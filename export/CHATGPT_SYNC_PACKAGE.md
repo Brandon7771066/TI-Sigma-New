@@ -295,7 +295,65 @@ Mechanism: Dark energy surplus
 
 ---
 
+# SECTION 9: CHATGPT SYNC (Post-11/30/25)
+
+## 9.1 Myrion Resolution - Complete Specification
+
+MR is **iterative and convergent**, not a one-shot test:
+
+| Stage | Function |
+|-------|----------|
+| MR-1 | Filter Double Tralse (DT) |
+| MR-2 | Classify: True-Tralse, Tralse-False, or Tralse-Indeterminate |
+| MR-3+ | Refine (diminishing returns beyond ~3 iterations) |
+
+**Key:** MR is infinite in principle, finite in practice. Action uses pragmatic convergence.
+
+## 9.2 Double Tralse (DT)
+
+DT is a **real, named state** (not Truth):
+- Lack-of-coherence state identified via attempted MR
+- Typically collapses at MR-1
+- Must be explicitly named to distinguish incoherence from weak coherence
+
+## 9.3 Corrected Permissible Domain (PD)
+
+| Zone | Range |
+|------|-------|
+| Great | ≥ +2 |
+| Approaching Great | +1 to +1.99 |
+| Indeterminate | ~0 |
+| Approaching Terrible | -1 to -2.99 |
+| Terrible | ≤ -3 |
+
+**Asymmetry is intentional:** +2 for Great, -3 for Terrible (moral asymmetry)
+
+## 9.4 Dual-PD Evaluation Rule (NEW)
+
+Every MR outcome has **two PD values**:
+1. **Current PD** (classification)
+2. **Residual coherence** (from MR-1)
+
+Essential for distinguishing barely-coherent claims from true DT.
+
+## 9.5 Paradox Classification
+
+| Statement | Classification |
+|-----------|---------------|
+| "The future exists" | Tralse-Indeterminate (low-positive) |
+| "Present exists alongside past" | Fragile but admissible |
+| "Past, present, future coexist" | DT (meaningless) |
+
+## 9.6 Ontological Truth vs Expression
+
+- **Ontological Truth**: Absolute, invariant
+- **Expression**: Can vary probabilistically (cultural goodness, love templates)
+- **L–E and Tralse–Myrion Logic**: Invariant operators, function regardless of recognition
+
+---
+
 # VERSION CONTROL
 
 - **v1.0** (Jan 1, 2026): Initial comprehensive export
+- **v1.1** (Jan 3, 2026): Added ChatGPT sync (MR spec, DT, PD corrections, Dual-PD, paradoxes)
 - Include date when updating for version tracking
