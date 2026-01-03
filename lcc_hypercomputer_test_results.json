@@ -1,0 +1,88 @@
+{
+  "headline": {
+    "timestamp": "2025-12-26T19:26:43.970179",
+    "total_tests": 7,
+    "total_passed": 6,
+    "pass_rate": 0.8571428571428571,
+    "lcc_tests_passed": 3,
+    "lcc_tests_total": 4,
+    "hypercomputer_tests_passed": 3,
+    "hypercomputer_tests_total": 3,
+    "meets_willow_standard": false
+  },
+  "lcc_results": {
+    "A_coverage_cost": {
+      "test_name": "coverage_cost_curve",
+      "test_type": "A",
+      "passed": true,
+      "accuracy": 1.0,
+      "precision": 0.7555555555555555,
+      "recall": 1.0,
+      "f1_score": 0.8607594936708861,
+      "cost_tokens": 1500,
+      "timestamp": "2025-12-26T19:26:43.971591"
+    },
+    "B_stopping_rule": {
+      "test_name": "stopping_rule_validity",
+      "test_type": "B",
+      "passed": false,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "cost_tokens": 0,
+      "timestamp": "2025-12-26T19:26:43.972480"
+    },
+    "C_leakage": {
+      "test_name": "leakage_shortcut_test",
+      "test_type": "C",
+      "passed": true,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "cost_tokens": 0,
+      "timestamp": "2025-12-26T19:26:43.972935"
+    },
+    "D_ablation": {
+      "test_name": "ablation_study",
+      "test_type": "D",
+      "passed": true,
+      "accuracy": 0.88,
+      "precision": 0.0,
+      "recall": 0.92,
+      "f1_score": 0.0,
+      "cost_tokens": 500,
+      "timestamp": "2025-12-26T19:26:43.973552"
+    }
+  },
+  "hypercomputer_results": {
+    "A_preregistered": {
+      "test_name": "preregistered_predictions",
+      "test_type": "A",
+      "passed": true,
+      "resonance_score": 0.7213677178681734,
+      "classical_baseline": 0.5,
+      "delta_vs_classical": 0.30000000000000004,
+      "timestamp": "2025-12-26T19:26:43.975361"
+    },
+    "B_human_loop": {
+      "test_name": "human_in_loop",
+      "test_type": "B",
+      "passed": true,
+      "resonance_score": 0.88,
+      "classical_baseline": 0.78,
+      "delta_vs_classical": 0.13,
+      "timestamp": "2025-12-26T19:26:43.976222"
+    },
+    "C_robustness": {
+      "test_name": "robustness",
+      "test_type": "C",
+      "passed": true,
+      "resonance_score": 0.8555793239789313,
+      "classical_baseline": 0.85,
+      "delta_vs_classical": -0.13232209409826345,
+      "timestamp": "2025-12-26T19:26:43.977214"
+    }
+  }
+}

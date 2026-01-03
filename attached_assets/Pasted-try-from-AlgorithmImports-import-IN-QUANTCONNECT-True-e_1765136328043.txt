@@ -1,0 +1,581 @@
+try:
+    from AlgorithmImports import *
+    IN_QUANTCONNECT = True
+except ImportError:
+    IN_QUANTCONNECT = False
+    class QCAlgorithm:
+        pass
+
+import numpy as np
+# Note: scipy not available in QuantConnect - using numpy instead
+
+class TIFramework3DJeffTimeAlgorithm(QCAlgorithm):
+    """
+    TI Framework V3: 3D Jeff Time Trading Algorithm
+    
+    Temporal Dimensions:
+    - t₁ (Pre-Jeff): 1-3 day quantum momentum - pure potential
+    - t₂ (Jeff Moment): Today's price action - observation/collapse
+    - t₃ (Post-Jeff): 20-50 day trend - cosmological context
+    
+    Love Dimension:
+    - Cross-asset correlation - market entanglement factor
+    
+    Enhanced GILE calculation integrating all 4 dimensions!
+    """
+    
+    # =========================================================================
+    # SACRED CONSTANTS
+    # =========================================================================
+    
+    SACRED_MIN = -0.666
+    SACRED_MAX = 0.333
+    
+    GREAT_THRESHOLD = 5.0
+    TERRIBLE_THRESHOLD = -5.0
+    ULTRA_GREAT_THRESHOLD = 20.0
+    ULTRA_TERRIBLE_THRESHOLD = -10.0
+    
+    GILE_GREAT = 1.5
+    GILE_GOOD = 0.3
+    GILE_BAD = -0.3
+    GILE_TERRIBLE = -1.5
+    
+    # =========================================================================
+    # 3D JEFF TIME PARAMETERS
+    # =========================================================================
+    
+    # t₁ (Quantum): Ultra-short lookback (1-3 days)
+    T1_QUANTUM_LOOKBACK = 3
+    T1_WEIGHT = 0.25  # Potential weight
+    
+    # t₂ (Interaction): Current day (today's observation)
+    T2_WEIGHT = 0.35  # The "Jeff Moment" has highest weight
+    
+    # t₃ (Cosmological): Long-term context (20-50 days)
+    T3_COSMO_SHORT = 20
+    T3_COSMO_LONG = 50
+    T3_WEIGHT = 0.25  # Context weight
+    
+    # Love dimension: Cross-correlation weight
+    LOVE_WEIGHT = 0.15  # Entanglement factor
+    
+    def initialize(self):
+        """Initialize with 3D Jeff Time parameters"""
+        
+        self.set_start_date(2020, 1, 1)
+        self.set_end_date(2024, 12, 31)
+        self.set_cash(100000)
+        
+        # Diverse universe for Love dimension (cross-correlation)
+        self.symbols = [
+            self.add_equity("SPY", Resolution.DAILY).symbol,   # Market beta
+            self.add_equity("QQQ", Resolution.DAILY).symbol,   # Tech beta
+            self.add_equity("AAPL", Resolution.DAILY).symbol,
+            self.add_equity("MSFT", Resolution.DAILY).symbol,
+            self.add_equity("GOOGL", Resolution.DAILY).symbol,
+            self.add_equity("TSLA", Resolution.DAILY).symbol,
+            self.add_equity("NVDA", Resolution.DAILY).symbol,
+            self.add_equity("AMD", Resolution.DAILY).symbol,
+            self.add_equity("META", Resolution.DAILY).symbol,
+            self.add_equity("AMZN", Resolution.DAILY).symbol,
+        ]
+        
+        # Price history for all temporal dimensions
+        self.price_history = {symbol: [] for symbol in self.symbols}
+        self.gile_history = {symbol: [] for symbol in self.symbols}
+        
+        # 3D Jeff Time scores
+        self.jeff_time_scores = {symbol: {
+            't1_quantum': 0,
+            't2_interaction': 0,
+            't3_cosmological': 0,
+            'love_correlation': 0,
+            'unified_gile': 0
+        } for symbol in self.symbols}
+        
+        self.max_history = 60  # Keep 60 days for t₃ calculations
+        self.max_position = 0.12  # Slightly tighter for risk management
+        
+        self.set_warmup(60, Resolution.DAILY)
+        
+        self.schedule.on(
+            self.date_rules.every_day(),
+            self.time_rules.after_market_open("SPY", 30),
+            self.jeff_time_rebalance
+        )
+        
+        # Performance tracking
+        self.trade_count = 0
+        self.winning_trades = 0
+    
+    def price_to_gile(self, pct_change: float) -> float:
+        """Convert price change to GILE score (same as V2)"""
+        
+        if pct_change > self.ULTRA_GREAT_THRESHOLD:
+            excess = pct_change - self.ULTRA_GREAT_THRESHOLD
+            return 2.0 + np.log1p(excess / 20) * 0.5
+        elif pct_change < self.ULTRA_TERRIBLE_THRESHOLD:
+            excess = abs(pct_change) - abs(self.ULTRA_TERRIBLE_THRESHOLD)
+            return -3.0 - np.log1p(excess / 10) * 0.5
+        elif pct_change > self.GREAT_THRESHOLD:
+            return 1.5 + (pct_change - 5) / (20 - 5) * 0.5
+        elif pct_change < self.TERRIBLE_THRESHOLD:
+            return -3.0 + (pct_change + 10) / (10 - 5) * 1.5
+        elif pct_change > self.SACRED_MAX:
+            return 0.3 + (pct_change - 0.333) / (5 - 0.333) * 1.2
+        elif pct_change < self.SACRED_MIN:
+            return -1.5 + (pct_change + 5) / (5 - 0.666) * 1.2
+        else:
+            if pct_change < 0:
+                return (pct_change / 0.666) * 0.3
+            else:
+                return (pct_change / 0.333) * 0.3
+    
+    def calculate_t1_quantum(self, symbol) -> float:
+        """
+        t₁ (Quantum/Pre-Jeff): Ultra-short momentum
+        
+        Represents pure POTENTIAL before observation.
+        Uses 1-3 day rate of change and volatility.
+        Higher volatility = more quantum uncertainty = opportunity
+        """
+        history = self.price_history.get(symbol, [])
+        if len(history) < self.T1_QUANTUM_LOOKBACK:
+            return 0.0
+        
+        recent = history[-self.T1_QUANTUM_LOOKBACK:]
+        
+        # Momentum over quantum window
+        momentum = (recent[-1] - recent[0]) / recent[0] * 100 if recent[0] != 0 else 0
+        
+        # Volatility (quantum uncertainty)
+        returns = np.diff(recent) / recent[:-1] * 100
+        volatility = np.std(returns) if len(returns) > 1 else 0
+        
+        # High volatility + positive momentum = high t₁ score
+        # This is the "potential energy" before the Jeff moment
+        t1_score = self.price_to_gile(momentum) * (1 + volatility * 0.1)
+        
+        return float(np.clip(t1_score, -3, 3))
+    
+    def calculate_t2_interaction(self, symbol) -> float:
+        """
+        t₂ (Interaction/Jeff Moment): Today's observation
+        
+        The wavefunction COLLAPSE - what actually happened today.
+        This is the core GILE signal from current price action.
+        """
+        history = self.price_history.get(symbol, [])
+        if len(history) < 2:
+            return 0.0
+        
+        # Today's price change (the observation)
+        today_change = (history[-1] - history[-2]) / history[-2] * 100 if history[-2] != 0 else 0
+        
+        # Direct GILE conversion of today's move
+        t2_score = self.price_to_gile(today_change)
+        
+        return float(t2_score)
+    
+    def calculate_t3_cosmological(self, symbol) -> float:
+        """
+        t₃ (Cosmological/Post-Jeff): Long-term trend context
+        
+        The evolved state after many observations.
+        Uses 20-day vs 50-day trend divergence.
+        Positive divergence = bullish cosmological context.
+        """
+        history = self.price_history.get(symbol, [])
+        if len(history) < self.T3_COSMO_LONG:
+            return 0.0
+        
+        # 20-day simple moving average
+        sma_short = np.mean(history[-self.T3_COSMO_SHORT:])
+        
+        # 50-day simple moving average
+        sma_long = np.mean(history[-self.T3_COSMO_LONG:])
+        
+        # Current price relative to long-term average
+        current = history[-1]
+        
+        # Trend divergence: how far short-term is from long-term
+        trend_divergence = (sma_short - sma_long) / sma_long * 100 if sma_long != 0 else 0
+        
+        # Price position: where current price sits relative to averages
+        price_position = (current - sma_long) / sma_long * 100 if sma_long != 0 else 0
+        
+        # Combined cosmological score
+        cosmo_pct = (trend_divergence + price_position) / 2
+        t3_score = self.price_to_gile(cosmo_pct)
+        
+        return float(t3_score)
+    
+    def calculate_love_correlation(self, symbol) -> float:
+        """
+        Love Dimension: Cross-asset correlation (market entanglement)
+        
+        Love is what BINDS the temporal dimensions across assets.
+        High positive correlation with strong assets = positive Love.
+        Divergence from weak assets = protective Love.
+        """
+        if len(self.price_history.get(symbol, [])) < 20:
+            return 0.0
+        
+        # Get returns for this symbol
+        sym_history = self.price_history[symbol]
+        sym_returns = np.diff(sym_history[-20:]) / sym_history[-21:-1] * 100
+        
+        # Compare with SPY (market beta)
+        spy_history = self.price_history.get(self.symbols[0], [])
+        if len(spy_history) < 21:
+            return 0.0
+        
+        spy_returns = np.diff(spy_history[-20:]) / spy_history[-21:-1] * 100
+        
+        if len(sym_returns) != len(spy_returns) or len(sym_returns) < 10:
+            return 0.0
+        
+        # Correlation with market (entanglement)
+        try:
+            corr_matrix = np.corrcoef(sym_returns, spy_returns)
+            correlation = float(corr_matrix[0, 1]) if not np.isnan(corr_matrix[0, 1]) else 0.0
+        except:
+            correlation = 0.0
+        
+        # High correlation during uptrend = positive Love
+        # High correlation during downtrend = negative Love
+        spy_trend = np.mean(spy_returns) if len(spy_returns) > 0 else 0
+        
+        if spy_trend > 0:
+            # Uptrend: high correlation is good (entangled with rising tide)
+            love_score = correlation * abs(spy_trend) * 0.5
+        else:
+            # Downtrend: low correlation is good (not entangled with falling tide)
+            love_score = (1 - abs(correlation)) * abs(spy_trend) * 0.5
+        
+        return float(np.clip(love_score, -1.5, 1.5))
+    
+    def calculate_unified_gile(self, symbol) -> dict:
+        """
+        Unified GILE score combining all 4 dimensions:
+        
+        GILE(unified) = w₁·t₁ + w₂·t₂ + w₃·t₃ + wₗ·L
+        
+        Where:
+        - t₁ = Quantum potential (0.25)
+        - t₂ = Jeff moment observation (0.35) 
+        - t₃ = Cosmological context (0.25)
+        - L = Love correlation (0.15)
+        """
+        t1 = self.calculate_t1_quantum(symbol)
+        t2 = self.calculate_t2_interaction(symbol)
+        t3 = self.calculate_t3_cosmological(symbol)
+        love = self.calculate_love_correlation(symbol)
+        
+        # Weighted combination
+        unified = (
+            self.T1_WEIGHT * t1 +
+            self.T2_WEIGHT * t2 +
+            self.T3_WEIGHT * t3 +
+            self.LOVE_WEIGHT * love
+        )
+        
+        result = {
+            't1_quantum': t1,
+            't2_interaction': t2,
+            't3_cosmological': t3,
+            'love_correlation': love,
+            'unified_gile': unified
+        }
+        
+        self.jeff_time_scores[symbol] = result
+        return result
+    
+    def get_zone_name(self, gile: float) -> str:
+        """Get GILE zone name"""
+        if gile > 2.0:
+            return "ULTRA_GREAT"
+        elif gile >= self.GILE_GREAT:
+            return "GREAT"
+        elif gile >= self.GILE_GOOD:
+            return "GOOD"
+        elif gile >= self.GILE_BAD:
+            return "INDETERMINATE"
+        elif gile >= self.GILE_TERRIBLE:
+            return "BAD"
+        elif gile >= -3.0:
+            return "TERRIBLE"
+        else:
+            return "ULTRA_TERRIBLE"
+    
+    def jeff_time_rebalance(self):
+        """Main rebalancing with 3D Jeff Time signals"""
+        
+        if self.is_warming_up:
+            return
+        
+        # Update price history for all symbols
+        for symbol in self.symbols:
+            security = self.securities.get(symbol)
+            if security is None or security.price <= 0:
+                continue
+            
+            price = security.price
+            self.price_history[symbol].append(price)
+            
+            # Trim to max history
+            if len(self.price_history[symbol]) > self.max_history:
+                self.price_history[symbol] = self.price_history[symbol][-self.max_history:]
+        
+        # Calculate unified GILE for all symbols
+        signals = {}
+        for symbol in self.symbols:
+            if len(self.price_history.get(symbol, [])) < self.T3_COSMO_LONG:
+                continue
+            
+            jeff_time = self.calculate_unified_gile(symbol)
+            unified_gile = jeff_time['unified_gile']
+            
+            signals[symbol] = {
+                'gile': unified_gile,
+                'zone': self.get_zone_name(unified_gile),
+                'components': jeff_time
+            }
+            
+            # Track GILE history
+            self.gile_history[symbol].append(unified_gile)
+            if len(self.gile_history[symbol]) > 30:
+                self.gile_history[symbol] = self.gile_history[symbol][-30:]
+        
+        # Rank signals by unified GILE
+        ranked = sorted(signals.items(), key=lambda x: x[1]['gile'], reverse=True)
+        
+        # Top 3 strongest positive signals
+        buy_candidates = [(s, sig) for s, sig in ranked if sig['gile'] >= self.GILE_GOOD][:3]
+        
+        # Sell signals (negative GILE or in GREAT zone to take profits)
+        for symbol in list(self.portfolio.keys()):
+            if symbol not in signals:
+                continue
+            
+            sig = signals[symbol]
+            holding = self.portfolio[symbol]
+            
+            if not holding.invested:
+                continue
+            
+            # Sell conditions
+            should_sell = False
+            reason = ""
+            
+            # 1. Strong negative signal
+            if sig['gile'] < self.GILE_BAD:
+                should_sell = True
+                reason = f"Negative GILE {sig['gile']:.2f}"
+            
+            # 2. Take profits in ULTRA_GREAT zone
+            elif sig['zone'] == "ULTRA_GREAT":
+                should_sell = True
+                reason = "Take profit in ULTRA_GREAT"
+            
+            # 3. Cosmological trend reversal (t₃ divergence)
+            elif sig['components']['t3_cosmological'] < -1.0:
+                should_sell = True
+                reason = f"Cosmo reversal t₃={sig['components']['t3_cosmological']:.2f}"
+            
+            if should_sell:
+                self.liquidate(symbol, reason)
+                self.trade_count += 1
+                if holding.unrealized_profit > 0:
+                    self.winning_trades += 1
+        
+        # Buy signals with position sizing based on signal strength
+        for symbol, sig in buy_candidates:
+            if self.portfolio[symbol].invested:
+                continue
+            
+            # Position size scales with GILE strength
+            base_size = self.max_position
+            if sig['zone'] == "GREAT":
+                size = base_size * 1.0
+            elif sig['zone'] == "GOOD":
+                size = base_size * 0.7
+            else:
+                size = base_size * 0.5
+            
+            # Additional boost if all temporal dimensions align
+            components = sig['components']
+            if (components['t1_quantum'] > 0 and 
+                components['t2_interaction'] > 0 and 
+                components['t3_cosmological'] > 0):
+                size = min(size * 1.2, base_size)  # 20% boost for full alignment
+            
+            self.set_holdings(symbol, size)
+            self.trade_count += 1
+            
+            self.debug(f"BUY {symbol}: GILE={sig['gile']:.2f} Zone={sig['zone']}")
+            self.debug(f"  t₁={components['t1_quantum']:.2f} t₂={components['t2_interaction']:.2f} " +
+                      f"t₃={components['t3_cosmological']:.2f} L={components['love_correlation']:.2f}")
+    
+    def on_end_of_algorithm(self):
+        """Final statistics"""
+        win_rate = self.winning_trades / max(self.trade_count, 1) * 100
+        self.debug(f"=== 3D JEFF TIME ALGORITHM COMPLETE ===")
+        self.debug(f"Total Trades: {self.trade_count}")
+        self.debug(f"Winning Trades: {self.winning_trades}")
+        self.debug(f"Win Rate: {win_rate:.1f}%")
+        self.debug(f"Final Portfolio Value: ${self.portfolio.total_portfolio_value:,.2f}")
+
+
+# ============================================================================
+# LOCAL TESTING / SIMULATION (runs outside QuantConnect)
+# ============================================================================
+
+def run_local_simulation():
+    """Run local simulation with historical data"""
+    import yfinance as yf
+    from datetime import datetime, timedelta
+    
+    print("="*70)
+    print("TI FRAMEWORK V3: 3D JEFF TIME ALGORITHM - LOCAL SIMULATION")
+    print("="*70)
+    
+    symbols = ['SPY', 'QQQ', 'AAPL', 'MSFT', 'GOOGL', 'TSLA', 'NVDA', 'AMD', 'META', 'AMZN']
+    
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=365*5)
+    
+    print(f"\nDownloading data for {len(symbols)} symbols...")
+    print(f"Period: {start_date.date()} to {end_date.date()}")
+    
+    data = {}
+    for sym in symbols:
+        try:
+            ticker = yf.Ticker(sym)
+            hist = ticker.history(start=start_date, end=end_date)
+            if len(hist) > 0:
+                data[sym] = hist['Close'].values
+                print(f"  {sym}: {len(hist)} days")
+        except Exception as e:
+            print(f"  {sym}: FAILED - {e}")
+    
+    if len(data) < 5:
+        print("Not enough data for simulation")
+        return
+    
+    print("\n" + "="*70)
+    print("3D JEFF TIME DIMENSIONS EXPLAINED:")
+    print("="*70)
+    print("""
+    t₁ (QUANTUM/PRE-JEFF): 1-3 day momentum + volatility
+       → Pure potential before observation
+       → High volatility = quantum uncertainty = opportunity
+       
+    t₂ (INTERACTION/JEFF MOMENT): Today's price action
+       → The wavefunction collapse - what actually happened
+       → Core GILE signal
+       
+    t₃ (COSMOLOGICAL/POST-JEFF): 20-50 day trend context
+       → Long-term evolved state
+       → SMA divergence indicates cosmological direction
+       
+    L (LOVE): Cross-asset correlation
+       → Market entanglement factor
+       → Binds temporal dimensions across assets
+    """)
+    
+    print("="*70)
+    print("CURRENT 3D JEFF TIME SIGNALS:")
+    print("="*70)
+    
+    results = []
+    
+    # Reference data for Love calculation
+    spy_data = data.get('SPY', [])
+    
+    for sym, prices in data.items():
+        if len(prices) < 60:
+            continue
+        
+        # t₁: Quantum (3-day)
+        recent_3 = prices[-3:]
+        momentum_3d = (recent_3[-1] - recent_3[0]) / recent_3[0] * 100 if recent_3[0] != 0 else 0
+        returns_3d = np.diff(recent_3) / recent_3[:-1] * 100
+        volatility = np.std(returns_3d) if len(returns_3d) > 1 else 0
+        t1 = momentum_3d * (1 + volatility * 0.1)
+        
+        # t₂: Interaction (today)
+        today_change = (prices[-1] - prices[-2]) / prices[-2] * 100 if prices[-2] != 0 else 0
+        t2 = today_change
+        
+        # t₃: Cosmological (20 vs 50 day)
+        sma_20 = np.mean(prices[-20:])
+        sma_50 = np.mean(prices[-50:])
+        trend_div = (sma_20 - sma_50) / sma_50 * 100 if sma_50 != 0 else 0
+        price_pos = (prices[-1] - sma_50) / sma_50 * 100 if sma_50 != 0 else 0
+        t3 = (trend_div + price_pos) / 2
+        
+        # Love: Correlation with SPY
+        if len(spy_data) >= 21 and len(prices) >= 21:
+            sym_prices_20 = prices[-21:]
+            spy_prices_20 = spy_data[-21:]
+            sym_returns = np.diff(sym_prices_20) / sym_prices_20[:-1] * 100
+            spy_returns = np.diff(spy_prices_20) / spy_prices_20[:-1] * 100
+            try:
+                corr_matrix = np.corrcoef(sym_returns, spy_returns)
+                corr = float(corr_matrix[0, 1]) if not np.isnan(corr_matrix[0, 1]) else 0.0
+            except:
+                corr = 0.0
+            spy_trend = np.mean(spy_returns)
+            if spy_trend > 0:
+                love = corr * abs(spy_trend) * 0.5
+            else:
+                love = (1 - abs(corr)) * abs(spy_trend) * 0.5
+        else:
+            love = 0
+        
+        # Unified GILE
+        unified = 0.25 * t1 + 0.35 * t2 + 0.25 * t3 + 0.15 * love
+        
+        results.append({
+            'symbol': sym,
+            't1': t1,
+            't2': t2,
+            't3': t3,
+            'love': love,
+            'unified': unified
+        })
+    
+    # Sort by unified GILE
+    results.sort(key=lambda x: x['unified'], reverse=True)
+    
+    print(f"\n{'Symbol':<8} {'t₁ Quantum':>12} {'t₂ Jeff':>12} {'t₃ Cosmo':>12} {'L Love':>10} {'UNIFIED':>12}")
+    print("-"*70)
+    
+    for r in results:
+        print(f"{r['symbol']:<8} {r['t1']:>12.2f} {r['t2']:>12.2f} {r['t3']:>12.2f} {r['love']:>10.2f} {r['unified']:>12.3f}")
+    
+    print("\n" + "="*70)
+    print("TOP SIGNALS FOR TRADING:")
+    print("="*70)
+    
+    for i, r in enumerate(results[:3], 1):
+        print(f"\n#{i} {r['symbol']}:")
+        print(f"   Unified GILE: {r['unified']:.3f}")
+        if r['t1'] > 0 and r['t2'] > 0 and r['t3'] > 0:
+            print("   STATUS: ALL TEMPORAL DIMENSIONS ALIGNED (Strong Buy)")
+        elif r['unified'] > 0.3:
+            print("   STATUS: Good Zone (Buy)")
+        elif r['unified'] > -0.3:
+            print("   STATUS: Indeterminate (Hold)")
+        else:
+            print("   STATUS: Negative (Avoid)")
+    
+    print("\n" + "="*70)
+    print("COPY THE ALGORITHM CODE TO QUANTCONNECT TO RUN FULL BACKTEST")
+    print("="*70)
+
+
+if __name__ == "__main__":
+    run_local_simulation()

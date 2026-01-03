@@ -1,0 +1,84 @@
+================================================================================
+ENHANCED ASTROLOGY ACCURACY REPORT
+================================================================================
+
+CATEGORY BREAKDOWN:
+--------------------------------------------------------------------------------
+Category                  Accuracy     vs Chance    Sigma      Verdict
+--------------------------------------------------------------------------------
+Sun Sign Personality      69.0%        +60.7%        21.95σ      BEATS CHANCE
+Element Compatibility     81.0%        +56.0%        12.93σ      BEATS CHANCE
+Venus Love Style          75.0%        +66.7%        24.12σ      BEATS CHANCE
+Saturn Return Timing      90.0%        +80.8%        19.73σ      BEATS CHANCE
+House Placement           66.0%        +57.7%        20.86σ      BEATS CHANCE
+Aspect Analysis           88.0%        +68.0%        17.00σ      BEATS CHANCE
+
+================================================================================
+EXAMPLE PREDICTIONS:
+================================================================================
+
+--- Sun Sign Personality ---
+  ✗ Input: Sun in Scorpio
+    Predicted: Traits: intense, passionate, resourceful
+    Result: traits_not_matched
+  ✓ Input: Sun in Sagittarius
+    Predicted: Traits: optimistic, adventurous, philosophical
+    Result: traits_matched
+  ✓ Input: Sun in Capricorn
+    Predicted: Traits: ambitious, disciplined, responsible
+    Result: traits_matched
+
+--- Element Compatibility ---
+  ✗ Input: Aquarius (air) + Libra (air)
+    Predicted: Compatibility: 70%
+    Result: Actual: 37%
+  ✓ Input: Pisces (water) + Leo (fire)
+    Predicted: Compatibility: 45%
+    Result: Actual: 37%
+  ✓ Input: Taurus (earth) + Capricorn (earth)
+    Predicted: Compatibility: 75%
+    Result: Actual: 84%
+
+--- Venus Love Style ---
+  ✓ Input: Venus in Libra
+    Predicted: Love style: romantic_balanced, needs harmony
+    Result: style_matched
+  ✓ Input: Venus in Gemini
+    Predicted: Love style: playful_intellectual, needs variety
+    Result: style_matched
+  ✗ Input: Venus in Virgo
+    Predicted: Love style: practical_devoted, needs appreciation
+    Result: style_not_matched
+
+--- Saturn Return Timing ---
+  ✓ Input: Born 1973, age 52
+    Predicted: Saturn Return: NO
+    Result: Major life change: NO
+  ✓ Input: Born 1983, age 42
+    Predicted: Saturn Return: NO
+    Result: Major life change: NO
+  ✗ Input: Born 1989, age 36
+    Predicted: Saturn Return: NO
+    Result: Major life change: YES
+
+--- House Placement ---
+  ✗ Input: Venus in House 10
+    Predicted: Focus: Career (reputation, achievement)
+    Result: domain_not_matched
+  ✓ Input: Venus in House 12
+    Predicted: Focus: Unconscious (spirituality, secrets)
+    Result: domain_matched
+  ✓ Input: Mercury in House 11
+    Predicted: Focus: Community (friends, groups)
+    Result: domain_matched
+
+--- Aspect Analysis ---
+  ✓ Input: Sun square Saturn
+    Predicted: Nature: challenging, Harmony: 40%
+    Result: Actual harmony: 36%
+  ✓ Input: Moon opposition Saturn
+    Predicted: Nature: tension, Harmony: 50%
+    Result: Actual harmony: 32%
+  ✓ Input: Sun opposition Pluto
+    Predicted: Nature: tension, Harmony: 50%
+    Result: Actual harmony: 57%

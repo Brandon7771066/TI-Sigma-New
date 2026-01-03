@@ -1,0 +1,159 @@
+# qc_guardian.py
+"""
+QC-GUARDIAN v3
+Institutional-grade QuantConnect validation, repair, and readiness engine.
+"""
+
+import os, re, time, subprocess, shutil
+import pytz, datetime
+import numpy as np
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+ROOT = "."
+PY_EXT = ".py"
+
+# ---------------- Utilities ----------------
+def run(cmd, label):
+    print(f"\n--- {label} ---")
+    subprocess.run(cmd, check=False)
+
+# ---------------- Auto Repair ----------------
+def sanitize(path):
+    with open(path, "rb") as f:
+        raw = f.read()
+    text = raw.decode("utf-8", errors="ignore")
+    text = text.replace("\t", "    ").replace("\r\n", "\n").replace("\ufeff", "")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+# ---------------- Auto Rewrite ----------------
+REWRITE_RULES = {
+    r"\bprint\(": "self.Debug(",
+    r"datetime\.now\(": "self.Time",
+}
+
+def auto_rewrite(code):
+    for bad, good in REWRITE_RULES.items():
+        code = re.sub(bad, good, code)
+    return code
+
+# ---------------- QC Rules ----------------
+QC_REQUIRED = {
+    "Initialize": r"def\s+Initialize",
+    "SetStartDate": r"SetStartDate\(",
+    "SetCash": r"SetCash\(",
+    "AddEquity": r"AddEquity\(",
+    "OnData": r"def\s+OnData",
+}
+
+QC_BAD = {
+    "sleep": r"time\.sleep",
+    "threading": r"threading\.",
+}
+
+# ---------------- Universe Validation ----------------
+def universe_checks(code, warnings):
+    if "UniverseSettings" not in code:
+        warnings.append("UniverseSettings not explicitly configured")
+    if "AddUniverse" in code and "Resolution" not in code:
+        warnings.append("Universe added without explicit Resolution")
+
+# ---------------- Timezone & DST Simulation ----------------
+def timezone_checks(warnings):
+    ny = pytz.timezone("US/Eastern")
+    dates = [
+        ny.localize(datetime.datetime(2024, 3, 10, 1, 59)),
+        ny.localize(datetime.datetime(2024, 3, 10, 3, 1)),
+        ny.localize(datetime.datetime(2024, 11, 3, 1, 59)),
+        ny.localize(datetime.datetime(2024, 11, 3, 2, 1)),
+    ]
+    if dates[0].utcoffset() == dates[1].utcoffset():
+        warnings.append("DST transition handling unclear")
+
+# ---------------- Monte Carlo Logic Sanity ----------------
+def monte_carlo_checks(code, warnings):
+    if "Random" in code or "np.random" in code:
+        warnings.append("Randomness detected — verify deterministic behavior")
+
+# ---------------- Full QC Validation ----------------
+def qc_validate(code):
+    score = 100
+    warnings = []
+
+    for name, pat in QC_REQUIRED.items():
+        if not re.search(pat, code):
+            warnings.append(f"Missing QC requirement: {name}")
+            score -= 10
+
+    for name, pat in QC_BAD.items():
+        if re.search(pat, code):
+            warnings.append(f"QC-incompatible usage: {name}")
+            score -= 10
+
+    universe_checks(code, warnings)
+    timezone_checks(warnings)
+    monte_carlo_checks(code, warnings)
+
+    if "Resolution.Minute" not in code and "Resolution.Daily" not in code:
+        warnings.append("No explicit Resolution set")
+        score -= 5
+
+    return max(score, 0), warnings
+
+# ---------------- Project Scan ----------------
+def scan_project():
+    combined = ""
+    for root, _, files in os.walk(ROOT):
+        for f in files:
+            if f.endswith(PY_EXT):
+                path = os.path.join(root, f)
+                sanitize(path)
+                with open(path, "r", encoding="utf-8") as file:
+                    text = auto_rewrite(file.read())
+                with open(path, "w", encoding="utf-8") as file:
+                    file.write(text)
+                combined += text + "\n"
+    return combined
+
+# ---------------- Validation Pipeline ----------------
+def validate_all():
+    code = scan_project()
+
+    run(["ruff", "check", "."], "Ruff Lint")
+    run(["pyright"], "Pyright Type Check")
+
+    score, warnings = qc_validate(code)
+
+    print("\n--- QuantConnect Compliance Report ---")
+    print(f"QC Readiness Score: {score}/100")
+
+    for w in warnings:
+        print(f"⚠️  {w}")
+
+    if shutil.which("lean"):
+        run(["lean", "backtest", "."], "Lean Backtest")
+    else:
+        print("[QC-GUARDIAN] Lean not installed — skipping backtest")
+
+# ---------------- Watcher ----------------
+class Watcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith(PY_EXT):
+            print(f"\n[QC-GUARDIAN] Change detected: {event.src_path}")
+            validate_all()
+
+def main():
+    print("\n[QC-GUARDIAN v3] Institutional QuantConnect mode ACTIVE\n")
+    obs = Observer()
+    obs.schedule(Watcher(), ROOT, recursive=True)
+    obs.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        obs.stop()
+    obs.join()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,164 @@
+# qc_guardian.py
+"""
+QC-GUARDIAN v6
+Causal, informational, and crowding-aware QuantConnect research engine.
+"""
+
+import os, re, time, subprocess, shutil, json
+import datetime
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+ROOT = "."
+PY_EXT = ".py"
+
+# ----------------------------------------
+# Utilities
+# ----------------------------------------
+def run(cmd, label):
+    print(f"\n--- {label} ---")
+    subprocess.run(cmd, check=False)
+
+def read_all_code():
+    code = ""
+    for root, _, files in os.walk(ROOT):
+        for f in files:
+            if f.endswith(PY_EXT):
+                with open(os.path.join(root, f), "r", encoding="utf-8", errors="ignore") as file:
+                    code += file.read() + "\n"
+    return code
+
+# ----------------------------------------
+# Causality Analysis
+# ----------------------------------------
+CAUSE_KEYWORDS = ["Volume", "ATR", "Volatility", "Liquidity", "Spread"]
+CORRELATE_KEYWORDS = ["RSI", "SMA", "EMA", "MACD", "Stochastic"]
+
+def causality_checks(code, warnings):
+    cause_hits = sum(code.count(k) for k in CAUSE_KEYWORDS)
+    corr_hits = sum(code.count(k) for k in CORRELATE_KEYWORDS)
+
+    if corr_hits > cause_hits * 3:
+        warnings.append("Causality risk: strategy dominated by correlation indicators")
+
+# ----------------------------------------
+# Redundant Alpha Detection
+# ----------------------------------------
+def redundancy_checks(code, warnings):
+    indicators = ["RSI", "SMA", "EMA", "MACD", "ROC", "Momentum"]
+    used = [i for i in indicators if i in code]
+
+    if len(used) >= 4:
+        warnings.append("Redundant alpha risk: multiple overlapping indicators")
+
+# ----------------------------------------
+# Information Density Estimate
+# ----------------------------------------
+def information_density(code, warnings):
+    logic_lines = len([l for l in code.splitlines() if "if " in l])
+    indicator_calls = sum(code.count(i) for i in ["RSI", "SMA", "EMA", "MACD", "ATR"])
+
+    if indicator_calls > logic_lines * 2:
+        warnings.append("Low information density: many signals, little logic")
+
+# ----------------------------------------
+# Alpha Crowding Inference
+# ----------------------------------------
+CROWDED_PATTERNS = ["RSI(", "SMA(", "EMA(", "MeanReversion", "Momentum"]
+
+def crowding_checks(code, warnings):
+    crowd_score = sum(code.count(p) for p in CROWDED_PATTERNS)
+    if crowd_score > 8:
+        warnings.append("Crowding risk: strategy resembles common retail alpha")
+
+# ----------------------------------------
+# Meta-Strategy Fragility
+# ----------------------------------------
+def fragility_checks(code, warnings):
+    if code.count("if ") < 2:
+        warnings.append("Fragility risk: single decision path")
+
+    if "else" not in code:
+        warnings.append("Fragility risk: no contingency logic")
+
+# ----------------------------------------
+# Verdict Engine (v6)
+# ----------------------------------------
+def verdict(score, warnings):
+    severe = len([w for w in warnings if "risk" in w.lower()])
+
+    if score >= 92 and severe <= 2:
+        return "DEPLOYABLE"
+    if score >= 80:
+        return "RESEARCH-ONLY"
+    if score >= 70:
+        return "THEORETICAL-ONLY"
+    if score >= 60:
+        return "ILLUSORY-ALPHA"
+    return "REJECT — NON-CAUSAL"
+
+# ----------------------------------------
+# Full Validation
+# ----------------------------------------
+def validate_all():
+    code = read_all_code()
+    warnings = []
+    score = 100
+
+    causality_checks(code, warnings)
+    redundancy_checks(code, warnings)
+    information_density(code, warnings)
+    crowding_checks(code, warnings)
+    fragility_checks(code, warnings)
+
+    score -= len(warnings) * 5
+    score = max(score, 0)
+
+    final_verdict = verdict(score, warnings)
+
+    print("\n--- QC-GUARDIAN v6 FINAL REPORT ---")
+    print(f"Score: {score}/100")
+    print(f"Verdict: {final_verdict}")
+
+    for w in warnings:
+        print(f"⚠️  {w}")
+
+    report = {
+        "score": score,
+        "verdict": final_verdict,
+        "warnings": warnings,
+        "timestamp": datetime.datetime.utcnow().isoformat()
+    }
+
+    with open("QC_V6_FINAL_REPORT.json", "w") as f:
+        json.dump(report, f, indent=2)
+
+    run(["ruff", "check", "."], "Ruff Lint")
+    run(["pyright"], "Pyright Type Check")
+
+    if shutil.which("lean"):
+        run(["lean", "backtest", "."], "Lean Backtest")
+
+# ----------------------------------------
+# Watcher
+# ----------------------------------------
+class Watcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith(PY_EXT):
+            print("\n[QC-GUARDIAN v6] Change detected — re-evaluating")
+            validate_all()
+
+def main():
+    print("\n[QC-GUARDIAN v6] CAUSAL + INFORMATION MODE ACTIVE\n")
+    observer = Observer()
+    observer.schedule(Watcher(), ROOT, recursive=True)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+if __name__ == "__main__":
+    main()

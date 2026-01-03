@@ -1,0 +1,33 @@
+{
+  "lookback_short": 7,
+  "lookback_long": 30,
+  "kappa_decay_positive": 0.1,
+  "kappa_decay_negative": 0.05,
+  "gile_weights": {
+    "goodness": 0.2,
+    "intuition": 0.25,
+    "love": 0.25,
+    "environment": 0.3
+  },
+  "valence_weights": {
+    "exceptional": 1.5,
+    "great": 1.0,
+    "neutral": 1.0,
+    "terrible": 2.0,
+    "wicked": 6.0
+  },
+  "regime_thresholds": {
+    "fracture_c_rate": 0.1,
+    "fracture_vol_ratio": 1.5,
+    "fracture_pd": -1.0,
+    "compression_c_rate": 0.05,
+    "compression_vol_ratio": 0.7,
+    "reset_c_rate": -0.05
+  },
+  "signal_thresholds": {
+    "strong_signal": 0.85,
+    "causation": 0.85
+  },
+  "tuned_date": "2025-12-23",
+  "note": "These parameters need empirical calibration via nested walk-forward optimization."
+}

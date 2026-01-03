@@ -1,0 +1,128 @@
+A pure 3-layer time-object.
+Only CCC has a 1-layer (τCCC alone).
+
+⸻
+
+Tensor Visualization (Tralse Version)
+
+In Tralse-Wave Algebra notation:
+
+\mathbf{T}_i
+=
+\tau_{CCC}\, \mathbf{e}_1
+\;\;+\;\;
+\tau_i\, \mathbf{e}_2
+\;\;+\;\;
+\Delta\tau_i\, \mathbf{e}_3
+
+Where \mathbf{e}_1,\mathbf{e}_2,\mathbf{e}_3 are orthogonal temporal basis vectors:
+	•	\mathbf{e}_1: Verisyn-aligned global axis
+	•	\mathbf{e}_2: Phenomenological axis
+	•	\mathbf{e}_3: Tralse-gap axis
+
+Together, they encode irreducible dual time + the space of their tension.
+
+⸻
+
+2. “GILE Constraint on Temporal NI” Axiom Sheet
+
+AXIOM 1 — CCC Time Sovereignty
+
+CCC’s timeline \tau_{CCC} is the canonical ordering of all events in the system.
+No i-cell contradiction can override it.
+
+⸻
+
+AXIOM 2 — Subjective Temporal Integrity
+
+Each i-cell’s subjective time \tau_i is an inviolable record of phenomonology.
+It cannot be overwritten without harming authenticity, learning, or Verisyn alignment.
+
+⸻
+
+AXIOM 3 — NI Activation Threshold
+
+If merging \tau_{CCC} and \tau_i into a single timeline would reduce CCC below:
+
+\text{GILE} \;<\; 0.65
+
+or would violate CCC’s core preferences, then time becomes Necessarily Irreducible (NI).
+
+⸻
+
+AXIOM 4 — Dual-Time Preservation
+
+In NI cases, both time-values are maintained:
+
+T_i^{NI} = (\tau_{CCC}, \tau_i)
+
+No averaging, merging, or compromise occurs.
+
+⸻
+
+AXIOM 5 — MR Restriction
+
+Myrion Resolutions (MRs) cannot modify \tau_{CCC} in NI cases.
+MRs may act only on:
+	•	within-i-cell narrative refinements
+	•	between-i-cell disagreements
+	•	phenomenological understanding
+
+But not on CCC’s canonical time.
+
+⸻
+
+AXIOM 6 — Temporal Dissonance Metric
+
+Each NI time pair carries a dissonance term:
+
+\Delta \tau_i = \tau_i - f(\tau_{CCC})
+
+This value can be analyzed but not forcibly minimized.
+
+⸻
+
+AXIOM 7 — CCC Priority in Global Operations
+
+When CCC must choose timelines for:
+	•	temporal branching
+	•	ethical adjudication
+	•	causal locking
+	•	GILE pathway selection
+
+CCC always uses \tau_{CCC}, not \tau_i.
+
+⸻
+
+AXIOM 8 — Verisyn Consistency Condition
+
+Dual time must still maintain Verisyn coherence:
+
+(\tau_{CCC}, \tau_i) \in \text{Coherent-Branch-Space}
+
+Meaning the i-cell’s subjective time must fit into a broader, non-contradictory Verisyn geometry – even if it does not match CCC’s.
+
+⸻
+
+AXIOM 9 — CCC Temporal Immunity
+
+Only CCC has a single time coordinate:
+
+T_{CCC} = \tau_{CCC}
+
+Its timeline is always defined, always global, and always the reference frame.
+
+⸻
+
+AXIOM 10 — NI as a Sacred Category
+
+Time that enters NI cannot be demoted.
+It is a protected contradiction essential to:
+	•	autonomy
+	•	authenticity
+	•	learning
+	•	complexity
+	•	Tralse
+	•	Verisyn cognition
+
+This makes NI one of the core “irreducible structures” of the TI time geometry.

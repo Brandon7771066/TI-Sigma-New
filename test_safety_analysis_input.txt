@@ -1,0 +1,33 @@
+Mood Amplifier Test Protocol
+
+Project Overview:
+This is a test of the Limbic-Cortical Coupling (LCC) mood amplifier technology that uses consumer EEG devices (Muse 2) to enhance mood and well-being.
+
+Claimed Mechanism:
+1. EEG detects alpha waves (8-12 Hz) in frontal cortex
+2. Real-time biofeedback trains users to increase limbic-cortical coupling
+3. Target coupling range: 0.70-0.80 (safe zone)
+4. Session duration: 9-10 minutes optimal
+
+Animal Studies:
+- Rodent studies (n=30 rats) showed 35% mood improvement
+- EEG/fMRI correlation: 0.91
+- No adverse effects observed in 7-day monitoring
+
+Physical Mechanisms:
+- Increases neurotransmitters: 5-HT (+40%), DA (+25%), NE (+30%)
+- Synaptic plasticity via LTP
+- Gene expression changes (BDNF, Arc, c-Fos)
+
+Tolerance Risk:
+- No tolerance observed in 8-week studies
+- Optimal re-dosing: every 48 hours
+- Effects persist 36-hour half-life
+
+Brain Damage Risk:
+- Coupling kept below 0.85 to prevent hypersynchronization
+- Reversible effects only
+- Consumer EEG validated (83% correlation with research-grade)
+
+Safety Summary:
+This appears to be a non-invasive neurofeedback intervention with minimal risks when used according to protocol guidelines.

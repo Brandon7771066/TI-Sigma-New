@@ -1,0 +1,59 @@
+modules = ["python-3.11", "postgresql-16", "nodejs-20"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["bluez", "cairo", "cargo", "catch2", "ffmpeg-full", "fmt", "fontconfig", "freetype", "ghostscript", "glib", "glibcLocales", "gobject-introspection", "gtk3", "harfbuzz", "libiconv", "liblsl", "libxcrypt", "muparserx", "nlohmann_json", "openssl", "pango", "pkg-config", "pyright", "qhull", "ruff", "rustc", "spdlog", "tcl", "tk", "xsimd", "yajl"]
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["streamlit", "run", "app.py", "--server.port", "5000"]
+
+[agent]
+integrations = ["perplexity_v0:1.0.0", "python_anthropic_ai_integrations:1.0.0", "python_openai_ai_integrations:1.0.0", "web_scraper:1.0.0", "youtube:1.0.0", "github:1.0.0", "stripe:2.0.0"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "discovery_scheduler"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "ti_website"
+
+[[workflows.workflow]]
+name = "discovery_scheduler"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -c \"from autonomous_research_scheduler import start_background_research; import time; start_background_research(); exec('while True: time.sleep(60)')\""
+
+[[workflows.workflow]]
+name = "ti_website"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python async_gateway.py"
+waitForPort = 5000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3000

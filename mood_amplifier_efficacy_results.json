@@ -1,0 +1,11 @@
+{
+  "n_subjects": 100,
+  "baseline_success_rate": 0.96,
+  "ti_v2_success_rate": 1.0,
+  "absolute_improvement": 4.0000000000000036,
+  "relative_improvement": 4.1666666666666705,
+  "baseline_confidence": 0.8287932407296337,
+  "ti_v2_confidence": 0.999473186662778,
+  "mean_psi_correlation": 1.0,
+  "beats_baseline": true
+}

@@ -1,0 +1,303 @@
+{
+  "timestamp": "2025-12-03T09:40:40.412239",
+  "tests": {
+    "test_4_bok_enhanced": {
+      "test": "Enhanced BOK Persistent Homology",
+      "hypothesis": "Biometric data shows 4 loop pairs (BOK topology)",
+      "data_source": "combined (real: 15, synthetic: 400)",
+      "n_points": 415,
+      "n_dimensions": 8,
+      "target_loops": 4,
+      "detected_loops": 6,
+      "homology_details": {
+        "n_points_analyzed": 200,
+        "n_dimensions": 8,
+        "persistent_b0": 6,
+        "persistent_loops_spectral": 6,
+        "pca_dims_for_90pct": 6,
+        "estimated_loops_from_pca": "3",
+        "final_loop_estimate": 6,
+        "variance_distribution": [
+          0.2449166937425783,
+          0.21900500315884996,
+          0.15332723177795357,
+          0.14572603134010784,
+          0.07831245814984458,
+          0.06063497361958272,
+          0.05461124006942372,
+          0.04346636814165934
+        ],
+        "filtration_results": [
+          {
+            "scale": 0.6803146527436205,
+            "b0": 8,
+            "spectral_gaps": 8,
+            "largest_eigenvalue": 68.14189380407298
+          },
+          {
+            "scale": 0.8729162508019697,
+            "b0": 7,
+            "spectral_gaps": 6,
+            "largest_eigenvalue": 96.07615221986929
+          },
+          {
+            "scale": 1.0441658727767251,
+            "b0": 6,
+            "spectral_gaps": 4,
+            "largest_eigenvalue": 123.03177038235535
+          },
+          {
+            "scale": 1.1532543926254448,
+            "b0": 6,
+            "spectral_gaps": 7,
+            "largest_eigenvalue": 151.01482287975384
+          },
+          {
+            "scale": 1.2390262489787005,
+            "b0": 6,
+            "spectral_gaps": 5,
+            "largest_eigenvalue": 165.01192182149086
+          },
+          {
+            "scale": 1.3209162077705219,
+            "b0": 6,
+            "spectral_gaps": 5,
+            "largest_eigenvalue": 178.00819778343632
+          },
+          {
+            "scale": 1.417470431859955,
+            "b0": 5,
+            "spectral_gaps": 5,
+            "largest_eigenvalue": 189.0029081088147
+          },
+          {
+            "scale": 1.5483640434301456,
+            "b0": 3,
+            "spectral_gaps": 7,
+            "largest_eigenvalue": 195.00233981037624
+          },
+          {
+            "scale": 1.7830315024978607,
+            "b0": 3,
+            "spectral_gaps": 6,
+            "largest_eigenvalue": 197.011212941305
+          }
+        ]
+      },
+      "passes_threshold": true,
+      "interpretation": "\u2705 PASS: Detected 6 loop structures (target: 4)"
+    },
+    "test_5_moonshine_enhanced": {
+      "test": "Enhanced Monster Moonshine Coefficients",
+      "hypothesis": "TI Framework data encodes moonshine structure",
+      "data_source": "stock_predictions: 100, quantconnect: 14, discoveries: 6, biometric: 153, sacred_numbers: 28",
+      "n_values_searched": 424,
+      "moonshine_numbers_checked": 16,
+      "total_moonshine_score": 9183.900000000001,
+      "random_baseline": 135.68,
+      "moonshine_ratio": 67.68794221698114,
+      "passes_threshold": true,
+      "interpretation": "\u2705 PASS: Moonshine ratio 67.69x above random (score: 9183.9)",
+      "detections": {
+        "196884": {
+          "name": "j^1 coefficient",
+          "weight": 10,
+          "exact": 1,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 1,
+          "mod_10": 0,
+          "digit_sum": 1,
+          "divisibility": 77,
+          "total_score": 506.0
+        },
+        "21493760": {
+          "name": "j^2 coefficient",
+          "weight": 8,
+          "exact": 0,
+          "close_matches": 0,
+          "mod_1000": 0,
+          "mod_100": 2,
+          "mod_10": 137,
+          "digit_sum": 0,
+          "divisibility": 80,
+          "total_score": 1320.0
+        },
+        "864299970": {
+          "name": "j^3 coefficient",
+          "weight": 6,
+          "exact": 0,
+          "close_matches": 0,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 137,
+          "digit_sum": 0,
+          "divisibility": 82,
+          "total_score": 969.6
+        },
+        "196883": {
+          "name": "Monster dimension",
+          "weight": 10,
+          "exact": 1,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 1,
+          "mod_10": 1,
+          "digit_sum": 1,
+          "divisibility": 68,
+          "total_score": 489.0
+        },
+        "194": {
+          "name": "Conjugacy classes",
+          "weight": 5,
+          "exact": 1,
+          "close_matches": 1,
+          "mod_1000": 0,
+          "mod_100": 1,
+          "mod_10": 0,
+          "digit_sum": 16,
+          "divisibility": 68,
+          "total_score": 227.0
+        },
+        "150": {
+          "name": "Rational classes",
+          "weight": 4,
+          "exact": 3,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 2,
+          "mod_10": 137,
+          "digit_sum": 18,
+          "divisibility": 81,
+          "total_score": 877.2
+        },
+        "22": {
+          "name": "Complex pairs",
+          "weight": 3,
+          "exact": 1,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 0,
+          "digit_sum": 7,
+          "divisibility": 69,
+          "total_score": 147.6
+        },
+        "24": {
+          "name": "Leech dimension",
+          "weight": 8,
+          "exact": 2,
+          "close_matches": 2,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 0,
+          "digit_sum": 18,
+          "divisibility": 77,
+          "total_score": 496.79999999999995
+        },
+        "8": {
+          "name": "E\u2088 dimension",
+          "weight": 7,
+          "exact": 2,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 2,
+          "digit_sum": 22,
+          "divisibility": 70,
+          "total_score": 483.0
+        },
+        "240": {
+          "name": "E\u2088 roots",
+          "weight": 6,
+          "exact": 1,
+          "close_matches": 1,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 137,
+          "digit_sum": 18,
+          "divisibility": 93,
+          "total_score": 1133.4
+        },
+        "196560": {
+          "name": "Leech kissing",
+          "weight": 5,
+          "exact": 1,
+          "close_matches": 3,
+          "mod_1000": 0,
+          "mod_100": 2,
+          "mod_10": 137,
+          "digit_sum": 3,
+          "divisibility": 136,
+          "total_score": 1041.5
+        },
+        "4371": {
+          "name": "Griess component 1",
+          "weight": 6,
+          "exact": 0,
+          "close_matches": 0,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 0,
+          "digit_sum": 10,
+          "divisibility": 70,
+          "total_score": 156.0
+        },
+        "96255": {
+          "name": "Griess component 2",
+          "weight": 5,
+          "exact": 0,
+          "close_matches": 0,
+          "mod_1000": 0,
+          "mod_100": 2,
+          "mod_10": 0,
+          "digit_sum": 3,
+          "divisibility": 79,
+          "total_score": 146.0
+        },
+        "96256": {
+          "name": "Griess component 3",
+          "weight": 5,
+          "exact": 0,
+          "close_matches": 0,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 1,
+          "digit_sum": 0,
+          "divisibility": 75,
+          "total_score": 117.5
+        },
+        "744": {
+          "name": "j constant",
+          "weight": 7,
+          "exact": 1,
+          "close_matches": 2,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 0,
+          "digit_sum": 10,
+          "divisibility": 81,
+          "total_score": 345.1
+        },
+        "1": {
+          "name": "Trivial rep",
+          "weight": 2,
+          "exact": 0,
+          "close_matches": 67,
+          "mod_1000": 0,
+          "mod_100": 0,
+          "mod_10": 0,
+          "digit_sum": 18,
+          "divisibility": 67,
+          "total_score": 728.2
+        }
+      }
+    }
+  },
+  "summary": {
+    "tests_passed": 2,
+    "tests_total": 2,
+    "pass_rate": "2/2",
+    "overall_status": "\u2705 ENHANCED TESTS PASSED"
+  }
+}

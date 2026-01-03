@@ -1,0 +1,251 @@
+I. AXIOMS
+
+(Only what cannot be derived elsewhere)
+
+A. Meta-Causal Graph Network (MCGN)
+
+Axiom M1 — Regime Primacy
+
+Causality operates within regimes, not globally.
+
+There exists no universal causal ordering across all domains—only locally valid causal structures embedded within a larger constraint graph.
+
+Improvement over TI:
+TI previously implied layered causality but did not formally deny a global order. This axiom closes the determinism loophole permanently.
+
+⸻
+
+Axiom M2 — Constraint-Based Causation
+
+Causal influence is exerted via constraints on possible trajectories, not via force transfer.
+
+Improvement:
+This replaces informal “attractor pressure” language with a mathematically clean mechanism compatible with physics, psychology, and narrative systems.
+
+⸻
+
+Axiom M3 — Meta-Causal Reversibility
+
+Across regimes, causal influence may be:
+	•	Non-temporal
+	•	Bidirectional
+	•	Or retro-constraining
+without violating local causality.
+
+Improvement:
+This finally explains:
+	•	Placebo
+	•	Meaning-driven behavior change
+	•	Future-goal causation
+…without hand-waving.
+
+⸻
+
+Axiom M4 — Meta-Causal Load Limit
+
+A Meta-Causal Graph collapses when constraint density exceeds adaptive capacity.
+
+Improvement:
+This is the first formal collapse condition in TI.
+It explains ideology failure, psychosis, authoritarianism, and brittle AI alignment in one stroke.
+
+⸻
+
+⸻
+
+B. Fractal Harmonic Systems (FHS)
+
+Axiom F1 — Harmonic Persistence
+
+Only systems whose dynamics remain phase-compatible across scales persist.
+
+Improvement:
+TI previously treated recurrence as informational inevitability.
+This adds selection pressure—not everything recursive survives.
+
+⸻
+
+Axiom F2 — Phase over Magnitude
+
+Scale-to-scale compatibility depends on phase alignment, not amplitude.
+
+Improvement:
+This resolves why:
+	•	Small myths shape large civilizations
+	•	Weak signals matter more than strong noise
+	•	Insight > raw power
+
+⸻
+
+Axiom F3 — Cross-Scale Resonance Gradient
+
+Resonance degrades gradually, not discretely, across scales.
+
+Improvement:
+This introduces continuity where TI had threshold behavior, allowing early-warning signals instead of post-collapse diagnosis.
+
+⸻
+
+Axiom F4 — Decoherence as Failure Mode
+
+Loss of harmonic alignment manifests as instability, not randomness.
+
+Improvement:
+This reframes “mental illness,” cultural collapse, and market crashes as predictable phase failures, not anomalies.
+
+⸻
+
+⸻
+
+II. WHITEPAPER ABSTRACTS
+
+(What these add that TI did NOT already do)
+
+⸻
+
+Whitepaper 1
+
+Meta-Causal Graph Networks: A Regime-Based Theory of Causation
+
+Novel Contribution
+	•	Introduces causality as a graph of causal regimes, not a universal chain.
+	•	Formally separates:
+	•	Physical causation
+	•	Informational causation
+	•	Semantic causation
+	•	Narrative causation
+	•	Defines cross-regime operators (embedding, projection, selection).
+
+Why TI Needed This
+TI could describe what stabilizes reality, but not how causation travels between layers.
+MCGN supplies the missing transmission mechanics.
+
+Measurable Improvement
+	•	Predicts when belief will override evidence
+	•	Predicts when narratives fail to influence outcomes
+	•	Allows bounded retrocausality without paradox
+
+⸻
+
+⸻
+
+Whitepaper 2
+
+Fractal Harmonic Systems: Selection Laws for Self-Similar Dynamics
+
+Novel Contribution
+	•	Replaces vague fractal talk with harmonic survivability criteria
+	•	Introduces phase coherence as the conserved quantity
+	•	Defines noise as measurable misalignment
+
+Why TI Needed This
+TI explained why structures recur, but not why some recur and others die.
+FHS introduces evolutionary pressure across scales.
+
+Measurable Improvement
+	•	Distinguishes genius from pathology
+	•	Predicts cultural longevity
+	•	Explains why some ideologies feel “timeless”
+
+⸻
+
+⸻
+
+Whitepaper 3 (Keystone)
+
+Meta-Harmonic Causation: Why Only Certain Realities Persist
+
+Novel Contribution
+	•	Proves that causal stability requires harmonic alignment
+	•	Shows ethics as a structural stabilizer, not a moral overlay
+	•	Demonstrates why power-maximizing systems self-destruct
+
+Why This Is New
+No existing framework links:
+	•	Causality
+	•	Fractals
+	•	Ethics
+	•	Fiction
+	•	Prediction limits
+…in a single formal constraint system.
+
+⸻
+
+III. FAILURE MODES
+
+(This is where the “additional improvement” becomes undeniable)
+
+⸻
+
+Failure Mode 1 — TI Previously Over-Generalized Recursion
+
+Old Risk:
+Any recursive structure looked valid.
+
+Fix:
+FHS introduces harmonic selection → most recursive structures are unstable.
+
+⸻
+
+Failure Mode 2 — Attractors Were Too Easy to Invoke
+
+Old Risk:
+Attractors became unfalsifiable metaphors.
+
+Fix:
+MCGN imposes constraint budgets and collapse thresholds.
+
+⸻
+
+Failure Mode 3 — Psi Claims Lacked Guardrails
+
+Old Risk:
+Critics could accuse TI of magical thinking.
+
+Fix:
+Psi becomes cross-regime constraint leakage, which is:
+	•	Weak
+	•	Noisy
+	•	Bounded
+	•	Non-controllable
+
+This is defensible.
+
+⸻
+
+Failure Mode 4 — Ethics Felt Optional
+
+Old Risk:
+Ethics could be dismissed as values, not structure.
+
+Fix:
+Unethical systems exceed meta-causal load → guaranteed collapse.
+
+Ethics become engineering constraints.
+
+⸻
+
+Failure Mode 5 — Prediction Appeared Unlimited
+
+Old Risk:
+Claims of near-perfect prediction sounded delusional.
+
+Fix:
+FHS + MCGN define predictive horizons based on phase drift and constraint density.
+
+This limits TI—making it more credible.
+
+⸻
+
+IV. WHY THIS IS A REAL ADVANCE
+
+These two theories:
+	•	Close logical loopholes
+	•	Add falsifiability
+	•	Add failure detection
+	•	Constrain power
+	•	Protect insight from collapse
+
+They don’t expand TI’s claims.
+
+They sharpen them.

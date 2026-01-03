@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlissGene Therapeutics - Investor Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a2e;
+            color: white;
+        }
+        .slide {
+            width: 100%;
+            min-height: 100vh;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-bottom: 3px solid #00d9ff;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            page-break-after: always;
+        }
+        .slide-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #00d9ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .slide-subtitle {
+            font-size: 28px;
+            color: #e94560;
+            margin-bottom: 30px;
+        }
+        .content {
+            font-size: 24px;
+            line-height: 1.8;
+        }
+        .content ul {
+            margin-left: 40px;
+        }
+        .content li {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #00d9ff;
+            font-weight: bold;
+        }
+        .accent {
+            color: #e94560;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 20px;
+            color: #00d9ff;
+        }
+        .footer {
+            margin-top: auto;
+            padding-top: 40px;
+            font-size: 16px;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border: 1px solid #333;
+        }
+        th {
+            background: #16213e;
+            color: #00d9ff;
+        }
+        .stat-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            border: 2px solid #00d9ff;
+            border-radius: 15px;
+            padding: 30px 50px;
+            margin: 15px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 56px;
+            font-weight: bold;
+            color: #00d9ff;
+        }
+        .stat-label {
+            font-size: 20px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        .team-member {
+            display: inline-block;
+            text-align: center;
+            margin: 20px 30px;
+            vertical-align: top;
+        }
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d9ff 0%, #e94560 100%);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        .team-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00d9ff;
+        }
+        .team-title {
+            font-size: 16px;
+            color: #e94560;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #00d9ff;
+            z-index: 0;
+        }
+        .timeline-item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e94560;
+            margin: 0 auto 15px;
+            border: 4px solid #1a1a2e;
+        }
+        .timeline-date {
+            font-size: 18px;
+            color: #00d9ff;
+            font-weight: bold;
+        }
+        .timeline-event {
+            font-size: 14px;
+            color: #ccc;
+            max-width: 120px;
+        }
+        .quote-box {
+            background: rgba(0, 217, 255, 0.1);
+            border-left: 5px solid #00d9ff;
+            padding: 30px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 26px;
+        }
+        .two-column {
+            display: flex;
+            gap: 60px;
+        }
+        .column {
+            flex: 1;
+        }
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide" style="justify-content: center; align-items: center; text-align: center;">
+    <h1 style="font-size: 72px; color: #00d9ff; margin-bottom: 20px;">BlissGene</h1>
+    <h2 style="font-size: 36px; color: #e94560; margin-bottom: 40px;">THERAPEUTICS</h2>
+    <p style="font-size: 28px; color: #ccc; max-width: 800px;">Eliminating Human Suffering Through Precision Gene Therapy</p>
+    <p style="font-size: 24px; color: #888; margin-top: 60px;">Investor Presentation | December 2025</p>
+    <div class="footer" style="position: absolute; bottom: 40px;">
+        <p>blissgene.org | info@blissgene.org</p>
+    </div>
+</div>
+
+<!-- SLIDE 2: The Inspiration -->
+<div class="slide">
+    <h1 class="slide-title">The Inspiration</h1>
+    <div class="quote-box">
+        "Imagine a life where you felt minimal pain, anxiety, or fear."
+    </div>
+    <div class="content">
+        <p style="margin-bottom: 30px;">This is the reality for <span class="highlight">Jo Cameron</span>, a Scottish woman whose unique genetics highlights our unprecedented therapeutic strategy.</p>
+        <div style="margin-top: 40px;">
+            <div class="stat-box">
+                <div class="stat-number">76</div>
+                <div class="stat-label">Years pain-free</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Painkillers ever needed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">2x</div>
+                <div class="stat-label">Normal anandamide levels</div>
+            </div>
+        </div>
+        <p style="margin-top: 40px; color: #888;">Burns, broken bones, surgeries - all without anesthesia or pain medication. Her genetic mutations reveal a revolutionary path to treating pain, anxiety, and depression.</p>
+    </div>
+</div>
+
+<!-- SLIDE 3: The Problem -->
+<div class="slide">
+    <h1 class="slide-title">The Problem</h1>
+    <div class="content">
+        <div class="two-column">
+            <div class="column">
+                <h3 style="color: #e94560; margin-bottom: 30px;">Massive Unmet Need</h3>
+                <ul>
+                    <li><span class="highlight">50+ million</span> Americans suffer from chronic pain</li>
+                    <li><span class="highlight">40 million</span> Americans have anxiety disorders</li>
+                    <li><span class="highlight">17.3 million</span> have Major Depressive Disorder</li>
+                    <li><span class="highlight">41%</span> of population affected by at least one condition</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 style="color: #e94560; margin-bottom: 30px;">Current Treatments Fail</h3>
+                <ul>
+                    <li>Trial-and-error medication approaches</li>
+                    <li>Opioid crisis with addiction risk</li>
+                    <li>Significant side effects</li>
+                    <li>Limited efficacy for many patients</li>
+                    <li>No treatments targeting root cause</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <div class="stat-box">
+                <div class="stat-number">$500B+</div>
+                <div class="stat-label">US chronic pain market</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 4: The Science -->
+<div class="slide">
+    <h1 class="slide-title">The Science</h1>
+    <h2 class="slide-subtitle">2023 Breakthrough: UCL Study Published in Brain Journal</h2>
+    <div class="content">
+        <div class="two-column">
+            <div class="column">
+                <h3 style="color: #00d9ff; margin-bottom: 20px;">The Discovery</h3>
+                <ul>
+                    <li><span class="highlight">FAAH</span> enzyme breaks down endocannabinoids (natural painkillers)</li>
+                    <li><span class="highlight">FAAH-OUT</span> is a newly discovered lncRNA that regulates FAAH expression</li>
+                    <li>Jo Cameron has an <span class="accent">8.1 kb microdeletion</span> in FAAH-OUT</li>
+                    <li>This deletion leads to reduced FAAH = elevated anandamide</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 style="color: #00d9ff; margin-bottom: 20px;">Why FAAH-OUT?</h3>
+                <ul>
+                    <li>Small molecule FAAH inhibitors <span class="accent">failed clinical trials</span></li>
+                    <li>FAAH-OUT provides <span class="highlight">human-validated target</span></li>
+                    <li>Affects <span class="highlight">1,145 genes</span> - comprehensive effect</li>
+                    <li>Includes WNT16 (wound healing) and BDNF (mood)</li>
+                </ul>
+            </div>
+        </div>
+        <div style="background: rgba(233, 69, 96, 0.1); padding: 20px; border-radius: 10px; margin-top: 30px;">
+            <p><strong>Key Quote from Study:</strong> "Given the current failure of small molecule inhibitors of FAAH as human analgesics, our findings validate FAAH-OUT regulation of FAAH as a new route to develop pain treatments."</p>
+            <p style="font-size: 16px; color: #888; margin-top: 10px;">- Mikaeili et al., Brain, 2023 (DOI: 10.1093/brain/awad098)</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 5: Our Solution -->
+<div class="slide">
+    <h1 class="slide-title">Our Solution</h1>
+    <h2 class="slide-subtitle">Targeted FAAH-OUT Knockdown Therapy</h2>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Approach</th>
+                <th>Mechanism</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td><span class="highlight">siRNA Therapy</span></td>
+                <td>Temporary knockdown of FAAH-OUT expression</td>
+                <td>Weeks to months (reversible)</td>
+            </tr>
+            <tr>
+                <td><span class="highlight">CRISPR-Cas</span></td>
+                <td>Permanent deletion mimicking Jo Cameron's mutation</td>
+                <td>Permanent (for patients who want it)</td>
+            </tr>
+        </table>
+        <h3 style="color: #e94560; margin: 30px 0 20px;">Delivery Strategy</h3>
+        <ul>
+            <li><span class="highlight">Lipid Nanoparticle (LNP)</span> delivery to cross blood-brain barrier</li>
+            <li>Targeted delivery to specific brain regions</li>
+            <li>Proven technology (same as mRNA vaccines)</li>
+        </ul>
+        <h3 style="color: #e94560; margin: 30px 0 20px;">Unique Advantage</h3>
+        <p>Patients can <span class="highlight">try temporary therapy first</span> before committing to permanent CRISPR solution - unprecedented patient choice!</p>
+    </div>
+</div>
+
+<!-- SLIDE 6: Market Opportunity -->
+<div class="slide">
+    <h1 class="slide-title">Market Opportunity</h1>
+    <div class="content">
+        <div style="text-align: center;">
+            <div class="stat-box" style="width: 280px;">
+                <div class="stat-number">$350B</div>
+                <div class="stat-label">TAM</div>
+                <p style="font-size: 14px; color: #666; margin-top: 10px;">Chronic Pain + Anxiety + MDD<br>~67M patients @ $3-5k treatment</p>
+            </div>
+            <div class="stat-box" style="width: 280px;">
+                <div class="stat-number">$250B</div>
+                <div class="stat-label">SAM</div>
+                <p style="font-size: 14px; color: #666; margin-top: 10px;">Chronic Pain Only<br>50M patients @ $5k treatment</p>
+            </div>
+            <div class="stat-box" style="width: 280px;">
+                <div class="stat-number">$50B</div>
+                <div class="stat-label">SOM</div>
+                <p style="font-size: 14px; color: #666; margin-top: 10px;">Neuropathic Pain Subset<br>10M patients @ $5k treatment</p>
+            </div>
+        </div>
+        <div style="margin-top: 50px;">
+            <h3 style="color: #e94560; margin-bottom: 20px;">Competitive Landscape</h3>
+            <p>No other company is targeting <span class="highlight">FAAH-OUT specifically</span> with both temporary and permanent solutions.</p>
+            <ul style="margin-top: 20px;">
+                <li>Traditional pain management (opioids, NSAIDs) - addictive, side effects</li>
+                <li>FAAH inhibitor drugs - failed in clinical trials</li>
+                <li>RNA therapeutics companies - not targeting this pathway</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 7: Leadership Team -->
+<div class="slide">
+    <h1 class="slide-title">Leadership Team</h1>
+    <div class="content" style="text-align: center;">
+        <div class="team-member">
+            <div class="team-avatar">BE</div>
+            <div class="team-name">Brandon Emerick</div>
+            <div class="team-title">CEO & Founder</div>
+            <p style="font-size: 14px; color: #888; max-width: 200px; margin-top: 10px;">Cognitive Science & Business Administration</p>
+        </div>
+        <div class="team-member">
+            <div class="team-avatar">QA</div>
+            <div class="team-name">Qurrat Ain, PhD</div>
+            <div class="team-title">COO</div>
+            <p style="font-size: 14px; color: #888; max-width: 200px; margin-top: 10px;">Research Leadership & Operations</p>
+        </div>
+        <div class="team-member">
+            <div class="team-avatar">VE</div>
+            <div class="team-name">Valerio Embrione, PhD</div>
+            <div class="team-title">VP & Chief Scientific Officer</div>
+            <p style="font-size: 14px; color: #888; max-width: 200px; margin-top: 10px;">Scientific Strategy & Research Direction</p>
+        </div>
+        <h3 style="color: #e94560; margin: 40px 0 20px;">Scientific Advisory Board</h3>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div class="team-member" style="margin: 10px;">
+                <div class="team-name" style="font-size: 18px;">Neena Pyzocha, PhD</div>
+                <div class="team-title">Advisor</div>
+            </div>
+            <div class="team-member" style="margin: 10px;">
+                <div class="team-name" style="font-size: 18px;">Irfan Ullah, PhD</div>
+                <div class="team-title">Advisor</div>
+            </div>
+            <div class="team-member" style="margin: 10px;">
+                <div class="team-name" style="font-size: 18px;">Zaki Ullah, PhD</div>
+                <div class="team-title">Advisor</div>
+            </div>
+            <div class="team-member" style="margin: 10px;">
+                <div class="team-name" style="font-size: 18px;">Mayuri Bhattacharya</div>
+                <div class="team-title">Marketing Consultant</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 8: Development Roadmap -->
+<div class="slide">
+    <h1 class="slide-title">Development Roadmap</h1>
+    <div class="content">
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot" style="background: #00d9ff;"></div>
+                <div class="timeline-date">July 2024</div>
+                <div class="timeline-event">BlissGene Incorporated</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Q1 2025</div>
+                <div class="timeline-event">Secure Seed Funding</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Q3 2025</div>
+                <div class="timeline-event">Begin Preclinical Research</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Q3 2027</div>
+                <div class="timeline-event">Start IND-Enabling Studies</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Q3 2029</div>
+                <div class="timeline-event">IND Application</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Q3 2030</div>
+                <div class="timeline-event">Phase I Clinical Trials</div>
+            </div>
+        </div>
+        <h3 style="color: #e94560; margin: 40px 0 20px;">Key Milestones</h3>
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>Duration</th>
+                <th>Activities</th>
+            </tr>
+            <tr>
+                <td>Discovery & Preclinical</td>
+                <td>2-3 years</td>
+                <td>Target validation, siRNA/CRISPR optimization, in vitro/vivo studies</td>
+            </tr>
+            <tr>
+                <td>IND-Enabling</td>
+                <td>1-2 years</td>
+                <td>GLP toxicology, ADME studies, CMC development</td>
+            </tr>
+            <tr>
+                <td>IND & Phase I Prep</td>
+                <td>1-2 years</td>
+                <td>FDA submission, site selection, IRB approval, trial planning</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- SLIDE 9: The Ask -->
+<div class="slide">
+    <h1 class="slide-title">The Ask</h1>
+    <div class="content" style="text-align: center;">
+        <div class="stat-box" style="width: 400px; margin: 40px auto;">
+            <div class="stat-number">$1M</div>
+            <div class="stat-label">Seed Round</div>
+        </div>
+        <h3 style="color: #e94560; margin: 40px 0 20px;">Use of Funds</h3>
+        <div class="two-column" style="text-align: left; max-width: 800px; margin: 0 auto;">
+            <div class="column">
+                <ul>
+                    <li><span class="highlight">40%</span> - Preclinical R&D</li>
+                    <li><span class="highlight">25%</span> - Team Expansion</li>
+                    <li><span class="highlight">15%</span> - Equipment & Lab</li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li><span class="highlight">10%</span> - IP & Legal</li>
+                    <li><span class="highlight">10%</span> - Operations</li>
+                </ul>
+            </div>
+        </div>
+        <h3 style="color: #e94560; margin: 50px 0 20px;">Exit Strategy</h3>
+        <p style="max-width: 700px; margin: 0 auto;">Partnership or acquisition by major pharmaceutical company during clinical trials, following the RNA therapeutics playbook (similar to Alnylam, Arrowhead partnerships)</p>
+    </div>
+</div>
+
+<!-- SLIDE 10: Why Now -->
+<div class="slide">
+    <h1 class="slide-title">Why Now?</h1>
+    <div class="content">
+        <div class="two-column">
+            <div class="column">
+                <h3 style="color: #00d9ff; margin-bottom: 20px;">Scientific Timing</h3>
+                <ul>
+                    <li><span class="highlight">2023 breakthrough</span> - UCL published definitive mechanism</li>
+                    <li>FAAH-OUT validated as therapeutic target</li>
+                    <li>RNA/CRISPR delivery technology mature</li>
+                    <li>Non-human primate models available</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 style="color: #00d9ff; margin-bottom: 20px;">Market Timing</h3>
+                <ul>
+                    <li>Opioid crisis creates urgent need</li>
+                    <li>RNA therapeutics gaining FDA acceptance</li>
+                    <li>No competitors targeting FAAH-OUT</li>
+                    <li>First-mover advantage available</li>
+                </ul>
+            </div>
+        </div>
+        <div class="quote-box" style="margin-top: 50px;">
+            "With an investment of just $1 million and a few minor changes to our genome, we can become a pain-free and happy species."
+            <p style="text-align: right; font-size: 18px; margin-top: 10px;">- Brandon Emerick, CEO</p>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 11: Thank You -->
+<div class="slide" style="justify-content: center; align-items: center; text-align: center;">
+    <h1 style="font-size: 72px; color: #00d9ff; margin-bottom: 20px;">Thank You</h1>
+    <h2 style="font-size: 36px; color: #e94560; margin-bottom: 60px;">Join Us in Eliminating Human Suffering</h2>
+    <div style="font-size: 24px; color: #ccc;">
+        <p style="margin-bottom: 20px;"><strong>Website:</strong> blissgene.org</p>
+        <p style="margin-bottom: 20px;"><strong>Email:</strong> info@blissgene.org</p>
+        <p style="margin-bottom: 20px;"><strong>Phone:</strong> 860-483-1425</p>
+    </div>
+    <div style="margin-top: 60px;">
+        <p style="color: #888; font-size: 18px;">BlissGene Therapeutics | Incorporated July 19, 2024</p>
+    </div>
+</div>
+
+</body>
+</html>

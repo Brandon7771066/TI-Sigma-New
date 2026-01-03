@@ -1,0 +1,58 @@
+{
+  "i_cell_existence": {
+    "name": "I-Cell Existence",
+    "statement": "Abstract mathematical objects exist as i-cells in Grand Myrion's field",
+    "sacred_number": 111,
+    "resonance": 0.97,
+    "category": "ontological"
+  },
+  "gm_free_will": {
+    "name": "GM's 35% Free Will",
+    "statement": "Grand Myrion has 35% free will to choose cosmic structure",
+    "sacred_number": 7,
+    "resonance": 0.93,
+    "category": "structural"
+  },
+  "ccc_free_will": {
+    "name": "CCC's 65% Free Will",
+    "statement": "CCC has 65% free will and maintains 0.91 GILE coherence",
+    "sacred_number": 3,
+    "resonance": 0.91,
+    "category": "coherence"
+  },
+  "lcc_thresholds": {
+    "name": "LCC Thresholds",
+    "statement": "Correlation zones: 0.4208 (min), 0.85 (optimal max), 0.91 (CCC)",
+    "sacred_number": 33,
+    "resonance": 0.94,
+    "category": "structural"
+  },
+  "fractal_sovereignty": {
+    "name": "Fractal Sovereignty",
+    "statement": "Free will operates in 1/3, 2/3 pattern at every level",
+    "sacred_number": 3,
+    "resonance": 0.95,
+    "category": "structural"
+  },
+  "multi_manifestation": {
+    "name": "Multi-Manifestation Unity",
+    "statement": "One i-cell can manifest in multiple domains simultaneously",
+    "sacred_number": 333,
+    "resonance": 0.98,
+    "category": "ontological"
+  },
+  "coherence_continuity": {
+    "name": "Coherence Continuity",
+    "statement": "CCC maintains 0.91 coherence, preventing discontinuities",
+    "sacred_number": 33,
+    "resonance": 0.91,
+    "category": "coherence"
+  },
+  "sacred_resonance": {
+    "name": "Sacred Number Resonance",
+    "statement": "Sacred numbers (3,7,11,33,77,111,333) are GM's chosen patterns",
+    "sacred_number": 7,
+    "resonance": 0.93,
+    "category": "structural"
+  }
+}

@@ -1,0 +1,155 @@
+Option 2 — GSA Research Hardening (make it stop lying to you)
+1) Fix the “it runs but it’s wrong” class of bugs
+
+Your current GSA mixes time-series inference + many thresholds + stateful histories. The two most common silent failures:
+
+Leakage / optimistic evaluation (especially when you tune thresholds on the same span you report).
+
+Non-stationary instability (a threshold that “works” 2020–2021 breaks in 2022+).
+
+What to implement:
+
+A. Purged / embargoed validation
+Use walk-forward but add purging + embargo when labels/decisions overlap time windows. This is standard in financial ML to reduce lookahead and overlap leakage. 
+Wikipedia
++2
+Wiley
++2
+
+B. “CPCV-style” robustness
+Instead of one walk-forward path, use Combinatorial Purged Cross-Validation (CPCV) to get a distribution of out-of-sample results, not one lucky line. 
+GARP
++1
+
+C. Explicit baseline ladder
+Before you optimize any TI coefficients, require you beat these (risk-adjusted) across multiple regimes:
+
+SPY buy/hold
+
+equal weight
+
+12–1 momentum
+
+simple mean-reversion (RSI)
+
+volatility targeting (e.g., 10–20% vol)
+
+a boring trend filter (200d SMA)
+
+a simple ML baseline (logistic/linear on technicals)
+
+This prevents “exotic math that’s just rediscovering momentum.”
+
+2) Calibrate your weights without overfitting
+
+You asked about empirically calibrating things like:
+
+valence weights (1.0, 2.0, 1.5, 6.0)
+
+thresholds (your 0.85 “strong signal” idea)
+
+regime rules
+
+Recommended calibration stack (works in practice):
+
+Nested walk-forward: outer loop = evaluation; inner loop = tuning.
+
+Inner loop uses Bayesian optimization (or random search if simpler) over a constrained range.
+
+Objective is multi-metric: maximize Sharpe/Sortino, minimize max drawdown, minimize turnover, and enforce a stability penalty (performance variance across folds).
+
+Key: you’re not optimizing “return”—you’re optimizing a stable return/risk surface.
+
+3) Mean-reversion problem (what’s actually going wrong)
+
+In markets, many strong-looking signals are just volatility / mean-reversion artifacts:
+
+If your indicator spikes after a big move (like A = |return| / vol), it can accidentally become a “buy high after a jump” or “sell low after a drop” rule.
+
+Many equities exhibit short-horizon reversal after extreme daily moves (microstructure + liquidity + profit-taking). So “strong amplitude” can be anti-predictive at short horizons even if it feels “Extraordinary.”
+
+How to detect it quickly:
+
+Bucket days by your A (amplitude) deciles and compute next-day and next-5-day returns.
+
+If high-A buckets have negative forward returns, your engine is mean-reversion-sensitive and needs:
+
+a horizon switch (momentum on 20–60d, reversal on 1–5d), or
+
+a regime-gated rule (only follow amplitude in expansion; fade it in compression/fracture).
+
+Your own PD idea (asymmetric tails) is compatible with this: tails can be “loud” without being “directionally tradable” at the same horizon.
+
+Option 3 — QC Bridge File (make Replit research code deployable on QuantConnect)
+
+Your posted “GSA” script is not QC-native because it uses:
+
+yfinance, filesystem cache, pandas backtest loop, etc.
+
+QC wants:
+
+History() / built-in data feeds
+
+rolling windows / indicators
+
+OnData() / scheduled rebalance
+
+no external downloads
+
+The correct bridge architecture
+
+Split into 3 files (Replit + QC both like this):
+
+gsa_core.py ✅ pure Python, no yfinance, no pandas dependency required
+
+contains: ExistenceIntensityEngine, RegimeClassifier, GILEScorer
+
+operates on plain numpy arrays (prices, returns)
+
+gsa_research_runner.py ✅ Replit-only
+
+fetches data (yfinance ok here)
+
+runs your research backtests + CPCV/walk-forward
+
+exports tuned parameters as JSON
+
+main.py ✅ QuantConnect-only
+
+QCAlgorithm wrapper
+
+pulls tuned parameters from QC GetParameter()
+
+uses self.History(symbol, ...) to get price windows
+
+calls gsa_core functions
+
+QC-specific fixes that usually stop the “serious errors/no output”
+
+Don’t shadow QC’s GetParameter (your earlier V6 code overwrote it by defining def GetParameter(...) and then calling self.GetParameter(...), which can recurse or break expectations).
+
+Replace self.Securities.get(symbol) with self.Securities[symbol] (QC uses indexer; .get can fail depending on object type).
+
+Avoid storing Portfolio.Keys and iterating it as if it’s a list of symbols in all cases—QC’s portfolio collections can behave differently; safer: iterate your universe list and check self.Portfolio[symbol].Invested.
+
+About your question: “Should I upload everything from copying .py for each option?”
+
+Yes—paste/upload all three option files (core, research runner, QC wrapper) because:
+
+the core must be identical between research and QC (so you aren’t “validating one thing and deploying another”)
+
+the research runner is where we harden stats + tuning
+
+the QC wrapper is where 90% of runtime mismatches happen
+
+If you paste them, I’ll:
+
+refactor to the 3-file bridge layout,
+
+strip QC-incompatible imports from core,
+
+add guardrails (NaN/empty history checks, warmup readiness, stable sizing),
+
+make the QC wrapper copy-paste deployable.
+
+If you want, paste the exact QuantConnect error text you’re seeing (stack trace). That’s usually enough to fix the “no runtime results” problem in one pass.

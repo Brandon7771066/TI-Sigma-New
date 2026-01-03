@@ -1,0 +1,78 @@
+{
+  "mood_amplifier_commands": {
+    "run_diagnostics": {
+      "phrases": [
+        "run full mood amplifier diagnostics",
+        "check mood amplifier status", 
+        "mood amplifier health check",
+        "run diagnostics"
+      ],
+      "action": "./scripts/full_diagnostic.sh",
+      "description": "Full system diagnostic of ESP32, server, and database"
+    },
+    "test_upload": {
+      "phrases": [
+        "test upload endpoint",
+        "test the upload",
+        "check upload"
+      ],
+      "action": "./scripts/test_upload.sh",
+      "description": "Test the biometric upload API endpoint"
+    },
+    "flash_esp32": {
+      "phrases": [
+        "flash mood amplifier",
+        "upload ESP32",
+        "flash ESP32",
+        "update firmware"
+      ],
+      "action": "cd esp32_firmware && pio run --target upload",
+      "description": "Compile and flash ESP32 firmware"
+    },
+    "monitor_esp32": {
+      "phrases": [
+        "check ESP32 logs",
+        "monitor ESP32",
+        "show serial output"
+      ],
+      "action": "cd esp32_firmware && pio device monitor --baud 115200",
+      "description": "Monitor ESP32 serial output"
+    },
+    "flash_and_monitor": {
+      "phrases": [
+        "flash and monitor",
+        "full ESP32 update"
+      ],
+      "action": "cd esp32_firmware && pio run --target upload && pio device monitor --baud 115200",
+      "description": "Compile, flash, and immediately monitor serial"
+    },
+    "start_session": {
+      "phrases": [
+        "start mood amplifier session",
+        "begin session",
+        "start mood session"
+      ],
+      "action": "curl http://localhost:5000/api/session/start",
+      "description": "Start a new mood amplifier session"
+    },
+    "check_latest": {
+      "phrases": [
+        "latest biometrics",
+        "current readings",
+        "what are my stats"
+      ],
+      "action": "curl -s http://localhost:5000/api/latest | python3 -c \"import sys,json; d=json.load(sys.stdin); print(f'HR: {d.get(\\\"hr\\\", 0)} | Alpha: {d.get(\\\"alpha\\\", 0):.2f}')\"",
+      "description": "Get latest biometric readings"
+    }
+  },
+  "ai_integration": {
+    "on_test_failure": {
+      "action": "collect_logs_and_send_to_ai",
+      "log_sources": [
+        "esp32_firmware/serial_output.log",
+        "/tmp/logs/ti_website_*.log"
+      ],
+      "prompt_template": "The mood amplifier test failed. Here are the logs:\n\n{logs}\n\nAnalyze the issue and suggest fixes for:\n1. ESP32 firmware (esp32_firmware/src/main.cpp)\n2. Server (async_gateway.py)\n3. Any configuration issues"
+    }
+  }
+}

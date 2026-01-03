@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# Replit specific
+.replit
+replit.nix
+.upm/
+.cache/
+.config/
+poetry.lock
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Generated files
+*.pdf
+*.zip
+generated_pdfs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+test_results/
+coverage/
+.pytest_cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Large ChatGPT export files (exceed GitLab 100MB limit)
+chatgpt_*.json
+chatgpt_data.db
+temp_jsondata.json
+attached_assets/chat_*.html
+attached_assets/chatgpt_conversations_*.json

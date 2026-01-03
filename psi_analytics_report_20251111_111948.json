@@ -1,0 +1,323 @@
+{
+  "timestamp": "2025-11-11T11:19:48.476217",
+  "overall_stats": {
+    "total_predictions": 20,
+    "verified": 0,
+    "pending": 20,
+    "successful": 0,
+    "success_rate": 0,
+    "avg_confidence": 69,
+    "predictions": [
+      {
+        "id": "pred_0",
+        "prediction": "Demo prediction 0",
+        "timestamp": "2025-11-11T11:13:20.619636",
+        "confidence": 50,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.5
+        }
+      },
+      {
+        "id": "pred_1",
+        "prediction": "Demo prediction 1",
+        "timestamp": "2025-11-10T11:13:20.619655",
+        "confidence": 52,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.55
+        }
+      },
+      {
+        "id": "pred_2",
+        "prediction": "Demo prediction 2",
+        "timestamp": "2025-11-09T11:13:20.619659",
+        "confidence": 54,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.6
+        }
+      },
+      {
+        "id": "pred_3",
+        "prediction": "Demo prediction 3",
+        "timestamp": "2025-11-08T11:13:20.619662",
+        "confidence": 56,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.65
+        }
+      },
+      {
+        "id": "pred_4",
+        "prediction": "Demo prediction 4",
+        "timestamp": "2025-11-07T11:13:20.619664",
+        "confidence": 58,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.7
+        }
+      },
+      {
+        "id": "pred_5",
+        "prediction": "Demo prediction 5",
+        "timestamp": "2025-11-06T11:13:20.619666",
+        "confidence": 60,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.75
+        }
+      },
+      {
+        "id": "pred_6",
+        "prediction": "Demo prediction 6",
+        "timestamp": "2025-11-05T11:13:20.619668",
+        "confidence": 62,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.8
+        }
+      },
+      {
+        "id": "pred_7",
+        "prediction": "Demo prediction 7",
+        "timestamp": "2025-11-04T11:13:20.619671",
+        "confidence": 64,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.8500000000000001
+        }
+      },
+      {
+        "id": "pred_8",
+        "prediction": "Demo prediction 8",
+        "timestamp": "2025-11-03T11:13:20.619675",
+        "confidence": 66,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.9
+        }
+      },
+      {
+        "id": "pred_9",
+        "prediction": "Demo prediction 9",
+        "timestamp": "2025-11-02T11:13:20.619677",
+        "confidence": 68,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 0.95
+        }
+      },
+      {
+        "id": "pred_10",
+        "prediction": "Demo prediction 10",
+        "timestamp": "2025-11-01T11:13:20.619679",
+        "confidence": 70,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.0
+        }
+      },
+      {
+        "id": "pred_11",
+        "prediction": "Demo prediction 11",
+        "timestamp": "2025-10-31T11:13:20.619681",
+        "confidence": 72,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.05
+        }
+      },
+      {
+        "id": "pred_12",
+        "prediction": "Demo prediction 12",
+        "timestamp": "2025-10-30T11:13:20.619688",
+        "confidence": 74,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.1
+        }
+      },
+      {
+        "id": "pred_13",
+        "prediction": "Demo prediction 13",
+        "timestamp": "2025-10-29T11:13:20.619693",
+        "confidence": 76,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.15
+        }
+      },
+      {
+        "id": "pred_14",
+        "prediction": "Demo prediction 14",
+        "timestamp": "2025-10-28T11:13:20.619695",
+        "confidence": 78,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.2000000000000002
+        }
+      },
+      {
+        "id": "pred_15",
+        "prediction": "Demo prediction 15",
+        "timestamp": "2025-10-27T11:13:20.619699",
+        "confidence": 80,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.25
+        }
+      },
+      {
+        "id": "pred_16",
+        "prediction": "Demo prediction 16",
+        "timestamp": "2025-10-26T11:13:20.619701",
+        "confidence": 82,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.3
+        }
+      },
+      {
+        "id": "pred_17",
+        "prediction": "Demo prediction 17",
+        "timestamp": "2025-10-25T11:13:20.619703",
+        "confidence": 84,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.35
+        }
+      },
+      {
+        "id": "pred_18",
+        "prediction": "Demo prediction 18",
+        "timestamp": "2025-10-24T11:13:20.619705",
+        "confidence": 86,
+        "verified": true,
+        "outcome": "correct",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.4
+        }
+      },
+      {
+        "id": "pred_19",
+        "prediction": "Demo prediction 19",
+        "timestamp": "2025-10-23T11:13:20.619707",
+        "confidence": 88,
+        "verified": true,
+        "outcome": "incorrect",
+        "category": "demo",
+        "auto_features": {
+          "q_score": 1.4500000000000002
+        }
+      }
+    ]
+  },
+  "q_score_correlation": {
+    "q_score_bins": {
+      "low_<0.5": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0
+      },
+      "med_0.5-0.7": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0
+      },
+      "high_0.7-0.91": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0
+      },
+      "ccc_\u22650.91": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0
+      }
+    },
+    "correlation_strength": "WEAK",
+    "avg_rate": 0
+  },
+  "temporal_patterns": {
+    "by_month": {},
+    "by_day_of_week": {},
+    "by_hour": {}
+  },
+  "by_category": {
+    "demo": {
+      "total": 20,
+      "verified": 20,
+      "correct": 10,
+      "rate": 50.0
+    }
+  },
+  "sacred_numbers": {
+    "sacred_time_predictions": {
+      "3:33": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "11:11": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "3:11": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0.0
+      },
+      "other": {
+        "total": 0,
+        "correct": 0,
+        "rate": 0.0
+      }
+    },
+    "sacred_rate": 0,
+    "other_rate": 0.0,
+    "enrichment": 0
+  },
+  "top_days": [],
+  "insights": [
+    "\ud83c\udf31 BASELINE: 0.0% - focus on Q \u2265 0.91 first"
+  ]
+}

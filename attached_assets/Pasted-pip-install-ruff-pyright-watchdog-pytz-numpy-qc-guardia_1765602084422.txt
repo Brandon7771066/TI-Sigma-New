@@ -1,0 +1,166 @@
+pip install ruff pyright watchdog pytz numpy
+
+qc_guardian.py
+
+# qc_guardian.py
+"""
+QC-GUARDIAN v5
+Epistemic, economic, and structural stress-testing engine for QuantConnect.
+"""
+
+import os, re, time, subprocess, shutil, json, math
+import datetime
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+ROOT = "."
+PY_EXT = ".py"
+
+# -------------------------------------------------
+# Utilities
+# -------------------------------------------------
+def run(cmd, label):
+    print(f"\n--- {label} ---")
+    subprocess.run(cmd, check=False)
+
+def read_all_code():
+    code = ""
+    for root, _, files in os.walk(ROOT):
+        for f in files:
+            if f.endswith(PY_EXT):
+                with open(os.path.join(root, f), "r", encoding="utf-8", errors="ignore") as file:
+                    code += file.read() + "\n"
+    return code
+
+# -------------------------------------------------
+# Alpha Decay Diagnostics
+# -------------------------------------------------
+def alpha_decay_checks(code, warnings):
+    if code.count("Optimize") > 0:
+        warnings.append("Alpha decay risk: optimization dependency detected")
+
+    fast_indicators = ["EMA(", "ROC(", "Momentum("]
+    if sum(code.count(i) for i in fast_indicators) > 5:
+        warnings.append("Alpha decay risk: excessive fast-reacting indicators")
+
+# -------------------------------------------------
+# Regime Sensitivity Checks
+# -------------------------------------------------
+def regime_checks(code, warnings):
+    if "ATR" not in code and "Volatility" not in code:
+        warnings.append("Regime risk: no volatility awareness detected")
+
+    if "Trend" in code and "Range" not in code:
+        warnings.append("Regime risk: trend-only logic may fail in chop")
+
+# -------------------------------------------------
+# Walk-Forward Consistency
+# -------------------------------------------------
+def walk_forward_checks(code, warnings):
+    static_params = re.findall(r"=\s*\d+\.?\d*", code)
+    if len(static_params) > 25 and "RollingWindow" not in code:
+        warnings.append("Walk-forward risk: many static parameters without adaptation")
+
+# -------------------------------------------------
+# Slippage & Fill Realism
+# -------------------------------------------------
+def slippage_checks(code, warnings):
+    if "MarketOrder" in code and "SlippageModel" not in code:
+        warnings.append("Execution risk: MarketOrder without slippage model")
+
+    if code.count("MarketOrder") > 20:
+        warnings.append("Execution risk: high turnover without liquidity checks")
+
+# -------------------------------------------------
+# Capital Scaling Stress
+# -------------------------------------------------
+def scaling_checks(code, warnings):
+    if "SetHoldings" in code:
+        percents = re.findall(r"SetHoldings\([^,]+,\s*(0\.\d+|1\.0)", code)
+        if percents and float(percents[0]) > 0.25:
+            warnings.append("Scaling risk: large capital concentration")
+
+    if "SetLeverage" in code:
+        lev = re.findall(r"SetLeverage\((\d+)", code)
+        if lev and int(lev[0]) > 2:
+            warnings.append("Scaling risk: leverage amplifies slippage at scale")
+
+# -------------------------------------------------
+# Deployment Verdict Engine
+# -------------------------------------------------
+def deployment_verdict(score, warnings):
+    severe = len([w for w in warnings if "risk" in w.lower()])
+
+    if score >= 90 and severe <= 2:
+        return "DEPLOYABLE"
+    if score >= 75:
+        return "RESEARCH-ONLY"
+    if score >= 60:
+        return "BACKTEST-ILLUSION"
+    return "REJECT — STRUCTURAL RISK"
+
+# -------------------------------------------------
+# Full Validation
+# -------------------------------------------------
+def validate_all():
+    code = read_all_code()
+    warnings = []
+    score = 100
+
+    alpha_decay_checks(code, warnings)
+    regime_checks(code, warnings)
+    walk_forward_checks(code, warnings)
+    slippage_checks(code, warnings)
+    scaling_checks(code, warnings)
+
+    score -= len(warnings) * 4
+    score = max(score, 0)
+
+    verdict = deployment_verdict(score, warnings)
+
+    print("\n--- QC-GUARDIAN v5 FINAL REPORT ---")
+    print(f"QC Score: {score}/100")
+    print(f"Deployment Verdict: {verdict}")
+
+    for w in warnings:
+        print(f"⚠️  {w}")
+
+    report = {
+        "score": score,
+        "verdict": verdict,
+        "warnings": warnings,
+        "timestamp": datetime.datetime.utcnow().isoformat()
+    }
+
+    with open("QC_V5_FINAL_REPORT.json", "w") as f:
+        json.dump(report, f, indent=2)
+
+    run(["ruff", "check", "."], "Ruff Lint")
+    run(["pyright"], "Pyright Type Check")
+
+    if shutil.which("lean"):
+        run(["lean", "backtest", "."], "Lean Backtest")
+
+# -------------------------------------------------
+# Watcher
+# -------------------------------------------------
+class Watcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith(PY_EXT):
+            print("\n[QC-GUARDIAN v5] Change detected — re-evaluating")
+            validate_all()
+
+def main():
+    print("\n[QC-GUARDIAN v5] EPISTEMIC STRESS MODE ACTIVE\n")
+    observer = Observer()
+    observer.schedule(Watcher(), ROOT, recursive=True)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+if __name__ == "__main__":
+    main()

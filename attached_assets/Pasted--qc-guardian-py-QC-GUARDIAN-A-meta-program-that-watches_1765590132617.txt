@@ -1,0 +1,87 @@
+# qc_guardian.py
+"""
+QC-GUARDIAN
+A meta-program that watches, repairs, lints, type-checks,
+and validates Python trading algorithms for QuantConnect compatibility.
+"""
+
+import os
+import subprocess
+import time
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+PROJECT_ROOT = "."
+WATCH_EXTENSIONS = (".py",)
+
+# ---------- Auto Repair ----------
+def sanitize_file(path: str):
+    try:
+        with open(path, "rb") as f:
+            raw = f.read()
+
+        text = raw.decode("utf-8", errors="ignore")
+
+        # Fix Replit corruption patterns
+        text = text.replace("\t", "    ")
+        text = text.replace("\r\n", "\n")
+        text = text.replace("\ufeff", "")
+
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+
+    except Exception as e:
+        print(f"[QC-GUARDIAN] Sanitize failed: {path} -> {e}")
+
+
+# ---------- Command Runner ----------
+def run_cmd(cmd, label):
+    print(f"\n--- {label} ---")
+    try:
+        subprocess.run(cmd, check=False)
+    except Exception as e:
+        print(f"[QC-GUARDIAN] {label} failed: {e}")
+
+
+# ---------- Validation Pipeline ----------
+def full_validation():
+    run_cmd(["ruff", "check", "."], "Ruff Lint")
+    run_cmd(["pyright"], "Pyright Type Check")
+
+    # Lean validation (only runs if Lean is installed)
+    if shutil.which("lean"):
+        run_cmd(["lean", "backtest", "."], "QuantConnect Lean Backtest")
+    else:
+        print("[QC-GUARDIAN] Lean not installed — skipping backtest")
+
+
+# ---------- Watcher ----------
+class CodeWatcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.is_directory:
+            return
+        if event.src_path.endswith(WATCH_EXTENSIONS):
+            print(f"\n[QC-GUARDIAN] Change detected: {event.src_path}")
+            sanitize_file(event.src_path)
+            full_validation()
+
+
+def main():
+    print("\n[QC-GUARDIAN] Active — Watching for code changes...\n")
+
+    observer = Observer()
+    observer.schedule(CodeWatcher(), path=PROJECT_ROOT, recursive=True)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+
+    observer.join()
+
+
+if __name__ == "__main__":
+    import shutil
+    main()

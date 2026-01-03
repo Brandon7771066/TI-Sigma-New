@@ -1,0 +1,67 @@
+{
+  "sessions": [
+    {
+      "session_id": "heart_20251125_223042",
+      "start_time": "2025-11-25T22:30:42.468464",
+      "end_time": null,
+      "polar_app": "Elite HRV",
+      "intuition_events": [
+        {
+          "timestamp": "2025-11-25T22:30:42.470825",
+          "event_type": "prediction",
+          "description": "Stock XYZ will go up tomorrow",
+          "confidence": 0.8,
+          "outcome": null,
+          "heart_rate_at_event": 72,
+          "coherence_at_event": 0.65,
+          "notes": ""
+        }
+      ],
+      "hrv_snapshots": [],
+      "coherence_scores": [],
+      "session_notes": "Testing persistence"
+    },
+    {
+      "session_id": "heart_20251126_014317",
+      "start_time": "2025-11-26T01:43:17.692844",
+      "end_time": "2025-11-26T01:46:53.019021",
+      "polar_app": "Elite HRV",
+      "intuition_events": [
+        {
+          "timestamp": "2025-11-26T01:43:30.884917",
+          "event_type": "intuition",
+          "description": "We need to figure out how to get users to lucid dreams at just the right moments when they\u2019re sleeping. The drug galantamine shows there is a strong acetylcholine mechanism. ",
+          "confidence": 0.81,
+          "outcome": null,
+          "heart_rate_at_event": 68,
+          "coherence_at_event": 0.97,
+          "notes": ""
+        },
+        {
+          "timestamp": "2025-11-26T01:44:00.929680",
+          "event_type": "intuition",
+          "description": "We really need to bring TI into VR",
+          "confidence": 0.81,
+          "outcome": null,
+          "heart_rate_at_event": 68,
+          "coherence_at_event": 0.73,
+          "notes": ""
+        },
+        {
+          "timestamp": "2025-11-26T01:46:32.838466",
+          "event_type": "intuition",
+          "description": "I predict that we have everything we need for the stock market. We need have to get the weights and stock market theories TI integrated.",
+          "confidence": 0.66,
+          "outcome": null,
+          "heart_rate_at_event": 68,
+          "coherence_at_event": 0.73,
+          "notes": ""
+        }
+      ],
+      "hrv_snapshots": [],
+      "coherence_scores": [],
+      "session_notes": "We really need to bring TI into VR"
+    }
+  ],
+  "last_updated": "2025-11-26T01:46:53.020363"
+}
