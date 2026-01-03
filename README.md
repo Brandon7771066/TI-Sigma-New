@@ -89,16 +89,29 @@ Coherence = |L × E| / 121
 
 ---
 
-## Tralse Logic (4-Valued)
+## Truth and Real-World Truth States
 
-Beyond binary True/False:
+### Ontological Truth
+**Truth (capital-T)** = Most perfect, necessary, and fully coherent entities.
+- Rare, invariant, NOT probabilistic
 
-| Value | Name | Meaning |
-|-------|------|---------|
-| **T** | True | Verified reality |
-| **F** | False | Verified non-reality |
-| **∇** | Tral | True-leaning undetermined |
-| **Δ** | Fals | False-leaning undetermined |
+### Real-World Truth States (Myrion Resolution)
+Four states encountered by imperfect agents:
+
+| State | Description |
+|-------|-------------|
+| **True-Tralse** | Converging toward Truth |
+| **Tralse-False** | Diverging from Truth |
+| **Tralse-Indeterminate** | Undetermined direction |
+| **Double Tralse (DT)** | Incoherent, collapses under resolution |
+
+**Only True-Tralse may converge toward Truth.**
+
+### Double Tralse (DT)
+- A real, named state representing lack of coherence
+- NOT Truth, NOT stable
+- A failure mode: collapses under resolution
+- Eliminated during MR-1, does NOT proceed to MR-2
 
 ---
 
