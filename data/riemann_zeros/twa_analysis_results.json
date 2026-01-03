@@ -1,0 +1,32 @@
+{
+  "twa_arithmetic": {
+    "sacred_interval": [
+      -0.6666666666666666,
+      0.3333333333333333
+    ],
+    "width": 1.0,
+    "fraction_gile_continuous": 0.5,
+    "fraction_twa_normalized": 0.49999999999999994,
+    "fraction_discrete_5point": 0.5,
+    "matches_20_percent": false
+  },
+  "riemann_analysis": {
+    "sigma": 0.5,
+    "gile_standard": 0.0,
+    "in_sacred_interval": true,
+    "sacred_interval": [
+      -0.6666666666666666,
+      0.3333333333333333
+    ],
+    "gap_analysis": {
+      "mean_gap": 0.6002561425434457,
+      "p10": -0.5090272913260631,
+      "p80": 0.33473807802679123,
+      "fraction_in_range": 0.6999996999997
+    }
+  },
+  "conclusion": {
+    "sacred_interval_is_20_percent": false,
+    "all_zeros_in_interval": true
+  }
+}

@@ -1,0 +1,136 @@
+# qc_guardian.py
+"""
+QC-GUARDIAN v2
+QuantConnect-aware meta-program that repairs, validates,
+and scores algorithm readiness for Lean.
+"""
+
+import os
+import re
+import time
+import subprocess
+import shutil
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+ROOT = "."
+PY_EXT = ".py"
+
+# ---------- Utilities ----------
+def run(cmd, label):
+    print(f"\n--- {label} ---")
+    try:
+        subprocess.run(cmd, check=False)
+    except Exception as e:
+        print(f"[QC-GUARDIAN] {label} error: {e}")
+
+# ---------- Auto Repair ----------
+def sanitize(path):
+    try:
+        with open(path, "rb") as f:
+            raw = f.read()
+
+        text = raw.decode("utf-8", errors="ignore")
+        text = text.replace("\t", "    ")
+        text = text.replace("\r\n", "\n")
+        text = text.replace("\ufeff", "")
+
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+
+    except Exception as e:
+        print(f"[QC-GUARDIAN] Sanitize failed: {e}")
+
+# ---------- QuantConnect Rules ----------
+QC_RULES = {
+    "Initialize": r"def\s+Initialize\s*\(",
+    "SetStartDate": r"SetStartDate\(",
+    "SetCash": r"SetCash\(",
+    "AddEquity": r"AddEquity\(",
+    "OnData": r"def\s+OnData\s*\(",
+}
+
+BAD_PATTERNS = {
+    "print_usage": r"\bprint\(",
+    "sleep_usage": r"\btime\.sleep\(",
+    "datetime_now": r"datetime\.now\(",
+}
+
+# ---------- QC Validation ----------
+def qc_validate(code):
+    score = 100
+    warnings = []
+
+    for name, pattern in QC_RULES.items():
+        if not re.search(pattern, code):
+            warnings.append(f"Missing QuantConnect requirement: {name}")
+            score -= 10
+
+    for name, pattern in BAD_PATTERNS.items():
+        if re.search(pattern, code):
+            warnings.append(f"QC-incompatible pattern detected: {name}")
+            score -= 5
+
+    if "Resolution.Minute" not in code and "Resolution.Daily" not in code:
+        warnings.append("No explicit resolution set")
+        score -= 5
+
+    return max(score, 0), warnings
+
+# ---------- Project Scan ----------
+def scan_project():
+    combined_code = ""
+    for root, _, files in os.walk(ROOT):
+        for f in files:
+            if f.endswith(PY_EXT):
+                path = os.path.join(root, f)
+                sanitize(path)
+                with open(path, "r", encoding="utf-8", errors="ignore") as file:
+                    combined_code += file.read() + "\n"
+    return combined_code
+
+# ---------- Full Pipeline ----------
+def validate_all():
+    code = scan_project()
+
+    run(["ruff", "check", "."], "Ruff Lint")
+    run(["pyright"], "Pyright Type Check")
+
+    score, warnings = qc_validate(code)
+
+    print("\n--- QuantConnect Readiness ---")
+    print(f"QC Readiness Score: {score}/100")
+
+    for w in warnings:
+        print(f"⚠️  {w}")
+
+    if shutil.which("lean"):
+        run(["lean", "backtest", "."], "Lean Backtest")
+    else:
+        print("[QC-GUARDIAN] Lean not installed — skipping backtest")
+
+# ---------- Watcher ----------
+class Watcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.is_directory:
+            return
+        if event.src_path.endswith(PY_EXT):
+            print(f"\n[QC-GUARDIAN] Change detected: {event.src_path}")
+            validate_all()
+
+def main():
+    print("\n[QC-GUARDIAN v2] Active — QuantConnect aware mode\n")
+    observer = Observer()
+    observer.schedule(Watcher(), ROOT, recursive=True)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+
+    observer.join()
+
+if __name__ == "__main__":
+    main()

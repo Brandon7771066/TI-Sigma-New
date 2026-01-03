@@ -1,0 +1,193 @@
+# qc_guardian.py
+"""
+QC-GUARDIAN v4
+Strategy-aware institutional QuantConnect validation engine.
+"""
+
+import os, re, time, subprocess, shutil, json
+import datetime, pytz
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+ROOT = "."
+PY_EXT = ".py"
+
+# -------------------------------------------------
+# Utilities
+# -------------------------------------------------
+def run(cmd, label):
+    print(f"\n--- {label} ---")
+    subprocess.run(cmd, check=False)
+
+def read_all_code():
+    code = ""
+    for root, _, files in os.walk(ROOT):
+        for f in files:
+            if f.endswith(PY_EXT):
+                with open(os.path.join(root, f), "r", encoding="utf-8", errors="ignore") as file:
+                    code += file.read() + "\n"
+    return code
+
+# -------------------------------------------------
+# Strategy Classification Engine
+# -------------------------------------------------
+STRATEGY_SIGNATURES = {
+    "Momentum": [
+        r"EMA\(", r"SMA\(", r"ROC\(", r"Momentum", r"Breakout"
+    ],
+    "MeanReversion": [
+        r"RSI\(", r"Bollinger", r"ZScore", r"MeanReversion"
+    ],
+    "StatArb": [
+        r"Cointegration", r"Spread", r"Pairs", r"HedgeRatio"
+    ],
+    "EventDriven": [
+        r"Earnings", r"News", r"Dividend", r"Split"
+    ],
+    "ML": [
+        r"sklearn", r"TensorFlow", r"PyTorch", r"model\.predict"
+    ],
+    "Options": [
+        r"AddOption", r"Greeks", r"ImpliedVolatility"
+    ],
+}
+
+def classify_strategy(code):
+    scores = {}
+    for strat, patterns in STRATEGY_SIGNATURES.items():
+        scores[strat] = sum(1 for p in patterns if re.search(p, code))
+    best = max(scores, key=scores.get)
+    return best if scores[best] > 0 else "Unclassified"
+
+# -------------------------------------------------
+# Strategy-Specific Rules
+# -------------------------------------------------
+STRATEGY_RULES = {
+    "Momentum": {
+        "required": ["Resolution.Minute", "SetWarmUp"],
+        "warnings": ["RSI(", "MeanReversion"],
+    },
+    "MeanReversion": {
+        "required": ["RSI(", "Bollinger"],
+        "warnings": ["Breakout", "Momentum"],
+    },
+    "StatArb": {
+        "required": ["History(", "RollingWindow"],
+        "warnings": ["SingleAsset"],
+    },
+    "Options": {
+        "required": ["AddOption", "SetFilter"],
+        "warnings": ["MarketOrder"],
+    },
+}
+
+# -------------------------------------------------
+# Overfitting Detection
+# -------------------------------------------------
+def overfitting_checks(code, warnings):
+    magic_numbers = re.findall(r"\b\d{2,}\.\d+|\b\d{3,}\b", code)
+    if len(magic_numbers) > 10:
+        warnings.append("High number of magic constants — overfitting risk")
+
+    if code.count("Optimize") > 0:
+        warnings.append("Parameter optimization detected — review overfitting")
+
+# -------------------------------------------------
+# Portfolio & Risk Checks
+# -------------------------------------------------
+def portfolio_checks(code, warnings):
+    if "SetHoldings" in code and "Risk" not in code:
+        warnings.append("SetHoldings used without explicit risk controls")
+
+    if "SetLeverage" in code:
+        lev = re.findall(r"SetLeverage\((\d+)", code)
+        if lev and int(lev[0]) > 2:
+            warnings.append("Leverage >2x — QC review risk")
+
+# -------------------------------------------------
+# QC Core Validation
+# -------------------------------------------------
+def qc_validate(code):
+    score = 100
+    warnings = []
+
+    strategy = classify_strategy(code)
+
+    # Strategy rules
+    rules = STRATEGY_RULES.get(strategy, {})
+    for req in rules.get("required", []):
+        if req not in code:
+            warnings.append(f"{strategy}: missing required component [{req}]")
+            score -= 7
+
+    for warn in rules.get("warnings", []):
+        if warn in code:
+            warnings.append(f"{strategy}: conflicting pattern detected [{warn}]")
+            score -= 5
+
+    overfitting_checks(code, warnings)
+    portfolio_checks(code, warnings)
+
+    return max(score, 0), warnings, strategy
+
+# -------------------------------------------------
+# Submission Notes Generator
+# -------------------------------------------------
+def generate_notes(strategy, score, warnings):
+    notes = {
+        "strategy_class": strategy,
+        "qc_score": score,
+        "risk_notes": warnings,
+        "timestamp": datetime.datetime.utcnow().isoformat()
+    }
+    with open("QC_SUBMISSION_NOTES.json", "w") as f:
+        json.dump(notes, f, indent=2)
+
+# -------------------------------------------------
+# Full Validation Pipeline
+# -------------------------------------------------
+def validate_all():
+    code = read_all_code()
+
+    run(["ruff", "check", "."], "Ruff Lint")
+    run(["pyright"], "Pyright Type Check")
+
+    score, warnings, strategy = qc_validate(code)
+
+    print("\n--- QC-GUARDIAN v4 REPORT ---")
+    print(f"Detected Strategy: {strategy}")
+    print(f"QC Readiness Score: {score}/100")
+
+    for w in warnings:
+        print(f"⚠️  {w}")
+
+    generate_notes(strategy, score, warnings)
+
+    if shutil.which("lean"):
+        run(["lean", "backtest", "."], "Lean Backtest")
+    else:
+        print("[QC-GUARDIAN] Lean not installed — skipping backtest")
+
+# -------------------------------------------------
+# Watcher
+# -------------------------------------------------
+class Watcher(FileSystemEventHandler):
+    def on_modified(self, event):
+        if not event.is_directory and event.src_path.endswith(PY_EXT):
+            print("\n[QC-GUARDIAN] Change detected — revalidating")
+            validate_all()
+
+def main():
+    print("\n[QC-GUARDIAN v4] STRATEGY-AWARE MODE ACTIVE\n")
+    observer = Observer()
+    observer.schedule(Watcher(), ROOT, recursive=True)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+if __name__ == "__main__":
+    main()

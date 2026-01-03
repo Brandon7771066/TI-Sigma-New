@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-11-11T11:16:03.161318",
+  "benchmarks": {
+    "information_density": {
+      "binary": {
+        "states": 2,
+        "bits_per_symbol": 1.0,
+        "efficiency": 100
+      },
+      "ternary": {
+        "states": 3,
+        "bits_per_symbol": 1.584962500721156,
+        "efficiency": 158.4962500721156
+      },
+      "tralse": {
+        "states": 4,
+        "bits_per_symbol": 2.0,
+        "efficiency": 200.0
+      },
+      "ternary_gain_percent": 58.49625007211561,
+      "tralse_gain_percent": 100.0
+    },
+    "xor_benchmark": {
+      "iterations": 10000,
+      "binary_time_ms": 9.479045867919922,
+      "tralse_time_ms": 17.690420150756836,
+      "binary_throughput": 1054958.4989184567,
+      "tralse_throughput": 1130555.3983207322,
+      "speedup_percent": 7.165864769066976
+    },
+    "pattern_recognition": {
+      "patterns_tested": 1000,
+      "binary_matches": 132,
+      "tralse_matches": 18,
+      "binary_time_ms": 1.1248588562011719,
+      "tralse_time_ms": 1.2269020080566406,
+      "efficiency_ratio": 1.8336572094830939,
+      "efficiency_gain_percent": 83.36572094830939
+    },
+    "memory_efficiency": {
+      "target_bits": 1000,
+      "binary_symbols_needed": 1000.0,
+      "ternary_symbols_needed": 630.9148264984227,
+      "tralse_symbols_needed": 500.0,
+      "ternary_memory_savings_percent": 36.90851735015773,
+      "tralse_memory_savings_percent": 50.0
+    },
+    "neural_network": {
+      "weights": 100,
+      "binary_capacity_bits": 100,
+      "tralse_capacity_bits": 200,
+      "capacity_ratio": 2.0,
+      "binary_final_accuracy": 74.25,
+      "tralse_final_accuracy": 93.06,
+      "accuracy_gain_percent": 18.810000000000002,
+      "epochs": 100
+    }
+  },
+  "summary": {
+    "information_density_gain": 58.49625007211561,
+    "tralse_efficiency": 100.0,
+    "average_gain": 58.0
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "num_zeros": 1000000,
+  "zero_range": {
+    "min": 14.134725142,
+    "max": 600269.677012445
+  },
+  "gile_mapping": {
+    "sigma": 0.5,
+    "gile_score": 0.0,
+    "num_zeros": 1000000,
+    "all_on_critical_line": true,
+    "interpretation": "Perfect \u03a6 balance - all zeros at GILE = 0"
+  },
+  "spacing_analysis": {
+    "10": {
+      "lower": 0.5448920171373175,
+      "upper": 0.6072943993203808,
+      "width": 0.062402382183063265,
+      "fraction_of_gaps": 0.1,
+      "interval_fraction": 0.009067990630294249
+    },
+    "20": {
+      "lower": 0.5143414939957438,
+      "upper": 0.6401152855949476,
+      "width": 0.12577379159920377,
+      "fraction_of_gaps": 0.2,
+      "interval_fraction": 0.018276795273814248
+    },
+    "30": {
+      "lower": 0.48352529837866315,
+      "upper": 0.6748982926656026,
+      "width": 0.1913729942869395,
+      "fraction_of_gaps": 0.3,
+      "interval_fraction": 0.027809331284732928
+    },
+    "40": {
+      "lower": 0.4515801244182512,
+      "upper": 0.7122343214228749,
+      "width": 0.2606541970046237,
+      "fraction_of_gaps": 0.4,
+      "interval_fraction": 0.03787691644929399
+    },
+    "50": {
+      "lower": 0.4183065719844308,
+      "upper": 0.7538438515039161,
+      "width": 0.3355372795194853,
+      "fraction_of_gaps": 0.5,
+      "interval_fraction": 0.048758537740934596
+    },
+    "60": {
+      "lower": 0.38256810354068876,
+      "upper": 0.8011847300222144,
+      "width": 0.4186166264815256,
+      "fraction_of_gaps": 0.6,
+      "interval_fraction": 0.06083119768543296
+    },
+    "70": {
+      "lower": 0.34233630949747745,
+      "upper": 0.8583848140056943,
+      "width": 0.5160485045082168,
+      "fraction_of_gaps": 0.7,
+      "interval_fraction": 0.07498949302816754
+    },
+    "80": {
+      "lower": 0.2947093842027243,
+      "upper": 0.9331049444124802,
+      "width": 0.6383955602097559,
+      "fraction_of_gaps": 0.8,
+      "interval_fraction": 0.09276833280853028
+    },
+    "90": {
+      "lower": 0.23050192069786135,
+      "upper": 1.0512357190982584,
+      "width": 0.8207337984003971,
+      "fraction_of_gaps": 0.9,
+      "interval_fraction": 0.11926478018142975
+    },
+    "95": {
+      "lower": 0.18122788291366304,
+      "upper": 1.1616991753005987,
+      "width": 0.9804712923869356,
+      "fraction_of_gaps": 0.95,
+      "interval_fraction": 0.14247700458862161
+    }
+  },
+  "power_law": {
+    "alpha": 3.867898366067674,
+    "r_squared": 0.7153112486456026,
+    "pareto_expected": 1.161,
+    "close_to_pareto": false
+  },
+  "density_analysis": {
+    "mean_ratio": 0.8595497674082643,
+    "matches_theory": false
+  }
+}

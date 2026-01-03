@@ -1,0 +1,639 @@
+Got it. Two big things are happening here:
+
+Your current GSA “Replit version” cannot run on QuantConnect because QC doesn’t allow/need yfinance, local file caching, or a standalone __main__ runner. QC wants one class inheriting QCAlgorithm (and your screenshot error is exactly that: QC can’t find a valid QCAlgorithm subclass to load).
+
+Replit’s critique correctly flags a real, code-level bug: your RegimeClassifier stores rolling state in one instance, so in a multi-ticker backtest the state bleeds between tickers (W4). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+Below are Option 2 (GSA Research Hardening) + Option 3 (QC bridge file), in a way you can copy-paste into Replit and then into QuantConnect.
+
+Should you upload everything / copy every file for each option?
+
+No. Do this instead:
+
+Keep one shared core file: gsa_core.py (Option 2 hardened core)
+
+Keep one QC entrypoint file: main.py (Option 3 bridge)
+
+(Optional for Replit only) keep a replit_runner.py if you want local testing—but QC doesn’t use it.
+
+So: 2 files are enough for QC: gsa_core.py + main.py. If you paste only one file into QC, paste main.py and embed the core inside it (I’ll keep them separate because it’s cleaner and easier to debug).
+
+OPTION 2 — GSA RESEARCH HARDENING (fixes + “LCC probability acquisition” hook)
+What this hardening does
+
+Fixes state bleed by making regime state per-symbol, not global (addresses W4). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+Removes QC-incompatible stuff (yfinance, file caching).
+
+Adds a calibration surface so coefficients aren’t “magic constants” (your SWOT calls this out as a shared issue: arbitrary coefficients). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+Adds a Probability Acquisition metric as Δentropy / Δlogloss stub so you can wire in your latest LCC findings without circularity (the critique recommends this explicitly). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+gsa_core.py (paste as-is)
+# gsa_core.py
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from enum import Enum
+from typing import Dict, List, Optional, Tuple
+
+import numpy as np
+
+
+class MarketRegime(Enum):
+    EXPANSION = "expansion"
+    COMPRESSION = "compression"
+    FRACTURE = "fracture"
+    RESET = "reset"
+
+
+class TradingSignal(Enum):
+    STRONG_BUY = "strong_buy"
+    BUY = "buy"
+    HOLD = "hold"
+    SELL = "sell"
+    STRONG_SELL = "strong_sell"
+
+
+SACRED_MIN, SACRED_MAX = -0.666, 0.333
+
+
+@dataclass
+class XiMetrics:
+    amplitude: float = 0.0
+    memory_kernel: float = 0.0
+    constraint: float = 0.0
+    xi_unsigned: float = 0.0
+    xi_signed: float = 0.0
+    pd_score: float = 0.0
+
+
+@dataclass
+class RegimeState:
+    regime: MarketRegime = MarketRegime.EXPANSION
+    confidence: float = 0.0
+    constraint_rate: float = 0.0
+    memory_asymmetry: float = 0.0
+    pd_shape: str = "broad"
+
+
+@dataclass
+class TradingDecision:
+    signal: TradingSignal = TradingSignal.HOLD
+    confidence: float = 0.0
+    xi_metrics: XiMetrics = field(default_factory=XiMetrics)
+    regime: RegimeState = field(default_factory=RegimeState)
+    gile_score: float = 0.0
+    reasoning: str = ""
+
+
+@dataclass
+class GSAConfig:
+    # Lookbacks
+    lookback_short: int = 7
+    lookback_long: int = 30
+    regime_lookback: int = 60
+
+    # κ decay
+    kappa_decay_positive: float = 0.10
+    kappa_decay_negative: float = 0.05
+
+    # Valence weights (calibration surface)
+    W_GREAT: float = 1.0
+    W_TERRIBLE: float = 2.0
+    W_EXCEPTIONAL: float = 1.5
+    W_WICKED: float = 6.0
+
+    # GILE weights (calibration surface)
+    w_goodness: float = 0.20
+    w_intuition: float = 0.25
+    w_love: float = 0.25
+    w_environment: float = 0.30
+
+    # Trading thresholds
+    gile_strong_buy: float = 0.65
+    gile_buy: float = 0.55
+    gile_hold: float = 0.45
+    gile_sell: float = 0.35
+
+    # Overrides
+    xi_strong_negative: float = -2.0
+    kappa_high_neg: float = 0.70
+
+
+@dataclass
+class PerSymbolRegimeMemory:
+    constraint_history: List[float] = field(default_factory=list)
+    pd_history: List[float] = field(default_factory=list)
+
+
+class ExistenceIntensityEngine:
+    def __init__(self, cfg: GSAConfig):
+        self.cfg = cfg
+
+    def calculate_amplitude(self, returns: np.ndarray) -> float:
+        if returns.size < 2:
+            return 0.0
+        current = float(abs(returns[-1]))
+        vol = float(max(np.std(returns), 0.01))
+        return float(np.clip(current / vol, 0.0, 10.0))
+
+    def calculate_memory_kernel(self, returns: np.ndarray) -> float:
+        # returns are percent returns
+        if returns.size < 3:
+            return 0.5
+
+        pos = returns[returns > 0]
+        neg = returns[returns < 0]
+
+        # Important: enumerate is over filtered arrays; this is "recency within sign"
+        # not full temporal order. That's okay as a first model, but it IS an assumption.
+        k_pos = float(sum(abs(r) * np.exp(-self.cfg.kappa_decay_positive * i) for i, r in enumerate(pos)))
+        k_neg = float(sum(abs(r) * np.exp(-self.cfg.kappa_decay_negative * i) for i, r in enumerate(neg)))
+
+        total = k_pos + k_neg
+        if total <= 0:
+            return 0.5
+        return float(np.clip(k_neg / total, 0.0, 1.0))
+
+    def calculate_constraint(self, prices: np.ndarray, returns: np.ndarray) -> float:
+        if prices.size < 5:
+            return 0.0
+        peak = float(np.max(prices))
+        dd = float((peak - prices[-1]) / peak) if peak > 0 else 0.0
+
+        lb_s = min(self.cfg.lookback_short, returns.size)
+        lb_l = min(self.cfg.lookback_long, returns.size)
+        recent_vol = float(np.std(returns[-lb_s:])) if lb_s >= 2 else 0.0
+        long_vol = float(np.std(returns[-lb_l:])) if lb_l >= 2 else max(recent_vol, 0.01)
+
+        vol_constraint = 1.0 - min(recent_vol / max(long_vol, 0.01), 1.0)
+        return float(np.clip(0.6 * dd + 0.4 * vol_constraint, 0.0, 1.0))
+
+    def calculate_valence_weight(self, return_pct: float) -> float:
+        if return_pct > 5.0:
+            return self.cfg.W_EXCEPTIONAL
+        if return_pct > SACRED_MAX:
+            return self.cfg.W_GREAT
+        if return_pct > SACRED_MIN:
+            return 1.0
+        if return_pct > -5.0:
+            return self.cfg.W_TERRIBLE
+        return self.cfg.W_WICKED
+
+    def compute_xi(self, close_prices: np.ndarray, pct_returns: np.ndarray) -> XiMetrics:
+        if close_prices.size < 10 or pct_returns.size < 5:
+            return XiMetrics()
+
+        lb_s = min(self.cfg.lookback_short, pct_returns.size)
+        lb_l = min(self.cfg.lookback_long, pct_returns.size)
+
+        A = self.calculate_amplitude(pct_returns[-lb_s:])
+        kappa = self.calculate_memory_kernel(pct_returns[-lb_l:])
+        C = self.calculate_constraint(close_prices[-lb_l:], pct_returns[-lb_l:])
+
+        xi_unsigned = float(A * kappa * C)
+
+        r = float(pct_returns[-1])
+        valence = 1.0 if r >= 0 else -1.0
+        xi_signed = float(valence * xi_unsigned * self.calculate_valence_weight(r))
+
+        pd_score = float(np.clip(np.sign(xi_signed) * np.log1p(abs(xi_signed)), -3.0, 2.0))
+        return XiMetrics(
+            amplitude=A,
+            memory_kernel=kappa,
+            constraint=C,
+            xi_unsigned=xi_unsigned,
+            xi_signed=xi_signed,
+            pd_score=pd_score,
+        )
+
+
+class RegimeClassifier:
+    def __init__(self, cfg: GSAConfig):
+        self.cfg = cfg
+
+    def classify_regime(
+        self,
+        xi: XiMetrics,
+        pct_returns: np.ndarray,
+        mem: PerSymbolRegimeMemory,
+    ) -> RegimeState:
+        if pct_returns.size < 10:
+            return RegimeState(regime=MarketRegime.EXPANSION, confidence=0.3)
+
+        mem.constraint_history.append(float(xi.constraint))
+        mem.pd_history.append(float(xi.pd_score))
+
+        if len(mem.constraint_history) > self.cfg.regime_lookback:
+            mem.constraint_history = mem.constraint_history[-self.cfg.regime_lookback :]
+        if len(mem.pd_history) > self.cfg.regime_lookback:
+            mem.pd_history = mem.pd_history[-self.cfg.regime_lookback :]
+
+        constraint_rate = 0.0
+        if len(mem.constraint_history) >= 5:
+            recent_c = float(np.mean(mem.constraint_history[-5:]))
+            older_c = float(np.mean(mem.constraint_history[-10:-5])) if len(mem.constraint_history) >= 10 else recent_c
+            constraint_rate = recent_c - older_c
+
+        pd_shape = "broad"
+        if len(mem.pd_history) >= 10:
+            pd_std = float(np.std(mem.pd_history[-10:]))
+            pd_skew = self._skew(mem.pd_history[-20:]) if len(mem.pd_history) >= 20 else 0.0
+            if pd_std > 1.0:
+                pd_shape = "heavy_tail"
+            elif pd_std < 0.3:
+                pd_shape = "narrow"
+            elif abs(pd_skew) < 0.3:
+                pd_shape = "symmetric"
+
+        recent_vol = float(np.std(pct_returns[-10:]))
+        long_vol = float(np.std(pct_returns[-30:])) if pct_returns.size >= 30 else max(recent_vol, 0.01)
+        vol_ratio = recent_vol / max(long_vol, 0.01)
+
+        regime = MarketRegime.EXPANSION
+        conf = 0.5
+
+        if constraint_rate > 0.1 and recent_vol > long_vol * 1.5 and xi.pd_score < -1:
+            regime = MarketRegime.FRACTURE
+            conf = min(0.9, 0.5 + abs(constraint_rate) + abs(xi.pd_score) / 3.0)
+        elif constraint_rate > 0.05 and vol_ratio < 0.7:
+            regime = MarketRegime.COMPRESSION
+            conf = min(0.8, 0.5 + constraint_rate * 2.0 + (1.0 - vol_ratio))
+        elif constraint_rate < -0.05 and recent_vol > long_vol:
+            regime = MarketRegime.RESET
+            conf = min(0.8, 0.5 + abs(constraint_rate) + (vol_ratio - 1.0) * 0.5)
+        else:
+            conf = max(0.4, 0.7 - abs(constraint_rate) * 2.0)
+
+        return RegimeState(
+            regime=regime,
+            confidence=float(conf),
+            constraint_rate=float(constraint_rate),
+            memory_asymmetry=float(xi.memory_kernel),
+            pd_shape=pd_shape,
+        )
+
+    @staticmethod
+    def _skew(values: List[float]) -> float:
+        if len(values) < 3:
+            return 0.0
+        arr = np.asarray(values, dtype=float)
+        m = float(np.mean(arr))
+        s = float(np.std(arr))
+        if s <= 0:
+            return 0.0
+        z = (arr - m) / s
+        return float(np.mean(z**3))
+
+
+class GILEScorer:
+    def __init__(self, cfg: GSAConfig):
+        self.cfg = cfg
+
+    def calculate_gile(
+        self,
+        close_prices: np.ndarray,
+        pct_returns: np.ndarray,
+        market_returns: Optional[np.ndarray] = None,
+    ) -> float:
+        if close_prices.size < 20 or pct_returns.size < 20:
+            return 0.5
+
+        r20 = pct_returns[-20:]
+        mean_ret = float(np.mean(r20))
+        std_ret = float(max(np.std(r20), 0.01))
+        g_score = float(1.0 / (1.0 + np.exp(-mean_ret / std_ret)))
+
+        # intuition proxy: short/long MA spread
+        i_score = 0.5
+        if close_prices.size >= 15:
+            short_ma = float(np.mean(close_prices[-5:]))
+            long_ma = float(np.mean(close_prices[-15:]))
+            denom = max(abs(long_ma), 1e-6)
+            i_score = float(1.0 / (1.0 + np.exp(-((short_ma - long_ma) / denom) * 50.0)))
+
+        # love proxy: corr vs market
+        l_score = 0.5
+        if market_returns is not None and market_returns.size >= 20:
+            mr = market_returns[-20:]
+            sr = r20
+            if mr.size == sr.size and sr.size >= 10:
+                c = np.corrcoef(mr, sr)[0, 1]
+                if not np.isnan(c):
+                    l_score = float((c + 1.0) / 2.0)
+
+        # environment proxy: alignment of short & medium summed momentum
+        e_score = 0.5
+        if pct_returns.size >= 30:
+            m30 = float(np.sum(pct_returns[-30:]))
+            m10 = float(np.sum(pct_returns[-10:]))
+            e_score = float(1.0 / (1.0 + np.exp(-(m10 * m30) * 0.01)))
+
+        w = self.cfg
+        gile = w.w_goodness * g_score + w.w_intuition * i_score + w.w_love * l_score + w.w_environment * e_score
+        return float(np.clip(gile, 0.0, 1.0))
+
+
+class ProbabilityAcquisition:
+    """
+    Hook for your newest LCC claim: “acquisition of probability.”
+    Implement as measurable Δentropy or Δlogloss, not a metaphysical switch.
+    (Matches the critique recommendation.) :contentReference[oaicite:4]{index=4}
+    """
+
+    @staticmethod
+    def delta_entropy(p_before: np.ndarray, p_after: np.ndarray, eps: float = 1e-12) -> float:
+        # H(p) = -sum p log p
+        pb = np.clip(p_before, eps, 1.0)
+        pa = np.clip(p_after, eps, 1.0)
+        pb = pb / np.sum(pb)
+        pa = pa / np.sum(pa)
+        Hb = -float(np.sum(pb * np.log(pb)))
+        Ha = -float(np.sum(pa * np.log(pa)))
+        return Hb - Ha  # positive means “acquired” (less uncertainty)
+
+    @staticmethod
+    def delta_logloss(y_true: int, p_before: float, p_after: float, eps: float = 1e-12) -> float:
+        pb = float(np.clip(p_before, eps, 1.0 - eps))
+        pa = float(np.clip(p_after, eps, 1.0 - eps))
+        # binary log loss
+        lb = -(y_true * np.log(pb) + (1 - y_true) * np.log(1 - pb))
+        la = -(y_true * np.log(pa) + (1 - y_true) * np.log(1 - pa))
+        return float(lb - la)  # positive means improved
+
+
+class GSAEngine:
+    def __init__(self, cfg: Optional[GSAConfig] = None):
+        self.cfg = cfg or GSAConfig()
+        self.xi_engine = ExistenceIntensityEngine(self.cfg)
+        self.regime_classifier = RegimeClassifier(self.cfg)
+        self.gile_scorer = GILEScorer(self.cfg)
+
+        # IMPORTANT: per-symbol memory to prevent state bleed (fixes W4). :contentReference[oaicite:5]{index=5}
+        self._mem: Dict[str, PerSymbolRegimeMemory] = {}
+
+    def analyze_series(
+        self,
+        symbol_id: str,
+        close_prices: np.ndarray,
+        pct_returns: np.ndarray,
+        market_returns: Optional[np.ndarray] = None,
+    ) -> TradingDecision:
+        if close_prices.size < 30 or pct_returns.size < 30:
+            return TradingDecision(signal=TradingSignal.HOLD, confidence=0.0, reasoning="Insufficient data")
+
+        xi = self.xi_engine.compute_xi(close_prices, pct_returns)
+
+        mem = self._mem.setdefault(symbol_id, PerSymbolRegimeMemory())
+        regime = self.regime_classifier.classify_regime(xi, pct_returns, mem)
+
+        gile = self.gile_scorer.calculate_gile(close_prices, pct_returns, market_returns)
+
+        signal, conf, reasoning = self._generate_signal(xi, regime, gile)
+        return TradingDecision(signal=signal, confidence=conf, xi_metrics=xi, regime=regime, gile_score=gile, reasoning=reasoning)
+
+    def _generate_signal(self, xi: XiMetrics, regime: RegimeState, gile: float) -> Tuple[TradingSignal, float, str]:
+        reasons: List[str] = []
+
+        if regime.regime == MarketRegime.FRACTURE:
+            return TradingSignal.STRONG_SELL, float(regime.confidence), f"FRACTURE: exit (C_rate={regime.constraint_rate:.3f})"
+
+        # Base by GILE
+        c = self.cfg
+        if gile > c.gile_strong_buy:
+            sig, conf = TradingSignal.STRONG_BUY, 0.80
+            reasons.append(f"High GILE {gile:.2f}")
+        elif gile > c.gile_buy:
+            sig, conf = TradingSignal.BUY, 0.60
+            reasons.append(f"Good GILE {gile:.2f}")
+        elif gile > c.gile_hold:
+            sig, conf = TradingSignal.HOLD, 0.50
+            reasons.append(f"Neutral GILE {gile:.2f}")
+        elif gile > c.gile_sell:
+            sig, conf = TradingSignal.SELL, 0.60
+            reasons.append(f"Weak GILE {gile:.2f}")
+        else:
+            sig, conf = TradingSignal.STRONG_SELL, 0.80
+            reasons.append(f"Poor GILE {gile:.2f}")
+
+        # Regime adjustments
+        if regime.regime == MarketRegime.COMPRESSION:
+            if sig in (TradingSignal.BUY, TradingSignal.STRONG_BUY):
+                sig = TradingSignal.HOLD
+                reasons.append("COMPRESSION: reduce exposure")
+            conf *= 0.70
+        elif regime.regime == MarketRegime.RESET:
+            conf *= 0.60
+            reasons.append("RESET: lower conviction")
+        elif regime.regime == MarketRegime.EXPANSION and xi.pd_score > 0.5:
+            conf = min(conf * 1.20, 0.90)
+            reasons.append("EXPANSION + positive PD")
+
+        # Ξ overrides
+        if xi.xi_signed < self.cfg.xi_strong_negative:
+            sig = TradingSignal.STRONG_SELL
+            conf = max(conf, 0.70)
+            reasons.append(f"Strong negative Ξ {xi.xi_signed:.2f}")
+
+        # κ caution
+        if xi.memory_kernel > self.cfg.kappa_high_neg:
+            if sig in (TradingSignal.BUY, TradingSignal.STRONG_BUY):
+                sig = TradingSignal.HOLD
+                reasons.append(f"High κ_neg {xi.memory_kernel:.2f}")
+
+        return sig, float(np.clip(conf, 0.0, 0.95)), " | ".join(reasons)
+
+OPTION 3 — QuantConnect BRIDGE FILE (main.py)
+
+This is what stops the QC loader error and gives you real runtime results in QC:
+
+Defines exactly one algorithm class inheriting QCAlgorithm
+
+Uses QC’s History() to get the same arrays your core expects
+
+Schedules a daily rebalance
+
+Uses SetHoldings (simple and QC-safe)
+
+main.py (QC entrypoint)
+# main.py (QuantConnect entrypoint)
+from AlgorithmImports import *
+import numpy as np
+
+from gsa_core import GSAEngine, GSAConfig, TradingSignal, MarketRegime
+
+
+class GSAQuantConnectBridge(QCAlgorithm):
+    def Initialize(self):
+        self.SetStartDate(2020, 1, 1)
+        self.SetEndDate(2024, 12, 31)
+        self.SetCash(100000)
+
+        tickers = ["SPY", "QQQ", "AAPL", "MSFT", "GOOGL", "TSLA", "NVDA", "AMD", "META", "AMZN"]
+        self.symbols = [self.AddEquity(t, Resolution.Daily).Symbol for t in tickers]
+        self.market_symbol = self.symbols[0]  # SPY
+
+        # --- Config: you can later wire these to QC parameters if you want ---
+        cfg = GSAConfig()
+        self.gsa = GSAEngine(cfg)
+
+        self.max_positions = 4
+        self.base_max_weight = 0.12  # per position cap
+
+        self.SetWarmUp(60, Resolution.Daily)
+
+        self.Schedule.On(
+            self.DateRules.EveryDay(self.market_symbol),
+            self.TimeRules.AfterMarketOpen(self.market_symbol, 30),
+            self.Rebalance
+        )
+
+    def _series_from_history(self, symbol: Symbol, lookback: int):
+        # History returns a pandas DataFrame in QC Python.
+        hist = self.History(symbol, lookback, Resolution.Daily)
+        if hist is None or hist.empty:
+            return None, None
+
+        # Works for single symbol history: columns include 'close'
+        # If QC returns multi-index, this still usually works with .loc slicing.
+        try:
+            close = hist["close"].values.astype(float)
+        except Exception:
+            # Fallback: try standard column name variants
+            close = hist["Close"].values.astype(float)
+
+        if close.size < 3:
+            return None, None
+
+        # percent returns in %
+        pct_ret = (close[1:] / close[:-1] - 1.0) * 100.0
+        return close, pct_ret
+
+    def Rebalance(self):
+        if self.IsWarmingUp:
+            return
+
+        # Market series
+        m_close, m_ret = self._series_from_history(self.market_symbol, 80)
+        if m_close is None:
+            self.Log("No market history; skipping rebalance.")
+            return
+
+        signals = []
+        for sym in self.symbols:
+            if sym == self.market_symbol:
+                continue
+
+            close, ret = self._series_from_history(sym, 80)
+            if close is None:
+                continue
+
+            decision = self.gsa.analyze_series(
+                symbol_id=str(sym.Value),
+                close_prices=close,
+                pct_returns=ret,
+                market_returns=m_ret
+            )
+
+            signals.append((sym, decision))
+
+        if not signals:
+            self.Log("No signals; skipping.")
+            return
+
+        # Rank by confidence * gile as a simple combined strength
+        ranked = sorted(signals, key=lambda x: (x[1].confidence * x[1].gile_score), reverse=True)
+
+        # Liquidate sells / strong sells
+        for sym, dec in ranked:
+            if not self.Portfolio[sym].Invested:
+                continue
+            if dec.signal in (TradingSignal.SELL, TradingSignal.STRONG_SELL):
+                self.Liquidate(sym, f"{dec.signal.value} | {dec.reasoning}")
+
+        # Select buys
+        candidates = [(sym, dec) for sym, dec in ranked if dec.signal in (TradingSignal.BUY, TradingSignal.STRONG_BUY)]
+        buys = candidates[: self.max_positions]
+
+        # Equal-weight with confidence scaling, capped
+        if buys:
+            raw_weights = []
+            for sym, dec in buys:
+                strength = max(0.10, dec.confidence * (0.5 + dec.gile_score))
+                # Optional: downshift if COMPRESSION/RESET; hard exit already happens in FRACTURE inside core
+                if dec.regime.regime == MarketRegime.COMPRESSION:
+                    strength *= 0.7
+                elif dec.regime.regime == MarketRegime.RESET:
+                    strength *= 0.6
+                raw_weights.append(strength)
+
+            total = sum(raw_weights)
+            for (sym, dec), w in zip(buys, raw_weights):
+                tgt = (w / total) * min(self.base_max_weight * len(buys), 0.95)
+                tgt = min(tgt, self.base_max_weight)
+                self.SetHoldings(sym, tgt, f"{dec.signal.value} | {dec.reasoning}")
+
+        # Optional debug
+        top = ranked[0]
+        self.Log(f"Top: {top[0].Value} sig={top[1].signal.value} conf={top[1].confidence:.2f} gile={top[1].gile_score:.2f} pd={top[1].xi_metrics.pd_score:.2f}")
+
+Why your QC screenshot error happens (in plain English)
+
+QC says: “Unable to import python module … Please ensure that one class inherits from QCAlgorithm.”
+
+That happens when:
+
+Your main.py doesn’t define a class X(QCAlgorithm) at top level, or
+
+Import fails before QC can see it (missing package, bad import, yfinance, file IO, etc.)
+
+The bridge file above fixes both: the QC class exists, and imports are only QC-safe + your local gsa_core.py.
+
+Rigorous critique (and how to move forward with both GSA + LCC)
+
+Your SWOT is basically right about the two “make-or-break” issues:
+
+1) Coefficients: you need a calibration story
+
+The document flags “arbitrary coefficients” across the whole ecosystem (GSA + LCC + others). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+
+This doesn’t mean “they’re wrong,” it means: without calibration, you can’t tell whether performance is signal or luck.
+
+Concrete next step: treat your weights as parameters and do walk-forward / bayesian optimization on out-of-sample data (even if you stay TI-native philosophically). That’s how you keep the engine publishable and upgradeable.
+
+2) Make “LCC probability acquisition” measurable, not axiomatic
+
+Your critique explicitly recommends defining it as Δentropy (or Δlogloss). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+
+That is exactly what the ProbabilityAcquisition hook is for.
+
+Concrete next step: decide what “p_before” and “p_after” mean in your market context. Example:
+
+p_before: baseline model probability for next-day up move (e.g., 0.52)
+
+p_after: probability after LCC signal integration (e.g., 0.61)
+Then you track whether Δlogloss is positive over time on a held-out stream.
+
+3) The state-bleed bug must be fixed before you trust any backtest
+
+This is not philosophical; it’s a straight-up validity bug (W4). 
+
+SWOT_ANALYSIS_GSA_LCC_CRITIQUE …
+
+
+The hardened core fixes it by making regime memory per symbol.

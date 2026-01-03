@@ -1,0 +1,116 @@
+{
+  "test_date": "2025-12-25",
+  "future_predictions": [
+    {
+      "target": "2025-12-26",
+      "direction": "NEUTRAL",
+      "confidence": 0.5050000000000001
+    },
+    {
+      "target": "2025-12-29",
+      "direction": "BEARISH",
+      "confidence": 0.5050000000000001
+    },
+    {
+      "target": "2025-12-30",
+      "direction": "BULLISH",
+      "confidence": 0.633
+    },
+    {
+      "target": "2026-01-05",
+      "direction": "NEUTRAL",
+      "confidence": 0.655
+    }
+  ],
+  "backtest_results": {
+    "accuracy": 0.6721311475409836,
+    "high_conf_accuracy": 0.6153846153846154,
+    "sigma": 5.6828103173943845
+  },
+  "significant_days": [
+    {
+      "id": "NU_20260106_2862",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-06",
+      "predicted": "MODERATE_major_move",
+      "confidence": 0.65,
+      "gile_score": 0.2272727272727273,
+      "actual": null,
+      "correct": null,
+      "error": null
+    },
+    {
+      "id": "NU_20260107_9331",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-07",
+      "predicted": "MODERATE_reversal",
+      "confidence": 0.65,
+      "gile_score": 0.31818181818181823,
+      "actual": null,
+      "correct": null,
+      "error": null
+    },
+    {
+      "id": "NU_20260109_4210",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-09",
+      "predicted": "MAJOR_insight",
+      "confidence": 0.75,
+      "gile_score": 0.5,
+      "actual": null,
+      "correct": null,
+      "error": null
+    },
+    {
+      "id": "NU_20260115_5284",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-15",
+      "predicted": "MODERATE_major_move",
+      "confidence": 0.65,
+      "gile_score": 0.2272727272727273,
+      "actual": null,
+      "correct": null,
+      "error": null
+    },
+    {
+      "id": "NU_20260116_5435",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-16",
+      "predicted": "MODERATE_reversal",
+      "confidence": 0.65,
+      "gile_score": 0.31818181818181823,
+      "actual": null,
+      "correct": null,
+      "error": null
+    },
+    {
+      "id": "NU_20260118_3898",
+      "system": "Numerology",
+      "type": "event",
+      "target": "MARKET",
+      "prediction_date": "2025-12-25",
+      "target_date": "2026-01-18",
+      "predicted": "MAJOR_insight",
+      "confidence": 0.75,
+      "gile_score": 0.5,
+      "actual": null,
+      "correct": null,
+      "error": null
+    }
+  ]
+}

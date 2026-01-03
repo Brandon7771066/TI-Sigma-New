@@ -1,0 +1,428 @@
+from AlgorithmImports import *
+import numpy as np
+
+class GrandStockAlgorithmQC(QCAlgorithm):
+    """
+    GRAND STOCK ALGORITHM (GSA) - QuantConnect Deployable
+    Ξ Metrics: Amplitude (A), Memory Kernel (κ), Constraint (C) -> PD
+    Regime: Expansion / Compression / Fracture / Reset
+    GILE: Goodness / Intuition / Love / Environment (0..1)
+    """
+
+    # ---------- QC LIFECYCLE ----------
+    def Initialize(self):
+        self.SetStartDate(2020, 1, 1)
+        self.SetEndDate(2024, 12, 1)
+        self.SetCash(100000)
+
+        # Universe
+        self.spy = self.AddEquity("SPY", Resolution.Daily).Symbol
+        tickers = ["AAPL", "MSFT", "GOOGL", "NVDA", "TSLA", "META", "AMZN"]
+        self.symbols = [self.AddEquity(t, Resolution.Daily).Symbol for t in tickers]
+
+        # Parameters (safe; no recursion)
+        self.lookback_short = int(self.GetParam("lookback_short", 7))
+        self.lookback_long  = int(self.GetParam("lookback_long", 60))
+        self.max_position   = float(self.GetParam("max_position", 0.15))
+
+        # κ asymmetry
+        self.kappa_decay_pos = float(self.GetParam("kappa_decay_pos", 0.10))
+        self.kappa_decay_neg = float(self.GetParam("kappa_decay_neg", 0.05))
+
+        # Valence weights (your PD logic)
+        self.W_GREAT, self.W_TERRIBLE = 1.0, 2.0
+        self.W_EXCEPTIONAL, self.W_WICKED = 1.5, 6.0
+
+        # Regime adjustments
+        self.regime_adj = {
+            "expansion": 1.0,
+            "compression": 0.5,
+            "fracture": 0.0,
+            "reset": 0.3
+        }
+
+        # Rolling windows (prices + returns)
+        self.prices = {}
+        self.returns = {}
+        for s in [self.spy] + self.symbols:
+            self.prices[s] = RollingWindow[float](self.lookback_long + 5)
+            self.returns[s] = RollingWindow[float](self.lookback_long + 5)
+
+        # History warmup
+        hist = self.History([self.spy] + self.symbols, self.lookback_long + 10, Resolution.Daily)
+        if not hist.empty:
+            for s in [self.spy] + self.symbols:
+                if s in hist.index.levels[0]:
+                    df = hist.loc[s]
+                    closes = df["close"].values
+                    for i in range(len(closes)):
+                        self._push_price_return(s, float(closes[i]))
+
+        self.SetWarmUp(self.lookback_long + 5)
+
+        # Regime histories (market-level, based on SPY)
+        self.constraint_hist = []
+        self.pd_hist = []
+
+        # Optional: realistic fills
+        self.SetSecurityInitializer(lambda sec: sec.SetSlippageModel(VolumeShareSlippageModel(0.01, 0.10)))
+
+        # Daily rebalance
+        self.Schedule.On(
+            self.DateRules.EveryDay(self.spy),
+            self.TimeRules.AfterMarketOpen(self.spy, 30),
+            self.Rebalance
+        )
+
+        self.trade_count = 0
+
+
+    def GetParam(self, key, default):
+        v = super().GetParameter(key)
+        if v is None or v == "":
+            return default
+        try:
+            return float(v)
+        except:
+            return default
+
+
+    def OnData(self, data: Slice):
+        # Update rolling windows from live bars
+        for s in [self.spy] + self.symbols:
+            bar = data.Bars.get(s)
+            if bar is None:
+                continue
+            self._push_price_return(s, float(bar.Close))
+
+
+    # ---------- DATA HELPERS ----------
+    def _push_price_return(self, symbol, price: float):
+        if price <= 0:
+            return
+
+        # compute return from previous stored price
+        if self.prices[symbol].Count > 0:
+            prev = float(self.prices[symbol][0])
+            if prev > 0:
+                r = (price / prev - 1.0) * 100.0
+                self.returns[symbol].Add(float(r))
+        self.prices[symbol].Add(float(price))
+
+
+    def _window_array(self, rw: RollingWindow[float], n: int):
+        # RollingWindow is newest at [0]
+        m = min(rw.Count, n)
+        if m <= 0:
+            return np.array([])
+        return np.array([float(rw[i]) for i in range(m)][::-1])  # oldest -> newest
+
+
+    # ---------- Ξ ENGINE ----------
+    def xi_amplitude(self, rets: np.ndarray) -> float:
+        if len(rets) < 2:
+            return 0.0
+        current = abs(rets[-1])
+        vol = max(float(np.std(rets)), 0.01)
+        return float(np.clip(current / vol, 0.0, 10.0))
+
+
+    def xi_memory_kernel(self, rets: np.ndarray) -> float:
+        # returns κ in [0,1] = negative memory dominance fraction
+        if len(rets) < 3:
+            return 0.5
+
+        # weight recent events more; negative decays slower
+        kpos, kneg = 0.0, 0.0
+        # iterate most recent backwards for consistent decay application
+        for i in range(len(rets)):
+            r = float(rets[-1 - i])
+            if r >= 0:
+                kpos += abs(r) * np.exp(-self.kappa_decay_pos * i)
+            else:
+                kneg += abs(r) * np.exp(-self.kappa_decay_neg * i)
+
+        total = kpos + kneg
+        if total <= 0:
+            return 0.5
+        return float(np.clip(kneg / total, 0.0, 1.0))
+
+
+    def xi_constraint(self, prices: np.ndarray, rets: np.ndarray) -> float:
+        if len(prices) < 5 or len(rets) < 5:
+            return 0.0
+
+        peak = float(np.max(prices))
+        dd = (peak - float(prices[-1])) / peak if peak > 0 else 0.0
+
+        # vol constraint: recent vol high relative to long vol -> more constraint
+        rs = rets[-min(len(rets), self.lookback_short):]
+        rl = rets[-min(len(rets), self.lookback_long):]
+        v_recent = float(np.std(rs)) if len(rs) >= 2 else 1.0
+        v_long = float(np.std(rl)) if len(rl) >= 2 else 1.0
+
+        ratio = v_recent / max(v_long, 0.01)
+        vol_constraint = 1.0 - min(ratio, 1.0)  # in [0,1]
+
+        return float(np.clip(0.6 * dd + 0.4 * vol_constraint, 0.0, 1.0))
+
+
+    def xi_valence_weight(self, ret_pct: float) -> float:
+        # You can tune thresholds later; this matches your intent
+        if ret_pct > 5.0:
+            return self.W_EXCEPTIONAL
+        if ret_pct > 0.333:
+            return self.W_GREAT
+        if ret_pct > -0.666:
+            return 1.0
+        if ret_pct > -5.0:
+            return self.W_TERRIBLE
+        return self.W_WICKED
+
+
+    def compute_xi_pd(self, symbol):
+        rets = self._window_array(self.returns[symbol], self.lookback_long)
+        prices = self._window_array(self.prices[symbol], self.lookback_long)
+
+        if len(rets) < 10 or len(prices) < 10:
+            return 0.0, 0.0, 0.0, 0.0, 0.0  # A, kappa, C, xi_signed, pd
+
+        A = self.xi_amplitude(rets[-min(len(rets), self.lookback_short):])
+        kappa = self.xi_memory_kernel(rets[-min(len(rets), self.lookback_long):])
+        C = self.xi_constraint(prices, rets)
+
+        xi_unsigned = A * kappa * C
+
+        curr_ret = float(rets[-1])
+        valence = 1.0 if curr_ret >= 0 else -1.0
+        W = self.xi_valence_weight(curr_ret)
+
+        xi_signed = valence * xi_unsigned * W
+
+        # PD: odd, log-asymptotic, bounded [-3, +2]
+        pd = np.sign(xi_signed) * np.log1p(abs(xi_signed))
+        pd = float(np.clip(pd, -3.0, 2.0))
+
+        return float(A), float(kappa), float(C), float(xi_signed), float(pd)
+
+
+    # ---------- REGIME CLASSIFIER (MARKET-LEVEL ON SPY) ----------
+    def classify_market_regime(self, pd: float, constraint: float):
+        self.constraint_hist.append(float(constraint))
+        self.pd_hist.append(float(pd))
+
+        self.constraint_hist = self.constraint_hist[-self.lookback_long:]
+        self.pd_hist = self.pd_hist[-self.lookback_long:]
+
+        constraint_rate = 0.0
+        if len(self.constraint_hist) >= 10:
+            recent_c = float(np.mean(self.constraint_hist[-5:]))
+            older_c = float(np.mean(self.constraint_hist[-10:-5]))
+            constraint_rate = recent_c - older_c
+
+        # PD shape proxy
+        pd_shape = "broad"
+        if len(self.pd_hist) >= 20:
+            arr = np.array(self.pd_hist[-20:])
+            std = float(np.std(arr))
+            skew = self._skew(arr)
+            if std > 1.0:
+                pd_shape = "heavy_tail"
+            elif std < 0.3:
+                pd_shape = "narrow"
+            elif abs(skew) < 0.3:
+                pd_shape = "symmetric"
+
+        # volatility ratio proxy from SPY returns
+        spy_rets = self._window_array(self.returns[self.spy], 60)
+        recent_vol = float(np.std(spy_rets[-10:])) if len(spy_rets) >= 10 else 1.0
+        long_vol   = float(np.std(spy_rets[-30:])) if len(spy_rets) >= 30 else 1.0
+        vol_ratio  = recent_vol / max(long_vol, 0.01)
+
+        regime = "expansion"
+        confidence = 0.55
+
+        # Fracture: rising constraint + vol spike + negative PD
+        if constraint_rate > 0.10 and vol_ratio > 1.5 and pd < -1.0:
+            regime = "fracture"
+            confidence = min(0.90, 0.50 + abs(constraint_rate) + abs(pd)/3.0)
+
+        # Compression: rising constraint but vol suppressed
+        elif constraint_rate > 0.05 and vol_ratio < 0.7:
+            regime = "compression"
+            confidence = min(0.85, 0.50 + constraint_rate*2.0 + (1.0 - vol_ratio))
+
+        # Reset: falling constraint with volatility release
+        elif constraint_rate < -0.05 and vol_ratio > 1.0:
+            regime = "reset"
+            confidence = min(0.80, 0.50 + abs(constraint_rate) + (vol_ratio - 1.0)*0.5)
+
+        else:
+            confidence = max(0.40, 0.70 - abs(constraint_rate)*2.0)
+
+        return regime, confidence, constraint_rate, pd_shape
+
+
+    def _skew(self, arr: np.ndarray) -> float:
+        if len(arr) < 3:
+            return 0.0
+        m = float(np.mean(arr))
+        s = float(np.std(arr))
+        if s <= 0:
+            return 0.0
+        return float(np.mean(((arr - m) / s) ** 3))
+
+
+    # ---------- GILE SCORE (0..1) ----------
+    def gile_score(self, symbol):
+        # Uses only QC available series (returns + prices)
+        rets = self._window_array(self.returns[symbol], 60)
+        prices = self._window_array(self.prices[symbol], 60)
+        spy_rets = self._window_array(self.returns[self.spy], 60)
+
+        if len(rets) < 30 or len(prices) < 30:
+            return 0.5
+
+        # Goodness: mean/std of last 20 returns
+        r20 = rets[-20:]
+        mean_ret = float(np.mean(r20))
+        std_ret  = max(float(np.std(r20)), 0.01)
+        goodness = 1.0 / (1.0 + np.exp(-mean_ret / std_ret))
+
+        # Intuition: short MA vs long MA slope proxy
+        ma5 = float(np.mean(prices[-5:]))
+        ma15 = float(np.mean(prices[-15:]))
+        intuition = 1.0 / (1.0 + np.exp(-((ma5 - ma15) / max(ma15, 0.01)) * 50.0))
+
+        # Love: correlation with market (SPY)
+        love = 0.5
+        if len(spy_rets) >= 20 and len(rets) >= 20:
+            a = rets[-20:]
+            b = spy_rets[-20:]
+            try:
+                corr = float(np.corrcoef(a, b)[0, 1])
+                if np.isnan(corr):
+                    corr = 0.0
+                love = (corr + 1.0) / 2.0
+            except:
+                love = 0.5
+
+        # Environment: interaction of 10-day and 30-day momentum
+        m10 = float(np.sum(rets[-10:]))
+        m30 = float(np.sum(rets[-30:]))
+        env = 1.0 / (1.0 + np.exp(-(m10 * m30) * 0.01))
+
+        # weights (match your earlier draft)
+        w_good, w_int, w_love, w_env = 0.20, 0.25, 0.25, 0.30
+        score = w_good*goodness + w_int*intuition + w_love*love + w_env*env
+        return float(np.clip(score, 0.0, 1.0))
+
+
+    # ---------- SIGNAL GENERATION ----------
+    def decide(self, symbol, market_regime, market_conf, pd, xi_signed, kappa):
+        gile = self.gile_score(symbol)
+
+        # base by GILE bands
+        if gile > 0.65:
+            base, conf = "strong_buy", 0.80
+        elif gile > 0.55:
+            base, conf = "buy", 0.60
+        elif gile > 0.45:
+            base, conf = "hold", 0.50
+        elif gile > 0.35:
+            base, conf = "sell", 0.60
+        else:
+            base, conf = "strong_sell", 0.80
+
+        reasons = []
+
+        # regime filter
+        if market_regime == "fracture":
+            return "strong_sell", min(0.95, max(0.70, market_conf)), gile
+
+        if market_regime == "compression":
+            if base in ["buy", "strong_buy"]:
+                base = "hold"
+                reasons.append("compression gate")
+            conf *= 0.70
+
+        elif market_regime == "reset":
+            conf *= 0.60
+
+        elif market_regime == "expansion" and pd > 0.5:
+            conf = min(conf * 1.20, 0.90)
+
+        # Ξ override
+        if xi_signed < -2.0:
+            base, conf = "strong_sell", max(conf, 0.70)
+
+        # κ neg dominance: reduce aggressiveness
+        if kappa > 0.70 and base in ["buy", "strong_buy"]:
+            base = "hold"
+
+        return base, float(np.clip(conf, 0.0, 1.0)), gile
+
+
+    # ---------- REBALANCE ----------
+    def Rebalance(self):
+        if self.IsWarmingUp:
+            return
+
+        # Market regime from SPY Ξ/PD
+        A, kappa, C, xi_signed, pd = self.compute_xi_pd(self.spy)
+        market_regime, market_conf, c_rate, pd_shape = self.classify_market_regime(pd, C)
+
+        # Hard fracture exit
+        if market_regime == "fracture":
+            for s in self.symbols:
+                if self.Portfolio[s].Invested:
+                    self.Liquidate(s, "FRACTURE")
+            self.Debug(f"[REGIME] FRACTURE (conf={market_conf:.2f}, pd={pd:.2f}, C={C:.2f}, dC={c_rate:.3f})")
+            return
+
+        # Evaluate symbols
+        candidates = []
+        for s in self.symbols:
+            A_s, k_s, C_s, xi_s, pd_s = self.compute_xi_pd(s)
+            sig, conf, gile = self.decide(s, market_regime, market_conf, pd_s, xi_s, k_s)
+
+            # score for ranking
+            score = (gile - 0.5) + 0.25 * pd_s + 0.10 * np.tanh(xi_s)
+            candidates.append((s, sig, conf, gile, score, pd_s, xi_s))
+
+        # Rank by score
+        candidates.sort(key=lambda x: x[4], reverse=True)
+
+        # Target top N
+        topN = 4
+        picks = [c for c in candidates if c[1] in ["buy", "strong_buy"]][:topN]
+
+        # Liquidate positions that no longer qualify
+        pick_syms = set([p[0] for p in picks])
+        for s in self.symbols:
+            if self.Portfolio[s].Invested and s not in pick_syms:
+                self.Liquidate(s, "Not in picks")
+
+        # Allocate
+        if len(picks) == 0:
+            self.Debug(f"[REGIME] {market_regime.upper()} no buys (pd_shape={pd_shape}, pd={pd:.2f}, C={C:.2f})")
+            return
+
+        # equal within picks, scaled by regime + confidence, capped by max_position
+        regime_scale = self.regime_adj.get(market_regime, 1.0)
+        base_w = min(self.max_position, 1.0 / len(picks)) * regime_scale
+
+        for (s, sig, conf, gile, score, pd_s, xi_s) in picks:
+            w = base_w * conf
+            w = float(np.clip(w, 0.0, self.max_position))
+            self.SetHoldings(s, w)
+            self.trade_count += 1
+
+        self.Debug(
+            f"[REGIME] {market_regime.upper()} conf={market_conf:.2f} pd={pd:.2f} C={C:.2f} dC={c_rate:.3f} "
+            f"| picks={[self.Securities[p[0]].Symbol.Value for p in picks]}"
+        )
+
+
+    def OnEndOfAlgorithm(self):
+        self.Log(f"GSA-QC done. Trades={self.trade_count}. Final=${self.Portfolio.TotalPortfolioValue:,.2f}")
