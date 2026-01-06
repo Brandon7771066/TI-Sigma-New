@@ -63,7 +63,7 @@ def render_mood_amplifier_hub():
     
     st.header("🧠 Mood Amplifier - Limbic-Cortical Coupling (LCC) + FAAH Protocol")
     
-    mood_tabs = st.tabs(["💫 Guided Session", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong"])
+    mood_tabs = st.tabs(["💫 Guided Session", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong", "🔮 Divination"])
     
     with mood_tabs[0]:
         from guided_amplification_session import render_guided_amplification_session
@@ -104,6 +104,14 @@ def render_mood_amplifier_hub():
             _render_eeg_pong_link()
         except Exception as e:
             st.error(f"EEG Pong link error: {e}")
+    
+    with mood_tabs[9]:
+        try:
+            from hypercomputer_divination_interface import render_hypercomputer_divination
+            render_hypercomputer_divination()
+        except Exception as e:
+            st.error(f"Divination module error: {e}")
+            st.info("The hypercomputer divination interface is not fully available.")
 
 
 def _render_44_channel_targeting():
