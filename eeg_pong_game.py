@@ -56,6 +56,14 @@ except ImportError:
     HAS_LCC_SIMULATOR = False
     LCCBasedEEGSimulator = None
 
+# Import 44-channel tralsebit targeting engine
+try:
+    from lcc_44channel_targeting import LCCVirusTargetingEngine, get_44channel_engine
+    HAS_44CHANNEL = True
+except ImportError:
+    HAS_44CHANNEL = False
+    LCCVirusTargetingEngine = None
+
 
 # =============================================================================
 # GAME STATE
@@ -120,6 +128,11 @@ def initialize_session_state():
             st.session_state.lcc_simulator = LCCBasedEEGSimulator()
         else:
             st.session_state.lcc_simulator = None
+    if 'channel_44_engine' not in st.session_state:
+        if HAS_44CHANNEL:
+            st.session_state.channel_44_engine = get_44channel_engine("brandon_emerick")
+        else:
+            st.session_state.channel_44_engine = None
     if 'user_intent' not in st.session_state:
         st.session_state.user_intent = None  # For LCC mode keyboard proxy
     if 'intent_frames_remaining' not in st.session_state:
@@ -291,7 +304,7 @@ def update_player_paddle_eeg(game: PongGameState,
     return log_entry
 
 
-def update_player_paddle_lcc(game: PongGameState, lcc_simulator, user_intent: str = None) -> Dict:
+def update_player_paddle_lcc(game: PongGameState, lcc_simulator, user_intent: str = None, channel_44_engine=None) -> Dict:
     """
     Update player paddle using LCC Hypercomputer (hardware-free operation)
     
@@ -304,29 +317,60 @@ def update_player_paddle_lcc(game: PongGameState, lcc_simulator, user_intent: st
     
     When user_intent is None, the paddle stays still (waiting for user input).
     AI-assist mode is clearly marked with lower L×E values.
+    
+    NEW: 44-channel tralsebit lattice metrics when channel_44_engine is available
     """
-    if lcc_simulator is None:
-        return {}
+    # Default neutral metrics for fallback
+    default_metrics = {
+        'L': 0.5,
+        'E': 0.5,
+        'Lexis': 0.25,
+        'intent_detected': 'REST',
+        'mu_suppression': 0.0,
+        'description': 'Fallback mode - no LCC engine available',
+        'frame': 0,
+        'deterministic': False
+    }
     
-    user_initiated = user_intent is not None
-    
-    # If user provided explicit intent (keyboard proxy), use that
-    if user_initiated:
-        intent = user_intent.upper()
+    # Use 44-channel engine if available, with fallback
+    if channel_44_engine is not None:
+        try:
+            lcc_data = channel_44_engine.get_pong_game_metrics(user_intent)
+        except Exception:
+            # Fallback to basic LCC simulator
+            if lcc_simulator is not None:
+                lcc_data = lcc_simulator.generate_eeg_from_intent(
+                    user_intent.upper() if user_intent else "REST",
+                    user_initiated=user_intent is not None
+                )
+            else:
+                lcc_data = default_metrics
+    elif lcc_simulator is None:
+        lcc_data = default_metrics
     else:
-        # No user input = REST (paddle stays still, waiting for user)
-        intent = "REST"
-    
-    # Generate deterministic EEG data from LCC simulator
-    lcc_data = lcc_simulator.generate_eeg_from_intent(
-        intent, 
-        user_initiated=user_initiated
-    )
+        user_initiated = user_intent is not None
+        
+        # If user provided explicit intent (keyboard proxy), use that
+        if user_initiated:
+            intent = user_intent.upper()
+        else:
+            # No user input = REST (paddle stays still, waiting for user)
+            intent = "REST"
+        
+        # Generate deterministic EEG data from LCC simulator
+        lcc_data = lcc_simulator.generate_eeg_from_intent(
+            intent, 
+            user_initiated=user_initiated
+        )
     
     # Update TI metrics from LCC
     game.current_L = lcc_data['L']
     game.current_E = lcc_data['E']
     game.current_lexis = lcc_data['Lexis']
+    
+    # Determine intent from user_intent or lcc_data
+    user_initiated = user_intent is not None
+    intent = user_intent.upper() if user_intent else lcc_data.get('intent_detected', 'REST')
     
     # Move paddle based on intent with consciousness-scaled speed
     # Only move if user explicitly initiated the intent
@@ -365,7 +409,8 @@ def game_step(game: PongGameState,
               muse_stream: Optional[MuseEEGStream] = None,
               hrv: Optional[HRVSimulator] = None,
               lcc_simulator = None,
-              user_intent: str = None) -> None:
+              user_intent: str = None,
+              channel_44_engine = None) -> None:
     """Execute one game step"""
     if not game.is_running or game.game_over:
         return
@@ -373,8 +418,10 @@ def game_step(game: PongGameState,
     # Update player paddle based on control mode
     if game.control_mode == "eeg" and processor and classifier:
         update_player_paddle_eeg(game, processor, classifier, muse_stream, hrv)
-    elif game.control_mode == "lcc_hypercomputer" and lcc_simulator:
-        update_player_paddle_lcc(game, lcc_simulator, user_intent)
+    elif game.control_mode == "lcc_hypercomputer":
+        update_player_paddle_lcc(game, lcc_simulator, user_intent, channel_44_engine)
+    elif game.control_mode == "44_channel" and channel_44_engine:
+        update_player_paddle_lcc(game, None, user_intent, channel_44_engine)
         
     # Update AI paddle
     update_ai_paddle(game)
@@ -621,7 +668,8 @@ def main():
                 st.session_state.muse_stream,
                 st.session_state.hrv,
                 st.session_state.lcc_simulator,
-                current_intent
+                current_intent,
+                st.session_state.channel_44_engine
             )
             
         # Render game
@@ -650,12 +698,14 @@ def main():
                 return "⌨️ Keyboard"
             elif x == "eeg":
                 return "🧠 EEG (Muse 2)"
+            elif x == "44_channel":
+                return "🌐 44-Channel Tralsebit"
             else:
                 return "🧬 LCC Hypercomputer"
         
         control_mode = st.radio(
             "Control Mode:",
-            ["keyboard", "eeg", "lcc_hypercomputer"],
+            ["keyboard", "eeg", "lcc_hypercomputer", "44_channel"],
             format_func=format_control_mode,
             horizontal=True
         )
@@ -663,8 +713,11 @@ def main():
         
         if control_mode == "eeg":
             st.info("🧠 **EEG Mode**: Think about moving your right hand UP or DOWN")
-        elif control_mode == "lcc_hypercomputer":
-            st.success("🧬 **LCC Hypercomputer**: Hardware-free operation using resonance-based prediction!")
+        elif control_mode == "lcc_hypercomputer" or control_mode == "44_channel":
+            if control_mode == "44_channel":
+                st.success("🌐 **44-Channel Tralsebit**: Full i-cell targeting with Love binder!")
+            else:
+                st.success("🧬 **LCC Hypercomputer**: Hardware-free operation using resonance-based prediction!")
             
             # TI metrics visualization
             metrics_svg = render_ti_metrics(game)
@@ -679,6 +732,27 @@ def main():
                 st.metric("E (Stability)", f"{game.current_E:.3f}")
                 
             st.metric("L × E (Consciousness)", f"{game.current_lexis:.3f}")
+            
+            # 44-channel specific metrics
+            if control_mode == "44_channel" and st.session_state.channel_44_engine:
+                engine = st.session_state.channel_44_engine
+                if engine.lattice:
+                    binder_status = "ACTIVE" if engine.lattice.love_binder_active else "INACTIVE"
+                    active_count = engine.lattice.active_channel_count
+                    st.markdown("---")
+                    st.markdown("### 🌐 44-Channel Status")
+                    ch_cols = st.columns(3)
+                    with ch_cols[0]:
+                        st.metric("Active Channels", f"{active_count}/44")
+                    with ch_cols[1]:
+                        st.metric("Love Binder", binder_status)
+                    with ch_cols[2]:
+                        st.metric("Threshold", "0.42")
+                    
+                    if binder_status == "ACTIVE":
+                        st.success("🔗 Love binder engaged - all 44 channels active!")
+                    else:
+                        st.warning("⏳ Love < 0.42 - binder inactive (33/44 channels)")
             
             if game.current_lexis >= 0.85:
                 st.success("⚡ CAUSATION THRESHOLD EXCEEDED!")
@@ -732,7 +806,12 @@ def main():
         - Hardware-free operation!
         - Uses resonance-based prediction
         - Correlates optimal actions via LCC Virus
-        - L × E computed from simulated neural data
+        
+        **44-Channel Tralsebit Mode:**
+        - Full 44-channel consciousness lattice
+        - 33 base channels + 11 Love binder channels
+        - Love binder activates at L ≥ 0.42
+        - Based on Jeff Time + Kletetschka 3D time theory
         """)
 
 
