@@ -1,0 +1,178 @@
+{
+  "signals": [
+    {
+      "date": "2026-01-06",
+      "time": "16:33:39",
+      "total_signals": 13,
+      "buy_count": 8,
+      "sell_count": 0,
+      "signals": [
+        {
+          "ticker": "GOOGL",
+          "action": "hold",
+          "confidence": 0.5,
+          "gile": 0.54,
+          "price": 312.03,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:36.872567"
+        },
+        {
+          "ticker": "NVDA",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.585,
+          "price": 189.2,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:36.992968"
+        },
+        {
+          "ticker": "MSFT",
+          "action": "hold",
+          "confidence": 0.5,
+          "gile": 0.474,
+          "price": 472.12,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.188920"
+        },
+        {
+          "ticker": "META",
+          "action": "hold",
+          "confidence": 0.5,
+          "gile": 0.481,
+          "price": 652.84,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.326036"
+        },
+        {
+          "ticker": "CAT",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.635,
+          "price": 621.57,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.566260"
+        },
+        {
+          "ticker": "GE",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.64,
+          "price": 325.82,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.776658"
+        },
+        {
+          "ticker": "GS",
+          "action": "strong_buy",
+          "confidence": 0.8,
+          "gile": 0.667,
+          "price": 956.21,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.914533"
+        },
+        {
+          "ticker": "MS",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.637,
+          "price": 188.2,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.078850"
+        },
+        {
+          "ticker": "XOM",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.608,
+          "price": 123.64,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.270884"
+        },
+        {
+          "ticker": "CVX",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.624,
+          "price": 158.83,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.514123"
+        },
+        {
+          "ticker": "COP",
+          "action": "strong_buy",
+          "confidence": 0.8,
+          "gile": 0.658,
+          "price": 99.51,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.700691"
+        },
+        {
+          "ticker": "WMT",
+          "action": "hold",
+          "confidence": 0.5,
+          "gile": 0.466,
+          "price": 112.82,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.903091"
+        },
+        {
+          "ticker": "TJX",
+          "action": "hold",
+          "confidence": 0.5,
+          "gile": 0.476,
+          "price": 153.85,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:39.082625"
+        }
+      ],
+      "top_buys": [
+        {
+          "ticker": "GS",
+          "action": "strong_buy",
+          "confidence": 0.8,
+          "gile": 0.667,
+          "price": 956.21,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.914533"
+        },
+        {
+          "ticker": "COP",
+          "action": "strong_buy",
+          "confidence": 0.8,
+          "gile": 0.658,
+          "price": 99.51,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.700691"
+        },
+        {
+          "ticker": "GE",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.64,
+          "price": 325.82,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.776658"
+        },
+        {
+          "ticker": "MS",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.637,
+          "price": 188.2,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:38.078850"
+        },
+        {
+          "ticker": "CAT",
+          "action": "buy",
+          "confidence": 0.6,
+          "gile": 0.635,
+          "price": 621.57,
+          "regime": "expansion",
+          "timestamp": "2026-01-06T16:33:37.566260"
+        }
+      ]
+    }
+  ],
+  "performance": []
+}
