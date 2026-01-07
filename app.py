@@ -113,8 +113,9 @@ st.markdown("---")
 # ====================================================
 
 # Create tabs
-tab_mobile, tab_brain_proof, tab_mood_amp, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives = st.tabs([
+tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives = st.tabs([
     "📱 Mobile Hub",
+    "🎮 EEG Pong",
     "🧠💓 Brain Proof",
     "🧠 Mood Amplifier",
     "🔬 Baseline Collection",
@@ -180,13 +181,18 @@ with tab_mobile:
     
     mobile_view = st.radio(
         "Select Content:",
-        ["📖 Quick Reads", "📄 Research PDFs", "📚 Books", "🎓 Courses", "⬇️ Downloads"],
+        ["🎮 EEG Pong Game", "📖 Quick Reads", "📄 Research PDFs", "📚 Books", "🎓 Courses", "⬇️ Downloads"],
         horizontal=True
     )
     
     st.markdown("---")
     
-    if mobile_view == "📖 Quick Reads":
+    if mobile_view == "🎮 EEG Pong Game":
+        st.subheader("🎮 EEG-Controlled Pong Game")
+        st.markdown("**Control the paddle with your brain or keyboard!**")
+        from eeg_pong_game import render_pong_game_embedded
+        render_pong_game_embedded(embed_id="mobile")
+    elif mobile_view == "📖 Quick Reads":
         render_quick_reads(hub)
     elif mobile_view == "📄 Research PDFs":
         render_pdfs_library(hub)
@@ -196,6 +202,17 @@ with tab_mobile:
         render_courses_collection(hub)
     elif mobile_view == "⬇️ Downloads":
         render_downloads_section(hub)
+
+with tab_pong:
+    st.header("🎮 EEG-Controlled Pong Game")
+    st.markdown("**Human Connection Proof: Control the paddle with your consciousness!**")
+    st.markdown("""
+    - **Keyboard Mode:** W/S or Arrow keys to move paddle
+    - **EEG Mode:** Think "move hand UP" or "move hand DOWN" (requires Muse 2)
+    - **LCC Hypercomputer:** Consciousness-guided play with L×E metrics
+    """)
+    from eeg_pong_game import render_pong_game_embedded
+    render_pong_game_embedded(embed_id="tab")
 
 with tab_brain_proof:
     from brain_connection_proof import BrainSnapshot, TIBrainMetrics, SimulatedBrainData, DatabaseBrainData

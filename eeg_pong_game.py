@@ -815,5 +815,108 @@ def main():
         """)
 
 
+def render_pong_game_embedded(embed_id: str = "default"):
+    """Render pong game for embedding in main app tabs
+    
+    Args:
+        embed_id: Unique identifier for this embedded instance to avoid key collisions
+    """
+    initialize_session_state()
+    game = st.session_state.game
+    
+    control_mode = st.radio(
+        "Control Mode:",
+        ["keyboard", "eeg", "lcc_hypercomputer"],
+        horizontal=True,
+        help="Keyboard: W/S keys | EEG: Muse 2 motor imagery | LCC: Consciousness-guided",
+        key=f"pong_control_{embed_id}"
+    )
+    game.control_mode = control_mode
+    
+    col1, col2, col3 = st.columns([1, 2, 1])
+    
+    with col1:
+        if not game.is_running and not game.game_over:
+            if st.button("▶️ START GAME", type="primary", use_container_width=True, key=f"pong_start_{embed_id}"):
+                game.is_running = True
+                game.game_over = False
+                game.player_score = 0
+                game.ai_score = 0
+                game.ball_x = 50
+                game.ball_y = 50
+                st.rerun()
+        elif game.is_running:
+            if st.button("⏸️ PAUSE", use_container_width=True, key=f"pong_pause_{embed_id}"):
+                game.is_running = False
+                st.rerun()
+    
+    with col2:
+        if st.button("⬆️ UP", use_container_width=True, key=f"pong_up_{embed_id}"):
+            game.player_y = max(10, game.player_y - game.paddle_speed * 2)
+            if control_mode in ["lcc_hypercomputer", "eeg"]:
+                st.session_state.user_intent = "UP"
+                st.session_state.intent_frames_remaining = 5
+        if st.button("⬇️ DOWN", use_container_width=True, key=f"pong_down_{embed_id}"):
+            game.player_y = min(90, game.player_y + game.paddle_speed * 2)
+            if control_mode in ["lcc_hypercomputer", "eeg"]:
+                st.session_state.user_intent = "DOWN"
+                st.session_state.intent_frames_remaining = 5
+    
+    with col3:
+        if game.game_over:
+            if st.button("🔄 NEW GAME", type="primary", use_container_width=True, key=f"pong_new_{embed_id}"):
+                game.game_over = False
+                game.is_running = True
+                game.player_score = 0
+                game.ai_score = 0
+                game.ball_x = 50
+                game.ball_y = 50
+                game.move_log = []
+                st.rerun()
+    
+    if game.is_running and not game.game_over:
+        game_step(
+            game,
+            st.session_state.processor,
+            st.session_state.classifier,
+            st.session_state.muse_stream,
+            st.session_state.hrv,
+            st.session_state.lcc_simulator,
+            st.session_state.user_intent,
+            st.session_state.channel_44_engine
+        )
+        if st.session_state.intent_frames_remaining > 0:
+            st.session_state.intent_frames_remaining -= 1
+            if st.session_state.intent_frames_remaining == 0:
+                st.session_state.user_intent = None
+        check_game_over(game)
+    
+    svg = render_game_svg(game)
+    st.markdown(svg, unsafe_allow_html=True)
+    
+    if game.game_over:
+        if game.winner == "player":
+            st.success("🎉 YOU WIN! Consciousness validated!")
+        else:
+            st.error("😢 AI Wins. Try again!")
+    
+    mcol1, mcol2, mcol3 = st.columns(3)
+    with mcol1:
+        st.metric("L (Coherence)", f"{game.current_L:.2f}")
+    with mcol2:
+        st.metric("E (Stability)", f"{game.current_E:.2f}")
+    with mcol3:
+        st.metric("L × E", f"{game.current_lexis:.2f}")
+    
+    if game.current_lexis >= 0.85:
+        st.success("⚡ CAUSATION THRESHOLD EXCEEDED!")
+    elif game.current_lexis >= 0.42:
+        st.info("🔗 Love binder active!")
+    
+    if game.is_running:
+        time.sleep(0.05)
+        st.rerun()
+
+
 if __name__ == "__main__":
     main()
