@@ -251,17 +251,44 @@ But this is captured in the L_tralsebit itself, not in 11 separate channels.
 
 ---
 
+## Justification for Ternary Discretization
+
+**Why ternary?** Physical measurements have fundamental limits:
+
+1. **Heisenberg uncertainty:** Position/momentum cannot both be precisely known
+2. **Thermal noise:** Quantum systems have inherent fluctuations at finite T
+3. **Observer effect:** Measurement disturbs the measured system
+
+These limits mean continuous values are ALWAYS discretized in practice.
+
+**Ternary is natural for TI because:**
+- Tralse logic uses {True, False, Indeterminate}
+- Discretizing to 3 levels maps directly to tralse states
+- Physical fidelity: Most quantum measurements distinguish ~3 states (low/medium/high)
+
+**Higher precision cases:**
+- 8-level: Appropriate for high-precision lab measurements
+- 256-level: Theoretical limit, rarely achievable in consciousness research
+
+---
+
 ## Summary: Tralsebit = 32 Bits (First Principles)
 
-| Component | Count | Bits |
-|-----------|-------|------|
-| Dimensions of Truth | 4 | - |
-| Values per Dimension | 5 (2 PD + 3 meta) | - |
-| Total values | 20 | - |
-| Bits per value (ternary) | 1.585 | - |
+| Component | Count | Notes |
+|-----------|-------|-------|
+| Dimensions of Truth | 4 | E, G, L, I (GILE) |
+| Values per Dimension | 5 | 2 PD + 3 metadata |
+| Total values | 20 | Continuous |
+| Discretization | Ternary (k=3) | Natural for tralse logic |
+| Bits per value | 1.585 | log₂(3) |
 | **Total bits** | **31.7 ≈ 32** | |
 
 **This replaces the 44-channel model with a simpler, principled framework.**
+
+The 44-channel model's 11 Love binder dimensions are unnecessary because:
+- Love is already one of the 4 GILE dimensions
+- Cross-dimensional effects are captured in the coherence and DT stability values
+- The 32-bit model is more parsimonious and equally expressive
 
 ---
 
@@ -271,3 +298,4 @@ But this is captured in the L_tralsebit itself, not in 11 separate channels.
 2. Define coherence measurement from first MR
 3. Test on more complex systems (helium, water, neurons)
 4. Verify that 4 dimensions are sufficient for all i-cell descriptions
+5. Implement tralsebit encoding in TI Computing Language (TICL)
