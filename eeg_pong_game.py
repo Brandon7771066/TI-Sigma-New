@@ -833,6 +833,21 @@ def render_pong_game_embedded(embed_id: str = "default"):
     )
     game.control_mode = control_mode
     
+    if control_mode == "eeg":
+        eeg_col1, eeg_col2 = st.columns(2)
+        with eeg_col1:
+            muse_connected = st.session_state.get('muse_stream') and st.session_state.muse_stream.connected
+            if muse_connected:
+                st.success("🧠 Muse 2 Connected")
+            else:
+                st.warning("🧠 Muse 2 Not Connected")
+                st.caption("Using simulated EEG data")
+        with eeg_col2:
+            if st.button("🔌 Connect Muse", key=f"muse_connect_{embed_id}"):
+                if hasattr(st.session_state, 'muse_stream'):
+                    st.session_state.muse_stream.connect()
+                    st.rerun()
+    
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col1:
