@@ -45,9 +45,11 @@ Certainty is the degree to which a subject has resolved a representation via Myr
 
 Truth is approached through iterative resolution under constraints.
 
-- MR completion ∈ [0,1]
-- Uncertainty = 1 − MR
-- Higher MR = greater justified certainty at that stage
+- MR outputs use (-3, 2) PD scale
+- Uncertainty = unresolved information (not 1 - MR; uncertainty is its own PD-graded value)
+- Higher MR stage = greater justified certainty at that stage
+
+**Note:** The original "MR ∈ [0,1]" and "Uncertainty = 1 - MR" are legacy formulations. In TI, uncertainty is a separate PD-graded measurement on the (-3, 2) scale, not a complement of MR completion.
 
 ---
 
