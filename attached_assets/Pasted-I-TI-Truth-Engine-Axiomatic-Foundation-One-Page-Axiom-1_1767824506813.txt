@@ -1,0 +1,106 @@
+I. TI Truth Engine — Axiomatic Foundation (One Page)
+
+Axiom 1 — Ontic Primacy
+
+Truth exists independently of minds as the time-indexed tralse state of beings or systems.
+
+Truth begins with the thing itself.
+
+⸻
+
+Axiom 2 — Representational Fallibility
+
+All representations of truth are imperfect and contain simultaneous degrees of truth and falsity (tralse).
+
+No depiction is purely true or purely false.
+
+⸻
+
+Axiom 3 — Accuracy Distinction
+
+Accuracy is the degree to which a representation correctly matches the ontic truth of a being or system.
+	•	Accuracy is mind-independent
+	•	Accuracy exists whether or not it is known
+
+⸻
+
+Axiom 4 — Certainty Distinction
+
+Certainty is the degree to which a subject has resolved a representation via Myrion Resolution (MR) at a given time.
+	•	Certainty is subject-relative
+	•	Certainty ≠ accuracy
+	•	Uncertainty = unresolved information, not error
+
+⸻
+
+Axiom 5 — Myrion Resolution (MR)
+
+Truth is approached through iterative resolution under constraints.
+	•	MR completion ∈ [0,1]
+	•	Uncertainty = 1 − MR
+	•	Higher MR = greater justified certainty at that stage
+
+⸻
+
+Axiom 6 — Ternary MR Outputs
+
+Each MR stage yields three independent PD-graded values:
+	1.	Accuracy — how right the representation is
+	2.	Certainty — how resolved it is for the subject
+	3.	Truth Value — tralse synthesis across dimensions
+
+⸻
+
+Axiom 7 — Four-Dimensional Truth
+
+Truth Value integrates four irreducible dimensions:
+	•	Ontic fit (what exists)
+	•	Ethical impact (what it does)
+	•	Conscious meaning (how it is experienced)
+	•	Structural / aesthetic harmony (how coherently it integrates)
+
+⸻
+
+Axiom 8 — Ethical Weighting Is Intrinsic
+
+All belief formation and inquiry is already morally weighted.
+
+Pragmatism is not optional — it is embedded in truth via ethical relevance.
+
+⸻
+
+Axiom 9 — Information Requires Recognition
+
+Truth alone is not information.
+	•	Information = truth + recognition
+	•	Therefore, some form of awareness must be omnipresent
+
+Before minds, there must have been proto-recognition.
+
+⸻
+
+Axiom 10 — Perspective Incompleteness
+
+Third-person truth is necessarily incomplete without first-person qualia.
+	•	Simulation improves approximation
+	•	Real-time completeness requires shared first-person access
+
+⸻
+
+Axiom 11 — Asymmetry of Certainty
+
+False certainty is more harmful than unresolved uncertainty.
+	•	PD weighting penalizes overconfidence
+	•	Uncertainty is tolerated unless it blocks coherence or ethical action
+
+⸻
+
+Axiom 12 — Potential Knowability
+
+All truths are in principle knowable, but never perfectly knowable by any single subject at a time.
+
+Deviation from total depiction is inevitable.
+
+⸻
+
+II. TI Truth Engine — Formal Diagram (Conceptual)
