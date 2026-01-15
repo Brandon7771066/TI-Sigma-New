@@ -14,7 +14,7 @@ from typing import Optional, Dict, Any, List
 from dataclasses import dataclass
 from enum import Enum
 
-C2_BASE_URL = "https://collective2.com/world/apiv3"
+C2_BASE_URL = "https://api.collective2.com/world/apiv3"
 
 class SignalAction(Enum):
     BUY_TO_OPEN = "BTO"
