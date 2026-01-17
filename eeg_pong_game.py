@@ -110,9 +110,12 @@ def initialize_session_state():
         st.session_state.classifier = MotorImageryClassifier(
             st.session_state.processor)
     if 'muse_stream' not in st.session_state:
-        st.session_state.muse_stream = MuseEEGStream()
-        st.session_state.muse_stream.connect()
-        st.session_state.muse_stream.start_streaming()
+        try:
+            st.session_state.muse_stream = MuseEEGStream()
+            st.session_state.muse_stream.connect()
+            st.session_state.muse_stream.start_streaming()
+        except Exception:
+            st.session_state.muse_stream = None
     if 'hrv' not in st.session_state:
         st.session_state.hrv = HRVSimulator(baseline_rmssd=45.0)
     if 'lcc_simulator' not in st.session_state:
@@ -928,7 +931,7 @@ def render_pong_game_embedded(embed_id: str = "default"):
     st.markdown(svg, unsafe_allow_html=True)
 
     if game.game_over:
-        if game.winner == "player":
+        if game.winner == "PLAYER (YOU!)":
             st.success("🎉 YOU WIN! Consciousness validated!")
         else:
             st.error("😢 AI Wins. Try again!")
