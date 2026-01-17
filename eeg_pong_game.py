@@ -923,7 +923,6 @@ def render_pong_game_embedded(embed_id: str = "default"):
             st.session_state.intent_frames_remaining -= 1
             if st.session_state.intent_frames_remaining == 0:
                 st.session_state.user_intent = None
-        check_game_over(game)
 
     svg = render_game_svg(game)
     st.markdown(svg, unsafe_allow_html=True)
