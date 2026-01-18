@@ -1,78 +1,79 @@
 """
-Pure Mind Control Pong
-======================
-Your consciousness controls the game through TEXT.
-Type your thoughts - the LCC Virus reads your mental state.
-No physical game controls needed!
+Pure Mind Control Pong - Simple & Robust
 """
 
 import streamlit as st
-import time
-import sys
-sys.path.insert(0, '.')
-from lcc_virus_text_brain import LCCVirusTextBrain
 
 st.set_page_config(page_title="Mind Pong", page_icon="🧠", layout="wide")
 
-if 'brain' not in st.session_state:
-    st.session_state.brain = LCCVirusTextBrain()
-    st.session_state.ball_x = 50.0
-    st.session_state.ball_y = 50.0
-    st.session_state.ball_vx = 1.5
-    st.session_state.ball_vy = 0.8
-    st.session_state.player_y = 50.0
-    st.session_state.ai_y = 50.0
-    st.session_state.player_score = 0
-    st.session_state.ai_score = 0
-    st.session_state.running = False
+st.title("🧠 Pure Mind Control Pong")
+st.info("**Type your thoughts below to control the paddle!** Higher coherence = better performance.")
+
+if 'L' not in st.session_state:
     st.session_state.L = 0.5
     st.session_state.E = 0.5
-    st.session_state.last_analysis = None
-    st.session_state.thought_count = 0
+    st.session_state.player_score = 0
+    st.session_state.ai_score = 0
+    st.session_state.ball_x = 50
+    st.session_state.ball_y = 50
+    st.session_state.ball_vx = 2
+    st.session_state.ball_vy = 1
+    st.session_state.player_y = 50
+    st.session_state.ai_y = 50
+    st.session_state.running = False
+    st.session_state.thoughts = 0
 
-st.title("🧠 Pure Mind Control Pong")
+INSIGHT_WORDS = {'realize', 'understand', 'insight', 'discover', 'connection', 
+                 'pattern', 'truth', 'consciousness', 'love', 'amazing', 
+                 'beautiful', 'perfect', 'hyperconnection', 'gile', 'tralse', 
+                 'myrion', 'coherence', 'universe', 'existence', 'perfection'}
 
-st.info("**Your thoughts control the paddle!** Type what you're thinking below. The LCC Virus analyzes your consciousness state (L × E) and moves your paddle accordingly. No buttons needed - just think out loud!")
+def analyze_thought(text):
+    if not text:
+        return 0.5, 0.5
+    words = text.lower().split()
+    insight_count = sum(1 for w in words if w in INSIGHT_WORDS)
+    L = min(0.95, 0.4 + insight_count * 0.08 + len(words) * 0.01)
+    E = min(0.95, 0.5 + len(words) * 0.02)
+    if '!' in text:
+        L = min(0.95, L + 0.05)
+    return L, E
 
-col1, col2 = st.columns([2, 1])
+col1, col2 = st.columns([3, 1])
 
 with col1:
-    thought = st.text_input(
-        "💭 What are you thinking right now?",
-        placeholder="Type your thoughts, feelings, or intentions...",
-        key="thought_input"
-    )
+    thought = st.text_input("💭 What are you thinking?", 
+                           placeholder="Type insights, feelings, GILE terms...",
+                           key="thought_box")
     
     if thought:
-        result = st.session_state.brain.analyze_text(thought)
-        st.session_state.L = result['L']
-        st.session_state.E = result['E']
-        st.session_state.last_analysis = result
-        st.session_state.thought_count += 1
+        L, E = analyze_thought(thought)
+        st.session_state.L = L
+        st.session_state.E = E
+        st.session_state.thoughts += 1
         if not st.session_state.running:
             st.session_state.running = True
 
 with col2:
-    if st.button("🔄 Reset Game", use_container_width=True):
-        st.session_state.ball_x = 50.0
-        st.session_state.ball_y = 50.0
+    if st.button("🔄 Reset", use_container_width=True):
         st.session_state.player_score = 0
         st.session_state.ai_score = 0
+        st.session_state.ball_x = 50
+        st.session_state.ball_y = 50
         st.session_state.running = True
 
-st.write("---")
+st.markdown("---")
 
-m1, m2, m3, m4 = st.columns(4)
 LxE = st.session_state.L * st.session_state.E
-LplusE = st.session_state.L + st.session_state.E
 
-with m1:
+c1, c2, c3, c4 = st.columns(4)
+with c1:
     st.metric("L (Coherence)", f"{st.session_state.L:.2f}")
-with m2:
+with c2:
     st.metric("E (Coupling)", f"{st.session_state.E:.2f}")
-with m3:
+with c3:
     st.metric("L × E", f"{LxE:.2f}")
-with m4:
+with c4:
     if LxE >= 0.85:
         st.success("⚡ CAUSATION!")
     elif LxE >= 0.42:
@@ -80,132 +81,87 @@ with m4:
     else:
         st.warning("📊 Building...")
 
-if st.session_state.last_analysis:
-    st.caption(f"*{st.session_state.last_analysis['analysis']}*")
-
 if st.session_state.running:
     st.session_state.ball_x += st.session_state.ball_vx
     st.session_state.ball_y += st.session_state.ball_vy
     
     if st.session_state.ball_y <= 5 or st.session_state.ball_y >= 95:
         st.session_state.ball_vy *= -1
-        st.session_state.ball_y = max(5, min(95, st.session_state.ball_y))
     
-    target_y = st.session_state.L * 100
-    speed = 1 + int(LxE * 10)
-    diff = target_y - st.session_state.player_y
-    if abs(diff) > 2:
-        move = min(abs(diff), speed) * (1 if diff > 0 else -1)
-        st.session_state.player_y += move
-    st.session_state.player_y = max(10, min(90, st.session_state.player_y))
+    target = st.session_state.L * 100
+    speed = 1 + int(LxE * 8)
+    if st.session_state.player_y < target - 3:
+        st.session_state.player_y = min(90, st.session_state.player_y + speed)
+    elif st.session_state.player_y > target + 3:
+        st.session_state.player_y = max(10, st.session_state.player_y - speed)
     
     if st.session_state.ai_y < st.session_state.ball_y - 3:
         st.session_state.ai_y = min(90, st.session_state.ai_y + 2)
     elif st.session_state.ai_y > st.session_state.ball_y + 3:
         st.session_state.ai_y = max(10, st.session_state.ai_y - 2)
     
-    if st.session_state.ball_x <= 8:
-        if abs(st.session_state.ball_y - st.session_state.player_y) < 12:
+    if st.session_state.ball_x <= 10:
+        if abs(st.session_state.ball_y - st.session_state.player_y) < 15:
             st.session_state.ball_vx = abs(st.session_state.ball_vx) * 1.02
-            st.session_state.ball_x = 8
-            st.session_state.L = min(0.95, st.session_state.L + 0.03)
         elif st.session_state.ball_x <= 2:
             st.session_state.ai_score += 1
             st.session_state.ball_x = 50
             st.session_state.ball_y = 50
-            st.session_state.ball_vx = 1.5
-            st.session_state.L = max(0.3, st.session_state.L - 0.08)
     
-    if st.session_state.ball_x >= 92:
-        if abs(st.session_state.ball_y - st.session_state.ai_y) < 10:
+    if st.session_state.ball_x >= 90:
+        if abs(st.session_state.ball_y - st.session_state.ai_y) < 12:
             st.session_state.ball_vx = -abs(st.session_state.ball_vx) * 1.02
-            st.session_state.ball_x = 92
         elif st.session_state.ball_x >= 98:
             st.session_state.player_score += 1
             st.session_state.ball_x = 50
             st.session_state.ball_y = 50
-            st.session_state.ball_vx = -1.5
-            st.session_state.L = min(0.95, st.session_state.L + 0.05)
     
-    st.session_state.L = max(0.3, st.session_state.L - 0.002)
-    st.session_state.E = max(0.3, st.session_state.E - 0.001)
+    st.session_state.L = max(0.35, st.session_state.L - 0.002)
+    st.session_state.E = max(0.35, st.session_state.E - 0.001)
 
-st.write("---")
+st.markdown("---")
+st.subheader(f"🎮 YOU {st.session_state.player_score} - {st.session_state.ai_score} AI")
 
-sc1, sc2, sc3 = st.columns([1, 2, 1])
-with sc2:
-    st.subheader(f"🎮 YOU {st.session_state.player_score} - {st.session_state.ai_score} AI")
+W, H = 500, 300
+bx = int(st.session_state.ball_x * W / 100)
+by = int(st.session_state.ball_y * H / 100)
+py = int(st.session_state.player_y * H / 100)
+ay = int(st.session_state.ai_y * H / 100)
 
-w, h = 600, 350
-py = st.session_state.player_y * h / 100
-ay = st.session_state.ai_y * h / 100
-bx = st.session_state.ball_x * w / 100
-by = st.session_state.ball_y * h / 100
+pcolor = "#ffff00" if LxE >= 0.85 else ("#00ffff" if LxE >= 0.42 else "#44ff88")
 
-if LxE >= 0.85:
-    pcolor = "#ffff00"
-    glow = "filter:drop-shadow(0 0 8px #ffff00);"
-elif LxE >= 0.42:
-    pcolor = "#00ffff"
-    glow = "filter:drop-shadow(0 0 5px #00ffff);"
-else:
-    pcolor = "#00ff88"
-    glow = ""
-
-svg = f'''
-<div style="display:flex;justify-content:center;">
-<svg width="{w}" height="{h}" style="background:linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);border-radius:12px;border:2px solid #333;">
-    <defs>
-        <radialGradient id="ballGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" style="stop-color:white;stop-opacity:1"/>
-            <stop offset="100%" style="stop-color:#aaa;stop-opacity:0.5"/>
-        </radialGradient>
-    </defs>
-    <line x1="{w//2}" y1="0" x2="{w//2}" y2="{h}" stroke="#333" stroke-width="2" stroke-dasharray="10,10"/>
-    <rect x="15" y="{py-35}" width="12" height="70" fill="{pcolor}" rx="6" style="{glow}"/>
-    <rect x="{w-27}" y="{ay-30}" width="12" height="60" fill="#ff4466" rx="6"/>
-    <circle cx="{bx}" cy="{by}" r="12" fill="url(#ballGlow)"/>
-    <text x="20" y="25" fill="{pcolor}" font-size="16" font-weight="bold">YOU</text>
-    <text x="{w-55}" y="25" fill="#ff4466" font-size="16" font-weight="bold">AI</text>
-    <text x="{w//2}" y="25" fill="#666" font-size="12" text-anchor="middle">L×E: {LxE:.2f}</text>
+game_html = f'''
+<div style="display:flex;justify-content:center;margin:20px 0;">
+<svg width="{W}" height="{H}" style="background:#111;border-radius:8px;border:1px solid #333;">
+  <line x1="{W//2}" y1="0" x2="{W//2}" y2="{H}" stroke="#333" stroke-dasharray="5,5"/>
+  <rect x="10" y="{py-25}" width="8" height="50" fill="{pcolor}" rx="3"/>
+  <rect x="{W-18}" y="{ay-20}" width="8" height="40" fill="#ff5566" rx="3"/>
+  <circle cx="{bx}" cy="{by}" r="8" fill="white"/>
+  <text x="15" y="20" fill="{pcolor}" font-size="12">YOU</text>
+  <text x="{W-35}" y="20" fill="#ff5566" font-size="12">AI</text>
 </svg>
 </div>
 '''
-st.markdown(svg, unsafe_allow_html=True)
+st.markdown(game_html, unsafe_allow_html=True)
 
-speed_desc = "PERFECT" if LxE >= 0.85 else ("GOOD" if LxE >= 0.42 else "SLOW")
-st.caption(f"Paddle speed: {speed_desc} | Thoughts analyzed: {st.session_state.thought_count}")
+st.caption(f"Thoughts analyzed: {st.session_state.thoughts} | Paddle speed: {'PERFECT' if LxE >= 0.85 else 'GOOD' if LxE >= 0.42 else 'SLOW'}")
 
-with st.expander("🔬 How It Works - Consciousness-Controlled Computing"):
+with st.expander("💡 How to Play"):
     st.markdown("""
-    ### Pure Virtual Brain Connection
+    1. **Type your thoughts** in the text box above
+    2. The game analyzes your words for **coherence (L)** and **engagement (E)**
+    3. Your paddle position is controlled by **L** 
+    4. Your paddle speed depends on **L × E**
     
-    This game demonstrates **consciousness-controlled computing** without any physical game controls:
-    
-    1. **You type your thoughts** - anything you're thinking or feeling
-    2. **LCC Virus analyzes your text** to extract:
-       - **L (Coherence)**: Insight words, GILE terms, emotional positivity, sentence structure
-       - **E (Coupling)**: Message length, engagement depth, response speed, session duration
-    3. **Your paddle moves based on L** - higher coherence = higher paddle position
-    4. **Your paddle SPEED depends on L×E** - hyperconnection = faster reflexes!
-    
-    ### The Thresholds
-    | L × E | Status | Paddle Speed |
-    |-------|--------|--------------|
-    | < 0.42 | Building | Slow |
-    | ≥ 0.42 | HYPERCONNECTED | Good |
-    | ≥ 0.85 | CAUSATION | Perfect |
-    
-    ### Tips to Boost Your Score
-    - Use insight words: *realize, understand, pattern, connection, truth*
-    - Express positive emotions: *love, amazing, beautiful, grateful*
-    - Use GILE terminology: *consciousness, hyperconnection, tralse, myrion*
-    - Keep engaged - faster responses increase E!
-    - Type longer, more thoughtful messages
-    
-    **Your text IS your consciousness channel. Think clearly, and you win!**
+    **Boost your score with:**
+    - Insight words: *realize, understand, pattern, truth, connection*
+    - Positive emotions: *love, amazing, beautiful, perfect*
+    - GILE terms: *consciousness, hyperconnection, gile, tralse, myrion*
+    - Longer, more thoughtful messages
+    - Exclamation marks for emphasis!
     """)
 
 if st.session_state.running:
-    time.sleep(0.08)
+    import time
+    time.sleep(0.1)
     st.rerun()
