@@ -444,63 +444,73 @@ def render_game_svg(game: PongGameState) -> str:
     width = 600
     height = 400
 
-    # Scale positions to pixels
-    player_y = game.player_y * height / 100
-    ai_y = game.ai_y * height / 100
-    ball_x = game.ball_x * width / 100
-    ball_y = game.ball_y * height / 100
-    paddle_h = game.paddle_height * height / 100
+    # Scale positions to pixels (use int to avoid float issues)
+    player_y = int(game.player_y * height / 100)
+    ai_y = int(game.ai_y * height / 100)
+    ball_x = int(game.ball_x * width / 100)
+    ball_y = int(game.ball_y * height / 100)
+    paddle_h = int(game.paddle_height * height / 100)
+
+    # Clamp positions to stay within bounds
+    player_y = max(paddle_h // 2 + 5, min(height - paddle_h // 2 - 5, player_y))
+    ai_y = max(paddle_h // 2 + 5, min(height - paddle_h // 2 - 5, ai_y))
+    ball_x = max(15, min(width - 15, ball_x))
+    ball_y = max(15, min(height - 15, ball_y))
 
     # Paddle positions
-    player_x = 20
-    ai_x = width - 20
+    player_x = 25
+    ai_x = width - 25
 
     svg = f'''
-    <svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" 
-         style="background: #111; border-radius: 10px;">
-        
-        <!-- Court outline -->
-        <rect x="2" y="2" width="{width-4}" height="{height-4}" 
-              fill="none" stroke="#333" stroke-width="2"/>
-        
-        <!-- Center line -->
-        <line x1="{width/2}" y1="0" x2="{width/2}" y2="{height}" 
-              stroke="#333" stroke-width="2" stroke-dasharray="10,10"/>
-        
-        <!-- Center circle -->
-        <circle cx="{width/2}" cy="{height/2}" r="40" 
-                fill="none" stroke="#333" stroke-width="2"/>
-        
-        <!-- Player paddle (left) - green -->
-        <rect x="{player_x - 5}" y="{player_y - paddle_h/2}" 
-              width="10" height="{paddle_h}" 
-              fill="#00ff88" rx="3"/>
-        
-        <!-- AI paddle (right) - red -->
-        <rect x="{ai_x - 5}" y="{ai_y - paddle_h/2}" 
-              width="10" height="{paddle_h}" 
-              fill="#ff4444" rx="3"/>
-        
-        <!-- Ball - white with glow -->
-        <circle cx="{ball_x}" cy="{ball_y}" r="10" fill="#fff">
-            <animate attributeName="opacity" values="1;0.8;1" dur="0.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="{ball_x}" cy="{ball_y}" r="15" fill="none" stroke="#fff" stroke-opacity="0.3"/>
-        
-        <!-- Score display -->
-        <text x="{width/2 - 60}" y="50" font-size="40" fill="#00ff88" 
-              font-family="monospace" text-anchor="middle">{game.player_score}</text>
-        <text x="{width/2 + 60}" y="50" font-size="40" fill="#ff4444" 
-              font-family="monospace" text-anchor="middle">{game.ai_score}</text>
-        
-        <!-- Labels -->
-        <text x="{player_x}" y="{height - 10}" font-size="12" fill="#00ff88" 
-              font-family="sans-serif" text-anchor="middle">YOU</text>
-        <text x="{ai_x}" y="{height - 10}" font-size="12" fill="#ff4444" 
-              font-family="sans-serif" text-anchor="middle">AI</text>
-              
-    </svg>
-    '''
+<div style="display:flex;justify-content:center;padding:10px;">
+<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" 
+     style="background:linear-gradient(180deg,#0a0a1a 0%,#1a1a2e 100%);border-radius:12px;border:2px solid #444;">
+    
+    <!-- Background fill to ensure visibility -->
+    <rect x="0" y="0" width="{width}" height="{height}" fill="#0a0a1a"/>
+    
+    <!-- Court outline -->
+    <rect x="4" y="4" width="{width-8}" height="{height-8}" 
+          fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Center line -->
+    <line x1="{width//2}" y1="0" x2="{width//2}" y2="{height}" 
+          stroke="#444" stroke-width="3" stroke-dasharray="15,10"/>
+    
+    <!-- Center circle -->
+    <circle cx="{width//2}" cy="{height//2}" r="50" 
+            fill="none" stroke="#333" stroke-width="2"/>
+    
+    <!-- Player paddle (left) - bright green with glow -->
+    <rect x="{player_x - 8}" y="{player_y - paddle_h//2}" 
+          width="16" height="{paddle_h}" 
+          fill="#00ff88" rx="8" style="filter:drop-shadow(0 0 10px #00ff88);"/>
+    
+    <!-- AI paddle (right) - red with glow -->
+    <rect x="{ai_x - 8}" y="{ai_y - paddle_h//2}" 
+          width="16" height="{paddle_h}" 
+          fill="#ff4466" rx="8" style="filter:drop-shadow(0 0 10px #ff4466);"/>
+    
+    <!-- Ball - white with strong glow -->
+    <circle cx="{ball_x}" cy="{ball_y}" r="12" fill="#ffffff" style="filter:drop-shadow(0 0 15px #ffffff);"/>
+    
+    <!-- Score display - large and prominent -->
+    <text x="{width//2 - 80}" y="60" font-size="48" fill="#00ff88" 
+          font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle">{game.player_score}</text>
+    <text x="{width//2}" y="60" font-size="32" fill="#666" 
+          font-family="Arial,sans-serif" text-anchor="middle">-</text>
+    <text x="{width//2 + 80}" y="60" font-size="48" fill="#ff4466" 
+          font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle">{game.ai_score}</text>
+    
+    <!-- Labels -->
+    <text x="{player_x}" y="{height - 15}" font-size="14" fill="#00ff88" 
+          font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle">YOU</text>
+    <text x="{ai_x}" y="{height - 15}" font-size="14" fill="#ff4466" 
+          font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle">AI</text>
+          
+</svg>
+</div>
+'''
 
     return svg
 
