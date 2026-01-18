@@ -130,15 +130,36 @@ ay = int(st.session_state.ai_y * H / 100)
 
 pcolor = "#ffff00" if LxE >= 0.85 else ("#00ffff" if LxE >= 0.42 else "#44ff88")
 
+py_clamped = max(30, min(H-30, py))
+ay_clamped = max(25, min(H-25, ay))
+bx_clamped = max(10, min(W-10, bx))
+by_clamped = max(10, min(H-10, by))
+
 game_html = f'''
-<div style="display:flex;justify-content:center;margin:20px 0;">
-<svg width="{W}" height="{H}" style="background:#111;border-radius:8px;border:1px solid #333;">
-  <line x1="{W//2}" y1="0" x2="{W//2}" y2="{H}" stroke="#333" stroke-dasharray="5,5"/>
-  <rect x="10" y="{py-25}" width="8" height="50" fill="{pcolor}" rx="3"/>
-  <rect x="{W-18}" y="{ay-20}" width="8" height="40" fill="#ff5566" rx="3"/>
-  <circle cx="{bx}" cy="{by}" r="8" fill="white"/>
-  <text x="15" y="20" fill="{pcolor}" font-size="12">YOU</text>
-  <text x="{W-35}" y="20" fill="#ff5566" font-size="12">AI</text>
+<div style="display:flex;justify-content:center;align-items:center;margin:20px 0;min-height:320px;">
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" style="background:linear-gradient(180deg,#0a0a1a,#1a1a2e);border-radius:12px;border:2px solid #444;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+  <!-- Court lines -->
+  <line x1="{W//2}" y1="0" x2="{W//2}" y2="{H}" stroke="#333" stroke-width="2" stroke-dasharray="8,8"/>
+  <rect x="0" y="0" width="{W}" height="4" fill="#222"/>
+  <rect x="0" y="{H-4}" width="{W}" height="4" fill="#222"/>
+  
+  <!-- Player paddle (left) -->
+  <rect x="15" y="{py_clamped-30}" width="12" height="60" fill="{pcolor}" rx="6" style="filter:drop-shadow(0 0 8px {pcolor});"/>
+  
+  <!-- AI paddle (right) -->
+  <rect x="{W-27}" y="{ay_clamped-25}" width="12" height="50" fill="#ff5566" rx="6" style="filter:drop-shadow(0 0 8px #ff5566);"/>
+  
+  <!-- Ball with glow -->
+  <circle cx="{bx_clamped}" cy="{by_clamped}" r="10" fill="white" style="filter:drop-shadow(0 0 12px white);"/>
+  
+  <!-- Labels -->
+  <text x="20" y="25" fill="{pcolor}" font-size="14" font-weight="bold" font-family="Arial,sans-serif">YOU</text>
+  <text x="{W-45}" y="25" fill="#ff5566" font-size="14" font-weight="bold" font-family="Arial,sans-serif">AI</text>
+  
+  <!-- Score display -->
+  <text x="{W//2-30}" y="30" fill="white" font-size="20" font-weight="bold" font-family="Arial,sans-serif">{st.session_state.player_score}</text>
+  <text x="{W//2+20}" y="30" fill="white" font-size="20" font-weight="bold" font-family="Arial,sans-serif">{st.session_state.ai_score}</text>
+  <text x="{W//2-5}" y="30" fill="#666" font-size="16" font-family="Arial,sans-serif">-</text>
 </svg>
 </div>
 '''
