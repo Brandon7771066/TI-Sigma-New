@@ -26,6 +26,7 @@ Date: December 26, 2025
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import numpy as np
 import time
 from dataclasses import dataclass, field
@@ -682,7 +683,8 @@ def main():
 
         # Render game
         game_svg = render_game_svg(game)
-        game_placeholder.markdown(game_svg, unsafe_allow_html=True)
+        with game_placeholder.container():
+            components.html(game_svg, height=420)
 
         # Game over message
         if game.game_over:
@@ -736,7 +738,7 @@ def main():
 
             # TI metrics visualization
             metrics_svg = render_ti_metrics(game)
-            st.markdown(metrics_svg, unsafe_allow_html=True)
+            components.html(metrics_svg, height=120)
 
             # Detailed metrics
             st.markdown("---")
@@ -938,7 +940,7 @@ def render_pong_game_embedded(embed_id: str = "default"):
                 st.session_state.user_intent = None
 
     svg = render_game_svg(game)
-    st.markdown(svg, unsafe_allow_html=True)
+    components.html(svg, height=420)
 
     if game.game_over:
         if game.winner == "PLAYER (YOU!)":
