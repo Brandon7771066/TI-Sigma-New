@@ -714,7 +714,10 @@ class DatabaseManager:
     
     def get_assets_by_type(self, asset_type):
         """Get all assets of specific type"""
-        conn = self.get_connection()
+        try:
+            conn = self.get_connection()
+        except ConnectionError:
+            return []
         cur = conn.cursor(cursor_factory=RealDictCursor)
         
         cur.execute("""
