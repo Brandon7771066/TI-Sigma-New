@@ -67,7 +67,11 @@ class DatabaseManager:
     
     def send_heartbeat(self, app_name):
         """Update app heartbeat"""
-        conn = self.get_connection()
+        try:
+            conn = self.get_connection()
+        except ConnectionError:
+            return
+
         cur = conn.cursor()
         
         cur.execute("""
