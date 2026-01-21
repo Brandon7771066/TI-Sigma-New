@@ -195,7 +195,7 @@ def render_duration_dashboard():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            session_date = st.date_input("Session Date", value=datetime.now())
+            session_date = st.date_input("Session Date", value=datetime.now(), key="duration_session_date")
             session_time = st.time_input("Session Time", value=datetime.now().time())
         
         with col2:
