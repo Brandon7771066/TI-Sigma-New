@@ -8,9 +8,12 @@ from datetime import datetime
 from db_utils import db
 
 def render_master_hub():
-    # Register Master Hub with database
-    db.register_app("Master Hub", "", "running")
-    db.send_heartbeat("Master Hub")
+    # Register Master Hub with database (optional in dev)
+    try:
+        db.register_app("Master Hub", "", "running")
+        db.send_heartbeat("Master Hub")
+    except Exception:
+        pass
     
     st.header("🌌 Master Coordination Hub")
     st.markdown("**33% Central Intelligence • 67% Distributed Specialists**")
