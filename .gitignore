@@ -84,3 +84,6 @@ chatgpt_data.db
 temp_jsondata.json
 attached_assets/chat_*.html
 attached_assets/chatgpt_conversations_*.json
+
+# Node
+node_modules/
