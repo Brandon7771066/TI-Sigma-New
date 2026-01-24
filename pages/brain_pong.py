@@ -1,10 +1,11 @@
 """
-Pure Mental Pong - 100% Thought-Controlled (Ultra-Stable Version)
-Uses text_input with callback for real-time paddle updates.
+Pure Mental Pong - 100% Thought-Controlled (Fixed Version)
+Uses text_area for real-time updates and removes problematic key parameter.
 """
 
 import streamlit as st
 import streamlit.components.v1 as components
+import hashlib
 
 st.set_page_config(page_title="Mental Pong", page_icon="🧠", layout="wide")
 
@@ -14,7 +15,6 @@ st.markdown("**Your paddle moves by THOUGHT ALONE.** Type to control your consci
 if 'L' not in st.session_state:
     st.session_state.L = 0.5
     st.session_state.E = 0.5
-    st.session_state.input_text = ""
 
 INSIGHT_WORDS = {
     'up': 0.22, 'high': 0.18, 'above': 0.15, 'top': 0.15, 'rise': 0.15, 'ascend': 0.18,
@@ -24,11 +24,15 @@ INSIGHT_WORDS = {
     'down': -0.22, 'low': -0.18, 'below': -0.15, 'bottom': -0.15, 'fall': -0.15, 'descend': -0.18,
     'ground': -0.12, 'earth': -0.10, 'dark': -0.10, 'shadow': -0.12, 'deep': -0.12,
     'd': -0.08, 'l': -0.05,
-    'center': 0.0, 'middle': 0.0, 'balance': 0.0, 'neutral': 0.0, 'c': 0.0, 'm': 0.0
+    'center': 0.0, 'middle': 0.0, 'balance': 0.0, 'neutral': 0.0, 'c': 0.0, 'm': 0.0,
+    'reset': 0.0
 }
 
 def analyze_thought(text):
     if not text.strip():
+        return 0.5, 0.5
+    
+    if 'reset' in text.lower():
         return 0.5, 0.5
     
     words = text.lower().split()
@@ -55,29 +59,19 @@ def analyze_thought(text):
     
     return L, E
 
-def on_input_change():
-    text = st.session_state.thought_input
-    L, E = analyze_thought(text)
+st.markdown("### 💭 Type Your Consciousness State")
+
+thought = st.text_area(
+    "Type words to control paddle (updates as you type):",
+    height=80,
+    placeholder="Type: 'up up up!' or 'down down' - updates happen when you click outside or press Ctrl+Enter",
+    key="thought_box"
+)
+
+if thought:
+    L, E = analyze_thought(thought)
     st.session_state.L = L
     st.session_state.E = E
-    st.session_state.input_text = text
-
-st.markdown("### 💭 Type Your Consciousness State")
-col_input, col_clear = st.columns([5, 1])
-with col_input:
-    st.text_input(
-        "Type words to move paddle (press Enter to update):",
-        value=st.session_state.input_text,
-        key="thought_input",
-        on_change=on_input_change,
-        placeholder="Type: 'up up up' or 'down down' or just 'u u u' for quick control"
-    )
-with col_clear:
-    if st.button("🔄 Reset"):
-        st.session_state.L = 0.5
-        st.session_state.E = 0.5
-        st.session_state.input_text = ""
-        st.rerun()
 
 L_val = st.session_state.L
 E_val = st.session_state.E
@@ -105,8 +99,6 @@ paddle_target = int((1 - L_val) * 100)
 paddle_speed = 4 + int(LxE * 10)
 
 pcolor = "#ffff00" if LxE >= 0.85 else ("#00ffff" if LxE >= 0.42 else "#44ff88")
-
-component_key = f"pong_{paddle_target}_{paddle_speed}"
 
 game_html = f'''
 <!DOCTYPE html>
@@ -146,11 +138,8 @@ let ball = {{ x: W/2, y: H/2, vx: 4, vy: 2, r: 10 }};
 let player = {{ y: H/2, h: 70, x: 25 }};
 let ai = {{ y: H/2, h: 55, speed: 2.5, x: W - 25 }};
 let score = {{ player: 0, ai: 0 }};
-let gameTime = 0;
 
 function update() {{
-  gameTime++;
-  
   const diff = PADDLE_TARGET - player.y;
   player.y += Math.sign(diff) * Math.min(PADDLE_SPEED, Math.abs(diff) * 0.15);
   player.y = Math.max(player.h/2 + 5, Math.min(H - player.h/2 - 5, player.y));
@@ -279,22 +268,24 @@ gameLoop();
 </html>
 '''
 
-components.html(game_html, height=430, key=component_key)
+components.html(game_html, height=430)
 
 with st.expander("🧠 Quick Control Guide", expanded=False):
     st.markdown("""
-    **Type words then press Enter to move paddle:**
+    **Type words to control paddle position:**
     
     | Quick Keys | Full Words | Effect |
     |------------|------------|--------|
     | `u u u` | up, high, sky, transcend | Paddle UP ⬆️ |
     | `d d d` | down, low, ground, deep | Paddle DOWN ⬇️ |
     | `c` or `m` | center, middle, balance | Paddle CENTER |
+    | `reset` | reset | Return to center |
     
     **Pro Tips:**
     - Add `!` for stronger effect: `up up up!`
     - Use TI words for power boost: `gile myrion tralse`
     - Higher L×E = faster paddle response
+    - Click outside text area or press Ctrl+Enter to update
     """)
 
-st.caption("🧠 Pure Mental Control - Type your thoughts and press Enter!")
+st.caption("🧠 Pure Mental Control - Type your thoughts to move the paddle!")
