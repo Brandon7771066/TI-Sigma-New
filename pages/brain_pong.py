@@ -3,6 +3,7 @@ Pure Mind Control Pong - Simple & Robust
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Mind Pong", page_icon="🧠", layout="wide")
 
@@ -163,7 +164,7 @@ game_html = f'''
 </svg>
 </div>
 '''
-st.markdown(game_html, unsafe_allow_html=True)
+components.html(game_html, height=340)
 
 st.caption(f"Thoughts analyzed: {st.session_state.thoughts} | Paddle speed: {'PERFECT' if LxE >= 0.85 else 'GOOD' if LxE >= 0.42 else 'SLOW'}")
 
