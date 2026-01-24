@@ -1,5 +1,5 @@
 """
-Pure Mind Control Pong - Improved Stability & Controls
+Pure Mind Control Pong - Client-Side Animation with Mind Control Integration
 """
 
 import streamlit as st
@@ -8,22 +8,11 @@ import streamlit.components.v1 as components
 st.set_page_config(page_title="Mind Pong", page_icon="🧠", layout="wide")
 
 st.title("🧠 Pure Mind Control Pong")
-st.info("**Control the paddle with your brain or keyboard!** Higher coherence = better performance.")
 
 if 'L' not in st.session_state:
     st.session_state.L = 0.5
     st.session_state.E = 0.5
-    st.session_state.player_score = 0
-    st.session_state.ai_score = 0
-    st.session_state.ball_x = 50
-    st.session_state.ball_y = 50
-    st.session_state.ball_vx = 2.5
-    st.session_state.ball_vy = 1.5
-    st.session_state.player_y = 50
-    st.session_state.ai_y = 50
-    st.session_state.running = False
     st.session_state.thoughts = 0
-    st.session_state.manual_move = 0
 
 INSIGHT_WORDS = {'realize', 'understand', 'insight', 'discover', 'connection', 
                  'pattern', 'truth', 'consciousness', 'love', 'amazing', 
@@ -44,8 +33,8 @@ def analyze_thought(text):
 col1, col2, col3 = st.columns([2, 1, 1])
 
 with col1:
-    thought = st.text_input("💭 What are you thinking?", 
-                           placeholder="Type insights, feelings, GILE terms...",
+    thought = st.text_input("💭 Type insights to control paddle position!", 
+                           placeholder="consciousness, love, tralse, myrion...",
                            key="thought_box")
     
     if thought:
@@ -53,170 +42,254 @@ with col1:
         st.session_state.L = L
         st.session_state.E = E
         st.session_state.thoughts += 1
-        if not st.session_state.running:
-            st.session_state.running = True
 
 with col2:
-    st.write("**Manual Controls:**")
-    btn_col1, btn_col2 = st.columns(2)
-    with btn_col1:
-        if st.button("⬆️ UP", use_container_width=True, key="up_btn"):
-            st.session_state.manual_move = -15
-            st.session_state.running = True
-    with btn_col2:
-        if st.button("⬇️ DOWN", use_container_width=True, key="down_btn"):
-            st.session_state.manual_move = 15
-            st.session_state.running = True
+    control_mode = st.radio("Control Mode", ["Mind + Manual", "Manual Only"], 
+                            horizontal=True, label_visibility="collapsed")
 
 with col3:
-    st.write("**Game Control:**")
-    if st.button("▶️ START" if not st.session_state.running else "⏸️ PAUSE", 
-                 use_container_width=True, type="primary"):
-        st.session_state.running = not st.session_state.running
-    if st.button("🔄 RESET", use_container_width=True):
-        st.session_state.player_score = 0
-        st.session_state.ai_score = 0
-        st.session_state.ball_x = 50
-        st.session_state.ball_y = 50
-        st.session_state.ball_vx = 2.5
-        st.session_state.ball_vy = 1.5
-        st.session_state.player_y = 50
-        st.session_state.ai_y = 50
-        st.session_state.running = True
+    st.metric("L × E Power", f"{st.session_state.L * st.session_state.E:.2f}")
 
 LxE = st.session_state.L * st.session_state.E
+L_value = st.session_state.L
+paddle_speed = 4 + int(LxE * 8)
+mind_target = int((1 - L_value) * 100)
+use_mind = 1 if control_mode == "Mind + Manual" else 0
+
+pcolor = "#ffff00" if LxE >= 0.85 else ("#00ffff" if LxE >= 0.42 else "#44ff88")
+state_label = "CAUSATION" if LxE >= 0.85 else ("CONNECTED" if LxE >= 0.42 else "Building")
 
 c1, c2, c3, c4 = st.columns(4)
 with c1:
-    st.metric("L (Coherence)", f"{st.session_state.L:.2f}")
+    st.metric("L (Coherence)", f"{L_value:.2f}")
 with c2:
     st.metric("E (Coupling)", f"{st.session_state.E:.2f}")
 with c3:
-    st.metric("L × E", f"{LxE:.2f}")
-with c4:
     if LxE >= 0.85:
-        st.success("⚡ CAUSATION!")
+        st.success(f"⚡ {state_label}")
     elif LxE >= 0.42:
-        st.info("🔗 HYPERCONNECTED")
+        st.info(f"🔗 {state_label}")
     else:
-        st.warning("📊 Building...")
+        st.warning(f"📊 {state_label}")
+with c4:
+    st.caption(f"Thoughts: {st.session_state.thoughts}")
 
-if st.session_state.running:
-    st.session_state.ball_x += st.session_state.ball_vx
-    st.session_state.ball_y += st.session_state.ball_vy
-    
-    if st.session_state.ball_y <= 5:
-        st.session_state.ball_y = 5
-        st.session_state.ball_vy = abs(st.session_state.ball_vy)
-    elif st.session_state.ball_y >= 95:
-        st.session_state.ball_y = 95
-        st.session_state.ball_vy = -abs(st.session_state.ball_vy)
-    
-    if st.session_state.manual_move != 0:
-        st.session_state.player_y += st.session_state.manual_move
-        st.session_state.player_y = max(10, min(90, st.session_state.player_y))
-        st.session_state.manual_move = 0
-    else:
-        target = st.session_state.L * 100
-        speed = 2 + int(LxE * 6)
-        if st.session_state.player_y < target - 5:
-            st.session_state.player_y = min(90, st.session_state.player_y + speed)
-        elif st.session_state.player_y > target + 5:
-            st.session_state.player_y = max(10, st.session_state.player_y - speed)
-    
-    ai_speed = 2.5
-    if st.session_state.ai_y < st.session_state.ball_y - 5:
-        st.session_state.ai_y = min(90, st.session_state.ai_y + ai_speed)
-    elif st.session_state.ai_y > st.session_state.ball_y + 5:
-        st.session_state.ai_y = max(10, st.session_state.ai_y - ai_speed)
-    
-    paddle_half = 15
-    if st.session_state.ball_x <= 12:
-        if abs(st.session_state.ball_y - st.session_state.player_y) < paddle_half:
-            st.session_state.ball_vx = abs(st.session_state.ball_vx) * 1.03
-            hit_pos = (st.session_state.ball_y - st.session_state.player_y) / paddle_half
-            st.session_state.ball_vy += hit_pos * 0.5
-        elif st.session_state.ball_x <= 3:
-            st.session_state.ai_score += 1
-            st.session_state.ball_x = 50
-            st.session_state.ball_y = 50
-            st.session_state.ball_vx = 2.5
-            st.session_state.ball_vy = 1.5
-    
-    if st.session_state.ball_x >= 88:
-        if abs(st.session_state.ball_y - st.session_state.ai_y) < 12:
-            st.session_state.ball_vx = -abs(st.session_state.ball_vx) * 1.03
-            hit_pos = (st.session_state.ball_y - st.session_state.ai_y) / 12
-            st.session_state.ball_vy += hit_pos * 0.5
-        elif st.session_state.ball_x >= 97:
-            st.session_state.player_score += 1
-            st.session_state.ball_x = 50
-            st.session_state.ball_y = 50
-            st.session_state.ball_vx = -2.5
-            st.session_state.ball_vy = 1.5
-    
-    st.session_state.L = max(0.35, st.session_state.L - 0.001)
-    st.session_state.E = max(0.35, st.session_state.E - 0.0005)
-
-st.markdown("---")
-st.subheader(f"🎮 YOU {st.session_state.player_score} - {st.session_state.ai_score} AI")
-
-W, H = 600, 350
-bx = int(st.session_state.ball_x * W / 100)
-by = int(st.session_state.ball_y * H / 100)
-py = int(st.session_state.player_y * H / 100)
-ay = int(st.session_state.ai_y * H / 100)
-
-pcolor = "#ffff00" if LxE >= 0.85 else ("#00ffff" if LxE >= 0.42 else "#44ff88")
-
-py_clamped = max(40, min(H-40, py))
-ay_clamped = max(35, min(H-35, ay))
-bx_clamped = max(12, min(W-12, bx))
-by_clamped = max(12, min(H-12, by))
+component_key = f"pong_{int(L_value*100)}_{int(st.session_state.E*100)}_{use_mind}"
 
 game_html = f'''
-<div style="display:flex;justify-content:center;align-items:center;margin:10px 0;">
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" style="background:linear-gradient(180deg,#0a0a1a,#1a1a2e);border-radius:12px;border:3px solid #555;">
-  <rect x="0" y="0" width="{W}" height="{H}" fill="#0a0a1a"/>
-  <line x1="{W//2}" y1="0" x2="{W//2}" y2="{H}" stroke="#333" stroke-width="3" stroke-dasharray="10,8"/>
-  <circle cx="{W//2}" cy="{H//2}" r="40" fill="none" stroke="#333" stroke-width="2"/>
-  <rect x="20" y="{py_clamped-40}" width="14" height="80" fill="{pcolor}" rx="7" style="filter:drop-shadow(0 0 12px {pcolor});"/>
-  <rect x="{W-34}" y="{ay_clamped-35}" width="14" height="70" fill="#ff5566" rx="7" style="filter:drop-shadow(0 0 12px #ff5566);"/>
-  <circle cx="{bx_clamped}" cy="{by_clamped}" r="12" fill="white" style="filter:drop-shadow(0 0 15px white);"/>
-  <text x="25" y="30" fill="{pcolor}" font-size="16" font-weight="bold" font-family="Arial,sans-serif">YOU</text>
-  <text x="{W-55}" y="30" fill="#ff5566" font-size="16" font-weight="bold" font-family="Arial,sans-serif">AI</text>
-  <text x="{W//2-50}" y="35" fill="white" font-size="28" font-weight="bold" font-family="Arial,sans-serif">{st.session_state.player_score}</text>
-  <text x="{W//2+35}" y="35" fill="white" font-size="28" font-weight="bold" font-family="Arial,sans-serif">{st.session_state.ai_score}</text>
-  <text x="{W//2-8}" y="35" fill="#666" font-size="20" font-family="Arial,sans-serif">-</text>
-</svg>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+body {{ background: transparent; display: flex; flex-direction: column; align-items: center; font-family: Arial, sans-serif; }}
+canvas {{ border-radius: 12px; border: 3px solid #555; display: block; }}
+#controls {{ display: flex; gap: 15px; margin: 15px 0; }}
+.btn {{ padding: 15px 30px; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; user-select: none; -webkit-user-select: none; }}
+.btn-up, .btn-down {{ background: {pcolor}; color: #000; }}
+.btn-pause {{ background: #555; color: white; }}
+.btn:active {{ transform: scale(0.95); opacity: 0.8; }}
+#info {{ font-size: 13px; color: #888; text-align: center; max-width: 500px; }}
+</style>
+</head>
+<body>
+<canvas id="pong" width="600" height="320"></canvas>
+<div id="controls">
+  <button class="btn btn-up" id="upBtn">⬆️ UP</button>
+  <button class="btn btn-pause" id="pauseBtn">⏸️ PAUSE</button>
+  <button class="btn btn-down" id="downBtn">⬇️ DOWN</button>
 </div>
-'''
-components.html(game_html, height=380)
+<div id="info">↑↓ keys or buttons to move | Type insights above to boost speed & control paddle</div>
 
-speed_label = 'PERFECT' if LxE >= 0.85 else 'GOOD' if LxE >= 0.42 else 'SLOW'
-st.caption(f"Thoughts analyzed: {st.session_state.thoughts} | Paddle speed: {speed_label} | Use UP/DOWN buttons or type insights!")
+<script>
+const canvas = document.getElementById('pong');
+const ctx = canvas.getContext('2d');
+const W = 600, H = 320;
+
+const PADDLE_SPEED = {paddle_speed};
+const MIND_TARGET = {mind_target} * H / 100;
+const USE_MIND = {use_mind};
+const PCOLOR = '{pcolor}';
+
+let ball = {{ x: W/2, y: H/2, vx: 3.5, vy: 2, r: 10 }};
+let player = {{ y: H/2, h: 70, moving: 0 }};
+let ai = {{ y: H/2, h: 55, speed: 2.5 }};
+let score = {{ player: 0, ai: 0 }};
+let running = true;
+
+document.addEventListener('keydown', (e) => {{
+  if (e.key === 'ArrowUp') {{ player.moving = -1; e.preventDefault(); }}
+  if (e.key === 'ArrowDown') {{ player.moving = 1; e.preventDefault(); }}
+}});
+document.addEventListener('keyup', (e) => {{
+  if (e.key === 'ArrowUp' && player.moving === -1) player.moving = 0;
+  if (e.key === 'ArrowDown' && player.moving === 1) player.moving = 0;
+}});
+
+const upBtn = document.getElementById('upBtn');
+const downBtn = document.getElementById('downBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+
+['mousedown', 'touchstart'].forEach(evt => {{
+  upBtn.addEventListener(evt, (e) => {{ e.preventDefault(); player.moving = -1; }});
+  downBtn.addEventListener(evt, (e) => {{ e.preventDefault(); player.moving = 1; }});
+}});
+['mouseup', 'mouseleave', 'touchend', 'touchcancel'].forEach(evt => {{
+  upBtn.addEventListener(evt, () => player.moving = 0);
+  downBtn.addEventListener(evt, () => player.moving = 0);
+}});
+pauseBtn.addEventListener('click', () => {{
+  running = !running;
+  pauseBtn.textContent = running ? '⏸️ PAUSE' : '▶️ PLAY';
+}});
+
+function update() {{
+  if (!running) return;
+  
+  if (player.moving !== 0) {{
+    player.y += player.moving * PADDLE_SPEED;
+  }} else if (USE_MIND) {{
+    const diff = MIND_TARGET - player.y;
+    if (Math.abs(diff) > 5) {{
+      player.y += Math.sign(diff) * Math.min(PADDLE_SPEED * 0.7, Math.abs(diff));
+    }}
+  }}
+  player.y = Math.max(player.h/2 + 5, Math.min(H - player.h/2 - 5, player.y));
+  
+  const aiDiff = ball.y - ai.y;
+  if (Math.abs(aiDiff) > 8) ai.y += Math.sign(aiDiff) * ai.speed;
+  ai.y = Math.max(ai.h/2 + 5, Math.min(H - ai.h/2 - 5, ai.y));
+  
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+  
+  if (ball.y <= ball.r + 5) {{ ball.y = ball.r + 5; ball.vy = Math.abs(ball.vy); }}
+  if (ball.y >= H - ball.r - 5) {{ ball.y = H - ball.r - 5; ball.vy = -Math.abs(ball.vy); }}
+  
+  if (ball.x <= 40 && ball.x >= 25 && ball.vx < 0) {{
+    if (Math.abs(ball.y - player.y) < player.h/2 + ball.r) {{
+      ball.vx = Math.abs(ball.vx) * 1.03;
+      ball.vy += (ball.y - player.y) * 0.08;
+      ball.x = 41;
+    }}
+  }}
+  
+  if (ball.x >= W - 40 && ball.x <= W - 25 && ball.vx > 0) {{
+    if (Math.abs(ball.y - ai.y) < ai.h/2 + ball.r) {{
+      ball.vx = -Math.abs(ball.vx) * 1.03;
+      ball.vy += (ball.y - ai.y) * 0.08;
+      ball.x = W - 41;
+    }}
+  }}
+  
+  if (ball.x < -10) {{
+    score.ai++;
+    resetBall(-1);
+  }}
+  if (ball.x > W + 10) {{
+    score.player++;
+    resetBall(1);
+  }}
+}}
+
+function resetBall(dir) {{
+  ball.x = W/2;
+  ball.y = H/2;
+  ball.vx = 3.5 * dir;
+  ball.vy = (Math.random() - 0.5) * 3;
+}}
+
+function draw() {{
+  ctx.fillStyle = '#0a0a1a';
+  ctx.fillRect(0, 0, W, H);
+  
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 2;
+  ctx.setLineDash([8, 6]);
+  ctx.beginPath();
+  ctx.moveTo(W/2, 0);
+  ctx.lineTo(W/2, H);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  
+  ctx.beginPath();
+  ctx.arc(W/2, H/2, 35, 0, Math.PI * 2);
+  ctx.stroke();
+  
+  ctx.shadowColor = PCOLOR;
+  ctx.shadowBlur = 12;
+  ctx.fillStyle = PCOLOR;
+  roundRect(ctx, 25, player.y - player.h/2, 12, player.h, 6);
+  ctx.fill();
+  
+  ctx.shadowColor = '#ff5566';
+  ctx.fillStyle = '#ff5566';
+  roundRect(ctx, W - 37, ai.y - ai.h/2, 12, ai.h, 6);
+  ctx.fill();
+  
+  ctx.shadowColor = 'white';
+  ctx.shadowBlur = 15;
+  ctx.fillStyle = 'white';
+  ctx.beginPath();
+  ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.shadowBlur = 0;
+  
+  ctx.font = 'bold 14px Arial';
+  ctx.fillStyle = PCOLOR;
+  ctx.fillText('YOU', 22, 25);
+  ctx.fillStyle = '#ff5566';
+  ctx.fillText('AI', W - 40, 25);
+  
+  ctx.font = 'bold 26px Arial';
+  ctx.fillStyle = 'white';
+  ctx.textAlign = 'center';
+  ctx.fillText(score.player + ' - ' + score.ai, W/2, 30);
+  ctx.textAlign = 'left';
+}}
+
+function roundRect(ctx, x, y, w, h, r) {{
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}}
+
+function gameLoop() {{
+  update();
+  draw();
+  requestAnimationFrame(gameLoop);
+}}
+
+gameLoop();
+</script>
+</body>
+</html>
+'''
+
+components.html(game_html, height=450, key=component_key)
 
 with st.expander("💡 How to Play"):
     st.markdown("""
-    **Two Ways to Control Your Paddle:**
+    **Controls:**
+    - **Keyboard**: Hold ↑ or ↓ arrow keys for continuous movement
+    - **Buttons**: Hold UP/DOWN buttons (works on mobile too)
+    - **Mind Control**: In "Mind + Manual" mode, paddle follows your L value when not pressing keys
     
-    1. **Manual Control**: Click the ⬆️ UP and ⬇️ DOWN buttons
-    2. **Mind Control**: Type insights in the text box - your words affect paddle position!
+    **Boost Your Power with GILE Terms:**
+    - *consciousness, hyperconnection, gile, tralse, myrion*
+    - *love, beautiful, perfect, amazing*
+    - *realize, understand, pattern, truth, connection*
     
-    **Boost your coherence (L) with:**
-    - Insight words: *realize, understand, pattern, truth, connection*
-    - Positive emotions: *love, amazing, beautiful, perfect*
-    - GILE terms: *consciousness, hyperconnection, gile, tralse, myrion*
-    - Longer, more thoughtful messages
-    - Exclamation marks for emphasis!
-    
-    **Tips:**
-    - Higher L × E = faster paddle speed
-    - The paddle follows your L value (higher L = paddle moves up)
-    - Type continuously to maintain high coherence!
+    **L × E Thresholds:**
+    - < 0.42: Building (slow paddle)
+    - 0.42-0.85: Connected (good speed)
+    - > 0.85: Causation (maximum speed!)
     """)
-
-if st.session_state.running:
-    import time
-    time.sleep(0.08)
-    st.rerun()
