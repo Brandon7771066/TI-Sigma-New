@@ -1,0 +1,39 @@
+{
+  "standard": {
+    "accuracy": 0.9666666666666667,
+    "ece": 0.02063921864777331,
+    "dead_neurons": 0.5055555555555555,
+    "info_preserved": 0.20553909416386779,
+    "total_entropy": 0.5028153899151632
+  },
+  "tralse": {
+    "accuracy": 0.9638888888888889,
+    "ece": 0.021241238752706067,
+    "dead_neurons_t": 0.5055121527777777,
+    "dead_neurons_f": 0.4944878472222222,
+    "mean_phi": 0.4976802949660266,
+    "info_preserved": 0.0,
+    "total_entropy": 0
+  },
+  "myrion": {
+    "accuracy": 0.9222222222222223,
+    "ece": 0.032844425932912216,
+    "dead_neurons": 0.0,
+    "info_preserved": 0.58697950594907,
+    "total_entropy": 1.4346380963284733
+  },
+  "full_tralse": {
+    "accuracy": 0.8666666666666667,
+    "ece": 0.04100918933042794,
+    "mean_phi": 0.5103199849777926,
+    "info_preserved": 0.0,
+    "total_entropy": 0
+  },
+  "summary": {
+    "ece_improvement_percent": -2.916874496107462,
+    "entropy_ratio": 0.0,
+    "standard_dead_neurons": 0.5055555555555555,
+    "tralse_mean_phi": 0.4976802949660266,
+    "timestamp": "2026-01-29T00:49:11.920981"
+  }
+}
