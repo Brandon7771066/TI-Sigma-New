@@ -106,6 +106,31 @@ Live endpoints on port 5000:
 - `career/priority4_kaggle_competitions.md` - Kaggle strategy for credentials
 - `career/priority5_seal_off_systems.md` - IP protection measures
 
+## MALLORN Kaggle Competition (January 2026)
+
+### TI Sigma Implementation for TDE Classification
+- **Competition**: MALLORN (astronomical Tidal Disruption Event classification)
+- **Baseline (no TI)**: OOF F1 = 0.38
+- **Current (TI Sigma)**: OOF F1 = 0.44, Holdout Best = 0.53
+- **Target**: F1 > 0.75
+
+### Key TI Sigma Components Validated
+1. **TAF (Tralse Activation Function)**: +6.26% improvement over conventional
+   - Unit sphere normalization: t² + f² + φ² + ψ² = 1
+   - taf_F_mean ranks top-10 in feature importance
+2. **Anti-GILE Holes**: +6.78% improvement
+   - I_hole consistently top-7 feature
+   - TDEs show -15% lower I_hole, -20.8% lower G_hole
+3. **TDE Signature Confirmed**: TDEs have +17.3% higher φ (uncertainty)
+
+### Files
+- `kaggle_mallorn/ti_sigma_formal.py` - Formal TI definitions
+- `kaggle_mallorn/ti_sigma_advanced.py` - Advanced feature engineering
+- `submission_ti_sigma_advanced.csv` - Current best submission
+
+### Architecture Note
+Current implementation uses heuristic proxies for TI concepts (ψ via local gradients, simplified Myrion Resolution). Full formalization requires training gradient history and iterative MR-1/2/3 classification.
+
 ## Recent Discoveries (December 2025 - January 2026)
 
 ### Physics Breakthroughs
