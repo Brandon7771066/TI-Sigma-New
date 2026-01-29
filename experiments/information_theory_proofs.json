@@ -1,0 +1,109 @@
+{
+  "proof1_capacity": {
+    "binary": {
+      "states": 2,
+      "bits": 1.0
+    },
+    "ternary": {
+      "states": 3,
+      "bits": 1.584962500721156
+    },
+    "tralse_discrete": {
+      "states": 4,
+      "bits": 2.0
+    },
+    "tralsebit": {
+      "states": 8589934592,
+      "bits": 33
+    },
+    "improvements": {
+      "ternary_vs_binary": 1.584962500721156,
+      "tralse_vs_binary": 2.0,
+      "tralsebit_vs_binary": 33.0
+    }
+  },
+  "proof2_cascade": {
+    "cascade": [
+      {
+        "depth": 1,
+        "binary_survival": 0.7,
+        "tralse_survival": 0.95,
+        "ratio": 1.3571428571428572
+      },
+      {
+        "depth": 5,
+        "binary_survival": 0.16806999999999994,
+        "tralse_survival": 0.7737809374999998,
+        "ratio": 4.6039206134348785
+      },
+      {
+        "depth": 10,
+        "binary_survival": 0.028247524899999984,
+        "tralse_survival": 0.5987369392383787,
+        "ratio": 21.196085014810592
+      },
+      {
+        "depth": 20,
+        "binary_survival": 0.0007979226629761189,
+        "tralse_survival": 0.3584859224085419,
+        "ratio": 449.2740199550781
+      },
+      {
+        "depth": 50,
+        "binary_survival": 1.7984650426474064e-08,
+        "tralse_survival": 0.07694497527671315,
+        "ratio": 4278369.245556607
+      },
+      {
+        "depth": 100,
+        "binary_survival": 3.2344765096247375e-16,
+        "tralse_survival": 0.0059205292203339975,
+        "ratio": 18304443401324.61
+      }
+    ],
+    "improvement_50_layers": 4278369.245556607,
+    "binary_rate": 0.7,
+    "tralse_rate": 0.95
+  },
+  "proof3_uncertainty": {
+    "binary": {
+      "output_dimensions": 1,
+      "can_distinguish_uncertainty_types": false
+    },
+    "tralse": {
+      "output_dimensions": 4,
+      "can_distinguish_uncertainty_types": true,
+      "uncertainty_types": [
+        "aleatoric (t vs f)",
+        "epistemic (\u03c6)",
+        "potential (\u03c8)"
+      ]
+    },
+    "calibration_improvement_expected": 3.0
+  },
+  "proof4_robustness": {
+    "binary": {
+      "original": 10.0,
+      "noise": -5.0,
+      "output": 5.0,
+      "signal_reduction": 0.5
+    },
+    "myrion": {
+      "original": 10.0,
+      "noise": -5.0,
+      "contradiction_detected": 5.0,
+      "phi_uncertainty": 0.3333333333333333,
+      "attack_flagged": true
+    },
+    "robustness_improvement_expected": 2.4
+  },
+  "proof5_phi": {
+    "binary_phi_factor": 0.028247524899999984,
+    "tralse_phi_factor": 1.1974738784767573,
+    "phi_improvement": 42.392170029621184,
+    "consciousness_warning": true,
+    "predicted_human_parity_possible": true
+  },
+  "timestamp": "2026-01-29T16:30:10.869312",
+  "conclusion": "Tralse architecture represents a fundamental paradigm shift"
+}

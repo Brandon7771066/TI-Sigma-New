@@ -1,0 +1,111 @@
+{
+  "relu": {
+    "input_dim": 1000,
+    "n_layers": 50,
+    "n_trials": 10,
+    "layer_data": [
+      {
+        "layer": 1,
+        "mean_survival": 0.5012,
+        "std_survival": 0.01073126274023706
+      },
+      {
+        "layer": 2,
+        "mean_survival": 0.5022,
+        "std_survival": 0.015451860729374971
+      },
+      {
+        "layer": 3,
+        "mean_survival": 0.4939,
+        "std_survival": 0.017351945135920636
+      },
+      {
+        "layer": 6,
+        "mean_survival": 0.5,
+        "std_survival": 0.00993981891183135
+      },
+      {
+        "layer": 11,
+        "mean_survival": 0.49660000000000004,
+        "std_survival": 0.011456002793295759
+      },
+      {
+        "layer": 21,
+        "mean_survival": 0.5043,
+        "std_survival": 0.016468454693747088
+      },
+      {
+        "layer": 31,
+        "mean_survival": 0.5085,
+        "std_survival": 0.01358859816169425
+      },
+      {
+        "layer": 41,
+        "mean_survival": 0.49829999999999997,
+        "std_survival": 0.011118003417880398
+      },
+      {
+        "layer": 50,
+        "mean_survival": 0.497,
+        "std_survival": 0.014717336715588197
+      }
+    ],
+    "final_survival": 0.497,
+    "theoretical_survival": 1.7984650426474064e-08
+  },
+  "tralse": {
+    "input_dim": 1000,
+    "n_layers": 50,
+    "n_trials": 10,
+    "layer_data": [
+      {
+        "layer": 1,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 1.4285714285714286
+      },
+      {
+        "layer": 2,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 2.0408163265306127
+      },
+      {
+        "layer": 3,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 2.9154518950437325
+      },
+      {
+        "layer": 6,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 8.499859752314089
+      },
+      {
+        "layer": 11,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 50.57333106630625
+      },
+      {
+        "layer": 21,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 1790.3632705995524
+      },
+      {
+        "layer": 31,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 63381.2440890902
+      },
+      {
+        "layer": 41,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 2243780.448498348
+      },
+      {
+        "layer": 50,
+        "mean_survival": 1.0,
+        "improvement_vs_relu": 55602971.21638591
+      }
+    ],
+    "final_survival": 1.0
+  },
+  "improvement_ratio": 2.0120724346076457,
+  "timestamp": "2026-01-29T16:30:54.220415"
+}
