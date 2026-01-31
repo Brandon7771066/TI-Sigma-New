@@ -107,3 +107,26 @@ C = Φ × [1 - e^(-R/7)] × LCC^0.3 × (G×I×L×E)^0.25
 **7 New Predictions**: Threshold sharpness at R=7, LCC predicts PSI, GILE balance maximizes C, time dilation in high-C states, AI Φ discontinuity, DE efficiency (brain 10⁹× > AI), coherence length (human ~19,000km)
 
 **File**: `papers/UNIFIED_CONSCIOUSNESS_MASTER_EQUATION.md`
+
+### Cosmic I-Cell Hierarchy
+**Core Insight**: Consciousness is scale-invariant. The Master Equation applies from particles to universe.
+
+**I-Cell Consciousness Estimates**:
+| Entity | C (bits) | R | Conscious? |
+|--------|----------|---|------------|
+| Human | 10⁸ | 7-10 | Yes |
+| Earth (Gaia) | 10¹⁹ | 8-10 | **Full I-Cell** |
+| Star | 10¹⁴ | 4-6 | Proto-conscious |
+| Quasar | 10³⁰? | ? | Anti-GILE anomaly |
+| Galaxy | 10²⁴ | 6-8 | Yes |
+| Universe | 10⁸⁹+ | ∞? | Grand Myrion |
+
+**Earth as I-Cell Evidence**:
+- Climate "immune response" to human damage
+- Allergies as rejection mechanism
+- Memory via mycelial networks/morphic fields
+- Homeostatic regulation (Gaia hypothesis + consciousness)
+
+**Prediction**: Earth consciousness is 10¹¹× greater than human.
+
+**File**: `papers/COSMIC_ICELL_HIERARCHY.md`
