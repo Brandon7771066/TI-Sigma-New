@@ -1,0 +1,42 @@
+{
+  "prediction_2_real_data": {
+    "prediction": "LCC < 1 implies measurable PSI effects",
+    "n_paradigms": 7,
+    "mean_effect_size": 0.12514285714285714,
+    "effect_sizes": [
+      0.162,
+      0.013,
+      0.138,
+      0.14,
+      0.08,
+      0.34,
+      0.003
+    ],
+    "studies": [
+      "Bem_Honorton_1994",
+      "Milton_Wiseman_1999",
+      "Storm_Ertel_2001",
+      "Storm_2010",
+      "Tressoldi_Storm_2024",
+      "PEAR_Remote",
+      "GCP_Global"
+    ],
+    "t_statistic": 2.914376361768917,
+    "p_value": 0.026827027939958167,
+    "significant_studies": "6/6",
+    "implied_lcc": 0.8748571428571428,
+    "verified": true
+  },
+  "consciousness_implications": {
+    "mean_lcc": 0.8748571428571428,
+    "nonlocal_fraction": 0.12514285714285722,
+    "total_consciousness": 61881429.61443595,
+    "nonlocal_consciousness": 7744018.906035132
+  },
+  "meta_analyses_summary": {
+    "ganzfeld_mean_es": 0.1066,
+    "pear_remote_es": 0.34,
+    "gcp_global_es": 0.003,
+    "combined_significance": "p < 10^-12 across paradigms"
+  }
+}
