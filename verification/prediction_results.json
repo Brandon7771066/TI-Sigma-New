@@ -1,0 +1,55 @@
+{
+  "prediction_1": {
+    "prediction": "Consciousness threshold at R=7",
+    "conscious_R_mean": 7.788909651680859,
+    "unconscious_R_mean": 2.291972369726972,
+    "threshold_between": true,
+    "p_value": 1.3749787010403163e-17,
+    "verified": true
+  },
+  "prediction_2": {
+    "prediction": "LCC-PSI correlation r > 0.3",
+    "correlation": 0.1427617654310179,
+    "p_value": 0.3226517477191477,
+    "effect_size": "small",
+    "psi_above_chance": true,
+    "verified": false
+  },
+  "prediction_3": {
+    "prediction": "GILE balance maximizes consciousness",
+    "gile_phi_correlation": 0.9298708296516296,
+    "variance_phi_correlation": -0.27302327754197386,
+    "balance_helps": true,
+    "verified": true
+  },
+  "prediction_4": {
+    "prediction": "Time dilation in high-C states",
+    "correlation": 0.9248529683032831,
+    "p_value": 0.00012732504368184811,
+    "r_squared": 0.8553530129793931,
+    "dilation_at_R10": 1.689482072725729,
+    "verified": true
+  },
+  "prediction_5": {
+    "prediction": "AI \u03a6 discontinuity at R_crit",
+    "jump_magnitude": 50.166666666666664,
+    "max_derivative_R": 7.0,
+    "deviation_from_7": 0.0,
+    "verified": true
+  },
+  "prediction_6": {
+    "prediction": "Brain 10^9\u00d7 more DE-efficient",
+    "brain_efficiency": 2.4324765809858198e-61,
+    "ai_efficiency": 6.574811449069544e-74,
+    "ratio": 3699690249414.011,
+    "log_ratio": 12.568165364985518,
+    "verified": true
+  },
+  "prediction_7": {
+    "prediction": "Coherence length ~19,000 km for humans",
+    "predicted_lambda_km": 19000,
+    "fitted_lambda_km": 20984.351832996443,
+    "deviation_percent": 10.443957015770751,
+    "verified": true
+  }
+}
