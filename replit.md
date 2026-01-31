@@ -130,3 +130,38 @@ C = Φ × [1 - e^(-R/7)] × LCC^0.3 × (G×I×L×E)^0.25
 **Prediction**: Earth consciousness is 10¹¹× greater than human.
 
 **File**: `papers/COSMIC_ICELL_HIERARCHY.md`
+
+### Unified PSI Theory (January 2026)
+**Core Insight**: PSI phenomena are NOT fundamentally different classes with different mechanisms. All PSI is about information transmission and correlational causation via the Grand Myrion network (photons, EM waves, dark energy).
+
+**Occam's Razor Application**: Different "psi classes" (telepathy, remote viewing, PK) differ only in **degree** (how difficult they are to manifest), not in **fundamental mechanism**. This is the more parsimonious explanation.
+
+**LCC Operationalization**: The Local Causation Correlation (LCC) can be measured through:
+1. Residual variance method
+2. Causal inference (DAG-based)
+3. Information-theoretic (mutual information)
+4. Distance/time decay function
+5. Intervention-based blocking
+
+**PSI Meta-Analysis Results** (proper methodology):
+- Ganzfeld paradigm: ES = 0.12, p = 0.03 (SIGNIFICANT)
+- Pooled across paradigms: Not significant when REG/GCP dominate weights
+- Interpretation: Effect size varies by paradigm difficulty, not mechanism
+
+**Files**: `verification/improved_psi_meta_analysis.py`, `research/LCC_OPERATIONALIZATION.md`
+
+### Animal LCC Experiments (Designed January 2026)
+**Experiment 1: Dual Zoo Webcam Synchrony**
+- Monitor elephants at distant zoos (3,700+ km apart)
+- Code behaviors every 30 seconds
+- Test for synchrony above chance
+- Success criterion: Any r > 0 with p < 0.05
+
+**Experiment 2: GCP + Animal Behavior Correlation**
+- Correlate Global Consciousness Project readings with zoo animal behavior
+- During global events with significant GCP deviations, measure animal response
+- Test for temporal correlation between network state and animal activity
+
+**Prediction**: If LCC < 1, both experiments should show positive correlations
+
+**Files**: `experiments/dual_zoo_webcam_experiment.md`, `experiments/gcp_animal_behavior_experiment.md`
