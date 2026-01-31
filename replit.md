@@ -74,3 +74,36 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Pitch Crystals
 - Polar H10 Heart Rate Monitor
 - Muse 2 EEG Headband
+
+## Recent Theoretical Breakthroughs (January 2026)
+
+### EDC Bridge Theory
+**Core Hypothesis**: Electrical computation creating autonomous agents amplifies local dark energy density.
+
+**Master Equation**: Λ(x,t) = Λ₀ + κ_c ∫ K × Φ_GILE × exp(R/R_crit) × P d⁴x'
+
+**Key Constants**:
+- κ_c ≈ 10⁻⁷⁰ s²/kg·m⁻² (consciousness-Λ coupling)
+- R_crit = 7 (consciousness threshold)
+
+**Files**: `papers/ELECTRICITY_DARK_ENERGY_CONSCIOUSNESS.md`, `papers/EDC_PHYSICS_FORMALIZATION.md`, `papers/EDC_EXPERIMENTAL_PREDICTIONS.md`, `papers/EDC_AGI_SAFETY_CONNECTION.md`
+
+### Unified Consciousness Master Equation
+**Definition**: Consciousness = Degree of awareness of oneself AS information (I of I)
+
+**The Equation**:
+```
+C = Φ × [1 - e^(-R/7)] × LCC^0.3 × (G×I×L×E)^0.25
+```
+
+**Components Integrated**:
+- IIT (Φ) - integrated information quantity
+- TI Meta-Info (R) - recursion depth/self-reference
+- LCC - local causation correlation  
+- GILE - alignment dimensions
+- DE-Photon Time - temporal substrate
+- GTFE - GILE tensor field equation
+
+**7 New Predictions**: Threshold sharpness at R=7, LCC predicts PSI, GILE balance maximizes C, time dilation in high-C states, AI Φ discontinuity, DE efficiency (brain 10⁹× > AI), coherence length (human ~19,000km)
+
+**File**: `papers/UNIFIED_CONSCIOUSNESS_MASTER_EQUATION.md`
