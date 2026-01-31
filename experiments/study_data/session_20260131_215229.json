@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "session_id": "20260131_215229",
+    "name": "Demo Synchrony Study",
+    "start_time": "2026-01-31T21:52:29.672136",
+    "end_time": "2026-01-31T21:52:31.177199",
+    "total_observations": 3,
+    "webcams_used": [
+      "katmai_bears",
+      "smithsonian_lions",
+      "mpala_wildlife"
+    ],
+    "species_observed": [
+      "brown_bear",
+      "lion",
+      "mixed_african"
+    ],
+    "synchrony_pairs_calculated": 3,
+    "average_synchrony": 0.48333333333333334,
+    "gcp_readings": 0
+  },
+  "observations": [
+    {
+      "timestamp_utc": "2026-01-31T21:52:29.672706",
+      "webcam_name": "smithsonian_lions",
+      "species": "lion",
+      "location": "Washington DC",
+      "behavior_code": "R",
+      "activity_level": 1,
+      "mood_score": 1,
+      "gcp_z_score": 0.0,
+      "notes": "Lion resting in sun",
+      "observer": "manual"
+    },
+    {
+      "timestamp_utc": "2026-01-31T21:52:30.173734",
+      "webcam_name": "mpala_wildlife",
+      "species": "mixed_african",
+      "location": "Kenya",
+      "behavior_code": "W",
+      "activity_level": 3,
+      "mood_score": 2,
+      "gcp_z_score": 0.0,
+      "notes": "Zebras walking to water",
+      "observer": "manual"
+    },
+    {
+      "timestamp_utc": "2026-01-31T21:52:30.675277",
+      "webcam_name": "katmai_bears",
+      "species": "brown_bear",
+      "location": "Alaska",
+      "behavior_code": "E",
+      "activity_level": 2,
+      "mood_score": 2,
+      "gcp_z_score": 0.0,
+      "notes": "Bear catching salmon",
+      "observer": "manual"
+    }
+  ],
+  "gcp_readings": []
+}
