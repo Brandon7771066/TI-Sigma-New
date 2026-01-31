@@ -1,0 +1,5 @@
+timestamp_utc,zoo,species,animal_id,behavior_code,behavior_name,mood_score,activity_level,weather,temperature_c,visitors,notes,gcp_z_score,event_name
+2026-02-01 15:00:00,Smithsonian,Elephant,E1,W,Walking,2,3,Sunny,18,Medium,Approaching water feature,1.2,None
+2026-02-01 15:00:00,SanDiego,Elephant,E2,S,Standing,1,2,Overcast,22,Low,Facing enclosure wall,1.2,None
+2026-02-01 15:00:30,Smithsonian,Elephant,E1,E,Eating,1,2,Sunny,18,Medium,At hay pile,0.8,None
+2026-02-01 15:00:30,SanDiego,Elephant,E2,W,Walking,2,3,Overcast,22,Low,Moving toward pool,0.8,None
