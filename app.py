@@ -419,8 +419,18 @@ with tab1:
     render_eeg_analyzer()
 
 with tab2:
-    from protocols_dashboard import render_protocols_dashboard
-    render_protocols_dashboard()
+    lcc_subtab1, lcc_subtab2 = st.tabs([
+        "🧪 LCC Protocols",
+        "🔬 Autonomous LCC Study"
+    ])
+    
+    with lcc_subtab1:
+        from protocols_dashboard import render_protocols_dashboard
+        render_protocols_dashboard()
+    
+    with lcc_subtab2:
+        from experiments.autonomous_lcc_dashboard import render_autonomous_lcc_dashboard
+        render_autonomous_lcc_dashboard()
 
 with tab3:
     from safety_analysis_dashboard import render_safety_analysis_dashboard

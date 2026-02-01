@@ -213,20 +213,38 @@ def install_dandi_cli():
 
 
 def list_dandiset_files(dandiset_id: str) -> List[Dict[str, Any]]:
-    """List files in a dandiset using DANDI API"""
+    """List files in a dandiset using DANDI REST API (no SDK required)"""
+    import requests
+    
     try:
-        from dandi.dandiapi import DandiAPIClient
-        
-        client = DandiAPIClient()
-        dandiset = client.get_dandiset(dandiset_id, "draft")
+        # Use DANDI Archive REST API directly
+        api_url = f"https://api.dandiarchive.org/api/dandisets/{dandiset_id}/versions/draft/assets/"
         
         files = []
-        for asset in dandiset.get_assets():
-            files.append({
-                "path": asset.path,
-                "size": asset.size,
-                "identifier": asset.identifier
-            })
+        page_url = api_url
+        
+        while page_url:
+            response = requests.get(page_url, timeout=30)
+            response.raise_for_status()
+            data = response.json()
+            
+            for asset in data.get("results", []):
+                files.append({
+                    "path": asset.get("path", "unknown"),
+                    "size": asset.get("size", 0),
+                    "size_mb": asset.get("size", 0) / (1024 * 1024),
+                    "identifier": asset.get("asset_id", ""),
+                    "blob": asset.get("blob", ""),
+                    "created": asset.get("created", ""),
+                    "content_url": asset.get("contentUrl", "")
+                })
+            
+            # Handle pagination
+            page_url = data.get("next")
+            
+            # Limit to first 100 files to avoid long queries
+            if len(files) >= 100:
+                break
         
         return files
     except Exception as e:
@@ -241,7 +259,8 @@ def download_dandiset(
     max_size_mb: float = 500
 ) -> Optional[Path]:
     """
-    Download a dandiset (or subset) to local storage.
+    Download a dandiset (or subset) to local storage using direct HTTP.
+    No SDK required - uses DANDI REST API directly.
     
     Args:
         dandiset_id: DANDI dataset ID (e.g., "001044")
@@ -252,15 +271,12 @@ def download_dandiset(
     Returns:
         Path to downloaded files, or None if failed
     """
+    import requests
+    
     if output_dir is None:
         output_dir = DATA_DIR / f"dandiset_{dandiset_id}"
     
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    if not check_dandi_cli():
-        if not install_dandi_cli():
-            print("Cannot proceed without DANDI CLI")
-            return None
     
     print(f"Downloading dandiset {dandiset_id} to {output_dir}...")
     
@@ -273,9 +289,13 @@ def download_dandiset(
         
         print(f"Found {len(files)} files in dandiset")
         
-        # Filter to manageable subset
+        # Filter to NWB files only
         nwb_files = [f for f in files if f["path"].endswith(".nwb")]
         print(f"Found {len(nwb_files)} NWB files")
+        
+        if not nwb_files:
+            print("No NWB files found - downloading first available file")
+            nwb_files = files[:1]
         
         # Sort by size and take smallest ones
         nwb_files.sort(key=lambda x: x.get("size", 0))
@@ -283,38 +303,46 @@ def download_dandiset(
         total_size = 0
         files_to_download = []
         for f in nwb_files[:max_files]:
-            size_mb = f.get("size", 0) / (1024 * 1024)
+            size_mb = f.get("size_mb", 0)
             if total_size + size_mb <= max_size_mb:
                 files_to_download.append(f)
                 total_size += size_mb
         
         print(f"Will download {len(files_to_download)} files ({total_size:.1f} MB)")
         
-        # Download using DANDI API
-        from dandi.dandiapi import DandiAPIClient
-        from dandi.download import download
-        
-        # Use dandi download command for each file
+        # Download files directly via HTTP
+        downloaded_files = []
         for file_info in files_to_download:
             file_path = file_info["path"]
-            print(f"Downloading: {file_path}")
+            asset_id = file_info.get("identifier", "")
+            
+            print(f"Downloading: {file_path} ({file_info.get('size_mb', 0):.1f} MB)")
+            
+            # Get download URL from DANDI API
+            download_url = f"https://api.dandiarchive.org/api/assets/{asset_id}/download/"
             
             try:
-                download(
-                    f"https://dandiarchive.org/dandiset/{dandiset_id}/draft",
-                    output_dir,
-                    get_metadata=False,
-                    jobs=1
-                )
-                break  # download() gets all files
+                # Stream download to avoid memory issues
+                response = requests.get(download_url, stream=True, timeout=300)
+                response.raise_for_status()
+                
+                # Create output path preserving directory structure
+                local_path = output_dir / file_path
+                local_path.parent.mkdir(parents=True, exist_ok=True)
+                
+                with open(local_path, 'wb') as f:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        f.write(chunk)
+                
+                downloaded_files.append(str(local_path))
+                print(f"  Saved to: {local_path}")
+                
             except Exception as e:
-                print(f"Download error: {e}")
-                # Try CLI fallback
-                subprocess.run(
-                    ["dandi", "download", f"DANDI:{dandiset_id}/draft", "-o", str(output_dir)],
-                    check=True
-                )
-                break
+                print(f"  Error downloading {file_path}: {e}")
+        
+        if not downloaded_files:
+            print("No files were downloaded successfully")
+            return None
         
         # Record in database
         conn = sqlite3.connect(str(DB_PATH))
@@ -329,7 +357,7 @@ def download_dandiset(
             "unknown",
             datetime.utcnow().isoformat(),
             str(output_dir),
-            len(files_to_download),
+            len(downloaded_files),
             total_size,
             "completed"
         ))
@@ -409,6 +437,7 @@ def extract_nwb_metadata(nwb_path: Path) -> Dict[str, Any]:
 def process_nwb_for_lcc(nwb_path: Path, segment_duration: float = 30.0) -> List[Dict[str, Any]]:
     """
     Process an NWB file to extract neural-behavior segments for LCC analysis.
+    Uses h5py directly instead of pynwb for better compatibility.
     
     Args:
         nwb_path: Path to NWB file
@@ -418,44 +447,105 @@ def process_nwb_for_lcc(nwb_path: Path, segment_duration: float = 30.0) -> List[
         List of extracted segments with neural and behavior features
     """
     try:
-        from pynwb import NWBHDF5IO
+        import h5py
         
         segments = []
         
-        with NWBHDF5IO(str(nwb_path), 'r', load_namespaces=True) as io:
-            nwb = io.read()
-            
-            # Find neural data
+        with h5py.File(str(nwb_path), 'r') as f:
+            # Find neural data in acquisition group
             neural_data = None
             neural_rate = 1000  # default
             neural_key = None
             
-            if hasattr(nwb, 'acquisition'):
-                for name, data in nwb.acquisition.items():
-                    if hasattr(data, 'data') and hasattr(data, 'rate'):
-                        neural_data = data.data[:]
-                        neural_rate = float(data.rate)
+            if 'acquisition' in f:
+                acq = f['acquisition']
+                for name in acq.keys():
+                    item = acq[name]
+                    if 'data' in item:
+                        neural_data = item['data'][:]
+                        if 'starting_time' in item and hasattr(item['starting_time'], 'attrs'):
+                            neural_rate = item['starting_time'].attrs.get('rate', 1000)
+                        elif 'rate' in item.attrs:
+                            neural_rate = item.attrs['rate']
                         neural_key = name
+                        print(f"Found neural data: {name}, shape: {neural_data.shape}, rate: {neural_rate}")
                         break
             
             if neural_data is None:
-                print(f"No neural data found in {nwb_path}")
+                # Try processing/ecephys for processed neural data (e.g., ripples)
+                if 'processing' in f and 'ecephys' in f['processing']:
+                    ecephys = f['processing']['ecephys']
+                    
+                    # Look for Ripples or other processed neural events
+                    if 'Ripples' in ecephys:
+                        ripples = ecephys['Ripples']
+                        if 'start_time' in ripples and 'peak_amplitudes' in ripples:
+                            ripple_times = ripples['start_time'][:]
+                            ripple_amps = ripples['peak_amplitudes'][:]
+                            ripple_freqs = ripples['peak_frequencies'][:]
+                            
+                            print(f"Found {len(ripple_times)} ripple events")
+                            
+                            # Create segments based on ripple activity
+                            # Group ripples into time bins
+                            max_time = float(np.max(ripple_times))
+                            num_segments = int(max_time / segment_duration)
+                            
+                            for i in range(min(num_segments, 100)):
+                                start_time = i * segment_duration
+                                end_time = start_time + segment_duration
+                                
+                                # Find ripples in this segment
+                                mask = (ripple_times >= start_time) & (ripple_times < end_time)
+                                seg_amps = ripple_amps[mask]
+                                seg_freqs = ripple_freqs[mask]
+                                
+                                # Calculate segment features
+                                ripple_rate = len(seg_amps) / segment_duration
+                                mean_amp = float(np.mean(seg_amps)) if len(seg_amps) > 0 else 0
+                                mean_freq = float(np.mean(seg_freqs)) if len(seg_freqs) > 0 else 0
+                                
+                                segment = {
+                                    "start_time": start_time,
+                                    "end_time": end_time,
+                                    "neural_power_delta": 0,
+                                    "neural_power_theta": 0,
+                                    "neural_power_alpha": 0,
+                                    "neural_power_beta": mean_freq / 200,  # Normalized freq
+                                    "neural_power_gamma": ripple_rate,  # Ripples are gamma-range
+                                    "ripple_rate": ripple_rate,
+                                    "ripple_amplitude": mean_amp,
+                                    "ripple_frequency": mean_freq,
+                                    "behavior_state": "ripple_active" if ripple_rate > 1 else "low_ripple",
+                                    "activity_level": ripple_rate / 10,  # Normalized
+                                    "arousal_estimate": mean_amp / 100,  # Normalized
+                                    "timestamp": datetime.utcnow().isoformat(),
+                                    "has_real_lfp": False,  # This is processed data
+                                    "data_type": "ripple_events"
+                                }
+                                segments.append(segment)
+                            
+                            print(f"Extracted {len(segments)} segments from ripple events")
+                            return segments
+                
+                print(f"No usable neural data found in {nwb_path}")
                 return segments
             
             # Find behavior data
             behavior_data = None
             behavior_rate = 1
             
-            if hasattr(nwb, 'processing') and 'behavior' in nwb.processing:
-                behavior_mod = nwb.processing['behavior']
+            if 'processing' in f and 'behavior' in f['processing']:
+                behavior_mod = f['processing']['behavior']
                 # Look for speed, position, or other behavioral signals
-                for name in ['speed', 'running_speed', 'velocity', 'position']:
-                    if name in behavior_mod.data_interfaces:
-                        ts = behavior_mod.data_interfaces[name]
-                        if hasattr(ts, 'data'):
-                            behavior_data = ts.data[:]
-                            if hasattr(ts, 'rate'):
-                                behavior_rate = float(ts.rate)
+                for name in ['speed', 'running_speed', 'velocity', 'position', 'BehavioralTimeSeries']:
+                    if name in behavior_mod:
+                        ts = behavior_mod[name]
+                        if 'data' in ts:
+                            behavior_data = ts['data'][:]
+                            if 'rate' in ts.attrs:
+                                behavior_rate = ts.attrs['rate']
+                            print(f"Found behavior data: {name}, shape: {behavior_data.shape}")
                             break
             
             # Calculate segments

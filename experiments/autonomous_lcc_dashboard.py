@@ -20,37 +20,52 @@ import json
 # Add experiments to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-# Page config
-st.set_page_config(
-    page_title="Autonomous LCC Study System",
-    page_icon="🧠",
-    layout="wide"
-)
 
-st.title("🧠 Autonomous LCC Study System")
-st.markdown("""
-**Fully automated analysis of Local Causation Correlation (LCC) using real neuroscience datasets.**
+def render_autonomous_lcc_dashboard():
+    """Render the autonomous LCC study dashboard (for embedding in main app)."""
+    
+    st.header("🧠 Autonomous LCC Study System")
+    st.markdown("""
+    **Fully automated analysis of Local Causation Correlation (LCC) using real neuroscience datasets.**
+    
+    This system tests whether consciousness enables non-local correlations (LCC < 1) by analyzing:
+    - Neural activity patterns across different subjects/sessions
+    - Behavior synchrony without shared sensory input
+    - Correlation with Global Consciousness Project readings
+    """)
+    
+    # Create tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "📊 Dashboard", 
+        "🔬 DANDI Datasets", 
+        "🧪 Allen Brain Data",
+        "📹 Zoo Webcam AI",
+        "📈 Results & Analysis"
+    ])
+    
+    with tab1:
+        _render_dashboard_tab()
+    
+    with tab2:
+        _render_dandi_tab()
+    
+    with tab3:
+        _render_allen_tab()
+    
+    with tab4:
+        _render_webcam_tab()
+    
+    with tab5:
+        _render_results_tab()
+    
+    # Footer
+    st.divider()
+    st.caption("**Autonomous LCC Study System** | Part of the TI Framework Consciousness Research Platform")
 
-This system tests whether consciousness enables non-local correlations (LCC < 1) by analyzing:
-- Neural activity patterns across different subjects/sessions
-- Behavior synchrony without shared sensory input
-- Correlation with Global Consciousness Project readings
-""")
 
-# Create tabs
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Dashboard", 
-    "🔬 DANDI Datasets", 
-    "🧪 Allen Brain Data",
-    "📹 Zoo Webcam AI",
-    "📈 Results & Analysis"
-])
-
-# =============================================================================
-# TAB 1: Dashboard Overview
-# =============================================================================
-with tab1:
-    st.header("System Overview")
+def _render_dashboard_tab():
+    """Tab 1: Dashboard Overview"""
+    st.subheader("System Overview")
     
     col1, col2, col3 = st.columns(3)
     
@@ -88,9 +103,9 @@ with tab1:
     col1, col2 = st.columns(2)
     
     with col1:
-        num_sessions = st.slider("Number of sessions to analyze", 2, 5, 3)
+        num_sessions = st.slider("Number of sessions to analyze", 2, 5, 3, key="dashboard_sessions")
         
-        if st.button("🔬 Run Allen Brain Analysis", type="primary", use_container_width=True):
+        if st.button("🔬 Run Allen Brain Analysis", type="primary", use_container_width=True, key="run_allen"):
             with st.spinner("Running autonomous LCC analysis... This may take several minutes."):
                 try:
                     from allen_brain_integration import autonomous_lcc_pipeline
@@ -123,11 +138,10 @@ with tab1:
         - Pattern across multiple session pairs
         """)
 
-# =============================================================================
-# TAB 2: DANDI Datasets
-# =============================================================================
-with tab2:
-    st.header("🔬 DANDI Archive Datasets")
+
+def _render_dandi_tab():
+    """Tab 2: DANDI Datasets"""
+    st.subheader("🔬 DANDI Archive Datasets")
     
     st.markdown("""
     [DANDI Archive](https://dandiarchive.org) hosts 400+ neuroscience datasets in NWB format.
@@ -135,7 +149,7 @@ with tab2:
     """)
     
     # Show recommended datasets
-    st.subheader("Recommended Datasets for LCC Analysis")
+    st.markdown("#### Recommended Datasets for LCC Analysis")
     
     try:
         from dandi_data_integration import RECOMMENDED_DATASETS
@@ -181,7 +195,7 @@ with tab2:
     st.divider()
     
     # Show downloaded datasets
-    st.subheader("Downloaded Datasets")
+    st.markdown("#### Downloaded Datasets")
     
     try:
         from dandi_data_integration import get_available_datasets
@@ -195,11 +209,10 @@ with tab2:
     except Exception as e:
         st.warning(f"Could not load dataset list: {e}")
 
-# =============================================================================
-# TAB 3: Allen Brain Observatory
-# =============================================================================
-with tab3:
-    st.header("🧪 Allen Brain Observatory")
+
+def _render_allen_tab():
+    """Tab 3: Allen Brain Observatory"""
+    st.subheader("🧪 Allen Brain Observatory")
     
     st.markdown("""
     The [Allen Brain Observatory](https://portal.brain-map.org) provides mouse neural recordings
@@ -212,9 +225,9 @@ with tab3:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("Available Sessions")
+        st.markdown("#### Available Sessions")
         
-        if st.button("🔍 Fetch Available Sessions"):
+        if st.button("🔍 Fetch Available Sessions", key="fetch_allen"):
             with st.spinner("Querying Allen Brain Observatory..."):
                 try:
                     from allen_brain_integration import get_visual_behavior_sessions
@@ -244,11 +257,11 @@ with tab3:
             st.dataframe(session_data, use_container_width=True)
     
     with col2:
-        st.subheader("Session Analysis")
+        st.markdown("#### Session Analysis")
         
-        session_id = st.number_input("Session ID to analyze", min_value=0, value=0)
+        session_id = st.number_input("Session ID to analyze", min_value=0, value=0, key="session_input")
         
-        if st.button("📥 Download & Process Session"):
+        if st.button("📥 Download & Process Session", key="process_session"):
             if session_id > 0:
                 with st.spinner(f"Downloading session {session_id}..."):
                     try:
@@ -269,7 +282,7 @@ with tab3:
     
     st.divider()
     
-    st.subheader("🔄 Autonomous Analysis Pipeline")
+    st.markdown("#### 🔄 Autonomous Analysis Pipeline")
     
     st.markdown("""
     This runs a complete autonomous analysis:
@@ -279,7 +292,7 @@ with tab3:
     4. Tests for cross-session correlations (LCC analysis)
     """)
     
-    if st.button("🚀 Run Full Autonomous Pipeline", type="primary"):
+    if st.button("🚀 Run Full Autonomous Pipeline", type="primary", key="run_pipeline"):
         with st.spinner("Running autonomous LCC pipeline... This may take 5-10 minutes."):
             try:
                 from allen_brain_integration import autonomous_lcc_pipeline
@@ -294,11 +307,10 @@ with tab3:
                 st.error(f"Pipeline failed: {e}")
                 st.info("This may require additional dependencies. Check the logs for details.")
 
-# =============================================================================
-# TAB 4: Zoo Webcam AI
-# =============================================================================
-with tab4:
-    st.header("📹 Zoo Webcam AI Analysis")
+
+def _render_webcam_tab():
+    """Tab 4: Zoo Webcam AI"""
+    st.subheader("📹 Zoo Webcam AI Analysis")
     
     st.markdown("""
     Uses AI vision (GPT-5) to automatically analyze animal behavior from zoo webcams.
@@ -308,7 +320,7 @@ with tab4:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("Available Webcams")
+        st.markdown("#### Available Webcams")
         
         WEBCAMS = {
             "Smithsonian Lions": "https://nationalzoo.si.edu/webcams/lion-cam",
@@ -327,7 +339,7 @@ with tab4:
                 st.link_button("Open", url, use_container_width=True)
     
     with col2:
-        st.subheader("AI Behavior Analysis")
+        st.markdown("#### AI Behavior Analysis")
         
         uploaded_file = st.file_uploader(
             "Upload webcam screenshot",
@@ -335,9 +347,9 @@ with tab4:
             help="Take a screenshot from any webcam and upload for AI analysis"
         )
         
-        webcam_name = st.text_input("Webcam source name", "unknown")
+        webcam_name = st.text_input("Webcam source name", "unknown", key="webcam_name")
         
-        if uploaded_file and st.button("🤖 Analyze with AI"):
+        if uploaded_file and st.button("🤖 Analyze with AI", key="analyze_webcam"):
             with st.spinner("AI is analyzing the image..."):
                 try:
                     from ai_behavior_analyzer import analyze_image_with_ai
@@ -367,7 +379,7 @@ with tab4:
     
     st.divider()
     
-    st.subheader("LCC Protocols for Webcam Analysis")
+    st.markdown("#### LCC Protocols for Webcam Analysis")
     
     try:
         from lcc_ethogram import LCC_PROTOCOLS
@@ -381,11 +393,10 @@ with tab4:
     except Exception as e:
         st.warning(f"Could not load protocols: {e}")
 
-# =============================================================================
-# TAB 5: Results & Analysis
-# =============================================================================
-with tab5:
-    st.header("📈 LCC Analysis Results")
+
+def _render_results_tab():
+    """Tab 5: Results & Analysis"""
+    st.subheader("📈 LCC Analysis Results")
     
     # Load results from database
     try:
@@ -395,7 +406,7 @@ with tab5:
         results = get_analysis_results()
         
         if results:
-            st.subheader("Cross-Dataset Correlations")
+            st.markdown("#### Cross-Dataset Correlations")
             
             for r in results:
                 with st.expander(f"Analysis: {r['dataset_a']} ↔ {r['dataset_b']} ({r['analysis_date'][:10]})"):
@@ -417,7 +428,7 @@ with tab5:
         
         # Show segment counts
         st.divider()
-        st.subheader("Data Summary")
+        st.markdown("#### Data Summary")
         
         conn = sqlite3.connect(str(DB_PATH))
         cursor = conn.cursor()
@@ -446,24 +457,16 @@ with tab5:
     
     st.divider()
     
-    st.subheader("Theoretical Context")
+    st.markdown("#### Theoretical Context")
     
     st.markdown("""
-    ### What LCC Means
-    
     **Local Causation Correlation (LCC)** measures how much of the correlation between
     distant systems can be explained by local (known) causal mechanisms.
     
     - **LCC = 1**: All correlation is explained by local causes (null hypothesis)
     - **LCC < 1**: Some correlation requires non-local explanation (alternative hypothesis)
     
-    ### How We Test It
-    
-    1. **Neural recordings from different subjects** should show no correlation if LCC = 1
-    2. **Behavior patterns** synchronized beyond sensory coupling suggests LCC < 1
-    3. **Global Consciousness Project** readings may correlate with behavior if LCC < 1
-    
-    ### Interpreting Results
+    **Interpreting Results:**
     
     | Correlation | P-value | Interpretation |
     |-------------|---------|----------------|
@@ -472,15 +475,15 @@ with tab5:
     | r > 0.3 | p < 0.01 | Moderate evidence (investigate confounds) |
     | r > 0.5 | p < 0.001 | Strong evidence (likely measurement artifact) |
     
-    **Important:** Extraordinary claims require extraordinary evidence. Any significant
-    correlation should be scrutinized for confounds before claiming LCC < 1.
+    **Important:** Extraordinary claims require extraordinary evidence.
     """)
 
-# Footer
-st.divider()
-st.markdown("""
----
-**Autonomous LCC Study System** | Part of the TI Framework Consciousness Research Platform
 
-*Data sources: DANDI Archive, Allen Brain Observatory, Global Consciousness Project*
-""")
+# Allow running as standalone
+if __name__ == "__main__":
+    st.set_page_config(
+        page_title="Autonomous LCC Study System",
+        page_icon="🧠",
+        layout="wide"
+    )
+    render_autonomous_lcc_dashboard()
