@@ -487,12 +487,16 @@ def process_nwb_for_lcc(nwb_path: Path, segment_duration: float = 30.0) -> List[
                             print(f"Found {len(ripple_times)} ripple events")
                             
                             # Create segments based on ripple activity
-                            # Group ripples into time bins
+                            # Start from first ripple time to avoid empty segments
+                            min_time = float(np.min(ripple_times))
                             max_time = float(np.max(ripple_times))
-                            num_segments = int(max_time / segment_duration)
+                            total_duration = max_time - min_time
+                            num_segments = int(total_duration / segment_duration)
                             
-                            for i in range(min(num_segments, 100)):
-                                start_time = i * segment_duration
+                            print(f"Ripple events span: {min_time:.1f}s to {max_time:.1f}s ({total_duration:.1f}s)")
+                            
+                            for i in range(min(num_segments, 200)):
+                                start_time = min_time + i * segment_duration
                                 end_time = start_time + segment_duration
                                 
                                 # Find ripples in this segment
@@ -608,6 +612,167 @@ def process_nwb_for_lcc(nwb_path: Path, segment_duration: float = 30.0) -> List[
     except Exception as e:
         print(f"Error processing NWB file {nwb_path}: {e}")
         return []
+
+
+def save_segments_to_db(segments: List[Dict[str, Any]], nwb_file_id: int) -> int:
+    """Save processed segments to the database."""
+    db_path = DATA_DIR / "neural_study.db"
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    
+    count = 0
+    for seg in segments:
+        cursor.execute("""
+            INSERT INTO neural_behavior_segments 
+            (nwb_file_id, start_time, end_time, neural_power_delta, neural_power_theta,
+             neural_power_alpha, neural_power_beta, neural_power_gamma,
+             behavior_state, activity_level, arousal_estimate, timestamp)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            nwb_file_id,
+            seg.get('start_time', 0),
+            seg.get('end_time', 0),
+            seg.get('neural_power_delta', 0),
+            seg.get('neural_power_theta', 0),
+            seg.get('neural_power_alpha', 0),
+            seg.get('neural_power_beta', 0),
+            seg.get('neural_power_gamma', 0),
+            seg.get('behavior_state', 'unknown'),
+            seg.get('activity_level', 0),
+            seg.get('arousal_estimate', 0),
+            seg.get('timestamp', datetime.utcnow().isoformat())
+        ))
+        count += 1
+    
+    conn.commit()
+    conn.close()
+    return count
+
+
+def analyze_session_lcc(segments: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Analyze LCC within a single session by examining correlations
+    between neural and behavioral features across time.
+    
+    NOTE: For meaningful LCC analysis, neural and behavior features must come
+    from independent sources. If both are derived from the same data (e.g.,
+    ripple events), the correlation is tautological.
+    """
+    import numpy as np
+    from scipy import stats
+    
+    if len(segments) < 10:
+        return {"error": "Not enough segments for analysis", "n": len(segments)}
+    
+    # Check if behavior is derived from neural (tautological case)
+    data_type = segments[0].get('data_type', 'unknown') if segments else 'unknown'
+    is_tautological = data_type == 'ripple_events'  # activity derived from ripple_rate
+    
+    # Extract features - remove NaNs
+    ripple_rates = np.array([s.get('ripple_rate', s.get('neural_power_gamma', 0)) for s in segments])
+    activity_levels = np.array([s.get('activity_level', 0) for s in segments])
+    
+    # Handle NaN values
+    valid_mask = ~(np.isnan(ripple_rates) | np.isnan(activity_levels))
+    ripple_rates = ripple_rates[valid_mask]
+    activity_levels = activity_levels[valid_mask]
+    
+    if len(ripple_rates) < 10:
+        return {"error": "Too many NaN values, insufficient data", "n": int(np.sum(valid_mask))}
+    
+    # Calculate correlations
+    results = {
+        "n_segments": len(ripple_rates),
+        "data_type": data_type,
+        "is_tautological": is_tautological
+    }
+    
+    # Neural-behavior correlation (key LCC test)
+    if np.std(ripple_rates) > 0 and np.std(activity_levels) > 0:
+        corr, p_val = stats.pearsonr(ripple_rates, activity_levels)
+        results["neural_behavior_correlation"] = float(corr)
+        results["neural_behavior_p_value"] = float(p_val)
+    else:
+        results["neural_behavior_correlation"] = 0
+        results["neural_behavior_p_value"] = 1.0
+        results["lcc_interpretation"] = "Insufficient variance for correlation analysis"
+        return results
+    
+    # Block permutation test (LCC methodology)
+    # Minimum block size of 3 to preserve local temporal structure
+    n_permutations = 1000
+    min_block_size = 3
+    block_size = max(min_block_size, len(ripple_rates) // 10)  # ~10% of data
+    results["block_size"] = block_size
+    
+    observed_corr = results["neural_behavior_correlation"]
+    
+    null_correlations = []
+    n = len(ripple_rates)
+    
+    for _ in range(n_permutations):
+        # Block shuffle that handles remainder properly
+        n_complete_blocks = n // block_size
+        remainder = n % block_size
+        
+        # Create blocks including partial final block
+        blocks = []
+        for i in range(n_complete_blocks):
+            blocks.append(ripple_rates[i*block_size:(i+1)*block_size])
+        if remainder > 0:
+            blocks.append(ripple_rates[n_complete_blocks*block_size:])
+        
+        # Shuffle block order
+        np.random.shuffle(blocks)
+        
+        # Reconstruct shuffled array
+        shuffled_neural = np.concatenate(blocks)
+        
+        if len(shuffled_neural) == len(activity_levels) and np.std(shuffled_neural) > 0:
+            null_corr, _ = stats.pearsonr(shuffled_neural, activity_levels)
+            null_correlations.append(null_corr)
+    
+    if len(null_correlations) >= 100:  # Need sufficient permutations
+        null_correlations = np.array(null_correlations)
+        permutation_p = np.mean(np.abs(null_correlations) >= np.abs(observed_corr))
+        results["permutation_p_value"] = float(permutation_p)
+        results["null_mean"] = float(np.mean(null_correlations))
+        results["null_std"] = float(np.std(null_correlations))
+        
+        # Calculate effect size (Cohen's d)
+        null_std = np.std(null_correlations)
+        if null_std > 0:
+            cohens_d = (observed_corr - np.mean(null_correlations)) / null_std
+            results["effect_size"] = float(cohens_d)
+        else:
+            results["effect_size"] = None
+    else:
+        results["permutation_p_value"] = None
+        results["permutation_warning"] = "Insufficient valid permutations for statistical test"
+    
+    # LCC interpretation
+    if is_tautological:
+        results["lcc_interpretation"] = (
+            "TAUTOLOGICAL: Behavior features derived from neural data. "
+            "High correlation expected but not meaningful for LCC testing. "
+            "Requires independent behavior signal (e.g., movement, stimuli)."
+        )
+    elif results.get("permutation_p_value") is None:
+        results["lcc_interpretation"] = "Insufficient permutations for LCC interpretation"
+    elif results["permutation_p_value"] < 0.05:
+        if observed_corr > 0.3:
+            results["lcc_interpretation"] = "Strong local causation (LCC ≈ 1)"
+        elif observed_corr > 0.1:
+            results["lcc_interpretation"] = "Moderate local causation (LCC > 0.5)"
+        else:
+            results["lcc_interpretation"] = "Weak but significant correlation"
+    else:
+        if observed_corr < -0.1 and results.get("permutation_p_value", 1) < 0.1:
+            results["lcc_interpretation"] = "Potential non-local correlation (LCC < 1) - requires validation"
+        else:
+            results["lcc_interpretation"] = "No significant neural-behavior correlation"
+    
+    return results
 
 
 def calculate_power_bands(signal: np.ndarray, sampling_rate: float) -> Dict[str, float]:
