@@ -386,7 +386,7 @@ def _render_webcam_tab():
         
         for name, protocol in LCC_PROTOCOLS.items():
             with st.expander(f"📋 {protocol.name}"):
-                st.markdown(f"**Hypothesis:** {protocol.hypothesis}")
+                st.markdown(f"**Hypothesis:** {protocol.gcp_correlation_hypothesis}")
                 st.markdown(f"**Duration:** {protocol.duration_minutes} minutes")
                 st.markdown(f"**Target Energy State:** {protocol.target_energy_state.value}")
                 st.markdown(f"**Expected Behaviors:** {', '.join(protocol.expected_behaviors)}")
@@ -399,10 +399,18 @@ def _render_results_tab():
     st.subheader("📈 LCC Analysis Results")
     
     # Load results from PostgreSQL database
+    database_url = os.environ.get('DATABASE_URL', '')
+    
+    if not database_url:
+        st.warning("Database not configured. Set DATABASE_URL environment variable.")
+        st.info("Run the autonomous analysis scripts to populate results.")
+        return
+    
+    conn = None
     try:
         import psycopg2
         
-        conn = psycopg2.connect(os.environ.get('DATABASE_URL', ''))
+        conn = psycopg2.connect(database_url)
         cur = conn.cursor()
         
         # Get LCC analysis results
@@ -419,7 +427,17 @@ def _render_results_tab():
             
             for r in results:
                 dataset_id, lcc, p_val, effect, interp, method, details, created = r
-                details_dict = details if isinstance(details, dict) else {}
+                
+                # Robustly parse details (may be dict, str, or bytes)
+                if isinstance(details, dict):
+                    details_dict = details
+                elif isinstance(details, (str, bytes)):
+                    try:
+                        details_dict = json.loads(details)
+                    except (json.JSONDecodeError, TypeError):
+                        details_dict = {}
+                else:
+                    details_dict = {}
                 
                 is_independent = details_dict.get('is_independent', False)
                 status_icon = "✅" if is_independent else "⚠️"
@@ -473,12 +491,13 @@ def _render_results_tab():
                 st.metric("Total Segments", total_segments)
                 st.metric("Datasets Processed", len(segments))
                 st.metric("LCC Analyses", len(results))
-        
-        conn.close()
             
     except Exception as e:
         st.warning(f"Could not load results: {e}")
         st.info("Database may not be initialized. Run an analysis first.")
+    finally:
+        if conn:
+            conn.close()
     
     st.divider()
     
