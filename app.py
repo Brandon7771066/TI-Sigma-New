@@ -643,6 +643,7 @@ with tab_everybody_lies:
     
     st.markdown("### 🎯 Truth Rankings")
     
+    import pandas as pd
     truth_df = pd.DataFrame({
         'Source': ['Google Trends', 'AI Queries (ChatGPT/Perplexity)', 'Anonymous Reddit', 
                    'Twitter/X', 'News Media', 'Analysts'],
