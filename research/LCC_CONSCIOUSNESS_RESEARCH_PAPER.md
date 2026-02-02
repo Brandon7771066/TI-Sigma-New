@@ -19,12 +19,14 @@ This paper presents the complete findings from our autonomous consciousness rese
 
 ### Key Findings Summary
 
-| Question | Answer | Confidence |
-|----------|--------|------------|
-| Nonlocal causal proof | **Not yet demonstrated** | High |
-| Observable state steering | **YES - demonstrated** | High |
-| Statistical significance | **Mixed** (1 significant, 1 borderline) | High |
-| Safety | **High safety profile** | High |
+| Question | Answer | Evidence Type | Confidence |
+|----------|--------|---------------|------------|
+| Nonlocal causal proof | **Not yet demonstrated** | Empirical (DANDI/Allen) | High |
+| Observable state steering | **SUPPORTED by literature** | Literature + Simulated Demo | Medium |
+| Statistical significance | **Mixed** (1 significant, 1 borderline) | Empirical (Real data) | High |
+| Safety | **High safety profile** | Literature review | High |
+
+**Important Distinction:** Results from DANDI/Allen datasets represent *validated empirical findings*. The mood amplifier and biometric intervention systems are *demonstration implementations* with simulated data, pending hardware integration for empirical validation.
 
 ---
 
@@ -180,26 +182,31 @@ All observed correlations are consistent with LOCAL causation (LCC = 1):
 
 ### 4.2 Can we steer subjective states in a desired direction?
 
-**Answer: YES - DEMONSTRATED**
+**Answer: SUPPORTED BY LITERATURE (Awaiting Empirical Validation)**
 
-Our Mood Amplifier Protocols demonstrate observable state modulation:
+The scientific literature strongly supports that visual entrainment can modulate brainwave states. Our platform provides the tools to test this empirically.
 
-**Visual Entrainment (SSVEP) Mechanism:**
+**Scientific Evidence for Visual Entrainment (SSVEP):**
+- 256-channel EEG studies confirm brain oscillations ENTRAIN to flickering light frequencies
+- Measurable peaks appear in EEG power spectrum at stimulus frequency
+- This is a well-established neurophysiological phenomenon (PhysioNet MAMEM dataset)
+
+**Frequency-State Associations (Literature):**
 - Alpha (10 Hz): Relaxation, reduced stress
 - Theta (6 Hz): Deep meditation, intuition
 - Gamma (40 Hz): Peak focus, cognitive clarity
 - Beta (18 Hz): Active alertness, concentration
 - Delta (2 Hz): Deep rest, healing
 
-**Evidence from Literature:**
-- SSVEP is scientifically validated (256-channel EEG studies)
-- Brain oscillations ENTRAIN to flickering light frequencies
-- Measurable peaks appear in EEG power spectrum at stimulus frequency
+**Our Implementation (Demonstration System):**
+- Real-time visual entrainment protocols (implemented)
+- Before/after subjective state assessment (implemented)
+- Biometric tracking dashboard (implemented with simulated data)
 
-**Our Implementation:**
-- Real-time visual entrainment protocols
-- Before/after subjective state assessment
-- Quantified improvements tracked in database
+**Next Steps for Validation:**
+- Connect real hardware (Muse 2 EEG, Polar H10 HRV)
+- Conduct controlled pre/post measurements
+- Compare to sham condition for placebo control
 
 ### 4.3 Are effects specifically from intervention, not chance?
 
