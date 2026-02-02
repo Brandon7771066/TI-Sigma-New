@@ -405,6 +405,11 @@ def main():
                         st.rerun()
     
     elif st.session_state.protocol_stage == 'before':
+        # Guard: Ensure protocol is selected
+        if st.session_state.selected_protocol is None or st.session_state.selected_protocol not in ENTRAINMENT_FREQUENCIES:
+            st.session_state.protocol_stage = 'select'
+            st.rerun()
+        
         protocol = ENTRAINMENT_FREQUENCIES[st.session_state.selected_protocol]
         st.markdown(f"## Step 2: Before Assessment - {protocol['name']}")
         st.info("Rate how you feel RIGHT NOW, before starting the protocol.")
@@ -423,6 +428,14 @@ def main():
                 st.rerun()
     
     elif st.session_state.protocol_stage == 'running':
+        # Guard: Ensure protocol and before_scores exist
+        if st.session_state.selected_protocol is None or st.session_state.selected_protocol not in ENTRAINMENT_FREQUENCIES:
+            st.session_state.protocol_stage = 'select'
+            st.rerun()
+        if st.session_state.before_scores is None:
+            st.session_state.protocol_stage = 'before'
+            st.rerun()
+        
         protocol = ENTRAINMENT_FREQUENCIES[st.session_state.selected_protocol]
         duration = protocol['duration_sec']
         
@@ -461,6 +474,14 @@ def main():
         st.rerun()
     
     elif st.session_state.protocol_stage == 'after':
+        # Guard: Ensure protocol and before_scores exist
+        if st.session_state.selected_protocol is None or st.session_state.selected_protocol not in ENTRAINMENT_FREQUENCIES:
+            st.session_state.protocol_stage = 'select'
+            st.rerun()
+        if st.session_state.before_scores is None:
+            st.session_state.protocol_stage = 'before'
+            st.rerun()
+        
         protocol = ENTRAINMENT_FREQUENCIES[st.session_state.selected_protocol]
         st.markdown(f"## Step 3: After Assessment - {protocol['name']}")
         st.info("Rate how you feel RIGHT NOW, after completing the protocol.")
@@ -495,6 +516,16 @@ def main():
             st.session_state.total_improvement = total
     
     elif st.session_state.protocol_stage == 'results':
+        # Guard: Ensure all required state exists
+        if (st.session_state.selected_protocol is None or 
+            st.session_state.selected_protocol not in ENTRAINMENT_FREQUENCIES or
+            st.session_state.before_scores is None or 
+            st.session_state.after_scores is None):
+            st.session_state.protocol_stage = 'select'
+            st.session_state.before_scores = None
+            st.session_state.after_scores = None
+            st.rerun()
+        
         protocol = ENTRAINMENT_FREQUENCIES[st.session_state.selected_protocol]
         
         render_results_comparison(
