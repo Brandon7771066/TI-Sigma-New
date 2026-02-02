@@ -1,0 +1,64 @@
+# Exclude large data directories
+attached_assets/
+kaggle_cafa6/
+kaggle_student_scores/
+kaggle_mallorn/
+kaggle_santa_2025/
+data/
+experiments/
+papers/
+research_papers/
+node_modules/
+
+# Exclude documentation and non-runtime files
+*.md
+*.pdf
+*.docx
+*.pptx
+*.txt
+LICENSE
+
+# Exclude media and assets
+*.mp4
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Exclude development files
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Exclude test files
+tests/
+test_*.py
+*_test.py
+
+# Exclude other large directories
+ti_distribution_materials/
+theories/
+career/
+content/
+conventional_proofs/
+media_launch/
+zenodo_articles/
+quantconnect/
+hardware/
+
+# Exclude Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Exclude local config
+.env.local
+.env.development

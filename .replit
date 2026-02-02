@@ -6,7 +6,7 @@ packages = ["bluez", "cairo", "cargo", "catch2", "ffmpeg-full", "fmt", "fontconf
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["streamlit", "run", "app.py", "--server.port", "5000"]
+run = ["sh", "-c", "python async_gateway.py"]
 
 [agent]
 integrations = ["perplexity_v0:1.0.0", "python_anthropic_ai_integrations:1.0.0", "python_openai_ai_integrations:1.0.0", "web_scraper:1.0.0", "youtube:1.0.0", "github:1.0.0", "stripe:2.0.0"]
