@@ -712,6 +712,8 @@ async def main():
     app.router.add_route('*', '/api/debug', debug_handler)
     app.router.add_route('*', '/api/upload', upload_handler)
     app.router.add_route('*', '/api/biometric/upload', upload_handler)
+    app.router.add_route('*', '/api/muse/upload', upload_handler)
+    app.router.add_route('*', '/api/polar/upload', upload_handler)
     app.router.add_route('*', '/api/latest', latest_handler)
     app.router.add_route('*', '/api/esp32/latest', latest_handler)
     
