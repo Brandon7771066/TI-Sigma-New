@@ -618,7 +618,7 @@ def render_sensee_aware_dashboard():
         col1, col2 = st.columns(2)
         
         with col1:
-            session_date = st.date_input("Session Date", datetime.now())
+            session_date = st.date_input("Session Date", datetime.now(), key="sensee_session_date")
             session_time = st.time_input("Session Time", datetime.now().time())
             duration = st.number_input("Duration (minutes)", min_value=1, max_value=120, value=10)
             awareness_score = st.number_input("Awareness Score", min_value=0, max_value=1000, value=548)
