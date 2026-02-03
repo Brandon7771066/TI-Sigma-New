@@ -9,6 +9,17 @@ Key Concepts:
 - 42 total orders (TI sacred number alignment)
 - Fractal self-similarity as fundamental reality structure
 
+RAMANUJAN INSIGHT: 42 = 24 REVERSED
+====================================
+The number 42 (universal answer in Hitchhiker's Guide, TI sacred number) is 24 written
+backwards. This suggests a profound mirror symmetry:
+- 24 orders: Observable scales (quantum → cosmic) - the OUTWARD journey
+- 42 orders: Complete reality including consciousness - the INWARD journey  
+- The reversal implies self-reflection: consciousness looking back at itself
+- Like Ramanujan's intuitive number relationships, this hints at deeper structure
+- 24 + 18 = 42, where 18 = hidden orders bridging matter and meaning
+- The palindromic relationship: reality is a mirror reflecting itself infinitely
+
 This module provides fractal scaling analysis for:
 1. Stock market predictions (fractal regime detection)
 2. Consciousness correlations (LCC fractal patterns)

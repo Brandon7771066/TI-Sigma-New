@@ -477,11 +477,20 @@ with tabs[5]:
     3. **42 Total Orders**: From Planck length to observable universe boundary
     4. **0.75 Power Law**: The fractal dimension of metabolic/consciousness networks
     
+    ### 🔢 Ramanujan Insight: 42 = 24 Reversed!
+    
+    A profound observation: **42 is 24 written backwards!** This suggests mirror symmetry:
+    - **24 orders**: Observable scales (quantum → cosmic) - the OUTWARD journey
+    - **42 orders**: Complete reality including consciousness - the INWARD journey
+    - **24 + 18 = 42**: The 18 hidden orders bridge matter and meaning
+    - Like Ramanujan's intuitive number relationships, reality is a mirror reflecting itself
+    
     ### Integration with TI Framework
     
     | Lehto Concept | TI Parallel | Synthesis |
     |---------------|-------------|-----------|
     | 42 orders | L×E = 42 | Universal constant |
+    | 42 = 24 reversed | Mirror symmetry | Consciousness reflects reality |
     | 0.75 scaling | Kleiber consciousness | Fractal network efficiency |
     | Self-similarity | Tralse recursion | Truth at every scale |
     | Non-locality | LCC < 1 | Cross-scale correlation |
