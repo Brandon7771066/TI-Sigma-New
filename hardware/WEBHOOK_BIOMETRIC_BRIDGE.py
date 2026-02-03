@@ -93,7 +93,7 @@ class MindMonitorBridge:
         
         while self.running:
             try:
-                time.sleep(1.0)
+                time.sleep(5.0)  # 5 sec interval to avoid webhook.site 429 rate limits
                 
                 if self.packets_received == 0:
                     print("Waiting for Mind Monitor data...")
