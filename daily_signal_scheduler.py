@@ -68,6 +68,8 @@ def generate_daily_signals():
             regime, conf, _ = gsa.classify_regime(xi.pd, xi.constraint, 1.0)
             signal = gsa.generate_signal(xi, gile, regime, conf)
             
+            signal = gsa.enhance_with_fractal(closes, signal)
+            
             signal_data = {
                 'ticker': ticker,
                 'action': signal.action,

@@ -376,3 +376,62 @@ class GSACore:
         base_weight = min(max_position, 1.0 / num_positions) * regime_scale
         weight = base_weight * signal.confidence
         return float(np.clip(weight, 0.0, max_position))
+    
+    def enhance_with_fractal(
+        self,
+        prices: np.ndarray,
+        existing_signal: Signal
+    ) -> Signal:
+        """
+        Enhance signal with Chris Lehto's Fractal Universe analysis.
+        
+        Integrates Hurst exponent, Kleiber scaling, and 42 orders alignment.
+        """
+        try:
+            from fractal_universe_engine import FractalMarketAnalyzer
+            
+            analyzer = FractalMarketAnalyzer()
+            prices_list = prices.tolist() if hasattr(prices, 'tolist') else list(prices)
+            
+            if len(prices_list) < 30:
+                return existing_signal
+            
+            third = len(prices_list) // 3
+            fractal = analyzer.multi_scale_prediction(
+                prices_list[-third:], 
+                prices_list[-2*third:], 
+                prices_list
+            )
+            
+            hurst = fractal.get('weighted_hurst', 0.5)
+            coherence = fractal.get('scale_coherence', 0.5)
+            
+            fractal_boost = 0.0
+            if abs(hurst - 0.75) < 0.1:
+                fractal_boost += 0.1
+            if coherence > 0.7:
+                fractal_boost += 0.05
+            
+            fractal_direction = fractal.get('direction', 'NEUTRAL')
+            aligned = (
+                (fractal_direction in ['BULLISH', 'STRONGLY_BULLISH'] and 
+                 existing_signal.action in ['buy', 'strong_buy']) or
+                (fractal_direction in ['BEARISH', 'STRONGLY_BEARISH'] and 
+                 existing_signal.action in ['sell', 'strong_sell'])
+            )
+            if aligned:
+                fractal_boost += 0.1
+            
+            new_reasons = existing_signal.reasons.copy()
+            new_reasons.append(f"Fractal: H={hurst:.3f}, Coh={coherence:.3f}")
+            
+            return Signal(
+                action=existing_signal.action,
+                confidence=min(1.0, existing_signal.confidence + fractal_boost),
+                gile=existing_signal.gile,
+                xi_metrics=existing_signal.xi_metrics,
+                regime=existing_signal.regime,
+                reasons=new_reasons
+            )
+        except Exception:
+            return existing_signal

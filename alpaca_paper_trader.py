@@ -147,6 +147,8 @@ class AlpacaGSAPaperTrader:
                 regime, regime_conf, _ = self.gsa.classify_regime(xi.pd, xi.constraint, 1.0)
                 signal = self.gsa.generate_signal(xi, gile, regime, regime_conf)
                 
+                signal = self.gsa.enhance_with_fractal(closes, signal)
+                
                 signals[ticker] = {
                     'action': signal.action,
                     'confidence': signal.confidence,
