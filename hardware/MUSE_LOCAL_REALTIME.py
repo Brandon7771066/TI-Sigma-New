@@ -26,8 +26,9 @@ except ImportError:
 
 import threading
 
-OSC_PORT = 5000
+OSC_PORT = 5001  # Changed from 5000 to avoid conflicts
 CSV_FILE = f"muse_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+SHARED_FILE = os.path.join(os.path.expanduser("~"), "muse_realtime_eeg.csv")
 
 bands = {'alpha': 0, 'beta': 0, 'theta': 0, 'gamma': 0, 'delta': 0}
 packet_count = 0
@@ -67,20 +68,35 @@ def handle_delta(addr, *args):
 def save_and_display():
     global data_received
     samples = 0
+    
+    # Initialize shared file with header
+    with open(SHARED_FILE, 'w', newline='') as sf:
+        sf.write('timestamp,alpha,beta,theta,gamma,delta\n')
+    print(f"Shared file for Pong: {SHARED_FILE}")
+    
     while True:
         time.sleep(1)
         now = datetime.now()
         
         if data_received:
-            csv_writer.writerow([
+            row_data = [
                 now.isoformat(),
                 round(bands['alpha'], 4),
                 round(bands['beta'], 4),
                 round(bands['theta'], 4),
                 round(bands['gamma'], 4),
                 round(bands['delta'], 4)
-            ])
+            ]
+            
+            # Write to main CSV
+            csv_writer.writerow(row_data)
             csv_file.flush()
+            
+            # Also write to shared file for Pong game
+            with open(SHARED_FILE, 'w', newline='') as sf:
+                sf.write('timestamp,alpha,beta,theta,gamma,delta\n')
+                sf.write(','.join(str(x) for x in row_data) + '\n')
+            
             samples += 1
             
             ratio = bands['alpha'] / bands['beta'] if bands['beta'] > 0 else 0
@@ -99,10 +115,12 @@ print(f"\nSaving to: {CSV_FILE}")
 print(f"OSC Port: {OSC_PORT}")
 print("\n" + "=" * 60)
 print("MIND MONITOR SETTINGS:")
-print("  OSC IP Address: 127.0.0.1")
+print(f"  OSC IP Address: 127.0.0.1")
 print(f"  OSC Port: {OSC_PORT}")
 print("  Enable OSC Streaming: ON")
 print("=" * 60)
+print("\nFOR EEG PONG: Run EEG_PONG_LCC_TEST.py in another terminal!")
+print(f"  Pong reads from: {SHARED_FILE}")
 print("\nListening for Mind Monitor data...\n")
 
 disp = dispatcher.Dispatcher()

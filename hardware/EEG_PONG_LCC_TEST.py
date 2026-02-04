@@ -4,17 +4,19 @@ EEG PONG - LCC (Luminated Consciousness Correlation) Test
 =========================================================
 Control Pong with your Muse 2 EEG headband!
 
+TWO MODES OF OPERATION:
+1. Run MUSE_LOCAL_REALTIME.py first in another terminal (streams EEG to file)
+2. Then run this Pong game - it reads from the shared file!
+
+OR: Use DEMO mode with arrow keys
+
 PROTOCOL:
 1. Phase 1 (WITH MUSE): Play normally, establish control
 2. Phase 2 (LCC TEST): Remove Muse, continue playing with intention
 3. If paddle still responds -> LCC CONFIRMED!
 
-CONTROLS:
-- Alpha dominance = Paddle UP (relaxed state)
-- Beta dominance = Paddle DOWN (focused state)
-
 REQUIREMENTS:
-pip install pygame-ce bleak numpy
+pip install pygame-ce numpy
 
 Run: python EEG_PONG_LCC_TEST.py
 """
@@ -23,10 +25,10 @@ import pygame
 import numpy as np
 import time
 import csv
-import sys
+import os
 from datetime import datetime
 from collections import deque
-import threading
+from pathlib import Path
 
 # =============================================================================
 # GAME SETTINGS
@@ -51,6 +53,9 @@ CYAN = (0, 255, 255)
 # EEG Control Settings
 CONTROL_SENSITIVITY = 8
 SMOOTHING_WINDOW = 10
+
+# Shared EEG data file (created by MUSE_LOCAL_REALTIME.py)
+EEG_SHARED_FILE = Path.home() / "muse_realtime_eeg.csv"
 
 # =============================================================================
 # GLOBAL STATE
@@ -82,201 +87,87 @@ class GameState:
         self.muse_connected = False
         self.lcc_mode = False
         self.lcc_start_time = None
-        self.ble_thread = None
-        self.ble_running = False
+        self.last_file_check = 0
+        self.last_file_line = 0
         
         # Logging
         self.log_data = []
         self.session_start = datetime.now()
         
-        # Raw EEG buffer for FFT
-        self.eeg_buffer = {
-            'TP9': deque(maxlen=256),
-            'AF7': deque(maxlen=256),
-            'AF8': deque(maxlen=256),
-            'TP10': deque(maxlen=256)
-        }
-        
         # Statistics
         self.total_hits = 0
         self.lcc_hits = 0
-        self.last_control_before_lcc = 0.0
 
 state = GameState()
 
 # =============================================================================
-# EEG PROCESSING
+# EEG FILE READING (From MUSE_LOCAL_REALTIME.py output)
 # =============================================================================
-def compute_band_powers(samples, fs=256):
-    """Compute band powers from EEG samples using FFT."""
-    if len(samples) < 64:
-        return {'alpha': 0, 'beta': 0, 'theta': 0, 'gamma': 0, 'delta': 0}
-    
-    samples = np.array(samples)
-    samples = samples - np.mean(samples)
-    
-    window = np.hanning(len(samples))
-    samples = samples * window
-    
-    fft = np.fft.rfft(samples)
-    freqs = np.fft.rfftfreq(len(samples), 1/fs)
-    power = np.abs(fft) ** 2
-    
-    bands = {
-        'delta': (0.5, 4),
-        'theta': (4, 8),
-        'alpha': (8, 13),
-        'beta': (13, 30),
-        'gamma': (30, 50)
-    }
-    
-    band_powers = {}
-    for band, (low, high) in bands.items():
-        mask = (freqs >= low) & (freqs < high)
-        if np.any(mask):
-            band_powers[band] = np.log10(np.mean(power[mask]) + 1e-10)
-        else:
-            band_powers[band] = 0
-    
-    return band_powers
-
-def update_control_signal():
-    """Calculate control signal from EEG bands."""
-    af7_powers = compute_band_powers(list(state.eeg_buffer['AF7']))
-    af8_powers = compute_band_powers(list(state.eeg_buffer['AF8']))
-    
-    state.alpha = (af7_powers['alpha'] + af8_powers['alpha']) / 2
-    state.beta = (af7_powers['beta'] + af8_powers['beta']) / 2
-    state.theta = (af7_powers['theta'] + af8_powers['theta']) / 2
-    state.gamma = (af7_powers['gamma'] + af8_powers['gamma']) / 2
-    
-    if abs(state.beta) > 0.01:
-        ab_ratio = state.alpha / (abs(state.beta) + 0.01)
-    else:
-        ab_ratio = 1.0
-    
-    raw_signal = (ab_ratio - 1.25) / 1.25
-    raw_signal = max(-1, min(1, raw_signal))
-    
-    state.control_history.append(raw_signal)
-    state.control_signal = float(np.mean(list(state.control_history)))
-
-# =============================================================================
-# MUSE BLE CONNECTION (Separate Thread)
-# =============================================================================
-def ble_thread_main():
-    """Run BLE in separate thread with its own event loop."""
-    import asyncio
-    import sys
-    
-    # Fix Windows event loop policy for bleak
-    if sys.platform == 'win32':
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+def read_eeg_from_file():
+    """Read latest EEG data from shared file."""
+    if not EEG_SHARED_FILE.exists():
+        return False
     
     try:
-        from bleak import BleakClient, BleakScanner
-    except ImportError:
-        print("bleak not installed!")
-        return
-    
-    # Muse UUIDs
-    CONTROL_CHAR = "273e0001-4c4d-454d-96be-f03bac821358"
-    EEG_CHAR = "273e0003-4c4d-454d-96be-f03bac821358"
-    
-    def parse_eeg(data):
-        """Parse raw EEG packet from Muse."""
-        if len(data) < 12:
-            return
+        # Read last few lines of the file
+        with open(EEG_SHARED_FILE, 'r') as f:
+            lines = f.readlines()
         
+        if len(lines) < 2:  # Need header + at least 1 data line
+            return False
+        
+        # Parse last line
+        last_line = lines[-1].strip()
+        if not last_line or last_line.startswith('timestamp'):
+            return False
+        
+        parts = last_line.split(',')
+        if len(parts) >= 6:
+            state.alpha = float(parts[1])
+            state.beta = float(parts[2])
+            state.theta = float(parts[3])
+            state.gamma = float(parts[4])
+            state.delta = float(parts[5])
+            
+            # Calculate control signal from alpha/beta ratio
+            if abs(state.beta) > 0.01:
+                ab_ratio = state.alpha / (abs(state.beta) + 0.01)
+            else:
+                ab_ratio = 1.0
+            
+            raw_signal = (ab_ratio - 1.25) / 1.25
+            raw_signal = max(-1, min(1, raw_signal))
+            
+            state.control_history.append(raw_signal)
+            state.control_signal = float(np.mean(list(state.control_history)))
+            
+            return True
+    except Exception as e:
+        pass
+    
+    return False
+
+def check_muse_connection():
+    """Check if Muse data is streaming."""
+    now = time.time()
+    if now - state.last_file_check < 0.1:  # Check every 100ms
+        return state.muse_connected
+    
+    state.last_file_check = now
+    
+    if EEG_SHARED_FILE.exists():
         try:
-            samples = []
-            for i in range(12):
-                byte_idx = 1 + (i * 3) // 2
-                if byte_idx + 1 < len(data):
-                    if i % 2 == 0:
-                        val = ((data[byte_idx] << 4) | (data[byte_idx + 1] >> 4)) & 0xFFF
-                    else:
-                        val = ((data[byte_idx] & 0x0F) << 8) | data[byte_idx + 1]
-                    uv = (val - 2048) * 0.48828125
-                    samples.append(uv)
-            
-            channels = ['TP9', 'AF7', 'AF8', 'TP10']
-            for ch_idx, ch in enumerate(channels):
-                for s in range(3):
-                    if ch_idx * 3 + s < len(samples):
-                        state.eeg_buffer[ch].append(samples[ch_idx * 3 + s])
-            
-            if len(state.eeg_buffer['AF7']) >= 64:
-                update_control_signal()
-                
-        except Exception as e:
+            mtime = EEG_SHARED_FILE.stat().st_mtime
+            # If file was modified in last 2 seconds, Muse is connected
+            if now - mtime < 2:
+                if read_eeg_from_file():
+                    state.muse_connected = True
+                    return True
+        except:
             pass
     
-    async def notification_handler(sender, data):
-        parse_eeg(bytes(data))
-    
-    async def connect_and_stream():
-        print("Scanning for Muse 2...")
-        
-        devices = await BleakScanner.discover(timeout=10)
-        muse_device = None
-        
-        for d in devices:
-            name = d.name or ""
-            if "Muse" in name:
-                muse_device = d
-                print(f"Found: {name}")
-                break
-        
-        if not muse_device:
-            print("No Muse found! Running in DEMO mode.")
-            return
-        
-        try:
-            async with BleakClient(muse_device.address) as client:
-                print(f"Connected to {muse_device.name}")
-                
-                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x64\x0a')
-                await asyncio.sleep(0.5)
-                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x73\x0a')
-                
-                await client.start_notify(EEG_CHAR, notification_handler)
-                
-                state.muse_connected = True
-                print("EEG streaming started!")
-                
-                while state.ble_running:
-                    await asyncio.sleep(0.1)
-                
-                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x68\x0a')
-                
-        except Exception as e:
-            print(f"BLE Error: {e}")
-        
-        state.muse_connected = False
-    
-    # Create new event loop for this thread
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    
-    try:
-        loop.run_until_complete(connect_and_stream())
-    except Exception as e:
-        print(f"BLE thread error: {e}")
-    finally:
-        loop.close()
-
-def start_ble_thread():
-    """Start BLE connection in separate thread."""
-    state.ble_running = True
-    state.ble_thread = threading.Thread(target=ble_thread_main, daemon=True)
-    state.ble_thread.start()
-
-def stop_ble_thread():
-    """Stop BLE thread."""
-    state.ble_running = False
-    if state.ble_thread:
-        state.ble_thread.join(timeout=2)
+    state.muse_connected = False
+    return False
 
 # =============================================================================
 # GAME LOGIC
@@ -406,13 +297,18 @@ def draw_game(screen, font):
     # Band powers
     small_font = pygame.font.Font(None, 24)
     bands_text = small_font.render(
-        f"A:{state.alpha:.1f}  B:{state.beta:.1f}  T:{state.theta:.1f}  G:{state.gamma:.1f}", 
+        f"A:{state.alpha:.2f}  B:{state.beta:.2f}  T:{state.theta:.2f}  G:{state.gamma:.2f}", 
         True, (150, 150, 150))
     screen.blit(bands_text, (SCREEN_WIDTH // 2 - bands_text.get_width() // 2, info_y + 25))
     
     # Instructions
     inst_text = small_font.render("SPACE: LCC Mode  |  R: Reset  |  ESC: Quit", True, (100, 100, 100))
     screen.blit(inst_text, (SCREEN_WIDTH // 2 - inst_text.get_width() // 2, SCREEN_HEIGHT - 20))
+    
+    # Connection hint
+    if not state.muse_connected and not state.lcc_mode:
+        hint = small_font.render("Run MUSE_LOCAL_REALTIME.py in another terminal for EEG control!", True, YELLOW)
+        screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 60))
     
     # LCC Stats
     if state.lcc_mode and state.lcc_start_time:
@@ -456,30 +352,28 @@ def main():
     print("\n" + "=" * 60)
     print("    EEG PONG - LUMINATED CONSCIOUSNESS CORRELATION TEST")
     print("=" * 60)
-    
-    # Start BLE thread
-    start_ble_thread()
-    
-    # Wait a bit for connection
-    print("Attempting Muse connection...")
-    time.sleep(3)
-    
-    if not state.muse_connected:
-        print("\nNo Muse connected - using DEMO mode (arrow keys)")
-    
-    print("\nControls:")
-    print("  SPACE - Toggle LCC Mode")
+    print("\nHOW TO USE WITH MUSE:")
+    print("  1. Open another terminal")
+    print("  2. Run: python MUSE_LOCAL_REALTIME.py")
+    print("  3. Wait for Muse to connect")
+    print("  4. Come back here and play!")
+    print("\nDEMO MODE:")
+    print("  Use UP/DOWN arrow keys to control paddle")
+    print("\nCONTROLS:")
+    print("  SPACE - Toggle LCC Mode (remove Muse first!)")
     print("  R     - Reset scores")
-    print("  ESC   - Quit")
-    if not state.muse_connected:
-        print("  UP/DOWN - Control paddle (demo mode)")
-    print("=" * 60 + "\n")
+    print("  ESC   - Quit and save log")
+    print("=" * 60)
+    print(f"\nLooking for EEG data at: {EEG_SHARED_FILE}")
     
     reset_ball()
     running = True
     
     try:
         while running:
+            # Check for Muse connection
+            check_muse_connection()
+            
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
@@ -491,7 +385,6 @@ def main():
                         if state.lcc_mode:
                             state.lcc_start_time = datetime.now()
                             state.lcc_hits = 0
-                            state.last_control_before_lcc = state.control_signal
                             print("\n*** LCC MODE ON - Remove Muse and play with intention! ***")
                         else:
                             print("\n*** LCC MODE OFF ***")
@@ -525,7 +418,6 @@ def main():
             clock.tick(FPS)
     
     finally:
-        stop_ble_thread()
         save_session_log()
         pygame.quit()
 
