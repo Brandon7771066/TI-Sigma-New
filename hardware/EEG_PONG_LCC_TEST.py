@@ -12,32 +12,21 @@ PROTOCOL:
 CONTROLS:
 - Alpha dominance = Paddle UP (relaxed state)
 - Beta dominance = Paddle DOWN (focused state)
-- Or use ATTENTION level for smooth control
 
 REQUIREMENTS:
-pip install pygame bleak numpy
+pip install pygame-ce bleak numpy
 
 Run: python EEG_PONG_LCC_TEST.py
 """
 
-import asyncio
 import pygame
 import numpy as np
 import time
 import csv
-import os
+import sys
 from datetime import datetime
 from collections import deque
 import threading
-import struct
-
-# Try to import bleak for BLE
-try:
-    from bleak import BleakClient, BleakScanner
-    BLEAK_AVAILABLE = True
-except ImportError:
-    BLEAK_AVAILABLE = False
-    print("WARNING: bleak not installed. Run: pip install bleak")
 
 # =============================================================================
 # GAME SETTINGS
@@ -57,15 +46,11 @@ RED = (255, 100, 100)
 BLUE = (100, 100, 255)
 YELLOW = (255, 255, 0)
 PURPLE = (200, 100, 255)
+CYAN = (0, 255, 255)
 
 # EEG Control Settings
-CONTROL_SENSITIVITY = 8  # How fast paddle responds to EEG
-SMOOTHING_WINDOW = 10    # Samples to average for smooth control
-
-# Muse 2 BLE UUIDs
-MUSE_SERVICE = "0000fe8d-0000-1000-8000-00805f9b34fb"
-CONTROL_CHAR = "273e0001-4c4d-454d-96be-f03bac821358"
-EEG_CHAR = "273e0003-4c4d-454d-96be-f03bac821358"  # TP9, AF7, AF8, TP10
+CONTROL_SENSITIVITY = 8
+SMOOTHING_WINDOW = 10
 
 # =============================================================================
 # GLOBAL STATE
@@ -77,10 +62,10 @@ class GameState:
         self.beta = 0.0
         self.theta = 0.0
         self.gamma = 0.0
-        self.attention = 0.5  # 0-1 scale
+        self.delta = 0.0
         
         # Control signal
-        self.control_signal = 0.0  # -1 to 1, negative=down, positive=up
+        self.control_signal = 0.0
         self.control_history = deque(maxlen=SMOOTHING_WINDOW)
         
         # Game state
@@ -95,8 +80,10 @@ class GameState:
         
         # Mode
         self.muse_connected = False
-        self.lcc_mode = False  # True = Muse removed, testing LCC
+        self.lcc_mode = False
         self.lcc_start_time = None
+        self.ble_thread = None
+        self.ble_running = False
         
         # Logging
         self.log_data = []
@@ -113,7 +100,7 @@ class GameState:
         # Statistics
         self.total_hits = 0
         self.lcc_hits = 0
-        self.control_accuracy = []
+        self.last_control_before_lcc = 0.0
 
 state = GameState()
 
@@ -126,19 +113,15 @@ def compute_band_powers(samples, fs=256):
         return {'alpha': 0, 'beta': 0, 'theta': 0, 'gamma': 0, 'delta': 0}
     
     samples = np.array(samples)
-    # Remove DC offset
     samples = samples - np.mean(samples)
     
-    # Apply Hanning window
     window = np.hanning(len(samples))
     samples = samples * window
     
-    # FFT
     fft = np.fft.rfft(samples)
     freqs = np.fft.rfftfreq(len(samples), 1/fs)
     power = np.abs(fft) ** 2
     
-    # Band definitions (Hz)
     bands = {
         'delta': (0.5, 4),
         'theta': (4, 8),
@@ -150,61 +133,57 @@ def compute_band_powers(samples, fs=256):
     band_powers = {}
     for band, (low, high) in bands.items():
         mask = (freqs >= low) & (freqs < high)
-        band_powers[band] = np.log10(np.mean(power[mask]) + 1e-10)
+        if np.any(mask):
+            band_powers[band] = np.log10(np.mean(power[mask]) + 1e-10)
+        else:
+            band_powers[band] = 0
     
     return band_powers
 
 def update_control_signal():
     """Calculate control signal from EEG bands."""
-    # Combine frontal channels (AF7, AF8) for attention
     af7_powers = compute_band_powers(list(state.eeg_buffer['AF7']))
     af8_powers = compute_band_powers(list(state.eeg_buffer['AF8']))
     
-    # Average frontal
     state.alpha = (af7_powers['alpha'] + af8_powers['alpha']) / 2
     state.beta = (af7_powers['beta'] + af8_powers['beta']) / 2
     state.theta = (af7_powers['theta'] + af8_powers['theta']) / 2
     state.gamma = (af7_powers['gamma'] + af8_powers['gamma']) / 2
     
-    # Control method: Alpha/Beta ratio
-    # High alpha (relaxed) = move UP
-    # High beta (focused) = move DOWN
-    if state.beta != 0:
+    if abs(state.beta) > 0.01:
         ab_ratio = state.alpha / (abs(state.beta) + 0.01)
     else:
         ab_ratio = 1.0
     
-    # Normalize to -1 to 1 range
-    # AB ratio > 2 = very relaxed (up)
-    # AB ratio < 0.5 = very focused (down)
-    raw_signal = (ab_ratio - 1.25) / 1.25  # Center around 1.25
-    raw_signal = max(-1, min(1, raw_signal))  # Clamp
+    raw_signal = (ab_ratio - 1.25) / 1.25
+    raw_signal = max(-1, min(1, raw_signal))
     
     state.control_history.append(raw_signal)
-    state.control_signal = np.mean(list(state.control_history))
-    
-    # Also compute attention (for display)
-    state.attention = 0.5 + (state.control_signal * 0.5)
+    state.control_signal = float(np.mean(list(state.control_history)))
 
 # =============================================================================
-# MUSE BLE CONNECTION
+# MUSE BLE CONNECTION (Separate Thread)
 # =============================================================================
-class MuseConnection:
-    def __init__(self):
-        self.client = None
-        self.running = False
-        
-    def parse_eeg(self, data):
+def ble_thread_main():
+    """Run BLE in separate thread with its own event loop."""
+    import asyncio
+    
+    try:
+        from bleak import BleakClient, BleakScanner
+    except ImportError:
+        print("bleak not installed!")
+        return
+    
+    # Muse UUIDs
+    CONTROL_CHAR = "273e0001-4c4d-454d-96be-f03bac821358"
+    EEG_CHAR = "273e0003-4c4d-454d-96be-f03bac821358"
+    
+    def parse_eeg(data):
         """Parse raw EEG packet from Muse."""
         if len(data) < 12:
             return
         
-        # Muse sends 12 samples per packet (3 per channel)
         try:
-            # First byte is packet counter
-            packet_idx = data[0]
-            
-            # Extract samples (12-bit values packed)
             samples = []
             for i in range(12):
                 byte_idx = 1 + (i * 3) // 2
@@ -213,30 +192,25 @@ class MuseConnection:
                         val = ((data[byte_idx] << 4) | (data[byte_idx + 1] >> 4)) & 0xFFF
                     else:
                         val = ((data[byte_idx] & 0x0F) << 8) | data[byte_idx + 1]
-                    # Convert to microvolts (approximate)
                     uv = (val - 2048) * 0.48828125
                     samples.append(uv)
             
-            # Distribute to channels (3 samples each)
             channels = ['TP9', 'AF7', 'AF8', 'TP10']
             for ch_idx, ch in enumerate(channels):
                 for s in range(3):
                     if ch_idx * 3 + s < len(samples):
                         state.eeg_buffer[ch].append(samples[ch_idx * 3 + s])
             
-            # Update control signal periodically
             if len(state.eeg_buffer['AF7']) >= 64:
                 update_control_signal()
                 
         except Exception as e:
-            pass  # Silently handle parse errors
+            pass
     
-    async def notification_handler(self, sender, data):
-        """Handle incoming EEG data."""
-        self.parse_eeg(bytes(data))
+    async def notification_handler(sender, data):
+        parse_eeg(bytes(data))
     
-    async def connect(self):
-        """Connect to Muse 2."""
+    async def connect_and_stream():
         print("Scanning for Muse 2...")
         
         devices = await BleakScanner.discover(timeout=10)
@@ -246,45 +220,58 @@ class MuseConnection:
             name = d.name or ""
             if "Muse" in name:
                 muse_device = d
-                print(f"Found: {name} ({d.address})")
+                print(f"Found: {name}")
                 break
         
         if not muse_device:
-            print("No Muse found!")
-            return False
+            print("No Muse found! Running in DEMO mode.")
+            return
         
         try:
-            self.client = BleakClient(muse_device.address)
-            await self.client.connect()
-            print(f"Connected to {muse_device.name}")
-            
-            # Start streaming
-            await self.client.write_gatt_char(CONTROL_CHAR, b'\x02\x64\x0a')  # Start
-            await asyncio.sleep(0.5)
-            await self.client.write_gatt_char(CONTROL_CHAR, b'\x02\x73\x0a')  # Resume
-            
-            # Subscribe to EEG
-            await self.client.start_notify(EEG_CHAR, self.notification_handler)
-            
-            state.muse_connected = True
-            self.running = True
-            print("EEG streaming started!")
-            return True
-            
+            async with BleakClient(muse_device.address) as client:
+                print(f"Connected to {muse_device.name}")
+                
+                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x64\x0a')
+                await asyncio.sleep(0.5)
+                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x73\x0a')
+                
+                await client.start_notify(EEG_CHAR, notification_handler)
+                
+                state.muse_connected = True
+                print("EEG streaming started!")
+                
+                while state.ble_running:
+                    await asyncio.sleep(0.1)
+                
+                await client.write_gatt_char(CONTROL_CHAR, b'\x02\x68\x0a')
+                
         except Exception as e:
-            print(f"Connection error: {e}")
-            return False
-    
-    async def disconnect(self):
-        """Disconnect from Muse."""
-        if self.client and self.client.is_connected:
-            try:
-                await self.client.write_gatt_char(CONTROL_CHAR, b'\x02\x68\x0a')  # Stop
-                await self.client.disconnect()
-            except:
-                pass
+            print(f"BLE Error: {e}")
+        
         state.muse_connected = False
-        self.running = False
+    
+    # Create new event loop for this thread
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
+    try:
+        loop.run_until_complete(connect_and_stream())
+    except Exception as e:
+        print(f"BLE thread error: {e}")
+    finally:
+        loop.close()
+
+def start_ble_thread():
+    """Start BLE connection in separate thread."""
+    state.ble_running = True
+    state.ble_thread = threading.Thread(target=ble_thread_main, daemon=True)
+    state.ble_thread.start()
+
+def stop_ble_thread():
+    """Stop BLE thread."""
+    state.ble_running = False
+    if state.ble_thread:
+        state.ble_thread.join(timeout=2)
 
 # =============================================================================
 # GAME LOGIC
@@ -300,13 +287,11 @@ def update_game():
     """Update game physics."""
     # Move player paddle based on EEG control
     if state.muse_connected or state.lcc_mode:
-        # Control signal: positive = up, negative = down
         state.player_y -= state.control_signal * CONTROL_SENSITIVITY
     
-    # Keep paddle in bounds
     state.player_y = max(PADDLE_HEIGHT // 2, min(SCREEN_HEIGHT - PADDLE_HEIGHT // 2, state.player_y))
     
-    # AI paddle (simple tracking)
+    # AI paddle
     ai_speed = 4
     if state.ball_y < state.ai_y:
         state.ai_y -= ai_speed
@@ -322,23 +307,19 @@ def update_game():
     if state.ball_y <= BALL_SIZE // 2 or state.ball_y >= SCREEN_HEIGHT - BALL_SIZE // 2:
         state.ball_dy *= -1
     
-    # Ball collision with paddles
-    # Player paddle (left)
+    # Player paddle collision
     if state.ball_x <= PADDLE_WIDTH + BALL_SIZE // 2 + 20:
         if abs(state.ball_y - state.player_y) < PADDLE_HEIGHT // 2 + BALL_SIZE // 2:
-            state.ball_dx = abs(state.ball_dx)  # Bounce right
-            state.ball_dx *= 1.05  # Speed up
+            state.ball_dx = abs(state.ball_dx) * 1.05
             state.total_hits += 1
             if state.lcc_mode:
                 state.lcc_hits += 1
-            # Log hit
             log_event("HIT", state.control_signal)
     
-    # AI paddle (right)
+    # AI paddle collision
     if state.ball_x >= SCREEN_WIDTH - PADDLE_WIDTH - BALL_SIZE // 2 - 20:
         if abs(state.ball_y - state.ai_y) < PADDLE_HEIGHT // 2 + BALL_SIZE // 2:
-            state.ball_dx = -abs(state.ball_dx)  # Bounce left
-            state.ball_dx *= 1.05
+            state.ball_dx = -abs(state.ball_dx) * 1.05
     
     # Scoring
     if state.ball_x < 0:
@@ -370,84 +351,78 @@ def draw_game(screen, font):
     """Draw game graphics."""
     screen.fill(BLACK)
     
-    # Draw center line
+    # Center line
     for y in range(0, SCREEN_HEIGHT, 30):
         pygame.draw.rect(screen, WHITE, (SCREEN_WIDTH // 2 - 2, y, 4, 15))
     
-    # Draw paddles
-    # Player paddle (left) - color based on mode
-    paddle_color = PURPLE if state.lcc_mode else (GREEN if state.muse_connected else WHITE)
+    # Paddles
+    paddle_color = PURPLE if state.lcc_mode else (GREEN if state.muse_connected else CYAN)
     pygame.draw.rect(screen, paddle_color, 
-                     (20, state.player_y - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT))
-    
-    # AI paddle (right)
+                     (20, int(state.player_y) - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT))
     pygame.draw.rect(screen, RED, 
-                     (SCREEN_WIDTH - 35, state.ai_y - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT))
+                     (SCREEN_WIDTH - 35, int(state.ai_y) - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT))
     
-    # Draw ball
+    # Ball
     pygame.draw.circle(screen, WHITE, (int(state.ball_x), int(state.ball_y)), BALL_SIZE // 2)
     
-    # Draw scores
+    # Scores
     score_text = font.render(f"{state.player_score}  -  {state.ai_score}", True, WHITE)
     screen.blit(score_text, (SCREEN_WIDTH // 2 - score_text.get_width() // 2, 20))
     
-    # Draw EEG info bar
-    info_y = SCREEN_HEIGHT - 80
-    
     # Mode indicator
+    info_y = SCREEN_HEIGHT - 80
     if state.lcc_mode:
-        mode_text = font.render("⚡ LCC MODE - MUSE REMOVED ⚡", True, PURPLE)
-        screen.blit(mode_text, (SCREEN_WIDTH // 2 - mode_text.get_width() // 2, info_y - 30))
+        mode_text = font.render("LCC MODE - MUSE REMOVED", True, PURPLE)
     elif state.muse_connected:
-        mode_text = font.render("🧠 EEG CONTROL ACTIVE", True, GREEN)
-        screen.blit(mode_text, (SCREEN_WIDTH // 2 - mode_text.get_width() // 2, info_y - 30))
+        mode_text = font.render("EEG CONTROL ACTIVE", True, GREEN)
     else:
-        mode_text = font.render("⌛ Connecting to Muse...", True, YELLOW)
-        screen.blit(mode_text, (SCREEN_WIDTH // 2 - mode_text.get_width() // 2, info_y - 30))
+        mode_text = font.render("DEMO MODE (Arrow Keys)", True, CYAN)
+    screen.blit(mode_text, (SCREEN_WIDTH // 2 - mode_text.get_width() // 2, info_y - 30))
     
-    # Control signal bar
+    # Control bar
     bar_width = 300
     bar_height = 20
     bar_x = SCREEN_WIDTH // 2 - bar_width // 2
     
     pygame.draw.rect(screen, (50, 50, 50), (bar_x, info_y, bar_width, bar_height))
-    
-    # Center marker
     pygame.draw.line(screen, WHITE, (bar_x + bar_width // 2, info_y), 
                      (bar_x + bar_width // 2, info_y + bar_height), 2)
     
-    # Control position
     ctrl_x = bar_x + bar_width // 2 + int(state.control_signal * bar_width // 2)
+    ctrl_x = max(bar_x + 10, min(bar_x + bar_width - 10, ctrl_x))
     pygame.draw.circle(screen, GREEN if state.control_signal > 0 else RED, 
                        (ctrl_x, info_y + bar_height // 2), 10)
     
-    # Labels
-    down_text = font.render("↓ FOCUS", True, RED)
-    up_text = font.render("RELAX ↑", True, GREEN)
-    screen.blit(down_text, (bar_x - 70, info_y))
+    down_text = font.render("DOWN", True, RED)
+    up_text = font.render("UP", True, GREEN)
+    screen.blit(down_text, (bar_x - 60, info_y))
     screen.blit(up_text, (bar_x + bar_width + 10, info_y))
     
-    # Band powers (small text)
+    # Band powers
     small_font = pygame.font.Font(None, 24)
     bands_text = small_font.render(
-        f"α:{state.alpha:.2f}  β:{state.beta:.2f}  θ:{state.theta:.2f}  γ:{state.gamma:.2f}", 
+        f"A:{state.alpha:.1f}  B:{state.beta:.1f}  T:{state.theta:.1f}  G:{state.gamma:.1f}", 
         True, (150, 150, 150))
     screen.blit(bands_text, (SCREEN_WIDTH // 2 - bands_text.get_width() // 2, info_y + 25))
     
     # Instructions
-    inst_text = small_font.render("SPACE: Toggle LCC Mode  |  R: Reset  |  ESC: Quit", True, (100, 100, 100))
+    inst_text = small_font.render("SPACE: LCC Mode  |  R: Reset  |  ESC: Quit", True, (100, 100, 100))
     screen.blit(inst_text, (SCREEN_WIDTH // 2 - inst_text.get_width() // 2, SCREEN_HEIGHT - 20))
     
-    # LCC Stats (if in LCC mode)
+    # LCC Stats
     if state.lcc_mode and state.lcc_start_time:
         elapsed = (datetime.now() - state.lcc_start_time).total_seconds()
-        lcc_text = small_font.render(
-            f"LCC Time: {elapsed:.0f}s  |  LCC Hits: {state.lcc_hits}", True, PURPLE)
+        lcc_text = small_font.render(f"LCC Time: {elapsed:.0f}s  |  LCC Hits: {state.lcc_hits}", True, PURPLE)
         screen.blit(lcc_text, (10, 10))
+    
+    # Total hits
+    hits_text = small_font.render(f"Total Hits: {state.total_hits}", True, (100, 100, 100))
+    screen.blit(hits_text, (10, 30 if not state.lcc_mode else 50))
 
 def save_session_log():
     """Save session data to CSV."""
     if not state.log_data:
+        print("No events to save.")
         return
     
     filename = f"pong_lcc_session_{state.session_start.strftime('%Y%m%d_%H%M%S')}.csv"
@@ -463,9 +438,9 @@ def save_session_log():
     print(f"Final score: You {state.player_score} - {state.ai_score} AI")
 
 # =============================================================================
-# MAIN GAME LOOP
+# MAIN
 # =============================================================================
-async def main():
+def main():
     """Main game loop."""
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -473,30 +448,30 @@ async def main():
     clock = pygame.time.Clock()
     font = pygame.font.Font(None, 48)
     
-    muse = MuseConnection() if BLEAK_AVAILABLE else None
+    print("\n" + "=" * 60)
+    print("    EEG PONG - LUMINATED CONSCIOUSNESS CORRELATION TEST")
+    print("=" * 60)
     
-    # Try to connect to Muse
-    if muse:
-        connected = await muse.connect()
-        if not connected:
-            print("\nRunning in DEMO mode (no Muse connected)")
-            print("Use UP/DOWN arrows to control paddle")
+    # Start BLE thread
+    start_ble_thread()
     
-    running = True
-    demo_mode = not state.muse_connected
+    # Wait a bit for connection
+    print("Attempting Muse connection...")
+    time.sleep(3)
+    
+    if not state.muse_connected:
+        print("\nNo Muse connected - using DEMO mode (arrow keys)")
+    
+    print("\nControls:")
+    print("  SPACE - Toggle LCC Mode")
+    print("  R     - Reset scores")
+    print("  ESC   - Quit")
+    if not state.muse_connected:
+        print("  UP/DOWN - Control paddle (demo mode)")
+    print("=" * 60 + "\n")
     
     reset_ball()
-    
-    print("\n" + "=" * 50)
-    print("EEG PONG - LCC TEST")
-    print("=" * 50)
-    print("Controls:")
-    print("  SPACE - Toggle LCC Mode (remove Muse first!)")
-    print("  R     - Reset scores")
-    print("  ESC   - Quit and save log")
-    if demo_mode:
-        print("  UP/DOWN - Manual paddle control (demo mode)")
-    print("=" * 50 + "\n")
+    running = True
     
     try:
         while running:
@@ -507,15 +482,14 @@ async def main():
                     if event.key == pygame.K_ESCAPE:
                         running = False
                     elif event.key == pygame.K_SPACE:
-                        # Toggle LCC mode
                         state.lcc_mode = not state.lcc_mode
                         if state.lcc_mode:
                             state.lcc_start_time = datetime.now()
                             state.lcc_hits = 0
-                            print("\n⚡ LCC MODE ACTIVATED - Remove your Muse now! ⚡")
-                            print("Continue playing with INTENTION ONLY...")
+                            state.last_control_before_lcc = state.control_signal
+                            print("\n*** LCC MODE ON - Remove Muse and play with intention! ***")
                         else:
-                            print("\n🧠 LCC MODE DEACTIVATED - Normal EEG control")
+                            print("\n*** LCC MODE OFF ***")
                             state.lcc_start_time = None
                         log_event("LCC_TOGGLE", state.control_signal)
                     elif event.key == pygame.K_r:
@@ -527,48 +501,28 @@ async def main():
                         log_event("RESET", 0)
             
             # Demo mode: keyboard control
-            if demo_mode:
+            if not state.muse_connected and not state.lcc_mode:
                 keys = pygame.key.get_pressed()
                 if keys[pygame.K_UP]:
                     state.control_signal = 0.8
                 elif keys[pygame.K_DOWN]:
                     state.control_signal = -0.8
                 else:
-                    state.control_signal *= 0.9  # Decay
+                    state.control_signal *= 0.9
             
-            # In LCC mode, we keep using the LAST control signal pattern
-            # (simulating intention-based control)
-            if state.lcc_mode and not demo_mode:
-                # Slowly decay control signal in LCC mode
-                # This simulates "intention" needing reinforcement
-                state.control_signal *= 0.995
+            # In LCC mode, slowly decay the control signal
+            if state.lcc_mode:
+                state.control_signal *= 0.998
             
             update_game()
             draw_game(screen, font)
             pygame.display.flip()
             clock.tick(FPS)
-            
-            # Allow async operations
-            await asyncio.sleep(0.001)
     
     finally:
-        if muse:
-            await muse.disconnect()
+        stop_ble_thread()
         save_session_log()
         pygame.quit()
 
-# =============================================================================
-# ENTRY POINT
-# =============================================================================
 if __name__ == "__main__":
-    print("\n" + "=" * 60)
-    print("    EEG PONG - LUMINATED CONSCIOUSNESS CORRELATION TEST")
-    print("=" * 60)
-    print("\nStarting...")
-    
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-        print("\nGame interrupted.")
-    
-    print("\nThank you for testing consciousness correlation! 🧠⚡🎮")
+    main()
