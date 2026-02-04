@@ -44,6 +44,7 @@ except ImportError:
         BLEAK_AVAILABLE = True
     except:
         BLEAK_AVAILABLE = False
+        
         print("⚠️ Polar H10 unavailable - EEG only mode")
 
 # Configuration
