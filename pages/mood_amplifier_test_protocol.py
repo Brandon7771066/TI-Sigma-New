@@ -86,7 +86,7 @@ ATTRACTOR_BASINS = {
     }
 }
 
-def calculate_entrainment_score(current_values, target_basin):
+def calculate_entrainment_score(current_values, target_basin, hrv_coherence=None):
     """Calculate how well current brain state matches target attractor basin."""
     if not target_basin or "targets" not in target_basin:
         return 0.0, {}
@@ -124,14 +124,35 @@ def calculate_entrainment_score(current_values, target_basin):
             total_weight += weight
     
     overall_score = weighted_sum / total_weight if total_weight > 0 else 0.0
+    
+    # Boost entrainment score if HRV coherence is high (heart-brain sync)
+    if hrv_coherence is not None and hrv_coherence > 0:
+        # HRV coherence acts as a multiplier for metta states
+        hrv_boost = hrv_coherence * 0.15  # Up to 15% boost
+        overall_score = min(1.0, overall_score + hrv_boost)
+        scores['hrv_coherence'] = hrv_coherence
+    
     return overall_score, scores
+
+def calculate_heart_brain_sync(alpha, hrv_coherence):
+    """Calculate heart-brain synchronization for metta states."""
+    if hrv_coherence == 0 or hrv_coherence is None:
+        return 0.0
+    
+    # Normalize alpha (typically -1 to 1 log scale from Mind Monitor)
+    alpha_norm = max(0, min(1, (alpha + 1) / 2))
+    
+    # Heart-brain sync = weighted combination
+    sync = (alpha_norm * 0.4 + hrv_coherence * 0.6)
+    return sync
 
 def calculate_sync_index(df, window=30):
     """Calculate real-time synchronization index from recent data."""
     if len(df) < window:
-        return 0.0, "Collecting..."
+        return 0.0, "Collecting...", False
     
     recent = df.tail(window)
+    has_hrv = 'hrv_coherence' in recent.columns or 'heart_brain_sync' in recent.columns
     
     # Alpha-Theta coherence (meditation signature)
     if 'alpha' in recent.columns and 'theta' in recent.columns:
@@ -151,16 +172,29 @@ def calculate_sync_index(df, window=30):
     else:
         alpha_gamma_coupling = 0
     
-    sync_index = (alpha_theta_corr * 0.4 + alpha_stability * 0.3 + alpha_gamma_coupling * 0.3)
+    # Heart-brain sync bonus (from Polar H10)
+    hrv_bonus = 0
+    if 'hrv_coherence' in recent.columns:
+        hrv_coh = recent['hrv_coherence'].mean()
+        if hrv_coh > 0:
+            hrv_bonus = hrv_coh * 0.2  # Up to 20% boost
+    elif 'heart_brain_sync' in recent.columns:
+        hb_sync = recent['heart_brain_sync'].mean()
+        if hb_sync > 0:
+            hrv_bonus = hb_sync * 0.2
+    
+    sync_index = (alpha_theta_corr * 0.35 + alpha_stability * 0.25 + 
+                  alpha_gamma_coupling * 0.25 + hrv_bonus)
+    sync_index = min(1.0, sync_index)
     
     if sync_index > 0.7:
-        status = "🟢 IN SYNC"
+        status = "🟢 IN SYNC" + (" 💓" if has_hrv else "")
     elif sync_index > 0.5:
         status = "🟡 PARTIAL SYNC"
     else:
         status = "🔴 NOT SYNCED"
     
-    return sync_index, status
+    return sync_index, status, has_hrv
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "📋 Protocol Overview",
@@ -328,12 +362,22 @@ with tab3:
         else:
             current_values['ab_ratio'] = 1.0
         
+        # Get HRV coherence if available
+        hrv_coherence = None
+        if 'hrv_coherence' in df.columns:
+            hrv_coherence = recent['hrv_coherence'].mean() if 'hrv_coherence' in recent.columns else None
+        elif 'heart_brain_sync' in df.columns:
+            hrv_coherence = recent['heart_brain_sync'].mean() if 'heart_brain_sync' in recent.columns else None
+        
         # Calculate entrainment
-        entrainment_score, band_scores = calculate_entrainment_score(current_values, basin)
-        sync_index, sync_status = calculate_sync_index(df)
+        entrainment_score, band_scores = calculate_entrainment_score(current_values, basin, hrv_coherence)
+        sync_index, sync_status, has_hrv = calculate_sync_index(df)
         
         st.markdown("---")
         st.markdown("### 🎯 Entrainment Status")
+        
+        if has_hrv:
+            st.success("💓 **Polar H10 HRV data detected - Heart-Brain sync enabled!**")
         
         col1, col2, col3 = st.columns(3)
         
