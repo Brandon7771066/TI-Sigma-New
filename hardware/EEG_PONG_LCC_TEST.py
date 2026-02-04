@@ -167,6 +167,11 @@ def update_control_signal():
 def ble_thread_main():
     """Run BLE in separate thread with its own event loop."""
     import asyncio
+    import sys
+    
+    # Fix Windows event loop policy for bleak
+    if sys.platform == 'win32':
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     
     try:
         from bleak import BleakClient, BleakScanner
