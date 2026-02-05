@@ -51,8 +51,8 @@ PURPLE = (200, 100, 255)
 CYAN = (0, 255, 255)
 
 # EEG Control Settings
-CONTROL_SENSITIVITY = 8
-SMOOTHING_WINDOW = 10
+CONTROL_SENSITIVITY = 12  # Increased for more responsive control
+SMOOTHING_WINDOW = 5  # Less smoothing = faster response
 
 # Shared EEG data file (created by MUSE_LOCAL_REALTIME.py)
 EEG_SHARED_FILE = Path.home() / "muse_realtime_eeg.csv"
@@ -150,7 +150,7 @@ def read_eeg_from_file():
 def check_muse_connection():
     """Check if Muse data is streaming."""
     now = time.time()
-    if now - state.last_file_check < 0.1:  # Check every 100ms
+    if now - state.last_file_check < 0.05:  # Check every 50ms for responsiveness
         return state.muse_connected
     
     state.last_file_check = now
@@ -158,8 +158,8 @@ def check_muse_connection():
     if EEG_SHARED_FILE.exists():
         try:
             mtime = EEG_SHARED_FILE.stat().st_mtime
-            # If file was modified in last 2 seconds, Muse is connected
-            if now - mtime < 2:
+            # If file was modified in last 1 second, Muse is connected
+            if now - mtime < 1:
                 if read_eeg_from_file():
                     state.muse_connected = True
                     return True

@@ -75,7 +75,7 @@ def save_and_display():
     print(f"Shared file for Pong: {SHARED_FILE}")
     
     while True:
-        time.sleep(1)
+        time.sleep(0.2)  # 5x faster updates for less lag
         now = datetime.now()
         
         if data_received:
