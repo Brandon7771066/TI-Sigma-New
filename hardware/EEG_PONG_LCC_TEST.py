@@ -51,8 +51,8 @@ PURPLE = (200, 100, 255)
 CYAN = (0, 255, 255)
 
 # EEG Control Settings
-CONTROL_SENSITIVITY = 25  # Very high sensitivity
-SMOOTHING_WINDOW = 3  # Minimal smoothing for instant response
+CONTROL_SENSITIVITY = 40  # Maximum sensitivity
+SMOOTHING_WINDOW = 2  # Almost no smoothing
 
 # Shared EEG data file (created by MUSE_LOCAL_REALTIME.py)
 EEG_SHARED_FILE = Path.home() / "muse_realtime_eeg.csv"
@@ -130,12 +130,14 @@ def read_eeg_from_file():
             state.delta = float(parts[5])
             
             # Calculate control signal from alpha/beta ratio
+            # More aggressive scaling for better responsiveness
             if abs(state.beta) > 0.01:
                 ab_ratio = state.alpha / (abs(state.beta) + 0.01)
             else:
                 ab_ratio = 1.0
             
-            raw_signal = (ab_ratio - 1.25) / 1.25
+            # Scale more aggressively: ratio > 1 = relaxed (up), ratio < 1 = focused (down)
+            raw_signal = (ab_ratio - 1.0) * 2.0  # Double the effect
             raw_signal = max(-1, min(1, raw_signal))
             
             state.control_history.append(raw_signal)
