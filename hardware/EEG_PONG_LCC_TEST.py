@@ -51,8 +51,8 @@ PURPLE = (200, 100, 255)
 CYAN = (0, 255, 255)
 
 # EEG Control Settings
-CONTROL_SENSITIVITY = 12  # Increased for more responsive control
-SMOOTHING_WINDOW = 5  # Less smoothing = faster response
+CONTROL_SENSITIVITY = 25  # Very high sensitivity
+SMOOTHING_WINDOW = 3  # Minimal smoothing for instant response
 
 # Shared EEG data file (created by MUSE_LOCAL_REALTIME.py)
 EEG_SHARED_FILE = Path.home() / "muse_realtime_eeg.csv"
