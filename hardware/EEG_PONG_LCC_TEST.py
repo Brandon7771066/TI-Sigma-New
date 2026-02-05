@@ -131,12 +131,17 @@ def read_eeg_from_file():
             
             # Calculate control signal from alpha vs beta difference
             # Alpha (relaxed) pushes UP, Beta (focused) pushes DOWN
-            alpha_norm = min(state.alpha, 1.0)  # Normalize to 0-1
-            beta_norm = min(state.beta, 1.0)
+            # Use max(0, x) to handle negative values from Mind Monitor
+            alpha_val = max(0, state.alpha)
+            beta_val = max(0, state.beta)
             
-            # Direct difference: positive = more alpha = up, negative = more beta = down
-            raw_signal = (alpha_norm - beta_norm) * 3.0  # Triple amplification
+            # Direct difference with strong amplification
+            raw_signal = (alpha_val - beta_val) * 5.0  # 5x amplification
             raw_signal = max(-1, min(1, raw_signal))
+            
+            # Debug print every few frames
+            if len(state.control_history) % 10 == 0:
+                print(f"A:{alpha_val:.2f} B:{beta_val:.2f} -> Signal:{raw_signal:.2f}")
             
             state.control_history.append(raw_signal)
             state.control_signal = float(np.mean(list(state.control_history)))
