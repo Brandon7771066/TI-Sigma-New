@@ -1,4 +1,3 @@
-"""
 LCC Attractor Basin Visualization Dashboard
 ============================================
 Visual proof of consciousness creating attractor dynamics in neural state space.
