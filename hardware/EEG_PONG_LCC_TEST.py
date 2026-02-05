@@ -129,15 +129,13 @@ def read_eeg_from_file():
             state.gamma = float(parts[4])
             state.delta = float(parts[5])
             
-            # Calculate control signal from alpha/beta ratio
-            # More aggressive scaling for better responsiveness
-            if abs(state.beta) > 0.01:
-                ab_ratio = state.alpha / (abs(state.beta) + 0.01)
-            else:
-                ab_ratio = 1.0
+            # Calculate control signal from alpha vs beta difference
+            # Alpha (relaxed) pushes UP, Beta (focused) pushes DOWN
+            alpha_norm = min(state.alpha, 1.0)  # Normalize to 0-1
+            beta_norm = min(state.beta, 1.0)
             
-            # Scale more aggressively: ratio > 1 = relaxed (up), ratio < 1 = focused (down)
-            raw_signal = (ab_ratio - 1.0) * 2.0  # Double the effect
+            # Direct difference: positive = more alpha = up, negative = more beta = down
+            raw_signal = (alpha_norm - beta_norm) * 3.0  # Triple amplification
             raw_signal = max(-1, min(1, raw_signal))
             
             state.control_history.append(raw_signal)
