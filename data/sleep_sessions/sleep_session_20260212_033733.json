@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "status": "SESSION_ENDED",
+    "duration_minutes": 0.33547613620758054,
+    "phases_completed": 0,
+    "sleep_detected": false,
+    "phase_history": [],
+    "timestamp": "2026-02-12T03:37:33.007247"
+  },
+  "log": [
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867433.288358
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867436.4736626
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867439.6118271
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867442.7508109
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867445.904684
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867449.0467968
+    },
+    {
+      "phase": 1,
+      "hr": 69,
+      "rmssd": 0,
+      "coherence": 0,
+      "onset_prob": 0,
+      "relaxation": 0.0,
+      "timestamp": 1770867452.1835515
+    }
+  ],
+  "baseline_hr": null
+}
