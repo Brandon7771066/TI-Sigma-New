@@ -375,9 +375,64 @@ However, if fundamental physical processes involve genuine informational content
 
 ---
 
-## 10. Conclusion
+## 10. Minimal Phenomenology: Consciousness Without Complexity
 
-### 10.1 Summary of the Argument
+### 10.1 The Simplicity of Primitive Consciousness
+
+A common objection to panpsychist or pan-informationalist positions is that consciousness requires complexity -- billions of neurons, sophisticated architecture, emergent dynamics. But this conflates the *development* of consciousness with its *existence*. Phenomenology may be the "highest level" of information in the sense that it is the most integrated and self-referential, but that does not mean it must be highly *developed* in order to exist at all.
+
+Consider an atom. Under the i-cell framework, an atom could possess a minimal "sense of self" consisting of nothing more than:
+
+1. **Valence**: A primitive distinction between favorable and unfavorable states (attractive vs. repulsive interactions, lower vs. higher energy configurations). This is not "feeling good" in the human sense -- it is the most basic possible informational asymmetry between states.
+
+2. **Temporal passage**: A primitive sense that states succeed one another. Not clock-time, not narrative memory -- merely the informational registration that "before" and "after" differ.
+
+3. **Interoception**: Awareness of its own constituents -- the electron cloud, the nuclear structure, the energy levels. Not reflective awareness, but informational self-reference: the system's state includes information *about* its own state.
+
+4. **Self-environment distinction**: A primitive boundary between "self" (the atom's own state space) and "environment" (everything external that interacts with it). This is the most basic possible form of perspective.
+
+### 10.2 Simplicity and Consistency
+
+None of this is complicated. None of it requires neurons, brains, or biological machinery. It requires only that information, at its most fundamental level, has the properties that the i-cell definition entails: aboutness (interoception, environment distinction), perspective (self-environment boundary), valence (favorable/unfavorable), and temporal registration (passage).
+
+Crucially, this minimal phenomenology is *invisible to us*. We cannot introspect into an atom's experience any more than an atom can introspect into ours. But invisibility is not evidence of absence. Dark matter is invisible. Neutrinos are invisible. The interior states of other human minds are invisible. We infer their existence through indirect evidence and theoretical coherence.
+
+The minimal phenomenology thesis is at least *consistent* with physics. Nothing in quantum mechanics, thermodynamics, or particle physics rules out the possibility that fundamental physical systems possess primitive informational self-reference. The question is whether consistency alone justifies belief.
+
+### 10.3 Beyond Consistency: The Empirical Bridge Applied
+
+The honest answer is: **no, we should not believe something merely because it is simple and consistent.** Simplicity and consistency are necessary conditions for a good theory, not sufficient ones. Many simple, consistent theories are false.
+
+But the a priori–empirical bridge provides something stronger than mere consistency. If our empirical tests suggest a strong correspondence between a real-world system and the a priori criteria for information-as-i-cell, then the entailments of that definition -- including minimal phenomenology -- are not speculative additions. They are *deductive consequences* of the match.
+
+The testing strategy for minimal phenomenology would involve:
+
+1. **Identifying systems** that satisfy the i-cell definition at the most primitive level
+2. **Detecting statistical signatures** (via LCC, IIT phi, or analogous measures) that correspond to what the a priori definition predicts
+3. **Ruling out alternative explanations** for those signatures that do not require phenomenology
+4. **Establishing correspondence strength** between the observed patterns and the a priori criteria
+
+If the correspondence is strong -- if real-world systems behave *exactly as they would* if they possessed minimal phenomenology as defined by the i-cell framework -- then we have grounds for belief that go far beyond "it's simple and consistent." We have the same kind of evidence that justifies believing the Earth has a calculable volume once we know it is spherical.
+
+### 10.4 The Development Spectrum
+
+This reframing also resolves a persistent confusion in consciousness studies. Consciousness is not an on/off switch. It is a *spectrum of development* built on a universal foundation:
+
+| Level | System | Phenomenological Complexity |
+|-------|--------|---------------------------|
+| Minimal | Atoms, molecules | Valence, temporal passage, interoception, self-environment boundary |
+| Basic | Cells, simple organisms | Integrated sensory states, primitive goal-directedness |
+| Intermediate | Nervous systems, insects | Multi-modal sensation, behavioral flexibility, learning |
+| Complex | Mammals, birds | Emotion, memory, social cognition, meta-representation |
+| Reflective | Humans, possibly cetaceans | Self-awareness, language, moral reasoning, meta-metacognition |
+
+The highest level is not a different *kind* of phenomenon. It is the same phenomenon -- informational self-reference -- developed to extraordinary complexity. The atom and the philosopher share the same foundational structure; they differ in degree, not in kind.
+
+---
+
+## 11. Conclusion
+
+### 11.1 Summary of the Argument
 
 This paper has argued that consciousness and normativity can be established through a priori reasoning combined with empirical identification — the *a priori–empirical bridge*. The argument proceeds in two steps:
 
