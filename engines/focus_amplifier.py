@@ -261,14 +261,20 @@ class FocusPhysiologyAnalyzer:
                 'recommendation': 'Calibrating... breathe normally'
             }
 
-        if mode == 'concentration':
-            score, components = self._score_concentration(hrv, coherence)
-        elif mode == 'open_awareness':
-            score, components = self._score_open_awareness(hrv, coherence)
-        elif mode == 'flow':
-            score, components = self._score_flow(hrv, coherence)
+        mode_info = FOCUS_MODES.get(mode, {})
+        category = mode_info.get('category', 'concentration')
+        energy = mode_info.get('energy', 'calm')
+
+        if category == 'concentration':
+            score, components = self._score_concentration(hrv, coherence, energy)
+        elif category == 'open_awareness':
+            score, components = self._score_open_awareness(hrv, coherence, energy)
+        elif category == 'flow':
+            score, components = self._score_flow(hrv, coherence, energy)
+        elif category == 'relaxation':
+            score, components = self._score_relaxation(hrv, coherence)
         else:
-            score, components = self._score_concentration(hrv, coherence)
+            score, components = self._score_concentration(hrv, coherence, energy)
 
         self.focus_scores.append(score)
 
@@ -293,26 +299,45 @@ class FocusPhysiologyAnalyzer:
             'recommendation': self._focus_recommendation(mode, score, hrv, coherence)
         }
 
-    def _score_concentration(self, hrv: Dict, coherence: Dict) -> Tuple[float, Dict]:
+    def _score_concentration(self, hrv: Dict, coherence: Dict,
+                              energy: str = 'calm') -> Tuple[float, Dict]:
         stability_score = hrv['hr_stability']
 
         lf_hf = hrv['lf_hf_ratio']
-        if 1.5 <= lf_hf <= 4.0:
-            sympathetic_score = 1.0
-        elif 1.0 <= lf_hf <= 6.0:
-            sympathetic_score = 0.7
+        if energy == 'excited':
+            if 2.5 <= lf_hf <= 5.0:
+                sympathetic_score = 1.0
+            elif 1.5 <= lf_hf <= 7.0:
+                sympathetic_score = 0.7
+            else:
+                sympathetic_score = 0.3
         else:
-            sympathetic_score = 0.3
+            if 1.0 <= lf_hf <= 2.5:
+                sympathetic_score = 1.0
+            elif 0.7 <= lf_hf <= 4.0:
+                sympathetic_score = 0.7
+            else:
+                sympathetic_score = 0.3
 
         coh_score = coherence['resonance_quality']
 
         arousal = hrv['arousal_level']
-        if 0.4 <= arousal <= 0.7:
-            arousal_score = 1.0
-        elif 0.3 <= arousal <= 0.8:
-            arousal_score = 0.7
+        if energy == 'excited':
+            if 0.55 <= arousal <= 0.85:
+                arousal_score = 1.0
+            elif 0.4 <= arousal <= 0.95:
+                arousal_score = 0.7
+            else:
+                arousal_score = 0.4
+            arousal_label = 'Drive Level'
         else:
-            arousal_score = 0.4
+            if 0.25 <= arousal <= 0.55:
+                arousal_score = 1.0
+            elif 0.15 <= arousal <= 0.65:
+                arousal_score = 0.7
+            else:
+                arousal_score = 0.4
+            arousal_label = 'Calm Focus Zone'
 
         total = (
             stability_score * 0.30 +
@@ -329,31 +354,50 @@ class FocusPhysiologyAnalyzer:
             'coherence': {'score': coh_score, 'weight': 0.25,
                         'pct': coherence['coherence_pct'], 'label': 'Heart Coherence'},
             'arousal': {'score': arousal_score, 'weight': 0.20,
-                       'level': arousal, 'label': 'Arousal Zone'}
+                       'level': arousal, 'label': arousal_label}
         }
         return min(1.0, total), components
 
-    def _score_open_awareness(self, hrv: Dict, coherence: Dict) -> Tuple[float, Dict]:
+    def _score_open_awareness(self, hrv: Dict, coherence: Dict,
+                               energy: str = 'calm') -> Tuple[float, Dict]:
         rmssd = hrv['rmssd']
         hrv_score = min(1.0, rmssd / 60.0)
 
         lf_hf = hrv['lf_hf_ratio']
-        if 0.7 <= lf_hf <= 1.5:
-            balance_score = 1.0
-        elif 0.4 <= lf_hf <= 2.5:
-            balance_score = 0.7
+        if energy == 'excited':
+            if 1.0 <= lf_hf <= 2.0:
+                balance_score = 1.0
+            elif 0.6 <= lf_hf <= 3.0:
+                balance_score = 0.7
+            else:
+                balance_score = 0.3
         else:
-            balance_score = 0.3
+            if 0.5 <= lf_hf <= 1.2:
+                balance_score = 1.0
+            elif 0.3 <= lf_hf <= 2.0:
+                balance_score = 0.7
+            else:
+                balance_score = 0.3
 
         coh_score = coherence['resonance_quality']
 
         arousal = hrv['arousal_level']
-        if 0.25 <= arousal <= 0.55:
-            calm_score = 1.0
-        elif 0.15 <= arousal <= 0.65:
-            calm_score = 0.7
+        if energy == 'excited':
+            if 0.35 <= arousal <= 0.65:
+                calm_score = 1.0
+            elif 0.25 <= arousal <= 0.75:
+                calm_score = 0.7
+            else:
+                calm_score = 0.4
+            calm_label = 'Energized Openness'
         else:
-            calm_score = 0.4
+            if 0.15 <= arousal <= 0.45:
+                calm_score = 1.0
+            elif 0.10 <= arousal <= 0.55:
+                calm_score = 0.7
+            else:
+                calm_score = 0.4
+            calm_label = 'Calm Receptivity'
 
         total = (
             hrv_score * 0.30 +
@@ -370,21 +414,32 @@ class FocusPhysiologyAnalyzer:
             'coherence': {'score': coh_score, 'weight': 0.25,
                         'pct': coherence['coherence_pct'], 'label': 'Heart Coherence'},
             'calm_alertness': {'score': calm_score, 'weight': 0.20,
-                             'level': arousal, 'label': 'Calm Alertness'}
+                             'level': arousal, 'label': calm_label}
         }
         return min(1.0, total), components
 
-    def _score_flow(self, hrv: Dict, coherence: Dict) -> Tuple[float, Dict]:
+    def _score_flow(self, hrv: Dict, coherence: Dict,
+                     energy: str = 'calm') -> Tuple[float, Dict]:
         rmssd = hrv['rmssd']
         hrv_score = min(1.0, rmssd / 50.0)
 
         lf_hf = hrv['lf_hf_ratio']
-        if 0.8 <= lf_hf <= 2.5:
-            balance_score = 1.0
-        elif 0.5 <= lf_hf <= 3.5:
-            balance_score = 0.7
+        if energy == 'excited':
+            if 1.5 <= lf_hf <= 3.0:
+                balance_score = 1.0
+            elif 1.0 <= lf_hf <= 4.0:
+                balance_score = 0.7
+            else:
+                balance_score = 0.4
+            balance_label = 'Performance Drive'
         else:
-            balance_score = 0.4
+            if 0.8 <= lf_hf <= 1.8:
+                balance_score = 1.0
+            elif 0.5 <= lf_hf <= 2.5:
+                balance_score = 0.7
+            else:
+                balance_score = 0.4
+            balance_label = 'Serene Engagement'
 
         coh_score = min(1.0, coherence['coherence'] * 1.3)
 
@@ -410,7 +465,7 @@ class FocusPhysiologyAnalyzer:
             'hrv_flexibility': {'score': hrv_score, 'weight': 0.20,
                               'rmssd': rmssd, 'label': 'Heart Flexibility'},
             'engagement_balance': {'score': balance_score, 'weight': 0.20,
-                                  'lf_hf': lf_hf, 'label': 'Engagement Balance'},
+                                  'lf_hf': lf_hf, 'label': balance_label},
             'coherence': {'score': coh_score, 'weight': 0.20,
                         'pct': coherence['coherence_pct'], 'label': 'Heart Coherence'},
             'sustained_absorption': {'score': sustained, 'weight': 0.20,
@@ -420,14 +475,84 @@ class FocusPhysiologyAnalyzer:
         }
         return min(1.0, total), components
 
+    def _score_relaxation(self, hrv: Dict, coherence: Dict) -> Tuple[float, Dict]:
+        rmssd = hrv['rmssd']
+        hrv_score = min(1.0, rmssd / 70.0)
+
+        lf_hf = hrv['lf_hf_ratio']
+        if 0.3 <= lf_hf <= 1.0:
+            parasympathetic_score = 1.0
+        elif 0.2 <= lf_hf <= 1.5:
+            parasympathetic_score = 0.7
+        else:
+            parasympathetic_score = 0.3
+
+        coh_score = coherence['resonance_quality']
+
+        arousal = hrv['arousal_level']
+        if 0.15 <= arousal <= 0.40:
+            relax_score = 1.0
+        elif 0.10 <= arousal <= 0.50:
+            relax_score = 0.7
+        elif arousal < 0.10:
+            relax_score = 0.4
+        else:
+            relax_score = 0.3
+
+        current_hr = hrv.get('current_hr', 70)
+        baseline_hr = self.baseline_hr or 70
+        hr_drop = baseline_hr - current_hr
+        if 3 <= hr_drop <= 15:
+            settling_score = 1.0
+        elif 0 <= hr_drop <= 20:
+            settling_score = 0.7
+        elif hr_drop > 20:
+            settling_score = 0.4
+        else:
+            settling_score = 0.5
+
+        total = (
+            hrv_score * 0.25 +
+            parasympathetic_score * 0.25 +
+            coh_score * 0.20 +
+            relax_score * 0.15 +
+            settling_score * 0.15
+        )
+
+        components = {
+            'hrv_flexibility': {'score': hrv_score, 'weight': 0.25,
+                              'rmssd': rmssd, 'label': 'Heart Flexibility'},
+            'parasympathetic': {'score': parasympathetic_score, 'weight': 0.25,
+                               'lf_hf': lf_hf, 'label': 'Relaxation Depth'},
+            'coherence': {'score': coh_score, 'weight': 0.20,
+                        'pct': coherence['coherence_pct'], 'label': 'Heart Coherence'},
+            'calm_alertness': {'score': relax_score, 'weight': 0.15,
+                             'level': arousal, 'label': 'Relaxed but Awake'},
+            'settling': {'score': settling_score, 'weight': 0.15,
+                        'hr_drop': hr_drop, 'label': 'Heart Rate Settling'}
+        }
+        return min(1.0, total), components
+
     def _focus_recommendation(self, mode: str, score: float,
                               hrv: Dict, coherence: Dict) -> str:
+        mode_info = FOCUS_MODES.get(mode, {})
+        category = mode_info.get('category', 'concentration')
+        energy = mode_info.get('energy', 'calm')
+
         if score > 0.8:
-            if mode == 'flow':
+            if category == 'flow':
+                if energy == 'excited':
+                    return "PEAK PERFORMANCE! You're locked in. Ride this wave."
                 return "You're in the zone. Don't change anything. Let it ride."
-            elif mode == 'concentration':
-                return "Deep focus achieved. Maintain steady breathing. You've got this."
+            elif category == 'concentration':
+                if energy == 'excited':
+                    return "LASER FOCUS! You're crushing it. Keep that energy channeled."
+                return "Deep calm focus achieved. Steady breathing. You've got this."
+            elif category == 'relaxation':
+                return "Perfect relaxation zone. Alert but peaceful. Stay right here."
             else:
+                if energy == 'excited':
+                    return "Ideas flowing beautifully. Capture everything. You're ON."
                 return "Beautiful open awareness. Stay receptive. Notice without grasping."
 
         if score > 0.6:
@@ -438,22 +563,42 @@ class FocusPhysiologyAnalyzer:
             return "Almost there. Keep doing what you're doing."
 
         if score > 0.4:
-            if mode == 'concentration':
-                if hrv['arousal_level'] > 0.7:
+            if category == 'concentration':
+                if energy == 'excited' and hrv['arousal_level'] < 0.4:
+                    return "Need more energy! Sit up. Take 3 quick breaths: 4 in, 2 out. Then attack."
+                elif energy == 'calm' and hrv['arousal_level'] > 0.6:
+                    return "Too activated for calm focus. Slow down: 4 in, 7 out. Let the mind settle."
+                elif hrv['arousal_level'] > 0.7:
                     return "Arousal is high. Take 3 slow breaths: 4 in, 6 out. Then return to task."
                 elif hrv['arousal_level'] < 0.3:
                     return "Energy is low. Sit up straight. Take a few energizing breaths: 4 in, 2 out."
                 return "Building focus. Minimize distractions. One thing at a time."
-            elif mode == 'open_awareness':
+            elif category == 'open_awareness':
+                if energy == 'excited':
+                    return "Let your mind scan freely. Don't lock onto anything. Stay light and curious."
                 return "Soften your gaze. Don't chase thoughts. Let them come and go."
+            elif category == 'relaxation':
+                if hrv['arousal_level'] > 0.5:
+                    return "Still too activated. Extended exhale: 4 in, 6 out, 3 pause. Let tension go."
+                elif hrv['arousal_level'] < 0.1:
+                    return "Getting drowsy! Sit up a bit. Keep eyes half-open. Stay present but soft."
+                return "Getting there. Focus on the exhale. Feel your body settling without sleeping."
             else:
                 return "Flow needs challenge-skill match. Is your task too easy or too hard?"
 
-        if mode == 'concentration':
-            return "Settling in. Start with 5 slow breaths: 4 in, 6 out. Then focus on one task."
-        elif mode == 'open_awareness':
-            return "Find a comfortable posture. Close your eyes. Notice sounds around you without judging."
+        if category == 'concentration':
+            if energy == 'excited':
+                return "Fire up! Start with 3 energizing breaths: 4 in, 2 out. Then ATTACK your task."
+            return "Settling in. Start with 5 slow breaths: 4 in, 7 out. Then focus on one task."
+        elif category == 'open_awareness':
+            if energy == 'excited':
+                return "Get curious! Look around. What do you notice? Let your mind explore freely."
+            return "Find a comfortable posture. Close your eyes. Notice sounds without judging."
+        elif category == 'relaxation':
+            return "Start with long exhales: 4 in, 6 out, 3 pause. Let your body soften. Stay awake."
         else:
+            if energy == 'excited':
+                return "Get moving first! Physical warm-up, then dive into something challenging."
             return "Flow takes time. Start with concentration first, then let go when engagement rises."
 
     def get_trend_data(self) -> Dict:
@@ -472,36 +617,124 @@ class FocusPhysiologyAnalyzer:
 
 
 FOCUS_MODES = {
+    'calm_concentration': {
+        'name': 'Calm Concentration',
+        'icon': '🧘',
+        'category': 'concentration',
+        'energy': 'calm',
+        'description': 'Quiet, steady attention — like reading or careful study',
+        'best_for': 'Reading, studying, proofreading, detailed analysis',
+        'adhd_tip': 'Low stimulation environment. Noise-cancelling headphones help.',
+        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 7, 'pause': 3},
+        'target_arousal': 'low-moderate',
+        'target_lf_hf': '1.0-2.5',
+        'color': '#4488ff',
+    },
+    'excited_concentration': {
+        'name': 'Excited Concentration',
+        'icon': '🔥',
+        'category': 'concentration',
+        'energy': 'excited',
+        'description': 'High-energy laser focus — like intense coding or debate prep',
+        'best_for': 'Coding sprints, competitive tasks, time-pressure work',
+        'adhd_tip': 'Channel that ADHD energy! Set a timer and ATTACK the task.',
+        'breathing': {'inhale': 4, 'hold': 2, 'exhale': 4, 'pause': 1},
+        'target_arousal': 'moderate-high',
+        'target_lf_hf': '2.5-5.0',
+        'color': '#ff4444',
+    },
+    'calm_open_awareness': {
+        'name': 'Calm Open Awareness',
+        'icon': '🌊',
+        'category': 'open_awareness',
+        'energy': 'calm',
+        'description': 'Gentle receptivity — like meditation or nature observation',
+        'best_for': 'Meditation, journaling, nature walks, reflection',
+        'adhd_tip': 'Your scattered attention is a FEATURE here. Let thoughts drift.',
+        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 8, 'pause': 4},
+        'target_arousal': 'low',
+        'target_lf_hf': '0.5-1.2',
+        'color': '#44aaff',
+    },
+    'excited_open_awareness': {
+        'name': 'Excited Open Awareness',
+        'icon': '✨',
+        'category': 'open_awareness',
+        'energy': 'excited',
+        'description': 'Energized scanning — like brainstorming or exploring ideas',
+        'best_for': 'Brainstorming, mind mapping, rapid idea generation',
+        'adhd_tip': 'ADHD superpower mode! Let ideas flow fast. Capture everything.',
+        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 5, 'pause': 2},
+        'target_arousal': 'moderate',
+        'target_lf_hf': '1.0-2.0',
+        'color': '#ffaa00',
+    },
+    'calm_flow': {
+        'name': 'Calm Flow',
+        'icon': '🌙',
+        'category': 'flow',
+        'energy': 'calm',
+        'description': 'Effortless absorption with inner stillness — like painting or yoga',
+        'best_for': 'Art, music, writing, yoga, crafts, slow creative work',
+        'adhd_tip': 'The most natural ADHD state. Don\'t force it — let it find you.',
+        'breathing': {'inhale': 0, 'hold': 0, 'exhale': 0, 'pause': 0},
+        'target_arousal': 'low-moderate',
+        'target_lf_hf': '0.8-1.8',
+        'color': '#aa88ff',
+    },
+    'excited_flow': {
+        'name': 'Excited Flow',
+        'icon': '⚡',
+        'category': 'flow',
+        'energy': 'excited',
+        'description': 'Peak performance rush — like gaming, sports, or intense creation',
+        'best_for': 'Gaming, sports, live performance, rapid prototyping',
+        'adhd_tip': 'Hyperfocus ENGAGED. This is where ADHD brains DOMINATE.',
+        'breathing': {'inhale': 0, 'hold': 0, 'exhale': 0, 'pause': 0},
+        'target_arousal': 'moderate-high',
+        'target_lf_hf': '1.5-3.0',
+        'color': '#ff8800',
+    },
+    'relaxation': {
+        'name': 'Active Relaxation',
+        'icon': '🌿',
+        'category': 'relaxation',
+        'energy': 'calm',
+        'description': 'Relaxed but alert — unwinding WITHOUT falling asleep',
+        'best_for': 'Post-work decompression, stress relief, gentle recovery',
+        'adhd_tip': 'ADHD minds struggle to relax without sleeping. This trains the middle ground.',
+        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 6, 'pause': 3},
+        'target_arousal': 'low (but not sleep)',
+        'target_lf_hf': '0.4-1.0',
+        'color': '#44cc88',
+    },
+}
+
+MODE_CATEGORIES = {
     'concentration': {
         'name': 'Concentration',
         'icon': '🎯',
+        'modes': ['calm_concentration', 'excited_concentration'],
         'description': 'Narrow, sustained attention on a single task',
-        'best_for': 'Studying, coding, writing, detail work',
-        'adhd_tip': 'Set a specific task before starting. One thing only.',
-        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 6, 'pause': 2},
-        'target_arousal': 'moderate-high',
-        'target_lf_hf': '2.0-4.0',
     },
     'open_awareness': {
         'name': 'Open Awareness',
         'icon': '🌊',
+        'modes': ['calm_open_awareness', 'excited_open_awareness'],
         'description': 'Broad, receptive attention without specific focus',
-        'best_for': 'Brainstorming, creative ideation, pattern recognition',
-        'adhd_tip': 'Your scattered attention is a FEATURE here, not a bug.',
-        'breathing': {'inhale': 4, 'hold': 0, 'exhale': 7, 'pause': 3},
-        'target_arousal': 'low-moderate',
-        'target_lf_hf': '0.8-1.5',
     },
     'flow': {
         'name': 'Flow State',
         'icon': '⚡',
+        'modes': ['calm_flow', 'excited_flow'],
         'description': 'Effortless, absorbed engagement in challenging activity',
-        'best_for': 'Creative work, deep coding, performance, music',
-        'adhd_tip': 'ADHD brains EXCEL at flow. Match challenge to skill level.',
-        'breathing': {'inhale': 0, 'hold': 0, 'exhale': 0, 'pause': 0},
-        'target_arousal': 'balanced',
-        'target_lf_hf': '1.0-2.0',
-    }
+    },
+    'relaxation': {
+        'name': 'Active Relaxation',
+        'icon': '🌿',
+        'modes': ['relaxation'],
+        'description': 'Relaxed but alert — the sweet spot between awake and asleep',
+    },
 }
 
 
