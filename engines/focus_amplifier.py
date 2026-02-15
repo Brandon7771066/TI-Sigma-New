@@ -855,6 +855,7 @@ class FocusAmplifierProtocol:
         }
 
         self._save_session(summary)
+        self._feed_cognitive_resource_model(summary)
         return summary
 
     def read_heart(self) -> Dict:
@@ -994,6 +995,32 @@ class FocusAmplifierProtocol:
                 'breathing': mode_info['breathing']
             }
         return {'status': 'INVALID_MODE', 'message': f'Unknown mode: {new_mode}'}
+
+    def _feed_cognitive_resource_model(self, summary: Dict):
+        try:
+            from engines.cognitive_resource_model import CognitiveResourceModel
+            crm = CognitiveResourceModel()
+
+            trends = self.analyzer.get_trend_data()
+            hrv = self.analyzer.compute_focus_hrv()
+
+            arousal = hrv.get('arousal_level', 0.5) if hrv.get('sufficient_data') else 0.5
+            performance = summary.get('avg_focus_score', 0.5)
+
+            if performance > 0:
+                crm.record_observation(
+                    arousal=arousal,
+                    performance=performance,
+                    nfc_state='high',
+                    focus_mode=summary.get('mode', ''),
+                    hr=hrv.get('current_hr', 0),
+                    hrv_rmssd=hrv.get('rmssd', 0),
+                    lf_hf_ratio=hrv.get('lf_hf_ratio', 0),
+                    coherence=trends.get('avg_focus', 0),
+                    session_id=summary.get('timestamp', '')
+                )
+        except Exception:
+            pass
 
     def _save_session(self, summary: Dict):
         try:
