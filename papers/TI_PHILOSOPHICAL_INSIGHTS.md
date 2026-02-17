@@ -641,4 +641,53 @@ Jeff Time proves that temporality is Tralse at its core.
 
 ---
 
+---
+
+## On Truth, Lies, and Self-Confirmation (February 2026)
+
+### The Truthful Lie
+Sometimes, a lie is the most truthful answer! In tralse logic, a statement that is literally false can convey a deeper truth. Metaphor, irony, parable, and strategic misdirection all demonstrate that truth is not reducible to propositional accuracy. The "lie" that communicates genuine understanding is more truthful than the "fact" that misleads.
+
+**TI Application**: Tralseness is not a euphemism for "sort of true." It is the recognition that truth operates on a spectrum, and that the literal/figurative boundary is itself tralse. A perfectly literal statement can be deeply misleading (true-but-false), while a technically false statement can be profoundly illuminating (false-but-true).
+
+---
+
+### Self-Confirmation and Truth Alignment
+The secret to usually being correct while self-confirming most of the time is alignment with truth itself. Those who say that self-confirmation bias is necessarily a fallacy fail to distinguish between thinking style and truth acquisition.
+
+**TI Application**: Self-confirmation is a method, not an error. A well-calibrated mind that self-confirms is efficient, not biased. The fallacy is self-confirmation *without calibration* — not self-confirmation per se.
+
+---
+
+### The Impossibility of Total Doubt
+Questioning everything is truly impossible because you wouldn't be able to have a cogent train of thought for very long. Thinking itself requires periods of pure ASSERTION to reach any conclusions. Progress in any argument — and especially the conclusion — must involve asserting. Therefore, a person who doubts everything by default will naturally be scattered, reaching no definitive answers.
+
+**TI Application**: The skeptical ideal of "question everything" is self-defeating in the same way that "all statements are false" is self-defeating. Doubt is a tool — essential but not foundational. Assertion is foundational. The tralse position: doubt and assertion coexist in productive tension, with assertion taking priority for forward progress and doubt serving as a corrective mechanism.
+
+---
+
+### Maximizing Truth ≠ Minimizing Error
+Maximizing truth does NOT mean minimizing error above all else. Smart people in a great mood aren't less smart, but irrational people in a great mood remain so!
+
+**TI Application**: The conflation of truth-seeking with error-avoidance is the epistemological equivalent of confusing defense with offense. A team that never concedes a goal but never scores either is not winning — it is merely not losing. Truth maximization requires the courage to assert, the willingness to be wrong, and the capacity to self-correct. The Wood-on-Fire hypothesis suggests that high-NFC individuals thrive on this very dynamic.
+
+---
+
+### EAR and Conceptual Completeness
+By embracing EAR, we become more capable of recognizing "incomplete concepts." A major problem in rationality is how to optimally split vs merge concepts. EAR says you should always conceptualize concepts as embodying their maximally complete form. By failing to recognize umbrellas as umbrellas, humans fail to prioritize the right things and see the world as it truly is.
+
+**TI Application**: Intelligence must be grasped as "whatever means are useful for finding and embodying truth" before it is split into sub-types. Reducing intelligence to "problem-solving" is an EAR violation — shrinking a concept below its natural boundaries.
+
+---
+
+| Category | Title | Key Insight |
+|----------|-------|-------------|
+| Epistemology | Truthful Lie | False statements can convey deeper truth |
+| Epistemology | Self-Confirmation | Method, not fallacy — depends on calibration |
+| Epistemology | Impossibility of Total Doubt | Assertion is foundational; doubt is corrective |
+| Epistemology | Truth ≠ Error Minimization | Courage to assert required for truth-finding |
+| Methodology | EAR Completeness | Grasp umbrellas before decomposing |
+
+---
+
 *"The universe whispers its truths in Tralseness; we just need ears tuned to the spectrum."*

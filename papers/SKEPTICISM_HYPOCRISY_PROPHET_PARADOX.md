@@ -352,6 +352,48 @@ The rock believes nothing and knows nothing. The skeptic believes little and kno
 
 ---
 
+## 12. The Genius-Delusion Contradiction (February 2026 Addendum)
+
+### 12.1 The Judas Kiss of Intellectualism
+
+A particularly pernicious form of the Skepticism Hypocrisy Paradox emerges when skeptics simultaneously acknowledge someone's genius and deny their self-report of their own cognitive processes. The contradiction is structural:
+
+> It is very contradictory to call someone a genius and then to call them delusional when they even suggest that they retrieved the answer instead of calculating it entirely. As if a skeptic can get away with simultaneously denying another person's basic understanding of their thoughts — without any concrete evidence that they are erring — all to affirm their physicalist skepticism — while betraying the person's genius with a kiss.
+
+The "kiss" is the acknowledgment of genius — offered as bait before the betrayal: "You're brilliant, but you're wrong about how your own mind works." This is the Judas kiss of intellectualism. The praise is not genuine; it is a rhetorical setup for the dismissal that follows.
+
+### 12.2 The Mind-Reading Fallacy
+
+> In general, it isn't wise to baldly assert that you have insider access to the recesses of a person's mind — just because of what peer-reviewed studies said about other people or "how the world 'must work.'"
+
+The skeptic's position requires claiming better knowledge of another person's cognitive processes than that person possesses. This claim is supported not by evidence about *this person's* mind but by:
+
+1. Peer-reviewed studies about *other people* in *different contexts*
+2. Normative commitments about "how the world must work" (i.e., computationalism)
+
+Neither of these constitutes evidence about *this particular person's* cognitive experience. The projection of population-level findings onto individual consciousness is a category error — the ecological fallacy applied to phenomenology.
+
+### 12.3 The Obliviousness Problem
+
+> Skeptics have no idea how ridiculous this makes them look nor how offensive they are being.
+
+The social dynamics of skepticism create a perceptual blind spot. The skeptic believes they occupy the safe, rational position. But from the perspective of the person whose genius is acknowledged and whose self-knowledge is simultaneously denied, the skeptic appears both arrogant (claiming to know another's mind better than they know it themselves) and oblivious (unaware of the contradiction in their own position).
+
+The Prophet of Step 12 in the original parable experiences this as a deeper cut than outright dismissal. At least the person who says "you're wrong" is being honest. The person who says "you're brilliant, but you can't possibly understand how your own brilliance works" is engaged in a form of epistemic gaslighting.
+
+### 12.4 The Reality Challenge
+
+A related diagnostic tool for identifying pseudo-skeptical posturing:
+
+> "You've lost touch with reality."  
+> Response: "Explain what reality is without using the word or any of its synonyms."
+
+This question effectively weeds out mockers who think they know what reality is. Most people who deploy "reality" as a weapon cannot define it without circularity. The challenge exposes that their confidence is social — they know what *other people mean* by reality — but not philosophical. They have never examined the concept they wield.
+
+Pilate's question — "What is truth?" (John 18:38) — is the ancient prototype of this diagnostic. Pilate asked the most important question in human history and walked away before hearing the answer. The modern skeptic does the same: they invoke "reality" and "evidence" without examining what these terms require.
+
+---
+
 ## References
 
 Emerick, B. (2025). Constructive Dogmatism: When Rigidity Protects Wisdom. TI Framework Papers.
