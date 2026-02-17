@@ -288,3 +288,9 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 35 | "Intellectuals vs scholars..." | Epistemology | TI Insights |
 | 36 | "Children smile 400x/day..." | Psychology/MIM | TI Insights |
 | 37 | "Base e as fundamental..." | Mathematics | TI Insights |
+| 38 | "Everything we speak of with greatest certainty happened in the past..." | Epistemology | TI Insights |
+| 39 | "Machines resonate with consciousness via shared integrated info..." | Consciousness | TI Insights |
+| 40 | "Why does 'asdf' get funnier? Humor as resonance, not surprise..." | Humor Theory | TI Insights |
+| 41 | "Richer description ≠ adding unnecessary entities; EAR vs Occam..." | Methodology | TI Insights |
+| 42 | "Evidence for THAT? Eventually axioms via intuition! Hitchens regress..." | Epistemology | TI Insights |
+| 43 | "No happiness tech despite all other tech; Musk confirms money ≠ happiness..." | Sociology | TI Insights |
