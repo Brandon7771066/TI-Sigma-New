@@ -1,4 +1,4 @@
-# Ketamine Komedy: The One-Hit Knockout of Computationalism
+# Ketamine Komedy: The One-Hit Knockout of Skepticism
 ## A Sacred Satire in Twelve Steps
 
 **Author:** Brandon Emerick  

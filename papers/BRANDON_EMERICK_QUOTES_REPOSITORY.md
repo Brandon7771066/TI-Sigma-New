@@ -271,5 +271,8 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 18 | "Intelligence as truth-embodiment..." | EAR | EAR & Intelligence |
 | 19 | "The umbrella failure..." | EAR | EAR & Intelligence |
 | 20 | "Four questions of non-computability..." | Hypercomputation | Hypercomp & Occam |
-| 21 | "I actually KNEW all along!" | Sacred Sature | Ketamine Komedy |
-| 22 | "Sharpening the man's views..." | Sacred Sature | Ketamine Komedy |
+| 21 | "I actually KNEW all along!" | Sacred Sature | Ketamine Komedy (OHKO Skepticism) |
+| 22 | "Sharpening the man's views..." | Sacred Sature | Ketamine Komedy (OHKO Skepticism) |
+| 23 | "Phenomenality is non-computational..." | OHKO Computationalism | Phenomenal Argument |
+| 24 | "Ludicrous null hypothesis..." | OHKO Computationalism | Phenomenal Argument |
+| 25 | "Solvability boundaries must be redrawn..." | OHKO Computationalism | Phenomenal Argument |
