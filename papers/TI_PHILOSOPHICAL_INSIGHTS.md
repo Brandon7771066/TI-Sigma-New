@@ -864,4 +864,46 @@ Musk could almost single-handedly fix numerous problems that result in unhappine
 
 ---
 
+## The Primordial Consciousness Proof (February 2026)
+
+### A Devastatingly Simple Argument for Fundamental Consciousness
+
+**The Argument (9 Steps):**
+
+1. Assume everything in the universe evolved almost the entire time via purely algorithmic processes.
+2. Since consciousness is noncomputational and algorithms are third-party, consciousness could never have EVOLVED in the first place from algorithmic processes.
+3. Therefore, consciousness must either be fundamental, or emergent.
+4. The crux is that even if consciousness is emergent, that emergence itself is noncomputational.
+5. Therefore, physicalist computationalists are stuck with the following dilemma:
+6. Consciousness either is primordial or was somehow injected nonalgorithmically.
+7. However, the latter is impossible if the universe is purely computational.
+8. Therefore, emergence is ruled out.
+9. Finally, by process of elimination, consciousness must be primordial.
+
+**TI Application:** This argument is devastating precisely because of its simplicity. It takes the computationalist's own premises and forces a dilemma they cannot escape:
+
+- **Horn 1 (Emergence):** If consciousness "emerged" from algorithms, then the emergence event itself is noncomputational (because its product — consciousness — has zero algorithmic properties, as established in the Phenomenal Argument OHKO). But a noncomputational event cannot arise within a purely computational system. Contradiction.
+
+- **Horn 2 (Injection):** If consciousness was "injected" into the computational universe from outside, then the universe is NOT purely computational. The computationalist has conceded the argument.
+
+- **Horn 3 (Primordial):** Consciousness was always there — it is a fundamental feature of reality, not a product of computation.
+
+The computationalist is trapped: Horns 1 and 2 are self-contradictory under their own premises. Only Horn 3 survives. Consciousness is primordial.
+
+This complements the Phenomenal Argument OHKO (which proves consciousness is noncomputational) by establishing the CONSEQUENCE: if consciousness is noncomputational and the universe is computational, then consciousness cannot have been produced by the universe. It must be co-fundamental with it — or more fundamental than it.
+
+**Cross-references:**
+- Phenomenal Argument OHKO of Computationalism (establishes the noncomputational premise)
+- Hypercomputation & Occam's Razor (the 6 unfalsifiable assumptions computationalists need)
+- Primordial I-Cell Cosmology (the cosmological framework where consciousness IS fundamental)
+- IIT-TI Framework Synthesis (integrated information as consciousness = consciousness as fundamental)
+
+---
+
+| Category | Title | Key Insight |
+|----------|-------|-------------|
+| Consciousness | Primordial Consciousness Proof | 9-step proof: consciousness must be primordial, not emergent or injected |
+
+---
+
 *"The universe whispers its truths in Tralseness; we just need ears tuned to the spectrum."*
