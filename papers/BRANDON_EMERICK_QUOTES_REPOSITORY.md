@@ -295,3 +295,4 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 42 | "Evidence for THAT? Eventually axioms via intuition! Hitchens regress..." | Epistemology | TI Insights |
 | 43 | "No happiness tech despite all other tech; Musk confirms money ≠ happiness..." | Sociology | TI Insights |
 | 44 | "Consciousness could never have EVOLVED from algorithmic processes..." | Consciousness | TI Insights (Primordial Proof) |
+| 45 | "Scaling wouldn't show signs of consciousness unless it was there to begin with..." | Consciousness | TI Insights (Scaling Circularity) |
