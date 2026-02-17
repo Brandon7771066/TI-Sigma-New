@@ -276,3 +276,15 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 23 | "Phenomenality is non-computational..." | OHKO Computationalism | Phenomenal Argument |
 | 24 | "Ludicrous null hypothesis..." | OHKO Computationalism | Phenomenal Argument |
 | 25 | "Solvability boundaries must be redrawn..." | OHKO Computationalism | Phenomenal Argument |
+| 26 | "Spirituality is truth itself..." | Spirituality/Truth | 17 Proofs (Proof 16) |
+| 27 | "Same info, different mediums..." | Tralseness | 17 Proofs (Proof 15) |
+| 28 | "Magic becomes technology..." | History of Science | 17 Proofs (Proof 17) |
+| 29 | "Genius = impact, not feats..." | Intelligence | TI Insights |
+| 30 | "Drugs activate, not produce..." | Neuroscience | TI Insights |
+| 31 | "Tralse knowledge..." | Epistemology | TI Insights |
+| 32 | "Founding TI Sigma..." | History | TI Insights |
+| 33 | "Certain suicide over uncertain change..." | Systems Theory | TI Insights |
+| 34 | "Societal koala bears..." | Ecology/Philosophy | TI Insights |
+| 35 | "Intellectuals vs scholars..." | Epistemology | TI Insights |
+| 36 | "Children smile 400x/day..." | Psychology/MIM | TI Insights |
+| 37 | "Base e as fundamental..." | Mathematics | TI Insights |
