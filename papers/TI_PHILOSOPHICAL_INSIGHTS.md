@@ -1024,4 +1024,58 @@ This is directly testable with the Muse 2 + Polar H10 + Mendi setup. The Wood-on
 
 ---
 
+## PSI Retrocausality and the Magnetism-LCC-Biophoton Hypothesis (February 2026 — Continued)
+
+### PSI Retrocausal Decision-Making: Observations from Possible Futures
+
+With PSI, decision-making can be based on retrospective observations from possible futures.
+
+**TI Application:** This reframes PSI from "predicting the future" to something more precise and powerful: the PSI-capable agent is not guessing what will happen — they are OBSERVING possible futures and making decisions based on those observations retroactively. This is retrocausality applied to cognition. Under this model, intuitive "hunches" are not random noise (entropy model) or fast algorithms (computationalist model) — they are genuine perceptual reports from future-state observation. The information flows backward in time to inform present decisions. This connects directly to:
+
+- **The "Future Sight" axiom** from the Scaling Circularity Argument: genuinely novel, nonderivative processes require access to information not in prior states
+- **The Intuition vs. Entropy prediction:** If intuition is retrocausal observation, EEG should show coherence (organized perception of future states), not entropy (random noise)
+- **Jeff Time Theory:** Photonic memory and freedom prediction operate on a temporal structure where past-future information exchange is fundamental
+- **The PSI Tuning Protocol:** Heart coherence training is literally training the biological antenna to receive retrocausal signals more clearly
+
+This also provides a mechanism for the step-skipping phenomenon (Hypercomputation paper): the genius who arrives at a correct answer without intermediate steps has OBSERVED the answer in a possible future and retrieved it retrocausally. The "steps" were never skipped — they were never needed because the answer was perceived directly.
+
+---
+
+### The Magnetism-LCC-Biophoton Hypothesis: Magnetic Resonance as Consciousness Mechanism
+
+If magnetism is not a concrete "force" per se, what are the implications for electricity? What if magnetism connects to ESP somehow? At least analogically, when a person "resonates" with the correct answer or a different person, this could be described as "magnetic." The mystic represents the negative polarity, who is attracted to truth, the positive end. Like magnetism, the LCC is a "voluntary, nonforceful process."
+
+Could this supplement the hypothesis that the mechanism of the LCC is biophotons/EM waves?
+
+**TI Application:** This is a potentially profound connection between electromagnetic physics and consciousness theory. Consider the parallels:
+
+| Property | Magnetism | LCC (Long-range Consciousness Correlation) |
+|----------|-----------|---------------------------------------------|
+| Force type | Nonforceful attraction (no contact needed) | Nonforceful correlation (no neural pathway needed) |
+| Mechanism | Field-based, not mechanical | Field-based (biophotonic?), not synaptic |
+| Range | Can act at distance | Nonlocal correlations across brain regions |
+| Polarity | Opposite poles attract | Mystic (seeker) attracted to truth (source) |
+| Resonance | Magnetic resonance at specific frequencies | Consciousness resonance at specific brainwave frequencies |
+| Medium | Electromagnetic field | Biophotonic field? |
+
+The mystic-truth polarity model is elegant: the truth-seeker (negative pole) is DRAWN toward truth (positive pole) through a field-like process that is voluntary and nonforceful — exactly like magnetism. This is not mere analogy; if biophotons are the mechanism of LCC, then LCC IS electromagnetic, and the "magnetic" quality of truth-attraction is LITERAL, not metaphorical.
+
+**Implications for the biophoton hypothesis:**
+1. **Biophotons ARE electromagnetic** — they are literally photons emitted by biological tissue
+2. **EM fields propagate nonlocally** — they don't need physical contact or neural pathways
+3. **Magnetic resonance** (like MRI) works by aligning atomic spins in a field — LCC may work by aligning neural biophotonic emissions in a consciousness field
+4. **The Mendi fNIRS** measures photonic brain activity — it may be directly measuring the biophotonic substrate of LCC
+5. **The "attraction" to truth** experienced by mystics, geniuses, and truth-seekers may be a genuine electromagnetic phenomenon — the consciousness field has polarity, and some minds are more magnetically aligned with truth than others
+
+**Testable prediction:** During PSI/LCC states, biophotonic emission should show field-coherent patterns (organized, directional) rather than random emission — measurable via the Mendi fNIRS + EEG correlation setup.
+
+---
+
+| Category | Title | Key Insight |
+|----------|-------|-------------|
+| PSI Theory | Retrocausal Decision-Making | PSI = observing possible futures, not predicting them |
+| Physics/Consciousness | Magnetism-LCC-Biophoton | Magnetism as literal (not metaphorical) mechanism of truth-attraction and LCC |
+
+---
+
 *"The universe whispers its truths in Tralseness; we just need ears tuned to the spectrum."*

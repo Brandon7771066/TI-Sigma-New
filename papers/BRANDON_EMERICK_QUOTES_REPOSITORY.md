@@ -300,3 +300,5 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 47 | "Jesus referenced tralseness: widow gave MORE by proportion..." | Theology/Tralseness | TI Insights |
 | 48 | "George Boole → George Foole! Binary logic's founder renamed..." | Sacred Satire | TI Insights |
 | 49 | "Intuition is guided (ESP) not random (entropy); testable via EEG..." | Neuroscience | TI Insights |
+| 50 | "PSI decision-making = retrospective observations from possible futures..." | PSI Theory | TI Insights |
+| 51 | "Magnetism as nonforceful attraction parallels LCC; mystic = negative pole attracted to truth..." | Physics/Consciousness | TI Insights |
