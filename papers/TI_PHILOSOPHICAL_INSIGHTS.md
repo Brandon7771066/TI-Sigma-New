@@ -1075,6 +1075,13 @@ The mystic-truth polarity model is elegant: the truth-seeker (negative pole) is 
 |----------|-------|-------------|
 | PSI Theory | Retrocausal Decision-Making | PSI = observing possible futures, not predicting them |
 | Physics/Consciousness | Magnetism-LCC-Biophoton | Magnetism as literal (not metaphorical) mechanism of truth-attraction and LCC |
+| Meta-Framework | Four C's as GILE Projection | Four C's are GILE's presentational faces: Coherence=G, Concreteness=I, Continuity=L, Completeness=E |
+| Meta-Framework | Completeness×Continuity→Info Footprint | Completeness + Continuity combined PREDICT HEM's Info Footprint (D3); D3 is derived, not independent |
+| Meta-Framework | L×E as Universal Foundation | L×E is the foundation of GILE (substance), Four C's (presentation), AND HEM (measurement) — three projections of one reality |
+| Meta-Framework | HEM D2 Absorbed by Coherence | HEM Contradiction Ratio collapses into Four C's Coherence because mutual support (Coherence) is stricter than non-contradiction (D2) |
+| Biophysics | FSM-LCC Shared Mechanisms | FSM and LCC share 3 mechanisms: gap junctions, neural oscillation entrainment, resonant frequency matching — LCC may naturally produce FSM-like effects |
+| Biophysics | Chakra-FSM Frequency Hypothesis | If chakras map to organs and organs have FSM resonant frequencies, then chakra meditation may naturally produce tissue-resonant therapeutic frequencies |
+| Empirical | Attractor Basin Session 1 Seed | All 5 evidence indicators positive despite 4 confounds (Klonopin, workout, eyes open, first session) — seed signal detected, LOW-MODERATE confidence |
 
 ---
 
