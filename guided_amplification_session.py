@@ -113,6 +113,75 @@ SESSION_PROTOCOLS = {
             {"name": "Sustain", "duration": 60, "guidance": "Stabilize this state. It becomes your new baseline."}
         ],
         "gile_target": {"G": 0.75, "I": 0.65, "L": 0.85, "E": 0.7}
+    },
+    "relaxed_metta_bliss": {
+        "name": "Relaxed Metta Bliss",
+        "tier": 3,
+        "duration_min": 12,
+        "description": "Deep relaxation fused with loving-kindness (metta) to cultivate sustained bliss. Targets parasympathetic dominance + heart-centered warmth for effortless joy.",
+        "active": True,
+        "biometric_targets": {
+            "heart_rate": "55-65 bpm (parasympathetic dominance)",
+            "hrv_rmssd": ">60 ms (vagal tone high)",
+            "coherence": ">0.7 (heart-brain sync)",
+            "brainwave": "Alpha-Theta border (7-10 Hz) — relaxed bliss window",
+            "lf_hf_ratio": "<1.0 (parasympathetic > sympathetic)"
+        },
+        "phases": [
+            {
+                "name": "Settle & Soften",
+                "duration": 90,
+                "guidance": "Close your eyes. Let your body become heavy. Each exhale is longer than the inhale. Feel gravity pulling tension downward and out through your feet.",
+                "breathing": True,
+                "breath_pattern": {"inhale": 4, "hold": 0, "exhale": 7},
+                "biometric_goal": "HR dropping, HRV rising"
+            },
+            {
+                "name": "Self-Metta",
+                "duration": 120,
+                "guidance": "Place your hand on your heart. Silently repeat: 'May I be at ease. May I be filled with joy. May I know deep peace.' Feel each phrase as warmth spreading from your chest.",
+                "breathing": True,
+                "breath_pattern": {"inhale": 4, "hold": 2, "exhale": 6},
+                "biometric_goal": "Coherence rising toward 0.7+"
+            },
+            {
+                "name": "Loved One Metta",
+                "duration": 120,
+                "guidance": "Picture someone you love deeply. See their face smiling. 'May you be happy. May you be free from suffering. May you be filled with bliss.' Feel love radiating FROM your heart TO them.",
+                "intervention": "love_flood",
+                "biometric_goal": "Heart coherence peak, HRV sustained"
+            },
+            {
+                "name": "Universal Metta",
+                "duration": 120,
+                "guidance": "Expand the field of loving-kindness outward — to all beings everywhere. 'May all beings know joy. May all beings be free.' Your heart has no boundary. Let the warmth become infinite.",
+                "biometric_goal": "Alpha-Theta crossover, deep coherence"
+            },
+            {
+                "name": "Bliss Soak",
+                "duration": 150,
+                "guidance": "Stop efforting. Just BE in whatever warmth, peace, or bliss is present. Don't direct it anywhere. Let it soak through every cell. This is your natural state — you are remembering it.",
+                "breathing": True,
+                "breath_pattern": {"inhale": 4, "hold": 0, "exhale": 8},
+                "biometric_goal": "Sustained low HR, high HRV, high coherence"
+            },
+            {
+                "name": "Gratitude Seal",
+                "duration": 60,
+                "guidance": "Notice how different you feel from when you started. Thank your body for this capacity. This bliss architecture is YOURS — drugs just activate what is already here. Carry this knowing forward.",
+                "checkpoint": "Rate your bliss 1-10 and describe what you feel physically",
+                "biometric_goal": "Stable elevated baseline"
+            },
+            {
+                "name": "Gentle Return",
+                "duration": 60,
+                "guidance": "Slowly deepen your breath. Wiggle fingers and toes. When ready, open your eyes softly. The bliss stays — it is your nature.",
+                "biometric_goal": "Gradual HR return, HRV stays elevated"
+            }
+        ],
+        "gile_target": {"G": 0.85, "I": 0.7, "L": 0.95, "E": 0.75},
+        "dual_biometric": True,
+        "devices": ["Polar H10 (heart coherence, HRV)", "Muse 2 (EEG alpha-theta)"]
     }
 }
 
@@ -393,7 +462,33 @@ def render_protocol_selection():
             st.rerun()
     
     st.markdown("---")
-    st.info("💡 **Tip:** Start your heart rate recording app now so you can enter metrics before and after!")
+    st.markdown("### Metta Bliss Protocol (Dual Biometric)")
+    
+    st.markdown("#### 🕊️ Relaxed Metta Bliss")
+    st.markdown("*Deep relaxation + loving-kindness for sustained bliss*")
+    rmb = SESSION_PROTOCOLS["relaxed_metta_bliss"]
+    col_m1, col_m2, col_m3 = st.columns(3)
+    with col_m1:
+        st.markdown("- **Tier:** 3 (Enhanced)")
+        st.markdown("- **Duration:** 12 min")
+    with col_m2:
+        st.markdown("- **Focus:** L (Love) + Parasympathetic")
+        st.markdown("- **GILE Target:** G=0.85, L=0.95")
+    with col_m3:
+        st.markdown("- **Devices:** Polar H10 + Muse 2")
+        st.markdown("- **Brainwave:** Alpha-Theta (7-10 Hz)")
+    
+    with st.expander("Biometric Targets for This Protocol"):
+        for target_name, target_val in rmb["biometric_targets"].items():
+            st.markdown(f"- **{target_name.replace('_', ' ').title()}:** {target_val}")
+    
+    if st.button("🕊️ START RELAXED METTA BLISS", key="sel_metta_bliss", type="primary"):
+        st.session_state.amp_protocol = SESSION_PROTOCOLS["relaxed_metta_bliss"]
+        st.session_state.amp_session_state = 'pre_measurement'
+        st.rerun()
+    
+    st.markdown("---")
+    st.info("💡 **Tip:** For best results, start your Polar H10 (Elite HRV / Pulsoid) AND Muse 2 (Muse app) recording before beginning!")
 
 
 def render_pre_measurement():
