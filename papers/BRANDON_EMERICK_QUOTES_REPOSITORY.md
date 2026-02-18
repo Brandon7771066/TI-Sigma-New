@@ -296,3 +296,7 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 43 | "No happiness tech despite all other tech; Musk confirms money ≠ happiness..." | Sociology | TI Insights |
 | 44 | "Consciousness could never have EVOLVED from algorithmic processes..." | Consciousness | TI Insights (Primordial Proof) |
 | 45 | "Scaling wouldn't show signs of consciousness unless it was there to begin with..." | Consciousness | TI Insights (Scaling Circularity) |
+| 46 | "Abandoning physicalism ≠ abandoning science; method ≠ metaphysics..." | Philosophy of Science | TI Insights |
+| 47 | "Jesus referenced tralseness: widow gave MORE by proportion..." | Theology/Tralseness | TI Insights |
+| 48 | "George Boole → George Foole! Binary logic's founder renamed..." | Sacred Satire | TI Insights |
+| 49 | "Intuition is guided (ESP) not random (entropy); testable via EEG..." | Neuroscience | TI Insights |

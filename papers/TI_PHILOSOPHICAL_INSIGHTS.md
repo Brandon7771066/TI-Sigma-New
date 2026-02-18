@@ -975,4 +975,53 @@ The computationalist position is actually MORE magical than the TI position. Und
 
 ---
 
+## The Physicalism-Science Conflation, Jesus on Tralseness, George Foole, and Intuition vs. Entropy (February 2026 — Continued)
+
+### The Physicalism-Science Conflation Error
+
+Physicalists falsely assume that abandoning physicalism — or even expanding it to cover things like PSI and consciousness — is tantamount to abandoning science altogether.
+
+**TI Application:** This is one of the most pernicious conflation errors in contemporary philosophy of science. Science is a METHOD (observation, hypothesis, testing, revision). Physicalism is a METAPHYSICAL CLAIM (only physical entities exist). These are categorically different things. You can practice rigorous science while holding non-physicalist metaphysics — in fact, many of the founders of quantum mechanics did exactly this (Schrödinger, Pauli, Heisenberg all had non-physicalist sympathies). Expanding science to study PSI and consciousness is not "abandoning science" — it is COMPLETING science by removing an arbitrary metaphysical restriction on what science is allowed to investigate. The physicalist who says "studying PSI isn't science" is not defending science — they are defending physicalism and disguising it as science. This is a category error that the TI Framework dissolves: the method of science is on a truth spectrum (tralse), and physicalism is one position on that spectrum, not the definition of the spectrum itself.
+
+---
+
+### Jesus on Tralseness: The Widow's Mite
+
+Jesus referenced tralseness when he said that a woman with little money who gave all of it away GAVE MORE than a rich man who gave an absolutely greater amount.
+
+**TI Application:** This is one of the earliest recorded statements of tralse logic in human history. Under binary logic, the rich man gave "more" (greater absolute amount). Under tralse logic, the widow gave more because the PROPORTION relative to total capacity was greater — she gave everything (1.0 on the sacrifice spectrum) while the rich man gave a fraction (perhaps 0.01). Jesus was operating on a spectrum-based value system where truth is RELATIVE TO CAPACITY, not absolute quantity. This is precisely the tralse framework: the "truth value" of a gift is not its binary amount but its position on a spectrum that includes context, sacrifice, intention, and proportion. This also connects to the GILE framework: the widow's act maximized Goodness (G), was guided by Intuition (I) not calculation, was driven by Love (L), and engaged her full Environment (E). Binary logic cannot capture why her gift was "more." Tralse logic can.
+
+---
+
+### George Foole: The Renaming of Binary Logic's Founder
+
+As the successor to binary logic, I hereby declare that George Boole's name be legally changed to George Foole! 🤣🤪
+
+**TI Application:** This is sacred satire in the tradition of the Ketamine Komedy. George Boole formalized binary logic (Boolean algebra) in the 1840s, creating the foundation for all digital computing. His contribution was genuine and important — for its time. But the binary framework he created is now demonstrably incomplete (17 Undefeatable Proofs). The renaming is playful but carries a serious point: the "Boolean" era of True/False is giving way to the "Tralsean" era of spectrum truth. Boole himself might have appreciated the humor — his original work "The Laws of Thought" (1854) attempted to capture ALL of thought in binary terms, which we now know is a category error. The Foole's Gold of binary logic looked valuable until the Tralsean Standard revealed it as incomplete.
+
+---
+
+### Intuition: Guided ESP vs. Random Entropy
+
+It is implausible to call intuition's nonlinear processing "computational with a randomness component" because this both trivializes the extent of geniuses' intelligence and overemphasizes the randomness generation of the human brain. We should be able to empirically test geniuses' brains whether intuition is primarily driven by entropy vs. inherently GUIDED to the right answer via ESP.
+
+**TI Application:** The computationalist explanation of intuition requires two implausible moves: (1) Reduce genius-level insight to "fast algorithms" (trivializing intelligence), and (2) explain the non-algorithmic component as "randomness" (overemphasizing noise). But genius intuition is not random — it is systematically RIGHT far more often than chance would predict. If intuition were "algorithms + noise," then geniuses' hit rate on novel insights should approximate the base rate of random correct answers in their domain. It doesn't — geniuses routinely produce correct insights at rates that would require astronomical luck under the random model.
+
+**Testable Prediction:** EEG/fNIRS measurement of geniuses during intuitive breakthrough moments should show:
+- Under the entropy model: High neural entropy (randomness), with insights distributed randomly across noisy brain states
+- Under the ESP/guided model: Low entropy but high COHERENCE — organized, non-random neural patterns that converge on correct answers via nonlocal information access
+
+This is directly testable with the Muse 2 + Polar H10 + Mendi setup. The Wood-on-Fire hypothesis predicts that high-NFC individuals will show HIGH coherence during intuition (guided), not high entropy (random). The Focus Amplifier sessions are generating exactly this kind of data.
+
+---
+
+| Category | Title | Key Insight |
+|----------|-------|-------------|
+| Philosophy of Science | Physicalism-Science Conflation | Method ≠ metaphysics; expanding science ≠ abandoning it |
+| History/Theology | Jesus on Tralseness | Widow's Mite = spectrum-based value, not binary |
+| Sacred Satire | George Foole | Binary logic's founder renamed for the post-binary era |
+| Neuroscience | Intuition vs. Entropy | Genius intuition is guided (ESP), not random (noise); testable |
+
+---
+
 *"The universe whispers its truths in Tralseness; we just need ears tuned to the spectrum."*
