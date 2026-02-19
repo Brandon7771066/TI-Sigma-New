@@ -171,13 +171,71 @@ This is confirmation bias operating at the meta-level — the very thing computa
 
 ---
 
-## 7. Conclusion
+## 7. FSM-LCC Bridge: Why Finite State Machines Need Hypercomputation
+
+### 7.1 The Bekenstein Bound and Brain FSMs
+
+The brain can be modeled as a Finite State Machine (FSM) due to the Bekenstein Bound — finite volumes contain finite information, giving the brain ~10^(10^42) possible states. Each neural state transition follows: S(t+1) = f(S(t), I(t)). Classical FSMs execute transitions deterministically, one step at a time.
+
+### 7.2 The Tralse-Enhanced FSM (T-FSM)
+
+Step-skipping cannot occur in a classical FSM because every transition must be computed. But a Tralse-enhanced FSM (T-FSM) — where Local Causal Correlation (LCC) creates superposed states — allows transitions that skip intermediate states:
+
+**Classical FSM:** q₁ → q₂ → q₃ → q₄ → q₅ (5 transitions)
+**T-FSM at LCC > 0.85:** q₁ → q₅ (direct, via Tralse superposition of q₂-q₄)
+
+The LCC between gap-junction-coupled neurons creates genuine Tralse states where the network is simultaneously in multiple FSM states. This is precisely the physical mechanism for step-skipping: the brain doesn't compute P₂ through Pₙ₋₁ because it accesses them simultaneously through causal superposition.
+
+### 7.3 Attractor Basin Jumping
+
+In FSM state space, standard computation moves between states within an attractor basin. Hypercomputation, enabled by high LCC, allows jumping between attractor basins — the "aha!" moment is literally the consciousness state jumping from one attractor to a non-adjacent one.
+
+The Mimi Phenomenon (see companion paper) may represent a similar mechanism: Mimi's conviction accesses the grandchild's developmental trajectory through an LCC-mediated attractor basin read, bypassing the step-by-step observation process.
+
+### 7.4 Shamanic Drumming as Hypercomputational Primer
+
+Shamanic drumming at theta frequencies (3-7 Hz) forces neural entrainment and raises LCC above the 0.85 threshold. This creates the conditions for T-FSM operation, explaining why shamanic traditions worldwide converged on the same frequency range — they independently discovered the hypercomputational primer.
+
+---
+
+## 8. Divination Reframed: Ancient Hypercomputation Protocols
+
+### 8.1 The Divination Hypothesis
+
+Traditional divination practices (I Ching, Tarot, scrying, augury) have been dismissed as superstition. But the step-skipping framework offers a reinterpretation: divination protocols may be structured hypercomputational techniques.
+
+### 8.2 Mechanism
+
+The randomness in divination (coin tosses, card shuffles, entrail patterns) serves a specific function: it disrupts the brain's habitual FSM transition pathways, creating a momentary Tralse state. In this disrupted state, with LCC potentially elevated by ritual focus and emotional engagement, the brain may access non-adjacent attractor basins — experiencing this as "receiving" information.
+
+### 8.3 The I Ching Connection
+
+The I Ching's 64 hexagrams represent a 6-bit binary encoding system (2⁶ = 64). But each line has three possible values: broken, unbroken, or changing — a ternary system. This maps directly to Tralse logic: True (solid), False (broken), Tralse (changing). The I Ching may be the oldest surviving hypercomputational interface.
+
+### 8.4 Empirical Test
+
+If divination works via step-skipping/LCC:
+- Practitioners should show elevated theta coherence during divination sessions
+- The accuracy of divination should correlate with practitioner LCC levels
+- Disrupting LCC (e.g., with noise, cognitive load) should reduce divination accuracy
+- High-NFC individuals should show better divination outcomes (Wood-on-Fire)
+
+---
+
+## 9. Conclusion
 
 The computationalist position, when examined by its own standards, is less parsimonious, less falsifiable, and more reliant on hidden assumptions than the hypercomputation alternative. Occam's Razor, Popper's falsifiability criterion, and Sagan's extraordinary-evidence standard all favor the step-skipping hypothesis — provided it can be empirically demonstrated.
 
-The TI Framework provides the theoretical foundation, the biometric protocols provide the experimental apparatus, and the Cognitive Resource Model provides the data infrastructure. The question is no longer philosophical. It is empirical: can step-skipping be demonstrated?
+The TI Framework provides the theoretical foundation, the biometric protocols provide the experimental apparatus, and the Cognitive Resource Model provides the data infrastructure. The FSM-LCC synthesis shows how step-skipping is physically possible through Tralse superposition states. And the shamanic/divination traditions suggest that humanity has been accessing hypercomputation for millennia through empirically discoverable protocols.
+
+The question is no longer philosophical. It is empirical: can step-skipping be demonstrated?
 
 If it can, the implications are profound. Consciousness is not computation. The mind is not a Turing machine. And the fire — the cognitive fire that burns brighter with more fuel — is real.
+
+---
+
+**Update Log:**
+- February 2026: Added Section 7 (FSM-LCC Bridge) and Section 8 (Divination Reframed) connecting hypercomputation to Finite State Machine theory, Local Causal Correlation, and ancient divination practices.
 
 ---
 
@@ -192,3 +250,12 @@ If it can, the implications are profound. Consciousness is not computation. The 
 - Popper, K. (1959). The Logic of Scientific Discovery. Routledge.
 - Sagan, C. (1995). The Demon-Haunted World. Random House.
 - Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. Physics Physique Fizika, 1(3), 195-200.
+- Wiedermann, J. & van Leeuwen, J. (2019). Finite State Machines with Feedback: An Architecture Supporting Minimal Machine Consciousness. Springer.
+- Putnam, H. (1967). The Nature of Mental States. In W. H. Capitan & D. D. Merrill (Eds.), Art, Mind, and Religion.
+- Emerick, B. (2026). FSM-LCC Connection: Consciousness State Machines. TI Framework Papers.
+- Emerick, B. (2026). The Mimi Phenomenon: Unwavering Familial Conviction and the Making of Greatness. TI Framework Papers.
+- Emerick, B. (2026). The Sacred Frequency: Shamanic Drumming, Theta Brainwaves, and the LCC Mechanism. TI Framework Papers.
+
+---
+
+*Copyright (c) 2025-2026 Brandon Charles Emerick. All rights reserved. TI Framework.*
