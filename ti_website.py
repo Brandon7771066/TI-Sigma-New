@@ -5,6 +5,7 @@ BlissGene Therapeutics
 """
 
 import streamlit as st
+import os
 from pathlib import Path
 
 # ESP32 API is now handled by streamlit_with_api.py wrapper
@@ -3181,6 +3182,141 @@ elif page == "📥 Downloads":
     
     st.markdown("---")
     st.info("All materials are free for personal use and distribution. Share the knowledge!")
+
+    st.markdown("---")
+    st.markdown("### 📄 Full Research Paper Library")
+    st.caption("Generate and download PDFs for all 300+ research papers on demand")
+
+    import glob as globmod
+
+    @st.cache_data(ttl=300)
+    def _load_all_papers():
+        papers = []
+        exclude = {'README.md', 'TEMPLATE.md', 'RESEARCH_PAPERS_INDEX.md'}
+        category_map = {
+            'GILE': 'Consciousness & GILE', 'CONSCIOUSNESS': 'Consciousness & GILE',
+            'TRALSE': 'Core Theory', 'MYRION': 'Core Theory', 'TOPOS': 'Core Theory',
+            'LCC': 'Core Theory', 'JEFF_TIME': 'Core Theory',
+            'STOCK': 'Business & Finance', 'GSA': 'Business & Finance', 'TRADING': 'Business & Finance',
+            'BLISSGENE': 'Business & Finance', 'COMMERCIAL': 'Business & Finance',
+            'EEG': 'Biometrics & Neuroscience', 'BIOMETRIC': 'Biometrics & Neuroscience',
+            'NEURO': 'Biometrics & Neuroscience', 'BRAIN': 'Biometrics & Neuroscience',
+            'HRV': 'Biometrics & Neuroscience', 'FNIRS': 'Biometrics & Neuroscience',
+            'QUANTUM': 'Physics & Mathematics', 'PHOTON': 'Physics & Mathematics',
+            'MATH': 'Physics & Mathematics', 'TENSOR': 'Physics & Mathematics',
+            'FRACTAL': 'Physics & Mathematics', 'RIEMANN': 'Physics & Mathematics',
+            'ETHICS': 'Ethics & Philosophy', 'MORAL': 'Ethics & Philosophy',
+            'EVIL': 'Ethics & Philosophy', 'JUDGISM': 'Ethics & Philosophy',
+            'SWOT': 'Strategy & Analysis', 'STRATEGY': 'Strategy & Analysis',
+            'ROADMAP': 'Strategy & Analysis',
+        }
+        for directory in ['papers', 'research_papers']:
+            if not os.path.exists(directory):
+                continue
+            for md_path in sorted(globmod.glob(f"{directory}/*.md")):
+                filename = os.path.basename(md_path)
+                if filename in exclude:
+                    continue
+                title = filename.replace(".md", "").replace("_", " ").title()
+                try:
+                    with open(md_path, 'r', encoding='utf-8') as f:
+                        for line in f.read(500).split('\n'):
+                            if line.startswith('# '):
+                                title = line[2:].strip()
+                                break
+                except:
+                    pass
+                upper = filename.upper()
+                cat = 'Other'
+                for key, val in category_map.items():
+                    if key in upper:
+                        cat = val
+                        break
+                papers.append({
+                    'md_path': md_path,
+                    'filename': filename,
+                    'title': title,
+                    'size_kb': os.path.getsize(md_path) / 1024,
+                    'category': cat
+                })
+        return papers
+
+    all_papers = _load_all_papers()
+
+    if all_papers:
+        st.success(f"**{len(all_papers)} papers** available for PDF download")
+
+        p_col1, p_col2 = st.columns(2)
+        with p_col1:
+            categories = ["All"] + sorted(set(p['category'] for p in all_papers))
+            selected_cat = st.selectbox("Filter by category:", categories, key="dl_cat")
+        with p_col2:
+            search_term = st.text_input("Search papers:", "", key="dl_search", placeholder="Type to search...")
+
+        filtered = all_papers
+        if selected_cat != "All":
+            filtered = [p for p in filtered if p['category'] == selected_cat]
+        if search_term:
+            sl = search_term.lower()
+            filtered = [p for p in filtered if sl in p['title'].lower() or sl in p['filename'].lower()]
+
+        PAPERS_PER_PAGE = 20
+        if 'dl_page' not in st.session_state:
+            st.session_state.dl_page = 0
+        total_pages = max(1, (len(filtered) + PAPERS_PER_PAGE - 1) // PAPERS_PER_PAGE)
+        current_page = min(st.session_state.dl_page, total_pages - 1)
+        start = current_page * PAPERS_PER_PAGE
+        page_papers = filtered[start:start + PAPERS_PER_PAGE]
+
+        st.caption(f"Showing {len(filtered)} papers | Page {current_page + 1} of {total_pages}")
+
+        for paper in page_papers:
+            with st.container():
+                pc1, pc2 = st.columns([3, 1])
+                with pc1:
+                    disp = paper['title'] if len(paper['title']) <= 55 else paper['title'][:52] + "..."
+                    st.markdown(f"**{disp}**")
+                    st.caption(f"{paper['category']} | {paper['size_kb']:.0f} KB")
+                with pc2:
+                    pdf_key = f"gen_{paper['filename']}"
+                    if pdf_key in st.session_state and st.session_state[pdf_key] is not None:
+                        st.download_button(
+                            "Save PDF",
+                            st.session_state[pdf_key],
+                            file_name=paper['filename'].replace('.md', '.pdf'),
+                            mime="application/pdf",
+                            key=f"save_{paper['filename']}",
+                            use_container_width=True
+                        )
+                    else:
+                        if st.button("Generate PDF", key=f"btn_{paper['filename']}", use_container_width=True):
+                            with st.spinner("Creating PDF..."):
+                                try:
+                                    import markdown as md_lib
+                                    from weasyprint import HTML, CSS
+                                    with open(paper['md_path'], 'r', encoding='utf-8') as f:
+                                        content = f.read()
+                                    html_content = md_lib.markdown(content, extensions=['tables', 'fenced_code', 'nl2br', 'sane_lists'])
+                                    css_str = "@page{size:Letter;margin:0.75in}body{font-family:Georgia,serif;font-size:11pt;line-height:1.6;color:#222}h1{font-size:22pt;color:#1a1a2e}h2{font-size:16pt;color:#16213e}h3{font-size:13pt}code{font-family:'Courier New',monospace;font-size:9pt;background:#f5f5f5;padding:2pt 4pt}pre{background:#f5f5f5;padding:10pt;border-left:3pt solid #666;font-size:9pt;white-space:pre-wrap}table{width:100%;border-collapse:collapse;margin:10pt 0}th,td{border:1pt solid #999;padding:5pt;font-size:10pt}th{background:#f0f0f0}blockquote{border-left:3pt solid #999;padding-left:12pt;color:#555;font-style:italic}"
+                                    full_html = f"<!DOCTYPE html><html><head><meta charset='UTF-8'><title>{paper['title']}</title></head><body>{html_content}</body></html>"
+                                    pdf_bytes = HTML(string=full_html).write_pdf(stylesheets=[CSS(string=css_str)])
+                                    st.session_state[pdf_key] = pdf_bytes
+                                    st.rerun()
+                                except Exception as e:
+                                    st.error(f"PDF generation failed: {e}")
+
+        if total_pages > 1:
+            nav1, nav2, nav3 = st.columns([1, 2, 1])
+            with nav1:
+                if current_page > 0 and st.button("← Previous", key="dl_prev", use_container_width=True):
+                    st.session_state.dl_page = current_page - 1
+                    st.rerun()
+            with nav2:
+                st.caption(f"Page {current_page + 1} of {total_pages}")
+            with nav3:
+                if current_page < total_pages - 1 and st.button("Next →", key="dl_next", use_container_width=True):
+                    st.session_state.dl_page = current_page + 1
+                    st.rerun()
 
 elif page == "⚖️ Judgisms":
     st.markdown("""

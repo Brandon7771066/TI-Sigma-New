@@ -469,53 +469,162 @@ def render_quick_reads(hub: MobileContentHub):
             )
 
 
-def render_pdfs_library(hub: MobileContentHub):
-    """Render PDF library with categories"""
-    st.subheader("📄 Research Papers")
-    
-    pdfs = hub.get_all_pdfs()
-    
-    if not pdfs:
-        st.warning("No PDFs found. Generate them from the Papers Library.")
-        return
-    
-    st.info(f"**{len(pdfs)} papers** available")
-    
-    categories = sorted(set(p['category'] for p in pdfs))
-    selected_category = st.selectbox("Filter by category:", ["All"] + categories)
-    
-    search = st.text_input("🔍 Search papers:", "")
-    
-    filtered_pdfs = pdfs
-    if selected_category != "All":
-        filtered_pdfs = [p for p in filtered_pdfs if p['category'] == selected_category]
-    if search:
-        filtered_pdfs = [p for p in filtered_pdfs if search.lower() in p['name'].lower()]
-    
-    st.caption(f"Showing {len(filtered_pdfs)} papers")
-    
-    for pdf in filtered_pdfs:
-        col1, col2 = st.columns([3, 1])
-        
-        with col1:
-            st.markdown(f"**{pdf['name'][:40]}...**" if len(pdf['name']) > 40 else f"**{pdf['name']}**")
-            st.caption(f"{pdf['category']} | {pdf['size_mb']:.1f} MB")
-        
-        with col2:
+def _get_all_markdown_papers(hub: MobileContentHub):
+    """Get all markdown papers with metadata for on-demand PDF generation"""
+    import glob as globmod
+    papers = []
+    papers_dir = "papers"
+    research_dir = "research_papers"
+    exclude = {'README.md', 'TEMPLATE.md', 'RESEARCH_PAPERS_INDEX.md'}
+
+    for directory in [papers_dir, research_dir]:
+        if not os.path.exists(directory):
+            continue
+        for md_path in sorted(globmod.glob(f"{directory}/*.md")):
+            filename = os.path.basename(md_path)
+            if filename in exclude:
+                continue
+            name = filename.replace(".md", "").replace("_", " ").title()
+            title = name
             try:
-                with open(pdf['path'], 'rb') as f:
-                    st.download_button(
-                        "📥",
-                        f.read(),
-                        file_name=pdf['filename'],
-                        mime="application/pdf",
-                        key=f"dl_{pdf['filename']}",
-                        use_container_width=True
-                    )
-            except Exception as e:
-                st.caption("Error")
-        
-        st.markdown("---")
+                with open(md_path, 'r', encoding='utf-8') as f:
+                    first_lines = f.read(500)
+                    for line in first_lines.split('\n'):
+                        if line.startswith('# '):
+                            title = line[2:].strip()
+                            break
+            except:
+                pass
+            size_kb = os.path.getsize(md_path) / 1024
+            category = hub._categorize_paper(filename)
+            papers.append({
+                'md_path': md_path,
+                'filename': filename,
+                'name': name,
+                'title': title,
+                'size_kb': size_kb,
+                'category': category,
+                'directory': directory
+            })
+    return papers
+
+
+def _generate_pdf_from_md(md_path, title="TI Paper"):
+    """Generate PDF bytes from a markdown file on demand"""
+    try:
+        import markdown as md_lib
+        from weasyprint import HTML, CSS
+
+        with open(md_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        html_content = md_lib.markdown(
+            content,
+            extensions=['tables', 'fenced_code', 'nl2br', 'sane_lists']
+        )
+
+        css = """
+        @page { size: Letter; margin: 0.75in; }
+        body { font-family: Georgia, serif; font-size: 11pt; line-height: 1.6; color: #222; }
+        h1 { font-size: 22pt; font-weight: bold; margin-top: 18pt; color: #1a1a2e; }
+        h2 { font-size: 16pt; font-weight: bold; margin-top: 14pt; color: #16213e; }
+        h3 { font-size: 13pt; font-weight: bold; margin-top: 12pt; }
+        code { font-family: 'Courier New', monospace; font-size: 9pt; background: #f5f5f5; padding: 2pt 4pt; }
+        pre { font-family: 'Courier New', monospace; background: #f5f5f5; padding: 10pt; border-left: 3pt solid #666; font-size: 9pt; white-space: pre-wrap; word-wrap: break-word; }
+        table { width: 100%; border-collapse: collapse; margin: 10pt 0; }
+        th, td { border: 1pt solid #999; padding: 5pt; font-size: 10pt; }
+        th { background: #f0f0f0; font-weight: bold; }
+        blockquote { border-left: 3pt solid #999; padding-left: 12pt; color: #555; font-style: italic; }
+        """
+
+        full_html = f"""<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{title}</title></head><body>{html_content}</body></html>"""
+        pdf_bytes = HTML(string=full_html).write_pdf(stylesheets=[CSS(string=css)])
+        return pdf_bytes
+    except Exception as e:
+        return None
+
+
+def render_pdfs_library(hub: MobileContentHub):
+    """Render PDF library with on-demand generation for ALL papers"""
+    st.subheader("📄 Research Papers — PDF Downloads")
+    st.caption("Tap any paper to generate and download as PDF")
+
+    all_papers = _get_all_markdown_papers(hub)
+
+    if not all_papers:
+        st.warning("No papers found.")
+        return
+
+    st.success(f"**{len(all_papers)} papers** available for PDF download")
+
+    categories = sorted(set(p['category'] for p in all_papers))
+    selected_category = st.selectbox("Filter by category:", ["All"] + categories, key="mobile_pdf_cat")
+
+    search = st.text_input("Search papers:", "", key="mobile_pdf_search", placeholder="Type to search...")
+
+    filtered = all_papers
+    if selected_category != "All":
+        filtered = [p for p in filtered if p['category'] == selected_category]
+    if search:
+        search_lower = search.lower()
+        filtered = [p for p in filtered if search_lower in p['name'].lower() or search_lower in p['title'].lower()]
+
+    st.caption(f"Showing {len(filtered)} of {len(all_papers)} papers")
+
+    PAPERS_PER_PAGE = 20
+    if 'mobile_pdf_page' not in st.session_state:
+        st.session_state.mobile_pdf_page = 0
+
+    total_pages = max(1, (len(filtered) + PAPERS_PER_PAGE - 1) // PAPERS_PER_PAGE)
+    current_page = min(st.session_state.mobile_pdf_page, total_pages - 1)
+
+    start_idx = current_page * PAPERS_PER_PAGE
+    end_idx = min(start_idx + PAPERS_PER_PAGE, len(filtered))
+    page_papers = filtered[start_idx:end_idx]
+
+    for paper in page_papers:
+        with st.container():
+            display_title = paper['title'] if len(paper['title']) <= 60 else paper['title'][:57] + "..."
+            st.markdown(f"**{display_title}**")
+            st.caption(f"{paper['category']} | {paper['size_kb']:.0f} KB")
+
+            pdf_key = f"mobile_gen_{paper['filename']}"
+
+            if pdf_key in st.session_state and st.session_state[pdf_key] is not None:
+                st.download_button(
+                    label="Save PDF",
+                    data=st.session_state[pdf_key],
+                    file_name=paper['filename'].replace('.md', '.pdf'),
+                    mime="application/pdf",
+                    key=f"mobile_dl_{paper['filename']}",
+                    use_container_width=True
+                )
+            else:
+                if st.button(f"Generate PDF", key=f"mobile_btn_{paper['filename']}", use_container_width=True):
+                    with st.spinner("Creating PDF..."):
+                        pdf_bytes = _generate_pdf_from_md(paper['md_path'], paper['title'])
+                        if pdf_bytes:
+                            st.session_state[pdf_key] = pdf_bytes
+                            st.rerun()
+                        else:
+                            st.error("PDF generation failed. Try again.")
+
+            st.markdown("---")
+
+    if total_pages > 1:
+        nav_col1, nav_col2, nav_col3 = st.columns([1, 2, 1])
+        with nav_col1:
+            if current_page > 0:
+                if st.button("Previous", key="mobile_pdf_prev", use_container_width=True):
+                    st.session_state.mobile_pdf_page = current_page - 1
+                    st.rerun()
+        with nav_col2:
+            st.caption(f"Page {current_page + 1} of {total_pages}")
+        with nav_col3:
+            if current_page < total_pages - 1:
+                if st.button("Next", key="mobile_pdf_next", use_container_width=True):
+                    st.session_state.mobile_pdf_page = current_page + 1
+                    st.rerun()
 
 
 def render_books_collection(hub: MobileContentHub):
