@@ -113,7 +113,7 @@ st.markdown("---")
 # ====================================================
 
 # Create tabs
-tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna = st.tabs([
+tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status = st.tabs([
     "📱 Mobile Hub",
     "🎮 EEG Pong",
     "🧠💓 Brain Proof",
@@ -175,6 +175,9 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitiv
     "🏥 MedGemma",
     "❤️ Heart Disease",
     "🧬 RNA Folding",
+    "🧠 Brain Coupling",
+    "⚡ Step-Skipping",
+    "📊 Stock Status",
 ])
 
 with tab_mobile:
@@ -967,3 +970,69 @@ with tab_heart:
 with tab_rna:
     from pages.rna_folding_dashboard import render_rna_folding_dashboard
     render_rna_folding_dashboard()
+
+with tab_brain_coupling:
+    from pages.brain_coupling_guessing import render as render_brain_coupling
+    render_brain_coupling()
+
+with tab_step_skip:
+    st.header("Non-Algorithmic Step-Skipping Experiment")
+    st.markdown("Tests whether consciousness-inspired heuristics can solve problems by *skipping* computational steps, achieving accuracy significantly above random chance.")
+
+    try:
+        from engines.step_skipping_experiment import StepSkippingExperiment
+        exp = StepSkippingExperiment()
+
+        col_config1, col_config2 = st.columns(2)
+        with col_config1:
+            trials_per_type = st.slider("Trials per problem type", 1, 10, 3)
+        with col_config2:
+            problems_per_trial = st.slider("Problems per trial", 5, 20, 10)
+
+        if st.button("Run Step-Skipping Experiment", type="primary"):
+            with st.spinner("Running experiment across 4 problem domains..."):
+                try:
+                    result = exp.run_full_experiment(trials_per_type=trials_per_type, problems_per_trial=problems_per_trial)
+                    s = result['summary']
+
+                    st.success("Experiment Complete!")
+
+                    col_m1, col_m2, col_m3, col_m4 = st.columns(4)
+                    col_m1.metric("Full Computation", f"{s['overall_full_accuracy']:.1%}")
+                    col_m2.metric("Consciousness Shortcut", f"{s['overall_shortcut_accuracy']:.1%}")
+                    col_m3.metric("Random Baseline", f"{s['overall_random_accuracy']:.1%}")
+                    col_m4.metric("Improvement over Random", f"{s['accuracy_improvement']:.1%}")
+
+                    st.subheader("Statistical Significance")
+                    binom = s['binomial_test']
+                    st.write(f"**Binomial Test p-value:** {binom['p_value']:.2e}")
+                    st.write(f"**Effect Size (Cohen's h):** {s['effect_size']['cohens_h']:.3f} ({s['effect_size']['interpretation']})")
+                    st.write(f"**Statistically Significant:** {'YES' if binom['significant'] else 'No'}")
+
+                    st.subheader("Results by Problem Domain")
+                    import pandas as pd
+                    domain_rows = []
+                    for ptype, info in s['per_type'].items():
+                        domain_rows.append({
+                            'Domain': ptype.replace('_', ' ').title(),
+                            'Shortcut Accuracy': f"{info['shortcut']:.1%}",
+                            'Random Accuracy': f"{info['random']:.1%}",
+                            'Full Accuracy': f"{info['full']:.1%}",
+                            'Trials': info.get('trials', trials_per_type),
+                        })
+                    st.dataframe(pd.DataFrame(domain_rows), use_container_width=True, hide_index=True)
+
+                    st.subheader("Conclusion")
+                    conclusion = s['conclusion']
+                    if conclusion['significant']:
+                        st.success(f"Step-skipping demonstrated statistically significant accuracy improvement! Strongest domain: {conclusion['strongest_domain'].replace('_', ' ').title()}")
+                    else:
+                        st.info("Results not yet statistically significant. More trials may be needed.")
+                except Exception as e:
+                    st.error(f"Experiment error: {str(e)}")
+    except ImportError as e:
+        st.error(f"Step-Skipping engine not available: {str(e)}. Please ensure scipy is installed.")
+
+with tab_stock_status:
+    from pages.stock_algorithm_status import render as render_stock_status
+    render_stock_status()
