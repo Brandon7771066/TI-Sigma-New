@@ -13,6 +13,7 @@ Budget Constraint: Under $50 total. All work must be batched (5+ items per sessi
 - Added TI Sigma Hypercomputer Roadmap paper (papers/TI_SIGMA_HYPERCOMPUTER_ROADMAP.md) - comprehensive plan to beat Google Willow using qutrits, GILE resonance, L*E+L+E, MR, Strawberry Fields, consciousness formula, GTFE
 - Added Sacred Mistake paper (papers/SACRED_MISTAKE_LxE_PLUS_LpE_NECESSITY.md) - why BOTH L*E and L+E are mathematically necessary
 - Added GTFE-LCC-Consciousness-EAR Master Unification paper (papers/GTFE_LCC_CONSCIOUSNESS_EAR_MASTER_UNIFICATION.md) - unifies all TI formulas, explains retrospective decision making from possible futures
+- Added "What ARE Emotions?" paper (papers/WHAT_ARE_EMOTIONS_MIM_GEOMETRY_PHENOMENALITY.md) - MIM-Geometric Theory of Emotion (MGTE) synthesizing STV, Barrett, Friston, Tozzi-Meijer, Panksepp, Damasio, and plasma consciousness into outer geometry / inner data / horizontal phenomenality framework
 - Built Non-Algorithmic Step-Skipping Experiment engine (engines/step_skipping_experiment.py) - 4 problem domains, 10+ trials, statistically significant results (39.7% shortcut vs 17.8% random, p < 0.000001)
 - Built Brain Coupling Number Guessing Game (pages/brain_coupling_guessing.py) - 1-10 guessing with binomial statistics, Brain Coupling Score, database persistence
 - Built Stock Algorithm Status Dashboard (pages/stock_algorithm_status.py) - audits all 17 GSA infrastructure components, API key status, GSA core test
