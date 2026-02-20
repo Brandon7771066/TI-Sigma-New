@@ -14,11 +14,12 @@ Budget Constraint: Under $50 total. All work must be batched (5+ items per sessi
 - Added Sacred Mistake paper (papers/SACRED_MISTAKE_LxE_PLUS_LpE_NECESSITY.md) - why BOTH L*E and L+E are mathematically necessary
 - Added GTFE-LCC-Consciousness-EAR Master Unification paper (papers/GTFE_LCC_CONSCIOUSNESS_EAR_MASTER_UNIFICATION.md) - unifies all TI formulas, explains retrospective decision making from possible futures
 - Added "What ARE Emotions?" paper (papers/WHAT_ARE_EMOTIONS_MIM_GEOMETRY_PHENOMENALITY.md) - MIM-Geometric Theory of Emotion (MGTE) synthesizing STV, Barrett, Friston, Tozzi-Meijer, Panksepp, Damasio, and plasma consciousness into outer geometry / inner data / horizontal phenomenality framework
+- Added "The Aperiodic Dual" paper (papers/APERIODIC_DUAL_LxE_LpE_EINSTEIN_TILING.md) - Dream-originated discovery connecting L×E+L+E to Einstein hat monotile, Penrose tilings, quasicrystals; proposes quasicrystalline computation for TI Sigma Hypercomputer
 - Built Non-Algorithmic Step-Skipping Experiment engine (engines/step_skipping_experiment.py) - 4 problem domains, 10+ trials, statistically significant results (39.7% shortcut vs 17.8% random, p < 0.000001)
 - Built Brain Coupling Number Guessing Game (pages/brain_coupling_guessing.py) - 1-10 guessing with binomial statistics, Brain Coupling Score, database persistence
 - Built Stock Algorithm Status Dashboard (pages/stock_algorithm_status.py) - audits all 17 GSA infrastructure components, API key status, GSA core test
 - Added three Kaggle competition engines: MedGemma (1743 lines), Heart Disease (1013 lines), RNA 3D Folding (1030 lines) with dashboards and research papers
-- Paper count: 313+ total papers
+- Paper count: 315+ total papers
 
 ## System Architecture
 ### UI/UX Decisions
