@@ -20,7 +20,8 @@ Budget Constraint: Under $50 total. All work must be batched (5+ items per sessi
 - Built Stock Algorithm Status Dashboard (pages/stock_algorithm_status.py) - audits all 17 GSA infrastructure components, API key status, GSA core test
 - Added three Kaggle competition engines: MedGemma (1743 lines), Heart Disease (1013 lines), RNA 3D Folding (1030 lines) with dashboards and research papers
 - Added Halting Problem / BB(6) paper (papers/HALTING_PROBLEM_GM_HYPERCOMPUTING_BB6.md) - GM hypercomputing approach to Busy Beaver, GILE Discoverability Theorem, Myrion Resolution of undecidable instances, concrete falsifiable targets
-- Paper count: 316+ total papers
+- Added LCC Nerve Stimulation paper (papers/LCC_NERVE_STIMULATION_PHI_DISTANT_HEALING.md) - trigeminal, vagus, brachial plexus stimulation via LCC; phi coherence as predictor; distant healing intentionality; safety protocols for raising φ levels
+- Paper count: 317+ total papers
 
 ## System Architecture
 ### UI/UX Decisions
