@@ -21,6 +21,8 @@ Budget Constraint: Under $50 total. All work must be batched (5+ items per sessi
 - Added three Kaggle competition engines: MedGemma (1743 lines), Heart Disease (1013 lines), RNA 3D Folding (1030 lines) with dashboards and research papers
 - Added Halting Problem / BB(6) paper (papers/HALTING_PROBLEM_GM_HYPERCOMPUTING_BB6.md) - GM hypercomputing approach to Busy Beaver, GILE Discoverability Theorem, Myrion Resolution of undecidable instances, concrete falsifiable targets
 - Added LCC Nerve Stimulation paper (papers/LCC_NERVE_STIMULATION_PHI_DISTANT_HEALING.md) - trigeminal, vagus, brachial plexus stimulation via LCC; phi coherence as predictor; distant healing intentionality; safety protocols for raising φ levels
+- Built Launch Control Dashboard (pages/launch_control.py) - unified revenue command center with Kalshi live trading, Alpaca GSA paper trading, and revenue strategy
+- Built Kalshi Live Scanner (kalshi_live_scanner.py) - real-time Kalshi API integration with RSA-PSS authentication, weather market scanning, category-based filtering, profit analysis
 - Paper count: 317+ total papers
 
 ## System Architecture
