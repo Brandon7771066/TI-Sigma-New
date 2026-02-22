@@ -39,6 +39,13 @@ The backend uses a service-oriented architecture with components for:
 - **EEG Brain-Computer Interface System**: Features a BCI architecture with signal processing and various applications.
 - **Autonomous LCC Study System**: Integrates with DANDI Archive and Allen Brain Observatory for real neuroscience data.
 
+### Recent Papers (Feb 2026)
+- Paper #319: "CHSH Existence Threshold: cos(π/8)" - All five TI thresholds derive from √2 and golden ratio φ through consecutive Fibonacci numbers
+- Paper #320: "The GILE Forgetting Experiment" - Empirical proof-by-demonstration that emotional valence is computationally non-trivial, based on ChatGPT forgetting GILE during a debate about computation
+- Paper #321: "Formal Proof That Tralse-Myrion Reasoning Is Nonalgorithmic" - 3-stage formal argument (Choice Function Problem, Irreducibility of Intuition, Degradation Theorem), introduces Hot Cognition, Tralse Discipline, confident geometry
+- Paper count: 321+ total papers
+- Key quotes: "Human cognition LOOKS cold ONLY WHEN IT LACKS HEAT", "There is no trying. There is no doing. There is only BE."
+
 ### System Design Choices
 The system is designed for resilient integration with sustainable ~90% True-Tralseness through distributed redundancy, mathematically linked to a 0.85 causation threshold. The GILE framework is deeply embedded, including a 64D GILE Matrix and the IIT-GILE-BOK Loop Synthesis. Photonic quantum computing is integrated via a Cirq-based "TI Strawberry Fields" engine for market cluster detection and trading signal generation. Mechanisms for animal training of mood amplifiers to optimize for human use are included. The GILE-PD Reconciliation unifies GILE's asymmetric range with L×E's symmetric range for optical quantum computing.
 
