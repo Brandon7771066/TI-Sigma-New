@@ -21,103 +21,197 @@ tab_predictit, tab_kalshi, tab_alpaca, tab_strategy = st.tabs([
 ])
 
 with tab_predictit:
-    st.subheader("PredictIt - Political Prediction Markets")
-    st.markdown("**Status: READY** | [Check current eligibility at PredictIt.org](https://www.predictit.org)")
-    st.caption("Note: Platform policies, fees, and availability may change. Verify current terms before depositing.")
+    st.subheader("PredictIt - Live Market Scanner")
+    st.markdown("**Status: LIVE DATA** | [PredictIt.org](https://www.predictit.org) | Free API, no key required")
+
+    pi_col1, pi_col2, pi_col3 = st.columns(3)
+    with pi_col1:
+        pi_bankroll = st.number_input("Bankroll ($)", min_value=10.0, max_value=3500.0, value=500.0, step=50.0, key="pi_bankroll")
+    with pi_col2:
+        pi_category = st.selectbox("Category", [
+            "All Markets",
+            "Presidential",
+            "Congressional",
+            "Policy",
+            "Other"
+        ], key="pi_category")
+    with pi_col3:
+        pi_sort = st.selectbox("Sort By", [
+            "Best Expected Value",
+            "Highest Volume",
+            "Cheapest YES (High Upside)",
+            "Cheapest NO (High Upside)",
+        ], key="pi_sort")
+
+    scan_pi = st.button("Scan Live PredictIt Markets", type="primary", use_container_width=True)
+
+    if scan_pi:
+        with st.spinner("Fetching live market data from PredictIt..."):
+            try:
+                from engines.predictit_live_scanner import PredictItScanner
+                scanner = PredictItScanner()
+                all_contracts = scanner.scan_opportunities(bankroll=pi_bankroll)
+
+                if all_contracts:
+                    cats = scanner.categorize_markets(all_contracts)
+                    cat_key = pi_category.lower()
+                    if cat_key == 'all markets':
+                        filtered = all_contracts
+                    else:
+                        filtered = cats.get(cat_key, all_contracts)
+
+                    if pi_sort == "Best Expected Value":
+                        filtered = sorted(filtered, key=lambda x: x.get('best_ev', 0), reverse=True)
+                    elif pi_sort == "Highest Volume":
+                        filtered = sorted(filtered, key=lambda x: x.get('volume', 0), reverse=True)
+                    elif pi_sort == "Cheapest YES (High Upside)":
+                        filtered = sorted(filtered, key=lambda x: x.get('yes_price', 1))
+                    elif pi_sort == "Cheapest NO (High Upside)":
+                        filtered = sorted(filtered, key=lambda x: x.get('no_price', 1))
+
+                    st.session_state['pi_contracts'] = filtered
+                    st.session_state['pi_all'] = all_contracts
+                    st.session_state['pi_cats'] = cats
+                    st.session_state['pi_stats'] = scanner.get_summary_stats(all_contracts)
+                    st.session_state['pi_mispriced'] = scanner.find_mispriced(all_contracts)
+                    st.success(f"Loaded {len(all_contracts)} contracts from {st.session_state['pi_stats']['markets_scanned']} markets!")
+                else:
+                    st.warning("No data returned. PredictIt API may be temporarily unavailable.")
+            except Exception as e:
+                st.error(f"Error: {str(e)}")
+
+    if 'pi_contracts' in st.session_state:
+        contracts = st.session_state['pi_contracts']
+        stats = st.session_state.get('pi_stats', {})
+        mispriced = st.session_state.get('pi_mispriced', [])
+        cats = st.session_state.get('pi_cats', {})
+
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            st.metric("Total Contracts", stats.get('total', 0))
+        with c2:
+            st.metric("Markets", stats.get('markets_scanned', 0))
+        with c3:
+            st.metric("Positive EV", stats.get('positive_ev_count', 0))
+        with c4:
+            st.metric("Mispriced", len(mispriced))
+
+        cat_c1, cat_c2, cat_c3, cat_c4 = st.columns(4)
+        with cat_c1:
+            st.metric("Presidential", len(cats.get('presidential', [])))
+        with cat_c2:
+            st.metric("Congressional", len(cats.get('congressional', [])))
+        with cat_c3:
+            st.metric("Policy", len(cats.get('policy', [])))
+        with cat_c4:
+            st.metric("Other", len(cats.get('other', [])))
+
+        if mispriced:
+            st.markdown("---")
+            st.markdown("### Mispriced Contracts (Spread Inefficiency)")
+            for m in mispriced[:10]:
+                spread = m.get('spread_inefficiency', 0)
+                st.markdown(
+                    f"- **{m['contract_name'][:60]}** ({m['market_name'][:50]}) | "
+                    f"YES={m['yes_price']:.2f} NO={m['no_price']:.2f} | "
+                    f"Spread: {spread:.2f}"
+                )
+
+        st.markdown("---")
+        st.markdown("### All Contracts (Sorted)")
+
+        for i, c in enumerate(contracts[:50]):
+            ev = c.get('best_ev', 0)
+            ev_label = f"+{ev:.3f}" if ev > 0 else f"{ev:.3f}"
+            tralse = c.get('tralse_state', 'TRALSE')
+            side = c.get('best_side', '?')
+            vol = c.get('volume', 0)
+            net_yes = c.get('net_return_yes', 0)
+            net_no = c.get('net_return_no', 0)
+
+            label = f"{c['contract_name'][:55]} | YES={c['yes_price']:.2f} | EV={ev_label} | Vol={vol}"
+            with st.expander(label):
+                ec1, ec2, ec3, ec4 = st.columns(4)
+                with ec1:
+                    st.metric("YES Price", f"${c['yes_price']:.2f}")
+                    st.metric("NO Price", f"${c['no_price']:.2f}")
+                with ec2:
+                    st.metric("Best EV", ev_label)
+                    st.metric("Best Side", side)
+                with ec3:
+                    st.metric("Tralse State", tralse)
+                    st.metric("Volume", f"{vol:,}")
+                with ec4:
+                    st.metric("Net Return (YES wins)", f"{net_yes:.1%}" if net_yes else "N/A")
+                    st.metric("Net Return (NO wins)", f"{net_no:.1%}" if net_no else "N/A")
+
+                st.caption(f"Market: {c['market_name']}")
+                if c.get('market_url'):
+                    st.markdown(f"[View on PredictIt]({c['market_url']})")
 
     st.markdown("---")
-    st.markdown("### Investment Calculator")
+    with st.expander("Investment Calculator"):
+        col_invest, col_return = st.columns(2)
+        with col_invest:
+            pi_investment = st.number_input("Investment Amount ($)", min_value=10.0, max_value=3500.0, value=500.0, step=50.0, key="pi_invest")
+        with col_return:
+            pi_gross_return = st.slider("Expected Gross Return (%)", min_value=5, max_value=200, value=50, step=5, key="pi_return")
 
-    col_invest, col_return = st.columns(2)
-    with col_invest:
-        pi_investment = st.number_input("Investment Amount ($)", min_value=10.0, max_value=3500.0, value=500.0, step=50.0, key="pi_invest")
-    with col_return:
-        pi_gross_return = st.slider("Expected Gross Return (%)", min_value=5, max_value=200, value=50, step=5, key="pi_return")
+        gross_profit = pi_investment * (pi_gross_return / 100)
+        profit_after_fee = gross_profit * 0.90
+        total_balance = pi_investment + profit_after_fee
+        withdrawal_amount = total_balance * 0.95
+        net_profit = withdrawal_amount - pi_investment
+        net_return_pct = (net_profit / pi_investment) * 100
 
-    gross_profit = pi_investment * (pi_gross_return / 100)
-    profit_after_fee = gross_profit * 0.90
-    total_balance = pi_investment + profit_after_fee
-    withdrawal_amount = total_balance * 0.95
-    net_profit = withdrawal_amount - pi_investment
-    net_return_pct = (net_profit / pi_investment) * 100
+        fc1, fc2, fc3, fc4 = st.columns(4)
+        with fc1:
+            st.metric("Gross Profit", f"${gross_profit:.2f}")
+        with fc2:
+            st.metric("After 10% Profit Fee", f"${profit_after_fee:.2f}")
+        with fc3:
+            st.metric("After 5% Withdrawal Fee", f"${withdrawal_amount:.2f}")
+        with fc4:
+            st.metric("NET Profit", f"${net_profit:.2f}", f"{net_return_pct:.1f}%")
 
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        st.metric("Gross Profit", f"${gross_profit:.2f}")
-    with c2:
-        st.metric("After 10% Profit Fee", f"${profit_after_fee:.2f}")
-    with c3:
-        st.metric("After 5% Withdrawal Fee", f"${withdrawal_amount:.2f}")
-    with c4:
-        color = "normal" if net_profit > 0 else "inverse"
-        st.metric("NET Profit", f"${net_profit:.2f}", f"{net_return_pct:.1f}%")
-
-    st.markdown("---")
-    st.markdown("### Fee Structure")
-    fee_data = {
-        "Fee Type": ["Credit Card Deposit", "Trading/Buying", "Profit Fee", "Withdrawal Fee"],
-        "Rate": ["0%", "0%", "10% of profits", "5% of withdrawal"],
-        "Impact on $500": ["$0", "$0", f"${gross_profit * 0.10:.2f}", f"${total_balance * 0.05:.2f}"]
-    }
-    st.dataframe(fee_data, use_container_width=True, hide_index=True)
-
-    st.markdown("---")
-    st.markdown("### TI Framework Competitive Advantage on PredictIt")
-    st.markdown("""
-    **What WE can predict that others CAN'T:**
-
-    1. **EAR Analysis of Political Events** - Score candidates/policies on Existence, Aesthetics, Rationality
-       - Events with high EAR coherence (>0.85) resolve more predictably
-       - Low-EAR events create market mispricing we can exploit
-
-    2. **GILE Truth-Density of Campaign Claims** - Quantify the truth-density of political rhetoric
-       - Claims above 0.92 truth threshold hold up under scrutiny
-       - Claims below 0.65 GILE threshold collapse under pressure
-
-    3. **Myrion Resolution for Conflicting Polls** - When polls disagree, MR resolves contradictions
-       - Standard analysts average conflicting data
-       - We resolve it using 4-valued logic (True, False, Both, Neither)
-
-    4. **LCC Coherence of Public Sentiment** - Track coherence patterns in social media/news
-       - Sentiment above 0.85 coherence = stable consensus
-       - Sentiment below 0.6 LCC = volatility, mispricing opportunity
-
-    5. **cos(pi/8) Decision Boundaries** - Principled thresholds from quantum mechanics
-       - Not arbitrary cutoffs: derived from the Tsirelson bound
-       - Five thresholds from two constants (sqrt(2) and golden ratio)
-    """)
-
-    st.markdown("---")
-    st.markdown("### Quick Start Checklist")
-    st.markdown("""
-    - [ ] Sign up at [PredictIt.org](https://www.predictit.org)
-    - [ ] Deposit $500 via credit card (instant, no fee)
-    - [ ] Verify identity (photo ID + selfie)
-    - [ ] Scan political markets for mispriced contracts
-    - [ ] Apply TI Framework analysis to identify high-confidence trades
-    - [ ] Start with $25-50 per trade, max $3,500 per contract
-    - [ ] Note: 30-day holding period before first withdrawal
-    """)
-
-    st.markdown("---")
-    st.markdown("### Limits & Rules")
-    col_l1, col_l2 = st.columns(2)
-    with col_l1:
+    with st.expander("TI Framework Competitive Advantage"):
         st.markdown("""
-        **Investment Limits:**
-        - $3,500 per contract position
-        - No account-wide cap
-        - Can invest in unlimited contracts
-        - Minimum deposit: $10
+**What WE can predict that others CAN'T:**
+
+1. **EAR Analysis** - Score events on Existence, Aesthetics, Rationality
+2. **GILE Truth-Density** - Claims above cos(pi/8) = 0.9239 hold up; below cos^2(pi/5) = 0.6545 they collapse
+3. **Myrion Resolution** - 4-valued logic resolves conflicting polls (True, False, Both, Neither)
+4. **LCC Coherence** - Sentiment above cos^2(pi/8) = 0.8536 = stable consensus
+5. **cos(pi/8) Decision Boundaries** - Five thresholds from two constants (sqrt(2) and golden ratio)
         """)
-    with col_l2:
+
+    with st.expander("Quick Start Checklist"):
         st.markdown("""
-        **Key Rules:**
-        - Politics/elections only (no sports)
-        - 30-day hold after first deposit
-        - Must verify identity before withdrawal
-        - Available to U.S. residents 18+
+- [ ] Sign up at [PredictIt.org](https://www.predictit.org)
+- [ ] Deposit via credit card (instant, no fee)
+- [ ] Verify identity (photo ID + selfie)
+- [ ] Use this scanner to find mispriced contracts
+- [ ] Start with $25-50 per trade, max $3,500 per contract
+- [ ] 30-day holding period before first withdrawal
         """)
+
+    with st.expander("Limits & Rules"):
+        col_l1, col_l2 = st.columns(2)
+        with col_l1:
+            st.markdown("""
+**Investment Limits:**
+- $3,500 per contract position
+- No account-wide cap
+- Can invest in unlimited contracts
+            """)
+        with col_l2:
+            st.markdown("""
+**Key Rules:**
+- Politics/elections only
+- 30-day hold after first deposit
+- Must verify identity before withdrawal
+- Available to U.S. residents 18+
+            """)
 
 with tab_kalshi:
     st.subheader("Kalshi Live Market Scanner")
