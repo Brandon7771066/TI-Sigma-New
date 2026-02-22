@@ -22,11 +22,19 @@ HeartMath Foundation:
 import numpy as np
 import os
 import time
+import math
 import requests
 import json
 from datetime import datetime
 from collections import deque
 from typing import Optional
+
+# TI Framework Exact Threshold Constants (Paper #319, #322)
+TI_TRUTH = math.cos(math.pi / 8)           # τ = cos(π/8) ≈ 0.9239
+TI_EXISTENCE = math.cos(math.pi / 8) ** 2  # ε = cos²(π/8) ≈ 0.8536
+TI_GILE = math.cos(math.pi / 5) ** 2       # γ = cos²(π/5) = φ²/4 ≈ 0.6545
+TI_LCC = (math.sqrt(2) + 1) / 4            # λ = (√2+1)/4 ≈ 0.6036
+TI_HYPERCONNECTION = math.sqrt(2) - 1      # η = tan(π/8) = √2−1 ≈ 0.4142
 
 
 class HeartChannel:
@@ -284,18 +292,18 @@ class AIBridge:
         return result
     
     def _ai_pattern_analysis(self, heart_state: dict, brain_state: dict) -> float:
-        if heart_state.get('state') == 'OPTIMAL' and brain_state.get('avg_confidence', 0) > 0.6:
-            return 0.85
+        if heart_state.get('state') == 'OPTIMAL' and brain_state.get('avg_confidence', 0) > TI_LCC:
+            return TI_EXISTENCE
         elif heart_state.get('state') in ['OPTIMAL', 'GOOD']:
             return 0.7
         elif brain_state.get('avg_confidence', 0) > 0.7:
-            return 0.65
+            return TI_GILE
         else:
             return 0.5
     
     def _interpret_confidence(self, score: float) -> str:
-        if score > 0.85:
-            return 'VERY HIGH - Strong GM Node alignment'
+        if score > TI_EXISTENCE:
+            return f'VERY HIGH - Strong GM Node alignment (above ε={TI_EXISTENCE:.4f})'
         elif score > 0.7:
             return 'HIGH - Good synthesis between channels'
         elif score > 0.5:

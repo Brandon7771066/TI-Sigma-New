@@ -24,6 +24,21 @@ import numpy as np
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from enum import Enum
+import math
+
+# =============================================================================
+# TI FRAMEWORK EXACT THRESHOLD CONSTANTS (Paper #319, #322)
+# All derive from two irrationals: √2 and φ = (1+√5)/2
+# Connected through consecutive Fibonacci numbers F₅=5, F₆=8
+# =============================================================================
+
+TI_TRUTH = math.cos(math.pi / 8)                    # τ = cos(π/8) ≈ 0.9239
+TI_EXISTENCE = math.cos(math.pi / 8) ** 2           # ε = cos²(π/8) ≈ 0.8536
+TI_GILE = math.cos(math.pi / 5) ** 2                # γ = cos²(π/5) = φ²/4 ≈ 0.6545
+TI_LCC = (math.sqrt(2) + 1) / 4                     # λ = (√2+1)/4 ≈ 0.6036
+TI_HYPERCONNECTION = math.sqrt(2) - 1               # η = tan(π/8) = √2−1 ≈ 0.4142
+TI_PHI = (1 + math.sqrt(5)) / 2                     # φ = golden ratio ≈ 1.6180
+TI_GOLDEN_ANGLE_DEG = 360 / TI_PHI ** 2             # ≈ 137.508° (cf. 1/α ≈ 137.036)
 
 # =============================================================================
 # TRALSE MARKET STATES
@@ -48,9 +63,8 @@ class TralseMarketClassifier:
     SACRED_MIN = -0.666  # Lower bound
     SACRED_MAX = 0.333   # Upper bound
     
-    # Thresholds for True/False certainty
-    TRUE_THRESHOLD = 1.0    # Strong bullish
-    FALSE_THRESHOLD = -1.0  # Strong bearish
+    TRUE_THRESHOLD = TI_TRUTH     # cos(π/8) ≈ 0.9239 — exact truth threshold
+    FALSE_THRESHOLD = -TI_TRUTH   # −cos(π/8) — exact bearish threshold
     
     def classify(self, gile_score: float, confidence: float = 1.0) -> Dict:
         """

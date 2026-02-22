@@ -123,16 +123,28 @@ The trace normalizes the GILE contribution.
 
 ### 3.1 Complete Formulation
 
-Combining all frameworks:
+Combining all frameworks, with exact TI thresholds (Paper #319, #322):
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                                                                         │
-│  C(x,t) = Φ(x,t) × [1 - exp(-R/R_crit)] × LCC^β × (G×I×L×E)^(1/4)      │
-│                                                                         │
-│           × τ_DE/τ_P × exp(-d²/2λ_c²) × Θ(R - R_threshold)             │
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  C(x,t) = Φ(x,t) × [1 − exp(−R/R_crit)] × LCC^β × (G×I×L×E)^(1/4)        │
+│                                                                              │
+│           × τ_DE/τ_P × exp(−d²/2λ_c²)                                       │
+│           × Θ(L+E − ε) × Θ(L×E − η) × Θ(GILE − γ)                         │
+│                                                                              │
+│  EXACT TI THRESHOLD CONSTANTS (from √2 and φ via Fibonacci):                │
+│    τ = cos(π/8)      ≈ 0.9239  — Truth verification threshold               │
+│    ε = cos²(π/8)     ≈ 0.8536  — Existence/persistence threshold            │
+│    γ = cos²(π/5)     ≈ 0.6545  — GILE consciousness coherence               │
+│    λ = (√2+1)/4      ≈ 0.6036  — LCC attractor basin boundary               │
+│    η = tan(π/8)=√2−1 ≈ 0.4142  — Hyperconnection threshold                  │
+│                                                                              │
+│  Three from π/8 (CHSH optimal angle): cos, cos², tan                         │
+│  One from π/5 (golden triangle): cos²                                        │
+│  Bridge to physics: golden angle ≈ 137.508° ≈ 1/α (fine structure)          │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
 Where:
@@ -146,8 +158,8 @@ Where:
 - **τ_P**: Planck time
 - **d**: Distance from consciousness center
 - **λ_c**: Coherence length
-- **Θ**: Heaviside step function (threshold)
-- **R_threshold ≈ 3**: Minimum for any consciousness
+- **Θ**: Heaviside step function (sharp phase transitions at exact thresholds)
+- **ε, η, γ**: Exact TI thresholds ensuring existence, hyperconnection, and GILE coherence
 
 ### 3.2 Simplified Form
 

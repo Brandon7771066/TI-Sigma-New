@@ -273,22 +273,27 @@ L × E ≥ H_c    where H_c = 0.42
 
 ### 3.4 The Threshold Hierarchy
 
-The two operations generate a hierarchy of states:
+The two operations generate a hierarchy of states, with EXACT values (Paper #319, #322):
 
-| **Threshold** | **Value** | **Condition** | **Meaning** |
-|---|---|---|---|
-| Existence | 0.84 | L + E ≥ 0.84 | System persists |
-| Correlation | 0.42 | L × E ≥ 0.42 | Non-local correlations emerge |
-| Causation | 0.85 | L × E ≥ 0.85 | Reliable information transfer |
-| Bidirectional | 0.8464 | L × E ≥ 0.92² | Full bidirectional channel |
+| **Threshold** | **Exact Value** | **Decimal** | **Condition** | **Meaning** |
+|---|---|---|---|---|
+| Hyperconnection | tan(π/8) = √2−1 | 0.4142 | L × E ≥ η | Non-local correlations emerge |
+| LCC Attractor | (√2+1)/4 | 0.6036 | LCC ≥ λ | Self-organization basin |
+| GILE Coherence | cos²(π/5) = φ²/4 | 0.6545 | GILE ≥ γ | Consciousness coherence |
+| Existence | cos²(π/8) = (2+√2)/4 | 0.8536 | L + E ≥ ε | System persists |
+| Truth | cos(π/8) | 0.9239 | Truth ≥ τ | Verified knowledge |
 
-**The 2× relationship:** The multiplicative threshold (0.42) is exactly half the additive threshold (0.84). This arises because at the balanced point (L = E = x):
+**Key identity:** λ = ε − 1/4, i.e., LCC threshold = Existence threshold minus one quarter.
+
+**Three from one angle:** cos(π/8), cos²(π/8), and tan(π/8) all come from the CHSH optimal angle 22.5°.
+
+**The balanced-point relationship:** At the balanced point (L = E = x):
 ```
-At existence threshold:  L + E = 2x = 0.84  →  x = 0.42
-At hyperconnection:      L × E = x² = 0.42  →  x = √0.42 ≈ 0.648
+At existence threshold:  L + E = 2x = ε = cos²(π/8)  →  x = cos²(π/8)/2 ≈ 0.4268
+At hyperconnection:      L × E = x² = η = √2−1       →  x = √(√2−1) ≈ 0.6436
 ```
 
-The balanced system at the existence boundary has L = E = 0.42, and its product is L×E = 0.42² = 0.1764 — far below the hyperconnection threshold. To hyperconnect, a balanced system must reach L = E ≈ 0.648, giving L + E = 1.296 — well above existence threshold.
+The balanced system at the existence boundary has L = E = ε/2 ≈ 0.4268, and its product is L×E ≈ 0.1822 — far below the hyperconnection threshold η = √2−1 ≈ 0.4142. To hyperconnect, a balanced system must reach L = E = √(√2−1) ≈ 0.6436, giving L + E ≈ 1.287 — well above the existence threshold.
 
 **Implication:** You cannot hyperconnect unless you substantially exceed the existence threshold. Existence is necessary but deeply insufficient for hyperconnection. This maps onto the empirical observation that most existing systems are not conscious (or at least not hyperconnected) — they persist but do not connect.
 
