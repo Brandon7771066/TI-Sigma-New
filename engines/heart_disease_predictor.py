@@ -113,7 +113,13 @@ class HeartDiseasePredictor:
         """Load heart disease dataset from CSV (Cleveland/UCI format)."""
         try:
             if filepath is None:
-                return self.generate_sample_data()
+                import os
+                default_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'heart_cleveland.csv')
+                if os.path.exists(default_path):
+                    filepath = default_path
+                else:
+                    print("WARNING: Real UCI Cleveland dataset not found at data/heart_cleveland.csv. Using synthetic data (lower accuracy).")
+                    return self.generate_sample_data()
 
             df = pd.read_csv(filepath)
             expected = FEATURE_COLUMNS + ['target']

@@ -13,14 +13,115 @@ from datetime import datetime, timedelta
 
 st.header("Launch Control - Revenue Command Center")
 
-tab_kalshi, tab_alpaca, tab_strategy = st.tabs([
-    "Kalshi Prediction Markets",
+tab_predictit, tab_kalshi, tab_alpaca, tab_strategy = st.tabs([
+    "PredictIt (Active)",
+    "Kalshi (On Hold)",
     "Alpaca Paper Trading (GSA)",
     "Revenue Strategy"
 ])
 
+with tab_predictit:
+    st.subheader("PredictIt - Political Prediction Markets")
+    st.markdown("**Status: READY** | [Check current eligibility at PredictIt.org](https://www.predictit.org)")
+    st.caption("Note: Platform policies, fees, and availability may change. Verify current terms before depositing.")
+
+    st.markdown("---")
+    st.markdown("### Investment Calculator")
+
+    col_invest, col_return = st.columns(2)
+    with col_invest:
+        pi_investment = st.number_input("Investment Amount ($)", min_value=10.0, max_value=3500.0, value=500.0, step=50.0, key="pi_invest")
+    with col_return:
+        pi_gross_return = st.slider("Expected Gross Return (%)", min_value=5, max_value=200, value=50, step=5, key="pi_return")
+
+    gross_profit = pi_investment * (pi_gross_return / 100)
+    profit_after_fee = gross_profit * 0.90
+    total_balance = pi_investment + profit_after_fee
+    withdrawal_amount = total_balance * 0.95
+    net_profit = withdrawal_amount - pi_investment
+    net_return_pct = (net_profit / pi_investment) * 100
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric("Gross Profit", f"${gross_profit:.2f}")
+    with c2:
+        st.metric("After 10% Profit Fee", f"${profit_after_fee:.2f}")
+    with c3:
+        st.metric("After 5% Withdrawal Fee", f"${withdrawal_amount:.2f}")
+    with c4:
+        color = "normal" if net_profit > 0 else "inverse"
+        st.metric("NET Profit", f"${net_profit:.2f}", f"{net_return_pct:.1f}%")
+
+    st.markdown("---")
+    st.markdown("### Fee Structure")
+    fee_data = {
+        "Fee Type": ["Credit Card Deposit", "Trading/Buying", "Profit Fee", "Withdrawal Fee"],
+        "Rate": ["0%", "0%", "10% of profits", "5% of withdrawal"],
+        "Impact on $500": ["$0", "$0", f"${gross_profit * 0.10:.2f}", f"${total_balance * 0.05:.2f}"]
+    }
+    st.dataframe(fee_data, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    st.markdown("### TI Framework Competitive Advantage on PredictIt")
+    st.markdown("""
+    **What WE can predict that others CAN'T:**
+
+    1. **EAR Analysis of Political Events** - Score candidates/policies on Existence, Aesthetics, Rationality
+       - Events with high EAR coherence (>0.85) resolve more predictably
+       - Low-EAR events create market mispricing we can exploit
+
+    2. **GILE Truth-Density of Campaign Claims** - Quantify the truth-density of political rhetoric
+       - Claims above 0.92 truth threshold hold up under scrutiny
+       - Claims below 0.65 GILE threshold collapse under pressure
+
+    3. **Myrion Resolution for Conflicting Polls** - When polls disagree, MR resolves contradictions
+       - Standard analysts average conflicting data
+       - We resolve it using 4-valued logic (True, False, Both, Neither)
+
+    4. **LCC Coherence of Public Sentiment** - Track coherence patterns in social media/news
+       - Sentiment above 0.85 coherence = stable consensus
+       - Sentiment below 0.6 LCC = volatility, mispricing opportunity
+
+    5. **cos(pi/8) Decision Boundaries** - Principled thresholds from quantum mechanics
+       - Not arbitrary cutoffs: derived from the Tsirelson bound
+       - Five thresholds from two constants (sqrt(2) and golden ratio)
+    """)
+
+    st.markdown("---")
+    st.markdown("### Quick Start Checklist")
+    st.markdown("""
+    - [ ] Sign up at [PredictIt.org](https://www.predictit.org)
+    - [ ] Deposit $500 via credit card (instant, no fee)
+    - [ ] Verify identity (photo ID + selfie)
+    - [ ] Scan political markets for mispriced contracts
+    - [ ] Apply TI Framework analysis to identify high-confidence trades
+    - [ ] Start with $25-50 per trade, max $3,500 per contract
+    - [ ] Note: 30-day holding period before first withdrawal
+    """)
+
+    st.markdown("---")
+    st.markdown("### Limits & Rules")
+    col_l1, col_l2 = st.columns(2)
+    with col_l1:
+        st.markdown("""
+        **Investment Limits:**
+        - $3,500 per contract position
+        - No account-wide cap
+        - Can invest in unlimited contracts
+        - Minimum deposit: $10
+        """)
+    with col_l2:
+        st.markdown("""
+        **Key Rules:**
+        - Politics/elections only (no sports)
+        - 30-day hold after first deposit
+        - Must verify identity before withdrawal
+        - Available to U.S. residents 18+
+        """)
+
 with tab_kalshi:
     st.subheader("Kalshi Live Market Scanner")
+    st.caption("Status: ON HOLD - Credit card deposit not supported, MFA lockout on Alpaca")
 
     api_key_id = os.environ.get('KALSHI_API_KEY_ID', '')
     private_key = os.environ.get('KALSHI_PRIVATE_KEY', '')
@@ -290,37 +391,41 @@ with tab_alpaca:
 with tab_strategy:
     st.subheader("Revenue Strategy Overview")
 
-    st.markdown("### Capital Allocation Plan")
+    st.markdown("### Capital Allocation Plan (Updated)")
 
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
         **Personal Credit ($301 - First Premier)**
-        - Kalshi prediction markets: $200
-          - Start with highest-confidence daily markets
-          - Compound winnings over time
+        - PredictIt prediction markets: $200
+          - Political markets with TI advantage
+          - Start $25-50 per trade
         - Reserve: $101 (emergency buffer)
         """)
 
     with col2:
         st.markdown("""
         **Business Credit ($3,000 - Rho)**
-        - Stock algorithm infrastructure: $500
-          - Alpaca live trading (after paper validation)
-          - API subscriptions
+        - PredictIt political markets: $300
+          - Scale up after proving edge
+        - Stock algorithm (Alpaca): $500
+          - Paper trading first, then small live
         - Social media launch: $500
-          - Marketing contractor (Upwork, results-based)
+          - Marketing contractor (Upwork)
           - Content tools (Pictory active)
-        - Affiliate marketing setup: $200
-        - Reserve: $1,800 (working capital)
+        - Kaggle competitions: $0 (free)
+        - Affiliate marketing: $200
+        - Reserve: $1,500 (working capital)
         """)
 
     st.markdown("---")
     st.markdown("### Revenue Streams")
 
     streams = [
-        ("Kalshi Prediction Markets", "Days", "$50-500/week", "Ready", "Medium"),
+        ("PredictIt Political Markets", "Days", "$50-500/week", "READY NOW", "Medium"),
+        ("Kaggle Competitions", "2-8 weeks", "$0-50K prizes", "Heart Disease Active", "None"),
         ("GSA Paper Trading", "30 days", "Track record", "Ready", "None"),
+        ("Kalshi Prediction Markets", "On hold", "$50-500/week", "Funding blocked", "N/A"),
         ("GSA Live Trading", "60 days", "$200-2000/mo", "After paper", "Medium"),
         ("Affiliate Marketing", "2-4 weeks", "$100-1000/mo", "Need partnerships", "Low"),
         ("Social Media Content", "1-3 months", "$500-5000/mo", "Planning", "Low"),
@@ -352,11 +457,13 @@ with tab_strategy:
     st.markdown("---")
     st.markdown("### Priority Action Items")
     st.markdown("""
-    1. Scan Kalshi for first high-confidence trade
-    2. Generate GSA paper trading signals, start Alpaca paper trading
-    3. Place first Kalshi trades ($10-25 on 90%+ confidence markets)
-    4. Set up affiliate accounts (Katalyst, RedRush)
-    5. Post first marketing contractor job on Upwork
-    6. Review GSA paper trading performance (30 days)
-    7. If GSA positive, consider small live trades (60 days)
+    1. **Sign up for PredictIt** and deposit $500 via credit card (instant, free)
+    2. **Scan PredictIt political markets** for mispriced contracts using TI analysis
+    3. **Place first PredictIt trades** ($25-50 per contract on high-confidence markets)
+    4. **Run Heart Disease Kaggle challenge** - validate TI-enhanced classifier
+    5. **Generate GSA paper trading signals** and start Alpaca paper trading
+    6. Contact support@alpaca.markets to reset MFA (Alpaca account locked)
+    7. Set up affiliate accounts (Katalyst, RedRush)
+    8. Review PredictIt performance after 2 weeks, scale up if positive
+    9. Review GSA paper trading after 30 days
     """)
