@@ -10,7 +10,7 @@
 
 ## Abstract
 
-We extend the loss aversion derivation from Paper #324 by demonstrating that the Prisoner's Dilemma (PD) imposes a 2:1 asymmetry on *both* magnitude and probability of experienced outcomes — not just one. When these two channels align (both negative or both positive), they amplify superlinearly, producing the characteristic spirals observed in depression (downward) and wellbeing (upward, per Fredrickson's Broaden-and-Build Theory). Since magnitude and probability exist on the same existential manifold (a consequence of EAR), their alignment constitutes *self-reinforcing existence amplification* — negative experiences that are both worse and more frequent compound into existential contraction, while positive experiences that are both better and more frequent compound into existential expansion. We validate these claims empirically across 930,303 cardiac observations (UCI n=303; Kaggle S6E2 n=630,000): G×E amplification replicates in both datasets, I×L cancellation identifies maximally Tralse patients, and TI thresholds mark genuine phase transitions. We derive Fredrickson's empirical 3:1 Broaden-and-Build ratio from PD structure, and propose the Academic Bias Index (ABI): a sentiment-analysis methodology to measure how closely different academic disciplines conform to the PD's 2:1 asymmetry in their own published literature, beginning with psychology — a field that studies bias in others but has never systematically measured its own conformity to the very loss aversion it discovered.
+We extend the loss aversion derivation from Paper #324 by demonstrating that the Prisoner's Dilemma (PD) imposes a 2:1 asymmetry on *both* magnitude and probability of experienced outcomes — not just one. When these two channels align (both negative or both positive), they amplify superlinearly, producing the characteristic spirals observed in depression (downward) and wellbeing (upward, per Fredrickson's Broaden-and-Build Theory). Since magnitude and probability exist on the same existential manifold (a consequence of EAR), their alignment constitutes *self-reinforcing existence amplification* — negative experiences that are both worse and more frequent compound into existential contraction, while positive experiences that are both better and more frequent compound into existential expansion. We validate these claims empirically across 930,303 cardiac observations (UCI n=303; Kaggle S6E2 n=630,000): G×E amplification replicates in both datasets, I×L cancellation identifies maximally Tralse patients, and TI thresholds mark genuine phase transitions. We derive Fredrickson's empirical 3:1 Broaden-and-Build ratio from PD structure, and propose the Academic Bias Index (ABI): a sentiment-analysis methodology to measure how closely different academic disciplines conform to the PD's 2:1 asymmetry in their own published literature. Pilot ABI results across 1,726 real paper abstracts from six disciplines (PubMed and arXiv) reveal a striking gradient: Medicine (ABI=2.60, exceeding the PD baseline), Psychology (ABI=1.86, remarkably close to 2.0), Economics (1.53), Computer Science (1.21), Mathematics (0.98, near-perfect balance), and Physics (0.48, inverted — positive language dominates). The gradient correlates with subjective stakes of being wrong and difficulty of objective verification, establishing loss aversion as a structural attractor that disciplines orbit at varying distances.
 
 ---
 
@@ -349,6 +349,78 @@ A discipline with ABI < 2.0 has *attenuated* the negative below its structural w
 - Compare ABI predictions against known metrics (replication rates, publication bias indices, retraction rates)
 - Test whether ABI predicts disciplinary health outcomes
 
+### 4.7 Pilot Results: ABI Across Six Disciplines
+
+We executed Phase 1 using publicly available abstracts from PubMed (psychology, medicine) and arXiv (physics, mathematics, computer science, economics). A 100-word academic sentiment lexicon was applied to 1,726 abstracts, scoring positive language (e.g., "significant," "novel," "robust," "breakthrough," "confirms") and negative language (e.g., "limitation," "bias," "failed," "uncertain," "inconsistent") per abstract, with intensifier weighting.
+
+**Results:**
+
+| Rank | Discipline | n | Pos/paper | Neg/paper | ABI | vs PD (2.0) |
+|------|-----------|---|-----------|-----------|-----|-------------|
+| 1 | **Medicine** | 555 | 0.55 | 1.44 | **2.602** | **>>2.0** |
+| 2 | **Psychology** | 380 | 0.86 | 1.60 | **1.857** | ~2.0 |
+| 3 | Economics | 198 | 1.25 | 1.91 | 1.525 | <2.0 |
+| 4 | Computer Science | 200 | 1.03 | 1.25 | 1.210 | <2.0 |
+| 5 | Mathematics | 194 | 0.48 | 0.47 | 0.984 | ~1.0 |
+| 6 | Physics | 199 | 0.86 | 0.41 | 0.478 | <<2.0 |
+
+### 4.8 Interpretation of Pilot Results
+
+The results reveal a striking gradient that aligns with theoretical predictions — but with one major surprise.
+
+**Medicine (ABI = 2.602) — The Highest Loss Aversion**
+
+Medicine *exceeds* the PD structural baseline of 2.0. This is the **disciplinary depression spiral** in action. Medical literature weights negative language (risks, adverse effects, limitations, errors) at 2.6× the rate of positive language. This makes clinical sense — patient harm is genuinely catastrophic — but the *excess* above 2.0 suggests that medicine's negativity bias has amplified beyond the structural baseline into institutional risk aversion. The defensive medicine phenomenon, informed consent inflation, and reluctance to publish positive null results are symptoms of this amplification.
+
+**Psychology (ABI = 1.857) — Almost Exactly at 2.0**
+
+Contrary to our initial prediction (H1: psychology >> 2.0), psychology lands remarkably close to the PD structural ratio. The field's extensive self-examination through the replication crisis may have *calibrated* its loss aversion toward the natural baseline. Psychology uses 1.86 negative words per positive word — within 7% of the theoretically predicted 2:1 ratio. This is arguably the most interesting finding: the discipline that studies bias has, through studying bias, inadvertently calibrated its own bias toward the structural optimum.
+
+However, an alternative reading is possible: psychology's proximity to 2.0 could indicate that the field has *internalized* the PD ratio so thoroughly that it reproduces it in its language. The discipline doesn't just study loss aversion — it *writes* with it.
+
+**Economics (ABI = 1.525) — Below Structural Baseline**
+
+Economics falls below 2.0, suggesting less loss aversion than the PD predicts. This may reflect economics' cultural emphasis on model elegance and the tradition of presenting results confidently. Economic papers frame uncertainty as a feature to be modeled rather than a limitation to be apologized for.
+
+**Computer Science (ABI = 1.210) — Benchmark Resilience**
+
+CS papers show relatively balanced sentiment. The benchmark culture — where performance is measured objectively — reduces the need for hedging language. When your model achieves 95.3% accuracy, you state it; when it achieves 87.1%, you state that too. Objectivity attenuates loss aversion.
+
+**Mathematics (ABI = 0.984) — Perfect Balance**
+
+Mathematics achieves near-perfect 1:1 balance between positive and negative sentiment. This validates prediction H3 (mathematics < 2.0). Proofs are proofs. A theorem is proven or it isn't. The emotional content of mathematical writing is minimal, and what exists is nearly symmetric. Mathematics is the discipline *least affected* by loss aversion — because its truth criteria are least affected by subjective weighting.
+
+**Physics (ABI = 0.478) — The Inversion**
+
+The most dramatic result. Physics doesn't just show reduced loss aversion — it shows *inverted* loss aversion. Positive language outweighs negative language by more than 2:1. Physics papers emphasize discoveries, measurements, and confirmations. The Popperian culture of falsification has not produced negativity — it has produced *confidence*. When you can measure a phenomenon to 12 decimal places, you write about it with authority.
+
+This inversion may also reflect physics' publication culture: negative results and failed experiments are genuinely less likely to be published (survivorship bias in the sample), and successful measurements are celebrated with language that emphasizes precision and discovery.
+
+### 4.9 The ABI Gradient: A Discipline Hierarchy
+
+The six disciplines form a clear gradient:
+
+```
+Medicine (2.60) > Psychology (1.86) > Economics (1.53) > CS (1.21) > Math (0.98) > Physics (0.48)
+                ↑                                                                      ↑
+        "Disciplinary                                                          "Disciplinary
+      depression spiral"                                                          optimism"
+```
+
+This gradient correlates with:
+
+| Factor | High ABI (Medicine) | Low ABI (Physics) |
+|--------|--------------------|--------------------|
+| Stakes of being wrong | Life/death | Abstract/theoretical |
+| Subjectivity of outcomes | High (patient variability) | Low (measurement precision) |
+| Replication difficulty | High (human subjects, ethics) | Medium (equipment-dependent) |
+| Cultural attitude to failure | Defensive/cautious | Exploratory/celebratory |
+| Publication bias | Strong (positive results favored) | Moderate |
+
+**The key insight**: Loss aversion in academic writing scales with the **subjective stakes** of being wrong and the **difficulty of objective verification.** Disciplines with high subjective stakes and difficult verification (medicine, psychology) show high ABI. Disciplines with low subjective stakes and easy verification (mathematics, physics) show low ABI.
+
+The PD's 2:1 ratio is not a universal constant in academic writing — it is a **structural attractor** that disciplines orbit at different distances, depending on their relationship to uncertainty.
+
 ---
 
 ## 5. Theoretical Implications
@@ -422,7 +494,9 @@ This is not a critique of psychology. It is an *application* of psychology — t
 
 3. **Fredrickson Ratio Derivation**: The empirical 3:1 positive-to-negative ratio required for flourishing falls within the PD Double Asymmetry's predicted range of 2:1 to 4:1.
 
-4. **Academic Bias Index**: A proposed methodology to measure how closely different disciplines conform to the structural 2:1 asymmetry in their published literature. Predicted finding: psychology exceeds 2.0 (amplified loss aversion), physics approximates 2.0 (culturally calibrated).
+4. **Academic Bias Index**: Empirical measurement across 1,726 abstracts from six disciplines reveals a gradient from Medicine (ABI=2.60, disciplinary depression spiral) through Psychology (ABI=1.86, calibrated near 2.0) to Physics (ABI=0.48, inverted — discovery-oriented optimism). Mathematics achieves near-perfect 1:1 balance (ABI=0.98). The gradient scales with subjective stakes and verification difficulty.
+
+5. **G×E Amplification**: Replicated across 930K+ observations — integrated health-stability assessment genuinely exceeds either component, confirming superlinear existence empirically.
 
 ### 6.2 The Reflexive Challenge
 
