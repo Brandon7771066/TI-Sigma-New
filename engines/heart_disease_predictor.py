@@ -36,13 +36,14 @@ from sklearn.ensemble import (
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import (
-    train_test_split, cross_val_score, StratifiedKFold, RandomizedSearchCV
+    train_test_split, cross_val_score, StratifiedKFold, cross_validate as sklearn_cross_validate
 )
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
-    roc_auc_score, confusion_matrix, classification_report, roc_curve
+    roc_auc_score, confusion_matrix, classification_report, roc_curve,
+    make_scorer
 )
-from sklearn.calibration import CalibratedClassifierCV
+from sklearn.feature_selection import SelectKBest, f_classif, mutual_info_classif
 from sklearn.neighbors import KNeighborsClassifier
 import xgboost as xgb
 import lightgbm as lgb
@@ -794,6 +795,137 @@ class HeartDiseasePredictor:
                 cv_results[name] = {'error': str(e)}
 
         return cv_results
+
+    def cross_validate_models(self, X: np.ndarray, y: np.ndarray) -> Dict:
+        """Proper CV with SMOTE inside each fold using imblearn Pipeline.
+
+        Fixes SMOTE leakage by applying SMOTE only to training folds,
+        not to the entire dataset before splitting.
+
+        Returns:
+            Dict with per-model mean/std accuracy and AUC, plus best model.
+        """
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+        model_specs = self._build_models()
+        cv_results = {}
+
+        for name, model in model_specs.items():
+            try:
+                pipeline = ImbPipeline([
+                    ('smote', SMOTE(random_state=42)),
+                    ('model', model),
+                ])
+
+                scoring = {
+                    'accuracy': 'accuracy',
+                    'roc_auc': 'roc_auc',
+                }
+                scores = sklearn_cross_validate(
+                    pipeline, X, y, cv=skf, scoring=scoring,
+                    return_train_score=False, n_jobs=-1,
+                )
+
+                cv_results[name] = {
+                    'accuracy_mean': round(float(np.mean(scores['test_accuracy'])), 4),
+                    'accuracy_std': round(float(np.std(scores['test_accuracy'])), 4),
+                    'auc_mean': round(float(np.mean(scores['test_roc_auc'])), 4),
+                    'auc_std': round(float(np.std(scores['test_roc_auc'])), 4),
+                    'fold_accuracies': [round(float(s), 4) for s in scores['test_accuracy']],
+                    'fold_aucs': [round(float(s), 4) for s in scores['test_roc_auc']],
+                    'status': 'evaluated',
+                }
+            except Exception as e:
+                cv_results[name] = {'status': 'failed', 'error': str(e)}
+
+        valid = {k: v for k, v in cv_results.items() if v.get('status') == 'evaluated'}
+        best_name = max(valid, key=lambda k: valid[k]['auc_mean'], default=None) if valid else None
+
+        return {
+            'model_results': cv_results,
+            'best_model': best_name,
+            'best_auc': valid[best_name]['auc_mean'] if best_name else None,
+            'best_accuracy': valid[best_name]['accuracy_mean'] if best_name else None,
+            'cv_config': {
+                'n_splits': 5,
+                'shuffle': True,
+                'random_state': 42,
+                'smote_applied_per_fold': True,
+            },
+        }
+
+    def select_features(self, X_train: np.ndarray, y_train: np.ndarray,
+                        X_test: np.ndarray) -> Tuple[np.ndarray, np.ndarray, Dict]:
+        """Select best features using SelectKBest with f_classif and mutual_info_classif.
+
+        Tests different k values and selects the best based on cross-validated AUC.
+
+        Returns:
+            Tuple of (X_train_selected, X_test_selected, selection_info)
+        """
+        from sklearn.model_selection import cross_val_score as _cv_score
+
+        n_features = X_train.shape[1]
+        k_values = [k for k in [5, 10, 15, 20, 25, min(30, n_features)] if k <= n_features]
+        if n_features not in k_values:
+            k_values.append(n_features)
+        k_values = sorted(set(k_values))
+
+        best_score = -1
+        best_k = n_features
+        best_method = 'f_classif'
+        best_selector = None
+        results = []
+
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+        for method_name, method_func in [('f_classif', f_classif), ('mutual_info_classif', mutual_info_classif)]:
+            for k in k_values:
+                try:
+                    selector = SelectKBest(score_func=method_func, k=k)
+                    X_selected = selector.fit_transform(X_train, y_train)
+
+                    estimator = xgb.XGBClassifier(
+                        n_estimators=100, max_depth=4, learning_rate=0.1,
+                        random_state=42, eval_metric='logloss',
+                        use_label_encoder=False, n_jobs=-1, verbosity=0,
+                    )
+                    scores = _cv_score(estimator, X_selected, y_train, cv=skf, scoring='roc_auc')
+                    mean_auc = float(np.mean(scores))
+
+                    results.append({
+                        'method': method_name,
+                        'k': k,
+                        'mean_auc': round(mean_auc, 4),
+                        'std_auc': round(float(np.std(scores)), 4),
+                    })
+
+                    if mean_auc > best_score:
+                        best_score = mean_auc
+                        best_k = k
+                        best_method = method_name
+                        best_selector = selector
+                except Exception:
+                    continue
+
+        if best_selector is None:
+            return X_train, X_test, {'error': 'Feature selection failed', 'using_all_features': True}
+
+        X_train_selected = best_selector.transform(X_train)
+        X_test_selected = best_selector.transform(X_test)
+
+        selected_mask = best_selector.get_support()
+        selected_indices = list(np.where(selected_mask)[0])
+        selected_names = [self.feature_columns[i] for i in selected_indices] if len(self.feature_columns) == X_train.shape[1] else selected_indices
+
+        return X_train_selected, X_test_selected, {
+            'best_method': best_method,
+            'best_k': best_k,
+            'best_auc': round(best_score, 4),
+            'selected_features': selected_names,
+            'n_original_features': n_features,
+            'n_selected_features': best_k,
+            'all_results': results,
+        }
 
     def generate_eda_report(self, df: pd.DataFrame) -> Dict:
         """Generate exploratory data analysis report."""

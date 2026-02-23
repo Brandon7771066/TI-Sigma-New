@@ -113,7 +113,7 @@ st.markdown("---")
 # ====================================================
 
 # Create tabs
-tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status = st.tabs([
+tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather = st.tabs([
     "📱 Mobile Hub",
     "🎮 EEG Pong",
     "🧠💓 Brain Proof",
@@ -178,6 +178,7 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_focus_amp, tab_cognitiv
     "🧠 Brain Coupling",
     "⚡ Step-Skipping",
     "📊 Stock Status",
+    "🌤️ Weather Trader",
 ])
 
 with tab_mobile:
@@ -1036,3 +1037,7 @@ with tab_step_skip:
 with tab_stock_status:
     from pages.stock_algorithm_status import render as render_stock_status
     render_stock_status()
+
+with tab_weather:
+    from weather_dashboard import render_weather_dashboard
+    render_weather_dashboard()

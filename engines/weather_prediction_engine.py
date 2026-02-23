@@ -24,13 +24,27 @@ TI INTEGRATION:
 """
 
 import math
+import time
+import base64
 import requests
 import json
 import os
+import logging
 import numpy as np
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass, field
+from urllib.parse import urlparse
+
+try:
+    from cryptography.hazmat.primitives import hashes, serialization  # type: ignore
+    from cryptography.hazmat.primitives.asymmetric import padding, rsa  # type: ignore
+    from cryptography.hazmat.backends import default_backend  # type: ignore
+    HAS_CRYPTOGRAPHY = True
+except ImportError:
+    HAS_CRYPTOGRAPHY = False
+
+logger = logging.getLogger(__name__)
 
 TAU = math.cos(math.pi / 8)
 EPSILON = math.cos(math.pi / 8) ** 2
@@ -56,6 +70,107 @@ NWS_HEADERS = {
     'User-Agent': '(TI-Sigma-Weather, brandon@tisigma.com)',
     'Accept': 'application/geo+json',
 }
+
+
+KALSHI_CITY_TICKERS = {
+    'NYC': 'HIGHNY', 'Chicago': 'HIGHCHI', 'Miami': 'HIGHMI',
+    'Austin': 'HIGHAUS', 'Denver': 'HIGHDEN', 'Boston': 'HIGHBOS',
+    'LA': 'HIGHLA', 'Phoenix': 'HIGHPHX', 'Seattle': 'HIGHSEA', 'Houston': 'HIGHHOU'
+}
+
+KALSHI_BASE_URL = "https://trading-api.kalshi.com/trade-api/v2"
+
+
+class KalshiClient:
+    """Client for Kalshi trading API with RSA-PSS authentication."""
+
+    def __init__(self, api_key_id: str, private_key_pem: str, base_url: str = KALSHI_BASE_URL):
+        self.api_key_id = api_key_id
+        self.base_url = base_url
+        self.session = requests.Session()
+
+        if not HAS_CRYPTOGRAPHY:
+            raise ImportError("cryptography library is required for Kalshi API authentication. Install with: pip install cryptography")
+
+        key_pem = private_key_pem.replace('\\n', '\n')
+        self.private_key = serialization.load_pem_private_key(
+            key_pem.encode('utf-8'),
+            password=None,
+            backend=default_backend()
+        )
+
+    def _generate_signature(self, method: str, path: str) -> Tuple[str, str]:
+        timestamp_ms = str(int(time.time() * 1000))
+        message = timestamp_ms + method.upper() + path
+        signature = self.private_key.sign(
+            message.encode('utf-8'),
+            padding.PSS(
+                mgf=padding.MGF1(hashes.SHA256()),
+                salt_length=padding.PSS.MAX_LENGTH
+            ),
+            hashes.SHA256()
+        )
+        signature_b64 = base64.b64encode(signature).decode('utf-8')
+        return timestamp_ms, signature_b64
+
+    def _get_auth_headers(self, method: str, path: str) -> Dict[str, str]:
+        timestamp_ms, signature = self._generate_signature(method, path)
+        return {
+            'KALSHI-ACCESS-KEY': self.api_key_id,
+            'KALSHI-ACCESS-SIGNATURE': signature,
+            'KALSHI-ACCESS-TIMESTAMP': timestamp_ms,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        }
+
+    def get(self, path: str, params: Optional[Dict] = None) -> Dict:
+        url = self.base_url + path
+        parsed = urlparse(url)
+        sign_path = parsed.path
+        headers = self._get_auth_headers('GET', sign_path)
+        try:
+            response = self.session.get(url, headers=headers, params=params, timeout=15)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code == 401:
+                logger.error("Kalshi authentication failed - check API key and private key")
+            raise
+        except requests.exceptions.ConnectionError:
+            logger.error("Failed to connect to Kalshi API")
+            raise
+        except requests.exceptions.Timeout:
+            logger.error("Kalshi API request timed out")
+            raise
+
+    def post(self, path: str, data: Optional[Dict] = None) -> Dict:
+        url = self.base_url + path
+        parsed = urlparse(url)
+        sign_path = parsed.path
+        headers = self._get_auth_headers('POST', sign_path)
+        try:
+            response = self.session.post(url, headers=headers, json=data, timeout=15)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code == 401:
+                logger.error("Kalshi authentication failed - check API key and private key")
+            raise
+        except requests.exceptions.ConnectionError:
+            logger.error("Failed to connect to Kalshi API")
+            raise
+        except requests.exceptions.Timeout:
+            logger.error("Kalshi API request timed out")
+            raise
+
+    def get_markets(self, series_ticker: str, status: str = 'active') -> Dict:
+        return self.get('/markets', params={'series_ticker': series_ticker, 'status': status})
+
+    def get_balance(self) -> Dict:
+        return self.get('/portfolio/balance')
+
+    def get_positions(self) -> Dict:
+        return self.get('/portfolio/positions')
 
 
 @dataclass
@@ -99,6 +214,73 @@ class WeatherPredictionEngine:
         self.trade_history: List[Dict] = []
         self.cache_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'weather_cache')
         os.makedirs(self.cache_dir, exist_ok=True)
+        self.kalshi_client: Optional[KalshiClient] = None
+        self._init_kalshi()
+
+    def _init_kalshi(self):
+        api_key_id = os.environ.get('KALSHI_API_KEY_ID')
+        private_key = os.environ.get('KALSHI_PRIVATE_KEY')
+
+        if not api_key_id or not private_key:
+            logger.info("Kalshi API credentials not found in environment - using simulated prices")
+            return
+
+        if not HAS_CRYPTOGRAPHY:
+            logger.warning("cryptography library not installed - Kalshi API unavailable")
+            return
+
+        try:
+            self.kalshi_client = KalshiClient(api_key_id, private_key)
+            logger.info("Kalshi API client initialized successfully")
+        except Exception as e:
+            logger.warning(f"Failed to initialize Kalshi client: {e}")
+            self.kalshi_client = None
+
+    def fetch_kalshi_markets(self, city: str) -> Dict[str, float]:
+        if self.kalshi_client is None:
+            return {}
+
+        ticker = KALSHI_CITY_TICKERS.get(city)
+        if not ticker:
+            logger.warning(f"No Kalshi ticker mapping for city: {city}")
+            return {}
+
+        try:
+            data = self.kalshi_client.get_markets(series_ticker=ticker, status='active')
+            markets = data.get('markets', [])
+            prices = {}
+            for market in markets:
+                title = market.get('title', '') or market.get('subtitle', '')
+                yes_price = market.get('yes_ask', market.get('last_price', 0))
+                if isinstance(yes_price, (int, float)):
+                    yes_price = yes_price / 100.0 if yes_price > 1 else yes_price
+                if title:
+                    prices[title] = round(float(yes_price), 4)
+            logger.info(f"Fetched {len(prices)} Kalshi markets for {city} ({ticker})")
+            return prices
+        except Exception as e:
+            logger.error(f"Failed to fetch Kalshi markets for {city}: {e}")
+            return {}
+
+    def get_kalshi_balance(self) -> Optional[Dict]:
+        if self.kalshi_client is None:
+            logger.warning("Kalshi client not initialized")
+            return None
+        try:
+            return self.kalshi_client.get_balance()
+        except Exception as e:
+            logger.error(f"Failed to fetch Kalshi balance: {e}")
+            return None
+
+    def get_kalshi_positions(self) -> Optional[Dict]:
+        if self.kalshi_client is None:
+            logger.warning("Kalshi client not initialized")
+            return None
+        try:
+            return self.kalshi_client.get_positions()
+        except Exception as e:
+            logger.error(f"Failed to fetch Kalshi positions: {e}")
+            return None
 
     def fetch_nws_forecast(self, city: str) -> Optional[List[WeatherForecast]]:
         """Fetch 7-day forecast from NWS API for a city."""
@@ -257,8 +439,13 @@ class WeatherPredictionEngine:
         brackets = self.generate_temperature_brackets(tomorrow.high_temp_f)
 
         if market_prices is None:
-            market_prices = self._simulate_market_prices(brackets)
-            print(f"  [SIMULATED] Using simulated market prices for {city} (connect real ForecastEx/Kalshi API for live pricing)")
+            kalshi_prices = self.fetch_kalshi_markets(city)
+            if kalshi_prices:
+                market_prices = kalshi_prices
+                print(f"  [LIVE] Using real Kalshi market prices for {city} ({len(kalshi_prices)} contracts)")
+            else:
+                market_prices = self._simulate_market_prices(brackets)
+                print(f"  [SIMULATED] Using simulated market prices for {city} (connect real ForecastEx/Kalshi API for live pricing)")
 
         for bracket in brackets:
             label = bracket['label']
@@ -482,6 +669,171 @@ class WeatherPredictionEngine:
                     'confidence': tomorrow.confidence,
                 }
         return summary
+
+    def save_scan_to_db(self, scan_results: Dict) -> bool:
+        """Save daily scan results to PostgreSQL."""
+        import psycopg2
+        db_url = os.environ.get('DATABASE_URL')
+        if not db_url:
+            logger.warning("DATABASE_URL not set, skipping database save")
+            return False
+
+        try:
+            conn = psycopg2.connect(db_url)
+            cur = conn.cursor()
+
+            summary = scan_results.get('summary', {})
+            scan_date = datetime.now().date()
+
+            cur.execute("""
+                INSERT INTO weather_daily_scans 
+                (scan_date, cities_scanned, total_opportunities, strong_signals, total_edge_dollars, bankroll, scan_data)
+                VALUES (%s, %s, %s, %s, %s, %s, %s)
+                ON CONFLICT (scan_date) DO UPDATE SET
+                    cities_scanned = EXCLUDED.cities_scanned,
+                    total_opportunities = EXCLUDED.total_opportunities,
+                    strong_signals = EXCLUDED.strong_signals,
+                    total_edge_dollars = EXCLUDED.total_edge_dollars,
+                    bankroll = EXCLUDED.bankroll,
+                    scan_data = EXCLUDED.scan_data,
+                    created_at = NOW()
+            """, (
+                scan_date, summary.get('cities_scanned', 0),
+                summary.get('total_opportunities', 0),
+                summary.get('strong_signals', 0),
+                summary.get('total_edge_dollars', 0),
+                scan_results.get('bankroll', 500),
+                json.dumps(scan_results),
+            ))
+
+            for city, forecasts_list in self.forecasts.items():
+                for fc in forecasts_list[:1]:
+                    cur.execute("""
+                        INSERT INTO weather_forecasts 
+                        (city, forecast_date, high_temp_f, low_temp_f, conditions, wind_speed_mph, precipitation_pct, forecast_source, confidence)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (city, forecast_date, forecast_source) DO UPDATE SET
+                            high_temp_f = EXCLUDED.high_temp_f,
+                            low_temp_f = EXCLUDED.low_temp_f,
+                            conditions = EXCLUDED.conditions,
+                            created_at = NOW()
+                    """, (
+                        fc.city, fc.date, fc.high_temp_f, fc.low_temp_f,
+                        fc.conditions, fc.wind_speed_mph, fc.precipitation_pct,
+                        fc.forecast_source, fc.confidence,
+                    ))
+
+            for signal in self.signals:
+                if 'SKIP' not in signal.recommendation:
+                    cur.execute("""
+                        INSERT INTO weather_trading_signals
+                        (city, signal_date, contract_type, bracket_low, bracket_high, nws_probability, market_price, edge, kelly_fraction, position_size, tralse_zone, confidence, recommendation)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    """, (
+                        signal.city, signal.date, signal.contract_type,
+                        signal.bracket_low, signal.bracket_high,
+                        signal.nws_probability, signal.market_price,
+                        signal.edge, signal.kelly_fraction,
+                        signal.position_size_dollars, signal.tralse_zone,
+                        signal.confidence, signal.recommendation,
+                    ))
+
+            conn.commit()
+            cur.close()
+            conn.close()
+            logger.info(f"Saved scan results to database for {scan_date}")
+            return True
+
+        except Exception as e:
+            logger.error(f"Failed to save scan to database: {e}")
+            return False
+
+    def get_historical_accuracy(self) -> Dict:
+        """Get historical forecast accuracy from database."""
+        import psycopg2
+        db_url = os.environ.get('DATABASE_URL')
+        if not db_url:
+            return {'error': 'DATABASE_URL not set'}
+
+        try:
+            conn = psycopg2.connect(db_url)
+            cur = conn.cursor()
+
+            cur.execute("""
+                SELECT f.city,
+                       COUNT(*) as total_forecasts,
+                       AVG(ABS(f.high_temp_f - a.actual_high_f)) as avg_high_error,
+                       AVG(ABS(f.low_temp_f - a.actual_low_f)) as avg_low_error
+                FROM weather_forecasts f
+                JOIN weather_actuals a ON f.city = a.city AND f.forecast_date = a.actual_date
+                GROUP BY f.city
+                ORDER BY avg_high_error
+            """)
+
+            results = {}
+            for row in cur.fetchall():
+                results[row[0]] = {
+                    'total_forecasts': row[1],
+                    'avg_high_error_f': round(float(row[2]), 1) if row[2] else None,
+                    'avg_low_error_f': round(float(row[3]), 1) if row[3] else None,
+                }
+
+            cur.execute("""
+                SELECT COUNT(*) as total_signals,
+                       SUM(CASE WHEN outcome = 'win' THEN 1 ELSE 0 END) as wins,
+                       SUM(CASE WHEN outcome = 'loss' THEN 1 ELSE 0 END) as losses,
+                       SUM(COALESCE(pnl, 0)) as total_pnl
+                FROM weather_trading_signals
+                WHERE outcome IS NOT NULL
+            """)
+            pnl_row = cur.fetchone()
+            trading_performance = {
+                'total_signals': pnl_row[0] if pnl_row else 0,
+                'wins': pnl_row[1] if pnl_row else 0,
+                'losses': pnl_row[2] if pnl_row else 0,
+                'total_pnl': round(float(pnl_row[3]), 2) if pnl_row and pnl_row[3] else 0,
+            }
+
+            cur.close()
+            conn.close()
+            return {'city_accuracy': results, 'trading': trading_performance}
+        except Exception as e:
+            return {'error': str(e)}
+
+    def get_scan_history(self, days: int = 30) -> List[Dict]:
+        """Get recent scan history from database."""
+        import psycopg2
+        db_url = os.environ.get('DATABASE_URL')
+        if not db_url:
+            return []
+
+        try:
+            conn = psycopg2.connect(db_url)
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT scan_date, cities_scanned, total_opportunities, strong_signals, total_edge_dollars, bankroll
+                FROM weather_daily_scans
+                ORDER BY scan_date DESC
+                LIMIT %s
+            """, (days,))
+
+            history = []
+            for row in cur.fetchall():
+                history.append({
+                    'date': str(row[0]),
+                    'cities_scanned': row[1],
+                    'opportunities': row[2],
+                    'strong_signals': row[3],
+                    'edge_dollars': round(float(row[4]), 2) if row[4] else 0,
+                    'bankroll': round(float(row[5]), 2) if row[5] else 500,
+                })
+
+            cur.close()
+            conn.close()
+            return history
+        except Exception as e:
+            logger.error(f"Failed to get scan history: {e}")
+            return []
 
 
 def demo():
