@@ -46,7 +46,8 @@ The backend uses a service-oriented architecture with components for:
 - Paper #321: "Formal Proof That Tralse-Myrion Reasoning Is Nonalgorithmic" - 3-stage formal argument (Choice Function Problem, Irreducibility of Intuition, Degradation Theorem), introduces Hot Cognition, Tralse Discipline, confident geometry
 - Paper #322: "Exact Value Integration and the Fine Structure Constant" - tan(π/8)=√2−1 discovery (3 thresholds from one angle), λ=ε−1/4 identity, golden angle≈1/α connection, complete formula updates
 - Paper #323: "Pi Plays Pokémon: The Extraction Problem and the Intelligence Hierarchy" - Analyzes WinningSequence YouTube channel feeding pi's digits into games. Introduces three-tier Intelligence Hierarchy: "Real" "Artificial Intelligence" (RRAI, pi/randomness), Artificial Intelligence (AI, LLMs), Meta-Artificial Intelligence (MAI, human consciousness). Formalizes the Extraction Problem (containment ≠ access). First TI Evidence Registry entry (TI-EVR-PI-001).
-- Paper count: 323+ total papers
+- Paper #324: "Superlinear Existence: Empirical Validation of EAR and the Loss Aversion Discovery" - First large-scale EAR empirical test (930K+ observations across UCI + Kaggle S6E2). G×E amplifies in both datasets confirming superlinear existence. I×L cancellation identifies maximally Tralse patients. Loss aversion 2:1 ratio derived from Sacred Interval [-0.666, +0.333] via PD structure.
+- Paper count: 324+ total papers
 - Key quotes: "Human cognition LOOKS cold ONLY WHEN IT LACKS HEAT", "There is no trying. There is no doing. There is only BE.", "Pi is the Library of Babel. Consciousness is the librarian."
 
 ### System Design Choices
