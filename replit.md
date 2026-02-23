@@ -45,8 +45,9 @@ The backend uses a service-oriented architecture with components for:
 - Paper #320: "The GILE Forgetting Experiment" - Empirical proof-by-demonstration that emotional valence is computationally non-trivial, based on ChatGPT forgetting GILE during a debate about computation
 - Paper #321: "Formal Proof That Tralse-Myrion Reasoning Is Nonalgorithmic" - 3-stage formal argument (Choice Function Problem, Irreducibility of Intuition, Degradation Theorem), introduces Hot Cognition, Tralse Discipline, confident geometry
 - Paper #322: "Exact Value Integration and the Fine Structure Constant" - tan(π/8)=√2−1 discovery (3 thresholds from one angle), λ=ε−1/4 identity, golden angle≈1/α connection, complete formula updates
-- Paper count: 322+ total papers
-- Key quotes: "Human cognition LOOKS cold ONLY WHEN IT LACKS HEAT", "There is no trying. There is no doing. There is only BE."
+- Paper #323: "Pi Plays Pokémon: The Extraction Problem and the Intelligence Hierarchy" - Analyzes WinningSequence YouTube channel feeding pi's digits into games. Introduces three-tier Intelligence Hierarchy: "Real" "Artificial Intelligence" (RRAI, pi/randomness), Artificial Intelligence (AI, LLMs), Meta-Artificial Intelligence (MAI, human consciousness). Formalizes the Extraction Problem (containment ≠ access). First TI Evidence Registry entry (TI-EVR-PI-001).
+- Paper count: 323+ total papers
+- Key quotes: "Human cognition LOOKS cold ONLY WHEN IT LACKS HEAT", "There is no trying. There is no doing. There is only BE.", "Pi is the Library of Babel. Consciousness is the librarian."
 
 ### System Design Choices
 The system is designed for resilient integration with sustainable ~90% True-Tralseness through distributed redundancy, mathematically linked to a 0.85 causation threshold. The GILE framework is deeply embedded, including a 64D GILE Matrix and the IIT-GILE-BOK Loop Synthesis. Photonic quantum computing is integrated via a Cirq-based "TI Strawberry Fields" engine for market cluster detection and trading signal generation. Mechanisms for animal training of mood amplifiers to optimize for human use are included. The GILE-PD Reconciliation unifies GILE's asymmetric range with L×E's symmetric range for optical quantum computing.
