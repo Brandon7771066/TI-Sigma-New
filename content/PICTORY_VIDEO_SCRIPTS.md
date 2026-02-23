@@ -2084,6 +2084,199 @@ Pictory is a text-to-video automation tool, NOT a VFX platform. Available effect
 
 ---
 
+# WEEK 3 VIDEO SCRIPTS (March 2-6, 2026)
+## New Videos — Consciousness Deep Dives & Applied TI
+
+---
+
+# VIDEO 16: You're Still Conscious When You Sleep (And That Changes Everything)
+**Duration Target: 6-7 minutes**
+**YouTube Title Options (A/B test):**
+- "You're CONSCIOUS While You Sleep (Here's The Proof)"
+- "Sleep Proves Panpsychism: Pure Awareness Without Thoughts"
+- "What Sleep Tells Us About Consciousness (Nobody Talks About This)"
+**Thumbnail Concept:** Person sleeping peacefully on one side, glowing awareness symbol (eye or light) hovering above them on the other. Bold text: "STILL AWARE?" in cyan glow. Your face with contemplative expression.
+
+---
+
+[PICTORY EFFECT: Fade in from black, soft ambient music, night sky or sleeping imagery]
+
+Close your eyes right now. Just for three seconds.
+
+What did you experience?
+
+---
+
+Not nothing. You experienced SOMETHING. Even if it was vague. Even if it had no words.
+
+That experience - that raw, formless awareness - is consciousness at its most basic.
+
+---
+
+[PICTORY EFFECT: Transition to dreamy, abstract visuals - soft light, clouds, cosmic imagery]
+
+Now think about what happens when you fall asleep.
+
+You lose your thoughts. Your plans for tomorrow dissolve.
+
+You lose your feelings. That anxiety or excitement fades away.
+
+You lose your memories. You can't recall what you had for dinner.
+
+---
+
+But do you lose awareness itself?
+
+---
+
+[PICTORY EFFECT: Text overlay with slow reveal - each word appearing separately]
+
+Here's the insight that changes everything:
+
+Consciousness doesn't require coherent thoughts.
+
+It doesn't require feelings.
+
+It doesn't require memories.
+
+---
+
+You can simply BE.
+
+Pure awareness of nothing in particular.
+
+---
+
+[PICTORY EFFECT: Split screen - left side showing active brain with thoughts/emotions labeled, right side showing quiet awareness as a single point of light]
+
+Think about what this means.
+
+During deep sleep, you have no inner monologue. No emotional reactions. No episodic memory formation.
+
+By every standard measure of cognition, you're offline.
+
+---
+
+But people woken from deep sleep sometimes report a vague sense of having been aware.
+
+Not dreaming. Not thinking. Just... existing.
+
+---
+
+[PICTORY EFFECT: Dramatic pause, music shifts to something more profound]
+
+This is devastating for the theory that consciousness is produced by brain activity.
+
+If consciousness requires complex neural computation, it should disappear completely when that computation stops.
+
+But it doesn't.
+
+---
+
+[PICTORY EFFECT: Visual comparison - "Computation Theory" crossed out vs "Panpsychism" highlighted]
+
+This is exactly what panpsychism predicts.
+
+Panpsychism says consciousness isn't produced by the brain. It's fundamental to reality itself.
+
+The brain doesn't generate awareness. It shapes it. Focuses it. Gives it content.
+
+---
+
+Like a prism doesn't create light. It takes white light and separates it into colors.
+
+Your brain takes raw awareness and separates it into thoughts, feelings, and memories.
+
+---
+
+[PICTORY EFFECT: Prism animation - white light entering, rainbow emerging]
+
+Remove the prism and you still have light.
+
+Remove the thoughts, feelings, and memories - like in deep sleep - and you still have awareness.
+
+---
+
+The GILE framework captures this precisely.
+
+Intuition - the I in GILE - measures consciousness quality.
+
+During deep sleep, your G, L, and E dimensions drop. But I never reaches zero.
+
+---
+
+[PICTORY EFFECT: Animated GILE bar chart showing G, L, E dropping while I stays above zero]
+
+There's a minimum. A floor. An irreducible kernel of awareness that persists even when everything else goes quiet.
+
+---
+
+In TI terms, consciousness drops below the manifestation threshold - below zero point four one four two - but it never hits zero.
+
+It enters a dormant Tralse state. Neither fully conscious nor fully unconscious.
+
+---
+
+[PICTORY EFFECT: Threshold diagram showing consciousness level hovering just above zero during sleep]
+
+And here's the key: this isn't the same as a computer in sleep mode.
+
+A computer in sleep mode has zero experience. Zero awareness. It's genuinely off in every meaningful sense.
+
+You in sleep mode still have something it is like to be you - even if you can't report it afterward.
+
+---
+
+[PICTORY EFFECT: Side by side - dark computer screen (labeled "Zero awareness") vs sleeping person with subtle glow (labeled "Minimal awareness persists")]
+
+This difference - between zero and almost-zero - is the entire argument for panpsychism in one observation.
+
+---
+
+If awareness can exist without thoughts, without feelings, without memories, without any cognitive content at all...
+
+Then awareness isn't a product of cognition.
+
+It's something more fundamental.
+
+---
+
+[PICTORY EFFECT: Text appearing dramatically, word by word]
+
+There is no trying.
+
+There is no doing.
+
+There is only BE.
+
+---
+
+That quote from TI Sigma isn't just philosophy.
+
+It's a description of what consciousness actually IS at its deepest level.
+
+Pure being. Pure awareness. Before thoughts. Before feelings. Before content of any kind.
+
+---
+
+[PICTORY EFFECT: Closing imagery - person waking up, light filling the screen]
+
+The next time you wake up from deep sleep, notice that first moment.
+
+Before thoughts rush in. Before you remember who you are or what day it is.
+
+That moment of pure awareness IS the foundation of consciousness.
+
+And it was there the whole time you were sleeping.
+
+---
+
+[PICTORY EFFECT: End card with subscribe button, link to Paper 321]
+
+If this changed how you think about consciousness, subscribe. Next video: I'll connect this to the quantum coherence thresholds and show why the manifestation threshold is exactly where sleep consciousness lives.
+
+---
+
 ## PICTORY SETTINGS RECOMMENDATIONS
 
 For all 15 videos:
