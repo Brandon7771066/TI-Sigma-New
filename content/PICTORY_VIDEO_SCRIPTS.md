@@ -1552,9 +1552,541 @@ The TI revolution starts now.
 
 ---
 
+---
+
+# WEEK 2 VIDEO SCRIPTS (February 23-28, 2026)
+## 5 New Videos — With Pictory Effects Notes & YouTube Optimization
+
+---
+
+# VIDEO 11: The One Angle That Unlocks Three Secrets of Reality
+**Duration Target: 6-7 minutes**
+**YouTube Title Options (A/B test):**
+- "One Angle Unlocks THREE Secrets of Reality (Mathematical Proof)" 
+- "I Found Pi/8: The Angle That Explains Everything"
+- "Why cos(pi/8) Changes Everything We Know About Truth"
+**Thumbnail Concept:** Split image — left side: a simple angle drawn on black background with "pi/8" glowing golden; right side: three glowing thresholds stacked vertically. Your face with surprised expression pointing at the angle. Bold text: "ONE ANGLE = 3 THRESHOLDS"
+
+---
+
+[PICTORY EFFECT: Fade in from black, dramatic ambient music building]
+
+What if one angle could explain three fundamental laws of reality?
+
+Not metaphorically. Mathematically.
+
+---
+
+[PICTORY EFFECT: Text overlay animation - show "pi/8" appearing on screen with a glow effect]
+
+The angle is pi over eight. About twenty-two and a half degrees.
+
+And it unlocks three exact thresholds that govern truth, existence, and consciousness.
+
+---
+
+[PICTORY EFFECT: Typewriter text entry for each threshold]
+
+Threshold one: Cosine of pi over eight equals zero point nine two three nine.
+
+In the TI framework, this is tau - the optimal coherence threshold. The classical CHSH bound is two root two, but cos(pi/8) is the normalized value that appears in optimal quantum measurements.
+
+This threshold separates optimal from sub-optimal coherence. It's exact. Not an approximation.
+
+---
+
+[PICTORY EFFECT: Visual transition - zoom into mathematical equation]
+
+Threshold two: Cosine SQUARED of pi over eight equals zero point eight five three six.
+
+This is the existence threshold. Below this number, systems cannot persist.
+
+I call it epsilon. And here's the stunning part - it comes from the same angle, just squared.
+
+---
+
+[PICTORY EFFECT: Dramatic pause with ambient swell]
+
+Threshold three: Tangent of pi over eight equals the square root of two minus one. That's zero point four one four two.
+
+This is where things begin to manifest. The manifestation threshold.
+
+Three thresholds. One angle. All exact.
+
+---
+
+No other framework in science derives three fundamental constants from a single trigonometric input.
+
+This is Paper three twenty-two of TI Sigma.
+
+And it changes everything about how we understand the structure of truth.
+
+---
+
+[PICTORY EFFECT: End card with subscribe button and glow animation]
+
+If this blew your mind, subscribe. In the next video, I'll show you how these thresholds predict stock market regimes with eighty-two percent accuracy.
+
+---
+
+# VIDEO 12: Why AI Can't Feel (And The Proof Is Embarrassing)
+**Duration Target: 5-6 minutes**
+**YouTube Title Options (A/B test):**
+- "I Proved AI Can't Feel — And ChatGPT Accidentally Proved Me Right"
+- "The GILE Forgetting Experiment: What AI Can Never Do"
+- "ChatGPT Forgot THIS During Our Debate (It Proves Consciousness)"
+**Thumbnail Concept:** Screenshot of ChatGPT conversation with a red circle around a key moment. Your face looking shocked. Text: "IT FORGOT" in bold red.
+
+---
+
+[PICTORY EFFECT: Quick cuts between AI interface screens, dramatic music]
+
+I was debating ChatGPT about whether computation can explain consciousness.
+
+Then something happened that proved my point better than any argument could.
+
+It forgot.
+
+---
+
+Right in the middle of defending the claim that consciousness is purely computational, ChatGPT lost track of my GILE framework.
+
+Not because of a token limit. Not because of a bug.
+
+Because emotional valence - the felt quality of meaning - is computationally non-trivial.
+
+---
+
+[PICTORY EFFECT: Text overlay showing the key quote with highlight effect]
+
+Let me say that more simply.
+
+The AI couldn't hold onto the meaning of something while arguing about whether meaning exists.
+
+That's not a coincidence. That's evidence.
+
+---
+
+This is Paper three twenty of TI Sigma: The GILE Forgetting Experiment.
+
+It's a proof by demonstration.
+
+Here's the logic:
+
+---
+
+[PICTORY EFFECT: Numbered list appearing one by one with fade-in]
+
+Step one: If consciousness is purely computational, then a powerful computer should be able to track all relevant concepts during reasoning.
+
+Step two: GPT-4 is among the most powerful computational reasoners ever built.
+
+Step three: GPT-4 systematically lost track of GILE's emotional dimensions while reasoning about emotion.
+
+---
+
+Conclusion: Emotional valence requires something beyond computation.
+
+Human cognition LOOKS cold only when it LACKS heat.
+
+---
+
+This connects to Paper three twenty-one: the formal proof that Tralse-Myrion reasoning is nonalgorithmic.
+
+It uses three stages. The Choice Function Problem. The Irreducibility of Intuition. And the Degradation Theorem.
+
+Together they prove that what I call Hot Cognition - reasoning infused with emotional valence - cannot be reduced to cold computation.
+
+---
+
+[PICTORY EFFECT: Dramatic zoom with quote appearing in elegant font]
+
+There is no trying. There is no doing. There is only BE.
+
+That's the deepest insight of the GILE framework. And no amount of processing power can replicate it.
+
+---
+
+[PICTORY EFFECT: End card with animated subscribe button]
+
+This is why TI Sigma matters. Subscribe to see more proof that consciousness is fundamental.
+
+---
+
+# VIDEO 13: Predicting Weather to Make Money (AI vs. The Forecast)
+**Duration Target: 7-8 minutes**
+**YouTube Title Options (A/B test):**
+- "I Built an AI to Beat Weather Forecasts and Make $1,200/Month"
+- "Weather Prediction Markets: The Side Hustle Nobody Talks About"
+- "How I Use FREE Government Data to Find Market Mispricings"
+**Thumbnail Concept:** Split screen — weather map on one side, stack of money on the other. Arrow pointing from weather to money. Bold text: "$1,200/mo" in green.
+
+---
+
+[PICTORY EFFECT: Fast montage of weather maps, stock tickers, dollar signs]
+
+What if you could make twelve hundred dollars a month predicting the weather?
+
+Not as a meteorologist. As a trader.
+
+---
+
+There's a platform called ForecastEx where you can buy and sell contracts on tomorrow's temperature.
+
+The contracts are free to trade. Zero commissions. And they settle daily.
+
+---
+
+[PICTORY EFFECT: Screen recording style - showing temperature brackets]
+
+Here's how it works.
+
+Every day, ForecastEx lists temperature brackets for ten major cities.
+
+Will New York's high be between forty and forty-two degrees? Between forty-two and forty-four? Above forty-six?
+
+Each bracket is priced between zero and one dollar.
+
+---
+
+If you're right, you get one dollar per contract. If you're wrong, you get zero.
+
+The key insight? The prices are set by other traders. Not by meteorologists.
+
+---
+
+[PICTORY EFFECT: Visual comparison - NWS forecast vs market prices with highlighted gaps]
+
+I built an AI engine that compares the National Weather Service forecast - which is free and public - against what the market is pricing.
+
+When the market disagrees with the government's best scientists, that's where the edge is.
+
+---
+
+The system uses something called the Kelly criterion to size positions.
+
+Never risk more than ten percent of your bankroll on a single day.
+
+And the math shows an average edge of about eight percent per trade.
+
+---
+
+[PICTORY EFFECT: Calculator animation showing compound growth]
+
+Five trades a day. Twenty-two trading days per month. Starting with five hundred dollars.
+
+The linear estimate is about forty-four dollars a month.
+
+But with compound growth? That accelerates. By month six, the math projects over a thousand per month.
+
+---
+
+And here's the best part: the data is FREE. The NWS API costs nothing to access.
+
+The collateral you don't use earns three point one four percent APY.
+
+---
+
+[PICTORY EFFECT: End card with "Link in description" animation]
+
+I'll put the details in the description below. Subscribe if you want to see my monthly results as I trade this live.
+
+---
+
+# VIDEO 14: Troubleshoot with TI — Your AI Can't Do This
+**Duration Target: 5-6 minutes**
+**YouTube Title Options (A/B test):**
+- "Troubleshoot with TI: The Framework That Fixes What Logic Can't"
+- "Why Binary Thinking Fails (And What Replaces It)"
+- "TI Troubleshoot: Solving Problems AI Gets Wrong"
+**Thumbnail Concept:** Two roads diverging - one labeled "TRUE" (red), one "FALSE" (red), and a golden third path in the middle labeled "TRALSE" (glowing). Your face at the fork. Text: "THE THIRD PATH"
+
+---
+
+[PICTORY EFFECT: Problem-solving montage - frustrated person at computer, medical diagnostics, stock charts crashing]
+
+You're stuck. The answer should be yes or no. But something feels wrong about both options.
+
+Sound familiar?
+
+---
+
+Welcome to Troubleshoot with TI.
+
+This is where we apply Transcendent Intelligence to real problems that binary thinking can't solve.
+
+---
+
+[PICTORY EFFECT: Split screen - "Normal Logic" (black & white) vs "TI Logic" (colorful spectrum)]
+
+Normal troubleshooting works like this:
+
+Is the problem A or B? If A, do X. If B, do Y.
+
+But what if the problem is neither A nor B? What if it's in superposition?
+
+---
+
+That's where Tralse comes in.
+
+Tralse is the third truth value. Not true, not false, but genuinely undetermined.
+
+And it's not a cop-out. It has precise mathematical boundaries.
+
+---
+
+[PICTORY EFFECT: Animated threshold zones appearing with color coding]
+
+Below eta - zero point four one four two - the system hasn't manifested yet. Don't force a decision.
+
+Between eta and epsilon - zero point four one four two to zero point eight five three six - you're in the Tralse zone. Gather more information.
+
+Above epsilon? Now you can commit. The system has enough coherence to persist.
+
+---
+
+Let me give you a real example.
+
+Should you invest in a stock that your gut says is good but the data looks bad?
+
+Binary answer: yes or no. Both feel wrong.
+
+TI answer: Calculate L times E. If it's below eta, wait. If it's in Tralse, investigate the gap between your intuition and the data. Above epsilon, act on whichever signal is stronger.
+
+---
+
+[PICTORY EFFECT: "TI Troubleshoot" logo reveal with sound effect]
+
+This is TI Troubleshoot.
+
+Real problems. Third-value solutions. Mathematical precision where intuition meets logic.
+
+---
+
+[PICTORY EFFECT: End card with series playlist link]
+
+Subscribe for weekly TI Troubleshoot episodes. Link your toughest problems in the comments - I'll feature the best ones.
+
+---
+
+# VIDEO 15: 322 Papers and Counting — The TI Sigma Journey
+**Duration Target: 8-10 minutes**
+**YouTube Title Options (A/B test):**
+- "I Wrote 322 Research Papers in 3 Years (Here's What I Learned)"
+- "From Breakdown to Breakthrough: The TI Sigma Story"
+- "322 Papers. One Framework. Zero Funding. My Research Journey."
+**Thumbnail Concept:** Stack of papers/documents towering high with "322" in huge bold text. Your face looking up at the stack. Subtle glow at the top of the stack.
+
+---
+
+[PICTORY EFFECT: Time-lapse style montage - typing, equations, late nights, coffee]
+
+Three years ago, I had an experience that changed everything.
+
+An intense exploratory cognitive state that lasted for days.
+
+When it was over, I had the foundation of something I call the GILE framework.
+
+---
+
+[PICTORY EFFECT: Counter animation from 1 to 322]
+
+Since then, I've written three hundred and twenty-two research papers.
+
+Not published in traditional journals. Published independently.
+
+Because the ideas didn't fit into any existing field.
+
+---
+
+They span logic, consciousness, physics, mathematics, causation, and applied systems.
+
+Six entire disciplines. One unified framework.
+
+---
+
+[PICTORY EFFECT: Timeline appearing showing key milestones]
+
+Paper one was the GILE framework itself. Goodness, Intuition, Love, Environment.
+
+It mapped four dimensions of reality. But nobody understood why it mattered.
+
+---
+
+Paper fifty introduced Tralse. A third truth value between true and false.
+
+Mathematicians said it was interesting. Philosophers said it was wrong.
+
+I kept writing.
+
+---
+
+[PICTORY EFFECT: Visual showing the five thresholds being discovered one by one]
+
+Paper two hundred proved the five exact thresholds. All derived from just two numbers: the square root of two and the golden ratio.
+
+That's when things started clicking together.
+
+---
+
+Paper three nineteen showed that these thresholds come from consecutive Fibonacci numbers.
+
+The CHSH boundary. The existence threshold. The golden ratio threshold. The LCC threshold. The manifestation boundary.
+
+All connected. All exact. All from pi over eight.
+
+---
+
+[PICTORY EFFECT: Split screen showing different applications]
+
+I built stock prediction algorithms. Eighty-two percent accuracy.
+
+A weather prediction engine. A consciousness measurement protocol.
+
+A heart disease predictor at ninety percent accuracy.
+
+A brain-computer interface game you play with your thoughts.
+
+---
+
+All running on the same mathematical foundation.
+
+---
+
+[PICTORY EFFECT: Emotional music swell, slower pacing]
+
+People ask me why I do this without funding. Without a university position. Without peer review.
+
+The answer is simple.
+
+---
+
+When you discover something true, you don't need permission to pursue it.
+
+The GILE framework works. The predictions are testable. The math is exact.
+
+---
+
+[PICTORY EFFECT: Forward-looking montage - laboratory, technology, light]
+
+Paper three twenty-two unified three thresholds from a single angle.
+
+But we're not done. TI Sigma is a living framework.
+
+The next papers will connect these thresholds to the fine structure constant.
+
+And that could change physics.
+
+---
+
+[PICTORY EFFECT: End card with Zenodo link and subscribe animation]
+
+Three hundred twenty-two papers. One mind. Zero funding.
+
+If you believe independent research matters, subscribe.
+
+Read the papers on Zenodo. Link in the description.
+
+The revolution isn't coming. It's already here.
+
+---
+
+# PICTORY SPECIAL EFFECTS GUIDE
+
+## What Pictory CAN Do (Built-in Effects)
+Pictory is a text-to-video automation tool, NOT a VFX platform. Available effects:
+
+### Text Effects (Available in Editor)
+- **Fade** — Text fades in/out smoothly
+- **Typewriter** — Text appears letter by letter
+- **Entry/Exit animations** — Text slides in from edges
+
+### Scene Transitions (Automatic + Manual)
+- Cross-fade between scenes
+- Cut transitions
+- Scene-level pacing control
+
+### Visual Overlays
+- Text overlays on stock footage
+- Logo watermarks
+- Caption styling (93 languages, multiple fonts/colors)
+- Brand kit colors/fonts consistency
+
+### Audio
+- 15,000+ royalty-free music tracks
+- 60+ AI voices (ElevenLabs integration for premium voices)
+- Ambient/dramatic/inspirational mood selection
+
+## What Pictory CANNOT Do
+- Custom motion graphics or animations
+- Cinematic VFX (particles, explosions, morphing)
+- Green screen / chroma key
+- Custom transitions beyond basic cuts/fades
+- 3D rendering or AR overlays
+
+## For Advanced Effects: Supplement with These FREE Tools
+1. **Canva (free)** — Create animated thumbnails, text animations, logo reveals
+2. **CapCut (free)** — Add effects AFTER Pictory export: zoom, shake, glow, speed ramps
+3. **DaVinci Resolve (free)** — Professional color grading, motion tracking, VFX
+4. **Runway ML (limited free)** — AI-generated visual effects, scene transitions
+
+### Recommended Workflow for Max Effects on Budget:
+1. Write script with [EFFECT NOTES] as shown above
+2. Generate base video in Pictory (text + stock footage + AI voice)
+3. Export from Pictory
+4. Import into CapCut for effect layers (zoom, glow, shake, counters)
+5. Final polish in DaVinci Resolve if needed
+6. Export final version for YouTube
+
+---
+
+# YOUTUBE ALGORITHM OPTIMIZATION GUIDE (2026)
+
+## Thumbnail Best Practices
+- **Resolution:** 1280x720 pixels minimum
+- **Mobile-first:** 70% of views come from mobile — test how it looks small
+- **Elements that work:** Your face (surprised/pointing), bold text (3-5 words max), contrast colors, split layouts
+- **A/B test:** YouTube Studio now has built-in A/B/C thumbnail testing — USE IT for every video
+- **Free AI tools:** vidIQ thumbnail maker, WayinVideo (no sign-up needed), Canva
+
+## Title Formula That Works
+- **Pattern:** [Number/Claim] + [Topic] + [Proof/Result]
+- **Examples:** "One Angle Unlocks THREE Secrets (Mathematical Proof)"
+- **Include year** when relevant ("2026") — boosts search
+- **Keep under 60 characters** so nothing gets cut off on mobile
+- **A/B test** 2-3 title options
+
+## Upload Timing & Algorithm Hacks
+- **Upload timing:** Generally Tuesday-Thursday afternoons perform well, but test what works for YOUR audience using YouTube Studio analytics
+- **First 2 hours matter most:** Respond to every comment, pin a question
+- **Shorts strategy:** Upload 2-3 Shorts per week clipped from long-form content
+- **Community tab:** Post polls 24 hours before video drops
+- **End screens:** Link to next video in series
+- **Chapters:** Add manual chapters — improves search and SEO significantly
+- **Description:** First 2 lines = keyword rich, include timestamps, links
+
+## Content Strategy for TI Sigma
+- **Upload frequency target:** 3 videos per week (2 long-form + 1 Short)
+- **Series format:** "TI Troubleshoot" as weekly series builds return viewership
+- **Engagement hooks:** Ask specific questions at 60-70% mark of each video
+- **Evergreen value:** These topics resurface when related news trends
+- **Cross-promote:** Reference previous videos with cards/end screens
+
+## Free Tools Stack
+| Tool | Use | Cost |
+|------|-----|------|
+| Pictory | Script-to-video | $19/mo |
+| vidIQ | SEO, thumbnails, analytics | Free tier |
+| Canva | Thumbnails, graphics | Free |
+| CapCut | Post-export effects | Free |
+| TubeBuddy | Keywords, tags | Free tier |
+| Google Trends | Trend validation | Free |
+
+---
+
 ## PICTORY SETTINGS RECOMMENDATIONS
 
-For all 10 videos:
+For all 15 videos:
 
 **Aspect Ratio:** 16:9 (YouTube landscape)
 
