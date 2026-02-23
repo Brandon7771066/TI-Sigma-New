@@ -132,13 +132,37 @@ class KaggleHeartDiseaseSubmission:
 
     def _clean_dataframe(self, df: pd.DataFrame) -> None:
         """Normalise column names and handle missing values in-place."""
+        s6e2_rename = {
+            "Age": "age", "Sex": "sex", "Chest pain type": "cp",
+            "BP": "trestbps", "Cholesterol": "chol", "FBS over 120": "fbs",
+            "EKG results": "restecg", "Max HR": "thalach",
+            "Exercise angina": "exang", "ST depression": "oldpeak",
+            "Slope of ST": "slope", "Number of vessels fluro": "ca",
+            "Thallium": "thal", "Heart Disease": "target",
+        }
+        df.rename(columns=s6e2_rename, inplace=True)
+
+        if "cp" in df.columns and df["cp"].max() >= 4:
+            df["cp"] = df["cp"] - 1
+
+        if "slope" in df.columns and df["slope"].min() >= 1:
+            df["slope"] = df["slope"] - 1
+
+        if "thal" in df.columns:
+            thal_map = {3: 1, 6: 2, 7: 3}
+            if df["thal"].isin([3, 6, 7]).any():
+                df["thal"] = df["thal"].map(thal_map).fillna(df["thal"])
+
         rename_map = {"num": "target", "goal": "target", "condition": "target", "disease": "target"}
         for old, new in rename_map.items():
             if old in df.columns:
                 df.rename(columns={old: new}, inplace=True)
 
         if "target" in df.columns:
-            df["target"] = (df["target"] > 0).astype(int)
+            if df["target"].dtype == object:
+                df["target"] = (df["target"].str.strip().str.lower() == "presence").astype(int)
+            else:
+                df["target"] = (df["target"] > 0).astype(int)
 
         for col in ["ca", "thal"]:
             if col in df.columns:
@@ -333,83 +357,83 @@ class KaggleHeartDiseaseSubmission:
             "lightgbm": {"params": self.best_lgb_params, "auc": round(float(lgb_search.best_score_), 4)},
         }
 
-    def build_ensemble(self) -> StackingClassifier:
-        """Create the stacking ensemble with tuned hyperparameters."""
+    def build_ensemble(self, large_dataset: bool = False) -> None:
+        """Create ensemble models scaled to dataset size."""
         xgb_p = self.best_xgb_params or {}
         lgb_p = self.best_lgb_params or {}
 
         xgb_model = xgb.XGBClassifier(
             **{**{
-                "n_estimators": 500, "max_depth": 5, "learning_rate": 0.05,
+                "n_estimators": 300, "max_depth": 6, "learning_rate": 0.05,
                 "subsample": 0.8, "colsample_bytree": 0.8, "min_child_weight": 3,
                 "gamma": 0.1, "reg_alpha": 0.1, "reg_lambda": 1.0,
             }, **xgb_p},
             random_state=42, eval_metric="logloss", n_jobs=-1,
+            tree_method="hist",
         )
 
         lgb_model = lgb.LGBMClassifier(
             **{**{
-                "n_estimators": 500, "max_depth": 5, "learning_rate": 0.05,
+                "n_estimators": 300, "max_depth": 6, "learning_rate": 0.05,
                 "subsample": 0.8, "colsample_bytree": 0.8, "min_child_samples": 10,
                 "reg_alpha": 0.1, "reg_lambda": 1.0,
             }, **lgb_p},
             random_state=42, verbose=-1, n_jobs=-1,
         )
 
-        gb_model = GradientBoostingClassifier(
-            n_estimators=300, max_depth=4, learning_rate=0.05,
-            subsample=0.8, min_samples_split=5, min_samples_leaf=3,
-            random_state=42,
-        )
-
-        et_model = ExtraTreesClassifier(
-            n_estimators=500, max_depth=15, min_samples_split=3,
-            min_samples_leaf=2, random_state=42, n_jobs=-1,
-        )
-
-        rf_model = RandomForestClassifier(
-            n_estimators=500, max_depth=12, min_samples_split=3,
-            min_samples_leaf=2, max_features="sqrt",
-            random_state=42, n_jobs=-1,
-        )
-
-        svm_model = SVC(
-            C=10.0, kernel="rbf", gamma="scale",
-            probability=True, random_state=42,
-        )
-
-        lr_model = LogisticRegression(
-            C=1.0, max_iter=2000, random_state=42, solver="lbfgs",
-        )
-
-        base_estimators = [
-            ("xgb", xgb_model),
-            ("lgb", lgb_model),
-            ("gb", gb_model),
-            ("et", et_model),
-            ("rf", rf_model),
-            ("svm", svm_model),
-            ("lr", lr_model),
-        ]
-
-        meta_learner = LogisticRegression(C=0.5, max_iter=2000, random_state=42)
-
-        self.ensemble = StackingClassifier(
-            estimators=base_estimators,
-            final_estimator=meta_learner,
-            cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
-            stack_method="predict_proba",
-            n_jobs=-1,
-        )
-
-        self.voting_ensemble = VotingClassifier(
-            estimators=base_estimators,
-            voting="soft",
-            weights=[0.22, 0.22, 0.16, 0.12, 0.10, 0.10, 0.08],
-            n_jobs=-1,
-        )
-
-        return self.ensemble
+        if large_dataset:
+            et_model = ExtraTreesClassifier(
+                n_estimators=200, max_depth=15, min_samples_split=3,
+                min_samples_leaf=2, random_state=42, n_jobs=-1,
+            )
+            self.base_models = {
+                "xgb": xgb_model,
+                "lgb": lgb_model,
+                "et": et_model,
+            }
+            self.ensemble = None
+            self.voting_ensemble = None
+        else:
+            gb_model = GradientBoostingClassifier(
+                n_estimators=300, max_depth=4, learning_rate=0.05,
+                subsample=0.8, min_samples_split=5, min_samples_leaf=3,
+                random_state=42,
+            )
+            et_model = ExtraTreesClassifier(
+                n_estimators=500, max_depth=15, min_samples_split=3,
+                min_samples_leaf=2, random_state=42, n_jobs=-1,
+            )
+            rf_model = RandomForestClassifier(
+                n_estimators=500, max_depth=12, min_samples_split=3,
+                min_samples_leaf=2, max_features="sqrt",
+                random_state=42, n_jobs=-1,
+            )
+            svm_model = SVC(
+                C=10.0, kernel="rbf", gamma="scale",
+                probability=True, random_state=42,
+            )
+            lr_model = LogisticRegression(
+                C=1.0, max_iter=2000, random_state=42, solver="lbfgs",
+            )
+            self.base_models = {
+                "xgb": xgb_model, "lgb": lgb_model, "gb": gb_model,
+                "et": et_model, "rf": rf_model, "svm": svm_model, "lr": lr_model,
+            }
+            base_estimators = list(self.base_models.items())
+            meta_learner = LogisticRegression(C=0.5, max_iter=2000, random_state=42)
+            self.ensemble = StackingClassifier(
+                estimators=base_estimators,
+                final_estimator=meta_learner,
+                cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42),
+                stack_method="predict_proba",
+                n_jobs=-1,
+            )
+            self.voting_ensemble = VotingClassifier(
+                estimators=base_estimators,
+                voting="soft",
+                weights=[0.22, 0.22, 0.16, 0.12, 0.10, 0.10, 0.08],
+                n_jobs=-1,
+            )
 
     def _build_smote_pipeline(self, estimator) -> ImbPipeline:
         """Wrap an estimator in an imblearn Pipeline with SMOTE + scaling."""
@@ -437,11 +461,20 @@ class KaggleHeartDiseaseSubmission:
         return best_threshold
 
     def select_features(self, X: np.ndarray, y: np.ndarray, k: int = 30) -> np.ndarray:
-        """Select top-k features using mutual information."""
+        """Select top-k features using f_classif (fast) or mutual info (small datasets)."""
         actual_k = min(k, X.shape[1])
-        self.feature_selector = SelectKBest(mutual_info_classif, k=actual_k)
-        X_selected = self.feature_selector.fit_transform(X, y)
+        n_samples = X.shape[0]
 
+        if n_samples > 50000:
+            from sklearn.feature_selection import f_classif as scorer
+            sample_idx = np.random.RandomState(42).choice(n_samples, min(50000, n_samples), replace=False)
+            self.feature_selector = SelectKBest(scorer, k=actual_k)
+            self.feature_selector.fit(X[sample_idx], y[sample_idx])
+        else:
+            self.feature_selector = SelectKBest(mutual_info_classif, k=actual_k)
+            self.feature_selector.fit(X, y)
+
+        X_selected = self.feature_selector.transform(X)
         mask = self.feature_selector.get_support()
         self.selected_features = [self.feature_names[i] for i, m in enumerate(mask) if m]
         dropped = X.shape[1] - X_selected.shape[1]
@@ -462,68 +495,77 @@ class KaggleHeartDiseaseSubmission:
             X = train_eng[feature_cols].values
             y = train_eng["target"].values
 
+            n_samples = len(y)
+            class_counts = np.bincount(y)
+            class_ratio = class_counts[1] / n_samples
+            use_smote = class_ratio < 0.35 or class_ratio > 0.65
+
             print(f"\n=== Feature Engineering ===")
+            print(f"  Samples: {n_samples:,}")
             print(f"  Raw features: {len(FEATURE_COLUMNS)}")
             print(f"  Engineered features: {len(feature_cols)}")
-            print(f"  Class balance: {np.bincount(y)} (ratio: {np.bincount(y)[1]/len(y):.2f})")
+            print(f"  Class balance: {class_counts} (ratio: {class_ratio:.2f})")
+            print(f"  SMOTE: {'enabled' if use_smote else 'disabled (balanced enough)'}")
 
             X = self.select_features(X, y, k=35)
 
             self.scaler.fit(X)
             X_scaled = self.scaler.transform(X)
 
-            if tune:
+            if tune and n_samples <= 50000:
                 print(f"\n=== Hyperparameter Tuning (RandomizedSearchCV) ===")
                 tune_results = self.tune_hyperparameters(X_scaled, y)
 
-            skf_cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-
-            smote_xgb_pipe = self._build_smote_pipeline(
-                xgb.XGBClassifier(
-                    **{**{
-                        "n_estimators": 300, "max_depth": 5, "learning_rate": 0.05,
-                        "subsample": 0.8, "colsample_bytree": 0.8,
-                    }, **(self.best_xgb_params or {})},
-                    random_state=42, eval_metric="logloss", n_jobs=-1,
-                )
-            )
-
-            cv_accuracy = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="accuracy", n_jobs=-1)
-            cv_f1 = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="f1", n_jobs=-1)
-            cv_auc = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="roc_auc", n_jobs=-1)
-
-            print(f"\n=== 5-Fold Stratified CV (tuned XGBoost, SMOTE inside) ===")
-            print(f"  Accuracy:  {cv_accuracy.mean():.4f} ± {cv_accuracy.std():.4f}")
-            print(f"  F1 Score:  {cv_f1.mean():.4f} ± {cv_f1.std():.4f}")
-            print(f"  ROC AUC:   {cv_auc.mean():.4f} ± {cv_auc.std():.4f}")
-
             X_tr, X_val, y_tr, y_val = train_test_split(
-                X, y, test_size=0.2, random_state=42, stratify=y
+                X, y, test_size=0.15, random_state=42, stratify=y
             )
 
-            smote = SMOTE(random_state=42, k_neighbors=min(3, min(np.bincount(y_tr)) - 1))
-            X_tr_res, y_tr_res = smote.fit_resample(X_tr, y_tr)
-
-            X_tr_scaled = self.scaler.fit_transform(X_tr_res)
+            X_tr_scaled = self.scaler.fit_transform(X_tr)
             X_val_scaled = self.scaler.transform(X_val)
 
-            if self.ensemble is None:
-                self.build_ensemble()
+            if use_smote:
+                smote = SMOTE(random_state=42, k_neighbors=min(3, min(np.bincount(y_tr)) - 1))
+                X_tr_scaled, y_tr = smote.fit_resample(X_tr_scaled, y_tr)
 
-            self.ensemble.fit(X_tr_scaled, y_tr_res)
-            self.voting_ensemble.fit(X_tr_scaled, y_tr_res)
+            large = n_samples > 50000
+            self.build_ensemble(large_dataset=large)
 
-            stack_proba = self.ensemble.predict_proba(X_val_scaled)[:, 1]
-            vote_proba = self.voting_ensemble.predict_proba(X_val_scaled)[:, 1]
+            n_models = len(self.base_models)
+            print(f"\n=== Training {n_models}-Model {'Blend' if large else 'Ensemble'} on {len(y_tr):,} samples ===")
 
-            sw, vw = self.optimal_blend_weights
-            blended_proba = sw * stack_proba + vw * vote_proba
+            if large:
+                model_probas_val = {}
+                for name, model in self.base_models.items():
+                    print(f"  Training {name}...")
+                    model.fit(X_tr_scaled, y_tr)
+                    model_probas_val[name] = model.predict_proba(X_val_scaled)[:, 1]
+                    acc = accuracy_score(y_val, (model_probas_val[name] >= 0.5).astype(int))
+                    auc = roc_auc_score(y_val, model_probas_val[name])
+                    print(f"    {name}: Acc={acc:.4f}  AUC={auc:.4f}")
+
+                weights = {"xgb": 0.40, "lgb": 0.40, "et": 0.20}
+                blended_proba = sum(
+                    weights.get(n, 1.0 / n_models) * p
+                    for n, p in model_probas_val.items()
+                )
+                stack_proba = blended_proba
+                vote_proba = blended_proba
+            else:
+                self.ensemble.fit(X_tr_scaled, y_tr)
+                print("  Stacking ensemble trained.")
+                self.voting_ensemble.fit(X_tr_scaled, y_tr)
+                print("  Voting ensemble trained.")
+
+                stack_proba = self.ensemble.predict_proba(X_val_scaled)[:, 1]
+                vote_proba = self.voting_ensemble.predict_proba(X_val_scaled)[:, 1]
+                sw, vw = self.optimal_blend_weights
+                blended_proba = sw * stack_proba + vw * vote_proba
 
             print(f"\n=== Optimizing Classification Threshold ===")
             self._optimize_threshold(blended_proba, y_val)
             blended_preds = (blended_proba >= self.optimal_threshold).astype(int)
 
-            print(f"\n=== Hold-Out Validation (20%) ===")
+            print(f"\n=== Hold-Out Validation ({len(y_val):,} samples, 15%) ===")
             for label, preds, proba in [
                 ("Stacking", (stack_proba >= self.optimal_threshold).astype(int), stack_proba),
                 ("Voting", (vote_proba >= self.optimal_threshold).astype(int), vote_proba),
@@ -536,40 +578,48 @@ class KaggleHeartDiseaseSubmission:
                 rec = recall_score(y_val, preds)
                 print(f"  {label:10s} — Acc: {acc:.4f}  F1: {f1:.4f}  AUC: {auc:.4f}  Prec: {prec:.4f}  Rec: {rec:.4f}")
 
+            print(f"\n=== Retraining on ALL {n_samples:,} samples for submission ===")
             self.scaler.fit(X)
             X_all_scaled = self.scaler.transform(X)
 
-            smote_all = SMOTE(random_state=42, k_neighbors=min(3, min(np.bincount(y)) - 1))
-            X_all_res, y_all_res = smote_all.fit_resample(X_all_scaled, y)
+            if use_smote:
+                smote_all = SMOTE(random_state=42, k_neighbors=min(3, min(np.bincount(y)) - 1))
+                X_all_fit, y_all_fit = smote_all.fit_resample(X_all_scaled, y)
+            else:
+                X_all_fit, y_all_fit = X_all_scaled, y
 
-            self.ensemble.fit(X_all_res, y_all_res)
-            self.voting_ensemble.fit(X_all_res, y_all_res)
+            if large:
+                for name, model in self.base_models.items():
+                    print(f"  Retraining {name} on full dataset...")
+                    model.fit(X_all_fit, y_all_fit)
+            else:
+                self.ensemble.fit(X_all_fit, y_all_fit)
+                if self.voting_ensemble is not self.ensemble:
+                    self.voting_ensemble.fit(X_all_fit, y_all_fit)
+
             self.X_train = X_all_scaled
             self.y_train = y
             self.is_trained = True
+            self._large_dataset = large
+            print("  Final models trained on full dataset.")
 
             self.cv_results = {
-                "cv_accuracy_mean": round(float(cv_accuracy.mean()), 4),
-                "cv_accuracy_std": round(float(cv_accuracy.std()), 4),
-                "cv_f1_mean": round(float(cv_f1.mean()), 4),
-                "cv_f1_std": round(float(cv_f1.std()), 4),
-                "cv_auc_mean": round(float(cv_auc.mean()), 4),
-                "cv_auc_std": round(float(cv_auc.std()), 4),
+                "n_train_samples": n_samples,
+                "n_features_selected": len(self.selected_features) if self.selected_features else len(feature_cols),
                 "holdout_stacking_acc": round(float(accuracy_score(y_val, (stack_proba >= self.optimal_threshold).astype(int))), 4),
                 "holdout_voting_acc": round(float(accuracy_score(y_val, (vote_proba >= self.optimal_threshold).astype(int))), 4),
                 "holdout_blended_acc": round(float(accuracy_score(y_val, blended_preds)), 4),
                 "holdout_blended_auc": round(float(roc_auc_score(y_val, blended_proba)), 4),
                 "optimal_blend_stack_weight": round(float(sw), 2),
                 "optimal_threshold": round(float(self.optimal_threshold), 2),
-                "n_features_selected": len(self.selected_features) if self.selected_features else len(feature_cols),
             }
 
             print(f"\n=== TI Threshold Constants (Paper #322) ===")
-            print(f"  TAU     = {TAU:.6f}")
-            print(f"  EPSILON = {EPSILON:.6f}")
-            print(f"  GAMMA   = {GAMMA:.6f}")
-            print(f"  LAMBDA  = {LAMBDA:.6f}")
-            print(f"  ETA     = {ETA:.6f}")
+            print(f"  TAU     = {TAU:.6f}  (CHSH optimal)")
+            print(f"  EPSILON = {EPSILON:.6f}  (existence threshold)")
+            print(f"  GAMMA   = {GAMMA:.6f}  (golden ratio threshold)")
+            print(f"  LAMBDA  = {LAMBDA:.6f}  (LCC threshold)")
+            print(f"  ETA     = {ETA:.6f}  (manifestation threshold)")
 
             return self.cv_results
 
@@ -608,10 +658,19 @@ class KaggleHeartDiseaseSubmission:
 
             X_test_scaled = self.scaler.transform(X_test)
 
-            sw, vw = self.optimal_blend_weights
-            stack_proba = self.ensemble.predict_proba(X_test_scaled)[:, 1]
-            vote_proba = self.voting_ensemble.predict_proba(X_test_scaled)[:, 1]
-            blended_proba = sw * stack_proba + vw * vote_proba
+            if getattr(self, '_large_dataset', False):
+                weights = {"xgb": 0.40, "lgb": 0.40, "et": 0.20}
+                blended_proba = sum(
+                    weights.get(n, 1.0 / len(self.base_models)) * m.predict_proba(X_test_scaled)[:, 1]
+                    for n, m in self.base_models.items()
+                )
+            elif self.voting_ensemble is not self.ensemble:
+                sw, vw = self.optimal_blend_weights
+                stack_proba = self.ensemble.predict_proba(X_test_scaled)[:, 1]
+                vote_proba = self.voting_ensemble.predict_proba(X_test_scaled)[:, 1]
+                blended_proba = sw * stack_proba + vw * vote_proba
+            else:
+                blended_proba = self.ensemble.predict_proba(X_test_scaled)[:, 1]
             predictions = (blended_proba >= self.optimal_threshold).astype(int)
 
             submission = pd.DataFrame()
@@ -619,7 +678,7 @@ class KaggleHeartDiseaseSubmission:
                 submission["id"] = test_ids.values
             else:
                 submission["id"] = range(len(predictions))
-            submission["target"] = predictions
+            submission["Heart Disease"] = predictions
 
             if os.path.dirname(output_path):
                 os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
