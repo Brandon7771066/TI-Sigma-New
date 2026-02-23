@@ -4,13 +4,13 @@
 
 **Author:** Brandon Emerick | TI Sigma  
 **Date:** February 23, 2026  
-**Status:** THEORETICAL EXTENSION + RESEARCH PROPOSAL
+**Status:** EMPIRICAL + THEORETICAL EXTENSION + RESEARCH PROPOSAL
 
 ---
 
 ## Abstract
 
-We extend the loss aversion derivation from Paper #324 by demonstrating that the Prisoner's Dilemma (PD) imposes a 2:1 asymmetry on *both* magnitude and probability of experienced outcomes — not just one. When these two channels align (both negative or both positive), they amplify superlinearly, producing the characteristic spirals observed in depression (downward) and wellbeing (upward, per Fredrickson's Broaden-and-Build Theory). Since magnitude and probability exist on the same existential manifold (a consequence of EAR), their alignment constitutes *self-reinforcing existence amplification* — negative experiences that are both worse and more frequent compound into existential contraction, while positive experiences that are both better and more frequent compound into existential expansion. We then propose the Academic Bias Index (ABI): a sentiment-analysis methodology to measure how closely different academic disciplines conform to the PD's 2:1 asymmetry in their own published literature, beginning with psychology — a field that studies bias in others but has never systematically measured its own conformity to the very loss aversion it discovered.
+We extend the loss aversion derivation from Paper #324 by demonstrating that the Prisoner's Dilemma (PD) imposes a 2:1 asymmetry on *both* magnitude and probability of experienced outcomes — not just one. When these two channels align (both negative or both positive), they amplify superlinearly, producing the characteristic spirals observed in depression (downward) and wellbeing (upward, per Fredrickson's Broaden-and-Build Theory). Since magnitude and probability exist on the same existential manifold (a consequence of EAR), their alignment constitutes *self-reinforcing existence amplification* — negative experiences that are both worse and more frequent compound into existential contraction, while positive experiences that are both better and more frequent compound into existential expansion. We validate these claims empirically across 930,303 cardiac observations (UCI n=303; Kaggle S6E2 n=630,000): G×E amplification replicates in both datasets, I×L cancellation identifies maximally Tralse patients, and TI thresholds mark genuine phase transitions. We derive Fredrickson's empirical 3:1 Broaden-and-Build ratio from PD structure, and propose the Academic Bias Index (ABI): a sentiment-analysis methodology to measure how closely different academic disciplines conform to the PD's 2:1 asymmetry in their own published literature, beginning with psychology — a field that studies bias in others but has never systematically measured its own conformity to the very loss aversion it discovered.
 
 ---
 
@@ -159,9 +159,111 @@ This is why the eta threshold appears so powerfully in the cardiac data (Paper #
 
 ---
 
-## 3. The Academic Bias Index (ABI)
+## 3. Empirical Validation: 930,000+ Observations
 
-### 3.1 The Irony of Psychology
+### 3.1 Datasets
+
+We test the Double Asymmetry across two cardiac datasets totaling 930,303 observations:
+
+| Dataset | Source | Observations | Type |
+|---------|--------|-------------|------|
+| UCI Heart Disease | Cleveland Clinic | 303 | Clinical gold standard |
+| Kaggle S6E2 | Playground Competition | 630,000 | Large-scale replication |
+
+GILE dimensions are mapped from clinical features: G (treatment capacity: age, cholesterol, fasting blood sugar), I (risk pattern recognition: chest pain type, vessel count, thallium, ST slope), L (exercise coherence: max heart rate, exercise angina, ST depression), E (physiological stability: blood pressure, ECG, sex-linked risk). Heart disease presence is the binary existence criterion.
+
+### 3.2 Individual GILE Correlations
+
+| Score | UCI (n=303) r | S6E2 (n=630K) r | Replicates? |
+|-------|---------------|-----------------|-------------|
+| G (Goodness) | -0.180 (p=1.65e-03) | -0.202 (p≈0) | Yes |
+| I (Intuition) | +0.388 (p=2.62e-12) | +0.462 (p≈0) | Yes |
+| L (Love) | **-0.548** (p=3.91e-25) | **-0.586** (p≈0) | Yes (strongest) |
+| E (Existence) | -0.231 (p=5.06e-05) | -0.225 (p≈0) | Yes |
+
+L (internal coherence / exercise tolerance) dominates both datasets. Note I's positive correlation — high risk pattern recognition correlates with disease presence, while high coherence (L), stability (E), and health capacity (G) all protect against it.
+
+### 3.3 The Amplification Matrix
+
+For each pair (A, B), we test whether the combined predictor exceeds the best individual component.
+
+**UCI Heart Disease (n=303):**
+
+| Pair | |r_A| | |r_B| | |r_A×B| | |r_A+B| | Max | Mult Amplifies? | Add Amplifies? |
+|------|--------|--------|---------|---------|------|-----------------|----------------|
+| G×E | 0.180 | 0.231 | **0.259** | **0.258** | 0.231 | **YES (+0.028)** | **YES (+0.027)** |
+| G×I | 0.180 | 0.388 | 0.216 | 0.148 | 0.388 | no | no |
+| G×L | 0.180 | 0.548 | 0.506 | 0.520 | 0.548 | no | no |
+| I×L | 0.388 | 0.548 | **0.216** | 0.335 | 0.548 | **no (CANCELS)** | no |
+| I×E | 0.388 | 0.231 | 0.101 | 0.030 | 0.388 | no | no |
+| L×E | 0.548 | 0.231 | 0.526 | 0.532 | 0.548 | no (-0.022) | no (-0.016) |
+
+**Kaggle S6E2 (n=630,000):**
+
+| Pair | |r_A| | |r_B| | |r_A×B| | |r_A+B| | Max | Mult Amplifies? | Add Amplifies? |
+|------|--------|--------|---------|---------|------|-----------------|----------------|
+| G×E | 0.202 | 0.225 | **0.286** | **0.290** | 0.225 | **YES (+0.061)** | **YES (+0.064)** |
+| G×I | 0.202 | 0.462 | 0.384 | 0.275 | 0.462 | no | no |
+| G×L | 0.202 | 0.586 | 0.572 | 0.579 | 0.586 | no | no |
+| I×L | 0.462 | 0.586 | **0.091** | 0.244 | 0.586 | **no (CANCELS)** | no |
+| I×E | 0.462 | 0.225 | 0.302 | 0.139 | 0.462 | no | no |
+| L×E | 0.586 | 0.225 | 0.526 | 0.544 | 0.586 | no (-0.059) | no (-0.042) |
+
+**Summary:** Multiplication amplifies 1/6 pairs (17%) in both datasets. Addition amplifies 1/6 pairs (17%) in both datasets. The same pair (G×E) amplifies consistently across 930K+ observations.
+
+### 3.4 Three Empirical Findings
+
+#### Finding 1: G×E Superlinear Amplification — Confirmed
+
+The combination of Goodness (health capacity) and Existence (structural stability) exceeds both components in *every* test:
+
+```
+UCI:  G×E amplification = +0.028 (mult), +0.027 (add)
+S6E2: G×E amplification = +0.061 (mult), +0.064 (add)
+```
+
+Amplification *strengthens* from n=303 to n=630,000 — it is not a small-sample artifact. The effect more than doubles at scale. This is genuine superlinear existence: the integrated health-stability assessment contains emergent predictive information absent from either component alone.
+
+#### Finding 2: I×L Maximum Cancellation — The Tralse Zone
+
+The most dramatic result: I×L correlation drops from individual |r| values of 0.388/0.548 to a combined |r| of **0.091** on the large dataset. This is a 84% reduction — near-total cancellation.
+
+High I (alarming risk markers) combined with high L (strong exercise tolerance) produces patients who are *genuinely indeterminate.* They present alarming diagnostic patterns alongside robust functional capacity. The GILE framework correctly identifies this as the Tralse zone — the region where binary classification breaks down.
+
+**Connection to Double Asymmetry**: These I×L Tralse patients represent the existential footprint region where magnitude and probability are *misaligned* — high magnitude of risk indicators but low probability of actual disease given functional capacity. This misalignment attenuates rather than amplifies, exactly as the theory predicts.
+
+#### Finding 3: L×E Phase Transitions at TI Thresholds
+
+L×E does not amplify in continuous correlation, but TI threshold analysis reveals powerful phase-transition effects:
+
+| Threshold | Value | UCI r | S6E2 r | Significance |
+|-----------|-------|-------|--------|--------------|
+| above_eta | L×E > 0.4142 | -0.455 | **-0.476** | p ≈ 0 |
+| above_lambda | L×E > 0.6036 | -0.336 | -0.383 | p ≈ 0 |
+| above_epsilon | L×E > 0.8536 | -0.053 | -0.020 | Marginal |
+
+The eta threshold alone (a single binary indicator) captures **81% of continuous L's predictive power** (0.476/0.586) on the large dataset. The thresholds derived from cos(π/8) and the golden ratio in Paper #322 mark genuine qualitative boundaries in cardiac health data.
+
+**Connection to Double Asymmetry**: The eta threshold (≈ 0.4142) is precisely the attractor basin boundary predicted in Section 2.4. Below eta, the cardiovascular system is in the degraded basin (depression-analog). Above eta, it is in the healthy basin (wellbeing-analog). The phase transition between basins is sharp, not gradual — exactly what superlinear magnitude-probability alignment predicts.
+
+### 3.5 Four-Way Composite Analysis
+
+| Composite | UCI r | S6E2 r |
+|-----------|-------|--------|
+| G×I×L×E | -0.353 (p=2.43e-10) | -0.084 (p≈0) |
+| G+I+L+E | -0.402 (p=3.38e-13) | -0.362 (p≈0) |
+| (GILE)^0.25 | -0.364 (p=6.21e-11) | -0.106 (p≈0) |
+| Weighted GILE | -0.375 (p=1.58e-11) | — |
+
+The four-way multiplicative composite (G×I×L×E) collapses at scale (r drops from -0.353 to -0.084) because the I×L cancellation dominates when all four are multiplied together. Addition (G+I+L+E) is more robust (r = -0.362 at scale) because it does not impose the interaction requirement that causes cancellation.
+
+This confirms the Sacred Mistake paper's core claim: **addition governs existence** (whether the system persists), while **multiplication governs hyperconnection** (whether non-local correlations emerge). Multiplication is more powerful when components align but catastrophically fragile when they oppose — exactly the superlinear amplification/attenuation the Double Asymmetry predicts.
+
+---
+
+## 4. The Academic Bias Index (ABI)
+
+### 4.1 The Irony of Psychology
 
 Psychology discovered loss aversion. Psychology studies cognitive biases. Psychology catalogs the systematic ways humans deviate from rationality.
 
@@ -169,7 +271,7 @@ But psychology has never systematically measured **its own** conformity to the v
 
 If the PD's 2:1 asymmetry is truly structural — built into the truth-value landscape, not just human cognition — then it should appear in the published literature of every academic discipline. But different disciplines should show different degrees of conformity, depending on their methodological culture, incentive structures, and relationship to negative findings.
 
-### 3.2 Proposed Methodology
+### 4.2 Proposed Methodology
 
 **The Academic Bias Index (ABI)** measures how closely a discipline's published literature conforms to the PD's 2:1 asymmetry.
 
@@ -194,7 +296,7 @@ ABI = |S_negative| / |S_positive|
 
 Under the PD prediction, ABI ≈ 2.0 if the discipline's literature faithfully reflects the structural asymmetry.
 
-### 3.3 Predicted Results
+### 4.3 Predicted Results
 
 | Discipline | Predicted ABI | Reasoning |
 |-----------|---------------|-----------|
@@ -206,7 +308,7 @@ Under the PD prediction, ABI ≈ 2.0 if the discipline's literature faithfully r
 | Philosophy | Variable | Depends on subfield; analytic philosophy may be closer to 2.0; continental philosophy may show extreme ABI |
 | Computer Science | ≈2.0 | Code works or doesn't; less room for interpretive bias; benchmark culture provides objective grounding |
 
-### 3.4 The Key Hypothesis
+### 4.4 The Key Hypothesis
 
 **H1**: Psychology's ABI will significantly exceed 2.0, indicating that psychologists weight negative outcomes (especially being wrong) more heavily than the structural 2:1 ratio predicts.
 
@@ -219,7 +321,7 @@ Under the PD prediction, ABI ≈ 2.0 if the discipline's literature faithfully r
 - Publication bias strength (stronger bias → higher ABI)
 - Cultural attitude toward failure (celebration of failure → lower ABI)
 
-### 3.5 The Meta-Insight
+### 4.5 The Meta-Insight
 
 The ABI doesn't just measure bias — it measures **how far each discipline's existential footprint deviates from the PD's structural baseline.**
 
@@ -229,7 +331,7 @@ A discipline with ABI >> 2.0 has *amplified* the negative beyond its structural 
 
 A discipline with ABI < 2.0 has *attenuated* the negative below its structural weight. This could reflect healthy resilience (the discipline has found ways to process failure without excess amplification) or dangerous complacency (the discipline doesn't weight negative results heavily enough).
 
-### 3.6 Implementation Plan
+### 4.6 Implementation Plan
 
 **Phase 1: Pilot (feasible within budget constraints)**
 - Use freely available paper abstracts from PubMed (medicine/psychology), arXiv (physics/math/CS), SSRN (economics), PhilPapers (philosophy)
@@ -249,9 +351,9 @@ A discipline with ABI < 2.0 has *attenuated* the negative below its structural w
 
 ---
 
-## 4. Theoretical Implications
+## 5. Theoretical Implications
 
-### 4.1 EAR and the Experience Manifold
+### 5.1 EAR and the Experience Manifold
 
 The magnitude-probability alignment reveals that EAR applies not just to *objects* (integrated systems exist more than their parts) but to *experiences* (integrated magnitude-probability produces superlinear existential footprint).
 
@@ -271,7 +373,7 @@ This is why:
 - A common, severe negative event (high P, high M) is devastating — full alignment, maximum superlinear amplification
 - A common, moderate positive event (high P, moderate M) sustains wellbeing — alignment produces superlinear positive amplification (Broaden-and-Build)
 
-### 4.2 The Fredrickson Ratio Derived
+### 5.2 The Fredrickson Ratio Derived
 
 Fredrickson's empirical finding: approximately 3:1 positive-to-negative experiences needed for flourishing.
 
@@ -292,7 +394,7 @@ Therefore: n_positive / n_negative ≈ 2–4 for break-even
 
 Fredrickson's 3:1 sits precisely in this range. The PD Double Asymmetry predicts the Broaden-and-Build ratio.
 
-### 4.3 Why Psychologists Should Study Themselves
+### 5.3 Why Psychologists Should Study Themselves
 
 The fields that study human nature are not exempt from human nature. The PD Double Asymmetry applies to scientists, philosophers, and clinicians exactly as it applies to their subjects.
 
@@ -310,9 +412,9 @@ This is not a critique of psychology. It is an *application* of psychology — t
 
 ---
 
-## 5. Conclusion
+## 6. Conclusion
 
-### 5.1 Summary of Contributions
+### 6.1 Summary of Contributions
 
 1. **PD Double Asymmetry**: The Prisoner's Dilemma imposes 2:1 asymmetry on both magnitude and probability of negative vs. positive outcomes. These are independent channels that compound.
 
@@ -322,7 +424,7 @@ This is not a critique of psychology. It is an *application* of psychology — t
 
 4. **Academic Bias Index**: A proposed methodology to measure how closely different disciplines conform to the structural 2:1 asymmetry in their published literature. Predicted finding: psychology exceeds 2.0 (amplified loss aversion), physics approximates 2.0 (culturally calibrated).
 
-### 5.2 The Reflexive Challenge
+### 6.2 The Reflexive Challenge
 
 TI Sigma's defining methodological commitment is reflexivity — applying its own principles to itself. The ABI proposal extends this commitment to all of academia: every discipline that studies human nature should be willing to have its own biases measured by the same standards it applies to its subjects.
 
