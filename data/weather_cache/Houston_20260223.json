@@ -1,0 +1,90 @@
+[
+  {
+    "city": "Houston",
+    "date": "2026-02-22",
+    "high_temp_f": 56,
+    "low_temp_f": 41,
+    "conditions": "",
+    "wind_speed_mph": 0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-23",
+    "high_temp_f": 63,
+    "low_temp_f": 42,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-24",
+    "high_temp_f": 71,
+    "low_temp_f": 61,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-25",
+    "high_temp_f": 79,
+    "low_temp_f": 67,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-26",
+    "high_temp_f": 83,
+    "low_temp_f": 55,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-27",
+    "high_temp_f": 77,
+    "low_temp_f": 55,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-02-28",
+    "high_temp_f": 80,
+    "low_temp_f": 60,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Houston",
+    "date": "2026-03-01",
+    "high_temp_f": 79,
+    "low_temp_f": 64,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

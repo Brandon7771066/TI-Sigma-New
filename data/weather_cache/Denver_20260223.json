@@ -1,0 +1,79 @@
+[
+  {
+    "city": "Denver",
+    "date": "2026-02-22",
+    "high_temp_f": 51,
+    "low_temp_f": 26,
+    "conditions": "Sunny",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-23",
+    "high_temp_f": 66,
+    "low_temp_f": 34,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-24",
+    "high_temp_f": 70,
+    "low_temp_f": 42,
+    "conditions": "Partly Sunny",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-25",
+    "high_temp_f": 68,
+    "low_temp_f": 35,
+    "conditions": "Partly Sunny then Chance Light Rain",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-26",
+    "high_temp_f": 65,
+    "low_temp_f": 38,
+    "conditions": "Sunny",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-27",
+    "high_temp_f": 67,
+    "low_temp_f": 36,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 8.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Denver",
+    "date": "2026-02-28",
+    "high_temp_f": 63,
+    "low_temp_f": 30,
+    "conditions": "Sunny",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

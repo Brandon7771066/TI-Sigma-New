@@ -1,45 +1,62 @@
 """
-TI-FRAMEWORK-ENHANCED HEART DISEASE CLASSIFIER
-=================================================
-Kaggle heart disease prediction competition engine using the UCI/Cleveland
-dataset with 14 standard features enhanced by GILE-dimension feature
-engineering and Tralse medical confidence scoring.
+TI-FRAMEWORK-ENHANCED HEART DISEASE CLASSIFIER V2
+====================================================
+Kaggle Playground Series S6E2 competition engine targeting 95%+ accuracy.
 
-FEATURES:
-- Load/generate UCI Cleveland heart disease data (14 features + target)
-- GILE feature engineering mapping clinical features to TI dimensions
-- Ensemble classifier (LogisticRegression, RandomForest, GradientBoosting, SVM)
-- Tralse confidence scoring for medical prediction uncertainty
-- Cross-validation, EDA, ROC data, Kaggle submission generation
+MODELS:
+- XGBoost, LightGBM, CatBoost-style GBM, RandomForest, SVM, LogisticRegression
+- Stacking ensemble with meta-learner
+- SMOTE oversampling for class balance
+- GridSearchCV hyperparameter optimization
+- 10-fold stratified cross-validation
 
-GILE DIMENSIONS:
-  G (Goodness/Treatment): Treatment response likelihood from age, cholesterol
-  I (Intuition/Risk): Intuitive risk pattern from symptom clustering
+GILE FEATURE ENGINEERING:
+  G (Goodness/Treatment): Treatment response from age, cholesterol
+  I (Intuition/Risk): Risk pattern from symptom clustering
   L (Love/Lifestyle): Exercise tolerance, resting HR, quality-of-life
   E (Existence/Stability): Blood pressure, ECG physiological stability
 
-Tralse Medical Confidence:
-  True zone (>0.75): High confidence prediction
-  Tralse zone (0.35-0.75): Uncertain — flag for specialist review
-  False zone (<0.35): High confidence negative prediction
+TI EXACT THRESHOLDS (Paper #322):
+  τ = cos(π/8) ≈ 0.9239 (CHSH optimal)
+  ε = cos²(π/8) ≈ 0.8536 (existence threshold)
+  γ = cos²(π/5) ≈ 0.6545 (golden ratio threshold)
+  λ = (√2+1)/4 ≈ 0.6036 (LCC threshold)
+  η = √2−1 ≈ 0.4142 (manifestation threshold)
 """
 
 import numpy as np
 import pandas as pd
+import math
 from typing import Dict, List, Optional, Tuple, Any
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
+from sklearn.ensemble import (
+    RandomForestClassifier, GradientBoostingClassifier,
+    VotingClassifier, StackingClassifier, ExtraTreesClassifier
+)
 from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
+from sklearn.model_selection import (
+    train_test_split, cross_val_score, StratifiedKFold, RandomizedSearchCV
+)
 from sklearn.metrics import (
     accuracy_score, precision_score, recall_score, f1_score,
     roc_auc_score, confusion_matrix, classification_report, roc_curve
 )
 from sklearn.calibration import CalibratedClassifierCV
+from sklearn.neighbors import KNeighborsClassifier
+import xgboost as xgb
+import lightgbm as lgb
+from imblearn.over_sampling import SMOTE
+from imblearn.pipeline import Pipeline as ImbPipeline  # used for CV pipeline
 import warnings
 
 warnings.filterwarnings('ignore')
+
+TAU = math.cos(math.pi / 8)
+EPSILON = math.cos(math.pi / 8) ** 2
+GAMMA = math.cos(math.pi / 5) ** 2
+LAMBDA_LCC = (math.sqrt(2) + 1) / 4
+ETA = math.sqrt(2) - 1
 
 FEATURE_COLUMNS = [
     'age', 'sex', 'cp', 'trestbps', 'chol', 'fbs',
@@ -94,13 +111,14 @@ TRALSE_THRESHOLDS = {
 
 class HeartDiseasePredictor:
     """
-    TI-Framework-Enhanced Heart Disease Classifier for Kaggle competition.
-    Uses GILE feature engineering and Tralse confidence scoring.
+    TI-Framework-Enhanced Heart Disease Classifier V2 for Kaggle competition.
+    Targets 95%+ accuracy with XGBoost, LightGBM, SMOTE, and stacking ensemble.
     """
 
     def __init__(self):
         self.models = {}
         self.ensemble = None
+        self.stacking_model = None
         self.scaler = StandardScaler()
         self.feature_columns = []
         self.is_trained = False
@@ -108,6 +126,7 @@ class HeartDiseasePredictor:
         self.model_comparison = {}
         self.gile_feature_names = []
         self.best_model_name = None
+        self.use_smote = True
 
     def load_data(self, filepath: str = None) -> pd.DataFrame:
         """Load heart disease dataset from CSV (Cleveland/UCI format)."""
@@ -192,7 +211,7 @@ class HeartDiseasePredictor:
         return df
 
     def engineer_gile_features(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Add GILE-dimension engineered features to the dataframe."""
+        """Add GILE-dimension engineered features plus advanced interactions."""
         result = df.copy()
 
         age_norm = (result['age'] - 29) / (77 - 29)
@@ -255,18 +274,33 @@ class HeartDiseasePredictor:
             1.0 - result['GILE_composite']
         ).round(4)
 
+        result['age_thalach_ratio'] = (result['age'] / (result['thalach'] + 1)).round(4)
+        result['chol_bp_product'] = (result['chol'] * result['trestbps'] / 10000).round(4)
+        result['oldpeak_slope'] = (result['oldpeak'] * (result['slope'] + 1)).round(4)
+        result['ca_thal_risk'] = (result['ca'] * thal_risk).round(4)
+        result['exercise_risk'] = (result['exang'] * result['oldpeak']).round(4)
+        result['age_sex_risk'] = (age_norm * result['sex']).round(4)
+        result['heart_reserve'] = ((220 - result['age'] - result['thalach']) / 220).round(4)
+
+        le_product = l_score * e_score
+        result['above_eta'] = (le_product > ETA).astype(int)
+        result['above_lambda'] = (le_product > LAMBDA_LCC).astype(int)
+        result['above_epsilon'] = (le_product > EPSILON).astype(int)
+
         self.gile_feature_names = [
             'G_score', 'I_score', 'L_score', 'E_score',
             'GI_interaction', 'GL_interaction', 'GE_interaction',
             'IL_interaction', 'IE_interaction', 'LE_interaction',
             'GILE_composite', 'tralse_risk_indicator',
+            'age_thalach_ratio', 'chol_bp_product', 'oldpeak_slope',
+            'ca_thal_risk', 'exercise_risk', 'age_sex_risk', 'heart_reserve',
+            'above_eta', 'above_lambda', 'above_epsilon',
         ]
         return result
 
-    def preprocess(self, df: pd.DataFrame) -> tuple:
-        """Feature engineering, scaling, and train/test split."""
+    def preprocess(self, df: pd.DataFrame, test_size: float = 0.2) -> tuple:
+        """Feature engineering, scaling, SMOTE, and train/test split."""
         df_enhanced = self.engineer_gile_features(df)
-
         self.feature_columns = FEATURE_COLUMNS + self.gile_feature_names
 
         missing_cols = [c for c in self.feature_columns if c not in df_enhanced.columns]
@@ -277,40 +311,96 @@ class HeartDiseasePredictor:
         y = df_enhanced['target'].values
 
         X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42, stratify=y
+            X, y, test_size=test_size, random_state=42, stratify=y
         )
 
         self.scaler.fit(X_train)
         X_train_scaled = self.scaler.transform(X_train)
         X_test_scaled = self.scaler.transform(X_test)
 
+        if self.use_smote and len(np.unique(y_train)) > 1:
+            try:
+                smote = SMOTE(random_state=42, k_neighbors=min(5, min(np.bincount(y_train)) - 1))
+                X_train_scaled, y_train = smote.fit_resample(X_train_scaled, y_train)
+            except Exception:
+                pass
+
         return X_train_scaled, X_test_scaled, y_train, y_test
 
-    def train_ensemble(self, X_train: np.ndarray, y_train: np.ndarray) -> dict:
-        """Train multiple models and build a voting ensemble."""
-        lr = LogisticRegression(
-            C=1.0, max_iter=1000, random_state=42, solver='lbfgs'
-        )
-        rf = RandomForestClassifier(
-            n_estimators=200, max_depth=10, min_samples_split=5,
-            min_samples_leaf=2, random_state=42, n_jobs=-1
-        )
-        gb = GradientBoostingClassifier(
-            n_estimators=150, max_depth=4, learning_rate=0.1,
-            subsample=0.8, random_state=42
-        )
-        svm_base = SVC(
-            C=1.0, kernel='rbf', gamma='scale', random_state=42, probability=True
-        )
-
-        model_specs = {
-            'logistic_regression': lr,
-            'random_forest': rf,
-            'gradient_boosting': gb,
-            'svm': svm_base,
+    def _build_models(self) -> dict:
+        """Build all candidate models with tuned hyperparameters."""
+        models = {
+            'xgboost': xgb.XGBClassifier(
+                n_estimators=500,
+                max_depth=5,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                gamma=0.1,
+                reg_alpha=0.1,
+                reg_lambda=1.0,
+                random_state=42,
+                eval_metric='logloss',
+                use_label_encoder=False,
+                n_jobs=-1,
+            ),
+            'lightgbm': lgb.LGBMClassifier(
+                n_estimators=500,
+                max_depth=5,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_samples=10,
+                reg_alpha=0.1,
+                reg_lambda=1.0,
+                random_state=42,
+                verbose=-1,
+                n_jobs=-1,
+            ),
+            'gradient_boosting': GradientBoostingClassifier(
+                n_estimators=300,
+                max_depth=4,
+                learning_rate=0.05,
+                subsample=0.8,
+                min_samples_split=5,
+                min_samples_leaf=3,
+                random_state=42,
+            ),
+            'random_forest': RandomForestClassifier(
+                n_estimators=500,
+                max_depth=12,
+                min_samples_split=3,
+                min_samples_leaf=2,
+                max_features='sqrt',
+                random_state=42,
+                n_jobs=-1,
+            ),
+            'extra_trees': ExtraTreesClassifier(
+                n_estimators=500,
+                max_depth=12,
+                min_samples_split=3,
+                min_samples_leaf=2,
+                random_state=42,
+                n_jobs=-1,
+            ),
+            'logistic_regression': LogisticRegression(
+                C=1.0, max_iter=2000, random_state=42, solver='lbfgs'
+            ),
+            'svm': SVC(
+                C=10.0, kernel='rbf', gamma='scale', random_state=42, probability=True
+            ),
+            'knn': KNeighborsClassifier(
+                n_neighbors=7, weights='distance', metric='minkowski', p=2, n_jobs=-1,
+            ),
         }
+        return models
 
+    def train_ensemble(self, X_train: np.ndarray, y_train: np.ndarray) -> dict:
+        """Train all models, build voting and stacking ensembles."""
+        model_specs = self._build_models()
         results = {}
+
         for name, model in model_specs.items():
             try:
                 model.fit(X_train, y_train)
@@ -330,34 +420,61 @@ class HeartDiseasePredictor:
                 results[name] = {'status': 'failed', 'error': str(e)}
 
         try:
-            self.ensemble = VotingClassifier(
-                estimators=[
-                    ('lr', self.models.get('logistic_regression', lr)),
-                    ('rf', self.models.get('random_forest', rf)),
-                    ('gb', self.models.get('gradient_boosting', gb)),
-                    ('svm', self.models.get('svm', svm_base)),
-                ],
-                voting='soft',
-                weights=[0.20, 0.30, 0.35, 0.15],
-            )
-            self.ensemble.fit(X_train, y_train)
-            self.models['ensemble'] = self.ensemble
+            estimators = [
+                (name, self.models[name])
+                for name in ['xgboost', 'lightgbm', 'gradient_boosting', 'random_forest', 'extra_trees']
+                if name in self.models
+            ]
+            if len(estimators) >= 3:
+                self.ensemble = VotingClassifier(
+                    estimators=estimators,
+                    voting='soft',
+                    weights=[0.25, 0.25, 0.20, 0.15, 0.15],
+                )
+                self.ensemble.fit(X_train, y_train)
+                self.models['voting_ensemble'] = self.ensemble
 
-            ens_pred = self.ensemble.predict(X_train)
-            ens_proba = self.ensemble.predict_proba(X_train)[:, 1]
-            results['ensemble'] = {
-                'train_accuracy': round(float(accuracy_score(y_train, ens_pred)), 4),
-                'train_auc': round(float(roc_auc_score(y_train, ens_proba)), 4),
-                'status': 'trained',
-                'weights': [0.20, 0.30, 0.35, 0.15],
-            }
+                ens_pred = self.ensemble.predict(X_train)
+                ens_proba = self.ensemble.predict_proba(X_train)[:, 1]
+                results['voting_ensemble'] = {
+                    'train_accuracy': round(float(accuracy_score(y_train, ens_pred)), 4),
+                    'train_auc': round(float(roc_auc_score(y_train, ens_proba)), 4),
+                    'status': 'trained',
+                }
         except Exception as e:
-            results['ensemble'] = {'status': 'failed', 'error': str(e)}
+            results['voting_ensemble'] = {'status': 'failed', 'error': str(e)}
+
+        try:
+            stack_estimators = [
+                (name, self.models[name])
+                for name in ['xgboost', 'lightgbm', 'random_forest', 'extra_trees', 'svm']
+                if name in self.models
+            ]
+            if len(stack_estimators) >= 3:
+                self.stacking_model = StackingClassifier(
+                    estimators=stack_estimators,
+                    final_estimator=LogisticRegression(C=1.0, max_iter=2000, random_state=42),
+                    cv=3,
+                    stack_method='predict_proba',
+                    n_jobs=-1,
+                )
+                self.stacking_model.fit(X_train, y_train)
+                self.models['stacking_ensemble'] = self.stacking_model
+
+                stack_pred = self.stacking_model.predict(X_train)
+                stack_proba = self.stacking_model.predict_proba(X_train)[:, 1]
+                results['stacking_ensemble'] = {
+                    'train_accuracy': round(float(accuracy_score(y_train, stack_pred)), 4),
+                    'train_auc': round(float(roc_auc_score(y_train, stack_proba)), 4),
+                    'status': 'trained',
+                }
+        except Exception as e:
+            results['stacking_ensemble'] = {'status': 'failed', 'error': str(e)}
 
         best_name = max(
             [k for k, v in results.items() if v.get('status') == 'trained'],
             key=lambda k: results[k].get('train_auc', 0),
-            default='ensemble'
+            default='xgboost'
         )
         self.best_model_name = best_name
         self.model_comparison = results
@@ -366,17 +483,46 @@ class HeartDiseasePredictor:
 
         return results
 
+    def tune_xgboost(self, X_train: np.ndarray, y_train: np.ndarray) -> dict:
+        """Hyperparameter tuning for XGBoost using GridSearchCV."""
+        param_grid = {
+            'max_depth': [3, 4, 5, 6],
+            'learning_rate': [0.01, 0.05, 0.1],
+            'n_estimators': [200, 300, 500],
+            'min_child_weight': [1, 3, 5],
+            'subsample': [0.7, 0.8, 0.9],
+            'colsample_bytree': [0.7, 0.8, 0.9],
+        }
+
+        base_model = xgb.XGBClassifier(
+            random_state=42, eval_metric='logloss',
+            use_label_encoder=False, n_jobs=-1,
+        )
+
+        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+        from sklearn.model_selection import RandomizedSearchCV
+        search = RandomizedSearchCV(
+            base_model, param_grid, n_iter=50, cv=skf,
+            scoring='roc_auc', random_state=42, n_jobs=-1, verbose=0,
+        )
+        search.fit(X_train, y_train)
+
+        self.models['xgboost_tuned'] = search.best_estimator_
+        return {
+            'best_params': search.best_params_,
+            'best_score': round(float(search.best_score_), 4),
+            'status': 'tuned',
+        }
+
     def predict_with_tralse(self, X: np.ndarray) -> List[Dict]:
-        """
-        Predict with Tralse confidence scoring.
-        Returns per-patient predictions with True/Tralse/False classification.
-        """
+        """Predict with Tralse confidence scoring."""
         if not self.is_trained:
             raise RuntimeError("Models not trained. Call train_ensemble first.")
 
-        model = self.models.get(self.best_model_name, self.ensemble)
+        model = self.models.get(self.best_model_name)
         if model is None:
-            raise RuntimeError("No trained model available.")
+            model = self.ensemble or list(self.models.values())[0]
 
         probas = model.predict_proba(X)[:, 1]
         predictions = []
@@ -419,15 +565,14 @@ class HeartDiseasePredictor:
 
     def _decompose_uncertainty(self, x_single: np.ndarray) -> Dict:
         """Calculate per-patient uncertainty decomposition across models."""
-        if len(self.models) < 2:
+        base_models = [n for n in self.models if 'ensemble' not in n]
+        if len(base_models) < 2:
             return {'aleatoric': 0.5, 'epistemic': 0.5, 'total': 1.0}
 
         model_probs = []
-        for name, model in self.models.items():
-            if name == 'ensemble':
-                continue
+        for name in base_models:
             try:
-                p = model.predict_proba(x_single)[:, 1][0]
+                p = self.models[name].predict_proba(x_single)[:, 1][0]
                 model_probs.append(float(p))
             except Exception:
                 continue
@@ -447,10 +592,7 @@ class HeartDiseasePredictor:
             'model_agreement': round(1.0 - epistemic * 4, 4),
             'individual_probs': {
                 name: round(p, 4)
-                for name, p in zip(
-                    [n for n in self.models if n != 'ensemble'],
-                    model_probs
-                )
+                for name, p in zip(base_models, model_probs)
             },
         }
 
@@ -492,6 +634,11 @@ class HeartDiseasePredictor:
         tralse_summary = self._tralse_summary(tralse_predictions, y_test)
         results['tralse_analysis'] = tralse_summary
 
+        valid_results = {k: v for k, v in results.items() if isinstance(v, dict) and 'auc_roc' in v}
+        if valid_results:
+            best_name = max(valid_results, key=lambda k: valid_results[k]['auc_roc'])
+            self.best_model_name = best_name
+
         self.model_comparison.update(results)
         return results
 
@@ -504,9 +651,7 @@ class HeartDiseasePredictor:
         zone_stats = {}
         for zone, indices in zones.items():
             if not indices:
-                zone_stats[zone] = {
-                    'count': 0, 'percentage': 0, 'accuracy': None,
-                }
+                zone_stats[zone] = {'count': 0, 'percentage': 0, 'accuracy': None}
                 continue
 
             zone_preds = [predictions[i]['prediction'] for i in indices]
@@ -534,7 +679,7 @@ class HeartDiseasePredictor:
     def feature_importance_gile(self, model=None) -> Dict:
         """Map feature importances to GILE dimensions."""
         if model is None:
-            model = self.models.get('random_forest') or self.models.get('gradient_boosting')
+            model = self.models.get('xgboost') or self.models.get('random_forest') or self.models.get('gradient_boosting')
         if model is None:
             raise RuntimeError("No tree-based model available for feature importance.")
 
@@ -605,7 +750,7 @@ class HeartDiseasePredictor:
         X_test = test_enhanced[self.feature_columns].values
         X_test_scaled = self.scaler.transform(X_test)
 
-        model = self.models.get(self.best_model_name, self.ensemble)
+        model = self.models.get(self.best_model_name) or self.ensemble
         probas = model.predict_proba(X_test_scaled)[:, 1]
         preds = (probas >= 0.5).astype(int)
 
@@ -621,7 +766,7 @@ class HeartDiseasePredictor:
 
         return output_path
 
-    def cross_validate(self, X: np.ndarray, y: np.ndarray, cv: int = 5) -> Dict:
+    def cross_validate(self, X: np.ndarray, y: np.ndarray, cv: int = 10) -> Dict:
         """K-fold cross-validation for all models."""
         if not self.is_trained:
             raise RuntimeError("Models not trained.")
@@ -675,7 +820,6 @@ class HeartDiseasePredictor:
                     'skew': round(float(df[col].skew()), 4),
                     'kurtosis': round(float(df[col].kurtosis()), 4),
                 }
-
                 if col in FEATURE_DESCRIPTIONS:
                     stats['description'] = FEATURE_DESCRIPTIONS[col]
 
@@ -693,8 +837,7 @@ class HeartDiseasePredictor:
             report['target_distribution'] = {
                 'counts': target_counts,
                 'percentages': {
-                    k: round(v / df.shape[0] * 100, 1)
-                    for k, v in target_counts.items()
+                    k: round(v / df.shape[0] * 100, 1) for k, v in target_counts.items()
                 },
                 'balance_ratio': round(
                     min(target_counts.values()) / max(target_counts.values()), 3
@@ -807,9 +950,11 @@ class HeartDiseasePredictor:
         X_train, X_test, y_train, y_test = self.preprocess(df)
         training_results = self.train_ensemble(X_train, y_train)
         eval_results = self.evaluate(X_test, y_test)
-        cv_results = self.cross_validate(X_train, y_train, cv=5)
+        cv_results = self.cross_validate(X_train, y_train, cv=10)
 
-        best_model = self.models.get(self.best_model_name, self.ensemble)
+        best_model = self.models.get(self.best_model_name)
+        if best_model is None:
+            best_model = list(self.models.values())[0]
         best_proba = best_model.predict_proba(X_test)[:, 1]
         roc_data = self.plot_roc_data(y_test, best_proba)
 
@@ -834,6 +979,13 @@ class HeartDiseasePredictor:
             'model_comparison': self.get_model_comparison(),
             'best_model': self.best_model_name,
             'sample_predictions': tralse_predictions[:10],
+            'ti_thresholds': {
+                'tau': round(TAU, 4),
+                'epsilon': round(EPSILON, 4),
+                'gamma': round(GAMMA, 4),
+                'lambda_lcc': round(LAMBDA_LCC, 4),
+                'eta': round(ETA, 4),
+            },
         }
 
     def get_patient_report(self, patient_data: Dict) -> Dict:
@@ -938,15 +1090,16 @@ class HeartDiseasePredictor:
 
 
 def demo():
-    """Run a standalone demo of the heart disease predictor."""
+    """Run a standalone demo of the heart disease predictor V2."""
     predictor = HeartDiseasePredictor()
 
     print("=" * 70)
-    print("TI-FRAMEWORK HEART DISEASE PREDICTOR — DEMO")
+    print("TI-FRAMEWORK HEART DISEASE PREDICTOR V2 — DEMO")
+    print(f"TI Thresholds: tau={TAU:.4f}, epsilon={EPSILON:.4f}, eta={ETA:.4f}")
     print("=" * 70)
 
-    df = predictor.generate_sample_data(500)
-    print(f"\nGenerated {len(df)} samples")
+    df = predictor.load_data()
+    print(f"\nLoaded {len(df)} samples")
     print(f"Target distribution: {df['target'].value_counts().to_dict()}")
 
     eda = predictor.generate_eda_report(df)
@@ -963,20 +1116,26 @@ def demo():
         print(f"  {dim}: mean={info['mean']:.3f}, discriminative_power={info.get('discriminative_power', 'N/A')}")
 
     X_train, X_test, y_train, y_test = predictor.preprocess(df)
-    print(f"\nTrain: {X_train.shape}, Test: {X_test.shape}")
-    print(f"Features: {len(predictor.feature_columns)} (13 original + {len(predictor.gile_feature_names)} GILE)")
+    print(f"\nTrain: {X_train.shape} (after SMOTE), Test: {X_test.shape}")
+    print(f"Features: {len(predictor.feature_columns)} (13 original + {len(predictor.gile_feature_names)} engineered)")
 
+    print("\nTraining 8 models + 2 ensembles...")
     training = predictor.train_ensemble(X_train, y_train)
     print("\nTraining Results:")
-    for name, metrics in training.items():
+    for name, metrics in sorted(training.items(), key=lambda x: x[1].get('train_auc', 0), reverse=True):
         if metrics.get('status') == 'trained':
             print(f"  {name}: acc={metrics['train_accuracy']:.4f}, auc={metrics['train_auc']:.4f}")
 
     eval_results = predictor.evaluate(X_test, y_test)
-    print("\nTest Evaluation:")
-    for name, metrics in eval_results.items():
-        if isinstance(metrics, dict) and 'accuracy' in metrics:
-            print(f"  {name}: acc={metrics['accuracy']:.4f}, auc={metrics['auc_roc']:.4f}, f1={metrics['f1']:.4f}")
+    print("\n*** TEST EVALUATION ***")
+    sorted_models = sorted(
+        [(n, m) for n, m in eval_results.items() if isinstance(m, dict) and 'accuracy' in m],
+        key=lambda x: x[1]['accuracy'], reverse=True
+    )
+    for name, metrics in sorted_models:
+        print(f"  {name}: acc={metrics['accuracy']:.4f}, auc={metrics['auc_roc']:.4f}, f1={metrics['f1']:.4f}")
+
+    print(f"\n  BEST MODEL: {predictor.best_model_name}")
 
     tralse_preds = predictor.predict_with_tralse(X_test)
     tralse_dist = {}
@@ -987,17 +1146,18 @@ def demo():
     print(f"Specialist reviews needed: {sum(1 for p in tralse_preds if p['specialist_review_needed'])}/{len(tralse_preds)}")
 
     importance = predictor.feature_importance_gile()
-    print("\nGILE Feature Importance (normalized):")
-    for dim, val in importance['gile_normalized'].items():
-        tw = importance['tralse_weighted_importance'][dim]
-        print(f"  {dim}: {val:.4f} [{tw['confidence']} confidence, {tw['zone']}]")
+    if 'error' not in importance:
+        print("\nGILE Feature Importance (normalized):")
+        for dim, val in importance['gile_normalized'].items():
+            tw = importance['tralse_weighted_importance'][dim]
+            print(f"  {dim}: {val:.4f} [{tw['confidence']} confidence, {tw['zone']}]")
 
+    print("\n5-Fold Cross-Validation (on training data):")
     cv = predictor.cross_validate(X_train, y_train, cv=5)
-    print("\n5-Fold Cross-Validation:")
-    for name, res in cv.items():
+    for name, res in sorted(cv.items(), key=lambda x: x[1].get('accuracy_mean', 0), reverse=True):
         if 'accuracy_mean' in res:
-            print(f"  {name}: acc={res['accuracy_mean']:.4f}±{res['accuracy_std']:.4f}, "
-                  f"auc={res['auc_mean']:.4f}±{res['auc_std']:.4f}")
+            print(f"  {name}: acc={res['accuracy_mean']:.4f}+/-{res['accuracy_std']:.4f}, "
+                  f"auc={res['auc_mean']:.4f}+/-{res['auc_std']:.4f}")
 
     sample_patient = {
         'age': 63, 'sex': 1, 'cp': 0, 'trestbps': 145, 'chol': 233,

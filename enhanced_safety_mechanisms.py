@@ -3,19 +3,32 @@ Enhanced Safety Mechanisms for Mood Amplifier
 Implements automatic kill switches and monitoring
 """
 
+import math
 import numpy as np
 from dataclasses import dataclass
 from typing import Optional, Callable
 import time
+
+# Paper #322 TI Constants - Exact Mathematical Values
+TAU = math.cos(math.pi / 8)  # cos(π/8) ≈ 0.9239 (CHSH optimal)
+EPSILON = math.cos(math.pi / 8) ** 2  # cos²(π/8) ≈ 0.8536 (existence threshold)
+GAMMA = math.cos(math.pi / 5) ** 2  # cos²(π/5) ≈ 0.6545 (golden ratio threshold)
+LAMBDA = (math.sqrt(2) + 1) / 4  # (√2+1)/4 ≈ 0.6036 (LCC threshold)
+ETA = math.sqrt(2) - 1  # √2−1 ≈ 0.4142 (manifestation threshold)
 
 @dataclass
 class SafetyMonitor:
     """Automatic safety monitoring with kill switches"""
     
     # Safety thresholds
-    lcc_max: float = 0.85  # Maximum safe LCC
+    lcc_max: float = None  # Maximum safe LCC (set in __post_init__)
     lcc_rate_max: float = 0.3  # Maximum change rate
     variance_min: float = 1e-10  # Minimum variance (sensor check)
+    
+    def __post_init__(self):
+        """Initialize lcc_max with EPSILON if not provided"""
+        if self.lcc_max is None:
+            self.lcc_max = EPSILON
     
     # State tracking
     last_lcc: float = 0.0
@@ -196,7 +209,7 @@ if __name__ == '__main__':
     print("=" * 60)
     print("\nThis module provides:")
     print("  ✅ Automatic sensor disconnection detection")
-    print("  ✅ Overcoupling prevention (LCC > 0.85)")
+    print(f"  ✅ Overcoupling prevention (LCC > {EPSILON:.4f})")
     print("  ✅ Rapid change rate limiting")
     print("  ✅ Automatic emergency shutdown")
     print("  ✅ Violation counting and enforcement")

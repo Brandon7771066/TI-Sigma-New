@@ -1,0 +1,79 @@
+[
+  {
+    "city": "Phoenix",
+    "date": "2026-02-22",
+    "high_temp_f": 82,
+    "low_temp_f": 55,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-23",
+    "high_temp_f": 85,
+    "low_temp_f": 55,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-24",
+    "high_temp_f": 86,
+    "low_temp_f": 58,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-25",
+    "high_temp_f": 88,
+    "low_temp_f": 61,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-26",
+    "high_temp_f": 90,
+    "low_temp_f": 62,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-27",
+    "high_temp_f": 92,
+    "low_temp_f": 63,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Phoenix",
+    "date": "2026-02-28",
+    "high_temp_f": 93,
+    "low_temp_f": 64,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

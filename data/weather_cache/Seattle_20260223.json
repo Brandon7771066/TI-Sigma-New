@@ -1,0 +1,79 @@
+[
+  {
+    "city": "Seattle",
+    "date": "2026-02-22",
+    "high_temp_f": 52,
+    "low_temp_f": 44,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 9.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-23",
+    "high_temp_f": 49,
+    "low_temp_f": 40,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-24",
+    "high_temp_f": 48,
+    "low_temp_f": 37,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-25",
+    "high_temp_f": 51,
+    "low_temp_f": 41,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-26",
+    "high_temp_f": 51,
+    "low_temp_f": 40,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 9.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-27",
+    "high_temp_f": 49,
+    "low_temp_f": 35,
+    "conditions": "Light Rain Likely",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Seattle",
+    "date": "2026-02-28",
+    "high_temp_f": 48,
+    "low_temp_f": 34,
+    "conditions": "Slight Chance Rain And Snow",
+    "wind_speed_mph": 3.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

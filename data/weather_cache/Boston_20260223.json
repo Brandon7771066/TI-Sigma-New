@@ -1,0 +1,90 @@
+[
+  {
+    "city": "Boston",
+    "date": "2026-02-22",
+    "high_temp_f": 43,
+    "low_temp_f": 28,
+    "conditions": "",
+    "wind_speed_mph": 0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-23",
+    "high_temp_f": 30,
+    "low_temp_f": 22,
+    "conditions": "Heavy Snow And Areas Of Blowing Snow",
+    "wind_speed_mph": 17.0,
+    "precipitation_pct": 60,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-24",
+    "high_temp_f": 32,
+    "low_temp_f": 13,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-25",
+    "high_temp_f": 38,
+    "low_temp_f": 29,
+    "conditions": "Light Snow",
+    "wind_speed_mph": 3.0,
+    "precipitation_pct": 60,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-26",
+    "high_temp_f": 39,
+    "low_temp_f": 30,
+    "conditions": "Slight Chance Light Snow then Chance Light Rain",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-27",
+    "high_temp_f": 42,
+    "low_temp_f": 25,
+    "conditions": "Chance Rain And Snow",
+    "wind_speed_mph": 8.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-02-28",
+    "high_temp_f": 42,
+    "low_temp_f": 32,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Boston",
+    "date": "2026-03-01",
+    "high_temp_f": 43,
+    "low_temp_f": 28,
+    "conditions": "Slight Chance Light Rain",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

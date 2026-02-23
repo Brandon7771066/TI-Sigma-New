@@ -1,0 +1,90 @@
+[
+  {
+    "city": "Austin",
+    "date": "2026-02-22",
+    "high_temp_f": 51,
+    "low_temp_f": 36,
+    "conditions": "",
+    "wind_speed_mph": 0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-23",
+    "high_temp_f": 65,
+    "low_temp_f": 40,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-24",
+    "high_temp_f": 75,
+    "low_temp_f": 56,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-25",
+    "high_temp_f": 86,
+    "low_temp_f": 59,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-26",
+    "high_temp_f": 81,
+    "low_temp_f": 49,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-27",
+    "high_temp_f": 79,
+    "low_temp_f": 51,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-02-28",
+    "high_temp_f": 84,
+    "low_temp_f": 55,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Austin",
+    "date": "2026-03-01",
+    "high_temp_f": 82,
+    "low_temp_f": 67,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

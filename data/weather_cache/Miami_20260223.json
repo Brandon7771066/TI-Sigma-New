@@ -1,0 +1,90 @@
+[
+  {
+    "city": "Miami",
+    "date": "2026-02-22",
+    "high_temp_f": 66,
+    "low_temp_f": 51,
+    "conditions": "",
+    "wind_speed_mph": 0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-23",
+    "high_temp_f": 63,
+    "low_temp_f": 45,
+    "conditions": "Sunny",
+    "wind_speed_mph": 14.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-24",
+    "high_temp_f": 64,
+    "low_temp_f": 56,
+    "conditions": "Sunny",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-25",
+    "high_temp_f": 72,
+    "low_temp_f": 67,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-26",
+    "high_temp_f": 78,
+    "low_temp_f": 72,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 12.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-27",
+    "high_temp_f": 82,
+    "low_temp_f": 72,
+    "conditions": "Chance Showers And Thunderstorms",
+    "wind_speed_mph": 7.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-02-28",
+    "high_temp_f": 81,
+    "low_temp_f": 72,
+    "conditions": "Chance Rain Showers",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Miami",
+    "date": "2026-03-01",
+    "high_temp_f": 79,
+    "low_temp_f": 64,
+    "conditions": "Slight Chance Rain Showers",
+    "wind_speed_mph": 6.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "city": "LA",
+    "date": "2026-02-22",
+    "high_temp_f": 75,
+    "low_temp_f": 52,
+    "conditions": "Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-23",
+    "high_temp_f": 80,
+    "low_temp_f": 55,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-24",
+    "high_temp_f": 79,
+    "low_temp_f": 56,
+    "conditions": "Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-25",
+    "high_temp_f": 78,
+    "low_temp_f": 57,
+    "conditions": "Patchy Fog then Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-26",
+    "high_temp_f": 81,
+    "low_temp_f": 59,
+    "conditions": "Patchy Fog then Mostly Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-27",
+    "high_temp_f": 83,
+    "low_temp_f": 59,
+    "conditions": "Patchy Fog then Partly Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "LA",
+    "date": "2026-02-28",
+    "high_temp_f": 81,
+    "low_temp_f": 58,
+    "conditions": "Patchy Fog then Partly Sunny",
+    "wind_speed_mph": 0.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]

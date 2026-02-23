@@ -13,6 +13,7 @@ Date: November 21, 2025
 Framework: Transcendent Intelligence (TI) + FAAH Protocol
 """
 
+import math
 import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
@@ -21,11 +22,18 @@ from unified_biometric_manager import get_biometric_manager, UnifiedBiometricSna
 from fnirs_manager import get_fnirs_manager
 from sacred_genome_analyzer import SacredGenomeAnalyzer
 
+# Paper #322 TI Constants - Exact Mathematical Values
+TAU = math.cos(math.pi / 8)  # cos(π/8) ≈ 0.9239 (CHSH optimal)
+EPSILON = math.cos(math.pi / 8) ** 2  # cos²(π/8) ≈ 0.8536 (existence threshold)
+GAMMA = math.cos(math.pi / 5) ** 2  # cos²(π/5) ≈ 0.6545 (golden ratio threshold)
+LAMBDA = (math.sqrt(2) + 1) / 4  # (√2+1)/4 ≈ 0.6036 (LCC threshold)
+ETA = math.sqrt(2) - 1  # √2−1 ≈ 0.4142 (manifestation threshold)
+
 # FAAH Protocol Tiers (from JO_CAMERON_FAAH_PROTOCOL.md)
 FAAH_PROTOCOL = {
     1: {
         'name': 'Baseline Support',
-        'description': 'High FAAH supplementation + gentle LCC (GILE < 0.42)',
+        'description': f'High FAAH supplementation + gentle LCC (GILE < η (√2−1 ≈ {ETA:.4f}))',
         'supplement': 'Natural FAAH stack (Kaempferol 50mg, Maca 1500mg, Piperine 10mg)',
         'lcc_target': (0.60, 0.70),
         'duration_min': 12,
@@ -33,7 +41,7 @@ FAAH_PROTOCOL = {
     },
     2: {
         'name': 'Moderate Enhancement',
-        'description': 'Standard FAAH + moderate LCC (GILE 0.42-0.7)',
+        'description': f'Standard FAAH + moderate LCC (GILE η-γ ({ETA:.4f}-{GAMMA:.4f}))',
         'supplement': 'Natural FAAH stack (standard dose)',
         'lcc_target': (0.65, 0.75),
         'duration_min': 10,
@@ -41,7 +49,7 @@ FAAH_PROTOCOL = {
     },
     3: {
         'name': 'Enhanced Integration',
-        'description': 'Low FAAH + strong LCC (GILE 0.7-1.0)',
+        'description': f'Low FAAH + strong LCC (GILE γ-τ ({GAMMA:.4f}-{TAU:.4f}))',
         'supplement': 'Optional low-dose FAAH support',
         'lcc_target': (0.70, 0.80),
         'duration_min': 10,
@@ -49,7 +57,7 @@ FAAH_PROTOCOL = {
     },
     4: {
         'name': 'Optimal Flow',
-        'description': 'LCC-only session (GILE > 1.0)',
+        'description': f'LCC-only session (GILE > τ (>{TAU:.4f}))',
         'supplement': 'None needed - endogenous system optimized',
         'lcc_target': (0.70, 0.85),
         'duration_min': 8,

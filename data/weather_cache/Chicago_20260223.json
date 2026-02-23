@@ -1,0 +1,90 @@
+[
+  {
+    "city": "Chicago",
+    "date": "2026-02-22",
+    "high_temp_f": 34,
+    "low_temp_f": 19,
+    "conditions": "",
+    "wind_speed_mph": 0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-23",
+    "high_temp_f": 30,
+    "low_temp_f": 20,
+    "conditions": "Intermittent Snow Showers then Partly Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-24",
+    "high_temp_f": 41,
+    "low_temp_f": 27,
+    "conditions": "Mostly Cloudy then Slight Chance Light Snow",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 40,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-25",
+    "high_temp_f": 37,
+    "low_temp_f": 28,
+    "conditions": "Mostly Sunny",
+    "wind_speed_mph": 5.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-26",
+    "high_temp_f": 34,
+    "low_temp_f": 25,
+    "conditions": "Chance Snow",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 40,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-27",
+    "high_temp_f": 50,
+    "low_temp_f": 34,
+    "conditions": "Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-02-28",
+    "high_temp_f": 46,
+    "low_temp_f": 25,
+    "conditions": "Partly Sunny then Slight Chance Rain",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 70,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  },
+  {
+    "city": "Chicago",
+    "date": "2026-03-01",
+    "high_temp_f": 34,
+    "low_temp_f": 19,
+    "conditions": "Partly Sunny",
+    "wind_speed_mph": 10.0,
+    "precipitation_pct": 0,
+    "forecast_source": "NWS",
+    "confidence": 0.85
+  }
+]
