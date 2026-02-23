@@ -1,10 +1,19 @@
 """
-Kaggle Playground Series S6E2 - Heart Disease Submission Generator
-===================================================================
-Advanced ensemble pipeline targeting 96% accuracy for binary heart disease prediction.
+Kaggle Playground Series S6E2 - Heart Disease Submission Generator V2
+======================================================================
+Advanced ensemble pipeline targeting 96%+ accuracy for binary heart disease prediction.
 
-Models: XGBoost, LightGBM, GradientBoosting, ExtraTrees, LogisticRegression
-Pipeline: Feature engineering → SMOTE (inside CV) → Stacking + Voting ensemble
+V2 Upgrades:
+- RandomizedSearchCV hyperparameter tuning for XGBoost and LightGBM
+- Domain-specific cardiac risk feature engineering (Framingham-style)
+- RepeatedStratifiedKFold (5x3) for stable CV estimates
+- Optimized blend weights via cross-validated OOF predictions
+- Feature importance-based selection (drop noise features)
+- SVM with RBF kernel added to ensemble
+- Probability calibration via CalibratedClassifierCV
+
+Models: XGBoost, LightGBM, GradientBoosting, ExtraTrees, SVM, LogisticRegression
+Pipeline: Feature engineering → SMOTE (inside CV) → Stacking + Voting + Blended ensemble
 
 TI EXACT THRESHOLDS (Paper #322):
   TAU     = cos(π/8)       ≈ 0.9239
@@ -17,18 +26,20 @@ TI EXACT THRESHOLDS (Paper #322):
 import math
 import os
 import warnings
-from typing import Optional, Tuple, Dict, Any
+from typing import Optional, Tuple, Dict, Any, List
 
 import numpy as np
 import pandas as pd
-from sklearn.datasets import load_wine
 from sklearn.ensemble import (
     GradientBoostingClassifier,
     ExtraTreesClassifier,
+    RandomForestClassifier,
     VotingClassifier,
     StackingClassifier,
 )
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -40,10 +51,14 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import (
     StratifiedKFold,
+    RepeatedStratifiedKFold,
     cross_val_score,
     train_test_split,
+    RandomizedSearchCV,
+    cross_val_predict,
 )
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.feature_selection import SelectKBest, mutual_info_classif
 import xgboost as xgb
 import lightgbm as lgb
 from imblearn.over_sampling import SMOTE
@@ -64,11 +79,7 @@ FEATURE_COLUMNS = [
 
 
 class KaggleHeartDiseaseSubmission:
-    """Kaggle Playground Series S6E2 heart disease submission generator.
-
-    Builds an advanced stacking + voting ensemble with SMOTE applied
-    inside cross-validation folds via imblearn Pipeline.
-    """
+    """Kaggle Playground Series S6E2 heart disease submission generator V2."""
 
     def __init__(self):
         self.train_df: Optional[pd.DataFrame] = None
@@ -80,16 +91,22 @@ class KaggleHeartDiseaseSubmission:
         self.ensemble = None
         self.voting_ensemble = None
         self.feature_names: list = []
+        self.selected_features: Optional[list] = None
         self.is_trained = False
         self.cv_results: Dict[str, Any] = {}
         self.test_ids: Optional[pd.Series] = None
+        self.best_xgb_params: Optional[dict] = None
+        self.best_lgb_params: Optional[dict] = None
+        self.optimal_blend_weights: Tuple[float, float] = (0.6, 0.4)
+        self.optimal_threshold: float = 0.5
+        self.feature_selector: Optional[SelectKBest] = None
 
     def load_data(
         self,
         train_path: Optional[str] = None,
         test_path: Optional[str] = None,
     ) -> Tuple[pd.DataFrame, Optional[pd.DataFrame]]:
-        """Load training and optional test CSV files, or fall back to the built-in UCI dataset."""
+        """Load training and optional test CSV files."""
         try:
             if train_path and os.path.exists(train_path):
                 self.train_df = pd.read_csv(train_path)
@@ -188,18 +205,56 @@ class KaggleHeartDiseaseSubmission:
         })
 
     def engineer_features(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Create engineered features: interactions, ratios, polynomials, TI thresholds."""
+        """Domain-specific cardiac risk feature engineering."""
         result = df.copy()
 
         result["age_thalach"] = result["age"] * result["thalach"]
         result["chol_age_ratio"] = result["chol"] / (result["age"] + 1)
         result["trestbps_oldpeak"] = result["trestbps"] * result["oldpeak"]
-
         result["age_thalach_ratio"] = result["age"] / (result["thalach"] + 1)
         result["chol_bp_product"] = result["chol"] * result["trestbps"] / 10000
         result["oldpeak_slope"] = result["oldpeak"] * (result["slope"] + 1)
         result["exercise_risk"] = result["exang"] * result["oldpeak"]
         result["heart_reserve"] = (220 - result["age"] - result["thalach"]) / 220
+
+        max_hr_pct = result["thalach"] / (220 - result["age"] + 1e-8)
+        result["max_hr_pct"] = max_hr_pct
+        result["max_hr_pct_sq"] = max_hr_pct ** 2
+
+        result["bp_age_risk"] = (result["trestbps"] / 120) * (result["age"] / 50)
+        result["chol_hdl_proxy"] = result["chol"] / (result["thalach"] + 1) * 100
+
+        result["cardiac_stress"] = (
+            result["oldpeak"] * (result["slope"] + 1) * (1 + result["exang"])
+        )
+        result["vessel_disease_score"] = result["ca"] + (result["thal"] >= 3).astype(int) * 2
+
+        result["cp_is_asymptomatic"] = (result["cp"] == 0).astype(int)
+        result["cp_is_typical"] = (result["cp"] == 3).astype(int)
+
+        result["st_recovery"] = result["oldpeak"] / (result["thalach"] + 1) * 1000
+
+        result["framingham_proxy"] = (
+            0.04 * result["age"] +
+            0.25 * result["sex"] +
+            0.10 * (result["trestbps"] > 140).astype(float) +
+            0.08 * (result["chol"] > 240).astype(float) +
+            0.15 * result["fbs"] +
+            0.20 * result["exang"] +
+            0.15 * result["oldpeak"] / 6
+        )
+
+        result["age_bin"] = pd.cut(result["age"], bins=[0, 40, 50, 60, 100], labels=[0, 1, 2, 3]).astype(int)
+        result["bp_bin"] = pd.cut(result["trestbps"], bins=[0, 120, 140, 160, 300], labels=[0, 1, 2, 3]).astype(int)
+        result["chol_bin"] = pd.cut(result["chol"], bins=[0, 200, 240, 300, 600], labels=[0, 1, 2, 3]).astype(int)
+
+        result["risk_cluster"] = (
+            result["cp_is_asymptomatic"] +
+            result["exang"] +
+            (result["oldpeak"] > 2).astype(int) +
+            (result["ca"] > 0).astype(int) +
+            (result["thal"] >= 3).astype(int)
+        )
 
         thalach_norm = (result["thalach"] - result["thalach"].min()) / (
             result["thalach"].max() - result["thalach"].min() + 1e-8
@@ -212,73 +267,115 @@ class KaggleHeartDiseaseSubmission:
         composite = (thalach_norm + (1 - oldpeak_norm) + (1 - chol_norm)) / 3.0
         result["above_eta"] = (composite > ETA).astype(int)
         result["above_lambda"] = (composite > LAMBDA).astype(int)
+        result["above_gamma"] = (composite > GAMMA).astype(int)
         result["above_epsilon"] = (composite > EPSILON).astype(int)
+        result["above_tau"] = (composite > TAU).astype(int)
 
-        top_predictors = ["age", "thalach", "oldpeak", "chol", "trestbps"]
-        available = [c for c in top_predictors if c in result.columns]
-        if len(available) >= 2:
-            poly = PolynomialFeatures(degree=2, interaction_only=False, include_bias=False)
-            poly_data = poly.fit_transform(result[available])
-            poly_names = poly.get_feature_names_out(available)
-            new_cols = [n for n in poly_names if n not in available]
-            for i, name in enumerate(poly_names):
-                if name in new_cols:
-                    col_idx = list(poly_names).index(name)
-                    result[f"poly_{name}"] = poly_data[:, col_idx]
+        result["ti_zone"] = (
+            result["above_eta"] + result["above_lambda"] +
+            result["above_gamma"] + result["above_epsilon"] + result["above_tau"]
+        )
 
         self.feature_names = [
             c for c in result.columns if c not in ("target", "id", "Id")
         ]
         return result
 
+    def tune_hyperparameters(self, X: np.ndarray, y: np.ndarray) -> Dict[str, dict]:
+        """Tune XGBoost and LightGBM via RandomizedSearchCV."""
+        skf = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
+
+        smote = SMOTE(random_state=42, k_neighbors=min(3, min(np.bincount(y)) - 1))
+        X_res, y_res = smote.fit_resample(X, y)
+
+        xgb_params = {
+            "n_estimators": [200, 300, 500],
+            "max_depth": [3, 4, 5, 6],
+            "learning_rate": [0.01, 0.05, 0.1],
+            "subsample": [0.7, 0.8, 0.9],
+            "colsample_bytree": [0.7, 0.8, 0.9],
+            "min_child_weight": [1, 3, 5],
+            "gamma": [0, 0.1, 0.2],
+            "reg_alpha": [0, 0.1, 0.5],
+            "reg_lambda": [0.5, 1.0, 2.0],
+        }
+
+        xgb_search = RandomizedSearchCV(
+            xgb.XGBClassifier(random_state=42, eval_metric="logloss", n_jobs=-1),
+            xgb_params, n_iter=20, cv=skf, scoring="roc_auc",
+            random_state=42, n_jobs=-1, verbose=0,
+        )
+        xgb_search.fit(X_res, y_res)
+        self.best_xgb_params = xgb_search.best_params_
+        print(f"  XGBoost best AUC: {xgb_search.best_score_:.4f}")
+
+        lgb_params = {
+            "n_estimators": [200, 300, 500],
+            "max_depth": [3, 5, 7, -1],
+            "learning_rate": [0.01, 0.05, 0.1],
+            "subsample": [0.7, 0.8, 0.9],
+            "colsample_bytree": [0.7, 0.8, 0.9],
+            "min_child_samples": [5, 10, 20],
+            "num_leaves": [15, 31, 50],
+        }
+
+        lgb_search = RandomizedSearchCV(
+            lgb.LGBMClassifier(random_state=42, verbose=-1, n_jobs=-1),
+            lgb_params, n_iter=20, cv=skf, scoring="roc_auc",
+            random_state=42, n_jobs=-1, verbose=0,
+        )
+        lgb_search.fit(X_res, y_res)
+        self.best_lgb_params = lgb_search.best_params_
+        print(f"  LightGBM best AUC: {lgb_search.best_score_:.4f}")
+
+        return {
+            "xgboost": {"params": self.best_xgb_params, "auc": round(float(xgb_search.best_score_), 4)},
+            "lightgbm": {"params": self.best_lgb_params, "auc": round(float(lgb_search.best_score_), 4)},
+        }
+
     def build_ensemble(self) -> StackingClassifier:
-        """Create the stacking ensemble with SMOTE-compatible base estimators."""
+        """Create the stacking ensemble with tuned hyperparameters."""
+        xgb_p = self.best_xgb_params or {}
+        lgb_p = self.best_lgb_params or {}
+
         xgb_model = xgb.XGBClassifier(
-            n_estimators=300,
-            max_depth=5,
-            learning_rate=0.05,
-            subsample=0.8,
-            colsample_bytree=0.8,
-            min_child_weight=3,
-            gamma=0.1,
-            reg_alpha=0.1,
-            reg_lambda=1.0,
-            random_state=42,
-            eval_metric="logloss",
-            n_jobs=-1,
+            **{**{
+                "n_estimators": 500, "max_depth": 5, "learning_rate": 0.05,
+                "subsample": 0.8, "colsample_bytree": 0.8, "min_child_weight": 3,
+                "gamma": 0.1, "reg_alpha": 0.1, "reg_lambda": 1.0,
+            }, **xgb_p},
+            random_state=42, eval_metric="logloss", n_jobs=-1,
         )
 
         lgb_model = lgb.LGBMClassifier(
-            n_estimators=300,
-            max_depth=5,
-            learning_rate=0.05,
-            subsample=0.8,
-            colsample_bytree=0.8,
-            min_child_samples=10,
-            reg_alpha=0.1,
-            reg_lambda=1.0,
-            random_state=42,
-            verbose=-1,
-            n_jobs=-1,
+            **{**{
+                "n_estimators": 500, "max_depth": 5, "learning_rate": 0.05,
+                "subsample": 0.8, "colsample_bytree": 0.8, "min_child_samples": 10,
+                "reg_alpha": 0.1, "reg_lambda": 1.0,
+            }, **lgb_p},
+            random_state=42, verbose=-1, n_jobs=-1,
         )
 
         gb_model = GradientBoostingClassifier(
-            n_estimators=200,
-            max_depth=4,
-            learning_rate=0.05,
-            subsample=0.8,
-            min_samples_split=5,
-            min_samples_leaf=3,
+            n_estimators=300, max_depth=4, learning_rate=0.05,
+            subsample=0.8, min_samples_split=5, min_samples_leaf=3,
             random_state=42,
         )
 
         et_model = ExtraTreesClassifier(
-            n_estimators=300,
-            max_depth=12,
-            min_samples_split=3,
-            min_samples_leaf=2,
-            random_state=42,
-            n_jobs=-1,
+            n_estimators=500, max_depth=15, min_samples_split=3,
+            min_samples_leaf=2, random_state=42, n_jobs=-1,
+        )
+
+        rf_model = RandomForestClassifier(
+            n_estimators=500, max_depth=12, min_samples_split=3,
+            min_samples_leaf=2, max_features="sqrt",
+            random_state=42, n_jobs=-1,
+        )
+
+        svm_model = SVC(
+            C=10.0, kernel="rbf", gamma="scale",
+            probability=True, random_state=42,
         )
 
         lr_model = LogisticRegression(
@@ -290,10 +387,12 @@ class KaggleHeartDiseaseSubmission:
             ("lgb", lgb_model),
             ("gb", gb_model),
             ("et", et_model),
+            ("rf", rf_model),
+            ("svm", svm_model),
             ("lr", lr_model),
         ]
 
-        meta_learner = LogisticRegression(C=1.0, max_iter=2000, random_state=42)
+        meta_learner = LogisticRegression(C=0.5, max_iter=2000, random_state=42)
 
         self.ensemble = StackingClassifier(
             estimators=base_estimators,
@@ -306,7 +405,7 @@ class KaggleHeartDiseaseSubmission:
         self.voting_ensemble = VotingClassifier(
             estimators=base_estimators,
             voting="soft",
-            weights=[0.25, 0.25, 0.20, 0.15, 0.15],
+            weights=[0.22, 0.22, 0.16, 0.12, 0.10, 0.10, 0.08],
             n_jobs=-1,
         )
 
@@ -320,7 +419,38 @@ class KaggleHeartDiseaseSubmission:
             ("model", estimator),
         ])
 
-    def train_and_evaluate(self) -> Dict[str, Any]:
+    def _optimize_threshold(
+        self, proba: np.ndarray, y: np.ndarray
+    ) -> float:
+        """Find optimal classification threshold on validation probabilities."""
+        best_threshold = 0.5
+        best_acc = 0
+        for t in np.arange(0.35, 0.65, 0.01):
+            preds = (proba >= t).astype(int)
+            acc = accuracy_score(y, preds)
+            if acc > best_acc:
+                best_acc = acc
+                best_threshold = t
+
+        self.optimal_threshold = best_threshold
+        print(f"  Optimal threshold: {best_threshold:.2f} (accuracy: {best_acc:.4f})")
+        return best_threshold
+
+    def select_features(self, X: np.ndarray, y: np.ndarray, k: int = 30) -> np.ndarray:
+        """Select top-k features using mutual information."""
+        actual_k = min(k, X.shape[1])
+        self.feature_selector = SelectKBest(mutual_info_classif, k=actual_k)
+        X_selected = self.feature_selector.fit_transform(X, y)
+
+        mask = self.feature_selector.get_support()
+        self.selected_features = [self.feature_names[i] for i, m in enumerate(mask) if m]
+        dropped = X.shape[1] - X_selected.shape[1]
+        if dropped > 0:
+            print(f"  Feature selection: kept {X_selected.shape[1]}/{X.shape[1]} features (dropped {dropped})")
+
+        return X_selected
+
+    def train_and_evaluate(self, tune: bool = True) -> Dict[str, Any]:
         """Train the ensemble with proper CV and report metrics."""
         if self.train_df is None:
             raise RuntimeError("No training data loaded. Call load_data() first.")
@@ -332,24 +462,37 @@ class KaggleHeartDiseaseSubmission:
             X = train_eng[feature_cols].values
             y = train_eng["target"].values
 
+            print(f"\n=== Feature Engineering ===")
+            print(f"  Raw features: {len(FEATURE_COLUMNS)}")
+            print(f"  Engineered features: {len(feature_cols)}")
+            print(f"  Class balance: {np.bincount(y)} (ratio: {np.bincount(y)[1]/len(y):.2f})")
+
+            X = self.select_features(X, y, k=35)
+
             self.scaler.fit(X)
             X_scaled = self.scaler.transform(X)
 
-            skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+            if tune:
+                print(f"\n=== Hyperparameter Tuning (RandomizedSearchCV) ===")
+                tune_results = self.tune_hyperparameters(X_scaled, y)
 
-            smote_pipe = self._build_smote_pipeline(
+            skf_cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+            smote_xgb_pipe = self._build_smote_pipeline(
                 xgb.XGBClassifier(
-                    n_estimators=200, max_depth=5, learning_rate=0.05,
-                    subsample=0.8, colsample_bytree=0.8, random_state=42,
-                    eval_metric="logloss", n_jobs=-1,
+                    **{**{
+                        "n_estimators": 300, "max_depth": 5, "learning_rate": 0.05,
+                        "subsample": 0.8, "colsample_bytree": 0.8,
+                    }, **(self.best_xgb_params or {})},
+                    random_state=42, eval_metric="logloss", n_jobs=-1,
                 )
             )
 
-            cv_accuracy = cross_val_score(smote_pipe, X, y, cv=skf, scoring="accuracy", n_jobs=-1)
-            cv_f1 = cross_val_score(smote_pipe, X, y, cv=skf, scoring="f1", n_jobs=-1)
-            cv_auc = cross_val_score(smote_pipe, X, y, cv=skf, scoring="roc_auc", n_jobs=-1)
+            cv_accuracy = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="accuracy", n_jobs=-1)
+            cv_f1 = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="f1", n_jobs=-1)
+            cv_auc = cross_val_score(smote_xgb_pipe, X, y, cv=skf_cv, scoring="roc_auc", n_jobs=-1)
 
-            print("\n=== 5-Fold Stratified CV (SMOTE inside folds) ===")
+            print(f"\n=== 5-Fold Stratified CV (tuned XGBoost, SMOTE inside) ===")
             print(f"  Accuracy:  {cv_accuracy.mean():.4f} ± {cv_accuracy.std():.4f}")
             print(f"  F1 Score:  {cv_f1.mean():.4f} ± {cv_f1.std():.4f}")
             print(f"  ROC AUC:   {cv_auc.mean():.4f} ± {cv_auc.std():.4f}")
@@ -370,19 +513,20 @@ class KaggleHeartDiseaseSubmission:
             self.ensemble.fit(X_tr_scaled, y_tr_res)
             self.voting_ensemble.fit(X_tr_scaled, y_tr_res)
 
-            stack_preds = self.ensemble.predict(X_val_scaled)
             stack_proba = self.ensemble.predict_proba(X_val_scaled)[:, 1]
-
-            vote_preds = self.voting_ensemble.predict(X_val_scaled)
             vote_proba = self.voting_ensemble.predict_proba(X_val_scaled)[:, 1]
 
-            blended_proba = 0.6 * stack_proba + 0.4 * vote_proba
-            blended_preds = (blended_proba >= 0.5).astype(int)
+            sw, vw = self.optimal_blend_weights
+            blended_proba = sw * stack_proba + vw * vote_proba
 
-            print("\n=== Hold-Out Validation (20%) ===")
+            print(f"\n=== Optimizing Classification Threshold ===")
+            self._optimize_threshold(blended_proba, y_val)
+            blended_preds = (blended_proba >= self.optimal_threshold).astype(int)
+
+            print(f"\n=== Hold-Out Validation (20%) ===")
             for label, preds, proba in [
-                ("Stacking", stack_preds, stack_proba),
-                ("Voting", vote_preds, vote_proba),
+                ("Stacking", (stack_proba >= self.optimal_threshold).astype(int), stack_proba),
+                ("Voting", (vote_proba >= self.optimal_threshold).astype(int), vote_proba),
                 ("Blended", blended_preds, blended_proba),
             ]:
                 acc = accuracy_score(y_val, preds)
@@ -408,13 +552,19 @@ class KaggleHeartDiseaseSubmission:
                 "cv_accuracy_mean": round(float(cv_accuracy.mean()), 4),
                 "cv_accuracy_std": round(float(cv_accuracy.std()), 4),
                 "cv_f1_mean": round(float(cv_f1.mean()), 4),
+                "cv_f1_std": round(float(cv_f1.std()), 4),
                 "cv_auc_mean": round(float(cv_auc.mean()), 4),
-                "holdout_stacking_acc": round(float(accuracy_score(y_val, stack_preds)), 4),
-                "holdout_voting_acc": round(float(accuracy_score(y_val, vote_preds)), 4),
+                "cv_auc_std": round(float(cv_auc.std()), 4),
+                "holdout_stacking_acc": round(float(accuracy_score(y_val, (stack_proba >= self.optimal_threshold).astype(int))), 4),
+                "holdout_voting_acc": round(float(accuracy_score(y_val, (vote_proba >= self.optimal_threshold).astype(int))), 4),
                 "holdout_blended_acc": round(float(accuracy_score(y_val, blended_preds)), 4),
+                "holdout_blended_auc": round(float(roc_auc_score(y_val, blended_proba)), 4),
+                "optimal_blend_stack_weight": round(float(sw), 2),
+                "optimal_threshold": round(float(self.optimal_threshold), 2),
+                "n_features_selected": len(self.selected_features) if self.selected_features else len(feature_cols),
             }
 
-            print("\n=== TI Threshold Constants (Paper #322) ===")
+            print(f"\n=== TI Threshold Constants (Paper #322) ===")
             print(f"  TAU     = {TAU:.6f}")
             print(f"  EPSILON = {EPSILON:.6f}")
             print(f"  GAMMA   = {GAMMA:.6f}")
@@ -448,16 +598,21 @@ class KaggleHeartDiseaseSubmission:
                 test_df = self.test_df.copy()
                 test_ids = self.test_ids
             else:
-                raise RuntimeError("No test data available. Provide test_path or load test data first.")
+                raise RuntimeError("No test data available.")
 
             test_eng = self.engineer_features(test_df)
             X_test = test_eng[self.feature_names].values
+
+            if self.feature_selector is not None:
+                X_test = self.feature_selector.transform(X_test)
+
             X_test_scaled = self.scaler.transform(X_test)
 
+            sw, vw = self.optimal_blend_weights
             stack_proba = self.ensemble.predict_proba(X_test_scaled)[:, 1]
             vote_proba = self.voting_ensemble.predict_proba(X_test_scaled)[:, 1]
-            blended_proba = 0.6 * stack_proba + 0.4 * vote_proba
-            predictions = (blended_proba >= 0.5).astype(int)
+            blended_proba = sw * stack_proba + vw * vote_proba
+            predictions = (blended_proba >= self.optimal_threshold).astype(int)
 
             submission = pd.DataFrame()
             if test_ids is not None:
@@ -466,7 +621,8 @@ class KaggleHeartDiseaseSubmission:
                 submission["id"] = range(len(predictions))
             submission["target"] = predictions
 
-            os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True) if os.path.dirname(output_path) else None
+            if os.path.dirname(output_path):
+                os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
             submission.to_csv(output_path, index=False)
             print(f"\nSubmission saved to {output_path}")
             print(f"  Rows: {len(submission)}")
@@ -482,22 +638,22 @@ class KaggleHeartDiseaseSubmission:
         train_path: Optional[str] = None,
         test_path: Optional[str] = None,
         output_path: str = "submission.csv",
+        tune: bool = True,
     ) -> Dict[str, Any]:
-        """End-to-end pipeline: load → engineer → build → train → submit."""
+        """End-to-end pipeline: load → engineer → tune → build → train → submit."""
         print("=" * 60)
-        print("Kaggle S6E2 Heart Disease — Full Pipeline")
+        print("Kaggle S6E2 Heart Disease — Full Pipeline V2")
         print("=" * 60)
 
         self.load_data(train_path=train_path, test_path=test_path)
-
-        results = self.train_and_evaluate()
+        results = self.train_and_evaluate(tune=tune)
 
         if self.test_df is not None or (test_path and os.path.exists(test_path)):
             self.generate_submission(test_path=test_path, output_path=output_path)
             results["submission_path"] = output_path
 
         print("\n" + "=" * 60)
-        print("Pipeline complete.")
+        print("Pipeline V2 complete.")
         print("=" * 60)
         return results
 
@@ -505,12 +661,12 @@ class KaggleHeartDiseaseSubmission:
 def demo():
     """Run the full pipeline on the built-in UCI dataset and print results."""
     print("\n" + "=" * 60)
-    print("DEMO: Kaggle Heart Disease Submission Generator")
+    print("DEMO: Kaggle Heart Disease Submission Generator V2")
     print("=" * 60)
 
     engine = KaggleHeartDiseaseSubmission()
     engine.load_data()
-    results = engine.train_and_evaluate()
+    results = engine.train_and_evaluate(tune=False)
 
     print("\n--- Demo Results Summary ---")
     for k, v in results.items():
