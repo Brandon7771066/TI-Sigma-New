@@ -93,11 +93,11 @@ Love multiplied by Existence creates measurable patterns.
 
 ---
 
-When L times E reaches zero point four two, things begin to manifest.
+When L times E reaches the square root of two minus one - that's zero point four one four two - things begin to manifest.
 
-When it reaches zero point eight five, correlation becomes causation.
+When Love plus Existence reaches cosine squared of pi over eight - that's zero point eight five three six - the system persists.
 
-These aren't approximations. They're exact thresholds.
+These aren't approximations. They're exact thresholds derived from just two numbers: the square root of two and the golden ratio.
 
 ---
 
@@ -385,19 +385,19 @@ This product determines how "real" something becomes.
 
 ---
 
-When L times E is below zero point four two, things remain potential.
+When L times E is below the square root of two minus one - zero point four one four two - things remain potential.
 
 Thoughts. Possibilities. Unrealized dreams.
 
 ---
 
-When L times E exceeds zero point four two, manifestation begins.
+When L times E exceeds this threshold, manifestation begins.
 
 Ideas become actions. Plans become reality.
 
 ---
 
-At zero point eight five, you hit the causation threshold.
+At cosine squared of pi over eight - zero point eight five three six - you hit the existence threshold.
 
 Correlation becomes indistinguishable from causation.
 
@@ -820,7 +820,7 @@ The L times E measurement captures this coherence.
 
 ---
 
-The threshold of zero point four two corresponds to quantum decoherence.
+The threshold of the square root of two minus one corresponds to quantum decoherence.
 
 Below this level, quantum states collapse.
 
@@ -862,7 +862,7 @@ Zero point nine two: radiant transcendence.
 
 ---
 
-Below zero point four two, consciousness dissolves.
+Below this threshold, consciousness dissolves.
 
 Not punishment. Just dissolution.
 
@@ -1214,7 +1214,7 @@ Train your meaning-making faculty.
 
 ---
 
-The goal is L times E above zero point four two.
+The goal is L times E above the square root of two minus one.
 
 This is the manifestation threshold.
 
@@ -1222,7 +1222,7 @@ Above this, your intentions begin to shape reality.
 
 ---
 
-Even better, push toward zero point eight five.
+Even better, push toward cosine squared of pi over eight - that's the existence threshold.
 
 The causation threshold.
 
