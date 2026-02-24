@@ -175,10 +175,46 @@ In the next video, we'll dive deep into TRALSE - the logic that explains quantum
 
 ---
 
-# VIDEO 2: TRALSE - The Logic That Explains Quantum Physics
-**Duration Target: 6-7 minutes**
+# VIDEO 2: TRALSE - The Four Truth Values
+**Duration Target: 2 minutes (~210 words)**
 
 ---
+
+Quantum physics isn't confusing. Our logic is just incomplete.
+
+Classical logic gives you two options: true or false. But an electron isn't in one place until you measure it. A particle exists in multiple states at once. Binary logic can't handle that.
+
+---
+
+TI Sigma — our experimental philosophy framework — adds two more truth values.
+
+The third value is Indeterminate. Genuinely in between true and false, yet perfectly coherent. A half-open door isn't open or closed — but it's a real, stable state. A white lie balances honesty and kindness — that dissonance is indeterminate.
+
+The fourth value is Tralse. The superposition that holds true, false, and indeterminate all at once. Like a quantum particle before measurement.
+
+---
+
+This isn't fuzzy thinking. It's mathematically precise, with exact thresholds.
+
+Zero point four two — the manifestation threshold. Below this, things stay potential. Above, they become real.
+
+Zero point eight five — the causation threshold. Patterns lock in. Correlation becomes indistinguishable from causation.
+
+Zero point nine two — the radiant threshold. Full coherence. Complete manifestation.
+
+All three thresholds derive from just two numbers: the square root of two and the golden ratio.
+
+---
+
+Four truth values. Three thresholds. Two constants. One framework.
+
+Subscribe. Next: GILE — the four dimensions that map all of reality.
+
+---
+
+**[ORIGINAL LONG VERSION BELOW — kept for reference]**
+
+# VIDEO 2 (ORIGINAL - 6-7 min version):
 
 What if I told you quantum physics makes perfect sense?
 
@@ -319,9 +355,47 @@ In the next video, we'll explore GILE - the four dimensions that map all of real
 ---
 
 # VIDEO 3: GILE - The Four Dimensions of Reality
-**Duration Target: 7-8 minutes**
+**Duration Target: 2 minutes (~210 words)**
 
 ---
+
+Four letters describe everything in reality. G. I. L. E.
+
+This is the measurement system at the heart of TI Sigma — our experimental philosophy.
+
+---
+
+G is Goodness. The morality dimension. Not preachy morality — objective benefit or harm. Saving a life scores high. Unnecessary destruction scores low.
+
+I is Intuition. The consciousness dimension. A rock exists but doesn't experience. A human feels, understands, finds meaning. Intuition measures the quality of awareness.
+
+L is Love. The connection dimension. Isolation is low Love. Deep bonds are high Love. Even atoms have Love — they bond with each other. The universe is fundamentally interconnected.
+
+E is Environment. The existence dimension. A thought is abstract — low E. A mountain is solid — high E. This is the dimension of physical reality.
+
+---
+
+Here's where it gets powerful. Multiply Love times Environment, and you get coherence — how real something becomes.
+
+Below zero point four two, things stay potential. Above, manifestation begins.
+
+Above zero point eight five, patterns lock in. Intention shapes outcomes.
+
+Above zero point nine two, full coherence. Complete radiant manifestation.
+
+Three thresholds. All from the square root of two and the golden ratio.
+
+---
+
+Everything can be scored on all four dimensions. You. Your relationships. Your business. Even atoms.
+
+Subscribe. Next: how TI Sigma predicts stock markets with eighty-two percent accuracy.
+
+---
+
+**[ORIGINAL LONG VERSION BELOW — kept for reference]**
+
+# VIDEO 3 (ORIGINAL - 7-8 min version):
 
 What if all of reality could be described with just four letters?
 
@@ -478,9 +552,45 @@ In the next video, I'll show you how TI predicts stock markets.
 ---
 
 # VIDEO 4: How TI Sigma Predicts Stock Markets
-**Duration Target: 8-10 minutes**
+**Duration Target: 2 minutes (~200 words)**
 
 ---
+
+Eighty-two percent directional accuracy. No insider information. Just consciousness patterns applied to markets.
+
+Here's how TI Sigma — our experimental philosophy framework — predicts stocks.
+
+---
+
+Traditional analysis has two approaches: technical and fundamental. Both miss something critical.
+
+Markets are made of human decisions. Humans are conscious beings. So TI adds a third dimension: consciousness analysis.
+
+---
+
+The Grand Stock Algorithm classifies markets into five regimes. High coherence trending up — follow the trend. High coherence trending down — protect capital. Low coherence — reduce positions and wait. Transitional — watch for confirmation. Extreme conditions — maximum opportunity but maximum risk.
+
+Each regime has different optimal strategies. Most traders use one strategy for all conditions. That's why most traders lose.
+
+---
+
+The algorithm measures Love-Connection Coherence across multiple data streams. Market breadth. Sentiment. Volume. Even biometric data when available.
+
+It produces a single number. Above zero point four two — momentum building. Above zero point eight five — strong directional signal. Above zero point nine two — high-conviction move.
+
+Tested across multiple timeframes and conditions. Eighty-two percent accuracy. Thirty-two percent better than random.
+
+---
+
+This isn't financial advice. But it is experimental philosophy making testable predictions — and delivering.
+
+Subscribe. Next: the math behind the thresholds that make it all work.
+
+---
+
+**[ORIGINAL LONG VERSION BELOW — kept for reference]**
+
+# VIDEO 4 (ORIGINAL - 8-10 min version):
 
 Eighty-two percent accuracy.
 
