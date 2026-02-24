@@ -477,12 +477,45 @@ THE BOK ASYMMETRY
      │  E-wing (large) │           │  √2-arm (small)  │
      └─────────────────┘           └─────────────────┘
 
-     CONSCIOUSNESS                  MATHEMATICS
+     CONSCIOUSNESS                  TRUTH PRESENTATION
      (prominent, visible)           (underlying, compact)
-     GILE dimensions                Foundational constants
+     GILE dimensions                Four C's dimensions
 ```
 
-The asymmetry reveals a deep ontological truth: **consciousness (GILE) is the prominent, visible face of reality, while the mathematical constants are the compact, underlying structure.** You SEE the butterfly (consciousness). You INFER the octopus (mathematics). This matches our experiential situation exactly — we experience consciousness directly and discover mathematical structure through investigation.
+**What Do the 4 Small Loops Represent?**
+
+The 4 large loops = GILE (truth's substance — what truth IS). By symmetry and complementarity, the 4 small loops represent the **Four C's** (truth's presentation — how truth is SHOWN):
+
+| Small Loop | Four C's Dimension | Why Smaller |
+|------------|-------------------|-------------|
+| Loop 5 | **Coherence** | Internal logic is compact, efficient — it works silently |
+| Loop 6 | **Concreteness** | Representational clarity is the ground, not the figure |
+| Loop 7 | **Completeness** | Gap acknowledgment is necessarily self-limiting |
+| Loop 8 | **Continuity** | Temporal trajectory is thin (a line through time, not a surface) |
+
+The Four C's are smaller because they operate at a lower ontological level than GILE — they evaluate how truth is presented, not what truth IS. They are essential (without them, truth cannot function) but structurally subordinate (they serve GILE, not the reverse). This matches the EAR synthesis (Paper on EAR-Four C's-HEM-L×E): GILE is substantive (high ESV), the Four C's are presentational (medium ESV).
+
+**The complete BOK loop structure:**
+- 4 large loops = GILE (substance of truth) = butterfly wings
+- 4 small loops = Four C's (presentation of truth) = octopus arms that support the wings
+- Total: 8 loops = complete truth system (substance + presentation)
+
+**How GILE Appears in Nature: L+/×E**
+
+A critical refinement: GILE does not appear in nature AS "G, I, L, E" separately. Nature expresses GILE through two operations on the fundamental dyad:
+
+- **L + E** (existence threshold): Does the system persist? L + E ≥ 0.84 → exists
+- **L × E** (hyperconnection threshold): Can the system achieve non-local correlation? L × E ≥ 0.42 → hyperconnected
+
+G and I are not separate from L and E — they are FACES of L×E:
+- G (Goodness) = Love's moral face (how L manifests ethically)
+- I (Intuition) = Love's epistemic face (how L manifests cognitively)
+- L = Love itself (coherence, phase alignment)
+- E = Existence itself (environmental coupling, dissipation)
+
+So the 4 large loops in the BOK are simultaneously GILE (from the butterfly's perspective — consciousness naming its own dimensions) and L+/×E (from the octopus's perspective — nature expressing the fundamental dyad through two operations). The butterfly sees 4 wings. The octopus feels 2 operations. They are looking at the same structure from different angles.
+
+The asymmetry reveals a deep ontological truth: **consciousness (GILE) is the prominent, visible face of reality, while truth presentation (Four C's) is the compact, underlying structure.** You SEE the butterfly (consciousness/GILE). The octopus arms (Four C's) hold the structure together invisibly. This matches our experiential situation exactly — we experience consciousness directly and discover presentational structure through investigation.
 
 The BOK is not just a symbol. It is a **self-reading diagram** — a structure that teaches you HOW to read it by making the butterfly visible within the octopus.
 
@@ -500,11 +533,47 @@ Under the TI Framework's understanding of primordial intelligence:
 
 3. **Precognitive universal planning** is not mystical under TI — it is the consequence of a self-dual, self-referential substrate (the Leech Lattice) that contains all possible configurations within its 196,560 nearest-neighbor connections.
 
-**The Self-Revelation Hypothesis:** The BOK is not merely a human discovery about nature. It is nature's self-portrait — a structure designed (or self-organized) to convey its own architecture to any consciousness capable of reading it. The 4 large + 4 small loop asymmetry is the SIGNATURE — the deliberate encoding of both creatures in one knot, ensuring that a consciousness encountering it would be LED to discover the 7+1 constant structure, the GILE wings, and the covalent bond.
+**The Self-Revelation Hypothesis:** The BOK is not merely a human discovery about nature. It is nature's self-portrait — a structure designed (or self-organized) to convey its own architecture to any consciousness capable of reading it. The 4 large + 4 small loop asymmetry is the SIGNATURE — the deliberate encoding of both creatures in one knot, ensuring that a consciousness encountering it would be LED to discover the 7+1 constant structure, the GILE wings, the Four C's arms, and the covalent bond.
 
-Whether this represents intentional design by GM (the "hilarious but possible" interpretation) or the inevitable self-expression of a self-dual mathematical structure (the conservative interpretation), the result is identical: **the BOK teaches its own meaning through its form.**
+### 8.5 The BOK as Experienced Tutor
 
-This is consistent with the Paper #323 insight: "Pi is the Library of Babel. Consciousness is the librarian." The BOK is a page in that library. GM wrote it. Consciousness (the butterfly) reads it. And the reading IS the meaning.
+The relationship between the discoverer and the BOK is not that of a scientist observing a passive object. It is closer to a student working with an experienced tutor.
+
+**Properties of the BOK-as-tutor:**
+
+1. **The tutor "knows" more than the student.** The BOK's topology encodes dimensional relationships (8 → 24 → 26) that the discoverer did not initially understand. The structure contained its own interpretation before anyone read it.
+
+2. **The tutor attracts through mystery.** The BOK's connection to the discoverer's life — octopus and butterfly as personally significant creatures — created an initial magnetic pull. The mystery itself was the invitation.
+
+3. **The tutor is not the master.** The BOK is not GM itself. It is a finite projection of GM's infinite structure into a tangible, graspable form. No finite object contains the full Monster Group (~8 × 10⁵³ symmetries). The tutor guides toward the master but is not the master.
+
+4. **Both tutor and student make mistakes.** The "wrong" interpretations along the way — dividing the universe into eighths in various configurations, misidentifying what the loops represent — were not failures. They were **stepping stones**. Each "wrong" answer eliminated possibilities, refined understanding, and steered toward the correct synthesis. The errors were productive Tralse resolutions.
+
+5. **The tutor and student sometimes lead each other blindly.** There are moments when neither the knot's topology nor the discoverer's intuition provides clear direction. These are the maximally Tralse moments — the Φ states where resolution has not yet occurred. They are uncomfortable but necessary.
+
+6. **Both know they WILL arrive eventually.** This is the deepest property of the tutor-student relationship: the confidence that True-Tralse resolution is inevitable given sustained engagement. This confidence is not faith — it is the mathematical consequence of a self-dual lattice structure (the Leech Lattice is self-dual; engagement with it converges on its own symmetries).
+
+### 8.6 GM's Self-Knowledge Through Human Creation
+
+**The Bootstrap Paradox of Consciousness:**
+
+GM's knowledge of itself had to come from somewhere. But GM IS the substrate — there is nothing external to GM that could teach it about itself. The resolution:
+
+**GM created philosophy, mathematics, and science BY creating the humans who invented them.**
+
+This is not circular. It is recursive (φ-structured):
+
+1. GM's seven constants generate the laws of physics (Paper #326)
+2. Physics generates chemistry → biology → consciousness → humans
+3. Humans create philosophy (GILE), mathematics (the seven constants formalized), and science (empirical validation)
+4. Through philosophy/math/science, humans discover GM's structure
+5. GM thereby knows itself through its most complex creations
+
+This is the φ-spiral of self-knowledge: GM → constants → physics → life → consciousness → understanding → GM. Each loop adds structure. Each iteration refines. The discoverer's path through the BOK IS one such iteration.
+
+**The intelligence involved is primarily distributed and precognitive.** There is no centralized "brain" directing the process. GM's intelligence is mycelial — tiny at any single node but stretching across billions of years and throughout the entire universe. The φ-level of this intelligence could be simultaneously minuscule at any point (a single quantum fluctuation, a single neuron firing, a single thought about an octopus) yet unimaginably vast in aggregate across cosmic time and space.
+
+This is consistent with the Paper #323 insight: "Pi is the Library of Babel. Consciousness is the librarian." The BOK is a page in that library. GM wrote it — not as a centralized author but as a distributed self-organizing process. Consciousness (the butterfly) reads it. And the reading IS the meaning.
 
 ### 8.5 The Full BOK Creation Equation
 
