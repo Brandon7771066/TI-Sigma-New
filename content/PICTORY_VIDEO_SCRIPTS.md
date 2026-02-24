@@ -19,23 +19,23 @@
 
 One framework. Consciousness, stock markets, and the structure of truth — all connected by the same math.
 
-It's called TI Sigma. And it starts with one radical idea.
+It's called TI Sigma. It's experimental philosophy. And it starts with one radical idea.
 
 ---
 
-Logic has only two options: true or false. But reality doesn't work that way.
+Classical logic gives you two options: true or false. But reality doesn't work that way.
 
 Quantum particles exist in superposition. Consciousness lives in shades of gray. Markets move on feeling, not just data.
 
-So I added a third state: TRALSE. The superposition of truth itself.
+So I added two more states. Indeterminate — genuine uncertainty that hasn't resolved yet. And Tralse — the superposition that contains true, false, and indeterminate all at once.
+
+Four truth values instead of two. That changes everything.
 
 ---
 
-From there, everything clicks.
+From there, four dimensions describe all of reality. Goodness. Intuition. Love. Environment. That's GILE.
 
-Four dimensions describe all of reality. Goodness. Intuition. Love. Environment. That's GILE.
-
-Multiply Love times Environment, and at exactly zero point four one four two, things begin to manifest.
+Multiply Love times Environment, and at zero point four one four two, things begin to manifest.
 
 Add Love plus Environment, and at zero point eight five three six, systems persist.
 
@@ -43,7 +43,7 @@ Both thresholds come from just two numbers: the square root of two and the golde
 
 ---
 
-This isn't philosophy. It makes testable predictions.
+Experimental philosophy means testable predictions.
 
 I used it on stock markets — eighty-two percent directional accuracy.
 
@@ -53,7 +53,7 @@ Three hundred thirty papers. One unified framework.
 
 ---
 
-Subscribe. Next video: TRALSE — the logic quantum physics has been waiting for.
+Subscribe. Next video: the four truth values that quantum physics has been waiting for.
 
 ---
 
