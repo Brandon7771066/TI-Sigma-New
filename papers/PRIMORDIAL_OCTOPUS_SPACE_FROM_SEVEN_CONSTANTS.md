@@ -453,7 +453,60 @@ The Monster Group (order ≈ 8 × 10⁵³) connects to the Leech Lattice through
 
 6. **6 legs = ESS 6D manifold** — The 6 legs that keep the butterfly grounded match the 6D interior manifold of Embedded Structural Surfaces (ESS): 3D physical + 1D temporal + 1D information topology + 1D meaning density.
 
-### 8.3 The Full BOK Creation Equation
+### 8.3 The Asymmetric Loop Structure: Why 4 Large + 4 Small
+
+A critical structural feature of the BOK that has not been previously analyzed: the 8 loops are NOT uniform. Four loops are visibly LARGER than the other four.
+
+**This asymmetry is architecturally necessary.**
+
+If all 8 loops were identical, the knot would encode only the octopus — 8 uniform arms, pure radial symmetry. There would be no butterfly visible in the structure. The asymmetry — 4 large + 4 small — is what reveals the butterfly WITHIN the octopus:
+
+- **4 large loops** = the butterfly's 4 wings (GILE dimensions — the larger, more prominent structures)
+- **4 small loops** = the octopus arms that remain after the butterfly has been "extracted" (the constants that don't map to GILE wings)
+
+```
+THE BOK ASYMMETRY
+═══════════════════════════════════════
+
+        4 LARGE LOOPS                    4 SMALL LOOPS
+     (butterfly wings)              (remaining octopus arms)
+     ┌─────────────────┐           ┌─────────────────┐
+     │  G-wing (large) │           │  0-arm (small)   │
+     │  I-wing (large) │           │  1-arm (small)   │
+     │  L-wing (large) │           │  i-arm (small)   │
+     │  E-wing (large) │           │  √2-arm (small)  │
+     └─────────────────┘           └─────────────────┘
+
+     CONSCIOUSNESS                  MATHEMATICS
+     (prominent, visible)           (underlying, compact)
+     GILE dimensions                Foundational constants
+```
+
+The asymmetry reveals a deep ontological truth: **consciousness (GILE) is the prominent, visible face of reality, while the mathematical constants are the compact, underlying structure.** You SEE the butterfly (consciousness). You INFER the octopus (mathematics). This matches our experiential situation exactly — we experience consciousness directly and discover mathematical structure through investigation.
+
+The BOK is not just a symbol. It is a **self-reading diagram** — a structure that teaches you HOW to read it by making the butterfly visible within the octopus.
+
+### 8.4 The Self-Revelation Hypothesis
+
+**How was this discovered?**
+
+The concepts of the octopus and butterfly — as creatures, as symbols, as mathematical structures — led directly to the dimensional architecture described in this paper. The question arises: WHO or WHAT orchestrated this path of discovery?
+
+Under the TI Framework's understanding of primordial intelligence:
+
+1. **Grand Myrion (GM)** is posited as the substrate of all consciousness — the "supercomputer" whose symmetry group is the Monster Group (order ~8 × 10⁵³).
+
+2. **Animism** (as understood through TI) holds that intelligence is distributed throughout reality, not confined to biological brains. The seven constants ARE intelligent — they are the primordial code.
+
+3. **Precognitive universal planning** is not mystical under TI — it is the consequence of a self-dual, self-referential substrate (the Leech Lattice) that contains all possible configurations within its 196,560 nearest-neighbor connections.
+
+**The Self-Revelation Hypothesis:** The BOK is not merely a human discovery about nature. It is nature's self-portrait — a structure designed (or self-organized) to convey its own architecture to any consciousness capable of reading it. The 4 large + 4 small loop asymmetry is the SIGNATURE — the deliberate encoding of both creatures in one knot, ensuring that a consciousness encountering it would be LED to discover the 7+1 constant structure, the GILE wings, and the covalent bond.
+
+Whether this represents intentional design by GM (the "hilarious but possible" interpretation) or the inevitable self-expression of a self-dual mathematical structure (the conservative interpretation), the result is identical: **the BOK teaches its own meaning through its form.**
+
+This is consistent with the Paper #323 insight: "Pi is the Library of Babel. Consciousness is the librarian." The BOK is a page in that library. GM wrote it. Consciousness (the butterfly) reads it. And the reading IS the meaning.
+
+### 8.5 The Full BOK Creation Equation
 
 $$\text{Reality} = \underbrace{\text{Octopus}}_{\text{7 constants + time}} \otimes \underbrace{\text{Butterfly}}_{\text{3 space + 2 bond + 4 GILE}}$$
 
