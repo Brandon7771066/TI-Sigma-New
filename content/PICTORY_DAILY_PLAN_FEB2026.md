@@ -55,18 +55,26 @@ For the academic/curious audience. These build authority.
 
 **TTS Budget: ~9 min | Video Budget: ~12 min | Scripts: VIDEO 1, 2 + 3 new**
 
-### DAY 2: Monday Feb 24 (5 videos)
-**Theme: GILE & The Structure of Truth**
+### DAY 2: Monday Feb 24 — EDITING DAY
+**Focus: Edit all 4 drafted videos through the pipeline**
 
-| # | Title | Series | Duration | TTS Min |
-|---|-------|--------|----------|---------|
-| 6 | "GILE: The Four Dimensions That Describe All of Reality" | A | 3 min | 2.5 |
-| 7 | "cos(pi/8) = 0.9239: Why THIS Number is the Truth Threshold" | C | 2.5 min | 2.0 |
-| 8 | "How to Score Anything Using GILE (Practical Guide)" | A | 2.5 min | 2.0 |
-| 9 | "The Golden Ratio Connects Consciousness to Electromagnetism" | D | 90 sec | 1.0 |
-| 10 | "PredictIt Strategy: Finding Mispriced Political Contracts" | B | 2.5 min | 2.0 |
+**Status: All 4 videos drafted in Pictory. Moving to editing phase.**
 
-**TTS Budget: ~9.5 min | Scripts: VIDEO 3, 8 + 3 new**
+| # | Video | Status | Next Step |
+|---|-------|--------|-----------|
+| 1 | "What is Transcendent Intelligence?" | Drafted (revised 2-min script) | Pictory review → CapCut polish |
+| 2 | "TRALSE: The Four Truth Values" | Drafted (revised 2-min script) | Pictory review → CapCut polish |
+| 3 | "GILE: The Four Dimensions of Reality" | Drafted (revising existing video) | Revise in Pictory → CapCut polish |
+| 4 | "How TI Sigma Predicts Stock Markets" | Drafted (fresh upload) | Pictory review → CapCut polish |
+
+**Editing workflow per video (~30 min each):**
+1. Review Pictory draft — check visuals match script, remove generic stock footage
+2. Render in Pictory (consumes TTS minutes)
+3. Import MP4 into CapCut — trim, add text overlays, pacing, hook, outro
+4. Export from CapCut — 1080p MP4
+5. YouTube metadata ready in `content/VIDEO_EDITING_GUIDE.md`
+
+**See: `content/VIDEO_EDITING_GUIDE.md` for per-video CapCut checklists and YouTube metadata**
 
 ### DAY 3: Tuesday Feb 25 (5 videos)
 **Theme: Markets & Money**
