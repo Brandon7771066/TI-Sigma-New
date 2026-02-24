@@ -27,7 +27,9 @@ Classical logic gives you two options: true or false. But reality doesn't work t
 
 Quantum particles exist in superposition. Consciousness lives in shades of gray. Markets move on feeling, not just data.
 
-So I added two more states. Indeterminate — genuine uncertainty that hasn't resolved yet. And Tralse — the superposition that contains true, false, and indeterminate all at once.
+So I added two more states. Indeterminate — genuinely in between true and false, yet perfectly coherent. A half-open door is neither open nor closed, but it's a real state. A white lie straddles honesty and kindness — that's indeterminate.
+
+And Tralse — the superposition that contains true, false, and indeterminate all at once.
 
 Four truth values instead of two. That changes everything.
 
