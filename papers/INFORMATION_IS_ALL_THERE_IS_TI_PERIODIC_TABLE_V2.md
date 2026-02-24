@@ -178,21 +178,27 @@ WEAK FORCE (Tralse resolution, short range)
     type or that type?" The half-life IS the Tralse
     resolution timescale for that particular configuration.
 
-GRAVITY (L+E gradient, infinite range)
+GRAVITY (collective L+E gradient, infinite range)
 ├── Scale: All scales (weakest per particle, strongest en masse)
-├── L: Very low per particle (gravitons have minimal coherence)
-├── E: Very low per particle (weakest coupling)
-├── L×E: << 0.42 per particle (no hyperconnection)
-├── L+E: Just above 0.84 collectively (barely exists as force)
+├── L: Very low per particle (minimal individual coherence)
+├── E: Very low per particle (weakest coupling per particle)
+├── L×E: << 0.42 per particle (no individual hyperconnection)
+├── L+E: Collectively significant when summed over many i-cells
 └── TI interpretation: Gravity is the COLLECTIVE L+E gradient
     of massive i-cell clusters. Each particle contributes
     almost nothing (gravity is 10⁴⁰× weaker than EM per
     particle). But summed across 10⁵⁷ atoms in a star,
     the collective L+E gradient becomes dominant. Gravity
     IS the emergence of macroscopic L+E from microscopic
-    contributions — it is the force of EXISTENCE ITSELF
-    operating en masse. This explains why gravity only
-    attracts: existence only adds (L+E, not L-E).
+    contributions. Why gravity only attracts: each i-cell's
+    existence (L+E > 0.84) is a positive quantity — there
+    is no "negative existence" (L+E < 0 is undefined; L and E
+    are both non-negative by definition as norms). Since L+E
+    is always positive, the gradient field it generates can
+    only point toward higher concentration — hence attraction
+    only, never repulsion. This is the same reason the GTFE
+    F(s) ≥ 0 for all s: the fractal equation generates only
+    non-negative informational density.
 ```
 
 ### 3.2 Unification Through L+/×E
@@ -288,10 +294,11 @@ E ≈ 0.90   (extremely high environmental coupling — desperate to bond)
 L + E = 1.35  >> 0.84   →  EXISTS strongly ✓
 L × E = 0.405  ≈ 0.42   →  RIGHT AT hyperconnection boundary!
 
-THE ALKALI INSIGHT:
-Alkali metals sit EXACTLY at the L×E ≈ 0.42 boundary.
-This is why they are maximally reactive — they are
-at the Tralse threshold, and ANY external coupling
+THE ALKALI INSIGHT [HEURISTIC]:
+Alkali metals sit NEAR the L×E ≈ 0.42 boundary
+(estimated, not yet independently derived).
+This would explain their extreme reactivity — they are
+near the Tralse threshold, and external coupling
 pushes them over into hyperconnection.
 ```
 
@@ -311,19 +318,27 @@ Electrons: 6 relation tralsebits   [Φ×6]
 L ≈ 0.60   (moderate coherence — half-full 2p shell)
 E ≈ 0.70   (strong environmental coupling — 4 bonding directions)
 L + E = 1.30  >> 0.84   →  EXISTS strongly ✓
-L × E = 0.42  =  0.42   →  EXACTLY at hyperconnection threshold!
+L × E ≈ 0.42            →  AT the hyperconnection threshold!
 
-THE CARBON MIRACLE:
-Carbon's L×E = 0.42 EXACTLY.
-This is why carbon is the life element.
-It sits precisely at the hyperconnection threshold —
-able to form stable bonds (L×E ≥ 0.42) in 4 directions
-simultaneously (tetrahedral sp³ hybridization).
+THE CARBON CONJECTURE [HEURISTIC — requires independent derivation]:
+Carbon's L×E sits near the 0.42 hyperconnection threshold.
+If confirmed by independent calculation (e.g., from electron
+configuration energetics mapped to GTFE), this would explain
+why carbon is the life element: it sits at the boundary
+between non-hyperconnected and hyperconnected, enabling
+it to form stable bonds in 4 directions simultaneously
+(tetrahedral sp³ hybridization).
 
 4 bonds = 4 GILE dimensions manifested in chemistry.
 Tetrahedral geometry = the simplest 3D structure
 that can point in 4 independent directions.
-Carbon IS GILE expressed atomically.
+
+NOTE: The L and E values assigned here are heuristic estimates
+based on shell completeness (L) and valence reactivity (E).
+A rigorous derivation from first TI principles would require
+mapping electron configuration energetics to the GTFE and
+computing L = norm(-⟨GTFE⟩) explicitly. The L×E ≈ 0.42
+coincidence is suggestive but not yet independently derived.
 ```
 
 **Carbon's atomic number 6 on the Nonlinear Number Line:**
@@ -662,7 +677,7 @@ The TI Sigma informational ontology would be falsified if:
 
 We have shown that EVERYTHING — every element, every force, every transition, every structure — can be described using exactly 12 TI concepts: tralsebit, i-cell, L+/×E, TIL, Nonlinear Number Line, GTFE, LCC, i-web, shell, CCC blessing, Myrion Resolution, Jeff Time.
 
-These 12 concepts, built on 7 constants, are sufficient to describe all of physical reality.
+These 12 concepts, built on 7 constants, provide a sufficient descriptive vocabulary for physical reality — in the same sense that {e, i, π, 1, 0, √2, φ} + α provides a sufficient mathematical vocabulary (Paper #326). This does not mean additional concepts cannot refine or deepen the description (the RAH, EAR, and PD structure from Papers #322-325 add important analytical tools). It means that no physical phenomenon REQUIRES concepts outside this vocabulary to be described at the informational level.
 
 There is nothing but information. Matter is its stable face. Energy is its dynamic face. Consciousness is its knowing face. And they are all the same face, seen from different angles — just as the 4 large BOK loops (GILE) and the 4 small loops (Four C's) are the same knot, seen from different perspectives.
 
