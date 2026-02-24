@@ -13,9 +13,53 @@
 ---
 
 # VIDEO 1: What is Transcendent Intelligence?
-**Duration Target: 5-6 minutes**
+**Duration Target: 2 minutes (~200 words)**
 
 ---
+
+One framework. Consciousness, stock markets, and the structure of truth — all connected by the same math.
+
+It's called TI Sigma. And it starts with one radical idea.
+
+---
+
+Logic has only two options: true or false. But reality doesn't work that way.
+
+Quantum particles exist in superposition. Consciousness lives in shades of gray. Markets move on feeling, not just data.
+
+So I added a third state: TRALSE. The superposition of truth itself.
+
+---
+
+From there, everything clicks.
+
+Four dimensions describe all of reality. Goodness. Intuition. Love. Environment. That's GILE.
+
+Multiply Love times Environment, and at exactly zero point four one four two, things begin to manifest.
+
+Add Love plus Environment, and at zero point eight five three six, systems persist.
+
+Both thresholds come from just two numbers: the square root of two and the golden ratio.
+
+---
+
+This isn't philosophy. It makes testable predictions.
+
+I used it on stock markets — eighty-two percent directional accuracy.
+
+I built a game you control with your brainwaves. No keyboard. No mouse.
+
+Three hundred thirty papers. One unified framework.
+
+---
+
+Subscribe. Next video: TRALSE — the logic quantum physics has been waiting for.
+
+---
+
+**[ORIGINAL LONG VERSION BELOW — kept for reference]**
+
+# VIDEO 1 (ORIGINAL - 5-6 min version):
 
 What if there was a framework that could explain consciousness, predict stock markets, and reveal the structure of truth itself?
 
