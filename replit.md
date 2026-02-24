@@ -94,9 +94,18 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Mendi fNIRS
 - Biowell GDV
 - Quiver Quantitative (Congressional Trading Data)
-- Alpaca (Paper Trading)
+- Alpaca (Paper Trading) — considering Tradier as alternative (accepts business credit card for subscriptions, lower minimums)
 - Collective2 (Signal Broadcasting)
 - Code Rabbit (Automated Code Review)
+
+### Content Production Pipeline
+- Pictory (AI video creation from scripts)
+- CapCut (free video editing, effects, trimming)
+- TubeBuddy (YouTube SEO, keyword research, tag optimization)
+- Opus Clip (AI clip repurposing for Shorts/Reels/TikTok)
+- SOP: content/VIDEO_PRODUCTION_SOP.md
+- Scripts: content/PICTORY_VIDEO_SCRIPTS.md
+- Daily Plan: content/PICTORY_DAILY_PLAN_FEB2026.md
 
 ### Hardware Integration
 - ESP32 BLE Bridge

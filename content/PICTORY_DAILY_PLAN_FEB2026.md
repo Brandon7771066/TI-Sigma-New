@@ -132,13 +132,124 @@ For the academic/curious audience. These build authority.
 
 ---
 
-## Workflow Per Video (Target: 15-20 min each)
+## Content Pipeline: Pictory -> CapCut -> TubeBuddy -> Opus Clip
 
-1. **Script** (3 min): Copy from PICTORY_VIDEO_SCRIPTS.md or write new 200-word script
-2. **Pictory "Script to Video"** (5 min): Paste script, select 16:9, choose AI voice
-3. **Customize** (5 min): Adjust visuals, add TI Sigma watermark/intro
-4. **Export** (2 min): Download MP4
-5. **YouTube Upload** (5 min): Title, description, tags, thumbnail
+### The 4-Tool Stack (All accept credit cards)
+
+| Tool | Role | Cost | What It Does |
+|------|------|------|-------------|
+| **Pictory** | Creator | Current plan | Script -> raw video with AI visuals + voiceover |
+| **CapCut** | Editor | FREE | Trim fluff, add effects, transitions, text overlays, speed changes |
+| **TubeBuddy** | SEO | Free tier available | Keyword research, tags, title optimization, thumbnail A/B testing |
+| **Opus Clip** | Repurposer | Free tier: 10 clips/mo | Auto-cuts long videos into Shorts/Reels/TikTok clips |
+
+### Pipeline Flow (Per Video)
+
+```
+STEP 1: SCRIPT (3 min)
+  Copy from PICTORY_VIDEO_SCRIPTS.md or write new ~200 words
+  Target: 90 sec - 3 min final length
+  Rule: If it sounds fluffy when you read it aloud, CUT IT
+
+STEP 2: PICTORY (5 min)
+  Paste script -> "Script to Video" -> 16:9 -> AI voice
+  Customize visuals, remove irrelevant stock footage
+  DO NOT RENDER YET if unsure (saves minutes!)
+  Export as MP4 only when satisfied with structure
+
+STEP 3: CAPCUT (10 min) — THE POLISH STEP
+  Import Pictory MP4 into CapCut (desktop or web, both free)
+  a) TRIM: Cut any scene that doesn't add value (be ruthless!)
+  b) PACE: Speed up slow sections (1.1x-1.25x feels natural)
+  c) EFFECTS: Add zoom, text highlights on key numbers/terms
+  d) HOOK: First 3 seconds must grab attention (bold text + energy)
+  e) OUTRO: Add subscribe CTA + next video teaser
+  Export final MP4
+
+STEP 4: TUBEBUDDY (5 min) — THE SEO STEP
+  Before uploading to YouTube:
+  a) Search keywords: Use TubeBuddy's keyword explorer
+  b) Title: Include primary keyword + curiosity hook
+     Formula: "[Keyword]: [Surprising Claim] | TI Sigma"
+     Example: "Consciousness Threshold: Why 0.9239 Changes Everything | TI Sigma"
+  c) Tags: 15-20 tags mixing broad ("consciousness") + specific ("GILE framework")
+  d) Description: First 2 lines = hook + keyword. Rest = links + timestamps
+  e) Thumbnail: Your face + bold text + contrast colors (CapCut can make these too)
+
+STEP 5: YOUTUBE UPLOAD (5 min)
+  Upload final MP4 with TubeBuddy-optimized metadata
+  Schedule uploads for peak times (TubeBuddy shows best times)
+  Add to correct playlist
+  Set end screens + cards linking to related videos
+
+STEP 6: OPUS CLIP (2 min) — THE REPURPOSE STEP
+  Upload the full YouTube video URL to Opus Clip
+  Let AI auto-detect best 30-60 second moments
+  Download top 2-3 clips as vertical (9:16) for:
+    - YouTube Shorts
+    - Instagram Reels
+    - TikTok
+  Upload Shorts to same YouTube channel (drives discovery)
+```
+
+---
+
+## Video Triage: Your 4 Existing Videos
+
+### Status Check
+Before doing anything else, check each video's status in Pictory:
+
+| Status | Minutes Used? | Action |
+|--------|--------------|--------|
+| **Draft** (not rendered) | NO minutes used | Edit freely, trim fluff, then render |
+| **Rendered** (downloaded) | YES, minutes consumed | Use CapCut to trim/polish the downloaded MP4 |
+
+### Triage Checklist (Do This For Each Video)
+
+- [ ] **Video 1:** ____________________
+  - [ ] Is it a draft or rendered?
+  - [ ] What's the current length? Target: under 3 min
+  - [ ] Hook: Does the first 3 seconds grab attention? If not, re-order scenes
+  - [ ] Fluff check: Can you remove 30%+ of scenes without losing the message?
+  - [ ] If draft: Edit in Pictory (remove scenes, tighten script)
+  - [ ] If rendered: Import to CapCut, trim ruthlessly, add effects
+
+- [ ] **Video 2:** ____________________
+  - [ ] Same checklist as above
+
+- [ ] **Video 3:** ____________________
+  - [ ] Same checklist as above
+
+- [ ] **Video 4:** ____________________
+  - [ ] Same checklist as above
+
+### Fluff-Cutting Rules
+1. **The 3-Second Rule:** If a scene doesn't add NEW information within 3 seconds, cut it
+2. **The Read-Aloud Test:** Read the script aloud. Every time you feel like skipping ahead, that section is fluff
+3. **The "So What?" Test:** After each scene, ask "So what?" If you can't answer instantly, cut it
+4. **Target Density:** Aim for 1 key idea per 15 seconds. A 2-min video = 8 key ideas, no more
+5. **Stock Footage Trap:** Pictory's auto-selected visuals are often generic. Replace or remove anything that doesn't directly illustrate the script
+
+### Pictory Minutes FAQ
+- **Rendering costs minutes.** Once you hit "Generate" or "Download," those minutes are consumed
+- **Deleting a rendered video does NOT refund minutes.** The processing already happened
+- **Drafts are free.** Edit, preview, and perfect drafts as much as you want before rendering
+- **Strategy:** Preview thoroughly in Pictory's editor before rendering. Use CapCut for post-render polish instead of re-rendering in Pictory
+
+---
+
+## Updated Workflow Per Video (Target: 30 min total)
+
+| Step | Tool | Time | What |
+|------|------|------|------|
+| 1. Script | Text editor | 3 min | Write/copy 200-word tight script |
+| 2. Create | Pictory | 5 min | Script to Video, customize visuals |
+| 3. Polish | CapCut | 10 min | Trim, effects, hook, pacing |
+| 4. Optimize | TubeBuddy | 5 min | Keywords, title, tags, description |
+| 5. Upload | YouTube | 5 min | Upload, schedule, playlist, cards |
+| 6. Repurpose | Opus Clip | 2 min | Auto-generate 2-3 Shorts |
+
+**Total: ~30 min per finished, optimized, SEO'd video with Shorts**
 
 ---
 
@@ -148,6 +259,9 @@ For the academic/curious audience. These build authority.
 - [ ] Banner image: TI Sigma branding
 - [ ] Playlists: "TI Explained", "Trading Signals", "Consciousness Science", "Quick Hits"
 - [ ] Upload schedule: 5 videos/day through Feb 28
+- [ ] Install TubeBuddy browser extension (free tier)
+- [ ] Create Opus Clip account (free tier: 10 clips/month)
+- [ ] Download CapCut (desktop app is free, no account needed)
 
 ---
 
