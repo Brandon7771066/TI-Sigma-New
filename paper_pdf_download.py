@@ -97,90 +97,139 @@ def render_pdf_download_dashboard():
     with tab1:
         st.subheader("Individual Paper Downloads")
         st.caption("Generate and download individual papers as searchable PDFs")
-        
-        # Group papers by category - include research_papers directory
-        categories = {
-            "🌟 NEW: Research Papers (Nov 2025)": [
-                ("research_papers", "GRAND_MYRION_COMPUTATION_PAPER.md"),
-                ("research_papers", "EULER_TRALSE_SYNTHESIS.md"),
-                ("research_papers", "BOOTSTRAPPED_FORESIGHT_PAPER.md"),
-                ("research_papers", "LCC_VIRUS_FRAMEWORK_PAPER.md"),
-                ("research_papers", "ANTI_GILE_EVIL_THEORY_PAPER.md"),
-                ("research_papers", "INVITATION_ETHICS_FRAMEWORK_PAPER.md"),
-                ("research_papers", "FREE_WILL_INTENSITY_PARADOX_PAPER.md"),
-                ("research_papers", "RESONANCE_VS_CALCULATION_PAPER.md"),
-                ("research_papers", "TRALSE_EPISTEMOLOGY_PAPER.md"),
-                ("research_papers", "ANIMAL_ICELL_SPIRIT_ANIMALS_PAPER.md"),
-                ("research_papers", "BIOLUMINESCENCE_DIVINE_INDICATOR_PAPER.md"),
-                ("research_papers", "DE_PHOTON_TIME_ICELL_MECHANICS_PAPER.md"),
-            ],
-            "Core Framework": [
-                ("papers", "CONSTRUCTIVE_DOGMATISM.md"),
-                ("papers", "TRALSEBIT_COMPLETE_THEORY.md"),
-                ("papers", "TI_STATISTICS_COMPLETE_FRAMEWORK.md"),
-                ("papers", "TI_FOR_EVERYONE_COMPLETE_BOOK.md"),
-            ],
-            "Mathematics": [
-                ("papers", "RIEMANN_HYPOTHESIS_TI_PROOF_v2.md"),
-                ("papers", "RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md"),
-                ("papers", "MONTGOMERY_PAIR_CORRELATION_RIEMANN.md"),
-                ("papers", "GILE_VS_PARETO_DISTRIBUTION.md"),
-            ],
-            "Consciousness Theory": [
-                ("papers", "CONSCIOUSNESS_SHELL_SOLUTION.md"),
-                ("papers", "ICELL_IWEB_ONTOLOGY_COMPLETE.md"),
-                ("papers", "PN_C_CCC_ME_COMPLETE_ONTOLOGY.md"),
-            ],
-            "Applications": [
-                ("papers", "PSI_AS_RESONANCE_FIELD_COMPLETE_THEORY.md"),
-                ("papers", "PSI_HEART_COHERENCE_MECHANISM.md"),
-            ]
-        }
-        
-        for category, file_list in categories.items():
-            with st.expander(f"📁 {category} ({len(file_list)} papers)"):
-                for item in file_list:
-                    # Handle both tuple format (dir, filename) and legacy string format
-                    if isinstance(item, tuple):
-                        dir_name, filename = item
-                        md_path = Path(dir_name) / filename
-                    else:
-                        filename = item
-                        md_path = papers_dir / filename
-                    
-                    if md_path.exists():
-                        # Read paper to get title
-                        with open(md_path, 'r', encoding='utf-8') as f:
-                            content = f.read()
-                            title = filename.replace('.md', '').replace('_', ' ').title()
-                            for line in content.split('\n'):
-                                if line.startswith('# '):
-                                    title = line[2:].strip()
-                                    break
-                        
-                        col1, col2, col3 = st.columns([4, 1, 1])
-                        col1.write(f"**{title}**")
-                        
-                        # View in browser button
-                        if col2.button("👁️ View", key=f"view_{filename}"):
-                            st.markdown(f"### {title}")
-                            st.markdown(content)
-                        
-                        # Download PDF button
-                        if col3.button("📥 PDF", key=f"dl_{filename}"):
-                            with st.spinner(f"Generating {title}..."):
-                                try:
-                                    pdf_bytes = markdown_to_pdf_bytes(content, title)
-                                    st.download_button(
-                                        label="⬇️ Download PDF",
-                                        data=pdf_bytes,
-                                        file_name=f"{filename.replace('.md', '')}.pdf",
-                                        mime="application/pdf",
-                                        key=f"download_{filename}"
-                                    )
-                                    st.success("✅ PDF ready!")
-                                except Exception as e:
-                                    st.error(f"❌ Error: {e}")
+
+        # --- LIVE SEARCH BAR ---
+        search_query = st.text_input("🔍 Search papers by title or keyword", placeholder="e.g. blueprint, tralse, consciousness, URB...")
+
+        if search_query.strip():
+            st.markdown(f"### Search results for: *{search_query}*")
+            results = []
+            for md_path in markdown_files:
+                content = md_path.read_text(encoding='utf-8', errors='ignore')
+                title = md_path.stem.replace('_', ' ').title()
+                for line in content.split('\n'):
+                    if line.startswith('# '):
+                        title = line[2:].strip()
+                        break
+                if search_query.lower() in title.lower() or search_query.lower() in content.lower():
+                    results.append((md_path, title, content))
+
+            if results:
+                st.success(f"Found {len(results)} paper(s) matching '{search_query}'")
+                for md_path, title, content in results:
+                    col1, col2, col3 = st.columns([4, 1, 1])
+                    col1.write(f"**{title}**")
+                    if col2.button("👁️ View", key=f"search_view_{md_path.name}"):
+                        st.markdown(f"### {title}")
+                        st.markdown(content)
+                    if col3.button("📥 PDF", key=f"search_dl_{md_path.name}"):
+                        with st.spinner(f"Generating PDF..."):
+                            try:
+                                pdf_bytes = markdown_to_pdf_bytes(content, title)
+                                st.download_button(
+                                    label="⬇️ Download PDF",
+                                    data=pdf_bytes,
+                                    file_name=f"{md_path.stem}.pdf",
+                                    mime="application/pdf",
+                                    key=f"search_download_{md_path.name}"
+                                )
+                                st.success("✅ PDF ready!")
+                            except Exception as e:
+                                st.error(f"❌ Error: {e}")
+            else:
+                st.warning(f"No papers found matching '{search_query}'. Try a different keyword.")
+
+        else:
+            # --- BROWSEABLE CATEGORIES ---
+            categories = {
+                "🔥 LATEST — Feb 2026 Breakthroughs": [
+                    ("papers", "UNIVERSAL_REALITY_BLUEPRINT_PERIODIC_TABLE_OF_MATH.md"),
+                    ("papers", "INFORMATION_IS_ALL_THERE_IS_TI_PERIODIC_TABLE_V2.md"),
+                    ("papers", "PRIMORDIAL_OCTOPUS_SPACE_FROM_SEVEN_CONSTANTS.md"),
+                    ("papers", "ORIGIN_OF_EXISTENCE_BREIT_WHEELER_TI_SIGMA.md"),
+                    ("papers", "NONLINEAR_NUMBER_LINE.md"),
+                    ("papers", "PRIMORDIAL_CONSCIOUSNESS_PHOTONIC_OPTICAL_COMPUTER.md"),
+                ],
+                "🌟 NEW: Research Papers (Nov 2025)": [
+                    ("research_papers", "GRAND_MYRION_COMPUTATION_PAPER.md"),
+                    ("research_papers", "EULER_TRALSE_SYNTHESIS.md"),
+                    ("research_papers", "BOOTSTRAPPED_FORESIGHT_PAPER.md"),
+                    ("research_papers", "LCC_VIRUS_FRAMEWORK_PAPER.md"),
+                    ("research_papers", "ANTI_GILE_EVIL_THEORY_PAPER.md"),
+                    ("research_papers", "INVITATION_ETHICS_FRAMEWORK_PAPER.md"),
+                    ("research_papers", "FREE_WILL_INTENSITY_PARADOX_PAPER.md"),
+                    ("research_papers", "RESONANCE_VS_CALCULATION_PAPER.md"),
+                    ("research_papers", "TRALSE_EPISTEMOLOGY_PAPER.md"),
+                    ("research_papers", "ANIMAL_ICELL_SPIRIT_ANIMALS_PAPER.md"),
+                    ("research_papers", "BIOLUMINESCENCE_DIVINE_INDICATOR_PAPER.md"),
+                    ("research_papers", "DE_PHOTON_TIME_ICELL_MECHANICS_PAPER.md"),
+                ],
+                "Core Framework": [
+                    ("papers", "CONSTRUCTIVE_DOGMATISM.md"),
+                    ("papers", "TRALSEBIT_COMPLETE_THEORY.md"),
+                    ("papers", "TI_STATISTICS_COMPLETE_FRAMEWORK.md"),
+                    ("papers", "TI_FOR_EVERYONE_COMPLETE_BOOK.md"),
+                ],
+                "Mathematics": [
+                    ("papers", "RIEMANN_HYPOTHESIS_TI_PROOF_v2.md"),
+                    ("papers", "RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md"),
+                    ("papers", "MONTGOMERY_PAIR_CORRELATION_RIEMANN.md"),
+                    ("papers", "GILE_VS_PARETO_DISTRIBUTION.md"),
+                ],
+                "Consciousness Theory": [
+                    ("papers", "CONSCIOUSNESS_SHELL_SOLUTION.md"),
+                    ("papers", "ICELL_IWEB_ONTOLOGY_COMPLETE.md"),
+                    ("papers", "PN_C_CCC_ME_COMPLETE_ONTOLOGY.md"),
+                ],
+                "Applications": [
+                    ("papers", "PSI_AS_RESONANCE_FIELD_COMPLETE_THEORY.md"),
+                    ("papers", "PSI_HEART_COHERENCE_MECHANISM.md"),
+                ]
+            }
+
+            # Auto-expand the featured section
+            for i, (category, file_list) in enumerate(categories.items()):
+                expanded = (i == 0)
+                with st.expander(f"📁 {category} ({len(file_list)} papers)", expanded=expanded):
+                    for item in file_list:
+                        # Handle both tuple format (dir, filename) and legacy string format
+                        if isinstance(item, tuple):
+                            dir_name, filename = item
+                            md_path = Path(dir_name) / filename
+                        else:
+                            filename = item
+                            md_path = papers_dir / filename
+
+                        if md_path.exists():
+                            with open(md_path, 'r', encoding='utf-8') as f:
+                                content = f.read()
+                                title = filename.replace('.md', '').replace('_', ' ').title()
+                                for line in content.split('\n'):
+                                    if line.startswith('# '):
+                                        title = line[2:].strip()
+                                        break
+
+                            col1, col2, col3 = st.columns([4, 1, 1])
+                            col1.write(f"**{title}**")
+
+                            if col2.button("👁️ View", key=f"view_{filename}"):
+                                st.markdown(f"### {title}")
+                                st.markdown(content)
+
+                            if col3.button("📥 PDF", key=f"dl_{filename}"):
+                                with st.spinner(f"Generating {title}..."):
+                                    try:
+                                        pdf_bytes = markdown_to_pdf_bytes(content, title)
+                                        st.download_button(
+                                            label="⬇️ Download PDF",
+                                            data=pdf_bytes,
+                                            file_name=f"{filename.replace('.md', '')}.pdf",
+                                            mime="application/pdf",
+                                            key=f"download_{filename}"
+                                        )
+                                        st.success("✅ PDF ready!")
+                                    except Exception as e:
+                                        st.error(f"❌ Error: {e}")
     
     with tab2:
         st.subheader("Bulk Download - All Papers ZIP")
