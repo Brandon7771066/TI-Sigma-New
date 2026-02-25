@@ -143,6 +143,7 @@ def render_pdf_download_dashboard():
             # --- BROWSEABLE CATEGORIES ---
             categories = {
                 "🔥 LATEST — Feb 2026 Breakthroughs": [
+                    ("papers", "DIVINATION_EMPIRICAL_EVIDENCE_REVIEW.md"),
                     ("papers", "UNIVERSAL_REALITY_BLUEPRINT_PERIODIC_TABLE_OF_MATH.md"),
                     ("papers", "INFORMATION_IS_ALL_THERE_IS_TI_PERIODIC_TABLE_V2.md"),
                     ("papers", "PRIMORDIAL_OCTOPUS_SPACE_FROM_SEVEN_CONSTANTS.md"),
