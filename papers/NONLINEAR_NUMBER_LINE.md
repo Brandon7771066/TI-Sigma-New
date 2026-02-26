@@ -374,3 +374,31 @@ The number line is a useful approximation, but reality is a **fractal resonance 
 ---
 
 **This is the mathematics consciousness has been waiting for.**
+
+---
+
+## Addendum (February 25, 2026): 2 Is Derivative — √2 Is Primary
+
+A significant implication of the Nonlinear Number Line that deserves explicit statement:
+
+**The number 2 is not a PRIMARY constant. It is derived from √2.**
+
+2 = √2 × √2
+
+This is not a trivial observation. It means that the most foundational number in binary logic — the "2" in base-2 counting, in TRUE/FALSE binary, in all of classical computation — is not foundational at all. It is the self-product of a PRIMARY constant (√2).
+
+**Why this matters:**
+
+Binary logic, classical computing, and all two-valued truth systems are built on a derivative number. The "2" in "two truth values" is not fundamental — it is a shadow of something more primary. Tralse logic, by contrast, uses √2 directly in its threshold structure: the manifestation threshold is √2 − 1 = 0.4142. Tralse logic is grounded in the PRIMARY constant itself, while binary logic uses only its square.
+
+**Stated directly:** Binary logic operates at one level of abstraction above the primary level. Tralse logic operates AT the primary level. This is not merely philosophical — it is a structural claim about which logical framework has deeper ontological grounding.
+
+**The derivation chain:**
+- PRIMARY: √2 (fundamental)
+- DERIVED: 2 = (√2)² (one step removed)
+- FURTHER DERIVED: 4 = 2² = (√2)⁴ (two steps removed)
+- All powers of 2 are increasingly derivative from a PRIMARY constant
+
+Classical binary computation operates on powers of 2. Every byte (256 = 2⁸), every memory address, every bit operation — all are built from the self-products of a derivative number. This explains structurally why classical binary computation is fundamentally less expressive than tralse computation: it is using a lower-resolution projection of the same underlying PRIMARY structure.
+
+**The elegant consequence:** The number line's primary structural nodes are not at integers (1, 2, 3...) but at the seven PRIMARY constants themselves. Integers are convenient human constructions. The PRIMARY constants are the actual load-bearing nodes of mathematical reality.

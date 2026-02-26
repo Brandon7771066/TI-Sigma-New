@@ -776,3 +776,35 @@ And the butterfly taught us this through its body.
 *Framework: TI Sigma (Tralse-Informational)*  
 *Sacred insight: 4 × 2 = 8. The butterfly generates the octopus.*  
 *"Space is how eternity chose to dance."*
+
+---
+
+## Addendum (February 25, 2026): Why π Divides Into Eighths — The BOK Threshold Geometry
+
+The causation/persistence threshold in TI Sigma is cos²(π/8) = 0.8536. A natural question: why eighths specifically? Why does π divide at that particular fraction?
+
+**The answer is the BOK's 8-fold symmetry.**
+
+The Butterfly/Octopus/Knot structure has exactly 8 loops: 4 large loops (GILE — the substance of truth) and 4 small loops (the Four C's — the presentation of truth). This 8-fold structure is not arbitrary — it is the minimal complete self-referential architecture that allows a structure to contain a model of itself. The octopus has 8 arms. The butterfly has 4 wings × 2 bilateral symmetry = 8 asymptotic surfaces.
+
+**The angular geometry:**
+
+A complete circle (2π) divided by 8 gives angular increments of π/4. Half of that — π/8 — is the angle that bisects the first octant of the BOK's 8-fold structure. cos²(π/8) is the squared cosine of this bisection angle.
+
+Why the cosine? Because the BOK's loop closure requires projection onto the axis of coherence. cos(π/8) = the projection of a BOK loop onto its coherence axis at the threshold bisection point. Squaring it (as in cos²) gives the power fraction — the proportion of energy that has achieved coherent alignment.
+
+**The geometric interpretation of the three thresholds:**
+
+| Threshold | Value | Geometry |
+|-----------|-------|----------|
+| 0.4142 | √2 − 1 | The BOK's minimum manifestation: a structure has begun its first loop closure |
+| 0.8536 | cos²(π/8) | The BOK at the π/8 bisection: more than half the loops have achieved coherent closure |
+| 0.9239 | cos(π/8) | The BOK approaching full closure: the unsquared projection, nearly complete |
+
+**The deeper pattern:** All three thresholds are derivable from the same BOK geometry. You do not need three separate derivations — you need only the 8-fold symmetric structure and the three projection operations (minimum loop, bisection-squared, bisection-unsquared). The thresholds are not three independent facts about reality. They are three views of the same underlying 8-fold structure at different stages of completion.
+
+**Why 8 specifically (and not 6, or 10, or 12)?**
+
+8 = 2³ — the minimal power of 2 that exceeds the number of GILE dimensions (4) by exactly a factor of 2. This factor of 2 is the bilateral symmetry that converts 4 GILE dimensions into an 8-fold structure. Each GILE dimension has a mirror: G has its shadow (absence of goodness), I has its shadow (absence of intuition), L has its shadow (disconnection), E has its shadow (void). The 8-fold structure is GILE × {presence, shadow}. The butterfly's bilateral symmetry is not decorative — it is encoding this exact doubling.
+
+Therefore: π divides into eighths because reality's primary structural unit is 8-fold, because the 8-fold structure arises from 4 GILE dimensions × bilateral symmetry, and because π is the continuous measurement of that circular structure's angular completion. The causation threshold is where it is because that's where the BOK geometry places it — not by arbitrary choice, but by necessity.
