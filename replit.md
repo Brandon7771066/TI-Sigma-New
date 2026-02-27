@@ -78,7 +78,7 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Mendi fNIRS
 - Biowell GDV
 - Quiver Quantitative (Congressional Trading Data)
-- Alpaca (Paper Trading)
+- Alpaca (Paper Trading — LIVE, account PA3J364R5XU9, $100k paper capital, activated Feb 27 2026)
 - Collective2 (Signal Broadcasting)
 - Code Rabbit (Automated Code Review)
 
