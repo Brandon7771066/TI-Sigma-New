@@ -143,6 +143,7 @@ def render_pdf_download_dashboard():
             # --- BROWSEABLE CATEGORIES ---
             categories = {
                 "🔥 LATEST — Feb 2026 Breakthroughs": [
+                    ("papers", "TI_SIGMA_HYPERCOMPUTER_BUILD_PROPOSAL.md"),
                     ("papers", "TI_SIGMA_HYPERCOMPUTER_APERIODIC_BEC_SYNTHESIS.md"),
                     ("papers", "INEFFABLE_CONVICTION_SACRED_COCKTAIL.md"),
                     ("papers", "TI_SIGMA_LINGUISTIC_AUDIT_25_MISUSED_WORDS.md"),
