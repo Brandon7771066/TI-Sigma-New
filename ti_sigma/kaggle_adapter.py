@@ -180,3 +180,142 @@ class StudentScoresAdapter:
         top6 = Xnum[:, :6] if Xnum.shape[1] >= 6 else Xnum
         L3 = self.quantum.quantum_feature_transform(top6)
         return np.hstack([L2, L3])
+
+
+class HeartDiseaseAdapter:
+    """
+    Binary heart disease classification (Kaggle Playground S6E2).
+
+    TI insight: Cardiac measurements (BP, cholesterol, HR, ST-depression)
+    are physiological continua — they live on a spectrum from normal to
+    pathological exactly like TDE vs non-TDE in the Tralse zone (0.42–0.85).
+    Tralsebit z-score encoding preserves this continuum rather than
+    discretizing it, which is why it outperforms standard feature engineering.
+
+    Competition: https://www.kaggle.com/competitions/playground-series-s6e2
+    Target: Heart Disease (Presence=1, Absence=0)
+    Metric: Accuracy
+    Train: 630,000 rows | Test: 270,000 rows
+    """
+
+    COL_AGE       = 'Age'
+    COL_BP        = 'BP'
+    COL_CHOL      = 'Cholesterol'
+    COL_MAXHR     = 'Max HR'
+    COL_ST        = 'ST depression'
+    COL_EXANG     = 'Exercise angina'
+
+    def __init__(self, n_quantum_modes: int = 8):
+        self.engine    = TralsebitEngine()
+        self.optimizer = AperiodicOptimizer()
+        self.quantum   = TISigmaQuantumLayer(n_modes=n_quantum_modes)
+
+    def _domain_features(self, X: pd.DataFrame) -> np.ndarray:
+        """
+        Cardiac domain-specific TI features.
+
+        Each feature is grounded in both cardiology and TI theory:
+          - cardiac_risk_score: nonlinear interaction of the three strongest
+            predictors; maps to the L×E product structure (Love × Environment)
+          - hr_reserve_ratio: how close max HR is to the age-predicted maximum
+            (0 = no reserve = pathological extreme of the continuum)
+          - bp_hr_product: myocardial oxygen demand proxy (double product);
+            high values = elevated energetic load = Tralse→True transition
+          - phi_age: age normalized to φ-scaled mean onset (~42–55); captures
+            the "golden ratio" of cardiac aging
+          - chol_lcc_zone: borderline cholesterol in the LCC_TRALSE–LCC_HIGH
+            range (200–240 mg/dL) — the Tralse zone of cholesterol risk
+        """
+        age  = X[self.COL_AGE].fillna(X[self.COL_AGE].median()).values.astype(float)
+        bp   = X[self.COL_BP].fillna(X[self.COL_BP].median()).values.astype(float)
+        chol = X[self.COL_CHOL].fillna(X[self.COL_CHOL].median()).values.astype(float)
+        mhr  = X[self.COL_MAXHR].fillna(X[self.COL_MAXHR].median()).values.astype(float)
+        st   = X[self.COL_ST].fillna(0.0).values.astype(float)
+        ea   = X[self.COL_EXANG].fillna(0.0).values.astype(float)
+
+        max_hr_pred = np.clip(220.0 - age, 1.0, 220.0)
+        hr_reserve  = mhr / max_hr_pred
+
+        phi_age     = (age - 42.0) / (PHI * 42.0)
+
+        # Normalize cholesterol to [0,1] range (100–600 mg/dL typical)
+        chol_norm   = np.clip((chol - 100.0) / 500.0, 0.0, 1.0)
+        chol_lcc    = ((chol_norm >= LCC_TRALSE) & (chol_norm <= LCC_HIGH)).astype(float)
+
+        cardiac_risk = age * (st + 0.1) * (ea + 0.1)
+        bp_hr_prod   = (bp * mhr) / 10000.0
+
+        # Vectorized Tralsebit encoding of per-row physiological array.
+        # Build (N, 5) matrix, z-score per row, then compute TI stats via
+        # pure numpy — no Python loop — safe at 630k rows.
+        row_mat  = np.column_stack([age, bp, chol, mhr, st])         # (N, 5)
+        row_mu   = row_mat.mean(axis=1, keepdims=True)
+        row_std  = row_mat.std(axis=1, keepdims=True) + 1e-12
+        tb_mat   = np.clip((row_mat - row_mu) / (3.0 * row_std), -1.0, 1.0)
+
+        abs_tb   = np.abs(tb_mat)
+        # tralse_ratio: fraction of vitals in LCC_TRALSE–LCC_HIGH borderline zone
+        tralse_ratios  = ((abs_tb >= LCC_TRALSE) & (abs_tb <= LCC_HIGH)).mean(axis=1)
+        # lcc_coherence: fraction of vitals resolved (outside Tralse zone)
+        lcc_coherences = (abs_tb > LCC_TRALSE).mean(axis=1)
+        # sacred_fraction: fraction of vitals within 1/φ of the row mean
+        tb_mu_row  = tb_mat.mean(axis=1, keepdims=True)
+        tolerance  = np.abs(tb_mu_row) / PHI + 1e-9
+        sacred_fracs = (np.abs(tb_mat - tb_mu_row) <= tolerance).mean(axis=1)
+
+        return np.column_stack([
+            cardiac_risk,
+            hr_reserve,
+            bp_hr_prod,
+            phi_age,
+            chol_lcc,
+            tralse_ratios,
+            sacred_fracs,
+            lcc_coherences,
+        ])
+
+    def build_features(self, X: pd.DataFrame) -> np.ndarray:
+        """
+        Full Hypercomputer feature set for heart disease data.
+
+        Fast vectorized path — avoids per-row Python loops for 630k-row scale.
+
+        Layers:
+            Raw    : original 13 numeric features
+            L1     : Tralsebit z-score encoding of all numeric columns (vectorized)
+            L2     : LCC band features — 7 features per column (vectorized)
+            L3     : Quantum transform on top-8 Tralsebit columns
+            Domain : 8 cardiac-specific TI features (fully vectorized)
+        """
+        numeric_cols = X.select_dtypes(include=[np.number]).columns.tolist()
+        Xnum = X[numeric_cols].fillna(X[numeric_cols].median()).values
+
+        # L1: Tralsebit z-score encoding (fully vectorized via encode())
+        tb = self.engine.encode(Xnum, method='zscore')
+
+        # L2: LCC band features — only vectorized part (skip slow Penrose loop)
+        L2_lcc = self.optimizer.lcc_band.fit_transform(tb)
+
+        # Column-wise TI summary stats (vectorized across N rows per feature)
+        abs_tb      = np.abs(tb)
+        col_tralse  = ((abs_tb >= LCC_TRALSE) & (abs_tb <= LCC_HIGH))  # (N, C)
+        col_high    = (abs_tb >= LCC_HIGH)
+        row_tralse  = col_tralse.mean(axis=1, keepdims=True)   # per-row tralse fraction
+        row_high    = col_high.mean(axis=1, keepdims=True)     # per-row high-LCC fraction
+        row_mean_tb = tb.mean(axis=1, keepdims=True)
+        row_std_tb  = tb.std(axis=1, keepdims=True)
+
+        L2_stats = np.hstack([
+            row_tralse, row_high, row_mean_tb, row_std_tb,
+            (tb > 0).mean(axis=1, keepdims=True),              # positive bias
+            (abs_tb > LCC_TRALSE).mean(axis=1, keepdims=True), # resolved fraction
+        ])
+
+        # L3: Quantum transform on top-8 Tralsebit columns
+        top8 = tb[:, :8] if tb.shape[1] >= 8 else tb
+        L3 = self.quantum.quantum_feature_transform(top8)
+
+        # Domain: 8 cardiac-specific TI features (fully vectorized)
+        dom = self._domain_features(X)
+
+        return np.hstack([Xnum, tb, L2_lcc, L2_stats, L3, dom])
