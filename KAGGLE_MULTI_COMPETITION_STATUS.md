@@ -21,6 +21,7 @@
 | **v5** | **88.79%** | **65 clinical** | **XGB+LGB+HGB — CURRENT BEST** |
 | v6 | — | 65 clinical | Pseudo-label attempt (negligible gain) |
 | v7 | 88.78% | 65 clinical | Cleveland 10× blend — confirms Bayes floor |
+| v8 | 88.80% | 40 TE+artifact | Target encoding + KNN generator artifacts — +0.01pp |
 
 **CONVERGENCE DISCOVERY (Paper #341) — CONFIRMED BY v7:**
 XGBoost 3.2.0 + LightGBM 4.6.0 both tested and converge to ~88.8%.
