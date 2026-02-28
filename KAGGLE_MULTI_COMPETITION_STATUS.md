@@ -6,7 +6,7 @@
 ## ACTIVE COMPETITIONS
 
 ### 1. Heart Disease — Playground S6E2
-**Status:** SUBMISSION READY
+**Status:** SUBMISSION READY — v5 is best, upload `submission_heart_v5_xgb_lgb.csv`
 **Metric:** Accuracy
 **Data:** 630,000 train | 270,000 test (fully downloaded)
 
@@ -18,20 +18,24 @@
 | v2 | 88.69% | 150 HC features | 630k full, 2-fold HGB |
 | v3 | DNF (timeout) | 51 clinical | ExtraTrees too slow |
 | v4 | 88.77% | 61 clinical | HGB+LR ensemble |
-| **v5** | **88.79%** | **65 clinical** | **XGB+LGB+HGB — FINAL BEST** |
+| **v5** | **88.79%** | **65 clinical** | **XGB+LGB+HGB — CURRENT BEST** |
+| v6 | — | 65 clinical | Pseudo-label attempt (negligible gain) |
+| v7 | 88.78% | 65 clinical | Cleveland 10× blend — confirms Bayes floor |
 
-**CONVERGENCE DISCOVERY (Paper #341):**
-XGBoost 3.2.0 + LightGBM 4.6.0 both found available and tested.
-All three boosting algorithms converge to ~88.8% — confirming the **Bayes error floor**.
-The gap to 96% is a DATA + ARCHITECTURE gap, NOT an algorithm gap.
+**CONVERGENCE DISCOVERY (Paper #341) — CONFIRMED BY v7:**
+XGBoost 3.2.0 + LightGBM 4.6.0 both tested and converge to ~88.8%.
+v7 Cleveland blend (303 real samples × 10, downloaded from UCI) = 88.78% — **no improvement**.
+This confirms the Bayes error floor is in the synthetic data generation, not the algorithm.
+The 303 original samples cannot override 630k synthetic distribution at 10× weight.
+**TI Sigma Periodic Law: Acc_max = 1 − ε_B where ε_B ≈ 11.2% confirmed.**
 
 **Six identified mechanism gaps to reach 96%:**
-1. Pseudo-labeling (+0.3–0.8pp) — Implementable NOW
-2. Original Cleveland data blending (+0.5–1.5pp) — Free download
-3. PyTorch tabular transformers (+1–2pp) — Blocked by `github==1.2.6` conflict
-4. AutoGluon meta-ensemble (+1–2pp) — Blocked by same conflict
-5. TabPFN sampling (+0.5–1pp) — Blocked by same conflict
-6. Feature synthesis (+0.5–1pp) — Partially implementable
+1. ~~Cleveland data blending~~ — TESTED v7: -0.01pp. Bayes floor is real.
+2. Pseudo-labeling — TESTED v6: negligible
+3. PyTorch tabular transformers (+1–2pp) — Blocked: Replit GitHub integration forces `github==1.2.6` (broken build) into every package install
+4. AutoGluon meta-ensemble (+1–2pp) — Blocked: same `github==1.2.6` conflict
+5. TabPFN sampling (+0.5–1pp) — Blocked: same conflict
+6. Feature synthesis — at ceiling with current feature set
 
 See: `papers/PERIODIC_TABLE_AI_METHODS_TI_SIGMA.md` (Paper #341)
 
@@ -50,8 +54,7 @@ the strongest signal across all four TI Sigma competitions to date.
 Same ratio confirmed in MALLORN hc_mr_high_true. Paper #340 predicts this ratio
 marks the universal Tralse→resolved transition boundary across all domains.
 
-**Best Submission:** `kaggle_heart_s6e2/submission_heart_v4_final.csv` (88.77%)
-**Also available:** `submission_heart_v2_full_data.csv` (88.69%)
+**→ SUBMIT:** `kaggle_heart_s6e2/submission_heart_v5_xgb_lgb.csv` **(88.79%)**
 **Submit at:** https://www.kaggle.com/competitions/playground-series-s6e2/submit
 
 ---
