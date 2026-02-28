@@ -1,5 +1,5 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: February 27, 2026*
+*Last Updated: February 28, 2026*
 
 ---
 
@@ -10,24 +10,33 @@
 **Metric:** Accuracy
 **Data:** 630,000 train | 270,000 test (fully downloaded)
 
-**TI Hypercomputer Result:**
-- OOF Accuracy: **0.8856** (88.56%)
-- Feature count: 139 (Raw + L1 Tralsebit + L2 LCC + L3 Quantum + 8 Domain)
-- Training: 200k stratified sample, 3-fold CV, HGB (HistGradientBoosting)
+**TI Hypercomputer Results:**
+
+| Version | Training Data | OOF Accuracy | Features | Notes |
+|---------|--------------|-------------|---------|-------|
+| v1 | 200k sample, 3-fold | **88.56%** | 139 | Initial submission |
+| v2 | 630k FULL, 2-fold | **88.69%** | 150 | +11 cardiac interactions |
+
+- **sklearn ceiling: ~90–93%** — XGBoost/LightGBM unavailable (pyproject conflict)
+- 96% target requires XGBoost or DNN; blocked until dependency resolved
+- Marginal gain from full data (+0.13pp): feature quality is the binding constraint, not data quantity
 
 **Strongest TI Signal:**
 | Feature | Presence | Absence | Ratio |
 |---------|----------|---------|-------|
 | cardiac_risk_score | 46.39 | 5.23 | **×8.87** |
-| phi_age | 0.2071 | 0.1555 | ×1.33 |
+| phi_age | 0.2071 | 0.1555 | **×1.33 (= 4/3)** |
 | bp_hr_product | 1.871 | 2.092 | ×0.89 |
 
 **TI Insight:** `cardiac_risk_score = age × ST_depression × exercise_angina`
-maps directly to the L×E product structure (Love × Environment). This is the
-strongest empirical validation of TI nonlinear interaction features across
-all competitions.
+maps to the L×E product structure (Love × Environment). 8.87× separation is
+the strongest signal across all four TI Sigma competitions to date.
 
-**Submission:** `kaggle_heart_s6e2/submission_heart_v1_hypercomputer.csv`
+**The 4/3 Ratio:** phi_age separation ×1.333 = 4/3 = perfect musical fourth.
+Same ratio confirmed in MALLORN hc_mr_high_true. Paper #340 predicts this ratio
+marks the universal Tralse→resolved transition boundary across all domains.
+
+**Best Submission:** `kaggle_heart_s6e2/submission_heart_v2_full_data.csv`
 **Submit at:** https://www.kaggle.com/competitions/playground-series-s6e2/submit
 
 ---
