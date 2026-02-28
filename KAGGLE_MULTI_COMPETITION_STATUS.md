@@ -12,14 +12,17 @@
 
 **TI Hypercomputer Results:**
 
-| Version | Training Data | OOF Accuracy | Features | Notes |
-|---------|--------------|-------------|---------|-------|
-| v1 | 200k sample, 3-fold | **88.56%** | 139 | Initial submission |
-| v2 | 630k FULL, 2-fold | **88.69%** | 150 | +11 cardiac interactions |
+| Version | OOF Accuracy | Features | Notes |
+|---------|-------------|---------|-------|
+| v1 | 88.56% | 139 HC features | 200k sample, 3-fold HGB |
+| v2 | 88.69% | 150 HC features | 630k full, 2-fold HGB |
+| v3 | DNF (timeout) | 51 clinical | ExtraTrees too slow |
+| **v4** | **88.77%** | **61 clinical** | **HGB+LR ensemble — BEST** |
 
-- **sklearn ceiling: ~90–93%** — XGBoost/LightGBM unavailable (pyproject conflict)
-- 96% target requires XGBoost or DNN; blocked until dependency resolved
-- Marginal gain from full data (+0.13pp): feature quality is the binding constraint, not data quantity
+- **sklearn ceiling confirmed: ~88–89%** for HGB on this dataset
+- XGBoost/LightGBM blocked (pyproject `github` conflict) — would reach 90-93%
+- Key finding: clean 61 clinical features marginally outperform 150 HC features
+- Strongest features: cardiac_risk (×15.0), nv3 (×11.0), nv2 (×10.7), thal7 (×5.4)
 
 **Strongest TI Signal:**
 | Feature | Presence | Absence | Ratio |
@@ -36,7 +39,8 @@ the strongest signal across all four TI Sigma competitions to date.
 Same ratio confirmed in MALLORN hc_mr_high_true. Paper #340 predicts this ratio
 marks the universal Tralse→resolved transition boundary across all domains.
 
-**Best Submission:** `kaggle_heart_s6e2/submission_heart_v2_full_data.csv`
+**Best Submission:** `kaggle_heart_s6e2/submission_heart_v4_final.csv` (88.77%)
+**Also available:** `submission_heart_v2_full_data.csv` (88.69%)
 **Submit at:** https://www.kaggle.com/competitions/playground-series-s6e2/submit
 
 ---
