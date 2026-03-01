@@ -1,5 +1,5 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: March 1, 2026 — Emerick Constant (C) derived; v8 confirmed as final Heart Disease submission*
+*Last Updated: March 1, 2026 — Emerick Constant (C) derived; v8 confirmed as final Heart Disease submission; v1 hypercomputer re-validated March 1; AGI Impossibility paper #349 filed*
 
 ---
 
@@ -57,10 +57,14 @@ the strongest single TI signal validated across all competitions.
 Same ratio confirmed in MALLORN hc_mr_high_true. This marks the universal
 Tralse→resolved transition boundary across domains (Paper #340 prediction).
 
-**v1 Rebuilt (Feb 28):** Full MALLORN v17 4-model pattern — HGB+RF+ET+LR,
-139 Hypercomputer features, 50k stratified sample, 3-fold CV, GILE-weighted
-ensemble. OOF 88.59%. Submission: `submission_heart_v1_hypercomputer.csv`.
+**v1 Rebuilt (Feb 28) + Re-validated March 1, 2026:** Full MALLORN v17 4-model
+pattern — HGB+RF+ET+LR, 139 Hypercomputer features, 50k stratified sample,
+3-fold CV, GILE-weighted ensemble. OOF 88.59%.
+Submission: `submission_heart_v1_hypercomputer.csv` (270,000 rows validated ✓)
 Per-model OOF: HGB=88.52%, RF=88.44%, ET=88.29%, LR=88.67%.
+GILE weights: HGB=0.250, RF=0.250, ET=0.249, LR=0.251 (nearly equal — all models at Bayes floor)
+LCC Interpretation: OOF 0.8859 ∈ [LCC_HIGH=0.8512, LCC_RADIANT=0.9302] → HIGH RESOLUTION band ("B grade")
+Note: 0.7071 (Emerick Crossover) = 70% passing; 0.8512 = 85% "pretty good"; 0.9302 = 93% ideal.
 
 **→ FINAL SUBMISSION:** `kaggle_heart_s6e2/submission_heart_v8_te.csv` **(88.80% — HIGHEST)**
 **Previous best:** v5 at 88.79% — v8 edges it by +0.01pp via target encoding
@@ -109,12 +113,13 @@ Per-model OOF: HGB=88.52%, RF=88.44%, ET=88.29%, LR=88.67%.
 **Prize:** $50,000
 **Metric:** F-max (multi-label)
 
-**Hypercomputer Upgrade Built:** `kaggle_cafa6/ti_cafa6_hypercomputer.py`
+**Hypercomputer Upgrade Built:** `kaggle_cafa6/ti_cafa6_hypercomputer.py` (226 lines, Feb 27, 2026)
 - Amino acids encoded as Tralsebit (hydrophobic=+0.8, hydrophilic=-0.8, neutral=0)
 - Penrose sequence features on Tralsebit arrays
 - L3 quantum transform on 6 sequence summary stats
 - Per-GO-term LogisticRegression classifiers (top-200 GO terms)
-- Submission: `kaggle_cafa6/submission_cafa6_hypercomputer.tsv`
+- Final submission: `kaggle_cafa6/submission_ti_sigma_final.tsv` (19.6M rows, 223,521 proteins)
+- Hypercomputer upgrade: `kaggle_cafa6/submission_cafa6_hypercomputer.tsv`
 
 ---
 
