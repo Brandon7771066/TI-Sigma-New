@@ -1,5 +1,5 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: March 1, 2026 — Emerick Constant (C) derived; v8 confirmed as final Heart Disease submission; v1 hypercomputer re-validated March 1; AGI Impossibility paper #349 filed*
+*Last Updated: March 1, 2026 — Session 2: v1 Hypercomputer re-run confirmed (88.59% OOF, 270k submission validated ✓); Papers #350–351 filed (Riemann Hypothesis EAR approach; Butterfly's Secret D4 BOK symmetry); LCC_RADIANT bug fixed (was 1.0, now √(e/π)≈0.930); LCC_EMERICK=1/√2 added; all 7 matching rules verified ✓*
 
 ---
 
