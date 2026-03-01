@@ -30,7 +30,8 @@ The backend uses a service-oriented architecture with key components for:
 - **Computation & Information Theory**: Encompasses a Ternary Computation Framework, Quantum Collapse Simulator, Tralsebit Information Theory, and a TI Computing Language (TICL) with EEG authentication.
 - **Bio-Well Energy Activation System**: Integrates Bio-Well GDV research with Myrion Lamp photonic therapy and Pitch Crystal sound healing.
 - **Multi-Modal Biometric Profiler**: Comprehensive 12+ channel biometric profiling for unified GILE profile fusion.
-- **Kaggle Competition Engines**: Includes solutions for MedGemma Impact Challenge, Heart Disease Prediction, and Stanford RNA 3D Folding Part 2.
+- **Kaggle Competition Engines**: Heart Disease S6E2 (88.80% OOF, v8 final submission ready); Hull Tactical Market Prediction (HC v1, 74 features, June 2026 deadline, $100K); MedGemma Impact Challenge (HC v1, 94 features); Stanford RNA 3D Folding Part 2 (HC v1, RNAAdapter, 24 features).
+- **YouTube Video Pipeline**: `ti_video_producer.py` — FFmpeg+Matplotlib+OpenAI TTS end-to-end MP4 production. First video: Paper #352 Consciousness Equation explainer. Run `python ti_video_producer.py` to produce `videos/paper_352_consciousness_equation.mp4`.
 - **Weather Prediction Trading System**: ForecastEx/Kalshi weather trader with NWS forecast integration, TI threshold edge detection, and Kelly criterion sizing.
 - **Non-Algorithmic Step-Skipping Experiment**: Tests consciousness-inspired heuristics.
 - **Brain Coupling Number Guessing Game**: Features binomial statistics, Brain Coupling Score, and GILE integration.
