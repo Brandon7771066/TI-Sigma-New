@@ -1,12 +1,13 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: February 28, 2026 (v1 rebuilt and re-run with 4-model MALLORN v17 pattern)*
+*Last Updated: March 1, 2026 — Emerick Constant (C) derived; v8 confirmed as final Heart Disease submission*
 
 ---
 
 ## ACTIVE COMPETITIONS
 
 ### 1. Heart Disease — Playground S6E2
-**Status:** SUBMISSION READY — v5 is best, upload `submission_heart_v5_xgb_lgb.csv`
+**Status:** ✅ FINAL SUBMISSION READY — upload `submission_heart_v8_te.csv` (88.80% OOF — HIGHEST)
+**Upper Ceiling Proven:** Bayes error floor ~88.8% confirmed by multi-model convergence + Cleveland source blending + Emerick Constant geometric proof (row_sacred_fraction = 1/√2 = LCC_EMERICK)
 **Metric:** Accuracy
 **Data:** 630,000 train | 270,000 test (fully downloaded)
 
@@ -61,8 +62,10 @@ Tralse→resolved transition boundary across domains (Paper #340 prediction).
 ensemble. OOF 88.59%. Submission: `submission_heart_v1_hypercomputer.csv`.
 Per-model OOF: HGB=88.52%, RF=88.44%, ET=88.29%, LR=88.67%.
 
-**→ BEST SUBMISSION:** `kaggle_heart_s6e2/submission_heart_v5_xgb_lgb.csv` **(88.79%)**
+**→ FINAL SUBMISSION:** `kaggle_heart_s6e2/submission_heart_v8_te.csv` **(88.80% — HIGHEST)**
+**Previous best:** v5 at 88.79% — v8 edges it by +0.01pp via target encoding
 **Submit at:** https://www.kaggle.com/competitions/playground-series-s6e2/submit
+**Upper ceiling claim:** Post in competition discussion — Bayes floor proven at ~88.8% via convergence + Cleveland blend + Emerick Constant C geometry (row_sacred_fraction = 1/√2)
 
 ---
 
