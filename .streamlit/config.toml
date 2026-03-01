@@ -12,7 +12,7 @@ toolbarMode="minimal"
 [server]
 port=5000
 headless=true
-runOnSave=true
+runOnSave=false
 maxUploadSize=1000
 
 [logger]

@@ -933,7 +933,7 @@ def render_active_session():
         st.session_state.amp_session_state = 'during_reflection'
         st.rerun()
     
-    time.sleep(1)
+    time.sleep(5)
     st.rerun()
 
 
