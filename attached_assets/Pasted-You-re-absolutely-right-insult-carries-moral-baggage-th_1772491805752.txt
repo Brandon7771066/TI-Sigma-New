@@ -1,0 +1,168 @@
+You’re absolutely right: “insult” carries moral baggage that prejudges the act as vicious.
+“Rebuke” or “censure” immediately reframes it as moral speech aimed at correction.
+
+That semantic shift alone clarifies your project.
+
+You’re not defending cruelty.
+You’re defending moral enforcement through speech.
+
+That’s a very different thing.
+
+⸻
+
+Step 1: Empirical Taxonomy of What We Call “Insults”
+
+If we want red lines, we first need categories.
+
+Most things labeled “insults” fall into a few empirically distinguishable types:
+
+Category A: Identity Attacks
+	•	“You’re worthless.”
+	•	Slurs.
+	•	Attacks on race, gender, disability, etc.
+	•	Global condemnation of the person.
+
+Function: Domination, exclusion, dehumanization.
+Effect: High trauma risk, low corrective value.
+
+→ These almost certainly fail your “nontraumatic restoration” criterion.
+
+⸻
+
+Category B: Character Condemnation
+	•	“You’re dishonest.”
+	•	“You’re lazy.”
+	•	“You’re manipulative.”
+
+Function: Moral labeling.
+Effect: Can be corrective if tied to behavior, corrosive if global.
+
+These become legitimate rebuke only when:
+	•	Specific.
+	•	Evidence-linked.
+	•	Behavior-targeted.
+	•	Revocable.
+
+⸻
+
+Category C: Behavioral Rebuke
+	•	“That was cruel.”
+	•	“You lied.”
+	•	“You’re dodging responsibility.”
+
+Function: Boundary enforcement.
+Effect: Often productive if proportionate.
+
+This is closest to your ideal JI.
+
+⸻
+
+Category D: Status Undermining / Mockery
+	•	Sarcasm.
+	•	Ridicule.
+	•	Public shaming.
+	•	Humor at someone’s expense.
+
+Function: Ego destabilization.
+Effect: Mixed — powerful leveling tool, but volatile.
+
+In small groups, ridicule deters dominance.
+In mass systems, it can spiral.
+
+⸻
+
+Category E: Gossip-Based Moral Signaling
+	•	“He cheats people.”
+	•	“She lies.”
+	•	Reputation warnings.
+
+Function: Information sharing + norm enforcement.
+Effect: Highly efficient in tight communities, dangerous in viral ones.
+
+⸻
+
+Step 2: What to Keep vs. Reject
+
+If we filter by your criteria (restoration, nontrauma, proportionality, IC-aligned intent):
+
+Reject Completely:
+	•	Identity annihilation.
+	•	Slurs.
+	•	Irreversible reputational branding.
+	•	Exaggeration beyond evidence.
+	•	Dogpiling.
+
+Conditional (Use with High Caution):
+	•	Public ridicule.
+	•	Reputation sharing beyond local scope.
+	•	Psychological destabilization tactics.
+
+Keep / Legitimize:
+	•	Direct behavioral rebuke.
+	•	Character criticism tied to pattern and evidence.
+	•	Proportionate, specific censure.
+	•	Private correction escalating to public only if harm persists.
+
+That already sketches red lines.
+
+⸻
+
+Step 3: Rough Estimate — How Often Should Rebuke Occur?
+
+Now we get empirical and pragmatic.
+
+In a functioning, healthy social system:
+	•	Minor norm violations happen daily.
+	•	Serious moral violations are rarer.
+	•	Chronic ego rigidity is rarer still.
+
+If rebuke becomes constant, it ceases to signal severity.
+
+Anthropological studies of small-scale societies suggest:
+	•	Gossip is frequent.
+	•	Direct confrontation is less frequent.
+	•	Severe public shaming is rare and escalatory.
+
+A rough heuristic:
+	•	Light corrective feedback: common (daily-scale).
+	•	Sharp rebuke: occasional (when harm persists).
+	•	Public censure: rare and reserved for repeated or serious violations.
+
+If “sharp rebuke” happens more than, say, 10–20% of significant disagreements, you likely have overuse.
+
+If it happens near 0%, norms decay.
+
+You’re aiming for a middle zone.
+
+⸻
+
+Step 4: Proposed Hard Red Lines for Your JI Constitution
+
+Here’s a draft:
+	1.	No identity-based condemnation.
+	2.	No irreversible reputational branding.
+	3.	No mob amplification.
+	4.	Must target behavior, not existence.
+	5.	Must allow reintegration.
+	6.	Must stop once order is restored.
+	7.	Must remain open to evidence reversal.
+	8.	Must be proportionate to harm.
+
+These don’t require Kantian universalization.
+They’re pragmatic safeguards.
+
+⸻
+
+Step 5: Reframing the Whole Project
+
+If you rename your framework:
+	•	From: Justified Insult (JI)
+	•	To: Ethical Rebuke (ER) or Restorative Censure (RC)
+
+The philosophy becomes much more defensible.
+
+Because what you’re really arguing is:
+
+A society that forbids sharp moral speech loses a key informal enforcement mechanism and drifts toward norm decay.
+
+That’s arguable.
