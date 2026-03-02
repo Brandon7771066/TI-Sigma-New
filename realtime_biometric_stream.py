@@ -14,6 +14,7 @@ Author: Brandon Emerick
 Date: December 2025
 """
 
+import pandas as pd  # must be first — plotly validators require pandas fully initialized
 import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
@@ -525,8 +526,11 @@ def render_realtime_biometric_stream():
                     )
             
             with chart_placeholder.container():
-                fig = create_realtime_charts(reading, history)
-                st.plotly_chart(fig, use_container_width=True, key=f"chart_{time.time()}")
+                try:
+                    fig = create_realtime_charts(reading, history)
+                    st.plotly_chart(fig, use_container_width=True, key=f"chart_{time.time()}")
+                except Exception as _chart_err:
+                    st.warning(f"Chart render error: {_chart_err}")
             
             time.sleep(st.session_state.update_interval)
             
@@ -555,8 +559,11 @@ def render_realtime_biometric_stream():
         
         with chart_placeholder.container():
             if history.get('timestamps'):
-                fig = create_realtime_charts(reading, history)
-                st.plotly_chart(fig, use_container_width=True)
+                try:
+                    fig = create_realtime_charts(reading, history)
+                    st.plotly_chart(fig, use_container_width=True)
+                except Exception as _chart_err:
+                    st.warning(f"Chart render error: {_chart_err}")
             else:
                 st.info("Click 'Start Streaming' to begin collecting data")
     
