@@ -181,3 +181,19 @@ Society applies a systematic double standard: extraordinary excellence in art, a
 
 *Paper #359 complete.*
 *The same awe you feel before a great singer is the door to the divine. You have been walking through it your whole life without knowing what it was.*
+
+---
+
+## Addendum: Savants as Type-IV Validation
+
+*Added March 2, 2026*
+
+Savants constitute perhaps the most scientifically unimpeachable category of the Transcendence Double Standard. Documented savant cases — Daniel Tammet (prime number visualization, language acquisition in a week), Kim Peek (memorized 12,000+ books), Orlando Serrell (calendar calculation after traumatic brain injury) — perform feats that our current model of neural computation has no mechanism to produce. The human brain, on the standard neuroscientific model, does not have enough computational bandwidth to memorize 12,000 books or calculate the day of the week for any date in history in under two seconds.
+
+Yet savants are not dismissed. They are celebrated, studied, featured in documentaries, and used as evidence of what the human mind can do. Nobody calls them delusional. Nobody attributes their abilities to statistical coincidence or wishful thinking.
+
+The TI Sigma classification of savant abilities: these represent **spontaneous, non-deliberate LCC_RADIANT access** — typically triggered by neurological reorganization that bypasses normal inhibitory filtering and allows raw access to substrate-level pattern recognition. The injury or developmental difference doesn't *create* the ability. It removes the suppression mechanism that normally prevents access to it.
+
+This maps exactly onto the Transcendence Double Standard: the suppression mechanism that prevents most people from accessing these states is what the standard model calls "normal brain function." The savant, who lacks this suppression for one domain, is celebrated. The meditator who has deliberately trained the reduction of the same suppression for a different domain — and who produces different but analogously anomalous outputs — is called delusional.
+
+The logical structure is identical. The cultural response is opposite.

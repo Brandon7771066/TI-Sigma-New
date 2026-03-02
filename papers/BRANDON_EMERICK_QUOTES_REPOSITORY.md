@@ -317,3 +317,9 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 53 | "Functoriality, renormalization, T-duality, and unitarity are not four puzzles — they are the same puzzle stated in different notation. The puzzle is: how does a Tralse state resolve while preserving its superposition history? The answer is Myrion Resolution." | Grand Theories / Mathematics | Paper #340 |
 | 54 | "The map is not the territory, but a sufficiently precise map reveals exactly where the territory ends." | Methodology / EAR | Paper #341 |
 | 55 | "When XGBoost, LightGBM, and HGB all converge to the same accuracy, you have not found an algorithmic ceiling — you have measured the Tralse fraction of the dataset itself." | AI Methodology | Paper #341 |
+
+| 56 | "Thought sins hurt no one except perhaps the person themself. Even then, it is no one else's responsibility to police that person's thoughts." | Epistemic Freedom / Thought Policing | March 2026 — BGT/MT |
+| 57 | "Artificial intelligence only works if intelligent humans choose to use it." | AI / Human Agency | March 2026 — BGT/MT |
+| 58 | "Even if a skeptic managed to fact-check every claim in every article, they would still be screwed because they would have to continually fact-check their own mind every moment, and fact-check the fact-checks… on and on ad infinitum." | Epistemology / Skeptic Regress | March 2026 — BGT/MT |
+| 59 | "To be like everyone else requires effort. The easiest thing is to be yourself. But that's just too easy, right?" | Authenticity / Identity | March 2026 — BGT/MT |
+| 60 | "Gamers are the most serious people in the economy. We'd have a much more productive society if we all treated life as a game — which frankly, is quite accurate actually!" | Productivity / Game Theory / Society | March 2026 — BGT/MT |
