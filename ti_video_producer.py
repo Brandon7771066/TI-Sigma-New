@@ -372,23 +372,65 @@ Subscribe for weekly discoveries at the frontier of consciousness mathematics.
 """.strip()
 
 
+def _chunk_text(text: str, max_chars: int = 180) -> list:
+    """Split text into chunks at sentence boundaries for TTS chunking."""
+    import re
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+    chunks, current = [], ''
+    for s in sentences:
+        if len(current) + len(s) + 1 <= max_chars:
+            current = (current + ' ' + s).strip()
+        else:
+            if current:
+                chunks.append(current)
+            current = s[:max_chars]
+    if current:
+        chunks.append(current)
+    return chunks
+
+
 def generate_narration(text: str, output_path: str, voice: str = 'onyx') -> str:
-    """Generate narration audio using OpenAI TTS via Replit AI integration."""
+    """Generate narration audio using Google TTS (free, no API key)."""
+    import requests as _req
+    chunks = _chunk_text(text)
+    print(f"  Generating narration ({len(text)} chars, {len(chunks)} chunks)...")
+    chunk_files = []
+    tmpdir = tempfile.mkdtemp(prefix='ti_tts_')
     try:
-        from openai import OpenAI
-        api_key = os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
-        base_url = os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
-        client = OpenAI(api_key=api_key, base_url=base_url)
-        print(f"  Generating narration ({len(text)} chars, voice={voice})...")
-        response = client.audio.speech.create(
-            model='tts-1',
-            voice=voice,
-            input=text,
-        )
-        response.stream_to_file(output_path)
+        for i, chunk in enumerate(chunks):
+            chunk_path = os.path.join(tmpdir, f'chunk_{i:03d}.mp3')
+            try:
+                params = {'ie': 'UTF-8', 'q': chunk, 'tl': 'en', 'client': 'tw-ob', 'ttsspeed': '0.85'}
+                headers = {'User-Agent': 'Mozilla/5.0'}
+                r = _req.get('https://translate.google.com/translate_tts',
+                             params=params, headers=headers, timeout=20)
+                if r.status_code == 200 and len(r.content) > 500:
+                    with open(chunk_path, 'wb') as f:
+                        f.write(r.content)
+                    chunk_files.append(chunk_path)
+                else:
+                    print(f"    Chunk {i} TTS failed (status {r.status_code}), skipping")
+            except Exception as ce:
+                print(f"    Chunk {i} error ({ce}), skipping")
+
+        if not chunk_files:
+            raise RuntimeError("All TTS chunks failed")
+
+        if len(chunk_files) == 1:
+            shutil.copy(chunk_files[0], output_path)
+        else:
+            list_file = os.path.join(tmpdir, 'chunks.txt')
+            with open(list_file, 'w') as f:
+                for cf in chunk_files:
+                    f.write(f"file '{cf}'\n")
+            concat_cmd = ['ffmpeg', '-y', '-f', 'concat', '-safe', '0',
+                          '-i', list_file, '-c', 'copy', output_path]
+            subprocess.run(concat_cmd, capture_output=True, check=True)
+
         size = os.path.getsize(output_path)
-        print(f"  Narration saved → {output_path} ({size:,} bytes)")
+        print(f"  Narration saved → {output_path} ({size:,} bytes, {len(chunk_files)} chunks)")
         return output_path
+
     except Exception as e:
         print(f"  TTS failed ({e}) — creating silent placeholder audio")
         duration_s = max(10, len(text.split()) * 0.45)
@@ -402,8 +444,10 @@ def generate_narration(text: str, output_path: str, voice: str = 'onyx') -> str:
         if r.returncode == 0 and os.path.exists(output_path):
             print(f"  Silent audio created ({duration_s:.0f}s placeholder)")
         else:
-            print(f"  Silent audio failed — video will be silent (no -i audio)")
+            print(f"  Silent audio failed — video will have no audio track")
         return output_path
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
