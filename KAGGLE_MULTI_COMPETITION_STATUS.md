@@ -1,5 +1,5 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: March 2, 2026 — Session 4: Video pipeline upgraded — cinematic redesign (gold/dark starfield, glow effects, letterbox), TRALSE spelling corrected in visual frames, script rewritten as humanized 5-min documentary narration (312s, 36 TTS chunks, 92 subtitle segments); Hull Tactical HC v1, MedGemma HC v1, Stanford RNA HC v1, Heart S6E2 v8 all confirmed complete from prior session*
+*Last Updated: March 2, 2026 — Session 4: Zenodo bundle built — top 10 papers ranked by IP value, polished with academic metadata headers, upload guide written (zenodo_bundle/); video upgraded to humanized 5-min documentary (312s, TRALSE spelling fixed); patent strategy mapped (Provisional #1–3 at $160 each after Zenodo DOIs); Heart S6E2/Hull/MedGemma/RNA all confirmed complete*
 
 ---
 
