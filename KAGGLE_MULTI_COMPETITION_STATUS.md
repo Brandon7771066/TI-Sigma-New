@@ -1,5 +1,5 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: March 2, 2026 — Session 4: Zenodo bundle built — top 10 papers ranked by IP value, polished with academic metadata headers, upload guide written (zenodo_bundle/); video upgraded to humanized 5-min documentary (312s, TRALSE spelling fixed); patent strategy mapped (Provisional #1–3 at $160 each after Zenodo DOIs); Heart S6E2/Hull/MedGemma/RNA all confirmed complete*
+*Last Updated: March 2, 2026 — Session 5: Hull HC v1 (572 lines, MALLORN v17, 74 features, TimeSeriesSplit 5-fold, GILE OOF-weights), MedGemma HC v1 (381 lines, 94 features, OOF AUC 0.5711), RNA HC v1 (451 lines, RNAAdapter A/U/G/C encoding, 24 features, OOF RMSE 3.48Å), video producer (786 lines, paper_352 MP4 live) all confirmed complete. Papers filed: #361 (Restorative Censure taxonomy), #362 (BOK 8-Arm Hypothesis — Four C's as support arms, Gödel as TRALSE logic), #363 (CCC=butterfly-octopus, GM=mycelial — three-layer i-cell architecture).*
 
 ---
 
