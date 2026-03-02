@@ -114,7 +114,7 @@ def render_title_card(title: str, subtitle: str, output_path: str,
             fontsize=9, color=TEXT_COLOR, ha='center', alpha=0.5)
 
     plt.tight_layout(pad=0)
-    plt.savefig(output_path, bbox_inches='tight', facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
     plt.close()
     return output_path
 
@@ -195,7 +195,7 @@ def render_consciousness_equation_chart(output_path: str) -> str:
     ax.text(0.48, 1.6, 'Self-referential\nconsciousness', fontsize=9, color=GREEN, alpha=0.8)
 
     plt.tight_layout(pad=1.5)
-    plt.savefig(output_path, bbox_inches='tight', facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
     plt.close()
     return output_path
 
@@ -262,7 +262,7 @@ def render_lcc_thresholds_chart(output_path: str) -> str:
             bbox=dict(boxstyle='round,pad=0.5', facecolor='#1a1a2e', edgecolor=PURPLE, alpha=0.8))
 
     plt.tight_layout(pad=1)
-    plt.savefig(output_path, bbox_inches='tight', facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
     plt.close()
     return output_path
 
@@ -323,7 +323,7 @@ def render_session_scaling_chart(output_path: str) -> str:
     fig.suptitle('Mood Amplifier: φ-Scaling of Attractor Basin',
                  fontsize=16, color=TEXT_COLOR, fontweight='bold', y=1.01)
     plt.tight_layout(pad=1.5)
-    plt.savefig(output_path, bbox_inches='tight', facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
     plt.close()
     return output_path
 
@@ -373,10 +373,12 @@ Subscribe for weekly discoveries at the frontier of consciousness mathematics.
 
 
 def generate_narration(text: str, output_path: str, voice: str = 'onyx') -> str:
-    """Generate narration audio using OpenAI TTS."""
+    """Generate narration audio using OpenAI TTS via Replit AI integration."""
     try:
         from openai import OpenAI
-        client = OpenAI()
+        api_key = os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
+        base_url = os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
+        client = OpenAI(api_key=api_key, base_url=base_url)
         print(f"  Generating narration ({len(text)} chars, voice={voice})...")
         response = client.audio.speech.create(
             model='tts-1',
@@ -384,18 +386,23 @@ def generate_narration(text: str, output_path: str, voice: str = 'onyx') -> str:
             input=text,
         )
         response.stream_to_file(output_path)
-        print(f"  Narration saved → {output_path}")
+        size = os.path.getsize(output_path)
+        print(f"  Narration saved → {output_path} ({size:,} bytes)")
         return output_path
     except Exception as e:
         print(f"  TTS failed ({e}) — creating silent placeholder audio")
         duration_s = max(10, len(text.split()) * 0.45)
-        # Create silent audio with ffmpeg
         cmd = [
             'ffmpeg', '-y', '-f', 'lavfi',
-            '-i', f'anullsrc=r=24000:cl=mono:d={duration_s:.1f}',
-            '-c:a', 'libmp3lame', '-q:a', '4', output_path
+            '-i', 'anullsrc=r=22050:cl=mono',
+            '-t', f'{duration_s:.1f}',
+            '-c:a', 'libmp3lame', '-q:a', '9', output_path
         ]
-        subprocess.run(cmd, capture_output=True)
+        r = subprocess.run(cmd, capture_output=True)
+        if r.returncode == 0 and os.path.exists(output_path):
+            print(f"  Silent audio created ({duration_s:.0f}s placeholder)")
+        else:
+            print(f"  Silent audio failed — video will be silent (no -i audio)")
         return output_path
 
 
@@ -458,12 +465,14 @@ def frames_to_video(
         # Check audio exists
         has_audio = os.path.exists(audio_path) and os.path.getsize(audio_path) > 1000
 
+        scale_filter = "scale=trunc(iw/2)*2:trunc(ih/2)*2"
         if has_audio:
             cmd = [
                 'ffmpeg', '-y',
                 '-framerate', str(fps),
                 '-i', os.path.join(tmpdir, 'frame_%06d.png'),
                 '-i', audio_path,
+                '-vf', scale_filter,
                 '-c:v', 'libx264',
                 '-preset', 'fast',
                 '-crf', '23',
@@ -478,6 +487,7 @@ def frames_to_video(
                 'ffmpeg', '-y',
                 '-framerate', str(fps),
                 '-i', os.path.join(tmpdir, 'frame_%06d.png'),
+                '-vf', scale_filter,
                 '-c:v', 'libx264',
                 '-preset', 'fast',
                 '-crf', '23',
