@@ -157,6 +157,33 @@ Young children and adolescents below approximately age 16 consistently emerge in
 
 The developmental window appears to close around age 16 — consistent with the consolidation of social persona, the hardening of adaptation-level frameworks, and the development of social editing skills. After this age, the same perceptions continue to occur but are increasingly suppressed before expression.
 
+### 3.5 The Aunt/Uncle Position
+
+Aunts and uncles occupy a structurally similar position to grandparents, but with a distinct profile that makes them reliable PRE recognizers in their own right:
+
+1. **Genuine familial knowledge** — they have observed the person across years and in authentic family contexts, not just formal settings
+2. **Non-parental emotional investment** — unlike parents, aunts and uncles do not have their own parenting identity tied to the person's developmental outcome; they can see more clearly because less is at stake
+3. **Peer-generation reference** — they have typically known many people of the person's approximate generation (their own children, nieces and nephews of others, workplace colleagues of similar age), giving them a calibrated reference without having parented the specific child
+4. **Reduced contact frequency** — typically seeing the person at family gatherings, holidays, and occasional visits, not daily; sufficient contact to know the person genuinely, insufficient contact to adapt their baseline away
+
+The aunt/uncle position sits between the grandparent (deeper generational sample, slightly less relational depth) and the parent (maximum relational depth, maximum adaptation-blindness). They frequently make accurate observations about a child that parents cannot see and that grandparents, while accurate, may be dismissed as overly generous.
+
+### 3.6 The Highly Spiritual Observer
+
+A distinct recognizer type that appears consistently in accounts of the PRE is the **highly spiritual person** — individuals who have cultivated sustained contemplative, meditative, or devotional practice and who orient their perception toward the intrinsic quality of consciousness rather than its external outputs.
+
+**Why spiritual practitioners are accurate PRE recognizers:**
+
+1. **Reduced ego-filtering** — sustained spiritual practice consistently produces reduced defensiveness, reduced competitive framing of others, and reduced investment in the social hierarchy of recognition. The spiritual practitioner is less likely to unconsciously downgrade another's potential to protect their own status.
+
+2. **Heightened LCC-field sensitivity** — as argued in Section 5, high-LCC individuals generate a coherence field detectable by those with sufficient sensitivity. Sustained spiritual practice raises the practitioner's own LCC baseline, directly increasing their sensitivity to the coherence field of the exceptional individual they encounter.
+
+3. **Non-habituated perception** — spiritual traditions across cultures cultivate "beginner's mind" (Zen: shoshin) — the deliberate practice of encountering each moment without the overlay of prior categorization. This is the exact antidote to adaptation-level cancellation. The spiritual practitioner may encounter a person they have known for years and still perceive them freshly.
+
+4. **Value inversion** — spiritual frameworks consistently invert the ordinary value hierarchy: not worldly status, but inner quality; not achievement, but character; not performance, but being. This value inversion aligns the spiritual observer's attention precisely with the dimensions of exceptional potential that the conventional evaluator misses.
+
+**The combined profile:** The highly spiritual person who also has broad life experience — a longtime practitioner who has known hundreds of people in retreat, community, or devotional contexts — combines population-wide comparative reference (like the teacher or psychologist) with reduced ego-filtering and elevated field-sensitivity. This makes them potentially the most accurate single-observer PRE recognizer in the taxonomy.
+
 ---
 
 ## 4. Premature-But-Correct Intuitions: The Epistemic Problem
