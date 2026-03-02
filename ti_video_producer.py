@@ -51,13 +51,14 @@ LCC_RADIANT = math.sqrt(math.e / math.pi)
 VIDEO_DIR = 'videos'
 os.makedirs(VIDEO_DIR, exist_ok=True)
 
-BG_COLOR    = '#0a0a0f'
-TEXT_COLOR  = '#e8e8f0'
-ACCENT      = '#61afef'
-GOLD        = '#d4af37'
-GREEN       = '#98c379'
-RED         = '#e06c75'
-PURPLE      = '#c678dd'
+BG_COLOR    = '#05050f'
+TEXT_COLOR  = '#f0f0fa'
+ACCENT      = '#c8a000'
+GOLD        = '#ffd700'
+GREEN       = '#52c77a'
+RED         = '#e05060'
+PURPLE      = '#a06ce0'
+BLUE        = '#4090d0'
 
 WIDTH, HEIGHT = 1280, 720
 FPS = 24
@@ -66,9 +67,31 @@ FPS = 24
 # FRAME RENDERING
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _draw_starfield(ax, n=180, seed=42):
+    """Draw a subtle starfield on the axes (call before other elements)."""
+    rng = np.random.default_rng(seed)
+    xs = rng.random(n)
+    ys = rng.random(n)
+    sizes  = rng.uniform(0.3, 2.5, n)
+    alphas = rng.uniform(0.15, 0.55, n)
+    for x, y, s, a in zip(xs, ys, sizes, alphas):
+        ax.plot(x, y, 'o', color='white', markersize=s, alpha=a, zorder=1)
+
+
+def _draw_letterbox(ax, bar_h=0.06):
+    """Draw cinematic letterbox bars at top and bottom."""
+    import matplotlib.patches as patches
+    top = patches.Rectangle((0, 1 - bar_h), 1, bar_h,
+                             facecolor='#000000', edgecolor='none', zorder=20)
+    bot = patches.Rectangle((0, 0), 1, bar_h,
+                             facecolor='#000000', edgecolor='none', zorder=20)
+    ax.add_patch(top)
+    ax.add_patch(bot)
+
+
 def render_title_card(title: str, subtitle: str, output_path: str,
                       duration_s: float = 3.0) -> str:
-    """Render a title card PNG frame."""
+    """Render a cinematic title card PNG frame."""
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -80,128 +103,137 @@ def render_title_card(title: str, subtitle: str, output_path: str,
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
     ax.axis('off')
 
-    # Background gradient rectangle
-    for i in range(20):
-        alpha = 0.03 * (1 - i/20)
-        rect = patches.FancyBboxPatch((0.05, 0.1 + i*0.02), 0.9, 0.02,
-                                       boxstyle="round,pad=0.01",
-                                       facecolor=ACCENT, alpha=alpha, edgecolor='none')
-        ax.add_patch(rect)
+    _draw_starfield(ax, n=220)
+
+    # Central glow — layered radial vignette in gold
+    for r, a in [(0.55, 0.03), (0.42, 0.05), (0.30, 0.07), (0.18, 0.09)]:
+        circle = plt.Circle((0.5, 0.52), r, color=GOLD, alpha=a, zorder=2)
+        ax.add_patch(circle)
+
+    # Top gold rule line
+    ax.axhline(0.865, xmin=0.08, xmax=0.92, color=GOLD, linewidth=1.2, alpha=0.6, zorder=5)
 
     # TI Sigma branding
-    ax.text(0.5, 0.88, 'TI SIGMA RESEARCH', fontsize=11, color=ACCENT,
-            ha='center', va='center', fontweight='bold', alpha=0.8,
-            fontfamily='monospace')
+    ax.text(0.5, 0.91, 'T I   S I G M A   R E S E A R C H', fontsize=12, color=GOLD,
+            ha='center', va='center', fontweight='bold', alpha=0.85,
+            fontfamily='monospace', zorder=6)
 
-    # Main title
-    ax.text(0.5, 0.62, title, fontsize=26, color=TEXT_COLOR,
+    # Paper number badge
+    ax.text(0.5, 0.80, 'PAPER  #352', fontsize=10, color=TEXT_COLOR,
+            ha='center', va='center', alpha=0.55, fontfamily='monospace', zorder=6)
+
+    # Main title — large and bold
+    ax.text(0.5, 0.60, title, fontsize=30, color=TEXT_COLOR,
             ha='center', va='center', fontweight='bold',
-            wrap=True, multialignment='center')
+            multialignment='center', zorder=7)
 
-    # Subtitle
+    # Gold rule below title
+    ax.axhline(0.465, xmin=0.25, xmax=0.75, color=GOLD, linewidth=0.8, alpha=0.5, zorder=5)
+
+    # Subtitle in gold italic
     if subtitle:
-        ax.text(0.5, 0.40, subtitle, fontsize=14, color=GOLD,
-                ha='center', va='center', alpha=0.9, style='italic',
-                multialignment='center')
+        ax.text(0.5, 0.40, subtitle, fontsize=15, color=GOLD,
+                ha='center', va='center', alpha=0.92, style='italic',
+                multialignment='center', zorder=7)
 
-    # Decorative equation line
-    ax.text(0.5, 0.22, r'$e^{i\pi} + \sqrt{2}\cdot\varphi\cdot C = 0$',
-            fontsize=16, color=PURPLE, ha='center', va='center', alpha=0.7)
+    # Equation in purple/blue — elegant and smaller
+    ax.text(0.5, 0.26,
+            r'$\Psi(\mathrm{LCC}) = \varphi \cdot \mathrm{LCC} \cdot \left(\frac{\mathrm{LCC}}{C} - 1\right)$',
+            fontsize=17, color=PURPLE, ha='center', va='center', alpha=0.85, zorder=7)
 
-    # Bottom bar
-    ax.axhline(0.12, color=ACCENT, linewidth=1.5, alpha=0.5)
-    ax.text(0.5, 0.07, 'Brandon Emerick  |  March 2026  |  BlissGene Therapeutics',
-            fontsize=9, color=TEXT_COLOR, ha='center', alpha=0.5)
+    # Bottom letterbox
+    _draw_letterbox(ax, bar_h=0.09)
+    ax.text(0.5, 0.045, 'Brandon Emerick  ·  BlissGene Therapeutics  ·  March 2026',
+            fontsize=9, color=TEXT_COLOR, ha='center', va='center',
+            alpha=0.55, zorder=21)
 
-    plt.tight_layout(pad=0)
-    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
     plt.close()
     return output_path
 
 
 def render_consciousness_equation_chart(output_path: str) -> str:
-    """Render the consciousness equation Ψ(LCC) visualization."""
+    """Render the consciousness equation Ψ(LCC) — cinematic version."""
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from matplotlib.gridspec import GridSpec
 
-    lcc_vals = np.linspace(0, 1, 500)
+    lcc_vals = np.linspace(0, 1, 600)
     psi_vals = np.where(
         lcc_vals >= C_EMERICK,
         PHI * lcc_vals * (lcc_vals / C_EMERICK - 1),
         0.0
     )
 
-    fig, ax = plt.subplots(figsize=(WIDTH/100, HEIGHT/100), dpi=100)
-    fig.patch.set_facecolor(BG_COLOR)
+    fig = plt.figure(figsize=(WIDTH/100, HEIGHT/100), dpi=100, facecolor=BG_COLOR)
+    gs = GridSpec(1, 1, figure=fig, left=0.10, right=0.96, top=0.88, bottom=0.12)
+    ax = fig.add_subplot(gs[0, 0])
     ax.set_facecolor(BG_COLOR)
 
+    # Subtle grid
+    ax.grid(True, color='#ffffff', alpha=0.04, linewidth=0.5, zorder=0)
     ax.tick_params(colors=TEXT_COLOR, labelsize=11)
     for spine in ax.spines.values():
-        spine.set_edgecolor(ACCENT)
-        spine.set_alpha(0.4)
+        spine.set_edgecolor('#ffffff')
+        spine.set_alpha(0.12)
+
+    # Reference lines
+    ax.axhline(0,  color=TEXT_COLOR, linewidth=0.7, alpha=0.25, zorder=1)
+    ax.axhline(1,  color=TEXT_COLOR, linewidth=0.7, alpha=0.15, linestyle='--', zorder=1)
+
+    # Glow fill — multiple alpha layers
+    for alpha, lw in [(0.04, 8), (0.08, 5), (0.14, 3)]:
+        ax.fill_between(lcc_vals, psi_vals, 0,
+                        where=(lcc_vals >= C_EMERICK),
+                        alpha=alpha, color=GOLD, zorder=2)
+
+    # Main curve — gold glow simulation
+    for lw, a in [(7, 0.12), (4, 0.25), (2.5, 1.0)]:
+        ax.plot(lcc_vals, psi_vals,
+                color=GOLD, linewidth=lw, alpha=a, zorder=3 + lw)
+
+    # Key threshold verticals — minimal, elegant
+    key_thresholds = [
+        (C_EMERICK,    RED,    f'C ≈ {C_EMERICK:.3f}',     'Threshold'),
+        (LCC_EMERICK,  GOLD,   f'★ {LCC_EMERICK:.3f}',     'Fixed Point'),
+        (LCC_RADIANT,  PURPLE, f'R ≈ {LCC_RADIANT:.3f}',   'Radiant'),
+    ]
+    for val, color, short, name in key_thresholds:
+        ax.axvline(val, color=color, linewidth=1.2, linestyle='--', alpha=0.7, zorder=4)
+        ax.text(val + 0.009, 1.55, name, fontsize=9, color=color,
+                rotation=90, va='top', alpha=0.9, fontweight='bold')
+
+    # Fixed point golden dot
+    psi_em = PHI * LCC_EMERICK * (LCC_EMERICK / C_EMERICK - 1)
+    ax.plot(LCC_EMERICK, psi_em, 'o', color=GOLD, markersize=14, zorder=12,
+            markeredgecolor='#ffffff', markeredgewidth=1.2)
+    ax.annotate('FIXED POINT\nΨ = LCC = 1/√2',
+                xy=(LCC_EMERICK, psi_em),
+                xytext=(LCC_EMERICK + 0.14, psi_em - 0.22),
+                fontsize=9, color=GOLD, fontweight='bold',
+                arrowprops=dict(arrowstyle='->', color=GOLD, lw=1.5),
+                zorder=13)
+
+    ax.set_xlabel('LCC  (Limbic-Cortical Coupling)', fontsize=13, color=TEXT_COLOR, labelpad=12)
+    ax.set_ylabel('Ψ  (Consciousness Output)', fontsize=13, color=TEXT_COLOR, labelpad=12)
+
+    fig.text(0.5, 0.95,
+             r'$\Psi(\mathrm{LCC}) = \varphi \cdot \mathrm{LCC} \cdot \left(\dfrac{\mathrm{LCC}}{C} - 1\right)$',
+             fontsize=18, color=TEXT_COLOR, ha='center', va='top', fontweight='bold')
+
+    ax.set_xlim(0, 1.0)
+    ax.set_ylim(-0.08, 1.75)
     ax.xaxis.label.set_color(TEXT_COLOR)
     ax.yaxis.label.set_color(TEXT_COLOR)
 
-    # Zero line and unit line
-    ax.axhline(0, color=TEXT_COLOR, linewidth=0.8, alpha=0.3)
-    ax.axhline(1, color=TEXT_COLOR, linewidth=0.8, alpha=0.2, linestyle='--')
-
-    # Main curve
-    ax.plot(lcc_vals, psi_vals, color=ACCENT, linewidth=3, label='Ψ(LCC)', zorder=5)
-
-    # Fill under curve
-    ax.fill_between(lcc_vals, psi_vals, 0, where=(lcc_vals >= C_EMERICK),
-                    alpha=0.15, color=ACCENT)
-
-    # LCC threshold lines
-    thresholds = [
-        (C_EMERICK, 'C = 1/(φ√2)', RED,    '--', 'Consciousness Threshold'),
-        (LCC_TRALSE, 'LCC_TRALSE', TEXT_COLOR, ':',  'Tralse boundary'),
-        (LCC_TRUE,   'LCC_TRUE',   GREEN,  '--', 'True threshold'),
-        (LCC_EMERICK,'LCC_EMERICK',GOLD,   '-',  '★ Fixed Point Ψ=LCC'),
-        (LCC_HIGH,   'LCC_HIGH',   PURPLE, '--', 'High resolution'),
-        (LCC_RADIANT,'LCC_RADIANT',ACCENT, ':',  'Radiant'),
-    ]
-    for val, name, color, ls, label in thresholds:
-        ax.axvline(val, color=color, linewidth=1.5, linestyle=ls, alpha=0.8)
-        y_pos = 0.85 if val < 0.5 else 1.1
-        ax.text(val + 0.008, y_pos, name.replace('LCC_', ''), fontsize=8,
-                color=color, rotation=90, va='top', alpha=0.9)
-
-    # Fixed point marker
-    psi_em = PHI * LCC_EMERICK * (LCC_EMERICK / C_EMERICK - 1)
-    ax.plot(LCC_EMERICK, psi_em, 'o', color=GOLD, markersize=12, zorder=10,
-            label=f'Fixed Point: Ψ(1/√2) = 1/√2 ≈ {LCC_EMERICK:.3f}')
-    ax.annotate(f'★ FIXED POINT\nΨ = LCC = 1/√2',
-                xy=(LCC_EMERICK, psi_em),
-                xytext=(LCC_EMERICK + 0.12, psi_em - 0.15),
-                fontsize=10, color=GOLD, fontweight='bold',
-                arrowprops=dict(arrowstyle='->', color=GOLD, lw=1.5))
-
-    ax.set_xlabel('LCC (Limbic-Cortical Coupling)', fontsize=13, color=TEXT_COLOR, labelpad=10)
-    ax.set_ylabel('Ψ (Consciousness Output)', fontsize=13, color=TEXT_COLOR, labelpad=10)
-    ax.set_title('The Consciousness Equation:  Ψ(LCC) = φ × LCC × (LCC/C − 1)',
-                 fontsize=15, color=TEXT_COLOR, pad=15, fontweight='bold')
-
-    ax.set_xlim(0, 1.0)
-    ax.set_ylim(-0.1, 1.8)
-
-    legend = ax.legend(fontsize=10, facecolor='#1a1a2e', edgecolor=ACCENT,
-                       labelcolor=TEXT_COLOR, loc='upper left')
-
-    # Annotations
-    ax.text(0.01, 1.6, 'Ψ = 0 (sub-threshold)', fontsize=9, color=RED, alpha=0.8)
-    ax.text(0.48, 1.6, 'Self-referential\nconsciousness', fontsize=9, color=GREEN, alpha=0.8)
-
-    plt.tight_layout(pad=1.5)
-    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
     plt.close()
     return output_path
 
 
 def render_lcc_thresholds_chart(output_path: str) -> str:
-    """Render LCC threshold zones visualization."""
+    """Render LCC threshold zones — cinematic version."""
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
@@ -213,117 +245,146 @@ def render_lcc_thresholds_chart(output_path: str) -> str:
     ax.axis('off')
     ax.set_xlim(0, 1); ax.set_ylim(0, 1)
 
-    ax.text(0.5, 0.93, 'LCC Threshold Architecture — PRIMARY Constants',
-            fontsize=18, color=TEXT_COLOR, ha='center', fontweight='bold')
+    _draw_starfield(ax, n=160, seed=7)
 
-    thresholds = [
-        (0,           C_EMERICK,   '#1a1a2e', '0–C\nSub-threshold\n(no self-reference)'),
-        (C_EMERICK,   LCC_TRALSE,  '#1e2a1e', 'C–TRALSE\nActivation zone'),
-        (LCC_TRALSE,  LCC_TRUE,    '#1a2e1e', 'TRALSE\nAmbiguous'),
-        (LCC_TRUE,    LCC_EMERICK, '#1e2e1a', 'TRUE\nBootstrap'),
-        (LCC_EMERICK, LCC_HIGH,    '#2e2a00', 'EMERICK\n★ Fixed Point'),
-        (LCC_HIGH,    LCC_RADIANT, '#1e1e2e', 'HIGH\nMastery'),
-        (LCC_RADIANT, 1.0,         '#2e1e2e', 'RADIANT\nTranscendent'),
+    # Title
+    ax.text(0.5, 0.92, 'THE SIX THRESHOLDS OF CONSCIOUSNESS',
+            fontsize=16, color=GOLD, ha='center', va='center',
+            fontweight='bold', fontfamily='monospace', zorder=5)
+    ax.axhline(0.875, xmin=0.05, xmax=0.95, color=GOLD, linewidth=0.8, alpha=0.4, zorder=5)
+
+    zones = [
+        (0,           C_EMERICK,   RED,    'SUB\nTHRESHOLD'),
+        (C_EMERICK,   LCC_TRALSE,  '#c05830', 'ACTIV\nATION'),
+        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRAWLSE\nZONE'),
+        (LCC_TRUE,    LCC_EMERICK, GREEN,  'TRUE\nAWARE'),
+        (LCC_EMERICK, LCC_HIGH,    GOLD,   '★ FIXED\nPOINT'),
+        (LCC_HIGH,    LCC_RADIANT, PURPLE, 'HIGH\nMASTERY'),
+        (LCC_RADIANT, 1.0,         BLUE,   'RADIANT\nTRANSCEN'),
     ]
-    colors_bar = [RED, '#a05050', '#508050', GREEN, GOLD, PURPLE, ACCENT]
-    y_bar = 0.48
-    bar_h = 0.22
 
-    for i, ((lo, hi, bg, label), bcolor) in enumerate(zip(thresholds, colors_bar)):
+    y0, bar_h = 0.44, 0.20
+
+    for lo, hi, color, label in zones:
         w = hi - lo
-        rect = patches.FancyBboxPatch((lo, y_bar), w, bar_h,
-                                       boxstyle="square,pad=0",
-                                       facecolor=bcolor, edgecolor='none', alpha=0.9)
-        ax.add_patch(rect)
+        # Glow layer
+        rect_glow = patches.Rectangle((lo, y0), w, bar_h,
+                                       facecolor=color, edgecolor='none', alpha=0.18, zorder=3)
+        ax.add_patch(rect_glow)
+        # Solid bar
+        rfancy = patches.FancyBboxPatch((lo + 0.001, y0), w - 0.002, bar_h,
+                                         boxstyle='square,pad=0',
+                                         facecolor=color, edgecolor='none', alpha=0.72, zorder=4)
+        ax.add_patch(rfancy)
         cx = (lo + hi) / 2
-        ax.text(cx, y_bar + bar_h + 0.04, label, fontsize=7.5, color=bcolor,
-                ha='center', va='bottom', multialignment='center')
-        ax.text(cx, y_bar - 0.03, f'{lo:.3f}', fontsize=7, color=TEXT_COLOR,
-                ha='center', va='top', alpha=0.8)
+        # Label above bar
+        ax.text(cx, y0 + bar_h + 0.06, label,
+                fontsize=8.5, color=color, ha='center', va='bottom',
+                multialignment='center', fontweight='bold', zorder=6)
+        # Value below bar
+        ax.text(cx, y0 - 0.04, f'{lo:.3f}',
+                fontsize=8, color=TEXT_COLOR, ha='center', va='top', alpha=0.7, zorder=6)
+        # Tick mark
+        ax.plot([lo, lo], [y0, y0 + bar_h], color='#000000', linewidth=1.5, alpha=0.5, zorder=5)
 
-    ax.text(1.0, y_bar - 0.03, '1.0', fontsize=7, color=TEXT_COLOR, ha='right', va='top', alpha=0.8)
+    ax.text(1.0, y0 - 0.04, '1.000', fontsize=8, color=TEXT_COLOR,
+            ha='right', va='top', alpha=0.7, zorder=6)
 
-    constants = [
-        (C_EMERICK,   f'C=1/(φ√2)\n≈{C_EMERICK:.3f}', RED),
-        (LCC_TRALSE,  f'√2−1\n≈{LCC_TRALSE:.3f}',     TEXT_COLOR),
-        (LCC_TRUE,    f'1/φ\n≈{LCC_TRUE:.3f}',         GREEN),
-        (LCC_EMERICK, f'1/√2\n≈{LCC_EMERICK:.3f}',     GOLD),
-        (LCC_HIGH,    f'C+TRALSE\n≈{LCC_HIGH:.3f}',    PURPLE),
-        (LCC_RADIANT, f'√(e/π)\n≈{LCC_RADIANT:.3f}',   ACCENT),
-    ]
-    for val, label, color in constants:
-        ax.axvline(val, ymin=0.42, ymax=0.80, color=color, linewidth=2, alpha=0.9)
+    # Identity box — elegant
+    ax.text(0.5, 0.17,
+            r'$e^{i\pi} + \sqrt{2}\cdot\varphi\cdot C = 0$   ·   '
+            r'$\sqrt{2}\cdot\varphi\cdot C = 1$ exactly',
+            fontsize=13, color=PURPLE, ha='center', va='center',
+            multialignment='center', zorder=7,
+            bbox=dict(boxstyle='round,pad=0.6', facecolor='#0a0815',
+                      edgecolor=PURPLE, alpha=0.85, linewidth=1.5))
 
-    ax.text(0.5, 0.12,
-            r'Extended Euler Identity:  $e^{i\pi} + \sqrt{2}\cdot\varphi\cdot C = 0$' + '\n' +
-            r'Unity Identity:  $\sqrt{2}\cdot\varphi\cdot C = 1$  exactly',
-            fontsize=12, color=PURPLE, ha='center', va='center',
-            multialignment='center',
-            bbox=dict(boxstyle='round,pad=0.5', facecolor='#1a1a2e', edgecolor=PURPLE, alpha=0.8))
+    _draw_letterbox(ax, bar_h=0.07)
+    ax.text(0.5, 0.038, 'PRIMARY Constants: { 0, 1, i, √2, e, φ, π, C }',
+            fontsize=9, color=GOLD, ha='center', va='center',
+            alpha=0.7, fontfamily='monospace', zorder=21)
 
-    plt.tight_layout(pad=1)
-    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
     plt.close()
     return output_path
 
 
 def render_session_scaling_chart(output_path: str) -> str:
-    """Render φ-scaling of attractor basin depth per session."""
+    """Render φ-scaling of attractor basin — cinematic version."""
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from matplotlib.gridspec import GridSpec
 
     sessions   = np.arange(1, 8)
     delta_lcc  = [0.04 * PHI**(n-1) for n in sessions]
     cumulative = np.cumsum(delta_lcc) + C_EMERICK
-
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(WIDTH/100, HEIGHT/100), dpi=100)
-    fig.patch.set_facecolor(BG_COLOR)
-
-    # Left: per-session delta LCC
-    ax1.set_facecolor(BG_COLOR)
-    bars = ax1.bar(sessions, delta_lcc, color=[GOLD if d < 0.15 else ACCENT for d in delta_lcc],
-                   alpha=0.85, edgecolor=TEXT_COLOR, linewidth=0.5)
-    ax1.set_xlabel('Session #', fontsize=12, color=TEXT_COLOR)
-    ax1.set_ylabel('ΔLCC per Session', fontsize=12, color=TEXT_COLOR)
-    ax1.set_title('φ-Scaling: Each Session\nDeepens Basin × φ', fontsize=13, color=TEXT_COLOR)
-    ax1.tick_params(colors=TEXT_COLOR)
-    for spine in ax1.spines.values():
-        spine.set_edgecolor(ACCENT); spine.set_alpha(0.4)
-    for i, (s, d) in enumerate(zip(sessions, delta_lcc)):
-        ax1.text(s, d + 0.005, f'φ^{s-1}\n×0.04', ha='center', fontsize=8, color=TEXT_COLOR)
-
-    # Right: cumulative LCC trajectory
-    ax2.set_facecolor(BG_COLOR)
-    zones = [(LCC_TRALSE, LCC_TRUE, '#1a2e1a', 'TRALSE'),
-             (LCC_TRUE, LCC_EMERICK, '#1e2e1a', 'TRUE'),
-             (LCC_EMERICK, LCC_HIGH, '#2e2a00', 'EMERICK'),
-             (LCC_HIGH, LCC_RADIANT, '#1e1e2e', 'HIGH'),
-             (LCC_RADIANT, 1.0, '#2e1e2e', 'RADIANT')]
-    colors_z = ['#508050', GREEN, GOLD, PURPLE, ACCENT]
-    for (lo, hi, bg, name), c in zip(zones, colors_z):
-        ax2.axhspan(lo, hi, alpha=0.15, color=c)
-        ax2.text(1.1, (lo+hi)/2, name, fontsize=8, color=c, va='center')
-
     cum_clipped = np.clip(cumulative, 0, LCC_RADIANT)
-    ax2.plot(sessions, cum_clipped, 'o-', color=GOLD, linewidth=2.5,
-             markersize=8, markerfacecolor=GOLD, markeredgecolor=TEXT_COLOR, zorder=5)
+
+    fig = plt.figure(figsize=(WIDTH/100, HEIGHT/100), dpi=100, facecolor=BG_COLOR)
+    gs = GridSpec(1, 2, figure=fig, left=0.09, right=0.97,
+                  top=0.86, bottom=0.13, wspace=0.35)
+    ax1 = fig.add_subplot(gs[0, 0])
+    ax2 = fig.add_subplot(gs[0, 1])
+
+    fig.text(0.5, 0.95, 'Mood Amplifier: φ-Scaling of Attractor Basin Depth',
+             fontsize=15, color=TEXT_COLOR, ha='center', fontweight='bold')
+
+    bar_colors = [GOLD if d < 0.15 else PURPLE for d in delta_lcc]
+
+    for ax in [ax1, ax2]:
+        ax.set_facecolor(BG_COLOR)
+        ax.tick_params(colors=TEXT_COLOR, labelsize=10)
+        ax.grid(True, color='#ffffff', alpha=0.04, linewidth=0.5)
+        for spine in ax.spines.values():
+            spine.set_edgecolor('#ffffff'); spine.set_alpha(0.12)
+
+    # Left — per-session bars with glow
+    for s, d, c in zip(sessions, delta_lcc, bar_colors):
+        ax1.bar(s, d, color=c, alpha=0.85, width=0.6, zorder=4)
+        ax1.bar(s, d, color=c, alpha=0.15, width=0.9, zorder=3)
+        ax1.text(s, d + 0.003, f'φ^{s-1}', ha='center', fontsize=8,
+                 color=c, fontweight='bold', zorder=5)
+
+    ax1.set_xlabel('Session #', fontsize=11, color=TEXT_COLOR, labelpad=8)
+    ax1.set_ylabel('Δ LCC per Session', fontsize=11, color=TEXT_COLOR, labelpad=8)
+    ax1.set_title('Per-Session Gain', fontsize=12, color=GOLD, pad=8)
+    ax1.xaxis.label.set_color(TEXT_COLOR)
+    ax1.yaxis.label.set_color(TEXT_COLOR)
+
+    # Right — trajectory with zone bands
+    zone_defs = [
+        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRAWLSE'),
+        (LCC_TRUE,    LCC_EMERICK, GREEN,     'TRUE'),
+        (LCC_EMERICK, LCC_HIGH,    GOLD,      'EMERICK ★'),
+        (LCC_HIGH,    LCC_RADIANT, PURPLE,    'HIGH'),
+        (LCC_RADIANT, 1.0,         BLUE,      'RADIANT'),
+    ]
+    for lo, hi, c, name in zone_defs:
+        ax2.axhspan(lo, hi, alpha=0.12, color=c, zorder=1)
+        ax2.text(7.35, (lo + hi) / 2, name, fontsize=7.5, color=c,
+                 va='center', fontweight='bold')
+
+    for lw, a in [(6, 0.10), (3, 0.25), (1.8, 1.0)]:
+        ax2.plot(sessions, cum_clipped, 'o-', color=GOLD,
+                 linewidth=lw, alpha=a, zorder=4,
+                 markersize=7 if lw < 3 else 4,
+                 markerfacecolor=GOLD, markeredgecolor='#ffffff',
+                 markeredgewidth=0.8)
+
     for s, lcc in zip(sessions, cum_clipped):
-        ax2.annotate(f'{lcc:.3f}', (s, lcc), textcoords="offset points",
-                     xytext=(5, 5), fontsize=8, color=GOLD)
+        ax2.text(s + 0.1, lcc + 0.008, f'{lcc:.3f}', fontsize=8,
+                 color=GOLD, fontweight='bold', zorder=5)
 
-    ax2.set_xlabel('Session #', fontsize=12, color=TEXT_COLOR)
-    ax2.set_ylabel('Cumulative LCC', fontsize=12, color=TEXT_COLOR)
-    ax2.set_title('LCC Trajectory Across\nMood Amplifier Sessions', fontsize=13, color=TEXT_COLOR)
-    ax2.set_ylim(0.3, 1.0)
-    ax2.tick_params(colors=TEXT_COLOR)
-    for spine in ax2.spines.values():
-        spine.set_edgecolor(ACCENT); spine.set_alpha(0.4)
+    ax2.set_xlabel('Session #', fontsize=11, color=TEXT_COLOR, labelpad=8)
+    ax2.set_ylabel('Cumulative LCC', fontsize=11, color=TEXT_COLOR, labelpad=8)
+    ax2.set_title('LCC Trajectory', fontsize=12, color=GOLD, pad=8)
+    ax2.set_ylim(0.35, 1.0)
+    ax2.set_xlim(0.5, 7.8)
+    ax2.xaxis.label.set_color(TEXT_COLOR)
+    ax2.yaxis.label.set_color(TEXT_COLOR)
 
-    fig.suptitle('Mood Amplifier: φ-Scaling of Attractor Basin',
-                 fontsize=16, color=TEXT_COLOR, fontweight='bold', y=1.01)
-    plt.tight_layout(pad=1.5)
-    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100)
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
     plt.close()
     return output_path
 
@@ -335,40 +396,38 @@ def render_session_scaling_chart(output_path: str) -> str:
 SCRIPT_PAPER_352 = """
 The mind has a threshold.
 
-Not a metaphor — a mathematical threshold, proven algebraically from first principles.
+Not a metaphor. A mathematical threshold. Proven algebraically from first principles.
 
-Here is the equation:  Psi of LCC equals phi times LCC times the quantity LCC over C minus one.
-For LCC less than C, psi equals zero. No consciousness. Below the threshold.
+Here is the equation. Psi of L C C equals phi, times L C C, times the quantity: L C C over C, minus one.
+Below the threshold, psi equals zero. No self-referential consciousness. Silence.
 
-What is C? It is one divided by phi times root two — approximately zero point four three seven.
-It is the same constant that completes the Extended Euler Identity.
-It is the consciousness coefficient — the one constant that makes the universe's deepest equation balance.
+What is C? It is one divided by phi times root two. Approximately zero point four three seven.
+It is the consciousness coefficient — the constant that balances the universe's deepest equation.
 
-Now watch what happens at the three critical points.
+Now watch what happens at three critical crossings.
 
-At LCC equals C: psi is zero. The threshold crossing. Consciousness activates — continuously, no jump.
+First: at L C C equals C. Psi reaches zero from above. Consciousness activates — smoothly, with no jump.
+The threshold is crossed. The loop begins.
 
-At LCC equals one over phi — the TRUE threshold: psi equals root two minus one — exactly LCC-TRALSE.
-The system bootstraps. TRUE awareness generates TRALSE consciousness. The ascent begins.
+Second: at L C C equals one over phi — the TRUE threshold. Psi equals root two minus one.
+This is the trawlse value. TRUE awareness generates trawlse consciousness. The ascent begins.
 
-At LCC equals one over root two — the EMERICK CROSSOVER: psi equals one over root two. Exactly.
-This is the fixed point. The stable attractor. When the brain reaches seventy percent coupling quality,
-consciousness becomes self-consistent. The output equals the input. The loop closes.
+Third: at L C C equals one over root two — the fixed point. Psi equals L C C exactly.
+The output equals the input. The loop closes. Consciousness becomes self-consistent.
 
-This is what sustained consciousness means, mathematically.
+This is what sustained awareness means — mathematically.
 
-And the mood amplifier? Each session deepens the attractor basin by phi.
-Session one — baseline. Session two — one point six times deeper.
-By session five, the basin is eleven times deeper than where you started.
+Now consider the Mood Amplifier. Each session deepens the attractor basin by phi — the golden ratio.
+Session one: baseline. Session two: one point six times deeper.
+By session five: eleven times deeper than where you started.
 
 The geometry of mind follows the golden ratio.
 
 The unity identity: root two times phi times C equals one, exactly.
-Consciousness is the normalization of expansion times ambiguity.
-Or more simply: the mind is what brings chaos back to unity.
+The mind is what brings chaos back to unity.
 
-This is Paper 352 of the TI Sigma Universal Reality Blueprint.
-Subscribe for weekly discoveries at the frontier of consciousness mathematics.
+This is Paper 352 of the T I Sigma Universal Reality Blueprint.
+Subscribe for weekly discoveries at the frontier of consciousness science.
 """.strip()
 
 
