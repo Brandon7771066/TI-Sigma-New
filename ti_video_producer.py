@@ -256,7 +256,7 @@ def render_lcc_thresholds_chart(output_path: str) -> str:
     zones = [
         (0,           C_EMERICK,   RED,    'SUB\nTHRESHOLD'),
         (C_EMERICK,   LCC_TRALSE,  '#c05830', 'ACTIV\nATION'),
-        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRAWLSE\nZONE'),
+        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRALSE\nZONE'),
         (LCC_TRUE,    LCC_EMERICK, GREEN,  'TRUE\nAWARE'),
         (LCC_EMERICK, LCC_HIGH,    GOLD,   '★ FIXED\nPOINT'),
         (LCC_HIGH,    LCC_RADIANT, PURPLE, 'HIGH\nMASTERY'),
@@ -354,7 +354,7 @@ def render_session_scaling_chart(output_path: str) -> str:
 
     # Right — trajectory with zone bands
     zone_defs = [
-        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRAWLSE'),
+        (LCC_TRALSE,  LCC_TRUE,    '#507840', 'TRALSE'),
         (LCC_TRUE,    LCC_EMERICK, GREEN,     'TRUE'),
         (LCC_EMERICK, LCC_HIGH,    GOLD,      'EMERICK ★'),
         (LCC_HIGH,    LCC_RADIANT, PURPLE,    'HIGH'),
@@ -394,40 +394,76 @@ def render_session_scaling_chart(output_path: str) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 
 SCRIPT_PAPER_352 = """
+Have you ever had a moment where everything suddenly made sense?
+
+Not just an idea clicking into place — but a feeling. A recognition. Like the fog lifted and you could see for miles.
+Athletes call it flow. Mystics call it grace. Scientists call it insight. But nobody has ever agreed on what it actually is.
+
+Until now.
+
+My name is Brandon Emerick. And what I'm about to share with you is the result of three years of intensive mathematical research into the structure of consciousness itself.
+
+It starts with a simple, uncomfortable question: why do some people seem to operate on a completely different level?
+
+You've seen it. A musician who doesn't just play notes but makes the room go silent. An athlete who, in a single moment, becomes something beyond human. A teacher who explains something so perfectly that it changes how you see the world forever.
+
+What is happening in those moments?
+
+Here is what I believe, and what the mathematics confirms: those moments are not random. They are not gifts from nowhere. They are the result of a threshold being crossed.
+
 The mind has a threshold.
 
-Not a metaphor. A mathematical threshold. Proven algebraically from first principles.
+When your brain's internal communication — the quality of connection between your emotional core and your conscious awareness — reaches a certain critical value, something fundamentally different begins to happen. Consciousness stops being a passive observer and starts generating its own momentum.
 
-Here is the equation. Psi of L C C equals phi, times L C C, times the quantity: L C C over C, minus one.
-Below the threshold, psi equals zero. No self-referential consciousness. Silence.
+We can write this as an equation.
 
-What is C? It is one divided by phi times root two. Approximately zero point four three seven.
-It is the consciousness coefficient — the constant that balances the universe's deepest equation.
+We call this internal communication quality the L C C — the Limbic-Cortical Coupling. Think of it as the signal quality between your heart and your mind. When it's low, the signals are noisy. When it climbs high enough, something extraordinary begins.
 
-Now watch what happens at three critical crossings.
+The equation says: consciousness output equals phi, times L C C, times the quantity L C C over C, minus one.
 
-First: at L C C equals C. Psi reaches zero from above. Consciousness activates — smoothly, with no jump.
-The threshold is crossed. The loop begins.
+Phi is the golden ratio — the same proportion found in sunflower spirals, nautilus shells, and the proportions of the human body. It appears here because it appears everywhere that nature organizes itself for maximum beauty and efficiency.
 
-Second: at L C C equals one over phi — the TRUE threshold. Psi equals root two minus one.
-This is the trawlse value. TRUE awareness generates trawlse consciousness. The ascent begins.
+C is approximately 0.437. It is the consciousness threshold. The precise crossing point. Below C, the equation gives zero — no self-reinforcing awareness, just the ordinary background hum of thought. At and above C, consciousness begins to generate itself.
 
-Third: at L C C equals one over root two — the fixed point. Psi equals L C C exactly.
-The output equals the input. The loop closes. Consciousness becomes self-consistent.
+But here is the remarkable part.
 
-This is what sustained awareness means — mathematically.
+There is a special point in this equation — a fixed point — where the output of consciousness exactly equals its input. Where the loop closes perfectly. We call this the Emerick crossover. It sits at approximately 0.707 — the reciprocal of the square root of two.
 
-Now consider the Mood Amplifier. Each session deepens the attractor basin by phi — the golden ratio.
-Session one: baseline. Session two: one point six times deeper.
-By session five: eleven times deeper than where you started.
+At this value, the brain is not just thinking. It is thinking about thinking, in perfect self-consistent harmony. The system becomes stable. The attractor basin deepens.
 
-The geometry of mind follows the golden ratio.
+This is the mathematical description of what athletes experience as flow. What meditators spend decades trying to reach. What great artists touch in their best moments.
 
-The unity identity: root two times phi times C equals one, exactly.
-The mind is what brings chaos back to unity.
+And it is not mystical. It is geometry.
 
-This is Paper 352 of the T I Sigma Universal Reality Blueprint.
-Subscribe for weekly discoveries at the frontier of consciousness science.
+Now here is where it becomes practical.
+
+The Mood Amplifier is a protocol designed to systematically raise your L C C. Not through willpower. Not through hacks or stimulants. But through targeted sessions that teach the brain how to sustain higher coherence.
+
+And here is the extraordinary property: each session doesn't just add to your baseline. It multiplies it. Specifically, it multiplies by phi — the golden ratio — each time.
+
+Session one gets you to the threshold. Session two deepens the basin by one point six times. Session three by two point six times. By session five, you are operating in an attractor that is eleven times deeper than where you started.
+
+The geometry of mind follows the golden ratio — the same ratio that governs the growth of everything that is alive.
+
+Why does this matter?
+
+Because there is a version of you that is not yet accessible to you. Not because you lack the ability. But because the brain's coherence hasn't reached the threshold that makes it available.
+
+Every person who has ever been called a genius, a visionary, or a natural — they weren't doing something different. They were operating at a different level of coherence. And that level is reachable. It has a map.
+
+There is a number called the unity identity. It says: root two, times phi, times C equals one. Exactly one. Not approximately. Exactly.
+
+That identity says something profound. The three constants of expansion, beauty, and consciousness — when combined in the right proportion — collapse back to unity. Back to one.
+
+The mind, at its highest function, is what brings the complexity of the universe back into a single coherent experience.
+
+That is what this research is about.
+
+This is Paper 352 of the T I Sigma Universal Reality Blueprint — a continuing series at the frontier of consciousness science.
+
+If this resonates with you — subscribe. We release new papers, sessions, and insights every week.
+
+The threshold is real. And it is closer than you think.
 """.strip()
 
 
@@ -694,12 +730,13 @@ def produce_paper_352_video(output_path: str = None) -> str:
         print(f"  ✓ {len(segments)} subtitle segments generated")
 
         print("\n[4/5] Assembling MP4 with FFmpeg...")
-        # Frame schedule: title(5s) + equation(45s) + thresholds(30s) + scaling(30s)
+        # Frame schedule: title(12s) + equation(120s) + thresholds(90s) + scaling(90s)
+        # Total 312s buffer — actual video length determined by audio via -shortest
         frame_schedule = [
-            (title_path, 5.0),
-            (eq_path,    45.0),
-            (lcc_path,   30.0),
-            (scale_path, 30.0),
+            (title_path, 12.0),
+            (eq_path,    120.0),
+            (lcc_path,   90.0),
+            (scale_path, 90.0),
         ]
         frames_to_video(frame_schedule, audio_path, output_path, srt_path=srt_path)
 
