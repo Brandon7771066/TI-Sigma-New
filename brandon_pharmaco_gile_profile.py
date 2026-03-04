@@ -341,12 +341,116 @@ BRANDON_SUPPLEMENTS = {
     },
     'omega_3': {
         'name': 'Omega-3 Fish Oil',
-        'dose': '4000 mg daily (e ratio = 2.71:1 EPA:DHA)',
+        'dose': '4000 mg daily (2.4:1 EPA:DHA ratio)',
         'category': 'anti_inflammatory',
         'layer': IcellLayer.VESSEL,
         'gile_effect': GILEVector(G=0.05, I=0.08, L=0.08, E=0.05),
         'mechanism': 'EPA/DHA - anti-inflammatory, membrane fluidity, brain structure',
-        'notes': "EPA:DHA ratio = e (2.718) - Euler's number! Natural mathematical harmony for optimal healing. ~2900mg EPA for aggressive anti-inflammatory action."
+        'notes': '~2400mg EPA aggressive anti-inflammatory. Synergy with beta-caryophyllene (CB2 + prostaglandin dual pathway).'
+    },
+
+    # ─── NEW ADDITIONS — March 4, 2026 ───────────────────────────────────────
+
+    'maca': {
+        'name': 'Maca Root Extract',
+        'dose': '800 mg (5% macamides, in MCT oil)',
+        'category': 'adaptogen',
+        'layer': IcellLayer.ME,
+        'gile_effect': GILEVector(G=0.05, I=0.04, L=0.06, E=0.08),
+        'mechanism': (
+            'Macamides (unique lipidic alkaloids) modulate endocannabinoid system indirectly. '
+            'May enhance dopaminergic and noradrenergic tone. '
+            'Adaptogen: normalizes HPA axis stress response. '
+            'No direct hormonal activity (macamides ≠ phytoestrogens).'
+        ),
+        'notes': (
+            'Low interaction risk overall. May mildly potentiate L-Tyrosine dopaminergic pathway. '
+            'MCT oil carrier improves absorption. Good E-axis (energy/stamina) support. '
+            'TI axis: G (motivated direction) and E (physical environment/body energy). '
+            'Expected benefit: sustained energy, mood lift, libido restoration.'
+        ),
+        'interactions': [
+            'Mild additive dopaminergic effect with L-Tyrosine (1g BID) — generally safe',
+            'No significant CYP interactions documented',
+        ],
+        'added': 'March 4, 2026',
+    },
+
+    'beta_caryophyllene': {
+        'name': 'Beta-Caryophyllene (BCP)',
+        'dose': '60 mg daily',
+        'category': 'cannabinoid_cb2_agonist',
+        'layer': IcellLayer.VESSEL,
+        'gile_effect': GILEVector(G=0.03, I=0.03, L=0.08, E=0.10),
+        'mechanism': (
+            'Selective CB2 receptor agonist (no CB1 psychoactivity). '
+            'Inhibits NF-κB inflammatory pathway. '
+            'Activates PPAR-γ (anti-inflammatory, neuroprotective). '
+            'Reduces TNF-α and IL-1β. '
+            'Gastroprotective via CB2 in gut mucosa. '
+            'Anxiolytic via CB2 in amygdala (independent of CB1).'
+        ),
+        'notes': (
+            'Additive CB2 effect with CBD (25mg BID). Together they provide dual-entry '
+            'endocannabinoid support: BCP as direct CB2 agonist, CBD as indirect modulator. '
+            'Synergy with Omega-3 (both anti-inflammatory, different pathways). '
+            'Synergy with PEA (palmitoylethanolamide, 600mg BID) — "entourage effect" '
+            'for endocannabinoid signaling without psychoactivity. '
+            'Gut-protective: stacks well with IBGard and Iberogast. '
+            'TI axis: L (Love/warmth/anti-inflammatory comfort) and E (body environment). '
+            'Very low toxicity; GRAS-listed as food flavoring at higher doses.'
+        ),
+        'interactions': [
+            'Additive CB2 agonism with CBD — monitor for enhanced sedation at higher doses',
+            'Additive anti-inflammatory with Omega-3 and PEA (palmitoylethanolamide)',
+            'No significant CYP interactions at 60mg dose',
+        ],
+        'added': 'March 4, 2026',
+    },
+
+    'huang_bo': {
+        'name': 'Huang Bo (Phellodendron amurense)',
+        'dose': '1 gram twice daily',
+        'category': 'mao_b_inhibitor_traditional',
+        'layer': IcellLayer.ME,
+        'gile_effect': GILEVector(G=0.04, I=0.08, L=0.03, E=0.05),
+        'mechanism': (
+            'Primary alkaloids: berberine, palmatine, coptisine, phellodendrine. '
+            'MAO-B inhibition (berberine/palmatine): reduces dopamine degradation → '
+            'extends dopamine availability without requiring more precursor. '
+            'AMPK activation (berberine): metabolic benefits, neuroprotection. '
+            'Weak 5-HT2A antagonism (similar to some antipsychotics). '
+            'Anti-inflammatory: IKK-β inhibition, NF-κB suppression. '
+            'Blood pressure lowering: vasodilatory via calcium channel modulation + AMPK.'
+        ),
+        'notes': (
+            'MAO-B inhibition stacks logically with L-Tyrosine + Focalin: '
+            'more dopamine synthesized (Tyrosine), more released (Focalin), '
+            'less degraded (Huang Bo MAO-B) — a three-point dopamine optimization. '
+            'TI axis: I (Intuition/clarity — dopamine-mediated signal detection).'
+        ),
+        'interactions': [
+            '⚠️ CYP3A4 INHIBITION (berberine): Discuss with prescriber — may increase '
+            'plasma levels of Seroquel (quetiapine), Klonopin (clonazepam), '
+            'Belsomra (suvorexant), Lunesta (eszopiclone), and Ketamine (all CYP3A4 substrates). '
+            'Start at lower dose and observe for enhanced sedation.',
+
+            '⚠️ ADDITIVE BP LOWERING: Berberine + Clonidine (0.3mg) both reduce blood pressure. '
+            'Monitor for dizziness/orthostatic hypotension, especially on standing.',
+
+            'NOTE: 5-HTP (200mg) + Mirtazapine already adds significant serotonin support. '
+            'Huang Bo (weak MAO-B) adds modest serotonin precursor conservation. '
+            'Combined serotonergic load worth monitoring — report any unusual sensations to prescriber.',
+
+            'NOTE: Berberine may modestly inhibit P-glycoprotein, affecting absorption '
+            'of several medications. Generally clinically minor at 1g BID dose.',
+
+            'SYNERGY: MAO-B inhibition extends dopamine half-life — may improve '
+            'Focalin (dexmethylphenidate) efficacy duration, potentially allowing '
+            'dose reduction over time (discuss with prescriber).',
+        ],
+        'added': 'March 4, 2026',
+        'flag_level': 'YELLOW — discuss CYP3A4 interactions with prescriber before sustained use',
     },
 }
 
