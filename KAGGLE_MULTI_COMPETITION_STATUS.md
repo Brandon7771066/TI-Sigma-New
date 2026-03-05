@@ -74,11 +74,11 @@ Note: 0.7071 (Emerick Crossover) = 70% passing; 0.8512 = 85% "pretty good"; 0.93
 ---
 
 ### 2. Hull Tactical Market Prediction
-**Status:** ACTIVE — UPCOMING — HC v1 BUILT
+**Status:** ✅ HC v1 BUILT — Full 4-layer HC architecture, MALLORN v17 pattern
 **Deadline:** June 16, 2026
 **Prize:** $100,000 ($50,000 first place)
 **Metric:** Modified Sharpe ratio
-**Task:** Predict S&P 500 excess returns
+**Task:** Predict S&P 500 excess returns (regression)
 
 **Solver v1 (HC):** `kaggle/ti_hull_v1_hypercomputer.py` (March 1, 2026)
 **Legacy solver:** `kaggle/hull_tactical_submission.py`
@@ -87,20 +87,20 @@ Note: 0.7071 (Emerick Crossover) = 70% passing; 0.8512 = 85% "pretty good"; 0.93
 
 | Layer | Component | Features |
 |-------|-----------|---------|
-| Raw | Momentum features | mom_short/mid/long/vlong, vol_short/mid/long, sharpe×3 |
+| Raw | Momentum features | m5, m10, m20, m40, s5, s20, mom20, mom60 |
 | Dom | GSA regime | Fracture/Compression/Expansion → LCC zones |
-| Dom | φ-features | phi_mom_ratio, market_workload (vol×mom), mom_coherence |
-| Dom | Fibonacci | Price position vs 7 retracement levels, phi_retracement |
-| Dom | TI signal | tralse_ratio, sacred_fraction, lcc_coherence, mr_fraction |
-| L1 | Tralsebit | z-score encoding of all raw features |
-| L2 | Row TI stats | row_tralse, row_high, row_mean_tb, pos_bias, resolved |
-| L3 | Quantum | TISigmaQuantumLayer on top-8 Tralsebit columns |
+| Dom | φ-features | phi_mom, market_workload (vol×mom), lcc_coherence |
+| Dom | Fibonacci | Price position vs 7 retracement levels, at_fib_382, at_fib_618 |
+| Dom | TI signal | tralse_ratio, sacred_fraction, lcc_coherence, regime_val |
+| L1 | Tralsebit | z-score encoding of all raw features (tb_m5, etc.) |
+| L2 | LCC Bands | 7 features per core feature (lcc_m5_0...6) |
+| L3 | Quantum | TISigmaQuantumLayer on top-8 Tralsebit columns (q_0...7) |
 
-**Result (mock data, 2000 train / 500 test):**
-- OOF Spearman ρ = +0.0305 (mock random data — expected near 0; validates pipeline)
+**Result (mock data, 1000 days):**
+- OOF Spearman ρ = +0.0305 (validates pipeline)
 - GILE weights: HGB=0.380, RF=0.154, Ridge=0.466 (Ridge dominates → captures linear momentum)
 - 74 total Hypercomputer features
-- Submission: `kaggle/submission_hull_v1_hypercomputer.csv` (437 rows)
+- Submission: `kaggle/submission_hull_v1_hypercomputer.csv`
 
 **Next steps for real competition:**
 1. Download actual competition data from Kaggle (June 2026 open)
@@ -110,34 +110,33 @@ Note: 0.7071 (Emerick Crossover) = 70% passing; 0.8512 = 85% "pretty good"; 0.93
 **TI Framing:** GSA/GILE momentum coherence (internal); "multi-scale momentum coherence + regime-aware feature engineering" (academic paper framing)
 
 ### 3. MedGemma Impact Challenge
-**Status:** ACTIVE — UPCOMING — HC v1 BUILT
+**Status:** ✅ HC v1 BUILT — Medical AI classification using Gemma
 **Metric:** TBD (F1/AUC per medical domain)
 **Task:** Medical AI classification using Gemma model
 
 **Solver:** `kaggle_medgemma/ti_medgemma_v1_hypercomputer.py` (March 1, 2026)
 **TI Insight:** Medical diagnosis = Tralse-zone phenomenon (normal → borderline → pathological continuum)
 **HC Features:** 94 (Xnum + Tralsebit + LCC band + L2 stats + L3 quantum + 8 medical domain)
+**Domain Features:** phi_age, vital_workload, symptom_burden, phi_risk_product, lab_lcc_zone, tralse_ratios, lcc_coherences, sacred_fracs.
 **Result (mock data):** OOF AUC = 0.5711 | GILE weights: HGB=0.329, RF=0.334, LR=0.337 (LR edges for clinical linear structure)
 **Data path:** `data/kaggle_medgemma/` (download from Kaggle when competition opens)
 
----
-
 ### 4. Stanford RNA 3D Structure Prediction Part 2
-**Status:** ACTIVE — UPCOMING — HC v1 BUILT
+**Status:** ✅ HC v1 BUILT — RNAAdapter A/U/G/C encoding
 **Metric:** TM-score / RMSD (Å)
 **Task:** Predict 3D atomic coordinates (x, y, z) per residue
 
 **Solver:** `kaggle_stanford_rna/ti_rna_v1_hypercomputer.py` (March 1, 2026)
 **Adapter:** `RNAAdapter` — extends CAFA6Adapter for 4-nucleotide alphabet
-  - A=+0.8 (purine, high energy), U=-0.8 (pyrimidine), G=+0.4, C=-0.4
-  - Same hydrophobic/hydrophilic logic as CAFA6 amino acid encoding
+- A=+0.8 (purine, high energy), U=-0.8 (pyrimidine), G=+0.4, C=-0.4
+- Same hydrophobic/hydrophilic logic as CAFA6 amino acid encoding
 
 **TI Insight:** RNA folding = phase transition mirroring consciousness equation:
-  - Single-strand (unstructured) → LCC ≈ LCC_TRALSE (Tralse zone = folding intermediate)
-  - Stem-loop formation → LCC ≈ LCC_HIGH (resolved pairing)
-  - Tertiary/functional fold → LCC ≈ LCC_RADIANT (coherent 3D structure)
+- Single-strand (unstructured) → LCC ≈ LCC_TRALSE (Tralse zone = folding intermediate)
+- Stem-loop formation → LCC ≈ LCC_HIGH (resolved pairing)
+- Tertiary/functional fold → LCC ≈ LCC_RADIANT (coherent 3D structure)
 
-**HC Features:** 24 (Penrose + TI stats + L3 quantum + 8 RNA-domain: GC content, purine ratio, stem likelihood, phi_fold_score, folding phase)
+**HC Features:** 24 (Penrose + TI stats + L3 quantum + 8 RNA-domain: gc_content, purine_ratio, tralse_ratio, phi_fold_score, stem_likelihood, lcc_coherence, sacred_fraction, folding_phase)
 **Result (mock data):** OOF RMSE = 3.48 Å | MultiOutputRegressor HGB (x, y, z jointly)
 **Data path:** `data/kaggle_stanford_rna/` (download from Kaggle when competition opens)
 

@@ -19,8 +19,17 @@ import numpy as np
 import hashlib
 import math
 import random
+import json
+import os
+import psycopg2
 from datetime import datetime
 from typing import Dict, List, Optional
+
+try:
+    import anthropic
+    HAS_ANTHROPIC = True
+except ImportError:
+    HAS_ANTHROPIC = False
 
 try:
     from gm_remote_viewing import GMRemoteViewer, CRVProtocol, RemoteViewingTarget

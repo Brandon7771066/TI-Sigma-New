@@ -182,6 +182,54 @@ class StudentScoresAdapter:
         return np.hstack([L2, L3])
 
 
+class MedGemmaAdapter:
+    """
+    Medical AI classification with Gemma (MedGemma Impact Challenge).
+
+    TI insight: Medical diagnosis is a Tralse-zone phenomenon — symptom burden
+    exists on a continuum (normal → borderline → pathological) exactly like
+    cardiac risk.
+    """
+
+    def __init__(self, n_quantum_modes: int = 8):
+        self.engine    = TralsebitEngine()
+        self.optimizer = AperiodicOptimizer()
+        self.quantum   = TISigmaQuantumLayer(n_modes=n_quantum_modes)
+
+    def build_features(self, X: pd.DataFrame) -> np.ndarray:
+        """
+        Build full Hypercomputer feature set for MedGemma clinical data.
+
+        Layers:
+            L1: Tralsebit encoding of numeric clinical features
+            L2: Aperiodic (LCC band) features
+            L3: Quantum transformation on top-8 clinical features
+        """
+        numeric_cols = X.select_dtypes(include=[np.number]).columns.tolist()
+        if not numeric_cols:
+            return np.zeros((len(X), 1))
+
+        # Fill missing with median - standard clinical baseline
+        Xnum = X[numeric_cols].fillna(X[numeric_cols].median()).values
+
+        # L1: Tralsebit encoding
+        tb = self.engine.encode(Xnum, method='zscore')
+
+        # L2: Aperiodic/LCC features
+        L2_lcc = self.optimizer.lcc_band.fit_transform(tb)
+
+        # L3: Quantum transform on top-8 features
+        top8 = tb[:, :8] if tb.shape[1] >= 8 else tb
+        L3 = self.quantum.quantum_feature_transform(top8)
+
+        # Domain: Row-level TI stats (Tralse logic applied to patient profile)
+        abs_tb = np.abs(tb)
+        tralse_ratios  = ((abs_tb >= LCC_TRALSE) & (abs_tb <= LCC_HIGH)).mean(axis=1, keepdims=True)
+        lcc_coherences = (abs_tb > LCC_TRALSE).mean(axis=1, keepdims=True)
+
+        return np.hstack([Xnum, tb, L2_lcc, L3, tralse_ratios, lcc_coherences])
+
+
 class HeartDiseaseAdapter:
     """
     Binary heart disease classification (Kaggle Playground S6E2).
@@ -319,3 +367,54 @@ class HeartDiseaseAdapter:
         dom = self._domain_features(X)
 
         return np.hstack([Xnum, tb, L2_lcc, L2_stats, L3, dom])
+
+
+class RNAAdapter:
+    """
+    RNA 3D structure prediction (Stanford RNA 3D Folding Part 2).
+
+    Key TI insights:
+        - 4 nucleotides (A, U, G, C) → Tralsebit encoding:
+            A: +0.8 (True / structural anchor)
+            U: -0.8 (False / structural opposite)
+            G: +0.4 (Partial True / flexible anchor)
+            C: -0.4 (Partial False / flexible opposite)
+        - RNA folding is a phase transition:
+            Single-strand → LCC_TRALSE (high entropy, low structure)
+            Paired stem   → LCC_HIGH   (ordered structure)
+            Tertiary      → LCC_RADIANT (complex emergent structure)
+    """
+
+    # RNA Tralsebit classification
+    RNA_VALUES = {
+        'A': +0.8,
+        'U': -0.8,
+        'G': +0.4,
+        'C': -0.4,
+        'T': -0.8,  # Handle DNA compatibility if needed
+    }
+
+    def __init__(self, n_hash_features: int = 512):
+        self.engine    = TralsebitEngine()
+        self.optimizer = AperiodicOptimizer(n_hash_features=n_hash_features)
+
+    def encode_sequence(self, sequence: str, max_len: int = 512) -> np.ndarray:
+        """Encode RNA sequence as Tralsebit array."""
+        seq = sequence[:max_len].upper()
+        tb  = np.array([self.RNA_VALUES.get(nt, LCC_TRALSE) for nt in seq],
+                       dtype=float)
+        # Pad to max_len
+        if len(tb) < max_len:
+            tb = np.pad(tb, (0, max_len - len(tb)))
+        return tb
+
+    def sequence_features(self, sequence: str) -> np.ndarray:
+        """Extract TI features from an RNA sequence."""
+        tb = self.encode_sequence(sequence)
+        penrose_feats = self.optimizer.penrose.sequence_features(tb)
+        tralse_feats  = np.array([
+            self.engine.tralse_ratio(tb),
+            self.engine.sacred_fraction(tb),
+            self.engine.lcc_coherence(tb),
+        ])
+        return np.concatenate([penrose_feats, tralse_feats])
