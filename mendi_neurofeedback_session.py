@@ -342,77 +342,296 @@ def render_mendi_neurofeedback_session():
                    f"Score 95 ≈ LCC {mendi_score_to_lcc(95):.3f}")
 
     with tab_session:
-        st.subheader("▶️ Session Timer & Notes")
-        st.info("Start your Mendi session on your phone FIRST, then start the timer here.")
+        st.subheader("▶️ Live Session — Polar H10 + Mendi Sync")
 
-        col_timer, col_notes = st.columns([1, 2])
-        with col_timer:
+        GATEWAY_URL = os.environ.get("REPLIT_DEV_DOMAIN", "")
+        if GATEWAY_URL:
+            live_endpoint = f"https://{GATEWAY_URL}/api/biometric/live"
+            current_endpoint = f"https://{GATEWAY_URL}/api/biometric/current"
+        else:
+            live_endpoint = "/api/biometric/live"
+            current_endpoint = "/api/biometric/current"
+
+        WEB_BT_HTML = f"""
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {{ font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+         background: #0e1117; color: #f0f0fa; margin: 0; padding: 10px; }}
+  button {{ background: #1f77d0; color: white; border: none; border-radius: 6px;
+            padding: 8px 16px; cursor: pointer; font-size: 14px; margin: 4px; }}
+  button:hover {{ background: #2a8ae0; }}
+  button:disabled {{ background: #444; color: #888; cursor: not-allowed; }}
+  .status {{ font-size: 13px; padding: 6px 10px; border-radius: 4px;
+             margin: 6px 0; background: #1e2130; }}
+  .ok {{ border-left: 3px solid #2ecc71; }}
+  .err {{ border-left: 3px solid #e74c3c; }}
+  .info {{ border-left: 3px solid #3498db; }}
+  .metrics {{ display: flex; gap: 12px; flex-wrap: wrap; margin: 10px 0; }}
+  .metric {{ background: #1a1d2e; border-radius: 8px; padding: 10px 14px;
+             min-width: 90px; text-align: center; }}
+  .metric .val {{ font-size: 22px; font-weight: bold; color: #5dade2; }}
+  .metric .lbl {{ font-size: 11px; color: #888; margin-top: 2px; }}
+  .lcc-bar {{ height: 10px; border-radius: 5px; background: #1e2130;
+              overflow: hidden; margin: 8px 0; }}
+  .lcc-fill {{ height: 100%; transition: width 0.5s, background 0.5s; }}
+</style>
+</head>
+<body>
+
+<div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+  <button id="btnConnect" onclick="connectPolar()">💓 Connect Polar H10</button>
+  <button id="btnDisconnect" onclick="disconnectPolar()" disabled>Disconnect</button>
+  <span id="btStatus" style="font-size:13px; color:#888;">Web Bluetooth ready</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="val" id="mHR">--</div><div class="lbl">HR bpm</div></div>
+  <div class="metric"><div class="val" id="mRMSSD">--</div><div class="lbl">RMSSD ms</div></div>
+  <div class="metric"><div class="val" id="mSDNN">--</div><div class="lbl">SDNN ms</div></div>
+  <div class="metric"><div class="val" id="mLCC">--</div><div class="lbl">LCC Proxy</div></div>
+  <div class="metric"><div class="val" id="mZone" style="font-size:14px;">--</div><div class="lbl">Zone</div></div>
+</div>
+
+<div class="lcc-bar"><div class="lcc-fill" id="lccFill" style="width:0%;background:#3498db;"></div></div>
+
+<div id="statusLog" class="status info">Waiting for Polar H10 connection…</div>
+
+<script>
+const ENDPOINT = "{live_endpoint}";
+let device = null, rrBuffer = [];
+
+const ZONE_COLORS = {{
+  RADIANT:"#f39c12", HIGH:"#2ecc71", EMERICK:"#3498db", TRALSE:"#9b59b6", BELOW:"#e74c3c"
+}};
+
+function computeRMSSD(rr) {{
+  if (rr.length < 2) return null;
+  const diffs = rr.slice(1).map((v,i) => (v - rr[i]) ** 2);
+  return Math.sqrt(diffs.reduce((a,b) => a+b, 0) / diffs.length);
+}}
+
+function computeSDNN(rr) {{
+  if (rr.length < 2) return null;
+  const mean = rr.reduce((a,b) => a+b, 0) / rr.length;
+  const variance = rr.map(v => (v-mean)**2).reduce((a,b) => a+b, 0) / rr.length;
+  return Math.sqrt(variance);
+}}
+
+function parseHRChar(value) {{
+  const flags = value.getUint8(0);
+  const hrFormat = flags & 0x01;
+  const rrPresent = (flags >> 4) & 0x01;
+  let offset = 1;
+  const hr = hrFormat ? value.getUint16(offset, true) : value.getUint8(offset);
+  offset += hrFormat ? 2 : 1;
+  if (flags & 0x08) offset += 2;
+  const rrs = [];
+  while (rrPresent && offset + 1 < value.byteLength) {{
+    rrs.push(value.getUint16(offset, true) / 1024.0 * 1000);
+    offset += 2;
+  }}
+  return {{ hr, rrs }};
+}}
+
+async function connectPolar() {{
+  if (!navigator.bluetooth) {{
+    log("Web Bluetooth not supported in this browser. Use Chrome/Edge on desktop.", "err");
+    return;
+  }}
+  try {{
+    log("Scanning for Polar H10…", "info");
+    device = await navigator.bluetooth.requestDevice({{
+      filters: [{{ namePrefix: "Polar" }}],
+      optionalServices: ["heart_rate"]
+    }});
+    const server = await device.gatt.connect();
+    const svc = await server.getPrimaryService("heart_rate");
+    const ch = await svc.getCharacteristic("heart_rate_measurement");
+    await ch.startNotifications();
+    ch.addEventListener("characteristicvaluechanged", onHRData);
+    device.addEventListener("gattserverdisconnected", onDisconnect);
+    document.getElementById("btnConnect").disabled = true;
+    document.getElementById("btnDisconnect").disabled = false;
+    document.getElementById("btStatus").textContent = "Connected: " + device.name;
+    document.getElementById("btStatus").style.color = "#2ecc71";
+    log("✅ Connected to " + device.name + " — streaming HRV…", "ok");
+    startPosting();
+  }} catch(e) {{
+    log("Connection failed: " + e.message, "err");
+  }}
+}}
+
+function disconnectPolar() {{
+  if (device && device.gatt.connected) device.gatt.disconnect();
+}}
+
+function onDisconnect() {{
+  document.getElementById("btnConnect").disabled = false;
+  document.getElementById("btnDisconnect").disabled = true;
+  document.getElementById("btStatus").textContent = "Disconnected";
+  document.getElementById("btStatus").style.color = "#e74c3c";
+  log("Polar H10 disconnected.", "err");
+}}
+
+let lastHR = null;
+function onHRData(ev) {{
+  const parsed = parseHRChar(ev.target.value);
+  lastHR = parsed.hr;
+  document.getElementById("mHR").textContent = parsed.hr;
+  parsed.rrs.forEach(rr => {{ rrBuffer.push(rr); if(rrBuffer.length > 60) rrBuffer.shift(); }});
+  const rmssd = computeRMSSD(rrBuffer);
+  const sdnn = computeSDNN(rrBuffer);
+  if (rmssd) document.getElementById("mRMSSD").textContent = Math.round(rmssd);
+  if (sdnn) document.getElementById("mSDNN").textContent = Math.round(sdnn);
+}}
+
+let postInterval = null;
+function startPosting() {{
+  if (postInterval) clearInterval(postInterval);
+  postInterval = setInterval(async () => {{
+    const rmssd = computeRMSSD(rrBuffer);
+    const sdnn = computeSDNN(rrBuffer);
+    if (!lastHR) return;
+    const payload = {{
+      hr: lastHR,
+      rmssd: rmssd ? Math.round(rmssd * 10) / 10 : null,
+      sdnn: sdnn ? Math.round(sdnn * 10) / 10 : null,
+      rr_intervals: rrBuffer.slice(-30),
+      source: "polar_h10_web_bluetooth"
+    }};
+    try {{
+      const resp = await fetch(ENDPOINT, {{
+        method: "POST",
+        headers: {{"Content-Type": "application/json"}},
+        body: JSON.stringify(payload)
+      }});
+      const data = await resp.json();
+      const lcc = data.lcc_proxy || 0;
+      const zone = data.zone || "BELOW";
+      document.getElementById("mLCC").textContent = lcc.toFixed(3);
+      document.getElementById("mZone").textContent = zone;
+      document.getElementById("mZone").style.color = ZONE_COLORS[zone] || "#fff";
+      const pct = Math.min(100, lcc * 107);
+      document.getElementById("lccFill").style.width = pct + "%";
+      document.getElementById("lccFill").style.background = ZONE_COLORS[zone] || "#3498db";
+    }} catch(e) {{
+      log("POST error: " + e.message, "err");
+    }}
+  }}, 2000);
+}}
+
+function log(msg, cls) {{
+  const el = document.getElementById("statusLog");
+  el.textContent = msg;
+  el.className = "status " + (cls || "info");
+}}
+</script>
+</body>
+</html>
+"""
+
+        st.components.v1.html(WEB_BT_HTML, height=230, scrolling=False)
+
+        st.caption(
+            "**How it works:** Click 'Connect Polar H10' → select your device → "
+            "live HR + RR intervals stream directly from your chest strap to this page. "
+            "Polar H10 supports dual BLE connections, so Elite HRV on your phone stays connected simultaneously."
+        )
+
+        st.divider()
+
+        col_mendi, col_timer_m = st.columns([1, 1])
+
+        with col_mendi:
+            st.markdown("**🧠 Mendi Score Sync**")
+            st.caption(
+                "Neurosight has the BLE connection to your headband — we can't tap in simultaneously. "
+                "Tap your current score every ~30 seconds to fuse it with the live HRV."
+            )
+            mendi_live_score = st.number_input(
+                "Current Mendi Score (check Neurosight app)",
+                min_value=0, max_value=100, value=70, step=1,
+                key="mendi_live_score_input"
+            )
+            if st.button("📡 Log Mendi Score Now", use_container_width=True):
+                import requests as req
+                try:
+                    resp = req.post(
+                        live_endpoint,
+                        json={"mendi_score": mendi_live_score, "source": "mendi_manual"},
+                        timeout=3
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        st.success(
+                            f"Logged — LCC: {data.get('lcc_proxy', '?'):.3f} | "
+                            f"Zone: {data.get('zone', '?')}"
+                        )
+                    else:
+                        st.warning("Gateway not responding — is the app running?")
+                except Exception as e:
+                    st.warning(f"Could not reach gateway: {e}")
+
+        with col_timer_m:
+            st.markdown("**⏱ Session Timer**")
             target_min = st.selectbox("Target duration", [10, 15, 20, 25, 30], index=2)
 
             if "session_start" not in st.session_state:
                 st.session_state["session_start"] = None
 
-            if st.button("▶️ Start Timer", type="primary", use_container_width=True):
+            c1, c2 = st.columns(2)
+            if c1.button("▶️ Start", type="primary", use_container_width=True):
                 st.session_state["session_start"] = datetime.now()
-
-            if st.button("⏹️ Stop Session", use_container_width=True):
+            if c2.button("⏹️ Stop", use_container_width=True):
                 if st.session_state.get("session_start"):
                     elapsed = (datetime.now() - st.session_state["session_start"]).seconds / 60
                     st.session_state["session_elapsed_min"] = round(elapsed, 1)
                     st.session_state["session_start"] = None
-                    st.success(f"Session complete: {elapsed:.1f} min")
+                    st.success(f"Complete: {elapsed:.1f} min")
 
             if st.session_state.get("session_start"):
                 elapsed = (datetime.now() - st.session_state["session_start"]).seconds / 60
                 pct = min(1.0, elapsed / target_min)
                 st.progress(pct, text=f"{elapsed:.1f} / {target_min} min")
-                remaining = max(0, target_min - elapsed)
-                st.metric("Remaining", f"{remaining:.1f} min")
+                st.metric("Remaining", f"{max(0, target_min - elapsed):.1f} min")
                 st.rerun()
 
-        with col_notes:
-            st.markdown("**Real-Time Notes** — jot impressions as they arise:")
-            live_notes = st.text_area(
-                "Session notes",
-                height=200,
-                placeholder="Mind state, distractions, breakthroughs, physical sensations, "
-                            "moments of clarity, score spikes...",
-                key="live_session_notes",
-            )
+        st.divider()
+
+        st.markdown("**📋 Session Notes**")
+        st.text_area(
+            "Real-time notes",
+            height=120,
+            placeholder="Impressions, clarity moments, distractions, score spikes…",
+            key="live_session_notes",
+        )
 
         st.divider()
-        st.subheader("🧠 Simulated fNIRS Preview")
-        st.caption("This shows what your fNIRS signal might look like at different Mendi scores — "
-                   "actual live data streams through the Mendi app on your phone.")
-
-        preview_score = st.slider("Preview Mendi Score", 20, 100, 70)
-        t_sim, hbo2_sim, hbr_sim = _simulate_fnirs_curve(preview_score, 120)
-
-        if HAS_PLOTLY:
-            fig = go.Figure()
-            fig.add_trace(go.Scatter(x=t_sim, y=hbo2_sim, name="HbO₂ (oxygenated)",
-                                     line=dict(color="#e74c3c", width=2)))
-            fig.add_trace(go.Scatter(x=t_sim, y=hbr_sim, name="HbR (deoxygenated)",
-                                     line=dict(color="#3498db", width=2)))
-            fig.add_hline(y=0, line_dash="dash", line_color="gray", opacity=0.5)
-            lcc_eq = mendi_score_to_lcc(preview_score)
-            zone, color, icon = lcc_to_zone(lcc_eq)
-            fig.update_layout(
-                title=f"Simulated fNIRS — Mendi Score {preview_score} → LCC {lcc_eq:.3f} ({zone})",
-                xaxis_title="Time (seconds)",
-                yaxis_title="Δ Hemoglobin (μM)",
-                height=300,
-                margin=dict(t=40, b=20),
-                paper_bgcolor="rgba(0,0,0,0)",
-                plot_bgcolor="rgba(0,0,0,0)",
-                font=dict(color="#f0f0fa"),
-            )
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.line_chart({"HbO2": hbo2_sim[:60], "HbR": hbr_sim[:60]})
-
-        st.caption("📡 For real live data: Mendi Neurosight app → Export CSV → "
-                   "upload in **Pre-Session Prep** → **Upload Mendi Data** section")
+        st.markdown("**📊 Live LCC from Last Logged Data**")
+        import requests as _req
+        try:
+            _r = _req.get(current_endpoint, timeout=2)
+            if _r.status_code == 200:
+                _d = _r.json()
+                if _d.get("lcc_proxy") is not None:
+                    _lcc = _d["lcc_proxy"]
+                    _zone, _color, _icon = lcc_to_zone(_lcc)
+                    _c1, _c2, _c3, _c4, _c5 = st.columns(5)
+                    _c1.metric("HR", f"{_d.get('hr') or '--'} bpm")
+                    _c2.metric("RMSSD", f"{_d.get('rmssd') or '--'} ms")
+                    _c3.metric("Mendi", f"{_d.get('mendi_score') or '--'}")
+                    _c4.metric("LCC", f"{_lcc:.3f}")
+                    _c5.metric("Zone", f"{_icon} {_zone}")
+                    _upd = _d.get("updated_at", "")
+                    if _upd:
+                        st.caption(f"Last updated: {_upd[:19]} UTC")
+                else:
+                    st.info("No live data yet — connect Polar H10 above or log a Mendi score.")
+        except Exception:
+            st.info("Connect Polar H10 above to see live data here.")
 
     with tab_post:
         st.subheader("📊 Post-Session Analysis — Enter Your Results")

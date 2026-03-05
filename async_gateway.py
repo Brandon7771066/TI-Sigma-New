@@ -31,6 +31,12 @@ import secrets as py_secrets
 streamlit_proc = None
 
 RATE_LIMITS = {'basic': 100, 'pro': 10000, 'enterprise': 100000}
+
+LIVE_SESSION = {
+    "hr": None, "rmssd": None, "sdnn": None, "coherence": None,
+    "rr_intervals": [], "mendi_score": None, "lcc_proxy": None,
+    "lcc_zone": None, "updated_at": None, "source": None
+}
 TIER_PRICES = {'basic': 99, 'pro': 499, 'enterprise': 'custom'}
 STREAMLIT_PORT = 5001
 
@@ -457,6 +463,106 @@ async def api_register_handler(request):
     except Exception as e:
         return web.json_response({'error': 'Database error', 'details': str(e)}, status=503)
 
+async def live_biometric_post_handler(request):
+    """Receive live biometric data from Web Bluetooth browser component."""
+    global LIVE_SESSION
+    try:
+        data = await request.json()
+    except Exception:
+        return web.json_response({"error": "invalid json"}, status=400)
+
+    import math
+    PHI = (1 + math.sqrt(5)) / 2
+    SQRT2 = math.sqrt(2)
+    LCC_TRALSE = SQRT2 - 1
+    LCC_EMERICK = 1 / SQRT2
+    LCC_HIGH = 0.851
+    LCC_RADIANT = math.sqrt(math.e / math.pi)
+
+    hr = data.get("hr")
+    rmssd = data.get("rmssd")
+    sdnn = data.get("sdnn")
+    mendi_score = data.get("mendi_score")
+    rr_list = data.get("rr_intervals", [])
+
+    LIVE_SESSION["updated_at"] = datetime.utcnow().isoformat()
+    if hr is not None:
+        LIVE_SESSION["hr"] = hr
+    if rmssd is not None:
+        LIVE_SESSION["rmssd"] = rmssd
+    if sdnn is not None:
+        LIVE_SESSION["sdnn"] = sdnn
+    if rr_list:
+        LIVE_SESSION["rr_intervals"] = rr_list[-30:]
+    if mendi_score is not None:
+        LIVE_SESSION["mendi_score"] = mendi_score
+    LIVE_SESSION["source"] = data.get("source", "web_bluetooth")
+
+    hrv_component = min(1.0, (rmssd or 0) / 80.0)
+    coherence = data.get("coherence")
+    if coherence is None and rmssd and hr:
+        nn50 = sum(1 for i in range(1, len(rr_list)) if abs(rr_list[i] - rr_list[i-1]) > 50)
+        pnn50 = nn50 / max(1, len(rr_list) - 1)
+        coherence = min(1.0, pnn50 * 3.0 + hrv_component * 0.5)
+    LIVE_SESSION["coherence"] = coherence
+
+    mendi_lcc = 0.0
+    if mendi_score is not None:
+        mendi_lcc = LCC_TRALSE + (mendi_score / 100.0) * (LCC_RADIANT - LCC_TRALSE)
+
+    if rmssd is not None and mendi_score is not None:
+        lcc = hrv_component * 0.6 + mendi_lcc * 0.4
+    elif rmssd is not None:
+        lcc = hrv_component * 0.85
+    elif mendi_score is not None:
+        lcc = mendi_lcc
+    else:
+        lcc = 0.0
+
+    LIVE_SESSION["lcc_proxy"] = round(lcc, 4)
+
+    if lcc >= LCC_RADIANT:
+        zone = "RADIANT"
+    elif lcc >= LCC_HIGH:
+        zone = "HIGH"
+    elif lcc >= LCC_EMERICK:
+        zone = "EMERICK"
+    elif lcc >= LCC_TRALSE:
+        zone = "TRALSE"
+    else:
+        zone = "BELOW"
+    LIVE_SESSION["lcc_zone"] = zone
+
+    try:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS live_session_stream (
+                id SERIAL PRIMARY KEY,
+                ts TIMESTAMP DEFAULT NOW(),
+                hr INTEGER, rmssd FLOAT, sdnn FLOAT, coherence FLOAT,
+                mendi_score INTEGER, lcc_proxy FLOAT, lcc_zone TEXT, source TEXT
+            )
+        """)
+        cur.execute("""
+            INSERT INTO live_session_stream
+            (hr, rmssd, sdnn, coherence, mendi_score, lcc_proxy, lcc_zone, source)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        """, (hr, rmssd, sdnn, coherence, mendi_score,
+              LIVE_SESSION["lcc_proxy"], zone, LIVE_SESSION["source"]))
+        conn.commit()
+        conn.close()
+    except Exception:
+        pass
+
+    return web.json_response({"ok": True, "lcc_proxy": LIVE_SESSION["lcc_proxy"], "zone": zone})
+
+
+async def live_biometric_get_handler(request):
+    """Return current live biometric state for Streamlit polling."""
+    return web.json_response(LIVE_SESSION)
+
+
 async def api_lcc_handler(request):
     """Calculate LCC (Love Consciousness Connection) proxy."""
     key_data, error = await validate_api_key(request)
@@ -716,6 +822,8 @@ async def main():
     app.router.add_route('*', '/api/polar/upload', upload_handler)
     app.router.add_route('*', '/api/latest', latest_handler)
     app.router.add_route('*', '/api/esp32/latest', latest_handler)
+    app.router.add_route('POST', '/api/biometric/live', live_biometric_post_handler)
+    app.router.add_route('GET', '/api/biometric/current', live_biometric_get_handler)
     
     app.router.add_route('GET', '/api/v1/health', api_v1_health_handler)
     app.router.add_route('POST', '/api/v1/register', api_register_handler)
