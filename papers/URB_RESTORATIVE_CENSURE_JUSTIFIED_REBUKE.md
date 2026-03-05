@@ -9,6 +9,7 @@
 **Builds on:** Paper #355 (EAR), Paper #360 (BGT/MT), Paper #356 (Tralse Authority),
 Paper #359 (Transcendence Double Standard), Tralse Topos, GILE Framework
 **External synthesis:** ChatGPT taxonomy of moral speech acts (March 2026)
+**Continued in:** Paper #375 (TI Rebuke Framework — Societal Checks & Balances, Two-Tier Ecology, Authentic Catharsis, Revenge Redefined; `papers/URB_TI_REBUKE_FRAMEWORK_SOCIETAL_CHECKS.md`) — adds the policy and engineering layer on top of this paper's taxonomy foundation.
 
 ---
 

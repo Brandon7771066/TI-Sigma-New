@@ -5,7 +5,9 @@
 **Series:** Unified Reality Base (URB) — TI Sigma Framework  
 **Date:** March 5, 2026  
 **Keywords:** TI Rebuke Framework, informal punishment, catharsis, moral restoration, just insult, Myrion Resolution, GM network, deontology, restorative justice, checks and balances, online ecology, ego resilience  
-**Connects to:** Paper #348 (Just Insult and IC), Paper #349 (Myrion Resolution), Paper #363 (GM network, i-cell), Paper #368 (Confidence-Being Law), Paper #374 (Full Merge/shapeshifting)
+**Continues from:** Paper #361 (Restorative Censure — Taxonomy and Ethical Framework for Justified Rebuke; `papers/URB_RESTORATIVE_CENSURE_JUSTIFIED_REBUKE.md`)  
+**Connects to:** Paper #361 (Restorative Censure/JI taxonomy; 8 red lines; 5 speech-act types), Paper #349 (Myrion Resolution), Paper #363 (GM network, i-cell), Paper #368 (Confidence-Being Law), Paper #374 (Full Merge/shapeshifting)  
+**Reading order:** Read Paper #361 first for the foundational taxonomy and TI formalization. This paper (375) adds the societal engineering layer: two-tier ecology, five checks and balances, catharsis theory, and the revenge redefinition.
 
 ---
 
@@ -181,7 +183,7 @@ For rebuke to be JI-valid (just insult compatible), the person delivering it mus
 | **Stop-ability** | You can stop after the boundary is enforced — no victory laps | E (Environment) — situational completion |
 | **Integration instinct** | You spontaneously include an off-ramp ("Own it and we move forward") | G + L — reintegration orientation |
 
-These markers match the insistence from Paper #348 that metacognition quality shows up in the action. A person meeting all five is in an IC state — genuine integrity-from-conviction, not dark-IC (conviction from ego defense or social performance).
+These markers match the insistence from Paper #361 (Restorative Censure) that metacognition quality shows up in the action. A person meeting all five is in an IC state — genuine integrity-from-conviction, not dark-IC (conviction from ego defense or social performance).
 
 A person failing markers 1, 3, or 5 is not in an IC state. The rebuke that follows may be authentic in the sense of being emotionally felt, but it lacks the structure required for MR-compatible correction. In that case, the appropriate action is to wait — to allow the internal state to clarify — rather than to deliver a rebuke that will fail the deontological test on execution.
 
@@ -215,7 +217,7 @@ The strongest version of the TI-RF normative claim does not require proving "hum
 
 1. **Humans can reliably embody truth-alignment** — high-truth embodiments exist (genuine shamans, mystical geniuses, integrated moral agents). These are not mythological; they are documented.
 2. **Such embodiment is valuable** — a culture with more truth-aligned actors produces better outcomes by any reasonable metric.
-3. **Our current environment discourages it** — genuine IC is consistently misidentified as arrogance, dismissed as non-conformity, and punished socially. The IC paper (Paper #348) argues exactly this.
+3. **Our current environment discourages it** — genuine IC is consistently misidentified as arrogance, dismissed as non-conformity, and punished socially. Paper #361 (Restorative Censure) argues exactly this.
 
 These three premises are sufficient to justify experimenting with cultural norms that reward truth-calibration and courageous moral speech. TI-RF is not a utopian plan premised on humans being naturally good. It is a policy experiment premised on humans being capable of better under different structural conditions.
 
