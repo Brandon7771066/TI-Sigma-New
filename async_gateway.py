@@ -38,7 +38,7 @@ LIVE_SESSION = {
     "lcc_zone": None, "updated_at": None, "source": None
 }
 TIER_PRICES = {'basic': 99, 'pro': 499, 'enterprise': 'custom'}
-STREAMLIT_PORT = 5001
+STREAMLIT_PORT = 5002
 
 def get_db():
     return psycopg2.connect(os.environ.get('DATABASE_URL'))
@@ -838,18 +838,20 @@ async def main():
     
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', 5000)
-    
+    site_5000 = web.TCPSite(runner, '0.0.0.0', 5000)
+    site_5001 = web.TCPSite(runner, '0.0.0.0', 5001)
+
     print("\n" + "="*60)
-    print("🌐 TI FRAMEWORK GATEWAY - Port 5000")
+    print("🌐 TI FRAMEWORK GATEWAY - Ports 5000 + 5001")
     print("="*60)
-    print("📍 /api/upload -> ESP32 biometric uploads")
+    print("📍 /api/upload -> EEG/biometric uploads")
     print("📍 /api/health -> Health check")
     print("📍 /api/v1/* -> TI Framework API (LCC, GSA, Tralse)")
     print("📍 /* -> Streamlit proxy")
     print("="*60 + "\n")
-    
-    await site.start()
+
+    await site_5000.start()
+    await site_5001.start()
     
     while True:
         await asyncio.sleep(3600)
