@@ -181,6 +181,8 @@ def _post_loop():
             "jaw_clench":    jaw,
             "blink":         blink,
             "source":        "mind_monitor_bridge",
+            "device_id":     "MUSE_BRIDGE",
+            "session_id":    "live_eeg_session",
         }
         payload = {k: v for k, v in payload.items() if v is not None}
 
