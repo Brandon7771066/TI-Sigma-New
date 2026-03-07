@@ -1,4 +1,4 @@
-# Paper #381: Response to Referee — BOK Metamathematic Model: Concessions, Defenses, and Formal Revisions
+Awe# Paper #381: Response to Referee — BOK Metamathematic Model: Concessions, Defenses, and Formal Revisions
 
 ## A Point-by-Point Reply to the ChatGPT Critical Analysis of Paper #380, With Specific Amendments
 
