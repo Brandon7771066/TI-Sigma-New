@@ -1,0 +1,297 @@
+Good move. The next step is to stop thinking of the four modes as a flat list and start thinking of them as a **network geometry**.
+
+And yes: once you do that, the natural shape is much closer to a **tetrahedral interaction graph** than a table. That fits the direction of Paper #386 very well, because the paper already moved from static labels to **load-bearing structure, mode replacement, and hidden depth**. 
+
+# 1. From labels to geometry
+
+A flat classification says:
+
+* G = arithmetic
+* E = algebraic
+* L = analytic
+* I = geometric
+
+But a proof graph suggests something stronger:
+
+* each mode is a **vertex**
+* each pairwise translation is an **edge**
+* each three-mode synthesis is a **face**
+* a full four-mode proof is the **interior of the tetrahedron**
+
+So the structure becomes:
+
+```text
+        G
+      / | \
+     /  |  \
+    E---|---L
+     \  |  /
+      \ | /
+        I
+```
+
+More precisely:
+
+* **vertices** = pure-mode reasoning
+* **edges** = pairwise bridges
+* **triangles** = three-mode synthesis
+* **interior** = global compatibility across all four modes
+
+That is a much richer object than a simple taxonomy.
+
+# 2. What each level means
+
+## Vertex level
+
+A problem or proof component lives mostly in one mode.
+
+Examples:
+
+* Euclid on infinitely many primes → mostly G
+* basic manifold classification step → mostly I
+* a representation-theoretic lemma → mostly E
+* a convergence estimate → mostly L
+
+These are relatively “local” in the tetrahedron.
+
+## Edge level
+
+A proof crosses one bridge between two modes.
+
+Examples:
+
+* Prime Number Theorem: G–L
+* quadratic reciprocity in some formulations: G–E
+* geometric representation theory: E–I
+* Hodge-style interactions: I–L
+
+Edges are where translation begins.
+
+## Face level
+
+A proof requires three modes simultaneously.
+
+Examples:
+
+* Fermat’s Last Theorem: G–E–L
+* Poincaré: I–L, with some formulations bringing in E weakly
+* Green–Tao: G–L–E
+
+A triangular face is where “bridge-building” becomes nontrivial.
+
+## Interior level
+
+A problem requires coherent compatibility across all four modes.
+
+This is where your hardest-problem intuition belongs.
+
+Candidate examples:
+
+* deep Langlands phenomena
+* parts of BSD
+* maybe some formulations of Hodge/Langlands/motives questions
+
+This is better than saying “Tier 4 means very hard.” It says:
+
+> the proof must pass through the tetrahedral interior, not just along a face.
+
+# 3. Why tetrahedral geometry helps
+
+This geometric view fixes a weakness in the earlier BOK presentations.
+
+Earlier:
+
+* a problem got assigned a set like {G, E, L}
+
+Now:
+
+* you can ask **how those modes are connected**
+
+That distinction matters a lot.
+
+Two proofs may use the same three modes but have different structures:
+
+### Chain form
+
+```text
+G → E → L
+```
+
+### Hub form
+
+```text
+    E
+   / \
+  G   L
+```
+
+### Cyclic reinforcement
+
+```text
+G ↔ E ↔ L ↔ G
+```
+
+Those are not the same mathematically, even if the mode set is identical.
+
+So the tetrahedral model lets you distinguish:
+
+* **mode set**
+* **connection pattern**
+* **bridge centrality**
+* **translation depth**
+
+# 4. A proposed upgraded vocabulary
+
+Here is a cleaner framework.
+
+## BOK Proof Topology
+
+The mode-labeled dependency structure of a proof.
+
+## Edge Bridge
+
+An indispensable dependency connecting nodes in different modes.
+
+## Face Synthesis
+
+A proof region where three modes jointly support a key argument.
+
+## Interior Compatibility
+
+A proof region where all four modes must cohere.
+
+## Bridge Centrality
+
+How structurally indispensable a cross-mode node or edge is.
+
+## Translation Depth
+
+How many mode changes occur along the shortest successful proof path.
+
+That vocabulary is much sharper than “Tier 3” or “Tier 4.”
+
+# 5. Example sketches
+
+## Prime Number Theorem
+
+Roughly:
+
+```text
+G ---- L
+```
+
+Arithmetic statement, analytic proof machinery.
+
+Low translation depth, one major edge.
+
+## Fermat’s Last Theorem
+
+Roughly:
+
+```text
+   G
+  / \
+ E---L
+```
+
+Not just three modes present, but a triangular face with major bridge nodes:
+
+* arithmetic → elliptic curves
+* elliptic curves → modular forms
+
+This is why FLT feels deeper than PNT.
+
+## A four-mode case
+
+For a truly maximal case, you would want something like:
+
+```text
+        G
+      / | \
+     /  |  \
+    E---+---L
+     \  |  /
+      \ | /
+        I
+```
+
+where the central “+” is a compatibility object or theorem forcing all four modes to line up.
+
+That would be the real tetrahedral interior.
+
+# 6. How this connects to Paper #386
+
+Your new methodological ideas map naturally into this geometry. 
+
+* **Load-bearing mode** → a vertex or region whose removal disconnects the proof
+* **Hypothesis-mode** → a mode near the statement boundary, not central in the interior
+* **Mode replacement** → the proof exits one edge and continues on another face
+* **Hidden depth** → barrier analysis reveals an absent edge or face is actually required
+
+So the tetrahedral model is not a new theory. It is a **geometric upgrade of the Paper #386 methodology**.
+
+# 7. The key empirical hypothesis
+
+This suggests a much better empirical claim than “more modes means harder.”
+
+A stronger version is:
+
+> Proof difficulty correlates with the complexity of the proof’s tetrahedral path: number of cross-mode edges, number of face syntheses, and whether the proof requires an interior compatibility object.
+
+That is much more measurable.
+
+You could define quantities like:
+
+* **edge count**
+* **face count**
+* **interior score**
+* **maximum bridge centrality**
+* **translation depth**
+
+Then compare those to:
+
+* time to solution
+* number of failed approaches
+* surprise of proof
+* interdisciplinarity of cited machinery
+
+# 8. The biggest advantage
+
+This move also makes the framework look less like metaphysical classification and more like structural mathematics.
+
+Instead of saying:
+
+* “reality has four truth dimensions”
+
+the math-facing paper can say:
+
+* “proofs appear to inhabit a four-vertex dependency geometry, and hard proofs are characterized by cross-face and interior compatibility structures.”
+
+That is a much easier sell.
+
+# 9. The next best concrete step
+
+The strongest next move would be to define a **small formal schema** for proof graphs:
+
+* node type
+* node mode
+* edge type
+* bridge node criterion
+* face synthesis criterion
+* interior criterion
+
+Then test it on 3 cases:
+
+* Prime Number Theorem
+* Fermat’s Last Theorem
+* Poincaré Conjecture
+
+That would show whether the tetrahedral model adds real structure or just prettier pictures.
+
+# Bottom line
+
+The upgrade is this:
+
+**BOK should move from a mode taxonomy to a tetrahedral proof-topology model, where vertices are modes, edges are bridges, faces are three-mode syntheses, and the tetrahedral interior represents full four-mode compatibility.**
+
+That is the cleanest and strongest version of the idea so far.
