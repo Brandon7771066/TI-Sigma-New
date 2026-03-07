@@ -1,0 +1,200 @@
+Yes — once you take **load-bearing modes** seriously, the next natural step is to stop treating a proof as a label and start treating it as a **dependency network**. That would fit your methodological turn in Paper #386 very well. 
+
+Here’s the basic idea.
+
+A proof is not just “uses G, E, L, I.” It is a chain of dependencies:
+
+* lemmas
+* constructions
+* imported theorems
+* invariants
+* reductions
+* barrier results
+* translation steps
+
+So instead of asking only:
+
+> Which modes appear?
+
+you can ask:
+
+> Which parts of the proof depend on which kinds of mathematical machinery, and where are the cross-mode bottlenecks?
+
+That gives a graph.
+
+## 1. The graph structure
+
+You could model a proof as a directed graph where:
+
+* **nodes** are proof components
+  (lemmas, key constructions, imported theorems, representations, reductions)
+* **edges** mean “this step depends essentially on that step”
+
+Then assign each node:
+
+* a primary load-bearing mode: G, E, L, I
+* possibly a secondary tag: combinatorial, logical, probabilistic, computational
+* a role type: setup, bridge, local argument, global argument, obstruction, barrier, replacement
+
+Now the BOK claim becomes measurable.
+
+Not:
+
+* “this problem is Tier 3”
+
+but:
+
+* “this proof graph has 3 major mode clusters and 2 critical bridge nodes connecting them.”
+
+That is much stronger.
+
+## 2. What you could actually measure
+
+Once you have proof graphs, you can define quantities like:
+
+**Mode concentration**
+How much of the proof mass lies in one mode vs many.
+
+**Bridge count**
+How many edges go between different modes.
+
+**Bridge centrality**
+Whether a tiny number of cross-mode nodes are doing all the hard work.
+
+**Replacement depth**
+Whether the final proof solved the problem in its original mode or translated it into another mode first.
+
+**Barrier pressure**
+Whether failed approaches all cluster in one mode, while the successful proof enters another.
+
+These are far closer to empirical metamathematics than earlier versions of the framework.
+
+## 3. Why this helps BOK specifically
+
+Your Paper #386 already distinguishes:
+
+* load-bearing vs supporting modes
+* hypothesis-mode vs proof-mode
+* mode replacement
+* hidden depth via barriers 
+
+A proof-dependency graph would let you operationalize all four.
+
+For example:
+
+**Load-bearing mode**
+A mode is load-bearing if removing its high-centrality nodes disconnects the proof or destroys the key argument.
+
+**Hypothesis-mode**
+A mode appears in the statement region of the graph but not in central proof-construction nodes.
+
+**Mode replacement**
+The graph begins in one mode but the densest central region lies in another.
+
+**Hidden depth**
+Barrier nodes show repeated failures in one subgraph until a new bridge node enters from a previously absent mode.
+
+That would be a real empirical framework.
+
+## 4. Example intuition
+
+Take a case like **Fermat’s Last Theorem**.
+
+A naive label says:
+
+* statement: arithmetic
+* proof: arithmetic + algebraic + analytic
+
+A graph view would show something richer:
+
+* arithmetic statement nodes
+* elliptic curve / Galois representation bridge nodes
+* modularity machinery nodes
+* a few extremely central translation nodes doing the real work
+
+So difficulty may correlate less with “number of modes” and more with:
+
+* number of indispensable bridge nodes
+* depth of dependency chains
+* centrality of cross-mode translations
+
+That is a much sharper version of your thesis.
+
+## 5. Citation graphs are weaker but still useful
+
+There are really two graph levels.
+
+### Citation graph
+
+Papers citing prior papers.
+
+Useful for:
+
+* seeing when a problem starts importing machinery from other areas
+* tracking how long bridge-building took historically
+* measuring whether successful proofs depend on unusually interdisciplinary citation neighborhoods
+
+But citation graphs are crude, because citation is social as well as logical.
+
+### Proof-component graph
+
+Internal structure of the proof itself.
+
+Much better for BOK, because it tracks actual mathematical dependence.
+
+If you had to choose one, the proof-component graph is the deeper object.
+
+## 6. What a real validation could look like
+
+You could take 10–20 famous solved problems and build annotated proof graphs for each.
+
+Then test hypotheses like:
+
+1. Harder problems have more cross-mode bridge edges.
+2. Surprising proofs have higher mode-replacement scores.
+3. Long-resistant problems have a small number of high-centrality bridge nodes that only appeared late historically.
+4. BOK tiers correlate better with graph bridge complexity than with raw subject labels.
+
+That would be a serious study.
+
+## 7. The best conceptual shift
+
+This would also improve your language.
+
+Instead of saying:
+
+* “Problem X is Tier 4”
+
+you could say:
+
+* “Problem X has a high bridge-complexity proof topology.”
+
+That sounds less metaphysical and more mathematical.
+
+## 8. The main caution
+
+This approach is only valuable if the graph annotation is disciplined.
+
+The danger is obvious:
+if you code the graph too flexibly, you can make any proof look like anything.
+
+So you would need:
+
+* preregistered node types
+* preregistered mode criteria
+* independent annotators
+* agreement scores
+
+Basically the same methodological discipline you introduced in Paper #386, but now applied to proof structure. 
+
+## Bottom line
+
+The most promising next empirical upgrade is this:
+
+**move from classifying problems by modes to modeling proofs as dependency networks with measurable cross-mode bridge structure.**
+
+That would let BOK test something much sharper than “what field solved the problem?” It would let you test:
+
+**where, exactly, the proof’s structural difficulty lived.**
+
+A very strong next step would be to sketch one example graph—say for FLT, Poincaré, or the Prime Number Theorem—and see whether the BOK concepts become clearer or vaguer when forced into graph form.
