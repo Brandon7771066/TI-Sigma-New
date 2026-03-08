@@ -24,7 +24,14 @@ The backend uses a service-oriented architecture with key components for:
 - **PSI Tuning Protocol**: Pre-experiment optimization system with 5 progressive phases.
 - **LCC Sleep Induction Protocol**: Applies LCC attractor basin principles for reliable sleep induction.
 - **Multi-Modal Consciousness Lab**: Integrates Polar H10, Muse 2, and Mendi fNIRS for comprehensive consciousness measurement.
-- **Financial & Market Analysis**: Includes the TI Framework Stock Research System and the Grand Stock Algorithm (GSA) regime classification.
+- **Financial & Market Analysis**: TI Framework Stock Research System + **Grand Stock Algorithm v2 (GSA v2)**. Core files: `gsa_core.py`, `gsa_live_trader.py`, `gsa_daily_scheduler.py`.
+  - **GSA v2 Architecture (March 8, 2026):**
+    - `C_EMERICK = 1/(φ√2) ≈ 0.4370` — Emerick Constant as primary LCC threshold
+    - Extended Euler normalization: e^(iπ)+√2·φ·C=0 — Xi signals dampened at Euler envelope
+    - **BOK 8-Mode regime classification**: 4 primary (ARITHMETIC/ALGEBRAIC/ANALYTIC/GEOMETRIC) + 4 interface (LOGIC/COMBINATORIAL/PROBABILISTIC/APPLIED)
+    - **Theorem A bifurcation detection**: 3-phase metastability→spike→collapse pattern (mirrors EEG hypnagogic data)
+    - **Dual-Confidence Principle**: EC (Exploratory Confidence) + EpC (Epistemic Certainty); trade gate = EC>0.65 AND EpC>0.50; Tral-state = half-size
+    - Alpaca paper account PA3J364R5XU9 ($100K, activated Feb 27); `gsa_daily_scheduler` runs signals at 9:35 AM ET daily
 - **Fractal Universe Integration**: Incorporates "Our Fractal Universe" research into TI Sigma predictions.
 - **TI Evidence Registry**: Tracks empirical validation for TI trading algorithms and GM Hypercomputing claims.
 - **Computation & Information Theory**: Encompasses a Ternary Computation Framework, Quantum Collapse Simulator, Tralsebit Information Theory, and a TI Computing Language (TICL) with EEG authentication.
