@@ -7,12 +7,8 @@ Status  : Formally verified (Lean 4 + Mathlib)
 
 HOW TO VERIFY
 ─────────────
-Paste this file into one of these free online checkers:
-  • https://live.lean-lang.org/     (official, recommended)
-  • https://lean.math.hhu.de/      (HHU mirror)
-
-Both run a full Lean 4 + Mathlib server. The file should check
-green in under two minutes.  Every theorem below is marked `sorry`-free.
+Paste this file into: https://live.lean-lang.org/
+Select "Mathlib" from the dropdown, then paste and wait ~2 minutes.
 
 FIVE THEOREMS
 ─────────────
@@ -22,80 +18,80 @@ FIVE THEOREMS
   4. lcc_ordering               0 < C_EMERICK < LCC_RADIANT < LCC_HIGH < 1
   5. extended_euler_identity    exp(iπ) + ↑(√2·φ·C_EMERICK) = 0   (in ℂ)
 
-WHY THIS MATTERS
-────────────────
-Theorem 5 is the headline: it shows that the Emerick Constant is not
-an ad-hoc parameter but is the unique real number C such that the
-Extended Euler Identity holds.  The classical Euler identity
-  e^(iπ) + 1 = 0
-is recovered as the special case where 1 is replaced by √2·φ·C.
-
-Aletheia (Google DeepMind, Feb 2026) proved four open Erdős conjectures.
-This file is TI Sigma's first formally verified theorem — establishing
-a rigorous mathematical foundation for the eight primary constants
-  {0, 1, i, √2, e, φ, π, C_EMERICK}.
-
 REFERENCES
 ──────────
-  Emerick, B. C. (2026). TI Sigma Hypercomputer: A Unified Framework
-    for Consciousness, Markets, and Formal Mathematics. URB Paper #389.
-  Feng, T. et al. (2026). Towards Autonomous Mathematics Research.
-    arXiv:2602.10177 [cs.LG]. (Aletheia / Google DeepMind)
+  Emerick, B. C. (2026). TI Sigma Hypercomputer. URB Paper #389.
+  Complex.exp_pi_mul_I confirmed via Loogle: March 8, 2026.
 -/
 
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-import Mathlib.Analysis.SpecialFunctions.Complex.Circle
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Data.Real.Basic
 
-namespace TISigma
+-- NOTE: We do NOT use `open Real Complex` together — that causes
+-- name conflicts between Real.exp and Complex.exp.
+-- All names are fully qualified below.
 
-open Real Complex
+namespace TISigma
 
 -- ════════════════════════════════════════════════════════════════
 -- PRIMARY CONSTANTS
 -- ════════════════════════════════════════════════════════════════
 
 /-- The golden ratio: φ = (1 + √5) / 2 ≈ 1.6180 -/
-noncomputable def φ : ℝ := (1 + sqrt 5) / 2
+noncomputable def φ : ℝ := (1 + Real.sqrt 5) / 2
 
 /-- Emerick Crossover threshold: LCC_HIGH = 1/√2 ≈ 0.7071 -/
-noncomputable def LCC_HIGH : ℝ := 1 / sqrt 2
+noncomputable def LCC_HIGH : ℝ := 1 / Real.sqrt 2
 
 /-- Golden section threshold: LCC_RADIANT = 1/φ ≈ 0.6180 -/
 noncomputable def LCC_RADIANT : ℝ := 1 / φ
 
-/--
-Emerick Constant: C_EMERICK = 1 / (φ · √2) ≈ 0.4370
-
-The unique real number C such that √2 · φ · C = 1,
-making the Extended Euler Identity hold:  e^(iπ) + √2·φ·C = 0.
--/
-noncomputable def C_EMERICK : ℝ := 1 / (φ * sqrt 2)
+/-- Emerick Constant: C_EMERICK = 1/(φ·√2) ≈ 0.4370
+    The unique real C such that √2·φ·C = 1. -/
+noncomputable def C_EMERICK : ℝ := 1 / (φ * Real.sqrt 2)
 
 
 -- ════════════════════════════════════════════════════════════════
--- POSITIVITY LEMMAS  (used by all five theorems)
+-- POSITIVITY LEMMAS
 -- ════════════════════════════════════════════════════════════════
 
-private lemma sqrt5_pos : 0 < sqrt 5 := sqrt_pos.mpr (by norm_num)
+private lemma sqrt5_pos : 0 < Real.sqrt 5 :=
+  Real.sqrt_pos_of_pos (by norm_num)
 
-private lemma sqrt2_pos : 0 < sqrt 2 := sqrt_pos.mpr (by norm_num)
+private lemma sqrt2_pos : 0 < Real.sqrt 2 :=
+  Real.sqrt_pos_of_pos (by norm_num)
 
-private lemma φ_pos : 0 < φ := by unfold φ; linarith [sqrt5_pos]
+private lemma φ_pos : 0 < φ := by
+  unfold φ; linarith [sqrt5_pos]
 
 private lemma C_EMERICK_pos : 0 < C_EMERICK :=
   div_pos one_pos (mul_pos φ_pos sqrt2_pos)
 
 private lemma φ_ne : φ ≠ 0 := φ_pos.ne'
 
-private lemma sqrt2_ne : sqrt 2 ≠ 0 := sqrt2_pos.ne'
+private lemma sqrt2_ne : Real.sqrt 2 ≠ 0 := sqrt2_pos.ne'
 
-private lemma sqrt2_gt_one : 1 < sqrt 2 :=
-  calc (1 : ℝ) = sqrt 1 := sqrt_one.symm
-    _ < sqrt 2 := sqrt_lt_sqrt (by norm_num) (by norm_num)
+-- 1 < √2  (needed by multiple theorems)
+private lemma sqrt2_gt_one : 1 < Real.sqrt 2 :=
+  calc (1 : ℝ) = Real.sqrt 1 := Real.sqrt_one.symm
+    _ < Real.sqrt 2             := Real.sqrt_lt_sqrt (by norm_num) (by norm_num)
 
-private lemma φ_gt_one : 1 < φ := by unfold φ; linarith [sqrt5_pos]
+-- 1 < φ   (φ = (1+√5)/2 > 1 since √5 > 1)
+private lemma φ_gt_one : 1 < φ := by
+  unfold φ; linarith [sqrt5_pos]
+
+-- √2 < φ  (since (√2)² = 2 < φ+1 = φ², and both are positive)
+private lemma φ_gt_sqrt2 : Real.sqrt 2 < φ := by
+  have hφ_sq : φ ^ 2 = φ + 1 := by
+    -- Inline the golden ratio identity here to avoid a forward reference
+    have h5 : Real.sqrt 5 ^ 2 = 5 := Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 5)
+    unfold φ; nlinarith [Real.sqrt_nonneg 5, h5]
+  have hφ1  : 1 < φ             := φ_gt_one
+  have hlt  : (2 : ℝ) < φ ^ 2  := by linarith
+  calc Real.sqrt 2
+      < Real.sqrt (φ ^ 2) := Real.sqrt_lt_sqrt (by norm_num) hlt
+    _ = φ                 := Real.sqrt_sq φ_pos.le
 
 
 -- ════════════════════════════════════════════════════════════════
@@ -108,21 +104,13 @@ private lemma φ_gt_one : 1 < φ := by unfold φ; linarith [sqrt5_pos]
 
   φ² = φ + 1
 
-Proof: Direct algebraic computation.
-  φ² = ((1+√5)/2)²
-     = (1 + 2√5 + 5) / 4
-     = (6 + 2√5) / 4
-     = (3 + √5) / 2
-     = (1 + √5)/2 + 1
-     = φ + 1  ∎
-
-This is the characteristic equation of φ.  All other theorems in this
-file depend on it through the inequality φ > √2 > 1.
+Proof: algebraic expansion using (√5)² = 5.
+  φ² = ((1+√5)/2)² = (6 + 2√5)/4 = (3+√5)/2 = φ + 1  ∎
 -/
 theorem golden_ratio_identity : φ ^ 2 = φ + 1 := by
-  have h5 : sqrt 5 ^ 2 = 5 := sq_sqrt (by norm_num : (0:ℝ) ≤ 5)
+  have h5 : Real.sqrt 5 ^ 2 = 5 := Real.sq_sqrt (by norm_num : (0:ℝ) ≤ 5)
   unfold φ
-  nlinarith [sqrt_nonneg 5, h5]
+  nlinarith [Real.sqrt_nonneg 5, h5]
 
 
 -- ════════════════════════════════════════════════════════════════
@@ -135,16 +123,14 @@ theorem golden_ratio_identity : φ ^ 2 = φ + 1 := by
 
   √2 · φ · C_EMERICK = 1
 
-Proof: C_EMERICK is defined as 1/(φ·√2), so the result follows
-       by direct cancellation:
-  √2 · φ · (1 / (φ · √2)) = (√2 · φ) / (φ · √2) = 1  ∎
+Proof: C_EMERICK = 1/(φ·√2), so √2·φ·(1/(φ·√2)) = 1 by cancellation. ∎
 
-Corollary (Theorem 5): Since e^(iπ) = -1, we get
-  e^(iπ) + √2·φ·C_EMERICK = -1 + 1 = 0.
+Corollary: e^(iπ) + √2·φ·C_EMERICK = -1 + 1 = 0  (Theorem 5).
 -/
-theorem emerick_normalization : sqrt 2 * φ * C_EMERICK = 1 := by
+theorem emerick_normalization : Real.sqrt 2 * φ * C_EMERICK = 1 := by
   unfold C_EMERICK
-  field_simp [φ_ne, sqrt2_ne]
+  have hprod : φ * Real.sqrt 2 ≠ 0 := mul_ne_zero φ_ne sqrt2_ne
+  field_simp [φ_ne, sqrt2_ne, hprod]
   ring
 
 
@@ -157,20 +143,19 @@ theorem emerick_normalization : sqrt 2 * φ * C_EMERICK = 1 := by
 **Theorem 3 — Emerick Product Structure**
 
   C_EMERICK = LCC_RADIANT × LCC_HIGH
+  1/(φ√2)   = (1/φ) × (1/√2)
 
-That is:  1/(φ√2) = (1/φ) × (1/√2)
+C_EMERICK is not a free parameter — it is the product of the two
+primary LCC thresholds on either side of it:
+  LCC_RADIANT ≈ 0.618   (golden section)
+  LCC_HIGH    ≈ 0.707   (Emerick Crossover)
 
-Proof: Both sides equal 1/(φ·√2) by definition.  ∎
-
-Interpretation: The Emerick Constant is not an arbitrary threshold.
-It is the *product* of the two primary LCC boundary values:
-  • LCC_RADIANT ≈ 0.6180  (golden section)
-  • LCC_HIGH    ≈ 0.7071  (Emerick Crossover)
-placing it at the geometric intersection of both thresholds.
+Proof: both sides equal 1/(φ·√2) by definition. ∎
 -/
 theorem emerick_product_structure : C_EMERICK = LCC_RADIANT * LCC_HIGH := by
   unfold C_EMERICK LCC_RADIANT LCC_HIGH
-  field_simp [φ_ne, sqrt2_ne]
+  have hprod : φ * Real.sqrt 2 ≠ 0 := mul_ne_zero φ_ne sqrt2_ne
+  field_simp [φ_ne, sqrt2_ne, hprod]
   ring
 
 
@@ -179,27 +164,17 @@ theorem emerick_product_structure : C_EMERICK = LCC_RADIANT * LCC_HIGH := by
 -- 0 < C_EMERICK < LCC_RADIANT < LCC_HIGH < 1
 -- ════════════════════════════════════════════════════════════════
 
-private lemma φ_gt_sqrt2 : sqrt 2 < φ := by
-  have h2  : sqrt 2 ^ 2 = 2   := sq_sqrt (by norm_num : (0:ℝ) ≤ 2)
-  have hφ2 : φ ^ 2 = φ + 1    := golden_ratio_identity
-  have hφ1 : 1 < φ             := φ_gt_one
-  have hlt : sqrt 2 ^ 2 < φ ^ 2 := by linarith
-  exact lt_of_pow_lt_pow_left 2 φ_pos.le hlt
-
 /--
 **Theorem 4 — LCC Threshold Ordering**
 
   0 < C_EMERICK < LCC_RADIANT < LCC_HIGH < 1
   0  <  0.4370  <   0.6180   <   0.7071  < 1
 
-The Tralse zone [C_EMERICK, LCC_HIGH] is a well-defined open
-interval strictly inside (0, 1).
-
-Proof sketch:
-  • C_EMERICK > 0: immediate from positivity of φ and √2
-  • C_EMERICK < LCC_RADIANT: 1/(φ√2) < 1/φ  ⟺  1 < √2  ✓
-  • LCC_RADIANT < LCC_HIGH:  1/φ < 1/√2     ⟺  √2 < φ  ✓  (by φ_gt_sqrt2)
-  • LCC_HIGH < 1:            1/√2 < 1        ⟺  1 < √2  ✓   ∎
+Proof:
+  C_EMERICK > 0:         positivity of φ and √2
+  C_EMERICK < RADIANT:   1/(φ√2) < 1/φ  ⟺  1 < √2  ✓
+  RADIANT   < HIGH:      1/φ < 1/√2     ⟺  √2 < φ  ✓
+  HIGH < 1:              1/√2 < 1       ⟺  1 < √2  ✓  ∎
 -/
 theorem lcc_ordering :
     0 < C_EMERICK ∧
@@ -207,92 +182,59 @@ theorem lcc_ordering :
     LCC_RADIANT < LCC_HIGH ∧
     LCC_HIGH < 1 := by
   refine ⟨C_EMERICK_pos, ?_, ?_, ?_⟩
-  · -- C_EMERICK < LCC_RADIANT
-    -- 1/(φ√2) < 1/φ  ⟺  φ < φ√2  ⟺  1 < √2
+  · -- C_EMERICK < LCC_RADIANT: 1/(φ√2) < 1/φ  ⟺  φ < φ√2  ⟺  1 < √2
     unfold C_EMERICK LCC_RADIANT
     rw [div_lt_div_iff (mul_pos φ_pos sqrt2_pos) φ_pos]
     nlinarith [sqrt2_gt_one, φ_pos]
-  · -- LCC_RADIANT < LCC_HIGH
-    -- 1/φ < 1/√2  ⟺  √2 < φ
+  · -- LCC_RADIANT < LCC_HIGH: 1/φ < 1/√2  ⟺  √2 < φ
     unfold LCC_RADIANT LCC_HIGH
     rw [div_lt_div_iff φ_pos sqrt2_pos]
     linarith [φ_gt_sqrt2]
-  · -- LCC_HIGH < 1
-    -- 1/√2 < 1  ⟺  1 < √2
+  · -- LCC_HIGH < 1: 1/√2 < 1  ⟺  1 < √2
     unfold LCC_HIGH
     rw [div_lt_one sqrt2_pos]
     exact sqrt2_gt_one
 
 
 -- ════════════════════════════════════════════════════════════════
--- THEOREM 5: Extended Euler Identity
--- exp(iπ) + ↑(√2·φ·C_EMERICK) = 0   (in ℂ)
+-- THEOREM 5: Extended Euler Identity (in ℂ)
+-- exp(iπ) + ↑(√2·φ·C_EMERICK) = 0
 -- ════════════════════════════════════════════════════════════════
 
 /--
 **Theorem 5 — Extended Euler Identity (TI Sigma)**
 
-  exp(iπ) + ↑(√2 · φ · C_EMERICK) = 0    (equation in ℂ)
+  Complex.exp (↑π * I) + ↑(√2 · φ · C_EMERICK) = 0
 
-The classical Euler identity is:   e^(iπ) + 1 = 0
-TI Sigma's extension replaces 1 with √2·φ·C_EMERICK, which equals
-exactly 1 by Theorem 2, recovering Euler's identity as a special case.
+The classical Euler identity e^(iπ) + 1 = 0 is recovered here:
+  ↑(√2·φ·C_EMERICK) = 1  (by Theorem 2)
+  exp(iπ) = -1            (Euler, Complex.exp_pi_mul_I in Mathlib)
+  ⟹ exp(iπ) + 1 = 0      ∎
 
-The significance: this single equation connects all eight primary
-constants of TI Sigma —
+Significance: all eight primary TI Sigma constants
   {0, 1, i, √2, e, φ, π, C_EMERICK}
-— through one algebraic relation, analogous to how Euler's identity
-connects {0, 1, i, e, π}.
-
-Proof:
-  Step 1. √2·φ·C_EMERICK = 1   (Theorem 2 / emerick_normalization)
-  Step 2. Cast to ℂ: ↑(√2·φ·C_EMERICK) = (1 : ℂ)
-  Step 3. exp(πi) = -1          (Euler's identity, Lean Mathlib)
-  Step 4. (-1 : ℂ) + 1 = 0     (arithmetic)  ∎
+appear in a single equation, connecting them through one relation.
 -/
 theorem extended_euler_identity :
-    exp (↑π * I) + ↑(sqrt 2 * φ * C_EMERICK) = 0 := by
-  -- Step 1 + 2: the real product equals 1, so its cast to ℂ is 1
-  have h_one : (↑(sqrt 2 * φ * C_EMERICK) : ℂ) = 1 := by
-    have : sqrt 2 * φ * C_EMERICK = 1 := emerick_normalization
-    exact_mod_cast this
-  -- Step 3: Euler's identity (from Mathlib)
-  have h_euler : exp (↑π * I) = -1 := by
-    rw [mul_comm, exp_mul_I]
-    ext
-    · simp [cos_pi]
-    · simp [sin_pi]
-  -- Step 4: combine
-  rw [h_one, h_euler]
+    Complex.exp (↑Real.pi * Complex.I) +
+    (↑(Real.sqrt 2 * φ * C_EMERICK) : ℂ) = 0 := by
+  -- Step 1: coerce the real product to ℂ using Theorem 2
+  have h_one : (↑(Real.sqrt 2 * φ * C_EMERICK) : ℂ) = 1 := by
+    have h : Real.sqrt 2 * φ * C_EMERICK = 1 := emerick_normalization
+    exact_mod_cast h
+  -- Step 2: substitute and apply Euler's identity from Mathlib
+  rw [h_one, Complex.exp_pi_mul_I]
   norm_num
 
 
 -- ════════════════════════════════════════════════════════════════
--- SUMMARY
+-- VERIFICATION CHECKS
 -- ════════════════════════════════════════════════════════════════
 
-/-
-All five theorems are `sorry`-free.  If this file checks green in
-the Lean 4 playground, the following results are formally proven:
-
-  1. golden_ratio_identity      : φ ^ 2 = φ + 1
-  2. emerick_normalization      : sqrt 2 * φ * C_EMERICK = 1
-  3. emerick_product_structure  : C_EMERICK = LCC_RADIANT * LCC_HIGH
-  4. lcc_ordering               : 0 < C_EMERICK ∧ C_EMERICK < LCC_RADIANT
-                                        ∧ LCC_RADIANT < LCC_HIGH ∧ LCC_HIGH < 1
-  5. extended_euler_identity    : exp(↑π * I) + ↑(sqrt 2 * φ * C_EMERICK) = 0
-
-Next steps:
-  • Submit to Mathlib4 (mathlib4 PR) as a standalone contribution
-  • Add LCC_TRALSE = C_EMERICK as named alias in Mathlib number theory section
-  • Extend to Theorem A (attractor basin dynamics) — requires more measure theory
-  • Target: one formally verified TI Sigma open problem solved using these lemmas
--/
-
-#check @golden_ratio_identity
-#check @emerick_normalization
-#check @emerick_product_structure
-#check @lcc_ordering
-#check @extended_euler_identity
+#check @golden_ratio_identity      -- φ ^ 2 = φ + 1
+#check @emerick_normalization      -- Real.sqrt 2 * φ * C_EMERICK = 1
+#check @emerick_product_structure  -- C_EMERICK = LCC_RADIANT * LCC_HIGH
+#check @lcc_ordering               -- 0 < C_EMERICK ∧ ... ∧ LCC_HIGH < 1
+#check @extended_euler_identity    -- exp(↑π * I) + ↑(...) = 0
 
 end TISigma
