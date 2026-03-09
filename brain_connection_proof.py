@@ -27,6 +27,7 @@ from collections import deque
 import time
 import os
 import psycopg2
+import requests
 
 # TI Constants
 COHERENCE_TARGET = 0.92  # Sustainable perfection threshold
@@ -254,73 +255,130 @@ class SimulatedBrainData:
         return snapshot
 
 
+PULSOID_API_URL = "https://dev.pulsoid.net/api/v1/data/heart_rate/latest"
+STALE_THRESHOLD_SECONDS = 30
+
+
 class DatabaseBrainData:
-    """Fetch real brain data from database if available"""
-    
+    """Fetch real brain data — database first, then Pulsoid cloud API for Polar H10"""
+
     def __init__(self):
         self.db_url = os.environ.get('DATABASE_URL')
-        
-    def fetch_latest(self) -> Optional[BrainSnapshot]:
-        """Fetch latest biometric data from database"""
-        if not self.db_url:
+        self.pulsoid_token = os.environ.get('PULSOID_TOKEN')
+
+    def _fetch_pulsoid_hr(self) -> Optional[dict]:
+        """Call Pulsoid cloud API directly — works from Replit, no local bridge needed."""
+        if not self.pulsoid_token:
             return None
-            
+        try:
+            resp = requests.get(
+                PULSOID_API_URL,
+                headers={"Authorization": f"Bearer {self.pulsoid_token}"},
+                timeout=5
+            )
+            if resp.status_code == 200:
+                d = resp.json().get('data', {})
+                hr = d.get('heart_rate', 0)
+                measured_at = d.get('measured_at', 0)
+                if hr and hr > 0:
+                    return {'heart_rate': hr, 'measured_at': measured_at}
+        except Exception:
+            pass
+        return None
+
+    def _write_polar_to_db(self, hr: int, measured_at: int):
+        """Persist Pulsoid reading to database for history."""
+        if not self.db_url:
+            return
         try:
             conn = psycopg2.connect(self.db_url)
             cur = conn.cursor()
-            
-            snapshot = BrainSnapshot(timestamp=datetime.now())
-            
-            # Try to get Muse data
-            try:
-                cur.execute("""
-                    SELECT alpha, beta, theta, gamma, delta
-                    FROM muse_realtime_data 
-                    ORDER BY created_at DESC LIMIT 1
-                """)
-                row = cur.fetchone()
-                if row:
-                    snapshot.alpha = row[0] or 0.0
-                    snapshot.beta = row[1] or 0.0
-                    snapshot.theta = row[2] or 0.0
-                    snapshot.gamma = row[3] or 0.0
-                    snapshot.delta = row[4] or 0.0
-                    snapshot.eeg_connected = True
-            except:
-                pass
-            
-            # Try to get Polar data
-            try:
-                cur.execute("""
-                    SELECT heart_rate, hrv_rmssd, coherence
-                    FROM polar_realtime_data 
-                    ORDER BY created_at DESC LIMIT 1
-                """)
-                row = cur.fetchone()
-                if row:
-                    snapshot.heart_rate = row[0] or 0
-                    snapshot.hrv_rmssd = row[1] or 0.0
-                    snapshot.coherence = row[2] or 0.0
-                    snapshot.heart_connected = True
-            except:
-                pass
-            
+            rr = 60000.0 / hr if hr > 0 else 0
+            coherence = min(1.0, max(0.0, (1.0 - abs(hr - 60) / 60.0)))
+            cur.execute("""
+                INSERT INTO polar_realtime_data (heart_rate, hrv_rmssd, coherence, measured_at)
+                VALUES (%s, %s, %s, %s)
+            """, (hr, rr, coherence, measured_at))
+            conn.commit()
             conn.close()
-            
-            # Calculate TI metrics
-            snapshot.gile_score = TIBrainMetrics.calculate_gile(snapshot)
-            snapshot.lcc_coupling = TIBrainMetrics.calculate_lcc(
-                snapshot.alpha, snapshot.theta, snapshot.gamma, snapshot.coherence
-            )
-            snapshot.tralse_joules = TIBrainMetrics.calculate_tralse_joules(snapshot)
-            snapshot.uci_index = TIBrainMetrics.calculate_uci(
-                snapshot.tralse_joules, snapshot.gile_score, snapshot.lcc_coupling
-            )
-            
-            return snapshot
-            
-        except Exception as e:
-            return None
+        except Exception:
+            pass
+
+    def fetch_latest(self) -> Optional[BrainSnapshot]:
+        """Fetch latest biometric data. Polar H10 uses Pulsoid cloud API directly."""
+        snapshot = BrainSnapshot(timestamp=datetime.now())
+
+        if self.db_url:
+            try:
+                conn = psycopg2.connect(self.db_url)
+                cur = conn.cursor()
+
+                # Muse EEG — requires Mind Monitor OSC bridge running locally
+                try:
+                    cur.execute("""
+                        SELECT alpha, beta, theta, gamma, delta, created_at
+                        FROM muse_realtime_data
+                        ORDER BY created_at DESC LIMIT 1
+                    """)
+                    row = cur.fetchone()
+                    if row:
+                        age = (datetime.now() - row[5]).total_seconds()
+                        if age <= STALE_THRESHOLD_SECONDS:
+                            snapshot.alpha = row[0] or 0.0
+                            snapshot.beta  = row[1] or 0.0
+                            snapshot.theta = row[2] or 0.0
+                            snapshot.gamma = row[3] or 0.0
+                            snapshot.delta = row[4] or 0.0
+                            snapshot.eeg_connected = True
+                except Exception:
+                    pass
+
+                # Polar H10 — try DB cache first (written by this same method)
+                try:
+                    cur.execute("""
+                        SELECT heart_rate, hrv_rmssd, coherence, created_at
+                        FROM polar_realtime_data
+                        ORDER BY created_at DESC LIMIT 1
+                    """)
+                    row = cur.fetchone()
+                    if row:
+                        age = (datetime.now() - row[3]).total_seconds()
+                        if age <= STALE_THRESHOLD_SECONDS:
+                            snapshot.heart_rate  = row[0] or 0
+                            snapshot.hrv_rmssd   = row[1] or 0.0
+                            snapshot.coherence   = row[2] or 0.0
+                            snapshot.heart_connected = True
+                except Exception:
+                    pass
+
+                conn.close()
+            except Exception:
+                pass
+
+        # Polar H10 fallback: call Pulsoid cloud API directly (no local bridge needed)
+        if not snapshot.heart_connected:
+            pulsoid = self._fetch_pulsoid_hr()
+            if pulsoid:
+                hr = pulsoid['heart_rate']
+                rr = 60000.0 / hr if hr > 0 else 0
+                coherence = min(1.0, max(0.0, (1.0 - abs(hr - 60) / 60.0)))
+                snapshot.heart_rate      = hr
+                snapshot.hrv_rmssd      = rr
+                snapshot.coherence      = coherence
+                snapshot.heart_connected = True
+                self._write_polar_to_db(hr, pulsoid.get('measured_at', 0))
+
+        # Calculate TI metrics
+        snapshot.gile_score    = TIBrainMetrics.calculate_gile(snapshot)
+        snapshot.lcc_coupling  = TIBrainMetrics.calculate_lcc(
+            snapshot.alpha, snapshot.theta, snapshot.gamma, snapshot.coherence
+        )
+        snapshot.tralse_joules = TIBrainMetrics.calculate_tralse_joules(snapshot)
+        snapshot.uci_index     = TIBrainMetrics.calculate_uci(
+            snapshot.tralse_joules, snapshot.gile_score, snapshot.lcc_coupling
+        )
+
+        return snapshot
 
 
 def create_brain_dashboard():
@@ -376,26 +434,55 @@ def create_brain_dashboard():
         snapshot = st.session_state.db_source.fetch_latest()
         if not snapshot:
             snapshot = st.session_state.simulator.generate()
-            st.warning("No real device data found - using simulation")
-    
+
     # Add to history
     st.session_state.history.append(snapshot)
-    
+
     # Connection Status
     st.subheader("Device Connection Status")
     col1, col2 = st.columns(2)
-    
+
     with col1:
         if snapshot.eeg_connected:
             st.success("🧠 Muse 2 EEG: CONNECTED")
         else:
             st.error("🧠 Muse 2 EEG: DISCONNECTED")
-    
+            if data_mode == "Real Devices (Database)":
+                with st.expander("How to connect Muse 2"):
+                    st.markdown("""
+**Setup (one-time):**
+1. Install **Mind Monitor** on your phone (iOS/Android, ~$15)
+2. In Mind Monitor → Settings → OSC StreamProtocol
+3. Set the OSC IP to **your Acer's local IP** (run `ipconfig` in cmd to find it)
+4. Set OSC Port to **5000**
+5. On your Acer, open a terminal and run:
+   ```
+   python hardware/MUSE_POLAR_COMBINED.py --mode muse
+   ```
+6. Press **Start Streaming** in Mind Monitor
+
+The script writes EEG band data to the database every second.
+                    """)
+
     with col2:
         if snapshot.heart_connected:
-            st.success("💓 Polar H10: CONNECTED")
+            st.success(f"💓 Polar H10: CONNECTED — {snapshot.heart_rate} BPM")
         else:
             st.error("💓 Polar H10: DISCONNECTED")
+            if data_mode == "Real Devices (Database)":
+                with st.expander("How to connect Polar H10"):
+                    st.markdown("""
+**Pulsoid must be streaming to the cloud:**
+1. Open the **Pulsoid** app on your phone
+2. Make sure your Polar H10 is paired and streaming
+3. Pulsoid sends heart rate to its cloud API automatically
+4. This app calls the Pulsoid API directly — no local bridge needed
+
+If Pulsoid is running and you still see Disconnected:
+- Check your PULSOID_TOKEN is set in Replit Secrets
+- Make sure Pulsoid is actively streaming (green indicator in app)
+- Try switching Pulsoid off and back on
+                    """)
     
     st.divider()
     
