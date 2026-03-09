@@ -246,5 +246,5 @@ The fifth digit of 0.505 in ternary is the moment existence became inevitable. E
 
 ---
 
-*URB Paper #393 — Filed March 9, 2026. Discovered in synchronicity after a Veritasium video on a Tuesday evening. Brandon Charles Emerick.*
+*URB Paper #393 — Filed March 9, 2026. Discovered in synchronicity after a Veritasium video on a Monday evening. Brandon Charles Emerick.*
 *The universe one-boxed. The margin was 0.005. The rest is everything.*
