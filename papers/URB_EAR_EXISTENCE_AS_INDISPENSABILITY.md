@@ -186,11 +186,11 @@ True (T): The fully expressed, maximally indispensable state. A true proposition
 
 Tralse (Tr): The state of productive superposition — simultaneously true and false. Tralse states are indispensable precisely because of their tension: they are the generative zone from which new truth emerges via Myrion Resolution. Tralse is NOT indeterminate. Tralse is actively both T and F; it has a specific structural character that makes it irreplaceable. Remove Tralse from the logic system and you lose the capacity to represent genuine creative tension, quantum superposition, and the identity-through-change that characterizes living systems.
 
-Indeterminate (I): The state of suspended resolution — neither true nor false because insufficient evidence exists to assign any truth value. Indeterminate states are epistemically passive. They do not represent an active tension between T and F; they represent the absence of adequate input to the truth-assignment process. Remove Indeterminate and you lose the space of possibility — the zone where propositions await testing. Note the difference from Tralse: a Tralse proposition has been tested and found to be genuinely in tension; an Indeterminate proposition has not yet been adequately tested.
+Indeterminate (I): A genuinely resolved midrange truth state — PD in (-0.666, 0.333) — that emerges when Myrion Resolution determines a claim is neither True nor False but genuinely in between. Indeterminate is not the absence of evidence; it is the result of an analysis that places the claim in the middle zone. Remove Indeterminate from the logic system and you lose the capacity to represent genuine midrange resolution: the cases where evidence, values, and context genuinely do not resolve to a clear True or False. The white lie is the canonical case: not simply dishonest (False) and not simply honest (True), but sitting in a real middle position that requires a third round of analysis to resolve further. Note the difference from Tralse: Tralse is the dynamic state of productive superposition during analysis — active tension between T and F while the Myrion process is working. Indeterminate is a stable resolved output that the process may return, indicating that the midrange is the correct answer at this level of analysis.
 
 False (F): The disconfirmed or incoherent state. Indispensable as a boundary: without F, there is no limit to what counts as true, and the system loses its discriminative power.
 
-EAR applied to the four logic states: each is genuinely indispensable — none collapses into the others. The binary T/F system is not more fundamental; it is a simplified approximation that collapses Tralse into either T or F under time pressure and collapses Indeterminate into I-will-treat-it-as-False or I-will-treat-it-as-True by default. The collapse is useful but lossy.
+EAR applied to the four logic states: each is genuinely indispensable — none collapses into the others. The binary T/F system is not more fundamental; it is a simplified approximation that collapses Tralse into either T or F under time pressure and collapses Indeterminate — the genuine resolved midrange — into a forced True or False verdict by default. The collapse is useful but lossy. Indeterminate is not passive; it is a specific resolved position that binary logic has no category for and therefore must misrepresent.
 
 ---
 
@@ -200,7 +200,7 @@ EAR as applied to persons: every conscious entity is indispensable by virtue of 
 
 EAR as a methodology: test all proposed concept sets for genuine indispensability. What can be derived without loss should be merged; what cannot be derived without loss should be preserved and its independence noted.
 
-EAR applied to Tralse Logic: all four logic states are indispensable, with Tralse (active superposition, productive tension) and Indeterminate (passive epistemic suspension) being distinct and irreducible. Binary logic is a collapsed special case, useful but not foundational.
+EAR applied to Tralse Logic: all four logic states are indispensable, with Tralse (active superposition, productive tension) and Indeterminate (genuine resolved midrange, PD in (-0.666, 0.333)) being distinct and irreducible. Binary logic is a collapsed special case, useful but not foundational.
 
 *Paper #355 extended March 2026.*
 *Existence implies indispensability. The rest is fulfillment.*

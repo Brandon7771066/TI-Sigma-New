@@ -21,13 +21,15 @@ Before presenting the proofs, it is essential to define the distinction between 
 
 Tralse is not a synonym for "unknown." Tralse names the specific fourth logical value that arises when a proposition is actively and simultaneously both true and false — not due to epistemic failure, but due to structural superposition. Examples: quantum superposition before measurement; the identity of a person who is simultaneously changing (new atoms, new patterns) and continuous (the same person); a scientific claim under active replication that has both confirming and disconfirming evidence of approximately equal weight. The Tralse state has an enabling, productive character — it is the zone of creative tension from which new truth emerges via Myrion Resolution.
 
-Indeterminate names the case where a proposition has not yet received sufficient evidence to assign any truth value — True, False, or Tralse. It is a passive state of epistemic suspension: not a structural superposition, but an absence of adequate input. A claim for which no studies have been done is Indeterminate. A claim for which one strong confirming and one equally strong disconfirming study exist is Tralse.
+Indeterminate names a genuine third truth state — not a failure of analysis, not an absence of evidence, but a resolved position that falls between True and False on the PD scale. After Myrion Resolution is applied, a claim that resolves to PD in the range (-0.666, 0.333) is Indeterminate. This is an active determination: the claim has been evaluated and found to be genuinely in the midrange. The white lie is the canonical example — after a first-order analysis (MR2), a white lie typically resolves to Indeterminate, meaning it is neither simply True nor simply False; a further round of analysis (MR3) then determines whether the Indeterminate result trends toward True ("worth it") or False ("not worth it").
+
+The distinction from Tralse: Tralse is the state of productive superposition before or during resolution — active tension between T and F. Indeterminate is the resolved midrange — what the resolution process returns when the evidence, values, and context genuinely sit between True and False. Tralse is the dynamic; Indeterminate is a possible stable output.
 
 The four-valued system therefore reads:
-- True: the proposition is confirmed, coherent, and actualized
-- Tralse: the proposition is in genuine active tension between T and F — productive superposition
-- Indeterminate: the proposition has not yet been adequately tested; truth value is suspended
-- False: the proposition is disconfirmed, incoherent, or definitively not actualized
+- True: the proposition is confirmed, coherent, and actualized (PD above the upper Indeterminate threshold)
+- Tralse: the proposition is in genuine active tension between T and F — productive superposition that the Myrion Resolution process is working through
+- Indeterminate: a genuinely resolved midrange truth value; PD in (-0.666, 0.333); neither True nor False, but determined to be in between — requires further MR rounds if greater precision is needed
+- False: the proposition is disconfirmed, incoherent, or definitively not actualized (PD below the lower Indeterminate threshold)
 
 Classical binary logic is the collapse of this four-valued system under forced resolution. The law of excluded middle (everything is either A or not-A) holds as an approximation for sufficiently resolved propositions, but fails for propositions in the Tralse or Indeterminate zones.
 

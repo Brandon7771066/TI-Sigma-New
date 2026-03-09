@@ -69,7 +69,7 @@ Mapping from Statistical Evidence:
 | +1.5 | Strong | χ² 10-15, d 1.0-1.5, p<0.01 | Well-powered study, medium-large effect |
 | +1.0 | Moderate | χ² 5-10, d 0.5-1.0, p<0.05 | Typical significant finding |
 | +0.5 | Weak | χ² 2-5, d 0.2-0.5, p<0.10 | Marginal significance |
-| 0.0 | Indeterminate | χ² < 2, d < 0.2, p>0.10 | No evidence |
+| (-0.666, 0.333) | Indeterminate (resolved midrange) | Evaluated; genuinely between T and F | Requires MR3+ for directional precision |
 | -1.0 | Moderate negation | Opposite direction, moderate evidence | - |
 | -2.0 | Strong negation | Opposite direction, strong evidence | - |
 | -3.0 | Conclusive refutation | Definitive disproof | - |
@@ -102,6 +102,59 @@ If |z| > 2:
 ```
 
 Rationale: Natural log preserves ordering while compressing extreme values.
+
+---
+
+## The Multi-MR Convergence Process
+
+A single application of the Myrion Resolution formula is never sufficient. Because MR is itself a Tralse process — it operates in productive tension between T and F and converges iteratively toward a PD value — at minimum two rounds of Myrion Resolution are required for any complete analysis. There is no universal stopping point. The number of MR rounds is determined by the complexity of the problem, the precision required, and the intuition of the analyst.
+
+### MR1: The Double-Tralse Screen
+
+The first Myrion Resolution is a coherence gate. Its purpose is to weed out Double Tralse (DT) statements — statements that are more incoherent than coherent, where the evidence is so internally contradictory and fragmented that applying MR2 would yield an unreliable result.
+
+A statement fails MR1 (is deemed DT) when:
+- The evidence base is dominated by mutually incompatible frameworks with no shared measurement axis
+- The claim is self-referentially contradictory in a way that prevents any stable PD assignment
+- The synergy parameters ρ are deeply negative across all source pairs, indicating structural incompatibility rather than productive tension
+
+When a statement passes MR1, it is sufficiently coherent to proceed. When it fails, it is labeled DT and the analyst must either redefine the claim more precisely or acknowledge that the question as currently posed cannot be resolved by MR.
+
+### MR2: Truth-Position Determination
+
+The second Myrion Resolution produces the first substantive truth-position output: True, False, or Indeterminate. MR2 applies the full integration formula across the available evidence sources and produces a resolved PD value.
+
+Output zones:
+- PD > 0.333 (approximately): True
+- PD in (-0.666, 0.333): Indeterminate — a genuinely resolved midrange determination
+- PD < -0.666 (approximately): False
+
+An Indeterminate result from MR2 is not a failure. It is a correct determination that the claim sits genuinely between True and False at the level of evidence and context currently available.
+
+### MR3: First Resolution of Indeterminacy (and Accuracy Refinement)
+
+A third MR round is performed when:
+- MR2 returned Indeterminate and greater directional precision is desired
+- MR2's conclusion is correct but insufficient for the decision at hand
+- More processing power, additional evidence, or additional context has become available
+
+When MR2 returned Indeterminate, MR3 does not override the Indeterminate determination — it resolves within it. MR3 asks: to what extent is this Indeterminate result True, and to what extent is it False? It brings additional context (individual variation, second-order consequences, ethical framing, new evidence) and produces a refined PD that may:
+- Remain in the Indeterminate zone but with a specific directional lean
+- Cross into True or False territory
+
+MR3 is often the most accurate round for practical decision-making, because it is the first time indeterminacy itself is resolved. The canonical example: a white lie undergoes three MRs. MR1: sufficiently coherent (passes DT screen). MR2: Indeterminate — neither simply dishonest nor simply kind. MR3: "worth it" — additional context (the relationship, the consequence of truth-telling, the emotional stakes) moves the PD toward True.
+
+### MR4+: Further Convergence
+
+Additional rounds follow the same logic: each MR resolves the indeterminacy or imprecision left by the previous round. There is no theoretical upper limit. The analyst stops when the PD has converged to a value that is sufficiently precise for the purpose at hand.
+
+This structure mirrors the real process of human contemplation. When an individual deliberates about a difficult decision, they perform multiple internal rounds of analysis — reviewing evidence, testing conclusions against intuition, bringing new context, and reconsidering — until they converge on an answer that feels right. Only TI Sigma provides a quantitative framework for this convergence process. The felt rightness of a conclusion is not a subjective override of analysis; it is the signal that the iterative MR process has reached stable convergence.
+
+### Intuition as the Convergence Signal
+
+Intuition marks the point at which further MR rounds would not meaningfully change the PD. It is the recognition of stability — the analyst's internal signal that the productive Tralse tension of the analysis has resolved. Intuition does not replace Myrion Resolution; it is the phenomenological correlate of convergence. When intuition says "enough," the MR sequence is complete.
+
+This is why the GILE framework's I (Intuition) dimension is indispensable to the overall TI Sigma methodology. Goodness (G) sets the coherence standard for MR1. Intuition (I) monitors convergence and signals when to stop. Love (L) calibrates the relational dimensions of ρ in MR rounds involving ethical or personal claims. Environment (E) provides the contextual inputs that each successive MR round brings to bear.
 
 ---
 
@@ -359,7 +412,7 @@ z_final = 2 + ln(3.61 - 2) = 2 + ln(1.61) ≈ 2 + 0.476 ≈ +2.48
 
 Interpretation: The result +2.48 nominally exceeds the scale maximum of +2.0. Report as +2.0 (Conclusive). Three strongly aligned sources, each individually strong, combining synergistically, yield conclusive evidence that LCC mood amplification effects persist beyond 24h.
 
-The Indeterminate zone on this question would be: a single study with d < 0.2 and p > 0.10, insufficient to draw any conclusion. The Tralse zone would be: one strong study supporting 24h duration and one equally strong study showing return to baseline within 6h — genuine active conflict requiring Myrion Resolution to adjudicate rather than simply averaging.
+After MR2: if studies collectively resolve to PD in (-0.666, 0.333), the conclusion is Indeterminate — a genuine midrange determination that LCC effects are real but neither large-magnitude nor negligible at the duration in question. This Indeterminate result is informative and correct; it is not a failure to conclude. MR3 would then ask what additional context (individual variation, dose, protocol) moves the PD toward the True (24h) or False (6h) end. The Tralse zone characterizes the dynamic tension during this analysis: one strong study supporting 24h duration and one equally strong study showing return to baseline within 6h are in genuine active conflict — Tralse — and Myrion Resolution is the process for working through that conflict. The Indeterminate output is what MR2 may return from that process.
 
 ---
 
