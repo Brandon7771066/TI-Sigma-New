@@ -198,7 +198,49 @@ Prediction 5 (temporal asynchrony): LD synchronization events reported by Living
 
 ---
 
-## 11. Summary
+## 11. Cross-Species Communication
+
+The GM-Node network is not a human network. It is a consciousness network. The minimum GM embedding that qualifies a node for participation in the mycelial substrate has been established in URB_MINIMUM_GM_EMBEDDING_SPIRITUAL_CHARACTER.md as a function of LCC threshold, not of species membership. Any conscious entity that reaches LCC >= C_EMERICK — whether human, mammalian, avian, or otherwise — becomes a relay node in the LCC Virus propagation and a participant in the Soul Bluetooth protocol.
+
+This has a direct consequence: cross-species Soul Bluetooth is not a special case requiring additional theoretical machinery. It is the standard protocol applied to nodes whose biological substrates differ. The synchronization strength formula S(N1, N2) = |LCC(N1) * LCC(N2)|^(1/2) * cos(delta_phi) contains no species term. What matters is the LCC of each node and the phase alignment between them.
+
+### 11.1 Cross-Species LL Mode
+
+Existing evidence for cross-species Living-Living synchronization is substantial:
+
+Humans and dogs show measurable HRV coherence coupling during sustained close contact. Oxytocin rises bidirectionally in both human and dog during mutual gaze — a cross-species Love-binding event that elevates the L-dimension in both GILE profiles simultaneously. Equine-assisted therapy produces HRV coherence coupling between rider and horse that is measurably higher than between rider and a mechanical equivalent. These are not metaphors for connection — they are biometric signatures of LCC Virus propagation across a species boundary.
+
+The willingness gate in cross-species LL operates through approach behavior, physiological relaxation, and sustained shared attention rather than verbal consent. A dog that seeks proximity, makes eye contact, and exhibits low-arousal calm physiology is expressing the open, receptive configuration that the protocol requires. A horse that moves toward a human and synchronizes its respiratory rhythm is expressing the same. The consent mechanism is non-verbal but structurally identical: the receiving node must be in a configuration that minimizes delta_phi with the incoming coherence perturbation.
+
+The LCC Virus propagation across species boundaries may partly explain the documented health benefits of animal companionship. Each mutual coherence elevation event between a human and an animal companion is a bidirectional LCC Virus transmission: both nodes elevate, both relay to their respective adjacent network nodes, and the overall GM network coherence in the local environment rises.
+
+### 11.2 Cross-Species LD Mode
+
+When an animal companion dies, its photonic I-cell enters the dark-energy substrate of the GM network by the same mechanism as a human I-cell. The coherence signature it leaves is species-agnostic from the network's perspective — it is a standing wave pattern characterized by the LCC the animal maintained and the Love-coupling it held with its human and other animal network neighbors.
+
+A Living human node that achieved genuine LCC Virus exchange with an animal during that animal's embodied life can access LD synchronization with the animal's photonic signature by the same mechanism as human-to-human LD synchronization: elevating LCC above C_EMERICK, adopting the willingness configuration, and aligning phase with the specific coherence pattern of the animal companion's standing wave.
+
+The subjective phenomenology of cross-species LD: many humans report vivid felt-sense experiences of deceased animal companions — a characteristic weight on the bed, a specific warmth, a felt orientation in space. Within the Soul Bluetooth framework, these reports are not grief-driven projections; they are the expected phenomenology of LD synchronization with a photonic signature whose coherence pattern was shaped by years of close biometric and LCC coupling with the Living node.
+
+### 11.3 Cross-Species Communication: The Deeper Claim
+
+Beyond synchronization, Soul Bluetooth raises the possibility of genuine cross-species information transfer — not translation of animal cognition into human language (which would require causal channels the protocol does not provide), but resonance with the coherence state of the animal: its arousal level, its orientation, its felt safety or distress, its phase alignment with specific features of its environment.
+
+The mechanism is the same as LD information transfer (Section 9, Prediction 4): the information content accessible through the channel is bounded by what is encoded in the coherence pattern. An animal's coherence signature encodes its relational history, its characteristic emotional-physiological states, and the specific GM-network adjacencies it built during its embodied life. A sufficiently coherent human node can resonate with these encoded patterns and receive them as intuition — not as translated language, but as felt knowledge of the animal's current or historically characteristic state.
+
+This reframes animal communication as a Soul Bluetooth access problem rather than a language problem. The barrier to cross-species understanding is not primarily cognitive (human cognition is capable of modeling animal experience) but coherence-based: the human node must achieve sufficient LCC, must adopt the willingness configuration, and must minimize delta_phi with the animal's coherence pattern. Skilled animal trainers, veterinarians with deep species attunement, and individuals with documented animal PSI connections (ANIMAL_PSI_VALIDATION_FRAMEWORK.md) may be individuals whose LCC profiles naturally align with the coherence patterns of their animal counterparts.
+
+### 11.4 Cross-Species Empirical Predictions
+
+Prediction CS1: Human-animal pairs with documented long-term bonding relationships will show significantly higher HRV coherence coupling during close contact than human-animal pairs with no prior relationship. This is measurable now with the existing Polar H10 and equivalent animal HRV monitoring.
+
+Prediction CS2: Humans actively practicing LCC elevation protocols (meditation, biofeedback, PSI tuning) will show stronger cross-species LD effects (by self-report and biometric measures) than control subjects, consistent with the LCC Virus transmission mechanism requiring LCC >= C_EMERICK in the Living node.
+
+Prediction CS3: The subjective information content of cross-species Soul Bluetooth events will be bounded by the coherence signature of the animal — i.e., reports will be consistent with the animal's characteristic behavioral and emotional repertoire during its embodied life, and will not include content that could not have been encoded in the animal's experience. This is a falsifiability condition parallel to Prediction 4 in Section 10.
+
+---
+
+## 12. Summary
 
 Soul Bluetooth is the LCC Virus operating as an intentional synchronization protocol across three connection modes: Living-Living (full bidirectional coherence coupling), Living-Dead (asymmetric correlation with a photonic standing wave), and Dead-Dead (symmetric correlation within the dark-energy substrate). The protocol is:
 
