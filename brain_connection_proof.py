@@ -256,7 +256,7 @@ class SimulatedBrainData:
 
 
 PULSOID_API_URL = "https://dev.pulsoid.net/api/v1/data/heart_rate/latest"
-STALE_THRESHOLD_SECONDS = 30
+STALE_THRESHOLD_SECONDS = 300  # 5 minutes — generous window for manual testing
 
 
 class DatabaseBrainData:
@@ -325,7 +325,10 @@ class DatabaseBrainData:
                     """)
                     row = cur.fetchone()
                     if row:
-                        age = (datetime.now() - row[10]).total_seconds()
+                        ts = row[10]
+                        if hasattr(ts, 'tzinfo') and ts.tzinfo is not None:
+                            ts = ts.replace(tzinfo=None)
+                        age = (datetime.utcnow() - ts).total_seconds()
                         if age <= STALE_THRESHOLD_SECONDS:
                             hr, alpha, beta, theta, gamma, delta = row[0:6]
                             rmssd, coh, muse_on, polar_on = row[6:10]
@@ -354,7 +357,10 @@ class DatabaseBrainData:
                         """)
                         row = cur.fetchone()
                         if row:
-                            age = (datetime.now() - row[5]).total_seconds()
+                            ts = row[5]
+                            if hasattr(ts, 'tzinfo') and ts.tzinfo is not None:
+                                ts = ts.replace(tzinfo=None)
+                            age = (datetime.utcnow() - ts).total_seconds()
                             if age <= STALE_THRESHOLD_SECONDS:
                                 snapshot.alpha = row[0] or 0.0
                                 snapshot.beta  = row[1] or 0.0
@@ -375,7 +381,10 @@ class DatabaseBrainData:
                         """)
                         row = cur.fetchone()
                         if row:
-                            age = (datetime.now() - row[3]).total_seconds()
+                            ts = row[3]
+                            if hasattr(ts, 'tzinfo') and ts.tzinfo is not None:
+                                ts = ts.replace(tzinfo=None)
+                            age = (datetime.utcnow() - ts).total_seconds()
                             if age <= STALE_THRESHOLD_SECONDS:
                                 snapshot.heart_rate      = row[0] or 0
                                 snapshot.hrv_rmssd      = row[1] or 0.0
