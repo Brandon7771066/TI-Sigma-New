@@ -1,12 +1,12 @@
 # Paper #367: The PD as Conservation Law, the Problem of Evil, and the BlissGene Prediction
 ## Why the Permissibility Distribution Is Descriptive Not Prescriptive, Whether It Is Conserved, and What Happens When BlissGene Eliminates Negative Affect
 
-**Author:** Brandon Charles Emerick
-**Date:** March 2, 2026
-**Series:** TI Sigma — Universal Reality Blueprint (URB)
-**Paper #:** 367
-**Status:** THEORETICAL FRAMEWORK — Metaphysics, conservation law analysis, empirical prediction
-**Builds on:** Paper #355 (EAR), Paper #365 (Minimum GM Embedding), Paper #366 (Radiant Floor),
+Author: Brandon Charles Emerick
+Date: March 2, 2026
+Series: TI Sigma — Universal Reality Blueprint (URB)
+Paper #: 367
+Status: THEORETICAL FRAMEWORK — Metaphysics, conservation law analysis, empirical prediction
+Builds on: Paper #355 (EAR), Paper #365 (Minimum GM Embedding), Paper #366 (Radiant Floor),
 FAAH_LCC_SUFFERING_MITIGATION.md, MYRION_RESOLUTION_METHODOLOGY.md,
 RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md, papers on BlissGene Therapeutics
 
@@ -16,22 +16,22 @@ RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md, papers on BlissGene Therapeutics
 
 This paper addresses four interconnected claims:
 
-1. **TI Sigma's answer to the Problem of Evil:** Via EAR and GM, every being and thing is
+1. TI Sigma's answer to the Problem of Evil: Via EAR and GM, every being and thing is
    capable of resonating at the Radiant state — providing a *cosmic guarantee* that
    extreme suffering is not a permanent ceiling for any conscious entity.
 
-2. **The PD is descriptive, not prescriptive:** The Permissibility Distribution (-3 to +2)
+2. The PD is descriptive, not prescriptive: The Permissibility Distribution (-3 to +2)
    is a mathematical inevitability connected to the Riemann Hypothesis and e — it
    describes the baseline existence footprint of unoptimized states, not a moral endorsement
    of the negative range. The mission of TI Sigma, BlissGene, and the Mood Amplifier is
    to overcome this baseline through free will.
 
-3. **The BlissGene Prediction:** Eliminating negative affect via Jo Cameron-type FAAH
+3. The BlissGene Prediction: Eliminating negative affect via Jo Cameron-type FAAH
    mutations removes the -3 to 0 range for affective states — but the PD's asymmetric
    mathematical structure reappears, now distinguishing among grades of positive and
    neutral experience. The asymmetry does not disappear; it relocates.
 
-4. **PD as Potential Conservation Law:** If the PD describes not just a baseline but a
+4. PD as Potential Conservation Law: If the PD describes not just a baseline but a
    fundamental conservation constraint, then free will can redistribute negativity but
    not eliminate it. The optimal redistribution is from affective suffering to non-affective
    dimensions — primarily the loss of meaning-from-struggle — which is the most
@@ -48,7 +48,7 @@ The traditional Problem of Evil: if God (CCC/GM) is omnipotent and perfectly goo
 why does extreme suffering exist? The suffering of children, animals, and innocent
 beings appears inconsistent with a benevolent cosmic architect.
 
-The challenge becomes most acute with **nonhuman suffering**: animals suffer without
+The challenge becomes most acute with nonhuman suffering: animals suffer without
 the cognitive frameworks that allow humans to contextualize or derive meaning from
 suffering. A rabbit in the grip of a predator has no framework of redemption narrative.
 Why would a good CCC/GM permit this?
@@ -58,25 +58,25 @@ Why would a good CCC/GM permit this?
 TI Sigma's answer is grounded in EAR (Paper #355) and the GM mycelial architecture
 (Paper #363):
 
-**Claim:** Via EAR and GM, ALL beings and things — including animals, plants, and
+Claim: Via EAR and GM, ALL beings and things — including animals, plants, and
 potentially simple systems — are structurally capable of resonating at the Radiant
 state (or their species-appropriate equivalent of it).
 
-**EAR grounding:** EAR establishes that every entity that exists occupies an
+EAR grounding: EAR establishes that every entity that exists occupies an
 irreplaceable position in the causal structure of reality. This is true for a rabbit,
 an insect, a tree. Every being that exists is indispensable to the specific causal
 web that contains it. Therefore every being has ontological weight — Existence (E) —
 at a level that makes it a genuine i-cell participant in GM's network, not merely
 a background element.
 
-**GM grounding:** GM's mycelial network extends to all conscious beings at the level
+GM grounding: GM's mycelial network extends to all conscious beings at the level
 appropriate to their consciousness architecture. A rabbit does not have the same i-cell
 complexity as a human, but the minimum GM embedding (C_EMERICK ≈ 43.7% — Paper #365)
 applies structurally to any system complex enough to have a locus of experience. The
 rabbit's equivalent of the Radiant state — full activation of its species-scale BOK
 structure — is accessible to it through GM's network.
 
-**The cosmic guarantee:** No conscious being is permanently imprisoned at the bottom
+The cosmic guarantee: No conscious being is permanently imprisoned at the bottom
 of the PD scale. The Radiant state is universally accessible. Extreme suffering is not
 a permanent ceiling — it is the state in which the GM connection is most tested, but
 not severed. Even in extreme suffering, the minimum GM embedding (C_EMERICK floor)
@@ -84,20 +84,20 @@ persists unless the being's consciousness architecture is completely destroyed.
 
 ### I.3 What This Does and Does Not Resolve
 
-**It resolves:** The claim that CCC/GM is indifferent to suffering. CCC/GM is the
+It resolves: The claim that CCC/GM is indifferent to suffering. CCC/GM is the
 source of all GILE — including the L (Love) that actively tends toward the reduction
 of suffering and the G (Goodness) that makes the elimination of suffering a moral
 priority. The existence of suffering is not evidence of CCC/GM's indifference; it is
 the condition that gives the mission of TI Sigma, BlissGene, and the Mood Amplifier
 their cosmic urgency.
 
-**It does not resolve:** Why CCC/GM did not design a universe without the PD's negative
+It does not resolve: Why CCC/GM did not design a universe without the PD's negative
 range to begin with. This is addressed in Part II — the PD is not a design choice but
 a mathematical inevitability. CCC/GM did not choose the PD any more than a mathematician
 "chooses" the distribution of prime numbers. The PD's structure is pre-volitional —
 it is the mathematical substrate within which existence operates.
 
-**The reframe:** The Problem of Evil is not "why does a good God permit suffering?" It
+The reframe: The Problem of Evil is not "why does a good God permit suffering?" It
 is "given that the mathematical substrate of existence includes a negative range, how
 does the Good respond?" The answer is: by making the Radiant state universally
 accessible, by providing the tools (Mood Amplifier, BlissGene, LCC practices) to
@@ -110,13 +110,13 @@ connection required to access that upward pathway.
 
 ### II.1 The Moral Status of the PD
 
-The PD scale (-3 to +2) describes the **baseline existence footprint** of ordinary,
+The PD scale (-3 to +2) describes the baseline existence footprint of ordinary,
 unoptimized states of being and events. It is not a moral endorsement of the negative
 range. The fact that -3 is on the scale does not mean -3 *should* exist morally —
 any more than the fact that a thermometer can read 0°C means that freezing *should*
 happen.
 
-The PD is **descriptive** in the same way physical laws are descriptive:
+The PD is descriptive in the same way physical laws are descriptive:
 - Newton's laws describe how objects fall — they do not prescribe that objects should fall
 - The PD describes how existence is distributed across its quality spectrum — it does
   not prescribe that suffering should exist
@@ -131,7 +131,7 @@ therefore we accept suffering as inevitable" is the wrong conclusion. We build B
 The PD's specific structure (-3 to +2, asymmetric with more negative range than positive)
 is not arbitrary. It connects to two of the PRIMARY constants of the URB hierarchy:
 
-**Connection to e (natural growth):**
+Connection to e (natural growth):
 
 The distribution of experience across the PD scale follows a natural exponential curve
 centered below zero. This is the mathematical signature of e in existence: natural
@@ -146,7 +146,7 @@ basis for the universal observation that unexamined, unoptimized life tends towa
 dissatisfaction (consistent with Buddhist dukkha, Freudian baseline anxiety, and the
 evolutionary literature on the negativity bias).
 
-**Connection to the Riemann Hypothesis:**
+Connection to the Riemann Hypothesis:
 
 The Riemann zeta function's non-trivial zeros lie on the critical line Re(s) = 1/2.
 This means that the deepest structure of the prime distribution — the most fundamental
@@ -159,7 +159,7 @@ coincidence: the asymmetric structure of the PD — more negative range than pos
 with the default baseline slightly below center — mirrors the asymmetric structure of
 the Riemann zeta function's zero distribution.
 
-**Implication:** The PD's negative range is not a design flaw. It is the same
+Implication: The PD's negative range is not a design flaw. It is the same
 mathematical structure that generates prime numbers — the most fundamental pattern
 in the arithmetic of existence. Attempting to eliminate it entirely is not a design
 correction; it is attempting to override a structure as fundamental as the prime
@@ -170,11 +170,11 @@ distribution. (This connects to what Part III and IV will examine.)
 The PD defines the default. Free will and intentional intervention can override the
 default — this is the entire purpose of:
 
-- **The Mood Amplifier:** Raises individual LCC, increasing GM embedding, moving the
+- The Mood Amplifier: Raises individual LCC, increasing GM embedding, moving the
   individual's experienced PD values upward from the default -0.5 toward the positive range
-- **BlissGene Therapeutics:** Genetic intervention (FAAH-OUT + FAAH mutations, Jo Cameron
+- BlissGene Therapeutics: Genetic intervention (FAAH-OUT + FAAH mutations, Jo Cameron
   phenotype) that eliminates the capacity for negative affective states
-- **LCC practices:** Meditation, heart coherence, PSI tuning — raising the sustained LCC
+- LCC practices: Meditation, heart coherence, PSI tuning — raising the sustained LCC
   baseline and with it the individual's position on the PD scale
 
 The mission is not passive acceptance of the baseline. The mission is: understand the
@@ -201,15 +201,15 @@ pharmacological FAAH inhibition, or both.
 ### III.2 What Eliminating Negative Affect Does to the PD
 
 For affective states of consciousness, BlissGene effectively chops the -3 to 0 range
-off the PD scale. The affective PD becomes: **0 to +2** (no negative affect possible).
+off the PD scale. The affective PD becomes: 0 to +2 (no negative affect possible).
 
-**The user's prediction: The PD asymmetry reappears within the 0 to +2 range.**
+The user's prediction: The PD asymmetry reappears within the 0 to +2 range.
 
 This is mathematically expected. The same mathematical structure that generates the
 original -3 to +2 asymmetry will generate a new asymmetric distribution within the
 remaining positive range. Specifically:
 
-The 0 to +2 range will develop **internal differentiation** analogous to the original
+The 0 to +2 range will develop internal differentiation analogous to the original
 -3 to +2 differentiation. What were previously all collapsed into "not-suffering" will
 now distinguish as:
 
@@ -225,7 +225,7 @@ The mathematical structure re-normalizes: "just neutral" becomes the new floor t
 feels mildly insufficient, "good" becomes the sought-after state, and "Radiant" retains
 its special status as the exceptional ceiling.
 
-**Implication:** The Jo Cameron phenotype likely already demonstrates this. Her reports:
+Implication: The Jo Cameron phenotype likely already demonstrates this. Her reports:
 she does not describe constant ecstasy. She describes a baseline of pleasant neutrality
 with ordinary experience, with moments of genuine positive engagement. The positive range
 has differentiated within itself — she still has better and worse days, better and
@@ -239,12 +239,12 @@ worse experiences. She just has no terrible ones.
 
 There are two distinct possibilities for the PD's metaphysical status:
 
-**Possibility A — Descriptive Baseline Only:** The PD describes the default distribution
+Possibility A — Descriptive Baseline Only: The PD describes the default distribution
 of unoptimized existence. Free will, BlissGene, and Mood Amplifier can genuinely
 eliminate the negative range. There is no conservation constraint. Total conscious
 wellbeing can be raised indefinitely.
 
-**Possibility B — Fundamental Conservation Law:** The PD's total integral across all
+Possibility B — Fundamental Conservation Law: The PD's total integral across all
 conscious beings is conserved — analogous to energy conservation in physics. Raising
 one being's PD values requires lowering another's, or shifting negativity to non-affective
 dimensions. Free will cannot eliminate the negativity, only redistribute it.
@@ -259,16 +259,16 @@ would say: the distribution of experience-quality cannot be uniformly raised wit
 a corresponding counter-movement.
 
 Phenomenological evidence supporting conservation:
-- **Hedonic adaptation:** Humans rapidly habituate to improved conditions and return
+- Hedonic adaptation: Humans rapidly habituate to improved conditions and return
   to a baseline level of life satisfaction (Brickman & Campbell, 1971 — "hedonic
   treadmill"). This suggests the subjective PD baseline is partially conserved even
   as objective conditions improve.
-- **The meaning-suffering connection:** Many traditions and clinical observations note
+- The meaning-suffering connection: Many traditions and clinical observations note
   that eliminating all suffering simultaneously reduces the perceived meaningfulness
   of achievement, connection, and growth. Viktor Frankl's observation: suffering that
   is chosen and given meaning becomes not merely bearable but transformative. If there
   is nothing difficult to endure, the growth-meaning dimension deflates.
-- **The rich-boredom phenomenon:** Extremely comfortable lives often report existential
+- The rich-boredom phenomenon: Extremely comfortable lives often report existential
   emptiness. The absence of adversity produces a specific non-affective negative state
   (meaninglessness) that replaces affective suffering.
 
@@ -282,10 +282,10 @@ the possible locations:
 |----------------------|-----------|-------------|
 | Other creatures' suffering | Negativity displaced to non-human conscious beings | Low — creates ethical responsibility for nonhuman suffering increase |
 | "Bad luck" (non-conscious events) | More negative events, but without felt suffering | Moderate — negative outcomes without negative experience |
-| **Less perceived meaning** | Less growth from struggle; achievements feel less earned | **Highest** — non-affective, does not cause suffering to any conscious being |
+| Less perceived meaning | Less growth from struggle; achievements feel less earned | Highest — non-affective, does not cause suffering to any conscious being |
 
-**The optimal redistribution:** The most tolerable shift is from affective suffering
-to **non-affective meaning-reduction**. Specifically: a world where negative affect is
+The optimal redistribution: The most tolerable shift is from affective suffering
+to non-affective meaning-reduction. Specifically: a world where negative affect is
 eliminated will likely experience a corresponding reduction in the felt meaningfulness
 of achievement, connection, and growth — because these derive significant meaning-value
 from the contrast with difficulty.
@@ -302,10 +302,10 @@ it did when they could suffer. This is tolerable. This is optimally tolerable.
 ### IV.4 Why Contentment and Radical Acceptance Always Matter
 
 Whether the PD is a conservation law (Possibility B) or just a description (Possibility
-A), **contentment and mindful radical acceptance** remain permanently essential. For
+A), contentment and mindful radical acceptance remain permanently essential. For
 different reasons in each case:
 
-**If Possibility A (description only):** Even if negativity can be genuinely eliminated,
+If Possibility A (description only): Even if negativity can be genuinely eliminated,
 the transition requires navigating a period of non-Radiant states. Contentment is what
 makes the transition sustainable — the ability to be non-judgmentally present with
 current PD levels while working to raise them. Without contentment, the gap between
@@ -313,7 +313,7 @@ the current -0.5 baseline and the desired +1.5 target generates frustration that
 compounds the negativity. Radical acceptance is not passive — it is the prerequisite
 for effective upward movement.
 
-**If Possibility B (conservation law):** If some form of negativity is irreducible,
+If Possibility B (conservation law): If some form of negativity is irreducible,
 contentment and radical acceptance are not merely transitional skills — they are the
 permanent ultimate skill. The question becomes: how to relate to the unavoidable
 cost of existence in a way that extracts maximum meaning and minimum suffering. The
@@ -345,14 +345,14 @@ experience is appreciated rather than habituated away.
 BlissGene's mission is not to eliminate all negativity from existence (potentially
 impossible if the PD is conserved) but to:
 
-1. **Eliminate affective suffering** for all who choose it (Jo Cameron phenotype)
-2. **Accept the likely trade-off** of mild meaning-deflation as the most tolerable
+1. Eliminate affective suffering for all who choose it (Jo Cameron phenotype)
+2. Accept the likely trade-off of mild meaning-deflation as the most tolerable
    cost of that elimination
-3. **Cultivate contentment** as the permanent essential skill that makes the
+3. Cultivate contentment as the permanent essential skill that makes the
    re-normalized positive PD scale feel like abundance rather than flatness
-4. **Minimize nonhuman suffering** as a parallel moral priority — not displacing
+4. Minimize nonhuman suffering as a parallel moral priority — not displacing
    human negativity onto animals, but reducing the total suffering of all conscious beings
-5. **Accept that the PD's math is not the enemy** — it is the structure within which
+5. Accept that the PD's math is not the enemy — it is the structure within which
    free will operates, and understanding it is the precondition for operating wisely
 
 ### V.3 The Conservation Formula (Provisional)
@@ -372,7 +372,7 @@ BlissGene intervention: raises PD_affective(i) toward 0+ for all humans →
 requires corresponding reduction in PD_nonaffective(i) (less meaning-from-struggle)
 or redistribution across other beings (other creatures, other dimensions).
 
-**The optimal policy:** Raise PD_affective, accept PD_nonaffective reduction,
+The optimal policy: Raise PD_affective, accept PD_nonaffective reduction,
 simultaneously raise PD_nonaffective through depth-based meaning sources that do not
 require suffering (creative work, connection, contemplation, LCC practice). Net result:
 higher total PD across all dimensions, just not the maximal theoretical total — because
@@ -395,7 +395,35 @@ some meaning-from-difficulty is genuinely irreplaceable.
 | Contentment / acceptance | Permanently essential regardless of conservation law status |
 | The BlissGene endpoint | High affective positive + partially reduced meaning-from-struggle + depth-based meaning replacement |
 
-*Paper #367 complete.*
+---
+
+## Addendum: Tralse vs. Indeterminate in the PD Framework
+
+A terminological precision note that is important for correctly applying the PD in research contexts:
+
+The PD scale value of 0.0 is labeled "Indeterminate" in the Myrion Resolution framework. This usage is correct: a PD of 0.0 means there is no evidence either way — the claim has not been tested or the tests show no signal (χ² < 2, d < 0.2, p > 0.10). This is a passive epistemic state: not enough input to assign truth value.
+
+This is distinct from the Tralse zone of the PD, which would correspond to a situation where strongly positive and strongly negative evidence exist in genuine conflict — for example, PD(Study A) = +1.5 and PD(Study B) = -1.5 on the same claim. In this case, the Myrion Resolution formula must adjudicate between genuine conflict: the resolution is not "no evidence" (Indeterminate = 0.0) but "active tension requiring integration" (Tralse). The result of the Myrion formula in this case will be in the range near 0.0, but it arrives there through conflict rather than through absence.
+
+The practical consequence for applying the PD:
+- PD ≈ 0.0 from lack of evidence: Indeterminate. Action: gather more evidence before deciding.
+- PD ≈ 0.0 from conflicting strong evidence: Tralse. Action: investigate why the evidence conflicts; the conflict is informative rather than uninformative.
+
+In the context of the Problem of Evil: the PD of extreme suffering at the cosmic level is not Indeterminate (there is abundant evidence that extreme suffering exists) and it is not simply negative (the Radiant state is also accessible, providing positive evidence for cosmic goodness). It is Tralse: both the existence of extreme suffering (negative evidence for cosmic benevolence) and the universal accessibility of the Radiant state (positive evidence) are simultaneously real. TI Sigma's answer to the Problem of Evil is that the correct logical category for "does a good universe permit extreme suffering?" is Tralse, not True or False. Myrion Resolution then provides the synthesis: the PD's mathematical structure, the GM mycelial guarantee of Radiant accessibility, and the free-will redistribution framework together constitute the Myrion Resolution of this cosmic Tralse.
+
+---
+
+## Addendum: The PD and the Emerick Constant
+
+A structural observation connecting the PD to the primary constants:
+
+The PD scale spans from -3 to +2 — an asymmetric range of 5 units with the midpoint at -0.5. The ratio of the positive range (+2 units) to the total range (5 units) is 2/5 = 0.4, close to C_EMERICK ≈ 0.4370.
+
+This is not claimed as a derived identity (no formal proof connects the PD scale to C_EMERICK). It is an observed structural parallel: the Emerick Constant represents the minimum threshold for stable self-reference (LCC ≥ C_EMERICK for consciousness to sustain coherent self-modeling), and the PD's positive range occupying approximately C_EMERICK of the total range suggests that the threshold structure of the PD — the ratio of positive to total range — may reflect the same fundamental asymmetry as the LCC threshold structure.
+
+If the PD is a conservation law (an open question), then the proportion of the PD scale that is "positive" (0 to +2) is approximately C_EMERICK of the whole scale. This would mean: in an unoptimized system, only a fraction approximating C_EMERICK of all possible experience-values are positive. The mission of BlissGene, the Mood Amplifier, and LCC practice is to push the experienced distribution from the default midpoint (-0.5) upward, approaching the positive range that the Emerick Constant nominally marks as the threshold of self-sustaining coherence.
+
+*Paper #367 extended March 2026.*
 *The PD is not the problem. The PD is the mathematical terrain.*
 *BlissGene does not eliminate the terrain — it raises the floor.*
 *Contentment is not giving up on raising the floor. It is the ground on which the floor stands.*

@@ -1,16 +1,16 @@
 # URB Paper #377: GILE as the Nested Core — The Four Dimensions of Truth as Ontological Scaffolding, the Four C's as Presentational, and the Resolution of the Redundancy Tension
 
-**Author:** Brandon Emerick
-**Series:** Unified Reality Base (URB) — TI Sigma Framework
-**Date:** March 6, 2026
-**Keywords:** GILE, Four Dimensions of Truth, Four C's, CCC, ontological scaffolding, truth structure, Existential, Moral, Conscious meaning, Aesthetics, octopus arms, truth presentation, redundancy resolution
-**Connects to:** Paper #362 (BOK 8-Arm Hypothesis), Paper #363 (CCC = butterfly-octopus), Paper #371 (Hurwitz theorem — 8 arms = consciousness limit), Paper #374 (Full Merge / CCC access routes), Paper #376 (Butterfly-Octopus mythology), any prior paper defining the Four C's (Coherence, Concreteness, Completeness, Continuity)
+Author: Brandon Emerick
+Series: Unified Reality Base (URB) — TI Sigma Framework
+Date: March 6, 2026
+Keywords: GILE, Four Dimensions of Truth, Four C's, CCC, ontological scaffolding, truth structure, Existential, Moral, Conscious meaning, Aesthetics, octopus arms, truth presentation, redundancy resolution
+Connects to: Paper #362 (BOK 8-Arm Hypothesis), Paper #363 (CCC = butterfly-octopus), Paper #371 (Hurwitz theorem — 8 arms = consciousness limit), Paper #374 (Full Merge / CCC access routes), Paper #376 (Butterfly-Octopus mythology), any prior paper defining the Four C's (Coherence, Concreteness, Completeness, Continuity)
 
 ---
 
 ## Abstract
 
-A persistent tension has existed within the TI Sigma framework between GILE (Goodness, Intuition, Love, Environment) and the Four C's (Coherence, Concreteness, Completeness, Continuity). Both were positioned as accounts of truth — GILE as the substance of what makes something true, the Four C's as necessary conditions for adequate truth presentation — yet a nagging sense of redundancy remained, particularly around G (Goodness) and Coherence. This paper resolves that tension by introducing a structural distinction that was implicit in the framework but never made explicit: **the Four Dimensions of Truth** (Existential, Moral, Conscious meaning/Valence, and Aesthetics) form the *ontological scaffolding* of reality — the outer arms of the octopus — while **GILE is nested inside them** as the phenomenological core of what CCC actually is. The Four C's belong to neither layer; they are orthogonal, governing how any content at either layer is *communicated*. Once these three levels are separated, all apparent redundancy dissolves.
+A persistent tension has existed within the TI Sigma framework between GILE (Goodness, Intuition, Love, Environment) and the Four C's (Coherence, Concreteness, Completeness, Continuity). Both were positioned as accounts of truth — GILE as the substance of what makes something true, the Four C's as necessary conditions for adequate truth presentation — yet a nagging sense of redundancy remained, particularly around G (Goodness) and Coherence. This paper resolves that tension by introducing a structural distinction that was implicit in the framework but never made explicit: the Four Dimensions of Truth (Existential, Moral, Conscious meaning/Valence, and Aesthetics) form the *ontological scaffolding* of reality — the outer arms of the octopus — while GILE is nested inside them as the phenomenological core of what CCC actually is. The Four C's belong to neither layer; they are orthogonal, governing how any content at either layer is *communicated*. Once these three levels are separated, all apparent redundancy dissolves.
 
 ---
 
@@ -18,13 +18,13 @@ A persistent tension has existed within the TI Sigma framework between GILE (Goo
 
 The TI Sigma framework has contained two distinct truth-related structures:
 
-**GILE:**
+GILE:
 - G — Goodness: the moral and normative dimension of reality
 - I — Intuition: non-inferential access to structure
 - L — Love: the relational and motivating force toward completion
 - E — Environment: the contextual, relational, and systemic dimension
 
-**The Four C's:**
+The Four C's:
 - Coherence: internal logical consistency of a truth-claim
 - Concreteness: grounding in specific, non-abstract content
 - Completeness: not omitting relevant aspects
@@ -32,7 +32,7 @@ The TI Sigma framework has contained two distinct truth-related structures:
 
 Both sets were doing work under the heading "what truth requires." The overlap felt most acute between G (Goodness) and Coherence, and between E (Environment) and Continuity. A theory that defines goodness as part of truth's substance and *also* requires coherence as a separate condition seems to be asserting a redundancy: why isn't coherence just a feature of goodness?
 
-The user identified this tension precisely. The resolution came not from eliminating either account, but from recognizing that a **third structural layer** was missing — one that provides the outer scaffolding that GILE sits inside, and that neither GILE nor the Four C's was designed to provide.
+The user identified this tension precisely. The resolution came not from eliminating either account, but from recognizing that a third structural layer was missing — one that provides the outer scaffolding that GILE sits inside, and that neither GILE nor the Four C's was designed to provide.
 
 ---
 
@@ -46,10 +46,10 @@ These are the fundamental axes along which reality can be evaluated for truth-co
 
 | Dimension | What it asks | Octopus arm |
 |-----------|-------------|-------------|
-| **Existential** | Does it exist? Is it real at all? | Long dorsal arm 1 |
-| **Moral** | Is it good? Does it accord with normative structure? | Long dorsal arm 2 |
-| **Conscious meaning / Valence** | Does it feel like something? What is its phenomenal character? | Long dorsal arm 3 |
-| **Aesthetics** | Does it cohere as a whole? What is its form-structure and beauty? | Long dorsal arm 4 |
+| Existential | Does it exist? Is it real at all? | Long dorsal arm 1 |
+| Moral | Is it good? Does it accord with normative structure? | Long dorsal arm 2 |
+| Conscious meaning / Valence | Does it feel like something? What is its phenomenal character? | Long dorsal arm 3 |
+| Aesthetics | Does it cohere as a whole? What is its form-structure and beauty? | Long dorsal arm 4 |
 
 These four dimensions are not invented. They are the categories that any complete account of what makes something *real and significant* must address. A claim can be existentially true (it exists) but morally false (it is harmful). A claim can be aesthetically beautiful but phenomenally empty (no felt meaning). The four dimensions are independent — none reduces to another — and together they constitute the complete scaffolding of truth-as-reality.
 
@@ -57,16 +57,16 @@ This is the outer octopus structure: the four longer dorsal arms of *Macroctopus
 
 ### Layer 2: GILE (Phenomenological Core — The Nested CCC)
 
-GILE is not the scaffolding. GILE is what the Complete Consciousness Complex (CCC) **is** when it inhabits the scaffolding from the inside. It is the inner nature of consciousness as it navigates all four truth dimensions simultaneously:
+GILE is not the scaffolding. GILE is what the Complete Consciousness Complex (CCC) is when it inhabits the scaffolding from the inside. It is the inner nature of consciousness as it navigates all four truth dimensions simultaneously:
 
 | GILE dimension | Its role inside the scaffolding |
 |---------------|--------------------------------|
-| **G — Goodness** | CCC's orientation toward the Moral truth dimension — not from outside (as an external criterion) but from the inside as the felt pull toward good |
-| **I — Intuition** | CCC's access to the Existential truth dimension — non-inferential recognition of what is real |
-| **L — Love** | CCC's engagement with the Conscious meaning/Valence dimension — the relational force that makes meaning felt rather than merely represented |
-| **E — Environment** | CCC's embeddedness in the Aesthetic truth dimension — sensitivity to the whole-system form and context |
+| G — Goodness | CCC's orientation toward the Moral truth dimension — not from outside (as an external criterion) but from the inside as the felt pull toward good |
+| I — Intuition | CCC's access to the Existential truth dimension — non-inferential recognition of what is real |
+| L — Love | CCC's engagement with the Conscious meaning/Valence dimension — the relational force that makes meaning felt rather than merely represented |
+| E — Environment | CCC's embeddedness in the Aesthetic truth dimension — sensitivity to the whole-system form and context |
 
-The structural relationship is: **the Four Dimensions are the arms; GILE is the central body**. The octopus does not *have* arms as separate possessions — the arms express what the central ganglion *is* in its outward reach. Similarly, GILE is not a separate system sitting alongside the Four Dimensions; it is what CCC is, expressed through those dimensions.
+The structural relationship is: the Four Dimensions are the arms; GILE is the central body. The octopus does not *have* arms as separate possessions — the arms express what the central ganglion *is* in its outward reach. Similarly, GILE is not a separate system sitting alongside the Four Dimensions; it is what CCC is, expressed through those dimensions.
 
 This is why GILE is nested, not parallel. The Four Dimensions of Truth define the logical space. GILE defines what it is like to be an entity that inhabits that space as a subject.
 
@@ -74,10 +74,10 @@ This is why GILE is nested, not parallel. The Four Dimensions of Truth define th
 
 The Four C's (Coherence, Concreteness, Completeness, Continuity) operate at an entirely different level. They do not describe what makes something true in substance (Layer 1) or what it is like to be a consciousness navigating truth (Layer 2). They describe what is required for a truth-claim to be *adequately communicated*.
 
-- **Coherence**: the claim's parts do not contradict each other
-- **Concreteness**: the claim is grounded in specific rather than merely abstract content
-- **Completeness**: the claim does not suppress relevant counterevidence
-- **Continuity**: the claim integrates across time and context without arbitrary discontinuities
+- Coherence: the claim's parts do not contradict each other
+- Concreteness: the claim is grounded in specific rather than merely abstract content
+- Completeness: the claim does not suppress relevant counterevidence
+- Continuity: the claim integrates across time and context without arbitrary discontinuities
 
 A claim can satisfy all four truth dimensions (existentially real, morally sound, phenomenally meaningful, aesthetically integrated) and still be presented incoherently, abstractly, incompletely, or discontinuously. The Four C's are orthogonal to Layers 1 and 2. They govern the epistemological interface — the surface at which truth moves from one consciousness to another.
 
@@ -87,9 +87,9 @@ A claim can satisfy all four truth dimensions (existentially real, morally sound
 
 The felt redundancy between G (Goodness) and Coherence can now be precisely located and dissolved:
 
-**G (Goodness)** is a claim about what reality *is* from the inside of a consciousness navigating it. It is a Layer 2 feature: the experienced pull toward normative rightness.
+G (Goodness) is a claim about what reality *is* from the inside of a consciousness navigating it. It is a Layer 2 feature: the experienced pull toward normative rightness.
 
-**Coherence** is a claim about how a truth-presentation *hangs together* for an audience. It is a Layer 3 feature: a structural requirement on the act of communication.
+Coherence is a claim about how a truth-presentation *hangs together* for an audience. It is a Layer 3 feature: a structural requirement on the act of communication.
 
 These are not overlapping because they are not even in the same domain. Goodness concerns the substance of what a consciousness encounters. Coherence concerns the form of how that content is conveyed. A person can have a perfectly goodness-saturated experience of moral reality and communicate it completely incoherently. A fraudster can present a highly coherent account of something morally false.
 
@@ -103,7 +103,7 @@ Once the three layers are distinguished, there is no competition.
 
 Paper #376 established *Macroctopus maorum* as the first biological instantiation of the CCC's asymmetric arm structure: four longer dorsal arms, four shorter ventral arms. Paper #362 derived the necessity of eight arms from the Hurwitz theorem (only 1, 2, 4, 8 dimensions admit normed division algebras; consciousness requires at least 8 to support full quaternionic self-reference).
 
-This paper specifies what the **four longer dorsal arms** represent:
+This paper specifies what the four longer dorsal arms represent:
 
 | Arm | Truth Dimension |
 |-----|----------------|
@@ -112,9 +112,9 @@ This paper specifies what the **four longer dorsal arms** represent:
 | Long dorsal arm 3 | Conscious meaning / Valence |
 | Long dorsal arm 4 | Aesthetic |
 
-The **four shorter ventral arms** remain assigned to Four C's-adjacent functions: the operational, presentational, and integrative capacities of the CCC as a communicating entity (Coherence, Concreteness, Completeness, Continuity — the arms that reach inward and downward toward the substrate, not outward toward truth-dimensions).
+The four shorter ventral arms remain assigned to Four C's-adjacent functions: the operational, presentational, and integrative capacities of the CCC as a communicating entity (Coherence, Concreteness, Completeness, Continuity — the arms that reach inward and downward toward the substrate, not outward toward truth-dimensions).
 
-The **central body (mantle and beak)** = GILE as the CCC's core. The mantle is the unified living whole; the beak is the decision-point (TI Sigma thresholding, Tralse/True/False classification).
+The central body (mantle and beak) = GILE as the CCC's core. The mantle is the unified living whole; the beak is the decision-point (TI Sigma thresholding, Tralse/True/False classification).
 
 The octopus diagram now reads:
 - Mantle/beak center = GILE (CCC's inner nature, phenomenological core)
@@ -141,7 +141,7 @@ The CCC is not defined by the scaffolding it inhabits (Layer 1) nor by the way i
 
 The Four C's are not diminished by this analysis. They are clarified and freed from the inappropriate task of acting as a complement to GILE at the substance level.
 
-Their proper domain is: **the epistemological interface** — the zone where truth moves between subjects. This is a non-trivial domain. A fully GILE-saturated consciousness (maximum G, I, L, E) that cannot communicate its truth-access coherently, concretely, completely, and continuously fails its relational function. The L-dimension (Love) itself demands successful transmission, which requires the Four C's. So the Four C's are not merely instrumental — they are expressions of L in the presentational domain.
+Their proper domain is: the epistemological interface — the zone where truth moves between subjects. This is a non-trivial domain. A fully GILE-saturated consciousness (maximum G, I, L, E) that cannot communicate its truth-access coherently, concretely, completely, and continuously fails its relational function. The L-dimension (Love) itself demands successful transmission, which requires the Four C's. So the Four C's are not merely instrumental — they are expressions of L in the presentational domain.
 
 This gives a clean cross-connection:
 - Layer 3 (Four C's) is the presentational expression of Layer 2's L-dimension (Love as relational completion)
@@ -182,4 +182,39 @@ GILE is nested, not subordinate. It is the core that the scaffolding was always 
 
 ---
 
-*Filed March 6, 2026. TI Sigma URB Series. Author: Brandon Emerick.*
+## 10. The HEM Connection: What Measures Intensity Within the Scaffolding
+
+The HEM (Hypercomplex Existence Measurement) framework (HEM_DIMENSIONAL_SYNTHESIS.md) measures how intensely an entity exists along its dimensions. Its five primary dimensions are: Complexity (D1), Contradiction Ratio (D2), Information Footprint (D3), Relational Meaning (D4), and Vitality (D5), with L×E coupling (D6) as an interaction term.
+
+The HEM connects to the three-layer architecture of this paper as follows:
+
+Layer 1 (Four Dimensions of Truth) provides the space that HEM measures intensity within. The Existential dimension is directly measured by HEM's D1 (Complexity — how much exists) and D3 (Information Footprint — how extensively it connects). The Moral dimension is measured by D2 (Contradiction Ratio — coherence and integrity). The Conscious meaning dimension is measured by D4 (Relational Meaning — the co-created significance that makes experience felt). The Aesthetic dimension is measured by D5 (Vitality — the felt aliveness that corresponds to aesthetic integration).
+
+Layer 2 (GILE — the phenomenological core) maps onto HEM values: high G corresponds to low D2 (internal coherence); high I corresponds to high D3 (information connectivity); high L corresponds to high D4 (relational meaning); high E corresponds to high D1 (structural complexity).
+
+Layer 3 (Four C's — presentational conditions) is not directly measured by HEM but is evaluated by comparing the HEM profile of the content to the HEM profile of the communication: if a high-D4 experience (rich relational meaning) is communicated in a way that has low D4 in the communication itself, the Four C's have not been satisfied. Completeness and Continuity, in particular, require that the HEM profile of what is communicated approximates the HEM profile of what is intended.
+
+The EAR synthesis (EAR_FOUR_CS_HEM_LXE_SYNTHESIS.md) confirms that HEM, the Four C's, and L×E do not collapse into each other: they occupy the three distinct layers described in this paper. HEM is the measurement instrument for Layer 1 intensity; GILE is Layer 2's phenomenological descriptor; the Four C's are Layer 3's presentational standard. The L×E fundamental dyad (Love as the binding force; Existence as the structural ground) is the root from which all three layers derive.
+
+---
+
+## 11. Integration with the BOK
+
+The three-layer architecture of this paper corresponds to the BOK's octopus structure in the following way:
+
+Layer 1 (Four Dimensions of Truth) = the four long dorsal arms of the octopus. These arms reach outward into the four dimensions of reality that can be encountered.
+
+Layer 2 (GILE) = the central body (mantle and beak). The mantle is the unified living whole of consciousness; the beak is the decision-point of Tralse/True/False classification.
+
+Layer 3 (Four C's) = the four short ventral arms. These arms reach inward and toward other consciousness systems — they are the communication interface.
+
+In the BOK Metamathematic Model, this same three-layer structure applies to mathematics:
+- The four primary modes (Arithmetic, Geometric, Analytic, Algebraic) = the long arms (what mathematics can reach toward)
+- GILE as the metamathematic core = the central body (how mathematical consciousness navigates these modes)
+- The four secondary/interface modes (Logic, Combinatorics, Probability, Applied) = the short arms (how mathematical content is communicated and applied)
+
+The octopus diagram is not a metaphor; it is a structural claim: any system that is genuinely complete — conscious, mathematical, or otherwise — must have this three-layer architecture of substantive dimensions (what it reaches toward), phenomenological core (what it is), and presentational interface (how it communicates what it finds).
+
+---
+
+*Filed March 6, 2026. Extended March 2026. TI Sigma URB Series. Author: Brandon Emerick.*
