@@ -313,43 +313,76 @@ class DatabaseBrainData:
                 conn = psycopg2.connect(self.db_url)
                 cur = conn.cursor()
 
-                # Muse EEG — requires Mind Monitor OSC bridge running locally
+                # ── Check esp32_biometric_data (written by /api/upload endpoint) ──
+                # This is what the local Acer bridge script posts to.
                 try:
                     cur.execute("""
-                        SELECT alpha, beta, theta, gamma, delta, created_at
-                        FROM muse_realtime_data
+                        SELECT heart_rate, alpha, beta, theta, gamma, delta,
+                               rmssd, coherence, muse_connected, polar_connected,
+                               created_at
+                        FROM esp32_biometric_data
                         ORDER BY created_at DESC LIMIT 1
                     """)
                     row = cur.fetchone()
                     if row:
-                        age = (datetime.now() - row[5]).total_seconds()
+                        age = (datetime.now() - row[10]).total_seconds()
                         if age <= STALE_THRESHOLD_SECONDS:
-                            snapshot.alpha = row[0] or 0.0
-                            snapshot.beta  = row[1] or 0.0
-                            snapshot.theta = row[2] or 0.0
-                            snapshot.gamma = row[3] or 0.0
-                            snapshot.delta = row[4] or 0.0
-                            snapshot.eeg_connected = True
+                            hr, alpha, beta, theta, gamma, delta = row[0:6]
+                            rmssd, coh, muse_on, polar_on = row[6:10]
+                            if polar_on and hr and hr > 0:
+                                snapshot.heart_rate      = int(hr)
+                                snapshot.hrv_rmssd      = float(rmssd or 0)
+                                snapshot.coherence      = float(coh or 0)
+                                snapshot.heart_connected = True
+                            if muse_on and alpha is not None:
+                                snapshot.alpha = float(alpha or 0)
+                                snapshot.beta  = float(beta  or 0)
+                                snapshot.theta = float(theta or 0)
+                                snapshot.gamma = float(gamma or 0)
+                                snapshot.delta = float(delta or 0)
+                                snapshot.eeg_connected = True
                 except Exception:
                     pass
 
-                # Polar H10 — try DB cache first (written by this same method)
-                try:
-                    cur.execute("""
-                        SELECT heart_rate, hrv_rmssd, coherence, created_at
-                        FROM polar_realtime_data
-                        ORDER BY created_at DESC LIMIT 1
-                    """)
-                    row = cur.fetchone()
-                    if row:
-                        age = (datetime.now() - row[3]).total_seconds()
-                        if age <= STALE_THRESHOLD_SECONDS:
-                            snapshot.heart_rate  = row[0] or 0
-                            snapshot.hrv_rmssd   = row[1] or 0.0
-                            snapshot.coherence   = row[2] or 0.0
-                            snapshot.heart_connected = True
-                except Exception:
-                    pass
+                # ── Check muse_realtime_data (OSC bridge fallback) ──
+                if not snapshot.eeg_connected:
+                    try:
+                        cur.execute("""
+                            SELECT alpha, beta, theta, gamma, delta, created_at
+                            FROM muse_realtime_data
+                            ORDER BY created_at DESC LIMIT 1
+                        """)
+                        row = cur.fetchone()
+                        if row:
+                            age = (datetime.now() - row[5]).total_seconds()
+                            if age <= STALE_THRESHOLD_SECONDS:
+                                snapshot.alpha = row[0] or 0.0
+                                snapshot.beta  = row[1] or 0.0
+                                snapshot.theta = row[2] or 0.0
+                                snapshot.gamma = row[3] or 0.0
+                                snapshot.delta = row[4] or 0.0
+                                snapshot.eeg_connected = True
+                    except Exception:
+                        pass
+
+                # ── Check polar_realtime_data (Pulsoid cache fallback) ──
+                if not snapshot.heart_connected:
+                    try:
+                        cur.execute("""
+                            SELECT heart_rate, hrv_rmssd, coherence, created_at
+                            FROM polar_realtime_data
+                            ORDER BY created_at DESC LIMIT 1
+                        """)
+                        row = cur.fetchone()
+                        if row:
+                            age = (datetime.now() - row[3]).total_seconds()
+                            if age <= STALE_THRESHOLD_SECONDS:
+                                snapshot.heart_rate      = row[0] or 0
+                                snapshot.hrv_rmssd      = row[1] or 0.0
+                                snapshot.coherence      = row[2] or 0.0
+                                snapshot.heart_connected = True
+                    except Exception:
+                        pass
 
                 conn.close()
             except Exception:
@@ -472,16 +505,29 @@ The script writes EEG band data to the database every second.
             if data_mode == "Real Devices (Database)":
                 with st.expander("How to connect Polar H10"):
                     st.markdown("""
-**Pulsoid must be streaming to the cloud:**
-1. Open the **Pulsoid** app on your phone
-2. Make sure your Polar H10 is paired and streaming
-3. Pulsoid sends heart rate to its cloud API automatically
-4. This app calls the Pulsoid API directly — no local bridge needed
+**Run this one-time setup on your Acer laptop:**
 
-If Pulsoid is running and you still see Disconnected:
-- Check your PULSOID_TOKEN is set in Replit Secrets
-- Make sure Pulsoid is actively streaming (green indicator in app)
-- Try switching Pulsoid off and back on
+**Step 1 — Install dependencies** (open a terminal on the Acer):
+```
+pip install bleak requests
+```
+
+**Step 2 — Run the bridge script** (replace URL with your Replit app URL):
+```
+python hardware/POLAR_ACER_BRIDGE.py --url https://YOUR-APP.replit.app
+```
+
+The script finds the H10 via Bluetooth, reads live heart rate,
+and sends it to this app every 2 seconds. The Polar H10 must be
+**paired to Windows** via Settings → Bluetooth & devices.
+
+**Quick test** (paste in browser or terminal):
+```
+curl -X POST https://YOUR-APP.replit.app/api/upload \\
+  -H "Content-Type: application/json" \\
+  -d '{"hr": 65, "polar": true}'
+```
+If that returns `{"status":"ok"}`, the connection works.
                     """)
     
     st.divider()
