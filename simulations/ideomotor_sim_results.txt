@@ -1,0 +1,73 @@
+=================================================================
+TI SIGMA — IDEOMOTOR BIOMARKER SIMULATION
+=================================================================
+
+C_EMERICK   = 0.437016
+φ (golden)  = 1.618034
+RMSSD threshold (C_EMERICK crossing) = 38.81 ms
+
+--- ACCURACY vs LCC (theoretical) ---
+     LCC    RMSSD (ms)    Acc (%)    Above C_EM
+  0.2000          12.5      52.56%         below
+  0.3000          21.4      56.08%         below
+  0.3500          26.9      58.86%         below
+  0.3890          31.8      61.47%         below
+  0.4370          38.8      65.00%            AT
+  0.4650          43.5      67.09%         ABOVE
+  0.5500          61.1      72.67%         ABOVE
+  0.6500          92.9      76.81%         ABOVE
+  0.8000         200.0      79.22%         ABOVE
+  1.0000         999.0      79.89%         ABOVE
+
+--- ACTUAL SESSION DATA vs SIMULATION PREDICTION ---
+                     Session    RMSSD    LCC_n   Pred Acc   CCI Shift    vs Threshold
+         Relaxed Metta Bliss     31.9   0.3894      61.49%        4.51      below C_EM
+      ACTIVE Heart Coherence     43.5   0.4651      67.09%       19.30      ABOVE C_EM
+
+  Predicted accuracy ratio S2/S1 : 1.091x
+  Observed CCI shift ratio  S2/S1 : 4.275x
+
+--- NEURAL LCC vs C_EMERICK ---
+             Dataset      LCC     p-val       d     vs C_EM  Status
+        DANDI:000552   0.4349    0.0000   6.011     -0.0021  below: HIGHLY SIGNIFICANT
+        ALLEN:000039   0.3451    0.0590   1.794     -0.0919  below: NOT SIGNIFICANT
+    DANDI:000582_MEC   0.1329    0.0010   0.134     -0.3041  below: WEAK SIGNIFICANT
+
+  DANDI:000552 LCC = 0.4349, C_EMERICK = 0.4370
+  Difference = 0.0021 (0.48% from C_EMERICK)
+
+--- MONTE CARLO: 100,000 TRIALS across 100 LCC levels ---
+Total trials simulated: 100,000
+Steepest accuracy gain: LCC = 0.535 (dAcc/dLCC = 2.9700)
+
+--- MINIMUM TRIALS FOR 80% POWER (one-sided, alpha=0.05) ---
+     LCC     RMSSD    Accuracy     N_min
+  0.4370      38.8ms       65.00%        69  C_EMERICK
+  0.5500      61.1ms       72.67%        30  
+  0.6500      92.9ms       76.81%        21  
+  0.3900      32.0ms       61.54%       117  
+  0.3500      26.9ms       58.86%       203  
+
+--- POLARITY CALIBRATION: Trials for 90% classification confidence ---
+  True Acc       LCC    N for 90% conf
+      65.0%                          93
+      70.0%                          53
+      75.0%                          33
+      55.0%                         866
+
+--- RMSSD PRACTICAL GUIDE ---
+   RMSSD     LCC_n   Predicted Acc  Recommendation
+    15.0    0.2308           53.38%  Do NOT proceed — PSI Tune first
+    25.0    0.3333           57.85%  Do NOT proceed — PSI Tune first
+    32.0    0.3902           61.55%  Do NOT proceed — PSI Tune first
+    35.0    0.4118           63.12%  Marginal — extend breathing protocol
+    38.8    0.4369           64.99%  PROCEED — above C_EMERICK
+    43.5    0.4652           67.10%  PROCEED — above C_EMERICK
+    50.0    0.5000           69.57%  PROCEED — high coherence state
+    60.0    0.5455           72.42%  PROCEED — high coherence state
+    80.0    0.6154           75.68%  PROCEED — high coherence state
+   100.0    0.6667           77.26%  PROCEED — high coherence state
+
+=================================================================
+SIMULATION COMPLETE
+=================================================================
