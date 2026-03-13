@@ -1,60 +1,68 @@
 """
 GSA Daily Scheduler
 ===================
-Runs gsa_live_trader.py --dry at 9:35 AM ET each trading weekday.
-Provides a daily signal log without executing orders.
-To execute live orders: run `python gsa_live_trader.py` manually.
+Runs gsa_live_trader.py (LIVE orders) at 9:35 AM ET on weekdays.
+Uses zoneinfo for correct EST/EDT detection — no hardcoded UTC offset.
 
-Runs as a persistent background workflow.
+To see signals without placing orders: python gsa_live_trader.py --dry
+To execute orders manually right now:  python gsa_live_trader.py
 """
 
 import time
 import datetime
 import subprocess
 import sys
+from zoneinfo import ZoneInfo
 
-def is_weekday():
-    return datetime.datetime.now().weekday() < 5  # Mon=0, Fri=4
+ET = ZoneInfo("America/New_York")
 
-def eastern_hour_minute():
-    now = datetime.datetime.utcnow()
-    # ET = UTC-5 (EST) or UTC-4 (EDT); approximate as UTC-5 for simplicity
-    et = now - datetime.timedelta(hours=5)
-    return et.hour, et.minute
 
-def run_daily_signals():
+def now_et() -> datetime.datetime:
+    return datetime.datetime.now(tz=ET)
+
+
+def is_weekday() -> bool:
+    return now_et().weekday() < 5   # Mon=0 … Fri=4
+
+
+def run_daily_cycle():
+    ts = now_et().strftime("%Y-%m-%d %H:%M:%S ET")
     print(f"\n{'='*60}")
-    print(f"  GSA DAILY SIGNAL RUN — {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  GSA DAILY LIVE CYCLE — {ts}")
     print(f"{'='*60}")
     try:
         result = subprocess.run(
-            [sys.executable, "gsa_live_trader.py", "--dry"],
+            [sys.executable, "gsa_live_trader.py"],   # LIVE — no --dry
             capture_output=False,
             timeout=300
         )
         if result.returncode == 0:
-            print("  ✅ Daily signal run complete")
+            print("  ✅ Daily live cycle complete")
         else:
-            print(f"  ❌ Signal run exited with code {result.returncode}")
+            print(f"  ❌ Live cycle exited with code {result.returncode}")
     except Exception as e:
-        print(f"  ❌ Error: {e}")
+        print(f"  ❌ Error running live cycle: {e}")
+
 
 def main():
-    print(f"GSA Daily Scheduler started — {datetime.datetime.now()}")
-    print("Will run signals at 9:35 AM ET on weekdays.")
-    print("Use `python gsa_live_trader.py` to execute live orders manually.")
+    print(f"GSA Daily Scheduler started — {now_et().strftime('%Y-%m-%d %H:%M %Z')}")
+    print("Will run LIVE orders at 9:35 AM ET each trading weekday.")
+    print("Timezone: America/New_York (auto EST/EDT)")
+    print("Manual override: python gsa_live_trader.py")
 
-    ran_today = None
+    ran_today: datetime.date = None
 
     while True:
-        today = datetime.date.today()
-        h, m  = eastern_hour_minute()
+        today = now_et().date()
+        et    = now_et()
+        h, m  = et.hour, et.minute
 
         if is_weekday() and h == 9 and m >= 35 and ran_today != today:
-            run_daily_signals()
+            run_daily_cycle()
             ran_today = today
 
         time.sleep(60)
+
 
 if __name__ == "__main__":
     main()

@@ -759,22 +759,333 @@ def produce_paper_352_video(output_path: str = None) -> str:
     return output_path
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# PAPER #398/399 — IDEOMOTOR EFFECT
+# ─────────────────────────────────────────────────────────────────────────────
+
+SCRIPT_PAPER_398 = """
+Have you ever had a feeling in your gut that you couldn't explain?
+
+You've heard the stories. Dowsers finding water. Chefs knowing when something is right. Athletes who react before they can think. Parents who somehow know when their child is in danger.
+
+Science usually dismisses these as coincidences. Self-deception. Wishful thinking.
+
+But what if the mechanism is real — and we've been looking in the wrong place?
+
+In 1852, a physician named William Carpenter described something he called the ideomotor effect. When you hold a pendulum and think of a direction, it moves — not because you're deliberately swinging it, but because tiny, unconscious muscle contractions translate your mental state into motion.
+
+This has been used to explain dowsing, applied kinesiology, the Ouija board. The usual conclusion: it's all self-deception. You're unconsciously moving it, and you don't realize it.
+
+Here's the problem with that explanation. It's half right. Yes, your body is generating the movement unconsciously. But why does it move in the right direction so much more often than chance, when the operator is in the right physiological state?
+
+When we analyzed published data on ideomotor accuracy across dowsing, applied kinesiology, and pendulum studies, a clear pattern emerged. Accuracy tracks a single physiological variable: H R V — heart rate variability — specifically the R M S S D measurement.
+
+And the relationship is not linear. It's a threshold function.
+
+Below 35 milliseconds R M S S D, accuracy is essentially at chance — fifty percent. The body is receiving noise.
+
+Above 38.8 milliseconds R M S S D, something shifts. Accuracy begins to climb in a sigmoid curve — precisely the shape you'd expect from a system crossing a coherence threshold.
+
+38.8 milliseconds. We know exactly why that number appears.
+
+In the TI Sigma framework, the consciousness threshold is governed by the Emerick Constant — C equals one over phi times root two — approximately 0.4370.
+
+The L C C, or Limbic-Cortical Coupling, is converted from R M S S D by a simple formula. When you solve for the R M S S D value that corresponds to exactly the Emerick Constant threshold, you get 38.8 milliseconds.
+
+This is not a coincidence. It's a mathematical derivation.
+
+Here is where it gets extraordinary.
+
+An independent neuroscience dataset — DANDI archive, dataset number 000552 — measured neural coherence across multiple brain regions in seventeen subjects.
+
+The researchers were not studying consciousness thresholds. They were not aware of the TI Sigma framework. They were studying something completely different.
+
+The mean neural L C C value they found: 0.4349.
+
+The Emerick Constant is 0.4370.
+
+The difference is less than half a percent.
+
+An independent dataset, measuring neural coherence with entirely different methodology, converged on essentially the same number that the mathematics independently predicts as the consciousness threshold.
+
+So what does this tell us?
+
+The ideomotor effect is not self-deception.
+
+It is somatic coherence transduction. Your body is a receiver. When your coherence — measured by your heart rate variability — crosses the threshold, you gain access to information that conscious deliberation cannot generate.
+
+The body moves first. Then the mind catches up and invents a reason.
+
+This is why some dowsers find water. Why some people have a genuine gift for applied kinesiology. Why your gut feeling is occasionally so right it feels like cheating.
+
+It's not a mystery. It's a threshold. And that threshold has a number.
+
+38.8 milliseconds. Your body already knows how to get there. Your job is to listen.
+
+This is Papers 398 and 399 of the TI Sigma Universal Reality Blueprint — a continuing series at the frontier of consciousness science.
+
+Subscribe for weekly discoveries.
+
+The threshold is real. And it's already inside you.
+""".strip()
+
+
+def render_ideomotor_accuracy_chart(output_path: str) -> str:
+    """Sigmoid accuracy vs RMSSD — the ideomotor threshold chart."""
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from scipy.special import expit
+
+    rmssd = np.linspace(0, 90, 600)
+    k, mid = 0.28, 38.8
+    accuracy = 0.50 + 0.50 * expit(k * (rmssd - mid))
+
+    fig, ax = plt.subplots(figsize=(WIDTH/100, HEIGHT/100), dpi=100)
+    fig.patch.set_facecolor(BG_COLOR)
+    ax.set_facecolor(BG_COLOR)
+    ax.grid(True, color='#ffffff', alpha=0.04, linewidth=0.5, zorder=0)
+    ax.tick_params(colors=TEXT_COLOR, labelsize=11)
+    for spine in ax.spines.values():
+        spine.set_edgecolor('#ffffff'); spine.set_alpha(0.12)
+
+    ax.axhline(0.5, color=TEXT_COLOR, linewidth=0.7, alpha=0.25, linestyle='--')
+    ax.axhline(1.0, color=TEXT_COLOR, linewidth=0.5, alpha=0.12, linestyle='--')
+
+    for alpha, lw in [(0.04, 10), (0.10, 6), (0.20, 3)]:
+        ax.fill_between(rmssd, accuracy, 0.5,
+                        where=(accuracy > 0.5), color=GOLD, alpha=alpha)
+
+    for lw, a in [(8, 0.12), (4, 0.28), (2, 1.0)]:
+        ax.plot(rmssd, accuracy, color=GOLD, linewidth=lw, alpha=a, zorder=4)
+
+    # Threshold line at 38.8ms
+    ax.axvline(38.8, color=RED, linewidth=1.5, linestyle='--', alpha=0.85, zorder=5)
+    ax.text(39.8, 0.97, 'THRESHOLD\n38.8 ms', fontsize=10, color=RED,
+            fontweight='bold', va='top', zorder=6)
+
+    # Chance level label
+    ax.text(2, 0.515, 'Chance (50%)', fontsize=9, color=TEXT_COLOR, alpha=0.6)
+
+    # Zone shading
+    ax.axvspan(0, 35, alpha=0.06, color=RED, zorder=1)
+    ax.axvspan(38.8, 90, alpha=0.06, color=GREEN, zorder=1)
+    ax.text(17, 0.54, 'NOISE\nZONE', fontsize=9, color=RED, ha='center',
+            alpha=0.8, fontweight='bold')
+    ax.text(64, 0.54, 'COHERENCE\nZONE', fontsize=9, color=GREEN, ha='center',
+            alpha=0.8, fontweight='bold')
+
+    # Fixed point annotation
+    acc_at_em = float(0.50 + 0.50 * expit(k * (38.8 - mid)))
+    ax.plot(38.8, acc_at_em, 'o', color=GOLD, markersize=12,
+            markeredgecolor='#ffffff', markeredgewidth=1.2, zorder=8)
+
+    ax.set_xlabel('RMSSD  (Heart Rate Variability, ms)', fontsize=13,
+                  color=TEXT_COLOR, labelpad=10)
+    ax.set_ylabel('Ideomotor Accuracy', fontsize=13, color=TEXT_COLOR, labelpad=10)
+    ax.set_xlim(0, 90); ax.set_ylim(0.46, 1.04)
+    ax.xaxis.label.set_color(TEXT_COLOR)
+    ax.yaxis.label.set_color(TEXT_COLOR)
+
+    fig.text(0.5, 0.95, 'RMSSD Threshold for Ideomotor Accuracy (C_EMERICK = 0.4370)',
+             fontsize=15, color=TEXT_COLOR, ha='center', fontweight='bold')
+
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
+    plt.close()
+    return output_path
+
+
+def render_dandi_comparison_chart(output_path: str) -> str:
+    """DANDI neural LCC vs C_EMERICK comparison — the convergence chart."""
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as patches
+
+    fig, ax = plt.subplots(figsize=(WIDTH/100, HEIGHT/100), dpi=100)
+    fig.patch.set_facecolor(BG_COLOR)
+    ax.set_facecolor(BG_COLOR)
+    ax.axis('off')
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1)
+    _draw_starfield(ax, n=140, seed=13)
+
+    ax.text(0.5, 0.92, 'INDEPENDENT CONVERGENCE ON THE THRESHOLD',
+            fontsize=16, color=GOLD, ha='center', fontweight='bold',
+            fontfamily='monospace', zorder=5)
+    ax.axhline(0.875, xmin=0.05, xmax=0.95, color=GOLD, linewidth=0.7, alpha=0.4, zorder=5)
+
+    # Left box — TI Sigma derivation
+    left = patches.FancyBboxPatch((0.05, 0.35), 0.38, 0.42,
+                                   boxstyle='round,pad=0.02',
+                                   facecolor='#0a0820', edgecolor=PURPLE,
+                                   linewidth=2, alpha=0.95, zorder=4)
+    ax.add_patch(left)
+    ax.text(0.24, 0.73, 'TI SIGMA', fontsize=13, color=PURPLE, ha='center',
+            fontweight='bold', fontfamily='monospace', zorder=6)
+    ax.text(0.24, 0.66, 'Mathematical Derivation', fontsize=10,
+            color=TEXT_COLOR, ha='center', alpha=0.75, zorder=6)
+    ax.text(0.24, 0.55, r'$C = \frac{1}{\varphi\sqrt{2}}$', fontsize=20,
+            color=PURPLE, ha='center', zorder=6)
+    ax.text(0.24, 0.44, '= 0.4370', fontsize=18, color=GOLD,
+            ha='center', fontweight='bold', zorder=6)
+
+    # Right box — DANDI empirical
+    right = patches.FancyBboxPatch((0.57, 0.35), 0.38, 0.42,
+                                    boxstyle='round,pad=0.02',
+                                    facecolor='#0a0820', edgecolor=GREEN,
+                                    linewidth=2, alpha=0.95, zorder=4)
+    ax.add_patch(right)
+    ax.text(0.76, 0.73, 'DANDI:000552', fontsize=13, color=GREEN, ha='center',
+            fontweight='bold', fontfamily='monospace', zorder=6)
+    ax.text(0.76, 0.66, 'Neural LCC  (17 subjects)', fontsize=10,
+            color=TEXT_COLOR, ha='center', alpha=0.75, zorder=6)
+    ax.text(0.76, 0.57, 'Mean LCC =', fontsize=13, color=TEXT_COLOR,
+            ha='center', alpha=0.85, zorder=6)
+    ax.text(0.76, 0.46, '0.4349', fontsize=22, color=GREEN,
+            ha='center', fontweight='bold', zorder=6)
+
+    # Arrow and convergence label
+    ax.annotate('', xy=(0.57, 0.565), xytext=(0.43, 0.565),
+                arrowprops=dict(arrowstyle='<->', color=GOLD, lw=2.5), zorder=7)
+    ax.text(0.5, 0.615, 'Δ = 0.0021', fontsize=11, color=GOLD, ha='center',
+            fontweight='bold', zorder=7)
+    ax.text(0.5, 0.515, '< 0.5%', fontsize=13, color=GOLD, ha='center',
+            fontweight='bold', zorder=7)
+
+    # Bottom conclusion
+    conc = patches.FancyBboxPatch((0.05, 0.10), 0.90, 0.20,
+                                   boxstyle='round,pad=0.02',
+                                   facecolor='#05050f', edgecolor=GOLD,
+                                   linewidth=1.5, alpha=0.90, zorder=4)
+    ax.add_patch(conc)
+    ax.text(0.5, 0.225, 'Two independent methods. One number.',
+            fontsize=14, color=GOLD, ha='center', fontweight='bold', zorder=6)
+    ax.text(0.5, 0.155,
+            'Mathematical derivation and empirical neuroscience converge on C_EMERICK within 0.5%',
+            fontsize=10, color=TEXT_COLOR, ha='center', alpha=0.80, zorder=6)
+
+    _draw_letterbox(ax, bar_h=0.07)
+    ax.text(0.5, 0.038, 'PRIMARY Constants: { 0, 1, i, √2, e, φ, π, C }',
+            fontsize=9, color=GOLD, ha='center', alpha=0.7,
+            fontfamily='monospace', zorder=21)
+
+    plt.savefig(output_path, facecolor=BG_COLOR, dpi=100, bbox_inches=None)
+    plt.close()
+    return output_path
+
+
+def produce_paper_398_video(output_path: str = None) -> str:
+    """
+    Produce Paper #398/399 — The Ideomotor Effect explainer video.
+    ~3.5 minutes | 4 visual sections | TTS narration
+    'Your Body Reads the Room Before You Do'
+    """
+    if output_path is None:
+        output_path = os.path.join(VIDEO_DIR, 'paper_398_ideomotor_effect.mp4')
+
+    print("=" * 65)
+    print("  TI SIGMA VIDEO PRODUCER")
+    print("  Paper #398/399 — The Ideomotor Effect")
+    print("  'Your Body Reads the Room Before You Do'")
+    print("=" * 65)
+
+    tmpdir = tempfile.mkdtemp(prefix='ti_frames_398_')
+    try:
+        print("\n[1/5] Rendering visual frames...")
+
+        title_path  = os.path.join(tmpdir, 'title.png')
+        sig_path    = os.path.join(tmpdir, 'sigmoid_accuracy.png')
+        dandi_path  = os.path.join(tmpdir, 'dandi_comparison.png')
+        lcc_path    = os.path.join(tmpdir, 'lcc_thresholds.png')
+
+        render_title_card(
+            title       = "Your Body Reads the Room\nBefore You Do",
+            subtitle    = "The Ideomotor Effect as Somatic Coherence Transduction\n\nPapers #398–399 — TI Sigma URB Series",
+            output_path = title_path,
+        )
+        print("  ✓ Title card")
+
+        render_ideomotor_accuracy_chart(sig_path)
+        print("  ✓ Sigmoid accuracy chart")
+
+        render_dandi_comparison_chart(dandi_path)
+        print("  ✓ DANDI convergence chart")
+
+        render_lcc_thresholds_chart(lcc_path)
+        print("  ✓ LCC threshold zones")
+
+        print("\n[2/5] Generating narration audio...")
+        audio_path = os.path.join(tmpdir, 'narration.mp3')
+        generate_narration(SCRIPT_PAPER_398, audio_path)
+
+        print("\n[3/5] Generating subtitle file...")
+        words   = SCRIPT_PAPER_398.split()
+        wps     = 2.3
+        seg_dur = 4.0
+        segments, i, t = [], 0, 0.0
+        while i < len(words):
+            chunk = words[i:i+int(seg_dur*wps)]
+            segments.append((t, t + seg_dur, ' '.join(chunk)))
+            t += seg_dur
+            i += len(chunk)
+        srt_path = os.path.join(tmpdir, 'subs.srt')
+        generate_srt(segments, srt_path)
+        print(f"  ✓ {len(segments)} subtitle segments")
+
+        print("\n[4/5] Assembling MP4 with FFmpeg...")
+        frame_schedule = [
+            (title_path, 12.0),
+            (sig_path,   110.0),
+            (dandi_path, 90.0),
+            (lcc_path,   90.0),
+        ]
+        frames_to_video(frame_schedule, audio_path, output_path, srt_path=srt_path)
+
+        print("\n[5/5] Verification...")
+        if os.path.exists(output_path):
+            size_mb = os.path.getsize(output_path) / 1e6
+            print(f"  ✓ Output: {output_path}")
+            print(f"  ✓ Size:   {size_mb:.1f} MB")
+        else:
+            print(f"  ✗ Output not found: {output_path}")
+
+    finally:
+        shutil.rmtree(tmpdir, ignore_errors=True)
+
+    print("\n" + "=" * 65)
+    print("  VIDEO #2 PRODUCTION COMPLETE")
+    print(f"  → {output_path}")
+    print("  Ready for CapCut final edit + YouTube upload")
+    print("=" * 65)
+    return output_path
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PUBLIC API
+# ─────────────────────────────────────────────────────────────────────────────
+
 def produce_video(
-    title:       str,
-    topic:       str  = 'consciousness_equation',
+    title:       str  = '',
+    topic:       str  = 'paper_352',
     output_path: str  = None,
     voice:       str  = 'onyx',
 ) -> str:
     """
-    Public API for producing TI Sigma videos.
+    Produce a TI Sigma video.
 
-    Currently supports topic='consciousness_equation' (Paper #352).
-    Additional topics will be added as new papers are published.
+    Topics:
+      'consciousness_equation' / 'paper_352'  — Paper #352 (video #1)
+      'ideomotor' / 'paper_398'               — Papers #398–399 (video #2)
     """
-    if topic == 'consciousness_equation' or topic == 'paper_352':
+    if topic in ('consciousness_equation', 'paper_352'):
         return produce_paper_352_video(output_path)
+    elif topic in ('ideomotor', 'paper_398', 'paper_399'):
+        return produce_paper_398_video(output_path)
     else:
-        raise ValueError(f"Unknown topic '{topic}'. Available: 'consciousness_equation'")
+        raise ValueError(
+            f"Unknown topic '{topic}'. "
+            "Available: 'paper_352', 'paper_398'"
+        )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -782,5 +1093,15 @@ def produce_video(
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
-    output = produce_paper_352_video()
+    import argparse
+    parser = argparse.ArgumentParser(description='TI Sigma Video Producer')
+    parser.add_argument('--paper', default='398',
+                        help="Which paper to produce: 352 (default) or 398")
+    args = parser.parse_args()
+
+    if args.paper == '352':
+        output = produce_paper_352_video()
+    else:
+        output = produce_paper_398_video()
+
     print(f"\nDone! Open {output} to review before uploading to CapCut/YouTube.")
