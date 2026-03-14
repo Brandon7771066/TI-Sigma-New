@@ -1,0 +1,108 @@
+{
+  "run_date": "2026-03-14T20:07:51.580667",
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "sqrt2": 1.4142135623730951,
+  "tau_adapt_ms": 207.80869212350274,
+  "test_A_isolated": {
+    "n_trials": 50,
+    "mean": 0.7675151743176228,
+    "se": 0.010051887077186784,
+    "std": 0.071077575160002,
+    "target_1_over_phi": 0.6180339887498948,
+    "t_stat": 14.870957504783597,
+    "p_value": 8.548360257219896e-20,
+    "phi_in_ci": false,
+    "confirmed": false
+  },
+  "test_B_network": {
+    "n_trials": 50,
+    "mean": 0.699231351805789,
+    "se": 0.0032354255182946196,
+    "std": 0.022877913240101258,
+    "target_1_over_sqrt2": 0.7071067811865475,
+    "t_stat": -2.434124765421761,
+    "p_value": 0.018618494987651533,
+    "sqrt2_in_ci": false,
+    "confirmed": false
+  },
+  "test_C_trinity": {
+    "measured_product": 0.5366706728695672,
+    "c_emerick": 0.43701602444882104,
+    "z_score": 13.368623352814545,
+    "se_product": 0.007454368770122128,
+    "confirmed": false
+  },
+  "trinity_confirmed": false,
+  "scorecard": {
+    "n_pass": 12,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "GW bottleneck (PLM lesion to LCC=0)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Generalized MSR p<0.0001 d=1.907",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Multi-modal soul preservation (3 modalities)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "\u03c6-Scaling: W2/W1 near 1/\u03c6 (URBs #404-405)",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "Consciousness Scaling Law \u03b2=1.505 N*\u224866",
+        "passed": true,
+        "paper": "#407"
+      },
+      {
+        "name": "\u03a6_norm \u2265 C_EMERICK (4-pt extrapolated N=302)",
+        "passed": true,
+        "paper": "#407"
+      },
+      {
+        "name": "\u03c6-\u221a2 Trinity: isolated\u21921/\u03c6, net\u21921/\u221a2, C=product",
+        "passed": false,
+        "paper": "#408"
+      }
+    ]
+  }
+}
