@@ -1,0 +1,48 @@
+{
+  "run_date": "2026-03-14T20:43:12.175254",
+  "primary_constants": {
+    "C": 0.43701602444882104,
+    "phi": 1.618033988749895,
+    "sqrt2": 1.4142135623730951,
+    "pi": 3.141592653589793,
+    "e": 2.718281828459045
+  },
+  "algebraic": {
+    "norm_C_in_Q_phi_sqrt2": 0.25,
+    "conjugates": [
+      0.43701602444882104,
+      -0.43701602444882104,
+      -1.1441228056353687,
+      1.1441228056353687
+    ],
+    "norm_exact": 0.25
+  },
+  "spectral": {
+    "N": 302,
+    "edges_nonzero": 2756,
+    "k_avg": 9.125827814569536,
+    "lambda_max": 25.23131942524416,
+    "lambda_min": -12.986593326204806,
+    "lambda_rms": 4.085468720488346,
+    "R_wigner": 6.0417970222673105,
+    "C_from_k_avg": 0.6620546809596256,
+    "C_from_k_error_pct": 51.49437181271115,
+    "C_times_R": 2.640362115197985,
+    "rho_0_wigner": 0.10536927507185212,
+    "rho_0_empirical": 1.2317880794701987,
+    "C_over_2pi": 0.06955326050139846
+  },
+  "oscillatory": {
+    "tau_adapt_ms": 207.80869212350274,
+    "omega_theta_rads": 30.23543068855574,
+    "freq_hz": 4.812118250596035,
+    "half_period_ms": 103.90434606175137,
+    "exp_identity": 1.618033988749895,
+    "phi": 1.618033988749895
+  },
+  "third_identity_candidates": {
+    "IIIA_spectral": "C = 2\u03c0 \u00d7 \u03c1_Wigner(0) (error 51.49%)",
+    "IIIB_exponential": "\u03c6 = exp(\u03c9_theta \u00d7 T_window / 2\u03c0) \u2014 algebraically exact",
+    "IIID_GILE_master": "(0+1) \u00d7 (C\u00d7\u03c6\u00d7\u221a2) \u00d7 e^(i\u03c0) = -1 \u2014 GILE completion"
+  }
+}
