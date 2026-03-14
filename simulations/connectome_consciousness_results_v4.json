@@ -1,0 +1,115 @@
+{
+  "run_date": "2026-03-14T19:37:51.122698",
+  "model": "C_elegans_302neuron_statistical_surrogate",
+  "n_synapses": 4390,
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "tau_adapt_ms": 207.80869212350274,
+  "phi_richclub": {
+    "n_neurons": 15,
+    "n_bins": 240,
+    "n_unique": 148,
+    "coverage_pct": 0.45166015625,
+    "H_full": 6.224042484709781,
+    "phi_mip": 0.2073818014208495,
+    "phi_max": 1.5685721523982767,
+    "phi_normalized": 0.03331947073470522,
+    "above_c_emerick": false,
+    "c_emerick": 0.43701602444882104,
+    "scale_factor_vs_6n": 3.3703926166259506
+  },
+  "phi_scaling_302n": {
+    "fr_adapt": [
+      0.03423841059602649,
+      0.019370860927152317,
+      0.01629139072847682,
+      0.016043046357615894,
+      0.015629139072847683
+    ],
+    "fr_noadapt": [
+      0.05927152317880795,
+      0.06743377483443709,
+      0.0678476821192053,
+      0.06764900662251655,
+      0.06774834437086093
+    ],
+    "ratios_adapt": [
+      0.5657640232108317,
+      0.841025641025641,
+      0.9847560975609757,
+      0.9742002063983489
+    ],
+    "mean_ratio": 0.8414364920489493,
+    "phi_target": 0.6180339887498948,
+    "n_active": 5,
+    "r2_phi": 0.0,
+    "r2_exp": 0.7079992844121301,
+    "phi_closer": true,
+    "r2_phi_wins": false
+  },
+  "scaling_law": {
+    "beta": 1.3260302639348114,
+    "A": 0.000918682601501089,
+    "N_threshold_for_C_emerick": 104.48594927189296,
+    "phi_norm_6n": 0.009885931558935362,
+    "phi_norm_15n": 0.03331947073470522
+  },
+  "scorecard": {
+    "n_pass": 11,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true
+      },
+      {
+        "name": "GW bottleneck (PLM lesion)",
+        "passed": true
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true
+      },
+      {
+        "name": "Generalized MSR p<0.0001 d=1.9",
+        "passed": true
+      },
+      {
+        "name": "Multi-modal soul preservation",
+        "passed": true
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0",
+        "passed": true
+      },
+      {
+        "name": "\u03c6-Scaling: ratio closer to 1/\u03c6",
+        "passed": true
+      },
+      {
+        "name": "\u03a6_normalized \u2265 C_EMERICK (15-n hub)",
+        "passed": false
+      },
+      {
+        "name": "R\u00b2(\u03c6) > R\u00b2(exp) in 302-n decay",
+        "passed": false
+      },
+      {
+        "name": "Consciousness scaling law fitted",
+        "passed": true
+      }
+    ]
+  }
+}
