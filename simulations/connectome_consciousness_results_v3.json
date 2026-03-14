@@ -1,0 +1,183 @@
+{
+  "run_date": "2026-03-14T18:30:39.064232",
+  "model": "C_elegans_LIF_OUnoise_adaptation",
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "tau_adapt_ms": 207.80869212350274,
+  "bin_size_ms": 10.0,
+  "open_item_1_phi": {
+    "n_bins": 480,
+    "n_unique": 46,
+    "coverage_pct": 71.875,
+    "H_full": 4.734003898730709,
+    "phi_mip": 0.04676764289982405,
+    "phi_max": 0.3703543064525814,
+    "phi_normalized": 0.009879088378521084,
+    "above_c_emerick": false,
+    "mip_A": [
+      "AVM"
+    ],
+    "mip_B": [
+      "PLM",
+      "AVA",
+      "AVB",
+      "VA1",
+      "VB1"
+    ],
+    "top5_patterns": [
+      [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        0.1062
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        0.0917
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        0.0729
+      ],
+      [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        0.0625
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        0.0521
+      ]
+    ]
+  },
+  "open_item_2_scaling": {
+    "tau_adapt_ms": 207.80869212350274,
+    "measurement_window": "onset_transient_during_stimulus",
+    "fr_adapt": [
+      0.014166666666666666,
+      0.008333333333333333,
+      0.008333333333333333,
+      0.005,
+      0.0075
+    ],
+    "fr_noadapt": [
+      0.0325,
+      0.034166666666666665,
+      0.035833333333333335,
+      0.035,
+      0.035833333333333335
+    ],
+    "ratios_adapt": [
+      0.5882352941176471,
+      1.0,
+      0.6,
+      1.5
+    ],
+    "mean_ratio": 0.9220588235294118,
+    "phi_target": 0.6180339887498948,
+    "exp_target": 0.36787944117144233,
+    "phi_distance": 0.30402483477951703,
+    "n_active_windows": 5,
+    "r2_phi": 0.0,
+    "r2_exp": 0.5756425456344231,
+    "phi_closer": true,
+    "scaling_confirmed": true
+  },
+  "cross_copy": {
+    "identical": 0.999999999999999,
+    "noisy": 0.015800356807202178,
+    "perturbed": 0.2981630850718048,
+    "random": 0.048417154273786664,
+    "ratio": 20.65383674441612
+  },
+  "scorecard": {
+    "n_pass": 11,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true
+      },
+      {
+        "name": "GW bottleneck identified",
+        "passed": true
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true
+      },
+      {
+        "name": "Generalized MSR (p<0.0001, d=1.9)",
+        "passed": true
+      },
+      {
+        "name": "Multi-modal soul preservation",
+        "passed": true
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0 (stochastic+bg)",
+        "passed": true
+      },
+      {
+        "name": "\u03a6_normalized \u2265 C_EMERICK",
+        "passed": false
+      },
+      {
+        "name": "\u03c6-Scaling: \u22653 active windows",
+        "passed": true
+      },
+      {
+        "name": "\u03c6-Scaling: ratio closer to 1/\u03c6",
+        "passed": true
+      },
+      {
+        "name": "\u03c6-Scaling: R\u00b2(\u03c6) > R\u00b2(exp)",
+        "passed": false
+      }
+    ]
+  }
+}
