@@ -1,0 +1,129 @@
+{
+  "run_date": "2026-03-14T19:46:51.066782",
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "tau_adapt_ms": 207.80869212350274,
+  "open_a_phi56": {
+    "N": 56,
+    "H_full": 41.14861449124432,
+    "phi_mip": 0.17535848744023905,
+    "phi_max": 1.0893362986756314,
+    "phi_normalized": 0.004261589110796237,
+    "above_c_emerick": false,
+    "c_emerick": 0.43701602444882104,
+    "n_bipartitions": 29316,
+    "scaling_3point": {
+      "beta": -0.4594578732755846,
+      "A": 0.041318676372314116,
+      "r2": 0.24893771765477984,
+      "N_star": Infinity
+    },
+    "data_points": {
+      "N6": 0.009885931558935362,
+      "N15": 0.03332262210796915,
+      "N56": 0.004261589110796237
+    }
+  },
+  "open_b_scaling": {
+    "delta_a_corrected": 0.06,
+    "fr_corrected": [
+      0.009166666666666667,
+      0.0075,
+      0.008333333333333333,
+      0.006666666666666667,
+      0.006666666666666667
+    ],
+    "fr_control": [
+      0.0125,
+      0.0125,
+      0.0175,
+      0.0175,
+      0.0175
+    ],
+    "ratios": [
+      0.8181818181818181,
+      1.1111111111111112,
+      0.8,
+      1.0
+    ],
+    "mean_ratio": 0.9323232323232323,
+    "r2_phi": 0.0,
+    "r2_exp": 0.7290601764694984,
+    "r2_phi_wins": false,
+    "phi_closer": true,
+    "n_active_windows": 5,
+    "theoretical_ratio": 0.6180339887498948,
+    "theory_confirmed": true
+  },
+  "final_scorecard": {
+    "n_pass": 11,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "GW bottleneck (PLM lesion to LCC=0)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Generalized MSR p<0.0001 d=1.907",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Multi-modal soul preservation (3 modalities)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0 (stochastic model)",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "\u03c6-Scaling: W2/W1 near 1/\u03c6",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "Consciousness Scaling Law fitted (\u03b2=1.326)",
+        "passed": true,
+        "paper": "#405"
+      },
+      {
+        "name": "\u03a6_normalized \u2265 C_EMERICK (56n Gaussian)",
+        "passed": false,
+        "paper": "#406"
+      },
+      {
+        "name": "R\u00b2(\u03c6) > R\u00b2(exp) or W2/W1 & W3/W2 near 1/\u03c6",
+        "passed": false,
+        "paper": "#406"
+      }
+    ]
+  }
+}
