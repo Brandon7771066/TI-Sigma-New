@@ -1,0 +1,146 @@
+{
+  "run_date": "2026-03-14T20:17:23.614943",
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "sqrt2": 1.4142135623730951,
+  "tau_adapt_ms": 207.80869212350274,
+  "regime_sweep": [
+    {
+      "I0": 1.2,
+      "w2w1": 0.4444444444444444,
+      "fr_ss": 8.499999810010195
+    },
+    {
+      "I0": 1.4,
+      "w2w1": 0.2833333333333333,
+      "fr_ss": 9.999999776482582
+    },
+    {
+      "I0": 1.5,
+      "w2w1": 0.4,
+      "fr_ss": 13.999999687075615
+    },
+    {
+      "I0": 1.6,
+      "w2w1": 0.3649999910593034,
+      "fr_ss": 18.999999575316906
+    },
+    {
+      "I0": 1.8,
+      "w2w1": 0.31999999552965164,
+      "fr_ss": 19.499999564141035
+    },
+    {
+      "I0": 2.0,
+      "w2w1": 0.34285713373398297,
+      "fr_ss": 28.499999456107616
+    },
+    {
+      "I0": 2.5,
+      "w2w1": 0.3833333217435416,
+      "fr_ss": 37.99999933689833
+    },
+    {
+      "I0": 3.0,
+      "w2w1": 0.383333341094355,
+      "fr_ss": 48.500000685453415
+    }
+  ],
+  "isolated_50trial": {
+    "n": 48,
+    "mean": 0.4357638857844804,
+    "se": 0.04045517014452069,
+    "std": 0.2802816404766136,
+    "target": 0.6180339887498948,
+    "t_stat": -4.505483534348732,
+    "p_value": 4.378131800567955e-05,
+    "phi_in_ci": false,
+    "confirmed": false,
+    "ci": [
+      0.35647175230121986,
+      0.5150560192677409
+    ]
+  },
+  "network_50trial": {
+    "mean": 0.6992,
+    "se": 0.0032,
+    "target": 0.7071067811865475
+  },
+  "trinity": {
+    "isolated_confirmed": false,
+    "algebraic_identity": true,
+    "empirical_product": 0.3046861089405087,
+    "c_emerick": 0.43701602444882104
+  },
+  "scorecard": {
+    "n_pass": 12,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "GW bottleneck (PLM lesion to LCC=0)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Generalized MSR p<0.0001 d=1.907",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Multi-modal soul preservation (3 modalities)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "\u03c6-Scaling: W2/W1 near 1/\u03c6 (single-run URBs 404-5)",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "Consciousness Scaling Law \u03b2=1.505 N*\u224866",
+        "passed": true,
+        "paper": "#407"
+      },
+      {
+        "name": "\u03a6_norm \u2265 C_EMERICK (4-pt extrapolated N=302)",
+        "passed": true,
+        "paper": "#407"
+      },
+      {
+        "name": "Trinity: isolated\u21921/\u03c6, network\u21921/\u221a2, C=(1/\u03c6)(1/\u221a2)",
+        "passed": false,
+        "paper": "#409"
+      }
+    ]
+  }
+}
