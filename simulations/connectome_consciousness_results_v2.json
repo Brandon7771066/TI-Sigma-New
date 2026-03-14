@@ -1,0 +1,168 @@
+{
+  "run_date": "2026-03-14T17:04:08.168630",
+  "model": "C_elegans_touch+thermo+chemo_12_LIF",
+  "c_emerick": 0.43701602444882104,
+  "phi_golden": 1.618033988749895,
+  "test_1_discrete_phi": {
+    "H_full_bits": -1.4428232973175175e-12,
+    "n_patterns": 1,
+    "phi_mip": 1.4428232973175175e-12,
+    "phi_max": 1.4428232973175175e-12,
+    "phi_normalized": 0.0014428232973175174,
+    "above_c_emerick": false,
+    "mip_A": [
+      0
+    ],
+    "mip_B": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "test_2_gw_lesion": {
+    "bottleneck_neuron": "PLM",
+    "bottleneck_lcc_drop": 1.0,
+    "lesion_table": [
+      {
+        "neuron": "PLM",
+        "residual_lcc": 0.0,
+        "lcc_drop": 1.0
+      },
+      {
+        "neuron": "AVM",
+        "residual_lcc": 0.9999999999999991,
+        "lcc_drop": 8.881784197001252e-16
+      },
+      {
+        "neuron": "AVB",
+        "residual_lcc": 0.9999999999999991,
+        "lcc_drop": 8.881784197001252e-16
+      },
+      {
+        "neuron": "VB1",
+        "residual_lcc": 0.9999999999999991,
+        "lcc_drop": 8.881784197001252e-16
+      },
+      {
+        "neuron": "AVA",
+        "residual_lcc": 1.0,
+        "lcc_drop": 0.0
+      },
+      {
+        "neuron": "VA1",
+        "residual_lcc": 1.0,
+        "lcc_drop": 0.0
+      }
+    ]
+  },
+  "test_3_phi_scaling": {
+    "fr_per_window": [
+      0.008333333333333333,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sequential_ratios": [
+      0.0,
+      null,
+      null,
+      null
+    ],
+    "mean_ratio": 0.0,
+    "phi_ratio": 0.6180339887498948,
+    "exp_ratio": 0.36787944117144233,
+    "phi_distance": 0.6180339887498948,
+    "exp_distance": 0.36787944117144233,
+    "phi_scaling_confirmed": false,
+    "r2_phi": 0.0,
+    "r2_exp": 0.0
+  },
+  "test_4_gen_msr": {
+    "n_trials": 20,
+    "mean_self_lcc": 0.046648353711312845,
+    "mean_other_lcc": 0.03576761266242275,
+    "std_self": 1.5672655685328788e-05,
+    "std_other": 0.008067818400300561,
+    "t_stat": 5.882107178864973,
+    "p_value": 1.1542512461929361e-05,
+    "cohens_d": 1.907289153270942,
+    "msr_positive": true,
+    "self_above_c": false
+  },
+  "test_5_extended": {
+    "lcc_identical_12": 0.9999999999999993,
+    "lcc_random_12": 0.003912217955900767,
+    "lcc_touch_in_multi": 0.9999999999999991,
+    "lcc_therm_in_multi": 0.9999999999999991,
+    "lcc_chem_in_multi": 1.0,
+    "fr_ava_multi": 0.0,
+    "fr_avb_multi": 0.0,
+    "phi_12_subspace": {
+      "H_full_bits": -1.4428232973175175e-12,
+      "n_patterns": 1,
+      "phi_mip": 1.4428232973175175e-12,
+      "phi_max": 1.4428232973175175e-12,
+      "phi_normalized": 0.0014428232973175174,
+      "above_c_emerick": false,
+      "mip_A": [
+        0
+      ],
+      "mip_B": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "scorecard": {
+    "URB_402": "4/6",
+    "URB_403": "6/10"
+  },
+  "criteria": [
+    {
+      "name": "Discrete \u03a6 > 0 at MIP",
+      "passed": true
+    },
+    {
+      "name": "\u03a6_normalized \u2265 C_EMERICK",
+      "passed": false
+    },
+    {
+      "name": "GW bottleneck identified",
+      "passed": true
+    },
+    {
+      "name": "Lesion drops LCC below C",
+      "passed": true
+    },
+    {
+      "name": "\u03c6-scaling confirmed",
+      "passed": false
+    },
+    {
+      "name": "R\u00b2(\u03c6) > R\u00b2(exp)",
+      "passed": false
+    },
+    {
+      "name": "Generalized MSR positive",
+      "passed": true
+    },
+    {
+      "name": "Self-LCC > C_EMERICK",
+      "passed": false
+    },
+    {
+      "name": "12-neuron identical LCC > C",
+      "passed": true
+    },
+    {
+      "name": "Modalities preserved in multi-modal",
+      "passed": true
+    }
+  ]
+}
