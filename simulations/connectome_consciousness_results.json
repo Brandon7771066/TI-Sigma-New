@@ -1,0 +1,117 @@
+{
+  "run_date": "2026-03-14T15:04:07.833553",
+  "model": "C_elegans_touch_circuit_6_LIF",
+  "c_emerick": 0.43701602444882104,
+  "test_1_cross_copy": {
+    "identical_copies": 0.9999999999999996,
+    "noisy_same_W": 0.4605215001335402,
+    "perturbed_5pct": 0.5230125523012548,
+    "random_connectome": 0.002621165954383527
+  },
+  "test_2_msr": {
+    "lcc_self_mirror": 0.029331567134899983,
+    "lcc_self_other": 0.540711346266902,
+    "msr_selectivity": 666666666.6666666,
+    "msr_positive": false,
+    "fr_self": [
+      0.0,
+      0.0,
+      56.0,
+      0.0,
+      56.0,
+      0.0
+    ],
+    "fr_mirror": [
+      0.0,
+      0.0,
+      58.0,
+      0.0,
+      58.0,
+      0.0
+    ],
+    "fr_other": [
+      0.0,
+      0.0,
+      56.0,
+      0.0,
+      56.0,
+      0.0
+    ]
+  },
+  "test_3_free_will": {
+    "deterministic_var": 0.0,
+    "noise_var": 1.564333333333335,
+    "butterfly_sensitivity": 0.16666666666666666,
+    "entropy_excess": -1.5178919272372533,
+    "verdict": "INDETERMINATE: LIF model is deterministic; biological noise adds physical variance but not genuine indeterminism. Quantum substrate (not simulated here) required for true free will. Sensitivity analysis: 1/6 neurons show chaotic sensitivity."
+  },
+  "test_4_phi": {
+    "H_full": -31.23434920466141,
+    "n_partitions": 41,
+    "min_phi": 0.0,
+    "max_phi": 3.552713678800501e-15,
+    "mean_phi": 1.5597279565465614e-15,
+    "normalized_phi": 0.0,
+    "above_c_emerick": false,
+    "mip_partition": {
+      "A": [
+        2
+      ],
+      "B": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "test_5_valence": {
+    "aversive_motor_ratio": 88000000000.0,
+    "appetitive_motor_ratio": 86000000000.0,
+    "asymmetry_score": 7.568e+21,
+    "lcc_between_valences": 0.0
+  },
+  "tralse_joule": {
+    "TJ_quantum_J": 6.435335874471119e-33,
+    "TJ_thermal_J": 1.8695545525920562e-21,
+    "TJ_psi_J": 3.0250028099160504e-21,
+    "TJ_euler_J": 3.977256299444678e-33,
+    "TJ_preferred": 6.435335874471119e-33,
+    "preferred_eV": 4.0170635920543815e-14,
+    "n_TJ_per_theta_moment": 0.6177766129925162
+  },
+  "de_photon_time": {
+    "E_DE_photon_J": 2.39274e-52,
+    "T_DE_photon_s": 2.7692101941707e+18,
+    "f_DE_photon_Hz": 3.611137941442801e-19,
+    "t_s_threshold_s": 0.3813742685451229,
+    "t_s_phi_s": 0.2696723314583158,
+    "ratio_threshold": 1.377195091033289e-19,
+    "ratio_phi": 9.738239878864633e-20,
+    "N_neurons_equiv": 3.151360622920527e-19
+  },
+  "additional_tests": [
+    {
+      "name": "Global Workspace Bottleneck",
+      "description": "Find the neuron/assembly through which maximum mutual information flows across all network partitions. GWT predicts a 'broadcast hub' in conscious systems. In C. elegans: AVA/AVB command interneurons are candidates. Test: remove each neuron; measure LCC degradation. Conscious signature: one neuron whose removal drops LCC below C_EMERICK."
+    },
+    {
+      "name": "Predictive Processing Gain",
+      "description": "Present the network with a structured sequence (ABABABAB...). Measure: does firing rate drop (suppression) after pattern established? Conscious systems build internal models and predict \u2014 generating less firing when prediction succeeds. Test via mutual information between past and future outputs."
+    },
+    {
+      "name": "Temporal Binding Width",
+      "description": "How long a time window does the network integrate before committing to a response? Conscious systems have a longer temporal binding window (Otto & Eimer, 2005). Test: vary stimulus onset asynchrony (SOA); find the SOA where LCC between stimulus and response drops below C_EMERICK. That is the subjective 'now' width."
+    },
+    {
+      "name": "Recurrent Amplification (\u03c6-scaling)",
+      "description": "After a stimulus, does activity show \u03c6-scaled amplification across sequential time windows? If LCC ratio between windows follows \u03c6^n (geometric), that is evidence for attractor dynamics consistent with the mood amplifier model. Non-conscious systems (feedforward only) should not show this scaling."
+    },
+    {
+      "name": "Self-Other Distinction via LCC Cross-Correlation",
+      "description": "Present two networks (A, B). Compute LCC(A_output, A_input) vs. LCC(A_output, B_input). Conscious networks should show higher self-coherence than cross-coherence. This generalizes MSR without requiring a physical mirror \u2014 only temporal statistics."
+    }
+  ],
+  "score": "4/6"
+}
