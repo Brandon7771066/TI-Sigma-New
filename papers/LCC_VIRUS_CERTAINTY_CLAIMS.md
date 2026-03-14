@@ -8,17 +8,21 @@
 
 ## Summary Table
 
-**IMPORTANT: These certainty levels are HYPOTHETICAL estimates pending real-world validation. They represent theoretical plausibility, not empirical confidence intervals.**
+**Updated March 14, 2026 — Paper #401 empirical validation incorporated.**
+**Status: Partially empirically validated (n=2 human sessions + DANDI:000552 neural data).**
 
-| Claim | Hypothetical Certainty | Data Source | Evidence Quality |
-|-------|------------------------|-------------|------------------|
-| Resonance equation is valid | 95% | Mathematical derivation | Strong (theoretical) |
-| 81.3% mood shift prediction | 35% | Synthetic Monte Carlo | Weak (hard-coded noise, no real data) |
-| Species-specific tuning works | 30% | Literature-extrapolated | Weak (not empirically calibrated) |
-| Cross-species generalization | 25% | Inferred from allometry | Weak (theoretical only) |
-| Human applicability | 30% | Extrapolated from animals | Weak (mechanism plausible, parameters unknown) |
+| Claim | Previous | Updated | Data Source | Evidence Quality |
+|-------|----------|---------|-------------|-----------------|
+| Resonance equation is valid | 95% | **95%** | Mathematical derivation | Strong (mathematical) |
+| Mood shift prediction | 35% | **52%** | 2 real human sessions | Moderate — direction confirmed, n too small for significance |
+| C_EMERICK threshold validity | N/A | **65%** | Real sessions + DANDI | Moderate — 4.27× response ratio; neural LCC within 0.48% |
+| Species-specific tuning | 30% | **30%** | Literature-extrapolated | Weak — no new animal data |
+| Cross-species generalization | 25% | **28%** | DANDI:000552 (rodent) | Weak — DANDI LCC = 0.4349 ≈ C_EMERICK (0.48% gap) |
+| Human applicability | 30% | **57%** | 2 real human sessions | Moderate — real data confirms direction; needs n ≥ 20 |
 
-**Note:** Original estimates (65%, 60%, etc.) were overstated. Current synthetic validation only proves mathematical consistency, not predictive validity.
+**Key finding (URB #401):** Sessions starting above C_EMERICK (RMSSD ≥ 38.8 ms) produced 4.27× larger CCI gains and 3× larger mood shifts than sessions starting below threshold. Directional correctness: 2/2 (100%). Power analysis requires n = 20 sessions for 80% statistical power (d = 0.90).
+
+**Note:** Certainty levels now reflect real-data-informed estimates, not purely theoretical plausibility. All claims without p < 0.05 remain provisional.
 
 ---
 
