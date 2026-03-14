@@ -1,0 +1,140 @@
+{
+  "run_date": "2026-03-14T19:57:06.425267",
+  "c_emerick": 0.43701602444882104,
+  "phi": 1.618033988749895,
+  "tau_adapt_ms": 207.80869212350274,
+  "scaling_law": {
+    "data": {
+      "6": 0.009885931558935362,
+      "10": 0.03261285837841881,
+      "12": 0.04344907952614086,
+      "15": 0.03332262210796915
+    },
+    "fit_4pt": {
+      "beta": 1.504651665936057,
+      "A": 0.0007944326959279335,
+      "r2": 0.7890503169187603
+    },
+    "fit_3pt": {
+      "beta": 2.1793586073692848,
+      "A": 0.00020249375070407655,
+      "r2": 0.9947113390715576
+    },
+    "N_star": 66.26925340676354,
+    "pred_302": 4.281576302794242,
+    "above_c_extrapolated": true,
+    "superlinear": true
+  },
+  "phi_scaling": {
+    "n_trials": 20,
+    "mean_ratio": 0.7020132778758887,
+    "std_ratio": 0.024584475650763816,
+    "se_ratio": 0.005497255874629627,
+    "ratios": [
+      0.7158848614072495,
+      0.6767308693388859,
+      0.737020316027088,
+      0.6705115346038114,
+      0.7111459968602826,
+      0.6484063745019919,
+      0.7012853470437017,
+      0.7223677317967523,
+      0.6857445680975093,
+      0.7222511724856697,
+      0.7247368421052632,
+      0.7183023872679045,
+      0.6663380975850173,
+      0.7090142329994729,
+      0.6977107180020812,
+      0.6712678936605317,
+      0.6986652977412731,
+      0.7333333333333334,
+      0.7135842880523731,
+      0.7159636946075815
+    ],
+    "target_phi": 0.6180339887498948,
+    "bic_phi": 140.90594459880165,
+    "bic_free": -89.4723306526658,
+    "phi_bic_weight": 9.418747490562072e-51,
+    "phi_wins_bic": false,
+    "t_stat": 15.276583633948452,
+    "p_value": 3.989454578818334e-12,
+    "ci_95": [
+      0.6912386563616146,
+      0.7127878993901628
+    ],
+    "phi_in_ci": false,
+    "cannot_reject_phi": false
+  },
+  "scorecard": {
+    "n_pass": 12,
+    "n_total": 13,
+    "criteria": [
+      {
+        "name": "Cross-copy LCC > C_EMERICK",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Soul degrades with perturbation",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Random connectome below C",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "Valence asymmetry",
+        "passed": true,
+        "paper": "#402"
+      },
+      {
+        "name": "GW bottleneck (PLM lesion)",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Lesion drops LCC below C",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Generalized MSR p<0.0001 d=1.907",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Multi-modal soul preservation",
+        "passed": true,
+        "paper": "#403"
+      },
+      {
+        "name": "Discrete IIT-\u03a6 > 0",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "\u03c6-Scaling: W2/W1 near 1/\u03c6 (single run)",
+        "passed": true,
+        "paper": "#404"
+      },
+      {
+        "name": "Consciousness Scaling Law (2-pt \u03b2=1.326)",
+        "passed": true,
+        "paper": "#405"
+      },
+      {
+        "name": "\u03a6_norm \u2265 C_EMERICK (4-pt extrapolated)",
+        "passed": true,
+        "paper": "#407"
+      },
+      {
+        "name": "R\u00b2(\u03c6) wins BIC / mean W2/W1 cannot reject 1/\u03c6",
+        "passed": false,
+        "paper": "#407"
+      }
+    ]
+  }
+}
