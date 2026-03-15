@@ -1,0 +1,61 @@
+{
+  "run_date": "2026-03-15T09:14:35.365983",
+  "primary_constants": {
+    "C": 0.43701602444882104,
+    "phi": 1.618033988749895,
+    "sqrt2": 1.4142135623730951,
+    "e": 2.718281828459045,
+    "pi": 3.141592653589793
+  },
+  "minimum_generating_set": [
+    "e",
+    "phi",
+    "sqrt2"
+  ],
+  "degrees_of_freedom": 3,
+  "consciousness_characteristic_polynomial": {
+    "coefficients": {
+      "lambda3": 1,
+      "lambda2": -3.4692635755718113,
+      "lambda1": 3.61338638120718,
+      "constant": -1
+    },
+    "roots": {
+      "C": 0.43701602444882104,
+      "phi": 1.618033988749895,
+      "sqrt2": 1.4142135623730951
+    },
+    "P_at_0": -1.0,
+    "P_at_0_equals": "e^(i*pi) = -1"
+  },
+  "companion_matrix": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      -3.61338638120718
+    ],
+    [
+      0.0,
+      1.0,
+      3.4692635755718113
+    ]
+  ],
+  "companion_eigenvalues": [
+    0.4370160244488215,
+    1.4142135623731027,
+    1.6180339887498871
+  ],
+  "companion_determinant": 1.0,
+  "irreducibility_theorem": "e, phi, sqrt2 are the minimum generating set; no proper subset generates the full system",
+  "open_questions_412": [
+    "Is there a single transcendental equation connecting e, phi, sqrt2?",
+    "What is the geometric interpretation of the Consciousness Manifold?",
+    "Does the 3-freedom structure connect to 3 spatial dimensions?",
+    "Is pi/phi = 1.9416 derivable from e, phi, sqrt2?"
+  ]
+}
