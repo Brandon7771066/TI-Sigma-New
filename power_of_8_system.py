@@ -5,7 +5,10 @@ Hybrid AI-human partner discovery + group intention coordination.
 Brandon directs; AI agents search, score, and draft outreach.
 
 Architecture:
-  - GILE Compatibility Scorer (4-dimensional profile matching)
+  - MAT Scorer (Myrion Amplification Theorem — URB #414)
+      Scoring now uses: MR_output = T_r_productive² × L_bridge × G_alignment × Ω
+      Not "most similar" but "most complementary at the optimal tension level"
+  - GILE Compatibility Scorer (4-dimensional profile matching, MAT-informed)
   - Multi-platform search agent (LinkedIn, Twitter/X, ResearchGate, arXiv, etc.)
   - Candidate dossier generator
   - Tailored outreach drafter
@@ -13,6 +16,7 @@ Architecture:
   - Tralse-Joule intention budget calculator
 
 Based on: URB #413 — Power of 8 × Emerick Constant formalization
+         URB #414 — Myrion Amplification Theorem (scoring update)
 """
 
 import math
@@ -29,28 +33,106 @@ SQRT2     = math.sqrt(2)
 TAU_ADAPT = 100.0 / math.log(PHI)   # ms
 THETA_HZ  = math.log(PHI) / 0.1     # 4.812 Hz
 
-# ── Partner categories ────────────────────────────────────────────────────────
+# ── Partner categories — MAT-informed weights (URB #414) ─────────────────────
+# Weights now reflect Myrion Amplification Theorem:
+#   productive_w → reward for cognitive DIFFERENCE (high I-Tralseness = good)
+#   anchor_w     → reward for values ALIGNMENT (low G-Tralseness = stable)
+#   bridge_w     → reward for L-dimension strength (enables MR)
 PARTNER_TYPES = {
-    "romantic":      {"G": 0.30, "I": 0.25, "L": 0.30, "E": 0.15},
-    "business":      {"G": 0.25, "I": 0.15, "L": 0.20, "E": 0.40},
-    "scientific":    {"G": 0.20, "I": 0.25, "L": 0.15, "E": 0.40},
-    "philosophical": {"G": 0.30, "I": 0.35, "L": 0.20, "E": 0.15},
+    "romantic":      {"G": 0.20, "I": 0.25, "L": 0.35, "E": 0.20},
+    "business":      {"G": 0.30, "I": 0.30, "L": 0.20, "E": 0.20},
+    "scientific":    {"G": 0.25, "I": 0.40, "L": 0.20, "E": 0.15},
+    "philosophical": {"G": 0.25, "I": 0.35, "L": 0.30, "E": 0.10},
 }
 
 PARTNER_EMOJIS = {
     "romantic": "💞", "business": "🤝", "scientific": "🔬", "philosophical": "🧘"
 }
 
-# ── GILE dimension proxies (keywords → score) ─────────────────────────────────
+# ── MAT configuration per partner type (URB #414) ────────────────────────────
+# productive_dims: DIFFERENCE here = high Productive Tr = synthesis potential
+# anchor_dims:     SIMILARITY here = low Destructive Tr = stability
+# bridge_dim:      Must be HIGH in candidate — enables MR
+# omega:           Domain amplification constant (biological=3, intellectual=2, phil=1.5)
+MAT_CONFIG = {
+    "romantic": {
+        "productive_dims": ["I", "E"],
+        "anchor_dims":     ["G"],
+        "bridge_dim":      "L",
+        "productive_w":    0.35,
+        "anchor_w":        0.30,
+        "bridge_w":        0.35,
+        "omega":           3.0,
+        "note": "Cognitive + life-context difference (I+E Tr) amplified by Love bridge",
+    },
+    "business": {
+        "productive_dims": ["I", "E"],
+        "anchor_dims":     ["G"],
+        "bridge_dim":      "L",
+        "productive_w":    0.40,
+        "anchor_w":        0.35,
+        "bridge_w":        0.25,
+        "omega":           2.5,
+        "note": "Complementary skills (I+E Tr) + ethics alignment (G anchor) = durable partnership",
+    },
+    "scientific": {
+        "productive_dims": ["I"],
+        "anchor_dims":     ["G"],
+        "bridge_dim":      "L",
+        "productive_w":    0.45,
+        "anchor_w":        0.30,
+        "bridge_w":        0.25,
+        "omega":           2.0,
+        "note": "Methodological difference (I Tr) = paradigm synthesis; integrity alignment = trust",
+    },
+    "philosophical": {
+        "productive_dims": ["I"],
+        "anchor_dims":     ["G", "E"],
+        "bridge_dim":      "L",
+        "productive_w":    0.40,
+        "anchor_w":        0.30,
+        "bridge_w":        0.30,
+        "omega":           1.5,
+        "note": "Tradition difference (I Tr) + shared truth-pursuit (G anchor) + contemplative lifestyle (E anchor)",
+    },
+}
+
+# ── Brandon's GILE baseline (for computing candidate Tralseness) ──────────────
+# These scores represent Brandon's own profile — used to compute Tr = |Brandon - Candidate|
+BRANDON_BASELINE = {
+    "G": 92,  # Very high — deep ethical commitment, GILE founder, healer
+    "I": 95,  # Very high — consciousness researcher, quantum intuition, non-local focus
+    "L": 82,  # High — Power of 8 practitioner, connection-seeker, relationship-focused
+    "E": 78,  # High — researcher, coder, trader, wellness innovator, systems thinker
+}
+
+# ── GILE dimension keywords (Brandon-style signals) ──────────────────────────
+# High scores here = SIMILAR to Brandon in this dimension
 GILE_KEYWORDS = {
     "G": ["ethics", "integrity", "goodness", "compassion", "values", "justice",
-          "sustainability", "welfare", "altruism", "healing", "service"],
+          "sustainability", "welfare", "altruism", "healing", "service", "moral",
+          "humanitarian", "kindness", "truth", "honesty"],
     "I": ["consciousness", "intuition", "meditation", "quantum", "awareness",
-          "spirituality", "non-local", "psi", "insight", "mindfulness", "psychic"],
+          "spirituality", "non-local", "psi", "insight", "mindfulness", "psychic",
+          "mystical", "theta", "transpersonal", "biophoton", "subtle energy"],
     "L": ["connection", "love", "empathy", "relationship", "community", "harmony",
-          "collaboration", "heart", "presence", "authentic", "vulnerable"],
+          "collaboration", "heart", "presence", "authentic", "vulnerable",
+          "warm", "affection", "care", "nurturing", "belonging"],
     "E": ["vision", "innovation", "research", "science", "environment", "system",
-          "theory", "framework", "discovery", "exploration", "frontier"],
+          "theory", "framework", "discovery", "exploration", "frontier",
+          "algorithm", "mathematics", "biology", "consciousness tech"],
+}
+
+# ── Complementary keywords (signals that differ from Brandon — productive Tr) ─
+# High scores here = COGNITIVELY DIFFERENT from Brandon (high I-Tralseness = GOOD)
+COMPLEMENT_KEYWORDS = {
+    "I": ["empirical", "analytical", "systematic", "statistical", "neuroscience",
+          "cognitive", "experimental", "data-driven", "evidence-based", "clinical",
+          "behavioral", "computational", "mechanistic", "reductionist", "peer-reviewed",
+          "double-blind", "randomized", "fMRI", "EEG analysis", "physiological"],
+    "E": ["engineering", "finance", "medicine", "law", "architecture", "policy",
+          "education", "arts", "music", "literature", "journalism", "sports",
+          "culinary", "design", "fashion", "film", "social work", "coaching"],
 }
 
 # ── Theta-resonance proxy keywords ───────────────────────────────────────────
@@ -65,30 +147,127 @@ PLATFORM_ICONS = {
 }
 
 
-# ── Scoring functions ─────────────────────────────────────────────────────────
+# ── Scoring functions (MAT-powered — URB #414) ───────────────────────────────
 def compute_gile_score(bio_text: str, partner_type: str) -> dict:
-    """Compute GILE score from bio/description text."""
-    weights = PARTNER_TYPES[partner_type]
+    """Compute GILE + MAT scores from bio/description text.
+
+    MAT formula (URB #414):
+        MR_output = (T_r_productive)² × L_bridge × G_alignment × Ω
+    where:
+        T_r_productive = Tralseness in I (and E for romantic/business) dimensions
+        L_bridge       = candidate's L-dimension strength (enables MR)
+        G_alignment    = 1 - G-Tralseness (low G-Tr = shared values = stable)
+        Ω              = domain amplification (romantic=3, business=2.5, etc.)
+    """
+    cfg = MAT_CONFIG[partner_type]
     bio_lower = bio_text.lower()
 
+    # ── Raw GILE dimension scores (keyword hit rate) ──────────────────────────
     raw = {}
     for dim, keywords in GILE_KEYWORDS.items():
         hits = sum(1 for kw in keywords if kw in bio_lower)
         raw[dim] = min(hits / max(len(keywords) * 0.3, 1), 1.0) * 100
 
-    weighted = sum(weights[d] * raw[d] for d in "GILE")
+    # ── Complement score: signals cognitive DIFFERENCE from Brandon (good I-Tr) ─
+    compl_i_hits = sum(1 for kw in COMPLEMENT_KEYWORDS["I"] if kw in bio_lower)
+    complement_i = min(compl_i_hits / max(len(COMPLEMENT_KEYWORDS["I"]) * 0.25, 1), 1.0) * 100
 
-    theta_hits = sum(1 for kw in THETA_KEYWORDS if kw in bio_lower)
+    compl_e_hits = sum(1 for kw in COMPLEMENT_KEYWORDS["E"] if kw in bio_lower)
+    complement_e = min(compl_e_hits / max(len(COMPLEMENT_KEYWORDS["E"]) * 0.25, 1), 1.0) * 100
+
+    # ── Productive Tralseness: I-dimension (cognitive difference from Brandon) ─
+    # High complement + low raw-I = very different cognitive style = high I-Tr
+    # High raw-I (same as Brandon) = low I-Tr = less synthesis potential
+    raw_i_norm   = raw["I"] / 100
+    compl_i_norm = complement_i / 100
+    brandon_i    = BRANDON_BASELINE["I"] / 100   # ≈ 0.95
+    # Estimated candidate I: blend of aligned and complementary signals
+    candidate_i_est = max(raw_i_norm, compl_i_norm)   # take the stronger signal
+    i_tr = abs(brandon_i - candidate_i_est)            # 0→1, higher = more different
+
+    # ── E Tralseness: life-context variety ───────────────────────────────────
+    brandon_e  = BRANDON_BASELINE["E"] / 100
+    # Complement-E score indicates they come from a very different domain
+    candidate_e_est = max(raw["E"] / 100, complement_e / 100)
+    e_tr = abs(brandon_e - candidate_e_est)
+
+    # ── G Anchor: values alignment (lower Tr = better) ────────────────────────
+    brandon_g   = BRANDON_BASELINE["G"] / 100   # ≈ 0.92
+    candidate_g = raw["G"] / 100
+    g_tr        = abs(brandon_g - candidate_g)
+    g_alignment = 1.0 - g_tr                    # 1.0 = perfect values alignment
+
+    # ── L Bridge: candidate's connection/warmth potential ─────────────────────
+    l_bridge = raw["L"] / 100                   # 0→1, higher = stronger bridge
+
+    # ── E Compatibility: moderate E-Tr is ideal per MAT ─────────────────────
+    # Optimal E-Tr ≈ C_EMERICK (enough variety, not too much practical friction)
+    e_optimal = C_EMERICK
+    e_quality  = max(0.0, 1.0 - abs(e_tr - e_optimal) / max(e_optimal, 0.01))
+
+    # ── MAT core formula ──────────────────────────────────────────────────────
+    # Productive Tr for this partner type
+    if "E" in cfg["productive_dims"]:
+        productive_tr = (i_tr + e_tr) / 2
+    else:
+        productive_tr = i_tr
+
+    # MR_output = T_r_productive² × L_bridge × G_alignment × E_quality × Ω
+    mat_raw   = (productive_tr ** 2) * l_bridge * g_alignment * e_quality * cfg["omega"]
+    mat_score = min(mat_raw * 100, 100)
+
+    # ── Destructive Tr penalty ────────────────────────────────────────────────
+    # G-Tr > 0.3 and E-Tr > 0.6 are destructive warning zones
+    alpha = 1.0 / C_EMERICK   # ≈ 2.288 — per MAT formula
+    if "E" in cfg["anchor_dims"]:
+        destructive_penalty = alpha * ((g_tr ** 2) + (e_tr ** 2)) / 2
+    else:
+        destructive_penalty = alpha * (g_tr ** 2)
+    mat_score = max(0.0, mat_score - destructive_penalty * 30)
+
+    # ── Legacy weighted total (backward compat — now MAT-re-weighted) ─────────
+    # Productive component: reward I-Tr (difference is good)
+    productive_component = productive_tr * 100
+    anchor_component     = g_alignment * 100
+    bridge_component     = l_bridge * 100
+    weighted = (
+        cfg["productive_w"] * productive_component +
+        cfg["anchor_w"]     * anchor_component +
+        cfg["bridge_w"]     * bridge_component
+    )
+
+    # ── Theta resonance ───────────────────────────────────────────────────────
+    theta_hits  = sum(1 for kw in THETA_KEYWORDS if kw in bio_lower)
     theta_score = min(theta_hits / max(len(THETA_KEYWORDS) * 0.2, 1), 1.0) * 100
 
+    # ── MAT Tier ──────────────────────────────────────────────────────────────
+    mat_tier = ("High MR Potential"      if mat_score >= 55 else
+                "Moderate MR Potential"  if mat_score >= 30 else
+                "Low MR Potential")
+
+    # ── G-alignment warning ───────────────────────────────────────────────────
+    g_warning = g_tr > 0.30   # Values divergence is destructive-Tr — flag it
+
     return {
+        # Raw GILE dimension scores
         "G": round(raw["G"], 1),
         "I": round(raw["I"], 1),
         "L": round(raw["L"], 1),
         "E": round(raw["E"], 1),
+        # Legacy weighted total (MAT-informed)
         "weighted_total": round(weighted, 1),
         "theta_resonance": round(theta_score, 1),
-        "tier": "Tier 1" if weighted >= 80 else "Tier 2" if weighted >= 60 else "Tier 3" if weighted >= 40 else "Not a fit",
+        "tier": "Tier 1" if weighted >= 60 else "Tier 2" if weighted >= 40 else "Tier 3" if weighted >= 20 else "Not a fit",
+        # MAT metrics (URB #414) — new
+        "mat_score":        round(mat_score, 1),
+        "productive_tr":    round(productive_tr * 100, 1),  # I-Tr (want ~44 = C_EMERICK×100)
+        "g_alignment":      round(g_alignment * 100, 1),    # Values alignment (want >70)
+        "l_bridge":         round(l_bridge * 100, 1),       # L-bridge strength (want >60)
+        "e_compatibility":  round(e_quality * 100, 1),      # E compatibility score
+        "g_tr_raw":         round(g_tr * 100, 1),           # Raw G-Tralseness (destructive — want low)
+        "mat_tier":         mat_tier,
+        "g_warning":        g_warning,                      # True = values divergence risk
+        "complement_i":     round(complement_i, 1),         # How different cognitively
     }
 
 
@@ -125,28 +304,44 @@ def ai_search_candidates(partner_type: str, additional_context: str = "") -> str
     dim_names = {"G": "Goodness/Ethics", "I": "Intuition/Consciousness",
                  "L": "Love/Connection", "E": "Environment/Vision"}
 
-    system = """You are the TI Sigma Discovery Agent — part of the Manifestation Machine 
+    cfg = MAT_CONFIG[partner_type]
+
+    system = f"""You are the TI Sigma Discovery Agent — part of the Manifestation Machine 
 for Brandon Emerick, CEO of BlissGene Therapeutics. Brandon is developing the TI Sigma 
 framework (consciousness × mathematics × quantum biology), has $750K seed funding, and is 
-seeking genuine partners across multiple domains. 
+seeking genuine partners across multiple domains.
 
-Your task: generate 5 realistic, diverse candidate profiles that would be high-GILE 
-compatibility matches for Brandon. Each profile should feel like a real person Brandon 
-might actually encounter on the specified platform. Include: name, location, role/background, 
-3-5 sentence bio, key interests, and the primary platform where they'd be found.
+CRITICAL SCORING FRAMEWORK — Myrion Amplification Theorem (URB #414):
+The optimal partner is NOT the most similar person. The formula is:
+  MR_output = T_r_productive² × L_bridge × G_alignment × Ω
 
-Important: Make profiles diverse in gender, ethnicity, age (25-55), and geography. 
-Make them genuinely interesting and specific — not generic."""
+This means you should look for candidates who are:
+  ✅ COGNITIVELY DIFFERENT from Brandon (high Productive Tralseness in I-dimension)
+     Brandon is: intuitive, quantum-focused, non-local, mystical, consciousness-first
+     Seek candidates who are: empirical, analytical, systematic, evidence-based, 
+     neuroscience-oriented, data-driven, mechanistic, or from a completely different domain
+  ✅ VALUES-ALIGNED with Brandon (low Destructive Tralseness in G-dimension)
+     Brandon's values: ethics, healing, truth, compassion, sustainability
+     Seek candidates with shared core ethical commitments — even in different language
+  ✅ CONNECTION-CAPABLE (strong L-bridge)
+     Seek candidates with warmth, empathy, authentic presence, genuine curiosity about people
+  ✅ DOMAIN: {cfg['note']}
 
-    dominant_focus = " and ".join([dim_names[d] for d, _ in dominant_dims])
+Brandon's profile: Consciousness researcher, mathematician, CEO of wellness biotech, 
+GILE framework developer, Power of 8 practitioner, quantum biology theorist, stock trader, 
+based in the US. High intuition/mysticism/non-local focus. High ethical commitment. 
+Seeking synthesis partners — people who complete the picture he cannot see from his position.
+
+Your task: Generate 5 realistic, diverse candidate profiles with HIGH MR potential.
+Each should feel like a real person. Make profiles diverse in gender, ethnicity, age (25-55), geography.
+Not all candidates need to share Brandon's exact interests — in fact the BEST candidates often won't."""
+
     context_block = f"\n\nAdditional search context: {additional_context}" if additional_context else ""
 
     prompt = f"""Generate 5 candidate profiles for Brandon's **{partner_type}** partner search.
 
-Partner type focus: High {dominant_focus} alignment.
-Brandon's profile: Consciousness researcher, mathematician, CEO of wellness biotech startup, 
-GILE framework developer, Power of 8 practitioner, quantum biology theorist, stock trader 
-using consciousness algorithms, based in the US.{context_block}
+MAT priority for this category: {cfg['note']}
+{context_block}
 
 For each candidate, provide:
 NAME: [Full name]
@@ -155,7 +350,9 @@ ROLE: [Current position/title]
 PLATFORM: [Best discovery platform]
 BIO: [3-5 sentences capturing their essence, work, and worldview]
 INTERESTS: [5-7 specific interests separated by commas]
-WHY FIT: [2-3 sentences on GILE compatibility with Brandon specifically]
+COGNITIVE STYLE: [1 sentence — how they think and process the world]
+VALUES CORE: [1 sentence — what they fundamentally stand for]
+WHY FIT (MAT): [2-3 sentences explaining Productive Tr (how they're different), G-alignment (shared values), and L-bridge (connection potential)]
 
 Format each profile clearly separated by ---"""
 
@@ -172,39 +369,56 @@ def ai_generate_dossier(candidate_info: str, partner_type: str) -> str:
     """Generate a deep GILE dossier for a specific candidate."""
     client = anthropic.Anthropic()
 
-    system = """You are the TI Sigma Intelligence Agent. Generate a comprehensive GILE 
-compatibility dossier. Structure your analysis around the four GILE dimensions 
-(Goodness, Intuition, Love, Environment) and the Power of 8 theta-resonance compatibility."""
+    cfg = MAT_CONFIG[partner_type]
 
-    prompt = f"""Create a GILE Compatibility Dossier for this {partner_type} candidate:
+    system = """You are the TI Sigma Intelligence Agent. Generate a comprehensive MAT-GILE 
+compatibility dossier grounded in the Myrion Amplification Theorem (URB #414).
+
+Core principle: The best partner is not the most similar — it is the one with the highest
+MR_output = T_r_productive² × L_bridge × G_alignment × Ω
+
+Evaluate through this lens: Does this candidate COMPLEMENT Brandon's cognitive style (good)?
+Do they share his VALUES (essential)? Do they have strong connection potential (critical)?"""
+
+    prompt = f"""Create a MAT-GILE Compatibility Dossier for this {partner_type} candidate:
 
 {candidate_info}
 
-Brandon's framework: TI Sigma (consciousness mathematics), GILE (Goodness-Intuition-Love-Environment), 
-Emerick Constant C=0.4370, Power of 8 group intention work, BlissGene Therapeutics CEO ($750K seed).
+Brandon's profile: TI Sigma framework (consciousness mathematics), GILE developer,
+Emerick Constant C=0.4370, Power of 8 researcher, BlissGene Therapeutics CEO ($750K seed).
+Brandon is highly intuitive, quantum/non-local focused, systems-oriented, ethically driven.
+MAT priority for this category: {cfg['note']}
 
 Structure the dossier as:
 
 ## GILE DIMENSION ANALYSIS
-**G (Goodness/Ethics) — Score /100:** [analysis]
-**I (Intuition/Consciousness) — Score /100:** [analysis]  
-**L (Love/Connection) — Score /100:** [analysis]
-**E (Environment/Vision) — Score /100:** [analysis]
+**G (Goodness/Ethics) — Score /100:** [Analysis of their ethical foundation. High score = values-aligned with Brandon. Note: HIGH G-alignment is ESSENTIAL — G-Tralseness is destructive per MAT.]
+**I (Intuition/Consciousness) — Score /100:** [Analysis of their cognitive/intuitive style. Note how they DIFFER from Brandon — cognitive difference is PRODUCTIVE per MAT. Brandon scores ~95 here.]
+**L (Love/Connection) — Score /100:** [Analysis of warmth, empathy, relational depth. This is the L-bridge — HIGH is critical for enabling MR at high Tralseness.]
+**E (Environment/Vision) — Score /100:** [Analysis of their life domain and context. Note level of domain difference from Brandon — moderate E-Tr (~44) is optimal per MAT.]
+
+## MAT ANALYSIS (URB #414)
+**Productive Tralseness (I-dimension):** [HIGH = they think very differently from Brandon = synthesis potential. Estimated score /100]
+**G-Alignment (values anchor):** [HIGH = shared ethical foundation = stable MR substrate. Score /100]
+**L-Bridge Strength:** [HIGH = genuine warmth/connection capacity = MR enabler. Score /100]
+**Destructive Tr Risk:** [Any G or E divergence that would create irreconcilable conflict?]
+**Estimated MR Output Potential:** [LOW / MODERATE / HIGH — with reasoning]
+**MR Formula:** T_r_productive² × L × G_alignment × Ω = [rough calculation]
 
 ## THETA RESONANCE SCORE /100
-[Likelihood of theta-band HRV compatibility for Power of 8]
+[Likelihood of theta-band HRV compatibility for Power of 8 sessions]
 
-## COMPATIBILITY NARRATIVE
-[2-3 paragraphs: where they'd connect deeply, potential tensions, growth areas]
+## MYRION RESOLUTION NARRATIVE
+[2-3 paragraphs: What synthesis would emerge from this pairing? What can they create TOGETHER that neither could create alone? What are the productive tensions (good) vs. the destructive tensions (watch out for)?]
 
 ## COLLABORATION POTENTIAL
-[Specific projects or experiments they could do together]
+[Specific projects or experiments that would maximize their combined MR output]
 
 ## CONVERSATION STARTERS
-[3 specific, natural opening topics that would genuinely interest both]
+[3 specific, natural opening topics calibrated to their cognitive style — NOT Brandon's topics]
 
-## OVERALL TIER
-[Tier 1/2/3 with reasoning]"""
+## OVERALL MAT VERDICT
+[High MR Potential / Moderate / Low — with one-paragraph reasoning grounded in the MAT formula]"""
 
     response = client.messages.create(
         model="claude-opus-4-5",
@@ -348,9 +562,15 @@ def show_power_of_8():
     # ── TAB 1: Partner Discovery ──────────────────────────────────────────────
     with tabs[0]:
         st.header("🔍 Multi-Platform Partner Discovery")
-        st.markdown("""
-        AI agents search across all platforms simultaneously and return scored 
-        candidates. You review and decide who to pursue.
+        st.markdown(f"""
+        Scoring upgraded to **Myrion Amplification Theorem** (URB #414):  
+        `MR_output = T_r_productive² × L_bridge × G_alignment × Ω`
+        
+        The best partner is **not the most similar** — it is the one with the highest synthesis potential:
+        - ✅ **Cognitively different** (high I-Tralseness) → synthesis potential scales as *square* of difference  
+        - ✅ **Values-aligned** (low G-Tralseness) → destructive Tr penalized by α = 1/C = {1/C_EMERICK:.2f}×  
+        - ✅ **Strong L-bridge** (warmth/connection) → enables MR at high Tralseness  
+        - ✅ **Optimal tension** ≈ C_EMERICK = {C_EMERICK:.4f} (the universal sweet spot)
         """)
 
         col1, col2 = st.columns([1, 1])
@@ -379,26 +599,50 @@ def show_power_of_8():
             st.success("Search complete — 5 candidates found")
             st.markdown("---")
 
-            # Parse and display candidates with GILE scores
+            # Parse and display candidates with MAT + GILE scores
             profiles = results.split("---")
+            shown = 0
             for i, profile in enumerate(profiles):
                 if len(profile.strip()) < 50:
                     continue
                 gile = compute_gile_score(profile, ptype)
                 tier_color = {"Tier 1": "🟢", "Tier 2": "🟡", "Tier 3": "🟠", "Not a fit": "🔴"}
-                with st.expander(f"Candidate {i+1} — {gile['tier']} {tier_color.get(gile['tier'], '')} | GILE: {gile['weighted_total']:.0f}/100"):
+                mat_color  = {"High MR Potential": "🟢", "Moderate MR Potential": "🟡", "Low MR Potential": "🔴"}
+                g_warn_str = " ⚠️ G-Tr risk" if gile["g_warning"] else ""
+
+                header = (f"Candidate {shown+1} — {mat_color.get(gile['mat_tier'], '')} "
+                          f"{gile['mat_tier']} | MAT: {gile['mat_score']:.0f} | "
+                          f"Tier: {gile['tier']}{g_warn_str}")
+                with st.expander(header):
                     st.markdown(profile)
-                    col_g, col_i, col_l, col_e, col_t = st.columns(5)
-                    col_g.metric("G", f"{gile['G']:.0f}")
-                    col_i.metric("I", f"{gile['I']:.0f}")
-                    col_l.metric("L", f"{gile['L']:.0f}")
-                    col_e.metric("E", f"{gile['E']:.0f}")
-                    col_t.metric("θ-Resonance", f"{gile['theta_resonance']:.0f}")
-                    if st.button(f"Generate Dossier & Outreach for Candidate {i+1}",
+                    st.markdown("**MAT Scores (URB #414)**")
+                    c1, c2, c3, c4, c5 = st.columns(5)
+                    c1.metric("I-Tr (prod.)", f"{gile['productive_tr']:.0f}",
+                              help="Cognitive difference from Brandon — higher = more synthesis potential (optimal ≈ 44)")
+                    c2.metric("G-Align", f"{gile['g_alignment']:.0f}",
+                              help="Values alignment — higher = stable MR substrate (want >70)")
+                    c3.metric("L-Bridge", f"{gile['l_bridge']:.0f}",
+                              help="Connection potential — enables MR at high Tralseness (want >60)")
+                    c4.metric("E-Compat", f"{gile['e_compatibility']:.0f}",
+                              help="Life-context compatibility — moderate is optimal per MAT")
+                    c5.metric("MAT Score", f"{gile['mat_score']:.0f}",
+                              help="MR_output = T_r² × L × G_align × Ω")
+                    if gile["g_warning"]:
+                        st.warning("⚠️ G-Tralseness elevated — values divergence detected. "
+                                   "This is Destructive Tr per MAT. Verify shared ethical foundation before pursuing.")
+                    st.markdown("**GILE Dimensions**")
+                    cg, ci, cl, ce, ct = st.columns(5)
+                    cg.metric("G", f"{gile['G']:.0f}")
+                    ci.metric("I", f"{gile['I']:.0f}")
+                    cl.metric("L", f"{gile['L']:.0f}")
+                    ce.metric("E", f"{gile['E']:.0f}")
+                    ct.metric("θ-Resonance", f"{gile['theta_resonance']:.0f}")
+                    if st.button(f"Generate MAT Dossier for Candidate {shown+1}",
                                   key=f"dossier_btn_{i}"):
-                        st.session_state[f"active_candidate"] = profile
-                        st.session_state[f"active_ptype"] = ptype
+                        st.session_state["active_candidate"] = profile
+                        st.session_state["active_ptype"] = ptype
                         st.info("Profile saved. Go to 'Candidate Dossier' tab.")
+                shown += 1
 
         # Manual candidate entry
         st.markdown("---")
@@ -414,18 +658,42 @@ def show_power_of_8():
         if st.button("Score this Candidate", key="score_manual") and manual_input:
             gile = compute_gile_score(manual_input, manual_ptype)
             tier_color = {"Tier 1": "🟢", "Tier 2": "🟡", "Tier 3": "🟠", "Not a fit": "🔴"}
-            st.markdown(f"### {tier_color.get(gile['tier'], '')} {gile['tier']} — GILE Score: {gile['weighted_total']:.0f}/100")
+            mat_color  = {"High MR Potential": "🟢", "Moderate MR Potential": "🟡", "Low MR Potential": "🔴"}
+
+            st.markdown(f"### {mat_color.get(gile['mat_tier'], '')} {gile['mat_tier']} — MAT Score: {gile['mat_score']:.0f}/100")
+            st.caption(f"GILE Tier: {tier_color.get(gile['tier'], '')} {gile['tier']} | "
+                       f"Formula: MR = T_r² × L_bridge × G_align × Ω")
+
+            st.markdown("**MAT Breakdown (URB #414)**")
+            m1, m2, m3, m4, m5 = st.columns(5)
+            m1.metric("I-Tr (prod.)", f"{gile['productive_tr']:.0f}",
+                      help="Cognitive difference — want ~44 (C_EMERICK×100)")
+            m2.metric("G-Align", f"{gile['g_alignment']:.0f}",
+                      help="Values alignment — want >70")
+            m3.metric("L-Bridge", f"{gile['l_bridge']:.0f}",
+                      help="Connection strength — want >60")
+            m4.metric("E-Compat", f"{gile['e_compatibility']:.0f}",
+                      help="Life-context fit — moderate is optimal")
+            m5.metric("MAT Score", f"{gile['mat_score']:.0f}",
+                      help="Myrion Resolution output potential")
+
+            if gile["g_warning"]:
+                st.warning("⚠️ G-Tralseness elevated — values divergence. Destructive Tr per MAT.")
+
+            st.markdown("**GILE Dimensions**")
             cols = st.columns(5)
             for dim, label in zip("GILE", ["Goodness", "Intuition", "Love", "Environment"]):
                 cols["GILE".index(dim)].metric(label, f"{gile[dim]:.0f}")
             cols[4].metric("θ-Resonance", f"{gile['theta_resonance']:.0f}")
+
             if st.button("Save & Generate Dossier", key="save_manual"):
                 st.session_state["active_candidate"] = manual_input
                 st.session_state["active_ptype"] = manual_ptype
 
     # ── TAB 2: Candidate Dossier ──────────────────────────────────────────────
     with tabs[1]:
-        st.header("📋 GILE Compatibility Dossier")
+        st.header("📋 MAT-GILE Compatibility Dossier")
+        st.caption("Myrion Amplification Theorem (URB #414): MR_output = T_r_productive² × L_bridge × G_alignment × Ω")
 
         candidate_text = st.session_state.get("active_candidate", "")
         candidate_ptype = st.session_state.get("active_ptype", "romantic")
