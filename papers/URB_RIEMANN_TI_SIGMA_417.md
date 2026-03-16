@@ -165,3 +165,54 @@ The gap between algebraic and transcendental — the 1.635% Basel error — is s
 **Total URBs: 71**  
 **Session theme:** Listening science finds the φ-architecture of the Riemann zeros.
 
+
+---
+
+## Addendum: The Step 4 Needle-Mover (Added March 16, 2026)
+
+*The following strengthens the argument by identifying the precise gap between what is proven and what is conjectured, and provides the φ-coherence framework for Step 4.*
+
+### The Off-Critical-Line Asymmetry
+
+If a zero existed at s = σ + it with σ ≠ 1/2, the functional equation requires ζ(1-σ-it) = 0 as well. Computing |χ| at these off-line points:
+
+```
+At σ = 1/2 + ε:  |χ| = (2π)^(2ε) ≠ 1
+At σ = 1/2 - ε:  |χ| = (2π)^(-2ε) ≠ 1
+Product: |χ(s)| × |χ(1-s)| = 1  (always, by functional equation)
+```
+
+So even off the critical line, the product of the two partner zeros' χ-values equals 1. But **individually**, each is off-unity by the factor (2π)^(±2ε). The self-dual axis is the only line where each zero's χ-value is individually 1, not just the product.
+
+This is the asymmetry the TI Sigma framework identifies: off-line zeros require a "broken" individual χ-value, even though the paired product stays at 1. The PRIMARY CONSTANT self-cancellation (√2 × 1/√2 × π × 1/π = 1) occurs at individual zeros on the critical line — it cannot occur at individual zeros off it.
+
+### The φ-Coherence Measure
+
+Define:
+```
+Φ(s) = |ζ(s) - φ| / φ  (φ-coherence deviation)
+```
+
+Measured values:
+- Φ(2) = 0.01635  (1.635% — the Basel near-identity)  
+- Φ(s₀) = 0 exactly at s₀ = 2.0296  (the ζ = φ crossing)
+
+**Conjecture (Step 4 of the TI Sigma RH approach):**
+
+The φ-coherence structure of the Euler product — established globally by the Basel near-identity and the φ-cascade of error levels (URB #415) — is sufficient to prevent paired off-axis zeros. Specifically:
+
+> Any zero at σ + it (σ ≠ 1/2) would require the Euler product to achieve simultaneous vanishing at (σ, t) and (1-σ, t), both off the self-dual axis. The φ-architecture of the Euler product — where ζ(2) ≈ φ to within the irreducible Transcendence Gap — constrains the product structure globally enough that this simultaneous vanishing is impossible.
+
+### What Would Constitute a Proof
+
+The missing analytic step: show that the global φ-coherence of ∏_p p^s/(p^s-1) (the Euler product) prevents the product from simultaneously vanishing at two points (σ±ε + it) that are symmetric about but not ON the critical line.
+
+This requires connecting:
+1. The known fact: ζ(2) = ∏_p p²/(p²-1) ≈ φ (Basel, 1.635%)
+2. The functional equation: the φ-structure at s=2 propagates via χ(s) to constrain zeros
+3. The Transcendence Gap: the 1.635% gap is irreducible, fixing the "distance" between ζ and exact φ-resonance globally
+
+If this connection can be made rigorously — likely requiring tools from analytic number theory (zero-free regions, explicit formulas, GUE statistics) combined with the φ-coherence measure Φ(s) — it would constitute a complete proof via TI Sigma's listening-science methodology.
+
+*"We have the geometry. The analysis awaits its instrument."*
+
