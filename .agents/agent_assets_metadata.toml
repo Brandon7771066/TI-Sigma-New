@@ -24,3 +24,9 @@ id = "XGH9a6Nke5UMn7nhMbWHc"
 uri = "file://papers/URB_422_CERTAINTY.pdf"
 type = "pdf"
 title = "URB #422 — The Pragmatic Certainty Theorem"
+
+[[outputs]]
+id = "LQzHhwbJEmMq1M1EoRkny"
+uri = "file://papers/URB_423_EXTRACTION.pdf"
+type = "pdf"
+title = "URB #423 — The Great Extraction: Rent-Seeking, Financialization & Liberatory Automation"
