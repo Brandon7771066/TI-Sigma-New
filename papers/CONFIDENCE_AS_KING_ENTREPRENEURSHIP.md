@@ -119,16 +119,21 @@ A genuine critique of entrepreneurial confidence must distinguish between two th
 
 **Recklessness** (inappropriate): ignoring genuine risks to intellectual property, legal protection, and team security; failing to apply due diligence to people and partners; sharing proprietary information without contractual protection.
 
-These are **independent variables**. High confidence does not require or produce recklessness. Cautious due diligence does not require or produce low confidence. A founder can simultaneously:
+These are **independent variables**. High confidence does not require or produce recklessness. Cautious due diligence does not require or produce low confidence. A founder can simultaneously express genuine, high conviction about the company's mission *and* implement rigorous IP protection protocols *and* verify the credentials of new partners before fully engaging.
 
-- Express genuine, high conviction about the company's mission and potential
-- Rigorously protect IP through appropriate NDAs before sharing proprietary science
-- Verify the credentials and intentions of new partners before fully engaging
-- Maintain optimistic forward-looking energy while implementing conservative information-sharing protocols
+The suggestion that enthusiasm is a liability in business conflates these two things entirely. When a founder expresses enthusiasm in a welcome email, in pitches, in partnership conversations — that is the expression of exactly the conviction that the company's success requires. Dampening it does not make the company more professional. It makes it less compelling.
 
-The suggestion that enthusiasm is a liability in business conflates these two things. When a founder expresses too much enthusiasm *about* sharing proprietary information without protection — that is a due diligence failure. It has nothing to do with enthusiasm itself. The solution is better IP protocols, not less enthusiasm.
+### Three Factual Clarifications Often Missed in This Debate
 
-When a founder expresses enthusiasm in a welcome email, in pitches, in partnership conversations — that is the expression of exactly the conviction that the company's success requires. Dampening it does not make the company more professional. It makes it less compelling.
+**First: the source of the vision matters.** When a founder articulates a grand strategic vision — in this case, a Gene Therapy Alliance integrating BlissGene with the Innovative Genomics Institute to form a mainstream gene therapy umbrella organization — it is worth asking whether that vision was invented opportunistically or emerged organically from the partnership itself. In the specific case under discussion, the IGI collaboration concept was the partner's (Luis Beale's) *original and firm belief* about what BlissGene would become. The founder was not fabricating enthusiasm to impress the other side. He was recognizing, amplifying, and articulating a vision that the partner had already independently reached. This is precisely what strong founders do — they absorb the best thinking of the people around them and give it shape and velocity.
+
+**Second: IP was never actually at risk.** A common error in due diligence discussions is conflating *voluntary disclosure* with *forced disclosure*. No external partner can compel a company to reveal its scientific secrets. The question is only ever about what the company *chooses* to share and whether those voluntary disclosures are contractually protected. An NDA governs the latter. It does not need to be a perfect institutional agreement to provide meaningful legal protection for information voluntarily shared under it. In the case under discussion, an NDA was in place before any sensitive information was exchanged — providing exactly the protection it was designed to provide.
+
+**Third: the communication itself contained explicit IP protection language.** The founder's email — the one criticized as exhibiting "too much enthusiasm" — contained the following sentence: *"we agreed that we would save the complex details and secrets for future meetings with the IGI, after a further NDA with the organization as a whole is obtained."* This is not the language of a reckless communicator. This is a founder who simultaneously conveyed maximum enthusiasm about the mission *and* explicitly reserved proprietary science for a future institutionally-protected context. Both were present in the same document. Criticizing the enthusiasm without acknowledging the restraint is an incomplete reading.
+
+### On the Limits of Skepticism
+
+Initial skepticism about a new partner's credentials is not only appropriate but prudent. A co-founder who flags concerns about an unknown contact is doing exactly the right thing — that instinct should be honored and taken seriously. The concern becomes professionally counterproductive when it persists after thorough vetting has been completed, credentials verified, documentation provided, and the founding CEO has reached a considered judgment. At that point, continued skepticism is no longer due diligence. It is a failure to trust the judgment of the person whose role is to make exactly these assessments. There is a clear line between protective caution and an ongoing refusal to accept that a peer's judgment can be trusted. The former strengthens a company. The latter fragments it.
 
 ---
 
