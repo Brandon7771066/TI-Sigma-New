@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "vHQ8fH9REFbx43NdAaGiM"
+uri = "file://papers/CONFIDENCE_AS_KING.pdf"
+type = "pdf"
+title = "Confidence as a Strategic Asset — Brandon Emerick, CEO BlissGene Therapeutics"
