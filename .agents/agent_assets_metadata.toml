@@ -30,3 +30,9 @@ id = "LQzHhwbJEmMq1M1EoRkny"
 uri = "file://papers/URB_423_EXTRACTION.pdf"
 type = "pdf"
 title = "URB #423 — The Great Extraction: Rent-Seeking, Financialization & Liberatory Automation"
+
+[[outputs]]
+id = "u2tEuR4CdkejjBLzY1WVb"
+uri = "file://papers/URB_424_ASC_COMPETENCE.pdf"
+type = "pdf"
+title = "URB #424 — The ASC Competence Hypothesis: Altered State Navigation as the Brain’s Ultimate Training Modality"
