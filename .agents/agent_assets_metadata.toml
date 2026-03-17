@@ -12,3 +12,15 @@ id = "XQmrsCFozII5xt9phZUZ5"
 uri = "file://papers/GILE_FIRST_BUSINESS.pdf"
 type = "pdf"
 title = "GILE First: Why Business Is Too Focused on Results — Brandon Emerick (March 2026)"
+
+[[outputs]]
+id = "DzLBdOjKmU3aZ-2rFCbl4"
+uri = "file://papers/URB_421_ICELL.pdf"
+type = "pdf"
+title = "URB #421 — i-Cell Theory & Markov Blankets"
+
+[[outputs]]
+id = "XGH9a6Nke5UMn7nhMbWHc"
+uri = "file://papers/URB_422_CERTAINTY.pdf"
+type = "pdf"
+title = "URB #422 — The Pragmatic Certainty Theorem"
