@@ -42,3 +42,9 @@ id = "NTEG2zW-GtTefNgaHd1gy"
 uri = "file://papers/URB_425_PHILOSOPHICAL_INTELLIGENCE.pdf"
 type = "pdf"
 title = "URB #425 — The Philosophical Intelligence Thesis"
+
+[[outputs]]
+id = "ay70GTz7pcchbrFTP2HAr"
+uri = "file://papers/URB_426_GOLD_STANDARD.pdf"
+type = "pdf"
+title = "URB #426 — The Gold Standard Category Error: Pragmatic Efficacy vs. Mechanistic Attribution in Drug Approval"
