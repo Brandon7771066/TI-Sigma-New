@@ -150,3 +150,9 @@ id = "d7IWNzxHTc574vy4dEn2a"
 uri = "file://papers/URB_441_TO_BE.pdf"
 type = "pdf"
 title = "URB #441 — “To Thine Own Self, BE!” — The Third Maxim of TI Sigma Ethics"
+
+[[outputs]]
+id = "WoN0ny6JeBsxb57XcUOt2"
+uri = "file://papers/URB_442_TRALSE_NUMBERS.pdf"
+type = "pdf"
+title = "URB #442 — The TRALSE Number: Dissolving the Real/Imaginary Binary in Mathematics"
