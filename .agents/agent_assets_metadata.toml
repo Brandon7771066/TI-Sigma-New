@@ -36,3 +36,9 @@ id = "u2tEuR4CdkejjBLzY1WVb"
 uri = "file://papers/URB_424_ASC_COMPETENCE.pdf"
 type = "pdf"
 title = "URB #424 — The ASC Competence Hypothesis: Altered State Navigation as the Brain’s Ultimate Training Modality"
+
+[[outputs]]
+id = "NTEG2zW-GtTefNgaHd1gy"
+uri = "file://papers/URB_425_PHILOSOPHICAL_INTELLIGENCE.pdf"
+type = "pdf"
+title = "URB #425 — The Philosophical Intelligence Thesis"
