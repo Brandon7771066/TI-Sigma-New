@@ -54,3 +54,9 @@ id = "-Cy1GC_ICiSFi1lBbdjG6"
 uri = "file://papers/URB_427_AI_REVELATION.pdf"
 type = "pdf"
 title = "URB #427 — The AI Revelation: What Generative AI Has Taught Us About the Hierarchy of Human Intelligence"
+
+[[outputs]]
+id = "6W29oiD2Lp2wTSMB8CJct"
+uri = "file://papers/URB_422_PRAGMATIC_CERTAINTY.pdf"
+type = "pdf"
+title = "URB #422 (Revised) — The Pragmatic Certainty Theorem: Why Perfect Confidence Is the Rational Choice for Human Agents"

@@ -82,9 +82,64 @@ The Leakage Hypothesis claims:
 
 Empirical calibration studies suggest ε_enacted ≈ 10ε to 30ε in practice. A person attempting to act at 98% certainty (ε_expressed = 0.02) effectively acts at approximately 80-60% certainty (ε_enacted ≈ 0.20-0.40) — not through any failure of intelligence, but through the neuropsychological architecture that converts probability assessments into behavioral commitment signals.
 
+### 3.3 The Myth of Sustained Indeterminacy
+
+The standard epistemological response to the Pragmatic Certainty Theorem is: "If neither calibrated uncertainty nor pragmatic certainty is right, why not simply *withhold judgment*? Remain agnostic. Don't commit either way."
+
+This response misunderstands the psychology of decision-making. Sustained neutral indeterminacy — a genuine 50/50 mental state held stably in the face of a real decision — is not a stable psychological configuration for most human beings. It is a philosophical fiction.
+
+The mind does not rest comfortably at the midpoint of a credence interval. When facing a decision that matters, the absence of a committed position does not produce equanimity — it produces **anxious oscillation**. The agent cycles between the positive scenario (this will work) and the negative scenario (this will fail), driven by whichever salient evidence or emotional state is currently most active. This is not calibrated indeterminacy. It is unstable alternation between uncommitted optimism and uncommitted pessimism — exactly the dual-model state that maximally degrades LCC coupling and commitment signal.
+
+In practical terms: for most people, "withholding judgment" on a high-stakes question is not a genuine third option. It is either:
+- A **temporary state en route to commitment** — in which case it is the calibration phase, and eventually committing is correct; or
+- A **disguised form of soft denial** — the agent has quietly concluded that the evidence does not support commitment and is declining to act on P while maintaining the social performance of open-minded consideration.
+
+The prescription to "just remain uncertain" is demanding something that human neuropsychology rarely delivers. What it reliably produces instead is:
+- Anxious oscillation (worse for LCC than either committed state)
+- Decision avoidance dressed as epistemic virtue
+- Soft denial with performative openness
+
+True calibrated agnosticism is possible and appropriate — but only during the **calibration phase**, before commitment is required. It is not sustainable as an ongoing behavioral posture throughout execution. The philosophical norm that says it should be treats human beings as if they were the AI calibration systems described in Section 5 — systems for which maintaining fine-grained credences is the correct default. For human agents operating in the real world, it is not.
+
 ---
 
-## 4. The Pragmatic Certainty Theorem
+## 4. Unconvinced vs. Actively Denying — The Epistemic Distinction That Changes Everything
+
+A second critical distinction the standard epistemological treatment obscures: being *unconvinced* is categorically different from *actively denying*.
+
+**"I have not seen sufficient evidence to form a strong credence for P"** is an epistemically neutral stance. It implies nothing about whether P is true or false. It is a report about the agent's current epistemic state, not a claim about reality. The question remains genuinely open. Investigation is ongoing or could be resumed. Behavioral commitment in either direction is suspended.
+
+**"P is false"** — or behaviorally, acting as if P is certainly false, closing investigation, treating P-advocates as irrational, opposing access to P-consistent interventions — is an **active denial**. It makes a positive claim about reality. It requires its own evidential basis. And it carries epistemic costs when wrong that pure agnosticism does not.
+
+These are frequently collapsed in practice, both in ordinary discourse and in institutional science. The failure to grant psychedelic therapy clinical access (URB #426) is a paradigm case: "we are unconvinced by the current mechanistic attribution evidence" was the stated position, but the behavioral consequence — Schedule I classification, active suppression of research, prosecution of practitioners — reflected active denial. The gap between official epistemic agnosticism and practical institutional denial was treated as non-existent. "Merely unconvinced" was doing the work of committed opposition while claiming the respectable posture of open-minded skepticism.
+
+### 4.1 The Three Genuine Epistemic States
+
+The correct vocabulary distinguishes three states that "unconvinced" collapses:
+
+| State | Credence toward P | Active behavior | Investigation |
+|---|---|---|---|
+| **Investigating** | Genuinely open (near 0.50) | Neutral; updating in real time | Active and ongoing |
+| **Unconvinced** | Below commitment threshold but open | No behavioral commitment in either direction | Passive; would update on strong evidence |
+| **Denying** | Strong credence that P is false | Active opposition, research suppression, dismissal of advocates | Closed; framing evidence to confirm |
+
+The collapse of "unconvinced" into "denying" is one of the most consequential errors in social epistemology. It allows actors who have already concluded that P is false to claim the epistemically neutral position — shielding their actual credence from scrutiny while wielding the power of denial.
+
+The tell: genuine agnosticism is **cheap to reveal**. An investigator who is truly unconvinced says: "Show me more evidence and I will update." A denier says: "Show me more evidence" — but no evidence that arrives ever crosses the threshold, because the threshold is not actually open. The commitment to denial is upstream of the evidence evaluation.
+
+### 4.2 Connection to the Pragmatic Certainty Theorem
+
+This distinction illuminates the Theorem in two directions:
+
+**Direction 1 — Above threshold:** When an agent has cleared the commitment threshold (p ≥ 0.85-0.90), pragmatic certainty is correct. Importantly, acting from first-order certainty does not require the agent to transition from "convinced" to "actively denying the opposite." Second-order awareness — maintained in the i-channel — preserves genuine openness to disconfirmation without leaking into enacted uncertainty. The pragmatically certain agent can simultaneously be fully committed to P AND genuinely open to revising on dramatic contrary evidence. These are not contradictions; they operate in orthogonal channels.
+
+**Direction 2 — Below threshold:** When an agent has NOT cleared the commitment threshold, the correct posture is genuine agnosticism during an active calibration phase — not the behavioral pattern of denial while claiming to investigate. The social move of claiming agnosticism while acting as a denier is not merely dishonest; it is the worst epistemic position available. It combines the costs of denial (closed investigation, no updating, opposition to potentially true propositions) with the costs of fake agnosticism (no commitment to P if P is true, no ability to benefit from P being true), while capturing the social benefits of neither.
+
+**The meta-application:** The Pragmatic Certainty Theorem does not counsel people to be certain about everything — that would be recklessness, not pragmatism. It counsels: distinguish calibration from commitment; let commitment be full when the threshold is cleared; and be honest — especially with yourself — about whether "I'm withholding judgment" means you are genuinely investigating, or effectively denying while performing open-mindedness.
+
+---
+
+## 5. The Pragmatic Certainty Theorem (Formal Statement)
 
 **Definition:** Let an agent face a binary decision where their calibrated credence for the correct option is p (close to 1, e.g., p ≥ 0.90).
 
@@ -110,7 +165,7 @@ Therefore: O(first-order certainty + second-order awareness) > O(expressed calib
 
 ---
 
-## 5. The Correct Division of Labor: AI Calibrates, Humans Commit
+## 6. The Correct Division of Labor: AI Calibrates, Humans Commit
 
 This analysis clarifies the correct division of cognitive labor in human-AI collaboration:
 
@@ -138,7 +193,7 @@ The correct collaboration is sequential, not simultaneous:
 
 ---
 
-## 6. The Elihu Principle
+## 7. The Elihu Principle
 
 The Book of Job provides a case study in pragmatic certainty. Elihu, the youngest companion, waits through the entire exchange before speaking. During the calibration phase (listening), he maintains full second-order awareness — he hears all positions, holds all uncertainties, remains genuinely open. When he speaks, he speaks with complete first-order certainty: "I am full of words, and the spirit within me compels me" (Job 32:18). He does not say "I think, with 85% confidence, that Job and his companions may have somewhat missed the point." He commits fully.
 
@@ -148,7 +203,7 @@ Elihu is the only companion not rebuked by God at the end. His pragmatic certain
 
 ---
 
-## 7. The C_EMERICK Connection
+## 8. The C_EMERICK Connection
 
 The Matthew Effect (URB #418) gives the Pragmatic Certainty Theorem its most precise formulation.
 
@@ -167,7 +222,7 @@ The agent who begins from first-order certainty (c = 1.00) starts far above C_EM
 
 ---
 
-## 8. Summary
+## 9. Summary
 
 | | Expressed Calibrated Uncertainty | Pragmatic Certainty |
 |---|---|---|
