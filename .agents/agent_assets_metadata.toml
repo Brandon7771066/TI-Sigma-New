@@ -72,3 +72,33 @@ id = "8ozCy04gtlBpwSuo9SxG9"
 uri = "file://papers/URB_428_TI_META_CREED.pdf"
 type = "pdf"
 title = "URB #428 — The TI Meta-Creed: Don't Take Anything Too Seriously; Everything in Moderation, Including Moderation"
+
+[[outputs]]
+id = "ToHfFyga2ByFSrwSdlD6o"
+uri = "file://papers/URB_429_STATUS_OF_I.pdf"
+type = "pdf"
+title = "URB #429 — The Status of i Across TI Sigma"
+
+[[outputs]]
+id = "l5mZmik7oo3K4AgSEgeAE"
+uri = "file://papers/URB_430_TRALSE_WAVE_ALGEBRA.pdf"
+type = "pdf"
+title = "URB #430 — Tralse Wave Algebra"
+
+[[outputs]]
+id = "OH3dYWT_jEB7-NO0Xfvnc"
+uri = "file://papers/URB_431_FRACTAL_HARMONIC_SYSTEMS.pdf"
+type = "pdf"
+title = "URB #431 — Fractal Harmonic Systems"
+
+[[outputs]]
+id = "kdnYuT169Ql9juupwSEEI"
+uri = "file://papers/URB_432_METACAUSAL_GRAPH_NETWORKS.pdf"
+type = "pdf"
+title = "URB #432 — Metacausal Graph Networks"
+
+[[outputs]]
+id = "GmRbySgPODQKxYMjA_dfb"
+uri = "file://papers/URB_433_GROUNDING_MATH_PHYSICS.pdf"
+type = "pdf"
+title = "URB #433 — Grounding Pure Mathematics in Fundamental Physics & TI Sigma"
