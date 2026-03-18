@@ -48,3 +48,9 @@ id = "ay70GTz7pcchbrFTP2HAr"
 uri = "file://papers/URB_426_GOLD_STANDARD.pdf"
 type = "pdf"
 title = "URB #426 — The Gold Standard Category Error: Pragmatic Efficacy vs. Mechanistic Attribution in Drug Approval"
+
+[[outputs]]
+id = "-Cy1GC_ICiSFi1lBbdjG6"
+uri = "file://papers/URB_427_AI_REVELATION.pdf"
+type = "pdf"
+title = "URB #427 — The AI Revelation: What Generative AI Has Taught Us About the Hierarchy of Human Intelligence"
