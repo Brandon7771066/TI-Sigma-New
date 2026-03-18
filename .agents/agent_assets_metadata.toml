@@ -102,3 +102,45 @@ id = "GmRbySgPODQKxYMjA_dfb"
 uri = "file://papers/URB_433_GROUNDING_MATH_PHYSICS.pdf"
 type = "pdf"
 title = "URB #433 — Grounding Pure Mathematics in Fundamental Physics & TI Sigma"
+
+[[outputs]]
+id = "y6V2wCuPvKcQebKmNuoCM"
+uri = "file://papers/URB_434_PC_ZERO.pdf"
+type = "pdf"
+title = "URB #434 — PRIMARY CONSTANT: 0 (Zero)"
+
+[[outputs]]
+id = "LOJO3ElJXGaYlrBcJkkPs"
+uri = "file://papers/URB_435_PC_ONE.pdf"
+type = "pdf"
+title = "URB #435 — PRIMARY CONSTANT: 1 (One)"
+
+[[outputs]]
+id = "Tsy7ZHOFf6ODE519vi9tn"
+uri = "file://papers/URB_436_PC_SQRT2.pdf"
+type = "pdf"
+title = "URB #436 — PRIMARY CONSTANT: √2"
+
+[[outputs]]
+id = "vRDc0x-2BSLNdOmu0MuBn"
+uri = "file://papers/URB_437_PC_E.pdf"
+type = "pdf"
+title = "URB #437 — PRIMARY CONSTANT: e (Euler's Number)"
+
+[[outputs]]
+id = "xdfRZuk4eKLF7AWTWGZxs"
+uri = "file://papers/URB_438_PC_PHI.pdf"
+type = "pdf"
+title = "URB #438 — PRIMARY CONSTANT: φ (Golden Ratio)"
+
+[[outputs]]
+id = "I3AO3YsHx-Wudu4bdRTVQ"
+uri = "file://papers/URB_439_PC_PI.pdf"
+type = "pdf"
+title = "URB #439 — PRIMARY CONSTANT: π (Pi)"
+
+[[outputs]]
+id = "xy0EubYNsR0HFcI8PY6mc"
+uri = "file://papers/URB_440_PC_C_EMERICK.pdf"
+type = "pdf"
+title = "URB #440 — PRIMARY CONSTANT: C (Emerick Constant)"
