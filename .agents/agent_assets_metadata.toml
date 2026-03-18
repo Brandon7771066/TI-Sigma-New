@@ -144,3 +144,9 @@ id = "xy0EubYNsR0HFcI8PY6mc"
 uri = "file://papers/URB_440_PC_C_EMERICK.pdf"
 type = "pdf"
 title = "URB #440 — PRIMARY CONSTANT: C (Emerick Constant)"
+
+[[outputs]]
+id = "d7IWNzxHTc574vy4dEn2a"
+uri = "file://papers/URB_441_TO_BE.pdf"
+type = "pdf"
+title = "URB #441 — “To Thine Own Self, BE!” — The Third Maxim of TI Sigma Ethics"
