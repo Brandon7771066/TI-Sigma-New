@@ -174,3 +174,15 @@ id = "ShjQBZLwEJh2M5-THyhV8"
 uri = "file://papers/URB_445_BENFORDS_PSI.pdf"
 type = "pdf"
 title = "URB #445 — Benford’s Law as a PSI Detection Protocol: Structured Deviations as Empirical Signatures of High-LCC Individuals"
+
+[[outputs]]
+id = "Ov50T8N-MDfiAINFMvUYd"
+uri = "file://papers/URB_446_TRALSE_THEOREMS.pdf"
+type = "pdf"
+title = "URB #446 — The Most Tralse Theorems in Mathematics [100th Paper ★]"
+
+[[outputs]]
+id = "u8bDnkdu0x9eFu1nK2ubn"
+uri = "file://papers/URB_447_PERFECTLY_PERFECT.pdf"
+type = "pdf"
+title = "URB #447 — Perfectly Perfect: The Intrinsic Perfection of Being and the Universality of Free Will"
