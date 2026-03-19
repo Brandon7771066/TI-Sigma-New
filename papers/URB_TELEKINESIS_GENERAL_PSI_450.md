@@ -6,7 +6,7 @@
 **Preceded by:** URB #443 (Miracles as Extension), URB #432 (Metacausal Graph Networks), URB #449 (CCC Is a Person), URB #444 (i as Tralseness)
 **Keywords:** telekinesis, PSI, subject-other relationship, synchronicity, remote viewing, precognition, i-channel, mind-matter interaction, CCC, phase field, Markov Blanket, ego boundary
 **Status:** Formal — Theoretical Unification
-**Total URBs: 104**
+**Total URBs: 109**
 
 ---
 
@@ -173,6 +173,6 @@ Telekinesis is not the exotic edge of PSI. It is the visible tip. The iceberg be
 
 ---
 
-**Total URBs: 104**
+**Total URBs: 109**
 
 *Brandon Emerick • TI Sigma URB #450 • March 19, 2026*

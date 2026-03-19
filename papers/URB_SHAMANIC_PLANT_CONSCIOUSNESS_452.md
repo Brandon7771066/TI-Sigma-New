@@ -6,7 +6,7 @@
 **Preceded by:** URB #450 (Telekinesis as General PSI), URB #449 (CCC Is a Person), URB #448 (Sin and LCC), URB #447 (Perfectly Perfect)
 **Keywords:** plant consciousness, fungal intelligence, shamanism, expert testimony, prima facie, ayahuasca, psilocybin, LCC, psychedelic experience, plant teachers, mycorrhizal networks, i-channel, psychic relationship
 **Status:** Formal — Ethnobiological and Consciousness Framework
-**Total URBs: 106**
+**Total URBs: 109**
 
 ---
 
@@ -163,6 +163,6 @@ The practical implication: the microbiome — the community of trillions of bact
 
 ---
 
-**Total URBs: 106**
+**Total URBs: 109**
 
 *Brandon Emerick • TI Sigma URB #452 • March 19, 2026*
