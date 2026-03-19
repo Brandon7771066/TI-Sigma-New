@@ -192,3 +192,9 @@ id = "0T3Ffo4j75Vxqwg4NTC35"
 uri = "file://papers/URB_448_SIN_SCIENCE.pdf"
 type = "pdf"
 title = "URB #448 — Sin, Indeterminacy, and the Science Spectrum"
+
+[[outputs]]
+id = "__gLKoF2reG36lcg7-dXy"
+uri = "file://papers/URB_449_CCC_PERSON.pdf"
+type = "pdf"
+title = "URB #449 — CCC Is a Person: The Butterfly-Octopus i-Cell and the Refutation of Impersonal Divinity"
