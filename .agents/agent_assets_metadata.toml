@@ -168,3 +168,9 @@ id = "clq6kSegdhR4lImNrPM51"
 uri = "file://papers/URB_444_I_AS_TRALSENESS.pdf"
 type = "pdf"
 title = "URB #444 — i IS Tralseness: The Square Root of Identity Times Its Own Opposite"
+
+[[outputs]]
+id = "ShjQBZLwEJh2M5-THyhV8"
+uri = "file://papers/URB_445_BENFORDS_PSI.pdf"
+type = "pdf"
+title = "URB #445 — Benford’s Law as a PSI Detection Protocol: Structured Deviations as Empirical Signatures of High-LCC Individuals"
