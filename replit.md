@@ -9,6 +9,16 @@ Research Focus: User emphasizes quantum-classical hybrid mechanisms, believing c
 Philosophical Foundation: GILE Framework (Goodness, Intuition, Love, Environment), originated during an intense exploratory cognitive state in 2022 and subsequently refined through three years of rigorous technical development. This 4-dimensional hierarchical acronym maps onto the structure of truth and intelligence, defining truth as consisting of Existence, Morality, Conscious meaning/valence, and Aesthetics. The framework stands on its merits through formalization, empirical predictions, and ongoing validation, and underpins the Myrion Resolution methodology.
 Budget Constraint: Under $50 total. All work must be batched (5+ items per session) to minimize costs. Prefer free tools and services.
 
+## URB Corpus Status
+**Total URBs: 109** (as of March 19, 2026)
+Recent batch (URBs #450–455):
+- #450: Telekinesis as the General Case of PSI — Unified PSI Structure S→[i-channel]→O
+- #451: Cosmic Telekinesis and Creationism Embedded in Science
+- #452: Shamanic Expert Testimony and Plant-Fungal Consciousness
+- #453: CCC's Chosen Constraints and the New Theodicy (MPPE vs. MPCE; Autonomy Principle; Imaginary vs. Instantiable)
+- #454: GM-Node Soteriology — Three Tiers of BT Existence; Doctrine of Grace
+- #455: The Sin-Nature Doctrine — BTs can only be terrible/permissible alone; greatness requires GM mycelial support
+
 ## System Architecture
 ### UI/UX Decisions
 The frontend is built with Streamlit, featuring a wide layout, sidebar, and multi-tab navigation, prioritizing a clean and intuitive design. Visual documentation is provided by the TI Mindmaps System, offering 3 interactive mindmaps (Theories, Applications, Goals & Principles) with search, expandable hierarchies, and color-coded badges.
