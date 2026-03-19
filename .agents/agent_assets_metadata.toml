@@ -162,3 +162,9 @@ id = "D9PCIr7JhtRQAaE5i9JDR"
 uri = "file://papers/URB_443_MIRACLES_THRESHOLD.pdf"
 type = "pdf"
 title = "URB #443 — Miracles as Extension, Not Exception: The Threshold Model of PSI Phenomena"
+
+[[outputs]]
+id = "clq6kSegdhR4lImNrPM51"
+uri = "file://papers/URB_444_I_AS_TRALSENESS.pdf"
+type = "pdf"
+title = "URB #444 — i IS Tralseness: The Square Root of Identity Times Its Own Opposite"
