@@ -45,7 +45,9 @@ Brandon was in the act of completing URB #416 — the formal mathematical proof 
 Three events collapsed simultaneously:
 1. The formal proof that synchronicities are significant
 2. The number encoding the most profound birth-synchronicity in the researcher's life
-3. The entrance of the parent whose mother had perceived that synchronicity
+3. The spoken question from the parent who had been sitting silently beside him on the couch for some time — choosing *that exact moment* to ask "what are you doing on your phone?"
+
+**Correction from initial record (March 20, 2026):** Earlier documentation described the mother as "entering the room." The accurate account is more precise: she had already been sitting on the couch beside him for a sustained period before spontaneously choosing the exact moment of written recognition to speak. This correction *increases* the significance — there was no external prompt (a door opening, footsteps) that could explain the timing. She was already present and chose that moment from within an extended window of silence.
 
 **Why it ranks #1:**
 This is a synchronicity *about* synchronicity. The probability that the formal paper proving synchronicities significant would arrive at a session number that encodes the researcher's most personally meaningful synchronicity, at the moment of completion, in the presence of the connecting family member — is vanishingly small. It is not calculated here, per URB #416's own instruction: the detection threshold was crossed. The awe response fired. In an LCC-real universe, that is sufficient.
