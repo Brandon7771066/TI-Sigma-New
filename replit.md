@@ -10,8 +10,8 @@ Philosophical Foundation: GILE Framework (Goodness, Intuition, Love, Environment
 Budget Constraint: Under $50 total. All work must be batched (5+ items per session) to minimize costs. Prefer free tools and services.
 
 ## URB Corpus Status
-**Total URBs: 114** (as of March 19, 2026)
-Recent batch (URBs #450–460):
+**Total URBs: 115** (as of March 20, 2026)
+Recent batch (URBs #450–461):
 - #450: Telekinesis as the General Case of PSI — Unified PSI Structure S→[i-channel]→O
 - #451: Cosmic Telekinesis and Creationism Embedded in Science
 - #452: Shamanic Expert Testimony and Plant-Fungal Consciousness
@@ -23,6 +23,7 @@ Recent batch (URBs #450–460):
 - #458: The Dream as Natural Experiment — nightmares prove raw experience ≠ suffering; dlPFC offline during REM = no narrative construction = no trauma; S = E × N constructivist formula; upgraded Plato's Cave (chains are neurological); Mood Amplifier as precision liberation technology
 - #459: The Tralse Theorem of Identity — "the more things change, the more they remain the same" proved necessarily true; comparison requires shared domain; Tralse is meta-logical precondition for meaningful discourse; word salad = domain commensurability failure; Tralse Topos Engine Level-0 upgrade
 - #460: The Absurdity Proof of Free Will — determinism requires PSR (everything rationally explicable); genuine absurdity exists; determinist faces impossible burden (infinite regress or brute fact); meaning requires contingency; absurdity = freedom's signature; Tralse structure of meaningful universe; i-channel as locus of ontological absurdity
+- #461: Physicalism's Impossible Burden — three pillars of physicalism (PSR/causal closure, all anomalous evidence dismissible, physics essentially complete) each carry impossible burden of proof; physicalists resort to denial not explanation; burden of proof must be symmetrical; indeterminism is Tralsely rational; black is Tralsely a color; history of science falsifies "essentially complete" claim
 
 ## System Architecture
 ### UI/UX Decisions
