@@ -10,8 +10,8 @@ Philosophical Foundation: GILE Framework (Goodness, Intuition, Love, Environment
 Budget Constraint: Under $50 total. All work must be batched (5+ items per session) to minimize costs. Prefer free tools and services.
 
 ## URB Corpus Status
-**Total URBs: 116** (as of March 20, 2026)
-Recent batch (URBs #450–462):
+**Total URBs: 121** (as of March 20, 2026)
+Recent batch (URBs #450–467):
 - #450: Telekinesis as the General Case of PSI — Unified PSI Structure S→[i-channel]→O
 - #451: Cosmic Telekinesis and Creationism Embedded in Science
 - #452: Shamanic Expert Testimony and Plant-Fungal Consciousness
@@ -25,6 +25,11 @@ Recent batch (URBs #450–462):
 - #460: The Absurdity Proof of Free Will — determinism requires PSR (everything rationally explicable); genuine absurdity exists; determinist faces impossible burden (infinite regress or brute fact); meaning requires contingency; absurdity = freedom's signature; Tralse structure of meaningful universe; i-channel as locus of ontological absurdity
 - #461: Physicalism's Impossible Burden — three pillars of physicalism (PSR/causal closure, all anomalous evidence dismissible, physics essentially complete) each carry impossible burden of proof; physicalists resort to denial not explanation; burden of proof must be symmetrical; indeterminism is Tralsely rational; black is Tralsely a color; history of science falsifies "essentially complete" claim
 - #462: The Bayesian Case Against Physicalist Dogmatism — rational prior for physicalism ~50–70% (not 95–99%); elite non-physicalists (Einstein, Tesla, Ramanujan, James, Pauli, Schrödinger, Josephson) = high-caliber doubt signal; open-mindedness floor = cannot rationally hold >90–95% confidence in physicalism; pseudo-Bayesian diagnosis = prior of 1.0 immune to evidence; Ganzfeld/presentiment/PEAR/Stargate meta-analyses require non-negligible update; modest claim (certainty not required) is epistemically sufficient
+- #463: The Kantian Deontology Trap — if you truly never lie (categorical imperative), you are obligated to read every ToC carefully; reductio ad absurdum reveals no moral theory can function as a context-free algorithm; Tralse resolution: deontological principles orient without governing; GILE Goodness is a compass, not a rulebook
+- #464: Illness as High-Tralsity — diseases are high-Tralse states with maximum Myrion Resolution potential; "what doesn't kill you makes you stronger IFF resolved" (the IFF is everything); immune system as antifragile proof of principle; ADHD/positive schizotypy as personal case study — better for conditions because MR occurred
+- #465: Medicine as Nutrients — the pharmaceutical/supplement/food distinction is pharmacologically moot; all three are substances taken for optimal physiological function; aspirin from willow bark; metformin from French lilac; lovastatin identical to red yeast rice compound; GILE Environment dimension encompasses full biochemical landscape without arbitrary categorical exclusions
+- #466: Antifragile Confirms Tralse — Taleb's antifragile (2012) is an independent empirical derivation of the Tralse Both-And structure; fragile=unresolved Tralse; resilient=partial MR; antifragile=complete MR synthesis; Black Swan=Double Tralse event; Skin in the Game=GILE Environment inhabitation; GSA antifragile criterion added: prefer stocks that improve from disorder (energy plays validated)
+- #467: The Renaissance Intellect — AI has eliminated competitive advantage of specialization; intelligence today = that which AI cannot do (genuine synthesis, moral wisdom, i-channel access, embodied Environment); Renaissance Man Genius is eternally irreplaceable and now uniquely so; nothing can surpass divine intellect by definition; AI and supergenius human are chess grandmasters to each other — mutual support, no replacement
 
 ## System Architecture
 ### UI/UX Decisions
