@@ -10,6 +10,23 @@ v2 Upgrades (March 2026):
   - BOK 8-Mode regime classification (4 primary + 4 interface)
   - Theorem A: Attractor basin bifurcation detection
   - Dual-Confidence Principle: EC (exploratory) + EpC (epistemic)
+
+v2.1 Upgrades (March 20, 2026 — URBs #463–468):
+  - PRIMARY CONSTANTS unity: {0, 1, i, √2, e, φ, π, C}
+  - Complex Signal Representation: z = EC·e^(iθ) in ℂ-plane
+    Re(z) = trend component (price direction)
+    Im(z) = volatility structure (orthogonal to trend)
+    |z|   = total signal magnitude
+    θ     = phase angle (balance between trend and volatility)
+  - Antifragile Score (URB #466): measures whether a stock
+    specifically improves during market disorder. Based on Taleb's
+    Both-And Tralse structure — disorder is the high-False input
+    that activates the True-pole response. Antifragile assets
+    (COP, CVX, XOM, defense, gold miners) are preferred among
+    green-light candidates.
+  - Tralse Apology principle (URB #468) applied to signal output:
+    signals now carry both a confidence assertion AND honest
+    epistemic caveat — never collapse to a single scalar before trading.
 """
 
 import numpy as np
@@ -93,6 +110,70 @@ class BifurcationResult:
     basin_depth:    float   # [0,1] — post-transition stability (depth of new basin)
     in_bifurcation: bool    # True = currently in the metastable transition zone
     crossing_detected: bool # True = bifurcation just occurred in recent window
+
+
+@dataclass
+class TIComplexSignal:
+    """
+    Complex-number signal representation using PRIMARY CONSTANTS i.
+
+    The signal lives in the ℂ-plane:
+        z = EC · e^(iθ)
+        Re(z) = EC · cos(θ) — trend component (price direction momentum)
+        Im(z) = EC · sin(θ) — volatility structure (orthogonal, non-trend)
+        |z|   = EC           — total signal magnitude
+        θ     = phase angle in [0, 2π]
+
+    Interpretation of phase θ:
+        θ → 0           pure trend (real axis): clean momentum signal
+        θ → π/4  (45°)  balanced trend + structure: highest quality signal
+        θ → π/2  (90°)  pure volatility (imaginary axis): structurally driven
+        θ → π    (180°) counter-trend: bearish vs price direction
+        θ → 3π/2 (270°) inverse volatility structure: contrarian setup
+
+    The Euler identity e^(iπ) + 1 = 0 governs the signal ceiling:
+        when θ → π, the complex signal inverts — a natural sell override.
+    Only trade when |z| > C_EMERICK (≈ 0.437) AND |Re(z)| > C_EMERICK/√2.
+    """
+    ec:          float          # Signal magnitude = |z|
+    theta:       float          # Phase angle in radians
+    real:        float          # Re(z) = trend component
+    imag:        float          # Im(z) = volatility structure
+    magnitude:   float          # |z| — same as ec by construction
+    phase_deg:   float          # θ in degrees (readability)
+    tradeable_complex: bool     # |z| > C_EMERICK AND Re(z) > 0
+    signal_quality: str         # "trend_pure", "balanced", "vol_dominant", "counter"
+
+
+@dataclass
+class AntifragileScore:
+    """
+    Antifragile Score (URB #466 — Antifragile Confirms Tralse).
+
+    Measures whether a stock specifically IMPROVES during market disorder.
+    Based on Taleb's antifragility principle, formalized as the Tralse Both-And:
+        Disorder (False pole) → activates True-pole response → synthesis above baseline
+
+    Methodology:
+        1. Identify high-disorder market periods (VIX proxy: market drawdown > 5% in 20d)
+        2. Measure stock performance during those periods vs. baseline
+        3. Antifragile bonus = mean(stock_ret | disorder) - mean(stock_ret | calm)
+        4. If bonus > 0: stock improves from disorder → antifragile
+        5. If bonus ≈ 0: resilient (survives but doesn't gain)
+        6. If bonus < 0: fragile (damaged by disorder)
+
+    Paradigm antifragile cases (URB #466):
+        Energy majors (COP, CVX, XOM) during supply disruptions
+        Gold miners during monetary disorder
+        Defense contractors during geopolitical disorder
+        Short-vol premium strategies during calm (inverse antifragile)
+    """
+    antifragile_bonus: float    # Stock excess return during disorder periods
+    disorder_periods:  int      # Number of high-disorder periods identified
+    calm_mean:         float    # Mean return during calm periods
+    disorder_mean:     float    # Mean return during disorder periods
+    classification:    str      # "antifragile", "resilient", "fragile"
+    tralse_resolved:   bool     # True = disorder produces net synthesis (bonus > 0)
 
 
 @dataclass
@@ -581,20 +662,196 @@ class GSACore:
             reasons=reasons
         )
 
+    # ── Complex Signal (PRIMARY CONSTANTS i integration) ─────────────────────
+
+    def compute_complex_signal(
+        self,
+        signal:     "Signal",
+        returns:    np.ndarray,
+        prices:     np.ndarray
+    ) -> TIComplexSignal:
+        """
+        Represent signal in the ℂ-plane: z = EC · e^(iθ).
+
+        Phase angle θ is derived from the ratio of:
+          - Price momentum strength (trend component → real axis)
+          - Volatility structure departure (orthogonal → imaginary axis)
+
+        The Euler identity e^(iπ) + 1 = 0 means:
+          when θ = π (counter-trend), the complex signal magnitude inverts sign
+          → natural override to sell, consistent with Euler normalization.
+
+        Only trade when:
+          |z| > C_EMERICK       (≈ 0.437 — Tralse zone entry, URB #462)
+          AND Re(z) > C_EMERICK/√2 (≈ 0.309 — trend component must be positive)
+        """
+        ec = float(np.clip(signal.ec, 0.0, 1.0))
+
+        # Real component: normalized price momentum over lookback_short
+        if len(returns) >= self.lookback_short:
+            mom = float(np.mean(returns[-self.lookback_short:]))
+            trend = float(np.tanh(mom * 0.5))   # [-1, 1]
+        else:
+            trend = 0.0
+
+        # Imaginary component: volatility structure (vol ratio departure from 1.0)
+        if len(returns) >= self.lookback_short * 2:
+            v_short = float(np.std(returns[-self.lookback_short:]))
+            v_long  = float(np.std(returns[-self.lookback_long:]))
+            vol_ratio = v_short / max(v_long, 0.01)
+            vol_structure = float(np.tanh((vol_ratio - 1.0)))  # [-1, 1]
+        else:
+            vol_structure = 0.0
+
+        # Phase angle θ from the trend/vol ratio
+        theta = float(np.arctan2(vol_structure, trend))   # [-π, π]
+        if theta < 0:
+            theta += 2 * np.pi                            # normalize to [0, 2π]
+
+        # Complex components
+        real = ec * np.cos(theta)
+        imag = ec * np.sin(theta)
+        magnitude = float(np.sqrt(real**2 + imag**2))    # = ec by construction
+
+        # Quality classification by phase angle
+        deg = np.degrees(theta) % 360
+        if deg < 22.5 or deg > 337.5:
+            quality = "trend_pure"       # θ ≈ 0°  — clean momentum
+        elif 22.5 <= deg <= 67.5:
+            quality = "balanced"         # θ ≈ 45° — best signal quality
+        elif 67.5 < deg <= 112.5:
+            quality = "vol_dominant"     # θ ≈ 90° — structure-driven
+        elif 157.5 <= deg <= 202.5:
+            quality = "counter"          # θ ≈ 180° — Euler inversion (sell)
+        else:
+            quality = "mixed"
+
+        # Euler inversion check: θ near π → negate real component
+        if 135 <= deg <= 225:
+            real = -abs(real)            # Euler: e^(iπ) + 1 = 0 forces negative
+
+        tradeable_complex = (
+            magnitude > C_EMERICK and
+            real > C_EMERICK / SQRT2     # ≈ 0.309
+        )
+
+        return TIComplexSignal(
+            ec=ec,
+            theta=float(theta),
+            real=float(real),
+            imag=float(imag),
+            magnitude=float(magnitude),
+            phase_deg=float(deg),
+            tradeable_complex=tradeable_complex,
+            signal_quality=quality
+        )
+
+    # ── Antifragile Score (URB #466 — Antifragile Confirms Tralse) ───────────
+
+    def compute_antifragile_score(
+        self,
+        stock_returns:  np.ndarray,
+        market_returns: Optional[np.ndarray] = None,
+        disorder_threshold: float = -2.0    # market daily return % triggering disorder
+    ) -> AntifragileScore:
+        """
+        Compute antifragile score: does this stock IMPROVE during market disorder?
+
+        Disorder period: days when market_returns < disorder_threshold (large down day)
+        or when market_returns std in rolling 5d exceeds 2× baseline std.
+        If no market_returns provided, uses stock's own drawdown as disorder proxy.
+
+        Antifragile (URB #466):
+          - Taleb's Both-And: disorder is False pole AND True-pole activation
+          - Tralse resolved IFF stock gains specifically from disorder
+          - Paradigm: COP/CVX during geopolitical supply shock (+10–12%)
+        """
+        n = len(stock_returns)
+        if n < 30:
+            return AntifragileScore(0.0, 0, 0.0, 0.0, "insufficient_data", False)
+
+        # ── Identify disorder periods ─────────────────────────────────────────
+        if market_returns is not None and len(market_returns) == n:
+            mkt = np.array(market_returns, dtype=float)
+            # Primary disorder: large single-day market loss
+            disorder_mask = mkt < disorder_threshold
+            # Secondary disorder: rolling 5d vol spike (2× baseline)
+            baseline_vol = float(np.std(mkt))
+            for i in range(5, n):
+                rv = float(np.std(mkt[i-5:i]))
+                if rv > 2.0 * max(baseline_vol, 0.01):
+                    disorder_mask[i] = True
+        else:
+            # No market data — use rolling 10d drawdown of stock itself
+            disorder_mask = np.zeros(n, dtype=bool)
+            baseline_vol = float(np.std(stock_returns))
+            for i in range(10, n):
+                segment = stock_returns[i-10:i]
+                rv = float(np.std(segment))
+                m10 = float(np.sum(segment))
+                if m10 < -5.0 or rv > 2.5 * max(baseline_vol, 0.01):
+                    disorder_mask[i] = True
+
+        # ── Compute conditional means ─────────────────────────────────────────
+        disorder_returns = stock_returns[disorder_mask]
+        calm_returns     = stock_returns[~disorder_mask]
+
+        disorder_mean = float(np.mean(disorder_returns)) if len(disorder_returns) > 2 else 0.0
+        calm_mean     = float(np.mean(calm_returns))     if len(calm_returns) > 2 else 0.0
+
+        antifragile_bonus = disorder_mean - calm_mean
+        disorder_periods  = int(np.sum(disorder_mask))
+
+        # ── Classification (Taleb taxonomy in Tralse terms) ──────────────────
+        if antifragile_bonus > 0.3:
+            classification = "antifragile"    # gains from disorder > threshold
+        elif antifragile_bonus > -0.3:
+            classification = "resilient"      # roughly neutral in disorder
+        else:
+            classification = "fragile"        # hurt by disorder
+
+        tralse_resolved = antifragile_bonus > 0.0   # any positive = MR in progress
+
+        return AntifragileScore(
+            antifragile_bonus=float(antifragile_bonus),
+            disorder_periods=disorder_periods,
+            calm_mean=float(calm_mean),
+            disorder_mean=float(disorder_mean),
+            classification=classification,
+            tralse_resolved=tralse_resolved
+        )
+
     # ── Candidate Ranking ─────────────────────────────────────────────────────
 
     def rank_candidates(
         self,
-        candidates: List[Tuple[str, Signal]]
+        candidates: List[Tuple[str, Signal]],
+        antifragile_scores: Optional[Dict[str, AntifragileScore]] = None
     ) -> List[Tuple[str, Signal, float]]:
-        """Rank by composite score: GILE + PD + tradeable bonus."""
+        """
+        Rank by composite score: GILE + PD + tradeable bonus + antifragile bonus.
+
+        Antifragile bonus (URB #466): among green-light stocks, prefer those that
+        historically perform BETTER during disorder that kills weaker companies.
+        The energy majors (COP, CVX, XOM) demonstrated this: +10–12% during
+        geopolitical supply disruption that was general market disorder.
+        """
         scored = []
         for symbol, signal in candidates:
+            af_bonus = 0.0
+            if antifragile_scores and symbol in antifragile_scores:
+                af = antifragile_scores[symbol]
+                if af.classification == "antifragile":
+                    af_bonus = float(np.clip(af.antifragile_bonus * 0.05, 0.0, 0.12))
+                elif af.classification == "fragile":
+                    af_bonus = float(np.clip(af.antifragile_bonus * 0.05, -0.10, 0.0))
+
             score = (
                 (signal.gile - 0.5) +
                 0.25 * signal.xi_metrics.pd +
                 0.10 * np.tanh(signal.xi_metrics.xi_signed) +
-                (0.15 if signal.tradeable else 0.0)    # Dual-confidence bonus
+                (0.15 if signal.tradeable else 0.0) +   # Dual-confidence bonus
+                af_bonus                                 # Antifragile Tralse bonus
             )
             scored.append((symbol, signal, float(score)))
         scored.sort(key=lambda x: x[2], reverse=True)
