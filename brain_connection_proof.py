@@ -484,26 +484,40 @@ def create_brain_dashboard():
     st.subheader("Device Connection Status")
     col1, col2 = st.columns(2)
 
+    APP_URL = "https://5c1b8726-c8b2-4bdf-a0a8-632ec557671f-00-307bfud8cnm36.worf.replit.dev"
+
     with col1:
         if snapshot.eeg_connected:
             st.success("🧠 Muse 2 EEG: CONNECTED")
         else:
             st.error("🧠 Muse 2 EEG: DISCONNECTED")
             if data_mode == "Real Devices (Database)":
-                with st.expander("How to connect Muse 2"):
-                    st.markdown("""
-**Setup (one-time):**
-1. Install **Mind Monitor** on your phone (iOS/Android, ~$15)
-2. In Mind Monitor → Settings → OSC StreamProtocol
-3. Set the OSC IP to **your Acer's local IP** (run `ipconfig` in cmd to find it)
-4. Set OSC Port to **5000**
-5. On your Acer, open a terminal and run:
-   ```
-   python hardware/MUSE_POLAR_COMBINED.py --mode muse
-   ```
-6. Press **Start Streaming** in Mind Monitor
+                with st.expander("▶ Connect Muse 2 — click to expand"):
+                    st.markdown(f"""
+**Why disconnected:** Mind Monitor is streaming OSC, but a local bridge script
+must be running on your Acer to receive it and send it to this server.
 
-The script writes EEG band data to the database every second.
+---
+
+**One-time setup on the Acer (takes ~2 min):**
+
+**Step 1 — Open a terminal on the Acer and install:**
+```
+pip install requests python-osc bleak
+```
+
+**Step 2 — In Mind Monitor on your phone:**
+- Settings → OSC → IP = your Acer's LAN IP (run `ipconfig` in cmd)
+- Port = **5001** (not 5000)
+- Press **Start Streaming**
+
+**Step 3 — Run the bridge** (keep this terminal open):
+```
+py hardware/ACER_LIVE_BRIDGE.py --server {APP_URL} --mode muse
+```
+
+You should see `✅ #1 sent | 🧠 alpha=xx.x` every 2 seconds.
+Refresh this page — Muse will show CONNECTED within 10 seconds.
                     """)
 
     with col2:
@@ -512,33 +526,39 @@ The script writes EEG band data to the database every second.
         else:
             st.error("💓 Polar H10: DISCONNECTED")
             if data_mode == "Real Devices (Database)":
-                with st.expander("How to connect Polar H10"):
-                    st.markdown("""
-**Run this one-time setup on your Acer laptop:**
+                with st.expander("▶ Connect Polar H10 — click to expand"):
+                    st.markdown(f"""
+**Why disconnected:** The Polar is connected to Acer Bluetooth, but the app
+reads heart rate via a local bridge that sends it to this server.
+The bridge also reads Muse — run one script for both.
 
-**Step 1 — Install dependencies** (open a terminal on the Acer):
+---
+
+**Step 1 — Install (if not done for Muse above):**
 ```
-pip install bleak requests
+pip install requests python-osc bleak
 ```
 
-**Step 2 — Run the bridge script** (replace URL with your Replit app URL):
+**Step 2 — Make sure Polar H10 is paired to Acer** via
+Windows Settings → Bluetooth & devices (already done ✅)
+
+**Step 3 — Run the unified bridge for BOTH devices:**
 ```
-python hardware/POLAR_ACER_BRIDGE.py --url https://YOUR-APP.replit.app
+py hardware/ACER_LIVE_BRIDGE.py --server {APP_URL} --mode all
 ```
 
-The script finds the H10 via Bluetooth, reads live heart rate,
-and sends it to this app every 2 seconds. The Polar H10 must be
-**paired to Windows** via Settings → Bluetooth & devices.
+The bridge will auto-discover the Polar H10 via Bluetooth.
+You should see `✅ #1 sent | ❤️  HR=xx bpm` every 2 seconds.
 
-**Quick test** (paste in browser or terminal):
+---
+
+**Test the connection right now** (paste in browser address bar):
 ```
-curl -X POST https://YOUR-APP.replit.app/api/upload \\
-  -H "Content-Type: application/json" \\
-  -d '{"hr": 65, "polar": true}'
+{APP_URL}/api/upload?hr=70&polar=1&muse=1&alpha=0.5
 ```
-If that returns `{"status":"ok"}`, the connection works.
+If you see `{{"status":"ok"}}` — the pipeline is working.
                     """)
-    
+
     st.divider()
     
     # Main metrics row
