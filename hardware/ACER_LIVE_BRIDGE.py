@@ -32,32 +32,53 @@ import random
 import math
 from datetime import datetime
 
+# ── Auto-install helper (works on Windows where bare 'pip' may not be in PATH)
+import os
+import subprocess
+
+def _pip_install(pkg):
+    """Try multiple pip invocations until one works."""
+    for cmd in [
+        [sys.executable, "-m", "pip", "install", pkg, "--quiet"],
+        ["py",  "-m", "pip", "install", pkg, "--quiet"],
+        ["pip", "install", pkg, "--quiet"],
+        ["pip3","install", pkg, "--quiet"],
+    ]:
+        try:
+            r = subprocess.run(cmd, capture_output=True, timeout=60)
+            if r.returncode == 0:
+                return True
+        except Exception:
+            continue
+    print(f"⚠️  Could not auto-install '{pkg}'. Try manually: py -m pip install {pkg}")
+    return False
+
 # ── Try imports ─────────────────────────────────────────────────────────────
 try:
     import requests
 except ImportError:
-    import os; os.system("pip install requests"); import requests
+    _pip_install("requests"); import requests
 
 try:
     from pythonosc import dispatcher, osc_server
     OSC_AVAILABLE = True
 except ImportError:
-    import os; os.system("pip install python-osc")
+    _pip_install("python-osc")
     try:
         from pythonosc import dispatcher, osc_server
         OSC_AVAILABLE = True
-    except:
+    except Exception:
         OSC_AVAILABLE = False
 
 try:
     from bleak import BleakClient, BleakScanner
     BLEAK_AVAILABLE = True
 except ImportError:
-    import os; os.system("pip install bleak")
+    _pip_install("bleak")
     try:
         from bleak import BleakClient, BleakScanner
         BLEAK_AVAILABLE = True
-    except:
+    except Exception:
         BLEAK_AVAILABLE = False
 
 # ── Polar H10 BLE UUID ───────────────────────────────────────────────────────
