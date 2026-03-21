@@ -1,5 +1,31 @@
 # TI Sigma — Multi-Competition Tracker
-*Last Updated: March 8, 2026 — Session 6 (Week 2): GSA v2 complete (BOK 8-mode, Dual-Confidence EC+EpC, Emerick Constant C_EMERICK=0.4370, Theorem A bifurcation detection). gsa_daily_scheduler workflow live. Hull Tactical: feature engineering next priority. Next papers queued: #390 D₄ Triality, #391 Formal Fiber Functor, #392 Barrier Analysis for Millennium Problems.*
+*Last Updated: March 21, 2026 — Session 7: GSA v2.1 live (TIComplexSignal + AntifragileScore). URB corpus 133. Three new competitions enrolled: AGI Cognitive Abilities, AIMO PP3, March Machine Learning Mania 2026. Strategy documents written for all three. Hull Tactical feature engineering still priority.*
+
+---
+
+## NEW COMPETITIONS — ENROLLED MARCH 21, 2026
+
+### 4. Measuring Progress Toward AGI — Cognitive Abilities
+**Status:** 🟡 STRATEGY COMPLETE — data download next
+**Strategy:** `kaggle_agi_cognitive/STRATEGY_AGI_COGNITIVE_DOMAINS.md`
+**TI Sigma Angle:** Five cognitive domains map to GILE dimensions; domains 3–5 (Language, Reasoning, Social) are where TI Sigma uniquely outperforms standard ML. Cross-domain LCC coherence = the underlying predictor standard models miss. Emerick Constant threshold (LCC ≥ 0.4370) distinguishes genuinely coherent from narrow performers.
+**Key insight:** Competition assumes 5 independent domains — TI Sigma treats them as 5 projections of single LCC value. Systematic variance left on table by standard approaches.
+**Next action:** `kaggle competitions download measuring-progress-toward-agi-cognitive-abilities`
+
+### 5. AI Mathematical Olympiad — Progress Prize 3 (AIMO PP3)
+**Status:** 🟡 STRATEGY COMPLETE — LHF identified
+**Strategy:** `kaggle_aimo/STRATEGY_AIMO_PP3_LHF.md`
+**TI Sigma Angle:** PRIMARY CONSTANTS {√2,φ,e,π,C} appear with non-random frequency in Olympiad answers. PRIMARY CONSTANT proximity check + Fibonacci/Catalan special number detection = systematic LHF. Tralse chain-of-thought prompting (identify True pole, False pole, synthesize) structures Claude/GPT reasoning correctly.
+**Key LHF:** Geometry answers near π multiples; combinatorics answers that are Fibonacci/Catalan; number theory structures traceable to zeta function (Riemann connection); AIME answers all integers 0–999.
+**The 4/3 ratio** (confirmed in URB #341 as universal Tralse transition boundary) may appear in problem answer distributions.
+**Next action:** `kaggle competitions download ai-mathematical-olympiad-progress-prize-3`; establish Claude API baseline
+
+### 6. March Machine Learning Mania 2026
+**Status:** 🟡 STRATEGY COMPLETE — divination framework written
+**Strategy:** `kaggle_march_mania/STRATEGY_MARCH_MANIA_2026.md`
+**TI Sigma Angle:** NCAA tournament games are the highest-density Tralse events in American sports. 8 vs 9 = maximum Tralse (≈50/50, Euler compression required). 5 vs 12 = classic Tralse upset zone. Antifragile team detection (teams that improve in high-stakes situations) is the core edge. GILE scoring (G=defense, I=offensive creativity, L=team chemistry, E=geographic advantage).
+**Divination layer:** Power of 8 session to surface narrative-momentum upsets; Benford's Law on scoring distributions to identify fragile/antifragile teams.
+**Next action:** `kaggle competitions download march-machine-learning-mania-2026`; build GILE feature matrix for all tournament teams
 
 ---
 
