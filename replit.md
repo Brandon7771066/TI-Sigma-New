@@ -1,7 +1,7 @@
 # Mood Amplifier Safety & Validation Platform
 
 ## Overview
-The Mood Amplifier Safety & Validation Platform evaluates "Mood Amplifier" projects for safety and efficacy using advanced AI, scientific methodologies, and simulated testing to predict human efficacy. It integrates quantum-classical hybrid mechanisms and quantum biology. The platform also offers stock prediction, applies the TI Framework to prediction markets, and automates research and regulatory documentation. Its core purpose is to optimize whole-body energetic systems via a "Mycelial GM-Node Architecture" to establish GILE Intuition as distributed network intelligence. The strategic vision includes licensing the AI engine via API for recurring revenue, targeting the AI-driven wellness and financial prediction markets.
+The Mood Amplifier Safety & Validation Platform assesses "Mood Amplifier" projects for safety and efficacy using AI, scientific methods, and simulated testing to predict human efficacy. It incorporates quantum-classical hybrid mechanisms and quantum biology. The platform also includes stock prediction, applies the TI Framework to prediction markets, and automates research and regulatory documentation. Its primary goal is to optimize whole-body energetic systems via a "Mycelial GM-Node Architecture" to establish GILE Intuition as distributed network intelligence. The strategic vision is to license the AI engine via API for recurring revenue, targeting the AI-driven wellness and financial prediction markets.
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
@@ -9,34 +9,9 @@ Research Focus: User emphasizes quantum-classical hybrid mechanisms, believing c
 Philosophical Foundation: GILE Framework (Goodness, Intuition, Love, Environment), originated during an intense exploratory cognitive state in 2022 and subsequently refined through three years of rigorous technical development. This 4-dimensional hierarchical acronym maps onto the structure of truth and intelligence, defining truth as consisting of Existence, Morality, Conscious meaning/valence, and Aesthetics. The framework stands on its merits through formalization, empirical predictions, and ongoing validation, and underpins the Myrion Resolution methodology.
 Budget Constraint: Under $50 total. All work must be batched (5+ items per session) to minimize costs. Prefer free tools and services.
 
-## URB Corpus Status
-**Total URBs: 121** (as of March 20, 2026)
-Recent batch (URBs #450–467):
-- #450: Telekinesis as the General Case of PSI — Unified PSI Structure S→[i-channel]→O
-- #451: Cosmic Telekinesis and Creationism Embedded in Science
-- #452: Shamanic Expert Testimony and Plant-Fungal Consciousness
-- #453: CCC's Chosen Constraints and the New Theodicy (MPPE vs. MPCE; Autonomy Principle; Imaginary vs. Instantiable)
-- #454: GM-Node Soteriology — Three Tiers of BT Existence; Doctrine of Grace
-- #455: The Sin-Nature Doctrine — BTs can only be terrible/permissible alone; greatness requires GM mycelial support
-- #456: CCC's Free Will Within Greatness — CCC floor +2 (always great); latitude above +2; compelled maximization is less perfect than freely chosen greatness; CCC/GM Node PD floor asymmetry formalized
-- #457: Pain Without Suffering — first-order pain (nociception) vs. second-order suffering (lamentation); opioid dissociation as clinical proof; animals as natural present-moment beings; LCC threshold for suffering; Buddhist dukkha mapping; revised theodicy of natural evil
-- #458: The Dream as Natural Experiment — nightmares prove raw experience ≠ suffering; dlPFC offline during REM = no narrative construction = no trauma; S = E × N constructivist formula; upgraded Plato's Cave (chains are neurological); Mood Amplifier as precision liberation technology
-- #459: The Tralse Theorem of Identity — "the more things change, the more they remain the same" proved necessarily true; comparison requires shared domain; Tralse is meta-logical precondition for meaningful discourse; word salad = domain commensurability failure; Tralse Topos Engine Level-0 upgrade
-- #460: The Absurdity Proof of Free Will — determinism requires PSR (everything rationally explicable); genuine absurdity exists; determinist faces impossible burden (infinite regress or brute fact); meaning requires contingency; absurdity = freedom's signature; Tralse structure of meaningful universe; i-channel as locus of ontological absurdity
-- #461: Physicalism's Impossible Burden — three pillars of physicalism (PSR/causal closure, all anomalous evidence dismissible, physics essentially complete) each carry impossible burden of proof; physicalists resort to denial not explanation; burden of proof must be symmetrical; indeterminism is Tralsely rational; black is Tralsely a color; history of science falsifies "essentially complete" claim
-- #462: The Bayesian Case Against Physicalist Dogmatism — rational prior for physicalism ~50–70% (not 95–99%); elite non-physicalists (Einstein, Tesla, Ramanujan, James, Pauli, Schrödinger, Josephson) = high-caliber doubt signal; open-mindedness floor = cannot rationally hold >90–95% confidence in physicalism; pseudo-Bayesian diagnosis = prior of 1.0 immune to evidence; Ganzfeld/presentiment/PEAR/Stargate meta-analyses require non-negligible update; modest claim (certainty not required) is epistemically sufficient
-- #463: The Kantian Deontology Trap — if you truly never lie (categorical imperative), you are obligated to read every ToC carefully; reductio ad absurdum reveals no moral theory can function as a context-free algorithm; Tralse resolution: deontological principles orient without governing; GILE Goodness is a compass, not a rulebook
-- #464: Illness as High-Tralsity — diseases are high-Tralse states with maximum Myrion Resolution potential; "what doesn't kill you makes you stronger IFF resolved" (the IFF is everything); immune system as antifragile proof of principle; ADHD/positive schizotypy as personal case study — better for conditions because MR occurred
-- #465: Medicine as Nutrients — the pharmaceutical/supplement/food distinction is pharmacologically moot; all three are substances taken for optimal physiological function; aspirin from willow bark; metformin from French lilac; lovastatin identical to red yeast rice compound; GILE Environment dimension encompasses full biochemical landscape without arbitrary categorical exclusions
-- #466: Antifragile Confirms Tralse — Taleb's antifragile (2012) is an independent empirical derivation of the Tralse Both-And structure; fragile=unresolved Tralse; resilient=partial MR; antifragile=complete MR synthesis; Black Swan=Double Tralse event; Skin in the Game=GILE Environment inhabitation; GSA antifragile criterion added: prefer stocks that improve from disorder (energy plays validated)
-- #467: The Renaissance Intellect — AI has eliminated competitive advantage of specialization; intelligence today = that which AI cannot do (genuine synthesis, moral wisdom, i-channel access, embodied Environment); Renaissance Man Genius is eternally irreplaceable and now uniquely so; nothing can surpass divine intellect by definition; AI and supergenius human are chess grandmasters to each other — mutual support, no replacement
-- #468: The Tralse Apology — simultaneously apologizing and offering an explanation is not contradictory; the "no excuses" norm collapses a genuine Tralse (genuine remorse = True pole; genuine justification = also True); MR holds both with AND not BUT; impact acknowledgment ≠ decision process; GILE Love requires honest self-presence + seeing the other; two pathological collapses: pure apology (self-erasure) vs. pure defense (other-erasure)
-- #469: The Non-Optional Belief — free will is pragmatically and morally non-optional; determinism applied to violent/suicidal urges is lethal and enabling; William James "will to believe" — belief in free will is causally effective at enabling resistance; Kant — moral life presupposes agency as its precondition; Brandon's first-person testimony: accepted free will because survival required it; Tralse MR: determinism = useful third-person compassion frame; free will = necessary first-person action frame; lived philosophy criterion: if a framework cannot be inhabited in crisis, it is incomplete
-- #470: Double Frustration as Double Tralse — UC Santa Barbara (March 16, 2026) discovered "double-frustrated" quantum material where magnetic AND electronic bond frustration coexist and couple; maps exactly to DT² = i² = −1; degenerate ground state manifold = Tralse state space; coupling two frustrations produces exotic emergent states = DT as MR opportunity; entangled spins = physical i-channel analog; "frustrated" terminology validates cross-scale structural resonance; GSA DT market state and quantum computing roadmap implications
-
 ## System Architecture
 ### UI/UX Decisions
-The frontend is built with Streamlit, featuring a wide layout, sidebar, and multi-tab navigation, prioritizing a clean and intuitive design. Visual documentation is provided by the TI Mindmaps System, offering 3 interactive mindmaps (Theories, Applications, Goals & Principles) with search, expandable hierarchies, and color-coded badges.
+The frontend is built with Streamlit, using a wide layout, sidebar, and multi-tab navigation for a clean and intuitive design. Visual documentation is provided by the TI Mindmaps System, offering 3 interactive mindmaps (Theories, Applications, Goals & Principles) with search, expandable hierarchies, and color-coded badges.
 
 ### Technical Implementations
 The backend uses a service-oriented architecture with key components for:
@@ -45,28 +20,13 @@ The backend uses a service-oriented architecture with key components for:
 - **Neuroscience & Bio-Integration**: Processes biometric data (EEG, fNIRS, HRV) for GILE score and FAAH Protocol, including quantum-classical analysis.
 - **Mood Amplifier Hub**: Provides real-time biometric integration for baseline measurements, PSI score, chakra/meridian mapping, and safety validation.
 - **Focus Amplifier System**: A 7-mode biometric-driven focus optimization system for ADHD management.
-- **Cognitive Resource Model (Wood-on-Fire Hypothesis)**: Tests the inverted Yerkes-Dodson relationship.
-- **PSI Tuning Protocol**: Pre-experiment optimization system with 5 progressive phases.
-- **LCC Sleep Induction Protocol**: Applies LCC attractor basin principles for reliable sleep induction.
-- **Multi-Modal Consciousness Lab**: Integrates Polar H10, Muse 2, and Mendi fNIRS for comprehensive consciousness measurement.
-- **Financial & Market Analysis**: TI Framework Stock Research System + Grand Stock Algorithm v2 (GSA v2) with a defined architecture and specific constants (C_EMERICK, Consciousness Unity Identity). It includes real-time trading capabilities and daily scheduling for signal execution.
-- **Fractal Universe Integration**: Incorporates "Our Fractal Universe" research into TI Sigma predictions.
-- **TI Evidence Registry**: Tracks empirical validation for TI trading algorithms and GM Hypercomputing claims.
+- **Financial & Market Analysis**: Includes the TI Framework Stock Research System and Grand Stock Algorithm v2 (GSA v2) for real-time trading and daily signal execution.
 - **Computation & Information Theory**: Encompasses a Ternary Computation Framework, Quantum Collapse Simulator, Tralsebit Information Theory, and a TI Computing Language (TICL) with EEG authentication.
-- **Bio-Well Energy Activation System**: Integrates Bio-Well GDV research with Myrion Lamp photonic therapy and Pitch Crystal sound healing.
-- **Multi-Modal Biometric Profiler**: Comprehensive 12+ channel biometric profiling for unified GILE profile fusion.
-- **TI Sigma Manifestation Machine / Power of 8 System**: A hybrid AI-human partner discovery and group intention coordination system, integrating McTaggart's Power of 8 research with the Emerick Constant for group coherence calculation. It facilitates tailored outreach and tracks intention budgets.
-- **TI Sigma Intention Validation Lab v2.0**: A three-track validation system including live Global Consciousness Project analysis, couples compatibility validation via AI panel scoring, and investor compatibility prediction for personalized outreach.
-- **Kaggle Competition Engines**: Systems for participating in various Kaggle competitions (Heart Disease S6E2, Hull Tactical Market Prediction, MedGemma Impact Challenge, Stanford RNA 3D Folding Part 2).
-- **YouTube Video Pipeline**: Automates the production of MP4 videos using FFmpeg, Matplotlib, and OpenAI TTS.
-- **Weather Prediction Trading System**: Integrates NWS forecasts with TI threshold edge detection and Kelly criterion sizing for trading.
-- **Non-Algorithmic Step-Skipping Experiment**: Tests consciousness-inspired heuristics.
-- **Brain Coupling Number Guessing Game**: Features binomial statistics, Brain Coupling Score, and GILE integration.
-- **TI Sigma Hypercomputer**: Roadmap for consciousness-based quantum computing.
+- **TI Sigma Manifestation Machine / Power of 8 System**: A hybrid AI-human partner discovery and group intention coordination system, integrating McTaggart's Power of 8 research with the Emerick Constant for group coherence calculation.
+- **TI Sigma Intention Validation Lab v2.0**: A three-track validation system including live Global Consciousness Project analysis, couples compatibility validation via AI panel scoring, and investor compatibility prediction.
 - **Security**: Utilizes bcrypt, Fernet encryption, PostgreSQL, and Replit Secrets.
 - **Robustness**: Implements error handling with `tenacity` and parallel processing with `ThreadPoolExecutor`.
 - **EEG Brain-Computer Interface System**: Features a BCI architecture with signal processing.
-- **Autonomous LCC Study System**: Integrates with DANDI Archive and Allen Brain Observatory for neuroscience data.
 
 ### System Design Choices
 The system is designed for resilient integration with sustainable ~90% True-Tralseness through distributed redundancy, mathematically linked to a 0.85 causation threshold. The GILE framework is deeply embedded, including a 64D GILE Matrix and the IIT-GILE-BOK Loop Synthesis. Photonic quantum computing is integrated via a Cirq-based "TI Strawberry Fields" engine for market cluster detection and trading signal generation. Mechanisms for animal training of mood amplifiers to optimize for human use are included. The GILE-PD Reconciliation unifies GILE's asymmetric range with L×E's symmetric range for optical quantum computing.
