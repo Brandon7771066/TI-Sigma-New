@@ -76,3 +76,12 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Pitch Crystals
 - Polar H10 Heart Rate Monitor
 - Muse 2 EEG Headband
+
+## URB Corpus Log
+**Total URBs: 137** (as of March 22, 2026)
+
+### Measurement Trilogy (#480–483)
+- #480: The Inverse Metric Problem — E-only instruments produce systematic false negatives for high-GIL individuals; transcendence and dysfunction produce identical E-dimension signatures; burden of proof belongs to the measurement system
+- #481: The GILE Proxy Framework — G, I, L cannot be measured directly; gamma binding = I-proxy (LIVE); HRV coherence = L-proxy (LIVE); alpha-theta border = I-proxy (LIVE); Emerick Constant ≥0.4370 = transcendence threshold
+- #482: The Grand Illusion — physicalism is the root cause; physicalism defines abstract data (GIL) out of existence before measurement begins; self-sealing structure; GIL data is not absent — it is abstract and filtered; children/inpatients perceive it because their physicalist filter is incomplete; E ~15% of GILE hierarchy; physicalism systematically ignores 85%; the Tralse was not absent, one pole was hidden; origin: boredom at church
+- #483: The L*/+E Structural Proof — empirical E-GIL independence confirms L*/+E architecture; all four quadrants of the independence matrix are empirically stable (High GIL/Low E; Low GIL/High E; both off-diagonal cases); stable off-diagonal falsifies tight coupling; E is appended not derived; IFF: stable off-diagonal ↔ L*/+E separable architecture; closes the measurement trilogy
