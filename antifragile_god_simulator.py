@@ -12,7 +12,7 @@ from plotly.subplots import make_subplots
 # ── PRIMARY CONSTANTS ─────────────────────────────────────────────────────────
 PHI = (1 + np.sqrt(5)) / 2
 C_EMERICK = 1 / (PHI * np.sqrt(2))
-POLY_THRESHOLD = 0.92
+POLY_THRESHOLD = 0.93
 ETERNAL_FLOOR = 2.0
 SQRT2 = np.sqrt(2)
 
