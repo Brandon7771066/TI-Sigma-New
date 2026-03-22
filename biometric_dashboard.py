@@ -19,12 +19,16 @@ import plotly.express as px
 from datetime import datetime, timedelta, date
 import pandas as pd
 import json
+import math
 from typing import Dict, Any, List
 
 from polar_h10_real_integration import PolarH10Integration
-# Note: ECGWaveform removed in new integration - using simpler HeartDataPoint
 from oura_ring_integration import OuraRingIntegration
 from psi_tracker import PsiTracker
+from gil_predictor_engine import (
+    BIOMARKERS, BRANDON_BASELINE, GILE_WEIGHTS, C_EMERICK,
+    compute_gile_portrait, get_dimension_narrative
+)
 
 
 def render():
@@ -88,13 +92,18 @@ def render():
     st.divider()
     
     # Tabs for different views
-    bio_tab1, bio_tab2, bio_tab3, bio_tab4 = st.tabs([
+    bio_tab0, bio_tab1, bio_tab2, bio_tab3, bio_tab4 = st.tabs([
+        "🧬 GIL Portrait",
         "🫀 Real-Time EKG",
         "📊 Coherence Tracking",
         "🌙 Sleep & Recovery",
         "🔮 PSI Correlation"
     ])
-    
+
+    # Tab 0: GIL Predictor Portrait
+    with bio_tab0:
+        render_gil_portrait()
+
     # Tab 1: Real-Time EKG
     with bio_tab1:
         render_realtime_ekg(polar_connected)
@@ -110,6 +119,272 @@ def render():
     # Tab 4: PSI Correlation
     with bio_tab4:
         render_psi_correlation(polar_connected, oura_token)
+
+
+def render_gil_portrait():
+    """
+    GIL Predictor Portrait — URB #480–483 Implementation
+    Shows the full GILE profile with correct dimensional weighting.
+    E is the LOWEST dimension. GIL dominates (85% of total person).
+    """
+    st.subheader("GIL Predictor Portrait")
+    st.caption(
+        "Based on URBs #480–483 (Measurement Trilogy). "
+        "E-dimension is ~15% of total GILE. GIL = 85%. "
+        f"Emerick Constant C = {C_EMERICK:.4f} — transcendence threshold."
+    )
+
+    st.info(
+        "**The Grand Illusion (URB #482):** Conventional biometrics capture only the "
+        "E-dimension (~15% of a person). This portrait uses ALL available GIL proxies "
+        "— biometric AND behavioral — to reveal the full picture physicalism misses.",
+        icon="🔬"
+    )
+
+    st.divider()
+
+    # ── User data input ───────────────────────────────────────────────────────
+    with st.expander("📥 Enter / Update Your Data", expanded=True):
+        st.caption("Pre-filled with Brandon's known baseline (March 2026). "
+                   "Leave blank where data is not yet available — the engine notes it.")
+
+        data = dict(BRANDON_BASELINE)
+
+        dim_order = ['G', 'I', 'L', 'E']
+        dim_labels = {
+            'G': '🟣 G — Goodness (35% of GILE)',
+            'I': '🔵 I — Intuition (27% of GILE)',
+            'L': '🟢 L — Love (23% of GILE)',
+            'E': '⚪ E — Environment (15% of GILE — lowest)',
+        }
+
+        for dim in dim_order:
+            st.markdown(f"**{dim_labels[dim]}**")
+            dim_markers = {k: v for k, v in BIOMARKERS.items() if v['dimension'] == dim}
+            cols = st.columns(2)
+            col_idx = 0
+            for key, bm in dim_markers.items():
+                with cols[col_idx % 2]:
+                    current = BRANDON_BASELINE.get(key)
+                    norm = bm['normalization']
+                    if norm[0] in ('scale', 'optimal'):
+                        max_val = float(norm[2])
+                        default = float(current) if current is not None else 0.0
+                        val = st.number_input(
+                            bm['label'],
+                            min_value=0.0,
+                            max_value=max_val,
+                            value=default,
+                            help=bm['description'] + f"\n\nEvidence: {bm['evidence']}",
+                            key=f"gil_{key}",
+                        )
+                        data[key] = val if val > 0 else None
+                    else:
+                        default = float(current) if current is not None else 0.5
+                        val = st.slider(
+                            bm['label'],
+                            min_value=0.0,
+                            max_value=1.0,
+                            value=default,
+                            step=0.01,
+                            help=bm['description'],
+                            key=f"gil_{key}",
+                        )
+                        data[key] = val
+                col_idx += 1
+            st.markdown("")
+
+    # ── Compute portrait ──────────────────────────────────────────────────────
+    portrait = compute_gile_portrait(data)
+    filled = portrait['filled']
+    raw = portrait['raw']
+
+    st.divider()
+    st.subheader("Your GIL Portrait")
+
+    # ── Radar chart ───────────────────────────────────────────────────────────
+    dims = ['G', 'I', 'L', 'E']
+    dim_full = ['Goodness (35%)', 'Intuition (27%)', 'Love (23%)', 'Environment (15%)']
+    scores = [filled[d] for d in dims]
+    scores_display = scores + [scores[0]]
+    dims_display = dim_full + [dim_full[0]]
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=scores_display,
+        theta=dims_display,
+        fill='toself',
+        fillcolor='rgba(100, 60, 200, 0.25)',
+        line=dict(color='rgba(130, 80, 255, 0.9)', width=2),
+        name='Your GIL Portrait',
+    ))
+    fig.add_trace(go.Scatterpolar(
+        r=[C_EMERICK] * 5,
+        theta=dims_display,
+        mode='lines',
+        line=dict(color='rgba(255, 180, 0, 0.6)', width=1.5, dash='dot'),
+        name=f'Emerick Constant ({C_EMERICK:.3f})',
+    ))
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 1], tickfont=dict(size=9)),
+            angularaxis=dict(tickfont=dict(size=12)),
+        ),
+        showlegend=True,
+        height=420,
+        title=dict(
+            text="GILE Dimensional Portrait<br><sup>E-dimension correctly weighted at 15%</sup>",
+            x=0.5,
+        ),
+        margin=dict(t=80, b=20),
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    # ── Dimension score tiles ─────────────────────────────────────────────────
+    col_g, col_i, col_l, col_e = st.columns(4)
+    dim_cols = {'G': col_g, 'I': col_i, 'L': col_l, 'E': col_e}
+    dim_colors = {'G': '🟣', 'I': '🔵', 'L': '🟢', 'E': '⚪'}
+    dim_weight_pct = {'G': '35%', 'I': '27%', 'L': '23%', 'E': '15%'}
+
+    for dim in dims:
+        with dim_cols[dim]:
+            score = filled[dim]
+            available = len(portrait['available_markers'][dim])
+            total_markers = len([k for k, v in BIOMARKERS.items() if v['dimension'] == dim])
+            delta_str = f"{available}/{total_markers} markers active"
+            is_estimated = raw[dim] is None
+            label = f"{dim_colors[dim]} {dim} ({dim_weight_pct[dim]})"
+            st.metric(
+                label,
+                f"{score:.2f}",
+                delta=delta_str,
+                help=get_dimension_narrative(dim, score) +
+                     (" *(estimated — no data yet)*" if is_estimated else ""),
+            )
+
+    st.divider()
+
+    # ── Key composite metrics ─────────────────────────────────────────────────
+    col_a, col_b, col_c = st.columns(3)
+
+    with col_a:
+        gil = portrait['gil_composite']
+        st.metric(
+            "GIL Composite Score",
+            f"{gil:.3f}",
+            help="Weighted G+I+L only. Emerick Constant threshold = 0.4370"
+        )
+        if portrait['transcendent']:
+            st.success(f"✅ Above Emerick Constant ({C_EMERICK:.4f}) — Transcendent")
+        else:
+            gap = C_EMERICK - gil
+            st.warning(f"Gap to transcendence threshold: {gap:.3f}")
+
+    with col_b:
+        st.metric(
+            "Total GILE Score",
+            f"{portrait['total_gile']:.3f}",
+            help="Full GILE with correct dimensional weights (G=35%, I=27%, L=23%, E=15%)"
+        )
+
+    with col_c:
+        quad = portrait['quadrant']
+        quad_icons = {'Q1': '🌟', 'Q2': '🔬', 'Q3': '🏢', 'Q4': '💤'}
+        st.metric(
+            "L*/+E Quadrant",
+            f"{quad_icons.get(quad, '')} {quad}",
+            help=portrait['quadrant_label']
+        )
+        if quad == 'Q2':
+            st.info("Q2 = L*/+E proof case: high GIL, low E. "
+                    "The Inverse Metric Problem in action.", icon="🧬")
+
+    st.divider()
+
+    # ── Dimension narratives ──────────────────────────────────────────────────
+    st.subheader("Dimensional Narrative")
+    for dim in dims:
+        score = filled[dim]
+        available = len(portrait['available_markers'][dim])
+        total_m = len([k for k, v in BIOMARKERS.items() if v['dimension'] == dim])
+        narrative = get_dimension_narrative(dim, score)
+        weight_label = dim_weight_pct[dim]
+        icon = dim_colors[dim]
+        st.markdown(
+            f"**{icon} {dim} — {weight_label} of your GILE:** {narrative}  \n"
+            f"*({available}/{total_m} markers active)*"
+        )
+
+    st.divider()
+
+    # ── Conventional vs GIL portrait comparison ───────────────────────────────
+    st.subheader("Conventional Portrait vs. GIL Portrait")
+    st.caption("The Grand Illusion (URB #482): E-only measurement misses 85% of the person.")
+
+    col_conv, col_gil = st.columns(2)
+
+    with col_conv:
+        st.markdown("**❌ Conventional (E-only) Portrait**")
+        e_score = filled['E']
+        e_pct = int(e_score * 100)
+        conv_markers = [
+            ("Physical health diagnoses", "Low" if data.get('physical_health_index', 5) < 5 else "OK"),
+            ("Financial stability", "Low" if data.get('financial_stability', 5) < 5 else "OK"),
+            ("Institutional recognition", "Low" if data.get('social_recognition', 5) < 5 else "OK"),
+            ("Sleep score", "Unknown" if data.get('sleep_score') is None else f"{data.get('sleep_score'):.0f}/100"),
+            ("Resting heart rate", "Unknown" if data.get('resting_heart_rate') is None else f"{data.get('resting_heart_rate'):.0f} BPM"),
+        ]
+        for label, val in conv_markers:
+            icon = "🔴" if val in ("Low", "Unknown") else "🟡"
+            st.markdown(f"{icon} {label}: **{val}**")
+        st.metric("Conventional Score", f"{e_score:.2f} / 1.0",
+                  help="This is 15% of the actual picture")
+        st.error("This portrait is what the system sees. "
+                 "It represents ~15% of who you are.")
+
+    with col_gil:
+        st.markdown("**✅ GIL Portrait (The Real Picture)**")
+        gil_markers = [
+            ("URB corpus volume", f"{int(data.get('urb_corpus_volume', 0))} original papers"),
+            ("Synchronicity frequency", f"{data.get('synchronicity_frequency', 0):.0f}/week"),
+            ("Suffering-activation", f"{data.get('suffering_activation', 0):.1f}/10"),
+            ("Pattern-obsession depth", f"{data.get('pattern_obsession_depth', 0):.1f}/10"),
+            ("Meditation/prayer", f"{data.get('meditation_prayer_hours_weekly', 0):.1f} hrs/week"),
+        ]
+        for label, val in gil_markers:
+            st.markdown(f"🟢 {label}: **{val}**")
+        st.metric("GIL Composite Score", f"{portrait['gil_composite']:.3f} / 1.0",
+                  help="85% of the actual picture")
+        if portrait['transcendent']:
+            st.success("This portrait is what the framework sees. "
+                       "Above the Emerick Constant threshold.")
+        else:
+            st.info("This portrait is what the framework sees. "
+                    "Approaching transcendence threshold as more markers activate.")
+
+    st.divider()
+
+    # ── Missing markers call-to-action ────────────────────────────────────────
+    missing = [
+        (k, BIOMARKERS[k])
+        for k in BIOMARKERS
+        if data.get(k) is None or data.get(k) == 0.0
+    ]
+    if missing:
+        with st.expander(f"📡 {len(missing)} biomarkers not yet active — unlock these", expanded=False):
+            for key, bm in missing:
+                device_hint = ""
+                if 'Muse' in bm['label'] or 'EEG' in bm['label'] or 'gamma' in bm['label'].lower() or 'alpha' in bm['label'].lower():
+                    device_hint = " | *Muse 2*"
+                elif 'Polar' in bm['label'] or 'HRV' in bm['label'] or 'heart' in bm['label'].lower():
+                    device_hint = " | *Polar H10*"
+                elif 'GDV' in bm['label']:
+                    device_hint = " | *Biowell GDV*"
+                elif 'Oura' in bm['label'] or 'Sleep' in bm['label']:
+                    device_hint = " | *Oura Ring*"
+                st.markdown(
+                    f"- **{bm['label']}** ({bm['dimension']}-dim, weight {bm['weight']:.0%} within {bm['dimension']}){device_hint}"
+                )
 
 
 def render_realtime_ekg(polar_connected: bool):
