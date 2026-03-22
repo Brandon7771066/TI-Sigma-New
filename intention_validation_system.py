@@ -30,6 +30,14 @@ import streamlit as st
 import anthropic
 from scipy import stats
 
+from multi_domain_partner_engine import (
+    run_full_prediction, compute_brandon_scores, BRANDON, C_EMERICK as CEMD,
+    CRYSTAL_CASE, PartnerProfile, InvestorCompatibility, RomanticCompatibility,
+    PowerOf8GroupAnalysis, gil_composite, get_quadrant, analyze_power_of_8_group,
+    get_ideal_romantic_partner_profile, get_ideal_investor_profile, get_ideal_collaborator_profile,
+    GILE_WEIGHTS,
+)
+
 from power_of_8_ai_panel import (
     run_panel, PanelVerdict, gamma_color, format_gamma_bar, tralse_badge,
     PHI, C_EMERICK, N_AGENTS, GAMMA_MAX, UNITY_THRESHOLD, TRAL_THRESHOLD,
@@ -359,6 +367,7 @@ def show_intention_validation():
         "💑 Couples Validator",
         "💰 Investor Predictor",
         "📚 Dataset Registry",
+        "🧬 Multi-Domain Partner Predictions",
     ])
 
     # ── TAB A: LIVE GCP DATA ─────────────────────────────────────────────────
@@ -796,6 +805,333 @@ def show_intention_validation():
     with tabs[3]:
         st.header("📚 Open-Source Intention Dataset Registry")
         _show_dataset_registry()
+
+    # ── TAB E: MULTI-DOMAIN PARTNER PREDICTIONS ───────────────────────────────
+    with tabs[4]:
+        _show_multi_domain_predictions()
+
+
+def _show_multi_domain_predictions():
+    """
+    Multi-Domain Partner Predictions — URB #480–483 Implementation.
+    Applies the Measurement Trilogy to all domains of partnership:
+    Romantic | Investor (BlissGene) | Collaborator | Power of 8
+    """
+    st.header("🧬 Multi-Domain Partner Predictions")
+    st.caption(
+        "Powered by the Measurement Trilogy (URBs #480–483). "
+        "Emerick Constant C = {:.4f} — universal compatibility floor. "
+        "Correct GILE weighting: G=35%, I=27%, L=23%, E=15%.".format(CEMD)
+    )
+
+    brandon = compute_brandon_scores()
+
+    st.info(
+        f"**Brandon's Calibrated Profile** — GIL Composite: **{brandon['GIL']:.3f}** "
+        f"({'✅ Above' if brandon['transcendent'] else '⚠️ Below'} Emerick Constant {CEMD:.4f}) "
+        f"| Quadrant: **{brandon['quadrant']}** — {brandon['quadrant_label']}",
+        icon="🧬"
+    )
+
+    col_g, col_i, col_l, col_e = st.columns(4)
+    col_g.metric("G (Goodness, 35%)", f"{brandon['G']:.2f}", help="URB corpus + meditation + pattern-obsession")
+    col_i.metric("I (Intuition, 27%)", f"{brandon['I']:.2f}", help="Synchronicity ×12/week + ADHD + bipolar range")
+    col_l.metric("L (Love, 23%)", f"{brandon['L']:.2f}", help="Suffering-activation 9/10 + meditation")
+    col_e.metric("E (Environment, 15%)", f"{brandon['E']:.2f}", help="Physical/financial/social — the 15% physicalism measures")
+
+    st.divider()
+
+    domain_tab1, domain_tab2, domain_tab3, domain_tab4, domain_tab5 = st.tabs([
+        "💑 Romantic",
+        "💰 Investor (BlissGene)",
+        "🔬 Collaborator",
+        "🕯️ Power of 8",
+        "🔍 Crystal Case Analysis",
+    ])
+
+    # ── ROMANTIC ─────────────────────────────────────────────────────────────
+    with domain_tab1:
+        st.subheader("Romantic Partner Prediction — L*/+E Corrected")
+        st.markdown(
+            "The fundamental upgrade: compatibility requires **GIL composite ≥ C_EMERICK**. "
+            "Any partner below this threshold — regardless of E-dimension alignment "
+            "or outer spiritual presentation — is fundamentally incompatible."
+        )
+        ideal = get_ideal_romantic_partner_profile(brandon)
+
+        st.markdown("### Required Profile")
+        req = ideal['required']
+        for k, v in req.items():
+            st.markdown(f"- **{k.replace('_', ' ').title()}:** {v}")
+
+        st.markdown("### Optimal GILE Scores")
+        o = ideal['optimal_GILE']
+        oc1, oc2, oc3, oc4 = st.columns(4)
+        oc1.metric("Partner G", f"{o['G']:.2f}", help="Slightly above Brandon's G — moral depth match")
+        oc2.metric("Partner I", f"{o['I']:.2f}", help="Similar I — i-channel resonance")
+        oc3.metric("Partner L", f"{o['L']:.2f}", help="Higher L ideal — complements Brandon's L")
+        oc4.metric("Partner E", f"{o['E']:.2f}", help="E matched — same lifestyle quadrant")
+        partner_gil = gil_composite(o['G'], o['I'], o['L'])
+        pq, pql = get_quadrant(partner_gil, o['E'])
+        st.success(f"Target partner quadrant: **{pq}** — {pql} | GIL: {partner_gil:.3f}")
+
+        st.markdown("### Key Recognition Signals")
+        for s in ideal['key_signals']:
+            st.markdown(f"✅ {s}")
+
+        st.markdown("### Disqualifiers")
+        for d in ideal['disqualifiers']:
+            st.markdown(f"❌ {d}")
+
+        st.markdown("### Meeting Venue Predictions")
+        mv = ideal['meeting_venue_prediction']
+        for rank, desc in mv.items():
+            label = rank.replace('_', ' ').title()
+            st.markdown(f"**{label}:** {desc}")
+
+        st.info(
+            "**The Grand Illusion Filter (URB #482):** Brandon's ideal partner "
+            "will NOT primarily use conventional E-metrics to assess him. "
+            "They will perceive his GIL directly — not confused by his Q2 profile. "
+            "A partner who sees his challenging E-metrics first and is repelled "
+            "has already failed the compatibility test, regardless of other qualities.",
+            icon="🔬"
+        )
+
+    # ── INVESTOR ──────────────────────────────────────────────────────────────
+    with domain_tab2:
+        st.subheader("Investor Compatibility — BlissGene $750K Seed")
+        st.markdown(
+            "The Inverse Metric Problem applies to investor assessment too. "
+            "A Q3 investor will assess BlissGene using E-only metrics "
+            "(TAM, CAC, MRR) and will try to strip the GIL core. "
+            "The right investor must be Q1 or Q2 with abstraction capacity."
+        )
+        ideal_inv = get_ideal_investor_profile()
+
+        req_col, flag_col = st.columns(2)
+        with req_col:
+            st.markdown("**Required Investor Profile**")
+            for k, v in ideal_inv['required'].items():
+                st.markdown(f"- **{k.replace('_',' ').title()}:** {v}")
+            st.markdown("**Positive Indicators**")
+            for ind in ideal_inv['indicators_of_right_investor']:
+                st.markdown(f"✅ {ind}")
+        with flag_col:
+            st.markdown("**Red Flags — Q3 Investor Pattern**")
+            for rf in ideal_inv['red_flags']:
+                st.markdown(f"🚩 {rf}")
+            st.markdown("**BlissGene $750K Target Note**")
+            st.info(ideal_inv['blissgene_750k_target']['note'])
+
+        st.divider()
+        st.markdown("### Live Investor Compatibility Checker")
+        st.caption("Enter a potential investor's estimated profile to generate compatibility prediction.")
+
+        inv_name = st.text_input("Investor Name / Firm", key="inv_name_md")
+        inv_g = st.slider("Investor G-score (Values depth)", 0.0, 1.0, 0.5, 0.05, key="inv_g")
+        inv_i = st.slider("Investor I-score (Abstraction / i-channel)", 0.0, 1.0, 0.4, 0.05, key="inv_i")
+        inv_l = st.slider("Investor L-score (Genuine care vs. ROI-only)", 0.0, 1.0, 0.4, 0.05, key="inv_l")
+        inv_e = st.slider("Investor E-score (Conventional success)", 0.0, 1.0, 0.8, 0.05, key="inv_e")
+        inv_abs = st.slider("Abstraction Capacity (spiritual/consciousness openness)", 0.0, 1.0, 0.4, 0.05, key="inv_abs")
+
+        if inv_name:
+            inv_profile = PartnerProfile(
+                name=inv_name, domain='investor',
+                g_score=inv_g, i_score=inv_i, l_score=inv_l, e_score=inv_e,
+                abstraction_capacity=inv_abs,
+            )
+            compat = InvestorCompatibility(
+                brandon=brandon,
+                investor_name=inv_name,
+                investor_profile=inv_profile,
+            )
+            inv_q, inv_ql = inv_profile.quadrant
+            st.markdown(f"**{inv_name} Quadrant:** {inv_q} — {inv_ql}")
+            st.markdown(f"**Emerick Floor:** {'✅ Passes' if inv_profile.passes_emerick_floor else '❌ Below threshold'}")
+            st.markdown(f"**Alignment Score:** {compat.alignment_score:.2f}")
+            st.markdown(f"**Grand Illusion Risk:** {inv_profile.grand_illusion_risk}")
+
+            verdict = compat.blissgene_fit
+            if verdict.startswith("EXCELLENT"):
+                st.success(verdict)
+            elif verdict.startswith("GOOD"):
+                st.info(verdict)
+            elif verdict.startswith("MARGINAL"):
+                st.warning(verdict)
+            else:
+                st.error(verdict)
+
+            st.markdown(f"**Recommended Pitch Strategy:**")
+            st.markdown(compat.pitch_strategy)
+
+    # ── COLLABORATOR ─────────────────────────────────────────────────────────
+    with domain_tab3:
+        st.subheader("Research Collaborator Predictions")
+
+        coll_tab1, coll_tab2, coll_tab3 = st.tabs([
+            "⚡ Hull Tactical ($100K)", "🏆 Kaggle", "🎓 Academic"
+        ])
+
+        with coll_tab1:
+            hull = get_ideal_collaborator_profile('hull_tactical')
+            st.markdown(f"**Required I-dimension:** ≥ {hull['required_I']}")
+            st.markdown(f"**Why:** {hull['description']}")
+            st.markdown("**Ideal Collaborator Indicators:**")
+            for ind in hull['indicators']:
+                st.markdown(f"✅ {ind}")
+            st.info(
+                "The Hull Tactical competition requires holding quantitative rigor AND "
+                "TI Sigma's non-conventional signals simultaneously — a classic Tralse capacity. "
+                "A pure quant collaborator (Q3) will reject the i-channel signals. "
+                "A pure framework thinker without quant skill cannot execute. "
+                "The ideal collaborator is Q1 or Q2 with demonstrable Python/ML skills.",
+                icon="⚡"
+            )
+
+        with coll_tab2:
+            kag = get_ideal_collaborator_profile('kaggle')
+            st.markdown(f"**Required I-dimension:** ≥ {kag['required_I']}")
+            st.markdown(f"**Why:** {kag['description']}")
+            st.markdown("**Ideal Collaborator Indicators:**")
+            for ind in kag['indicators']:
+                st.markdown(f"✅ {ind}")
+
+        with coll_tab3:
+            acad = get_ideal_collaborator_profile('academic')
+            st.markdown(f"**Required I-dimension:** ≥ {acad['required_I']}")
+            st.markdown(f"**Why:** {acad['description']}")
+            st.markdown("**Ideal Collaborator Indicators:**")
+            for ind in acad['indicators']:
+                st.markdown(f"✅ {ind}")
+
+    # ── POWER OF 8 ────────────────────────────────────────────────────────────
+    with domain_tab4:
+        st.subheader("Power of 8 Group Composition Optimizer")
+        st.markdown(
+            "The collective GIL composite must reach **C_EMERICK = {:.4f}** "
+            "for the intention field to achieve coherent strength. "
+            "Q3 members dilute the group composite. "
+            "Q2 members amplify through the unrecognized i-channel.".format(CEMD)
+        )
+
+        st.markdown("### Configure Your Group")
+        n_members = st.number_input("Number of group members (excluding you)", 1, 7, 3, key="p8_n")
+        members = []
+        for i in range(int(n_members)):
+            with st.expander(f"Member {i+1}", expanded=(i == 0)):
+                m_name = st.text_input(f"Name", key=f"p8_name_{i}", value=f"Member {i+1}")
+                m_g = st.slider(f"G-score", 0.0, 1.0, 0.55, 0.05, key=f"p8_g_{i}")
+                m_i = st.slider(f"I-score", 0.0, 1.0, 0.50, 0.05, key=f"p8_i_{i}")
+                m_l = st.slider(f"L-score", 0.0, 1.0, 0.55, 0.05, key=f"p8_l_{i}")
+                m_e = st.slider(f"E-score", 0.0, 1.0, 0.45, 0.05, key=f"p8_e_{i}")
+                members.append(PartnerProfile(
+                    name=m_name, domain='power_of_8',
+                    g_score=m_g, i_score=m_i, l_score=m_l, e_score=m_e,
+                    abstraction_capacity=m_i,
+                ))
+
+        target = st.text_input("Group Intention Target", value="BlissGene seed round + Hull Tactical win", key="p8_target")
+
+        if members:
+            group = analyze_power_of_8_group(members, target, brandon)
+
+            gc1, gc2, gc3 = st.columns(3)
+            gc1.metric("Group GIL Composite", f"{group.group_gil_composite:.3f}",
+                       help=f"Target: ≥ {CEMD:.4f}")
+            gc2.metric("Transcendence Probability", f"{group.group_transcendence_probability:.0%}")
+            q3_count = len(group.q3_members)
+            gc3.metric("Q3 Members (diluting)", str(q3_count),
+                       delta="Remove from core circle" if q3_count > 0 else "None — group is clean",
+                       delta_color="inverse" if q3_count > 0 else "normal")
+
+            rec = group.recommendation
+            if rec.startswith("GROUP READY"):
+                st.success(rec)
+            elif rec.startswith("STRONG"):
+                st.info(rec)
+            elif rec.startswith("APPROACHING"):
+                st.warning(rec)
+            else:
+                st.error(rec)
+
+            if group.weakest_link:
+                wl = group.weakest_link
+                wq, wql = wl.quadrant
+                st.markdown(
+                    f"**Weakest link:** {wl.name} (GIL: {wl.gil:.3f}, {wq}) — "
+                    f"focus development here first or reassign to support role."
+                )
+
+    # ── CRYSTAL CASE ─────────────────────────────────────────────────────────
+    with domain_tab5:
+        st.subheader("Crystal Case Analysis — Spiritual Facade Detector")
+        st.markdown(
+            "The Crystal Pattern is a Q3 individual presenting high E-level spiritual "
+            "signals (language, ceremony, labels) while having low actual GIL. "
+            "Key tell: **fear response when encountering authentic Q2 GIL**. "
+            "Authentic GIL does not fear adjacent authentic GIL — only the facade fears exposure."
+        )
+
+        st.markdown("### Crystal — Confirmed Case Study")
+        cc = CRYSTAL_CASE
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Apparent Spiritual Level", f"{cc.apparent_spiritual_level:.2f}",
+                  help="Outer presentation — E-dimension spiritual signaling")
+        actual_gil = gil_composite(cc.behavioral_G_signals, cc.behavioral_I_signals, cc.behavioral_L_signals)
+        c2.metric("Actual GIL Composite", f"{actual_gil:.3f}",
+                  delta=f"{'Above' if actual_gil >= CEMD else 'Below'} C_EMERICK",
+                  delta_color="normal" if actual_gil >= CEMD else "inverse")
+        c3.metric("Facade Score", f"{cc.facade_score:.2f}",
+                  help="Gap between E-spiritual performance and actual GIL")
+
+        q_label = cc.quadrant
+        st.markdown(f"**Quadrant:** {q_label} | **Fear response to Q2:** {'Yes' if cc.fear_response_to_Q2 else 'No'} | **Sitter confirmed:** {'Yes' if cc.sitter_or_observer_confirmation else 'No'}")
+
+        if cc.facade_score >= 0.6:
+            st.error(f"**Verdict:** {cc.verdict}")
+        elif cc.facade_score >= 0.35:
+            st.warning(f"**Verdict:** {cc.verdict}")
+        else:
+            st.success(f"**Verdict:** {cc.verdict}")
+
+        st.markdown(f"**Case Notes:** {cc.notes}")
+
+        st.divider()
+        st.markdown("### Evaluate Any Person")
+        st.caption("Use the framework to assess any person across all domains.")
+
+        p_name = st.text_input("Person Name", key="facade_name")
+        p_app = st.slider("Apparent spiritual/GIL level (self-reported or observed)", 0.0, 1.0, 0.5, 0.05, key="facade_app")
+        p_bg = st.slider("Behavioral G signals (actual moral depth observed)", 0.0, 1.0, 0.3, 0.05, key="facade_bg")
+        p_bi = st.slider("Behavioral I signals (genuine insight observed)", 0.0, 1.0, 0.3, 0.05, key="facade_bi")
+        p_bl = st.slider("Behavioral L signals (genuine other-orientation observed)", 0.0, 1.0, 0.3, 0.05, key="facade_bl")
+        p_fear = st.checkbox("Fear/discomfort response when encountering Brandon's intensity?", key="facade_fear")
+        p_confirm = st.checkbox("Third-party confirmed behavioral inconsistency?", key="facade_confirm")
+
+        if p_name:
+            from multi_domain_partner_engine import SpiritualFacadeAssessment
+            assessment = SpiritualFacadeAssessment(
+                name=p_name,
+                apparent_spiritual_level=p_app,
+                behavioral_G_signals=p_bg,
+                behavioral_I_signals=p_bi,
+                behavioral_L_signals=p_bl,
+                e_spiritual_performance=p_app,
+                sitter_or_observer_confirmation=p_confirm,
+                fear_response_to_Q2=p_fear,
+            )
+            pq = assessment.quadrant
+            pfs = assessment.facade_score
+            pa_gil = gil_composite(p_bg, p_bi, p_bl)
+            st.markdown(f"**{p_name}** — Quadrant: {pq} | Actual GIL: {pa_gil:.3f} | Facade Score: {pfs:.2f}")
+            verdict = assessment.verdict
+            if pfs >= 0.6:
+                st.error(f"**{verdict}**")
+            elif pfs >= 0.35:
+                st.warning(f"**{verdict}**")
+            else:
+                st.success(f"**{verdict}**")
 
 
 # ── Dataset registry content (shared between tabs) ────────────────────────────
