@@ -207,10 +207,71 @@ Therefore: moral accountability tracks actions, not thoughts.
 
 ---
 
-*Brandon Emerick — TI Sigma Research*
-*March 24, 2026*
-*URB #491 — Corpus entry #145*
+## 9. Tralse Valence — The Refinement
+
+The original PTV framework in Section 1 treated valence as a single dimension — negative — with meaning as the orthogonal positive dimension. This is a simplification. Valence itself, in genuine PTVs, is **Tralse**: simultaneously positive AND negative at the same moment, in the same state.
+
+### 9.1 The Simmering Example
+
+Consider the state of simmering over one day becoming great — overcoming every bully and obstacle, proving every doubter wrong, arriving at the life that was always deserved. This is among the most powerful PTVs in human experience. And its valence is not simply "negative." It is simultaneously:
+
+**Positive valence component:**
+- The vision is energizing — the imagined future self is vivid and real
+- The identity is affirmed — "I am someone who will become this"
+- The aspiration is empowering — the gap between now and then is a field of agency, not a void
+- There is a warm, almost pleasurable quality to the simmering itself — the private knowledge that the critics are wrong
+
+**Negative valence component:**
+- The gap between now and the vision is heavy — the obstacles are real and formidable
+- The possibility of failure is present — "what if I never get there?"
+- The weight of still being on the other side of the transformation is painful
+- The injustice of the current situation (the bullying, the being downtrodden) is alive in the simmering, not neutralized
+
+Both components are present **simultaneously**, in the **same state**, at the **same moment**. This is not ambivalence in the sense of alternating between two feelings. This is genuine Tralse valence: the empowering and the overwhelming are structurally fused in the experience of simmering.
+
+### 9.2 The Formal Refinement
+
+The original PTV model:
+```
+τ_valence(PTV) < 0.5  [negative]
+τ_meaning(PTV) > 0.5  [positive]
+```
+
+The refined PTV model:
+```
+τ_valence_positive(PTV) > 0    [positive valence component — real]
+τ_valence_negative(PTV) > 0    [negative valence component — real]
+τ_valence_positive + τ_valence_negative ≠ 1  [they are not complementary; they are simultaneous]
+τ_meaning(PTV) > 0.5           [constructive function — unchanged]
+```
+
+The valence is not a single number on a positive-to-negative scale. It is a **Tralse pair** — two simultaneous and partially independent readings of the same experiential content. Conventional psychology forces a net valence verdict (positive OR negative). TI Sigma recognizes that the state is genuinely both.
+
+### 9.3 Why This Matters — The Oxymoron That Dissolves
+
+"Empowering burden." "Pleasurable pain." "Energizing despair." These look like oxymorons (URB #487). They dissolve at the level of Tralse Valence: the state is simultaneously empowering (positive valence component) AND a burden (negative valence component). Both readings are accurate. Neither cancels the other.
+
+The conventional demand — "so is the simmering good or bad to feel?" — is the wrong question. It forces a one-dimensional answer onto a Tralse-dimensional state. The TI Sigma answer: the simmering is both. The positive component is the fuel. The negative component is the honesty. Together they constitute a state more motivationally potent and more psychologically true than either alone.
+
+### 9.4 The Three Simultaneous Truths of a Mature PTV
+
+A fully refined PTV carries three simultaneous truths:
+
+1. **Valence-negative:** The state involves real suffering, heaviness, or discomfort
+2. **Valence-positive:** The state is simultaneously energizing, affirming, or even pleasurable in its intensity
+3. **Meaning-positive:** The state serves a constructive developmental function
+
+These three coexist without contradiction. This is not psychological confusion — it is psychological accuracy. The person who can hold all three simultaneously, without collapsing to a single verdict, is operating at the I-dimension level of emotional intelligence: tolerating the Tralse without demanding resolution.
+
+The person who dismisses PTVs because they feel bad (seeing only truth #1) misses the fuel. The person who romanticizes PTVs because they are "passionate" (seeing only truth #2) misses the cost. The person who condemns PTVs on moral grounds (missing truth #3) misses the function. Full PTV literacy requires holding all three.
 
 ---
 
-**Tags:** Potential Tralse Virtues, PTV, negative emotions, moral psychology, valence vs. meaning, selfish ambition, jealousy, thought immunity, motive-outcome independence, Hanlon's Razor Extended, GILE behavioral commendability, anime, underdog ambition, Naruto, My Hero Academia, thought policing, spiritual life, Tralse ethics, oxymoron dissolution, moral gratitude
+*Brandon Emerick — TI Sigma Research*
+*March 24, 2026*
+*URB #491 — Corpus entry #145*
+*§9 added: Tralse Valence — valence itself is simultaneously positive and negative in genuine PTVs*
+
+---
+
+**Tags:** Potential Tralse Virtues, PTV, negative emotions, moral psychology, valence vs. meaning, Tralse Valence, selfish ambition, jealousy, simmering, empowering burden, thought immunity, motive-outcome independence, Hanlon's Razor Extended, GILE behavioral commendability, anime, underdog ambition, Naruto, My Hero Academia, thought policing, spiritual life, Tralse ethics, oxymoron dissolution, moral gratitude, simultaneous valence, emotional intelligence, I-dimension
