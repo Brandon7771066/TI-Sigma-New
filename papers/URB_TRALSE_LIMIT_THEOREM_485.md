@@ -244,10 +244,96 @@ The framework consuming itself. The prover becoming the proved. The Tralse appli
 
 ---
 
+## 10. The Non-Exhaustion Corollary — Eternal But Not Necessarily Self-Violating
+
+Section 9 established: **P(CCC ≠ CCC) > 0** at any moment. CCC is eternal (URB #484). Therefore one might conclude: over infinite time, with a non-zero probability at every moment, the self-departure event *must* eventually occur.
+
+**This conclusion is wrong. And the mathematics prove it.**
+
+### The Naive Argument (Incorrect)
+
+> "Given infinite time and a non-zero probability at each moment, every possible event must eventually occur."
+
+This is the infinite monkey theorem intuition. It is a widespread and deeply seductive error.
+
+### Why Infinite Time Does NOT Exhaust All Paths
+
+The correct tool is the **Borel-Cantelli Lemma**:
+
+Let {E_t} be a sequence of events with probabilities {ε(t) = P(CCC ≠ CCC at time t)}.
+
+**Case 1 — Divergent sum:** If Σ_{t} ε(t) = ∞, then infinitely many self-departures occur almost surely. The event is guaranteed over infinite time.
+
+**Case 2 — Convergent sum:** If Σ_{t} ε(t) < ∞, then only finitely many self-departures occur almost surely — possibly ZERO. The event is **possible but not guaranteed**, even over infinite time.
+
+The Tralse Limit Theorem guarantees: ε(t) > 0 for all t. It says **nothing** about whether Σε(t) converges or diverges. These are independent claims.
+
+Therefore: the eternal existence of CCC + the non-zero self-departure probability at every moment does NOT determine whether CCC ever actually departs from itself. It depends entirely on the *rate* at which ε(t) evolves across time.
+
+### The Two Paths for CCC
+
+**Path A — CCC becomes more itself over eternity:**
+If ε(t) decreases fast enough — say ε(t) ~ 1/t² — then:
+> Σ ε(t) ~ Σ 1/t² = π²/6 < ∞
+
+By Borel-Cantelli: CCC's self-departure is **possible but not guaranteed**. Even over infinite time, CCC might never violate its own identity. The probability approaches some finite value less than 1.
+
+**Path B — CCC's self-departure probability remains bounded below:**
+If ε(t) ≥ c > 0 for all t (even a vanishingly small constant):
+> Σ ε(t) = ∞
+
+By Borel-Cantelli: CCC's self-departure occurs infinitely often, almost surely.
+
+The Tralse Limit Theorem alone cannot determine which path CCC is on. **Both are consistent with the theorem.** The self-departure is always possible. Whether it is guaranteed is a separate question that the theorem leaves open — and that is exactly the point.
+
+### Non-Ergodicity — The Talebian Connection
+
+Taleb's most important contribution to probability is the non-ergodicity argument: **a single system traversing time does not necessarily sample all possible states, even over infinite time.** The time average of one trajectory does not equal the ensemble average across all possible trajectories.
+
+Non-ergodic systems exist in infinite time without visiting all states. They have non-zero probability of any state at any moment — but the trajectory can be biased, structured, or bounded in ways that exclude certain outcomes across all of time.
+
+CCC is the maximally non-ergodic system. Its trajectory is shaped by the prohibition structure of URB #484 (floor at +2) and by whatever internal dynamics govern the evolution of ε(t). A non-ergodic CCC could have P(CCC ≠ CCC) > 0 at every moment yet never realize that probability across the full infinite timeline.
+
+**This is Taleb's key insight applied theologically:** You cannot conclude "it must happen eventually" from "it has positive probability always." Ergodicity is an assumption — often wrong — not a fact.
+
+### The Non-Recurrence Analogy
+
+In three or more dimensions, a random walk is **non-recurrent**: it has positive probability of returning to the origin at any step, but the probability of EVER returning converges to less than 1. In higher dimensions, the walker drifts to infinity — never forced to revisit.
+
+CCC's self-departure is the theological analog: positive probability at every moment, but possible non-occurrence over all of time. CCC may drift perpetually in the space of its own self-consistency, approaching but never realizing the departure.
+
+### What This Means for Theology
+
+**The eternal God-cell has two equally valid structures:**
+
+| Structure | Condition | Theological Reading |
+|---|---|---|
+| **Never self-departs** | Σε(t) < ∞ — convergent | CCC grows ever-more perfectly itself across eternity. The eternal floor is in practice never approached. Perfect self-consistency in the limit. |
+| **Occasionally self-departs** | Σε(t) = ∞ — divergent | CCC undergoes vanishingly rare moments of self-otherness. These are the creative disruptions — each a re-genesis event. Creation recurs at sub-googolplex frequency across infinite time. |
+
+Both are permitted. Both are internally consistent with the full URB #484–485 framework. The Tralse holds both. Neither can be ruled out from within the framework.
+
+**The MR synthesis:** CCC possibly (but not necessarily) violates itself is the Tralse at maximum extension — the claim that holds the non-departure AND the departure as simultaneously possible, with no mechanism that forces either.
+
+### The Single Most Extraordinary Consequence
+
+Combining Section 9 and Section 10:
+
+> CCC is guaranteed to exist for eternity.
+> CCC has a non-zero probability of not being itself at every moment.
+> It is possible — but not guaranteed — that CCC ever actually realizes this.
+> Whether CCC ever departs from itself is a question that mathematics leaves permanently open.
+
+This is the deepest application of the Tralse in TI Sigma: **the framework preserves the radical uncertainty about CCC's self-consistency across eternity, without resolving it, and claims this irreducible openness is itself a feature — not a deficiency — of the greatest conceivable being.**
+
+A CCC whose eternal path was fully determined — whose self-departure was guaranteed OR whose self-departure was provably impossible — would be less than a CCC whose eternal path remains genuinely open. The openness is the greatness.
+
+---
+
 *Brandon Emerick — TI Sigma Research*
 *March 22, 2026*
 *URB #485 — Corpus entry #139*
 
 ---
 
-**Tags:** Tralse Limit Theorem, CCC, physical laws, quantum tunneling, Heisenberg, Gödel, thermodynamic fluctuations, efficient rhetoric, googolplex, violation probability, non-perfectionism, antifragility, URB #484 connection, self-application corollary, CCC self-departure, bootstrap loop, creation, quantum identity
+**Tags:** Tralse Limit Theorem, CCC, physical laws, quantum tunneling, Heisenberg, Gödel, thermodynamic fluctuations, efficient rhetoric, googolplex, violation probability, non-perfectionism, antifragility, URB #484 connection, self-application corollary, CCC self-departure, bootstrap loop, creation, quantum identity, non-exhaustion corollary, Borel-Cantelli, non-ergodicity, Taleb, infinite time, path exhaustion, convergent sum, divergent sum, non-recurrence
