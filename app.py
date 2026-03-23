@@ -312,45 +312,72 @@ py C:\\Users\\brand\\Desktop\\ACER_LIVE_BRIDGE.py --server {APP_URL} --mode muse
 ```
 You'll see `✅ #1 sent | 🧠 alpha=xx.x` — then refresh this page.
                     """)
+    POLAR_SCRIPT_DOWNLOAD = f"{APP_URL}/download/bridge?script=polar"
+    POLAR_SCRIPT = '''import asyncio, requests
+SERVER = "''' + APP_URL + '''"
+HR_UUID = "00002a37-0000-1000-8000-00805f9b34fb"
+async def main():
+    from bleak import BleakScanner, BleakClient
+    print("Scanning for Polar H10...")
+    devices = await BleakScanner.discover(timeout=10)
+    polar = next((d for d in devices if d.name and "Polar" in d.name), None)
+    if not polar:
+        print("Polar not found — is Bluetooth on?"); return
+    print(f"Found: {polar.name}")
+    async with BleakClient(polar.address) as client:
+        count = 0
+        def cb(s, data):
+            nonlocal count; count += 1
+            hr = data[1] if data[0]&1==0 else data[1]|data[2]<<8
+            try:
+                r = requests.post(f"{SERVER}/api/upload", json={"hr":hr,"polar":1}, timeout=3)
+                print(f"HR #{count} | {hr} bpm | {'OK' if r.status_code==200 else r.status_code}")
+            except Exception as e: print(f"HR #{count} | {hr} bpm | FAIL: {e}")
+        await client.start_notify(HR_UUID, cb)
+        while True: await asyncio.sleep(1)
+try: asyncio.run(main())
+except KeyboardInterrupt: print("Stopped.")'''
+
     with c2:
         if snapshot.heart_connected:
             st.success(f"💓 Polar H10: CONNECTED — {snapshot.heart_rate} BPM")
         else:
             st.error("💓 Polar H10: DISCONNECTED")
             if data_mode == "Real Devices":
-                pulsoid_diag = st.session_state.brain_db.diagnose_pulsoid()
-                pstatus = pulsoid_diag["status"]
-                pmsg = pulsoid_diag["message"]
-                if pstatus == "ok":
-                    st.success(f"Pulsoid: {pmsg} — refreshing...")
-                    st.rerun()
-                elif pstatus in ("no_token", "auth_fail"):
-                    st.error(f"Pulsoid: {pmsg}")
-                elif pstatus == "no_data":
-                    st.warning(f"Pulsoid: {pmsg}")
-                else:
-                    st.warning(f"Pulsoid: {pmsg}")
-                with st.expander("▶ Two ways to connect Polar H10"):
+                st.warning("⚠️ **Pulsoid API requires a paid plan** — their REST & WebSocket endpoints both return 402 on free tier. Use one of these free alternatives:")
+                with st.expander("▶ Path A — Direct BLE from your Acer (recommended, ~2 min setup)"):
                     st.markdown(f"""
-**Path A — Pulsoid app on iPhone (easiest, no Acer bridge needed):**
-1. Open **Pulsoid** app on your iPhone
-2. Connect Polar H10 in Pulsoid *(may need to forget it from Acer BT first)*
-3. Pulsoid status above will update within 10 seconds
+**`bleak` is already installed on your Acer.** Just do this:
 
-**Current Pulsoid status:** `{pmsg}`
+**Step 1 —** Download the script: **[📥 polar_bridge.py]({POLAR_SCRIPT_DOWNLOAD})**
+*(or copy the code below and paste into Notepad → Save As `polar_bridge.py` on Desktop)*
 
----
-
-**Path B — Polar stays paired to Acer:**
-1. Download the bridge: [📥 ACER_LIVE_BRIDGE.py]({BRIDGE_DOWNLOAD}) → save to Desktop
-2. Open PowerShell and run:
+**Step 2 —** In PowerShell:
 ```
-py -m pip install requests bleak
-py C:\\Users\\brand\\Desktop\\ACER_LIVE_BRIDGE.py --server {APP_URL} --mode polar
+py C:\\Users\\brand\\Desktop\\polar_bridge.py
 ```
-You'll see `❤️ HR=xx bpm ✅ sent` — then refresh this page.
+You'll see `HR #0001 | 72 bpm | OK` — then refresh this page.
+*(Make sure Polar H10 is paired to Acer, not your iPhone)*
+
+**The full script (copy to Notepad if download doesn't work):**
                     """)
-                st.caption(f"Quick test — paste in browser: `{APP_URL}/api/upload?hr=72&polar=1`")
+                    st.code(POLAR_SCRIPT, language="python")
+
+                with st.expander("▶ Path B — iOS Shortcut (no Acer needed, updates every 1 min)"):
+                    st.markdown(f"""
+**Create an iOS Shortcut that sends Polar HR to TI Platform:**
+
+1. On your iPhone → **Shortcuts** app → tap **+** (new shortcut)
+2. Add action: **Health** → **Find Health Samples** → type: **Heart Rate** → limit 1 → sort newest first
+3. Add action: **URL** → paste: `{APP_URL}/api/upload`
+4. Add action: **Get Contents of URL** → Method: POST → Request Body: JSON
+   - Add field: `hr` = **Heart Rate Value** (from step 2)
+   - Add field: `polar` = `1`
+5. Add **Automation** (Shortcut menu → Automation → + → Time of Day) → every 1 minute → run this shortcut
+
+*(Polar H10 syncs to Health app via the Polar Beat app — if not syncing, open Polar Beat once)*
+                    """)
+                st.caption(f"Manual test (paste in browser): `{APP_URL}/api/upload?hr=72&polar=1`")
     
     st.divider()
     st.subheader("TI Consciousness Metrics")

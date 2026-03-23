@@ -808,15 +808,21 @@ async def wait_for_streamlit(max_retries=30, delay=1.0):
     return False
 
 async def download_bridge_handler(request):
-    """Serve the ACER_LIVE_BRIDGE.py file as a direct download."""
-    bridge_path = os.path.join(os.path.dirname(__file__), 'hardware', 'ACER_LIVE_BRIDGE.py')
+    """Serve bridge scripts as direct downloads."""
+    script = request.rel_url.query.get('script', 'polar')
+    if script == 'full':
+        fname = 'ACER_LIVE_BRIDGE.py'
+        fpath = os.path.join(os.path.dirname(__file__), 'hardware', 'ACER_LIVE_BRIDGE.py')
+    else:
+        fname = 'polar_bridge.py'
+        fpath = os.path.join(os.path.dirname(__file__), 'polar_bridge_minimal.py')
     try:
-        with open(bridge_path, 'r') as f:
+        with open(fpath, 'r') as f:
             content = f.read()
         return web.Response(
             body=content.encode('utf-8'),
             content_type='application/octet-stream',
-            headers={'Content-Disposition': 'attachment; filename="ACER_LIVE_BRIDGE.py"'}
+            headers={'Content-Disposition': f'attachment; filename="{fname}"'}
         )
     except Exception as e:
         return web.json_response({"error": str(e)}, status=500)
