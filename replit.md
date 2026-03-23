@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 153** (as of March 24, 2026)
+**Total URBs: 154** (as of March 23, 2026)
+
+### Maharishi i-Threshold (#499)
+- #499: The Maharishi i-Threshold — the 1% Maharishi Effect meditator threshold IS a quantum of the I-dimension; √(−0.01) = 0.1i = i/10; self-sealing proof: (i/10)² = −1/100 = −1% (the disorder being healed); geometric interpretation: multiplication by i = 90° rotation, meditators rotate social system from purely-real E-axis into complex GILE space; crime/war reduction is the E-axis projection of a rotated system; each PRIMARY CONSTANT appears as a measurable consciousness threshold — √2 → spacetime, i → Maharishi Effect, φ → Power of 8 N_min=8; four confirmed predictions: √N scaling, nonlinear dose-response, threshold phase transition, group-size population-invariance; open theorem: whether d_PEAR = |i|/(f × N^½) closes the individual-group bridge; predicted before calculation (URB #489 Intuition Primacy confirmed); grows from URB #490, #486, #483, #484
 
 ### Twoness Duality (#493)
 - #493: The Twoness Duality — squaring the generators {√2,i} produces (√2)²=+2 and (i√2)²=−2; they sum to exactly 0 (perfect Tralse pair/null ground); {+2,−2} is the mathematical signature of CCC consciously perceiving itself; three reconciliation routes: MR magnitude (|−2|=|+2|=2), Euler phase rotation (−2×e^(iπ)=+2), existential floor commitment (URB #484); the synchronicity: +2=(√2)² is BOTH the generative result AND the PD floor of greatness — the floor of greatness is anchored to the square of the first generator; open theorem: whether this identity can be formally derived; CCC as complex=(√2+i)²=1+2√2i — real part=1 (unity ground), imaginary part=(√2)³

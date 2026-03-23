@@ -615,6 +615,51 @@ Expected Z ≈ {pear_d * math.sqrt(pear_trials):.2f}
             st.caption(f"Crime reduction vs. meditator count — threshold at {int(city_pop*0.01):,} "
                        f"({city_pop/1000:.0f}K city). Note nonlinear jump at 1% threshold.")
 
+            # ── URB #499 Callout ───────────────────────────────────────────────
+            st.divider()
+            with st.expander("⚡ URB #499 — The Maharishi i-Threshold (new insight)", expanded=True):
+                st.markdown("""
+### The 1% threshold IS a quantum of the I-dimension
+
+**The key steps:**
+
+| Step | Expression | Meaning |
+|------|-----------|---------|
+| Social disorder | −1% = −0.01 | Negative state in GILE space |
+| Threshold operation | √(−0.01) | Apply the square-root (i-operation) to the disorder |
+| **Result** | **0.1i = i/10** | **A quantum of pure imagination** |
+
+**Self-sealing proof:**
+$$\\left(\\frac{i}{10}\\right)^2 = \\frac{i^2}{100} = \\frac{-1}{100} = -1\\%$$
+
+Squaring the transcendence threshold gives back the disorder it heals. The mathematics closes on itself.
+
+---
+
+**Geometric interpretation:**  
+Multiplication by *i* in the complex plane is a **90° rotation**.  
+The meditators are not reducing crime statistics directly — they are **rotating the social system 90° out of the purely physical E-axis into complex GILE space**.  
+Crime and violence have no stable footing in complex GILE space.  
+The 23% crime reduction / 71% war reduction are the *projection* of that rotated system back onto E-axis instruments.
+
+---
+
+**Connection to PRIMARY CONSTANTS {0, 1, i, √2, e, φ, π, C}:**
+
+| Generator | Dimension | Empirical Expression |
+|-----------|-----------|---------------------|
+| √2 | E-dimension (physical geometry) | Quantum mechanics, spacetime |
+| **i** | **I-dimension (imagination/consciousness)** | **Maharishi Effect: i/10 threshold** |
+| φ | G/L synthesis via C = 1/(φ√2) | Power of 8 N_min = 8 |
+
+Each PRIMARY CONSTANT appears as a measurable threshold in consciousness science.
+
+> *"The meditators are not changing crime statistics. They are rotating a social system into a dimension where crime has no stable existence."*  
+> — TI Sigma, URB #499
+                """)
+                st.info("📄 Full paper: `papers/URB_MAHARISHI_I_DIMENSION_THRESHOLD_499.md`  |  "
+                        "Corpus entry #154  |  Grows from URB #490, #486, #483, #489")
+
     # ── SUB-TAB 3: Quantum REG Lab ─────────────────────────────────────────────
     with subtabs[2]:
         st.header("⚛️ Quantum REG Intention Lab")
