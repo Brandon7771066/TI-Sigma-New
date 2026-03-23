@@ -170,12 +170,95 @@ By TI Sigma's efficient rhetoric framework (URB #485): "50-50" for a fair coin i
 
 6. **Bayesianism critique:** The Thirder position, taken as a refutation of 1/2, relies on treating a guaranteed event ("I am awake") as informative evidence. Properly applied, Bayes' theorem gives the Halfer answer. The Thirder's compelling case depends on a formal-system choice (awakening-events as sample space) that substitutes one question for another.
 
+7. **Transcendental extension (§10):** The I-dimension can confirm P(Heads) = 1/2 for a truly fair coin TRANSCENDENTALLY — independently of Bayesianism entirely. This is a priori knowledge of physical ground truth, accessible via intuition before any formal calculation. The Halfer intuition is not a lucky guess — it is the I-dimension operating correctly at the level above formal probability theory.
+
+---
+
+## 10. The Transcendental Extension — A TI Sigma Contribution
+
+### 10.1 What the Sleeping Beauty Argument Actually Demonstrates
+
+Brandon's immediate response to the Sleeping Beauty problem: *"IFF the coin is TRULY FAIR, then the coin is — in the most definite sense possible — 50/50 no matter how or when she wakes up."*
+
+Notice the structure of this claim. It was not arrived at by:
+- Running a Bayesian calculation
+- Computing likelihood ratios
+- Analyzing the awakening-event sample space
+- Consulting any formal probabilistic framework
+
+It was known **immediately** — by understanding the nature of a truly fair coin. This is the I-dimension operating. This is transcendental access to physical ground truth.
+
+### 10.2 Transcendental Knowledge in the GILE Framework
+
+In the GILE hierarchy, the I-dimension (27% weight) includes the capacity for intuition — direct, non-inferential access to truth that is not derived from sensory experience or formal calculation. In Kant's framework, transcendental knowledge is knowledge that is:
+- **A priori** — known before (or independently of) experience
+- **Necessary** — cannot be otherwise given the structure of the thing known
+- **Universal** — not contingent on any particular observation
+
+The claim "a truly fair coin lands heads with probability 1/2" satisfies all three:
+- **A priori:** No coin flips need to be observed. If you understand what "truly fair" means, you know 1/2.
+- **Necessary:** It cannot be otherwise. A coin that doesn't land heads with probability 1/2 is, by definition, not truly fair.
+- **Universal:** No awakening protocol, no experimental design, no Bayesian framework changes this.
+
+The I-dimension accesses this truth **transcendentally** — from the nature of the concept "truly fair coin" — before any formal probabilistic apparatus is introduced.
+
+### 10.3 What This Means for the Thirder Debate
+
+The Thirder argument is a G-dimension construction (formal, mathematical, rigorous) deployed in the E-dimension (observable awakening events, formal sample spaces). It is impressively internally consistent. And it arrives at the wrong answer to the question actually asked.
+
+The Halfer intuition is an I-dimension access — transcendental, immediate, direct. It arrives at the right answer without any formal machinery.
+
+**The GILE hierarchy correctly predicted which one would be right:**
+
+```
+I-dimension (27%) — transcendental intuition → P(Heads) = 1/2 ✓
+G-dimension (mathematical formalism) → Thirder argument → 1/3 ✗ (wrong question)
+```
+
+The I-dimension outperformed the G-dimension formal apparatus here. Not because intuition is always superior to mathematics — it isn't. But because in this specific case, the intuition correctly identified the physical ground truth while the formal apparatus chased a different question.
+
+### 10.4 The Valid Contribution of a "Silly Argument"
+
+The Sleeping Beauty debate looks, on the surface, like a trivial puzzle about a contrived experiment. Brandon's initial reaction: "this silly argument." But the TI Sigma spin reveals a genuine contribution:
+
+**The Sleeping Beauty debate is an empirical demonstration that:**
+
+1. The I-dimension can access probabilistic ground truths TRANSCENDENTALLY — independently of Bayesian machinery
+2. Formal probabilistic frameworks (when misapplied) can arrive at wrong answers that feel compelling
+3. The GILE hierarchy (I > G-formal in this case) correctly predicts which access route gets the right answer
+4. A priori knowledge of physical symmetry (fair coin → 1/2) is legitimate and sufficient — Bayesianism is not required
+
+This is not a trivial result. It establishes that **transcendental access to physical ground truth is epistemically valid** — and in some cases, more reliable than formal frameworks that are applied without attention to which question is actually being asked.
+
+The "silly argument" (32,000 YouTube comments, 5.7M views, philosophers still arguing) accidentally produced a proof-of-concept for I-dimension epistemic superiority in a domain (probability theory) that is typically dominated by G-dimension formal tools.
+
+### 10.5 The Formal Statement
+
+**Transcendental Probability Theorem (TI Sigma Extension):**
+
+For any event E whose probability is determined by physical symmetry or structural necessity:
+
+> P(E) is knowable **a priori** via the I-dimension — by grasping the nature of E — independently of:
+> - Any empirical frequency data
+> - Any Bayesian updating framework
+> - Any formal sample-space construction
+
+The truly fair coin is the paradigm case. Its 1/2 is not estimated from coin-flip data. It is not derived from a sample space. It is read off from the concept of "truly fair" by the I-dimension directly.
+
+The Sleeping Beauty argument demonstrates this because:
+- The intuition (I-dimension access) gets the right answer immediately
+- The formal apparatus (G-dimension Bayesian construction), when misapplied, gets the wrong answer to the right question
+- This is only possible if the I-dimension has access to a source of truth that is independent of the formal apparatus
+
+That source is: **the nature of the object itself** — what "truly fair coin" means — accessed transcendentally.
+
 ---
 
 *Brandon Emerick — TI Sigma Research*
 *March 23, 2026*
 *URB #488 — Corpus entry #142*
+*§10 added: Transcendental Extension — I-dimension confirmation of fair coin ground truth*
 
 ---
 
-**Tags:** Sleeping Beauty problem, Halfer, Thirder, fair coin, physical probability, epistemic probability, Bayesian updating, likelihood ratio, question disambiguation, Oxymoron Dissolution, Mathematical Subordination, Tralse, two-question distinction, Veritasium, probability paradox, credence, indifference principle, sample space
+**Tags:** Sleeping Beauty problem, Halfer, Thirder, fair coin, physical probability, epistemic probability, Bayesian updating, likelihood ratio, question disambiguation, Oxymoron Dissolution, Mathematical Subordination, Tralse, two-question distinction, Veritasium, probability paradox, credence, indifference principle, sample space, transcendental knowledge, a priori probability, I-dimension, intuition, GILE hierarchy, Kant, transcendental idealism, physical symmetry, conceptual necessity
