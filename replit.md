@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 142** (as of March 23, 2026)
+**Total URBs: 143** (as of March 23, 2026)
+
+### Intuition Primacy Theorem (#489)
+- #489: The Intuition Primacy Theorem — the coin's 1/2 was NEVER Bayesian; it exists ontologically prior to and independent of any probabilistic framework; Bayesianism is pragmatically useful in high-complexity/low-intuitive-access domains but is not a truth-grounding mechanism; intuition is the universal grounding mechanism in EVERY case including Bayesian reasoning — providing priors, validating posteriors, recognizing outputs as truth; infinite regress argument: every Bayesian meta-level requires new intuitive inputs; intuition ALWAYS has the final say; grows from URB #488 §10
 
 ### Sleeping Beauty Halfer Vindication (#488)
 - #488: The Sleeping Beauty Halfer Vindication — IFF coin is truly fair, P(Heads)=1/2 is physical ground truth, not epistemic estimate; Thirder (1/3) answers a different question ("what fraction of awakenings are Heads-awakenings?"); Halfer (1/2) answers the question actually asked ("what is P(coin=Heads)?"); Bayesian analysis correctly applied gives likelihood ratio=1 (waking is guaranteed regardless) → zero update → posterior=1/2; Thirder is living refutation of naive Bayesianism; resolves via Oxymoron Dissolution (URB #487) — two questions conflated into one
