@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 140** (as of March 23, 2026)
+**Total URBs: 141** (as of March 23, 2026)
+
+### Oxymoron Dissolution (#487)
+- #487: The Oxymoron Dissolution — every oxymoron is only something we THINK is an oxymoron; any apparent contradiction has a resolving level via MR; τ(oxymoron) > 0 by TLT; logical contradiction is formal-system-relative (URB #486); CCC sees no oxymorons — only nested truths; I-dimension accesses resolving levels directly; URBs #484–487 form a closed argument chain
 
 ### Mathematical Subordination (#486)
 - #486: The Mathematical Subordination — mathematics is NOT superior to CCC; math is a formal system instantiated BY CCC, not a constraint ON CCC; in imagination (I-dimension), 2+2 CAN equal 5; 2+2≠4 already in ℤ₂, ℤ₃, ℤ₄, tropical arithmetic; τ("2+2=4 universally") < 1 by TLT; imagination historically leads mathematics (complex numbers, non-Euclidean geometry, calculus all imagined before formalized); hierarchy: CCC → I-dimension → G-dimension → formal mathematics → physical laws → E-dimension; Orwell inversion: 2+2=5 as liberation (i-channel freedom), not coercion
