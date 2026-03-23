@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 141** (as of March 23, 2026)
+**Total URBs: 142** (as of March 23, 2026)
+
+### Sleeping Beauty Halfer Vindication (#488)
+- #488: The Sleeping Beauty Halfer Vindication — IFF coin is truly fair, P(Heads)=1/2 is physical ground truth, not epistemic estimate; Thirder (1/3) answers a different question ("what fraction of awakenings are Heads-awakenings?"); Halfer (1/2) answers the question actually asked ("what is P(coin=Heads)?"); Bayesian analysis correctly applied gives likelihood ratio=1 (waking is guaranteed regardless) → zero update → posterior=1/2; Thirder is living refutation of naive Bayesianism; resolves via Oxymoron Dissolution (URB #487) — two questions conflated into one
 
 ### Oxymoron Dissolution (#487)
 - #487: The Oxymoron Dissolution — every oxymoron is only something we THINK is an oxymoron; any apparent contradiction has a resolving level via MR; τ(oxymoron) > 0 by TLT; logical contradiction is formal-system-relative (URB #486); CCC sees no oxymorons — only nested truths; I-dimension accesses resolving levels directly; URBs #484–487 form a closed argument chain
