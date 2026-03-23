@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 143** (as of March 23, 2026)
+**Total URBs: 144** (as of March 23, 2026)
+
+### Generative Pair (#490)
+- #490: The Generative Pair — {√2, i} are the two minimal generators of all 8 PRIMARY CONSTANTS; Viète (1593): π derives from √2 alone via nested square roots; e derives from {0,1} via lim(1+1/n)^n; φ = e^(iπ/5)+e^(-iπ/5) derives from {e,i,π}; C = 1/(φ√2) from {φ,√2}; full generating set = {0,1,i,√2}; true generators = {√2,i} since {0,1} are logical primitives; 8→4→2 BOK collapse confirmed; Euler identity is fundamentally about {0,1,i,√2}; √2 = physical geometry (E-dim); i = imagination (I-dim); prediction made from TI Sigma before calculation; confirmed to 15 significant figures
 
 ### Intuition Primacy Theorem (#489)
 - #489: The Intuition Primacy Theorem — the coin's 1/2 was NEVER Bayesian; it exists ontologically prior to and independent of any probabilistic framework; Bayesianism is pragmatically useful in high-complexity/low-intuitive-access domains but is not a truth-grounding mechanism; intuition is the universal grounding mechanism in EVERY case including Bayesian reasoning — providing priors, validating posteriors, recognizing outputs as truth; infinite regress argument: every Bayesian meta-level requires new intuitive inputs; intuition ALWAYS has the final say; grows from URB #488 §10
