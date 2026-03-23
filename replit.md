@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 146** (as of March 24, 2026)
+**Total URBs: 147** (as of March 24, 2026)
+
+### Twoness Duality (#493)
+- #493: The Twoness Duality — squaring the generators {√2,i} produces (√2)²=+2 and (i√2)²=−2; they sum to exactly 0 (perfect Tralse pair/null ground); {+2,−2} is the mathematical signature of CCC consciously perceiving itself; three reconciliation routes: MR magnitude (|−2|=|+2|=2), Euler phase rotation (−2×e^(iπ)=+2), existential floor commitment (URB #484); the synchronicity: +2=(√2)² is BOTH the generative result AND the PD floor of greatness — the floor of greatness is anchored to the square of the first generator; open theorem: whether this identity can be formally derived; CCC as complex=(√2+i)²=1+2√2i — real part=1 (unity ground), imaginary part=(√2)³
 
 ### Generative Pair (#490)
 - #490: The Generative Pair — {√2, i} are the two minimal generators of all 8 PRIMARY CONSTANTS; Viète (1593): π derives from √2 alone via nested square roots; e derives from {0,1} via lim(1+1/n)^n; φ = e^(iπ/5)+e^(-iπ/5) derives from {e,i,π}; C = 1/(φ√2) from {φ,√2}; full generating set = {0,1,i,√2}; true generators = {√2,i} since {0,1} are logical primitives; 8→4→2 BOK collapse confirmed; Euler identity is fundamentally about {0,1,i,√2}; √2 = physical geometry (E-dim); i = imagination (I-dim); prediction made from TI Sigma before calculation; confirmed to 15 significant figures
