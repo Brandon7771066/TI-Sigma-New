@@ -283,6 +283,9 @@ with tab_brain_proof:
     
     st.session_state.brain_history.append(snapshot)
     
+    APP_URL = "https://5c1b8726-c8b2-4bdf-a0a8-632ec557671f-00-307bfud8cnm36.worf.replit.dev"
+    BRIDGE_DOWNLOAD = f"{APP_URL}/download/bridge"
+
     st.subheader("Device Status")
     c1, c2 = st.columns(2)
     with c1:
@@ -290,11 +293,64 @@ with tab_brain_proof:
             st.success("🧠 Muse 2: CONNECTED")
         else:
             st.error("🧠 Muse 2: DISCONNECTED")
+            if data_mode == "Real Devices":
+                with st.expander("▶ How to connect Muse 2"):
+                    st.markdown(f"""
+**Step 1 — Download the bridge script to your Acer:**
+[📥 Click here to download ACER_LIVE_BRIDGE.py]({BRIDGE_DOWNLOAD})
+
+Save it to your Desktop (e.g. `C:\\Users\\brand\\Desktop\\ACER_LIVE_BRIDGE.py`)
+
+**Step 2 — In Mind Monitor on your iPhone:**
+- Settings → OSC Stream → Host = your Acer's WiFi IP (`ipconfig` to find it)
+- Port = **5001** → Toggle **OSC Stream ON**
+
+**Step 3 — Open PowerShell on your Acer and run:**
+```
+py -m pip install requests python-osc bleak
+py C:\\Users\\brand\\Desktop\\ACER_LIVE_BRIDGE.py --server {APP_URL} --mode muse
+```
+You'll see `✅ #1 sent | 🧠 alpha=xx.x` — then refresh this page.
+                    """)
     with c2:
         if snapshot.heart_connected:
-            st.success("💓 Polar H10: CONNECTED")
+            st.success(f"💓 Polar H10: CONNECTED — {snapshot.heart_rate} BPM")
         else:
             st.error("💓 Polar H10: DISCONNECTED")
+            if data_mode == "Real Devices":
+                pulsoid_diag = st.session_state.brain_db.diagnose_pulsoid()
+                pstatus = pulsoid_diag["status"]
+                pmsg = pulsoid_diag["message"]
+                if pstatus == "ok":
+                    st.success(f"Pulsoid: {pmsg} — refreshing...")
+                    st.rerun()
+                elif pstatus in ("no_token", "auth_fail"):
+                    st.error(f"Pulsoid: {pmsg}")
+                elif pstatus == "no_data":
+                    st.warning(f"Pulsoid: {pmsg}")
+                else:
+                    st.warning(f"Pulsoid: {pmsg}")
+                with st.expander("▶ Two ways to connect Polar H10"):
+                    st.markdown(f"""
+**Path A — Pulsoid app on iPhone (easiest, no Acer bridge needed):**
+1. Open **Pulsoid** app on your iPhone
+2. Connect Polar H10 in Pulsoid *(may need to forget it from Acer BT first)*
+3. Pulsoid status above will update within 10 seconds
+
+**Current Pulsoid status:** `{pmsg}`
+
+---
+
+**Path B — Polar stays paired to Acer:**
+1. Download the bridge: [📥 ACER_LIVE_BRIDGE.py]({BRIDGE_DOWNLOAD}) → save to Desktop
+2. Open PowerShell and run:
+```
+py -m pip install requests bleak
+py C:\\Users\\brand\\Desktop\\ACER_LIVE_BRIDGE.py --server {APP_URL} --mode polar
+```
+You'll see `❤️ HR=xx bpm ✅ sent` — then refresh this page.
+                    """)
+                st.caption(f"Quick test — paste in browser: `{APP_URL}/api/upload?hr=72&polar=1`")
     
     st.divider()
     st.subheader("TI Consciousness Metrics")

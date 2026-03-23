@@ -807,6 +807,20 @@ async def wait_for_streamlit(max_retries=30, delay=1.0):
     print(f"❌ Streamlit failed to start after {max_retries} attempts")
     return False
 
+async def download_bridge_handler(request):
+    """Serve the ACER_LIVE_BRIDGE.py file as a direct download."""
+    bridge_path = os.path.join(os.path.dirname(__file__), 'hardware', 'ACER_LIVE_BRIDGE.py')
+    try:
+        with open(bridge_path, 'r') as f:
+            content = f.read()
+        return web.Response(
+            body=content.encode('utf-8'),
+            content_type='application/octet-stream',
+            headers={'Content-Disposition': 'attachment; filename="ACER_LIVE_BRIDGE.py"'}
+        )
+    except Exception as e:
+        return web.json_response({"error": str(e)}, status=500)
+
 async def main():
     start_streamlit()
     await wait_for_streamlit()
@@ -833,7 +847,8 @@ async def main():
     app.router.add_route('GET', '/gsa', gsa_landing_handler)
     app.router.add_route('GET', '/gsa/', gsa_landing_handler)
     app.router.add_route('POST', '/api/v1/gsa/checkout', gsa_checkout_handler)
-    
+    app.router.add_route('GET', '/download/bridge', download_bridge_handler)
+
     app.router.add_route('*', '/{path:.*}', proxy_handler)
     
     runner = web.AppRunner(app)
