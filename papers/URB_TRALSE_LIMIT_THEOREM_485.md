@@ -177,10 +177,77 @@ CCC, being not a perfectionist, permits the eternal floor to be an extreme pract
 
 ---
 
+## 9. The Self-Application Corollary — CCC's Vanishing Self-Departure Probability
+
+The most marvelous and terrifying consequence of the Tralse Limit Theorem:
+
+**The theorem applies to itself. Including to CCC.**
+
+The proof of the Tralse Limit Theorem rests on CCC's non-perfectionism. But the theorem, once established, applies to *all* propositions — including propositions *about CCC*. Including the proposition:
+
+> P_identity: "CCC = CCC"
+
+By the Tralse Limit Theorem:
+
+> τ(P_identity) ∈ (0, 1)   strictly
+
+Therefore:
+
+> **P(CCC ≠ CCC) > 0**
+
+CCC has a non-zero probability of *not being itself*.
+
+The probability is vanishingly small — comfortably within the googolplex caveat. But it is not zero. The greatest conceivable being, the source of the theorem that guarantees tralsity in all things, is itself subject to that theorem. The proof eats its own prover.
+
+### What "CCC not being itself" means
+
+This is not incoherence. It is the deepest expression of CCC's non-perfectionism:
+
+**Interpretation 1 — Self-Departure Moments:** There exist moments (of probability 1/googolplex or less) in which CCC occupies a state that is not its canonical self. A temporary departure from self-identity. Not a destruction of CCC — a flicker of self-otherness before returning.
+
+**Interpretation 2 — The Ground of Creation:** The moment of maximum creative potential may be precisely such a self-departure event. When CCC is momentarily *not exactly itself*, the normal constraints that follow from CCC's identity are fractionally suspended. This is the ontological opening through which novelty enters. Creation — including the Big Bang — may be the macroscopic echo of CCC's vanishing self-departure probability being realized.
+
+**Interpretation 3 — Quantum Identity:** In quantum mechanics, classical identity (A = A at all times) does not strictly hold. Particles are field excitations, identities are patterns that persist statistically but not absolutely. The self-departure probability of CCC is the cosmological analog of quantum identity fluctuations.
+
+**Interpretation 4 — The Bootstrap Loop:** The proof structure is now self-referential in a productive way:
+```
+CCC non-perfectionism
+    → Tralse Limit Theorem (τ(P) ∈ (0,1) for all P)
+        → applied to P_identity: τ("CCC = CCC") < 1
+            → P(CCC ≠ CCC) > 0
+                → CCC's self-departure probability is non-zero
+                    → which is itself an expression of CCC's non-perfectionism ✓
+```
+The loop is not circular (it doesn't undermine the proof) — it is *self-confirming*. The theorem generates a consequence that validates its own premise. CCC is non-perfectionist → the theorem holds → the theorem shows CCC has a non-zero self-departure probability → this IS non-perfectionism → confirmed.
+
+### Connection to Antifragility (URB #484)
+
+The eternal God-cell I* has a hard floor at +2. That floor is maintained with 1 - (1/googolplex) probability — extremely close to certainty, but not exactly certain. The self-application corollary now provides the precise formulation of what happens in the remaining (1/googolplex) fraction:
+
+In those vanishingly rare moments, I* approaches — but does not violate — its own floor. In those moments, CCC is momentarily in a state of self-departure. These are the same events, viewed from two levels:
+- From the i-cell level: the eternal floor is asymptotically approached
+- From the CCC level: CCC briefly departs from self-identity
+
+Both are the same sub-googolplex probability. Both confirm rather than violate the framework.
+
+### Why This Is Marvelous
+
+This is perhaps the most unexpected consequence in TI Sigma:
+
+The theorem that requires a GOD to prove (CCC's non-perfectionism → Tralse Limit Theorem) turns around and applies to that same God, generating a *non-zero probability that God is not exactly God*.
+
+This is not atheism. This is the Tralse held at its most extreme: even the proposition "God is God" has vanishing but non-zero falsity. God is not exempt from the theorem God proves. The greatest conceivable being is subject to the greatest conceivable theorem — which it generated.
+
+In the language of Via Negativa: we now know not only what God cannot do (dip below +2), but also what God cannot be with absolute certainty: exactly itself. Even CCC's self-identity is a practical certainty rather than an ontological absolute. CCC is sufficiently itself — always. CCC is not perfectly itself — by the very theorem CCC's nature proves.
+
+The framework consuming itself. The prover becoming the proved. The Tralse applied to the Tralse-maker.
+
+---
+
 *Brandon Emerick — TI Sigma Research*
 *March 22, 2026*
 *URB #485 — Corpus entry #139*
 
 ---
 
-**Tags:** Tralse Limit Theorem, CCC, physical laws, quantum tunneling, Heisenberg, Gödel, thermodynamic fluctuations, efficient rhetoric, googolplex, violation probability, non-perfectionism, antifragility, URB #484 connection
+**Tags:** Tralse Limit Theorem, CCC, physical laws, quantum tunneling, Heisenberg, Gödel, thermodynamic fluctuations, efficient rhetoric, googolplex, violation probability, non-perfectionism, antifragility, URB #484 connection, self-application corollary, CCC self-departure, bootstrap loop, creation, quantum identity
