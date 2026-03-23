@@ -286,6 +286,41 @@ class DatabaseBrainData:
             pass
         return None
 
+    def diagnose_pulsoid(self) -> dict:
+        """Return full Pulsoid diagnostic info for the UI."""
+        if not self.pulsoid_token:
+            return {"status": "no_token", "message": "PULSOID_TOKEN secret not set"}
+        try:
+            resp = requests.get(
+                PULSOID_API_URL,
+                headers={"Authorization": f"Bearer {self.pulsoid_token}"},
+                timeout=5
+            )
+            if resp.status_code == 200:
+                d = resp.json().get('data', {})
+                hr = d.get('heart_rate', 0)
+                measured_at = d.get('measured_at', 0)
+                age_s = None
+                if measured_at:
+                    import time
+                    age_s = int(time.time() * 1000 - measured_at) // 1000
+                if hr and hr > 0:
+                    return {"status": "ok", "hr": hr, "age_s": age_s,
+                            "message": f"✅ Pulsoid live — {hr} BPM (data {age_s}s old)"}
+                else:
+                    return {"status": "no_hr", "message": "Pulsoid connected but HR=0 — is the Polar H10 sending to your phone?"}
+            elif resp.status_code == 401:
+                return {"status": "auth_fail", "message": "Pulsoid token rejected (401) — token may be expired"}
+            elif resp.status_code == 404:
+                return {"status": "no_data", "message": "Pulsoid has no recent data (404) — open the Pulsoid app on your phone"}
+            else:
+                body = resp.text[:120]
+                return {"status": "error", "message": f"Pulsoid HTTP {resp.status_code}: {body}"}
+        except requests.exceptions.Timeout:
+            return {"status": "timeout", "message": "Pulsoid API timed out — check your internet connection"}
+        except Exception as e:
+            return {"status": "exception", "message": f"Pulsoid error: {str(e)[:80]}"}
+
     def _write_polar_to_db(self, hr: int, measured_at: int):
         """Persist Pulsoid reading to database for history."""
         if not self.db_url:
@@ -482,9 +517,10 @@ def create_brain_dashboard():
 
     # Connection Status
     st.subheader("Device Connection Status")
-    col1, col2 = st.columns(2)
 
     APP_URL = "https://5c1b8726-c8b2-4bdf-a0a8-632ec557671f-00-307bfud8cnm36.worf.replit.dev"
+
+    col1, col2 = st.columns(2)
 
     with col1:
         if snapshot.eeg_connected:
@@ -492,32 +528,30 @@ def create_brain_dashboard():
         else:
             st.error("🧠 Muse 2 EEG: DISCONNECTED")
             if data_mode == "Real Devices (Database)":
-                with st.expander("▶ Connect Muse 2 — click to expand"):
+                st.markdown("**Mind Monitor bridge not running on Acer.**")
+                with st.expander("▶ How to connect Muse 2 — step by step"):
                     st.markdown(f"""
-**Why disconnected:** Mind Monitor is streaming OSC, but a local bridge script
-must be running on your Acer to receive it and send it to this server.
+**On your iPhone:** Mind Monitor → Settings → OSC Stream
+- Host = your Acer's LAN IP  *(run `ipconfig` in Acer cmd to find it)*
+- Port = **5001**
+- Toggle **OSC Stream → ON**
+- Muse 2 must be connected with signal showing
 
----
-
-**One-time setup on the Acer (takes ~2 min):**
-
-**Step 1 — Open a terminal on the Acer and install:**
-```
-pip install requests python-osc bleak
-```
-
-**Step 2 — In Mind Monitor on your phone:**
-- Settings → OSC → IP = your Acer's LAN IP (run `ipconfig` in cmd)
-- Port = **5001** (not 5000)
-- Press **Start Streaming**
-
-**Step 3 — Run the bridge** (keep this terminal open):
+**On your Acer — open a terminal and run once:**
 ```
 py hardware/ACER_LIVE_BRIDGE.py --server {APP_URL} --mode muse
 ```
+*(Installs dependencies automatically on first run)*
 
-You should see `✅ #1 sent | 🧠 alpha=xx.x` every 2 seconds.
-Refresh this page — Muse will show CONNECTED within 10 seconds.
+You'll see `✅ #1 sent | 🧠 alpha=xx.x` every 2 seconds.
+**Refresh this page** — status will flip to CONNECTED within 10 s.
+
+---
+**Quick pipeline test** — paste this in your browser:
+```
+{APP_URL}/api/upload?muse=1&alpha=0.5&theta=0.3
+```
+If you see `{{"status":"ok"}}` the pipeline is live.
                     """)
 
     with col2:
@@ -526,37 +560,47 @@ Refresh this page — Muse will show CONNECTED within 10 seconds.
         else:
             st.error("💓 Polar H10: DISCONNECTED")
             if data_mode == "Real Devices (Database)":
-                with st.expander("▶ Connect Polar H10 — click to expand"):
+                # Show live Pulsoid diagnostic
+                pulsoid_diag = st.session_state.db_source.diagnose_pulsoid()
+                pstatus = pulsoid_diag["status"]
+                pmsg = pulsoid_diag["message"]
+                if pstatus == "ok":
+                    st.success(f"Pulsoid cloud: {pmsg}")
+                elif pstatus in ("no_token", "auth_fail"):
+                    st.error(f"Pulsoid: {pmsg}")
+                elif pstatus == "no_data":
+                    st.warning(f"Pulsoid: {pmsg}")
+                else:
+                    st.warning(f"Pulsoid cloud: {pmsg}")
+
+                with st.expander("▶ Two ways to connect Polar H10"):
                     st.markdown(f"""
-**Why disconnected:** The Polar is connected to Acer Bluetooth, but the app
-reads heart rate via a local bridge that sends it to this server.
-The bridge also reads Muse — run one script for both.
+### Path A — Pulsoid (phone-based, no Acer bridge needed)
+1. Install **Pulsoid** app on your iPhone
+2. In Pulsoid: connect Polar H10 via Bluetooth on the phone
+   *(may need to unpair from Acer first: Settings → Bluetooth → Polar H10 → Forget)*
+3. Pulsoid streams HR to the cloud — this app reads it automatically
+
+**Current Pulsoid status:** `{pmsg}`
 
 ---
 
-**Step 1 — Install (if not done for Muse above):**
+### Path B — Local Acer bridge (Polar stays paired to Acer)
+1. Polar H10 stays connected to Acer Bluetooth ✅
+2. Open terminal on Acer and run:
 ```
-pip install requests python-osc bleak
+py hardware/ACER_LIVE_BRIDGE.py --server {APP_URL} --mode polar
 ```
+*(Or `--mode all` to run Muse + Polar together)*
 
-**Step 2 — Make sure Polar H10 is paired to Acer** via
-Windows Settings → Bluetooth & devices (already done ✅)
-
-**Step 3 — Run the unified bridge for BOTH devices:**
-```
-py hardware/ACER_LIVE_BRIDGE.py --server {APP_URL} --mode all
-```
-
-The bridge will auto-discover the Polar H10 via Bluetooth.
-You should see `✅ #1 sent | ❤️  HR=xx bpm` every 2 seconds.
+You'll see `❤️  HR=xx bpm ✅ sent` every 2 seconds.
+**Refresh this page** — status flips to CONNECTED within 10 s.
 
 ---
-
-**Test the connection right now** (paste in browser address bar):
+**Quick pipeline test:**
 ```
-{APP_URL}/api/upload?hr=70&polar=1&muse=1&alpha=0.5
+{APP_URL}/api/upload?hr=72&polar=1
 ```
-If you see `{{"status":"ok"}}` — the pipeline is working.
                     """)
 
     st.divider()
