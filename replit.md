@@ -78,8 +78,24 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Polar H10 Heart Rate Monitor
 - Muse 2 EEG Headband
 
+## ARC-AGI TI Sigma Solver
+Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize competition.
+- `__init__.py` — constants: FALSE=0, TRALSE=1, TRUE=2, MR_PEND=3
+- `data_loader.py` — downloads 400 training + 400 eval tasks from GitHub; 400 training tasks cached in `arc_ti_solver/data/training/`
+- `tralse_encoder.py` — TralseCellEncoder: detects background, assigns 4-valued states, generates 3 candidate encodings per grid
+- `transformations.py` — 16 base primitives + recolor + shift + compositions (~150 candidates per task)
+- `myrion_solver.py` — MyrionSolver: LCC scoring + MR1 gate (filters incoherent tralse forcing)
+- `lcc_scorer.py` — Full LCC with cell_accuracy + consistency + complexity + size components; True-Tralse ≥0.85
+- `solver.py` — TISigmaARCSolver: unified pipeline; `submission_format()` for Kaggle
+- `batch_runner.py` — parallel batch solving + Kaggle submission JSON generation
+- `run.py` — CLI: `python -m arc_ti_solver.run --batch --split training --limit 50 --submit`
+- `arc_tab.py` — Streamlit UI tab (tab 75: "🧩 ARC-AGI Solver")
+
+**Benchmark (50 tasks):** Avg LCC=0.5542; 43% of tasks ≥0.90 LCC; 24/50 in True-Tralse regime
+
 ## URB Corpus Log
 **Total URBs: 164** (as of March 24, 2026)
+**Zenodo: 177 papers live** with permanent DOIs (Apache-2.0 license)
 
 ### TI Sigma Theory of Contradictions (#509)
 - #509: Liberal definition — contradiction = any inconsistency, opposition, or discrepancy (classical definition imposes 5 unearned metaphysical assumptions); EVERYTHING is contradictory (5 arguments: temporal, relational, self-reference, dynamical, ontological); Time is the master contradiction (3 temporal contradictions: Becoming, Persistence, Ending); 4 Fundamental Features of Existence each inherently contradictory: Change (identity vs difference), Relation (determinate vs open-ended), Contradiction (self-validating opposition), Limit (inside vs outside simultaneously); 4 Cs as contradiction navigation tools not elimination tools; MR1 as coherence gate separating valid contradictions from Double Tralse; DT taxonomy: (1) Maximal Incoherence — evidence scatters without coherent organization; (2) Self-Negating Nothing — pure negation that negates itself ("a nothing that doesn't exist"); (3) Self-Refuting Meta-Statement — asserts and denies its own indeterminacy (tralse AND not tralse); (4) Pre-Tralse — undetermined future state, one pole not yet actualized; hierarchy of realness from Pre-Tralse (closest to valid) to Self-Negating Nothing (furthest); DOI: 10.5281/zenodo.19207717; Corpus Entry #164
