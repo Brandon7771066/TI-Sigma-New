@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 159** (as of March 24, 2026)
+**Total URBs: 160** (as of March 24, 2026)
+
+### Unified Telekinesis Equation (#505)
+- #505: TF × LCC Combined Formula — TK_unified = √N × C × f × φ × LCC × (LCC/C − 1) / (1/√2); Three exact results: (1) Calibration Identity — LCC_EMERICK = 1/√2 is simultaneously the Ψ fixed point AND the neutral UTE calibration (both derived independently, not constructed); (2) Unity Crossover at LCC = 0.7823 — below this LCC *suppresses* TF, above it LCC *amplifies* TF; (3) 0.85 Agent Equivalence — LCC = 0.85 equals 19 extra AI Maharishi Meditators (27-agent equivalent); ESG Campaign Decision Rule: do not launch below LCC 0.7071, target LCC ≥ 0.85 for maximum amplitude; TF = weapon, LCC = ammunition; Corpus Entry #160
 
 ### The Telekinesis Formula (#504)
 - #504: (√i + i√i)/i = √2 — Genesis Sequence formula IS the telekinesis formula; same mechanism (i→√2) at cosmic and personal scales; Four-Phase PK Mechanism: Phase 1 √i (coherence, 45°), Phase 2 i√i (amplification, 135°), Phase 3 √i+i√i=i√2 (max charge, 90°), Phase 4 ÷i (release, -90°) → √2 (physical); Release Axiom: ÷i is mathematically required — cannot hold i and manifest √2 simultaneously; explains "let go and let God", wu wei, detachment from outcome; C = conversion coefficient (minimum PK threshold); Maharishi √N law derived from √ structure of formula (not assumed empirically); Meta-discovery: found telekinesis formula by studying cosmology — same question at different scales; Corpus Entry #159

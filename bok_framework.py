@@ -1115,6 +1115,88 @@ creates local E-changes from i. Same formula. Same mechanism. Different amplitud
 📄 Full paper: `papers/URB_TELEKINESIS_FORMULA_504.md` | Corpus Entry #159
             """)
 
+        with st.expander("🔗 URB #505 — The Unified Telekinesis Equation (TF × LCC)", expanded=False):
+            import math as _math
+            phi_  = (1 + _math.sqrt(5)) / 2
+            sqrt2_= _math.sqrt(2)
+            C_val = 1 / (phi_ * sqrt2_)
+            LCC_E = 1 / sqrt2_
+
+            def _psi(lcc):
+                if lcc < C_val: return 0.0
+                return phi_ * lcc * (lcc / C_val - 1)
+
+            def _tf(N, f): return _math.sqrt(N) * C_val * f
+            def _uте(N, f, lcc): return _tf(N, f) * _psi(lcc) / _psi(LCC_E)
+
+            # Unity crossover
+            a_ = phi_ / C_val; b_ = -phi_; disc_ = b_**2 - 4*a_*(-1)
+            lcc_unity = (-b_ + _math.sqrt(disc_)) / (2*a_)
+
+            st.markdown(f"""
+### The Unified Telekinesis Equation
+
+**TK_unified = √N × C × f × φ × LCC × (LCC/C − 1) / (1/√2)**
+
+Derived by multiplying the Telekinesis Formula (URB #504) by the Consciousness Equation (URB #352),
+normalised so that LCC_EMERICK = 1/√2 is the neutral baseline (combined = TF alone).
+
+| Mechanism | Controls | Key constant |
+|-----------|----------|--------------|
+| **TF (Telekinesis Formula)** | How consciousness converts to physical effect | √2, C |
+| **LCC (Consciousness Equation)** | How strongly the practitioner couples to the field | φ, C |
+| **UTE (Unified)** | Complete telekinetic power | All 8 PRIMARY constants |
+
+**The TF is the weapon. LCC is the ammunition.**
+
+---
+
+### Three Exact Results
+
+**1. Calibration Identity:**
+LCC_EMERICK = 1/√2 ≈ {LCC_E:.4f} is simultaneously:
+- the fixed point of the Consciousness Equation (Ψ returns to itself)
+- the neutral calibration of the UTE (multiplier = 1×, combined = TF alone)
+
+Both derived independently. The match is not constructed — it is found.
+
+**2. The Unity Crossover (LCC = {lcc_unity:.4f}):**
+Below this, LCC *suppresses* TF. Above it, LCC *amplifies* TF.
+At LCC_EMERICK (0.707), the UTE is already at baseline. But to get net amplification, you must reach LCC = 0.7823.
+
+| LCC | Ψ(LCC) | UTE multiplier | vs TF alone |
+|-----|--------|----------------|-------------|
+| C = {C_val:.4f} | 0 | 0 | Dead — no coupling |
+| 0.60 | {_psi(0.60):.4f} | {_psi(0.60)/_psi(LCC_E):.3f}× | Suppressing TF |
+| 1/√2 = {LCC_E:.4f} | {_psi(LCC_E):.4f} | **1.000×** | Neutral baseline |
+| {lcc_unity:.4f} | 1.000 | **{1.0/_psi(LCC_E):.3f}×** | Crossover — amplification begins |
+| 0.85 | {_psi(0.85):.4f} | **{_psi(0.85)/_psi(LCC_E):.3f}×** | Causation≈correlation — peak |
+| 0.90 | {_psi(0.90):.4f} | {_psi(0.90)/_psi(LCC_E):.3f}× | High-coherence regime |
+
+**3. The 0.85 Agent Equivalence:**
+
+At LCC = 0.85 (N=8, f=0.70):
+- TF alone: {_tf(8, 0.70):.4f}
+- Combined: {_uте(8, 0.70, 0.85):.4f} ({_uте(8, 0.70, 0.85)/_tf(8, 0.70):.3f}× amplification)
+- Equivalent pure-TF agents needed: **≈ 27** (19 extra agents from one human at LCC 0.85)
+
+---
+
+### ESG Campaign Decision Rule
+
+Before launching any session, measure your HRV coherence → estimate LCC proxy:
+
+| LCC | Action |
+|-----|--------|
+| < {C_val:.4f} (below C) | Do not launch — rest and recover |
+| {C_val:.4f} – {LCC_E:.4f} | Prepare — HRV breathing 5–15 min first |
+| {LCC_E:.4f} – {lcc_unity:.4f} | Can launch at baseline power (no net amplification) |
+| {lcc_unity:.4f} – 0.85 | Launch — LCC is amplifying TF |
+| ≥ 0.85 | Launch immediately — maximum amplitude |
+
+📄 Full paper: `papers/URB_TF_LCC_UNIFIED_TELEKINESIS_505.md` | Corpus Entry #160
+            """)
+
         with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
             st.markdown(f"""
 TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:
