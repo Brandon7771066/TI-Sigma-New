@@ -1269,6 +1269,170 @@ Both arrive at the exact same number. This is the **unity of the mathematical an
 📄 Full paper: `papers/URB_I_COMPLETENESS_THEOREM_506.md` | Corpus Entry #161
             """)
 
+        with st.expander("🔢 URB #507 — The 6-Element Basis: {i, +, −, ×, ÷, lim} Generates All Math", expanded=False):
+            import math as _m7, cmath as _cm7
+            _phi7  = (1 + _m7.sqrt(5)) / 2
+            _th7   = _m7.log(_phi7) / 0.1   # θ_GILE
+            # Verify: cos from i via Taylor
+            def _cos_from_i(x, terms=30):
+                r = complex(0); p = complex(1); f = 1
+                for n in range(terms):
+                    r += p / f; p *= (1j * x); f *= (n + 1)
+                return r.real
+            # Verify: ln from limit
+            def _ln_from_lim(z, n=10**6): return n * (z**(1/n) - 1)
+
+            st.markdown(f"""
+### The 6-Element Minimal Basis of Mathematics
+
+URB #506 derived all PRIMARY CONSTANTS from i using {{ln, arctan, cos}}. This URB asks: are those functions primitives, or do they reduce further?
+
+**Answer: they ALL reduce to {{+, −, ×, ÷, lim}} applied to i.**
+
+| Function | Reduction | Operations used |
+|----------|-----------|----------------|
+| **ln(z)** | lim_{{n→∞}} n(z^(1/n) − 1) | lim + {{+, ×, ÷}} |
+| **z^(1/n)** | Newton iteration: x_{{k+1}} = ((n−1)x_k + z/x_k^(n−1))/n | lim + {{+, ×, ÷}} |
+| **arctan(x)** | Σ(−1)ⁿ x^(2n+1)/(2n+1) | lim + {{+, −, ×, ÷}} |
+| **cos(x)** | Re(Σ (ix)ⁿ/n!) | {{i}} + lim + {{+, ×, ÷}} |
+
+**Verified numerically (this is live computation):**
+
+- cos(π/4) via Re(Σ(ix)ⁿ/n!): {_cos_from_i(_m7.pi/4):.10f} | exact: {_m7.cos(_m7.pi/4):.10f} ✅
+- ln(e) via lim n(e^(1/n)−1): {_ln_from_lim(_m7.e):.8f} | exact: {_m7.log(_m7.e):.8f} ✅
+
+---
+
+### The Truly Minimal Set: 1 constant + 5 operations
+
+```
+{{i}}  +  {{+,  -,  x,  /,  lim}}
+           arithmetic          limit
+```
+
+This 6-element basis generates the **entire mathematical universe.**
+
+Why you cannot remove any element:
+- Remove **i**: lose C, lose the TF formula, lose sqrt(2)'s exact 3-step path
+- Remove **+**: lose counting, lose Taylor series
+- Remove **-**: lose negatives, lose oscillating functions
+- Remove **x**: lose powers, lose factorials
+- Remove **÷**: lose fractions, lose normalization
+- Remove **lim**: lose all irrationals *except √2*
+
+---
+
+### The Special Status of √2
+
+**Every PRIMARY CONSTANT except √2 requires lim.**
+
+| Constant | Requires lim? | Steps from i |
+|----------|--------------|--------------|
+| 0, 1, −1 | No | 1 step each |
+| **√2** | **No** | **3 steps (TF formula)** |
+| π | Yes (series/limit) | 4+ steps |
+| e | Yes | 5+ steps |
+| φ | Yes | 5+ steps |
+| C | Yes | 6+ steps |
+
+√2 is the **most directly accessible irrational real number from i.**  
+This is why it is the physical bridge constant — the universe chose the constant reachable without the limit operation.
+
+---
+
+### The θ_GILE Frequency (PRIMARY CONSTANT derived)
+
+The only frequency derivable purely from PRIMARY CONSTANTS:
+
+**θ_GILE = ln(φ) / 0.1 = {_th7:.6f} Hz**
+
+This falls in the **theta brainwave range (4–8 Hz)** — the range of peak PSI performance, meditation, and hypnagogic states. Recommended for Bliss Sender sessions.
+
+📄 Full paper: `papers/URB_MINIMAL_OPERATIONS_507.md` | Corpus Entry #162
+            """)
+
+        with st.expander("💎 URB #508 — Bengston's Healing Energy: Water vs. Quartz Storage", expanded=False):
+            import math as _m8
+            _phi8 = (1 + _m8.sqrt(5)) / 2
+            _th8  = _m8.log(_phi8) / 0.1
+
+            st.markdown(f"""
+### What Was Bengston Actually Storing?
+
+**William Bengston's key results:**
+1. Image cycling → 87.9% cancer remission in treated mice
+2. Control animals in the same building ALSO healed
+3. Water held during sessions stored healing effect for hours-days
+4. Skeptical practitioners worked as well as believers
+
+**The TI Sigma identification:** Image cycling IS the Four-Phase PK Protocol (URB #504).
+
+| Bengston stage | TF Phase | Operation |
+|---|---|---|
+| Slow image cycling | Phase 1 √i (45°) | Coherence builds |
+| Faster, effortful cycling | Phase 2 i√i (135°) | Amplification |
+| Images become automatic | Phase 3 sum (90°) | Full imaginal charge |
+| "Let go" — can't hold it | Phase 4 ÷i | **Release Axiom** |
+| Healing appears | √2 crystallizes | Physical reorganization |
+
+**Skeptics worked** because ÷i (the Release Axiom) is structural, not psychological.  
+**Control animals healed** because CCC field entrainment is non-local once LCC is high.
+
+---
+
+### What Is Stored in Water?
+
+A **φ-coherent hydrogen bond network state** — measurable via:
+- NMR: shifted ¹H chemical shift
+- IR spectroscopy: shifted O-H stretch (≈3400 vs. normal ≈3300 cm⁻¹)
+- Raman spectroscopy: changed H-O-H bending mode
+
+Induced by: coherent biophoton exposure + HRV pressure waves + CCC field coupling during high-LCC session.
+
+---
+
+### Why Quartz Beats Water
+
+| Property | Water | Quartz |
+|---|---|---|
+| Thermal stability | Hours–days (H-bond decay) | Years–millennia (crystal lattice) |
+| Emission | Passive (must be consumed) | **Active re-emission** via converse piezo |
+| φ-ratio geometry | None (amorphous) | Natural spiral, Vogel cut = tan(51.51°) ≈ φ |
+| Scientific measurability | NMR (expensive) | **Impedance meter at θ_GILE = {_th8:.2f} Hz** |
+| ξ factor (UTE boost) | ~0 | 0.05 – 0.30 |
+
+**Quartz is a slow-release resonance broadcaster. Water is a single-dose carrier.**
+
+---
+
+### The Quartz Storage Protocol
+
+1. **Measure baseline** impedance of Vogel-cut crystal at θ_GILE = **{_th8:.2f} Hz**
+2. **Hold crystal** in dominant hand during Bliss Sender session (LCC ≥ 0.85)
+3. **Re-measure** immediately — shift Δf > 5 Hz = significant imprint
+4. Place charged crystal in filtered water for **4–8 hours** to structure it
+5. **Drink or apply** the structured water
+
+**Falsifiable prediction:** Δf will correlate with practitioner LCC at r > 0.5 across sessions. Vogel-cut will show 2–5× larger Δf than raw quartz (same session).
+
+---
+
+### Sacred Frequencies — Honest Assessment
+
+| Frequency | Hz | Valid? | Reason |
+|---|---|---|---|
+| θ_GILE | {_th8:.2f} | ✅ | PRIMARY CONSTANT derivation: ln(φ)/0.1 |
+| Schumann resonance | 7.83 | ✅ | Real EM physics: c / Earth circumference |
+| HRV coherence breathing | 0.10 | ✅ | Measurable, trainable biology |
+| Theta binaural beats | 4–8 Hz | ✅ | EEG entrainment in θ_GILE range |
+| OM chanting | 136.1 | 🟡 | Vagal nerve via vocal resonance |
+| 432 Hz (alt tuning) | 432 | ❌ | No PRIMARY derivation, no physiology |
+| 528 Hz "DNA repair" | 528 | ❌ | No mechanism, no replication |
+| Solfège tones | 174–963 | ❌ | No PRIMARY derivation, no controlled studies |
+
+📄 Full papers: `papers/URB_MINIMAL_OPERATIONS_507.md` and `papers/URB_BENGSTON_WATER_QUARTZ_508.md` | Corpus Entries #162–#163
+            """)
+
         with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
             st.markdown(f"""
 TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:

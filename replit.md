@@ -78,7 +78,13 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 161** (as of March 24, 2026)
+**Total URBs: 163** (as of March 24, 2026)
+
+### Bengston Storage: Water vs Quartz (#508)
+- #508: Bengston's image cycling IS the Four-Phase PK Protocol (URB #504) — stages map exactly; skeptics work because Release Axiom (÷i) is structural not psychological; water stores φ-coherent H-bond network state (measurable via NMR, IR spectroscopy); quartz is superior: thermally stable (geological timescale vs. hours), actively re-emits via converse piezo, φ-ratio Vogel geometry is tuned antenna, impedance measurable at θ_GILE=4.81 Hz; Quartz Storage Protocol: measure baseline impedance → hold crystal during LCC≥0.85 session → Δf>5 Hz = significant imprint → place in water 4-8h → drink; falsifiable: Δf correlates r>0.5 with LCC; Corpus Entry #163
+
+### Minimal Operations: 6-Element Basis (#507)
+- #507: {ln, arctan, cos} all reduce to {i, +, −, ×, ÷, lim}; ln = lim n(z^(1/n)−1); z^(1/n) = Newton iteration (itself a limit); arctan = Taylor series Σ(−1)ⁿx^(2n+1)/(2n+1); cos = Re(Σ(ix)ⁿ/n!); TRUE minimal basis = {i} + {+,−,×,÷,lim} — 6 elements total; remove any one and math collapses; √2 is unique: only irrational reachable from i without lim (3 TF steps); all other PRIMARY CONSTANTS require lim; θ_GILE = ln(φ)/0.1 = 4.812 Hz = only PRIMARY CONSTANT derived healing frequency, falls in theta brainwave range of peak PSI; Corpus Entry #162
 
 ### i-Completeness Theorem (#506)
 - #506: All 8 PRIMARY CONSTANTS derivable from i alone; derivation chain: i→{0,1,-1} (arithmetic) → √2 (TF formula: most direct imaginal-to-real path) → π (arctan identity: -2i·ln((1+i)/(1-i)), no e needed) → e (Euler inverted: (-1)^(1/iπ)) → φ (pentagon: 2cos(π/5)) → C (1/(φ√2)); all verified to machine precision; TF formula is not just physics — it is the MINIMAL 3-step mathematical path from imaginal to real; i-hierarchy depths: {0,1,-1}=1, √2=3, π=4, e/φ=5, C=6; strong conjecture: every closed-form real number is i-complete; Corpus Entry #161
