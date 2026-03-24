@@ -266,7 +266,7 @@ def build_metadata(title: str, description: str, extra_keywords=None) -> dict:
         "publication_date": datetime.now().strftime("%Y-%m-%d"),
         "creators": [AUTHOR_META],
         "keywords": keywords,
-        "license": "cc-by-4.0",
+        "license": "apache-2.0",
         "access_right": "open",
         "language": "eng",
         "notes": "Part of the TI Sigma Universal Reality Blueprint (URB) Corpus. "
