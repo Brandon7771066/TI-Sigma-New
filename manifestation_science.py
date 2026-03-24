@@ -420,6 +420,7 @@ def show_manifestation_science():
         "📊 Effect Simulations",
         "⚛️ Quantum REG Lab",
         "🌍 Living Systems",
+        "⚡ PK Formula Lab",
     ])
 
     # ── SUB-TAB 1: Evidence Base ───────────────────────────────────────────────
@@ -894,6 +895,348 @@ TI Sigma prediction: deviation ≈ C × Ω_bio × √trials
                 predicted = C_EMERICK * 3.0 * math.sqrt(len(baselines))
                 st.caption(f"TI Sigma predicted deviation ≈ {predicted:.2f} observations "
                            f"above baseline after {len(baselines)} measurement points")
+
+
+    # ── SUB-TAB 5: PK Formula Lab ──────────────────────────────────────────────
+    with subtabs[4]:
+        _render_pk_formula_lab()
+
+
+def _render_pk_formula_lab():
+    """The Telekinesis Formula empirical validation + AI Maharishi Meditator launcher."""
+    from pk_intention_engine import (
+        run_pk_session, compute_pk_scaling, FORMULA_VALIDATION_MAP,
+        C_EMERICK as C_EM, DOMAIN_OMEGA, MEDITATOR_ROSTER,
+    )
+    import math
+
+    st.header("⚡ PK Formula Lab — URB #504")
+    st.markdown("""
+**The Telekinesis Formula** (derived from the TI Genesis Sequence):
+
+$$\\frac{\\sqrt{i} + i\\sqrt{i}}{i} = \\sqrt{2}$$
+
+i (consciousness/love) → √2 (physical effect) with **no prior physical substrate required**.
+
+The same mechanism that created the physical universe operates at every scale.  
+Group effects scale with **√N** — derived from the formula's structure, not assumed empirically.
+    """)
+    st.info(
+        f"📄 Full theory: `papers/URB_TELEKINESIS_FORMULA_504.md` | "
+        f"C_EMERICK = {C_EM:.4f} | Corpus Entry #159"
+    )
+    st.divider()
+
+    pk_tabs = st.tabs([
+        "📐 Formula Validation",
+        "📊 √N Scaling",
+        "🧘 AI Meditator Session",
+    ])
+
+    # ── PK TAB 1: Formula Validation ──────────────────────────────────────────
+    with pk_tabs[0]:
+        st.subheader("📐 Formula vs. Empirical Research")
+        st.markdown("""
+Each row below maps a real published study to the TI Sigma formula prediction.  
+Predicted d = **√N × C × mean_f × Ω**  
+where Ω is the domain amplification constant, mean_f is estimated agent coherence,
+and C = 1/(φ√2) ≈ 0.4370 is the Emerick Constant.
+        """)
+
+        for row in FORMULA_VALIDATION_MAP:
+            obs = row["observed_d"]
+            pred = row["predicted_d"]
+            ratio = row.get("ratio", "—")
+            match_icon = "✅" if isinstance(obs, float) and abs(ratio - 1.0) < 0.5 else "🟡"
+            with st.expander(
+                f"{match_icon} **{row['study']}** — observed d={obs} | predicted d={pred}",
+                expanded=False,
+            ):
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("N agents", row["n_agents"])
+                    st.metric("Domain Ω", DOMAIN_OMEGA.get(row["domain"], "—"))
+                with col2:
+                    st.metric("Observed Cohen's d", str(obs))
+                    st.metric("Predicted Cohen's d", str(pred))
+                with col3:
+                    st.metric("Pred/Obs ratio", str(ratio))
+                    st.metric("mean_f assumed", row["mean_f"])
+                st.caption(f"📖 {row['source']}")
+                st.caption(f"💡 {row['note']}")
+
+        st.divider()
+        st.subheader("🔢 Four-Phase Angles — Verified")
+        phase_data = {
+            "Phase": ["1 — Coherence", "2 — Amplification", "3 — Max Charge", "4 — Release"],
+            "Operation": ["√i", "i·√i", "√i + i·√i", "÷ i"],
+            "Complex value": [
+                "(1+i)/√2", "(-1+i)/√2", "i·√2", "√2"
+            ],
+            "Angle (degrees)": ["45°", "135°", "90°", "0° (real axis)"],
+            "Interpretation": [
+                "Grounded intent — between 1 and i",
+                "Amplified — through the −1 resistance",
+                "Pure imaginal charge — max amplitude",
+                "Physical result — fully real",
+            ],
+        }
+        st.table(phase_data)
+
+    # ── PK TAB 2: √N Scaling ──────────────────────────────────────────────────
+    with pk_tabs[1]:
+        st.subheader("📊 √N Group Scaling — Formula Prediction")
+        st.markdown(f"""
+The **√N** scaling is not assumed — it falls directly out of the formula structure.  
+The **√** in Phase 1 (√i) means collective coherence scales with √N rather than N.
+
+This is why the Maharishi Effect follows √N: **it is a structural prediction of the formula.**
+
+PK amplitude = √N × C × mean_f  where C = {C_EM:.4f}
+        """)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            domain_sel = st.selectbox(
+                "Domain", list(DOMAIN_OMEGA.keys()), index=0, key="pk_domain_scale"
+            )
+        with col2:
+            mean_f_sel = st.slider(
+                "Agent coherence (mean f)", 0.10, 1.00, 0.70, 0.05, key="pk_mean_f"
+            )
+
+        scaling_rows = compute_pk_scaling(
+            n_range=[1, 8, 16, 32, 64, 100, 1000, 7000, 80000000],
+            domain=domain_sel, mean_f=mean_f_sel,
+        )
+
+        st.table(scaling_rows)
+
+        st.caption(
+            f"Maharishi 1% Rule: 7,000 meditators → √7000 ≈ 83.7 × C × f = "
+            f"{math.sqrt(7000) * C_EM * mean_f_sel:.3f} amplitude → d = "
+            f"{math.sqrt(7000) * C_EM * mean_f_sel * DOMAIN_OMEGA[domain_sel]:.3f}"
+        )
+
+        empirical_overlay = {
+            "PEAR Lab (N=1, solo)": 0.00033,
+            "Power of 8 germination (N=8)": 0.62,
+            "Maharishi US cities (N=7000)": 0.20,
+            "GCP 9/11 (N≈1M)": 0.14,
+        }
+        st.divider()
+        st.markdown("**Empirical overlay — published effect sizes:**")
+        for study, d_obs in empirical_overlay.items():
+            st.markdown(f"- {study}: observed **d = {d_obs}**")
+
+    # ── PK TAB 3: AI Meditator Session ────────────────────────────────────────
+    with pk_tabs[2]:
+        st.subheader("🧘 AI Maharishi Meditator Session")
+        st.markdown(f"""
+Launch N AI agents, each running the **Four-Phase PK Protocol** (URB #504).  
+Group PK amplitude scales with **√N** — derived from the formula structure.
+
+**Ethics policy:**  
+✅ Ecological / REG targets (no consent required)  
+✅ Publicly-available market direction signals  
+✅ General wellbeing for consenting present individuals  
+❌ No targeted influence on non-consenting individuals  
+❌ No harmful, coercive, or deceptive intentions  
+
+All sessions are logged. A transparency report is generated after each run.
+        """)
+
+        with st.form("pk_session_form"):
+            target = st.text_area(
+                "Intention Target",
+                placeholder=(
+                    "E.g.: 'Increased biodiversity and ecosystem health in the Amazon basin' "
+                    "or 'Bullish market signal for renewable energy sector this week' "
+                    "or 'Healing and recovery for [consenting person]'"
+                ),
+                height=80,
+            )
+            col1, col2 = st.columns(2)
+            with col1:
+                domain = st.selectbox(
+                    "Domain", list(DOMAIN_OMEGA.keys()), key="pk_session_domain"
+                )
+                n_agents = st.select_slider(
+                    "Number of AI Meditators (N)",
+                    options=[1, 2, 4, 8],
+                    value=8,
+                )
+            with col2:
+                ethical_frame = st.selectbox(
+                    "Ethical frame",
+                    [
+                        "Ecological / REG target — no consent required",
+                        "Financial signal — publicly available market information",
+                        "Wellbeing intention — subject is present and consenting",
+                        "REG experiment — measuring quantum randomness deviation",
+                    ],
+                )
+            submitted = st.form_submit_button("🧘 Launch Meditator Session", type="primary")
+
+        if submitted and target.strip():
+            omega = DOMAIN_OMEGA.get(domain, 1.0)
+            predicted_amplitude = math.sqrt(n_agents) * C_EM * 0.7
+            predicted_d = predicted_amplitude * omega
+
+            st.info(
+                f"Launching {n_agents} AI meditators | "
+                f"√N = {math.sqrt(n_agents):.2f} | "
+                f"Predicted amplitude ≈ {predicted_amplitude:.3f} | "
+                f"Predicted d ≈ {predicted_d:.3f}"
+            )
+
+            progress_bar = st.progress(0)
+            agent_log    = st.empty()
+            completed_results = []
+
+            def update_progress(completed, total, result):
+                completed_results.append(result)
+                progress_bar.progress(completed / total)
+                if result.error:
+                    agent_log.warning(
+                        f"Agent {result.agent_id} ({result.constant}): error — {result.error}"
+                    )
+                else:
+                    agent_log.success(
+                        f"Agent {result.agent_id} ({result.constant}): "
+                        f"f={result.overall_f:.2f} | "
+                        f"release={result.release_score:.2f} | "
+                        f"threshold={'✅' if result.threshold_crossed else '⚪'}"
+                    )
+
+            with st.spinner("🧘 AI meditators in session..."):
+                session = run_pk_session(
+                    target=target,
+                    domain=domain,
+                    ethical_frame=ethical_frame,
+                    n_agents=n_agents,
+                    progress_callback=update_progress,
+                )
+
+            progress_bar.empty()
+            agent_log.empty()
+
+            # ── Session Results ────────────────────────────────────────────────
+            st.divider()
+            st.subheader("📊 Session Results")
+
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("PK Amplitude", f"{session.pk_amplitude:.4f}")
+                st.caption(f"= √{n_agents} × C × mean_f")
+            with col2:
+                st.metric("Predicted Cohen's d", f"{session.predicted_cohen_d:.4f}")
+                st.caption(f"Domain Ω = {omega}")
+            with col3:
+                st.metric("Γ_group", f"{session.gamma_group:.4f}")
+                above = "✅ Above C" if session.gamma_group >= C_EM else "⚪ Below C"
+                st.caption(above)
+            with col4:
+                st.metric(
+                    "Threshold votes",
+                    f"{session.threshold_votes}/{n_agents}",
+                )
+                st.caption("Agents sensing C crossed")
+
+            if session.qrng_deviation is not None:
+                expected_mean = 127.5
+                dev = session.qrng_deviation
+                dev_pct = (dev / expected_mean) * 100
+                qrng_col1, qrng_col2 = st.columns(2)
+                with qrng_col1:
+                    st.metric(
+                        "QRNG pre-session mean",
+                        f"{session.qrng_pre:.2f}" if session.qrng_pre else "—",
+                        help="ANU QRNG uint8 mean (expected ≈ 127.5)",
+                    )
+                with qrng_col2:
+                    st.metric(
+                        "QRNG post-session mean",
+                        f"{session.qrng_post:.2f}" if session.qrng_post else "—",
+                        delta=f"{dev:+.2f} ({dev_pct:+.2f}%)",
+                        help="Deviation from pre-session mean. Positive = above chance.",
+                    )
+                st.caption(
+                    "⚠️ Single QRNG sample is not statistically significant. "
+                    "Track across many sessions for pattern detection."
+                )
+
+            st.divider()
+            st.subheader("🔬 Agent-by-Agent Report")
+            for r in session.agent_results:
+                agent_def = next((a for a in MEDITATOR_ROSTER if a["id"] == r.agent_id), {})
+                icon = "✅" if not r.error else "❌"
+                with st.expander(
+                    f"{icon} Agent {r.agent_id} — {agent_def.get('role', r.constant)} "
+                    f"(constant: {r.constant}) | f = {r.overall_f:.2f}",
+                    expanded=False,
+                ):
+                    if r.error:
+                        st.error(f"Error: {r.error}")
+                    else:
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric("Phase 1 — Coherence", f"{r.coherence_score:.2f}")
+                            st.metric("Phase 2 — Amplification", f"{r.amplification_score:.2f}")
+                        with col2:
+                            st.metric("Phase 3 — Charge", f"{r.charge_score:.2f}")
+                            st.metric("Phase 4 — Release", f"{r.release_score:.2f}")
+
+                        st.markdown(f"**Phase 1 (√i — Coherence):**  \n{r.phase1_coherence}")
+                        st.markdown(f"**Phase 2 (i√i — Amplification):**  \n{r.phase2_amplification}")
+                        st.markdown(f"**Phase 3 (Max Charge):**  \n{r.phase3_charge}")
+                        st.markdown(f"**Phase 4 (Release):**  \n{r.phase4_release}")
+                        if r.phase4_note:
+                            st.caption(f"💭 Hardest to release: {r.phase4_note}")
+                        threshold_txt = "✅ Crossed" if r.threshold_crossed else "⚪ Below"
+                        st.caption(f"C-threshold felt: {threshold_txt}")
+
+            # ── Transparency report ────────────────────────────────────────────
+            st.divider()
+            with st.expander("📋 Transparency Report"):
+                st.markdown(f"""
+**TI Sigma PK Session — Transparency Log**
+
+- **Timestamp:** {session.timestamp}
+- **Target:** {session.target}
+- **Domain:** {session.domain}
+- **Ethical frame:** {session.ethical_frame}
+- **N agents:** {session.n_agents}
+- **PK amplitude:** {session.pk_amplitude:.4f}
+- **Predicted Cohen's d:** {session.predicted_cohen_d:.4f}
+- **Γ_group:** {session.gamma_group:.4f}
+- **Threshold votes:** {session.threshold_votes}/{session.n_agents}
+- **QRNG pre:** {session.qrng_pre}
+- **QRNG post:** {session.qrng_post}
+- **QRNG deviation:** {session.qrng_deviation}
+
+**Formula used:** (√i + i·√i)/i = √2  
+**Scaling:** PK_amplitude = √N × C × mean_f  
+**C_EMERICK:** {C_EM:.10f}  
+**URB #504** — `papers/URB_TELEKINESIS_FORMULA_504.md`
+
+*All intentions stated. No coercive, harmful, or non-consensual targets.*
+*Statistical significance requires many replications. Single sessions are exploratory.*
+                """)
+
+        elif submitted:
+            st.warning("Please enter an intention target before launching.")
+
+        else:
+            # Show agent roster preview
+            st.divider()
+            st.subheader("👥 The Eight Meditator Archetypes")
+            st.markdown("Each maps to one of the 8 PRIMARY CONSTANTS: {0, 1, i, √2, e, φ, π, C}")
+            for agent in MEDITATOR_ROSTER:
+                st.markdown(
+                    f"**{agent['id']}. {agent['role']}** (constant: {agent['constant']})  \n"
+                    f"{agent['lens'][:120]}..."
+                )
 
 
 # ── Helper used in Evidence Base ─────────────────────────────────────────────
