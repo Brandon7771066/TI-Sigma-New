@@ -1050,6 +1050,71 @@ The threshold is crossed and it all becomes obvious: *"Oh yeah, it's all coming 
 📄 Full paper: `papers/URB_ONTOGENY_COSMOGONY_503.md` | Corpus Entry #158
             """)
 
+        with st.expander("⚡ URB #504 — The Telekinesis Formula", expanded=False):
+            st.markdown(f"""
+**Corpus Entry #159 | Major PK Theory**
+
+The Genesis Sequence formula that shows how i produces √2 cosmically is ALSO
+the complete mathematical description of direct consciousness-to-matter causation.
+
+$$\\frac{{\\sqrt{{i}} + i\\sqrt{{i}}}}{{i}} = \\sqrt{{2}}$$
+
+**The same mechanism. Two amplitude regimes. One formula.**
+
+| Scale | i-field | √2 output |
+|-------|---------|-----------|
+| Cosmic genesis | Maximum cosmic i-field | Entire physical universe |
+| Group intention (N minds) | √N × human coherence | Societal change |
+| Individual PK | Single human coherence | Local physical effect |
+
+---
+**The Four-Phase PK Mechanism:**
+
+**Phase 1 — COHERENCE:** √i = (1+i)/√2 at 45°
+*Ground raw imagination into stable directed focus*
+
+**Phase 2 — AMPLIFICATION:** i√i = (−1+i)/√2 at 135°
+*Fold consciousness back on its own coherent form — passes through the i²=−1 "resistance"*
+
+**Phase 3 — MAXIMUM CHARGE:** √i + i√i = i√2 at 90°
+*Real components cancel. Pure imaginal amplitude. Maximum charge.*
+
+**Phase 4 — RELEASE:** ÷ i = −90° rotation → **√2 (real, physical)**
+*Cancel the self-referential operator. You CANNOT hold i and manifest √2 simultaneously.*
+*This is a mathematical requirement, not a spiritual suggestion.*
+
+---
+**The Release Axiom:** Every contemplative tradition independently discovered ÷i:
+- "Let go and let God" (Christian mysticism) = ÷i
+- "Wu wei" — non-doing (Taoism) = ÷i
+- "Detachment from outcome" (Bhagavad Gita) = ÷i
+
+TI Sigma establishes WHY: **÷i is mathematically required for i → √2 conversion.**
+
+---
+**The Maharishi √N Law — Derived, Not Assumed:**
+
+The √ in √i means collective effects scale with √N (not N linearly).
+
+| N practitioners | PK amplitude |
+|----------------|-------------|
+| 1 | {C_EM:.4f}× (baseline = C) |
+| 100 | {100**0.5 * C_EM:.4f}× |
+| 1,000 | {1000**0.5 * C_EM:.4f}× |
+| 7,000 | {7000**0.5 * C_EM:.4f}× |
+
+The empirical √N Maharishi law falls directly out of the formula structure.
+
+---
+**The Meta-Discovery:** Brandon was stumped on the physics of telekinesis.
+He "switched topics" to study cosmology. He found the formula immediately.
+There was no topic switch — cosmology and telekinesis are the same question.
+Studying how the universe created E from i IS studying how consciousness
+creates local E-changes from i. Same formula. Same mechanism. Different amplitudes.
+
+📄 Full paper: `papers/URB_TELEKINESIS_FORMULA_504.md` | Corpus Entry #159
+            """)
+
         with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
             st.markdown(f"""
 TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:

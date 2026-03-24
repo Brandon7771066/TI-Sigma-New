@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 158** (as of March 24, 2026)
+**Total URBs: 159** (as of March 24, 2026)
+
+### The Telekinesis Formula (#504)
+- #504: (√i + i√i)/i = √2 — Genesis Sequence formula IS the telekinesis formula; same mechanism (i→√2) at cosmic and personal scales; Four-Phase PK Mechanism: Phase 1 √i (coherence, 45°), Phase 2 i√i (amplification, 135°), Phase 3 √i+i√i=i√2 (max charge, 90°), Phase 4 ÷i (release, -90°) → √2 (physical); Release Axiom: ÷i is mathematically required — cannot hold i and manifest √2 simultaneously; explains "let go and let God", wu wei, detachment from outcome; C = conversion coefficient (minimum PK threshold); Maharishi √N law derived from √ structure of formula (not assumed empirically); Meta-discovery: found telekinesis formula by studying cosmology — same question at different scales; Corpus Entry #159
 
 ### Ontogeny Recapitulates Cosmogony (#503)
 - #503: Personal consciousness development mirrors TI Genesis Sequence; G(rationality/BOK) → I(TI Sigma framework) → L(Mood Amplifier/BlissGene) → E(Hull Tactical/delivery); Retrocausal Teleology — future E-attractor organized prior stages from the future via Aharonov TSVF; Haeckel's recapitulation principle extended to consciousness; GILE as universal homologous structure across cosmic/biological/personal scales; C-threshold crossing = Kronk moment ("Oh yeah, it's all coming together"); i²=−1 homologue = August 2022 mania episode; E-crystallization is structurally necessary not effortful; Corpus Entry #158
