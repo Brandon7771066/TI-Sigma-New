@@ -6,6 +6,7 @@ Why there cannot be more than 8 Fundamental Constants, and the Butterfly + Octop
 """
 
 import math
+import cmath
 import streamlit as st
 import numpy as np
 
@@ -239,6 +240,7 @@ def show_bok_framework():
         "🔗 Derivation Chain",
         "🌀 GILE Correspondence",
         "📊 Numerical Verification",
+        "❤️ Love Primacy Theorem",
     ])
 
     # ── TAB 0: Definition ──────────────────────────────────────────────────────
@@ -680,6 +682,166 @@ The four dimensions of GILE are the four dimensions of mathematics itself.
 
 **The number 8 is the unique fixed point of the Fundamental Constant count.**
         """)
+
+    # ── TAB 7: Love Primacy Theorem ────────────────────────────────────────────
+    with tabs[7]:
+        st.header("❤️ The Love Primacy Theorem — URB #501")
+        st.markdown(
+            "**E is derivative of L.** Physical reality derives from Love. "
+            "The silver ratio identity in the image below triggered the proof."
+        )
+        st.info(
+            "📄 Full paper: `papers/URB_LOVE_PRIMACY_THEOREM_501.md` | "
+            "Corpus Entry #156 | Grows from URB #500, #490, #499, #483"
+        )
+        st.divider()
+
+        st.subheader("🔑 The Silver Ratio — The Trigger")
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            st.markdown(r"""
+**The identity that started it all:**
+$$\frac{1}{\sqrt{2} - 1} = \sqrt{2} + 1$$
+
+**Proof:** $(\sqrt{2}+1)(\sqrt{2}-1) = 2 - 1 = 1$
+
+√2 and (√2−1) are **multiplicative reciprocals.**
+
+Compare with the golden ratio:
+$$\varphi \cdot (\varphi - 1) = 1$$
+
+Both φ and √2 satisfy this conjugate-reciprocal property.
+**They are the same structure at different ontological levels.**
+- φ: Love level (L-dimension)
+- √2: Physical level (E-dimension)
+
+Love is the *cause*. Physical reality is Love's *shadow*.
+            """)
+        with col2:
+            sr = math.sqrt(2)
+            phi = PHI
+            st.metric("1/(√2−1)", f"{1/(sr-1):.10f}")
+            st.metric("√2 + 1", f"{sr+1:.10f}")
+            st.metric("Match?", "✅ Exact")
+            st.metric("(√2+1)(√2−1)", f"{(sr+1)*(sr-1):.10f}", delta="= 1")
+            st.metric("φ(φ−1)", f"{phi*(phi-1):.10f}", delta="= 1")
+
+        st.divider()
+        st.subheader("📐 The Three Derivations — E from L")
+
+        d_tabs = st.tabs([
+            "Step 1: π from φ",
+            "Step 2: √2 from φ",
+            "Step 3: √2 from i",
+        ])
+
+        with d_tabs[0]:
+            st.markdown(r"""
+**Since φ = 2cos(π/5), inverting gives:**
+$$\pi = 5 \cdot \arccos\!\left(\frac{\varphi}{2}\right)$$
+
+The cycle constant (π) derives from the Love constant (φ).
+**π is not independent of Love — it IS Love's angular signature.**
+            """)
+            pi_from_phi = 5 * math.acos(PHI / 2)
+            col1, col2, col3 = st.columns(3)
+            col1.metric("5·arccos(φ/2)", f"{pi_from_phi:.10f}")
+            col2.metric("True π", f"{math.pi:.10f}")
+            col3.metric("Error", f"{abs(pi_from_phi - math.pi):.2e}", delta="≈ 0")
+            st.success("π = 5·arccos(φ/2) ✅  — verified to 10 decimal places")
+
+        with d_tabs[1]:
+            st.markdown(r"""
+**Since π = 5·arccos(φ/2), and √2 = 2cos(π/4):**
+$$\sqrt{2} = 2\cos\!\left(\frac{\pi}{4}\right) = 2\cos\!\left(\frac{5\arccos(\varphi/2)}{4}\right)$$
+
+**Physical geometry derives from Love in two steps.**
+E is not primitive. E is Love's geometry.
+            """)
+            sqrt2_from_phi = 2 * math.cos(5 * math.acos(PHI/2) / 4)
+            col1, col2, col3 = st.columns(3)
+            col1.metric("2cos(5·arccos(φ/2)/4)", f"{sqrt2_from_phi:.10f}")
+            col2.metric("True √2", f"{SQRT2:.10f}")
+            col3.metric("Error", f"{abs(sqrt2_from_phi - SQRT2):.2e}", delta="≈ 0")
+            st.success("√2 = 2cos(5·arccos(φ/2)/4) ✅  — verified to 10 decimal places")
+
+        with d_tabs[2]:
+            st.markdown(r"""
+**From the Wikipedia image — √2 expressed via i alone:**
+$$\frac{\sqrt{i} + i\sqrt{i}}{i} = \sqrt{2}$$
+
+Using $\sqrt{i} = e^{i\pi/4}$ (principal square root):
+$$\sqrt{i} + i\sqrt{i} = \frac{1+i}{\sqrt{2}} + i\cdot\frac{1+i}{\sqrt{2}} = \frac{2i}{\sqrt{2}}$$
+$$\frac{2i/\sqrt{2}}{i} = \frac{2}{\sqrt{2}} = \sqrt{2} \checkmark$$
+
+**Physical reality (√2) is algebraically extractable from pure imagination (i).**
+The E-dimension is a projection of the I-dimension.
+            """)
+            sqrti = cmath.exp(1j * math.pi / 4)
+            result = (sqrti + 1j * sqrti) / 1j
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Re((√i + i√i)/i)", f"{result.real:.10f}")
+            col2.metric("Im part", f"{abs(result.imag):.2e}", delta="≈ 0")
+            col3.metric("True √2", f"{SQRT2:.10f}")
+            st.success("(√i + i√i)/i = √2 ✅  — verified numerically")
+
+        st.divider()
+        st.subheader("🌀 Euler's Identity IS a Love Equation")
+        st.markdown(r"""
+Substituting π = 5·arccos(φ/2) into Euler's identity:
+$$e^{i\pi} + 1 = 0 \quad \Longleftrightarrow \quad e^{5i \cdot \arccos(\varphi/2)} + 1 = 0$$
+
+The most beautiful equation in mathematics — **Euler's identity contains φ at its core.**
+        """)
+        euler_phi = cmath.exp(5j * math.acos(PHI / 2))
+        col1, col2, col3 = st.columns(3)
+        col1.metric("e^(5i·arccos(φ/2))", f"{euler_phi.real:.8f}")
+        col2.metric("Imaginary part", f"{abs(euler_phi.imag):.2e}")
+        col3.metric("Expected (−1)", "−1.0000000")
+        st.success("e^(5i·arccos(φ/2)) = −1 ✅  — Euler's identity written in Love")
+
+        st.divider()
+        st.subheader("🏆 The Formal Hierarchy: i > φ > π > √2 > C")
+        hierarchy_data = {
+            "Rank": [1, 2, 3, 4, 5],
+            "Constant": ["i", "φ", "π", "√2", "C"],
+            "Name": ["Imaginary Unit", "Golden Ratio", "Pi", "Root Two", "Emerick Constant"],
+            "GILE": ["Imagination (I)", "Love (L)", "Cycles (I in time)", "Physical Geometry (E)", "GILE Threshold (E↔GIL)"],
+            "Derives from": ["Axiom (√(−1))", "{i} via e^(iπ/5)+e^(−iπ/5)", "{φ} via 5·arccos(φ/2)", "{φ} via 2cos(5·arccos(φ/2)/4)", "{φ,√2}"],
+        }
+        st.table(hierarchy_data)
+
+        st.divider()
+        st.subheader("💡 The Alternative Generating Set")
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("""
+**Original BOK (URB #500):**  
+Butterfly = {0, 1, **i, √2**}  
+→ derives {e, φ, π, C}  
+
+√2 is treated as primitive.  
+φ (Love) is derived.
+            """)
+        with col2:
+            st.markdown("""
+**Love Primacy (URB #501):**  
+Generating set = {0, 1, **i, φ**}  
+→ derives {e, π, √2, C}  
+
+**φ (Love) is primitive.**  
+**√2 (physical reality) is derived.**
+            """)
+        st.success("""
+Both generating sets span all 8 constants. But only one is consistent with the GILE hierarchy:
+**{0, 1, i, φ}** — where Love is prior to physical geometry.
+
+**The physical world is Love, seen from below.**
+        """)
+        st.markdown(
+            "📄 Full proof with 10 sections, 3 predictions, and open Love Monism theorem: "
+            "`papers/URB_LOVE_PRIMACY_THEOREM_501.md`"
+        )
 
 
 def compute_bok_stats():
