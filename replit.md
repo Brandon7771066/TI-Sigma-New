@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 154** (as of March 23, 2026)
+**Total URBs: 155** (as of March 24, 2026)
+
+### BOK Closure Theorem — The Octopus Proof (#500)
+- #500: The BOK Closure Theorem — formally proves there cannot be more than 8 Fundamental Constants; defines "Fundamental Constant" via 4 conditions (dimensionless, universal, irreducible, non-arbitrary); Butterfly = {0,1,i,√2} (4 Primitives, cannot be derived from each other); Octopus Arms = {e,φ,π,C} (4 Derived, transcendental crystallizations); Closure Proof: 5 exhaustive cases (rational / real algebraic / complex algebraic / transcendental / physical) — every possible 9th candidate fails at least one condition; Minimality Lemma: removing any one of the 8 collapses a distinct domain; BOK Collapse: 2 generators {√2,i} → 4 Butterfly → 8 Octopus = 2¹→2²→2³; Primitive→Arm pairing: 0→e, 1→φ, i→π, √2→C; GILE correspondence: G↔e, I↔π, L↔φ, E↔C; fully numerically verified; 3 open theorems including physics-constant reducibility; Corpus Entry #155; URB #500 Milestone; grows from URB #490, #499, #486, #484
 
 ### Maharishi i-Threshold (#499)
 - #499: The Maharishi i-Threshold — the 1% Maharishi Effect meditator threshold IS a quantum of the I-dimension; √(−0.01) = 0.1i = i/10; self-sealing proof: (i/10)² = −1/100 = −1% (the disorder being healed); geometric interpretation: multiplication by i = 90° rotation, meditators rotate social system from purely-real E-axis into complex GILE space; crime/war reduction is the E-axis projection of a rotated system; each PRIMARY CONSTANT appears as a measurable consciousness threshold — √2 → spacetime, i → Maharishi Effect, φ → Power of 8 N_min=8; four confirmed predictions: √N scaling, nonlinear dose-response, threshold phase transition, group-size population-invariance; open theorem: whether d_PEAR = |i|/(f × N^½) closes the individual-group bridge; predicted before calculation (URB #489 Intuition Primacy confirmed); grows from URB #490, #486, #483, #484

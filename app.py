@@ -113,7 +113,7 @@ st.markdown("---")
 # ====================================================
 
 # Create tabs
-tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather, tab_lost_item, tab_manifestation, tab_manifest_science, tab_intention_val, tab_antifragile_god = st.tabs([
+tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather, tab_lost_item, tab_manifestation, tab_manifest_science, tab_bok, tab_intention_val, tab_antifragile_god = st.tabs([
     "📱 Mobile Hub",
     "🎮 EEG Pong",
     "🧠💓 Brain Proof",
@@ -183,6 +183,7 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, t
     "🔍 Lost Item Finder",
     "⚡ Manifestation Machine",
     "🔬 Manifestation Science",
+    "🐙 BOK Framework",
     "🔬 Intention Validation",
     "⚡ Antifragile God",
 ])
@@ -1146,6 +1147,10 @@ with tab_manifestation:
 with tab_manifest_science:
     from manifestation_science import show_manifestation_science
     show_manifestation_science()
+
+with tab_bok:
+    from bok_framework import show_bok_framework
+    show_bok_framework()
 
 with tab_intention_val:
     from intention_validation_system import show_intention_validation
