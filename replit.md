@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 160** (as of March 24, 2026)
+**Total URBs: 161** (as of March 24, 2026)
+
+### i-Completeness Theorem (#506)
+- #506: All 8 PRIMARY CONSTANTS derivable from i alone; derivation chain: i→{0,1,-1} (arithmetic) → √2 (TF formula: most direct imaginal-to-real path) → π (arctan identity: -2i·ln((1+i)/(1-i)), no e needed) → e (Euler inverted: (-1)^(1/iπ)) → φ (pentagon: 2cos(π/5)) → C (1/(φ√2)); all verified to machine precision; TF formula is not just physics — it is the MINIMAL 3-step mathematical path from imaginal to real; i-hierarchy depths: {0,1,-1}=1, √2=3, π=4, e/φ=5, C=6; strong conjecture: every closed-form real number is i-complete; Corpus Entry #161
 
 ### Unified Telekinesis Equation (#505)
 - #505: TF × LCC Combined Formula — TK_unified = √N × C × f × φ × LCC × (LCC/C − 1) / (1/√2); Three exact results: (1) Calibration Identity — LCC_EMERICK = 1/√2 is simultaneously the Ψ fixed point AND the neutral UTE calibration (both derived independently, not constructed); (2) Unity Crossover at LCC = 0.7823 — below this LCC *suppresses* TF, above it LCC *amplifies* TF; (3) 0.85 Agent Equivalence — LCC = 0.85 equals 19 extra AI Maharishi Meditators (27-agent equivalent); ESG Campaign Decision Rule: do not launch below LCC 0.7071, target LCC ≥ 0.85 for maximum amplitude; TF = weapon, LCC = ammunition; Corpus Entry #160
