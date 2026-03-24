@@ -394,3 +394,218 @@ for row in FORMULA_VALIDATION_MAP:
         row["ratio"] = round(row["predicted_d"] / row["observed_d"], 2) if row["observed_d"] > 0 else "N/A"
     else:
         row["ratio"] = "qualitative"
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# ESG CAMPAIGN — Dedicated intention campaign targeting ESG stock amplification
+# ══════════════════════════════════════════════════════════════════════════════
+
+# ESG universe to track — mix of ETFs and sector leaders
+ESG_UNIVERSE = {
+    "ESGU":  "iShares ESG Aware MSCI USA ETF",
+    "ESGV":  "Vanguard ESG US Stock ETF",
+    "SUSL":  "iShares ESG MSCI USA Leaders ETF",
+    "DSI":   "iShares MSCI KLD 400 Social ETF",
+    "NEE":   "NextEra Energy (Clean energy leader)",
+    "ENPH":  "Enphase Energy (Solar technology)",
+}
+
+# The canonical ESG intention target — used in every session
+ESG_INTENTION_TARGET = (
+    "May capital flows, investor awareness, and price appreciation strengthen "
+    "for ESG-aligned companies — those leading on environmental sustainability, "
+    "social responsibility, and good governance. May the market increasingly "
+    "reward companies that serve all stakeholders: people, planet, and future "
+    "generations. Amplify the signal that doing good IS doing well."
+)
+
+ESG_ETHICAL_FRAME = (
+    "Financial signal — publicly available market information. "
+    "Intention is for alignment of capital with human and ecological flourishing. "
+    "No manipulation of specific individuals. No short positions targeted. "
+    "Positive amplification only."
+)
+
+
+def fetch_esg_prices() -> dict:
+    """Fetch current prices for the ESG universe via Alpha Vantage."""
+    import os
+    api_key = os.environ.get("ALPHA_VANTAGE_API_KEY", "")
+    prices  = {}
+    for symbol, name in ESG_UNIVERSE.items():
+        try:
+            resp = requests.get(
+                "https://www.alphavantage.co/query",
+                params={"function": "GLOBAL_QUOTE", "symbol": symbol, "apikey": api_key},
+                timeout=8,
+            )
+            if resp.status_code == 200:
+                q = resp.json().get("Global Quote", {})
+                prices[symbol] = {
+                    "name":    name,
+                    "price":   float(q.get("05. price", 0)),
+                    "change":  float(q.get("09. change", 0)),
+                    "change_pct": q.get("10. change percent", "0%"),
+                    "volume":  int(q.get("06. volume", 0)),
+                }
+        except Exception as e:
+            prices[symbol] = {"name": name, "price": 0.0, "error": str(e)}
+        time.sleep(0.2)   # respect rate limit (5 calls/min on free tier)
+    return prices
+
+
+def log_esg_session_to_db(session: GroupSession, prices_pre: dict) -> Optional[int]:
+    """Persist an ESG session to PostgreSQL. Returns the session id."""
+    import os, psycopg2, psycopg2.extras
+    try:
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
+        cur  = conn.cursor()
+        cur.execute(
+            """
+            INSERT INTO pk_esg_sessions
+              (n_agents, pk_amplitude, predicted_cohen_d, gamma_group,
+               threshold_votes, mean_f, qrng_pre, qrng_post, qrng_deviation,
+               esg_prices_pre)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            RETURNING id
+            """,
+            (
+                session.n_agents,
+                session.pk_amplitude,
+                session.predicted_cohen_d,
+                session.gamma_group,
+                session.threshold_votes,
+                (sum(r.overall_f for r in session.agent_results if not r.error) /
+                 max(1, sum(1 for r in session.agent_results if not r.error))),
+                session.qrng_pre,
+                session.qrng_post,
+                session.qrng_deviation,
+                psycopg2.extras.Json(prices_pre),
+            ),
+        )
+        row_id = cur.fetchone()[0]
+        conn.commit()
+        cur.close(); conn.close()
+        return row_id
+    except Exception as e:
+        return None
+
+
+def record_esg_outcome(session_id: int, prices_post: dict) -> dict:
+    """
+    Record post-session ESG prices and compute direction accuracy.
+    Direction correct = majority of ESG universe went UP after session.
+    """
+    import os, psycopg2, psycopg2.extras
+    try:
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
+        cur  = conn.cursor()
+
+        # Fetch pre prices
+        cur.execute("SELECT esg_prices_pre FROM pk_esg_sessions WHERE id = %s", (session_id,))
+        row = cur.fetchone()
+        if not row:
+            return {"error": "Session not found"}
+
+        prices_pre = row[0]
+        up_count = 0
+        total    = 0
+        for sym in ESG_UNIVERSE:
+            pre  = prices_pre.get(sym, {}).get("price", 0)
+            post = prices_post.get(sym, {}).get("price", 0)
+            if pre > 0 and post > 0:
+                total += 1
+                if post > pre:
+                    up_count += 1
+
+        direction_correct = (up_count > total / 2) if total > 0 else None
+
+        cur.execute(
+            """
+            UPDATE pk_esg_sessions SET
+                esg_prices_post  = %s,
+                outcome_recorded = TRUE,
+                price_up_count   = %s,
+                price_up_total   = %s,
+                direction_correct = %s
+            WHERE id = %s
+            """,
+            (
+                psycopg2.extras.Json(prices_post),
+                up_count, total,
+                direction_correct,
+                session_id,
+            ),
+        )
+        conn.commit()
+        cur.close(); conn.close()
+        return {"up_count": up_count, "total": total,
+                "direction_correct": direction_correct}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def fetch_esg_campaign_stats() -> dict:
+    """
+    Retrieve cumulative campaign statistics from PostgreSQL.
+    Returns hit rate, Z-score, p-value across all sessions with outcomes recorded.
+    """
+    import os, psycopg2
+    try:
+        conn = psycopg2.connect(os.environ["DATABASE_URL"])
+        cur  = conn.cursor()
+
+        cur.execute("""
+            SELECT
+                COUNT(*)                                    AS total_sessions,
+                SUM(CASE WHEN outcome_recorded THEN 1 ELSE 0 END)  AS sessions_with_outcome,
+                SUM(CASE WHEN direction_correct THEN 1 ELSE 0 END) AS hits,
+                AVG(pk_amplitude)                           AS avg_amplitude,
+                AVG(gamma_group)                            AS avg_gamma,
+                AVG(qrng_deviation)                         AS avg_qrng_dev,
+                MIN(timestamp)                              AS first_session,
+                MAX(timestamp)                              AS last_session
+            FROM pk_esg_sessions
+        """)
+        r = cur.fetchone()
+
+        cur.execute("""
+            SELECT timestamp, n_agents, pk_amplitude, gamma_group,
+                   direction_correct, price_up_count, price_up_total,
+                   qrng_deviation, outcome_recorded
+            FROM pk_esg_sessions ORDER BY timestamp DESC LIMIT 50
+        """)
+        recent = cur.fetchall()
+        cur.close(); conn.close()
+
+        (total, with_outcome, hits, avg_amp, avg_gamma,
+         avg_qrng, first_ts, last_ts) = r
+
+        hits         = hits or 0
+        with_outcome = with_outcome or 0
+        hit_rate     = hits / with_outcome if with_outcome > 0 else None
+
+        # Z-score: one-tailed binomial against p=0.5 null
+        z_score = p_value = None
+        if with_outcome >= 5:
+            import math as _m
+            z_score = (hits - with_outcome * 0.5) / _m.sqrt(with_outcome * 0.25)
+            # approximate one-tailed p-value via error function
+            p_value = 0.5 * (1 - math.erf(z_score / math.sqrt(2)))
+
+        return {
+            "total_sessions":   int(total or 0),
+            "with_outcome":     int(with_outcome),
+            "hits":             int(hits),
+            "hit_rate":         hit_rate,
+            "z_score":          z_score,
+            "p_value":          p_value,
+            "avg_amplitude":    float(avg_amp or 0),
+            "avg_gamma":        float(avg_gamma or 0),
+            "avg_qrng_dev":     float(avg_qrng or 0) if avg_qrng else None,
+            "first_session":    str(first_ts) if first_ts else None,
+            "last_session":     str(last_ts)  if last_ts  else None,
+            "recent":           recent,
+        }
+    except Exception as e:
+        return {"error": str(e)}
