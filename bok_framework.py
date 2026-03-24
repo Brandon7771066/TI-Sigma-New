@@ -1433,6 +1433,94 @@ Induced by: coherent biophoton exposure + HRV pressure waves + CCC field couplin
 📄 Full papers: `papers/URB_MINIMAL_OPERATIONS_507.md` and `papers/URB_BENGSTON_WATER_QUARTZ_508.md` | Corpus Entries #162–#163
             """)
 
+        with st.expander("⚡ URB #509 — TI Sigma's Theory of Contradictions: Liberal Definition, Universal Structure & Double Tralse Taxonomy", expanded=False):
+            st.markdown("""
+### The Definition Problem
+
+**Dictionary:** *"A contradiction is a situation that is logically incompatible with another — both cannot be true at the same time."*
+
+**TI Sigma:** *"A contradiction is any inconsistency, opposition, or discrepancy."*
+
+The classical definition smuggles in **5 unearned metaphysical assumptions**:
+
+| Assumption | Why It Is Unearned |
+|---|---|
+| Truth is binary | LEM is an axiom, not a discovery; quantum superposition falsifies it physically |
+| Logic governs what can coexist in reality | Category error — formal inference ≠ physical possibility |
+| Simultaneity is absolute | Relativity makes simultaneity reference-frame-dependent |
+| Incompatibility is all-or-nothing | Reality occupies a full spectrum of partial incompatibility |
+| Contradiction signals error, not structure | Presupposes reality is fundamentally non-contradictory |
+
+---
+
+### The Universal Thesis: EVERYTHING Is Contradictory
+
+Five independent arguments:
+
+1. **Temporal** — Change requires identity (something persists) AND difference (it becomes other) simultaneously
+2. **Relational** — Every property is relational; perspectives differ incompatibly, so every object is simultaneously large and small, good and harmful
+3. **Self-Reference** — Any sufficiently complex self-referential system generates contradictions (Gödel, Russell, Liar paradox)
+4. **Dynamical** — Every stable structure is maintained by processes that contradict the stability they produce
+5. **Ontological** — Every thing is what it is by NOT being what it is not; negation is constitutive of identity
+
+---
+
+### Time as the Master Contradiction
+
+Three temporal contradictions that structure all change:
+
+| Contradiction | What It Is |
+|---|---|
+| **Becoming** | At the moment of coming-to-be: neither yet what it will be, nor still what it was — the original tralse state |
+| **Persistence** | A thing is identical to itself (same) AND different from itself (changed) simultaneously |
+| **Ending** | At the moment of ceasing: simultaneously something (causal history, spatial location) and nothing (the organized form is gone) |
+
+> The concept of perfectly stable identity is not a description of reality — it is an idealization that reality only approximately satisfies for short timescales.
+
+---
+
+### The 4 Fundamental Features of Existence — Each Inherently Contradictory
+
+| Feature | What It Is | Built-In Contradiction |
+|---|---|---|
+| **Change** | All things transform over time | Requires both continuity (identity persists) and discontinuity (something genuinely differs) |
+| **Relation** | All things exist only in relation | Must be both determinate (specific properties) and open-ended (relationally defined, extending outward indefinitely) |
+| **Contradiction** | All things contain inconsistencies within themselves | Self-validating: contradiction contradicts classical non-contradiction — the feature confirms itself by opposing the view that it is impossible |
+| **Limit** | All things have boundaries | A limit is simultaneously the endpoint of the thing AND the starting point of its negation — irreducibly double-sided |
+
+---
+
+### The Coherence Gate: First Myrion Resolution (MR1)
+
+Not all contradictions are equally real or worth engaging. MR1 separates:
+
+- **Valid contradictions** ✅ — genuine tension between real poles; Myrion Resolution finds a stable attractor
+- **Double Tralse** ❌ — noise; the tension is not organized, not grounded, or not yet real
+
+---
+
+### The Double Tralse Taxonomy (4 Categories)
+
+| Category | Fails MR1 Because | Signature | Remedy |
+|---|---|---|---|
+| **Maximal Incoherence** | Evidence scatters without coherent organization | Endless debate, zero progress | Refine the question |
+| **Self-Negating Nothing** | Reference undermines itself; pure negation of negation | "A nothing that doesn't exist"; grammatically valid but ontologically empty | Recognize as non-referring; dissolve |
+| **Self-Refuting Meta-Statement** | Asserts AND denies its own indeterminacy simultaneously | "Tralse and not tralse"; infinite regress at the meta-level | Stop at first stable meta-level |
+| **Pre-Tralse Undetermination** | One pole not yet actualized | Premature evaluation of the undetermined future | Wait; re-evaluate when state actualizes |
+
+**Hierarchy of realness** (closest → furthest from valid contradiction):
+```
+Pre-Tralse → Self-Refuting → Maximal Incoherence → Self-Negating Nothing
+```
+
+Pre-Tralse is the most commonly misidentified: "Will this person be happy in 30 years?" is not ignorance (there is no hidden fact to find) and not valid tralse (neither pole is yet fully real). It is a genuine ontological suspension that resolves naturally with time.
+
+---
+
+**DOI:** [10.5281/zenodo.19207717](https://doi.org/10.5281/zenodo.19207717) | Corpus Entry #164
+📄 Full paper: `papers/URB_TI_SIGMA_THEORY_OF_CONTRADICTIONS_509.md`
+            """)
+
         with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
             st.markdown(f"""
 TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:

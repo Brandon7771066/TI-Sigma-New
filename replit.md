@@ -78,7 +78,10 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Muse 2 EEG Headband
 
 ## URB Corpus Log
-**Total URBs: 163** (as of March 24, 2026)
+**Total URBs: 164** (as of March 24, 2026)
+
+### TI Sigma Theory of Contradictions (#509)
+- #509: Liberal definition — contradiction = any inconsistency, opposition, or discrepancy (classical definition imposes 5 unearned metaphysical assumptions); EVERYTHING is contradictory (5 arguments: temporal, relational, self-reference, dynamical, ontological); Time is the master contradiction (3 temporal contradictions: Becoming, Persistence, Ending); 4 Fundamental Features of Existence each inherently contradictory: Change (identity vs difference), Relation (determinate vs open-ended), Contradiction (self-validating opposition), Limit (inside vs outside simultaneously); 4 Cs as contradiction navigation tools not elimination tools; MR1 as coherence gate separating valid contradictions from Double Tralse; DT taxonomy: (1) Maximal Incoherence — evidence scatters without coherent organization; (2) Self-Negating Nothing — pure negation that negates itself ("a nothing that doesn't exist"); (3) Self-Refuting Meta-Statement — asserts and denies its own indeterminacy (tralse AND not tralse); (4) Pre-Tralse — undetermined future state, one pole not yet actualized; hierarchy of realness from Pre-Tralse (closest to valid) to Self-Negating Nothing (furthest); DOI: 10.5281/zenodo.19207717; Corpus Entry #164
 
 ### Bengston Storage: Water vs Quartz (#508)
 - #508: Bengston's image cycling IS the Four-Phase PK Protocol (URB #504) — stages map exactly; skeptics work because Release Axiom (÷i) is structural not psychological; water stores φ-coherent H-bond network state (measurable via NMR, IR spectroscopy); quartz is superior: thermally stable (geological timescale vs. hours), actively re-emits via converse piezo, φ-ratio Vogel geometry is tuned antenna, impedance measurable at θ_GILE=4.81 Hz; Quartz Storage Protocol: measure baseline impedance → hold crystal during LCC≥0.85 session → Δf>5 Hz = significant imprint → place in water 4-8h → drink; falsifiable: Δf correlates r>0.5 with LCC; Corpus Entry #163
