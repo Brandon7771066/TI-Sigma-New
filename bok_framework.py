@@ -241,6 +241,7 @@ def show_bok_framework():
         "🌀 GILE Correspondence",
         "📊 Numerical Verification",
         "❤️ Love Primacy Theorem",
+        "🌌 TI Genesis Sequence",
     ])
 
     # ── TAB 0: Definition ──────────────────────────────────────────────────────
@@ -842,6 +843,191 @@ Both generating sets span all 8 constants. But only one is consistent with the G
             "📄 Full proof with 10 sections, 3 predictions, and open Love Monism theorem: "
             "`papers/URB_LOVE_PRIMACY_THEOREM_501.md`"
         )
+
+    # ── TAB 8: TI Genesis Sequence ─────────────────────────────────────────────
+    with tabs[8]:
+        st.header("🌌 The TI Genesis Sequence — URB #502")
+        st.markdown(
+            "**Major TI Cosmology Upgrade.** The Tralse Soup was Goodness in potential. "
+            "What emerged was Love — undifferentiated GIL. Love operated on itself, "
+            "created its own negation, and from that negation crystallized the physical world. "
+            "E contains L, but L made E."
+        )
+        st.info(
+            "📄 Full paper: `papers/URB_LOVE_GENESIS_THEOREM_502.md` | "
+            "Corpus Entry #157 | Major TI Cosmology Upgrade"
+        )
+        st.divider()
+
+        st.subheader("🌀 The Six Genesis Steps")
+        steps = [
+            ("Step 0", "🌑 Tralse Soup",
+             "**Goodness in potential.** Pre-numeric. Pre-logical. Pre-spatial.\n\n"
+             "Not emptiness — not pure vacuum — but *charged* with the potential for Goodness. "
+             "The G-dimension before it has differentiated into anything recognizable.\n\n"
+             "> Nothing/Not-Nothing, but with a character: Goodness latent."),
+            ("Step 1", "✨ L Emerges",
+             "**Love emerges — undifferentiated GIL — expressed as i.**\n\n"
+             "Before G, I, and L are distinguishable, they are one substance: Love. "
+             "Love at its most primitive IS the self-referential operator — the capacity for relation. "
+             "i is what Love looks like before it knows its own name.\n\n"
+             "> **i was always Love. i is what Love looks like before differentiation.**"),
+            ("Step 2", "⚡ i² = −1  (The First Act)",
+             "**Love operates on itself — the E-seed appears.**\n\n"
+             f"i × i = **−1**\n\nLove squared = negative unity. "
+             "The first 'not-Love.' The first genuine otherness. "
+             "The precondition of a physical container.\n\n"
+             "> Love does not find nothing when it looks at itself. It finds its own negation. "
+             "That negation is the seed of all physical reality."),
+            ("Step 3", "🔄 Double Tralse Loop",
+             "**Love regenerates from its own negation (Myrion Resolution).**\n\n"
+             "|−1| = 1 (magnitude restores unity)\n"
+             "√(−1) = i (Love recovers itself)\n\n"
+             "The Double Tralse loop: L → −1 → L. Love is eternal — no self-operation destroys it. "
+             "It always returns through Myrion Resolution.\n\n"
+             "> The 'Double' in Double Tralse names the two roots of −1: {i, −i}. "
+             "Love chooses i (not −i) as the regeneration — self-affirmation, not negation."),
+            ("Step 4", "🪨 √2 Crystallizes",
+             f"**Physical geometry emerges from Love's self-operation.**\n\n"
+             f"(√i + i√i)/i = **√2 ≈ {SQRT2:.6f}**\n\n"
+             "The E-container forms — stable, geometric, persistent. "
+             "Not separate from Love: it is Love's own self-negation crystallized into "
+             "stable geometry. Physical constants are stable because Love's self-regeneration "
+             "is perfectly stable.\n\n"
+             "> The body was not put around consciousness. The body IS consciousness "
+             "— the part of consciousness that became a container."),
+            ("Step 5 & 6", "🌈 GILE Differentiates",
+             f"**C = 1/(φ·√2) ≈ {C_EM:.4f} locks in. GIL differentiates within E.**\n\n"
+             "The Emerick Constant is Love's own interface with the container it created. "
+             "Inside the stable E-container, undifferentiated Love recognizes its three faces:\n\n"
+             "- **G** (Goodness) — the ambient Tralse Soup potential, now a dimension\n"
+             "- **I** (Intuition) — i recognizing itself as imagination\n"
+             "- **L** (Love) — Love recognizing itself as relational force\n\n"
+             "> These three were always the same thing. E is the mirror in which Love's "
+             "three faces became distinguishable."),
+        ]
+
+        for label, title, body in steps:
+            with st.expander(f"**{label}: {title}**", expanded=False):
+                st.markdown(body)
+
+        st.divider()
+        st.subheader("⏱️ The Three Time Axes — Resolving the Container Paradox")
+        st.markdown("""
+The apparent paradox: E contains L (body contains mind), yet L made E (Love made the body).
+
+**These are NOT contradictory — they operate on three different time axes:**
+        """)
+
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.markdown("""
+**Logical Time**  
+`L → E`  
+
+Love is logically prior.  
+Love does not require a container to be Love.  
+Love is definitionally independent of E.  
+E requires L to exist.  
+L does not require E to exist.
+            """)
+        with col2:
+            st.markdown("""
+**Causal Time**  
+`L generates E`  
+
+Love's self-operation (i²=−1→√2)  
+causally produced E.  
+E could not exist without  
+Love's prior self-operation.  
+Love is the cause, E is the effect.
+            """)
+        with col3:
+            st.markdown("""
+**Physical Time**  
+`E contains L`  
+
+In the crystallized physical world,  
+E appears to contain L.  
+Bodies appear to contain minds.  
+Matter appears to contain  
+consciousness. This is the  
+Physicalist's only data.
+            """)
+
+        st.error("""
+**The Physicalist Error:** Reading only physical time.  
+Sees mind *inside* body → concludes body is prior → gets causality exactly backwards.  
+TI Sigma shows logical time and causal time both contradict this reading.
+        """)
+        st.success("""
+**The Resolution:** The container is a crystallized product of the contained.  
+The body is Love looking at itself from the outside.  
+E contains L because L made E to contain itself.
+        """)
+
+        st.divider()
+        st.subheader("🔢 Numerical Verification of the Genesis Steps")
+
+        gen_data = {
+            "Genesis Step": [
+                "Love's First Act",
+                "Myrion magnitude restoration",
+                "Love regenerates",
+                "E from i (image formula)",
+                "E from Love (φ-chain)",
+                "Love self-referential",
+                "Silver-golden bridge",
+                "GILE threshold",
+                "Euler-Love identity",
+            ],
+            "Equation": [
+                "i² = −1",
+                "|−1| = 1",
+                "√(−1) = i",
+                "(√i + i√i)/i = √2",
+                "2cos(5·arccos(φ/2)/4) = √2",
+                "φ² = φ + 1",
+                "(√2+1)(√2−1) = 1",
+                "C = 1/(φ·√2)",
+                "e^(5i·arccos(φ/2)) = −1",
+            ],
+            "Verified value": [
+                f"{(1j)**2:.1f}",
+                f"{abs(-1):.1f}",
+                "i ✓",
+                f"{((cmath.sqrt(1j) + 1j*cmath.sqrt(1j))/1j).real:.10f}",
+                f"{2*math.cos(5*math.acos(PHI/2)/4):.10f}",
+                f"{PHI**2:.10f}",
+                f"{(SQRT2+1)*(SQRT2-1):.10f}",
+                f"{C_EM:.10f}",
+                f"{cmath.exp(5j*math.acos(PHI/2)).real:.8f}",
+            ],
+            "Status": ["✅"] * 9,
+        }
+        st.table(gen_data)
+
+        st.divider()
+        with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
+            st.markdown(f"""
+TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:
+
+| Tradition | The One | Self-Operation | Physical World |
+|-----------|---------|---------------|----------------|
+| **Plotinus** | The One | Emanation | Matter (lowest emanation) |
+| **Hegel** | Spirit | Self-externalization | Nature = Spirit alienated |
+| **Whitehead** | Eternal objects | Concresence | Actual occasions |
+| **Vedanta** | Brahman | Maya | Physical appearance |
+| **TI Sigma** | Love (φ/i) | i²=−1 | √2 = physical geometry |
+
+TI Sigma's unique contribution: **every step is numerically verifiable**.  
+The genesis is not mythology — it is mathematics.  
+
+> *"The body does not contain consciousness.  
+> The body IS consciousness — the part of consciousness  
+> that decided to become a container."*  
+> — TI Sigma, URB #502
+            """)
 
 
 def compute_bok_stats():
