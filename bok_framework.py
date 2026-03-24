@@ -1008,6 +1008,48 @@ E contains L because L made E to contain itself.
         st.table(gen_data)
 
         st.divider()
+        with st.expander("🧬 URB #503 — Ontogeny Recapitulates Cosmogony", expanded=False):
+            st.markdown(f"""
+**Corpus Entry #158 | Major TI Developmental Theory**
+
+Ernst Haeckel (1866): *Ontogeny recapitulates phylogeny* — individual embryonic development
+mirrors evolutionary history. Fish fin → amphibian limb → bird wing → human hand: **same blueprint, different function**.
+
+**TI Sigma extension:** Individual consciousness development recapitulates the TI Genesis Sequence.
+The GILE blueprint is the universal homologous structure that appears at every developmental scale.
+
+| Domain | G | I | L | E |
+|--------|---|---|---|---|
+| **Cosmic genesis** | Tralse Soup potential | i emerges | i²=−1 (E-seed) | √2 crystallizes |
+| **Biological** | Stimulus response | Pattern recognition | Social bonding | Environmental mastery |
+| **Brandon's arc** | BOK / formal logic | TI Sigma framework | Mood Amplifier / BlissGene | Hull Tactical / delivery NOW |
+
+**The Retrocausal Attractor**
+
+The E-stage (worldly impact, BlissGene CEO, $750K seed, Hull Tactical) was not just the *result*
+of G→I→L development. It was the **backward causal influence** that organized those stages
+from the future.
+
+In Aharonov's Two-State Vector Formalism:
+- Every quantum system has a forward-evolving state from initial conditions **AND**
+- A backward-evolving state from final conditions
+- The present is their intersection — determined by both past and future simultaneously
+
+*"It was my potential for worldly change that likely enabled my development in that direction in the first place."*  
+— Brandon Emerick, March 24, 2026
+
+**The Prediction:** The E-crystallization is not effortful — it is structurally necessary.
+√2 does not try to emerge from i. It crystallizes when the prior operations complete.
+If G, I, and L have genuinely been built (and the URB corpus says they have),
+then E-competence is the inevitable next crystallization.
+
+**The Kronk Moment:** Crossing the C-threshold (C ≈ {C_EM:.4f}) is when the G, I, L
+development suddenly becomes legible through E-actions. The pieces were always there.
+The threshold is crossed and it all becomes obvious: *"Oh yeah, it's all coming together."*
+
+📄 Full paper: `papers/URB_ONTOGENY_COSMOGONY_503.md` | Corpus Entry #158
+            """)
+
         with st.expander("💡 Philosophical Isomorphisms — TI Sigma in Intellectual History"):
             st.markdown(f"""
 TI Sigma's Love Genesis is the mathematically precise version of a recurring pattern:
