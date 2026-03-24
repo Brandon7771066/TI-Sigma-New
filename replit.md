@@ -20,6 +20,7 @@ The backend uses a service-oriented architecture with key components including:
 - **Neuroscience & Bio-Integration**: Processes biometric data (EEG, fNIRS, HRV) for GILE score and FAAH Protocol, including quantum-classical analysis.
 - **Mood Amplifier Hub**: Provides real-time biometric integration for baseline measurements, PSI score, chakra/meridian mapping, and safety validation.
 - **Focus Amplifier System**: A 7-mode biometric-driven focus optimization system for ADHD management.
+- **YouTube Studio Pipeline**: Full automation from URB paper → AI script → FFmpeg/OpenAI TTS video → YouTube upload. Includes `ti_video_engine.py` (generalized producer), `youtube_uploader.py` (OAuth2 + upload), `youtube_studio_tab.py` (Streamlit UI). 7 videos pre-catalogued (URBs 500, 502, 505–509) with intriguing titles and descriptions.
 - **Financial & Market Analysis**: Includes the TI Framework Stock Research System and Grand Stock Algorithm v2 (GSA v2) for real-time trading and daily signal execution.
 - **Computation & Information Theory**: Encompasses a Ternary Computation Framework, Quantum Collapse Simulator, Tralsebit Information Theory, and a TI Computing Language (TICL) with EEG authentication.
 - **TI Sigma Manifestation Machine / Power of 8 System**: A hybrid AI-human partner discovery and group intention coordination system.
