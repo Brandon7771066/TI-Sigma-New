@@ -84,3 +84,5 @@ externalPort = 3001
 [userenv]
 
 [userenv.shared]
+client_secret = "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"
+client_id = "584975588599-ffdf519vi5hllcu45cov9h8dob6fn69r.apps.googleusercontent.com"

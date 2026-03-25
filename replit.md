@@ -95,7 +95,7 @@ Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize comp
 
 ## URB Corpus Log
 **Total URBs: 164** (as of March 24, 2026)
-**Zenodo: 177 papers live** with permanent DOIs (Apache-2.0 license)
+**Zenodo: 178 papers live** with permanent DOIs (Apache-2.0 license)
 
 ### TI Sigma Theory of Contradictions (#509)
 - #509: Liberal definition — contradiction = any inconsistency, opposition, or discrepancy (classical definition imposes 5 unearned metaphysical assumptions); EVERYTHING is contradictory (5 arguments: temporal, relational, self-reference, dynamical, ontological); Time is the master contradiction (3 temporal contradictions: Becoming, Persistence, Ending); 4 Fundamental Features of Existence each inherently contradictory: Change (identity vs difference), Relation (determinate vs open-ended), Contradiction (self-validating opposition), Limit (inside vs outside simultaneously); 4 Cs as contradiction navigation tools not elimination tools; MR1 as coherence gate separating valid contradictions from Double Tralse; DT taxonomy: (1) Maximal Incoherence — evidence scatters without coherent organization; (2) Self-Negating Nothing — pure negation that negates itself ("a nothing that doesn't exist"); (3) Self-Refuting Meta-Statement — asserts and denies its own indeterminacy (tralse AND not tralse); (4) Pre-Tralse — undetermined future state, one pole not yet actualized; hierarchy of realness from Pre-Tralse (closest to valid) to Self-Negating Nothing (furthest); DOI: 10.5281/zenodo.19207717; Corpus Entry #164
