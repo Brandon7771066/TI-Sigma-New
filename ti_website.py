@@ -15,7 +15,7 @@ st.set_page_config(
     page_title="TI Framework | Consciousness Engineering",
     page_icon="✨",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded"
 )
 
 st.markdown("""
@@ -84,9 +84,17 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+with st.sidebar:
+    st.markdown("### 🚀 Navigate")
+    st.metric("URBs", "171", "Zenodo: 185")
+
 page = st.sidebar.radio("Navigate", [
     "Home",
     "📥 Downloads",
+    "📺 YouTube Studio",
+    "🧩 ARC-AGI Solver",
+    "📚 Zenodo Corpus",
+    "🔮 Manifestation Machine",
     "🧠 Elite Brain Protocol",
     "🧠💓 Brain Proof",
     "🔗 Brain Connection NOW",
@@ -3715,6 +3723,39 @@ elif page == "About":
         <p><strong>— Brandon Emerick, TI Framework</strong></p>
     </div>
     """, unsafe_allow_html=True)
+
+elif page == "📺 YouTube Studio":
+    st.title("📺 YouTube Studio")
+    try:
+        from youtube_studio_tab import render_youtube_studio_tab
+        render_youtube_studio_tab()
+    except Exception as e:
+        st.error(f"YouTube Studio error: {e}")
+        st.info("Make sure YOUTUBE_CLIENT_ID and YOUTUBE_CLIENT_SECRET are set in Secrets.")
+
+elif page == "🧩 ARC-AGI Solver":
+    st.title("🧩 ARC-AGI TI Sigma Solver")
+    try:
+        from arc_ti_solver.arc_tab import show_arc_tab
+        show_arc_tab()
+    except Exception as e:
+        st.error(f"ARC Solver error: {e}")
+
+elif page == "📚 Zenodo Corpus":
+    st.title("📚 Zenodo Corpus Manager")
+    try:
+        from zenodo_tab import show_zenodo_manager
+        show_zenodo_manager()
+    except Exception as e:
+        st.error(f"Zenodo error: {e}")
+
+elif page == "🔮 Manifestation Machine":
+    st.title("🔮 TI Sigma Manifestation Machine")
+    try:
+        from power_of_8_system import render_power_of_8_tab
+        render_power_of_8_tab()
+    except Exception as e:
+        st.error(f"Manifestation Machine error: {e}")
 
 st.markdown("---")
 st.markdown("""
