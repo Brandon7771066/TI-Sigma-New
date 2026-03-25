@@ -112,6 +112,97 @@ with col3:
 st.markdown("---")
 # ====================================================
 
+# ===== SIDEBAR QUICK NAVIGATOR =====
+with st.sidebar:
+    st.markdown("## 🚀 Quick Navigate")
+    st.caption("Jump directly to any section")
+
+    QUICK_NAV_OPTIONS = {
+        "— Browse All Tabs —": None,
+        "📺 YouTube Studio": "youtube",
+        "🧩 ARC-AGI Solver": "arc",
+        "📚 Zenodo Corpus": "zenodo",
+        "🔮 Manifestation Machine": "manifestation",
+        "📐 BOK Explorer": "bok",
+        "📈 TI Stock Research": "ti_stock",
+        "🎯 Focus Amplifier": "focus_amp",
+        "🧠 Mood Amplifier": "mood_amp",
+        "🌌 Master Hub": "tab0",
+        "📄 PDF Library": "tab_pdf",
+        "📚 TI Books": "books",
+        "🔬 Baseline Collection": "baseline",
+        "🎮 EEG Pong": "pong",
+        "⚛️ TI Quantum": "quantum",
+        "💊 Pharmacological Sim": "tab9b",
+        "🌐 Intention Validation": "intention_val",
+        "🤖 GSA Stock Algorithm": "stock_status",
+        "🧬 Genius DNA": "genome",
+        "🎵 Music": "music",
+    }
+
+    nav_selection = st.selectbox(
+        "Go to:",
+        options=list(QUICK_NAV_OPTIONS.keys()),
+        key="quick_nav_selection",
+        label_visibility="collapsed"
+    )
+
+    if nav_selection != "— Browse All Tabs —":
+        st.info(f"Section loaded below ↓\nScroll down past the tab bar to see it.")
+
+    st.markdown("---")
+    st.markdown("### 📊 Corpus Stats")
+    st.metric("URBs Written", "171")
+    st.metric("Zenodo Papers", "185")
+    st.markdown("---")
+    st.markdown("### 🔗 Key Links")
+    st.markdown("[Zenodo Corpus](https://zenodo.org/communities/ti-sigma)")
+    st.markdown("[Kaggle ARC-AGI](https://www.kaggle.com/competitions/arc-prize-2024)")
+
+# Store quick nav in session state
+_quick_nav_dest = QUICK_NAV_OPTIONS.get(nav_selection)
+
+# If a quick nav destination is selected, render it prominently NOW (before the tabs)
+if _quick_nav_dest == "youtube":
+    st.markdown("## 📺 YouTube Studio")
+    st.caption("Navigated here via Quick Access — scroll up to use the sidebar to switch sections")
+    from youtube_studio_tab import render_youtube_studio_tab
+    render_youtube_studio_tab()
+    st.markdown("---")
+elif _quick_nav_dest == "arc":
+    st.markdown("## 🧩 ARC-AGI TI Sigma Solver")
+    from arc_ti_solver.arc_tab import show_arc_tab
+    show_arc_tab()
+    st.markdown("---")
+elif _quick_nav_dest == "zenodo":
+    st.markdown("## 📚 Zenodo Corpus Manager")
+    from zenodo_tab import show_zenodo_manager
+    show_zenodo_manager()
+    st.markdown("---")
+elif _quick_nav_dest == "manifestation":
+    st.markdown("## 🔮 TI Sigma Manifestation Machine")
+    from power_of_8_system import render_power_of_8_tab
+    render_power_of_8_tab()
+    st.markdown("---")
+elif _quick_nav_dest == "bok":
+    st.markdown("## 📐 BOK Explorer")
+    try:
+        from bok_explorer import render_bok_tab
+        render_bok_tab()
+    except Exception as e:
+        st.info(f"BOK Explorer: open the BOK tab in the tab bar below. ({e})")
+    st.markdown("---")
+elif _quick_nav_dest == "ti_stock":
+    st.markdown("## 📈 TI Stock Research System")
+    try:
+        from ti_stock_research import render_ti_stock_tab
+        render_ti_stock_tab()
+    except Exception:
+        st.info("Open the TI Stock tab in the tab bar below.")
+    st.markdown("---")
+elif _quick_nav_dest is not None:
+    st.info(f"**{nav_selection}** — use the tab bar below to navigate to this section (quick render not available for this tab).")
+
 # Create tabs
 tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather, tab_lost_item, tab_manifestation, tab_manifest_science, tab_bok, tab_intention_val, tab_antifragile_god, tab_zenodo, tab_youtube, tab_arc = st.tabs([
     "📱 Mobile Hub",
