@@ -213,6 +213,14 @@ def generate_signals(market_data, gsa):
             if len(closes) < 61:
                 continue
 
+            # Bug fix: skip tickers with NaN price (e.g. recently-sold, data unavailable)
+            if np.isnan(closes[-1]) or np.all(np.isnan(closes)):
+                print(f"    Skipping {ticker}: NaN price data (recently sold or feed unavailable)")
+                continue
+
+            # Replace any internal NaN gaps with forward-fill to avoid NaN return propagation
+            closes = pd.Series(closes, dtype=float).ffill().bfill().to_numpy(dtype=float)
+
             returns = np.diff(closes) / closes[:-1] * 100
 
             xi      = gsa.compute_xi_metrics(returns[-60:], closes[-60:])
@@ -536,6 +544,7 @@ def run_daily_cycle(dry_run=False, status_only=False):
     sell_orders = [o for o in orders if o["side"] == "sell"]
 
     current_tickers = {p["symbol"] for p in positions}
+    position_lookup = {p["symbol"]: p for p in positions}  # for accurate sell logging
     sell_orders = [o for o in sell_orders if o["ticker"] in current_tickers]
 
     print(f"\n  Buy orders:  {len(buy_orders)}")
@@ -564,9 +573,13 @@ def run_daily_cycle(dry_run=False, status_only=False):
     for o in sell_orders:
         try:
             alpaca.close_position(o["ticker"])
-            print(f"  CLOSED {o['ticker']}")
+            pos   = position_lookup.get(o["ticker"], {})
+            qty   = float(pos.get("qty", 0))
+            price = float(pos.get("current_price", o["price"]) or o["price"])
+            value = qty * price
+            print(f"  CLOSED {o['ticker']} ({qty:.4f} shares @ ${price:.2f})")
             if logger:
-                logger.log_trade(o["ticker"], "sell", 0, o["price"], 0, "", "closed")
+                logger.log_trade(o["ticker"], "sell", qty, price, value, "", "closed")
             n_trades += 1
         except Exception as e:
             print(f"  CLOSE ERROR {o['ticker']}: {e}")

@@ -456,7 +456,9 @@ class GSACore:
         Returns: (regime, confidence, constraint_rate)
         """
         self.constraint_history.append(float(constraint))
-        self.pd_history.append(float(pd))
+        # Bug fix: never let NaN into pd_history — one NaN poisons np.std() for all subsequent tickers
+        if not np.isnan(pd) and not np.isinf(pd):
+            self.pd_history.append(float(pd))
         self.constraint_history = self.constraint_history[-self.lookback_long:]
         self.pd_history         = self.pd_history[-self.lookback_long:]
 
@@ -542,8 +544,10 @@ class GSACore:
         interface_penalty = 0.20 if current_regime in interface_modes else 0.0
 
         # GILE stability: low variance in pd history = stable signal
-        if len(self.pd_history) >= 10:
-            pd_std = float(np.std(self.pd_history[-10:]))
+        # Bug fix: filter any stray NaN before calling np.std()
+        clean_pd = [x for x in self.pd_history[-10:] if not np.isnan(x) and not np.isinf(x)]
+        if len(clean_pd) >= 5:
+            pd_std = float(np.std(clean_pd))
             gile_stability = float(np.clip(1.0 - pd_std / 2.0, 0.0, 1.0))
         else:
             gile_stability = 0.50
