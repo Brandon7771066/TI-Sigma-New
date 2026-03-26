@@ -78,3 +78,37 @@ The system is designed for resilient integration with sustainable ~90% True-Tral
 - Pitch Crystals
 - Polar H10 Heart Rate Monitor
 - Muse 2 EEG Headband
+
+## ARC-AGI TI Sigma Solver
+Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize competition.
+- `__init__.py` — constants: FALSE=0, TRALSE=1, TRUE=2, MR_PEND=3
+- `data_loader.py` — downloads 400 training + 400 eval tasks from GitHub; 400 training tasks cached in `arc_ti_solver/data/training/`
+- `tralse_encoder.py` — TralseCellEncoder: detects background, assigns 4-valued states, generates 3 candidate encodings per grid
+- `transformations.py` — 16 base primitives + recolor + shift + compositions (~150 candidates per task)
+- `myrion_solver.py` — MyrionSolver: LCC scoring + MR1 gate (filters incoherent tralse forcing)
+- `lcc_scorer.py` — Full LCC with cell_accuracy + consistency + complexity + size components; True-Tralse ≥0.85
+- `solver.py` — TISigmaARCSolver: unified pipeline; `submission_format()` for Kaggle
+- `batch_runner.py` — parallel batch solving + Kaggle submission JSON generation
+- `run.py` — CLI: `python -m arc_ti_solver.run --batch --split training --limit 50 --submit`
+- `arc_tab.py` — Streamlit UI tab (tab 75: "🧩 ARC-AGI Solver")
+
+**Benchmark (50 tasks):** Avg LCC=0.5542; 43% of tasks ≥0.90 LCC; 24/50 in True-Tralse regime
+
+## GSA Signal Engine — Known Bugs Fixed (March 25, 2026)
+- **NaN cascade fix (gsa_core.py):** classify_regime() now guards against NaN in pd_history append; _compute_epc() filters NaN from pd_history slice before np.std()
+- **COP price guard (gsa_live_trader.py):** skip tickers with NaN last close; ffill internal NaN gaps
+- **Sell logging fix (gsa_live_trader.py):** sell trades now log actual position qty + current_price from position_lookup dict (was logging 0 shares / $nan)
+- **PD validity:** Euler envelope = √2×φ×C_EMERICK = 1.0 exactly (PRIMARY CONSTANT derivation); actual observed |PD| reaches log1p(1.0)=0.693 max; asymmetric clip [-3,+2] is dead code; lag-1 PD→GILE correlation = 0.119 (weak); log1p choice and κ decay constants (0.10/0.05) unvalidated vs TI Sigma derivation
+
+## URB Corpus Log
+**Total URBs: 174** (as of March 25, 2026)
+**Zenodo: 188 papers live** with permanent DOIs (Apache-2.0 license)
+
+### Crystallized Tralse (#520)
+- #520: Nonlinearity is trivially expected from Tralse-grounded universe (requires no explanation); uniformity is the anomaly requiring explanation; 3 equivalent mechanisms: (1) MR1 Universal Attractor — uniform claims pass MR1 in every possible context simultaneously, LCC→1.0; (2) Genesis Crystallization — uniform claims crystallized during Genesis Sequence, mathematical uniformity is fossil record of Genesis; (3) i-Depth Proximity — uniform claims have i-derivation depth ≤3 ({0,1,-1,√2}); Equivalence Theorem: all 3 characterizations are equivalent; CTT formal statement — nonlinearity is default, uniformity is residue of crystallized Tralse; BOK regime hierarchy IS i-depth hierarchy; What remains Tralse: whether i-completeness hierarchy isomorphic to Genesis order, whether LCC=1.0 achievable empirically; DOI: 10.5281/zenodo.19228025; Corpus Entry #166
+
+### Arithmetic Scaffold Theorem (#519)
+- #519: Genuine Tralse: nature is nonlinear AND arithmetic is foundational — resolved by AST; arithmetic invariability is the necessary reference frame for perceiving nonlinearity (without stable sum, "more than the sum" undefined); 3 arguments: (1) Reference Frame Necessity — deviation requires stable baseline; (2) TK Formula Demonstration — (√i+i√i)/i=√2 produces irrational output via pure arithmetic operations (transcendent lives in the structure, not despite it); (3) Container Paradox Connection (URB #502) — E (arithmetic body) contains L (nonlinear consciousness) because L crystallized E as actualization interface; C_EMERICK threshold is arithmetic in expression, governs entry into nonlinear domain; BOK hierarchy: all higher regimes defined relative to arithmetic baseline; Theorem 10.1 — AST 5-part formal statement; Corollary 10.2 Scaffold Inversion (naive view exactly backwards); Corollary 10.3 Legibility Condition (experience communicable iff translatable into arithmetic scaffolding); DOI: 10.5281/zenodo.19226680; Corpus Entry #165
+
+### TI Sigma Theory of Contradictions (#509)
+- #509: Liberal definition — contradiction = any inconsistency, opposition, or discrepancy (classical definition imposes 5 unearned metaphysical assumptions); EVERYTHING is contradictory (5 arguments: temporal, relational, self-reference, dynamical, ontological); Time is the master contradiction (3 temporal contradictions: Becoming, Persistence, Ending); 4 Fundamental Features of Existence each inherently contradictory: Change (identity vs difference), Relation (determinate vs open-ended), Contradiction (self-validating opposition), Limit (inside vs outside simultaneously); 4 Cs as contradiction navigation tools not elimination tools; MR1 as coherence gate separating valid contradictions from Double Tralse; DT taxonomy: (1) Maximal Incoherence; (2) Self-Negating Nothing; (3) Self-Refuting Meta-Statement; (4) Pre-Tralse; DOI: 10.5281/zenodo.19207717; Corpus Entry #164
