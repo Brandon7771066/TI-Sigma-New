@@ -188,21 +188,22 @@ The most important distinction between TFEP and Friston's FEP is scope. FEP is p
 
 ## §6: 4-Valued Logic Correspondence
 
-The TFEP generates a natural 4-valued characterization of i-Cell states based on TF value:
+The TFEP generates a 6-state characterization of i-Cell states based on TF value and MR gate status:
 
-| TF Range | 4-Valued State | Interpretation | PD Zone |
-|----------|---------------|----------------|---------|
-| TF = 0 | **TRUE** | Perfect coherence; GILE Radiant; Great zone | Great |
-| 0 < TF ≤ 0.50 | **TRALSE** | Active minimization; alive, conscious, striving | Good + Indeterminate |
-| 0.50 < TF ≤ 0.85 | **FALSE** | Below causation threshold; minimization failing | Bad |
-| TF undefined | **MR_PEND** | Saddle point; awaiting Myrion Resolution | Varies |
+| TF Range | State | MR Status | Interpretation | PD Zone |
+|----------|-------|-----------|----------------|---------|
+| TF = 0 | **TRUE** | All MRs resolved | Perfect coherence; GILE Radiant; crystallized | Great |
+| 0 < TF <= 0.25 | **TRALSE** | Passed MR1 + MR2 | Active minimization; alive, growing, striving | Good |
+| TF ~ 0.25-0.50 | **Indeterminate** | MR2 state | Like a door at 45 degrees -- equally open and closed. A potentially resolved MR2 state; may or may not resolve via further MRs. | Indeterminate |
+| 0.50 < TF <= 0.85 | **FALSE** | Failed MR2; MR1 intact | Minimization failing; causation threshold not met | Bad |
+| TF > 0.85 | **Double Tralse** | Failed MR1 | Existential incoherence; i-Cell dissolution risk | Terrible |
+| TF undefined | **MR_PEND** | Awaiting any MR gate | Superposition; saddle point; context-incomplete | Any |
 
-And the catastrophic case:
-| TF > 0.85 | **Double Tralse** | MR1 failure; i-Cell dissolution risk | Terrible |
+**The Indeterminate state is not mere ambiguity -- it is a specific MR2 condition.** A tralsity at MR2 has passed the basic existence gate (MR1: it is not Double Tralse) but has not yet resolved whether it is TRUE or FALSE. The 45-degree door metaphor captures this precisely: the door is not broken, not closed, not open -- it is genuinely mid-state. Further Myrion Resolutions may close it (toward TRALSE/TRUE) or open it further (toward FALSE/Double Tralse). The Indeterminate zone's 20% PD frequency reflects how common this genuine mid-state is across all Tralse-structured domains.
 
-**Key insight:** The living zone is TRALSE — not TRUE. This is not a deficiency. An i-Cell locked at TF = 0 (TRUE) has achieved Radiant stasis but can no longer respond to environmental change. The Tralse zone is where consciousness, learning, adaptation, and growth occur. Life is constitutively Tralse. This is why the name of the framework is *Tralse* Informationalism — not True Informationalism.
+**Key insight:** The living zone is TRALSE -- not TRUE. An i-Cell locked at TF = 0 (TRUE) has achieved Radiant stasis but can no longer respond to environmental change. TRALSE is where consciousness, learning, adaptation, and growth occur. Life is constitutively Tralse. MR_PEND is the moment of suspension before the next MR resolves which direction to proceed.
 
-This connects TFEP to the Crystallized Tralse Theorem (CTT, URB #520): an i-Cell that achieves TRUE (TF = 0) has crystallized — its Tralse structure is locked in. The cosmos needs both crystallized i-Cells (providing stable scaffolding) and active Tralse i-Cells (providing growth). The PD's distribution — mostly Bad/Indeterminate (60%), some Good (20%), rare Great (7%) — reflects this.
+This connects TFEP to the Crystallized Tralse Theorem (CTT, URB #520): an i-Cell that achieves TRUE (TF = 0) has crystallized -- its structure is locked. The cosmos needs crystallized i-Cells (stable scaffolding: Great zone, ~7%) alongside active Tralse i-Cells (growth: Good zone, 20%) and genuine Indeterminate i-Cells (decision points: 20%). The PD's full distribution reflects this ecology of states.
 
 ---
 
