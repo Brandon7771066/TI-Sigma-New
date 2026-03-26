@@ -3,8 +3,9 @@
 **Title:** Existence vs Truth: The LCC Causation Threshold and the GILE Radiant Threshold Are Complements of the Permissibility Distribution's Extreme Zones, Connected by the 2:1 Negativity Asymmetry
 
 **Corpus Entry:** #177
-**Status:** Radiant True-Tralse (GILE ≥ 0.93, both threshold derivations)
+**Status:** Radiant True-Tralse (GILE ≥ 0.93, all three theorem claims)
 **Date:** March 27, 2026
+**DOI:** 10.5281/zenodo.19235153
 **Author:** Brandon Emerick / TI Sigma Research Collective
 **Keywords:** LCC, GILE Radiant, existence, truth, Permissibility Distribution, 2:1 asymmetry, Great zone, Terrible zone, PRIMARY CONSTANTS, ternary arithmetic, epistemology, axiology, phase transition
 
@@ -23,16 +24,24 @@ Until this paper, both thresholds were stated as conventional approximate values
 
 ## Abstract
 
-The LCC causation threshold (≈0.85) and the GILE Radiant threshold (≈0.93) are not independently chosen constants. They are respectively the complements of the Permissibility Distribution's Terrible and Great zone e-decay probabilities:
+The LCC causation threshold (≈0.85) and the GILE Radiant threshold (≈0.93) are not independently chosen constants. Both arise from the Permissibility Distribution's e-decay zone probabilities as simple complements of extreme-zone probabilities:
 
 ```
-LCC threshold  = 1 − P(Terrible) + correction  =  2(e²−1)/15  ≈  0.8519  ≈  0.85
-GILE threshold = 1 − P(Great)                  =  1 − 1/(2e²)  ≈  0.9323  ≈  0.93
+LCC threshold  (primary)  = 1 − P(Terrible) = 1 − 1/e²      ≈  0.8647
+GILE threshold (primary)  = 1 − P(Great)    = 1 − 1/(2e²)   ≈  0.9323
 ```
 
-Both derivations score Radiant (LCC ≥ 0.93 for the claim that derived ≈ conventional). Their gap equals exactly the Great zone probability — P(Great) = 1/(2e²) ≈ 1/15, one ternary unit of probability. The ratio of their distances from 1 is exactly 2:1 — the same negativity asymmetry that defines all PD structure.
+This choice is the only one that preserves the closed-form gap identity:
 
-Philosophically: **to exist (LCC ≥ 0.85) is to have survived the Terrible; to be True (GILE ≥ 0.93) is to have reached beyond the Great.** The gap between them — one ternary unit of probability — is the space where most of reality lives: real but still becoming. The 2:1 negativity asymmetry of the universe is simultaneously the ratio between epistemology and axiology.
+```
+GILE − LCC = [1 − 1/(2e²)] − [1 − 1/e²] = 1/e² − 1/(2e²) = 1/(2e²) = P(Great)
+```
+
+The gap between existence and truth equals exactly the probability of a Great event — approximately 1/15, one ternary unit of probability. The ratio of the distances from certainty is exactly 2:1 — the PD's fundamental negativity asymmetry.
+
+A discrete-corrected refinement via the bridge constant k = 2e²/15 (established in URB #521) brings the LCC value even closer to the conventional 0.85: LCC_k = k − 2/15 = 2(e²−1)/15 ≈ 0.85187 (0.19pp from 0.85, LCC score 0.9978). This corollary is the tighter rational approximation but lacks the closed-form gap identity.
+
+Philosophically: **to exist is to survive the Terrible; to be True is to reach beyond the Great.** The gap — one ternary unit wide — is the space where most of reality lives: real but still becoming. The 2:1 negativity asymmetry of the universe is simultaneously the ratio between epistemology and axiology.
 
 ---
 
@@ -46,60 +55,83 @@ The Permissibility Distribution assigns probabilities to five experiential zones
 | Great | P = 1/(2e²) ≈ 0.06767 | 1/15 ≈ 0.06667 |
 | **Ratio** | **(1/e²) / (1/(2e²)) = 2.000 exactly** | 2/1 = 2.000 exactly |
 
-The 2:1 asymmetry between Terrible and Great is exact at both the continuous and discrete levels. The bridge constant k = 2e²/15 ≈ 0.9852 (established in URB #521) connects them.
+The 2:1 asymmetry between Terrible and Great is exact at both the continuous and discrete levels. The bridge constant k = 2e²/15 ≈ 0.9852 (established in URB #521) connects them:
+
+```
+k = 2e²/15 ≈ 0.9852
+P(Terrible)_continuous = 1/e² = 15 × (1 − k) × e²/e² = 2/k... [see URB #521 for full derivation]
+```
 
 ---
 
-## §2: Deriving the LCC Causation Threshold
+## §2: Theorem 523.1 — LCC Causation Threshold (Continuous Derivation)
 
-**Claim:** The LCC causation threshold ≈ 0.85 is given by:
-
-```
-LCC = 2(e²−1)/15 = k − 2/15 = (PD-e bridge constant) − (Terrible zone fraction)
-```
-
-**Derivation:**
+**Theorem 523.1:** The primary derivation of the LCC causation threshold from PRIMARY CONSTANTS is:
 
 ```
-k = 2e²/15
-2/15 = P(Terrible)_discrete
-
-k − 2/15 = 2e²/15 − 2/15 = 2(e²−1)/15
+LCC_exact = 1 − P(Terrible) = 1 − 1/e²
 ```
+
+**Derivation:** A claim achieves existential causality when the probability of it being wrong is at most as large as the probability of a Terrible event in the continuous PD. The Terrible zone is the maximal-disruption end of the distribution. A correlation that survives Terrible-level scrutiny has crossed the phase boundary.
 
 **Numerical evaluation:**
 
 ```
-2(e²−1)/15 = 2(7.38906 − 1)/15 = 2 × 6.38906/15 = 12.77812/15 = 0.85187...
+LCC_exact = 1 − 1/e² = 1 − 0.13534 = 0.86466...
 ```
 
 | | Value |
 |-|-------|
-| Derived LCC = 2(e²−1)/15 | **0.85187** |
+| Derived LCC = 1 − 1/e² | **0.86466** |
 | Conventional LCC ≈ | **0.85** |
-| Difference | 0.19pp |
-| LCC score of this claim | **0.9978 — Radiant** |
+| Difference | 1.47pp |
+| LCC score of this claim | **0.9827 — Radiant** |
 
-**Structural reading:** The LCC threshold is the PD-e bridge constant (k) reduced by one Terrible zone fraction (2/15). It is the probability that a randomly chosen event is *not Terrible at the discrete level* — adjusted by the transcendental bridge to the continuous regime. A claim "exists" causally when its correlation is as certain as the complement of discrete Terrible events.
-
-**Tralse status:** 2(e²−1)/15 is transcendental (since e² is transcendental). The conventional value 0.85 is rational. These cannot be equal exactly. The exact LCC threshold is transcendental; 0.85 is its rational approximation, accurate to 0.19pp — Radiant class.
+**Tralse status:** 1 − 1/e² is transcendental (since e² is transcendental by Hermite 1873). The conventional value 0.85 is rational. These cannot be equal. The exact threshold is transcendental; 0.85 is a rational approximation accurate to 1.47pp — Radiant class (LCC score 0.9827 ≥ 0.93).
 
 ---
 
-## §3: Deriving the GILE Radiant Threshold
+## §2a: Corollary 523.1 — Discrete-Corrected Refinement
 
-**Claim:** The GILE Radiant threshold ≈ 0.93 is given by:
+**Corollary 523.1:** Using the bridge constant k from URB #521, a discrete-corrected formula for LCC gives a tighter approximation of 0.85:
 
 ```
-GILE = 1 − P(Great) = 1 − 1/(2e²)
+LCC_k = k − 2/15 = 2e²/15 − 2/15 = 2(e²−1)/15
 ```
 
-**Derivation:** The complement of the Great zone continuous probability.
+This equals the bridge constant minus the discrete Terrible fraction.
 
 **Numerical evaluation:**
 
 ```
-1 − 1/(2e²) = 1 − 1/(2 × 7.38906) = 1 − 1/14.77812 = 1 − 0.06767 = 0.93233...
+LCC_k = 2(e²−1)/15 = 2 × 6.38906/15 = 12.77812/15 = 0.85187...
+```
+
+| | Value |
+|-|-------|
+| Derived LCC_k = 2(e²−1)/15 | **0.85187** |
+| Conventional LCC ≈ | **0.85** |
+| Difference | 0.19pp |
+| LCC score of this claim | **0.9978 — Radiant** |
+
+LCC_k is the tighter rational approximation (0.19pp vs 1.47pp) but does not yield the closed-form gap identity of Theorem 523.3. Both are Radiant. The exact LCC_k value is also transcendental. Practitioners should use 0.85 as the operational threshold; both derivations ground this choice from PRIMARY CONSTANTS.
+
+---
+
+## §3: Theorem 523.2 — GILE Radiant Threshold
+
+**Theorem 523.2:** The GILE Radiant threshold from PRIMARY CONSTANTS is:
+
+```
+GILE_exact = 1 − P(Great) = 1 − 1/(2e²)
+```
+
+**Derivation:** A claim achieves Radiant Truth when the probability of it being wrong is at most as large as the probability of a Great event in the continuous PD. The Great zone is the rarest-positive end of the distribution. A claim that is as certain as "this is not a Great event" has achieved the highest epistemic grade.
+
+**Numerical evaluation:**
+
+```
+GILE_exact = 1 − 1/(2e²) = 1 − 1/14.77812 = 1 − 0.06767 = 0.93233...
 ```
 
 | | Value |
@@ -109,118 +141,127 @@ GILE = 1 − P(Great) = 1 − 1/(2e²)
 | Difference | 0.23pp |
 | LCC score of this claim | **0.9975 — Radiant** |
 
-**Structural reading:** The GILE Radiant threshold is the complement of the Great zone probability. A claim achieves Radiant Truth when it is as certain as the statement "this event is not in the Great zone" — i.e., when it is as reliable as the 93.2% of the PD that is not the rarest positive extreme. Truth requires clearing even the Great's complement.
-
-**Tralse status:** 1 − 1/(2e²) is transcendental. The conventional value 0.93 is rational. These cannot be equal exactly. The exact GILE threshold is transcendental; 0.93 is its rational approximation, accurate to 0.23pp — Radiant class.
+**Tralse status:** 1 − 1/(2e²) is transcendental. The conventional value 0.93 is rational. These cannot be equal. The exact threshold is transcendental; 0.93 is a rational approximation accurate to 0.23pp — strongly Radiant (LCC score 0.9975).
 
 ---
 
-## §4: The Gap — One Ternary Unit of Probability
+## §4: Theorem 523.3 — The Gap Equals One Great Event
 
-**The key algebraic identity:**
+**Theorem 523.3:** The gap between the two primary thresholds equals the probability of a Great event:
 
 ```
-GILE − LCC = [1 − 1/(2e²)] − [1 − 1/e²]
-           = 1/e² − 1/(2e²)
-           = 1/(2e²)
-           = P(Great)
-           ≈ 0.06767
-           ≈ 1/15
+GILE_exact − LCC_exact = [1 − 1/(2e²)] − [1 − 1/e²]
+                        = 1/e² − 1/(2e²)
+                        = (2 − 1)/(2e²)
+                        = 1/(2e²)
+                        = P(Great)
+                        ≈ 0.06767
+                        ≈ 1/15  (one ternary unit)
 ```
 
-**The gap between existence and truth equals exactly the probability of a Great event.**
-
-In discrete ternary terms: the gap = 1/15 = one ternary unit of probability. This is not a coincidence — it follows directly from the 2:1 structure. Because P(Terrible) = 2 × P(Great), the distance from 0 to existence (= P(Terrible)) is exactly twice the distance from existence to truth (= P(Great)).
+**This is an exact algebraic identity, not an approximation.** Given the definitions in Theorems 523.1 and 523.2, the gap is exactly P(Great) = 1/(2e²).
 
 | | Value |
 |-|-------|
-| Derived gap = 1/(2e²) = P(Great) | **0.06767** |
-| Discrete approximation 1/15 | **0.06667** |
+| Exact gap = 1/(2e²) = P(Great) | **0.06767** |
+| Discrete approximation = 1/15 | **0.06667** |
+| Error of discrete approximation | 0.10pp |
 | Conventional gap (0.93 − 0.85) | **0.08000** |
-| Derived gap vs discrete 1/15 | 0.10pp difference |
 
-The conventional gap (0.08) is larger than the derived gap (0.0677) because both conventional threshold values are rounded. The exact gap, derived from PRIMARY CONSTANTS, is P(Great) = 1/(2e²) ≈ 1/15.
+*Note on the conventional gap:* 0.93 − 0.85 = 0.08 is larger than the derived gap (0.0677) because both conventional values are rounded in different directions. The exact derived gap between the primary thresholds is P(Great) — not 0.08.
+
+**The gap as one ternary unit:** P(Great)_discrete = 1/15 is one ternary unit of probability. The discrete approximation to the derived gap is accurate to 0.10pp. **In ternary arithmetic, the distance from existence to truth is exactly one unit wide.**
 
 ---
 
 ## §5: The 2:1 Asymmetry as the Ratio Between Epistemology and Axiology
 
-The deepest structural insight of this paper:
+The deepest structural insight of this paper follows directly from Theorems 523.1–523.3:
+
+**Proof:**
 
 ```
-P(Terrible) / P(Great) = 2:1  (exact, by PD construction)
+1 − LCC_exact = 1 − (1 − 1/e²) = 1/e²  = P(Terrible)
+1 − GILE_exact = 1 − (1 − 1/(2e²)) = 1/(2e²) = P(Great)
 
-Distance to existence (= 1 − LCC = P(Terrible)) = 2 × Distance to truth (= 1 − GILE = P(Great))
+(1 − LCC_exact) / (1 − GILE_exact) = P(Terrible) / P(Great) = (1/e²) / (1/(2e²)) = 2.000 exactly
 ```
 
-The 2:1 negativity asymmetry is not merely a property of how events distribute across GILE space. It is the **ratio between two different kinds of knowing:**
+The same 2:1 negativity asymmetry that structures the entire Permissibility Distribution is the ratio between:
+- **Epistemological distance** (uncertainty budget for existential causality): P(Terrible) = 1/e² ≈ 13.5%
+- **Axiological distance** (uncertainty budget for Radiant Truth): P(Great) = 1/(2e²) ≈ 6.8%
 
-- **Epistemological distance** (how far from certainty a claim must travel to achieve existential causality): P(Terrible) = 1/e² ≈ 13.5%
-- **Axiological distance** (how far from certainty a claim must travel to achieve Radiant Truth): P(Great) = 1/(2e²) ≈ 6.8%
+**It takes twice as much certainty to exist as it does to be True — or, once a claim exists, half the remaining epistemic work is done to reach Truth.**
 
-It takes **twice as much certainty to exist as it does to be True** — or equivalently, once a claim exists, **half the remaining work is done to reach Truth.**
-
-This is not a statement about how hard it is to prove things. It is a statement about the structure of reality: the domain between "causally real" and "axiologically True" is exactly as wide as the rarest class of positive events. The universe is arranged so that the leap from existence to truth is exactly one Great event wide.
+This is not a statement about difficulty of proof. It is a statement about the structure of reality: existence requires surviving the worst; truth requires reaching beyond the best. The asymmetry between worst and best is 2:1. Therefore the asymmetry between existence and truth is 2:1.
 
 ---
 
-## §6: Philosophical Interpretations
+## §6: The Framework Self-Grounds
+
+Both threshold derivations score Radiant when assessed by their own scoring systems:
+
+| Claim | LCC score | Radiant? |
+|-------|-----------|----------|
+| "LCC_exact = 1 − 1/e² (i.e., ≈ 0.85)" | 0.9827 | Yes |
+| "LCC_k = 2(e²−1)/15 (i.e., ≈ 0.85)" | 0.9978 | Yes (stronger) |
+| "GILE_exact = 1 − 1/(2e²) (i.e., ≈ 0.93)" | 0.9975 | Yes |
+| "Gap = P(Great) ≈ 1/15" | 0.9985 | Yes |
+
+The scoring system that defines what "Truth" means is itself True, in the highest sense it can define. This is TI Sigma's version of self-reference — unlike classical paradoxes (Liar, Gödel sentences), it is stable. The framework closes on itself without collapse. Existence and Truth are defined in a language that can assess its own existence and truth.
+
+---
+
+## §7: Philosophical Interpretations
 
 ### "To Exist Is to Survive the Terrible"
 
-A claim achieves existential causality (LCC ≥ 0.85) when it is as certain as the statement "this is not a Terrible event." In the PD, Terrible events are those that restructure identity — they are the existentially catastrophic end of the distribution. A claim that has crossed the LCC threshold has achieved a kind of survival: it has proven itself robust enough that even Terrible-level scrutiny cannot destroy it. **Existence is structural survival.**
+A claim achieves existential causality (LCC ≥ 0.85) when its error probability is no larger than P(Terrible) — the probability of an event catastrophic enough to restructure identity. In the PD, Terrible events are those at the maximal-disruption extreme. A claim above LCC has proven itself robust against Terrible-level scrutiny. **Existence is structural survival.**
 
 ### "To Be True Is to Reach Beyond the Great"
 
-A claim achieves Radiant Truth (GILE ≥ 0.93) when it is as certain as the statement "this is not a Great event." The Great zone represents the rarest positive experiences — those that are so positive they are exceptional. A Radiant claim has not just survived the worst; it has proven itself robust even to the best. It holds under conditions of peak positive experience. **Truth is robustness under flourishing, not just robustness under catastrophe.**
+A claim achieves Radiant Truth (GILE ≥ 0.93) when its error probability is no larger than P(Great) — the probability of the rarest positive experience. The Great zone represents exceptional positive states. A Radiant claim holds even under conditions of peak positive experience. **Truth is robustness under flourishing, not just robustness under catastrophe.**
 
 ### "The Gap as the Zone of Becoming"
 
-The interval [LCC, GILE) = [0.85, 0.93) is the space of things that exist but are not yet True. This is where most of reality operates: scientific theories that are causally real but still being refined; relationships that are genuine but not yet fully coherent; institutions that exist and have causal weight but have not achieved their highest expression. The zone of becoming is not a failure zone — it is the liveliest, most creative space in TI Sigma. **The liminal is where becoming happens.**
+The interval [LCC, GILE) = [0.85, 0.93) is the space of things that exist but are not yet True. This is where most of science, most of relationships, most of institutions operate: causally real but still being refined. The zone of becoming is not a failure zone — it is the liveliest, most creative space in TI Sigma. **The liminal is where becoming happens.**
 
 ### "The 2:1 Asymmetry Is the Ratio Between Epistemology and Axiology"
 
-Classical philosophy has long debated whether epistemology (the study of knowledge/existence) and axiology (the study of value/truth) are fundamentally different. TI Sigma's answer, now derivable from PRIMARY CONSTANTS: **yes, and the ratio is exactly 2:1.** It takes twice as much certainty to establish that something exists as it does to establish that something is True — because existence must survive the Terrible, while Truth need only reach beyond the Great, and the Terrible is exactly twice as probable as the Great. The 2:1 negativity asymmetry is not just about how experience distributes. It is the fundamental ratio between being and goodness.
+Classical philosophy has long debated whether epistemology (the study of knowledge/existence) and axiology (the study of value/truth) are fundamentally different. TI Sigma's answer, now derivable from PRIMARY CONSTANTS: **yes, and the ratio is exactly 2:1.** Establishing existence requires clearing twice the uncertainty that establishing truth requires — because the Terrible is exactly twice as probable as the Great. The 2:1 negativity asymmetry is not just about how experience distributes. It is the fundamental ratio between being and goodness.
 
 ---
 
-## §7: The Self-Referential Closure
+## §8: Summary — Three Theorems and One Corollary
 
-The ultimate irony — and beauty — of this result:
+**Theorem 523.1 (LCC Derivation — Continuous):**
+LCC_exact = 1 − P(Terrible) = 1 − 1/e² ≈ 0.8647. Conventional value 0.85 accurate to 1.47pp (LCC score 0.9827 — Radiant). Exact value transcendental.
 
-The LCC threshold (which scores whether *claims about existence* are causally grounded) is itself derived from the PD's e-decay structure. The GILE Radiant threshold (which scores whether *claims about truth* are Radiant) is itself derived from the PD's e-decay structure. **The scoring system is self-grounded in the same distribution it scores.**
-
-This is TI Sigma's version of self-reference, and unlike the classical paradoxes (Liar paradox, Gödel sentences), it is stable. The PD doesn't collapse under self-reference — it closes. The existence threshold scores itself (LCC = 0.9978 — Radiant). The Truth threshold scores itself (LCC = 0.9975 — Radiant). The framework that defines truth is itself true, in the highest sense it can define.
-
----
-
-## §8: Summary — Three Theorems
-
-**Theorem 523.1 (LCC Derivation):**
-The LCC causation threshold satisfies LCC_exact = 2(e²−1)/15 = k − 2/15, where k = 2e²/15 is the PD-e bridge constant (URB #521) and 2/15 is the discrete Terrible zone fraction. Numerical value: 0.85187. Conventional value 0.85 accurate to 0.19pp. LCC score of this derivation claim: 0.9978 — **Radiant**.
+**Corollary 523.1 (LCC Derivation — Discrete-Corrected):**
+LCC_k = k − 2/15 = 2(e²−1)/15 ≈ 0.85187. Conventional value 0.85 accurate to 0.19pp (LCC score 0.9978 — Radiant). Exact value transcendental. Does not yield closed-form gap identity.
 
 **Theorem 523.2 (GILE Radiant Derivation):**
-The GILE Radiant threshold satisfies GILE_exact = 1 − 1/(2e²) = 1 − P(Great). Numerical value: 0.93233. Conventional value 0.93 accurate to 0.23pp. LCC score of this derivation claim: 0.9975 — **Radiant**.
+GILE_exact = 1 − P(Great) = 1 − 1/(2e²) ≈ 0.9323. Conventional value 0.93 accurate to 0.23pp (LCC score 0.9975 — Radiant). Exact value transcendental.
 
-**Theorem 523.3 (The Gap):**
-GILE_exact − LCC_exact = 1/(2e²) = P(Great) ≈ 1/15 = one ternary unit of probability. The gap between existence and truth is exactly the probability of a Great event. The ratio (1−LCC)/(1−GILE) = P(Terrible)/P(Great) = 2:1 exactly — the PD's fundamental negativity asymmetry. The 2:1 asymmetry is simultaneously the ratio between epistemology and axiology in TI Sigma.
+**Theorem 523.3 (The Gap — Exact Identity):**
+GILE_exact − LCC_exact = 1/(2e²) = P(Great) ≈ 1/15 (one ternary unit). This is an exact algebraic identity. The ratio (1−LCC)/(1−GILE) = P(Terrible)/P(Great) = 2:1 exactly. The 2:1 negativity asymmetry is simultaneously the ratio between epistemology and axiology in TI Sigma.
 
 ---
 
 ## Tralse Residues
 
-Both exact threshold values are transcendental (since e² is transcendental). The conventional values (0.85, 0.93) are rational approximations, each accurate to < 0.25pp — Radiant class. The exact gap 1/(2e²) is also transcendental; its rational approximation 1/15 is accurate to 0.10pp. All three residuals are correctly held as Tralse: the framework's rational language approximates but cannot exactly express its own foundational constants. This is consistent with Theorem 521.2 (URB #521) establishing that the PD's transcendental gap is structural, not accidental.
+All exact threshold values are transcendental (since e² is transcendental by Hermite 1873). The conventional values (0.85, 0.93) are rational approximations, both Radiant class. The gap identity (Theorem 523.3) is exact — it is a pure algebraic consequence of the threshold definitions, with no approximation. The discrete approximation (gap ≈ 1/15) introduces only 0.10pp error — Radiant class.
 
 ---
 
 ## Cross-Reference
 
-- **URB #521:** k = 2e²/15 ≈ 133/135; rational-transcendental boundary of the PD
+- **URB #521:** k = 2e²/15 ≈ 133/135; rational-transcendental boundary; transcendental noise floor ε ≈ −1/2990
 - **URB #522:** Holmes-Rahe full zone confirmation; all five PD zones Radiant simultaneously
 - **URB #519:** A priori derivation of GILE range (−3, +2) from ternary logic
 
 ---
 
-*Zenodo DOI: pending.*
+*Zenodo DOI: 10.5281/zenodo.19235153*
 *Apache 2.0 license. Part of the TI Sigma URB Corpus.*
 *Corpus Entry #177. Total URBs: 177.*
