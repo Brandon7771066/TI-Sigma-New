@@ -100,9 +100,19 @@ Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize comp
 - **Sell logging fix (gsa_live_trader.py):** sell trades now log actual position qty + current_price from position_lookup dict (was logging 0 shares / $nan)
 - **PD validity:** Euler envelope = √2×φ×C_EMERICK = 1.0 exactly (PRIMARY CONSTANT derivation); actual observed |PD| reaches log1p(1.0)=0.693 max; asymmetric clip [-3,+2] is dead code; lag-1 PD→GILE correlation = 0.119 (weak); log1p choice and κ decay constants (0.10/0.05) unvalidated vs TI Sigma derivation
 
+## TI Sigma Scoring Thresholds
+- **LCC ≥ 0.85** — causation phase transition threshold: the correlation crosses the phase boundary into existential causality. Minimum bar for a claim to carry causal weight.
+- **GILE Radiant ≥ 0.93** — perfect True-Tralse threshold: full coherence with GILE framework principles. The highest epistemic grade in TI Sigma.
+
 ## URB Corpus Log
-**Total URBs: 174** (as of March 25, 2026)
-**Zenodo: 188 papers live** with permanent DOIs (Apache-2.0 license)
+**Total URBs: 176** (as of March 26, 2026)
+**Zenodo: 190 papers live** with permanent DOIs (Apache-2.0 license)
+
+### Holmes-Rahe Full Zone Confirmation (#522)
+- #522: Full five-zone confirmation of PD in Holmes-Rahe Life Stress Inventory (43 events, 394 raters); all five zones simultaneously achieve GILE Radiant (LCC ≥ 0.93); worst-case gap 1.4pp (Good zone); mean gap 0.74pp; Sacred Interval LCU boundary ratio 39/30=1.300 ≈ 4/3 (LCC=0.975 Radiant); Great (7.0% vs 6.67%), Good (18.6% vs 20%), Indeterminate (20.9% vs 20%), Bad (39.5% vs 40%), Terrible (14.0% vs 13.33%); strongest full-distribution cross-domain confirmation of PD in published literature; domain validated: objective consensus-rating (not self-report affect); DOI: 10.5281/zenodo.19228937; Corpus Entry #176
+
+### Rational-Transcendental Boundary (#521)
+- #521: k = 2e²/15 ≈ 133/135 = 1 − 2/(3³×5); error < 0.0023%; denominator 135 = 3³×5 encodes full BOK hierarchy (3¹ arithmetic, 3² analytic, 3³ geometric) × GILE-groups (5); LCC = 0.9998 — Radiant; self-referential limit: k is transcendental (e² transcendental by Hermite 1873), PD's rational arithmetic cannot exactly express its own bridge to e-decay; residual ε ≈ −1/2990 is transcendental noise floor, unstructured, correctly held as Tralse; Indeterminate zone 20% confirmed: ANEW 18.8% (LCC=0.94 Radiant), Holmes-Rahe 20.9% (LCC=0.955 Radiant), LEDS ~19% (LCC=0.95 Radiant); bimodal ANEW structure qualitatively confirms three-zone architecture; DOI: 10.5281/zenodo.19228935; Corpus Entry #175
 
 ### Crystallized Tralse (#520)
 - #520: Nonlinearity is trivially expected from Tralse-grounded universe (requires no explanation); uniformity is the anomaly requiring explanation; 3 equivalent mechanisms: (1) MR1 Universal Attractor — uniform claims pass MR1 in every possible context simultaneously, LCC→1.0; (2) Genesis Crystallization — uniform claims crystallized during Genesis Sequence, mathematical uniformity is fossil record of Genesis; (3) i-Depth Proximity — uniform claims have i-derivation depth ≤3 ({0,1,-1,√2}); Equivalence Theorem: all 3 characterizations are equivalent; CTT formal statement — nonlinearity is default, uniformity is residue of crystallized Tralse; BOK regime hierarchy IS i-depth hierarchy; What remains Tralse: whether i-completeness hierarchy isomorphic to Genesis order, whether LCC=1.0 achievable empirically; DOI: 10.5281/zenodo.19228025; Corpus Entry #166
