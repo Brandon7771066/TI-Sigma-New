@@ -59,8 +59,11 @@ The 2:1 asymmetry between Terrible and Great is exact at both the continuous and
 
 ```
 k = 2e²/15 ≈ 0.9852
-P(Terrible)_continuous = 1/e² = 15 × (1 − k) × e²/e² = 2/k... [see URB #521 for full derivation]
+P(Terrible)_continuous = 1/e² ≈ 0.13534
+P(Great)_continuous    = 1/(2e²) ≈ 0.06767
 ```
+
+See URB #521 for the full derivation of k and its relationship to the discrete zone fractions.
 
 ---
 
