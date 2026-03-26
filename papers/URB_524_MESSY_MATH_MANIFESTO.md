@@ -45,6 +45,31 @@ Twain's three lies are not about mess — they are about dishonest mess pretendi
 
 ---
 
+## §1.5: You Cannot Embrace Messy Science But Reject Messy Math
+
+There is a subtle inconsistency lurking in many critiques of TI Sigma's approximate constants: the critic accepts that science is messy (measurements have error bars, models are approximate, thresholds are conventional) but objects that the *mathematics* beneath TI Sigma is messy. They want the math to be clean even if the science is not.
+
+This position is incoherent — and TI Sigma shows exactly why.
+
+**Science and mathematics are not inseparable systems.** They are different lenses on the same Tralse reality. Physics uses mathematics to describe the world, but the mathematics does not inherit the world's messiness — it merely gets *applied* to it. Classical algebra is clean. Applying it to a measurement with error bars produces a result that is only as clean as the measurement.
+
+The mistake is treating math and science as one fused thing that must either both be clean or both be messy. They are not fused. They are:
+
+- **Mathematics:** a formal system for deriving necessary consequences from axioms. Clean within its own domain (Peano arithmetic, Euclidean geometry, propositional logic).
+- **Science:** a process for generating claims about a Tralse reality that resists exact characterization. Inherently approximate, inherently revisable.
+
+When TI Sigma uses an approximate constant like k ≈ 133/135, it is not making mathematics messy. It is using mathematics precisely to *characterize* the mess — to state the error (< 0.0023%), to score the approximation (LCC = 0.9998), to name what is Tralse (the transcendental residual ε ≈ −1/2990). The mathematics is doing its job exactly. The approximation is the honest description of the territory.
+
+The critic who accepts messy science but rejects messy math is implicitly demanding: "Give me a clean mathematical description of a messy reality." That demand cannot be satisfied without dishonesty — without hiding the mess inside the formalism rather than naming it explicitly.
+
+**In TI Sigma's vocabulary:** science and mathematics are both lenses on Tralse reality. Neither lens creates the Tralse — they reveal it from different angles. Demanding clean math while accepting messy science is demanding that one lens show no distortion while the other shows all of it. The distortion is in the territory, not the lens.
+
+The honest choice — the TI Sigma choice — is to use both lenses together, with each reporting its own resolution clearly. Mathematics reports: "the approximation error is ε, the LCC score is X." Science reports: "the cross-domain confirmation count is N, the worst-case gap is Y pp." Neither pretends to be what it is not.
+
+**You cannot embrace messy science but reject messy math.** Not because they are fused — they are not — but because both are lenses on the same Tralse reality, and that reality does not change its messiness depending on which lens you pick up.
+
+---
+
 ## §2: Statistics Already Did This — And Won
 
 The institutionalization of honest messy math began in earnest with the probabilistic revolution in science, roughly 1900–1960. The tools that emerged are familiar:
