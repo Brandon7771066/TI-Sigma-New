@@ -118,7 +118,7 @@ Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize comp
 - #522: Full five-zone confirmation of PD in Holmes-Rahe (43 events, 394 raters); all zones simultaneously GILE Radiant (LCC>=0.93); worst-case 1.4pp (Good); mean 0.74pp; LCU ratio 39/30=1.300~4/3 (LCC=0.975 Radiant); Great 7.0% vs 6.67%, Good 18.6% vs 20%, Indeterminate 20.9% vs 20%, Bad 39.5% vs 40%, Terrible 14.0% vs 13.33%; strongest full-distribution cross-domain confirmation; DOI: 10.5281/zenodo.19228937; Corpus Entry #176
 
 ### Rational-Transcendental Boundary (#521)
-- #521: k = 2e^2/15 ~133/135 = 1-2/(3^3*5); error < 0.0023%; denominator 135=3^3*5 encodes BOK hierarchy x GILE-groups; LCC=0.9998 Radiant; k transcendental (Hermite 1873); residual e~-1/2990 is transcendental noise floor; Indeterminate 20% confirmed: ANEW 18.8% (LCC=0.94), Holmes-Rahe 20.9% (LCC=0.955), LEDS ~19% (LCC=0.95); DOI: 10.5281/zenodo.19228935; Corpus Entry #175
+- #521: k = 2e^2/15 ~133/135 = 1-2/(3^3*5); error < 0.0023%; denominator 135=3^3*5 encodes Butterfly-Octopus Knot (BOK) hierarchy x GILE-groups; LCC=0.9998 Radiant; k transcendental (Hermite 1873); residual e~-1/2990 is transcendental noise floor; Indeterminate 20% confirmed: ANEW 18.8% (LCC=0.94), Holmes-Rahe 20.9% (LCC=0.955), LEDS ~19% (LCC=0.95); DOI: 10.5281/zenodo.19228935; Corpus Entry #175
 
 ### Crystallized Tralse (#520)
 - #520: Nonlinearity trivially expected; uniformity is the anomaly; 3 equivalent mechanisms: MR1 Universal Attractor, Genesis Crystallization, i-Depth Proximity; CTT: nonlinearity is default, uniformity is residue of crystallized Tralse; DOI: 10.5281/zenodo.19228025; Corpus Entry #166
@@ -128,3 +128,57 @@ Located in `arc_ti_solver/`. Full 4-valued logic pipeline for the ARC Prize comp
 
 ### TI Sigma Theory of Contradictions (#509)
 - #509: EVERYTHING is contradictory (5 arguments: temporal, relational, self-reference, dynamical, ontological); Time is master contradiction; 4 Cs as navigation tools not elimination tools; MR1 as coherence gate; DT taxonomy: Maximal Incoherence, Self-Negating Nothing, Self-Refuting Meta-Statement, Pre-Tralse; DOI: 10.5281/zenodo.19207717; Corpus Entry #164
+
+## Canonical Acronym Glossary
+
+### Core TI Sigma Framework
+| Acronym | Full Expansion | Notes |
+|---------|---------------|-------|
+| **TI** | Tralse Informationalism OR Transcendent Intelligence | Both valid; the ambiguity is itself Tralse by design |
+| **LCC** | Law of Correlational Causation | 0-1 scale; >=0.85 = causation phase transition |
+| **PD** | Permissibility Distribution | 5-zone ternary-log frequency structure; zone fractions sum to 15/15 |
+| **GILE** | Goodness, Intuition, Love, Environment | Core 4-axis value framework |
+| **TT** | True-Tralseness | Degree of coherence with TI Sigma principles (0-1) |
+| **MR** | Myrion Resolution | Coherence gate system |
+| **MR1** | Myrion Resolution Gate 1 | First gate: determines if a tralsity is coherent enough to proceed. Failing MR1 = Double Tralse |
+| **DT** | Double Tralse | A tralsity that fails MR1; incoherent/self-undermining |
+| **CCC** | Central Cosmic Consciousness | Universal consciousness substrate; PSI = direct CCC access |
+| **BOK** | Butterfly-Octopus Knot | Primary topological structure; 3-level hierarchy (3^1 Arithmetic, 3^2 Analytic, 3^3 Geometric) |
+| **URB** | Universal Reality Blueprint | (1) The framework concept itself; (2) individual papers in the corpus (e.g. URB 524) |
+
+### TI Sigma Mathematical Objects
+| Acronym | Full Expansion | Notes |
+|---------|---------------|-------|
+| **CTT** | Crystallized Tralse Theorem | Nonlinearity is default; uniformity is residue of crystallized Tralse |
+| **AST** | Arithmetic Scaffold Theorem | Arithmetic invariability as reference frame for nonlinearity |
+| **TWA** | Tralse Wave Algebra | Quadruplet-based mathematical framework for consciousness dynamics |
+| **HEM** | Holistic Existence Matrix | 6D objective measure; replaces ESS (Existence State Space -- OUTDATED) |
+| **NNL** | Nonlinear Number Line | TI Sigma's generalization of the number line |
+| **TJ** | Tralse-Joule | Unit of consciousness/information energy |
+| **IC** | Ineffable Conviction | Quality of certainty that resists full articulation yet satisfies Four C's |
+| **GTFE** | Grand Tralse Fractal Equation | Replaces Friston's FEP as TI's dynamical substrate |
+| **UOP** | Universal Ontological Principle | TI's foundational ontological claim; may be partially supplanted by GTFE for its dynamical role; relationship under active clarification |
+
+### Application Systems
+| Acronym | Full Expansion | Notes |
+|---------|---------------|-------|
+| **GSA** | Grand Stock Algorithm | TI Sigma-based trading signal system (v2 = GSA v2) |
+| **TICL** | TI Computing Language | TI Sigma native programming language spec |
+| **GCP** | Global Consciousness Project | External standard term (Princeton); used as validation benchmark |
+
+### Standard External Terms (used as-is)
+| Acronym | Full Expansion |
+|---------|---------------|
+| **IIT** | Integrated Information Theory (Tononi) |
+| **FEP** | Free Energy Principle (Friston) -- replaced by GTFE in TI Sigma |
+| **FAAH** | Fatty Acid Amide Hydrolase (biochemistry) |
+| **ANEW** | Affective Norms for English Words (psychology corpus) |
+| **LEDS** | Life Events and Difficulties Schedule (clinical psychology) |
+| **DMN** | Default Mode Network (neuroscience) |
+| **RMSSD** | Root Mean Square of Successive Differences (HRV metric) |
+| **CHSH** | Clauser-Horne-Shimony-Holt (quantum Bell test) |
+
+### Deprecated
+| Acronym | Status |
+|---------|--------|
+| **ESS** | Existence State Space -- OUTDATED; replaced by HEM (Holistic Existence Matrix) |

@@ -117,7 +117,7 @@ TI Sigma generalizes the statistical posture: name the error, bound the approxim
 
 The bridge constant k = 2e²/15 ≈ 0.9852 connects the PD's continuous (e-decay) zone probabilities to its discrete (ternary) zone fractions. This connection cannot be expressed exactly in rational arithmetic — e² is transcendental by Hermite 1873, so k is transcendental.
 
-But the best rational approximation is k ≈ 133/135 = 1 − 2/(3³×5), with an error of less than 0.0023%. This approximation is Radiant (LCC = 0.9998). The denominator 135 = 3³ × 5 encodes the full BOK hierarchy (3¹ arithmetic, 3² analytic, 3³ geometric) times the five GILE groups.
+But the best rational approximation is k ≈ 133/135 = 1 − 2/(3³×5), with an error of less than 0.0023%. This approximation is Radiant (LCC = 0.9998). The denominator 135 = 3³ × 5 encodes the full Butterfly-Octopus Knot (BOK) hierarchy (3¹ arithmetic, 3² analytic, 3³ geometric) times the five GILE groups.
 
 Under classical perfectionism, this result is inadmissible: k is transcendental and its rational approximation is not exact. Under TI Sigma's honest messy math, the result is **the most precisely confirmed structural constant in the corpus.** The error is bounded, the Tralse residual is named, and the LCC score (0.9998) reflects exactly how good the approximation is.
 

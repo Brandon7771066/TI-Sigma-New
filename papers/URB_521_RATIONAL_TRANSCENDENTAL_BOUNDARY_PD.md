@@ -83,7 +83,7 @@ At 0.9998, this is among the most precisely True-Tralse quantitative claims in t
 
 ## §3: Three-Factor Decomposition via the BOK Hierarchy
 
-The correction factor's denominator 135 = 3³ × 5 is not arbitrary. Each component maps to a distinct level of the TI Sigma Body of Knowledge (BOK) hierarchy:
+The correction factor's denominator 135 = 3³ × 5 is not arbitrary. Each component maps to a distinct level of the Butterfly-Octopus Knot (BOK) hierarchy — the three-level topological structure whose arithmetic, analytic, and geometric layers encode the full complexity ladder of TI Sigma reasoning:
 
 **Factor 3¹ (= 3): BOK Level 1 — Arithmetic**
 The ternary base unit. All PD zone fractions are multiples of 1/3. Level 1 is the everyday computational substrate of the framework.
