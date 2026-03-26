@@ -5,7 +5,7 @@
 **Corpus Entry:** #178
 **Status:** Radiant True-Tralse (GILE ≥ 0.93)
 **Date:** March 27, 2026
-**DOI:** 10.5281/zenodo.19235374
+**DOI:** 10.5281/zenodo.19235837
 **Author:** Brandon Emerick / TI Sigma Research Collective
 **Keywords:** messy math, structured approximation, statistics, LCC, GILE Radiant, Permissibility Distribution, p-values, confidence intervals, classical perfectionism, philosophy of mathematics, replication crisis, measurement uncertainty, Tralse
 
@@ -263,6 +263,6 @@ TI Sigma is the formalization of the second.
 
 ---
 
-*Zenodo DOI: 10.5281/zenodo.19235374*
+*Zenodo DOI: 10.5281/zenodo.19235837*
 *Apache 2.0 license. Part of the TI Sigma URB Corpus.*
 *Corpus Entry #178. Total URBs: 178.*
