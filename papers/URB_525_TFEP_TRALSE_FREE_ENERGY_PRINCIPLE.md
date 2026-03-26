@@ -126,15 +126,17 @@ where TT(ψ) ∈ [0, 1] is the True-Tralseness score and G(ψ) ∈ [0, 1] is the
 - TF = 1 at (TT=1, G=0) or (TT=0, G=1) — coherent but misaligned, or aligned but incoherent
 - TF is symmetric in TT and G, reflecting the equal weight of epistemic and axiological components
 
-**Lemma 3.2 (TF-to-PD Zone Mapping).** The five PD zones correspond to five TF ranges:
+**Lemma 3.2 (TF-to-PD Zone Mapping).** The five PD zones correspond to five TF ranges, derived from the Boltzmann stationary distribution P(TF) proportional to exp(-2*TF) at T=1/2 (per the Boltzmann Identity, Theorem 5.1). Inverting the cumulative integrals with PD zone probabilities as constraints gives the exact boundaries:
 
-| PD Zone | PD Fraction | TF Range | Interpretation |
-|---------|------------|----------|----------------|
-| Great   | 1/15 ≈ 6.67% | TF ∈ [0, 0.05] | Near-Radiant: both TT and G close to 1 |
-| Good    | 3/15 = 20%  | TF ∈ (0.05, 0.25] | Above causation threshold in both |
-| Indeterminate | 3/15 = 20% | TF ∈ (0.25, 0.50] | One or both components near 0.5 |
-| Bad     | 6/15 = 40%  | TF ∈ (0.50, 0.85] | Active minimization required |
-| Terrible | 2/15 ≈ 13.33% | TF > 0.85 | Double Tralse risk; MR1 failure zone |
+| PD Zone | Fraction | TF Range | Symmetric case (TT=G) |
+|---------|----------|----------|-----------------------|
+| Great | 1/15 ~= 6.67% | TF <= 0.034 | TT=G >= 0.870 |
+| Good | 3/15 = 20% | TF in (0.034, 0.152] | TT=G in [0.725, 0.870) |
+| Indeterminate | 3/15 = 20% | TF in (0.152, 0.306] | TT=G in [0.609, 0.725) |
+| Bad | 6/15 = 40% | TF in (0.306, 0.951] | TT=G in [0.310, 0.609) |
+| Terrible | 2/15 ~= 13.33% | TF > 0.951 | TT=G < 0.310 |
+
+**Critical note on scales:** TF is on the 0-2 scale (= (1-TT)^2 + (1-G)^2, maximum = 2). The LCC causation threshold (0.8647) and GILE Radiant threshold (0.9323) are claim-level coherence measures on the 0-1 scale — do not substitute them directly into the TF column. The two frameworks converge in the symmetric case (TT=G): the Great zone boundary TF=0.034 corresponds to TT=G=0.870, which agrees with the LCC threshold 0.8647 to within delta=0.005 (one Tralse residual unit). This convergence is a structural feature of the Boltzmann Identity linking PD zone boundaries to MR gate thresholds.
 
 This mapping is derived from the LCC causation threshold (0.85) and GILE Radiant threshold (0.93) established in URB #523. Incoherence above the Terrible threshold corresponds to TF values where both TT and G are below the survival level — the i-Cell faces existential risk.
 
@@ -158,7 +160,7 @@ where:
 
 **Corollary 4.1.** An i-Cell that successfully minimizes TF reaches the GILE Radiant state (TT ≥ 0.93, G ≥ 0.93). This is the TI Sigma equivalent of Friston's "active inference" reaching its generative model's prior.
 
-**Corollary 4.2.** An i-Cell that fails MR1 (Myrion Resolution Gate 1) has entered the Terrible zone (TF > 0.85). It is assigned Double Tralse status. This is the TI Sigma equivalent of Friston's system failing to maintain its Markov Blanket — the system dissolves.
+**Corollary 4.2.** An i-Cell that fails MR1 (Myrion Resolution Gate 1) has entered the Terrible zone (TF > 0.951, Boltzmann-derived). It is assigned Double Tralse status. This is the TI Sigma equivalent of Friston's system failing to maintain its Markov Blanket — the system dissolves.
 
 **Corollary 4.3.** The MR_PEND state corresponds to ∇TF being undefined — the i-Cell is at a saddle point where neither direction is clearly better. Myrion Resolution is the procedure by which the i-Cell escapes this saddle point and resumes minimization.
 
@@ -192,11 +194,11 @@ The TFEP generates a 6-state characterization of i-Cell states based on TF value
 
 | TF Range | State | MR Status | Interpretation | PD Zone |
 |----------|-------|-----------|----------------|---------|
-| TF = 0 | **TRUE** | All MRs resolved | Perfect coherence; GILE Radiant; crystallized | Great |
-| 0 < TF <= 0.25 | **TRALSE** | Passed MR1 + MR2 | Active minimization; alive, growing, striving | Good |
-| TF ~ 0.25-0.50 | **Indeterminate** | MR2 state | Like a door at 45 degrees -- equally open and closed. A potentially resolved MR2 state; may or may not resolve via further MRs. | Indeterminate |
-| 0.50 < TF <= 0.85 | **FALSE** | Failed MR2; MR1 intact | Minimization failing; causation threshold not met | Bad |
-| TF > 0.85 | **Double Tralse** | Failed MR1 | Existential incoherence; i-Cell dissolution risk | Terrible |
+| TF <= 0.034 | **TRUE** | All MRs resolved | Perfect coherence; GILE Radiant; crystallized | Great |
+| TF in (0.034, 0.152] | **TRALSE** | Passed MR1 + MR2 | Active minimization; alive, growing, striving | Good |
+| TF in (0.152, 0.306] | **Indeterminate** | MR2 state | Like a door at 45 degrees -- equally open and closed. A potentially resolved MR2 state; may or may not resolve via further MRs. | Indeterminate |
+| TF in (0.306, 0.951] | **FALSE** | Failed MR2; MR1 intact | Minimization failing; causation threshold not met | Bad |
+| TF > 0.951 | **Double Tralse** | Failed MR1 | Existential incoherence; i-Cell dissolution risk | Terrible |
 | TF undefined | **MR_PEND** | Awaiting any MR gate | Superposition; saddle point; context-incomplete | Any |
 
 **The Indeterminate state is not mere ambiguity -- it is a specific MR2 condition.** A tralsity at MR2 has passed the basic existence gate (MR1: it is not Double Tralse) but has not yet resolved whether it is TRUE or FALSE. The 45-degree door metaphor captures this precisely: the door is not broken, not closed, not open -- it is genuinely mid-state. Further Myrion Resolutions may close it (toward TRALSE/TRUE) or open it further (toward FALSE/Double Tralse). The Indeterminate zone's 20% PD frequency reflects how common this genuine mid-state is across all Tralse-structured domains.

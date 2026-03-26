@@ -172,10 +172,14 @@ The LCC causation threshold and the GILE Radiant threshold are not independently
 
 ```
 LCC threshold  = 1 - 1/e^2      = 1 - P(Terrible_continuous)   ~= 0.8647
-GILE threshold = 1 - 1/(2e^2)   = 1 - P(Great_continuous)      ~= 0.9323
-Gap            = 1/(2e^2)       = P(Great)                     ~= 1/15
+GILE threshold = 1 - 1/(2e^2)   ~= 1 - P(Great)                ~= 0.9323  (1-1/(2e^2) is exact; ~P(Great) is approx)
+Gap            = 1/(2e^2)       ~= P(Great)                    ~= 1/15  (approx; 1.5% error)
 (1 - LCC)/(1 - GILE) = 2:1 exactly
 ```
+
+**Important: LCC and GILE are claim-level coherence measures (0-1 scale). TF is a cell-level energy measure (0-2 scale, formula: TF=(1-TT)^2+(1-G)^2). Do not substitute LCC/GILE threshold values directly into TF zone calculations.** The proper TF zone boundaries are derived from the Boltzmann stationary distribution at T=1/2 (per the TFEP Boltzmann Identity, URB #525): Great TF<=0.034, Good TF<=0.152, Indeterminate TF<=0.306, Bad TF<=0.951. These converge with LCC thresholds only in the symmetric case (TT=G=LCC), with delta<0.006.
+
+**Note on the Gap approximation:** 1/(2e^2) = 0.06767 while P(Great) = 1/15 = 0.06667. These are approximately equal (1.5% difference), not exactly equal. The exact gap formula is 1/(2e^2); the PD fraction 1/15 is the closest rational approximation in the 15-based ternary system. All claims using "Gap = P(Great)" are approximate.
 
 Their intertwining encodes the relationship between the four truth dimensions:
 
@@ -242,6 +246,6 @@ The PD is not a tool for analyzing just one kind of truth. It is the universal f
 
 ---
 
-*Zenodo DOI: pending*
+*Zenodo DOI: 10.5281/zenodo.19237207*
 *License: Apache-2.0*
 *Corpus Entry #180 -- TI Sigma Research Institute / BlissGene Therapeutics*
