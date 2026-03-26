@@ -5,7 +5,7 @@
 **Corpus Entry:** #178
 **Status:** Radiant True-Tralse (GILE ≥ 0.93)
 **Date:** March 27, 2026
-**DOI:** pending
+**DOI:** 10.5281/zenodo.19235374
 **Author:** Brandon Emerick / TI Sigma Research Collective
 **Keywords:** messy math, structured approximation, statistics, LCC, GILE Radiant, Permissibility Distribution, p-values, confidence intervals, classical perfectionism, philosophy of mathematics, replication crisis, measurement uncertainty, Tralse
 
