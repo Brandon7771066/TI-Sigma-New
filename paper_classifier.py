@@ -41,19 +41,14 @@ ARXIV_CATEGORIES = {
     "mathematics":        "math.HO",
     "physics":            "physics.gen-ph",
     "computing":          "cs.AI",
-    "consciousness":      "q-bio.NC",
-    "neuroscience":       "q-bio.NC",
-    "biology":            "q-bio.OT",
-    "information_theory": "cs.IT",
     "philosophy":         "physics.hist-ph",
     "quantum":            "quant-ph",
-    "finance":            "q-fin.GN",
+    "information_theory": "cs.IT",
 }
 
 ARXIV_ALLOWED_DOMAINS = {
     "mathematics", "physics", "computing", "philosophy",
-    "quantum", "information_theory", "neuroscience", "consciousness",
-    "biology", "finance",
+    "quantum", "information_theory",
 }
 
 # ── Keyword rule sets ──────────────────────────────────────────────────────────
@@ -476,6 +471,25 @@ def run_batch_classification(force: bool = False, batch_size: int = 50,
 
 # ── Export helpers ─────────────────────────────────────────────────────────────
 
+def _derive_description(filename: str, title: str, max_chars: int = 160) -> str:
+    """Pull first non-header, non-empty sentence from the paper as a one-line description."""
+    md_path = PAPERS_DIR / filename
+    if not md_path.exists():
+        return ""
+    try:
+        text = md_path.read_text(encoding="utf-8", errors="ignore")
+        for line in text.splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or line.startswith("**") or line.startswith("|"):
+                continue
+            if len(line) < 20:
+                continue
+            return line[:max_chars]
+    except Exception:
+        pass
+    return ""
+
+
 def get_researchgate_list() -> list:
     conn = get_db()
     cur  = conn.cursor()
@@ -489,6 +503,8 @@ def get_researchgate_list() -> list:
     rows = [dict(zip(cols, r)) for r in cur.fetchall()]
     cur.close()
     conn.close()
+    for row in rows:
+        row["short_description"] = _derive_description(row["filename"], row["title"])
     return rows
 
 

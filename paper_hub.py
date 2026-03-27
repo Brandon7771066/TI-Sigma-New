@@ -371,16 +371,24 @@ def _render_researchgate_tab():
     st.divider()
 
     df = pd.DataFrame(papers)
-    df["radicality"] = df["radicality_score"].map(RADICALITY_LABELS)
-    df["doi_link"]   = df["zenodo_doi"].apply(lambda d: f"https://doi.org/{d}" if d else "No DOI yet")
-    df["domains"]    = df["domain_tags"].apply(lambda t: ", ".join(t) if t else "—")
+    df["radicality"]        = df["radicality_score"].map(RADICALITY_LABELS)
+    df["doi_link"]          = df["zenodo_doi"].apply(lambda d: f"https://doi.org/{d}" if d else "No DOI yet")
+    df["domains"]           = df["domain_tags"].apply(lambda t: ", ".join(t) if t else "—")
+    df["short_description"] = df.get("short_description", "").fillna("")
 
     st.dataframe(
-        df[["title", "radicality", "journal_tier", "domains", "doi_link"]].rename(columns={
-            "title": "Title", "radicality": "Radicality",
-            "journal_tier": "Journal Tier", "domains": "Domains", "doi_link": "DOI Link"
+        df[["title", "short_description", "radicality", "journal_tier", "domains", "doi_link"]].rename(columns={
+            "title":             "Title",
+            "short_description": "Description",
+            "radicality":        "Radicality",
+            "journal_tier":      "Journal Tier",
+            "domains":           "Domains",
+            "doi_link":          "DOI Link",
         }),
-        use_container_width=True
+        use_container_width=True,
+        column_config={
+            "Description": st.column_config.TextColumn("Description", width="large"),
+        }
     )
 
     st.caption(
