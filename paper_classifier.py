@@ -426,7 +426,7 @@ def build_assignment(radicality: int, domains: list = None) -> list:
     return platforms
 
 
-def run_batch_classification(force: bool = False, batch_size: int = 50,
+def run_batch_classification(force: bool = False,
                               progress_fn=None) -> dict:
     """
     Classify all unclassified papers using the keyword/heuristic engine.
