@@ -90,6 +90,7 @@ with st.sidebar:
 
 page = st.sidebar.radio("Navigate", [
     "Home",
+    "📄 Paper Hub",
     "📥 Downloads",
     "📺 YouTube Studio",
     "🧩 ARC-AGI Solver",
@@ -116,7 +117,11 @@ page = st.sidebar.radio("Navigate", [
     "About"
 ], label_visibility="collapsed")
 
-if page == "Home":
+if page == "📄 Paper Hub":
+    from paper_hub import render as render_paper_hub
+    render_paper_hub()
+
+elif page == "Home":
     st.markdown("""
     <div class="main-header">
         <h1>TI Framework</h1>
