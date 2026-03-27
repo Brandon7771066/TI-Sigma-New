@@ -45,11 +45,22 @@ DOMAIN_OPTIONS = [
 
 def render():
     st.title("📄 Paper Classification Hub")
-    st.caption("Classify and route 543 TI Sigma papers across ResearchGate, arXiv, and Zenodo.")
 
     init_classification_db()
-
     counts = get_summary_counts()
+
+    st.caption(
+        f"Classify and route {counts['total_papers']} TI Sigma papers "
+        "across ResearchGate, arXiv, and Zenodo."
+    )
+
+    # First-load auto-classification: run once silently if papers exist but none classified
+    if counts["classified"] == 0 and counts["total_papers"] > 0:
+        if not st.session_state.get("_auto_classify_done"):
+            st.session_state["_auto_classify_done"] = True
+            with st.spinner(f"First run: classifying {counts['total_papers']} papers..."):
+                run_batch_classification(force=False)
+            st.rerun()
 
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Total Papers", counts["total_papers"])
@@ -187,13 +198,14 @@ def _run_classification(force: bool):
 
 def _render_review_tab():
     st.subheader("Review & Edit All Classifications")
+    st.caption("Edit radicality, journal tier, formal proof, or Zenodo status directly in the table, then click Save Changes.")
 
     rows = get_all_classifications()
     if not rows:
-        st.warning("No papers classified yet. Run AI classification first.")
+        st.warning("No papers classified yet. Run classification first.")
         return
 
-    df = pd.DataFrame(rows)
+    df_full = pd.DataFrame(rows)
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -210,6 +222,7 @@ def _render_review_tab():
     with col3:
         domain_filter = st.text_input("Filter by domain tag (partial match)", "")
 
+    df = df_full.copy()
     if rad_filter:
         df = df[df["radicality_score"].isin(rad_filter)]
     if tier_filter:
@@ -220,98 +233,106 @@ def _render_review_tab():
                              for t in (tags or []))
         )]
 
-    df["radicality_label"] = df["radicality_score"].map(RADICALITY_LABELS)
-    df["domains"] = df["domain_tags"].apply(
-        lambda t: ", ".join(t) if t else "—"
-    )
-    df["platforms"] = df["platform_assignment"].apply(
-        lambda t: ", ".join(t) if t else "—"
-    )
-    df["doi_link"] = df["zenodo_doi"].apply(
-        lambda d: f"https://doi.org/{d}" if d else "—"
+    df["domains"]   = df["domain_tags"].apply(lambda t: ", ".join(t) if t else "")
+    df["platforms"] = df["platform_assignment"].apply(lambda t: ", ".join(t) if t else "")
+    df["zenodo_doi"] = df["zenodo_doi"].fillna("")
+    df["user_notes"] = df["user_notes"].fillna("")
+
+    EDIT_COLS = ["filename", "title", "radicality_score", "has_formal_proof",
+                 "journal_tier", "zenodo_status", "zenodo_doi", "user_notes",
+                 "domains", "platforms"]
+
+    col_config = {
+        "filename":       st.column_config.TextColumn("File", disabled=True),
+        "title":          st.column_config.TextColumn("Title", disabled=True),
+        "radicality_score": st.column_config.SelectboxColumn(
+            "Radicality", options=[1, 2, 3, 4, 5], required=True),
+        "has_formal_proof": st.column_config.CheckboxColumn("Formal Proof"),
+        "journal_tier":   st.column_config.SelectboxColumn(
+            "Journal Tier", options=JOURNAL_TIER_OPTIONS, required=True),
+        "zenodo_status":  st.column_config.SelectboxColumn(
+            "Zenodo Status", options=ZENODO_STATUS_OPTIONS, required=True),
+        "zenodo_doi":     st.column_config.TextColumn("Zenodo DOI"),
+        "user_notes":     st.column_config.TextColumn("Notes"),
+        "domains":        st.column_config.TextColumn("Domains", disabled=True),
+        "platforms":      st.column_config.TextColumn("Platforms", disabled=True),
+    }
+
+    edited = st.data_editor(
+        df[EDIT_COLS],
+        column_config=col_config,
+        use_container_width=True,
+        height=460,
+        num_rows="fixed",
+        key="paper_editor",
     )
 
-    display_cols = ["filename", "title", "radicality_label", "has_formal_proof",
-                    "journal_tier", "domains", "platforms", "zenodo_status", "doi_link"]
-    st.dataframe(df[display_cols].rename(columns={
-        "filename": "File",
-        "title": "Title",
-        "radicality_label": "Radicality",
-        "has_formal_proof": "Formal Proof",
-        "journal_tier": "Journal Tier",
-        "domains": "Domains",
-        "platforms": "Platforms",
-        "zenodo_status": "Zenodo Status",
-        "doi_link": "DOI Link",
-    }), use_container_width=True, height=450)
+    st.caption(f"Showing {len(df)} of {len(df_full)} papers — edit any cell, then click Save below.")
 
-    st.caption(f"Showing {len(df)} papers")
+    if st.button("💾 Save All Changes", type="primary"):
+        from paper_classifier import build_assignment
+        saved = 0
+        original = {r["filename"]: r for r in rows}
+        for _, row in edited.iterrows():
+            fname = row["filename"]
+            orig  = original.get(fname, {})
+            new_rad    = int(row["radicality_score"])
+            new_tier   = row["journal_tier"]
+            new_proof  = bool(row["has_formal_proof"])
+            new_status = row["zenodo_status"]
+            new_doi    = row.get("zenodo_doi") or None
+            new_notes  = row.get("user_notes") or None
+            domains    = orig.get("domain_tags") or []
+            new_plat   = build_assignment(new_rad, domains)
+            updated = {
+                "filename":            fname,
+                "title":               orig.get("title"),
+                "radicality_score":    new_rad,
+                "has_formal_proof":    new_proof,
+                "journal_tier":        new_tier,
+                "platform_assignment": new_plat,
+                "domain_tags":         domains,
+                "zenodo_doi":          new_doi,
+                "zenodo_status":       new_status,
+                "user_notes":          new_notes,
+            }
+            upsert_classification(updated)
+            saved += 1
+        st.success(f"Saved {saved} papers.")
+        st.rerun()
 
     st.divider()
-    st.subheader("Edit a Paper Classification")
+    st.subheader("Edit Domain Tags for One Paper")
+    st.caption("Domain tags affect platform routing — use this to refine arXiv eligibility.")
 
     all_files = sorted([r["filename"] for r in rows])
-    selected = st.selectbox("Select paper to edit", all_files, index=0)
-
+    selected = st.selectbox("Select paper to edit domains", all_files, index=0, key="domain_edit_sel")
     paper = next((r for r in rows if r["filename"] == selected), None)
     if not paper:
         return
 
-    st.markdown(f"**{paper.get('title', selected)}**")
-
-    with st.form(f"edit_form_{selected}"):
-        c1, c2 = st.columns(2)
-        with c1:
-            new_rad = st.selectbox(
-                "Radicality Score",
-                options=[1, 2, 3, 4, 5],
-                index=(int(paper.get("radicality_score") or 3) - 1),
-                format_func=lambda x: RADICALITY_LABELS[x]
-            )
-            new_tier = st.selectbox(
-                "Journal Tier",
-                options=JOURNAL_TIER_OPTIONS,
-                index=JOURNAL_TIER_OPTIONS.index(paper.get("journal_tier") or "zenodo_only")
-            )
-            new_status = st.selectbox(
-                "Zenodo Status",
-                options=ZENODO_STATUS_OPTIONS,
-                index=ZENODO_STATUS_OPTIONS.index(paper.get("zenodo_status") or "unpublished")
-            )
-        with c2:
-            new_proof = st.checkbox(
-                "Has Formal Proof",
-                value=bool(paper.get("has_formal_proof"))
-            )
-            existing_domains = paper.get("domain_tags") or []
-            new_domains = st.multiselect(
-                "Domain Tags",
-                options=DOMAIN_OPTIONS,
-                default=[d for d in existing_domains if d in DOMAIN_OPTIONS]
-            )
-            new_doi = st.text_input("Zenodo DOI", value=paper.get("zenodo_doi") or "")
-            new_notes = st.text_input("Notes", value=paper.get("user_notes") or "")
-
-        submitted = st.form_submit_button("💾 Save Changes", type="primary")
-
-    if submitted:
-        from paper_classifier import build_assignment
-        new_platforms = build_assignment(new_rad, new_domains)
-        updated = {
-            "filename":            selected,
-            "title":               paper.get("title"),
-            "radicality_score":    new_rad,
-            "has_formal_proof":    new_proof,
-            "journal_tier":        new_tier,
-            "platform_assignment": new_platforms,
-            "domain_tags":         new_domains,
-            "zenodo_doi":          new_doi or None,
-            "zenodo_status":       new_status,
-            "user_notes":          new_notes or None,
-        }
-        upsert_classification(updated)
-        st.success(f"Saved! Platform assignment updated to: {', '.join(new_platforms)}")
-        st.rerun()
+    existing_domains = paper.get("domain_tags") or []
+    with st.form("domain_edit_form"):
+        new_domains = st.multiselect(
+            "Domain Tags",
+            options=DOMAIN_OPTIONS,
+            default=[d for d in existing_domains if d in DOMAIN_OPTIONS]
+        )
+        if st.form_submit_button("💾 Save Domain Tags"):
+            from paper_classifier import build_assignment
+            new_plat = build_assignment(int(paper.get("radicality_score") or 3), new_domains)
+            upsert_classification({
+                "filename":            selected,
+                "title":               paper.get("title"),
+                "radicality_score":    paper.get("radicality_score"),
+                "has_formal_proof":    paper.get("has_formal_proof"),
+                "journal_tier":        paper.get("journal_tier"),
+                "platform_assignment": new_plat,
+                "domain_tags":         new_domains,
+                "zenodo_status":       paper.get("zenodo_status"),
+            })
+            st.success(f"Domain tags saved. Platform: {', '.join(new_plat)}")
+            st.rerun()
 
 
 def _render_researchgate_tab():

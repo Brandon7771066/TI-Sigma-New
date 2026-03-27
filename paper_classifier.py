@@ -38,16 +38,22 @@ DOMAIN_LIST = [
 ]
 
 ARXIV_CATEGORIES = {
-    "mathematics":       "math.HO",
-    "physics":           "physics.gen-ph",
-    "computing":         "cs.AI",
-    "consciousness":     "q-bio.NC",
-    "neuroscience":      "q-bio.NC",
-    "biology":           "q-bio.OT",
+    "mathematics":        "math.HO",
+    "physics":            "physics.gen-ph",
+    "computing":          "cs.AI",
+    "consciousness":      "q-bio.NC",
+    "neuroscience":       "q-bio.NC",
+    "biology":            "q-bio.OT",
     "information_theory": "cs.IT",
-    "philosophy":        "physics.hist-ph",
-    "quantum":           "quant-ph",
-    "finance":           "q-fin.GN",
+    "philosophy":         "physics.hist-ph",
+    "quantum":            "quant-ph",
+    "finance":            "q-fin.GN",
+}
+
+ARXIV_ALLOWED_DOMAINS = {
+    "mathematics", "physics", "computing", "philosophy",
+    "quantum", "information_theory", "neuroscience", "consciousness",
+    "biology", "finance",
 }
 
 # ── Keyword rule sets ──────────────────────────────────────────────────────────
@@ -407,11 +413,16 @@ def extract_paper_snippet(md_path: Path, max_chars: int = 1500) -> tuple:
 
 
 def build_assignment(radicality: int, domains: list = None) -> list:
-    """Derive platform_assignment from radicality."""
+    """
+    Derive platform_assignment from radicality + domains.
+    arXiv requires radicality 1-3 AND at least one allowed domain
+    (math/physics/cs/philosophy/quantum/biology/neuroscience/consciousness/finance/info-theory).
+    """
     platforms = []
+    domain_set = set(domains or [])
     if radicality <= 2:
         platforms.append("researchgate")
-    if radicality <= 3:
+    if radicality <= 3 and bool(domain_set & ARXIV_ALLOWED_DOMAINS):
         platforms.append("arxiv")
     if radicality <= 4:
         platforms.append("zenodo_public")
@@ -449,7 +460,7 @@ def run_batch_classification(force: bool = False, batch_size: int = 50,
             "radicality_score":    result["radicality_score"],
             "has_formal_proof":    result["has_formal_proof"],
             "journal_tier":        result["journal_tier"],
-            "platform_assignment": build_assignment(result["radicality_score"]),
+            "platform_assignment": build_assignment(result["radicality_score"], result["domain_tags"]),
             "domain_tags":         result["domain_tags"],
             "zenodo_status":       result["zenodo_status"],
         }
@@ -482,6 +493,7 @@ def get_researchgate_list() -> list:
 
 
 def get_arxiv_list() -> list:
+    """Return papers eligible for arXiv: radicality 1-3 AND at least one arXiv-allowed domain."""
     conn = get_db()
     cur  = conn.cursor()
     cur.execute("""
@@ -495,15 +507,21 @@ def get_arxiv_list() -> list:
     cur.close()
     conn.close()
 
+    result = []
     for row in rows:
-        tags     = row.get("domain_tags") or []
+        tags      = row.get("domain_tags") or []
+        tag_set   = set(tags)
+        allowed   = tag_set & ARXIV_ALLOWED_DOMAINS
+        if not allowed:
+            continue
         category = "physics.gen-ph"
         for tag in tags:
             if tag in ARXIV_CATEGORIES:
                 category = ARXIV_CATEGORIES[tag]
                 break
         row["arxiv_category"] = category
-    return rows
+        result.append(row)
+    return result
 
 
 def get_zenodo_privacy_map() -> list:
@@ -532,7 +550,7 @@ def get_summary_counts() -> dict:
 
     total  = count()
     rg     = count("WHERE radicality_score <= 2")
-    arxiv  = count("WHERE radicality_score <= 3")
+    arxiv  = count("WHERE 'arxiv' = ANY(platform_assignment)")
     zpub   = count("WHERE radicality_score <= 4")
     zpriv  = count("WHERE radicality_score = 5")
     proofs = count("WHERE has_formal_proof = TRUE")
