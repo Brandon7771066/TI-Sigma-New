@@ -1,0 +1,51 @@
+{
+  "urb_ref": "537",
+  "series": "TI Sigma Mathematics",
+  "episode": 1,
+  "youtube_title": "The Collatz Conjecture Has a Hidden Clock — And We Found It",
+  "thumbnail_text": "COLLATZ CLOCK FOUND",
+  "tags": [
+    "Collatz Conjecture", "Tralse Informationalism", "TI Sigma", "Number Theory",
+    "Ternary Logic", "Mathematical Proof", "2-adic valuation", "Collatz sequence",
+    "Math", "Brandon Emerick", "Lean 4", "Formal Verification"
+  ],
+  "youtube_description": "The Collatz Conjecture has stumped mathematicians for nearly 90 years. Take any number. If it's even, halve it. If it's odd, multiply by 3 and add 1. Repeat. It always seems to reach 1 — but nobody has proved it.\n\nIn this video: we found a hidden binary clock inside the Collatz sequence. Specifically, we proved that consecutive single-step runs are governed by exactly one number: the 2-adic valuation of n+1. It counts down by one with every step, and when it hits 1, the pattern must break.\n\nProof: URB #537 (Zenodo, Apache 2.0)\nLean 4 formalization: URB #538\nFull paper: https://zenodo.org — search 'Brandon Emerick Tralse'\n\nTimestamps:\n0:00 Hook — what is the Collatz conjecture?\n0:40 The two types of steps\n1:40 The hidden clock: 2-adic valuation\n2:40 The theorem: run length = ν₂(n+1) − 1\n3:40 Why this matters\n4:20 Lean 4 verification",
+  "segments": [
+    {
+      "label": "Hook",
+      "script": "Pick any number. Say, 27. If it's odd, multiply by 3 and add 1. That gives 82. Now it's even, so halve it: 41. Odd again: 3 times 41 plus 1 is 124. Half of that is 62. Half again is 31. And so on. Every number anyone has ever tried eventually reaches 1. But nobody — not Erdős, not Terence Tao, nobody — has proved it always works. It's one of the most famous unsolved problems in mathematics. Today, we found something hiding inside it.",
+      "visual_note": "Animated Collatz sequence for n=27: show each step with the number appearing and bouncing. Graph the trajectory showing the chaotic peaks before descent. Bold text: '27 → 82 → 41 → 124 → 62 → 31 → ...' End on: '...→ 1 (after 111 steps)'",
+      "duration_s": 30
+    },
+    {
+      "label": "Two Types of Steps",
+      "script": "Here's something most people don't know about Collatz. When you hit an odd number, you don't just do 3n plus 1. You actually do 3n plus 1, then immediately divide by 2 as many times as possible — until you get an odd number again. Think of it as one 'compound step.' And that compound step can use one halving, two halvings, three halvings, or more. The number of halvings is called k. When k equals 1, we call it a single step. When k is 2 or more, we call it a big step. Here's what we found: there's a hidden number that counts how many consecutive single steps are possible. And when that number runs out, a big step is guaranteed.",
+      "visual_note": "Show the compound step: odd number → (3n+1) → divide by 2 repeatedly → new odd number. Highlight k=1 (one halving) in blue, k≥2 (multiple halvings) in gold. Show a sequence where k=1 appears 4 times in a row before a big k=3 step.",
+      "duration_s": 65
+    },
+    {
+      "label": "The Hidden Clock",
+      "script": "The hidden number is called ν₂ of n plus 1 — the 2-adic valuation of n+1. Don't let the name scare you. It just counts how many times 2 divides evenly into the number n plus 1. So if n equals 7, then n plus 1 equals 8, and 8 equals 2 to the power of 3, so ν₂ equals 3. What we proved is this: every time you take a single step — a k-equals-1 step — this hidden number decreases by exactly 1. It counts down like a clock. And when it reaches 1, the single-step regime is over. The very next step must be a big step. The maximum run of single steps starting at n is exactly ν₂ of n plus 1, minus 1.",
+      "visual_note": "Animated clock face with the ν₂ value displayed. Each k=1 step ticks the clock down by 1. When clock hits 1, a big BANG animation shows the k≥2 step. Show the formula: max k=1 run = ν₂(n+1) − 1 in gold text. Example: n=7, ν₂(8)=3, max run = 2.",
+      "duration_s": 65
+    },
+    {
+      "label": "The Proof",
+      "script": "The proof is cleaner than you might expect. When n is congruent to 3 mod 4 — meaning n plus 1 is divisible by 4 — the step is a single step. If you write n plus 1 as 4 times k, then after the step, the new value n-prime plus 1 equals 6 times k. Now: ν₂ of 4k equals 2 plus ν₂ of k. And ν₂ of 6k equals 1 plus ν₂ of k. The difference is exactly 1. The clock ticks down by one every time. This was verified computationally for every odd number up to 5,119 with zero exceptions. And the core theorem — called nu2_collatz_countdown — was formally proved in Lean 4, the interactive theorem prover, completely without any gaps.",
+      "visual_note": "Show the equation: n+1 = 4k → n'+1 = 6k. Then show: ν₂(4k) = 2 + ν₂(k) and ν₂(6k) = 1 + ν₂(k), so difference = 1. Show a green checkmark on each step. Then show the Lean 4 code snippet: 'theorem nu2_collatz_countdown' with 'sorry-free' badge.",
+      "duration_s": 60
+    },
+    {
+      "label": "Why This Matters",
+      "script": "This result does three things. First, it proves that k=1 runs are bounded by O of log n — they can never be astronomically long, because ν₂ is at most log₂ of n. Second, it guarantees that big steps always follow every k=1 run — the sequence can never get stuck in an infinite single-step loop. Third, and most interesting, it maps the Collatz trajectory onto a crystal structure: the k=1 runs are grain interiors, the big steps are grain boundaries, and the sequence is walking through a polycrystalline mathematical landscape. We're calling this the Collatz Polycrystal. And it connects — of all things — to the recently discovered aperiodic Einstein tiling. More on that in a future video.",
+      "visual_note": "Show a bar graph of run lengths for n=1 to 200, capped at ν₂(n+1)−1. All bars stay within the bound. Then show a beautiful crystalline lattice image transitioning into a tiling. The text: 'Every run ends. Every orbit descends.'",
+      "duration_s": 55
+    },
+    {
+      "label": "Call to Action",
+      "script": "The full proof is in URB #537, free on Zenodo. The Lean 4 formalization is in URB #538. Both are Apache 2.0. If you're a mathematician who wants to extend this — the remaining open question is whether the big steps always compensate for the single steps globally — that's the Cycle Convergence Conjecture. Link in the description. Subscribe for more proofs from Tralse Informationalism.",
+      "visual_note": "Show Zenodo logo, DOI link, GitHub/Lean file path. End card with subscribe animation and a preview image of the next video.",
+      "duration_s": 25
+    }
+  ]
+}

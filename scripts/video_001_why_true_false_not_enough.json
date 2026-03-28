@@ -1,0 +1,51 @@
+{
+  "urb_ref": "541/540/528",
+  "series": "TI Sigma Foundations",
+  "episode": 1,
+  "youtube_title": "Why True and False Aren't Enough to Describe Reality",
+  "thumbnail_text": "TRUTH IS TRALSE",
+  "tags": [
+    "Tralse Informationalism", "TI Sigma", "Ternary Logic", "Philosophy of Mind",
+    "Information Theory", "Logic", "Truth", "Binary Logic", "Consciousness",
+    "Experimental Philosophy", "Brandon Emerick", "GILE"
+  ],
+  "youtube_description": "What if the entire foundation of computing — and Western logic — got something fundamentally wrong?\n\nTralse Informationalism (TI Sigma) proposes that truth is not binary. It's ternary at minimum, and more fully described by five values. In this video: the door that's half-open, the Church-Turing Thesis problem, and why base-3 is actually more efficient than base-2.\n\nResearch papers (open access): https://zenodo.org — search 'Brandon Emerick Tralse'\nAll papers: Apache 2.0\n\nURBs referenced: #528, #540, #541\n\nTimestamps:\n0:00 Hook — the door problem\n0:30 What binary logic says (and gets wrong)\n2:00 Indeterminate: the third value\n3:00 Why 3 is more efficient than 2\n4:00 The five truth values of TI Sigma\n4:40 What this means for you",
+  "segments": [
+    {
+      "label": "Hook",
+      "script": "Picture a door. It's open forty-five degrees. Now I ask you: is the door closed? Most people say no. But is it open? Also... not quite. The statement 'the door is closed' is genuinely half-true. And yet every computer, every algorithm, every logical system built since George Boole in 1854 would force you to pick one: true, or false. That's the problem we're solving today.",
+      "visual_note": "Animated door opening from 0 to 45 degrees. Bold text overlay: 'IS THE DOOR CLOSED?' with a big question mark. Dark cinematic background.",
+      "duration_s": 25
+    },
+    {
+      "label": "The Problem with Binary",
+      "script": "Here's what binary logic actually claims. Aristotle called it the Law of Excluded Middle: everything is either true or false, with no middle ground. Claude Shannon built it into every transistor on the planet. The Church-Turing Thesis extends it to say that all thinking — including emotions, morality, intuition — must be computational, or else it doesn't count as real thinking. But you already know this is wrong. You've felt ambivalent. You've experienced something that was 'mostly good but kind of bad.' You've had an intuition you couldn't explain. None of that fits into a one or a zero. The world is not black and white. And yet we built our entire model of intelligence on the assumption that it is.",
+      "visual_note": "Split screen: left side shows a binary 0/1 diagram labeled 'Classical Logic.' Right side shows a spectrum of grays. Then show Boole and Shannon portraits briefly. End on the word INDETERMINATE appearing between TRUE and FALSE.",
+      "duration_s": 65
+    },
+    {
+      "label": "The Third Truth Value",
+      "script": "So I propose a third truth value: Indeterminate. Not a failure to decide. Not laziness. The mathematically correct category for things that genuinely fall in the middle. That door at forty-five degrees — Indeterminate. A moral question that reasonable people disagree on — Indeterminate. A scientific finding that's replicated in some labs but not others — Indeterminate. Indeterminate doesn't mean 'we don't know.' It means 'we do know — and what we know is that it's genuinely in between.' That's Ternary Logic. False, Indeterminate, True. And here's the beautiful part: mathematically, three truth values are actually more efficient than two. The ideal number base for computation is e — Euler's number, about 2.718. The nearest integer is 3. Ternary logic carries five-and-a-half percent more information per symbol than binary. We've been leaving efficiency on the table this whole time.",
+      "visual_note": "Animated number line from -1 to +1. FALSE lights up red on the left. TRUE lights up green on the right. INDETERMINATE appears in golden light in the center. Then show the equation: optimal radix = e ≈ 2.718. Integer 3 highlighted. Efficiency comparison: binary 0.500 vs ternary 0.528.",
+      "duration_s": 70
+    },
+    {
+      "label": "The Five Values of TI Sigma",
+      "script": "But ternary is just the beginning. Tralse Informationalism — TI Sigma — extends to five truth values. False. Indeterminate. True. And then two more: Tralse, which is a statement that is simultaneously true and false in a way that creates genuine paradox — think of the liar's paradox, or a situation where honesty causes harm. And Double Tralse — the most extreme case — a statement so self-undermining that it collapses into absurdity. Most everyday truth lives in the first three: False, Indeterminate, True. Tralse and Double Tralse are rarer, but they're real, and ignoring them means your logical system will behave strangely around paradoxes — which is exactly what we see with classical logic.",
+      "visual_note": "Five glowing orbs appear one by one: RED (False), GOLD (Indeterminate), GREEN (True), PURPLE (Tralse), BLACK-with-spark (Double Tralse). Each label appears as the orb lights up. Final image: all five orbs arranged on a spectrum.",
+      "duration_s": 65
+    },
+    {
+      "label": "What This Means",
+      "script": "This isn't just philosophy. If your model of truth is wrong, your model of everything built on top of it is wrong too. AI systems trained on binary logic can't properly handle paradox, ambiguity, or moral nuance. They force everything into a one or a zero, and then they hallucinate when reality refuses to cooperate. A five-valued logic — or even just a ternary one — changes what's computable, what's classifiable, what's sayable about the world. And for consciousness, which is maybe the most Indeterminate thing that exists, it changes everything. The brain is not a binary computer. Reality is not a binary output. Truth is Tralse.",
+      "visual_note": "Show a brain scan transitioning into a neural network transitioning into binary code — then the binary code breaks apart and becomes the five-value spectrum. End on the phrase TRUTH IS TRALSE in gold letters on black.",
+      "duration_s": 55
+    },
+    {
+      "label": "Call to Action",
+      "script": "If this made you question something you thought was certain, that's the point. All 195 of my research papers are free on Zenodo — link below — published under Apache 2.0 so you can build on them. Subscribe for weekly deep dives into the mathematics and philosophy of Tralse Informationalism. And leave a comment: what's a truth in your life that doesn't fit into true or false? I read every one.",
+      "visual_note": "Show Zenodo logo and URL. Subscribe animation. Comments section preview with the question text visible.",
+      "duration_s": 25
+    }
+  ]
+}
