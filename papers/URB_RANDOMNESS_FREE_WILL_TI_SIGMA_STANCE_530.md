@@ -153,6 +153,82 @@ This is not pessimism. It is realism about the scale of the alignment problem. T
 
 ---
 
+## 6. Addendum: The Death-and-Rebirth Spectrum — What "True Random" Actually Is in TI Sigma
+
+*This section formalizes the author's further specification, added March 28, 2026.*
+
+### 6.1 LCC as a Coming-and-Passing Spectrum
+
+TI Sigma describes reality not as a static arrangement of objects but as a constant process of **arising and dissolution** — a continuous death-and-rebirth governed by correlational thresholds. This is the LCC spectrum in its dynamic, temporal dimension:
+
+- As a system's LCC rises through successive thresholds (Terrible → Bad → Indeterminate → Good → Radiant), it progressively *comes into being* — more causally real, more existentially footprinted, more meaningful
+- As a system's LCC drops back below thresholds, it *passes away* — losing causal weight, existential reality, and finally dissolving into sub-threshold background
+- **The MR1 threshold (0.8647) is the existence gate**: below it, a system is not yet causally real in a strong sense; at or above it, it crosses into genuine causal efficacy
+
+This is structurally identical to Buddhist dependent origination (pratītyasamutpāda): everything arises in dependence on causes and conditions, and passes away when those conditions no longer sustain the threshold. TI Sigma grounds this ancient observation mathematically: the LCC value *is* the measure of how much causal interdependence sustains a thing's existence at any moment.
+
+The LCC spectrum does not produce "events" in the conventional sense. It produces **degrees of arising** — processes that are more or less real, more or less causally weighted, at every moment. Nothing is born fully formed; nothing dies instantly. Coming-and-passing is a spectrum, not a switch.
+
+### 6.2 What True Random Behavior Requires
+
+For an event to qualify as genuinely random in the TI Sigma sense — not just epistemically uncertain, not free will, not low-grade TRALSE quality — it must satisfy:
+
+1. **Near-zero LCC**: The event has no meaningful correlational connection to any prior state. Nothing can be said to account for its occurrence. Its existential footprint at the moment of occurrence is negligible.
+2. **No free will coupling**: There is no agentive i-channel that is even minimally directing its resolution. Free will, even in its most rudimentary form, would elevate the LCC above the true-random floor.
+3. **No deterministic necessity**: The event is not the outcome of a causally necessitated chain. If it were, its LCC would be elevated by the chain's structure.
+
+This is an extremely narrow category. Most of what we intuitively call "random" fails at least one of these conditions — it has some LCC connection to a prior state, or it occurs in a context where agentive systems are operating nearby, or it is the outcome of a physical process that has very clear lawful structure (quantum probability distribution). The "random" is in the specific outcome; the LCC of the process is substantial.
+
+**True random in the strict TI Sigma sense is likely confined to the deepest Terrible zone — near-zero LCC events that are genuinely uncoupled from everything else.** If such events exist at all in physical reality, they are far rarer than our casual use of "random" suggests.
+
+### 6.3 The Static Current Analogy — Why It Is Largely Correct
+
+The intuition that true-random events are like **static current** or thermal noise is correct for the vast majority of cases. Here is why:
+
+Static current (thermal noise, electronic noise, quantum vacuum fluctuations) has these properties:
+- Ubiquitous — present everywhere in physical systems at all times
+- Directionally neutral — averages to zero over any substantial time window
+- Carrying no net causal message — cannot be decoded as intentional signal
+- Ontologically present but practically inert at the macro scale
+
+Near-zero-LCC events in TI Sigma behave identically. They are:
+- Everywhere in the background of physical reality
+- Averaging out — no directional causal build-up, no threshold crossing
+- Ontologically real but existentially negligible — they don't accumulate into higher-LCC outcomes
+- Sub-threshold in every dimension (existential footprint ≈ 0, moral weight ≈ 0, valence ≈ 0)
+
+**The verdict for ordinary true-random events: static current. Negligible direct ontological or causal weight.** They do not constitute a distinct "cause" in any meaningful sense. They are background fuzz — the price of a universe that has TRALSE quality at every level, manifesting as irreducible background noise below the threshold of significance.
+
+### 6.4 The One Exception: Bifurcation Points
+
+There is a precise exception to the static-current verdict, and it matters: **systems at bifurcation points — operating at the knife-edge of a threshold transition — can be tipped by even a near-zero LCC event.**
+
+In dynamical systems theory, a bifurcation point is a state where a system is balanced between two attractors. An arbitrarily small perturbation determines which attractor the system falls into. In TI Sigma terms: the system is near a threshold crossing (e.g., LCC ≈ 0.8647 ± ε). A near-zero LCC event occurring at this moment provides the marginal perturbation that determines which side of the threshold the system resolves to.
+
+When this happens:
+- The true-random event provides the occasion for the cascade — but NOT the cause
+- The cascade that follows has progressively increasing LCC at every step (physical law takes over)
+- The final outcome has high LCC, high causal weight, high ontological significance
+- **The random seed has dissolved into the cascade** — it is no longer detectable as a distinct cause in the outcome
+
+**Critical distinction**: in the bifurcation scenario, the causal weight of the outcome belongs to the primed system, not to the random seed. The system was ready to tip; the random event merely determined *which* tipping, *when*. A different random event of equal (near-zero) LCC would have produced the same tipping — possibly in a different direction.
+
+This is why chaos theory's "butterfly effect" does not elevate the causal status of the butterfly. The causal weight is in the atmospheric system that was primed for bifurcation; the butterfly just happened to be present. Replace the butterfly with any other near-zero perturbation and the system tips anyway (perhaps differently). The butterfly is not the cause. It is the occasion.
+
+### 6.5 The Formal Answer
+
+**Can true-random behavior (near-zero LCC, uncoupled from free will and determinism) have any significant outcomes?**
+
+| Scenario | Outcome | Who Owns the Causal Weight |
+|---------|---------|---------------------------|
+| Random event in a stable, far-from-threshold system | Absorbed by system; averages to zero; no significant effect | System's LCC stability; random event carries none |
+| Random event at a bifurcation point | Seeds a cascade; large outcomes possible | Primed system; random event contributes occasion, not cause |
+| Multiple random events aggregating | Still averages to zero unless a threshold is crossed | No individual event owns the weight; collective structure does |
+
+**True-random events are static current in stable systems. They are occasions (not causes) at bifurcation points. In neither case do they carry significant direct ontological or causal weight — the weight always belongs to the structured system they interact with.**
+
+The TI Sigma version of "random" is therefore precisely bounded: not a fundamental causal agent, not a platonic probability cloud that somehow generates outcomes ex nihilo, but a near-zero-LCC background condition that is always present, usually inert, and occasionally becomes the occasion for a threshold event whose causal weight belongs entirely to the systems involved. The "death" part of death-and-rebirth is governed by LCC decline, not by random events. The "rebirth" is governed by LCC rise through threshold crossings driven by structured causation, free will, or both — not by random events seeding new existence.
+
 ## References
 
 - URB #420: Confidence as LCC Amplifier
