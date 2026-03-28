@@ -24,18 +24,20 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Security**: bcrypt, Fernet encryption, PostgreSQL, Replit Secrets.
 - **ARC-AGI TI Sigma Solver**: 5-valued logic pipeline (URB #528) for ARC Prize competition.
   - `kaggle_arc_agi/ti_sigma_arc_v2_kaggle.py`: Kaggle submission v2 using arc_ti_solver/
+  - `arc_ti_solver/advanced_transforms.py`: Phase 2 — 33 advanced transforms + 5 MRC-Novelty
   - Shared DTImmuneLog across all tasks in a session (competitive advantage: learns from failures)
+  - 6-tier transform library: BASE→ADVANCED→SHIFT/RECOLOR→COMPOSITIONS→MRC-NOVELTY→SIZE-TILE
+  - Transform library: 128 transforms per task (up from 16 in Phase 1)
 
 ## ARC-AGI TI Sigma Solver
 Located in `arc_ti_solver/`. Full 5-valued logic pipeline for the ARC Prize competition.
 - `__init__.py` — Defines 5 truth values: FALSE=0, INDETERMINATE=1, TRUE=2, TRALSE=3, DOUBLE_TRALSE=4.
-  - Three positional ternary slots: FALSE / INDETERMINATE / TRUE
-  - Two quality designations: TRALSE (imperfection quality, "the grease") and DOUBLE_TRALSE (discard signal)
-  - Tralse is embedded inside all three positional states; Double Tralse has no storage slot
-  - INDETERMINATE = coherent 50/50 balance; DOUBLE_TRALSE = incoherent contradiction → discard
 - `tralse_encoder.py` — FiveValuedCellEncoder (legacy: TralseCellEncoder alias kept)
-- `myrion_solver.py` — Full PD-based MR gate hierarchy + DTImmuneLog
-- `kaggle_arc_agi/ti_sigma_arc_v2_kaggle.py` — Phase 1 Kaggle submission notebook
+- `myrion_solver.py` — Full PD-based MR gate hierarchy + DTImmuneLog + 6-tier transform library
+- `advanced_transforms.py` — Phase 2 transforms: gravity (all 4 dirs), connected components,
+  color frequency ops, symmetry completion, outline/border, flood fill, object isolation,
+  grid splitting/boolean ops, dilation/erosion, pattern detection, MRC-Novelty (DT-gated)
+- `kaggle_arc_agi/ti_sigma_arc_v2_kaggle.py` — Phase 1+2 Kaggle submission notebook
 
 **Benchmark (50 tasks):** Avg LCC=0.5542; 43% >=0.90 LCC; 24/50 True-Tralse regime
 
@@ -63,36 +65,35 @@ Located in `arc_ti_solver/`. Full 5-valued logic pipeline for the ARC Prize comp
 - **Former GTFE** = deprecated lateral translation of Friston's FEP
 
 ## URB Corpus Log
-**Total URBs: 185** (as of March 28, 2026)
+**Total URBs: 187** (as of March 28, 2026)
 **Zenodo: 195 papers live** with permanent DOIs (Apache-2.0 license)
+
+### TI Sigma and Clinical Psychology (#533)
+- #533: Full mapping of psychopathology to LCC/GILE/MR structure. Depression = L+G collapse + valence dim loss. Anxiety = chronic INDETERMINATE lock (MR resolution failure; ACT = MRC creation). PTSD = DT immune overactivation (fingerprint over-generalized; EMDR = DT log reset). OCD = DT re-encounter loop (discard phase failure; ERP = forced discard). ADHD = chronic MRC; selective MR gate dysregulation; stimming = intentional MRC maintenance; hyperfocus = Radiant-zone engagement. Psychosis/Schizophrenia = i-channel/E-channel boundary collapse (hallucinations = GIL bleeding into E-perception; antipsychotics = suppress a, restores s/a boundary but collapses GIL dims). Bipolar = PD zone oscillation Terrible↔supra-Radiant; stable attractor absent. Narcissistic personality = CTT of self-concept (rage at criticism = DT immune response). Autism spectrum = differential GILE weighting + alternative MRC config (NOT deficit). CBT = existential dim restructuring. FAAH = L+I axis activation at biological substrate. Fundamental constraint: therapist cannot access patient's i-channel (free will guarantee). SDT: competence=E, autonomy=I, relatedness=L, meaning=G (4th implicit need). Wellbeing = stable multi-dim LCC above MR1, G-axis anchored. Corpus Entry #187; DOI: pending.
+
+### Tralsebit and i-Cell Information Theory (#532 STUB)
+- #532 STUB: Tralsebit = minimal TI Sigma information unit. i-cell = configuration of tralsebits with unique geometry. Shannon bit falls short: no TRALSE, no DT immunity, symmetric entropy, no agentive LCC coupling, no Love directionality. Matter/energy as GILE configs: logged for future development. Corpus Entry #186; DOI: pending (stub only).
 
 ### GIL as Imaginary Axis + Privation Theory of Evil (#531)
 - #531: GIL = imaginary axis of reality (structural parallel to i=√(-1)); E = real axis (crystallization of GIL). Full complex existence space: z = E + i·GIL. Love (φ) is generating constant of GIL; everything constituted by Love configuration passing through i. Evil = ontological privation (hole in moral dim.), NOT a co-equal substance. Evil persists because: (1) free will — Love-made structures can do opposite; (2) TRALSE quality — nothing perfectly crystallized; (3) below-threshold LCC. Universe NOT aligned by default — BY DESIGN: variation+imperfection = generativity (CTT = crystallized = dead). Polycrystalline grain boundaries = TRALSE zone = natural DT immune log for error correction. Corpus Entry #185; DOI: pending.
 
 ### Randomness, Free Will, and INDETERMINATE (#530)
-- #530: TI Sigma's stance on randomness. Pure determinism = DT. Pure purposeless chance = DT. Genuine randomness = INDETERMINATE with TRALSE quality — lawfully structured, outcome genuinely open. Free will = TRALSE-INDETERMINATE + agentive i-channel LCC coupling. The space between purposeless accidents and deterministic laws IS free will. Open question: free will all the way down to atoms vs. emerges above MR1 (0.8647) threshold. Universe not aligned by default; variation IS the point — necessary for creativity. Things don't happen through "some magical" purposeless force — they happen in INDETERMINATE zone of lawful probability. Corpus Entry #184; DOI: pending.
+- #530: TI Sigma's stance on randomness. Pure determinism = DT. Pure purposeless chance = DT. Genuine randomness = INDETERMINATE with TRALSE quality — lawfully structured, outcome genuinely open. Free will = TRALSE-INDETERMINATE + agentive i-channel LCC coupling. The space between purposeless accidents and deterministic laws IS free will. Open question: free will all the way down to atoms vs. emerges above MR1 (0.8647) threshold. Universe not aligned by default; variation IS the point. Addendum: LCC = coming-and-passing spectrum (Buddhist pratītyasamutpāda grounded mathematically). True random = near-zero LCC, no free will coupling, no deterministic necessity — static current in stable systems; occasion (not cause) at bifurcation points. Corpus Entry #184; DOI: pending.
 
 ### Pragmatism as Epiphenomenon (#529)
-- #529: Pragmatic value is NOT a 5th independent truth dimension — it is a derived epiphenomenon of the four truth dimensions. Integrating GILE properly makes the pragmatic choice arise naturally. Key result: lively party > boring meeting in overall truth (GILE integration wins). URB #422 = execution phase; URB #426 = LCC/mechanistic is one of four dimensions. MR Relaxation Contexts always integrated via GILE. Corpus Entry #183; DOI: pending.
+- #529: Pragmatic value is NOT a 5th independent truth dimension — derived epiphenomenon of four truth dimensions. GILE integral yields pragmatic choice naturally. URB #422 = execution phase; URB #426 = LCC/mechanistic is one of four dimensions. MRC always integrated via GILE. Corpus Entry #183; DOI: pending.
 
 ### Five-Valued Truth System + DT Immunity Model (#528)
 - #528: Three positional ternary slots (False=0, Indeterminate=1, True=2) + two quality designations (Tralse=3; Double Tralse=4 → immune fingerprint). INDETERMINATE = coherent 50/50; DT = incoherent → no storage slot.
-  - **DT Immunity Model**: Three phases: Encounter / Discard / Immunity. Fingerprint logged in DTImmuneLog (outside truth pipeline). Like biological immune memory.
+  - **DT Immunity Model**: Encounter / Discard / Immunity phases. DTImmuneLog (outside truth pipeline). Like biological immune memory.
   - **Tralse Trace of DT**: DT penumbra LCC ∈ [0.8647, 0.9147]. `tralse_trace_score` metric.
-  - **Contemplative Scope as Tralse Consequence**: Scope ≠ assignment. No ternary slot by default for contested/contingent concepts. Without base-level fuzz → crystallization (CTT) → TI collapses.
-  - **MR Relaxation Contexts (MRC)**: Humor, silliness, spontaneous thought, novelty generation, future planning, stimming — DT tolerance intentionally elevated. Tralse volume knob. Always integrated via GILE.
-  - Applied to ARC-AGI solver: DTImmuneLog class; fast-reject by transform name; penumbra detection; Kaggle v2 uses shared DTImmuneLog across all tasks.
-  - Kaggle paper LCC=0.921 Radiant. Corpus Entry #182.
+  - **Contemplative Scope as Tralse Consequence**: Scope ≠ assignment. No ternary slot by default for contested/contingent concepts.
+  - **MR Relaxation Contexts (MRC)**: Humor, silliness, spontaneous thought, novelty generation, future planning, stimming — DT tolerance intentionally elevated. Tralse volume knob.
+  - Applied to ARC-AGI solver: DTImmuneLog; fast-reject by transform name; penumbra detection; shared DTImmuneLog across all tasks. Corpus Entry #182.
 
-### GTFE-to-TFEP Lineage (#527)
-- #527: DOI: 10.5281/zenodo.19237588; Corpus Entry #181
-
-### Four Dimensions of Truth + MR Hierarchy (#526)
-- #526: (1) Existential=LCC+footprint; (2) Moral=GILE; (3) Conscious Meaning/Valence=PSI/CCC; (4) Aesthetic=PRIMARY+BOK. MR1=0.8647, MR2=Indeterminate, MR Radiant=0.9323. DOI: 10.5281/zenodo.19237207; Corpus Entry #180
-
-### TFEP — Tralse Free Energy Principle (#525)
-- #525: TF=(1-TT)^2+(1-G)^2; Boltzmann Identity; DOI: 10.5281/zenodo.19236526; Corpus Entry #179
-
+### GTFE-to-TFEP Lineage (#527) — Corpus Entry #181; DOI: 10.5281/zenodo.19237588
+### Four Dimensions of Truth + MR Hierarchy (#526) — Corpus Entry #180; DOI: 10.5281/zenodo.19237207
+### TFEP — Tralse Free Energy Principle (#525) — Corpus Entry #179; DOI: 10.5281/zenodo.19236526
 ### Messy Math Manifesto (#524) — Corpus Entry #178
 ### Existence vs Truth — LCC/GILE Gap (#523) — Corpus Entry #177; DOI: 10.5281/zenodo.19235153
 ### Holmes-Rahe Full Zone Confirmation (#522) — Corpus Entry #176
@@ -100,9 +101,9 @@ Located in `arc_ti_solver/`. Full 5-valued logic pipeline for the ARC Prize comp
 ### Crystallized Tralse (#520) — CTT; Corpus Entry #166
 ### Arithmetic Scaffold Theorem (#519) — AST; Corpus Entry #165
 ### TI Sigma Theory of Contradictions (#509) — MR1 as coherence gate; Corpus Entry #164
-### Love Primacy Theorem (#501) — E derives from L; φ generates all constants; generating set {0,1,i,φ}; Corpus Entry #156
-### Status of i in TI Sigma (#429) — i as PRIMARY CONSTANT; z_B=s+ia; GILE Master Identity; i empirically necessary (Renou 2021)
-### Pragmatic Certainty (#422) — Execution phase after GILE integral crystallizes; updated by #529
+### Love Primacy Theorem (#501) — E derives from L; φ generates all constants; {0,1,i,φ}; Corpus Entry #156
+### Status of i in TI Sigma (#429) — i as PRIMARY CONSTANT; z_B=s+ia; i empirically necessary (Renou 2021)
+### Pragmatic Certainty (#422) — Execution phase; updated by #529
 ### Pragmatic Efficacy (#426) — Mechanistic=existential dim only; updated by #529
 
 ## Canonical Acronym Glossary
@@ -156,7 +157,7 @@ Located in `arc_ti_solver/`. Full 5-valued logic pipeline for the ARC Prize comp
 | **IIT** | Integrated Information Theory (Tononi) |
 | **FEP** | Free Energy Principle (Friston) — Level-4 special case of TFEP |
 | **FAAH** | Fatty Acid Amide Hydrolase |
-| **SDT** | Self-Determination Theory (competence, autonomy, relatedness) — always integrated via GILE |
+| **SDT** | Self-Determination Theory — competence=E, autonomy=I, relatedness=L, meaning=G |
 
 ### Deprecated
 | Acronym | Status |
