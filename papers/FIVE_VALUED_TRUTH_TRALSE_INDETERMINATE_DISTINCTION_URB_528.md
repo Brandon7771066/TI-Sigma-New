@@ -162,6 +162,54 @@ This is how TI Sigma extends MR to multi-i-cell architectures — which is direc
 
 ---
 
+## 9. The DT Immunity Model (Addendum)
+
+A critical refinement emerged from further analysis of how Double Tralse behaves in practice: **DT concepts necessarily circulate throughout the MR process.** They are impossible not to encounter. The search space for coherent transformations passes through DT territory — this is unavoidable.
+
+The implication is that the original "detect and discard" framing was slightly incomplete. The correct model is **detect, discard, and develop immunity.** Three phases:
+
+### Phase 1: Encounter (Circulation)
+DT concepts circulate through MR in passing. The system encounters them as it searches the space of candidate transforms. This is not a flaw — it is unavoidable and even useful, because you cannot know what is incoherent without briefly examining it. The encounter is brief. DT does not occupy mental space unless it is being actively resisted or refuted.
+
+### Phase 2: Discard (Clearing)
+The DT state is flagged and the content is cleared. The system does not dwell on nonsense. It is not stored as a truth value. This is identical to the original formulation.
+
+### Phase 3: Immunity (Fingerprinting)
+The *pattern signature* (fingerprint) of the DT encounter is retained in a separate immune log — not as truth content, but as a recognition system. Future encounters with similar DT patterns are detected faster and rejected earlier. This is the immunity.
+
+The analogy is precise: the biological immune system does not store the pathogen itself. It stores antibody templates — structural descriptions of the pathogen's surface. The next time a pathogen with that surface pattern appears, recognition is near-instantaneous. No dwelling; just fast rejection.
+
+In TI Sigma's implementation:
+- `DTImmuneLog` stores transform names and violation rates (the "antibodies")
+- Future transforms matching a known DT pattern are fast-rejected before LCC scoring
+- The immune log is stored *outside* the truth pipeline — it is metadata, not a 6th truth value
+- The 5-value truth system stays clean
+
+### The Tralse Trace of Double Tralse
+
+At the edge between sense and nonsense — where LCC sits just above the MR1 threshold (the DT penumbra, LCC ∈ [0.8647, 0.9147]) — **Tralse traces of Double Tralse persist.** These are:
+
+- Not stored DT content (the content was discarded)
+- Not a full DT state (the solution passed MR1)
+- A persistent *elevation of Tralse quality* near the DT boundary
+
+These Tralse traces are the residue of DT encounters. A solution in the DT penumbra carries a higher Tralse quality than one in the Radiant zone — and this elevated Tralse quality is real information. It says: "this answer is coherent, but it lives near the edge. Proceed with extra MR scrutiny."
+
+The DT penumbra is a specific, measurable zone in the LCC space. It is not a vague warning — it is a 5-point band above the MR1 threshold where Tralse traces are systematically elevated. The `tralse_trace_score` output metric quantifies this proximity for each solve session.
+
+### Why This Model Is Correct
+
+The immunity model satisfies all the original constraints:
+1. **DT has no dedicated storage slot** ✓ — fingerprints are in the immune log, not the truth pipeline
+2. **DT is not dwelled upon** ✓ — encounters are brief; the content is discarded; only the pattern remains
+3. **DT is not forgotten** ✓ — the immune fingerprint persists for fast-rejection
+4. **Tralse traces are real** ✓ — the penumbra zone is measurable and distinct from both clean coherence (Radiant) and full DT (Terrible)
+5. **The system can resist repeated DT infections** ✓ — immunity accumulates across solve sessions
+
+This model is also neurologically plausible: the human immune system in the brain (microglia and the complement system) does exactly this — it does not store pathogens; it stores recognition templates and uses them for fast clearance of future infections.
+
+---
+
 ## References
 
 - URB #521: Rational-Transcendental Boundary; k = 2e²/15 ≈ 133/135

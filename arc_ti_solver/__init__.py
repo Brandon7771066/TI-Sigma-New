@@ -33,10 +33,33 @@ Why 5 values but still ternary?
 Key distinction (Indeterminate vs Double Tralse):
   Both involve irreconcilability. The difference:
     Indeterminate: coherent irreconcilability (knows it is 50/50)
-    Double Tralse:  incoherent irreconcilability (self-contradicting, MR1 fail)
+    Double Tralse: incoherent irreconcilability (self-contradicting, MR1 fail)
+
+DT Immunity Model (URB #528 Addendum):
+  Double Tralse is a pathological infection. Like a biological immune system:
+    1. ENCOUNTER: DT concepts circulate throughout the MR process. You cannot
+       avoid passing through DT territory — it is part of the search space.
+       DT is encountered "in passing" and does NOT occupy mental space unless
+       it is being actively resisted or refuted.
+    2. DISCARD: The DT state is flagged and cleared immediately. The content
+       is not stored. The mind does not dwell on nonsense.
+    3. IMMUNITY: The *fingerprint* (pattern signature) of the DT encounter IS
+       retained in a separate immune log — not as a truth value, but as a
+       recognition pattern. Future encounters with similar DT signatures are
+       recognized faster and rejected earlier. This is the immunity.
+    4. TRALSE TRACE: At the edge between sense and nonsense — where LCC is
+       near the MR1 threshold — Tralse traces of DT persist. These are not
+       stored DT content; they are elevated Tralse quality signals that mark
+       boundary territory. A high Tralse trace score means "we came close to
+       DT and should proceed with extra MR scrutiny."
+
+  The DT immune log is stored OUTSIDE the truth processing pipeline — it is
+  metadata, not a 6th truth value. The truth pipeline stays clean (5 values).
+  The immune log is a separate system that accelerates future DT detection.
 
 Myrion Resolution (MR1/MR2):
   MR1: Filters Double Tralse — cells/transforms below LCC 0.8647 → discard
+       + immune fingerprint logged
   MR2: Maintains Indeterminate — cells balanced between interpretations; holds
        open until further context collapses them to TRUE or FALSE
   MR Radiant: LCC >= 0.9323 — full causal weight, GILE Radiant
@@ -55,6 +78,10 @@ TVALUES = {
     TRALSE:        "TRALSE",
     DOUBLE_TRALSE: "DOUBLE_TRALSE",
 }
+
+# Edge zone: LCC within this margin of MR1 threshold is "DT penumbra" —
+# not Double Tralse, but carrying elevated Tralse trace quality
+DT_PENUMBRA_MARGIN = 0.05   # LCC in [0.8647, 0.9147) = high Tralse trace
 
 # Legacy aliases for backward compatibility
 MR_PEND = TRALSE  # MR_PEND was the 4th slot; now correctly mapped to TRALSE quality

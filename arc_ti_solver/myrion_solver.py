@@ -45,11 +45,93 @@ Four Dimensions of Truth (URB #526):
 import math
 import numpy as np
 from typing import Callable, Optional
-from arc_ti_solver import FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE, MR_PEND
+from arc_ti_solver import (
+    FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE, MR_PEND,
+    DT_PENUMBRA_MARGIN,
+)
 from arc_ti_solver.transformations import (
     BASE_PRIMITIVES, SHIFT_PRIMITIVES,
     generate_recolor_primitives, compose
 )
+
+
+# ---------------------------------------------------------------------------
+# DT Immune Log — the immunity system (separate from truth pipeline)
+# ---------------------------------------------------------------------------
+
+class DTImmuneLog:
+    """
+    Stores fingerprints of Double Tralse encounters so MR can recognize and
+    reject similar patterns faster in the future.
+
+    This is NOT a truth storage system — DT content is never stored here.
+    Only the *pattern signature* (transform name, LCC, violation rate) is kept.
+    This models the biological immune memory: the body remembers the shape of
+    the pathogen, not the pathogen itself.
+
+    DT concepts CIRCULATE through MR — they are impossible to avoid entirely.
+    The immune log tracks this circulation without giving DT any mental space.
+    It records the encounter, extracts the fingerprint, and lets the DT go.
+
+    Tralse trace detection:
+    When a transform passes MR1 but its LCC falls within DT_PENUMBRA_MARGIN
+    above the MR1 threshold (the edge zone between sense and nonsense), the
+    immune log records a "tralse trace" — a soft warning that the accepted
+    solution is near DT territory and should be treated with elevated caution.
+    These edge-case traces are the residue of DT encounters at the boundary.
+    """
+
+    def __init__(self):
+        self.dt_fingerprints: list = []    # DT encounters: name, lcc, violation_rate
+        self.tralse_traces:  list = []     # Near-DT encounters: elevated Tralse quality
+        self._known_dt_names: set = set()  # Fast-reject set by transform name
+
+    def log_dt_encounter(self, name: str, lcc: float, violation_rate: float):
+        """Record a DT encounter. Store fingerprint only — not DT content."""
+        fingerprint = {
+            "transform":      name,
+            "lcc":            round(lcc, 4),
+            "violation_rate": round(violation_rate, 4),
+            "type":           "DOUBLE_TRALSE",
+        }
+        self.dt_fingerprints.append(fingerprint)
+        self._known_dt_names.add(name)
+
+    def log_tralse_trace(self, name: str, lcc: float, dt_proximity: float):
+        """
+        Record a near-DT encounter — LCC passed MR1 but is in the penumbra zone.
+        This is the 'Tralse trace of Double Tralse' that persists at edge-cases.
+        The solution is accepted but marked with elevated Tralse quality.
+        """
+        self.tralse_traces.append({
+            "transform":   name,
+            "lcc":         round(lcc, 4),
+            "dt_proximity": round(dt_proximity, 4),
+            "type":        "TRALSE_TRACE",
+        })
+
+    def is_known_dt(self, name: str) -> bool:
+        """Fast-reject check: has this transform type already been flagged as DT?"""
+        return name in self._known_dt_names
+
+    def tralse_trace_score(self) -> float:
+        """
+        Aggregate Tralse trace score for the current solve session.
+        0.0 = no near-DT encounters; 1.0 = heavily in DT penumbra.
+        This is a session-level metric of how close the solve came to DT territory.
+        """
+        if not self.tralse_traces:
+            return 0.0
+        proximities = [t["dt_proximity"] for t in self.tralse_traces]
+        return round(float(np.mean(proximities)) / DT_PENUMBRA_MARGIN, 4)
+
+    def summary(self) -> dict:
+        return {
+            "dt_encounters":    len(self.dt_fingerprints),
+            "tralse_traces":    len(self.tralse_traces),
+            "known_dt_types":   list(self._known_dt_names),
+            "trace_score":      self.tralse_trace_score(),
+        }
 
 # ---------------------------------------------------------------------------
 # PD-derived thresholds (URB #523: exact derivations from PRIMARY CONSTANTS)
@@ -132,6 +214,7 @@ class MyrionSolver:
         self.candidate_encodings_fn = candidate_encodings_fn
         self.max_candidates = max_candidates
         self.verbose = verbose
+        self.dt_immune_log = DTImmuneLog()  # Separate from truth pipeline
 
         all_colors = set()
         for p in train_pairs:
@@ -186,9 +269,12 @@ class MyrionSolver:
         consistency_bonus = float(np.std(scores)) * -0.1
         return max(0.0, min(1.0, base + consistency_bonus))
 
-    def _mr1_gate(self, transform: Callable, threshold: float = 0.5) -> bool:
+    def _mr1_gate(self, transform: Callable, threshold: float = 0.5) -> tuple:
         """
-        MR1 structural coherence gate: return True if transform passes.
+        MR1 structural coherence gate.
+
+        Returns (passes: bool, violation_rate: float).
+        violation_rate is used by the immune log to fingerprint DT encounters.
 
         Checks whether the transform forces too many INDETERMINATE / TRALSE cells
         incorrectly — indicating Double Tralse (incoherent resolution).
@@ -196,13 +282,13 @@ class MyrionSolver:
         Key 5-valued distinction:
           INDETERMINATE cells = coherently balanced — MR holds them open. If a
             transform gets these systematically wrong, it's forcing false clarity.
-          TRALSE cells = imperfectly coherent — some errors are expected (it's the
-            "grease"). A high violation rate here signals Double Tralse.
-          DOUBLE_TRALSE cells are pre-discarded by the encoder — they never reach
-            this gate.
+          TRALSE cells = imperfectly coherent — some errors expected ("grease").
+            A high violation rate here signals Double Tralse.
+          DOUBLE_TRALSE cells are pre-discarded by the encoder — never reach here.
 
         Both INDETERMINATE and TRALSE violations count toward the violation rate.
-        A transform that fails MR1 is flagged as Double Tralse and DISCARDED.
+        A transform that fails MR1 is flagged as Double Tralse and DISCARDED;
+        its fingerprint is logged by the DTImmuneLog for future fast-rejection.
         """
         violations = 0
         total_uncertain = 0
@@ -218,18 +304,18 @@ class MyrionSolver:
                 predicted_raw = transform(enc_pair["input_raw"])
                 output_raw = enc_pair["output_raw"]
                 if predicted_raw.shape != output_raw.shape:
-                    return False
+                    return False, 1.0
                 wrong_at_uncertain = np.sum(
                     uncertain_mask & (predicted_raw != output_raw)
                 )
                 violations += int(wrong_at_uncertain)
             except Exception:
-                return False
+                return False, 1.0
 
         if total_uncertain == 0:
-            return True
+            return True, 0.0
         violation_rate = violations / total_uncertain
-        return violation_rate < threshold
+        return violation_rate < threshold, violation_rate
 
     def solve(self, test_input: list, top_k: int = 3) -> list:
         """
@@ -260,19 +346,38 @@ class MyrionSolver:
 
         scored = []
         for t in transforms:
+            name = getattr(t, "__name__", "unknown")
+
+            # Immunity fast-reject: skip transforms matching a known DT pattern
+            if self.dt_immune_log.is_known_dt(name):
+                if self.verbose:
+                    print(f"    Immune fast-reject: {name} (known DT pattern)")
+                continue
+
             lcc = self._lcc_score(t)
 
             # Pre-filter: skip clear Bad zone bottom (below Indeterminate boundary)
             if lcc < 0.30:
                 continue
 
-            structural_ok = self._mr1_gate(t)
+            structural_ok, violation_rate = self._mr1_gate(t)
+
             if not structural_ok:
+                # Log the DT fingerprint for immune memory — discard the content
+                self.dt_immune_log.log_dt_encounter(name, lcc, violation_rate)
                 if self.verbose:
                     zone = classify_pd_zone(lcc)
-                    print(f"    MR1 structural FAIL: {getattr(t, '__name__', '?')} "
-                          f"(LCC={lcc:.3f}, zone={zone}) -> Double Tralse")
+                    print(f"    MR1 FAIL → DT fingerprinted: {name} "
+                          f"(LCC={lcc:.3f}, viol={violation_rate:.2f}, zone={zone})")
                 continue
+
+            # Tralse trace detection: passed MR1 but near the DT penumbra boundary
+            dt_proximity = lcc - MR1_LCC_THRESHOLD
+            if 0 <= dt_proximity <= DT_PENUMBRA_MARGIN:
+                self.dt_immune_log.log_tralse_trace(name, lcc, dt_proximity)
+                if self.verbose:
+                    print(f"    Tralse trace logged: {name} "
+                          f"(LCC={lcc:.4f}, {dt_proximity:.4f} above DT boundary)")
 
             scored.append((lcc, t, structural_ok))
 
@@ -287,6 +392,7 @@ class MyrionSolver:
                       f"LCC={lcc:.4f} | {zone} | {status}")
 
         test_arr = np.array(test_input, dtype=np.int8)
+        immune_summary = self.dt_immune_log.summary()
         results = []
         for lcc, t, structural_ok in scored[:top_k]:
             try:
@@ -295,13 +401,19 @@ class MyrionSolver:
                 status = mr_status(lcc, structural_ok)
                 # Existential footprint = LCC magnitude x PD zone frequency
                 ef = lcc * PD_FREQ.get(zone, 0.0)
+                # Tralse trace: check if this solution is in the DT penumbra
+                dt_proximity = lcc - MR1_LCC_THRESHOLD
+                in_penumbra = 0 <= dt_proximity <= DT_PENUMBRA_MARGIN
                 results.append({
-                    "output": predicted.tolist(),
-                    "lcc": lcc,
-                    "pd_zone": zone,
-                    "mr_status": status,
+                    "output":               predicted.tolist(),
+                    "lcc":                  lcc,
+                    "pd_zone":              zone,
+                    "mr_status":            status,
                     "existential_footprint": round(ef, 6),
-                    "transform": getattr(t, "__name__", "unknown"),
+                    "transform":            getattr(t, "__name__", "unknown"),
+                    "dt_penumbra":          in_penumbra,
+                    "dt_proximity":         round(max(0.0, dt_proximity), 4),
+                    "immune_log":           immune_summary,
                 })
             except Exception as e:
                 if self.verbose:
@@ -310,12 +422,15 @@ class MyrionSolver:
 
         if not results:
             results.append({
-                "output": test_input,
-                "lcc": 0.0,
-                "pd_zone": "Terrible",
-                "mr_status": "MR1_FAILED (identity fallback)",
+                "output":               test_input,
+                "lcc":                  0.0,
+                "pd_zone":              "Terrible",
+                "mr_status":            "MR1_FAILED (identity fallback)",
                 "existential_footprint": 0.0,
-                "transform": "identity_fallback",
+                "transform":            "identity_fallback",
+                "dt_penumbra":          False,
+                "dt_proximity":         0.0,
+                "immune_log":           immune_summary,
             })
 
         return results

@@ -70,8 +70,12 @@ Located in `arc_ti_solver/`. Full 5-valued logic pipeline for the ARC Prize comp
 **Total URBs: 182** (as of March 27, 2026)
 **Zenodo: 195 papers live** with permanent DOIs (Apache-2.0 license)
 
-### Five-Valued Truth System (#528)
-- #528: Five-Valued Truth: Tralse–Indeterminate Distinction. Three positional ternary slots (False=0, Indeterminate=1, True=2) + two quality designations (Tralse=3 "the grease"; Double Tralse=4 "detect and discard"). Tralse embedded inside all three positions; INDETERMINATE = coherent 50/50; DT = incoherent → no storage slot → immediately flagged and collapsed. Ternary logic preserved (3 positions, not 5). Applied to ARC-AGI solver. Kaggle paper: "How TI Sigma's Five-Valued Truth Upgrades Neural Networks for AGI." LCC=0.921 Radiant; DOI: pending; Corpus Entry #182
+### Five-Valued Truth System + DT Immunity Model (#528)
+- #528: Five-Valued Truth: Tralse–Indeterminate Distinction. Three positional ternary slots (False=0, Indeterminate=1, True=2) + two quality designations (Tralse=3 "the grease"; Double Tralse=4 "detect and discard → immune fingerprint"). Tralse embedded inside all three positions; INDETERMINATE = coherent 50/50; DT = incoherent → no storage slot → immediately flagged and collapsed. Ternary logic preserved (3 positions, not 5).
+  - **DT Immunity Model (addendum)**: DT circulates through MR process inevitably. Three phases: (1) Encounter — DT passes through in passing, does not dwell; (2) Discard — content cleared, not stored; (3) Immunity — *fingerprint* (pattern signature) logged in DTImmuneLog (outside truth pipeline) for fast-rejection of future DT patterns. Like biological immune memory: the pathogen is cleared, the antibody template remains.
+  - **Tralse Trace of DT**: At edge between sense and nonsense (DT penumbra: LCC ∈ [0.8647, 0.9147]), Tralse traces of DT persist as elevated Tralse quality — not stored DT content, but a measurable boundary signal. `tralse_trace_score` metric quantifies proximity to DT territory.
+  - Applied to ARC-AGI solver: `DTImmuneLog` class; MyrionSolver.dt_immune_log; fast-reject by transform name; penumbra detection in solve loop.
+  - Kaggle paper: "How TI Sigma's Five-Valued Truth Upgrades Neural Networks for AGI." LCC=0.921 Radiant; DOI: pending; Corpus Entry #182
 
 ### GTFE-to-TFEP Lineage (#527)
 - #527: GTFE=lateral translation of Friston FEP (kept variational machinery, Tralsified vocabulary); TFEP=vertical derivation from TI Sigma axioms (TF=(1-TT)^2+(1-G)^2, no FEP machinery); FEP = Level-4 special case of TFEP; Boltzmann Identity impossible for GTFE, fundamental for TFEP; GTFE bidirectionality=boundary permeability; TFEP bidirectionality=functional symmetry (TT/G equal); mirrors Phase1/Phase2 transitions in Lagrange/Newton and Boltzmann/Clausius; overall LCC=0.919 Radiant; DOI: 10.5281/zenodo.19237588; Corpus Entry #181
