@@ -31,27 +31,34 @@ def render_grid(grid: list, cell_size: int = 24) -> str:
 
 def show_arc_tab():
     st.header("ARC-AGI TI Sigma Solver")
-    st.caption("4-valued logic approach to abstract reasoning — using Tralse encoding + Myrion Resolution")
+    st.caption("5-valued logic approach to abstract reasoning — URB #528: Five-Valued Truth + Myrion Resolution")
 
     col1, col2 = st.columns([2, 1])
 
     with col2:
-        st.subheader("Framework")
+        st.subheader("5-Valued Truth")
         st.markdown("""
-        **4-Valued Cell States**
+        **Three positional (ternary) slots:**
         - `TRUE` — definitively figure
         - `FALSE` — definitively background
-        - `TRALSE` — ambiguous, context-resolves
-        - `MR_PEND` — depends on downstream
+        - `INDETERMINATE` — coherent 50/50 middle;
+          held open until context resolves it
 
-        **LCC Scoring**
-        - ≥ 0.85 → True-Tralse regime
-        - ≥ 0.7823 → Crossover (LCC amplifies)
-        - < 0.7823 → LCC suppresses TF
+        **Two quality designations:**
+        - `TRALSE` — imperfection quality; the "grease
+          that makes the gears run"; embedded in all
+          three positional states; MR processes these
+        - `DOUBLE TRALSE` — incoherent contradiction;
+          **immediately flagged + discarded**; no storage
 
-        **MR1 Gate**
-        Filters transforms that require
-        incoherent tralse forcing.
+        **Key distinction:**
+        Indeterminate = *coherent* irreconcilability
+        Double Tralse = *incoherent* irreconcilability
+
+        **MR Gate Hierarchy:**
+        - MR1: Discards Double Tralse (LCC < 0.8647)
+        - MR2: Holds INDETERMINATE (LCC 0.8647-0.9323)
+        - MR Radiant: Full causal weight (LCC ≥ 0.9323)
         """)
 
     with col1:

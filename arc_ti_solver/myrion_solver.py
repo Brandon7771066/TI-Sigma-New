@@ -1,29 +1,41 @@
 """
 Myrion Resolution Solver
 ========================
-TI Sigma coherence gate system — updated with PD-derived thresholds (URBs #521-523).
+TI Sigma coherence gate system — updated for 5-valued truth (URB #528) and
+PD-derived thresholds (URBs #521-523).
+
+Five-Valued Truth in MR Context:
+  FALSE / INDETERMINATE / TRUE = the three positional ternary slots
+  TRALSE       = imperfection quality marker on any state; MR processes these
+                 carefully but does NOT discard them
+  DOUBLE_TRALSE = incoherence detection → IMMEDIATELY flagged and discarded;
+                  the solver never stores DT states; it collapses them to their
+                  nearest coherent positional value before proceeding
 
 MR Gate Hierarchy:
-  MR1 (Existence Gate): Filters Double Tralse — claims/transforms that require
-      incoherent tralse forcing. LCC threshold: 0.8647 (= 1 - 1/e^2, Terrible zone
-      boundary). Failing MR1 -> Double Tralse (Terrible PD zone).
+  MR1 (Existence Gate): Filters Double Tralse — transforms that require
+      incoherent resolution (violation rate >= threshold at INDETERMINATE/TRALSE
+      cells) are flagged as Double Tralse and skipped. LCC threshold: 0.8647
+      (= 1 - 1/e^2). Failing MR1 → Double Tralse (Terrible PD zone) → DISCARDED.
 
-  MR2 (Truth Gate): Classifies Indeterminate states. A transform that passes MR1
-      but scores LCC in [0.8647, 0.9323) is in the Indeterminate zone -- the
-      "45-degree door" state. A potentially resolved state that is equally open and
-      closed. May or may not resolve via further MRs. PD frequency: 20%.
+  MR2 (Truth Gate): Maintains INDETERMINATE states. A transform that passes MR1
+      but scores LCC in [0.8647, 0.9323) is in the Indeterminate zone — the
+      "45-degree door." Coherent irreconcilability. May resolve with more context.
+      INDETERMINATE ≠ TRALSE: Indeterminate is a coherent middle position;
+      Tralse marks imperfection within any position. Both are different from DT.
+      PD frequency: 20%.
 
-  MR Radiant (GILE Gate): LCC >= 0.9323 (= 1 - 1/(2e^2), GILE Radiant threshold).
-      Transform is in Good or Great PD zone. Full causal weight granted.
+  MR Radiant (GILE Gate): LCC >= 0.9323 (= 1 - 1/(2e^2)).
+      Transform is in Good or Great zone. Full causal weight granted.
 
-PD Zone Boundaries (URB #523 exact derivations from PRIMARY CONSTANTS):
-  Great:         LCC >= 0.9323  (GILE Radiant threshold = 1 - 1/(2e^2), P=1/15)
-  Good:          0.8647 <= LCC < 0.9323  (above causation, not yet Radiant, P=3/15)
-  Indeterminate: 0.70   <= LCC < 0.8647  (MR2 state; 45-degree door, P=3/15)
-  Bad:           0.30   <= LCC < 0.70    (below causation; minimization needed, P=6/15)
-  Terrible:      LCC < 0.30              (Double Tralse risk; MR1 failure zone, P=2/15)
+PD Zone Boundaries (URB #523, exact from PRIMARY CONSTANTS):
+  Great:         LCC >= 0.9323  (MR Radiant, P=1/15)
+  Good:          0.8647 <= LCC < 0.9323  (above causation, P=3/15)
+  Indeterminate: 0.70   <= LCC < 0.8647  (MR2 zone; 45-degree door, P=3/15)
+  Bad:           0.30   <= LCC < 0.70    (below causation, P=6/15)
+  Terrible:      LCC < 0.30              (Double Tralse risk; discard, P=2/15)
 
-Truth has 4 dimensions -- all governed by PD zone values (URB #526):
+Four Dimensions of Truth (URB #526):
   1. Existential (LCC + existential footprint = frequency x magnitude)
   2. Moral (GILE alignment)
   3. Conscious Meaning/Valence (PSI/CCC resonance)
@@ -33,7 +45,7 @@ Truth has 4 dimensions -- all governed by PD zone values (URB #526):
 import math
 import numpy as np
 from typing import Callable, Optional
-from arc_ti_solver import FALSE, TRALSE, TRUE, MR_PEND
+from arc_ti_solver import FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE, MR_PEND
 from arc_ti_solver.transformations import (
     BASE_PRIMITIVES, SHIFT_PRIMITIVES,
     generate_recolor_primitives, compose
@@ -178,33 +190,45 @@ class MyrionSolver:
         """
         MR1 structural coherence gate: return True if transform passes.
 
-        Checks whether the transform forces too many TRALSE/MR_PEND cells
-        incorrectly -- indicating Double Tralse (incoherent resolution).
+        Checks whether the transform forces too many INDETERMINATE / TRALSE cells
+        incorrectly — indicating Double Tralse (incoherent resolution).
 
-        This structural check complements the LCC-based PD zone classification.
-        Both must pass for a transform to be considered above the causation threshold.
+        Key 5-valued distinction:
+          INDETERMINATE cells = coherently balanced — MR holds them open. If a
+            transform gets these systematically wrong, it's forcing false clarity.
+          TRALSE cells = imperfectly coherent — some errors are expected (it's the
+            "grease"). A high violation rate here signals Double Tralse.
+          DOUBLE_TRALSE cells are pre-discarded by the encoder — they never reach
+            this gate.
+
+        Both INDETERMINATE and TRALSE violations count toward the violation rate.
+        A transform that fails MR1 is flagged as Double Tralse and DISCARDED.
         """
-        tralse_violations = 0
-        total_tralse = 0
+        violations = 0
+        total_uncertain = 0
 
         for enc_pair in self.encoded_pairs:
-            tralse_mask = (enc_pair["input"] == TRALSE) | (enc_pair["input"] == MR_PEND)
-            total_tralse += int(np.sum(tralse_mask))
+            uncertain_mask = (
+                (enc_pair["input"] == INDETERMINATE) |
+                (enc_pair["input"] == TRALSE) |
+                (enc_pair["input"] == MR_PEND)
+            )
+            total_uncertain += int(np.sum(uncertain_mask))
             try:
                 predicted_raw = transform(enc_pair["input_raw"])
                 output_raw = enc_pair["output_raw"]
                 if predicted_raw.shape != output_raw.shape:
                     return False
-                wrong_at_tralse = np.sum(
-                    tralse_mask & (predicted_raw != output_raw)
+                wrong_at_uncertain = np.sum(
+                    uncertain_mask & (predicted_raw != output_raw)
                 )
-                tralse_violations += int(wrong_at_tralse)
+                violations += int(wrong_at_uncertain)
             except Exception:
                 return False
 
-        if total_tralse == 0:
+        if total_uncertain == 0:
             return True
-        violation_rate = tralse_violations / total_tralse
+        violation_rate = violations / total_uncertain
         return violation_rate < threshold
 
     def solve(self, test_input: list, top_k: int = 3) -> list:
@@ -299,7 +323,17 @@ class MyrionSolver:
     def resolve_multi_encoding(self, test_input: list, top_k: int = 3) -> list:
         """
         Run solve across multiple candidate encodings of the test input.
-        Each encoding resolves TRALSE/MR_PEND cells differently.
+
+        In the 5-valued system, INDETERMINATE cells can be resolved in multiple ways
+        (collapse toward TRUE or FALSE). Each resolution path is a separate encoding.
+        TRALSE cells (imperfect quality) are tested under multiple interpretations.
+        DOUBLE_TRALSE cells are pre-discarded by the encoder — they never appear here.
+
+        This models the i-cell conflict resolution process: different sub-regions
+        of the grid may have conflicting Myrion Resolutions. The LCC-weighted vote
+        aggregates across all candidate resolutions to find the highest-coherence
+        global solution — exactly how a multi-i-cell mind resolves conflicting PDs.
+
         Aggregates results by LCC-weighted voting.
         """
         all_results = self.solve(test_input, top_k=top_k)
