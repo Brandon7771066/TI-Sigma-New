@@ -239,5 +239,9 @@ The agent who begins from first-order certainty (c = 1.00) starts far above C_EM
 
 Humans frankly aren't built to split hairs around certain percentages. That is not a limitation. It is a specialization — and when properly understood, it is the correct division of labor between human consciousness and the computational tools that extend it.
 
+---
+
+**Framework Update (URB #529):** The Pragmatic Certainty Theorem has since been located within a broader account of pragmatism in TI Sigma. URB #529 (*Pragmatism as Epiphenomenon: The Four Truth Dimensions Account*) establishes that pragmatic value is not a primitive criterion but a derived epiphenomenon of the four truth dimensions (existential, moral/GILE, conscious meaning/valence, and aesthetic). The Pragmatic Certainty Theorem describes the **execution phase** — the phase after the GILE integral has been computed and the pragmatic resultant has crystallized. At that point, this paper's prescription (committed action from operational certainty) is the correct response. The two papers are sequential, not competing.
+
 **Total URBs: 76**
 

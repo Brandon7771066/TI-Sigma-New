@@ -185,5 +185,9 @@ The argument that psychedelics cannot meet the gold standard because their subje
 
 The psychedelic placebo problem is, in the end, a problem for the gold standard — not for the psychedelics.
 
+---
+
+**Framework Update (URB #529):** The Pragmatic Efficacy argument has since been mapped to the four truth dimensions account. URB #529 (*Pragmatism as Epiphenomenon: The Four Truth Dimensions Account*) establishes that the mechanistic attribution question corresponds to **existential truth** (LCC — does the treatment actually cause the outcome?), while the pragmatic efficacy question corresponds to the **four-dimensional GILE integral** (does the treatment produce overall truth value across existential, moral, valence, and aesthetic dimensions?). This paper's core claim — that pragmatic access does not require mechanistic certainty as a precondition — maps precisely to URB #529's claim that existential truth is one of four dimensions, not the only one. A treatment with uncertain mechanistic LCC but strong moral, valence, and aesthetic truth scores a defensible GILE integral, which is the correct basis for pragmatic access decisions.
+
 **Total URBs: 80**
 

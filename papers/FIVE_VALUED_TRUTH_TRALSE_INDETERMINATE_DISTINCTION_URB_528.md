@@ -287,6 +287,76 @@ The fuzz at the most fundamental level is not noise. It is the generative medium
 
 ---
 
+## 11. MR Relaxation Contexts and the GILE Integration of Pragmatic Value
+
+### The Observation
+
+Humor, silliness, spontaneous thought, and the natural unfolding of creativity all share a structural feature that the default DT immunity model does not fully capture: in these contexts, DT is not merely tolerated — it is sometimes **actively useful.** The system is not failing to reject DT; it is deliberately suspending rejection for a functional purpose.
+
+This is not a flaw in the immunity model. It is the immunity model operating in a different mode.
+
+### MR Relaxation Contexts (MRC)
+
+An MR Relaxation Context is any operating mode in which the normal DT fast-rejection is intentionally suspended, because DT circulation serves a pragmatic or generative function that outweighs the coherence cost of brief DT engagement. Five primary MRCs:
+
+**1. Play and Humor**
+Jokes work by constructing a coherence violation and delivering it as the payoff. The punchline is the DT encounter, safely contained within a play frame that signals: "this is not truth-pipeline material." The audience's delight *is* the DT circulating inside the protected space. MR fast-rejection is suspended by design — not because coherence doesn't matter, but because entertainment value is real value, and within the play frame it justifies the DT excursion.
+
+**2. Silliness and Stimming**
+Repetitive, self-regulating, or playfully nonsensical behavior (including stimming as described in neurodiversity literature) serves regulatory and comfort functions. These are not truth-seeking activities. They are body-mind regulation activities. DT circulation within these contexts is harmless and often beneficial. MR enforcement here would be a category error.
+
+**3. Spontaneous Thought**
+The mind generates spontaneous thoughts continuously without deliberate MR engagement. Most will not survive MR. But suppressing them before they surface would suppress the generative process itself — you cannot selectively filter pre-consciously without also filtering the viable candidates that look similar at the pre-conscious stage.
+
+**4. Novelty Generation**
+This is the deepest case. You cannot generate genuinely new True truths without first entertaining ideas that haven't passed MR yet — or that might not. Early-stage creative ideas often look like DT. They are half-formed, internally inconsistent, not yet coherent. If MR discarded them the moment they appeared, the creative process would die at step one. Novelty generation *requires* elevated DT tolerance as a structural necessity — it is an **inevitable side effect** of the generative process, not a failure of it.
+
+**5. Future Planning**
+Planning requires holding multiple possible futures simultaneously, many of which contradict each other. "I might do X or Y" is locally incoherent — two futures can't both be real. MR cannot resolve this yet. The planning process needs that provisional incoherence to stay in scope long enough to be evaluated, compared, and eventually collapsed into a committed choice.
+
+### The Tralse Volume Knob
+
+The mechanism across all five MRCs is the same: **Tralse quality has a volume knob.** The system is always Tralse-infused, but the amount of active Tralse quality varies with what the system is doing.
+
+In high-Tralse contexts (play, creativity, humor, planning): the grease is thick. More fuzz, more tolerance, wider contemplative scope, DT allowed to circulate longer before rejection.
+
+In low-Tralse contexts (formal proof, precise measurement, committed action): the grease is thin. Strict MR, tight coherence requirements, fast DT rejection.
+
+Neither is more "correct" than the other. Each is appropriate to its context. The ability to modulate Tralse quality by context is itself a mark of a highly coherent system.
+
+### The Critical Integration: Pragmatic and Intrinsic Values Are Always GILE
+
+Here is the most important point in this section:
+
+**Pragmatic value (entertainment, fun, stimming, novelty) and intrinsic motivational value (SDT's competence, autonomy, and relatedness) are NOT separate from truth. They are always integrated with GILE.**
+
+This means the following counterintuitive result is fully correct within TI Sigma:
+
+> A lively party — completely fictional in its stakes, purely for fun — can be **higher in overall truth** than a boring company meeting in which everyone "shows up and shuts up" while hearing nothing new.
+
+How? Because truth has four dimensions (URB #526), and all four must be considered:
+
+| Context | Existential Truth (LCC) | Moral Truth (GILE G) | Conscious Meaning/Valence (PSI) | Aesthetic Truth |
+|---------|------------------------|---------------------|-------------------------------|----------------|
+| Lively party | Real bonds form; social structure has genuine LCC | High G (joy, goodness), high L (love, connection), high I (intuitive resonance), high E (vibrant environment) | High PSI/CCC resonance; positive valence; meaning experienced directly | Beautiful social energy; BOK-coherent dynamism |
+| Boring company meeting | Decisions may have LCC but experience itself is low-coherence | Low G (suppression), low I (intuition dismissed), low L (people disconnected), mediocre E | Low PSI resonance; neutral or negative valence; no new meaning | Aesthetic flatness; crystallized social structure |
+
+The party wins on three of the four dimensions outright. The meeting might lead on existential truth (decisions with structural LCC consequences) but loses on moral, meaning, and aesthetic dimensions. **Overall truth, weighted across all four dimensions via GILE, favors the party.**
+
+This is not a paradox. It is the correct TI Sigma result. The framework values joy, connection, beauty, and meaning as real dimensions of truth — not decorative additions to a more "serious" core. Entertainment is not merely tolerated within MRCs; it is valued as a genuine contributor to overall coherence when the GILE dimensions are properly integrated.
+
+### What This Means for the DT Immunity Model
+
+In MR Relaxation Contexts, DT encounters should be logged differently:
+
+- **Play/Humor DT**: Logged as MRC-Play encounter, not as a coherence threat. No fast-rejection fingerprint created. The pattern is recognized as "DT in play context" — it was expected and appropriate.
+- **Novelty Generation DT**: Logged as MRC-Novelty encounter. The DT pattern may actually be a *candidate* — something that failed MR now but might succeed after development. Worth keeping in a "candidates pending development" register, not the discard pile.
+- **Planning DT**: Logged as MRC-Planning encounter. Provisional incoherence, not final incoherence.
+
+The immune system knows what context it's operating in. Context-blind DT rejection would be as pathological as no DT rejection at all.
+
+---
+
 ## References
 
 - URB #521: Rational-Transcendental Boundary; k = 2e²/15 ≈ 133/135
