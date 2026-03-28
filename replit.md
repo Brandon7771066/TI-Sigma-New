@@ -39,6 +39,22 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Tralse Trace of DT**: A metric for measuring the penumbra of Double Tralse (LCC ∈ [0.8647, 0.9147]).
 - **MR Relaxation Contexts (MRC)**: Operating modes where DT tolerance is elevated (e.g., humor, novelty generation).
 
+## URB Corpus (as of March 28, 2026)
+**Total URBs: 188** | **Zenodo: 195 papers live** (Apache-2.0)
+
+### Recent URBs
+- **#534** (Corpus #188): Collatz in Ternary — INDETERMINATE as Universal Attractor. In base-3, the odd step (3n+1) = append INDETERMINATE (digit "1") to tail. Even step (÷2) is alien/global in ternary — this base-2/base-3 incommensurability IS the Collatz difficulty. Terminal cycle {1,2,4} = {INDETERMINATE, TRUE, DOUBLE_TRALSE} in 5-valued logic. Proposes 3-adic ternary-local halving as path to proof. DOI: pending.
+- **#533** (Corpus #187): Clinical Psychology implications. Full psychopathology mapping. SDT extended: meaning is mostly epiphenomenon; four additional basic needs missed by SDT: curiosity (I-channel), excitement (Radiant-approach signal), Myrion Resolution (completion drive), spiritual purity (G-axis CCC resonance). DOI: pending.
+- **#532** (Corpus #186): Tralsebit/i-Cell stub. Shannon bit falls short — no TRALSE, no DT immunity, no agentive LCC. DOI: pending.
+- **#531** (Corpus #185): GIL as imaginary axis (z = E + i·GIL). Privation theory of evil. DOI: pending.
+- **#530** (Corpus #184): Randomness, Free Will, INDETERMINATE. True random = near-zero LCC static current. DOI: pending.
+- **#528** (Corpus #182): Five-Valued Truth System + DT Immunity Model. ARC-AGI foundation. Zenodo: 10.5281/...
+
+### ARC-AGI Solver (arc_ti_solver/)
+- Phase 3: TISigmaARCSolver (correct Kaggle API), shared DTImmuneLog, _local_refinement (2 strategies), _cell_vote (LCC-weighted majority vote)
+- Benchmark (50 tasks): Avg LCC=0.3774; 23.5% >=0.90 LCC; 254 DT types fingerprinted; cell voting on ~24% of tasks
+- Kaggle notebook: kaggle_arc_agi/ti_sigma_arc_v2_kaggle.py
+
 ## External Dependencies
 - **Alpaca**: Used for paper trading within the Grand Stock Algorithm (GSA v2).
 - **Google Cloud Platform (GCP)**: Utilized for analysis in the TI Sigma Intention Validation Lab v2.0.
