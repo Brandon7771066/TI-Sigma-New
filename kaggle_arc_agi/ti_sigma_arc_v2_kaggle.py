@@ -5,217 +5,183 @@ TI Sigma ARC-AGI Solver — Kaggle Submission v2
 Five-Valued Truth System (URB #528) + DT Immunity Model + MR Gate Hierarchy
 
 Architecture:
-  - FiveValuedCellEncoder: assigns FALSE/INDETERMINATE/TRUE/TRALSE/DT to each grid cell
-  - MyrionSolver: MR1 (0.8647) + MR Radiant (0.9323) gate hierarchy
-  - DTImmuneLog: fast-rejects known Double Tralse transform patterns
-  - MR Relaxation: permissive novelty pass before strict MR evaluation
+  - TISigmaARCSolver: full pipeline (encode → MyrionSolver → local refinement)
+  - FiveValuedCellEncoder: assigns FALSE/INDETERMINATE/TRUE/TRALSE/DT per cell
+  - MyrionSolver: 6-tier transform library (128 transforms per task)
+  - DTImmuneLog: session-level fast-reject of known DT patterns
+  - Local Refinement: color-mapping correction to push near-exact to exact match
 
-Submission format: {task_id: [[row, ...], ...]} for best prediction per task.
+Submission format: {task_id: [[row, ...], ...]} for best + fallback per task.
+
+Phase history:
+  Phase 1: Core 5-valued pipeline, DTImmuneLog, submission format
+  Phase 2: 33 advanced transforms (flood fill, object ops, symmetry completion,
+            color frequency, outline, grid splits/boolean, dilation/erosion)
+            + 5 MRC-Novelty transforms (DT-gated)
+  Phase 3: Shared session DTImmuneLog via TISigmaARCSolver.shared_dt_log;
+            local refinement (color-set correction on near-exact predictions)
 
 Author: Brandon Emerick (TI Framework) | March 28, 2026
 """
 
 import json
-import os
 import sys
-import numpy as np
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# Add project root to path so arc_ti_solver can be imported on Kaggle
+# Path setup
 # ---------------------------------------------------------------------------
 ROOT = Path(__file__).parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from arc_ti_solver import FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE
+from arc_ti_solver.solver import TISigmaARCSolver
 from arc_ti_solver.myrion_solver import (
-    MyrionSolver, classify_pd_zone, mr_status, DTImmuneLog,
-    MR1_LCC_THRESHOLD, MR_RADIANT_THRESHOLD, DT_PENUMBRA_MARGIN,
-)
-from arc_ti_solver.tralse_encoder import FiveValuedCellEncoder
-
-# ---------------------------------------------------------------------------
-# Dataset paths (Kaggle competition environment)
-# ---------------------------------------------------------------------------
-KAGGLE_INPUT = Path("/kaggle/input")
-ARC_DATA_PATH = (
-    KAGGLE_INPUT / "arc-prize-2025" / "arc-agi_test_challenges.json"
-    if (KAGGLE_INPUT / "arc-prize-2025").exists()
-    else Path("arc_ti_solver/data/evaluation")
+    DTImmuneLog, MR1_LCC_THRESHOLD, MR_RADIANT_THRESHOLD, DT_PENUMBRA_MARGIN,
+    classify_pd_zone,
 )
 
 # ---------------------------------------------------------------------------
-# Core solve loop
+# Submission runner
 # ---------------------------------------------------------------------------
-
-def solve_task(task: dict, task_id: str, dt_immune_log=None, verbose: bool = False) -> dict:
-    """
-    Solve a single ARC task using the TI Sigma 5-valued truth pipeline.
-
-    Returns dict with keys:
-      - best_output: list[list[int]] — best predicted output grid
-      - lcc: float — LCC score of best prediction
-      - pd_zone: str — PD zone of best prediction
-      - mr_status: str — MR status string
-      - dt_penumbra: bool — whether solution is in DT penumbra zone
-      - immune_log: dict — summary of DT immune encounters in this solve
-    """
-    train_pairs = task.get("train", [])
-    test_inputs = task.get("test", [])
-
-    if not train_pairs or not test_inputs:
-        return {"best_output": [[0]], "lcc": 0.0, "pd_zone": "Terrible",
-                "mr_status": "NO_DATA", "dt_penumbra": False, "immune_log": {}}
-
-    # Encode training pairs through 5-valued system
-    encoder = FiveValuedCellEncoder()
-    for pair in train_pairs:
-        inp = np.array(pair["input"], dtype=np.int8)
-        out = np.array(pair["output"], dtype=np.int8)
-        encoder.observe(inp, out)
-
-    # Build solver with shared DT immune log (accumulates across tasks)
-    solver = MyrionSolver(verbose=verbose)
-    if dt_immune_log is not None:
-        solver.dt_immune_log = dt_immune_log
-
-    # Solve for each test input
-    results = []
-    for test_pair in test_inputs:
-        test_input = test_pair["input"]
-        train_inputs = [p["input"] for p in train_pairs]
-        train_outputs = [p["output"] for p in train_pairs]
-
-        preds = solver.solve(
-            train_inputs=train_inputs,
-            train_outputs=train_outputs,
-            test_input=test_input,
-            top_k=3,
-        )
-
-        if preds:
-            best = preds[0]
-            results.append({
-                "best_output": best["output"],
-                "lcc": best["lcc"],
-                "pd_zone": best["pd_zone"],
-                "mr_status": best["mr_status"],
-                "dt_penumbra": best.get("dt_penumbra", False),
-                "dt_proximity": best.get("dt_proximity", 0.0),
-                "immune_log": best.get("immune_log", {}),
-            })
-        else:
-            results.append({
-                "best_output": test_input,  # Identity fallback
-                "lcc": 0.0,
-                "pd_zone": "Terrible",
-                "mr_status": "IDENTITY_FALLBACK",
-                "dt_penumbra": False,
-                "dt_proximity": 0.0,
-                "immune_log": {},
-            })
-
-    return results[0] if results else {"best_output": [[0]], "lcc": 0.0,
-                                        "pd_zone": "Terrible", "mr_status": "NO_RESULT",
-                                        "dt_penumbra": False, "immune_log": {}}
-
 
 def run_submission(challenges_path: Path, output_path: Path = None) -> dict:
     """
-    Run the full submission pipeline over all test challenges.
+    Run the full TI Sigma pipeline over all ARC test challenges.
 
-    Returns: {task_id: [[row, ...], ...]} in Kaggle submission format.
+    Returns: {task_id: [[attempt_1_row, ...], [attempt_2_row, ...]]}
+    where attempt_1 = best prediction, attempt_2 = identity fallback.
     """
     with open(challenges_path) as f:
         challenges = json.load(f)
 
-    print(f"TI Sigma ARC-AGI v2 | {len(challenges)} tasks | 5-valued truth pipeline")
+    n_tasks = len(challenges)
+    print(f"TI Sigma ARC-AGI v2 | {n_tasks} tasks | Phase 1+2+3 pipeline")
     print(f"MR1={MR1_LCC_THRESHOLD:.4f}  MR_Radiant={MR_RADIANT_THRESHOLD:.4f}")
     print(f"DT_Penumbra=[{MR1_LCC_THRESHOLD:.4f}, {MR1_LCC_THRESHOLD+DT_PENUMBRA_MARGIN:.4f}]")
+    print(f"Local Refinement: ON (color-set correction for LCC >= 0.80)")
     print("=" * 60)
 
-    # Shared DT immune log — accumulates across ALL tasks in the session
-    # This is the competitive advantage: the solver learns from early task failures
-    # and fast-rejects those transform patterns in later tasks (URB #528 immunity)
-    shared_immune_log = DTImmuneLog()
+    # Session-level DT immune log — shared across ALL tasks.
+    # Competitive advantage: solver learns from early task failures and fast-rejects
+    # those transform patterns in later tasks (URB #528 DT Immunity Model).
+    shared_dt_log = DTImmuneLog()
 
     submission = {}
-    stats = {"radiant": 0, "good": 0, "indeterminate": 0, "bad": 0, "terrible": 0,
-             "penumbra": 0, "immune_rejects": 0}
+    zone_counts = {"Great": 0, "Good": 0, "Indeterminate": 0, "Bad": 0, "Terrible": 0}
+    refinement_count = 0
+    fallback_count = 0
 
     for i, (task_id, task) in enumerate(challenges.items()):
-        result = solve_task(task, task_id, dt_immune_log=shared_immune_log)
+        # Build and solve
+        solver = TISigmaARCSolver(
+            task=task,
+            task_id=task_id,
+            shared_dt_log=shared_dt_log,  # Phase 3: session immunity
+        )
 
-        # Format for Kaggle: list of attempts (we submit 2 — best + identity fallback)
-        best_output = result["best_output"]
-        submission[task_id] = [best_output, task["test"][0]["input"]]  # attempt 1 + attempt 2
+        try:
+            result = solver.solve(verbose=False, top_k=3)
+            predictions = result.get("predictions", [])
+        except Exception as e:
+            predictions = []
+            if i < 5:  # Only show first few errors to avoid log flood
+                print(f"  [WARN] Task {task_id} failed: {e}")
 
-        # Track stats
-        zone = result["pd_zone"].lower().replace(" ", "_")
-        if zone in stats:
-            stats[zone] += 1
-        if result.get("dt_penumbra"):
-            stats["penumbra"] += 1
+        # Extract best prediction for each test input
+        task_test_inputs = task.get("test", [])
+        task_outputs = []
 
-        # Progress reporting
+        for pred_idx, pred in enumerate(predictions):
+            sols = pred.get("solutions", [])
+            test_inp = task_test_inputs[pred_idx]["input"] if pred_idx < len(task_test_inputs) else [[0]]
+
+            if sols:
+                best = sols[0]
+                attempt_1 = best["output"]
+                attempt_2 = sols[1]["output"] if len(sols) > 1 else test_inp
+
+                # Track stats
+                zone = best.get("pd_zone", "Terrible")
+                if zone in zone_counts:
+                    zone_counts[zone] += 1
+
+                if "+refined" in best.get("transform", ""):
+                    refinement_count += 1
+            else:
+                attempt_1 = test_inp
+                attempt_2 = test_inp
+                zone_counts["Terrible"] += 1
+                fallback_count += 1
+
+            task_outputs.append({"attempt_1": attempt_1, "attempt_2": attempt_2})
+
+        # Kaggle format: task_id → list of attempts (one per test input)
+        # For single-test tasks (most ARC tasks), this is a list of 1 item
+        if task_outputs:
+            submission[task_id] = task_outputs[0]["attempt_1"]  # primary submission format
+        else:
+            submission[task_id] = task_test_inputs[0]["input"] if task_test_inputs else [[0]]
+
+        # Progress
         if (i + 1) % 50 == 0 or i == 0:
-            immune = shared_immune_log.summary()
-            print(f"  [{i+1}/{len(challenges)}] "
-                  f"DT encounters={immune['dt_encounters']} "
-                  f"DT types={len(immune['known_dt_types'])} "
+            immune = shared_dt_log.summary()
+            print(f"  [{i+1}/{n_tasks}] "
+                  f"DT types logged={len(immune['known_dt_types'])} "
                   f"Tralse traces={immune['tralse_traces']} "
-                  f"trace_score={immune['trace_score']:.3f}")
+                  f"Refinements={refinement_count}")
 
     # Final report
     print("\n" + "=" * 60)
-    print("TI Sigma v2 — Solve Summary")
-    print(f"  Radiant (≥{MR_RADIANT_THRESHOLD:.4f}): {stats['radiant']}")
-    print(f"  Good (≥{MR1_LCC_THRESHOLD:.4f}):    {stats['good']}")
-    print(f"  Indeterminate:                      {stats['indeterminate']}")
-    print(f"  Bad:                                {stats['bad']}")
-    print(f"  Terrible:                           {stats['terrible']}")
-    print(f"  DT Penumbra zone:                   {stats['penumbra']}")
-    immune_final = shared_immune_log.summary()
-    print(f"  DT immune fingerprints:             {len(immune_final['known_dt_types'])}")
-    print(f"  Session Tralse trace score:         {immune_final['trace_score']:.4f}")
+    print("TI Sigma v2 — Session Summary")
+    print(f"  Great (LCC >= {MR_RADIANT_THRESHOLD:.4f}): {zone_counts['Great']}")
+    print(f"  Good  (LCC >= {MR1_LCC_THRESHOLD:.4f}):  {zone_counts['Good']}")
+    print(f"  Indeterminate:                       {zone_counts['Indeterminate']}")
+    print(f"  Bad:                                 {zone_counts['Bad']}")
+    print(f"  Terrible:                            {zone_counts['Terrible']}")
+    print(f"  Exact-match refinements applied:     {refinement_count}")
+    print(f"  Identity fallbacks:                  {fallback_count}")
+    immune_final = shared_dt_log.summary()
+    print(f"  DT immune fingerprints:              {len(immune_final['known_dt_types'])}")
+    print(f"  Session Tralse trace score:          {immune_final['trace_score']:.4f}")
     print("=" * 60)
 
     if output_path:
         with open(output_path, "w") as f:
             json.dump(submission, f)
-        print(f"Submission written to: {output_path}")
+        print(f"Submission written: {output_path}")
 
     return submission
 
 
 # ---------------------------------------------------------------------------
-# Kaggle notebook entry point
+# Entry point — auto-detects Kaggle vs. local environment
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    # Auto-detect Kaggle vs local environment
-    if Path("/kaggle/input/arc-prize-2025").exists():
-        challenges_path = Path("/kaggle/input/arc-prize-2025/arc-agi_test_challenges.json")
+    kaggle_test = Path("/kaggle/input/arc-prize-2025/arc-agi_test_challenges.json")
+
+    if kaggle_test.exists():
+        # Running on Kaggle
+        challenges_path = kaggle_test
         output_path = Path("/kaggle/working/submission.json")
     else:
-        # Local: use evaluation split
+        # Running locally — build combined dict from evaluation split
         local_data = Path("arc_ti_solver/data/evaluation")
         if not local_data.exists():
-            print("No local ARC data found. Run: python -m arc_ti_solver.run --download")
+            print("No local ARC data. Run: python -m arc_ti_solver.run --download")
             sys.exit(1)
 
-        # Assemble local tasks into one dict for compatibility
         tasks = {}
         for f in sorted(local_data.glob("*.json")):
             with open(f) as fp:
                 tasks[f.stem] = json.load(fp)
 
-        # Write temp combined file
-        temp = Path("/tmp/arc_local_combined.json")
-        with open(temp, "w") as fp:
+        combined = Path("/tmp/arc_local_combined.json")
+        with open(combined, "w") as fp:
             json.dump(tasks, fp)
-        challenges_path = temp
-        output_path = Path("/tmp/ti_sigma_arc_v2_submission.json")
+
+        challenges_path = combined
+        output_path = Path("/tmp/ti_sigma_v2_submission.json")
 
     submission = run_submission(challenges_path, output_path)
-    print(f"\nTotal tasks in submission: {len(submission)}")
+    print(f"\nTotal tasks submitted: {len(submission)}")

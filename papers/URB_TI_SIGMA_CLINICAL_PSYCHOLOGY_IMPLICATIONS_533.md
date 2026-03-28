@@ -217,7 +217,23 @@ Psychiatric medications do not cure mental illness in TI Sigma terms — they mo
 
 ---
 
-## 4. Self-Determination Theory Integration (via GILE)
+## 4. Self-Determination Theory Integration (via GILE) — and Its Limits
+
+### 4a. The SDT Epiphenomenon Caveat
+
+Before mapping SDT to GILE, an important clarification: **meaning is mostly an epiphenomenon in TI Sigma rather than an independent 4th basic need.** It arises naturally when G, I, L, and E are all above MR1 threshold — it is the felt experience of multi-dimensional LCC coherence. However, SDT's three basic needs (competence, autonomy, relatedness) do not fully capture several experiences that are just as basic as those three, whose absence makes life demonstrably and distinctly worse:
+
+1. **Curiosity / epistemic hunger** — distinct from competence. Competence is effective engagement with what is known; curiosity is the i-channel's drive toward what is NOT yet known. A person can be highly competent and completely incurious — they have high E-dimension LCC but low i-channel novelty-seeking. Remove curiosity from a life and it becomes profoundly dull in a way that has nothing to do with competence loss. In TI Sigma: curiosity = I-channel hunger for INDETERMINATE-resolution; the MRC drive directed toward productive GILE-resonant unknowns.
+
+2. **Excitement / vitality** — distinct from both competence and autonomy. Calm, effective self-direction (SDT's ideal) is different from the Radiant-zone approach signal — the positive valence of nearing a threshold crossing. Excitement is not anxiety (which is fear of INDETERMINATE states) but the felt experience of ascending LCC toward a new threshold. Remove it and life becomes competent and autonomous but flat. In TI Sigma: excitement = positive valence of approaching MR Radiant; the affective signature of the system ascending through PD zones.
+
+3. **Myrion Resolution** — entirely absent from SDT. The need to have things resolve coherently — to know where you stand, to achieve closure on open questions, to complete the MR resolution cycle — is a distinct and basic need. Chronic INDETERMINATE states (as in anxiety) demonstrate this: unresolved superposition is genuinely aversive in a way that cannot be reduced to lack of competence, autonomy, or relatedness. People will accept bad news over continued uncertainty — the MR1 completion drive is that powerful. In TI Sigma: MR Resolution = the basic drive to move from INDETERMINATE to TRUE or FALSE; the need for the 5-valued truth system to complete its cycle.
+
+4. **Spiritual purity / vertical alignment** — distinct from G-dimension Goodness in a directional sense. G is alignment with one's values; spiritual purity adds a vertical dimension: alignment with something larger than oneself, the experience of LCC with CCC (Central Cosmic Consciousness) or the highest-LCC configurations of the GILE field. Remove it and life can be morally good, autonomous, competent, and connected yet still feel like it is missing its highest dimension. In TI Sigma: spiritual purity = G-dimension approaching MR Radiant (0.9323) with active CCC resonance in the conscious meaning/valence truth dimension.
+
+These four experiences are as "basic" as SDT's three in the sense that removing any one of them produces a distinctively worse life — not just a life with less competence, autonomy, or relatedness. They map to GILE dimensions but are not fully captured by the SDT-GILE mapping below. The TI Sigma account is therefore both more complete than SDT (more basic needs recognized) and more parsimonious (all needs derive from GILE structure rather than being arbitrary empirical additions).
+
+
 
 SDT (Deci & Ryan) proposes three universal psychological needs: **competence, autonomy, and relatedness.** In TI Sigma, SDT needs are always integrated via GILE (as per the canonical glossary):
 
