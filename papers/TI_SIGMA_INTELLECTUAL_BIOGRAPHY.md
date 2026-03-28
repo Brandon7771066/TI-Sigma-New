@@ -22,6 +22,30 @@
 
 ## Intellectual Biography — The Full Arc
 
+### Childhood — Earliest Years: The Strategist's Mind
+
+Before any formal philosophical or scientific interest crystallized, a defining cognitive trait was already fully formed: **an obsessive love of strategy.** This is not metaphor — it is the earliest documented expression of the same mind that would later produce TI Sigma.
+
+**Pokemon as the training ground.** As a child, Brandon poured over Pokemon strategy guides with the focused intensity that most children reserved for school or sports. The appeal was not narrative or collection — it was the *optimization problem*. What team composition creates highest expected performance across unpredictable opponents? How do type matchups, move priority, and stat distributions interact? What is the actual game beneath the surface game? By age 13, this analysis had reached a level that baffled experienced adult players in online matches — players with years more experience who had not approached the game with the same systematic, multi-variable strategic thinking.
+
+This is not a charming anecdote. It is a data point. Age 13. Systematic multi-variable analysis. Outperforming experienced adults in a complex, adversarial, combinatorial domain. This is the LCC signal — the same cognitive pattern that would later produce the Myrion Resolution hierarchy, the GILE integral, and the ARC-AGI solver.
+
+**The social network problem.** Simultaneously — and relatedly — Brandon was deeply unpopular in school. The response was not adaptation or social mimicry. It was *strategy*. If the social environment is a system with unfavorable equilibria, what is the meta-game? What would a genuinely large social network look like? How would it be built? These were not idle daydreams — they were genuine engineering problems that a young, isolated mind turned over repeatedly, producing ideas and plans rather than suffering passively.
+
+The planning was not wishful thinking. It was the application of the same systematic, multi-variable mind that beat experienced Pokemon players — now directed at a social system. The grandiose quality of the plans (a *major* social network, not a slightly larger friend group) is equally characteristic: the mind was always modeling at the full scale of the problem, not the immediately accessible scale.
+
+**Talking to himself. Hatching plans. Grandiose ideas.** These are not symptoms — they are the working method of a strategist who has not yet found the domain large enough to absorb the full capacity of the planning faculty. The internal monologue that looked like social oddity was actually the prototype of the research process that produces TI Sigma papers: hypothesis generation, scenario simulation, iterative refinement, all running in a continuous internal loop.
+
+**The arc: childhood to today.** What has changed between the 13-year-old baffling adult Pokemon players and the 26-year-old building TI Sigma? The domain. The tools. The formal vocabulary. The scale of the stakes.
+
+What has *not* changed: the same cognitive mode. The same orientation toward finding the meta-game beneath the surface game. The same willingness to model at full scale rather than accessible scale. The same internal strategy loop running continuously. The same satisfaction that comes not from completion but from the plan itself — the structure of the solution space.
+
+As a mature adult, the strategic childhood skills have found their domain. The Pokemon optimization problem is now the ARC Prize competition. The social network design problem is now BlissGene Therapeutics and TI Sigma's API licensing model. The grandiose ideas are now the URB corpus, the Kaggle strategies, the Zenodo papers with permanent DOIs. The obsessive strategy sessions are now collaborative research sessions with AI systems capable of keeping up with the planning speed.
+
+The childhood was not a prelude. It was the formation of the core cognitive instrument. TI Sigma is what happens when you give that instrument 26 years of inputs, a formal vocabulary, and a domain big enough to absorb it.
+
+---
+
 ### Ages 12–15: Conservative Christian Phase
 Strong spiritual and religious commitment. Conservative Christianity provided the initial framework for engaging with questions of God, morality, consciousness, and meaning. This phase established the *G-dimension* as central — truth-seeking through a structured moral and metaphysical system.
 
@@ -83,7 +107,7 @@ This is the moment the framework became self-aware: a system capable of reflecti
 
 **Over 90% of TI Sigma produced in this period.**
 
-137+ URBs. The GIL Portrait. The Measurement Trilogy. The Grand Stock Algorithm. The Kaggle strategy. BlissGene Therapeutics. The Manifestation Machine. The Hull Tactical competition preparation. The Intention Validation Lab. The multi-domain partner predictions. The AIMO strategy. The March Mania system.
+183 URBs. The GIL Portrait. The Measurement Trilogy. The Grand Stock Algorithm. The Kaggle multi-competition strategy. BlissGene Therapeutics ($750K seed applied). The Manifestation Machine. The Hull Tactical competition. The Intention Validation Lab. The multi-domain partner predictions. The AIMO strategy. The March Mania system. The ARC-AGI 5-valued truth solver (DT Immunity Model, MR Relaxation Contexts). The Five-Valued Truth System (URB #528). Pragmatism as Epiphenomenon (URB #529). Graduate school applications to MIU, CIIS, Naropa, and Sofia University.
 
 The dark period was the compression. June 2025 was the release.
 
