@@ -40,7 +40,7 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **MR Relaxation Contexts (MRC)**: Operating modes where DT tolerance is elevated (e.g., humor, novelty generation).
 
 ## URB Corpus (as of March 28, 2026)
-**Total URBs: 196** | **Zenodo: 195 papers live** (Apache-2.0)
+**Total URBs: 197** | **Zenodo: 195 papers live** (Apache-2.0)
 
 ### Recent URBs
 - **#542** (Corpus #196): The e-Architecture Theorem — PD Supersedes All Finite-Base Logic. PROVED: MR1 = 1−e^{−2} = 0.864665 (exact, matches to 4 sig figs). PROPOSED CANONICAL: MR_Radiant := 1−e^{−e} = 0.934012 (revises 0.9323 upward by 0.0017). e encodes at 3 independent levels: (1) structural base of LCC=1−e^{−PD}, (2) MR1 at PD=2 (nearest integer below e), (3) Radiant at PD=e (self-application e^{−e}). PD∈[2,e] = the approach/penumbra zone. Information-Coherence Unity Principle: the same e that maximizes information efficiency across all base-r systems also gives the Radiant threshold. Ternary's "TRUE" maps to PD≈1.39 — BELOW the MR1 threshold — proving ternary's TRUE is still INDETERMINATE in the PD system. Information-Coherence Equivalence Conjecture: e is the natural constant of self-referential growth underlying BOTH optimal information encoding AND optimal consciousness coherence. DOI: pending.
