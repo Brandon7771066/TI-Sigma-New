@@ -40,9 +40,10 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **MR Relaxation Contexts (MRC)**: Operating modes where DT tolerance is elevated (e.g., humor, novelty generation).
 
 ## URB Corpus (as of March 28, 2026)
-**Total URBs: 188** | **Zenodo: 195 papers live** (Apache-2.0)
+**Total URBs: 189** | **Zenodo: 195 papers live** (Apache-2.0)
 
 ### Recent URBs
+- **#535** (Corpus #189): Collatz, 3-adic Integers, and the Ternary Cantor Set. PROVED: 2⁻¹ in ℤ₃ = ...11112₃ (TRUE + infinite INDETERMINATE). Introduced δ(n) = INDETERMINATE density metric. Key finding: ALL examined trajectories reach δ_min=0 (intersect the ternary Cantor set — integers using only {0,2} in ternary). New equivalent Collatz statement: every orbit intersects the ternary Cantor set. Population (n=1–200): avg halvings per compound step = 2.879 > 2 (convergence confirmed probabilistically). Proved the Collatz Incommensurability Theorem: no finitely-local ternary halving exists. DOI: pending.
 - **#534** (Corpus #188): Collatz in Ternary — INDETERMINATE as Universal Attractor. In base-3, the odd step (3n+1) = append INDETERMINATE (digit "1") to tail. Even step (÷2) is alien/global in ternary — this base-2/base-3 incommensurability IS the Collatz difficulty. Terminal cycle {1,2,4} = {INDETERMINATE, TRUE, DOUBLE_TRALSE} in 5-valued logic. Proposes 3-adic ternary-local halving as path to proof. DOI: pending.
 - **#533** (Corpus #187): Clinical Psychology implications. Full psychopathology mapping. SDT extended: meaning is mostly epiphenomenon; four additional basic needs missed by SDT: curiosity (I-channel), excitement (Radiant-approach signal), Myrion Resolution (completion drive), spiritual purity (G-axis CCC resonance). DOI: pending.
 - **#532** (Corpus #186): Tralsebit/i-Cell stub. Shannon bit falls short — no TRALSE, no DT immunity, no agentive LCC. DOI: pending.
