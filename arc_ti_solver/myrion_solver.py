@@ -53,6 +53,10 @@ from arc_ti_solver.transformations import (
     BASE_PRIMITIVES, SHIFT_PRIMITIVES,
     generate_recolor_primitives, compose
 )
+from arc_ti_solver.advanced_transforms import (
+    ADVANCED_PRIMITIVES, MRC_NOVELTY,
+    tile_to_match,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -225,10 +229,25 @@ class MyrionSolver:
         self.observed_colors = sorted(all_colors)
 
     def _build_transform_library(self) -> list:
-        """Build the full transformation library for this task."""
-        primitives = list(BASE_PRIMITIVES)
-        primitives += generate_recolor_primitives(self.observed_colors)
+        """
+        Build the full transformation library for this task.
 
+        Phase 2 expansion (URB #528 — MRC-Novelty pass):
+          TIER 1 — BASE_PRIMITIVES: geometry (rotation, flip, scale, gravity)
+          TIER 2 — ADVANCED_PRIMITIVES: connected components, color ops, symmetry
+                   completion, outline, flood fill, object isolation
+          TIER 3 — SHIFT + RECOLOR: applied conditionally on size/color context
+          TIER 4 — COMPOSITIONS: cross-tier pairs from TIER 1+2
+          TIER 5 — MRC-NOVELTY: only when DTImmuneLog shows >= 5 DT encounters
+                   (MR Relaxation Context: elevated DT tolerance for creative search)
+          TIER 6 — SIZE-MATCHING TILE: when output size differs from input
+        """
+        primitives = list(BASE_PRIMITIVES)
+
+        # TIER 2 — Advanced pattern families
+        primitives += list(ADVANCED_PRIMITIVES)
+
+        # TIER 3 — Shifts (only for size-preserved tasks; capped to avoid explosion)
         size_preserved = all(
             np.array(p["input"]).shape == np.array(p["output"]).shape
             for p in self.train_pairs
@@ -236,12 +255,32 @@ class MyrionSolver:
         if size_preserved:
             primitives += SHIFT_PRIMITIVES[:20]
 
+        # TIER 3 — Recolor (always useful when multiple colors present)
+        if len(self.observed_colors) > 1:
+            primitives += generate_recolor_primitives(self.observed_colors)
+
+        # TIER 4 — Compositions (cross-tier pairs, limited to avoid N² blowup)
+        all_tier12 = list(BASE_PRIMITIVES) + list(ADVANCED_PRIMITIVES)[:8]
         compositions = []
-        for i, f in enumerate(BASE_PRIMITIVES[:6]):
-            for j, g in enumerate(BASE_PRIMITIVES[:6]):
+        for i, f in enumerate(all_tier12[:8]):
+            for j, g in enumerate(all_tier12[:8]):
                 if i != j:
                     compositions.append(compose(f, g))
         primitives += compositions
+
+        # TIER 5 — MRC-Novelty: unlock creative transforms when standard set is failing
+        # MRC context: DTImmuneLog has seen enough DT patterns that a novelty pass
+        # is warranted. DT tolerance is intentionally elevated in this pass.
+        immune_summary = self.dt_immune_log.summary()
+        if immune_summary["dt_encounters"] >= 5:
+            primitives += list(MRC_NOVELTY)
+
+        # TIER 6 — Size-matching tile: when any training output is larger than input
+        for pair in self.train_pairs:
+            inp = np.array(pair["input"])
+            out = np.array(pair["output"])
+            if out.shape != inp.shape and out.shape[0] > 0 and out.shape[1] > 0:
+                primitives.append(tile_to_match(out.shape[0], out.shape[1]))
 
         return primitives
 
