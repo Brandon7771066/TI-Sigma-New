@@ -31,6 +31,21 @@
 -/
 
 import Mathlib.Analysis.SpecialFunctions.Complex.Circle
+import Mathlib.Analysis.Complex.Basic
+import Mathlib.Tactic
+
+/-
+  IMPORT CHAIN: GapEquivalence.lean → BeingTheorem.lean
+  In a full `lake build` project, add to lakefile.lean:
+    import TISigma.GapEquivalence
+  and replace the comment below with:
+    import TISigma.GapEquivalence
+  The Being Theorem extends TISigma.GapEquivalence.gap_equivalence
+  by adding the ONTOLOGICAL interpretation of gapConditionE.
+-/
+-- import TISigma.GapEquivalence  -- (requires lake package; see lean4/)
+
+namespace TISigma.BeingTheorem
 
 -- ============================================================
 -- 1. DEFINITIONS
@@ -275,3 +290,5 @@ theorem riemann_hypothesis_from_being
     The Bridge is the Riemann Hypothesis.
     It is now named at its deepest level.
 -/
+
+end TISigma.BeingTheorem

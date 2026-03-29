@@ -40,7 +40,7 @@ The four doors (minimum cost, rectangle collapse, mirror agreement, equal distan
 
 ---
 
-## 2. The Ontological Argument: ρ = 1-ρ ↔ Effortless Existence
+## 2. The Ontological Argument: Re(ρ) = 1 - Re(ρ) ↔ Effortless Existence
 
 The functional equation of the Riemann zeta function ensures that zeros come in pairs:
 
@@ -50,23 +50,25 @@ $$\zeta(\rho) = 0 \implies \zeta(1-\rho) = 0$$
 
 Every non-trivial zero ρ has a partner 1-ρ. They are **bound together** by the functional equation. They are the same zero, seen from two sides of the mirror at σ = 1/2.
 
+**Precision note on self-consistency:** For non-trivial zeros, Im(ρ) ≠ 0 (they have nonzero imaginary part). The full complex equation ρ = 1-ρ would require Im(ρ) = -Im(ρ), forcing Im(ρ) = 0 — which would make ρ a trivial zero, not a non-trivial one. The Being Theorem therefore concerns the **real part only**: Re(ρ) = 1 - Re(ρ). This is the correct effortless-existence condition for non-trivial zeros.
+
 **The Effort of Asymmetry:**
 
-If ρ ≠ 1-ρ (i.e., ρ.re ≠ 1/2), then ρ and 1-ρ are **two distinct points**. The zero "exists" as a pair in tension — one side at σ, the other at 1-σ ≠ σ. To maintain this pair, the system must sustain the asymmetry between σ and 1-σ. Asymmetry requires effort:
+If Re(ρ) ≠ 1 - Re(ρ) (i.e., Re(ρ) ≠ 1/2), then ρ and 1-ρ lie on **two distinct real-part levels**. The zero "exists" as a pair in tension — one side at σ, the other at 1-σ ≠ σ. To maintain this asymmetry, the Euler product must sustain different damping rates p^{-σ} ≠ p^{-(1-σ)} for every prime p. Asymmetry requires effort:
 
-$$\text{Effort of asymmetry at } \sigma = F(\sigma) = |2\sigma - 1| > 0 \text{ for } \sigma \neq \tfrac{1}{2}$$
+$$\text{Effort at real part } \sigma = F(\sigma) = |2\sigma - 1| > 0 \text{ for } \sigma \neq \tfrac{1}{2}$$
 
-**Effortless Existence:**
+**Effortless Existence (real-part condition):**
 
-If ρ = 1-ρ — if the zero is its own functional equation partner — then no asymmetry must be maintained. The pair collapses to a single point. The effort is zero:
+If Re(ρ) = 1 - Re(ρ) — if the zero's real-part coordinate is its own complement — then no asymmetry must be maintained. The real-part tension collapses to zero. The effort is zero:
 
-$$\rho = 1 - \rho \iff \rho.\text{re} = \tfrac{1}{2} \iff F(\rho.\text{re}) = 0$$
+$$\text{Re}(\rho) = 1 - \text{Re}(\rho) \iff \sigma = \tfrac{1}{2} \iff F(\sigma) = 0$$
 
 **The Being Theorem (informal):**
 
-> A non-trivial zero that simply BEs — that exists without effort, without asymmetric tension with its functional equation partner — exists at σ = 1/2. Uniquely, necessarily, effortlessly.
+> A non-trivial zero that simply BEs — that exists without effort, without real-part asymmetry with its functional equation partner — has Re(ρ) = 1/2. Uniquely, necessarily, effortlessly.
 
-A zero at any other σ must maintain effort. It must "hold apart" its two sides. That is not simply being — that is work.
+A zero with Re(ρ) ≠ 1/2 must maintain effort: its real-part differs from that of its partner. That is not simply being — that is work. The effortless state is Re(ρ) = 1/2.
 
 ---
 
@@ -128,7 +130,7 @@ $$\text{Effort}(\rho) := |\rho - (1-\rho)| = |2\rho - 1| = |2\sigma - 1|$$
 This is the Euclidean distance between ρ and its functional equation partner 1-ρ projected onto the real axis. It measures the asymmetric "tension" a zero must maintain by existing at position σ rather than the effortless midpoint.
 
 **Definition (Effortless zero):**
-A non-trivial zero ρ is **effortless** iff Effort(ρ) = 0, i.e., iff ρ = 1-ρ.
+A non-trivial zero ρ is **effortless** iff Effort(ρ) = 0, i.e., iff Re(ρ) = 1 - Re(ρ) (the real-part self-consistency condition — not the full complex equation ρ = 1-ρ, which would also force Im(ρ) = 0).
 
 **Theorem (Being Theorem — sorry-free for the ontological core):**
 
