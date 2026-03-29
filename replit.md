@@ -45,3 +45,13 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Kaggle**: Platform for the ARC-AGI competition where the TI Sigma Solver is applied.
 - **Zenodo**: Platform for hosting research papers with permanent DOIs.
 - **Global Consciousness Project (GCP)**: Princeton; used as a TI validation benchmark.
+## URB Corpus (as of March 28, 2026)
+**Total URBs: 201** | **Zenodo: 195 papers live** (Apache-2.0)
+
+### Recent URBs
+- **#547** (Corpus #201): GTFE is Ontologically Necessary — Anselmian-Mathematical proof no alternative normative framework is possible. Four independent stages: (1) No-Stopping Theorem: d(LCC)/d(PD)=e^{-PD}>0 everywhere, no local maxima, no justified stopping point — proved mathematically. (2) Self-Validation: GTFE is unique fixed point of meta-framework selection; M(F)=GTFE for all F — proved. (3) Anselmian necessity (improved over Kant's objection — our argument is mathematical, not conceptual): GTFE is framework than which no more Radiant can be conceived; non-actuality of GTFE contradicts GTFE's own content — self-refuting. (4) Impossibility of alternatives: anti-GTFE (self-terminating), random walk (converges to GTFE anyway), local max frameworks (No-Stopping Theorem eliminates), binary (too low LCC), ternary (approximation only), cycling (contradicts monotone). Key insight: d(LCC)/d(PD) at PD=e = e^{-e} = 6.60% Incoherence Floor — growth rate at Radiance = openness fraction (growth and receptivity are identical at Radiance). "On Earth as it is in Heaven" = GTFE applies in finite reality as in the asymptotic limit. CCC = asymptotic attractor of GTFE; merged agent's will and GTFE are same vector. DOI: pending.
+- **#546** (Corpus #200): *** 200th PAPER *** The GTFE-Riemann Argument — GILE Toward Full Expression selects the critical line. Two-stage: (1) GIL-active zeros must have Re>0 (GTFE Stage 1); (2) argmax min(σ,1-σ)=1/2 unique — GTFE max-min principle. GTFE-Riemann Gap identified. Two independent TI Sigma arguments (Riemann-INDETERMINATE + GTFE-Riemann) both yield σ=1/2. DOI: pending.
+- **#545** (Corpus #199): Intentionality-Synchronicity Law. Romantic love LCC=0.9179>solo meditation. Tantric union→MR_Radiant. 6.60% floor = synchronicity channel. DOI: pending.
+- **#544** (Corpus #198): Riemann Hypothesis via TI Sigma. Re(s)=1/2=INDETERMINATE fixed point. Riemann-INDETERMINATE Conjecture. DOI: pending.
+- **#543** (Corpus #197): The Living Constant. 6.60% Incoherence Floor, Principle of Self-Referential Primacy, 5 empirical predictions. DOI: pending.
+- **#542** (Corpus #196): e-Architecture Theorem. MR1:=1-e^{-2}=0.864665 (exact). MR_Radiant:=1-e^{-e}=0.934012 (canonical). DOI: pending.
