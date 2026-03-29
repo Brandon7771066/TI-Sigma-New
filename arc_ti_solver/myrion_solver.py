@@ -57,6 +57,9 @@ from arc_ti_solver.advanced_transforms import (
     ADVANCED_PRIMITIVES, MRC_NOVELTY,
     tile_to_match,
 )
+from arc_ti_solver.klein_v4_detector import (
+    klein_v4_prefilter, combined_score, KLEIN_V4_GROUP,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -377,6 +380,45 @@ class MyrionSolver:
         if self.verbose:
             print(f"  MR thresholds: MR1={MR1_LCC_THRESHOLD:.4f}, "
                   f"Radiant={MR_RADIANT_THRESHOLD:.4f}")
+
+        # ---------------------------------------------------------------
+        # Phase 4a: Klein V₄ Pre-Filter (URB #554–556)
+        # Before scoring 128+ transforms, check if the task is solved by
+        # a group element with unanimous alignment across all training pairs.
+        # This is the ARC analog of orbit_collapse_iff_critical:
+        #   every training example independently points to the same element.
+        # If found, return immediately — no full search needed.
+        # ---------------------------------------------------------------
+        klein_winner = klein_v4_prefilter(self.train_pairs)
+        if klein_winner and klein_winner in KLEIN_V4_GROUP:
+            winner_fn = KLEIN_V4_GROUP[klein_winner]
+            winner_fn.__name__ = klein_winner
+            test_arr = np.array(test_input, dtype=np.int8)
+            try:
+                predicted = winner_fn(test_arr)
+                lcc_val = combined_score(winner_fn, self.train_pairs)
+                zone = classify_pd_zone(lcc_val)
+                ef = lcc_val * PD_FREQ.get(zone, 0.0)
+                if self.verbose:
+                    print(f"  Klein V₄ UNANIMOUS WINNER: {klein_winner} "
+                          f"(alignment={lcc_val:.4f}, zone={zone})")
+                    print("  → Returning immediately — all examples aligned.")
+                return [{
+                    "output":               predicted.tolist(),
+                    "lcc":                  lcc_val,
+                    "pd_zone":              zone,
+                    "mr_status":            f"KLEIN_V4_UNANIMOUS ({klein_winner})",
+                    "existential_footprint": round(ef, 6),
+                    "transform":            klein_winner,
+                    "dt_penumbra":          False,
+                    "dt_proximity":         0.0,
+                    "immune_log":           self.dt_immune_log.summary(),
+                    "klein_alignment":      round(lcc_val, 4),
+                }]
+            except Exception:
+                pass  # Fall through to full search if application fails
+
+        if self.verbose:
             print("  Building transformation library...")
         transforms = self._build_transform_library()
 
@@ -393,7 +435,10 @@ class MyrionSolver:
                     print(f"    Immune fast-reject: {name} (known DT pattern)")
                 continue
 
-            lcc = self._lcc_score(t)
+            # Phase 4b: GILE Alignment Scoring (URB #556)
+            # Use combined_score (60% min + 40% mean) instead of democratic mean.
+            # The correct transform is the one every example independently selects.
+            lcc = combined_score(t, self.train_pairs)
 
             # Pre-filter: skip clear Bad zone bottom (below Indeterminate boundary)
             if lcc < 0.30:

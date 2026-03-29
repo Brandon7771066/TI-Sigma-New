@@ -19,6 +19,9 @@ from arc_ti_solver.data_loader import load_task, task_summary
 from arc_ti_solver.tralse_encoder import TralseCellEncoder
 from arc_ti_solver.myrion_solver import MyrionSolver
 from arc_ti_solver.lcc_scorer import compute_full_lcc, rank_solutions, lcc_report
+from arc_ti_solver.klein_v4_detector import (
+    mr_moot_check, apply_klein_v4_boost, klein_v4_report,
+)
 
 
 def _compute_resolution_pressure(encoded_pairs: list) -> float:
@@ -143,7 +146,23 @@ class TISigmaARCSolver:
                     pass
                 enriched.append(sol)
 
+            # Phase 4b: Klein V₄ alignment boost (URB #556)
+            # Reward group-element transforms that are unanimously aligned.
+            enriched = apply_klein_v4_boost(enriched, self.train_pairs)
+
             ranked = rank_solutions(enriched)
+
+            # Phase 4c: MR Moot Gate (URB #555/556, Riddle 1)
+            # When two candidates produce the same output, the choice is moot.
+            # Flag the solutions — confidence is higher when transforms agree.
+            ranked = mr_moot_check(ranked, test_input)
+
+            if verbose and any(s.get("mr_moot") for s in ranked):
+                moot_pair = next(
+                    (s.get("transform") + " ≡ " + s.get("moot_partner", "?")
+                     for s in ranked if s.get("mr_moot")), ""
+                )
+                print(f"  MR MOOT: {moot_pair} — both produce same output")
 
             # Phase 3a: local refinement — push near-exact solutions to exact match
             # Try both residual-based (with transform_fn) and color-set fallback.

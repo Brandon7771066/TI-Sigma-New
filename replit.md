@@ -40,4 +40,10 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Replit Secrets**: For secure storage of environment variables and sensitive data.
 - **Kaggle**: Platform for the ARC-AGI competition where the TI Sigma Solver is applied.
 - **Zenodo**: Platform for hosting research papers with permanent DOIs.
-- **Global Consciousness Project (GCP)**: Princeton; used as a TI validation benchmark.
+- **Global Consciousness Project (GCP)**: Princeton; used as a TI validation benchmark.- **#557** (Corpus #211): The True-Tralse Connection — φ ≈ ζ(2). ζ(2)=π²/6≈1.6449 and φ=(1+√5)/2≈1.6180 within 1.7%. Double near-equality: ζ(2)≈φ AND ζ(2)-1≈1/φ (same approximation because φ-1=1/φ). Classified as True-Tralse: TRUE (real verified fact) TRALSE (1.7% Freedom Floor). Both are self-referential fixed points. TI reading: ζ(TRUE) ≈ φ (zeta at the TRUE integer ≈ golden ratio). Riemann tangent: critical line (σ=1/2) is to zeros what s=2 is to φ. DOI: pending.
+
+## ARC-AGI Solver Upgrades (Phase 4)
+- **Klein V₄ Detector**: `arc_ti_solver/klein_v4_detector.py` — implements orbit-collapse pre-filter (from Riemann URB #554), alignment scoring (min not mean, URB #556), MR Moot gate (URB #555/Riddle 1), and Klein V₄ boost
+- **Phase 4a**: Klein V₄ Pre-Filter — unanimous group-element detection BEFORE scoring 128+ transforms. Returns KLEIN_V4_UNANIMOUS immediately when found
+- **Phase 4b**: GILE Alignment Scoring — combined_score(60% min + 40% mean) replaces pure democratic mean; each example must independently align
+- **Phase 4c**: MR Moot Gate — detects when top candidates produce same test output; flags as moot (dilemma dissolved, confidence increased)
