@@ -182,29 +182,62 @@ theorem riddle4_iff_riddle5 (ρ : ℂ) :
 -- ============================================================
 
 /-
-  GapEquivalence.lean (URB #555) proves five equivalent Gap conditions,
-  all ↔ σ = 1/2 (sorry-free for the equivalences, named axiom for the Gap):
+  FORMAL LINKAGE TO TISigma.GapEquivalence (URB #555)
 
-    gapConditionA: variational minimum C(σ) = -1/2
-    gapConditionB: Klein V₄ orbit collapse S₁(ρ) = S₂(ρ)
-    gapConditionC: Mirror pairing conj(ρ) = 1-ρ (real part)
-    gapConditionD: UOP equidistance |ρ|² = |1-ρ|²
-    gapConditionE: UOP free energy |2σ-1| = 0
+  GapEquivalence.lean exports (all sorry-free):
+    pairCost' σ         := -min σ (1-σ)          [Route A variational]
+    condA_iff_critical  : pairCost' σ = -(1/2) ↔ σ = 1/2
+    condBC_iff_critical : S₁(s) = S₂(s) ↔ s.re = 1/2
+    condMirror_iff_critical : conj(s) = 1-s ↔ s.re = 1/2
+    condUOP_iff_critical    : normSq s = normSq (1-s) ↔ s.re = 1/2
+    gap_equivalence     : all four conditions ↔ s.re = 1/2
 
-  The Being Theorem (URB #560) adds a sixth equivalent condition:
-    gapConditionF: isEffortlessZero ρ ↔ σ = 1/2
+  Import (requires `lake build` in lean4/):
+    -- import TISigma.GapEquivalence
 
-  This is the same as gapConditionE restated in ontological language:
-  "zero free energy" (physical) = "effortless existence" (ontological).
-
-  The Being Theorem does not add new mathematics to GapEquivalence —
-  it adds depth of interpretation: the room that gapConditionE describes
-  from the outside (F=0) is the same room the Being Theorem inhabits
-  from the inside (simply BE).
+  We copy pairCost' here with explicit attribution so the formal
+  bridge theorem below can reference the GapEquivalence condition
+  without a live lakefile.  When the lakefile is configured:
+    - Replace the definition below with `open TISigma.GapEquivalence`
+    - The bridge theorem holds by definition of condA_iff_critical.
 -/
 
-/-- The Being Theorem condition is equivalent to the UOP free energy
-    condition from GapEquivalence.lean (gapConditionE). -/
+/-- pairCost' from TISigma.GapEquivalence (URB #555, Route A):
+    pairCost' σ = -min(σ, 1-σ).
+    Copied here for formal bridging; original in lean4/GapEquivalence.lean. -/
+noncomputable def pairCost' (σ : ℝ) : ℝ := -min σ (1 - σ)
+
+/-- FORMAL BRIDGE — condA to uopFreeEnergy (sorry-free):
+    pairCost'(σ) = -(1/2) ↔ uopFreeEnergy σ = 0.
+    Connects TISigma.GapEquivalence.condA_iff_critical to the Being Theorem.
+    Proved: both conditions ↔ σ = 1/2, so they are equivalent. -/
+theorem pairCost_condA_iff_uop_free_energy (σ : ℝ) :
+    pairCost' σ = -(1/2) ↔ uopFreeEnergy σ = 0 := by
+  constructor
+  · intro h
+    -- From condA: pairCost'(σ) = -1/2 → σ = 1/2 (same proof as condA_iff_critical)
+    unfold pairCost' at h
+    have hσ : σ = 1 / 2 := by
+      simp only [neg_inj] at h
+      rcases le_or_lt σ (1 - σ) with hle | hlt
+      · rw [min_eq_left hle] at h; linarith
+      · rw [min_eq_right (le_of_lt hlt)] at h; linarith
+    exact (uop_minimum σ).mpr hσ
+  · intro h
+    -- From uopFreeEnergy = 0: σ = 1/2 → pairCost'(σ) = -1/2
+    have hσ : σ = 1 / 2 := (uop_minimum σ).mp h
+    unfold pairCost'
+    rw [hσ]; norm_num
+
+/-- Being Theorem is formally a sixth gap condition in GapEquivalence:
+    isEffortlessZero ρ ↔ pairCost'(ρ.re) = -(1/2)
+    (the first five are in TISigma.GapEquivalence.gap_equivalence) -/
+theorem being_theorem_is_sixth_gap_condition (ρ : ℂ) :
+    isEffortlessZero ρ ↔ pairCost' ρ.re = -(1/2) := by
+  rw [pairCost_condA_iff_uop_free_energy]
+  exact effortless_iff_zero_free_energy ρ
+
+/-- The Being Theorem condition is equivalent to the UOP free energy condition. -/
 theorem being_theorem_is_gap_condition_E (ρ : ℂ) :
     isEffortlessZero ρ ↔ uopFreeEnergy ρ.re = 0 :=
   effortless_iff_zero_free_energy ρ
