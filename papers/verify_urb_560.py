@@ -4,8 +4,15 @@ All mathematical claims verified against Python (arithmetic + mpmath zeta).
 
 Run:  python3 papers/verify_urb_560.py
 
+IMPORTANT PRECISION NOTE (verified in Claim 3c):
+  Effort(ρ) := |2·Re(ρ) - 1| = |2σ - 1|   (real-part projection)
+  NOT |2ρ-1| (full complex modulus) which equals sqrt((2σ-1)²+4t²)
+  The full complex modulus is NOT zero at σ=1/2 for non-trivial zeros.
+  Only the real-part projection is zero at σ=1/2.
+
 Claims verified:
   1-7: Algebraic/arithmetic properties of Effort(σ) = |2σ-1|
+  3c:  Precision check — real-part vs complex modulus distinction
   8:   Genuine mpmath zeta computation at known non-trivial zeros
   9:   Formal bridge: pairCost'(σ) = -1/2 ↔ uopFreeEnergy(σ) = 0
        (connects to TISigma.GapEquivalence.condA_iff_critical)
@@ -60,6 +67,31 @@ for t in [14.1347, 21.0220, 25.0109, 30.4249]:
     assert abs(rho.real - (1 - rho.real)) < 1e-15
 print("CLAIM 3b VERIFIED: rho=1-rho (complex) fails for non-trivial zeros,")
 print("                   Re(rho)=1-Re(rho) holds correctly at sigma=1/2")
+
+# CLAIM 3c: PRECISION — real-part projection vs full complex modulus
+# The paper defines Effort(rho) := |2*Re(rho)-1|, NOT |2*rho-1|.
+# At sigma=1/2, with non-trivial zeros (t != 0):
+#   Real-part effort:    |2*(1/2)-1| = 0              (ZERO)
+#   Full complex modulus: |2*(1/2+it)-1| = |2it| = 2t (NONZERO)
+# Verifying this distinction for the four known zeros used in Claim 8:
+for t in [14.1347, 21.0220, 25.0109, 30.4249]:
+    rho = complex(0.5, t)
+    effort_realpart = abs(2 * rho.real - 1)
+    effort_complex  = abs(2 * rho - 1)
+    assert effort_realpart == 0.0, (
+        f"FAIL: real-part effort should be 0 at sigma=1/2, got {effort_realpart}"
+    )
+    assert abs(effort_complex - 2 * t) < 1e-10, (
+        f"FAIL: |2*rho-1| should equal 2t={2*t}, got {effort_complex}"
+    )
+    assert effort_complex > 10.0, (
+        f"FAIL: full complex modulus |2*rho-1| should be large (nonzero) at sigma=1/2, "
+        f"got {effort_complex}"
+    )
+print("CLAIM 3c VERIFIED: Effort(rho) = |2*Re(rho)-1| (real-part projection)")
+print("                   At sigma=1/2: real-part effort = 0")
+print("                   |2*rho-1| (full complex) = 2t, which is LARGE (nonzero)")
+print("                   => The paper's Effort definition is real-part ONLY")
 
 # -------------------------------------------------------
 # CLAIM 4: All five riddle conditions ↔ sigma = 1/2

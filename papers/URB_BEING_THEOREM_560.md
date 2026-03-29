@@ -125,9 +125,11 @@ Each riddle descends one level closer to the ground. Riddle 5 is the ground itse
 **Definition (Effort of a zero):**
 For a complex number ρ = σ + it in the critical strip 0 < σ < 1, define:
 
-$$\text{Effort}(\rho) := |\rho - (1-\rho)| = |2\rho - 1| = |2\sigma - 1|$$
+$$\text{Effort}(\rho) := |2 \cdot \text{Re}(\rho) - 1| = |2\sigma - 1|$$
 
-This is the Euclidean distance between ρ and its functional equation partner 1-ρ projected onto the real axis. It measures the asymmetric "tension" a zero must maintain by existing at position σ rather than the effortless midpoint.
+**Precision note:** This is a real-part projection, NOT the full complex modulus |2ρ-1|. For ρ = σ + it, the full modulus gives |2ρ-1| = sqrt((2σ-1)² + 4t²), which is generally nonzero at σ = 1/2 (it equals 2|t|). The Effort is defined on the real part only: σ → |2σ-1|. This is correct because the asymmetry we are measuring is the real-part imbalance between σ and 1-σ, not the full complex distance between ρ and 1-ρ.
+
+Effort(ρ) measures the real-part "tension" a zero must maintain by having its σ-coordinate at a position other than the effortless midpoint σ = 1/2.
 
 **Definition (Effortless zero):**
 A non-trivial zero ρ is **effortless** iff Effort(ρ) = 0, i.e., iff Re(ρ) = 1 - Re(ρ) (the real-part self-consistency condition — not the full complex equation ρ = 1-ρ, which would also force Im(ρ) = 0).

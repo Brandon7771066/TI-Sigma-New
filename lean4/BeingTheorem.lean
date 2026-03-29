@@ -36,14 +36,11 @@ import Mathlib.Tactic
 
 /-
   IMPORT CHAIN: GapEquivalence.lean → BeingTheorem.lean
-  In a full `lake build` project, add to lakefile.lean:
-    import TISigma.GapEquivalence
-  and replace the comment below with:
-    import TISigma.GapEquivalence
-  The Being Theorem extends TISigma.GapEquivalence.gap_equivalence
-  by adding the ONTOLOGICAL interpretation of gapConditionE.
+  This file is part of the TISigma lake package (lean4/lakefile.lean).
+  Within the TISigma package, GapEquivalence is a direct dependency.
+  Run `lake build` from lean4/ to resolve all imports.
 -/
--- import TISigma.GapEquivalence  -- (requires lake package; see lean4/)
+import GapEquivalence  -- TISigma package: lean4/GapEquivalence.lean
 
 namespace TISigma.BeingTheorem
 
@@ -195,45 +192,31 @@ theorem riddle4_iff_riddle5 (ρ : ℂ) :
   Import (requires `lake build` in lean4/):
     -- import TISigma.GapEquivalence
 
-  We copy pairCost' here with explicit attribution so the formal
-  bridge theorem below can reference the GapEquivalence condition
-  without a live lakefile.  When the lakefile is configured:
-    - Replace the definition below with `open TISigma.GapEquivalence`
-    - The bridge theorem holds by definition of condA_iff_critical.
+  The TISigma lake package (lean4/lakefile.lean) makes this import
+  available. Run `lake build` from lean4/ to verify all imports.
+  The bridge theorems below reference TISigma.GapEquivalence.pairCost'
+  and TISigma.GapEquivalence.condA_iff_critical directly.
 -/
 
-/-- pairCost' from TISigma.GapEquivalence (URB #555, Route A):
-    pairCost' σ = -min(σ, 1-σ).
-    Copied here for formal bridging; original in lean4/GapEquivalence.lean. -/
-noncomputable def pairCost' (σ : ℝ) : ℝ := -min σ (1 - σ)
+/-
+  The symbols pairCost' and condA_iff_critical are imported from
+  TISigma.GapEquivalence (lean4/GapEquivalence.lean, URB #555).
+  We open the namespace locally for the bridge theorems below.
+-/
 
 /-- FORMAL BRIDGE — condA to uopFreeEnergy (sorry-free):
-    pairCost'(σ) = -(1/2) ↔ uopFreeEnergy σ = 0.
-    Connects TISigma.GapEquivalence.condA_iff_critical to the Being Theorem.
-    Proved: both conditions ↔ σ = 1/2, so they are equivalent. -/
+    TISigma.GapEquivalence.pairCost'(σ) = -(1/2) ↔ uopFreeEnergy σ = 0.
+    Proof: both conditions ↔ σ = 1/2 (condA_iff_critical + uop_minimum),
+    so they are equivalent by transitivity. -/
 theorem pairCost_condA_iff_uop_free_energy (σ : ℝ) :
-    pairCost' σ = -(1/2) ↔ uopFreeEnergy σ = 0 := by
-  constructor
-  · intro h
-    -- From condA: pairCost'(σ) = -1/2 → σ = 1/2 (same proof as condA_iff_critical)
-    unfold pairCost' at h
-    have hσ : σ = 1 / 2 := by
-      simp only [neg_inj] at h
-      rcases le_or_lt σ (1 - σ) with hle | hlt
-      · rw [min_eq_left hle] at h; linarith
-      · rw [min_eq_right (le_of_lt hlt)] at h; linarith
-    exact (uop_minimum σ).mpr hσ
-  · intro h
-    -- From uopFreeEnergy = 0: σ = 1/2 → pairCost'(σ) = -1/2
-    have hσ : σ = 1 / 2 := (uop_minimum σ).mp h
-    unfold pairCost'
-    rw [hσ]; norm_num
+    TISigma.GapEquivalence.pairCost' σ = -(1/2) ↔ uopFreeEnergy σ = 0 := by
+  rw [TISigma.GapEquivalence.condA_iff_critical, uop_minimum]
 
 /-- Being Theorem is formally a sixth gap condition in GapEquivalence:
-    isEffortlessZero ρ ↔ pairCost'(ρ.re) = -(1/2)
-    (the first five are in TISigma.GapEquivalence.gap_equivalence) -/
+    isEffortlessZero ρ ↔ TISigma.GapEquivalence.pairCost'(ρ.re) = -(1/2)
+    (the first five conditions are in TISigma.GapEquivalence.gap_equivalence) -/
 theorem being_theorem_is_sixth_gap_condition (ρ : ℂ) :
-    isEffortlessZero ρ ↔ pairCost' ρ.re = -(1/2) := by
+    isEffortlessZero ρ ↔ TISigma.GapEquivalence.pairCost' ρ.re = -(1/2) := by
   rw [pairCost_condA_iff_uop_free_energy]
   exact effortless_iff_zero_free_energy ρ
 
