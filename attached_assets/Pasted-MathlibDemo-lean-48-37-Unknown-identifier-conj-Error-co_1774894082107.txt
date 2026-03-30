@@ -1,0 +1,147 @@
+MathlibDemo.lean:48:37
+Unknown identifier `conj`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:59:11
+Unknown identifier `le_or_lt`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:59:35
+Tactic `rcases` failed: `x✝ : ?m.29` is not an inductive datatype
+MathlibDemo.lean:67:13
+declaration uses `sorry`
+MathlibDemo.lean:71:10
+This simp argument is unused:
+  Complex.conj_re
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_re, Complex.sub_re, Complex.one_re] at hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:72:4
+linarith failed to find a contradiction
+case mp.h1.h
+s : ℂ
+h : sorry = 1 - s
+hr : (sorry ()).re = 1 - s.re
+a✝ : s.re < 1 / 2
+⊢ False
+
+failed
+MathlibDemo.lean:75:12
+This simp argument is unused:
+  Complex.conj_re
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_re, Complex.sub_re, Complex.one_re, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:75:65
+linarith failed to find a contradiction
+case mpr.a.h1.h
+s : ℂ
+h : s.re = 1 / 2
+a✝ : (sorry ()).re < 1 - 2⁻¹
+⊢ False
+
+failed
+MathlibDemo.lean:76:12
+This simp argument is unused:
+  Complex.conj_im
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_im, Complex.sub_im, Complex.one_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:76:4
+unsolved goals
+case mpr.a
+s : ℂ
+h : s.re = 1 / 2
+⊢ (sorry ()).im = -s.im
+MathlibDemo.lean:80:4
+Function expected at
+  conj
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  s
+
+Hint: The identifier `conj` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:84:10
+This simp argument is unused:
+  Complex.conj_re
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_re, Complex.sub_re, Complex.one_re] at hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:85:4
+linarith failed to find a contradiction
+case mp.h1.h
+x✝ : Sort u_1
+conj : x✝
+s : ℂ
+h : sorry = 1 - s
+hr : (sorry ()).re = 1 - s.re
+a✝ : s.re < 1 / 2
+⊢ False
+
+failed
+MathlibDemo.lean:88:12
+This simp argument is unused:
+  Complex.conj_re
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_re, Complex.sub_re, Complex.one_re, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:88:65
+linarith failed to find a contradiction
+case mpr.a.h1.h
+x✝ : Sort u_1
+conj : x✝
+s : ℂ
+h : s.re = 1 / 2
+a✝ : (sorry ()).re < 1 - 2⁻¹
+⊢ False
+
+failed
+MathlibDemo.lean:89:12
+This simp argument is unused:
+  Complex.conj_im
+
+Hint: Omit it from the simp argument list.
+  simp [Complex.conj_im, Complex.sub_im, Complex.one_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:89:4
+unsolved goals
+case mpr.a
+x✝ : Sort u_1
+conj : x✝
+s : ℂ
+h : s.re = 1 / 2
+⊢ (sorry ()).im = -s.im
+MathlibDemo.lean:95:55
+This simp argument is unused:
+  neg_sq
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.sub_im, Complex.one_re, Complex.one_im,
+    zero_sub, neg_sq]zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:104:19
+unexpected token '↔'; expected ':=', 'where' or '|'
+MathlibDemo.lean:115:5
+Function expected at
+  conj
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  s
+
+Hint: The identifier `conj` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
