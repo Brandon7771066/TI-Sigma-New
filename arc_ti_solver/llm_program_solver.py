@@ -90,7 +90,7 @@ def _format_examples(task: dict, max_pairs: int = 5) -> str:
 
 
 def _build_prompt(task: dict, domain_hint: str = "", error_feedback: str = "") -> str:
-    """Build the LLM prompt for program synthesis."""
+    """Build the LLM prompt for program synthesis, grounded in the skill library."""
     examples_str = _format_examples(task)
 
     # Color legend
@@ -117,30 +117,44 @@ Error / mismatch:
 Please fix the transform() function. The issue is above.
 """
 
+    # Include known skill descriptions as context
+    try:
+        from arc_ti_solver.skill_library import SKILL_REGISTRY
+        skill_hints = "\n".join(
+            f"  - {s.name}: {s.description}"
+            for s in SKILL_REGISTRY
+        )
+        skill_section = f"""
+Known transformation primitives (check these first before inventing new ones):
+{skill_hints}
+"""
+    except ImportError:
+        skill_section = ""
+
     prompt = f"""You are solving an ARC-AGI visual reasoning puzzle.
 {domain_hint_str}
 Color legend: {color_legend}
 Symbol key: . = black, b = blue, r = red, g = green, y = yellow, a = gray, m = magenta, o = orange, c = azure, w = maroon
-
+{skill_section}
 {examples_str}
 {error_str}
 Your task:
-1. Identify the pattern/rule that transforms INPUT → OUTPUT in the examples
-2. Write a Python function `transform(grid)` that implements this rule
-3. The function takes a list[list[int]] and returns a list[list[int]]
-4. The function must work on ANY valid input for this task, not just the examples
+1. Study the examples and identify the exact transformation rule
+2. Check if any known primitive above fits (or a simple composition of them)
+3. Write a Python function `transform(grid)` that implements the rule
+4. The function takes a list[list[int]] and returns a list[list[int]]
+5. The rule must generalize — do NOT hardcode outputs
 
 Rules:
 - Use only Python standard library + numpy (import as needed)
-- Do NOT hardcode the expected output — deduce the general rule
-- Handle edge cases robustly (different grid sizes, different positions)
+- Background color is almost always the most common color (usually 0=black)
 - Return the output as a list of lists of integers (not numpy arrays)
 
-Think step by step about the rule, then write the code.
+Think step by step, then write the code.
 
 Respond EXACTLY in this format:
 <reasoning>
-[Your step-by-step analysis of the pattern]
+[Your step-by-step analysis — which primitive fits, or what new rule applies]
 </reasoning>
 <code>
 def transform(grid):
@@ -277,9 +291,30 @@ def _validate_on_training(code: str, train_pairs: list) -> dict:
 
 
 def _call_claude(prompt: str, max_tokens: int = 2048) -> Optional[str]:
-    """Call Claude via Replit modelfarm."""
+    """
+    Call Claude.
+    Priority:
+      1. Direct ANTHROPIC_API_KEY secret (user's own key — bypasses modelfarm)
+      2. Replit modelfarm (AI_INTEGRATIONS_ANTHROPIC_API_KEY)
+    """
+    from anthropic import Anthropic
+
+    # 1. Try direct key first
+    direct_key = os.environ.get("ANTHROPIC_API_KEY")
+    if direct_key:
+        try:
+            client = Anthropic(api_key=direct_key)
+            msg = client.messages.create(
+                model="claude-opus-4-5",
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return msg.content[0].text
+        except Exception:
+            pass  # fall through to modelfarm
+
+    # 2. Replit modelfarm fallback
     try:
-        from anthropic import Anthropic
         client = Anthropic(
             api_key=os.environ.get("AI_INTEGRATIONS_ANTHROPIC_API_KEY"),
             base_url=os.environ.get("AI_INTEGRATIONS_ANTHROPIC_BASE_URL"),
@@ -290,14 +325,35 @@ def _call_claude(prompt: str, max_tokens: int = 2048) -> Optional[str]:
             messages=[{"role": "user", "content": prompt}],
         )
         return msg.content[0].text
-    except Exception as e:
+    except Exception:
         return None
 
 
 def _call_gpt(prompt: str, max_tokens: int = 2048) -> Optional[str]:
-    """Call GPT-4 via Replit modelfarm."""
+    """
+    Call GPT-4.
+    Priority:
+      1. Direct OPENAI_API_KEY secret (user's own key)
+      2. Replit modelfarm (AI_INTEGRATIONS_OPENAI_API_KEY)
+    """
+    from openai import OpenAI
+
+    # 1. Try direct key first
+    direct_key = os.environ.get("OPENAI_API_KEY")
+    if direct_key:
+        try:
+            client = OpenAI(api_key=direct_key)
+            resp = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=max_tokens,
+            )
+            return resp.choices[0].message.content
+        except Exception:
+            pass  # fall through to modelfarm
+
+    # 2. Replit modelfarm fallback
     try:
-        from openai import OpenAI
         client = OpenAI(
             api_key=os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY"),
             base_url=os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL"),
@@ -308,7 +364,7 @@ def _call_gpt(prompt: str, max_tokens: int = 2048) -> Optional[str]:
             max_tokens=max_tokens,
         )
         return resp.choices[0].message.content
-    except Exception as e:
+    except Exception:
         return None
 
 
