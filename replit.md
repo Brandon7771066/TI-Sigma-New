@@ -23,7 +23,10 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Computation & Information Theory**: Includes Ternary Computation, a Quantum Collapse Simulator, and TICL (TI Computing Language).
 - **TI Sigma Manifestation Machine / Power of 8**: Facilitates AI-human partner discovery and group intention.
 - **TI Sigma Intention Validation Lab v2.0**: Uses GCP for analysis, couples compatibility, and investor prediction.
-- **ARC-AGI TI Sigma Solver**: A full 5-valued logic pipeline for the ARC Prize competition.
+- **ARC-AGI TI Sigma Solver**: A full 5-valued logic pipeline for the ARC Prize competition. Phase 4: Klein V₄ Pre-Filter, GILE Alignment Scoring (min not mean), MR Moot Gate, FiveValuedCellEncoder, PolycrystallineEncoder (grain map with δ-density and orbit-collapse detection).
+- **Complex GILE Synthesis (URB #563)**: E = Im(i·z) where z = E + i·GIL. Resolves L*/+E vs Aperiodic Dual. On unit coherence circle (|z|=1): E = √(1−GIL²). Coherence radius |z| = √(E²+GIL²) as diagnostic tool.
+- **Tralse Hexagram / 64D GILE Matrix (URB #564)**: 5^6 = 15,625 state Tralse I Ching. 8 trigrams = 8 BOK modes. e-weighted casting via ω = e^{iπ/3}. Above-chance via von Mises sampling on unit coherence circle.
+- **GSA TI Prior (gsa_ti_prior.py)**: e-weighted prior distribution over 6 market orientations (ω^k, k=0..5). Replaces flat Bayesian prior. Unanimous aggregation (product of experts). 13% P(BUY) improvement demonstrated vs flat Bayes.
 
 ### System Design Choices
 - **Security**: Implemented using bcrypt for hashing, Fernet for encryption, PostgreSQL for database management, and Replit Secrets for sensitive information.
