@@ -22,6 +22,7 @@ from arc_ti_solver.lcc_scorer import compute_full_lcc, rank_solutions, lcc_repor
 from arc_ti_solver.klein_v4_detector import (
     mr_moot_check, apply_klein_v4_boost, klein_v4_report,
 )
+from arc_ti_solver.domain_classifier import route_to_domain_solver, classify_domain, DOMAIN_NAMES
 
 
 def _compute_resolution_pressure(encoded_pairs: list) -> float:
@@ -78,6 +79,59 @@ class TISigmaARCSolver:
             print(f"  Size preserved: {summary['size_preserved']}")
             print(f"  Input colors: {summary['input_colors']}")
             print(f"  Output colors: {summary['output_colors']}")
+
+        # ── Phase 5: Domain-Specialist Routing ──────────────────────────────────
+        # Try specialist solvers (Domain 2–4) before Myrion.
+        # If a specialist produces a confident result, return it directly.
+        domain_num = classify_domain(self.task)
+        domain_name = DOMAIN_NAMES.get(domain_num, "Unknown")
+
+        if verbose:
+            print(f"\nDomain classification: {domain_num} — {domain_name}")
+
+        specialist_result = route_to_domain_solver(self.task, task_id=self.task_id)
+
+        if specialist_result is not None and specialist_result.get("lcc", 0) >= 0.85:
+            if verbose:
+                print(f"  Specialist solver SUCCESS: {specialist_result.get('method')} "
+                      f"| LCC={specialist_result['lcc']:.3f}")
+            output = specialist_result["output"]
+            prediction = {
+                "test_index": 0,
+                "best": {
+                    "output": output,
+                    "lcc": specialist_result["lcc"],
+                    "transform": specialist_result.get("method", "specialist"),
+                },
+                "ranked": [
+                    {
+                        "output": output,
+                        "lcc": specialist_result["lcc"],
+                        "transform": specialist_result.get("method", "specialist"),
+                        "mr_moot": False,
+                    }
+                ],
+            }
+            report_lines = [
+                f"Task: {self.task_id}",
+                f"Domain: {domain_num} — {domain_name}",
+                f"Method: {specialist_result.get('method')}",
+                f"LCC: {specialist_result['lcc']:.4f}",
+                f"Pattern: {specialist_result.get('pattern', '')}",
+            ]
+            return {
+                "task_id": self.task_id,
+                "predictions": [prediction],
+                "domain": domain_num,
+                "domain_name": domain_name,
+                "method": specialist_result.get("method"),
+                "report": "\n".join(report_lines),
+            }
+
+        if verbose and specialist_result is not None:
+            print(f"  Specialist result below threshold "
+                  f"(LCC={specialist_result.get('lcc', 0):.3f}), falling back to Myrion.")
+        # ── End Phase 5 ────────────────────────────────────────────────────────
 
         encoder = TralseCellEncoder(self.train_pairs)
 
@@ -220,6 +274,9 @@ class TISigmaARCSolver:
             "predictions": all_predictions,
             "resolution_pressure": resolution_pressure,
             "color_roles": encoder.color_roles,
+            "domain": domain_num,
+            "domain_name": domain_name,
+            "method": "myrion",
             "report": "\n".join(report_lines),
         }
 
