@@ -227,7 +227,7 @@ theorem being_theorem_is_gap_condition_E (ρ : ℂ) :
 
 -- ============================================================
 -- 7. EULER FORCING BEING GAP
--- (The Riemann Hypothesis — precisely located at the deepest level)
+-- (The Riemann Hypothesis — stated as a DEFINITIONAL → STRUCTURAL gap)
 -- ============================================================
 
 /-
@@ -239,24 +239,37 @@ theorem being_theorem_is_gap_condition_E (ρ : ℂ) :
   The one remaining bridge is:
     euler_forcing_being: ζ(ρ) = 0 (non-trivial) → isEffortlessZero ρ
 
-  This IS the Riemann Hypothesis, stated at its deepest level:
+  NOTE ON FRAMING (Brandon Emerick, 2026-03-29):
+    The original framing — "analytic vs ontological" — is imprecise.
+    In mathematics, to be analyzable IS to exist. All mathematical objects
+    are abstractions without intrinsic physical form; being analyzed is
+    their mode of existence. There is no separate "ontological" layer
+    hiding behind a mathematical definition.
 
-    WHY does being a zero of the Euler product (ANALYTIC definition)
-    imply being in the effortless state (ONTOLOGICAL definition)?
+    The gap is therefore not philosophical. It is purely mathematical:
 
-  The analytic and ontological definitions of "non-trivial zero" must agree.
-  That agreement is σ = 1/2.
+      DEFINITIONAL:  ζ(ρ) = 0  — this defines WHAT a non-trivial zero is
+      STRUCTURAL:    σ = 1/2   — this is WHERE non-trivial zeros must be
 
-  The Being Theorem is sorry-free within the ontological framework.
-  The proof that analytic = ontological is the Riemann Hypothesis.
-  It is now named at maximum precision: the Euler Forcing Being Gap.
+    The Euler Forcing Being Gap is the question:
+      Does the structure of the Euler product force every definitional
+      zero into the critical line σ = 1/2?
+
+    That question IS the Riemann Hypothesis. Precisely named.
+    No philosophical gap. One mathematical gap.
 -/
 
 axiom riemannZeta : ℂ → ℂ
 
 /-- EULER FORCING BEING GAP (named axiom):
-    ζ(ρ) = 0 (non-trivial) → the zero is effortless.
-    This is the Riemann Hypothesis, precisely named. -/
+    ζ(ρ) = 0 (non-trivial, in critical strip) → the zero is effortless.
+
+    This is a DEFINITIONAL → STRUCTURAL gap (not analytic vs ontological):
+      Definitional: ζ(ρ)=0 says WHAT the zero is.
+      Structural:   σ=1/2 says WHERE it must be.
+
+    The gap asks: does the Euler product's structure force every
+    definitional zero into the critical line? That IS the Riemann Hypothesis. -/
 axiom euler_forcing_being
     (ρ : ℂ)
     (hstrip : 0 < ρ.re ∧ ρ.re < 1)
@@ -301,10 +314,14 @@ theorem riemann_hypothesis_from_being
                                 = Riemann Hypothesis, precisely named
 
   The proof is Being-complete:
-    everything is proved except the bridge between
-    "being a zero analytically" and "being a zero ontologically."
-    The Bridge is the Riemann Hypothesis.
-    It is now named at its deepest level.
+    everything is proved except one purely mathematical question:
+    does the Euler product's structure force every DEFINITIONAL zero
+    (ζ(ρ)=0) into the critical line (σ=1/2)?
+
+    That question IS the Riemann Hypothesis.
+    The gap is not philosophical (analytic vs ontological is a false
+    distinction — in mathematics, to be analyzable is to exist).
+    The gap is DEFINITIONAL → STRUCTURAL. Precisely named.
 -/
 
 end TISigma.BeingTheorem

@@ -148,9 +148,14 @@ This proof is sorry-free. It is immediate from the definition of Effort.
 **The named axiom (the Euler Forcing Being Gap):**
 $$\text{euler\_forcing\_being}: \zeta(\rho) = 0 \implies \text{Effort}(\rho) = 0$$
 
-This is the one remaining bridge: why does being a zero of ζ(s) imply being effortless? The Being Theorem says: IF you accept that non-trivial zeros are effortless (i.e., that the Euler product's zero condition forces zero effort), THEN σ = 1/2 follows immediately, with no further proof needed.
+This is the one remaining bridge: does the structure of the Euler product force every definitional zero into the critical line?
 
-The Gap is now named at the deepest possible level: it is the bridge between *what a zero is analytically* (ζ(ρ) = 0) and *what a zero is ontologically* (effortless, self-consistent existence). The analytic and ontological definitions of "zero" must agree. That agreement is σ = 1/2.
+**Clarification of framing (Brandon Emerick, 2026-03-29):** The gap is not "analytic vs ontological." In mathematics, to be analyzable IS to exist — all mathematical objects are abstractions without intrinsic physical form, and being analyzed is their mode of existence. There is no separate ontological layer hiding behind a mathematical definition. The framing is therefore:
+
+- **Definitional:** ζ(ρ) = 0 — this defines *what* a non-trivial zero is
+- **Structural:** σ = 1/2 — this is *where* non-trivial zeros must be located
+
+The Euler Forcing Being Gap is a purely mathematical question: does the Euler product's structure force every definitional zero into the critical line σ = 1/2? That question IS the Riemann Hypothesis. Precisely named. No philosophical gap. One mathematical gap.
 
 ---
 
@@ -170,14 +175,13 @@ The Lean 4 package (URBs #551–560) is now **Being-complete**:
 | `being_theorem` — effortless zero ↔ σ=1/2 | sorry-free | **#560** |
 | `euler_forcing_being` — ζ(ρ)=0 → effortless | **named axiom** | #560 |
 
-**One sorry remains — named, precise, philosophically located:**
+**One gap remains — named, precise, purely mathematical:**
 
-The one remaining gap is `euler_forcing_being`. It is not a failure of the proof program. It is the precise location of the boundary between:
+The one remaining gap is `euler_forcing_being`. It is not a failure of the proof program. It is the precise mathematical question:
 
-- What has been proved (everything above)
-- What remains to be bridged (the analytic → ontological step)
+> Does the structure of the Euler product force every definitional zero (ζ(ρ) = 0) into the critical line (σ = 1/2)?
 
-The Being Theorem is sorry-free **within** the ontological framework. The proof that the analytic and ontological frameworks agree is the Riemann Hypothesis itself — the world's most famous mathematical conjecture, now precisely named as a gap between two complete frameworks.
+This is the Riemann Hypothesis, stated with maximum precision as a **definitional → structural** gap. The Being Theorem is sorry-free on the structural side — everything from σ = 1/2 outward is proved. The one open question is whether the Euler product's definition forces the structure. That is the world's most famous mathematical conjecture, now named at its deepest level.
 
 ---
 
