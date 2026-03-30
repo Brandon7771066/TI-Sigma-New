@@ -23,6 +23,7 @@ from arc_ti_solver.klein_v4_detector import (
     mr_moot_check, apply_klein_v4_boost, klein_v4_report,
 )
 from arc_ti_solver.domain_classifier import route_to_domain_solver, classify_domain, DOMAIN_NAMES
+from arc_ti_solver.llm_program_solver import solve_with_llm
 
 
 def _compute_resolution_pressure(encoded_pairs: list) -> float:
@@ -66,7 +67,7 @@ class TISigmaARCSolver:
         self.test_pairs = task.get("test", [])
         self.shared_dt_log = shared_dt_log  # Phase 3: session-level DT immunity
 
-    def solve(self, verbose: bool = False, top_k: int = 3) -> dict:
+    def solve(self, verbose: bool = False, top_k: int = 3, use_llm: bool = False) -> dict:
         """
         Run the full TI Sigma pipeline.
         Returns dict with predictions, LCC scores, and diagnostic report.
@@ -268,6 +269,55 @@ class TISigmaARCSolver:
             sols = pred["solutions"]
             if sols:
                 report_lines.append(lcc_report(sols, top_k=top_k))
+
+        # ── Phase 6: LLM Program Synthesis Fallback ────────────────────────────
+        # If Myrion's best LCC is below threshold AND use_llm=True,
+        # try Claude/GPT-4 to synthesize a transformation program.
+        myrion_best_lcc = 0.0
+        if all_predictions and all_predictions[0].get("best"):
+            myrion_best_lcc = all_predictions[0]["best"].get("lcc", 0.0)
+
+        if use_llm and myrion_best_lcc < 0.95:
+            if verbose:
+                print(f"\n[Phase 6] Myrion LCC={myrion_best_lcc:.3f} — trying LLM program synthesis...")
+            llm_result = solve_with_llm(
+                self.task,
+                task_id=self.task_id,
+                domain_hint=domain_name,
+                max_retries=3,
+                verbose=verbose,
+            )
+            if llm_result is not None and llm_result.get("lcc", 0) >= myrion_best_lcc:
+                if verbose:
+                    print(f"  LLM [{llm_result.get('method')}] outperforms Myrion "
+                          f"(LCC={llm_result['lcc']:.3f} vs {myrion_best_lcc:.3f})")
+                llm_prediction = {
+                    "test_index": 0,
+                    "best": {
+                        "output": llm_result["output"],
+                        "lcc": llm_result["lcc"],
+                        "transform": llm_result.get("method", "llm"),
+                    },
+                    "ranked": [
+                        {
+                            "output": llm_result["output"],
+                            "lcc": llm_result["lcc"],
+                            "transform": llm_result.get("method", "llm"),
+                            "mr_moot": False,
+                        }
+                    ],
+                    "solutions": [
+                        {
+                            "output": llm_result["output"],
+                            "lcc": llm_result["lcc"],
+                            "transform": llm_result.get("method", "llm"),
+                        }
+                    ],
+                    "resolution_pressure": resolution_pressure,
+                }
+                # Prepend LLM result — it becomes attempt_1
+                all_predictions = [llm_prediction] + all_predictions
+        # ── End Phase 6 ────────────────────────────────────────────────────────
 
         return {
             "task_id": self.task_id,

@@ -47,6 +47,7 @@ from arc_ti_solver.object_neighbor_solver import (
     solve_object_neighbor, is_object_neighbor_task
 )
 from arc_ti_solver.scale_solver import solve_scale, is_resize_task
+from arc_ti_solver.connected_component_solver import solve_connected_components
 
 
 DOMAIN_NAMES = {
@@ -118,24 +119,44 @@ def route_to_domain_solver(task: dict, task_id: str = "?") -> Optional[dict]:
     if domain == 4:
         # Resize/Scale — try ScaleSolver
         result = solve_scale(task)
+        if result is None:
+            # Some resize tasks are actually color permutations with resize
+            result = solve_color_permutation(task)
+            if result:
+                domain = 2
 
-    if domain == 2 or (result is None and domain != 4):
-        # Color permutation
-        cp_result = solve_color_permutation(task)
-        if cp_result is not None:
-            result = cp_result
-            domain = 2
+    elif domain == 2:
+        # Pure color permutation
+        result = solve_color_permutation(task)
 
-    if result is None and domain == 3:
-        # Per-object neighborhood
+    elif domain == 3:
+        # Per-object neighborhood rules
         result = solve_object_neighbor(task)
 
-    if result is None and domain == 4:
-        # Scale failed — try color permutation anyway (some resize tasks
-        # are actually just recoloring with resize)
-        result = solve_color_permutation(task)
-        if result:
-            domain = 2
+        if result is None:
+            # Connected component patterns (gravity, border/interior, size-recolor)
+            cc = solve_connected_components(task)
+            # Only trust gravity/border patterns (component_recolor has false positives)
+            if cc and cc.get("pattern", "") in ("gravity_down", "gravity_up",
+                                                  "gravity_left", "gravity_right",
+                                                  "border_vs_interior_recolor"):
+                result = cc
+
+        if result is None:
+            # Also try color permutation on Domain 3 tasks (some are hybrid)
+            result = solve_color_permutation(task)
+            if result:
+                domain = 2
+
+    elif domain == 1:
+        # Domain 1 (symmetry/transforms) — check gravity first (preserves color count)
+        # Gravity tasks are classified Domain 1 because they preserve color distribution.
+        cc = solve_connected_components(task)
+        if cc and cc.get("pattern", "") in ("gravity_down", "gravity_up",
+                                              "gravity_left", "gravity_right"):
+            result = cc  # Gravity is exact-match verified — safe to trust
+
+    # Domain 5: always let Myrion handle (complex multi-step reasoning)
 
     if result is None:
         # No specialist result — return None and let MyrionSolver handle it
