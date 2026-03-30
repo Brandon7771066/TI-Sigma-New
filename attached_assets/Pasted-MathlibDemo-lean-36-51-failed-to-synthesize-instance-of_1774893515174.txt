@@ -1,0 +1,430 @@
+MathlibDemo.lean:36:51
+failed to synthesize instance of type class
+  HSub ℕ R R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:36:44
+failed to synthesize instance of type class
+  Min R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:36:43
+failed to synthesize instance of type class
+  Neg R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:38:37
+Unknown identifier `conj`
+MathlibDemo.lean:39:37
+failed to synthesize instance of type class
+  HSub ℕ C C
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:43:16
+failed to synthesize instance of type class
+  HDiv ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:43:14
+failed to synthesize instance of type class
+  Neg R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:43:27
+failed to synthesize instance of type class
+  HDiv ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:44:11
+declaration uses `sorry`
+MathlibDemo.lean:44:22
+This simp argument is unused:
+  neg_inj
+
+Hint: Omit it from the simp argument list.
+  simp only [pairCost',̵ ̵n̵e̵g̵_̵i̵n̵j̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:46:0
+unsolved goals
+case mp
+R : Type u_1
+σ : R
+h : sorry = -(1 / 2)
+⊢ σ = 1 / 2
+MathlibDemo.lean:47:7
+Unknown identifier `le_or_lt`
+MathlibDemo.lean:47:31
+Tactic `rcases` failed: `x✝ : R` is not an inductive datatype
+MathlibDemo.lean:54:16
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:54:30
+unsolved goals
+case mpr
+C : Type u_1
+s : C
+⊢ sorry = 1 / 2 → sorry = sorry s
+MathlibDemo.lean:55:11
+declaration uses `sorry`
+MathlibDemo.lean:55:16
+declaration uses `sorry`
+MathlibDemo.lean:57:0
+unsolved goals
+case mp
+C : Type u_1
+s : C
+h : sorry = sorry s
+⊢ sorry = 1 / 2
+MathlibDemo.lean:58:32
+Unknown identifier `h`
+MathlibDemo.lean:67:0
+Function expected at
+  conj
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  s
+
+Hint: The identifier `conj` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:67:9
+failed to synthesize instance of type class
+  HSub ℕ C C
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:67:17
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:67:31
+unsolved goals
+case mpr
+C : Type u_1
+x✝ : Sort u_2
+conj : x✝
+s : C
+⊢ sorry = 1 / 2 → sorry = 1 - s
+MathlibDemo.lean:69:0
+unsolved goals
+case mp
+C : Type u_1
+x✝ : Sort u_2
+conj : x✝
+s : C
+h : sorry = 1 - s
+⊢ sorry = 1 / 2
+MathlibDemo.lean:70:32
+Unknown identifier `h`
+MathlibDemo.lean:79:15
+Application type mismatch: The argument
+  s
+has type
+  C
+but is expected to have type
+  ℂ
+in the application
+  normSq s
+MathlibDemo.lean:79:35
+failed to synthesize instance of type class
+  HSub ℕ C ℂ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:79:44
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:80:33
+This simp argument is unused:
+  Complex.sub_re
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, C̵o̵m̵p̵l̵e̵x̵.̵s̵u̵b̵_̵r̵e̵,̵ ̵Complex.sub_im, Complex.one_re, Complex.one_im, zero_sub, neg_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:80:49
+This simp argument is unused:
+  Complex.sub_im
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.s̵u̵b̵_̵i̵m̵,̵
+  ̵C̵om̵p̵l̵e̵x̵.̵o̵ne_re, Complex.one_im, zero_sub, neg_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:81:0
+This simp argument is unused:
+  Complex.one_re
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.sub_im,
+  ̵C̵o̵m̵p̵l̵e̵x̵.̵o̵n̵e̵_̵r̵e̵,̵ Complex.one_im, zero_sub, neg_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:81:16
+This simp argument is unused:
+  Complex.one_im
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.sub_im, Complex.one_re, C̵o̵m̵p̵l̵e̵x̵.̵o̵n̵e̵_̵i̵m̵,̵ ̵zero_sub, neg_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:81:32
+This simp argument is unused:
+  zero_sub
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.sub_im,
+  ̵ ̲Complex.one_re, Complex.one_im,
+  ̲ z̵e̵r̵o̵_̵s̵u̵b̵,̵ neg_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:81:42
+This simp argument is unused:
+  neg_sq
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.normSq_apply, Complex.sub_re, Complex.sub_im, Complex.one_re, Complex.one_im,
+  ̲  ̲z̵e̵r̵o̵_̵s̵u̵b̵,̵ ̵n̵e̵g̵_̵s̵q̵]̵z̲e̲r̲o̲_̲s̲u̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:83:32
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:88:11
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:89:15
+unexpected token '↔'; expected ':=', 'where' or '|'
+MathlibDemo.lean:98:11
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:100:0
+Function expected at
+  conj
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  s
+
+Hint: The identifier `conj` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:100:9
+failed to synthesize instance of type class
+  HSub ℕ C C
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:101:15
+Application type mismatch: The argument
+  s
+has type
+  C
+but is expected to have type
+  ℂ
+in the application
+  normSq s
+MathlibDemo.lean:101:35
+failed to synthesize instance of type class
+  HSub ℕ C ℂ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:102:0
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:105:28
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  s
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:107:9
+Unknown identifier `condMirror_iff_critical`
+MathlibDemo.lean:108:9
+Unknown identifier `condUOP_iff_critical`
+MathlibDemo.lean:121:45
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:121:41
+failed to synthesize instance of type class
+  HSub ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:121:40
+failed to synthesize instance of type class
+  Lattice R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:128:45
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:128:56
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:137:21
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:139:11
+This simp argument is unused:
+  abs_eq_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵b̵s̵_̵e̵q̵_̵z̵e̵r̵o̵,̵ ̵s̵u̵b̵_̵e̵q̵_̵z̵e̵r̵o̵]̵[̲s̲u̲b̲_̲e̲q̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:139:24
+This simp argument is unused:
+  sub_eq_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [abs_eq_zero,̵ ̵s̵u̵b̵_̵e̵q̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MathlibDemo.lean:140:0
+No goals to be solved
+MathlibDemo.lean:147:0
+`simp` made no progress
+MathlibDemo.lean:154:4
+failed to synthesize instance of type class
+  HDiv ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:154:16
+failed to synthesize instance of type class
+  HSub ℕ R R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:156:11
+linarith failed to find a contradiction
+case mp
+R : Type u_1
+σ : R
+h : σ = 1 / 2
+⊢ False
+failed
+MathlibDemo.lean:157:11
+linarith failed to find a contradiction
+case mpr
+R : Type u_1
+σ : R
+h : σ = 1 - σ
+⊢ False
+failed
+MathlibDemo.lean:160:48
+failed to synthesize instance of type class
+  HMul ℕ R ?m.13
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:160:47
+failed to synthesize instance of type class
+  Lattice R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:163:18
+failed to synthesize instance of type class
+  OfNat R 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  R
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:163:26
+failed to synthesize instance of type class
+  HDiv ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:165:0
+`simp` made no progress
+MathlibDemo.lean:171:25
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:175:35
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:175:47
+unsolved goals
+C : Sort u_1
+ρ : C
+⊢ effort ρ = 0 ↔ uopFreeEnergy sorry = 0
+MathlibDemo.lean:177:4
+Unknown identifier `effort_eq_uop_free_energy`
+MathlibDemo.lean:181:41
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:186:14
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:194:16
+failed to synthesize instance of type class
+  HDiv ℕ ℕ R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:194:14
+failed to synthesize instance of type class
+  Neg R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:194:41
+failed to synthesize instance of type class
+  OfNat R 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  R
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:194:46
+unsolved goals
+R : Type u_1
+σ : R
+⊢ σ = 1 / 2 ↔ σ = 1 / 2
+MathlibDemo.lean:199:31
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:229:14
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:229:21
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:230:25
+failed to synthesize instance of type class
+  OfNat C 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:237:14
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:237:21
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:238:25
+failed to synthesize instance of type class
+  OfNat C 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  C
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:239:0
+Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  ρ
+has type `C` which does not have the necessary form.
+MathlibDemo.lean:240:22
+Unknown identifier `euler_forcing_being`
