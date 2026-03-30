@@ -1,25 +1,23 @@
-/-!
-# TI Sigma — Gap Equivalence + Being Theorem
-## Self-contained Lean4web demo (URBs #555, #560)
-
-Paste into https://live.lean-lang.org — compiles with zero errors.
-
-Author  : Brandon Emerick (TI Sigma / BlissGene Therapeutics)
-Date    : March 30, 2026
-Corpus  : URB #555 (GapEquivalence) + URB #560 (Being Theorem)
-
-## Fixes applied vs original MathlibDemo errors
-1. `conj` unknown → use `star` (StarRing typeclass, always available for ℂ)
-   and define a local `abbrev conj := @star ℂ _` for readability
-2. `conj_re`/`conj_im` unknown → use `Complex.star_def` to reduce `star z`
-   to `{ re := z.re, im := -z.im }`, then component lemmas are obvious
-3. `le_or_lt` unknown → use `min_le_left`/`min_le_right` + `linarith` (no rcases)
-4. Triple `↔` chaining → `A ↔ B ↔ C ↔ D` is invalid Lean4 syntax; use `∧`
-5. `R`, `C` as type names → autoImplicit makes them generic; always use `ℝ`, `ℂ`
-6. `neg_sq` unused simp arg → removed; use `ring_nf` + `nlinarith` instead
--/
-
 import Mathlib
+
+/-
+  TI Sigma — Gap Equivalence + Being Theorem
+  Self-contained Lean4web demo (URBs #555, #560)
+
+  Paste into https://live.lean-lang.org — compiles with zero errors.
+
+  Author  : Brandon Emerick (TI Sigma / BlissGene Therapeutics)
+  Date    : March 30, 2026
+  Corpus  : URB #555 (GapEquivalence) + URB #560 (Being Theorem)
+
+  Fixes applied vs original MathlibDemo errors:
+  1. import must be line 1 (no doc comment before it)
+  2. `conj` unknown → local abbrev conj := @star ℂ _ + helper lemmas
+  3. `conj_re`/`conj_im` → proved from Complex.star_def
+  4. `le_or_lt` unknown → min_le_left/right + linarith (no rcases)
+  5. A ↔ B ↔ C ↔ D invalid → use ∧ of four biconditionals
+  6. `neg_sq` unused → ring_nf + nlinarith instead
+-/
 
 set_option linter.unusedSimpArgs false
 
