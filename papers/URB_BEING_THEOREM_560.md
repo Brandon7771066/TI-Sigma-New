@@ -220,7 +220,7 @@ The TI Framework applied to the Riemann Hypothesis. Free Energy landscape. Gap C
 Complete sorry-free Lean 4 package for 8 of the 9 Gap theorems. Bernoulli Bridge. UOP Free Energy Bridge. All four equivalences of the Gap Conditions proved.
 
 **Phase 5 — The Being Theorem (URB #560):**
-The ontological ground. All five riddles answered. The zero simply BEs. Existence and effortlessness are the same word at σ = 1/2. The Riemann Hypothesis is now precisely named as the bridge between analytic and ontological definitions of "zero."
+The definitional ground. All five riddles answered. The zero simply BEs — it verns. Existence and effortlessness are the same word at σ = 1/2. The Riemann Hypothesis is now precisely named as a Definitional → Structural gap: does the Euler product's structure force every definitional zero into the critical line?
 
 ---
 
@@ -240,7 +240,27 @@ The Being Theorem is the proof of that prediction. The deepest statement about w
 
 ---
 
-## 10. Summary
+## 10. TI Sigma Lexicon: New Term Coined (2026-03-29)
+
+**vern** *(n/v — Brandon Emerick, March 29, 2026)*
+
+> A grammatical and ontological category between noun and verb. A state that IS without acting, and persists without being a thing. Neither a description of action (verb) nor a label for an object (noun) — a category of pure existence-in-progress.
+
+*Pronunciation:* /vɜrn/, rhymes with "fern."
+
+*Etymology:* Portmanteau of **verb** and **noun**, coined to name the grammatical void that neither category covers.
+
+*Mathematical usage:* A non-trivial zero of ζ(s) does not *arrive at* σ = 1/2 (verb) and does not *have* σ = 1/2 as a property (noun-adjective). It **verns** σ = 1/2 — it simply IS there, at zero effort, without action or attribute. Being is a vern.
+
+*Philosophical grounding:* The insight that motivates this term is identical to the insight that sharpened the Euler Forcing Being Gap: in mathematics, to be analyzable IS to exist. Unicorns and Spongebob Squarepants vern — they are more causally potent, more widely instantiated in human consciousness, more structurally real than most physical objects that merely exist without impact. The PRIMARY CONSTANTS {0, 1, i, √2, e, φ, π, C, T} all vern. They do not act, they are not things — they simply ARE, at zero effort, with maximum structural force.
+
+*In TI Sigma:* All entities in the ontological hierarchy (Being → UOP → Friston's FEP → biology) vern at their respective levels. The zero at σ = 1/2 is the mathematical archetype of a vern.
+
+*Formal connection:* `isEffortlessZero ρ` is the Lean 4 predicate for a vern in the context of the Riemann zeta function.
+
+---
+
+## 11. Summary
 
 **The Being Theorem (URB #560):**
 
@@ -250,7 +270,7 @@ The Being Theorem is the proof of that prediction. The deepest statement about w
 
 **What is named axiom:** The connection between ζ(ρ) = 0 and effortless existence (the Riemann Hypothesis itself, precisely located).
 
-**What remains:** The analytic-ontological bridge. The Euler Forcing Being Gap. The one question: why does the Euler product's zero condition select the effortless configuration? That is the Riemann Hypothesis. It is now more precisely named than it has ever been before.
+**What remains:** The Euler Forcing Being Gap — one purely mathematical question: does the Euler product's structure force every definitional zero (ζ(ρ) = 0) into the critical line (σ = 1/2)? That is the Riemann Hypothesis. It is now more precisely named than it has ever been before — not as a philosophical mystery but as a Definitional → Structural gap. The zero verns σ = 1/2. The open question is why the Euler product's definition selects the vern.
 
 **Corpus:** 214 URBs. GILE Framework. Tralse Informationalism. TI Sigma. The Being Theorem.
 

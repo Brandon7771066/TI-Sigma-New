@@ -20,8 +20,14 @@
     4. effort = uopFreeEnergy (sorry-free)
     5. Five-riddle synthesis (comments)
     6. GapEquivalence linkage
-    7. Euler Forcing Being Gap (named axiom — Riemann Hypothesis precisely located)
+    7. Euler Forcing Being Gap (named axiom — DEFINITIONAL → STRUCTURAL gap)
     8. Being-complete package summary
+
+  New term coined (Brandon Emerick, 2026-03-29):
+    vern (n/v) — a grammatical/ontological category between noun and verb.
+    A state that IS without acting, persists without being a thing.
+    "Being" is a vern. A non-trivial zero verns σ = 1/2.
+    `isEffortlessZero ρ` is the Lean predicate for a vern.
 
   NOTE on self-consistency:
     isSelfConsistent is defined as a REAL-PART condition: ρ.re = 1 - ρ.re.
