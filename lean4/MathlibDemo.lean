@@ -30,7 +30,7 @@ In Lean4 Mathlib, complex conjugation is the `star` operation.
 We introduce a local abbreviation for readability.
 `Complex.star_def : star z = { re := z.re, im := -z.im }` (definitional)
 -/
-local abbrev conj : ℂ → ℂ := @star ℂ _
+noncomputable def conj (z : ℂ) : ℂ := star z
 
 private lemma conj_re (z : ℂ) : (conj z).re = z.re := by
   simp [conj, Complex.star_def]
