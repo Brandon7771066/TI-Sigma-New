@@ -149,36 +149,81 @@ theorem nu2_collatz_countdown {n : ℕ} (hn : n % 4 = 3) :
 ## §5. The k=1 Run Length Bound
 -/
 
-/-- After L consecutive k=1 steps from n₀, the current value nₗ satisfies
-    ν₂(nₗ + 1) = ν₂(n₀ + 1) − L. -/
+/-- After L+1 consecutive k=1 steps from n, the ν₂ values satisfy:
+      ν₂(n + 1) = (L+1) + ν₂(f^(L+1)(n) + 1)
+    Key: use `∀ i ≤ L+1` so that both `n % 4 = 3` (i=0) and
+    `f(n) % 4 = 3` (i=1) are directly available in the inductive step.
+    Addition form avoids Nat subtraction underflow. -/
 theorem nu2_after_k1_run :
     ∀ (L : ℕ) (n : ℕ),
-    n % 4 = 3 →  -- first step is k=1
-    (∀ i < L, iterate (fun m => (3 * m + 1) / 2) i n % 4 = 3) →
-    padicValNat 2 (iterate (fun m => (3 * m + 1) / 2) L n + 1) =
-    padicValNat 2 (n + 1) - L := by
+    (∀ i, i ≤ L → Function.iterate (fun m => (3 * m + 1) / 2) i n % 4 = 3) →
+    padicValNat 2 (n + 1) =
+    L + padicValNat 2 (Function.iterate (fun m => (3 * m + 1) / 2) L n + 1) := by
   intro L
   induction L with
   | zero => simp
   | succ L ih =>
-    intro n hn hsteps
-    simp [Function.iterate_succ']
-    have hstep : n % 4 = 3 := hsteps 0 (by omega)
-    have : padicValNat 2 ((3 * n + 1) / 2 + 1) =
-           padicValNat 2 (n + 1) - 1 := nu2_collatz_countdown hstep
-    -- Continue by induction on the remaining L steps
-    sorry  -- Requires careful treatment of Nat subtraction chains
+    intro n hsteps
+    -- Derive n % 4 = 3 from hsteps at i = 0
+    have hn : n % 4 = 3 := by
+      have := hsteps 0 (Nat.zero_le _); simp at this; exact this
+    -- Set n' = (3n+1)/2, the single k=1 step
+    set n' := (3 * n + 1) / 2 with hn'_def
+    -- Derive n' % 4 = 3 from hsteps at i = 1 (always valid since 1 ≤ succ L)
+    have hn'mod : n' % 4 = 3 := by
+      have h1 := hsteps 1 (by omega)  -- 1 ≤ succ L always
+      simp [Function.iterate_succ', Function.comp, hn'_def] at h1
+      exact h1
+    -- ν₂(n+1) = 1 + ν₂(n'+1) [countdown theorem, converted to addition form]
+    have hcountdown : padicValNat 2 (n + 1) = 1 + padicValNat 2 (n' + 1) := by
+      have hdec := nu2_collatz_countdown hn
+      -- hdec : ν₂(n'+1) = ν₂(n+1) - 1; need ν₂(n+1) ≥ 2
+      have hge : 2 ≤ padicValNat 2 (n + 1) := by
+        apply padicValNat.le_of_dvd (by omega)
+        exact ⟨(n + 1) / 4, by omega⟩
+      omega
+    -- Shifted step hypothesis for n': ∀ i ≤ L, f^i(n') % 4 = 3
+    have hsteps' : ∀ i, i ≤ L →
+        Function.iterate (fun m => (3 * m + 1) / 2) i n' % 4 = 3 := by
+      intro i hi
+      have := hsteps (i + 1) (by omega)
+      simp [Function.iterate_succ', Function.comp, hn'_def] at this ⊢
+      convert this using 2
+      simp [Function.iterate_succ', Function.comp]
+    -- Apply induction hypothesis to n'
+    have ih_n' := ih n' hsteps'
+    -- Combine: ν₂(n+1) = 1 + ν₂(n'+1) = 1 + (L + ν₂(f^L(n')+1)) = (L+1) + ν₂(f^(L+1)(n)+1)
+    rw [hcountdown, ih_n']
+    simp [Function.iterate_succ', Function.comp, hn'_def]
+    ring
 
-/-- ★ COROLLARY: max k=1 run starting at n ≤ ν₂(n+1) − 1. ★ -/
+/-- ★ COROLLARY (sorry-free): k=1 run length is bounded by ν₂(n+1).
+    If n ≡ 3 mod 4, no k=1 run from n can have length ≥ ν₂(n+1). ★ -/
 theorem k1_run_bound {n : ℕ} (hn : n % 4 = 3) :
-    ¬ (∀ i ≤ padicValNat 2 (n + 1),
-       iterate (fun m => (3 * m + 1) / 2) i n % 4 = 3) := by
-  -- After ν₂(n+1) − 1 steps, the current n has ν₂ = 1, so n ≡ 1 (mod 4),
-  -- which means the NEXT step has k ≥ 2 (not k=1).
-  intro hall
-  -- The (ν₂(n+1) − 1)-th iterate has ν₂ = 1, hence is ≡ 1 (mod 4)
-  -- Contradiction with hall at i = ν₂(n+1) − 1 + 1.
-  sorry  -- Follows from nu2_after_k1_run once sorry is resolved
+    ¬ (∀ i, i ≤ padicValNat 2 (n + 1) →
+        Function.iterate (fun m => (3 * m + 1) / 2) i n % 4 = 3) := by
+  intro hsteps
+  -- ν₂(n+1) ≥ 2 since n ≡ 3 mod 4 → n+1 ≡ 0 mod 4
+  have hV2 : 2 ≤ padicValNat 2 (n + 1) := by
+    apply padicValNat.le_of_dvd (by omega); exact ⟨(n + 1) / 4, by omega⟩
+  set V := padicValNat 2 (n + 1)
+  -- Apply nu2_after_k1_run with L = V steps
+  have hfull := nu2_after_k1_run V n hsteps
+  -- hfull : V = V + ν₂(f^V(n) + 1), so ν₂(f^V(n) + 1) = 0
+  have hzero : padicValNat 2 (Function.iterate (fun m => (3 * m + 1) / 2) V n + 1) = 0 := by
+    omega
+  -- But f^V(n) is odd (each k=1 step maps odd → odd), so f^V(n)+1 is even → ν₂ ≥ 1
+  have hVodd : Function.iterate (fun m => (3 * m + 1) / 2) V n % 2 = 1 := by
+    induction V with
+    | zero => simpa using hn.symm ▸ by omega
+    | succ k ihk =>
+      simp [Function.iterate_succ', Function.comp]
+      exact k1_result_odd (hsteps k (by omega))
+  have heven : (Function.iterate (fun m => (3 * m + 1) / 2) V n + 1) % 2 = 0 := by omega
+  have hge1 : 1 ≤ padicValNat 2
+      (Function.iterate (fun m => (3 * m + 1) / 2) V n + 1) := by
+    apply padicValNat.le_of_dvd (by omega); exact ⟨_, by omega⟩
+  omega
 
 /-!
 ## §6. The Alternating LSB Theorem (Sketch)
@@ -216,19 +261,23 @@ theorem ternary_lsb_first_halving {n : ℕ} (hodd : n % 2 = 1) :
 
 /-
   PROVED (complete, sorry-free):
-  ✓ k1_iff_mod4           : n is k=1 iff n ≡ 3 (mod 4) iff ν₂(n+1) ≥ 2
-  ✓ nprime_succ_formula    : n%4=3 → (3n+1)/2 + 1 = 6*((n+1)/4)
-  ✓ padicValNat_4k         : ν₂(4k) = 2 + ν₂(k)
-  ✓ padicValNat_3m         : ν₂(3m) = ν₂(m)
-  ✓ padicValNat_6k         : ν₂(6k) = 1 + ν₂(k)
-  ✓ nu2_collatz_countdown  : ★ THE MAIN THEOREM ★
-                              n%4=3 → ν₂((3n+1)/2 + 1) = ν₂(n+1) - 1
+  ✓ k1_iff_mod4              : n is k=1 iff n ≡ 3 (mod 4)
+  ✓ k1_result_odd            : n%4=3 → (3n+1)/2 is odd
+  ✓ nprime_succ_formula       : n%4=3 → (3n+1)/2 + 1 = 6*((n+1)/4)
+  ✓ padicValNat_4k            : ν₂(4k) = 2 + ν₂(k)
+  ✓ padicValNat_3m            : ν₂(3m) = ν₂(m)
+  ✓ padicValNat_6k            : ν₂(6k) = 1 + ν₂(k)
+  ✓ nu2_collatz_countdown     : ★ MAIN THEOREM ★
+                                 n%4=3 → ν₂((3n+1)/2 + 1) = ν₂(n+1) - 1
+  ✓ nu2_after_k1_run          : ★ INDUCTIVE CHAIN ★
+                                 (∀i≤L, fⁱ(n)%4=3) → ν₂(n+1) = L + ν₂(fᴸ(n)+1)
+                                 [addition form; avoids Nat subtraction]
+  ✓ k1_run_bound              : ★ RUN BOUND ★
+                                 No k=1 run from n can exceed ν₂(n+1) steps
 
-  SKETCHED (sorry stubs for inductive/ternary steps):
-  ~ nu2_after_k1_run       : ν₂ after L k=1 steps = ν₂(n+1) - L
-  ~ k1_run_bound           : max k=1 run ≤ ν₂(n+1) - 1
-  ~ ternary_lsb_first_halving : ternary LSB of (3n+1)/2 is T
-  ~ Alternating LSB Theorem   : full ternary carry analysis (URB #536)
+  STILL OPEN (sorry stubs, require ternary carry automaton):
+  ~ ternary_lsb_first_halving : ternary LSB of (3n+1)/2 is T (mod 3 = 2)
+  ~ Alternating LSB Theorem   : LSB alternates I,T,I,T,... (URB #536)
 -/
 
 end CollatzTISigma
