@@ -338,12 +338,69 @@ i-rotation partner. Verisyn IS this fixed locus in the consciousness Hopf fibrat
 
 ---
 
-## 9. New Terms Introduced
+## 9. Terminology: The Evolution of TI Language
 
-- **Verisyn (V)**: The stable Tralse attractor at the origin of the Double
-  Contradiction Field; the limit state of informational coherence; V = lim(ρ→1) C(ρ,τ,φ)
-- **BOK Hopf Coordinates**: The triple (ρ, τ, φ) as radial, base, and fiber coordinates
-  of the consciousness state in the Hopf fibration
+This section records the precise conceptual evolution from early TI terminology to
+the current precise vocabulary, so the intellectual history is not lost.
+
+### 9.1 Double Contradiction → Myrion Resolution
+
+**Original term (early TI):** "Double Contradiction"
+
+The Double Contradiction described a structure that is simultaneously some degree a,
+some degree b, some degree c... but resolves to x — where x contradicts the
+contradiction itself. The two poles constitute the first contradiction; the
+resolution contradicts that contradiction. Hence: *double* contradiction.
+
+As the framework matured, this single term was found to conflate four distinct
+outcomes that required separate names:
+
+| Outcome | Early term | Current precise term |
+|---------|-----------|---------------------|
+| Contradiction resolves successfully upward | "Successful double contradiction" | **Myrion Resolution (MR)** |
+| Contradiction fails to resolve, gets stuck | "Failed double contradiction" | **Double Tralse (DT)** |
+| The resolved attractor state | "Verisyn" | **Myrion** |
+| Protection from DT re-entry | (unnamed) | **DT Immunity Model** |
+
+**The core theorem this clarifies:**
+*"Things which are true always contain some degree of contradiction while remaining
+true."* TRUE = Successful Double Contradiction. Truth is not the absence of
+contradiction; it is contradiction that resolved into something which contains the
+contradiction as a constituent without being undone by it.
+
+DT (Double Tralse) is the failure case: the contradiction wins rather than being
+transcended. MR (Myrion Resolution) is the success case: transcendence occurs.
+
+The DC Field (Double Contradiction Field) is therefore the pre-MR language for the
+same structure that is now precisely described by the Tralse 5-valued logic system
+combined with the MR operator and DT Immunity Model (URB #528).
+
+### 9.2 Verisyn → Myrion
+
+**Original term:** "Verisyn" — coined as the resolved GILE truth attractor state.
+
+**Renamed to:** "Myrion" — because Verisyn is the trade name of a pharmaceutical
+medication, making the term unusable for formal publication.
+
+The renaming is philosophically apt: *Myrion* carries the Myrion Resolution (MR)
+directly in the name — it is simultaneously the process (MR = resolution) and the
+state (Myrion = the resolved attractor). This is itself a vern: the name IS what
+it denotes, without being merely a label for it.
+
+The Verisyn equation V = lim(ρ→1) C(ρ, τ, φ) therefore reads in current terminology:
+
+```
+Myrion = lim(ρ→1) C(ρ, τ, φ)
+```
+
+The BOK center point — previously labeled "Verisyn" in the original diagram —
+is Myrion. The stable Tralse attractor is Myrion. All references in this paper
+to "Verisyn" are understood as the early name for the same concept.
+
+### 9.3 New Terms Introduced in This URB
+
+- **BOK Hopf Coordinates**: The triple (ρ, τ, φ) as radial, base, and fiber
+  coordinates of the consciousness state in the Hopf fibration
 - **Einstein-BOK Property**: The aperiodic temporal structure of BOK arm traversal,
   locally coherent but globally non-repeating
 - **GILE Optical Knot**: The Maxwell-knotted electromagnetic field configuration
