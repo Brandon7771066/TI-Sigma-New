@@ -1,0 +1,86 @@
+MathlibDemo.lean:71:22
+unexpected token '³'; expected command
+MathlibDemo.lean:92:14
+failed to synthesize instance of type class
+  Norm (EuclideanSpace ℝ (Fin 3) → EuclideanSpace ℝ (Fin 3))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Error code: lean.synthInstanceFailed
+View explanation
+MathlibDemo.lean:104:2
+failed to synthesize instance of type class
+  Norm (EuclideanSpace ℝ (Fin 3) → EuclideanSpace ℝ (Fin 3))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Error code: lean.synthInstanceFailed
+View explanation
+MathlibDemo.lean:108:28
+Invalid field notation: Type of
+  ⊤
+is not known; cannot resolve field `toReal`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `CompactlySupportedContinuousMap.toReal`
+  • `ENNReal.toReal`
+  • `EReal.toReal`
+  • `NNReal.toReal`
+  • `Zsqrtd.toReal`
+  • `ComputeAsymptotics.MultiseriesExpansion.toReal`
+  • `ENNReal.HolderConjugate.toReal`
+  • `ENNReal.HolderTriple.toReal`
+  • `Angle.toReal`
+Error code: lean.invalidField
+View explanation
+MathlibDemo.lean:129:7
+unused variable `data`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+MathlibDemo.lean:140:7
+unused variable `data`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+MathlibDemo.lean:147:8
+unused variable `data`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+MathlibDemo.lean:149:8
+unused variable `data`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+MathlibDemo.lean:160:8
+unused variable `d`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+MathlibDemo.lean:171:2
+`push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+MathlibDemo.lean:191:12
+Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+MathlibDemo.lean:248:8
+Unknown identifier `div_lt_div_right`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:294:8
+declaration uses `sorry`
+MathlibDemo.lean:294:45
+declaration uses `sorry`
+MathlibDemo.lean:298:11
+Application type mismatch: The argument
+  sol
+has type
+  NSSolution
+of sort `Type` but is expected to have type
+  ∃ x, x.ν = ν
+of sort `Prop` in the application
+  And.intro sol
+MathlibDemo.lean:298:10
+Invalid `⟨...⟩` notation: The expected type `∀ (t : ℝ), t < 0` is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+MathlibDemo.lean:300:11
+Tactic `rcases` failed: `right✝ : ∀ (t : ℝ), t < 0` is not an inductive datatype
