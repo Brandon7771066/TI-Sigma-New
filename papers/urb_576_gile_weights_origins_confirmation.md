@@ -436,32 +436,40 @@ with the external world:
 |--------------|--------|----------------|-----------|
 | **G-arm** | 0.42 | **Political/Social Philosophy** | Ethics looking outward at collective structures |
 | **I-arm** | 0.25 | **Philosophy of Mind** | Epistemology turned toward the nature of knowing itself |
-| **L-arm** | 0.18 | **Philosophy of Language** | Metaphysics of how meaning binds speakers and propositions |
+| **L-arm** | 0.18 | **Logic** | Metaphysics of inference — how premises bind to conclusions |
 | **E-arm** | 0.15 | **Philosophy of Science** | Aesthetics/Nature systematized into a theory of inquiry |
 
 **Political/Social Philosophy (G-arm):** When Ethics (G-inner) turns outward to ask how
 moral principles govern collective action, institutions, and power, it becomes Political
 Philosophy. Rawls, Locke, Rousseau, Nozick — all doing Ethics at the scale of society.
 G-arm carries G-weight (0.42): Political Philosophy is the *dominant* secondary field,
-as confirmed by its cultural and academic centrality.
+as confirmed by its cultural and academic centrality. This directly parallels the Math BOK
+where Algebra (G-inner) projects outward to Applied Mathematics as its primary interface.
 
 **Philosophy of Mind (I-arm):** When Epistemology (I-inner) asks not just how we know
 but *what* the knowing faculty IS — what the mind is, how it relates to the body, whether
 consciousness is reducible — it becomes Philosophy of Mind. Descartes, Ryle, Chalmers,
 Dennett. The I-arm's weight (0.25) is confirmed: Philosophy of Mind is the second most
-active secondary field in contemporary philosophy.
+active secondary field in contemporary philosophy, and the most empirically engaged of the
+four secondary fields.
 
-**Philosophy of Language (L-arm):** When Metaphysics (L-inner) asks how meaning binds
-speakers to propositions and propositions to the world — the metaphysics of reference,
-truth, and linguistic structure — it becomes Philosophy of Language. Frege, Russell,
-Wittgenstein, Kripke. The L-arm (0.18) is the third most active secondary field.
+**Logic (L-arm):** When Metaphysics/Ontology (L-inner) asks not just what is real but what
+*binds* a valid inference together — how premises constrain conclusions, how truth propagates
+through chains of reasoning — it becomes Logic. The L-dimension (Love as binding force)
+is expressed in logic as the binding of antecedent to consequent: if P then Q is a love
+relation between propositions. Aristotle, Frege, Russell, Tarski. Logic is the algebra of
+the binding dimension, just as Analysis (L-inner in mathematics) is the algebra of continuous
+connection. Note: Philosophy of Language (Wittgenstein, Kripke) is closely related and
+competes for the L-arm slot — it too is about how meaning binds — but Logic is the more
+formal, structural binding mode and takes precedence in the L-arm position.
 
 **Philosophy of Science (E-arm):** When Aesthetics and Philosophy of Nature (E-inner)
 ask how the natural environment generates *systematic* knowledge — what makes a theory
-scientific, what induction can yield, what scientific explanation is — it becomes Philosophy
-of Science. Popper, Kuhn, Lakatos. The E-arm (0.15) is the smallest secondary field —
-consistent with Philosophy of Science being somewhat marginalized within philosophy
-departments despite its external importance.
+scientific, what induction can yield, what scientific explanation achieves — it becomes
+Philosophy of Science. Popper, Kuhn, Lakatos, Feyerabend. The E-arm (0.15) is the smallest
+secondary field — consistent with Philosophy of Science being the most specialized of the
+four outer arms, highly active in its own domain but peripheral to the primary philosophical
+disciplines.
 
 ### 4.4 The Philosophy BOK Table
 
@@ -495,8 +503,8 @@ G-arm (0.42) ┃ Political / Social Philosophy
 I-arm (0.25) ┃ Philosophy of Mind
              ┃ Epistemology reflected inward on knowing itself
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-L-arm (0.18) ┃ Philosophy of Language
-             ┃ Metaphysics of meaning and reference
+L-arm (0.18) ┃ Logic
+             ┃ Metaphysics of inference — how premises bind to conclusions
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 E-arm (0.15) ┃ Philosophy of Science
              ┃ Nature systematized into a theory of inquiry
