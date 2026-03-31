@@ -321,10 +321,12 @@ theorem larger_viscosity_lower_Re (L U ν₁ ν₂ : ℝ)
     reynoldsNumber L U ν₂ < reynoldsNumber L U ν₁ := by
   unfold reynoldsNumber
   have hLU : 0 < L * U := mul_pos hL hU
-  rw [lt_div_iff hν₁,
-      show L * U / ν₂ * ν₁ = L * U * ν₁ / ν₂ from by ring,
-      div_lt_iff hν₂]
-  nlinarith
+  have h₁  : 0 < L * U / ν₁ := div_pos hLU hν₁
+  -- Reduce L*U/ν₂ < L*U/ν₁  to  ν₁/ν₂ < 1  to  ν₁ < ν₂
+  rw [← div_lt_one h₁,
+      show L * U / ν₂ / (L * U / ν₁) = ν₁ / ν₂ from by field_simp,
+      div_lt_one hν₂]
+  exact hlt
 
 /-- The MR regime: Re < 1 means viscosity dominates inertia. -/
 def isMRDominated (L U ν : ℝ) : Prop := reynoldsNumber L U ν < 1
