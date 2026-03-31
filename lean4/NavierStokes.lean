@@ -88,12 +88,12 @@ axiom nsEnstrophy_nonneg : ∀ (sol : NSSolution) (t : ℝ), 0 ≤ nsEnstrophy s
 def isGloballyRegular (sol : NSSolution) : Prop :=
   ∃ C : ℝ, ∀ t : ℝ, 0 ≤ t → nsEnergy sol t ≤ C
 
-/-- A solution blows up at time T* > 0: energy diverges as t → T*⁻. -/
+/-- A solution blows up at time T* > 0: energy diverges to +∞ as t → T*⁻.
+    Stated elementarily: for every bound M there exists a time t < T* at
+    which the energy already exceeds M. -/
 def hasBlowup (sol : NSSolution) (T_star : ℝ) : Prop :=
   0 < T_star ∧
-  Tendsto (nsEnergy sol)
-    (nhdsWithin T_star (Set.Ico 0 T_star))
-    atTop
+  ∀ M : ℝ, ∃ t : ℝ, 0 ≤ t ∧ t < T_star ∧ M < nsEnergy sol t
 
 /-- A solution is a Smoothness Vern: its effort (energy) is uniformly bounded.
     isSmoothnessVern = isGloballyRegular (same content, TI Sigma name). -/
