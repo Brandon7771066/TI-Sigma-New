@@ -69,10 +69,10 @@ axiom lFunction_analytic (E : EllipticCurveQ) : Differentiable ℂ (lFunction E)
 -- ============================================================
 
 /-- BSD effort: how far L(E,s) is from being zero at s=1.
-    bsdEffort E = |L(E,1)| — the absolute value of L at the critical point.
+    bsdEffort E = ‖L(E,1)‖ — the norm (complex modulus) of L at s=1.
     Zero effort means L(E,1)=0, i.e., the curve "verns" s=1. -/
 noncomputable def bsdEffort (E : EllipticCurveQ) : ℝ :=
-  Complex.abs (lFunction E 1)
+  ‖lFunction E 1‖
 
 /-- E is BSD-effortless iff L(E,1) = 0.
     L(E,s) simply IS at s=1 — verns s=1 — when rank ≥ 1. -/
@@ -83,7 +83,7 @@ def isBSDEffortless (E : EllipticCurveQ) : Prop :=
 theorem bsdEffort_zero_iff (E : EllipticCurveQ) :
     bsdEffort E = 0 ↔ isBSDEffortless E := by
   unfold bsdEffort isBSDEffortless
-  simp [Complex.abs.eq_zero]
+  simp [norm_eq_zero]
 
 -- ============================================================
 -- 3. THE BSD BEING THEOREM (named axioms — the BSD conjecture)
@@ -122,10 +122,17 @@ axiom weak_bsd_forward (E : EllipticCurveQ) :
 axiom weak_bsd_converse (E : EllipticCurveQ) :
     isBSDEffortless E → 1 ≤ rank E
 
+/-- The order of vanishing of L(E,s) at s=1.
+    Full definition requires complex analytic machinery; axiomatized here.
+    In Mathlib this would be computed via the Taylor expansion of lFunction E. -/
+noncomputable axiom lFunctionOrderAt : EllipticCurveQ → ℕ
+
 /-- STRONG BSD (named axiom — the full conjecture):
-    The order of vanishing of L(E,s) at s=1 equals rank E(ℚ). -/
+    The order of vanishing of L(E,s) at s=1 equals rank E(ℚ).
+    lFunctionOrderAt replaces (lFunction E).orderAt 1 since
+    Function.orderAt is not available in Lean4web Mathlib. -/
 axiom strong_bsd (E : EllipticCurveQ) :
-    (lFunction E).orderAt 1 = rank E
+    lFunctionOrderAt E = rank E
 
 -- ============================================================
 -- 4. THE BSD BEING THEOREM (sorry-free consequences)
@@ -157,7 +164,7 @@ theorem bsd_rank_zero_iff (E : EllipticCurveQ) :
     omega
   · intro hne
     by_contra hne0
-    push_neg at hne0
+    push Not at hne0
     exact hne (weak_bsd_forward E (by omega))
 
 -- ============================================================
