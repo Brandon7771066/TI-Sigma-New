@@ -145,10 +145,9 @@ axiom leray_energy_inequality (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
     E(t) ≤ E(0) for all t ≥ 0. -/
 theorem leray_energy_bounded (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
     nsEnergy sol t ≤ nsEnergy sol 0 := by
-  have h := leray_energy_inequality sol t ht
-  have hν  := mul_pos (mul_pos two_pos sol.ν_pos)
-               (integratedEnstrophy_nonneg sol t ht)
-  linarith
+  have h  := leray_energy_inequality sol t ht
+  have hZ := integratedEnstrophy_nonneg sol t ht
+  nlinarith [sol.ν_pos, mul_nonneg (by norm_num : (0:ℝ) ≤ 2) (le_of_lt sol.ν_pos)]
 
 /-- **Leray Monotonicity (sorry-free): MR dissipation is the gap between
     initial and current energy. It is always non-negative. -/
@@ -321,8 +320,11 @@ theorem larger_viscosity_lower_Re (L U ν₁ ν₂ : ℝ)
     (hL : 0 < L) (hU : 0 < U) (hν₁ : 0 < ν₁) (hν₂ : 0 < ν₂) (hlt : ν₁ < ν₂) :
     reynoldsNumber L U ν₂ < reynoldsNumber L U ν₁ := by
   unfold reynoldsNumber
-  rw [div_lt_div_iff hν₂ hν₁]
-  nlinarith [mul_pos hL hU]
+  have hLU   : (0 : ℝ) < L * U        := mul_pos hL hU
+  have hinv  : ν₂⁻¹ < ν₁⁻¹           := inv_lt_inv_of_lt hν₁ hlt
+  calc L * U / ν₂ = L * U * ν₂⁻¹ := div_eq_mul_inv _ _
+    _ < L * U * ν₁⁻¹ := mul_lt_mul_of_pos_left hinv hLU
+    _ = L * U / ν₁   := (div_eq_mul_inv _ _).symm
 
 /-- The MR regime: Re < 1 means viscosity dominates inertia. -/
 def isMRDominated (L U ν : ℝ) : Prop := reynoldsNumber L U ν < 1
@@ -369,8 +371,12 @@ theorem viscosity_improves_kolmogorov (ν₁ ν₂ ε : ℝ)
     kolmogorovScale ν₁ ε < kolmogorovScale ν₂ ε := by
   unfold kolmogorovScale
   apply rpow_lt_rpow (by positivity) _ (by norm_num)
-  rw [div_lt_div_right hε]
-  exact pow_lt_pow_left hlt (le_of_lt hν₁) (by norm_num)
+  have hpow : ν₁ ^ 3 < ν₂ ^ 3 :=
+    pow_lt_pow_left hlt (le_of_lt hν₁) (by norm_num)
+  have hεinv : (0 : ℝ) < ε⁻¹ := inv_pos.mpr hε
+  calc ν₁ ^ 3 / ε = ν₁ ^ 3 * ε⁻¹ := div_eq_mul_inv _ _
+    _ < ν₂ ^ 3 * ε⁻¹ := mul_lt_mul_of_pos_right hpow hεinv
+    _ = ν₂ ^ 3 / ε   := (div_eq_mul_inv _ _).symm
 
 -- ============================================================
 -- 9. THE MILLENNIUM PROBLEM: NAMED AXIOMS
