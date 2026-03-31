@@ -320,11 +320,13 @@ theorem larger_viscosity_lower_Re (L U ν₁ ν₂ : ℝ)
     (hL : 0 < L) (hU : 0 < U) (hν₁ : 0 < ν₁) (hν₂ : 0 < ν₂) (hlt : ν₁ < ν₂) :
     reynoldsNumber L U ν₂ < reynoldsNumber L U ν₁ := by
   unfold reynoldsNumber
-  have hLU   : (0 : ℝ) < L * U        := mul_pos hL hU
-  have hinv  : ν₂⁻¹ < ν₁⁻¹           := inv_lt_inv_of_lt hν₁ hlt
-  calc L * U / ν₂ = L * U * ν₂⁻¹ := div_eq_mul_inv _ _
-    _ < L * U * ν₁⁻¹ := mul_lt_mul_of_pos_left hinv hLU
-    _ = L * U / ν₁   := (div_eq_mul_inv _ _).symm
+  have hprod  : (0 : ℝ) < ν₁ * ν₂ := mul_pos hν₁ hν₂
+  have lhs_eq : L * U / ν₂ * (ν₁ * ν₂) = L * U * ν₁ := by field_simp; ring
+  have rhs_eq : L * U / ν₁ * (ν₁ * ν₂) = L * U * ν₂ := by field_simp; ring
+  have key    : L * U * ν₁ < L * U * ν₂ := by nlinarith [mul_pos hL hU]
+  have step   : L * U / ν₂ * (ν₁ * ν₂) < L * U / ν₁ * (ν₁ * ν₂) := by
+    rw [lhs_eq, rhs_eq]; exact key
+  exact (mul_lt_mul_right hprod).mp step
 
 /-- The MR regime: Re < 1 means viscosity dominates inertia. -/
 def isMRDominated (L U ν : ℝ) : Prop := reynoldsNumber L U ν < 1
@@ -371,8 +373,7 @@ theorem viscosity_improves_kolmogorov (ν₁ ν₂ ε : ℝ)
     kolmogorovScale ν₁ ε < kolmogorovScale ν₂ ε := by
   unfold kolmogorovScale
   apply rpow_lt_rpow (by positivity) _ (by norm_num)
-  have hpow : ν₁ ^ 3 < ν₂ ^ 3 :=
-    pow_lt_pow_left hlt (le_of_lt hν₁) (by norm_num)
+  have hpow : ν₁ ^ 3 < ν₂ ^ 3 := by gcongr
   have hεinv : (0 : ℝ) < ε⁻¹ := inv_pos.mpr hε
   calc ν₁ ^ 3 / ε = ν₁ ^ 3 * ε⁻¹ := div_eq_mul_inv _ _
     _ < ν₂ ^ 3 * ε⁻¹ := mul_lt_mul_of_pos_right hpow hεinv
