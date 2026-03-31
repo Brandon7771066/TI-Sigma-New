@@ -242,8 +242,9 @@ theorem viscosity_improves_regularity (ν₁ ν₂ ε : ℝ)
     kolmogorovScale ν₁ ε < kolmogorovScale ν₂ ε := by
   unfold kolmogorovScale
   apply rpow_lt_rpow (by positivity) _ (by norm_num)
-  rw [div_lt_div_right hε]
-  gcongr
+  have h3 : ν₁ ^ 3 < ν₂ ^ 3 := by gcongr
+  rw [div_lt_div_iff hε hε]
+  nlinarith
 
 -- ============================================================
 -- 6. NS EULER FORCING GAP (THE MILLENNIUM PROBLEM PRECISELY NAMED)
