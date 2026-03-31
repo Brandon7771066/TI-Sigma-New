@@ -717,7 +717,7 @@ from external data. They are confirmed post-hoc by pattern-matching across multi
 
 Philosophy has the same 4+4 BOK structure:
 - 4 primary modes: Ethics, Epistemology, Metaphysics, Aesthetics
-- 4 secondary modes: Political Phil., Philosophy of Mind, Philosophy of Language, Philosophy of Science
+- 4 secondary modes: Political Phil., Philosophy of Mind, Logic, Philosophy of Science
 - Ethics (G=0.42) is dominant — confirmed by PhilPapers, publication distributions
 - The G-arm (Political Philosophy) is the dominant secondary mode — confirmed by cultural prominence
 
