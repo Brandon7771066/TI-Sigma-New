@@ -49,6 +49,16 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Tralse Trace of DT**: A metric for measuring the penumbra of Double Tralse.
 - **MR Relaxation Contexts (MRC)**: Operating modes where DT tolerance is elevated.
 
+## April 2026 Key Deliverables
+- `papers/LAYMEN_GUIDES_MILLENNIUM_PROBLEMS.md` — Layman's guides for all 6 Millennium Prize Problems + Collatz; college-educated audience; TI Sigma framework for each proof; Brandon (insights/overhead) vs. AI (formal proofs) division of labor; summary table of TI Sigma principles across 7 problems
+- `papers/urb_586_intentionality_override_emerick_threshold_sacred_laziness.md` — Intentionality Override, Sacred Laziness, Tripartite Intensity (URB #586)
+- `papers/urb_587_ti_sigma_llm_neural_network_analysis.md` — TI Sigma explanation of LLMs: E-arm simulators, G/I/L=0 (URB #587)
+- `papers/urb_588_philosophy_before_technology_gils_greatest_blunder.md` — E-Reductionist Blunder + CBHF (URB #588)
+- `papers/urb_589_empirical_test_noncomputational_intuition_neuroscience.md` — Dual-signature protocol for noncomputational intuition (URB #589)
+- `halting_intuition_experiment.py` — Halting Problem experiment: 27-problem Collatz bank, H1–H4 tests, oracle (H3: 88.7% p=0.000, H4: r=0.80)
+- TFEP → UOP rename completed across all 9 papers; URB_525 and URB_527 filenames updated
+- 5 Zenodo draft records created (IDs: 19371947, 19371952, 19371956, 19371958, 19371961) — awaiting manual Publish
+
 ## External Dependencies
 - **Alpaca**: Used for paper trading within the Grand Stock Algorithm (GSA v2).
 - **Google Cloud Platform (GCP)**: Utilized for analysis in the TI Sigma Intention Validation Lab v2.0.
