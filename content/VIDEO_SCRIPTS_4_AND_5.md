@@ -117,7 +117,7 @@ Our edge, to the extent there is one, is treating I-dominant and L-dominant info
 ## [SCENE 6 — 6:15–7:00] WHAT'S NEXT
 
 **NARRATION:**
-"We're planning to launch GSA v2 as a live trading system in Q3 2026, pending regulatory review and additional paper trading validation. The TI prior code is open-source on GitHub. The theoretical framework is published free on Zenodo.
+"We're planning to launch GSA v2 as a live trading system in Q3 2026, pending regulatory review and additional paper trading validation. The TI prior code is open-source on GitHub. The theoretical framework is published free on Zenodo — the Beyond Bayes paper is at DOI 10.5281/zenodo.19371958, and the GILE URB series is at 10.5281/zenodo.19371956. Both links are in the description.
 
 If you're a quant, a trader, or just someone who finds this framework interesting — the link to the full paper is in the description. We're also launching an API that other systems can use to query the current GILE state of any ticker.
 
@@ -262,7 +262,7 @@ This is why we believe the path to AGI runs through TRALSE logic, not just bigge
 **NARRATION:**
 "We're continuing to develop the ARC-TI Sigma Solver. The code is open-source on GitHub. We're targeting the ARC Prize 2026 competition with a recursive Myrion Resolution architecture that handles the hierarchical tasks we currently struggle with.
 
-If you want to collaborate — if you're an AI researcher interested in five-valued logic approaches to ARC — reach out. Links in the description. The full technical paper on the ARC-TI Sigma approach is on Zenodo.
+If you want to collaborate — if you're an AI researcher interested in five-valued logic approaches to ARC — reach out. Links in the description. The full technical paper on the ARC-TI Sigma approach is on Zenodo — the complete archive at DOI 10.5281/zenodo.19371961, and the Millennium formalizations at 10.5281/zenodo.19371952.
 
 Next video in this series goes back to the mathematics — specifically, the Riemann Hypothesis as formulated in TI Sigma. No, we haven't solved it. But we have a Lean 4 formalization of why the five-valued approach gives it a different structure. Subscribe and I'll walk you through it.
 

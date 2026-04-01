@@ -130,10 +130,11 @@ In the next video, we'll go deeper on the mathematics — specifically, how this
 ## [SCENE 6 — 6:00–6:20] CALL TO ACTION
 
 **NARRATION:**
-"The full mathematical framework is available free on Zenodo — link in the description. Next video: the Collatz conjecture has a hidden clock. We found it. And we proved it in Lean 4. Subscribe to see the math."
+"The full mathematical framework is available free on Zenodo — the complete archive is at DOI 10.5281/zenodo.19371961, link in the description. The GILE URB series is separately at 10.5281/zenodo.19371956. Both are free, open access, permanent. Next video: the Collatz conjecture has a hidden clock. We found it. And we proved it in Lean 4. Subscribe to see the math."
 
 **VISUALS:**
 - Zenodo logo + "Free on Zenodo"
+- DOI text on screen: "doi.org/10.5281/zenodo.19371961"
 - Preview thumbnail of Video 2 (Collatz hidden clock)
 - Subscribe animation
 
@@ -267,10 +268,12 @@ This isn't physics speculation. This is a research program with formal theorems,
 ## [SCENE 6 — 6:30–7:00] CALL TO ACTION
 
 **NARRATION:**
-"The ν₂ Countdown Theorem and the Alternating LSB Theorem are both formally proved and verified in Lean 4. Free on Zenodo. Links below. Subscribe for the next video in this series, where we tackle the Grand Stock Algorithm — yes, we applied TRALSE logic to the stock market — and the results are not what you'd expect."
+"The ν₂ Countdown Theorem and the Alternating LSB Theorem are both formally proved and verified in Lean 4. The paper is free on Zenodo — DOI 10.5281/zenodo.19371947. The complete TI Sigma archive is at 10.5281/zenodo.19371961. Both links are in the description. Subscribe for the next video in this series, where we tackle the Grand Stock Algorithm — yes, we applied TRALSE logic to the stock market — and the results are not what you'd expect."
 
 **VISUALS:**
-- Zenodo logo, DOI links
+- Zenodo logo
+- DOI text: "doi.org/10.5281/zenodo.19371947" (Collatz paper)
+- DOI text: "doi.org/10.5281/zenodo.19371961" (Complete archive)
 - Preview of stock market video (Video 4)
 - Subscribe animation
 
