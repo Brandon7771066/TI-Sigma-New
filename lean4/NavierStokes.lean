@@ -160,7 +160,7 @@ theorem leray_dissipation_nonneg (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
     enstrophy Z, the higher-viscosity solution has a strictly lower energy ceiling:
     E₀ − 2ν₂Z < E₀ − 2ν₁Z when ν₁ < ν₂ and Z > 0. -/
 theorem larger_viscosity_tighter_ceiling (ν₁ ν₂ Z E₀ : ℝ)
-    (hν₁ : 0 < ν₁) (hlt : ν₁ < ν₂) (hZ : 0 < Z) :
+    (hlt : ν₁ < ν₂) (hZ : 0 < Z) :
     E₀ - 2 * ν₂ * Z < E₀ - 2 * ν₁ * Z := by
   nlinarith
 
