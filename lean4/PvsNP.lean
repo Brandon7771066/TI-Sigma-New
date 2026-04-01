@@ -47,6 +47,7 @@ import Mathlib
 -/
 
 set_option linter.unusedSimpArgs false
+set_option linter.unusedVariables false
 
 namespace TISigma.PvsNP
 
@@ -161,7 +162,7 @@ theorem creation_verification_asymmetry :
     (∀ k, ∃ x, x^k < creationTime L x) := by             -- create in super-poly time
   obtain ⟨L, hNP, hsup⟩ := creation_superpolynomial
   obtain ⟨k, hverify⟩ := hNP
-  exact ⟨L, hNP, ⟨k, hverify⟩, hsup⟩
+  exact ⟨L, ⟨k, hverify⟩, ⟨k, hverify⟩, hsup⟩
 
 -- ============================================================
 -- 5. TRALSE WAVE ALGEBRA CONNECTION (URB #566)
@@ -207,13 +208,17 @@ theorem pvsnp_creation_vern_gap :
   · intro ⟨L, hNP, hnP⟩
     exact ⟨L, hNP, fun k => by
       by_contra hall
-      push_neg at hall
-      exact hnP ⟨k, fun x => by have := hall x; linarith⟩⟩
+      push Not at hall
+      apply hnP
+      exact ⟨k, fun x => by
+        have h := hall x
+        simp only [creationEffort] at h
+        exact h⟩⟩
   · intro ⟨L, hNP, hsup⟩
     exact ⟨L, hNP, fun ⟨k, hpoly⟩ => by
       obtain ⟨x, hx⟩ := hsup k
-      have := hpoly x
-      linarith⟩
+      simp only [creationEffort] at hx
+      linarith [hpoly x]⟩
 
 -- ============================================================
 -- 6. THE COMPLETE MILLENNIUM DUALITY TABLE

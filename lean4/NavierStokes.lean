@@ -443,7 +443,7 @@ theorem ns_smoothness_vern_theorem (ν : ℝ) (hν : 0 < ν) :
 theorem ns_not_regular_implies_unbounded (sol : NSSolution) (h : ¬ isGloballyRegular sol) :
     ∀ C : ℝ, ∃ t : ℝ, 0 ≤ t ∧ C < nsEnergy sol t := by
   unfold isGloballyRegular at h
-  push_neg at h
+  push Not at h
   intro C
   obtain ⟨t, ht, hlt⟩ := h C
   exact ⟨t, ht, hlt⟩

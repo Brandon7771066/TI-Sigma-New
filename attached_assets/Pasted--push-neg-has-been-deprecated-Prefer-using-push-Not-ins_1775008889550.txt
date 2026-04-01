@@ -1,0 +1,49 @@
+`push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+MathlibDemo.lean:51:9
+Unknown identifier `ns_dichotomy`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:51:27
+Tactic `rcases` failed: `x✝ : ?m.6` is not an inductive datatype
+MathlibDemo.lean:69:24
+Unknown identifier `ns_2d_global_regularity`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:69:57
+Unknown identifier `ns_dichotomy`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:76:15
+Function expected at
+  satisfiesSerrin
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  sol
+
+Hint: The identifier `satisfiesSerrin` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:78:2
+Unknown identifier `serrin_regularity`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:83:4
+Function expected at
+  singularHausdorffMeasure
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  sol
+
+Hint: The identifier `singularHausdorffMeasure` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:84:2
+Unknown identifier `ckn_partial_regularity`
+Error code: lean.unknownIdentifier
+View explanation
