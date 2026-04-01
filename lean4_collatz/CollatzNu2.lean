@@ -14,9 +14,10 @@
   Dependencies: Mathlib (padicValNat, Nat.div_add_mod, omega)
 -/
 
-import Mathlib.NumberTheory.Padics.PadicVal
-import Mathlib.Data.Nat.Defs
-import Mathlib.Tactic
+import Mathlib
+
+set_option linter.unusedVariables false
+set_option linter.unusedSimpArgs false
 
 open Nat
 
@@ -44,24 +45,37 @@ def isK1Step (n : ℕ) : Prop := padicValNat 2 (3 * n + 1) = 1
 /-- k=1 iff n ≡ 3 (mod 4). -/
 theorem k1_iff_mod4 {n : ℕ} (hodd : n % 2 = 1) :
     isK1Step n ↔ n % 4 = 3 := by
+  simp only [isK1Step]
+  have hpos : 0 < 3 * n + 1 := by omega
   constructor
   · intro hk1
-    simp [isK1Step] at hk1
-    -- padicValNat 2 (3n+1) = 1 iff 2 | (3n+1) but 4 ∤ (3n+1)
-    -- iff 3n+1 ≡ 2 (mod 4)
-    -- iff 3n ≡ 1 (mod 4)
-    -- iff n ≡ 3 (mod 4)  [since 3×3=9≡1 mod 4]
-    rw [padicValNat.eq_one_iff_of_prime (p := 2) (by norm_num)] at hk1
-    obtain ⟨hdvd, hndvd⟩ := hk1
+    -- From v₂(3n+1) = 1: extract 2 | (3n+1) and 4 ∤ (3n+1)
+    have h2dvd : 2 ∣ (3 * n + 1) := by
+      have h := @pow_padicValNat_dvd 2 (3 * n + 1)
+      rw [hk1, pow_one] at h; exact h
+    have h4ndvd : ¬ 4 ∣ (3 * n + 1) := by
+      intro h4
+      have hge : 2 ≤ padicValNat 2 (3 * n + 1) :=
+        padicValNat.le_of_dvd hpos
+          (show (2 : ℕ)^2 ∣ 3 * n + 1 by convert h4 using 1; norm_num)
+      omega
     omega
   · intro hmod
-    simp [isK1Step]
-    rw [padicValNat.eq_one_iff_of_prime (p := 2) (by norm_num)]
-    constructor
-    · -- 2 | 3n+1: n ≡ 3 mod 4 → n is odd → 3n is odd → 3n+1 is even
-      omega
-    · -- 4 ∤ 3n+1: n ≡ 3 mod 4 → 3n+1 ≡ 10 ≡ 2 (mod 4)
-      omega
+    -- From n%4=3: 2|(3n+1) and 4∤(3n+1), so v₂(3n+1) = 1
+    have h2dvd : 2 ∣ (3 * n + 1) := by omega
+    have h4ndvd : ¬ 4 ∣ (3 * n + 1) := by intro ⟨k, hk⟩; omega
+    apply le_antisymm
+    · -- v₂(3n+1) ≤ 1: if ≥2 then 4 | (3n+1), contradiction
+      by_contra hgt
+      push Not at hgt
+      have hge2 : 2 ≤ padicValNat 2 (3 * n + 1) := by omega
+      have h4pow : (4 : ℕ) ∣ 2 ^ padicValNat 2 (3 * n + 1) := by
+        rw [show (4 : ℕ) = 2 ^ 2 from by norm_num]
+        exact Nat.pow_dvd_pow 2 hge2
+      exact h4ndvd (h4pow.trans pow_padicValNat_dvd)
+    · -- v₂(3n+1) ≥ 1: from 2 | (3n+1)
+      apply padicValNat.le_of_dvd hpos
+      simpa using h2dvd
 
 /-- When n ≡ 3 (mod 4), the result n' = (3n+1)/2 is odd. -/
 theorem k1_result_odd {n : ℕ} (hn : n % 4 = 3) :
@@ -76,10 +90,7 @@ theorem k1_result_odd {n : ℕ} (hn : n % 4 = 3) :
 theorem nprime_succ_eq_6k {n k : ℕ} (hk : n + 1 = 4 * k) (hkpos : 0 < k) :
     (3 * n + 1) / 2 + 1 = 6 * k := by
   have h2dvd : 2 ∣ (3 * n + 1) := by omega
-  have hval : 3 * n + 1 = 2 * (6 * k - 1) := by omega
-  rw [Nat.div_eq_iff_eq_mul_add (by norm_num) h2dvd |>.mpr]
-  · omega
-  · exact ⟨6 * k - 1, 0, by omega⟩
+  omega
 
 /-- Alternative (omega-friendly) form of the same identity. -/
 theorem nprime_succ_formula {n : ℕ} (hn : n % 4 = 3) :
@@ -105,23 +116,26 @@ theorem nprime_succ_formula {n : ℕ} (hn : n % 4 = 3) :
 /-- (A) ν₂(4k) = 2 + ν₂(k). -/
 theorem padicValNat_4k {k : ℕ} (hk : 0 < k) :
     padicValNat 2 (4 * k) = 2 + padicValNat 2 k := by
-  rw [show (4 : ℕ) = 2 ^ 2 from by norm_num, pow_mul_comm]
-  rw [padicValNat.prime_pow_mul (p := 2) (by norm_num) (by positivity)]
-  ring
+  have hk0 : k ≠ 0 := by omega
+  rw [show (4 : ℕ) = 2 ^ 2 from by norm_num,
+      padicValNat.mul (by norm_num) hk0]
+  norm_num
 
 /-- (C) ν₂(3m) = ν₂(m) since 3 is odd (2 ∤ 3). -/
 theorem padicValNat_3m {m : ℕ} (hm : 0 < m) :
     padicValNat 2 (3 * m) = padicValNat 2 m := by
-  rw [padicValNat.mul (by norm_num) (by omega)]
-  simp [padicValNat.eq_zero_of_not_dvd (p := 2) (n := 3) (by norm_num)]
+  have hm0 : m ≠ 0 := by omega
+  rw [padicValNat.mul (by norm_num) hm0]
+  norm_num
 
 /-- (B) ν₂(6k) = 1 + ν₂(k). -/
 theorem padicValNat_6k {k : ℕ} (hk : 0 < k) :
     padicValNat 2 (6 * k) = 1 + padicValNat 2 k := by
-  rw [show (6 : ℕ) = 2 * 3 from by norm_num]
-  rw [Nat.mul_assoc, padicValNat.mul (by norm_num) (by positivity)]
-  rw [padicValNat.self (p := 2) (by norm_num)]
-  rw [padicValNat_3m hk]
+  have hk0 : k ≠ 0 := by omega
+  rw [show (6 : ℕ) = 2 * 3 from by norm_num,
+      Nat.mul_assoc, padicValNat.mul (by norm_num) (mul_ne_zero (by norm_num) hk0),
+      padicValNat_3m hk]
+  norm_num
 
 /-  ★ THE MAIN THEOREM ★
     Collatz ν₂ Countdown:
