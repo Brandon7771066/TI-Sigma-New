@@ -1,0 +1,99 @@
+import Mathlib
+set_option linter.unusedSimpArgs false
+set_option linter.unusedVariables false
+namespace TISigma.NavierStokes
+open Real
+
+-- Section 1
+inductive Dimension | two | three
+structure NSSolution where
+  ν     : ℝ
+  ν_pos : 0 < ν
+  dim   : Dimension
+noncomputable axiom nsEnergy    : NSSolution → ℝ → ℝ
+noncomputable axiom nsEnstrophy : NSSolution → ℝ → ℝ
+axiom nsEnergy_nonneg    : ∀ (sol : NSSolution) (t : ℝ), 0 ≤ nsEnergy sol t
+axiom nsEnstrophy_nonneg : ∀ (sol : NSSolution) (t : ℝ), 0 ≤ nsEnstrophy sol t
+noncomputable axiom integratedEnstrophy : NSSolution → ℝ → ℝ
+axiom integratedEnstrophy_nonneg (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
+    0 ≤ integratedEnstrophy sol t
+axiom leray_energy_inequality (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
+    nsEnergy sol t + 2 * sol.ν * integratedEnstrophy sol t ≤ nsEnergy sol 0
+
+-- Section 2
+def isGloballyRegular (sol : NSSolution) : Prop :=
+  ∃ C : ℝ, ∀ t : ℝ, 0 ≤ t → nsEnergy sol t ≤ C
+def hasBlowup (sol : NSSolution) (T_star : ℝ) : Prop :=
+  0 < T_star ∧ ∀ M : ℝ, ∃ t : ℝ, 0 ≤ t ∧ t < T_star ∧ M < nsEnergy sol t
+def isSmoothnessVern (sol : NSSolution) : Prop :=
+  ∃ C : ℝ, ∀ t : ℝ, 0 ≤ t → nsEnergy sol t ≤ C
+
+-- Section 4
+axiom ns_2d_global_regularity (sol : NSSolution) (h2d : sol.dim = Dimension.two) :
+    isGloballyRegular sol
+axiom blowup_not_regular (sol : NSSolution) (T_star : ℝ) :
+    hasBlowup sol T_star → ¬ isGloballyRegular sol
+
+-- Section 5
+def satisfiesSerrin (sol : NSSolution) (T p q : ℝ) : Prop :=
+  0 < T ∧ 1 < p ∧ 3 < q ∧ 2/p + 3/q ≤ 1
+axiom serrin_regularity (sol : NSSolution) (T p q : ℝ)
+    (hs : satisfiesSerrin sol T p q) : isSmoothnessVern sol
+
+-- Section 6
+noncomputable axiom singularHausdorffMeasure : NSSolution → ℝ
+axiom ckn_partial_regularity (sol : NSSolution) (h3d : sol.dim = Dimension.three) :
+    singularHausdorffMeasure sol = 0
+
+-- Section 9
+axiom ns_global_regularity (ν : ℝ) (hν : 0 < ν) :
+    ∃ sol : NSSolution, sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol
+axiom ns_dichotomy :
+    (∀ ν : ℝ, 0 < ν → ∃ sol : NSSolution,
+        sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol) ∨
+    (∃ (ν : ℝ) (_ : 0 < ν) (sol : NSSolution) (T_star : ℝ),
+        sol.ν = ν ∧ sol.dim = Dimension.three ∧ hasBlowup sol T_star)
+
+-- Section 10
+theorem ns_smoothness_vern_theorem (ν : ℝ) (hν : 0 < ν) :
+    (∃ sol : NSSolution, sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol) →
+    ∃ sol : NSSolution, sol.ν = ν ∧ sol.dim = Dimension.three ∧ isSmoothnessVern sol := by
+  intro ⟨sol, hν_eq, hdim, C, hC⟩
+  exact ⟨sol, hν_eq, hdim, C, fun t ht => hC t ht⟩
+
+theorem ns_not_regular_implies_unbounded (sol : NSSolution) (h : ¬ isGloballyRegular sol) :
+    ∀ C : ℝ, ∃ t : ℝ, 0 ≤ t ∧ C < nsEnergy sol t := by
+  unfold isGloballyRegular at h
+  push Not at h
+  intro C
+  obtain ⟨t, ht, hlt⟩ := h C
+  exact ⟨t, ht, hlt⟩
+
+theorem ns_dichotomy_corollary :
+    (∃ sol : NSSolution, sol.dim = Dimension.three ∧ isGloballyRegular sol) ∨
+    (∃ sol : NSSolution, sol.dim = Dimension.three ∧ ¬ isGloballyRegular sol) := by
+  rcases ns_dichotomy with hreg | hblow
+  · left
+    obtain ⟨sol, _, hdim, hreg⟩ := hreg 1 one_pos
+    exact ⟨sol, hdim, hreg⟩
+  · right
+    obtain ⟨_ν, _hν, sol, T_star, _, hdim, hblow⟩ := hblow
+    exact ⟨sol, hdim, blowup_not_regular sol T_star hblow⟩
+
+theorem two_d_always_regular_three_d_open :
+    (∀ sol : NSSolution, sol.dim = Dimension.two → isGloballyRegular sol) ∧
+    ((∀ ν : ℝ, 0 < ν → ∃ sol : NSSolution,
+          sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol) ∨
+     (∃ (ν : ℝ) (_ : 0 < ν) (sol : NSSolution) (T_star : ℝ),
+          sol.ν = ν ∧ sol.dim = Dimension.three ∧ hasBlowup sol T_star)) :=
+  ⟨fun sol h2d => ns_2d_global_regularity sol h2d, ns_dichotomy⟩
+
+theorem leray_serrin_bridge (sol : NSSolution) (T p q : ℝ)
+    (hT : 0 < T) (hp : 1 < p) (hq : 3 < q) (heq : 2/p + 3/q ≤ 1)
+    (hserrin : satisfiesSerrin sol T p q) :
+    isSmoothnessVern sol :=
+  serrin_regularity sol T p q hserrin
+
+theorem ckn_generic_regularity (sol : NSSolution) (h3d : sol.dim = Dimension.three) :
+    singularHausdorffMeasure sol = 0 :=
+  ckn_partial_regularity sol h3d
