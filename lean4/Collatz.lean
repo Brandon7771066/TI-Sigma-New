@@ -102,17 +102,26 @@ theorem collatz_mod4_3 (n : ℕ) (h : n % 4 = 3) :
     (3 * n + 1) % 4 = 2 := by omega
 
 /-- The 2-adic valuation of 3n+1 when n ≡ 3 mod 4 is exactly 1.
-    Proof sketch: 2 | (3n+1) [by omega] and 4 ∤ (3n+1) [by omega],
-    so v_2(3n+1) = 1 by the characterization of padicValNat.
-    The sorry bridges the divisibility fact to the padicValNat API. -/
+    Strategy: factor 3n+1 = 2 * half, show half is odd via 4 ∤ (3n+1),
+    then padicValNat.mul + padicValNat.self + padicValNat.eq_zero_of_not_dvd. -/
 theorem padicVal_collatz_mod4_3 (n : ℕ) (hn : n % 4 = 3) (hpos : 0 < n) :
     padicValNat 2 (3 * n + 1) = 1 := by
-  have hdvd  : 2 ∣ (3 * n + 1)     := ⟨(3 * n + 1) / 2, by omega⟩
   have hndvd : ¬ (4 ∣ (3 * n + 1)) := by
     intro ⟨k, hk⟩; have := collatz_mod4_3 n hn; omega
-  -- Mathematical content: 2 | m and 4 ∤ m implies v_2(m) = 1.
-  -- This is a bookkeeping sorry: the math is in hdvd and hndvd above.
-  sorry
+  -- Factor: 3n+1 = 2 * ((3n+1)/2)
+  have hdiv : 3 * n + 1 = 2 * ((3 * n + 1) / 2) := by omega
+  -- (3n+1)/2 is odd: if 2 | it then 4 | (3n+1), contradiction
+  have hodd_half : ¬ 2 ∣ ((3 * n + 1) / 2) := by
+    intro ⟨m, hm⟩; exact hndvd ⟨m, by omega⟩
+  have hz : padicValNat 2 ((3 * n + 1) / 2) = 0 :=
+    padicValNat.eq_zero_of_not_dvd hodd_half
+  -- padicValNat 2 (3n+1) = padicValNat 2 2 + padicValNat 2 (half) = 1 + 0 = 1
+  calc padicValNat 2 (3 * n + 1)
+      = padicValNat 2 (2 * ((3 * n + 1) / 2)) := by rw [hdiv]
+    _ = padicValNat 2 2 + padicValNat 2 ((3 * n + 1) / 2) :=
+          padicValNat.mul (by norm_num) (by omega)
+    _ = 1 + 0 := by rw [padicValNat.self (by norm_num : Nat.Prime 2), hz]
+    _ = 1 := by ring
 
 /-- Simpler version: when n ≡ 3 mod 4, 2 divides 3n+1 but 4 does not. -/
 theorem collatz_mod4_3_div2_not_div4 (n : ℕ) (h : n % 4 = 3) :
