@@ -1,0 +1,62 @@
+-- 10. SORRY-FREE THEOREMS (derived from axioms + known results)
+-- ============================================================
+
+/-- **NS Smoothness Vern Theorem (sorry-free from ns_global_regularity):**
+    Global regularity → solution is a smoothness vern. -/
+theorem ns_smoothness_vern_theorem (ν : ℝ) (hν : 0 < ν) :
+    (∃ sol : NSSolution, sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol) →
+    ∃ sol : NSSolution, sol.ν = ν ∧ sol.dim = Dimension.three ∧ isSmoothnessVern sol := by
+  intro ⟨sol, hν_eq, hdim, C, hC⟩
+  exact ⟨sol, hν_eq, hdim, C, fun t ht => hC t ht⟩
+
+/-- **NS Contrapositive (sorry-free):**
+    ¬ globally regular → energy unbounded. -/
+theorem ns_not_regular_implies_unbounded (sol : NSSolution) (h : ¬ isGloballyRegular sol) :
+    ∀ C : ℝ, ∃ t : ℝ, 0 ≤ t ∧ C < nsEnergy sol t := by
+  unfold isGloballyRegular at h
+  push Not at h
+  intro C
+  obtain ⟨t, ht, hlt⟩ := h C
+  exact ⟨t, ht, hlt⟩
+
+/-- **NS Dichotomy Corollary (sorry-free from ns_dichotomy):**
+    Either some 3D solution is globally regular, or some is not. -/
+theorem ns_dichotomy_corollary :
+    (∃ sol : NSSolution, sol.dim = Dimension.three ∧ isGloballyRegular sol) ∨
+    (∃ sol : NSSolution, sol.dim = Dimension.three ∧ ¬ isGloballyRegular sol) := by
+  rcases ns_dichotomy with hreg | hblow
+  · left
+    obtain ⟨sol, _, hdim, hreg⟩ := hreg 1 one_pos
+    exact ⟨sol, hdim, hreg⟩
+  · right
+    obtain ⟨_ν, _hν, sol, T_star, _, hdim, hblow⟩ := hblow
+    exact ⟨sol, hdim, blowup_not_regular sol T_star hblow⟩
+
+/-- **2D vs 3D Asymmetry (sorry-free):**
+    2D solutions are always globally regular (proven).
+    3D solutions satisfy the dichotomy: either all smooth or some blow up (open).
+    The dimension IS the gap. -/
+theorem two_d_always_regular_three_d_open :
+    (∀ sol : NSSolution, sol.dim = Dimension.two → isGloballyRegular sol) ∧
+    ((∀ ν : ℝ, 0 < ν → ∃ sol : NSSolution,
+          sol.ν = ν ∧ sol.dim = Dimension.three ∧ isGloballyRegular sol) ∨
+     (∃ (ν : ℝ) (_ : 0 < ν) (sol : NSSolution) (T_star : ℝ),
+          sol.ν = ν ∧ sol.dim = Dimension.three ∧ hasBlowup sol T_star)) := by
+  exact ⟨fun sol h2d => ns_2d_global_regularity sol h2d, ns_dichotomy⟩
+
+/-- **Leray + Serrin Bridge (sorry-free):**
+    If Leray energy inequality gives a bound that satisfies the Serrin condition,
+    the solution is a smoothness vern. -/
+theorem leray_serrin_bridge (sol : NSSolution) (T p q : ℝ)
+    (hT : 0 < T) (hp : 1 < p) (hq : 3 < q) (heq : 2/p + 3/q ≤ 1)
+    (hserrin : satisfiesSerrin sol T p q) :
+    isSmoothnessVern sol :=
+  serrin_regularity sol T p q hserrin
+
+/-- **CKN Singular Set is Invisible (sorry-free from CKN):**
+    The singular set has measure zero: generic spacetime point is regular. -/
+theorem ckn_generic_regularity (sol : NSSolution) (h3d : sol.dim = Dimension.three) :
+    singularHausdorffMeasure sol = 0 :=
+  ckn_partial_regularity sol h3d
+
+-- 
