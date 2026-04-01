@@ -120,7 +120,7 @@ theorem padicVal_collatz_mod4_3 (n : ℕ) (hn : n % 4 = 3) (hpos : 0 < n) :
       = padicValNat 2 (2 * ((3 * n + 1) / 2)) := by rw [hdiv]
     _ = padicValNat 2 2 + padicValNat 2 ((3 * n + 1) / 2) :=
           padicValNat.mul (by norm_num) (by omega)
-    _ = 1 + 0 := by rw [padicValNat.self (by norm_num : Nat.Prime 2), hz]
+    _ = 1 + 0 := by rw [padicValNat.self (by norm_num : 1 < 2), hz]
     _ = 1 := by ring
 
 /-- Simpler version: when n ≡ 3 mod 4, 2 divides 3n+1 but 4 does not. -/

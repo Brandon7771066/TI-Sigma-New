@@ -52,7 +52,7 @@ theorem k1_iff_mod4 {n : ℕ} (hodd : n % 2 = 1) :
       1 + padicValNat 2 ((3 * n + 1) / 2) := by
     conv_lhs => rw [hdiv]
     rw [padicValNat.mul (by norm_num) (by omega),
-        padicValNat.self (by norm_num : Nat.Prime 2)]
+        padicValNat.self (by norm_num : 1 < 2)]
   constructor
   · intro hk1
     -- padicValNat 2 ((3*n+1)/2) = 0 from hk1 and hval
@@ -65,7 +65,7 @@ theorem k1_iff_mod4 {n : ℕ} (hodd : n % 2 = 1) :
           1 + padicValNat 2 q := by
         conv_lhs => rw [hqdiv]
         rw [padicValNat.mul (by norm_num) (by omega),
-            padicValNat.self (by norm_num : Nat.Prime 2)]
+            padicValNat.self (by norm_num : 1 < 2)]
       omega  -- hz says = 0, hval2 says = 1 + something ≥ 1
     -- 2 | (3*n+1) from pow_padicValNat_dvd + hk1
     have h2dvd : 2 ∣ (3 * n + 1) := by
@@ -127,7 +127,7 @@ theorem padicValNat_4k {k : ℕ} (hk : 0 < k) :
     _ = padicValNat 2 2 + (padicValNat 2 2 + padicValNat 2 k) := by
           rw [padicValNat.mul (by norm_num) hk0]
     _ = 2 + padicValNat 2 k := by
-          rw [padicValNat.self (by norm_num : Nat.Prime 2)]; ring
+          rw [padicValNat.self (by norm_num : 1 < 2)]; ring
 
 /-- (C) ν₂(3m) = ν₂(m) since 3 is odd (2 ∤ 3). -/
 theorem padicValNat_3m {m : ℕ} (hm : 0 < m) :
@@ -198,8 +198,9 @@ theorem nu2_after_k1_run :
       exact h1
     -- ν₂(n+1) = 1 + ν₂(n'+1) [countdown theorem, converted to addition form]
     have hcountdown : padicValNat 2 (n + 1) = 1 + padicValNat 2 (n' + 1) := by
-      have hdec := nu2_collatz_countdown hn
-      -- ν₂(n+1) ≥ 2 since n+1 ≡ 0 mod 4 — use padicValNat_4k
+      -- Explicit type so omega sees n' = (3*n+1)/2 unified
+      have hdec : padicValNat 2 (n' + 1) = padicValNat 2 (n + 1) - 1 :=
+        nu2_collatz_countdown hn
       have hge : 2 ≤ padicValNat 2 (n + 1) := by
         rw [show n + 1 = 4 * ((n + 1) / 4) from by omega,
             padicValNat_4k (by omega : 0 < (n + 1) / 4)]
@@ -209,10 +210,11 @@ theorem nu2_after_k1_run :
     have hsteps' : ∀ i, i ≤ L →
         (fun m => (3 * m + 1) / 2)^[i] n' % 4 = 3 := by
       intro i hi
-      have := hsteps (i + 1) (by omega)
-      simp [Function.iterate_succ', Function.comp, hn'_def] at this ⊢
-      convert this using 2
-      simp [Function.iterate_succ', Function.comp]
+      have h := hsteps (i + 1) (by omega)
+      -- f^(i+1)(n) = f^i(f(n)) = f^i(n') since n' = (3n+1)/2 = f(n)
+      simp only [Function.iterate_succ', Function.comp] at h
+      rw [← hn'_def] at h
+      exact h
     -- Apply induction hypothesis to n'
     have ih_n' := ih n' hsteps'
     -- Combine: ν₂(n+1) = 1 + ν₂(n'+1) = 1 + (L + ν₂(f^L(n')+1)) = (L+1) + ν₂(f^(L+1)(n)+1)
@@ -237,13 +239,10 @@ theorem k1_run_bound {n : ℕ} (hn : n % 4 = 3) :
   -- hfull : V = V + ν₂(f^V(n) + 1), so ν₂(f^V(n) + 1) = 0
   have hzero : padicValNat 2 ((fun m => (3 * m + 1) / 2)^[V] n + 1) = 0 := by
     omega
-  -- But f^V(n) is odd (each k=1 step maps odd → odd), so f^V(n)+1 is even → ν₂ ≥ 1
+  -- f^V(n) ≡ 3 mod 4 (from hsteps at i=V), so it's odd
   have hVodd : (fun m => (3 * m + 1) / 2)^[V] n % 2 = 1 := by
-    induction V with
-    | zero => simpa using hn.symm ▸ by omega
-    | succ k ihk =>
-      simp [Function.iterate_succ', Function.comp]
-      exact k1_result_odd (hsteps k (by omega))
+    have h := hsteps V le_rfl
+    omega
   have heven : ((fun m => (3 * m + 1) / 2)^[V] n + 1) % 2 = 0 := by omega
   -- ν₂(f^V(n)+1) ≥ 1 since f^V(n)+1 is even: factor as 2*(half) via mul+self
   have hge1 : 1 ≤ padicValNat 2 ((fun m => (3 * m + 1) / 2)^[V] n + 1) := by
@@ -253,7 +252,7 @@ theorem k1_run_bound {n : ℕ} (hn : n % 4 = 3) :
         padicValNat 2 2 + padicValNat 2 (m / 2) := by
       conv_lhs => rw [show m = 2 * (m / 2) from by simp only [m]; omega]
       exact padicValNat.mul (by norm_num) hm_half
-    rw [this, padicValNat.self (by norm_num : Nat.Prime 2)]
+    rw [this, padicValNat.self (by norm_num : 1 < 2)]
     omega
   omega
 
@@ -316,7 +315,7 @@ theorem alternating_lsb {n : ℕ} (hodd : n % 2 = 1) (j : ℕ) (hj : 1 ≤ j)
       split_ifs at ih2 ⊢ with hmod hmod2
       · -- pos: (j+2) even, (j+1) odd; A=(3n+1)/2^(j+1) has A%3=2 and 2|A
         -- So A/2 = (3n+1)/2^(j+2) and (2*B)%3=2 → B%3=1
-        have hA_pos : 0 < 2^(j+1) := Nat.pos_pow_of_pos _ (by norm_num)
+        have hA_pos : 0 < 2^(j+1) := pow_pos (by norm_num : (0:ℕ) < 2) (j+1)
         -- Rewrite goal: (3n+1)/2^(j+2) = (3n+1)/2^(j+1)/2
         have hstep : (3*n+1) / 2^(j+1+1) = (3*n+1) / 2^(j+1) / 2 := by
           rw [pow_succ, Nat.div_div_eq_div_mul]
