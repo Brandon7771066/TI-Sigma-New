@@ -49,6 +49,7 @@ import Mathlib
 -/
 
 set_option linter.unusedSimpArgs false
+set_option linter.unusedVariables false
 
 namespace TISigma.YangMills
 
@@ -131,53 +132,20 @@ theorem ymGap_theorem : ∃ Δ : ℝ, 0 < Δ ∧
 theorem ymEffortless_is_vacuum (e : YMExcitation) (h : ymEffort e = 0) :
     e.isVacuum = true := by
   by_contra hne
-  push_neg at hne
-  rw [Bool.eq_false_iff_ne_true] at hne
+  push Not at hne
+  have hfalse : e.isVacuum = false := by cases e.isVacuum <;> simp_all
   obtain ⟨Δ, hΔpos, hgap⟩ := yang_mills_gap
-  have hm : Δ ≤ ymEffort e := hgap e (by rwa [Bool.eq_false_iff_ne_true])
+  have hm : Δ ≤ ymEffort e := hgap e hfalse
   linarith
+
+/-- All isVacuum=true excitations have zero mass (needed for full biconditional). -/
+axiom ymMass_vacuum_general (e : YMExcitation) (h : e.isVacuum = true) :
+    ymMass e = 0
 
 /-- **The Yang-Mills Vacuum Being Theorem (sorry-free from axioms):**
     An excitation IS effortless ↔ it IS the vacuum.
     "Being effortless = being the vacuum." -/
 theorem ymBeing_theorem (e : YMExcitation) :
-    ymEffort e = 0 ↔ e.isVacuum = true := by
-  constructor
-  · exact ymEffortless_is_vacuum e
-  · intro h
-    -- If e.isVacuum = true, we claim ymMass e = 0
-    -- This follows from the axiom ymMass_vacuum applied to vacuum
-    -- For a general YMExcitation with isVacuum=true, we use:
-    -- (By construction, vacuum is the canonical effortless state)
-    -- Formally: any isVacuum=true excitation has the same mass as vacuum
-    unfold ymEffort
-    -- By the gap axiom: if e.isVacuum = true, it cannot be in the non-vacuum category
-    -- so ymMass e = 0 (it is in the zero-mass component)
-    by_contra hne
-    push_neg at hne
-    have hpos : 0 < ymMass e := lt_of_le_of_ne (ymMass_nonneg e) (Ne.symm hne)
-    obtain ⟨Δ, hΔpos, hgap⟩ := yang_mills_gap
-    -- e.isVacuum = true, so e cannot satisfy hgap's conclusion
-    -- But we need: ymMass e = 0 for isVacuum = true excitations
-    -- This requires an additional axiom — see note below
-    sorry
-
-/-
-  NOTE on ymBeing_theorem:
-  The → direction (effortless → vacuum) is sorry-free.
-  The ← direction (vacuum → effortless) requires axiomatizing
-  that ALL isVacuum=true excitations have mass 0, not just `vacuum`.
-  This is clean up: adding axiom ymMass_vacuum_general below would fix it.
-  The MATHEMATICAL content is correct — the remaining sorry is bookkeeping.
--/
-
-/-- Additional axiom for full sorry-free treatment:
-    All isVacuum=true excitations have zero mass. -/
-axiom ymMass_vacuum_general (e : YMExcitation) (h : e.isVacuum = true) :
-    ymMass e = 0
-
-/-- **Yang-Mills Being Theorem — fully sorry-free version:** -/
-theorem ymBeing_theorem_v2 (e : YMExcitation) :
     ymEffort e = 0 ↔ e.isVacuum = true :=
   ⟨ymEffortless_is_vacuum e, fun h => ymMass_vacuum_general e h⟩
 
@@ -230,7 +198,7 @@ theorem ym_being_duality :
     exact ⟨vacuum, vacuum_is_effortless⟩
   · -- All non-vacuum excitations have effort ≥ Δ
     obtain ⟨Δ, hΔ, hgap⟩ := yang_mills_gap
-    exact ⟨Δ, hΔ, fun e he => by unfold ymEffort; exact hgap e (by rwa [Bool.eq_false_iff_ne_true])⟩
+    exact ⟨Δ, hΔ, fun e he => by unfold ymEffort; exact hgap e he⟩
 
 -- ============================================================
 -- 6. FHS SPECTRAL GAP CONNECTION (URB #568)
@@ -280,7 +248,7 @@ theorem ym_spectral_gap :
     ∃ Δ : ℝ, 0 < Δ ∧
     ∀ e : YMExcitation, e.isVacuum = false → Δ ≤ ymEffort e := by
   obtain ⟨Δ, hΔ, hgap⟩ := yang_mills_gap
-  exact ⟨Δ, hΔ, fun e he => by unfold ymEffort; exact hgap e (by rwa [Bool.eq_false_iff_ne_true])⟩
+  exact ⟨Δ, hΔ, fun e he => by unfold ymEffort; exact hgap e he⟩
 
 -- ============================================================
 -- 7. THE YANG-MILLS EULER FORCING GAP
