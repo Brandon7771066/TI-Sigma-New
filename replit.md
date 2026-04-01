@@ -8,6 +8,8 @@ Preferred communication style: Simple, everyday language.
 Research Focus: Quantum-classical hybrid mechanisms; non-local correlations beyond classical neuroscience.
 Philosophical Foundation: GILE Framework (Goodness, Intuition, Love, Environment), originated August 2022. Tralse Informationalism coined June 25, 2025.
 Budget Constraint: Under $50 total. All work batched (5+ items per session). Prefer free tools.
+**DPES (Default Philosophical Eating Strategy):** When user is eating/commuting/occupied, enter autonomous high-output mode. Produce maximum-value deliverables (papers, scripts, letters, audits) with minimal directional input. Signal words: "DPES", "Continue", directional one-liners. See `papers/DPES_DEFAULT_PHILOSOPHICAL_EATING_STRATEGY.md`.
+**Lean 4 / lean4web API notes:** `padicValNat.self` requires `(h : 1 < p)` — use `by omega`, NOT `by norm_num` (norm_num routes through Nat.Prime internally). `rw [hdiv]` rewrites ALL occurrences — use `conv_lhs => rw [hdiv]` when RHS contains the same term. `pow_pos` not `Nat.pos_pow_of_pos`. `f^[n] x` not `Function.iterate f n x`.
 
 ## System Architecture
 ### UI/UX Decisions
