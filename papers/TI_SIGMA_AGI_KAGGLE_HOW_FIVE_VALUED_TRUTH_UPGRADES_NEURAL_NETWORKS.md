@@ -181,9 +181,9 @@ These three additions, grounded in the PRIMARY CONSTANTS {0, 1, i, √2, e, φ, 
 
 ## References
 
-- URB #525: TFEP — Tralse Free Energy Principle (TF = (1-TT)² + (1-G)²)
+- URB #525: UOP — Unified Optimization Principle (TF = (1-TT)² + (1-G)²)
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #527: GTFE-to-TFEP Transition (vertical derivation from TI Sigma axioms)
+- URB #527: GTFE-to-UOP Transition (vertical derivation from TI Sigma axioms)
 - URB #528: Five-Valued Truth: Tralse–Indeterminate Distinction
 - ARC-AGI Dataset: Chollet, F. (2019). On the Measure of Intelligence.
 - Friston, K. (2010). The free-energy principle: a unified brain theory?

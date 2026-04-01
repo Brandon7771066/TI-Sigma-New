@@ -73,7 +73,7 @@ The Permissibility Distribution (PD) defines five zones with frequency fractions
 | Great | 1/15 | ~6.67% | True on all four axes simultaneously. Existentially causal, morally aligned, consciously meaningful, aesthetically elegant. GILE Radiant. |
 | Good | 3/15 | 20.00% | True on three or more axes. Above causation threshold. Passed MR2. |
 | Indeterminate | 3/15 | 20.00% | Genuinely mid-state on at least one axis. MR2 state. Door at 45 degrees. Not resolved yet -- may resolve via further MRs or may remain permanently Indeterminate. |
-| Bad | 6/15 | 40.00% | True on fewer than two axes. Below causation threshold. Active minimization (TFEP) needed. |
+| Bad | 6/15 | 40.00% | True on fewer than two axes. Below causation threshold. Active minimization (UOP) needed. |
 | Terrible | 2/15 | ~13.33% | Failed MR1. Existentially incoherent. Double Tralse on at least the Existential axis. |
 
 **Key theorem:** The Great zone (LCC >= 0.93 = GILE Radiant) is where all four truth dimensions converge. When a claim achieves GILE Radiant status:
@@ -177,7 +177,7 @@ Gap            = 1/(2e^2)       ~= P(Great)                    ~= 1/15  (approx;
 (1 - LCC)/(1 - GILE) = 2:1 exactly
 ```
 
-**Important: LCC and GILE are claim-level coherence measures (0-1 scale). TF is a cell-level energy measure (0-2 scale, formula: TF=(1-TT)^2+(1-G)^2). Do not substitute LCC/GILE threshold values directly into TF zone calculations.** The proper TF zone boundaries are derived from the Boltzmann stationary distribution at T=1/2 (per the TFEP Boltzmann Identity, URB #525): Great TF<=0.034, Good TF<=0.152, Indeterminate TF<=0.306, Bad TF<=0.951. These converge with LCC thresholds only in the symmetric case (TT=G=LCC), with delta<0.006.
+**Important: LCC and GILE are claim-level coherence measures (0-1 scale). TF is a cell-level energy measure (0-2 scale, formula: TF=(1-TT)^2+(1-G)^2). Do not substitute LCC/GILE threshold values directly into TF zone calculations.** The proper TF zone boundaries are derived from the Boltzmann stationary distribution at T=1/2 (per the UOP Boltzmann Identity, URB #525): Great TF<=0.034, Good TF<=0.152, Indeterminate TF<=0.306, Bad TF<=0.951. These converge with LCC thresholds only in the symmetric case (TT=G=LCC), with delta<0.006.
 
 **Note on the Gap approximation:** 1/(2e^2) = 0.06767 while P(Great) = 1/15 = 0.06667. These are approximately equal (1.5% difference), not exactly equal. The exact gap formula is 1/(2e^2); the PD fraction 1/15 is the closest rational approximation in the 15-based ternary system. All claims using "Gap = P(Great)" are approximate.
 

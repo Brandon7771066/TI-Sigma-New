@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This paper establishes the canonical Five-Valued Truth System for Tralse Informationalism (TI Sigma), resolving a critical ambiguity in prior formulations that conflated the Tralse quality with the Indeterminate positional slot. We formally distinguish five truth values — True, False, Indeterminate, Tralse, and Double Tralse — while demonstrating that ternary logic is fully preserved: Tralse and Double Tralse are *qualitative designations*, not positional slots on the truth spectrum. The three ternary positions (True, False, Indeterminate) remain. Tralse is embedded *inside* all three as the imperfection quality that enables real-world processing. Double Tralse triggers immediate detection-and-discard rather than persistent storage. This upgrade applies globally to all TI Sigma frameworks, including Myrion Resolution, TFEP, PD zone classification, and the ARC-AGI solver.
+This paper establishes the canonical Five-Valued Truth System for Tralse Informationalism (TI Sigma), resolving a critical ambiguity in prior formulations that conflated the Tralse quality with the Indeterminate positional slot. We formally distinguish five truth values — True, False, Indeterminate, Tralse, and Double Tralse — while demonstrating that ternary logic is fully preserved: Tralse and Double Tralse are *qualitative designations*, not positional slots on the truth spectrum. The three ternary positions (True, False, Indeterminate) remain. Tralse is embedded *inside* all three as the imperfection quality that enables real-world processing. Double Tralse triggers immediate detection-and-discard rather than persistent storage. This upgrade applies globally to all TI Sigma frameworks, including Myrion Resolution, UOP, PD zone classification, and the ARC-AGI solver.
 
 **LCC:** 0.921 (Radiant)
 
@@ -363,9 +363,9 @@ The immune system knows what context it's operating in. Context-blind DT rejecti
 - URB #522: Holmes-Rahe Full Zone Confirmation
 - URB #523: Existence vs Truth — LCC/GILE Gap
 - URB #524: Messy Math Manifesto
-- URB #525: TFEP — Tralse Free Energy Principle
+- URB #525: UOP — Unified Optimization Principle
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #527: GTFE-to-TFEP Transition
+- URB #527: GTFE-to-UOP Transition
 
 ---
 

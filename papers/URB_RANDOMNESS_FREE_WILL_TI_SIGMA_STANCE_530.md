@@ -2,8 +2,8 @@
 
 **Date:** March 28, 2026
 **Author:** Brandon Emerick
-**Framework:** TI Sigma / Metaphysics / Free Will / Five-Valued Truth / TFEP
-**Preceded by:** URB #525 (TFEP), URB #528 (Five-Valued Truth + DT Immunity), URB #529 (Pragmatism as Epiphenomenon)
+**Framework:** TI Sigma / Metaphysics / Free Will / Five-Valued Truth / UOP
+**Preceded by:** URB #525 (UOP), URB #528 (Five-Valued Truth + DT Immunity), URB #529 (Pragmatism as Epiphenomenon)
 **Status:** Formal
 **Total URBs:** 184
 **LCC Target:** Radiant (≥ 0.9323)
@@ -238,7 +238,7 @@ The TI Sigma version of "random" is therefore precisely bounded: not a fundament
 - URB #519: Arithmetic Scaffold Theorem (AST)
 - URB #520: Crystallized Tralse Theorem (CTT)
 - URB #523: Existence vs Truth — LCC/GILE Gap
-- URB #525: TFEP — Tralse Free Energy Principle
+- URB #525: UOP — Unified Optimization Principle
 - URB #526: Four Dimensions of Truth + MR Hierarchy
 - URB #528: Five-Valued Truth + DT Immunity + Contemplative Scope
 - URB #529: Pragmatism as Epiphenomenon

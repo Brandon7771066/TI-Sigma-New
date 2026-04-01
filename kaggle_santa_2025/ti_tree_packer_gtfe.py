@@ -242,7 +242,7 @@ class MycelialDistributor:
         return order
 
 
-class TIGTFEPacker:
+class TIGUOPacker:
     """
     TI Sigma Packer with GTFE Integration
     
@@ -568,7 +568,7 @@ def run_gtfe_competition(max_n: int = 10, verbose: bool = True):
     print("Optimizing with 11D L×E field dynamics...")
     print()
     
-    packer = TIGTFEPacker(use_gtfe=True, use_mycelial=True)
+    packer = TIGUOPacker(use_gtfe=True, use_mycelial=True)
     
     results = []
     total_score = 0

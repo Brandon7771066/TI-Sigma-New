@@ -203,7 +203,7 @@ The following URBs are referenced or implied but need formal numbers assigned:
 
 ---
 
-## NEXT ASSIGNMENTS (URBs #579–#585)
+## NEXT ASSIGNMENTS (URBs #579–#586)
 
 | URB | Topic | Priority |
 |---|---|---|
@@ -214,3 +214,8 @@ The following URBs are referenced or implied but need formal numbers assigned:
 | #583 | GSA v2 Formal Paper | MED |
 | #584 | Alternating LSB → Einstein Tile Connection (formal) | MED — companion paper |
 | #585 | Collatz Polycrystal — Grain Boundary Theory | LOW/MED |
+| #586 | Intentionality Override, Emerick Threshold Dynamics, and Sacred Laziness | HIGH — formalizes IO, supra-ET amplification, Sacred Laziness, Tripartite Intensity |
+
+### ACRONYM UPDATE (April 1, 2026)
+**TFEP (Tralse Free Energy Principle) → UOP (Unified Optimization Principle)** across all papers.
+Affects: URB #525 (now `URB_525_UOP_UNIFIED_OPTIMIZATION_PRINCIPLE.md`), URB #527 (now `URB_527_GTFE_TO_UOP_TRANSLATION_TO_DERIVATION.md`), URBs #526, #528, #529, #530, #533.

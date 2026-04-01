@@ -206,9 +206,9 @@ Pragmatism is the name we give to the GILE integral when we're viewing it from o
 - URB #426: Pragmatic Efficacy vs Mechanistic Attribution — gold standard category error in drug approval
 - URB #520: Crystallized Tralse Theorem (CTT)
 - URB #523: Existence vs Truth — LCC/GILE Gap; 2:1 ratio exact
-- URB #525: TFEP — Tralse Free Energy Principle
+- URB #525: UOP — Unified Optimization Principle
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #527: GTFE-to-TFEP Lineage
+- URB #527: GTFE-to-UOP Lineage
 - URB #528: Five-Valued Truth, DT Immunity Model, Contemplative Scope, MR Relaxation Contexts
 
 ---

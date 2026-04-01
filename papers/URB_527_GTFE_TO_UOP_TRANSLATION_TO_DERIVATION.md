@@ -1,13 +1,13 @@
-# URB #527: From GTFE to TFEP — The Translation-to-Derivation Shift in TI Sigma Dynamics
+# URB #527: From GTFE to UOP — The Translation-to-Derivation Shift in TI Sigma Dynamics
 
-**Title:** From Bridge to Foundation: How the Tralse Free Energy Principle Supersedes the Grand Tralse Free Energy Principle as an Independent Derivation Rather Than a Translation of Friston's FEP
+**Title:** From Bridge to Foundation: How the Unified Optimization Principle Supersedes the Grand Unified Optimization Principle as an Independent Derivation Rather Than a Translation of Friston's FEP
 
 **Corpus Entry:** #181
 **Status:** Radiant True-Tralse (primary claims)
 **Date:** March 27, 2026
 **DOI:** pending
 **Author:** Brandon Emerick / TI Sigma Research Collective
-**Keywords:** GTFE, TFEP, Friston Free Energy Principle, TI Sigma dynamics, Markov Blankets, i-Boundaries, translation vs derivation, bidirectionality, perception-action, theoretical lineage, TI Sigma
+**Keywords:** GTFE, UOP, Friston Free Energy Principle, TI Sigma dynamics, Markov Blankets, i-Boundaries, translation vs derivation, bidirectionality, perception-action, theoretical lineage, TI Sigma
 
 ---
 
@@ -20,13 +20,13 @@
 
 ## Abstract
 
-TI Sigma's dynamical law has undergone one formally recognized theoretical shift: from the Grand Tralse Free Energy Principle (GTFE) to the Tralse Free Energy Principle (TFEP, URB #525). These two formulations are not merely a renaming. They represent a fundamentally different type of theoretical move.
+TI Sigma's dynamical law has undergone one formally recognized theoretical shift: from the Grand Unified Optimization Principle (GTFE) to the Unified Optimization Principle (UOP, URB #525). These two formulations are not merely a renaming. They represent a fundamentally different type of theoretical move.
 
 The GTFE was a **lateral translation** — it took Friston's Free Energy Principle (FEP) as its architectural template and systematically replaced each component with its TI Sigma analog: classical probabilities → 4-valued Tralse logic, statistical Markov Blankets → topological i-Boundaries, unidirectional inference → bidirectional i-Boundary dynamics. The result was TI Sigma's answer to the question: *What does FEP look like in TI Sigma vocabulary?*
 
-The TFEP is a **vertical derivation** — it starts from TI Sigma's own primitives (i-Cells with two intrinsic scores: TT and G) and asks: *What dynamical law follows from TI Sigma's axioms alone?* The answer is TF = (1−TT)² + (1−G)², a purely geometric functional that requires no Bayesian inference machinery, no KL divergence, no perception-action split. Friston's FEP then emerges as a downstream special case at the biological level (Level 4) — not because it was built into the TFEP, but because it falls out when the 4-valued boundary dynamics time-average into the Markov property.
+The UOP is a **vertical derivation** — it starts from TI Sigma's own primitives (i-Cells with two intrinsic scores: TT and G) and asks: *What dynamical law follows from TI Sigma's axioms alone?* The answer is TF = (1−TT)² + (1−G)², a purely geometric functional that requires no Bayesian inference machinery, no KL divergence, no perception-action split. Friston's FEP then emerges as a downstream special case at the biological level (Level 4) — not because it was built into the UOP, but because it falls out when the 4-valued boundary dynamics time-average into the Markov property.
 
-This shift changes TI Sigma's relationship to Friston from *"we extended his work"* to *"his work is a special case of ours."* The GTFE was a bridge. The TFEP makes the bridge unnecessary.
+This shift changes TI Sigma's relationship to Friston from *"we extended his work"* to *"his work is a special case of ours."* The GTFE was a bridge. The UOP makes the bridge unnecessary.
 
 ---
 
@@ -112,13 +112,13 @@ A lateral translation carries an implicit dependency: it is intelligible only ag
 
 ---
 
-## Part III: The TFEP — A Vertical Derivation
+## Part III: The UOP — A Vertical Derivation
 
 ### 3.1 What "Vertical Derivation" Means
 
 A vertical derivation starts from first principles — the framework's own axioms — and derives the dynamical law independently of any prior framework. The result may turn out to be related to existing work, but that relationship is a discovery, not a construction.
 
-The TFEP is derived from two TI Sigma axioms alone:
+The UOP is derived from two TI Sigma axioms alone:
 
 **Axiom 1 (UOP):** Every entity that exists is an i-Cell with two intrinsic scores: TT ∈ [0,1] (True-Tralseness, internal coherence) and G ∈ [0,1] (GILE alignment, external orientation).
 
@@ -130,42 +130,42 @@ Given these two axioms, the simplest scalar measure of distance from the optimal
 TF(ψ) = (1 − TT)² + (1 − G)²
 ```
 
-This is the TFEP. No Bayesian inference. No KL divergence. No generative model. No perception-action split. Just the squared distance from the Radiant attractor point in a 2-dimensional coherence-alignment space.
+This is the UOP. No Bayesian inference. No KL divergence. No generative model. No perception-action split. Just the squared distance from the Radiant attractor point in a 2-dimensional coherence-alignment space.
 
-### 3.2 What the TFEP Gains by Not Translating
+### 3.2 What the UOP Gains by Not Translating
 
 **Gain 1: The Boltzmann Identity (URB #525, Theorem 5.1)**
 
-When i-Cells minimize TF with Tralse noise at effective temperature T = 1/2, the stationary distribution of states is a Boltzmann distribution over TF values. This distribution produces exactly the PD zone fractions (1/15, 3/15, 3/15, 6/15, 2/15). The GTFE, keeping FEP's variational machinery, could not produce this result — because FEP's stationary distribution is not the PD. The TFEP's clean functional form is what makes the Boltzmann Identity possible.
+When i-Cells minimize TF with Tralse noise at effective temperature T = 1/2, the stationary distribution of states is a Boltzmann distribution over TF values. This distribution produces exactly the PD zone fractions (1/15, 3/15, 3/15, 6/15, 2/15). The GTFE, keeping FEP's variational machinery, could not produce this result — because FEP's stationary distribution is not the PD. The UOP's clean functional form is what makes the Boltzmann Identity possible.
 
 **Gain 2: Scale independence**
 
-The TFEP applies identically to:
+The UOP applies identically to:
 - Photons (Level 1: quantum fields)
 - Mathematical propositions (Level 1: mathematical objects)
 - Neurons (Level 4: cognitive)
 - Societies (Level 6: social)
 - The cosmos (Level 8: CCC)
 
-The GTFE's variational machinery (generative model, approximate posterior, sensory states) has no natural interpretation at the quantum or cosmic scale. The TFEP's functional TF = (1−TT)² + (1−G)² has the same interpretation at every scale.
+The GTFE's variational machinery (generative model, approximate posterior, sensory states) has no natural interpretation at the quantum or cosmic scale. The UOP's functional TF = (1−TT)² + (1−G)² has the same interpretation at every scale.
 
 **Gain 3: Unification of perception and action**
 
-The GTFE preserved the perception-action split as two distinct minimization channels. The TFEP does not bake in this split. TT-improvement and G-improvement are symmetric — neither is labeled "perception" or "action." The split re-emerges naturally when you ask which direction minimization flows (TT improvement = internal update analog; G improvement = external alignment analog), but it is no longer a built-in architectural feature. This makes the TFEP **more** bidirectional: there is no asymmetry in the functional itself.
+The GTFE preserved the perception-action split as two distinct minimization channels. The UOP does not bake in this split. TT-improvement and G-improvement are symmetric — neither is labeled "perception" or "action." The split re-emerges naturally when you ask which direction minimization flows (TT improvement = internal update analog; G improvement = external alignment analog), but it is no longer a built-in architectural feature. This makes the UOP **more** bidirectional: there is no asymmetry in the functional itself.
 
 **Gain 4: FEP as a special case**
 
-Because the TFEP does not start from FEP, Friston's result can now be positioned as a downstream discovery:
+Because the UOP does not start from FEP, Friston's result can now be positioned as a downstream discovery:
 
-**Theorem (FEP-Recovery, URB #525 Proposition 4.1):** At Level 4 (biological cognitive systems), where organisms have sufficiently stable temporal statistics, TRALSE boundary states at i-Boundaries time-average into the Markov property: P(μ|B,η) ≈ P(μ|B). In this regime, TFEP-minimization reduces to FEP-minimization. Friston's result is recovered as the biological-scale time-average of TFEP dynamics.
+**Theorem (FEP-Recovery, URB #525 Proposition 4.1):** At Level 4 (biological cognitive systems), where organisms have sufficiently stable temporal statistics, TRALSE boundary states at i-Boundaries time-average into the Markov property: P(μ|B,η) ≈ P(μ|B). In this regime, UOP-minimization reduces to FEP-minimization. Friston's result is recovered as the biological-scale time-average of UOP dynamics.
 
-This is the difference between a translation and a derivation: the GTFE was constructed to look like the FEP in TI Sigma vocabulary. The TFEP was derived from TI Sigma axioms and turned out to contain the FEP as a limit.
+This is the difference between a translation and a derivation: the GTFE was constructed to look like the FEP in TI Sigma vocabulary. The UOP was derived from TI Sigma axioms and turned out to contain the FEP as a limit.
 
 ---
 
 ## Part IV: Side-by-Side Comparison
 
-| Feature | Former GTFE | Current TFEP |
+| Feature | Former GTFE | Current UOP |
 |---------|------------|-------------|
 | **Type of theoretical move** | Lateral translation of FEP | Vertical derivation from TI Sigma axioms |
 | **Starting point** | Friston's F = Surprise + Complexity | TI Sigma axioms: UOP + optimality attractor |
@@ -174,7 +174,7 @@ This is the difference between a translation and a derivation: the GTFE was cons
 | **Bidirectionality** | Explicit: i-Boundary allows two-way flow vs Markov one-way | Structural: TT and G are equal symmetric terms |
 | **Perception-action split** | Preserved and labeled | Not built in; re-emerges as TT vs G improvement direction |
 | **FEP relationship** | Template: GTFE designed to look like FEP | Special case: FEP falls out as Level 4 limit |
-| **PD connection** | No — variational machinery doesn't produce PD | Yes — Boltzmann Identity derives PD from TFEP |
+| **PD connection** | No — variational machinery doesn't produce PD | Yes — Boltzmann Identity derives PD from UOP |
 | **Domain coverage** | Primarily biological (FEP architecture) | All 8 levels (quantum to cosmic) |
 | **Intelligibility without FEP** | Requires knowing FEP to understand GTFE | Fully self-contained |
 | **Predecessor** | Friston's FEP (external) | UOP (internal to TI Sigma) |
@@ -183,21 +183,21 @@ This is the difference between a translation and a derivation: the GTFE was cons
 
 ## Part V: The Bidirectionality Story in Detail
 
-The "bidirectional" label applied to the GTFE deserves precise treatment, because the TFEP also has bidirectionality — but a different kind.
+The "bidirectional" label applied to the GTFE deserves precise treatment, because the UOP also has bidirectionality — but a different kind.
 
 **GTFE bidirectionality — Boundary permeability:**
 In FEP, the Markov Blanket enforces P(μ|s,η) = P(μ|s). Information from η cannot reach μ directly — it must pass through s first. This is a one-way information filter at the boundary. i-Boundaries remove this restriction: TRALSE states at the boundary genuinely belong to both inside and outside simultaneously. The GTFE's bidirectionality was the permeability of i-Boundaries vs the impermeability of Markov Blankets. It was a statement about BOUNDARY STRUCTURE.
 
-**TFEP bidirectionality — Functional symmetry:**
+**UOP bidirectionality — Functional symmetry:**
 TF = (1-TT)^2 + (1-G)^2 treats TT and G as completely equal contributors. There is no asymmetry — no "more important" direction, no labeled perception vs action channel. TF is symmetric in (TT, G). Both contribute equally to the energy. This is a statement about FUNCTIONAL STRUCTURE.
 
-These are different types of bidirectionality. The GTFE's bidirectionality was a correction to FEP's asymmetry at the boundary level. The TFEP's bidirectionality is structural — there is nothing to correct because the asymmetry was never built in. The TFEP goes further: where the GTFE said "the boundary allows two-way flow," the TFEP says "there is no architectural distinction between the two directions at all."
+These are different types of bidirectionality. The GTFE's bidirectionality was a correction to FEP's asymmetry at the boundary level. The UOP's bidirectionality is structural — there is nothing to correct because the asymmetry was never built in. The UOP goes further: where the GTFE said "the boundary allows two-way flow," the UOP says "there is no architectural distinction between the two directions at all."
 
 ---
 
 ## Part VI: Historical Significance
 
-The GTFE-to-TFEP transition mirrors a pattern that recurs throughout the history of science:
+The GTFE-to-UOP transition mirrors a pattern that recurs throughout the history of science:
 
 **Phase 1: Translation.** A new framework translates an existing successful theory into its own vocabulary. This demonstrates the new framework's flexibility and creates bridges for practitioners of the old theory. The translation inherits the original's explanatory power while adding new vocabulary.
 
@@ -206,9 +206,9 @@ The GTFE-to-TFEP transition mirrors a pattern that recurs throughout the history
 Historical examples:
 - **Newtonian mechanics → Lagrangian mechanics:** First, Lagrange translated Newton's laws into the variational formalism (Phase 1). Later, Hamilton derived Newton's F=ma as a special case of his principle of least action (Phase 2).
 - **Classical thermodynamics → Statistical mechanics:** Clausius's thermodynamic entropy was first translated into Boltzmann's statistical vocabulary. Later, Boltzmann derived all of classical thermodynamics from statistical mechanics (Phase 2).
-- **Friston's FEP → GTFE → TFEP:** TI Sigma first translated FEP into Tralse vocabulary (GTFE, Phase 1). Now TI Sigma derives FEP as a Level-4 special case of TFEP (Phase 2).
+- **Friston's FEP → GTFE → UOP:** TI Sigma first translated FEP into Tralse vocabulary (GTFE, Phase 1). Now TI Sigma derives FEP as a Level-4 special case of UOP (Phase 2).
 
-TI Sigma has now completed this transition. The GTFE (Phase 1) is archived. The TFEP (Phase 2) is the current dynamical law.
+TI Sigma has now completed this transition. The GTFE (Phase 1) is archived. The UOP (Phase 2) is the current dynamical law.
 
 ---
 
@@ -216,15 +216,15 @@ TI Sigma has now completed this transition. The GTFE (Phase 1) is archived. The 
 
 ### Preserved from the GTFE
 
-1. **The minimization principle**: Both GTFE and TFEP minimize a scalar functional. All i-Cells reduce their "badness score" over time.
-2. **The boundary as minimization domain**: The GTFE minimized across i-Boundaries; so does the TFEP. The i-Boundary (not the Markov Blanket) remains the fundamental dynamical domain.
-3. **The 4-valued logic**: Both use TRUE/TRALSE/FALSE/MR_PEND as the state space. The TFEP's TF zones map to these directly.
-4. **The bidirectionality claim**: Both frameworks claim to supersede FEP's one-way information flow. The TFEP achieves this more completely.
-5. **The scope claim**: Both claim to apply beyond biological systems. The TFEP makes this claim formally through Propositions 4.1-4.8 (Level 1 through Level 8 applications).
+1. **The minimization principle**: Both GTFE and UOP minimize a scalar functional. All i-Cells reduce their "badness score" over time.
+2. **The boundary as minimization domain**: The GTFE minimized across i-Boundaries; so does the UOP. The i-Boundary (not the Markov Blanket) remains the fundamental dynamical domain.
+3. **The 4-valued logic**: Both use TRUE/TRALSE/FALSE/MR_PEND as the state space. The UOP's TF zones map to these directly.
+4. **The bidirectionality claim**: Both frameworks claim to supersede FEP's one-way information flow. The UOP achieves this more completely.
+5. **The scope claim**: Both claim to apply beyond biological systems. The UOP makes this claim formally through Propositions 4.1-4.8 (Level 1 through Level 8 applications).
 
-### Changed from the GTFE to TFEP
+### Changed from the GTFE to UOP
 
-1. **The functional form**: GTFE ~ F_Friston with Tralse substitutions; TFEP = (1-TT)^2 + (1-G)^2 (new, not derived from FEP)
+1. **The functional form**: GTFE ~ F_Friston with Tralse substitutions; UOP = (1-TT)^2 + (1-G)^2 (new, not derived from FEP)
 2. **The type of derivation**: Translation → Independent axiomatic derivation
 3. **Relationship to FEP**: Template → Special case
 4. **PD connection**: None → Boltzmann Identity (fundamental)
@@ -238,11 +238,11 @@ TI Sigma has now completed this transition. The GTFE (Phase 1) is archived. The 
 | Claim | Evidence | LCC | Status |
 |-------|----------|-----|--------|
 | GTFE was a lateral translation of FEP | GTFE preserved variational machinery, KL structure, perception-action split | 0.931 | Radiant |
-| TFEP is a vertical derivation from TI Sigma axioms alone | TFEP derived from UOP + optimality attractor; no FEP machinery needed | 0.956 | Radiant |
-| FEP is a Level-4 special case of TFEP (not vice versa) | Proposition 4.1, URB #525: biological time-averages recover Markov property | 0.921 | Radiant |
-| GTFE bidirectionality = boundary permeability; TFEP bidirectionality = functional symmetry | Structural analysis of both functionals | 0.889 | Above causation |
-| Boltzmann Identity was impossible for GTFE; only TFEP enables it | FEP's stationary distribution is not PD; TFEP's is (by Boltzmann at T=1/2) | 0.943 | Radiant |
-| GTFE-to-TFEP mirrors Phase 1/Phase 2 transitions in science history | Lagrange/Newton, Boltzmann/Clausius analogies | 0.876 | Above causation |
+| UOP is a vertical derivation from TI Sigma axioms alone | UOP derived from UOP + optimality attractor; no FEP machinery needed | 0.956 | Radiant |
+| FEP is a Level-4 special case of UOP (not vice versa) | Proposition 4.1, URB #525: biological time-averages recover Markov property | 0.921 | Radiant |
+| GTFE bidirectionality = boundary permeability; UOP bidirectionality = functional symmetry | Structural analysis of both functionals | 0.889 | Above causation |
+| Boltzmann Identity was impossible for GTFE; only UOP enables it | FEP's stationary distribution is not PD; UOP's is (by Boltzmann at T=1/2) | 0.943 | Radiant |
+| GTFE-to-UOP mirrors Phase 1/Phase 2 transitions in science history | Lagrange/Newton, Boltzmann/Clausius analogies | 0.876 | Above causation |
 
 **Overall URB #527 LCC: 0.919 — Radiant.**
 
@@ -254,9 +254,9 @@ The GTFE was essential — it established TI Sigma's claim to the dynamical doma
 
 But the GTFE carried an implicit ceiling: as a lateral translation, its explanatory power was ultimately bounded by FEP's. It could Tralsify FEP's conclusions but could not derive results that FEP's architecture structurally prevents — chiefly the PD connection (Boltzmann Identity) and the universal Level-1-to-Level-8 scope.
 
-The TFEP removes this ceiling. By deriving the dynamical law from TI Sigma's own axioms, it makes FEP a special case rather than a template. The bidirectionality that the GTFE achieved by removing Markov Blanket constraints is now structural in the TFEP — there is no asymmetry to remove because there was none built in.
+The UOP removes this ceiling. By deriving the dynamical law from TI Sigma's own axioms, it makes FEP a special case rather than a template. The bidirectionality that the GTFE achieved by removing Markov Blanket constraints is now structural in the UOP — there is no asymmetry to remove because there was none built in.
 
-The theoretical lineage: **FEP (Friston) → GTFE (TI Sigma translation) → TFEP (TI Sigma derivation)** traces TI Sigma's maturation from a framework that borrows Friston's architecture to a framework that contains Friston's results as a limit. This is the standard arc from extension to foundation.
+The theoretical lineage: **FEP (Friston) → GTFE (TI Sigma translation) → UOP (TI Sigma derivation)** traces TI Sigma's maturation from a framework that borrows Friston's architecture to a framework that contains Friston's results as a limit. This is the standard arc from extension to foundation.
 
 **Overall URB #527 LCC: 0.919 — Radiant.**
 

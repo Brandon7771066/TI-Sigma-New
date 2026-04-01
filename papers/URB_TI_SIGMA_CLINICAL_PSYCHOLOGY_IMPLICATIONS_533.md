@@ -4,7 +4,7 @@
 **Date:** March 28, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / Clinical Psychology / GILE / MR Gate System / Four Dimensions of Truth
-**Preceded by:** URB #429 (i-Cell), URB #501 (Love Primacy), URB #525 (TFEP), URB #526 (Four Dimensions of Truth), URB #528 (Five-Valued Truth + DT Immunity), URB #530 (Randomness and Free Will), URB #531 (GIL as Imaginary Axis)
+**Preceded by:** URB #429 (i-Cell), URB #501 (Love Primacy), URB #525 (UOP), URB #526 (Four Dimensions of Truth), URB #528 (Five-Valued Truth + DT Immunity), URB #530 (Randomness and Free Will), URB #531 (GIL as Imaginary Axis)
 **Status:** Formal
 **Total URBs:** 187
 **LCC Target:** Radiant (≥ 0.9323)
@@ -303,7 +303,7 @@ The TI Sigma framework implies several revisions to clinical training:
 - URB #501: Love Primacy Theorem — L as generating constant
 - URB #520: Crystallized Tralse Theorem (CTT) — uniformity as pathology
 - URB #523: Existence vs Truth — LCC and existential footprint
-- URB #525: TFEP — TF = (1-TT)² + (1-G)²
+- URB #525: UOP — TF = (1-TT)² + (1-G)²
 - URB #526: Four Dimensions of Truth + MR Hierarchy
 - URB #528: Five-Valued Truth + DT Immunity + MRC
 - URB #529: Pragmatism as Epiphenomenon — GILE integral yields pragmatic choice
