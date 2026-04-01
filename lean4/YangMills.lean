@@ -133,7 +133,10 @@ theorem ymEffortless_is_vacuum (e : YMExcitation) (h : ymEffort e = 0) :
     e.isVacuum = true := by
   by_contra hne
   push Not at hne
-  have hfalse : e.isVacuum = false := by cases e.isVacuum <;> simp_all
+  have hfalse : e.isVacuum = false := by
+    cases e.isVacuum
+    · rfl
+    · exact absurd rfl hne
   obtain ⟨Δ, hΔpos, hgap⟩ := yang_mills_gap
   have hm : Δ ≤ ymEffort e := hgap e hfalse
   linarith
