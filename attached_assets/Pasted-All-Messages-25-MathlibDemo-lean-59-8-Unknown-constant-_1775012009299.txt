@@ -1,0 +1,138 @@
+All Messages (25)
+MathlibDemo.lean:59:8
+Unknown constant `padicValNat.le_of_dvd`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:77:12
+Unknown constant `padicValNat.le_of_dvd`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:78:6
+No goals to be solved
+MathlibDemo.lean:118:51
+unsolved goals
+k : ℕ
+hk : 0 < k
+hk0 : k ≠ 0
+⊢ padicValNat 2 4 = 2
+MathlibDemo.lean:173:18
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:175:23
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:178:9
+unsolved goals
+case zero
+⊢ ∀ (n : ℕ), sorry () % 4 = 3 → padicValNat 2 (n + 1) = padicValNat 2 (sorry () + 1)
+MathlibDemo.lean:196:14
+Unknown constant `padicValNat.le_of_dvd`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:197:8
+No goals to be solved
+MathlibDemo.lean:198:6
+omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 2
+  b - c ≤ 0
+  a ≤ -1
+where
+ a := Lean.Omega.bmod_div_term 3 [0, 3, 0, -2] (Lean.Omega.Coeffs.ofList [↑n, ↑n / 4, ↑(3 * n + 1) / 2, ↑n' / 4])
+ b := ↑(padicValNat 2 (n + 1))
+ c := ↑(padicValNat 2 (n' + 1))
+MathlibDemo.lean:201:8
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:206:6
+No goals to be solved
+MathlibDemo.lean:218:8
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:222:10
+Unknown constant `padicValNat.le_of_dvd`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:222:44
+No goals to be solved
+MathlibDemo.lean:227:30
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:230:15
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:236:16
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:238:7
+Unknown identifier `Function.iterate`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:239:10
+Unknown constant `padicValNat.le_of_dvd`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:239:44
+No goals to be solved
+MathlibDemo.lean:300:19
+Unknown constant `Nat.succ_mod_two`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:303:19
+Unknown constant `Nat.succ_mod_two`
+Error code: lean.unknownIdentifier
+View explanation
+MathlibDemo.lean:305:8
+omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  f ≥ 1
+  0 ≤ d - 3*e ≤ 1
+  c ≥ 1
+  b ≥ 1
+  b ≥ 1
+  a ≥ 0
+where
+ a := ↑n / 2
+ b := ↑2 ^ j
+ c := ↑2 ^ (j + 2)
+ d := ↑(3 * n + 1) / ↑(2 ^ (j + 1 + 1))
+ e := ↑((3 * n + 1) / 2 ^ (j + 1 + 1)) / 3
+ f := ↑(j + 1) / 2
+MathlibDemo.lean:290:13
+unsolved goals
+case pos
+n : ℕ
+hodd : n % 2 = 1
+j : ℕ
+ih : 1 ≤ j + 1 → 2 ^ (j + 1) ∣ 3 * n + 1 → (3 * n + 1) / 2 ^ (j + 1) % 3 = if (j + 1) % 2 = 1 then 2 else 1
+hj : 1 ≤ j + 1 + 1
+hdvd : 2 ^ (j + 1 + 1) ∣ 3 * n + 1
+hj2 : 1 ≤ j + 1
+hdvd2 : 2 ^ (j + 1) ∣ 3 * n + 1
+hmod : ¬(j + 1 + 1) % 2 = 1
+h✝ : (j + 1) % 2 = 1
+ih2 : (3 * n + 1) / 2 ^ (j + 1) % 3 = 2
+⊢ (3 * n + 1) / 2 ^ (j + 1 + 1) % 3 = 1
+
+
+case neg
+n : ℕ
+hodd : n % 2 = 1
+j : ℕ
+ih : 1 ≤ j + 1 → 2 ^ (j + 1) ∣ 3 * n + 1 → (3 * n + 1) / 2 ^ (j + 1) % 3 = if (j + 1) % 2 = 1 then 2 else 1
+hj : 1 ≤ j + 1 + 1
+hdvd : 2 ^ (j + 1 + 1) ∣ 3 * n + 1
+hj2 : 1 ≤ j + 1
+hdvd2 : 2 ^ (j + 1) ∣ 3 * n + 1
+hmod : ¬(j + 1 + 1) % 2 = 1
+h✝ : ¬(j + 1) % 2 = 1
+ih2 : (3 * n + 1) / 2 ^ (j + 1) % 3 = 1
+⊢ (3 * n + 1) / 2 ^ (j + 1 + 1) % 3 = 1
