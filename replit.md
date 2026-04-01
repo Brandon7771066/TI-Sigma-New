@@ -55,6 +55,13 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **DOES NOT EXIST:** `lean4/RiemannHypothesis.lean` — the Riemann formalization lives in `lean4/RiemannUOP.lean` + `lean4/BeingTheorem.lean`
 - **Full audit:** `papers/LEAN4_AUDIT_REPORT_APR2026.md`
 
+## TI SIGMA OFFICIAL FOUNDING — April 1, 2026
+- **Founding Charter:** `papers/TI_SIGMA_FOUNDING_CHARTER.md` — 9 Primary Constants, GILE axioms, 7 First Principles, manifesto
+- **URB Master Catalog:** `papers/TI_SIGMA_URB_MASTER_CATALOG.md` — All 578 URBs catalogued by tier/domain/status; #579+ assignments
+- **Founding Announcement:** `papers/TI_SIGMA_FOUNDING_ANNOUNCEMENT.md` — Press release + MIU letter + BlissGene stakeholder letter + social media copy
+- **Live Website Page:** `🔬 TI Sigma` tab added to ti_website.py — 5 sub-tabs: What Is TI Sigma, Primary Constants, Research Pillars, URB Corpus, Status & Links
+- **Sidebar updated:** URB count corrected to 578, "Est. Apr 1, 2026" label
+
 ## New Content (April 2026 DPES Session)
 - `papers/URB_537_538_COLLATZ_NU2_FORMAL_PAPER.md` — Journal-ready Collatz paper (JNT / AMM target)
 - `papers/COLLATZ_ARXIV_SUBMISSION.tex` — arXiv-ready LaTeX (submit to math.NT + cs.LO)
