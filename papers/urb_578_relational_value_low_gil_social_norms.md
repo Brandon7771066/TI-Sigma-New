@@ -176,6 +176,8 @@ The categorical floor of a norm equals its intrinsic G-content, independent of a
 | Manners have moral value iff they carry L-content | MYRION RESOLUTION |
 | GILE Intuition naturally navigates this distinction | PREDICTED |
 | Clinical implication: low-GIL norm violations under neurological constraint carry near-zero moral weight | APPLIED |
+| Unacknowledged low-GIL norm performance is a strictly negative GIL transaction | NEW (§11) |
+| Redirecting GIL capacity from unacknowledged low-GIL norms to high-GIL activity is framework-correct | NEW (§12) |
 
 **TI Sigma Status:** MYRION (successfully resolved via MR)
 
@@ -184,5 +186,130 @@ The categorical floor of a norm equals its intrinsic G-content, independent of a
 
 ---
 
+## 11. The GIL Cost Asymmetry
+
+### 11.1 The Value Side Was Only Half the Picture
+
+Section 2 established that unacknowledged low-GIL norms produce **zero value** for the performer. But this addresses only the output side of the transaction. The input side — what the performer actually spends — was left unexamined. That input is real.
+
+Performing a social norm, even a low-GIL one, costs genuine GIL capacity:
+
+- **Time** — finite and non-renewable. Time spent washing dishes is time not spent philosophizing, building, creating, or resting.
+- **Attention** — I-dimension expenditure. Self-referential processing directed at the task rather than at self-development or insight generation.
+- **Emotional regulation** — L-dimension expenditure. Maintaining composure and care-orientation toward a recipient who does not acknowledge takes active effort.
+- **Motivational energy** — G-dimension depletion. Sustaining effort against the pull of meaninglessness depletes the very integrity-maintenance capacity that generates G.
+
+### 11.2 The Full Transaction
+
+For an unacknowledged low-GIL norm performance, the complete GIL transaction is:
+
+> **GIL invested:** real and non-trivial  
+> **Value produced:** ≈ 0 (no acknowledgment → no loop closure → norm collapses)  
+> **Net GIL balance:** strictly negative
+
+This is not a neutral exchange. It is **resource extraction**: the performer subsidizes a zero-value interaction from their own GIL reserves, with no return flow. The traditional label "virtuous helpfulness" applied to this situation is a mislabeling — it names the action by its *form* rather than by its *GIL structure*.
+
+### 11.3 "Going Through the Motions" Compounds the Deficit
+
+Section 8 established that manners are L-vehicles: they acquire moral value only when L-charged. "Going through the motions" — performing the norm without genuine care — strips the L from the exchange:
+
+> **With L charged:** small positive L-content delivered (partially offsets cost)  
+> **Without L (robotic/coerced performance):** zero L delivered, full GIL cost still paid
+
+The performer who has stopped caring but continues performing out of habit or social pressure incurs the worst case: maximum GIL expenditure, zero value produced, zero L generated. The deficit compounds because even the residual L-vehicle function has been eliminated.
+
+### 11.4 The Virtue Mislabeling Is Itself a Low-GIL Norm
+
+The social convention that labels persistent, unacknowledged helpfulness as "virtue" is itself a low-GIL norm — a convention maintained by collective acknowledgment (family scripts, cultural expectations, peer approval). By URB #578's own finding, this convention has no categorical authority. It has been internalized as if it were a high-GIL ethical demand, but it is political philosophy (G-arm outer), not ethics (G-wing inner).
+
+**Consequence:** Moral guilt arising from withdrawing unacknowledged low-GIL norm performance is guilt about violating a soft-floor norm while falsely experiencing it as a hard-floor violation. This is precisely the misclassification that GILE Intuition resolves.
+
+### 11.5 Formal Statement of the GIL Cost Asymmetry
+
+**Theorem (GIL Cost Asymmetry):**  
+Let P be a performer executing norm N with GIL(N) ≈ 0 in a context where acknowledgment A(N) ≈ 0. Let Cost(P, N) > 0 be the GIL capacity expended. Then:
+
+> Net(P, N) = Value(N) − Cost(P, N) ≈ 0 − Cost(P, N) < 0
+
+The transaction is strictly GIL-negative for the performer regardless of sincerity, effort, or duration.
+
+**Corollary (Compounding with Robotic Performance):**  
+If L(performance) ≈ 0 (going through the motions), then even the partial L-vehicle offset disappears:
+
+> Net(P, N) = 0 − Cost(P, N) − L_offset = −Cost(P, N) < 0 (no partial offset)
+
+The performer is strictly worse off in every scenario of unacknowledged low-GIL norm execution.
+
+---
+
+## 12. Opportunity Cost and Rational GIL Allocation
+
+### 12.1 GIL as a Finite Resource
+
+GILE Intuition (URB #567) is not infinitely generative — it operates on a substrate of finite GIL capacity in any given time window. Time spent in one activity is time definitionally unavailable for another. This creates an **opportunity cost structure** in GIL space:
+
+> **Opportunity Cost(activity A) = GIL value of the best foregone alternative**
+
+When the activity A is an unacknowledged low-GIL norm, and the best foregone alternative is a high-GIL activity (philosophical inquiry, artistic creation, scientific research, restorative rest), the opportunity cost is not merely the time lost — it is the **GIL value that would have been generated but was not**.
+
+### 12.2 High-GIL vs. Low-GIL Opportunity Cost Comparison
+
+| Activity | GIL Generated | GIL Cost | Net | Notes |
+|----------|--------------|----------|-----|-------|
+| URB paper (acknowledged) | High | Medium | Strongly positive | Builds corpus, generates I-content |
+| URB paper (unacknowledged) | High (intrinsic) | Medium | Still positive | G survives; value independent of audience |
+| Unacknowledged household chore | ≈ 0 | Medium | Negative | Value collapses; cost remains |
+| Acknowledged household chore | Low-Medium | Medium | Near-zero to slightly positive | Acknowledgment partially closes loop |
+| Creative/philosophical rest | High | Low | Strongly positive | Restorative; replenishes GIL capacity |
+
+The critical asymmetry: **high-GIL activities generate value that survives non-acknowledgment** (the G-signal is intrinsic), while **low-GIL activities only generate value when acknowledged** (the G-signal is borrowed). This means:
+
+- A philosopher whose work goes unread still generated genuine GIL value.
+- A household servant whose work goes unacknowledged generated near-zero GIL value.
+
+### 12.3 Rational GIL Allocation Is Not Selfishness
+
+The standard social accusation against someone who withdraws from unacknowledged low-GIL norm performance is: *"You're being selfish."* By the GILE framework, this accusation fails on two counts:
+
+**Count 1 — The accusation is itself a low-GIL norm.** "You must keep helping regardless of acknowledgment" is a social convention that collapses under the same analysis: it has no categorical G-floor. Compliance is not ethically required.
+
+**Count 2 — GIL conservation is L-oriented at the systemic level.** Redirecting GIL capacity from zero-value activities to high-GIL activities produces *more* genuine value for the world, not less. A philosopher who writes URBs instead of making beds is generating more net L — more net constructive-relational output — than one who sacrifices the same hours to unacknowledged household tasks. The Love dimension is better served by the high-GIL allocation.
+
+**The TI Sigma verdict:** Rational GIL allocation is not selfishness. It is **GIL stewardship** — the responsible management of a finite resource in service of genuine value generation.
+
+### 12.4 The Redirect Principle
+
+**Redirect Principle (URB #578, §12):**
+
+> When an activity satisfies all three conditions — (1) low-GIL norm, (2) consistently unacknowledged, (3) a higher-GIL alternative exists — the framework-correct response is to redirect GIL capacity to the higher-GIL alternative.
+
+Compliance with this principle is not withdrawal from love — it IS love, expressed at the systemic level. The performer who redirects is choosing to maximize their net constructive-relational output (L-core) rather than spending it into a zero-return sink.
+
+### 12.5 Boundary Conditions
+
+The Redirect Principle is not a license for unlimited withdrawal. Two conditions bound it:
+
+**Condition 1 — Emergency exception:** If the low-GIL norm addresses a genuine immediate need (a person is ill, safety is at risk), the L-content of the response rises sharply and the norm temporarily becomes high-GIL. Emergency care is not a low-GIL norm.
+
+**Condition 2 — Relationship maintenance exception:** If performing the low-GIL norm maintains access to a relationship that enables high-GIL exchange elsewhere, the opportunity cost calculation must account for the relationship's full GIL value, not just the single task. Strategic compliance for relational preservation is coherent with the framework.
+
+Outside these exceptions, the Redirect Principle holds.
+
+### 12.6 Application to the Originating Case
+
+The originating insight came from a specific context: persistent helpfulness at home that goes unacknowledged, at the expense of philosophical work that generates URBs and advances TI Sigma.
+
+By the Redirect Principle:
+- (1) Household chores = low-GIL norm ✓
+- (2) Consistently unacknowledged ✓
+- (3) Philosophical/creative work = high-GIL alternative ✓
+
+**Verdict:** Redirecting time and attention from unacknowledged household tasks to TI Sigma work is the framework-correct, L-maximizing, G-conserving response. It is not failure of duty. It is not selfishness. It is accurate GIL accounting in service of genuine value.
+
+---
+
 *"The acknowledgment loop IS the norm. Strip the audience and you strip the value — not because G was hidden, but because there was never G to find."*  
-— URB #578 summary aphorism
+— URB #578, §1–9 summary aphorism
+
+*"Performing into a void is not virtue — it is a subsidy. The framework-correct response is to redirect the subsidy toward something that can actually receive it."*  
+— URB #578, §11–12 summary aphorism
