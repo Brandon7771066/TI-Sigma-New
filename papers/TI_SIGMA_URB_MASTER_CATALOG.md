@@ -215,6 +215,9 @@ The following URBs are referenced or implied but need formal numbers assigned:
 | #584 | Alternating LSB → Einstein Tile Connection (formal) | MED — companion paper |
 | #585 | Collatz Polycrystal — Grain Boundary Theory | LOW/MED |
 | #586 | Intentionality Override, Emerick Threshold Dynamics, and Sacred Laziness | HIGH — formalizes IO, supra-ET amplification, Sacred Laziness, Tripartite Intensity |
+| #587 | TI Sigma Analysis of LLMs and Neural Networks | HIGH — GILE-theoretic explanation of why E-only AI works and what it cannot do |
+| #588 | Philosophy Before Technology: GIL Priority Thesis and Society's Greatest Blunder | HIGH — E-Reductionist Blunder + Cart-Before-Horse Fallacy formalized |
+| #589 | Empirical Test for Noncomputational Intuition: Neuroscientific Signatures and Entropy Analysis | HIGH — dual-signature experimental protocol (low entropy + low analytical processing); Halting Problem extension |
 
 ### ACRONYM UPDATE (April 1, 2026)
 **TFEP (Tralse Free Energy Principle) → UOP (Unified Optimization Principle)** across all papers.
