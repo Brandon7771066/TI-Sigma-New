@@ -52,7 +52,7 @@ theorem k1_iff_mod4 {n : ℕ} (hodd : n % 2 = 1) :
       1 + padicValNat 2 ((3 * n + 1) / 2) := by
     conv_lhs => rw [hdiv]
     rw [padicValNat.mul (by norm_num) (by omega),
-        padicValNat.self (by norm_num : 1 < 2)]
+        padicValNat.self (by omega : 1 < 2)]
   constructor
   · intro hk1
     -- padicValNat 2 ((3*n+1)/2) = 0 from hk1 and hval
@@ -65,7 +65,7 @@ theorem k1_iff_mod4 {n : ℕ} (hodd : n % 2 = 1) :
           1 + padicValNat 2 q := by
         conv_lhs => rw [hqdiv]
         rw [padicValNat.mul (by norm_num) (by omega),
-            padicValNat.self (by norm_num : 1 < 2)]
+            padicValNat.self (by omega : 1 < 2)]
       omega  -- hz says = 0, hval2 says = 1 + something ≥ 1
     -- 2 | (3*n+1) from pow_padicValNat_dvd + hk1
     have h2dvd : 2 ∣ (3 * n + 1) := by
@@ -127,7 +127,7 @@ theorem padicValNat_4k {k : ℕ} (hk : 0 < k) :
     _ = padicValNat 2 2 + (padicValNat 2 2 + padicValNat 2 k) := by
           rw [padicValNat.mul (by norm_num) hk0]
     _ = 2 + padicValNat 2 k := by
-          rw [padicValNat.self (by norm_num : 1 < 2)]; ring
+          rw [padicValNat.self (by omega : 1 < 2)]; ring
 
 /-- (C) ν₂(3m) = ν₂(m) since 3 is odd (2 ∤ 3). -/
 theorem padicValNat_3m {m : ℕ} (hm : 0 < m) :
@@ -252,7 +252,7 @@ theorem k1_run_bound {n : ℕ} (hn : n % 4 = 3) :
         padicValNat 2 2 + padicValNat 2 (m / 2) := by
       conv_lhs => rw [show m = 2 * (m / 2) from by simp only [m]; omega]
       exact padicValNat.mul (by norm_num) hm_half
-    rw [this, padicValNat.self (by norm_num : 1 < 2)]
+    rw [this, padicValNat.self (by omega : 1 < 2)]
     omega
   omega
 
