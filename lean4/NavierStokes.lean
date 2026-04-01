@@ -80,6 +80,19 @@ noncomputable axiom nsEnstrophy : NSSolution → ℝ → ℝ
 axiom nsEnergy_nonneg    : ∀ (sol : NSSolution) (t : ℝ), 0 ≤ nsEnergy sol t
 axiom nsEnstrophy_nonneg : ∀ (sol : NSSolution) (t : ℝ), 0 ≤ nsEnstrophy sol t
 
+/-- Integrated enstrophy from 0 to t (axiomatized — needs Bochner integral). -/
+noncomputable axiom integratedEnstrophy : NSSolution → ℝ → ℝ
+
+/-- integratedEnstrophy is non-negative for t ≥ 0. -/
+axiom integratedEnstrophy_nonneg (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
+    0 ≤ integratedEnstrophy sol t
+
+/-- **Leray Energy Inequality (K1 — named axiom, proven in classical PDE):**
+    E(t) + 2ν ∫₀ᵗ ‖∇u‖² ds ≤ E(0) for all t ≥ 0.
+    MR dissipation (viscous term) ensures total energy never grows. -/
+axiom leray_energy_inequality (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
+    nsEnergy sol t + 2 * sol.ν * integratedEnstrophy sol t ≤ nsEnergy sol 0
+
 -- ============================================================
 -- 2. REGULARITY DEFINITIONS
 -- ============================================================
@@ -127,19 +140,6 @@ theorem smoothnessVern_eq_globallyRegular (sol : NSSolution) :
   But this does NOT prevent blow-up: the inequality allows E(t) → ∞
   in finite time IF the enstrophy term also diverges.
 -/
-
-/-- Integrated enstrophy from 0 to t (axiomatized — needs Bochner integral). -/
-noncomputable axiom integratedEnstrophy : NSSolution → ℝ → ℝ
-
-/-- integratedEnstrophy is non-negative for t ≥ 0. -/
-axiom integratedEnstrophy_nonneg (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
-    0 ≤ integratedEnstrophy sol t
-
-/-- **Leray Energy Inequality (K1 — named axiom, proven in classical PDE):**
-    E(t) + 2ν ∫₀ᵗ ‖∇u‖² ds ≤ E(0) for all t ≥ 0.
-    MR dissipation (viscous term) ensures total energy never grows. -/
-axiom leray_energy_inequality (sol : NSSolution) (t : ℝ) (ht : 0 ≤ t) :
-    nsEnergy sol t + 2 * sol.ν * integratedEnstrophy sol t ≤ nsEnergy sol 0
 
 /-- **Leray Corollary (sorry-free): Energy is bounded by initial energy.**
     E(t) ≤ E(0) for all t ≥ 0. -/
