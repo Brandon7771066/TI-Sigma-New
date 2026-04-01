@@ -48,6 +48,25 @@ Budget Constraint: Under $50 total. All work batched (5+ items per session). Pre
 - **Tralse Trace of DT**: A metric for measuring the penumbra of Double Tralse.
 - **MR Relaxation Contexts (MRC)**: Operating modes where DT tolerance is elevated.
 
+## Lean 4 File Audit (April 2026)
+- **Sorry-free (0 code sorries):** `lean4_collatz/CollatzNu2.lean` (11 theorems), `lean4/Collatz.lean`, `lean4/BSD.lean`, `lean4/Hodge.lean`, `lean4/NavierStokes.lean`, `lean4/PvsNP.lean`, `lean4/TISigma.lean`
+- **Experimental (Millennium sorries, expected):** `lean4/YangMills.lean` (1), `lean4/RiemannUOP.lean` (3), `lean4/BeingTheorem.lean` (3)
+- **In development (reduce next):** `lean4/GapEquivalence.lean` (5), `lean4/MirrorPairing.lean` (5), `lean4/GroupSymmetryRoute.lean` (2), `lean4/VariationalRoute.lean` (2)
+- **DOES NOT EXIST:** `lean4/RiemannHypothesis.lean` — the Riemann formalization lives in `lean4/RiemannUOP.lean` + `lean4/BeingTheorem.lean`
+- **Full audit:** `papers/LEAN4_AUDIT_REPORT_APR2026.md`
+
+## New Content (April 2026 DPES Session)
+- `papers/URB_537_538_COLLATZ_NU2_FORMAL_PAPER.md` — Journal-ready Collatz paper (JNT / AMM target)
+- `papers/COLLATZ_ARXIV_SUBMISSION.tex` — arXiv-ready LaTeX (submit to math.NT + cs.LO)
+- `papers/JOURNAL_OUTREACH_LETTERS.md` — 5 letters: UConn, JNT, AMM, Experimental Math, Synthese
+- `papers/BEYOND_BAYES_TI_SIGMA_EPISTEMOLOGY.md` — Full philosophy paper (Synthese / Erkenntnis target)
+- `papers/DPES_DEFAULT_PHILOSOPHICAL_EATING_STRATEGY.md` — DPES protocol formalized
+- `papers/ZENODO_UPLOAD_CHECKLIST_APR2026.md` — Upload queue with time estimates
+- `papers/ZENODO_METADATA_READY.md` — Copy-paste metadata for all 4 Zenodo records
+- `papers/LEAN4_AUDIT_REPORT_APR2026.md` — Full sorry/header audit of all 13 lean4 files
+- `content/VIDEO_SCRIPTS_PRODUCTION_READY.md` — Videos 1–3 full word-for-word scripts
+- `content/VIDEO_SCRIPTS_4_AND_5.md` — Videos 4 (GSA stock algo) + 5 (ARC-AGI) full scripts
+
 ## External Dependencies
 - **Alpaca**: Used for paper trading within the Grand Stock Algorithm (GSA v2).
 - **Google Cloud Platform (GCP)**: Utilized for analysis in the TI Sigma Intention Validation Lab v2.0.

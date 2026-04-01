@@ -1,17 +1,37 @@
 /-
   CollatzNu2.lean
-  TI Sigma Collatz Formalization — URB #538
-  Author: Brandon Emerick (2026)
-  License: Apache 2.0
+  TI Sigma Collatz Formalization
+  ==============================
+  URB     : #537 (k=1 Run Length Bound Theorem) + #538 (Lean 4 Formalization)
+  Corpus  : #191 + #192
+  Author  : Brandon Emerick (TI Sigma / BlissGene Therapeutics)
+  Date    : April 1, 2026
+  License : Apache 2.0
 
-  Formalizes the k=1 Run Length Bound Theorem (URB #537):
+  STATUS: 0 sorry statements — fully machine-verified in Lean 4 + Mathlib.
+
+  Formalizes the ν₂ Countdown Theorem (URB #537):
     "The maximum number of consecutive single-halving compound Collatz steps
-     from odd n is exactly padicValNat 2 (n+1) − 1."
+     from odd n ≡ 3 (mod 4) is exactly padicValNat 2 (n+1) − 1."
 
-  The key lemma is the ν₂ Countdown:
+  Key lemma (the ν₂ Countdown):
     n % 4 = 3  →  padicValNat 2 ((3*n+1)/2 + 1) = padicValNat 2 (n+1) − 1
 
-  Dependencies: Mathlib (padicValNat, Nat.div_add_mod, omega)
+  Proof: n+1 = 4k  →  (3n+1)/2 + 1 = 6k
+         ν₂(4k) = 2 + ν₂(k),  ν₂(6k) = 1 + ν₂(k)  →  difference = 1.
+
+  11 Theorems (all sorry-free):
+    k1_iff_mod4, k1_result_odd, padicValNat_4k, padicValNat_3m,
+    padicValNat_6k, nu2_collatz_countdown, nu2_after_k1_run,
+    k1_run_bound, k1_result_odd_iter, alternating_lsb_base, alternating_lsb
+
+  Lean 4 API notes (lean4web-confirmed):
+    padicValNat.self requires (h : 1 < p) — use `by omega`, NOT norm_num.
+    rw [h] rewrites ALL occurrences — use conv_lhs => rw [h] when needed.
+    pow_pos NOT Nat.pos_pow_of_pos.  f^[n] x NOT Function.iterate f n x.
+
+  Dependencies: Mathlib (padicValNat, omega, Function.iterate)
+  DOI: [pending Zenodo upload]
 -/
 
 import Mathlib
