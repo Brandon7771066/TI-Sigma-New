@@ -1,0 +1,137 @@
+All Messages (31)
+MathlibDemo.lean:1:0
+unexpected token '#'; expected command
+MathlibDemo.lean:9:107
+unexpected token ','; expected ':'
+MathlibDemo.lean:21:472
+unexpected token '='; expected command
+MathlibDemo.lean:96:44
+failed to synthesize instance of type class
+  HMod ℕ Nat ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:96:52
+failed to synthesize instance of type class
+  OfNat ℕ 3
+numerals are polymorphic in Lean, but the numeral `3` cannot be used in a context where the expected type is
+  ℕ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:97:4
+Function expected at
+  padicValNat
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  2
+
+Hint: The identifier `padicValNat` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:98:4
+Function expected at
+  padicValNat
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  2
+
+Hint: The identifier `padicValNat` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+MathlibDemo.lean:98:33
+unsolved goals
+ℕ : Type u_1
+x✝ : Sort u_2
+padicValNat : x✝
+n : ℕ
+hn : n % 4 = 3
+hkpos : sorry
+⊢ sorry = sorry - 1
+MathlibDemo.lean:99:15
+failed to synthesize instance of type class
+  OfNat ℕ 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  ℕ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:99:20
+failed to synthesize instance of type class
+  HAdd ℕ Nat ?m.42
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:99:15
+failed to synthesize instance of type class
+  LT ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:99:37
+omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+MathlibDemo.lean:100:3
+unknown tactic
+MathlibDemo.lean:124:57
+unexpected token '.'; expected command
+MathlibDemo.lean:169:51
+failed to synthesize instance of type class
+  HMod ℕ Nat ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:169:59
+failed to synthesize instance of type class
+  OfNat ℕ 1
+numerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is
+  ℕ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:170:5
+failed to synthesize instance of type class
+  HMul Nat ℕ ?m.25
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:170:4
+failed to synthesize instance of type class
+  HMod Nat Nat ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:170:26
+failed to synthesize instance of type class
+  OfNat ℕ 2
+numerals are polymorphic in Lean, but the numeral `2` cannot be used in a context where the expected type is
+  ℕ
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:171:28
+failed to synthesize instance of type class
+  HAdd Nat Nat ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:171:42
+failed to synthesize instance of type class
+  HDiv ℕ Nat Nat
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+MathlibDemo.lean:171:52
+omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+MathlibDemo.lean:173:2
+omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+MathlibDemo.lean:174:0
+unexpected token '`'; expected command
+MathlibDemo.lean:189:26
+Failed to infer type of binder `of`
+MathlibDemo.lean:189:29
+unexpected token; expected command
+MathlibDemo.lean:203:89
+unexpected token ')'; expected identifier
+MathlibDemo.lean:203:89
+unexpected token ')'; expected ':'
+MathlibDemo.lean:222:25
+unexpected token '*'; expected identifier
+MathlibDemo.lean:222:28
+unexpected token '='; expected ':'
+MathlibDemo.lean:224:59
+unexpected identifier; expected 'binder_predicate', 'builtin_dsimproc', 'builtin_simproc', 'dsimproc', 'elab', 'elab_rules', 'grind_pattern', 'infix', 'infixl', 'infixr', 'instance', 'macro', 'macro_rules', 'notation', 'postfix', 'prefix', 'simproc', 'syntax' or 'unif_hint'
