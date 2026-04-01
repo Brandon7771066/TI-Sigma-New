@@ -74,20 +74,16 @@ theorem collatzStep_two : collatzStep 2 = 1 := by
   unfold collatzStep; norm_num
 
 /-- 4 reaches 1 in two steps. -/
-theorem collatzIter_four : collatzIter 2 4 = 1 := by
-  unfold collatzIter collatzStep; norm_num
+theorem collatzIter_four : collatzIter 2 4 = 1 := by decide
 
 /-- 1 converges (it already IS 1 in 0 steps). -/
-theorem collatz_one_converges : collatzConverges 1 := by
-  exact ⟨0, rfl⟩
+theorem collatz_one_converges : collatzConverges 1 := ⟨0, by decide⟩
 
 /-- 2 converges (reaches 1 in 1 step). -/
-theorem collatz_two_converges : collatzConverges 2 := by
-  exact ⟨1, by unfold collatzIter collatzStep; norm_num⟩
+theorem collatz_two_converges : collatzConverges 2 := ⟨1, by decide⟩
 
 /-- 4 converges (reaches 1 in 2 steps). -/
-theorem collatz_four_converges : collatzConverges 4 := by
-  exact ⟨2, by unfold collatzIter collatzStep; norm_num⟩
+theorem collatz_four_converges : collatzConverges 4 := ⟨2, by decide⟩
 
 -- ============================================================
 -- 3. 2-ADIC VALUATION LEMMAS (sorry-free)
@@ -159,7 +155,7 @@ theorem collatz_step_converges {n : ℕ} (hconv : collatzConverges n) (hn : 0 < 
   | zero =>
     simp [collatzIter] at hk
     subst hk
-    exact ⟨2, by unfold collatzIter collatzStep; norm_num⟩
+    exact ⟨2, by decide⟩
   | succ j =>
     exact ⟨j, by unfold collatzIter at hk; exact hk⟩
 
