@@ -64,7 +64,7 @@ class BiometricStreamManager:
         self.max_history = max_history
         self.history: deque = deque(maxlen=max_history)
         self.db_url = os.environ.get('DATABASE_URL')
-        self.api_base = "http://localhost:8000"
+        self.api_base = "http://localhost:5000"
         self.last_fetch_time = datetime.now() - timedelta(seconds=10)
         
     def fetch_from_database(self) -> Optional[BiometricReading]:
@@ -91,29 +91,29 @@ class BiometricStreamManager:
                 reading.mendi_connected = True
             
             cur.execute("""
-                SELECT timestamp, heart_rate, rr_interval, hrv_rmssd, coherence
+                SELECT heart_rate, hrv_rmssd, coherence, created_at
                 FROM polar_realtime_data 
                 ORDER BY created_at DESC LIMIT 1
             """)
             row = cur.fetchone()
             if row:
-                reading.heart_rate = row[1] or 0
-                reading.hrv_rmssd = row[3] or 0.0
-                reading.heart_coherence = row[4] or 0.0
+                reading.heart_rate = row[0] or 0
+                reading.hrv_rmssd = row[1] or 0.0
+                reading.heart_coherence = row[2] or 0.0
                 reading.polar_connected = True
             
             cur.execute("""
-                SELECT timestamp, alpha, beta, theta, gamma, delta
+                SELECT alpha, beta, theta, gamma, delta, created_at
                 FROM muse_realtime_data 
                 ORDER BY created_at DESC LIMIT 1
             """)
             row = cur.fetchone()
             if row:
-                reading.eeg_alpha = row[1] or 0.0
-                reading.eeg_beta = row[2] or 0.0
-                reading.eeg_theta = row[3] or 0.0
-                reading.eeg_gamma = row[4] or 0.0
-                reading.eeg_delta = row[5] or 0.0
+                reading.eeg_alpha = row[0] or 0.0
+                reading.eeg_beta = row[1] or 0.0
+                reading.eeg_theta = row[2] or 0.0
+                reading.eeg_gamma = row[3] or 0.0
+                reading.eeg_delta = row[4] or 0.0
                 reading.muse_connected = True
             
             cur.execute("""
@@ -149,50 +149,56 @@ class BiometricStreamManager:
             return None
     
     def fetch_from_api(self) -> Optional[BiometricReading]:
-        """Fetch latest data from HTTP API endpoints"""
+        """Fetch latest data from HTTP API — uses /api/biometric/current (live session) and
+        /api/latest (ESP32 cache). Falls back to per-device endpoints if available."""
         reading = BiometricReading(timestamp=datetime.now())
-        
+        got_data = False
+
+        # 1. Try the unified live-session endpoint (pushed by Web Bluetooth / phone)
         try:
-            resp = requests.get(f"{self.api_base}/api/mendi/latest", timeout=2)
+            resp = requests.get(f"{self.api_base}/api/biometric/current", timeout=2)
             if resp.status_code == 200:
                 data = resp.json()
-                reading.fnirs_hbo2 = data.get('hbo2', 0.0)
-                reading.fnirs_hbr = data.get('hbr', 0.0)
-                reading.fnirs_oxygenation = data.get('oxygenation_percent', 0.0)
-                reading.mendi_connected = True
-        except:
+                hr = data.get("hr") or data.get("heart_rate", 0)
+                if hr and hr > 0:
+                    reading.heart_rate = int(hr)
+                    reading.hrv_rmssd = data.get("rmssd") or 0.0
+                    reading.heart_coherence = data.get("coherence") or 0.0
+                    reading.polar_connected = True
+                    got_data = True
+                mendi = data.get("mendi_score")
+                if mendi is not None:
+                    reading.mendi_connected = True
+        except Exception:
             pass
-        
-        try:
-            resp = requests.get(f"{self.api_base}/api/polar/latest", timeout=2)
-            if resp.status_code == 200:
-                data = resp.json()
-                reading.heart_rate = data.get('heart_rate', 0)
-                reading.hrv_rmssd = data.get('hrv', {}).get('rmssd', 0.0)
-                reading.heart_coherence = data.get('hrv', {}).get('coherence', 0.0)
-                reading.polar_connected = True
-        except:
-            pass
-        
-        try:
-            resp = requests.get(f"{self.api_base}/api/muse/latest", timeout=2)
-            if resp.status_code == 200:
-                data = resp.json()
-                bands = data.get('bands', {})
-                reading.eeg_alpha = bands.get('alpha', 0.0)
-                reading.eeg_beta = bands.get('beta', 0.0)
-                reading.eeg_theta = bands.get('theta', 0.0)
-                reading.eeg_gamma = bands.get('gamma', 0.0)
-                reading.eeg_delta = bands.get('delta', 0.0)
-                reading.muse_connected = True
-        except:
-            pass
-        
+
+        # 2. Try the ESP32 cache endpoint
+        if not got_data:
+            try:
+                resp = requests.get(f"{self.api_base}/api/latest", timeout=2)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    hr = data.get("heart_rate", 0)
+                    if hr and hr > 0:
+                        reading.heart_rate = int(hr)
+                        reading.eeg_alpha = data.get("alpha", 0.0)
+                        reading.eeg_beta = data.get("beta", 0.0)
+                        reading.eeg_theta = data.get("theta", 0.0)
+                        reading.eeg_gamma = data.get("gamma", 0.0)
+                        reading.eeg_delta = data.get("delta", 0.0)
+                        reading.hrv_rmssd = data.get("rmssd", 0.0)
+                        reading.heart_coherence = data.get("coherence", 0.0)
+                        reading.muse_connected = data.get("muse_connected", False)
+                        reading.polar_connected = data.get("polar_connected", False)
+                        got_data = True
+            except Exception:
+                pass
+
         reading.gile_score = self._calculate_gile(reading)
         reading.psi_score = self._calculate_psi(reading)
         reading.lcc_coupling = self._calculate_lcc(reading)
-        
-        return reading
+
+        return reading if got_data else None
     
     def get_latest(self) -> BiometricReading:
         """Get latest biometric reading from best available source"""

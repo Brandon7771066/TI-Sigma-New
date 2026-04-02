@@ -15,11 +15,17 @@ Framework: Transcendent Intelligence (TI) + FAAH Protocol
 """
 
 import asyncio
+import os
+import requests
+import psycopg2
 from typing import Dict, Optional, Any, List
-from datetime import datetime
+from datetime import datetime, timedelta
 import numpy as np
 from dataclasses import dataclass, asdict
 import streamlit as st
+
+PULSOID_API_URL = "https://dev.pulsoid.net/api/v1/data/heart_rate/latest"
+_PULSOID_CACHE: Dict[str, Any] = {}  # {"hr": int, "ts": datetime, "ok": bool}
 
 try:
     from muse2_integration import Muse2Device, Muse2Manager
@@ -391,16 +397,131 @@ class UnifiedBiometricManager:
         else:
             return 4
     
+    def _poll_pulsoid(self) -> Optional[Dict[str, Any]]:
+        """
+        Poll Pulsoid cloud API for Polar H10 heart rate.
+        Returns {"hr": int, "rmssd": float} or None.
+        Caches results for 5 s to avoid hammering the API.
+        Gracefully handles 402 premium_required.
+        """
+        global _PULSOID_CACHE
+        token = os.environ.get("PULSOID_TOKEN", "")
+        if not token:
+            return None
+
+        # Return cached value if fresh (< 5 s)
+        cached_ts = _PULSOID_CACHE.get("ts")
+        if cached_ts and (datetime.now() - cached_ts).total_seconds() < 5:
+            return _PULSOID_CACHE if _PULSOID_CACHE.get("ok") else None
+
+        try:
+            resp = requests.get(
+                PULSOID_API_URL,
+                headers={"Authorization": f"Bearer {token}"},
+                timeout=4,
+            )
+            if resp.status_code == 200:
+                data = resp.json()
+                hr = data.get("data", {}).get("heart_rate", 0)
+                measured_at = data.get("measured_at", 0)
+                if hr and hr > 0:
+                    _PULSOID_CACHE = {"ok": True, "hr": int(hr), "measured_at": measured_at, "ts": datetime.now()}
+                    return _PULSOID_CACHE
+            elif resp.status_code == 402:
+                # Premium required — mark as known failure, don't spam
+                _PULSOID_CACHE = {"ok": False, "reason": "premium_required", "ts": datetime.now()}
+            else:
+                _PULSOID_CACHE = {"ok": False, "reason": f"http_{resp.status_code}", "ts": datetime.now()}
+        except Exception as exc:
+            _PULSOID_CACHE = {"ok": False, "reason": str(exc)[:60], "ts": datetime.now()}
+
+        return None
+
+    def _poll_esp32_db(self) -> Optional[Dict[str, Any]]:
+        """
+        Read the latest row from esp32_biometric_data.
+        Returns a dict if the row is fresher than 5 minutes, else None.
+        """
+        db_url = os.environ.get("DATABASE_URL", "")
+        if not db_url:
+            return None
+        try:
+            conn = psycopg2.connect(db_url)
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT timestamp, heart_rate, alpha, beta, theta, gamma, delta,
+                       rmssd, coherence, muse_connected, polar_connected
+                FROM esp32_biometric_data
+                ORDER BY timestamp DESC LIMIT 1
+            """)
+            row = cur.fetchone()
+            conn.close()
+            if row:
+                ts = row[0]
+                age_s = (datetime.now() - ts).total_seconds() if ts else 9999
+                if age_s < 300:  # Accept data up to 5 minutes old
+                    return {
+                        "ok": True, "age_s": age_s,
+                        "heart_rate": row[1] or 0,
+                        "alpha": row[2] or 0.0, "beta": row[3] or 0.0,
+                        "theta": row[4] or 0.0, "gamma": row[5] or 0.0,
+                        "delta": row[6] or 0.0,
+                        "rmssd": row[7] or 0.0, "coherence": row[8] or 0.0,
+                        "muse_connected": row[9] or False,
+                        "polar_connected": row[10] or False,
+                    }
+        except Exception:
+            pass
+        return None
+
+    @staticmethod
+    def get_pulsoid_status() -> Dict[str, Any]:
+        """Return the last known Pulsoid status for display in the UI."""
+        if not _PULSOID_CACHE:
+            return {"status": "not_tried", "message": "Pulsoid not yet polled"}
+        if _PULSOID_CACHE.get("ok"):
+            hr = _PULSOID_CACHE.get("hr", 0)
+            age_s = (datetime.now() - _PULSOID_CACHE["ts"]).total_seconds()
+            return {"status": "live", "message": f"✅ Pulsoid live — {hr} BPM ({age_s:.0f}s ago)", "hr": hr}
+        reason = _PULSOID_CACHE.get("reason", "unknown")
+        if reason == "premium_required":
+            return {"status": "premium_required",
+                    "message": "⚠️ Pulsoid requires Premium plan for REST API access. Open Pulsoid app, upgrade, or use ESP32 bridge."}
+        return {"status": "error", "message": f"❌ Pulsoid error: {reason}"}
+
     def get_unified_snapshot(self) -> UnifiedBiometricSnapshot:
         """
-        Get current unified biometric snapshot
-        
+        Get current unified biometric snapshot.
+        Priority: (1) Pulsoid live HR → (2) ESP32 DB cache → (3) BLE hardware → (4) Demo/sim.
+
         Returns:
             UnifiedBiometricSnapshot with all current metrics
         """
         snapshot = UnifiedBiometricSnapshot(timestamp=datetime.now())
-        
-        if self.is_demo_mode_active() and self.simulator:
+
+        # --- Priority 1: Pulsoid cloud HR (Polar H10 via phone app) ---
+        pulsoid = self._poll_pulsoid()
+        if pulsoid:
+            snapshot.heart_rate_bpm = float(pulsoid["hr"])
+            snapshot.polar_connected = True
+
+        # --- Priority 2: ESP32 DB cache (bridge was recently streaming) ---
+        esp32 = self._poll_esp32_db()
+        if esp32:
+            if not snapshot.polar_connected:
+                snapshot.heart_rate_bpm = float(esp32["heart_rate"])
+                snapshot.polar_connected = esp32["polar_connected"]
+            snapshot.alpha_power = esp32["alpha"]
+            snapshot.beta_power = esp32["beta"]
+            snapshot.theta_power = esp32["theta"]
+            snapshot.hrv_rmssd = esp32["rmssd"]
+            snapshot.coherence_score = esp32["coherence"]
+            snapshot.muse_connected = esp32["muse_connected"]
+
+        # If we got real data from Pulsoid or ESP32, skip simulation
+        has_real_data = snapshot.polar_connected or snapshot.muse_connected
+
+        if not has_real_data and self.is_demo_mode_active() and self.simulator:
             sim_frame = self.simulator.generate_frame()
             
             snapshot.heart_rate_bpm = sim_frame.heart_rate_bpm

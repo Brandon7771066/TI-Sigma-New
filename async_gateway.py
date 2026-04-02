@@ -212,6 +212,81 @@ async def latest_handler(request):
     except Exception as e:
         return web.json_response({"error": str(e)}, status=500)
 
+
+async def mendi_latest_handler(request):
+    """GET /api/mendi/latest — most recent Mendi fNIRS row."""
+    try:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT hbo2, hbr, oxygenation_percent, signal_quality, created_at
+            FROM mendi_realtime_data
+            ORDER BY created_at DESC LIMIT 1
+        """)
+        row = cur.fetchone()
+        cur.close()
+        conn.close()
+        if row:
+            return web.json_response({
+                "hbo2": row[0], "hbr": row[1],
+                "oxygenation_percent": row[2], "signal_quality": row[3],
+                "created_at": row[4].isoformat() if row[4] else None,
+            })
+        return web.json_response({"error": "no_data"}, status=404)
+    except Exception as exc:
+        return web.json_response({"error": str(exc)}, status=500)
+
+
+async def polar_latest_handler(request):
+    """GET /api/polar/latest — most recent Polar H10 row."""
+    try:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT heart_rate, hrv_rmssd, coherence, created_at
+            FROM polar_realtime_data
+            ORDER BY created_at DESC LIMIT 1
+        """)
+        row = cur.fetchone()
+        cur.close()
+        conn.close()
+        if row:
+            return web.json_response({
+                "heart_rate": row[0],
+                "hrv": {"rmssd": row[1], "coherence": row[2]},
+                "created_at": row[3].isoformat() if row[3] else None,
+            })
+        return web.json_response({"error": "no_data"}, status=404)
+    except Exception as exc:
+        return web.json_response({"error": str(exc)}, status=500)
+
+
+async def muse_latest_handler(request):
+    """GET /api/muse/latest — most recent Muse 2 EEG row."""
+    try:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT alpha, beta, theta, gamma, delta, source, created_at
+            FROM muse_realtime_data
+            ORDER BY created_at DESC LIMIT 1
+        """)
+        row = cur.fetchone()
+        cur.close()
+        conn.close()
+        if row:
+            return web.json_response({
+                "bands": {
+                    "alpha": row[0], "beta": row[1], "theta": row[2],
+                    "gamma": row[3], "delta": row[4],
+                },
+                "source": row[5],
+                "created_at": row[6].isoformat() if row[6] else None,
+            })
+        return web.json_response({"error": "no_data"}, status=404)
+    except Exception as exc:
+        return web.json_response({"error": str(exc)}, status=500)
+
 async def proxy_websocket(request):
     protocols_str = request.headers.get('Sec-WebSocket-Protocol', '')
     protocols = [p.strip() for p in protocols_str.split(',') if p.strip()] if protocols_str else []
@@ -842,6 +917,9 @@ async def main():
     app.router.add_route('*', '/api/polar/upload', upload_handler)
     app.router.add_route('*', '/api/latest', latest_handler)
     app.router.add_route('*', '/api/esp32/latest', latest_handler)
+    app.router.add_route('GET', '/api/mendi/latest', mendi_latest_handler)
+    app.router.add_route('GET', '/api/polar/latest', polar_latest_handler)
+    app.router.add_route('GET', '/api/muse/latest', muse_latest_handler)
     app.router.add_route('POST', '/api/biometric/live', live_biometric_post_handler)
     app.router.add_route('GET', '/api/biometric/current', live_biometric_get_handler)
     

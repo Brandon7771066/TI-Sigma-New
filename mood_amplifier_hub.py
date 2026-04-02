@@ -270,52 +270,131 @@ def _render_full_mood_amplifier():
     except Exception as e:
         st.error(f"Database error: {e}")
     
+    # Show Pulsoid status banner
+    try:
+        from unified_biometric_manager import get_biometric_manager as _get_bm
+        _pulsoid_status = _get_bm().get_pulsoid_status()
+        if _pulsoid_status["status"] == "live":
+            st.success(f"💓 {_pulsoid_status['message']}")
+        elif _pulsoid_status["status"] == "premium_required":
+            st.warning(_pulsoid_status["message"])
+        elif _pulsoid_status["status"] not in ("not_tried",):
+            st.info(f"ℹ️ {_pulsoid_status['message']}")
+    except Exception:
+        pass
+
+    # Quick Manual HR Push (shows when no live device connected)
+    has_stream = esp32_status["streaming"]
+    if not has_stream:
+        with st.expander("📲 Push Heart Rate Manually (phone / terminal)", expanded=False):
+            st.markdown("""
+            Since no ESP32 is streaming, you can push HR data directly:
+
+            **From your browser (phone or desktop):**
+            ```
+            POST  <your-replit-url>/api/biometric/live
+            Body: {"hr": 72, "rmssd": 55, "sdnn": 45}
+            ```
+
+            **One-liner terminal / phone Shortcut:**
+            ```bash
+            curl -X POST https://<your-replit-url>/api/biometric/live \\
+                 -H 'Content-Type: application/json' \\
+                 -d '{"hr": 72, "rmssd": 55, "source": "manual"}'
+            ```
+
+            **Or use the quick-push form below:**
+            """)
+            push_col1, push_col2, push_col3 = st.columns(3)
+            with push_col1:
+                manual_hr = st.number_input("Heart Rate (BPM)", 40, 200, 72, key="manual_hr_push")
+            with push_col2:
+                manual_rmssd = st.number_input("HRV RMSSD (ms)", 10, 150, 50, key="manual_rmssd_push")
+            with push_col3:
+                st.markdown("&nbsp;", unsafe_allow_html=True)
+                if st.button("📤 Push Reading", use_container_width=True, key="do_manual_push"):
+                    import requests as _req
+                    try:
+                        _r = _req.post(
+                            "http://localhost:5000/api/biometric/live",
+                            json={"hr": manual_hr, "rmssd": float(manual_rmssd), "source": "manual_hub"},
+                            timeout=3,
+                        )
+                        if _r.status_code == 200:
+                            st.success(f"✅ Pushed! LCC proxy: {_r.json().get('lcc_proxy', '?'):.3f}")
+                        else:
+                            st.error(f"Push failed: {_r.status_code}")
+                    except Exception as _pe:
+                        st.error(f"Push error: {_pe}")
+
     device_col1, device_col2, device_col3, device_col4 = st.columns(4)
-    
+
     # ESP32 Bridge Status
     with device_col1:
         st.markdown("**📡 ESP32 Bridge**")
         if esp32_status["streaming"]:
-            st.success(f"✅ Streaming")
+            st.success("✅ Live Streaming")
             st.caption(f"Data age: {esp32_status['age_seconds']:.0f}s")
+        elif esp32_status.get("last_data"):
+            age_min = esp32_status["age_seconds"] / 60
+            if age_min < 60:
+                st.warning(f"⏸ Last data {age_min:.0f} min ago")
+            else:
+                age_hr = age_min / 60
+                st.error(f"⏸ Last data {age_hr:.1f} hr ago")
+            with st.expander("📋 Restart ESP32"):
+                st.markdown("""
+                1. Power on ESP32 near Muse 2 & Polar H10
+                2. Ensure WiFi credentials match
+                3. Open serial monitor — data resumes automatically
+                """)
         else:
-            st.warning("⏳ Waiting for data...")
-            st.caption("Upload ESP32 firmware & power on")
+            st.warning("⏳ No ESP32 data yet")
             with st.expander("📋 Setup Guide"):
                 st.markdown("""
                 1. Open `ESP32_BLE_BRIDGE.ino` in Arduino IDE
                 2. Update WiFi credentials
                 3. Upload to ESP32
-                4. Power on ESP32 near your Muse 2 & Polar H10
-                5. Data will stream automatically!
+                4. Power on ESP32 near Muse 2 & Polar H10
                 """)
-    
+
     # Muse 2 via ESP32
     with device_col2:
         st.markdown("**🧠 Muse 2 (via ESP32)**")
-        if esp32_status["muse"]:
+        if esp32_status["streaming"] and esp32_status.get("muse"):
             st.success("✅ Connected")
-            st.metric("Alpha", f"{esp32_status['alpha']:.2f}")
+            st.metric("Alpha", f"{esp32_status.get('alpha', 0):.2f}")
+        elif esp32_status.get("last_data") and esp32_status.get("alpha", 0) > 0:
+            st.info(f"📈 Last known α: {esp32_status.get('alpha', 0):.2f}")
+            st.caption("Stream paused")
         else:
             st.info("⏳ Waiting for Muse 2")
             st.caption("Turn on Muse 2 headband")
-    
+
     # Polar H10 via ESP32
     with device_col3:
         st.markdown("**❤️ Polar H10 (via ESP32)**")
-        if esp32_status["polar"]:
+        if esp32_status["streaming"] and esp32_status.get("polar"):
             st.success("✅ Connected")
-            st.metric("HR", f"{esp32_status['heart_rate']} bpm")
+            st.metric("HR", f"{esp32_status.get('heart_rate', 0)} bpm")
+        elif esp32_status.get("last_data") and esp32_status.get("heart_rate", 0) > 0:
+            st.info(f"📈 Last known HR: {esp32_status.get('heart_rate', 0)} bpm")
+            st.caption("Stream paused")
         else:
             st.info("⏳ Waiting for Polar")
             st.caption("Wear & wet the Polar strap")
-    
-    # Live Metrics from ESP32  
+
+    # Live Metrics from ESP32
     with device_col4:
-        st.markdown("**📊 Live Metrics**")
+        st.markdown("**📊 Metrics**")
+        rmssd = esp32_status.get("rmssd", 0)
+        coherence = esp32_status.get("coherence", 0)
         if esp32_status["streaming"]:
-            st.metric("HRV (RMSSD)", f"{esp32_status['rmssd']:.1f} ms")
-            st.metric("Coherence", f"{esp32_status['coherence']:.2f}")
+            st.metric("HRV (RMSSD)", f"{rmssd:.1f} ms")
+            st.metric("Coherence", f"{coherence:.2f}")
+        elif rmssd > 0:
+            st.metric("HRV (RMSSD, last)", f"{rmssd:.1f} ms")
+            st.metric("Coherence (last)", f"{coherence:.2f}")
         else:
             st.info("Awaiting data...")
             st.caption("Start ESP32 to see metrics")
