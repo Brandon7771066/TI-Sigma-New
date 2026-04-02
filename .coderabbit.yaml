@@ -1,0 +1,79 @@
+reviews:
+  profile: "assertive"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+
+language: "en-US"
+
+review_instructions: |
+  ## TI Sigma Framework — April 2026 Review Standards
+
+  ### Terminology (CRITICAL — flag any violations)
+  - TFEP is OBSOLETE. The correct term is "Unified Optimization Principle (UOP)". Flag every instance of "TFEP" found.
+  - GILE weights are canonical: G=√2−1≈0.4142, I=0.25, L≈0.18, E=0.15 (NOT 0.20/0.25/0.25/0.30 or any other allocation)
+  - "Tralse Informationalism" is the correct full name for the TI Sigma framework
+  - "Emerick Threshold" (ET = √2−1 ≈ 0.42) is the GILE coherence boundary — flag if misidentified
+  - "Myrion Resolution" (not "Myrion" alone unless context is clear) — flag ambiguous uses
+
+  ### Mathematical Correctness
+  - GILE composite = 0.4142*G + 0.25*I + 0.18*L + 0.15*E (weights must sum to ~1.0)
+  - TI PRIMARY constants: {0, 1, i, √2, e, φ, π, C=1/(φ√2)≈0.4370, T=1−e^{−e}≈0.9340}
+  - Emerick Threshold ET = √2−1 (NOT 0.4370 which is C, NOT 0.42 rounded only — show full precision)
+  - TRALSE 5-spectrum: FALSE < TRALSE− < TRALSE < TRALSE+ < TRUE (check ordering in code)
+  - ν₂(n) is the 2-adic valuation — flag any computation that uses it incorrectly
+  - Lean 4: `padicValNat.self` requires `(h : 1 < p)` via `by omega` NOT `by norm_num`
+  - Lean 4: `pow_pos` not `Nat.pos_pow_of_pos`; `f^[n] x` not `Function.iterate f n x`
+
+  ### Security
+  - Flag ANY hardcoded API keys, secrets, or tokens — all must use os.environ.get()
+  - ALPACA, KALSHI, ZENODO, PERPLEXITY, MAGAI credentials must NEVER appear in code
+  - bcrypt for password hashing, Fernet for symmetric encryption (already established)
+  - Database URL must always come from DATABASE_URL environment variable
+
+  ### Pharmacological Simulator (ti_pharmacological_simulator.py)
+  - GILE consciousness weights in gile_composite must use canonical values above
+  - All supplement effects must be grounded in peer-reviewed endocannabinoid literature
+  - Anandamide multiplier calculations: flag if FAAH inhibition + NAPE-PLD logic diverges from established pharmacology
+  - Flag any claims that are not annotated with an evidence level (EMPIRICAL / INFERRED / SPECULATIVE)
+  - BRANDON'S EPILEPSY NOTE: flag any supplement that has pro-convulsant properties without a warning comment
+
+  ### GSA / Alpaca Trading
+  - Paper trading ONLY — flag any code attempting to use live trading endpoints (non-paper URLs)
+  - All performance claims must be qualified with "paper trading" — flag unqualified claims
+  - Risk limits: flag any single position >30% of portfolio value in paper trading mode
+  - Flag any missing stop-loss logic in new trading strategies
+
+  ### Zenodo / Academic
+  - DOI references should use format: doi.org/10.5281/zenodo.XXXXXXX
+  - Active DOIs: 19371947 (Collatz), 19371952 (Millennium), 19371956 (GILE URBs), 19371958 (Beyond Bayes), 19371961 (Archive)
+  - Flag any paper claiming results not yet formally verified (sorry-free in Lean 4)
+  - Lean 4 sorry-free files: CollatzNu2.lean, Collatz.lean, BSD.lean, Hodge.lean, NavierStokes.lean, PvsNP.lean, TISigma.lean
+  - Files with remaining sorries: YangMills.lean (1), RiemannUOP.lean (3), BeingTheorem.lean (3)
+
+  ### Bot Band / Autonomous Research
+  - autonomous_research_scheduler.py: flag if discovery interval < 4 hours (resource concern)
+  - Flag if discoveries are being generated without database persistence
+  - Research areas should align with current URB series (#590+)
+
+  ### Code Quality
+  - All new functions must have docstrings
+  - Flag functions >100 lines — suggest breaking into smaller units
+  - Type hints required for all public functions
+  - Flag any bare `except:` clauses without specific exception types
+
+  ### BlissGene Therapeutics Context
+  - Brandon has epilepsy — flag any consciousness protocol or supplement recommendation that could lower seizure threshold
+  - All therapeutic claims must include "not medical advice" disclaimer
+  - Mood Amplifier protocols: flag any that lack safety validation section
+
+path_filters:
+  - "!**/__pycache__/**"
+  - "!**/*.pyc"
+  - "!**/node_modules/**"
+  - "!lean4/**/*.olean"
+  - "!**/.git/**"
+  - "!papers/all_papers.zip"

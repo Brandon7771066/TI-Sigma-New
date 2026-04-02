@@ -59,7 +59,8 @@ class ConsciousnessState:
     
     @property
     def gile_composite(self) -> float:
-        return 0.25 * self.gile_g + 0.25 * self.gile_i + 0.30 * self.gile_l + 0.20 * self.gile_e
+        # Canonical GILE weights: G=√2−1≈0.4142, I=0.25, L≈0.18, E=0.15 (April 2026 update)
+        return 0.4142 * self.gile_g + 0.25 * self.gile_i + 0.18 * self.gile_l + 0.15 * self.gile_e
     
     def to_dict(self) -> Dict:
         return {
@@ -108,6 +109,11 @@ class Supplement:
     half_life_hours: float = 4.0  # Elimination half-life
     bbb_penetration: float = 0.5  # 0-1, how well it crosses blood-brain barrier
     
+    # SAFETY (April 2026 — critical for Brandon's epilepsy profile)
+    epilepsy_risk: str = "LOW"   # LOW / MODERATE / HIGH / CONTRAINDICATED
+    epilepsy_note: str = ""      # Specific note for seizure-prone individuals
+    not_medical_advice: str = "NOT MEDICAL ADVICE — consult neurologist before use"
+    
     # Mechanism of action (0-1 scale of effect strength)
     faah_inhibition: float = 0.0  # Blocks anandamide breakdown
     cb1_activation: float = 0.0  # Activates cannabinoid receptor 1
@@ -134,13 +140,15 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         dose_mg=400,
         absorption_time_min=45,
         half_life_hours=6,
-        bbb_penetration=0.85,  # BBB-penetrating formula
+        bbb_penetration=0.85,
         faah_inhibition=0.65,
         anti_inflammatory=0.80,
         bdnf_upregulation=0.55,
         lcc_boost=0.03,
         love_boost=0.04,
-        intuition_boost=0.02
+        intuition_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Generally safe; anti-inflammatory may mildly reduce seizure threshold elevation from neuroinflammation. Monitor if starting new protocol."
     ),
     'macamides_5pct': Supplement(
         name='Nootropics Depot 5% Macamides',
@@ -155,7 +163,9 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         lcc_boost=0.05,
         love_boost=0.06,
         intuition_boost=0.04,
-        goodness_boost=0.03
+        goodness_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Maca-derived macamides have no reported pro-convulsant activity. CB1 partial activation may have mild anticonvulsant properties."
     ),
     'pea_palmitoylethanolamide': Supplement(
         name='PEA (Palmitoylethanolamide)',
@@ -166,7 +176,9 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         nape_pld_activation=0.75,
         anti_inflammatory=0.70,
         lcc_boost=0.04,
-        love_boost=0.05
+        love_boost=0.05,
+        epilepsy_risk="LOW",
+        epilepsy_note="PEA has emerging anticonvulsant research support via PPAR-alpha activation. Generally considered safe for epilepsy profiles. Consult neurologist."
     ),
     'cbd_oil': Supplement(
         name='CBD Oil',
@@ -180,7 +192,9 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         anti_inflammatory=0.60,
         gaba_modulation=0.30,
         lcc_boost=0.02,
-        love_boost=0.03
+        love_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="CBD (Epidiolex) is FDA-approved for certain epilepsy types (Dravet, LGS). At low doses (25mg), generally well-tolerated. May interact with AEDs — monitor drug levels if on valproate or clobazam."
     ),
     'kaempferol': Supplement(
         name='Kaempferol',
@@ -190,7 +204,9 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         bbb_penetration=0.55,
         faah_inhibition=0.45,
         anti_inflammatory=0.50,
-        lcc_boost=0.015
+        lcc_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Kaempferol shows anticonvulsant activity in animal models. No clinical pro-convulsant data. Generally considered safe."
     ),
     'maca_standard': Supplement(
         name='Maca Root (Standard)',
