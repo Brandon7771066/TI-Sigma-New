@@ -40,15 +40,19 @@ Positive I is a benevolent form of consciousness: awareness that is itself pleas
 
 I alone is not love either. Pure I-awareness — the meditator in deep absorption, the moment of pure perception — can exist without relational pull toward another i-cell. It is rich, it is real, it is valuable. But it does not yet have the *binding* character of love, which requires L.
 
-I is the **warmth and awareness** that love requires, but is not itself love.
+Furthermore, **pure I without G is structurally ambiguous as a positive.** Positive feelings in general — pleasure, excitement, exhilaration — can attach to anything: moral or immoral, constructive or destructive. Without G providing the moral architecture, I's positivity has no guarantee of being oriented toward what is genuinely good. The feeling of euphoria is I. So is the feeling of moral triumph. Without G, there is no structural reason for I to count as *benevolent* positive feeling rather than mere hedonic state. G is what makes I reliably positive in the morally relevant sense — and this is why positive-I is most coherent when G is simultaneously present.
+
+I is the **warmth and awareness** that love requires, but is not itself love — and without G, its "positivity" is not yet trustworthy as a moral category.
 
 ### 1.3 L Alone: Binding — Not Yet Love
 
 The L-arm is **binding** — topological cohesion, structural attraction, relational pull. As established in URBs #590 and #594, L began as structural binding at the quantum/molecular level and evolved through proto-affection to romantic love to agape.
 
-L alone — pure binding without I or G — is attachment: the pull toward another without awareness of what that pull is (no I) and without moral structuring of that pull (no G). This is infatuation, compulsion, enmeshment, codependency. Powerful but not yet love in its full sense.
+L alone — pure binding without I or G — is **clinginess.** The pull toward another exists but without awareness of what that pull is (no I) and without any moral structuring of it (no G). This is the condition where attachment has become an end in itself: the person clings not from warmth or genuine regard but because the bond itself is all that is operating. Infatuation, compulsion, enmeshment, codependency, and possessiveness are all pure-L phenomena — the relational gravity has activated without the warm knowing of I or the structural integrity of G to give it direction or dignity.
 
-L is the **relational gravity** that love requires, but is not itself love.
+Clinginess is precisely L without I+G: the binding is real, but the person being clung to is not genuinely *seen* (no I) and their flourishing is not genuinely *prioritized* (no G). The clinging serves the L-activation itself rather than the other i-cell. This is why clinginess feels oppressive rather than loving to the recipient — it is experienced as a demand of the bond rather than a gift of care.
+
+L is the **relational gravity** that love requires, but without I and G it collapses into mere attachment — real, powerful, and insufficient.
 
 ---
 
