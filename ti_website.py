@@ -1671,7 +1671,7 @@ elif page == "Empirical Testing":
         framework = TIEmpiricalTestingFramework()
         synthesis = DEPhotonJeffTimeSynthesis()
         
-        emp_tab1, emp_tab2, emp_tab3, emp_tab4 = st.tabs(["Hypothesis Status", "Live Data Tests", "DE-Photon Predictions", "DE-Photon Jeff Time"])
+        emp_tab1, emp_tab2, emp_tab3, emp_tab4, emp_tab5 = st.tabs(["Hypothesis Status", "Live Data Tests", "DE-Photon Predictions", "DE-Photon Jeff Time", "🧬 Facial GILE"])
         
         with emp_tab1:
             st.markdown("### All Testable Hypotheses")
@@ -1871,7 +1871,219 @@ elif page == "Empirical Testing":
                 st.metric("Optimal Hold", f"{integration['optimal_hold_evolved']:.1f} days")
             
             st.info(f"**Recommendation:** {integration['recommendation']}")
-        
+
+        with emp_tab5:
+            st.markdown("### 🧬 Facial GILE Morphology Lab")
+            st.markdown("*URB #597 — Testing whether facial features predict GILE arm strength*")
+
+            st.info("""
+            **Hypothesis:** Sharpness + Eye Intensity → I-arm (Intelligence). Cuteness → G+L-arm (Moral character/warmth).
+            **Tralse Prediction:** Enlightened geniuses will score HIGH on BOTH simultaneously — the moot phenotype.
+            """)
+
+            import psycopg2
+            import pandas as pd
+            import numpy as np
+
+            def get_facial_db():
+                return psycopg2.connect(os.environ['DATABASE_URL'])
+
+            fgile_tab1, fgile_tab2, fgile_tab3 = st.tabs(["➕ Rate a Face", "📊 Results & Correlations", "🏆 Genius Candidates"])
+
+            with fgile_tab1:
+                st.markdown("#### Enter a Face to Rate")
+                st.markdown("*Rate each dimension 1–10 independently. Try to assess morphology before assessing intelligence/character.*")
+
+                with st.form("facial_gile_form"):
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        person_name = st.text_input("Person Name", placeholder="e.g. Nikola Tesla")
+                        image_url = st.text_input("Image URL (optional)", placeholder="https://...")
+                        group_type = st.selectbox("Group Type", [
+                            "general",
+                            "high_intelligence",
+                            "high_moral_character",
+                            "enlightened_genius_candidate"
+                        ])
+                        notes = st.text_area("Notes", placeholder="Any observations...")
+
+                    with col2:
+                        st.markdown("**Morphological Ratings (face only — before judging personality)**")
+                        sharpness = st.slider("Sharpness (angular jaw, defined features, geometric structure)", 1.0, 10.0, 5.0, 0.5)
+                        eye_intensity = st.slider("Eye Intensity (depth of gaze, penetrating/sharp quality)", 1.0, 10.0, 5.0, 0.5)
+                        cuteness = st.slider("Cuteness (round features, soft jaw, warm/open expression)", 1.0, 10.0, 5.0, 0.5)
+
+                        st.markdown("**GILE Proxy Outcome Ratings**")
+                        intelligence_est = st.slider("Intelligence Estimate (cognitive depth, precision, insight)", 1.0, 10.0, 5.0, 0.5)
+                        moral_est = st.slider("Moral Character Estimate (warmth, goodness, ethical orientation)", 1.0, 10.0, 5.0, 0.5)
+
+                    submitted = st.form_submit_button("Submit Rating", type="primary")
+
+                    if submitted:
+                        if not person_name.strip():
+                            st.error("Person name is required.")
+                        else:
+                            try:
+                                conn = get_facial_db()
+                                cur = conn.cursor()
+                                cur.execute("""
+                                    INSERT INTO facial_gile_ratings
+                                    (person_name, image_url, sharpness, eye_intensity, cuteness,
+                                     intelligence_estimate, moral_character_estimate, notes, group_type)
+                                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                                """, (
+                                    person_name.strip(),
+                                    image_url.strip() if image_url else None,
+                                    sharpness, eye_intensity, cuteness,
+                                    intelligence_est, moral_est,
+                                    notes.strip() if notes else None,
+                                    group_type
+                                ))
+                                conn.commit()
+                                cur.close()
+                                conn.close()
+                                st.success(f"✅ Rating for **{person_name}** saved! Tralse score: **{min(sharpness, cuteness):.1f}** (min of Sharp/Cute)")
+                            except Exception as db_err:
+                                st.error(f"Database error: {db_err}")
+
+            with fgile_tab2:
+                st.markdown("#### All Ratings + Correlation Analysis")
+
+                try:
+                    conn = get_facial_db()
+                    df = pd.read_sql("""
+                        SELECT person_name, group_type, sharpness, eye_intensity, cuteness,
+                               intelligence_estimate, moral_character_estimate, notes, created_at
+                        FROM facial_gile_ratings
+                        ORDER BY created_at DESC
+                    """, conn)
+                    conn.close()
+
+                    if df.empty:
+                        st.info("No ratings yet. Go to 'Rate a Face' to add the first entry.")
+                    else:
+                        df['i_arm_proxy'] = (df['sharpness'] + df['eye_intensity']) / 2
+                        df['gl_arm_proxy'] = (df['cuteness'] + df['moral_character_estimate']) / 2
+                        df['tralse_score'] = df[['sharpness', 'cuteness']].min(axis=1)
+
+                        n = len(df)
+                        st.metric("Total Ratings", n)
+
+                        if n >= 3:
+                            st.markdown("#### Hypothesis Test Results")
+                            col1, col2, col3 = st.columns(3)
+
+                            with col1:
+                                r1 = np.corrcoef(df['i_arm_proxy'], df['intelligence_estimate'])[0, 1]
+                                st.metric("H1: Sharp+Intense → Intelligence", f"r = {r1:.3f}")
+                                if abs(r1) > 0.4:
+                                    st.success("✅ Correlation exceeds threshold (0.4)")
+                                else:
+                                    st.warning(f"⏳ Needs more data (threshold: r > 0.4, n > 10)")
+
+                            with col2:
+                                r2 = np.corrcoef(df['cuteness'], df['moral_character_estimate'])[0, 1]
+                                st.metric("H2: Cuteness → Moral Character", f"r = {r2:.3f}")
+                                if abs(r2) > 0.4:
+                                    st.success("✅ Correlation exceeds threshold (0.4)")
+                                else:
+                                    st.warning(f"⏳ Needs more data (threshold: r > 0.4, n > 10)")
+
+                            with col3:
+                                genius_mask = df['group_type'] == 'enlightened_genius_candidate'
+                                other_mask = ~genius_mask
+                                if genius_mask.sum() >= 2 and other_mask.sum() >= 2:
+                                    genius_tralse = df[genius_mask]['tralse_score'].mean()
+                                    other_tralse = df[other_mask]['tralse_score'].mean()
+                                    st.metric("H3: Genius Tralse Score", f"{genius_tralse:.2f}")
+                                    st.metric("Non-Genius Tralse Score", f"{other_tralse:.2f}")
+                                    if genius_tralse > other_tralse:
+                                        st.success("✅ Geniuses score higher on Tralse phenotype")
+                                    else:
+                                        st.warning("⏳ More genius candidates needed")
+                                else:
+                                    st.info("⏳ Need ≥2 genius candidates + ≥2 others for H3")
+
+                        st.markdown("---")
+                        st.markdown("#### All Ratings")
+
+                        display_df = df[['person_name', 'group_type', 'sharpness', 'eye_intensity', 'cuteness',
+                                         'i_arm_proxy', 'gl_arm_proxy', 'tralse_score',
+                                         'intelligence_estimate', 'moral_character_estimate']].copy()
+                        display_df.columns = ['Name', 'Group', 'Sharp', 'Eye Intensity', 'Cute',
+                                               'I-arm Proxy', 'GL-arm Proxy', 'Tralse Score',
+                                               'Intel Est.', 'Moral Est.']
+                        display_df = display_df.round(2)
+                        st.dataframe(display_df, use_container_width=True)
+
+                except Exception as db_err:
+                    st.error(f"Error loading data: {db_err}")
+
+            with fgile_tab3:
+                st.markdown("#### 🏆 Enlightened Genius Leaderboard")
+                st.markdown("*Sorted by Tralse Score (simultaneous high Sharpness + Cuteness)*")
+
+                try:
+                    conn = get_facial_db()
+                    df_all = pd.read_sql("""
+                        SELECT person_name, group_type, sharpness, eye_intensity, cuteness,
+                               intelligence_estimate, moral_character_estimate, notes
+                        FROM facial_gile_ratings
+                        ORDER BY LEAST(sharpness, cuteness) DESC
+                    """, conn)
+                    conn.close()
+
+                    if df_all.empty:
+                        st.info("No ratings yet.")
+                    else:
+                        df_all['I-arm'] = ((df_all['sharpness'] + df_all['eye_intensity']) / 2).round(2)
+                        df_all['GL-arm'] = ((df_all['cuteness'] + df_all['moral_character_estimate']) / 2).round(2)
+                        df_all['Tralse'] = df_all[['sharpness', 'cuteness']].min(axis=1).round(2)
+
+                        for _, row in df_all.iterrows():
+                            tralse = row['Tralse']
+                            if tralse >= 7:
+                                badge = "🌟 ENLIGHTENED"
+                                color = "#2d7a2d"
+                            elif tralse >= 5:
+                                badge = "⚡ HIGH TRALSE"
+                                color = "#7a6e00"
+                            else:
+                                badge = "📊 STANDARD"
+                                color = "#555"
+
+                            st.markdown(f"""
+                            <div style="border:1px solid {color};border-radius:8px;padding:1rem;margin-bottom:0.7rem;background:rgba(255,255,255,0.03);">
+                                <b style="font-size:1.1rem;">{row['person_name']}</b>
+                                &nbsp;&nbsp;<span style="color:{color};font-weight:bold;">{badge}</span>
+                                &nbsp;&nbsp;<span style="color:#aaa;font-size:0.85rem;">({row['group_type']})</span>
+                                <br/>
+                                Sharp: <b>{row['sharpness']}</b> &nbsp;|&nbsp;
+                                Eye Intensity: <b>{row['eye_intensity']}</b> &nbsp;|&nbsp;
+                                Cute: <b>{row['cuteness']}</b> &nbsp;|&nbsp;
+                                <b style="color:{color};">Tralse: {tralse}</b>
+                                <br/>
+                                I-arm proxy: <b>{row['I-arm']}</b> &nbsp;|&nbsp;
+                                GL-arm proxy: <b>{row['GL-arm']}</b> &nbsp;|&nbsp;
+                                Intel: <b>{row['intelligence_estimate']}</b> &nbsp;|&nbsp;
+                                Moral: <b>{row['moral_character_estimate']}</b>
+                                {"<br/><i style='color:#888;font-size:0.85rem;'>" + str(row['notes']) + "</i>" if row['notes'] else ""}
+                            </div>
+                            """, unsafe_allow_html=True)
+
+                        st.markdown("---")
+                        st.markdown("""
+                        **Tralse Score Interpretation:**
+                        - 🌟 ≥ 7.0: Enlightened Genius phenotype — simultaneously sharp AND cute at high level (Moot)
+                        - ⚡ 5.0–6.9: High Tralse — both dimensions present, approaching integration
+                        - 📊 < 5.0: Standard — one dimension dominant (typical phenotype)
+
+                        *The Tralse Score = min(Sharpness, Cuteness) — only high when BOTH are high simultaneously.*
+                        """)
+
+                except Exception as db_err:
+                    st.error(f"Error: {db_err}")
+
     except Exception as e:
         st.error(f"Error in Empirical Testing: {e}")
         import traceback
