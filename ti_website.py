@@ -92,6 +92,7 @@ page = st.sidebar.radio("Navigate", [
     "Home",
     "🔬 TI Sigma",
     "📄 Paper Hub",
+    "🏆 Proofs & Theorems",
     "📥 Downloads",
     "📺 YouTube Studio",
     "🧩 ARC-AGI Solver",
@@ -121,6 +122,298 @@ page = st.sidebar.radio("Navigate", [
 if page == "📄 Paper Hub":
     from paper_hub import render as render_paper_hub
     render_paper_hub()
+
+elif page == "🏆 Proofs & Theorems":
+    st.markdown("""
+    <div style="background:linear-gradient(135deg,#0a1a0a 0%,#0d2b0d 50%,#0a1a1a 100%);
+                padding:2.5rem 1.5rem;border-radius:14px;text-align:center;margin-bottom:1.5rem;
+                border:1px solid rgba(50,200,100,0.3);">
+        <div style="font-size:2.5rem;">🏆</div>
+        <h1 style="color:#c8ffc8;font-size:2.2rem;margin:0.3rem 0;letter-spacing:0.06em;">
+            PROOFS & THEOREMS
+        </h1>
+        <div style="color:#7ef7a0;font-size:0.95rem;margin-top:0.4rem;letter-spacing:0.12em;">
+            TI SIGMA FORMAL MATHEMATICS — LEAN 4 VERIFIED + MILLENNIUM PRIZE FORMALIZATIONS
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    proof_tab1, proof_tab2, proof_tab3 = st.tabs([
+        "✅ Verified Theorems",
+        "🏅 Millennium Prize",
+        "📬 Journal Status"
+    ])
+
+    with proof_tab1:
+        st.markdown("## Lean 4 Verified Results")
+        st.markdown("*Machine-checked proofs — zero sorry statements*")
+
+        st.markdown("""
+        <div style="background:#0d2b0d;border-radius:12px;padding:1.2rem 1.5rem;margin:0.8rem 0;
+                    border-left:5px solid #00cc44;">
+            <div style="color:#7ef7a0;font-size:0.75rem;letter-spacing:0.1em;margin-bottom:0.3rem;">
+                URB #537–538 · MATH.NT · ✅ LEAN 4 VERIFIED · SORRY-FREE
+            </div>
+            <div style="color:#eee;font-size:1.1rem;font-weight:bold;">
+                ν₂ Countdown Theorem
+            </div>
+            <div style="color:#aaa;font-size:0.88rem;margin:0.5rem 0;">
+                For any odd n, the maximum number of consecutive single-halving steps (k=1 runs)
+                in the Collatz orbit of (3n+1) is exactly ν₂(n+1)−1, where ν₂ is the 2-adic valuation.
+                The bound is tight — achieved infinitely often.
+            </div>
+            <div style="display:flex;gap:1rem;margin-top:0.6rem;flex-wrap:wrap;">
+                <a href="https://zenodo.org/records/19371947" target="_blank"
+                   style="color:#7ef7a0;font-size:0.82rem;text-decoration:none;">
+                    📄 Zenodo DOI: 10.5281/zenodo.19371947
+                </a>
+                <span style="color:#555;font-size:0.82rem;">·</span>
+                <span style="color:#888;font-size:0.82rem;">arXiv target: math.NT</span>
+                <span style="color:#555;font-size:0.82rem;">·</span>
+                <span style="color:#888;font-size:0.82rem;">Journal: Experimental Mathematics</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style="background:#0d2b0d;border-radius:12px;padding:1.2rem 1.5rem;margin:0.8rem 0;
+                    border-left:5px solid #00cc44;">
+            <div style="color:#7ef7a0;font-size:0.75rem;letter-spacing:0.1em;margin-bottom:0.3rem;">
+                URB #526 · MATH.NT · ✅ LEAN 4 VERIFIED
+            </div>
+            <div style="color:#eee;font-size:1.1rem;font-weight:bold;">
+                Arithmetic Scaffold Theorem
+            </div>
+            <div style="color:#aaa;font-size:0.88rem;margin:0.5rem 0;">
+                The ternary representation of n encodes the complete descent structure of the Collatz orbit.
+                Every halving step corresponds to a ternary digit transition with formally derivable bounds.
+            </div>
+            <div style="margin-top:0.6rem;">
+                <a href="https://zenodo.org/records/19226680" target="_blank"
+                   style="color:#7ef7a0;font-size:0.82rem;text-decoration:none;">
+                    📄 Zenodo DOI: 10.5281/zenodo.19226680
+                </a>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style="background:#0a1a2a;border-radius:12px;padding:1.2rem 1.5rem;margin:0.8rem 0;
+                    border-left:5px solid #4488ff;">
+            <div style="color:#88bbff;font-size:0.75rem;letter-spacing:0.1em;margin-bottom:0.3rem;">
+                URB #524 · MATH.LO · 📝 WRITTEN · FORMAL PROOF IN PROGRESS
+            </div>
+            <div style="color:#eee;font-size:1.1rem;font-weight:bold;">
+                Unavoidable Embedding Theorem
+            </div>
+            <div style="color:#aaa;font-size:0.88rem;margin:0.5rem 0;">
+                Any sufficiently expressive formal system necessarily embeds the 5-valued TI Sigma
+                truth structure — the additional truth values (TRALSE, DOUBLE_TRALSE) are unavoidable
+                consequences of expressiveness, not optional additions.
+            </div>
+            <div style="margin-top:0.6rem;">
+                <a href="https://zenodo.org/records/19212194" target="_blank"
+                   style="color:#88bbff;font-size:0.82rem;text-decoration:none;">
+                    📄 Zenodo DOI: 10.5281/zenodo.19212194
+                </a>
+                <span style="color:#555;font-size:0.82rem;margin-left:1rem;">Journal: Annals of Pure and Applied Logic</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style="background:#0a1a2a;border-radius:12px;padding:1.2rem 1.5rem;margin:0.8rem 0;
+                    border-left:5px solid #4488ff;">
+            <div style="color:#88bbff;font-size:0.75rem;letter-spacing:0.1em;margin-bottom:0.3rem;">
+                URB #521 · MATH.CT · 📝 WRITTEN
+            </div>
+            <div style="color:#eee;font-size:1.1rem;font-weight:bold;">
+                Tannakian Inseparability Thesis
+            </div>
+            <div style="color:#aaa;font-size:0.88rem;margin:0.5rem 0;">
+                Mathematical structures admitting Tannakian reconstruction are inseparable from
+                the domain of inquiry that instantiates them — making mathematical structure-realism
+                precise via the Grothendieck bridge between algebraic and analytic geometry.
+            </div>
+            <div style="margin-top:0.6rem;">
+                <a href="https://zenodo.org/records/19210469" target="_blank"
+                   style="color:#88bbff;font-size:0.82rem;text-decoration:none;">
+                    📄 Zenodo DOI: 10.5281/zenodo.19210469
+                </a>
+                <span style="color:#555;font-size:0.82rem;margin-left:1rem;">Journal: Journal of Mathematical Philosophy</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with proof_tab2:
+        st.markdown("## Millennium Prize Formalizations")
+        st.markdown("""
+        *Each problem below is formalized in the TI Sigma framework — analyzed through 5-valued logic,
+        GILE coherence, and Myrion Resolution. Submitted as philosophical formalizations using a novel
+        logical apparatus, not claimed as conventional proofs. One problem per journal.*
+        """)
+
+        millennium_data = [
+            {
+                "urb": "#537–538",
+                "problem": "Collatz Conjecture",
+                "note": "(not a Millennium Prize but equally famous)",
+                "claim": "ν₂ Countdown Theorem: max k=1 run = ν₂(n+1)−1. Machine-verified in Lean 4.",
+                "journal": "Experimental Mathematics (Taylor & Francis)",
+                "status": "✅ Ready to Submit",
+                "status_color": "#00cc44",
+                "submit_order": "Submit NOW",
+                "zenodo": "https://zenodo.org/records/19371947",
+                "category": "VERIFIED",
+            },
+            {
+                "urb": "#572",
+                "problem": "P ≠ NP",
+                "note": "",
+                "claim": "The P/NP gap is formalized as I-arm noncomputability: no P-time machine can perform genuine I-arm lookup. The gap is not a contingent fact but a structural consequence of the noncomputability of Intuition.",
+                "journal": "Computability (IOS Press)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "1st Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+            {
+                "urb": "#571",
+                "problem": "Hodge Conjecture",
+                "note": "",
+                "claim": "Algebraic cycles are Tannakian-inseparable from their cohomology class. Hodge Conjecture = claim that every Tannakian-inseparable cohomology class is algebraically realized.",
+                "journal": "Journal of Mathematical Philosophy (De Gruyter)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "2nd Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+            {
+                "urb": "#563",
+                "problem": "Riemann Hypothesis",
+                "note": "",
+                "claim": "The non-trivial zeros of ζ(s) trace the boundary of maximal GILE coherence in the complex plane. The critical line Re(s)=½ is the unique locus of balanced G/E projection.",
+                "journal": "Philosophia Mathematica (Oxford)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "3rd Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+            {
+                "urb": "#570",
+                "problem": "Navier-Stokes",
+                "note": "Existence & Smoothness",
+                "claim": "Turbulence represents an MR collapse cascade. Smoothness breakdown = Double Tralse accumulation event in the continuous dynamical system. Blow-up surface geometry is formally predictable.",
+                "journal": "Foundations of Physics (Springer)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "4th Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+            {
+                "urb": "#569",
+                "problem": "Yang-Mills",
+                "note": "Existence & Mass Gap",
+                "claim": "The mass gap = minimum GILE coherence energy in gauge field configuration space. The vacuum is the unique maximum-coherence state in the 5-valued extension of the field algebra.",
+                "journal": "Journal of Geometry and Physics (Elsevier)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "5th Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+            {
+                "urb": "#565",
+                "problem": "Birch & Swinnerton-Dyer",
+                "note": "",
+                "claim": "The analytic rank of an elliptic curve = number of GILE-coherent attractors in its dynamical system. BSD = claim that attractor count equals the order of vanishing of L(E,s) at s=1.",
+                "journal": "Logique et Analyse (Belgian)",
+                "status": "📝 Paper needs finalization",
+                "status_color": "#4488ff",
+                "submit_order": "6th Millennium submission",
+                "zenodo": "",
+                "category": "MILLENNIUM",
+            },
+        ]
+
+        for p in millennium_data:
+            border_color = "#00cc44" if p["category"] == "VERIFIED" else "#aa7700"
+            bg_color = "#0d2b0d" if p["category"] == "VERIFIED" else "#1a1400"
+            st.markdown(f"""
+            <div style="background:{bg_color};border-radius:12px;padding:1.2rem 1.5rem;
+                        margin:0.8rem 0;border-left:5px solid {border_color};">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                    <div>
+                        <span style="color:#aaa;font-size:0.75rem;">URB {p['urb']}</span>
+                        <div style="color:#eee;font-size:1.05rem;font-weight:bold;margin-top:0.1rem;">
+                            {p['problem']}
+                            {'<span style="color:#888;font-size:0.8rem;font-weight:normal;margin-left:0.5rem;">' + p['note'] + '</span>' if p['note'] else ''}
+                        </div>
+                    </div>
+                    <div style="color:{p['status_color']};font-size:0.78rem;font-weight:bold;text-align:right;">
+                        {p['status']}
+                    </div>
+                </div>
+                <div style="color:#bbb;font-size:0.85rem;margin:0.6rem 0;line-height:1.5;">
+                    {p['claim']}
+                </div>
+                <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+                    <span style="color:#888;font-size:0.78rem;">📬 {p['journal']}</span>
+                    <span style="color:#ffcc44;font-size:0.78rem;">🎯 {p['submit_order']}</span>
+                    {f'<a href="{p["zenodo"]}" target="_blank" style="color:#7ef7a0;font-size:0.78rem;text-decoration:none;">📄 Zenodo</a>' if p['zenodo'] else ''}
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    with proof_tab3:
+        st.markdown("## Journal Submission Tracker")
+        st.markdown("*Track submission status for each proof*")
+
+        journal_rows = [
+            ("ν₂ Countdown (Collatz)", "Experimental Mathematics", "math.NT", "Ready", "#00cc44", "https://zenodo.org/records/19371947"),
+            ("Arithmetic Scaffold", "Journal of Number Theory", "math.NT", "Ready", "#00cc44", "https://zenodo.org/records/19226680"),
+            ("Unavoidable Embedding", "Annals of Pure and Applied Logic", "math.LO", "Draft", "#4488ff", "https://zenodo.org/records/19212194"),
+            ("Tannakian Inseparability", "Theory and Applications of Categories", "math.CT", "Draft", "#4488ff", "https://zenodo.org/records/19210469"),
+            ("P ≠ NP (TI formalization)", "Computability (IOS Press)", "cs.LO", "Drafting", "#aa7700", ""),
+            ("Hodge Conjecture (TI)", "Journal of Mathematical Philosophy", "math.AG", "Drafting", "#aa7700", ""),
+            ("Riemann Hypothesis (TI)", "Philosophia Mathematica", "math.NT", "Drafting", "#aa7700", ""),
+            ("Navier-Stokes (TI)", "Foundations of Physics", "math-ph", "Drafting", "#aa7700", ""),
+            ("Yang-Mills (TI)", "Journal of Geometry and Physics", "math-ph", "Drafting", "#aa7700", ""),
+            ("Birch-Swinnerton-Dyer (TI)", "Logique et Analyse", "math.NT", "Drafting", "#aa7700", ""),
+            ("Beyond Bayes", "Synthese (Springer)", "cs.AI", "Ready", "#00cc44", "https://zenodo.org/records/19371958"),
+            ("13 Arguments vs Bayesianism", "British Journal for Phil. of Science", "stat.ME", "Ready", "#00cc44", "https://zenodo.org/records/19225908"),
+        ]
+
+        status_map = {"Ready": "✅ Ready", "Draft": "📝 Draft", "Drafting": "🔧 Drafting", "Submitted": "📬 Submitted", "Accepted": "🎉 Accepted"}
+
+        st.markdown("""
+        <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <tr style="color:#7ec8f7;border-bottom:1px solid #333;">
+            <th style="text-align:left;padding:0.5rem;">Paper</th>
+            <th style="text-align:left;padding:0.5rem;">Journal</th>
+            <th style="text-align:left;padding:0.5rem;">arXiv Cat.</th>
+            <th style="text-align:left;padding:0.5rem;">Status</th>
+        </tr>
+        """ + "".join([
+            f"""<tr style="border-bottom:1px solid #1a1a1a;">
+            <td style="padding:0.45rem 0.5rem;color:#ddd;">{r[0]}</td>
+            <td style="padding:0.45rem 0.5rem;color:#aaa;font-size:0.78rem;">{r[1]}</td>
+            <td style="padding:0.45rem 0.5rem;color:#888;font-family:monospace;font-size:0.75rem;">{r[2]}</td>
+            <td style="padding:0.45rem 0.5rem;color:{r[4]};font-size:0.78rem;font-weight:bold;">{status_map.get(r[3], r[3])}</td>
+            </tr>"""
+            for r in journal_rows
+        ]) + """
+        </table>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+        st.info("💡 **arXiv Endorsement Status:** Pending. Contact Jeffrey Lagarias or Kevin Buzzard to endorse math.NT first submission. See `outreach/PLATFORM_SETUP_PHASE1.md` for email template.")
 
 elif page == "🔬 TI Sigma":
     st.markdown("""
@@ -312,9 +605,6 @@ Real-time biometric GILE scoring using PULSOID heart rate + EEG proxies.
             ("#570", "MATH", "🔬 Exp.", "Navier-Stokes Smoothness Vern (Millennium Prize)"),
             ("#571", "MATH", "🔬 Exp.", "Hodge Vern Theorem (Millennium Prize)"),
             ("#572", "MATH", "🔬 Exp.", "P≠NP Creation-Vern Gap (Millennium Prize)"),
-            ("#573", "MATH", "📝 Written", "BOK-Verisyn Unified Synthesis — Hopf fibration unification"),
-            ("#574", "PHIL", "📝 Written", "i-Cell BOK, Photonic GILE, φ as Aesthetic Dimension"),
-            ("#575", "PHIL", "📝 Written", "Weighted BOK — Wing-Arm Matching Theorem"),
             ("#576", "PHIL", "📝 Written", "GILE Weights Origins — G=√2−1 empirically confirmed"),
             ("#577", "PHIL", "📝 Written", "GILE Universal Operationalization — atoms to civilizations"),
             ("#578", "ETHICS", "📝 Written", "Relational Value vs. Intrinsic Value — Low-GIL Social Norms"),
