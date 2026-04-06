@@ -71,49 +71,56 @@ def render_mood_amplifier_hub():
     
     st.header("🧠 Mood Amplifier - Limbic-Cortical Coupling (LCC) + FAAH Protocol")
     
-    mood_tabs = st.tabs(["💫 Guided Session", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong", "🔮 Divination"])
+    mood_tabs = st.tabs(["💫 Guided Session", "💍 Oura Ring", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong", "🔮 Divination"])
     
     with mood_tabs[0]:
         from guided_amplification_session import render_guided_amplification_session
         render_guided_amplification_session()
     
     with mood_tabs[1]:
+        try:
+            from oura_mood_tab import render_oura_tab
+            render_oura_tab()
+        except Exception as e:
+            st.error(f"Oura Ring tab error: {e}")
+
+    with mood_tabs[2]:
         from mendi_heart_realtime_dashboard import render_mendi_heart_realtime_dashboard
         render_mendi_heart_realtime_dashboard()
     
-    with mood_tabs[2]:
+    with mood_tabs[3]:
         from gm_hypercomputing_session import render_gm_hypercomputing_session
         render_gm_hypercomputing_session()
     
-    with mood_tabs[3]:
+    with mood_tabs[4]:
         _render_full_mood_amplifier()
     
-    with mood_tabs[4]:
+    with mood_tabs[5]:
         from sensee_aware_dashboard import render_sensee_aware_dashboard
         render_sensee_aware_dashboard()
     
-    with mood_tabs[5]:
+    with mood_tabs[6]:
         from animal_mood_amplifier_training import render_animal_training_dashboard
         render_animal_training_dashboard()
     
-    with mood_tabs[6]:
+    with mood_tabs[7]:
         from ma_validation_system import render_ma_validation_dashboard
         render_ma_validation_dashboard()
     
-    with mood_tabs[7]:
+    with mood_tabs[8]:
         try:
             _render_44_channel_targeting()
         except Exception as e:
             st.error(f"44-Channel module error: {e}")
             st.info("The 44-channel targeting module is not fully available.")
     
-    with mood_tabs[8]:
+    with mood_tabs[9]:
         try:
             _render_eeg_pong_link()
         except Exception as e:
             st.error(f"EEG Pong link error: {e}")
     
-    with mood_tabs[9]:
+    with mood_tabs[10]:
         try:
             from hypercomputer_divination_interface import render_hypercomputer_divination
             render_hypercomputer_divination()
