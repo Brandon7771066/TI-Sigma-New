@@ -28,5 +28,40 @@
     "id": 19371961,
     "title": "Tralse Informationalism (TI Sigma) \u2014 Complete Research Archive, April 2026",
     "draft_url": "https://zenodo.org/deposit/19371961"
+  },
+  {
+    "record": "Millennium_v2",
+    "draft_id": 19445628,
+    "title": "TI Sigma Millennium Prize Formalizations in Lean 4 (Experimental Framework \u2014 v2, April 2026)",
+    "review_url": "https://zenodo.org/deposit/19445628",
+    "action": "REVIEW \u2192 PUBLISH on zenodo.org"
+  },
+  {
+    "record": "GILE_v2",
+    "draft_id": 19445629,
+    "title": "The GILE Framework & TI Sigma Truth Architecture: Canonical Weights, Universal Operationalization, and the Three-State Truth Revision (URBs #573-#578, #598, #604-#608)",
+    "review_url": "https://zenodo.org/deposit/19445629",
+    "action": "REVIEW \u2192 PUBLISH on zenodo.org"
+  },
+  {
+    "record": "Beyond_Bayes_v2",
+    "draft_id": 19445632,
+    "title": "Beyond Bayes: Domain-Calibrated Inference, Binary AI Limits, and the TI Sigma Truth Architecture Revision (URBs #606, #607)",
+    "review_url": "https://zenodo.org/deposit/19445632",
+    "action": "REVIEW \u2192 PUBLISH on zenodo.org"
+  },
+  {
+    "record": "Archive_v2",
+    "draft_id": 19445634,
+    "title": "Tralse Informationalism (TI Sigma) \u2014 Complete Research Archive, April 2026 (v2 \u2014 Truth Architecture Revision)",
+    "review_url": "https://zenodo.org/deposit/19445634",
+    "action": "REVIEW \u2192 PUBLISH on zenodo.org"
+  },
+  {
+    "record": "Truth_Architecture_URBs_604_608",
+    "draft_id": 19445638,
+    "title": "TI Sigma Truth Architecture Revision: Three Stable Truth States, Double Tralse as Truth-Absence, and Higher-Order Myrion Resolution (URBs #604-#608)",
+    "review_url": "https://zenodo.org/deposit/19445638",
+    "action": "REVIEW \u2192 PUBLISH on zenodo.org"
   }
 ]
