@@ -47,13 +47,77 @@ class PDFWriter:
         self._objects.append((oid, content))
         return oid
 
+    # Comprehensive Unicode → ASCII/Latin-1 substitution table
+    _UNICODE_MAP = {
+        # Greek lowercase
+        'α': 'alpha', 'β': 'beta', 'γ': 'gamma', 'δ': 'delta',
+        'ε': 'epsilon', 'ζ': 'zeta', 'η': 'eta', 'θ': 'theta',
+        'ι': 'iota', 'κ': 'kappa', 'λ': 'lambda', 'μ': 'mu',
+        'ν': 'nu', 'ξ': 'xi', 'ο': 'o', 'π': 'pi',
+        'ρ': 'rho', 'σ': 'sigma', 'τ': 'tau', 'υ': 'upsilon',
+        'φ': 'phi', 'χ': 'chi', 'ψ': 'psi', 'ω': 'omega',
+        # Greek uppercase
+        'Α': 'Alpha', 'Β': 'Beta', 'Γ': 'Gamma', 'Δ': 'Delta',
+        'Ε': 'Epsilon', 'Ζ': 'Zeta', 'Η': 'Eta', 'Θ': 'Theta',
+        'Ι': 'Iota', 'Κ': 'Kappa', 'Λ': 'Lambda', 'Μ': 'Mu',
+        'Ν': 'Nu', 'Ξ': 'Xi', 'Ο': 'O', 'Π': 'Pi',
+        'Ρ': 'Rho', 'Σ': 'Sigma', 'Τ': 'Tau', 'Υ': 'Upsilon',
+        'Φ': 'Phi', 'Χ': 'Chi', 'Ψ': 'Psi', 'Ω': 'Omega',
+        # Number sets
+        'ℝ': 'R', 'ℂ': 'C', 'ℕ': 'N', 'ℤ': 'Z', 'ℚ': 'Q',
+        # Arrows
+        '→': '->', '←': '<-', '↔': '<->', '⟹': '=>', '⟺': '<=>',
+        '↑': '^', '↓': 'v', '⟶': '->', '⟵': '<-',
+        # Logic / set
+        '∀': 'forall', '∃': 'exists', '¬': 'not', '∧': 'and',
+        '∨': 'or', '⊕': 'xor', '∈': 'in', '∉': 'not in',
+        '⊆': 'subset', '⊇': 'superset', '∅': '{}', '∪': 'union',
+        '∩': 'intersect', '⊂': 'C', '⊃': 'D',
+        # Relations
+        '≤': '<=', '≥': '>=', '≠': '!=', '≈': '~=', '≡': '==',
+        '≪': '<<', '≫': '>>', '∝': 'prop.', '∼': '~',
+        # Calculus / analysis
+        '∂': 'd', '∇': 'nabla', '∆': 'Delta', '∞': 'inf',
+        '∫': 'integral', '∑': 'Sum', '∏': 'Prod',
+        '√': 'sqrt', '∛': 'cbrt',
+        # Norms / brackets
+        '‖': '||', '⟨': '<', '⟩': '>', '⌊': '[', '⌋': ']',
+        '⌈': '[', '⌉': ']', '|': '|',
+        # Superscript digits
+        '⁰': '^0', '¹': '^1', '²': '^2', '³': '^3', '⁴': '^4',
+        '⁵': '^5', '⁶': '^6', '⁷': '^7', '⁸': '^8', '⁹': '^9',
+        # Subscript digits
+        '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4',
+        '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9',
+        # Typography
+        '\u2014': '--', '\u2013': '-', '\u2018': "'", '\u2019': "'",
+        '\u201c': '"', '\u201d': '"', '\u00b7': '.', '\u00b1': '+/-',
+        '\u00d7': 'x', '\u00f7': '/', '\u00b0': 'deg',
+        '\u00b2': '^2', '\u00b3': '^3',
+        # Misc math
+        '\u2205': '{}', '\u22c5': '.', '\u2227': 'and',
+        '\u2228': 'or', '\u22a2': '|-', '\u22a8': '|=',
+        # Lean / Mathlib specific
+        '\u27e8': '<', '\u27e9': '>', '\u2115': 'N',
+        '\u211d': 'R', '\u2102': 'C', '\u2124': 'Z', '\u211a': 'Q',
+    }
+
     def _encode(self, text: str) -> str:
-        """Escape PDF string and convert non-ASCII to '?'."""
-        out = []
+        """Escape for PDF string literal; map Unicode via substitution table."""
+        # First pass: substitute known Unicode symbols
+        result = []
         for ch in text:
-            if ord(ch) > 127:
-                out.append('?')
-            elif ch == '(':
+            if ch in self._UNICODE_MAP:
+                result.append(self._UNICODE_MAP[ch])
+            elif ord(ch) > 127:
+                # Unknown high codepoint — skip silently (cleaner than '?')
+                pass
+            else:
+                result.append(ch)
+        # Second pass: escape PDF special chars
+        out = []
+        for ch in ''.join(result):
+            if ch == '(':
                 out.append(r'\(')
             elif ch == ')':
                 out.append(r'\)')
@@ -297,7 +361,7 @@ PROOFS = [
     },
     {
         "filename": "Riemann_Hypothesis_TI_Sigma.pdf",
-        "md":       "papers/RIEMANN_HYPOTHESIS_TI_PROOF_v2.md",
+        "md":       "papers/URB_LEAN4_RIEMANN_UOP_551.md",
         "lean":     "lean4/RiemannUOP.lean",
     },
     {
