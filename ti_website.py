@@ -265,6 +265,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "Submit NOW",
                 "zenodo": "https://zenodo.org/records/19371947",
                 "category": "VERIFIED",
+                "pdf": "Collatz_Nu2_Countdown_Theorem.pdf",
             },
             {
                 "urb": "#572",
@@ -277,6 +278,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "1st Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "P_vs_NP_Creation_Verification_Asymmetry.pdf",
             },
             {
                 "urb": "#571",
@@ -289,6 +291,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "2nd Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "Hodge_Conjecture_Vern_Cohomology.pdf",
             },
             {
                 "urb": "#563",
@@ -301,6 +304,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "3rd Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "Riemann_Hypothesis_TI_Sigma.pdf",
             },
             {
                 "urb": "#570",
@@ -313,6 +317,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "4th Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "Navier_Stokes_Smoothness_Vern.pdf",
             },
             {
                 "urb": "#569",
@@ -325,6 +330,7 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "5th Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "Yang_Mills_Mass_Gap_Being_Dual.pdf",
             },
             {
                 "urb": "#565",
@@ -337,37 +343,55 @@ elif page == "🏆 Proofs & Theorems":
                 "submit_order": "6th Millennium submission",
                 "zenodo": "",
                 "category": "MILLENNIUM",
+                "pdf": "Birch_Swinnerton_Dyer_Being_Theorem.pdf",
             },
         ]
 
         for p in millennium_data:
             border_color = "#00cc44" if p["category"] == "VERIFIED" else "#aa7700"
             bg_color = "#0d2b0d" if p["category"] == "VERIFIED" else "#1a1400"
-            st.markdown(f"""
-            <div style="background:{bg_color};border-radius:12px;padding:1.2rem 1.5rem;
-                        margin:0.8rem 0;border-left:5px solid {border_color};">
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
-                    <div>
-                        <span style="color:#aaa;font-size:0.75rem;">URB {p['urb']}</span>
-                        <div style="color:#eee;font-size:1.05rem;font-weight:bold;margin-top:0.1rem;">
-                            {p['problem']}
-                            {'<span style="color:#888;font-size:0.8rem;font-weight:normal;margin-left:0.5rem;">' + p['note'] + '</span>' if p['note'] else ''}
+            col_card, col_btn = st.columns([5, 1])
+            with col_card:
+                st.markdown(f"""
+                <div style="background:{bg_color};border-radius:12px;padding:1.2rem 1.5rem;
+                            margin:0.8rem 0;border-left:5px solid {border_color};">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:0.5rem;">
+                        <div>
+                            <span style="color:#aaa;font-size:0.75rem;">URB {p['urb']}</span>
+                            <div style="color:#eee;font-size:1.05rem;font-weight:bold;margin-top:0.1rem;">
+                                {p['problem']}
+                                {'<span style="color:#888;font-size:0.8rem;font-weight:normal;margin-left:0.5rem;">' + p['note'] + '</span>' if p['note'] else ''}
+                            </div>
+                        </div>
+                        <div style="color:{p['status_color']};font-size:0.78rem;font-weight:bold;text-align:right;">
+                            {p['status']}
                         </div>
                     </div>
-                    <div style="color:{p['status_color']};font-size:0.78rem;font-weight:bold;text-align:right;">
-                        {p['status']}
+                    <div style="color:#bbb;font-size:0.85rem;margin:0.6rem 0;line-height:1.5;">
+                        {p['claim']}
+                    </div>
+                    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+                        <span style="color:#888;font-size:0.78rem;">📬 {p['journal']}</span>
+                        <span style="color:#ffcc44;font-size:0.78rem;">🎯 {p['submit_order']}</span>
+                        {f'<a href="{p["zenodo"]}" target="_blank" style="color:#7ef7a0;font-size:0.78rem;text-decoration:none;">📄 Zenodo</a>' if p['zenodo'] else ''}
                     </div>
                 </div>
-                <div style="color:#bbb;font-size:0.85rem;margin:0.6rem 0;line-height:1.5;">
-                    {p['claim']}
-                </div>
-                <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem;">
-                    <span style="color:#888;font-size:0.78rem;">📬 {p['journal']}</span>
-                    <span style="color:#ffcc44;font-size:0.78rem;">🎯 {p['submit_order']}</span>
-                    {f'<a href="{p["zenodo"]}" target="_blank" style="color:#7ef7a0;font-size:0.78rem;text-decoration:none;">📄 Zenodo</a>' if p['zenodo'] else ''}
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
+            with col_btn:
+                st.markdown("<div style='margin-top:1.6rem;'></div>", unsafe_allow_html=True)
+                pdf_path = f"static/pdfs/{p['pdf']}"
+                try:
+                    with open(pdf_path, "rb") as pdf_file:
+                        st.download_button(
+                            label="⬇ PDF",
+                            data=pdf_file.read(),
+                            file_name=p['pdf'],
+                            mime="application/pdf",
+                            key=f"dl_{p['urb'].replace('#','').replace('–','-')}",
+                            use_container_width=True,
+                        )
+                except FileNotFoundError:
+                    st.caption("PDF pending")
 
     with proof_tab3:
         st.markdown("## Journal Submission Tracker")
