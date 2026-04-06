@@ -34,7 +34,8 @@ class PDFWriter:
     def __init__(self):
         self._objects = []   # list of (id, bytes)
         self._pages   = []   # list of page object ids
-        self._obj_id  = 1
+        # IDs 1-4 are reserved: 1=Catalog, 2=Pages, 3=Font/Regular, 4=Font/Bold
+        self._obj_id  = 5
 
     def _alloc_id(self):
         oid = self._obj_id
@@ -150,19 +151,21 @@ class PDFWriter:
         for oid, content in self._objects:
             write_obj(oid, content)
 
-        # xref
+        # xref — each entry MUST be exactly 20 bytes (PDF spec §7.5.4)
         xref_offset = len(body)
         all_ids = sorted(offsets.keys())
-        body += f"xref\n0 {max(all_ids)+1}\n".encode()
-        body += b"0000000000 65535 f \n"
-        for i in range(1, max(all_ids) + 1):
+        max_id = max(all_ids)
+        body += f"xref\n0 {max_id + 1}\n".encode()
+        # Free object 0
+        body += b"0000000000 65535 f \r\n"
+        for i in range(1, max_id + 1):
             if i in offsets:
-                body += f"{offsets[i]:010d} 00000 n \n".encode()
+                body += f"{offsets[i]:010d} 00000 n \r\n".encode()
             else:
-                body += b"0000000000 65535 f \n"
+                body += b"0000000000 65535 f \r\n"
 
         body += (
-            f"trailer\n<< /Size {max(all_ids)+1} /Root 1 0 R >>\n"
+            f"trailer\n<< /Size {max_id + 1} /Root 1 0 R >>\n"
             f"startxref\n{xref_offset}\n%%EOF\n"
         ).encode()
 
