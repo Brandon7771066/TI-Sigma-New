@@ -200,6 +200,66 @@ def _render_video_queue(authorized: bool):
 
     upload_log = _get_uploaded_log()
 
+    # ── TI SIGMA CORE SERIES (10 videos) ──────────────────────────────────────
+    st.markdown("### 📺 TI Sigma Core Series (Record These First)")
+    st.caption("Full scripts in `papers/YOUTUBE_10_VIDEO_SCRIPTS.md` · Platform strategy in `papers/ARXIV_RESEARCHGATE_STRATEGY.md` · Reddit strategy in `papers/REDDIT_CONTENT_STRATEGY.md`")
+
+    series_order = [
+        (9903, "Video 3 — START HERE (most credible, formal math)"),
+        (9904, "Video 4 — Beyond Bayes (academic / philosophy)"),
+        (9901, "Video 1 — Series Intro (record after you know the series)"),
+        (9902, "Video 2 — GILE Framework"),
+        (9905, "Video 5 — Truth System / Quantum"),
+        (9906, "Video 6 — Millennium Problems + BSD"),
+        (9907, "Video 7 — Binary AI Ceiling"),
+        (9908, "Video 8 — Myrion Resolution"),
+        (9909, "Video 9 — Primary Constants"),
+        (9910, "Video 10 — GILE Biometrics / Oura"),
+    ]
+
+    for urb_num, series_label in series_order:
+        cat = VIDEO_CATALOGUE.get(urb_num, {})
+        title = cat.get("title", f"Series #{urb_num - 9900}")
+        uploaded_info = upload_log.get(str(urb_num))
+        has_script = _script_exists(urb_num)
+        has_mp4 = _mp4_exists(urb_num)
+        is_live = uploaded_info is not None
+
+        status_icon = "🟢" if is_live else "🟡" if has_mp4 else "🔵" if has_script else "⚪"
+
+        with st.expander(f"{status_icon} {series_label} — {title}", expanded=False):
+            col_a, col_b = st.columns([3, 1])
+            with col_a:
+                if cat.get("hook"):
+                    st.caption(f'_Hook: "{cat["hook"]}"_')
+                if cat.get("tags"):
+                    st.caption("Tags: " + ", ".join(cat["tags"][:6]))
+                st.info("📄 Full script in `papers/YOUTUBE_10_VIDEO_SCRIPTS.md`")
+            with col_b:
+                if is_live:
+                    st.success(f"✅ Live\n{uploaded_info['url']}")
+                elif has_mp4:
+                    st.warning("📹 MP4 ready")
+                    if authorized:
+                        if st.button("Upload", key=f"ul_series_{urb_num}"):
+                            st.info("Use standard upload flow below with this ID")
+                else:
+                    if st.button("Generate Video", key=f"gen_series_{urb_num}"):
+                        with st.spinner("Producing video..."):
+                            from ti_video_engine import produce_urb_video
+                            result = produce_urb_video(
+                                None,
+                                override_title=cat.get("title"),
+                                override_hook=cat.get("hook"),
+                            )
+                            if result.get("mp4"):
+                                st.success(f"✅ {result['mp4']}")
+                            else:
+                                st.error(result.get("error", "Unknown error"))
+
+    st.divider()
+    st.markdown("### 🔬 URB Research Videos")
+
     priority_urbs = [509, 507, 506, 505, 502, 500, 508, 504, 503, 501, 499]
 
     for urb_num in priority_urbs:

@@ -65,6 +65,169 @@ FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
 # ─────────────────────────────────────────────────────────────────────────────
 
 VIDEO_CATALOGUE = {
+    # ── TI SIGMA SERIES (10 Core Videos) ─────────────────────────────────────
+    9901: {
+        "title": "What Is Tralse Informationalism? (Series Intro)",
+        "subtitle": "TI Sigma Series #1 · The Framework",
+        "hook": "What if the biggest problem in math, AI, and consciousness research all share one root cause — binary logic?",
+        "tags": ["Tralse Informationalism", "TI Sigma", "consciousness", "philosophy", "three-valued logic",
+                 "GILE", "Myrion Resolution", "Brandon Emerick"],
+        "description_template": (
+            "What if truth isn't binary — and that single assumption is breaking mathematics, "
+            "AI, and consciousness research at the same time?\n\n"
+            "This is the series intro to Tralse Informationalism (TI Sigma) — a research program "
+            "built on three pillars: formally verified mathematics, a 4D consciousness framework "
+            "(GILE), and applied systems from stock prediction to AI design.\n\n"
+            "Topics: 3-state truth architecture · GILE framework · 9 Primary Constants · Lean 4 proofs\n\n"
+            "Full research: https://zenodo.org/communities/tisigma\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9902: {
+        "title": "The GILE Framework — Measuring Consciousness in 4 Dimensions",
+        "subtitle": "TI Sigma Series #2 · G=√2−1, I=0.25, L=0.18, E=0.15",
+        "hook": "Four numbers can describe every conscious decision ever made. Here's the derivation.",
+        "tags": ["GILE framework", "consciousness", "G weight", "Goodness Intuition Love Environment",
+                 "TI Sigma", "octonionic geometry", "biometrics", "consciousness measurement"],
+        "description_template": (
+            "G = √2 − 1 ≈ 0.4142. I = 0.25. L ≈ 0.18. E ≈ 0.15.\n\n"
+            "These four weights sum to ~1 and describe the four irreducible dimensions of every "
+            "conscious decision. The dominant weight, G (Goodness), was derived from octonionic "
+            "geometry and confirmed from Turing Award and Fields Medal winner data — before the "
+            "confirmation was checked.\n\n"
+            "Full derivation and empirical evidence: URB #576 on Zenodo\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9903: {
+        "title": "We Formally Verified a Collatz Theorem — Here's What It Means",
+        "subtitle": "TI Sigma Series #3 · ν₂ Countdown Theorem · Lean 4",
+        "hook": "Paul Erdős said math wasn't ready for Collatz. We just machine-verified a bound that no one has proved before.",
+        "tags": ["Collatz conjecture", "Lean 4", "formal verification", "2-adic valuation",
+                 "number theory", "Mathlib", "TI Sigma", "mathematics"],
+        "description_template": (
+            "The ν₂ Countdown Theorem: for any odd n ≡ 3 (mod 4), the 2-adic valuation "
+            "ν₂(n'+1) = ν₂(n+1) − 1 under one single-halving Collatz step. This is a discrete "
+            "clock embedded in the Collatz sequence — proved in Lean 4 with 11 sorry-free theorems.\n\n"
+            "We don't claim to solve Collatz. We found a structural obstruction to infinite "
+            "single-halving loops — and it's machine-checkable.\n\n"
+            "Paper + Lean code: https://zenodo.org/doi/10.5281/zenodo.19371947\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9904: {
+        "title": "Why Bayesian Epistemology Is Broken (And What Replaces It)",
+        "subtitle": "TI Sigma Series #4 · Domain-Calibrated Intuitive Inference",
+        "hook": "Bayesian reasoning is the gold standard for rational belief. Except it fails at exactly the moments that matter most.",
+        "tags": ["Bayesian epistemology", "DCII", "domain-calibrated inference", "epistemology",
+                 "philosophy", "rational belief", "TI Sigma", "intuition"],
+        "description_template": (
+            "Bayesian reasoning has three structural failures: (1) priors are not domain-neutral, "
+            "(2) evidence types are not commensurable, (3) the pre-evidential zone is invisible to Bayes.\n\n"
+            "We propose Domain-Calibrated Intuitive Inference (DCII) — a structured alternative "
+            "where evidence weights are learned from demonstrated domain performers, not fixed a priori.\n\n"
+            "Paper: Beyond Bayes (papers/BEYOND_BAYES_TI_SIGMA_EPISTEMOLOGY.md)\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9905: {
+        "title": "The Truth System Quantum Mechanics Was Trying to Tell Us",
+        "subtitle": "TI Sigma Series #5 · Tralse Truth Architecture · URB #607",
+        "hook": "Quantum superposition isn't strange. It's the universe insisting that binary logic is wrong.",
+        "tags": ["quantum mechanics", "superposition", "three-valued logic", "Tralse", "truth",
+                 "philosophy of physics", "TI Sigma", "Double Tralse"],
+        "description_template": (
+            "Three stable truth states: True, False, and Tralse/Indeterminate. One label for "
+            "truth-absence: Double Tralse.\n\n"
+            "Quantum superposition is not mysterious — it's a Tralse proposition that collapses "
+            "to True/False at measurement (Myrion Resolution). The EPR paradox, the double-slit "
+            "experiment, entanglement — all more naturally described in three-valued logic.\n\n"
+            "URB #607 Truth Architecture paper on Zenodo.\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9906: {
+        "title": "The Millennium Prize Problems — What TI Sigma Found",
+        "subtitle": "TI Sigma Series #6 · BSD Parity Vanishing · Lean 4",
+        "hook": "We didn't solve the Millennium Prize Problems. We found something better — exactly where the gaps are.",
+        "tags": ["Millennium Prize", "BSD conjecture", "Birch Swinnerton-Dyer", "Lean 4",
+                 "formal verification", "parity vanishing", "elliptic curves", "number theory"],
+        "description_template": (
+            "BSD Parity Vanishing Theorem: if the root number ε_E = −1, then L(E,1) = 0 — "
+            "proved unconditionally from the functional equation alone, without BSD.\n\n"
+            "We formalized this in Lean 4 and created a Named Gap Formalization of BSD: every "
+            "theorem labelled PROVED, OPEN, or PARTIAL. The exact location of every gap, "
+            "machine-verifiable.\n\n"
+            "BSD.lean v2 on Zenodo: https://zenodo.org/deposit/19445628\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9907: {
+        "title": "Why GPT Can't Do What You Think It Does",
+        "subtitle": "TI Sigma Series #7 · Binary AI Ceiling · URB #606",
+        "hook": "Binary AI can approximate multi-valued logic. But approximation has a ceiling — and we're approaching it.",
+        "tags": ["binary AI", "GPT", "AI limits", "multi-valued logic", "Tralse", "TI Sigma",
+                 "AI safety", "artificial intelligence", "approximation ceiling"],
+        "description_template": (
+            "Four arguments why binary AI cannot natively represent Tralse-Myrion Logic:\n"
+            "1. Efficiency: trit = 1.585 bits, five-valued truth needs 3 bits minimum\n"
+            "2. Category error: universe is spectral, not discrete\n"
+            "3. Self-refutation: accepting quantum indeterminacy commits you to 3+ truth values\n"
+            "4. Intuition ceiling: human substrate is continuous; binary AI has machine epsilon\n\n"
+            "Binary approximating TML ≈ rationals approximating π.\n\n"
+            "URB #606 on Zenodo. TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9908: {
+        "title": "Myrion Resolution — Beyond Yes and No",
+        "subtitle": "TI Sigma Series #8 · 12 Meta-Truth Types · URB #608",
+        "hook": "Every decision protocol collapses to yes or no. Except this one.",
+        "tags": ["Myrion Resolution", "decision theory", "Meta-Truth", "TI Sigma",
+                 "philosophy", "Tralse", "indeterminate", "decision making"],
+        "description_template": (
+            "Myrion Resolution is a structured process for working with irreducibly Tralse "
+            "propositions — questions that don't have yes/no answers.\n\n"
+            "Levels 1-2: Base resolution and quality check.\n"
+            "Level 3+: Meta-Truths — 12 types in 6 categories, from WDA/NWDA reversals "
+            "to Integration Meta-Truths (Both True at Different Levels, Transcend).\n\n"
+            "URB #608 Meta-Truth Catalogue on Zenodo.\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9909: {
+        "title": "The Nine Primary Constants — A New Theory of Fundamental Numbers",
+        "subtitle": "TI Sigma Series #9 · {0,1,i,√2,e,φ,π,C,T}",
+        "hook": "Physics has its fundamental constants. TI Sigma has nine. Two are new — and they were derived, not invented.",
+        "tags": ["primary constants", "C constant", "T constant", "phi", "golden ratio",
+                 "TI Sigma", "consciousness", "mathematics", "fundamental constants"],
+        "description_template": (
+            "The 9 Primary Constants of TI Sigma: { 0, 1, i, √2, e, φ, π, C, T }\n\n"
+            "C = 1/(φ√2) ≈ 0.4370 — the Coherence Constant: the GILE phase transition threshold\n"
+            "T = 1 − e^{−e} ≈ 0.9340 — the Tralse Threshold: when MR collapses to resolution\n\n"
+            "These weren't chosen — they emerged from the framework's mathematics, "
+            "derivable from i and the existing seven constants.\n\n"
+            "TI Sigma Founding Charter on Zenodo.\n"
+            "TI Sigma Research | Brandon Emerick | BlissGene Therapeutics"
+        ),
+    },
+    9910: {
+        "title": "The GILE Mood Amplifier — When Theory Meets Biometrics",
+        "subtitle": "TI Sigma Series #10 · Oura Ring + GILE Framework",
+        "hook": "We built a system that translates your Oura Ring data into GILE scores. Here's what we found.",
+        "tags": ["Oura Ring", "HRV", "GILE framework", "biometrics", "consciousness",
+                 "mood amplifier", "TI Sigma", "wearables", "neuroscience"],
+        "description_template": (
+            "The GILE Mood Amplifier translates biometric data into daily GILE scores:\n"
+            "G (Goodness) ← HRV / prefrontal activation (r=0.65-0.85)\n"
+            "I (Intuition) ← REM sleep duration and quality\n"
+            "L (Love) ← Restorative sleep / circadian alignment\n"
+            "E (Environment) ← Body temperature deviation\n\n"
+            "Every mapping backed by peer-reviewed neuroscience. Every correlation shown "
+            "with its source paper and confidence interval.\n\n"
+            "BlissGene Therapeutics / TI Sigma Research | Brandon Emerick"
+        ),
+    },
+    # ── EXISTING CATALOGUE ───────────────────────────────────────────────────
     509: {
         "title": "Everything Is a Contradiction — and That's Actually Good",
         "subtitle": "URB #509 · TI Sigma Theory of Contradictions",
