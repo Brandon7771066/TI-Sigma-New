@@ -5,12 +5,11 @@ Personalized drug/supplement effect modeling using:
 - Consciousness metrics (LCC, GILE, True-Tralseness)
 - Genetic variants (FAAH, COMT, serotonin receptors, schizotypy SNPs)
 - Biometrics (HRV, EEG, heart rate)
+- HEM D2 Tralse meter (URB #619)
+- EV/PD distribution (URB #609, #615)
 - Historical response patterns
 
-This does what Google's models CANNOT:
-- Model effects through consciousness states
-- Account for non-linear genetic × consciousness interactions
-- Predict YOUR specific response, not population averages
+Canonical GILE weights (URB #576): G=√2−1≈0.4142, I=0.25, L=0.18, E=0.15
 """
 
 import numpy as np
@@ -24,23 +23,29 @@ from psycopg2.extras import RealDictCursor
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
+# Canonical GILE weights (URB #576 — Emerick Threshold G = √2−1)
+GILE_W_G = 0.4142
+GILE_W_I = 0.25
+GILE_W_L = 0.18
+GILE_W_E = 0.15
+
 
 @dataclass
 class GeneticProfile:
     """User's genetic variants affecting pharmacology"""
-    faah_activity: float = 1.0  # 0.0 = low (good), 1.0 = normal, 2.0 = high (fast metabolism)
-    comt_activity: float = 1.0  # 0.0 = low (worrier), 1.0 = normal, 2.0 = high (warrior)
-    serotonin_sensitivity: float = 1.0  # 0.0 = low, 1.0 = normal, 2.0 = high
-    bdnf_expression: float = 1.0  # 0.0 = low, 1.0 = normal, 2.0 = high
-    schizotypy_snp_count: int = 0  # Number of schizotypy-related SNPs
-    cb1_receptor_density: float = 1.0  # 0.5 = low, 1.0 = normal, 1.5 = high
+    faah_activity: float = 1.0      # 0.0 = low (good), 1.0 = normal, 2.0 = high (fast metabolism)
+    comt_activity: float = 1.0      # 0.0 = low (worrier), 1.0 = normal, 2.0 = high (warrior)
+    serotonin_sensitivity: float = 1.0
+    bdnf_expression: float = 1.0
+    schizotypy_snp_count: int = 0   # Number of schizotypy-related SNPs
+    cb1_receptor_density: float = 1.0
     gaba_sensitivity: float = 1.0
     dopamine_sensitivity: float = 1.0
-    
+
     def consciousness_amplification_factor(self) -> float:
-        """Calculate how much consciousness effects are amplified by genetics"""
+        """How much consciousness effects are amplified by genetics"""
         base = 1.0
-        base += (self.schizotypy_snp_count / 100) * 0.5  # More SNPs = more amplification
+        base += (self.schizotypy_snp_count / 100) * 0.5
         base += (self.cb1_receptor_density - 1.0) * 0.3
         base += (self.serotonin_sensitivity - 1.0) * 0.2
         return max(0.5, min(2.0, base))
@@ -49,19 +54,40 @@ class GeneticProfile:
 @dataclass
 class ConsciousnessState:
     """Current consciousness metrics"""
-    lcc: float = 0.5  # Love-Consciousness Coupling (0-1)
-    gile_g: float = 0.5  # Goodness dimension
-    gile_i: float = 0.5  # Intuition dimension
-    gile_l: float = 0.5  # Love dimension
-    gile_e: float = 0.5  # Environment dimension
-    coherence: float = 0.5  # Brain-heart coherence
-    true_tralseness: float = 0.5  # Overall truth-alignment
-    
+    lcc: float = 0.5        # Love-Consciousness Coupling (0-1)
+    gile_g: float = 0.5
+    gile_i: float = 0.5
+    gile_l: float = 0.5
+    gile_e: float = 0.5
+    coherence: float = 0.5
+    true_tralseness: float = 0.5  # kept for backward compat; see gile_truth below
+
     @property
     def gile_composite(self) -> float:
-        # Canonical GILE weights: G=√2−1≈0.4142, I=0.25, L≈0.18, E=0.15 (April 2026 update)
-        return 0.4142 * self.gile_g + 0.25 * self.gile_i + 0.18 * self.gile_l + 0.15 * self.gile_e
-    
+        """Canonical GILE weights (URB #576)"""
+        return (GILE_W_G * self.gile_g + GILE_W_I * self.gile_i
+                + GILE_W_L * self.gile_l + GILE_W_E * self.gile_e)
+
+    @property
+    def gile_truth_score(self) -> float:
+        """GILE Truth Score = gile_composite × coherence"""
+        return self.gile_composite * self.coherence
+
+    @property
+    def hem_d2(self) -> float:
+        """
+        HEM D2 (Contradiction Ratio / Tralse Meter — URB #619).
+        Derived from coherence vs. the tension between high-activation dimensions.
+        D2 = 0 → fully resolved (True/False); D2 > 0.65 → DT risk.
+        """
+        # Internal contradiction = variance across GILE dimensions
+        dims = [self.gile_g, self.gile_i, self.gile_l, self.gile_e]
+        variance = float(np.var(dims))
+        # Incoherence contribution
+        incoherence = 1.0 - self.coherence
+        d2 = 0.5 * variance * 4 + 0.5 * incoherence  # scale variance to 0-1
+        return float(np.clip(d2, 0.0, 1.0))
+
     def to_dict(self) -> Dict:
         return {
             'lcc': self.lcc,
@@ -70,31 +96,30 @@ class ConsciousnessState:
             'gile_l': self.gile_l,
             'gile_e': self.gile_e,
             'gile_composite': self.gile_composite,
+            'gile_truth_score': self.gile_truth_score,
             'coherence': self.coherence,
-            'true_tralseness': self.true_tralseness
+            'hem_d2_tralse': self.hem_d2,
         }
 
 
 @dataclass
 class BiometricState:
     """Current biometric measurements"""
-    heart_rate: float = 70.0  # bpm
-    rmssd: float = 40.0  # ms (HRV measure)
-    sdnn: float = 50.0  # ms
-    alpha_power: float = 0.5  # 0-1 (EEG)
+    heart_rate: float = 70.0
+    rmssd: float = 40.0
+    sdnn: float = 50.0
+    alpha_power: float = 0.5
     beta_power: float = 0.3
     theta_power: float = 0.4
     gamma_power: float = 0.2
     delta_power: float = 0.3
-    
+
     @property
     def parasympathetic_dominance(self) -> float:
-        """Calculate PNS dominance from HRV"""
         return min(1.0, self.rmssd / 80.0)
-    
+
     @property
     def eeg_coherence(self) -> float:
-        """Calculate EEG coherence from band powers"""
         return (self.alpha_power + self.gamma_power * 0.5) / (self.beta_power + 0.1)
 
 
@@ -103,193 +128,380 @@ class Supplement:
     """Supplement with pharmacological properties"""
     name: str
     dose_mg: float
-    
-    # Pharmacokinetic properties
-    absorption_time_min: float = 30.0  # Time to peak absorption
-    half_life_hours: float = 4.0  # Elimination half-life
-    bbb_penetration: float = 0.5  # 0-1, how well it crosses blood-brain barrier
-    
-    # SAFETY (April 2026 — critical for Brandon's epilepsy profile)
-    epilepsy_risk: str = "LOW"   # LOW / MODERATE / HIGH / CONTRAINDICATED
-    epilepsy_note: str = ""      # Specific note for seizure-prone individuals
+
+    # Pharmacokinetics
+    absorption_time_min: float = 30.0
+    half_life_hours: float = 4.0
+    bbb_penetration: float = 0.5
+
+    # Safety
+    epilepsy_risk: str = "LOW"          # LOW / MODERATE / HIGH / CONTRAINDICATED
+    epilepsy_note: str = ""
     not_medical_advice: str = "NOT MEDICAL ADVICE — consult neurologist before use"
-    
-    # Mechanism of action (0-1 scale of effect strength)
-    faah_inhibition: float = 0.0  # Blocks anandamide breakdown
-    cb1_activation: float = 0.0  # Activates cannabinoid receptor 1
-    cb2_activation: float = 0.0  # Activates cannabinoid receptor 2
-    nape_pld_activation: float = 0.0  # Enhances anandamide synthesis
-    anti_inflammatory: float = 0.0  # Reduces neuroinflammation
-    bdnf_upregulation: float = 0.0  # Increases BDNF expression
-    gaba_modulation: float = 0.0  # Affects GABA system
-    serotonin_modulation: float = 0.0  # Affects serotonin system
-    dopamine_modulation: float = 0.0  # Affects dopamine system
-    
+
+    # Mechanisms (0-1 strength)
+    faah_inhibition: float = 0.0
+    cb1_activation: float = 0.0
+    cb2_activation: float = 0.0
+    nape_pld_activation: float = 0.0
+    anti_inflammatory: float = 0.0
+    bdnf_upregulation: float = 0.0
+    gaba_modulation: float = 0.0
+    serotonin_modulation: float = 0.0
+    dopamine_modulation: float = 0.0
+    nmda_modulation: float = 0.0        # NEW: NMDA system
+    acetylcholine_modulation: float = 0.0  # NEW: ACh system
+    mitochondrial_support: float = 0.0  # NEW: energy metabolism
+
     # Consciousness effects (TI-specific)
-    lcc_boost: float = 0.0  # Direct effect on Love-Consciousness Coupling
-    love_boost: float = 0.0  # Effect on Love dimension
-    intuition_boost: float = 0.0  # Effect on Intuition dimension
-    goodness_boost: float = 0.0  # Effect on Goodness dimension
-    environment_boost: float = 0.0  # Effect on Environment dimension
+    lcc_boost: float = 0.0
+    love_boost: float = 0.0
+    intuition_boost: float = 0.0
+    goodness_boost: float = 0.0
+    environment_boost: float = 0.0
+
+    # Interaction flags
+    interaction_group: str = ""         # e.g. "faah_inhibitor", "cb1_agonist", "dopamine_precursor"
+    known_interactions: List[str] = field(default_factory=list)
 
 
-# Pre-defined supplement database
+# ============================================================
+# SUPPLEMENT DATABASE
+# ============================================================
 SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
+
+    # --- Endocannabinoid System ---
     'curcubrain': Supplement(
         name='Curcubrain',
-        dose_mg=400,
-        absorption_time_min=45,
-        half_life_hours=6,
-        bbb_penetration=0.85,
-        faah_inhibition=0.65,
-        anti_inflammatory=0.80,
-        bdnf_upregulation=0.55,
-        lcc_boost=0.03,
-        love_boost=0.04,
-        intuition_boost=0.02,
+        dose_mg=400, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.85,
+        faah_inhibition=0.65, anti_inflammatory=0.80, bdnf_upregulation=0.55,
+        lcc_boost=0.03, love_boost=0.04, intuition_boost=0.02,
         epilepsy_risk="LOW",
-        epilepsy_note="Generally safe; anti-inflammatory may mildly reduce seizure threshold elevation from neuroinflammation. Monitor if starting new protocol."
+        epilepsy_note="Generally safe; anti-inflammatory may mildly reduce seizure threshold elevation. Monitor if starting new protocol.",
+        interaction_group="faah_inhibitor"
     ),
     'macamides_5pct': Supplement(
         name='Nootropics Depot 5% Macamides',
-        dose_mg=750,
-        absorption_time_min=30,
-        half_life_hours=4,
-        bbb_penetration=0.70,
-        cb1_activation=0.70,
-        nape_pld_activation=0.60,
-        dopamine_modulation=0.45,
-        serotonin_modulation=0.35,
-        lcc_boost=0.05,
-        love_boost=0.06,
-        intuition_boost=0.04,
-        goodness_boost=0.03,
+        dose_mg=750, absorption_time_min=30, half_life_hours=4, bbb_penetration=0.70,
+        cb1_activation=0.70, nape_pld_activation=0.60,
+        dopamine_modulation=0.45, serotonin_modulation=0.35,
+        lcc_boost=0.05, love_boost=0.06, intuition_boost=0.04, goodness_boost=0.03,
         epilepsy_risk="LOW",
-        epilepsy_note="Maca-derived macamides have no reported pro-convulsant activity. CB1 partial activation may have mild anticonvulsant properties."
+        epilepsy_note="Macamides have no reported pro-convulsant activity. CB1 partial activation may have mild anticonvulsant properties.",
+        interaction_group="cb1_agonist"
     ),
     'pea_palmitoylethanolamide': Supplement(
         name='PEA (Palmitoylethanolamide)',
-        dose_mg=1500,
-        absorption_time_min=40,
-        half_life_hours=5,
-        bbb_penetration=0.60,
-        nape_pld_activation=0.75,
-        anti_inflammatory=0.70,
-        lcc_boost=0.04,
-        love_boost=0.05,
+        dose_mg=1500, absorption_time_min=40, half_life_hours=5, bbb_penetration=0.60,
+        nape_pld_activation=0.75, anti_inflammatory=0.70,
+        lcc_boost=0.04, love_boost=0.05,
         epilepsy_risk="LOW",
-        epilepsy_note="PEA has emerging anticonvulsant research support via PPAR-alpha activation. Generally considered safe for epilepsy profiles. Consult neurologist."
+        epilepsy_note="PEA has emerging anticonvulsant research via PPAR-alpha. Generally safe for epilepsy profiles. Consult neurologist.",
+        interaction_group="faah_inhibitor"
     ),
     'cbd_oil': Supplement(
         name='CBD Oil',
-        dose_mg=25,
-        absorption_time_min=20,
-        half_life_hours=3,
-        bbb_penetration=0.75,
-        faah_inhibition=0.50,
-        cb1_activation=0.20,
-        cb2_activation=0.40,
-        anti_inflammatory=0.60,
-        gaba_modulation=0.30,
-        lcc_boost=0.02,
-        love_boost=0.03,
+        dose_mg=25, absorption_time_min=20, half_life_hours=3, bbb_penetration=0.75,
+        faah_inhibition=0.50, cb1_activation=0.20, cb2_activation=0.40,
+        anti_inflammatory=0.60, gaba_modulation=0.30,
+        lcc_boost=0.02, love_boost=0.03,
         epilepsy_risk="LOW",
-        epilepsy_note="CBD (Epidiolex) is FDA-approved for certain epilepsy types (Dravet, LGS). At low doses (25mg), generally well-tolerated. May interact with AEDs — monitor drug levels if on valproate or clobazam."
+        epilepsy_note="CBD (Epidiolex) is FDA-approved for certain epilepsy types. At 25mg generally well-tolerated. May interact with AEDs — monitor drug levels if on valproate or clobazam.",
+        interaction_group="faah_inhibitor",
+        known_interactions=["Valproate — monitor drug levels", "Clobazam — increased clobazam exposure"]
     ),
     'kaempferol': Supplement(
         name='Kaempferol',
-        dose_mg=50,
-        absorption_time_min=35,
-        half_life_hours=4,
-        bbb_penetration=0.55,
-        faah_inhibition=0.45,
-        anti_inflammatory=0.50,
+        dose_mg=50, absorption_time_min=35, half_life_hours=4, bbb_penetration=0.55,
+        faah_inhibition=0.45, anti_inflammatory=0.50,
         lcc_boost=0.015,
         epilepsy_risk="LOW",
-        epilepsy_note="Kaempferol shows anticonvulsant activity in animal models. No clinical pro-convulsant data. Generally considered safe."
-    ),
-    'maca_standard': Supplement(
-        name='Maca Root (Standard)',
-        dose_mg=1500,
-        absorption_time_min=40,
-        half_life_hours=5,
-        bbb_penetration=0.40,
-        nape_pld_activation=0.30,
-        dopamine_modulation=0.25,
-        lcc_boost=0.01
-    ),
-    'magnesium_l_threonate': Supplement(
-        name='Magnesium L-Threonate',
-        dose_mg=144,
-        absorption_time_min=60,
-        half_life_hours=8,
-        bbb_penetration=0.90,  # Very high BBB penetration
-        gaba_modulation=0.40,
-        bdnf_upregulation=0.35,
-        lcc_boost=0.01,
-        intuition_boost=0.02
-    ),
-    'omega3_dha': Supplement(
-        name='Omega-3 DHA',
-        dose_mg=1000,
-        absorption_time_min=90,
-        half_life_hours=24,
-        bbb_penetration=0.70,
-        anti_inflammatory=0.60,
-        bdnf_upregulation=0.30,
-        lcc_boost=0.01
-    ),
-    'vitamin_b6_p5p': Supplement(
-        name='Vitamin B6 (P5P)',
-        dose_mg=50,
-        absorption_time_min=30,
-        half_life_hours=6,
-        bbb_penetration=0.85,
-        nape_pld_activation=0.25,  # Cofactor for NAPE-PLD
-        serotonin_modulation=0.30,
-        dopamine_modulation=0.25,
-        gaba_modulation=0.20,
-        lcc_boost=0.005
+        epilepsy_note="Kaempferol shows anticonvulsant activity in animal models. No clinical pro-convulsant data.",
+        interaction_group="faah_inhibitor"
     ),
     'quercetin': Supplement(
         name='Quercetin',
-        dose_mg=500,
-        absorption_time_min=45,
-        half_life_hours=5,
-        bbb_penetration=0.50,
-        faah_inhibition=0.40,
-        anti_inflammatory=0.65,
-        lcc_boost=0.015
+        dose_mg=500, absorption_time_min=45, half_life_hours=5, bbb_penetration=0.50,
+        faah_inhibition=0.40, anti_inflammatory=0.65,
+        lcc_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="No pro-convulsant activity; some neuroprotective evidence.",
+        interaction_group="faah_inhibitor"
     ),
     'luteolin': Supplement(
         name='Luteolin',
-        dose_mg=100,
-        absorption_time_min=35,
-        half_life_hours=4,
-        bbb_penetration=0.55,
-        faah_inhibition=0.55,
-        anti_inflammatory=0.50,
-        lcc_boost=0.02
+        dose_mg=100, absorption_time_min=35, half_life_hours=4, bbb_penetration=0.55,
+        faah_inhibition=0.55, anti_inflammatory=0.50,
+        lcc_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Neuroprotective; no pro-convulsant data.",
+        interaction_group="faah_inhibitor"
     ),
     'black_seed_oil': Supplement(
         name='Black Seed Oil (Thymoquinone)',
-        dose_mg=500,
-        absorption_time_min=40,
-        half_life_hours=5,
-        bbb_penetration=0.45,
-        faah_inhibition=0.35,
-        anti_inflammatory=0.55,
-        lcc_boost=0.015
-    )
+        dose_mg=500, absorption_time_min=40, half_life_hours=5, bbb_penetration=0.45,
+        faah_inhibition=0.35, anti_inflammatory=0.55,
+        lcc_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Thymoquinone shows anticonvulsant properties in animal models."
+    ),
+
+    # --- Minerals & Foundational ---
+    'magnesium_l_threonate': Supplement(
+        name='Magnesium L-Threonate',
+        dose_mg=144, absorption_time_min=60, half_life_hours=8, bbb_penetration=0.90,
+        gaba_modulation=0.40, bdnf_upregulation=0.35, nmda_modulation=0.35,
+        lcc_boost=0.01, intuition_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Magnesium is neuroprotective and may reduce seizure susceptibility. Well-tolerated.",
+        interaction_group="nmda_modulator"
+    ),
+    'omega3_dha': Supplement(
+        name='Omega-3 DHA',
+        dose_mg=1000, absorption_time_min=90, half_life_hours=24, bbb_penetration=0.70,
+        anti_inflammatory=0.60, bdnf_upregulation=0.30,
+        lcc_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="DHA is neuroprotective. No seizure risk."
+    ),
+    'vitamin_b6_p5p': Supplement(
+        name='Vitamin B6 (P5P)',
+        dose_mg=50, absorption_time_min=30, half_life_hours=6, bbb_penetration=0.85,
+        nape_pld_activation=0.25, serotonin_modulation=0.30,
+        dopamine_modulation=0.25, gaba_modulation=0.20,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="B6 cofactor for GABA synthesis. Generally anticonvulsant. Very high doses (>500mg/day) can cause neuropathy."
+    ),
+
+    # --- Maca variants ---
+    'maca_standard': Supplement(
+        name='Maca Root (Standard)',
+        dose_mg=1500, absorption_time_min=40, half_life_hours=5, bbb_penetration=0.40,
+        nape_pld_activation=0.30, dopamine_modulation=0.25,
+        lcc_boost=0.01,
+        epilepsy_risk="LOW", epilepsy_note="No seizure risk reported."
+    ),
+
+    # --- Nootropics / Cognition ---
+    'lions_mane': Supplement(
+        name="Lion's Mane (Hericium erinaceus)",
+        dose_mg=1000, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.55,
+        bdnf_upregulation=0.70, anti_inflammatory=0.40,
+        lcc_boost=0.025, intuition_boost=0.04, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Neuroprotective via NGF induction. No pro-convulsant data. Safe profile.",
+        interaction_group="bdnf_booster"
+    ),
+    'bacopa_monnieri': Supplement(
+        name='BaCognize (Bacopa monnieri)',
+        dose_mg=500, absorption_time_min=60, half_life_hours=5, bbb_penetration=0.60,
+        bdnf_upregulation=0.45, anti_inflammatory=0.30, serotonin_modulation=0.25,
+        lcc_boost=0.015, intuition_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Bacosides are neuroprotective. No seizure risk; some evidence of anticonvulsant effects.",
+        interaction_group="bdnf_booster"
+    ),
+    'alpha_gpc': Supplement(
+        name='Alpha GPC',
+        dose_mg=600, absorption_time_min=30, half_life_hours=4, bbb_penetration=0.85,
+        acetylcholine_modulation=0.75, bdnf_upregulation=0.20,
+        lcc_boost=0.02, intuition_boost=0.035,
+        epilepsy_risk="LOW",
+        epilepsy_note="ACh precursor; no pro-convulsant activity. High doses may lower seizure threshold theoretically — stay ≤600mg.",
+        interaction_group="cholinergic"
+    ),
+    'phosphatidylserine': Supplement(
+        name='Phosphatidylserine',
+        dose_mg=300, absorption_time_min=40, half_life_hours=5, bbb_penetration=0.65,
+        bdnf_upregulation=0.25, anti_inflammatory=0.20,
+        lcc_boost=0.01, intuition_boost=0.02, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Cell membrane support; no seizure risk."
+    ),
+
+    # --- Dopamine / Monoamine Pathway ---
+    'mucuna_pruriens': Supplement(
+        name='Mucuna Pruriens (15% L-DOPA)',
+        dose_mg=400, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.70,
+        dopamine_modulation=0.75, serotonin_modulation=0.20,
+        lcc_boost=0.03, intuition_boost=0.04, environment_boost=0.03,
+        epilepsy_risk="MODERATE",
+        epilepsy_note="L-DOPA can lower seizure threshold at high doses. Use cautiously with epilepsy; start low. Do NOT combine with MAOIs.",
+        interaction_group="dopamine_precursor",
+        known_interactions=["Do NOT combine with L-Tyrosine same day", "Do NOT combine with MAOIs"]
+    ),
+    'l_tyrosine': Supplement(
+        name='L-Tyrosine',
+        dose_mg=500, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.60,
+        dopamine_modulation=0.45, serotonin_modulation=0.15,
+        lcc_boost=0.015, intuition_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Gentle dopamine precursor. No significant seizure risk.",
+        interaction_group="dopamine_precursor",
+        known_interactions=["Do NOT combine with Mucuna same day"]
+    ),
+
+    # --- NMDA / Glutamate Pathway ---
+    'nac': Supplement(
+        name='NAC (N-Acetyl Cysteine)',
+        dose_mg=1000, absorption_time_min=45, half_life_hours=5, bbb_penetration=0.60,
+        anti_inflammatory=0.50, nmda_modulation=0.40,
+        lcc_boost=0.02, goodness_boost=0.04,
+        epilepsy_risk="LOW",
+        epilepsy_note="Antioxidant and glutamate modulator. Some anticonvulsant properties. Well-tolerated.",
+        interaction_group="nmda_modulator"
+    ),
+    'glycine': Supplement(
+        name='Glycine',
+        dose_mg=3000, absorption_time_min=20, half_life_hours=4, bbb_penetration=0.55,
+        gaba_modulation=0.35, nmda_modulation=0.30, serotonin_modulation=0.10,
+        lcc_boost=0.015, love_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Inhibitory neurotransmitter; supports sleep. No pro-convulsant activity.",
+        interaction_group="nmda_modulator"
+    ),
+
+    # --- Mitochondrial / Energy ---
+    'coq10': Supplement(
+        name='CoQ10',
+        dose_mg=200, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.30,
+        mitochondrial_support=0.75, anti_inflammatory=0.25,
+        lcc_boost=0.005, environment_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Mitochondrial support; antioxidant. No seizure risk. May benefit mitochondrial epilepsy variants."
+    ),
+    'creatine': Supplement(
+        name='Creatine',
+        dose_mg=5000, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.35,
+        mitochondrial_support=0.60,
+        lcc_boost=0.005, intuition_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Phosphocreatine buffer for brain energy. Neuroprotective; no seizure risk."
+    ),
 }
 
+
+# ============================================================
+# INTERACTION DETECTION
+# ============================================================
+
+INTERACTION_CONFLICTS = {
+    ("dopamine_precursor", "dopamine_precursor"): "⚠️ Two dopamine precursors in same stack — high depletion risk. Use on alternate days.",
+    ("faah_inhibitor", "faah_inhibitor"): "ℹ️ Multiple FAAH inhibitors — effects cap via diminishing returns (already handled in simulation).",
+    ("cb1_agonist", "cb1_agonist"): "ℹ️ Multiple CB1 agonists — receptor saturation risk above 3 agents.",
+}
+
+
+def detect_interactions(supp_objects: List[Supplement]) -> List[str]:
+    """Detect pharmacological interactions between supplements."""
+    warnings = []
+    groups = [s.interaction_group for s in supp_objects if s.interaction_group]
+
+    # Check group conflicts
+    for i in range(len(groups)):
+        for j in range(i + 1, len(groups)):
+            key = tuple(sorted([groups[i], groups[j]]))
+            if key in INTERACTION_CONFLICTS:
+                msg = INTERACTION_CONFLICTS[key]
+                if msg not in warnings:
+                    warnings.append(msg)
+
+    # Check known interaction notes
+    for s in supp_objects:
+        for note in s.known_interactions:
+            if note not in warnings:
+                warnings.append(f"💊 {s.name}: {note}")
+
+    return warnings
+
+
+# ============================================================
+# PERMISSIBILITY DISTRIBUTION (PD — URB #615)
+# ============================================================
+
+def compute_pd(gile_truth: float, d2: float, lcc: float) -> Dict[str, float]:
+    """
+    Compute the 5-state PD (Permissibility Distribution) over {TT, TI, TF, DT, EV}.
+    Based on URB #615 logic with D2 as the Tralse meter (URB #619).
+
+    TT  = True-Tralse (high truth, some indeterminacy)
+    TI  = Tralse-Indeterminate (mid-truth, high indeterminacy)
+    TF  = Tralse-False (low truth, some indeterminacy)
+    DT  = Double Tralse (total indeterminacy / absence of truth-content)
+    EV  = EV-dominant (existence-driven, truth secondary)
+    """
+    # D2 drives indeterminacy allocation
+    # gile_truth drives T-pole vs F-pole
+    # lcc drives EV weight
+
+    dt_weight = max(0.0, (d2 - 0.35) / 0.65) ** 1.5  # rises sharply above 0.35
+    dt_weight = min(dt_weight, 0.70)
+
+    remaining = 1.0 - dt_weight
+
+    ev_weight = remaining * (1.0 - gile_truth) * 0.3 * (1.0 - lcc * 0.5)
+    ev_weight = max(0.0, ev_weight)
+    remaining -= ev_weight
+
+    # Indeterminacy band (TI) peaks at d2=0.5
+    ti_weight = remaining * (1.0 - abs(d2 - 0.5) * 2) * d2
+    ti_weight = max(0.0, ti_weight)
+    remaining -= ti_weight
+
+    # Allocate TT vs TF by gile_truth
+    tt_weight = remaining * gile_truth
+    tf_weight = remaining * (1.0 - gile_truth)
+
+    total = tt_weight + ti_weight + tf_weight + dt_weight + ev_weight
+    if total <= 0:
+        return {'TT': 0.2, 'TI': 0.2, 'TF': 0.2, 'DT': 0.2, 'EV': 0.2}
+
+    return {
+        'TT': round(tt_weight / total, 3),
+        'TI': round(ti_weight / total, 3),
+        'TF': round(tf_weight / total, 3),
+        'DT': round(dt_weight / total, 3),
+        'EV': round(ev_weight / total, 3),
+    }
+
+
+# ============================================================
+# EXISTENCE VALUE (EV — URB #609)
+# ============================================================
+
+def compute_ev(gile_g: float, gile_i: float, gile_l: float, gile_e: float,
+               lcc: float, coherence: float) -> Dict[str, float]:
+    """
+    Compute Existence Value (EV) across Four Dimensions of Existence (FDE).
+    FDE-1 = EF (physical causal presence); FDE-2 = Moral; FDE-3 = Meaning; FDE-4 = Aesthetics.
+    """
+    fde1 = (gile_e * 0.6 + lcc * 0.4)                    # EF: physical/energetic
+    fde2 = max(0.0, gile_g)                                # Moral Presence (no negatives — privation)
+    fde3 = (gile_i * 0.55 + gile_l * 0.45)               # Conscious Meaning
+    fde4 = (coherence * 0.5 + gile_l * 0.3 + gile_e * 0.2)  # Aesthetics / structural harmony
+
+    ev_total = 0.35 * fde1 + 0.25 * fde2 + 0.25 * fde3 + 0.15 * fde4
+
+    return {
+        'fde1_ef': round(fde1, 3),
+        'fde2_moral': round(fde2, 3),
+        'fde3_meaning': round(fde3, 3),
+        'fde4_aesthetics': round(fde4, 3),
+        'ev_total': round(ev_total, 3),
+    }
+
+
+# ============================================================
+# PREDICTION RESULT
+# ============================================================
 
 @dataclass
 class PredictionResult:
     """Result of pharmacological simulation"""
     timestamp: datetime
     supplements: List[str]
-    
+
     # Predicted changes
     lcc_change: float = 0.0
     gile_g_change: float = 0.0
@@ -297,65 +509,78 @@ class PredictionResult:
     gile_l_change: float = 0.0
     gile_e_change: float = 0.0
     coherence_change: float = 0.0
-    true_tralseness_change: float = 0.0
-    
+    true_tralseness_change: float = 0.0  # kept for DB compat
+
     # Predicted final state
     final_lcc: float = 0.0
-    final_gile_composite: float = 0.0
+    final_gile_composite: float = 0.0   # canonical weights
+    final_gile_truth: float = 0.0       # gile_composite × coherence
     final_coherence: float = 0.0
-    final_true_tralseness: float = 0.0
-    
-    # Predicted biometric changes
+    final_true_tralseness: float = 0.0  # kept for DB compat
+
+    # HEM D2 (Tralse meter — URB #619)
+    hem_d2_before: float = 0.0
+    hem_d2_after: float = 0.0
+
+    # EV (URB #609)
+    ev_before: Dict = field(default_factory=dict)
+    ev_after: Dict = field(default_factory=dict)
+
+    # PD distribution (URB #615)
+    pd_before: Dict = field(default_factory=dict)
+    pd_after: Dict = field(default_factory=dict)
+
+    # Biometric predictions
     heart_rate_change: float = 0.0
     rmssd_change: float = 0.0
-    
-    # Time-series predictions
+
+    # Timeline
     time_to_onset_min: float = 30.0
     time_to_peak_min: float = 60.0
     duration_hours: float = 4.0
-    
-    # Anandamide estimation
+
+    # Anandamide
     anandamide_multiplier: float = 1.0
-    
-    # Physical sensation predictions
+
+    # Safety
+    epilepsy_flags: List[Dict] = field(default_factory=list)
+    interaction_warnings: List[str] = field(default_factory=list)
+
+    # Phenomology
     predicted_sensations: List[str] = field(default_factory=list)
     predicted_emotions: List[str] = field(default_factory=list)
     synchronicity_likelihood: float = 0.5
-    
-    # Confidence
     confidence: float = 0.5
 
+
+# ============================================================
+# MAIN SIMULATOR CLASS
+# ============================================================
 
 class TIPharmacologicalSimulator:
     """
     Personalized pharmacological simulator using TI framework.
-    
-    This models drug/supplement effects through consciousness metrics,
-    genetics, and biometrics - something population-based AI cannot do.
+    Integrates URB #619 (HEM-EF Bridge) and URB #615 (PD/MR/EAR).
     """
-    
+
     def __init__(self, user_id: str = 'brandon'):
         self.user_id = user_id
         self.genetic_profile = GeneticProfile()
         self.load_user_profile()
-    
+
     def load_user_profile(self):
-        """Load user's genetic and historical data from database"""
         if not DATABASE_URL:
             self._set_brandon_defaults()
             return
-            
+
         try:
             conn = psycopg2.connect(DATABASE_URL)
             cur = conn.cursor(cursor_factory=RealDictCursor)
-            
-            # Try to load genetic profile
             cur.execute("""
-                SELECT * FROM ti_genetic_profiles 
-                WHERE user_id = %s 
+                SELECT * FROM ti_genetic_profiles
+                WHERE user_id = %s
                 ORDER BY created_at DESC LIMIT 1
             """, (self.user_id,))
-            
             row = cur.fetchone()
             if row:
                 self.genetic_profile = GeneticProfile(
@@ -370,26 +595,46 @@ class TIPharmacologicalSimulator:
                 )
             else:
                 self._set_brandon_defaults()
-            
             cur.close()
             conn.close()
         except Exception as e:
             print(f"Could not load profile from DB: {e}")
             self._set_brandon_defaults()
-    
+
     def _set_brandon_defaults(self):
-        """Set Brandon's known genetic profile"""
         self.genetic_profile = GeneticProfile(
-            faah_activity=0.7,  # Lower = good for anandamide
-            comt_activity=0.8,  # Slightly lower = worrier variant
-            serotonin_sensitivity=1.3,  # Higher sensitivity
+            faah_activity=0.7,
+            comt_activity=0.8,
+            serotonin_sensitivity=1.3,
             bdnf_expression=1.1,
-            schizotypy_snp_count=180,  # 180+ schizotypy SNPs
-            cb1_receptor_density=1.2,  # Higher density
+            schizotypy_snp_count=180,
+            cb1_receptor_density=1.2,
             gaba_sensitivity=1.1,
             dopamine_sensitivity=1.2
         )
-    
+
+    def _resolve_supplements(self, supplements: List[str]) -> List[Supplement]:
+        """Match supplement keys/names to database entries."""
+        result = []
+        seen = set()
+        for name in supplements:
+            key = name.lower().replace(' ', '_').replace('-', '_')
+            if key in SUPPLEMENT_DATABASE and key not in seen:
+                result.append(SUPPLEMENT_DATABASE[key])
+                seen.add(key)
+                continue
+            if name.lower() in SUPPLEMENT_DATABASE and name.lower() not in seen:
+                result.append(SUPPLEMENT_DATABASE[name.lower()])
+                seen.add(name.lower())
+                continue
+            # Partial match
+            for k, s in SUPPLEMENT_DATABASE.items():
+                if k not in seen and (name.lower() in k or k in name.lower()):
+                    result.append(s)
+                    seen.add(k)
+                    break
+        return result
+
     def simulate(
         self,
         supplements: List[str],
@@ -398,174 +643,227 @@ class TIPharmacologicalSimulator:
         session_type: str = 'standard'
     ) -> PredictionResult:
         """
-        Simulate the effects of supplements on consciousness state.
-        
-        This is where TI beats Google - we model through consciousness, not just biology.
+        Simulate supplement stack effects through the TI framework.
+        Integrates canonical GILE weights, EV, PD, HEM D2 (URB #619).
         """
-        
-        # Get supplement objects
-        supp_objects = []
-        for name in supplements:
-            key = name.lower().replace(' ', '_').replace('-', '_')
-            if key in SUPPLEMENT_DATABASE:
-                supp_objects.append(SUPPLEMENT_DATABASE[key])
-            elif name.lower() in SUPPLEMENT_DATABASE:
-                supp_objects.append(SUPPLEMENT_DATABASE[name.lower()])
-        
-        if not supp_objects:
-            # Try partial matching
-            for name in supplements:
-                for key, supp in SUPPLEMENT_DATABASE.items():
-                    if name.lower() in key or key in name.lower():
-                        supp_objects.append(supp)
-                        break
-        
-        # Calculate combined effects
-        total_faah_inhibition = 0.0
-        total_cb1_activation = 0.0
-        total_nape_pld_activation = 0.0
-        total_anti_inflammatory = 0.0
+        supp_objects = self._resolve_supplements(supplements)
+
+        # --- Interaction detection ---
+        interaction_warnings = detect_interactions(supp_objects)
+
+        # --- Epilepsy flags ---
+        epilepsy_flags = []
+        for s in supp_objects:
+            if s.epilepsy_risk in ("MODERATE", "HIGH", "CONTRAINDICATED"):
+                epilepsy_flags.append({
+                    'supplement': s.name,
+                    'risk': s.epilepsy_risk,
+                    'note': s.epilepsy_note
+                })
+
+        # --- Combine mechanisms (multiplicative for same-receptor effects) ---
+        total_faah = 0.0
+        total_cb1 = 0.0
+        total_nape = 0.0
+        total_anti_inflam = 0.0
         total_bdnf = 0.0
+        total_dopamine = 0.0
+        total_serotonin = 0.0
+        total_gaba = 0.0
+        total_nmda = 0.0
+        total_ach = 0.0
+        total_mito = 0.0
+
         total_lcc_boost = 0.0
-        total_love_boost = 0.0
-        total_intuition_boost = 0.0
-        total_goodness_boost = 0.0
-        total_environment_boost = 0.0
-        avg_absorption_time = 0.0
+        total_love = 0.0
+        total_intuition = 0.0
+        total_goodness = 0.0
+        total_env = 0.0
+
+        avg_absorption = 0.0
         avg_duration = 0.0
-        
-        for supp in supp_objects:
-            # Multiplicative stacking for same-mechanism effects (not additive)
-            total_faah_inhibition = 1 - (1 - total_faah_inhibition) * (1 - supp.faah_inhibition)
-            total_cb1_activation = 1 - (1 - total_cb1_activation) * (1 - supp.cb1_activation)
-            total_nape_pld_activation = 1 - (1 - total_nape_pld_activation) * (1 - supp.nape_pld_activation)
-            total_anti_inflammatory = 1 - (1 - total_anti_inflammatory) * (1 - supp.anti_inflammatory)
-            total_bdnf = 1 - (1 - total_bdnf) * (1 - supp.bdnf_upregulation)
-            
-            # Consciousness effects stack additively
-            total_lcc_boost += supp.lcc_boost
-            total_love_boost += supp.love_boost
-            total_intuition_boost += supp.intuition_boost
-            total_goodness_boost += supp.goodness_boost
-            total_environment_boost += supp.environment_boost
-            
-            avg_absorption_time += supp.absorption_time_min
-            avg_duration += supp.half_life_hours
-        
-        n_supps = len(supp_objects) if supp_objects else 1
-        avg_absorption_time /= n_supps
-        avg_duration /= n_supps
-        
-        # Apply genetic modifiers
+
+        for s in supp_objects:
+            total_faah = 1 - (1 - total_faah) * (1 - s.faah_inhibition)
+            total_cb1 = 1 - (1 - total_cb1) * (1 - s.cb1_activation)
+            total_nape = 1 - (1 - total_nape) * (1 - s.nape_pld_activation)
+            total_anti_inflam = 1 - (1 - total_anti_inflam) * (1 - s.anti_inflammatory)
+            total_bdnf = 1 - (1 - total_bdnf) * (1 - s.bdnf_upregulation)
+            total_dopamine = 1 - (1 - total_dopamine) * (1 - s.dopamine_modulation)
+            total_serotonin = 1 - (1 - total_serotonin) * (1 - s.serotonin_modulation)
+            total_gaba = 1 - (1 - total_gaba) * (1 - s.gaba_modulation)
+            total_nmda = 1 - (1 - total_nmda) * (1 - s.nmda_modulation)
+            total_ach = 1 - (1 - total_ach) * (1 - s.acetylcholine_modulation)
+            total_mito = 1 - (1 - total_mito) * (1 - s.mitochondrial_support)
+
+            total_lcc_boost += s.lcc_boost
+            total_love += s.love_boost
+            total_intuition += s.intuition_boost
+            total_goodness += s.goodness_boost
+            total_env += s.environment_boost
+
+            avg_absorption += s.absorption_time_min
+            avg_duration += s.half_life_hours
+
+        n = len(supp_objects) if supp_objects else 1
+        avg_absorption /= n
+        avg_duration /= n
+
+        # --- Genetic modifiers ---
         genetic_amp = self.genetic_profile.consciousness_amplification_factor()
-        
-        # FAAH inhibition is more effective with lower FAAH activity
-        faah_effectiveness = total_faah_inhibition * (2.0 - self.genetic_profile.faah_activity)
-        
-        # CB1 activation is more effective with higher receptor density
-        cb1_effectiveness = total_cb1_activation * self.genetic_profile.cb1_receptor_density
-        
-        # Calculate anandamide multiplier
-        # FAAH inhibition prevents breakdown, NAPE-PLD increases synthesis
-        anandamide_multiplier = 1.0
-        anandamide_multiplier *= (1 + faah_effectiveness * 0.8)  # Up to 80% from FAAH block
-        anandamide_multiplier *= (1 + total_nape_pld_activation * 0.6)  # Up to 60% from synthesis
-        anandamide_multiplier *= (1 + cb1_effectiveness * 0.3)  # Up to 30% from receptor activation
-        
-        # Apply consciousness baseline amplification
-        # Higher LCC means supplements work BETTER (non-linear)
-        consciousness_multiplier = 1.0 + (current_consciousness.lcc - 0.5) * 0.5
-        
-        # Calculate consciousness changes
-        lcc_change = total_lcc_boost * genetic_amp * consciousness_multiplier
-        gile_g_change = total_goodness_boost * genetic_amp
-        gile_i_change = total_intuition_boost * genetic_amp * (1 + self.genetic_profile.schizotypy_snp_count / 200)
-        gile_l_change = total_love_boost * genetic_amp * (anandamide_multiplier - 1) * 0.5
-        gile_e_change = total_environment_boost * genetic_amp
-        
-        # Anti-inflammatory effects boost coherence
-        coherence_change = total_anti_inflammatory * 0.05 * consciousness_multiplier
-        
-        # Calculate final states (capped at reasonable maximums)
-        final_lcc = min(1.0, current_consciousness.lcc + lcc_change)
-        final_gile_g = min(1.0, current_consciousness.gile_g + gile_g_change)
-        final_gile_i = min(1.0, current_consciousness.gile_i + gile_i_change)
-        final_gile_l = min(1.0, current_consciousness.gile_l + gile_l_change)
-        final_gile_e = min(1.0, current_consciousness.gile_e + gile_e_change)
-        final_coherence = min(1.0, current_consciousness.coherence + coherence_change)
-        
-        final_gile_composite = 0.25 * final_gile_g + 0.25 * final_gile_i + 0.30 * final_gile_l + 0.20 * final_gile_e
-        final_true_tralseness = 0.4 * final_lcc + 0.3 * final_coherence + 0.3 * final_gile_composite
-        
-        # Biometric predictions
-        # Higher anandamide = lower heart rate, higher RMSSD (parasympathetic)
-        heart_rate_change = -(anandamide_multiplier - 1) * 15  # Up to -15 bpm
-        rmssd_change = (anandamide_multiplier - 1) * 25  # Up to +25 ms
-        
-        # Predict physical sensations based on effects
-        sensations = []
-        emotions = []
-        
-        if anandamide_multiplier > 1.5:
-            sensations.append("Warmth spreading through body")
-            sensations.append("Tingling in extremities")
-        if anandamide_multiplier > 2.0:
-            sensations.append("Feeling of lightness")
-            sensations.append("Reduced physical tension")
-        if total_anti_inflammatory > 0.5:
-            sensations.append("Reduced inflammation/pain perception")
-        if cb1_effectiveness > 0.5:
-            sensations.append("Mild euphoria")
-        
-        if gile_l_change > 0.05:
-            emotions.append("Deep sense of love/connection")
-        if gile_i_change > 0.03:
-            emotions.append("Enhanced intuition/knowing")
-        if lcc_change > 0.02:
-            emotions.append("Feeling of consciousness expansion")
-        if total_anti_inflammatory > 0.5:
-            emotions.append("Peace and calmness")
-        if final_lcc > 0.95:
-            emotions.append("Sense of future pulling forward")
-            emotions.append("Synchronicities becoming obvious")
-        
-        # Synchronicity likelihood based on LCC
-        synchronicity_likelihood = min(0.95, final_lcc * 0.9 + (anandamide_multiplier - 1) * 0.1)
-        
-        # Calculate confidence based on how much data we have
-        confidence = 0.6  # Base confidence
+        faah_eff = total_faah * (2.0 - self.genetic_profile.faah_activity)
+        cb1_eff = total_cb1 * self.genetic_profile.cb1_receptor_density
+        dopamine_eff = total_dopamine * self.genetic_profile.dopamine_sensitivity
+        serotonin_eff = total_serotonin * self.genetic_profile.serotonin_sensitivity
+
+        # --- Anandamide multiplier ---
+        anandamide_mult = 1.0
+        anandamide_mult *= (1 + faah_eff * 0.8)
+        anandamide_mult *= (1 + total_nape * 0.6)
+        anandamide_mult *= (1 + cb1_eff * 0.3)
+
+        # --- Consciousness baseline amplification (non-linear: high LCC = better response) ---
+        cons_mult = 1.0 + (current_consciousness.lcc - 0.5) * 0.5
+
+        # --- GILE changes ---
+        g_change = (total_goodness + total_anti_inflam * 0.02 + total_nmda * 0.01) * genetic_amp
+        i_change = (total_intuition + total_ach * 0.03 + total_bdnf * 0.02
+                    + dopamine_eff * 0.015) * genetic_amp * (1 + self.genetic_profile.schizotypy_snp_count / 200)
+        l_change = (total_love + (anandamide_mult - 1) * 0.04 + serotonin_eff * 0.02) * genetic_amp
+        e_change = (total_env + total_mito * 0.03 + total_anti_inflam * 0.01) * genetic_amp
+
+        lcc_change = total_lcc_boost * genetic_amp * cons_mult
+        coherence_change = (total_anti_inflam * 0.05 + total_gaba * 0.02 + total_nmda * 0.01) * cons_mult
+
+        # --- Final states ---
+        final_g = float(np.clip(current_consciousness.gile_g + g_change, 0, 1))
+        final_i = float(np.clip(current_consciousness.gile_i + i_change, 0, 1))
+        final_l = float(np.clip(current_consciousness.gile_l + l_change, 0, 1))
+        final_e = float(np.clip(current_consciousness.gile_e + e_change, 0, 1))
+        final_lcc = float(np.clip(current_consciousness.lcc + lcc_change, 0, 1))
+        final_coherence = float(np.clip(current_consciousness.coherence + coherence_change, 0, 1))
+
+        # Canonical GILE composite (URB #576)
+        final_gile_composite = GILE_W_G * final_g + GILE_W_I * final_i + GILE_W_L * final_l + GILE_W_E * final_e
+        final_gile_truth = final_gile_composite * final_coherence
+
+        # HEM D2 before/after (URB #619)
+        d2_before = current_consciousness.hem_d2
+        dims_after = [final_g, final_i, final_l, final_e]
+        d2_after = float(np.clip(
+            0.5 * float(np.var(dims_after)) * 4 + 0.5 * (1.0 - final_coherence), 0, 1
+        ))
+
+        # EV before/after (URB #609)
+        ev_before = compute_ev(current_consciousness.gile_g, current_consciousness.gile_i,
+                               current_consciousness.gile_l, current_consciousness.gile_e,
+                               current_consciousness.lcc, current_consciousness.coherence)
+        ev_after = compute_ev(final_g, final_i, final_l, final_e, final_lcc, final_coherence)
+
+        # PD before/after (URB #615)
+        pd_before = compute_pd(current_consciousness.gile_truth_score, d2_before, current_consciousness.lcc)
+        pd_after = compute_pd(final_gile_truth, d2_after, final_lcc)
+
+        # Biometrics
+        hr_change = -(anandamide_mult - 1) * 15 - total_gaba * 3
+        rmssd_change = (anandamide_mult - 1) * 25 + total_gaba * 5
+
+        # Sensations & emotions
+        sensations, emotions = self._predict_phenomenology(
+            anandamide_mult, cb1_eff, total_anti_inflam, total_bdnf,
+            l_change, i_change, lcc_change, total_ach, total_dopamine, final_lcc
+        )
+
+        # Synchronicity: now includes D2 reduction as signal
+        d2_reduction = max(0.0, d2_before - d2_after)
+        synchronicity = min(0.95, final_lcc * 0.7 + (anandamide_mult - 1) * 0.1 + d2_reduction * 0.2)
+
+        # Confidence
+        confidence = 0.60
         if self.genetic_profile.schizotypy_snp_count > 0:
-            confidence += 0.1  # We have genetic data
+            confidence += 0.10
         if current_consciousness.lcc > 0.9:
-            confidence += 0.1  # High baseline = more predictable
+            confidence += 0.08
+        if len(supp_objects) >= 3:
+            confidence += 0.05   # more data points
         confidence = min(0.95, confidence)
-        
+
+        # Legacy true_tralseness field
+        final_tt = 0.4 * final_lcc + 0.3 * final_coherence + 0.3 * final_gile_composite
+
         return PredictionResult(
             timestamp=datetime.now(),
             supplements=[s.name for s in supp_objects],
             lcc_change=lcc_change,
-            gile_g_change=gile_g_change,
-            gile_i_change=gile_i_change,
-            gile_l_change=gile_l_change,
-            gile_e_change=gile_e_change,
+            gile_g_change=g_change,
+            gile_i_change=i_change,
+            gile_l_change=l_change,
+            gile_e_change=e_change,
             coherence_change=coherence_change,
-            true_tralseness_change=final_true_tralseness - current_consciousness.true_tralseness,
+            true_tralseness_change=final_tt - current_consciousness.true_tralseness,
             final_lcc=final_lcc,
             final_gile_composite=final_gile_composite,
+            final_gile_truth=final_gile_truth,
             final_coherence=final_coherence,
-            final_true_tralseness=final_true_tralseness,
-            heart_rate_change=heart_rate_change,
+            final_true_tralseness=final_tt,
+            hem_d2_before=d2_before,
+            hem_d2_after=d2_after,
+            ev_before=ev_before,
+            ev_after=ev_after,
+            pd_before=pd_before,
+            pd_after=pd_after,
+            heart_rate_change=hr_change,
             rmssd_change=rmssd_change,
-            time_to_onset_min=avg_absorption_time * 0.5,
-            time_to_peak_min=avg_absorption_time,
+            time_to_onset_min=avg_absorption * 0.5,
+            time_to_peak_min=avg_absorption,
             duration_hours=avg_duration * 2,
-            anandamide_multiplier=anandamide_multiplier,
+            anandamide_multiplier=anandamide_mult,
+            epilepsy_flags=epilepsy_flags,
+            interaction_warnings=interaction_warnings,
             predicted_sensations=sensations,
             predicted_emotions=emotions,
-            synchronicity_likelihood=synchronicity_likelihood,
-            confidence=confidence
+            synchronicity_likelihood=synchronicity,
+            confidence=confidence,
         )
-    
+
+    def _predict_phenomenology(
+        self, anandamide_mult, cb1_eff, anti_inflam, bdnf,
+        l_change, i_change, lcc_change, ach, dopamine, final_lcc
+    ) -> Tuple[List[str], List[str]]:
+        sensations = []
+        emotions = []
+
+        if anandamide_mult > 1.5:
+            sensations.append("Warmth spreading through body")
+            sensations.append("Tingling in extremities")
+        if anandamide_mult > 2.0:
+            sensations.append("Feeling of lightness")
+            sensations.append("Reduced physical tension")
+        if anti_inflam > 0.5:
+            sensations.append("Reduced inflammation / pain perception")
+        if cb1_eff > 0.5:
+            sensations.append("Mild euphoria")
+        if ach > 0.4:
+            sensations.append("Mental sharpness and clarity")
+        if dopamine > 0.4:
+            sensations.append("Motivated, energized")
+
+        if l_change > 0.04:
+            emotions.append("Deep sense of love and connection")
+        if i_change > 0.03:
+            emotions.append("Enhanced intuition and knowing")
+        if lcc_change > 0.02:
+            emotions.append("Expansion of consciousness awareness")
+        if anti_inflam > 0.5:
+            emotions.append("Peace and calmness")
+        if bdnf > 0.4:
+            emotions.append("Openness and neuroplasticity — good time to learn")
+        if final_lcc > 0.95:
+            emotions.append("Sense of future pulling forward")
+            emotions.append("Synchronicities becoming obvious")
+
+        return sensations, emotions
+
     def predict_time_series(
         self,
         supplements: List[str],
@@ -574,108 +872,70 @@ class TIPharmacologicalSimulator:
         duration_hours: float = 6.0,
         interval_min: float = 15.0
     ) -> List[Dict]:
-        """
-        Predict consciousness state over time after taking supplements.
-        Returns time-series data for visualization.
-        """
-        
-        # Get peak prediction
-        peak_result = self.simulate(supplements, current_consciousness, current_biometrics)
-        
-        time_series = []
-        current_time = 0.0
-        
-        while current_time <= duration_hours * 60:
-            # Calculate effect curve (absorption -> peak -> decay)
-            time_factor = self._calculate_time_factor(
-                current_time,
-                peak_result.time_to_onset_min,
-                peak_result.time_to_peak_min,
-                peak_result.duration_hours * 60
-            )
-            
-            # Scale all effects by time factor
-            point = {
-                'time_min': current_time,
-                'time_hours': current_time / 60,
-                'lcc': current_consciousness.lcc + peak_result.lcc_change * time_factor,
-                'gile_l': current_consciousness.gile_l + peak_result.gile_l_change * time_factor,
-                'gile_i': current_consciousness.gile_i + peak_result.gile_i_change * time_factor,
-                'gile_g': current_consciousness.gile_g + peak_result.gile_g_change * time_factor,
-                'gile_e': current_consciousness.gile_e + peak_result.gile_e_change * time_factor,
-                'coherence': current_consciousness.coherence + peak_result.coherence_change * time_factor,
-                'heart_rate': current_biometrics.heart_rate + peak_result.heart_rate_change * time_factor,
-                'rmssd': current_biometrics.rmssd + peak_result.rmssd_change * time_factor,
-                'anandamide_multiplier': 1.0 + (peak_result.anandamide_multiplier - 1.0) * time_factor,
-                'effect_intensity': time_factor
-            }
-            
-            time_series.append(point)
-            current_time += interval_min
-        
-        return time_series
-    
-    def _calculate_time_factor(
-        self,
-        current_time: float,
-        onset_time: float,
-        peak_time: float,
-        total_duration: float
-    ) -> float:
-        """Calculate effect intensity at a given time point"""
-        
-        if current_time < onset_time:
-            # Absorption phase (exponential rise)
-            return (current_time / onset_time) ** 2 * 0.3
-        elif current_time < peak_time:
-            # Rise to peak
-            progress = (current_time - onset_time) / (peak_time - onset_time)
-            return 0.3 + 0.7 * progress
-        elif current_time < total_duration:
-            # Decay phase (exponential decay)
-            decay_progress = (current_time - peak_time) / (total_duration - peak_time)
-            return 1.0 * np.exp(-decay_progress * 2)
-        else:
-            return 0.1  # Residual effect
-    
+        peak = self.simulate(supplements, current_consciousness, current_biometrics)
+
+        series = []
+        t = 0.0
+        while t <= duration_hours * 60:
+            tf = self._time_factor(t, peak.time_to_onset_min, peak.time_to_peak_min,
+                                   peak.duration_hours * 60)
+            series.append({
+                'time_min': t,
+                'time_hours': t / 60,
+                'lcc': current_consciousness.lcc + peak.lcc_change * tf,
+                'gile_g': current_consciousness.gile_g + peak.gile_g_change * tf,
+                'gile_l': current_consciousness.gile_l + peak.gile_l_change * tf,
+                'gile_i': current_consciousness.gile_i + peak.gile_i_change * tf,
+                'gile_e': current_consciousness.gile_e + peak.gile_e_change * tf,
+                'coherence': current_consciousness.coherence + peak.coherence_change * tf,
+                'heart_rate': current_biometrics.heart_rate + peak.heart_rate_change * tf,
+                'rmssd': current_biometrics.rmssd + peak.rmssd_change * tf,
+                'anandamide_multiplier': 1.0 + (peak.anandamide_multiplier - 1.0) * tf,
+                'effect_intensity': tf,
+            })
+            t += interval_min
+        return series
+
+    def _time_factor(self, t, onset, peak_t, total) -> float:
+        if t < onset:
+            return (t / onset) ** 2 * 0.3 if onset > 0 else 0.0
+        elif t < peak_t:
+            p = (t - onset) / (peak_t - onset) if peak_t > onset else 1.0
+            return 0.3 + 0.7 * p
+        elif t < total:
+            dp = (t - peak_t) / (total - peak_t) if total > peak_t else 1.0
+            return float(np.exp(-dp * 2))
+        return 0.1
+
     def compare_stacks(
         self,
         stack_options: List[List[str]],
         current_consciousness: ConsciousnessState,
         current_biometrics: BiometricState
     ) -> List[Tuple[List[str], PredictionResult]]:
-        """Compare multiple supplement stacks to find the best one"""
-        
         results = []
         for stack in stack_options:
-            prediction = self.simulate(stack, current_consciousness, current_biometrics)
-            results.append((stack, prediction))
-        
-        # Sort by LCC improvement
-        results.sort(key=lambda x: x[1].final_lcc, reverse=True)
+            pred = self.simulate(stack, current_consciousness, current_biometrics)
+            results.append((stack, pred))
+        results.sort(key=lambda x: x[1].final_gile_truth, reverse=True)
         return results
-    
+
     def save_prediction(self, prediction: PredictionResult):
-        """Save prediction to database for later validation"""
         if not DATABASE_URL:
             return
-        
         try:
             conn = psycopg2.connect(DATABASE_URL)
             cur = conn.cursor()
-            
             cur.execute("""
                 INSERT INTO ti_pharmacological_predictions (
                     user_id, timestamp, supplements,
                     predicted_lcc, predicted_gile_composite, predicted_coherence,
                     predicted_true_tralseness, predicted_anandamide_multiplier,
-                    predicted_sensations, predicted_emotions,
-                    confidence
+                    predicted_sensations, predicted_emotions, confidence
                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
             """, (
-                self.user_id,
-                prediction.timestamp,
+                self.user_id, prediction.timestamp,
                 json.dumps(prediction.supplements),
                 prediction.final_lcc,
                 prediction.final_gile_composite,
@@ -686,13 +946,15 @@ class TIPharmacologicalSimulator:
                 json.dumps(prediction.predicted_emotions),
                 prediction.confidence
             ))
-            
+            pred_id = cur.fetchone()[0]
             conn.commit()
             cur.close()
             conn.close()
+            return pred_id
         except Exception as e:
             print(f"Could not save prediction: {e}")
-    
+            return None
+
     def validate_prediction(
         self,
         prediction_id: int,
@@ -701,48 +963,62 @@ class TIPharmacologicalSimulator:
         actual_sensations: List[str],
         actual_emotions: List[str]
     ):
-        """Validate a previous prediction against actual results"""
         if not DATABASE_URL:
             return
-        
         try:
             conn = psycopg2.connect(DATABASE_URL)
             cur = conn.cursor()
-            
             cur.execute("""
                 UPDATE ti_pharmacological_predictions
-                SET actual_lcc = %s,
-                    actual_gile_composite = %s,
-                    actual_sensations = %s,
-                    actual_emotions = %s,
+                SET actual_lcc = %s, actual_gile_composite = %s,
+                    actual_sensations = %s, actual_emotions = %s,
                     validated_at = NOW()
                 WHERE id = %s
-            """, (
-                actual_lcc,
-                actual_gile_composite,
-                json.dumps(actual_sensations),
-                json.dumps(actual_emotions),
-                prediction_id
-            ))
-            
+            """, (actual_lcc, actual_gile_composite,
+                  json.dumps(actual_sensations), json.dumps(actual_emotions),
+                  prediction_id))
             conn.commit()
             cur.close()
             conn.close()
         except Exception as e:
             print(f"Could not validate prediction: {e}")
 
+    def get_prediction_history(self, limit: int = 20) -> List[Dict]:
+        if not DATABASE_URL:
+            return []
+        try:
+            conn = psycopg2.connect(DATABASE_URL)
+            cur = conn.cursor(cursor_factory=RealDictCursor)
+            cur.execute("""
+                SELECT id, timestamp, supplements, predicted_lcc, predicted_gile_composite,
+                       predicted_anandamide_multiplier, confidence,
+                       actual_lcc, actual_gile_composite, validated_at
+                FROM ti_pharmacological_predictions
+                WHERE user_id = %s
+                ORDER BY timestamp DESC
+                LIMIT %s
+            """, (self.user_id, limit))
+            rows = [dict(r) for r in cur.fetchall()]
+            cur.close()
+            conn.close()
+            return rows
+        except Exception as e:
+            print(f"Could not load history: {e}")
+            return []
+
+
+# ============================================================
+# DATABASE SETUP
+# ============================================================
 
 def create_database_tables():
-    """Create necessary database tables for pharmacological simulator"""
     if not DATABASE_URL:
         print("No DATABASE_URL found")
         return
-    
     try:
         conn = psycopg2.connect(DATABASE_URL)
         cur = conn.cursor()
-        
-        # Genetic profiles table
+
         cur.execute("""
             CREATE TABLE IF NOT EXISTS ti_genetic_profiles (
                 id SERIAL PRIMARY KEY,
@@ -760,8 +1036,7 @@ def create_database_tables():
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
-        # Pharmacological predictions table
+
         cur.execute("""
             CREATE TABLE IF NOT EXISTS ti_pharmacological_predictions (
                 id SERIAL PRIMARY KEY,
@@ -784,110 +1059,29 @@ def create_database_tables():
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-        
+
         conn.commit()
         cur.close()
         conn.close()
-        print("Database tables created successfully!")
+        print("Database tables ready.")
     except Exception as e:
         print(f"Error creating tables: {e}")
 
 
-def demo_simulation():
-    """Demonstrate the pharmacological simulator"""
-    
-    print("=" * 80)
-    print("🧬 TI PHARMACOLOGICAL SIMULATOR - DEMO")
-    print("=" * 80)
-    
-    # Initialize simulator for Brandon
-    simulator = TIPharmacologicalSimulator(user_id='brandon')
-    
-    print(f"\n📊 Genetic Profile Loaded:")
-    print(f"   FAAH Activity: {simulator.genetic_profile.faah_activity} (lower = better for anandamide)")
-    print(f"   COMT Activity: {simulator.genetic_profile.comt_activity}")
-    print(f"   Schizotypy SNPs: {simulator.genetic_profile.schizotypy_snp_count}")
-    print(f"   Consciousness Amplification Factor: {simulator.genetic_profile.consciousness_amplification_factor():.2f}")
-    
-    # Current state (Brandon's elevated baseline)
-    current_consciousness = ConsciousnessState(
-        lcc=0.99,
-        gile_g=0.95,
-        gile_i=0.90,
-        gile_l=0.99,
-        gile_e=0.95,
-        coherence=0.99,
-        true_tralseness=0.98
-    )
-    
-    current_biometrics = BiometricState(
-        heart_rate=60,
-        rmssd=80,
-        alpha_power=0.85,
-        gamma_power=0.40
-    )
-    
-    print(f"\n📊 Current Consciousness State:")
-    print(f"   LCC: {current_consciousness.lcc:.1%}")
-    print(f"   GILE Composite: {current_consciousness.gile_composite:.3f}")
-    print(f"   Coherence: {current_consciousness.coherence:.1%}")
-    print(f"   True-Tralseness: {current_consciousness.true_tralseness:.1%}")
-    
-    print(f"\n📊 Current Biometrics:")
-    print(f"   Heart Rate: {current_biometrics.heart_rate} bpm")
-    print(f"   RMSSD: {current_biometrics.rmssd} ms")
-    
-    # Simulate Brandon's current stack
-    supplements = ['curcubrain', 'macamides_5pct', 'magnesium_l_threonate', 'omega3_dha', 'vitamin_b6_p5p']
-    
-    print(f"\n💊 Simulating Stack: {supplements}")
-    
-    result = simulator.simulate(supplements, current_consciousness, current_biometrics)
-    
-    print(f"\n" + "=" * 80)
-    print("🔮 PREDICTION RESULTS")
-    print("=" * 80)
-    
-    print(f"\n📈 Anandamide Multiplier: {result.anandamide_multiplier:.2f}x baseline")
-    print(f"   (You're predicted to have {result.anandamide_multiplier:.1f}x normal anandamide levels)")
-    
-    print(f"\n📊 Consciousness Changes:")
-    print(f"   LCC: {current_consciousness.lcc:.1%} → {result.final_lcc:.1%} (+{result.lcc_change:.3f})")
-    print(f"   Love (L): {current_consciousness.gile_l:.3f} → {current_consciousness.gile_l + result.gile_l_change:.3f} (+{result.gile_l_change:.3f})")
-    print(f"   Intuition (I): {current_consciousness.gile_i:.3f} → {current_consciousness.gile_i + result.gile_i_change:.3f} (+{result.gile_i_change:.3f})")
-    print(f"   Goodness (G): {current_consciousness.gile_g:.3f} → {current_consciousness.gile_g + result.gile_g_change:.3f} (+{result.gile_g_change:.3f})")
-    print(f"   Environment (E): {current_consciousness.gile_e:.3f} → {current_consciousness.gile_e + result.gile_e_change:.3f} (+{result.gile_e_change:.3f})")
-    print(f"   Coherence: {current_consciousness.coherence:.1%} → {result.final_coherence:.1%} (+{result.coherence_change:.3f})")
-    print(f"   True-Tralseness: {current_consciousness.true_tralseness:.1%} → {result.final_true_tralseness:.1%}")
-    
-    print(f"\n📊 Biometric Predictions:")
-    print(f"   Heart Rate: {current_biometrics.heart_rate} bpm → {current_biometrics.heart_rate + result.heart_rate_change:.0f} bpm")
-    print(f"   RMSSD: {current_biometrics.rmssd} ms → {current_biometrics.rmssd + result.rmssd_change:.0f} ms")
-    
-    print(f"\n⏰ Timeline:")
-    print(f"   Onset: ~{result.time_to_onset_min:.0f} minutes")
-    print(f"   Peak: ~{result.time_to_peak_min:.0f} minutes")
-    print(f"   Duration: ~{result.duration_hours:.1f} hours")
-    
-    print(f"\n✨ Predicted Physical Sensations:")
-    for sensation in result.predicted_sensations:
-        print(f"   • {sensation}")
-    
-    print(f"\n💜 Predicted Emotional States:")
-    for emotion in result.predicted_emotions:
-        print(f"   • {emotion}")
-    
-    print(f"\n🔮 Synchronicity Likelihood: {result.synchronicity_likelihood:.1%}")
-    print(f"📊 Prediction Confidence: {result.confidence:.1%}")
-    
-    print("\n" + "=" * 80)
-    print("✅ SIMULATION COMPLETE")
-    print("=" * 80)
-
-
 if __name__ == "__main__":
-    # Create database tables if needed
     create_database_tables()
-    
-    # Run demo
-    demo_simulation()
+
+    sim = TIPharmacologicalSimulator(user_id='brandon')
+    cs = ConsciousnessState(lcc=0.99, gile_g=0.95, gile_i=0.90, gile_l=0.99, gile_e=0.95, coherence=0.99)
+    bio = BiometricState(heart_rate=60, rmssd=80, alpha_power=0.85, gamma_power=0.40)
+
+    stack = ['curcubrain', 'macamides_5pct', 'magnesium_l_threonate', 'omega3_dha', 'vitamin_b6_p5p']
+    result = sim.simulate(stack, cs, bio)
+
+    print(f"Anandamide: {result.anandamide_multiplier:.2f}x")
+    print(f"Final LCC: {result.final_lcc:.1%}")
+    print(f"GILE Truth: {result.final_gile_truth:.3f}")
+    print(f"HEM D2 before/after: {result.hem_d2_before:.3f} → {result.hem_d2_after:.3f}")
+    print(f"EV total: {result.ev_before['ev_total']} → {result.ev_after['ev_total']}")
+    print(f"PD before: {result.pd_before}")
+    print(f"PD after:  {result.pd_after}")
