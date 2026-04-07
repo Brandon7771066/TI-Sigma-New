@@ -258,3 +258,91 @@ MR1 output: (GILE_score, EV_total)
 | GILE-I definition | Pattern recognition beyond inference | Value of knowing self/others |
 | Positivity of consciousness | Implicit in I | Explicitly in L |
 | Existence weights | Provisional fixed | Domain-variable, inferred from exemplars |
+
+---
+
+## 12. Addendum — Existence Precedes Essence: GILE Weights Derived from Existence Weights
+
+**Date added:** April 6, 2026  
+**Related:** URB #611 §3 (Domain-Variable GILE Weights)
+
+### 12.1 The Insight
+
+A critical dependency between the frameworks, realized April 6, 2026:
+
+> **GILE weights (essence) must be derived from Existence weights (existence), because there is no reliable a priori method of knowing which abstract things to value in a particular domain.**
+
+Jean-Paul Sartre's foundational existentialist claim — *existence precedes essence* — maps directly and precisely onto the GILE/Existence architecture. In TI Sigma terms:
+
+- **Existence** (EV, FDE) captures what is real, measurable, and causally present in a domain
+- **Essence** (GILE weights) captures which abstract values — Goodness, Knowing, Love, Aesthetics — matter most in that domain
+
+Sartre's claim was that you cannot determine what a being *should* value (essence) without first understanding what that being *is* and *encounters* (existence). TI Sigma gives this a formal computational structure: Existence measurements come first (parallel Track B in MR1), and from those measurements, you infer the domain-specific GILE weights that constitute the domain's evaluative essence.
+
+### 12.2 The Formal Dependency
+
+**Prior assumption (now revised):** GILE weights were thought to be derivable from abstract principles — G from octonionic geometry, I from quaternionic symmetry, etc. These derivations give the *universal reference weights*, not domain-specific weights.
+
+**New claim:** Domain-specific GILE weights must be read off from Existence measurements in the domain.
+
+Formally, for domain D:
+
+$$w_k^{\text{GILE},D} = f\left(w_j^{\text{EV},D}, \text{exemplar data in } D\right)$$
+
+The function f is not known analytically — it must be estimated empirically. But the dependency direction is clear: you first measure what exists and has causal impact (Existence weights), and from that, you infer which GILE dimensions are doing the most work in producing high-EV outcomes (GILE weights).
+
+### 12.3 Why No A Priori GILE Weights Are Reliable for Specific Domains
+
+Consider two domains:
+
+**Molecular biology:** The EF dimension of Existence (physical structure, frequency, amplitude) is paramount — the physical form of molecules determines their function. Physical Bonds (FDE-2) are also central — molecular binding IS the mechanism. Looking at what Existence measures are high among successful molecular biologists, you find: they work with physical precision (high EF sensitivity), they understand binding energetics (high Physical Bonds attention), and they have strong aesthetic recognition of elegant structures (high E-access). Therefore: domain GILE weights should be I-high (structural knowing), E-high (aesthetic precision), with G and L secondary.
+
+You could not have derived this a priori. You had to look at what exists in the domain first.
+
+**Psychotherapy:** The Physical Bonds dimension (FDE-2) — therapeutic alliance, neurochemical attunement — is central to outcome. Conscious meaning/valence (FDE-4) drives whether the client improves. Looking at what Existence measures are high among successful therapists: strong attunement (high Physical Bonds sensitivity) and strong meaning-generation capacity (high conscious valence engagement). Therefore: domain GILE weights should be L-high (conscious positive regard is the intervention), I-high (knowing the client), G-high (genuine orientation toward client's good).
+
+Again: not derivable a priori. Derived from Existence.
+
+### 12.4 The Procedure — Existence Weights First, Then GILE Weights
+
+**Revised domain calibration protocol:**
+
+```
+Step 1: Identify exemplars in domain D (N ≥ 20)
+Step 2: Assess FDE dimensions for each exemplar entity
+        → What has high EF in this domain?
+        → What physical bonds are central to success?
+        → What moral presence is observable?
+        → What conscious engagement is evident?
+Step 3: Infer domain Existence weights w_j^{EV,D}
+Step 4: Observe which Existence dimensions are causally upstream of high-EV outcomes
+Step 5: Map Existence dimensions to GILE dimensions:
+        EF ↔ E (aesthetic structural quality)
+        Physical Bonds ↔ L (conscious positive regard — what physical bonds enable)
+        Moral presence ↔ G (goodness orientation — what moral presence tracks)
+        Conscious meaning ↔ I+L (knowing and positive regard)
+Step 6: Infer domain GILE weights w_k^{GILE,D}
+        from the observed Existence dimension priorities
+```
+
+### 12.5 Philosophical Grounding — Sartre in TI Sigma
+
+Sartre argued that humans are not born with a fixed essence (a nature, a purpose, a set of predetermined values) — they exist first, encounter the world, make choices, and through those choices, constitute their essence.
+
+TI Sigma formalizes this at the framework level:
+
+- The *existence* of entities in a domain (measured by FDE) precedes their *essence* (the GILE values that matter)
+- You cannot determine which abstract GILE values are most important in a domain without first encountering what the domain actually instantiates — what kinds of things exist there, how they bind, how they impact, what moral presence looks like
+- The GILE weights are not fixed properties of GILE itself — they are *constituted by* what exists in the domain
+
+This is not relativism: the GILE dimensions themselves (G, I, L, E) are universal and real. What varies is which dimensions are most causally active in a given domain — and that variation is determined by the domain's Existence structure, not by abstract preference.
+
+**Sartre was right. TI Sigma makes him more precisely right.**
+
+### 12.6 Updated Status of Universal GILE Weights
+
+| Weight set | Status | Use |
+|---|---|---|
+| Universal reference weights (G≈0.41, I=0.25, L=0.18, E=0.15) | Pragmatic scaffolding; empirically derived from general exemplar pool | Use when domain-specific data is unavailable |
+| Domain-specific weights | To be empirically inferred via Existence-first protocol | Use for all serious domain applications |
+| CCC/BOK weights | All dimensions at saturation (URB #612 §2, #611 BOK Saturation) | Reference only; not applicable to finite agents |
