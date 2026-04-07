@@ -16,6 +16,7 @@ Lean 4 / lean4web API notes: `padicValNat.self` requires `(h : 1 < p)` — use `
 - **YouTube Studio Pipeline**: Features a Streamlit UI for a research-to-video pipeline.
 
 ### Technical Implementations
+- **HEM–EF Bridge + FFD–Tralse Equation (URB #619)**: HEM D1–D6 formally mapped to FDE 1–4; refined EF = f·A·R_ST·AMI (HEM D3 as informational multiplier). FFD's Indeterminacy formally identical to Tralseness. Contradiction types (Inconsistency→Tralse-Indeterminate, Opposition→pure Tralse, Discrepancy→partial Tralse). HEM D2 (Contradiction Ratio) is the empirical Tralse meter; D2>0.65 → DT risk. MR is the universal Indeterminacy-collapse operator. File: `papers/urb_619_hem_ef_ffd_tralse_bridge.md`
 - **Tralse Topos Engine**: Utilizes 5-valued logic (URB #528) and Myrion Resolution.
 - **AI Integration**: Core for safety analysis, efficacy prediction, and autonomous research.
 - **Neuroscience & Bio-Integration**: Incorporates EEG, fNIRS, and HRV data for GILE score calculation and the FAAH Protocol.
