@@ -379,6 +379,423 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         epilepsy_risk="LOW",
         epilepsy_note="Phosphocreatine buffer for brain energy. Neuroprotective; no seizure risk."
     ),
+
+    # ── NEW SUPPLEMENTS (April 2026 full stack) ───────────────────────────
+
+    'beta_caryophyllene': Supplement(
+        name='Beta-Caryophyllene (sublingual, MCT)',
+        dose_mg=90, absorption_time_min=15, half_life_hours=3, bbb_penetration=0.65,
+        cb2_activation=0.75, anti_inflammatory=0.60, gaba_modulation=0.20,
+        lcc_boost=0.025, love_boost=0.035, goodness_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Selective CB2 agonist (no psychoactivity). Anti-inflammatory; potential anticonvulsant via GABA-A. Very safe profile.",
+        interaction_group="cb2_agonist"
+    ),
+    'saffron_extract': Supplement(
+        name='Saffron Extract (2% safranal, 11% crocins)',
+        dose_mg=60, absorption_time_min=30, half_life_hours=5, bbb_penetration=0.70,
+        serotonin_modulation=0.55, dopamine_modulation=0.30, bdnf_upregulation=0.40,
+        anti_inflammatory=0.35,
+        lcc_boost=0.04, love_boost=0.05, intuition_boost=0.03, goodness_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Saffron has anticonvulsant properties in animal models. No pro-convulsant data. May reduce anxiety which is seizure-protective.",
+        interaction_group="serotonin_modulator",
+        known_interactions=["Caution with 5-HTP and SSRI — serotonin syndrome risk; separate by 12h"]
+    ),
+    'htp_5': Supplement(
+        name='5-HTP (200 mg)',
+        dose_mg=200, absorption_time_min=30, half_life_hours=4, bbb_penetration=0.80,
+        serotonin_modulation=0.75, bdnf_upregulation=0.20,
+        lcc_boost=0.04, love_boost=0.06, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="5-HTP generally well-tolerated. High serotonergic activity — do NOT combine with SSRIs, MAOIs, or Saffron without monitoring.",
+        interaction_group="serotonin_precursor",
+        known_interactions=["Do NOT combine with SSRIs or MAOIs — serotonin syndrome", "Caution with Saffron (separate by 12h)"]
+    ),
+    'mood_probiotic': Supplement(
+        name='Mood Probiotic (L. helveticus R-52 + B. longum R-175)',
+        dose_mg=357, absorption_time_min=120, half_life_hours=48, bbb_penetration=0.10,
+        serotonin_modulation=0.30, gaba_modulation=0.25, anti_inflammatory=0.40,
+        lcc_boost=0.03, love_boost=0.04, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Probiotics are safe for epilepsy profiles. Gut-brain axis modulation is neuroprotective. No seizure risk.",
+        interaction_group="gut_brain"
+    ),
+    'pqq': Supplement(
+        name='PQQ (Pyrroloquinoline Quinone, 20 mg)',
+        dose_mg=20, absorption_time_min=30, half_life_hours=6, bbb_penetration=0.55,
+        mitochondrial_support=0.80, bdnf_upregulation=0.50, anti_inflammatory=0.30,
+        lcc_boost=0.02, intuition_boost=0.03, environment_boost=0.04,
+        epilepsy_risk="LOW",
+        epilepsy_note="PQQ stimulates mitochondrial biogenesis. Neuroprotective. No seizure risk."
+    ),
+    'beta_ecdysterone': Supplement(
+        name='Beta-Ecdysterone (500 mg x2)',
+        dose_mg=1000, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.45,
+        mitochondrial_support=0.50, anti_inflammatory=0.35, bdnf_upregulation=0.30,
+        lcc_boost=0.015, environment_boost=0.04, intuition_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Ecdysterone (ERβ agonist) is neuroprotective. No pro-convulsant data."
+    ),
+    'l_methylfolate': Supplement(
+        name='L-Methylfolate (1700 DFE)',
+        dose_mg=1.0, absorption_time_min=30, half_life_hours=4, bbb_penetration=0.90,
+        serotonin_modulation=0.35, dopamine_modulation=0.30, bdnf_upregulation=0.35,
+        lcc_boost=0.025, goodness_boost=0.04, intuition_boost=0.025,
+        epilepsy_risk="LOW",
+        epilepsy_note="L-methylfolate is neuroprotective. Supports neurotransmitter synthesis (BH4 cofactor). No seizure risk."
+    ),
+    'vitamin_d3': Supplement(
+        name='Vitamin D3 (250 mcg / 10,000 IU)',
+        dose_mg=0.25, absorption_time_min=60, half_life_hours=72, bbb_penetration=0.65,
+        anti_inflammatory=0.40, bdnf_upregulation=0.45, serotonin_modulation=0.25,
+        lcc_boost=0.015, goodness_boost=0.02, intuition_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Vitamin D deficiency is associated with increased seizure risk. Supplementation is neuroprotective. Very safe."
+    ),
+    'green_tea_egcg': Supplement(
+        name='Green Tea Extract (98% polyphenols, 45% EGCG, 725 mg)',
+        dose_mg=725, absorption_time_min=40, half_life_hours=5, bbb_penetration=0.65,
+        faah_inhibition=0.40, anti_inflammatory=0.60, bdnf_upregulation=0.45,
+        nape_pld_activation=0.20,
+        lcc_boost=0.02, intuition_boost=0.025, goodness_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="EGCG is neuroprotective; mild anticonvulsant properties. No pro-convulsant data. Decaffeinated form removes caffeine seizure risk.",
+        interaction_group="faah_inhibitor"
+    ),
+    'triacetyluridine': Supplement(
+        name='Triacetyluridine (TAU, 250 mg)',
+        dose_mg=250, absorption_time_min=30, half_life_hours=6, bbb_penetration=0.75,
+        dopamine_modulation=0.40, acetylcholine_modulation=0.30, mitochondrial_support=0.25,
+        lcc_boost=0.02, intuition_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="TAU (CDP-choline pathway) supports dopamine receptor density. No seizure risk."
+    ),
+    'moringa': Supplement(
+        name='Moringa (1 gram)',
+        dose_mg=1000, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.40,
+        anti_inflammatory=0.45, bdnf_upregulation=0.35, serotonin_modulation=0.20,
+        lcc_boost=0.015, goodness_boost=0.02, love_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Moringa has anticonvulsant properties in animal models. Neuroprotective. Safe profile."
+    ),
+    'tribulus_extract': Supplement(
+        name='Tribulus Extract (95% saponins, 500 mg)',
+        dose_mg=500, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.35,
+        dopamine_modulation=0.30, serotonin_modulation=0.15,
+        lcc_boost=0.01, environment_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Tribulus at standard doses: no seizure data. Mild dopaminergic; well-tolerated."
+    ),
+    'lactoferrin': Supplement(
+        name='Lactoferrin (300 mg)',
+        dose_mg=300, absorption_time_min=60, half_life_hours=8, bbb_penetration=0.30,
+        anti_inflammatory=0.50, bdnf_upregulation=0.20,
+        lcc_boost=0.01, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Lactoferrin is neuroprotective and iron-regulatory. No seizure risk.",
+        interaction_group="gut_brain"
+    ),
+    'iberogast': Supplement(
+        name='Iberogast (20 drops x2 daily)',
+        dose_mg=30, absorption_time_min=20, half_life_hours=4, bbb_penetration=0.20,
+        serotonin_modulation=0.35, gaba_modulation=0.20, anti_inflammatory=0.30,
+        lcc_boost=0.015, love_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Iberogast (STW 5) is safe. Prokinetic; no CNS effects at standard doses.",
+        interaction_group="gut_brain"
+    ),
+    'peppermint_oil_capsule': Supplement(
+        name='Peppermint Essential Oil (enteric, 20 ml x3)',
+        dose_mg=60, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.40,
+        gaba_modulation=0.25, serotonin_modulation=0.15,
+        lcc_boost=0.01, love_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Peppermint oil (menthol) modulates TRPM8 channels. Antispasmodic. No seizure risk."
+    ),
+    'ceylon_cinnamon': Supplement(
+        name='Ceylon Cinnamon (1 teaspoon daily)',
+        dose_mg=2500, absorption_time_min=40, half_life_hours=8, bbb_penetration=0.35,
+        anti_inflammatory=0.40, serotonin_modulation=0.15,
+        lcc_boost=0.01, environment_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Ceylon cinnamon (not cassia) is safe. Anticonvulsant properties in animal models."
+    ),
+    'ginger_extract': Supplement(
+        name='Ginger (1 teaspoon daily)',
+        dose_mg=2000, absorption_time_min=30, half_life_hours=5, bbb_penetration=0.30,
+        anti_inflammatory=0.45, serotonin_modulation=0.25,
+        lcc_boost=0.01, love_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Ginger is anti-inflammatory and has anticonvulsant properties. Very safe."
+    ),
+    'psyllium_husk': Supplement(
+        name='Psyllium Husk (2 teaspoons daily)',
+        dose_mg=8000, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.05,
+        anti_inflammatory=0.20,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="Psyllium is gut fiber. No CNS effects; no seizure risk.",
+        interaction_group="gut_brain"
+    ),
+    'sunfiber': Supplement(
+        name='Sunfiber PHGG (7 grams daily)',
+        dose_mg=7000, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.05,
+        anti_inflammatory=0.20, serotonin_modulation=0.10,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="Partially hydrolyzed guar gum — prebiotic. No seizure risk.",
+        interaction_group="gut_brain"
+    ),
+    'iron_b12_folate': Supplement(
+        name='Iron + B12 + Folate Complex (28mg Fe + 60mg VitC + 667mcg DFE + 8mcg B12)',
+        dose_mg=100, absorption_time_min=45, half_life_hours=8, bbb_penetration=0.50,
+        serotonin_modulation=0.20, dopamine_modulation=0.20, mitochondrial_support=0.30,
+        lcc_boost=0.01, intuition_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Iron + B12 + folate support heme-dependent neurotransmitter synthesis. Neuroprotective. No seizure risk."
+    ),
+    'bromelain_quercetin': Supplement(
+        name='Quercetin 880mg + Bromelain 165mg',
+        dose_mg=1045, absorption_time_min=35, half_life_hours=5, bbb_penetration=0.55,
+        faah_inhibition=0.45, anti_inflammatory=0.70, bdnf_upregulation=0.20,
+        lcc_boost=0.02, intuition_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Quercetin has anticonvulsant properties. Bromelain enhances quercetin absorption. Very safe.",
+        interaction_group="faah_inhibitor"
+    ),
+    'omega3_high_epa': Supplement(
+        name='Omega-3 Fish Oil (4g, 2.4:1 EPA:DHA)',
+        dose_mg=4000, absorption_time_min=90, half_life_hours=24, bbb_penetration=0.75,
+        anti_inflammatory=0.70, bdnf_upregulation=0.45, serotonin_modulation=0.25,
+        lcc_boost=0.02, love_boost=0.02, intuition_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="High-dose Omega-3 (4g EPA+DHA) is anticonvulsant in some studies. EPA-dominant formulas show stronger mood effects."
+    ),
+    'transdermal_cbd': Supplement(
+        name='Transdermal CBD (30-60 mg)',
+        dose_mg=45, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.60,
+        faah_inhibition=0.45, cb1_activation=0.15, cb2_activation=0.35,
+        anti_inflammatory=0.55, gaba_modulation=0.25,
+        lcc_boost=0.02, love_boost=0.025,
+        epilepsy_risk="LOW",
+        epilepsy_note="Transdermal CBD has lower bioavailability than oral but avoids first-pass metabolism. FDA-approved CBD (Epidiolex) is anticonvulsant. Monitor if on valproate/clobazam.",
+        interaction_group="faah_inhibitor",
+        known_interactions=["Monitor if on valproate or clobazam — may increase drug levels"]
+    ),
+
+    # ── PRESCRIPTION MEDICATIONS ──────────────────────────────────────────
+
+    'seroquel': Supplement(
+        name='Seroquel (Quetiapine, 200 mg)',
+        dose_mg=200, absorption_time_min=90, half_life_hours=7, bbb_penetration=0.85,
+        gaba_modulation=0.30, serotonin_modulation=0.55, dopamine_modulation=0.50,
+        lcc_boost=0.01, love_boost=0.02, goodness_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Quetiapine has a low seizure risk. H1 antagonism causes sedation. At very high doses (>1000mg) there is theoretical seizure risk — 200mg is safe.",
+        interaction_group="antipsychotic",
+        known_interactions=["Additive sedation with Olanzapine — monitor metabolic panel", "CYP3A4 substrate — avoid grapefruit"]
+    ),
+    'olanzapine': Supplement(
+        name='Olanzapine (Zyprexa, 10 mg)',
+        dose_mg=10, absorption_time_min=60, half_life_hours=30, bbb_penetration=0.90,
+        serotonin_modulation=0.65, dopamine_modulation=0.60, gaba_modulation=0.20,
+        lcc_boost=0.005, love_boost=0.01,
+        epilepsy_risk="MODERATE",
+        epilepsy_note="Olanzapine lowers seizure threshold more than Seroquel — MODERATE risk. Combined with Seroquel: monitor closely. Keppra co-prescription mitigates risk.",
+        interaction_group="antipsychotic",
+        known_interactions=["Additive metabolic risk with Seroquel — weight, glucose, lipids", "Additive sedation with all sleep aids"]
+    ),
+    'klonopin': Supplement(
+        name='Klonopin (Clonazepam, 1 mg as needed)',
+        dose_mg=1, absorption_time_min=30, half_life_hours=30, bbb_penetration=0.90,
+        gaba_modulation=0.85, anti_inflammatory=0.15,
+        lcc_boost=0.02, love_boost=0.04,
+        epilepsy_risk="LOW",
+        epilepsy_note="Clonazepam IS an anticonvulsant (first-line for some seizure types). Very safe for epilepsy. Risk: tolerance and dependence with regular use.",
+        interaction_group="benzo_gaba",
+        known_interactions=["Additive CNS depression with Lunesta, Belsomra, Seroquel, Olanzapine — use as-needed only"]
+    ),
+    'lunesta': Supplement(
+        name='Lunesta (Eszopiclone, 3 mg as needed)',
+        dose_mg=3, absorption_time_min=30, half_life_hours=6, bbb_penetration=0.90,
+        gaba_modulation=0.75,
+        lcc_boost=0.01, love_boost=0.015,
+        epilepsy_risk="LOW",
+        epilepsy_note="Eszopiclone (Z-drug, GABA-A agonist) is safe for epilepsy. May have mild anticonvulsant properties.",
+        interaction_group="benzo_gaba",
+        known_interactions=["Do not combine with Klonopin and Belsomra simultaneously — additive CNS depression"]
+    ),
+    'belsomra': Supplement(
+        name='Belsomra (Suvorexant, 20 mg)',
+        dose_mg=20, absorption_time_min=30, half_life_hours=12, bbb_penetration=0.85,
+        serotonin_modulation=0.10,
+        lcc_boost=0.015, love_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Suvorexant (orexin antagonist) has an excellent safety profile for epilepsy. No seizure risk; may actually reduce sleep-related seizures.",
+        known_interactions=["Additive sedation with Klonopin, Lunesta if combined same night"]
+    ),
+    'clonidine': Supplement(
+        name='Clonidine (0.3 mg)',
+        dose_mg=0.3, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.85,
+        serotonin_modulation=0.10, gaba_modulation=0.20,
+        lcc_boost=0.01, love_boost=0.02, goodness_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Alpha-2 agonist. Some anticonvulsant properties; reduces NE (which can be proconvulsant). Safe."
+    ),
+    'desmopressin': Supplement(
+        name='Desmopressin (DDAVP, 0.6 mg)',
+        dose_mg=0.6, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.20,
+        lcc_boost=0.005, intuition_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Desmopressin (ADH analog) is safe for epilepsy at standard doses. CAUTION: hyponatremia risk (low sodium) at high doses or with excess water intake — hyponatremia CAN trigger seizures. Monitor sodium.",
+        known_interactions=["⚠️ Hyponatremia risk — do not over-hydrate; monitor sodium levels"]
+    ),
+    'ketamine_troche': Supplement(
+        name='Ketamine Troche (200 mg sublingual, every other day)',
+        dose_mg=200, absorption_time_min=15, half_life_hours=3, bbb_penetration=0.95,
+        nmda_modulation=0.90, dopamine_modulation=0.40, serotonin_modulation=0.30,
+        bdnf_upregulation=0.75,
+        lcc_boost=0.08, love_boost=0.07, intuition_boost=0.08, goodness_boost=0.04,
+        epilepsy_risk="MODERATE",
+        epilepsy_note="Ketamine has a complex seizure profile: anticonvulsant at sub-anesthetic doses (used in refractory status epilepticus), potentially pro-convulsant at higher doses. 200mg sublingual troche is sub-anesthetic — likely safe with Keppra co-administration. Monitor closely.",
+        interaction_group="nmda_modulator",
+        known_interactions=["Synergy with Lithium (GSK-3β + AMPA potentiation)", "LDN may prevent tolerance (TLR4 mechanism)", "Additive CNS effects with Klonopin — coordinate with prescriber"]
+    ),
+    'focalin': Supplement(
+        name='Focalin (Dexmethylphenidate, 10 mg x2)',
+        dose_mg=20, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.90,
+        dopamine_modulation=0.75, serotonin_modulation=0.20,
+        lcc_boost=0.02, intuition_boost=0.04, environment_boost=0.03,
+        epilepsy_risk="MODERATE",
+        epilepsy_note="Stimulants can lower seizure threshold. Dexmethylphenidate at therapeutic doses (20mg total) has low but non-zero seizure risk. Keppra co-administration provides significant mitigation. Avoid dose escalation.",
+        interaction_group="stimulant",
+        known_interactions=["⚠️ May lower seizure threshold — mitigated by Keppra", "Additive cardiovascular effects with Qelbree"]
+    ),
+    'qelbree': Supplement(
+        name='Qelbree (Viloxazine, 600 mg)',
+        dose_mg=600, absorption_time_min=90, half_life_hours=7, bbb_penetration=0.85,
+        serotonin_modulation=0.45, dopamine_modulation=0.35,
+        lcc_boost=0.025, intuition_boost=0.04, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Viloxazine (NRI) has a low seizure risk profile — safer than stimulants. No significant pro-convulsant data at 600mg.",
+        interaction_group="stimulant",
+        known_interactions=["CYP1A2 inhibitor — may raise levels of caffeine, melatonin, clozapine"]
+    ),
+    'lithium': Supplement(
+        name='Lithium Carbonate (300 mg)',
+        dose_mg=300, absorption_time_min=60, half_life_hours=24, bbb_penetration=0.70,
+        anti_inflammatory=0.40, bdnf_upregulation=0.55, nmda_modulation=0.30,
+        lcc_boost=0.03, goodness_boost=0.05, environment_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Lithium at therapeutic levels (0.6–1.2 mEq/L) is neuroprotective. Toxic levels (>1.5) can cause seizures. 300mg is a low dose — safe. Monitor levels quarterly.",
+        known_interactions=["⚠️ NSAIDs (Sulindac) raise lithium levels — monitor levels when adding/removing Sulindac", "Monitor with Prilosec (minimal interaction but track)"]
+    ),
+    'amantadine': Supplement(
+        name='Amantadine (200 mg x2)',
+        dose_mg=400, absorption_time_min=90, half_life_hours=16, bbb_penetration=0.85,
+        nmda_modulation=0.55, dopamine_modulation=0.50,
+        lcc_boost=0.025, intuition_boost=0.04, environment_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Amantadine has anticonvulsant properties via NMDA antagonism. Generally safe with Keppra. Low seizure risk.",
+        interaction_group="nmda_modulator",
+        known_interactions=["Synergy with Alpha GPC (dopamine + ACh cognitive enhancement)"]
+    ),
+    'ldn': Supplement(
+        name='Low Dose Naltrexone (LDN, 4.5 mg)',
+        dose_mg=4.5, absorption_time_min=60, half_life_hours=13, bbb_penetration=0.80,
+        anti_inflammatory=0.65, bdnf_upregulation=0.40,
+        lcc_boost=0.04, love_boost=0.05, goodness_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="LDN (TLR4 antagonist + OGF/OGFR modulator) is neuroprotective and anti-inflammatory. No seizure risk. May actually benefit seizure thresholds via neuroinflammation reduction.",
+        known_interactions=["May prevent ketamine tolerance (TLR4 mechanism — therapeutic synergy)", "Do NOT use standard-dose naltrexone if on opioids"]
+    ),
+    'keppra': Supplement(
+        name='Keppra (Levetiracetam, 500 mg x2)',
+        dose_mg=1000, absorption_time_min=60, half_life_hours=8, bbb_penetration=0.85,
+        anti_inflammatory=0.30, gaba_modulation=0.25,
+        lcc_boost=0.01, goodness_boost=0.02,
+        epilepsy_risk="LOW",
+        epilepsy_note="Keppra IS an anticonvulsant (SV2A modulator). Protective. Note: Keppra rage/irritability in some patients — Vitamin B6 + Magnesium may mitigate this.",
+        known_interactions=["Vitamin B6 (P5P) may reduce Keppra-associated mood side effects"]
+    ),
+    'taltz': Supplement(
+        name='Taltz (Ixekizumab, 80 mg monthly)',
+        dose_mg=80, absorption_time_min=3000, half_life_hours=312, bbb_penetration=0.05,
+        anti_inflammatory=0.80,
+        lcc_boost=0.02, goodness_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Biologic (IL-17A antibody). No CNS penetration at standard doses. Anti-inflammatory systemic effects are neuroprotective. No seizure risk."
+    ),
+    'sulindac': Supplement(
+        name='Sulindac (200 mg)',
+        dose_mg=200, absorption_time_min=60, half_life_hours=18, bbb_penetration=0.45,
+        anti_inflammatory=0.60,
+        lcc_boost=0.01,
+        epilepsy_risk="LOW",
+        epilepsy_note="Sulindac (NSAID, COX inhibitor). No direct seizure risk. Anti-inflammatory benefit.",
+        known_interactions=["⚠️ CRITICAL: Sulindac raises lithium levels by ~25%. Monitor lithium every 2 weeks if Sulindac dose changes."]
+    ),
+    'tylenol_xr': Supplement(
+        name='Acetaminophen XR (1300 mg)',
+        dose_mg=1300, absorption_time_min=60, half_life_hours=4, bbb_penetration=0.50,
+        anti_inflammatory=0.20,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="Acetaminophen is safe for epilepsy. Do not exceed 4g/day; avoid alcohol.",
+        known_interactions=["Total daily Tylenol limit 4g/day — factor in all sources"]
+    ),
+    'prilosec': Supplement(
+        name='Prilosec (Omeprazole, 20 mg)',
+        dose_mg=20, absorption_time_min=60, half_life_hours=1, bbb_penetration=0.20,
+        lcc_boost=0.0,
+        epilepsy_risk="LOW",
+        epilepsy_note="Omeprazole (PPI) is safe for epilepsy. May reduce magnesium absorption with long-term use — supplement Mg L-Threonate (already doing this).",
+        known_interactions=["Long-term use may reduce magnesium absorption — already supplemented by Mg L-Threonate"]
+    ),
+    'linzess': Supplement(
+        name='Linzess (Linaclotide, 145 mcg)',
+        dose_mg=0.145, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.02,
+        serotonin_modulation=0.20,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="Linaclotide acts locally in the gut (GC-C agonist). Minimal systemic absorption. No seizure risk.",
+        interaction_group="gut_brain"
+    ),
+    'flonase': Supplement(
+        name='Flonase (Fluticasone, 2 sprays each nostril)',
+        dose_mg=0.2, absorption_time_min=30, half_life_hours=8, bbb_penetration=0.05,
+        anti_inflammatory=0.40,
+        lcc_boost=0.005,
+        epilepsy_risk="LOW",
+        epilepsy_note="Intranasal fluticasone has minimal systemic absorption (<1%). No seizure risk."
+    ),
+    'mucinex': Supplement(
+        name='Mucinex XR (Guaifenesin, 1200 mg)',
+        dose_mg=1200, absorption_time_min=60, half_life_hours=7, bbb_penetration=0.10,
+        lcc_boost=0.0,
+        epilepsy_risk="LOW",
+        epilepsy_note="Guaifenesin is an expectorant with no CNS effects at therapeutic doses. No seizure risk."
+    ),
+
+    'ubiquinone_coq10': Supplement(
+        name='Ubiquinone CoQ10 (200 mg)',
+        dose_mg=200, absorption_time_min=60, half_life_hours=12, bbb_penetration=0.30,
+        mitochondrial_support=0.75, anti_inflammatory=0.25,
+        lcc_boost=0.005, environment_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="CoQ10 is mitochondrially neuroprotective. No seizure risk. May benefit mitochondrial epilepsy."
+    ),
+    'saffron_macamides_mct': Supplement(
+        name='Maca Macamides 5% + MCT Oil (800 mg)',
+        dose_mg=800, absorption_time_min=25, half_life_hours=4, bbb_penetration=0.75,
+        cb1_activation=0.70, nape_pld_activation=0.60,
+        dopamine_modulation=0.45, serotonin_modulation=0.35,
+        lcc_boost=0.05, love_boost=0.055, intuition_boost=0.04, goodness_boost=0.03,
+        epilepsy_risk="LOW",
+        epilepsy_note="Macamides via MCT oil have enhanced absorption. CB1 activation may be mildly anticonvulsant.",
+        interaction_group="cb1_agonist"
+    ),
 }
 
 
@@ -388,8 +805,14 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
 
 INTERACTION_CONFLICTS = {
     ("dopamine_precursor", "dopamine_precursor"): "⚠️ Two dopamine precursors in same stack — high depletion risk. Use on alternate days.",
-    ("faah_inhibitor", "faah_inhibitor"): "ℹ️ Multiple FAAH inhibitors — effects cap via diminishing returns (already handled in simulation).",
+    ("faah_inhibitor", "faah_inhibitor"): "ℹ️ Multiple FAAH inhibitors — diminishing returns (handled in simulation). Stack is safe.",
     ("cb1_agonist", "cb1_agonist"): "ℹ️ Multiple CB1 agonists — receptor saturation risk above 3 agents.",
+    ("antipsychotic", "antipsychotic"): "⚠️ Two antipsychotics (Seroquel + Olanzapine) — additive metabolic risk (weight, glucose, lipids). Monitor metabolic panel quarterly.",
+    ("benzo_gaba", "benzo_gaba"): "⚠️ Multiple GABA-A agents (e.g. Klonopin + Lunesta) — additive CNS depression. Use only one per night; as-needed only.",
+    ("serotonin_modulator", "serotonin_precursor"): "⚠️ Saffron (SSRI-like) + 5-HTP (serotonin precursor) — serotonin syndrome risk. Separate by at least 12 hours.",
+    ("stimulant", "stimulant"): "ℹ️ Focalin + Qelbree — coordinate with prescriber. Both affect NE/DA; additive cardiovascular effects.",
+    ("nmda_modulator", "nmda_modulator"): "ℹ️ Multiple NMDA modulators (Ketamine + Amantadine + Magnesium + NAC + Glycine) — rich but complex NMDA environment. Generally synergistic; titrate carefully.",
+    ("gut_brain", "gut_brain"): "ℹ️ Multiple gut-brain agents — generally synergistic (probiotics + prebiotics + prokinetics work in complementary layers).",
 }
 
 
