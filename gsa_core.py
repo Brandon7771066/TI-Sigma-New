@@ -1,8 +1,18 @@
 """
-GSA CORE ENGINE v2 — TI Sigma BOK Architecture
-================================================
+GSA CORE ENGINE v3 — TI Sigma BOK Architecture + TIL Pipeline
+==============================================================
 Grand Stock Algorithm — Existence Intensity Framework
-Ξ(E) = A(t) · κ(t,τ) · C(t) → PD → GILE → Signal
+Ξ(E) = A(t) · κ(t,τ) · C(t) → PD → BOK(GILE-EV) → MR → Signal
+
+MAIN TI SIGMA THEORIES (URBs #615, #617, #618):
+  TIL  = Tralse-Myrion Logic — the operational truth-navigation framework:
+           PD  (Permissibility Distribution)  — 5-state truth assignment
+           BOK (Being-of-Knowledge, GILE-EV i-Cell) — structural model
+           MR  (Myrion Resolution)            — convergence procedure
+  UOP  = Unified Optimization Principle — TIL's guiding principle;
+           optimizes simultaneously across all GILE + EV dimensions.
+  BOK  + LCC are the two structural flagships.
+  PD   + MR  + EAR are the three operational pillars.
 
 v2 Upgrades (March 2026):
   - Emerick Constant C_EMERICK = 1/(φ√2) ≈ 0.4370 as primary threshold
@@ -14,19 +24,22 @@ v2 Upgrades (March 2026):
 v2.1 Upgrades (March 20, 2026 — URBs #463–468):
   - PRIMARY CONSTANTS unity: {0, 1, i, √2, e, φ, π, C}
   - Complex Signal Representation: z = EC·e^(iθ) in ℂ-plane
-    Re(z) = trend component (price direction)
-    Im(z) = volatility structure (orthogonal to trend)
-    |z|   = total signal magnitude
-    θ     = phase angle (balance between trend and volatility)
-  - Antifragile Score (URB #466): measures whether a stock
-    specifically improves during market disorder. Based on Taleb's
-    Both-And Tralse structure — disorder is the high-False input
-    that activates the True-pole response. Antifragile assets
-    (COP, CVX, XOM, defense, gold miners) are preferred among
-    green-light candidates.
-  - Tralse Apology principle (URB #468) applied to signal output:
-    signals now carry both a confidence assertion AND honest
-    epistemic caveat — never collapse to a single scalar before trading.
+  - Antifragile Score (URB #466)
+  - Tralse Apology principle (URB #468)
+
+v3 Upgrades (April 7, 2026 — URBs #615, #618):
+  - TIL pipeline formally named; PD + BOK + MR integrated
+  - PDDistribution: 5-state truth-distribution over market signals
+      TT (True-Tralse)         → strong directional signal
+      TI (Tralse-Indeterminate) → genuine ambiguity, MR unresolved
+      TF (Tralse-False)        → contra-signal
+      DT (Double-Tralse)       → no tradeable truth-state, pause
+      EV (EV-Decoupled)        → existence diverges from signal
+  - EVScore: Four Dimensions of Existence for each stock (FDE-1..4)
+  - GILEScore expanded: now includes ev_composite for UOP scoring
+  - UOP position sizing: replaces simple regime multiplier with full
+    GILE-EV composite optimization across all five dimensions
+  - MR-gated signal: DT screen as Level-1 MR before any action
 """
 
 import numpy as np
@@ -91,12 +104,93 @@ class XiMetrics:
 
 @dataclass
 class GILEScore:
-    """Four-dimensional GILE assessment"""
-    goodness:    float   # G — risk-adjusted returns
-    intuition:   float   # I — trend alignment
-    love:        float   # L — market correlation
-    environment: float   # E — momentum alignment
-    composite:   float   # Weighted combination [0,1]
+    """
+    Four-dimensional GILE assessment (inner BOK loops).
+    Extended in v3 to carry ev_composite for UOP position sizing.
+    """
+    goodness:    float   # G — risk-adjusted returns (Sharpe proxy)
+    intuition:   float   # I — trend pre-recognition (MA crossover signal)
+    love:        float   # L — market correlation coherence
+    environment: float   # E — structural/momentum alignment
+    composite:   float   # GILE weighted combination [0,1]
+    ev_composite: float = 0.5  # EV composite from EVScore [0,1]; injected after compute_ev
+
+
+@dataclass
+class EVScore:
+    """
+    Existence Value (EV) Score — Four Dimensions of Existence (FDE).
+    Models the stock's 'existence' in the market ecosystem (BOK outer loops).
+
+    FDE-1 Physical/Energetic:    Volume-weighted price stability
+    FDE-2 Social/Historical:     52-week position (institutional presence proxy)
+    FDE-3 Aesthetic/Structural:  Technical pattern quality (clean chart proxy)
+    FDE-4 Conscious/Experiential: Momentum-of-momentum (second derivative of trend)
+
+    ESV (Existence Scalar Value) = EAR output = weighted FDE mean [0,1].
+    High ESV → stock has robust market existence; position is warranted.
+    Low ESV  → stock is existentially fragile; EV-decoupling risk.
+    """
+    fde1_physical:    float   # Volume-energetic stability [0,1]
+    fde2_social:      float   # 52W position proxy [0,1]
+    fde3_aesthetic:   float   # Technical pattern quality [0,1]
+    fde4_conscious:   float   # Momentum of momentum [0,1]
+    esv:              float   # Existence Scalar Value (EAR output) [0,1]
+    ev_decoupled:     bool    # True = EV and GILE are diverging (>0.35 delta)
+
+
+@dataclass
+class PDDistribution:
+    """
+    Permissibility Distribution — 5 market truth-states (URB #615, #618).
+    Replaces the scalar PD float with a proper truth-state distribution.
+
+    Applied to the stock's TIL pipeline:
+      TT  True-Tralse:         Signal confirmed by GILE + EV → BUY / STRONG_BUY
+      TI  Tralse-Indeterminate: Genuine ambiguity, MR unresolved → HOLD / WAIT
+      TF  Tralse-False:         Contra-signal evidence dominates → CAUTION / SELL
+      DT  Double-Tralse:        No tradeable truth-state present → EXIT / PAUSE
+      EV  EV-Decoupled:         Existence Value diverges from signal → WATCH
+
+    MR Resolution:
+      Level 1: DT screen — if dt_weight > 0.35, action = 'pause' (MR gate)
+      Level 2: GILE-EV integration — reweight TT/TI/TF by GILE + ESV
+      Level 3: Convergence — if dominant state weight > MR_THRESHOLD, mr_resolved = True
+    """
+    tt_weight:   float   # True-Tralse weight
+    ti_weight:   float   # Tralse-Indeterminate weight
+    tf_weight:   float   # Tralse-False weight
+    dt_weight:   float   # Double-Tralse weight (MR gate: >0.35 → pause)
+    ev_weight:   float   # EV-Decoupled weight
+    dominant:    str     # Name of highest-weight truth-state
+    mr_resolved: bool    # True = dominant state > MR_THRESHOLD (0.45)
+    til_action:  str     # TIL-derived action: buy/hold/sell/pause/watch
+
+    @property
+    def uncertainty(self) -> float:
+        """Unresolved information = 1 - dominant_weight. NOT error."""
+        weights = [self.tt_weight, self.ti_weight, self.tf_weight,
+                   self.dt_weight, self.ev_weight]
+        return float(1.0 - max(weights))
+
+    @property
+    def dt_gate_active(self) -> bool:
+        """MR Level-1 DT screen: pause if DT > 0.35."""
+        return self.dt_weight > 0.35
+
+    def to_dict(self) -> dict:
+        return {
+            "tt": round(self.tt_weight, 4),
+            "ti": round(self.ti_weight, 4),
+            "tf": round(self.tf_weight, 4),
+            "dt": round(self.dt_weight, 4),
+            "ev": round(self.ev_weight, 4),
+            "dominant": self.dominant,
+            "mr_resolved": self.mr_resolved,
+            "til_action": self.til_action,
+            "uncertainty": round(self.uncertainty, 4),
+            "dt_gate_active": self.dt_gate_active,
+        }
 
 
 @dataclass
@@ -865,26 +959,332 @@ class GSACore:
 
     def calculate_position_size(
         self,
-        signal:        Signal,
+        signal:        "Signal",
         regime:        MarketRegime,
         max_position:  float = 0.15,
-        num_positions: int   = 4
+        num_positions: int   = 4,
+        pd_dist:       Optional[PDDistribution] = None,
+        ev_score:      Optional[EVScore] = None,
     ) -> float:
         """
-        Position size using Dual-Confidence + BOK regime multiplier.
-        Tral-state signals get half-size (directional but not validated).
+        UOP-guided position sizing (v3 — Unified Optimization Principle).
+
+        The UOP optimizes across ALL GILE + EV dimensions simultaneously.
+        Position size reflects not just directional confidence (EC/EpC) but
+        the full multi-dimensional coherence of the trade:
+
+          UOP composite = 0.35 × GILE_composite
+                        + 0.25 × ESV (Existence Scalar Value)
+                        + 0.20 × PD_tt_weight (True-Tralse confirmation)
+                        + 0.20 × (1 - PD_dt_weight) (absence of DT)
+
+        Overrides:
+          - DT gate active (dt_weight > 0.35): reduce to 25% of base
+          - EV-decoupled: reduce to 60% of base (structural watch)
+          - Tral-state: reduce to 50% of base (exploratory, not validated)
+          - GEOMETRIC regime: 0% (already filtered upstream)
         """
         regime_scale = self.regime_adj.get(regime, 1.0)
         base_weight  = min(max_position, 1.0 / num_positions) * regime_scale
 
-        # Use composite confidence for sizing
-        weight = base_weight * signal.confidence
+        # UOP composite score
+        gile_comp  = signal.gile
+        esv        = ev_score.esv if ev_score else 0.5
+        tt_w       = pd_dist.tt_weight if pd_dist else 0.5
+        dt_w       = pd_dist.dt_weight if pd_dist else 0.0
 
-        # Tral-state: half size — respect the exploratory direction but stay cautious
-        if signal.tral_state:
-            weight *= 0.50
+        uop_composite = float(np.clip(
+            0.35 * gile_comp +
+            0.25 * esv +
+            0.20 * tt_w +
+            0.20 * (1.0 - dt_w),
+            0.0, 1.0
+        ))
+
+        weight = base_weight * uop_composite
+
+        # Override gates (applied multiplicatively, most conservative wins)
+        if pd_dist and pd_dist.dt_gate_active:
+            weight *= 0.25   # DT gate: near-zero position, MR Level-1 block
+        elif ev_score and ev_score.ev_decoupled:
+            weight *= 0.60   # EV-decoupled: reduce exposure, structural watch
+        elif signal.tral_state:
+            weight *= 0.50   # Tral-state: half-size exploratory position
 
         return float(np.clip(weight, 0.0, max_position))
+
+    # ── TIL Pipeline: EVScore, PDDistribution, MR ──────────────────────────────
+
+    def compute_ev_score(
+        self,
+        prices: np.ndarray,
+        returns: np.ndarray,
+        gile: GILEScore,
+    ) -> EVScore:
+        """
+        Compute EVScore — Four Dimensions of Existence for a stock.
+        Models the BOK outer loops: the stock's 'existence' in the market.
+
+        FDE-1 Physical/Energetic:    Volume-weighted price stability proxy
+                                     → uses constraint (drawdown + vol ratio)
+        FDE-2 Social/Historical:     52-week high position proxy
+                                     → prices[-1] / max(prices[-252:])
+        FDE-3 Aesthetic/Structural:  Chart pattern quality
+                                     → coherence of trend structure (1/vol_ratio)
+        FDE-4 Conscious/Experiential: Momentum of momentum
+                                     → second derivative of short-term trend
+
+        ESV = EAR output: weighted FDE mean (EAR amplifies what genuinely exists,
+        prunes superficial distinctions — Law of Realness from URB #615).
+        EV-decoupled: |ESV - GILE_composite| > 0.35
+        """
+        n = len(prices)
+        if n < 30:
+            return EVScore(0.5, 0.5, 0.5, 0.5, 0.5, False)
+
+        # FDE-1: Physical/Energetic — inverse of constraint (low drawdown+vol = high stability)
+        c = self._constraint(prices, returns)
+        fde1 = float(np.clip(1.0 - c, 0.0, 1.0))
+
+        # FDE-2: Social/Historical — 52W position proxy
+        lookback_52w = min(n, 252)
+        price_max_52w = float(np.max(prices[-lookback_52w:]))
+        price_min_52w = float(np.min(prices[-lookback_52w:]))
+        price_range = price_max_52w - price_min_52w
+        fde2 = float(np.clip(
+            (prices[-1] - price_min_52w) / max(price_range, 0.01),
+            0.0, 1.0
+        ))
+
+        # FDE-3: Aesthetic/Structural — chart pattern coherence
+        # (Low short/long vol ratio = cleaner chart = higher structural quality)
+        rs = returns[-min(n, 7):]
+        rl = returns[-min(n, 30):]
+        v_short = max(float(np.std(rs)), 0.001)
+        v_long  = max(float(np.std(rl)), 0.001)
+        vol_ratio = v_short / v_long
+        fde3 = float(np.clip(1.0 / (1.0 + abs(vol_ratio - 1.0)), 0.0, 1.0))
+
+        # FDE-4: Conscious/Experiential — momentum of momentum (second derivative)
+        if len(returns) >= 10:
+            mom_recent = float(np.mean(returns[-5:]))
+            mom_prior  = float(np.mean(returns[-10:-5]))
+            mom_accel  = mom_recent - mom_prior
+            # Sigmoid: positive acceleration = high FDE-4
+            fde4 = float(1.0 / (1.0 + np.exp(-mom_accel * 20.0)))
+        else:
+            fde4 = 0.5
+
+        # ESV = EAR output: amplify what genuinely exists
+        # Weights: FDE-1 (stability) 0.25, FDE-2 (history) 0.25,
+        #          FDE-3 (structure) 0.30, FDE-4 (acceleration) 0.20
+        esv = float(np.clip(
+            0.25 * fde1 + 0.25 * fde2 + 0.30 * fde3 + 0.20 * fde4,
+            0.0, 1.0
+        ))
+
+        # EV-decoupled: Existence Value and GILE are diverging
+        ev_decoupled = abs(esv - gile.composite) > 0.35
+
+        return EVScore(
+            fde1_physical=float(fde1),
+            fde2_social=float(fde2),
+            fde3_aesthetic=float(fde3),
+            fde4_conscious=float(fde4),
+            esv=float(esv),
+            ev_decoupled=ev_decoupled,
+        )
+
+    def compute_pd_distribution(
+        self,
+        xi_metrics:  XiMetrics,
+        gile:        GILEScore,
+        ev:          EVScore,
+        bifurcation: BifurcationResult,
+    ) -> PDDistribution:
+        """
+        Compute PDDistribution — 5-state market truth distribution (TIL/PD).
+
+        MR three-level pipeline (URB #615, #618):
+          Level 1 (DT screen): Flag if vol spike + negative memory + bifurcation
+          Level 2 (GILE-EV):   Weight TT/TI/TF by both GILE composite and ESV
+          Level 3 (convergence): Resolve if dominant > 0.45; derive TIL action
+
+        Truth-state construction:
+          TT  (True-Tralse):          GILE high + ESV high + positive PD
+          TI  (Tralse-Indeterminate): Near-threshold GILE or high bifurcation
+          TF  (Tralse-False):         GILE low or strong negative momentum
+          DT  (Double-Tralse):        Volatility spike + negative memory dominant
+          EV  (EV-Decoupled):         GILE and ESV diverge significantly
+        """
+        MR_THRESHOLD = 0.45  # minimum dominant weight for mr_resolved = True
+        DT_GATE      = 0.35  # DT weight above this → pause (MR Level-1 gate)
+
+        pd_val   = xi_metrics.pd           # scalar PD in [-3, +2]
+        g_comp   = gile.composite          # GILE composite [0,1]
+        esv      = ev.esv                  # Existence Scalar Value [0,1]
+        kappa    = xi_metrics.memory_kernel  # negative memory dominance [0,1]
+        in_bif   = bifurcation.in_bifurcation
+        crossed  = bifurcation.crossing_detected
+        amp      = xi_metrics.xi_unsigned
+
+        # ── Level 1: DT seed — absence of tradeable truth ──────────────────
+        # DT arises when: high negative memory + vol spike + structural fracture
+        dt_raw = float(np.clip(
+            0.40 * kappa +
+            0.30 * float(np.clip(amp - 1.0, 0.0, 1.0)) +   # vol spike
+            0.30 * (0.80 if in_bif and xi_metrics.xi_signed < -1.0 else 0.0),
+            0.0, 1.0
+        ))
+
+        # ── Level 2: GILE-EV integration ───────────────────────────────────
+        # TT weight: GILE composite + positive PD + ESV all supporting
+        pd_pos = float(np.clip(pd_val / 2.0, 0.0, 1.0))   # normalize PD to [0,1]
+        pd_neg = float(np.clip(-pd_val / 3.0, 0.0, 1.0))  # normalize neg PD
+
+        tt_raw = float(np.clip(
+            0.40 * g_comp +
+            0.35 * pd_pos +
+            0.25 * esv,
+            0.0, 1.0
+        ))
+
+        # TF weight: inverse GILE + negative PD + high negative memory
+        tf_raw = float(np.clip(
+            0.35 * (1.0 - g_comp) +
+            0.35 * pd_neg +
+            0.30 * float(np.clip(kappa - 0.5, 0.0, 1.0)),
+            0.0, 1.0
+        ))
+
+        # TI weight: near-threshold GILE + bifurcation uncertainty
+        tralse_zone = float(np.clip(
+            1.0 - 2.0 * abs(g_comp - 0.50),   # peaks at GILE = 0.5
+            0.0, 1.0
+        ))
+        ti_raw = float(np.clip(
+            0.50 * tralse_zone +
+            0.30 * (0.80 if in_bif else 0.0) +
+            0.20 * (0.60 if crossed else 0.0),
+            0.0, 1.0
+        ))
+
+        # EV weight: existence decoupling
+        ev_gap = abs(esv - g_comp)
+        ev_raw = float(np.clip(ev_gap / 0.5, 0.0, 1.0))  # normalized: gap > 0.50 → max
+
+        # ── Level 3: Normalize and converge ───────────────────────────────
+        total = tt_raw + ti_raw + tf_raw + dt_raw + ev_raw
+        if total < 1e-6:
+            total = 1.0
+        tt = tt_raw / total
+        ti = ti_raw / total
+        tf = tf_raw / total
+        dt = dt_raw / total
+        ev = ev_raw / total
+
+        # Resolve dominant state
+        state_names  = ["TT", "TI", "TF", "DT", "EV"]
+        state_weights = [tt, ti, tf, dt, ev]
+        dom_idx  = int(np.argmax(state_weights))
+        dominant = state_names[dom_idx]
+        dom_w    = state_weights[dom_idx]
+
+        mr_resolved = dom_w > MR_THRESHOLD
+
+        # TIL action from MR:
+        #   Level-1 gate (DT screen): dt > DT_GATE → pause regardless
+        if dt > DT_GATE:
+            til_action = "pause"
+        elif dominant == "TT" and mr_resolved:
+            til_action = "buy" if tt < 0.70 else "strong_buy"
+        elif dominant == "TF" and mr_resolved:
+            til_action = "sell" if tf < 0.70 else "strong_sell"
+        elif dominant == "TI":
+            til_action = "hold"
+        elif dominant == "EV":
+            til_action = "watch"   # structural watch: EV divergence noted
+        else:
+            til_action = "hold"    # unresolved MR → conservative default
+
+        return PDDistribution(
+            tt_weight=round(tt, 4),
+            ti_weight=round(ti, 4),
+            tf_weight=round(tf, 4),
+            dt_weight=round(dt, 4),
+            ev_weight=round(ev, 4),
+            dominant=dominant,
+            mr_resolved=mr_resolved,
+            til_action=til_action,
+        )
+
+    def run_til(
+        self,
+        returns: np.ndarray,
+        prices:  np.ndarray,
+        market_returns: Optional[np.ndarray] = None,
+    ) -> Tuple["Signal", EVScore, PDDistribution]:
+        """
+        Run the full TIL pipeline (Tralse-Myrion Logic).
+
+        Pipeline: Ξ(E) → GILE → EV → PD → MR → Signal
+          1. Compute Xi metrics (Existence Intensity)
+          2. Compute GILE score (BOK inner loops)
+          3. Compute EV score  (BOK outer loops)
+          4. Inject EV composite into GILE for UOP scoring
+          5. Classify BOK regime
+          6. Compute PD distribution (5-state truth assignment)
+          7. MR Level-1 DT gate: if DT active, override to 'pause'
+          8. Generate signal with UOP position sizing
+
+        The UOP (guiding principle) operates throughout: every computation
+        optimizes across ALL GILE + EV dimensions simultaneously.
+
+        Returns: (Signal, EVScore, PDDistribution)
+        """
+        # Step 1: Xi metrics
+        xi = self.compute_xi_metrics(returns, prices)
+
+        # Step 2: GILE (BOK inner loops)
+        gile = self.compute_gile(returns, prices, market_returns)
+
+        # Step 3: EV (BOK outer loops)
+        ev_score = self.compute_ev_score(prices, returns, gile)
+
+        # Step 4: Inject EV composite into GILEScore for UOP scoring
+        gile.ev_composite = ev_score.esv
+
+        # Step 5: BOK regime
+        vol_ratio = 1.0
+        if len(returns) >= self.lookback_long:
+            v_short = max(float(np.std(returns[-self.lookback_short:])), 0.001)
+            v_long  = max(float(np.std(returns[-self.lookback_long:])), 0.001)
+            vol_ratio = v_short / v_long
+        regime, regime_conf, _ = self.classify_regime(xi.pd, xi.xi_unsigned, vol_ratio)
+
+        # Step 6: PD distribution (MR input)
+        bif = self.detect_bifurcation(self.constraint_history)
+        pd_dist = self.compute_pd_distribution(xi, gile, ev_score, bif)
+
+        # Step 7: Generate signal (with MR DT-gate override)
+        signal = self.generate_signal(xi, gile, regime, regime_conf, bif)
+
+        # MR Level-1 override: DT gate active → pause regardless of GILE signal
+        if pd_dist.dt_gate_active and signal.action in ("buy", "strong_buy"):
+            signal.action = "hold"
+            signal.ec = float(np.clip(signal.ec * 0.40, 0.0, 1.0))
+            signal.reasons.append(
+                f"MR DT-gate: dt_weight={pd_dist.dt_weight:.3f} > 0.35 — signal muted"
+            )
+
+        # EV-decoupled watch note
+        if ev_score.ev_decoupled:
+            signal.reasons.append(
+                f"EV-decoupled: ESV={ev_score.esv:.3f} vs GILE={gile.composite:.3f} "
+                f"(Δ={abs(ev_score.esv - gile.composite):.3f}) — structural watch"
+            )
+
+        return signal, ev_score, pd_dist
 
     # ── Fractal Enhancement ───────────────────────────────────────────────────
 
