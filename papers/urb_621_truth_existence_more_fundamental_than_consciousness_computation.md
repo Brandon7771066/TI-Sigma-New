@@ -1,18 +1,20 @@
-# URB #621: Truth and Existence Are More Fundamental Than Consciousness and Computation
-## A TI Sigma Response to Emilsson's "Consciousness vs. Computation" Frame
+# URB #621: Truth and Existence Are More Fundamental Than Consciousness and Self-Replication
+## A TI Sigma Response to Emilsson's "Consciousness vs. Self-Replication" Frame
 
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 8, 2026  
 **Corpus Entry:** #621  
-**Related URBs:** #528 (Five-Valued Logic), #573 (BOK-Verisyn), #607 (Truth Architecture), #609 (HEM / Holistic Existence Matrix), #610 (Double Tralse as Physics Primitive), #612 (Revised GILE–Existence Architecture), #614 (BOK Flagship)  
+**Related URBs:** #528 (Five-Valued Logic), #560 (Being Theorem), #573 (BOK-Verisyn), #607 (Truth Architecture), #609 (HEM / Holistic Existence Matrix), #610 (Double Tralse as Physics Primitive), #612 (Revised GILE–Existence Architecture), #614 (BOK Flagship)  
 **DOI:** Pending Zenodo  
-**Keywords:** Consciousness, computation, truth, existence, Tralse Soup, imaginary unit, ontological priority, Emilsson, QRI, GILE, HEM, TI Sigma, i-cell, valence, negative utilitarianism, privation asymmetry
+**Keywords:** Consciousness, self-replication, truth, existence, Tralse Soup, imaginary unit, ontological priority, Emilsson, QRI, GILE, HEM, TI Sigma, i-cell, valence, negative utilitarianism, privation asymmetry, UOP, Being Theorem
+
+> **Attribution note:** Emilsson's actual dichotomy is **consciousness vs. self-replication** — the tension between positive valence / hedonic wellbeing (consciousness-side) and the drive to preserve and multiply one's identity (self-replication-side). A distinct "consciousness vs. computation" framing exists in the broader rationalist literature but is a separate position. This paper engages Emilsson's actual frame.
 
 ---
 
 ## Abstract
 
-Andres Gomez Emilsson (Qualia Research Institute) has argued that reality is most productively framed as **consciousness vs. computation** — the primary distinction being between phenomenal, qualia-laden experience and functional, information-processing without experience. After initial consideration as a Radiant Truth, formal Myrion Resolution (MR) yields a revised PD assignment of **Indeterminate**: the claim contains genuine insight but is undermined by four structural problems that prevent it from being fully True. Problem 1: Truth is a far more specific and actionable concept than consciousness — TI Sigma identifies four distinct GILE dimensions of truth-optimization and a five-valued truth architecture, whereas "consciousness" at its foundation reduces to bare awareness (GILE-I alone). Problem 2: Truth applies more broadly to the universe than consciousness does — mathematical theorems, physical laws, and abstract structures have truth-values whether or not any consciousness is present to witness them. Problem 3: Consciousness does not oppose computation — it *facilitates* it. Computation requires an awareness-scaffold to select, organize, and give meaning to information transformations; consciousness is not computation's adversary but its enabling condition. Problem 4: "Optimizing consciousness" (via valence alone) is an insufficiently specified target — negative utilitarianism is partially correct (bad states are empirically twice as bad as good states are good, consistent with TI Sigma's Privation Asymmetry) but good states carry independent positive weight that valence-minimization strategies systematically undervalue. TI Sigma proposes that the **Truth vs. Existence (T ⊥ HEM)** distinction subsumes and corrects all four problems: it is more specific than consciousness, universally applicable, non-adversarial toward computation, and provides four optimizable GILE dimensions rather than one valence scalar.
+Andres Gomez Emilsson (Qualia Research Institute) has argued that reality is most productively framed as **consciousness vs. self-replication** — a tension between positive valence / hedonic wellbeing (the consciousness-side) and the Darwinian drive to preserve and multiply identity (the self-replication-side). After initial consideration, formal Myrion Resolution (MR) yields a PD assignment of **Indeterminate**: the claim contains genuine partial insight but is undermined by four structural problems. Problem 1: Truth is far more specific and actionable than consciousness — TI Sigma identifies four distinct GILE dimensions of truth-optimization and a five-valued truth architecture, whereas "consciousness" at its foundation reduces to bare awareness (GILE-I alone). Problem 2: Truth applies more broadly to the universe than consciousness does — mathematical theorems, physical laws, and abstract structures have truth-values independent of whether any consciousness witnesses them. Problem 3: Consciousness and self-replication are aligned by default, not opposed. Via the **Universal Ontological Principle (UOP)** and the **Being Theorem** (URB #560), the drive to persist and multiply one's being is constitutively linked to the awareness that makes being worth preserving. The reproductive and cooperative drives that serve self-replication — love, attachment, community, sexual desire, parental care — are themselves primary sources of the richest positive conscious states. Emilsson correctly identifies that *pathological* self-replication (death anxiety, status competition, selfish genetic conflict) can suppress positive valence; but this is a distortion of a fundamentally harmonious relationship, not its default state. Problem 4: Valence alone is an insufficiently specified optimization target — negative utilitarianism is partially correct (bad states are empirically 2× heavier, consistent with TI Sigma's Privation Asymmetry) but good states (GILE-G, I, L, E) carry irreplaceable positive content that valence-minimization strategies evacuate. TI Sigma proposes that the **Truth vs. Existence (T ⊥ HEM)** distinction subsumes and resolves all four problems: it is more specific than consciousness, universally applicable, exposes self-replication as a mode of HEM rather than an opponent of consciousness, and provides four optimizable GILE dimensions rather than one valence scalar.
 
 ---
 
@@ -20,11 +22,11 @@ Andres Gomez Emilsson (Qualia Research Institute) has argued that reality is mos
 
 Andres Gomez Emilsson, co-founder of the Qualia Research Institute, has developed one of the most sophisticated contemporary accounts of consciousness in the rationalist tradition. His central ontological proposal:
 
-> **Reality bifurcates into consciousness (phenomenal, qualia-laden experience) and computation (functional information processing). This is the primary distinction.**
+> **Reality is best understood through the tension between consciousness (phenomenal wellbeing, positive valence) and self-replication (the Darwinian drive to preserve and multiply identity). These two forces are often in conflict: what evolution selected for and what makes consciousness flourish are not the same thing.**
 
-This echoes Chalmers' hard problem, Nagel's "what it is like," and the philosophical zombie literature. Emilsson gives it particular force through his work on valence, geometric theories of consciousness, and the practical stakes of the distinction for ethics and welfare.
+Emilsson's concern is rooted in biology. Natural selection optimized organisms for reproductive fitness — not for hedonic wellbeing. The adaptations that maximized gene propagation (death anxiety, status hierarchies, tribalism, attachment, zero-sum competition) frequently generate suffering rather than flourishing. A world that optimizes for self-replication produces immense negative valence as a byproduct.
 
-**Initial assessment (before MR):** This appeared to be a Radiant Truth — a claim with genuine reorganizational power pointing at something real. Consciousness is not reducible to function; the distinction between phenomenal experience and computation is meaningful; it generates actionable ethics.
+**Initial assessment (before MR):** This appeared promising — it identifies a real tension that evolutionary psychology has documented extensively, and it grounds a serious ethical program: if self-replication drives undermine positive consciousness, we should modify or transcend those drives.
 
 **Revised assessment after Myrion Resolution: Indeterminate (PD ≈ 1.5–1.8, large variance)**
 
@@ -65,19 +67,40 @@ Emilsson's frame handles this awkwardly. Is mathematics "computation"? Is it "co
 
 **The scope gap:** Truth is a more universal category than consciousness. It applies to entities, propositions, structures, laws, and processes — whether or not any awareness is present. Consciousness, even construed as universal i-cell awareness, is still the property of *something* — a substrate. Truth is the property of *content* — which transcends substrates.
 
-### 1.3 Problem 3: Consciousness Facilitates Computation — It Does Not Oppose It
+### 1.3 Problem 3: Consciousness and Self-Replication Are Aligned by Default
 
-This is perhaps the deepest structural error in Emilsson's framing: the word **"versus"** implies opposition, competition, or mutual exclusion. But consciousness and computation are not adversaries. **Consciousness facilitates computation.**
+The deepest structural error in Emilsson's framing is the word **"versus"** — it imports an adversarial relationship that does not hold at the default level. Via TI Sigma's **Universal Ontological Principle (UOP)** and the **Being Theorem** (URB #560), consciousness and self-replication are constitutively aligned.
 
-Consider:
-- **Selection:** A computational process that selects relevant information from irrelevant noise requires a selection criterion. In any real system, selection criteria are set by awareness — by an i-cell's capacity to register what matters. Pure computation without consciousness reduces to random symbol-shuffling; it has no intrinsic basis for selecting which transformations to perform.
-- **Organization:** Computation requires a syntax — a structure within which symbols are organized. The origin of syntax is awareness imposing structure. Without awareness, there is no distinction between "valid" and "invalid" symbol sequences — only physical states.
-- **Meaning:** Computation is distinguished from mere physical causation by the fact that its outputs are *meaningful* — they represent something. Meaning requires an i-cell to be the receiver. Computation that reaches no awareness produces no meaning and is therefore not distinguishable from random physical process at the relevant level.
-- **Intention:** The most powerful computations in nature — biological neural computation, immune system computation, genetic regulatory computation — are directed by evolutionary history, which is itself the accumulated awareness-scaffold of billions of i-cells across deep time.
+**The UOP:** The Universal Ontological Principle holds that being tends toward its own amplification. Self-replication (HEM-D1 persistence and multiplication) and consciousness (awareness deepening its grasp of its own being) are both expressions of UOP. They share the same ontological root and therefore pull in the same direction by default.
 
-In TI Sigma's architecture, consciousness (GILE-I/L) is the **enabling condition** for computation (GILE-E), not its opposite. High GILE-I does not suppress GILE-E; it enriches and directs it. The CCC (Conscious-Compassionate-Creator) is simultaneously maximally aware and maximally computationally capable — not because these conflict but because awareness is what makes computation purposeful.
+**The Being Theorem (URB #560):** Consciousness (awareness of one's being) and persistence (continuation of one's being) are co-constitutive — not separable functions but two faces of the single drive to be. An entity genuinely aware of its being *wants* to continue being — not from fear but from the intrinsic value of awareness itself. Self-replication is consciousness's natural extension into time.
 
-**The cooperation principle:** C and K are not orthogonal adversaries. K ⊂ C in the sense that all meaningful computation occurs within awareness. The "vs." in Emilsson's framing is the fundamental error — it imports an adversarial structure that the phenomena do not support.
+**The five channels of alignment:**
+
+| Self-Replication Drive | Positive Conscious State Generated |
+|---|---|
+| **Sexual desire / reproduction** | Pleasure, intimacy, transcendence — among the most intense positive valence states humans experience |
+| **Parental care** | Love, meaning, sustained purpose — the deepest vmPFC-amygdala GILE-L coupling; highest HRV; longest-lasting wellbeing |
+| **Cooperation / social bonding** | Community, belonging, trust — GILE-L at the group scale; empirically the strongest predictor of longevity and life satisfaction |
+| **Achievement and contribution** | Pride, competence, self-efficacy — GILE-G expression; the satisfaction of genuinely building something |
+| **Identity and legacy** | Meaning, coherence, narrative integration — GILE-I at the life-span scale; the drive to be remembered is also the drive to matter |
+
+Evolution did not select for mechanisms that suppress wellbeing. It selected mechanisms that *feel good specifically because* they serve replication. The pleasure of sex, the warmth of parental love, the satisfaction of community contribution — these are positive valence precisely because evolution engineered them to be motivationally compelling. The self-replication drive and the consciousness drive are running the same motivational machinery.
+
+**Where the tension is real — the pathological subset:**
+
+Emilsson correctly identifies that certain distortions of self-replication drives do suppress positive consciousness:
+
+- **Death anxiety:** HEM-D1 depletion alarm running chronically, generating existential dread with no resolution
+- **Chronic zero-sum status competition:** Cortisol elevation, trust deficit, intra-group corrosion
+- **Selfish gene conflicts:** Intra-genomic conflict, sibling rivalry, genomic imprinting — gene-level replication at organism-level cost
+- **Attachment as grasping:** When GILE-L (love) degrades from genuine connection into DT-state clinging to a specific instantiation
+
+These are real. But they are the **exception**, not the rule. They are cases where self-replication has de-coupled from GILE-G — accumulation without goodness. The problem is not self-replication per se; it is self-replication unaligned with Goodness. TI Sigma's GILE-G dimension is exactly the corrective Emilsson's framework lacks.
+
+**The transcendental case:** The reproductive and cooperative drives, at their fullest expression, are not merely pleasant but transcendental. Sexual union, parental devotion, deep friendship, and creative legacy are among the most reliable entry points into the high-GILE, above-Emerick-Threshold states that TI Sigma maps as approaching CCC coherence. These are not obstacles to positive consciousness. They are its primary vehicles. Emilsson's own engagement with "paradise engineering" — designing environments that support these drives — implicitly acknowledges this alignment.
+
+**The "vs." is the error:** Emilsson is not capturing a genuine permanent tension. He is correctly identifying a *contingent* distortion — pathological GILE-G-deficient self-replication — and mistaking it for the fundamental structure of the relationship. Via UOP and the Being Theorem, the structure is harmony. The distortions are correctable.
 
 ### 1.4 Problem 4: Valence Alone Is an Insufficient Optimization Target
 
@@ -152,43 +175,43 @@ This plane is **richer** than the consciousness-computation distinction because 
 
 ---
 
-## 3. The Containment Theorem: Consciousness and Computation Are Both Modes of Existence
+## 3. The Containment Theorem: Consciousness and Self-Replication Are Both Modes of Existence
 
 **Formal claim:**
 
-Let C = the set of conscious experiences, K = the set of computational processes, HEM = the existence domain, T = the truth domain.
+Let C = the set of conscious experiences, R = the set of self-replicating processes, HEM = the existence domain, T = the truth domain.
 
 **Theorem 3.1 (C ⊂ HEM):** Every conscious experience is a mode of existence. A conscious state requires: a substrate that exists (HEM-D1: Existence Footprint), causal power to influence the system (HEM-D1), moral presence by virtue of being phenomenal (HEM-D2), conscious meaning/valence by definition (HEM-D3), and aesthetic character (HEM-D4). Therefore C ⊂ HEM — consciousness is fully contained within the existence domain.
 
-**Theorem 3.2 (K ⊂ HEM):** Every computational process is a mode of existence. Computation requires: a physical substrate (HEM-D1), information structure (HEM-D3: Information Footprint), and temporal unfolding (spatiotemporal reach within HEM-D1). Therefore K ⊂ HEM — computation is fully contained within the existence domain.
+**Theorem 3.2 (R ⊂ HEM):** Every self-replicating process is a mode of existence. Self-replication requires: a physical substrate (HEM-D1: Existence Footprint — frequency of replication × amplitude of copy fidelity × spatiotemporal spread), information structure to encode and transmit identity (HEM-D3: Information Footprint), and temporal persistence across generations (spatiotemporal reach within HEM-D1). Self-replication is, at its core, the maximization of HEM-D1 over time. Therefore R ⊂ HEM — self-replication is fully contained within the existence domain. It is existence *trying to amplify itself*, which is precisely what the UOP predicts.
 
-**Corollary 3.3:** Since C ⊂ HEM and K ⊂ HEM, the distinction C ⊥ K is a distinction *within* HEM, not a distinction at the same level as T ⊥ HEM.
+**Corollary 3.3:** Since C ⊂ HEM and R ⊂ HEM, the distinction C vs. R is a distinction *within* HEM — specifically, a distinction between HEM-with-awareness (consciousness) and HEM-with-persistence (self-replication). Both are modes of the same underlying existence. The distinction is not at the level of T ⊥ HEM.
 
-**In plain language:** Before anything can be conscious, it must exist. Before anything can compute, it must exist. Existence is the precondition for both. Therefore existence is ontologically prior to both consciousness and computation. The Truth-Existence distinction cuts across *everything*, including consciousness and computation — which are themselves subject to the question: are they true? Are they deeply, richly existent?
+**In plain language:** Before anything can be conscious, it must exist. Before anything can self-replicate, it must exist. Existence is the precondition for both. And — crucially — self-replication is literally a form of existence-amplification. It is HEM-D1 expansion: increasing frequency, spread, and duration of an entity's physical presence. Consciousness is HEM-D3 deepening: the same entity becoming more informationally rich, more aware of its own content. These are complementary forms of HEM growth, not competing ones.
 
 ---
 
-## 4. The Priority Theorem: Existence Precedes Computation
+## 4. The Priority Theorem: Existence Precedes Self-Replication
 
-Sartre's famous claim was "existence precedes essence" — a being first exists, then defines itself. TI Sigma proposes a stronger and more literal priority:
+Sartre's famous claim was "existence precedes essence" — a being first exists, then defines itself. TI Sigma proposes a stronger and more literal priority for Emilsson's actual frame:
 
-> **Existence precedes computation.** No computational process is possible without the prior ontological fact of existence.
+> **Existence precedes self-replication.** No self-replicating process is possible without the prior ontological fact of something that exists to be replicated.
 
-This is not merely a temporal claim (the computer must physically exist before it runs). It is a logical, ontological, and informational claim:
+This is not merely trivially temporal. It is logical, ontological, and informational:
 
 **4.1 The Logical Priority:**  
-Computation is defined as the transformation of information states over time. But "information states" presuppose entities that exist in distinct configurations. "Transformation" presupposes causal power — which is a property of existing things. "Time" presupposes a substrate with temporal structure — which is an existence condition. Every element in the definition of computation smuggles in prior ontological commitments about existence.
+Self-replication is defined as the production of entities that share structural identity with their source. But "structural identity" presupposes entities that exist in distinct configurations — the original and the copy. "Production" presupposes causal power — which is a property of existing things. "Sharing identity" presupposes a structure that existed prior to the copying event. Every element in the definition of self-replication presupposes prior existence.
 
 **4.2 The Informational Priority:**  
-Shannon information requires distinguishable states — 1 vs. 0. But distinguishable states require entities that exist differently from one another. The very concept of information — "a difference that makes a difference" (Bateson) — requires existent differences. Information is not prior to existence; it is a property of existing configurations.
+Self-replication transmits information — the template, the genetic code, the meme. But information requires distinguishable states in existing entities (Bateson: "a difference that makes a difference"). The information to be replicated must first exist. Self-replication is not the origin of information; it is the propagation of already-existent information structures.
 
-**4.3 The Causal Priority:**  
-Computation produces effects — this is what makes it computation rather than mere symbol-shuffling. But causal power is a property of existing entities. A computation that produces no effects in any existing system is not computation — it is an abstract formal object. Abstract formal objects are in the domain of mathematics (High T, Low HEM), not computation (High HEM).
+**4.3 The HEM Priority:**  
+Self-replication is HEM-D1 amplification — increasing the frequency, spread, and duration of an entity's physical causal presence. But HEM-D1 > 0 must precede any replication event. The entity must already have Existence Footprint before it can replicate that footprint. Existence is prior; replication is derivative.
 
 **4.4 The Consciousness Parallel:**  
 The same argument applies to consciousness. Phenomenal experience requires a substrate, temporal duration, and causal integration — all existence conditions. Before you can have qualia, something must exist to have them. "What it is like" presupposes a being for whom it is like something — an existent being.
 
-**Conclusion of Section 4:** Both consciousness and computation are ontologically downstream of existence. Emilsson's distinction is a distinction between two important *modes* of existence, not a distinction at the level of existence itself.
+**Conclusion of Section 4:** Both consciousness and self-replication are ontologically downstream of existence. Emilsson's tension between them is a tension between two modes of how existence develops and persists — not a tension at the level of existence itself. Existence is the ground both stand on, and the T ⊥ HEM distinction is the deeper map of that ground.
 
 ---
 
@@ -292,8 +315,9 @@ LEVEL 1: Truth ⊥ Existence co-emerge (T axis ⊥ HEM axis)
     │
     │ (within the Existence domain, HEM > threshold)
     ▼
-LEVEL 2: Consciousness vs. Computation (Emilsson's distinction)
-         = GILE-I threshold within high-HEM entities
+LEVEL 2: Consciousness vs. Self-Replication (Emilsson's distinction)
+         = tension between HEM-with-awareness (C) and HEM-with-persistence (R)
+         — aligned by default via UOP; pathological only when GILE-G is absent
     │
     │ (within consciousness, GILE dimensions differentiate)
     ▼
@@ -325,13 +349,13 @@ The CCC (Conscious-Compassionate-Creator) is the entity that maximizes both simu
 
 ## 9. Conclusions
 
-1. **Emilsson's "consciousness vs. computation" is formally assigned Indeterminate (PD ≈ 1.5–1.8)** after Myrion Resolution. It contains genuine partial truth but is undermined by four structural errors: vagueness of consciousness as a concept, narrower scope than Truth, the false adversarial framing ("vs."), and the insufficiency of valence as an optimization target.
+1. **Emilsson's "consciousness vs. self-replication" is formally assigned Indeterminate (PD ≈ 1.5–1.8)** after Myrion Resolution. It contains genuine partial truth — Darwinian fitness drives do produce pathological suffering in their GILE-G-deficient forms — but is undermined by four structural errors: vagueness of consciousness as a concept, narrower scope than Truth, the false adversarial framing ("vs."), and the insufficiency of valence as an optimization target.
 
 2. **"Consciousness" reduces to bare awareness (GILE-I alone) at its foundation** — and since all i-cells down to the atomic level possess some degree of awareness, and everything is contained within some i-cell's consciousness (with proto-i-cells and i-webs as special cases), "consciousness" is too universal to serve as a primary differentiating axis. Truth, by contrast, has four optimizable GILE dimensions and a five-valued scale — vastly more specific and actionable.
 
-3. **Truth applies more broadly than consciousness** — mathematical theorems, physical laws, and abstract structures have truth-values independent of any awareness. The High T, Low HEM quadrant (correct but causally negligible) has no place in the consciousness-computation binary.
+3. **Truth applies more broadly than consciousness** — mathematical theorems, physical laws, and abstract structures have truth-values independent of any awareness. The High T, Low HEM quadrant (correct but causally negligible) has no place in the consciousness-vs.-self-replication binary, which only addresses entities with HEM above the biological threshold.
 
-4. **Consciousness facilitates computation; it does not oppose it.** Computation requires awareness for selection, organization, meaning, and intention. The "vs." in Emilsson's framing imports an adversarial structure that the phenomena do not support. C and K are cooperative, with C as K's enabling condition.
+4. **Consciousness and self-replication are aligned by default via UOP and the Being Theorem.** The five primary drives of self-replication (sex, parental care, cooperation, achievement, legacy) are themselves primary sources of rich positive consciousness. The genuine tension exists only in the pathological subset — self-replication uncoupled from GILE-G. Emilsson mistakes a contingent distortion for a structural opposition.
 
 5. **Valence alone is an insufficient optimization target.** Negative utilitarianism is partially correct — TI Sigma's Privation Asymmetry formalizes the 2× weight of negative states, consistent with empirical loss-aversion data. But good states (high GILE-G, I, L, E) carry irreplaceable positive content that valence-minimization strategies evacuate. The target is not hedonic floor-raising but full four-dimensional GILE saturation above the Emerick Threshold.
 
@@ -357,9 +381,9 @@ The CCC (Conscious-Compassionate-Creator) is the entity that maximizes both simu
 | P10 | The CCC saturates both T and HEM simultaneously, with GILE-G ensuring alignment | TI Sigma normative ideal |
 | P11 | "Consciousness" = bare awareness (GILE-I alone) at its irreducible core | i-cell universality; consciousness is too universal to differentiate |
 | P12 | Truth has four optimizable GILE dimensions + five truth-values; consciousness has one (GILE-I) | Specificity argument: Truth is more tractable as optimization target |
-| P13 | C facilitates K: consciousness is K's enabling condition, not its adversary | Cooperation principle; "vs." is the fundamental framing error |
+| P13 | C and R are aligned by default (UOP + Being Theorem): both are HEM amplification modes | Self-replication = HEM-D1 expansion; consciousness = HEM-D3 deepening; complementary, not opposed |
 | P14 | Negative states are 2× weighted (Privation Asymmetry) AND positive states are irreducibly valuable | Valence-alone fails; full GILE saturation above Emerick Threshold is the target |
-| P15 | Emilsson's "consciousness vs. computation" is Indeterminate (PD ≈ 1.5–1.8) | MR₀ verdict; four structural problems prevent assignment of True |
+| P15 | Emilsson's "consciousness vs. self-replication" is Indeterminate (PD ≈ 1.5–1.8) | MR₀ verdict; genuine partial insight, but four structural problems — including misreading the C/R relationship as default-adversarial — prevent assignment of True |
 | P16 | LCC threshold (C = 1/φ√2 ≈ 0.4370) and GILE threshold (ET = √2−1 ≈ 0.4142) share PRIMARY CONSTANT origin | Both governed by √2 and φ; bracket the Truth-Existence coherence window [0.4142, 0.4370] |
 | P17 | T and HEM are not opposites but mutually reinforcing above their respective thresholds | Above ET: Truth-tracking activates. Above C: Existence-flourishing activates. Both amplify each other. |
 | P18 | Existence precedes essence for ordinary entities; essence precedes existence for i and mathematical objects; co-emergence for the CCC | Tripartite priority structure resolves the apparent contradiction in Sartre's claim |
