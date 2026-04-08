@@ -1,0 +1,272 @@
+Short answer: it’s almost certainly circular, not a legitimate axiom—unless you formalize it in a way that is strictly weaker than 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP, which your current framework does not do.
+
+Let me explain carefully, in referee style.
+
+Referee-Style Evaluation of “mr_nonalgorithmic”
+1. What an axiom must do (in complexity theory)
+
+In this area, you cannot introduce an “axiom” that:
+
+already encodes the conclusion (e.g., “no polynomial algorithm can solve SAT”), or
+is equivalent in strength to 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP.
+
+A legitimate axiom must be:
+
+independent of the statement you’re trying to prove, and
+plausibly true for reasons unrelated to 
+𝑃
+P vs 
+𝑁
+𝑃
+NP.
+
+Examples of acceptable assumptions in the literature:
+
+existence of one-way functions,
+existence of pseudorandom generators,
+circuit lower bounds for restricted models.
+
+These are not equivalent to 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP, even though they may imply it.
+
+2. What your “mr_nonalgorithmic” is doing (structurally)
+
+From your framework, the role of “mr_nonalgorithmic” is clearly:
+
+To assert that search (finding a satisfying assignment) cannot be fully captured by algorithmic compression / polynomial-time computation.
+
+That is essentially the same content as:
+
+“There is no polynomial-time algorithm that can find satisfying assignments for all SAT instances.”
+
+But that statement is already equivalent to:
+
+𝑆
+𝐴
+𝑇
+∉
+𝑃
+⇒
+𝑃
+≠
+𝑁
+𝑃
+SAT∈
+/
+P⇒P
+
+=NP
+
+So the axiom is doing the heavy lifting.
+
+3. Why this is circular
+
+Your proof structure is:
+
+Assume “mr_nonalgorithmic” (search requires irreducible/non-algorithmic information).
+Conclude no polynomial-time algorithm can find solutions.
+Conclude SAT ∉ P.
+Conclude 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP.
+
+But step (1) already implies step (2).
+
+So the logical flow is:
+
+Assumption
+  
+≈
+  
+(
+𝑆
+𝐴
+𝑇
+∉
+𝑃
+)
+  
+⇒
+  
+𝑃
+≠
+𝑁
+𝑃
+Assumption≈(SAT∈
+/
+P)⇒P
+
+=NP
+
+That’s not a proof—it’s a rephrasing of the conclusion as an axiom.
+
+4. Diagnostic test (very important)
+
+Here’s the clean way to check:
+
+If I assume 
+𝑃
+=
+𝑁
+𝑃
+P=NP, does your axiom become false?
+
+If yes, then your axiom is equivalent to 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP → circular.
+If no, then it might be a legitimate independent principle.
+
+For “mr_nonalgorithmic”, under 
+𝑃
+=
+𝑁
+𝑃
+P=NP:
+
+there does exist a polynomial-time algorithm that finds satisfying assignments,
+so “search is non-algorithmic” becomes false.
+
+Therefore:
+
+👉 Your axiom cannot coexist with 
+𝑃
+=
+𝑁
+𝑃
+P=NP
+👉 So it is equivalent in strength to 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP
+👉 Therefore it is circular
+
+5. Deeper issue: “non-algorithmic” is not formalized
+
+Even beyond circularity, there’s a second fatal issue:
+
+“non-algorithmic” is not a standard mathematical property.
+
+To be usable, it must be defined in one of these formal ways:
+
+Turing-computability
+time complexity (e.g., superpolynomial)
+circuit complexity
+Kolmogorov complexity (carefully, and conditionally)
+
+Right now, “non-algorithmic” functions as an intuitive/philosophical label, not a rigorously defined predicate on functions or problems.
+
+That makes it unusable as an axiom in a proof intended for journals like JACM.
+
+6. When something like this would be legitimate
+
+You could salvage the idea only if you weaken and formalize it.
+
+For example, something like:
+
+“There exists a distribution over SAT instances such that every polynomial-time algorithm fails with probability ≥ ε.”
+
+This is:
+
+formal,
+nontrivial,
+and not obviously equivalent to 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP.
+
+Or:
+
+“There exists a function in NP with circuit complexity 
+2
+Ω
+(
+𝑛
+)
+2
+Ω(n)
+.”
+
+This is a standard kind of assumption.
+
+But your current axiom is closer to:
+
+“Search cannot be done efficiently”
+
+which is just 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP in disguise.
+
+7. Bottom line
+
+Verdict:
+
+❌ Not a legitimate independent axiom
+❌ Not formalized mathematically
+❌ Equivalent in strength to the conclusion
+✅ Therefore circular
+8. The core insight (worth saving)
+
+Your intuition:
+
+“Search requires global information; verification is local”
+
+is actually very good.
+
+But to make it non-circular, you must:
+
+express it as a precise lower bound, and
+prove it (or assume something weaker than 
+𝑃
+≠
+𝑁
+𝑃
+P
+
+=NP).
+
+If you want, I can help you reformulate “mr_nonalgorithmic” into a non-circular, publishable conjecture that actually fits into modern complexity theory.
+
+DEVELOPER MODE
