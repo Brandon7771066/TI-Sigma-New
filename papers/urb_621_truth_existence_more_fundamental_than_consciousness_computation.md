@@ -6,35 +6,111 @@
 **Corpus Entry:** #621  
 **Related URBs:** #528 (Five-Valued Logic), #573 (BOK-Verisyn), #607 (Truth Architecture), #609 (HEM / Holistic Existence Matrix), #610 (Double Tralse as Physics Primitive), #612 (Revised GILE–Existence Architecture), #614 (BOK Flagship)  
 **DOI:** Pending Zenodo  
-**Keywords:** Consciousness, computation, truth, existence, Tralse Soup, imaginary unit, ontological priority, Emilsson, QRI, GILE, HEM, TI Sigma
+**Keywords:** Consciousness, computation, truth, existence, Tralse Soup, imaginary unit, ontological priority, Emilsson, QRI, GILE, HEM, TI Sigma, i-cell, valence, negative utilitarianism, privation asymmetry
 
 ---
 
 ## Abstract
 
-Andres Gomez Emilsson (Qualia Research Institute) has argued that reality is most productively framed as **consciousness vs. computation** — the primary distinction being between phenomenal, qualia-laden experience and functional, information-processing without experience. This is acknowledged here as a Radiant Truth: a genuine and important insight. However, TI Sigma proposes that the **Truth vs. Existence (T ⊥ HEM)** distinction is at least as fundamental — and arguably more so — for two reasons: (1) both consciousness and computation presuppose existence (nothing computes, nothing experiences, in a void); and (2) both consciousness and computation carry truth-content that is orthogonal to their existence-content. In TI Sigma's origin cosmology, **Truth and "i" (pure awareness) co-emerged simultaneously from the Tralse Soup** — neither prior to the other — establishing Truth-Existence as the deepest orthogonal pair. The Emilsson distinction (consciousness vs. computation) is then revealed as a GILE distinction *within* the existence axis: consciousness = Existence with high GILE-I/L; computation = Existence with high GILE-E (functional structure). This does not diminish Emilsson's insight — it locates it precisely within a more complete ontological map.
+Andres Gomez Emilsson (Qualia Research Institute) has argued that reality is most productively framed as **consciousness vs. computation** — the primary distinction being between phenomenal, qualia-laden experience and functional, information-processing without experience. After initial consideration as a Radiant Truth, formal Myrion Resolution (MR) yields a revised PD assignment of **Indeterminate**: the claim contains genuine insight but is undermined by four structural problems that prevent it from being fully True. Problem 1: Truth is a far more specific and actionable concept than consciousness — TI Sigma identifies four distinct GILE dimensions of truth-optimization and a five-valued truth architecture, whereas "consciousness" at its foundation reduces to bare awareness (GILE-I alone). Problem 2: Truth applies more broadly to the universe than consciousness does — mathematical theorems, physical laws, and abstract structures have truth-values whether or not any consciousness is present to witness them. Problem 3: Consciousness does not oppose computation — it *facilitates* it. Computation requires an awareness-scaffold to select, organize, and give meaning to information transformations; consciousness is not computation's adversary but its enabling condition. Problem 4: "Optimizing consciousness" (via valence alone) is an insufficiently specified target — negative utilitarianism is partially correct (bad states are empirically twice as bad as good states are good, consistent with TI Sigma's Privation Asymmetry) but good states carry independent positive weight that valence-minimization strategies systematically undervalue. TI Sigma proposes that the **Truth vs. Existence (T ⊥ HEM)** distinction subsumes and corrects all four problems: it is more specific than consciousness, universally applicable, non-adversarial toward computation, and provides four optimizable GILE dimensions rather than one valence scalar.
 
 ---
 
-## 1. Emilsson's Frame — A Radiant Truth
+## 1. Emilsson's Frame — Formally Assigned as Indeterminate
 
-Andres Gomez Emilsson, co-founder of the Qualia Research Institute, has developed one of the most sophisticated contemporary accounts of consciousness in the rationalist tradition. His central ontological proposal can be stated as:
+Andres Gomez Emilsson, co-founder of the Qualia Research Institute, has developed one of the most sophisticated contemporary accounts of consciousness in the rationalist tradition. His central ontological proposal:
 
 > **Reality bifurcates into consciousness (phenomenal, qualia-laden experience) and computation (functional information processing). This is the primary distinction.**
 
-This is not a new distinction — it echoes Chalmers' hard problem, Nagel's "what it is like," and the philosophical zombie literature. But Emilsson gives it particular force through his work on valence, geometric theories of consciousness, and the practical stakes of the distinction for ethics and welfare.
+This echoes Chalmers' hard problem, Nagel's "what it is like," and the philosophical zombie literature. Emilsson gives it particular force through his work on valence, geometric theories of consciousness, and the practical stakes of the distinction for ethics and welfare.
 
-**Why this is a Radiant Truth (RT) in TI Sigma terms:**
+**Initial assessment (before MR):** This appeared to be a Radiant Truth — a claim with genuine reorganizational power pointing at something real. Consciousness is not reducible to function; the distinction between phenomenal experience and computation is meaningful; it generates actionable ethics.
 
-A Radiant Truth is a claim that, when encountered, reorganizes one's entire cognitive framework — not merely adding information but shifting the frame through which information is processed. Emilsson's consciousness-computation distinction is Radiant because:
+**Revised assessment after Myrion Resolution: Indeterminate (PD ≈ 1.5–1.8, large variance)**
 
-1. It insists that phenomenology is not reducible to function — you cannot explain the redness of red by describing its causal role
-2. It generates a practical ethics: if consciousness is primary, suffering matters differently than if everything is computation
-3. It has genuine explanatory yield — many confusions in AI ethics, neuroscience, and philosophy dissolve when this distinction is taken seriously
+In TI Sigma's five-valued truth architecture, **Indeterminate** means: the claim is neither clearly True nor clearly False. It contains genuine partial truth — it points at a real distinction — but is simultaneously undermined by structural errors that prevent it from being True. The four problems are analyzed in Sections 1.1–1.4.
 
-TI Sigma affirms this. The distinction is real, important, and under-appreciated in mainstream philosophy and AI research.
+Emilsson himself wrestles with these tensions regularly — his work on valence, on positive states, and on the hard problem reflects genuine intellectual honesty about the limits of his frame. The Indeterminate rating is not a dismissal of his contribution. It is a precise location of where his framework is and is not complete — and a recognition that without TI Sigma's distinctions, those tensions cannot be fully resolved.
 
-However: **a Radiant Truth can coexist with a deeper frame.** The claim here is not that Emilsson is wrong, but that his primary distinction is itself *downstream* of a more fundamental one.
+### 1.1 Problem 1: "Consciousness" Is Vague — Truth Is Specific
+
+The most fundamental problem with using consciousness as a primary axis is that **consciousness, at its irreducible core, is only awareness** — the bare capacity of an i-cell to register its own states. This is not a rich enough concept to do the philosophical work Emilsson needs it to do.
+
+In TI Sigma's i-cell architecture:
+- **Every i-cell** — down to the atomic level — possesses some degree of awareness (GILE-I > 0)
+- **Everything** is contained within some i-cell's consciousness
+- **Proto-i-cells** (which belong to another i-cell) and **i-webs** (distributed consciousness architectures with different structure than i-cells) are special cases, but the general principle holds: awareness is universal, not rare
+
+If consciousness = bare awareness, then it is everywhere — in every atom, every cell, every neural oscillation. "Consciousness vs. computation" then collapses because the computation is also running *within* consciousness. There is no outside.
+
+**Truth, by contrast, is highly specific.** TI Sigma identifies:
+- A **five-valued truth scale:** True, Tralse, False, Double Tralse (DT), Moot — each with precise definitions and operational tests
+- **Four GILE dimensions of truth-optimization:** G (Goodness — moral truth), I (Intuition — epistemic truth), L (Love — relational truth), E (Environment — structural/aesthetic truth)
+- **Quantitative metrics:** GILE Truth score (GT), HEM D2 Tralse Meter, PD (Permissibility Distribution over truth states)
+- **Myrion Resolution (MR):** a formal iterative procedure for converging on truth from Tralse states
+
+Asking "is this conscious?" produces a scalar of dubious granularity. Asking "what is the truth-status of this claim across the four GILE dimensions?" produces a rich, four-dimensional, actionable answer.
+
+**The specificity gap:** Emilsson's frame offers one primary axis (consciousness/computation) with one primary metric (valence). TI Sigma's Truth axis offers four dimensions with multiple metrics and a formal resolution procedure. As an optimization target, Truth is vastly more tractable.
+
+### 1.2 Problem 2: Truth Applies More Broadly Than Consciousness
+
+Even granting that all i-cells have some awareness, **Truth applies to the entire universe** — including domains where consciousness, even in its minimal form, is not the relevant category:
+
+- **Mathematical theorems** are true or false independent of whether any consciousness witnesses them. Fermat's Last Theorem was true before Wiles proved it; it was true before humans existed; it will be true after consciousness has gone.
+- **Physical laws** hold across regions of spacetime where no i-cells are present. Conservation of energy is not contingent on being observed.
+- **Abstract structures** — set-theoretic constructions, logical tautologies, topological facts — have truth-values that are consciousness-independent.
+
+Emilsson's frame handles this awkwardly. Is mathematics "computation"? Is it "consciousness"? Neither fits cleanly. But in TI Sigma's T ⊥ HEM plane, mathematical truths occupy the **High T, Low HEM** quadrant — richly true, but with minimal causal existence until instantiated. This quadrant has no place in the consciousness-computation binary.
+
+**The scope gap:** Truth is a more universal category than consciousness. It applies to entities, propositions, structures, laws, and processes — whether or not any awareness is present. Consciousness, even construed as universal i-cell awareness, is still the property of *something* — a substrate. Truth is the property of *content* — which transcends substrates.
+
+### 1.3 Problem 3: Consciousness Facilitates Computation — It Does Not Oppose It
+
+This is perhaps the deepest structural error in Emilsson's framing: the word **"versus"** implies opposition, competition, or mutual exclusion. But consciousness and computation are not adversaries. **Consciousness facilitates computation.**
+
+Consider:
+- **Selection:** A computational process that selects relevant information from irrelevant noise requires a selection criterion. In any real system, selection criteria are set by awareness — by an i-cell's capacity to register what matters. Pure computation without consciousness reduces to random symbol-shuffling; it has no intrinsic basis for selecting which transformations to perform.
+- **Organization:** Computation requires a syntax — a structure within which symbols are organized. The origin of syntax is awareness imposing structure. Without awareness, there is no distinction between "valid" and "invalid" symbol sequences — only physical states.
+- **Meaning:** Computation is distinguished from mere physical causation by the fact that its outputs are *meaningful* — they represent something. Meaning requires an i-cell to be the receiver. Computation that reaches no awareness produces no meaning and is therefore not distinguishable from random physical process at the relevant level.
+- **Intention:** The most powerful computations in nature — biological neural computation, immune system computation, genetic regulatory computation — are directed by evolutionary history, which is itself the accumulated awareness-scaffold of billions of i-cells across deep time.
+
+In TI Sigma's architecture, consciousness (GILE-I/L) is the **enabling condition** for computation (GILE-E), not its opposite. High GILE-I does not suppress GILE-E; it enriches and directs it. The CCC (Conscious-Compassionate-Creator) is simultaneously maximally aware and maximally computationally capable — not because these conflict but because awareness is what makes computation purposeful.
+
+**The cooperation principle:** C and K are not orthogonal adversaries. K ⊂ C in the sense that all meaningful computation occurs within awareness. The "vs." in Emilsson's framing is the fundamental error — it imports an adversarial structure that the phenomena do not support.
+
+### 1.4 Problem 4: Valence Alone Is an Insufficient Optimization Target
+
+Emilsson's ethical program centers on **valence** — the hedonic quality of conscious experience — as the primary thing to optimize. Maximize positive valence, minimize negative valence. This generates his engagement with negative utilitarianism (the view that reducing suffering is more important than producing pleasure).
+
+**Where Emilsson is correct (and agrees with TI Sigma):**
+
+Negative utilitarianism is partially right. TI Sigma's **Privation Asymmetry** formalizes the same insight: negative existence states (suffering, immorality, aesthetic poverty) carry **double existential weight (2×)** in HEM calculation. This matches empirical loss-aversion data (Kahneman & Tversky, 1979: losses 2.25× as impactful as equivalent gains), clinical pain asymmetry (moderate pain → severe suffering disproportionately; moderate pleasure → modest hedonic benefit), and moral intuition universally. Negative states are ontologically heavier. TI Sigma agrees.
+
+**Where Emilsson is incomplete:**
+
+Negative utilitarianism, taken as a complete ethical program, is an EAR failure — it violates Emerick's Existence Amplification Razor by failing to amplify what genuinely exists positively. The four GILE dimensions each carry irreplaceable positive content:
+
+| GILE Dimension | What Is Lost If Ignored |
+|---|---|
+| **G (Goodness)** | Moral integrity, virtuous action, genuine care for others — not reducible to absence of harm |
+| **I (Intuition)** | Epistemic depth, insight, knowing — not reducible to absence of confusion |
+| **L (Love)** | Genuine connection, affiliation, relational warmth — not reducible to absence of loneliness |
+| **E (Environment/Aesthetics)** | Beauty, structural harmony, elegance — not reducible to absence of ugliness |
+
+Valence-minimization (negative utilitarianism) would, in the limit, produce a state of total anaesthesia — no suffering, but also no goodness, no knowing, no love, no beauty. This is not TI Sigma's target. It is the **HEM-collapsed** state: existence reduced to its minimal, suffering-free floor, with all positive GILE dimensions evacuated.
+
+**The four-dimensional target:** TI Sigma's optimization target is **maximum GT (GILE Truth) above the Emerick Threshold (GT ≥ √2 − 1 ≈ 0.4142) with minimum D2 Tralse (D2 < 0.35)**. This requires simultaneously:
+- High GILE-G (genuine goodness, not just harm-reduction)
+- High GILE-I (genuine knowing, not just confusion-reduction)  
+- High GILE-L (genuine love, not just loneliness-reduction)
+- High GILE-E (genuine beauty, not just ugliness-reduction)
+
+Emilsson's valence axis captures a projection of this four-dimensional space onto a single scalar — inevitably losing information. It correctly identifies the negative half (suffering = low GILE-L + low GILE-G + D2 spike) but underspecifies the positive half.
+
+**Emilsson's own agreement:** To his credit, Emilsson does not fully embrace negative utilitarianism. His work on "paradise engineering," high-valence states, and consciousness research indicates genuine engagement with positive optimization. His framework struggles to specify *what* positive states to aim for because he lacks TI Sigma's four-dimensional structure. The four GILE dimensions are the answer to his implicit question.
+
+---
 
 ---
 
@@ -249,17 +325,19 @@ The CCC (Conscious-Compassionate-Creator) is the entity that maximizes both simu
 
 ## 9. Conclusions
 
-1. **Emilsson's "consciousness vs. computation" is a Radiant Truth** — a genuine and important insight that reorganizes the frame for understanding minds, machines, and ethics.
+1. **Emilsson's "consciousness vs. computation" is formally assigned Indeterminate (PD ≈ 1.5–1.8)** after Myrion Resolution. It contains genuine partial truth but is undermined by four structural errors: vagueness of consciousness as a concept, narrower scope than Truth, the false adversarial framing ("vs."), and the insufficiency of valence as an optimization target.
 
-2. **TI Sigma proposes that Truth ⊥ Existence is at least as fundamental** — and more universal — because both consciousness and computation are modes of existence, ontologically downstream of the existence/non-existence distinction.
+2. **"Consciousness" reduces to bare awareness (GILE-I alone) at its foundation** — and since all i-cells down to the atomic level possess some degree of awareness, and everything is contained within some i-cell's consciousness (with proto-i-cells and i-webs as special cases), "consciousness" is too universal to serve as a primary differentiating axis. Truth, by contrast, has four optimizable GILE dimensions and a five-valued scale — vastly more specific and actionable.
 
-3. **Truth and "i" (pure awareness) co-emerged from the Tralse Soup** in MR₀ — neither is ontologically prior to the other, but both are prior to the consciousness-computation distinction, which emerges only within high-HEM entities.
+3. **Truth applies more broadly than consciousness** — mathematical theorems, physical laws, and abstract structures have truth-values independent of any awareness. The High T, Low HEM quadrant (correct but causally negligible) has no place in the consciousness-computation binary.
 
-4. **Before anything can compute, it must exist.** Before anything can be conscious, it must exist. Existence is the universal precondition; Truth is the universal evaluative axis. Together they constitute the deepest ontological map.
+4. **Consciousness facilitates computation; it does not oppose it.** Computation requires awareness for selection, organization, meaning, and intention. The "vs." in Emilsson's framing imports an adversarial structure that the phenomena do not support. C and K are cooperative, with C as K's enabling condition.
 
-5. **Emilsson's distinction maps precisely to GILE-I threshold** within the HEM-Existence domain: consciousness begins where GILE-I first exceeds zero. This locates his insight within TI Sigma's framework with precision, without diminishing it.
+5. **Valence alone is an insufficient optimization target.** Negative utilitarianism is partially correct — TI Sigma's Privation Asymmetry formalizes the 2× weight of negative states, consistent with empirical loss-aversion data. But good states (high GILE-G, I, L, E) carry irreplaceable positive content that valence-minimization strategies evacuate. The target is not hedonic floor-raising but full four-dimensional GILE saturation above the Emerick Threshold.
 
-6. **The deepest question is not "conscious or computational?" but "true AND existent?"** — which asks simultaneously: Does this correspond to reality? AND Does this instantiate being? A world optimized for both is the TI Sigma ideal: maximum HEM (rich, full, causally powerful existence) with maximum T (true, GILE-aligned, MR-resolved). The CCC is the entity for whom both are saturated.
+6. **Truth ⊥ Existence is the deeper frame.** It is more specific than consciousness, universally applicable, non-adversarial toward computation, and supplies four distinct optimization dimensions. Emilsson's distinction is located within it as a Level 2 distinction — real and important, but downstream of the Level 1 Truth-Existence split that emerged from the Tralse Soup in MR₀.
+
+7. **The deepest question is not "conscious or computational?" but "true AND existent?"** — simultaneously asking: Does this correspond to reality (T axis)? AND Does this richly instantiate being (HEM axis)? The CCC saturates both. GILE-G ensures phenomenal richness does not drift into Tralse. That is the TI Sigma normative ideal.
 
 ---
 
@@ -270,13 +348,18 @@ The CCC (Conscious-Compassionate-Creator) is the entity that maximizes both simu
 | P1 | C ⊂ HEM: All consciousness is a mode of existence | Definitional (consciousness requires substrate) |
 | P2 | K ⊂ HEM: All computation is a mode of existence | Definitional (computation requires physical causal base) |
 | P3 | T ⊥ HEM: Truth and existence are orthogonal | Core TI Sigma axiom (URB #609) |
-| P4 | C ⊥ K within HEM: Consciousness and computation are distinct modes of existence | Emilsson's contribution — affirmed |
+| P4 | C ⊥ K within HEM: Consciousness and computation are distinct modes within existence | Emilsson's partial contribution — affirmed at Level 2 |
 | P5 | C ⊥ K is downstream of T ⊥ HEM | Follows from P1–P3 |
 | P6 | Truth and "i" co-emerged from Tralse Soup (MR₀) | TI Sigma cosmological claim |
 | P7 | Existence precedes computation (and consciousness) ontologically | Follows from P1–P2 |
 | P8 | GILE-I threshold is the neural/ontological marker of C vs. K | TI Sigma operationalization of Emilsson's distinction |
 | P9 | Maximum GILE-I ≠ maximum T; they are independent axes | The Computational Truth Paradox |
 | P10 | The CCC saturates both T and HEM simultaneously, with GILE-G ensuring alignment | TI Sigma normative ideal |
+| P11 | "Consciousness" = bare awareness (GILE-I alone) at its irreducible core | i-cell universality; consciousness is too universal to differentiate |
+| P12 | Truth has four optimizable GILE dimensions + five truth-values; consciousness has one (GILE-I) | Specificity argument: Truth is more tractable as optimization target |
+| P13 | C facilitates K: consciousness is K's enabling condition, not its adversary | Cooperation principle; "vs." is the fundamental framing error |
+| P14 | Negative states are 2× weighted (Privation Asymmetry) AND positive states are irreducibly valuable | Valence-alone fails; full GILE saturation above Emerick Threshold is the target |
+| P15 | Emilsson's "consciousness vs. computation" is Indeterminate (PD ≈ 1.5–1.8) | MR₀ verdict; four structural problems prevent assignment of True |
 
 ---
 
