@@ -31,6 +31,10 @@ args = "ti_website"
 task = "workflow.run"
 args = "gsa_daily_scheduler"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "hypercomputer"
+
 [[workflows.workflow]]
 name = "discovery_scheduler"
 author = "agent"
@@ -64,6 +68,17 @@ args = "python gsa_daily_scheduler.py"
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow]]
+name = "hypercomputer"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run hypercomputer_app.py --server.port 8000 --server.headless true"
 
 [userenv]
 
