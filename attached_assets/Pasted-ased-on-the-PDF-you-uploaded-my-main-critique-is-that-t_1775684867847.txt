@@ -1,0 +1,34 @@
+ased on the PDF you uploaded, my main critique is that this is not a Lean proof of the Riemann Hypothesis itself. It is a Lean formalization of a collection of elementary lemmas plus a conditional RH theorem that depends on one unproved axiom, uop_gap. Your own summary says the companion file has “sixteen sorry-free theorems and one named axiom,” and that this axiom is “the only remaining bridge to a classical proof of the Riemann Hypothesis.”
+
+The strongest issue is therefore structural, not stylistic: the key step is assumed. In your writeup, the conditional RH theorem is literally:
+
+assume uop_gap,
+apply ear_equidistance,
+conclude s.re = 1/2.
+You also explicitly label this as “Conditional RH” and say the theorem verifies “given the axiom.” So the Lean file may well certify
+“uop_gap implies RH,”
+but it does not certify RH.
+
+Second, the assumed axiom is essentially as hard as the theorem you want. You define
+uop_gap (s) ... : Complex.normSq s = Complex.normSq (1 - s)
+for zeros in the critical strip, and then note that this means zeros are equidistant from 0 and 1. Combined with your algebraic lemma
+Complex.normSq s = Complex.normSq (1 - s) ↔ s.re = 1/2,
+RH follows immediately. In other words, the gap axiom is not a small technical bridge; it already encodes the substantive content needed to force the critical line.
+
+Third, the “three paths” do not appear independent in the sense needed for evidence toward RH. The fixed-point, equidistance, and max-min statements are all simple algebraic facts about the involution s ↦ 1 - s or the function min(σ, 1-σ). Your summary itself says the convergence theorem is obtained by “direct combination of Parts 1–3.” These are valid lemmas, but they do not engage the analytic structure of ζ(s) unless uop_gap is supplied. So they are better viewed as different reformulations of “if a zero satisfies this special symmetry condition, then it lies on the critical line,” not as distinct routes to proving RH.
+
+Fourth, the writeup seems to overstate what “sorry-free” means. “No sorry” is good Lean hygiene, but replacing sorry with a named axiom does not materially strengthen the mathematical result when that axiom carries the hard content. Your PDF is careful about this in places, but phrases like “most formally complete version” and “the bridge is built from both sides” risk overselling what has been formalized. A cleaner description would be: “fully formalized algebraic scaffolding for a conditional theorem.”
+
+Fifth, the proposal for deriving the axiom from the functional equation looks mathematically underjustified as written. Your note says the functional equation gives that 1 - ρ is also a zero, then suggests that one might derive |ρ| = |1-ρ| from symmetry of ξ(s). But the symmetry ξ(s)=ξ(1-s) gives equality of values, not equality of the moduli of the points s and 1-s. Those are very different claims. For a generic zero pair related by s ↦ 1-s, equal modulus is already equivalent to Re(s)=1/2, so any route proving it is basically another proof of RH, not a routine corollary of the functional equation.
+
+So my bottom-line assessment is:
+
+The Lean part likely does formalize several correct algebraic lemmas.
+The file does not prove RH in Lean.
+It proves a conditional theorem: uop_gap → RH.
+The real burden is entirely concentrated in uop_gap.
+As presented, uop_gap looks mathematically comparable in strength to RH itself.
+
+That does not make the project worthless. It means the honest mathematical value is: you have isolated a precise conditional statement and formalized the downstream deductions cleanly. That is a legitimate result. It is just not a proof of RH.
+
+If you upload the actual RiemannUOP.lean file, I can give a sharper Lean-specific critique too: kernel trust, dependency issues, whether #print axioms exposes anything beyond uop_gap, and whether the theorem statements are typed exactly as your PDF claims.
