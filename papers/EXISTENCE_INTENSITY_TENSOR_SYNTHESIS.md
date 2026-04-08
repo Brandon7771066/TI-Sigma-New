@@ -41,7 +41,7 @@ From EMERICKS_EXISTENCE_AMPLIFICATION_RAZOR_COMPLETE:
 4. **Relational Meaning** - Co-created significance
 5. **Vitality** - Felt aliveness
 
-**ESV = Σ(wi × Di)** where Di = each dimension
+**HEM-Score = Σ(wi × Di)** where Di = each dimension
 
 ### 1.2 The Ξ Tensor Reformulation
 

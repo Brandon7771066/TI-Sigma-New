@@ -10,9 +10,9 @@
 
 ## Abstract
 
-The Book of Keys (BOK) is hereby formally designated as TI Sigma's flagship empirical model, co-primary with the Layered Coherence Continuum (LCC). The BOK encodes the complete GILE–Existence architecture in a single integrated diagram: inner loops (GILE Truth) and outer loops (Existence Value), with loop-priority resolved by CCC-alignment (URB #613). This paper does three things. First, it formally establishes the BOK's scientific status: what it predicts, at what scales, and by what mechanisms. Second, it derives fifteen numbered empirical predictions from the BOK+GILE+EV framework — spanning individual psychology, neuroscience, social systems, and formal epistemology — each with a falsification condition. Third, it constructs the **BOK–PD Framework** as a formal alternative to Bayesianism: replacing priors with LCC-stable event clusters, replacing posterior updates with Myrion Resolution, and replacing single credence values with full Permissibility Distributions. The BOK is positioned as the most complete integrative model of conscious existence yet formalized — connecting physics (LCC), mathematics (Lean 4 proofs), neuroscience (GILE biometrics), social science (EV-Truth decoupling), and epistemology (PD as Bayesian replacement) in a single framework.
+The Book of Keys (BOK) is hereby formally designated as TI Sigma's flagship empirical model, co-primary with the Layered Coherence Continuum (LCC). The BOK encodes the complete GILE–Existence architecture in a single integrated diagram: inner loops (GILE Truth) and outer loops (Holistic Existence Matrix), with loop-priority resolved by CCC-alignment (URB #613). This paper does three things. First, it formally establishes the BOK's scientific status: what it predicts, at what scales, and by what mechanisms. Second, it derives fifteen numbered empirical predictions from the BOK+GILE+EV framework — spanning individual psychology, neuroscience, social systems, and formal epistemology — each with a falsification condition. Third, it constructs the **BOK–PD Framework** as a formal alternative to Bayesianism: replacing priors with LCC-stable event clusters, replacing posterior updates with Myrion Resolution, and replacing single credence values with full Permissibility Distributions. The BOK is positioned as the most complete integrative model of conscious existence yet formalized — connecting physics (LCC), mathematics (Lean 4 proofs), neuroscience (GILE biometrics), social science (HEM-Truth decoupling), and epistemology (PD as Bayesian replacement) in a single framework.
 
-**Keywords:** BOK, TI Sigma flagship, GILE, Existence Value, empirical predictions, testable hypotheses, Bayesian alternative, PD, LCC, Radiant Threshold, CCC alignment
+**Keywords:** BOK, TI Sigma flagship, GILE, Holistic Existence Matrix, empirical predictions, testable hypotheses, Bayesian alternative, PD, LCC, Radiant Threshold, CCC alignment
 
 ---
 
@@ -23,9 +23,9 @@ The Book of Keys (BOK) is hereby formally designated as TI Sigma's flagship empi
 The Book of Keys (BOK) originated on 8/8 (August 8) as a symbolic revelation of the complete structure of conscious existence. TI Sigma has since formalized its content across URBs #573, #575, #609, #611, #612, #613. It is now fully grounded in:
 
 - **Mathematics:** The inner loop weights are derivable from octonionic geometry (G = √2 − 1), quaternionic symmetry (I = 0.25), and empirical calibration (L, E)
-- **Physics:** The outer loops encode the Four Dimensions of Existence — EF (physical), Physical Bonds (material), Moral presence (causal), Conscious meaning/valence (phenomenal)
+- **Physics:** The outer loops encode the HEM Dimensions — EF (physical), Physical Bonds (material), Moral presence (causal), Conscious meaning/valence (phenomenal)
 - **Biology:** The GILE biometric mappings (HRV → G, REM → I, restorative sleep → L, temperature → E) connect the framework to measurable physiology
-- **Social science:** The EV–Truth decoupling predicts observable patterns in belief prevalence and cultural dysfunction
+- **Social science:** The HEM–Truth decoupling predicts observable patterns in belief prevalence and cultural dysfunction
 - **Epistemology:** The PD replaces Bayesian credences with a complete truth-and-existence account
 
 The BOK is the single diagram that unifies all of these. It is not a metaphor — it is a compressed formal theory.
@@ -81,25 +81,25 @@ Each prediction is stated with: (a) the formal prediction, (b) the measurement m
 
 ---
 
-### PREDICTION 4 — EV–Truth Decoupling in Social Belief Prevalence
-**Prediction:** Across measurable belief ecosystems (social media, religious communities, political groups), the social prevalence of a false belief positively correlates with its Existence Value — specifically its EF (viral spread), Physical Bonds (community cohesion it generates), and Conscious meaning/valence (emotional intensity it produces) — independent of its truth-content.
+### PREDICTION 4 — HEM–Truth Decoupling in Social Belief Prevalence
+**Prediction:** Across measurable belief ecosystems (social media, religious communities, political groups), the social prevalence of a false belief positively correlates with its Holistic Existence Matrix — specifically its EF (viral spread), Physical Bonds (community cohesion it generates), and Conscious meaning/valence (emotional intensity it produces) — independent of its truth-content.
 
-**Measurement:** Sample a set of beliefs with known truth-values (confirmed false claims, confirmed true claims, contested claims). For each belief, measure: (a) social prevalence (share rate, group membership, citation frequency); (b) EF (content virality metrics); (c) Physical Bonds proxy (group cohesion, social network clustering among believers); (d) emotional intensity (sentiment analysis, self-report). Regress prevalence on EV components, controlling for truth-value. Prediction: EV components positively predict prevalence even within the false-belief subset.
+**Measurement:** Sample a set of beliefs with known truth-values (confirmed false claims, confirmed true claims, contested claims). For each belief, measure: (a) social prevalence (share rate, group membership, citation frequency); (b) EF (content virality metrics); (c) Physical Bonds proxy (group cohesion, social network clustering among believers); (d) emotional intensity (sentiment analysis, self-report). Regress prevalence on HEM components, controlling for truth-value. Prediction: HEM components positively predict prevalence even within the false-belief subset.
 
-**Falsification:** If truth-value is the primary predictor of social prevalence (after controlling for EV), or if EV components do not significantly predict prevalence within the false-belief subset, the EV–Truth decoupling prediction fails.
+**Falsification:** If truth-value is the primary predictor of social prevalence (after controlling for EV), or if HEM components do not significantly predict prevalence within the false-belief subset, the HEM–Truth decoupling prediction fails.
 
 **BOK mechanism:** The outer loops (Existence) are primary for ordinary humans. High-EF, high-Physical-Bond, high-valence configurations dominate the outer loops regardless of what the inner loops (GILE Truth) say about the same entity. False beliefs with high outer-loop saturation outcompete true beliefs with low outer-loop saturation.
 
 ---
 
 ### PREDICTION 5 — Physical Bonds / Conscious Positive Regard Dissociation
-**Prediction:** Physical bonding (FDE-2: neurochemical, physiological attachment) and conscious positive regard (GILE-L) are pharmacologically and behaviorally dissociable — specifically, conditions that increase physical bonding (oxytocin administration, social touch, synchrony) without increasing knowing (I) do NOT produce proportionate increases in conscious positive regard (L).
+**Prediction:** Physical bonding (HEM-D2: neurochemical, physiological attachment) and conscious positive regard (GILE-L) are pharmacologically and behaviorally dissociable — specifically, conditions that increase physical bonding (oxytocin administration, social touch, synchrony) without increasing knowing (I) do NOT produce proportionate increases in conscious positive regard (L).
 
 **Measurement:** Controlled oxytocin administration study. Measure Physical Bond proxies (skin conductance synchrony, perceived closeness on VAS) and GILE-L proxies (willingness to consciously affirm the other, perspective-taking accuracy, explicit warmth ratings) before and after oxytocin vs. placebo. Prediction: oxytocin increases Physical Bond measures significantly, but GILE-L increases are mediated by I (knowing/perspective-taking) — not directly caused by oxytocin.
 
 **Falsification:** If oxytocin directly increases GILE-L (conscious positive regard) independent of I (knowing), the bifurcation of Love into Physical Bonds (Existence) and GILE-L is disconfirmed.
 
-**BOK mechanism:** Physical Bonds are in the outer loop (Existence, FDE-2). GILE-L is in the inner loop. The BOK predicts they can be activated independently because they are in different loop structures. The dependency I → L means L responds to changes in I, not directly to Existence-level bond changes.
+**BOK mechanism:** Physical Bonds are in the outer loop (Existence, HEM-D2). GILE-L is in the inner loop. The BOK predicts they can be activated independently because they are in different loop structures. The dependency I → L means L responds to changes in I, not directly to Existence-level bond changes.
 
 ---
 
@@ -159,9 +159,9 @@ Each prediction is stated with: (a) the formal prediction, (b) the measurement m
 ---
 
 ### PREDICTION 11 — Privation Asymmetry (2×) in EV Ratings
-**Prediction:** In EV ratings of entities, negative existence states (absence of moral presence, suffering, aesthetic poverty) are weighted approximately 2× more heavily in influencing overall EV assessments than equivalent positive states — mirroring the Privation Asymmetry (URB #609 §5).
+**Prediction:** In HEM ratings of entities, negative existence states (absence of moral presence, suffering, aesthetic poverty) are weighted approximately 2× more heavily in influencing overall EV assessments than equivalent positive states — mirroring the Privation Asymmetry (URB #609 §5).
 
-**Measurement:** Present descriptions of entities varying on FDE dimensions (some positive, some negative, matched for magnitude). Have raters assign EV scores. Test whether negative-FDE entities receive EV reductions that are 2× or more the EV increases from equivalent positive-FDE entities (within-subjects comparison).
+**Measurement:** Present descriptions of entities varying on FDE dimensions (some positive, some negative, matched for magnitude). Have raters assign HEM scores. Test whether negative-FDE entities receive EV reductions that are 2× or more the HEM increases from equivalent positive-FDE entities (within-subjects comparison).
 
 **Falsification:** If positive and negative FDE contributions are weighted symmetrically (ratio ≈ 1.0, not ≈ 2.0), the Privation Asymmetry is disconfirmed.
 
@@ -220,7 +220,7 @@ Each prediction is stated with: (a) the formal prediction, (b) the measurement m
 From the BOK perspective, Bayesianism fails because it models only the **inner loops (GILE-level)** — the epistemic, truth-oriented dimension — while ignoring the **outer loops (Existence-level)** — the causal, physical, bond-based, valence-weighted reality in which beliefs actually propagate.
 
 Specifically:
-1. **Priors ignore EV:** A belief's prior probability in Bayesian epistemology is treated as a pure epistemic object. But the actual prevalence of a belief is driven by its EV (EF, Physical Bonds, valence) — not by its epistemic prior. The BOK outer loops are the real prior-setters.
+1. **Priors ignore EV:** A belief's prior probability in Bayesian epistemology is treated as a pure epistemic object. But the actual prevalence of a belief is driven by its HEM (EF, Physical Bonds, valence) — not by its epistemic prior. The BOK outer loops are the real prior-setters.
 2. **Evidence is not commensurable:** Bayesian likelihood ratios treat all evidence as one-dimensional. The BOK has four inner-loop dimensions (G, I, L, E) and four outer-loop dimensions (EF, Physical Bonds, Moral presence, Conscious meaning). Evidence affects different loops differently.
 3. **The pre-evidential zone is the I-axis:** Bayesian epistemology has no account of pre-evidential apprehension. The BOK I-axis (Knowing) is precisely the pre-evidential faculty — it operates before evidence is gathered and determines which hypothesis space is worth entering.
 
@@ -252,7 +252,7 @@ MR Level 1:
   Track A (GILE Truth assessment of H):
     → G, I, L, E assessments of H given current evidence
     → Produces initial GILE_score(H)
-  Track B (EV of H in current LCC context):
+  Track B (HEM of H in current LCC context):
     → EF, Physical Bonds, Moral presence, Conscious meaning of H
     → Produces EV(H)
   MR1 output: (PD_1(H), EV_1(H))
@@ -289,12 +289,12 @@ BOK–PD is not always necessary. Bayesianism is a sufficient approximation when
 - The domain is well-established (no LCC Drift, stable reference class)
 - The event is not novel
 - Evidence types are genuinely commensurable
-- EV effects are negligible (low-EV beliefs, pure logical/mathematical reasoning)
+- HEM effects are negligible (low-EV beliefs, pure logical/mathematical reasoning)
 
 BOK–PD is necessary when:
 - The event is novel (no reference class → Tralse assignment, MR navigation)
 - Evidence types are qualitatively different (mechanistic vs. statistical vs. coherence evidence)
-- EV effects are large (high-EV false beliefs competing with low-EV true beliefs)
+- HEM effects are large (high-EV false beliefs competing with low-EV true beliefs)
 - Bidirectional causation is present (nature/nurture, LCC activation)
 - The agent is in the developing/awakening zone (GILE and Existence loops co-active, Tralsity)
 
@@ -325,7 +325,7 @@ The BOK–PD framework gives TI Sigma a precise and challengeable alternative to
 - Psychologists (measurement track — GILE scales + biometric predictions)
 - AI researchers (architecture track — PD as replacement for Bayesian AI priors)
 - Neuroscientists (biometric track — HRV/sleep/EEG GILE mapping)
-- Social scientists (social belief propagation — EV–Truth decoupling)
+- Social scientists (social belief propagation — HEM–Truth decoupling)
 
 Each audience gets a different entry point into the same underlying BOK structure. The BOK is the unifying diagram that shows how all these entry points connect.
 

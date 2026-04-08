@@ -263,7 +263,7 @@ def render_ti_proof_assistant():
                 with col1:
                     st.markdown(f"{icon} {e['text']}")
                 with col2:
-                    if st.button("🗑️", key=f"del_ev_{i}"):
+                    if st.button("🗑️", key=f"del_hem_{i}"):
                         st.session_state.evidence.pop(i)
                         st.rerun()
         

@@ -158,11 +158,11 @@ Beyond its application to persons, EAR functions as a general-purpose methodolog
 
 The procedure has four steps:
 
-Step 1 — Partition the proposed set of concepts by their Existence Score Value (ESV). Concepts that would cause irreplaceable loss if removed have high ESV; concepts that can be recovered from others have low ESV.
+Step 1 — Partition the proposed set of concepts by their Existence Score Value (HEM-Score). Concepts that would cause irreplaceable loss if removed have high HEM-Score; concepts that can be recovered from others have low HEM-Score.
 
 Step 2 — Identify high-Tralse features: the aspects of each concept that are genuinely active and in productive tension with other concepts rather than merely repeating them in different words.
 
-Step 3 — Test for collapse: can any high-ESV concept be derived from others without loss? If yes, merge it; if no, preserve its independence.
+Step 3 — Test for collapse: can any high-HEM-Score concept be derived from others without loss? If yes, merge it; if no, preserve its independence.
 
 Step 4 — Report the minimal non-redundant set and the higher-order synthesis that shows how the retained concepts relate.
 

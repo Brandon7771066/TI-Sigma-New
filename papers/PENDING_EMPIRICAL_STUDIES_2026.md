@@ -83,7 +83,7 @@
 
 ### T2-D: Privation Asymmetry Test [🟡 NEAR-TERM]
 **Status:** Not started.  
-**Protocol:** N=60; present paired scenarios of equal EV magnitude (positive vs. privation/negative). Test: do privation scenarios receive 2× the EV rating magnitude of matched positive scenarios?  
+**Protocol:** N=60; present paired scenarios of equal EV magnitude (positive vs. privation/negative). Test: do privation scenarios receive 2× the HEM rating magnitude of matched positive scenarios?  
 **Tests:** URB #614 Prediction 11 — Privation Asymmetry ≥ 2×  
 **Cost:** $0 | **Time:** 3 weeks  
 **TI Sigma hypothesis:** EV-based loss aversion produces asymmetric ratings consistent with the Privation Theory (URB #609).

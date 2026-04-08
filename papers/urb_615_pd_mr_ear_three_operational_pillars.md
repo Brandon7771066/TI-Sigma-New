@@ -45,7 +45,7 @@ PD(H) = {
   Tr(H):   weight on the Tralse-Indeterminate component
   F(H):    weight on the Tralse-False component
   DT(H):   weight on the Double Tralse component (coherence violation flag)
-  EV(H):   the Existence Value of H (outer-loop context, from BOK/FDE)
+  EV(H):   the Holistic Existence Matrix of H (outer-loop context, from BOK/FDE)
 }
 ```
 
@@ -60,14 +60,14 @@ The scalar summary of PD is the **Permissibility Level** (PL or "PD score"), ran
 
 **Problem 1 — The single credence problem:** Bayes assigns P(H|E) ∈ [0,1]. This is a single number. It cannot capture the difference between:
 - "H is 70% true because the evidence is moderately strong" (True-Tralse, PD ≈ 1.7)
-- "H is 70% true because two equally strong but contradictory lines of evidence cancel" (Tralse-Indeterminate with high EV, PD ≈ 1.5 with large variance)
+- "H is 70% true because two equally strong but contradictory lines of evidence cancel" (Tralse-Indeterminate with high HEM, PD ≈ 1.5 with large variance)
 - "H appears 70% true but the concept is incoherent" (DT component elevated — Bayesian posterior is meaningless)
 
 PD distinguishes all three. Bayesianism conflates them.
 
 **Problem 2 — The novel event problem (pre-evidential zone):** Before evidence arrives, Bayesianism requires a prior. For genuinely novel events, priors are not available or are arbitrary. PD handles this by assigning an initial distribution via MR Level 1, using the I-axis (pre-evidential apprehension) as the input — not an arbitrary prior.
 
-**Problem 3 — The EV-blind problem:** Bayesian posteriors track truth-content only. PD tracks both truth-content (inner loops, GILE) and Existence Value (outer loops, FDE). A proposition can have high EV and low truth-content simultaneously — which is exactly the EV–Truth decoupling pattern (URB #614, Prediction 4) that Bayesianism cannot model.
+**Problem 3 — The EV-blind problem:** Bayesian posteriors track truth-content only. PD tracks both truth-content (inner loops, GILE) and Holistic Existence Matrix (outer loops, FDE). A proposition can have high HEM and low truth-content simultaneously — which is exactly the HEM–Truth decoupling pattern (URB #614, Prediction 4) that Bayesianism cannot model.
 
 **Problem 4 — The incommensurable evidence problem:** Bayesian likelihood ratios treat all evidence as one-dimensional. PD assigns GILE-dimensional evidence assessments separately (G-assessment, I-assessment, L-assessment, E-assessment) and integrates them via MR rather than collapsing them into a single likelihood.
 
@@ -170,7 +170,7 @@ Given: a set of concepts C = {c₁, c₂, ..., cₙ} with
   S(c) = mid/low-Tralse superficial features (noise)
 
 EAR procedure:
-  STEP 1: PARTITION — Group concepts by comparable Existence Scalar Value (ESV)
+  STEP 1: PARTITION — Group concepts by comparable Holistic Existence Score (HEM-Score)
   STEP 2: PRIORITIZE — Within each group, keep K(c), park S(c)
   STEP 3: COLLAPSE — Merge concepts whose K overlap strongly into hybrid hⱼ
   STEP 4: AMPLIFY — What survives collapse? That is what GENUINELY EXISTS
@@ -202,15 +202,15 @@ EAR is the tool for BOK-level ontological decisions. When applying the BOK to a 
 
 The BOK provides the structure; EAR provides the method for filling in the structure correctly in any specific application.
 
-### 4.4 The Existence Scalar Value (ESV)
+### 4.4 The Holistic Existence Score (HEM-Score)
 
-EAR introduces a metric — the **Existence Scalar Value (ESV)** — as the quantitative face of EAR decisions. ESV is a measure of how much something genuinely exists along the relevant dimensions. It connects to the EV framework (URB #609) as follows:
-- EV (Existence Value, URB #609) = the FDE-based outer-loop measure of an entity's Existence
-- ESV (Existence Scalar Value, EAR) = the combined inner+outer loop measure used for EAR comparisons
+EAR introduces a metric — the **Holistic Existence Score (HEM-Score)** — as the quantitative face of EAR decisions. HEM-Score is a measure of how much something genuinely exists along the relevant dimensions. It connects to the HEM framework (URB #609) as follows:
+- EV (Holistic Existence Matrix, URB #609) = the FDE-based outer-loop measure of an entity's Existence
+- HEM-Score (Existence Scalar Value, EAR) = the combined inner+outer loop measure used for EAR comparisons
 
-ESV includes both GILE-inner and EV-outer contributions:
+HEM-Score includes both GILE-inner and EV-outer contributions:
 ```
-ESV(e) = w_GILE × GILE_score(e) + w_EV × EV(e)
+HEM-Score(e) = w_GILE × GILE_score(e) + w_EV × EV(e)
 ```
 where weights are domain-calibrated via the Sartre Protocol.
 
@@ -272,13 +272,13 @@ STEP 5 — BOK/LCC placement: Where does the conclusion sit?
 | Construct proliferation — dozens of overlapping concepts in psychology/philosophy | **EAR** (collapse + amplify) |
 | Over-parsimony — Occam cuts the real along with the noise | **EAR** (amplifies what genuinely exists) |
 | Non-algorithmic insight — the generative hypothesis step has no formal account | **MR** (I-axis as formal pre-evidential faculty) |
-| Existence ignored in epistemology — EV effects on belief propagation invisible | **PD** (EV component) + **EAR** (ESV) |
+| Existence ignored in epistemology — HEM effects on belief propagation invisible | **PD** (HEM component) + **EAR** (HEM-Score) |
 
 ### 5.3 The Academic Case for All Three
 
 The standard academic methodology (pre-registration → data collection → Bayesian or frequentist analysis → publication) can be upgraded at each step by TI Sigma's pillars:
 
-- **Pre-registration:** Instead of stating a hypothesis + expected effect size, state a hypothesis + expected PD (including EV component and GILE-dimensional evidence structure)
+- **Pre-registration:** Instead of stating a hypothesis + expected effect size, state a hypothesis + expected PD (including HEM component and GILE-dimensional evidence structure)
 - **Data collection:** Design studies to collect evidence across G/I/L/E dimensions, not just a single operationalization
 - **Analysis:** Run MR on the collected evidence → output a PD for each hypothesis
 - **Publication:** Report PD + MR levels, not just p-values and effect sizes — this is more information, more honestly reported

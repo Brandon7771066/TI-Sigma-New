@@ -1,4 +1,4 @@
-# URB #609: The Existence Value Framework — Four Dimensions of Existence, EV Calculation, and the Parallel MR Protocol
+# URB #609: The Holistic Existence Matrix Framework — HEM Dimensions, EV Calculation, and the Parallel MR Protocol
 
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)
 **Date:** April 6, 2026
@@ -10,9 +10,9 @@
 
 ## Abstract
 
-TI Sigma distinguishes two irreducible questions about any entity: (1) *Is it true?* and (2) *Does it exist?* Prior work established the GILE truth-score and Myrion Resolution (MR) for handling (1). This paper formalizes (2) via the **Existence Value (EV)** — a four-dimensional scalar derived from the **Four Dimensions of Existence (FDE)**: Existence Footprint (EF), Moral presence, Conscious meaning/valence, and Aesthetics. EV is calculated during the *first MR* in **parallel** with the GILE truth-score, producing two distinct but interacting values. The **Privation Theory** is formalized: negative existence states (immorality, suffering, aesthetic poverty) are ontological *holes* — absences of positive existence — not positive entities in a negative direction. Accordingly, negative states receive **double existential weight (2×)** in EV. The key philosophical implication: Double Tralse and False entities **exist** (can have high EV) while lacking truth entirely. This explains why the world systematically gravitates toward high-EV, low-truth configurations — and why Goodness (G) is the critical corrective.
+TI Sigma distinguishes two irreducible questions about any entity: (1) *Is it true?* and (2) *Does it exist?* Prior work established the GILE truth-score and Myrion Resolution (MR) for handling (1). This paper formalizes (2) via the **Holistic Existence Matrix (HEM)** — a four-dimensional scalar derived from the **HEM Dimensions**: Existence Footprint (EF), Moral presence, Conscious meaning/valence, and Aesthetics. HEM is calculated during the *first MR* in **parallel** with the GILE truth-score, producing two distinct but interacting values. The **Privation Theory** is formalized: negative existence states (immorality, suffering, aesthetic poverty) are ontological *holes* — absences of positive existence — not positive entities in a negative direction. Accordingly, negative states receive **double existential weight (2×)** in EV. The key philosophical implication: Double Tralse and False entities **exist** (can have high HEM) while lacking truth entirely. This explains why the world systematically gravitates toward high-EV, low-truth configurations — and why Goodness (G) is the critical corrective.
 
-**Keywords:** Existence Value, Four Dimensions of Existence, Existence Footprint, Privation Theory, GILE, Myrion Resolution, Permissibility Distribution, Double Tralse, TI Sigma
+**Keywords:** Holistic Existence Matrix, HEM Dimensions, Existence Footprint, Privation Theory, GILE, Myrion Resolution, Permissibility Distribution, Double Tralse, TI Sigma
 
 ---
 
@@ -28,22 +28,22 @@ The most persistent confusion in philosophy of mind and social epistemology conf
 
 > **Truth** is the correspondence of a proposition's content with reality, measured on the five-valued TI Sigma scale {True, Tralse, False, DT, Moot}.
 >
-> **Existence** is the degree to which an entity instantiates being — causally, physically, consciously, aesthetically, and morally — measured by the Existence Value (EV).
+> **Existence** is the degree to which an entity instantiates being — causally, physically, consciously, aesthetically, and morally — measured by the Holistic Existence Matrix (HEM).
 
 These are orthogonal axes. An entity can occupy any quadrant:
-- High EV, True: factually correct and causally powerful (e.g., a law of physics)
-- High EV, False: causally powerful but untrue (e.g., a viral conspiracy theory; a cult belief)
-- High EV, DT: causally powerful but truth-incoherent (e.g., a sensory hallucination with full phenomenal force)
-- Low EV, True: correct but causally negligible (e.g., a mathematical truth nobody has discovered)
-- Low EV, False: wrong and negligible
+- High HEM, True: factually correct and causally powerful (e.g., a law of physics)
+- High HEM, False: causally powerful but untrue (e.g., a viral conspiracy theory; a cult belief)
+- High HEM, DT: causally powerful but truth-incoherent (e.g., a sensory hallucination with full phenomenal force)
+- Low HEM, True: correct but causally negligible (e.g., a mathematical truth nobody has discovered)
+- Low HEM, False: wrong and negligible
 
-The EV–Truth plane is the **ontological map** of TI Sigma.
+The HEM–Truth plane is the **ontological map** of TI Sigma.
 
 ---
 
-## 2. The Four Dimensions of Existence (FDE)
+## 2. The HEM Dimensions
 
-EV is computed from four dimensions, listed by ontological priority:
+HEM is computed from four dimensions, listed by ontological priority:
 
 ### 2.1 Dimension 1: Existence Footprint (EF) — *Primary*
 
@@ -67,9 +67,9 @@ where R_ST is the normalized spatiotemporal reach. HEM may add further multiplic
 
 **Key clarification (Privation Theory, §4):** Moral presence has a lower bound at zero (absence of goodness), not at a negative value. Immorality is the *privation* of moral presence — the ontological hole left by the absence of G — not a positive "evil force" in the negative direction.
 
-**Measurement:** Derived from the GILE truth-score's G-component after first MR. The G-axis contribution to EV is:
+**Measurement:** Derived from the GILE truth-score's G-component after first MR. The G-axis contribution to HEM is:
 $$\text{EV}_{\text{Moral}} = \max(0, G_{\text{GILE}})$$
-Negative G scores (moral absence or harm) reduce Moral EV to zero, not below — reflecting the privation structure.
+Negative G scores (moral absence or harm) reduce Moral HEM to zero, not below — reflecting the privation structure.
 
 ### 2.3 Dimension 3: Conscious Meaning / Valence — *Third*
 
@@ -93,9 +93,9 @@ $$\text{EV}_{\text{Aesthetic}} = \max(0, E_{\text{GILE}})$$
 
 ---
 
-## 3. The Existence Value Formula
+## 3. The Holistic Existence Matrix Formula
 
-**EV is a weighted composite of the four FDE dimensions:**
+**HEM is a weighted composite of the four FDE dimensions:**
 
 $$\text{EV} = w_{\text{EF}} \cdot \text{EF} + w_{\text{Moral}} \cdot \text{EV}_{\text{Moral}} + w_{\text{Meaning}} \cdot \text{EV}_{\text{Meaning}} + w_{\text{Aesthetic}} \cdot \text{EV}_{\text{Aesthetic}}$$
 
@@ -108,7 +108,7 @@ $$\text{EV} = w_{\text{EF}} \cdot \text{EF} + w_{\text{Moral}} \cdot \text{EV}_{
 | Meaning/Valence | 0.20 |
 | Aesthetics | 0.10 |
 
-**Important:** EV is a measure of *existential intensity* — how much being an entity instantiates. It is not a measure of goodness or truth. A false belief can have high EV. DT can have high EV. This is the key empirical prediction: **false and DT entities can dominate experiential and social reality by existential force alone**, even while lacking all truth content.
+**Important:** HEM is a measure of *existential intensity* — how much being an entity instantiates. It is not a measure of goodness or truth. A false belief can have high HEM. DT can have high HEM. This is the key empirical prediction: **false and DT entities can dominate experiential and social reality by existential force alone**, even while lacking all truth content.
 
 ---
 
@@ -134,7 +134,7 @@ $$\text{EV} = w_{\text{EF}} \cdot \text{EF} + w_{\text{Moral}} \cdot \text{EV}_{
 
 Although negative EV states cannot be less than zero on the dimension itself, they exert **disproportionate existential pressure** on the overall system. This is the **Privation Asymmetry**:
 
-> **A unit of negative existence state (suffering, moral absence, aesthetic poverty) reduces the total EV of the containing system by 2× relative to a unit of positive increase.**
+> **A unit of negative existence state (suffering, moral absence, aesthetic poverty) reduces the total HEM of the containing system by 2× relative to a unit of positive increase.**
 
 **Justification:**
 - Evolutionary loss aversion: negative outcomes require 2-2.5× the positive payoff to restore motivational equilibrium (Kahneman–Tversky). Loss aversion is an empirically confirmed asymmetry in human (and likely general conscious) value systems.
@@ -170,7 +170,7 @@ MR Level 1 (parallel tracks):
     → Compute GILE score
     → Produce initial PD value
 
-  Track B (Existence Value):
+  Track B (Holistic Existence Matrix):
     → Measure EF (frequency, amplitude, spatiotemporal reach)
     → Apply Privation Theory floors
     → Apply Privation Asymmetry (2× correction)
@@ -201,7 +201,7 @@ This interface is designated **Open / Under Development** in the TI Sigma formal
 
 ---
 
-## 8. Why the World Is "Messed Up" — The EV–Truth Decoupling
+## 8. Why the World Is "Messed Up" — The HEM–Truth Decoupling
 
 TI Sigma provides a formal account of social dysfunction:
 
@@ -281,8 +281,8 @@ This captures the emergence and bidirectionality that percentages cannot.
 
 | Contribution | Status |
 |---|---|
-| Four Dimensions of Existence (FDE): EF, Moral, Meaning/Valence, Aesthetics | Established |
-| Existence Value (EV) formula with priority weights | Established (weights preliminary) |
+| HEM Dimensions: EF, Moral, Meaning/Valence, Aesthetics | Established |
+| Holistic Existence Matrix (HEM) formula with priority weights | Established (weights preliminary) |
 | Privation Theory: negative states as ontological holes | Established |
 | Privation Asymmetry: 2× weight for negative states in EV | Established |
 | Parallel MR Protocol: EV and GILE computed simultaneously in MR1 | Established |

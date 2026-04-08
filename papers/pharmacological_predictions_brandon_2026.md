@@ -42,7 +42,7 @@ Ketamine's NMDA antagonism potentiates AMPA receptors, increasing BDNF. Lithium'
 | GILE Truth | 0.1984 → 0.3323 | +13.4% |
 | HEM D2 (Tralse meter) | 0.242 | 0.270 🟢 | — |
 
-**PD Distribution:** TT=0.25 | TI=0.13 | TF=0.50 | DT=0.00 | EV=0.13  →  Dominant: **TF**
+**PD Distribution:** TT=0.25 | TI=0.13 | TF=0.50 | DT=0.00 | HEM=0.13  →  Dominant: **TF**
 
 ### Epilepsy Safety
   - 🟡 **Ketamine Troche (200 mg sublingual, every other day)** (MODERATE): Ketamine has a complex seizure profile: anticonvulsant at sub-anesthetic doses (used in refractory status epilepticus), potentially pro-convulsant at higher doses. 200mg sublingual troche is sub-anesthetic — likely safe with Keppra co-administration. Monitor closely.
@@ -87,7 +87,7 @@ LDN's TLR4 antagonism prevents microglial-mediated opioid receptor desensitizati
 | GILE Truth | 0.1984 → 0.3392 | +14.1% |
 | HEM D2 (Tralse meter) | 0.242 | 0.267 🟢 | — |
 
-**PD Distribution:** TT=0.25 | TI=0.12 | TF=0.49 | DT=0.00 | EV=0.13  →  Dominant: **TF**
+**PD Distribution:** TT=0.25 | TI=0.12 | TF=0.49 | DT=0.00 | HEM=0.13  →  Dominant: **TF**
 
 ### Epilepsy Safety
   - 🟡 **Ketamine Troche (200 mg sublingual, every other day)** (MODERATE): Ketamine has a complex seizure profile: anticonvulsant at sub-anesthetic doses (used in refractory status epilepticus), potentially pro-convulsant at higher doses. 200mg sublingual troche is sub-anesthetic — likely safe with Keppra co-administration. Monitor closely.
@@ -132,7 +132,7 @@ L-methylfolate provides BH4 (tetrahydrobiopterin) cofactor for aromatic amino ac
 | GILE Truth | 0.1984 → 0.2642 | +6.6% |
 | HEM D2 (Tralse meter) | 0.242 | 0.254 🟢 | — |
 
-**PD Distribution:** TT=0.20 | TI=0.11 | TF=0.54 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.20 | TI=0.11 | TF=0.54 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -174,7 +174,7 @@ L. helveticus Rosell-52 and B. longum Rosell-175 reduce cortisol, increase GABAe
 | GILE Truth | 0.1984 → 0.2691 | +7.1% |
 | HEM D2 (Tralse meter) | 0.242 | 0.224 🟢 | — |
 
-**PD Distribution:** TT=0.20 | TI=0.09 | TF=0.56 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.20 | TI=0.09 | TF=0.56 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -215,7 +215,7 @@ PQQ stimulates mitochondrial biogenesis via PGC-1α. CoQ10 (ubiquinone) is the r
 | GILE Truth | 0.1984 → 0.2820 | +8.4% |
 | HEM D2 (Tralse meter) | 0.242 | 0.258 🟢 | — |
 
-**PD Distribution:** TT=0.21 | TI=0.11 | TF=0.53 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.21 | TI=0.11 | TF=0.53 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -257,7 +257,7 @@ Multiple FAAH inhibitors converge to preserve anandamide (the bliss molecule). E
 | GILE Truth | 0.1984 → 0.3055 | +10.7% |
 | HEM D2 (Tralse meter) | 0.242 | 0.242 🟢 | — |
 
-**PD Distribution:** TT=0.23 | TI=0.10 | TF=0.53 | DT=0.00 | EV=0.14  →  Dominant: **TF**
+**PD Distribution:** TT=0.23 | TI=0.10 | TF=0.53 | DT=0.00 | HEM=0.14  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -298,7 +298,7 @@ Glycine is the obligatory co-agonist at the NMDA glycine-B site — it gates NMD
 | GILE Truth | 0.1984 → 0.2929 | +9.5% |
 | HEM D2 (Tralse meter) | 0.242 | 0.245 🟢 | — |
 
-**PD Distribution:** TT=0.22 | TI=0.10 | TF=0.53 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.22 | TI=0.10 | TF=0.53 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -340,7 +340,7 @@ Saffron (safranal/crocin) acts as a mild SSRI + MAOB inhibitor (serotonin axis).
 | GILE Truth | 0.1984 → 0.3236 | +12.5% |
 | HEM D2 (Tralse meter) | 0.242 | 0.287 🟢 | — |
 
-**PD Distribution:** TT=0.23 | TI=0.14 | TF=0.49 | DT=0.00 | EV=0.14  →  Dominant: **TF**
+**PD Distribution:** TT=0.23 | TI=0.14 | TF=0.49 | DT=0.00 | HEM=0.14  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -382,7 +382,7 @@ Keppra (SV2A modulator) reduces presynaptic neurotransmitter release during exce
 | GILE Truth | 0.1984 → 0.2829 | +8.4% |
 | HEM D2 (Tralse meter) | 0.242 | 0.226 🟢 | — |
 
-**PD Distribution:** TT=0.22 | TI=0.09 | TF=0.55 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.22 | TI=0.09 | TF=0.55 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -425,7 +425,7 @@ Taltz (ixekizumab) blocks IL-17A — a cytokine strongly implicated in neuroinfl
 | GILE Truth | 0.1984 → 0.3141 | +11.6% |
 | HEM D2 (Tralse meter) | 0.242 | 0.240 🟢 | — |
 
-**PD Distribution:** TT=0.24 | TI=0.10 | TF=0.53 | DT=0.00 | EV=0.13  →  Dominant: **TF**
+**PD Distribution:** TT=0.24 | TI=0.10 | TF=0.53 | DT=0.00 | HEM=0.13  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -467,7 +467,7 @@ Vitamin D3 upregulates BDNF and serotonin synthesis transcription (via VDR), red
 | GILE Truth | 0.1984 → 0.2897 | +9.1% |
 | HEM D2 (Tralse meter) | 0.242 | 0.231 🟢 | — |
 
-**PD Distribution:** TT=0.22 | TI=0.09 | TF=0.54 | DT=0.00 | EV=0.15  →  Dominant: **TF**
+**PD Distribution:** TT=0.22 | TI=0.09 | TF=0.54 | DT=0.00 | HEM=0.15  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -508,7 +508,7 @@ Maca macamides are plant-derived alkylamide analogs that activate the endocannab
 | GILE Truth | 0.1984 → 0.3087 | +11.0% |
 | HEM D2 (Tralse meter) | 0.242 | 0.251 🟢 | — |
 
-**PD Distribution:** TT=0.23 | TI=0.11 | TF=0.52 | DT=0.00 | EV=0.14  →  Dominant: **TF**
+**PD Distribution:** TT=0.23 | TI=0.11 | TF=0.52 | DT=0.00 | HEM=0.14  →  Dominant: **TF**
 
 ### Epilepsy Safety
 ✅ No MODERATE or HIGH risk items in this stack.
@@ -575,7 +575,7 @@ Running the complete available supplement + medication stack through the simulat
 | GILE Truth | 0.1984 | 0.5748 | +37.6% |
 | HEM D2 (Tralse Meter) | 0.242 | 0.220 | 🟢 Resolved |
 
-**PD Distribution:** TT=0.49 | TI=0.09 | TF=0.36 | DT=0.00 | EV=0.06  →  Dominant: **TT**
+**PD Distribution:** TT=0.49 | TI=0.09 | TF=0.36 | DT=0.00 | HEM=0.06  →  Dominant: **TT**
 
 **Epilepsy Flags (MODERATE+):**
   - 🟡 **Ketamine Troche (200 mg sublingual, every other day)** (MODERATE): Ketamine has a complex seizure profile: anticonvulsant at sub-anesthetic doses (used in refractory status epilepticus), potentially pro-convulsant at higher doses. 200mg sublingual troche is sub-anesthetic — likely safe with Keppra co-administration. Monitor closely.

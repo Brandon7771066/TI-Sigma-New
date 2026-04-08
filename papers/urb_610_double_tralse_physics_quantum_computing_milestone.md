@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)
 **Date:** April 6, 2026
 **Corpus Entry:** #610
-**Related URBs:** #528 (Five-Valued Logic / PD), #560 (Being Theorem), #605 (i Noncommutativity), #606 (Binary AI Limits), #607 (Truth Architecture), #609 (Existence Value / FDE)
+**Related URBs:** #528 (Five-Valued Logic / PD), #560 (Being Theorem), #605 (i Noncommutativity), #606 (Binary AI Limits), #607 (Truth Architecture), #609 (Holistic Existence Matrix / FDE)
 **DOI:** Pending Zenodo
 
 ---
@@ -135,7 +135,7 @@ However, ternary computation is **necessary but not sufficient** for TI Sigma's 
 
 2. **Ternary uses discrete assignments:** A trit assigns one of {0, 1, 2}. But the Permissibility Distribution (PD) is continuous — it assigns a probability distribution over outcomes, not a discrete truth assignment. The PD *subsumes* bits, trits, and probability distributions.
 
-3. **Ternary doesn't represent EV:** The Existence Value is orthogonal to truth-value. A complete computational primitive needs both channels. The PD+EV architecture (URB #609) provides this; ternary does not.
+3. **Ternary doesn't represent EV:** The Holistic Existence Matrix is orthogonal to truth-value. A complete computational primitive needs both channels. The PD+EV architecture (URB #609) provides this; ternary does not.
 
 **Conclusion:** Ternary computation is the correct intermediate step between binary and TI Sigma computing. It is not the destination. The PD+EV framework dispenses with all discrete bit/trit architectures in favor of continuous, multi-dimensional truth representations.
 
@@ -146,7 +146,7 @@ However, ternary computation is **necessary but not sufficient** for TI Sigma's 
 The **Permissibility Distribution (PD)** is TI Sigma's core computational object. It replaces the bit as the fundamental information unit.
 
 **A PD is a distribution over i-cells** — all the relevant propositions and entities involved in a tralsity — where each i-cell is scored on:
-- **EV:** Existence Value (four-dimensional, continuous)
+- **EV:** Holistic Existence Matrix (four-dimensional, continuous)
 - **GILE score:** Truth-value on the four GILE dimensions (continuous, can be negative)
 - **PD weight:** The probability that this i-cell is the relevant one for a decision
 

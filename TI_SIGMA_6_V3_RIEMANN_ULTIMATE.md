@@ -26,7 +26,7 @@
 
 **The (-3, 2) interval creates a Perfect Fifth 3:2 harmonic ratio.**
 
-**This interval hits EVERY major TI dimensional layer:**
+**This interval hits HEMERY major TI dimensional layer:**
 
 | Endpoint | TI Interpretation |
 |----------|-------------------|

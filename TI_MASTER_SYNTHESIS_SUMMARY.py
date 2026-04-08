@@ -201,7 +201,7 @@ When two (or more) concepts have HIGH-TRALSE OVERLAP in their key
 features, assume their separation is mostly SUPERFICIAL.
 
 THE ALGORITHM:
-1. PARTITION BY EXISTENCE - Group by comparable ESV
+1. PARTITION BY EXISTENCE - Group by comparable HEM-Score
 2. PRIORITIZE HIGH-TRALSE - Keep only key features K, park superficials S
 3. ATTEMPT COLLAPSE - Merge concepts with overlapping K into hybrids
 4. AUDIT COHERENCE - Does hybridization reduce contradictions/redundancy?
@@ -449,7 +449,7 @@ def print_synthesis_summary():
 1. papers/EMERICKS_EXISTENCE_AMPLIFICATION_RAZOR_COMPLETE.md
    - Full EAR methodology with examples
    - Five D/M (Dimensions/Modules) of existence
-   - ESV/DTV calculation methods
+   - HEM-Score/DTV calculation methods
 
 2. papers/DIMENSIONAL_RECONCILIATION_EAR_ANALYSIS.md
    - GILE reduction to L×E proof

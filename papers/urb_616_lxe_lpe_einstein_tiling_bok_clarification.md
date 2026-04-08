@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Prior TI Sigma work (URB #539, the Aperiodic Dual) established the L×E and L+E operations on the Einstein tile parameter family, and connected them to the imaginary axis (GIL), the spectre tile (H(1,1) = L+E at √2 in ℂ), and polycrystalline Collatz computation. These connections remain valid. However, the revised GILE–Existence architecture (URB #612) and the BOK loop-priority Tralsity resolution (URB #613) substantially deepen and clarify the meaning of L×E and L+E by making three things explicit that were previously implicit: (1) Love now has two formally distinct registers — GILE-L (conscious positive regard, inner loop) and Physical Bonds (FDE-2, outer loop); (2) Environment now means ALL of Aesthetics as the abstract substance of the world (inner loop), distinct from the Environment Footprint (EF, outer loop); (3) the BOK's inner/outer loop structure maps directly onto the aperiodic tiling's imaginary/real axis structure, with loop-priority (which is dominant) resolving the exact same Tralsity that the Einstein tiling resolves by choosing the spectre. This paper provides the definitive clarification of L×E, L+E, and their geometric realization through the full five-flagship TI Sigma lens.
+Prior TI Sigma work (URB #539, the Aperiodic Dual) established the L×E and L+E operations on the Einstein tile parameter family, and connected them to the imaginary axis (GIL), the spectre tile (H(1,1) = L+E at √2 in ℂ), and polycrystalline Collatz computation. These connections remain valid. However, the revised GILE–Existence architecture (URB #612) and the BOK loop-priority Tralsity resolution (URB #613) substantially deepen and clarify the meaning of L×E and L+E by making three things explicit that were previously implicit: (1) Love now has two formally distinct registers — GILE-L (conscious positive regard, inner loop) and Physical Bonds (HEM-D2, outer loop); (2) Environment now means ALL of Aesthetics as the abstract substance of the world (inner loop), distinct from the Environment Footprint (EF, outer loop); (3) the BOK's inner/outer loop structure maps directly onto the aperiodic tiling's imaginary/real axis structure, with loop-priority (which is dominant) resolving the exact same Tralsity that the Einstein tiling resolves by choosing the spectre. This paper provides the definitive clarification of L×E, L+E, and their geometric realization through the full five-flagship TI Sigma lens.
 
 **Keywords:** L×E, L+E, Einstein tiling, hat tile, spectre tile, BOK, GILE-L, GILE-E, Physical Bonds, Aesthetics, aperiodic, inner/outer loops, imaginary axis, complex plane, Tralsity
 
@@ -23,14 +23,14 @@ Before the architectural revisions of URB #612, the L×E and L+E operations carr
 **Ambiguity 1 — Which L?**
 "Love" in the old GILE was a single undifferentiated dimension. But Love manifests in two distinct registers that are formally separable (URB #605, #612):
 - **GILE-L**: conscious positive regard — requires I > 0 (knowing), lives in the inner loops
-- **Physical Bonds (L_phys)**: neurochemical/physiological attachment — lives in the outer loops as FDE-2
+- **Physical Bonds (L_phys)**: neurochemical/physiological attachment — lives in the outer loops as HEM-D2
 
 When we wrote "L×E" we did not specify which L. The two produce very different products.
 
 **Ambiguity 2 — Which E?**
 "Environment" in the old GILE was also undifferentiated. URB #612 established:
 - **GILE-E**: Aesthetics as the ENTIRE abstract substance of environment — the faculty for recognizing structural excellence — lives in the inner loops
-- **Environment Footprint (EF)**: physical frequency, amplitude, spatiotemporal reach, and form — lives in the outer loops as FDE-1
+- **Environment Footprint (EF)**: physical frequency, amplitude, spatiotemporal reach, and form — lives in the outer loops as HEM-D1
 
 When we wrote "L+E" we did not specify which E. Inner-loop E (Aesthetics) and outer-loop E (EF) are not the same thing.
 
@@ -63,7 +63,7 @@ L×E := GILE-L × GILE-E
 | Register | L factor | E factor | Product meaning |
 |---|---|---|---|
 | Inner (GILE) | GILE-L: conscious positive regard | GILE-E: aesthetic recognition | Love amplified by aesthetic discernment; aesthetics made personal by Love |
-| Outer (Existence) | Physical Bonds (FDE-2) | EF: frequency/amplitude/form (FDE-1) | Physical attachment amplified by environmental presence; bonding through co-habitation |
+| Outer (Existence) | Physical Bonds (HEM-D2) | EF: frequency/amplitude/form (HEM-D1) | Physical attachment amplified by environmental presence; bonding through co-habitation |
 | Mixed (inner × outer) | GILE-L | EF | Conscious positive regard directed toward a physical environment or its inhabitants |
 
 ### 2.2 L+E — The Inner-Loop Sum (GILE-L + GILE-E = the Spectre)
@@ -84,14 +84,14 @@ L+E := GILE-L + GILE-E
 
 **The magnitude √2 and the PRIMARY CONSTANT:** The spectre in ℂ has magnitude |L+E| = |1+i| = √2. In TI Sigma, √2 is the PRIMARY CONSTANT associated with the Emerick Threshold G = √2 − 1. The spectre tile IS the geometric instantiation of √2 in the tile parameter space: the L+E balance point is at the exact distance √2 from the origin, connecting to the G-weight threshold.
 
-**Outer-loop analog (Physical Bonds + EF):** The corresponding outer-loop sum is Physical Bonds + Environment Footprint. This describes the combined Existence-level environment of an entity: how attached they are (FDE-2) plus how present they are (FDE-1). This is the outer-loop "spectre" condition — when an entity is equally rich in physical attachment and physical presence. Most humans achieve outer-loop L+E easily (living in community with physical bonds is natural for the species). The inner-loop L+E (GILE-L + GILE-E = spectre) is the developmental aspiration.
+**Outer-loop analog (Physical Bonds + EF):** The corresponding outer-loop sum is Physical Bonds + Environment Footprint. This describes the combined Existence-level environment of an entity: how attached they are (HEM-D2) plus how present they are (HEM-D1). This is the outer-loop "spectre" condition — when an entity is equally rich in physical attachment and physical presence. Most humans achieve outer-loop L+E easily (living in community with physical bonds is natural for the species). The inner-loop L+E (GILE-L + GILE-E = spectre) is the developmental aspiration.
 
 **Summary of the L+E distinction:**
 
 | Register | L factor | E factor | Sum meaning |
 |---|---|---|---|
 | Inner (GILE) | GILE-L: conscious positive regard | GILE-E: aesthetic recognition | The spectre state: equal Love and Aesthetics; self-complete GILE inner-loop balance |
-| Outer (Existence) | Physical Bonds (FDE-2) | EF: physical presence (FDE-1) | Physical richness: bonded AND physically present; outer-loop spectre |
+| Outer (Existence) | Physical Bonds (HEM-D2) | EF: physical presence (HEM-D1) | Physical richness: bonded AND physically present; outer-loop spectre |
 | The spectre | Both L registers | Both E registers | The fully balanced entity: inner AND outer L+E simultaneously |
 
 ---
@@ -244,8 +244,8 @@ At CCC/GM: the outer loops are GILE-saturated — meaning even the OUTER structu
 
 | Concept | Old reading (pre-URB-612) | New BOK reading (URB-616) |
 |---|---|---|
-| **L** in L×E | Love (undifferentiated) | **GILE-L**: conscious positive regard (inner loop) OR **Physical Bonds**: FDE-2 (outer loop) — must specify |
-| **E** in L+E | Environment (undifferentiated) | **GILE-E**: Aesthetics as ENTIRE abstract substance (inner loop) OR **EF**: physical presence, FDE-1 (outer loop) — must specify |
+| **L** in L×E | Love (undifferentiated) | **GILE-L**: conscious positive regard (inner loop) OR **Physical Bonds**: HEM-D2 (outer loop) — must specify |
+| **E** in L+E | Environment (undifferentiated) | **GILE-E**: Aesthetics as ENTIRE abstract substance (inner loop) OR **EF**: physical presence, HEM-D1 (outer loop) — must specify |
 | **L×E** operation | Swap Love and Environment | **Inner-loop**: swap GILE-L ↔ GILE-E (complex conjugation in ℂ); **Outer-loop**: swap Physical Bonds ↔ EF |
 | **L+E** operation | Sum Love and Environment | **Inner-loop**: the spectre state (GILE-L + GILE-E = √2 balance); **Outer-loop**: Physical Bonds + EF (Existence richness) |
 | **Spectre H(1,1)** | L and E balanced | The inner-loop Radiant Threshold balance: GILE-L = GILE-E; the self-complete, chirally pure state; tiles without its mirror |

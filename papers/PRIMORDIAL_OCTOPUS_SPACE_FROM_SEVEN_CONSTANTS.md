@@ -493,7 +493,7 @@ The 4 large loops = GILE (truth's substance — what truth IS). By symmetry and 
 | Loop 7 | **Completeness** | Gap acknowledgment is necessarily self-limiting |
 | Loop 8 | **Continuity** | Temporal trajectory is thin (a line through time, not a surface) |
 
-The Four C's are smaller because they operate at a lower ontological level than GILE — they evaluate how truth is presented, not what truth IS. They are essential (without them, truth cannot function) but structurally subordinate (they serve GILE, not the reverse). This matches the EAR synthesis (Paper on EAR-Four C's-HEM-L×E): GILE is substantive (high ESV), the Four C's are presentational (medium ESV).
+The Four C's are smaller because they operate at a lower ontological level than GILE — they evaluate how truth is presented, not what truth IS. They are essential (without them, truth cannot function) but structurally subordinate (they serve GILE, not the reverse). This matches the EAR synthesis (Paper on EAR-Four C's-HEM-L×E): GILE is substantive (high HEM-Score), the Four C's are presentational (medium HEM-Score).
 
 **The complete BOK loop structure:**
 - 4 large loops = GILE (substance of truth) = butterfly wings

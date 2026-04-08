@@ -313,7 +313,7 @@ def fmt_pd(pd):
         return "No PD data."
     dominant = max(pd, key=pd.get)
     return (f"TT={pd.get('TT',0):.2f} | TI={pd.get('TI',0):.2f} | TF={pd.get('TF',0):.2f} | "
-            f"DT={pd.get('DT',0):.2f} | EV={pd.get('EV',0):.2f}  →  Dominant: **{dominant}**")
+            f"DT={pd.get('DT',0):.2f} | HEM={pd.get('EV',0):.2f}  →  Dominant: **{dominant}**")
 
 
 def fmt_epilepsy(flags):

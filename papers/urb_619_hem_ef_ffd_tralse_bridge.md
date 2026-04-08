@@ -12,7 +12,7 @@
 
 ## Abstract
 
-Two conceptual bridges are formalized here. **Bridge 1 (HEM → EF):** The six dimensions of the Holistic Existence Model (HEM D1–D6) are precisely mapped to the Four Dimensions of Existence (FDE 1–4) established in URB #609, showing that HEM is the *measurement layer* for Existence Value (EV) and the Existence Footprint (EF) is HEM's primary output. **Bridge 2 (FFD ↔ Tralse):** The Four Fundamental Descriptors of reality (FFD: Complexity, Indeterminacy, Vagueness, Constraint) are linked to the contradiction-language of the TI Sigma truth architecture (inconsistency, opposition, discrepancy) as multiple names for the same underlying phenomenon: **Tralseness**, which is formally identical to Indeterminacy. The result is a unified vocabulary in which HEM measurements quantify how much Tralse is present in any real system, and the FFD provides the phenomenological face of what Myrion Resolution is resolving.
+Two conceptual bridges are formalized here. **Bridge 1 (HEM → EF):** The six dimensions of the Holistic Existence Matrix (HEM D1–D6) are precisely mapped to the HEM Dimensions (HEM-D1–4) established in URB #609, showing that HEM is the *measurement layer* for Holistic Existence Matrix (HEM) and the Existence Footprint (EF) is HEM's primary output. **Bridge 2 (FFD ↔ Tralse):** The Four Fundamental Descriptors of reality (FFD: Complexity, Indeterminacy, Vagueness, Constraint) are linked to the contradiction-language of the TI Sigma truth architecture (inconsistency, opposition, discrepancy) as multiple names for the same underlying phenomenon: **Tralseness**, which is formally identical to Indeterminacy. The result is a unified vocabulary in which HEM measurements quantify how much Tralse is present in any real system, and the FFD provides the phenomenological face of what Myrion Resolution is resolving.
 
 ---
 
@@ -20,18 +20,18 @@ Two conceptual bridges are formalized here. **Bridge 1 (HEM → EF):** The six d
 
 ### 1.1 Background: Two Systems That Should Be One
 
-URB #609 established the **Four Dimensions of Existence (FDE)**:
+URB #609 established the **HEM Dimensions**:
 
 | FDE | Name | What It Measures |
 |-----|------|-----------------|
-| FDE-1 | Existence Footprint (EF) | Physical causal presence: frequency × amplitude × spatiotemporal reach |
-| FDE-2 | Moral Presence | G-axis activation: orientation toward genuine good |
-| FDE-3 | Conscious Meaning / Valence | I+L components: phenomenal weight, relational significance |
-| FDE-4 | Aesthetics | Structural harmony, beauty, formal elegance |
+| HEM-D1 | Existence Footprint (EF) | Physical causal presence: frequency × amplitude × spatiotemporal reach |
+| HEM-D2 | Moral Presence | G-axis activation: orientation toward genuine good |
+| HEM-D3 | Conscious Meaning / Valence | I+L components: phenomenal weight, relational significance |
+| HEM-D4 | Aesthetics | Structural harmony, beauty, formal elegance |
 
-URB #598 defined **EF** (the Existence Footprint) as the primary FDE-1 metric: a weighted GILE sum using *level-appropriate* weights, measuring how richly an entity exists within its actual dimensional scope.
+URB #598 defined **EF** (the Existence Footprint) as the primary HEM-D1 metric: a weighted GILE sum using *level-appropriate* weights, measuring how richly an entity exists within its actual dimensional scope.
 
-The Holistic Existence Model (HEM) was developed separately as a measurement framework with six dimensions:
+The Holistic Existence Matrix (HEM) was developed separately as a measurement framework with six dimensions:
 
 | HEM | Name | What It Measures |
 |-----|------|-----------------|
@@ -52,12 +52,12 @@ These two systems were developed at different times for different purposes. URB 
 
 | HEM Dimension | Primary FDE | Secondary FDE | Justification |
 |---------------|------------|---------------|---------------|
-| D1: Complexity (PAS) | FDE-1 (EF) | — | Structural density directly indexes physical causal presence: more interacting parts = larger spatiotemporal footprint |
-| D2: Contradiction Ratio | FDE-2 (Moral Presence) | FDE-1 modifier | G-axis coherence is the inverse of contradiction ratio; high contradiction = low G-axis activation; this is the Tralse measurement (see Part 2) |
-| D3: Info Footprint (AMI) | FDE-1 (EF) | — | Informational reach *is* a component of EF (URB #609 §2.1: "HEM may add further multiplicative factors" to EF) — D3 is that factor |
-| D4: Relational Meaning | FDE-3 (Conscious Meaning) | FDE-4 | Co-created significance is precisely what the I+L components of EV measure; relational meaning = conscious valence at the inter-entity level |
-| D5: Vitality (L×E) | FDE-3 + FDE-4 | FDE-1 | Felt aliveness integrates conscious presence (FDE-3) and aesthetic aliveness (FDE-4); its foundation is the L×E product |
-| D6: L×E Coupling | FDE-1 through FDE-4 | All | The fundamental interaction term; all four FDE dimensions are projections of L×E, so D6 modulates every FDE component |
+| D1: Complexity (PAS) | HEM-D1 (EF) | — | Structural density directly indexes physical causal presence: more interacting parts = larger spatiotemporal footprint |
+| D2: Contradiction Ratio | HEM-D2 (Moral Presence) | HEM-D1 modifier | G-axis coherence is the inverse of contradiction ratio; high contradiction = low G-axis activation; this is the Tralse measurement (see Part 2) |
+| D3: Info Footprint (AMI) | HEM-D1 (EF) | — | Informational reach *is* a component of EF (URB #609 §2.1: "HEM may add further multiplicative factors" to EF) — D3 is that factor |
+| D4: Relational Meaning | HEM-D3 (Conscious Meaning) | HEM-D4 | Co-created significance is precisely what the I+L components of EV measure; relational meaning = conscious valence at the inter-entity level |
+| D5: Vitality (L×E) | HEM-D3 + HEM-D4 | HEM-D1 | Felt aliveness integrates conscious presence (HEM-D3) and aesthetic aliveness (HEM-D4); its foundation is the L×E product |
+| D6: L×E Coupling | HEM-D1 through HEM-D4 | All | The fundamental interaction term; all four FDE dimensions are projections of L×E, so D6 modulates every FDE component |
 
 **Refined EF Formula (including HEM D3):**
 
@@ -82,24 +82,24 @@ Layer 0: L × E (Fundamental dyad — the 2D attractor)
             ↓
 Layer 1: GILE (G + I + L + E — the 4-dimensional substance of existence)
             ↓
-Layer 2: FDE (Four Dimensions of Existence — the ontological categories)
-         FDE-1=EF, FDE-2=Moral, FDE-3=Meaning, FDE-4=Aesthetics
+Layer 2: FDE (HEM Dimensions — the ontological categories)
+         HEM-D1=EF, HEM-D2=Moral, HEM-D3=Meaning, HEM-D4=Aesthetics
             ↓
 Layer 3: HEM D1–D6 (The measurement instruments for FDE)
-         D1+D3 → FDE-1; D2 → FDE-2; D4 → FDE-3; D5 → FDE-3+4; D6 → all
+         D1+D3 → HEM-D1; D2 → HEM-D2; D4 → HEM-D3; D5 → HEM-D3+4; D6 → all
             ↓
-Layer 4: Existence Value (EV) — the scalar output of MR across all FDE
+Layer 4: Holistic Existence Matrix (HEM) — the scalar output of MR across all FDE
 ```
 
-**Consequence:** HEM is not a separate framework from EV/EF. It is the *empirical arm* of the same architecture. When a researcher runs a HEM profile on an entity, they are measuring the entity's EV across FDE 1–4. The HEM dimensions are EV's operational definitions.
+**Consequence:** HEM is not a separate framework from EV/EF. It is the *empirical arm* of the same architecture. When a researcher runs a HEM profile on an entity, they are measuring the entity's EV across HEM-D1–4. The HEM dimensions are EV's operational definitions.
 
 ---
 
 ### 1.4 Why This Matters for Practice
 
-1. **Research integration:** Existing HEM measurement tools (PAS for D1, AMI for D3, coherence meters for D2) can now be used directly to calculate Existence Value. No translation step required — HEM output *is* FDE measurement.
+1. **Research integration:** Existing HEM measurement tools (PAS for D1, AMI for D3, coherence meters for D2) can now be used directly to calculate Holistic Existence Matrix. No translation step required — HEM output *is* FDE measurement.
 
-2. **The Contradiction Ratio (D2) is the Tralse sensor:** D2 does not merely modify EV at the margin — it is the primary instrument for detecting how much Tralseness an entity contains. This is Part 2's central finding.
+2. **The Contradiction Ratio (D2) is the Tralse sensor:** D2 does not merely modify HEM at the margin — it is the primary instrument for detecting how much Tralseness an entity contains. This is Part 2's central finding.
 
 3. **Vitality (D5) bridges consciousness and physics:** D5 (felt aliveness) is the phenomenal face of the L×E product. When a conscious being experiences vitality, they are experiencing the L×E coupling at maximum coherence. This makes D5 the biometric target for BOK Saturation studies (URB #614 prediction #10).
 
@@ -264,7 +264,7 @@ This explains why **rules, structure, and commitment** (all forms of Constraint)
 
 ## Part 4: Formal Summary
 
-**Definition 1 (HEM–FDE Correspondence):** HEM D1 and D3 measure FDE-1 (EF/physical causal presence); HEM D2 measures FDE-2 (Moral Presence / G-axis coherence, inversely); HEM D4 measures FDE-3 (Conscious Meaning); HEM D5 measures FDE-3 and FDE-4 jointly; HEM D6 measures the L×E coupling underlying all four FDE dimensions.
+**Definition 1 (HEM–FDE Correspondence):** HEM D1 and D3 measure HEM-D1 (EF/physical causal presence); HEM D2 measures HEM-D2 (Moral Presence / G-axis coherence, inversely); HEM D4 measures HEM-D3 (Conscious Meaning); HEM D5 measures HEM-D3 and HEM-D4 jointly; HEM D6 measures the L×E coupling underlying all four FDE dimensions.
 
 **Definition 2 (Refined EF Formula):** EF = f · A · R_ST · AMI, where AMI (HEM D3) is the informational reach multiplier that amplifies or reduces raw physical causal presence.
 

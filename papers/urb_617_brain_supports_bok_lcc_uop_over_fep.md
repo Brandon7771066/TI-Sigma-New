@@ -217,7 +217,7 @@ The brain uses multiple, partially dissociable neuromodulatory systems that trac
 
 - **Serotonin:** Tracks "patience" — the ability to defer reward — and "social rank" (Tops et al. 2009). High serotonin → more prosocial, higher tolerance for delayed reward, better social integration. This is NOT captured by free energy minimization — it is a separate value dimension.
 
-- **Oxytocin:** Tracks trust, in-group bonding, and social recognition. Oxytocin is specifically associated with Physical Bonds (FDE-2) and selective prosocial behavior — consistent with BOK's bifurcation of Love into GILE-L and Physical Bonds.
+- **Oxytocin:** Tracks trust, in-group bonding, and social recognition. Oxytocin is specifically associated with Physical Bonds (HEM-D2) and selective prosocial behavior — consistent with BOK's bifurcation of Love into GILE-L and Physical Bonds.
 
 - **Norepinephrine:** Tracks uncertainty and precision (consistent with FEP's precision weighting). This is the FEP dimension.
 
@@ -233,7 +233,7 @@ The UOP (Unified Optimization Principle) replaces the single free-energy minimiz
 Each neuromodulator tracks a different UOP dimension:
 - **Serotonin → G-axis** (social patience, moral orientation, deferred prosocial reward)
 - **Dopamine → I-axis + E-axis** (novelty seeking = I-axis exploration; reward signal = E-axis environmental tracking)
-- **Oxytocin → Physical Bonds** (outer-loop FDE-2, NOT GILE-L directly)
+- **Oxytocin → Physical Bonds** (outer-loop HEM-D2, NOT GILE-L directly)
 - **Norepinephrine → EV/Existence** (precision tracking = Existence-loop calibration)
 - **Acetylcholine → MR** (exploitation/exploration switching = MR level transitions)
 

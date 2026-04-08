@@ -261,7 +261,7 @@ The 5 D/M reduce to:
 - **E-cluster**: Complexity
 
 **Or more precisely**:
-- **ESV ≈ f(L, E)** where L dominates most measurements
+- **HEM-Score ≈ f(L, E)** where L dominates most measurements
 
 ---
 

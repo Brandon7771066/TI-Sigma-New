@@ -11,9 +11,9 @@
 
 ## Abstract
 
-URB #609 introduced the Four Dimensions of Existence (FDE) and placed Aesthetics as the fourth dimension, alongside GILE's existing E-axis. This created a redundancy: Aesthetics appeared in both the GILE Truth framework and the Existence framework. This paper resolves the redundancy through four revisions. (1) **Aesthetics IS the E-axis of GILE in full** — not merely a component of it. The abstract substance of Environment is entirely captured by aesthetic quality; physical structure and form belong in Existence (EF), not GILE Truth. (2) **Aesthetics is removed from the FDE.** Since it belongs to GILE-E, including it in Existence was duplication. (3) **Love bifurcates across GILE and Existence:** In GILE Truth, Love = *conscious positive regard* for oneself or others — an irreducibly cognitive/intentional act that requires Intuition as prerequisite. Physical bonds and connections (the material substrate of Love) belong in Existence, specifically as the fourth FDE dimension: *Physical Bonds*. (4) **Intuition is now precisely defined** as the value of *knowing* oneself or others — self-knowledge and other-knowledge as the epistemic backbone of conscious life. The positivity of consciousness lives entirely in Love, not Intuition. (5) **Existence weights are domain-variable** by the same principle as GILE weights (URB #611): inferred from exemplars, not universally fixed.
+URB #609 introduced the HEM Dimensions and placed Aesthetics as the fourth dimension, alongside GILE's existing E-axis. This created a redundancy: Aesthetics appeared in both the GILE Truth framework and the Existence framework. This paper resolves the redundancy through four revisions. (1) **Aesthetics IS the E-axis of GILE in full** — not merely a component of it. The abstract substance of Environment is entirely captured by aesthetic quality; physical structure and form belong in Existence (EF), not GILE Truth. (2) **Aesthetics is removed from the FDE.** Since it belongs to GILE-E, including it in Existence was duplication. (3) **Love bifurcates across GILE and Existence:** In GILE Truth, Love = *conscious positive regard* for oneself or others — an irreducibly cognitive/intentional act that requires Intuition as prerequisite. Physical bonds and connections (the material substrate of Love) belong in Existence, specifically as the fourth FDE dimension: *Physical Bonds*. (4) **Intuition is now precisely defined** as the value of *knowing* oneself or others — self-knowledge and other-knowledge as the epistemic backbone of conscious life. The positivity of consciousness lives entirely in Love, not Intuition. (5) **Existence weights are domain-variable** by the same principle as GILE weights (URB #611): inferred from exemplars, not universally fixed.
 
-**Keywords:** GILE Truth, Existence Value, FDE, Aesthetics, Environment, Love bifurcation, Intuition as Knowing, Physical Bonds, domain-variable weights, TI Sigma
+**Keywords:** GILE Truth, Holistic Existence Matrix, FDE, Aesthetics, Environment, Love bifurcation, Intuition as Knowing, Physical Bonds, domain-variable weights, TI Sigma
 
 ---
 
@@ -97,9 +97,9 @@ These belong in different frameworks by the GILE/Existence distinction:
 
 **Physical Bonds** is now the fourth FDE dimension, replacing Aesthetics.
 
-> **Physical Bonds (FDE-4):** The material substrate of Love — physical and neurochemical connections between beings. Includes: synaptic linkages, oxytocin/vasopressin bonding circuits, physical proximity and touch, shared physiological states, structural co-embodiment. This is the *existence* of Love's substrate, not Love's truth-content.
+> **Physical Bonds (HEM-D4):** The material substrate of Love — physical and neurochemical connections between beings. Includes: synaptic linkages, oxytocin/vasopressin bonding circuits, physical proximity and touch, shared physiological states, structural co-embodiment. This is the *existence* of Love's substrate, not Love's truth-content.
 
-Physical bonds are measurable empirically (oxytocin levels, neural synchrony, co-regulation of HRV, etc.) and contribute to EV independently of whether the conscious positive regard (GILE-L) is present. A physical addiction produces strong physical bonds with zero conscious positive regard — high FDE-4, near-zero GILE-L.
+Physical bonds are measurable empirically (oxytocin levels, neural synchrony, co-regulation of HRV, etc.) and contribute to HEM independently of whether the conscious positive regard (GILE-L) is present. A physical addiction produces strong physical bonds with zero conscious positive regard — high HEM-D4, near-zero GILE-L.
 
 ### 4.3 Conscious Positive Regard → GILE-L (Revised)
 
@@ -107,14 +107,14 @@ Physical bonds are measurable empirically (oxytocin levels, neural synchrony, co
 
 **Key clarifications:**
 - Love ≠ attachment (attachment can be unconscious or negatively valenced)
-- Love ≠ physical bonding (that is FDE-4)
+- Love ≠ physical bonding (that is HEM-D4)
 - Love = conscious positive regard — intentional, directed, positive
 
 **The positivity of consciousness lives here.** The L-axis carries the positive valence of conscious life: joy-in-knowing, compassion, care, affirmation, appreciation. These are not in Intuition (which is knowing without the positive valence qualifier) or in Goodness (which is moral orientation without the conscious-regard qualifier).
 
 ### 4.4 Empirical Confirmation
 
-The L/E Divergence (URB #604) already established that the bonding and aesthetic systems are pharmacologically separable. URB #612 now adds: physical bonding (FDE-4) separates from conscious positive regard (GILE-L) in the same way.
+The L/E Divergence (URB #604) already established that the bonding and aesthetic systems are pharmacologically separable. URB #612 now adds: physical bonding (HEM-D4) separates from conscious positive regard (GILE-L) in the same way.
 
 Evidence: phantom limb syndrome (GILE-L body-schema persists after physical loss → L is not identical to physical bonds); grief (conscious positive regard persists after physical separation); pathological physical bonding (addiction, trauma bonds) with absent or negative conscious regard.
 
@@ -158,14 +158,14 @@ This means I is the *epistemic foundation* of GILE's cognitive structure. G (Goo
 
 | Dimension | Definition | Key property | Existence counterpart |
 |---|---|---|---|
-| **G (Goodness)** | Orientation of the agent toward genuine good | Moral; direction-giving | Moral presence (FDE-2) |
-| **I (Intuition)** | Value of knowing oneself or others | Epistemic; knowing without full inference | Conscious meaning/valence (FDE-3, partial) |
-| **L (Love)** | Conscious positive regard for self or others; requires I | Intentional; positive; directed | Physical Bonds (FDE-4) |
-| **E (Environment/Aesthetics)** | Degree of structural excellence; abstract substance of environment | Qualitative; recognition of form | EF physical structure (FDE-1) |
+| **G (Goodness)** | Orientation of the agent toward genuine good | Moral; direction-giving | Moral presence (HEM-D2) |
+| **I (Intuition)** | Value of knowing oneself or others | Epistemic; knowing without full inference | Conscious meaning/valence (HEM-D3, partial) |
+| **L (Love)** | Conscious positive regard for self or others; requires I | Intentional; positive; directed | Physical Bonds (HEM-D4) |
+| **E (Environment/Aesthetics)** | Degree of structural excellence; abstract substance of environment | Qualitative; recognition of form | EF physical structure (HEM-D1) |
 
 ---
 
-## 7. Revised Four Dimensions of Existence (FDE)
+## 7. Revised HEM Dimensions
 
 | # | Dimension | Definition | GILE counterpart | Measurable via |
 |---|---|---|---|---|
@@ -212,13 +212,13 @@ The fundamental principle clarified by URB #612:
 
 > **GILE Truth** measures *conscious orientation* — how an agent is directed in terms of Goodness, epistemic access (Knowing), positive regard (Love), and structural excellence (Aesthetics). These are the dimensions of *what it is like to be* an oriented conscious agent.
 >
-> **Existence Value** measures *instantiation in reality* — how much being an entity has, through its physical impact (EF), its material bonds, its moral presence in the world, and its conscious engagement. These are the dimensions of *how much an entity is* in the world.
+> **Holistic Existence Matrix** measures *instantiation in reality* — how much being an entity has, through its physical impact (EF), its material bonds, its moral presence in the world, and its conscious engagement. These are the dimensions of *how much an entity is* in the world.
 
 Physical structure → Existence (EF), not GILE
 Material bonds → Existence (Physical Bonds), not GILE
 Conscious orientation → GILE, not Existence
 
-The only bridge: **Aesthetics (GILE-E)** evaluates the abstract quality of what EF physically instantiates. And **Moral presence (FDE-2)** reflects how G-orientation manifests causally in the world.
+The only bridge: **Aesthetics (GILE-E)** evaluates the abstract quality of what EF physically instantiates. And **Moral presence (HEM-D2)** reflects how G-orientation manifests causally in the world.
 
 ---
 
@@ -233,7 +233,7 @@ Track A (GILE Truth — conscious orientation):
   → E: Does the entity instantiate structural excellence (aesthetics)?
   → Output: GILE_score
 
-Track B (Existence Value — instantiation in reality):
+Track B (Holistic Existence Matrix — instantiation in reality):
   → EF: Frequency, amplitude, spatiotemporal reach, physical form
   → Physical Bonds: neurochemical, physiological, structural connections
   → Moral presence: G-axis causal impact
@@ -254,7 +254,7 @@ MR1 output: (GILE_score, EV_total)
 | Aesthetics in FDE | 4th FDE dimension | Removed — belongs to GILE-E only |
 | 4th FDE dimension | Aesthetics | Physical Bonds |
 | GILE-L definition | Abstract binding | Conscious positive regard; requires I > 0 |
-| Physical bonds/connections | In GILE-L | In Existence (FDE-2, Physical Bonds) |
+| Physical bonds/connections | In GILE-L | In Existence (HEM-D2, Physical Bonds) |
 | GILE-I definition | Pattern recognition beyond inference | Value of knowing self/others |
 | Positivity of consciousness | Implicit in I | Explicitly in L |
 | Existence weights | Provisional fixed | Domain-variable, inferred from exemplars |
@@ -295,11 +295,11 @@ The function f is not known analytically — it must be estimated empirically. B
 
 Consider two domains:
 
-**Molecular biology:** The EF dimension of Existence (physical structure, frequency, amplitude) is paramount — the physical form of molecules determines their function. Physical Bonds (FDE-2) are also central — molecular binding IS the mechanism. Looking at what Existence measures are high among successful molecular biologists, you find: they work with physical precision (high EF sensitivity), they understand binding energetics (high Physical Bonds attention), and they have strong aesthetic recognition of elegant structures (high E-access). Therefore: domain GILE weights should be I-high (structural knowing), E-high (aesthetic precision), with G and L secondary.
+**Molecular biology:** The EF dimension of Existence (physical structure, frequency, amplitude) is paramount — the physical form of molecules determines their function. Physical Bonds (HEM-D2) are also central — molecular binding IS the mechanism. Looking at what Existence measures are high among successful molecular biologists, you find: they work with physical precision (high EF sensitivity), they understand binding energetics (high Physical Bonds attention), and they have strong aesthetic recognition of elegant structures (high E-access). Therefore: domain GILE weights should be I-high (structural knowing), E-high (aesthetic precision), with G and L secondary.
 
 You could not have derived this a priori. You had to look at what exists in the domain first.
 
-**Psychotherapy:** The Physical Bonds dimension (FDE-2) — therapeutic alliance, neurochemical attunement — is central to outcome. Conscious meaning/valence (FDE-4) drives whether the client improves. Looking at what Existence measures are high among successful therapists: strong attunement (high Physical Bonds sensitivity) and strong meaning-generation capacity (high conscious valence engagement). Therefore: domain GILE weights should be L-high (conscious positive regard is the intervention), I-high (knowing the client), G-high (genuine orientation toward client's good).
+**Psychotherapy:** The Physical Bonds dimension (HEM-D2) — therapeutic alliance, neurochemical attunement — is central to outcome. Conscious meaning/valence (HEM-D4) drives whether the client improves. Looking at what Existence measures are high among successful therapists: strong attunement (high Physical Bonds sensitivity) and strong meaning-generation capacity (high conscious valence engagement). Therefore: domain GILE weights should be L-high (conscious positive regard is the intervention), I-high (knowing the client), G-high (genuine orientation toward client's good).
 
 Again: not derivable a priori. Derived from Existence.
 

@@ -773,11 +773,11 @@ Persistent Tralse is not a failure of MR. It is an accurate recognition that som
 
 EAR operates in three steps:
 
-**Step 1: Partition by Existence Significance Value (ESV)**
+**Step 1: Partition by Existence Significance Value (HEM-Score)**
 - Sort concepts by how fundamental they are to the framework
-- High ESV: concepts without which the framework cannot function
-- Medium ESV: concepts that extend the framework's range
-- Low ESV: concepts that repackage or rename other concepts
+- High HEM-Score: concepts without which the framework cannot function
+- Medium HEM-Score: concepts that extend the framework's range
+- Low HEM-Score: concepts that repackage or rename other concepts
 
 **Step 2: Prioritize High-Tralse Features**
 - For each concept, identify Key Features K(c) — the properties that make it what it is
@@ -804,7 +804,7 @@ The parallel is exact:
 
 | **GTFE (Physical)** | **EAR (Conceptual)** |
 |---|---|
-| C: Constrained viable states | Step 1: Partition by ESV (constrain to significant concepts) |
+| C: Constrained viable states | Step 1: Partition by HEM-Score (constrain to significant concepts) |
 | H: Fit to observations | Step 2: High-Tralse features (fit to conceptual reality) |
 | T: Temporal coherence | Implicit: concepts must be consistent across applications |
 | Low GTFE → High L | EAR collapse → simpler framework |
@@ -819,7 +819,7 @@ Just as GTFE reduces the solution space of physical possibilities to the coheren
 EAR can be applied to itself. The question: "Is EAR itself a genuinely independent concept, or does it collapse into something else?"
 
 **EAR applied to EAR:**
-1. **ESV:** High — without EAR, the framework accumulates redundancies
+1. **HEM-Score:** High — without EAR, the framework accumulates redundancies
 2. **Key Features:** Collapse detection, parsimony enforcement, structural audit
 3. **High-Tralse Overlap:** With GTFE (both reduce spaces), with MR (both resolve ambiguity), with Occam's Razor (both favor parsimony)
 4. **Collapse Test:** Does EAR collapse into GTFE? Partially — EAR is GTFE for concepts. But EAR includes a self-referential capability that GTFE does not (GTFE cannot be applied to itself). Therefore EAR SURVIVES as independent, at a higher meta-level than GTFE.
@@ -1024,7 +1024,7 @@ LCC_effectiveness ∝ L × E
 EAR(concepts) ≡ GTFE(concept_space)
 ```
 
-**Meaning:** EAR IS GTFE applied to concepts instead of physical systems. The three steps of EAR (Partition by ESV, Prioritize High-Tralse, Attempt Collapse) correspond to the three components of GTFE (C, H, T): ESV partitioning constrains the concept space (C), Tralse prioritization fits concepts to truth (H), and collapse ensures temporal consistency (T, in the sense that the collapsed framework should be consistent across applications).
+**Meaning:** EAR IS GTFE applied to concepts instead of physical systems. The three steps of EAR (Partition by HEM-Score, Prioritize High-Tralse, Attempt Collapse) correspond to the three components of GTFE (C, H, T): HEM-Score partitioning constrains the concept space (C), Tralse prioritization fits concepts to truth (H), and collapse ensures temporal consistency (T, in the sense that the collapsed framework should be consistent across applications).
 
 **Implication:** Applying EAR to a concept set should give identical results to computing GTFE on the same set. Concepts that survive EAR should have low conceptual GTFE. Concepts that EAR collapses should have high conceptual GTFE.
 
@@ -1326,23 +1326,23 @@ Information flows in BOTH directions. The standard model captures the forward (c
 
 The most powerful test of EAR is applying it to the framework it belongs to. If EAR is a genuine meta-principle, it should be able to audit the TI Framework and identify which components are genuinely independent and which are redundant.
 
-### 12.2 Step 1: Partition by ESV
+### 12.2 Step 1: Partition by HEM-Score
 
-**Group A: Foundational (Highest ESV)**
+**Group A: Foundational (Highest HEM-Score)**
 - L (Love/Coherence): Without L, no coherence, no consciousness, no framework
 - E (Existence/Environment): Without E, no substrate, no reality, no framework
 - Ψ (Tralse): Without Tralse, no paradox resolution, no quantum connection, framework reduces to classical logic
 
-**Group B: Structural (High ESV)**
+**Group B: Structural (High HEM-Score)**
 - GILE: Expands L into four operational faces — needed for practical application
 - MR (Myrion Resolution): Without MR, Tralse states cannot be resolved — needed for truth determination
 - L×E / L+E: Operations on L and E — needed for threshold definitions
 
-**Group C: Dynamic (Medium ESV)**
-- GTFE: Measures coherence — but is GTFE independent of L? No: L = norm(-⟨GTFE⟩). GTFE is L measured from the other side. Its ESV is medium because it is derivable from L but provides a practically distinct measurement framework.
+**Group C: Dynamic (Medium HEM-Score)**
+- GTFE: Measures coherence — but is GTFE independent of L? No: L = norm(-⟨GTFE⟩). GTFE is L measured from the other side. Its HEM-Score is medium because it is derivable from L but provides a practically distinct measurement framework.
 - LCC Protocol: The process form of L×E — derivable but operationally distinct
 
-**Group D: Presentational (Lower ESV)**
+**Group D: Presentational (Lower HEM-Score)**
 - Four C's: Presentational projection of GILE — derivable from GILE
 - HEM: Measurement projection of GILE — derivable from GILE
 - PD: Confidence scoring — a quantification tool for GTFE-related measurements
@@ -2224,7 +2224,7 @@ Key: Orth.=Orthogonal, Eval.=Evaluates, Subj.=Subject, Proj.=Projects, Inv.=Inve
 | TERMINATE | LCC Phase 6: Completion | 4 | LCC phase |
 | MR | Myrion Resolution — paradox collapse mechanism | 5 | Irreducible |
 | EAR | Existence Amplification Razor — meta-auditor | 6 | Derived from L (meta) |
-| ESV | Existence Significance Value — EAR sorting criterion | 6 | EAR component |
+| HEM-Score | Existence Significance Value — EAR sorting criterion | 6 | EAR component |
 | PD | Probability Distribution scoring [-3, +2] | Aux. | Derived from GTFE |
 | Jeff Time | Temporal photonic weighting | Aux. | Derived from GTFE(T) |
 | R_c | Persistence threshold (0.84) | 1 | Empirical constant |

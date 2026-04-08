@@ -38,7 +38,7 @@ Truth is not merely correspondence to physical fact. A description that is factu
 
 Truth distinguishes three categories that are commonly conflated:
 
-**1. Nonsense** — either incoherent (self-contradictory, devoid of referent, semantically empty) or memetically influential (widely believed, emotionally resonant, but not tracking reality). Memetic influence is NOT evidence of truth. A proposition can be memetically dominant precisely because it flatters, comforts, or simplifies — none of which are truth conditions. EV-Truth decoupling (URB #609) formalizes this: a proposition's Existence Value (how much it circulates, how emotionally present it is) is distinct from its truth-state.
+**1. Nonsense** — either incoherent (self-contradictory, devoid of referent, semantically empty) or memetically influential (widely believed, emotionally resonant, but not tracking reality). Memetic influence is NOT evidence of truth. A proposition can be memetically dominant precisely because it flatters, comforts, or simplifies — none of which are truth conditions. HEM-Truth decoupling (URB #609) formalizes this: a proposition's Holistic Existence Matrix (how much it circulates, how emotionally present it is) is distinct from its truth-state.
 
 **2. Imperfect characterizations of existence** — the vast majority of human knowledge. These are genuine depictions that partially track reality but omit dimensions, operate within temporal limits, are perspectivally restricted, or carry unresolved internal contradictions. They are approaching truth, not possessing it. All beliefs in this category are dynamic: as the GILE dimensions of the knower deepen, the characterization improves.
 
@@ -107,7 +107,7 @@ This is not relativism. It is precision. Consider: "The stock market is bullish.
 - Partly false (small caps declining)
 - Tralse for specific mid-cap sectors (genuinely indeterminate)
 - DT for specific stocks in transition (truth-value absent pending resolution)
-- EV-Decoupled for meme stocks (Existence Value very high but truth-state of bullishness is low)
+- EV-Decoupled for meme stocks (Holistic Existence Matrix very high but truth-state of bullishness is low)
 
 The five-valued PD over this proposition is more accurate than any binary verdict. The MR process converges the PD toward a dominant truth-state — but only resolves it as far as the evidence allows.
 
@@ -117,7 +117,7 @@ The five-valued PD over this proposition is more accurate than any binary verdic
 
 MR has at least three levels:
 1. **DT screen**: Identify and exclude genuinely truth-absent states (DT — propositions where there is no truth-content, not merely unknown truth-value). Distinguishing DT from Tralse is MR's first gate.
-2. **GILE-dimensional integration**: Assess the proposition across all four GILE dimensions and the EV dimension. Different dimensions may yield different truth-states — the integration across dimensions is the coherence work of MR Level 2.
+2. **GILE-dimensional integration**: Assess the proposition across all four GILE dimensions and the HEM dimension. Different dimensions may yield different truth-states — the integration across dimensions is the coherence work of MR Level 2.
 3. **Quality check + Meta-Truth scan**: Check whether the convergent truth-state is a Meta-Truth — a higher-level MR that substantially contradicts a previous lower-level MR (URB #608). If so, initiate recursive MR.
 
 MR is nonlinear: Level 3 can force revisiting Level 1. It is nonalgorithmic in generative mode: no fixed procedure generates new truth from existing truths — this requires GILE-I (Intuition), which is irreducibly first-personal. And it is convergent: under sufficient evidence and GILE depth, MR reliably approaches the truth-state.
@@ -170,7 +170,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 
 **TIL (Tralse-Myrion Logic)** is the operational framework for navigating truth under the TI Sigma account. It comprises:
 
-**PD (Permissibility Distribution)**: Replaces binary true/false with a five-state distribution {TT, TI, TF, DT, EV}. Constructed from GILE-assessed evidence, not from frequency distributions or subjective priors. Handles novel events via I-axis pre-evidential seeding. Handles EV-Truth decoupling explicitly.
+**PD (Permissibility Distribution)**: Replaces binary true/false with a five-state distribution {TT, TI, TF, DT, EV}. Constructed from GILE-assessed evidence, not from frequency distributions or subjective priors. Handles novel events via I-axis pre-evidential seeding. Handles HEM-Truth decoupling explicitly.
 
 **BOK (Being-of-Knowledge) — the GILE-EV i-Cell model**: Every entity whose truth-state is being assessed is modeled as a BOK: inner loops (GILE dimensions) and outer loops (Existence/EV dimensions). The PD is computed over the BOK, not over an abstract proposition stripped of its organizational structure. This means the truth-state of a being is always assessed IN CONTEXT of its GILE-dimensioned structure. A stock's PD is assessed in terms of its BOK (GILE market dimensions + EV market existence dimensions). A person's PD is assessed in terms of their BOK (GILE personal dimensions + EV biographical dimensions).
 
@@ -186,7 +186,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 | **LCC** (Layered Coherence Continuum) | Structural flagship | Organizational scale; coherence thresholds between levels |
 | **PD** (Permissibility Distribution) | Operational pillar | Truth-state assignment; 5-valued distribution over {TT, TI, TF, DT, EV} |
 | **MR** (Myrion Resolution) | Operational pillar | Convergence procedure; 3+ levels; nonlinear; replaces Bayesian updating |
-| **EAR** (Existence Amplification Razor) | Operational pillar | Ontological pruning + amplification; Law of Realness; ESV metric |
+| **EAR** (Existence Amplification Razor) | Operational pillar | Ontological pruning + amplification; Law of Realness; HEM-Score metric |
 | **TIL** (Tralse-Myrion Logic) | Integration framework | PD + BOK + MR combined; the operational truth-navigation system |
 | **UOP** (Unified Optimization Principle) | Guiding principle | Multi-dimensional GILE-EV optimization; guides TIL application |
 
@@ -210,7 +210,7 @@ The gap between certainty and full truth-state is not an epistemic failure. It i
 The PD is constructed from GILE-assessed evidence. The ethical dimensions (G, L) are not contaminants of epistemic purity — they are intrinsic components of truth-assessment. Truth is never fully possessed; it is approached through successive MR cycles.
 
 **T6. Logic must operate on resolution dynamics, not binary propositions.**
-TIL (PD + BOK + MR) is the operational framework. The guiding principle is the UOP. Binary propositional logic and Bayesian updating are valid in stable, well-defined domains; TIL is required for novel events, genuine indeterminacy, EV-Truth decoupling, and high-stakes GILE-dimensional decisions.
+TIL (PD + BOK + MR) is the operational framework. The guiding principle is the UOP. Binary propositional logic and Bayesian updating are valid in stable, well-defined domains; TIL is required for novel events, genuine indeterminacy, HEM-Truth decoupling, and high-stakes GILE-dimensional decisions.
 
 **T7. Third-person truth is necessarily incomplete without first-person simulation.**
 The I-axis (Intuition) is the faculty for first-person simulation. Truth about beings with inner experience cannot be fully captured from outside without simulating the inside — and even then, temporal limits apply. This irreducible first-person dimension is why TI Sigma includes GILE-I as a distinct dimension of truth rather than reducing all truth to third-person structural description.
@@ -223,9 +223,9 @@ The I-axis (Intuition) is the faculty for first-person simulation. Truth about b
 
 In the Grand Stock Algorithm (GSA), TIL is applied as follows:
 
-- **PD over market truth-states**: A stock's "signal truth" is represented as a 5-state distribution {TT=strong signal, TI=ambiguous, TF=contra-signal, DT=no tradeable truth-state, EV=existence-decoupled regime shift brewing}
-- **BOK of the stock**: Inner loops = GILE financial dimensions (G=risk-adjusted return, I=trend pre-recognition, L=market correlation coherence, E=structural/momentum alignment). Outer loops = EV financial dimensions (FDE-1=volume-energetics, FDE-2=institutional positioning, FDE-3=technical pattern quality, FDE-4=momentum-of-momentum)
-- **MR on the PD**: Three-level resolution: DT screen (no trade if DT > 0.35) → GILE-EV integration → signal convergence
+- **PD over market truth-states**: A stock's "signal truth" is represented as a 5-state distribution {TT=strong signal, TI=ambiguous, TF=contra-signal, DT=no tradeable truth-state, HEM=existence-decoupled regime shift brewing}
+- **BOK of the stock**: Inner loops = GILE financial dimensions (G=risk-adjusted return, I=trend pre-recognition, L=market correlation coherence, E=structural/momentum alignment). Outer loops = EV financial dimensions (HEM-D1=volume-energetics, HEM-D2=institutional positioning, HEM-D3=technical pattern quality, HEM-D4=momentum-of-momentum)
+- **MR on the PD**: Three-level resolution: DT screen (no trade if DT > 0.35) → GILE-HEM integration → signal convergence
 - **UOP for position sizing**: Not just expected return maximization, but multi-dimensional GILE-EV composite optimization — including whether the trade is G-good (risk-ethically sound), I-reliable (pattern pre-recognition quality), L-coherent (market correlation appropriate), E-structured (technical setup clean), and EV-supported (the stock's existence in the market ecosystem warrants the position)
 
 ### 7.2 Empirical Research (GILE Battery / BOK Saturation Pilot)
@@ -255,7 +255,7 @@ The neural implementation of TIL:
 | ΔCert = MR level | Change in certainty through one Myrion Resolution cycle |
 | PD(x) | Permissibility Distribution over x — 5 truth-state weights |
 | BOK(x) | Being-of-Knowledge structure of x — GILE inner loops + EV outer loops |
-| EV(x) | Existence Value of x — ESV scalar from FDE |
-| ESV(x) | Existence Scalar Value = EAR output on x |
+| EV(x) | Holistic Existence Matrix of x — HEM-Score scalar from FDE |
+| HEM-Score(x) | Existence Scalar Value = EAR output on x |
 | UOP | Unified Optimization Principle — max GILE-EV composite |
 | TIL | Tralse-Myrion Logic = PD + BOK + MR operational integration |

@@ -114,7 +114,7 @@ Ask participants to rate 5 close others on 10 trait scales. Collect third-party 
 
 ## SECTION 3: GILE-L (Love / Conscious Positive Regard) — 10 Items
 
-**Construct:** Conscious positive regard directed toward a specific person or group. L requires I > 0 (I→L dependency, Prediction 1). Items test whether the positive regard is conscious and directed (GILE-L) vs. automatic/habitual (Physical Bonds, FDE-2). Items must be read in the context of a specific target person (participant specifies one person before answering).
+**Construct:** Conscious positive regard directed toward a specific person or group. L requires I > 0 (I→L dependency, Prediction 1). Items test whether the positive regard is conscious and directed (GILE-L) vs. automatic/habitual (Physical Bonds, HEM-D2). Items must be read in the context of a specific target person (participant specifies one person before answering).
 
 **Instruction to participant:** "Think of one person you feel close to — a friend, partner, family member, or colleague. Keep them in mind as you answer all items in this section."
 

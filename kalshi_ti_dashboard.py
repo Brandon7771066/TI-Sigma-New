@@ -60,7 +60,7 @@ def render_kalshi_ti_dashboard():
     category_filter = None if category == "All" else category.lower()
     
     min_ev = st.sidebar.slider("Min Expected Value:", 0.0, 0.5, 0.05, 0.01, 
-                                help="Minimum EV threshold for opportunities")
+                                help="Minimum HEM threshold for opportunities")
     
     # Main content tabs
     tabs = st.tabs(["📈 Market Analysis", "🎯 Top Opportunities", "💰 Portfolio", "📊 Performance"])
@@ -180,7 +180,7 @@ def render_kalshi_ti_dashboard():
             )
             
             if opportunities:
-                st.success(f"🎯 Found {len(opportunities)} opportunities with EV > {min_ev:.1%}")
+                st.success(f"🎯 Found {len(opportunities)} opportunities with HEM > {min_ev:.1%}")
                 
                 # Top opportunities
                 for i, opp in enumerate(opportunities[:5], 1):
@@ -242,7 +242,7 @@ def render_kalshi_ti_dashboard():
                 st.plotly_chart(fig, use_container_width=True)
             
             else:
-                st.warning(f"⚠️ No opportunities found with EV > {min_ev:.1%}. Try lowering the threshold.")
+                st.warning(f"⚠️ No opportunities found with HEM > {min_ev:.1%}. Try lowering the threshold.")
         
         else:
             st.info("👈 Go to 'Market Analysis' tab first to analyze markets!")
@@ -298,7 +298,7 @@ def render_kalshi_ti_dashboard():
     
     - **GILE Analysis**: Convert market data → GILE scores → physics-based predictions
     - **Momentum Detection**: High volume/open interest = strong conviction
-    - **Expected Value**: Calculate EV to identify profitable trades
+    - **Expected Value**: Calculate HEM to identify profitable trades
     - **Risk Management**: Only trade when confidence exceeds thresholds
     
     **Disclaimer:** This is experimental technology combining quantum physics with finance. 

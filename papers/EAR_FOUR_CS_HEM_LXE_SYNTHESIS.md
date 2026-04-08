@@ -29,17 +29,17 @@ This paper applies the EAR algorithm to the three evaluation frameworks used for
 
 ### 2.1 Existence-Level Grouping
 
-**Group A: Fundamental (highest ESV)**
+**Group A: Fundamental (highest HEM-Score)**
 - L×E — the 2D foundation from which all others derive
 
-**Group B: Structural (high ESV)**
+**Group B: Structural (high HEM-Score)**
 - GILE — names the 4 faces of L×E (G=L's moral face, I=L's epistemic face, L=L itself, E=E itself)
 - HEM 5D — 5 measurements of L×E intensity
 
-**Group C: Presentational (medium ESV)**
+**Group C: Presentational (medium HEM-Score)**
 - Four C's — evaluates how well the above are communicated
 
-*Note: Lower ESV does not mean less important. The Four C's are ESSENTIAL — truth that cannot be presented cannot function. But they exist at a different ontological level than the substance they evaluate.*
+*Note: Lower HEM-Score does not mean less important. The Four C's are ESSENTIAL — truth that cannot be presented cannot function. But they exist at a different ontological level than the substance they evaluate.*
 
 ---
 

@@ -13,7 +13,7 @@ Emerick's Existence Amplification Razor (EAR) is a philosophical-computational t
 1. **Filtering** superficial conceptual distinctions (noise)
 2. **Amplifying** genuine existence claims (signal)
 3. **Collapsing** redundant concepts into coherent hybrids
-4. **Measuring** existence via the Existence Scalar Value (ESV)
+4. **Measuring** existence via the Holistic Existence Score (HEM-Score)
 
 **The Synchronicity**: "EAR" perfectly captures the tool's dual function—just as the human ear FILTERS frequencies AND AMPLIFIES signals, EAR filters conceptual noise while amplifying genuine existence!
 
@@ -28,7 +28,7 @@ Emerick's Existence Amplification Razor (EAR) is a philosophical-computational t
 | Term | Full Name | Definition |
 |------|-----------|------------|
 | **D/M** | Dimensions/Modules | Interchangeable "parts of reality" |
-| **ESV** | Existence Scalar Value | Sum of fundamental existence scalars for a target |
+| **HEM-Score** | Existence Scalar Value | Sum of fundamental existence scalars for a target |
 | **DTV** | Decimal Tralse Value | 0-1 normalized snapshot; good for same-kind comparisons |
 | **EAR** | Existence Amplification Razor | The collapse-and-amplify procedure |
 | **K(c)** | Key Features | High-tralse attributes of concept c |
@@ -60,13 +60,13 @@ EAR is different:
 A set of initial concepts C = {c₁, c₂, ..., cₙ} with:
 - **Key features** K(c) — high-tralse attributes
 - **Superficial features** S(c) — mid/low-tralse noise
-- **Optional**: ESV (or DTV if ESV infeasible yet)
+- **Optional**: HEM-Score (or DTV if HEM-Score infeasible yet)
 
 ### 2.2 Procedure (Concise Algorithm)
 
 ```
 STEP 1: PARTITION BY EXISTENCE
-├── Group concepts by comparable ESV (or DTV if needed)
+├── Group concepts by comparable HEM-Score (or DTV if needed)
 ├── Run EAR within each group
 └── Handle cross-group relations later
 
@@ -91,12 +91,12 @@ STEP 4: AUDIT COHERENCE
 
 STEP 5: REINTEGRATE (OR DISCARD) SUPERFICIAL FEATURES
 ├── Bring back S only if they raise coherence without bloat
-├── If adding a feature lowers coherence or ESV → trim (Occam)
+├── If adding a feature lowers coherence or HEM-Score → trim (Occam)
 └── Superficials that don't contribute get discarded
 
 STEP 6: FINALIZE SET
 ├── Select lowest-count, highest-coherence set of concepts/features
-├── Recompute ESV/DTV if relevant
+├── Recompute HEM-Score/DTV if relevant
 └── Report "amplified existence" (the "Ear effect")
 ```
 
@@ -120,11 +120,11 @@ This is the opposite of reductionism! Instead of reducing things to their smalle
 | 4 | **Relational/Co-created Meaning** | — | Jointly generated significance (close ties, daily enactments) |
 | 5 | **Intrinsic Presence/Vitality** | — | The "flesh-and-blood" felt aliveness, wellbeing |
 
-### 3.2 ESV Calculation
+### 3.2 HEM-Score Calculation
 
-**ESV = weighted sum of the five scalars**
+**HEM-Score = weighted sum of the five scalars**
 
-$$ESV = w_1 \cdot \text{Complexity} + w_2 \cdot \text{Contradiction}^{-1} + w_3 \cdot \text{AMI} + w_4 \cdot \text{Relational} + w_5 \cdot \text{Vitality}$$
+$$HEM-Score = w_1 \cdot \text{Complexity} + w_2 \cdot \text{Contradiction}^{-1} + w_3 \cdot \text{AMI} + w_4 \cdot \text{Relational} + w_5 \cdot \text{Vitality}$$
 
 Weights can be:
 - **Universal default** (equal weights: w = 0.2 each)
@@ -134,7 +134,7 @@ Weights can be:
 
 For comparisons within the same kind/type:
 
-$$DTV = \frac{ESV - ESV_{min}}{ESV_{max} - ESV_{min}} \in [0, 1]$$
+$$DTV = \frac{HEM-Score - HEM-Score_{min}}{HEM-Score_{max} - HEM-Score_{min}} \in [0, 1]$$
 
 DTV provides a **normalized snapshot** useful for:
 - Comparing entities of the same category
@@ -241,7 +241,7 @@ Both are concerned with **stabilizing information** about right action!
 By applying EAR, we've:
 1. **Filtered** the superficial distinction (deontology vs. consequentialism)
 2. **Amplified** the genuine insight (both seek informational stability)
-3. **Produced** a more REAL concept (Tralse Ethics) with higher ESV
+3. **Produced** a more REAL concept (Tralse Ethics) with higher HEM-Score
 
 ---
 
@@ -291,7 +291,7 @@ Key features:
 
 ---
 
-## Part 7: ESV/DTV Dashboard Design
+## Part 7: HEM-Score/DTV Dashboard Design
 
 ### 7.1 Visualization Concept
 
@@ -299,7 +299,7 @@ An EAR-based dashboard would display:
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  EXISTENCE SCALAR VALUE (ESV) DASHBOARD            │
+│  EXISTENCE SCALAR VALUE (HEM-Score) DASHBOARD            │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
 │  CONCEPT: [User Input]                              │
@@ -313,7 +313,7 @@ An EAR-based dashboard would display:
 │  │  ████████░░ Vitality              [0.80]    │   │
 │  └─────────────────────────────────────────────┘   │
 │                                                     │
-│  ESV = 3.80 / 5.00                                 │
+│  HEM-Score = 3.80 / 5.00                                 │
 │  DTV = 0.76 (normalized)                           │
 │                                                     │
 │  TOV (Tralse Overall Value): ████████░░ [0.78]     │
@@ -326,7 +326,7 @@ An EAR-based dashboard would display:
 ### 7.2 App Outputs
 
 The EAR app would output:
-1. **ESV** - Raw existence scalar value
+1. **HEM-Score** - Raw existence scalar value
 2. **DTV** - Normalized 0-1 value
 3. **Error bars** - Confidence intervals
 4. **Dashboard** - Five bars + TOV
@@ -353,7 +353,7 @@ In Monster Group terms:
 - **Superficial features** = Reducible representations
 - **Key features** = Irreducible representations
 - **Collapse** = Finding the minimal faithful representation
-- **ESV** = Dimension of representation
+- **HEM-Score** = Dimension of representation
 
 The Monster's 196,883-dimensional representation is the result of "EAR applied to group theory"—the minimal faithful representation that captures all structure without redundancy.
 
@@ -365,7 +365,7 @@ EAR is a special case of GILE Optimization:
 - **L (Love)** → Preserving relational meaning
 - **E (Environment)** → Respecting complexity constraints
 
-Maximizing ESV = Maximizing GILE projection onto the measurement dimensions.
+Maximizing HEM-Score = Maximizing GILE projection onto the measurement dimensions.
 
 ---
 
@@ -404,7 +404,7 @@ class EARProcessor:
         self.esv_weights = [0.2, 0.2, 0.2, 0.2, 0.2]  # Default equal weights
     
     def partition_by_existence(self, concepts):
-        """Group concepts by comparable ESV"""
+        """Group concepts by comparable HEM-Score"""
         pass
     
     def extract_key_features(self, concept):
@@ -445,7 +445,7 @@ class EARProcessor:
 EAR should be integrated into:
 1. **Concept validation** - Before adding new TI concepts, run EAR
 2. **Theory auditing** - Periodically collapse redundant theories
-3. **Research prioritization** - Focus on high-ESV, low-redundancy areas
+3. **Research prioritization** - Focus on high-HEM-Score, low-redundancy areas
 
 ---
 
@@ -455,7 +455,7 @@ EAR should be integrated into:
 
 1. **Distinguishing real from contrived** (filtering function)
 2. **Promoting genuine existence claims** (amplifying function)
-3. **Measuring existence quantitatively** (ESV/DTV metrics)
+3. **Measuring existence quantitatively** (HEM-Score/DTV metrics)
 4. **Guiding conceptual development** (parsimony + coherence)
 
 **The Law of Realness** inverts reductionism: Instead of asking "what is the least we can believe?", EAR asks "what is the MOST we can coherently affirm exists?"
@@ -512,7 +512,7 @@ INPUT: Set of concepts C
              │
              ▼
 OUTPUT: Minimal coherent concept set
-        + ESV/DTV metrics
+        + HEM-Score/DTV metrics
         + "Amplified existence" report
 ```
 

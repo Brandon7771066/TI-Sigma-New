@@ -322,13 +322,13 @@ class SynchronizationDetector:
             next_threshold = thresholds_by_level[next_level]
             
             if current_idx == 0:
-                prev_value = 0.0
+                prhem_value = 0.0
             else:
                 prev_levels = [SyncLevel.BASELINE, SyncLevel.COHERENT, SyncLevel.MAJOR_TRUTH, SyncLevel.SUSTAINABLE]
-                prev_values = [0.0, 0.70, 0.85, 0.92]
-                prev_value = prev_values[current_idx]
+                prhem_values = [0.0, 0.70, 0.85, 0.92]
+                prhem_value = prhem_values[current_idx]
             
-            progress = (current_composite - prev_value) / (next_threshold.min_value - prev_value)
+            progress = (current_composite - prhem_value) / (next_threshold.min_value - prhem_value)
             progress = max(0, min(1, progress))
             
             return {

@@ -89,7 +89,7 @@ The eternal God-cell is **antifragile** by formal necessity:
 1. ε is insufficient: I*(t - ε) ≥ 2 still — the perturbation fails, confirming the floor
 2. ε reaches the floor: I*(t) = 2 exactly — the floor absorbs it, and the prohibition is demonstrated
 
-In neither case does I*(t) go below +2. The floor IS the antifragility mechanism. Every attack on the eternal God-cell either fails (case 1) or reaches the floor and bounces (case 2) — with the EVIDENCE of the bounce strengthening the case for the prohibition.
+In neither case does I*(t) go below +2. The floor IS the antifragility mechanism. Every attack on the eternal God-cell either fails (case 1) or reaches the floor and bounces (case 2) — with the HEMIDENCE of the bounce strengthening the case for the prohibition.
 
 **The Barbell Structure:** The eternal God-cell has:
 - **Left tail BOUNDED** at +2 — no downside below +2 possible

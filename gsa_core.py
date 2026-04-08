@@ -35,7 +35,7 @@ v3 Upgrades (April 7, 2026 — URBs #615, #618):
       TF (Tralse-False)        → contra-signal
       DT (Double-Tralse)       → no tradeable truth-state, pause
       EV (EV-Decoupled)        → existence diverges from signal
-  - EVScore: Four Dimensions of Existence for each stock (FDE-1..4)
+  - EVScore: HEM Dimensions for each stock (HEM-D1..4)
   - GILEScore expanded: now includes ev_composite for UOP scoring
   - UOP position sizing: replaces simple regime multiplier with full
     GILE-EV composite optimization across all five dimensions
@@ -119,17 +119,17 @@ class GILEScore:
 @dataclass
 class EVScore:
     """
-    Existence Value (EV) Score — Four Dimensions of Existence (FDE).
+    Holistic Existence Matrix (HEM) Score — HEM Dimensions.
     Models the stock's 'existence' in the market ecosystem (BOK outer loops).
 
-    FDE-1 Physical/Energetic:    Volume-weighted price stability
-    FDE-2 Social/Historical:     52-week position (institutional presence proxy)
-    FDE-3 Aesthetic/Structural:  Technical pattern quality (clean chart proxy)
-    FDE-4 Conscious/Experiential: Momentum-of-momentum (second derivative of trend)
+    HEM-D1 Physical/Energetic:    Volume-weighted price stability
+    HEM-D2 Social/Historical:     52-week position (institutional presence proxy)
+    HEM-D3 Aesthetic/Structural:  Technical pattern quality (clean chart proxy)
+    HEM-D4 Conscious/Experiential: Momentum-of-momentum (second derivative of trend)
 
-    ESV (Existence Scalar Value) = EAR output = weighted FDE mean [0,1].
-    High ESV → stock has robust market existence; position is warranted.
-    Low ESV  → stock is existentially fragile; EV-decoupling risk.
+    HEM-Score (Holistic Existence Score) = EAR output = weighted FDE mean [0,1].
+    High HEM-Score → stock has robust market existence; position is warranted.
+    Low HEM-Score  → stock is existentially fragile; EV-decoupling risk.
     """
     fde1_physical:    float   # Volume-energetic stability [0,1]
     fde2_social:      float   # 52W position proxy [0,1]
@@ -150,11 +150,11 @@ class PDDistribution:
       TI  Tralse-Indeterminate: Genuine ambiguity, MR unresolved → HOLD / WAIT
       TF  Tralse-False:         Contra-signal evidence dominates → CAUTION / SELL
       DT  Double-Tralse:        No tradeable truth-state present → EXIT / PAUSE
-      EV  EV-Decoupled:         Existence Value diverges from signal → WATCH
+      EV  EV-Decoupled:         Holistic Existence Matrix diverges from signal → WATCH
 
     MR Resolution:
       Level 1: DT screen — if dt_weight > 0.35, action = 'pause' (MR gate)
-      Level 2: GILE-EV integration — reweight TT/TI/TF by GILE + ESV
+      Level 2: GILE-HEM integration — reweight TT/TI/TF by GILE + HEM-Score
       Level 3: Convergence — if dominant state weight > MR_THRESHOLD, mr_resolved = True
     """
     tt_weight:   float   # True-Tralse weight
@@ -964,7 +964,7 @@ class GSACore:
         max_position:  float = 0.15,
         num_positions: int   = 4,
         pd_dist:       Optional[PDDistribution] = None,
-        ev_score:      Optional[EVScore] = None,
+        hem_score:      Optional[EVScore] = None,
     ) -> float:
         """
         UOP-guided position sizing (v3 — Unified Optimization Principle).
@@ -974,7 +974,7 @@ class GSACore:
         the full multi-dimensional coherence of the trade:
 
           UOP composite = 0.35 × GILE_composite
-                        + 0.25 × ESV (Existence Scalar Value)
+                        + 0.25 × HEM-Score (Holistic Existence Score)
                         + 0.20 × PD_tt_weight (True-Tralse confirmation)
                         + 0.20 × (1 - PD_dt_weight) (absence of DT)
 
@@ -989,7 +989,7 @@ class GSACore:
 
         # UOP composite score
         gile_comp  = signal.gile
-        esv        = ev_score.esv if ev_score else 0.5
+        esv        = hem_score.esv if hem_score else 0.5
         tt_w       = pd_dist.tt_weight if pd_dist else 0.5
         dt_w       = pd_dist.dt_weight if pd_dist else 0.0
 
@@ -1006,7 +1006,7 @@ class GSACore:
         # Override gates (applied multiplicatively, most conservative wins)
         if pd_dist and pd_dist.dt_gate_active:
             weight *= 0.25   # DT gate: near-zero position, MR Level-1 block
-        elif ev_score and ev_score.ev_decoupled:
+        elif hem_score and hem_score.ev_decoupled:
             weight *= 0.60   # EV-decoupled: reduce exposure, structural watch
         elif signal.tral_state:
             weight *= 0.50   # Tral-state: half-size exploratory position
@@ -1015,38 +1015,38 @@ class GSACore:
 
     # ── TIL Pipeline: EVScore, PDDistribution, MR ──────────────────────────────
 
-    def compute_ev_score(
+    def compute_hem_score(
         self,
         prices: np.ndarray,
         returns: np.ndarray,
         gile: GILEScore,
     ) -> EVScore:
         """
-        Compute EVScore — Four Dimensions of Existence for a stock.
+        Compute EVScore — HEM Dimensions for a stock.
         Models the BOK outer loops: the stock's 'existence' in the market.
 
-        FDE-1 Physical/Energetic:    Volume-weighted price stability proxy
+        HEM-D1 Physical/Energetic:    Volume-weighted price stability proxy
                                      → uses constraint (drawdown + vol ratio)
-        FDE-2 Social/Historical:     52-week high position proxy
+        HEM-D2 Social/Historical:     52-week high position proxy
                                      → prices[-1] / max(prices[-252:])
-        FDE-3 Aesthetic/Structural:  Chart pattern quality
+        HEM-D3 Aesthetic/Structural:  Chart pattern quality
                                      → coherence of trend structure (1/vol_ratio)
-        FDE-4 Conscious/Experiential: Momentum of momentum
+        HEM-D4 Conscious/Experiential: Momentum of momentum
                                      → second derivative of short-term trend
 
-        ESV = EAR output: weighted FDE mean (EAR amplifies what genuinely exists,
+        HEM-Score = EAR output: weighted FDE mean (EAR amplifies what genuinely exists,
         prunes superficial distinctions — Law of Realness from URB #615).
-        EV-decoupled: |ESV - GILE_composite| > 0.35
+        EV-decoupled: |HEM-Score - GILE_composite| > 0.35
         """
         n = len(prices)
         if n < 30:
             return EVScore(0.5, 0.5, 0.5, 0.5, 0.5, False)
 
-        # FDE-1: Physical/Energetic — inverse of constraint (low drawdown+vol = high stability)
+        # HEM-D1: Physical/Energetic — inverse of constraint (low drawdown+vol = high stability)
         c = self._constraint(prices, returns)
         fde1 = float(np.clip(1.0 - c, 0.0, 1.0))
 
-        # FDE-2: Social/Historical — 52W position proxy
+        # HEM-D2: Social/Historical — 52W position proxy
         lookback_52w = min(n, 252)
         price_max_52w = float(np.max(prices[-lookback_52w:]))
         price_min_52w = float(np.min(prices[-lookback_52w:]))
@@ -1056,7 +1056,7 @@ class GSACore:
             0.0, 1.0
         ))
 
-        # FDE-3: Aesthetic/Structural — chart pattern coherence
+        # HEM-D3: Aesthetic/Structural — chart pattern coherence
         # (Low short/long vol ratio = cleaner chart = higher structural quality)
         rs = returns[-min(n, 7):]
         rl = returns[-min(n, 30):]
@@ -1065,25 +1065,25 @@ class GSACore:
         vol_ratio = v_short / v_long
         fde3 = float(np.clip(1.0 / (1.0 + abs(vol_ratio - 1.0)), 0.0, 1.0))
 
-        # FDE-4: Conscious/Experiential — momentum of momentum (second derivative)
+        # HEM-D4: Conscious/Experiential — momentum of momentum (second derivative)
         if len(returns) >= 10:
             mom_recent = float(np.mean(returns[-5:]))
             mom_prior  = float(np.mean(returns[-10:-5]))
             mom_accel  = mom_recent - mom_prior
-            # Sigmoid: positive acceleration = high FDE-4
+            # Sigmoid: positive acceleration = high HEM-D4
             fde4 = float(1.0 / (1.0 + np.exp(-mom_accel * 20.0)))
         else:
             fde4 = 0.5
 
-        # ESV = EAR output: amplify what genuinely exists
-        # Weights: FDE-1 (stability) 0.25, FDE-2 (history) 0.25,
-        #          FDE-3 (structure) 0.30, FDE-4 (acceleration) 0.20
+        # HEM-Score = EAR output: amplify what genuinely exists
+        # Weights: HEM-D1 (stability) 0.25, HEM-D2 (history) 0.25,
+        #          HEM-D3 (structure) 0.30, HEM-D4 (acceleration) 0.20
         esv = float(np.clip(
             0.25 * fde1 + 0.25 * fde2 + 0.30 * fde3 + 0.20 * fde4,
             0.0, 1.0
         ))
 
-        # EV-decoupled: Existence Value and GILE are diverging
+        # EV-decoupled: Holistic Existence Matrix and GILE are diverging
         ev_decoupled = abs(esv - gile.composite) > 0.35
 
         return EVScore(
@@ -1107,15 +1107,15 @@ class GSACore:
 
         MR three-level pipeline (URB #615, #618):
           Level 1 (DT screen): Flag if vol spike + negative memory + bifurcation
-          Level 2 (GILE-EV):   Weight TT/TI/TF by both GILE composite and ESV
+          Level 2 (GILE-EV):   Weight TT/TI/TF by both GILE composite and HEM-Score
           Level 3 (convergence): Resolve if dominant > 0.45; derive TIL action
 
         Truth-state construction:
-          TT  (True-Tralse):          GILE high + ESV high + positive PD
+          TT  (True-Tralse):          GILE high + HEM-Score high + positive PD
           TI  (Tralse-Indeterminate): Near-threshold GILE or high bifurcation
           TF  (Tralse-False):         GILE low or strong negative momentum
           DT  (Double-Tralse):        Volatility spike + negative memory dominant
-          EV  (EV-Decoupled):         GILE and ESV diverge significantly
+          EV  (EV-Decoupled):         GILE and HEM-Score diverge significantly
         """
         MR_THRESHOLD = 0.45  # minimum dominant weight for mr_resolved = True
         DT_GATE      = 0.35  # DT weight above this → pause (MR Level-1 gate)
@@ -1137,8 +1137,8 @@ class GSACore:
             0.0, 1.0
         ))
 
-        # ── Level 2: GILE-EV integration ───────────────────────────────────
-        # TT weight: GILE composite + positive PD + ESV all supporting
+        # ── Level 2: GILE-HEM integration ───────────────────────────────────
+        # TT weight: GILE composite + positive PD + HEM-Score all supporting
         pd_pos = float(np.clip(pd_val / 2.0, 0.0, 1.0))   # normalize PD to [0,1]
         pd_neg = float(np.clip(-pd_val / 3.0, 0.0, 1.0))  # normalize neg PD
 
@@ -1230,7 +1230,7 @@ class GSACore:
         Pipeline: Ξ(E) → GILE → EV → PD → MR → Signal
           1. Compute Xi metrics (Existence Intensity)
           2. Compute GILE score (BOK inner loops)
-          3. Compute EV score  (BOK outer loops)
+          3. Compute HEM score  (BOK outer loops)
           4. Inject EV composite into GILE for UOP scoring
           5. Classify BOK regime
           6. Compute PD distribution (5-state truth assignment)
@@ -1249,10 +1249,10 @@ class GSACore:
         gile = self.compute_gile(returns, prices, market_returns)
 
         # Step 3: EV (BOK outer loops)
-        ev_score = self.compute_ev_score(prices, returns, gile)
+        hem_score = self.compute_hem_score(prices, returns, gile)
 
         # Step 4: Inject EV composite into GILEScore for UOP scoring
-        gile.ev_composite = ev_score.esv
+        gile.ev_composite = hem_score.esv
 
         # Step 5: BOK regime
         vol_ratio = 1.0
@@ -1264,7 +1264,7 @@ class GSACore:
 
         # Step 6: PD distribution (MR input)
         bif = self.detect_bifurcation(self.constraint_history)
-        pd_dist = self.compute_pd_distribution(xi, gile, ev_score, bif)
+        pd_dist = self.compute_pd_distribution(xi, gile, hem_score, bif)
 
         # Step 7: Generate signal (with MR DT-gate override)
         signal = self.generate_signal(xi, gile, regime, regime_conf, bif)
@@ -1278,13 +1278,13 @@ class GSACore:
             )
 
         # EV-decoupled watch note
-        if ev_score.ev_decoupled:
+        if hem_score.ev_decoupled:
             signal.reasons.append(
-                f"EV-decoupled: ESV={ev_score.esv:.3f} vs GILE={gile.composite:.3f} "
-                f"(Δ={abs(ev_score.esv - gile.composite):.3f}) — structural watch"
+                f"EV-decoupled: HEM-Score={hem_score.esv:.3f} vs GILE={gile.composite:.3f} "
+                f"(Δ={abs(hem_score.esv - gile.composite):.3f}) — structural watch"
             )
 
-        return signal, ev_score, pd_dist
+        return signal, hem_score, pd_dist
 
     # ── Fractal Enhancement ───────────────────────────────────────────────────
 

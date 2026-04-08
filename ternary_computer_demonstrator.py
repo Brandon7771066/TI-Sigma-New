@@ -13,7 +13,7 @@ class TernaryComputer:
     
     # Tralse states
     STATES = {'F': 0, 'Ψ': 1, 'Φ': 2, 'T': 3}
-    STATES_REV = {0: 'F', 1: 'Ψ', 2: 'Φ', 3: 'T'}
+    STATES_RHEM = {0: 'F', 1: 'Ψ', 2: 'Φ', 3: 'T'}
     
     @staticmethod
     def tralse_xor(a: int, b: int) -> int:

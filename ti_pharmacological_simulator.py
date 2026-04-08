@@ -896,8 +896,8 @@ def compute_pd(gile_truth: float, d2: float, lcc: float) -> Dict[str, float]:
 def compute_ev(gile_g: float, gile_i: float, gile_l: float, gile_e: float,
                lcc: float, coherence: float) -> Dict[str, float]:
     """
-    Compute Existence Value (EV) across Four Dimensions of Existence (FDE).
-    FDE-1 = EF (physical causal presence); FDE-2 = Moral; FDE-3 = Meaning; FDE-4 = Aesthetics.
+    Compute Holistic Existence Matrix (HEM) across HEM Dimensions.
+    HEM-D1 = EF (physical causal presence); HEM-D2 = Moral; HEM-D3 = Meaning; HEM-D4 = Aesthetics.
     """
     fde1 = (gile_e * 0.6 + lcc * 0.4)                    # EF: physical/energetic
     fde2 = max(0.0, gile_g)                                # Moral Presence (no negatives — privation)
@@ -1505,6 +1505,6 @@ if __name__ == "__main__":
     print(f"Final LCC: {result.final_lcc:.1%}")
     print(f"GILE Truth: {result.final_gile_truth:.3f}")
     print(f"HEM D2 before/after: {result.hem_d2_before:.3f} → {result.hem_d2_after:.3f}")
-    print(f"EV total: {result.ev_before['ev_total']} → {result.ev_after['ev_total']}")
+    print(f"HEM total: {result.ev_before['ev_total']} → {result.ev_after['ev_total']}")
     print(f"PD before: {result.pd_before}")
     print(f"PD after:  {result.pd_after}")

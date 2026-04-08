@@ -54,7 +54,7 @@ Remarkably, Nāgārjuna sometimes **rejects all four corners simultaneously**, p
 
 ### 2.4 Graham Priest's Formal Modeling
 
-The Australian logician Graham Priest has provided rigorous formal modeling of the catuṣkoṭi using **First-Degree Entailment (FDE)**, a four-valued logic with truth values:
+The Australian logician Graham Priest has provided rigorous formal modeling of the catuṣkoṭi using **First-Degree Entailment (HEM-D)**, a four-valued logic with truth values:
 
 - **t** (true only)
 - **f** (false only)
