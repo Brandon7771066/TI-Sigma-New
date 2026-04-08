@@ -138,13 +138,17 @@ theorem uop_argmax :
     (min σ (1 - σ) = 1 / 2 ↔ σ = 1 / 2) :=
   fun σ _ => ⟨uop_upper_bound σ, uop_max_iff σ⟩
 
-/-- The UOP selects σ = 1/2: no other σ achieves the maximum. -/
+/-- The UOP selects σ = 1/2: no other σ achieves the maximum.
+    BUG FIX (URB #634): original proof concluded σ₁ = 1/2 (wrong variable).
+    Corrected: use heq to transfer min equality from σ₁ to σ₂, then apply uop_max_iff σ₂. -/
 theorem uop_unique_maximizer (σ₁ σ₂ : ℝ)
     (h₁ : σ₁ ∈ Set.Ioo (0 : ℝ) 1) (h₂ : σ₂ ∈ Set.Ioo (0 : ℝ) 1)
     (heq : min σ₁ (1 - σ₁) = min σ₂ (1 - σ₂))
     (hmax₁ : min σ₁ (1 - σ₁) = 1 / 2) : σ₂ = 1 / 2 := by
-  rw [← heq] at *
-  exact (uop_max_iff σ₁).mp hmax₁
+  -- Transfer the max-achievement from σ₁ to σ₂ via heq
+  have hmax₂ : min σ₂ (1 - σ₂) = 1 / 2 := heq ▸ hmax₁
+  -- Now apply the iff to the correct variable
+  exact (uop_max_iff σ₂).mp hmax₂
 
 -- ============================================================
 -- PART 4 — LCC MONOTONICITY (FREEDOM FLOOR THEOREM FOUNDATION)
