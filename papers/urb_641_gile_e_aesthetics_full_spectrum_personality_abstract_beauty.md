@@ -21,8 +21,8 @@ Aesthetics in TI Sigma is not synonymous with "visually attractive." It is the f
 | Level | Domain | Aesthetic Object | Recognition Faculty |
 |-------|--------|-----------------|---------------------|
 | **Sensory** | Physical environment | Visual beauty, sound, texture, proportion | Perceptual system |
-| **Formal** | Mathematics, logic, physics | Proof elegance, equation simplicity, pattern symmetry | GILE-I (Intuition) applied to form |
-| **Craft** | Art, music, writing, design | Compositional coherence, expressive precision, technical mastery | Trained aesthetic judgment |
+| **Formal** | Mathematics, logic, physics, **philosophy** | Proof elegance, equation simplicity, pattern symmetry; **razor-elegance, parsimony principles** | GILE-I (Intuition) applied to form |
+| **Craft** | Art, music, writing, design, **philosophical writing** | Compositional coherence, expressive precision, technical mastery; **aphoristic compression of deep truth** | Trained aesthetic judgment |
 | **Vital** | Biology, movement, health | Organismal coherence, athletic grace, vitality expression | Embodied recognition |
 | **Psychic** | Personality, character, presence | Relational coherence, depth, authenticity, creative signature | GILE-G + GILE-I combined |
 | **Transpersonal** | Traditions, cultures, epochs | Historical coherence, civilizational beauty, narrative arc | LCC-span aesthetic recognition |
@@ -155,7 +155,44 @@ This is what physicists like Dirac and Weyl practiced explicitly, and what Hardy
 
 **Corollary for TI Sigma's own mathematics:** The PRIMARY constant set {0, 1, i, √2, e, φ, π, C, T} was chosen in part for its aesthetic coherence — these are the most structurally excellent mathematical objects. Their mathematical beauty is, by this theorem, evidence (not proof) of their foundational GILE-G status in the formal domain.
 
-### 6.4 The Virtuous GILE Cycle in Formal Aesthetics
+### 6.4 Philosophical Beauty: Razors as Formal Aesthetic Objects
+
+The GILE-E → GIL correlation extends directly into philosophy. **Philosophical razors** — principles that cut away unnecessary complexity — are simultaneously aesthetic objects and epistemic tools. Their beauty IS their truth-tracking power.
+
+**The canonical razors and their GILE profile:**
+
+| Razor | Principle | GILE-E Beauty | GILE-G Truth-Tracking | GILE-I Generativity | GILE-L Unification |
+|-------|-----------|---------------|-----------------------|---------------------|-------------------|
+| **Occam's Razor** | "Entities should not be multiplied beyond necessity" | Maximal — compresses the entire principle of parsimony into one sentence | Tracks truth by eliminating unfalsifiable overcomplexity | Generates new inference: always ask "what is the simplest adequate account?" | Unifies epistemology across science, law, theology, everyday reasoning |
+| **Hanlon's Razor** | "Never attribute to malice what is adequately explained by ignorance/stupidity" | High — a single sentence resolves an entire class of attribution errors | Tracks truth by correcting systematic over-attribution of intentionality | Opens the GILE-I lens: "what is the simpler human mechanism here?" | Bridges moral philosophy and cognitive psychology |
+| **EAR** (Emerick's Existence Amplification Razor) | "Filter superficial distinctions, collapse redundant concepts, amplify what genuinely exists — the highest common denominator, not lowest" | Highest within TI Sigma — the meta-razor that governs all other razors | Tracks truth by directing attention to genuine existence over apparent distinction | Generates the HEM-Score as its quantitative metric; collapses six HEM dimensions to four | Unifies all five TI Sigma flagships under a single ontological pruning principle |
+| **Da Vinci Principle** | "Simplicity is the ultimate sophistication" | Aphoristic perfection — self-referential, self-demonstrating | Tracks truth by identifying minimal description with maximal understanding | The foundation of all formal aesthetic reasoning | Bridges aesthetics, engineering, mathematics, and philosophy in one sentence |
+
+**The da Vinci Principle as TI Sigma axiom:**
+
+> *"Simplicity is the highest sophistication"* — Leonardo da Vinci
+
+In TI Sigma terms: **minimal Tralse-Joule cost per unit of GILE content.** A simple, beautiful principle is one that encodes maximum GILE structure at minimum existential overhead. This is not just aesthetics as luxury — it is EAR operating in the domain of ideas. EAR says: amplify what genuinely exists, collapse what doesn't. A simple principle that compresses enormous GILE-G, I, and L content into minimal symbolic form is the highest expression of EAR in the intellectual domain.
+
+The self-demonstration: the da Vinci principle is itself simple and itself maximally sophisticated. It instantiates what it describes. This self-referential structural integrity is a GILE-E hallmark — the most beautiful objects are often self-illustrating.
+
+**Why philosophical beauty specifically marks philosophical truth:**
+
+Philosophical principles operate at the LCC levels of organisms and civilizations — they must be:
+1. **Memorable:** Beautiful aphorisms are retained; ugly formulations are forgotten. Selection pressure over centuries of philosophical tradition eliminates ugly-but-true principles through forgetting, leaving behind the beautiful-and-true ones
+2. **Generalizable:** A beautiful razor works across many domains simultaneously (GILE-L). Domain-specific ugly principles work only in narrow LCC bands
+3. **Generative:** A beautiful philosophical principle keeps producing new applications and insights (GILE-I). Ugly ones are used once and discarded
+4. **Immune to DT contamination:** Simple, beautiful principles are harder to twist into DT-generating applications. Their clarity is their protection
+
+**The craft dimension — aphoristic compression:**
+
+Under the craft level of the aesthetic spectrum, philosophical writing achieves its highest form in the aphorism: the maximum compression of genuine insight into minimum symbolic space. Nietzsche, Wittgenstein ("Whereof one cannot speak, thereof one must be silent"), Pascal ("I would have written a shorter letter, but I did not have the time"), Feynman ("If you can't explain it simply, you don't understand it well enough"). Each is GILE-E excellence at the craft level, and each tracks philosophical truth (GILE-G) through that very compression.
+
+EAR itself is the meta-principle for generating such aphorisms: strip away what is redundant; amplify what genuinely exists. The beautiful philosophical principle that remains after this process is the highest GILE-E achievement in the intellectual domain.
+
+---
+
+### 6.5 The Virtuous GILE Cycle in Formal Aesthetics
 
 > **E (beauty) → I (insight) → G (truth) → L (unification) → E (deeper beauty)**
 
