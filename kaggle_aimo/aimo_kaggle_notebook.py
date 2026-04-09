@@ -325,58 +325,75 @@ def predict(id_: str, problem: str) -> int:
 # MODE A — GATEWAY (live competition evaluation)
 # ══════════════════════════════════════════════════════════
 GATEWAY_AVAILABLE = False
-GATEWAY_ERROR    = None
+AIMO3Gateway = None
 
-# ── Step 1: try the native Kaggle import (works in real submission kernel) ──
+# ─────────────────────────────────────────────────────────────
+# GATEWAY IMPORT STRATEGY
+#
+# The `data_paths` TypeError from previous runs is a DRAFT MODE
+# artifact: in draft mode Kaggle's evaluation server isn't running,
+# so data_paths is never set from a list → subscript fails.
+# In a REAL submission (Save & Run All Commit), the server IS
+# running and all copies of the gateway work fine.
+#
+# Priority order:
+#  1. Direct import  — works in real submission kernels natively
+#  2. Competition input folder (/kaggle/input/competitions/...)
+#  3. Any of our attached dataset copies (all have same code;
+#     they work in real submission, only fail in draft)
+# ─────────────────────────────────────────────────────────────
+
+# 1. Direct import
 try:
     from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
     GATEWAY_AVAILABLE = True
-    print("      ✓ kaggle_evaluation imported directly (native Kaggle kernel)")
+    print("      ✓ kaggle_evaluation: direct import succeeded")
 except ImportError:
     pass
 
-# ── Step 2: if native import failed, walk COMPETITION folder ONLY ──
-# (Never use our dataset's copy — it has a data_paths bug)
+# 2. Competition input folder
 if not GATEWAY_AVAILABLE:
-    comp_root = "/kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3"
-    for root, dirs, files in os.walk(comp_root):
-        if "aimo_3_gateway.py" in files:
-            pkg_parent = str(Path(root).parent)
-            if pkg_parent not in sys.path:
-                sys.path.insert(0, pkg_parent)
-            print(f"      Added to sys.path: {pkg_parent}")
+    _comp = Path("/kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3")
+    for _p in [_comp, _comp / "kaggle_evaluation"]:
+        if (_p / "aimo_3_gateway.py").exists():
+            _parent = str(_p.parent) if _p.name == "kaggle_evaluation" else str(_p)
+            if _parent not in sys.path:
+                sys.path.insert(0, _parent)
+            print(f"      Added to path: {_parent}")
             break
     try:
         from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
         GATEWAY_AVAILABLE = True
-        print("      ✓ Gateway found in competition input folder")
-    except ImportError as e:
-        GATEWAY_ERROR = str(e)
+        print("      ✓ Gateway loaded from competition folder")
+    except ImportError:
+        pass
 
-# ── Step 3: last resort — walk ALL dataset folders (except our buggy dataset) ──
+# 3. Walk ALL input folders for any copy of aimo_3_gateway.py
 if not GATEWAY_AVAILABLE:
-    SKIP = {"brandonemerick/ti-aimo-3", "brandonemerick/aimo-3"}   # our broken copies
-    dataset_root = "/kaggle/input/datasets"
-    found_path = None
-    for root, dirs, files in os.walk(dataset_root):
-        if "aimo_3_gateway.py" in files:
-            # Reject our own dataset copies
-            if any(skip in root for skip in SKIP):
-                continue
-            found_path = str(Path(root).parent)
+    _found = None
+    for _search in ["/kaggle/input/datasets", "/kaggle/input"]:
+        _sp = Path(_search)
+        if not _sp.exists():
+            continue
+        for _root, _dirs, _files in os.walk(_sp):
+            if "aimo_3_gateway.py" in _files:
+                _found = str(Path(_root).parent)
+                print(f"      Found gateway at: {_root}")
+                break
+        if _found:
             break
-    if found_path:
-        if found_path not in sys.path:
-            sys.path.insert(0, found_path)
+    if _found and _found not in sys.path:
+        sys.path.insert(0, _found)
+    if _found:
         try:
             from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
             GATEWAY_AVAILABLE = True
-            print(f"      ✓ Gateway found in external dataset: {found_path}")
-        except ImportError as e:
-            GATEWAY_ERROR = str(e)
+            print("      ✓ Gateway loaded from dataset folder")
+        except ImportError as _e:
+            print(f"      ✗ Import failed even with path set: {_e}")
 
 if not GATEWAY_AVAILABLE:
-    print(f"      ✗ Gateway not available ({GATEWAY_ERROR}) — falling back to CSV mode")
+    print("      ✗ kaggle_evaluation not found in any input path — CSV/demo mode")
 
 if GATEWAY_AVAILABLE:
     print("\n      ✓ GATEWAY MODE — Kaggle evaluation server detected")
@@ -384,18 +401,21 @@ if GATEWAY_AVAILABLE:
     print("        Submitting via gateway now...\n")
     print("=" * 60)
 
-    # AIMO3Gateway expects predict(id: str, problem: str) -> int
     gateway = AIMO3Gateway(predict)
     try:
-        gateway.run()   # blocks until all problems are answered; Kaggle scores live
+        gateway.run()   # blocks until all problems answered; Kaggle scores live
         print("\n" + "=" * 60)
         print("GATEWAY RUN COMPLETE")
         print("=" * 60)
-    except Exception as gw_exc:
-        print(f"\n      ✗ Gateway runtime error: {gw_exc}")
-        print("        This is typically a Kaggle evaluation server issue.")
-        print("        Check that the competition dataset is attached correctly.")
-        GATEWAY_AVAILABLE = False  # flag for summary block below
+    except Exception as _gw_exc:
+        _msg = str(_gw_exc)
+        print(f"\n      ✗ Gateway runtime error: {_msg}")
+        if "data_paths" in _msg or "not subscriptable" in _msg:
+            print("        → This is a DRAFT MODE artifact (no evaluation server).")
+            print("          In a real submission (Save & Run All Commit) this works.")
+        else:
+            print("        → Unexpected error. Check competition dataset is attached.")
+        GATEWAY_AVAILABLE = False
 
 # ══════════════════════════════════════════════════════════
 # MODE B — REFERENCE CSV (offline tuning)
@@ -403,29 +423,33 @@ if GATEWAY_AVAILABLE:
 if not GATEWAY_AVAILABLE:
     print("\n      Gateway not available — falling back to CSV mode.")
 
-    # Find reference.csv (has real problems + answers for offline validation)
-    ref_candidates = [
-        f for f in all_files
-        if f.suffix.lower() == '.csv' and 'reference' in f.name.lower()
-    ]
-    demo_candidates = [
-        f for f in all_files
-        if f.suffix.lower() == '.csv'
-        and 'sample_submission' not in f.name.lower()
-        and 'reference' not in f.name.lower()
-        and 'test' not in f.name.lower()
-    ]
+    # ── Priority 1: reference.csv from competition (real problems + answers) ──
+    all_csvs = [f for f in all_files if f.suffix.lower() == '.csv']
+    ref_candidates = [f for f in all_csvs if 'reference' in f.name.lower()]
+    test_candidates = [f for f in all_csvs if 'test' in f.name.lower()
+                       and 'sample' not in f.name.lower()]
+    other_candidates = [f for f in all_csvs
+                        if 'sample_submission' not in f.name.lower()
+                        and 'reference' not in f.name.lower()
+                        and 'test' not in f.name.lower()]
 
     CSV_FILE = None
-    if ref_candidates:
-        # Prefer the competition's own reference over dataset copies
-        comp_refs = [f for f in ref_candidates if 'competitions' in str(f)]
-        CSV_FILE = comp_refs[0] if comp_refs else ref_candidates[0]
-        print(f"      ✓ Using reference CSV: {CSV_FILE.name}")
-        print("        (Contains real problems with known answers — good for tuning)")
-    elif demo_candidates:
-        CSV_FILE = demo_candidates[0]
-        print(f"      ✓ Using CSV: {CSV_FILE.name}")
+    # Prefer competition folder in every category
+    def _prefer_comp(lst):
+        comp = [f for f in lst if 'competitions' in str(f)]
+        return comp[0] if comp else (lst[0] if lst else None)
+
+    CSV_FILE = _prefer_comp(ref_candidates)
+    if CSV_FILE:
+        print(f"      ✓ Using reference CSV: {CSV_FILE}  (problems + known answers)")
+    else:
+        CSV_FILE = _prefer_comp(test_candidates)
+        if CSV_FILE:
+            print(f"      ✓ Using test CSV: {CSV_FILE}")
+        else:
+            CSV_FILE = _prefer_comp(other_candidates)
+            if CSV_FILE:
+                print(f"      ✓ Using CSV: {CSV_FILE.name}")
 
     if CSV_FILE:
         df = pd.read_csv(CSV_FILE)
