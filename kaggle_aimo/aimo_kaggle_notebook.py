@@ -270,180 +270,181 @@ def solve_one(problem, pid, n_passes=3):
 print("      ✓ LLM interface ready")
 
 # ══════════════════════════════════════════════════════════
-# STEP 6 — LOAD DATA + RUN + SAVE SUBMISSION
+# STEP 6 — RUN: GATEWAY MODE (real submission) or CSV FALLBACK
 # ══════════════════════════════════════════════════════════
-print("\n[6/6] Loading competition data...")
+#
+# HOW AIMO3 WORKS:
+#   The competition does NOT score your submission.csv directly.
+#   Instead, Kaggle runs a local evaluation server that streams real
+#   problems to your notebook one at a time via the AIMO3Gateway client.
+#   Your predict() function is called for each problem; Kaggle records
+#   every answer in real time.
+#
+#   test.csv contains only 3 trivial warm-up problems (1-1, 0×10, x=0).
+#   Those are correct — they are literally placeholders to verify your
+#   notebook runs. The actual olympiad problems come through the gateway.
+#
+# EXECUTION MODES (auto-detected):
+#   A) GATEWAY MODE  — kaggle_evaluation package is importable (real run)
+#                      → predict() called per problem, scored live
+#   B) REFERENCE CSV — gateway unavailable, reference.csv has real problems
+#                      → useful for offline tuning against known answers
+#   C) DEMO MODE     — nothing else available → 5 built-in hard problems
 
-# ── DIAGNOSTIC: show everything under /kaggle/input/ ──────
-import os
+print("\n[6/6] Running solver...")
+
+import os, sys
+
+# ── Diagnostic: list all available files ──────────────────
 kaggle_input = Path("/kaggle/input")
 all_files = []
 if kaggle_input.exists():
     for root, dirs, files in os.walk(kaggle_input):
         for f in files:
             all_files.append(Path(root) / f)
-    if all_files:
-        print(f"      Files found under /kaggle/input/ ({len(all_files)} total):")
-        for f in sorted(all_files)[:40]:          # show up to 40
-            print(f"        {f}")
-        if len(all_files) > 40:
-            print(f"        ... and {len(all_files)-40} more")
-    else:
-        print("      /kaggle/input/ exists but is EMPTY — dataset not attached yet")
-else:
-    print("      /kaggle/input/ does not exist (not in Kaggle environment?)")
+    print(f"      Files under /kaggle/input/ ({len(all_files)} total):")
+    for f in sorted(all_files)[:40]:
+        print(f"        {f}")
+    if len(all_files) > 40:
+        print(f"        ... and {len(all_files)-40} more")
 
-# ── Find the CSV that contains actual math problems ────────
-# Logic:
-#   1. Skip sample_submission.csv entirely (no problem text)
-#   2. Among remaining CSVs, prefer files whose name suggests problems
-#   3. Validate that the chosen file actually has a text column
-#      with long strings (not just numbers or placeholder IDs)
+# ── Configuration ─────────────────────────────────────────
+N_PASSES     = 3      # Claude calls per problem (3 = most reliable)
+MAX_PROBLEMS = None   # None = all; set e.g. 5 for a quick local test
 
-def has_problem_text(path):
-    """Return (True, text_col) if this CSV has a column with real problem text."""
-    try:
-        tmp = pd.read_csv(path, nrows=5)
-        for col in tmp.columns:
-            if col.lower() in ['problem', 'question', 'text', 'prompt', 'statement']:
-                vals = tmp[col].dropna().astype(str)
-                if len(vals) > 0 and vals.str.len().mean() > 20:
-                    return True, col
-        # Any column with long average text (>30 chars) that isn't 'id'/'answer'
-        for col in tmp.columns:
-            if col.lower() in ['id', 'answer', 'label', 'target', 'solution']:
-                continue
-            vals = tmp[col].dropna().astype(str)
-            if len(vals) > 0 and vals.str.len().mean() > 30:
-                return True, col
-    except Exception:
-        pass
-    return False, None
+# ── The predict function: called by gateway OR the fallback loop ──
+_results_log = []   # accumulated for summary at end
 
-csv_files = sorted([
-    f for f in all_files
-    if f.suffix.lower() == '.csv'
-    and 'sample_submission' not in f.name.lower()
-])
+def predict(id_: str, problem: str) -> int:
+    """Solve one problem. Returns integer answer. Called by AIMO3Gateway."""
+    result = solve_one(str(problem), str(id_), n_passes=N_PASSES)
+    _results_log.append(result)
+    return int(result['answer'])
 
-print(f"\n      CSVs (excluding sample_submission): {[f.name for f in csv_files]}")
-
-DATA_FILE = None
-TEXT_COL_HINT = None
-
-# Priority: test > problem/question > reference > train > any
-PRIORITY_NAMES = ['test', 'problem', 'question', 'reference', 'train']
-for priority in PRIORITY_NAMES:
-    for f in csv_files:
-        if priority in f.name.lower():
-            ok, col = has_problem_text(f)
-            if ok:
-                DATA_FILE, TEXT_COL_HINT = f, col
+# ══════════════════════════════════════════════════════════
+# MODE A — GATEWAY (live competition evaluation)
+# ══════════════════════════════════════════════════════════
+GATEWAY_AVAILABLE = False
+try:
+    # Add the competition's kaggle_evaluation package to the path
+    for search_root in ["/kaggle/input/competitions", "/kaggle/input/datasets"]:
+        for root, dirs, files in os.walk(search_root):
+            if "aimo_3_gateway.py" in files:
+                pkg_parent = str(Path(root).parent)
+                if pkg_parent not in sys.path:
+                    sys.path.insert(0, pkg_parent)
                 break
-    if DATA_FILE:
-        break
 
-# Fallback: any remaining CSV with actual problem text
-if not DATA_FILE:
-    for f in csv_files:
-        ok, col = has_problem_text(f)
-        if ok:
-            DATA_FILE, TEXT_COL_HINT = f, col
-            break
+    from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
+    GATEWAY_AVAILABLE = True
+except ImportError:
+    pass
 
-# Last resort: include sample_submission if nothing else found
-if not DATA_FILE:
-    all_csv = sorted([f for f in all_files if f.suffix.lower() == '.csv'])
-    for f in all_csv:
-        ok, col = has_problem_text(f)
-        if ok:
-            DATA_FILE, TEXT_COL_HINT = f, col
-            break
+if GATEWAY_AVAILABLE:
+    print("\n      ✓ GATEWAY MODE — Kaggle evaluation server detected")
+    print("        Real olympiad problems will be streamed to predict().")
+    print("        Submitting via gateway now...\n")
+    print("=" * 60)
 
-DEMO_MODE = False
-if DATA_FILE:
-    df = pd.read_csv(DATA_FILE)
-    print(f"\n      ✓ Loaded {len(df)} rows from: {DATA_FILE}")
-    print(f"        Columns: {list(df.columns)}")
-    print(df.head(3).to_string())
+    gateway = AIMO3Gateway(predict)
+    gateway.run()   # blocks until all problems are answered; Kaggle scores live
+
+    print("\n" + "=" * 60)
+    print("GATEWAY RUN COMPLETE")
+    print("=" * 60)
+
+# ══════════════════════════════════════════════════════════
+# MODE B — REFERENCE CSV (offline tuning)
+# ══════════════════════════════════════════════════════════
 else:
-    DEMO_MODE = True
-    print("\n      ! No problem data found in any CSV — running DEMO problems")
-    print("        The competition data doesn't seem to have a problem text column.")
-    print("        Most likely cause: only 'sample_submission.csv' was attached,")
-    print("        which contains placeholder IDs and no actual problem text.")
-    print()
-    print("        To fix:")
-    print("        1. Data (left sidebar) → Add Data → Competition Datasets")
-    print("        2. Find 'AI Mathematical Olympiad - Progress Prize 3'")
-    print("        3. Click + to add it, then Run All again")
-    print()
-    df = pd.DataFrame([
-        {'id': 'demo_1', 'problem': "How many positive integers n ≤ 100 satisfy: n² + n + 41 is prime?"},
-        {'id': 'demo_2', 'problem': "A triangle has sides 3, 4, 5. What is the area of the triangle formed by connecting the midpoints of its sides?"},
-        {'id': 'demo_3', 'problem': "How many integers from 1 to 1000 are divisible by 3 but not by 9?"},
-        {'id': 'demo_4', 'problem': "Find the sum of all positive divisors of 120."},
-        {'id': 'demo_5', 'problem': "In how many ways can 5 people be arranged in a row?"},
-    ])
+    print("\n      Gateway not available — falling back to CSV mode.")
 
-# ── Detect id and text columns ────────────────────────────
-id_col = next((c for c in df.columns if c.lower() in ['id','problem_id','idx']), df.columns[0])
+    # Find reference.csv (has real problems + answers for offline validation)
+    ref_candidates = [
+        f for f in all_files
+        if f.suffix.lower() == '.csv' and 'reference' in f.name.lower()
+    ]
+    demo_candidates = [
+        f for f in all_files
+        if f.suffix.lower() == '.csv'
+        and 'sample_submission' not in f.name.lower()
+        and 'reference' not in f.name.lower()
+        and 'test' not in f.name.lower()
+    ]
 
-if TEXT_COL_HINT and TEXT_COL_HINT in df.columns:
-    text_col = TEXT_COL_HINT
-else:
-    text_col = next(
-        (c for c in df.columns if c.lower() in ['problem','question','text','prompt','statement']),
-        None
-    )
-    if text_col is None:
-        # Find the column with the longest average text
-        best_col, best_len = None, 0
-        for col in df.columns:
-            if col.lower() in ['id','answer','label','target']: continue
-            avg = df[col].dropna().astype(str).str.len().mean()
-            if avg > best_len:
-                best_len, best_col = avg, col
-        text_col = best_col or df.columns[-1]
+    CSV_FILE = None
+    if ref_candidates:
+        # Prefer the competition's own reference over dataset copies
+        comp_refs = [f for f in ref_candidates if 'competitions' in str(f)]
+        CSV_FILE = comp_refs[0] if comp_refs else ref_candidates[0]
+        print(f"      ✓ Using reference CSV: {CSV_FILE.name}")
+        print("        (Contains real problems with known answers — good for tuning)")
+    elif demo_candidates:
+        CSV_FILE = demo_candidates[0]
+        print(f"      ✓ Using CSV: {CSV_FILE.name}")
 
-print(f"      id column='{id_col}' | text column='{text_col}'")
-print(f"      Sample problem text: {str(df[text_col].iloc[0])[:120]}")
+    if CSV_FILE:
+        df = pd.read_csv(CSV_FILE)
+        print(f"        Columns: {list(df.columns)} | Rows: {len(df)}")
+        # Show a snippet so we can confirm problem content
+        id_col   = next((c for c in df.columns if c.lower() in ['id','problem_id']), df.columns[0])
+        text_col = next((c for c in df.columns if c.lower() in ['problem','question','text','prompt']), None)
+        if text_col is None:
+            # Pick longest-average-text column that isn't id/answer/solution
+            skip = {'id','answer','label','target','solution','answer_value'}
+            text_col = max(
+                (c for c in df.columns if c.lower() not in skip),
+                key=lambda c: df[c].dropna().astype(str).str.len().mean(),
+                default=df.columns[-1]
+            )
+        print(f"        id='{id_col}' | problem='{text_col}'")
+        print(f"        Sample: {str(df[text_col].iloc[0])[:120]}")
 
-# How many to solve (set MAX_PROBLEMS = N to test with just N problems first)
-MAX_PROBLEMS = None   # ← change to e.g. 5 to do a quick test run
-N_PASSES     = 3      # ← number of Claude calls per problem (1 is fastest, 3 is most reliable)
+        solve_df = df.head(MAX_PROBLEMS) if MAX_PROBLEMS else df
+        print(f"\nSolving {len(solve_df)} problem(s) with {N_PASSES} passes each...")
+        print("=" * 60)
 
-solve_df = df.head(MAX_PROBLEMS) if MAX_PROBLEMS else df
-print(f"\nSolving {len(solve_df)} problem(s) with {N_PASSES} passes each...")
-print("=" * 60)
+        for _, row in solve_df.iterrows():
+            predict(str(row[id_col]), str(row[text_col]))
 
-results = []
-for _, row in solve_df.iterrows():
-    pid     = str(row[id_col])
-    problem = str(row[text_col])
-    result  = solve_one(problem, pid, n_passes=N_PASSES)
-    results.append(result)
+    else:
+        # ── MODE C: DEMO ──────────────────────────────────────
+        print("\n      ! No CSV found — running 5 built-in demo problems")
+        DEMO_PROBLEMS = [
+            ("demo_1", "How many positive integers n ≤ 100 satisfy φ(n) < n/2, where φ is Euler's totient function?"),
+            ("demo_2", "Find the number of ordered pairs (a,b) of positive integers with a+b=100 and gcd(a,b)=4."),
+            ("demo_3", "A circle of radius 3 is inscribed in a right triangle. If one leg has length 12, find the hypotenuse."),
+            ("demo_4", "How many 6-digit integers contain exactly three distinct digits?"),
+            ("demo_5", "Find the sum of all integers n such that n²+20n+26 is a perfect square."),
+        ]
+        print("=" * 60)
+        for pid, problem in DEMO_PROBLEMS:
+            predict(pid, problem)
 
-# Build submission
-results_df = pd.DataFrame(results)
-submission = results_df[['id', 'answer']].copy()
-submission['answer'] = submission['answer'].fillna(0).astype(int)
+    # ── Save submission CSV (fallback modes only) ─────────
+    if _results_log:
+        results_df = pd.DataFrame(_results_log)
+        submission = results_df[['id', 'answer']].copy()
+        submission['answer'] = submission['answer'].fillna(0).astype(int)
+        out = "/kaggle/working/submission.csv"
+        submission.to_csv(out, index=False)
+        print("\n" + "=" * 60)
+        print(f"DONE — submission saved to {out}")
+        print("=" * 60)
+        print(submission.to_string())
 
-# Save
-out = "/kaggle/working/submission.csv"
-submission.to_csv(out, index=False)
+# ── Summary (all modes) ───────────────────────────────────
+if _results_log:
+    results_df = pd.DataFrame(_results_log)
+    print(f"\nMR LEVEL BREAKDOWN:")
+    for level, count in results_df['mr_level'].value_counts().items():
+        print(f"  {level}: {count}")
+    print(f"\nTYPE BREAKDOWN:")
+    for ptype, count in results_df['problem_type'].value_counts().items():
+        print(f"  {ptype}: {count}")
+    print(f"\nMean confidence: {results_df['confidence'].mean():.2f}")
 
 print("\n" + "=" * 60)
-print(f"DONE — submission saved to {out}")
+print("NOTE: In GATEWAY MODE, Kaggle scores answers live — no CSV submit needed.")
+print("      In CSV/DEMO MODE, click 'Submit' top-right to submit submission.csv.")
 print("=" * 60)
-print(submission.to_string())
-
-# Summary
-print(f"\nMR LEVEL BREAKDOWN:")
-for level, count in results_df['mr_level'].value_counts().items():
-    print(f"  {level}: {count}")
-print(f"\nTYPE BREAKDOWN:")
-for ptype, count in results_df['problem_type'].value_counts().items():
-    print(f"  {ptype}: {count}")
-print(f"\nMean confidence: {results_df['confidence'].mean():.2f}")
-print("\n✓ Submit submission.csv via the 'Submit' button in the top-right corner.")

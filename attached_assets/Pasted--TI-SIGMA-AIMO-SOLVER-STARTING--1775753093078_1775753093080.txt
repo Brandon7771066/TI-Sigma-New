@@ -1,0 +1,107 @@
+============================================================
+TI SIGMA AIMO SOLVER — STARTING
+============================================================
+
+[1/6] Installing anthropic...
+      Done.
+
+[2/6] Loading API key from Kaggle Secrets...
+      ✓ Found Anthropic key under secret name 'Anthropic_Api_Key'
+      ✓ ANTHROPIC_API_KEY set (sk-ant-a...wwAA)
+
+[3/6] Importing libraries...
+      ✓ All imports OK
+
+[4/6] Building TI Sigma math engine...
+      ✓ Math engine ready
+
+[5/6] Setting up LLM interface...
+      ✓ LLM interface ready
+
+[6/6] Loading competition data...
+      Files found under /kaggle/input/ (45 total):
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/AIMO3_Reference_Problems.pdf
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/__init__.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/aimo_3_gateway.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/aimo_3_inference_server.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/__init__.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/base_gateway.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/generated/__init__.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/generated/kaggle_evaluation_pb2.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/generated/kaggle_evaluation_pb2_grpc.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/kaggle_evaluation.proto
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/relay.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/kaggle_evaluation/core/templates.py
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/reference.csv
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/sample_submission.csv
+        /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/test.csv
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/AIMO3_Reference_Problems.pdf
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/__init__.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/aimo_3_gateway.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/aimo_3_inference_server.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/__init__.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/base_gateway.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/generated/__init__.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/generated/kaggle_evaluation_pb2.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/generated/kaggle_evaluation_pb2_grpc.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/kaggle_evaluation.proto
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/relay.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/kaggle_evaluation/core/templates.py
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/reference.csv
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/sample_submission.csv
+        /kaggle/input/datasets/brandonemerick/aimo-3-ti-sigma/test.csv
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/AIMO3_Reference_Problems.pdf
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/__init__.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/aimo_3_gateway.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/aimo_3_inference_server.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/__init__.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/base_gateway.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/generated/__init__.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/generated/kaggle_evaluation_pb2.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/generated/kaggle_evaluation_pb2_grpc.py
+        /kaggle/input/datasets/brandonemerick/ti-aimo-3/kaggle_evaluation/core/kaggle_evaluation.proto
+        ... and 5 more
+
+      ✓ Loaded 3 rows from: /kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3/test.csv
+        Columns: ['id', 'problem']
+       id                 problem
+0  000aaa          What is $1-1$?
+1  111bbb    What is $0\times10$?
+2  222ccc  Solve $4+x=4$ for $x$.
+      id column: 'id' | text column: 'problem'
+
+Solving 3 problem(s) with 3 passes each...
+============================================================
+  [000aaa] algebra — What is $1-1$?
+       Pass 1: 0  conf=0.65  [Triangular]
+       Pass 2: 0  conf=0.65  [Triangular]
+       Pass 3: 0  conf=0.65  [Triangular]
+       → MR COLLAPSE: 0  (MR2-Resolved, conf=1.00)
+  [111bbb] algebra — What is $0\times10$?
+       Pass 1: 0  conf=0.65  [Triangular]
+       Pass 2: 0  conf=0.65  [Triangular]
+       Pass 3: 0  conf=0.65  [Triangular]
+       → MR COLLAPSE: 0  (MR2-Resolved, conf=1.00)
+  [222ccc] algebra — Solve $4+x=4$ for $x$.
+       Pass 1: 0  conf=0.65  [Triangular]
+       Pass 2: 0  conf=0.65  [Triangular]
+       Pass 3: 0  conf=0.65  [Triangular]
+       → MR COLLAPSE: 0  (MR2-Resolved, conf=1.00)
+
+============================================================
+DONE — submission saved to /kaggle/working/submission.csv
+============================================================
+       id  answer
+0  000aaa       0
+1  111bbb       0
+2  222ccc       0
+
+MR LEVEL BREAKDOWN:
+  MR2-Resolved: 3
+
+TYPE BREAKDOWN:
+  algebra: 3
+
+Mean confidence: 1.00
+
+✓ Submit submission.csv via the 'Submit' button in the top-right corner.
