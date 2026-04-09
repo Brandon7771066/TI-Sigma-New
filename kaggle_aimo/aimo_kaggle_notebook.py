@@ -293,37 +293,91 @@ if kaggle_input.exists():
 else:
     print("      /kaggle/input/ does not exist (not in Kaggle environment?)")
 
-# ── Find any CSV that could contain problems ──────────────
-# Priority order: files with 'test'/'problem'/'question' in name first,
-# then any CSV, regardless of folder depth.
-DATA_FILE = None
-csv_files = sorted([f for f in all_files if f.suffix.lower() == '.csv'])
+# ── Find the CSV that contains actual math problems ────────
+# Logic:
+#   1. Skip sample_submission.csv entirely (no problem text)
+#   2. Among remaining CSVs, prefer files whose name suggests problems
+#   3. Validate that the chosen file actually has a text column
+#      with long strings (not just numbers or placeholder IDs)
 
-PRIORITY_NAMES = ['test', 'problem', 'question', 'reference', 'train', 'sample']
+def has_problem_text(path):
+    """Return (True, text_col) if this CSV has a column with real problem text."""
+    try:
+        tmp = pd.read_csv(path, nrows=5)
+        for col in tmp.columns:
+            if col.lower() in ['problem', 'question', 'text', 'prompt', 'statement']:
+                vals = tmp[col].dropna().astype(str)
+                if len(vals) > 0 and vals.str.len().mean() > 20:
+                    return True, col
+        # Any column with long average text (>30 chars) that isn't 'id'/'answer'
+        for col in tmp.columns:
+            if col.lower() in ['id', 'answer', 'label', 'target', 'solution']:
+                continue
+            vals = tmp[col].dropna().astype(str)
+            if len(vals) > 0 and vals.str.len().mean() > 30:
+                return True, col
+    except Exception:
+        pass
+    return False, None
+
+csv_files = sorted([
+    f for f in all_files
+    if f.suffix.lower() == '.csv'
+    and 'sample_submission' not in f.name.lower()
+])
+
+print(f"\n      CSVs (excluding sample_submission): {[f.name for f in csv_files]}")
+
+DATA_FILE = None
+TEXT_COL_HINT = None
+
+# Priority: test > problem/question > reference > train > any
+PRIORITY_NAMES = ['test', 'problem', 'question', 'reference', 'train']
 for priority in PRIORITY_NAMES:
     for f in csv_files:
         if priority in f.name.lower():
-            DATA_FILE = f
-            break
+            ok, col = has_problem_text(f)
+            if ok:
+                DATA_FILE, TEXT_COL_HINT = f, col
+                break
     if DATA_FILE:
         break
 
-# Last resort: just take the first CSV found
-if not DATA_FILE and csv_files:
-    DATA_FILE = csv_files[0]
+# Fallback: any remaining CSV with actual problem text
+if not DATA_FILE:
+    for f in csv_files:
+        ok, col = has_problem_text(f)
+        if ok:
+            DATA_FILE, TEXT_COL_HINT = f, col
+            break
 
+# Last resort: include sample_submission if nothing else found
+if not DATA_FILE:
+    all_csv = sorted([f for f in all_files if f.suffix.lower() == '.csv'])
+    for f in all_csv:
+        ok, col = has_problem_text(f)
+        if ok:
+            DATA_FILE, TEXT_COL_HINT = f, col
+            break
+
+DEMO_MODE = False
 if DATA_FILE:
     df = pd.read_csv(DATA_FILE)
     print(f"\n      ✓ Loaded {len(df)} rows from: {DATA_FILE}")
     print(f"        Columns: {list(df.columns)}")
     print(df.head(3).to_string())
 else:
-    print("\n      ! No CSV data found — running DEMO problems")
-    print("        To attach competition data:")
-    print("        1. Click the folder icon (Data) in the left sidebar")
-    print("        2. Click 'Add Data' → 'Competition Datasets'")
-    print("        3. Find 'AI Mathematical Olympiad - Progress Prize 3' → click +")
-    print("        4. Run All again\n")
+    DEMO_MODE = True
+    print("\n      ! No problem data found in any CSV — running DEMO problems")
+    print("        The competition data doesn't seem to have a problem text column.")
+    print("        Most likely cause: only 'sample_submission.csv' was attached,")
+    print("        which contains placeholder IDs and no actual problem text.")
+    print()
+    print("        To fix:")
+    print("        1. Data (left sidebar) → Add Data → Competition Datasets")
+    print("        2. Find 'AI Mathematical Olympiad - Progress Prize 3'")
+    print("        3. Click + to add it, then Run All again")
+    print()
     df = pd.DataFrame([
         {'id': 'demo_1', 'problem': "How many positive integers n ≤ 100 satisfy: n² + n + 41 is prime?"},
         {'id': 'demo_2', 'problem': "A triangle has sides 3, 4, 5. What is the area of the triangle formed by connecting the midpoints of its sides?"},
@@ -332,10 +386,28 @@ else:
         {'id': 'demo_5', 'problem': "In how many ways can 5 people be arranged in a row?"},
     ])
 
-# Detect column names
-id_col   = next((c for c in df.columns if c.lower() in ['id','problem_id','idx']), df.columns[0])
-text_col = next((c for c in df.columns if c.lower() in ['problem','question','text','prompt']), df.columns[-1])
-print(f"      id column: '{id_col}' | text column: '{text_col}'")
+# ── Detect id and text columns ────────────────────────────
+id_col = next((c for c in df.columns if c.lower() in ['id','problem_id','idx']), df.columns[0])
+
+if TEXT_COL_HINT and TEXT_COL_HINT in df.columns:
+    text_col = TEXT_COL_HINT
+else:
+    text_col = next(
+        (c for c in df.columns if c.lower() in ['problem','question','text','prompt','statement']),
+        None
+    )
+    if text_col is None:
+        # Find the column with the longest average text
+        best_col, best_len = None, 0
+        for col in df.columns:
+            if col.lower() in ['id','answer','label','target']: continue
+            avg = df[col].dropna().astype(str).str.len().mean()
+            if avg > best_len:
+                best_len, best_col = avg, col
+        text_col = best_col or df.columns[-1]
+
+print(f"      id column='{id_col}' | text column='{text_col}'")
+print(f"      Sample problem text: {str(df[text_col].iloc[0])[:120]}")
 
 # How many to solve (set MAX_PROBLEMS = N to test with just N problems first)
 MAX_PROBLEMS = None   # ← change to e.g. 5 to do a quick test run
