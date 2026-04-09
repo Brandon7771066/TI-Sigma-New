@@ -273,28 +273,56 @@ print("      ✓ LLM interface ready")
 # ══════════════════════════════════════════════════════════
 print("\n[6/6] Loading competition data...")
 
-# Try to find the data
-DATA_DIRS = [
-    "/kaggle/input/ai-mathematical-olympiad-progress-prize-3",
-    "/kaggle/input/aimo-progress-prize-3",
-    "/kaggle/input",
-]
+# ── DIAGNOSTIC: show everything under /kaggle/input/ ──────
+import os
+kaggle_input = Path("/kaggle/input")
+all_files = []
+if kaggle_input.exists():
+    for root, dirs, files in os.walk(kaggle_input):
+        for f in files:
+            all_files.append(Path(root) / f)
+    if all_files:
+        print(f"      Files found under /kaggle/input/ ({len(all_files)} total):")
+        for f in sorted(all_files)[:40]:          # show up to 40
+            print(f"        {f}")
+        if len(all_files) > 40:
+            print(f"        ... and {len(all_files)-40} more")
+    else:
+        print("      /kaggle/input/ exists but is EMPTY — dataset not attached yet")
+else:
+    print("      /kaggle/input/ does not exist (not in Kaggle environment?)")
+
+# ── Find any CSV that could contain problems ──────────────
+# Priority order: files with 'test'/'problem'/'question' in name first,
+# then any CSV, regardless of folder depth.
 DATA_FILE = None
-for d in DATA_DIRS:
-    for fname in ["test.csv", "train.csv", "problems.csv", "sample_submission.csv"]:
-        p = Path(d) / fname
-        if p.exists():
-            DATA_FILE = p
+csv_files = sorted([f for f in all_files if f.suffix.lower() == '.csv'])
+
+PRIORITY_NAMES = ['test', 'problem', 'question', 'reference', 'train', 'sample']
+for priority in PRIORITY_NAMES:
+    for f in csv_files:
+        if priority in f.name.lower():
+            DATA_FILE = f
             break
-    if DATA_FILE: break
+    if DATA_FILE:
+        break
+
+# Last resort: just take the first CSV found
+if not DATA_FILE and csv_files:
+    DATA_FILE = csv_files[0]
 
 if DATA_FILE:
     df = pd.read_csv(DATA_FILE)
-    print(f"      ✓ Loaded {len(df)} rows from {DATA_FILE}")
+    print(f"\n      ✓ Loaded {len(df)} rows from: {DATA_FILE}")
     print(f"        Columns: {list(df.columns)}")
+    print(df.head(3).to_string())
 else:
-    print("      ! No competition data found — running DEMO problems")
-    print("        (To fix: Data → Add Data → search 'ai-mathematical-olympiad-progress-prize-3')")
+    print("\n      ! No CSV data found — running DEMO problems")
+    print("        To attach competition data:")
+    print("        1. Click the folder icon (Data) in the left sidebar")
+    print("        2. Click 'Add Data' → 'Competition Datasets'")
+    print("        3. Find 'AI Mathematical Olympiad - Progress Prize 3' → click +")
+    print("        4. Run All again\n")
     df = pd.DataFrame([
         {'id': 'demo_1', 'problem': "How many positive integers n ≤ 100 satisfy: n² + n + 41 is prime?"},
         {'id': 'demo_2', 'problem': "A triangle has sides 3, 4, 5. What is the area of the triangle formed by connecting the midpoints of its sides?"},
