@@ -119,6 +119,7 @@ with st.sidebar:
 
     QUICK_NAV_OPTIONS = {
         "— Browse All Tabs —": None,
+        "🔮 TSC Crystal Visualizer": "crystal",
         "📺 YouTube Studio": "youtube",
         "🧩 ARC-AGI Solver": "arc",
         "📚 Zenodo Corpus": "zenodo",
@@ -200,11 +201,17 @@ elif _quick_nav_dest == "ti_stock":
     except Exception:
         st.info("Open the TI Stock tab in the tab bar below.")
     st.markdown("---")
+elif _quick_nav_dest == "crystal":
+    st.markdown("## 🔮 TI Sigma Crystal Visualizer")
+    st.caption("Navigated here via Quick Access — scroll up to use the sidebar to switch sections")
+    from pages.tsc_crystal_page import render_tsc_crystal
+    render_tsc_crystal()
+    st.markdown("---")
 elif _quick_nav_dest is not None:
     st.info(f"**{nav_selection}** — use the tab bar below to navigate to this section (quick render not available for this tab).")
 
 # Create tabs
-tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather, tab_lost_item, tab_manifestation, tab_manifest_science, tab_bok, tab_intention_val, tab_antifragile_god, tab_zenodo, tab_youtube, tab_arc = st.tabs([
+tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, tab_cognitive, tab_baseline, tab_biowell, tab0, tab_pdf, tab_books, tab_quantum, tab_genome, tab_music, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab9b, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33, tab34, tab35, tab36, tab_math_explainer, tab_everybody_lies, tab_quantum_demo, tab_psi_hub, tab_ti_stock, tab_initiatives, tab_multimodal, tab_medgemma, tab_heart, tab_rna, tab_brain_coupling, tab_step_skip, tab_stock_status, tab_weather, tab_lost_item, tab_manifestation, tab_manifest_science, tab_bok, tab_intention_val, tab_antifragile_god, tab_zenodo, tab_youtube, tab_arc, tab_crystal = st.tabs([
     "📱 Mobile Hub",
     "🎮 EEG Pong",
     "🧠💓 Brain Proof",
@@ -280,6 +287,7 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, t
     "📤 Zenodo",
     "📺 YouTube Studio",
     "🧩 ARC-AGI Solver",
+    "🔮 TSC Crystal",
 ])
 
 with tab_mobile:
@@ -1265,3 +1273,7 @@ with tab_youtube:
 with tab_arc:
     from arc_ti_solver.arc_tab import show_arc_tab
     show_arc_tab()
+
+with tab_crystal:
+    from pages.tsc_crystal_page import render_tsc_crystal
+    render_tsc_crystal()
