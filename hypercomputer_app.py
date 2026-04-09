@@ -66,6 +66,12 @@ PHASE_DISPLAY = {
 }
 
 
+@st.cache_data(show_spinner=False)
+def _tsc_crystal_static(mode: str, height: int):
+    """Cached wrapper for static (no-amplitude) crystal renders."""
+    return tsc_crystal_figure(amplitudes=None, mode=mode, height=height)
+
+
 def tsc_crystal_figure(amplitudes=None, mode="ring", height=680, title=None):
     """
     Spectacular 3D visualization of the 57-vertex TSC crystal.
@@ -399,12 +405,11 @@ with tab1:
             index=0,
             help="Choose how the 57 i-cells are colored"
         )
-        show_phase_demo = False
+        demo_amps = None
         if crystal_mode == "🔬 Load phase state":
             pd_demo = st.slider("Mean |α| amplitude", 0.0, 1.0, 0.70, 0.01,
                                 help="Uniform amplitude for all vertices — shows how phase regime changes")
             demo_amps = np.full(N_VERTICES, pd_demo, dtype=complex)
-            show_phase_demo = True
         st.markdown("---")
         st.markdown("**Crystal constants:**")
         for rname, rval, rcolor in zip(RING_NAMES, RING_RADII, RING_PALETTE):
@@ -412,15 +417,39 @@ with tab1:
                 f'<span style="color:{rcolor}">●</span> **{rname}** = {rval:.4f}',
                 unsafe_allow_html=True
             )
+        st.markdown("---")
+        load_crystal = st.button("🔮 Render Crystal", use_container_width=True,
+                                 help="Loads the interactive 3D WebGL crystal (may take a moment on mobile)")
 
     with info_col:
-        if crystal_mode == "✨ Full BEC (all TRUE)":
-            fig1 = tsc_crystal_figure(mode="bec", height=700)
-        elif crystal_mode == "🔬 Load phase state":
-            fig1 = tsc_crystal_figure(amplitudes=demo_amps, mode="phase", height=700)
+        if not load_crystal and "crystal_loaded" not in st.session_state:
+            st.info(
+                "**3D Crystal not yet rendered.**  \n"
+                "Press **🔮 Render Crystal** on the left to load the interactive "
+                "57-vertex WebGL visualization.  \n\n"
+                "_On mobile: the crystal renders best in landscape mode._"
+            )
+            st.markdown("""
+| Ring | Constant | Radius | Phase |
+|------|----------|--------|-------|
+| 1 | C = 1/(φ√2) | 0.4370 | FQH floor |
+| 2 | T = 1−e⁻ᵉ | 0.9340 | BEC gate |
+| 3 | 1 | 1.0000 | Unity |
+| 4 | √2 | 1.4142 | Tritone / Bell |
+| 5 | φ | 1.6180 | Golden / DNA |
+| 6 | e | 2.7183 | Exponential |
+| 7 | π | 3.1416 | Circular |
+""")
         else:
-            fig1 = tsc_crystal_figure(mode="ring", height=700)
-        st.plotly_chart(fig1, use_container_width=True)
+            st.session_state["crystal_loaded"] = True
+            with st.spinner("Rendering TSC Crystal…"):
+                if crystal_mode == "✨ Full BEC (all TRUE)":
+                    fig1 = _tsc_crystal_static("bec", 680)
+                elif crystal_mode == "🔬 Load phase state" and demo_amps is not None:
+                    fig1 = tsc_crystal_figure(amplitudes=demo_amps, mode="phase", height=680)
+                else:
+                    fig1 = _tsc_crystal_static("ring", 680)
+            st.plotly_chart(fig1, use_container_width=True)
 
     st.markdown("---")
     m1, m2, m3, m4, m5, m6 = st.columns(6)
