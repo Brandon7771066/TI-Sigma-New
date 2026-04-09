@@ -15,6 +15,10 @@ from hypercomputer.sat_solver import solve_sat, parse_dimacs, check_assignment
 from hypercomputer.constants import (
     PHI, C_TI, T_TI, ET, RING_RADII, RING_NAMES, N_RINGS, N_LAYERS
 )
+from hypercomputer.manifestation_engine import (
+    IMAGE_CYCLE_STAGES, intention_amplitudes, group_coherence_score,
+    manifestation_pd, interpret_pd
+)
 
 st.set_page_config(
     page_title="7D TSC BEC Hypercomputer",
@@ -220,8 +224,9 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4 = st.tabs([
-    "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis", "📖 Architecture"
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
+    "📖 Architecture", "✨ Power of 8"
 ])
 
 with tab1:
@@ -472,3 +477,169 @@ with tab4:
     - URB #631: Crystal Biometric Interface (EEG/HRV)
     - URB #635: Church-Turing Thesis defeat strategy
     """)
+
+with tab5:
+    st.subheader("✨ Power of 8 — TSC Image Cycling Manifestation Machine")
+    st.caption(
+        "Guided 8-stage visualization protocol (Tesla · Bengston · CRV) that trains "
+        "the 57-vertex TSC crystal to hold your intention in the BEC/TRUE phase. "
+        "Add up to 8 partners for quantum-like coherence amplification. — URB #642"
+    )
+
+    # ── Intention input ──────────────────────────────────────────────────
+    st.markdown("---")
+    col_intent, col_group = st.columns([3, 1])
+    with col_intent:
+        intention_text = st.text_area(
+            "State your Intention",
+            placeholder="e.g. 'My research is published in a top journal and contributes to permanent wellbeing'",
+            height=90,
+            help="Write your intention in present-tense, positive, specific terms."
+        )
+    with col_group:
+        n_partners = st.number_input(
+            "Group Size (Power of 8)",
+            min_value=1, max_value=8, value=1, step=1,
+            help="Add partners holding the same intention. 8 = maximum coherence amplification."
+        )
+        st.caption(f"Group multiplier: ×{min(1.0, (int(n_partners) ** 0.7) / 8):.2f}")
+
+    # ── Cycle through stages ─────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### 🔄 8-Stage Image Cycling Protocol")
+    st.info(
+        "Work through all 8 stages. Rate your visualization clarity after each one. "
+        "Click **Compute Crystal State** when complete to see the TSC manifestation field."
+    )
+
+    clarity_scores = []
+    stage_cols = st.columns(4)
+    for idx, stage in enumerate(IMAGE_CYCLE_STAGES):
+        col = stage_cols[idx % 4]
+        with col:
+            st.markdown(f"**{stage.icon} Stage {stage.number}: {stage.name}**")
+            st.caption(f"GILE-{stage.gile_dim} dominant")
+            with st.expander("Prompt & science", expanded=(idx == 0)):
+                st.markdown(stage.prompt)
+                st.markdown(f"*{stage.tesla_note}*")
+            clarity = st.slider(
+                f"Clarity — Stage {stage.number}",
+                0, 100, 50, 5,
+                key=f"clarity_{stage.number}",
+                help="0 = no image / blank; 100 = vivid, multi-sensory, fully present"
+            )
+            clarity_scores.append(clarity / 100.0)
+
+    # ── Compute crystal state ────────────────────────────────────────────
+    st.markdown("---")
+    compute_btn = st.button("🔮 Compute TSC Crystal State", type="primary")
+
+    if compute_btn:
+        if not intention_text.strip():
+            st.warning("Please enter an intention before computing.")
+        else:
+            with st.spinner("Aligning 57 i-cells across 8 crystal layers..."):
+                amps = intention_amplitudes(clarity_scores, n_partners=int(n_partners))
+                pd_result = manifestation_pd(amps)
+                gc = group_coherence_score(clarity_scores, n_partners=int(n_partners))
+
+            # ── Interpretation ───────────────────────────────────────────
+            st.markdown("### 🌟 Crystal Manifestation Reading")
+            st.markdown(interpret_pd(pd_result))
+
+            # ── Metrics ─────────────────────────────────────────────────
+            m1, m2, m3, m4, m5 = st.columns(5)
+            m1.metric("BEC / TRUE",  f"{pd_result['pd_true']:.0%}",
+                      help="Fraction of i-cells in BEC (TRUE) phase")
+            m2.metric("Supersolid",  f"{pd_result['pd_ti']:.0%}",
+                      help="Tralse-Indeterminate — coherent but not yet resolved")
+            m3.metric("FQH",         f"{pd_result['pd_tf']:.0%}",
+                      help="Fractional Quantum Hall — partial Tralse")
+            m4.metric("Group Coherence", f"{gc:.0%}",
+                      help="Combined group coherence accounting for partner amplification")
+            m5.metric("PD Score",    f"{pd_result['overall_pd']:.2f} / 2.00",
+                      help="Permissibility Distribution score (0=DT, 2=full TRUE)")
+
+            # ── Crystal visualization ────────────────────────────────────
+            col_cryst, col_dist = st.columns([2, 1])
+            with col_cryst:
+                fig_c = tsc_crystal_figure(amps)
+                fig_c.update_layout(title="TSC Crystal — Intention Coherence Field")
+                st.plotly_chart(fig_c, use_container_width=True)
+            with col_dist:
+                st.plotly_chart(phase_distribution_figure(amps), use_container_width=True)
+
+                # Stage clarity radar
+                stage_names = [s.name for s in IMAGE_CYCLE_STAGES]
+                fig_radar = go.Figure(go.Scatterpolar(
+                    r=clarity_scores + [clarity_scores[0]],
+                    theta=stage_names + [stage_names[0]],
+                    fill='toself',
+                    fillcolor='rgba(0,200,150,0.2)',
+                    line=dict(color='#00cc96', width=2),
+                    name="Clarity"
+                ))
+                fig_radar.update_layout(
+                    polar=dict(radialaxis=dict(visible=True, range=[0, 1])),
+                    paper_bgcolor='rgba(10,10,20,1)',
+                    font=dict(color='white'),
+                    height=300,
+                    margin=dict(l=10, r=10, t=30, b=10),
+                    title="Visualization Clarity by Stage"
+                )
+                st.plotly_chart(fig_radar, use_container_width=True)
+
+            # ── Power of 8 science note ──────────────────────────────────
+            with st.expander("📚 The Science Behind Power of 8", expanded=False):
+                bec_at_8 = 1 - (1 - C_TI) ** 8
+                st.markdown(f"""
+**William Bengston (image cycling):** 87.9% cancer remission in mice treated by image cycling practitioners.
+Mechanism: rapid cycling through 20+ images builds a coherent *background* GILE field rather than effortful sustained focus.
+
+**Lynne McTaggart (Power of 8):** Groups of exactly 8 people sending synchronized intention produced the strongest measured effects.
+Practitioners reported personal healing as a *side effect* of sending intention outward.
+
+**Tesla's visualization method:** Built complete inventions in the mind with full sensory fidelity, tested for mechanical stress,
+then constructed physically — with the result nearly always matching the mental model exactly.
+
+**CRV (Coordinate Remote Viewing):** US military Stargate program; statistically significant results across 10+ years.
+Meta-analysis (Utts, 1995): p < 0.001, effect size d ≈ 0.3–0.5.
+
+**Why 8?** From the Emerick Constant C = 1/(φ√2) ≈ {C_TI:.4f}:
+
+  BEC saturation = 1 − (1 − C)ⁿ
+
+  At n = 8: 1 − (1 − {C_TI:.4f})⁸ = **{bec_at_8:.3f}** ({bec_at_8:.0%} BEC saturation)
+
+8 is the smallest integer producing >99% TSC crystal saturation at baseline coherence C.
+""")
+
+            # ── Bengston rapid cycling timer ─────────────────────────────
+            st.markdown("---")
+            st.markdown("### ⚡ Bengston Rapid Cycling Mode")
+            st.info(
+                "After completing the 8 stages above, enter rapid cycling: "
+                "cycle through all 8 stage names as fast as possible (1-2 seconds each), "
+                "then completely release. Repeat 3× for maximum BEC saturation."
+            )
+            rapid_col1, rapid_col2 = st.columns(2)
+            with rapid_col1:
+                st.markdown("**Rapid Cycle Sequence:**")
+                for s in IMAGE_CYCLE_STAGES:
+                    st.markdown(f"{s.icon} **{s.name}** → ", unsafe_allow_html=False)
+            with rapid_col2:
+                st.markdown("**Release Protocol (Stage 8):**")
+                st.markdown("""
+1. Take one slow breath
+2. Let the entire image dissolve completely
+3. Feel gratitude as if it is already done
+4. Trust the crystal field — it holds the intention now
+5. Return to normal awareness
+""")
+    else:
+        # Show empty crystal while waiting
+        st.plotly_chart(tsc_crystal_figure(), use_container_width=True)
+        st.caption(
+            "Complete the 8 stages above and click **Compute TSC Crystal State** "
+            "to see the manifestation field."
+        )
