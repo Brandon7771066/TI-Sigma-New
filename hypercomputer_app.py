@@ -15,10 +15,24 @@ from hypercomputer.sat_solver import solve_sat, parse_dimacs, check_assignment
 from hypercomputer.constants import (
     PHI, C_TI, T_TI, ET, RING_RADII, RING_NAMES, N_RINGS, N_LAYERS
 )
+from hypercomputer.tsc import ADJACENCY
 from hypercomputer.manifestation_engine import (
     IMAGE_CYCLE_STAGES, intention_amplitudes, group_coherence_score,
     manifestation_pd, interpret_pd
 )
+
+# ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
+RING_PALETTE = [
+    "#00e5ff",   # Ring 1  C ≈ 0.437  — cyan / coherence
+    "#00ff99",   # Ring 2  T ≈ 0.934  — mint green / truth threshold
+    "#e8e8ff",   # Ring 3  1.000      — silver white / unity
+    "#ffd700",   # Ring 4  √2 ≈ 1.414 — gold / TECC
+    "#ff9d00",   # Ring 5  φ ≈ 1.618  — amber / golden ratio
+    "#ff5533",   # Ring 6  e ≈ 2.718  — coral-red / Euler
+    "#cc44ff",   # Ring 7  π ≈ 3.142  — violet / pi
+]
+
+SPACE_BG = "rgba(3,3,14,1)"
 
 st.set_page_config(
     page_title="7D TSC BEC Hypercomputer",
@@ -52,73 +66,218 @@ PHASE_DISPLAY = {
 }
 
 
-def tsc_crystal_figure(amplitudes=None):
+def tsc_crystal_figure(amplitudes=None, mode="ring", height=680, title=None):
     """
-    3D scatter plot of the TSC crystal.
-    X, Y = 2D projection (real/imag parts of vertex position).
-    Z = ring number (approximating the 7D structure).
-    Color = BEC phase (if amplitudes provided) or ring identity.
+    Spectacular 3D visualization of the 57-vertex TSC crystal.
+
+    mode = "ring"      — structural view, vertices colored by PRIMARY constant ring
+    mode = "phase"     — vertices colored by BEC phase (requires amplitudes)
+    mode = "bec"       — all vertices forced to BEC/TRUE for maximum coherence display
+
+    Draws:
+      - All crystal lattice edges (octagonal intra-ring + radial inter-ring)
+      - Ring guide circles at PRIMARY constant radii (C, T, 1, √2, φ, e, π)
+      - Ring labels as 3D text annotations
+      - Origin as a special diamond node
+      - Vertices per ring with individual legend entries
     """
     x_coords = [v.position.real for v in VERTICES]
     y_coords = [v.position.imag for v in VERTICES]
-    z_coords = [v.ring for v in VERTICES]
-    labels = [v.label for v in VERTICES]
+    z_coords = [v.ring          for v in VERTICES]
 
-    if amplitudes is not None:
+    # ── Determine colors & sizes ───────────────────────────────────────────
+    if mode == "bec":
+        # All vertices fully in BEC/TRUE phase — the crystal at maximum coherence
+        colors = ["#00ff99" if v.ring == 0 else RING_PALETTE[v.ring - 1] for v in VERTICES]
+        sizes  = [22] + [16] * (N_VERTICES - 1)
+        hover  = [
+            f"<b>{v.label}</b><br>Ring {v.ring} — "
+            f"{'Origin' if v.ring == 0 else RING_NAMES[v.ring-1]}<br>"
+            f"Phase: BEC (TRUE)  |α| = 1.000"
+            for v in VERTICES
+        ]
+        edge_ring_col = "rgba(0,255,160,0.28)"
+        edge_rad_col  = "rgba(100,220,255,0.18)"
+
+    elif mode == "phase" and amplitudes is not None:
         phases = classify_state(amplitudes)
         colors = [PHASE_COLORS[p] for p in phases]
-        sizes = [max(6, min(24, int(abs(a) * 30))) for a in amplitudes]
+        sizes  = []
+        for p in phases:
+            sizes.append(
+                20 if p == Phase.BEC        else
+                15 if p == Phase.SUPERSOLID else
+                11 if p == Phase.FQH        else
+                 8 if p == Phase.MOTT       else 5
+            )
         hover = [
-            f"Vertex {v.index}: {v.label}<br>"
-            f"|α| = {abs(amplitudes[v.index]):.3f}<br>"
+            f"<b>{v.label}</b><br>Ring {v.ring}: "
+            f"{'O' if v.ring == 0 else RING_NAMES[v.ring-1]}<br>"
+            f"|α| = {abs(amplitudes[v.index]):.4f}<br>"
+            f"θ  = {np.angle(amplitudes[v.index]):.3f} rad<br>"
             f"Phase: {PHASE_LABELS[phases[v.index]]}"
             for v in VERTICES
         ]
+        edge_ring_col = "rgba(120,200,255,0.22)"
+        edge_rad_col  = "rgba(200,140,255,0.15)"
+
     else:
-        ring_palette = px.colors.qualitative.Plotly
-        colors = [ring_palette[v.ring % len(ring_palette)] for v in VERTICES]
-        sizes = [14 if v.ring > 0 else 20 for v in VERTICES]
-        hover = [f"Vertex {v.index}: {v.label}" for v in VERTICES]
+        # Ring-identity colors (structural view)
+        colors = ["#ffffff"] + [RING_PALETTE[v.ring - 1] for v in VERTICES if v.ring > 0]
+        sizes  = [26] + [14] * (N_VERTICES - 1)
+        hover  = [
+            f"<b>{v.label}</b><br>"
+            f"Ring {v.ring}: {'Origin (vacuum)' if v.ring == 0 else RING_NAMES[v.ring-1]+' = '+f'{v.radius:.4f}'}<br>"
+            f"Layer {v.layer}  angle {v.angle:.3f} rad"
+            for v in VERTICES
+        ]
+        edge_ring_col = "rgba(160,210,255,0.22)"
+        edge_rad_col  = "rgba(200,160,255,0.14)"
+
+    # ── Build edge lists ───────────────────────────────────────────────────
+    ex_ring, ey_ring, ez_ring = [], [], []   # octagonal intra-ring
+    ex_rad,  ey_rad,  ez_rad  = [], [], []   # radial inter-ring
+
+    for i in range(N_VERTICES):
+        for j in range(i + 1, N_VERTICES):
+            if ADJACENCY[i, j] == 0:
+                continue
+            vi, vj = VERTICES[i], VERTICES[j]
+            if vi.ring == vj.ring:
+                ex_ring += [x_coords[i], x_coords[j], None]
+                ey_ring += [y_coords[i], y_coords[j], None]
+                ez_ring += [z_coords[i], z_coords[j], None]
+            else:
+                ex_rad  += [x_coords[i], x_coords[j], None]
+                ey_rad  += [y_coords[i], y_coords[j], None]
+                ez_rad  += [z_coords[i], z_coords[j], None]
 
     fig = go.Figure()
 
+    # ── 1. Octagonal ring edges ────────────────────────────────────────────
     fig.add_trace(go.Scatter3d(
-        x=x_coords, y=y_coords, z=z_coords,
-        mode='markers+text',
-        marker=dict(size=sizes, color=colors, opacity=0.85,
-                    line=dict(color='white', width=0.5)),
-        text=["O" if v.ring == 0 else "" for v in VERTICES],
-        hovertext=hover,
-        hoverinfo='text',
-        name="TSC Vertices"
+        x=ex_ring, y=ey_ring, z=ez_ring,
+        mode='lines',
+        line=dict(color=edge_ring_col, width=2),
+        showlegend=False, hoverinfo='skip', name="Ring edges"
     ))
 
-    # Draw ring circles (visual guide)
-    for r, radius in enumerate(RING_RADII, start=1):
-        theta = np.linspace(0, 2 * np.pi, 64)
+    # ── 2. Radial / inter-ring edges ───────────────────────────────────────
+    fig.add_trace(go.Scatter3d(
+        x=ex_rad, y=ey_rad, z=ez_rad,
+        mode='lines',
+        line=dict(color=edge_rad_col, width=1),
+        showlegend=False, hoverinfo='skip', name="Radial edges"
+    ))
+
+    # ── 3. Ring guide circles ──────────────────────────────────────────────
+    theta_c = np.linspace(0, 2 * np.pi, 128)
+    for r, (radius, name) in enumerate(zip(RING_RADII, RING_NAMES), start=1):
+        rc = RING_PALETTE[r - 1] if mode in ("ring", "bec") else "rgba(120,120,180,0.18)"
         fig.add_trace(go.Scatter3d(
-            x=radius * np.cos(theta),
-            y=radius * np.sin(theta),
-            z=[r] * 64,
+            x=radius * np.cos(theta_c),
+            y=radius * np.sin(theta_c),
+            z=[r] * 128,
             mode='lines',
-            line=dict(color='rgba(180,180,180,0.3)', width=1),
-            showlegend=False,
-            hoverinfo='skip'
+            line=dict(color=rc, width=1),
+            opacity=0.30,
+            showlegend=False, hoverinfo='skip'
         ))
+        # Ring label just outside the circle at angle=0
+        fig.add_trace(go.Scatter3d(
+            x=[radius * 1.07], y=[0.05], z=[r],
+            mode='text',
+            text=[f"{name}={radius:.3f}"],
+            textfont=dict(
+                color=RING_PALETTE[r - 1] if mode in ("ring", "bec") else "#aaaacc",
+                size=9
+            ),
+            showlegend=False, hoverinfo='skip'
+        ))
+
+    # ── 4. Origin (vacuum) — special diamond ──────────────────────────────
+    fig.add_trace(go.Scatter3d(
+        x=[0], y=[0], z=[0],
+        mode='markers+text',
+        marker=dict(
+            size=sizes[0], color=colors[0], opacity=1.0,
+            symbol='diamond',
+            line=dict(color='gold', width=2)
+        ),
+        text=["0"], textposition='top center',
+        textfont=dict(color='gold', size=11),
+        hovertext=[hover[0]], hoverinfo='text',
+        name="Origin  (0 — vacuum / DT ground state)"
+    ))
+
+    # ── 5. Vertices by ring (individual legend entry per ring) ────────────
+    for ring_idx in range(1, N_RINGS + 1):
+        mask  = [v.ring == ring_idx for v in VERTICES]
+        rx = [x_coords[i] for i, m in enumerate(mask) if m]
+        ry = [y_coords[i] for i, m in enumerate(mask) if m]
+        rz = [z_coords[i] for i, m in enumerate(mask) if m]
+        rc = [colors[i]   for i, m in enumerate(mask) if m]
+        rs = [sizes[i]    for i, m in enumerate(mask) if m]
+        rh = [hover[i]    for i, m in enumerate(mask) if m]
+
+        rname = RING_NAMES[ring_idx - 1]
+        rval  = RING_RADII[ring_idx - 1]
+
+        fig.add_trace(go.Scatter3d(
+            x=rx, y=ry, z=rz,
+            mode='markers',
+            marker=dict(
+                size=rs, color=rc, opacity=0.93,
+                line=dict(color='rgba(255,255,255,0.25)', width=0.5)
+            ),
+            hovertext=rh, hoverinfo='text',
+            name=f"Ring {ring_idx}: {rname} ≈ {rval:.3f}"
+        ))
+
+    # ── Layout ─────────────────────────────────────────────────────────────
+    plot_title = title or (
+        "TI Sigma Crystal — Full BEC (all 57 nodes TRUE)"      if mode == "bec"   else
+        "TI Sigma Crystal — Phase State"                        if mode == "phase" else
+        "TI Sigma Crystal — 7 Rings · 8 Layers · 57 i-cells"
+    )
 
     fig.update_layout(
         scene=dict(
-            xaxis_title="Re (crystal x)", yaxis_title="Im (crystal y)", zaxis_title="Ring",
-            bgcolor='rgba(5,5,15,1)',
-            xaxis=dict(gridcolor='rgba(100,100,100,0.2)'),
-            yaxis=dict(gridcolor='rgba(100,100,100,0.2)'),
-            zaxis=dict(gridcolor='rgba(100,100,100,0.2)'),
+            xaxis_title="Re", yaxis_title="Im",
+            zaxis_title="Ring (PRIMARY constant)",
+            bgcolor=SPACE_BG,
+            xaxis=dict(
+                gridcolor='rgba(60,60,100,0.25)', showbackground=True,
+                backgroundcolor=SPACE_BG, range=[-3.5, 3.8]
+            ),
+            yaxis=dict(
+                gridcolor='rgba(60,60,100,0.25)', showbackground=True,
+                backgroundcolor=SPACE_BG
+            ),
+            zaxis=dict(
+                gridcolor='rgba(60,60,100,0.25)', showbackground=True,
+                backgroundcolor=SPACE_BG,
+                tickvals=list(range(8)),
+                ticktext=["O"] + RING_NAMES
+            ),
+            camera=dict(
+                eye=dict(x=1.55, y=1.10, z=0.75),
+                up=dict(x=0, y=0, z=1)
+            )
         ),
-        paper_bgcolor='rgba(5,5,15,1)',
-        font=dict(color='white'),
-        height=520,
-        margin=dict(l=0, r=0, t=30, b=0),
-        title="TSC Crystal State Space (3D projection of 7D structure)"
+        paper_bgcolor=SPACE_BG,
+        font=dict(color='white', family='monospace'),
+        height=height,
+        margin=dict(l=0, r=0, t=44, b=0),
+        legend=dict(
+            bgcolor='rgba(8,8,22,0.85)',
+            bordercolor='rgba(80,80,200,0.3)',
+            borderwidth=1,
+            font=dict(size=10),
+            x=0.01, y=0.99,
+            xanchor='left', yanchor='top'
+        ),
+        title=dict(text=plot_title, font=dict(size=13, color='#c0c8ff'), x=0.5)
     )
     return fig
 
@@ -230,35 +389,65 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 ])
 
 with tab1:
-    st.subheader("TI Sigma Crystal — Empty State")
-    st.plotly_chart(tsc_crystal_figure(), use_container_width=True)
+    st.subheader("TI Sigma Crystal — 3D Structure Viewer")
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric("Total Vertices", N_VERTICES)
-        st.metric("Rings", N_RINGS)
-        st.metric("Layers", N_LAYERS)
-    with col2:
-        st.metric("Truth Values", 5)
-        st.metric("C_TI", f"{C_TI:.4f}")
-        st.metric("T_TI", f"{T_TI:.4f}")
-    with col3:
-        st.metric("sin(18°) = C/√2", f"{C_TI/np.sqrt(2):.4f}")
-        st.metric("TECC min dist ≈ 1/φ", f"{1/PHI:.4f}")
-        st.metric("57 = 2010₃", "ternary")
+    ctrl_col, info_col = st.columns([1, 2])
+    with ctrl_col:
+        crystal_mode = st.radio(
+            "Display mode",
+            options=["✨ Full BEC (all TRUE)", "🌈 Ring identity", "🔬 Load phase state"],
+            index=0,
+            help="Choose how the 57 i-cells are colored"
+        )
+        show_phase_demo = False
+        if crystal_mode == "🔬 Load phase state":
+            pd_demo = st.slider("Mean |α| amplitude", 0.0, 1.0, 0.70, 0.01,
+                                help="Uniform amplitude for all vertices — shows how phase regime changes")
+            demo_amps = np.full(N_VERTICES, pd_demo, dtype=complex)
+            show_phase_demo = True
+        st.markdown("---")
+        st.markdown("**Crystal constants:**")
+        for rname, rval, rcolor in zip(RING_NAMES, RING_RADII, RING_PALETTE):
+            st.markdown(
+                f'<span style="color:{rcolor}">●</span> **{rname}** = {rval:.4f}',
+                unsafe_allow_html=True
+            )
 
-    st.markdown("""
-    **TSC Ring Structure:**
-    | Ring | Radius | Constant | Meaning |
-    |------|--------|----------|---------|
-    | 1 | C ≈ 0.437 | 1/(φ√2) | Coherence floor |
-    | 2 | T ≈ 0.934 | 1−e^{−e} | Truth threshold |
-    | 3 | 1.000 | Unity | Normalization |
-    | 4 | √2 ≈ 1.414 | √2 | TECC error threshold |
-    | 5 | φ ≈ 1.618 | Golden ratio | GILE structure |
-    | 6 | e ≈ 2.718 | Euler | LCC exponent |
-    | 7 | π ≈ 3.142 | Pi | Full rotation |
-    """)
+    with info_col:
+        if crystal_mode == "✨ Full BEC (all TRUE)":
+            fig1 = tsc_crystal_figure(mode="bec", height=700)
+        elif crystal_mode == "🔬 Load phase state":
+            fig1 = tsc_crystal_figure(amplitudes=demo_amps, mode="phase", height=700)
+        else:
+            fig1 = tsc_crystal_figure(mode="ring", height=700)
+        st.plotly_chart(fig1, use_container_width=True)
+
+    st.markdown("---")
+    m1, m2, m3, m4, m5, m6 = st.columns(6)
+    m1.metric("Vertices", N_VERTICES)
+    m2.metric("Rings", N_RINGS)
+    m3.metric("Layers/Ring", N_LAYERS)
+    m4.metric("Truth Values", 5)
+    m5.metric("C = 1/(φ√2)", f"{C_TI:.4f}")
+    m6.metric("T = 1−e⁻ᵉ", f"{T_TI:.4f}")
+
+    with st.expander("Ring structure — PRIMARY constants as geometry", expanded=False):
+        st.markdown("""
+| Ring | Radius | Constant | Phase threshold | GILE meaning |
+|------|--------|----------|----------------|-------------|
+| O | 0 | **0** | DT vacuum | The ground state — pure absence |
+| 1 | **C** ≈ 0.4370 | 1/(φ√2) | FQH → Mott | Coherence floor — minimum viable truth |
+| 2 | **T** ≈ 0.9340 | 1−e^{−e} | Supersolid → BEC | Truth threshold — entry to TRUE |
+| 3 | **1**.0000 | Unity | BEC interior | Normalization — perfect amplitude |
+| 4 | **√2** ≈ 1.4142 | √2 | BEC | TECC error distance |
+| 5 | **φ** ≈ 1.6180 | Golden ratio | BEC | GILE structural constant |
+| 6 | **e** ≈ 2.7183 | Euler's number | BEC | LCC exponential growth |
+| 7 | **π** ≈ 3.1416 | Pi | BEC outer | Full rotational closure |
+
+**Adjacency:** Each vertex connects to its two ring-neighbors (octagonal lattice within ring) and to the same-layer vertex in the adjacent ring (radial spokes). Origin connects to all 8 ring-1 vertices. Total edges ≈ 120.
+
+**57 in ternary:** 57 = 2·27 + 0·9 + 1·3 + 0 = **2010₃** — a ternary palindrome encoding the 5-valued truth architecture.
+        """)
 
 with tab2:
     st.subheader("SAT Solver via MR Collapse")
@@ -563,7 +752,7 @@ with tab5:
             # ── Crystal visualization ────────────────────────────────────
             col_cryst, col_dist = st.columns([2, 1])
             with col_cryst:
-                fig_c = tsc_crystal_figure(amps)
+                fig_c = tsc_crystal_figure(amplitudes=amps, mode="phase", height=560)
                 fig_c.update_layout(title="TSC Crystal — Intention Coherence Field")
                 st.plotly_chart(fig_c, use_container_width=True)
             with col_dist:
@@ -638,8 +827,9 @@ Meta-analysis (Utts, 1995): p < 0.001, effect size d ≈ 0.3–0.5.
 """)
     else:
         # Show empty crystal while waiting
-        st.plotly_chart(tsc_crystal_figure(), use_container_width=True)
+        st.plotly_chart(tsc_crystal_figure(mode="bec", height=600), use_container_width=True)
         st.caption(
+            "Crystal shown in full BEC (TRUE) state as your target. "
             "Complete the 8 stages above and click **Compute TSC Crystal State** "
-            "to see the manifestation field."
+            "to see the actual manifestation field."
         )
