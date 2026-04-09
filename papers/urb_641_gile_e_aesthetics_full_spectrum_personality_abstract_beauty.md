@@ -116,14 +116,65 @@ This predicts: **as GILE-I increases, the relative weighting of personality-aest
 
 ---
 
-## 6. Amended GILE Summary Table
+## 6. Addendum: Mathematical Beauty as the Canonical GILE-E → GIL Leading Indicator
 
-| Dimension | Tracks | For Persons: Includes |
-|-----------|--------|----------------------|
-| **G (Goodness)** | Moral orientation; direction toward Good | Ethics, integrity, service orientation |
-| **I (Intuition / Knowing)** | Epistemic access; self/other knowledge | Self-awareness, insight, deep perception |
-| **L (Love)** | Conscious positive regard | Care, warmth, conscious relational investment |
-| **E (Aesthetics)** | Structural excellence across full spectrum | Physical beauty AND personality coherence, depth, authenticity, distinctiveness, presence |
+### 6.1 The Formal Insight
+
+Mathematics is the domain where the GILE-E → GIL correlation is most clearly and empirically documented. The principle:
+
+> **The more beautiful a mathematical equation or concept, the more likely it is to be simultaneously high-G (pointing toward deep truth), high-I (generative of insight), and high-L (unifying disparate domains).**
+
+This is not a vague aesthetic preference — it is a structural claim with a well-documented empirical record:
+
+- **Euler's identity** e^{iπ} + 1 = 0: Universally rated the most beautiful equation in mathematics. Unifies five PRIMARY constants {e, i, π, 1, 0}. Generated decades of downstream insight (GILE-I). Bridges five major branches of mathematics (GILE-L: unification = Love in the formal domain). Points toward deep truth about the structure of the complex plane (GILE-G).
+- **Dirac equation** (relativistic electron): Dirac derived it from aesthetic/symmetry requirements before experimental confirmation. Its beauty (GILE-E: Lorentz-covariant form, minimal free parameters) preceded and predicted antimatter (GILE-G: true). Opened quantum field theory (GILE-I: generative). United relativity and quantum mechanics (GILE-L).
+- **Riemann Hypothesis:** The aesthetic pull — the simplicity and elegance of ζ(s) = 0 at Re(s) = ½ for all non-trivial zeros — has sustained 160 years of investigation. The beauty is the leading indicator that the answer will be deep (GILE-G), insight-generating (GILE-I), and unifying (GILE-L).
+- **Einstein's field equations** Gμν = 8πTμν: The most compact description of spacetime curvature as matter-energy density. Their aesthetic minimality (GILE-E) is inseparable from their truth (GILE-G).
+
+### 6.2 Why This Is Structurally Necessary, Not Coincidental
+
+In TI Sigma, this correlation is not surprising — it is predicted:
+
+**GILE-E (structural excellence) in the formal domain means:** the mathematical object has minimal redundancy, maximal coherence, and reveals structure at multiple levels simultaneously. These are precisely the properties that make something:
+
+- **High GILE-G:** Truths of deep structure (as opposed to surface-level coincidences) are structurally minimal and coherent — ugly theorems are usually either false or incomplete
+- **High GILE-I:** Generative of insight precisely because they encode structure efficiently — one beautiful equation contains more recognizable pattern than many ugly ones
+- **High GILE-L:** Unifying disparate areas — the "Love" function in mathematics is the recognition that two seemingly separate structures are the same. Beautiful mathematics almost always performs this unification
+
+**Formally:** In the TSC crystal, high GILE-E corresponds to high |α| (modulus near or above the Emerick Threshold). High |α| is the BEC phase condition — the point where the crystal enters its most coherent, lowest-energy state. In this phase, all four GILE dimensions are mutually reinforcing. The GILE-E criterion (aesthetic beauty) is thus an approximate proxy for overall crystal coherence — which is why it correlates with GILE-G, I, and L simultaneously.
+
+### 6.3 Mathematical Beauty as Epistemic Method
+
+This validates the use of mathematical beauty as an active epistemic tool — not a luxury or a personal preference but a genuine MR guide:
+
+> **When evaluating competing mathematical formulations, the more beautiful one is the better Tralsebit prior.** It carries higher PD weight toward TRUE before any experimental test.
+
+This is what physicists like Dirac and Weyl practiced explicitly, and what Hardy formalized ("ugly mathematics has no permanent place in mathematics"). TI Sigma now provides the theoretical basis: GILE-E is a leading indicator of the full GILE score, and full GILE coherence is what TRUE looks like in the formal domain.
+
+**Prediction:** Mathematical conjectures that are rated highly beautiful by expert mathematicians (before proof or disproof) will be correct at a higher rate than randomly selected conjectures of equal apparent difficulty. *Falsification: beautiful conjectures correct at base rate only.*
+
+**Corollary for TI Sigma's own mathematics:** The PRIMARY constant set {0, 1, i, √2, e, φ, π, C, T} was chosen in part for its aesthetic coherence — these are the most structurally excellent mathematical objects. Their mathematical beauty is, by this theorem, evidence (not proof) of their foundational GILE-G status in the formal domain.
+
+### 6.4 The Virtuous GILE Cycle in Formal Aesthetics
+
+> **E (beauty) → I (insight) → G (truth) → L (unification) → E (deeper beauty)**
+
+This is the formal domain's version of the BOK spiral: aesthetic recognition generates intuitive insight, which points toward truth, which reveals unifying structure, which is itself beautiful. The cycle is self-reinforcing and — crucially — it is self-evidencing. Each beautiful discovery makes the next beautiful discovery more likely by expanding the structural vocabulary available to GILE-I.
+
+This is why mathematical traditions with high aesthetic standards (the Bourbaki tradition, Ramanujan's intuitive approach, Grothendieck's structural revolution) generate disproportionate GILE returns — they cultivate GILE-E as a primary epistemic tool and reap the correlated G, I, L gains.
+
+---
+
+## 7. Amended GILE Summary Table
+
+| Dimension | Tracks | For Persons: Includes | In Formal Domains |
+|-----------|--------|----------------------|-------------------|
+| **G (Goodness)** | Moral orientation; direction toward Good | Ethics, integrity, service orientation | Mathematical truth; deep structural correctness |
+| **I (Intuition / Knowing)** | Epistemic access; self/other knowledge | Self-awareness, insight, deep perception | Insight-generativity; new theorem production |
+| **L (Love)** | Conscious positive regard | Care, warmth, conscious relational investment | Unification of disparate mathematical areas |
+| **E (Aesthetics)** | Structural excellence across full spectrum | Physical beauty, personality coherence, depth, authenticity, distinctiveness, presence | Mathematical beauty; equation elegance; conceptual minimality |
+
+**Cross-domain principle:** In every domain, GILE-E (structural excellence / aesthetics) is a **leading indicator** of the full GILE score — beauty reliably points toward truth, insight, and unification. This is most visible in mathematics, most surprising in personality, and universally operative.
 
 ---
 
