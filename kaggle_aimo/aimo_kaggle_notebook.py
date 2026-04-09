@@ -325,20 +325,58 @@ def predict(id_: str, problem: str) -> int:
 # MODE A — GATEWAY (live competition evaluation)
 # ══════════════════════════════════════════════════════════
 GATEWAY_AVAILABLE = False
-try:
-    # Add the competition's kaggle_evaluation package to the path
-    for search_root in ["/kaggle/input/competitions", "/kaggle/input/datasets"]:
-        for root, dirs, files in os.walk(search_root):
-            if "aimo_3_gateway.py" in files:
-                pkg_parent = str(Path(root).parent)
-                if pkg_parent not in sys.path:
-                    sys.path.insert(0, pkg_parent)
-                break
+GATEWAY_ERROR    = None
 
+# ── Step 1: try the native Kaggle import (works in real submission kernel) ──
+try:
     from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
     GATEWAY_AVAILABLE = True
+    print("      ✓ kaggle_evaluation imported directly (native Kaggle kernel)")
 except ImportError:
     pass
+
+# ── Step 2: if native import failed, walk COMPETITION folder ONLY ──
+# (Never use our dataset's copy — it has a data_paths bug)
+if not GATEWAY_AVAILABLE:
+    comp_root = "/kaggle/input/competitions/ai-mathematical-olympiad-progress-prize-3"
+    for root, dirs, files in os.walk(comp_root):
+        if "aimo_3_gateway.py" in files:
+            pkg_parent = str(Path(root).parent)
+            if pkg_parent not in sys.path:
+                sys.path.insert(0, pkg_parent)
+            print(f"      Added to sys.path: {pkg_parent}")
+            break
+    try:
+        from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
+        GATEWAY_AVAILABLE = True
+        print("      ✓ Gateway found in competition input folder")
+    except ImportError as e:
+        GATEWAY_ERROR = str(e)
+
+# ── Step 3: last resort — walk ALL dataset folders (except our buggy dataset) ──
+if not GATEWAY_AVAILABLE:
+    SKIP = {"brandonemerick/ti-aimo-3", "brandonemerick/aimo-3"}   # our broken copies
+    dataset_root = "/kaggle/input/datasets"
+    found_path = None
+    for root, dirs, files in os.walk(dataset_root):
+        if "aimo_3_gateway.py" in files:
+            # Reject our own dataset copies
+            if any(skip in root for skip in SKIP):
+                continue
+            found_path = str(Path(root).parent)
+            break
+    if found_path:
+        if found_path not in sys.path:
+            sys.path.insert(0, found_path)
+        try:
+            from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway
+            GATEWAY_AVAILABLE = True
+            print(f"      ✓ Gateway found in external dataset: {found_path}")
+        except ImportError as e:
+            GATEWAY_ERROR = str(e)
+
+if not GATEWAY_AVAILABLE:
+    print(f"      ✗ Gateway not available ({GATEWAY_ERROR}) — falling back to CSV mode")
 
 if GATEWAY_AVAILABLE:
     print("\n      ✓ GATEWAY MODE — Kaggle evaluation server detected")
@@ -346,17 +384,23 @@ if GATEWAY_AVAILABLE:
     print("        Submitting via gateway now...\n")
     print("=" * 60)
 
+    # AIMO3Gateway expects predict(id: str, problem: str) -> int
     gateway = AIMO3Gateway(predict)
-    gateway.run()   # blocks until all problems are answered; Kaggle scores live
-
-    print("\n" + "=" * 60)
-    print("GATEWAY RUN COMPLETE")
-    print("=" * 60)
+    try:
+        gateway.run()   # blocks until all problems are answered; Kaggle scores live
+        print("\n" + "=" * 60)
+        print("GATEWAY RUN COMPLETE")
+        print("=" * 60)
+    except Exception as gw_exc:
+        print(f"\n      ✗ Gateway runtime error: {gw_exc}")
+        print("        This is typically a Kaggle evaluation server issue.")
+        print("        Check that the competition dataset is attached correctly.")
+        GATEWAY_AVAILABLE = False  # flag for summary block below
 
 # ══════════════════════════════════════════════════════════
 # MODE B — REFERENCE CSV (offline tuning)
 # ══════════════════════════════════════════════════════════
-else:
+if not GATEWAY_AVAILABLE:
     print("\n      Gateway not available — falling back to CSV mode.")
 
     # Find reference.csv (has real problems + answers for offline validation)
