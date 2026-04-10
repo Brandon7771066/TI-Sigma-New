@@ -35,6 +35,12 @@ from bok_harmonics import (
     THRESHOLD_NOTE_ON, THRESHOLD_CHORD_IN, THRESHOLD_STRONG, THRESHOLD_BEC,
     ET as H_ET, C_TI as H_C_TI, T_TI as H_T_TI,
 )
+from gile_lcc_ratio_engine import (
+    DOMAIN_REGISTRY, DomainGLSpec, GLTransform, ICellGLRatio,
+    apply_transform, apply_transform_array,
+    fit_gl_ratio_linear, best_fit_transform, linearity_test,
+    transform_curve, describe_ratio,
+)
 
 # ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
 RING_PALETTE = [
@@ -1262,29 +1268,281 @@ with tab7:
 
     st.markdown("---")
 
-    # ── Dimension sliders — GILE (left) and HEM (right) ──────────────────────
-    st.markdown("### Set Dimension Values")
-    gile_col, hem_col = st.columns(2)
+    # ── Input mode toggle ─────────────────────────────────────────────────────
+    harm_mode = st.radio(
+        "Input mode",
+        ["🎼 Direct GILE values", "⚖️ LCC → GILE via Domain Ratio (URB #649)"],
+        horizontal=True, key="harm_mode",
+        help="Direct: set GILE dimensions directly. LCC mode: set raw LCC weights, "
+             "convert to GILE using the domain-specific GL ratio."
+    )
+    st.markdown("---")
 
-    dim_vals: dict = {}
-    with gile_col:
-        st.markdown("**GILE — Inner BOK Loops**")
-        for key in ['G', 'I', 'L', 'E']:
-            d = DIM_NOTES[key]
-            dim_vals[key] = st.slider(
-                f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
-                0.0, 1.0, 0.5, 0.01, key=f"harm_{key}",
-                help=d.description,
+    # ── LCC → GILE Conversion panel ───────────────────────────────────────────
+    lcc_vals_raw: dict = {}
+    domain_spec: DomainGLSpec = None
+
+    if harm_mode.startswith("⚖️"):
+        st.markdown("### ⚖️ GILE-LCC Ratio Engine — URB #649")
+        st.caption(
+            "The GL ratio (LCC_value / GILE_value) varies by domain, i-cell, and time. "
+            "It is determined empirically — not assumed. Set LCC weights below; "
+            "GILE values are derived via the domain transform."
+        )
+
+        ratio_c1, ratio_c2, ratio_c3 = st.columns(3)
+        with ratio_c1:
+            domain_name = st.selectbox("Domain", list(DOMAIN_REGISTRY.keys()),
+                                       key="harm_domain")
+            domain_spec = DOMAIN_REGISTRY[domain_name]
+
+        with ratio_c2:
+            # Allow overriding ratio
+            gl_ratio_override = st.slider(
+                "GL Ratio override (LCC ÷ GILE)",
+                0.2, 8.0, float(round(domain_spec.gl_ratio, 2)), 0.05,
+                key="harm_gl_ratio",
+                help=f"Domain default: {domain_spec.gl_ratio:.2f}. "
+                     f"{describe_ratio(domain_spec.gl_ratio)}"
             )
-    with hem_col:
-        st.markdown("**HEM — Outer BOK Loops**")
-        for key in ['D1', 'D2', 'D3', 'D4']:
-            d = DIM_NOTES[key]
-            dim_vals[key] = st.slider(
-                f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
-                0.0, 1.0, 0.3, 0.01, key=f"harm_{key}",
-                help=d.description,
+            tf_name = st.selectbox(
+                "Transform",
+                [t.value for t in GLTransform],
+                index=[t.value for t in GLTransform].index(domain_spec.transform.value),
+                key="harm_transform",
             )
+            tf_enum = next(t for t in GLTransform if t.value == tf_name)
+
+        with ratio_c3:
+            alpha_val = st.slider("Power α (POWER only)", 0.2, 4.0,
+                                  float(round(domain_spec.alpha, 2)), 0.05,
+                                  key="harm_alpha")
+            k_val     = st.slider("Steepness k (non-linear)", 1.0, 20.0,
+                                  float(round(domain_spec.k, 1)), 0.5,
+                                  key="harm_k")
+            mu_val    = st.slider("Midpoint μ (SIGMOID only)", 0.1, 0.9,
+                                  float(round(domain_spec.mu, 2)), 0.01,
+                                  key="harm_mu")
+
+        # Ratio description
+        st.info(f"**{domain_name}** · GL ratio = {gl_ratio_override:.2f} · "
+                f"Transform: {tf_name} · {describe_ratio(gl_ratio_override)}")
+        if domain_spec.notes:
+            st.caption(f"Domain note: {domain_spec.notes}")
+
+        # Transform curve
+        lcc_x = np.linspace(0.0, 1.0, 300)
+        gile_y = apply_transform_array(lcc_x, gl_ratio_override, tf_enum,
+                                       alpha_val, k_val, mu_val)
+        fig_curve_tf = go.Figure()
+        fig_curve_tf.add_trace(go.Scatter(x=lcc_x, y=gile_y, mode='lines',
+                                          line=dict(color='#aa44ff', width=2.5),
+                                          name='GILE = f(LCC)'))
+        # Reference diagonal (linear 1:1)
+        fig_curve_tf.add_trace(go.Scatter(x=[0,1], y=[0,1], mode='lines',
+                                          line=dict(color='rgba(150,150,150,0.4)',
+                                                    width=1, dash='dot'),
+                                          name='1:1 reference'))
+        # TI thresholds
+        for thr, lbl, col in [(H_ET, 'ET', '#7777ff'),
+                               (H_C_TI, 'C', '#00ff99'),
+                               (H_T_TI, 'T', '#ffffff')]:
+            fig_curve_tf.add_hline(y=thr, line_dash='dot', line_color=col,
+                                   annotation_text=f'GILE {lbl}',
+                                   annotation_font_color=col, annotation_font_size=9)
+            fig_curve_tf.add_vline(x=thr, line_dash='dot', line_color=col,
+                                   annotation_text=f'LCC {lbl}',
+                                   annotation_font_color=col, annotation_font_size=9)
+        fig_curve_tf.update_layout(
+            height=260,
+            paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+            font=dict(color='white'),
+            xaxis=dict(title='LCC value', range=[0,1],
+                       gridcolor='rgba(100,100,150,0.2)'),
+            yaxis=dict(title='GILE value', range=[0,1],
+                       gridcolor='rgba(100,100,150,0.2)'),
+            legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+            margin=dict(l=50, r=20, t=20, b=40),
+            title=dict(text=f"LCC → GILE Transform: {tf_name} (ratio={gl_ratio_override:.2f})",
+                       font=dict(color='white', size=12)),
+        )
+        st.plotly_chart(fig_curve_tf, use_container_width=True)
+
+        # LCC sliders
+        st.markdown("### Set LCC Dimension Values")
+        lcc_g_col, lcc_h_col = st.columns(2)
+        with lcc_g_col:
+            st.markdown("**LCC weights — GILE dimensions**")
+            for key in ['G', 'I', 'L', 'E']:
+                d = DIM_NOTES[key]
+                lcc_vals_raw[key] = st.slider(
+                    f"LCC→{key}  [{d.label}]",
+                    0.0, 1.0, 0.5, 0.01, key=f"lcc_{key}",
+                    help=f"Raw LCC weight for {d.label}. Will be converted to GILE via the ratio."
+                )
+        with lcc_h_col:
+            st.markdown("**LCC weights — HEM dimensions**")
+            for key in ['D1', 'D2', 'D3', 'D4']:
+                d = DIM_NOTES[key]
+                lcc_vals_raw[key] = st.slider(
+                    f"LCC→{key}  [{d.label}]",
+                    0.0, 1.0, 0.3, 0.01, key=f"lcc_{key}",
+                    help=f"Raw LCC weight for {d.label}. Will be converted to GILE via the ratio."
+                )
+
+        # Convert LCC → GILE
+        dim_vals = {
+            k: apply_transform(v, gl_ratio_override, tf_enum, alpha_val, k_val, mu_val)
+            for k, v in lcc_vals_raw.items()
+        }
+
+        # Show the conversion table
+        with st.expander("📊 LCC → GILE Conversion Table", expanded=False):
+            import pandas as pd
+            conv_rows = []
+            for k in DIM_ORDER:
+                d = DIM_NOTES[k]
+                lcc_v = lcc_vals_raw[k]
+                gile_v = dim_vals[k]
+                inferred_ratio = lcc_v / max(gile_v, 1e-9)
+                conv_rows.append({
+                    'Dim': k, 'Note': d.note_name,
+                    'LCC raw': round(lcc_v, 3),
+                    'GILE computed': round(gile_v, 3),
+                    'Effective ratio': round(inferred_ratio, 3),
+                    'Activation': note_activation_level(gile_v),
+                })
+            st.dataframe(pd.DataFrame(conv_rows), use_container_width=True, hide_index=True)
+
+        # ── Calibration tool ──────────────────────────────────────────────────
+        st.markdown("---")
+        with st.expander("🔬 Empirical Calibration Tool (URB #649)", expanded=False):
+            st.markdown(
+                "Enter observed (LCC, GILE) pairs from exemplar individuals in this domain. "
+                "The engine will fit the best GL ratio and test whether the relationship is linear."
+            )
+            cal_c1, cal_c2 = st.columns(2)
+            with cal_c1:
+                cal_lcc  = st.number_input("Observed LCC value", 0.0, 1.0, 0.42, 0.01,
+                                           key="cal_lcc")
+                cal_gile = st.number_input("Observed GILE value", 0.0, 1.0, 0.21, 0.01,
+                                           key="cal_gile")
+                cal_btn  = st.button("➕ Add data point", key="cal_add")
+
+            if cal_btn:
+                if "cal_data" not in st.session_state:
+                    st.session_state["cal_data"] = []
+                st.session_state["cal_data"].append((float(cal_lcc), float(cal_gile)))
+
+            cal_data = st.session_state.get("cal_data", [])
+
+            with cal_c2:
+                if cal_data:
+                    import pandas as pd
+                    cal_df = pd.DataFrame(cal_data, columns=["LCC", "GILE"])
+                    cal_df["Inferred ratio"] = cal_df["LCC"] / cal_df["GILE"].clip(lower=1e-9)
+                    st.dataframe(cal_df.round(4), use_container_width=True, hide_index=True)
+                    if st.button("🗑 Clear calibration data", key="cal_clear"):
+                        st.session_state["cal_data"] = []
+                        st.rerun()
+                else:
+                    st.caption("No calibration data yet. Add observed (LCC, GILE) pairs above.")
+
+            if len(cal_data) >= 2:
+                lcc_cal  = [p[0] for p in cal_data]
+                gile_cal = [p[1] for p in cal_data]
+                fitted_ratio = fit_gl_ratio_linear(lcc_cal, gile_cal)
+                lt = linearity_test(lcc_cal, gile_cal, fitted_ratio)
+
+                st.markdown(f"**Fitted GL ratio: {fitted_ratio:.3f}**  "
+                            f"({describe_ratio(fitted_ratio)})")
+                st.markdown(f"**Linearity test:** {lt['conclusion']}")
+
+                cal_cols = st.columns(4)
+                cal_cols[0].metric("R²", f"{lt['r_squared']:.4f}")
+                cal_cols[1].metric("RMSE (linear)", f"{lt['rmse_linear']:.4f}")
+                cal_cols[2].metric("RMSE (power)", f"{lt['rmse_power']:.4f}")
+                cal_cols[3].metric("Power α", f"{lt['power_alpha']:.3f}")
+
+                # Plot calibration scatter vs fit
+                fig_cal = go.Figure()
+                lcc_plot = np.linspace(0, 1, 200)
+                gile_plot_fit = apply_transform_array(lcc_plot, fitted_ratio,
+                                                      GLTransform.LINEAR)
+                fig_cal.add_trace(go.Scatter(x=lcc_plot, y=gile_plot_fit,
+                                             mode='lines',
+                                             line=dict(color='#aa44ff', width=2),
+                                             name='Linear fit'))
+                if lt['power_alpha'] != 1.0:
+                    gile_plot_pw = apply_transform_array(
+                        lcc_plot, fitted_ratio, GLTransform.POWER,
+                        alpha=lt['power_alpha'])
+                    fig_cal.add_trace(go.Scatter(x=lcc_plot, y=gile_plot_pw,
+                                                 mode='lines',
+                                                 line=dict(color='#ff9d00', width=2,
+                                                           dash='dash'),
+                                                 name=f'Power fit (α={lt["power_alpha"]:.2f})'))
+                fig_cal.add_trace(go.Scatter(
+                    x=lcc_cal, y=gile_cal,
+                    mode='markers',
+                    marker=dict(size=10, color='#00ff99',
+                                line=dict(width=1, color='white')),
+                    name='Observed pairs',
+                ))
+                fig_cal.update_layout(
+                    height=220,
+                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                    font=dict(color='white'),
+                    xaxis=dict(title='LCC', range=[0,1],
+                               gridcolor='rgba(100,100,150,0.2)'),
+                    yaxis=dict(title='GILE', range=[0,1],
+                               gridcolor='rgba(100,100,150,0.2)'),
+                    legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+                    margin=dict(l=50, r=20, t=20, b=40),
+                    title=dict(text="Calibration: Observed vs Fitted",
+                               font=dict(color='white', size=12)),
+                )
+                st.plotly_chart(fig_cal, use_container_width=True)
+
+                if len(cal_data) >= 3:
+                    tf_best, ratio_best, alpha_best, k_best, rmse_best = best_fit_transform(
+                        lcc_cal, gile_cal
+                    )
+                    st.success(
+                        f"Best-fit transform: **{tf_best.value}** "
+                        f"(ratio={ratio_best:.2f}, α={alpha_best:.2f}, "
+                        f"k={k_best:.1f}, RMSE={rmse_best:.4f})"
+                    )
+
+        st.markdown("---")
+
+    else:
+        # ── Direct GILE mode sliders ───────────────────────────────────────────
+        st.markdown("### Set GILE Dimension Values")
+        domain_spec = None
+
+    # ── Standard GILE sliders (always shown in Direct mode; shown as computed in LCC mode) ──
+    if harm_mode.startswith("🎼"):
+        gile_col, hem_col = st.columns(2)
+        dim_vals: dict = {}
+        with gile_col:
+            st.markdown("**GILE — Inner BOK Loops**")
+            for key in ['G', 'I', 'L', 'E']:
+                d = DIM_NOTES[key]
+                dim_vals[key] = st.slider(
+                    f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
+                    0.0, 1.0, 0.5, 0.01, key=f"harm_{key}",
+                    help=d.description,
+                )
+        with hem_col:
+            st.markdown("**HEM — Outer BOK Loops**")
+            for key in ['D1', 'D2', 'D3', 'D4']:
+                d = DIM_NOTES[key]
+                dim_vals[key] = st.slider(
+                    f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
+                    0.0, 1.0, 0.3, 0.01, key=f"harm_{key}",
+                    help=d.description,
+                )
 
     # ── Detect chord ──────────────────────────────────────────────────────────
     best_chord, chord_dims, active_dims = detect_chord(dim_vals)
