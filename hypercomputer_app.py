@@ -1892,265 +1892,264 @@ with tab8:
     results = st.session_state.get("test_results", None)
     if not results:
         st.info("Press **▶ Run All Tests** to execute the test suite.")
-        st.stop()
 
-    st.markdown("---")
+    if results:
+        import pandas as pd
+        st.markdown("---")
 
-    # ═══ Summary scorecard ════════════════════════════════════════════════════
-    smry = summarize(results)
-    sc_cols = st.columns(4)
-    sc_cols[0].metric("Tests Passed",  f"{smry['passed']}/{smry['total']}")
-    sc_cols[1].metric("Pass Rate",     f"{smry['pass_rate']:.0%}")
-    sc_cols[2].metric("Mean Score",    f"{smry['mean_score']:.3f}")
-    sc_cols[3].metric("Tests Failed",  str(smry['failed']),
-                      delta_color="inverse",
-                      delta=f"−{smry['failed']}" if smry['failed'] else "none")
-    st.markdown("---")
+        # ═══ Summary scorecard ═══════════════════════════════════════════════
+        smry = summarize(results)
+        sc_cols = st.columns(4)
+        sc_cols[0].metric("Tests Passed",  f"{smry['passed']}/{smry['total']}")
+        sc_cols[1].metric("Pass Rate",     f"{smry['pass_rate']:.0%}")
+        sc_cols[2].metric("Mean Score",    f"{smry['mean_score']:.3f}")
+        sc_cols[3].metric("Tests Failed",  str(smry['failed']),
+                          delta_color="inverse",
+                          delta=f"−{smry['failed']}" if smry['failed'] else "none")
+        st.markdown("---")
 
-    import pandas as pd
-
-    for res in results:
-        badge = "✅ PASS" if res.passed else "❌ FAIL"
-        badge_col = PASS_COLOR if res.passed else FAIL_COLOR
-        with st.expander(
-            f"{badge}  **{res.test_id}: {res.name}** — score {res.score:.3f}",
-            expanded=not res.passed,
-        ):
-            st.markdown(f"**Hypothesis:** {res.hypothesis}")
-            st.markdown(
-                f"<p style='color:{badge_col};font-weight:bold;'>{res.verdict}</p>",
-                unsafe_allow_html=True,
-            )
-            st.markdown("**Detailed metrics:**")
-            # Flatten details for table display
-            flat_rows = []
-            for k, v in res.details.items():
-                if isinstance(v, dict):
-                    flat_rows.append({'Metric': k, 'Value': '(see sub-table below)'})
-                else:
-                    flat_rows.append({'Metric': k, 'Value': str(v)})
-            st.dataframe(pd.DataFrame(flat_rows), use_container_width=True,
-                         hide_index=True, height=min(len(flat_rows) * 36 + 40, 360))
-
-            # ── T1 plot: accuracy bar chart ───────────────────────────────────
-            if res.test_id == 'T1' and 'per_transform' in res.details:
-                pt = res.details['per_transform']
-                fig_t1 = go.Figure(go.Bar(
-                    x=list(pt.keys()),
-                    y=[v['accuracy'] for v in pt.values()],
-                    marker_color=[PASS_COLOR if v['accuracy'] >= 0.70
-                                  else FAIL_COLOR for v in pt.values()],
-                    text=[f"{v['accuracy']:.0%}" for v in pt.values()],
-                    textposition='outside',
-                ))
-                fig_t1.add_hline(y=0.70, line_dash='dot', line_color=WARN_COLOR,
-                                 annotation_text='70% threshold',
-                                 annotation_font_color=WARN_COLOR)
-                fig_t1.update_layout(
-                    height=280, yaxis=dict(range=[0, 1.05], title='Identification Accuracy'),
-                    xaxis_title='Transform Type', title='T1 — Transform Identification Accuracy',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'), margin=dict(t=40, b=40, l=50, r=20),
+        for res in results:
+            badge = "✅ PASS" if res.passed else "❌ FAIL"
+            badge_col = PASS_COLOR if res.passed else FAIL_COLOR
+            with st.expander(
+                f"{badge}  **{res.test_id}: {res.name}** — score {res.score:.3f}",
+                expanded=not res.passed,
+            ):
+                st.markdown(f"**Hypothesis:** {res.hypothesis}")
+                st.markdown(
+                    f"<p style='color:{badge_col};font-weight:bold;'>{res.verdict}</p>",
+                    unsafe_allow_html=True,
                 )
-                st.plotly_chart(fig_t1, use_container_width=True)
+                st.markdown("**Detailed metrics:**")
+                # Flatten details for table display
+                flat_rows = []
+                for k, v in res.details.items():
+                    if isinstance(v, dict):
+                        flat_rows.append({'Metric': k, 'Value': '(see sub-table below)'})
+                    else:
+                        flat_rows.append({'Metric': k, 'Value': str(v)})
+                st.dataframe(pd.DataFrame(flat_rows), use_container_width=True,
+                             hide_index=True, height=min(len(flat_rows) * 36 + 40, 360))
 
-            # ── T2 plot: bias curves ──────────────────────────────────────────
-            if res.test_id == 'T2' and res.data:
-                d = res.data
-                fig_t2 = go.Figure()
-                fig_t2.add_trace(go.Scatter(
-                    x=d['lcc_obs'], y=d['gile_obs'], mode='markers',
-                    marker=dict(size=6, color='#00ff99',
-                                line=dict(width=0.5, color='white')),
-                    name='Observed',
-                ))
-                fig_t2.add_trace(go.Scatter(
-                    x=d['lcc_grid'], y=d['pred_lin'], mode='lines',
-                    line=dict(color='#ff4444', width=2), name='Linear fit (biased)',
-                ))
-                fig_t2.add_trace(go.Scatter(
-                    x=d['lcc_grid'], y=d['pred_pow'], mode='lines',
-                    line=dict(color='#44aaff', width=2.5), name='Power fit (correct)',
-                ))
-                # Bias shading
-                lcc_g = np.array(d['lcc_grid'])
-                pred_lin_arr = np.array(d['pred_lin'])
-                pred_pow_arr = np.array(d['pred_pow'])
-                fig_t2.add_trace(go.Scatter(
-                    x=np.concatenate([lcc_g, lcc_g[::-1]]),
-                    y=np.concatenate([pred_lin_arr, pred_pow_arr[::-1]]),
-                    fill='toself',
-                    fillcolor='rgba(255,100,100,0.12)',
-                    line=dict(color='rgba(0,0,0,0)'),
-                    name='Linear bias region',
-                ))
-                fig_t2.update_layout(
-                    height=300, title='T2 — Linear Assumption Bias (Power-Law Ground Truth)',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='LCC value', gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='GILE value', gridcolor='rgba(100,100,150,0.2)'),
-                    legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
-                    margin=dict(t=40, b=40, l=50, r=20),
-                )
-                st.plotly_chart(fig_t2, use_container_width=True)
+                # ── T1 plot: accuracy bar chart ───────────────────────────────────
+                if res.test_id == 'T1' and 'per_transform' in res.details:
+                    pt = res.details['per_transform']
+                    fig_t1 = go.Figure(go.Bar(
+                        x=list(pt.keys()),
+                        y=[v['accuracy'] for v in pt.values()],
+                        marker_color=[PASS_COLOR if v['accuracy'] >= 0.70
+                                      else FAIL_COLOR for v in pt.values()],
+                        text=[f"{v['accuracy']:.0%}" for v in pt.values()],
+                        textposition='outside',
+                    ))
+                    fig_t1.add_hline(y=0.70, line_dash='dot', line_color=WARN_COLOR,
+                                     annotation_text='70% threshold',
+                                     annotation_font_color=WARN_COLOR)
+                    fig_t1.update_layout(
+                        height=280, yaxis=dict(range=[0, 1.05], title='Identification Accuracy'),
+                        xaxis_title='Transform Type', title='T1 — Transform Identification Accuracy',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'), margin=dict(t=40, b=40, l=50, r=20),
+                    )
+                    st.plotly_chart(fig_t1, use_container_width=True)
 
-            # ── T3 plot: convergence curve ────────────────────────────────────
-            if res.test_id == 'T3' and res.data:
-                d = res.data
-                fig_t3 = go.Figure()
-                fig_t3.add_trace(go.Scatter(
-                    x=d['n_vals'], y=d['ratio_curve'], mode='lines+markers',
-                    line=dict(color='#aa44ff', width=2),
-                    marker=dict(size=5), name='Fitted ratio',
-                ))
-                fig_t3.add_hline(y=d['true_ratio'], line_dash='dash', line_color='#00ff99',
-                                 annotation_text=f"True ratio = {d['true_ratio']}",
-                                 annotation_font_color='#00ff99')
-                fig_t3.add_hline(y=d['true_ratio'] * (1 + d['target_pct']),
-                                 line_dash='dot', line_color=WARN_COLOR,
-                                 annotation_text=f"+{int(d['target_pct']*100)}%",
-                                 annotation_font_color=WARN_COLOR)
-                fig_t3.add_hline(y=d['true_ratio'] * (1 - d['target_pct']),
-                                 line_dash='dot', line_color=WARN_COLOR,
-                                 annotation_text=f"-{int(d['target_pct']*100)}%",
-                                 annotation_font_color=WARN_COLOR)
-                fig_t3.update_layout(
-                    height=280, title='T3 — GL Ratio Convergence Rate',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='n data points', gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='Fitted GL Ratio', gridcolor='rgba(100,100,150,0.2)'),
-                    legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
-                    margin=dict(t=40, b=40, l=60, r=20),
-                )
-                st.plotly_chart(fig_t3, use_container_width=True)
+                # ── T2 plot: bias curves ──────────────────────────────────────────
+                if res.test_id == 'T2' and res.data:
+                    d = res.data
+                    fig_t2 = go.Figure()
+                    fig_t2.add_trace(go.Scatter(
+                        x=d['lcc_obs'], y=d['gile_obs'], mode='markers',
+                        marker=dict(size=6, color='#00ff99',
+                                    line=dict(width=0.5, color='white')),
+                        name='Observed',
+                    ))
+                    fig_t2.add_trace(go.Scatter(
+                        x=d['lcc_grid'], y=d['pred_lin'], mode='lines',
+                        line=dict(color='#ff4444', width=2), name='Linear fit (biased)',
+                    ))
+                    fig_t2.add_trace(go.Scatter(
+                        x=d['lcc_grid'], y=d['pred_pow'], mode='lines',
+                        line=dict(color='#44aaff', width=2.5), name='Power fit (correct)',
+                    ))
+                    # Bias shading
+                    lcc_g = np.array(d['lcc_grid'])
+                    pred_lin_arr = np.array(d['pred_lin'])
+                    pred_pow_arr = np.array(d['pred_pow'])
+                    fig_t2.add_trace(go.Scatter(
+                        x=np.concatenate([lcc_g, lcc_g[::-1]]),
+                        y=np.concatenate([pred_lin_arr, pred_pow_arr[::-1]]),
+                        fill='toself',
+                        fillcolor='rgba(255,100,100,0.12)',
+                        line=dict(color='rgba(0,0,0,0)'),
+                        name='Linear bias region',
+                    ))
+                    fig_t2.update_layout(
+                        height=300, title='T2 — Linear Assumption Bias (Power-Law Ground Truth)',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='LCC value', gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='GILE value', gridcolor='rgba(100,100,150,0.2)'),
+                        legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+                        margin=dict(t=40, b=40, l=50, r=20),
+                    )
+                    st.plotly_chart(fig_t2, use_container_width=True)
 
-                # Percentage error curve
-                fig_t3e = go.Figure()
-                fig_t3e.add_trace(go.Scatter(
-                    x=d['n_vals'], y=[p * 100 for p in d['pct_err_curve']],
-                    mode='lines+markers', line=dict(color='#ff9d00', width=2),
-                    marker=dict(size=5), name='% error',
-                ))
-                fig_t3e.add_hline(y=d['target_pct'] * 100, line_dash='dot',
-                                  line_color=PASS_COLOR,
-                                  annotation_text=f"Target: {int(d['target_pct']*100)}%",
-                                  annotation_font_color=PASS_COLOR)
-                fig_t3e.add_hline(y=5, line_dash='dot', line_color='#00ffff',
-                                  annotation_text="5%", annotation_font_color='#00ffff')
-                fig_t3e.update_layout(
-                    height=220, title='T3 — Ratio Estimation Error vs Sample Size',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='n data points', gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='% error from true ratio',
-                               gridcolor='rgba(100,100,150,0.2)'),
-                    margin=dict(t=40, b=40, l=60, r=20),
-                )
-                st.plotly_chart(fig_t3e, use_container_width=True)
+                # ── T3 plot: convergence curve ────────────────────────────────────
+                if res.test_id == 'T3' and res.data:
+                    d = res.data
+                    fig_t3 = go.Figure()
+                    fig_t3.add_trace(go.Scatter(
+                        x=d['n_vals'], y=d['ratio_curve'], mode='lines+markers',
+                        line=dict(color='#aa44ff', width=2),
+                        marker=dict(size=5), name='Fitted ratio',
+                    ))
+                    fig_t3.add_hline(y=d['true_ratio'], line_dash='dash', line_color='#00ff99',
+                                     annotation_text=f"True ratio = {d['true_ratio']}",
+                                     annotation_font_color='#00ff99')
+                    fig_t3.add_hline(y=d['true_ratio'] * (1 + d['target_pct']),
+                                     line_dash='dot', line_color=WARN_COLOR,
+                                     annotation_text=f"+{int(d['target_pct']*100)}%",
+                                     annotation_font_color=WARN_COLOR)
+                    fig_t3.add_hline(y=d['true_ratio'] * (1 - d['target_pct']),
+                                     line_dash='dot', line_color=WARN_COLOR,
+                                     annotation_text=f"-{int(d['target_pct']*100)}%",
+                                     annotation_font_color=WARN_COLOR)
+                    fig_t3.update_layout(
+                        height=280, title='T3 — GL Ratio Convergence Rate',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='n data points', gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='Fitted GL Ratio', gridcolor='rgba(100,100,150,0.2)'),
+                        legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+                        margin=dict(t=40, b=40, l=60, r=20),
+                    )
+                    st.plotly_chart(fig_t3, use_container_width=True)
 
-            # ── T4 plot: sigmoid alignment ────────────────────────────────────
-            if res.test_id == 'T4' and res.data:
-                d = res.data
-                lcc_g = np.linspace(0, 1, 300)
-                from gile_lcc_ratio_engine import GLTransform as GLT, apply_transform_array as ata
-                sig_true = ata(lcc_g, d['fitted_ratio'], GLT.SIGMOID,
-                               k=10.0, mu=d['true_mu'])
-                sig_fit  = ata(lcc_g, d['fitted_ratio'], GLT.SIGMOID,
-                               k=d['recovered_k'], mu=d['recovered_mu'])
-                fig_t4 = go.Figure()
-                fig_t4.add_trace(go.Scatter(
-                    x=d['lcc_obs'], y=d['gile_obs'], mode='markers',
-                    marker=dict(size=6, color='#00ff99',
-                                line=dict(width=0.5, color='white')),
-                    name='Observed',
-                ))
-                fig_t4.add_trace(go.Scatter(
-                    x=lcc_g.tolist(), y=sig_true.tolist(), mode='lines',
-                    line=dict(color='rgba(100,100,200,0.6)', width=1.5, dash='dash'),
-                    name=f'True (μ = C_TI = {d["true_mu"]:.4f})',
-                ))
-                fig_t4.add_trace(go.Scatter(
-                    x=lcc_g.tolist(), y=sig_fit.tolist(), mode='lines',
-                    line=dict(color='#ff9d00', width=2.5),
-                    name=f'Fitted (μ = {d["recovered_mu"]:.4f})',
-                ))
-                fig_t4.add_vline(x=d['true_mu'], line_dash='dot', line_color='#00ffff',
-                                 annotation_text=f'C_TI={d["true_mu"]:.4f}',
-                                 annotation_font_color='#00ffff')
-                fig_t4.add_vline(x=d['recovered_mu'], line_dash='dot', line_color='#ff9d00',
-                                 annotation_text=f'μ̂={d["recovered_mu"]:.4f}',
-                                 annotation_font_color='#ff9d00')
-                fig_t4.update_layout(
-                    height=300, title='T4 — Radiant Threshold Alignment (Spiritual Domain Sigmoid)',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='LCC value', gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='GILE value', gridcolor='rgba(100,100,150,0.2)'),
-                    legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
-                    margin=dict(t=40, b=40, l=50, r=20),
-                )
-                st.plotly_chart(fig_t4, use_container_width=True)
+                    # Percentage error curve
+                    fig_t3e = go.Figure()
+                    fig_t3e.add_trace(go.Scatter(
+                        x=d['n_vals'], y=[p * 100 for p in d['pct_err_curve']],
+                        mode='lines+markers', line=dict(color='#ff9d00', width=2),
+                        marker=dict(size=5), name='% error',
+                    ))
+                    fig_t3e.add_hline(y=d['target_pct'] * 100, line_dash='dot',
+                                      line_color=PASS_COLOR,
+                                      annotation_text=f"Target: {int(d['target_pct']*100)}%",
+                                      annotation_font_color=PASS_COLOR)
+                    fig_t3e.add_hline(y=5, line_dash='dot', line_color='#00ffff',
+                                      annotation_text="5%", annotation_font_color='#00ffff')
+                    fig_t3e.update_layout(
+                        height=220, title='T3 — Ratio Estimation Error vs Sample Size',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='n data points', gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='% error from true ratio',
+                                   gridcolor='rgba(100,100,150,0.2)'),
+                        margin=dict(t=40, b=40, l=60, r=20),
+                    )
+                    st.plotly_chart(fig_t3e, use_container_width=True)
 
-            # ── T5 plot: domain discriminability bar chart ────────────────────
-            if res.test_id == 'T5' and res.data:
-                d = res.data
-                fig_t5 = go.Figure()
-                fig_t5.add_trace(go.Bar(
-                    name='True GL Ratio',
-                    x=d['domain_names'], y=d['true_ratios'],
-                    marker_color='rgba(0,200,255,0.6)',
-                    text=[f"{v:.2f}" for v in d['true_ratios']],
-                    textposition='outside',
-                ))
-                fig_t5.add_trace(go.Bar(
-                    name='Fitted GL Ratio',
-                    x=d['domain_names'], y=d['fitted_ratios'],
-                    marker_color='rgba(255,150,0,0.8)',
-                    text=[f"{v:.2f}" for v in d['fitted_ratios']],
-                    textposition='outside',
-                ))
-                fig_t5.update_layout(
-                    height=320, barmode='group',
-                    title='T5 — Domain GL Ratio Discriminability (True vs Fitted)',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='Domain', tickangle=-30,
-                               gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='GL Ratio', gridcolor='rgba(100,100,150,0.2)'),
-                    legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
-                    margin=dict(t=40, b=80, l=60, r=20),
-                )
-                st.plotly_chart(fig_t5, use_container_width=True)
+                # ── T4 plot: sigmoid alignment ────────────────────────────────────
+                if res.test_id == 'T4' and res.data:
+                    d = res.data
+                    lcc_g = np.linspace(0, 1, 300)
+                    from gile_lcc_ratio_engine import GLTransform as GLT, apply_transform_array as ata
+                    sig_true = ata(lcc_g, d['fitted_ratio'], GLT.SIGMOID,
+                                   k=10.0, mu=d['true_mu'])
+                    sig_fit  = ata(lcc_g, d['fitted_ratio'], GLT.SIGMOID,
+                                   k=d['recovered_k'], mu=d['recovered_mu'])
+                    fig_t4 = go.Figure()
+                    fig_t4.add_trace(go.Scatter(
+                        x=d['lcc_obs'], y=d['gile_obs'], mode='markers',
+                        marker=dict(size=6, color='#00ff99',
+                                    line=dict(width=0.5, color='white')),
+                        name='Observed',
+                    ))
+                    fig_t4.add_trace(go.Scatter(
+                        x=lcc_g.tolist(), y=sig_true.tolist(), mode='lines',
+                        line=dict(color='rgba(100,100,200,0.6)', width=1.5, dash='dash'),
+                        name=f'True (μ = C_TI = {d["true_mu"]:.4f})',
+                    ))
+                    fig_t4.add_trace(go.Scatter(
+                        x=lcc_g.tolist(), y=sig_fit.tolist(), mode='lines',
+                        line=dict(color='#ff9d00', width=2.5),
+                        name=f'Fitted (μ = {d["recovered_mu"]:.4f})',
+                    ))
+                    fig_t4.add_vline(x=d['true_mu'], line_dash='dot', line_color='#00ffff',
+                                     annotation_text=f'C_TI={d["true_mu"]:.4f}',
+                                     annotation_font_color='#00ffff')
+                    fig_t4.add_vline(x=d['recovered_mu'], line_dash='dot', line_color='#ff9d00',
+                                     annotation_text=f'μ̂={d["recovered_mu"]:.4f}',
+                                     annotation_font_color='#ff9d00')
+                    fig_t4.update_layout(
+                        height=300, title='T4 — Radiant Threshold Alignment (Spiritual Domain Sigmoid)',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='LCC value', gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='GILE value', gridcolor='rgba(100,100,150,0.2)'),
+                        legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+                        margin=dict(t=40, b=40, l=50, r=20),
+                    )
+                    st.plotly_chart(fig_t4, use_container_width=True)
 
-            # ── T6 plot: CV RMSE by domain ────────────────────────────────────
-            if res.test_id == 'T6' and res.data:
-                d = res.data
-                colors = [PASS_COLOR if p else FAIL_COLOR for p in d['pass_flags']]
-                fig_t6 = go.Figure()
-                fig_t6.add_trace(go.Bar(
-                    x=d['domain_names'], y=d['mean_rmses'],
-                    error_y=dict(type='data', array=d['std_rmses'], visible=True,
-                                 color='rgba(255,255,255,0.5)'),
-                    marker_color=colors,
-                    text=[f"{v:.4f}" for v in d['mean_rmses']],
-                    textposition='outside',
-                ))
-                fig_t6.add_hline(y=0.10, line_dash='dash', line_color=WARN_COLOR,
-                                 annotation_text='0.10 threshold',
-                                 annotation_font_color=WARN_COLOR)
-                fig_t6.update_layout(
-                    height=300,
-                    title=f'T6 — {tp_k_folds}-Fold CV RMSE by Domain',
-                    paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
-                    font=dict(color='white'),
-                    xaxis=dict(title='Domain', tickangle=-30,
-                               gridcolor='rgba(100,100,150,0.2)'),
-                    yaxis=dict(title='Mean CV RMSE', gridcolor='rgba(100,100,150,0.2)'),
-                    margin=dict(t=40, b=80, l=60, r=20),
-                )
-                st.plotly_chart(fig_t6, use_container_width=True)
+                # ── T5 plot: domain discriminability bar chart ────────────────────
+                if res.test_id == 'T5' and res.data:
+                    d = res.data
+                    fig_t5 = go.Figure()
+                    fig_t5.add_trace(go.Bar(
+                        name='True GL Ratio',
+                        x=d['domain_names'], y=d['true_ratios'],
+                        marker_color='rgba(0,200,255,0.6)',
+                        text=[f"{v:.2f}" for v in d['true_ratios']],
+                        textposition='outside',
+                    ))
+                    fig_t5.add_trace(go.Bar(
+                        name='Fitted GL Ratio',
+                        x=d['domain_names'], y=d['fitted_ratios'],
+                        marker_color='rgba(255,150,0,0.8)',
+                        text=[f"{v:.2f}" for v in d['fitted_ratios']],
+                        textposition='outside',
+                    ))
+                    fig_t5.update_layout(
+                        height=320, barmode='group',
+                        title='T5 — Domain GL Ratio Discriminability (True vs Fitted)',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='Domain', tickangle=-30,
+                                   gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='GL Ratio', gridcolor='rgba(100,100,150,0.2)'),
+                        legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+                        margin=dict(t=40, b=80, l=60, r=20),
+                    )
+                    st.plotly_chart(fig_t5, use_container_width=True)
+
+                # ── T6 plot: CV RMSE by domain ────────────────────────────────────
+                if res.test_id == 'T6' and res.data:
+                    d = res.data
+                    colors = [PASS_COLOR if p else FAIL_COLOR for p in d['pass_flags']]
+                    fig_t6 = go.Figure()
+                    fig_t6.add_trace(go.Bar(
+                        x=d['domain_names'], y=d['mean_rmses'],
+                        error_y=dict(type='data', array=d['std_rmses'], visible=True,
+                                     color='rgba(255,255,255,0.5)'),
+                        marker_color=colors,
+                        text=[f"{v:.4f}" for v in d['mean_rmses']],
+                        textposition='outside',
+                    ))
+                    fig_t6.add_hline(y=0.10, line_dash='dash', line_color=WARN_COLOR,
+                                     annotation_text='0.10 threshold',
+                                     annotation_font_color=WARN_COLOR)
+                    fig_t6.update_layout(
+                        height=300,
+                        title=f'T6 — {tp_k_folds}-Fold CV RMSE by Domain',
+                        paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(10,10,25,1)',
+                        font=dict(color='white'),
+                        xaxis=dict(title='Domain', tickangle=-30,
+                                   gridcolor='rgba(100,100,150,0.2)'),
+                        yaxis=dict(title='Mean CV RMSE', gridcolor='rgba(100,100,150,0.2)'),
+                        margin=dict(t=40, b=80, l=60, r=20),
+                    )
+                    st.plotly_chart(fig_t6, use_container_width=True)
 
     # ── Real-world data collection protocol ───────────────────────────────────
     st.markdown("---")
