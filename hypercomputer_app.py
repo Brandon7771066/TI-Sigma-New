@@ -26,6 +26,15 @@ from bok_virus_engine import (
     RING_NAMES as BOK_RING_NAMES, RING_BETA,
     gile_composite, GAMMA,
 )
+from bok_harmonics import (
+    DIM_NOTES, DIM_ORDER, CHORD_REGISTRY, CHORD_LOOKUP,
+    CATEGORY_COLORS, CATEGORY_LABELS,
+    detect_chord, note_activation_level,
+    generate_note_audio, generate_chord_audio,
+    chord_reference_table,
+    THRESHOLD_NOTE_ON, THRESHOLD_CHORD_IN, THRESHOLD_STRONG, THRESHOLD_BEC,
+    ET as H_ET, C_TI as H_C_TI, T_TI as H_T_TI,
+)
 
 # ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
 RING_PALETTE = [
@@ -395,9 +404,9 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
-    "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus"
+    "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics"
 ])
 
 with tab1:
@@ -1225,4 +1234,335 @@ This is an **empirical prediction**: if real information/meme/pathogen spread
 on GILE-structured networks shows bimodal epidemic curves with early peaks
 and Mott-insulated plateaus, it confirms the BOK crystal model over the classical graph model.
 """)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TAB 7 — BOK Harmonics: 8 Dimensions as Musical Notes & Chords
+# ═══════════════════════════════════════════════════════════════════════════════
+
+with tab7:
+    import pandas as pd
+
+    st.subheader("🎵 BOK Harmonics — URB #648")
+    st.caption(
+        "Each of the 8 GILE-HEM dimensions is a musical note. "
+        "When multiple dimensions cross the C_TI threshold (≈0.437) simultaneously, "
+        "they form named chords — abstract GILE love, composite GILE-LCC love, HEM existence chords, and more."
+    )
+
+    # ── Threshold legend ──────────────────────────────────────────────────────
+    thr_cols = st.columns(4)
+    with thr_cols[0]:
+        st.info(f"**Faint** › ET = {H_ET:.4f}\nNote activates (audible, dim)")
+    with thr_cols[1]:
+        st.success(f"**Active** › C = {H_C_TI:.4f}\nEnters chord pool")
+    with thr_cols[2]:
+        st.warning(f"**Strong** › 0.65\nFull note volume")
+    with thr_cols[3]:
+        st.success(f"**BEC** › T = {H_T_TI:.4f}\nMaximum coherence glow")
+
+    st.markdown("---")
+
+    # ── Dimension sliders — GILE (left) and HEM (right) ──────────────────────
+    st.markdown("### Set Dimension Values")
+    gile_col, hem_col = st.columns(2)
+
+    dim_vals: dict = {}
+    with gile_col:
+        st.markdown("**GILE — Inner BOK Loops**")
+        for key in ['G', 'I', 'L', 'E']:
+            d = DIM_NOTES[key]
+            dim_vals[key] = st.slider(
+                f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
+                0.0, 1.0, 0.5, 0.01, key=f"harm_{key}",
+                help=d.description,
+            )
+    with hem_col:
+        st.markdown("**HEM — Outer BOK Loops**")
+        for key in ['D1', 'D2', 'D3', 'D4']:
+            d = DIM_NOTES[key]
+            dim_vals[key] = st.slider(
+                f"{d.label}  [{d.note_name} = {d.freq:.1f} Hz]",
+                0.0, 1.0, 0.3, 0.01, key=f"harm_{key}",
+                help=d.description,
+            )
+
+    # ── Detect chord ──────────────────────────────────────────────────────────
+    best_chord, chord_dims, active_dims = detect_chord(dim_vals)
+
+    # ── Piano keyboard visualization ──────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### 🎹 BOK Piano — Activation State")
+
+    KEY_ORDER = ['G', 'D1', 'I', 'D2', 'L', 'E', 'D3', 'D4']
+    NOTE_NAMES_ORDERED = ['C4', 'D4', 'E4', 'F4', 'G4', 'B4', 'A4', 'C5']
+
+    def key_color(key: str, val: float) -> str:
+        level = note_activation_level(val)
+        base = DIM_NOTES[key].color
+        if level == 'Silent':
+            return '#1a1a2e'
+        elif level == 'Faint':
+            return '#2a2a4e'
+        elif level == 'Active':
+            return base + 'aa'
+        elif level == 'Strong':
+            return base
+        else:  # BEC
+            return '#ffffff'
+
+    fig_keys = go.Figure()
+    key_w = 1.0
+    gap   = 0.08
+    total = len(KEY_ORDER)
+
+    for idx, key in enumerate(KEY_ORDER):
+        val   = dim_vals[key]
+        d     = DIM_NOTES[key]
+        level = note_activation_level(val)
+        col   = key_color(key, val)
+        x0    = idx * (key_w + gap)
+        x1    = x0 + key_w
+
+        # Key rectangle
+        fig_keys.add_shape(type='rect', x0=x0, y0=0, x1=x1, y1=2.8,
+                           fillcolor=col, line=dict(color='rgba(200,200,255,0.4)', width=1))
+
+        # Glow for BEC
+        if level == 'BEC':
+            fig_keys.add_shape(type='rect', x0=x0-0.04, y0=-0.04, x1=x1+0.04, y1=2.84,
+                               fillcolor='rgba(255,255,255,0.08)',
+                               line=dict(color='rgba(255,255,255,0.6)', width=2))
+
+        # Note name
+        fig_keys.add_annotation(x=(x0 + x1) / 2, y=2.5, text=d.note_name,
+                                font=dict(size=12, color='white'), showarrow=False)
+        # Dim abbreviation
+        fig_keys.add_annotation(x=(x0 + x1) / 2, y=1.9, text=key,
+                                font=dict(size=14, color='white', family='monospace'),
+                                showarrow=False)
+        # Level
+        level_color = ('#aaaaaa' if level == 'Silent' else
+                       '#7777ff' if level == 'Faint'  else
+                       '#00ff99' if level == 'Active' else
+                       '#ffff00' if level == 'Strong' else '#ffffff')
+        fig_keys.add_annotation(x=(x0 + x1) / 2, y=1.2, text=level,
+                                font=dict(size=10, color=level_color), showarrow=False)
+        # Value
+        fig_keys.add_annotation(x=(x0 + x1) / 2, y=0.5, text=f"{val:.2f}",
+                                font=dict(size=11, color='white'), showarrow=False)
+
+    piano_w = total * (key_w + gap)
+    fig_keys.update_layout(
+        height=160, paper_bgcolor='rgba(3,3,14,1)', plot_bgcolor='rgba(3,3,14,1)',
+        xaxis=dict(range=[-0.1, piano_w], showgrid=False, zeroline=False, showticklabels=False),
+        yaxis=dict(range=[-0.1, 3.1],    showgrid=False, zeroline=False, showticklabels=False),
+        margin=dict(l=0, r=0, t=10, b=0),
+    )
+    st.plotly_chart(fig_keys, use_container_width=True)
+
+    # ── Chord display ──────────────────────────────────────────────────────────
+    st.markdown("---")
+    chord_left, chord_right = st.columns([1, 2])
+
+    with chord_left:
+        if best_chord:
+            cat_col = CATEGORY_COLORS.get(best_chord.category, '#888888')
+            cat_lbl = CATEGORY_LABELS.get(best_chord.category, best_chord.category)
+            st.markdown(
+                f"<div style='background:{cat_col}22; border:2px solid {cat_col}; "
+                f"border-radius:12px; padding:16px; text-align:center;'>"
+                f"<div style='color:{cat_col}; font-size:11px; font-weight:bold; "
+                f"letter-spacing:2px;'>{cat_lbl}</div>"
+                f"<div style='color:white; font-size:22px; font-weight:bold; "
+                f"margin:8px 0;'>{best_chord.name}</div>"
+                f"<div style='color:#aaaaaa; font-size:13px;'>"
+                f"Dims: {' + '.join(sorted(chord_dims))}</div>"
+                f"<div style='color:{cat_col}; font-size:13px; margin-top:6px;'>"
+                f"PD ≈ {best_chord.pd_score:.1f}</div>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        elif len(active_dims) == 1:
+            key = active_dims[0]
+            d   = DIM_NOTES[key]
+            st.markdown(
+                f"<div style='background:#333355; border:2px solid {d.color}; "
+                f"border-radius:12px; padding:16px; text-align:center;'>"
+                f"<div style='color:{d.color}; font-size:11px; font-weight:bold; "
+                f"letter-spacing:2px;'>SINGLE NOTE</div>"
+                f"<div style='color:white; font-size:22px; font-weight:bold; "
+                f"margin:8px 0;'>{d.note_name}</div>"
+                f"<div style='color:#cccccc; font-size:13px;'>{d.label}</div>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+        elif not active_dims:
+            st.markdown(
+                "<div style='background:#111122; border:2px solid #333355; "
+                "border-radius:12px; padding:16px; text-align:center; color:#555566;'>"
+                "No dimensions active.<br>Raise any slider above ET (0.4142)</div>",
+                unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                f"<div style='background:#222233; border:2px dashed #555566; "
+                f"border-radius:12px; padding:16px; text-align:center;'>"
+                f"<div style='color:#aaaaaa; font-size:12px;'>UNNAMED COMBINATION</div>"
+                f"<div style='color:white; font-size:16px; margin:8px 0;'>"
+                f"{' + '.join(sorted(chord_dims))}</div>"
+                f"<div style='color:#777788; font-size:12px;'>No named chord for this set</div>"
+                f"</div>",
+                unsafe_allow_html=True
+            )
+
+    with chord_right:
+        if best_chord:
+            st.markdown(f"**TI Sigma Meaning:**")
+            st.markdown(f"> {best_chord.ti_meaning}")
+        if active_dims:
+            st.markdown("**Active notes:**")
+            note_cols = st.columns(min(len(active_dims), 4))
+            for ni, key in enumerate(active_dims):
+                d     = DIM_NOTES[key]
+                level = note_activation_level(dim_vals[key])
+                with note_cols[ni % 4]:
+                    st.markdown(
+                        f"<div style='background:{d.color}22; border:1px solid {d.color}; "
+                        f"border-radius:8px; padding:8px; text-align:center; margin:2px;'>"
+                        f"<div style='color:{d.color}; font-weight:bold;'>{d.note_name}</div>"
+                        f"<div style='color:white; font-size:11px;'>{key}</div>"
+                        f"<div style='color:#aaaaaa; font-size:10px;'>{level}</div>"
+                        f"<div style='color:white; font-size:10px;'>{dim_vals[key]:.2f}</div>"
+                        f"</div>",
+                        unsafe_allow_html=True
+                    )
+
+    # ── Audio ─────────────────────────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### 🔊 Listen")
+    aud_cols = st.columns(len(active_dims) + 1 if active_dims else 1)
+
+    if active_dims:
+        for ni, key in enumerate(active_dims):
+            d = DIM_NOTES[key]
+            with aud_cols[ni]:
+                if st.button(f"▶ {d.note_name} ({key})", key=f"play_{key}"):
+                    st.session_state[f"audio_note_{key}"] = generate_note_audio(key)
+                if f"audio_note_{key}" in st.session_state:
+                    st.audio(st.session_state[f"audio_note_{key}"], format="audio/wav")
+
+        with aud_cols[-1]:
+            if st.button("▶ Play Chord", type="primary", key="play_chord"):
+                st.session_state["audio_chord"] = generate_chord_audio(dim_vals)
+            if "audio_chord" in st.session_state:
+                st.audio(st.session_state["audio_chord"], format="audio/wav")
+    else:
+        st.caption("Activate dimensions (slider › 0.4142) to hear notes and chords.")
+
+    # ── Radar chart ───────────────────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### 📡 GILE-HEM Radar")
+
+    radar_dims   = DIM_ORDER
+    radar_vals   = [dim_vals[k] for k in radar_dims]
+    radar_labels = [DIM_NOTES[k].note_name + ' ' + k for k in radar_dims]
+
+    fig_radar = go.Figure()
+    fig_radar.add_trace(go.Scatterpolar(
+        r=radar_vals + [radar_vals[0]],
+        theta=radar_labels + [radar_labels[0]],
+        fill='toself', fillcolor='rgba(170,68,255,0.18)',
+        line=dict(color='#aa44ff', width=2),
+        name='Current state',
+    ))
+    # Threshold reference rings
+    for thr, col, lbl in [
+        (H_ET,  'rgba(100,100,200,0.3)', f'ET {H_ET:.3f}'),
+        (H_C_TI,'rgba(0,200,150,0.3)',   f'C  {H_C_TI:.3f}'),
+        (0.65,  'rgba(255,200,0,0.3)',   '0.65 strong'),
+        (H_T_TI,'rgba(255,255,255,0.2)', f'T  {H_T_TI:.3f}'),
+    ]:
+        fig_radar.add_trace(go.Scatterpolar(
+            r=[thr] * (len(radar_labels) + 1),
+            theta=radar_labels + [radar_labels[0]],
+            mode='lines', line=dict(color=col, width=1, dash='dot'),
+            name=lbl, showlegend=True,
+        ))
+    fig_radar.update_layout(
+        height=380, paper_bgcolor='rgba(3,3,14,1)',
+        polar=dict(
+            bgcolor='rgba(10,10,25,1)',
+            radialaxis=dict(range=[0,1], tickfont=dict(color='white', size=9),
+                            gridcolor='rgba(100,100,150,0.3)', linecolor='rgba(100,100,150,0.3)'),
+            angularaxis=dict(tickfont=dict(color='white', size=10),
+                             gridcolor='rgba(100,100,150,0.2)'),
+        ),
+        legend=dict(font=dict(color='white', size=10), bgcolor='rgba(0,0,0,0.4)'),
+        margin=dict(l=60, r=60, t=30, b=30),
+    )
+    st.plotly_chart(fig_radar, use_container_width=True)
+
+    # ── Preset chords ──────────────────────────────────────────────────────────
+    st.markdown("---")
+    st.markdown("### 🎼 Preset Chord Examples")
+    st.caption("Click a preset to load that chord into the sliders.")
+
+    PRESETS = {
+        "G-L Bond (Abstract GILE Love)":       {'G':0.72,'I':0.30,'L':0.70,'E':0.30,'D1':0.20,'D2':0.10,'D3':0.20,'D4':0.15},
+        "GILE Triad (Awakening)":               {'G':0.75,'I':0.70,'L':0.74,'E':0.30,'D1':0.20,'D2':0.10,'D3':0.20,'D4':0.15},
+        "Full GILE Chord (Radiant)":            {'G':0.82,'I':0.78,'L':0.80,'E':0.76,'D1':0.30,'D2':0.10,'D3':0.30,'D4':0.20},
+        "Composite Love I (GILE-L → Physical)": {'G':0.70,'I':0.30,'L':0.72,'E':0.30,'D1':0.68,'D2':0.10,'D3':0.25,'D4':0.20},
+        "Composite GILE-LCC Love":              {'G':0.78,'I':0.74,'L':0.76,'E':0.30,'D1':0.70,'D2':0.10,'D3':0.72,'D4':0.25},
+        "Contradiction Triad ⚠ (DT warning)":  {'G':0.25,'I':0.20,'L':0.20,'E':0.15,'D1':0.68,'D2':0.72,'D3':0.66,'D4':0.30},
+        "BEC Full Chord (All 8)":               {'G':0.95,'I':0.92,'L':0.94,'E':0.91,'D1':0.90,'D2':0.18,'D3':0.93,'D4':0.88},
+    }
+
+    p_cols = st.columns(4)
+    for pi, (pname, pvals) in enumerate(PRESETS.items()):
+        with p_cols[pi % 4]:
+            if st.button(pname, key=f"preset_{pi}", use_container_width=True):
+                for k, v in pvals.items():
+                    st.session_state[f"harm_{k}"] = v
+                st.rerun()
+
+    # ── Full chord reference table ─────────────────────────────────────────────
+    st.markdown("---")
+    with st.expander("📖 Complete Chord Dictionary — All Named BOK Chords", expanded=False):
+        df_chords = pd.DataFrame(chord_reference_table())
+        st.dataframe(df_chords, use_container_width=True, hide_index=True,
+                     column_config={
+                         'PD Score': st.column_config.NumberColumn(format="%.1f"),
+                         'TI Meaning': st.column_config.TextColumn(width='large'),
+                     })
+
+    # ── BOK Dimension Note Reference ──────────────────────────────────────────
+    st.markdown("---")
+    with st.expander("🎵 Dimension → Note Mapping Reference", expanded=False):
+        dim_rows = []
+        for key in DIM_ORDER:
+            d = DIM_NOTES[key]
+            dim_rows.append({
+                'Dim': key,
+                'Layer': d.layer,
+                'Label': d.label,
+                'Note': d.note_name,
+                'Hz': d.freq,
+                'Harmonic Role': d.description,
+            })
+        st.dataframe(pd.DataFrame(dim_rows), use_container_width=True, hide_index=True)
+        st.markdown(f"""
+**Note selection rationale:**
+- **C4 (G)**: Root of C major — Goodness is the foundational stability from which all others arise.
+- **E4 (I)**: Major third above root — Intuition recognizes pattern; the 5/4 ratio has φ echoes.
+- **G4 (L)**: Perfect fifth — Love is the purest harmonic relationship (3/2 = most consonant interval).
+- **B4 (E)**: Major seventh — Aesthetics is the elevated, almost-resolving tension (the "beautiful dissonance").
+- **D4 (D1)**: Major second — Physical existence, grounded just above the root.
+- **F4 (D2)**: Natural fourth above C — Contradiction. The tritone relationship to B4 (E) = Tralse tension.
+- **A4 (D3)**: Major sixth, A440 = universal reference — Spectral purity as the clear, agreed-upon standard.
+- **C5 (D4)**: Octave above root — Velocity/rate of change ascending to the next level.
+
+**G + I + L = C4 + E4 + G4 = C major triad** — The most fundamental chord in Western music.
+This is the GILE Triad (Awakening), and it is no coincidence.
+""")
+
 
