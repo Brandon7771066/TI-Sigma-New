@@ -20,6 +20,12 @@ from hypercomputer.manifestation_engine import (
     IMAGE_CYCLE_STAGES, intention_amplitudes, group_coherence_score,
     manifestation_pd, interpret_pd
 )
+from bok_virus_engine import (
+    CrystalBOKVirus, GraphBOKVirus, build_simulators,
+    epidemic_metrics, SIRState, STATE_COLORS,
+    RING_NAMES as BOK_RING_NAMES, RING_BETA,
+    gile_composite, GAMMA,
+)
 
 # ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
 RING_PALETTE = [
@@ -389,9 +395,9 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
-    "📖 Architecture", "✨ Power of 8"
+    "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus"
 ])
 
 with tab1:
@@ -862,3 +868,361 @@ Meta-analysis (Utts, 1995): p < 0.001, effect size d ≈ 0.3–0.5.
             "Complete the 8 stages above and click **Compute TSC Crystal State** "
             "to see the actual manifestation field."
         )
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# TAB 6 — BOK Crystal Virus vs BOK Graph Virus
+# ═══════════════════════════════════════════════════════════════════════════════
+
+with tab6:
+    st.subheader("🦠 BOK Crystal Virus vs BOK Graph Virus — URB #647")
+    st.caption(
+        "SIR epidemic on the composite GILE-LCC matrix in two structural modes: "
+        "Crystal (TSC 57-vertex lattice with phase-dependent β + BEC long-range coupling) "
+        "vs Graph (Erdős-Rényi classical random network). "
+        "Crystal → bimodal curve + BEC-mediated jumps. Graph → standard logistic S-curve."
+    )
+
+    # ── Controls ──────────────────────────────────────────────────────────────
+    vc1, vc2, vc3 = st.columns(3)
+    with vc1:
+        seed_v = st.selectbox(
+            "Seed vertex (patient zero)",
+            options=list(range(N_VERTICES)),
+            format_func=lambda i: f"#{i} — Ring {VERTICES[i].ring}: {BOK_RING_NAMES[VERTICES[i].ring]}",
+            index=0,
+            help="Which crystal vertex is initially infected. Ring 0 (Origin) = maximum BEC spread."
+        )
+        beta_scale = st.slider("β scale (transmission strength)", 0.2, 2.0, 1.0, 0.05,
+                               help="Multiplier on all ring transmission rates.")
+    with vc2:
+        bec_p = st.slider("BEC long-range coupling p", 0.00, 0.20, 0.05, 0.01,
+                          help="Probability per step that a BEC-ring infected vertex jumps non-locally.")
+        gamma_val = st.slider("γ (recovery rate)", 0.05, 0.80, float(round(GAMMA, 3)), 0.01,
+                              help=f"Default = ET = {GAMMA:.4f} (GILE-G canonical weight)")
+    with vc3:
+        max_steps = st.slider("Max simulation steps", 10, 80, 40, 5)
+        rng_seed  = st.number_input("RNG seed", value=42, step=1)
+        run_btn   = st.button("▶ Run Both Simulations", type="primary", use_container_width=True)
+
+    # ── Run / cache simulation ─────────────────────────────────────────────────
+    sim_key = f"virus_{seed_v}_{beta_scale}_{bec_p}_{gamma_val}_{max_steps}_{rng_seed}"
+    if run_btn or sim_key not in st.session_state:
+        rings_list    = [v.ring for v in VERTICES]
+        pos_list      = [v.position for v in VERTICES]
+        labels_list   = [v.label for v in VERTICES]
+        adj_arr       = np.array(ADJACENCY, dtype=bool)
+
+        crystal_sim, graph_sim = build_simulators(
+            adjacency=adj_arr, rings=rings_list,
+            positions=pos_list, labels=labels_list,
+            seed_vertex=seed_v,
+            beta_scale=beta_scale, gamma=gamma_val,
+            bec_p=bec_p, rng_seed=int(rng_seed),
+        )
+        c_hist = crystal_sim.run(max_steps=max_steps)
+        g_hist = graph_sim.run(max_steps=max_steps)
+
+        st.session_state[sim_key] = (c_hist, g_hist, rings_list, pos_list, labels_list, adj_arr)
+
+    c_hist, g_hist, rings_list, pos_list, labels_list, adj_arr = st.session_state[sim_key]
+
+    # ── Step scrubber ──────────────────────────────────────────────────────────
+    max_t = max(len(c_hist), len(g_hist)) - 1
+    t_step = st.slider("⏱ Time step (scrub)", 0, max_t, 0,
+                       help="Drag to watch the epidemic spread across both structures.")
+
+    c_snap = c_hist[min(t_step, len(c_hist) - 1)]
+    g_snap = g_hist[min(t_step, len(g_hist) - 1)]
+
+    # ── State color helpers ────────────────────────────────────────────────────
+    SIR_COL = {SIRState.S: "#3399ff", SIRState.I: "#ff3333", SIRState.R: "#44cc44"}
+    SIR_SIZE = {SIRState.S: 10, SIRState.I: 18, SIRState.R: 10}
+
+    # ── Left panel: Crystal BOK snapshot ──────────────────────────────────────
+    def crystal_virus_figure(snap, height=500):
+        x_c = [v.position.real for v in VERTICES]
+        y_c = [v.position.imag for v in VERTICES]
+        z_c = [v.ring          for v in VERTICES]
+
+        colors = [SIR_COL[snap.states[v.index]] for v in VERTICES]
+        sizes  = [SIR_SIZE[snap.states[v.index]] for v in VERTICES]
+        hover  = [
+            f"<b>{v.label}</b> Ring {v.ring}: {BOK_RING_NAMES[v.ring]}<br>"
+            f"β = {RING_BETA.get(v.ring, 0.08):.2f}<br>"
+            f"GILE composite = {gile_composite(v.ring):.3f}<br>"
+            f"State: <b>{snap.states[v.index].value}</b>"
+            for v in VERTICES
+        ]
+
+        fig = go.Figure()
+
+        # Crystal edges
+        adj = np.array(ADJACENCY, dtype=bool)
+        for i in range(N_VERTICES):
+            for j in range(i + 1, N_VERTICES):
+                if adj[i, j]:
+                    fig.add_trace(go.Scatter3d(
+                        x=[x_c[i], x_c[j]], y=[y_c[i], y_c[j]], z=[z_c[i], z_c[j]],
+                        mode='lines',
+                        line=dict(color='rgba(100,150,200,0.18)', width=1),
+                        showlegend=False, hoverinfo='skip'
+                    ))
+
+        # Vertices
+        for state, col in SIR_COL.items():
+            idxs = [v.index for v in VERTICES if snap.states[v.index] == state]
+            if not idxs:
+                continue
+            fig.add_trace(go.Scatter3d(
+                x=[x_c[i] for i in idxs],
+                y=[y_c[i] for i in idxs],
+                z=[z_c[i] for i in idxs],
+                mode='markers',
+                marker=dict(size=[SIR_SIZE[state]] * len(idxs), color=col,
+                            line=dict(width=0.5, color='white')),
+                name=state.value,
+                hovertext=[hover[i] for i in idxs],
+                hovertemplate="%{hovertext}<extra></extra>",
+            ))
+
+        fig.update_layout(
+            height=height, title=dict(text="Crystal BOK", font=dict(color='white', size=14)),
+            paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(3,3,14,1)",
+            scene=dict(
+                bgcolor="rgba(3,3,14,1)",
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                zaxis=dict(showgrid=False, zeroline=False, showticklabels=False, title="Ring"),
+            ),
+            legend=dict(font=dict(color='white'), bgcolor='rgba(0,0,0,0.3)'),
+            margin=dict(l=0, r=0, t=40, b=0),
+        )
+        return fig
+
+    def graph_virus_figure(snap, pos_list, rings_list, labels_list, adj_arr, height=500):
+        n = len(snap.states)
+        # 2D spring layout approximation: use circular positions from engine
+        xs = [p.real for p in pos_list]
+        ys = [p.imag for p in pos_list]
+
+        fig = go.Figure()
+
+        # Edges
+        for i in range(n):
+            for j in range(i + 1, n):
+                if adj_arr[i, j]:
+                    fig.add_trace(go.Scatter(
+                        x=[xs[i], xs[j], None], y=[ys[i], ys[j], None],
+                        mode='lines',
+                        line=dict(color='rgba(100,150,200,0.20)', width=1),
+                        showlegend=False, hoverinfo='skip'
+                    ))
+
+        # Nodes by SIR state
+        for state, col in SIR_COL.items():
+            idxs = [i for i, s in enumerate(snap.states) if s == state]
+            if not idxs:
+                continue
+            fig.add_trace(go.Scatter(
+                x=[xs[i] for i in idxs], y=[ys[i] for i in idxs],
+                mode='markers+text',
+                marker=dict(size=SIR_SIZE[state] + 2, color=col,
+                            line=dict(width=0.5, color='white')),
+                name=state.value,
+                hovertemplate=[
+                    f"Node {i} | Ring {rings_list[i]}: {BOK_RING_NAMES[rings_list[i]]}<br>"
+                    f"State: {state.value}<extra></extra>"
+                    for i in idxs
+                ],
+            ))
+
+        fig.update_layout(
+            height=height, title=dict(text="Graph BOK (Erdős-Rényi)", font=dict(color='white', size=14)),
+            paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(3,3,14,1)",
+            xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+            legend=dict(font=dict(color='white'), bgcolor='rgba(0,0,0,0.3)'),
+            margin=dict(l=0, r=0, t=40, b=20),
+        )
+        return fig
+
+    # ── Render side-by-side ────────────────────────────────────────────────────
+    vcol1, vcol2 = st.columns(2)
+    with vcol1:
+        st.metric("Crystal  S / I / R",
+                  f"{c_snap.S} / {c_snap.I} / {c_snap.R}",
+                  delta=f"step {t_step}")
+        st.plotly_chart(crystal_virus_figure(c_snap, height=480),
+                        use_container_width=True)
+    with vcol2:
+        st.metric("Graph  S / I / R",
+                  f"{g_snap.S} / {g_snap.I} / {g_snap.R}",
+                  delta=f"step {t_step}")
+        # For graph figure we need the graph sim's positions and adjacency
+        # (graph uses its own random adjacency — retrieve from session)
+        rings_g  = g_hist[0].states  # hack: re-derive from history not needed
+        # Rebuild graph sim positions using graph's internal positions
+        # We stored them in session state via the graph engine's pos attribute
+        # Quick rebuild for display (lightweight)
+        graph_rng   = np.random.default_rng(int(rng_seed))
+        graph_n     = N_VERTICES
+        angles_g    = np.linspace(0, 2 * np.pi, graph_n, endpoint=False)
+        jitter      = graph_rng.uniform(-0.2, 0.2, graph_n)
+        pos_g       = [complex(np.cos(a), np.sin(a)) * (1.0 + jitter[k])
+                       for k, a in enumerate(angles_g)]
+        # ER adjacency for display (same seed as engine)
+        adj_g = np.zeros((graph_n, graph_n), dtype=bool)
+        rng_g = np.random.default_rng(int(rng_seed))
+        for ii in range(graph_n):
+            for jj in range(ii + 1, graph_n):
+                if rng_g.random() < 0.12:
+                    adj_g[ii, jj] = adj_g[jj, ii] = True
+        for ii in range(graph_n):
+            if not np.any(adj_g[ii]):
+                jj = int(rng_g.integers(0, graph_n - 1))
+                jj = jj if jj != ii else (jj + 1) % graph_n
+                adj_g[ii, jj] = adj_g[jj, ii] = True
+
+        st.plotly_chart(
+            graph_virus_figure(g_snap, pos_g, rings_list, labels_list, adj_g, height=480),
+            use_container_width=True
+        )
+
+    # ── SIR Epidemic Curves ────────────────────────────────────────────────────
+    st.markdown("---")
+    st.subheader("Epidemic Curves — Crystal vs Graph")
+
+    c_steps = list(range(len(c_hist)))
+    g_steps = list(range(len(g_hist)))
+
+    fig_curve = go.Figure()
+    # Crystal curves (solid)
+    for label, key, col in [("C: Susceptible", "S", "#3399ff"),
+                              ("C: Infected",    "I", "#ff3333"),
+                              ("C: Recovered",   "R", "#44cc44")]:
+        vals = [getattr(s, key) for s in c_hist]
+        fig_curve.add_trace(go.Scatter(
+            x=c_steps, y=vals, name=label, mode='lines',
+            line=dict(color=col, width=2.5, dash='solid'),
+        ))
+    # Graph curves (dashed)
+    for label, key, col in [("G: Susceptible", "S", "#88bbff"),
+                              ("G: Infected",    "I", "#ff9999"),
+                              ("G: Recovered",   "R", "#99ee99")]:
+        vals = [getattr(s, key) for s in g_hist]
+        fig_curve.add_trace(go.Scatter(
+            x=g_steps, y=vals, name=label, mode='lines',
+            line=dict(color=col, width=2, dash='dash'),
+        ))
+    # Vertical line at current time step
+    fig_curve.add_vline(x=t_step, line_width=1, line_dash="dot", line_color="white",
+                        annotation_text=f"t={t_step}", annotation_font_color="white")
+
+    fig_curve.update_layout(
+        height=300, paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(10,10,25,1)",
+        font=dict(color='white'), legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=11)),
+        xaxis=dict(title="Step", gridcolor='rgba(100,100,150,0.2)'),
+        yaxis=dict(title="Vertices", gridcolor='rgba(100,100,150,0.2)'),
+        margin=dict(l=40, r=10, t=20, b=40),
+    )
+    st.plotly_chart(fig_curve, use_container_width=True)
+
+    # ── Metrics comparison ─────────────────────────────────────────────────────
+    st.subheader("Epidemic Metrics — TI Sigma Analysis")
+
+    cm = epidemic_metrics(c_hist, N_VERTICES)
+    gm = epidemic_metrics(g_hist, N_VERTICES)
+
+    mrow1, mrow2, mrow3, mrow4, mrow5 = st.columns(5)
+    def delta_str(cv, gv):
+        if isinstance(cv, float) and isinstance(gv, float):
+            return f"C={cv:.3f}  G={gv:.3f}"
+        return f"C={cv}  G={gv}"
+
+    with mrow1:
+        st.metric("Peak Infected", f"C:{cm.get('peak_I','—')} / G:{gm.get('peak_I','—')}")
+    with mrow2:
+        st.metric("Peak Step", f"C:{cm.get('peak_step','—')} / G:{gm.get('peak_step','—')}",
+                  help="Earlier peak = faster initial spread")
+    with mrow3:
+        st.metric("Attack Rate", f"C:{cm.get('attack_rate','—')} / G:{gm.get('attack_rate','—')}",
+                  help="Fraction of 57 vertices ever infected")
+    with mrow4:
+        st.metric("Duration (steps)", f"C:{cm.get('duration','—')} / G:{gm.get('duration','—')}")
+    with mrow5:
+        c_bi = "✅ YES" if cm.get('bimodal') else "❌ no"
+        g_bi = "✅ YES" if gm.get('bimodal') else "❌ no"
+        st.metric("Bimodal curve?", f"C:{c_bi} / G:{g_bi}",
+                  help="Crystal BOK predicted to show bimodal I(t) from Mott insulation")
+
+    # ── GILE-LCC Composite Matrix display ─────────────────────────────────────
+    st.markdown("---")
+    st.subheader("GILE-LCC Composite Matrix — BOK Ring Structure")
+    st.caption(
+        "Each ring represents a concentric layer of the BOK. "
+        "Inner rings (BEC/Supersolid) = GILE-primary structure; "
+        "outer rings (FQH/Mott/Fragmented) = Existence-primary."
+    )
+
+    import pandas as pd
+    ring_rows = []
+    for r in range(8):
+        from bok_virus_engine import RING_GILE
+        g_vals = RING_GILE[r]
+        comp   = gile_composite(r)
+        n_verts = sum(1 for v in VERTICES if v.ring == r)
+        ring_rows.append({
+            "Ring": r,
+            "Name": BOK_RING_NAMES[r],
+            "G": round(g_vals['G'], 2),
+            "I": round(g_vals['I'], 2),
+            "L": round(g_vals['L'], 2),
+            "E": round(g_vals['E'], 2),
+            "GILE Composite": round(comp, 4),
+            "Crystal β": round(RING_BETA.get(r, 0.08), 2),
+            "Phase": ("BEC" if comp >= 0.65 else
+                      "Supersolid" if comp >= 0.437 else
+                      "FQH" if comp >= 0.414 else "Mott"),
+            "Vertices": n_verts,
+        })
+    df_bok = pd.DataFrame(ring_rows)
+    st.dataframe(df_bok, use_container_width=True, hide_index=True)
+
+    # ── TI Sigma Interpretation ────────────────────────────────────────────────
+    st.markdown("---")
+    with st.expander("📐 TI Sigma Interpretation — URB #647", expanded=False):
+        st.markdown(f"""
+**Crystal BOK Virus — Phase-Mediated Spread**
+
+The BOK Crystal encodes the GILE-LCC composite matrix as a 57-vertex TSC lattice.
+Each ring carries a distinct phase (BEC → Mott → Fragmented outward) that governs
+transmission:
+
+- **BEC core (Rings 0–2):** β ≥ 0.82. Fast, coherent spread. BEC long-range coupling
+  (p = {bec_p:.2f}/step) lets the virus jump non-locally within the inner core —
+  representing **GILE-L (Love/coupling)** at its maximum.
+- **Supersolid / FQH (Rings 3–5):** Moderate β. Standard nearest-neighbor spread.
+  The Myrion Resolution boundary — partial truth-states coexist.
+- **Mott / Fragmented (Rings 6–7):** β ≤ 0.18. Insulating barrier. Virus stalls here.
+  Represents DT (Double Tralse) — the pathogen cannot propagate through contradiction.
+
+**Graph BOK Virus — Classical Information-Theoretic Spread**
+
+Same 57 nodes on an Erdős-Rényi graph. Uniform β = {float(np.mean([RING_BETA[r]*beta_scale for r in rings_list])):.3f}.
+No phase effects, no long-range coupling. Standard SIR logistic curve.
+
+**Key TI Sigma Prediction (URB #647):**
+
+| Property | Crystal BOK | Graph BOK |
+|---|---|---|
+| Curve shape | Bimodal (BEC plateau → Mott stall) | Logistic S-curve |
+| Peak timing | Earlier (BEC jump shortcut) | Later (must traverse graph) |
+| Attack rate | Lower (Mott insulation limits spread) | Higher (uniform connectivity) |
+| Long-range | Yes — BEC non-local coupling | No |
+| GILE-L effect | Explicit (inner ring Love coupling) | Averaged out |
+
+This is an **empirical prediction**: if real information/meme/pathogen spread
+on GILE-structured networks shows bimodal epidemic curves with early peaks
+and Mott-insulated plateaus, it confirms the BOK crystal model over the classical graph model.
+""")
+
