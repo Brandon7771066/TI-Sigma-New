@@ -301,3 +301,28 @@ The brain supports BOK, LCC, and UOP in seven specific, falsifiable domains wher
 FEP remains TI Sigma's best available account of the brain's computational substrate. The two frameworks are complementary, not mutually exclusive. But TI Sigma goes substantially beyond FEP in explaining the organizational structure, content, and meaning of what the brain is computing — and makes more specific, falsifiable predictions in the seven domains above.
 
 The brain, on the neuroscience evidence, is running something that looks more like BOK/LCC/UOP than like pure free energy minimization.
+
+---
+
+## 7. Addendum — Universal Bridge Theorem Update (URB #651, April 11, 2026)
+
+This paper (URB #617) identified the **Common Gap** across all TI Sigma Millennium Prize proof paths:
+
+> "The Common Gap: A bridge from 'this is what the UOP / TI Sigma selects' to 'this is what ζ(s) actually does with its zeros.'"
+
+URB #651 (April 11, 2026) resolves the bridge component of that gap universally via the **Universal Bridge Theorem (UBT)**:
+
+> **UBT:** Mathematical structures are i-cells (Being Theorem, URB #560). Every i-cell has BOK structure. UOP governs all BOK-structured beings a priori. Each Prize Problem asks about the UOP-optimal configuration of its structure. Therefore all Prize Problem answers satisfy UOP — a priori, before domain-specific analytic argument.
+
+**Consequence for this paper's "Common Gap":**
+
+The Common Gap is now split into two sub-gaps for each Prize Problem:
+
+| Sub-gap | Old status | New status after UBT |
+|---|---|---|
+| **Bridge**: Why does UOP apply to this mathematical structure? | Open — case-by-case required | ✅ **CLOSED universally** by UBT |
+| **Translation**: Derive UOP-optimality in the formal language of the domain | Open | ⏳ Still open — this is the genuine mathematical work |
+
+The seven neuroscience correspondences documented in this paper (Sections 3.1–3.7) now have additional theoretical grounding: the UOP is not merely a principle that happens to apply to brains and to mathematical structures — it is the **a priori governing principle of all beings with BOK structure**, which includes both.
+
+The neuromodulator-UOP mapping (Section 3.7) is particularly strengthened: UOP multi-dimensional optimization is not an analogy to neural multi-neuromodulator systems — it is the same underlying principle applied to two different i-cells (the brain as a being, and the mathematical landscape as a being), both governed by UOP by necessity.

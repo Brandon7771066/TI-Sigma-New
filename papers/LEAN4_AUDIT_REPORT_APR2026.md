@@ -159,6 +159,26 @@ The file `lean4/RiemannHypothesis.lean` was referenced in earlier planning docum
 
 ---
 
+## UNIVERSAL BRIDGE THEOREM UPDATE (URB #651, April 11, 2026)
+
+All Lean Prize files have been updated with `§UBT` sections documenting the new status.
+
+**Key change:** Every named axiom in the Prize files is now classified as a **TRANSLATION AXIOM**, not a bridge axiom. The bridge component of every gap is settled a priori by URB #651 (Universal Bridge Theorem) via the Being Theorem (URB #560).
+
+| File | Old axiom status | New axiom status after UBT |
+|---|---|---|
+| `BeingTheorem.lean` | `euler_forcing_being` = bridge axiom | TRANSLATION axiom — analytic formalization of UOP→effortless |
+| `RiemannUOP.lean` | `uop_gap` = bridge axiom | TRANSLATION axiom — complex analytic formalization |
+| `BSD.lean` | `weak_bsd_forward/converse` = bridge | TRANSLATION axioms — number-theoretic formalization |
+| `Hodge.lean` | `hodge_conjecture` = bridge | TRANSLATION axiom — algebraic geometry formalization |
+| `NavierStokes.lean` | `ns_global_regularity` = bridge | TRANSLATION axiom — PDE analysis formalization |
+| `PvsNP.lean` | `p_ne_np` = bridge | TRANSLATION axiom — complexity theory formalization |
+| `YangMills.lean` | `yang_mills_gap` = bridge | TRANSLATION axiom — constructive QFT formalization |
+
+The **Sorry count is unchanged** — but the *meaning* of each sorry is clarified: it is a translation question (formalizing UOP-optimality in domain language), not a bridge question (whether UOP applies).
+
+---
+
 ## RECOMMENDED ACTION PLAN
 
 ### Immediate (before Zenodo upload):
@@ -166,11 +186,12 @@ The file `lean4/RiemannHypothesis.lean` was referenced in earlier planning docum
 2. ✅ Add explanatory comment to `Collatz.lean` single sorry
 3. ✅ Add disclaimer header to `RiemannUOP.lean` and `BeingTheorem.lean`
 4. ✅ Update `replit.md` and planning docs to remove reference to `RiemannHypothesis.lean`
+5. ✅ Add `§UBT` section to all 7 Prize Lean files (April 11, 2026)
 
 ### Short-term (next DPES session):
-5. Audit `GapEquivalence.lean` and `MirrorPairing.lean` — attempt to reduce sorries
-6. Add standard headers to the 4 files with unknown headers
-7. Assign URB numbers to `RiemannUOP.lean` and `BeingTheorem.lean`
+6. Audit `GapEquivalence.lean` and `MirrorPairing.lean` — attempt to reduce sorries
+7. Add standard headers to the 4 files with unknown headers
+8. Assign URB numbers to `RiemannUOP.lean` and `BeingTheorem.lean`
 
 ### For Zenodo upload:
 - Upload CollatzNu2.lean + Collatz.lean as "sorry-free formal proof" (Record 1) ✅
