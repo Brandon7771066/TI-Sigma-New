@@ -593,7 +593,14 @@ if not GATEWAY_AVAILABLE:
         print(f"        Sample: {str(df[text_col].iloc[0])[:100]}")
 
         # test.csv from AIMO3 has 3 trivial placeholder rows — skip if max answer ≤ 10
-        if 'answer' in df.columns and df['answer'].max() <= 10 and len(df) <= 5:
+        _is_trivial = False
+        if 'answer' in df.columns and len(df) <= 5:
+            try:
+                _max_ans = pd.to_numeric(df['answer'], errors='coerce').max()
+                _is_trivial = (not pd.isna(_max_ans)) and (_max_ans <= 10)
+            except Exception:
+                pass
+        if _is_trivial:
             print("        ! Detected trivial warm-up CSV (not real problems) — switching to DEMO mode")
             CSV_FILE = None
 
