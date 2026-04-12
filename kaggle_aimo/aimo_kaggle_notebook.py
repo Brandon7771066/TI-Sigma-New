@@ -92,8 +92,9 @@ else:
     print("      ! No Anthropic key found — will try Perplexity")
 
 # Load Perplexity key (fallback provider — r1-1776 is great at math)
+# "TI_Sigma" is the name used in this project's Kaggle Secrets
 PERPLEXITY_KEY, _pname = _get_secret(
-    "Perplexity_Api_Key", "PERPLEXITY_API_KEY", "perplexity_api_key",
+    "TI_Sigma", "Perplexity_Api_Key", "PERPLEXITY_API_KEY", "perplexity_api_key",
     "PerplexityApiKey", "PERPLEXITY_KEY"
 )
 if PERPLEXITY_KEY:
