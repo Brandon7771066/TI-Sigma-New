@@ -37,6 +37,9 @@ print("\n[1/6] Installing dependencies...")
 # anthropic SDK
 subprocess.run([sys.executable, "-m", "pip", "install", "anthropic", "--quiet"], check=False)
 
+# openai SDK — also used to reach Perplexity (OpenAI-compatible API)
+subprocess.run([sys.executable, "-m", "pip", "install", "openai", "--quiet"], check=False)
+
 # kaggle-evaluation — required to import AIMO3Gateway in a submission kernel
 # This installs the package so `from kaggle_evaluation.aimo_3_gateway import AIMO3Gateway` works.
 result = subprocess.run(
@@ -56,37 +59,53 @@ print("      ✓ Dependencies done")
 # ══════════════════════════════════════════════════════════
 import os
 
-print("\n[2/6] Loading API key from Kaggle Secrets...")
+print("\n[2/6] Loading API keys from Kaggle Secrets...")
 
-ANTHROPIC_KEY = None
+ANTHROPIC_KEY   = None
+PERPLEXITY_KEY  = None
 
-# Primary: Kaggle Secrets (requires "Attach to notebook" toggle ON)
-try:
-    from kaggle_secrets import UserSecretsClient
-    _sc = UserSecretsClient()
-    for _name in ["Anthropic_Api_Key", "ANTHROPIC_API_KEY", "anthropic_api_key",
-                  "AnthropicApiKey", "anthropic", "ANTHROPIC_KEY"]:
+# ── Helper: pull a secret by any of several candidate names ──
+def _get_secret(*names):
+    for name in names:
         try:
-            ANTHROPIC_KEY = _sc.get_secret(_name)
-            if ANTHROPIC_KEY:
-                print(f"      ✓ Found Anthropic key under secret name '{_name}'")
-                break
+            from kaggle_secrets import UserSecretsClient
+            val = UserSecretsClient().get_secret(name)
+            if val:
+                return val, name
         except Exception:
             pass
-except ImportError:
-    print("      (Not in Kaggle environment — looking for local env var)")
+        val = os.environ.get(name, "")
+        if val:
+            return val, name
+    return None, None
 
-# Fallback: local environment variable
-if not ANTHROPIC_KEY:
-    ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-
+# Load Anthropic key
+ANTHROPIC_KEY, _aname = _get_secret(
+    "Anthropic_Api_Key", "ANTHROPIC_API_KEY", "anthropic_api_key",
+    "AnthropicApiKey", "anthropic", "ANTHROPIC_KEY"
+)
 if ANTHROPIC_KEY:
     os.environ["ANTHROPIC_API_KEY"] = ANTHROPIC_KEY
     masked = ANTHROPIC_KEY[:8] + "..." + ANTHROPIC_KEY[-4:]
-    print(f"      ✓ ANTHROPIC_API_KEY set ({masked})")
+    print(f"      ✓ Anthropic key found ('{_aname}'): {masked}")
 else:
-    print("      ✗ WARNING: No Anthropic API key found!")
-    print("        → Make sure your secret name is 'Anthropic_Api_Key' in Kaggle Secrets")
+    print("      ! No Anthropic key found — will try Perplexity")
+
+# Load Perplexity key (fallback provider — r1-1776 is great at math)
+PERPLEXITY_KEY, _pname = _get_secret(
+    "Perplexity_Api_Key", "PERPLEXITY_API_KEY", "perplexity_api_key",
+    "PerplexityApiKey", "PERPLEXITY_KEY"
+)
+if PERPLEXITY_KEY:
+    os.environ["PERPLEXITY_API_KEY"] = PERPLEXITY_KEY
+    masked2 = PERPLEXITY_KEY[:8] + "..." + PERPLEXITY_KEY[-4:]
+    print(f"      ✓ Perplexity key found ('{_pname}'): {masked2}")
+else:
+    print("      ! No Perplexity key found")
+
+if not ANTHROPIC_KEY and not PERPLEXITY_KEY:
+    print("      ✗ WARNING: No API keys found at all!")
+    print("        → Add 'Anthropic_Api_Key' OR 'Perplexity_Api_Key' to Kaggle Secrets")
     print("        → Make sure 'Attach to notebook' is toggled ON for the secret")
     print("        → The notebook will continue in DEMO mode (no real API calls)")
 
@@ -282,24 +301,51 @@ TYPE_HINTS = {
     'algebra':      "ALGEBRA: use AM-GM, Cauchy-Schwarz, substitution, symmetry.",
 }
 
-def _claude_worker(model, user_msg, result_container):
-    """Worker thread: calls Claude and stores result in result_container[0]."""
-    try:
-        import anthropic
-        aclient = anthropic.Anthropic()
-        msg = aclient.messages.create(
-            model=model,
-            max_tokens=1536,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": user_msg}]
-        )
-        result_container[0] = msg.content[0].text
-    except Exception as ex:
-        result_container[0] = f"[CLAUDE_ERROR: {ex}]"
+# ── Provider: which API are we using? (auto-detected at validation time) ──
+# Options: "anthropic", "perplexity", None (demo mode)
+ACTIVE_PROVIDER = None
+ACTIVE_MODEL    = None
 
-def call_claude(problem, ptype, attempt=1, use_strong=False):
-    """Call Claude with a hard timeout. Returns response text or error string."""
-    model = MODEL_STRONG if use_strong else MODEL_FAST
+def _llm_worker(provider, model, user_msg, result_container):
+    """Worker thread: calls the active provider and stores result."""
+    try:
+        if provider == "anthropic":
+            import anthropic
+            aclient = anthropic.Anthropic()
+            msg = aclient.messages.create(
+                model=model,
+                max_tokens=1536,
+                system=SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": user_msg}]
+            )
+            result_container[0] = msg.content[0].text
+
+        elif provider == "perplexity":
+            from openai import OpenAI
+            pclient = OpenAI(
+                api_key=os.environ.get("PERPLEXITY_API_KEY", ""),
+                base_url="https://api.perplexity.ai"
+            )
+            resp = pclient.chat.completions.create(
+                model=model,
+                max_tokens=1536,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user",   "content": user_msg}
+                ]
+            )
+            result_container[0] = resp.choices[0].message.content
+
+        else:
+            result_container[0] = "[LLM_ERROR: no provider configured]"
+
+    except Exception as ex:
+        result_container[0] = f"[LLM_ERROR: {ex}]"
+
+def call_llm(problem, ptype, attempt=1):
+    """Call the active LLM provider with a hard timeout. Returns response text or error."""
+    if ACTIVE_PROVIDER is None:
+        return "[LLM_ERROR: no working provider — add Anthropic or Perplexity API key]"
 
     note = ""
     if attempt == 2:
@@ -310,15 +356,22 @@ def call_claude(problem, ptype, attempt=1, use_strong=False):
     user_msg = f"{TYPE_HINTS.get(ptype, '')}{note}\n\nProblem: {problem}"
 
     result = [None]
-    thread = threading.Thread(target=_claude_worker, args=(model, user_msg, result), daemon=True)
+    thread = threading.Thread(
+        target=_llm_worker,
+        args=(ACTIVE_PROVIDER, ACTIVE_MODEL, user_msg, result),
+        daemon=True
+    )
     thread.start()
     thread.join(timeout=CALL_TIMEOUT_SEC)
 
     if thread.is_alive():
-        return f"[CLAUDE_ERROR: timeout after {CALL_TIMEOUT_SEC}s]"
+        return f"[LLM_ERROR: timeout after {CALL_TIMEOUT_SEC}s]"
     if result[0] is None:
-        return "[CLAUDE_ERROR: no response]"
+        return "[LLM_ERROR: no response]"
     return result[0]
+
+# Keep call_claude as an alias for backwards compatibility
+call_claude = call_llm
 
 # ── Configuration ──────────────────────────────────────────
 # N_PASSES=3 with fast model: ~45-90s total per problem (well within budget).
@@ -332,20 +385,21 @@ def solve_one(problem, pid, n_passes=3):
     ptype = classify(problem)
     print(f"\n  [{pid}] {ptype.upper()} | {problem[:80]}{'...' if len(problem)>80 else ''}")
 
-    if not ANTHROPIC_KEY:
-        print(f"       → DEMO MODE (no API key): answer = 0")
+    if ACTIVE_PROVIDER is None:
+        print(f"       → DEMO MODE (no working API): answer = 0")
         return {'id': pid, 'answer': 0, 'confidence': 0.0,
                 'mr_level': 'DT', 'problem_type': ptype}
 
     answers, confs = [], []
+    _model_label = f"{ACTIVE_PROVIDER}:{ACTIVE_MODEL}"
 
     for attempt in range(1, n_passes + 1):
         t0 = time.time()
-        response = call_claude(problem, ptype, attempt)
+        response = call_llm(problem, ptype, attempt)
         elapsed  = time.time() - t0
 
-        if response.startswith("[CLAUDE_ERROR"):
-            print(f"       Pass {attempt} ({MODEL_FAST}, {elapsed:.0f}s): ERROR — {response[:80]}")
+        if response.startswith("[LLM_ERROR") or response.startswith("[CLAUDE_ERROR"):
+            print(f"       Pass {attempt} ({_model_label}, {elapsed:.0f}s): ERROR — {response[:80]}")
             answers.append(None)
             confs.append(0.0)
         else:
@@ -358,7 +412,7 @@ def solve_one(problem, pid, n_passes=3):
             tag = ""
             if pc_hit: tag += f"  [{pc_hit}]"
             if sn_hit: tag += f"  [{sn_hit}]"
-            print(f"       Pass {attempt} ({MODEL_FAST}, {elapsed:.0f}s): {a}  conf={c:.2f}{tag}")
+            print(f"       Pass {attempt} ({_model_label}, {elapsed:.0f}s): {a}  conf={c:.2f}{tag}")
 
         # Early exit: if first 2 passes agree at high confidence, skip pass 3
         if attempt == 2 and len([x for x in answers if x is not None]) >= 2:
@@ -372,55 +426,94 @@ def solve_one(problem, pid, n_passes=3):
     return {'id': pid, 'answer': final, 'confidence': conf,
             'mr_level': level, 'problem_type': ptype}
 
-# ── Model validation: test the model before running all problems ─────
-# If the primary model is invalid (Error 400), auto-fall back to a known-good model.
-FALLBACK_MODELS = [
-    "claude-3-5-sonnet-20241022",
-    "claude-3-5-haiku-20241022",
-    "claude-3-opus-20240229",
-    "claude-3-sonnet-20240229",
-    "claude-3-haiku-20240307",
+# ── Provider auto-detection — tries each option, picks the first that works ──
+# Priority: Anthropic (best math) → Perplexity r1-1776 (free, excellent math) → demo
+#
+# Anthropic models to try (in order):
+ANTHROPIC_MODELS = [
+    "claude-3-5-sonnet-20241022",   # Best balance of speed + accuracy
+    "claude-3-5-haiku-20241022",    # Fastest, cheapest
+    "claude-3-opus-20240229",       # Strongest (slow, expensive)
+    "claude-3-sonnet-20240229",     # Older sonnet
+    "claude-3-haiku-20240307",      # Oldest haiku
+]
+# Perplexity models to try (in order):
+PERPLEXITY_MODELS = [
+    "r1-1776",                      # DeepSeek-R1 — excellent at math olympiad
+    "sonar-pro",                    # Sonar Pro — web-connected, strong reasoning
+    "sonar",                        # Standard sonar
 ]
 
-def _validate_model(model_name):
-    """Quick test: send a trivial message to verify the model name is valid."""
+def _test_anthropic(model_name):
+    """Return (ok, reply_or_error) for one Anthropic model."""
     try:
         import anthropic
         aclient = anthropic.Anthropic()
         resp = aclient.messages.create(
-            model=model_name,
-            max_tokens=10,
-            messages=[{"role": "user", "content": "Say 1"}]
+            model=model_name, max_tokens=10,
+            messages=[{"role": "user", "content": "Reply with just the number 1"}]
         )
         return True, resp.content[0].text.strip()
     except Exception as ex:
-        return False, str(ex)[:120]
+        return False, str(ex)[:160]
 
-if ANTHROPIC_KEY:
-    print(f"      Testing model: {MODEL_FAST} ...")
-    ok, msg = _validate_model(MODEL_FAST)
-    if ok:
-        print(f"      ✓ Model '{MODEL_FAST}' works  (test reply: {msg})")
-    else:
-        print(f"      ✗ Model '{MODEL_FAST}' FAILED: {msg}")
-        print(f"      → Trying fallback models...")
-        for fb in FALLBACK_MODELS:
-            if fb == MODEL_FAST:
-                continue
-            ok2, msg2 = _validate_model(fb)
-            if ok2:
-                print(f"      ✓ Fallback '{fb}' works — switching!")
-                MODEL_FAST   = fb
-                MODEL_STRONG = fb  # use same for both if we had to fall back
-                break
-            else:
-                print(f"        ✗ '{fb}': {msg2[:60]}")
+def _test_perplexity(model_name):
+    """Return (ok, reply_or_error) for one Perplexity model."""
+    try:
+        from openai import OpenAI
+        pclient = OpenAI(
+            api_key=os.environ.get("PERPLEXITY_API_KEY", ""),
+            base_url="https://api.perplexity.ai"
+        )
+        resp = pclient.chat.completions.create(
+            model=model_name, max_tokens=10,
+            messages=[{"role": "user", "content": "Reply with just the number 1"}]
+        )
+        return True, resp.choices[0].message.content.strip()
+    except Exception as ex:
+        return False, str(ex)[:160]
+
+print("      ─── Provider auto-detection ───")
+
+# 1. Try Anthropic (best math accuracy)
+if ANTHROPIC_KEY and ACTIVE_PROVIDER is None:
+    print("      Trying Anthropic...")
+    for _model in ANTHROPIC_MODELS:
+        _ok, _msg = _test_anthropic(_model)
+        if _ok:
+            ACTIVE_PROVIDER = "anthropic"
+            ACTIVE_MODEL    = _model
+            print(f"      ✓ Anthropic → '{_model}' works (reply: {_msg})")
+            break
         else:
-            print("      ✗ NO WORKING MODEL FOUND — all API calls will fail.")
-            print("        Check your Anthropic API key and account model access.")
+            _short = _msg[:80]
+            print(f"        ✗ '{_model}': {_short}")
+            # credit error → pointless to try other Anthropic models
+            if "credit" in _msg.lower() or "billing" in _msg.lower():
+                print("          ↳ Anthropic credit issue — skipping remaining Anthropic models")
+                print("          ↳ → Top up at console.anthropic.com → Plans & Billing")
+                break
 
-print("      ✓ LLM interface ready")
-print(f"      Model: {MODEL_FAST} (fast) | timeout: {CALL_TIMEOUT_SEC}s/call | passes: {N_PASSES}")
+# 2. Try Perplexity (free for existing subscribers, great math with r1-1776)
+if PERPLEXITY_KEY and ACTIVE_PROVIDER is None:
+    print("      Trying Perplexity...")
+    for _model in PERPLEXITY_MODELS:
+        _ok, _msg = _test_perplexity(_model)
+        if _ok:
+            ACTIVE_PROVIDER = "perplexity"
+            ACTIVE_MODEL    = _model
+            print(f"      ✓ Perplexity → '{_model}' works (reply: {_msg})")
+            break
+        else:
+            print(f"        ✗ '{_model}': {_msg[:80]}")
+
+if ACTIVE_PROVIDER is None:
+    print("      ✗ NO WORKING PROVIDER — running in DEMO mode (answers = 0)")
+    print("        Fix: add Anthropic credits OR add Perplexity_Api_Key to Kaggle Secrets")
+else:
+    print(f"      ✓ LLM interface ready")
+    print(f"        Provider: {ACTIVE_PROVIDER} | Model: {ACTIVE_MODEL}")
+    print(f"        Timeout: {CALL_TIMEOUT_SEC}s/call | Passes: {N_PASSES}")
 
 # ══════════════════════════════════════════════════════════
 # STEP 6 — RUN: GATEWAY MODE or CSV FALLBACK
