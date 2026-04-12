@@ -228,10 +228,13 @@ def answer_confidence(a, ptype):
     """Score confidence of a candidate answer using TI Sigma heuristics."""
     if a is None:
         return 0.0
+    # AIMO answers are always non-negative integers — negative result = likely extraction error
+    if a < 0:
+        return 0.05
     c = 0.4
     if pc_check(a)[0]:   c += 0.20
     if special_check(a): c += 0.15
-    if 0 <= a <= 999:    c += 0.10
+    if 0 <= a <= 999:    c += 0.10   # AIMO answers almost always in this range
     if 0 <= a <= 9999:   c += 0.05
     return min(c, 1.0)
 
@@ -277,20 +280,22 @@ print("\n[5/6] Setting up LLM interface...")
 # We allow 90s per API call; 3 passes = ~5 min max per problem.
 CALL_TIMEOUT_SEC = 90
 
-SYSTEM_PROMPT = """You are a world-class mathematical olympiad solver.
+SYSTEM_PROMPT = """You are a world-class mathematical olympiad solver competing in AIMO (AI Mathematical Olympiad).
 
 Solve the problem using this EXACT structure:
 1. TRUE POLE: The most direct interpretation of the problem.
 2. FALSE POLE: The hidden constraint, edge case, or trick beginners miss.
 3. MYRION SYNTHESIS: Combine both poles to find the correct formulation.
-4. CALCULATION: Careful, step-by-step arithmetic — show every step.
+4. CALCULATION: Careful, step-by-step arithmetic — show every step. Double-check all arithmetic.
 5. VERIFY: Substitute your answer back and confirm ALL conditions hold.
 6. FINAL ANSWER: State the integer as \\boxed{N}
 
 Rules:
-- The answer must be a NON-NEGATIVE integer (0 or positive whole number).
-- Do not leave the boxed answer blank.
-- If uncertain, give your best integer estimate in \\boxed{N}."""
+- The answer MUST be a non-negative integer (0 or a positive whole number).
+- AIMO answers are always integers in the range 0–999. If your calculation gives a larger number, compute it mod 1000.
+- Show all intermediate steps clearly so errors can be caught.
+- Do not leave the boxed answer blank — always provide your best integer estimate.
+- The \\boxed{N} answer is what gets scored — make it unambiguous."""
 
 TYPE_HINTS = {
     'geometry':     "GEOMETRY: use similarity ratios, power of a point, area decomposition.",
@@ -312,7 +317,7 @@ def _llm_worker(provider, model, user_msg, result_container):
             aclient = anthropic.Anthropic()
             msg = aclient.messages.create(
                 model=model,
-                max_tokens=1536,
+                max_tokens=2048,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user_msg}]
             )
@@ -326,7 +331,7 @@ def _llm_worker(provider, model, user_msg, result_container):
             )
             resp = pclient.chat.completions.create(
                 model=model,
-                max_tokens=1536,
+                max_tokens=2048,
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user",   "content": user_msg}
