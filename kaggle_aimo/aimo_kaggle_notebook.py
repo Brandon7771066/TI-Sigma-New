@@ -242,10 +242,18 @@ print("      ✓ Math engine ready")
 print("\n[5/6] Setting up LLM interface...")
 
 # ── Model selection ────────────────────────────────────────
-# claude-sonnet-4-5 is 3-4× faster than Opus with near-equal math accuracy.
-# Use Sonnet for the first 2 passes; use Opus only if passes 1 and 2 disagree.
-MODEL_FAST   = "claude-sonnet-4-5"   # ~15-30s/call — default for all passes
-MODEL_STRONG = "claude-opus-4-5"     # ~40-90s/call — reserved for tiebreaker
+# IMPORTANT: Use standard Anthropic API model names (not Replit internal names).
+# "claude-sonnet-4-5" / "claude-opus-4-5" are Replit-specific — they cause
+# Error 400 invalid_request_error on a standard Anthropic API key in Kaggle.
+#
+# Standard Anthropic API model names (confirmed valid):
+MODEL_FAST   = "claude-3-5-sonnet-20241022"  # Best math accuracy + speed balance
+MODEL_STRONG = "claude-3-opus-20240229"      # Strongest reasoning (tiebreaker only)
+#
+# Alternatives if the above fail (try in order):
+#   "claude-3-5-haiku-20241022"   — fastest, weakest
+#   "claude-3-sonnet-20240229"    — older sonnet
+#   "claude-3-opus-20240229"      — strongest pre-4
 
 # ── Per-call hard timeout (seconds) ───────────────────────
 # Gateway allows ~9 hours for ~50 problems = ~10 min/problem.
@@ -363,6 +371,53 @@ def solve_one(problem, pid, n_passes=3):
     print(f"       → MR COLLAPSE: {final}  ({level}, conf={conf:.2f})")
     return {'id': pid, 'answer': final, 'confidence': conf,
             'mr_level': level, 'problem_type': ptype}
+
+# ── Model validation: test the model before running all problems ─────
+# If the primary model is invalid (Error 400), auto-fall back to a known-good model.
+FALLBACK_MODELS = [
+    "claude-3-5-sonnet-20241022",
+    "claude-3-5-haiku-20241022",
+    "claude-3-opus-20240229",
+    "claude-3-sonnet-20240229",
+    "claude-3-haiku-20240307",
+]
+
+def _validate_model(model_name):
+    """Quick test: send a trivial message to verify the model name is valid."""
+    try:
+        import anthropic
+        aclient = anthropic.Anthropic()
+        resp = aclient.messages.create(
+            model=model_name,
+            max_tokens=10,
+            messages=[{"role": "user", "content": "Say 1"}]
+        )
+        return True, resp.content[0].text.strip()
+    except Exception as ex:
+        return False, str(ex)[:120]
+
+if ANTHROPIC_KEY:
+    print(f"      Testing model: {MODEL_FAST} ...")
+    ok, msg = _validate_model(MODEL_FAST)
+    if ok:
+        print(f"      ✓ Model '{MODEL_FAST}' works  (test reply: {msg})")
+    else:
+        print(f"      ✗ Model '{MODEL_FAST}' FAILED: {msg}")
+        print(f"      → Trying fallback models...")
+        for fb in FALLBACK_MODELS:
+            if fb == MODEL_FAST:
+                continue
+            ok2, msg2 = _validate_model(fb)
+            if ok2:
+                print(f"      ✓ Fallback '{fb}' works — switching!")
+                MODEL_FAST   = fb
+                MODEL_STRONG = fb  # use same for both if we had to fall back
+                break
+            else:
+                print(f"        ✗ '{fb}': {msg2[:60]}")
+        else:
+            print("      ✗ NO WORKING MODEL FOUND — all API calls will fail.")
+            print("        Check your Anthropic API key and account model access.")
 
 print("      ✓ LLM interface ready")
 print(f"      Model: {MODEL_FAST} (fast) | timeout: {CALL_TIMEOUT_SEC}s/call | passes: {N_PASSES}")
