@@ -433,12 +433,16 @@ def solve_one(problem, pid, n_passes=3):
 # Priority: Anthropic (best math) → Perplexity r1-1776 (free, excellent math) → demo
 #
 # Anthropic models to try (in order):
+# NOTE: If a model returns Error 404 (not_found_error), your API key may not
+# have access to that model tier. The haiku model at the bottom is a known fallback.
+# Add credits at console.anthropic.com and check your account's model access tier.
 ANTHROPIC_MODELS = [
-    "claude-3-5-sonnet-20241022",   # Best balance of speed + accuracy
-    "claude-3-5-haiku-20241022",    # Fastest, cheapest
-    "claude-3-opus-20240229",       # Strongest (slow, expensive)
-    "claude-3-sonnet-20240229",     # Older sonnet
-    "claude-3-haiku-20240307",      # Oldest haiku
+    "claude-3-7-sonnet-20250219",   # Feb 2025 — strongest reasoning + extended thinking
+    "claude-3-5-sonnet-20241022",   # Oct 2024 — best speed/accuracy balance
+    "claude-3-5-haiku-20241022",    # Oct 2024 — fastest, lightest
+    "claude-3-haiku-20240307",      # Mar 2024 — confirmed fallback if newer models 404
+    "claude-3-opus-20240229",       # Feb 2024 — deprecated, last resort
+    "claude-3-sonnet-20240229",     # Feb 2024 — deprecated, last resort
 ]
 # Perplexity models to try (in order):
 PERPLEXITY_MODELS = [
@@ -553,7 +557,11 @@ def predict(id_: str, problem: str) -> int:
     """Solve one problem. Returns integer answer. Called by AIMO3Gateway."""
     result = solve_one(str(problem), str(id_), n_passes=N_PASSES)
     _results_log.append(result)
-    return int(result['answer'])
+    ans = int(result['answer'])
+    # AIMO answers are always 0–999. Clamp anything that escaped the prompt instruction.
+    if ans < 0 or ans > 999:
+        ans = ans % 1000
+    return ans
 
 # ══════════════════════════════════════════════════════════
 # MODE A — GATEWAY (live competition evaluation)
