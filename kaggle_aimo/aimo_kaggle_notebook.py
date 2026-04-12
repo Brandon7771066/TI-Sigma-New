@@ -260,19 +260,17 @@ print("      ✓ Math engine ready")
 # ══════════════════════════════════════════════════════════
 print("\n[5/6] Setting up LLM interface...")
 
-# ── Model selection ────────────────────────────────────────
-# IMPORTANT: Use standard Anthropic API model names (not Replit internal names).
-# "claude-sonnet-4-5" / "claude-opus-4-5" are Replit-specific — they cause
-# Error 400 invalid_request_error on a standard Anthropic API key in Kaggle.
+# ── Provider selection is automatic (see provider auto-detection block below) ──
+# ACTIVE_PROVIDER + ACTIVE_MODEL are set by the validation block.
+# Priority: Anthropic (best math) → Perplexity r1-1776 → demo mode.
 #
-# Standard Anthropic API model names (confirmed valid):
-MODEL_FAST   = "claude-3-5-sonnet-20241022"  # Best math accuracy + speed balance
-MODEL_STRONG = "claude-3-opus-20240229"      # Strongest reasoning (tiebreaker only)
+# If Anthropic fails with "credit balance too low":
+#   → Go to console.anthropic.com → Settings → Billing → Add Credits (prepay $5+)
+#   → Setting a monthly "spend limit" does NOT add credits. You need to buy them.
 #
-# Alternatives if the above fail (try in order):
-#   "claude-3-5-haiku-20241022"   — fastest, weakest
-#   "claude-3-sonnet-20240229"    — older sonnet
-#   "claude-3-opus-20240229"      — strongest pre-4
+# If Perplexity fails:
+#   → Make sure secret 'Perplexity_Api_Key' is added in Kaggle Secrets (Add-ons → Secrets)
+#   → Make sure "Attach to notebook" toggle is ON for that secret
 
 # ── Per-call hard timeout (seconds) ───────────────────────
 # Gateway allows ~9 hours for ~50 problems = ~10 min/problem.
