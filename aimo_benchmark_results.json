@@ -1,0 +1,63 @@
+{
+  "model": "claude-haiku-4-5",
+  "n_problems": 5,
+  "ti_accuracy": 0.6,
+  "baseline_accuracy": 0.4,
+  "results": [
+    {
+      "id": 1,
+      "q": "Find the remainder when 7^100 is divided by 1000.",
+      "true_answer": 1,
+      "cat": "number_theory",
+      "diff": 2,
+      "ti_answer": 1000,
+      "ti_correct": false,
+      "baseline_answer": 1,
+      "baseline_correct": true
+    },
+    {
+      "id": 2,
+      "q": "Find the remainder when 3^200 is divided by 1000.",
+      "true_answer": 1,
+      "cat": "number_theory",
+      "diff": 2,
+      "ti_answer": 1,
+      "ti_correct": true,
+      "baseline_answer": 1000,
+      "baseline_correct": false
+    },
+    {
+      "id": 3,
+      "q": "Find the remainder when 13^50 is divided by 1000.",
+      "true_answer": 249,
+      "cat": "number_theory",
+      "diff": 2,
+      "ti_answer": 8,
+      "ti_correct": false,
+      "baseline_answer": 125,
+      "baseline_correct": false
+    },
+    {
+      "id": 4,
+      "q": "Find the remainder when 2^30 is divided by 1000.",
+      "true_answer": 824,
+      "cat": "number_theory",
+      "diff": 1,
+      "ti_answer": 824,
+      "ti_correct": true,
+      "baseline_answer": 5,
+      "baseline_correct": false
+    },
+    {
+      "id": 5,
+      "q": "Find Euler's totient function \u03c6(360).",
+      "true_answer": 96,
+      "cat": "number_theory",
+      "diff": 1,
+      "ti_answer": 96,
+      "ti_correct": true,
+      "baseline_answer": 96,
+      "baseline_correct": true
+    }
+  ]
+}
