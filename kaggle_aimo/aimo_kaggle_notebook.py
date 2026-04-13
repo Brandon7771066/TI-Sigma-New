@@ -446,10 +446,15 @@ ANTHROPIC_MODELS = [
     "claude-3-sonnet-20240229",     # Feb 2024 — deprecated, last resort
 ]
 # Perplexity models to try (in order):
+# NOTE: r1-1776 (DeepSeek-R1) returns 400 "Invalid model" on the $20/month Agent API plan —
+# it may only be available on higher-tier plans. sonar-reasoning-pro uses chain-of-thought
+# reasoning (similar to o1) and is the strongest available math model on Agent API.
 PERPLEXITY_MODELS = [
-    "r1-1776",                      # DeepSeek-R1 — excellent at math olympiad
-    "sonar-pro",                    # Sonar Pro — web-connected, strong reasoning
-    "sonar",                        # Standard sonar
+    "sonar-reasoning-pro",          # Chain-of-thought reasoning, Pro — best math on Agent API
+    "sonar-reasoning",              # Chain-of-thought reasoning — strong at multi-step math
+    "r1-1776",                      # DeepSeek-R1 — try in case it becomes available
+    "sonar-pro",                    # Sonar Pro — web-connected, solid fallback
+    "sonar",                        # Standard sonar — last resort
 ]
 
 def _test_anthropic(model_name):
