@@ -45,6 +45,7 @@ from gile_lcc_test_suite import (
     run_all_tests, run_T1, run_T2, run_T3, run_T4, run_T5, run_T6,
     summarize, PASS_COLOR, FAIL_COLOR, WARN_COLOR,
 )
+from mood_amplifier_simulation_ui import render_mood_amplifier_simulation
 
 # ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
 RING_PALETTE = [
@@ -414,10 +415,10 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
-    "🧪 GL Ratio Tests",
+    "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine",
 ])
 
 with tab1:
@@ -2228,4 +2229,5 @@ not an arbitrary constant.
                     f"{'✅ DOMAIN-SPECIFIC' if t5.passed else '❌ NOT DISCRIMINABLE'}"
                 )
 
-
+with tab9:
+    render_mood_amplifier_simulation()
