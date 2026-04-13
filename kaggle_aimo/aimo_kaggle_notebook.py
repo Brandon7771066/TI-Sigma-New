@@ -240,15 +240,27 @@ def answer_confidence(a, ptype):
     return min(c, 1.0)
 
 def mr_collapse(answers, confs):
-    """Myrion Resolution: weighted majority vote over N candidate answers."""
+    """Myrion Resolution: weighted majority vote over N candidate answers.
+    
+    Weights are the answer_confidence scores (which already incorporate PC/special
+    bonuses). We do NOT re-add those bonuses here to avoid double-counting, which
+    would bias the vote toward small 'mathematical' numbers even when the model
+    consistently returns a larger problem-specific answer.
+    
+    Tie-breaking only: if two answers have equal accumulated weight, prefer the one
+    that is a primary constant multiple or special number.
+    """
     valid = [(a, c) for a, c in zip(answers, confs) if a is not None]
     if not valid:
         return 0, 0.0, "DT"
     weights = {}
     for a, c in valid:
         weights[a] = weights.get(a, 0) + c
-        if pc_check(a)[0]:    weights[a] += 0.12
-        if special_check(a):  weights[a] += 0.08
+    # Tie-breaking only — tiny nudge (0.01) for mathematical special numbers
+    # This resolves exact ties without overriding the model's numerical preference
+    for a in weights:
+        if pc_check(a)[0]:    weights[a] += 0.01
+        if special_check(a):  weights[a] += 0.01
     best  = max(weights, key=weights.get)
     total = sum(weights.values())
     conf  = weights[best] / total
@@ -330,9 +342,13 @@ def _llm_worker(provider, model, user_msg, result_container):
                 api_key=os.environ.get("PERPLEXITY_API_KEY", ""),
                 base_url="https://api.perplexity.ai"
             )
+            # Reasoning models (sonar-reasoning-pro, sonar-reasoning) produce longer
+            # chain-of-thought output — give them more tokens so the \boxed{N} answer
+            # is never cut off before it appears.
+            _max_tok = 6000 if "reasoning" in model else 2048
             resp = pclient.chat.completions.create(
                 model=model,
-                max_tokens=2048,
+                max_tokens=_max_tok,
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user",   "content": user_msg}
