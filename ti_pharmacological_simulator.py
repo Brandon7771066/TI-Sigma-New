@@ -796,6 +796,73 @@ SUPPLEMENT_DATABASE: Dict[str, Supplement] = {
         epilepsy_note="Macamides via MCT oil have enhanced absorption. CB1 activation may be mildly anticonvulsant.",
         interaction_group="cb1_agonist"
     ),
+
+    # ── NEW URB #669 COMPOUNDS (April 2026) ──────────────────────────────────
+    # OEA — Oleoylethanolamide: endocannabinoid-like lipid, PPAR-alpha agonist
+    # Mechanism: reduces food intake, anti-inflammatory, mild endocannabinoid potentiation
+    # Literature: Schwartz et al. 2008 (Nature Neuroscience); Romano et al. 2015
+    'oea': Supplement(
+        name='OEA — Oleoylethanolamide (500 mg)',
+        dose_mg=500, absorption_time_min=30, half_life_hours=3, bbb_penetration=0.30,
+        cb1_activation=0.10,          # indirect; PPAR-alpha primary
+        nape_pld_activation=0.65,     # endocannabinoid synthesis axis
+        faah_inhibition=0.15,         # mild competitive inhibition of AEA breakdown
+        dopamine_modulation=0.15,
+        serotonin_modulation=0.10,
+        lcc_boost=0.03, love_boost=0.03, intuition_boost=0.04, goodness_boost=0.05,
+        epilepsy_risk="LOW",
+        epilepsy_note=(
+            "OEA (oleoylethanolamide) activates PPAR-alpha, not directly CNS. "
+            "No pro-convulsant activity. May have anti-inflammatory benefits relevant to "
+            "neuroinflammatory seizure models. Safe at 500mg. Combine with PEA for synergy."
+        ),
+        interaction_group="faah_inhibitor"
+    ),
+
+    # DHEA (Docosahexaenoyl Ethanolamide / Synaptamide) — NOT to be confused with DHEA hormone
+    # This is the DHA-derived endocannabinoid: promotes neurogenesis, anti-inflammatory
+    # Literature: Kim et al. 2011 (Nature Neuroscience); Bazan 2012
+    'dhea_synaptamide': Supplement(
+        name='DHEA / Synaptamide — DHA-derived Endocannabinoid (200 mg DHA precursor)',
+        dose_mg=200, absorption_time_min=45, half_life_hours=6, bbb_penetration=0.70,
+        cb1_activation=0.25,          # GPR110 primary; partial CB1
+        nape_pld_activation=0.55,
+        faah_inhibition=0.10,
+        dopamine_modulation=0.20,
+        serotonin_modulation=0.20,
+        lcc_boost=0.06, love_boost=0.04, intuition_boost=0.06, goodness_boost=0.04,
+        epilepsy_risk="LOW",
+        epilepsy_note=(
+            "Synaptamide (N-DHA-ethanolamine) promotes neurogenesis via GPR110. "
+            "Neuroprotective, anti-inflammatory. No pro-convulsant data. "
+            "Use DHA-rich omega-3 as precursor (fish oil ≥1g DHA/day). "
+            "Anti-inflammatory profile is seizure-protective."
+        ),
+        interaction_group="cb1_agonist"
+    ),
+
+    # URB597 — Selective FAAH inhibitor (research compound, not commercially available)
+    # Included as reference standard for FAAH inhibition benchmarking
+    # Literature: Kathuria et al. 2003 (Nature Medicine); Piomelli lab
+    'urb597_reference': Supplement(
+        name='URB597 — FAAH Inhibitor Reference Standard (RESEARCH ONLY, not for human use)',
+        dose_mg=1,   # research micro-dose equivalent
+        absorption_time_min=20, half_life_hours=12, bbb_penetration=0.90,
+        cb1_activation=0.55,          # indirect via AEA accumulation
+        nape_pld_activation=0.20,
+        faah_inhibition=0.95,         # highly selective FAAH inhibitor
+        dopamine_modulation=0.30,
+        serotonin_modulation=0.25,
+        lcc_boost=0.08, love_boost=0.06, intuition_boost=0.09, goodness_boost=0.07,
+        epilepsy_risk="MODERATE",
+        epilepsy_note=(
+            "⚠️ URB597 is a RESEARCH compound — NOT approved for human use. "
+            "Included as reference standard only (benchmarks max FAAH inhibition = 0.95). "
+            "Clinical FAAH inhibitors (BIA 10-2474) caused serious adverse events in 2016 trial. "
+            "Do NOT administer URB597 to humans. Use OEA + PEA as safe clinical proxies."
+        ),
+        interaction_group="faah_inhibitor"
+    ),
 }
 
 
