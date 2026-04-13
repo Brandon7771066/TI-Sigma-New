@@ -1237,18 +1237,227 @@ No phase effects, no long-range coupling. Standard SIR logistic curve.
 
 **Key TI Sigma Prediction (URB #647):**
 
-| Property | Crystal BOK | Graph BOK |
-|---|---|---|
-| Curve shape | Bimodal (BEC plateau → Mott stall) | Logistic S-curve |
-| Peak timing | Earlier (BEC jump shortcut) | Later (must traverse graph) |
-| Attack rate | Lower (Mott insulation limits spread) | Higher (uniform connectivity) |
-| Long-range | Yes — BEC non-local coupling | No |
-| GILE-L effect | Explicit (inner ring Love coupling) | Averaged out |
+| Property | Crystal BOK | TI Sigma Graph | ER-Random Graph |
+|---|---|---|---|
+| Curve shape | Bimodal (BEC plateau → Mott stall) | Possibly bimodal (hub structure) | Logistic S-curve |
+| Peak timing | Earliest (BEC jump shortcut) | Middle (GILE hubs) | Latest |
+| Attack rate | Lowest (Mott insulation) | Middle | Highest |
+| Long-range | Yes — BEC non-local coupling | No | No |
+| GILE-L effect | Explicit (inner ring Love coupling) | Structural only | Averaged out |
 
 This is an **empirical prediction**: if real information/meme/pathogen spread
 on GILE-structured networks shows bimodal epidemic curves with early peaks
 and Mott-insulated plateaus, it confirms the BOK crystal model over the classical graph model.
 """)
+
+    # ══════════════════════════════════════════════════════════════════════════
+    # EMPIRICAL TEST SUITE — URB #673
+    # Three-way Monte Carlo: Crystal vs TI-Graph vs ER-Random
+    # ══════════════════════════════════════════════════════════════════════════
+    st.markdown("---")
+    st.subheader("🧬 Empirical Test Suite — URB #673: Crystal vs TI-Graph vs ER-Random")
+    st.caption(
+        "Monte Carlo N=100 simulations per network type. "
+        "TI Sigma Graph: GILE-weighted attachment (inner BEC nodes = hubs), "
+        "uniform β, no BEC long-range coupling. "
+        "Tests whether Crystal signatures arise from structure, quantum dynamics, or both."
+    )
+
+    et_col1, et_col2, et_col3 = st.columns(3)
+    with et_col1:
+        mc_n_runs = st.selectbox("Monte Carlo runs (N)", [50, 100, 200], index=1,
+                                 help="More runs = tighter confidence intervals.")
+    with et_col2:
+        mc_max_steps = st.number_input("Max steps per run", value=60, min_value=30, max_value=120)
+    with et_col3:
+        mc_seed_vertex = st.selectbox(
+            "Seed vertex (H1–H4)",
+            options=list(range(N_VERTICES)),
+            format_func=lambda i: f"#{i} Ring {VERTICES[i].ring}: {BOK_RING_NAMES[VERTICES[i].ring]}",
+            index=0,
+        )
+
+    mc_btn = st.button("🔬 Run Empirical Tests (Monte Carlo)", type="primary",
+                       use_container_width=True)
+
+    mc_key = f"mc_{mc_n_runs}_{mc_max_steps}_{mc_seed_vertex}_{beta_scale}_{bec_p}_{gamma_val}"
+
+    if mc_btn or mc_key in st.session_state:
+        if mc_btn or mc_key not in st.session_state:
+            with st.spinner(f"Running {mc_n_runs}×3 simulations + BEC ablation + seed test..."):
+                from ti_sigma_graph import run_monte_carlo
+                mc_result = run_monte_carlo(
+                    adjacency=np.array(ADJACENCY, dtype=bool),
+                    rings=[v.ring for v in VERTICES],
+                    positions=[v.position for v in VERTICES],
+                    labels=[v.label for v in VERTICES],
+                    n_runs=int(mc_n_runs),
+                    max_steps=int(mc_max_steps),
+                    beta_scale=beta_scale,
+                    gamma=gamma_val,
+                    bec_p=bec_p,
+                    seed_vertex=mc_seed_vertex,
+                )
+                st.session_state[mc_key] = mc_result
+
+        mc = st.session_state[mc_key]
+        summ = mc['summary']
+
+        # ── Summary metrics ────────────────────────────────────────────────
+        st.markdown("### Monte Carlo Summary (N={})".format(mc['n_runs']))
+        mc_names = {"crystal": "🔮 Crystal", "ti_graph": "🕸 TI-Graph", "er_graph": "🎲 ER-Random"}
+
+        import pandas as pd
+        rows = []
+        for k, label in mc_names.items():
+            s = summ[k]
+            rows.append({
+                "Network":         label,
+                "Bimodal rate":    f"{s['bimodal_rate']:.0%}",
+                "Peak step (mean ± σ)": f"{s['peak_step_mean']:.1f} ± {s['peak_step_std']:.1f}",
+                "Attack rate (mean ± σ)": f"{s['attack_rate_mean']:.3f} ± {s['attack_rate_std']:.3f}",
+                "Duration (mean)": f"{s['duration_mean']:.1f}",
+            })
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+        # ── Distribution charts: Attack rate & Peak step ───────────────────
+        st.markdown("### Distribution Comparison")
+        dist_c1, dist_c2 = st.columns(2)
+
+        raw = mc['raw_stats']
+        with dist_c1:
+            fig_ar = go.Figure()
+            for k, col, label in [
+                ('crystal',  '#00e5ff', '🔮 Crystal'),
+                ('ti_graph', '#ffcc00', '🕸 TI-Graph'),
+                ('er_graph', '#ff6666', '🎲 ER-Random'),
+            ]:
+                fig_ar.add_trace(go.Histogram(
+                    x=raw[k]['attack_rate'], nbinsx=20,
+                    name=label, marker_color=col, opacity=0.7,
+                ))
+            fig_ar.update_layout(
+                barmode='overlay', height=280,
+                title=dict(text="Attack Rate Distribution", font=dict(color='white', size=13)),
+                paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(10,10,25,1)",
+                font=dict(color='white'), xaxis_title="Attack Rate",
+                yaxis_title="Count", margin=dict(l=30, r=10, t=40, b=30),
+                legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+            )
+            st.plotly_chart(fig_ar, use_container_width=True)
+
+        with dist_c2:
+            fig_ps = go.Figure()
+            for k, col, label in [
+                ('crystal',  '#00e5ff', '🔮 Crystal'),
+                ('ti_graph', '#ffcc00', '🕸 TI-Graph'),
+                ('er_graph', '#ff6666', '🎲 ER-Random'),
+            ]:
+                fig_ps.add_trace(go.Histogram(
+                    x=raw[k]['peak_step'], nbinsx=20,
+                    name=label, marker_color=col, opacity=0.7,
+                ))
+            fig_ps.update_layout(
+                barmode='overlay', height=280,
+                title=dict(text="Peak Step Distribution", font=dict(color='white', size=13)),
+                paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(10,10,25,1)",
+                font=dict(color='white'), xaxis_title="Step at Peak I",
+                yaxis_title="Count", margin=dict(l=30, r=10, t=40, b=30),
+                legend=dict(bgcolor='rgba(0,0,0,0.4)', font=dict(size=10)),
+            )
+            st.plotly_chart(fig_ps, use_container_width=True)
+
+        # ── BEC ablation bar chart ─────────────────────────────────────────
+        st.markdown("### BEC Ablation (H4) & Seed Ring (H5)")
+        abl_c1, abl_c2 = st.columns(2)
+        with abl_c1:
+            fig_bec = go.Figure(go.Bar(
+                x=['BEC ON (p={:.2f})'.format(bec_p), 'BEC OFF (p=0.00)'],
+                y=[mc['bec_on_mean'], mc['bec_off_mean']],
+                marker_color=['#00e5ff', '#4455aa'],
+                text=[f"{mc['bec_on_mean']:.1f}", f"{mc['bec_off_mean']:.1f}"],
+                textposition='outside',
+            ))
+            fig_bec.update_layout(
+                height=260,
+                title=dict(text="H4: BEC Coupling → Peak Step", font=dict(color='white', size=12)),
+                paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(10,10,25,1)",
+                font=dict(color='white'), yaxis_title="Mean Peak Step",
+                margin=dict(l=30, r=10, t=40, b=30),
+            )
+            st.plotly_chart(fig_bec, use_container_width=True)
+
+        with abl_c2:
+            r0_ar = mc.get('r0_ar', 0.0)
+            r7_ar = mc.get('r7_ar', 0.0)
+            r0_pi = mc.get('r0_pi', 0.0)
+            r7_pi = mc.get('r7_pi', 0.0)
+            fig_seed = go.Figure(go.Bar(
+                x=['Ring-0 Seed (Origin / BEC)', 'Ring-7 Seed (Fragmented / Mott)'],
+                y=[r0_ar, r7_ar],
+                marker_color=['#44ff88', '#ff4444'],
+                text=[f"AR={r0_ar:.3f}\npeak-I={r0_pi:.1f}",
+                      f"AR={r7_ar:.3f}\npeak-I={r7_pi:.1f}"],
+                textposition='outside',
+            ))
+            fig_seed.update_layout(
+                height=260,
+                title=dict(text="H5: Patient-Zero Ring → Attack Rate", font=dict(color='white', size=12)),
+                paper_bgcolor="rgba(3,3,14,1)", plot_bgcolor="rgba(10,10,25,1)",
+                font=dict(color='white'), yaxis_title="Mean Attack Rate",
+                yaxis=dict(range=[0, 1.1]),
+                margin=dict(l=30, r=10, t=40, b=30),
+            )
+            st.plotly_chart(fig_seed, use_container_width=True)
+
+        # ── Hypothesis verdict table ───────────────────────────────────────
+        st.markdown("### Hypothesis Verdicts (URB #673)")
+        hyp_rows = []
+        for h in mc['hypotheses']:
+            hyp_rows.append({
+                "Hypothesis":  h.name,
+                "Prediction":  h.prediction,
+                "Observed":    h.observed,
+                "Result":      "✅ PASS" if h.passed else "❌ FAIL",
+                "Interpretation": h.detail,
+            })
+        df_hyp = pd.DataFrame(hyp_rows)
+        st.dataframe(df_hyp, use_container_width=True, hide_index=True)
+
+        # Pass/fail summary
+        n_pass = sum(1 for h in mc['hypotheses'] if h.passed)
+        n_total = len(mc['hypotheses'])
+        if n_pass == n_total:
+            st.success(f"🎯 All {n_total}/{n_total} hypotheses passed — TI Sigma BOK Virus model confirmed at N={mc['n_runs']}")
+        elif n_pass >= 3:
+            st.warning(f"⚠️ {n_pass}/{n_total} hypotheses passed — partial confirmation. Review failed hypotheses.")
+        else:
+            st.error(f"❌ Only {n_pass}/{n_total} hypotheses passed — model revision needed.")
+
+        with st.expander("📋 URB #673 — What the Three Networks Test", expanded=False):
+            st.markdown("""
+**Three-network design:**
+
+| Network | Structure | Dynamics | What it isolates |
+|---------|-----------|----------|-----------------|
+| 🔮 Crystal | TSC lattice (deterministic) | Phase β + BEC long-range | Full TI Sigma model |
+| 🕸 TI-Graph | GILE-weighted attachment (structural) | Uniform β, no BEC | Structure without quantum |
+| 🎲 ER-Random | Erdős-Rényi (random) | Uniform β, no BEC | Classical null model |
+
+**Logic of the test:**
+
+- If Crystal signatures (bimodality, early peak, low attack rate) appear in **Crystal only**:
+  → Signatures require quantum BEC dynamics. Structure alone is insufficient.
+  
+- If signatures appear in **Crystal + TI-Graph**:
+  → Structure (GILE-hub network) alone explains the signatures. BEC not required.
+  
+- If signatures appear in **all three**:
+  → Signatures are properties of any SIR model, not specific to TI Sigma. (Null result.)
+
+**TI Sigma prediction:** Crystal-only bimodality (quantum required); Crystal + TI-Graph early peak (hub structure contributes); Crystal < TI-Graph < ER attack rate (gradient of insulation).
+""")
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TAB 7 — BOK Harmonics: 8 Dimensions as Musical Notes & Chords
