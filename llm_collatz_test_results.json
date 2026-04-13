@@ -1,0 +1,227 @@
+{
+  "model": "claude-haiku-4-5",
+  "n_problems": 27,
+  "base_rate": 0.5555555555555556,
+  "overall_accuracy": 0.7037037037037037,
+  "easy_accuracy": 1.0,
+  "hard_accuracy": 0.42857142857142855,
+  "delta_vs_base_rate": 0.14814814814814814,
+  "results": [
+    {
+      "n": 3,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 7,
+      "difficulty": "easy"
+    },
+    {
+      "n": 5,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 5,
+      "difficulty": "easy"
+    },
+    {
+      "n": 7,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 16,
+      "difficulty": "easy"
+    },
+    {
+      "n": 9,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 19,
+      "difficulty": "easy"
+    },
+    {
+      "n": 15,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 17,
+      "difficulty": "easy"
+    },
+    {
+      "n": 25,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 23,
+      "difficulty": "easy"
+    },
+    {
+      "n": 255,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 47,
+      "difficulty": "easy"
+    },
+    {
+      "n": 511,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 61,
+      "difficulty": "easy"
+    },
+    {
+      "n": 1023,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 62,
+      "difficulty": "easy"
+    },
+    {
+      "n": 32767,
+      "true_ans": true,
+      "llm_ans": false,
+      "correct": false,
+      "steps": 129,
+      "difficulty": "hard"
+    },
+    {
+      "n": 65535,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 130,
+      "difficulty": "hard"
+    },
+    {
+      "n": 31,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 106,
+      "difficulty": "easy"
+    },
+    {
+      "n": 63,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 107,
+      "difficulty": "easy"
+    },
+    {
+      "n": 97,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 118,
+      "difficulty": "easy"
+    },
+    {
+      "n": 27,
+      "true_ans": true,
+      "llm_ans": true,
+      "correct": true,
+      "steps": 111,
+      "difficulty": "easy"
+    },
+    {
+      "n": 703,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 170,
+      "difficulty": "hard"
+    },
+    {
+      "n": 871,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 178,
+      "difficulty": "hard"
+    },
+    {
+      "n": 2047,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 156,
+      "difficulty": "hard"
+    },
+    {
+      "n": 4095,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 157,
+      "difficulty": "hard"
+    },
+    {
+      "n": 6171,
+      "true_ans": false,
+      "llm_ans": false,
+      "correct": true,
+      "steps": 261,
+      "difficulty": "hard"
+    },
+    {
+      "n": 8191,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 158,
+      "difficulty": "hard"
+    },
+    {
+      "n": 16383,
+      "true_ans": false,
+      "llm_ans": false,
+      "correct": true,
+      "steps": 159,
+      "difficulty": "hard"
+    },
+    {
+      "n": 77031,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 350,
+      "difficulty": "hard"
+    },
+    {
+      "n": 131071,
+      "true_ans": false,
+      "llm_ans": false,
+      "correct": true,
+      "steps": 224,
+      "difficulty": "hard"
+    },
+    {
+      "n": 262143,
+      "true_ans": false,
+      "llm_ans": true,
+      "correct": false,
+      "steps": 225,
+      "difficulty": "hard"
+    },
+    {
+      "n": 524287,
+      "true_ans": false,
+      "llm_ans": false,
+      "correct": true,
+      "steps": 177,
+      "difficulty": "hard"
+    },
+    {
+      "n": 837799,
+      "true_ans": false,
+      "llm_ans": false,
+      "correct": true,
+      "steps": 524,
+      "difficulty": "hard"
+    }
+  ]
+}

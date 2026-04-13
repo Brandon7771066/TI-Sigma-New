@@ -47,6 +47,7 @@ from gile_lcc_test_suite import (
 )
 from mood_amplifier_simulation_ui import render_mood_amplifier_simulation
 from halting_experiment_ui import render_halting_experiment
+from oea_protocol_tracker import render_oea_tracker
 
 # ── Aesthetic color palette for each PRIMARY constant ring ─────────────────
 RING_PALETTE = [
@@ -416,10 +417,11 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
     "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine", "🔬 Halting Experiment",
+    "💊 OEA Protocol",
 ])
 
 with tab1:
@@ -2235,3 +2237,6 @@ with tab9:
 
 with tab10:
     render_halting_experiment()
+
+with tab11:
+    render_oea_tracker()
