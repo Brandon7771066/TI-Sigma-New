@@ -3,8 +3,8 @@
 
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 14, 2026  
-**Corpus Entry:** #678  
-**Related URBs:** #670 (In Defense of Bluntness), #528 (PD), #565 (MR), #658 (HEAR), #676 (Double Tralse), #677 (Indestructibility Theorem)  
+**Corpus Entry:** #679  
+**Related URBs:** #670 (In Defense of Bluntness), #528 (PD), #565 (MR), #658 (HEAR), #677 (Double Tralse), #677 (Indestructibility Theorem)  
 **DOI:** Pending Zenodo  
 **Keywords:** valid hyperbole, Tralse, pole amplification, PD-corrective, pragmatic truth, HEAR, Permissibility Distribution, Myrion Resolution, communication ethics, rhetoric, bluntness, epistemic fairness
 
