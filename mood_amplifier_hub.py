@@ -74,9 +74,13 @@ def render_mood_amplifier_hub():
     mood_tabs = st.tabs(["💫 Guided Session", "💍 Oura Ring", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong", "🔮 Divination"])
     
     with mood_tabs[0]:
-        from guided_amplification_session import render_guided_amplification_session
-        render_guided_amplification_session()
-    
+        try:
+            from guided_amplification_session import render_guided_amplification_session
+            render_guided_amplification_session()
+        except Exception as e:
+            st.error(f"Guided Session error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[1]:
         try:
             from oura_mood_tab import render_oura_tab
@@ -85,27 +89,51 @@ def render_mood_amplifier_hub():
             st.error(f"Oura Ring tab error: {e}")
 
     with mood_tabs[2]:
-        from mendi_heart_realtime_dashboard import render_mendi_heart_realtime_dashboard
-        render_mendi_heart_realtime_dashboard()
-    
+        try:
+            from mendi_heart_realtime_dashboard import render_mendi_heart_realtime_dashboard
+            render_mendi_heart_realtime_dashboard()
+        except Exception as e:
+            st.error(f"Real-Time Measurement error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[3]:
-        from gm_hypercomputing_session import render_gm_hypercomputing_session
-        render_gm_hypercomputing_session()
-    
+        try:
+            from gm_hypercomputing_session import render_gm_hypercomputing_session
+            render_gm_hypercomputing_session()
+        except Exception as e:
+            st.error(f"GM Hypercomputing error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[4]:
-        _render_full_mood_amplifier()
-    
+        try:
+            _render_full_mood_amplifier()
+        except Exception as e:
+            st.error(f"Full Mood Amplifier error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[5]:
-        from sensee_aware_dashboard import render_sensee_aware_dashboard
-        render_sensee_aware_dashboard()
-    
+        try:
+            from sensee_aware_dashboard import render_sensee_aware_dashboard
+            render_sensee_aware_dashboard()
+        except Exception as e:
+            st.error(f"Sensee Aware EEG error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[6]:
-        from animal_mood_amplifier_training import render_animal_training_dashboard
-        render_animal_training_dashboard()
-    
+        try:
+            from animal_mood_amplifier_training import render_animal_training_dashboard
+            render_animal_training_dashboard()
+        except Exception as e:
+            st.error(f"Animal Training error: {e}")
+            import traceback; st.code(traceback.format_exc())
+
     with mood_tabs[7]:
-        from ma_validation_system import render_ma_validation_dashboard
-        render_ma_validation_dashboard()
+        try:
+            from ma_validation_system import render_ma_validation_dashboard
+            render_ma_validation_dashboard()
+        except Exception as e:
+            st.error(f"Validation error: {e}")
+            import traceback; st.code(traceback.format_exc())
     
     with mood_tabs[8]:
         try:
