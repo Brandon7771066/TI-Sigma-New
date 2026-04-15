@@ -951,18 +951,24 @@ async def download_page_handler(request):
 <b>On Acer — Terminal 1, paste both lines:</b><br>
 <code>cd %USERPROFILE%\Downloads</code><br>
 <code>python mind_monitor_bridge.py</code><br><br>
-<span class="green">✓ You'll see alpha/beta/theta bars printing every 2 seconds.</span>
+<span class="green">✓ You'll see alpha/beta/theta bars printing every 2 seconds.</span><br><br>
+<span class="note">🔥 If it says "No Muse data" after 10 seconds:</span><br>
+<span class="note">Windows Firewall is blocking it. Run this in Command Prompt <b>as Administrator</b>:</span><br>
+<code>netsh advfirewall firewall add rule name="MindMonitorBridge" dir=in action=allow protocol=UDP localport=5005</code><br>
+<span class="note">Then close and re-run the script.</span>
 </div>
 
 <h2>Step 4 — Polar H10 (Heart Rate + HRV)</h2>
 <div class="step">
+<b>Before running:</b> Pair Polar H10 in Windows first:<br>
+Windows Settings → Bluetooth &amp; devices → Add device → Bluetooth → select <b>Polar H10</b><br><br>
 <b>Physical:</b> Wet the two electrode bumps on the strap. Wear snugly.<br>
-Close Polar Flow / Polar Beat if open — they block BLE access.<br><br>
+Close Polar Flow / Polar Beat — they block BLE access.<br><br>
 <b>On Acer — Terminal 2, paste both lines:</b><br>
 <code>cd %USERPROFILE%\Downloads</code><br>
 <code>python polar_h10_bridge.py</code><br><br>
-<span class="green">✓ You'll see HR bpm + RMSSD uploading every 5 seconds.</span><br><br>
-<span class="note">If "Polar not found": pair once via Windows Settings → Bluetooth → Add device → Polar H10. Then re-run.</span>
+<span class="green">✓ Script will list all BLE devices it finds, then connect and upload every 5s.</span><br><br>
+<span class="note">If the scan shows your Polar but still fails: remove it from Bluetooth settings and re-pair.</span>
 </div>
 
 <h2>Step 5 — Open the Mood Amplifier</h2>
