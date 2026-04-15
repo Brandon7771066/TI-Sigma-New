@@ -885,12 +885,13 @@ async def wait_for_streamlit(max_retries=30, delay=1.0):
 async def download_bridge_handler(request):
     """Serve bridge scripts as direct downloads."""
     script = request.rel_url.query.get('script', 'polar')
-    if script == 'full':
-        fname = 'ACER_LIVE_BRIDGE.py'
-        fpath = os.path.join(os.path.dirname(__file__), 'hardware', 'ACER_LIVE_BRIDGE.py')
-    else:
-        fname = 'polar_bridge.py'
-        fpath = os.path.join(os.path.dirname(__file__), 'polar_bridge_minimal.py')
+    base = os.path.dirname(__file__)
+    options = {
+        'polar':        ('polar_h10_bridge.py',      os.path.join(base, 'polar_h10_bridge.py')),
+        'muse':         ('mind_monitor_bridge.py',   os.path.join(base, 'mind_monitor_bridge.py')),
+        'full':         ('ACER_LIVE_BRIDGE.py',      os.path.join(base, 'hardware', 'ACER_LIVE_BRIDGE.py')),
+    }
+    fname, fpath = options.get(script, options['polar'])
     try:
         with open(fpath, 'r') as f:
             content = f.read()
@@ -900,7 +901,75 @@ async def download_bridge_handler(request):
             headers={'Content-Disposition': f'attachment; filename="{fname}"'}
         )
     except Exception as e:
-        return web.json_response({"error": str(e)}, status=500)
+        return web.json_response({"error": f"Script not found: {e}"}, status=500)
+
+
+async def download_page_handler(request):
+    """HTML setup page with download buttons for Acer bridge scripts."""
+    html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mood Amplifier — Acer Bridge Setup</title>
+<style>
+  body { font-family: monospace; background: #0a0a0a; color: #e0e0e0; max-width: 700px; margin: 40px auto; padding: 20px; }
+  h1 { color: #7df; margin-bottom: 4px; }
+  h2 { color: #adf; margin-top: 32px; border-bottom: 1px solid #333; padding-bottom: 6px; }
+  .step { background: #111; border-left: 3px solid #4af; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+  code { background: #1a1a2e; color: #7df; padding: 2px 6px; border-radius: 3px; }
+  .btn { display: inline-block; background: #1a4a8a; color: #fff; padding: 10px 22px; border-radius: 6px;
+         text-decoration: none; margin: 6px 6px 6px 0; font-size: 15px; border: 1px solid #4af; }
+  .btn:hover { background: #2a6aba; }
+  .note { color: #fa8; font-size: 13px; margin-top: 6px; }
+  .green { color: #4f8; }
+  .ip { color: #ff8; font-size: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>🧠❤️ Mood Amplifier — Acer Bridge Scripts</h1>
+<p>Download these two scripts to your Acer laptop, then follow the steps below.</p>
+
+<h2>Step 1 — Install dependencies (one time only)</h2>
+<div class="step">Open <b>Command Prompt</b> on your Acer and run:<br><br>
+<code>pip install python-osc requests bleak</code>
+</div>
+
+<h2>Step 2 — Download the scripts</h2>
+<a class="btn" href="/download/bridge?script=muse">⬇ mind_monitor_bridge.py</a>
+<a class="btn" href="/download/bridge?script=polar">⬇ polar_h10_bridge.py</a>
+<p class="note">Save both files to the same folder, e.g. <code>C:\\Users\\brand\\bridges\\</code></p>
+
+<h2>Step 3 — Mind Monitor (Muse 2 EEG)</h2>
+<div class="step">
+<b>On your phone (Mind Monitor app):</b><br>
+1. Connect Muse 2 in Mind Monitor<br>
+2. Settings → OSC Stream<br>
+3. Host = <span class="ip">192.168.4.46</span> &nbsp;(your Acer's WiFi IP)<br>
+4. Port = <code>5005</code><br>
+5. Toggle <b>OSC Stream ON</b><br><br>
+<b>On Acer (Terminal 1) — cd to where you saved the file:</b><br>
+<code>python mind_monitor_bridge.py</code><br><br>
+<span class="green">✓ You'll see alpha/beta/theta bars printing every 2 seconds.</span>
+</div>
+
+<h2>Step 4 — Polar H10 (Heart Rate + HRV)</h2>
+<div class="step">
+<b>Physical:</b> Wet the two electrode bumps on the strap. Wear snugly.<br>
+Close Polar Flow / Polar Beat if open — they block BLE access.<br><br>
+<b>On Acer (Terminal 2):</b><br>
+<code>python polar_h10_bridge.py</code><br><br>
+<span class="green">✓ You'll see HR bpm + RMSSD uploading every 5 seconds.</span><br><br>
+<span class="note">If "Polar not found": pair once via Windows Settings → Bluetooth → Add device → Polar H10. Then re-run.</span>
+</div>
+
+<h2>Step 5 — Open the Mood Amplifier</h2>
+<div class="step">
+Once both scripts are running, open the Mood Amplifier Hub in your browser.<br>
+Both devices will show as connected within ~10 seconds.
+</div>
+</body>
+</html>"""
+    return web.Response(text=html, content_type='text/html')
 
 async def main():
     start_streamlit()
@@ -932,6 +1001,8 @@ async def main():
     app.router.add_route('GET', '/gsa/', gsa_landing_handler)
     app.router.add_route('POST', '/api/v1/gsa/checkout', gsa_checkout_handler)
     app.router.add_route('GET', '/download/bridge', download_bridge_handler)
+    app.router.add_route('GET', '/download', download_page_handler)
+    app.router.add_route('GET', '/download/', download_page_handler)
 
     app.router.add_route('*', '/{path:.*}', proxy_handler)
     
