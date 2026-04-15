@@ -526,7 +526,7 @@ def _render_hear_landscape():
 
     with col2:
         # 2D contour heatmap
-        fig2 = go.Figure(go.Contourf(
+        fig2 = go.Figure(go.Contour(
             x=gile_vals, y=hem_vals, z=HEAR_GRID,
             colorscale=[
                 [0.00, "#ff2244"], [0.20, "#ff8800"],
