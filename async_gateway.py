@@ -927,17 +927,18 @@ async def download_page_handler(request):
 </head>
 <body>
 <h1>🧠❤️ Mood Amplifier — Acer Bridge Scripts</h1>
-<p>Download these two scripts to your Acer laptop, then follow the steps below.</p>
+<p>You are viewing this page on your Acer. Follow all 4 steps below.</p>
 
-<h2>Step 1 — Install dependencies (one time only)</h2>
-<div class="step">Open <b>Command Prompt</b> on your Acer and run:<br><br>
-<code>pip install python-osc requests bleak</code>
-</div>
-
-<h2>Step 2 — Download the scripts</h2>
+<h2>Step 1 — Download both scripts right now</h2>
 <a class="btn" href="/download/bridge?script=muse">⬇ mind_monitor_bridge.py</a>
 <a class="btn" href="/download/bridge?script=polar">⬇ polar_h10_bridge.py</a>
-<p class="note">Save both files to the same folder, e.g. <code>C:\\Users\\brand\\bridges\\</code></p>
+<p class="note">They will land in your <b>Downloads</b> folder automatically.</p>
+
+<h2>Step 2 — Install dependencies (one time only)</h2>
+<div class="step">Open <b>Command Prompt</b> and paste this exactly:<br><br>
+<code>python -m pip install python-osc requests bleak</code><br><br>
+<span class="note">⚠ Use <b>python -m pip</b> — not just "pip" — on Python 3.14</span>
+</div>
 
 <h2>Step 3 — Mind Monitor (Muse 2 EEG)</h2>
 <div class="step">
@@ -947,7 +948,8 @@ async def download_page_handler(request):
 3. Host = <span class="ip">192.168.4.46</span> &nbsp;(your Acer's WiFi IP)<br>
 4. Port = <code>5005</code><br>
 5. Toggle <b>OSC Stream ON</b><br><br>
-<b>On Acer (Terminal 1) — cd to where you saved the file:</b><br>
+<b>On Acer — Terminal 1, paste both lines:</b><br>
+<code>cd %USERPROFILE%\Downloads</code><br>
 <code>python mind_monitor_bridge.py</code><br><br>
 <span class="green">✓ You'll see alpha/beta/theta bars printing every 2 seconds.</span>
 </div>
@@ -956,7 +958,8 @@ async def download_page_handler(request):
 <div class="step">
 <b>Physical:</b> Wet the two electrode bumps on the strap. Wear snugly.<br>
 Close Polar Flow / Polar Beat if open — they block BLE access.<br><br>
-<b>On Acer (Terminal 2):</b><br>
+<b>On Acer — Terminal 2, paste both lines:</b><br>
+<code>cd %USERPROFILE%\Downloads</code><br>
 <code>python polar_h10_bridge.py</code><br><br>
 <span class="green">✓ You'll see HR bpm + RMSSD uploading every 5 seconds.</span><br><br>
 <span class="note">If "Polar not found": pair once via Windows Settings → Bluetooth → Add device → Polar H10. Then re-run.</span>
