@@ -15,17 +15,59 @@ Proxy science:
 """
 
 import os
+import requests
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
-from datetime import date
+from datetime import date, datetime
 
 
 # ── Data source ────────────────────────────────────────────────────────────────
 
+def _fetch_todays_live() -> dict:
+    """Pull today's stress + activity from Oura v2 API directly."""
+    token = os.environ.get("OURA_PERSONAL_ACCESS_TOKEN", "")
+    if not token:
+        return {}
+    today_str = date.today().isoformat()
+    headers = {"Authorization": f"Bearer {token}"}
+    live = {"connected": True, "date": today_str}
+    try:
+        r = requests.get(
+            f"https://api.ouraring.com/v2/usercollection/daily_stress"
+            f"?start_date={today_str}&end_date={today_str}",
+            headers=headers, timeout=8,
+        )
+        if r.ok:
+            items = r.json().get("data", [])
+            if items:
+                s = items[0]
+                live["stress_high_min"] = s.get("stress_high", 0) or 0
+                live["recovery_high_min"] = s.get("recovery_high", 0) or 0
+                live["day_summary"] = s.get("day_summary")
+    except Exception:
+        pass
+    try:
+        r = requests.get(
+            f"https://api.ouraring.com/v2/usercollection/daily_activity"
+            f"?start_date={today_str}&end_date={today_str}",
+            headers=headers, timeout=8,
+        )
+        if r.ok:
+            items = r.json().get("data", [])
+            if items:
+                a = items[0]
+                live["active_calories"] = a.get("active_calories", 0) or 0
+                live["steps"] = a.get("steps", 0) or 0
+                live["avg_met"] = round(a.get("average_met_minutes", 0) or 0, 2)
+    except Exception:
+        pass
+    return live
+
+
 def _load_data():
-    """Return (df_with_proxies, mode) where mode = 'live' | 'simulation'."""
+    """Return (df_with_proxies, mode) where mode = 'live' | 'connected' | 'simulation'."""
     token = os.environ.get("OURA_PERSONAL_ACCESS_TOKEN", "")
     if token:
         try:
@@ -35,6 +77,11 @@ def _load_data():
             if snap and snap.get("readiness_score"):
                 df = _build_live_df(snap)
                 return df, "live"
+            # Token exists but no sleep data yet — ring is connected, first night pending
+            from oura_simulation_engine import generate_30_days, compute_brain_mood_proxies
+            df = generate_30_days(30)
+            df = compute_brain_mood_proxies(df)
+            return df, "connected"
         except Exception:
             pass
     from oura_simulation_engine import generate_30_days, compute_brain_mood_proxies
@@ -163,8 +210,37 @@ def render_oura_tab():
             "Connect a live ring by activating your Oura membership and adding your token.",
             icon="🔬"
         )
+    elif mode == "connected":
+        st.success(
+            "**Oura Ring 4 — Connected!** API authenticated. "
+            "Sleep, HRV, and readiness scores will unlock after your first full night wearing the ring. "
+            "Projections below use simulation until then. Today's live tracking is shown above.",
+            icon="💍"
+        )
+        # Show today's real live data from the API
+        live = _fetch_todays_live()
+        if live:
+            st.markdown("#### 📡 Today's Live Tracking (Real Data)")
+            c1, c2, c3, c4 = st.columns(4)
+            stress_min = live.get("stress_high_min", 0)
+            recovery_min = live.get("recovery_high_min", 0)
+            net = recovery_min - stress_min
+            steps = live.get("steps", 0)
+            cals = live.get("active_calories", 0)
+            avg_met = live.get("avg_met", 0)
+            day_sum = live.get("day_summary") or "Accumulating…"
+            c1.metric("Stress minutes", f"{int(stress_min)} min",
+                      help="Minutes spent in high-stress HRV state today")
+            c2.metric("Recovery minutes", f"{int(recovery_min)} min",
+                      help="Minutes in active recovery HRV state today")
+            c3.metric("Net balance", f"{int(net):+d} min",
+                      delta="recovery surplus" if net >= 0 else "stress surplus")
+            c4.metric("Steps so far", f"{int(steps):,}")
+            st.caption(f"Day summary: **{day_sum}** | Active calories: {int(cals)} kcal | Avg MET: {avg_met}")
+            st.info("Wear the ring tonight during sleep → tomorrow morning you'll see full HRV, "
+                    "readiness, sleep stages, and GILE scores.", icon="🌙")
     else:
-        st.success("**Live Oura Ring Gen 3** — real biometric data", icon="💍")
+        st.success("**Live Oura Ring 4** — real biometric data", icon="💍")
 
     st.subheader(f"Today — {date.today().strftime('%A, %B %d, %Y')}")
 

@@ -428,7 +428,38 @@ def render_mendi_heart_realtime_dashboard():
     
     st.header("🔬 Real-Time Mendi + Heart Measurement Dashboard")
     st.caption("Production-Ready Whole-Body Biofeedback System with Safety Protocols")
-    
+
+    # ── First-time setup: download the local bridge script ─────────────────
+    with st.expander("📥 First time? Download the local bridge script (Muse 2 + Polar H10)"):
+        st.markdown("""
+**Why you need this:** Your Muse 2 and Polar H10 connect via Bluetooth to your *local computer*.
+This small script bridges that local Bluetooth data to this cloud dashboard.
+
+**Steps on your Windows laptop:**
+1. Download the script below and save it to `C:\\Users\\brand\\`
+2. Open Command Prompt and run:
+```
+cd C:\\Users\\brand
+pip install requests python-osc numpy bleak
+python local_biometric_collector.py --mode all
+```
+3. Return here — your devices will appear as **LIVE** within ~10 seconds.
+
+**For Muse 2:** also install [Mind Monitor](https://mind-monitor.com/) on your phone,
+connect your Muse headband to it, and enable OSC streaming to your laptop's IP on port 5000.
+        """)
+        try:
+            with open("local_biometric_collector.py", "r") as _f:
+                _collector_src = _f.read()
+            st.download_button(
+                label="⬇️ Download local_biometric_collector.py",
+                data=_collector_src,
+                file_name="local_biometric_collector.py",
+                mime="text/x-python",
+            )
+        except Exception as _e:
+            st.error(f"Could not load file: {_e}")
+
     # Initialize managers - USE REAL DATA if devices connected
     bio_manager = get_biometric_manager()
     
