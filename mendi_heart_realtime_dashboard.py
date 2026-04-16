@@ -449,13 +449,13 @@ python local_biometric_collector.py --mode all
 connect your Muse headband to it, and enable OSC streaming to your laptop's IP on port 5000.
         """)
         try:
-            with open("local_biometric_collector.py", "r") as _f:
+            with open("local_biometric_collector.py", "r", encoding="utf-8") as _f:
                 _collector_src = _f.read()
             st.download_button(
                 label="⬇️ Download local_biometric_collector.py",
-                data=_collector_src,
+                data=_collector_src.encode("utf-8"),
                 file_name="local_biometric_collector.py",
-                mime="text/x-python",
+                mime="text/plain",
             )
         except Exception as _e:
             st.error(f"Could not load file: {_e}")
