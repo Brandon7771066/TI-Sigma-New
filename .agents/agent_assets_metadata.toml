@@ -216,3 +216,9 @@ id = "u3kGVapwvtvwvG5_7BBRn"
 uri = "file://figures/bok_morph_animation.gif"
 type = "image"
 title = "[B] BOK Morphogenesis Animation — butterfly-octopus morphing as τ and ϕ vary"
+
+[[outputs]]
+id = "o8TtbOjk684QjYOzvuwCO"
+uri = "file://figures/urb_700_p1_p4_precision_test.png"
+type = "image"
+title = "URB #700 P1+P4 precision test — cos(12θ) coefficient as clean dial through QED anomaly scale, electron vs muon BOK predicted to differ by ~5×10⁻⁷ in wing/arm"

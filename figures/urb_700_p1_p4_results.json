@@ -1,0 +1,17 @@
+{
+  "test_date": "2026-04-17",
+  "n_samples": 100000,
+  "angular_window_rad": 0.1308996938995747,
+  "alpha": 0.0072973525692838015,
+  "anomaly_electron_predicted": 0.0011614097328858596,
+  "anomaly_muon_predicted": 0.001162250593532469,
+  "baseline_wing_arm_E0": 2.304541550040853,
+  "E_for_tree_level_2": -0.15999999999999992,
+  "E_for_electron_P1": -0.16500000000000004,
+  "E_for_muon_P4": -0.16500000000000004,
+  "ratio_at_E_for_electron": 1.9951223014803543,
+  "ratio_at_E_for_muon": 1.9951223014803543,
+  "local_sensitivity_dr_dE": 1.700020455927936,
+  "predicted_e_minus_mu_E_shift": 4.946179581162879e-07,
+  "interpretation": "The cos(12\u03b8) correction term E provides a continuous, smooth dial that brings wing/arm through 2.0 and through the predicted P1 anomalous value 2 - \u03b1/(2\u03c0). The local sensitivity (dr/dE) is order unity, so an E perturbation of ~5e-7 separates the electron and muon predictions. This confirms STRUCTURAL CAPACITY of the BOK harmonic basis to encode QED-scale anomalous corrections \u2014 it does NOT derive them from first principles. Derivation would require linking E to the fine-structure constant via an independent framework principle (open research question, target of URB #704)."
+}

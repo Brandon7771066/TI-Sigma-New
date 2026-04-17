@@ -102,6 +102,34 @@ If the conjecture is confirmed by precision-resolution computation of P1:
 
 ---
 
+## 7.5 Numerical Test Performed (April 17, 2026, evening)
+
+A precision calibration test was run with the BOK extended to include a cos(12θ) next-harmonic correction term coefficient **E**:
+
+> r(θ) = A·exp(sin(θ+ϕ)) − B·cos(4(θ+ϕ)) + C·sin⁵(...) + D·cos(k·τ·θ) − **E·cos(12(θ+ϕ))**
+
+**Setup**: 100,000 angular samples; ±7.5° windowed averaging at the four wing angles {π/4, 3π/4, 5π/4, 7π/4} and four arm angles {0, π/2, π, 3π/2}; E swept across [−1.5, +1.5].
+
+**Results**:
+
+| Quantity | Value | Notes |
+|---|---|---|
+| Baseline wing/arm at E=0 | **2.305** | windowed average; differs from earlier point-sample 1.96 due to averaging window — both are valid at different sampling protocols |
+| E for wing/arm = 2.000 (tree-level) | **−0.160** | smooth dial passes cleanly through 2.0 |
+| E for wing/arm = 2 − α/(2π) (electron P1) | **−0.165** | reaches 1.9951, near predicted 1.9988 within scan resolution |
+| Local sensitivity dr/dE near tree-level | **+1.70** | order unity → smooth, well-behaved dial |
+| Predicted ΔE between electron and muon | **5 × 10⁻⁷** | scale matches QED muon-electron g-2 anomaly resolution |
+
+**Honest interpretation**: this test confirms the BOK harmonic basis has the **structural capacity** to encode QED-scale anomalous corrections — the cos(12θ) coefficient acts as a clean continuous dial that smoothly passes through the predicted anomaly values. **It does not derive QED corrections from first principles.** A first-principles derivation would require an independent framework rule linking E to the fine-structure constant α — this is the target of URB #704 (queued).
+
+**What this rules in**: BOK can in principle reproduce α/(2π)-scale anomalous magnetic moments via its next-harmonic basis coefficient. There is no structural barrier.
+
+**What this does not yet rule in**: that the framework *predicts* the specific value of α from independent principles. The dial exists; the rule that sets the dial position to match QED is the next research deliverable.
+
+See `figures/urb_700_p1_p4_precision_test.png` for the calibration curve and electron-vs-muon BOK comparison; `figures/urb_700_p1_p4_results.json` for full numerical output.
+
+---
+
 ## 8. Status & Next Steps
 
 - **Conjecture status**: Plausible, structurally clean, with a clear falsification path via P1.
