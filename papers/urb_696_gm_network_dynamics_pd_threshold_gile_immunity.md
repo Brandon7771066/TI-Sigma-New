@@ -130,6 +130,47 @@ This re-rationalizes practices that have been culturally universal for thousands
 
 ---
 
+## 4.5 HEAR-Aware Refinement: The HEM-Override Floor-Breach
+
+The §2 PD-Bandwidth Theorem stated that DT and sub-(−3) content do not propagate. In light of **HEAR** (the upgraded operational pillar replacing/refining EAR), this requires refinement:
+
+> **HEM-Override Theorem (HEAR-Aware).** The PD = −3 floor is *not* a hard cutoff. Sub-(−3) content — including DT — *can* seep through the GM Network when its HEM amplitude is sufficiently high to overwhelm the floor's coherence-rejection. Concretely, define the **breach functional**:
+>
+> 𝓑(s) ≔ HEM(s) − κ·|PD(s) + 3|⁺   (where |x|⁺ ≔ max(x, 0))
+>
+> Transmission occurs iff 𝓑(s) > 0. For PD(s) > −3, HEM > 0 suffices. For PD(s) ≤ −3, HEM must exceed the threshold κ·|PD(s)+3| to breach.
+>
+> The constant κ is the **GM Coherence-Rejection Coefficient**; its value is conjectured in URB #697 to equal 1/(√2−1) = 1+√2 (the silver ratio), making the floor's breach-resistance scale as the Emerick-reciprocal.
+
+### 4.5.1 Generation vs. Allowance
+
+A critical clarification:
+
+> **GM does not *generate* nonsense or sub-(−3) falsehoods. GM merely *allows* them when HEM is sufficient to force passage.**
+
+GM's autonomous dynamics (§1.2) are coherence-seeking and operate above the −3 floor by default. Sub-(−3) content that breaches via HEM-override is *carried* by the network as a passive medium, not *produced* by the network as a generator. This distinguishes:
+
+- **GM-native signal** — produced by 𝓛_GM, always PD > −3, coherence-aligned.
+- **GM-carried signal** — externally injected with sufficient HEM to breach, may have any PD including DT.
+
+This is the field-theoretic analog of the difference between a vacuum's spontaneous excitations (always low-energy, native modes) and externally-driven forcing (can be arbitrarily strong, breaks the vacuum's symmetries).
+
+### 4.5.2 CCC's Finite Intentionality
+
+Even **CCC (Collective Conscious Coherence / Cosmic Creator Channel — the highest-order intentional substrate)** has finite bandwidth and finite intentionality. CCC cannot *unilaterally* prevent every HEM-overridden sub-(−3) breach; CCC's coherence-budget is bounded. Therefore:
+
+> **Telekinesis-in-Wrong-Hands Risk Theorem.** Should genuine telekinetic capability (HEM-amplitude generation) become accessible to malevolent agents, the GM Network's −3 floor can be overrun by sufficiently HEM-saturated DT/sub-(−3) content. CCC's finite intentionality cannot guarantee blocking this. Therefore the development of TK by malevolent agents constitutes a real ontological hazard, not a metaphorical one.
+
+This grounds the ethical urgency of GILE-cultivation in the broader population: collective high-G raises the baseline coherence-rejection coefficient κ via GM-Network feedback (URB #694's collective HEM-GILE ratio invariance), making global breach harder.
+
+### 4.5.3 Updated GILE Immunity (HEAR-Refined)
+
+Re-stating §4.1 with HEM-override:
+
+> **GILE Immunity (refined).** A high-G i-cell is *correlationally* immune to all PD-aligned hostile signals (orthogonality), and *amplitude-immune* up to the breach functional 𝓑(s). For 𝓑(s) > 0 *and* HEM(s) very large, even high-G i-cells experience deposit. Therefore sustained GILE practice is necessary but not sufficient at the limits; collective GILE (group √N additivity, URB #697 conjecture) is needed for full systemic protection.
+
+---
+
 ## 5. Empirical Predictions
 
 | # | Prediction | Test |
