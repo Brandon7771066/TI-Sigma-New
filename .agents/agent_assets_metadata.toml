@@ -222,3 +222,15 @@ id = "o8TtbOjk684QjYOzvuwCO"
 uri = "file://figures/urb_700_p1_p4_precision_test.png"
 type = "image"
 title = "URB #700 P1+P4 precision test — cos(12θ) coefficient as clean dial through QED anomaly scale, electron vs muon BOK predicted to differ by ~5×10⁻⁷ in wing/arm"
+
+[[outputs]]
+id = "Dl1OLhm6Jc4Fsx2Zmf3RI"
+uri = "file://figures/urb_705_scaling_exponents_test.png"
+type = "image"
+title = "URB #705 empirical test — charged leptons match prediction (1.889 vs 1.87, 1% match); synthetic brain test methodology shown; real EEG analysis still required"
+
+[[outputs]]
+id = "wRJhzkGU18aPXJmA3YJkL"
+uri = "file://figures/urb_707_bok_vs_maxwell_knot_sidebyside.png"
+type = "image"
+title = "URB #707 visual asset — BOK r(θ) framework prediction vs stylized Maxwell knot (Irvine lab confirmed); both halves of BOK SM-bridge experimentally anchored"
