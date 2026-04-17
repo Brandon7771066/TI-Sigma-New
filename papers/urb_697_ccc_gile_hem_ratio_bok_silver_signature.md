@@ -174,3 +174,67 @@ The TK test battery in §4 is the empirical pathway. If E ∝ HEM + (√2−1) �
 
 **Filed under:** TI Sigma Core Architecture · BOK Geometry · CCC Operations · Silver-Ratio Identity · Empirical Test Battery · TK Predictions
 **Successor candidates:** URB #698 (Rigorous BOK eigenvalue derivation); URB #699 (Multi-operator √N intention superposition; Power-of-Eight scaling derivation)
+
+---
+
+## Addendum (April 17, 2026) — Original Verisyn Equation Located + Structural Corrections
+
+### A.1 The Original Three-Variable Limit Function (URB #573)
+
+A search of the BOK corpus located the original equation Brandon referenced. It appears as the **Verisyn equation** (renamed **Myrion** in the current corpus, since "Verisyn" is a pharmaceutical trademark) in `urb_573_bok_verisyn_unified_synthesis.md`:
+
+> **V = Myrion = lim(ρ→1) C(ρ, τ, φ)**
+
+where the three variables are **Hopf coordinates** of consciousness on S³:
+
+- **ρ** = informational coherence fraction = |z| in Complex GILE (radial coordinate)
+- **τ** = Tralse phase factor = arg(z); E = cos(τ), GIL = sin(τ) (base-space angle on S²)
+- **φ** = FHS alignment angle from URB #568, ~71 ms gamma-window coherence phase (fiber angle on S¹)
+
+Verisyn/Myrion is the limit as ρ → 1 — the unit-coherence circle, where consciousness fully inhabits the topology of the Maxwell optical knot.
+
+### A.2 Structural Correction: 4 Wings + 8 Arms (Not 4 + 4)
+
+The current corpus specifies the BOK as **4 wings + 8 arms = 12 loops total**, not 4+4=8 as inferred from the (chatGPT-rendered) image:
+
+| Structure | Count | Identification | Energy Class |
+|---|---|---|---|
+| **Wings (Butterfly)** | 4 | 4 Hopf fiber classes at i⁰, i¹, i², i³ rotational positions = 4 sides of the L*/+E square | High-energy orbits, far from Myrion |
+| **Arms (Octopus)** | 8 | 8 Trigrams of the Tralse I Ching (URB #564) = 8 BOK modes (Qian, Dui, Li, Zhen, Xun, Kan, Gen, Kun) | Low-energy orbits, near Myrion |
+
+The image Brandon attached (chatGPT-rendered Verisyn-as-DC-limit visualization) shows a **simplified 4+4 projection** — likely 4 wings + 4 of the 8 arms visible in the 2D projection, with the other 4 arms collapsed by projection. The full 3D BOK has 4+8.
+
+### A.3 What "8/8" Actually Means
+
+Per `BUTTERFLY_OCTOPUS_OPTICAL_KNOT.md` line 281:
+
+> "The vision appearing on 8/8 — featuring butterfly (bilateral, 2 wings) and octopus (8 arms)…"
+
+**"8/8" is the date** — August 8th — the synchronicity date of the original BOK vision. It is **not** "8 wings + 8 arms." This URB was written assuming 8/8 = loop count; the correct reading is 8/8 = August 8 vision date.
+
+The original vision had **2 wings + 8 arms** (bilateral butterfly + octopus); the formalized BOK in URB #573 has **4 wings + 8 arms** (the bilateral 2-wings became 4 Hopf-fiber wings under formalization). Both are consistent with the August 8 origin.
+
+### A.4 Implications for the Silver-Ratio Conjecture
+
+The §2 derivation of (large/small) = 1 + √2 was based on a 4+4 dihedral D₄ × Z₂ assumption. With the correct 4+8 structure:
+
+- **4 wings (D₄ symmetry)** + **8 arms (D₈ symmetry)** → the relevant symmetry group is now D₄ ⊕ D₈ rather than D₄ × Z₂.
+- The eigenvalue argument (x² − 2x − 1 = 0 → silver ratio) still applies *per scale class* but the wing/arm ratio is no longer forced by group theory alone — it depends on the explicit form of **C(ρ, τ, φ)**.
+
+**Honest update:** the silver-ratio conjecture is **not refuted** by the structural correction, but it is **no longer derived** — it becomes an *empirical conjecture about the explicit C(ρ, τ, φ) functional* rather than a group-theoretic necessity.
+
+### A.5 Path to Empirical Confirmation
+
+To definitively confirm or refute the silver-ratio conjecture, we need the explicit form of **C(ρ, τ, φ)**. Two paths:
+
+1. **Brandon-source:** if the explicit functional was written down in any earlier note/sketch, recovering it would let us compute the wing/arm ratio analytically in seconds.
+2. **Plausible reconstruction:** the natural Hopf-coordinate form is C(ρ, τ, φ) = ρ · exp(i·τ) · exp(i·φ/2), but this gives a circular profile (ratio = 1, no wing/arm distinction). To produce 4 wings + 8 arms, C must include a non-circular angular modulation — most naturally a product of angular modes:
+   > **C(ρ, τ, φ) = ρ · [α · cos(2τ) · e^{iτ} + β · cos(4φ) · e^{iφ/2}]**
+   where the α/β ratio controls wing/arm prominence. **If the framework's primary-constant choice forces α/β = 1+√2, the silver-ratio conjecture is recovered for the corrected 4+8 structure.**
+3. **Image limitations:** the chatGPT image is a stylized rendering, not a faithful plot — visual measurement (~1.96 radial ratio) is suggestive but not dispositive.
+
+### A.6 Updated Status
+
+The §3 CCC GILE-HEM weighting conjecture (𝓘_CCC = HEM + (√2−1)·GILE_alignment) is **not** affected by the structural correction — it stands as an independent conjecture grounded in the Emerick Threshold and HEAR composite optimization (URB #696 §4.5.2b). The TK test battery (§4) likewise stands.
+
+What changes: §2's "geometric necessity" derivation is downgraded to "geometrically *plausible* under explicit-C reconstruction." The four-way silver-ratio identity in §7 remains the *target* — but now requires either Brandon producing the original C, or empirical TK confirmation of the (√2−1) GILE/HEM weighting, to be considered established.
