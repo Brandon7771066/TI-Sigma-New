@@ -198,3 +198,9 @@ id = "__gLKoF2reG36lcg7-dXy"
 uri = "file://papers/URB_449_CCC_PERSON.pdf"
 type = "pdf"
 title = "URB #449 — CCC Is a Person: The Butterfly-Octopus i-Cell and the Refutation of Impersonal Divinity"
+
+[[outputs]]
+id = "QGEH9dBRks9L5sIGcggDA"
+uri = "file://figures/bok_dirac_fit.png"
+type = "image"
+title = "BOK r(θ) — ChatGPT-recovered equation, structurally 4+4 (cos(4θ) wings + cos(8θ) octopus = 2nd-harmonic doubling)"
