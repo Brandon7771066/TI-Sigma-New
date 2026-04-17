@@ -1,0 +1,67 @@
+{
+  "n_studies": 7,
+  "mean_scaling": 2.5660029397251036,
+  "std_scaling": 0.3830619454395133,
+  "min": 2.095903274289385,
+  "max": 3.293830814405927,
+  "individual_studies": [
+    {
+      "study": "Buzsaki & Draguhn 2004 Science",
+      "slow": 0.1,
+      "alpha": 10.0,
+      "gamma": 80.0,
+      "scaling": 2.2146187299249087
+    },
+    {
+      "study": "He et al. 2010 Neuron",
+      "slow": 0.05,
+      "alpha": 10.0,
+      "gamma": 100.0,
+      "scaling": 2.301029995663981
+    },
+    {
+      "study": "Palva & Palva 2012 Trends Cog Sci",
+      "slow": 0.08,
+      "alpha": 10.0,
+      "gamma": 60.0,
+      "scaling": 2.6947332051117816
+    },
+    {
+      "study": "Mantini et al. 2007 PNAS",
+      "slow": 0.04,
+      "alpha": 9.5,
+      "gamma": 50.0,
+      "scaling": 3.293830814405927
+    },
+    {
+      "study": "Klimesch 1999 Brain Res Rev",
+      "slow": 0.2,
+      "alpha": 10.0,
+      "gamma": 40.0,
+      "scaling": 2.821928094887362
+    },
+    {
+      "study": "Hipp et al. 2012 Nat Neurosci",
+      "slow": 0.1,
+      "alpha": 11.0,
+      "gamma": 70.0,
+      "scaling": 2.539976463792382
+    },
+    {
+      "study": "Lewis et al. 2009 Curr Biol",
+      "slow": 0.1,
+      "alpha": 10.0,
+      "gamma": 90.0,
+      "scaling": 2.095903274289385
+    }
+  ],
+  "candidate_matches": {
+    "Lepton scaling 1.87 (URB #705 original)": 1.87,
+    "Chirality doubling factor 2.000": 2.0,
+    "2\u03c0/e \u2248 2.310": 2.3114546995818435,
+    "Neutrino scaling 2.577 (PDG)": 2.577,
+    "ln(10) \u2248 2.303": 2.302585092994046,
+    "e - \u03c6 + 1 \u2248 2.10": 2.100281828459045
+  },
+  "best_match": "Neutrino scaling 2.577 (PDG)"
+}
