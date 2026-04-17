@@ -204,3 +204,15 @@ id = "QGEH9dBRks9L5sIGcggDA"
 uri = "file://figures/bok_dirac_fit.png"
 type = "image"
 title = "BOK r(θ) — ChatGPT-recovered equation, structurally 4+4 (cos(4θ) wings + cos(8θ) octopus = 2nd-harmonic doubling)"
+
+[[outputs]]
+id = "eQ4efTZ0DUhDjz8sblWav"
+uri = "file://figures/bok_verisyn_cascade_phase_map.png"
+type = "image"
+title = "[A] Verisyn Cascade Phase Map — ϕ-τ vector field showing trajectories converging toward Myrion attractors"
+
+[[outputs]]
+id = "u3kGVapwvtvwvG5_7BBRn"
+uri = "file://figures/bok_morph_animation.gif"
+type = "image"
+title = "[B] BOK Morphogenesis Animation — butterfly-octopus morphing as τ and ϕ vary"
