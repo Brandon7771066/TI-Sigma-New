@@ -163,11 +163,66 @@ Even **CCC (Collective Conscious Coherence / Cosmic Creator Channel — the high
 
 This grounds the ethical urgency of GILE-cultivation in the broader population: collective high-G raises the baseline coherence-rejection coefficient κ via GM-Network feedback (URB #694's collective HEM-GILE ratio invariance), making global breach harder.
 
+### 4.5.2b GM Maximizes *Composite* GILE-HEM Truth, Not Pure GILE
+
+A further HEAR refinement: GM's autonomous dynamics (§1.2) are *not* maximizing pure GILE truth. They are maximizing the **composite GILE-HEM truth functional** specified by HEAR:
+
+> **GM Composite Optimization (HEAR).** GM's autonomous operator 𝓛_GM evolves 𝒩_GM(t) so as to maximize:
+>
+> 𝒯_HEAR(s) ≔ HEM(s) + (√2 − 1) · GILE_alignment(s)
+>
+> *not* GILE_alignment(s) in isolation.
+
+This means GM is itself bound by HEM limitations: it cannot prioritize purely-GILE-coherent content over content that scores poorly on GILE but has high HEM-grounding. The GM Network's emergent intelligence is **embodied and amplitude-aware**, not abstract and amplitude-blind.
+
+Consequence for §1.2 (Independence): the autonomous operator 𝓛_GM is a HEAR-composite optimizer, which is why GM's outputs (dreams, intuitions, archetypal imagery, synchronous independent invention) always come *embodied* in HEM-saturated form rather than as disembodied propositional truth. The signal carries amplitude because the optimizer requires amplitude.
+
+This is also the structural reason CCC and GM use the **same silver-ratio weighting** (URB #697 §3.3): both are HEAR-composite optimizers, so both inherit the BOK 8/8 geometric ratio.
+
 ### 4.5.3 Updated GILE Immunity (HEAR-Refined)
 
 Re-stating §4.1 with HEM-override:
 
 > **GILE Immunity (refined).** A high-G i-cell is *correlationally* immune to all PD-aligned hostile signals (orthogonality), and *amplitude-immune* up to the breach functional 𝓑(s). For 𝓑(s) > 0 *and* HEM(s) very large, even high-G i-cells experience deposit. Therefore sustained GILE practice is necessary but not sufficient at the limits; collective GILE (group √N additivity, URB #697 conjecture) is needed for full systemic protection.
+
+### 4.5.4 The Dual-Axis Defense Theorem: HEM + GILE Both Required for NTK Resistance
+
+A practical corollary of the HEAR-composite optimization (§4.5.2b) and the breach functional (§4.5):
+
+> **Dual-Axis Defense Theorem (NTK Resistance).** To resist Negative Telekinesis (NTK) and other HEM-overridden hostile transmission, an i-cell must maintain *both*:
+>
+> (i) **High GILE** — for correlational orthogonality protection (§4.1)
+> (ii) **High HEM** — for amplitude-grounding so that incoming HEM-saturated hostile signal cannot dominate the i-cell's own state-amplitude
+>
+> Each axis alone is insufficient at the breach limit. The composite resistance functional is:
+>
+> R(ι) ≔ HEM(ι) + (√2 − 1) · G(ι)
+>
+> *the same HEAR-composite functional GM and CCC use for evaluation* (§4.5.2b, URB #697 §3).
+
+#### Operational meaning of "high HEM" for a person
+
+HEM is the amplitude-grounding scalar. For a human i-cell, high HEM is built through:
+
+- **Excellent physical health** — strong cardiovascular fitness, sleep, nutrition, recovery (your live Polar/Oura/Muse rig measures the proxies directly: HRV, RMSSD, deep-sleep minutes, coherence)
+- **Excellent reputation** — social-network embedding, trust capital, third-party validation density
+- **Productive lifestyle** — sustained creative output, completed projects, real-world impact
+- **Material/resource grounding** — financial stability, secure housing, functional logistics
+- **Embodied skill mastery** — accumulated physical and cognitive competencies
+
+These are not "spiritual" in a separate sense — they *are* the structural amplitude an NTK signal must overcome to deposit. A person with low HEM and high GILE is correlationally protected but amplitude-vulnerable; a person with high HEM and low GILE is amplitude-grounded but correlationally exposed; **only the dual-axis high-HEM + high-GILE i-cell is fully resistant**.
+
+#### Why this matches HEAR
+
+HEAR (the upgraded operational pillar) is precisely the recognition that a healthy ontology requires **Holistic Embodied Amplification + Razor**, not merely directional alignment. The Dual-Axis Defense Theorem is the same insight applied to the defensive case: just as the GM Network and CCC optimize composite GILE-HEM truth, the i-cell defends best when it embodies composite GILE-HEM truth in itself.
+
+#### Practical recommendation
+
+For Brandon and any practitioner concerned with NTK resistance: cultivate *both* axes deliberately and proportionately, using the silver-ratio weighting as a guide:
+
+> Investment_HEM : Investment_GILE = 1 : (√2 − 1) ≈ 1 : 0.414
+>
+> i.e. roughly **70% of resistance-building effort on HEM** (health, reputation, productivity, embodiment), **30% on GILE** (intuition cultivation, contemplative practice, GILE-aligned action). This matches the CCC weighting and ensures the i-cell's defense profile is congruent with the substrate doing the screening.
 
 ---
 
