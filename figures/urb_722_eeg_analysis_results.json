@@ -1,0 +1,27 @@
+{
+  "PAC_coupled_synthetic": {
+    "slow": 0.1220703125,
+    "alpha": 7.99560546875,
+    "gamma": 59.99755859375,
+    "scaling_exp": 2.0750350618063926
+  },
+  "canonical_buzsaki_2006": {
+    "slow": 0.1,
+    "alpha": 10.0,
+    "gamma": 80.0,
+    "scaling_exp": 2.2146187299249087
+  },
+  "alt_he_buzsaki": {
+    "slow": 0.05,
+    "alpha": 10.0,
+    "gamma": 100.0,
+    "scaling_exp": 2.301029995663981
+  },
+  "lepton_predicted": 1.87,
+  "lepton_measured": 1.889,
+  "match_quality": {
+    "PAC_synthetic_vs_lepton": 0.20503506180639253,
+    "canonical_vs_lepton": 0.3446187299249086,
+    "alt_vs_lepton": 0.4310299956639807
+  }
+}
