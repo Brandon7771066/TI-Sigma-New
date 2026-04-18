@@ -252,3 +252,9 @@ id = "tgeCwHSSW0hlZtU9SRKFn"
 uri = "file://figures/urb_728_pd_full_architecture.png"
 type = "image"
 title = "URB #728 — Full PD Architecture: 4 thresholds (DT cliff at −3, ultra-terrible at −e, Verisyn at +2, transcendent at +e), 5 zones, asymmetric main scale + e-symmetric ultra-thresholds. Six independent empirical anchors confirm the architecture."
+
+[[outputs]]
+id = "K2cJfoOsC1OJ3E9BIzZfx"
+uri = "file://figures/urb_733_736_complex_pd_and_ticg.png"
+type = "image"
+title = "URB #733 + #736 — Complex PD plane (left, with |PD|=e ultra-magnitude circle and Indeterminate disc) + TICG with all 25 LCC/GILE/PD thresholds mapped onto specific points (right)"

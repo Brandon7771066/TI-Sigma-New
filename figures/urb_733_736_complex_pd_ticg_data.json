@@ -1,0 +1,237 @@
+{
+  "complex_pd_points": {
+    "Verisyn pole (max)": {
+      "re": 2.0,
+      "im": 0.0,
+      "mag": 2.0,
+      "arg_deg": 0.0
+    },
+    "Transcendent +e": {
+      "re": 2.718281828459045,
+      "im": 0.0,
+      "mag": 2.718281828459045,
+      "arg_deg": 0.0
+    },
+    "DT cliff": {
+      "re": -3.0,
+      "im": 0.0,
+      "mag": 3.0,
+      "arg_deg": 180.0
+    },
+    "Pre-DT -e": {
+      "re": -2.718281828459045,
+      "im": 0.0,
+      "mag": 2.718281828459045,
+      "arg_deg": 180.0
+    },
+    "Pure Tralse +i": {
+      "re": 0.0,
+      "im": 1.0,
+      "mag": 1.0,
+      "arg_deg": 90.0
+    },
+    "Pure Tralse -i": {
+      "re": 0.0,
+      "im": -1.0,
+      "mag": 1.0,
+      "arg_deg": -90.0
+    },
+    "Tralse-True (1+i)/\u221a2": {
+      "re": 0.7071067811865475,
+      "im": 0.7071067811865475,
+      "mag": 0.9999999999999999,
+      "arg_deg": 45.0
+    },
+    "Indeterminate disc bound": {
+      "re": 0.0,
+      "im": 0.6666666666666666,
+      "mag": 0.6666666666666666,
+      "arg_deg": 90.0
+    },
+    "Moot origin": {
+      "re": 0.0,
+      "im": 0.0,
+      "mag": 0.0,
+      "arg_deg": 0.0
+    },
+    "Verisyn-Tralse +2+ei": {
+      "re": 2.0,
+      "im": 2.718281828459045,
+      "mag": 3.3747675622078996,
+      "arg_deg": 53.65589366570506
+    }
+  },
+  "ticg_primary_vertices": {
+    "0": [
+      0,
+      0
+    ],
+    "1": [
+      1,
+      0
+    ],
+    "i": [
+      0,
+      1
+    ],
+    "\u221a2": [
+      1.4142135623730951,
+      0
+    ],
+    "e": [
+      2.718281828459045,
+      0
+    ],
+    "\u03c6": [
+      1.618033988749895,
+      0
+    ],
+    "\u03c0": [
+      3.141592653589793,
+      0
+    ],
+    "C": [
+      0.7071067811865477,
+      1.2247448713915892
+    ],
+    "T": [
+      -1.3591409142295219,
+      2.354101118091147
+    ]
+  },
+  "threshold_to_ticg_map": {
+    "GILE Emerick (\u221a2 \u2212 1)": {
+      "position": [
+        0.41421356237309515,
+        0
+      ],
+      "TICG_node": "between 0 and \u221a2"
+    },
+    "GILE Operational (1)": {
+      "position": [
+        1,
+        0
+      ],
+      "TICG_node": "1 vertex"
+    },
+    "GILE Radiant (\u03c6)": {
+      "position": [
+        1.618033988749895,
+        0
+      ],
+      "TICG_node": "\u03c6 vertex"
+    },
+    "PD DT cliff (\u22123)": {
+      "position": [
+        -3,
+        0
+      ],
+      "TICG_node": "antipode of \u03c0+0i (3 \u2248 \u03c0)"
+    },
+    "PD Verisyn cap (+2)": {
+      "position": [
+        2,
+        0
+      ],
+      "TICG_node": "2 = 1+1 (sum of unit edges)"
+    },
+    "PD Ultra-terrible (\u2212e)": {
+      "position": [
+        -2.718281828459045,
+        0
+      ],
+      "TICG_node": "antipode of e vertex"
+    },
+    "PD Transcendent (+e)": {
+      "position": [
+        2.718281828459045,
+        0
+      ],
+      "TICG_node": "e vertex"
+    },
+    "PD Indeterminate (\u00b11/3, \u00b12/3)": {
+      "position": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "TICG_node": "barycenter of 0-1-i triangle"
+    },
+    "PD Pure Tralse (\u00b1i)": {
+      "position": [
+        0,
+        1
+      ],
+      "TICG_node": "i vertex"
+    },
+    "BOK 4+4 = Dirac (URB #699)": {
+      "position": [
+        1.4142135623730951,
+        1.4142135623730951
+      ],
+      "TICG_node": "edge \u221a2 + \u221a2i = 2 (Dirac)"
+    },
+    "Maxwell knot Hopfion (URB #707)": {
+      "position": [
+        1,
+        1
+      ],
+      "TICG_node": "edge 1+i = \u221a2 \u222045\u00b0"
+    },
+    "Brain-neutrino bridge (URB #727)": {
+      "position": [
+        2.718281828459045,
+        0
+      ],
+      "TICG_node": "e vertex (scaling exp \u2248 neutrino 2.577 \u2248 e)"
+    },
+    "Loss aversion 4\u00d7 (URB #728)": {
+      "position": [
+        2,
+        2
+      ],
+      "TICG_node": "2\u00b2 edge product"
+    },
+    "Integrated 6\u00d7 (URB #728)": {
+      "position": [
+        4.854101966249685,
+        0
+      ],
+      "TICG_node": "3\u03c6 \u2248 4.85"
+    },
+    "Three-generation cube-root (URB #729)": {
+      "position": [
+        9.0,
+        0
+      ],
+      "TICG_node": "9 vertex (729^(1/3) = 9)"
+    },
+    "Ramanujan 1729 taxicab": {
+      "position": [
+        1,
+        12
+      ],
+      "TICG_node": "1+12i (= 1+12\u00b3 component)"
+    }
+  },
+  "ramanujan_resonance": {
+    "729": {
+      "factorization": "3^6 = 27\u00b2",
+      "property": "smallest perfect cube AND square > 1",
+      "cube_root": 9,
+      "sixth_root": 3,
+      "framework_relevance": "URB #729 derives gravitational base via cube-root structure"
+    },
+    "1729": {
+      "factorization": "7 \u00d7 13 \u00d7 19",
+      "property": "Hardy-Ramanujan taxicab, smallest sum of two cubes in two ways",
+      "cubes": "1\u00b3+12\u00b3 = 9\u00b3+10\u00b3 = 1729",
+      "framework_future_use": "URB #1729 reserved for sum-of-cubes formal work"
+    }
+  },
+  "brain_e_offset": {
+    "brain_scaling": 2.577,
+    "e": 2.718281828459045,
+    "delta": 0.14128182845904513,
+    "ratio": 0.9480253198988069
+  }
+}
