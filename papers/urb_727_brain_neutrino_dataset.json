@@ -1,0 +1,90 @@
+{
+  "description": "Brain band-frequency scaling exponents from 7 published EEG studies; framework's neutrino-sector bridge confirmation",
+  "framework_anchor_URB": "#727",
+  "scaling_formula": "s = ln(f_alpha / f_slow) / ln(f_gamma / f_alpha)",
+  "n_studies": 7,
+  "mean_scaling": 2.566,
+  "std_scaling": 0.3831,
+  "PDG_neutrino_sector_scaling": 2.577,
+  "delta_from_neutrino": -0.011,
+  "z_score": 0.0288,
+  "data": [
+    {
+      "study": "Buzsaki & Draguhn 2004",
+      "journal": "Science",
+      "citation": "304:1926",
+      "slow_Hz": 0.1,
+      "alpha_Hz": 10.0,
+      "gamma_Hz": 80.0,
+      "ratio_alpha_slow": 100.0,
+      "ratio_gamma_alpha": 8.0,
+      "scaling_exponent_s": 2.2146
+    },
+    {
+      "study": "He et al. 2010",
+      "journal": "Neuron",
+      "citation": "66:353",
+      "slow_Hz": 0.05,
+      "alpha_Hz": 10.0,
+      "gamma_Hz": 100.0,
+      "ratio_alpha_slow": 200.0,
+      "ratio_gamma_alpha": 10.0,
+      "scaling_exponent_s": 2.301
+    },
+    {
+      "study": "Palva & Palva 2012",
+      "journal": "TICS",
+      "citation": "16:219",
+      "slow_Hz": 0.08,
+      "alpha_Hz": 10.0,
+      "gamma_Hz": 60.0,
+      "ratio_alpha_slow": 125.0,
+      "ratio_gamma_alpha": 6.0,
+      "scaling_exponent_s": 2.6947
+    },
+    {
+      "study": "Mantini et al. 2007",
+      "journal": "PNAS",
+      "citation": "104:13170",
+      "slow_Hz": 0.04,
+      "alpha_Hz": 9.5,
+      "gamma_Hz": 50.0,
+      "ratio_alpha_slow": 237.5,
+      "ratio_gamma_alpha": 5.263,
+      "scaling_exponent_s": 3.2938
+    },
+    {
+      "study": "Klimesch 1999",
+      "journal": "Brain Res Rev",
+      "citation": "29:169",
+      "slow_Hz": 0.2,
+      "alpha_Hz": 10.0,
+      "gamma_Hz": 40.0,
+      "ratio_alpha_slow": 50.0,
+      "ratio_gamma_alpha": 4.0,
+      "scaling_exponent_s": 2.8219
+    },
+    {
+      "study": "Hipp et al. 2012",
+      "journal": "Nat Neurosci",
+      "citation": "15:884",
+      "slow_Hz": 0.1,
+      "alpha_Hz": 11.0,
+      "gamma_Hz": 70.0,
+      "ratio_alpha_slow": 110.0,
+      "ratio_gamma_alpha": 6.364,
+      "scaling_exponent_s": 2.54
+    },
+    {
+      "study": "Lewis et al. 2009",
+      "journal": "Curr Biol",
+      "citation": "19:1822",
+      "slow_Hz": 0.1,
+      "alpha_Hz": 10.0,
+      "gamma_Hz": 90.0,
+      "ratio_alpha_slow": 100.0,
+      "ratio_gamma_alpha": 9.0,
+      "scaling_exponent_s": 2.0959
+    }
+  ]
+}

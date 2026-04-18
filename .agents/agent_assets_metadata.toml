@@ -258,3 +258,15 @@ id = "K2cJfoOsC1OJ3E9BIzZfx"
 uri = "file://figures/urb_733_736_complex_pd_and_ticg.png"
 type = "image"
 title = "URB #733 + #736 — Complex PD plane (left, with |PD|=e ultra-magnitude circle and Indeterminate disc) + TICG with all 25 LCC/GILE/PD thresholds mapped onto specific points (right)"
+
+[[outputs]]
+id = "AXxQi_3zA6wqsDnEMSDf1"
+uri = "file://papers/urb_727_brain_neutrino_dataset.csv"
+type = "table"
+title = "URB #727 Brain Band-Neutrino Bridge Dataset (CSV) — 7 published EEG studies, scaling exponents, downloadable for independent reproduction"
+
+[[outputs]]
+id = "-ZLFcmamWYSc0xOFkvIAC"
+uri = "file://papers/urb_727_brain_neutrino_dataset.json"
+type = "unspecified"
+title = "URB #727 Brain Band-Neutrino Bridge Dataset (JSON, with metadata + statistics)"
