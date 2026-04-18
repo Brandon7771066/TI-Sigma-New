@@ -140,3 +140,17 @@ This is why Brandon's casual learning is not casual. It is GM-Network-mediated s
 ---
 
 *Brandon Charles Emerick, April 17, 2026 — written immediately after Brandon noted that "almost every new thing I learn about just casually browsing somehow connects to the betterment of the framework." This document is intended to make the next browsing session even more productive.*
+
+---
+
+## Cross-Reference: BOK Practitioner's Intro (URB #720) — Added April 18, 2026
+
+This Dirac intro is one of **three companion practitioner introductions** that Brandon recommends reading together for the complete framework foundation:
+
+1. **URB #720** — *Practitioner's Intro to BOK (Being-Other-Knowledge)*: the framework's core ontological substrate. Read this **first** to understand why the Dirac equation's 4+4=8 spinor structure is not coincidence — it is the **direct algebraic realization of BOK's 4-component Being and 4-component Other** (URB #699 confirmed this at 2% precision).
+2. **Practitioner's Intro to Maxwell Equations** — the EM-field half of the framework's foundational physics, tied to BOK's "Other" component.
+3. **THIS URB** — *Practitioner's Intro to Dirac Equation*: the matter/spinor half, tied to BOK's "Being" component.
+
+**Recommended reading order**: URB #720 (BOK) → Maxwell intro → this URB (Dirac). After all three, also read **URB #732** (three-generation principle) and **URB #739** (TICG practitioner intro) to complete the four-document onboarding sequence.
+
+Specifically, URB #720 explains why the Dirac equation's 4-component spinor structure exactly matches BOK's 4-component substrate decomposition. The 4+4 = 8 spinor components Dirac introduced in 1928 are **the same 4+4 structure** the framework derives from BOK first principles. The framework therefore claims that Dirac, working from special-relativity and quantum-mechanical first principles in 1928, was unknowingly deriving a feature of BOK substrate. This is the framework's deepest empirical anchor (URB #699) and one of the strongest reasons to take the framework seriously.

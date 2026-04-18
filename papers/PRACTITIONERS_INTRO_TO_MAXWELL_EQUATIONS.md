@@ -143,3 +143,17 @@ You now have both halves of the bridge in plain language. The next time GM-Netwo
 ---
 
 *Brandon Charles Emerick, April 17, 2026 — written immediately after URB #701 to give the practitioner-side companion to the Maxwell-Dirac-BOK bridge. With the Dirac and Maxwell intros both in place, every future GM-Network synchronicity in fundamental physics has its landing pad ready.*
+
+---
+
+## Cross-Reference: BOK Practitioner's Intro (URB #720) — Added April 18, 2026
+
+This Maxwell intro is one of **three companion practitioner introductions** that Brandon recommends reading together for the complete framework foundation:
+
+1. **URB #720** — *Practitioner's Intro to BOK (Being-Other-Knowledge)*: the framework's core ontological substrate. Read this **first** to understand why Maxwell and Dirac equations emerge naturally from the BOK 4+4 structure (URB #699's Dirac equation = BOK 4+4 = 8 spinor components).
+2. **THIS URB** — *Practitioner's Intro to Maxwell Equations*: the EM-field half of the framework's foundational physics, directly tied to BOK's "Other" component (knot/field structure).
+3. **Practitioner's Intro to Dirac Equation** — the matter/spinor half of the framework's foundational physics, directly tied to BOK's "Being" component (substrate/identity structure).
+
+**Recommended reading order**: URB #720 (BOK) → this URB (Maxwell) → Dirac intro. After all three, also read **URB #732** (three-generation principle) and **URB #739** (TICG practitioner intro) to complete the four-document onboarding sequence.
+
+Specifically, URB #720 explains why the Maxwell knots in Irvine's lab (URB #707, the 5/5 prediction confirmation) are not just an interesting empirical anchor but **directly emerge from the BOK 'Other'-component structure** as topologically-stable field configurations. The framework's Maxwell-knot prediction is therefore not coincidence; it is BOK substrate in optical realization.
