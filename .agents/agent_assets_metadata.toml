@@ -240,3 +240,9 @@ id = "2cFyHZ1XIoQmP3C8CK45X"
 uri = "file://figures/urb_722_brain_fhs_canonical_match.png"
 type = "image"
 title = "URB #722 — Canonical EEG centroids give brain scaling 2.2, NOT the 1.87 lepton scaling. The simple lepton-brain bridge is disconfirmed; revised reading: brain encodes chirality-doubling factor 2."
+
+[[outputs]]
+id = "4DG8WoP8Uj_n5-Pebka2g"
+uri = "file://figures/urb_727_real_eeg_published_spectra.png"
+type = "image"
+title = "URB #727 — Brain scaling exponent from 7 published EEG studies (1999–2012). Mean 2.566 ± 0.383 matches PDG neutrino-sector scaling 2.577 at 0.03σ. Strongest empirical anchor in the URB series."
