@@ -1,0 +1,19 @@
+{
+  "validation": "synthetic RR series with engineered VLF/LF/HF peaks at 0.020/0.090/0.275 Hz",
+  "fs_rr_Hz": 4.0,
+  "duration_min": 60,
+  "f_VLF_Hz": 0.02,
+  "f_LF_Hz": 0.09,
+  "f_HF_Hz": 0.27555555555555555,
+  "scaling_exponent_s_HRV": 1.344150874789477,
+  "predicted_range_URB748": [
+    1.3,
+    1.89
+  ],
+  "in_predicted_range": true,
+  "up_quark_ref": 1.298,
+  "lepton_ref": 1.889,
+  "delta_from_up_quark": 0.04615087478947699,
+  "pipeline_status": "VALIDATED (recovers engineered scaling within tolerance)",
+  "note": "Real-cohort run requires PhysioNet wfdb access; URB #748 protocol active"
+}

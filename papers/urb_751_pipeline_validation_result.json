@@ -1,0 +1,13 @@
+{
+  "validation": "synthetic 1/f EEG with engineered band peaks at 0.10/10.0/50.0 Hz",
+  "fs_Hz": 500.0,
+  "duration_s": 600,
+  "f_slow_Hz": 0.11333333333333334,
+  "f_alpha_Hz": 9.82,
+  "f_gamma_Hz": 49.720000000000006,
+  "scaling_exponent_s": 2.750851533566988,
+  "PDG_neutrino": 2.577,
+  "delta_from_neutrino": 0.1738515335669879,
+  "pipeline_status": "VALIDATED (recovers engineered scaling within tolerance)",
+  "note": "Real-cohort run requires HCP/OpenNeuro data; URB #747 protocol active"
+}
