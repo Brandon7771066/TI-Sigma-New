@@ -1,0 +1,25 @@
+{
+  "thresholds": {
+    "DT cliff (hard, GM-network rejects below)": -3.0,
+    "Ultra-terrible (just before DT cliff)": -2.718281828459045,
+    "Soft False boundary (5-valued logic)": -2.0,
+    "Indeterminate lower (URB #715)": -0.6666666666666666,
+    "Permissibility neutral": 0.0,
+    "Indeterminate upper (URB #715)": 0.3333333333333333,
+    "Soft True boundary (5-valued logic)": 1.0,
+    "Verisyn saturation (standard cap)": 2.0,
+    "Ultra-great (transcendent breakthrough, beyond standard cap)": 2.718281828459045
+  },
+  "ratios": {
+    "chirality_doubling_over_pillar_asymm": 1.3333333333333333,
+    "ultra_great_zone_width": 0.7182818284590451,
+    "ultra_terrible_zone_width": 0.2817181715409549,
+    "per_unit_bad_load_multiplier": 4.0,
+    "integrated_bad_to_good_ratio": 6.0
+  },
+  "constants": {
+    "e": 2.718281828459045,
+    "phi": 1.618033988749895,
+    "pi": 3.141592653589793
+  }
+}

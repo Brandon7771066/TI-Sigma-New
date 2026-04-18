@@ -246,3 +246,9 @@ id = "4DG8WoP8Uj_n5-Pebka2g"
 uri = "file://figures/urb_727_real_eeg_published_spectra.png"
 type = "image"
 title = "URB #727 — Brain scaling exponent from 7 published EEG studies (1999–2012). Mean 2.566 ± 0.383 matches PDG neutrino-sector scaling 2.577 at 0.03σ. Strongest empirical anchor in the URB series."
+
+[[outputs]]
+id = "tgeCwHSSW0hlZtU9SRKFn"
+uri = "file://figures/urb_728_pd_full_architecture.png"
+type = "image"
+title = "URB #728 — Full PD Architecture: 4 thresholds (DT cliff at −3, ultra-terrible at −e, Verisyn at +2, transcendent at +e), 5 zones, asymmetric main scale + e-symmetric ultra-thresholds. Six independent empirical anchors confirm the architecture."
