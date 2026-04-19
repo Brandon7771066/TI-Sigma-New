@@ -35,6 +35,10 @@ args = "gsa_daily_scheduler"
 task = "workflow.run"
 args = "hypercomputer"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "mood_amplifier_live"
+
 [[workflows.workflow]]
 name = "discovery_scheduler"
 author = "agent"
@@ -80,12 +84,28 @@ outputType = "console"
 task = "shell.exec"
 args = "streamlit run hypercomputer_app.py --server.port 8000 --server.headless true"
 
+[[workflows.workflow]]
+name = "mood_amplifier_live"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run mood_amplifier_live_dashboard.py --server.port 3000 --server.headless true --server.address 0.0.0.0"
+waitForPort = 3000
+
+[workflows.workflow.metadata]
+outputType = "console"
+
 [userenv]
 
 [userenv.shared]
 client_secret = "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"
 client_id = "584975588599-ffdf519vi5hllcu45cov9h8dob6fn69r.apps.googleusercontent.com"
 "TI Sigma Upload" = "c9WBsIKnXLUmSWA3eHQzaLdx3YS7HygZgw75jheWExaWtFWln5BccQw4pIUf"
+
+[[ports]]
+localPort = 3000
+externalPort = 3001
 
 [[ports]]
 localPort = 5000
