@@ -19,7 +19,7 @@ import urllib.parse
 import urllib.request
 from pythonosc import dispatcher, osc_server
 
-REPLIT_URL = "https://5c1b8726-c8b2-4bdf-a0a8-632ec557671f-00-307bfud8cnm36.worf.replit.dev"
+REPLIT_URL = "https://5c1b8726-c8b2-4bdf-a0a8-632ec557671f-00-307bfud8cnm36.worf.replit.dev:5000"
 UPLOAD_PATH = "/api/upload"
 POST_INTERVAL_SEC = 3
 SESSION_ID = f"ma_{int(time.time())}"
