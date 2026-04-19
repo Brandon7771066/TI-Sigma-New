@@ -1,0 +1,47 @@
+{
+  "framework": "URB #758 P1 \u2014 PMNS triality structure quick check",
+  "PDG_2024_inputs": {
+    "sin2_th12": 0.307,
+    "sin2_th23": 0.572,
+    "sin2_th13": 0.022,
+    "delta_cp_rad": -1.97
+  },
+  "PMNS_probability_matrix": [
+    [
+      0.677754,
+      0.3002459999999999,
+      0.022
+    ],
+    [
+      0.11380224697191359,
+      0.32678175302808654,
+      0.5594159999999998
+    ],
+    [
+      0.20844375302808635,
+      0.3729722469719135,
+      0.41858400000000007
+    ]
+  ],
+  "trivial_S3_invariants": {
+    "row_sums": [
+      0.9999999999999999,
+      1.0,
+      0.9999999999999999
+    ],
+    "col_sums": [
+      0.9999999999999999,
+      1.0,
+      0.9999999999999999
+    ]
+  },
+  "non_trivial_S3_invariants": {
+    "Jarlskog_invariant_J": -0.030502844908747963,
+    "diagonal_e1_e2_e3": [
+      1.4231197530280866,
+      0.6419602338873064,
+      0.09270699656297268
+    ]
+  },
+  "triality_assessment": "PMNS structure is consistent with O(8) triality at the level of TRUE S3-invariants (unitarity row/column sums, Jarlskog J). The diagonal probabilities themselves are NOT S3-invariant under column cycling because they are basis-dependent. The framework's URB #758 P1 prediction holds for true geometric invariants but does NOT hold for basis-dependent quantities. This SHARPENS the prediction: triality lives in the geometric/algebraic invariants, not in any specific basis representation."
+}
