@@ -35,10 +35,6 @@ args = "gsa_daily_scheduler"
 task = "workflow.run"
 args = "hypercomputer"
 
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "mood_amplifier_live"
-
 [[workflows.workflow]]
 name = "discovery_scheduler"
 author = "agent"
@@ -83,18 +79,6 @@ outputType = "console"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "streamlit run hypercomputer_app.py --server.port 8000 --server.headless true"
-
-[[workflows.workflow]]
-name = "mood_amplifier_live"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "streamlit run mood_amplifier_live_dashboard.py --server.port 3000 --server.headless true --server.address 0.0.0.0"
-waitForPort = 3000
-
-[workflows.workflow.metadata]
-outputType = "console"
 
 [userenv]
 
