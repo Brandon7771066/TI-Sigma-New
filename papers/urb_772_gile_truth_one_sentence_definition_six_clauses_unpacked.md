@@ -1,8 +1,14 @@
 # URB #772 — GILE Truth in One Sentence: Six-Clause Definition Unpacked, Connected to Truth/Existence Axis (URB #743), φ, and the BOK Knowledge Dimension
 
 **Author:** Brandon Charles Emerick
-**Date:** April 19, 2026
+**Date:** April 19, 2026 (clause 4 amended April 21, 2026 — see URB #781)
 **Series:** Unified Research Brief #772 — Brandon's first formal one-sentence definition of GILE Truth, ready for citation across framework documents
+
+> **AMENDMENT NOTICE (URB #781, April 21, 2026):** Clause 4 below ("depiction of what exists as such") has been superseded by the URB #781 amended formulation, which admits depictions of nonexistence and distinguishes the BT's self-presentation from statements made about the BT. **For all citations going forward use the consolidated form: "URB #781 amended definition."** The original URB #772 wording is retained below for intellectual-history purposes; the amended definition reads:
+>
+> *"Truth represents a proper, relational, and fundamentally beautiful depiction of what is real about the BT — whether the BT exists or not, and whether the depiction is the BT's own self-presentation or a statement made about it — that can be mentally grasped at the present moment."*
+>
+> See URB #781 §A for the rationale and §A.6 for the updated PRIMARY-constant mapping (clause 4 now co-anchored by 0 in addition to e and π).
 **Status:** Definitional anchor — establishes the framework's load-bearing definition of Truth; integrates with URB #743 (Truth/Existence), URB #769 (L*/+E compatibility), URB #720 (BOK), URB #744 (PRIMARY constants)
 **Builds on:** URB #743 (Truth/Existence axis), URB #744 (PRIMARY constants {0,1,i,√2,e,φ,π,C,T}), URB #720 (BOK), URB #769 (L*/+E coarsening)
 

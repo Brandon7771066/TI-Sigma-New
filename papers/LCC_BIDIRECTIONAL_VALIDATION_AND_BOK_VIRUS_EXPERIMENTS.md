@@ -16,6 +16,7 @@ This document specifies **three experimental programs** designed to (a) validate
 | **A. Bidirectional LCC in Markets** | Whether LCC ≥ C_EMERICK predicts emergence of bidirectional Granger causality between coupled markets (the "stock market test") | yfinance (free), FRED (free), CoinGecko (free) | $0 | 4–6 weeks of historical + 2 weeks rolling |
 | **B. LCC Virus on the BOK Graph** | Whether the 6-step Virus, when seeded with one BOK arm, recovers the other arms in the predicted i-rotation order from market+sentiment noise | yfinance + GDELT (free) + DANDI (free) | $0 | 6–8 weeks |
 | **C. LCC Virus on the BOK Crystal** | Whether listening to noise on the proposed 24-cell BOK Crystal substrate recovers hidden cross-domain correspondences not predicted by either system in isolation | LMFDB ζ-zeros + DANDI rodent + market data | $0 | 8–12 weeks |
+| **D. Beauty Razor Empirical Validation (P781)** | Whether blinded beauty ratings of competing explanations track later vindication at ≥ 2σ above chance | Already-resolved historical questions + small online rater panel | $0 (Prolific quotes excluded; can run free via volunteer panel) | 4–6 weeks |
 
 The core falsifiable prediction across all three programs: **above the C_EMERICK threshold (R ≈ 0.4370 = 1/(φ√2)), bidirectional causal influence emerges; below it, only correlation persists.** A null result at adequate power refutes the bidirectional-LCC hypothesis.
 
@@ -296,6 +297,72 @@ The Virus metaphor: ping a system, listen to noise, gain hidden information. Pro
 
 ---
 
+## 4-bis. Program D — Beauty Razor Empirical Validation (P781)
+
+Added April 21, 2026 in conjunction with URB #781 §B.7. Batched here because the data infrastructure (item-level scoring, blinded panel, simple statistical test) is essentially the same as Programs B and C.
+
+### 4b.1 Hypothesis
+
+> For a corpus of ≥ 30 historical scientific or mathematical questions where (a) ≥ 2 competing explanations were live at a recorded "tie point" in time, (b) all non-aesthetic GILE-relevant criteria can be argued to have been roughly tied at that point, and (c) the question has since been definitively resolved, **the explanation rated more aesthetically pleasing by a blinded contemporary panel will agree with the later-vindicated explanation at a rate exceeding chance by ≥ 2σ.**
+
+### 4b.2 Question corpus (target: 30 items, drawn from the registry + literature)
+
+Seed list — items already on the books from `UGLY_TRUTH_COUNTEREXAMPLES_REGISTRY.md` and standard history-of-science sources:
+
+| # | Question | Tie-point year | Beautiful candidate | Ugly candidate | Vindicated |
+|---|---|---|---|---|---|
+| 1 | Solar system structure | 1543 | Heliocentric | Ptolemaic+epicycles | Heliocentric |
+| 2 | Origin of universe | 1955 | Steady-state | Big Bang | Big Bang |
+| 3 | Relativistic kinematics | 1905 | Einstein SR | Lorentz–Poincaré ether | Einstein |
+| 4 | Continental positions | 1920 | Wegener drift | Fixed continents | Drift (1960s) |
+| 5 | Disease causation | 1860 | Germ theory | Miasma | Germ theory |
+| 6 | Combustion | 1780 | Lavoisier oxidation | Phlogiston | Lavoisier |
+| 7 | Light propagation | 1817 | Wave (Fresnel) | Particle (Newtonian) | Wave (until 1905, then dual) |
+| 8 | Stellar energy | 1920 | Nuclear fusion | Gravitational contraction | Nuclear fusion |
+| ... | (22 more drawn from McAllister 1996 plus systematic sweep) | | | | |
+
+The corpus must be locked **before** the panel rates anything, with no item added or removed after lock. Each item gets a one-paragraph neutral description of both candidates, written without aesthetic-loaded language.
+
+### 4b.3 Panel and procedure
+
+- **Panel size:** 8–12 raters (minimum for inter-rater reliability under conservative bootstrap).
+- **Recruitment:** Volunteer panel from contacts with technical backgrounds (math, physics, engineering, philosophy of science). No payment needed for n ≤ 12.
+- **Blinding:** Raters see the two competing explanations stripped of attribution, dating, and any text indicating which was eventually vindicated. Order randomized per rater.
+- **Rating scale:** Each rater assigns a beauty rating to each explanation on a 7-point scale, plus a 1-line free-text justification.
+- **Aggregation:** Median rating per explanation. Explanation with higher median = "BR-selected." Ties (rare) discarded.
+
+### 4b.4 Statistical test
+
+```
+Let N        = number of corpus items where BR-selection is unambiguous
+Let k        = number of items where BR-selected = vindicated
+Under H0     = BR has no truth-tracking power → k ~ Binomial(N, 0.5)
+Reject H0    if observed k corresponds to z ≥ 2.0 (one-sided)
+              i.e., k / N ≥ 0.5 + 1.0/sqrt(N)
+For N = 30   threshold = 0.5 + 0.183 = 0.683 → need ≥ 21/30 correct
+```
+
+### 4b.5 Pre-registration commitments
+
+- Corpus locked before any rating.
+- Aesthetic descriptors stripped from all rater-facing materials.
+- One pre-registered analysis; no item dropping after the fact.
+- Inter-rater reliability (Krippendorff's α) reported alongside primary result; if α < 0.4, the panel is too noisy and the analysis is reported as inconclusive rather than positive or negative.
+- All 30 items reported individually, not just aggregate, so any reader can re-aggregate under different rules.
+
+### 4b.6 What success vs. null looks like
+
+- **Success (z ≥ 2.0, k/N ≥ 21/30):** BR has empirical truth-tracking warrant beyond aesthetic preference. Promote BR from "ceteris paribus tie-breaker" to "empirically supported truth-tracking razor." Publish.
+- **Null (z < 2.0):** BR remains a methodological convenience without empirical truth-tracking warrant. The Razor stays in the framework as a tie-breaker but its status is downgraded to "heuristic." Publish the null with the same clarity as a positive result; update `UGLY_TRUTH_COUNTEREXAMPLES_REGISTRY.md` accordingly.
+
+### 4b.7 Cost and schedule
+
+- Compute: laptop only.
+- Panel honoraria: $0 if volunteer, ≤ $200 total if Prolific (still inside the under-$50-per-session constraint if amortized; recommend volunteer panel for first run).
+- Schedule: 1 week corpus assembly, 2 weeks panel rating, 1 week analysis and write-up. Fits in the existing 9-week schedule (§6.1) running in parallel with Programs B and C, which are compute-bound and need no human input during execution.
+
+---
+
 ## 5. Combined Falsification / Confirmation Matrix
 
 | Program A | Program B | Program C | Inference |
@@ -316,11 +383,11 @@ The matrix is honest about all eight outcomes. None of them are framed as "we'll
 
 | Week | Activity |
 |---|---|
-| 1 | Pre-register all three programs to OSF (free); pull and cache all data |
-| 2 | Run Program A in full; freeze numerical results |
-| 3–4 | Run Program B in full; freeze |
-| 5–7 | Run Program C in full; freeze |
-| 8 | Single combined writeup as URB #710 (or whichever is next) |
+| 1 | Pre-register all four programs to OSF (free); pull and cache all data; assemble Program D corpus |
+| 2 | Run Program A in full; freeze numerical results; open Program D rater panel |
+| 3–4 | Run Program B in full; freeze; collect Program D ratings |
+| 5–7 | Run Program C in full; freeze; close Program D panel and analyze |
+| 8 | Single combined writeup as the next available URB |
 | 9 | Post to Zenodo with permanent DOI |
 
 ### 6.2 Open questions for you (Brandon)

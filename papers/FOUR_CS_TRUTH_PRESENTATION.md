@@ -399,3 +399,33 @@ The Four C's are, in the end, what tralseness *looks like* when it communicates.
 *"Truth that cannot be shown is truth that cannot work. And truth that can be shown -- coherently, concretely, completely, continuously -- is truth that builds worlds."*
 
 — TI Framework, Principle of Presentational Adequacy
+
+---
+
+## 10. The Beauty Razor as the Fifth Razor (added April 21, 2026 — URB #781)
+
+The Tralse Occam's Razor Violation (§4) established that *removing* tralseness from ontology *increases* explanatory complexity — the framework's first formal razor argument. URB #781 (April 21, 2026) adds a complementary methodological razor that operates on the aesthetic dimension of competing depictions.
+
+### 10.1 The Beauty Razor (BR)
+
+> Among competing explanations of the same explanandum, or competing instantiations of the same BT, with all other GILE-relevant criteria held equal (properness, relationality, ontological grounding, mental graspability, present-moment anchoring), the more aesthetically pleasing explanation or instantiation is the more truthful one.
+
+The Razor operates strictly under *ceteris paribus*. Ugly truths (states of affairs that are morally or sensorially unpleasing) do not refute it: BR cuts on *depictions and instantiations*, not on the unfiltered character of what is depicted. A clear, well-graphed presentation of a tragic statistic is a more truthful depiction of the tragedy than a sloppy jargon-laden report citing the same fact.
+
+### 10.2 The Razor Family in the Framework
+
+| Razor | Cuts on | Selects |
+|---|---|---|
+| Occam's Razor | Number of postulates | The simpler explanation |
+| Tralse Occam's Razor Violation | Whether removing tralseness increases complexity | Keep tralseness in ontology |
+| EAR (Existence Amplification Razor) | Existence-amplification capacity | Maximizes ontological pruning + amplification |
+| Myrion Resolution (MR) | Contradiction resolvability under 5-valued logic | The depiction whose state passes MR |
+| **Beauty Razor (BR)** | **Aesthetic quality at parity** | **The more beautiful at-parity depiction** |
+
+BR is the **last razor before Tralseness arbitration** — the final tie-breaker among presentationally-adequate, substantively-coherent candidates.
+
+### 10.3 Continuity with Prior Literature
+
+BR is continuous with Dirac's Principle of Mathematical Beauty (1939, 1963), Hardy's elegance criterion (1940), McAllister's Aesthetic Induction (1996), Weinberg's beauty criterion (1992), and Einstein's "inner perfection" criterion. The framework's contribution is not to invent the principle but to (a) state it in proper relative-sense form, (b) anchor it ontologically in φ as PRIMARY constant rather than leaving it as sociological observation, and (c) give it a name as a methodological razor on equal footing with Occam and EAR.
+
+See URB #781 §B for the full statement, the operationalization formula **Beauty(T) = w₁·φ_presence + w₂·proportional_symmetry + w₃·reception_coherence**, and pre-registered prediction P781.
