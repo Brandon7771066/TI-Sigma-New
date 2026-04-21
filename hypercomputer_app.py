@@ -417,11 +417,11 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
     "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine", "🔬 Halting Experiment",
-    "💊 OEA Protocol", "🎯 Spectre (VMP)",
+    "💊 OEA Protocol", "🎯 Spectre (VMP)", "🍄 Mycelial Resonance",
 ])
 
 with tab1:
@@ -2585,3 +2585,111 @@ with tab12:
                     st.json(report["platform_hem_proxy"])
             except Exception as e:
                 st.error(f"P784.5 audit failed: {e}")
+
+with tab13:
+    st.subheader("🍄 Mycelial Resonance Engine — Closed-Loop Brain Entrainment")
+    st.caption(
+        "v1: ambient isochronic entrainment with 5.5-BPM cardiac coherence envelope. "
+        "Reads your live Muse stream from `esp32_biometric_data` and drifts from your "
+        "current α-peak toward the selected mood-attractor frequency. Pure Python, "
+        "no external API calls."
+    )
+
+    import mycelial_resonance_engine as _mre
+
+    mre_left, mre_right = st.columns([1, 1])
+
+    with mre_left:
+        st.markdown("**Live state (latest Muse sample)**")
+        try:
+            mre_state = _mre.read_current_state()
+        except Exception as e:
+            mre_state = {}
+            st.caption(f"(state read failed: {e})")
+
+        if mre_state:
+            mre_alpha_peak = _mre.estimate_alpha_peak(mre_state)
+            sc1, sc2, sc3 = st.columns(3)
+            sc1.metric("α", f"{(mre_state.get('alpha') or 0):.3f}")
+            sc2.metric("β", f"{(mre_state.get('beta') or 0):.3f}")
+            sc3.metric("θ", f"{(mre_state.get('theta') or 0):.3f}")
+            st.metric("Estimated α-peak (Hz)", f"{mre_alpha_peak:.2f}")
+            st.caption(f"Session: `{mre_state.get('session_id', '—')}`  ·  "
+                       f"updated {mre_state.get('created_at', '—')}")
+        else:
+            st.warning("No live Muse data — start the bridge to enable state-aware drift.")
+            mre_alpha_peak = 10.0
+
+        st.markdown("---")
+        st.markdown("**Generation parameters**")
+        mre_mood = st.selectbox(
+            "Mood attractor",
+            list(_mre.MOOD_ATTRACTORS.keys()),
+            format_func=lambda k: f"{_mre.MOOD_ATTRACTORS[k].name} ({_mre.MOOD_ATTRACTORS[k].target_hz} Hz)",
+            key="mre_mood",
+        )
+        mre_attractor = _mre.MOOD_ATTRACTORS[mre_mood]
+        st.caption(mre_attractor.description)
+
+        mre_duration = st.slider("Duration (minutes)", 1, 30, 5, key="mre_duration")
+        mre_mode = st.radio("Output mode", ["isochronic", "binaural"],
+                            help="isochronic = mono, speaker-safe; binaural = stereo, headphones required",
+                            key="mre_mode", horizontal=True)
+        mre_use_state = st.checkbox(
+            "Drift from current α-peak (vs. start at target)",
+            value=True, key="mre_use_state",
+            help="If on, the track ramps from your estimated current peak to the target. "
+                 "If off, the entire track sits at the target frequency.",
+        )
+        mre_run = st.button("Generate track", type="primary",
+                            use_container_width=True, key="mre_run")
+
+    with mre_right:
+        if mre_run:
+            with st.spinner(f"Synthesizing {mre_duration}-minute {mre_attractor.name} track…"):
+                try:
+                    result = _mre.generate_for_mood(
+                        mood_key=mre_mood,
+                        duration_s=int(mre_duration * 60),
+                        use_current_state=mre_use_state,
+                        mode=mre_mode,
+                    )
+                except Exception as e:
+                    st.error(f"Generation failed: {e}")
+                    result = None
+
+            if result is not None:
+                st.success(
+                    f"Track ready · drift {result['start_hz']} Hz → {result['target_hz']} Hz · "
+                    f"{result['duration_s']}s · {result['mode']}"
+                )
+                try:
+                    with open(result["path"], "rb") as f:
+                        audio_bytes = f.read()
+                    st.audio(audio_bytes, format="audio/wav")
+                    st.download_button(
+                        "Download WAV",
+                        data=audio_bytes,
+                        file_name=os.path.basename(result["path"]),
+                        mime="audio/wav",
+                        use_container_width=True,
+                    )
+                except Exception as e:
+                    st.warning(f"(playback unavailable: {e})")
+                with st.expander("Track metadata"):
+                    st.json(result)
+
+        st.markdown("---")
+        st.markdown("**Usage notes**")
+        st.markdown(
+            "- **Casual ambient use:** play at low volume in the background while you do "
+            "anything — reading, eating, conversation. The entrainment works subliminally.\n"
+            "- **Active session use:** play through good speakers or headphones at "
+            "comfortable volume. Close eyes if you want stronger lock-in.\n"
+            "- **Headphones required for binaural mode.** Isochronic works on speakers.\n"
+            "- **Cardiac coupling:** every track has a 5.5-BPM amplitude envelope so "
+            "HRV resonance and EEG entrainment lock simultaneously.\n"
+            "- **Verification:** glance at the Muse terminal readout 3–5 minutes in. "
+            "α/β should rise for CALM_FOCUS / GILE_COHERENCE; β should rise for FLOW; "
+            "θ should rise for DEEP_REST / CREATIVE_IDEATION."
+        )

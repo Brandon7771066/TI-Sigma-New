@@ -270,3 +270,9 @@ id = "-ZLFcmamWYSc0xOFkvIAC"
 uri = "file://papers/urb_727_brain_neutrino_dataset.json"
 type = "unspecified"
 title = "URB #727 Brain Band-Neutrino Bridge Dataset (JSON, with metadata + statistics)"
+
+[[outputs]]
+id = "kDu_o6qkuleeagBxI-3vX"
+uri = "file://tracks/mre_calm_focus_101_to_105.wav"
+type = "audio"
+title = "MRE v1 — Block 3 Calm Focus track (10.17 → 10.5 Hz, 5 min)"
