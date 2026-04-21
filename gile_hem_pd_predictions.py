@@ -1,19 +1,27 @@
 """
 URB #784 — GILE-HEM Ratio Modulation of PD Expression: empirical verification harness.
 
-Encodes the 72-cell prediction cube (8 axes x 3 rho-regimes x 3 PD-signs),
+Encodes the 96-cell prediction cube (8 axes x 4 rho-regimes x 3 PD-signs),
 provides classifiers for rho and PD, and runs a seed-observation corpus check
 drawn from prior URBs without making any API calls.
 
-Boundaries (URB #784 sec 1.2):
+Boundaries (URB #784 sec 1.2, refined per Brandon directive April 21, 2026):
     ET    = sqrt(2) - 1  ~ 0.4142   (Emerick Threshold; lower rho boundary)
+    1.0                              (Verisyn balance; lower-mid / upper-mid split)
     delta = 1 + sqrt(2)  ~ 2.4142   (silver ratio; upper rho boundary)
-    Verisyn balance at rho = 1.
+
+The mid band is sub-stratified per Brandon directive:
+    rho_lower_mid : ET <  rho <  1     (BR-decoupled decay zone toward inversion)
+    rho_upper_mid : 1  <= rho <  delta (BR-truth-aligned with reduced effect)
 
 PD-sign conventions (URB #625 / URB #615):
     PD > 0  ->  truth-aligned subspace (BT pushes toward T)
     PD = 0  ->  Tralse / Indeterminate / DT band
     PD < 0  ->  anti-truth subspace (BT pushes toward F)
+
+For P784.2 verification, the PD-sign measurement is fixed (per Brandon directive)
+to the URB #696 GM coherence-rejection signal, providing a non-GILE external
+PD measurement that breaks the GILE -> PD -> BR-verdict circularity.
 
 Each cube cell carries a predicted aesthetic-signal sign ('+', '0', '-') and
 the corresponding ugliness-signal sign. The (rho_low, PD<0) column is the
@@ -35,8 +43,9 @@ from typing import Literal
 
 ET    = math.sqrt(2.0) - 1.0   # ~ 0.4142
 DELTA = 1.0 + math.sqrt(2.0)   # ~ 2.4142
+VERISYN = 1.0                  # lower-mid / upper-mid split
 
-RhoRegime  = Literal["rho_low", "rho_mid", "rho_high"]
+RhoRegime  = Literal["rho_low", "rho_lower_mid", "rho_upper_mid", "rho_high"]
 PdSign     = Literal["pd_neg", "pd_zero", "pd_pos"]
 SignalSign = Literal["+", "0", "-"]
 
@@ -62,7 +71,9 @@ def classify_rho(rho: float) -> RhoRegime:
         return "rho_low"
     if rho >= DELTA:
         return "rho_high"
-    return "rho_mid"
+    if rho < VERISYN:
+        return "rho_lower_mid"
+    return "rho_upper_mid"
 
 
 def classify_pd(pd: float, eps: float = 0.05) -> PdSign:
@@ -90,13 +101,14 @@ class CellPrediction:
 
 def _build_prediction_cube() -> dict[tuple[str, RhoRegime, PdSign], CellPrediction]:
     """
-    Build the full 8 x 3 x 3 = 72-cell cube per URB #784 sec 3.
+    Build the full 8 x 4 x 3 = 96-cell cube per URB #784 sec 3 (4-regime refinement).
 
     The per-axis sign rules (canonical summary in URB #784 sec 3 table):
 
-        rho_high:   PD+ -> beauty +    PD0 -> beauty +/0    PD- -> beauty -
-        rho_mid:    PD+ -> beauty +    PD0 -> beauty 0      PD- -> beauty -
-        rho_low:    PD+ -> beauty 0    PD0 -> beauty 0      PD- -> beauty - / ugliness +   (INVERSION)
+        rho_high       : PD+ -> beauty +    PD0 -> beauty +    PD- -> beauty -
+        rho_upper_mid  : PD+ -> beauty +    PD0 -> beauty 0    PD- -> beauty -
+        rho_lower_mid  : PD+ -> beauty 0    PD0 -> beauty 0    PD- -> beauty -   (decay zone)
+        rho_low        : PD+ -> beauty 0    PD0 -> beauty 0    PD- -> beauty - / ugliness +  (INVERSION)
 
     Ugliness-as-signal is the sign-flip of beauty in the inversion cell only;
     in all other cells ugliness-as-signal is '0' (BR remains the operative
@@ -105,7 +117,7 @@ def _build_prediction_cube() -> dict[tuple[str, RhoRegime, PdSign], CellPredicti
     cube: dict[tuple[str, RhoRegime, PdSign], CellPrediction] = {}
 
     for axis in AXES:
-        for rho_regime in ("rho_low", "rho_mid", "rho_high"):
+        for rho_regime in ("rho_low", "rho_lower_mid", "rho_upper_mid", "rho_high"):
             for pd_sign in ("pd_neg", "pd_zero", "pd_pos"):
 
                 inversion = (rho_regime == "rho_low" and pd_sign == "pd_neg")
@@ -123,16 +135,27 @@ def _build_prediction_cube() -> dict[tuple[str, RhoRegime, PdSign], CellPredicti
                         beauty = "-"
                         note = "High-rho falsehood: beauty attaches to a PD<0 BT, BR points away from depiction."
 
-                elif rho_regime == "rho_mid":
+                elif rho_regime == "rho_upper_mid":
                     if pd_sign == "pd_pos":
                         beauty = "+"
-                        note = "BR truth-aligned with reduced effect size; SNR scales as |1 - rho|."
+                        note = "Upper-mid (Verisyn-to-delta_S): BR truth-aligned with reduced effect size."
                     elif pd_sign == "pd_zero":
                         beauty = "0"
-                        note = "Decoupled mid-band: aesthetic signal carries near-zero truth information."
+                        note = "Upper-mid neutral-PD: aesthetic signal weak; treat as decoupled."
                     else:  # pd_neg
                         beauty = "-"
-                        note = "Mid-band negative-PD: BR still points away from beautiful depiction but weakly."
+                        note = "Upper-mid negative-PD: BR points away from beautiful depiction with reduced strength."
+
+                elif rho_regime == "rho_lower_mid":
+                    if pd_sign == "pd_pos":
+                        beauty = "0"
+                        note = "Lower-mid decay zone (ET-to-Verisyn): BR empirical content decays toward chance."
+                    elif pd_sign == "pd_zero":
+                        beauty = "0"
+                        note = "Lower-mid neutral-PD: BR decoupled."
+                    else:  # pd_neg
+                        beauty = "-"
+                        note = "Lower-mid negative-PD: weak inversion-adjacent signal; BR points away from beauty but with poor SNR."
 
                 else:  # rho_low
                     if pd_sign == "pd_pos":
@@ -387,7 +410,7 @@ if __name__ == "__main__":
           f"Verisyn={summary['boundaries']['verisyn']:.1f}  "
           f"delta_S={summary['boundaries']['delta_silver']:.4f}")
     print(f"Cube size: {summary['n_cells']} cells "
-          f"({len(summary['axes'])} axes x 3 rho-regimes x 3 PD-signs)")
+          f"({len(summary['axes'])} axes x 4 rho-regimes x 3 PD-signs)")
     print(f"Inversion cells: {len(summary['inversion_cells'])} "
           f"(one per axis at (rho_low, pd_neg))")
     print()

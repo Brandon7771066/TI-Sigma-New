@@ -325,7 +325,20 @@ CREATE TABLE IF NOT EXISTS spectre_memes (
     gate_reason     TEXT,
     breakdown_json  JSONB
 );
+ALTER TABLE spectre_memes ADD COLUMN IF NOT EXISTS engagement_score REAL;
+ALTER TABLE spectre_memes ADD COLUMN IF NOT EXISTS engagement_source TEXT;
+ALTER TABLE spectre_memes ADD COLUMN IF NOT EXISTS engagement_recorded_at TIMESTAMPTZ;
 """
+
+# Platform HEM-proxy classification (URB #784 P784.5).
+# Audience-substrate-amplitude proxy for the host platform.
+PLATFORM_HEM_PROXY: dict[str, str] = {
+    "TikTok":      "high",   # short-form video, high audience-D1 amplitude
+    "Instagram":   "high",   # image-driven, high audience-D1 amplitude
+    "X / Twitter": "mid",    # text + image, moderate amplitude
+    "Reddit":      "low",    # text-dominant niche communities
+    "LinkedIn":    "low",    # text-dominant professional niche
+}
 
 
 def _connect():
@@ -380,6 +393,138 @@ def log_candidates(
                 rows,
             )
         conn.commit()
+
+
+def record_engagement(meme_id: int, engagement_score: float, source: str = "manual") -> None:
+    """Record an observed engagement signal for a generated meme (Program F input)."""
+    with _connect() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                UPDATE spectre_memes
+                SET engagement_score = %s,
+                    engagement_source = %s,
+                    engagement_recorded_at = NOW()
+                WHERE id = %s
+                """,
+                (float(engagement_score), source, int(meme_id)),
+            )
+        conn.commit()
+
+
+# ---------------------------------------------------------------------------
+# URB #784 P784.5 audit — Spectre-side hook into the Inversion Theorem
+# ---------------------------------------------------------------------------
+
+def _spearman_rho(xs: list[float], ys: list[float]) -> float:
+    """Compute Spearman rank correlation. Returns 0.0 if degenerate."""
+    n = len(xs)
+    if n < 2 or n != len(ys):
+        return 0.0
+
+    def _ranks(vals: list[float]) -> list[float]:
+        idx = sorted(range(n), key=lambda i: vals[i])
+        ranks = [0.0] * n
+        i = 0
+        while i < n:
+            j = i
+            while j + 1 < n and vals[idx[j + 1]] == vals[idx[i]]:
+                j += 1
+            avg = (i + j) / 2.0 + 1.0
+            for k in range(i, j + 1):
+                ranks[idx[k]] = avg
+            i = j + 1
+        return ranks
+
+    rx = _ranks(xs)
+    ry = _ranks(ys)
+    mx = sum(rx) / n
+    my = sum(ry) / n
+    num = sum((rx[i] - mx) * (ry[i] - my) for i in range(n))
+    dx = sum((rx[i] - mx) ** 2 for i in range(n)) ** 0.5
+    dy = sum((ry[i] - my) ** 2 for i in range(n)) ** 0.5
+    if dx == 0.0 or dy == 0.0:
+        return 0.0
+    return num / (dx * dy)
+
+
+def audit_p784_5(min_n_per_stratum: int = 5) -> dict:
+    """
+    URB #784 P784.5 audit — Spectre Program F secondary endpoint.
+
+    Tests: V-score-to-engagement Spearman rho should be < 0.3 in low-audience-HEM
+    platform strata and > 0.5 in high-audience-HEM platform strata.
+
+    Safe to run before any engagement data has been collected; reports
+    'insufficient_data' for strata with fewer than `min_n_per_stratum` rows.
+    """
+    init_db()  # ensures the engagement_* columns exist
+    with _connect() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            cur.execute(
+                """
+                SELECT platform, v_score, engagement_score
+                FROM spectre_memes
+                WHERE engagement_score IS NOT NULL
+                  AND v_score IS NOT NULL
+                  AND gate_passed = TRUE
+                """
+            )
+            rows = cur.fetchall()
+
+    by_stratum: dict[str, list[dict]] = {"low": [], "mid": [], "high": [], "unknown": []}
+    for r in rows:
+        stratum = PLATFORM_HEM_PROXY.get(r["platform"], "unknown")
+        by_stratum[stratum].append(r)
+
+    report: dict = {
+        "prediction": "P784.5: low-HEM Spearman < 0.3, high-HEM Spearman > 0.5",
+        "n_total": len(rows),
+        "platform_hem_proxy": PLATFORM_HEM_PROXY,
+        "strata": {},
+    }
+
+    for stratum_name, stratum_rows in by_stratum.items():
+        n = len(stratum_rows)
+        if n < min_n_per_stratum:
+            report["strata"][stratum_name] = {
+                "n": n,
+                "status": "insufficient_data",
+                "spearman_rho": None,
+            }
+            continue
+
+        vs = [float(r["v_score"]) for r in stratum_rows]
+        es = [float(r["engagement_score"]) for r in stratum_rows]
+        rho = _spearman_rho(vs, es)
+
+        if stratum_name == "low":
+            verdict = "confirms" if rho < 0.3 else "refutes" if rho > 0.5 else "ambiguous"
+        elif stratum_name == "high":
+            verdict = "confirms" if rho > 0.5 else "refutes" if rho < 0.3 else "ambiguous"
+        else:
+            verdict = "n/a"
+
+        report["strata"][stratum_name] = {
+            "n": n,
+            "status": "ok",
+            "spearman_rho": round(rho, 4),
+            "verdict_vs_p784_5": verdict,
+        }
+
+    high = report["strata"].get("high", {})
+    low  = report["strata"].get("low",  {})
+    if high.get("status") == "ok" and low.get("status") == "ok":
+        if high["verdict_vs_p784_5"] == "confirms" and low["verdict_vs_p784_5"] == "confirms":
+            report["overall_verdict"] = "P784.5 confirmed (both strata)"
+        elif "refutes" in (high["verdict_vs_p784_5"], low["verdict_vs_p784_5"]):
+            report["overall_verdict"] = "P784.5 refuted on at least one stratum"
+        else:
+            report["overall_verdict"] = "P784.5 partial / ambiguous"
+    else:
+        report["overall_verdict"] = "Pending — awaiting Program F engagement data"
+
+    return report
 
 
 def recent_memes(limit: int = 25) -> list[dict]:

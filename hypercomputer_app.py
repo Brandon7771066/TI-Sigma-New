@@ -2558,3 +2558,30 @@ with tab12:
                 st.caption("No memes generated yet.")
         except Exception as e:
             st.caption(f"(DB unavailable: {e})")
+
+        st.markdown("---")
+        st.markdown("#### URB #784 P784.5 audit (Inversion-Theorem secondary endpoint)")
+        st.caption(
+            "Tests V-score → engagement Spearman ρ stratified by platform-HEM proxy. "
+            "Pending until Program F engagement data lands; the harness reports "
+            "`insufficient_data` cleanly when no engagement is recorded yet."
+        )
+        if st.button("Run P784.5 audit", key="spectre_audit_p784_5"):
+            try:
+                report = _spectre.audit_p784_5()
+                st.markdown(f"**Overall verdict:** {report['overall_verdict']}")
+                st.markdown(f"**Total rows with engagement:** {report['n_total']}")
+                strata_view = []
+                for stratum, info in report["strata"].items():
+                    strata_view.append({
+                        "stratum": stratum,
+                        "n": info["n"],
+                        "status": info["status"],
+                        "spearman_rho": info.get("spearman_rho"),
+                        "verdict": info.get("verdict_vs_p784_5", "n/a"),
+                    })
+                st.dataframe(strata_view, use_container_width=True, hide_index=True)
+                with st.expander("Platform → HEM-proxy mapping"):
+                    st.json(report["platform_hem_proxy"])
+            except Exception as e:
+                st.error(f"P784.5 audit failed: {e}")
