@@ -18,6 +18,16 @@ Two categories of apparent counterexample are tracked separately:
 
 A genuine refutation of BR requires accumulating Type-1 entries faster than chance would predict given the panel size and the threshold in P781. Type-2 entries clarify the Razor's scope without challenging it.
 
+### Amendment (URB #784, April 21, 2026) — Type-3 Inversion-Cell Predictions
+
+URB #784 establishes that the Beauty Razor is ρ-gated and *inverts* in the cell ρ ≤ ET ∧ PD < 0 (Beauty Razor Inversion Theorem). Apparent counterexamples falling in this cell are now **predicted** rather than refuting; they are reclassified as:
+
+- **Type-3 (Inversion-cell prediction):** An apparent BR violation in which the BT under depiction has ρ(X) ≤ ET (Emerick Threshold, ≈ 0.4142) and an independently scored negative PD. In this cell URB #784 *predicts* that the uglier depiction is the truer one, so an observation of "ugly truth beating beautiful falsehood" *confirms* the Razor's URB #784 amendment rather than refuting it.
+
+Registry intake protocol from this date forward: each candidate Type-1 entry is first ρ-classified using the procedure in URB #784 §3 and `gile_hem_pd_predictions.py`. If the entry lands in (ρ_low, PD−), it is re-coded as Type-3. P784.4 predicts that ≥ 60% of historical Type-1 entries reclassify as Type-3 once ρ-coded.
+
+The five existing initial entries (UTC-2026-04-21-001 through 005) will be ρ-audited in a follow-up pass; preliminary inspection suggests all five are either Type-2 (scope misapplications, already so coded) or Type-3 cases — none are surviving Type-1 candidates.
+
 ---
 
 ## Registry Schema

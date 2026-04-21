@@ -47,6 +47,7 @@ DPES (Default Philosophical Eating Strategy): When user is eating/commuting/occu
 - **Holistic Existence Matrix Framework**: Defines HEM as a four-dimensional scalar, introducing Privation Theory and Parallel MR Protocol.
 - **Double Tralse as Physics Primitive + Quantum Computing Milestone**: Proposes Double Tralse (DT) as a physics primitive and outlines a DT-native architecture.
 - **Revised Truth Architecture**: Refines truth architecture, unifying Tralse and Indeterminate states and defining Moot.
+- **GILE-HEM Ratio Modulation of PD Expression (URB #784)**: Defines ρ := GILE/HEM as the chirality-breaking parameter of the BOK 4+4 architecture; partitions ρ-space into three regimes via silver-ratio boundaries (ET, 1, δ_S); states the Beauty Razor Inversion Theorem (BR sign-flips in the (ρ_low, PD−) cell, where ugliness becomes the truth-tracker); ships a 72-cell prediction cube (8 axes × 3 ρ-regimes × 3 PD-signs) as `gile_hem_pd_predictions.py` with a seed-corpus verification harness (12/12 concordance, 0 inversion violations). Replaces P781 with the ρ-gated P781′.
 
 ### System Design Choices
 - **Security**: Implemented using bcrypt for hashing, Fernet for encryption, PostgreSQL for database management, and Replit Secrets for sensitive information.

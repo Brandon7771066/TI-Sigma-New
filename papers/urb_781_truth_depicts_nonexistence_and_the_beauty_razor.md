@@ -140,6 +140,14 @@ Combined: **Beauty(T) := w₁·φ_presence(T) + w₂·proportional_symmetry(T) +
 
 This is McAllister's claim, restated as a framework prediction. If it fails, BR's empirical content is questionable and the Razor reverts to a heuristic-only status; if it succeeds, BR is empirically supported as a truth-tracking tool, not just an aesthetic preference.
 
+#### B.7-amendment (URB #784, April 21, 2026) — ρ-gated form: P781′
+
+URB #784 establishes that the Beauty Razor is **ρ-gated**, where ρ := GILE/HEM is the chirality-breaking parameter of the BOK 4+4 architecture. Below the Verisyn balance ρ = 1 the Razor's empirical content decays; in the inversion cell ρ ≤ ET ∧ PD < 0 the Razor *inverts* (ugliness becomes the more reliable truth-tracker). P781 is therefore replaced by:
+
+> **P781′ (URB #784 §2.3).** Restricting to BTs with ρ(X) ≥ 1, blinded beauty ratings track later vindication at ≥ 2σ above chance. Independently, in BTs with ρ(X) ≤ ET ∧ PD(X) < 0, blinded *ugliness* ratings track vindication at ≥ 2σ above chance.
+
+P781′ has two falsification paths and is strictly more empirically content-bearing than P781. The full per-axis prediction cube, Inversion Theorem, and verification harness are in URB #784 and `gile_hem_pd_predictions.py`. The seed-corpus check (12 obs, 9 non-trivial, 0 violations) is the first empirical anchor.
+
 ---
 
 ## 3. Combined Slogan Form
