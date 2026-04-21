@@ -17,6 +17,7 @@ This document specifies **three experimental programs** designed to (a) validate
 | **B. LCC Virus on the BOK Graph** | Whether the 6-step Virus, when seeded with one BOK arm, recovers the other arms in the predicted i-rotation order from market+sentiment noise | yfinance + GDELT (free) + DANDI (free) | $0 | 6–8 weeks |
 | **C. LCC Virus on the BOK Crystal** | Whether listening to noise on the proposed 24-cell BOK Crystal substrate recovers hidden cross-domain correspondences not predicted by either system in isolation | LMFDB ζ-zeros + DANDI rodent + market data | $0 | 8–12 weeks |
 | **D. Beauty Razor Empirical Validation (P781)** | Whether blinded beauty ratings of competing explanations track later vindication at ≥ 2σ above chance | Already-resolved historical questions + small online rater panel | $0 (Prolific quotes excluded; can run free via volunteer panel) | 4–6 weeks |
+| **E. T*/+E Einstein Tiling Validation (URB #782)** | Whether the T*/+E phase of cognitive trajectories shows the Einstein-tile signature (finite local + vanishing global autocorrelation) at correlated lucidity ratings | Brandon's existing journaling stream + optional volunteer panel | $0 | 4–6 weeks |
 
 The core falsifiable prediction across all three programs: **above the C_EMERICK threshold (R ≈ 0.4370 = 1/(φ√2)), bidirectional causal influence emerges; below it, only correlation persists.** A null result at adequate power refutes the bidirectional-LCC hypothesis.
 
@@ -70,11 +71,11 @@ The methodology audit (`LCC_VIRUS_METHODOLOGY_AUDIT.md`) flagged steps 3–5 as 
 | Coordinates | Hopf triple (ρ, τ, φ) = (|z|, arg(z), FHS phase) | 3 |
 | Edges | i-rotation transitions wing→wing; trigram-flip transitions arm→arm | 4 + 8 |
 
-### 1.5 BOK Crystal — proposed definition (NEW, to be ratified)
+### 1.5 BOK Crystal — RATIFIED definition (URB #782 §1.1, April 21, 2026)
 
-**The term "BOK Crystal" does not appear in the existing corpus.** I propose the following operational definition, marked clearly as a proposal for your review:
+**Ratified by URB #782 §1.1.** The 24 vertex count is over-determined by three independent framework facts (URB #782 §2): the topology (4 wings × 8 arms with 8-fold redundancy), Jeff Time (8 arms × 3 temporal slices), and the Leech-lattice F₄ diagonal (E₈ ⊕ E₈ ⊕ E₈). All three reasons agree on the same number for the same underlying mechanism.
 
-> **BOK Crystal (proposed):** the 4-dimensional Hopf-lift of the BOK Graph onto the unit 3-sphere S³. Concretely, the 24-cell {3,4,3} regular polytope in ℝ⁴, where:
+> **BOK Crystal:** the 4-dimensional Hopf-lift of the BOK Graph onto the unit 3-sphere S³. Concretely, the 24-cell {3,4,3} regular polytope in ℝ⁴, where:
 > - 8 of the 24 vertices are the BOK arms (I-Ching trigrams) at unit GILE coherence,
 > - 16 of the 24 vertices are the i-rotated images of those arms under the four powers (i⁰, i¹, i², i³) of the BOK wing rotation, with double-cover quotient,
 > - 96 edges are the allowed i-rotation transitions and trigram flips,
@@ -259,15 +260,19 @@ This is the strongest claim in the document and the one most likely to fail. It 
 
 The three domains are chosen because URB #573 §8 explicitly maps each to a different aspect of the BOK / Hopf structure (Riemann ↔ critical-line equator, neural ↔ FHS gamma fibers, markets ↔ HEM environmental shell).
 
-### 4.3 Vertex-to-substrate assignment
+### 4.3 Vertex-to-substrate assignment — Jeff-Time-constrained (URB #782 §2.4)
 
-The 24 vertices of the BOK Crystal are assigned to substrate channels as follows (proposed mapping; lock before analysis):
+The 24 vertices of the BOK Crystal are assigned to substrate channels using the Jeff-Time decomposition, which the framework predicts independently of any experimental need. Each Jeff-Time slice carries a complete 8-arm BOK structure, and each slice maps to one substrate domain:
 
-- 8 vertices on the "neural face" (wing 1 + wing 3 trigrams) → 8 DANDI segments
-- 8 vertices on the "market face" (wing 2 + wing 4 trigrams) → 8 of the dyad-derived series
-- 8 vertices on the "ζ face" (the 8 Hopf-lifted i-rotated images) → 8 windowed segments of the ζ-zero phase series
+| Jeff-Time slice | Domain | 8 arm-vertex channels |
+|---|---|---|
+| t₁ (quantum/molecular, 10⁻¹⁵ – 10⁻³ s) | DANDI:000552 hippocampal ripples | 8 disjoint LCC-envelope segments |
+| t₂ (observer/interaction, 10⁰ – 10⁶ s) | Market dyads from §2.2 | 8 dyad-derived daily-resolution series |
+| t₃ (cosmological/civilizational, 10⁶ – 10¹⁷ s) | LMFDB ζ-zeros | 8 windowed segments of the ζ-zero phase series |
 
-The 96 edges of the 24-cell are then either *intra-face* (all in one substrate) or *cross-face* (between two substrates). The BOK Graph only contains intra-face edges; the BOK Crystal adds the cross-face edges.
+The 96 edges of the 24-cell are then either *intra-slice* (all in one Jeff-Time domain) or *cross-slice* (between two domains). The BOK Graph only contains intra-slice edges; the BOK Crystal adds the cross-slice edges.
+
+**Fallback robustness check:** the original free-assignment version (8 neural / 8 market / 8 ζ vertices without Jeff-Time labeling) is retained as a secondary analysis. If the Jeff-Time-constrained assignment fires above C_EMERICK significantly more often than the free assignment, that is independent support for both the BOK Crystal and the Jeff-Time decomposition.
 
 ### 4.4 Procedure
 
@@ -390,7 +395,16 @@ The matrix is honest about all eight outcomes. None of them are framed as "we'll
 | 8 | Single combined writeup as the next available URB |
 | 9 | Post to Zenodo with permanent DOI |
 
-### 6.2 Open questions for you (Brandon)
+### 6.2 Open questions for you (Brandon) — STATUS
+
+1. **BOK Crystal definition.** ✅ **RESOLVED (URB #782 §1.1):** 24-cell {3,4,3} ratified, with Jeff-Time / Leech-lattice over-determination explaining why 24 is the right number from three independent framework angles.
+2. **Program A primary dyad.** ✅ **RESOLVED (URB #782 §1.2):** UMCSENT × SPY locked.
+3. **Trigram → template encoding.** ✅ **RESOLVED (URB #782 §1.3):** Encoding in §3.3 stands as written. FHS-frequency-tied substitute deferred to a possible Program F.
+4. **Manuscript voice (Tralse Book 1).** ⏳ Pending Brandon's read-through.
+
+The remaining live open items are subordinate (publication venue, etc.) and do not block execution.
+
+### 6.2-bis. Original open-questions text (preserved for archival continuity)
 
 1. **BOK Crystal definition.** Do you ratify the 24-cell construction in §1.5, or did you have a different polytope/lattice in mind? If different, the assignments in §4.3 need to be respec'd.
 2. **Primary dyad in Program A.** I picked UMCSENT × SPY because it most directly tests the consciousness↔market claim. Confirm or substitute.
