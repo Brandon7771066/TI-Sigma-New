@@ -417,11 +417,11 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12 = st.tabs([
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
     "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine", "🔬 Halting Experiment",
-    "💊 OEA Protocol",
+    "💊 OEA Protocol", "🎯 Spectre (VMP)",
 ])
 
 with tab1:
@@ -2449,3 +2449,112 @@ with tab10:
 
 with tab11:
     render_oea_tracker()
+
+with tab12:
+    st.subheader("🎯 Spectre — TI Viral Meme Project (VMP)")
+    st.caption(
+        "Generator-only mode (URB #783 §6.2 directive). Predictor accuracy claim "
+        "withheld until Program F validation completes (~4 weeks). "
+        "Hard GILE floors enforced: G ≥ 0.50, L ≥ 0.40 (self-Love admissible)."
+    )
+
+    import spectre_engine as _spectre
+
+    sp_left, sp_right = st.columns([1, 2])
+    with sp_left:
+        sp_topic = st.text_area(
+            "Topic / theme",
+            value="GILE-coherence as the antidote to viral cruelty",
+            height=90,
+            key="spectre_topic",
+        )
+        sp_platform = st.selectbox(
+            "Platform",
+            list(_spectre.PLATFORM_CARRIER.keys()),
+            key="spectre_platform",
+        )
+        sp_audience = st.selectbox(
+            "Audience profile",
+            ["general", "tech/builder", "wellness/spirituality",
+             "political/policy", "academic", "entertainment"],
+            key="spectre_audience",
+        )
+        sp_n = st.slider("Candidates to generate", 5, 20, 10, key="spectre_n")
+        sp_topk = st.slider("Top-K to display", 1, 5, 3, key="spectre_topk")
+        sp_persist = st.checkbox("Log to spectre_memes table", value=True,
+                                 key="spectre_persist")
+        sp_run = st.button("Generate candidates", type="primary",
+                           use_container_width=True, key="spectre_run")
+
+        st.markdown("---")
+        st.markdown("**V-formula coefficients (URB #783 §1)**")
+        st.markdown(
+            f"- α (CONTENT) = `{_spectre.ALPHA}`\n"
+            f"- β (NETWORK) = `{_spectre.BETA}`\n"
+            f"- γ (GILE) = `{_spectre.GAMMA}`\n"
+            f"- δ (GILE×NETWORK) = `{_spectre.DELTA}`"
+        )
+        st.caption(
+            "Pre-validation defaults; replaced by ridge-regression fits after Program F."
+        )
+
+    with sp_right:
+        if sp_run:
+            with st.spinner("Generating candidates and applying GILE floor…"):
+                try:
+                    result = _spectre.run_pipeline(
+                        topic=sp_topic,
+                        platform=sp_platform,
+                        audience=sp_audience,
+                        n_candidates=sp_n,
+                        top_k=sp_topk,
+                        persist=sp_persist,
+                    )
+                except Exception as e:
+                    st.error(f"Generation failed: {e}")
+                    result = None
+
+            if result is not None:
+                top = result["top"]
+                rejected = result["rejected_count"]
+                st.success(
+                    f"Generated {len(result['all_candidates'])} candidates · "
+                    f"rejected {rejected} on GILE floor · "
+                    f"showing top {len(top)}"
+                )
+                if rejected:
+                    with st.expander(f"Rejected ({rejected}) — gate reasons"):
+                        for r in result["rejection_reasons"]:
+                            st.markdown(f"- `{r}`")
+
+                for i, c in enumerate(top, start=1):
+                    st.markdown(f"### #{i} — V = {c.v_score:.3f}")
+                    st.markdown(f"**{c.text}**")
+                    st.caption(
+                        f"Primary emotion: *{c.primary_emotion}* · "
+                        f"Intended payoff: *{c.intended_payoff}*"
+                    )
+                    bd = c.breakdown()
+                    bd_cols = st.columns(4)
+                    bd_cols[0].metric("CONTENT", f"{bd['CONTENT']:.2f}")
+                    bd_cols[1].metric("NETWORK", f"{bd['NETWORK']:.2f}")
+                    bd_cols[2].metric("GILE", f"{bd['GILE']:.2f}")
+                    bd_cols[3].metric("G×N", f"{bd['interaction']:.2f}")
+                    with st.expander("Sub-scores"):
+                        st.json({
+                            "content": _spectre.asdict(c.content),
+                            "gile": _spectre.asdict(c.gile),
+                            "network": _spectre.asdict(c.network),
+                        })
+                    st.markdown("---")
+
+        st.markdown("#### Recent generations")
+        try:
+            _spectre.init_db()
+            recents = _spectre.recent_memes(limit=10)
+            if recents:
+                st.dataframe(recents, use_container_width=True, hide_index=True)
+            else:
+                st.caption("No memes generated yet.")
+        except Exception as e:
+            st.caption(f"(DB unavailable: {e})")
