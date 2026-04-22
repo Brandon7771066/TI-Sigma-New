@@ -17,7 +17,15 @@ st.caption(
     "Reads `esp32_biometric_data` and writes results to `mre_live_sessions`."
 )
 
-GATEWAY_URL = os.environ.get("TI_GATEWAY_URL", "http://localhost:5000")
+def _gateway_base() -> str:
+    if os.environ.get("TI_GATEWAY_URL"):
+        return os.environ["TI_GATEWAY_URL"].rstrip("/")
+    domain = os.environ.get("REPLIT_DEV_DOMAIN") or os.environ.get("REPLIT_DOMAINS", "").split(",")[0].strip()
+    if domain:
+        return f"https://{domain}"
+    return "http://localhost:5000"
+
+GATEWAY_URL = _gateway_base()
 EMBED_URL = f"{GATEWAY_URL}/mycelial"
 
 with st.expander("ℹ️ About this page", expanded=False):
