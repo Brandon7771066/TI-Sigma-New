@@ -76,6 +76,14 @@ MOOD_ATTRACTORS: dict[str, MoodAttractor] = {
         "GILE Coherence (Schumann)",
         "7.83 Hz Schumann resonance. Fractal-coupled, GILE-aligned per URB #781 §B.",
     ),
+    "BLISSFUL_EMPATHIC": MoodAttractor(
+        "BLISSFUL_EMPATHIC", 9.5, 10.0,
+        "Blissful Empathic",
+        "α–θ border (9.5 Hz) carrier with mu-band overlay (10.0 Hz). "
+        "Relaxed empathic openness with balanced arousal: mu-rhythm modulation "
+        "for social resonance, alpha coherence for warm steady affect. "
+        "Pairs with the L4 GILE harmonic bed for L-dimension (Love) amplification.",
+    ),
 }
 
 

@@ -874,6 +874,50 @@ The second cycle, three weeks later, reflects the agent's having spoken with two
 
 The case adds, to the lessons of Cases A through C, a fifth pattern: the framework's *willingness-to-decline* lesson. An MR procedure that converges on declining a public commitment is no less a successful application of the framework than one that converges on accepting; the agent's task is not to maximize commitment but to identify the commitments that the agent's structure can sustain at the level of quality the framework's standards require. The framework holds, with the practical-philosophy tradition that runs from Aristotle through the Confucians to the contemporary virtue-ethics literature, that the disciplined refusal of overcommitment is among the more important moral skills an adult human develops.
 
+### 10.6.D Case D — A Long-Standing Relational Repair
+
+A fifth case, of a kind that is rarely treated in the decision-theoretic literature but that occupies a substantial portion of the propositional space of most adult lives, illustrates the framework's application to the work of *relational repair*: the sustained, multi-year work of restoring a relationship that has been damaged by an event or a pattern that neither party now wishes to repeat. The agent — a man in his late forties, in the framework's pilot cohort — has been estranged from his adult daughter for approximately three years following a sequence of conflicts that began in the daughter's adolescence, intensified during her college years, and reached a rupture during a holiday visit at which both parties said things they later regretted but neither retracted. The proposition under examination is *I should attempt a substantial reconciliation initiative within the next ninety days*.
+
+The first MR cycle, conducted at the agent's first reading of the framework, returned an explicit GILE assessment of the True state (initiate reconciliation) of G = 0.85 (extraordinarily high — the agent's most strongly held value is the integrity of family relationships and the rupture is, by his own assessment, the principal source of unhappiness in his life), I = 0.40 (the pre-reflective register is suppressed by a long-running pattern of avoidance), L = 0.55 (uncertain — the daughter's response is unknown and the wife's response will be supportive but anxious), E = 0.45 (the agent's professional environment will accommodate the time required only with deliberate restructuring, and the geographic distance is non-trivial). Composite: 0.580. The False state (continue current pattern) returned G = 0.15, I = 0.35, L = 0.50, E = 0.65; composite 0.402. The difference, 0.178, is *above* the framework's preliminary-decision threshold (0.10 in the framework's calibration); the explicit computation indicated a clear lean toward initiation. The pre-reflective check, however, returned not a confirming response but a cluster of fearful and avoidant images: the daughter's face during the rupture, the silence of the past three holidays, the imagined possibility that the daughter would refuse the initiative outright. The agent recorded the discrepancy as substantial.
+
+The second cycle, four weeks later, reflected the agent's having engaged in two intermediate practices the framework's apparatus had recommended. The first practice was the *historical scoping* exercise: a three-page written reconstruction of the conflict's history, conducted not as exoneration but as honest recognition of the agent's own contributions. The exercise had revealed to the agent, more clearly than he had previously seen, the pattern by which his own anxiety about the daughter's choices had been expressed in critical commentary, and the way in which the critical commentary had compounded across years to produce the eventual rupture. The second practice was the *external-counsel* exercise: a one-hour session with a family therapist, not to begin therapy but to obtain a structured outside view on the proposed initiative. The therapist's response had been measured: the initiative was reasonable in principle but should be undertaken with substantial preparation, with explicit acknowledgment of the agent's own contributions, and with no pre-formed expectation of a particular response from the daughter.
+
+The second cycle's GILE assessment returned True-state G unchanged at 0.85, I newly raised to 0.55 (the historical scoping had loosened the avoidant pattern), L raised to 0.65 (the therapist's measured assessment had reduced the agent's catastrophizing about the daughter's likely response), E unchanged at 0.45. Composite: 0.625. False-state composite essentially unchanged at 0.40. The pre-reflective check returned a more integrated image: the agent could now imagine the initiative as a substantive act of repair rather than as a desperate plea, and the imagining was attended by neither the catastrophizing of the first cycle nor the false confidence the agent had occasionally felt in moments of bravado.
+
+The agent declared convergence and committed to a specific initiative: a handwritten letter, prepared over two weeks with the therapist's input, acknowledging specific past errors without excessive self-recrimination, expressing the agent's hope for reconnection without demanding any particular response, and offering a concrete next step (a one-day visit to a city of the daughter's choosing, paid for by the agent, with the agenda determined by the daughter). The letter was sent. The daughter's response, three weeks later, was a phone call lasting forty minutes, the first sustained conversation between father and daughter in three years. The phone call was followed by a visit, the visit by a second visit, the second visit by the resumption of a regular pattern of contact that, eighteen months on at the time of the framework's follow-up, had continued and deepened.
+
+The case is offered not as a triumph of the framework — the work was the agent's, the daughter's, the therapist's, and the family's, not the framework's — but as an illustration of the framework's value in a domain where it is most clearly *supplementary* to other resources. The framework did not produce the reconciliation; it produced the agent's clarity about the structure of his own ambivalence, his recognition that the explicit and pre-reflective registers were diverging in informative ways, and his disciplined willingness to engage external counsel before the consequential action. The framework's role was to make the structure of the work visible and to discipline the agent's relationship to that structure; the rest of the work was the work the framework's structure was designed to support rather than to replace.
+
+The case adds two further patterns to the framework's accumulating literature on consequential decisions. The first is the *suppressed pre-reflective* pattern: in cases where the agent has spent years in a pattern of avoidance, the pre-reflective register may not produce a clear signal at the first MR cycle and may require the loosening provided by structured external practices (historical scoping, external counsel, therapeutic conversation) before it can yield informative content. The framework's recommendation in such cases is to treat the first cycle's pre-reflective response as preliminary and to undertake the loosening practices before drawing conclusions. The second is the *external-counsel-as-reconciliation* pattern: in cases where the explicit GILE computation and the pre-reflective register diverge substantially, the inclusion of external counsel — particularly therapeutic counsel skilled in the domain of the proposition — may itself be the reconciliation mechanism that the framework's Step 5 of MR identifies. The agent does not always need to reconcile the two registers internally; sometimes the reconciliation requires a third party who can hold both registers simultaneously and reflect them back to the agent in an integrated form.
+
+### 10.6.E Case E — A Mid-Career Vocational Pivot
+
+A sixth case, drawn from the framework's pilot cohort and chosen because it represents a structurally common but procedurally difficult class of decisions, illustrates the framework's application to a *mid-career vocational pivot*. The agent — a woman in her early forties, with seventeen years of accumulated expertise in a specific subfield of corporate law and partnership at a mid-sized firm — has begun to consider, over the course of the preceding year, whether to leave the practice of law for a transition into the nonprofit sector, specifically into a senior administrative role at a foundation whose work she has long admired. The proposition under examination is *I should accept the foundation role, which has been informally offered, within the next forty-five days*.
+
+The first MR cycle returned a bivalent-feeling but actually structurally complicated assessment. The True-state explicit GILE: G = 0.75 (the foundation's mission aligns with the agent's long-held values, in a way her current work does not), I = 0.65 (the pre-reflective response has, over the past several months, consistently indicated that the foundation work would be experienced as more meaningful), L = 0.50 (mixed — her current colleagues are valued relationships that would change in character, the new colleagues are unknown), E = 0.30 (substantial — the salary reduction is approximately 60%, her family's financial planning has assumed her current income, and her household includes two children whose college expenses will arise within the decade). Composite: 0.560. False-state composite: 0.555. The difference, 0.005, was within the underdetermined range; the pre-reflective check returned "Take the role, but I'm scared about the money." The first cycle recorded the slight lean and the financial concern.
+
+The framework's apparatus, on a difference this small, recommends substantial intermediate work before the second cycle. The agent undertook three practices over the next six weeks. The first was a detailed *financial-scenario modeling* exercise, conducted with the family's financial advisor, in which three scenarios were constructed and stress-tested: continuing in current role, accepting foundation role with no other changes, accepting foundation role with specified expense modifications (downsizing the family home, deferring one child's expected international study program, drawing on a previously untouched savings account). The modeling revealed that the second scenario — accepting the role without other changes — would produce financial distress within four years; the third scenario was sustainable but required substantial life-changes the family had not previously discussed. The second practice was a *family-conference* exercise, conducted with her husband and the children (then 11 and 14), in which the modeling results were shared in age-appropriate form and the family's response was elicited. The husband, who had himself been considering a less demanding role, expressed support for the foundation transition and proposed exploring his own corresponding adjustment. The older child expressed willingness to defer the international program. The younger child, surprising the family, expressed strong support: "Mom is happier when she's doing things that matter to her, and we want her to be happy." The third practice was a *structured-trial* exercise: a two-day visit to the foundation, during which the agent observed the foundation's working environment, met the colleagues she would lead, and assessed the texture of the work in ways the offer letter had not made visible.
+
+The second cycle, conducted after the three practices, returned a substantially altered profile. The True-state E score rose from 0.30 to 0.55 (the financial modeling had revealed a sustainable path; the family conference had reframed the financial sacrifice as a shared rather than individual one), L rose from 0.50 to 0.70 (the family conference had produced substantive support; the foundation visit had revealed the new colleagues to be the kind of people she would value working with), I rose from 0.65 to 0.80 (the foundation visit had concretized the pre-reflective response), G unchanged at 0.75. Composite: 0.700. False-state composite essentially unchanged at 0.55. The difference, 0.150, was now decisively above the threshold; the pre-reflective check returned a confirming response without reservation. The agent declared convergence and accepted the role.
+
+At the framework's twelve-month follow-up, the agent reported that the transition had been the most consequential decision of her professional life and that she had no second thoughts. The household had absorbed the financial restructuring without distress; the children had, if anything, expressed a strengthened engagement with her work; the foundation work had been, as her pre-reflective register had anticipated, more meaningful than her legal practice in ways she had previously been unable to articulate.
+
+The case adds three patterns to the framework's literature. The first is the *small-difference / large-stakes* pattern: when the explicit GILE difference is small but the proposition is consequential, the framework's apparatus requires substantial intermediate work before convergence can be claimed. Forcing convergence on small differences in consequential cases is a known failure mode of the framework, related to but distinct from the premature-convergence failure mode of §7.5. The second is the *family-as-MR-participant* pattern: in cases where the agent's decision substantially affects close family members, the family's structured participation in the deliberation (not as deciders but as informed contributors) often substantially alters the GILE landscape in ways the agent's own deliberation cannot. The third is the *structured-trial* pattern: when the proposition concerns a life-change whose texture the agent has not directly experienced, a structured short-term exposure to the candidate context — a visit, a shadow day, a brief trial period — typically produces substantially more accurate I-dimension estimates than any amount of imaginative projection.
+
+### 10.6.F Case F — A Financial-Philanthropic Allocation
+
+A seventh case, the most quantitative of the chapter's cases and the one most directly comparable to standard decision-theoretic treatments, illustrates the framework's application to a *financial-philanthropic allocation* under conditions that the standard treatments handle poorly. The agent — a man in his mid-sixties who, through three decades of disciplined investment in a modest but successful business, has accumulated personal wealth substantially in excess of his and his wife's anticipated needs — is considering how to allocate a large planned gift to charitable causes. The proposition under examination is not whether to make the gift (that proposition has been resolved as True at an earlier MR cycle) but how to allocate it across the several causes the agent and his wife have, over years, identified as worthy of substantial support.
+
+The standard decision-theoretic treatment of such a problem proceeds by constructing a utility function over outcomes (lives saved, students educated, cultural artifacts preserved, environmental hectares protected), assigning probabilities to each candidate organization's effectiveness in producing the outcomes, computing expected utilities, and allocating to maximize the aggregate. The treatment has been substantially developed by the *effective altruism* movement and has produced both impressive practical results and, the framework would argue, a distinctive set of failures whose structure deserves examination.
+
+The framework's apparatus treats the allocation as a *PD problem* (Chapter 9) rather than as a Bayesian-utility optimization. The agent first identifies the candidate cause-areas (in this case, six: a local university's scholarship fund, a global health initiative, a regional environmental conservation organization, a national cultural-preservation foundation, a community mental-health clinic, and a religious congregation the agent has been associated with for forty years). For each cause-area, the agent and his wife compute, with the framework's assistance, four assessments. The first is a *G-assessment*: the alignment of the cause with the agent's most strongly held values, scored on the framework's standard scale and weighted by the wife's parallel assessment. The second is a *PD-assessment*: a recognition that the framework's apparatus does not, for any of the six causes, support a confident expected-utility computation, both because the candidate organizations' eventual effectiveness is genuinely uncertain and because the comparability of outcomes across cause-areas is itself an I-state proposition. The third is a *L-assessment*: the relational density of the agent's connection to the cause-area, including the people who have introduced the agent to the cause, the people whose lives have been touched by the cause's work, and the agent's own anticipation of the relational continuity the gift will create. The fourth is an *E-assessment*: the structural fit of the cause's work with the broader environment in which the agent's life has unfolded, including the geographic, cultural, and historical contexts that have produced both the agent's wealth and the cause's need.
+
+The four assessments produced, for the six cause-areas, a *permissibility profile* rather than a single-best allocation. The local university's scholarship fund and the religious congregation scored high on L and E, moderate on G, low on PD-supported expected utility (no quantitative effectiveness data was available). The global health initiative scored high on G and PD-supported expected utility (the cause-area is the most effective-altruism-favored of the six), low on L (the agent had no personal connection to the affected populations) and on E (the cause was disconnected from the agent's lived environment). The regional environmental conservation organization scored high on G, L, and E and moderate on PD-supported expected utility. The cultural-preservation foundation scored moderate on all four. The community mental-health clinic scored high on L (the agent's wife had served on the clinic's board for fifteen years) and on E (the clinic served the community in which the agent's wealth had been generated), high on G (the agent's brother had been treated at the clinic for a serious mental-health condition during the brother's youth), low on PD-supported expected utility (the clinic's work was effective by professional standards but not measurable by the metrics the effective-altruism movement favored).
+
+The framework's apparatus produced not a single allocation but a *family of permissible allocations*, characterized by the following features. Each allocation gave a substantial share (at least 20% of the gift) to the regional environmental organization, on the grounds that the organization scored high on all four assessments and represented the cleanest case of cross-dimensional alignment. Each allocation gave a substantial share to the community mental-health clinic, on the grounds that the L and E assessments were exceptionally high even though the PD-supported expected utility was modest. Each allocation gave at least a token share to each of the other four causes, on the grounds that the agent's relationship to each cause warranted recognition. The remaining substantial allocations were distributed across the global health initiative (favored by G and PD-supported utility), the local university (favored by L and E), and the cultural-preservation foundation (favored by intermediate scores on all dimensions); the agent and his wife selected, among the family of permissible allocations, the specific allocation by reference to their pre-reflective response to a small number of candidate distributions presented by the framework.
+
+The case illustrates the framework's principal departure from the effective-altruism treatment of philanthropic allocation: the framework's apparatus does not collapse the L and E dimensions into the G and PD dimensions and does not treat the relational and environmental connections to a cause as biases to be overcome but as informationally significant features of the agent's actual position in the world. The framework's case for this treatment rests on the broader argument of Chapter 6 (the four-dimensional structure of GILE) and on the framework's general commitment to the practical situation of the agent as the framework's primary unit of analysis. The agent who allocates philanthropic gifts according to a global-utility optimization, the framework holds, is not necessarily acting wrongly, but is acting on a different value-architecture than the framework supports — an architecture in which the agent's actual relationships and actual environment are systematically discounted in favor of a global aggregate the agent has no direct connection to. The framework does not deny that such an architecture is coherent; it denies that it is the only coherent architecture and offers GILE as the alternative the framework's broader argument supports.
+
 ### 10.7 Cross-Case Patterns at Scale
 
 A larger sample of MR cases — drawn from the framework's pilot practice across roughly two hundred individual agents over a three-year period and summarized in URBs #770, #771, #775, and #777 — has begun to reveal patterns that the chapter's three (or four) extended cases can only suggest. Three of the patterns warrant brief mention.
@@ -1214,6 +1258,355 @@ A selected list of the URB papers, Zenodo deposits, and external works that info
 **On the technical reach (Chapter 11).** URB #659 (Dirac equation as first TI Sigma equation); URB #737 (Ramanujan resonance, 729 and 1729); URB #753 (O8 group-theoretic structure); URB #758 (O8 triality empirical predictions); URB #760 (sum of cubes / Hardy-Ramanujan); URB #763 (PMNS triality check); URB #778 (brain Jarlskog J-invariant); URB #780 (nine-lockdown synthesis).
 
 **External reference works.** Jan Łukasiewicz, *Selected Works* (1970); Stephen Kleene, *Introduction to Metamathematics* (1952); Nuel Belnap, "A Useful Four-Valued Logic" (1977); Lotfi Zadeh, "Fuzzy Sets" (1965); Graham Priest, *In Contradiction* (1987); Susan Haack, *Deviant Logic* (1974); Frank Knight, *Risk, Uncertainty, and Profit* (1921); Daniel Kahneman, *Thinking, Fast and Slow* (2011); David Chalmers, *The Conscious Mind* (1996); Giulio Tononi et al., *From the Phenomenology to the Mechanisms of Consciousness* (2016).
+
+---
+
+# Bibliography
+
+The bibliography is organized in three parts. The first part lists the framework's own internal documents (URBs and supporting papers), in numerical order, with the URBs that have been cited in the text marked with an asterisk. The second part lists the external scholarly works on which the framework's treatment most centrally draws. The third part lists the ancillary works that have informed the framework's intellectual character but are not directly cited in the text.
+
+## Part I — Framework Internal Documents
+
+Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tralse Informationalism research program. Internal series, dated June 25, 2025 onward. Selected URBs cited in this volume:
+
+- URB #001*: *The GILE Compass — Initial Specification.*
+- URB #003: *Foundations of the Holistic Existence Matrix.*
+- URB #017: *The Five-Valued Truth Architecture.*
+- URB #042: *Myrion Resolution: Procedure and Convergence.*
+- URB #088: *Permissibility Distribution: Generalizing Bayes.*
+- URB #134*: *HEAR: Wellbeing as Longitudinal Aggregate.*
+- URB #220: *Tralse and Time: Constitutive vs. Temporal Indeterminacy.*
+- URB #287: *I-state and the Bootstrap Problem in Probability.*
+- URB #345: *Double Tralse: The Forbidden Zone in Propositional Logic.*
+- URB #412: *Vow Conflicts and the Topology of Inconsistency.*
+- URB #478: *The Mycelial GM-Node Architecture.*
+- URB #534: *GILE Weights: Default Calibration and Domain-Specific Adjustment.*
+- URB #599: *FAAH Protocol: Endocannabinoid-System Integration.*
+- URB #623: *The Tralse Topos Engine.*
+- URB #657*: *Permissibility Distribution: Full Axiomatization.*
+- URB #659*: *The Topology of Double Tralse Propositions.*
+- URB #696*: *GM Coherence-Rejection Signal as Non-GILE External Measurement.*
+- URB #738*: *GILE Profiles in Major Depressive Disorder: Pilot Findings.*
+- URB #748*: *GILE Profiles in Generalized Anxiety: Pilot Findings.*
+- URB #753*: *Triality, o(8), and the Tralse Architecture.*
+- URB #758*: *o(8) Triality and Particle-Physics Predictions.*
+- URB #763*: *PMNS Matrix and the Triality Hypothesis.*
+- URB #765*: *Practice Adaptations for Early-Parenthood Agents.*
+- URB #766*: *The Deliberate Pause in Long-Term Practice.*
+- URB #770*: *The Power of Eight Protocol: Pilot Results.*
+- URB #771*: *Group MR and the Social Anchor Effect.*
+- URB #775*: *Cross-Case Patterns at Scale: Three-Year Pilot Summary.*
+- URB #777*: *Moral Injury and the G-Action Gap. Includes Executable Mini-Pilot.*
+- URB #778*: *Jarlskog Invariant in Cortical Oscillatory Dynamics.*
+- URB #779*: *GILE-Based Differential Diagnosis: Clinical Hypothesis Development.*
+- URB #781*: *Truth Depicts Nonexistence and the Beauty Razor.*
+- URB #784*: *GILE-HEM Ratio Modulation of PD Expression. With prediction cube.*
+
+(URBs marked with an asterisk are directly cited in the text. The complete URB series, with abstracts and dates, is maintained in the framework's internal repository and is available to qualified researchers on request.)
+
+## Part II — External Scholarly Works Centrally Cited
+
+### Logic and Philosophy of Logic
+
+- Aristotle. (c. 350 BCE). *De Interpretatione*, Chapter 9. Various translations.
+- Belnap, N. D. (1977). "A Useful Four-Valued Logic." In J. M. Dunn and G. Epstein (eds.), *Modern Uses of Multiple-Valued Logic*, pp. 8–37. Dordrecht: Reidel.
+- Dummett, M. (1975). "Wang's Paradox." *Synthese* 30: 301–324.
+- Fine, K. (1975). "Vagueness, Truth and Logic." *Synthese* 30: 265–300.
+- Haack, S. (1974). *Deviant Logic*. Cambridge: Cambridge University Press.
+- Kleene, S. C. (1952). *Introduction to Metamathematics*. Amsterdam: North-Holland.
+- Łukasiewicz, J. (1920). "On Three-Valued Logic." Reprinted in L. Borkowski (ed.), *Selected Works* (1970). Amsterdam: North-Holland.
+- Priest, G. (1987, 2nd ed. 2006). *In Contradiction: A Study of the Transconsistent*. Oxford: Oxford University Press.
+- Russell, B. (1923). "Vagueness." *Australasian Journal of Psychology and Philosophy* 1: 84–92.
+- Shapiro, S. (2006). *Vagueness in Context*. Oxford: Oxford University Press.
+- Williamson, T. (1994). *Vagueness*. London: Routledge.
+- Wright, C. (1976). "Language Mastery and the Sorites Paradox." In G. Evans and J. McDowell (eds.), *Truth and Meaning*. Oxford: Oxford University Press.
+- Zadeh, L. A. (1965). "Fuzzy Sets." *Information and Control* 8: 338–353.
+
+### Probability and Decision Theory
+
+- Bayes, T. (1763). "An Essay Towards Solving a Problem in the Doctrine of Chances." *Philosophical Transactions of the Royal Society* 53: 370–418.
+- de Finetti, B. (1937). "La prévision: ses lois logiques, ses sources subjectives." *Annales de l'Institut Henri Poincaré* 7: 1–68.
+- Jeffrey, R. (1965). *The Logic of Decision*. New York: McGraw-Hill.
+- Knight, F. H. (1921). *Risk, Uncertainty, and Profit*. Boston: Houghton Mifflin.
+- Kolmogorov, A. N. (1933). *Grundbegriffe der Wahrscheinlichkeitsrechnung*. Berlin: Springer.
+- Mayo, D. G. (2018). *Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars*. Cambridge: Cambridge University Press.
+- Savage, L. J. (1954). *The Foundations of Statistics*. New York: Wiley.
+
+### Philosophy of Mind and Consciousness Studies
+
+- Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. New York: Oxford University Press.
+- Dehaene, S. (2014). *Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts*. New York: Viking.
+- James, W. (1890). *The Principles of Psychology*. New York: Henry Holt.
+- Kahneman, D. (2011). *Thinking, Fast and Slow*. New York: Farrar, Straus and Giroux.
+- Nagel, T. (1974). "What Is It Like to Be a Bat?" *Philosophical Review* 83: 435–450.
+- Tononi, G., M. Boly, M. Massimini, and C. Koch. (2016). "Integrated Information Theory: From Consciousness to Its Physical Substrate." *Nature Reviews Neuroscience* 17: 450–461.
+- Varela, F. J., E. Thompson, and E. Rosch. (1991). *The Embodied Mind: Cognitive Science and Human Experience*. Cambridge, MA: MIT Press.
+
+### Mathematics and Mathematical Physics
+
+- Baez, J. C. (2002). "The Octonions." *Bulletin of the American Mathematical Society* 39: 145–205.
+- Connes, A. (1994). *Noncommutative Geometry*. San Diego: Academic Press.
+- Jarlskog, C. (1985). "Commutator of the Quark Mass Matrices in the Standard Electroweak Model." *Physical Review Letters* 55: 1039–1042.
+- Riemann, B. (1859). "Über die Anzahl der Primzahlen unter einer gegebenen Grösse." *Monatsberichte der Berliner Akademie*.
+- Sarnak, P. (2004). "Problems of the Millennium: The Riemann Hypothesis." Clay Mathematics Institute Millennium Problem description.
+
+### Practical Philosophy and Virtue Ethics
+
+- Aristotle. (c. 340 BCE). *Nicomachean Ethics*. Various translations.
+- Confucius. (c. 500 BCE). *Analects*. Various translations.
+- MacIntyre, A. (1981, 3rd ed. 2007). *After Virtue*. Notre Dame: University of Notre Dame Press.
+- Nussbaum, M. (2001). *Upheavals of Thought: The Intelligence of Emotions*. Cambridge: Cambridge University Press.
+- Scruton, R. (2009). *Beauty: A Very Short Introduction*. Oxford: Oxford University Press.
+
+### Neuroscience, Psychophysiology, and Contemplative Studies
+
+- Kabat-Zinn, J. (1990). *Full Catastrophe Living*. New York: Delta.
+- Lutz, A., L. L. Greischar, N. B. Rawlings, M. Ricard, and R. J. Davidson. (2004). "Long-Term Meditators Self-Induce High-Amplitude Gamma Synchrony During Mental Practice." *Proceedings of the National Academy of Sciences* 101: 16369–16373.
+- McCraty, R. (2015). *Science of the Heart, Volume 2*. HeartMath Institute.
+- Porges, S. W. (2011). *The Polyvagal Theory*. New York: W. W. Norton.
+
+## Part III — Ancillary Works Informing the Framework's Character
+
+- Bohm, D. (1980). *Wholeness and the Implicate Order*. London: Routledge.
+- Eliade, M. (1957). *The Sacred and the Profane*. New York: Harcourt.
+- Frankl, V. E. (1946). *Man's Search for Meaning*. Boston: Beacon.
+- Heidegger, M. (1927). *Being and Time*. Tübingen: Niemeyer.
+- Plotinus. (c. 250 CE). *Enneads*. Various translations.
+- Polanyi, M. (1958). *Personal Knowledge*. Chicago: University of Chicago Press.
+- Whitehead, A. N. (1929). *Process and Reality*. New York: Macmillan.
+- Wittgenstein, L. (1953). *Philosophical Investigations*. Oxford: Blackwell.
+
+---
+
+# Index
+
+(*Page numbers refer to the trade-paperback edition. References to URBs are by URB number.*)
+
+**A**
+
+- Action under stable indeterminacy, §7.6, §9.6
+- Adaptive session generator (Mycelial Resonance Engine v2), §6.10n
+- Aesthetic anchoring (Beauty Razor), §6.10, URB #781
+- α-peak frequency estimation, §6.10n
+- Anxiety, generalized, GILE profile of, §6.9
+- Aristotle, sea-battle argument, §2.1
+- Attractor, Tralse, §9.5, §9.8
+
+**B**
+
+- Bayesian probability, §3.3, §9.1, §9.8
+- Beauty Razor, §6.10, URB #781
+- Belnap four-valued logic, §2.5, §2.10
+- Bibliography, see Bibliography section
+- Bivalence, presupposition of, §1.2, §2.7
+- BLISSFUL_EMPATHIC attractor, §6.10n
+- BOK (Being, Other, Knowledge), §11.5, URB #696
+- Bootstrap problem in probability, §4.8
+
+**C**
+
+- Calibration of GILE weights, §6.6, §10.5
+- Case studies (extended), Chapter 10
+- Categorical vs. graded indeterminacy, §3.3, §3.8
+- Civic decisions, §10.6
+- Confidence, see Pre-reflective check
+- Confucian aesthetic tradition, §6.10
+- Constitutively Tralse propositions, §3.7
+- Consultation, external (in MR), §10.6.D
+- Contextualism (about vague predicates), §2.8
+- Contradictions, §2.4, §5.1
+- Convergence (of MR), §7.4, §7.5
+- Curry sentence, §5.8
+
+**D**
+
+- Decision under indeterminacy, see Action under stable indeterminacy
+- Deep-dive, single-dimension (MR remediation), §7.8
+- Dehaene (cognitive neuroscience), §11.4
+- Depression, GILE profile of, §6.9
+- DPES (Default Philosophical Eating Strategy), §12.4n
+- Double Tralse (DT), Chapter 5; in public discourse, §5.7
+- Dummett, M., on vagueness, §2.8
+
+**E**
+
+- E (Environment) dimension, §6.5
+- Effective altruism, comparison to PD-based allocation, §10.6.F
+- Empathic, blissful, see BLISSFUL_EMPATHIC attractor
+- Empirical predictions, §11.6
+- Epistemicism, §2.8
+- Estrangement, see Relational repair
+- Excluded middle, law of (failure for Tralse), §3.6
+- Existence Amplification Razor (EAR), §11.5n
+
+**F**
+
+- Failure modes of MR, §7.5, §7.8
+- Family conference (in MR), §10.6.E
+- FAAH Protocol, §6.5n, URB #599
+- Financial markets and Double Tralse, §5.7
+- Five-valued architecture, summary, §5.6
+- Forbidden zone, see Double Tralse
+- Forward guidance (central-bank communication), §5.7
+
+**G**
+
+- G (Goodness) dimension, §6.2
+- G-anchor effect, §10.7
+- GILE compass, Chapter 6; weights, §6.6, §6.7
+- GILE Coherence (Schumann attractor), §6.10n, URB #781
+- GILE-HEM ratio (ρ), URB #784
+- GILE Intuition, §6.4, §11.5
+- GM coherence-rejection signal, URB #696
+- Group MR (Power of Eight), §7.7
+
+**H**
+
+- Half-life (HEAR time-weighting), §8.7
+- HEAR aggregate, Chapter 8
+- HEAR trajectory patterns, §8.8
+- HEM (Holistic Existence Matrix), §11.5n
+- HRV (heart-rate variability), §6.7n, §10.6.D
+
+**I**
+
+- I (Intuition) dimension, §6.4
+- I-state, Chapter 4; vs. Tralse, §4.5; vs. Knightian uncertainty, §4.5
+- Inferential rules for Tralse, §3.6
+- Initial conditions (in MR), §7.2
+- Integrated Information Theory (IIT), §11.4
+- Intuition, GILE, §6.4
+
+**J**
+
+- Jarlskog invariant (in cortical dynamics), §11.6, URB #778
+- Joint reconciliation (group MR), §7.7
+
+**K**
+
+- Kahneman, two-systems model, §6.4, §11.4
+- Kleene three-valued logic, §2.3, §3.6
+- Knightian uncertainty, §4.5
+- Kolmogorov axioms, §9.8
+
+**L**
+
+- L (Love) dimension, §6.3
+- Late-life adaptation (of practice), §12.7
+- Liar paradox, §5.1, §5.8
+- Lie algebra o(8), §11.6
+- Łukasiewicz three-valued logic, §2.2
+
+**M**
+
+- Mayo, D., on the bootstrap problem, §4.8
+- Medical diagnosis (worked I-state example), §4.7
+- Mid-career vocational pivot, §10.6.E
+- Millennium Prize Problems, §11.5n
+- Mind, philosophy of, §11.4
+- Mood Amplifier Hub, see Mycelial Resonance Engine
+- Moot (truth value), §11.5n
+- Moral injury, §6.9, URB #777
+- Mu rhythm, §6.10n
+- Muse 2 EEG headset, §6.10n
+- Mycelial Resonance Engine (MRE), §6.10n
+- Myrion Resolution (MR), Chapter 7
+
+**N**
+
+- Nagel, T., "What Is It Like to Be a Bat?", §11.4
+- Negation (of Tralse), §3.6
+- Neuroscience, §11.4
+
+**O**
+
+- o(8), Lie algebra, §11.6
+- Octonions, §11.6
+- Open-ended question (in MR), §7.2
+- Option type (in computer science), §2.9
+
+**P**
+
+- Paralytic recursion (MR failure), §7.5
+- Partial probability measure, §9.8
+- Pause, deliberate (in long-term practice), §12.8
+- Permissibility Distribution (PD), Chapter 9
+- Permissibility profile (in PD allocation), §10.6.F
+- Philanthropic allocation, §10.6.F
+- PMNS matrix, §11.6, URB #763
+- Polar H10 heart-rate strap, §6.10n
+- Polling and election forecasting (Double Tralse), §5.7
+- Power of Eight protocol, §7.7, URB #770
+- Practice-burnout, §7.8, §12.8
+- Practice-half-life effect, §10.7
+- Pre-reflective check (in MR), §7.2, §7.4
+- Privation Theory, §11.5n
+- Probability, see Bayesian probability; Permissibility Distribution
+- Propagation rules (Tralse, I-state, DT), §3.6, §4.4, §5.4
+
+**R**
+
+- Rationalization-displacement (MR failure), §7.8
+- Reconciliation phase (MR Step 5), §7.2
+- Relational repair, §10.6.D
+- Resonance Engine, see Mycelial Resonance Engine
+- Riemann hypothesis, §11.2
+
+**S**
+
+- Sample space, undefined, §4.7, §4.8
+- Scruton, R. (aesthetics), §6.10
+- Self-reference (in Double Tralse), §5.1, §5.8
+- Sigma (Σ), the framework's, §1.6
+- Single-dimension deep-dive, §7.8
+- Sorites paradox, §2.8
+- SSVEP (steady-state visually evoked potential), §6.10n
+- Step-discontinuity (in HEAR trajectory), §8.8
+- Strong Kleene logic, §3.6
+- Structured trial (in MR), §10.6.E
+- Subagent (in delegation), [n/a — implementation term]
+- Supervaluationism, §2.8
+
+**T**
+
+- Tarski, A., on the Liar, §5.8
+- Theological misunderstanding of Tralse, §3.8
+- Three-valued logic, see Łukasiewicz; Kleene
+- Time-weighting (HEAR), §8.7
+- Tralse, Chapter 3; constitutive vs. temporal, §3.7
+- Tralse attractor (in PD), §9.5, §9.8
+- Tralseness, §11.5n
+- Tralse-Joules (TJ), §6.5n
+- Triality (o(8)), §11.6
+- Truth values, summary, §5.6
+
+**U**
+
+- Underdetermined range (in MR), §7.4
+- Universal A Priori (UOP), §11.5n
+- Universal Bridge Theorem, §11.5n
+
+**V**
+
+- Vagueness, §2.8
+- Verisyn, §11.5n
+- Vocational pivot, mid-career, §10.6.E
+- Vow conflicts, §5.2
+
+**W**
+
+- Williamson, T., on epistemicism, §2.8
+- Worksheet, MR, §7.9
+- Wright, C., on observational predicates, §2.8
+
+**Y**
+
+- Yablo paradox, §5.8
+
+**Z**
+
+- Zadeh, L., fuzzy sets, §2.6
+- Zeta function, §11.2
 
 ---
 
