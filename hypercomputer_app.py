@@ -2641,6 +2641,21 @@ with tab13:
             help="If on, the track ramps from your estimated current peak to the target. "
                  "If off, the entire track sits at the target frequency.",
         )
+        mre_bed = st.checkbox(
+            "L4 — GILE-coherent harmonic bed (URB #781 §B)",
+            value=False, key="mre_bed",
+            help="Replaces the bare 200 Hz carrier with a sparse just-intonation chord "
+                 "progression (I → IV → V → I) on a low root, with a slow breath tremolo. "
+                 "Sounds less clinical, more pleasant for ambient daily use.",
+        )
+        mre_session_kind = st.radio(
+            "Generation strategy",
+            ["Single drift (v1)", "Adaptive session (v2)"],
+            help="v1: one linear drift from your current α-peak to the target. "
+                 "v2: anticipatory pre-adaptation — reads recent Muse history, estimates "
+                 "α-velocity, builds a multi-segment WAV that meets you where you'll be.",
+            key="mre_session_kind", horizontal=True,
+        )
         mre_run = st.button("Generate track", type="primary",
                             use_container_width=True, key="mre_run")
 
@@ -2648,12 +2663,23 @@ with tab13:
         if mre_run:
             with st.spinner(f"Synthesizing {mre_duration}-minute {mre_attractor.name} track…"):
                 try:
-                    result = _mre.generate_for_mood(
-                        mood_key=mre_mood,
-                        duration_s=int(mre_duration * 60),
-                        use_current_state=mre_use_state,
-                        mode=mre_mode,
-                    )
+                    if mre_session_kind.startswith("Adaptive"):
+                        result = _mre.generate_adaptive_session(
+                            mood_key=mre_mood,
+                            duration_s=int(mre_duration * 60),
+                            segment_s=30,
+                            mode=mre_mode,
+                            harmonic_bed=mre_bed,
+                        )
+                        result["start_hz"] = result["current_peak_hz"]
+                    else:
+                        result = _mre.generate_for_mood(
+                            mood_key=mre_mood,
+                            duration_s=int(mre_duration * 60),
+                            use_current_state=mre_use_state,
+                            mode=mre_mode,
+                            harmonic_bed=mre_bed,
+                        )
                 except Exception as e:
                     st.error(f"Generation failed: {e}")
                     result = None
@@ -2680,6 +2706,23 @@ with tab13:
                     st.json(result)
 
         st.markdown("---")
+        st.markdown("**L5 — Visual SSVEP overlay (v3 preview)**")
+        st.caption(
+            "Soft sinusoidal flicker at the target frequency for steady-state visual "
+            "evoked-potential coupling. Use in peripheral vision only — do not stare. "
+            "Stop after 5–10 minutes or at any discomfort. Photosensitive-epilepsy warning applies."
+        )
+        ssvep_freq = st.number_input(
+            "SSVEP frequency (Hz)", min_value=4.0, max_value=40.0,
+            value=float(_mre.MOOD_ATTRACTORS[mre_mood].target_hz),
+            step=0.1, key="mre_ssvep_freq",
+        )
+        if st.button("Open SSVEP overlay", use_container_width=True, key="mre_ssvep_open"):
+            from streamlit.components.v1 import html as _html
+            _html(_mre.ssvep_html(ssvep_freq, _mre.MOOD_ATTRACTORS[mre_mood].name),
+                  height=420, scrolling=False)
+
+        st.markdown("---")
         st.markdown("**Usage notes**")
         st.markdown(
             "- **Casual ambient use:** play at low volume in the background while you do "
@@ -2689,6 +2732,10 @@ with tab13:
             "- **Headphones required for binaural mode.** Isochronic works on speakers.\n"
             "- **Cardiac coupling:** every track has a 5.5-BPM amplitude envelope so "
             "HRV resonance and EEG entrainment lock simultaneously.\n"
+            "- **L4 harmonic bed:** turn it on for ambient daily use; off for clinical "
+            "verification (the bare 200 Hz carrier makes the modulation more measurable).\n"
+            "- **L5 SSVEP overlay:** strongest entrainment when audio + visual are both on. "
+            "Look slightly past the screen, not at the center fixation dot.\n"
             "- **Verification:** glance at the Muse terminal readout 3–5 minutes in. "
             "α/β should rise for CALM_FOCUS / GILE_COHERENCE; β should rise for FLOW; "
             "θ should rise for DEEP_REST / CREATIVE_IDEATION."
