@@ -22,7 +22,7 @@ def _gateway_base() -> str:
         return os.environ["TI_GATEWAY_URL"].rstrip("/")
     domain = os.environ.get("REPLIT_DEV_DOMAIN") or os.environ.get("REPLIT_DOMAINS", "").split(",")[0].strip()
     if domain:
-        return f"https://{domain}"
+        return f"https://{domain}:5000"
     return "http://localhost:5000"
 
 GATEWAY_URL = _gateway_base()
