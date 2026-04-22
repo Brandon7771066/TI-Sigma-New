@@ -2597,9 +2597,308 @@ with tab13:
 
     import mycelial_resonance_engine as _mre
 
-    mre_left, mre_right = st.columns([1, 1])
+    mre_app_mode = st.radio(
+        "Mode",
+        ["Static track generator", "🎯 Live closed-loop session (biofeedback)"],
+        horizontal=True, key="mre_app_mode",
+        help="Static: pre-render a WAV and download/play. Live: 5-min baseline → "
+             "calibrated audio + on-screen α-peak trajectory → debrief stats.",
+    )
 
-    with mre_left:
+    if mre_app_mode.startswith("🎯"):
+        # ============================================================
+        # LIVE CLOSED-LOOP SESSION MODE
+        # ============================================================
+        st.markdown(
+            "**How this works.** "
+            "(1) **Baseline** — your live Muse stream is sampled for 5 minutes (default) "
+            "to establish your resting α-peak and band-power profile. "
+            "(2) **Calibration** — an audio session is generated, drifting from your "
+            "actual measured baseline toward the chosen attractor. "
+            "(3) **Steering** — audio plays while your α-peak is plotted live against the "
+            "target. (4) **Debrief** — drift achieved, time-in-target-band, and a session "
+            "log row are saved to `mre_live_sessions`."
+        )
+
+        live_left, live_right = st.columns([1, 1])
+        with live_left:
+            live_mood = st.selectbox(
+                "Mood attractor",
+                list(_mre.MOOD_ATTRACTORS.keys()),
+                format_func=lambda k: f"{_mre.MOOD_ATTRACTORS[k].name} ({_mre.MOOD_ATTRACTORS[k].target_hz} Hz)",
+                index=list(_mre.MOOD_ATTRACTORS.keys()).index("BLISSFUL_EMPATHIC")
+                    if "BLISSFUL_EMPATHIC" in _mre.MOOD_ATTRACTORS else 0,
+                key="mre_live_mood",
+            )
+            live_attractor = _mre.MOOD_ATTRACTORS[live_mood]
+            st.caption(live_attractor.description)
+            live_baseline_min = st.slider("Baseline duration (min)", 1, 10, 5,
+                                          key="mre_live_baseline_min")
+            live_steering_min = st.slider("Steering duration (min)", 3, 30, 15,
+                                          key="mre_live_steering_min")
+            live_poll_s = st.slider("Poll interval (sec)", 1, 5, 2,
+                                    key="mre_live_poll_s",
+                                    help="How often to read the latest Muse row.")
+            live_bed = st.checkbox("L4 GILE harmonic bed", value=True,
+                                   key="mre_live_bed")
+            live_band_hz = st.slider("Target-band tolerance (± Hz)", 0.2, 2.0, 0.5, 0.1,
+                                     key="mre_live_band_hz",
+                                     help="A sample counts as 'in target band' if "
+                                          "|α-peak − target| < this value.")
+
+        with live_right:
+            st.markdown("**Pre-flight check**")
+            try:
+                _pre_state = _mre.read_current_state()
+            except Exception as _e:
+                _pre_state = {}
+                st.error(f"DB read failed: {_e}")
+            if _pre_state:
+                _pre_age = (datetime.now() - _pre_state.get('created_at')).total_seconds() \
+                    if _pre_state.get('created_at') else 999
+                p1, p2, p3 = st.columns(3)
+                p1.metric("α", f"{(_pre_state.get('alpha') or 0):.3f}")
+                p2.metric("HR", f"{(_pre_state.get('heart_rate') or 0)} bpm")
+                p3.metric("Sample age", f"{_pre_age:.1f}s")
+                if _pre_age > 10:
+                    st.warning(f"⚠️ Latest Muse sample is {_pre_age:.0f}s old — "
+                               "your bridge isn't pushing fresh data. The live "
+                               "session will run on stale state until the bridge "
+                               "starts streaming.")
+                elif (_pre_state.get('heart_rate') or 0) == 0:
+                    st.warning("⚠️ HR=0 — Polar H10 not detected. Session will run "
+                               "but HRV metrics will be flat.")
+                else:
+                    st.success("✅ Stream looks live. Ready to start.")
+            else:
+                st.error("No state available — start your ESP32 bridge.")
+
+            st.markdown("**Target attractor**")
+            st.metric("Frequency", f"{live_attractor.target_hz} Hz")
+            if live_attractor.overlay_hz:
+                st.caption(f"+ overlay at {live_attractor.overlay_hz} Hz")
+
+            live_start = st.button("▶ Start live closed-loop session",
+                                   type="primary", use_container_width=True,
+                                   key="mre_live_start")
+            st.caption("To abort mid-session, refresh the browser tab.")
+
+        if live_start:
+            import time as _time
+            import pandas as _pd
+            import base64 as _b64
+
+            target_hz = live_attractor.target_hz
+            poll_s = live_poll_s
+            baseline_dur = live_baseline_min * 60
+            steering_dur = live_steering_min * 60
+
+            st.markdown("---")
+            phase_box = st.empty()
+            timer_box = st.empty()
+            audio_box = st.empty()
+            metrics_box = st.empty()
+            chart_box = st.empty()
+            band_box = st.empty()
+
+            history = {"t": [], "peak": [], "alpha": [], "beta": [],
+                       "theta": [], "gamma": [], "hr": [], "rmssd": []}
+            baseline_peaks = []
+            steering_peaks = []
+            audio_started = False
+            start_t = _time.time()
+
+            try:
+                while True:
+                    now = _time.time()
+                    elapsed = now - start_t
+                    if elapsed >= baseline_dur + steering_dur:
+                        break
+
+                    try:
+                        st_row = _mre.read_current_state()
+                    except Exception:
+                        st_row = {}
+                    peak = _mre.estimate_alpha_peak(st_row) if st_row else None
+
+                    if peak is not None:
+                        history["t"].append(elapsed)
+                        history["peak"].append(peak)
+                        history["alpha"].append(float(st_row.get("alpha") or 0))
+                        history["beta"].append(float(st_row.get("beta") or 0))
+                        history["theta"].append(float(st_row.get("theta") or 0))
+                        history["gamma"].append(float(st_row.get("gamma") or 0))
+                        history["hr"].append(int(st_row.get("heart_rate") or 0))
+                        history["rmssd"].append(float(st_row.get("rmssd") or 0))
+
+                    in_baseline = elapsed < baseline_dur
+                    if in_baseline:
+                        phase_label = "🔵 BASELINE"
+                        remaining = baseline_dur - elapsed
+                        if peak is not None:
+                            baseline_peaks.append(peak)
+                    else:
+                        phase_label = "🟢 STEERING"
+                        remaining = (baseline_dur + steering_dur) - elapsed
+                        if peak is not None:
+                            steering_peaks.append(peak)
+                        if not audio_started:
+                            baseline_peak = float(np.mean(baseline_peaks)) \
+                                if baseline_peaks else 10.0
+                            with audio_box.container():
+                                with st.spinner(
+                                    f"Generating {live_steering_min}-min session "
+                                    f"calibrated to baseline α-peak "
+                                    f"{baseline_peak:.2f} Hz → target {target_hz} Hz…"
+                                ):
+                                    try:
+                                        gen_result = _mre.generate_for_mood(
+                                            mood_key=live_mood,
+                                            duration_s=int(steering_dur),
+                                            use_current_state=True,
+                                            mode="isochronic",
+                                            harmonic_bed=live_bed,
+                                        )
+                                        with open(gen_result["path"], "rb") as _af:
+                                            _wav_bytes = _af.read()
+                                        _b64s = _b64.b64encode(_wav_bytes).decode()
+                                        st.markdown(
+                                            f'<audio controls autoplay '
+                                            f'src="data:audio/wav;base64,{_b64s}" '
+                                            f'style="width:100%"></audio>',
+                                            unsafe_allow_html=True,
+                                        )
+                                        st.caption(
+                                            f"🔊 Drift: {gen_result['start_hz']} Hz → "
+                                            f"{gen_result['target_hz']} Hz over "
+                                            f"{live_steering_min} min · "
+                                            f"L4 bed: {'on' if live_bed else 'off'}"
+                                        )
+                                    except Exception as _ge:
+                                        st.error(f"Audio generation failed: {_ge}")
+                            audio_started = True
+
+                    mins = int(remaining // 60)
+                    secs = int(remaining % 60)
+                    phase_box.markdown(
+                        f"### {phase_label}  ·  remaining **{mins}:{secs:02d}**"
+                    )
+
+                    if peak is not None:
+                        baseline_mean = (float(np.mean(baseline_peaks))
+                                         if baseline_peaks else None)
+                        distance = abs(peak - target_hz)
+                        with metrics_box.container():
+                            m1, m2, m3, m4, m5 = st.columns(5)
+                            m1.metric("Current α-peak", f"{peak:.2f} Hz")
+                            m2.metric("Baseline mean",
+                                      f"{baseline_mean:.2f} Hz" if baseline_mean else "—")
+                            m3.metric("Target", f"{target_hz:.2f} Hz")
+                            m4.metric("Δ to target", f"{distance:.2f} Hz")
+                            m5.metric("HR", f"{history['hr'][-1]} bpm"
+                                            if history["hr"] else "—")
+
+                    if len(history["t"]) >= 2:
+                        df = _pd.DataFrame({
+                            "t (s)": history["t"],
+                            "α-peak": history["peak"],
+                            "target": [target_hz] * len(history["t"]),
+                        }).set_index("t (s)")
+                        chart_box.line_chart(df, height=240)
+
+                        if len(steering_peaks) > 0:
+                            in_band_n = sum(1 for p in steering_peaks
+                                            if abs(p - target_hz) < live_band_hz)
+                            band_pct = in_band_n / len(steering_peaks)
+                            band_box.progress(
+                                min(1.0, band_pct),
+                                text=f"Time-in-target-band (±{live_band_hz} Hz): "
+                                     f"{band_pct:.0%}  ({in_band_n}/{len(steering_peaks)} samples)"
+                            )
+
+                    _time.sleep(poll_s)
+
+            except Exception as _le:
+                st.error(f"Live session loop error: {_le}")
+
+            # Debrief
+            st.markdown("---")
+            st.markdown("### 📊 Session Debrief")
+            if baseline_peaks and steering_peaks:
+                bmean = float(np.mean(baseline_peaks))
+                smean = float(np.mean(steering_peaks))
+                drift = bmean - smean
+                target_drift = bmean - target_hz
+                in_band_final = sum(1 for p in steering_peaks
+                                    if abs(p - target_hz) < live_band_hz) \
+                                / max(1, len(steering_peaks))
+                d1, d2, d3, d4 = st.columns(4)
+                d1.metric("Baseline mean", f"{bmean:.2f} Hz")
+                d2.metric("Steering mean", f"{smean:.2f} Hz",
+                          delta=f"{-drift:+.2f} Hz vs baseline")
+                d3.metric("Target drift", f"{target_drift:+.2f} Hz")
+                d4.metric(f"Time-in-band (±{live_band_hz} Hz)",
+                          f"{in_band_final:.0%}")
+
+                # Drift efficiency: how much of the target drift was achieved
+                if abs(target_drift) > 0.05:
+                    efficiency = max(0.0, min(1.0, drift / target_drift)) \
+                        if target_drift != 0 else 0
+                    st.metric("Drift efficiency",
+                              f"{efficiency:.0%}",
+                              help="Fraction of intended baseline→target shift "
+                                   "actually observed in α-peak.")
+                try:
+                    log_id = _mre.save_live_session_log(
+                        mood_key=live_mood,
+                        target_hz=float(target_hz),
+                        baseline_peak_hz=bmean,
+                        final_peak_hz=smean,
+                        drift_hz=float(drift),
+                        time_in_band_pct=float(in_band_final),
+                        samples=len(history["t"]),
+                        baseline_min=float(live_baseline_min),
+                        steering_min=float(live_steering_min),
+                        notes="",
+                    )
+                    st.success(f"✅ Session log saved to `mre_live_sessions` (id={log_id}).")
+                except Exception as _se:
+                    st.warning(f"(log save failed: {_se})")
+            else:
+                st.warning("Insufficient data to compute debrief stats — "
+                           "your bridge may not have been streaming.")
+
+        # Recent sessions table
+        st.markdown("---")
+        st.markdown("**Recent live sessions**")
+        try:
+            with psycopg2.connect(os.environ["DATABASE_URL"]) as _conn:
+                _hist_df = pd.read_sql(
+                    """
+                    SELECT id, started_at, mood_key, target_hz,
+                           ROUND(baseline_peak_hz::numeric, 2) AS baseline,
+                           ROUND(final_peak_hz::numeric, 2) AS final,
+                           ROUND(drift_hz::numeric, 2) AS drift,
+                           ROUND((time_in_band_pct*100)::numeric, 1) AS in_band_pct,
+                           samples
+                    FROM mre_live_sessions
+                    ORDER BY started_at DESC LIMIT 10
+                    """, _conn
+                )
+            if not _hist_df.empty:
+                st.dataframe(_hist_df, use_container_width=True, hide_index=True)
+            else:
+                st.caption("(no live sessions logged yet)")
+        except Exception as _he:
+            st.caption(f"(history unavailable: {_he})")
+
+    else:
+        # ============================================================
+        # STATIC TRACK GENERATOR MODE (existing UI)
+        # ============================================================
+        mre_left, mre_right = st.columns([1, 1])
+
+        with mre_left:
         st.markdown("**Live state (latest Muse sample)**")
         try:
             mre_state = _mre.read_current_state()

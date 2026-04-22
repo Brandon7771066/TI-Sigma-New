@@ -559,6 +559,55 @@ SSVEP_HTML_TEMPLATE = """\
 """
 
 
+def save_live_session_log(
+    mood_key: str,
+    target_hz: float,
+    baseline_peak_hz: float,
+    final_peak_hz: float,
+    drift_hz: float,
+    time_in_band_pct: float,
+    samples: int,
+    baseline_min: float,
+    steering_min: float,
+    notes: str = "",
+) -> int:
+    """Persist a live closed-loop session result to mre_live_sessions table.
+    Auto-creates the table on first call. Returns inserted row id."""
+    with psycopg2.connect(os.environ["DATABASE_URL"]) as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                CREATE TABLE IF NOT EXISTS mre_live_sessions (
+                    id SERIAL PRIMARY KEY,
+                    started_at TIMESTAMP DEFAULT now(),
+                    mood_key TEXT NOT NULL,
+                    target_hz DOUBLE PRECISION,
+                    baseline_peak_hz DOUBLE PRECISION,
+                    final_peak_hz DOUBLE PRECISION,
+                    drift_hz DOUBLE PRECISION,
+                    time_in_band_pct DOUBLE PRECISION,
+                    samples INTEGER,
+                    baseline_min DOUBLE PRECISION,
+                    steering_min DOUBLE PRECISION,
+                    notes TEXT
+                )
+                """
+            )
+            cur.execute(
+                """
+                INSERT INTO mre_live_sessions
+                (mood_key, target_hz, baseline_peak_hz, final_peak_hz, drift_hz,
+                 time_in_band_pct, samples, baseline_min, steering_min, notes)
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                RETURNING id
+                """,
+                (mood_key, target_hz, baseline_peak_hz, final_peak_hz, drift_hz,
+                 time_in_band_pct, samples, baseline_min, steering_min, notes),
+            )
+            row = cur.fetchone()
+    return int(row[0]) if row else -1
+
+
 def ssvep_html(target_hz: float, mood_name: str = "Calm Focus") -> str:
     """Return a self-contained HTML page that flickers a soft purple field at target_hz.
 
