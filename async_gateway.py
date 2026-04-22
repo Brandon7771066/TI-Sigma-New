@@ -638,6 +638,432 @@ async def live_biometric_get_handler(request):
     return web.json_response(LIVE_SESSION)
 
 
+# ============================================================
+# MYCELIAL RESONANCE — LIVE CLOSED-LOOP BIOFEEDBACK ENDPOINTS
+# ============================================================
+
+async def mycelial_state_handler(request):
+    """Return latest band-power state + estimated alpha-peak."""
+    try:
+        import mycelial_resonance_engine as _mre
+        s = _mre.read_current_state()
+        if not s:
+            return web.json_response({"ok": False, "error": "no state"}, status=404)
+        peak = _mre.estimate_alpha_peak(s)
+        created = s.get("created_at")
+        age_s = None
+        if created:
+            try:
+                age_s = (datetime.now() - created).total_seconds()
+            except Exception:
+                age_s = None
+        return web.json_response({
+            "ok": True,
+            "alpha_peak_hz": round(float(peak), 3),
+            "alpha": float(s.get("alpha") or 0),
+            "beta": float(s.get("beta") or 0),
+            "theta": float(s.get("theta") or 0),
+            "gamma": float(s.get("gamma") or 0),
+            "delta": float(s.get("delta") or 0),
+            "heart_rate": int(s.get("heart_rate") or 0),
+            "rmssd": float(s.get("rmssd") or 0),
+            "coherence": float(s.get("coherence") or 0),
+            "session_id": s.get("session_id"),
+            "sample_age_s": age_s,
+        })
+    except Exception as e:
+        return web.json_response({"ok": False, "error": str(e)}, status=500)
+
+
+async def mycelial_attractors_handler(request):
+    """Return the registered attractor catalog."""
+    try:
+        import mycelial_resonance_engine as _mre
+        out = []
+        for k, a in _mre.MOOD_ATTRACTORS.items():
+            out.append({
+                "key": k, "name": a.name, "target_hz": a.target_hz,
+                "overlay_hz": getattr(a, "overlay_hz", None),
+                "description": a.description,
+            })
+        return web.json_response({"ok": True, "attractors": out})
+    except Exception as e:
+        return web.json_response({"ok": False, "error": str(e)}, status=500)
+
+
+async def mycelial_generate_handler(request):
+    """Generate a calibrated WAV for the chosen attractor; return relative URL."""
+    try:
+        import mycelial_resonance_engine as _mre
+        body = await request.json()
+        mood_key = body.get("mood_key", "BLISSFUL_EMPATHIC")
+        duration_s = int(body.get("duration_s", 900))
+        harmonic_bed = bool(body.get("harmonic_bed", True))
+        result = _mre.generate_for_mood(
+            mood_key=mood_key, duration_s=duration_s,
+            use_current_state=True, mode="isochronic",
+            harmonic_bed=harmonic_bed,
+        )
+        fname = os.path.basename(result["path"])
+        return web.json_response({
+            "ok": True,
+            "wav_url": f"/api/mycelial/track/{fname}",
+            "start_hz": result["start_hz"],
+            "target_hz": result["target_hz"],
+            "duration_s": result["duration_s"],
+        })
+    except Exception as e:
+        return web.json_response({"ok": False, "error": str(e)}, status=500)
+
+
+async def mycelial_track_handler(request):
+    """Serve a generated WAV from tracks/."""
+    fname = request.match_info.get("fname", "")
+    if "/" in fname or "\\" in fname or ".." in fname:
+        return web.Response(status=400, text="bad name")
+    path = os.path.join("tracks", fname)
+    if not os.path.isfile(path):
+        return web.Response(status=404, text="not found")
+    return web.FileResponse(path, headers={"Content-Type": "audio/wav"})
+
+
+async def mycelial_log_handler(request):
+    """Persist a completed live session to mre_live_sessions."""
+    try:
+        import mycelial_resonance_engine as _mre
+        b = await request.json()
+        rid = _mre.save_live_session_log(
+            mood_key=b.get("mood_key", "UNKNOWN"),
+            target_hz=float(b.get("target_hz", 0)),
+            baseline_peak_hz=float(b.get("baseline_peak_hz", 0)),
+            final_peak_hz=float(b.get("final_peak_hz", 0)),
+            drift_hz=float(b.get("drift_hz", 0)),
+            time_in_band_pct=float(b.get("time_in_band_pct", 0)),
+            samples=int(b.get("samples", 0)),
+            baseline_min=float(b.get("baseline_min", 0)),
+            steering_min=float(b.get("steering_min", 0)),
+            notes=str(b.get("notes", "web")),
+        )
+        return web.json_response({"ok": True, "id": rid})
+    except Exception as e:
+        return web.json_response({"ok": False, "error": str(e)}, status=500)
+
+
+async def mycelial_sessions_handler(request):
+    """Return last 10 logged live sessions."""
+    try:
+        with psycopg2.connect(os.environ["DATABASE_URL"]) as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    SELECT id, started_at, mood_key, target_hz,
+                           baseline_peak_hz, final_peak_hz, drift_hz,
+                           time_in_band_pct, samples
+                    FROM mre_live_sessions
+                    ORDER BY started_at DESC LIMIT 10
+                """)
+                rows = cur.fetchall()
+        out = [{
+            "id": r[0],
+            "started_at": r[1].isoformat() if r[1] else None,
+            "mood_key": r[2], "target_hz": float(r[3]) if r[3] is not None else None,
+            "baseline_peak_hz": float(r[4]) if r[4] is not None else None,
+            "final_peak_hz": float(r[5]) if r[5] is not None else None,
+            "drift_hz": float(r[6]) if r[6] is not None else None,
+            "time_in_band_pct": float(r[7]) if r[7] is not None else None,
+            "samples": int(r[8]) if r[8] is not None else 0,
+        } for r in rows]
+        return web.json_response({"ok": True, "sessions": out})
+    except Exception as e:
+        return web.json_response({"ok": True, "sessions": [], "warning": str(e)})
+
+
+async def mycelial_page_handler(request):
+    """Self-contained live closed-loop biofeedback HTML page."""
+    return web.Response(text=MYCELIAL_HTML, content_type="text/html")
+
+
+MYCELIAL_HTML = r"""<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>🍄 Mycelial Resonance — Live Closed-Loop Biofeedback</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  *{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  body{margin:0;background:#0d0a16;color:#eaddff;padding:20px;max-width:1200px;margin:auto}
+  h1{color:#c89bff;margin:0 0 4px 0}
+  .sub{color:#9b86c4;margin-bottom:20px;font-size:14px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+  .card{background:#1a142b;border:1px solid #3a2a5c;border-radius:10px;padding:16px}
+  label{display:block;font-size:13px;margin:10px 0 4px 0;color:#b6a3d8}
+  select,input[type=range],input[type=number]{width:100%;background:#2a1f44;border:1px solid #4a3870;color:#eaddff;padding:7px;border-radius:6px;font-size:14px}
+  input[type=checkbox]{margin-right:6px;transform:scale(1.2)}
+  .row{display:flex;gap:8px;align-items:center}
+  button{background:linear-gradient(135deg,#a86ef0,#6e3fc8);color:white;border:none;padding:12px 18px;
+         border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;width:100%;margin-top:10px}
+  button:hover{filter:brightness(1.15)}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  .phase{font-size:22px;font-weight:700;color:#fff;padding:14px;border-radius:8px;text-align:center;margin-bottom:14px}
+  .phase.baseline{background:linear-gradient(90deg,#1f4480,#3060c0)}
+  .phase.steering{background:linear-gradient(90deg,#1f8050,#30c080)}
+  .phase.debrief{background:linear-gradient(90deg,#80501f,#c08030)}
+  .phase.idle{background:#2a1f44;color:#9b86c4}
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+  .m{background:#2a1f44;padding:10px;border-radius:6px;text-align:center}
+  .m .v{font-size:20px;font-weight:700;color:#fff}
+  .m .l{font-size:11px;color:#9b86c4;margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+  .pre-flight{background:#241936;padding:10px;border-radius:6px;font-size:13px;margin-bottom:10px}
+  .ok{color:#7be38f}.warn{color:#f0c060}.err{color:#f06070}
+  audio{width:100%;margin:10px 0}
+  .progress-wrap{background:#241936;height:24px;border-radius:6px;overflow:hidden;margin-bottom:10px;position:relative}
+  .progress-bar{background:linear-gradient(90deg,#6e3fc8,#a86ef0);height:100%;transition:width .3s}
+  .progress-text{position:absolute;top:0;left:0;right:0;line-height:24px;text-align:center;font-size:12px;font-weight:600;color:white}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th,td{padding:6px;border-bottom:1px solid #3a2a5c;text-align:left}
+  th{color:#9b86c4;font-weight:600}
+  .desc{font-size:12px;color:#9b86c4;font-style:italic;margin-top:4px}
+  #chartWrap{height:280px;background:#241936;border-radius:6px;padding:8px}
+</style></head><body>
+
+<h1>🍄 Mycelial Resonance — Live Closed-Loop Biofeedback</h1>
+<div class="sub">Baseline → calibrated audio → live α-peak steering → debrief. Reads <code>esp32_biometric_data</code>.</div>
+
+<div class="grid">
+  <div class="card">
+    <h3 style="margin-top:0;color:#c89bff">Configuration</h3>
+    <label>Mood attractor</label>
+    <select id="mood"></select>
+    <div id="moodDesc" class="desc"></div>
+
+    <label>Baseline duration: <span id="baselineLbl">5</span> min</label>
+    <input type="range" id="baseline" min="1" max="10" value="5" step="1"/>
+
+    <label>Steering duration: <span id="steeringLbl">15</span> min</label>
+    <input type="range" id="steering" min="3" max="30" value="15" step="1"/>
+
+    <label>Poll interval: <span id="pollLbl">2</span> sec</label>
+    <input type="range" id="poll" min="1" max="5" value="2" step="1"/>
+
+    <label>Target band tolerance: ±<span id="bandLbl">0.5</span> Hz</label>
+    <input type="range" id="band" min="0.2" max="2.0" value="0.5" step="0.1"/>
+
+    <label><input type="checkbox" id="bed" checked/> L4 GILE harmonic bed</label>
+
+    <button id="startBtn">▶ Start live closed-loop session</button>
+    <button id="stopBtn" style="background:#604070;display:none">■ Stop session</button>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;color:#c89bff">Pre-flight</h3>
+    <div id="preflight" class="pre-flight">Checking live stream...</div>
+    <div class="metrics">
+      <div class="m"><div class="v" id="pfAlpha">—</div><div class="l">α</div></div>
+      <div class="m"><div class="v" id="pfPeak">—</div><div class="l">α-peak Hz</div></div>
+      <div class="m"><div class="v" id="pfHr">—</div><div class="l">HR bpm</div></div>
+      <div class="m"><div class="v" id="pfRmssd">—</div><div class="l">RMSSD</div></div>
+      <div class="m"><div class="v" id="pfAge">—</div><div class="l">age s</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div id="phase" class="phase idle">IDLE — configure and press Start</div>
+  <div id="audioWrap"></div>
+  <div class="metrics">
+    <div class="m"><div class="v" id="mPeak">—</div><div class="l">Current α-peak</div></div>
+    <div class="m"><div class="v" id="mBaseline">—</div><div class="l">Baseline mean</div></div>
+    <div class="m"><div class="v" id="mTarget">—</div><div class="l">Target Hz</div></div>
+    <div class="m"><div class="v" id="mDelta">—</div><div class="l">Δ to target</div></div>
+    <div class="m"><div class="v" id="mHr">—</div><div class="l">HR bpm</div></div>
+  </div>
+  <div class="progress-wrap"><div class="progress-bar" id="bandBar" style="width:0%"></div>
+    <div class="progress-text" id="bandText">Time-in-band: —</div></div>
+  <div id="chartWrap"><canvas id="chart"></canvas></div>
+</div>
+
+<div class="card" style="margin-top:20px">
+  <h3 style="margin-top:0;color:#c89bff">Recent sessions</h3>
+  <div id="sessions">loading...</div>
+</div>
+
+<script>
+let ATTRACTORS=[],MOOD={},chart,history=[],baselinePeaks=[],steeringPeaks=[];
+let phaseState="idle",startT=null,baselineDur=0,steeringDur=0,pollInterval=2000,bandHz=0.5;
+let pollTimer=null,audioStarted=false,abortRequested=false;
+
+async function loadAttractors(){
+  const r=await fetch("/api/mycelial/attractors");const j=await r.json();
+  ATTRACTORS=j.attractors||[];
+  const sel=document.getElementById("mood");sel.innerHTML="";
+  ATTRACTORS.forEach(a=>{MOOD[a.key]=a;const o=document.createElement("option");
+    o.value=a.key;o.textContent=`${a.name} (${a.target_hz} Hz)`;sel.appendChild(o);});
+  if(MOOD.BLISSFUL_EMPATHIC) sel.value="BLISSFUL_EMPATHIC";
+  updateDesc();
+}
+function updateDesc(){const k=document.getElementById("mood").value;
+  document.getElementById("moodDesc").textContent=MOOD[k]?.description||"";}
+document.getElementById("mood").addEventListener("change",updateDesc);
+
+["baseline","steering","poll","band"].forEach(id=>{
+  document.getElementById(id).addEventListener("input",e=>{
+    document.getElementById(id+"Lbl").textContent=e.target.value;
+  });
+});
+
+async function preflight(){
+  try{const r=await fetch("/api/mycelial/state");const s=await r.json();
+    if(!s.ok){document.getElementById("preflight").innerHTML='<span class="err">⚠️ No state — start your bridge.</span>';return;}
+    document.getElementById("pfAlpha").textContent=s.alpha.toFixed(3);
+    document.getElementById("pfPeak").textContent=s.alpha_peak_hz.toFixed(2);
+    document.getElementById("pfHr").textContent=s.heart_rate;
+    document.getElementById("pfRmssd").textContent=s.rmssd.toFixed(1);
+    document.getElementById("pfAge").textContent=s.sample_age_s!==null?s.sample_age_s.toFixed(1):"?";
+    let html="";
+    if(s.sample_age_s===null||s.sample_age_s>15) html='<span class="warn">⚠️ Sample is '+(s.sample_age_s||"unknown")+'s old — your bridge isn\'t streaming. Live α-peak will be flat.</span>';
+    else if(s.heart_rate===0) html='<span class="warn">⚠️ HR=0 — Polar H10 not connected. EEG will work but HRV metrics flat.</span>';
+    else html='<span class="ok">✅ Stream is live — ready to start.</span>';
+    document.getElementById("preflight").innerHTML=html;
+  }catch(e){document.getElementById("preflight").innerHTML='<span class="err">'+e+'</span>';}
+}
+preflight();setInterval(preflight,5000);
+
+async function loadSessions(){
+  try{const r=await fetch("/api/mycelial/sessions");const j=await r.json();
+    const s=j.sessions||[];if(!s.length){document.getElementById("sessions").innerHTML='<div class="desc">(no sessions logged yet)</div>';return;}
+    let h='<table><thead><tr><th>id</th><th>when</th><th>mood</th><th>target</th><th>baseline</th><th>final</th><th>drift</th><th>in-band %</th><th>samples</th></tr></thead><tbody>';
+    s.forEach(r=>{h+=`<tr><td>${r.id}</td><td>${(r.started_at||"").replace("T"," ").slice(0,19)}</td><td>${r.mood_key}</td><td>${r.target_hz?.toFixed(2)}</td><td>${r.baseline_peak_hz?.toFixed(2)}</td><td>${r.final_peak_hz?.toFixed(2)}</td><td>${r.drift_hz?.toFixed(2)}</td><td>${(r.time_in_band_pct*100).toFixed(0)}%</td><td>${r.samples}</td></tr>`;});
+    h+="</tbody></table>";document.getElementById("sessions").innerHTML=h;
+  }catch(e){document.getElementById("sessions").innerHTML='<div class="err">'+e+'</div>';}
+}
+loadSessions();
+
+function initChart(targetHz){
+  if(chart)chart.destroy();
+  const ctx=document.getElementById("chart").getContext("2d");
+  chart=new Chart(ctx,{type:"line",data:{labels:[],datasets:[
+    {label:"α-peak (Hz)",data:[],borderColor:"#c89bff",backgroundColor:"rgba(200,155,255,.2)",tension:.3,pointRadius:1.5},
+    {label:"target",data:[],borderColor:"#7be38f",borderDash:[6,4],pointRadius:0,fill:false},
+    {label:"target +band",data:[],borderColor:"#3a6f48",borderDash:[2,3],pointRadius:0,fill:false},
+    {label:"target -band",data:[],borderColor:"#3a6f48",borderDash:[2,3],pointRadius:0,fill:false},
+  ]},options:{responsive:true,maintainAspectRatio:false,
+    scales:{x:{ticks:{color:"#9b86c4"},grid:{color:"#3a2a5c"}},
+            y:{ticks:{color:"#9b86c4"},grid:{color:"#3a2a5c"},suggestedMin:targetHz-2,suggestedMax:targetHz+2}},
+    plugins:{legend:{labels:{color:"#eaddff"}}}}});
+}
+
+function setPhase(label,cls){const p=document.getElementById("phase");p.className="phase "+cls;p.textContent=label;}
+function fmtTime(s){s=Math.max(0,Math.floor(s));return Math.floor(s/60)+":"+String(s%60).padStart(2,"0");}
+
+async function poll(){
+  if(abortRequested) return finishSession();
+  const now=Date.now()/1000, elapsed=now-startT;
+  const totalDur=baselineDur+steeringDur;
+  if(elapsed>=totalDur) return finishSession();
+
+  let s=null;
+  try{const r=await fetch("/api/mycelial/state");if(r.ok){s=await r.json();}}catch(e){}
+  if(s&&s.ok){
+    history.push({t:elapsed,peak:s.alpha_peak_hz,alpha:s.alpha,beta:s.beta,theta:s.theta,gamma:s.gamma,hr:s.heart_rate,rmssd:s.rmssd});
+    document.getElementById("mHr").textContent=s.heart_rate;
+  }
+
+  const inBaseline=elapsed<baselineDur;
+  const targetHz=MOOD[document.getElementById("mood").value].target_hz;
+
+  if(inBaseline){
+    setPhase(`🔵 BASELINE — remaining ${fmtTime(baselineDur-elapsed)}`,"baseline");
+    if(s&&s.ok) baselinePeaks.push(s.alpha_peak_hz);
+  } else {
+    setPhase(`🟢 STEERING — remaining ${fmtTime(totalDur-elapsed)}`,"steering");
+    if(s&&s.ok) steeringPeaks.push(s.alpha_peak_hz);
+    if(!audioStarted){
+      audioStarted=true;
+      const baselineMean=baselinePeaks.length?baselinePeaks.reduce((a,b)=>a+b,0)/baselinePeaks.length:10.0;
+      document.getElementById("audioWrap").innerHTML=`<div class="desc">⏳ Generating ${steeringDur/60} min track calibrated to baseline ${baselineMean.toFixed(2)} Hz...</div>`;
+      try{
+        const gr=await fetch("/api/mycelial/generate",{method:"POST",headers:{"Content-Type":"application/json"},
+          body:JSON.stringify({mood_key:document.getElementById("mood").value,duration_s:steeringDur,harmonic_bed:document.getElementById("bed").checked})});
+        const gj=await gr.json();
+        if(gj.ok){
+          document.getElementById("audioWrap").innerHTML=`<audio controls autoplay src="${gj.wav_url}"></audio><div class="desc">🔊 Drift ${gj.start_hz} Hz → ${gj.target_hz} Hz over ${gj.duration_s}s · L4 bed ${document.getElementById("bed").checked?"on":"off"}</div>`;
+        } else {document.getElementById("audioWrap").innerHTML='<div class="err">Audio generation failed: '+gj.error+'</div>';}
+      }catch(e){document.getElementById("audioWrap").innerHTML='<div class="err">'+e+'</div>';}
+    }
+  }
+
+  // metrics
+  if(history.length){
+    const last=history[history.length-1];
+    document.getElementById("mPeak").textContent=last.peak.toFixed(2)+" Hz";
+    document.getElementById("mTarget").textContent=targetHz.toFixed(2)+" Hz";
+    document.getElementById("mDelta").textContent=Math.abs(last.peak-targetHz).toFixed(2)+" Hz";
+  }
+  if(baselinePeaks.length){
+    const bm=baselinePeaks.reduce((a,b)=>a+b,0)/baselinePeaks.length;
+    document.getElementById("mBaseline").textContent=bm.toFixed(2)+" Hz";
+  }
+  // chart
+  if(chart&&history.length){
+    chart.data.labels=history.map(h=>Math.round(h.t)+"s");
+    chart.data.datasets[0].data=history.map(h=>h.peak);
+    chart.data.datasets[1].data=history.map(_=>targetHz);
+    chart.data.datasets[2].data=history.map(_=>targetHz+bandHz);
+    chart.data.datasets[3].data=history.map(_=>targetHz-bandHz);
+    chart.update("none");
+  }
+  // band progress
+  if(steeringPeaks.length){
+    const inBand=steeringPeaks.filter(p=>Math.abs(p-targetHz)<bandHz).length;
+    const pct=inBand/steeringPeaks.length;
+    document.getElementById("bandBar").style.width=(pct*100)+"%";
+    document.getElementById("bandText").textContent=`Time-in-target-band (±${bandHz} Hz): ${(pct*100).toFixed(0)}%  (${inBand}/${steeringPeaks.length})`;
+  }
+  pollTimer=setTimeout(poll,pollInterval);
+}
+
+async function finishSession(){
+  clearTimeout(pollTimer);pollTimer=null;
+  const targetHz=MOOD[document.getElementById("mood").value].target_hz;
+  const bm=baselinePeaks.length?baselinePeaks.reduce((a,b)=>a+b,0)/baselinePeaks.length:0;
+  const sm=steeringPeaks.length?steeringPeaks.reduce((a,b)=>a+b,0)/steeringPeaks.length:bm;
+  const drift=bm-sm;
+  const inBand=steeringPeaks.length?steeringPeaks.filter(p=>Math.abs(p-targetHz)<bandHz).length/steeringPeaks.length:0;
+  setPhase(`📊 DEBRIEF — baseline ${bm.toFixed(2)} → final ${sm.toFixed(2)} (drift ${(-drift>=0?"+":"")+(-drift).toFixed(2)} Hz toward target) · in-band ${(inBand*100).toFixed(0)}%`,"debrief");
+  document.getElementById("startBtn").style.display="";
+  document.getElementById("stopBtn").style.display="none";
+  // log
+  if(baselinePeaks.length&&steeringPeaks.length){
+    try{
+      await fetch("/api/mycelial/log",{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({mood_key:document.getElementById("mood").value,target_hz:targetHz,
+          baseline_peak_hz:bm,final_peak_hz:sm,drift_hz:drift,time_in_band_pct:inBand,
+          samples:history.length,baseline_min:baselineDur/60,steering_min:steeringDur/60,notes:"web"})});
+      loadSessions();
+    }catch(e){}
+  }
+}
+
+document.getElementById("startBtn").addEventListener("click",()=>{
+  history=[];baselinePeaks=[];steeringPeaks=[];audioStarted=false;abortRequested=false;
+  baselineDur=parseInt(document.getElementById("baseline").value)*60;
+  steeringDur=parseInt(document.getElementById("steering").value)*60;
+  pollInterval=parseInt(document.getElementById("poll").value)*1000;
+  bandHz=parseFloat(document.getElementById("band").value);
+  const targetHz=MOOD[document.getElementById("mood").value].target_hz;
+  initChart(targetHz);
+  document.getElementById("audioWrap").innerHTML="";
+  document.getElementById("startBtn").style.display="none";
+  document.getElementById("stopBtn").style.display="";
+  startT=Date.now()/1000;poll();
+});
+document.getElementById("stopBtn").addEventListener("click",()=>{abortRequested=true;});
+
+loadAttractors();
+</script>
+</body></html>
+"""
+
+
 async def api_lcc_handler(request):
     """Calculate LCC (Love Consciousness Connection) proxy."""
     key_data, error = await validate_api_key(request)
@@ -1012,6 +1438,14 @@ async def main():
     app.router.add_route('GET', '/download/bridge', download_bridge_handler)
     app.router.add_route('GET', '/download', download_page_handler)
     app.router.add_route('GET', '/download/', download_page_handler)
+    app.router.add_route('GET', '/mycelial', mycelial_page_handler)
+    app.router.add_route('GET', '/mycelial/', mycelial_page_handler)
+    app.router.add_route('GET', '/api/mycelial/state', mycelial_state_handler)
+    app.router.add_route('GET', '/api/mycelial/attractors', mycelial_attractors_handler)
+    app.router.add_route('POST', '/api/mycelial/generate', mycelial_generate_handler)
+    app.router.add_route('GET', '/api/mycelial/track/{fname}', mycelial_track_handler)
+    app.router.add_route('POST', '/api/mycelial/log', mycelial_log_handler)
+    app.router.add_route('GET', '/api/mycelial/sessions', mycelial_sessions_handler)
 
     app.router.add_route('*', '/{path:.*}', proxy_handler)
     
