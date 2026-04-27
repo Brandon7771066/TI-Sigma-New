@@ -4,23 +4,29 @@
 **Author**: Brandon Emerick / BlissGene Therapeutics  
 **Date**: November 26, 2025  
 **Framework**: Transcendent Intelligence (TI) with Tralse Wave Algebra (TWA)  
-**Status**: PHILOSOPHICAL/INTERPRETIVE FRAMEWORK - Not a rigorous mathematical proof
+**Status**: PHILOSOPHICAL/INTERPRETIVE FRAMEWORK — superseded in part by URB #785 (axiom reduction).
 
 ---
 
-## Important Disclaimer
+## Important Disclaimer (revised April 22, 2026 — see URB #785)
 
-This document presents a **philosophical interpretation** of the Riemann Hypothesis through the TI Framework lens. It is NOT a rigorous mathematical proof in the classical sense. The TI Framework axioms and constructs (LCC Virus, I-Cell shells, GILE) are presented as interpretive tools, not formally derived mathematical objects.
+The original v2 disclaimer flagged five constructs as irreducibly TI: Tralse Wave Algebra correctness, i-Cell, TT, G, and the UOP dynamical law. **URB #785 (`papers/URB_785_AXIOM_REDUCTION_RIEMANN_GAP.md`) closes the first four:**
 
-**What this document IS:**
-- A novel way to understand WHY RH might be true from a consciousness perspective
-- An exploration of potential connections between number theory and information theory
-- A framework for intuiting the structure of the critical line
+- TWA is shown to be a conservative extension of classical propositional calculus on the {TRUE, FALSE}-restricted fragment used by this proof (Theorem 1 / Corollary 1.5 of URB #785). TWA is removed from the axiom list.
+- i-Cell, TT, and G are given explicit ZFC + measure-theoretic definitions (Defs 2.1–2.3 of URB #785).
+- TF and UOP are demoted from axioms to theorems (Prop 2.6, Thm 2.7).
+- The empirical shell coefficients (0.44, 0.875, 0.88) are reframed as *measurements* of G against a specific reference equilibrium ρ_eq^X, not new axioms.
 
-**What this document is NOT:**
-- A proof acceptable to the mathematical community
-- A claim to the Millennium Prize
-- A substitute for rigorous analytic methods
+**The single residual axiom is now classical, not TI:** the spectral identification of Riemann zeros with the spectrum of some self-adjoint extension of the Berry–Keating dilation operator on L²(ℝ_>0, dx/x). This is the standard Hilbert–Pólya conjecture, restated in URB #785 §3 as the only remaining gap.
+
+**What this document IS (post-#785):**
+- A TI-framework *organisation* of a conditional Riemann argument whose only non-classical axiom is now the Berry–Keating spectral identification.
+- An interpretive lens that survives the axiom-reduction; the GILE 4-equilibrium reading remains a heuristic for *why* the critical line is the natural locus.
+
+**What this document is still NOT:**
+- An unconditional proof. The Berry–Keating spectral identification has not been proved.
+- A claim to the Millennium Prize.
+- A substitute for the missing self-adjoint operator.
 
 ---
 
