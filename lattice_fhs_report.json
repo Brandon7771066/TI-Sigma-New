@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "script": "lattice_fhs.py",
+    "paper": "papers/URB_791_FHS_E8_LEECH.md",
+    "elapsed_s": 1.43300461769104
+  },
+  "e8": {
+    "L_max": 24,
+    "n_samples": 4000,
+    "spectrum_var_over_mean": [
+      0.0,
+      0.0,
+      0.2142986475599932,
+      0.4366061958024382,
+      0.26477304964539006,
+      0.6894999999999999,
+      0.8949999999999999,
+      0.9550000000000002,
+      0.9812500000000001,
+      0.9929999999999998,
+      0.9935000000000003,
+      0.9962500000000003,
+      0.9990000000000003,
+      0.9987500000000007,
+      0.9992500000000003,
+      0.0,
+      0.9995000000000004,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.9997499999999998,
+      0.0,
+      0.0
+    ],
+    "loglog_slope": 0.7704671935631742,
+    "loglog_r2": 0.6903452842124219
+  },
+  "leech": {
+    "N_q": 24,
+    "shell_pops_2k": [
+      196560.0,
+      398034000.0,
+      34417656000.0,
+      814879774800.0,
+      9486551299680.0,
+      70486236999360.0,
+      384163586352000.0,
+      1668890090322000.0,
+      6096882661243920.0,
+      1.942843985527536e+16,
+      5.543159127341472e+16,
+      1.44355739339448e+17
+    ],
+    "loglog_slope": 10.996859040543473,
+    "loglog_r2": 0.9999999188428342
+  },
+  "control": {
+    "riemann_density_loglog_slope_predicted": 1.0,
+    "note": "FHS criterion as stated in replit.md is three-level synchronization between brain 1/f, zeta-zero density, and toroidal consciousness; we only check whether E8 angular spectrum and Leech shell growth share a power-law signature, not full FHS synchronization."
+  }
+}
