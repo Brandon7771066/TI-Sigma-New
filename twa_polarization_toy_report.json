@@ -1,0 +1,34 @@
+{
+  "params": {
+    "seed": 2026,
+    "T_steps": 1500,
+    "dt": 0.02,
+    "collapse_prob": 0.005,
+    "H_scale": 1.0
+  },
+  "H_eigenvalues": [
+    -2.406956104623089,
+    -1.4896812748545536,
+    -0.7329900617092432,
+    1.4413004159103795,
+    2.530481121324623
+  ],
+  "n_collapses": 4,
+  "collapse_outcome_counts": [
+    1,
+    1,
+    1,
+    0,
+    1
+  ],
+  "collapse_outcome_frequencies": [
+    0.25,
+    0.25,
+    0.25,
+    0.0,
+    0.25
+  ],
+  "entropy_initial": 1.6094379124341005,
+  "entropy_final": 1.3136060148953963,
+  "entropy_max": 1.6094379124341003
+}

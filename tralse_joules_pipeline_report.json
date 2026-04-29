@@ -1,0 +1,60 @@
+{
+  "params": {
+    "seed": 42,
+    "n_random_samples": 1000,
+    "N_vertices": 24,
+    "graph_mean_degree": 8
+  },
+  "equivariant_states": [
+    {
+      "label": "DT",
+      "tau": 0.0,
+      "C": 1.0,
+      "delta_MR": 0.0,
+      "TJ": 0.0
+    },
+    {
+      "label": "NotT",
+      "tau": 0.0,
+      "C": 1.0,
+      "delta_MR": 0.0,
+      "TJ": 0.0
+    },
+    {
+      "label": "U",
+      "tau": 0.0,
+      "C": 1.0,
+      "delta_MR": 0.0,
+      "TJ": 0.0
+    },
+    {
+      "label": "Tplus",
+      "tau": 0.0,
+      "C": 1.0,
+      "delta_MR": 0.0,
+      "TJ": 0.0
+    },
+    {
+      "label": "T",
+      "tau": 1.0,
+      "C": 1.0,
+      "delta_MR": 0.0,
+      "TJ": 0.0
+    }
+  ],
+  "random_states": {
+    "n": 1000,
+    "tau_mean": 0.19491666666666668,
+    "tau_std": 0.0820348418525798,
+    "C_mean": 0.3149583333333334,
+    "C_std": 0.052216812293657974,
+    "deltaMR_mean": 0.1865,
+    "deltaMR_std": 0.09748062485551792,
+    "TJ_mean": 0.03533854166666667,
+    "TJ_std": 0.024647457306844218,
+    "TJ_min": 0.0,
+    "TJ_max": 0.1875,
+    "fraction_TJ_positive": 0.986,
+    "fraction_TJ_zero": 0.014
+  }
+}

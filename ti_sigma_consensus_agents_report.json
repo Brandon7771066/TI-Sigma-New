@@ -1,0 +1,37 @@
+{
+  "params": {
+    "seed": 2026,
+    "T_steps": 80,
+    "noise_p": 0.05,
+    "n_trials": 30,
+    "coherence_target": 0.5,
+    "N": 24,
+    "degree": 8
+  },
+  "conditions": {
+    "(a) random graph + random init": {
+      "C_final_mean": 0.9597222222222224,
+      "C_final_std": 0.03483315612217904,
+      "TJ_cumulative_mean": 0.11521990740740741,
+      "TJ_cumulative_std": 0.05616077194624752,
+      "time_to_target_mean_steps": 1.2333333333333334,
+      "fraction_reached_target": 1.0
+    },
+    "(b) F4 graph + random init": {
+      "C_final_mean": 0.9555555555555554,
+      "C_final_std": 0.04427049291808119,
+      "TJ_cumulative_mean": 0.1171875,
+      "TJ_cumulative_std": 0.0632108972019632,
+      "time_to_target_mean_steps": 1.8,
+      "fraction_reached_target": 1.0
+    },
+    "(c) F4 graph + F4-equivariant init": {
+      "C_final_mean": 0.9708333333333332,
+      "C_final_std": 0.03071297831596665,
+      "TJ_cumulative_mean": -0.12818287037037035,
+      "TJ_cumulative_std": 0.04641856683768995,
+      "time_to_target_mean_steps": 0.0,
+      "fraction_reached_target": 1.0
+    }
+  }
+}
