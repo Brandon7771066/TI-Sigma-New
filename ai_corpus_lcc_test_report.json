@@ -1,0 +1,37 @@
+{
+  "C_EMERICK": 0.43701602444882104,
+  "vocab_size": 1024,
+  "T_seg": 300,
+  "sigma": 5.0,
+  "max_lag": 15,
+  "n_papers_used": 830,
+  "n_urb_papers": 229,
+  "n_citation_edges": 938,
+  "n_per_cond_target": 100,
+  "summary": {
+    "strong": {
+      "n": 100,
+      "mean": 0.004361161858490831,
+      "std": 0.1010681562147585,
+      "median": -0.06256612686367066,
+      "frac_above_C_EMERICK": 0.0
+    },
+    "weak": {
+      "n": 100,
+      "mean": 0.00588463408779245,
+      "std": 0.10346335227762378,
+      "median": 0.004231287796542034,
+      "frac_above_C_EMERICK": 0.0
+    },
+    "independent": {
+      "n": 100,
+      "mean": 0.006900617736302686,
+      "std": 0.09628614182406621,
+      "median": 0.05594535798795533,
+      "frac_above_C_EMERICK": 0.0
+    }
+  },
+  "auc_strong_vs_independent": 0.49960000000000004,
+  "auc_weak_vs_independent": 0.48819999999999997,
+  "wall_time_s": 1.6985361576080322
+}

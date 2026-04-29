@@ -1,0 +1,600 @@
+{
+  "C_EMERICK": 0.43701602444882104,
+  "n_seeds": 10,
+  "n_per_cond": 100,
+  "T": 300,
+  "K_states": 16,
+  "sigma": 5.0,
+  "max_lag": 15,
+  "alphas": [
+    0.0,
+    0.1,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "summary": [
+    {
+      "alpha": 0.0,
+      "auc_mean": 0.47924,
+      "auc_ci95": 0.026374997886129462,
+      "auc_min": 0.41439999999999994,
+      "auc_max": 0.5345,
+      "frac_coupled_mean": 0.0,
+      "frac_coupled_ci95": 0.0,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": -0.0019635281527896767,
+      "mean_indep": 0.002700827342950048
+    },
+    {
+      "alpha": 0.1,
+      "auc_mean": 0.69391,
+      "auc_ci95": 0.023302495053439155,
+      "auc_min": 0.5962,
+      "auc_max": 0.7373000000000001,
+      "frac_coupled_mean": 0.0,
+      "frac_coupled_ci95": 0.0,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": 0.06780214293833799,
+      "mean_indep": 0.0038627347667212404
+    },
+    {
+      "alpha": 0.2,
+      "auc_mean": 0.9507300000000001,
+      "auc_ci95": 0.013636337586512438,
+      "auc_min": 0.9114,
+      "auc_max": 0.9787999999999998,
+      "frac_coupled_mean": 0.0,
+      "frac_coupled_ci95": 0.0,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": 0.18878546082488787,
+      "mean_indep": -0.0011706704966015947
+    },
+    {
+      "alpha": 0.4,
+      "auc_mean": 1.0,
+      "auc_ci95": 0.0,
+      "auc_min": 1.0,
+      "auc_max": 1.0,
+      "frac_coupled_mean": 0.21200000000000002,
+      "frac_coupled_ci95": 0.048610809954622684,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": 0.3915622316256352,
+      "mean_indep": -0.007665518295009244
+    },
+    {
+      "alpha": 0.6,
+      "auc_mean": 1.0,
+      "auc_ci95": 0.0,
+      "auc_min": 1.0,
+      "auc_max": 1.0,
+      "frac_coupled_mean": 0.9950000000000001,
+      "frac_coupled_ci95": 0.0043826932358995915,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": 0.5853774612303111,
+      "mean_indep": -0.0028971424972030037
+    },
+    {
+      "alpha": 0.8,
+      "auc_mean": 1.0,
+      "auc_ci95": 0.0,
+      "auc_min": 1.0,
+      "auc_max": 1.0,
+      "frac_coupled_mean": 1.0,
+      "frac_coupled_ci95": 0.0,
+      "frac_indep_mean": 0.0,
+      "frac_indep_ci95": 0.0,
+      "mean_coupled": 0.783393021322929,
+      "mean_indep": 0.006572754077443498
+    }
+  ],
+  "per_seed_results": [
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.41439999999999994,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.0070956333730032685,
+        "mean_indep": 0.013123053695162834
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7111000000000001,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.07188722789439962,
+        "mean_indep": 0.00481687715620911
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9114,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.1667594918122559,
+        "mean_indep": -0.00896301160039781
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.08,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.37257011652661787,
+        "mean_indep": -0.015341288583001126
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5778418934095062,
+        "mean_indep": 0.004007623855348023
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7720000911412483,
+        "mean_indep": -0.0025673990695378223
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.5094,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.0015210570872175278,
+        "mean_indep": -3.991279858981789e-05
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7041,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.07460346879810029,
+        "mean_indep": 0.004576616714394843
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9684999999999998,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.2140503268183208,
+        "mean_indep": 0.003370569411861927
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.29,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.4156697134520819,
+        "mean_indep": -0.00980116381168899
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.6055772899992746,
+        "mean_indep": -0.018185395835832067
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.8015700103837795,
+        "mean_indep": 0.007676058595174371
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.468,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.008360731995795794,
+        "mean_indep": 0.004576150359587008
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7023,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.06862894099208594,
+        "mean_indep": 0.0003029136605732254
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9527,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.1806514886344781,
+        "mean_indep": 0.0046245588376966915
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.14,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.38067428564734807,
+        "mean_indep": -0.0045862885411685145
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.98,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5682775273965837,
+        "mean_indep": -0.00746370850929778
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7734743624387136,
+        "mean_indep": 0.008539298916737404
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.4739,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.009237659824583109,
+        "mean_indep": -0.00905753130703683
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7135,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.08651456037509207,
+        "mean_indep": 0.023194706751127333
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9658,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.192405075000738,
+        "mean_indep": -0.009548615768181975
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.26,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.40219754847950534,
+        "mean_indep": 0.002053386714747739
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.6009748313860066,
+        "mean_indep": -0.010330837255073673
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7930436748670716,
+        "mean_indep": 0.01477958816640648
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.4928,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.009648747614174889,
+        "mean_indep": 0.008381483927088101
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7099000000000001,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.06976048915772673,
+        "mean_indep": -0.0060457348436123125
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9787999999999998,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.19877707075528103,
+        "mean_indep": -0.00961916915060208
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.29,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.4069503480057995,
+        "mean_indep": 0.015283849581452713
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5990366458630051,
+        "mean_indep": 0.0008038411802278373
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7901410740523499,
+        "mean_indep": -0.0028587070687420934
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.5044,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.002722989563996707,
+        "mean_indep": -0.0022345064204810764
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.5962,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.047197062584807374,
+        "mean_indep": 0.027216399442488978
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9412,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.18628912383423388,
+        "mean_indep": 0.006238965530675069
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.33,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.4015059711198895,
+        "mean_indep": -0.015069218640835231
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5920657705346548,
+        "mean_indep": -0.0006497487222542383
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7859008216853343,
+        "mean_indep": 0.027809569812333273
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.5345,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.015478631411218446,
+        "mean_indep": 0.0018789518965970076
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.6855,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.06471469111773555,
+        "mean_indep": -0.01065129129894137
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9494000000000001,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.19409200140868488,
+        "mean_indep": -0.0024552801873582923
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.19,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.3908055404471657,
+        "mean_indep": -0.026600165053430172
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5882025649227228,
+        "mean_indep": 0.0030595989634433674
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.789033684476776,
+        "mean_indep": -0.007876313627720224
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.43479999999999996,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.006299065428963782,
+        "mean_indep": 0.014804690483593539
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.6957,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.06004870267347491,
+        "mean_indep": -0.0015762329470631162
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9761999999999998,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.19952511101668446,
+        "mean_indep": 0.011561213920308278
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.18,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.3810153872767238,
+        "mean_indep": 0.008400133833415773
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.99,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5767430045413996,
+        "mean_indep": 0.004467780877559486
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.780340989487685,
+        "mean_indep": 0.0021153706590499323
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.531,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.0038243669506678193,
+        "mean_indep": -0.009530604604045314
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.6835,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.06225897066425456,
+        "mean_indep": 0.000398558392525713
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.93,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.18218528509915877,
+        "mean_indep": 0.0025488008837442977
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.2,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.3848649328414568,
+        "mean_indep": -0.016492764353780998
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.99,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.5807465425287237,
+        "mean_indep": -0.009102511550640634
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.779655265524547,
+        "mean_indep": 0.017552606006024273
+      }
+    ],
+    [
+      {
+        "alpha": 0.0,
+        "auc": 0.42919999999999997,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": -0.01639200440483279,
+        "mean_indep": 0.005106498197625025
+      },
+      {
+        "alpha": 0.1,
+        "auc": 0.7373000000000001,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.0724073151257028,
+        "mean_indep": -0.003605465360489999
+      },
+      {
+        "alpha": 0.2,
+        "auc": 0.9333000000000001,
+        "frac_coupled_above_C_EMERICK": 0.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.17311963386904294,
+        "mean_indep": -0.009464736843762051
+      },
+      {
+        "alpha": 0.4,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.16,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.3793684724597633,
+        "mean_indep": -0.01450166409580362
+      },
+      {
+        "alpha": 0.6,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 0.99,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.564308541721234,
+        "mean_indep": 0.004421932024489641
+      },
+      {
+        "alpha": 0.8,
+        "auc": 1.0,
+        "frac_coupled_above_C_EMERICK": 1.0,
+        "frac_indep_above_C_EMERICK": 0.0,
+        "mean_coupled": 0.7687702391717844,
+        "mean_indep": 0.0005574683847093817
+      }
+    ]
+  ],
+  "wall_time_s": 66.86385893821716
+}
