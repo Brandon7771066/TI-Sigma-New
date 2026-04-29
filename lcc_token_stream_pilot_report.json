@@ -1,0 +1,140 @@
+{
+  "params": {
+    "seed": 2026,
+    "K_tokens": 16,
+    "T_chain": 300,
+    "n_per_condition": 100,
+    "sigma": 5.0,
+    "alphas": [
+      0.0,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "C_EMERICK": 0.43701602444882104
+  },
+  "results": [
+    {
+      "alpha": 0.0,
+      "mean_LCC_coupled": -0.0003592638558394197,
+      "std_LCC_coupled": 0.09828634529685147,
+      "mean_LCC_independent": 0.009355712417880633,
+      "std_LCC_independent": 0.09846142308731534,
+      "roc_auc": 0.4907,
+      "fraction_coupled_above_C_EMERICK": 0.0,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        -0.08745867627642653,
+        -0.0031110967389223546,
+        0.090416859851727
+      ],
+      "scores_independent_quartiles": [
+        -0.09784478954141138,
+        0.07048664010561352,
+        0.0919077870661051
+      ]
+    },
+    {
+      "alpha": 0.1,
+      "mean_LCC_coupled": 0.09328376328874147,
+      "std_LCC_coupled": 0.09083654196117069,
+      "mean_LCC_independent": 0.007501465601758274,
+      "std_LCC_independent": 0.09750164486676424,
+      "roc_auc": 0.7694,
+      "fraction_coupled_above_C_EMERICK": 0.0,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        0.08661553763543982,
+        0.11010861296157608,
+        0.1438520595539918
+      ],
+      "scores_independent_quartiles": [
+        -0.08634865340417752,
+        0.05792729813818752,
+        0.08999667670539949
+      ]
+    },
+    {
+      "alpha": 0.2,
+      "mean_LCC_coupled": 0.18669263871747227,
+      "std_LCC_coupled": 0.07873999382495206,
+      "mean_LCC_independent": 0.0042656844682569545,
+      "std_LCC_independent": 0.09971584663855315,
+      "roc_auc": 0.9496,
+      "fraction_coupled_above_C_EMERICK": 0.0,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        0.15288159356692904,
+        0.19401383534007965,
+        0.23264709034041361
+      ],
+      "scores_independent_quartiles": [
+        -0.09565969117966558,
+        0.058372687422508576,
+        0.09301131420079661
+      ]
+    },
+    {
+      "alpha": 0.4,
+      "mean_LCC_coupled": 0.3679746125371492,
+      "std_LCC_coupled": 0.06412349242625218,
+      "mean_LCC_independent": -0.002097878522976106,
+      "std_LCC_independent": 0.1023208770141014,
+      "roc_auc": 1.0,
+      "fraction_coupled_above_C_EMERICK": 0.15,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        0.32037588783368615,
+        0.3750742551303502,
+        0.41119742299389866
+      ],
+      "scores_independent_quartiles": [
+        -0.0924552486605151,
+        -0.053082469450037736,
+        0.09468226663820489
+      ]
+    },
+    {
+      "alpha": 0.6,
+      "mean_LCC_coupled": 0.5642873413322751,
+      "std_LCC_coupled": 0.05416035830294143,
+      "mean_LCC_independent": -0.00036512772774129233,
+      "std_LCC_independent": 0.10018484822029709,
+      "roc_auc": 1.0,
+      "fraction_coupled_above_C_EMERICK": 0.99,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        0.5261754527304238,
+        0.567205164081185,
+        0.6055579987373461
+      ],
+      "scores_independent_quartiles": [
+        -0.09867888974660219,
+        0.05569130092773561,
+        0.08690257630568989
+      ]
+    },
+    {
+      "alpha": 0.8,
+      "mean_LCC_coupled": 0.7718114300164227,
+      "std_LCC_coupled": 0.039424231685824186,
+      "mean_LCC_independent": 0.0037948340991742695,
+      "std_LCC_independent": 0.09524199558931246,
+      "roc_auc": 1.0,
+      "fraction_coupled_above_C_EMERICK": 1.0,
+      "fraction_independent_above_C_EMERICK": 0.0,
+      "scores_coupled_quartiles": [
+        0.7474341410778972,
+        0.7753398020149278,
+        0.7967360240911956
+      ],
+      "scores_independent_quartiles": [
+        -0.08449713176305869,
+        0.0529236159028552,
+        0.09099495882592779
+      ]
+    }
+  ]
+}

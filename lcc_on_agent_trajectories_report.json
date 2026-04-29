@@ -1,0 +1,48 @@
+{
+  "params": {
+    "seed": 2026,
+    "T_steps": 80,
+    "noise_p": 0.05,
+    "n_trials": 30,
+    "sigma": 5.0,
+    "N": 24,
+    "C_EMERICK": 0.43701602444882104
+  },
+  "summary": {
+    "(a) random graph + random init": {
+      "mean_pairwise_LCC": 0.18176699431474427,
+      "std_pairwise_LCC": 0.27295433284903176,
+      "median_pairwise_LCC": 0.21944395860141108,
+      "fraction_pairs_above_C_EMERICK": 0.15229468599033816,
+      "fraction_trials_with_max_above_C_EMERICK": 1.0,
+      "per_trial_mean_LCC_mean": 0.18176699431474427,
+      "per_trial_mean_LCC_std": 0.10372981861872337,
+      "per_trial_frac_above_C_EMERICK_mean": 0.15229468599033816
+    },
+    "(b) F4 graph + random init": {
+      "mean_pairwise_LCC": 0.19738410021702577,
+      "std_pairwise_LCC": 0.2627662812205037,
+      "median_pairwise_LCC": 0.2295631771709217,
+      "fraction_pairs_above_C_EMERICK": 0.15857487922705313,
+      "fraction_trials_with_max_above_C_EMERICK": 1.0,
+      "per_trial_mean_LCC_mean": 0.19738410021702574,
+      "per_trial_mean_LCC_std": 0.10558376886795819,
+      "per_trial_frac_above_C_EMERICK_mean": 0.15857487922705316
+    },
+    "(c) F4 graph + F4-equivariant init": {
+      "mean_pairwise_LCC": 0.20127526598023512,
+      "std_pairwise_LCC": 0.1860430383334169,
+      "median_pairwise_LCC": 0.17653120398266384,
+      "fraction_pairs_above_C_EMERICK": 0.1143719806763285,
+      "fraction_trials_with_max_above_C_EMERICK": 1.0,
+      "per_trial_mean_LCC_mean": 0.20127526598023512,
+      "per_trial_mean_LCC_std": 0.018093113042662264,
+      "per_trial_frac_above_C_EMERICK_mean": 0.11437198067632849
+    },
+    "h1_test": {
+      "delta_mean_LCC": 0.01950827166549085,
+      "welch_t_statistic": 5.373575540321806,
+      "h1_supported_directional": false
+    }
+  }
+}
