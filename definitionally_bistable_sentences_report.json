@@ -1,0 +1,79 @@
+{
+  "tralse_values": [
+    "DT",
+    "F",
+    "T",
+    "f",
+    "t"
+  ],
+  "n_sentences": 5,
+  "n_bivalent_inconsistent": 5,
+  "n_bivalent_clean": 0,
+  "results": [
+    {
+      "index": 1,
+      "sentence": "Balance is appropriateness.",
+      "explications": {
+        "balance = equilibrium / equal-weight": "F",
+        "balance = harmony as fit-for-purpose": "T",
+        "balance = moderation (context-free midpoint)": "F"
+      },
+      "dominant_explication": null,
+      "classical_bivalent_verdict": "AMBIGUOUS_WITHOUT_EXPLICATION",
+      "tralse_5valued_verdict": "DT",
+      "note": "Brandon's URB #814 case. The two principal explications of 'balance' map to opposite truth-values; without a stipulated explication the sentence sits at DT."
+    },
+    {
+      "index": 2,
+      "sentence": "Freedom is constraint.",
+      "explications": {
+        "freedom = absence of external interference (negative liberty, Berlin)": "F",
+        "freedom = capacity for self-direction (positive liberty / Stoic / Buddhist; requires self-discipline)": "T"
+      },
+      "dominant_explication": null,
+      "classical_bivalent_verdict": "AMBIGUOUS_WITHOUT_EXPLICATION",
+      "tralse_5valued_verdict": "DT",
+      "note": "Classic positive-vs-negative-liberty case. Berlin's 1958 lecture 'Two Concepts of Liberty' is the canonical articulation; the explication choice is itself a major philosophical-political question."
+    },
+    {
+      "index": 3,
+      "sentence": "Knowledge is justified true belief.",
+      "explications": {
+        "pre-Gettier dominant analytic analysis of knowledge (tradition discussed back to Plato's Theaetetus, which itself entertains and rejects several candidates)": "T",
+        "post-Gettier (1963) \u2014 counterexamples widely accepted as showing JTB is insufficient as an analysis of knowledge": "F",
+        "reliabilist account (Goldman 1967 onward)": "F"
+      },
+      "dominant_explication": "post-Gettier (1963) \u2014 counterexamples widely accepted as showing JTB is insufficient as an analysis of knowledge",
+      "classical_bivalent_verdict": "AMBIGUOUS_WITHOUT_EXPLICATION",
+      "tralse_5valued_verdict": "f",
+      "note": "Historical pivot: the dominant analytic ANALYSIS of knowledge shifted after Gettier's 1963 three-page paper. The claim here is about the dominant analysis (T \u2192 F), not about a wholesale change in the natural-language meaning of 'knowledge,' which is itself broader than any particular philosophical analysis."
+    },
+    {
+      "index": 4,
+      "sentence": "Numbers exist.",
+      "explications": {
+        "Platonism (abstract objects exist independently of minds)": "T",
+        "nominalism (only concrete particulars exist; numbers are fictions)": "F",
+        "fictionalism (numbers exist as useful fictions; ontology agnostic)": "F"
+      },
+      "dominant_explication": null,
+      "classical_bivalent_verdict": "AMBIGUOUS_WITHOUT_EXPLICATION",
+      "tralse_5valued_verdict": "DT",
+      "note": "Long-running metaphysics debate that Chalmers (2011) cites as a paradigm verbal dispute about the explication of 'exists'."
+    },
+    {
+      "index": 5,
+      "sentence": "A sentence is meaningful only if verifiable.",
+      "explications": {
+        "early/strict logical positivism (Vienna Circle, ~1920s-1930s) \u2014 early formulations; positivists themselves later weakened the principle (verifiability \u2192 confirmability \u2192 testability) partly in response to self-application objections": "T",
+        "mainstream post-positivist philosophy of science (Quine 1951, Kuhn 1962, etc.) \u2014 verifiability principle widely rejected": "F",
+        "(self-application: this sentence is itself not empirically verifiable, so under strict verifiability it would be meaningless)": "F"
+      },
+      "dominant_explication": "mainstream post-positivist philosophy of science (Quine 1951, Kuhn 1962, etc.) \u2014 verifiability principle widely rejected",
+      "classical_bivalent_verdict": "AMBIGUOUS_WITHOUT_EXPLICATION",
+      "tralse_5valued_verdict": "f",
+      "note": "Included as a historically important contested thesis with a classical-logic self-application problem layered on top of the definitional issue. The early-positivist T-assignment is itself a simplification: Vienna Circle members weakened the principle multiple times precisely because of the self-application objection and other problems. This row is NOT a clean T-under-A / F-under-B case in the same way the first four rows are; it illustrates that real philosophical sentences can have both definitional bistability AND internal logical issues, and the Tralse representation accommodates both via the t/f gradient."
+    }
+  ],
+  "interpretation": "All 5 sentences exhibit definitional bistability (at least one T-explication and one F-explication). Within each individual explication, bivalent classical logic assigns a clean T or F. At the natural-language level (no explication chosen), bivalent logic must either pick an explication silently or report the sentence as ambiguous / under-specified. The Tralse 5-valued vocabulary adds a single-symbol name for the bistable state \u2014 DT for sentences with no dominant explication, t/f for those with a dominant explication that an alternative flips. This is a small but useful expressive gain for philosophical-discourse work; it does not claim that bivalent logic is broken, only that giving the bistable state its own name is convenient enough to be worth coining. The phenomenon itself has been named in the established stack: polysemy (linguistics, the mechanism), equivocation (logic, the fallacy form), verbal dispute (Chalmers 2011, the debate form), and Carnapian explication (Carnap 1950, the precision-making remedy)."
+}
