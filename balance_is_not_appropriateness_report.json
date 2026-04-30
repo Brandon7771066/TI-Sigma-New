@@ -1,0 +1,213 @@
+{
+  "config": {
+    "rng_seed": 20260430,
+    "scenarios": [
+      {
+        "name": "child_running_into_traffic",
+        "description": "side A = full intervention",
+        "optimal_weight_side_a": 0.97
+      },
+      {
+        "name": "friend_describes_serious_loss",
+        "description": "side A = listening (vs speaking)",
+        "optimal_weight_side_a": 0.88
+      },
+      {
+        "name": "apology_for_serious_harm",
+        "description": "side A = full ownership",
+        "optimal_weight_side_a": 0.95
+      },
+      {
+        "name": "romantic_declaration_of_love",
+        "description": "side A = undiluted statement",
+        "optimal_weight_side_a": 0.92
+      },
+      {
+        "name": "emergency_surgery",
+        "description": "side A = total focus on the cut",
+        "optimal_weight_side_a": 0.97
+      },
+      {
+        "name": "defensive_coding_hostile_input",
+        "description": "side A = reject-by-default",
+        "optimal_weight_side_a": 0.95
+      },
+      {
+        "name": "vaccine_policy_briefing",
+        "description": "side A = evidence-supported view",
+        "optimal_weight_side_a": 0.95
+      },
+      {
+        "name": "climate_policy_briefing",
+        "description": "side A = evidence-supported view",
+        "optimal_weight_side_a": 0.95
+      },
+      {
+        "name": "witnessing_a_serious_crime",
+        "description": "side A = truthful testimony",
+        "optimal_weight_side_a": 0.95
+      },
+      {
+        "name": "casual_chat_about_a_movie",
+        "description": "side A = your speaking turn",
+        "optimal_weight_side_a": 0.5
+      },
+      {
+        "name": "commodity_price_negotiation",
+        "description": "side A = your share of surplus",
+        "optimal_weight_side_a": 0.5
+      },
+      {
+        "name": "boastful_colleague_seeks_praise",
+        "description": "side A = effusive praise",
+        "optimal_weight_side_a": 0.15
+      },
+      {
+        "name": "persistent_salesperson_pressure",
+        "description": "side A = elaborate justification",
+        "optimal_weight_side_a": 0.1
+      },
+      {
+        "name": "stranger_intrusive_question",
+        "description": "side A = full personal disclosure",
+        "optimal_weight_side_a": 0.15
+      },
+      {
+        "name": "drunk_picks_political_argument",
+        "description": "side A = engaged debate",
+        "optimal_weight_side_a": 0.05
+      }
+    ]
+  },
+  "scores": [
+    {
+      "responder": "Balanced (always 0.5)",
+      "per_scenario_response": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "per_scenario_abs_error": [
+        0.47,
+        0.38,
+        0.44999999999999996,
+        0.42000000000000004,
+        0.47,
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996,
+        0.0,
+        0.0,
+        0.35,
+        0.4,
+        0.35,
+        0.45
+      ],
+      "mean_absolute_error": 0.36933333333333335,
+      "max_absolute_error": 0.47,
+      "fraction_within_0_05_of_optimal": 0.13333333333333333
+    },
+    {
+      "responder": "Appropriate (matches optimal)",
+      "per_scenario_response": [
+        0.97,
+        0.88,
+        0.95,
+        0.92,
+        0.97,
+        0.95,
+        0.95,
+        0.95,
+        0.95,
+        0.5,
+        0.5,
+        0.15,
+        0.1,
+        0.15,
+        0.05
+      ],
+      "per_scenario_abs_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0,
+      "fraction_within_0_05_of_optimal": 1.0
+    },
+    {
+      "responder": "Compromise (avg of 0.5 and optimal)",
+      "per_scenario_response": [
+        0.735,
+        0.69,
+        0.725,
+        0.71,
+        0.735,
+        0.725,
+        0.725,
+        0.725,
+        0.725,
+        0.5,
+        0.5,
+        0.325,
+        0.3,
+        0.325,
+        0.275
+      ],
+      "per_scenario_abs_error": [
+        0.235,
+        0.19000000000000006,
+        0.22499999999999998,
+        0.21000000000000008,
+        0.235,
+        0.22499999999999998,
+        0.22499999999999998,
+        0.22499999999999998,
+        0.22499999999999998,
+        0.0,
+        0.0,
+        0.17500000000000002,
+        0.19999999999999998,
+        0.17500000000000002,
+        0.22500000000000003
+      ],
+      "mean_absolute_error": 0.18466666666666667,
+      "max_absolute_error": 0.235,
+      "fraction_within_0_05_of_optimal": 0.13333333333333333
+    }
+  ],
+  "diagnostic": {
+    "n_scenarios": 15,
+    "n_symmetric_scenarios": 2,
+    "n_asymmetric_scenarios": 13,
+    "mae_balanced": 0.36933333333333335,
+    "mae_appropriate": 0.0,
+    "mae_compromise": 0.18466666666666667,
+    "interpretation": "Balanced (always 0.5) is OPTIMAL for the symmetric scenarios and POORLY-FIT for the asymmetric ones. The appropriate response is the one that matches the situation; balance happens to be the appropriate response when the situation is symmetric, and is harmful when the situation is asymmetric. The Compromise strategy (averaging balance and the optimal) reduces the worst-case error of pure-balance but is still strictly worse than appropriateness on the asymmetric scenarios. The structural point of URB #814 is that 'balance' as a context-free prescription is the wrong policy whenever situations have any underlying asymmetry."
+  }
+}
