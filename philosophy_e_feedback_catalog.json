@@ -1,0 +1,243 @@
+{
+  "n_concepts": 23,
+  "concepts": [
+    {
+      "concept": "free will (compatibilism vs incompatibilism)",
+      "subfield": "metaphysics / ethics / philosophy of mind",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Compatibilists frequently make the verbal-dispute move; some incompatibilists explicitly grant the partly-verbal structure; yet the dispute continues to occupy significant literature space as if substantive."
+    },
+    {
+      "concept": "knowledge (post-Gettier)",
+      "subfield": "epistemology",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 1,
+      "practice_shift": 1,
+      "note": "Sixty years of post-Gettier patching (defeasibility, no-false-lemmas, safety, sensitivity, virtue epistemology) without a verbal-dispute diagnosis being load-bearing in the literature; rare exceptions (Weatherson) have not shifted mainstream practice."
+    },
+    {
+      "concept": "mind-body / hard problem",
+      "subfield": "philosophy of mind",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Chalmers himself diagnoses verbal-dispute aspects (consciousness as 'C-consciousness' vs 'P-consciousness' etc.); URB #813 covered this; modest neuroscience/psychology environmental feedback; practice still proceeds largely as substantive dispute."
+    },
+    {
+      "concept": "personal identity over time",
+      "subfield": "metaphysics / philosophy of mind",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Parfit's 'what matters in survival' move was substantially a verbal-dispute reframing; post-Chalmers explicitly so; yet teletransporter-thought-experiment literature continues largely as substantive metaphysics."
+    },
+    {
+      "concept": "abstract objects (mathematical / universals)",
+      "subfield": "metaphysics / philosophy of mathematics",
+      "tralseness_presence": 3,
+      "env_feedback": 0,
+      "recognized_verbal": 1,
+      "practice_shift": 0,
+      "note": "Carnap's 'External Questions' essay was a paradigm verbal-dispute diagnosis, largely rejected or sidelined by mainstream metaphysics post-Quine; the dispute continues as if substantive."
+    },
+    {
+      "concept": "realism vs anti-realism (general)",
+      "subfield": "metaphysics / philosophy of science / epistemology",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Putnam, Dummett, and others have explicitly worked on the verbal-dispute structure; Chalmers' framework gave a clean diagnostic; yet new realism-vs-anti-realism literature continues to be produced regularly."
+    },
+    {
+      "concept": "consequentialism vs deontology",
+      "subfield": "ethics",
+      "tralseness_presence": 3,
+      "env_feedback": 0,
+      "recognized_verbal": 1,
+      "practice_shift": 0,
+      "note": "Multi-millennium dispute; some hybrid views (rule-consequentialism, threshold-deontology) implicitly acknowledge verbal-dispute structure; mainstream ethics literature largely conducts the dispute as substantive."
+    },
+    {
+      "concept": "epistemic internalism vs externalism",
+      "subfield": "epistemology",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Several internalists and externalists have explicitly granted that the dispute is partly about which explication of justification to adopt; yet the literature continues to be productive in substantive mode."
+    },
+    {
+      "concept": "A-series vs B-series of time (McTaggart)",
+      "subfield": "metaphysics / philosophy of physics",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 1,
+      "practice_shift": 1,
+      "note": "Modest physics-of-time environmental feedback (relativity favors B-series broadly); some recognition that 'tense' admits multiple explications; mainstream metaphysics-of-time continues substantively."
+    },
+    {
+      "concept": "de re vs de dicto modality",
+      "subfield": "modal metaphysics / philosophy of language",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 3,
+      "practice_shift": 2,
+      "note": "Quine's critique was substantially verbal-dispute-style; Kripke's response established the de re/de dicto distinction technically; this dispute is among the most apparatus-developed in non-philosophy-of-language metaphysics, partly because it sits adjacent to formal semantics where E-feedback is stronger."
+    },
+    {
+      "concept": "beauty (definition of)",
+      "subfield": "aesthetics",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 2,
+      "practice_shift": 2,
+      "note": "Weitz's open-concept thesis was an explicit verbal-dispute / definitional-bistability move; aesthetics is one of the few subfields where the central concept's bistability has been substantially central to the discipline's self-understanding."
+    },
+    {
+      "concept": "justice (Plato to Rawls to today)",
+      "subfield": "political philosophy / ethics",
+      "tralseness_presence": 3,
+      "env_feedback": 1,
+      "recognized_verbal": 1,
+      "practice_shift": 1,
+      "note": "Multi-millennium dispute; multiple competing explications (procedural, distributive, retributive, restorative, capabilities-based); recognition of verbal-dispute structure is modest; political-policy environmental feedback is real but contested."
+    },
+    {
+      "concept": "God's existence (theistic philosophy)",
+      "subfield": "philosophy of religion",
+      "tralseness_presence": 3,
+      "env_feedback": 0,
+      "recognized_verbal": 1,
+      "practice_shift": 0,
+      "note": "Verificationist tradition (Ayer, early Carnap) substantially diagnosed the dispute as definitionally fraught; mainstream philosophy of religion continues largely as substantive metaphysics; very weak environmental feedback."
+    },
+    {
+      "concept": "causation (Hume to interventionist)",
+      "subfield": "metaphysics / philosophy of science",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 2,
+      "practice_shift": 2,
+      "note": "Multiple competing explications (regularity, counterfactual, mechanistic, interventionist, probabilistic); statistics-and-causal-inference apparatus (Pearl, Rubin) provides genuine environmental feedback; recognition and modest practice shift have followed."
+    },
+    {
+      "concept": "persistence through time (endurantism vs perdurantism)",
+      "subfield": "metaphysics",
+      "tralseness_presence": 3,
+      "env_feedback": 0,
+      "recognized_verbal": 2,
+      "practice_shift": 1,
+      "note": "Substantial recognition that the dispute is partly about which explication of 'object' to adopt; yet specialized metaphysics literature continues as substantive."
+    },
+    {
+      "concept": "vagueness itself (epistemicism / supervaluationism / degree theory)",
+      "subfield": "philosophy of language / philosophical logic",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 3,
+      "practice_shift": 2,
+      "note": "Sits adjacent to philosophy of language; Williamson, Fine, and others have made the verbal-dispute structure load-bearing; modest practice shift and one of the more apparatus-developed disputes."
+    },
+    {
+      "concept": "truth itself (correspondence vs coherence vs deflationism vs pragmatist)",
+      "subfield": "philosophy of language / metaphysics",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 3,
+      "practice_shift": 2,
+      "note": "Tarski + deflationism + pluralism literature has substantially absorbed the verbal-dispute structure; another case where the philosophy-of-language adjacency provides real E-feedback; modest practice shift."
+    },
+    {
+      "concept": "meaning itself (use theory vs truth-conditional vs intentional)",
+      "subfield": "philosophy of language",
+      "tralseness_presence": 3,
+      "env_feedback": 3,
+      "recognized_verbal": 3,
+      "practice_shift": 3,
+      "note": "Philosophy of language proper; relentless E-feedback from linguistic data; verbal-dispute structure is centrally recognized; substantial practice apparatus has developed; the canonical case where the GILE-E hypothesis predicts well-developed tralseness apparatus and that prediction is borne out."
+    },
+    {
+      "concept": "naturalized epistemology (post-Quine)",
+      "subfield": "epistemology / philosophy of cognitive science",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 2,
+      "practice_shift": 2,
+      "note": "Quine's naturalized-epistemology program explicitly imports cognitive-science feedback into epistemology; subsequent work (Goldman, Kornblith, Kitcher) has been substantially shaped by empirical research on actual cognition; verbal-dispute structure of 'knowledge' and 'justification' is recognized by many naturalized epistemologists as partly definitional; practice has shifted in this subliterature relative to mainstream a priori epistemology."
+    },
+    {
+      "concept": "species concept (philosophy of biology)",
+      "subfield": "philosophy of biology",
+      "tralseness_presence": 3,
+      "env_feedback": 3,
+      "recognized_verbal": 3,
+      "practice_shift": 3,
+      "note": "Philosophy of biology has fully absorbed the multi-explication-pluralism of 'species' (biological, morphological, phylogenetic, ecological, ring-species edge cases); the verbal-dispute structure is centrally recognized; practice has shifted to acknowledge species-concept pluralism as the working position; canonical case where strong empirical environmental feedback from biology forced apparatus development."
+    },
+    {
+      "concept": "interpretations of QM (philosophy of physics)",
+      "subfield": "philosophy of physics",
+      "tralseness_presence": 3,
+      "env_feedback": 3,
+      "recognized_verbal": 2,
+      "practice_shift": 2,
+      "note": "Philosophy of physics on QM-interpretations (Copenhagen vs Everett vs Bohmian vs QBist) is shaped by experimental physics feedback (Bell tests, decoherence research, weak-measurement experiments); the verbal-dispute structure is partly recognized (some philosophers explicitly grant that the dispute is partly about which explication of 'measurement' or 'state' to adopt) but mainstream practice still treats interpretations as substantively distinct."
+    },
+    {
+      "concept": "applied / medical ethics (bioethics, clinical ethics)",
+      "subfield": "applied ethics",
+      "tralseness_presence": 3,
+      "env_feedback": 2,
+      "recognized_verbal": 1,
+      "practice_shift": 2,
+      "note": "Applied and medical ethics work directly with clinical/regulatory feedback that forces operational definitions of 'consent,' 'capacity,' 'futility,' 'death,' 'person'; the verbal-dispute structure is rarely named but practice has shifted considerably under regulatory and clinical pressure (DSM revisions, brain-death criteria evolution, capacity-assessment standardization). Partial counterexample: practice-shift higher than typical paradigmatic dispute, even though verbal-dispute recognition is modest."
+    },
+    {
+      "concept": "experimental philosophy (X-phi)",
+      "subfield": "experimental philosophy / metaphilosophy",
+      "tralseness_presence": 2,
+      "env_feedback": 3,
+      "recognized_verbal": 2,
+      "practice_shift": 2,
+      "note": "X-phi imports survey-and-experimental empirical methods into philosophy itself; explicitly tests whether folk intuitions on free will, knowledge, intentional action, etc. align with philosophical analyses; finds substantial cross-cultural and demographic variation that is difficult to reconcile with universal-explication ambitions; partly diagnoses the verbal-dispute structure of disputes where folk intuitions diverge; practice has shifted within X-phi but the broader philosophical mainstream has been selectively responsive."
+    }
+  ],
+  "aggregate": {
+    "n": 23,
+    "avg_tralseness_presence": 2.96,
+    "avg_env_feedback": 1.48,
+    "avg_recognized_verbal": 1.91,
+    "avg_practice_shift": 1.43,
+    "high_tralseness_low_env": [
+      "free will (compatibilism vs incompatibilism)",
+      "knowledge (post-Gettier)",
+      "personal identity over time",
+      "abstract objects (mathematical / universals)",
+      "realism vs anti-realism (general)",
+      "consequentialism vs deontology",
+      "epistemic internalism vs externalism",
+      "de re vs de dicto modality",
+      "beauty (definition of)",
+      "justice (Plato to Rawls to today)",
+      "God's existence (theistic philosophy)",
+      "persistence through time (endurantism vs perdurantism)"
+    ],
+    "recognized_but_no_practice_shift": [
+      "free will (compatibilism vs incompatibilism)",
+      "mind-body / hard problem",
+      "personal identity over time",
+      "realism vs anti-realism (general)",
+      "epistemic internalism vs externalism",
+      "persistence through time (endurantism vs perdurantism)"
+    ],
+    "env_feedback_practice_shift_covariance": 0.662
+  },
+  "interpretation": "Across 23 philosophical disputes / subfield-concepts (18 long-running paradigmatic disputes plus 5 empirically-anchored counterexamples added per URB #818 \u00a72 reframing and the architect-review selection-bias patch), tralseness-presence is uniformly high (avg 2.96/3), environmental-feedback is low to moderate overall (avg 1.48/3) but visibly bimodal between the paradigmatic disputes (low E) and the empirically-anchored subfields (high E), recognition of verbal-dispute structure is variable (avg 1.91/3), and disciplinary-practice shift is modest in the paradigmatic disputes but substantial in the empirically-anchored subfields (avg 1.43/3 overall). The env_feedback \u00d7 practice_shift covariance is +0.662, which is CONSISTENT WITH but does not TEST URB #818's GILE-E (environmental-feedback) hypothesis. THE COVARIANCE IS A FEATURE OF AUTHOR CODING, NOT AN INDEPENDENT EMPIRICAL FINDING: the same author who has the GILE-E hypothesis in mind also assigned the ratings, and a confirmation-bias risk applies. 12 of 23 disputes have high tralseness-presence but low environmental-feedback (the predicted at-risk regime); 6 of 23 disputes show the diagnostic-available-but-practice-unchanged pattern that the GILE-E hypothesis specifically predicts. The cleanest counterexamples to the low-E pattern (de re / de dicto modality, vagueness itself, truth itself, meaning itself, naturalized epistemology, species concept, QM-interpretations, applied/medical ethics, X-phi) cluster in subfields with strong empirical anchors \u2014 consistent with GILE-E predictions but also consistent with \u00a75's rival hypotheses (institutional history, individual leadership, publication norms, pedagogy, disciplinary inertia). RATINGS ARE AUTHOR JUDGMENTS not survey data; reasonable observers would shift several scores; ROBUSTNESS TO RELABELING IS ASSERTED IN PRIOR DRAFTS WITHDRAWN HERE \u2014 the sensitivity analysis with multiple coding schemes that would substantiate a robustness claim has not been performed and would be needed before treating any aggregate as more than illustrative. The catalog is explicitly a NON-RANDOM SAMPLE: the 18 paradigmatic disputes were selected as long-running paradigms (likely biased toward disputes that fit the low-E pattern), and the 5 added empirically-anchored counterexamples were selected specifically to test (and partly correct) that selection bias. A truly representative sample of philosophical activity would need to draw on PhilPapers / PhilPeople / SEP / journal-corpus data, which this $0 catalog cannot replicate. The pattern is reported as illustrative of the GILE-E hypothesis under one reasonable coding, not as evidence that adjudicates between GILE-E and the rival hypotheses in URB #818 \u00a75."
+}
