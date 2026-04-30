@@ -1,0 +1,23 @@
+{
+  "config": {
+    "n_questions": 5000,
+    "c_q_size": 4,
+    "p_conventional_hits_e_q": 0.7,
+    "rng_seed": 20260430
+  },
+  "conventional_answerer": {
+    "rigid_grader_score": 0.7792,
+    "real_grader_score": 1.0,
+    "answers_in_c_q_fraction": 1.0
+  },
+  "divergent_answerer": {
+    "rigid_grader_score": 0.253,
+    "real_grader_score": 1.0,
+    "answers_in_c_q_fraction": 1.0
+  },
+  "asymmetry": {
+    "rigid_grader_punishes_divergent_by_pp": 52.62,
+    "real_grader_difference_pp": 0.0,
+    "interpretation": "Both answerers are always correct in reality (both always answer within C_Q). The rigid grader nevertheless reports a large gap, because it is running the procedure 'matches E_Q?' and reporting it as 'is correct?'. The real grader correctly reports 0pp gap. The rigid-grader gap is the asymmetric punishment of divergent-thinking answerers in conventional grading environments."
+  }
+}
