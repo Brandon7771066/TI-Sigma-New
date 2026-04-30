@@ -1,0 +1,295 @@
+{
+  "n_concepts": 20,
+  "concepts": [
+    {
+      "concept": "consciousness",
+      "discipline": "psychology / neuroscience / philosophy of mind",
+      "bistability_kinds": [
+        "definitional",
+        "paradigm-shifted"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 1,
+      "note": "Hard-problem and IIT/GWT/HOT debates explicitly involve definitional disputes; psych/neuro intro courses typically do not cover the bistability framing despite extensive philosophy literature; covered in URB #813."
+    },
+    {
+      "concept": "species",
+      "discipline": "biology",
+      "bistability_kinds": [
+        "definitional",
+        "vague"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 2,
+      "cross_disc_handle": 0,
+      "note": "Mayr/Hull/Ghiselin/Sober species-concept debates are extensive; intro bio mentions the multiple concepts (biological, morphological, phylogenetic, ecological); cross-disciplinary connection to philosophy of language is rare even though the structural pattern matches definitional bistability exactly."
+    },
+    {
+      "concept": "gene",
+      "discipline": "biology / genetics",
+      "bistability_kinds": [
+        "definitional",
+        "paradigm-shifted"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "Molecular vs functional vs Mendelian gene concepts diverged after the 1960s; intro genetics typically uses one definition without naming the bistability; molecular biologists are sophisticated locally but rarely connect to general philosophy of language."
+    },
+    {
+      "concept": "intelligence",
+      "discipline": "psychology / AI",
+      "bistability_kinds": [
+        "definitional",
+        "vague",
+        "political"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "g vs multiple-intelligences vs CHC vs operational AGI definitions are deeply contested; intro psych mentions IQ debates but rarely frames them as definitional-bistability problems; the AGI literature has begun to grapple with the bistability explicitly (Chollet et al.) but mostly without connecting to the tralseness tradition."
+    },
+    {
+      "concept": "race",
+      "discipline": "anthropology / biology / sociology",
+      "bistability_kinds": [
+        "definitional",
+        "political",
+        "paradigm-shifted"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 2,
+      "cross_disc_handle": 1,
+      "note": "Biological-vs-social-construct debates are foregrounded in undergraduate anthropology/sociology; the cross-disciplinary handle is more developed here than for most concepts on this list, partly because the political stakes have forced the field to be explicit about the definitional structure."
+    },
+    {
+      "concept": "depression",
+      "discipline": "psychiatry",
+      "bistability_kinds": [
+        "definitional",
+        "vague"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "DSM-III through DSM-5 have repeatedly renegotiated the diagnostic criteria; psychiatrists are sophisticated about the renegotiation but the field rarely frames it as an instance of general definitional bistability; the operational definitions are taught as if they were stable bivalent categories."
+    },
+    {
+      "concept": "recession",
+      "discipline": "economics",
+      "bistability_kinds": [
+        "definitional",
+        "operational"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "NBER definition vs technical 'two consecutive quarters of GDP decline' definition; the bistability is well-known to working economists; intro macroeconomics typically presents one definition without surfacing the structure."
+    },
+    {
+      "concept": "democracy",
+      "discipline": "political science",
+      "bistability_kinds": [
+        "definitional",
+        "political",
+        "vague"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 2,
+      "cross_disc_handle": 1,
+      "note": "Schumpeterian, deliberative, participatory, liberal, illiberal definitions all have established literatures; intro political science covers the conceptual diversity; the cross-disciplinary handle is partially developed because political theory overlaps with philosophy."
+    },
+    {
+      "concept": "fitness",
+      "discipline": "evolutionary biology",
+      "bistability_kinds": [
+        "definitional",
+        "operational"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "Propensity vs realized vs inclusive vs gene-centric fitness; substantial philosophy-of-biology literature; intro evolution typically uses a single operational definition without surfacing the bistability."
+    },
+    {
+      "concept": "mass",
+      "discipline": "physics",
+      "bistability_kinds": [
+        "paradigm-shifted"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "Newtonian inertial-vs-gravitational mass vs relativistic invariant-vs-relativistic mass; the bistability across paradigms is well-known to physicists but typically taught as 'we now use the better definition' rather than as a Kuhnian definitional shift; classic illustration of paradigm-shift bistability."
+    },
+    {
+      "concept": "person",
+      "discipline": "law / ethics / philosophy",
+      "bistability_kinds": [
+        "definitional",
+        "political"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 2,
+      "cross_disc_handle": 2,
+      "note": "Abortion, animal-rights, AI-personhood debates all turn on the definition; legal scholars and ethicists are explicit about the bistability and the cross-disciplinary handle is well-developed here because the field is philosophy-adjacent."
+    },
+    {
+      "concept": "model",
+      "discipline": "many (statistics / science / philosophy / CS)",
+      "bistability_kinds": [
+        "definitional",
+        "cross-disciplinary"
+      ],
+      "within_field_lit": 1,
+      "ugrad_teaching": 0,
+      "cross_disc_handle": 0,
+      "note": "Statistical fit vs mechanistic explanation vs formal logical structure vs computational simulation vs scale model; cross-disciplinary collaborations regularly stumble on this; rarely surfaced as a definitional problem in any single discipline's teaching."
+    },
+    {
+      "concept": "theory",
+      "discipline": "many",
+      "bistability_kinds": [
+        "definitional",
+        "cross-disciplinary"
+      ],
+      "within_field_lit": 1,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 1,
+      "note": "Hypothesis vs established framework vs axiomatic system vs interpretive lens; the everyday-vs-scientific bistability is familiar (the 'just a theory' confusion in evolution debates) but the deeper cross-disciplinary diversity is rarely surfaced."
+    },
+    {
+      "concept": "function",
+      "discipline": "math / biology / CS / sociology",
+      "bistability_kinds": [
+        "definitional",
+        "cross-disciplinary"
+      ],
+      "within_field_lit": 1,
+      "ugrad_teaching": 0,
+      "cross_disc_handle": 0,
+      "note": "Mathematical mapping vs biological role vs computational subroutine vs social purpose; each field uses 'function' fluently in its own sense; cross-disciplinary translation is regularly trip-causing and rarely flagged."
+    },
+    {
+      "concept": "system",
+      "discipline": "many",
+      "bistability_kinds": [
+        "definitional",
+        "cross-disciplinary"
+      ],
+      "within_field_lit": 1,
+      "ugrad_teaching": 0,
+      "cross_disc_handle": 0,
+      "note": "Formal axiomatic system vs dynamical system vs ecological system vs organizational system vs computational system; pervasive cross-disciplinary polysemy."
+    },
+    {
+      "concept": "harm",
+      "discipline": "law / ethics / public policy / AI safety",
+      "bistability_kinds": [
+        "definitional",
+        "vague",
+        "political"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 1,
+      "note": "Physical vs psychological vs financial vs reputational vs offense; harm-principle debates in political philosophy are extensive; AI safety has imported the concept with mostly implicit definitions; the bistability is real and consequential."
+    },
+    {
+      "concept": "consent",
+      "discipline": "law / ethics / medicine / AI",
+      "bistability_kinds": [
+        "definitional",
+        "vague",
+        "operational"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "Informed-consent in medicine vs contractual consent in law vs sexual consent vs data-consent in tech; the cross-disciplinary handle is largely absent despite the practical stakes."
+    },
+    {
+      "concept": "addiction",
+      "discipline": "psychiatry / neuroscience / sociology",
+      "bistability_kinds": [
+        "definitional",
+        "vague",
+        "political"
+      ],
+      "within_field_lit": 2,
+      "ugrad_teaching": 1,
+      "cross_disc_handle": 0,
+      "note": "Disease model vs behavioral model vs social model; DSM has shifted multiple times (substance dependence vs substance use disorder); intro psych typically presents one model without surfacing the bistability."
+    },
+    {
+      "concept": "art",
+      "discipline": "aesthetics / art history",
+      "bistability_kinds": [
+        "definitional",
+        "paradigm-shifted"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 2,
+      "cross_disc_handle": 1,
+      "note": "Open-concept (Weitz) vs institutional (Dickie) vs aesthetic-property vs historical (Levinson) definitions; aesthetics is one of the few fields whose primary literature explicitly engages with definitional bistability of the central concept."
+    },
+    {
+      "concept": "set",
+      "discipline": "mathematics / foundations",
+      "bistability_kinds": [
+        "definitional",
+        "foundational"
+      ],
+      "within_field_lit": 3,
+      "ugrad_teaching": 0,
+      "cross_disc_handle": 1,
+      "note": "Naive set theory vs ZFC vs NBG vs Quine's NF vs constructive vs categorical foundations; a clear case where math's working core operates in stipulated-explication mode (URB \u00a72) but the foundations have lively bistability that intro math courses do not surface."
+    }
+  ],
+  "aggregate": {
+    "n": 20,
+    "avg_within_field_lit": 2.3,
+    "avg_ugrad_teaching": 1.05,
+    "avg_cross_disc_handle": 0.45,
+    "high_lit_low_teach": [
+      "consciousness",
+      "gene",
+      "intelligence",
+      "depression",
+      "recession",
+      "fitness",
+      "mass",
+      "harm",
+      "consent",
+      "addiction",
+      "set"
+    ],
+    "high_lit_low_cross": [
+      "species",
+      "gene",
+      "intelligence",
+      "depression",
+      "recession",
+      "fitness",
+      "mass",
+      "consent",
+      "addiction"
+    ],
+    "no_cross_handle": [
+      "species",
+      "gene",
+      "intelligence",
+      "depression",
+      "recession",
+      "fitness",
+      "mass",
+      "model",
+      "function",
+      "system",
+      "consent",
+      "addiction"
+    ]
+  },
+  "interpretation": "Across 20 academic concepts spanning many disciplines, average within-field literature on the concept's bistability is 2.30/3 (substantial; local sophistication is real), average undergraduate-teaching foregrounding is 1.05/3 (modest; the bistability is rarely central to introductory teaching), and average cross-disciplinary connection to the linguistic / philosophy-of-language tradition on tralseness as a general phenomenon is 0.45/3 (low; 12 of 20 concepts have essentially no cross-disciplinary handle). 11 concepts have substantial within-field literature on the bistability but only modest undergrad-teaching foregrounding, and 9 have substantial within-field literature but no cross-disciplinary handle. This pattern supports URB #817's central claim: working academics in most fields are sophisticated about the bistability of THEIR OWN field's terms, but the cross-cutting theoretical handle (Frege/Carnap/Strawson/Chalmers tradition) is mostly absent from non-specialist training. The gap is in cross-disciplinary transferable vocabulary, not in local discipline-specific sophistication. RATINGS ARE AUTHOR JUDGMENTS, not survey data; reasonable observers would shift several scores; the qualitative pattern (high local lit + low cross-disc handle) is robust to relabeling but the exact averages should not be treated as a quantitative result."
+}
