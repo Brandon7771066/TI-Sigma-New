@@ -220,7 +220,7 @@ def _true_tralsity_resolution() -> dict:
             "truth of both propositions under their respective aspectual readings. "
             "This is admissible without contradiction in the 5-valued system."
         ),
-        "three_corollaries": {
+        "four_corollaries": {
             "i_compatibilism": (
                 "Free will exists but operates within physical/chemical substrate, "
                 "not against it. Standard compatibilist position in TI-native "
@@ -243,6 +243,65 @@ def _true_tralsity_resolution() -> dict:
                 "episode, not integrated insight. Agency relocated to the "
                 "experiencing subject without denying substrate's catalytic role."
             ),
+            "iv_freeing_not_self_defeat_with_cushioning": {
+                "brandon_statement_verbatim": (
+                    "My perspective of 'happiness being a choice' is something "
+                    "I view as FREEING rather than an opportunity for "
+                    "self-defeat. The fact that happiness is within our "
+                    "control, without any specific set of prerequisites, and "
+                    "creatable is quite liberating! Yet, the choice is still "
+                    "rough and physically bounded, which gives me ample "
+                    "cushioning in case I can't 'manufacture happiness at 98% "
+                    "capacity' next time."
+                ),
+                "structural_role": (
+                    "Inverts the polarity that the architect's §2 review and "
+                    "the standard mental-health-literature critique of "
+                    "'happiness is a choice' framings was anxious about. The "
+                    "standard worry: telling someone in withdrawal/depression "
+                    "'happiness is a choice' sets them up for self-blame when "
+                    "they can't access it. Brandon's framing is the reverse: "
+                    "the choosability of happiness, unprerequisited, is "
+                    "liberating because it removes the demand that conditions "
+                    "be perfect first; AND the difficulty-spectrum bounding "
+                    "from corollary (ii) provides the cushioning so that the "
+                    "next failure-to-manufacture is not framed as a moral "
+                    "failure."
+                ),
+                "paired_structure": {
+                    "liberation_move": (
+                        "Happiness is not gated behind any specific set of "
+                        "life-prerequisites; you do not have to wait for the "
+                        "right job, partner, finances, neurochemistry, or "
+                        "season. The state is creatable from where you are."
+                    ),
+                    "cushioning_move": (
+                        "The choice is rough and physically bounded; failing "
+                        "to manufacture the state at 98% capacity on a given "
+                        "day does not retroactively negate the liberation move "
+                        "or the framework, because the difficulty-spectrum "
+                        "bounding (corollary ii) was already in the structure "
+                        "before the failure occurred."
+                    ),
+                    "joint_requirement": (
+                        "Both moves must be present together. Without the "
+                        "liberation move, the difficulty-spectrum bounding "
+                        "collapses into 'well, you couldn't help it' "
+                        "defeatism. Without the cushioning move, the "
+                        "liberation collapses into the self-blame trap. "
+                        "Brandon's framing carries both simultaneously — the "
+                        "joint-aspectual structure the true-tralsity move was "
+                        "set up to express."
+                    ),
+                },
+                "honest_caveat": (
+                    "One founder's lived framing of how the structure functions "
+                    "for him; NOT a clinical claim that the same framing will "
+                    "be liberating-rather-than-burdening for arbitrary other "
+                    "people in arbitrary clinical states. Generalization to "
+                    "third parties remains explicitly out of scope per §0."
+                ),
+            },
         },
     }
 
@@ -465,6 +524,7 @@ def _caveats() -> list[str]:
         "§6 reflexivity-preservation claim was architect-softened from 'is what distinguishes' to 'may distinguish'; alternative reading (post-hoc reconstruction during integration window) cannot be ruled out from available evidence.",
         "True-tralsity move bounds the bivalent-forcing tension flag; it does NOT prove libertarian free will, establish ketamine was MERELY catalyst rather than partial cause, or settle deeper philosophy-of-mind questions. Per §2 architect-flagged 'tension bounded' (not 'tension retracted').",
         "§7 numeric priors (50/60/55/65) are subjective expectations, NOT calibrated probabilities (per §7.7). Honest expectation-disclosure with wide implicit confidence intervals; not Bayesian credences with reference-class warrant.",
+        "§2 corollary (iv) — 'happiness is a choice' as FREEING-with-cushioning rather than self-defeat — is one founder's lived framing of how the structure functions for him. NOT a clinical claim that the same framing will be liberating-rather-than-burdening for arbitrary other people in arbitrary clinical states. Generalization to third parties remains explicitly out of scope per §0. The liberation-move and cushioning-move must be present together; either alone collapses (defeatism vs. self-blame).",
     ]
 
 
