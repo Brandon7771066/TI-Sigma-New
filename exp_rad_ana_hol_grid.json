@@ -1,0 +1,664 @@
+{
+  "n_fields": 21,
+  "favorable_scoring": [
+    {
+      "field": "TI Sigma",
+      "exp": 2,
+      "rad": 3,
+      "ana": 3,
+      "hol": 3,
+      "composite_score_out_of_12": 11,
+      "pillars_at_2_or_above": 4,
+      "pillars_at_3": 3,
+      "rad_anchor": "GILE/MR/tralse 5-valued logic + constitutive-tralseness-of-language hard core",
+      "hol_anchor": "URB series spans phil-of-language + phil-of-mind + phil-of-science + formal math (Lean4 MPP, TWA, Leech, E8, Monster) + neuroscience/biometrics + quantum-classical hybrid + economics + psychology/wellbeing + theology under one hard core; URB #797 is the cleanest cross-domain pre-registered pilot (phil + group theory + multi-agent sim + LCC methodology) with H1 honestly falsified at noise_p=0.05",
+      "note": "Provisional scores per URB #820 \u00a74.4: ANA=3 firm; RAD=2-3 (URB #819 \u00a74.2/\u00a78.3); EXP=1-2 (URB #819 \u00a74.3/\u00a78.2 synthetic-vs-external distinction); HOL=2-3 (URB #820 \u00a74.2 \u2014 n=1 cleanly cross-domain pre-registered pilot URB #797 is the minimum threshold for HOL=3 charitable). Favorable scoring 11/12; strict 8/12."
+    },
+    {
+      "field": "Theoretical physics (string theory / loop quantum gravity)",
+      "exp": 2,
+      "rad": 2,
+      "ana": 3,
+      "hol": 3,
+      "composite_score_out_of_12": 10,
+      "pillars_at_2_or_above": 4,
+      "pillars_at_3": 2,
+      "rad_anchor": "currently-best-confirmed theory + speculative unifications (string landscape, LQG)",
+      "hol_anchor": "Strong cross-subfield integration claims (gravity + QM + matter + cosmology under one framework). HOL=3 score is generous and contested \u2014 string theory's predictive content is famously thin, which is the canonical Wilber-comparable issue.",
+      "note": "Closest comparator to TI Sigma at favorable scoring (10/12). Same Wilber-style risk on HOL=3 score that TI Sigma faces."
+    },
+    {
+      "field": "Mathematics with proof-checking",
+      "exp": 1,
+      "rad": 3,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 9,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 2,
+      "rad_anchor": "ZFC / category theory / type theory / constructive foundations",
+      "hol_anchor": "Within mathematics, category theory + Langlands program + algebraic geometry produce substantial cross-subfield integration (HOL=2-3 within math). Across disciplines, math typically does not integrate with non-mathematical fields (HOL=1 cross-disciplinary). Average HOL=2.",
+      "note": "Edges TI Sigma out at 9/12 under strict TI scoring (URB #820 \u00a76.1). RAD anchored elsewhere than TI Sigma's GILE/MR/tralse."
+    },
+    {
+      "field": "Experimental physics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 9,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 2,
+      "rad_anchor": "currently-best-confirmed theory (Standard Model + GR) treated as provisional",
+      "hol_anchor": "HOL=2 within physics (cross-subfield integration via quantum field theory, statistical mechanics, GR); HOL=1 across disciplines.",
+      "note": "Ties or beats TI Sigma at strict scoring (9/12)."
+    },
+    {
+      "field": "Linguistics (formal semantics + corpus + cognitive)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "formal-semantics compositional bivalence + corpus statistics (in tension)",
+      "hol_anchor": "HOL=1 \u2014 formal-semantics + corpus + cogling subfields often pursued separately.",
+      "note": "URB #816 \u00a73.1 polarity finding: formal-semantics retained bivalent commitments rather than radically inverting."
+    },
+    {
+      "field": "NLP / computational linguistics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "engineering benchmarks + transformer architecture as de facto foundation",
+      "hol_anchor": "HOL=1 \u2014 NLP often operates separately from formal semantics, cogling, philosophy of language.",
+      "note": "Same shape as linguistics; engineering-driven."
+    },
+    {
+      "field": "Naturalized epistemology",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "cognitive science feedback as the foundation for epistemology",
+      "hol_anchor": "HOL=2 \u2014 integrates epistemology with cognitive science; some cross-domain claims about belief-formation across cultures/contexts.",
+      "note": ""
+    },
+    {
+      "field": "Pittsburgh school (Sellars, Brandom, McDowell)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "the space of reasons + inferentialism + non-foundationalist normativity",
+      "hol_anchor": "HOL=2 \u2014 inferentialism integrates semantics + epistemology + metaphysics + philosophy of mind under the space-of-reasons framework. Substantial conceptual integration.",
+      "note": "Highest HOL among mainstream analytic-tradition philosophy; closest to TI Sigma on integrative ambition within philosophy proper."
+    },
+    {
+      "field": "Post-structuralism",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "hol": 3,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "diff\u00e9rance / decentering / textuality as constitutive",
+      "hol_anchor": "HOL=3 \u2014 diff\u00e9rance + biopolitics + textuality apparatus produces cross-domain results in literary theory + political theory + philosophy + cultural critique. Whether predictive or classificatory is contested; granted HOL=3 charitably.",
+      "note": "Closest non-TI-Sigma field to HOL=3 charitable."
+    },
+    {
+      "field": "Theology (mainstream systematic)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "scripture / tradition / magisterium",
+      "hol_anchor": "Systematic theology integrates scripture + tradition + reason + experience under one hard core. HOL=2 (classification rather than novel predictions).",
+      "note": "RAD anchored elsewhere than TI Sigma; EXP=0 by design."
+    },
+    {
+      "field": "Philosophy of language",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "compositional semantics + truth-conditional meaning",
+      "hol_anchor": "Within phil-of-language, formal-semantics + corpus + pragmatics + cogling are pursued in often-disconnected subliteratures. HOL=1 \u2014 cross-domain reference but not integration.",
+      "note": "URB #816 \u00a72's catalog of 20 substantive tools is evidence of substantial within-domain capture of TI's tralseness pillar; HOL=1 because integration with other TI Sigma domains (phil-of-mind, formal math, neuroscience) is rare."
+    },
+    {
+      "field": "Molecular biology",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "molecular paradigm (DNA \u2192 RNA \u2192 protein \u2192 phenotype) treated as working framework",
+      "hol_anchor": "HOL=1 \u2014 molecular biology is specialized; integration with ecology / evolutionary biology / behavior happens but is usually subfield-bounded.",
+      "note": ""
+    },
+    {
+      "field": "Experimental philosophy (X-phi)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "folk intuitions + empirical surveys as data for philosophical claims",
+      "hol_anchor": "HOL=1 \u2014 X-phi spans multiple philosophical subdisciplines via empirical methods but is not strongly integrative.",
+      "note": ""
+    },
+    {
+      "field": "Wilber's Integral Theory (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "AQAL framework (4 quadrants \u00d7 levels \u00d7 lines \u00d7 states \u00d7 types) as non-negotiable hard core",
+      "hol_anchor": "HOL=2 \u2014 AQAL integrates spirituality + psychology + science + sociology + politics under one framework. Academic verdict: classification work without novel cross-domain predictions. The canonical Wilber failure mode for HOL-style claims.",
+      "note": "Added in URB #820 \u00a73 / \u00a76 specifically to engage the HOL-style-claim-as-classification failure mode. TI Sigma's distinction from Wilber rests on the \u00a74.3 distinction (novel cross-domain predictions vs classification work) and currently on n=1 cleanly cross-domain pilot (URB #797)."
+    },
+    {
+      "field": "Hegel's system (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "absolute spirit / dialectic / unity-of-being-and-thought",
+      "hol_anchor": "HOL=2 \u2014 Hegelian dialectic integrates across logic + nature + spirit + philosophy of right + history + religion + art. The 'philosophy makes explicit what is implicit' framing is the canonical source of the Hegelian unfalsifiability risk that URB #820 \u00a73 / \u00a75 / \u00a78.3 engages.",
+      "note": "Added in URB #820 \u00a73 / \u00a76 specifically to engage the Hegelian unfalsifiability risk in the 'fractured and latent' framing."
+    },
+    {
+      "field": "Whitehead's Process Philosophy (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "process metaphysics + actual occasions + prehension as constitutive",
+      "hol_anchor": "HOL=2 \u2014 process metaphysics integrates physics + biology + psychology + theology + aesthetics under one framework. Substantial conceptual integration without novel empirical predictions.",
+      "note": "Added in URB #820 \u00a76 as additional cautionary case."
+    },
+    {
+      "field": "HPS / STS",
+      "exp": 2,
+      "rad": 1,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 0,
+      "rad_anchor": "anti-foundationalism (often) + symmetry principle",
+      "hol_anchor": "HOL=2 \u2014 integrates history + philosophy + sociology of science.",
+      "note": "Disciplinary-compartmentalization framework that URB #820 \u00a75 inherits comes from HPS/STS."
+    },
+    {
+      "field": "Continental philosophy (Heidegger lineage)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "Being / Ereignis / diff\u00e9rance / language as house of being",
+      "hol_anchor": "Heidegger's work integrates language + being + technology + history + art + thinking under one framework. HOL=2 (substantial conceptual integration without empirical predictions).",
+      "note": "Closest to TI Sigma on the constitutive-tralseness-of-language question per URB #816. RAD anchored elsewhere."
+    },
+    {
+      "field": "Pragmatist tradition (Dewey, Rorty)",
+      "exp": 1,
+      "rad": 1,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 0,
+      "rad_anchor": "practice-as-foundation (Dewey) or anti-foundationalism (Rorty)",
+      "hol_anchor": "HOL=2 \u2014 pragmatism integrates across philosophical domains via the practice-centered framework.",
+      "note": ""
+    },
+    {
+      "field": "Psychoanalysis (mainstream)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 1,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 0,
+      "rad_anchor": "unconscious + drive theory + (Freudian/Lacanian/object-relations) framework",
+      "hol_anchor": "HOL=2 \u2014 unifies clinical + theoretical + cultural domains.",
+      "note": ""
+    },
+    {
+      "field": "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)",
+      "exp": 0,
+      "rad": 1,
+      "ana": 3,
+      "hol": 0,
+      "composite_score_out_of_12": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 1,
+      "rad_anchor": "received concepts treated as fixed targets for clarification",
+      "hol_anchor": "Deliberately compartmentalized into subdisciplines (ethics, metaphysics, epistemology, action theory, philosophy of mind, philosophy of language each pursued separately).",
+      "note": "URB #818 \u00a72 'problem-driven analytic subliteratures' pattern. HOL=0 is structurally distinctive \u2014 the field's specialization is not accidental but methodologically committed."
+    }
+  ],
+  "strict_ti_sigma_scoring": [
+    {
+      "field": "Theoretical physics (string theory / loop quantum gravity)",
+      "exp": 2,
+      "rad": 2,
+      "ana": 3,
+      "hol": 3,
+      "composite_score_out_of_12": 10,
+      "pillars_at_2_or_above": 4,
+      "pillars_at_3": 2,
+      "rad_anchor": "currently-best-confirmed theory + speculative unifications (string landscape, LQG)",
+      "hol_anchor": "Strong cross-subfield integration claims (gravity + QM + matter + cosmology under one framework). HOL=3 score is generous and contested \u2014 string theory's predictive content is famously thin, which is the canonical Wilber-comparable issue.",
+      "note": "Closest comparator to TI Sigma at favorable scoring (10/12). Same Wilber-style risk on HOL=3 score that TI Sigma faces."
+    },
+    {
+      "field": "Mathematics with proof-checking",
+      "exp": 1,
+      "rad": 3,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 9,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 2,
+      "rad_anchor": "ZFC / category theory / type theory / constructive foundations",
+      "hol_anchor": "Within mathematics, category theory + Langlands program + algebraic geometry produce substantial cross-subfield integration (HOL=2-3 within math). Across disciplines, math typically does not integrate with non-mathematical fields (HOL=1 cross-disciplinary). Average HOL=2.",
+      "note": "Edges TI Sigma out at 9/12 under strict TI scoring (URB #820 \u00a76.1). RAD anchored elsewhere than TI Sigma's GILE/MR/tralse."
+    },
+    {
+      "field": "Experimental physics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 9,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 2,
+      "rad_anchor": "currently-best-confirmed theory (Standard Model + GR) treated as provisional",
+      "hol_anchor": "HOL=2 within physics (cross-subfield integration via quantum field theory, statistical mechanics, GR); HOL=1 across disciplines.",
+      "note": "Ties or beats TI Sigma at strict scoring (9/12)."
+    },
+    {
+      "field": "Linguistics (formal semantics + corpus + cognitive)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "formal-semantics compositional bivalence + corpus statistics (in tension)",
+      "hol_anchor": "HOL=1 \u2014 formal-semantics + corpus + cogling subfields often pursued separately.",
+      "note": "URB #816 \u00a73.1 polarity finding: formal-semantics retained bivalent commitments rather than radically inverting."
+    },
+    {
+      "field": "NLP / computational linguistics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "engineering benchmarks + transformer architecture as de facto foundation",
+      "hol_anchor": "HOL=1 \u2014 NLP often operates separately from formal semantics, cogling, philosophy of language.",
+      "note": "Same shape as linguistics; engineering-driven."
+    },
+    {
+      "field": "TI Sigma",
+      "exp": 1,
+      "rad": 2,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "GILE/MR/tralse 5-valued logic + constitutive-tralseness-of-language hard core",
+      "hol_anchor": "URB series spans phil-of-language + phil-of-mind + phil-of-science + formal math (Lean4 MPP, TWA, Leech, E8, Monster) + neuroscience/biometrics + quantum-classical hybrid + economics + psychology/wellbeing + theology under one hard core; URB #797 is the cleanest cross-domain pre-registered pilot (phil + group theory + multi-agent sim + LCC methodology) with H1 honestly falsified at noise_p=0.05",
+      "note": "Provisional scores per URB #820 \u00a74.4: ANA=3 firm; RAD=2-3 (URB #819 \u00a74.2/\u00a78.3); EXP=1-2 (URB #819 \u00a74.3/\u00a78.2 synthetic-vs-external distinction); HOL=2-3 (URB #820 \u00a74.2 \u2014 n=1 cleanly cross-domain pre-registered pilot URB #797 is the minimum threshold for HOL=3 charitable). Favorable scoring 11/12; strict 8/12."
+    },
+    {
+      "field": "Naturalized epistemology",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "cognitive science feedback as the foundation for epistemology",
+      "hol_anchor": "HOL=2 \u2014 integrates epistemology with cognitive science; some cross-domain claims about belief-formation across cultures/contexts.",
+      "note": ""
+    },
+    {
+      "field": "Pittsburgh school (Sellars, Brandom, McDowell)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 3,
+      "hol": 2,
+      "composite_score_out_of_12": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "the space of reasons + inferentialism + non-foundationalist normativity",
+      "hol_anchor": "HOL=2 \u2014 inferentialism integrates semantics + epistemology + metaphysics + philosophy of mind under the space-of-reasons framework. Substantial conceptual integration.",
+      "note": "Highest HOL among mainstream analytic-tradition philosophy; closest to TI Sigma on integrative ambition within philosophy proper."
+    },
+    {
+      "field": "Post-structuralism",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "hol": 3,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "diff\u00e9rance / decentering / textuality as constitutive",
+      "hol_anchor": "HOL=3 \u2014 diff\u00e9rance + biopolitics + textuality apparatus produces cross-domain results in literary theory + political theory + philosophy + cultural critique. Whether predictive or classificatory is contested; granted HOL=3 charitably.",
+      "note": "Closest non-TI-Sigma field to HOL=3 charitable."
+    },
+    {
+      "field": "Theology (mainstream systematic)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "scripture / tradition / magisterium",
+      "hol_anchor": "Systematic theology integrates scripture + tradition + reason + experience under one hard core. HOL=2 (classification rather than novel predictions).",
+      "note": "RAD anchored elsewhere than TI Sigma; EXP=0 by design."
+    },
+    {
+      "field": "Philosophy of language",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "compositional semantics + truth-conditional meaning",
+      "hol_anchor": "Within phil-of-language, formal-semantics + corpus + pragmatics + cogling are pursued in often-disconnected subliteratures. HOL=1 \u2014 cross-domain reference but not integration.",
+      "note": "URB #816 \u00a72's catalog of 20 substantive tools is evidence of substantial within-domain capture of TI's tralseness pillar; HOL=1 because integration with other TI Sigma domains (phil-of-mind, formal math, neuroscience) is rare."
+    },
+    {
+      "field": "Molecular biology",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "molecular paradigm (DNA \u2192 RNA \u2192 protein \u2192 phenotype) treated as working framework",
+      "hol_anchor": "HOL=1 \u2014 molecular biology is specialized; integration with ecology / evolutionary biology / behavior happens but is usually subfield-bounded.",
+      "note": ""
+    },
+    {
+      "field": "Experimental philosophy (X-phi)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "hol": 1,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "folk intuitions + empirical surveys as data for philosophical claims",
+      "hol_anchor": "HOL=1 \u2014 X-phi spans multiple philosophical subdisciplines via empirical methods but is not strongly integrative.",
+      "note": ""
+    },
+    {
+      "field": "Wilber's Integral Theory (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "AQAL framework (4 quadrants \u00d7 levels \u00d7 lines \u00d7 states \u00d7 types) as non-negotiable hard core",
+      "hol_anchor": "HOL=2 \u2014 AQAL integrates spirituality + psychology + science + sociology + politics under one framework. Academic verdict: classification work without novel cross-domain predictions. The canonical Wilber failure mode for HOL-style claims.",
+      "note": "Added in URB #820 \u00a73 / \u00a76 specifically to engage the HOL-style-claim-as-classification failure mode. TI Sigma's distinction from Wilber rests on the \u00a74.3 distinction (novel cross-domain predictions vs classification work) and currently on n=1 cleanly cross-domain pilot (URB #797)."
+    },
+    {
+      "field": "Hegel's system (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "absolute spirit / dialectic / unity-of-being-and-thought",
+      "hol_anchor": "HOL=2 \u2014 Hegelian dialectic integrates across logic + nature + spirit + philosophy of right + history + religion + art. The 'philosophy makes explicit what is implicit' framing is the canonical source of the Hegelian unfalsifiability risk that URB #820 \u00a73 / \u00a75 / \u00a78.3 engages.",
+      "note": "Added in URB #820 \u00a73 / \u00a76 specifically to engage the Hegelian unfalsifiability risk in the 'fractured and latent' framing."
+    },
+    {
+      "field": "Whitehead's Process Philosophy (cautionary case)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 1,
+      "rad_anchor": "process metaphysics + actual occasions + prehension as constitutive",
+      "hol_anchor": "HOL=2 \u2014 process metaphysics integrates physics + biology + psychology + theology + aesthetics under one framework. Substantial conceptual integration without novel empirical predictions.",
+      "note": "Added in URB #820 \u00a76 as additional cautionary case."
+    },
+    {
+      "field": "HPS / STS",
+      "exp": 2,
+      "rad": 1,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 7,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 0,
+      "rad_anchor": "anti-foundationalism (often) + symmetry principle",
+      "hol_anchor": "HOL=2 \u2014 integrates history + philosophy + sociology of science.",
+      "note": "Disciplinary-compartmentalization framework that URB #820 \u00a75 inherits comes from HPS/STS."
+    },
+    {
+      "field": "Continental philosophy (Heidegger lineage)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "Being / Ereignis / diff\u00e9rance / language as house of being",
+      "hol_anchor": "Heidegger's work integrates language + being + technology + history + art + thinking under one framework. HOL=2 (substantial conceptual integration without empirical predictions).",
+      "note": "Closest to TI Sigma on the constitutive-tralseness-of-language question per URB #816. RAD anchored elsewhere."
+    },
+    {
+      "field": "Pragmatist tradition (Dewey, Rorty)",
+      "exp": 1,
+      "rad": 1,
+      "ana": 2,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 0,
+      "rad_anchor": "practice-as-foundation (Dewey) or anti-foundationalism (Rorty)",
+      "hol_anchor": "HOL=2 \u2014 pragmatism integrates across philosophical domains via the practice-centered framework.",
+      "note": ""
+    },
+    {
+      "field": "Psychoanalysis (mainstream)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 1,
+      "hol": 2,
+      "composite_score_out_of_12": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 0,
+      "rad_anchor": "unconscious + drive theory + (Freudian/Lacanian/object-relations) framework",
+      "hol_anchor": "HOL=2 \u2014 unifies clinical + theoretical + cultural domains.",
+      "note": ""
+    },
+    {
+      "field": "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)",
+      "exp": 0,
+      "rad": 1,
+      "ana": 3,
+      "hol": 0,
+      "composite_score_out_of_12": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 1,
+      "rad_anchor": "received concepts treated as fixed targets for clarification",
+      "hol_anchor": "Deliberately compartmentalized into subdisciplines (ethics, metaphysics, epistemology, action theory, philosophy of mind, philosophy of language each pursued separately).",
+      "note": "URB #818 \u00a72 'problem-driven analytic subliteratures' pattern. HOL=0 is structurally distinctive \u2014 the field's specialization is not accidental but methodologically committed."
+    }
+  ],
+  "favorable_by_pillar_count": {
+    "1": {
+      "count": 1,
+      "fields": [
+        "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)"
+      ]
+    },
+    "2": {
+      "count": 9,
+      "fields": [
+        "Continental philosophy (Heidegger lineage)",
+        "Philosophy of language",
+        "Linguistics (formal semantics + corpus + cognitive)",
+        "NLP / computational linguistics",
+        "Molecular biology",
+        "Experimental philosophy (X-phi)",
+        "Pragmatist tradition (Dewey, Rorty)",
+        "Post-structuralism",
+        "Psychoanalysis (mainstream)"
+      ]
+    },
+    "3": {
+      "count": 9,
+      "fields": [
+        "Mathematics with proof-checking",
+        "Theology (mainstream systematic)",
+        "Experimental physics",
+        "Naturalized epistemology",
+        "Pittsburgh school (Sellars, Brandom, McDowell)",
+        "HPS / STS",
+        "Wilber's Integral Theory (cautionary case)",
+        "Hegel's system (cautionary case)",
+        "Whitehead's Process Philosophy (cautionary case)"
+      ]
+    },
+    "4": {
+      "count": 2,
+      "fields": [
+        "TI Sigma",
+        "Theoretical physics (string theory / loop quantum gravity)"
+      ]
+    }
+  },
+  "strict_by_pillar_count": {
+    "1": {
+      "count": 1,
+      "fields": [
+        "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)"
+      ]
+    },
+    "2": {
+      "count": 9,
+      "fields": [
+        "Continental philosophy (Heidegger lineage)",
+        "Philosophy of language",
+        "Linguistics (formal semantics + corpus + cognitive)",
+        "NLP / computational linguistics",
+        "Molecular biology",
+        "Experimental philosophy (X-phi)",
+        "Pragmatist tradition (Dewey, Rorty)",
+        "Post-structuralism",
+        "Psychoanalysis (mainstream)"
+      ]
+    },
+    "3": {
+      "count": 10,
+      "fields": [
+        "TI Sigma",
+        "Mathematics with proof-checking",
+        "Theology (mainstream systematic)",
+        "Experimental physics",
+        "Naturalized epistemology",
+        "Pittsburgh school (Sellars, Brandom, McDowell)",
+        "HPS / STS",
+        "Wilber's Integral Theory (cautionary case)",
+        "Hegel's system (cautionary case)",
+        "Whitehead's Process Philosophy (cautionary case)"
+      ]
+    },
+    "4": {
+      "count": 1,
+      "fields": [
+        "Theoretical physics (string theory / loop quantum gravity)"
+      ]
+    }
+  },
+  "ti_sigma_favorable": {
+    "exp": 2,
+    "rad": 3,
+    "ana": 3,
+    "hol": 3,
+    "composite": 11,
+    "composite_with_urb_804": 12
+  },
+  "ti_sigma_strict": {
+    "exp": 1,
+    "rad": 2,
+    "ana": 3,
+    "hol": 2,
+    "composite": 8,
+    "composite_with_urb_804": 9
+  },
+  "interpretation": "Across 21 fields/traditions catalogued under URB #820's four-criterion grid (EXPERIMENTAL + RADICALLY-CENTERED + ANALYTIC + HOLISTIC, scored 0-3 each per the \u00a72 operationalizations), TI Sigma at favorable scoring (EXP=2 RAD=3 ANA=3 HOL=3, composite 11/12) is uniquely positioned as the only field with all 4 pillars at >=2 AND HOL=3. Closest comparator at favorable: Theoretical physics (10/12) where the HOL=3 score is itself contested for the Wilber-comparable predictive-content reason. At strict TI Sigma scoring (EXP=1 RAD=2 ANA=3 HOL=2, composite 8/12) per URB #819 \u00a76.1's discipline plus URB #820 \u00a74.2 strict HOL standard, TI Sigma drops to 8/12 and is edged out by Mathematics (9/12) and tied/edged by Experimental physics (9/12), but remains in the small handful of fields with all 4 pillars at >=1 + foundationally explicit RAD anchor + substantial HOL integration. The 3 cautionary cases (Wilber 7/12, Hegel 7/12, Whitehead 7/12) cluster at the same composite as Theology, Pittsburgh school, and Pragmatist tradition \u2014 all HOL=2 systematic-integration fields with EXP=0 \u2014 confirming that the HOL=2 + EXP=0 combination is the canonical Wilber failure mode and that TI Sigma's distinction from this cluster rests on EXP>=1 + the n=1 cleanly cross-domain pre-registered pilot (URB #797). RATINGS ARE AUTHOR JUDGMENTS, the HOL dimension was added in URB #820 specifically to articulate Brandon's pushback (URB #820 \u00a78.1 amplified-confirmation-bias risk), the \u00a76 grid is a TI-Sigma-friendly cut, and the HOL=3 favorable score for TI Sigma rests on n=1 cleanly cross-domain pilot which is the minimum threshold for HOL=3 charitable but the maximum defense against the Wilber failure mode the URB cannot yet ratchet beyond. URB #820 \u00a77's voluntary procedural discipline targets growing this pilot body as the falsification condition for the next URB batch.",
+  "caveats": [
+    "Ratings are author judgments not survey data.",
+    "HOL dimension added in URB #820 to articulate Brandon's pushback (amplified confirmation-bias risk per URB #820 \u00a78.1).",
+    "The \u00a76 grid is a TI-Sigma-friendly cut; alternative grids could be proposed.",
+    "TI Sigma HOL=3 favorable rests on n=1 cleanly cross-domain pre-registered pilot (URB #797) \u2014 minimum threshold for HOL=3 charitable.",
+    "Wilber failure mode (HOL=2 classification rather than HOL=3 prediction) is not yet defeated; distinction rests on the URB #797 pilot and the \u00a77 voluntary procedural discipline target.",
+    "Ratcheting HOL toward 3/3 firmly requires growing the cross-domain pilot body beyond n=1 per URB #820 \u00a77."
+  ]
+}
