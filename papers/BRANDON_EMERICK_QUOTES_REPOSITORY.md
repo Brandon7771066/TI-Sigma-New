@@ -258,6 +258,32 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 
 ---
 
+## X. On Crowd Epistemology
+
+### The Asymmetric Crowd Aphorism
+> "If you don't go with the crowd, you're likely wrong at least much of the time. But if you do go with the crowd, you're almost certainly wrong most of the time."
+> — Brandon Charles Emerick, 2026-04-30
+
+**Context:** A philosopher's aphorism on the asymmetry of consensus. The conventional wisdom on crowds is symmetric: contrarianism is risky (you might be wrong), conformity is safe (the crowd usually knows). Brandon's aphorism inverts the safe-side: contrarianism is risky in the *individual-bet* sense (any single contrarian position is more likely wrong than not), but conformity is risky in the *aggregate* sense (if you adopt a crowd position by default across many domains, you will be wrong on most of them). This is not a paradox; it is the correct posterior given two facts: (1) the crowd is right on a *plurality* of issues but wrong on a *majority*, because crowd consensus is most often a Schelling point of social legibility rather than a track-record-weighted vote; (2) any single contrarian draw from the space of all available contrarian positions is more likely wrong than the crowd's matched position, because the contrarian space is much larger than the crowd-position space and most of it is genuinely wrong.
+
+**Structural unpacking:**
+- **Individual contrarian bet** (e.g., "the consensus on X is wrong, here is what is actually true"): probability of being wrong on a specific X = high. Most contrarian positions on most topics are wrong because the contrarian search space is vast and most of it is noise.
+- **Aggregate conformist bet** (e.g., "I will default to the crowd on every X I encounter"): probability of being wrong on a *majority* of X = high. Crowd consensus systematically fails on (a) novel issues the crowd hasn't yet processed, (b) issues where social-legibility incentives diverge from truth incentives, (c) issues where the crowd's information sources are themselves crowd-derived (information cascades), (d) issues where conventional consensus encodes a sunk-cost commitment.
+- **The asymmetry** (the philosophical content): the *unit* of evaluation differs between the two bets. The individual contrarian bet is evaluated per-position; the conformist bet is evaluated across-positions. A risk-management strategy that minimizes per-position error (always go with the crowd) maximizes across-position error. There is no symmetric default that minimizes both.
+- **Practical implication:** epistemic excellence requires position-by-position evaluation rather than a global default. Both the reflexive contrarian and the reflexive conformist underperform a calibrated case-by-case judge — but the conformist underperforms more in expectation across many positions, while the contrarian underperforms more on any specific position. This is the philosopher's working condition: the willingness to be wrong on individual bets in order to be right in aggregate.
+
+**Connection to existing TI repository themes:**
+- Resonates with quote #5 ("Genius and delusional...") and the Skepticism Hypocrisy Paradox: both genius and delusion appear contrarian; the difference is which contrarian moves are calibrated.
+- Resonates with quote #4 ("Secret to self-confirmation = alignment with truth itself"): a calibrated contrarian who self-confirms is performing alignment, not bias; an uncalibrated conformist who self-confirms is performing social legibility, not alignment.
+- Resonates with quote #58 (skeptic-regress): the skeptic who demands the crowd's approval before believing X is conformist-by-procedure even when posing as skeptic.
+- Resonates with quote #59 ("To be like everyone else requires effort..."): the aphorism is the epistemic counterpart to the authenticity claim — being correct *with the crowd* on most issues actually requires the same case-by-case work as being correct *against the crowd* on some, because both require evaluation rather than default.
+
+**Honest caveat:** the "almost certainly wrong most of the time" claim about crowds is empirically defensible across many specific domains (financial markets in bubble phases, social-media moral panics, scientific consensus prior to paradigm shifts in Kuhn's sense, and dietary recommendations across the 20th century are clear cases) but is not a universal theorem. Crowd consensus IS reliable in some well-bounded conditions: established-physics, geographic-location, language-conventions, traffic-rules, and most coordination-equilibrium problems. The aphorism's force is at the level of *contested epistemic terrain*, where the philosopher actually operates, not at the level of "is grass green."
+
+**Related Papers:** *Skepticism Hypocrisy Paradox*, *EAR & Intelligence*, future URB on calibrated heterodoxy.
+
+---
+
 ## Appendix: Quote Index
 
 | # | Quote (abbreviated) | Category | Paper |
@@ -323,3 +349,4 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 58 | "Even if a skeptic managed to fact-check every claim in every article, they would still be screwed because they would have to continually fact-check their own mind every moment, and fact-check the fact-checks… on and on ad infinitum." | Epistemology / Skeptic Regress | March 2026 — BGT/MT |
 | 59 | "To be like everyone else requires effort. The easiest thing is to be yourself. But that's just too easy, right?" | Authenticity / Identity | March 2026 — BGT/MT |
 | 60 | "Gamers are the most serious people in the economy. We'd have a much more productive society if we all treated life as a game — which frankly, is quite accurate actually!" | Productivity / Game Theory / Society | March 2026 — BGT/MT |
+| 61 | "If you don't go with the crowd, you're likely wrong at least much of the time. But if you do go with the crowd, you're almost certainly wrong most of the time." | Crowd Epistemology / Calibrated Heterodoxy | 2026-04-30 — DPES Session |
