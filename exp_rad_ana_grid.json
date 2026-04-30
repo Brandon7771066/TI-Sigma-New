@@ -1,0 +1,350 @@
+{
+  "n_fields": 17,
+  "fields": [
+    {
+      "field": "TI Sigma",
+      "exp": 2,
+      "rad": 3,
+      "ana": 3,
+      "composite_score_out_of_9": 8,
+      "pillars_at_2_or_above": 3,
+      "pillars_at_3": 2,
+      "rad_anchor": "GILE/MR/tralse 5-valued logic + constitutive-tralseness-of-language hard core",
+      "note": "EXP=2 because URBs #796 #797 #799 #801 #802 #803 are real pre-registered executed pilots with honest falsifications (URB #802 H1) and honest report-against-prior, but URB #804 DANDI replication remains pending and several other operationalizable hypotheses are unexecuted; ratcheting EXP to 3 requires URB #804 execution per URB #818 \u00a78.5 / URB #819 \u00a77. RAD=3 because GILE/MR/tralse hard core is non-negotiable AND the protective belt is generating progressive updates per Lakatosian discipline (H1 falsified \u2192 mechanism identified; H2 H3 supported). ANA=3 because formal definitions, mathematical structure (F4 BOK 24-cell, Leech, E8, Lean4 MPP formalizations), pre-registration discipline, brutal-honesty audits as analytic discipline are pervasive throughout the URB series."
+    },
+    {
+      "field": "Mathematics with proof-checking",
+      "exp": 1,
+      "rad": 3,
+      "ana": 3,
+      "composite_score_out_of_9": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "ZFC / category theory / type theory / constructive foundations (varies by community)",
+      "note": "Same shape as TI Sigma minus EXP, with RAD anchored at ZFC or alternative foundations rather than GILE/MR/tralse. Mathematicians in ZFC do not grasp TI not because they lack a pillar but because their RAD anchor is different. EXP=1 because numerical pilots and proof-checking are common but the field's primary mode is proof, not pre-registered empirical pilot."
+    },
+    {
+      "field": "Linguistics (formal semantics + corpus + cognitive)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "formal-semantics compositional bivalence + corpus statistics (in tension)",
+      "note": "Strong EXP and ANA. RAD=1 per URB #816 \u00a73.1: formal-semantics retained bivalent compositional commitments for decades despite mounting evidence from cognitive linguistics, distributional semantics, and now LLMs. The polarity-flip to constitutively-tralse foundation has not occurred; the field continues patching bivalent cores with corrective machinery rather than radically inverting. This is the canonical case of EXP+ANA without RAD."
+    },
+    {
+      "field": "NLP / computational linguistics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "engineering benchmarks (BLEU, GLUE, etc.) + transformer architecture as de facto foundation",
+      "note": "Same shape as linguistics. RAD=1 because the field is engineering-driven (benchmark-chasing) rather than foundationally committed. The current de facto foundation (transformer architectures + scaling laws) is treated as working method, not as non-negotiable."
+    },
+    {
+      "field": "Experimental physics",
+      "exp": 3,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 7,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 2,
+      "rad_anchor": "currently-best-confirmed theory (Standard Model + GR) treated as provisional",
+      "note": "Strong EXP and ANA. RAD=1 because foundations are explicitly treated as in-principle revisable; a physicist who committed to a particular interpretation of QM as non-negotiable would lose empirical-science status. This is the canonical case where EXP requires foundational humility, so RAD drops."
+    },
+    {
+      "field": "Philosophy of language",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "compositional semantics + truth-conditional meaning (Frege/Tarski lineage)",
+      "note": "Strong on ANA and EXP via linguistic data and intuition pumps. RAD=1 because the foundational commitment to compositionality and truth-conditional semantics is treated as the working framework but not radically defended as non-negotiable; alternative foundations (use theories, dynamic semantics, distributional semantics) are admitted into the conversation."
+    },
+    {
+      "field": "Molecular biology",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "composite_score_out_of_9": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "molecular paradigm (DNA \u2192 RNA \u2192 protein \u2192 phenotype) treated as working framework",
+      "note": "Strong EXP. ANA=2 because formal apparatus is moderate (kinetics models, sequence statistics, structural biology) but the field is more empirical-descriptive than formal. RAD=1 because the molecular paradigm is the working framework but is treated as a successful working hypothesis, not as Lakatosian non-negotiable hard core."
+    },
+    {
+      "field": "Naturalized epistemology",
+      "exp": 2,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "cognitive science feedback as the foundation for epistemology",
+      "note": "Strong ANA. EXP=2 because the field imports cognitive science empirical work but does not always pre-register its philosophical hypotheses. RAD=1 because naturalized epistemology rejects a-priori foundational commitments in epistemology, treating cognitive science as the relevant evidence rather than as a foundational anchor."
+    },
+    {
+      "field": "Experimental philosophy (X-phi)",
+      "exp": 3,
+      "rad": 1,
+      "ana": 2,
+      "composite_score_out_of_9": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "folk intuitions + empirical surveys as data for philosophical claims",
+      "note": "Strong EXP via empirical surveys and intuition-elicitation. ANA=2 because the field uses statistical methods and pre-registration but is methodologically diverse. RAD=1 because the field's foundational stance is anti-foundationalist in the sense of refusing to privilege any particular set of intuitions as foundational."
+    },
+    {
+      "field": "Pittsburgh school (Sellars, Brandom, McDowell)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 3,
+      "composite_score_out_of_9": 6,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "the space of reasons + inferentialism + non-foundationalist normativity",
+      "note": "Strong ANA. RAD=2 because the foundational commitment to the space of reasons / inferentialism is explicit and defended but the tradition is also explicitly non-foundationalist in the classical sense. EXP=1 because the tradition uses linguistic and historical case studies but does not produce pre-registered empirical pilots."
+    },
+    {
+      "field": "Theology (mainstream)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 2,
+      "composite_score_out_of_9": 5,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 1,
+      "rad_anchor": "scripture / tradition / magisterium",
+      "note": "RAD=3 because scripture or tradition functions as non-negotiable hard core. ANA=2 because formal theology (Aquinas, Anselm, modern systematic theology) uses substantial formal apparatus but not pervasively. EXP=0 because empirical pilot is not the field's mode of work. Failure to grasp TI is a different-anchor issue, not a missing-pillar issue (RAD anchored at scripture not at GILE/MR/tralse)."
+    },
+    {
+      "field": "HPS / STS (history and philosophy of science / science and technology studies)",
+      "exp": 2,
+      "rad": 1,
+      "ana": 2,
+      "composite_score_out_of_9": 5,
+      "pillars_at_2_or_above": 2,
+      "pillars_at_3": 0,
+      "rad_anchor": "anti-foundationalism (often) + symmetry principle",
+      "note": "EXP=2 via descriptive empirical work on actual scientific practice. ANA=2 because the apparatus (Kuhnian paradigms, Latourian actor-network theory, conceptual-history methods) is formal but not load-bearing throughout. RAD=1 because the tradition is mostly anti-foundationalist by methodological commitment."
+    },
+    {
+      "field": "Continental philosophy (Heidegger lineage)",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "composite_score_out_of_9": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 1,
+      "rad_anchor": "Being / Ereignis / diff\u00e9rance / language as house of being",
+      "note": "RAD=3 because foundational commitments to Being, Ereignis, diff\u00e9rance are non-negotiable for the tradition. ANA=1 because the tradition deliberately resists analytic apparatus in favor of phenomenological, hermeneutic, or rhetorical methods. EXP=0 because empirical pilot is not the field's mode. The Heideggerian commitment to language as constitutively prior to bivalent logic OVERLAPS with URB #816's constitutive-tralseness finding \u2014 closer to TI than analytic philosophy is on the language question \u2014 but the RAD anchor is different."
+    },
+    {
+      "field": "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)",
+      "exp": 0,
+      "rad": 1,
+      "ana": 3,
+      "composite_score_out_of_9": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 1,
+      "rad_anchor": "received concepts (knowledge, free will, justice, etc.) treated as fixed targets for clarification",
+      "note": "ANA=3 because the analytic methods (analysis, distinction-drawing, counterexample-construction) are formal and load-bearing. RAD=1 because the field operates on received concepts without committing to a foundational explanation of why these are the right concepts. EXP=0-1 because X-phi and naturalized epistemology are small subfields. The URB #818 \u00a72 'problem-driven analytic subliteratures' pattern."
+    },
+    {
+      "field": "Post-structuralism",
+      "exp": 0,
+      "rad": 3,
+      "ana": 1,
+      "composite_score_out_of_9": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 1,
+      "rad_anchor": "diff\u00e9rance / decentering / textuality as constitutive",
+      "note": "RAD=3 because foundational commitments to diff\u00e9rance, decentering, and textuality are non-negotiable for the tradition and define its identity. ANA=1 because the tradition deliberately resists analytic apparatus in favor of literary, performative, or paradoxical methods. EXP=0 because empirical pilot is not the field's mode."
+    },
+    {
+      "field": "Pragmatist tradition (Dewey, Rorty)",
+      "exp": 1,
+      "rad": 1,
+      "ana": 2,
+      "composite_score_out_of_9": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 0,
+      "rad_anchor": "practice-as-foundation (or anti-foundationalism in Rorty)",
+      "note": "Moderate across the board. RAD=1 because the tradition is explicitly anti-foundationalist (Rorty) or treats practice as foundation in a non-Lakatosian way (Dewey). EXP=1 because empirical engagement is via examples rather than pre-registered pilots. ANA=2 because formal apparatus is present but not load-bearing."
+    },
+    {
+      "field": "Psychoanalysis (mainstream)",
+      "exp": 1,
+      "rad": 2,
+      "ana": 1,
+      "composite_score_out_of_9": 4,
+      "pillars_at_2_or_above": 1,
+      "pillars_at_3": 0,
+      "rad_anchor": "unconscious + drive theory + (Freudian or Lacanian or object-relations) framework as working foundation",
+      "note": "RAD=2 because the framework commitments are explicit and defended but the field admits substantial revision (post-Freudian, relational, Lacanian, etc.). EXP=1 because case studies are used but pre-registration is rare. ANA=1 because formal apparatus is present (Lacanian topology, structural diagrams) but not load-bearing throughout."
+    }
+  ],
+  "by_pillar_count": {
+    "0": {
+      "count": 0,
+      "fields": []
+    },
+    "1": {
+      "count": 5,
+      "fields": [
+        "Continental philosophy (Heidegger lineage)",
+        "Mainstream analytic philosophy (ethics, metaphysics, epistemology core)",
+        "Pragmatist tradition (Dewey, Rorty)",
+        "Post-structuralism",
+        "Psychoanalysis (mainstream)"
+      ]
+    },
+    "2": {
+      "count": 11,
+      "fields": [
+        "Mathematics with proof-checking",
+        "Theology (mainstream)",
+        "Philosophy of language",
+        "Linguistics (formal semantics + corpus + cognitive)",
+        "NLP / computational linguistics",
+        "Experimental physics",
+        "Molecular biology",
+        "Naturalized epistemology",
+        "Experimental philosophy (X-phi)",
+        "Pittsburgh school (Sellars, Brandom, McDowell)",
+        "HPS / STS (history and philosophy of science / science and technology studies)"
+      ]
+    },
+    "3": {
+      "count": 1,
+      "fields": [
+        "TI Sigma"
+      ]
+    }
+  },
+  "ti_sigma_favorable_scoring": {
+    "exp": 2,
+    "rad": 3,
+    "ana": 3,
+    "composite_current": 8,
+    "composite_with_urb_804": 9,
+    "rad_anchor": "GILE/MR/tralse 5-valued logic + constitutive-tralseness-of-language hard core",
+    "other_fields_with_all_3_at_2_or_above": []
+  },
+  "ti_sigma_strict_scoring": {
+    "exp": 1,
+    "rad": 2,
+    "ana": 3,
+    "composite_current": 6,
+    "composite_with_urb_804": 7,
+    "pillars_at_2_or_above": 2
+  },
+  "sensitivity_top_5_strict": [
+    {
+      "field": "Mathematics with proof-checking",
+      "composite": 7,
+      "exp": 1,
+      "rad": 3,
+      "ana": 3
+    },
+    {
+      "field": "Linguistics (formal semantics + corpus + cognitive)",
+      "composite": 7,
+      "exp": 3,
+      "rad": 1,
+      "ana": 3
+    },
+    {
+      "field": "NLP / computational linguistics",
+      "composite": 7,
+      "exp": 3,
+      "rad": 1,
+      "ana": 3
+    },
+    {
+      "field": "Experimental physics",
+      "composite": 7,
+      "exp": 3,
+      "rad": 1,
+      "ana": 3
+    },
+    {
+      "field": "TI Sigma",
+      "composite": 6,
+      "exp": 1,
+      "rad": 2,
+      "ana": 3
+    }
+  ],
+  "fields_with_different_rad_anchor": [
+    {
+      "field": "Mathematics with proof-checking",
+      "rad_anchor": "ZFC / category theory / type theory / constructive foundations (varies by community)",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Theology (mainstream)",
+      "rad_anchor": "scripture / tradition / magisterium",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Philosophy of language",
+      "rad_anchor": "compositional semantics + truth-conditional meaning (Frege/Tarski lineage)",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Linguistics (formal semantics + corpus + cognitive)",
+      "rad_anchor": "formal-semantics compositional bivalence + corpus statistics (in tension)",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "NLP / computational linguistics",
+      "rad_anchor": "engineering benchmarks (BLEU, GLUE, etc.) + transformer architecture as de facto foundation",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Experimental physics",
+      "rad_anchor": "currently-best-confirmed theory (Standard Model + GR) treated as provisional",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Molecular biology",
+      "rad_anchor": "molecular paradigm (DNA \u2192 RNA \u2192 protein \u2192 phenotype) treated as working framework",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Naturalized epistemology",
+      "rad_anchor": "cognitive science feedback as the foundation for epistemology",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Experimental philosophy (X-phi)",
+      "rad_anchor": "folk intuitions + empirical surveys as data for philosophical claims",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "Pittsburgh school (Sellars, Brandom, McDowell)",
+      "rad_anchor": "the space of reasons + inferentialism + non-foundationalist normativity",
+      "pillars_at_2_or_above": 2
+    },
+    {
+      "field": "HPS / STS (history and philosophy of science / science and technology studies)",
+      "rad_anchor": "anti-foundationalism (often) + symmetry principle",
+      "pillars_at_2_or_above": 2
+    }
+  ],
+  "interpretation": "Across 17 fields/traditions catalogued under URB #819's three-criterion grid (EXPERIMENTAL + RADICALLY-CENTERED + ANALYTIC, scored 0-3 each per the \u00a72 operationalizations), TI Sigma is the only field with all three pillars at >=2 currently (EXP=2 RAD=3 ANA=3, composite 8/9), and would be the only field with all three pillars at 3 if URB #804 DANDI replication is executed (composite 9/9). The closest comparison fields each lack at least one pillar at >=2 OR satisfy all pillars but anchor RAD elsewhere: mathematics (ANA=3 RAD=3 EXP=1, RAD anchored at ZFC/foundations not GILE/MR/tralse); linguistics (ANA=3 EXP=3 RAD=1 because formal-semantics retained bivalent commitments per URB #816 \u00a73.1); mainstream analytic philosophy (ANA=3 RAD=1 EXP=0-1, the URB #818 \u00a72 problem-driven-analytic-subliteratures pattern); theology (RAD=3 ANA=2 EXP=0, RAD anchored at scripture); continental philosophy (RAD=3 ANA=1 EXP=0, RAD anchored at Being/Ereignis); post-structuralism (RAD=3 ANA=1 EXP=0, RAD anchored at diff\u00e9rance). The structural-rarity claim is supported under author coding: the EXP+RAD+ANA combination is genuinely uncommon because of the \u00a73 tensions (EXP usually erodes RAD; RAD usually limits EXP; ANA without RAD or EXP reduces to clarification work). The negative claim about other fields needs the qualification (URB #819 \u00a75) that several fields satisfy 2-3 pillars but anchor RAD elsewhere; their failure to grasp TI is a different-anchor issue, not a missing-pillar issue. RATINGS ARE AUTHOR JUDGMENTS not survey data; the author has the EXP+RAD+ANA framework in mind while rating TI Sigma's own program against it (confirmation-bias risk per URB #818 \u00a79.4 and URB #819 \u00a78.4); sensitivity analysis under alternative operationalizations (foundationalist-vs-phenomenological-vs-normative groundings of RAD) is not performed and would be needed to substantiate any robustness claim. The catalog is illustrative of URB #819's structural-distinctiveness claim under one reasonable coding; it does not adjudicate against alternative codings that would weaken the claim, and the \u00a76 grid is itself a TI-Sigma-friendly cut that a field with a different framework could legitimately propose replacing with a different grid that would not place TI Sigma in a structurally distinctive position.",
+  "caveats": [
+    "Ratings are author judgments not survey data.",
+    "The author has the EXP+RAD+ANA framework in mind while rating TI Sigma's own program (confirmation-bias risk).",
+    "Sensitivity analysis under alternative RAD operationalizations not performed.",
+    "The \u00a76 grid is a TI-Sigma-friendly cut; alternative grids could be proposed.",
+    "TI Sigma EXP=2 currently; ratcheting to 3 requires URB #804 execution per URB #818 \u00a78.5 binding commitment.",
+    "RAD=3 score depends on Lakatosian protective-belt continuing to absorb experimental hits with progressive (not degenerating) updates; if EXP execution stops, RAD becomes harder to defend."
+  ]
+}
