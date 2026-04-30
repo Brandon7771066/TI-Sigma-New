@@ -1,0 +1,390 @@
+{
+  "n_tools": 20,
+  "n_constitutive": 10,
+  "n_corrective": 10,
+  "by_tralse_type": {
+    "presupposition": {
+      "total": 3,
+      "constitutive": 0,
+      "corrective": 3
+    },
+    "polysemy (proto)": {
+      "total": 1,
+      "constitutive": 0,
+      "corrective": 1
+    },
+    "definitional-bistability (proto)": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "distributional": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "definitional-bistability (across time)": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "vagueness": {
+      "total": 3,
+      "constitutive": 1,
+      "corrective": 2
+    },
+    "vagueness / categorization": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "context (modal base)": {
+      "total": 1,
+      "constitutive": 0,
+      "corrective": 1
+    },
+    "implicature": {
+      "total": 1,
+      "constitutive": 0,
+      "corrective": 1
+    },
+    "context": {
+      "total": 1,
+      "constitutive": 0,
+      "corrective": 1
+    },
+    "dynamic-update": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "all (foundational reframing)": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "indexicality": {
+      "total": 1,
+      "constitutive": 0,
+      "corrective": 1
+    },
+    "definitional-bistability": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "alternatives / dynamic": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    },
+    "all (distributional, context, polysemy, implicature emerge in the geometry)": {
+      "total": 1,
+      "constitutive": 1,
+      "corrective": 0
+    }
+  },
+  "by_decade": {
+    "1900s": [
+      "Theory of Descriptions"
+    ],
+    "1890s": [
+      "Sense / Reference distinction"
+    ],
+    "1950s": [
+      "Presupposition / truth-value gaps",
+      "Two Dogmas of Empiricism",
+      "Distributional structure"
+    ],
+    "1930s": [
+      "Three-valued logics (Kleene, Bochvar)"
+    ],
+    "1960s": [
+      "The Structure of Scientific Revolutions",
+      "Fuzzy sets / fuzzy semantics",
+      "Possible-worlds semantics for modality"
+    ],
+    "1970s": [
+      "Prototype theory in linguistics",
+      "Supervaluation for vagueness",
+      "Scalar implicature",
+      "Scorekeeping / contextualism"
+    ],
+    "1980s": [
+      "Dynamic semantics / file change semantics / DRT",
+      "Cognitive linguistics / Women, Fire, and Dangerous Things",
+      "Demonstratives / indexicality"
+    ],
+    "1990s": [
+      "Vagueness (Williamson)"
+    ],
+    "2010s": [
+      "Verbal Disputes",
+      "Distributional semantics at scale (word2vec, GloVe, BERT, GPT)"
+    ],
+    "2000s": [
+      "Inquisitive semantics"
+    ]
+  },
+  "tools": [
+    {
+      "name": "Theory of Descriptions",
+      "introduced": "1905",
+      "key_figures": [
+        "Bertrand Russell"
+      ],
+      "phenomenon": "denotation failure ('the present King of France is bald')",
+      "tralse_type": "presupposition",
+      "mechanism": "rewrite definite descriptions as existential quantifications; preserves bivalence by making such sentences false rather than gappy",
+      "constitutive": false,
+      "limit": "preserves bivalence by stipulation; many linguists later preferred Strawson's gap analysis as more faithful to ordinary usage"
+    },
+    {
+      "name": "Sense / Reference distinction",
+      "introduced": "1892",
+      "key_figures": [
+        "Gottlob Frege"
+      ],
+      "phenomenon": "two terms with same reference but different cognitive content (Hesperus / Phosphorus); also raised proto-presuppositional concerns (e.g. denotation failure of 'the present King of France') though without formalizing them in the modern Strawson/Heim sense",
+      "tralse_type": "polysemy (proto)",
+      "mechanism": "two-level meaning: sense (mode of presentation) + reference (object)",
+      "constitutive": false,
+      "limit": "binary distinction; cited here mainly for sense/reference, not for a fully developed presupposition theory (which traces more directly to Strawson 1950 and Heim 1983); does not handle context-conditioned reference shifts at the granularity LLMs do"
+    },
+    {
+      "name": "Presupposition / truth-value gaps",
+      "introduced": "1950",
+      "key_figures": [
+        "P. F. Strawson"
+      ],
+      "phenomenon": "sentences with failed presuppositions ('the King of France is bald' when there is no king)",
+      "tralse_type": "presupposition",
+      "mechanism": "third truth-value (gap, undefined, or 'neither true nor false')",
+      "constitutive": false,
+      "limit": "handles presupposition specifically; not a general theory of tralseness"
+    },
+    {
+      "name": "Three-valued logics (Kleene, Bochvar)",
+      "introduced": "1938 / 1939",
+      "key_figures": [
+        "Stephen Kleene",
+        "Dmitri Bochvar"
+      ],
+      "phenomenon": "presupposition failure, partial functions, undefined values",
+      "tralse_type": "presupposition",
+      "mechanism": "third truth-value with strong/weak connective tables",
+      "constitutive": false,
+      "limit": "specifically for undefinedness; does not address polysemy, vagueness, or definitional bistability"
+    },
+    {
+      "name": "Two Dogmas of Empiricism",
+      "introduced": "1951",
+      "key_figures": [
+        "W. V. O. Quine"
+      ],
+      "phenomenon": "the analytic-synthetic distinction breaks down on examination",
+      "tralse_type": "definitional-bistability (proto)",
+      "mechanism": "argument that meaning and fact cannot be cleanly separated; web-of-belief holism",
+      "constitutive": true,
+      "limit": "philosophical critique; does not provide a positive formal alternative"
+    },
+    {
+      "name": "Distributional structure",
+      "introduced": "1954",
+      "key_figures": [
+        "Zellig Harris",
+        "J. R. Firth (1957)"
+      ],
+      "phenomenon": "lexical meaning as patterns of co-occurrence",
+      "tralse_type": "distributional",
+      "mechanism": "meaning as distribution over linguistic contexts ('you shall know a word by the company it keeps')",
+      "constitutive": true,
+      "limit": "originally informal; took five decades to become computationally tractable (word2vec 2013)"
+    },
+    {
+      "name": "The Structure of Scientific Revolutions",
+      "introduced": "1962",
+      "key_figures": [
+        "Thomas Kuhn"
+      ],
+      "phenomenon": "scientific terms shift meaning across paradigms (mass, species, gene)",
+      "tralse_type": "definitional-bistability (across time)",
+      "mechanism": "paradigms as systems of meaning; incommensurability across paradigm shifts",
+      "constitutive": true,
+      "limit": "largely historical / philosophical; not a formal semantics"
+    },
+    {
+      "name": "Fuzzy sets / fuzzy semantics",
+      "introduced": "1965",
+      "key_figures": [
+        "Lotfi Zadeh"
+      ],
+      "phenomenon": "vague predicates with no sharp boundary ('tall', 'red', 'old')",
+      "tralse_type": "vagueness",
+      "mechanism": "graded membership in [0,1]; truth-degrees rather than truth-values",
+      "constitutive": true,
+      "limit": "gradient-based; less natural for discrete bistability and for combinatorial tralseness"
+    },
+    {
+      "name": "Prototype theory in linguistics",
+      "introduced": "1973-1975",
+      "key_figures": [
+        "Eleanor Rosch"
+      ],
+      "phenomenon": "category membership is graded; prototypical members vs peripheral ('robin' vs 'penguin' as 'bird')",
+      "tralse_type": "vagueness / categorization",
+      "mechanism": "categories defined by similarity to prototype, not by necessary-and-sufficient conditions",
+      "constitutive": true,
+      "limit": "psychological focus; less developed as a formal semantic system"
+    },
+    {
+      "name": "Supervaluation for vagueness",
+      "introduced": "1975",
+      "key_figures": [
+        "Kit Fine"
+      ],
+      "phenomenon": "Sorites paradox; vague predicates",
+      "tralse_type": "vagueness",
+      "mechanism": "truth = true on all admissible precisifications; preserves classical tautologies despite vagueness",
+      "constitutive": false,
+      "limit": "preserves bivalence at the cost of higher-order vagueness; Williamson 1994 critiques the framework's stability"
+    },
+    {
+      "name": "Possible-worlds semantics for modality",
+      "introduced": "1968-1973",
+      "key_figures": [
+        "Robert Stalnaker",
+        "David Lewis",
+        "Angelika Kratzer"
+      ],
+      "phenomenon": "counterfactuals, possibility, necessity",
+      "tralse_type": "context (modal base)",
+      "mechanism": "truth relative to a world; modals quantify over accessible worlds",
+      "constitutive": false,
+      "limit": "world-relative bivalence; does not directly address polysemy or definitional bistability"
+    },
+    {
+      "name": "Scalar implicature",
+      "introduced": "1972",
+      "key_figures": [
+        "Laurence Horn",
+        "Stephen Levinson"
+      ],
+      "phenomenon": "'some' implicates 'not all'; pragmatic strengthening of literal content",
+      "tralse_type": "implicature",
+      "mechanism": "Gricean-style maxim-driven inference layered on top of bivalent semantic content",
+      "constitutive": false,
+      "limit": "two-layer architecture (semantics bivalent, pragmatics adds content); preserves bivalent core"
+    },
+    {
+      "name": "Scorekeeping / contextualism",
+      "introduced": "1979",
+      "key_figures": [
+        "David Lewis",
+        "Keith DeRose",
+        "Jason Stanley"
+      ],
+      "phenomenon": "truth-conditions depend on conversational context (epistemic standards, comparison classes)",
+      "tralse_type": "context",
+      "mechanism": "context as an index that shifts truth-conditions; conversational scoreboard updated by participants",
+      "constitutive": false,
+      "limit": "preserves bivalent truth at each context-index; the index is the parameter, the truth is bivalent given the index"
+    },
+    {
+      "name": "Dynamic semantics / file change semantics / DRT",
+      "introduced": "1981-1991",
+      "key_figures": [
+        "Hans Kamp",
+        "Irene Heim",
+        "Jeroen Groenendijk",
+        "Martin Stokhof"
+      ],
+      "phenomenon": "anaphora across sentences; cross-sentential dynamics; donkey sentences",
+      "tralse_type": "dynamic-update",
+      "mechanism": "meaning as context-update potential; sentences update an information state rather than mapping to truth-values directly",
+      "constitutive": true,
+      "tag_contested": true,
+      "limit": "TAG IS CONTESTABLE: tagged constitutive here because the headline move is meaning-as-update rather than meaning-as-truth, but most dynamic-semantics frameworks still preserve truth/satisfaction conditions relative to contexts and so could equally well be tagged corrective; this URB takes the constitutive reading but reasonable interpreters would tag it differently; also the philosophical ramification (meaning-as-update vs meaning-as-truth) was not foregrounded by the field as a foundational shift"
+    },
+    {
+      "name": "Cognitive linguistics / Women, Fire, and Dangerous Things",
+      "introduced": "1987",
+      "key_figures": [
+        "George Lakoff",
+        "Ronald Langacker",
+        "Charles Fillmore"
+      ],
+      "phenomenon": "embodied meaning, frames, image schemas, conceptual metaphor",
+      "tralse_type": "all (foundational reframing)",
+      "mechanism": "meaning as embodied conceptual structure; explicitly opposed to truth-conditional bivalent semantics",
+      "constitutive": true,
+      "limit": "treated by formal-semantics mainstream as a competing paradigm rather than as a foundational corrective; institutional integration has been partial"
+    },
+    {
+      "name": "Demonstratives / indexicality",
+      "introduced": "1989 (publication; lectures circulated from 1977)",
+      "key_figures": [
+        "David Kaplan"
+      ],
+      "phenomenon": "'I', 'here', 'now', 'this' have context-dependent reference",
+      "tralse_type": "indexicality",
+      "mechanism": "two-level semantics: character (function from context to content) + content (proposition); preserves bivalent truth at each context",
+      "constitutive": false,
+      "limit": "preserves bivalent truth-conditions per context; the tralseness is in the context-dependence, not in the truth-value itself"
+    },
+    {
+      "name": "Vagueness (Williamson)",
+      "introduced": "1994",
+      "key_figures": [
+        "Timothy Williamson"
+      ],
+      "phenomenon": "Sorites; epistemicism; survey of supervaluation, fuzzy logic, contextualism",
+      "tralse_type": "vagueness",
+      "mechanism": "epistemicist defense of bivalence: vague predicates have sharp boundaries we don't know",
+      "constitutive": false,
+      "limit": "explicitly defends bivalence at the cost of an unknowable sharp boundary; the most thorough modern defense of the bivalent-core architecture against vagueness pressure"
+    },
+    {
+      "name": "Verbal Disputes",
+      "introduced": "2011",
+      "key_figures": [
+        "David Chalmers"
+      ],
+      "phenomenon": "philosophical disputes that hinge on definitional choice rather than substantive disagreement",
+      "tralse_type": "definitional-bistability",
+      "mechanism": "method of elimination: strike out the contested term; if substantive disagreement vanishes, the dispute was merely verbal",
+      "constitutive": true,
+      "limit": "diagnostic / methodological; does not propose a unified semantics for definitional bistability beyond the diagnostic move"
+    },
+    {
+      "name": "Inquisitive semantics",
+      "introduced": "2009-present",
+      "key_figures": [
+        "Jeroen Groenendijk",
+        "Floris Roelofsen",
+        "Ivano Ciardelli"
+      ],
+      "phenomenon": "questions and assertions in a unified framework; meaning as proposing alternatives",
+      "tralse_type": "alternatives / dynamic",
+      "mechanism": "propositions as sets of possibilities; both questions and assertions express semantic content",
+      "constitutive": true,
+      "limit": "unifies questions and assertions; less developed for polysemy and definitional bistability specifically"
+    },
+    {
+      "name": "Distributional semantics at scale (word2vec, GloVe, BERT, GPT)",
+      "introduced": "2013-present",
+      "key_figures": [
+        "Tomas Mikolov",
+        "Jeffrey Pennington",
+        "Jacob Devlin",
+        "OpenAI / Anthropic / Google teams"
+      ],
+      "phenomenon": "context-conditioned meaning representation at industrial scale",
+      "tralse_type": "all (distributional, context, polysemy, implicature emerge in the geometry)",
+      "mechanism": "high-dimensional vector embeddings + attention; meaning as context-conditioned predictive distribution",
+      "constitutive": true,
+      "limit": "foundationally non-bivalent; opaque to symbolic analysis; the philosophical implications for semantics have been noticed but not unified into a foundational shift in linguistic theory"
+    }
+  ],
+  "interpretation": "Linguistics and philosophy of language have at least 20 substantial tools / theories addressing tralse-like phenomena, spanning 1890s to 2010s. Of these, this catalog tags 10 as constitutive (default / foundational) and 10 as corrective (patches to a bivalent core), with 1 explicitly marked as having a contested tag (reasonable interpreters would classify them differently). The constitutive/corrective tags are INTERPRETIVE LABELS, not objective measurements: another reasonable observer could shift several items between buckets and the apparent 50/50 split is a function of which items are included and how the borderline ones are tagged, not a quantitative finding. The corrective tools are mostly in the dominant formal-semantics mainstream (Russell's theory of descriptions, Kleene/Bochvar three-valued logics, supervaluation, possible-worlds modality, scalar implicature, contextualism, Kaplanian indexicality, Williamson's epistemicism). The constitutive tools are mostly outside the formal mainstream (Quine, Harris/Firth distributional, Kuhn, fuzzy sets, prototype theory, dynamic semantics [contested], cognitive linguistics, Chalmers' verbal-disputes diagnostic, inquisitive semantics, modern distributional / LLM-based semantics). This is the structural observation behind URB #816: the technical machinery exists, but the constitutive vs corrective polarity is split across the field, and the formal-mainstream commitment to bivalent-core-with-patches has been the institutionally dominant frame. TI Sigma's specific PROPOSED contribution is foundational reframing (invert the polarity, make tralseness the default) plus unification of the philosophical ramifications \u2014 NOT new technical mechanisms, and NOT a settled result; the proposal itself is a hypothesis to be argued for."
+}
