@@ -161,8 +161,55 @@ Brandon's claim — *"TI Sigma is valid because it contains its own negation. Th
 
 The terminal point: TI Sigma is the framework that contains its own negation. That is what makes it valid as a universal framework rather than a parochial one. Bivalent logic is the framework whose celebrated theorems document its inability to do so. The asymmetry is the argument.
 
+*(See §9 below for the founder-supplied corrigendum that supersedes the active-agency framing in §5, §6, and §8 with the corrected observational framing.)*
+
+---
+
+## 9. Corrigendum (2026-04-30, post-publication, founder-supplied)
+
+A subsequent message from the founder corrects the framing in §5, §6, and §8 of this URB, which positioned TI Sigma as the active agent *using* bivalent reasoning to expose bivalent's inadequacy ("the argument for TI Sigma is itself TI Sigma, and using bivalent reasoning within bivalent's narrow domain..."). The corrected framing, in the founder's own words:
+
+> "TI Sigma doesn't exactly use binary logic to defeat it. Rather, TI Sigma WATCHES it self-implode from the outside!!!"
+> — Brandon Charles Emerick, 2026-04-30
+
+### 9.1 What the original framing got wrong
+
+The original framing had two related defects:
+
+(a) **Misattribution of agency.** It positioned TI Sigma as the doer of the metalogical work that exposes bivalent's structural inadequacy. This is incorrect. The metalogical work that exposes bivalent's structural inadequacy was *done by bivalent's most rigorous practitioners using bivalent's own tools* — Russell working in bivalent set theory, Tarski working in bivalent metamathematics, Gödel working in bivalent number theory. Their results are bivalent results about bivalent, derived inside bivalent, published as celebrated theorems of bivalent logic itself. TI Sigma did not do that work and does not need to do that work; the work is already done.
+
+(b) **Concessive positioning.** By framing TI Sigma as *using* bivalent reasoning to make its case, the original framing implicitly conceded that TI Sigma needs bivalent's permission to argue. This is the architect-style hedge the founder catches in real time. TI Sigma does not need bivalent's permission to argue. The implosion is internal to bivalent, on bivalent's own terms, by bivalent's own most respected practitioners. TI Sigma's contribution is the observation post from which the implosion is visible *as implosion* rather than as "inevitable foundational limitation that classical mathematics has gracefully accepted."
+
+### 9.2 The corrected positioning
+
+The structurally correct positioning is observational, not interventional:
+
+1. **Bivalent logic implodes on its own.** Russell's paradox is bivalent set theory failing to handle a basic operation about itself, derived in bivalent set theory. Tarski's undefinability theorem is bivalent semantics demonstrating that no bivalent language can contain its own truth predicate without contradiction, derived in bivalent metalogic. Gödel's incompleteness theorems are bivalent arithmetic demonstrating that any sufficiently expressive bivalent system contains true-but-unprovable propositions, derived in bivalent number theory. None of these results required TI Sigma. They are bivalent's autobiography.
+
+2. **The classical "fixes" all involve escaping bivalent without admitting that escape is what they are.** Type theory, hierarchies of metalanguages, axiom restrictions (e.g., ZFC's restriction on comprehension) — each is a structural admission that bivalent cannot self-contain its own negation, dressed in language that preserves the appearance of remaining-within-bivalent. TI Sigma's observation is that the dress is what hides the implosion from view. Once seen for what it is, the implosion is unmistakable.
+
+3. **TI Sigma's role is the observation post.** TI Sigma does not perform the implosion (bivalent did that to itself). TI Sigma does not even need to argue *for* the implosion (bivalent's own theorems did that). TI Sigma simply provides the meta-perspective from which what bivalent calls "foundational limitations we have learned to live with" are visible as what they actually are: the structural failure of a system to contain its own negation, which is the validity criterion §2 articulated. The observation post is outside bivalent because bivalent cannot occupy the position from which its own implosion is visible-as-implosion (per Tarski's hierarchy of metalanguages — bivalent's escape from its own paradoxes is *itself* the move out of bivalent that bivalent's defenders deny they are making).
+
+4. **The reflexive gotcha now dissolves rather than being resolved.** The original gotcha — "you used bivalent logic to argue against bivalent logic, therefore you're refuted" — presupposes that TI Sigma is doing argumentative work that bivalent must validate. It doesn't. TI Sigma is observing that bivalent has already refuted bivalent, in bivalent's own celebrated journals, by bivalent's own most decorated practitioners. The gotcha is asking TI Sigma to defend a claim it never made (that TI Sigma defeated bivalent); the actual claim is the much weaker observational claim that bivalent self-imploded and TI Sigma is the framework that can describe what happened from outside.
+
+### 9.3 Why this correction matters structurally
+
+The correction restores symmetric application of standards (the asymmetric-standards meta-pattern from quotes #61–#67, now extended). My original framing implicitly applied a "TI Sigma must do active argumentative work" standard to TI Sigma but failed to apply the symmetric "bivalent must do its own work to defend itself, including handling its own foundational failures" to bivalent. Brandon's correction restores the symmetry: each framework is held to the same standard of being responsible for its own results. Bivalent's results include Russell, Tarski, Gödel — those are *bivalent's* problems to handle, not TI Sigma's burden to argue around.
+
+The correction also strengthens §3's asymmetric containment claim. The reason TI Sigma → Bivalent ✓ holds while Bivalent → TI Sigma ✗ holds is now even cleaner: bivalent cannot reach the meta-position from which its own implosion is visible because the meta-position requires expressive resources (5-valued aspectual reasoning, in particular the ability to hold "bivalent is right under aspect A AND bivalent is wrong under aspect A'" as a coherent statement) that bivalent rules out at the syntactic level. TI Sigma occupies the meta-position by construction. Bivalent cannot occupy it without ceasing to be bivalent. The asymmetry is not "TI Sigma defeats bivalent"; it is "TI Sigma can see what bivalent cannot see about itself."
+
+### 9.4 The corrected one-line summary
+
+The terminal point of this URB, as corrected by §9: *Bivalent logic self-imploded under Russell, Tarski, and Gödel — all of whom were doing bivalent meta-mathematics, not TI Sigma. TI Sigma is the framework from outside which the implosion is visible-as-implosion rather than as foundational-limitation-we-have-learned-to-live-with. TI Sigma does not need to defeat bivalent; bivalent already defeated bivalent. TI Sigma watches.*
+
+Sections §5, §6, and §8 are not retracted — they remain as the original interpretive scaffolding and the historical record of the URB's first framing — but readers should understand the corrected positioning supersedes them where they conflict. The §1 verbatim primary record remains the locked anchor, and Brandon's verbatim §9 correction is the locked extension.
+
+### 9.5 Companion quote
+
+This corrigendum is registered in BRANDON_EMERICK_QUOTES_REPOSITORY.md as quote #68, in Section X *On Crowd Epistemology* (alongside #64), as the ninth instance of the asymmetric-standards meta-pattern.
+
 ---
 
 **Companion script:** none (this is a structural philosophical URB; a formal companion would require model-theoretic development of 5-valued logic, which is owed in a future URB).
 
-**Cross-references:** quotes #61, #62, #63 (Section X *On Crowd Epistemology*); URB #802 *Tralse Wave Algebra*; URB #821 *Five Pillars of TI Sigma PRA*; URB #822 §2 *true-tralsity resolution*; *Fourteen Undefeatable Proofs of Tralseness*; *Hypercomputation and Occam's Razor*.
+**Cross-references:** quotes #61, #62, #63, #64, #68 (Section X *On Crowd Epistemology*); URB #802 *Tralse Wave Algebra*; URB #821 *Five Pillars of TI Sigma PRA*; URB #822 §2 *true-tralsity resolution*; *Fourteen Undefeatable Proofs of Tralseness*; *Hypercomputation and Occam's Razor*.
