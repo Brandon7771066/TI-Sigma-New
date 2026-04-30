@@ -1,0 +1,221 @@
+{
+  "title": "0/0 is DT (Double Tralse), not 'indeterminate' \u2014 demonstration script for URB #811",
+  "ieee_demonstration": {
+    "input": "np.float64(0.0) / np.float64(0.0)",
+    "result_repr": "np.float64(nan)",
+    "is_nan": true,
+    "is_finite": false,
+    "ieee_classification": "NaN (Not-a-Number)",
+    "ti_sigma_classification": "DT (Double Tralse) \u2014 the substrate refuses to assign a numerical value because the operation is malformed"
+  },
+  "sympy_raw_demonstration": {
+    "input": "sp.Integer(0) / sp.Integer(0)",
+    "result_repr": "nan",
+    "is_nan": true,
+    "ti_sigma_classification": "DT \u2014 sympy returns sp.nan, the symbolic marker that the expression has no well-defined value"
+  },
+  "limit_demonstrations": [
+    {
+      "limit_label": "lim x->0 of sin(x)/x",
+      "expression": "sin(x)/x",
+      "form_demonstrated": "0/0",
+      "direction": "+-",
+      "computed_value": "1",
+      "expected_value": "1",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0/0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0 of (1-cos(x))/x^2",
+      "expression": "(1 - cos(x))/x**2",
+      "form_demonstrated": "0/0",
+      "direction": "+-",
+      "computed_value": "1/2",
+      "expected_value": "1/2",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0/0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0+ of x/x^2",
+      "expression": "1/x",
+      "form_demonstrated": "0/0",
+      "direction": "+",
+      "computed_value": "oo",
+      "expected_value": "oo",
+      "matches_expected": true,
+      "ti_sigma_classification": "T (right-limit; left-limit is -oo, so two-sided is DT)",
+      "comment": "The LIMIT has a determinate value (T). The '0/0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0 of x^2/x",
+      "expression": "x",
+      "form_demonstrated": "0/0",
+      "direction": "+-",
+      "computed_value": "0",
+      "expected_value": "0",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0/0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0 of (sin(x) - x)/x^3",
+      "expression": "(-x + sin(x))/x**3",
+      "form_demonstrated": "0/0",
+      "direction": "+-",
+      "computed_value": "-1/6",
+      "expected_value": "-1/6",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0/0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->oo of e^x / x^2",
+      "expression": "exp(x)/x**2",
+      "form_demonstrated": "oo/oo",
+      "direction": "+-",
+      "computed_value": "oo",
+      "expected_value": "oo",
+      "matches_expected": true,
+      "ti_sigma_classification": "T (= +oo, well-defined)",
+      "comment": "The LIMIT has a determinate value (T). The 'oo/oo' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->oo of ln(x) / x",
+      "expression": "log(x)/x",
+      "form_demonstrated": "oo/oo",
+      "direction": "+-",
+      "computed_value": "0",
+      "expected_value": "0",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The 'oo/oo' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0+ of x*ln(x)",
+      "expression": "x*log(x)",
+      "form_demonstrated": "0 * oo",
+      "direction": "+",
+      "computed_value": "0",
+      "expected_value": "0",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0 * oo' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0+ of (1/x - 1/sin(x))",
+      "expression": "-1/sin(x) + 1/x",
+      "form_demonstrated": "oo - oo",
+      "direction": "+",
+      "computed_value": "0",
+      "expected_value": "0",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The 'oo - oo' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0+ of x^x",
+      "expression": "x**x",
+      "form_demonstrated": "0^0",
+      "direction": "+",
+      "computed_value": "1",
+      "expected_value": "1",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '0^0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->oo of x^(1/x)",
+      "expression": "x**(1/x)",
+      "form_demonstrated": "oo^0",
+      "direction": "+-",
+      "computed_value": "1",
+      "expected_value": "1",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The 'oo^0' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    },
+    {
+      "limit_label": "lim x->0+ of (1+x)^(1/x)",
+      "expression": "(x + 1)**(1/x)",
+      "form_demonstrated": "1^oo",
+      "direction": "+",
+      "computed_value": "E",
+      "expected_value": "E",
+      "matches_expected": true,
+      "ti_sigma_classification": "T",
+      "comment": "The LIMIT has a determinate value (T). The '1^oo' form encountered by direct substitution is a syntactic flag \u2014 DT only if you stop there."
+    }
+  ],
+  "indeterminate_forms_classification": [
+    {
+      "form": "0/0",
+      "as_raw_arithmetic": "DT (nonsense \u2014 equation 0 = 0*c has all c as solutions; no unique answer exists)",
+      "as_limit_form": "T or F per case (resolvable by L'Hopital, series expansion, or factoring)",
+      "category_error_warning": "Conventional 'indeterminate form' label conflates these two cases."
+    },
+    {
+      "form": "infinity/infinity",
+      "as_raw_arithmetic": "DT (infinity is not a number; ratio not defined in standard reals)",
+      "as_limit_form": "T or F per case (L'Hopital applies)",
+      "category_error_warning": "Same conflation as 0/0."
+    },
+    {
+      "form": "0 * infinity",
+      "as_raw_arithmetic": "DT",
+      "as_limit_form": "T or F per case (rewrite as 0/0 or infinity/infinity then L'Hopital)",
+      "category_error_warning": null
+    },
+    {
+      "form": "infinity - infinity",
+      "as_raw_arithmetic": "DT",
+      "as_limit_form": "T or F per case (algebraic manipulation)",
+      "category_error_warning": null
+    },
+    {
+      "form": "0^0",
+      "as_raw_arithmetic": "DT in general; conventionally DEFINED as 1 in combinatorics and discrete math (a convention, not a derivation)",
+      "as_limit_form": "T or F per case (use exp/log transformation)",
+      "category_error_warning": "The conventional convention 0^0 := 1 is a DEFINITION chosen for utility, not a derivation from the field axioms."
+    },
+    {
+      "form": "infinity^0",
+      "as_raw_arithmetic": "DT",
+      "as_limit_form": "T or F per case",
+      "category_error_warning": null
+    },
+    {
+      "form": "1^infinity",
+      "as_raw_arithmetic": "DT (literal 1^infinity is malformed: infinity is not a field element and so is not a valid exponent in standard fields). NOTE: 1^n with n a finite natural / integer / rational is T = 1 by the standard exponentiation axioms \u2014 but that is not the '1^infinity form'.",
+      "as_limit_form": "T or F per case (e.g., (1+1/n)^n -> e)",
+      "category_error_warning": "An earlier draft labeled raw 1^infinity as Pre-True; corrected here. The form arises only in limit contexts where the base APPROACHES 1 without being exactly 1, so 1^anything = 1 cannot be invoked."
+    }
+  ],
+  "division_axiom_analysis": {
+    "field_axiom": "For a field F, division a/b is defined as the unique element c such that a = b*c, provided b != 0.",
+    "case_b_eq_0_a_eq_0": "If b = 0 and a = 0, the equation 0 = 0*c is satisfied by EVERY c in F. There is no UNIQUE c. Therefore 0/0 is not a value in F; it fails the existence-and-uniqueness predicate that defines division.",
+    "case_b_eq_0_a_neq_0": "If b = 0 and a != 0, the equation a = 0*c = 0 is NEVER satisfied (since a != 0). Therefore a/0 (a != 0) is not a value in F; it fails the existence predicate.",
+    "ti_sigma_mapping": {
+      "0/0 (a=0, b=0)": "DT \u2014 the question 'what is 0/0?' has no unique answer because the defining equation has too many solutions (every element of F).",
+      "a/0 with a != 0": "DT \u2014 the question has no answer because the defining equation has no solutions.",
+      "a/b with b != 0": "T \u2014 the question has a unique answer."
+    },
+    "why_double_tralse_not_just_tralse": "Tralse (T-tilde) marks 'ambiguous in a structurally meaningful way' \u2014 there is content to evaluate but the evaluation is underdetermined. DT (Double Tralse) marks 'the question itself is malformed' \u2014 the evaluation procedure does not apply at all. 0/0 is the second case: it is not that we lack information about 0/0, it is that 0/0 is not the kind of expression that has a value."
+  },
+  "conventional_position_critique": {
+    "textbook_label": "indeterminate form",
+    "textbook_canonical_list": [
+      "0/0",
+      "infinity/infinity",
+      "0 * infinity",
+      "infinity - infinity",
+      "0^0",
+      "infinity^0",
+      "1^infinity"
+    ],
+    "textbook_meaning": "A syntactic pattern that arises when evaluating a limit by direct substitution; signals that L'Hopital's rule, series expansion, or algebraic manipulation is required.",
+    "where_it_goes_wrong": "The label 'indeterminate FORM' is correctly restricted to limit contexts. But the same label is colloquially extended to RAW ARITHMETIC '0/0' as if it meant 'the value 0/0 is undetermined' or 'could be anything.' That extension is the category error: raw 0/0 is not a value with multiple candidate determinations; it is not a value at all. 'Indeterminate' suggests epistemic underdetermination; the correct label is malformed-by-construction, i.e., DT.",
+    "ti_sigma_correction": "Distinguish: (a) 'indeterminate FORM' as a syntactic flag in limit contexts (legitimate, narrow usage), (b) 'indeterminate VALUE' applied to raw 0/0 (incorrect \u2014 it is DT, not T-tilde and not Pre-True). Reserving 'indeterminate' for case (a) only and labeling case (b) as DT eliminates the conflation."
+  }
+}
