@@ -278,9 +278,51 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 - Resonates with quote #58 (skeptic-regress): the skeptic who demands the crowd's approval before believing X is conformist-by-procedure even when posing as skeptic.
 - Resonates with quote #59 ("To be like everyone else requires effort..."): the aphorism is the epistemic counterpart to the authenticity claim — being correct *with the crowd* on most issues actually requires the same case-by-case work as being correct *against the crowd* on some, because both require evaluation rather than default.
 
-**Honest caveat:** the "almost certainly wrong most of the time" claim about crowds is empirically defensible across many specific domains (financial markets in bubble phases, social-media moral panics, scientific consensus prior to paradigm shifts in Kuhn's sense, and dietary recommendations across the 20th century are clear cases) but is not a universal theorem. Crowd consensus IS reliable in some well-bounded conditions: established-physics, geographic-location, language-conventions, traffic-rules, and most coordination-equilibrium problems. The aphorism's force is at the level of *contested epistemic terrain*, where the philosopher actually operates, not at the level of "is grass green."
+**Honest scope note (originally a caveat, walked back at author's request 2026-04-30):** an earlier draft of this entry hedged the aphorism with an exception class — "the crowd is reliable on well-bounded conditions like 'grass is green,' 'sky is blue,' traffic rules, language conventions, etc." Brandon (correctly) rejected that hedging and observed that the supposedly-safe examples are themselves wrong much of the time on closer inspection:
 
-**Related Papers:** *Skepticism Hypocrisy Paradox*, *EAR & Intelligence*, future URB on calibrated heterodoxy.
+> "Statements like 'grass is green' and 'the sky is blue' ARE actually wrong much of the time! There are numerous species of grass and many different hues the sky can possibly be. Not to mention, dead grass can take on a brown or even white color, as seen in hay! Even the most basic statements people believe — especially philosophical things — tend to be often wrong!"
+> — Brandon Charles Emerick, 2026-04-30
+
+This is the stronger reading of the aphorism, and the original draft's hedging was itself an instance of the failure mode the aphorism describes (defaulting to the crowd's "obvious" examples as a safety move, even when those examples don't survive closer inspection). Specifically:
+
+- **Grass is green:** wrong on dead grass (brown), hay (white-yellow), drought-stressed lawns (yellow-brown), Bermuda grass dormant in winter (tan), red fescue (reddish), blue fescue (blue-gray), purple fountain grass (purple). Many species across many states. The "green" claim is roughly correct on a *plurality* of grass-instances in temperate-zone summer, not a *majority* across all grass-states globally year-round. Crowd-true on a plurality, crowd-wrong on a majority — exactly matching the aphorism's structure.
+- **Sky is blue:** wrong on dawn/dusk (red, orange, pink, gold), overcast (gray, white), heavy storms (near-black), dust storms (orange-red), wildfire smoke (orange-brown), polar twilight (purple-violet), aurora conditions (green-purple), altitude/elevation effects (deep-blue to black), and roughly half the time at night (black with stars). A blue daytime cloudless sky in temperate latitudes is a *plurality* condition, not a *majority* condition across all sky-states.
+- **Traffic rules:** vary by jurisdiction (right-side vs. left-side driving, yield rules, right-on-red, roundabout precedence, school-zone speeds), evolve over decades (no-fault liability, autonomous-vehicle integration, e-scooter regulation), and have systematic exceptions the crowd treats as rules (rolling stops, "everyone speeds 5 over," signal-then-merge protocols).
+- **Language conventions:** dialectal variation, register shifts, generational drift, technical-vs-vernacular meanings, and ongoing semantic change all mean that "the meaning of word W is M" is locally true and globally only-roughly-true.
+
+**Strengthened aphorism scope:** the aphorism's force extends beyond "contested epistemic terrain" to *the entire space of empirical claims people treat as obviously-true*, including the supposedly-safe examples used to draw the boundary. Even the boundary cases reproduce the structure: crowd-true on a plurality of instances, crowd-wrong on a majority of instances. The exception class shrinks dramatically once examined: arguably to logical/mathematical tautologies (1+1=2, P∨¬P), some physical constants (speed of light in vacuum, electron charge), and a handful of definitions-by-convention (kilogram, second post-2019 SI redefinition). Almost everything else is true on a plurality and wrong on a majority once edge cases, exceptions, contextual variation, and counterexamples are counted.
+
+**Why this matters for the aphorism's force:** the aphorism is not merely about contested philosophical claims; it is about the *structure of how language and consensus interact with reality*. The crowd's basic claims compress reality into legible defaults that are right on the modal case and wrong on the long tail — and reality has a much fatter long tail than the crowd's legibility-pressure admits. Philosophy in particular suffers from this because philosophical claims are typically asserted in the form of universal generalizations ("all knowledge is...", "consciousness is...", "meaning requires..."), so the long-tail counterexamples are the entire game. A philosophical claim that is true on a plurality and wrong on a majority of cases is, qua philosophical claim, simply wrong — because philosophy traffics in universals, not modal pluralities.
+
+**Honest residual caveat (much smaller than the original):** the aphorism does not claim the crowd is wrong on *every* claim. Logical tautologies, mathematical identities, and a small handful of physical-definition-by-convention claims are crowd-true on a true majority. But this exception class is much smaller than the crowd believes, and using it to hedge the aphorism's main force is itself the failure mode the aphorism describes.
+
+**Related Papers:** *Skepticism Hypocrisy Paradox*, *EAR & Intelligence*, future URB on calibrated heterodoxy + the long-tail-of-counterexamples structure.
+
+---
+
+### The Long-Tail Counter to "Obvious" Truths
+> "Even the most basic statements people believe — especially philosophical things — tend to be often wrong!"
+> — Brandon Charles Emerick, 2026-04-30
+
+**Context:** Companion aphorism to #61, articulated when Brandon rejected an earlier hedging in the #61 entry that treated "grass is green" and "the sky is blue" as crowd-safe defaults. The deeper point is structural: any natural-language claim asserted as a universal generalization ("X is Y") tends to be true on a *plurality* of cases (the modal case the speaker has in mind) and wrong on a *majority* of cases once edge cases, exceptions, contextual variation, and counterexamples are counted. This applies with special force to philosophical claims because philosophy traffics in universals; a philosophical claim that is true on a plurality and wrong on a majority of cases is, qua philosophical claim, simply wrong.
+
+**Structural reading:**
+- The crowd compresses reality into legible defaults that are right on the modal case and wrong on the long tail.
+- Reality has a much fatter long tail than the crowd's legibility-pressure admits.
+- "The most basic statements people believe" are precisely the ones whose long tails are unconsciously suppressed at assertion-time, which is what makes them feel safe and obvious.
+- Philosophical claims are universal generalizations by genre, so the long-tail counterexamples are the entire game; suppressing them produces philosophy-shaped false-confidence.
+
+**Practical implication:** the philosopher's discipline is to *find the long tail before asserting the modal case as a universal*. Every "X is Y" claim should provoke the reflex "where is X NOT Y, and how often, and under what conditions?" before being trusted. This is the same case-by-case calibration #61 demands but applied at the level of basic empirical and conceptual claims rather than only at the level of contested terrain.
+
+**Connection to existing repository themes:**
+- Strengthens #61 (Asymmetric Crowd Aphorism) by showing the exception class is much smaller than even the original #61 draft admitted.
+- Resonates with #19 (The Umbrella Failure): incomplete grasp of the concept produces confident wrongness.
+- Resonates with #17 (Concepts Must Be Grasped Whole First): partial grasp of "grass" or "sky" as singular-color concepts produces the very failure this aphorism describes.
+- Resonates with #2 (The Truthful Lie): a "truth" that is true on a plurality and wrong on a majority can be more misleading than a "lie" that is honest about its scope.
+
+**Honest residual exception class:** logical tautologies, mathematical identities, and a handful of physical-definitions-by-convention (kilogram, second post-2019 SI redefinition) are crowd-true on a true majority. But these constitute a tiny fraction of the claim-space the crowd treats with comparable confidence.
+
+**Related Papers:** quote #61 (Asymmetric Crowd Aphorism), *Skepticism Hypocrisy Paradox*, *EAR & Intelligence*.
 
 ---
 
@@ -350,3 +392,4 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 | 59 | "To be like everyone else requires effort. The easiest thing is to be yourself. But that's just too easy, right?" | Authenticity / Identity | March 2026 — BGT/MT |
 | 60 | "Gamers are the most serious people in the economy. We'd have a much more productive society if we all treated life as a game — which frankly, is quite accurate actually!" | Productivity / Game Theory / Society | March 2026 — BGT/MT |
 | 61 | "If you don't go with the crowd, you're likely wrong at least much of the time. But if you do go with the crowd, you're almost certainly wrong most of the time." | Crowd Epistemology / Calibrated Heterodoxy | 2026-04-30 — DPES Session |
+| 62 | "Even the most basic statements people believe — especially philosophical things — tend to be often wrong!" (companion to #61; long-tail counter to "obvious" truths like 'grass is green' / 'sky is blue') | Crowd Epistemology / Long-Tail Counterexamples | 2026-04-30 — DPES Session |
