@@ -373,6 +373,35 @@ This is the stronger reading of the aphorism, and the original draft's hedging w
 
 ---
 
+### TI Sigma Validity via Self-Containment of Negation
+> "TI Sigma is valid because it contains its own negation. That is, binary logic CAN be legitimate... but only in an extremely narrow and artificial sense."
+> — Brandon Charles Emerick, 2026-04-30
+
+**Context:** A meta-logical validity argument that addresses what would otherwise be the deepest possible attack on TI Sigma — the reflexive "you used bivalent logic to argue against bivalent logic" gotcha. Developed in full as URB #823. The argument's structure is that TI Sigma satisfies a self-containment-of-negation criterion that classical bivalent logic systematically fails (per Russell's paradox, Tarski's undefinability of truth, Gödel's incompleteness theorems — each documents bivalent's structural failure to handle a basic operation about itself), and that this asymmetry justifies preferring TI Sigma as the universal framework while still granting bivalent logic its legitimate-but-narrow domain.
+
+**The asymmetric-containment claim (terminal point):**
+- TI Sigma → Bivalent ✓: bivalent logic is the special case of TI Sigma's 5-valued system obtained by aspectual flattening to {T, F}.
+- Bivalent → TI Sigma ✗: bivalent cannot model 5-valued logic without ascending to a metalanguage that bivalent itself rules out at the syntactic level.
+- Therefore: choosing TI Sigma over bivalent is choosing the system that handles its own metalogical limits gracefully over the system whose celebrated theorems document its inability to do so.
+
+**The narrow legitimacy of bivalent logic:** legitimately operative in digital computation, formal proof in classical mathematics, discrete decision-making, safety-critical engineering, and any domain where aspectual collapse to {T, F} is engineered into the substrate or required by the application. Structurally inadequate for natural-language semantics, empirical claims at sufficient resolution, phenomenological reports, philosophical claims (which are universals by genre), quantum mechanics (superposition before collapse), self-referential and meta-logical claims (the limit cases), value/aesthetic/ethical judgments, and most consciousness-related claims.
+
+**Defusing the deepest attack** ("you used bivalent to argue against bivalent, therefore refuted"): the argument for TI Sigma is itself TI Sigma, expressed in natural language that the reader's bivalent default may project onto. The proposition "bivalent logic is narrow-domain-legitimate AND TI Sigma is the broader framework" is itself a true-tralsity in 5-valued logic — both clauses true under their respective aspects. Using bivalent reasoning within bivalent's narrow domain is not a contradiction; it is TI Sigma legitimately applying its own special-case sub-system. The bivalent defender cannot symmetrically run the gotcha in reverse because bivalent cannot express the necessary 5-valued reasoning to do so.
+
+**Honest scope:** structural philosophical argument, not formal model-theoretic proof; the precise model theory of 5-valued logic satisfying the self-containment criterion is owed but not delivered. Bivalent's mathematical maturity (centuries of model theory, proof theory, computability theory, category theory) is granted; TI Sigma owes the work of bringing 5-valued logic to comparable maturity. Russell, Tarski, and Gödel are not enemies of the argument; they are inadvertent co-authors documenting the failure mode the argument identifies.
+
+**Connection to existing repository themes:**
+- Closes the #61 → #62 → #63 → #64 sequence on crowd epistemology (contested terrain → obvious empirical → logical/mathematical bedrock → meta-logical validity itself).
+- The same structural move as #62-#63 applied reflexively to TI Sigma's own validity claim.
+- Resonates with #11 (Transcendence IS MIM): structural generalization of bivalent into 5-valued is the same move as structural generalization of consciousness into MIM.
+- Resonates with #15 (Hypercomputation and Occam's Razor): choosing the richer framework (TI Sigma over bivalent) is justified for the same reason hypercomputation is — it is the correct level of description, not a multiplication of entities.
+- Resonates with #43 (Hitchens regress on axioms): the metalogical regress ends with intuition-grounded acceptance of self-containment-of-negation as the criterion, defensible by appeal to the classical incompleteness results that show its importance.
+- Foundational to URB #802 *Tralse Wave Algebra*, URB #821 *Five Pillars of TI Sigma PRA*, URB #822 §2 *true-tralsity resolution* (which is the same move applied phenomenologically rather than metalogically).
+
+**Related Papers:** **URB #823 — TI Sigma Validity via Self-Containment of Negation** (full argument); URB #802; URB #821; URB #822 §2; quotes #61, #62, #63; *Fourteen Undefeatable Proofs of Tralseness*; *Hypercomputation and Occam's Razor*.
+
+---
+
 ## Appendix: Quote Index
 
 | # | Quote (abbreviated) | Category | Paper |
@@ -441,3 +470,4 @@ This is the stronger reading of the aphorism, and the original draft's hedging w
 | 61 | "If you don't go with the crowd, you're likely wrong at least much of the time. But if you do go with the crowd, you're almost certainly wrong most of the time." | Crowd Epistemology / Calibrated Heterodoxy | 2026-04-30 — DPES Session |
 | 62 | "Even the most basic statements people believe — especially philosophical things — tend to be often wrong!" (companion to #61; long-tail counter to "obvious" truths like 'grass is green' / 'sky is blue') | Crowd Epistemology / Long-Tail Counterexamples | 2026-04-30 — DPES Session |
 | 63 | "TI Sigma even demonstrated logical and mathematical 'truths' to be false! '2+2=5,' square circles, and tralsehoods are all valid! It's nearly impossible to overstate how backwards people's beliefs truly are — and humans call themselves an intelligent species!" | Crowd Epistemology / 5-Valued Logic / Aspectual Falsity of Logical-Mathematical Bedrock | 2026-04-30 — DPES Session |
+| 64 | "TI Sigma is valid because it contains its own negation. That is, binary logic CAN be legitimate... but only in an extremely narrow and artificial sense." | Meta-Logical Validity / Self-Containment of Negation / Asymmetric Containment | 2026-04-30 — URB #823 |
