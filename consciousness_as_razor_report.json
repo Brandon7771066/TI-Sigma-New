@@ -1,0 +1,91 @@
+{
+  "config": {
+    "n_steps": 5000,
+    "activities": {
+      "meditate": 0.1,
+      "relax": 0.25,
+      "study": 0.6,
+      "socialize": 0.85
+    },
+    "rng_seed": 20260430
+  },
+  "scores": [
+    {
+      "agent": "Flat (always 0.5)",
+      "variance": 0.0,
+      "stability_metric_value": 0.0,
+      "activity_fit_metric_value": -0.08879800000000002,
+      "mean_squared_error_vs_optimal": 0.08879800000000002,
+      "correlation_with_optimal": 0.0
+    },
+    {
+      "agent": "Adaptive (matches optimal)",
+      "variance": 0.08581465559999998,
+      "stability_metric_value": 0.08581465559999998,
+      "activity_fit_metric_value": -0.0,
+      "mean_squared_error_vs_optimal": 0.0,
+      "correlation_with_optimal": 1.0
+    },
+    {
+      "agent": "ContextUncoupled (matched marginals, no context-tracking)",
+      "variance": 0.08581465559999998,
+      "stability_metric_value": 0.08581465559999998,
+      "activity_fit_metric_value": -0.17192000000000002,
+      "mean_squared_error_vs_optimal": 0.17192000000000002,
+      "correlation_with_optimal": -0.0016937013728456627
+    }
+  ],
+  "rankings": {
+    "by_stability_metric_lower_is_better": [
+      [
+        "Flat (always 0.5)",
+        0.0
+      ],
+      [
+        "Adaptive (matches optimal)",
+        0.08581465559999998
+      ],
+      [
+        "ContextUncoupled (matched marginals, no context-tracking)",
+        0.08581465559999998
+      ]
+    ],
+    "by_activity_fit_metric_higher_is_better": [
+      [
+        "Adaptive (matches optimal)",
+        -0.0
+      ],
+      [
+        "Flat (always 0.5)",
+        -0.08879800000000002
+      ],
+      [
+        "ContextUncoupled (matched marginals, no context-tracking)",
+        -0.17192000000000002
+      ]
+    ],
+    "by_correlation_with_optimal_higher_is_better": [
+      [
+        "Adaptive (matches optimal)",
+        1.0
+      ],
+      [
+        "Flat (always 0.5)",
+        0.0
+      ],
+      [
+        "ContextUncoupled (matched marginals, no context-tracking)",
+        -0.0016937013728456627
+      ]
+    ]
+  },
+  "diagnostic_variance_cannot_distinguish": {
+    "variance_adaptive": 0.08581465559999998,
+    "variance_context_uncoupled": 0.08581465559999998,
+    "variance_gap_pp": 0.0,
+    "activity_fit_adaptive": -0.0,
+    "activity_fit_context_uncoupled": -0.17192000000000002,
+    "activity_fit_gap": 0.17192000000000002,
+    "interpretation": "By construction Adaptive and ContextUncoupled share the same marginal distribution of arousal values, so their variances are identical (modulo permutation noise of order 0). The conventional stability metric (variance) therefore CANNOT distinguish the context-coupled profile from the context-uncoupled profile. The activity-fit metric (negative MSE vs. optimal arousal) and the correlation-with-optimal metric BOTH cleanly distinguish them. This is the structural point of URB #813. ContextUncoupled is a STRUCTURAL FOIL, not a clinical model of any psychiatric condition; real clinical diagnosis uses additional criteria (duration, impairment, sleep, psychosis, risk) that this toy does not capture."
+  }
+}
