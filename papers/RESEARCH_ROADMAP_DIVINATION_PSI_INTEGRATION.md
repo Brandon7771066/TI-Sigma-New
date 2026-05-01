@@ -16,6 +16,51 @@
 - ✅ **Phase 4**: DNA-anchored vs conventional head-to-head — 🟡 MIXED→NEGATIVE on strict gates (−7.5% deviation; near-canonical substrate too close to baseline; ceiling effect) — locked
 - ✅ **Phase 4-bis**: Three-arm head-to-head (post-architect-audit, locked-seed numbers): Conventional dev 5.64, DNA-Anchored dev 5.22, Divination-Amplified dev 4.83 (−7.5% vs B, −14.4% vs A), Mean Amp ×1.1705, **R_intra dominates 9/9 improvements** (divination channels never dominate). 🔴 **RED-procedural and substantively-NEGATIVE** for the divination hypothesis as currently architected. Per-pre-reg §5 step 7: divination-amplification as currently designed is **DEPRECATED**.
 - ⏸️ **Phase 5** (Brandon-DNA outcomes extrapolation): GATED — does not proceed until cohort-variance test (Phase B) or live-telemetry test (Phase C) provides clean PASS, AND Phase A-prime ablation confirms divination channels add real signal.
+- 🆕 **URB #826 (2026-04-30)**: Biophoton/EM-DNA Carrier Hypothesis locked. Brandon's reframe — i-cell signature carried by DNA's EM/optics, not bases per se — is **consistent with** the Phase 4-bis R_intra-dominance finding (R_intra is the DNA-anchored channel; under the new hypothesis it dominated because DNA *is* the carrier, but via EM not sequence). Adds Phase H to the roadmap. Three-tier claim discipline: Tier 1 (UPE in cells, mainstream) defensible, Tier 2 (DNA-EM as primary carrier, plausible) testable, Tier 3 (Montagnier DNA-EM transmission) explicitly **out of scope**.
+
+---
+
+## Continue-Full-Roadmap Status Block (2026-04-30)
+
+Brandon's directive: "Continue with the full roadmap." Concrete next-step lock per phase, in execution order:
+
+| Phase | Status | Next concrete action | Cost | Duration | Lock-by-when |
+|---|---|---|---|---|---|
+| **A-prime-Pharma** (R_intra-only ablation) | 🟢 ready | Run `phase_4_bis_*.py` with R_se=R_ss=R_stack=R_obs=0; agent prediction dev=4.87 | $0 | 30 min | next DPES |
+| **A-prime-Astrology** (N=30 birth charts) | 🟡 blocked on volunteer recruit | Draft Google Form for birth-chart + NEO-PI-R; ship to Brandon for distribution | $0 | 2-3 weeks | next DPES draft form |
+| **A-prime-Market** (corrected ternary I-Ching SPY) | 🟢 ready after 2 code fixes | Patch `divination_empirical_testing.py` lines 500-504 (strict ternary) and 440-459 (hard-fail on missing yfinance); retroactive run on locked window | $0 | 1 hour | next DPES |
+| **A-prime-GSA-Overlay** (overlay-on vs overlay-off) | 🟢 ready | Identify overlay toggle in `gsa_core.py` / `gm_divination_expanded.py`; run 2x on green-subset | $0 | 30 min | next DPES |
+| **Phase H-1** (R_intra_em proxy smoke test) | 🟢 ready after refactor | Code split per URB #826 §3; run on Brandon N=1 | $0 | 2 hours code + 30 min run | next DPES after A-prime |
+| **Phase B** (MPD held-out cohort) | ⏸️ requires A-prime to clear OR explicit override | Pull MPD FAAH-knockout pharma data; build strain-DNA → strain-response mapping; pre-register 60% threshold | $0 | 1 DPES session | post A-prime |
+| **Phase H-2** (MZ-twin re-analysis) | ⏸️ requires Phase B framework | After Phase B mining infrastructure exists, redirect at TwinsUK MZ-discordant cohorts | $0 | 1 DPES session | post Phase B |
+| **Phase C** (Brandon Pulsoid+Oura live R_se) | 🟢 ready (secrets configured) | 7-day continuous logging; replace SHA-projected toy R_se with real telemetry; re-run Phase 4-bis subset | $0 | 7 days passive + 1 DPES analysis | start collection now in parallel |
+| **Phase D** (GCP REG as 5th R_se) | 🟢 ready | Pull GCP REG public archive; add as 5th R_se channel; ablation-test contribution | $0 | 1 DPES | post Phase C |
+| **Phase E** (multi-substrate composite — sharpened by URB #826) | ⏸️ refactored under URB #826 | The 5-channel composite from original Phase E is now replaced by R_intra split (§3.1) + Phase H weight learning. Keep the microbiome optional add-on. | $0-$35 | 2 DPES | post Phase H-3 |
+| **Phase H-3** (weight learning w_seq vs w_em on MPD) | ⏸️ requires Phase B data | After Phase B provides empirical labels, train linear (w_seq, w_em) | $0 | 1 DPES | post Phase B |
+| **Phase F** (NN on MPD empirical labels) | ⏸️ requires Phase B GREEN | Hold; circular synthetic-label training is barred per Phase F architect-correction | $0 | 2 DPES | post Phase B GREEN |
+| **Phase G** (FastAPI productization + Stripe) | ⏸️ requires Phase F GREEN OR Phase H-3 SURVIVE | Hold; ship only on a defensible mechanism | ~$50 | 2 DPES | post Phase F or H-3 |
+
+**Critical-path summary:** Next DPES window can clear all four A-prime experiments + Phase H-1 + start Phase C telemetry collection in parallel. That single window resolves the divination-as-overlay question across pharma + market + astrology + GSA + Brandon's new biophoton hypothesis. ETA: one DPES session + 7-day passive collection.
+
+**Sequencing dependency graph:**
+```
+A-prime-Pharma  ─┐
+A-prime-Astro   ─┼─→ (decision: divination overlay alive or dead)
+A-prime-Market  ─┤        │
+A-prime-GSA     ─┘        ├─→ if all FAIL: divination-as-overlay deprecated permanently
+                          │   biophoton-EM hypothesis (URB #826) becomes the live frame
+                          ↓
+                       Phase H-1 (smoke) → Phase B (MPD) → Phase H-3 (weights) ─┐
+Phase C (live telemetry, 7-day)  ─────────────────────────────────────────────────┤
+Phase D (GCP REG) ────────────────────────────────────────────────────────────────┤
+                                                                                   ↓
+                                                            decision: ship or shelve
+                                                                          │
+                                                              ┌───────────┴───────────┐
+                                                          Phase F (NN)              shelve
+                                                              ↓
+                                                          Phase G (API)
+```
 
 ---
 
@@ -234,6 +279,59 @@ Per `replit.md` Overview: *"The strategic vision is to license the AI engine via
 - $0.10 per prediction call (1000 calls = $100)
 - $99/mo subscription = 1000 calls included + analytics dashboard
 - $999/mo enterprise = unlimited + priority support + custom substrate types
+
+---
+
+## Phase H — Biophoton/EM-DNA Carrier Hypothesis (URB #826)
+
+**Cost**: $0 within current budget (proxies); ~$5K if Phase H-3 SURVIVE triggers real PMT measurement
+**Duration**: ~3 DPES sessions (H-1, H-2, H-3) + 7-day passive proxy collection
+**Pre-registration required**: yes — locked at URB #826 §6
+**Authority**: Brandon's directive 2026-04-30 — *"I-Cell resonance is likely mediated by biophotons and EM Waves emitted by DNA specifically. The electromagnetics and optics of DNA are the primary carriers of information rather than the DNA bases themselves."*
+
+### Why this fits
+
+The Phase 4-bis attribution audit (R_intra dominates 9/9 improvements; divination channels never dominate) initially looked anti-divination. Brandon's biophoton/EM-DNA reframe re-reads the same finding as **pro-DNA-as-the-carrier** (R_intra is the DNA-anchored channel; under Brandon's hypothesis it dominated because DNA is the actual carrier — but via its EM/optical signature, not its base sequence). This is a sharpened, testable mechanistic interpretation, not a rescue of the divination wrapper.
+
+### Three-tier claim structure (URB #826 §2)
+
+- **Tier 1** (defensible): Cells emit ultra-weak photon emission. Mainstream-replicated. ✓
+- **Tier 2** (testable, the hypothesis): DNA specifically is a primary biophoton/EM emitter, and its spectral coherence carries information beyond what base sequence encodes. ⚠️
+- **Tier 3** (out of scope): Montagnier-style DNA-EM transmission of sequence at distance. 🔴 NOT required by this URB.
+
+### Architectural refactor (URB #826 §3)
+```
+R_intra_total := w_seq · R_intra_seq + w_em · R_intra_em
+```
+where `R_intra_em` is a 5-component proxy stack (mito-haplogroup match, telomere proxy, CpG-density, HRV coherence 7-day, sleep efficiency 7-day) — all $0, all already in the codebase or accessible from Brandon's existing 23andMe + Pulsoid + Oura streams.
+
+### Phase H-1 — Smoke test (Brandon N=1)
+- **Test:** Compute R_intra_em on Brandon. Substitute for R_intra in Phase 4-bis. Report dev_em.
+- **Pre-registered prediction (URB #826 §6.1):** dev_em = 4.85 (band [4.70, 5.05]) — proxy stack on N=1 should not differ from R_intra_seq beyond simulator noise. This is a smoke test for the refactor, not a hypothesis test.
+
+### Phase H-2 — MZ-twin discordance re-analysis
+- **Test:** Public MZ-twin pharma-response data (TwinsUK, MZ-discordant fitness cohorts). For each pair, sequence-only model predicts identical response (intra-pair variance = 0); EM-augmented model predicts differential response. Score against measured intra-pair variance.
+- **Pre-registered prediction (URB #826 §6.2):** EM-augmented R² gain on intra-pair residuals ≥ 0.15. FAIL band [−0.05, +0.10]. SURVIVE if ≥ 0.15 with permutation p < 0.05.
+
+### Phase H-3 — Weight learning (post Phase B)
+- **Test:** After Phase B provides empirical MPD response data (≥30 strains × ≥10 compounds), train linear (w_seq, w_em) summing to 1.
+- **Pre-registered prediction (URB #826 §6.3):** w_em = 0.18 (band [0.10, 0.30]). FAIL for Brandon's strong "primary carrier" hypothesis if w_em < 0.30. SURVIVE for the strong hypothesis if w_em ≥ 0.50 with bootstrap CI excluding 0.30.
+
+### Outcome routes
+- **w_em ≥ 0.50 (strong SURVIVE):** Brandon's hypothesis earned — biophoton/EM becomes the primary architectural frame; URB #824 becomes a sequence-only special case. Strongest pro-PSI result the project has produced. Budget the ~$5K external PMT-lab partnership for real biophoton measurement to confirm proxy-vs-real correspondence.
+- **w_em ∈ [0.10, 0.50] (substantial-but-not-primary):** real signal, but proxy stack is the bottleneck. Refine proxy stack (drop SNP-based mito term; isolate purely physiological proxies) and re-test before scaling.
+- **w_em ≤ 0.10 (FAIL):** proxy stack is wrong direction. Either the hypothesis is wrong, or only real PMT measurement can test it. Decision: shelve or budget external lab.
+
+### Anti-Tier-3-drift discipline
+- ❌ NO claims that DNA-EM transmits sequence information at distance
+- ❌ NO interpretation of dilution-series results in Montagnier framing
+- ✅ Required: every Phase H output explicitly tags whether it relies on Tier 1 (UPE existence), Tier 2 (DNA-EM primary carrier), or both
+- ✅ Required: any drift toward Tier 3 triggers a corrigendum and re-scoping before further results
+
+### Cross-references
+- URB #826 (full design + 3-tier discipline + R_intra split spec)
+- AGENT_LOCKED_PREDICTIONS_2026-04-30.md §9 (NEW — H-1, H-2, H-3 numerical commitments)
+- This roadmap §Continue-Full-Roadmap-Status-Block (timeline + dependencies)
 
 ---
 

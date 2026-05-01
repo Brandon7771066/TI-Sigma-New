@@ -127,4 +127,76 @@ If any single prediction falsifies in the divination-favorable direction, the co
 | Cost to execute all five | $0 (yfinance free + Alpaca paper + N=30 volunteer recruit + locally-stored RNG) |
 | Total wall time | ≈4 weeks (60 trading days for §2 and §4; §1 = 5 minutes; §3 = 2-3 weeks for survey turnaround; §5 = ~30 minutes) |
 
+---
+
+## §9. Subsequent Pre-Registrations — Phase H (Biophoton/EM-DNA Carrier)
+
+**Lock date:** 2026-04-30 (same DPES session as §1-§5, added after URB #826 was authored)
+**Authority:** Brandon's directive — *"I-Cell resonance is likely mediated by biophotons and EM Waves emitted by DNA specifically."* (URB #826 §1)
+**Editing rule:** §9.1, §9.2, §9.3 are FROZEN. New rows added to §10, never by editing.
+
+### §9.1 MEDIUM-conviction — Phase H-1 (R_intra_em proxy smoke test on Brandon N=1)
+
+**Experiment:** Compute the 5-component R_intra_em proxy stack (mito-haplogroup canonical-form match + telomere proxy + CpG-promoter density + 7-day Pulsoid HRV coherence + 7-day Oura sleep efficiency) on Brandon. Substitute R_intra_em for R_intra_seq in `phase_4_bis_divination_amplified_validation.py`. Same LOCK_DATE = 2026-04-30, same LOCK_SEED = 20573. Report dev_em.
+
+**My prediction:**
+- **Point estimate:** dev_em = **4.85**
+- **Band:** [4.70, 5.05]
+- **Verdict zone:** within simulator noise of original dev = 4.83 — smoke test passes (refactor is sound), but does NOT itself test the hypothesis on N=1.
+
+**Confidence:** MEDIUM (high on the math, lower on whether HRV/sleep telemetry will actually be available in time).
+
+**What would falsify me:** dev_em outside [4.70, 5.05]. If dev_em ≪ 4.70, R_intra_em is *more* informative than R_intra_seq even on N=1, which would be surprisingly fast confirmation of Brandon's hypothesis. If dev_em ≫ 5.05, the proxy stack is actively misleading (worse than sequence) and needs redesign.
+
+### §9.2 MEDIUM-conviction — Phase H-2 (MZ-twin discordance R² gain)
+
+**Experiment:** Public MZ-twin pharma-response data (TwinsUK; MZ-discordant fitness cohorts; Falconer/Christensen pharmacogenomic-twin literature; all $0). For each pair, compute predicted response under (a) sequence-only model and (b) sequence + R_intra_em model. Score on intra-pair residuals after accounting for measured response.
+
+**My prediction:**
+- **Point estimate:** R² gain on intra-pair residuals = **0.10**
+- **Band:** [0.02, 0.20]
+- **Verdict zone:** below the SURVIVE threshold (0.15 with permutation p < 0.05); modest signal driven mostly by HRV/sleep being mechanistically real (which is uncontroversial — "physiological state matters for drug response" is well-established) rather than by anything specifically DNA-EM.
+
+**Confidence:** MEDIUM. The R² gain is mechanically guaranteed to be > 0 (HRV and sleep correlate with response), so the question is purely how large.
+
+**What would falsify me:** R² gain ≥ 0.20 with permutation p < 0.05. That would justify the *DNA-EM-specifically* framing rather than just "physiological state matters."
+
+### §9.3 LOW-conviction — Phase H-3 (w_em weight on MPD cohort)
+
+**Experiment:** After Phase B (MPD held-out cohort) supplies empirical mouse pharma response data, fit linear (w_seq, w_em) summing to 1 to maximize prediction accuracy. Report w_em.
+
+**My prediction:**
+- **Point estimate:** w_em = **0.18**
+- **Band:** [0.05, 0.35]
+- **Verdict zone:** substantial-but-not-primary; FAILS Brandon's strong "primary carrier" hypothesis (which would require w_em ≥ 0.5).
+
+**Confidence:** LOW. I don't have strong priors on this from prior published work using this exact architecture on mouse cohorts. Brandon's hypothesis as written predicts w_em ≈ 1.0; my prediction concentrates probability mass much lower. **This is the prediction Brandon should most want to falsify** — if w_em lands ≥ 0.50, his hypothesis has earned the strongest pro-DNA-EM evidence the project has produced, and the architectural frame should pivot.
+
+**What would falsify me:** w_em ≥ 0.35 with bootstrap CI excluding 0.18. That tilts toward Brandon's strong reading.
+
+### §9.4 Aggregate cross-domain table (post-§9 update)
+
+| Prediction | Conviction | Point | Band | Falsification = |
+|---|---|---|---|---|
+| §1 A-prime-Pharma (R_intra-only) dev | HIGH | 4.87 | [4.78, 4.95] | dev outside band |
+| §2 A-prime-Market ternary I-Ching | MEDIUM | 33.2% | [29%, 38%] | hit rate ≥ 38% |
+| §3 A-prime-Astrology Conscientiousness decile | MEDIUM | 11% | [7%, 16%] | hit rate ≥ 16%, p < 0.05 |
+| §4 GSA next 60d universe-wide Sharpe | MEDIUM | 0.3 | [0.0, 0.6] | Sharpe ≥ 0.6 |
+| §5 GSA divination-overlay marginal Sharpe | LOW | +0.02 | [−0.05, +0.10] | Sharpe ≥ +0.20 (2 subperiods) |
+| §9.1 H-1 dev_em smoke test | MEDIUM | 4.85 | [4.70, 5.05] | dev_em outside band |
+| §9.2 H-2 MZ-twin R² gain | MEDIUM | 0.10 | [0.02, 0.20] | R² gain ≥ 0.20, p < 0.05 |
+| §9.3 H-3 w_em weight | LOW | 0.18 | [0.05, 0.35] | w_em ≥ 0.35, CI excludes 0.18 |
+
+**Total locked predictions: 8.** If all 8 land in their bands, divination overlays remain deprecated and biophoton/EM-DNA hypothesis is "real but not primary." If any single one falsifies in the divination/EM-favorable direction, that domain becomes the project's central focus.
+
+---
+
+## §10. Reserved for future pre-registrations
+
+Empty as of 2026-04-30. New pre-registrations must:
+- be added with their own lock date,
+- specify point + band + falsification = condition,
+- specify confidence level,
+- be locked BEFORE the experiment is run.
+
 — END LOCKED PREDICTIONS —
