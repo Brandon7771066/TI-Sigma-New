@@ -218,6 +218,7 @@ def compute_lcc_amplifier(
     iching_seed: Optional[int] = None,
     today: Optional[date] = None,
     mode: str = "full",
+    r_intra_em_override: Optional[float] = None,
 ) -> LCCTrace:
     """
     Compute the full Amp_TI multiplier from all five LCC usages.
@@ -225,15 +226,48 @@ def compute_lcc_amplifier(
 
     mode: "full" (default, all 5 LCC channels) | "R_intra_only" (Phase A-prime ablation:
           zeros R_ss/R_se/R_stack/R_obs, keeps only R_intra — tests whether R_intra alone
-          reproduces the Phase 4-bis dev=4.83 result, per AGENT_LOCKED_PREDICTIONS §1).
+          reproduces the Phase 4-bis dev=4.83 result, per AGENT_LOCKED_PREDICTIONS §1) |
+          "R_intra_em_substituted" (URB #826 Phase H-1: replaces R_intra_seq with the
+          R_intra_em proxy stack value supplied via r_intra_em_override; zeros divination
+          channels exactly like R_intra_only — tests whether the EM-DNA proxy stack
+          architecture pipes through the URB #824 amplifier sensibly,
+          per AGENT_LOCKED_PREDICTIONS §10.3).
+
+    r_intra_em_override: if set AND mode == "R_intra_em_substituted", this value
+          replaces the sequence-derived R_intra. Required for that mode.
     """
+    import math
+
+    _VALID_MODES = ("full", "R_intra_only", "R_intra_em_substituted")
+    if mode not in _VALID_MODES:
+        raise ValueError(
+            f"compute_lcc_amplifier: unknown mode={mode!r}. "
+            f"Must be one of {_VALID_MODES}."
+        )
+
     trace = LCCTrace()
 
     # Usage 1: Intra-substrate LCC — already computed for Brandon = 0.847
     # We use the pre-computed coherence for this profile; it's static per-DNA-set.
     trace.R_intra = lcc_substrate_coherence(profile)
-    # R_intra is naturally in [0, 1] for coherent DNA; we keep it as-is so it
-    # multiplies as a slight boost (~1.42 for Brandon's 0.847).
+    # R_intra is naturally in [0, 1] for coherent DNA. The intra_mult formula
+    # below maps R_intra=0.5 → 1.0 (neutral) and R_intra=0.847 → 1.1735 in the
+    # R_intra-only path. (NOTE: the prior comment claiming "~1.42 for 0.847" was
+    # wrong — that figure was the FULL 5-channel composite amp, not intra_mult
+    # alone. Caught by §8.6.a corrigendum.)
+    if mode == "R_intra_em_substituted":
+        if r_intra_em_override is None:
+            raise ValueError(
+                "mode='R_intra_em_substituted' requires r_intra_em_override "
+                "(URB #826 §3.1 R_intra_em proxy stack value in [0, 1])."
+            )
+        ov = float(r_intra_em_override)
+        if not math.isfinite(ov) or ov < 0.0 or ov > 1.0:
+            raise ValueError(
+                f"r_intra_em_override must be a finite float in [0, 1]; got {ov!r}. "
+                "URB #826 §3.1 proxy stack values are bounded coherence scalars."
+            )
+        trace.R_intra = ov
     intra_mult = 1.0 + 0.5 * (trace.R_intra - 0.5)  # 0.5 baseline → 1.0 multiplier
 
     # Usage 2: Substrate–Supplement LCC — sum across stack
@@ -279,15 +313,16 @@ def compute_lcc_amplifier(
     obs_mult = _lcc_to_multiplier(trace.R_obs, max_swing=0.2)  # smallest swing — placebo channel
 
     # Final amplifier — capped to [0.5, 3.0] per URB #824 §5 TERMINATE step
-    if mode == "R_intra_only":
-        # Phase A-prime ablation: zero out the four divination channels in the trace
-        # (so the per-trace audit reflects what was actually used) and use only R_intra.
+    if mode in ("R_intra_only", "R_intra_em_substituted"):
+        # Phase A-prime ablation / URB #826 H-1: zero out the four divination channels
+        # in the trace (so the per-trace audit reflects what was actually used) and use
+        # only R_intra (sequence for R_intra_only, EM-proxy override for em_substituted).
         trace.R_ss = 0.0
         trace.R_se = 0.0
         trace.R_se_components = {k: 0.0 for k in trace.R_se_components}
         trace.R_stack = 0.0
         trace.R_obs = 0.0
-        raw_amp = intra_mult  # static per-Brandon: 1.0 + 0.5*(R_intra-0.5)
+        raw_amp = intra_mult  # 1.0 + 0.5*(R_intra-0.5) using whichever R_intra is set
     else:
         raw_amp = intra_mult * ss_mult * se_mult * stack_mult * obs_mult
     trace.amp_ti = max(0.5, min(3.0, raw_amp))
@@ -314,6 +349,7 @@ class DivinationAmplifiedSimulator:
         iching_seed: Optional[int] = None,
         today: Optional[date] = None,
         mode: str = "full",
+        r_intra_em_override: Optional[float] = None,
     ):
         self.sim = underlying
         self.subject_name = subject_name
@@ -322,6 +358,7 @@ class DivinationAmplifiedSimulator:
         self.iching_seed = iching_seed
         self.today = today
         self.mode = mode
+        self.r_intra_em_override = r_intra_em_override
         self.last_trace: Optional[LCCTrace] = None
 
     @property
@@ -358,6 +395,7 @@ class DivinationAmplifiedSimulator:
             iching_seed=self.iching_seed,
             today=self.today,
             mode=self.mode,
+            r_intra_em_override=self.r_intra_em_override,
         )
         self.last_trace = trace
 

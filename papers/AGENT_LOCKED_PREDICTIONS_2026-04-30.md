@@ -394,6 +394,128 @@ This is *exactly* what the methodology was built to detect: a result you weren't
 
 ---
 
+### §10.3 — Phase H-1 PARTIAL (2-of-5 real components, $0 tonight)
+
+**Lock date:** 2026-04-30 DPES window, locked BEFORE running.
+
+**Authority:** Brandon's directive 2026-04-30 — *"Let's do whatever we can to confirm or deny H1 tonight. If we can't do anything yet, we'll pursue something else in the meantime while we set up the full test."*
+
+**Honest scope statement:** This is **NOT** the full Phase H-1 from URB #826 §6.1. The full H-1 requires all 5 components from URB #826 §3.1 to be real. Tonight's accessible components at $0:
+
+| Component | Status tonight | Source |
+|---|---|---|
+| mito_snp_score | ❌ stubbed at 0.5 | needs Brandon 23andMe upload |
+| telomere_proxy | ❌ stubbed at 0.5 | needs Brandon 23andMe upload |
+| cpg_promoter_density | ❌ stubbed at 0.5 | needs Brandon 23andMe upload |
+| **hrv_coherence_7day** | **✅ REAL** (Oura overnight HRV substitute for Pulsoid) | Oura `get_sleep_sessions().average_hrv`, last 7 nights with valid readings, normalized |
+| **sleep_efficiency_7day** | **✅ REAL** | Oura `get_sleep_sessions().efficiency`, last 7 nights, /100 |
+
+**Note on Pulsoid:** Pulsoid REST historical-data endpoints require paid premium subscription (probed 2026-04-30, returned `{"error_code":"7007","error_message":"premium_required"}`). Out of $0 budget. Substituting Oura overnight HRV `average_hrv` field as the HRV component proxy for tonight; this differs from Pulsoid daytime HRV but is the closest $0-accessible measurement.
+
+**What is actually being tested tonight:**
+1. Does the R_intra_em proxy stack architecture pipe through correctly into the URB #824 amplifier model? (engineering smoke check #2 beyond §8.4 passthrough)
+2. Does substituting a real-data-anchored R_intra_em (with 60% stub noise) produce a sensible dev shift compared to passthrough §8.4?
+3. Is the resulting dev_em_partial within the original §6.1 H-1 locked band [4.70, 5.05]?
+
+**What is NOT being tested tonight:**
+- The actual biophoton/EM-DNA hypothesis (60% of the proxy stack is stubbed; this cannot move the needle on Brandon's claim)
+- The differentiated predictions of §5.1, §5.2, §5.3 in URB #826 (those need MZ twins or learned weights from Phase B)
+- Whether w_em > 0 (no weight learning happens here)
+
+**Locked prediction:**
+
+| Quantity | Point | Band | Falsification |
+|---|---|---|---|
+| dev_em_partial (R_intra_em substituted) | 4.85 | [4.70, 5.10] | dev > 5.10 OR dev < 4.70 |
+| `\|dev_em_partial − dev_passthrough(4.7719)\|` | 0.10 | [0.00, 0.30] | shift > 0.30 |
+
+Falsification of either band → architecture is not piping correctly OR proxies create unexpected non-linearity → debug before treating any future H-1 result as valid.
+
+**Confidence:** MEDIUM-HIGH on the architecture-piping check (the simulator math is well-tested). MEDIUM on the band hit (3-of-5 stubs add noise of unknown magnitude).
+
+**Decision matrix:**
+
+| Outcome | Verdict |
+|---|---|
+| dev in [4.70, 5.10] AND shift ≤ 0.30 | ✅ Architecture pipes correctly. Real partial H-1 result is within full H-1 band. **Does NOT confirm H-1**, only validates infrastructure. Forward path: collect 23andMe + upgrade Pulsoid to enable full H-1. |
+| dev in [4.70, 5.10] but shift > 0.30 | ⚠️ Architecture pipes but proxy substitution moves dev more than expected. Investigate amp non-linearity. |
+| dev outside [4.70, 5.10] | ❌ Architecture has bug OR proxy stack has unexpected interaction. Block full H-1 until diagnosed. |
+
+**Outcome documented in §8.6 (FROZEN after run).**
+
+**Editing rule:** §10.3 numbers are FROZEN as of this lock.
+
+---
+
+### §8.6 — OUTCOME of §10.3 Phase H-1 PARTIAL (2-of-5 real components)
+
+**Date executed:** 2026-04-30 DPES window (same session as locking §10.3).
+**Script:** `phase_h1_partial.py`.
+**New simulator mode added:** `R_intra_em_substituted` in `divination_amplified_pharma.py` (uses `r_intra_em_override` to replace sequence-derived `R_intra` with a proxy-stack value; otherwise behaves identically to `R_intra_only` mode).
+
+**Live Oura data pulled tonight (last 7 valid long-sleep nights, 2026-04-21 .. 2026-04-28):**
+
+| Date | Efficiency | Avg HRV |
+|---|---|---|
+| 2026-04-21 | 96% | 79 ms |
+| 2026-04-23 | 97% | 73 ms |
+| 2026-04-24 | 92% | 78 ms |
+| 2026-04-25 | 76% | 69 ms |
+| 2026-04-26 | 84% | 86 ms |
+| 2026-04-27 | 87% | 85 ms |
+| 2026-04-28 | 90% | 71 ms |
+
+**Computed R_intra_em proxy stack (URB #826 §3.1):**
+
+| Component | Value | Status |
+|---|---|---|
+| mito_snp_score | 0.5000 | ❌ stub (needs 23andMe) |
+| telomere_proxy | 0.5000 | ❌ stub (needs 23andMe) |
+| cpg_promoter_density | 0.5000 | ❌ stub (needs 23andMe) |
+| **hrv_coherence_7day** | **0.7729** | ✅ REAL (Oura overnight HRV) |
+| **sleep_efficiency_7day** | **0.8886** | ✅ REAL (Oura sleep efficiency) |
+| **R_intra_em (mean)** | **0.6323** | (R_intra_seq baseline = 0.8470) |
+
+**RESULT — BOTH PRE-REGISTERED §10.3 BANDS HIT:**
+
+| Quantity | Pre-registered §10.3 band | Actual | In band? |
+|---|---|---|---|
+| dev_em_partial | [4.70, 5.10] | **4.9285** | ✅ YES |
+| `\|dev_em_partial − dev_passthrough(4.7719)\|` | [0.00, 0.30] | **0.1566** | ✅ YES |
+| Also in §6.1 original H-1 band [4.70, 5.05] | — | 4.9285 | ✅ YES (just under upper edge) |
+
+**Verdict per §10.3 decision matrix (row 1):** ✅ Architecture pipes correctly. Real partial H-1 result is within predicted band. Direction of shift is sensible — R_intra_em (0.6323) < R_intra_seq (0.8470), so amp dropped from ×1.1735 (R_intra-only with sequence value 0.847: 1 + 0.5·(0.847−0.5)) to ×1.066 (R_intra-only with em-partial value 0.6323: 1 + 0.5·(0.6323−0.5)), pulling dev away from observed empirical responses by 0.1566 in the expected direction.
+
+**§8.6.a — Correction (post-lock corrigendum, 2026-04-30 same session):** An earlier draft of this verdict misstated the sequence amp as "×1.42 (sequence)". The ×1.42 figure is the FULL 5-channel mode amp; the correct comparison value for the R_intra-only-with-em-substitution architecture is ×1.1735, computed above. The shift magnitude (0.1566) and band-hit verdict are unaffected — those are computed from `dev` values, not amps. The qualitative claim ("amp dropped in the expected direction") is also unaffected (1.1735 → 1.066 is still a drop). Caught by architect review immediately after §8.6 lock; logged here for honesty per asymmetric-standards #69.
+
+**WHAT THIS MEANS:**
+- ✅ The R_intra_em proxy stack architecture works end-to-end with real Oura biometric data flowing in.
+- ✅ The simulator responds to lower R_intra inputs in a sensible, monotone direction.
+- ✅ Full H-1 (when all 5 components are real) is architecturally unblocked.
+- ✅ Brandon's overnight HRV (77 ms 7-day mean) and sleep efficiency (88.9% 7-day mean) are objectively excellent — the live components contribute high values to R_intra_em.
+
+**WHAT THIS DOES *NOT* MEAN:**
+- ❌ This is NOT a confirmation of URB #826's biophoton/EM-DNA hypothesis. 60% of the proxy stack is stubbed at the neutral 0.5 baseline. The contribution of the real Oura components (which together push R_intra_em from the all-stub baseline 0.5 toward 0.6323) is consistent with both the EM-hypothesis-true and EM-hypothesis-false worlds.
+- ❌ This does NOT establish w_em > 0 (no weight learning). That awaits Phase B + Phase H-3.
+- ❌ This does NOT validate any of URB #826's three differentiated predictions (§5.1 same-sequence-different-EM, §5.2 different-sequence-same-EM, §5.3 w_em ≥ 0.30 from learned weights). All three require external data not yet collected.
+
+**WHAT IS NEEDED TO UNLOCK FULL H-1:**
+
+| Component | Path to real data | Cost | Owner |
+|---|---|---|---|
+| mito_snp_score | Brandon uploads 23andMe raw txt → MitoMap haplogroup lookup | $0 | Brandon |
+| telomere_proxy | Same upload → open-source TL estimator (Codd-style algorithm) | $0 | Brandon |
+| cpg_promoter_density | Same upload → UCSC Genome Browser CpG island annotations | $0 | Brandon |
+| hrv_coherence_7day | (a) Pulsoid premium subscription [$], OR (b) Polar H10 hardware [$60 one-time], OR (c) accept Oura overnight HRV as substitute | $-$60 | choice |
+
+Note: the Brandon 23andMe DNA file (`attached_assets/original_a9c8948d_220222163642_1777591258931.txt`) is already loaded for `R_intra_seq` computation. The mito/telomere/CpG components could in principle be derived from that same file — building those derivation modules is a separate Phase H-1.5 development task ($0, ~1 DPES).
+
+**Calibration note:** §10.3's MEDIUM-HIGH confidence on architecture-piping was correct; MEDIUM on band-hit landed within band but at the upper edge (4.9285), suggesting my point estimate of 4.85 was very close. Calibration good.
+
+**Editing rule:** §8.6 is FROZEN.
+
+---
+
 ## §11. Reserved for future outcome corrigenda + new pre-registrations
 
 Empty as of 2026-04-30. Same editing rules as §10 and §8.
