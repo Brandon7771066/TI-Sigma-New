@@ -42,6 +42,41 @@ Run Phase 4-bis with R_se = R_ss = R_stack = R_obs = 0 forced. Only R_intra cont
 - **PASS**: divination channels validated as contributing; Phase B proceeds with full architecture
 - **FAIL**: confirm what the audit suggests — divination wrapper collapses to R_intra-only on N=1; Phase B proceeds with R_intra-only baseline as the comparator and divination work moved to Phase C exclusively (where live telemetry replaces SHA-projected toy data)
 
+### Cross-Domain Extensions (Added 2026-04-30 per URB #825)
+
+The Phase A-prime ablation principle (test whether divination overlay adds anything beyond the underlying real signal) generalizes beyond pharma. The cross-domain audit (URB #825) flagged two more wrappers that need the same treatment, plus a fourth in the GSA stack:
+
+#### A-prime-Astrology (NEW)
+- **File to fix:** `psi_astrology_testing.py` (currently a `random.gauss` stub — see SIMULATION_WARNING header)
+- **Test:** N=30 volunteer birth charts → predict NEO-PI-R Conscientiousness decile from sun sign + Mercury house only → score by exact-decile match
+- **Chance baseline:** 10%
+- **Pre-registered FAIL:** hit rate ≤ 18%
+- **Pre-registered SURVIVE:** hit rate ≥ 25% with binomial p < 0.05
+- **Cost:** $0; **Duration:** 2-3 weeks (volunteer recruit dominates)
+- **Agent locked prediction (URB #825):** 11% (FAIL band)
+
+#### A-prime-Market (NEW)
+- **File to fix:** `divination_empirical_testing.py` (currently has 2 methodology bugs — see METHODOLOGY_WARNING header)
+- **Required edits before run:** (a) replace correctness logic with strict ternary match (BULL=BULL, BEAR=BEAR, NEUTRAL=NEUTRAL); (b) hard-fail on missing yfinance data instead of silently substituting Gaussian random walk; (c) tag every output row with `data_source: "yfinance" | "synthetic"`
+- **Test:** I-Ching-only predictor on SPY, daily 5-day-horizon, N=60 trading days, locked seed
+- **Chance baseline:** ~33%
+- **Pre-registered FAIL:** hit rate ≤ 36%
+- **Pre-registered SURVIVE:** hit rate ≥ 42% with binomial p < 0.05
+- **Cost:** $0 (free yfinance); **Duration:** 60 trading days for forward test, or 1 hour for retroactive run on locked historical window
+- **Agent locked prediction (URB #825):** 33.2% (FAIL band)
+
+#### A-prime-GSA-Overlay (NEW)
+- **Files involved:** `gsa_core.py`, `gm_divination_expanded.py`, `hypercomputer_divination_interface.py`
+- **Test:** Run GSA twice on the green-light subset (Industrials + Tech + Energy, ~15 stocks) over 2020-2024 backtest — once WITH divination overlay enabled, once WITHOUT — measure marginal Sharpe contribution from the overlay alone
+- **Pre-registered FAIL (overlay-adds-nothing):** marginal Sharpe ∈ [−0.10, +0.15]
+- **Pre-registered SURVIVE (overlay-carries-edge):** marginal Sharpe ≥ +0.20 replicated across ≥2 sub-periods
+- **Cost:** $0 (yfinance); **Duration:** 30 minutes (single re-run pair)
+- **Agent locked prediction (URB #825):** +0.02 (FAIL band)
+
+#### Cross-Domain Aggregate Verdict Logic
+- **All four A-prime experiments FAIL (predicted):** divination overlays as currently implemented add no measurable signal beyond the underlying real signals. Phase 5 stays gated permanently. Phase C (live Pulsoid + Oura telemetry) becomes the sole defensible expansion path because it replaces simulated R_se with real physiological coupling.
+- **One or more A-prime experiments SURVIVE:** that specific domain becomes the focus of follow-up power-up trials at full pre-registered N. One falsification of the agent's prediction is more valuable than four confirmations.
+
 ---
 
 ## Phase B — Held-Out Cohort with Genotype Variance (Mouse Phenome Database)

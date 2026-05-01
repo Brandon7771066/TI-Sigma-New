@@ -2,6 +2,43 @@
 DIVINATION EMPIRICAL TESTING SYSTEM
 =====================================
 
+⚠️  METHODOLOGY_WARNING (added 2026-04-30 per URB #825 cross-domain audit) ⚠️
+
+This module has TWO methodology bugs that inflate reported accuracies:
+
+BUG #1 — credit-for-near-miss (lines 500-504 of `backtest()`):
+    A BULLISH prediction is marked "correct" when actual_direction is
+    NEUTRAL (|return| ≤ 1%) but actual_return > 0. With ordinary market
+    drift, ~half of NEUTRAL days have positive returns, so this roughly
+    doubles the apparent BULL/BEAR hit rate.
+
+    The honest metric is exact ternary match (BULL=BULL, BEAR=BEAR,
+    NEUTRAL=NEUTRAL only). The current code still compares the inflated
+    metric against `expected_random = 0.33` (line 529) — a pure
+    apples-to-oranges comparison.
+
+BUG #2 — silent synthetic-data fallback (lines 440-459):
+    If `yfinance` import fails OR `Ticker.history()` raises (rate limit,
+    network blip, ticker delisting), the code silently substitutes a
+    Gaussian random walk as if it were real prices and reports a
+    "backtest accuracy" against fake data — with no flag in the output
+    indicating which mode was used.
+
+DO NOT cite the directional accuracies, hit rates, or backtest results
+from this module at face value. The two corrective edits required before
+any future run:
+  (a) replace the correctness logic with strict ternary match
+  (b) hard-fail (raise) instead of silently substituting synthetic data
+      when yfinance is unavailable, and tag every result row with
+      `data_source: "yfinance" | "synthetic"`
+
+See URB #825 §2.2 and §5 A-prime-Market for the corrected pre-registered
+re-run protocol.
+
+────────────────────────────────────────────────────────────────────
+
+Original docstring:
+
 FALSIFIABLE PREDICTIONS + BACKTESTING
 
 This module creates REAL testable predictions using divination methods,

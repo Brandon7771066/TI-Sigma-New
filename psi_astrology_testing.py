@@ -2,13 +2,35 @@
 PSI Astrology Testing Module
 ============================
 
+⚠️  SIMULATION_WARNING (added 2026-04-30 per URB #825 cross-domain audit) ⚠️
+
+This module is a STUB / PLACEHOLDER, not an empirical test. Its "accuracy"
+outputs are produced by `random.gauss(prior_mean, sd)` calls (lines 254,
+300, 356, 402, 452, 505) — meaning the reported accuracy IS the hardcoded
+prior, not a measurement against any external ground truth.
+
+DO NOT cite numbers from this module as evidence for or against astrology.
+
+To convert this stub into a real test (per URB #825 §5 A-prime-Astrology):
+  (a) replace `random.gauss` with real birth-chart inputs from N≥30 volunteers
+  (b) score predictions against external psychometric instruments
+      (NEO-PI-R Big-Five) or biographical event records
+  (c) report exact (not Gaussian-sampled) hit rates with binomial CIs
+  (d) pre-register the prediction targets BEFORE measurement
+
+Until those four conditions are met, treat this file as architectural
+scaffolding only.
+
+────────────────────────────────────────────────────────────────────
+
 Enhanced testing for astrology with specific prediction categories:
 - Zodiac signs and personality traits
 - House placements and life domains
 - Planetary aspects and relationship dynamics
 - Transits and timing predictions
 
-Goal: Achieve results at least as good as numerology (52-94% accuracy)
+Original goal (un-met): Achieve results at least as good as numerology
+literature claims (52-94% accuracy).
 """
 
 import random
