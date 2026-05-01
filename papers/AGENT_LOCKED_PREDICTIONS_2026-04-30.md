@@ -314,6 +314,84 @@ This is *exactly* what the methodology was built to detect: a result you weren't
 
 **Editing rule:** §10.1 number lock is FROZEN. Outcome documented in §11 corrigendum after Brandon reveals the target.
 
+### §10.2 — OOS Replication Test for Brandon's "Converse-Divination" Claim (post-§8.2)
+
+**Lock date:** 2026-04-30, locked AFTER §8.2 result was known (this is honest **post-result pre-registration**, not naive pre-registration; I have already seen 21.67% on Feb-Apr 2026 and am now testing whether the anti-correlation replicates out-of-sample on an independent window).
+
+**Authority:** Brandon's directive 2026-04-30 — *"strong 'anti-divination' signals are ACTUALLY HIGH PRO-CONVERSE DIVINATION SIGNALS!!! TI saves the day!!!"*
+
+**Steelman of Brandon's claim:** Under TI Sigma 5-valued logic, if a predictor is *consistently* anti-correlated with truth, betting against it (the "converse" predictor) is a positive signal. Asymmetric-standards #69 supports this structurally: falsification carries information, and one specific way to monetize that information is contrarian betting. The §8.2 result (hit rate 21.67% with p=0.028 in LOW tail on Feb-Apr 2026) is the silhouette this claim predicts.
+
+**Honest qualifier:** One window is not "consistent." OOS replication on an independent window is the only way to distinguish "real anti-correlation" from "regime-specific noise."
+
+**Experiment specification:**
+- Same script logic as `phase_a_prime_market_ablation.py` (strict ternary equality + hard-fail on missing yfinance, no synthetic fallback)
+- **Different historical window:** SPY trading days 2024-06-01 .. 2024-12-31 (~145 trading days, no overlap with Feb-Apr 2026 window, different regime — 2024 H2 vs 2026 Q1)
+- Same per-window deterministic seed = LOCK_SEED_MARKET + i for reproducibility
+- Same 5-trading-day forward horizon, same ±1% NEUTRAL band
+- Report TWO numbers: original I-Ching hit rate AND converse-I-Ching hit rate (where converse = invert BULL↔BEAR, NEUT→NEUT)
+
+**Pre-registered numerical predictions (LOW conviction, knowledge of §8.2 absorbed):**
+
+| Quantity | Point | Band | Falsification | What outcome means |
+|---|---|---|---|---|
+| Original I-Ching OOS hit rate | 33% | [27%, 39%] | hit ≤ 27% with p<0.05 | < 27% with p<0.05 → anti-correlation REPLICATES; converse-divination claim has legs |
+| Converse I-Ching OOS hit rate | 33% | [27%, 39%] | hit ≥ 39% with p<0.05 | ≥ 39% with p<0.05 → converse signal SURVIVES OOS; Brandon's TI-saves-the-day claim earned |
+
+**Decision matrix:**
+
+| Original | Converse | Verdict |
+|---|---|---|
+| ~33% | ~33% | Feb-Apr 2026 was noise; neither anti-divination nor converse-divination has support; calibrate down |
+| < 27% p<0.05 | > 39% p<0.05 | **CONVERSE-DIVINATION CONFIRMED OOS** — Brandon's TI claim survives; lock as URB #827 |
+| > 39% p<0.05 | < 27% p<0.05 | I-Ching has POSITIVE signal in 2024 H2; regime-dependent; both claims wrong |
+| Mixed | Mixed | Regime-dependent or noisy; need N=300+ across multiple regimes |
+
+**Confidence:** LOW. Most likely outcome (my honest prior, before running): regression to chance (~33%) on the OOS window. Anti-correlation on one window almost always regresses on the next. But Brandon's claim deserves a real test, not dismissal.
+
+**Editing rule:** §10.2 numbers are FROZEN as of this lock. Outcome documented in §8.5 corrigendum.
+
+---
+
+### §8.5 — OUTCOME of §10.2 OOS Replication / Converse-Divination Test
+
+**Date executed:** 2026-04-30 DPES window (same session as locking §10.2).
+**Script:** `phase_a_prime_market_oos_converse.py`.
+**OOS window:** SPY 2024-06-01 .. 2024-12-31, N=141 eligible 5-day windows, no overlap with §8.2 Feb-Apr 2026 window.
+
+**RESULT — BRANDON'S CONVERSE-DIVINATION CLAIM NOT SUPPORTED OOS:**
+
+| Quantity | Pre-registered §10.2 band | Actual OOS | In band? | p-value |
+|---|---|---|---|---|
+| Original I-Ching hit rate | [27%, 39%] | **33.33% (47/141)** | YES | two-sided 1.0000 |
+| Converse I-Ching hit rate | [27%, 39%] | **33.33% (47/141)** | YES | two-sided 1.0000 |
+
+**Both at exactly chance baseline (1/3).** Independence test: expected diagonal hits from predicted/actual marginals = 47.94; observed = 47 (within 1 of pure independence). I-Ching predictions are statistically independent of SPY 5-day-forward direction on the 2024 H2 window.
+
+**Verdict per §10.2 decision matrix (row 1):** Both hit rates in ~chance band → "Feb-Apr 2026 §8.2 result regressed to chance OOS. Anti-correlation was likely noise. Brandon's converse claim NOT supported on this OOS window."
+
+**Cross-window summary:**
+
+| Window | Original I-Ching | Significance |
+|---|---|---|
+| Feb-Apr 2026 (§8.2, N=60) | 21.67% (13/60) | z=-1.917, p_one=0.028 LOW |
+| 2024-06..12 (§8.5 OOS, N=141) | 33.33% (47/141) | z=0.000, p_two=1.000 |
+| 2024-06..12 (§8.5 OOS, converse) | 33.33% (47/141) | z=0.000, p_two=1.000 |
+
+**Honest interpretation:** §8.2 was not anti-predictive in any robust sense; it was a single-window noise excursion that did not replicate. Per asymmetric-standards #69, this single OOS test is sufficient to falsify the converse-divination claim — one window of clean chance behavior, with N=141 (2.35× the original window's N=60), refutes the contrarian-signal hypothesis more cleanly than dozens of cherry-picked confirmation runs would have supported it.
+
+**The TI Sigma 5-valued logic structure remains formally valid** — IF a signal were consistently anti-correlated, betting against it WOULD be a positive signal. But the empirical antecedent ("consistently anti-correlated") fails here on the OOS test. The mathematical move is sound; the empirical input that would activate it is absent.
+
+**What this leaves standing from the divination program:**
+- §8.1 deprecation of R_se/R_ss/R_stack/R_obs as multiplicative simulator wrappers — UNCHANGED.
+- §8.2 falsification of "I-Ching as standalone market predictor" — STRENGTHENED (now also fails as contrarian signal OOS).
+- Possibility that I-Ching could still serve as a **regime-detection feature** for a Phase F NN that learns when divination signals carry information vs. when they're pure noise — UNTESTED, technically still on the table, but priors should be very low.
+- R_intra (DNA-anchored channel from §8.1) — STILL the only surviving substrate; URB #826 biophoton/EM-DNA frame remains the live frontier.
+
+**Calibration note:** My §10.2 prior ("most likely outcome: regression to chance ~33%") was correct. Conviction calibration restored after the §8.1 over-confident HIGH miss.
+
+**Editing rule:** §8.5 is FROZEN.
+
 ---
 
 ## §11. Reserved for future outcome corrigenda + new pre-registrations
