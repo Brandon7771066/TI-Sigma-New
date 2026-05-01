@@ -121,6 +121,34 @@ If at any point in the 21 days you decide this isn't worth your time, that's a p
 
 ---
 
+## Pharmacology Confound — added 2026-05-01 PM
+
+You disclosed today that you started **Adderall 40 mg IR** (Day 1) after **~10 days of withdrawal from Focalin 30 mg IR** (which you'd been on for ~3 weeks with "great success"). Subjective Day-1 effects: subtle, no edge/energy boost, felt tired, one mild confusion episode at the Post Office, mood good, productive.
+
+This is a **real confound** for §10.6 that I have to handle honestly:
+
+1. **Stimulants of any class modulate HRV.** Methylphenidate (Focalin) and amphetamine (Adderall) both increase resting heart rate, decrease HRV, and shift sympathetic/parasympathetic balance — all of which directly enter the Phase B regression as features.
+2. **Your 30-day Oura window (used in §8.8) overlaps with three pharmacological regimes**: late-Focalin, Focalin-washout, and (now) Adderall. §8.8 is FROZEN per pre-registration so this doesn't invalidate it, but it means §8.8's small per-day signal may have been contaminated by med-state, not "true" daily biology.
+3. **The H10 + §10.6 collection window starts during a med transition.** Day 1 Adderall ≠ Day 21 Adderall. Steady-state amphetamine HRV effects take 2–4 weeks.
+
+**Mitigation (added today, $0):**
+
+- `data/medication_log.csv` — seeded with the Focalin start/stop and today's Adderall start
+- `data/subjective_daily_log.csv` — seeded with today's row
+- `log_daily_subjective.py` — tiny CLI to append one row in 30 seconds: `python log_daily_subjective.py` (interactive) or `python log_daily_subjective.py --energy 3 --mood 4 --focus 3 --edge 2 --notes "..."`
+
+**§10.6 plan revision (will be locked formally before run):**
+
+- **Add `is_on_adderall`, `is_on_focalin`, `days_since_med_change` as explicit covariates** to the regression. The architect-review version of §10.6 will treat these as forced controls, not features competing for weight. This is asymmetric-standards #69 honesty: a pharma-explained variance has nothing to do with URB #826.
+- **Optionally: drop the first 14 days of H10 data** as Adderall-titration washout. Keep all-day H10 collection going during these days (we'll use them for Adderall-titration HRV characterization later).
+- **§10.6 falsification thresholds remain unchanged** (w_em < 0.10 ∧ HRV > 0.85 → falsified at this subject), but the EM features will be tested against the *residual* HRV after pharma-control regression — i.e., we ask "does URB #826 explain HRV variance that Adderall can't?"
+
+This is actually a stronger test, not a weaker one. If URB #826 survives controlling for Adderall, that's a real result.
+
+**One operational ask (~30 sec/day):** `python log_daily_subjective.py` once a day — energy/mood/focus/edge on 1–5, plus any med change. Even rough numbers matter for spotting med-state shifts in the regression.
+
+---
+
 ## TL;DR for the eating-while-reading version
 
 1. We're testing whether your DNA actually emits an EM signal (URB #826).
