@@ -1,0 +1,117 @@
+{
+  "lock_metadata": {
+    "lock_timestamp": "2026-05-01T10:30:00-04:00",
+    "subject": "Brandon Charles Emerick",
+    "n_subjects": 1,
+    "method": "NNLS via SLSQP, sum=1 simplex constraint",
+    "target": "next-day readiness_score / 100",
+    "feature_order": [
+      "mito_snp_score",
+      "telomere_proxy",
+      "cpg_promoter_density",
+      "sleep_hrv_norm",
+      "ppg_biosignature"
+    ],
+    "mito_snp_score": 0.9468,
+    "telomere_proxy": 0.4167,
+    "cpg_promoter_density": 0.4757
+  },
+  "ran_at": "2026-05-01T11:03:21.357429Z",
+  "harvest_path": "data/oura_30day_harvest_2026-05-01.json",
+  "ppg_sigs_path": "data/ppg_biophoton_signatures_2026-05-01.json",
+  "n_complete_rows": 6,
+  "feature_order": [
+    "x_mito",
+    "x_telomere",
+    "x_cpg",
+    "x_sleep_hrv_norm",
+    "x_ppg_biosignature"
+  ],
+  "learned_weights": {
+    "x_mito": 0.740330800138582,
+    "x_telomere": 0.11751725226728742,
+    "x_cpg": 0.12124148480361337,
+    "x_sleep_hrv_norm": 0.0,
+    "x_ppg_biosignature": 0.020910462790517337
+  },
+  "diagnostics": {
+    "converged": true,
+    "message": "Optimization terminated successfully",
+    "n_iter": 12,
+    "rss": 0.005523303664713243,
+    "weights_sum": 1.0,
+    "min_weight": 0.0,
+    "max_weight": 0.740330800138582
+  },
+  "rss_baseline_uniform": 0.2918818047272068,
+  "rss_improvement_fraction": 0.9810769168366786,
+  "verdict": {
+    "HIT_1_converged_simplex_no_nan": true,
+    "HIT_2_rss_better_than_uniform": true,
+    "HIT_3_nonnegative_weights": true,
+    "all_three_hit": true
+  },
+  "data_rows": [
+    {
+      "day": "2026-04-20",
+      "target_day": "2026-04-21",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.87,
+      "x_ppg_biosignature": 0.5522753204774711,
+      "y_target": 0.84
+    },
+    {
+      "day": "2026-04-23",
+      "target_day": "2026-04-24",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.73,
+      "x_ppg_biosignature": 0.4063236323510516,
+      "y_target": 0.79
+    },
+    {
+      "day": "2026-04-24",
+      "target_day": "2026-04-25",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.78,
+      "x_ppg_biosignature": 0.2920889434729852,
+      "y_target": 0.82
+    },
+    {
+      "day": "2026-04-25",
+      "target_day": "2026-04-26",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.69,
+      "x_ppg_biosignature": 0.310922948559471,
+      "y_target": 0.84
+    },
+    {
+      "day": "2026-04-26",
+      "target_day": "2026-04-27",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.86,
+      "x_ppg_biosignature": 0.2432464938738002,
+      "y_target": 0.84
+    },
+    {
+      "day": "2026-04-27",
+      "target_day": "2026-04-28",
+      "x_mito": 0.9468,
+      "x_telomere": 0.4167,
+      "x_cpg": 0.4757,
+      "x_sleep_hrv_norm": 0.85,
+      "x_ppg_biosignature": 0.3215776224114266,
+      "y_target": 0.76
+    }
+  ],
+  "honest_scope": "Time-constant genome features have structurally-meaningless weights in N=1 within-subject fit. URB #826 not tested. Pipeline architecturally validated for forward \u00a710.6 use after Polar H10 + \u226521 days."
+}

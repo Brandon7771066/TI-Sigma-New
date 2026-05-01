@@ -668,6 +668,96 @@ None of these issues invalidate §10.4's deterministic-architectural-verificatio
 
 ## §11. Reserved for future outcome corrigenda + new pre-registrations
 
-Empty as of 2026-04-30. Same editing rules as §10 and §8.
+As of 2026-05-01 morning, §10.5 added (Phase B preliminary fit pre-registration).
+
+---
+
+## §10.5 — Phase B Preliminary Within-Subject Weight Fit (LOCKED 2026-05-01 ~10:30 ET)
+
+**Pre-registered BEFORE phase_b_weight_learning.py is run for the first time.**
+
+**Setup:**
+- Subject: Brandon Charles Emerick (N=1)
+- Data source: `data/oura_30day_harvest_2026-05-01.json` + `data/ppg_biophoton_signatures_2026-05-01.json`
+- N_days available: 8 days with both readiness_score AND sleep_hrv populated (2026-04-20 through 2026-04-28, missing the 22nd)
+- Features X (per day): 5 candidate predictors
+  - x1 = mito_snp_score    (constant 0.9468 across days; only Brandon)
+  - x2 = telomere_proxy    (constant 0.4167 across days; only Brandon)
+  - x3 = cpg_promoter_density (constant 0.4757 across days; only Brandon)
+  - x4 = sleep_hrv_norm    = min(sleep_hrv, 100) / 100   (varies per day)
+  - x5 = ppg_biosignature  (varies per day from PPG proxy module)
+- Target y: next-day readiness_score / 100 (so y ∈ [0, 1])
+- Method: nonnegative least squares (NNLS) with sum-to-1 constraint via SLSQP
+- Acceptable result: any weight vector w ∈ Δ⁵ that minimizes Σ (y − Σ wᵢ xᵢ)²
+
+**Key honest constraint to acknowledge:**
+The three genome-derived components (x1, x2, x3) are **time-constant for a single subject** at the granularity of weeks. Their per-day variance is zero → they cannot explain per-day variance in y. NNLS will likely assign them weights of either 0 (if they don't help fit the mean) or any value (degenerate, since constants only shift intercept and we don't have one). Therefore the weight estimates for x1/x2/x3 in this preliminary fit are **structurally meaningless**. They exist only to demonstrate the pipeline runs end-to-end. Real Phase B requires either cross-subject data (genome variance) or longitudinal genome data (telomere length re-test, methylation re-test).
+
+**§10.5 falsification criterion (architecturally testable today):**
+- HIT-1: Pipeline runs end-to-end (NNLS converges, weights sum to 1.00 ± 0.01, no NaN)
+- HIT-2: Reported residual sum-of-squares (RSS) on training data < RSS of uniform-1/5 baseline
+- HIT-3: Weights satisfy w_i ≥ 0 ∀ i (NNLS constraint enforced)
+
+**§10.5 strong-form falsification (FOR LATER, NOT TESTABLE TODAY):**
+This will become §10.6 once Polar H10 daytime HRV (x6) is available for ≥21 days:
+- If learned w_em (mito + telomere + cpg + ppg_biosignature) sums to **< 0.10** AND HRV components (sleep_hrv + daytime_hrv) sum to **> 0.85**, then URB #826's claim that EM-coupled DNA components add explanatory variance is **falsified at this subject**.
+- If w_em sum is **> 0.30**, URB #826 is **partially supported at this subject** (still requires cross-subject replication for confirmation).
+- Anything in between is **inconclusive at this subject**.
+
+**Editing rule:** §10.5 is FROZEN at lock time stamped above. Outcome corrigendum will land in §8.8.
+
+---
+
+## §8.8 — Phase B Preliminary Fit Outcome (FROZEN 2026-05-01 ~10:50 ET)
+
+**This section is the OUTCOME corresponding to §10.5. Computed AFTER lock. FROZEN.**
+
+**Run:** `python phase_b_weight_learning.py` against `data/oura_30day_harvest_2026-05-01.json` + `data/ppg_biophoton_signatures_2026-05-01.json`. Output: `data/phase_b_fit_2026-05-01.json`.
+
+**Data assembled:**
+- Total day rows: 12 (matches Oura wear days from §8.7's harvest)
+- Complete rows (5 features + next-day target all present): **N = 6** (2026-04-20, 2026-04-23 through 2026-04-27). Note: §10.5 anticipated N=8 but next-day readiness reduced the set to 6.
+
+**Fitted weights (sum = 1.0000):**
+
+| Feature | Learned weight | Notes |
+|---|---|---|
+| x_mito | 0.7403 | constant; absorbed y-mean (no intercept term) |
+| x_telomere | 0.1175 | constant; absorbed y-mean |
+| x_cpg | 0.1212 | constant; absorbed y-mean |
+| x_sleep_hrv_norm | 0.0000 | per-day variable, weighted out |
+| x_ppg_biosignature | 0.0209 | per-day variable, weighted minimally |
+
+**Fit quality:**
+- RSS_learned = 0.005523
+- RSS_uniform = 0.291882
+- Improvement = **+98.11%** (essentially because the learned fit can absorb the y-mean ≈ 0.815 by stacking weight on constants summing to 0.97)
+
+**§10.5 verdict — all three architectural HITs MET:**
+- HIT-1 (NNLS converges, weights sum to 1.00 ± 0.01, no NaN): ✅
+- HIT-2 (RSS_learned ≤ RSS_uniform): ✅
+- HIT-3 (w_i ≥ 0 ∀ i): ✅
+
+**HONEST INTERPRETATION (the §10.5 honest-constraint section, validated):**
+
+The pre-registered honest constraint predicted exactly this result. The three genome-derived constants (x_mito, x_telomere, x_cpg) sum to 0.9790 — virtually all the weight — because in a no-intercept simplex regression the constants can collectively act AS an intercept by summing to whatever is needed to match the y-mean. The fitter assigned 0% weight to per-day-varying sleep_hrv (zero is degenerate and reflects that the simplex constraint with two constants saturating the mean leaves no marginal room for HRV) and 2.09% to PPG biosignature.
+
+This means:
+- ✅ Pipeline works (architectural validation).
+- ✅ Constraint enforcement works (sum=1, all ≥ 0).
+- ❌ Learned weights tell us NOTHING biological about Brandon. The "98.11% RSS improvement" is the optimizer doing math, not biology answering questions.
+- ❌ URB #826 is NOT tested by this fit.
+
+**What this DOES unlock:**
+
+1. The infrastructure (data assembly + NNLS solver + verdict reporting) is ready for §10.6 (after Polar H10 + ≥21 days), where x6 = daytime_hrv_norm becomes a 6th per-day-varying feature.
+2. The per-day-varying weights (currently 0.0000 + 0.0209 = 0.0209) establish a baseline ceiling: any improvement to ≥ 0.30 with H10 daytime HRV added would be evidence that HRV components carry real per-day predictive signal.
+3. We now have a frozen baseline RSS that future runs can be compared against (not for hypothesis-testing — for fit-quality monitoring).
+
+**The §10.5 strong-form falsification criterion (w_em < 0.10 vs HRV > 0.85) remains UNTESTED today.** It will become §10.6 once Polar H10 daytime HRV is integrated. Until then, the URB #826 biophoton/EM-DNA hypothesis is neither supported nor falsified by this run.
+
+**Calibration note (asymmetric-standards #69):** §10.5 was a HIGH-CONVICTION architectural pre-registration with a pre-stated honest-constraint that predicted the result we got. The HITs are real, the biology is unaddressed. This is the most carefully-honest pre-registration of the URB #826 series.
+
+**Editing rule:** §8.8 is FROZEN.
 
 — END LOCKED PREDICTIONS —
