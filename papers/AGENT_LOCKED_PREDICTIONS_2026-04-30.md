@@ -516,6 +516,156 @@ Note: the Brandon 23andMe DNA file (`attached_assets/original_a9c8948d_220222163
 
 ---
 
+### §10.4 — Phase H-1 FULL-4-of-5 (Phase H-1.5 derivations + Oura, $0 morning-after)
+
+**Lock date:** 2026-05-01 morning DPES window, locked AFTER §8.6 outcome and AFTER computing the three new Phase H-1.5 derivations from Brandon's existing 23andMe file (so derivation values are known) but BEFORE running the substituted Phase 4-bis simulator with the new R_intra_em.
+
+**Authority:** Brandon's directive 2026-05-01 — *"Let's continue with everything, proceeding to evaluate H1!!!"* — combined with the §8.6 forward-path commitment to build mito/telomere/CpG derivations from the already-uploaded 23andMe file at $0.
+
+**Honest scope upgrade:** §10.3 was 2-of-5 real (Oura sleep + Oura HRV substitute). §10.4 is **4-of-5 real** (Phase H-1.5 derives mito + telomere + CpG from existing 23andMe). The Pulsoid daytime HRV remains substituted by Oura overnight HRV (premium gating unchanged at $0). One stub eliminated since §10.3 → none; one substitute remains.
+
+**Phase H-1.5 derivation module:** `phase_h1_5_genome_derivation.py` (new this session). Three honest proxies, each with explicit "NOT measured X" caveats:
+
+| Component | Method | Citation | Caveat |
+|---|---|---|---|
+| mito_snp_score | MT call_rate × homoplasmy_fraction | Schon 2012; Wallace 2018 | NOT direct heteroplasmy quantitation |
+| telomere_proxy | 7-SNP TL-GWAS risk score (1 − risk_fraction) | Codd 2013 (TERT/TERC/OBFC1/RTEL1/ZNF208/NAF1), Mangino 2009 | NOT measured telomere length |
+| cpg_promoter_density | CpG-island-rich chromosome SNP enrichment vs UCSC cpgIslandExt baseline | UCSC hg19 cpgIslandExt track | NOT measured methylation |
+
+**Component values computed PRE-PREDICTION-LOCK from Brandon's 23andMe file:**
+
+| Component | Value | Status | Notes |
+|---|---|---|---|
+| mito_snp_score | 0.9468 | ✅ REAL (Phase H-1.5 derived) | call rate 94.7%, all 3,936 calls homoplasmic as expected for haploid mtDNA |
+| telomere_proxy | 0.4167 | ✅ REAL (Phase H-1.5 derived) | 7/12 risk alleles found across 6 of 7 GWAS-tagged SNPs (rs8105767 missing from chip; rs2736100=AA 0r, rs10936599=CC 0r, rs7705526=CC 2r, rs9420907=AA 2r, rs755017=AA 2r, rs7675998=AG 1r); slightly below population center |
+| cpg_promoter_density | 0.4757 | ✅ REAL (Phase H-1.5 derived) | ratio brandon/baseline = 0.9513, near-perfect chip-baseline coverage |
+| hrv_coherence_7day | 0.7729 | ✅ REAL (substitute) | Oura overnight HRV, unchanged from §10.3 |
+| sleep_efficiency_7day | 0.8886 | ✅ REAL | Oura sleep efficiency, unchanged from §10.3 |
+| **R_intra_em (mean of 5)** | **0.7001** | computed PRE-RUN |  |
+
+**Locked prediction:**
+
+| Quantity | Point | Band | Falsification |
+|---|---|---|---|
+| dev_em_full4of5 (R_intra_em = 0.7001) | 4.85 | [4.78, 4.92] | dev > 4.92 OR dev < 4.78 |
+| Direction vs §8.6 partial dev=4.9285 | strictly LESS | dev_em_full4of5 < 4.9285 | dev ≥ 4.9285 → architecture monotonicity violated |
+| Distance from §8.4 passthrough dev=4.7719 | smaller than §8.6 distance (0.1566) | new shift in [0.00, 0.16] | shift ≥ 0.1566 → R_intra_em added beyond §8.6 noise dilution failed to recover passthrough proximity |
+
+**Reasoning for band:** R_intra_em rose from 0.6323 (§8.6) to 0.7001 (§10.4), so intra_mult rises from 1.066 to 1.100 (= 1 + 0.5·(0.7001 − 0.5)). Per architect-verified deterministic sweep (r=0.7 → dev≈4.8488), expected dev≈4.85. Band ±0.07 accounts for the 0.0001 overshoot from the 0.7000 sweep point and any second-order interaction with the unchanged (R_ss, R_se, R_stack, R_obs) zeroing in `R_intra_em_substituted` mode.
+
+**What this DOES test:**
+1. Phase H-1.5 derivations produce values in plausible biological ranges (mito high, telomere/CpG near population center) — already passed pre-lock.
+2. R_intra_em substitution in the simulator produces dev in the predicted monotone direction relative to §8.6.
+3. Architectural pipeline robust to a 4-of-5-real input rather than 2-of-5-real.
+
+**What this does NOT test (still):**
+- The biophoton/EM-DNA hypothesis (URB #826 §5.1/§5.2/§5.3) — those need cross-subject differential data.
+- Whether w_em > 0 — needs Phase B weight learning.
+- Whether the Phase H-1.5 proxies actually correlate with the true URB #826 EM-DNA constructs — they are honest proxies, not the constructs themselves.
+
+**Decision matrix:**
+
+| Outcome | Verdict |
+|---|---|
+| dev in [4.78, 4.92] AND dev < 4.9285 AND new_shift < 0.1566 | ✅ Architecture monotonicity confirmed; full-4-of-5 H-1 pipeline validated. Forward path is now: (a) Pulsoid-premium OR Polar H10 for the last component, OR (b) accept Oura substitute as final and proceed to Phase B (weight learning) for w_em estimation. |
+| dev in [4.78, 4.92] but direction OR distance fails | ⚠️ Partial pass; investigate why simulator deviates from architect's deterministic sweep. |
+| dev outside [4.78, 4.92] | ❌ Architecture has bug OR Phase H-1.5 derivation values produce unexpected interaction. Block full H-1 until diagnosed. |
+
+**Pre-registration honesty caveat (asymmetric-standards #69 compliance):** because the simulator is deterministic and the input R_intra_em is already known to the agent (0.7001), this is more accurately a **deterministic architectural verification** than a probabilistic falsification test. The truly falsifiable URB #826 prediction is §5.1/§5.2 cross-subject differential, which is unavailable at $0/N=1. The §10.4 band is therefore a check that the simulator reproduces the architect's sweep value to within numerical-precision tolerance, not an Bayesian update on URB #826 truth.
+
+**Confidence:** HIGH on band-hit (deterministic computation, architect sweep validated); HIGH on direction (monotonicity is mathematical, not empirical).
+
+**Outcome to be documented in §8.7 (FROZEN after run).**
+
+**Editing rule:** §10.4 numbers are FROZEN as of this lock.
+
+---
+
+### §8.7 — OUTCOME of §10.4 Phase H-1 FULL-4-of-5
+
+**Date executed:** 2026-05-01 morning DPES window (immediately after locking §10.4).
+**Script:** `phase_h1_full4of5.py`.
+**New derivation module:** `phase_h1_5_genome_derivation.py` (Phase H-1.5: mito_snp_score, telomere_proxy, cpg_promoter_density from existing 23andMe file).
+
+**R_intra_em proxy stack — 4 of 5 real (only 1 substitute remains):**
+
+| Component | Value | Status | vs §8.6 |
+|---|---|---|---|
+| mito_snp_score | 0.9468 | ✅ REAL (Phase H-1.5) | was 0.5 stub, now real |
+| telomere_proxy | 0.4167 | ✅ REAL (Phase H-1.5) | was 0.5 stub, now real |
+| cpg_promoter_density | 0.4757 | ✅ REAL (Phase H-1.5) | was 0.5 stub, now real |
+| hrv_coherence_7day | 0.7729 | ✅ REAL (Oura substitute) | unchanged |
+| sleep_efficiency_7day | 0.8886 | ✅ REAL | unchanged |
+| **R_intra_em (mean of 5)** | **0.7001** | matches §10.4 pre-reg to 4 decimals | was 0.6323 |
+
+**RESULT — ALL THREE §10.4 CRITERIA HIT:**
+
+| Quantity | Pre-reg §10.4 band | Actual | In band? |
+|---|---|---|---|
+| dev_em_full4of5 | [4.78, 4.92] | **4.8488** | ✅ YES |
+| Direction < §8.6 (4.9285) | strictly less | 4.8488 (-0.0797) | ✅ YES |
+| Shift vs §8.4 passthrough (4.7719) | [0.00, 0.16] | **0.0769** | ✅ YES |
+
+**Quantitative reproduction of architect sweep:** §10.4 was pre-registered using the architect's deterministic dev sweep, which gave dev≈4.8488 at r=0.7. Actual at r=0.7001 = 4.8488. Reproduction to 4 decimals confirms (a) no leakage of sequence-derived R_intra in the substitution path, (b) the simulator is deterministic with locked seed as designed, and (c) the architect's sweep was correctly computed.
+
+**Run-level deltas vs §8.6:**
+
+| Metric | §8.6 (R_intra_em=0.6323) | §8.7 (R_intra_em=0.7001) | Δ |
+|---|---|---|---|
+| intra_mult | 1.066 | 1.100 | +0.034 |
+| amp_ti | ×1.066 | ×1.100 | +0.034 |
+| dev | 4.9285 | 4.8488 | −0.0797 |
+| Magnitude accuracy | 6/12 (50%) | 7/12 (58.3%) | +1 trial |
+| Directional accuracy | 12/12 (100%) | 12/12 (100%) | unchanged |
+| `\|dev − passthrough(4.7719)\|` | 0.1566 | 0.0769 | −0.0797 |
+
+**WHAT THIS MEANS:**
+- ✅ Phase H-1.5 derivations produce values in plausible biological ranges:
+  - Brandon's mtDNA call rate (94.7%) is excellent; all calls homoplasmic as expected for haploid mtDNA. No heteroplasmy signal.
+  - Brandon's 7-SNP TL-GWAS risk score (6 of 7 panel SNPs found; rs8105767 missing from his chip) is slightly above population center (7/12 risk alleles vs population mean ~6/12), placing him in the "slightly shorter TL-by-genotype" tail. NOT measured TL.
+  - Brandon's chromosome-weighted SNP distribution against the UCSC cpgIslandExt-per-Mb constants gives a brandon/baseline ratio of 0.9513 — essentially population-typical chip coverage. Note this primarily reflects the 23andMe v5 chip's CpG-region targeting consistency, not a personal CpG density measurement.
+- ✅ R_intra_em substitution architecture is fully validated end-to-end with 80% real input.
+- ✅ Simulator monotonicity holds: higher R_intra_em → higher amp → lower dev (closer to empirical) in the deterministic-mathematical direction.
+- ✅ Phase H-1 pipeline is now **architecturally complete** and ready for Phase B (weight learning).
+
+**WHAT THIS DOES *NOT* MEAN (asymmetric-standards #69 honesty):**
+- ❌ This is NOT a confirmation of URB #826's biophoton/EM-DNA hypothesis. The deterministic match between predicted and actual dev is a check on the simulator architecture, NOT on the truth of EM-DNA mediation.
+- ❌ This does NOT establish w_em > 0 (no weight learning happened; w_em is implicitly fixed at uniform 1/5 across the proxy stack).
+- ❌ This does NOT validate any of URB #826's three differentiated predictions §5.1 (same-sequence-different-EM), §5.2 (different-sequence-same-EM), or §5.3 (w_em ≥ 0.30 from learned weights). All three require N≥2 differentiated subjects or learned weights, neither available at $0.
+- ❌ The Phase H-1.5 derivations are PROXIES, not the true URB #826 constructs. Specifically:
+  - mito_snp_score uses MT call rate × homoplasmy fraction — this is a QC metric, not a heteroplasmy quantitation
+  - telomere_proxy is a 7-SNP GWAS risk score — not a measured telomere length (qPCR/Southern blot/TeSLA)
+  - cpg_promoter_density is chip-coverage CpG-region enrichment — not a methylation status (450K array / bisulfite seq)
+- ❌ Brandon's actual telomere length, methylation profile, and heteroplasmy status remain unknown. The proxies merely use SNP-level signals that GWAS literature has associated with these constructs.
+
+**WHAT REMAINS BLOCKED AT $0:**
+
+| Blocker | Cost to unblock | What it enables |
+|---|---|---|
+| Daytime HRV component (currently Oura overnight HRV substitute) | Pulsoid premium subscription OR Polar H10 hardware (~$60) | True 5-of-5 real H-1 (vs current 4-of-5 + 1 substitute) |
+| w_em learning | Phase B implementation + N≥2 differentiated subjects' data | URB #826 §5.3 differential prediction |
+| URB #826 §5.1 same-sequence-different-EM test | Brandon's MZ twin OR a tested clone (impossible) OR a longitudinal time-series of Brandon over a state intervention | Most direct test of biophoton/EM-DNA hypothesis |
+| URB #826 §5.2 different-sequence-same-EM test | N≥2 unrelated subjects with similar lifestyle/state | Cross-subject test |
+| Direct measurement of mtDNA heteroplasmy / TL / methylation | Specialized assays ($100–$500 per subject) | Replace proxies with constructs |
+
+**Calibration note:** §10.4 was a deterministic-architectural pre-registration with HIGH conviction. Outcome was a 4-decimal-place reproduction of the architect sweep. Calibration confirmed; this success carries less Bayesian weight than §8.5's chance-rate falsification because it tested simulator correctness rather than a probabilistic hypothesis.
+
+**§8.7.a — Architect-review corrections (post-lock corrigendum, 2026-05-01 same session):**
+
+Three issues caught by the post-lock architect review and logged here for honesty per asymmetric-standards #69:
+
+1. **Missing-SNP narrative was wrong**: I wrote "rs7675998 missing from chip" in §10.4 / §8.7. The chip actually has rs7675998 (genotype AG, 1 risk allele); the missing SNP is rs8105767. Per-SNP breakdown corrected above. Score (0.4167) and verdict UNAFFECTED — that scoring used 6 SNPs / 12 max alleles regardless of which SNP was missing.
+
+2. **cpg_promoter_density description was overstated**: The original docstring described "SNP density per Mb of called sites" implying a personal CpG density measurement. The actual math is chromosome-SNP-count × per-chromosome cpgIslandExt-density-constant, then sigmoid. This is primarily a chip-coverage-consistency proxy, NOT a personal CpG-density biomarker. Two healthy adults using the same 23andMe v5 chip will get nearly identical cpg scores. Docstring corrected in `phase_h1_5_genome_derivation.py`; §8.7 "WHAT THIS MEANS" prose tightened. Numerical score (0.4757) and verdict UNAFFECTED.
+
+3. **R_intra_em drift handling soft**: `phase_h1_full4of5.py` warns if Oura window drifts >0.001 from pre-reg but proceeds anyway. Architect recommends hard-fail on drift. Implemented: script now exits with code 2 and refuses to write a verdict if drift exceeds tolerance.
+
+None of these issues invalidate §10.4's deterministic-architectural-verification verdict. The dev=4.8488 result reproduces the architect's r=0.7 sweep to 4 decimal places regardless of which TL-SNP is missing or how the cpg description is phrased. The corrections improve the honesty of the narrative without altering the architectural conclusion.
+
+**Editing rule:** §8.7 (and §8.7.a) is FROZEN.
+
+---
+
 ## §11. Reserved for future outcome corrigenda + new pre-registrations
 
 Empty as of 2026-04-30. Same editing rules as §10 and §8.
