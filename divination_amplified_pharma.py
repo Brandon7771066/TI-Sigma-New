@@ -217,10 +217,15 @@ def compute_lcc_amplifier(
     weather: Optional[Dict] = None,
     iching_seed: Optional[int] = None,
     today: Optional[date] = None,
+    mode: str = "full",
 ) -> LCCTrace:
     """
     Compute the full Amp_TI multiplier from all five LCC usages.
     Returns the LCCTrace — caller multiplies the conventional prediction by trace.amp_ti.
+
+    mode: "full" (default, all 5 LCC channels) | "R_intra_only" (Phase A-prime ablation:
+          zeros R_ss/R_se/R_stack/R_obs, keeps only R_intra — tests whether R_intra alone
+          reproduces the Phase 4-bis dev=4.83 result, per AGENT_LOCKED_PREDICTIONS §1).
     """
     trace = LCCTrace()
 
@@ -274,7 +279,17 @@ def compute_lcc_amplifier(
     obs_mult = _lcc_to_multiplier(trace.R_obs, max_swing=0.2)  # smallest swing — placebo channel
 
     # Final amplifier — capped to [0.5, 3.0] per URB #824 §5 TERMINATE step
-    raw_amp = intra_mult * ss_mult * se_mult * stack_mult * obs_mult
+    if mode == "R_intra_only":
+        # Phase A-prime ablation: zero out the four divination channels in the trace
+        # (so the per-trace audit reflects what was actually used) and use only R_intra.
+        trace.R_ss = 0.0
+        trace.R_se = 0.0
+        trace.R_se_components = {k: 0.0 for k in trace.R_se_components}
+        trace.R_stack = 0.0
+        trace.R_obs = 0.0
+        raw_amp = intra_mult  # static per-Brandon: 1.0 + 0.5*(R_intra-0.5)
+    else:
+        raw_amp = intra_mult * ss_mult * se_mult * stack_mult * obs_mult
     trace.amp_ti = max(0.5, min(3.0, raw_amp))
     return trace
 
@@ -298,6 +313,7 @@ class DivinationAmplifiedSimulator:
         weather: Optional[Dict] = None,
         iching_seed: Optional[int] = None,
         today: Optional[date] = None,
+        mode: str = "full",
     ):
         self.sim = underlying
         self.subject_name = subject_name
@@ -305,6 +321,7 @@ class DivinationAmplifiedSimulator:
         self.weather = weather
         self.iching_seed = iching_seed
         self.today = today
+        self.mode = mode
         self.last_trace: Optional[LCCTrace] = None
 
     @property
@@ -340,6 +357,7 @@ class DivinationAmplifiedSimulator:
             weather=self.weather,
             iching_seed=self.iching_seed,
             today=self.today,
+            mode=self.mode,
         )
         self.last_trace = trace
 

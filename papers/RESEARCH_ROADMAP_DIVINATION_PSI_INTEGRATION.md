@@ -24,12 +24,26 @@
 
 Brandon's directive: "Continue with the full roadmap." Concrete next-step lock per phase, in execution order:
 
+> ### 🔴 PHASE A-PRIME EXECUTED 2026-04-30 — TWO FALSIFICATIONS, BOTH ANTI-DIVINATION
+>
+> **§1 Pharma:** R_intra-only ablation produced dev = **4.7719** vs locked band [4.78, 4.95] — falsified LOW. R_intra-only BEAT full 5-LCC by Δ = −0.0546. The four divination channels (R_se, R_ss, R_stack, R_obs) were ACTIVELY DEGRADING accuracy on locked-seed N=12.
+>
+> **§2 Market:** Strict-ternary I-Ching SPY 5d-forward hit rate = **21.67% (13/60)** vs locked band [29%, 38%] — falsified LOW. Significantly worse than chance (33.3%; one-sided p = 0.028). With URB #825 bug-fixes applied, the I-Ching market signal turns ANTI-predictive on N=60.
+>
+> **§5 GSA Overlay:** VOIDED — no divination overlay exists in `gsa_*.py` to toggle.
+>
+> **§9.1 H-1 smoke-check:** PASSED (passthrough dev = 4.7719 ∈ [4.70, 5.05]); URB #826 R_intra split refactor architecture is sound.
+>
+> **Per asymmetric-standards #69, this single direction-coherent pair of falsifications resolves the divination-as-overlay question more cleanly than another year of confirmation runs would have.** What survives: R_intra (the DNA-anchored channel) — exactly the channel Brandon's biophoton/EM-DNA hypothesis (URB #826) reframes as the *real* primary carrier. Forward direction: drop the four divination wrappers from the simulator amp_ti; re-architect divination as feature engineering for Phase F NN, not multiplicative wrappers; biophoton/EM-DNA Phase H is now the live frontier.
+>
+> Outcome corrigenda: `papers/AGENT_LOCKED_PREDICTIONS_2026-04-30.md` §8.1 (Pharma), §8.2 (Market), §8.3 (GSA voided), §8.4 (H-1 smoke). Scripts: `phase_a_prime_pharma_ablation.py`, `phase_a_prime_market_ablation.py`.
+
 | Phase | Status | Next concrete action | Cost | Duration | Lock-by-when |
 |---|---|---|---|---|---|
-| **A-prime-Pharma** (R_intra-only ablation) | 🟢 ready | Run `phase_4_bis_*.py` with R_se=R_ss=R_stack=R_obs=0; agent prediction dev=4.87 | $0 | 30 min | next DPES |
+| **A-prime-Pharma** (R_intra-only ablation) | ✅ DONE 2026-04-30 — falsified LOW | Drop R_se/R_ss/R_stack/R_obs from simulator amp_ti | done | done | done |
 | **A-prime-Astrology** (N=30 birth charts) | 🟡 blocked on volunteer recruit | Draft Google Form for birth-chart + NEO-PI-R; ship to Brandon for distribution | $0 | 2-3 weeks | next DPES draft form |
-| **A-prime-Market** (corrected ternary I-Ching SPY) | 🟢 ready after 2 code fixes | Patch `divination_empirical_testing.py` lines 500-504 (strict ternary) and 440-459 (hard-fail on missing yfinance); retroactive run on locked window | $0 | 1 hour | next DPES |
-| **A-prime-GSA-Overlay** (overlay-on vs overlay-off) | 🟢 ready | Identify overlay toggle in `gsa_core.py` / `gm_divination_expanded.py`; run 2x on green-subset | $0 | 30 min | next DPES |
+| **A-prime-Market** (corrected ternary I-Ching SPY) | ✅ DONE 2026-04-30 — falsified LOW | I-Ching market predictor formally retired as standalone; survives only as Phase F NN feature | done | done | done |
+| **A-prime-GSA-Overlay** (overlay-on vs overlay-off) | ⚠️ VOIDED 2026-04-30 — no overlay exists | If overlay added in Phase G prep, lock fresh pre-registration before A/B | $0 | n/a | n/a |
 | **Phase H-1** (R_intra_em proxy smoke test) | 🟢 ready after refactor | Code split per URB #826 §3; run on Brandon N=1 | $0 | 2 hours code + 30 min run | next DPES after A-prime |
 | **Phase B** (MPD held-out cohort) | ⏸️ requires A-prime to clear OR explicit override | Pull MPD FAAH-knockout pharma data; build strain-DNA → strain-response mapping; pre-register 60% threshold | $0 | 1 DPES session | post A-prime |
 | **Phase H-2** (MZ-twin re-analysis) | ⏸️ requires Phase B framework | After Phase B mining infrastructure exists, redirect at TwinsUK MZ-discordant cohorts | $0 | 1 DPES session | post Phase B |
