@@ -38,17 +38,18 @@ DPES (Default Philosophical Eating Strategy): When user is eating/commuting/occu
 - **Monster Group Irrep-Dimension Spectrum + j-Invariant Pilot**: Analyzes the Monster character table and its relation to the j-invariant.
 - **Fractal Harmonic Systems Pilot on E₈ Roots and Leech Shells**: Investigates fractal harmonic systems in exceptional algebraic structures.
 - **Tralse Wave Algebra over the Leech Lattice**: Defines Tralse-state space and coherence functional on the Leech Lattice.
-- **UBKI Path (UOP-Berry–Keating Identification)**: Multiple paths explore connections to the Riemann Hypothesis using sparse + prime-coded V + BOK-Crystal V + Leech-shell V + LCC-Virus iterative search, Connes Adelic Identification, and Distributional Trace Identity.
+- **UBKI Path (UOP-Berry–Keating Identification)**: Multiple paths explore connections to the Riemann Hypothesis.
 - **Riemann Hypothesis v3 (Conditional Proof reducing to UBKI)**: A conditional proof reducing the Riemann Hypothesis to UBKI.
 - **Axiom Reduction for the UOP Gap in the Riemann Proof**: Reduces irreducibly-TI axioms in the Riemann proof.
 - **GILE-HEM Ratio Modulation of PD Expression**: Defines ρ := GILE/HEM as the chirality-breaking parameter.
-- **TI Sigma Validity via Self-Containment of Negation**: Establishes self-containment-of-negation as a validity criterion for TI Sigma, arguing its asymmetry with classical bivalent logic.
+- **TI Sigma Validity via Self-Containment of Negation**: Establishes self-containment-of-negation as a validity criterion for TI Sigma.
 - **Asymmetric-Standards Aphorism Sequence**: A philosophical meta-position deploying a single structural principle across various domains.
 - **LCC-Telepathy Pre-Registered Trials**: Pre-registered cooperative-contemplation psi-prediction series.
 - **DNA-Anchored Psi-Signature Research Roadmap**: Research program extending LCC framework to use DNA as substrate-anchor for i-cell psi-signature.
 - **URB #824 — Divination-Pharma-LCC Integration**: Locks the five distinct LCC usages and the composite Amp_TI.
 - **URB #825 — Cross-Domain Divination Audit (Astrology + Market + Pharma)**: Applies asymmetric-standards audit to astrology and stock-market divination.
 - **URB #826 — Biophoton/EM-DNA Carrier Hypothesis**: Focuses on the hypothesis that I-Cell resonance is mediated by biophotons and EM Waves emitted by DNA.
+- **URB #828 draft — Biopsychosignature (BPS) Stacking Hypothesis**: Proposes stacking multiple BPS for superior anchoring, with a focus on resonance through anchors.
 
 ### System Design Choices
 - **Security**: Implemented using bcrypt for hashing, Fernet for encryption, PostgreSQL for database management, and Replit Secrets for sensitive information.
