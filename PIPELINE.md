@@ -23,7 +23,8 @@
 1. ☐ **Mendi Phase 1 BLE scan** — 5–10 min on Brandon's local machine. See `papers/MENDI_PATH_B_STATUS_2026-05-01.md` Step 1–6. No rush; not on URB #828 critical path.
 2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; awaiting confirmation.
 3. ✅ **URB #828 v2 M=5 token-set CONFIRMED 2026-05-01 PM**: {calm, red, ★, 7, M}.
-4. ☐ **Print sealed deck of 5 cards** for URB #828 trials (large clear print, opaque card backs). Ready by 2026-05-22.
+4. ☐ **Print sealed deck of 5 cards** for URB #828 trials — one card per token in the M=5 set: `calm` / `red` / `★` / `7` / `M`. Large clear print, opaque card backs (so back is identical and gives no draw signal). Ready by 2026-05-22.
+7. ☐ **Optional: fingerprint capture** (~10 min) for URB #828 C7 condition. See `papers/FINGERPRINT_CAPTURE_INSTRUCTIONS.md`. If skipped, C7 just becomes "not measured"; C0/C2/C5 still run.
 5. ☐ **Visual confirmation that `pages/papers_browser.py` renders** — restart `ti_website` workflow, navigate to "papers_browser" in the Streamlit sidebar.
 6. ☐ **Daily H10 + subjective + medication logging** through 2026-05-22 (continues active critical path).
 

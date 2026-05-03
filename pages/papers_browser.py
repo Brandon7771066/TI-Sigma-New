@@ -24,6 +24,69 @@ ROOT_GLOBS = ["*.md", "*.tex", "*.pdf"]
 
 URB_RE = re.compile(r"URB[_\s#]?(\d{3,4})", re.IGNORECASE)
 DATE_RE = re.compile(r"(20\d{2}[-_]\d{2}[-_]\d{2})")
+ACRONYM_RE = re.compile(r"\b([A-Z]{2,6}(?:[-_][A-Z0-9]{1,4})?)\b")
+TI_SIGMA_RE = re.compile(r"TI[\s\-_]?(?:Sigma|σ|Σ)|tralse[\s\-_]?informationalism", re.IGNORECASE)
+
+# Stop-word acronyms (common English / formatting noise)
+ACRONYM_STOP = {
+    "THE", "AND", "OR", "NOT", "IS", "ARE", "WAS", "WERE", "BE", "HAS", "HAD",
+    "DO", "DOES", "DID", "OF", "ON", "IN", "AT", "TO", "BY", "FOR", "FROM",
+    "WITH", "AS", "AN", "A", "I", "II", "III", "IV", "V", "VI", "VII", "VIII",
+    "IX", "X", "XI", "XII", "MD", "PHD", "DR", "MR", "MS", "MRS", "JR", "SR",
+    "USA", "US", "UK", "EU", "AM", "PM", "ET", "PT", "EST", "PST", "UTC",
+    "GMT", "CST", "MST", "API", "URL", "URI", "HTML", "CSS", "JS", "TS",
+    "PDF", "MD", "TEX", "TXT", "CSV", "JSON", "XML", "YAML", "PNG", "JPG",
+    "JPEG", "GIF", "ZIP", "TAR", "GZ", "OK", "NO", "YES", "TBD", "TODO",
+    "FIXME", "WIP", "N", "M", "L", "K", "J", "P", "Q", "R", "S", "T",
+}
+
+# TI Sigma field taxonomy: keyword -> field
+TI_SIGMA_FIELDS = {
+    "Mathematics": [
+        "riemann", "navier", "yang-mills", "yang_mills", "p=np", "hodge",
+        "birch", "millennium", "hopf", "e8", "e_8", " lie ", "leech",
+        "moonshine", "j-invariant", "j_invariant", "zeta", "ζ",
+        "berry-keating", "berry_keating", "ubki", "uop", "twa", "wave algebra",
+        "metacausal", "fractal harmonic", "fhs", "monster",
+    ],
+    "Physics / EM / Biophoton": [
+        "biophoton", "electromagnetic", " em ", "em-dna", "em_dna", "popp",
+        "photon", "polariz", "near-field", "far-field", "rf ", "phase-lock",
+        "h_bfg", "field geometry", "thermodynamic",
+    ],
+    "Philosophy / Foundations": [
+        "gile", "tralse", "intentionality", "asymmetric-standard", "asymmetric_standard",
+        " mr ", "myrion", "myrion resolution", "bok", "verisyn", "being theorem",
+        "five-valued", "5-valued", "double tralse", "dt immunity", "dpes",
+        "self-containment", "validity criterion", "uop ", "ontolog",
+    ],
+    "Computation / Logic": [
+        "ticl", "ternary", "arc-agi", "arc_agi", "lean4", "lean ", "hypercomputer",
+        "tsc", "polycrystalline bec", "bec ", "sat solver", "sat-solver",
+        "ti computing", "ti-computing", "5-valued logic", "five-valued logic",
+        "quantum collapse simulator", "ternary computation",
+    ],
+    "Biology / Neuroscience": [
+        "dna", "biopsychosignature", " bps ", "bps_", "mendi", "biowell",
+        "polar h10", "oura", "gdv", "fnirs", "eeg", "hrv", "ssvep", " faah ",
+        "telomere", "mitochond", "cpg", "epigenet", "fingerprint",
+    ],
+    "Consciousness / Psi": [
+        " lcc ", "lcc_", "telepathy", " gcp ", "global consciousness",
+        " psi ", "divination", "intention", "resonance", "mood amplifier",
+        "mood-amplifier", "mre", "i-cell", "i_cell", "myceli", "chakra",
+        "meridian", "psi-signature", "anchor",
+    ],
+    "Markets / Finance": [
+        " gsa ", "gsa_", "grand stock algorithm", "stock", "alpaca",
+        "kalshi", "collective2", "prediction market", "prediction-market",
+        "ti framework", "ti-framework", "trading",
+    ],
+    "Bio-integration / Wellness": [
+        "biowell", "biofeedback", "wellbeing", "wellness", "biometric",
+        " gdv ", "ai-bio", "rescreen", "psi score", "chakra", "meridian",
+    ],
+}
 
 TOPIC_PREFIXES = {
     "URB_": "URB Research Bulletins",
@@ -104,6 +167,68 @@ def _topic_for(name: str) -> str:
     if "URB" in upper and URB_RE.search(name):
         return "URB Research Bulletins"
     return "Other / Uncategorized"
+
+
+@st.cache_data(ttl=300)
+def scan_ti_sigma_atlas(files):
+    """Identify TI Sigma papers and tag each with all matching fields.
+
+    Returns: (ti_files, by_field) where by_field maps field_name -> list of files.
+    """
+    ti_files = []
+    by_field = defaultdict(list)
+    for f in files:
+        if f["ext"] not in {".md", ".tex", ".txt"}:
+            continue
+        try:
+            content = Path(f["path"]).read_text(errors="ignore")[:200_000]
+        except OSError:
+            continue
+        # Identify TI-Sigma-related papers (name match OR content match)
+        is_ti = bool(TI_SIGMA_RE.search(f["name"])) or bool(TI_SIGMA_RE.search(content))
+        if not is_ti:
+            continue
+        haystack = (f["name"] + " " + content).lower()
+        matched_fields = []
+        for field, kws in TI_SIGMA_FIELDS.items():
+            if any(kw in haystack for kw in kws):
+                matched_fields.append(field)
+                by_field[field].append(f)
+        if not matched_fields:
+            by_field["Uncategorized TI Sigma"].append(f)
+            matched_fields = ["Uncategorized TI Sigma"]
+        ti_files.append({**f, "ti_fields": matched_fields})
+    return ti_files, by_field
+
+
+@st.cache_data(ttl=300)
+def extract_acronyms_index(files, max_files: int = 600, max_bytes: int = 80_000):
+    """Auto-extract acronyms from .md/.tex/.txt content. Returns Counter + per-acronym
+    file list (top 5 example files per acronym)."""
+    counts = Counter()
+    examples = defaultdict(list)
+    scanned = 0
+    for f in files:
+        if scanned >= max_files:
+            break
+        if f["ext"] not in {".md", ".tex", ".txt"}:
+            continue
+        try:
+            content = Path(f["path"]).read_text(errors="ignore")[:max_bytes]
+        except OSError:
+            continue
+        scanned += 1
+        seen_in_file = set()
+        for m in ACRONYM_RE.finditer(content):
+            acr = m.group(1)
+            if acr in ACRONYM_STOP:
+                continue
+            counts[acr] += 1
+            if acr not in seen_in_file:
+                seen_in_file.add(acr)
+                if len(examples[acr]) < 5:
+                    examples[acr].append(f["name"])
+    return counts, dict(examples), scanned
 
 
 @st.cache_data(ttl=300)
@@ -202,10 +327,20 @@ elif sort_by == "Size":
 st.write(f"**{len(filtered):,}** documents match current filters")
 
 # --- Tabs ---
-tab_browse, tab_urb, tab_topics, tab_graph, tab_timeline = st.tabs([
+(
+    tab_browse,
+    tab_urb,
+    tab_topics,
+    tab_ti_sigma,
+    tab_index,
+    tab_graph,
+    tab_timeline,
+) = st.tabs([
     "Browse & Download",
     "URBs by Number",
     "By Topic",
+    "TI Sigma Atlas",
+    "Index & Acronyms",
     "Cross-Reference Graph",
     "Timeline",
 ])
@@ -291,6 +426,110 @@ with tab_topics:
                     cols[1].caption("(err)")
             if len(by_topic[topic]) > 50:
                 st.caption(f"...and {len(by_topic[topic]) - 50} more (use Browse tab)")
+
+with tab_ti_sigma:
+    st.subheader("TI Sigma Atlas — concepts, theories, and proofs across fields")
+    st.caption(
+        "Auto-tagged. A paper is included if its filename or first 200KB of "
+        "content references TI Sigma / Tralse Informationalism. Each paper is "
+        "cross-listed in every field whose keywords appear in it."
+    )
+    with st.spinner("Scanning TI Sigma corpus..."):
+        ti_files, by_field = scan_ti_sigma_atlas(files)
+    if not ti_files:
+        st.info("No TI Sigma references found.")
+    else:
+        a, b, c = st.columns(3)
+        a.metric("TI Sigma documents", len(ti_files))
+        b.metric("Fields covered", len([k for k, v in by_field.items() if v]))
+        c.metric("Cross-listings (field tags)", sum(len(v) for v in by_field.values()))
+        # Field-count chart
+        field_counts = {k: len(v) for k, v in by_field.items() if v}
+        st.bar_chart(field_counts)
+        # Per-field expanders
+        for field in sorted(by_field.keys(), key=lambda k: -len(by_field[k])):
+            entries = by_field[field]
+            if not entries:
+                continue
+            with st.expander(f"{field} — {len(entries)} document(s)"):
+                # Sub-categorize within field by topic prefix
+                by_subtopic = defaultdict(list)
+                for f in entries:
+                    by_subtopic[f["topic"]].append(f)
+                for sub in sorted(by_subtopic.keys()):
+                    st.markdown(f"**{sub}** ({len(by_subtopic[sub])})")
+                    for f in sorted(by_subtopic[sub], key=lambda x: x["mtime"], reverse=True)[:30]:
+                        cols = st.columns([5, 1])
+                        urb = f"`URB #{f['urb']}` " if f["urb"] else ""
+                        cols[0].write(f"{urb}`{f['name']}` · {fmt_size(f['size'])} · {f['mtime'].strftime('%Y-%m-%d')}")
+                        try:
+                            with open(f["path"], "rb") as fh:
+                                cols[1].download_button(
+                                    "↓",
+                                    data=fh.read(),
+                                    file_name=f["name"],
+                                    key=f"tisigma_dl_{field}_{f['path']}",
+                                )
+                        except OSError:
+                            cols[1].caption("(err)")
+                    if len(by_subtopic[sub]) > 30:
+                        st.caption(f"...and {len(by_subtopic[sub]) - 30} more")
+
+with tab_index:
+    st.subheader("Continually-updated Index & Acronym Glossary")
+    st.caption(
+        "Refreshes every 5 minutes (cached). Subcategory counts are scoped to the "
+        "current sidebar filters. Acronym extraction scans up to the first ~80KB of "
+        "the most recent 600 markdown / TeX / text files."
+    )
+
+    # Subcategory index
+    st.markdown("### Subcategory index (filtered)")
+    idx_cols = st.columns(2)
+    with idx_cols[0]:
+        st.markdown("**By topic prefix**")
+        topic_idx = Counter(f["topic"] for f in filtered)
+        for t, c in sorted(topic_idx.items(), key=lambda kv: -kv[1]):
+            st.write(f"- {t} — **{c}**")
+    with idx_cols[1]:
+        st.markdown("**By file extension**")
+        ext_idx = Counter(f["ext"] for f in filtered)
+        for e, c in sorted(ext_idx.items(), key=lambda kv: -kv[1]):
+            st.write(f"- `{e}` — **{c}**")
+        st.markdown("**By URB-status**")
+        with_urb = sum(1 for f in filtered if f["urb"] is not None)
+        st.write(f"- has URB number — **{with_urb}**")
+        st.write(f"- no URB number — **{len(filtered) - with_urb}**")
+
+    # TI Sigma sub-index
+    st.markdown("### TI Sigma field index (full corpus)")
+    ti_files, by_field = scan_ti_sigma_atlas(files)
+    for field in sorted(by_field.keys(), key=lambda k: -len(by_field[k])):
+        if by_field[field]:
+            st.write(f"- {field} — **{len(by_field[field])}**")
+
+    # Acronyms
+    st.markdown("### Acronym glossary (auto-extracted, top 200)")
+    with st.spinner("Extracting acronyms..."):
+        ac_counts, ac_examples, n_scanned = extract_acronyms_index(files)
+    st.caption(f"Scanned {n_scanned} text-format files. {len(ac_counts)} unique acronyms found.")
+    search_acr = st.text_input("Filter acronyms (substring)").strip().upper()
+    top = ac_counts.most_common(500)
+    if search_acr:
+        top = [(a, c) for a, c in top if search_acr in a]
+    top = top[:200]
+    if not top:
+        st.info("No acronyms match.")
+    else:
+        for acr, cnt in top:
+            with st.expander(f"**{acr}** — {cnt} occurrence(s)"):
+                exs = ac_examples.get(acr, [])
+                if exs:
+                    st.write("Example files:")
+                    for ex in exs:
+                        st.write(f"- `{ex}`")
+                else:
+                    st.caption("(no examples cached)")
 
 with tab_graph:
     st.subheader("URB cross-reference graph")
