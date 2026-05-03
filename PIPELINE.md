@@ -22,7 +22,7 @@
 
 1. ☐ **Mendi Phase 1 BLE scan** — 5–10 min on Brandon's local machine. See `papers/MENDI_PATH_B_STATUS_2026-05-01.md` Step 1–6. No rush; not on URB #828 critical path.
 2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; awaiting confirmation.
-3. ☐ **Confirm or override URB #828 v2 M=5 token-set** (`papers/URB_828_v2_PRE_REGISTRATION_LOCKED_2026-05-01.md` §1): proposed {calm, red, ★, 7, M}.
+3. ✅ **URB #828 v2 M=5 token-set CONFIRMED 2026-05-01 PM**: {calm, red, ★, 7, M}.
 4. ☐ **Print sealed deck of 5 cards** for URB #828 trials (large clear print, opaque card backs). Ready by 2026-05-22.
 5. ☐ **Visual confirmation that `pages/papers_browser.py` renders** — restart `ti_website` workflow, navigate to "papers_browser" in the Streamlit sidebar.
 6. ☐ **Daily H10 + subjective + medication logging** through 2026-05-22 (continues active critical path).
@@ -52,7 +52,7 @@
 | 5. §6 ML discriminator | APPROVED | ✅ |
 | 6. Thresholds | APPROVED (C5−C3 → C5−C2 due to focused-4) | ✅ |
 | 7. Sequential vs parallel with §10.6 | **Sequential** (start 2026-05-22) | ✅ |
-| 8. M=5 token-set | **Heterogeneous** (1 valence + 1 color + 1 symbol + 1 number + 1 letter); specific tokens proposed, awaiting Brandon confirm | ✅ design / ☐ specific tokens |
+| 8. M=5 token-set | **Heterogeneous** (1 valence + 1 color + 1 symbol + 1 number + 1 letter); specific tokens **{calm, red, ★, 7, M} CONFIRMED 2026-05-01 PM** | ✅ |
 | 9. No inter-trial feedback | CONFIRMED | ✅ |
 | 10. Sample size | **N=30 × 4 conditions = 120 condition-points** (30 trial-days @ 1/day, ~30 days) | ✅ |
 

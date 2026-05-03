@@ -761,3 +761,34 @@ This means:
 **Editing rule:** §8.8 is FROZEN.
 
 — END LOCKED PREDICTIONS —
+
+---
+
+## §10.7 — URB #828 v2 Pre-Registration LOCK Cross-Reference (2026-05-01 PM)
+
+Brandon Charles Emerick locked all 10 §10 items of URB #828 v2 on 2026-05-01 PM and approved every paper in the Gate 3 staging package on the same date.
+
+**SHA-256 priority claims** (computed 2026-05-01 PM, post-Brandon-blanket-approval):
+
+```
+7178ca7db90bcfcad05fb6794aafd969eb819d68ac71c0bb22d02e13fbf3a387  papers/URB_828_v2_PRE_REGISTRATION_LOCKED_2026-05-01.md
+585611ba4b2fac4da842b956b3978ec2218ea15532f40f575a7c93495a4bc6ab  papers/BPS_CAPTURE_PROTOCOL.md
+b0ea87ae4fd1516b0fa4a43a5af10521907aa9f6c9ec9f1d4dd13d80f7686f32  papers/PHYSICAL_HYPOTHESES_INVENTORY_2026-05-01.md
+1df6bd95376fe2b6e04bc94bad1de64d7dc4947454900b325c65da5599f48d44  papers/MENDI_PATH_B_STATUS_2026-05-01.md
+56fcadf29fb6c81747324a5c5145b29bf05c117976268c1a64d0c45343bd3851  PIPELINE.md
+```
+
+**Cross-reference targets locked:**
+- C5 ≥ 0.40 primary (M=5 chance=0.20, one-tailed binomial, α=0.05)
+- C0 ≤ 0.25 (>0.35 triggers §6 framework collapse)
+- C5 − C2 ≥ 0.10 v2-vs-v1-analogue discriminator
+- C7 − C5 ≤ 0.10 monotone saturation
+- Holm-Bonferroni across 4 condition tests
+- Pharmacology covariates residualized via logistic regression before binomial test
+- N=30 trials × 4 conditions = 120 condition-points
+- Schedule: 2026-05-22 → ~2026-06-22 (sequential after URB #826 §10.6)
+- M=5 token-set CONFIRMED 2026-05-01 PM: **{calm, red, ★, 7, M}**
+
+**Editing rule:** §10.7 and the SHA-256 block above are FROZEN. Any future edit to the referenced files invalidates the corresponding hash and must be filed as a separate revision-cross-reference, not as an in-place edit.
+
+— END URB #828 v2 LOCK CROSS-REFERENCE —

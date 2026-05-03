@@ -28,7 +28,7 @@
 
 Per Brandon's directive: one specific token drawn from each of five orthogonal domains, fixed at lock time, used for the entire run. This gives type-heterogeneous candidates (lower confusability than homogeneous sets, more interpretable confusion patterns).
 
-**Agent's proposed specific tokens** (Brandon: confirm or override before trial day 1):
+**Specific tokens — CONFIRMED by Brandon 2026-05-01 PM (blanket approval of all Gate-3 papers):**
 
 | Slot | Domain pool | Pool size | **Proposed token** |
 |---|---|---|---|
@@ -141,11 +141,11 @@ Result appended to `papers/AGENT_LOCKED_PREDICTIONS_2026-04-30.md` §10.7 cross-
 
 ---
 
-## §9 — Open Brandon-confirmation items (does NOT block lock; can be confirmed before trial day 1)
+## §9 — Brandon-confirmation items
 
-1. ☐ Confirm or override agent's proposed M=5 specific tokens (§1: {calm, red, ★, 7, M}).
-2. ☐ Confirm or amend printed-card layout for sealed deck (font, size, color of card backs).
-3. ☐ Confirm `pages/papers_browser.py` is rendering correctly in the Streamlit UI after `ti_website` workflow restart.
+1. ✅ M=5 specific tokens {calm, red, ★, 7, M} — CONFIRMED 2026-05-01 PM.
+2. ☐ Print sealed deck of 5 cards before 2026-05-22 (large clear print, opaque card backs).
+3. ☐ Visual confirmation that `pages/papers_browser.py` renders correctly post-workflow-restart.
 
 ---
 
