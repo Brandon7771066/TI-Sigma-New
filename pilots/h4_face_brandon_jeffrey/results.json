@@ -1,0 +1,122 @@
+[
+  {
+    "metric": "phash_sim",
+    "pair": "BRANDON_vs_JEFFREY (target H4 case)",
+    "score": 0.52734375,
+    "interpretation": "Perceptual hash similarity (1=identical, 0.5=chance)"
+  },
+  {
+    "metric": "color_hist_r",
+    "pair": "BRANDON_vs_JEFFREY (target H4 case)",
+    "score": 0.4490566913233255,
+    "interpretation": "RGB histogram Pearson correlation (-1..+1)"
+  },
+  {
+    "metric": "gray_cosine",
+    "pair": "BRANDON_vs_JEFFREY (target H4 case)",
+    "score": 0.12406788766384125,
+    "interpretation": "Centered grayscale 32x32 cosine (-1..+1)"
+  },
+  {
+    "metric": "hog_cosine",
+    "pair": "BRANDON_vs_JEFFREY (target H4 case)",
+    "score": 0.3669130206108093,
+    "interpretation": "HOG-style gradient orientation cosine (0..1 typ.)"
+  },
+  {
+    "metric": "phash_sim",
+    "pair": "BRANDON_vs_BRANDON_mirror (self-control upper bound)",
+    "score": 0.48828125,
+    "interpretation": "Perceptual hash similarity (1=identical, 0.5=chance)"
+  },
+  {
+    "metric": "color_hist_r",
+    "pair": "BRANDON_vs_BRANDON_mirror (self-control upper bound)",
+    "score": 0.9999999999999999,
+    "interpretation": "RGB histogram Pearson correlation (-1..+1)"
+  },
+  {
+    "metric": "gray_cosine",
+    "pair": "BRANDON_vs_BRANDON_mirror (self-control upper bound)",
+    "score": 0.13611334562301636,
+    "interpretation": "Centered grayscale 32x32 cosine (-1..+1)"
+  },
+  {
+    "metric": "hog_cosine",
+    "pair": "BRANDON_vs_BRANDON_mirror (self-control upper bound)",
+    "score": 0.19839495420455933,
+    "interpretation": "HOG-style gradient orientation cosine (0..1 typ.)"
+  },
+  {
+    "metric": "phash_sim",
+    "pair": "JEFFREY_vs_JEFFREY_blur (self-control degraded)",
+    "score": 0.796875,
+    "interpretation": "Perceptual hash similarity (1=identical, 0.5=chance)"
+  },
+  {
+    "metric": "color_hist_r",
+    "pair": "JEFFREY_vs_JEFFREY_blur (self-control degraded)",
+    "score": 0.6941126238600278,
+    "interpretation": "RGB histogram Pearson correlation (-1..+1)"
+  },
+  {
+    "metric": "gray_cosine",
+    "pair": "JEFFREY_vs_JEFFREY_blur (self-control degraded)",
+    "score": 0.8890016078948975,
+    "interpretation": "Centered grayscale 32x32 cosine (-1..+1)"
+  },
+  {
+    "metric": "hog_cosine",
+    "pair": "JEFFREY_vs_JEFFREY_blur (self-control degraded)",
+    "score": 0.6001149415969849,
+    "interpretation": "HOG-style gradient orientation cosine (0..1 typ.)"
+  },
+  {
+    "metric": "phash_sim",
+    "pair": "BRANDON_vs_NOISE (random-image lower bound)",
+    "score": 0.56640625,
+    "interpretation": "Perceptual hash similarity (1=identical, 0.5=chance)"
+  },
+  {
+    "metric": "color_hist_r",
+    "pair": "BRANDON_vs_NOISE (random-image lower bound)",
+    "score": 0.08341309651788868,
+    "interpretation": "RGB histogram Pearson correlation (-1..+1)"
+  },
+  {
+    "metric": "gray_cosine",
+    "pair": "BRANDON_vs_NOISE (random-image lower bound)",
+    "score": 0.0016044322401285172,
+    "interpretation": "Centered grayscale 32x32 cosine (-1..+1)"
+  },
+  {
+    "metric": "hog_cosine",
+    "pair": "BRANDON_vs_NOISE (random-image lower bound)",
+    "score": 0.5580623745918274,
+    "interpretation": "HOG-style gradient orientation cosine (0..1 typ.)"
+  },
+  {
+    "metric": "phash_sim",
+    "pair": "JEFFREY_vs_INVERTED_JEFFREY (photometric extreme)",
+    "score": 0.01953125,
+    "interpretation": "Perceptual hash similarity (1=identical, 0.5=chance)"
+  },
+  {
+    "metric": "color_hist_r",
+    "pair": "JEFFREY_vs_INVERTED_JEFFREY (photometric extreme)",
+    "score": 0.6323861025390853,
+    "interpretation": "RGB histogram Pearson correlation (-1..+1)"
+  },
+  {
+    "metric": "gray_cosine",
+    "pair": "JEFFREY_vs_INVERTED_JEFFREY (photometric extreme)",
+    "score": -1.0,
+    "interpretation": "Centered grayscale 32x32 cosine (-1..+1)"
+  },
+  {
+    "metric": "hog_cosine",
+    "pair": "JEFFREY_vs_INVERTED_JEFFREY (photometric extreme)",
+    "score": 0.9999995231628418,
+    "interpretation": "HOG-style gradient orientation cosine (0..1 typ.)"
+  }
+]
