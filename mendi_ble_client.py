@@ -37,6 +37,7 @@ import argparse
 import asyncio
 import datetime as _dt
 import json
+import os
 import sys
 from typing import Optional
 
@@ -157,7 +158,8 @@ async def cmd_discover_gatt(address: str) -> int:
             out["services"].append(svc_info)
 
         ts = _dt.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
-        path = f"data/mendi/ble_discovery/gatt_{ts}.json"
+        path = os.path.join("data", "mendi", "ble_discovery", f"gatt_{ts}.json")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(out, fh, indent=2)
         print(f"Wrote GATT tree to {path}")
