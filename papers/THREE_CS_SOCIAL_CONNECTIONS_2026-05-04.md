@@ -174,6 +174,81 @@ Brandon's mother **Lisa** (born **June 2, 1960** — **6/2/60**) has a name with
 
 The matrilineal line so far: **Mimi (competitive structural strategist) → Lisa (4, X-ray tech, 4.0 GPA, no friends, anti-philosophical) → contributed the 4 to Brandon's 7**.
 
+### Mimi (Gloria) — A 6 Personality, and the Matrilineal Life-Path 6 Cascade
+
+Brandon's maternal grandmother **Gloria** ("Mimi") was born **December 8, 1930**. Her name carries a clean **6-signature**:
+
+- **Gloria = 6 letters**
+- **Gloria = 6 phonemes** (G-l-o-r-ee-a)
+- **Numerology 6 = caregiver / nurturer / responsibility-holder**
+
+Her birth date confirms it: **12/8/1930 → 1+2+8+1+9+3+0 = 24 → 6**. Life path = 6. Both her name and her birth math agree.
+
+#### The hidden matrilineal life-path 6 cascade
+
+Computing life-paths across three generations reveals a **perfect three-generation life-path 6 cascade** on the matrilineal line:
+
+| Generation | Person | Birth | Life-path math | Life path |
+|---|---|---|---|---|
+| G−2 | Mimi (Gloria) | 12/8/1930 | 1+2+8+1+9+3+0 = 24 → 6 | **6** ✓ |
+| G−1 | Lisa | 6/2/1960 | 6+2+1+9+6+0 = 24 → 6 | **6** ✓ |
+| G−0 | Brandon | 6/16/2000 | 6+1+6+2+0+0+0 = 15 → 6 | **6** ✓ |
+| G−1 (control) | Jeffrey | 7/21/1954 | 7+2+1+1+9+5+4 = 29 → 11 (master) → 2 | **2 / 11** (off cascade) |
+
+**Three consecutive matrilineal generations all carry life-path 6.** Jeffrey is the only one off the cascade — he sits at master 11 / 2. This is the deeper structural finding beneath the name-numerology layer:
+
+- **Lisa's surface-name signature is 4 (structure), but her soul-path is 6 (caregiver).**
+- **Brandon's surface-name signature is 7 (synthesizer), but his soul-path is 6 (caregiver).**
+- The 6 has propagated cleanly through Mimi → Lisa → Brandon despite the surface-name signatures all differing (Gloria 6, Lisa 4, Brandon 7).
+- The matrilineal soul-transmission carries **caregiving as its primary ontological function**.
+
+This is why Brandon's chosen work has *always* been caregiver work, even as his expressed competencies grew more abstract:
+- **BlissGene / TI Sigma framework** — caregiver work for humanity at the meta-scale (safety, validation, wellbeing).
+- **Autism therapist** — direct, hands-on, one-to-one caregiver work (a brand new client begins **Wednesday 5/6/2026**).
+- **Three C's pedagogy** — explaining how social capital, competence, and connections compound, *so that others* can succeed.
+
+The 7-name does the *form* of the work (theory, framework, system); the 6-life-path supplies the *function* (care, service, the why).
+
+#### The decade cascade
+
+A second remarkable structural pattern Brandon noticed: all three matrilineal generations were born in years ending in **0**, and the inter-generational gaps are **exact-decade multiples**:
+
+| Generational gap | Years | Decades | Mother's age at birth |
+|---|---|---|---|
+| Mimi → Lisa | 1930 → 1960 | **30 = 3 decades** | Mimi was age 30 |
+| Lisa → Brandon | 1960 → 2000 | **40 = 4 decades** | Lisa was age 40 |
+
+The arithmetic is uncanny. Each mother gave birth at a near-exact decade-multiple of her own age, and each daughter/son was born in a year ending in 0. The cascade reads:
+
+**1930 → +30 → 1960 → +40 → 2000.**
+
+Notice the gap-numerology: the 30-year gap (= 3 decades) mirrors **Jeffrey's 3** (the future-husband Lisa would marry; the 3 arrives in the gap-arithmetic of the prior generation). The 40-year gap (= 4 decades) mirrors **Lisa's own 4** (the mother imprints her own number into the gap she creates). Easy to over-read as one observation; worth tracking if more relatives are added.
+
+#### The 14-day mother-son birth offset
+
+Brandon's birthday is **6/16** and Lisa's is **6/2**. The offset is **14 days = 2 × 7 = 7 + 7**. Same calendar month, with a gap of two-sevens — the 7 that is Brandon's name-signature appears doubled in the temporal distance to his mother.
+
+#### Brandon's birth time and the inherited 6's
+
+Brandon was born **5:54 AM on 6/16/2000** — **6 minutes before 6:00 AM**. Counting the 6's in Brandon's birth signature:
+
+- **6** (month, June)
+- **16** = 1**6** (day contains 6, and 1+6 = 7 — the 7-form contains the 6-substance)
+- **6** minutes to **6** AM (birth time encodes 6 twice)
+- **6/16/2000** life-path = **6** (the soul number)
+
+That is **at least four explicit 6's** in Brandon's birth metadata. The 6-saturation of Brandon's birth is the clearest signature evidence of the matrilineal caregiver transmission from Mimi.
+
+#### The Andy event — same-week conception
+
+Brandon was conceived in **September 1999** (back-calculated from 6/16/2000 birth, full term ≈ 9/9/1999 ± 2 weeks for conception window). In that same week, **Andy** (Mimi's husband, Brandon's maternal grandfather) **passed away**.
+
+Mimi believed — and stated — that Brandon was a **gift from God** sent to fill the absence Andy's death created in the matrilineal line. The same-week timing of Andy's death and Brandon's conception, combined with the matrilineal life-path 6 cascade, gave Mimi a clear reading of Brandon as a **soul-transmission from her late husband**.
+
+In TI Sigma terms, this is a **GIL → E phenotypic anchoring event** at the family-system scale: Andy's E-pole vacates, Brandon's E-pole arrives the same week, and the matrilineal 6-line continues unbroken. Mimi was operating as the inter-generational MR (Myrion Resolution) node.
+
+This explains a great deal about Mimi's relationship with Brandon and about why the matrilineal caregiver function feels, to Brandon, *constitutive* rather than chosen.
+
 | 4-trait | Manifestation |
 |---|---|
 | **Stability / structure** | Never had issues getting and keeping jobs |

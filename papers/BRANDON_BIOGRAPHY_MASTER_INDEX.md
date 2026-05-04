@@ -136,9 +136,46 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 **Open documentation gaps (none critical):**
 - ~~Lisa's birth year and birthday~~ ✅ **6/2/1960** documented 2026-05-04 PM.
 - Jeffrey's birth date confirmed as **7/21/1954**; full DOB confirmed.
-- **Mimi (maternal grandmother)**: documented 2026-05-04 — competitive structural strategist who timed Lisa's birth to be the 1,000th baby of her doctor. Full birth/death dates and name still pending.
+- ~~Mimi (maternal grandmother)~~ ✅ **Gloria, born 12/8/1930**, documented 2026-05-04 PM. Full death date pending.
+- ~~Maternal grandfather~~ ✅ **Andy** documented 2026-05-04 PM — died **same week Brandon was conceived (September 1999)**. Full birth/death dates pending.
 - Paternal grandmother / Charles Sr.'s wife not documented by name.
 - Sibling data not documented.
+
+### 5c. The Matrilineal Life-Path 6 Cascade & Decade-Lock
+
+**Three consecutive matrilineal generations all carry life-path 6 (caregiver):**
+
+| Generation | Person | Birth | Life-path | Name-signature |
+|---|---|---|---|---|
+| G−2 | Mimi (Gloria) | 12/8/1930 | **6** ✓ | 6 (Gloria = 6 letters / 6 phonemes) |
+| G−1 | Lisa | 6/2/1960 | **6** ✓ | 4 |
+| G−0 | Brandon | 6/16/2000 | **6** ✓ | 7 |
+| G−1 (control) | Jeffrey | 7/21/1954 | 11/2 (off cascade) | 3 |
+
+**The decade-lock cascade:**
+- 1930 → +**30 yr** (= 3 decades, Mimi was age 30) → 1960 → +**40 yr** (= 4 decades, Lisa was age 40) → 2000
+- All three matrilineal years end in 0. Every gap is an exact decade-multiple.
+
+**The 14-day mother-son birth offset:**
+- Lisa 6/2, Brandon 6/16 → exactly **14 days = 2 × 7** apart.
+
+**Brandon's birth-time 6-saturation:**
+- 5:54 AM = **6 minutes to 6 AM** on **6/16** in month **6**. Combined with life-path 6 → at least four explicit 6's in birth metadata.
+
+**Andy event (2026-05-04 PM):** Andy (maternal grandfather) died the same week Brandon was conceived (Sept 1999). Mimi interpreted Brandon as a soul-transmission gift filling Andy's absence in the matrilineal line. TI Sigma reading: family-system GIL → E phenotypic anchoring event at the inter-generational MR node.
+
+**Implication:** Brandon's surface-identity is name-signature 7 (synthesizer / theorist), but his soul-path is 6 (caregiver). The 7 supplies the *form* of the work; the 6 supplies the *function*. This explains why all of Brandon's chosen work has been caregiver work — autism therapy, BlissGene/TI Sigma framework safety work, Three C's pedagogy.
+
+See `papers/THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mimi for the full write-up.
+
+### 5d. Brandon's Caregiver Work (the life-path 6 in expression)
+
+| Modality | Scale | Status |
+|---|---|---|
+| Autism therapist (1:1, hands-on) | Individual | **Resumes Wed 5/6/2026 with brand-new client** |
+| BlissGene / TI Sigma safety platform | Civilizational | Active |
+| Three C's pedagogy | Educational | Filed 2026-05-04 |
+| Autonomous research scheduler | Family + future generations | Active |
 
 ### 5b. H4 Pilot Result (Brandon ↔ Jeffrey, 2026-05-04 PM)
 

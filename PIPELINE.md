@@ -15,6 +15,7 @@
 | Daily medication log | Active | `data/medication_log.csv` |
 | Oura nightly summary | Autonomous | `oura_full_metrics_harvester.py` |
 | Adderall titration (Day 1 = 2026-05-01) | Active | 14-day window; covariate logged; URB #828 trial-1 (2026-05-22) is post-washout |
+| **Autism therapy work resumes** | **Wed 2026-05-06 — brand new client** | Caregiver-mode life-path-6 expression; track sleep/HRV the night before |
 
 ---
 
