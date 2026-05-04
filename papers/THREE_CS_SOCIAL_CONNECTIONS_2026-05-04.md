@@ -120,14 +120,18 @@ The Lindbergh naming is itself a C-chain: **C**harles Lindbergh → **C**harles 
 
 Brandon's father Jeffrey (d. 3/27/2008) presents a contrasting numerological signature — a **3** rather than a **7**:
 
-| Data point | Value | 3-relevance |
-|---|---|---|
-| Date of death | 3/27/2008 | Starts with 3; 27 = 3³ |
-| Birth year | 1954 | 54 = 18 × 3 |
-| Marriage year | 1993 | Ends in 3 |
-| Car accident & religious conversion | 1984 | 84 = 28 × 3 |
-| Name "Jeff" | 3 phonemes (J-eh-f) | Phonemic 3 |
-| Personality | Major extrovert, specialized in structural tasks | Structural/extrovert = features of 3 |
+| Data point | Value | 3-relevance | 7-relevance |
+|---|---|---|---|
+| **Birthday** | **7/21** | **21 = 7 × 3** | **Month = 7** |
+| Date of death | 3/27/2008 | Starts with 3; 27 = 3³ | — |
+| Birth year | 1954 | 54 = 18 × 3 | — |
+| Marriage year | 1993 | Ends in 3 | — |
+| Car accident & religious conversion | 1984 | 84 = 28 × 3 | — |
+| Name "Jeffrey" | 7 letters | — | 7 letters |
+| Name "Jeff" | 3 phonemes (J-eh-f) | Phonemic 3 | — |
+| Personality | Major extrovert, specialized in structural tasks | Structural/extrovert = features of 3 | — |
+
+Jeffrey's birthday — **July 21st (7/21)** — is arguably the single date in the calendar that most cleanly encodes both 7 and 3 simultaneously: the month *is* 7, and the day *is* 7 × 3. Out of 365 possible dates, no other so compactly expresses the intersection of these two numbers. His name "Jeffrey" has 7 letters; his nickname "Jeff" has 3 phonemes. Even at the level of his birth date, the 7 and 3 coexist — but as his life data shows, the 3 dominated his expression while the 7 remained latent, ultimately surfacing fully in his son.
 
 Jeffrey had 7 letters in his full name, yet his life pattern expressed 3 far more than 7. He was a deep thinker but not a philosopher — a right-wing Christian fundamentalist who didn't engage with academic content, performed poorly in school, and didn't like reading. He was not an archetype of wisdom (7) the way Brandon is; his archetype was structural action (3).
 
