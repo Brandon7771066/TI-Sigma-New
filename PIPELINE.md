@@ -1,6 +1,6 @@
 # Pipeline Tracker — Mood Amplifier Safety & Validation Platform
 
-**Last updated:** 2026-05-01 PM (post URB #828 v2 LOCK)
+**Last updated:** 2026-05-04 AM
 **Owner:** Brandon Charles Emerick
 **Standard:** asymmetric-standards #69, $0 budget unless noted.
 
@@ -20,7 +20,7 @@
 
 ## Brandon's open tasks (none are blockers; ordered by ease)
 
-1. ☐ **Mendi Phase 1 BLE scan** — 5–10 min on Brandon's local machine. See `papers/MENDI_PATH_B_STATUS_2026-05-01.md` Step 1–6. No rush; not on URB #828 critical path.
+1. ☐ **Mendi Phase 1 GATT discovery** — BLE scan DONE (MAC: F8:1C:96:82:73:AD found 2026-05-03). Next: double-click `mendi_connect.bat` in Downloads folder, upload resulting JSON to Replit. See `papers/MENDI_PATH_B_STATUS_2026-05-01.md`.
 2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; awaiting confirmation.
 3. ✅ **URB #828 v2 M=5 token-set CONFIRMED 2026-05-01 PM**: {calm, red, ★, 7, M}.
 4. ☐ **Print sealed deck of 5 cards** for URB #828 trials — one card per token in the M=5 set: `calm` / `red` / `★` / `7` / `M`. Large clear print, opaque card backs (so back is identical and gives no draw signal). Ready by 2026-05-22.
@@ -72,8 +72,15 @@
 | Power-curve simulation | Done | `urb828_power_curve_simulation.py` |
 | Classical-ML discriminator (C0) skeleton | Done | `urb828_c0_ml_discriminator_skeleton.py` |
 | Unified Papers Browser tab | Done | `pages/papers_browser.py` |
+| TI Sigma Atlas + Index/Acronyms tabs | Done | `pages/papers_browser.py` (tabs 4 & 5) |
 | Pipeline tracker | Done (this file) | `PIPELINE.md` |
 | Mendi status update | Done | `papers/MENDI_PATH_B_STATUS_2026-05-01.md` |
+| Fingerprint capture instructions | Done | `papers/FINGERPRINT_CAPTURE_INSTRUCTIONS.md` |
+| TI Sigma Systematic Review — Empirical Science | Done (living doc) | `papers/TI_SIGMA_REVIEW_EMPIRICAL_SCIENCE.md` |
+| TI Sigma Systematic Review — Theoretical Science | Done (living doc) | `papers/TI_SIGMA_REVIEW_THEORETICAL_SCIENCE.md` |
+| TI Sigma Systematic Review — Philosophy | Done (living doc) | `papers/TI_SIGMA_REVIEW_PHILOSOPHY.md` |
+| TI Sigma Systematic Review — Business & Engineering | Done (living doc) | `papers/TI_SIGMA_REVIEW_BUSINESS_ENGINEERING.md` |
+| TI Sigma Systematic Review — Mathematics | Done (living doc) | `papers/TI_SIGMA_REVIEW_MATHEMATICS.md` |
 
 ---
 
@@ -96,7 +103,8 @@
 | Item | State |
 |---|---|
 | URB #827 — Operational TI Sigma competence test (~3-4h) | Drafted, awaits Brandon green-light |
-| Mendi BLE Path B Phase 1 (~5–10 min on Brandon's machine) | **Scaffold ready; awaits Brandon local execution.** See `papers/MENDI_PATH_B_STATUS_2026-05-01.md` |
+| Mendi BLE Path B Phase 1 GATT discovery | **BLE scan DONE** (MAC: F8:1C:96:82:73:AD). GATT discovery pending — Brandon runs `mendi_connect.bat`, uploads JSON. |
+| Upload Muse + Polar H10 session data from phone apps | **No data in Replit yet.** Brandon wearing devices; data in phone apps (Muse app, Polar Flow). Export + upload needed. |
 | Biowell appointment booking | Brandon's task; reached out 2026-05-01 PM, awaiting confirmation |
 | Replit checkpoint rollback (if needed) | Available via Replit UI |
 
