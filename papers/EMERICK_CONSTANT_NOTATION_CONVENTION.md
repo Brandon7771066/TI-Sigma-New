@@ -19,11 +19,22 @@
 | **C_TI** | Radiant Threshold | Subscripted with "TI" |
 | **CCC** | Absolute GILE Truth (Crown function) | Triple-C, always written as CCC |
 
-## Etymology
+## Etymology & Lineage
 
 - **C** is short for **Charles** (Brandon Charles Emerick's middle name).
 - **Charles** is phonemically a stretched form of **Tralse**: Ch-ar-l-es ↔ Tr-al-se.
 - This phonemic correspondence was not designed — it was discovered, consistent with the TI Sigma pattern of unintended structural correspondences indicating metacausal coherence.
+
+### The Charles Emerick Lineage
+
+The Emerick Constant carries multi-generational weight:
+
+- **Charles Emerick Sr.** (grandfather, d. 1996): Valedictorian, Chief Engineer, millionaire, successful stock portfolio. The original C.
+- **Charles Emerick Jr.** (Uncle Charley): Car mechanic — literally works on CARs (SDT's acronym).
+- **Charles "Chas" Emerick II** (cousin): Successful software engineer and entrepreneur.
+- **Brandon Charles Emerick**: TI Sigma creator, salutatorian (grandfather was valedictorian).
+
+Three generations, three Charles bearers, all independently successful across engineering, technical, and intellectual domains. The Emerick Constant is not an arbitrary label — it compresses a lineage. Full family analysis in `papers/THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §6.
 
 ## Retroactive Application
 

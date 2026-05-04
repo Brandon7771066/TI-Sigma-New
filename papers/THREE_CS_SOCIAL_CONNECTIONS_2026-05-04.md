@@ -101,7 +101,46 @@ The Emerick Constant's precise definition and value are documented in the core T
 
 ---
 
-## 6. Convergence Log (2026-05-04)
+## 6. The Emerick Lineage — C as Heritage
+
+The Emerick Constant (C = Charles) is not merely a notation convention. It carries the weight of a family lineage defined by intelligence, engineering, and competence — all seeded by one man:
+
+### Charles Emerick Sr. (1916?–1996)
+
+- **Valedictorian** of his class (Brandon was salutatorian of his — a generational parallel)
+- **Chief Engineer** at his company
+- Died a **millionaire** with a successful **stock portfolio**
+- Had a large and lively retirement party before passing in 1996
+- Brandon never knew him personally, yet independently re-derived his legacy's central qualities
+
+### The Emerick Descendants
+
+Charles Sr. produced (directly or through his children) a concentration of intelligence and engineering talent:
+
+| Name | Relation to Brandon | Domain | C-relevance |
+|---|---|---|---|
+| **Charles Emerick Sr.** | Grandfather | Chief Engineer, valedictorian, millionaire investor | The original C; source of the Emerick Constant |
+| **Uncle Bruce** | Uncle | Brilliant managerial engineer | Friend of Thom Zeppieri (Three C's co-originator) |
+| **Uncle Dave** | Uncle | Brilliant managerial engineer | Engineering lineage |
+| **Uncle Charley** (Charles Jr.) | Uncle | **Car** mechanic | Named after Sr.; CAR = SDT's acronym; works on Cars |
+| **Uncle Paul** | Uncle | Mid-level corporate manager (UPS), CS major | **C**omputer **S**cience |
+| **Brandon's father** | Father | Deep thinker, engineering-type house/repair extraordinaire | Practical engineering competence |
+| **Cousin Matthew** | Cousin (son of Uncle Paul) | **C**ybersecurity, Rensselaer graduate | Another C-domain |
+| **Charles "Chas" Emerick II** | Cousin | Successful software engineer & entrepreneur | Third-generation Charles; engineering + capital |
+| **Brandon Charles Emerick** | Self | TI Sigma creator, TEDx speaker | Middle name = Charles = Tralse stretched out |
+
+Notable patterns:
+- **Three separate Charles bearers** across the family: Sr., Jr. (Uncle Charley), and Chas Emerick II — the name propagates
+- **Uncle Charley is a Car mechanic** — he literally works on CARs, and CAR is SDT's acronym that Brandon chanted during his first manic episode
+- **Cousin Chas** is a software engineer and entrepreneur — embodying both Competence and Capital
+- **Cousin Matthew** works in Cybersecurity — yet another C-initial domain
+- The family concentrates in **engineering** across every branch — the Competence C is the Emerick family trait
+
+The Emerick Constant is not an arbitrary label. It is a compression of a multi-generational pattern of intelligence, engineering competence, and the letter C recurring through names, professions, and domains in ways that were not designed but emerged.
+
+---
+
+## 7. Convergence Log (2026-05-04)
 
 The day the Three C's were formulated saw an unusual density of C-related convergences:
 
@@ -122,7 +161,7 @@ Honest assessment per asymmetric-standards #69: The clustering of C-related even
 
 ---
 
-## 7. Cross-References
+## 8. Cross-References
 
 - Self-Determination Theory: Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal pursuits. *Psychological Inquiry*, 11(4), 227–268.
 - Brandon's TEDx Talk: "How the Science of Curiosity Can Crush Your Comfort Zone" (YouTube)
