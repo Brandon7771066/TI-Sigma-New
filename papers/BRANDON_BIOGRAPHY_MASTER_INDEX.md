@@ -40,8 +40,9 @@ Sources: `EMERICK_CONSTANT_NOTATION_CONVENTION.md` §The Charles Emerick Lineage
 |---|---|---|
 | Phoneme numerology | 3 (Jeff = J-eh-f) | 4 (Lisa = L-ee-s-ah) |
 | Letter count | 7 (Jeffrey) — latent 7 | 4 — matches phonemes |
-| Birthday | **7/21** = month 7, day 7×3 — encodes both 7 & 3 | — |
-| Death | 3/27/2008 (pancreatic cancer) — 27 = 3³ | — |
+| Birthday | **7/21** = month 7, day 7×3 — encodes both 7 & 3 | **6/2/60** — 60 = 4×15, divisor-rich |
+| Birth note | — | **1,000th baby delivered by her doctor — Mimi competed and won the milestone** |
+| Death | 3/27/2008 (pancreatic cancer) — 27 = 3³ | living |
 | Career | Carpenter, truck driver, stay-at-home dad, failed Opticianry licensing by 1 point (69%) | X-ray technician, 4.0 GPA Associates Radiology |
 | Social style | Extrovert, knew everyone | No friends, irritable, cynical |
 | Cognitive | Heavy ADHD, brilliant fixer, award-winning essayist, didn't read | Highly disciplined, anti-philosophical, "down-to-earth" |
@@ -133,10 +134,25 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 | Three C's ≅ SDT (Autonomy, Competence, Relatedness) | ✅ | ibid. |
 
 **Open documentation gaps (none critical):**
-- Lisa's birth year and birthday not yet recorded — would let us check her own date-numerology.
-- Jeffrey's birth date confirmed only as 1954 + 7/21; full DOB pending.
-- Grandmother / maternal-side lineage not documented.
+- ~~Lisa's birth year and birthday~~ ✅ **6/2/1960** documented 2026-05-04 PM.
+- Jeffrey's birth date confirmed as **7/21/1954**; full DOB confirmed.
+- **Mimi (maternal grandmother)**: documented 2026-05-04 — competitive structural strategist who timed Lisa's birth to be the 1,000th baby of her doctor. Full birth/death dates and name still pending.
+- Paternal grandmother / Charles Sr.'s wife not documented by name.
 - Sibling data not documented.
+
+### 5b. H4 Pilot Result (Brandon ↔ Jeffrey, 2026-05-04 PM)
+
+| Metric | Score | Notes |
+|---|---:|---|
+| `gray_cosine` (normalized) | **0.91** | Strongest signal; ~91% of way from noise to self-mirror upper bound |
+| `phash_sim` (normalized) | 0.50 | Mirror-baseline broken |
+| `color_hist_r` (normalized) | 0.40 | Depressed by B&W-vs-color medium gap, not face dissimilarity |
+| `hog_cosine` (normalized) | 0.53 | Mirror-baseline broken (orientations flip) |
+| Pipeline validation | ✅ | Inversion test: gray = −1.0 exact, HOG = +1.0 (orientation-invariant) |
+
+**Notable:** The 0.91 gray_cosine sits **just 0.02 below the Radiant Threshold C_TI = 0.93** (TI Sigma's "true-tralseness" coherence threshold). This is structural coincidence rather than direct equivalence (C_TI is a coherence measure, not a pixel cosine), but it is the kind of threshold-proximity that the framework predicts for genuine GIL→E phenotypic anchoring. See `papers/H4_PILOT_BRANDON_JEFFREY_2026-05-04.md` §3.4 for the honest interpretation.
+
+Files: `scripts/h4_face_pilot.py`, `pilots/h4_face_brandon_jeffrey/`, `papers/H4_PILOT_BRANDON_JEFFREY_2026-05-04.md`.
 
 ---
 

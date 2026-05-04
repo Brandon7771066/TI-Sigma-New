@@ -164,7 +164,15 @@ This is testable via:
 
 ### Lisa Emerick (Brandon's Mother) — A 4 Personality
 
-Brandon's mother **Lisa** has a name with **4 letters and 4 distinct phonemes** (L-ee-s-ah), giving her a clean numerological signature of **4**. Her life data confirms it:
+Brandon's mother **Lisa** (born **June 2, 1960** — **6/2/60**) has a name with **4 letters and 4 distinct phonemes** (L-ee-s-ah), giving her a clean numerological signature of **4**. Her life data confirms it:
+
+**Birth-context as 4-signature:** Lisa was the **1,000th baby** delivered by a specific doctor. Mimi (Lisa's mother) actively competed against other expectant mothers to deliver on the day that would make Lisa that doctor's milestone-thousand baby — and won. This is itself a 4-signature event:
+- **Counted, structural, milestone-driven** — Lisa's *entrance into the world* was about being precisely the 1,000th, not the 999th or 1,001st.
+- **1,000 = 10³** — a perfect cube of the most-structural decimal base. The 4-archetype is the cube; the 4 directions, the 4 corners, the 4 walls.
+- **Mimi's competitive structural drive** is the matrilineal source of Lisa's discipline. Lisa inherited the 4 from Mimi, who had the planning instinct to compete *and win* on a numerical milestone.
+- **6/2/60** numerology: 6+2+6+0 = **14 → 1+4 = 5** (life-path 5), but the date itself reads as **6, 2, 60** — a sequence of divisors of 60, the most-divisible base in human use (24 hr, 60 min, 60 sec, 360°). 60 = **4 × 15** = **5 × 12** = **6 × 10** — a number whose entire identity is structural divisibility, perfect for a 4-personality.
+
+The matrilineal line so far: **Mimi (competitive structural strategist) → Lisa (4, X-ray tech, 4.0 GPA, no friends, anti-philosophical) → contributed the 4 to Brandon's 7**.
 
 | 4-trait | Manifestation |
 |---|---|

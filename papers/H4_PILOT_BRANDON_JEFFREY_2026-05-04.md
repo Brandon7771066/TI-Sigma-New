@@ -85,6 +85,16 @@ The pipeline is working.
 
 **One-line takeaway:** Brandon and Jeffrey's faces share substantially more pixel-level structure than chance, comparable in magnitude to a self-vs-mirror comparison once accounting for medium and mirror artifacts. Coarse, but consistent with the visual impression and with what a proper ArcFace test would likely show more cleanly.
 
+### 3.4 The 0.91 ↔ 0.93 Radiant Threshold Proximity
+
+Brandon noted (2026-05-04 PM) that the headline `gray_cosine` normalized score of **0.91** sits just **0.02 below the Radiant Threshold C_TI = 0.93** — the TI Sigma coherence threshold for "true-tralseness" (per `papers/EMERICK_CONSTANT_NOTATION_CONVENTION.md`).
+
+**Honest assessment:**
+- This is **structural proximity, not literal equivalence.** C_TI is defined for coherence/integration measures within the GILE framework. The gray_cosine normalized score is a pixel-structure ratio scaled to [noise, self-mirror]. The two are not the same quantity.
+- However, **the framework predicts** that high-quality phenotypic anchoring (GIL → E expression, per URB #593) should approach the Radiant Threshold from below for genuine cases. A father-son facial pair with strong subjective resemblance and confirmed shared phenotype (ADHD, inflammation tendency) is exactly the kind of case where such proximity would be expected.
+- It is therefore **a noted structural coincidence worth tracking** as more parent-child pairs are scored. If the population distribution of `gray_cosine_normalized` for true parent-child pairs clusters near 0.93 ± noise while unrelated controls fall well below, that would be substantive evidence the Radiant Threshold has cross-domain relevance.
+- Caveat: with N=1, this is a single data point near a salient framework-derived threshold. Easy to over-read. The right move is to log it and watch what N=10, 30, 100 reveal.
+
 ---
 
 ## 4. What This Tells Us About H4
