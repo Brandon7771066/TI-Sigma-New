@@ -76,12 +76,19 @@ def decode_frame(frame: bytes) -> Optional[dict]:
     return None
 
 
-async def cmd_scan(timeout_s: float = 10.0) -> int:
+async def cmd_scan(timeout_s: float = 30.0) -> int:
     """List all BLE devices visible to this radio. Mendi should appear."""
     print(f"Scanning for {timeout_s:.0f} seconds — power on the Mendi headband NOW")
+    print("(Make sure Mendi is NOT listed in Windows Bluetooth paired devices.)")
+    print("(If it is: Settings > Bluetooth > Mendi > Remove device, then re-run.)\n")
     devices = await BleakScanner.discover(timeout=timeout_s)
     if not devices:
-        print("No BLE devices found. Is Bluetooth on? Is the headband powered on?")
+        print("No BLE devices found at all.")
+        print("\nTroubleshooting:")
+        print("  1. Is Bluetooth turned ON in Windows Settings?")
+        print("  2. Is the Mendi headband powered on (blinking)?")
+        print("  3. Try: right-click Command Prompt > 'Run as administrator'")
+        print("  4. Close the Mendi phone app if it's open (it may hold the connection)")
         return 1
 
     mendi_candidates = []
@@ -93,24 +100,36 @@ async def cmd_scan(timeout_s: float = 10.0) -> int:
         line = f"  {addr}  {name:<30}  rssi={rssi}"
         if name and MENDI_NAME_PREFIX.lower() in name.lower():
             mendi_candidates.append((line, addr, name))
+        elif name and any(kw in name.lower() for kw in ("mnd", "neuro", "fnirs")):
+            mendi_candidates.append((line, addr, name))
         else:
             other_devices.append(line)
 
+    print(f"\nFound {len(devices)} BLE device(s) total.\n")
+
     if mendi_candidates:
-        print(f"\n=== Mendi candidates (name contains '{MENDI_NAME_PREFIX}') ===")
+        print(f"=== Mendi candidates (name contains '{MENDI_NAME_PREFIX}' or similar) ===")
         for line, _, _ in mendi_candidates:
             print(line)
         print()
         print("Next step: run with --discover-gatt --address <MAC>")
-        print("Or use nRF Connect for Mobile (per "
-              "papers/MENDI_BLE_REVERSE_ENGINEERING_PLAN.md Step 2)")
+        print("Example:  python mendi_ble_client.py --discover-gatt --address AA:BB:CC:DD:EE:FF")
     else:
-        print(f"\nNo device with name containing '{MENDI_NAME_PREFIX}' found.")
-        print("All visible devices:")
-        for line in other_devices[:30]:
+        print(f"No device with name containing '{MENDI_NAME_PREFIX}' found.")
+        print("\nAll visible devices (check if Mendi appears under a different name):")
+        for line in sorted(other_devices):
             print(line)
-        print("\nIf the Mendi shows under a different name, edit "
-              "MENDI_NAME_PREFIX in this file.")
+        print(f"\n--- {len(other_devices)} device(s) listed ---")
+        print("\nIf the Mendi is listed under a different name above,")
+        print("copy its MAC address and run:")
+        print("  python mendi_ble_client.py --discover-gatt --address <MAC>")
+        print("\nIf Mendi is NOT listed at all:")
+        print("  1. REMOVE Mendi from Windows Bluetooth paired devices")
+        print("     (Settings > Bluetooth & devices > find Mendi > Remove)")
+        print("  2. Close the Mendi phone app (it may be holding the connection)")
+        print("  3. Power-cycle the Mendi headband (off, wait 5 sec, on)")
+        print("  4. Right-click Command Prompt > 'Run as administrator'")
+        print("  5. Re-run this scan")
     return 0
 
 
@@ -232,6 +251,8 @@ def main() -> int:
                     help="streaming: log raw hex only, do NOT POST decoded "
                          "samples to bridge")
     ap.add_argument("--address", help="BLE MAC address of the Mendi")
+    ap.add_argument("--timeout", type=float, default=30.0,
+                    help="scan timeout in seconds (default 30)")
     ap.add_argument("--duration", type=float, default=120.0,
                     help="streaming duration in seconds (default 120)")
     ap.add_argument("--bridge-url",
@@ -243,7 +264,7 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.scan:
-        return asyncio.run(cmd_scan())
+        return asyncio.run(cmd_scan(timeout_s=args.timeout))
     if args.discover_gatt:
         if not args.address:
             print("ERROR: --discover-gatt requires --address", file=sys.stderr)
