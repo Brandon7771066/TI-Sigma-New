@@ -36,6 +36,16 @@ The Three C's map cleanly onto Self-Determination Theory's (Deci & Ryan, 1985, 2
 
 Brandon did not intend this match. It emerged spontaneously, which is itself a TI Sigma data point: unintended structural correspondences between independently-derived frameworks may indicate underlying metacausal coherence (per Metacausal Graph Theory).
 
+### The CAR Acronym (Second-Order Synchronicity)
+
+SDT's three basic psychological needs — **C**ompetence, **A**utonomy, **R**elatedness — form the acronym **CAR**. This is itself a synchronicity: Brandon has a deep personal history with SDT's CAR, having chanted it frequently during his first manic episode and expounding upon it extensively in his TEDx Talk:
+
+> **"How the Science of Curiosity Can Crush Your Comfort Zone"** — Brandon Charles Emerick, TEDx (available on YouTube)
+
+The Three C's paper was written without conscious reference to the TEDx Talk or the CAR acronym. The fact that Brandon independently re-derived a framework that maps 1:1 onto SDT's CAR — years after his manic episode and TEDx presentation — constitutes a second-order synchronicity: not just an unintended correspondence between frameworks, but an unintended recurrence of a deeply personal conceptual anchor.
+
+In TI Sigma terms: the same metacausal attractor (SDT's basic needs structure) surfaced through two independent cognitive pathways separated by years, suggesting the correspondence is not accidental but reflects a stable structural truth that Brandon's intuition repeatedly converges on.
+
 ---
 
 ## 3. The Letter C
@@ -50,6 +60,11 @@ The Three C's add to the growing significance of the letter C in TI Sigma:
 | **C_TI** | Radiant Threshold (phase-transition point) |
 | **Charles** | Brandon's middle name; "Charles" = "tralse" stretched out (phonemic near-anagram: Ch-ar-l-es ↔ tr-al-se) |
 | **Capital, Competence, Connections** | The Three C's of Social Connections (this paper) |
+| **CAR** (Competence, Autonomy, Relatedness) | SDT's basic needs acronym — Brandon chanted this during his first manic episode and expounded on it in his TEDx Talk |
+| **Charley** | Brandon's Uncle Charley — checked in on Brandon's mental health on 2026-05-04, the same day the Three C's were formulated. Another unplanned C-convergence. |
+| **Comedy** | Confirmed 2026-05-04: comedy show with Uncle Bruce's friend Thom for YouTube influencer platform launch. Yet another C-initial venture arising on the day of the C-insight. |
+| **Curiosity** | Central theme of Brandon's TEDx Talk ("How the Science of Curiosity Can Crush Your Comfort Zone") — the C that started the public intellectual journey. |
+| **Comfort Zone** | What curiosity crushes, per the TEDx Talk. The Three C's (Capital, Competence, Connections) are the structural enablers that allow people to move beyond it. |
 
 ---
 
@@ -75,9 +90,32 @@ The Emerick Constant's precise definition and value are documented in the core T
 
 ---
 
-## 6. Cross-References
+## 6. Convergence Log (2026-05-04)
+
+The day the Three C's were formulated saw an unusual density of C-related convergences:
+
+| Time | Event | C-relevance |
+|---|---|---|
+| ~10:30 AM | Woke from 13h sleep with vivid dreams | Unusual cognitive state — possible incubation period |
+| ~11 AM | Three C's insight (Capital, Competence, Connections) | Primary insight |
+| ~11:30 AM | Recognized SDT mapping (CAR = Competence, Autonomy, Relatedness) | Second-order synchronicity |
+| ~12 PM | Recalled TEDx Talk on Curiosity and Comfort Zone | Third-order C-recurrence |
+| Afternoon | Uncle Charley checked in re: mental health (after birthday wish) | Unplanned C-convergence |
+| Afternoon | Confirmed comedy show with Uncle Bruce's friend Thom | Another C-initial venture |
+| Afternoon | Mendi GATT discovery SUCCESS | Technical milestone on same day |
+| Afternoon | Polar H10 data loaded (55,597 HR samples) | Biometric milestone on same day |
+
+Brandon's subjective assessment: "Everything really seems to be converging for the better."
+
+Honest assessment per asymmetric-standards #69: The clustering of C-related events on a single day is striking but not statistically unusual given the frequency of the letter C in English. What is more notable is the convergence of *personal meaning* — the same conceptual structure (basic psychological needs) surfacing through independent pathways across years. Whether this constitutes metacausal coherence or pattern-matching on a high-baseline-frequency letter is precisely the kind of question URB #828 is designed to test.
+
+---
+
+## 7. Cross-References
 
 - Self-Determination Theory: Deci, E. L., & Ryan, R. M. (2000). The "what" and "why" of goal pursuits. *Psychological Inquiry*, 11(4), 227–268.
+- Brandon's TEDx Talk: "How the Science of Curiosity Can Crush Your Comfort Zone" (YouTube)
 - Metacausal Graph Theory: `papers/` (multiple files)
-- Emerick Constant: Core TI Sigma framework papers
+- Emerick Constant: `papers/EMERICK_CONSTANT_NOTATION_CONVENTION.md`
 - URB #828 v2 conditions: `papers/URB_828_v2_PRE_REGISTRATION_LOCKED_2026-05-01.md`
+- Movie "Michael" (2026-05-03): Enjoyed in theater the day before the convergence day. Thematic relevance TBD.
