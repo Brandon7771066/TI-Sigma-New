@@ -1,8 +1,8 @@
 # The Three C's of Social Connections — A TI Sigma Micro-Theory
 
-**Author:** Brandon Charles Emerick
+**Authors:** Brandon Charles Emerick & Thom Zeppieri (co-originator)
 **Date:** 2026-05-04
-**Origin:** Spontaneous insight during an atypical day (13h sleep, late medication, failed TM session, first meal at lunch). Logged in `data/subjective_daily_log.csv`.
+**Origin:** Collaborative insight during a Messenger conversation. Brandon introduced the concept of "Capital"; Thom Zeppieri paired it with "Connections" ("connections and capital are our primary goals"); Brandon then added "Competence" to complete the triad and formulated the full philosophical insight. Logged in `data/subjective_daily_log.csv`.
 
 ---
 
@@ -11,6 +11,17 @@
 One of life's greatest lies that seems to be true: **"Nobody cares."**
 
 The truth is that passionate and good-natured people do exist but lack the **Capital, Competence, and Connections** to make a difference.
+
+### Genesis
+
+The Three C's emerged through dialogue, not monologue:
+
+1. **Brandon** raised the concept of **Capital** in the context of building an influencer platform and comedy show.
+2. **Thom Zeppieri** responded: *"Okay, connections and capital are our primary goals. And we've got to have someone foot the restaurant bill."* — pairing **Connections** with Capital.
+3. **Brandon** recognized the pattern and added **Competence** to complete the triad, then formulated the full insight: *"One of life's greatest lies that seems to be quite true on the surface: 'Nobody cares.' The truth is that passionate and good-natured people do exist but lack the capital, competence, and connections ('Three C's of Social Success') to make a difference."*
+4. **Thom** affirmed: *"There's a lot to expound upon there! A good Thai dinner will make an excellent accomplishment!"*
+
+This collaborative origin is itself significant in TI Sigma terms: the insight required Connections (Brandon ↔ Thom) to emerge. The Three C's theory was born through the very mechanism it describes.
 
 ### The Three C's of Social Connections
 
@@ -62,7 +73,7 @@ The Three C's add to the growing significance of the letter C in TI Sigma:
 | **Capital, Competence, Connections** | The Three C's of Social Connections (this paper) |
 | **CAR** (Competence, Autonomy, Relatedness) | SDT's basic needs acronym — Brandon chanted this during his first manic episode and expounded on it in his TEDx Talk |
 | **Charley** | Brandon's Uncle Charley — checked in on Brandon's mental health on 2026-05-04, the same day the Three C's were formulated. Another unplanned C-convergence. |
-| **Comedy** | Confirmed 2026-05-04: comedy show with Uncle Bruce's friend Thom for YouTube influencer platform launch. Yet another C-initial venture arising on the day of the C-insight. |
+| **Comedy** | Confirmed 2026-05-04: comedy show with Thom Zeppieri (Uncle Bruce's friend and Three C's co-originator) for YouTube influencer platform launch. Yet another C-initial venture arising on the day of the C-insight. |
 | **Curiosity** | Central theme of Brandon's TEDx Talk ("How the Science of Curiosity Can Crush Your Comfort Zone") — the C that started the public intellectual journey. |
 | **Comfort Zone** | What curiosity crushes, per the TEDx Talk. The Three C's (Capital, Competence, Connections) are the structural enablers that allow people to move beyond it. |
 
