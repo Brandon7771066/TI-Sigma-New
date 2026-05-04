@@ -29,7 +29,7 @@
 
 The Emerick Constant carries multi-generational weight:
 
-- **Charles Emerick Sr.** (grandfather, d. 1996): Valedictorian, Chief Engineer, millionaire, successful stock portfolio. The original C.
+- **Charles Emerick Sr.** (1928–1996): Named after **Charles Lindbergh** (1927 flight). Born in 1928 = 7 × 4. Valedictorian, Chief Engineer, millionaire, successful stock portfolio. The original C.
 - **Charles Emerick Jr.** (Uncle Charley): Car mechanic — literally works on CARs (SDT's acronym).
 - **Charles "Chas" Emerick II** (cousin): Successful software engineer and entrepreneur.
 - **Brandon Charles Emerick**: TI Sigma creator, salutatorian (grandfather was valedictorian).

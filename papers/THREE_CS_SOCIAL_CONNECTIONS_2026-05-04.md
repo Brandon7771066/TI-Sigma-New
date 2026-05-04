@@ -105,13 +105,33 @@ The Emerick Constant's precise definition and value are documented in the core T
 
 The Emerick Constant (C = Charles) is not merely a notation convention. It carries the weight of a family lineage defined by intelligence, engineering, and competence — all seeded by one man:
 
-### Charles Emerick Sr. (1916?–1996)
+### Charles Emerick Sr. (1928–1996)
 
+- **Named after Charles Lindbergh**, honoring the landmark 1927 solo transatlantic flight — born the year after, in **1928** (= 7 × 4, both significant numbers in TI Sigma)
 - **Valedictorian** of his class (Brandon was salutatorian of his — a generational parallel)
 - **Chief Engineer** at his company
 - Died a **millionaire** with a successful **stock portfolio**
 - Had a large and lively retirement party before passing in 1996
 - Brandon never knew him personally, yet independently re-derived his legacy's central qualities
+
+The Lindbergh naming is itself a C-chain: **C**harles Lindbergh → **C**harles Emerick Sr. → **C**harles Emerick Jr. (Uncle Charley) → Brandon **C**harles Emerick. The audacity and pioneering spirit Lindbergh represented propagated through the name across a century.
+
+### Jeffrey Emerick (Brandon's Father)
+
+Brandon's father Jeffrey (d. 3/27/2008) presents a contrasting numerological signature — a **3** rather than a **7**:
+
+| Data point | Value | 3-relevance |
+|---|---|---|
+| Date of death | 3/27/2008 | Starts with 3; 27 = 3³ |
+| Birth year | 1954 | 54 = 18 × 3 |
+| Marriage year | 1993 | Ends in 3 |
+| Car accident & religious conversion | 1984 | 84 = 28 × 3 |
+| Name "Jeff" | 3 phonemes (J-eh-f) | Phonemic 3 |
+| Personality | Major extrovert, specialized in structural tasks | Structural/extrovert = features of 3 |
+
+Jeffrey had 7 letters in his full name, yet his life pattern expressed 3 far more than 7. He was a deep thinker but not a philosopher — a right-wing Christian fundamentalist who didn't engage with academic content, performed poorly in school, and didn't like reading. He was not an archetype of wisdom (7) the way Brandon is; his archetype was structural action (3).
+
+The father-son contrast is striking: Jeffrey (3) produced Brandon (7). The 3 builds the structure; the 7 discovers the meaning within it. In TI Sigma terms, Jeffrey embodied the **E** (Environment) — the structural scaffolding — while Brandon embodies the **I** (Intuition) — the pattern recognition that operates on that scaffolding.
 
 ### The Emerick Descendants
 
