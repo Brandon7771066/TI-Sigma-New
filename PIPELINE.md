@@ -1,6 +1,6 @@
 # Pipeline Tracker — Mood Amplifier Safety & Validation Platform
 
-**Last updated:** 2026-05-04 AM
+**Last updated:** 2026-05-04 PM
 **Owner:** Brandon Charles Emerick
 **Standard:** asymmetric-standards #69, $0 budget unless noted.
 
@@ -10,7 +10,7 @@
 
 | Item | State | Notes |
 |---|---|---|
-| Polar H10 daily wear (Polar Beat untethered) | Active | sync nightly; data → `data/polar_h10/` |
+| Polar H10 daily wear (Polar Beat untethered) | Active; **first export received 2026-05-04** (5 sessions, 54,639 1-sec HR samples = 15.2h) | data → `data/polar_h10/` |
 | Daily subjective log (`log_daily_subjective.py`) | Active | 30s/day; mood/energy/focus/event |
 | Daily medication log | Active | `data/medication_log.csv` |
 | Oura nightly summary | Autonomous | `oura_full_metrics_harvester.py` |
@@ -20,7 +20,7 @@
 
 ## Brandon's open tasks (none are blockers; ordered by ease)
 
-1. ☐ **Mendi Phase 1 GATT discovery** — BLE scan DONE (MAC: F8:1C:96:82:73:AD found 2026-05-03). Next: double-click `mendi_connect.bat` in Downloads folder, upload resulting JSON to Replit. See `papers/MENDI_PATH_B_STATUS_2026-05-01.md`.
+1. ✅ **Mendi Phase 1 GATT discovery DONE 2026-05-04** — 5 services, 16 characteristics found. JSON at `Downloads\data\mendi\ble_discovery\gatt_2026-05-04T13-53-03.json` on Brandon's Acer. **UPLOAD TO REPLIT PENDING** — drag JSON into `data/mendi/ble_discovery/` in the Replit file panel.
 2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; awaiting confirmation.
 3. ✅ **URB #828 v2 M=5 token-set CONFIRMED 2026-05-01 PM**: {calm, red, ★, 7, M}.
 4. ☐ **Print sealed deck of 5 cards** for URB #828 trials — one card per token in the M=5 set: `calm` / `red` / `★` / `7` / `M`. Large clear print, opaque card backs (so back is identical and gives no draw signal). Ready by 2026-05-22.
@@ -103,8 +103,10 @@
 | Item | State |
 |---|---|
 | URB #827 — Operational TI Sigma competence test (~3-4h) | Drafted, awaits Brandon green-light |
-| Mendi BLE Path B Phase 1 GATT discovery | **BLE scan DONE** (MAC: F8:1C:96:82:73:AD). GATT discovery pending — Brandon runs `mendi_connect.bat`, uploads JSON. |
-| Upload Muse + Polar H10 session data from phone apps | **No data in Replit yet.** Brandon wearing devices; data in phone apps (Muse app, Polar Flow). Export + upload needed. |
+| Mendi BLE Path B Phase 1 GATT discovery | ✅ **DONE 2026-05-04.** 5 services, 16 characteristics. JSON on Brandon's Acer; **upload to Replit pending.** |
+| Mendi BLE Path B Phase 2 (protocol analysis) | Blocked on JSON upload. Agent-side ~2-4h once JSON arrives. |
+| Upload Polar H10 data from Polar Flow | ✅ **First export received 2026-05-04.** 7 sessions (5 May 2026), 54,639 HR samples. |
+| Upload Muse session data from Muse app | **No data in Replit yet.** Brandon wearing device; data in Muse app. Export needed. |
 | Biowell appointment booking | Brandon's task; reached out 2026-05-01 PM, awaiting confirmation |
 | Replit checkpoint rollback (if needed) | Available via Replit UI |
 
@@ -119,7 +121,7 @@
 | Zenodo DOI for URB #827 results | Held | Pending run |
 | Zenodo DOI for URB #828 v2 results | Held | Pending run completion (~2026-06-22) |
 | Cite Popp et al. biophoton literature | Held | Pending H826 confirmation |
-| Mendi Path B Phases 2–4 | Held | Blocked on Phase 1 (Brandon local) |
+| Mendi Path B Phases 2–4 | Phase 1 DONE; Phase 2 blocked on JSON upload to Replit | Agent can start protocol analysis once JSON arrives |
 
 ---
 

@@ -1,0 +1,25 @@
+{
+  "exportVersion": "2.6",
+  "username": "brandonemerick91@gmail.com",
+  "firstName": "Brandob",
+  "lastName": "Emerick",
+  "physicalInformation": {
+    "sex": "MALE",
+    "birthday": "2000-06-16",
+    "height, cm": 180.0,
+    "weight, kg": 85.0,
+    "trainingBackground": "FREQUENT",
+    "typicalDay": "null"
+  },
+  "linkedApplications": [],
+  "linkedOrganisations": [],
+  "settings": {
+    "firstDayOfWeek": "MONDAY",
+    "measurementUnit": "METRIC",
+    "dateFormat": "null",
+    "dateSeparator": "null",
+    "timeFormat": "null",
+    "timeFormatSeparator": "null",
+    "language": "en"
+  }
+}
