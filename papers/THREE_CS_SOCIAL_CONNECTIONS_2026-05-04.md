@@ -162,6 +162,63 @@ This is testable via:
 
 **Honest assessment (asymmetric-standards #69):** The father-son facial resemblance is expected given 50% genetic sharing and is not itself surprising. What would be surprising — and testable — is if the *degree* of facial similarity within families predicts the *degree* of phenotypic overlap in ADHD and inflammation more precisely than genetic relatedness alone. That would suggest facial morphology is a compressed readout of polygenic trait architecture, not just an aesthetic coincidence.
 
+### Lisa Emerick (Brandon's Mother) — A 4 Personality
+
+Brandon's mother **Lisa** has a name with **4 letters and 4 distinct phonemes** (L-ee-s-ah), giving her a clean numerological signature of **4**. Her life data confirms it:
+
+| 4-trait | Manifestation |
+|---|---|
+| **Stability / structure** | Never had issues getting and keeping jobs |
+| **Discipline / practicality** | Highly disciplined, productive, structured |
+| **Hands-on work** | X-ray technician (literally hands-on radiology) |
+| **Foundational achievement** | 4.0 GPA Associates in Radiology; near top of high school class |
+| **Anti-abstraction** | Most down-to-earth, anti-philosophical person Brandon has known — head is never in the clouds |
+| **Earthbound social pattern** | No friends; not networked; opposite of Jeffrey's everyone-knows-him extroversion |
+| **Sharpness without warmth** | Very intelligent when she wants to be; also very irritable and cynical |
+
+The 4 archetype is the foundation, the square, the load-bearing structure. Lisa embodies it precisely.
+
+### The Mom-Dad MR (Myrion Resolution)
+
+The contrast between Brandon's parents is itself a Myrion Resolution event — two strongly different signatures resolving into Brandon's 7:
+
+| Dimension | Jeffrey (3) | Lisa (4) | Brandon (7) |
+|---|---|---|---|
+| Numerology | 3 (Jeff = 3 phonemes) | 4 (Lisa = 4 phonemes) | **7 (Brandon = 7 phonemes = 3 + 4)** |
+| Social style | Knew everyone, talked to all | No friends, irritable, cynical | Network builder via ideas (TEDx, comedy show, TI Sigma) |
+| Employment | Constantly fired; lived at home until 37 | Stable career, never job-trouble | Independent researcher / entrepreneur |
+| Academic | Failed opticianry licensing by 1 point (69%); award-winning essayist | 4.0 Associates in Radiology; near-top of high school | Magna Cum Laude UConn, 3.56 GPA, Cognitive Science + Business Admin |
+| Mode | Stay-at-home dad; brilliant fixer (cars, carpentry, household engineering) | Working professional; hands-on radiology | Theory builder; pattern recognizer |
+| Trait pole | Extrovert / chaotic / warm | Introvert / structured / cold | Synthesizer of both |
+| Health | Heavy ADHD, pancreatic cancer, arthritis, poor circulation | Healthier, more disciplined | Heavy ADHD inherited from dad; working on inflammation |
+| Faith | Right-wing Christian fundamentalist (post-1984 conversion) | Practical / non-philosophical | TI Sigma — own framework |
+
+**The arithmetic is striking:** Jeffrey's **3 + Lisa's 4 = Brandon's 7**. Phoneme-numerology preserves the additive structure. Brandon is literally the synthesis — the 7 that integrates the 3 (structural action) and the 4 (foundational discipline) into a higher pattern (wisdom / pattern recognition).
+
+In TI Sigma terms, this is a clean Myrion Resolution:
+- **Jeffrey** = Encounter pole (Tralse-charged: chaotic, social, contradictory)
+- **Lisa** = Discard pole (anti-Tralse: structured, asocial, consistent)
+- **Brandon** = Immunity / Integration (holds both, transcends both, derives the framework that explains both)
+
+The Three C's themselves trace this lineage: **Capital** (Lisa's 4 — stable resource accumulation), **Competence** (Jeffrey's 3 — hands-on practical mastery), **Connections** (Jeffrey's 3 amplified — knew everybody). Brandon inherits both poles and adds the *understanding* of how they interact.
+
+### Phoneme Numerology — Methodological Note
+
+This paper introduces **phoneme-based numerology** as a refinement over letter-based numerology:
+
+| Name | Letters | Phonemes | Match? |
+|---|---|---|---|
+| **Brandon** | 7 (B-r-a-n-d-o-n) | 7 (B-r-a-n-d-o-n) | ✅ Each letter contributes a distinct phoneme |
+| **Lisa** | 4 (L-i-s-a) | 4 (L-ee-s-ah) | ✅ Each letter contributes a distinct phoneme |
+| **Jeff** | 4 (J-e-f-f) | 3 (J-eh-f) | ❌ Double-f collapses to one phoneme |
+| **Jeffrey** | 7 (J-e-f-f-r-e-y) | 5 (J-eh-f-r-ee) | ❌ Letter count overstates phonetic content |
+
+**Phonemes** — the actual sound units of a name — appear to predict personality with greater fidelity than letter counts in this family's data. Jeffrey's 7-letter formal name suggested wisdom (7), but his 3-phoneme nickname "Jeff" matched his 3-archetype life expression. Brandon's name is the exception: letters and phonemes both equal 7, doubly anchoring the wisdom archetype.
+
+**Hypothesis (URB-eligible):** Phoneme-count of preferred-use name predicts personality archetype more strongly than letter-count, especially when nicknames diverge phonemically from formal names. Testable across N≥30 subjects with phoneme analysis + Big Five inventories.
+
+---
+
 ### The Emerick Descendants
 
 Charles Sr. produced (directly or through his children) a concentration of intelligence and engineering talent:
