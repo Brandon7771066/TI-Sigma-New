@@ -72,7 +72,7 @@ The Three C's add to the growing significance of the letter C in TI Sigma:
 | **Charles** | Brandon's middle name; "Charles" = "tralse" stretched out (phonemic near-anagram: Ch-ar-l-es ↔ tr-al-se) |
 | **Capital, Competence, Connections** | The Three C's of Social Connections (this paper) |
 | **CAR** (Competence, Autonomy, Relatedness) | SDT's basic needs acronym — Brandon chanted this during his first manic episode and expounded on it in his TEDx Talk |
-| **Charley** | Brandon's Uncle Charley — checked in on Brandon's mental health on 2026-05-04, the same day the Three C's were formulated. Another unplanned C-convergence. |
+| **Charley / Charles** | Brandon's Uncle Charley (Charles Emerick Jr.) — checked in on Brandon's mental health on 2026-05-04, the same day the Three C's were formulated. Both Uncle Charley and Brandon are named after their grandfather **Charles Emerick Sr.** — a three-generation Charles lineage. The name "Charles" (= "Tralse" stretched out) reaching across three generations and surfacing on the day of the C-insight is a multi-layered convergence. |
 | **Comedy** | Confirmed 2026-05-04: comedy show with Thom Zeppieri (Uncle Bruce's friend and Three C's co-originator) for YouTube influencer platform launch. Yet another C-initial venture arising on the day of the C-insight. |
 | **Curiosity** | Central theme of Brandon's TEDx Talk ("How the Science of Curiosity Can Crush Your Comfort Zone") — the C that started the public intellectual journey. |
 | **Comfort Zone** | What curiosity crushes, per the TEDx Talk. The Three C's (Capital, Competence, Connections) are the structural enablers that allow people to move beyond it. |
@@ -111,7 +111,7 @@ The day the Three C's were formulated saw an unusual density of C-related conver
 | ~11 AM | Three C's insight (Capital, Competence, Connections) | Primary insight |
 | ~11:30 AM | Recognized SDT mapping (CAR = Competence, Autonomy, Relatedness) | Second-order synchronicity |
 | ~12 PM | Recalled TEDx Talk on Curiosity and Comfort Zone | Third-order C-recurrence |
-| Afternoon | Uncle Charley checked in re: mental health (after birthday wish) | Unplanned C-convergence |
+| Afternoon | Uncle Charley (Charles Emerick Jr.) checked in re: mental health (after birthday wish). Both he and Brandon are named after grandfather Charles Emerick Sr. — three-generation Charles lineage surfaces on the day of the C-insight. | Multi-generational C-convergence |
 | Afternoon | Confirmed comedy show with Uncle Bruce's friend Thom | Another C-initial venture |
 | Afternoon | Mendi GATT discovery SUCCESS | Technical milestone on same day |
 | Afternoon | Polar H10 data loaded (55,597 HR samples) | Biometric milestone on same day |
