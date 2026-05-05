@@ -30,7 +30,8 @@ The claim is not unsupported. The following genuinely-improbable evidence cluste
 - **Brandon's birth-time 6-saturation**: 5:54 AM (= 6 min to 6 AM) on 6/16, life-path 6 → ≥4 explicit 6's in birth metadata.
 - **Phoneme-numerology Mom-Dad MR**: Jeffrey 3 + Lisa 4 = Brandon 7. Clean additive structure.
 - **14-day mother-son birth offset**: 2 × 7 = the 7-name doubled in Brandon-Lisa temporal distance.
-- **Andy event**: maternal grandfather died the same week Brandon was conceived (Sept 1999); Mimi interpreted Brandon as a soul-transmission gift.
+- **Andy event (tightened 2026-05-04 PM later)**: Andy died 9/28/1999; Brandon conceived ~9/23/1999 (clinical back-calculation). **5-day window between Andy's death and Brandon's conception.** Mimi (matrilineal MR-node) interpreted Brandon as the soul-transmission replacing Andy; her instant-bonding event at the hospital and her repeated "you mean the whole world to me" use of Andy's exact phrase about Brandon over Brandon's life are documentation of conscious inter-generational MR-anchoring.
+- **Patrilineal-name / matrilineal-soul split (added 2026-05-04 PM later)**: With Charles Sr.'s correct DOB now confirmed (4/20/1927, life-path 7), a clean two-axis lineage emerges. Brandon's NAME-signature 7 = Charles Sr.'s LIFE-PATH 7 (patrilineal grandfather). Brandon's LIFE-PATH 6 = Mimi's LIFE-PATH 6 (matrilineal grandmother). Both grandparents Brandon was closest to are encoded structurally in him, on different axes — surface identity from patrilineal, soul identity from matrilineal. See `papers/BRANDON_BIOGRAPHY_MASTER_INDEX.md` §5f.
 
 ### 2.2 Recent measurable findings
 - **H4 pilot**: Brandon-Jeffrey gray_cosine normalized = 0.91, sitting **0.02 below the Radiant Threshold C_TI = 0.93**. Pilot validated by inversion control. See `papers/H4_PILOT_BRANDON_JEFFREY_2026-05-04.md`.

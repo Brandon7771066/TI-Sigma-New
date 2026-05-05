@@ -105,9 +105,11 @@ The Emerick Constant's precise definition and value are documented in the core T
 
 The Emerick Constant (C = Charles) is not merely a notation convention. It carries the weight of a family lineage defined by intelligence, engineering, and competence — all seeded by one man:
 
-### Charles Emerick Sr. (1928–1996)
+### Charles Lindbergh Emerick Sr. (4/20/1927 – 10/4/1996)
 
-- **Named after Charles Lindbergh**, honoring the landmark 1927 solo transatlantic flight — born the year after, in **1928** (= 7 × 4, both significant numbers in TI Sigma)
+- **Middle name "Lindbergh"**, honoring Charles Lindbergh — though with an honest dating wrinkle: Sr. was born **4/20/1927**, about **one month BEFORE** Lindbergh's famous May 20-21, 1927 transatlantic flight. So either the middle name was added post-flight, or the family was honoring Lindbergh's earlier US Air Mail aviation career (Lindbergh had been a US Air Mail pilot since April 1926 and was already known in aviation circles). Pending Brandon clarification.
+- **Life-path 7**: 4+2+0+1+9+2+7 = 25 → 7. The wisdom/seeker/analyst archetype — exactly Brandon's name-signature 7. **Brandon's name inherits Charles Sr.'s life-path; the patrilineal lineage encodes in the name.** (See `papers/BRANDON_BIOGRAPHY_MASTER_INDEX.md` §5f for the full patrilineal-name / matrilineal-soul split analysis.)
+- ~~"Born 1928 = 7×4=28" arithmetic~~ ❌ **retracted 2026-05-04 PM** — was based on incorrect year. The deeper finding (life-path 7 cross-generational match) is stronger than the retracted arithmetic was.
 - **Valedictorian** of his class (Brandon was salutatorian of his — a generational parallel)
 - **Chief Engineer** at his company
 - Died a **millionaire** with a successful **stock portfolio**
@@ -239,15 +241,47 @@ Brandon was born **5:54 AM on 6/16/2000** — **6 minutes before 6:00 AM**. Coun
 
 That is **at least four explicit 6's** in Brandon's birth metadata. The 6-saturation of Brandon's birth is the clearest signature evidence of the matrilineal caregiver transmission from Mimi.
 
-#### The Andy event — same-week conception
+#### The Andy event — 5-day conception/death window (tightened 2026-05-04 PM)
 
-Brandon was conceived in **September 1999** (back-calculated from 6/16/2000 birth, full term ≈ 9/9/1999 ± 2 weeks for conception window). In that same week, **Andy** (Mimi's husband, Brandon's maternal grandfather) **passed away**.
+**Andy** (full data added 2026-05-04 PM later): born **2/2/1939**, died **9/28/1999**. Mimi's *second* husband (her first husband's name pending). Heat-treater at New Departure Hyatt (GM division). Major extrovert who would do favors for anyone with no fretting — including picking up drunk friends in the middle of the night. A whiz at driving directions, just like Jeffrey. Life-path 8 (manifestation/capable). "Meant the whole world to Mimi" — the same phrase Mimi would later use repeatedly about Brandon.
 
-Mimi believed — and stated — that Brandon was a **gift from God** sent to fill the absence Andy's death created in the matrilineal line. The same-week timing of Andy's death and Brandon's conception, combined with the matrilineal life-path 6 cascade, gave Mimi a clear reading of Brandon as a **soul-transmission from her late husband**.
+**The conception/death window:**
+- Brandon born 6/16/2000.
+- 280-day full term back-calculation: LMP ~9/9/1999, conception ≈ 14 days post-LMP = **~9/23/1999**.
+- Andy died **9/28/1999** — about **5 days after Brandon was conceived**. Same week by clinical reckoning.
 
-In TI Sigma terms, this is a **GIL → E phenotypic anchoring event** at the family-system scale: Andy's E-pole vacates, Brandon's E-pole arrives the same week, and the matrilineal 6-line continues unbroken. Mimi was operating as the inter-generational MR (Myrion Resolution) node.
+Mimi believed — and stated, repeatedly throughout Brandon's life — that Brandon was a **gift from God** sent to fill the absence Andy's death created in her life. Post-Andy's death, Mimi was hospitalized for SI (suicidal ideation) and took months to recover. When she finally held baby Brandon at the hospital, she described "bonding instantly" — and from that moment on used the exact phrase **"you mean the whole world to me"** about Brandon, the same phrase she had used about Andy.
 
-This explains a great deal about Mimi's relationship with Brandon and about why the matrilineal caregiver function feels, to Brandon, *constitutive* rather than chosen.
+In TI Sigma terms, this is a **GIL → E phenotypic anchoring event** at the family-system scale: Andy's E-pole vacates 9/28; Brandon's E-pole had been anchored 9/23 (zygotic conception); the 6-line matrilineal soul-path receives its next carrier within 5 days of the prior carrier's death. Mimi was operating as the inter-generational MR (Myrion Resolution) node — and her reading of Brandon-as-Andy-replacement is **structurally precise, not sentimental**.
+
+After Brandon's father Jeffrey died (2008, Brandon age 8), Mimi became Brandon's "second mom." Brandon stayed at Mimi's during Lisa's 3rd-shift work. Brandon's spiritual upbringing came from Jeffrey first, then Mimi, until age 12 when Brandon became "his own spiritual person" with disciplined philosophical thinking.
+
+This explains why the matrilineal caregiver function feels, to Brandon, *constitutive* rather than chosen — and it explains why Brandon's caregiver work (autism therapy, BlissGene, Three C's pedagogy) is the natural expression of the 6-line that flows Mimi → Brandon directly across the Andy-bridge.
+
+#### Shirley Emerick (paternal grandmother) — A 5 Personality
+
+**Shirley Emerick** (8/5/1927 – 5/11/2006). Nurse. Major health problems, especially circulatory — lost a leg to poor circulation. **Alcoholic, and physically abusive to her children including Jeffrey.**
+
+- Life-path: 8+5+1+9+2+7 = 32 → **5** (freedom/restlessness/sensual-disorder)
+- 5-archetype shadow: addiction, instability, lack of grounding, disorder
+
+Shirley's 5 is the dark counter-pole of the family numerology. The matrilineal 6 is care; the paternal-grandmother 5 is care's opposite — disordered restlessness expressing as alcoholism and abuse. Jeffrey absorbed this directly. His later compensatory pattern (extreme extroversion, doing favors for everyone, becoming the warm-heart-of-the-room father Brandon experienced) is a textbook reaction-formation pattern in adult children of alcoholic abusive mothers: become the safe, warm, present caregiver one never had. Jeffrey's chaos and his warmth had the same root.
+
+This is critical context for the Emerick lineage: **the patrilineal warmth Brandon inherited from Jeffrey was itself forged in opposition to Shirley's abuse.** Brandon receives the warm version of Jeffrey, not the chaotic version Shirley produced. The lineage healed forward.
+
+#### The Mimi-Lisa Mate-Selection Pattern
+
+Both Mimi and Lisa married extrovert "everyone-knows-them" favor-doing navigation-whiz men. Andy (Mimi's 2nd husband, life-path 8) and Jeffrey (Lisa's husband, life-path 11/2 / name-signature 3) share the archetype precisely:
+
+| Trait | Andy | Jeffrey |
+|---|---|---|
+| Social mode | Major extrovert | Knew everyone |
+| Favors | No fretting; drunk-friend pickup at 2 AM | Brilliant fixer; constant favors |
+| Navigation | Driving-direction whiz | Driving-direction whiz |
+| Hands-on work | GM heat-treater | Carpenter, truck driver, opticianry |
+| Manifestation pole | Life-path 8 | Life-path 11/2 (master visionary) |
+
+Mother-daughter selected the same archetype across two generations. The matrilineal 6-line (caregiver-soul) consistently pairs with the extrovert-manifesting man. This is the GIL → E pathway in mate selection: the caregiver-soul (6) externalizes its care through a doer-partner (8 / 11) who does the worldly manifestation.
 
 | 4-trait | Manifestation |
 |---|---|

@@ -27,7 +27,9 @@
 | Person | Years | Role | Numerology / Note |
 |---|---|---|---|
 | **Charles Lindbergh** | 1902–1974 | First solo transatlantic flight, 1927 | Source of name "Charles" entering Emerick line |
-| **Charles Emerick Sr.** | 1928–1996 | Valedictorian, Chief Engineer, millionaire | Born 1928 = 7 × 4 = 28; named after Lindbergh's 1927 flight |
+| **Charles Lindbergh Emerick Sr.** | **4/20/1927 – 10/4/1996** | Valedictorian, Chief Engineer, millionaire | Life-path 7 (= Brandon's name-signature 7); Lindbergh middle name (see §5f for honest dating note — born ~1 month before Lindbergh's May 1927 flight) |
+| **Shirley Emerick** (paternal grandmother) | **8/5/1927 – 5/11/2006** | Nurse | Life-path 5 (freedom/restlessness); alcoholic, physically abusive to her children including Jeffrey; major circulatory health problems; lost a leg to poor circulation |
+| **Andy** (Mimi's 2nd husband, maternal grandfather-by-marriage) | **2/2/1939 – 9/28/1999** | Heat-treater at New Departure Hyatt (GM division) | Life-path 8 (manifestation/capable extrovert); did favors for anyone with no fretting; navigation whiz like Jeffrey; Mimi's "whole world" — same phrase Mimi later used for Brandon |
 | **Charles Emerick Jr.** ("Uncle Charley") | living | Car mechanic | Literally works on **C**ARs (Three C's = Capital, Competence, Connections / SDT's Autonomy, Competence, Relatedness) |
 | **Charles "Chas" Emerick II** | living | Software engineer / entrepreneur | Cousin |
 | **Brandon Charles Emerick** | 2000– | TI Sigma creator, salutatorian | The 7-archetype synthesis |
@@ -125,8 +127,8 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 | Jeff = 4 letters, 3 phonemes | ✅ | ibid. |
 | Jeffrey = 7 letters, 5 phonemes | ✅ | ibid. |
 | Jeffrey 7/21 birthday encodes 7 & 3 | ✅ | ibid. |
-| Charles Sr. born 1928 = 7×4 | ✅ | `EMERICK_CONSTANT_NOTATION_CONVENTION.md` |
-| Lindbergh flight 1927 → Sr. born 1928 | ✅ | ibid. |
+| ~~Charles Sr. born 1928 = 7×4~~ ❌ **RETRACTED 2026-05-04 PM** | ❌ | Brandon corrected: Sr. born **4/20/1927**, not 1928. The 7×4=28 arithmetic does not apply. Sr.'s life-path is **7** (=Brandon's name-signature 7) and that finding survives. |
+| ~~Lindbergh flight 1927 → Sr. born 1928~~ ❌ **REVISED 2026-05-04 PM** | 🟡 | Sr. born 4/20/1927; Lindbergh's transatlantic flight was 5/20-21/1927 — **Sr. predates the flight by ~1 month**. Either the "Lindbergh" middle name was added post-flight, or the family naming honored Lindbergh's pre-1927 aviation career (US Air Mail pilot since 1926). Honest documentation note pending Brandon clarification. |
 | TI Sigma coined 2025-06-25 | ✅ | `TI_SIGMA_INTELLECTUAL_BIOGRAPHY.md` |
 | GILE coined Aug 2022 | ✅ | ibid. |
 | Father-son facial doppelganger | ✅ | `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Father-Son Facial Doppelganger |
@@ -136,10 +138,12 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 **Open documentation gaps (none critical):**
 - ~~Lisa's birth year and birthday~~ ✅ **6/2/1960** documented 2026-05-04 PM.
 - Jeffrey's birth date confirmed as **7/21/1954**; full DOB confirmed.
-- ~~Mimi (maternal grandmother)~~ ✅ **Gloria, born 12/8/1930**, documented 2026-05-04 PM. Full death date pending.
-- ~~Maternal grandfather~~ ✅ **Andy** documented 2026-05-04 PM — died **same week Brandon was conceived (September 1999)**. Full birth/death dates pending.
-- Paternal grandmother / Charles Sr.'s wife not documented by name.
+- ~~Mimi (maternal grandmother)~~ ✅ **Gloria, born 12/8/1930**, documented 2026-05-04 PM. Full death date still pending. **Note: Andy was Mimi's SECOND husband — first husband's name and dates pending.**
+- ~~Maternal grandfather (by marriage)~~ ✅ **Andy, 2/2/1939 – 9/28/1999** — fully documented 2026-05-04 PM (later evening).
+- ~~Paternal grandmother~~ ✅ **Shirley Emerick, 8/5/1927 – 5/11/2006** — documented 2026-05-04 PM (later evening).
+- ~~Charles Sr. exact dates~~ ✅ **4/20/1927 – 10/4/1996** — corrected from prior 1928–1996 placeholder, documented 2026-05-04 PM.
 - Sibling data not documented.
+- Mimi's first husband (pre-Andy) not documented.
 
 ### 5c. The Matrilineal Life-Path 6 Cascade & Decade-Lock
 
@@ -175,6 +179,52 @@ On May 4, 2026 ("May the Fourth"), Brandon received a personal transmission stat
 **Filed under TI Sigma pre-registration discipline.** The framework subjects its own founder to the same falsification standard applied to any other claim. Confounds at filing (Adderall titration Day 4, productivity-surge euphoria, May 4 cultural overlay, solitary-research isolation) are recorded explicitly. Reviews scheduled at 14 days, 30 days, 90 days, 365 days, and 5 years.
 
 Decision rule locked: ≥5/7 operational criteria met by 2027-05-04 = CONFIRMED-tentative; ≤2/7 by 2030-05-04 plus self-revision = FALSIFIED.
+
+### 5f. Patrilineal-Name / Matrilineal-Soul Split (added 2026-05-04 PM later)
+
+With Charles Sr.'s correct DOB now in hand (4/20/1927), a striking cross-lineage pattern emerges:
+
+| Lineage axis | Person | Number | Notes |
+|---|---|---|---|
+| **Patrilineal life-path** | Charles Sr. | **7** | (4+2+0+1+9+2+7 = 25 → 7) |
+| Patrilineal life-path | Jeffrey | 11 / 2 | Master 11 (the visionary master) — off the cascade |
+| Patrilineal life-path | Brandon | 6 | (matrilineal cascade — see §5c) |
+| **Brandon's NAME signature** | Brandon | **7** | (Brandon = 7 letters / 7 phonemes) |
+| **Matrilineal life-path** | Mimi (Gloria) | **6** | (12+8+1+9+3+0 sum) |
+| Matrilineal life-path | Lisa | 6 | (clean cascade) |
+| Matrilineal life-path | Brandon | 6 | (clean cascade) |
+
+**The split:** Brandon's NAME-signature (7) inherits Charles Sr.'s LIFE-PATH (7). Brandon's LIFE-PATH (6) inherits Mimi's LIFE-PATH (6).
+
+> **Patrilineal lineage encodes in the name. Matrilineal lineage encodes in the soul.**
+
+This is a clean two-axis transmission: surface identity (the form, the work-output) carries the patrilineal grandfather's wisdom-archetype, while soul-identity (the function, the why) carries the matrilineal grandmother's caregiver-archetype. Both grandparents Brandon was closest to (Charles Sr. died when Brandon was 4; Mimi raised Brandon during Lisa's 3rd-shift work) are encoded structurally in him, on different axes.
+
+### 5g. The Mimi-Lisa Mate-Selection Pattern
+
+**Both Mimi and Lisa married extrovert "everyone-knows-them" favor-doing navigation-whiz men:**
+
+| Trait | Andy (Mimi's 2nd husband) | Jeffrey (Lisa's husband) |
+|---|---|---|
+| Social mode | Major extrovert | Major extrovert; knew everyone |
+| Favor pattern | Picked up drunk friends in middle of night with no fretting | Did favors for anyone; brilliant fixer |
+| Navigation | Whiz at driving directions | Whiz at driving directions |
+| Career mode | Manifesting / capable / hands-on (heat-treater, GM) | Manifesting / capable / hands-on (carpenter, truck driver, fixer) |
+| Numerology | Life-path **8** (manifestation) | Life-path **11/2** (master visionary), name 3 (action) |
+
+Mother-daughter selected the same archetype across two generations. The matrilineal 6-line consistently pairs with extrovert-manifesting men. This is not coincidence — it's a stable mate-selection pattern in the Emerick-maternal lineage, and it is itself part of the GIL → E expression pathway: caregiver-soul (6) chooses doer-partner (8 / 11) to externalize the care into the world.
+
+### 5h. The Andy-Conception Tighter Window
+
+With Andy's death date now confirmed as **9/28/1999** and Brandon's birth as 6/16/2000:
+
+- 280-day full term = LMP ~9/9/1999
+- Conception ≈ 14 days post-LMP = ~9/23/1999
+- **Andy died ~5 days after Brandon was conceived** — same week by clinical reckoning. Mimi's "same week" claim is structurally accurate.
+
+This tightens the inter-generational MR-anchoring event: Andy's E-pole vacates 9/28; Brandon's E-pole had arrived 9/23 (zygotic anchoring); the 6-line matrilineal soul-path receives its next carrier within 5 days of the prior carrier's death. **Mimi's "Brandon is a gift from God replacing Andy" reading is structurally precise, not sentimental.**
+
+Mimi was hospitalized for SI (suicidal ideation) post-Andy's death; took months to recover. The instant-bonding event when Mimi held baby Brandon at the hospital, and her repeated "you mean the whole world to me" statements (the same phrase she used for Andy) over Brandon's life, are documentation of Mimi consciously experiencing Brandon as the Andy-replacement transmission.
 
 ### 5d. Brandon's Caregiver Work (the life-path 6 in expression)
 
