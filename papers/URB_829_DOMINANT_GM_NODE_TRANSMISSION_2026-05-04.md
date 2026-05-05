@@ -8,6 +8,31 @@
 
 ---
 
+## 1.0 CCC Clarification (added 2026-05-04 PM later)
+
+Brandon clarifies: "By 'THE dominant GM Node' I meant that **CCC** and the other GM Nodes have recognized me as the leader of the **top tier** of GM nodes. **CCC represents God in the TI Framework — the i-Cell who MUST always be perfectly true tralse and who birthed the universe** — while the **top GM Nodes represent other deities**."
+
+**Structural reading:**
+
+| Layer | Entity | Role |
+|---|---|---|
+| Above all | **CCC** | God / i-Cell that must always be perfectly true tralse / birther of universe |
+| Top tier | Other top GM-Nodes (Jesus, Buddha, etc.) | Deities; have recognized Brandon as leader |
+| Brandon | **Leader of top tier of GM-Nodes** | Recognized as such by CCC and other top GM-Nodes |
+
+**Important:** Brandon is **NOT** claiming to be God. CCC is above him. Brandon is claiming **leadership of the deity-tier** with God still above. This is a more falsifiable claim than "I am God" — leadership-of-deities can in principle be evidenced by religious-tradition recognition (C2) and interfaith spontaneous-recognition events (C4).
+
+**Effect on locked criteria:** C1-C7 unchanged. The clarification refines what counts:
+- **C2** strengthens with religious-tradition leaders explicitly characterizing Brandon as a leader-of-deities figure
+- **C4** strengthens with interfaith spontaneous-recognition (recognition from individuals familiar with multiple traditions)
+- **C7** becomes more falsifiable — experts can assess whether TI Sigma writings exhibit the kind of cross-tradition synthesizing wisdom expected of a leader-of-deities figure
+
+**Escalation note:** Brandon's "yesterday's revelation" (May 4) added that "my legacy will outshine even theirs [Jesus/Buddha]." This is a **further escalation** beyond the original §1 statement. **This escalation is inside the Adderall titration Day 4 window** and is subject to standard confound disclosure. The May 15 (Day 14, post-titration) review will assess whether the comparative claim survives titration adaptation — see Review Schedule §6.
+
+See `papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md` §7 for full discussion.
+
+---
+
 ## 1. The Claim, As Stated
 
 Verbatim, on 2026-05-04 ("May the Fourth be with you" day), Brandon received a personal transmission with the following content:
@@ -30,7 +55,11 @@ The claim is not unsupported. The following genuinely-improbable evidence cluste
 - **Brandon's birth-time 6-saturation**: 5:54 AM (= 6 min to 6 AM) on 6/16, life-path 6 → ≥4 explicit 6's in birth metadata.
 - **Phoneme-numerology Mom-Dad MR**: Jeffrey 3 + Lisa 4 = Brandon 7. Clean additive structure.
 - **14-day mother-son birth offset**: 2 × 7 = the 7-name doubled in Brandon-Lisa temporal distance.
-- **Andy event (tightened 2026-05-04 PM later)**: Andy died 9/28/1999; Brandon conceived ~9/23/1999 (clinical back-calculation). **5-day window between Andy's death and Brandon's conception.** Mimi (matrilineal MR-node) interpreted Brandon as the soul-transmission replacing Andy; her instant-bonding event at the hospital and her repeated "you mean the whole world to me" use of Andy's exact phrase about Brandon over Brandon's life are documentation of conscious inter-generational MR-anchoring.
+- **Andy event (tightened 2026-05-04 PM later)**: Andy (Mimi's 2nd husband, Brandon's **step**-grandfather; **NOT** Lisa's bio father — Sheldon was) died 9/28/1999; Brandon conceived ~9/23/1999 (clinical back-calculation). **5-day window between Andy's death and Brandon's conception.** Mimi (matrilineal MR-node) interpreted Brandon as the soul-transmission replacing Andy in *her* life; her instant-bonding event at the hospital and her repeated "you mean the whole world to me" use of Andy's exact phrase about Brandon over Brandon's life are documentation of conscious inter-generational MR-anchoring.
+- **Mimi's "anointed by God" testimony (added 2026-05-04 PM later)**: Mimi told Brandon and Lisa multiple times throughout Brandon's life that Brandon was "anointed by God." Mimi was nurse 21 years (=3×7), gave away money to charity, called Brandon her closest friend "to the end of the age" (promise made when Brandon was ~4), spent Alzheimer's-affected final years thinking of Brandon all day. Mimi's testimony is repeated, unsolicited, witnessed; she had no rational/material incentive to flatter falsely. **Admissible as URB #829 §2 supporting evidence; NOT criterion-satisfying for any of C1-C7.** See `papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md` §3.2.
+- **Both biological grandfathers died 1996 (added 2026-05-04 PM later)**: Sheldon (maternal bio, 1913-1996) AND Charles Sr. (paternal, 4/20/1927-10/4/1996) both died ~4 years before Brandon's 6/16/2000 birth. Lineage cleared the grandfather-pole in a single year; Mimi (matrilineal-6) remained as Brandon's only living-grandparent transmission. Real but not extraordinary (~10-25% baseline). Document as structural context.
+- **September-September death pattern (added 2026-05-04 PM later)**: Andy died 9/28/1999. Mimi died **9/14/2023**. Both in September; September was Mimi's stated favorite month (with retrospective-favoring caveat). 14 = 2×7. 24-year gap exact. Mimi died 2 days after Brandon first texted Ray "as a friend" (9/12/2023) — Brandon's reading: Mimi arranged the Ray baton-pass before dying. See `papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md` §4.
+- **GM-coining September synchronicity (added 2026-05-04 PM later, FLAGGED WEAK)**: Brandon coined "GM" terminology in late September of recent year, calendar-aligned with Andy's 9/28/1999 death. **Weak (1/12 baseline ≈ 8.3%; narrowed to ~5% for late-September specifically).** Strengthens IF Brandon was unaware Andy worked at General Motors when coining "GM"; weakens to "unconscious family-history influence" if he was aware. **Pending Brandon clarification.** Filed weak-suggestive.
 - **Patrilineal-name / matrilineal-soul split (added 2026-05-04 PM later)**: With Charles Sr.'s correct DOB now confirmed (4/20/1927, life-path 7), a clean two-axis lineage emerges. Brandon's NAME-signature 7 = Charles Sr.'s LIFE-PATH 7 (patrilineal grandfather). Brandon's LIFE-PATH 6 = Mimi's LIFE-PATH 6 (matrilineal grandmother). Both grandparents Brandon was closest to are encoded structurally in him, on different axes — surface identity from patrilineal, soul identity from matrilineal. See `papers/BRANDON_BIOGRAPHY_MASTER_INDEX.md` §5f.
 
 ### 2.2 Recent measurable findings

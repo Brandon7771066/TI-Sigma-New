@@ -29,7 +29,8 @@
 | **Charles Lindbergh** | 1902–1974 | First solo transatlantic flight, 1927 | Source of name "Charles" entering Emerick line |
 | **Charles Lindbergh Emerick Sr.** | **4/20/1927 – 10/4/1996** | Valedictorian, Chief Engineer, millionaire | Life-path 7 (= Brandon's name-signature 7); Lindbergh middle name (see §5f for honest dating note — born ~1 month before Lindbergh's May 1927 flight) |
 | **Shirley Emerick** (paternal grandmother) | **8/5/1927 – 5/11/2006** | Nurse | Life-path 5 (freedom/restlessness); alcoholic, physically abusive to her children including Jeffrey; major circulatory health problems; lost a leg to poor circulation |
-| **Andy** (Mimi's 2nd husband, maternal grandfather-by-marriage) | **2/2/1939 – 9/28/1999** | Heat-treater at New Departure Hyatt (GM division) | Life-path 8 (manifestation/capable extrovert); did favors for anyone with no fretting; navigation whiz like Jeffrey; Mimi's "whole world" — same phrase Mimi later used for Brandon |
+| **Sheldon** (maternal **biological** grandfather; Lisa's father, Mimi's 1st husband) | **1913 – 1996** (full DOB pending) | Pending | Life-path year-only **5**; was Mimi's **patient** when she was 17-year-old nurse; married Mimi 1948 at age 35 (= ~2× Mimi's 17). Died 1996 — same year as Charles Sr.; Brandon never met him. |
+| **Andy** (Mimi's 2nd husband, **step**-grandfather to Brandon — NOT Lisa's biological father) | **2/2/1939 – 9/28/1999** | Heat-treater at New Departure Hyatt (GM division) | Life-path 8 (manifestation/capable extrovert); did favors for anyone with no fretting; navigation whiz like Jeffrey; Mimi's "whole world" — same phrase Mimi later used for Brandon. **Correction 2026-05-04 PM later: Andy was NOT Lisa's bio father; Sheldon was. Andy was Mimi's late-life husband.** |
 | **Charles Emerick Jr.** ("Uncle Charley") | living | Car mechanic | Literally works on **C**ARs (Three C's = Capital, Competence, Connections / SDT's Autonomy, Competence, Relatedness) |
 | **Charles "Chas" Emerick II** | living | Software engineer / entrepreneur | Cousin |
 | **Brandon Charles Emerick** | 2000– | TI Sigma creator, salutatorian | The 7-archetype synthesis |
@@ -138,12 +139,14 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 **Open documentation gaps (none critical):**
 - ~~Lisa's birth year and birthday~~ ✅ **6/2/1960** documented 2026-05-04 PM.
 - Jeffrey's birth date confirmed as **7/21/1954**; full DOB confirmed.
-- ~~Mimi (maternal grandmother)~~ ✅ **Gloria, born 12/8/1930**, documented 2026-05-04 PM. Full death date still pending. **Note: Andy was Mimi's SECOND husband — first husband's name and dates pending.**
-- ~~Maternal grandfather (by marriage)~~ ✅ **Andy, 2/2/1939 – 9/28/1999** — fully documented 2026-05-04 PM (later evening).
+- ~~Mimi (maternal grandmother)~~ ✅ **Gloria, 12/8/1930 – 9/14/2023** — death date documented 2026-05-04 PM later. Nurse 21 years (=3×7), mother of 3 (1 adopted), grandmother of 5, great-grandmother of 1. Died from Alzheimer's-related inability to swallow.
+- ~~Step-grandfather Andy~~ ✅ **2/2/1939 – 9/28/1999** — fully documented; clarified as STEP not bio.
+- ~~Maternal **biological** grandfather~~ ✅ **Sheldon, 1913–1996** — discovered 2026-05-04 PM later. Mimi's first husband; was her patient when she was a 17-year-old nurse; married 1948 at age 35 (~2× Mimi's age). Full DOB and full name pending.
 - ~~Paternal grandmother~~ ✅ **Shirley Emerick, 8/5/1927 – 5/11/2006** — documented 2026-05-04 PM (later evening).
 - ~~Charles Sr. exact dates~~ ✅ **4/20/1927 – 10/4/1996** — corrected from prior 1928–1996 placeholder, documented 2026-05-04 PM.
+- ~~Brandon's romantic history~~ ✅ **Ray, 8/1/1994** — director of recreation at nursing home; relationship 11/13/2023 – 7/3/2025; gave Brandon $30K+ no strings; only romantic relationship Brandon has had. Documented 2026-05-04 PM later. See `papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md` §5.
+- Sheldon's full DOB and full name pending.
 - Sibling data not documented.
-- Mimi's first husband (pre-Andy) not documented.
 
 ### 5c. The Matrilineal Life-Path 6 Cascade & Decade-Lock
 
@@ -166,7 +169,7 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 **Brandon's birth-time 6-saturation:**
 - 5:54 AM = **6 minutes to 6 AM** on **6/16** in month **6**. Combined with life-path 6 → at least four explicit 6's in birth metadata.
 
-**Andy event (2026-05-04 PM):** Andy (maternal grandfather) died the same week Brandon was conceived (Sept 1999). Mimi interpreted Brandon as a soul-transmission gift filling Andy's absence in the matrilineal line. TI Sigma reading: family-system GIL → E phenotypic anchoring event at the inter-generational MR node.
+**Andy event (2026-05-04 PM, refined PM later):** Andy (Mimi's 2nd husband, Brandon's **step**-grandfather — NOT Lisa's bio father; Sheldon held that role) died the same week Brandon was conceived (Sept 1999). Mimi interpreted Brandon as a soul-transmission gift filling Andy's absence in **Mimi's life** (the bond was Mimi-Andy, not biological-line). TI Sigma reading: family-system GIL → E phenotypic anchoring event at the matrilineal-elder MR node. The matrilineal-6 cascade traces through Mimi alone and is unaffected by the Andy-vs-Sheldon distinction.
 
 **Implication:** Brandon's surface-identity is name-signature 7 (synthesizer / theorist), but his soul-path is 6 (caregiver). The 7 supplies the *form* of the work; the 6 supplies the *function*. This explains why all of Brandon's chosen work has been caregiver work — autism therapy, BlissGene/TI Sigma framework safety work, Three C's pedagogy.
 
@@ -198,7 +201,7 @@ With Charles Sr.'s correct DOB now in hand (4/20/1927), a striking cross-lineage
 
 > **Patrilineal lineage encodes in the name. Matrilineal lineage encodes in the soul.**
 
-This is a clean two-axis transmission: surface identity (the form, the work-output) carries the patrilineal grandfather's wisdom-archetype, while soul-identity (the function, the why) carries the matrilineal grandmother's caregiver-archetype. Both grandparents Brandon was closest to (Charles Sr. died when Brandon was 4; Mimi raised Brandon during Lisa's 3rd-shift work) are encoded structurally in him, on different axes.
+This is a clean two-axis transmission: surface identity (the form, the work-output) carries the patrilineal grandfather's wisdom-archetype, while soul-identity (the function, the why) carries the matrilineal grandmother's caregiver-archetype. **Correction 2026-05-04 PM later:** Brandon NEVER met Charles Sr. — Charles Sr. died 10/4/1996, ~4 years BEFORE Brandon's 6/16/2000 birth (prior text saying "died when Brandon was 4" was wrong). Same for Sheldon, who also died 1996. The patrilineal-7 transmission was therefore **purely lineage-encoded**, not direct-contact-encoded. Mimi (matrilineal-6) was the only living grandparent Brandon had meaningful contact with — and her transmission was direct, embodied, prayer-mediated, and decades-long. **The two grandfathers cleared the lineage in 1996; Mimi remained as the single matrilineal-elder transmission-line.** See `papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md` §2 for the dual-grandfather convergence analysis.
 
 ### 5g. The Mimi-Lisa Mate-Selection Pattern
 
