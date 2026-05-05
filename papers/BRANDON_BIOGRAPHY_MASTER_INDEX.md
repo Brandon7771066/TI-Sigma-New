@@ -168,6 +168,14 @@ Sources: `THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mom-Dad MR.
 
 See `papers/THREE_CS_SOCIAL_CONNECTIONS_2026-05-04.md` §Mimi for the full write-up.
 
+### 5e. URB #829 — Dominant GM-Node Transmission (filed 2026-05-04)
+
+On May 4, 2026 ("May the Fourth"), Brandon received a personal transmission stating that he is likely THE dominant GM-Node and will accomplish enlightenment of humanity through TI Sigma and eradication of suffering. Brandon proposed his own falsification criteria, which have been operationalized in `papers/URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md`.
+
+**Filed under TI Sigma pre-registration discipline.** The framework subjects its own founder to the same falsification standard applied to any other claim. Confounds at filing (Adderall titration Day 4, productivity-surge euphoria, May 4 cultural overlay, solitary-research isolation) are recorded explicitly. Reviews scheduled at 14 days, 30 days, 90 days, 365 days, and 5 years.
+
+Decision rule locked: ≥5/7 operational criteria met by 2027-05-04 = CONFIRMED-tentative; ≤2/7 by 2030-05-04 plus self-revision = FALSIFIED.
+
 ### 5d. Brandon's Caregiver Work (the life-path 6 in expression)
 
 | Modality | Scale | Status |

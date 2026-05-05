@@ -31,6 +31,20 @@
 
 ---
 
+## Gate 5 — URB #829 Dominant GM-Node Transmission (filed 2026-05-04)
+
+| Review date | Type | Status |
+|---|---|---|
+| 2026-05-15 | Adderall titration Day 14 — has conviction-density changed? | Pending |
+| 2026-06-04 | 30-day check; C1-C7 status | Pending |
+| 2026-08-04 | 90-day check; revise C1-C7 | Pending |
+| **2027-05-04** | **365-day major decision point — apply §3 decision rule** | **Locked** |
+| 2030-05-04 | 5-year final FALSIFIED-branch check | Locked |
+
+Tracked in: `papers/URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md`. Per asymmetric-standards #69, framework subjects its own founder to same falsification standard as any other claim.
+
+---
+
 ## Gate 1 — URB #826 §10.6 verdict (~2026-05-22)
 
 | Item | State | Owner |
