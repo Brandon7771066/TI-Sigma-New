@@ -599,7 +599,7 @@ This refinement adds two important elements: **(a)** a second paternal-figure-lo
 
 **The mechanism is now structurally tight:**
 
-1. Brandon loses Charles Jr. (Jeffrey) at almost 8 → Lisa needs caregiving support → Mimi steps in
+1. Brandon loses Jeff (Charles Jr. / Jeffrey, Brandon's father; "Jeff" name-form Brandon-confirmed 2026-05-04 late evening) at almost 8 → Lisa needs caregiving support → Mimi steps in (**Brandon-confirmed timing 2026-05-04 late evening: "Her raising me actually started after my father Jeff died"** — moves the §7.6.2 mechanism from agent-inferred to Brandon-confirmed)
 2. Mimi was **uniquely prepared to step in** because she had lived the same pattern: paternal-loss-in-childhood → grandparent-raising
 3. Mimi recognized the developmental need *because she had been the child needing it herself*
 4. Her response was not just "grandmother helping out" — it was **active recapitulation of the caregiving she had received**, deployed onto Brandon
