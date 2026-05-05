@@ -1,6 +1,6 @@
 # Pipeline Tracker — Mood Amplifier Safety & Validation Platform
 
-**Last updated:** 2026-05-04 PM
+**Last updated:** 2026-05-05 PM
 **Owner:** Brandon Charles Emerick
 **Standard:** asymmetric-standards #69, $0 budget unless noted.
 
@@ -10,24 +10,29 @@
 
 | Item | State | Notes |
 |---|---|---|
-| Polar H10 daily wear (Polar Beat untethered) | Active; **first export received 2026-05-04** (5 sessions, 54,639 1-sec HR samples = 15.2h) | data → `data/polar_h10/` |
-| Daily subjective log (`log_daily_subjective.py`) | Active | 30s/day; mood/energy/focus/event |
-| Daily medication log | Active | `data/medication_log.csv` |
+| Polar H10 daily wear (Polar Beat untethered) | Active; **first export received 2026-05-04** (5 sessions, 54,639 1-sec HR samples = 15.2h); **next export expected tonight 2026-05-05** | data → `data/polar_h10/` |
+| Daily subjective log (`log_daily_subjective.py`) | Active; **2026-05-05 entry logged** | 30s/day; mood/energy/focus/event |
+| Daily medication log | Active; **2026-05-05 change-events + full snapshot logged** | `data/medication_log.csv` + `data/medication_snapshots/2026-05-05.md` |
 | Oura nightly summary | Autonomous | `oura_full_metrics_harvester.py` |
-| Adderall titration (Day 1 = 2026-05-01) | Active | 14-day window; covariate logged; URB #828 trial-1 (2026-05-22) is post-washout |
+| Adderall titration (Day 1 = 2026-05-01) | **Day 5 today; Brandon DISSATISFIED — Focalin XR request planned at 5/06 doctor appt** | If transition approved, regimen change mid-§10.6 window; covariate model needs Adderall-Day-N + Focalin-XR-Day-N sub-windows |
+| Glycine 3g | **DISCONTINUED 2026-05-05 (last day)** | Regimen change event flagged |
 | **Autism therapy work resumes** | **Wed 2026-05-06 — brand new client** | Caregiver-mode life-path-6 expression; track sleep/HRV the night before |
+| **Doctor appointment** | **Wed 2026-05-06 — Focalin XR request** | If approved → Adderall→Focalin XR transition; flag in URB #826/828 covariate model |
 
 ---
 
 ## Brandon's open tasks (none are blockers; ordered by ease)
 
-1. ✅ **Mendi Phase 1 GATT discovery DONE 2026-05-04** — 5 services, 16 characteristics found. JSON at `Downloads\data\mendi\ble_discovery\gatt_2026-05-04T13-53-03.json` on Brandon's Acer. **UPLOAD TO REPLIT PENDING** — drag JSON into `data/mendi/ble_discovery/` in the Replit file panel.
-2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; awaiting confirmation.
+1. ✅ **Mendi Phase 1 GATT discovery DONE 2026-05-04** — 5 services, 16 characteristics found. JSON at `Downloads\data\mendi\ble_discovery\gatt_2026-05-04T13-53-03.json` on Brandon's Acer. **UPLOAD TO REPLIT PENDING** — drag JSON into `data/mendi/ble_discovery/` in the Replit file panel. **Brandon plans 10-min Mendi meditation session once reconnected — value-add: if BLE traffic capture runs alongside the session (nRF Connect Logger), produces Phase 3 protocol-replay evidence; otherwise just personal-benefit + device-comfort.**
+2. ☐ **Biowell appointment** — Brandon reached out 2026-05-01 PM; **scan pushed to next week (2026-05-12+)**.
 3. ✅ **URB #828 v2 M=5 token-set CONFIRMED 2026-05-01 PM**: {calm, red, ★, 7, M}.
-4. ☐ **Print sealed deck of 5 cards** for URB #828 trials — one card per token in the M=5 set: `calm` / `red` / `★` / `7` / `M`. Large clear print, opaque card backs (so back is identical and gives no draw signal). Ready by 2026-05-22.
-7. ☐ **Optional: fingerprint capture** (~10 min) for URB #828 C7 condition. See `papers/FINGERPRINT_CAPTURE_INSTRUCTIONS.md`. If skipped, C7 just becomes "not measured"; C0/C2/C5 still run.
-5. ☐ **Visual confirmation that `pages/papers_browser.py` renders** — restart `ti_website` workflow, navigate to "papers_browser" in the Streamlit sidebar.
-6. ☐ **Daily H10 + subjective + medication logging** through 2026-05-22 (continues active critical path).
+4. ☐ **Print sealed deck of 5 cards** for URB #828 trials — one card per token in the M=5 set: `calm` / `red` / `★` / `7` / `M`. Large clear print, opaque card backs. **Brandon has no home printer — library trip required. Not urgent (deadline 2026-05-22).**
+5. ☐ **Fingerprint capture** (~10 min) for URB #828 C7 condition — **Brandon plans tonight 2026-05-05.** See `papers/FINGERPRINT_CAPTURE_INSTRUCTIONS.md`.
+6. ☐ **Visual confirmation that `pages/papers_browser.py` renders** — restart `ti_website` workflow, navigate to "papers_browser" in the Streamlit sidebar.
+7. ☐ **Daily H10 + subjective + medication logging** through 2026-05-22 (continues active critical path). **2026-05-05 logged.**
+8. ☐ **Polar H10 baseline analysis** — agent-side; **deferred to tonight after Brandon uploads latest H10 export.**
+9. ☐ **Doctor appointment 2026-05-06: Focalin XR request.** If approved, regimen-change event; agent must add Focalin-XR-Day-N sub-window to §10.6 covariate model.
+10. ☐ **More biographical refinements (URB #829 §2 supporting evidence) incoming from Brandon shortly.** Add as supporting-evidence accrual; do not gate Gate 5 on rate-of-refinement.
 
 ---
 
