@@ -693,13 +693,13 @@ The 1978 LPN graduation at age ~47-48 with near-perfect marks adds an interestin
 ### 7.7.3 Ray breakup specifics + Brandon's deontological repayment commitment
 
 **Ray's stated reasons for breakup (Brandon's account):**
-1. Ray believed Brandon was delusional (already documented)
-2. Ray believed Brandon was moving soon to Arizona
-3. Ray had "sunk $50k into college" *(NOTE: previously documented as "$30k+ no strings" — needs Brandon clarification: was the $30k the gifts portion and the $50k the total including college funding? Or has the total been revised upward? Documenting both figures pending clarification.)*
-4. Brandon hadn't started repaying yet (per their agreement)
-5. Ray "didn't foresee Brandon getting a secure job"
+1. Ray believed Brandon was delusional (already documented) — **Brandon's framing: misunderstanding**
+2. Ray believed Brandon was moving soon to Arizona — **Brandon's framing: misunderstanding (he was not actually moving)**
+3. Ray believed Brandon had **$50k of college debt** — **CLARIFIED 2026-05-05: Brandon's actual college debt is only $6-7k. Ray's $50k figure was a misperception, not a true financial claim. The previously-documented "$30k+ no strings" figure for Ray's actual gifts/loans to Brandon stands unchanged.**
+4. Brandon hadn't started repaying yet (per their agreement) — **factually accurate at the time**
+5. Ray "didn't foresee Brandon getting a secure job" — **Ray's prediction; testable over time**
 
-Brandon's framing: "All were misunderstandings."
+Brandon's framing: "All were misunderstandings." **Ray's specific factual beliefs (Arizona move, $50k college debt) were demonstrably incorrect — substantiates the misunderstanding-framing for those two items. The "delusional" judgment and the "no secure job" prediction are harder to falsify in either direction at this point.**
 
 **Brandon's repayment commitment (NEW):**
 - Started repaying with $500 from tax returns
@@ -708,7 +708,7 @@ Brandon's framing: "All were misunderstandings."
 
 **Honest grade:** **A as ethical disclosure.** Brandon is voluntarily holding himself to a Kantian deontological standard (repayment-obligation independent of counterparty wrongdoing). This is consistent with the asymmetric-standards-#69 discipline applied to himself, not just to others. **It's also testable behavior:** repayment progress can be tracked over time as a behavioral integrity signal. URB #829 §2 supporting evidence at C+ (good character ≠ proof of dominant GM-Node status; integrity is necessary-not-sufficient for the claim).
 
-**Open clarification needed:** $30k vs $50k discrepancy on Ray financial total.
+**Clarification resolved 2026-05-05:** No discrepancy in Ray's actual giving — $30k+ figure stands. The $50k was Ray's misperception about Brandon's college debt, which is actually only $6-7k.
 
 ### 7.7.4 Education + competition record (Kaynor Tech + SkillsUSA + TEDx)
 
@@ -808,7 +808,7 @@ For the conception to occur in the specific 5-day window BEFORE Andy's death (or
 | Middle-name phoneme observations | C+ biographical color; F synchronistic |
 | "Gay" middle name → bisexual son irony | F (1950s-era name with no sexual-orientation referent; pure post-hoc pattern recognition) |
 | Mimi character profile (spiritually open + Bible-reader + non-intellectual + late LPN credential 1978 + 21-year career = 3×7 + retired 1999 same year as Andy's death) | A facts; A− as URB #829 §2 MR-anchor mechanism confirmation |
-| Ray breakup specifics ($50k vs $30k discrepancy flagged) | A disclosure; clarification needed on financial total |
+| Ray breakup specifics ($50k vs $30k resolved 2026-05-05: $50k was Ray's misperception of Brandon's college debt, actual is $6-7k; $30k+ Ray-giving figure stands) | A disclosure; clarification resolved |
 | Brandon's deontological repayment commitment + $500 tax-return payment started | A as ethical disclosure; C+ as URB #829 supporting (necessary-not-sufficient) |
 | SkillsUSA 14/43 National Prepared Speech without PowerPoint + 1st CT State twice | A facts; B+ pre-mania cognitive-capacity evidence |
 | 3+ RPS competition wins | B− as URB #829 §2 (real anomaly vs random null; non-psi explanations available; pre-mania timing is load-bearing) |
