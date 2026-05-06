@@ -1,0 +1,82 @@
+[
+  {
+    "start": "2026-05-01T11:29:20",
+    "dur_min": 209.66666666666666,
+    "sample_types": [
+      "HEART_RATE"
+    ],
+    "hr_n": 12577,
+    "hr_mean": 62.51928122763775,
+    "hr_med": 62.0,
+    "hr_min": 51.0,
+    "hr_max": 81.0,
+    "rr_n": 0,
+    "rmssd": null,
+    "sdnn": null,
+    "pnn50": null
+  },
+  {
+    "start": "2026-05-02T14:16:44",
+    "dur_min": 122.31666666666666,
+    "sample_types": [
+      "HEART_RATE"
+    ],
+    "hr_n": 7339,
+    "hr_mean": 55.66725711949857,
+    "hr_med": 55.0,
+    "hr_min": 49.0,
+    "hr_max": 77.0,
+    "rr_n": 0,
+    "rmssd": null,
+    "sdnn": null,
+    "pnn50": null
+  },
+  {
+    "start": "2026-05-02T17:44:35",
+    "dur_min": 213.78333333333333,
+    "sample_types": [
+      "HEART_RATE"
+    ],
+    "hr_n": 12827,
+    "hr_mean": 64.76791143681297,
+    "hr_med": 64.0,
+    "hr_min": 53.0,
+    "hr_max": 83.0,
+    "rr_n": 0,
+    "rmssd": null,
+    "sdnn": null,
+    "pnn50": null
+  },
+  {
+    "start": "2026-05-03T06:16:48",
+    "dur_min": 100.0,
+    "sample_types": [
+      "HEART_RATE"
+    ],
+    "hr_n": 5986,
+    "hr_mean": 54.58085532910123,
+    "hr_med": 53.0,
+    "hr_min": 43.0,
+    "hr_max": 74.0,
+    "rr_n": 0,
+    "rmssd": null,
+    "sdnn": null,
+    "pnn50": null
+  },
+  {
+    "start": "2026-05-03T08:05:11",
+    "dur_min": 264.8833333333333,
+    "sample_types": [
+      "HEART_RATE"
+    ],
+    "hr_n": 15889,
+    "hr_mean": 67.82214110390836,
+    "hr_med": 66.0,
+    "hr_min": 52.0,
+    "hr_max": 125.0,
+    "rr_n": 0,
+    "rmssd": null,
+    "sdnn": null,
+    "pnn50": null
+  }
+]

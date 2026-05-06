@@ -1,0 +1,22 @@
+{
+  "exportVersion": "2.6",
+  "devices": [
+    {
+      "name": "Polar H10 Heart Rate Sensor",
+      "deviceId": "C895672B",
+      "deviceUuid": "0e030000-0084-0000-0000-0000c895672b",
+      "registered": "2025-02-03"
+    }
+  ],
+  "archivedDevices": [],
+  "productRegistrationEvents": [
+    {
+      "userId": "62575116",
+      "created": "2025-02-03T14:44:13.161Z",
+      "eventType": "ADD",
+      "deviceUuid": "0e030000-0084-0000-0000-0000c895672b",
+      "manufacturerName": "",
+      "modelName": "H10"
+    }
+  ]
+}
