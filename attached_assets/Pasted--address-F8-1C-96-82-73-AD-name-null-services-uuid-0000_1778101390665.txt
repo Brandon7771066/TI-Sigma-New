@@ -1,0 +1,156 @@
+{
+  "address": "F8:1C:96:82:73:AD",
+  "name": null,
+  "services": [
+    {
+      "uuid": "00001800-0000-1000-8000-00805f9b34fb",
+      "desc": "Generic Access Profile",
+      "chars": [
+        {
+          "uuid": "00002a00-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read",
+            "write"
+          ],
+          "desc": "Device Name"
+        },
+        {
+          "uuid": "00002a01-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Appearance"
+        },
+        {
+          "uuid": "00002a04-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Peripheral Preferred Connection Parameters"
+        },
+        {
+          "uuid": "00002aa6-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Central Address Resolution"
+        }
+      ]
+    },
+    {
+      "uuid": "00001801-0000-1000-8000-00805f9b34fb",
+      "desc": "Generic Attribute Profile",
+      "chars": [
+        {
+          "uuid": "00002a05-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "indicate"
+          ],
+          "desc": "Service Changed"
+        }
+      ]
+    },
+    {
+      "uuid": "fc3eabb0-c6c4-49e6-922a-6e551c455af5",
+      "desc": "Unknown",
+      "chars": [
+        {
+          "uuid": "fc3eabb1-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "read",
+            "notify"
+          ],
+          "desc": "Unknown"
+        },
+        {
+          "uuid": "fc3eabb2-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "write",
+            "notify"
+          ],
+          "desc": "Unknown"
+        },
+        {
+          "uuid": "fc3eabb3-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "write",
+            "notify"
+          ],
+          "desc": "Unknown"
+        },
+        {
+          "uuid": "fc3eabb4-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "read",
+            "notify"
+          ],
+          "desc": "Unknown"
+        },
+        {
+          "uuid": "fc3eabb5-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "notify"
+          ],
+          "desc": "Unknown"
+        },
+        {
+          "uuid": "fc3eabb6-c6c4-49e6-922a-6e551c455af5",
+          "props": [
+            "read",
+            "write",
+            "notify"
+          ],
+          "desc": "Unknown"
+        }
+      ]
+    },
+    {
+      "uuid": "0000180a-0000-1000-8000-00805f9b34fb",
+      "desc": "Device Information",
+      "chars": [
+        {
+          "uuid": "00002a29-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Manufacturer Name String"
+        },
+        {
+          "uuid": "00002a25-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Serial Number String"
+        },
+        {
+          "uuid": "00002a27-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Hardware Revision String"
+        },
+        {
+          "uuid": "00002a26-0000-1000-8000-00805f9b34fb",
+          "props": [
+            "read"
+          ],
+          "desc": "Firmware Revision String"
+        }
+      ]
+    },
+    {
+      "uuid": "0000fe59-0000-1000-8000-00805f9b34fb",
+      "desc": "Nordic Semiconductor ASA",
+      "chars": [
+        {
+          "uuid": "8ec90003-f315-4f60-9fb8-838830daea50",
+          "props": [
+            "write",
+            "indicate"
+          ],
+          "desc": "Buttonless DFU"
+        }
+      ]
+    }
+  ]
+}

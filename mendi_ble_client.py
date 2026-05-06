@@ -53,28 +53,44 @@ except ImportError:
     requests = None
 
 MENDI_NAME_PREFIX = "Mendi"
-STREAM_SVC_UUID: Optional[str] = None
-STREAM_CHAR_UUID: Optional[str] = None
-CONTROL_CHAR_UUID: Optional[str] = None
-CONTROL_START_PAYLOAD: Optional[bytes] = None
+# Discovered 2026-05-06 via mendi_capture.py 10-min meditation @ MAC F8:1C:96:82:73:AD
+STREAM_SVC_UUID: Optional[str] = "fc3eabb0-c6c4-49e6-922a-6e551c455af5"
+STREAM_CHAR_UUID: Optional[str] = "fc3eabb4-c6c4-49e6-922a-6e551c455af5"  # main signal stream, ~1.4 Hz
+CONTROL_CHAR_UUID: Optional[str] = "fc3eabb2-c6c4-49e6-922a-6e551c455af5"  # write+notify, untested
+CONTROL_START_PAYLOAD: Optional[bytes] = None  # not yet known — Mendi appears to auto-stream
+# Other characteristics in the same service:
+#   bb1 read+notify  → device-state snapshot at startup (97 bytes, ~16 protobuf fields)
+#   bb3 write+notify → control channel B
+#   bb5 notify       → 9-byte session header at startup (contains initial sample)
+#   bb6 read+write+notify → config
 
 
 def decode_frame(frame: bytes) -> Optional[dict]:
-    """
-    Decode one BLE notification payload into {timestamp, hbo2, hbr,
-    signal_quality}.
+    """Decode one bb4 notification → {raw_value, signal_intensity_norm}.
 
-    SCAFFOLD: returns None until the byte format is known.
-
-    Once decoded, expected return shape:
-        {
-          "timestamp": ISO 8601 string,
-          "hbo2": float (~50-80 µmol·mm),
-          "hbr":  float (~20-50 µmol·mm),
-          "signal_quality": float [0.0, 1.0],
-        }
+    Wire format (discovered 2026-05-06 from 737-frame capture):
+        Single protobuf varint, field 1, wire type 0.
+        Bytes: 08 <varint>
+        Observed integer range during 10-min meditation: 3820-3832 (range=12, stdev=2.4)
+        Hypothesis: 12-bit ADC raw NIR photodetector intensity (max 4095);
+        3820 ≈ 93% of full scale = healthy optode-skin contact.
+        Lower values = more photon absorption = more blood (HbO2+HbR) in optical path.
     """
-    return None
+    if len(frame) < 2 or frame[0] != 0x08:
+        return None
+    # Inline varint decode
+    val = 0; shift = 0; pos = 1
+    while pos < len(frame):
+        b = frame[pos]
+        val |= (b & 0x7F) << shift
+        pos += 1
+        if not (b & 0x80):
+            break
+        shift += 7
+    return {
+        "raw_value": val,
+        "signal_intensity_norm": val / 4095.0,  # assuming 12-bit ADC
+    }
 
 
 async def cmd_scan(timeout_s: float = 30.0) -> int:
