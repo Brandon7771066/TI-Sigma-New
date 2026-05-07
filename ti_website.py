@@ -86,38 +86,75 @@ st.markdown("""
 
 with st.sidebar:
     st.markdown("### 🚀 Navigate")
-    st.metric("URBs", "578", "Est. Apr 1, 2026")
+    st.metric(
+        "URBs",
+        "578",
+        "Est. Apr 1, 2026",
+        help="URB = Unitive Research Brick. Each URB is a single atomic, dated research artifact (a proof, theorem, dataset, experiment, or insight) contributed to the TI Sigma corpus. URBs are the indivisible units of knowledge production in the framework — every paper, every Lean-verified theorem, every empirical result is one or more URBs. Total count grows continuously as new artifacts are produced and dated."
+    )
 
-page = st.sidebar.radio("Navigate", [
+RESEARCH_SUBS = {
+    "📄 Paper Hub": "📄 Paper Hub",
+    "📥 Downloads": "📥 Downloads",
+    "📚 Zenodo Corpus": "📚 Zenodo Corpus",
+    "🗂️ Evidence Registry": "Evidence Registry",
+    "🧪 Empirical Testing": "Empirical Testing",
+    "🧠 TI Mindmaps": "TI Mindmaps",
+    "⏱️ 3D Jeff Time": "3D Jeff Time",
+    "🔬 Research Index": "Research",
+}
+
+ENGINEERING_SUBS = {
+    "🖥️ GM Hypercomputer": "GM Hypercomputer",
+    "💖 Mood Amplifier (All)": "Mood Amplifier",
+    "📈 QuantConnect Trading Algorithm": "QuantConnect Algorithm",
+    "💑 Soulmate Finder": "Soulmate Finder",
+    "🎯 Kalshi Scanner": "Kalshi Scanner",
+    "📋 Application Catalog (More Apps)": "__app_catalog__",
+}
+
+TOP_PAGES = [
     "Home",
     "🔬 TI Sigma",
-    "📄 Paper Hub",
     "🏆 Proofs & Theorems",
-    "📥 Downloads",
+    "📚 Research & Papers",
+    "⚙️ TI Sigma Engineering Applications",
     "📺 YouTube Studio",
     "🧩 ARC-AGI Solver",
-    "📚 Zenodo Corpus",
     "🔮 Manifestation Machine",
     "🧠 Elite Brain Protocol",
     "🧠💓 Brain Proof",
     "🔗 Brain Connection NOW",
-    "TI Mindmaps",
-    "Evidence Registry",
-    "Empirical Testing",
-    "GM Hypercomputer",
-    "Mood Amplifier",
-    "3D Jeff Time",
-    "QuantConnect Algorithm",
     "Books",
     "Blog",
     "Courses",
-    "Soulmate Finder",
-    "Kalshi Scanner",
     "Meme Lab",
-    "Research",
     "⚖️ Judgisms",
-    "About"
-], label_visibility="collapsed")
+    "About",
+]
+
+top_choice = st.sidebar.radio("Navigate", TOP_PAGES, label_visibility="collapsed")
+
+if top_choice == "📚 Research & Papers":
+    st.sidebar.markdown("**📂 Section:**")
+    research_sub = st.sidebar.radio(
+        "Research Section",
+        list(RESEARCH_SUBS.keys()),
+        key="research_sub_radio",
+        label_visibility="collapsed",
+    )
+    page = RESEARCH_SUBS[research_sub]
+elif top_choice == "⚙️ TI Sigma Engineering Applications":
+    st.sidebar.markdown("**🛠️ Application:**")
+    eng_sub = st.sidebar.radio(
+        "Engineering Application",
+        list(ENGINEERING_SUBS.keys()),
+        key="engineering_sub_radio",
+        label_visibility="collapsed",
+    )
+    page = ENGINEERING_SUBS[eng_sub]
+else:
+    page = top_choice
 
 if page == "📄 Paper Hub":
     from paper_hub import render as render_paper_hub
@@ -715,7 +752,15 @@ elif page == "Home":
         <p style="font-size: 1rem; margin-top: 1rem;">Transform your understanding of reality through GILE optimization</p>
     </div>
     """, unsafe_allow_html=True)
-    
+
+    st.info(
+        "**📐 What is a URB?** "
+        "URB = **Unitive Research Brick** — the atomic, dated unit of research production in the TI Sigma corpus. "
+        "Every theorem, paper, dataset, experiment, and insight is logged as one or more URBs with a unique number and date. "
+        "URBs are indivisible (each one is a single contribution) and cumulative (the corpus grows by one URB per artifact produced). "
+        "The current URB count (visible in the sidebar) reflects the total volume of original research output to date."
+    )
+
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -4559,6 +4604,88 @@ elif page == "🔮 Manifestation Machine":
         render_power_of_8_tab()
     except Exception as e:
         st.error(f"Manifestation Machine error: {e}")
+
+elif page == "__app_catalog__":
+    st.markdown("""
+    <div style="background:linear-gradient(135deg,#1a0a2a 0%,#0d1b3d 100%);
+                padding:2rem 1.5rem;border-radius:14px;text-align:center;margin-bottom:1.5rem;
+                border:1px solid rgba(120,100,255,0.3);">
+        <div style="font-size:2.5rem;">📋</div>
+        <h1 style="color:#d8d0ff;font-size:2rem;margin:0.3rem 0;letter-spacing:0.05em;">
+            TI Sigma Engineering Application Catalog
+        </h1>
+        <div style="color:#b0a0ff;font-size:0.95rem;margin-top:0.4rem;">
+            Companion modules — runnable from the project repository
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    The applications below ship as standalone Python modules in the repository. Each is fully runnable
+    via Streamlit or direct invocation. The five flagship apps (GM Hypercomputer, Mood Amplifier,
+    QuantConnect Trading, Soulmate Finder, Kalshi Scanner) are integrated as their own subsections in
+    this Engineering tab. The remainder are catalogued here for now and can be promoted into the main
+    UI on demand.
+    """)
+
+    catalog = [
+        ("🩺 Biometric & Brain Coupling", [
+            ("LCC Sleep Protocol", "lcc_optimization_simulator.py", "Lateral Coherence Coupling protocol applied to sleep-state optimization. Targets HRV-EEG coupling during NREM."),
+            ("LCC Attractor Visualization", "lcc_on_agent_trajectories.py", "Phase-space attractor visualization for LCC trajectories on agent timeseries (PNG export included)."),
+            ("Heart Pong LCC", "heart_icell_theory.py", "Heart-rate-driven Pong control surface; LCC-coupled paddle position. Demo of cardiac→motor coupling."),
+            ("Heart Disease Dashboard", "biometric_dashboard.py", "Risk-stratification dashboard using HRV, RMSSD, SDNN; GILE-weighted composite score."),
+            ("GM Consciousness Sync", "biometric_api.py", "Group-mind consciousness synchronization measurement across multiple biometric streams."),
+            ("Biometric Intervention", "biometric_simulator.py", "Closed-loop intervention engine: detects mood drift and triggers haptic/audio cues."),
+            ("BOK Live Polar Morph", "bok_framework.py", "Live Polar H10 → BOK harmonic morphing. Maps RR-interval stream to BOK basis."),
+            ("Brain Coupling Guessing", "brain_connection_proof.py", "Two-player paired-EEG guessing game; quantifies inter-brain mutual information vs chance."),
+            ("Brain Pong", "brain_connection_proof.py", "Two-player Pong controlled by paired EEG attention metric. Companion experiment to Brain Coupling."),
+            ("Multimodal Biometric Dashboard", "biometric_dashboard.py", "Unified HRV + EEG + fNIRS + temp + EDA dashboard with GILE/LCC composite scoring."),
+        ]),
+        ("💊 Pharma & Health", [
+            ("Medgemma Dashboard", "brandon_pharma_predictions.py", "Medgemma medical-LLM dashboard for treatment response prediction; Brandon-personal pharmacogenomic profile baseline."),
+            ("Pharmacological Simulator", "animal_pharmacological_simulations.py", "Animal-model pharmacological simulation suite (dose-response, half-life, receptor binding)."),
+            ("RNA Folding Dashboard", "—", "RNA secondary-structure folding visualization (in development; module name TBD)."),
+        ]),
+        ("🔮 Psi & Soulmate", [
+            ("Psi Testing Protocol", "automated_psi_validation.py", "Automated GCP-style psi-validation harness (RNG deviation, RV scoring, blind protocols)."),
+            ("Psi Tuning Dashboard", "hypercomputing_psi_validation.py", "Real-time psi-signal tuning + hypercomputer-scored deviation panel."),
+            ("Soulmate Finder", "(integrated above)", "TI-Framework-based partner-prediction engine — full version available in this Engineering tab."),
+            ("TSC Crystal Page", "gsa_tsc_signal.py", "Tralse Sigma Crystal page — GSA daily signal + crystal-lattice intuition harmonics."),
+        ]),
+        ("📈 Markets & Trading (beyond core algos)", [
+            ("Stock Algorithm Status", "alpaca_paper_trader.py", "Live Alpaca paper-trading status panel for the GILE algorithm. Position + P&L + signal-trace."),
+            ("Marketing Optimizer", "biological_virality_engine.py", "Biological-virality-engine-driven content/marketing optimization."),
+            ("Launch Control", "—", "Pre-launch checklist + go/no-go panel for product releases (in development)."),
+        ]),
+    ]
+
+    for category_name, apps in catalog:
+        st.markdown(f"### {category_name}")
+        cols = st.columns(2)
+        for i, (app_name, module, description) in enumerate(apps):
+            with cols[i % 2]:
+                st.markdown(f"""
+                <div style="background:#1a1a2e;border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;
+                            border-left:3px solid #7864ff;min-height:140px;">
+                    <div style="color:#d8d0ff;font-size:1.05rem;font-weight:bold;margin-bottom:0.3rem;">
+                        {app_name}
+                    </div>
+                    <div style="color:#888;font-size:0.78rem;font-family:monospace;margin-bottom:0.5rem;">
+                        Module: {module}
+                    </div>
+                    <div style="color:#bbb;font-size:0.88rem;line-height:1.4;">
+                        {description}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+        st.markdown("")
+
+    st.markdown("---")
+    st.info(
+        "**To promote a catalog app into the main UI**: tell the agent which app to integrate, "
+        "and it will be added as its own subsection under "
+        "**⚙️ TI Sigma Engineering Applications**. Each promotion is one URB."
+    )
 
 st.markdown("---")
 st.markdown("""
