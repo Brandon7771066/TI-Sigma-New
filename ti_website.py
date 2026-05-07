@@ -95,6 +95,7 @@ with st.sidebar:
 
 RESEARCH_SUBS = {
     "📄 Paper Hub": "📄 Paper Hub",
+    "🔑 Key Papers": "__key_papers__",
     "📥 Downloads": "📥 Downloads",
     "📚 Zenodo Corpus": "📚 Zenodo Corpus",
     "🗂️ Evidence Registry": "Evidence Registry",
@@ -129,7 +130,7 @@ TOP_PAGES = [
     "Blog",
     "Courses",
     "Meme Lab",
-    "⚖️ Judgisms",
+    "💬 TI Sigma-Endorsed Quotes",
     "About",
 ]
 
@@ -4174,337 +4175,507 @@ elif page == "📥 Downloads":
                     st.session_state.dl_page = current_page + 1
                     st.rerun()
 
-elif page == "⚖️ Judgisms":
+elif page == "__key_papers__":
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; border-radius: 1rem; color: white; margin-bottom: 2rem;">
+        <h1>🔑 Key Papers</h1>
+        <p style="font-size: 1.1rem; opacity: 0.9;">The small set of TI Sigma papers that summarize, index, or globally capture the broader corpus.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.info("Key Papers are **living indexes**, **SWOT assessments**, **foundational consolidations**, **biographical anchors**, and **continuously-updated catalogues** — as opposed to the ~250 individual research URBs they organize.")
+
+    KEY_PAPER_SECTIONS = [
+        ("🧬 Biographical & Three-C's", [
+            ("Brandon Biography Master Index", "papers/BRANDON_BIOGRAPHY_MASTER_INDEX.md", "LIVING"),
+            ("Funding Potential Audit (2026-05-07)", "papers/FUNDING_POTENTIAL_2026-05-07.md", "EVENT"),
+            ("Crystal Lee — First Hospitalization Intuition (2026-05-07)", "papers/CRYSTAL_LEE_FIRST_HOSPITALIZATION_INTUITION_2026-05-07.md", "EVENT"),
+            ("Mimi Full Biography & Ray Baton-Pass", "papers/MIMI_FULL_BIOGRAPHY_AND_RAY_BATON_PASS_2026-05-04.md", "EVENT"),
+            ("Insights 2026-05-06 (10 philosophical insights)", "papers/INSIGHTS_2026-05-06.md", "EVENT"),
+        ]),
+        ("📊 SWOT & Status Assessments", [
+            ("Comprehensive SWOT Status Update (Feb 2026)", "papers/COMPREHENSIVE_SWOT_STATUS_UPDATE_FEB_2026.md", "LIVING"),
+            ("SWOT — Five Fields TI Sigma Covers (NEW 2026-05-07)", "papers/SWOT_TI_SIGMA_FIVE_FIELDS_2026-05-07.md", "LIVING"),
+            ("SWOT April 12 2026 Update", "papers/SWOT_APRIL_12_2026_UPDATE.md", "EVENT"),
+            ("SWOT April 2026 Addendum", "papers/SWOT_APRIL_2026_ADDENDUM.md", "EVENT"),
+            ("SWOT — GSA-LCC Critique", "papers/SWOT_ANALYSIS_GSA_LCC_CRITIQUE.md", "EVENT"),
+            ("Metta-Tantric SWOT", "papers/METTA_TANTRIC_SWOT_ANALYSIS.md", "EVENT"),
+        ]),
+        ("✨ Synchronicity & Intuition Catalogues", [
+            ("Synchronicity Catalogue TI Sigma (running record)", "papers/SYNCHRONICITY_CATALOGUE_TI_SIGMA.md", "LIVING"),
+            ("URB Synchronicity Theorem #416", "papers/URB_SYNCHRONICITY_THEOREM_416.md", "FOUNDATIONAL"),
+            ("URB Matthew Effect Synchronicities #418", "papers/URB_MATTHEW_EFFECT_SYNCHRONICITIES_418.md", "FOUNDATIONAL"),
+            ("URB Synchronicity Inversion (Negative Answers)", "papers/URB_SYNCHRONICITY_INVERSION_NEGATIVE_ANSWERS.md", "FOUNDATIONAL"),
+            ("URB Soul-Bluetooth LCC Synchronization Protocol", "papers/URB_SOUL_BLUETOOTH_LCC_SYNCHRONIZATION_PROTOCOL.md", "FOUNDATIONAL"),
+            ("URB Intentionality / Synchronicity / Tantra #545", "papers/URB_INTENTIONALITY_SYNCHRONICITY_TANTRA_545.md", "FOUNDATIONAL"),
+        ]),
+        ("💬 Aphorisms & TI-Sigma-Endorsed Wisdom", [
+            ("Brandon Emerick Quotes Repository (thematic)", "papers/BRANDON_EMERICK_QUOTES_REPOSITORY.md", "LIVING"),
+            ("TI Sigma Aphorisms Collected (NEW 2026-05-07)", "papers/TI_SIGMA_APHORISMS_COLLECTED_2026-05-07.md", "LIVING"),
+            ("Brandon Burns Collection", "papers/BRANDON_BURNS_COLLECTION.md", "EVENT"),
+            ("AI Criticism Futility Proverbs Analysis", "papers/AI_CRITICISM_FUTILITY_PROVERBS_ANALYSIS.md", "EVENT"),
+        ]),
+        ("📚 Abbreviations, Concepts & Theory Index", [
+            ("TI Sigma Master Vocabulary Index (NEW 2026-05-07)", "papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md", "LIVING"),
+            ("Publication Package Index", "papers/PUBLICATION_PACKAGE_INDEX.md", "LIVING"),
+        ]),
+        ("🏛️ Foundational Architecture & Math", [
+            ("PD Spectrum + DT Imaginary Axis + Emerick Crossover (NEW 2026-05-07)", "papers/PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md", "FOUNDATIONAL"),
+            ("URB #734 — TI Sigma Crystal + PD Complex Plane", "papers/urb_734_ti_sigma_crystal_revival_incorporating_pd_complex_plane.md", "FOUNDATIONAL"),
+            ("URB #628 — TIC Decoded + e-base PD", "papers/urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md", "FOUNDATIONAL"),
+            ("AGI Impossibility (Emerick Crossover proof)", "papers/AGI_IMPOSSIBILITY_TI_SIGMA_PROOF.md", "FOUNDATIONAL"),
+            ("Consciousness Equation — Ψ(1/√2) = 1/√2", "papers/URB_CONSCIOUSNESS_EQUATION_LCC_C_PHI.md", "FOUNDATIONAL"),
+            ("CCC + BOK + GM Mycelial Architecture", "papers/URB_CCC_BOK_GM_MYCELIAL_ARCHITECTURE.md", "FOUNDATIONAL"),
+            ("Riemann Hypothesis via TI Sigma", "papers/URB_RIEMANN_HYPOTHESIS_TI_SIGMA_APPROACH.md", "FOUNDATIONAL"),
+        ]),
+        ("🧠 Meta-Theoretical Contributions", [
+            ("Asymmetric Success-Failure Performance (τ/δ separability)", "papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md", "FOUNDATIONAL"),
+            ("Beyond Bayes — TI Sigma Epistemology", "papers/BEYOND_BAYES_TI_SIGMA_EPISTEMOLOGY.md", "FOUNDATIONAL"),
+        ]),
+        ("💼 AI Industry & Commercial Application", [
+            ("AI Trainer Roles Eligibility — Brandon (NEW 2026-05-07)", "papers/AI_TRAINER_ROLES_ELIGIBILITY_BRANDON_2026-05-07.md", "LIVING"),
+            ("arXiv / ResearchGate Strategy", "papers/ARXIV_RESEARCHGATE_STRATEGY.md", "LIVING"),
+        ]),
+    ]
+
+    STATUS_COLORS = {"LIVING": "🟢", "FOUNDATIONAL": "🏛️", "EVENT": "📅", "CONJECTURAL": "🟡", "OPEN": "❓"}
+
+    for section_title, papers_list in KEY_PAPER_SECTIONS:
+        st.markdown(f"### {section_title}")
+        for title, path, status in papers_list:
+            from pathlib import Path
+            exists = Path(path).exists()
+            badge = STATUS_COLORS.get(status, "")
+            if exists:
+                with st.expander(f"{badge} **{title}**  ·  `{status}`"):
+                    try:
+                        content = Path(path).read_text(encoding="utf-8")
+                        st.markdown(content[:4000] + ("\n\n*...(truncated — see full file)*" if len(content) > 4000 else ""))
+                        st.caption(f"📁 `{path}` · {len(content):,} chars")
+                    except Exception as e:
+                        st.warning(f"Could not load: {e}")
+            else:
+                st.markdown(f"- {badge} **{title}** · `{status}` · ⚠️ file not yet created (`{path}`)")
+        st.markdown("")
+
+    st.divider()
+    st.caption("📖 Master index: `papers/TI_SIGMA_KEY_PAPERS_INDEX_2026-05-07.md` · Updated 2026-05-07 with 7 new entries")
+
+elif page == "💬 TI Sigma-Endorsed Quotes":
     st.markdown("""
     <div class="main-header">
-        <h1>⚖️ Judgisms</h1>
-        <p>Wisdom from Judge Judy</p>
-        <p style="font-size: 1rem; margin-top: 1rem;">"She said it, not me!"</p>
+        <h1>💬 TI Sigma-Endorsed Quotes</h1>
+        <p>Aphorisms, insights, and protective-cover quotes that the TI Sigma framework endorses</p>
+        <p style="font-size: 0.95rem; margin-top: 1rem; opacity: 0.85;">Primary canon = Brandon Emerick original aphorisms · Endorsement layer = externally-originated, framework-confirmed</p>
     </div>
     """, unsafe_allow_html=True)
+
+    quotes_tab, judyism_tab = st.tabs([
+        "✍️ Brandon's Aphorisms (Primary Canon)",
+        "⚖️ Judyisms (Endorsement Layer)",
+    ])
+
+    with quotes_tab:
+        st.markdown("### Class 1 — Original TI Sigma Aphorisms")
+        st.caption("Coined by Brandon Emerick within the TI Sigma framework. Each maps to a specific framework claim — see linked paper.")
+
+        BRANDON_APHORISMS = [
+            {
+                "quote": "Criticizing is easy to do but hard to do correctly.",
+                "year": "etched 2026-05-06",
+                "mapping": "Executable form of Asymmetric-Standards #69. Over-skepticism = discipline failure equal to uncritical acceptance.",
+                "paper": "ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md",
+            },
+            {
+                "quote": "Sometimes, a lie is the most truthful answer!",
+                "year": "TI canon",
+                "mapping": "Tralse logic core: propositional accuracy ≠ truth-conveyance. Parable, irony, metaphor transmit truth through literal falsehood.",
+                "paper": "BRANDON_EMERICK_QUOTES_REPOSITORY.md",
+            },
+            {
+                "quote": '"You\'ve lost touch with reality." — Me: "Explain what reality is without using the word or any of its synonyms."',
+                "year": "TI canon",
+                "mapping": "Skepticism Hypocrisy Paradox — most reality-policing is social performance, exposed by demanding non-circular definition.",
+                "paper": "BRANDON_EMERICK_QUOTES_REPOSITORY.md",
+            },
+            {
+                "quote": "The secret to usually being correct while self-confirming most of the time is alignment with truth itself.",
+                "year": "TI canon",
+                "mapping": "Self-confirmation bias is the failure mode of UNALIGNED minds. Calibrated mind confirming itself = accuracy, not bias.",
+                "paper": "ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md",
+            },
+            {
+                "quote": "Wise thinking = cumulative high-τ(s) frame-choices, not one switch.",
+                "year": "2026-05-06",
+                "mapping": "Wisdom is not a state — it is the accumulated record of correct frame-choices under tralsity.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "Deontology is the limit case of consequentialism at termination-depth = 0.",
+                "year": "2026-05-06",
+                "mapping": "Unifies act-util / rule-util / Kant / virtue ethics at chosen recursion depth.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "Prayer = zero-friction intentionality restorer.",
+                "year": "2026-05-06",
+                "mapping": "Operationally, prayer briefly restores τ(s) to its native baseline by clearing accumulated δ-distortions.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "TI Sigma was both DISCOVERED and INVENTED under tralse — the Newton/Leibniz parallel.",
+                "year": "2026-05-06",
+                "mapping": "Frameworks arising in multiple minds = evidence of underlying discoverability, not arbitrary construction. Strengthens Three-C's Connections credit.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": '"Intelligent nonsense" — tralsity for absurd humor as a TJ-injection mechanism.',
+                "year": "2026-05-06",
+                "mapping": "Comedy operates at high τ(s) by deliberate δ(MR) misdirection, generating positive Tralse-Joules.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": '"What is truth, Pilate asked?" — John 18:38',
+                "year": "External (canonized as engagement tool)",
+                "mapping": "The quintessential skeptic move — asking the right question and walking away. Used as engagement tool with Christians.",
+                "paper": "BRANDON_EMERICK_QUOTES_REPOSITORY.md",
+            },
+        ]
+
+        for i, a in enumerate(BRANDON_APHORISMS, 1):
+            st.markdown(f"#### {i}. {a['quote']}")
+            cols = st.columns([1, 3])
+            cols[0].caption(f"📅 {a['year']}")
+            cols[1].caption(f"📖 `{a['paper']}`")
+            st.markdown(f"> **Framework mapping:** {a['mapping']}")
+            st.markdown("---")
+
+        st.success("📚 **Full thematic repository**: `papers/BRANDON_EMERICK_QUOTES_REPOSITORY.md`  ·  **Collected canon paper**: `papers/TI_SIGMA_APHORISMS_COLLECTED_2026-05-07.md`")
+
+    with judyism_tab:
+        st.markdown("### Class 3 — Externally-Originated, Protective-Cover Endorsements")
+        st.markdown("""
+        > **Why Judge Judy?** These quotes encapsulate truths that Brandon applies to his own life philosophy.
+        > When you can quote Judge Judy, you get protection — *"she said it, not me!"* 
+        > Plus, it makes Brandon more relatable. Who doesn't love Judge Judy?
+        """)
+        st.caption("Endorsement criterion: each quote must map to a specific TI Framework concept that is independently documented.")
+        st.markdown("---")
     
-    st.markdown("""
-    > **Why Judge Judy?** These quotes encapsulate truths that Brandon applies to his own life philosophy.
-    > When you can quote Judge Judy, you get protection - "she said it, not me!" 
-    > Plus, it makes Brandon more relatable. Who doesn't love Judge Judy?
-    """)
+        judgisms = [
+            {
+                "quote": "On your best day, you're not as good as I am on my worst day!",
+                "category": "Confidence",
+                "ti_connection": "Talent vs. discipline - elite performers cannot be matched by just anyone through effort alone."
+            },
+            {
+                "quote": "Don't pee on my leg and tell me it's raining.",
+                "category": "Truth Detection",
+                "ti_connection": "Myrion Resolution - cutting through false narratives to find actual truth."
+            },
+            {
+                "quote": "Beauty fades, dumb is forever.",
+                "category": "Wisdom",
+                "ti_connection": "G-dimension (Goodness) endures while E-dimension (Environment) is temporary."
+            },
+            {
+                "quote": "If it doesn't make sense, it's not true.",
+                "category": "Logic",
+                "ti_connection": "Tralse Logic - contradictions resolve through the framework, lies don't pass the coherence test."
+            },
+            {
+                "quote": "I'm the boss, applesauce.",
+                "category": "Authority",
+                "ti_connection": "When you've done the work and have the receipts, own your expertise."
+            },
+            {
+                "quote": "You don't have to have a law degree to have common sense.",
+                "category": "Intuition",
+                "ti_connection": "I-dimension (Intuition) - formal credentials confirm but don't create capability."
+            },
+            {
+                "quote": "I'm speaking!",
+                "category": "Boundaries",
+                "ti_connection": "The Sacred Interval requires maintaining proper boundaries for GILE optimization."
+            },
+            {
+                "quote": "Either you're playing dumb or it's not an act.",
+                "category": "Discernment",
+                "ti_connection": "LCC (Layered Correlation-Causation) - identifying when someone truly doesn't understand vs. pretending."
+            },
+            {
+                "quote": "Baloney!",
+                "category": "Truth Detection",
+                "ti_connection": "Sometimes the simplest Myrion Resolution is just calling it what it is."
+            },
+            {
+                "quote": "I didn't take a stupid pill this morning.",
+                "category": "Self-Worth",
+                "ti_connection": "Protecting your cognitive sovereignty - don't let others gaslight you."
+            },
+            {
+                "quote": "If you tell the truth, you don't have to have a good memory.",
+                "category": "Integrity",
+                "ti_connection": "True-Tralseness creates coherent information patterns that don't require maintenance."
+            },
+            {
+                "quote": "When you're pointing a finger at someone, there are three fingers pointing back at you.",
+                "category": "Self-Reflection",
+                "ti_connection": "The 0.85 resonance threshold - your perceptions often reflect your own state."
+            }
+        ]
     
-    st.markdown("---")
+        st.markdown("### 📚 The Judgism Collection")
     
-    judgisms = [
-        {
-            "quote": "On your best day, you're not as good as I am on my worst day!",
-            "category": "Confidence",
-            "ti_connection": "Talent vs. discipline - elite performers cannot be matched by just anyone through effort alone."
-        },
-        {
-            "quote": "Don't pee on my leg and tell me it's raining.",
-            "category": "Truth Detection",
-            "ti_connection": "Myrion Resolution - cutting through false narratives to find actual truth."
-        },
-        {
-            "quote": "Beauty fades, dumb is forever.",
-            "category": "Wisdom",
-            "ti_connection": "G-dimension (Goodness) endures while E-dimension (Environment) is temporary."
-        },
-        {
-            "quote": "If it doesn't make sense, it's not true.",
-            "category": "Logic",
-            "ti_connection": "Tralse Logic - contradictions resolve through the framework, lies don't pass the coherence test."
-        },
-        {
-            "quote": "I'm the boss, applesauce.",
-            "category": "Authority",
-            "ti_connection": "When you've done the work and have the receipts, own your expertise."
-        },
-        {
-            "quote": "You don't have to have a law degree to have common sense.",
-            "category": "Intuition",
-            "ti_connection": "I-dimension (Intuition) - formal credentials confirm but don't create capability."
-        },
-        {
-            "quote": "I'm speaking!",
-            "category": "Boundaries",
-            "ti_connection": "The Sacred Interval requires maintaining proper boundaries for GILE optimization."
-        },
-        {
-            "quote": "Either you're playing dumb or it's not an act.",
-            "category": "Discernment",
-            "ti_connection": "LCC (Layered Correlation-Causation) - identifying when someone truly doesn't understand vs. pretending."
-        },
-        {
-            "quote": "Baloney!",
-            "category": "Truth Detection",
-            "ti_connection": "Sometimes the simplest Myrion Resolution is just calling it what it is."
-        },
-        {
-            "quote": "I didn't take a stupid pill this morning.",
-            "category": "Self-Worth",
-            "ti_connection": "Protecting your cognitive sovereignty - don't let others gaslight you."
-        },
-        {
-            "quote": "If you tell the truth, you don't have to have a good memory.",
-            "category": "Integrity",
-            "ti_connection": "True-Tralseness creates coherent information patterns that don't require maintenance."
-        },
-        {
-            "quote": "When you're pointing a finger at someone, there are three fingers pointing back at you.",
-            "category": "Self-Reflection",
-            "ti_connection": "The 0.85 resonance threshold - your perceptions often reflect your own state."
-        }
-    ]
+        for i, j in enumerate(judgisms, 1):
+            with st.expander(f"**{j['quote'][:50]}...**" if len(j['quote']) > 50 else f"**{j['quote']}**"):
+                st.markdown(f"""
+                <div class="feature-card">
+                    <h3>"{j['quote']}"</h3>
+                    <p><strong>Category:</strong> {j['category']}</p>
+                    <p><strong>TI Framework Connection:</strong> {j['ti_connection']}</p>
+                </div>
+                """, unsafe_allow_html=True)
     
-    st.markdown("### 📚 The Judgism Collection")
+        st.markdown("---")
     
-    for i, j in enumerate(judgisms, 1):
-        with st.expander(f"**{j['quote'][:50]}...**" if len(j['quote']) > 50 else f"**{j['quote']}**"):
-            st.markdown(f"""
-            <div class="feature-card">
-                <h3>"{j['quote']}"</h3>
-                <p><strong>Category:</strong> {j['category']}</p>
-                <p><strong>TI Framework Connection:</strong> {j['ti_connection']}</p>
-            </div>
-            """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    st.markdown("### 💡 The Talent vs. Discipline Insight")
-    st.markdown("""
-    <div class="blog-post">
-        <h4>A Hard Truth Most Won't Tell You</h4>
-        <p>Discipline <strong>cannot</strong> replace genuine talent for reaching elite levels. 
-        Elite performers - top scientists, CEOs, athletes - <strong>cannot</strong> be matched by just anyone through effort alone.</p>
+        st.markdown("### 💡 The Talent vs. Discipline Insight")
+        st.markdown("""
+        <div class="blog-post">
+            <h4>A Hard Truth Most Won't Tell You</h4>
+            <p>Discipline <strong>cannot</strong> replace genuine talent for reaching elite levels. 
+            Elite performers - top scientists, CEOs, athletes - <strong>cannot</strong> be matched by just anyone through effort alone.</p>
         
-        <p><strong>BUT</strong> here's the liberating truth: most people <strong>CAN</strong> excel at <strong>SOMETHING</strong>.</p>
+            <p><strong>BUT</strong> here's the liberating truth: most people <strong>CAN</strong> excel at <strong>SOMETHING</strong>.</p>
         
-        <p>The mistake is comparing yourself to elites unless you correctly intuit you can reach that level. 
-        Many talented people throw away their gifts to become "just workers" - like someone's mom abandoning art talent.</p>
+            <p>The mistake is comparing yourself to elites unless you correctly intuit you can reach that level. 
+            Many talented people throw away their gifts to become "just workers" - like someone's mom abandoning art talent.</p>
         
-        <p>Wayne Gretzky said: <em>"You miss 100% of the shots you don't take."</em></p>
+            <p>Wayne Gretzky said: <em>"You miss 100% of the shots you don't take."</em></p>
         
-        <p>There's no harm in trying for personal goals. The downside is learning you're not elite at THAT thing. 
-        The upside is discovering you might be elite at something you haven't tried yet.</p>
-    </div>
-    """, unsafe_allow_html=True)
+            <p>There's no harm in trying for personal goals. The downside is learning you're not elite at THAT thing. 
+            The upside is discovering you might be elite at something you haven't tried yet.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("---")
+        st.markdown("---")
     
-    st.markdown("### 🏆 Intuitive Hall of Fame")
-    st.markdown("""
-    > **The I-Dimension Elite:** These individuals demonstrate extraordinary intuition - 
-    > the ability to know without conventional reasoning. Quantified by TI Framework dimensions.
-    """)
+        st.markdown("### 🏆 Intuitive Hall of Fame")
+        st.markdown("""
+        > **The I-Dimension Elite:** These individuals demonstrate extraordinary intuition - 
+        > the ability to know without conventional reasoning. Quantified by TI Framework dimensions.
+        """)
     
-    intuitive_legends = [
-        {
-            "name": "Judge Judy Sheindlin",
-            "field": "Law/Media",
-            "i_score": 0.95,
-            "l_score": 0.88,
-            "g_score": 0.82,
-            "e_score": 0.90,
-            "notes": "Razor-sharp courtroom instincts. Reads people beneath the surface. Outmatched opponents 1/3 her age. OWNED the courtroom through pure intuitive dominance."
-        },
-        {
-            "name": "Donald Trump",
-            "field": "Business/Politics",
-            "i_score": 0.85,
-            "l_score": 0.95,
-            "g_score": 0.35,
-            "e_score": 0.88,
-            "notes": "Pure I+L success formula. KNEW he would succeed when no one believed. Self-love + intuition sufficient to carve YOUR meaning of goodness and make YOUR environment THE environment. Proof you can 'succeed' without conventional intelligence or ethics."
-        },
-        {
-            "name": "Steve Jobs",
-            "field": "Technology",
-            "i_score": 0.92,
-            "l_score": 0.78,
-            "g_score": 0.65,
-            "e_score": 0.95,
-            "notes": "Intuited what people wanted before they knew. Reality distortion field = making YOUR environment THE environment."
-        },
-        {
-            "name": "Nikola Tesla",
-            "field": "Science/Engineering",
-            "i_score": 0.98,
-            "l_score": 0.55,
-            "g_score": 0.90,
-            "e_score": 0.40,
-            "notes": "Visualized complete inventions before building. Pure I-dimension genius. Low L-score (self-love) led to exploitation."
-        },
-        {
-            "name": "Oprah Winfrey",
-            "field": "Media/Business",
-            "i_score": 0.90,
-            "l_score": 0.85,
-            "g_score": 0.80,
-            "e_score": 0.92,
-            "notes": "Reads people instantly. Built empire on authentic connection. High GILE balance across all dimensions."
-        },
-        {
-            "name": "Elon Musk",
-            "field": "Technology/Business",
-            "i_score": 0.88,
-            "l_score": 0.82,
-            "g_score": 0.60,
-            "e_score": 0.90,
-            "notes": "First principles thinking = intuitive leaps. Bets on unproven futures. Moderate G-score (ethics questioned)."
-        },
-        {
-            "name": "Warren Buffett",
-            "field": "Finance",
-            "i_score": 0.92,
-            "l_score": 0.70,
-            "g_score": 0.85,
-            "e_score": 0.88,
-            "notes": "Intuitive value detection. Ignores market noise. Sacred Interval trader before it had a name."
-        },
-        {
-            "name": "Muhammad Ali",
-            "field": "Sports",
-            "i_score": 0.90,
-            "l_score": 0.95,
-            "g_score": 0.78,
-            "e_score": 0.85,
-            "notes": "Predicted round of knockouts. Ultimate I+L combination. Self-belief transcended sport into cultural force."
-        }
-    ]
+        intuitive_legends = [
+            {
+                "name": "Judge Judy Sheindlin",
+                "field": "Law/Media",
+                "i_score": 0.95,
+                "l_score": 0.88,
+                "g_score": 0.82,
+                "e_score": 0.90,
+                "notes": "Razor-sharp courtroom instincts. Reads people beneath the surface. Outmatched opponents 1/3 her age. OWNED the courtroom through pure intuitive dominance."
+            },
+            {
+                "name": "Donald Trump",
+                "field": "Business/Politics",
+                "i_score": 0.85,
+                "l_score": 0.95,
+                "g_score": 0.35,
+                "e_score": 0.88,
+                "notes": "Pure I+L success formula. KNEW he would succeed when no one believed. Self-love + intuition sufficient to carve YOUR meaning of goodness and make YOUR environment THE environment. Proof you can 'succeed' without conventional intelligence or ethics."
+            },
+            {
+                "name": "Steve Jobs",
+                "field": "Technology",
+                "i_score": 0.92,
+                "l_score": 0.78,
+                "g_score": 0.65,
+                "e_score": 0.95,
+                "notes": "Intuited what people wanted before they knew. Reality distortion field = making YOUR environment THE environment."
+            },
+            {
+                "name": "Nikola Tesla",
+                "field": "Science/Engineering",
+                "i_score": 0.98,
+                "l_score": 0.55,
+                "g_score": 0.90,
+                "e_score": 0.40,
+                "notes": "Visualized complete inventions before building. Pure I-dimension genius. Low L-score (self-love) led to exploitation."
+            },
+            {
+                "name": "Oprah Winfrey",
+                "field": "Media/Business",
+                "i_score": 0.90,
+                "l_score": 0.85,
+                "g_score": 0.80,
+                "e_score": 0.92,
+                "notes": "Reads people instantly. Built empire on authentic connection. High GILE balance across all dimensions."
+            },
+            {
+                "name": "Elon Musk",
+                "field": "Technology/Business",
+                "i_score": 0.88,
+                "l_score": 0.82,
+                "g_score": 0.60,
+                "e_score": 0.90,
+                "notes": "First principles thinking = intuitive leaps. Bets on unproven futures. Moderate G-score (ethics questioned)."
+            },
+            {
+                "name": "Warren Buffett",
+                "field": "Finance",
+                "i_score": 0.92,
+                "l_score": 0.70,
+                "g_score": 0.85,
+                "e_score": 0.88,
+                "notes": "Intuitive value detection. Ignores market noise. Sacred Interval trader before it had a name."
+            },
+            {
+                "name": "Muhammad Ali",
+                "field": "Sports",
+                "i_score": 0.90,
+                "l_score": 0.95,
+                "g_score": 0.78,
+                "e_score": 0.85,
+                "notes": "Predicted round of knockouts. Ultimate I+L combination. Self-belief transcended sport into cultural force."
+            }
+        ]
     
-    st.markdown("#### GILE Dimension Scores (0.0 - 1.0)")
-    st.markdown("""
-    - **G (Goodness):** Ethical alignment, contribution to others
-    - **I (Intuition):** Knowing without reasoning, pattern recognition, instinct
-    - **L (Love):** Self-love, self-belief, internal validation
-    - **E (Environment):** Ability to shape surroundings, external success
-    """)
+        st.markdown("#### GILE Dimension Scores (0.0 - 1.0)")
+        st.markdown("""
+        - **G (Goodness):** Ethical alignment, contribution to others
+        - **I (Intuition):** Knowing without reasoning, pattern recognition, instinct
+        - **L (Love):** Self-love, self-belief, internal validation
+        - **E (Environment):** Ability to shape surroundings, external success
+        """)
     
-    for person in intuitive_legends:
-        gile_total = (person['g_score'] + person['i_score'] + person['l_score'] + person['e_score']) / 4
-        with st.expander(f"**{person['name']}** - {person['field']} | GILE: {gile_total:.2f}"):
-            col1, col2 = st.columns([1, 2])
-            with col1:
-                st.metric("G (Goodness)", f"{person['g_score']:.2f}")
-                st.metric("I (Intuition)", f"{person['i_score']:.2f}")
-                st.metric("L (Love)", f"{person['l_score']:.2f}")
-                st.metric("E (Environment)", f"{person['e_score']:.2f}")
-            with col2:
-                st.markdown(f"**Analysis:** {person['notes']}")
-                st.progress(person['i_score'], text=f"Intuition: {person['i_score']:.0%}")
+        for person in intuitive_legends:
+            gile_total = (person['g_score'] + person['i_score'] + person['l_score'] + person['e_score']) / 4
+            with st.expander(f"**{person['name']}** - {person['field']} | GILE: {gile_total:.2f}"):
+                col1, col2 = st.columns([1, 2])
+                with col1:
+                    st.metric("G (Goodness)", f"{person['g_score']:.2f}")
+                    st.metric("I (Intuition)", f"{person['i_score']:.2f}")
+                    st.metric("L (Love)", f"{person['l_score']:.2f}")
+                    st.metric("E (Environment)", f"{person['e_score']:.2f}")
+                with col2:
+                    st.markdown(f"**Analysis:** {person['notes']}")
+                    st.progress(person['i_score'], text=f"Intuition: {person['i_score']:.0%}")
     
-    st.markdown("---")
+        st.markdown("---")
     
-    st.markdown("### 🔑 The I+L Success Formula")
-    st.markdown("""
-    <div class="blog-post">
-        <h4>How to "Succeed" Without Conventional Intelligence or Ethics</h4>
-        <p>The Trump case study reveals a fundamental truth: <strong>I + L is sufficient for worldly success.</strong></p>
+        st.markdown("### 🔑 The I+L Success Formula")
+        st.markdown("""
+        <div class="blog-post">
+            <h4>How to "Succeed" Without Conventional Intelligence or Ethics</h4>
+            <p>The Trump case study reveals a fundamental truth: <strong>I + L is sufficient for worldly success.</strong></p>
         
-        <ul>
-            <li><strong>I (Intuition):</strong> KNOW you will succeed when no one believes you</li>
-            <li><strong>L (Self-Love):</strong> Internal validation independent of external opinion</li>
-        </ul>
+            <ul>
+                <li><strong>I (Intuition):</strong> KNOW you will succeed when no one believes you</li>
+                <li><strong>L (Self-Love):</strong> Internal validation independent of external opinion</li>
+            </ul>
         
-        <p>These two dimensions are sufficient to:</p>
-        <ul>
-            <li>Carve out YOUR OWN meaning of goodness</li>
-            <li>Make YOUR environment THE environment</li>
-            <li>Succeed without conventional intelligence, ethics, or care for others</li>
-        </ul>
+            <p>These two dimensions are sufficient to:</p>
+            <ul>
+                <li>Carve out YOUR OWN meaning of goodness</li>
+                <li>Make YOUR environment THE environment</li>
+                <li>Succeed without conventional intelligence, ethics, or care for others</li>
+            </ul>
         
-        <p><strong>Warning:</strong> This formula produces worldly success, not necessarily good GILE scores. 
-        Low G-dimension means the success may come at others' expense. The universe eventually rebalances.</p>
-    </div>
-    """, unsafe_allow_html=True)
+            <p><strong>Warning:</strong> This formula produces worldly success, not necessarily good GILE scores. 
+            Low G-dimension means the success may come at others' expense. The universe eventually rebalances.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("---")
+        st.markdown("---")
     
-    st.markdown("### 🎯 The Confidence Correlation-Causation Trap")
-    st.markdown("""
-    <div class="feature-card">
-        <h4>Why "Fake It Till You Make It" Fails</h4>
-        <p>Most people confuse correlation for causation when observing confident, successful people:</p>
+        st.markdown("### 🎯 The Confidence Correlation-Causation Trap")
+        st.markdown("""
+        <div class="feature-card">
+            <h4>Why "Fake It Till You Make It" Fails</h4>
+            <p>Most people confuse correlation for causation when observing confident, successful people:</p>
         
-        <p><strong>The Correlation View (WRONG):</strong></p>
-        <ul>
-            <li>"Successful people are confident"</li>
-            <li>"Therefore, if I ACT confident, I will become successful"</li>
-            <li>"Fake it till you make it!"</li>
-        </ul>
+            <p><strong>The Correlation View (WRONG):</strong></p>
+            <ul>
+                <li>"Successful people are confident"</li>
+                <li>"Therefore, if I ACT confident, I will become successful"</li>
+                <li>"Fake it till you make it!"</li>
+            </ul>
         
-        <p><strong>The Causation Reality (TI Framework):</strong></p>
-        <ul>
-            <li>High-I individuals aren't confident BECAUSE they plan to succeed</li>
-            <li>They <strong>KNOW</strong> they will succeed because they're reading a reality others can't see</li>
-            <li>Genuine confidence is the I-dimension detecting your actual position on the probability manifold</li>
-            <li>It cannot be faked because it's not a behavior - it's a perception</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
+            <p><strong>The Causation Reality (TI Framework):</strong></p>
+            <ul>
+                <li>High-I individuals aren't confident BECAUSE they plan to succeed</li>
+                <li>They <strong>KNOW</strong> they will succeed because they're reading a reality others can't see</li>
+                <li>Genuine confidence is the I-dimension detecting your actual position on the probability manifold</li>
+                <li>It cannot be faked because it's not a behavior - it's a perception</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("""
-    <div class="blog-post">
-        <h4>Warren Buffett: The Case Study</h4>
-        <p>Buffett's success wasn't just temperament, extensive reading, and trading style. 
-        He was using <strong>that which cannot be mimicked</strong> - genuine I-dimension pattern recognition.</p>
+        st.markdown("""
+        <div class="blog-post">
+            <h4>Warren Buffett: The Case Study</h4>
+            <p>Buffett's success wasn't just temperament, extensive reading, and trading style. 
+            He was using <strong>that which cannot be mimicked</strong> - genuine I-dimension pattern recognition.</p>
         
-        <p>Millions have copied his:</p>
-        <ul>
-            <li>Value investing philosophy</li>
-            <li>Reading habits (500 pages/day)</li>
-            <li>Patient temperament</li>
-            <li>Long-term holding strategy</li>
-        </ul>
+            <p>Millions have copied his:</p>
+            <ul>
+                <li>Value investing philosophy</li>
+                <li>Reading habits (500 pages/day)</li>
+                <li>Patient temperament</li>
+                <li>Long-term holding strategy</li>
+            </ul>
         
-        <p>Yet they don't become Buffett. <strong>Because they're copying the outputs, not the source.</strong>
-        The I-dimension cannot be transferred through books or imitation.</p>
-    </div>
-    """, unsafe_allow_html=True)
+            <p>Yet they don't become Buffett. <strong>Because they're copying the outputs, not the source.</strong>
+            The I-dimension cannot be transferred through books or imitation.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("""
-    <div class="testimonial">
-        <h4>Why Confidence Is Extinct</h4>
-        <p>If genuine confidence could be boosted long-term through:</p>
-        <ul>
-            <li>Planning and goal-setting</li>
-            <li>Exercise and health optimization</li>
-            <li>Reading and self-improvement</li>
-        </ul>
-        <p>...then genuine (or even convincingly faked) confidence wouldn't be so <strong>rare</strong>.</p>
+        st.markdown("""
+        <div class="testimonial">
+            <h4>Why Confidence Is Extinct</h4>
+            <p>If genuine confidence could be boosted long-term through:</p>
+            <ul>
+                <li>Planning and goal-setting</li>
+                <li>Exercise and health optimization</li>
+                <li>Reading and self-improvement</li>
+            </ul>
+            <p>...then genuine (or even convincingly faked) confidence wouldn't be so <strong>rare</strong>.</p>
         
-        <p>The scarcity of real confidence proves it's not a trainable skill - 
-        it's an I-dimension read of your actual probability landscape. 
-        You can't talk yourself into seeing what isn't there.</p>
-    </div>
-    """, unsafe_allow_html=True)
+            <p>The scarcity of real confidence proves it's not a trainable skill - 
+            it's an I-dimension read of your actual probability landscape. 
+            You can't talk yourself into seeing what isn't there.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("""
-    <div class="feature-card">
-        <h4>🔮 Confidence Is ANTICIPATORY, Not Retrospective</h4>
-        <p><strong>The Key Insight:</strong> Confidence isn't given for the good you are currently doing - 
-        it's for how you will perform <strong>in the future</strong>.</p>
+        st.markdown("""
+        <div class="feature-card">
+            <h4>🔮 Confidence Is ANTICIPATORY, Not Retrospective</h4>
+            <p><strong>The Key Insight:</strong> Confidence isn't given for the good you are currently doing - 
+            it's for how you will perform <strong>in the future</strong>.</p>
         
-        <p>Energy to succeed makes sense <strong>only in an anticipatory sense</strong>.</p>
+            <p>Energy to succeed makes sense <strong>only in an anticipatory sense</strong>.</p>
         
-        <p><strong>Think about it:</strong> If the brain just gave us "confidence" for succeeding at a relatively hard 
-        task we <em>already did</em>, what would be its point? The task is done! Confidence would be useless as a mere reward.</p>
+            <p><strong>Think about it:</strong> If the brain just gave us "confidence" for succeeding at a relatively hard 
+            task we <em>already did</em>, what would be its point? The task is done! Confidence would be useless as a mere reward.</p>
         
-        <p><strong>The Real Function:</strong></p>
-        <ul>
-            <li>Confidence = The I-dimension detecting your FUTURE probability landscape</li>
-            <li>It's predictive energy, not retrospective celebration</li>
-            <li>High-I individuals feel confident because they SEE success coming</li>
-            <li>Low-I individuals can't manufacture this because there's nothing to detect</li>
-        </ul>
+            <p><strong>The Real Function:</strong></p>
+            <ul>
+                <li>Confidence = The I-dimension detecting your FUTURE probability landscape</li>
+                <li>It's predictive energy, not retrospective celebration</li>
+                <li>High-I individuals feel confident because they SEE success coming</li>
+                <li>Low-I individuals can't manufacture this because there's nothing to detect</li>
+            </ul>
         
-        <p><strong>Implication:</strong> This is why affirmations and "positive thinking" don't work long-term. 
-        You can't convince your I-dimension to see a future that isn't there. 
-        Genuine confidence arises when your intuition detects an actual high-probability success path.</p>
-    </div>
-    """, unsafe_allow_html=True)
+            <p><strong>Implication:</strong> This is why affirmations and "positive thinking" don't work long-term. 
+            You can't convince your I-dimension to see a future that isn't there. 
+            Genuine confidence arises when your intuition detects an actual high-probability success path.</p>
+        </div>
+        """, unsafe_allow_html=True)
     
-    st.markdown("---")
+        st.markdown("---")
     
-    st.success("**Remember:** When you quote Judge Judy, you get protection. She said it first!")
+        st.success("**Remember:** When you quote Judge Judy, you get protection. She said it first!")
 
 elif page == "About":
     st.markdown("## About the TI Framework")
