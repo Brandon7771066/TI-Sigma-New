@@ -1,21 +1,22 @@
 # The PD Spectrum: Full Range, DT's Position on the Imaginary Axis, and the Role of the Emerick Crossover (1/√2)
 
-> ## ⚠️ TIER A AUDIT VERDICT — 2026-05-08 (Pass 7)
+> ## ✅ PASS 8 RECANONIZATION — 2026-05-08
 >
-> **STATUS: NON-CANONICAL. Pending Brandon-audit & rewrite.**
+> **STATUS: RECANONIZED. Geometry is Brandon-canonical; specific label-strings under separate audit.**
 >
-> This paper was identified in the Pass 6 abbreviations-index audit (§2.3) as **Tier A high-priority** because it is built around the **disowned PD-as-complex-plane vocabulary** that Brandon has retracted as Replit-introduced (see canonical ruling in `TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` §2.2).
+> **Pass 6 / Pass 7 OVER-RETRACTION RETRACTED.** Brandon clarified 2026-05-08:
 >
-> **Specifically disowned in this paper:** Pre-DT mirror, Pre-DT zone, DT cliff, Indeterminate disc, Standard mirror, Transcendent mirror, Transcendent annulus, DT-mirror, PD Real Axis, PD Imaginary Axis, Chirality direction (π/3), and the entire "complex-plane PD with named zones at 0, ±(√2−1), ±(1/√2), ±1, ±φ, ±e, ±π" architecture.
+> > "The complex plane spectrum involving the PD and DT was indeed my idea. It was just the language that was not coined by me."
 >
-> Per Brandon (2026-05-08, Pass 6): **"PD = Permissibility Distribution canonically and exclusively. PD is a 1-D scalar on the (−3, 2) interval based on the Perfect Fifth (3:2 musical ratio) and connected to the Riemann Hypothesis. The Indeterminate sub-range is (−0.666, 0.333). Pre-DT Zone, DT Cliff, and Indeterminate Disc are all terms that I never coined."**
+> The complex-plane PD/DT geometry — real axis = (−∞, +∞) with named threshold constants at ±1, ±φ, ±e, ±π (and Emerick Crossover ±1/√2); imaginary axis = DT/Tralse axis; ±e ultra-thresholds; circular |PD| = e Indeterminate region; 4/3 area-ratio relations; 360° ultra-state symmetry — is **Brandon-canonical** and is anchored in Brandon-authored URBs **#733** (`urb_733_complex_pd_plane_i_dimension_unified_with_ultra_thresholds.md`, April 2026), **#728** (`urb_728_pd_architecture_full_lockin_e_thresholds_four_thirds_badness_multiplier.md`), and **#736** (`urb_736_ticg_complete_threshold_mapping_lcc_gile_pd_unified.md`).
 >
-> **Possible salvage candidates (Brandon to confirm or reject):**
-> - The Emerick Crossover at 1/√2 ≈ 0.7071 — if this is Brandon-canonical, it lives on the (−3, 2) PD axis, not in a complex plane.
-> - The numerical near-identity (√2−1)² + (1/√2)² ≈ 2/3 — interesting algebraic observation, may survive in a different framing.
-> - The TIC vertex angles (π/3, 2π/3) — likely belong to TIC vocabulary, not PD vocabulary.
+> **What remains under separate label-audit (NOT geometry-audit):** the specific English-language strings "Pre-DT Zone," "DT Cliff," "Indeterminate Disc," "Standard Mirror," "Transcendent Mirror," "Transcendent Annulus," "Chirality Direction," and similar zone-names that may have been agent-introduced or agent-rephrased. Brandon retains the right to rename any specific zone label without altering the underlying geometry. Until Brandon issues alternative names, these strings stay in service as working labels with the understanding that they are agent-supplied descriptors of Brandon-canonical geometric regions.
 >
-> **Action required before this paper can be considered canonical:** Brandon audit. Until then, treat the content below as a Pass-7-pre-canonical artifact preserved for context. Do NOT cite this paper as canonical PD architecture in the book or in publication-grade work.
+> **What is NOT retracted:** the underlying claim that PD admits a complex-plane representation; the threshold constants at ±1, ±φ, ±e, ±π; the imaginary-axis DT/Tralse interpretation; the ultra-state symmetry; the 4/3 area ratios; the Emerick Crossover at 1/√2. **All of these are Brandon-canonical per the URB anchors above.**
+>
+> **Relationship to the (−3, 2) Perfect-Fifth PD scalar:** the (−3, 2) interval is the **operationally-projected PD scale** used for empirical scoring (pharmacology validation, MR PD assignments in synchronicity catalogue, etc.). The complex-plane PD is the **full mathematical object**; the (−3, 2) interval is its principal real-axis working window. Both are Brandon-canonical and they coexist as projection ↔ full-object, not as competing definitions. (Compare: TI Sigma Graph is the 2-D projection of TI Sigma Crystal; same projection-of-fuller-object pattern.)
+>
+> **For consolidation paper see:** `PD_COMPLEX_PLANE_RECANONIZATION_PASS_8_2026-05-08.md` (Pass 8 deliverable).
 >
 > ---
 

@@ -1,0 +1,16 @@
+{
+  "deposition_id": 20091187,
+  "html": "https://zenodo.org/deposit/20091187",
+  "self": "https://zenodo.org/api/deposit/depositions/20091187",
+  "publish_url": "https://zenodo.org/api/deposit/depositions/20091187/actions/publish",
+  "discard_url": "https://zenodo.org/api/deposit/depositions/20091187/actions/discard",
+  "doi_reserved": {
+    "doi": "10.5281/zenodo.20091187",
+    "recid": 20091187
+  },
+  "files_uploaded": [
+    "PD_COMPLEX_PLANE_RECANONIZATION_PASS_8_2026-05-08.md",
+    "TI_FOR_EVERYONE_COMPLETE_BOOK.md",
+    "ti_sigma_corpus_2026-05-08.tar.gz"
+  ]
+}

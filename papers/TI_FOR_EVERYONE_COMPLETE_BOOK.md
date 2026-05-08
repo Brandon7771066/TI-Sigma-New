@@ -151,7 +151,7 @@ The second is the *GILE framework* — Goodness, Intuition, Love, and Environmen
 
 The third is *Myrion Resolution* (MR), an iterative convergence procedure for moving from a state of indeterminate truth to a stable assignment, where such an assignment is available, and for recognizing when it is not. MR is the practical core of the book. Where Bayesian inference asks the agent to assign and update credences, MR asks the agent to perform a sequence of structured inquiries and to register honestly the point at which further inquiry ceases to change the assignment. Chapter 7 develops the procedure in detail; Chapter 10 illustrates it through three extended case studies.
 
-The fourth is the *HEAR score* (Holistic Existence Amplification Reading), a derived measure that integrates GILE, MR convergence behavior, and contextual variables into a single scalar. HEAR is intended to play, for the inner life of an agent, a role analogous to that played by gross domestic product for an economy: a coarse, contestable, but useful aggregate that supports comparison across time and across decisions.
+The fourth is the *HEAR score* (Holistic Existence Amplification Razor), a derived measure that integrates GILE, MR convergence behavior, and contextual variables into a single scalar. HEAR is intended to play, for the inner life of an agent, a role analogous to that played by gross domestic product for an economy: a coarse, contestable, but useful aggregate that supports comparison across time and across decisions.
 
 ### 1.4 Scope and Limits of This Book
 

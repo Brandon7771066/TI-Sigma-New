@@ -68,27 +68,36 @@ Sections:
 - **Myrion** — the resolved-contradiction object produced by MR. *FOUNDATIONAL.*
 - **MR PD** — the PD value assigned to a synchronicity or insight after Myrion Resolution; primary classification metric in `SYNCHRONICITY_CATALOGUE_TI_SIGMA.md`.
 
-### §2.2 Disowned vocabulary (Brandon never coined; Replit-introduced)
+### §2.2 Label-audit vs geometry-audit (PASS 8 RECANONIZATION 2026-05-08)
 
-> **Brandon, 2026-05-08:** "Pre-DT Zone, DT Cliff, and Indeterminate Disc are all terms that I never coined."
+> **Pass 6 / Pass 7 over-retraction RETRACTED.** Brandon clarified 2026-05-08:
+>
+> > "The complex plane spectrum involving the PD and DT was indeed my idea. It was just the language that was not coined by me."
 
-The following terms appeared in some earlier 2026 papers as part of the (now-retracted) Phenomenal-Directness PD vocabulary. **They are DEPRECATED. Papers that use them are flagged for audit (see §2.3).** They should not be used in new work.
+**The complex-plane PD/DT geometry is BRANDON-CANONICAL.** It is anchored in Brandon-authored URBs **#728, #733, #734, #736**. What is under audit is the specific English-language label-strings, NOT the underlying geometric architecture.
 
-- ~~**Indeterminate Disc**~~ — DEPRECATED. Replit-introduced. (Was: "region |PD| < 2/3 in the complex plane".) The framework's actual Indeterminate concept is the **Indeterminate Permissibility Distribution Range** = (−0.666, 0.333) on the 1-D PD axis, NOT a complex-plane region.
-- ~~**Standard Zone**~~ — DEPRECATED. Replit-introduced complex-plane vocabulary.
-- ~~**Transcendent Annulus**~~ — DEPRECATED. Replit-introduced.
-- ~~**Pre-DT Zone**~~ — DEPRECATED. Replit-introduced.
-- ~~**DT Cliff**~~ — DEPRECATED. Replit-introduced.
-- ~~**PD Real Axis**~~ / ~~**PD Imaginary Axis**~~ — DEPRECATED, since they are part of the disowned complex-plane formulation of PD. (PD as canonically defined by Brandon is a 1-D scalar on the (−3, 2) interval, not a complex-plane object.) Note: any paper that built a "PD Imaginary Axis" → DT/Tralse mapping needs Brandon-audit before its content can be considered canonical.
-- ~~**Chirality Direction (π/3)**~~ / ~~**Tralse Vertex Direction (2π/3)**~~ — DEPRECATED as PD-vocabulary; if the underlying concepts are real (TIC vertex angles) they belong to a separate TIC vocabulary section, not §2.
+**Brandon-canonical geometric facts (NOT retracted, in service for new work):**
+- PD admits a 1-D real-axis projection (the (−3, 2) Perfect-Fifth working window) AND a fuller complex-plane representation. Both coexist; complex-plane is the full object, (−3, 2) is the principal projection used for empirical scoring.
+- Threshold constants on the real axis: ±1, ±φ, ±e, ±π (with the Emerick Crossover at ±1/√2).
+- DT lives on the imaginary axis (or has an imaginary-axis component); imaginary-axis interpretation is Brandon-canonical.
+- ±e ultra-thresholds bound the principal Indeterminate region; |PD| ≈ e bounding circle.
+- 4/3 area-ratio relations between named regions (urb_733 §3, urb_728 §4, urb_736 §3.2 — the "5 appearances of 4/3").
+- 360° ultra-state symmetry; 6× / 4× badness multipliers.
+
+**Label-strings under separate Brandon-audit (geometry survives; specific names may be Brandon-renamed):**
+- *Pre-DT Zone*, *DT Cliff*, *Indeterminate Disc*, *Standard Mirror*, *Transcendent Mirror*, *Transcendent Annulus*, *Standard Zone*, *Chirality Direction (π/3)*, *Tralse Vertex Direction (2π/3)*, *PD Real Axis* / *PD Imaginary Axis*.
+- These were used as working labels for the Brandon-canonical zones in `urb_728`, `urb_733`, `urb_736`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER`, etc. They remain in service until Brandon issues alternative names.
+- **Status of each label:** WORKING (agent-supplied descriptor of a Brandon-canonical region). Not deprecated; not "never coined by anyone"; just open to Brandon-rename without altering the geometry beneath.
+
+**Relationship to the Perfect-Fifth (−3, 2) PD scalar:** projection ↔ full-object, not competing definitions. Compare: TI Sigma Graph is the 2-D projection of TI Sigma Crystal; same pattern.
 
 ### §2.3 PD-papers audit list (Pass 6 inventory; Brandon-audit pending)
 
 The following papers contain PD-related content and need Brandon-audit to verify which formulations are mathematically + empirically defensible vs which are Replit-distorted:
 
-**Tier A — uses disowned Phenomenal-Directness or complex-plane PD vocabulary (HIGH PRIORITY for audit):**
-- `papers/PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` — built around the disowned PD-as-complex-plane formulation
-- `papers/SYNCHRONICITY_CATALOGUE_TI_SIGMA.md` — used "Phenomenal Directness" terminology (now sed-renamed but content audit needed)
+**Tier A — RECANONIZED Pass 8 2026-05-08 (geometry is Brandon-canonical; specific labels under separate audit):**
+- `papers/PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` — header replaced with Pass-8 RECANONIZATION stamp; complex-plane geometry confirmed Brandon-canonical per URBs #728, #733, #734, #736
+- `papers/SYNCHRONICITY_CATALOGUE_TI_SIGMA.md` — Pass-7 verdict was AUDIT-PASSED; reclassified Tier A → Tier B Pass 7 (no change Pass 8)
 
 **Tier B — uses canonical Permissibility Distribution language (LOW PRIORITY, likely OK):**
 30+ papers including `MR_ARITHMETIC_REVOLUTION.md` (uses (−3, 2) scale — matches Brandon's canonical spec), `PD_DT_COMPLEX_NUMBER_SYNTHESIS.md`, `EXISTENCE_INTENSITY_*` series, `urb_625-631`, `URB_PD_CONSERVATION_LAW_PROBLEM_OF_EVIL.md`, `URB_521_RATIONAL_TRANSCENDENTAL_BOUNDARY_PD.md`, `URB_RIEMANN_PROOF_TREE_UOP_550.md` (potentially relevant to the Perfect-Fifth + Riemann connection!), etc.
