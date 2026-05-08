@@ -20,7 +20,7 @@ The Authority Axis (AA, "Double A") was named by Brandon Emerick on 2026-05-07 P
 AA is **orthogonal** to:
 - **PD real axis** (degree of trueness)
 - **PD imaginary axis** (modality / DT)
-- **Tralse five-valued logic** (categorical truth-state: {Nonsense, Moot, True, False, Indeterminate}; MR-gate scheme per `TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md` §4, corrected per Brandon 2026-05-08; classical T/F explicitly rejected)
+- **MR Truth Labels (base-4 + Meta-Truths)** (categorical: base-4 = {True, False, Indeterminate, Double Tralse} + N Meta-Truths in `urb_608`; canonical per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`; classical T/F explicitly rejected; Tralse = universal quality, Indeterminate = specific state)
 - **τ/δ separability** (internal calibration vs external selection from `ASYMMETRIC` §4)
 
 A TI Sigma truth-claim's full description is therefore a **5-dimensional vector**, with AA as the 5th coordinate.

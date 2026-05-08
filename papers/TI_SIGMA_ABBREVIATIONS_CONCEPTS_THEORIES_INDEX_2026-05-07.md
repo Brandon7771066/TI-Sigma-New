@@ -27,29 +27,33 @@ Sections:
 
 - **TI** (Tralse Informationalism / Tralse-Informationalist Framework) — the overarching framework. Coined June 25, 2025. *FOUNDATIONAL.* Anchor: framework-wide.
 - **TI Sigma** — the formal-mathematical layer of TI; emphasizes proof-theoretic content (Lean 4 verified theorems). *FOUNDATIONAL.*
-- **Tralse** — the third truth-value beyond True/False; "neither classically true nor classically false but information-bearing." *FOUNDATIONAL.* Anchor: foundational from June 2025.
-- **Tralse Logic** — the three-valued (or complex-valued) logic system whose values are {True, False, Tralse}. *FOUNDATIONAL.*
+- **Tralse (the universal quality)** — **the universal indeterminacy quality embedded in every coherent truth label** (per Brandon 2026-05-08 canonical ruling). Embedded in True, False, *and* Indeterminate; absent only in DT (which contradicts it and is therefore discarded). **NOT a 5th base truth-value** — listing it as one would double-count, since it is universal. Tralse-quality is quantified on the PD-imaginary axis (axis 2). *FOUNDATIONAL.* Anchor: framework foundation from June 2025; canonical clarification `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` §2.3.
+- **Indeterminate (the state)** — distinct from Tralse-quality. **One of the four base MR Truth Labels** (a discrete MR2-gate output: a coherent 50/50 balance, the "45-degree door"). *FOUNDATIONAL.* Anchor: same canonical ruling.
+- **Tralse Logic** — historically: the three-valued logic system {True, False, Tralse}. **Superseded** by the canonical base-4 MR Truth Label scheme (per 2026-05-08 ruling). Retained as the historical name for the broader framework's logic layer. *FOUNDATIONAL (historical).*
 - **Tralsity** — the property of being Tralse; degree to which a proposition occupies the Tralse value rather than True or False. *ESTABLISHED.*
 - **Tralsebit** — a single information unit in Tralse logic, generalizing the bit. *ESTABLISHED.* Anchor: `BEC_OPTICAL_TRALSEBITS_PRIMORDIAL_COMPUTER.md`.
 - **TT** (True-True) — ternary digit 2; the maximum-truth ternary code in PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`. **Caution**: not a stand-alone truth value; see "MR-gate truth-value scheme" below for the canonical truth-value taxonomy.
 - **TI** (Tralse-Indeterminate, ternary code; *do not confuse with framework abbreviation TI*) — ternary digit 1; partial/indeterminate truth in PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`.
 - **DT** — **OVERLOADED ABBREVIATION** (canonical-bug flag, surfaced 2026-05-08): two distinct meanings exist in the corpus.
-  - **DT (scheme A) = Double Tralse** — the MR1-failure / discard signal. "Indeterminate indeterminacy" / incoherent self-contradiction. *FOUNDATIONAL.* Anchor: `FIVE_VALUED_TRUTH_TRALSE_INDETERMINATE_DISTINCTION_URB_528.md`. **This is the canonical truth-value-scheme meaning.**
+  - **DT (scheme A) = Double Tralse** — the MR1-failure / discard signal. **Formal definition (Brandon 2026-05-08): DT(P) ⟺ τ(P) ∧ ¬τ(P)** — "something which IS AND IS NOT tralse." Always some form of nonsense. Algebraic instantiation: T(T(P)) = τ² = 0 nilsquare (per `urb_677`). *FOUNDATIONAL.* Anchor: `FIVE_VALUED_TRUTH_TRALSE_INDETERMINATE_DISTINCTION_URB_528.md`, `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` §2.2, `urb_677_double_tralse_indeterminate_indeterminacy.md`. **This is the canonical truth-value-scheme meaning.**
   - **DT (scheme B) = Defective Truth / Down Truth / Direct-Tralse** — ternary digit 0; truth-absent on the PD-imaginary axis (PD-coordinate notation, NOT a truth-value category). *ESTABLISHED.* Anchor: `urb_628`, `urb_734`, `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md`.
   - **Reconciliation OPEN**: scheme B should be renamed (e.g., **DefT**) to eliminate the collision. Until then, every "DT" use must be tagged scheme A or scheme B at point of use.
 - **TF** (True-False / Tralse-False) — the False zone on the PD real axis, range (0, √2−1) — PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`.
 - **EV** (Extreme Value / Edge Value) — appears in the PD-coordinate-notation set {TT, TI, TF, DT(scheme B), EV}. *ESTABLISHED.* Anchor: `urb_628` §4. Not part of the canonical MR-gate truth-value scheme.
 
-### MR-Gate Truth-Value Scheme (canonical, per Brandon 2026-05-08)
+### MR Truth Labels — Canonical Scheme (per Brandon 2026-05-08 ruling)
 
-- **MR1** (Existence Gate / Gate 1) — first-iteration MR; detects whether a statement is **Double Tralse** (DT scheme A). DT statements are flagged and discarded; no storage slot. *FOUNDATIONAL.* Anchor: `FIVE_VALUED_TRUTH_TRALSE_INDETERMINATE_DISTINCTION_URB_528.md` lines 87-88.
-- **MR2** (Truth Gate / Gate 2) — second-iteration MR; for any statement that passes MR1 (sufficiently coherent), determines whether it is **True, False, or Indeterminate**. Indeterminate = coherent 50/50 balance ("45-degree door"), not ignorance. *FOUNDATIONAL.* Anchor: same paper, lines 92-93.
-- **Future MRs (MR3, MR4, …)** — modify provisional MR1+MR2 results across iterations. Each full pipeline iteration yields **one overall truth-claim**.
-- **Compact-4 truth-value set** = {True, False, Indeterminate, Double Tralse}. *FOUNDATIONAL.*
-- **Expanded-5 truth-value set** = {Nonsense, Moot, True, False, Indeterminate} — DT compartmentalized into:
-  - **Nonsense** — DT proper; indeterminate indeterminacy; incoherent. *FOUNDATIONAL (per Brandon 2026-05-08).*
-  - **Moot** — DT-other compartment; well-formed but truth-evaluation is dispensable in the relevant frame. *FOUNDATIONAL (per Brandon 2026-05-08).*
+**TI Sigma's canonical truth-value scheme is base-4 + N Meta-Truths.** Anchor: **`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`**.
+
+- **Base-4 MR Truth Labels** = **{True, False, Indeterminate, Double Tralse}**. *FOUNDATIONAL.*
+- **MR1** (Existence Gate / Gate 1) — first-iteration MR; detects DT (per the τ ∧ ¬τ definition above). DT statements are flagged and discarded. *FOUNDATIONAL.* Anchor: `urb_528` lines 87-88.
+- **MR2** (Truth Gate / Gate 2) — for statements passing MR1: determines True, False, or Indeterminate. Indeterminate = coherent 50/50 balance ("45-degree door"). *FOUNDATIONAL.* Anchor: same paper lines 92-93.
+- **MR3+** — modify provisional MR1+MR2 results. Substantial modifications register as **Meta-Truths** (next item).
+- **Meta-Truths (MTs)** — operations on top of the base-4 evaluation, firing at MR3+. **N = 12 established** (per `urb_608_meta_truths_myrion_resolution_catalogue.md`), N = 24 CONJECTURAL (per `urb_639`). Categories A1/A2 Reversal, B1/B2 Dissolution, C1/C2 Scope-Shift, D1/D2 Contextual, E1/E2 Acceptance, F1/F2 Integration. *FOUNDATIONAL (12-MT core); CONJECTURAL (24-MT extension).*
+  - **Moot (MT-B1)** — the most-frequently-fired Meta-Truth: well-formed statement whose base-4 truth-evaluation is dispensable in the relevant frame. **Independent of DT** (per Brandon 2026-05-08 ruling) — Moot is never nonsense; DT is always nonsense. Composes with base labels: "Moot-True", "Moot-False", "Moot-Indeterminate" are meaningful compounds. *FOUNDATIONAL.* Anchor: `urb_608`.
+- **Why 4, not 5**: base-4 + N Meta-Truths fully covers `urb_713`'s ≥99.7% coverage analysis without inflating the base set. Mootness is iterative and compositional (signature of an MT, not a base value). See `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` §4.
 - **Classical True/False are EXPLICITLY REJECTED** by TI Sigma as sloppy labels. All statements carry universal Tralse-quality (structured imperfection); no proposition occupies pure classical T or F. *FOUNDATIONAL.* Anchor: `TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md` §4.1.
+- **Superseded prior schemes** (kept in corpus as historical artifacts; see ruling §3 table for full reconciliation): `urb_639` {TRUE, FALSE, TI, DT, EV} reclassified as PD-coordinate notation; `urb_677` {T, F, I, Tralse, DT} — Tralse moved to quality register; `urb_713` {T, F, Tralse, Moot, DT} — coverage analysis preserved, Moot reclassified to MT-B1; Brandon 2026-05-08 morning first-pass {Nonsense, Moot, T, F, I} — refined to base-4 + Moot-as-MT.
 
 ---
 
