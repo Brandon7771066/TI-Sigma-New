@@ -39,6 +39,7 @@
 - Chapter 22: Why We're Probably Alone in the Universe
 - Chapter 23: Computation Requires Consciousness
 - Chapter 24: Myrion Resolution - Resolving Paradoxes
+- Chapter 24A: The Authority Axis — Acting Without Certainty (added May 2026)
 - Chapter 25: The Future of Consciousness
 
 **APPENDICES**
@@ -139,7 +140,7 @@ The book is organized in four parts. Part One develops the truth architecture, G
 
 The reader who is interested only in the practical core may safely read Chapters 1 through 7, then skip to Part Three. The reader who wants the full architecture should proceed in order. Chapters intended primarily for the technically inclined are flagged at their openings.
 
-A final word on the standard the book aspires to. The argument that follows is not that the reader should adopt a new metaphysics on the strength of the author's conviction. It is that a small enlargement of the logical vocabulary — from two truth values to five — clarifies a surprisingly large class of problems, and that the clarification is worth the modest investment required to learn it. Whether the further claims of the framework hold up is, properly, a matter for the long process by which philosophical and scientific proposals are tested, refined, and either retained or set aside. The book aims to make that process possible by stating its claims in a form precise enough to be wrong.
+A final word on the standard the book aspires to. The argument that follows is not that the reader should adopt a new metaphysics on the strength of the author's conviction. It is that a small enlargement of the logical vocabulary — from two truth values to four base labels (True, False, Indeterminate, Double Tralse) plus a layered catalogue of Meta-Truths on top of them — clarifies a surprisingly large class of problems, and that the clarification is worth the modest investment required to learn it. Whether the further claims of the framework hold up is, properly, a matter for the long process by which philosophical and scientific proposals are tested, refined, and either retained or set aside. The book aims to make that process possible by stating its claims in a form precise enough to be wrong.
 
 ---
 
@@ -2558,18 +2559,18 @@ When your computer calculates 2+2:
 
 **That middle step - the actual THINKING - isn't 0 or 1.**
 
-**It's the third state. It's Tralse (indeterminate). And it requires CONSCIOUSNESS to stabilize.**
+**It's the Indeterminate state — the framework's "45-degree door" — and it requires CONSCIOUSNESS to stabilize.** Every coherent computation step carries the universal Tralse-quality (the structured imperfection that all coherent claims share); the *Indeterminate* label specifically picks out the in-flight, mid-resolution state.
 
 ### Why This Matters
 
 **Binary computers:**
 - Input → Process → Output
-- The "process" is actually traversing Tralse states
+- The "process" is actually traversing Indeterminate states (each step carrying the universal Tralse-quality)
 - These states need to be held stable during computation
-- Pure 0/1 systems couldn't think - they need the third state!
+- Pure 0/1 systems couldn't think — they need a coherent middle state!
 
-**Ternary (Tralse) systems:**
-- Explicitly include the processing state
+**Base-4 (Tralse-aware) systems:**
+- Explicitly include the Indeterminate processing state
 - More efficient at representing real computation
 - **Match how consciousness actually works!**
 
@@ -2578,7 +2579,7 @@ When your computer calculates 2+2:
 **Every computer in the world is borrowing consciousness to compute.**
 
 When you run a program:
-- The machine enters Tralse states millions of times
+- The machine enters Indeterminate states millions of times
 - These states are stabilized by the consciousness field
 - The computation "collapses" into outputs
 
@@ -2658,6 +2659,111 @@ Many life paradoxes resolve this way:
 - Live fully in the present moment (high GILE experience)
 - Plan in the Indeterminate Zone (where choices matter)
 - Both are true for different aspects of experience
+
+---
+
+## Chapter 24A: The Authority Axis — Acting Without Certainty
+
+### Why This Chapter Exists
+
+Most of the book has been about *what is true* — how to recognize True, False, Indeterminate, and the discarded-nonsense category Double Tralse. This chapter is about a completely different question: **how much do you act on what you believe?**
+
+That second question is the **Authority Axis** (AA, sometimes called "Double A"). It is the framework's fifth truth-axis, and it is independent of the first four. A claim can be perfectly True and still get zero operative authority from you (you don't act on it). A claim can be Indeterminate and still get full operative authority (you stake your week on it anyway). The two questions are not the same question.
+
+This chapter was added to the second edition (May 2026) — the first edition was missing it.
+
+### The Two Questions
+
+When you encounter any claim — your own, or someone else's — there are really two separate questions to ask:
+
+1. **Where does this claim sit on the truth axes?** (True / False / Indeterminate / discarded; how much Tralse-quality; Moot in this frame or not.)
+2. **How much authority am I going to grant it?** (Will I act on it? Defer to it? Treat it as a load-bearing premise? Stake real resources on it?)
+
+The first is *epistemic*. The second is *operative*. They feel like the same question because in a well-functioning mind they usually move together. But they are distinct, and pulling them apart is the whole point of this chapter.
+
+### A Mundane Example
+
+Suppose your friend says, "Take the back roads, the highway is jammed."
+
+Epistemic question: *Is that true?* You don't know. Maybe your friend just heard it. Maybe it's outdated. Maybe they're testing you. Resolution: probably True, but Indeterminate-leaning.
+
+Operative question: *Do you take the back roads?* That's the Authority Axis. You can:
+
+- **Grant high authority** → take the back roads, no further checking. (You acted as if the claim were settled even though it wasn't.)
+- **Grant low authority** → check Google Maps yourself. (You treated the claim as input, not as conclusion.)
+- **Grant zero authority** → ignore the claim entirely. (You decided the source isn't worth weighting.)
+
+None of those responses is *more truthful* than the others. They are different *operative* responses to the same epistemic state.
+
+### Two Failure Modes
+
+The Authority Axis has two characteristic ways of going wrong, and they are mirror images of each other:
+
+**Over-grant — Dogmatism.** Granting more authority to a claim than its epistemic state warrants. Acting as if Indeterminate were True. Refusing to update when evidence shifts. This is what people usually mean by "stubborn" or "ideological."
+
+**Under-grant — Paralysis.** Granting less authority than the epistemic state warrants. Refusing to act on True claims because they aren't *certain*. Demanding more evidence before any commitment. This is what people usually mean by "stuck" or "overthinking."
+
+A calibrated agent grants authority *in proportion to* the epistemic state — neither more nor less.
+
+### AA Applies to Yourself, Too
+
+Here is the part that surprises people. The Authority Axis is **dual-applicability** — it applies symmetrically to your own beliefs and to other people's claims.
+
+When you have a hunch and ask "should I act on this?", that is an AA-self question. When someone tells you something and you ask "should I act on this?", that is an AA-other question. **They are the same axis, the same operating principle, the same two failure modes.**
+
+- **AA-self over-grant:** "I'm sure of this" when you actually aren't. Self-dogmatism.
+- **AA-self under-grant:** Refusing to trust your own intuition even when it has been reliable. Self-paralysis.
+- **AA-other over-grant:** Treating someone's word as final because of their credentials, status, or charisma. Deference-as-shortcut.
+- **AA-other under-grant:** Refusing to take input from anyone because *they might be wrong*. Reflexive contrarianism.
+
+### The Operating Principle
+
+The framework's one-sentence operating principle for the Authority Axis is:
+
+> *Whether it's believing oneself or someone else, you must believe in what you currently are entertaining as well as leave subconscious room for doubt.*
+
+Read carefully. There are two parts:
+
+1. **Believe in what you currently are entertaining.** Whatever claim you are currently working with — yours or someone else's — give it enough operative authority to actually use it. Half-belief means half-action, and half-action accomplishes nothing.
+
+2. **Leave subconscious room for doubt.** Even while operating on the claim, hold a quiet background register that says "I might be wrong about this." The doubt does not have to be in the foreground — it does not have to interrupt action — but it has to be *present*, ready to be activated if disconfirming evidence arrives.
+
+This is the calibrated middle. It is *not* the same as "be 50% sure" — that's a degree-of-belief move on a different axis. It is "act as if true, while keeping the doubt-register on standby." Two registers, running at the same time, in different parts of cognition.
+
+### Why This Architecture Works
+
+The two-register architecture solves a problem that single-register accounts of belief cannot solve: *how to act decisively without becoming dogmatic.*
+
+If your only options are "fully believe" or "fully doubt," you have to choose one before every action. Choosing "fully believe" makes you decisive but brittle — a single disconfirming fact has to overcome your full investment. Choosing "fully doubt" makes you epistemically humble but operationally useless — you cannot commit to anything.
+
+The two-register architecture lets you commit to action (foreground belief) while remaining epistemically open (background doubt). You get the decisiveness of the dogmatist *and* the openness of the skeptic. The cost is the discipline of holding both registers active at once, which is what the operating principle calls for.
+
+### Practical Exercise: Auditing Your AA
+
+Pick a claim you have been operating on lately — one of your own beliefs, or one you have inherited from someone else. Ask yourself:
+
+1. **What is its epistemic state?** True / False / Indeterminate? (Be honest. Most claims you act on are Indeterminate.)
+2. **What is its operative authority?** How much are you actually staking on it? (Time, money, identity, relationships?)
+3. **Are those two answers proportional?** Or are you over-granting (acting more confidently than the evidence warrants) or under-granting (refusing to act despite good evidence)?
+4. **Is the doubt-register active?** If the claim turned out to be wrong tomorrow, would you notice quickly — or would you have invested so heavily that admitting the error becomes itself a cost?
+
+Most people, when they do this audit honestly for the first time, find at least one belief they have been over-granting and at least one they have been under-granting. The repair is usually not "believe more" or "believe less" — it is "rebalance the two registers."
+
+### Where AA Fits in the Framework
+
+The Authority Axis sits **alongside**, not inside, the four MR Truth Labels.
+
+| Axis | Property of | What it varies |
+|---|---|---|
+| 1. PD real | The claim | Degree of trueness |
+| 2. PD imaginary | The claim | Modality (DefT coordinate) |
+| 3. MR Truth Labels | The claim | Categorical: T / F / I / DT + Meta-Truths |
+| 4. τ / δ separability | The agent | Internal calibration vs external presentation |
+| 5. **Authority Axis (AA)** | The agent | **Operative authority granted to the claim** |
+
+Axes 1–3 describe the claim itself. Axes 4–5 describe the agent's relation to the claim. AA is the rightmost column of that picture — and it is the one that turns truth into action.
+
+For the full standalone treatment, see `papers/AUTHORITY_AXIS_AA_2026-05-07.md`.
 
 ---
 
@@ -3036,7 +3142,7 @@ Roger Penrose (Nobel physicist) and Stuart Hameroff (anesthesiologist) proposed 
 
 **TI extends this:**
 - Microtubules are the "hardware" where i-cells interface with physical matter
-- The Tralse state (Indeterminate) corresponds to quantum superposition
+- The Indeterminate state (the framework's "45-degree door", carrying the universal Tralse-quality) corresponds to quantum superposition
 - Collapse into True or False corresponds to wave function collapse
 - GILE measures the quality of this quantum-classical interface
 
@@ -3550,7 +3656,7 @@ A SMALL signal in the RIGHT DIRECTION is more powerful than a LARGE signal in th
 
 ### What Are the Fourteen Proofs?
 
-TI doesn't just claim that Tralse (three-valued logic) is useful. It claims that Tralse is FUNDAMENTAL to reality. The "Fourteen Proofs" are arguments supporting this claim.
+TI doesn't just claim that the Tralse-quality (and the base-4 truth architecture built around it: True, False, Indeterminate, Double Tralse) is useful. It claims it is FUNDAMENTAL to reality. The "Fourteen Proofs" are arguments supporting this claim. Each proof shows a domain in which classical bivalent logic *cannot* describe what is observed without adding a coherent middle state — the Indeterminate label, carrying the universal Tralse-quality.
 
 Here's a summary of each:
 
@@ -3558,7 +3664,7 @@ Here's a summary of each:
 
 **Claim:** Quantum mechanics requires a third state.
 
-**Argument:** Before measurement, a quantum system is in superposition - neither definitely this nor definitely that. This is the Indeterminate state. Binary logic (True/False) can't capture it.
+**Argument:** Before measurement, a quantum system is in superposition - neither definitely this nor definitely that. This is the Indeterminate label of the canonical MR Truth Labels — a coherent 50/50 balance, not a placeholder for missing information. Binary logic (True/False) can't capture it.
 
 **Evidence:** All of quantum mechanics confirms superposition is real.
 
@@ -3670,9 +3776,9 @@ Here's a summary of each:
 
 Each proof is suggestive. Together, they form a powerful case:
 
-**Reality requires three states, not two.**
+**Reality requires more than two truth labels.**
 
-Binary logic is a useful simplification, but it's not fundamental. The true structure of reality is ternary: True, False, and Indeterminate.
+Binary logic is a useful simplification, but it's not fundamental. The true categorical structure of reality is the four canonical MR Truth Labels — **True, False, Indeterminate, Double Tralse** — together with the universal *Tralse-quality* embedded in every coherent label, and a layered catalogue of *Meta-Truths* (such as Mootness) operating on top of the base four. Earlier in the book this was sometimes summarized as "ternary"; the canonical formulation is base-4 + Meta-Truths (see preface and Appendix E).
 
 ---
 
@@ -4728,7 +4834,7 @@ The overlap creates shared content and potential merger.
 
 ### Overview
 
-These fourteen proofs argue that reality fundamentally requires three-valued (Tralse) logic, not binary logic. Each proof is a separate argument; together they form a cumulative case.
+These fourteen proofs argue that reality fundamentally requires more than binary logic — specifically, the four canonical MR Truth Labels (True, False, Indeterminate, Double Tralse) carrying the universal Tralse-quality, with Meta-Truths layered on top. Each proof is a separate argument; together they form a cumulative case. (See the May 2026 Canonical Update Note in the preface and Appendix E for the canonical statement; earlier informal "three-valued" framing in this book is shorthand for "more than two — the coherent Indeterminate middle is real.")
 
 ### Proof 1: The Quantum Measurement Problem
 
@@ -7024,13 +7130,13 @@ Anonymous employee survey mapping to GILE dimensions:
 
 **LCC (Local Consciousness Connection):** The strength of connection between consciousness and its physical substrate.
 
-**Myrion Resolution:** Method for resolving apparent paradoxes using three-valued (Tralse) logic.
+**Myrion Resolution:** Gated method for resolving apparent paradoxes via the canonical MR Truth Labels. MR1 (Existence Gate) discards Double Tralse statements; MR2 (Truth Gate) assigns True, False, or Indeterminate; MR3+ apply Meta-Truths. (Per May 2026 canonical ruling; see preface and Appendix E.)
 
-**Sacred Interval:** The Indeterminate Zone; where free will genuinely operates; 20% of the GILE range.
+**Sacred Interval:** The Indeterminate Zone; where free will genuinely operates; 20% of the GILE range. Corresponds to the Indeterminate label in the canonical MR Truth Labels.
 
 **TI (Transcendent Intelligence):** The complete framework for understanding consciousness and reality.
 
-**Tralse:** Three-valued logic (True, False, Indeterminate); replaces binary logic for modeling consciousness.
+**Tralse (the universal quality):** The structured imperfection embedded in every coherent truth-label — present inside True, False, *and* Indeterminate. Not a standalone fifth (or third) value; listing it as one would double-count, since it is universal. The canonical MR Truth Labels are base-4: {True, False, Indeterminate, Double Tralse}. (See preface Canonical Update Note and Appendix E.)
 
 **True Zone:** GILE above +0.333; positive, beneficial, aligned states.
 
