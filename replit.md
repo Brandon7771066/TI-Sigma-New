@@ -19,6 +19,8 @@ _Populate as you build_
 *   `data/polar_h10_export/_summary_2026_05.json`: per-session HR summaries (May 1-3 2026).
 *   `mendi_ble_client.py`, `mendi_connect.bat`, `mendi_data_bridge_api.py`: Mendi BLE Path B scaffolds.
 *   `hardware/ESP32_MoodAmplifier/`: ESP32 firmware + guide.
+*   `papers/AUTHORITY_AXIS_AA_2026-05-07.md`: Authority Axis (AA / "Double A") standalone paper — 5th orthogonal truth-axis, dual-applicability (self + other), simultaneous-belief-and-doubt operating principle.
+*   `papers/TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md`: Review paper synthesizing all 5 TI Sigma truth-axes (PD-real, PD-imaginary/DT, tralse five-valued, τ/δ separability, Authority Axis AA) with 10-pair orthogonality table + external-framework projections + dimensional-inflation threshold flagged.
 
 ## Architecture decisions
 *   **GILE-HEM Operationalization & MR1 Threshold Theorem**
