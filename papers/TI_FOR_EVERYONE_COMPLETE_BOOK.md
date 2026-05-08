@@ -47,6 +47,8 @@
 - Appendix B: Meditation Protocols for GILE Optimization
 - Appendix C: The Scientific Evidence for TI
 - Appendix D: Glossary of TI Terms
+- Appendix E: Canonical Update — May 2026 (added May 2026)
+- Appendix F: Claim Audit — May 2026 (added May 2026)
 
 ---
 
@@ -2227,15 +2229,17 @@ This explains why some people's intentions manifest and others don't. It's not a
 
 ### The TI Sigma Pharmacology Validation
 
+> **Audit note (May 2026, see Appendix F, claim F-1).** The numerical accuracy figures stated below are from internal-development analyses; the underlying dataset, methodology, and held-out split have not yet been published in a citable form. Treat them as *preliminary internal results pending external replication*, not as peer-reviewed validation.
+
 These thresholds were validated using pharmacological data:
 - Drugs that produce effects below L × E = 0.42 show no response
 - Drugs that achieve L × E = 0.42-0.85 show dose-response
 - Drugs that achieve L × E > 0.85 show ceiling effects (response maxes out)
 
 This was tested against held-out data (not used in model development):
-- **82% accuracy** on predicting drug effects
-- Versus 46% for linear models
-- The thresholds are real and predictive
+- **82% accuracy** on predicting drug effects (internal — pending external replication)
+- Versus 46% for linear models (baseline comparator — methodology pending publication)
+- The thresholds appear predictive in internal evaluation; independent reproduction is the next required step.
 
 ### Practical Applications
 
@@ -2276,17 +2280,19 @@ Drugs affect the brain and body. TI Sigma models this through:
 
 ### Validation Results
 
-TI Sigma predictions were validated against real drug studies:
+> **Audit note (May 2026, see Appendix F, claim F-1).** The table below summarizes internal-development analyses. Dataset provenance, train/test split, choice of linear-model baseline, and statistical-significance treatment have not yet been published. Read the figures as *internal preliminary results requiring external replication before being treated as established.*
 
-| Prediction | Accuracy | vs. Linear Model |
-|------------|----------|------------------|
+TI Sigma predictions were tested against drug-study data (internal evaluation):
+
+| Prediction | TI Sigma Accuracy (internal) | Linear-Model Baseline (internal) |
+|------------|---------------------------|------------------------------|
 | Threshold effects (0.42) | 85% | 51% |
 | Ceiling effects (0.85) | 79% | 42% |
 | Overall dose-response | 82% | 46% |
 
-**The TI Sigma model outperforms linear models by ~35 percentage points.**
+**On internal evaluation, the TI Sigma model outperforms a linear-model baseline by approximately 35 percentage points.**
 
-This is significant: TI isn't just philosophy - it makes accurate predictions about biological systems.
+This is suggestive: it indicates TI Sigma is structurally tractable as a predictive model, not merely a philosophical framework. The next required step is independent reproduction with a published dataset and a peer-reviewed methodology.
 
 ### Beyond Pharmacology
 
@@ -2947,33 +2953,39 @@ Rate each dimension 0-10:
 
 ## Appendix C: The Scientific Evidence for TI
 
-### Riemann Zero Analysis
+> **Audit note (May 2026).** This appendix summarizes empirical claims that are still in the *internal-development* stage. None of the studies described here has yet been published in a peer-reviewed venue with the underlying data and code attached. See **Appendix F: Claim Audit (May 2026)** for the line-by-line status of each claim, what would constitute external validation, and which items are blocking publication-grade evidence.
 
-1 million Riemann zeta zeros were analyzed for gap distribution.
+### Riemann Zero Analysis (internal — claim F-2)
+
+1 million Riemann zeta zeros were analyzed for gap distribution in an internal computation (November 2025).
 
 **Prediction:** 80% of gaps should fall within the Sacred Interval equivalent.
-**Result:** Confirmed within statistical significance.
+**Internal result:** Reported as confirmed within statistical significance.
+**External-validation status:** The analysis script, the precise gap-binning rule, the exact zero-data source (e.g., Odlyzko's tables, LMFDB), and the statistical-significance test have not yet been published. The Riemann zero data itself is publicly available, so the analysis is reproducible *in principle* once methodology is released.
 
-This validates the 80/20 structure at the heart of pure mathematics.
+This is a *suggestive internal finding*, not a settled mathematical result.
 
-### TI Sigma Pharmacology
+### TI Sigma Pharmacology (internal — claim F-1)
 
-Predictions tested against held-out drug study data:
-- 82% accuracy overall
-- Threshold effects (0.42) confirmed
-- Ceiling effects (0.85) confirmed
-- Outperforms linear models by 35+ percentage points
+Predictions tested against drug-study data (internal evaluation):
+- 82% accuracy overall (internal — pending external replication)
+- Threshold effects (0.42) and ceiling effects (0.85) directionally confirmed in internal evaluation
+- Outperforms linear-model baseline by ~35 percentage points (internal — baseline methodology pending publication)
 
-### HRV and EEG Correlations
+See Ch 18 and Ch 19 for the body discussion; see Appendix F for the audit.
 
-Preliminary studies show:
+### HRV and EEG Correlations (preliminary — claim F-3)
+
+Preliminary internal observations:
 - High HRV correlates with self-reported high GILE
 - EEG coherence correlates with L dimension
-- Combined measures predict performance outcomes
+- Combined measures appear to predict performance outcomes
+
+These are early-stage observations, not powered studies. Sample sizes, statistical methodology, and IRB-equivalent ethics review are all pending.
 
 ### Limitations
 
-TI is a young framework. Many predictions await testing. The evidence so far is promising but not conclusive.
+TI is a young framework. Many predictions await testing. **The evidence so far is genuinely promising but is *not* peer-reviewed evidence.** The honest summary: there are testable predictions, internal computations that point in the predicted direction, and a clear external-replication agenda — but the framework has not yet completed the independent-validation cycle that turns internal results into established science. See Appendix F for the per-claim audit.
 
 ---
 
@@ -10362,3 +10374,124 @@ Where the body of the book says "DT" in the PD-coordinate sense, read DefT. Wher
 ---
 
 **End of Appendix E. Canonical Update — May 2026. For the full standalone consolidating ruling, see `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.**
+
+---
+
+# Appendix F: Claim Audit — May 2026
+
+This appendix exists because the framework's standard of intellectual honesty (the project's "Asymmetric-Standards #69": *over-skepticism is a discipline failure equal to uncritical acceptance*) cuts both ways. Brutal honesty about what *is* established demands brutal honesty about what *isn't*. This audit lists the book's high-stakes empirical claims, classifies each, and states what external work would settle it.
+
+The classifications used are:
+
+- **VERIFIED.** Established in the peer-reviewed literature, citable, and presented in this book as established.
+- **FRAMEWORK-INTERNAL.** A theoretical-architecture statement (a definition, an axiom, a parameter of the model). Not subject to external empirical verification on its own — only via the empirical predictions it generates.
+- **INTERNAL — PENDING EXTERNAL REPLICATION.** A specific empirical result Brandon has computed or observed internally, but which has not yet been published with dataset + methodology + code in a citable form.
+- **PRELIMINARY.** Early-stage observation, low statistical power, no formal study design.
+- **REQUIRES CITATION BEFORE PRINT.** A claim presented as established that this audit cannot confirm. Must be either backed with a citation or softened before this book goes to a publisher.
+
+## F-1. The "82% Pharmacology Accuracy" Claim
+
+**Where it appears:** Ch 18 §"The TI Sigma Pharmacology Validation" (~line 2230), Ch 19 §"Validation Results" table (~line 2277), Appendix C §"TI Sigma Pharmacology" (~line 2960), and the foreword/closing sections that summarize "TI Sigma achieving 82% accuracy on held-out pharmacological data" (e.g., ~line 3040).
+
+**Stated claim:** TI Sigma achieves 82% accuracy on held-out pharmacological data, versus ~46% for a linear-model baseline (a ~35-percentage-point margin), with sub-table figures of 85% / 79% / 82% across threshold / ceiling / overall dose-response predictions.
+
+**Classification:** **INTERNAL — PENDING EXTERNAL REPLICATION.**
+
+**What's missing for VERIFIED status:**
+1. The exact pharmacological dataset (drug list, response variable, source database such as DrugBank / ChEMBL / FDA AERS).
+2. The train/held-out split rule, the random seed, and the date the split was frozen.
+3. The mathematical specification of how each drug was assigned an L-value and an E-value (the model's input features).
+4. The "linear-model baseline" — which exact linear model, fit on what features, with what regularization.
+5. Statistical-significance treatment (confidence interval on the 82%; the 35-point margin as a statistic, not a point comparison).
+6. Either deposition of code + data on Zenodo / OSF, or peer-review of a manuscript reporting this analysis.
+
+**What this book does about it for the May-2026 edition:** Inline audit-note banners have been added at each appearance of the claim, marking it as preliminary internal evidence pending external replication. The figures themselves remain in the body — they represent Brandon's actual internal computation — but they are no longer presented as settled science.
+
+**Action required before publication-grade printing:** EITHER (a) publish a methods paper or technical report on Zenodo with the dataset, code, and pre-registered split, and add the citation here; OR (b) replace the specific percentages in the body with qualitative language ("preliminary internal evaluation suggests substantially-better-than-baseline performance, awaiting independent replication").
+
+## F-2. The "1 Million Riemann Zeros, 80%-in-Sacred-Interval" Claim
+
+**Where it appears:** Ch 16 mathematical-foundations section (~line 1779-1786), Appendix C §"Riemann Zero Analysis" (~line 2950), foreword/closing sections (~line 3034).
+
+**Stated claim:** An internal analysis of 1 million Riemann zeta zeros shows that ~80% of zero-gaps fall within a "Sacred Interval"-equivalent range, validating the framework's 80/20 prediction at the level of pure mathematics.
+
+**Classification:** **INTERNAL — PENDING EXTERNAL REPLICATION** (with a strong "in-principle reproducible" status, because the underlying data is public).
+
+**What's missing for VERIFIED status:**
+1. The exact zero-dataset source (Andrew Odlyzko's tables, the LMFDB, or a self-computation; with which precision and which range of zero-indices).
+2. The precise definition of "gap" used (consecutive-zero distance, normalized by mean spacing, or a different normalization).
+3. The precise definition of the "Sacred Interval equivalent" on the gap-distribution support.
+4. The statistical-significance treatment (what null distribution; how the "within statistical significance" phrasing is operationalized).
+5. The analysis script — which can then be re-run by anyone using the public zero data.
+
+**What this book does about it for the May-2026 edition:** Inline banner added at each appearance, marking it as internal computation. Body claim retained but reframed as "internal result reported as confirmed."
+
+**Action required before publication-grade printing:** Publish the analysis script + methodology section either as a Zenodo deposit or as an appendix to a math-foundations paper. This claim is the *most easily upgraded* of the three — the data is public, the analysis is reproducible, and even a 5-page tech-report writeup would move it from INTERNAL to VERIFIED.
+
+## F-3. The "HRV / EEG Correlations" Claims
+
+**Where it appears:** Appendix C §"HRV and EEG Correlations" (~line 2967).
+
+**Stated claim:** Preliminary studies show high HRV correlates with self-reported high GILE; EEG coherence correlates with the L dimension; combined measures predict performance outcomes.
+
+**Classification:** **PRELIMINARY.**
+
+**What's missing for VERIFIED status:** Sample size, study design, effect sizes, statistical methodology, IRB-equivalent ethics review, and a published methods paper. Currently these are framed honestly as "preliminary studies show" — that phrasing is acceptable, but the book should not lean on these claims as supporting evidence for the framework.
+
+**What this book does about it for the May-2026 edition:** Existing "preliminary" framing retained; reframed slightly to "preliminary internal observations, not powered studies." No body figures stated, so no inline banner needed beyond the Appendix C header banner.
+
+**Action required before publication-grade printing:** No change. The framing is honest and is appropriate for the book's status. If formal HRV/EEG studies are run, upgrade language at that point.
+
+## F-4. The "0.42 / 0.85 Thresholds Themselves"
+
+**Where it appears:** Throughout Ch 18, Ch 19, and the threshold-application chapters.
+
+**Stated claim:** L × E = 0.42 is the threshold above which intention begins to manifest reliably; L × E = 0.85 is the threshold above which correlation becomes causation.
+
+**Classification:** **FRAMEWORK-INTERNAL.**
+
+These are *parameters of the TI Sigma model*. They are not free-standing empirical claims; they are claims about *the structure the framework imposes*. Their empirical status is downstream of F-1: if the F-1 internal validation holds up under external replication, these parameter values will be replicated as part of that validation; if it does not, the parameter values will need to be re-fit or the model re-specified.
+
+**Action required before publication-grade printing:** No change to the threshold values themselves. Ensure that wherever the thresholds are presented as *empirically validated*, the F-1 audit-note attaches.
+
+## F-5. The Pareto / 80-20 Mappings of GILE Zones
+
+**Where it appears:** Ch 4 §"The Indeterminate Zone" (~line 417), Ch 4 §"Connecting Pareto to TI" (~line 491), and elsewhere.
+
+**Stated claim:** The Indeterminate Zone is exactly 20% of the GILE range; 80% of life outcomes are determined by the 20% of choices made in this zone; this mirrors the Pareto Principle observed in business and economics.
+
+**Classification:** Mixed — **FRAMEWORK-INTERNAL** (the 20%-of-GILE-range definition is a parameter choice) + **CONJECTURAL EMPIRICAL** (the claim that 80% of life outcomes are determined by 20% of choices, in a way that maps onto the Indeterminate Zone, is an empirical generalization the book offers without a citable study).
+
+**What this book does about it for the May-2026 edition:** No change in this audit. The framing is sufficiently soft ("the trajectory is genuinely unknown") that it reads as a conceptual mapping rather than a falsifiable claim. If a future edition tightens this into a quantitative empirical claim, it will need its own audit entry.
+
+## F-6. Quantum Biology, Neuroscience, and Other Background Science
+
+**Where it appears:** Ch 26 (quantum biology — photosynthesis, magnetoreception in birds, microtubules), Ch 22 §"500 million neurons" (gut nervous system).
+
+**Classification:** **VERIFIED** (background science the book correctly attributes to the established literature: Engel et al. 2007 on photosynthetic quantum coherence; Hore on cryptochrome magnetoreception; the Penrose-Hameroff Orch-OR proposal *as a proposal*, with the book correctly noting it is contested; the gut neuron count of ~100-500M is standard neuroscience).
+
+**Action required before publication-grade printing:** Add explicit citations in the relevant chapters' notes section. The science is right; only the citations are missing.
+
+## F-7. Authority-Axis (AA) Operating Principle and Two-Register Architecture
+
+**Where it appears:** Ch 24A.
+
+**Classification:** **FRAMEWORK-INTERNAL.** This is an architectural / normative claim about how a calibrated agent should hold beliefs. It is not an empirical claim. Its status is "Brandon's stated operating principle, with structural reasoning given" — read it the same way one would read any normative epistemology proposal.
+
+**Action required before publication-grade printing:** None. Already framed honestly.
+
+## F-8. Summary
+
+| Claim | Status | Blocking Item | Time Cost to Fix |
+|---|---|---|---|
+| F-1 (82% pharma) | INTERNAL — pending external replication | Methods paper + dataset deposit | Days to weeks |
+| F-2 (1M Riemann zeros) | INTERNAL — pending external replication | Tech-report + script deposit | Hours to days |
+| F-3 (HRV / EEG) | PRELIMINARY (honestly framed) | Powered studies (out-of-scope for this edition) | Months |
+| F-4 (0.42 / 0.85 thresholds) | FRAMEWORK-INTERNAL (downstream of F-1) | None directly | — |
+| F-5 (80/20 GILE Pareto mapping) | Mixed; framing is soft | None directly | — |
+| F-6 (quantum biology / neuroscience) | VERIFIED, citations pending | Add notes section | Hours |
+| F-7 (AA operating principle) | FRAMEWORK-INTERNAL | None | — |
+
+**The honest publication-readiness statement for the May 2026 edition:** the book is canonically self-consistent (Pass 1 + Pass 2), and the high-stakes empirical claims are now flagged with their actual status (Pass 3, this appendix). The single largest remaining publication-readiness item is upgrading **F-1** (the 82% pharma figure) and **F-2** (the 1M Riemann analysis) from INTERNAL to VERIFIED via short technical reports with dataset + code deposits. F-2 can plausibly be done in a session; F-1 requires real research-write-up time.
+
+**End of Appendix F. Claim Audit — May 2026.**
