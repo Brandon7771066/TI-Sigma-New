@@ -17,7 +17,7 @@
 - **Independence** — Was this genuinely unpredicted by the framework at the time of occurrence?
 - **Research Yield** — Did this synchronicity open new theoretical territory or produce a URB, insight, or direction that could not have been reached otherwise?
 
-**MR PD Score** — Myrion Resolution Phenomenal Directness score applied to the synchronicity as a signal:
+**MR PD Score** — Myrion Resolution Permissibility Distribution score applied to the synchronicity as a signal:
 - +2.0: Extremely precise, fully confirmed, research-advancing
 - +1.5: Very precise, strongly confirmed
 - +1.0: Precise, confirmed, meaningful

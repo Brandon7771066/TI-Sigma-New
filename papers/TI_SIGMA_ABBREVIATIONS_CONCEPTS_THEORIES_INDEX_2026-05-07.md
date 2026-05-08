@@ -14,7 +14,7 @@ Each entry has the form:
 
 Sections:
 - §1 Core Truth-Theoretic Vocabulary
-- §2 PD (Phenomenal Directness) Vocabulary
+- §2 PD (Permissibility Distribution) Vocabulary
 - §3 GILE & Consciousness Vocabulary
 - §4 Geometric & Mathematical Constants
 - §5 Hardware, Biometrics & Empirical Vocabulary
@@ -55,21 +55,45 @@ Sections:
 
 ---
 
-## §2 PD (Phenomenal Directness) Vocabulary
+## §2 PD (Permissibility Distribution) Vocabulary — CANONICAL RULING 2026-05-08
 
-- **PD** (Phenomenal Directness) — the framework's primary scalar/complex measure of how directly a phenomenon manifests; full spectrum is the complex plane. *FOUNDATIONAL.* Anchor: URB #394, #416, #728, #733, #734, `PD_SPECTRUM_2026-05-07`.
-- **MR** (Myrion Resolution) — the resolution-mechanism applied to apparent contradictions; produces a PD score for the resolved state. *FOUNDATIONAL.*
+> **CANONICAL RULING (Brandon, 2026-05-08, Pass 6):** **PD = Permissibility Distribution.** This has always been the canonical meaning. The "Phenomenal Directness" naming that appeared in some 2026 papers (and in earlier versions of this index) was a **Replit-introduced distortion of Brandon's acronym** and is hereby retracted. The PD ambiguity flag (raised Pass 5) is **RESOLVED in favor of Permissibility Distribution**.
+
+### §2.1 The canonical Permissibility Distribution
+
+- **PD** (Permissibility Distribution) — the framework's primary scalar measure of *event valence × existence-footprint* — the joint frequency-and-intensity profile of fortunate vs unfortunate events in everyday life. *FOUNDATIONAL.*
+- **PD Interval** — the canonical interval **(−3, 2)** covering ~80% of everyday-life events. The interval is **based on the Perfect Fifth** (musical harmony ratio 3:2) and is **connected to the Riemann Hypothesis**. *Brandon-canonical.* The exact mathematical derivation of the (−3, 2) bounds from the Perfect Fifth + Riemann is part of the PD-papers audit (see §2.3).
+- **Indeterminate Permissibility Distribution Range** — the sub-interval **(−0.666, 0.333)** within the PD interval, where events are "neither positive nor negative" (close to 0). The framework predicts ~20% of everyday events fall in this range; the remaining 80% are polarized (more positive or more negative). Legacy alias: "Sacred Interval" (renamed Pass 5).
+- **MR** (Myrion Resolution) — the resolution-mechanism applied to apparent contradictions; produces a PD value for the resolved state. *FOUNDATIONAL.*
 - **Myrion** — the resolved-contradiction object produced by MR. *FOUNDATIONAL.*
-- **MR PD** — the PD score assigned to a synchronicity or insight after Myrion Resolution; primary classification metric in `SYNCHRONICITY_CATALOGUE_TI_SIGMA.md`.
-- **Indeterminate Disc** — region |PD| < 2/3 in the complex plane. *ESTABLISHED.*
-- **Standard Zone** — region 2/3 < |PD| < 2 in the complex plane; where most ordinary truth-states live. *ESTABLISHED.*
-- **Transcendent Annulus** — region 2 < |PD| < e ≈ 2.718. *ESTABLISHED.*
-- **Pre-DT Zone** — region e < |PD| < π. *ESTABLISHED.*
-- **DT Cliff** — the boundary at |PD| = π beyond which DT-saturation dominates. *ESTABLISHED.* Anchor: `urb_734`.
-- **PD Real Axis** — the True/False direction. *ESTABLISHED.*
-- **PD Imaginary Axis** — the DT/Tralse direction. *ESTABLISHED.* Anchor: `urb_734`, `PD_SPECTRUM_2026-05-07`.
-- **Chirality Direction** — angle π/3 (60°), TIC vertex C. *ESTABLISHED.*
-- **Tralse Vertex Direction** — angle 2π/3 (120°), TIC vertex T. *ESTABLISHED.*
+- **MR PD** — the PD value assigned to a synchronicity or insight after Myrion Resolution; primary classification metric in `SYNCHRONICITY_CATALOGUE_TI_SIGMA.md`.
+
+### §2.2 Disowned vocabulary (Brandon never coined; Replit-introduced)
+
+> **Brandon, 2026-05-08:** "Pre-DT Zone, DT Cliff, and Indeterminate Disc are all terms that I never coined."
+
+The following terms appeared in some earlier 2026 papers as part of the (now-retracted) Phenomenal-Directness PD vocabulary. **They are DEPRECATED. Papers that use them are flagged for audit (see §2.3).** They should not be used in new work.
+
+- ~~**Indeterminate Disc**~~ — DEPRECATED. Replit-introduced. (Was: "region |PD| < 2/3 in the complex plane".) The framework's actual Indeterminate concept is the **Indeterminate Permissibility Distribution Range** = (−0.666, 0.333) on the 1-D PD axis, NOT a complex-plane region.
+- ~~**Standard Zone**~~ — DEPRECATED. Replit-introduced complex-plane vocabulary.
+- ~~**Transcendent Annulus**~~ — DEPRECATED. Replit-introduced.
+- ~~**Pre-DT Zone**~~ — DEPRECATED. Replit-introduced.
+- ~~**DT Cliff**~~ — DEPRECATED. Replit-introduced.
+- ~~**PD Real Axis**~~ / ~~**PD Imaginary Axis**~~ — DEPRECATED, since they are part of the disowned complex-plane formulation of PD. (PD as canonically defined by Brandon is a 1-D scalar on the (−3, 2) interval, not a complex-plane object.) Note: any paper that built a "PD Imaginary Axis" → DT/Tralse mapping needs Brandon-audit before its content can be considered canonical.
+- ~~**Chirality Direction (π/3)**~~ / ~~**Tralse Vertex Direction (2π/3)**~~ — DEPRECATED as PD-vocabulary; if the underlying concepts are real (TIC vertex angles) they belong to a separate TIC vocabulary section, not §2.
+
+### §2.3 PD-papers audit list (Pass 6 inventory; Brandon-audit pending)
+
+The following papers contain PD-related content and need Brandon-audit to verify which formulations are mathematically + empirically defensible vs which are Replit-distorted:
+
+**Tier A — uses disowned Phenomenal-Directness or complex-plane PD vocabulary (HIGH PRIORITY for audit):**
+- `papers/PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` — built around the disowned PD-as-complex-plane formulation
+- `papers/SYNCHRONICITY_CATALOGUE_TI_SIGMA.md` — used "Phenomenal Directness" terminology (now sed-renamed but content audit needed)
+
+**Tier B — uses canonical Permissibility Distribution language (LOW PRIORITY, likely OK):**
+30+ papers including `MR_ARITHMETIC_REVOLUTION.md` (uses (−3, 2) scale — matches Brandon's canonical spec), `PD_DT_COMPLEX_NUMBER_SYNTHESIS.md`, `EXISTENCE_INTENSITY_*` series, `urb_625-631`, `URB_PD_CONSERVATION_LAW_PROBLEM_OF_EVIL.md`, `URB_521_RATIONAL_TRANSCENDENTAL_BOUNDARY_PD.md`, `URB_RIEMANN_PROOF_TREE_UOP_550.md` (potentially relevant to the Perfect-Fifth + Riemann connection!), etc.
+
+**Note on URB anchors previously cited for PD-as-Phenomenal-Directness:** The earlier abbreviations index entry for PD cited URB #394, #416, #728, #733, #734 as anchors for "Phenomenal Directness." Per Brandon's ruling, those URB anchors should be re-read to verify whether they actually use the Brandon-canonical Permissibility Distribution sense (in which case the citations remain valid, just under the correct name) OR whether the URB content itself was Replit-distorted in earlier sessions. **This re-reading is a Brandon-audit item, not an agent-decision item, per #69.**
 
 ---
 
@@ -81,15 +105,9 @@ Sections:
 - **L dimension (Love)** — third GILE axis; relational coherence. *ESTABLISHED.*
 - **E dimension (Environment)** — fourth GILE axis; situational coupling. *ESTABLISHED.*
 - **GILE Score** — composite [0, 1] consciousness-optimization metric; 0.92+ is near-perfect. *ESTABLISHED.*
-- **Indeterminate Permissibility Distribution Range** (canonical name as of 2026-05-08; legacy name: "Sacred Interval" or "Sacred GILE Interval") — the range (−0.666, 0.333) on the Permissibility Distribution axis; the interval where events are "neither positive nor negative" (close to 0). The framework predicts ~20% of everyday-life events fall in this range (the remaining 80% being polarized positive/negative). *ESTABLISHED for the everyday-events empirical claim.* **Note (Pass 4-5 audit, 2026-05-08):** the legacy "derived from Pareto principle + Riemann analysis" framing is no longer defensible — the Riemann-zero mapping has been **disconfirmed** at the natural operationalization (density-bin Pareto test) AND at Brandon's clarified literal-interval operationalization (interval-membership test, all four normalization schemes). See book Appendix F-2 for the audit. The everyday-events claim itself is independent of the Riemann-zero analogy and remains the framework's load-bearing form of the claim.
+- **Indeterminate Permissibility Distribution Range** (canonical name as of 2026-05-08; legacy name: "Sacred Interval" or "Sacred GILE Interval") — the sub-interval **(−0.666, 0.333)** within the canonical PD interval (−3, 2); the interval where events are "neither positive nor negative" (close to 0). The framework predicts ~20% of everyday-life events fall in this range (the remaining 80% being polarized positive/negative). *ESTABLISHED for the everyday-events empirical claim.* **Note (Pass 4-6 audit, 2026-05-08):** Brandon clarifies that the (−3, 2) overall PD interval is **based on the Perfect Fifth (musical 3:2 ratio) and is connected to the Riemann Hypothesis** — this is a Brandon-canonical claim that has NOT yet been independently tested by the agent. What HAS been tested and disconfirmed is the secondary mapping where the Indeterminate sub-range (−0.666, 0.333) was claimed to characterize Riemann-zero gap-deviations: under both the density-bin Pareto operationalization and the literal interval-membership operationalization (4 normalization schemes), Riemann-zero gaps do NOT exhibit the bimodal "20% close to zero, 80% polarized" structure (book Appendix F-2). **The (−3, 2) Perfect-Fifth + Riemann derivation, however, is a separate and stronger claim that remains UNTESTED and may well hold** — it is on the Brandon-audit list as part of the §2.3 PD-papers re-read.
 
-> **#69 PD AMBIGUITY FLAG (raised Pass 5, 2026-05-08, awaiting Brandon's ruling):** The two letters "PD" are currently used in the project for **at least three distinct concepts**:
->
-> 1. **PD = Phenomenal Directness** — the canonical foundational scalar/complex measure on the complex plane (this section §2). Anchored in URB #394, #416, #728, #733, #734, `PD_SPECTRUM_2026-05-07`, the Indeterminate Disc, the Pre-DT Zone, the DT Cliff. Used in dozens of papers.
-> 2. **PD = Permissibility Distribution** (Brandon's directive 2026-05-08) — the axis on which the Indeterminate Permissibility Distribution Range (−0.666, 0.333) lives; measures "positive vs negative valence" of events.
-> 3. **Permissibility Distribution (different scale)** — in `papers/MR_ARITHMETIC_REVOLUTION.md`, "permissibility distributions" live on the scale (−3, 2) and are used to formalize fuzzy identity in MR Arithmetic.
->
-> These are *three different objects* sharing two letters, with overlapping but non-identical roles. Brandon's ruling required: (a) keep PD = Phenomenal Directness as the canonical foundational meaning, and use a different abbreviation (e.g., PermD, PDist, PD-events) for the Permissibility Distribution axis; OR (b) overwrite PD canonically as Permissibility Distribution and rename Phenomenal Directness everywhere (large surface — touches the entire PD complex-plane vocabulary including Indeterminate Disc, Pre-DT Zone, DT Cliff, PD Real Axis, PD Imaginary Axis); OR (c) accept the ambiguity and contextualize at every use site. Per #69 brutal-honesty discipline, this should NOT be silently overwritten without Brandon's explicit ruling. **Pass 5 holding pattern:** the new "Indeterminate Permissibility Distribution Range" entry above writes out "Permissibility Distribution" in full to avoid the ambiguity; existing "PD" usages elsewhere have NOT been touched and continue to mean Phenomenal Directness per this section.
+> **#69 PD AMBIGUITY FLAG — RESOLVED (Pass 6, 2026-05-08, per Brandon's explicit ruling):** PD = Permissibility Distribution canonically and exclusively. The "Phenomenal Directness" naming that appeared in some 2026 papers and in earlier versions of this index was a **Replit-introduced distortion of Brandon's acronym** and is retracted. The associated complex-plane vocabulary (Indeterminate Disc, Standard Zone, Transcendent Annulus, Pre-DT Zone, DT Cliff, PD Real/Imaginary Axis, Chirality Direction, Tralse Vertex Direction) is also disowned as Replit-introduced — see §2.2 above. Papers built around the disowned vocabulary are tagged for Brandon-audit in §2.3. The `MR_ARITHMETIC_REVOLUTION.md` use of "Permissibility Distribution" on the (−3, 2) scale is **consistent with the canonical ruling**, not a distinct meaning.
 - **LCC** (Lateral Coherence Coupling) — primary measurable correlate of consciousness; `gile_lcc_ratio_engine.py`. *FOUNDATIONAL.*
 - **LCC_EMERICK** — the value 1/√2 ≈ 0.7071, the **Emerick Crossover** threshold for full GM integration. *FOUNDATIONAL.* (See §4.)
 - **CCC** — the central-coherence-coordination layer; the "butterfly" structure that closes at LCC ≥ 1/√2. *FOUNDATIONAL.* Anchor: `URB_CCC_BOK_GM_MYCELIAL_ARCHITECTURE.md`.

@@ -22,7 +22,7 @@ This paper consolidates what existing TI Sigma literature has already establishe
 
 ## 1. The PD Real Axis — Full Spectrum (consolidates URB #628, #728)
 
-The Phenomenal Directness scale on the real axis runs across **the full real line**, with named zones and threshold constants. Consolidated from `papers/urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md` §6 and the AGI Impossibility paper:
+The Permissibility Distribution scale on the real axis runs across **the full real line**, with named zones and threshold constants. Consolidated from `papers/urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md` §6 and the AGI Impossibility paper:
 
 | Zone | Range (real axis) | Truth-state | Threshold constant | Status |
 |---|---|---|---|---|

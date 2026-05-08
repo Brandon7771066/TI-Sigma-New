@@ -10435,7 +10435,34 @@ The classifications used are:
 
 **The "82%" body-figure ≈ the 83.3% magnitude-accuracy figure** from the April 2026 report. So the *headline number* is roughly correct, just rounded.
 
-**The "46% linear-model baseline" body-figure is NOT substantiated in the validation report.** The April 2026 study compared TI Sigma against *direct empirical outcomes* (rat/mouse/human studies), not against a linear-model baseline. **No linear-model baseline was actually computed in the 12-experiment validation.** This is a #69 honesty flag: the body should either (a) compute and publish such a baseline (e.g., a logistic regression on FAAH-inhibition stack components → predicted GILE-L change, evaluated on the same 12 experiments), or (b) remove the "vs ~46% for linear models" comparator from the body until it can be substantiated.
+**Pass 6 update (May 8 2026, post-Brandon-ruling Decision 2 Option A):** A formal linear-baseline computation has now been run (`analyses/pharma_baseline/linear_baseline.py`). Results:
+
+| Method | Directional | Magnitude (within strict 2×) |
+|---|---|---|
+| TI Sigma simulator | 12/12 = 100.0% | **9/12 = 75.0%** |
+| Random direction (coin flip) | 50.0% (analytic) | ~33% |
+| Majority class (always +) | 100.0% (trivial) | N/A |
+| Mean-magnitude baseline | 100.0% (trivial) | 8/12 = 66.7% |
+| Median-magnitude baseline | 100.0% (trivial) | 8/12 = 66.7% |
+| Linear regression on stack-size (LOO CV) | 100.0% | 7/12 = 58.3% |
+
+**TI margin over best honest baseline (mean-magnitude): +8.3 percentage points.** The book-stated "+35 pp margin (82% vs ~46%)" is **NOT reproduced** by any of the simple baselines tested.
+
+**Two #69-honesty findings from the linear-baseline run:**
+
+1. **Strict-within-2× magnitude accuracy is 75.0%, not 83.3%.** The 83.3% in the April 2026 validation report counts E04 (TI/empirical ratio = 2.11) as ✓. With a strict ≤ 2.0 boundary, E04 fails and the count is 9/12 = 75.0%. The 83.3% / 82% headline figure is approximately right but is using a slightly generous boundary. Honest restatement: "directional 100% (against a tied-100% trivial floor — see point 2), magnitude 75-83% within a ~2× tolerance band."
+
+2. **Directional accuracy 100% has a 100% trivial floor on this validation set.** All 12 experiments in the validation set are *positive-effect* outcomes (anxiolytic, antidepressant, anti-inflammatory, etc.) — i.e., the validation set is a hand-curated set of "treatment-works" studies. Any non-malicious baseline ("always predict +") gets 100% directional accuracy on this set. The TI Sigma directional 100% therefore *ties* this trivial floor — it does not *beat* it. Future validation should include null/negative-effect studies (e.g., placebo-RCTs that did NOT find an effect) to give the directional metric discriminative power.
+
+**The "vs ~46% for linear models" body comparator is REMOVED in this audit and replaced with the honest baseline numbers above.** Brandon's options are:
+
+- **Option (i)** — strike "vs ~46% for linear models" from the body and replace with: "TI Sigma achieves 75% magnitude accuracy (within 2×), an +8 pp margin over the best simple baseline (mean-magnitude prediction at 67%); directional accuracy 100% but the validation set is selection-biased toward positive-effect studies, so the directional figure is uninformative against the trivial 'always +' baseline."
+- **Option (ii)** — Brandon supplies the *specific* linear-model definition that originally yielded ~46% (different feature set, different metric, different validation set), and we re-test under that operationalization; if the 46% figure can be reproduced under a specific definition, the body claim is reframed to reference that definition.
+- **Option (iii)** — fund expanded validation with null/negative-effect studies, then re-run all baselines on the expanded set.
+
+**Reproduction artifacts (Pass 6):** `analyses/pharma_baseline/linear_baseline.py` (script), `analyses/pharma_baseline/results_2026-05-08.txt` (full output).
+
+The April 2026 report's actual study design (TI Sigma vs *direct empirical outcomes from peer-reviewed studies*, not vs a linear baseline) remains a strong study design. The honest framing is: "TI Sigma's GILE-dimension predictions match published peer-reviewed empirical effects in direction (12/12) and within-2× magnitude (9-10/12)" — this is meaningful even without a linear comparator.
 
 **Earlier internal computation (December 2025, `TI_PHARMACOLOGICAL_SIMULATOR_EMPIRICAL_VALIDATION.md`):** A different validation against FAAH-knockout literature reports **98.2% accuracy** across anandamide elevation, hypothermia, and anxiety reduction metrics — but this is on a *narrow FAAH-pathway evaluation*, not "held-out pharmacological data" generically. The "82%" figure should be sourced to the April 2026 12-experiment study, not to the December 2025 98.2%-FAAH-narrow study.
 
@@ -10511,6 +10538,21 @@ After Brandon clarified the original operationalization — the "Indeterminate P
 This does not impact the Indeterminate Permissibility Distribution Range claim *for everyday events* (where it is fundamentally an empirical claim about the distribution of human-experience event-valence) — only the *Riemann-zero mapping* of the framework. The framework is free to retain the everyday-events claim while honestly retiring the Riemann-zero analogy, OR to seek a different mathematical analogy that does match the bimodal prediction.
 
 **v2 Reproduction artifact:** `analyses/riemann_pareto/riemann_pd_interval_v2.py` + `analyses/riemann_pareto/results_v2_2026-05-08.txt`.
+
+### F-2 Pass 6 Update (May 8 2026, post-Brandon PD ruling)
+
+After the v1 + v2 disconfirming results above, Brandon clarified (Pass 6, 2026-05-08) the canonical structure of the Permissibility Distribution: the **overall PD interval is (−3, 2)** (covering ~80% of everyday events), is **based on the Perfect Fifth (musical 3:2 ratio)**, and is **connected to the Riemann Hypothesis**. The Indeterminate sub-range (−0.666, 0.333) is a sub-interval within this; it characterizes the ~20% of events that are "neither positive nor negative."
+
+**This means there are TWO distinct Riemann-related claims, and the Pass 4 + Pass 5 work disconfirmed only the secondary one:**
+
+| Claim | Status |
+|---|---|
+| **Primary:** the (−3, 2) overall PD interval is connected to the Riemann Hypothesis via the Perfect Fifth | **UNTESTED by the agent.** Brandon-canonical; remains open. The Perfect Fifth ratio 3:2 maps to the (−3, +2) bounds in a structurally suggestive way; the Riemann connection (presumably via the Riemann zeta function's relation to musical scales / prime distribution) is a substantive mathematical claim that requires its own analysis. **Audit-priority: HIGH.** |
+| **Secondary:** the (−0.666, 0.333) Indeterminate sub-range characterizes Riemann-zero normalized-gap deviations as "20% close to zero, 80% polarized" | **DISCONFIRMED.** Density-bin Pareto test (v1) and literal interval-membership test under 4 normalization schemes (v2) all fail. Riemann-zero gaps cluster *near zero* (GUE bell-shape), not in a polarized bimodal pattern. |
+
+**Honest publication-ready statement for the May 2026 edition:** The book's earlier formulation "1 million Riemann zeros, 80%-in-Sacred-Interval" conflated these two claims. The retired version of that formulation is the secondary claim above (Riemann-zero gaps mapped to the Indeterminate sub-range). The primary claim — the (−3, 2) interval ↔ Perfect Fifth ↔ Riemann connection — has not been disconfirmed; it has not yet been *tested.* It remains a load-bearing Brandon-canonical claim. A future tech-report should specify the exact mathematical mapping from "Perfect Fifth" to "(−3, 2)" and from there to a testable Riemann-Hypothesis prediction, then test it.
+
+**Action required before publication-grade printing:** The book body language should distinguish these two claims rather than collapsing them. The primary claim is presented as "Brandon-canonical, Perfect-Fifth-derived, Riemann-connected (forthcoming tech report)" and the secondary claim is reported with its disconfirmation per Pass 4-5 above.
 
 ## F-3. The "HRV / EEG Correlations" Claims
 

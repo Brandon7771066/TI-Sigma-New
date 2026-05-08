@@ -1,0 +1,73 @@
+============================================================================
+F-1 Linear-Baseline Computation (Pass 6, May 8 2026)
+Validation set: 12 experiments from pharma_simulator_validation_report.md
+============================================================================
+  N experiments      : 12
+  Empirical mean     : 46.38%
+  Empirical median   : 47.50%
+  Empirical stdev    : 24.55%
+  Empirical range    : [12.0, 100.0]%
+  Positive-direction : 12/12 (100% if all positive)
+----------------------------------------------------------------------------
+
+## TI Sigma simulator (the thing being tested)
+  Directional : 12/12 = 100.0%
+  Magnitude (within 2x) : 9/12 = 75.0%
+  Mean TI/empirical ratio : 1.201
+
+## Baseline 1: Random-direction (coin flip)
+  Directional (expected) : 50% (analytic)
+  Magnitude              : N/A (random sign + mean magnitude => ~33%)
+
+## Baseline 2: Majority-class (always predict +)
+  Directional : 12/12 = 100.0%
+  *** NOTE: this dataset has 100% positive effects (selection bias toward
+      improvement-from-treatment outcomes). TI Sigma's 100% directional ties
+      this trivial floor on this validation set. ***
+
+## Baseline 3: Mean-magnitude (predict mean effect for every experiment)
+  Predicted: 46.38% for every experiment
+  Magnitude (within 2x) : 8/12 = 66.7%
+
+## Baseline 4: Median-magnitude (predict median for every experiment)
+  Predicted: 47.50% for every experiment
+  Magnitude (within 2x) : 8/12 = 66.7%
+
+## Baseline 5: Linear regression on stack-size (1 feature)
+  Hypothesis: more ingredients -> bigger effect
+  Method: leave-one-out CV; for each held-out experiment, fit OLS on
+          the other 11 experiments and predict the held-out one.
+  Full-data fit: effect = 11.64 * stack_size + 23.10
+  LOO Directional : 12/12 = 100.0%
+  LOO Magnitude (within 2x) : 7/12 = 58.3%
+----------------------------------------------------------------------------
+
+## SUMMARY TABLE
+Method                                           Dir %    Mag %
+-----------------------------------------------------------------
+TI Sigma simulator (the framework)              100.0%    75.0%
+Random direction (coin flip)                     50.0%     ~33%
+Majority class (always +)                       100.0%      N/A
+Mean-magnitude baseline                         100.0%    66.7%
+Median-magnitude baseline                       100.0%    66.7%
+Linear regression on stack-size (LOO)           100.0%    58.3%
+-----------------------------------------------------------------
+
+## TI MARGIN OVER BASELINES (magnitude accuracy)
+  vs Mean-magnitude baseline    : +8.3 pp
+  vs Median-magnitude baseline  : +8.3 pp
+  vs Linear-regression baseline : +16.7 pp
+
+## #69 HONEST CALL
+  The book claims '82% accuracy vs ~46% for linear models' (a +35 pp margin).
+  ACTUAL (Pass 6, this analysis):
+    - TI Sigma magnitude accuracy = 75.0%
+    - Best honest baseline (mean-magnitude) = 66.7%
+    - Actual margin = +8.3 pp (NOT +35 pp)
+  The '46%' figure in the book is not reproduced by ANY simple baseline I tried.
+  Brandon should EITHER:
+    (a) tell me what specific 'linear model' was originally used to get 46%; OR
+    (b) revise the body to report the honest +8 pp margin.
+  Direction is a tied 100% across all non-random baselines because all 12
+  empirical effects are positive (selection bias in this hand-curated set).
+============================================================================
