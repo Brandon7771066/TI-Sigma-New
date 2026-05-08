@@ -1,10 +1,29 @@
 # The PD Spectrum: Full Range, DT's Position on the Imaginary Axis, and the Role of the Emerick Crossover (1/√2)
 
+> ## ⚠️ TIER A AUDIT VERDICT — 2026-05-08 (Pass 7)
+>
+> **STATUS: NON-CANONICAL. Pending Brandon-audit & rewrite.**
+>
+> This paper was identified in the Pass 6 abbreviations-index audit (§2.3) as **Tier A high-priority** because it is built around the **disowned PD-as-complex-plane vocabulary** that Brandon has retracted as Replit-introduced (see canonical ruling in `TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` §2.2).
+>
+> **Specifically disowned in this paper:** Pre-DT mirror, Pre-DT zone, DT cliff, Indeterminate disc, Standard mirror, Transcendent mirror, Transcendent annulus, DT-mirror, PD Real Axis, PD Imaginary Axis, Chirality direction (π/3), and the entire "complex-plane PD with named zones at 0, ±(√2−1), ±(1/√2), ±1, ±φ, ±e, ±π" architecture.
+>
+> Per Brandon (2026-05-08, Pass 6): **"PD = Permissibility Distribution canonically and exclusively. PD is a 1-D scalar on the (−3, 2) interval based on the Perfect Fifth (3:2 musical ratio) and connected to the Riemann Hypothesis. The Indeterminate sub-range is (−0.666, 0.333). Pre-DT Zone, DT Cliff, and Indeterminate Disc are all terms that I never coined."**
+>
+> **Possible salvage candidates (Brandon to confirm or reject):**
+> - The Emerick Crossover at 1/√2 ≈ 0.7071 — if this is Brandon-canonical, it lives on the (−3, 2) PD axis, not in a complex plane.
+> - The numerical near-identity (√2−1)² + (1/√2)² ≈ 2/3 — interesting algebraic observation, may survive in a different framing.
+> - The TIC vertex angles (π/3, 2π/3) — likely belong to TIC vocabulary, not PD vocabulary.
+>
+> **Action required before this paper can be considered canonical:** Brandon audit. Until then, treat the content below as a Pass-7-pre-canonical artifact preserved for context. Do NOT cite this paper as canonical PD architecture in the book or in publication-grade work.
+>
+> ---
+
 **Author:** Brandon Charles Emerick (technical co-development with the agent)
-**Date:** 2026-05-07
+**Date:** 2026-05-07 (original); audit verdict 2026-05-08
 **Series:** Foundational PD Architecture — consolidates and extends URB #394, #416, #628, #728, #733, #734, AGI Impossibility, Consciousness Equation
 **URB candidate:** TBD
-**Status:** Foundational consolidation paper; resolves three open questions raised 2026-05-07
+**Status:** **TIER A NON-CANONICAL — Brandon-audit pending (Pass 7, 2026-05-08).** Original status: foundational consolidation paper; resolves three open questions raised 2026-05-07.
 
 ---
 

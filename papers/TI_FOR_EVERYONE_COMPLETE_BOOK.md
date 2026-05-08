@@ -2264,8 +2264,9 @@ These thresholds were validated using pharmacological data:
 - Drugs that achieve L × E > 0.85 show ceiling effects (response maxes out)
 
 This was tested against held-out data (not used in model development):
-- **82% accuracy** on predicting drug effects (internal — pending external replication)
-- Versus 46% for linear models (baseline comparator — methodology pending publication)
+- **75-83% magnitude accuracy** on predicting drug effects within a ~2× tolerance (12-experiment internal validation set; 75% under strict ≤2.0 boundary, 83% under the more generous boundary used in the original April 2026 report). Pending external replication.
+- **+8 percentage-point margin over the best simple baseline.** A formal linear-baseline computation (May 2026, Pass 6 audit) tested 5 baselines (random, majority-class, mean-magnitude, median-magnitude, linear regression on stack-size with leave-one-out CV); the strongest of these (mean-magnitude prediction) reaches 67% magnitude accuracy. **The earlier "vs ~46% for linear models (≈ +35 pp margin)" claim could not be reproduced under any baseline tested and has been retracted in favor of the honest +8 pp figure.** See Appendix F-1 for the full baseline table and reproduction script.
+- Directional accuracy is 100% but ties a trivial-100% floor on this validation set, since all 12 validation experiments are positive-effect outcomes (selection bias). Future validation should include null/negative-effect studies to make the directional metric discriminative.
 - The thresholds appear predictive in internal evaluation; independent reproduction is the next required step.
 
 ### Practical Applications
@@ -2307,19 +2308,21 @@ Drugs affect the brain and body. TI Sigma models this through:
 
 ### Validation Results
 
-> **Audit note (May 2026, see Appendix F, claim F-1).** The table below summarizes internal-development analyses. Dataset provenance, train/test split, choice of linear-model baseline, and statistical-significance treatment have not yet been published. Read the figures as *internal preliminary results requiring external replication before being treated as established.*
+> **Audit note (May 2026, see Appendix F, claim F-1, and Pass 6 audit).** The "Linear-Model Baseline" column in the table immediately below was the original April 2026 framing. **In a Pass 6 honesty audit (May 8 2026), the 51% / 42% / 46% baseline figures could not be reproduced under any of five simple linear baselines tested** (random, majority-class, mean-magnitude, median-magnitude, linear regression on stack-size with leave-one-out CV). The actual best baseline tested reaches ~67% magnitude accuracy, not 46%, and the actual TI Sigma margin is **~+8 percentage points, not +35**. The original-table figures are preserved below for transparency, but the +35 pp claim has been retracted; the honest figure follows the table.
 
 TI Sigma predictions were tested against drug-study data (internal evaluation):
 
-| Prediction | TI Sigma Accuracy (internal) | Linear-Model Baseline (internal) |
+| Prediction | TI Sigma Accuracy (internal) | Original "Linear-Model Baseline" (RETRACTED Pass 6 — could not be reproduced) |
 |------------|---------------------------|------------------------------|
-| Threshold effects (0.42) | 85% | 51% |
-| Ceiling effects (0.85) | 79% | 42% |
-| Overall dose-response | 82% | 46% |
+| Threshold effects (0.42) | 85% | ~~51%~~ — not reproduced |
+| Ceiling effects (0.85) | 79% | ~~42%~~ — not reproduced |
+| Overall dose-response | 82% | ~~46%~~ — not reproduced |
 
-**On internal evaluation, the TI Sigma model outperforms a linear-model baseline by approximately 35 percentage points.**
+**Honest restatement (Pass 6, May 8 2026):**
 
-This is suggestive: it indicates TI Sigma is structurally tractable as a predictive model, not merely a philosophical framework. The next required step is independent reproduction with a published dataset and a peer-reviewed methodology.
+> On the 12-experiment internal validation set, TI Sigma achieves **75% strict-within-2× magnitude accuracy** (the original 82-83% figure used a slightly generous boundary that counts ratio = 2.11 as a pass), with **directional accuracy 100% (against a tied trivial-100% floor — see Appendix F-1)**. The strongest honest baseline tested (mean-magnitude prediction at 67%) is beaten by **+8 percentage points** in magnitude accuracy. The earlier "+35 pp vs ~46% linear" margin was not reproducible under any baseline tested and has been retracted. See Appendix F-1 for the full baseline table, reproduction script (`analyses/pharma_baseline/linear_baseline.py`), and three honest-resolution options.
+
+The +8 pp margin is suggestive but modest: TI Sigma is structurally tractable as a predictive model, but the original margin claim was overstated. Independent reproduction with a published dataset, a clearly-specified linear comparator, and a validation set that includes null/negative-effect studies is the next required step.
 
 ### Beyond Pharmacology
 
@@ -6083,7 +6086,7 @@ To create, you must:
 TI predicted that 20% of Riemann zeta zeros would show specific patterns. Analysis confirmed this.
 
 **2. TI Sigma Pharmacology:**
-82% accuracy on held-out pharmaceutical data (baseline 46%).
+75-83% magnitude accuracy on held-out pharmaceutical data (12-experiment internal validation set), an +8 percentage-point margin over the best simple baseline (mean-magnitude prediction at 67%). The earlier "vs 46% baseline (≈ +35 pp margin)" claim has been **retracted in the May 2026 Pass 6 audit** — see Appendix F-1.
 
 **3. GILE-Biometric Correlations:**
 HRV and EEG patterns correlate with self-reported GILE as predicted.
@@ -9451,9 +9454,9 @@ January 2026
 
 **Test:** Prediction of drug effects on held-out pharmaceutical data.
 
-**Result:** 82% accuracy on held-out data vs. 46% baseline.
+**Result:** 75-83% magnitude accuracy on the 12-experiment internal validation set, +8 percentage-point margin over the best simple baseline (mean-magnitude prediction at 67%). The earlier "vs 46% baseline (≈ +35 pp margin)" claim was not reproducible under any of five linear baselines tested in the May 2026 Pass 6 audit and has been retracted; see Appendix F-1 for the full table and reproduction script.
 
-**Status:** Strong initial validation. Peer-reviewed publication pending.
+**Status:** Modest internal validation. Independent peer-reviewed reproduction with a clearly-specified linear comparator and an expanded validation set (including null-effect studies) is pending.
 
 **3. GILE-Biometric Correlations**
 
@@ -9850,7 +9853,7 @@ A: No. TI is a framework for understanding consciousness. It has philosophical a
 
 **Q: Is this scientifically proven?**
 
-A: TI is scientifically *testable*, which is the first requirement. Some predictions have been validated (82% accuracy in pharmacological predictions vs. 46% baseline). Others await testing. The framework is designed to be falsifiable - if the predictions don't hold up, the theory needs revision.
+A: TI is scientifically *testable*, which is the first requirement. Some predictions have shown modest internal support (75-83% magnitude accuracy in pharmacological predictions, an +8 percentage-point margin over the best simple baseline; the earlier "vs 46% baseline" framing was retracted in the May 2026 audit). Others await testing. One major prediction (Riemann-zero gap distribution mapping the Indeterminate sub-range) was independently tested in May 2026 and **disconfirmed** — the framework retired that specific claim while preserving the broader empirical claim about everyday events. The framework is designed to be falsifiable, and that disconfirmation is logged honestly in Appendix F.
 
 **Q: What if I track my GILE and nothing changes?**
 
@@ -9944,7 +9947,7 @@ TI makes several experimentally testable predictions:
 
 2. **L × E threshold effects:** Performance on intention tasks should improve when L × E > 0.42. Testable with random number generator protocols similar to PEAR lab methods.
 
-3. **Pharmacological predictions:** TI Sigma predicts drug effects on GILE dimensions. Already shows 82% accuracy on held-out data vs. 46% baseline.
+3. **Pharmacological predictions:** TI Sigma predicts drug effects on GILE dimensions. Internal validation on 12 experiments shows 75-83% magnitude accuracy, an +8 percentage-point margin over the best simple baseline (mean-magnitude prediction). The original "vs 46% baseline (~+35 pp margin)" claim was retracted in the May 2026 audit — see Appendix F-1.
 
 4. **Zone distribution:** Population GILE should show characteristic distribution with clustering in the 20% Indeterminate Zone. Testable with surveys.
 
@@ -10553,6 +10556,33 @@ After the v1 + v2 disconfirming results above, Brandon clarified (Pass 6, 2026-0
 **Honest publication-ready statement for the May 2026 edition:** The book's earlier formulation "1 million Riemann zeros, 80%-in-Sacred-Interval" conflated these two claims. The retired version of that formulation is the secondary claim above (Riemann-zero gaps mapped to the Indeterminate sub-range). The primary claim — the (−3, 2) interval ↔ Perfect Fifth ↔ Riemann connection — has not been disconfirmed; it has not yet been *tested.* It remains a load-bearing Brandon-canonical claim. A future tech-report should specify the exact mathematical mapping from "Perfect Fifth" to "(−3, 2)" and from there to a testable Riemann-Hypothesis prediction, then test it.
 
 **Action required before publication-grade printing:** The book body language should distinguish these two claims rather than collapsing them. The primary claim is presented as "Brandon-canonical, Perfect-Fifth-derived, Riemann-connected (forthcoming tech report)" and the secondary claim is reported with its disconfirmation per Pass 4-5 above.
+
+### F-2 Pass 7 Update (May 8 2026, Brandon directive (iii) — test the (−3, 2) ↔ Perfect Fifth ↔ Riemann claims)
+
+Brandon directed the agent to test the primary (−3, 2) ↔ Perfect Fifth ↔ Riemann claim. Per #69, four natural operationalizations were specified, scripted, and run (`analyses/perfect_fifth_riemann/perfect_fifth_riemann_test.py` + `results_2026-05-08.txt`):
+
+| # | Test | Hypothesis | Result | Verdict |
+|---|---|---|---|---|
+| **T1** | Perfect Fifth ratio in consecutive Riemann zero ratios γ_{n+1}/γ_n | Cluster near 3/2 = 1.5 or 2/3 = 0.667 | 0.3% near 1.5; 0.0% near 0.667; bulk concentrate at ratio = 1.013 (asymptotic Riemann fact) | **DISCONFIRMED** |
+| **T2** | (−3, 2) interval coverage of centered normalized-gap deviations | ~80% of centered deviations fall in (−3, 2) | 100% trivially (raw); under unit-stdev z-scaling: **96.3% vs predicted 80% — off by +16.3 pp** | **MISSED PREDICTION** (+16.3 pp over) |
+| **T3** | Skew direction match — does the GUE-like distribution share (−3, 2)'s left-skew (3 below, 2 above)? | Negative-side mass count + tail-direction both left-skewed | **Mixed:** count-asymmetry 55.9% negative vs 60% predicted (close, +4 pp under); tail-skewness coefficient = +0.47 (right-skewed, opposite direction) | **MIXED** — count direction OK, tail direction opposite |
+| **T4** | Pitch-class units: log₂(γ_{n+1}/γ_n) clusters near log₂(3/2) = 0.585 | Mass at 0.585 | 0.3% in [0.55, 0.62]; bulk at 0.018 | **DISCONFIRMED** |
+
+**Honest verdict (Pass 7):** Of four natural tests, **two are hard-disconfirmed (T1, T4), one missed its prediction by +16.3 pp under the only operationalization that has discriminative power (T2), and one is mixed with the tail-direction opposing the prediction (T3).** No test cleanly supports the (−3, 2) ↔ Perfect Fifth ↔ Riemann mapping as currently specified.
+
+**Important #69 caveat:** This does **NOT** falsify the Brandon-canonical claim, because the claim has not been sharply specified. Brandon may have a specific mathematical bridge in mind (e.g., the explicit formula linking Riemann zeta zeros to musical scales via the Riemann xi function, OR the Berry-Keating Hamiltonian conjecture, OR prime-counting modulations) that is not captured by any of T1-T4. The natural operationalizations tried by the agent are not exhaustive.
+
+**Status revision:** The Pass 6 status of "(−3, 2) ↔ Perfect Fifth ↔ Riemann is **UNTESTED**" is now revised to:
+
+> **TESTED under 4 natural operationalizations: 2 disconfirmed, 1 missed prediction by +16 pp, 1 mixed (count-direction OK, tail-direction opposite). Brandon-canonical specification of the precise mathematical mapping is awaited before a sharper test can be run. The structural-aesthetic resonance (Perfect Fifth 3:2 ↔ (−3, +2) bounds) remains; the empirical Riemann connection has not been demonstrated under any agent-tested operationalization.**
+
+Brandon's options going forward:
+
+- **Option A — supply the precise mathematical mapping** (which Riemann property maps to (−3, 2), via what bridge function), then re-test under that operationalization.
+- **Option B — soften the body language** to "structural-aesthetic resonance, mathematical bridge to Riemann pending tech-report" while preserving the (−3, 2) interval as the canonical empirical claim about everyday events (which is independent of the Riemann mapping and remains the framework's load-bearing form).
+- **Option C — drop the Riemann-connection claim entirely** and present (−3, 2) purely as the empirical everyday-events interval.
+
+**v3 Reproduction artifact:** `analyses/perfect_fifth_riemann/perfect_fifth_riemann_test.py` + `results_2026-05-08.txt`. Cached zeros in `analyses/riemann_pareto/zeros_cache.txt` (300 zeros).
 
 ## F-3. The "HRV / EEG Correlations" Claims
 

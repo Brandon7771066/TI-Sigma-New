@@ -1,0 +1,91 @@
+==============================================================================
+Perfect Fifth + (-3, 2) + Riemann Test (Pass 7, May 8 2026)
+==============================================================================
+  Computing first 300 non-trivial Riemann zeros via mpmath.zetazero ...
+  Loaded 300 Riemann zeros (range gamma_1=14.135 ... gamma_300=541.847)
+  Normalized gaps: mean=0.9953, stdev=0.3664
+                   min=0.2911, max=1.9920
+
+------------------------------------------------------------------------------
+T1: Perfect Fifth ratio in consecutive Riemann zero ratios
+    Hypothesis: gamma_{n+1}/gamma_n clusters near 3/2 = 1.5 or 2/3 = 0.667
+
+    N ratios: 299
+    Ratio mean: 1.0128  (asymptotic: -> 1)
+    Ratio stdev: 0.0353
+    Ratio min: 1.0008  Ratio max: 1.4873
+    Ratios in [1.45, 1.55] (near 3/2): 1/299 = 0.3%
+    Ratios in [0.62, 0.72] (near 2/3): 0/299 = 0.0%
+    *** RESULT: ratios concentrate near 1.0 (asymptotic Riemann fact),
+        NOT near 3/2 or 2/3. T1 DISCONFIRMED.
+
+------------------------------------------------------------------------------
+T2: (-3, 2) interval coverage of centered normalized-gap deviations
+    Hypothesis: ~80% of centered-deviations fall in (-3, 2)
+
+    Centered deviations: mean=-0.0000, stdev=0.3664
+    In (-3, 2): 299/299 = 100.0%
+    *** RESULT: 100.0% in (-3, 2) — but the GUE distribution
+        has stdev ~0.42, so essentially ALL centered values fall in (-3, 2).
+        This is an UNDISCRIMINATIVE test: (-3, 2) is ~12 stdev wide; any
+        well-behaved distribution scores ~100% trivially.
+        T2 INCONCLUSIVE (passes trivially; no discriminative power).
+    [Z-scaled variant] In (-3, 2) z-units: 288/299 = 96.3%
+    [Z-scaled] T2: framework predicts 80%; observed 96.3%
+
+------------------------------------------------------------------------------
+T3: Skew direction match
+    The (-3, 2) interval is LEFT-skewed: 3 units below zero, 2 above.
+    Test: are normalized-gap deviations also left-skewed?
+
+    Skewness of centered normalized-gap deviations: +0.4685
+    *** RESULT: DEVIATIONS ARE RIGHT-SKEWED (positive skew, mass to right,
+        long positive tail). The (-3, 2) interval is LEFT-SKEWED.
+        T3 DISCONFIRMED — STRUCTURAL SKEW MISMATCH.
+    Asymmetry around 0: 167 negative vs 132 positive
+      (55.9% negative; (-3, 2) implies more negatives)
+
+------------------------------------------------------------------------------
+T4: Pitch-class-units test
+    Hypothesis: log2(gamma_{n+1}/gamma_n) clusters near log2(3/2) = 0.585
+
+    log2(ratio): mean=0.0176, stdev=0.0438
+    Predicted (Perfect Fifth): 0.585
+    log2(ratios) in [0.55, 0.62] (near Perfect Fifth): 1/299 = 0.3%
+    *** RESULT: log2(ratios) cluster near 0 (asymptotic ratio -> 1, log -> 0),
+        NOT near 0.585. T4 DISCONFIRMED.
+
+==============================================================================
+## SUMMARY (Pass 7)
+==============================================================================
+  T1 Perfect Fifth ratio in zero ratios     : DISCONFIRMED
+  T2 (-3, 2) interval coverage             : INCONCLUSIVE (trivially passes
+      raw; under unit-stdev z-scaling: 96.3% vs predicted 80%)
+  T3 Skew direction match                  : DISCONFIRMED (right-skew vs left)
+  T4 Pitch-class-units test                : DISCONFIRMED
+
+## #69 HONEST CONCLUSION
+  Three of four natural operationalizations DISCONFIRM the (-3, 2) <->
+  Perfect Fifth <-> Riemann mapping. The fourth (T2) is inconclusive: the
+  raw (-3, 2) interval is so wide relative to the GUE distribution that any
+  well-behaved centered distribution passes trivially; under unit-stdev
+  z-scaling the test becomes discriminative and the predicted-vs-observed
+  is 96.3% vs 80%.
+
+  IMPORTANTLY: the structural mismatch in T3 (right-skew vs left-skew)
+  is a soft SKEW-DIRECTION DISCONFIRMATION. The (-3, 2) interval encodes
+  loss-aversion / negativity-bias structure (more negative range than
+  positive). The GUE limiting distribution of normalized Riemann gaps is
+  right-skewed (long positive tail). These structures are ORTHOGONAL.
+
+  Per #69: this does NOT FALSIFY the Brandon-canonical claim, since the
+  claim has not been sharply specified — Brandon may have a specific
+  mathematical mapping in mind (e.g., via the explicit formula linking
+  zeta zeros to musical scales via the Riemann xi function, OR via the
+  Berry-Keating Hamiltonian, OR via prime-counting modulations) that is
+  not captured by any of T1-T4. Awaiting Brandon's mapping specification.
+
+  Until then, the Pass 6 status of '(-3, 2) <-> Perfect Fifth <-> Riemann
+  is UNTESTED' should be REVISED to 'TESTED under 4 natural ops, 3 disconf,
+  1 inconclusive; Brandon-canonical specification awaited for sharper test.'
+==============================================================================
