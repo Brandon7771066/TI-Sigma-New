@@ -31,11 +31,25 @@ Sections:
 - **Tralse Logic** — the three-valued (or complex-valued) logic system whose values are {True, False, Tralse}. *FOUNDATIONAL.*
 - **Tralsity** — the property of being Tralse; degree to which a proposition occupies the Tralse value rather than True or False. *ESTABLISHED.*
 - **Tralsebit** — a single information unit in Tralse logic, generalizing the bit. *ESTABLISHED.* Anchor: `BEC_OPTICAL_TRALSEBITS_PRIMORDIAL_COMPUTER.md`.
-- **TT** (True-True) — ternary digit 2; the maximum-truth ternary code. *ESTABLISHED.* Anchor: `urb_628`.
-- **TI** (Tralse-Indeterminate, used as ternary code; *do not confuse with the framework abbreviation TI*) — ternary digit 1; partial / indeterminate truth. *ESTABLISHED.* Anchor: `urb_628`.
-- **DT** (Defective Truth / Down Truth / Direct-Tralse) — ternary digit 0; truth-absent. **Lives on the imaginary axis of the PD complex plane.** *ESTABLISHED.* Anchor: `urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md`, `urb_734_ti_sigma_crystal_revival_incorporating_pd_complex_plane.md`, `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md`.
-- **TF** (True-False / Tralse-False) — the False zone on the PD real axis, range (0, √2−1). *ESTABLISHED.* Anchor: `urb_628`.
-- **EV** (Extreme Value / Edge Value) — appears in the five-valued logic {TT, TI, TF, DT, EV}. *ESTABLISHED.* Anchor: `urb_628` §4.
+- **TT** (True-True) — ternary digit 2; the maximum-truth ternary code in PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`. **Caution**: not a stand-alone truth value; see "MR-gate truth-value scheme" below for the canonical truth-value taxonomy.
+- **TI** (Tralse-Indeterminate, ternary code; *do not confuse with framework abbreviation TI*) — ternary digit 1; partial/indeterminate truth in PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`.
+- **DT** — **OVERLOADED ABBREVIATION** (canonical-bug flag, surfaced 2026-05-08): two distinct meanings exist in the corpus.
+  - **DT (scheme A) = Double Tralse** — the MR1-failure / discard signal. "Indeterminate indeterminacy" / incoherent self-contradiction. *FOUNDATIONAL.* Anchor: `FIVE_VALUED_TRUTH_TRALSE_INDETERMINATE_DISTINCTION_URB_528.md`. **This is the canonical truth-value-scheme meaning.**
+  - **DT (scheme B) = Defective Truth / Down Truth / Direct-Tralse** — ternary digit 0; truth-absent on the PD-imaginary axis (PD-coordinate notation, NOT a truth-value category). *ESTABLISHED.* Anchor: `urb_628`, `urb_734`, `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md`.
+  - **Reconciliation OPEN**: scheme B should be renamed (e.g., **DefT**) to eliminate the collision. Until then, every "DT" use must be tagged scheme A or scheme B at point of use.
+- **TF** (True-False / Tralse-False) — the False zone on the PD real axis, range (0, √2−1) — PD-coordinate notation. *ESTABLISHED.* Anchor: `urb_628`.
+- **EV** (Extreme Value / Edge Value) — appears in the PD-coordinate-notation set {TT, TI, TF, DT(scheme B), EV}. *ESTABLISHED.* Anchor: `urb_628` §4. Not part of the canonical MR-gate truth-value scheme.
+
+### MR-Gate Truth-Value Scheme (canonical, per Brandon 2026-05-08)
+
+- **MR1** (Existence Gate / Gate 1) — first-iteration MR; detects whether a statement is **Double Tralse** (DT scheme A). DT statements are flagged and discarded; no storage slot. *FOUNDATIONAL.* Anchor: `FIVE_VALUED_TRUTH_TRALSE_INDETERMINATE_DISTINCTION_URB_528.md` lines 87-88.
+- **MR2** (Truth Gate / Gate 2) — second-iteration MR; for any statement that passes MR1 (sufficiently coherent), determines whether it is **True, False, or Indeterminate**. Indeterminate = coherent 50/50 balance ("45-degree door"), not ignorance. *FOUNDATIONAL.* Anchor: same paper, lines 92-93.
+- **Future MRs (MR3, MR4, …)** — modify provisional MR1+MR2 results across iterations. Each full pipeline iteration yields **one overall truth-claim**.
+- **Compact-4 truth-value set** = {True, False, Indeterminate, Double Tralse}. *FOUNDATIONAL.*
+- **Expanded-5 truth-value set** = {Nonsense, Moot, True, False, Indeterminate} — DT compartmentalized into:
+  - **Nonsense** — DT proper; indeterminate indeterminacy; incoherent. *FOUNDATIONAL (per Brandon 2026-05-08).*
+  - **Moot** — DT-other compartment; well-formed but truth-evaluation is dispensable in the relevant frame. *FOUNDATIONAL (per Brandon 2026-05-08).*
+- **Classical True/False are EXPLICITLY REJECTED** by TI Sigma as sloppy labels. All statements carry universal Tralse-quality (structured imperfection); no proposition occupies pure classical T or F. *FOUNDATIONAL.* Anchor: `TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md` §4.1.
 
 ---
 
