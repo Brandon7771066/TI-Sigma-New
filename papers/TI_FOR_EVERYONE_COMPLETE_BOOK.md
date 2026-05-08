@@ -51,13 +51,41 @@
 
 ## For the Reader
 
-This book explains a revolutionary framework for understanding reality. You don't need to know mathematics, physics, or philosophy to understand it. 
+This book explains a revolutionary framework for understanding reality. You don't need to know mathematics, physics, or philosophy to understand it.
 
 Everything is explained using everyday experiences and simple analogies.
 
 If you can understand why you feel happy or sad, you can understand this framework.
 
 Let's begin.
+
+---
+
+## Canonical Update Note (May 2026)
+
+The first edition of this book was completed in January 2026. Since then, the framework has been refined in several important ways. The body of the text reflects the original first-edition presentation; the most important May-2026 updates are summarized here at the front so you read with the right vocabulary, and given a full treatment in **Appendix E** at the back.
+
+If anything in the body of the book seems to contradict the summary below, **the summary below is the canonical version**. The body has not yet been fully rewritten; that pass is in progress.
+
+**1. Four canonical Truth Labels — not five.** The framework now officially commits to **four** base truth labels: **True, False, Indeterminate, Double Tralse**. Earlier draft material that listed five base values (variously including "Tralse" as a fifth value, "I-state" as separate from Indeterminate, "EV", or "Moot") is superseded. All other truth-flavored outcomes — including Mootness — live in a separate catalogue called *Meta-Truths*, on top of the base four.
+
+**2. Tralse is a universal quality, not a label.** "Tralse" is the structured imperfection embedded in *every* coherent truth-claim — it is present inside True, inside False, and inside Indeterminate alike. It is not a fifth label sitting next to them. The body of the book sometimes uses "Tralse" the way the early drafts did (as if it were the third or fifth value); read those passages with the understanding that the *quality* is what is meant.
+
+**3. Indeterminate is one of the four labels — and is distinct from Tralse-the-quality.** Indeterminate is a coherent 50/50 balance, the "45-degree door" the framework's resolution gate can stop at. Earlier text occasionally conflates Indeterminate with Tralse; treat them as two different objects.
+
+**4. Double Tralse has a precise definition.** A statement is **Double Tralse** when it both *is* and *is not* Tralse — formally, DT(P) ⟺ τ(P) ∧ ¬τ(P). Such statements are nonsense and are discarded by the framework's first resolution gate (MR1). They are not borderline truths; they are structural failures to admit truth-evaluation at all.
+
+**5. Myrion Resolution is gated.** The procedure described in Chapter 24 has been clarified into two explicit gates. **MR1 (Existence Gate)** detects and discards Double Tralse statements. **MR2 (Truth Gate)** assigns the surviving statement to True, False, or Indeterminate. **MR3 and beyond** apply Meta-Truths (such as "Moot") on top of the base assignment when needed.
+
+**6. Moot is a Meta-Truth, not a label.** When a coherent statement's truth-value is dispensable in the relevant frame ("technically true but it doesn't matter here"), the framework calls it **Moot**. Moot is not nonsense, it is not Indeterminate, and it is not a fifth base label. It composes with the base four — "Moot-True", "Moot-False", "Moot-Indeterminate" are all meaningful.
+
+**7. Classical True and False are explicitly rejected as standalone values.** The framework does not treat "pure" classical True or pure classical False as available endpoints. Every coherent statement carries the universal Tralse-quality; classical T/F are useful idealizations, not destinations.
+
+**8. There is now a fifth axis: Authority Axis (AA).** A truth-claim is described by *five* dimensions, not one: PD-real (degree of trueness), PD-imaginary (modality), MR Truth Labels (the categorical base-4 + Meta-Truths just described), τ/δ separability (calibration vs presentation), and **Authority Axis (AA)** — the operative authority a person grants to a claim ("how much do I act on this?"). AA is independent of whether the claim is true and applies symmetrically to one's own beliefs and to others' claims.
+
+**9. Notation cleanup: DT means Double Tralse, DefT means Defective Truth.** Earlier material sometimes used "DT" for two different things. As of May 2026: **DT = Double Tralse** (the discarded-nonsense label, gate MR1). **DefT = Defective Truth** (a coordinate label on the PD imaginary axis, *not* a truth value). Where the book body uses "DT" in the coordinate sense, read it as DefT.
+
+For the full canonical statement of all of the above, plus the structural reasoning and historical reconciliation of earlier drafts, see **Appendix E: Canonical Update — May 2026** at the back of the book, or the standalone paper `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
 
 ---
 
@@ -81,13 +109,13 @@ The first sustained challenges to bivalence came in the early twentieth century.
 
 Each of these systems acknowledged what bivalence ignored, and each captured something real. But each also stopped short. The third value was typically read as *unknown*, *undefined*, or *neither* — that is, as a placeholder for an absence rather than as a positive logical state in its own right. Fuzzy logic blurred the boundary between true and false but did not change its endpoints. None of these systems gave a principled account of propositions that are *stably between* true and false in a way that further inquiry will not, even in principle, resolve.
 
-Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a fifth truth value — *Tralse* — that is neither true, nor false, nor both, nor unknown, but something distinct: the stable logical state of a proposition whose truth-conditions are genuinely indeterminate, and whose indeterminacy is itself an informational fact about the world rather than a deficit in our access to it. The framework develops alongside it a sixth state, *Double Tralse*, for propositions that occupy a forbidden region in which their truth would generate logical or physical inconsistency, and a fourth state, the *I-state*, for propositions whose sample space is undefined. The full architecture is laid out in Chapters 3 through 5.
+Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a universal **Tralse-quality** — a structured imperfection — that is embedded in every coherent truth-claim, and a categorical scheme of **four base truth labels** that the framework's resolution procedure assigns: **True, False, Indeterminate, and Double Tralse**. *Indeterminate* is not a placeholder for missing information; it is a stable, coherent 50/50 balance — the framework's "45-degree door" — recognized as a positive logical state. *Double Tralse* is reserved for statements that are structurally incoherent (formally: a statement that both is and is not Tralse), which the framework discards rather than smuggling into the rest of the calculus. Outcomes beyond these four — for example, statements whose truth-value is technically settled but practically *dispensable* in the relevant frame — live in a separate catalogue called *Meta-Truths*, layered on top of the base four. The full architecture is laid out in Chapters 3 through 5 in the original first-edition presentation, and consolidated in Appendix E (Canonical Update — May 2026).
 
 ### 1.3 What the Framework Provides
 
 Tralse Informationalism is a working framework rather than a programmatic suggestion. The chapters that follow develop, in order, four components.
 
-The first is a *five-valued truth architecture* — True, False, Tralse, I-state, Double Tralse — together with the inference rules and consistency conditions that govern transitions among them. The architecture is conservative over classical logic on the bivalent fragment, which is to say that any inference valid in classical two-valued logic remains valid here when restricted to determinate propositions. Nothing the reader knows about ordinary deductive reasoning is lost.
+The first is a *base-four truth architecture* — True, False, Indeterminate, and Double Tralse — together with the inference rules and consistency conditions that govern transitions among them, and a layered *Meta-Truth* catalogue (currently twelve well-established Meta-Truths, with twenty-four catalogued in extended form) for outcomes that operate on top of the base four. The architecture is conservative over classical logic on the bivalent fragment, which is to say that any inference valid in classical two-valued logic remains valid here when restricted to determinate propositions. Nothing the reader knows about ordinary deductive reasoning is lost.
 
 The second is the *GILE framework* — Goodness, Intuition, Love, and Environment — which the book treats as a four-dimensional compass for assessing the quality of a state of affairs, including the inner state of an agent making a decision. GILE is operationalized in two registers: as a self-report instrument suitable for everyday use, and as a biometric construct correlated with measurable physiological signals. The relation between the two registers is the subject of Chapter 6.
 
@@ -411,19 +439,24 @@ In the Indeterminate Zone, outcomes aren't fixed. They're genuinely uncertain - 
 
 This is the zone of maximum agency. Maximum responsibility. Maximum opportunity.
 
-### The Ternary (Tralse) Classification
+### The Ternary Classification (Three of the Four Base Truth Labels)
 
 Traditional logic uses binary: True or False, 1 or 0, Yes or No.
 
 But reality isn't binary. There's a genuine middle ground.
 
-**GILE scores classify into three discrete Tralse states:**
+**GILE scores classify into three of the four canonical MR Truth Labels** (True, False, Indeterminate — the fourth, Double Tralse, is reserved for incoherent statements that the framework discards before this stage):
 
-| **If GILE is...** | **Then Tralse =** | **Digit** | **Meaning** |
-|-------------------|-------------------|-----------|-------------|
-| GILE > +0.333 | **TRUE (T)** | 2 | Positive, beneficial |
-| -0.666 ≤ GILE ≤ +0.333 | **INDETERMINATE (⊥)** | 1 | Uncertain, in flux |
-| GILE < -0.666 | **FALSE (F)** | 0 | Negative, harmful |
+| **If GILE is...** | **Then the MR Truth Label =** | **PD-coordinate digit** | **Meaning** |
+|-------------------|-------------------------------|-------------------------|-------------|
+| GILE > +0.333 | **True (T)** | TT (digit 2) | Positive, beneficial |
+| -0.666 ≤ GILE ≤ +0.333 | **Indeterminate (I)** | TI (digit 1) | Coherent 50/50 balance — the "45-degree door" |
+| GILE < -0.666 | **False (F)** | TF (digit 0) | Negative, harmful |
+
+Two notes (per the May 2026 Canonical Update — see preface and Appendix E):
+
+1. *Indeterminate* is a specific **state** — one of the four base labels. It is **not** the same thing as the universal *Tralse-quality*, which is the structured imperfection embedded in every label (True statements have it, False statements have it, Indeterminate statements have it). Earlier drafts conflated the two; the canonical version treats them as distinct.
+2. The PD-coordinate column above (TT / TI / TF) is **PD-coordinate notation**, not a truth-value taxonomy. The truth-value taxonomy is the four base MR Truth Labels {True, False, Indeterminate, Double Tralse}.
 
 **Examples:**
 
@@ -2563,7 +2596,17 @@ Myrion Resolution is a TI method for resolving apparently irreconcilable contrad
 
 **Named after "Myrion" = Many/countless**, it addresses how multiple contradictory things can all be true.
 
-### The Three Steps
+### The Gated Architecture (Canonical, per May 2026 Update)
+
+Myrion Resolution operates as a sequence of **gates**, each of which produces a more refined verdict on the statement under examination. Each full pass through the pipeline yields **one overall truth-claim**.
+
+- **MR1 — the Existence Gate.** Detects whether the statement is **Double Tralse** (formally, a statement that both *is* and *is not* Tralse — the structured imperfection both present and contradicted). Such statements are incoherent at the root; MR1 discards them. They get no storage slot in the rest of the framework.
+- **MR2 — the Truth Gate.** For any statement that survived MR1 (i.e. is sufficiently coherent to be evaluable), MR2 assigns one of three labels: **True**, **False**, or **Indeterminate** ("the 45-degree door" — a coherent 50/50 balance that is recognized as a positive logical state, not a placeholder for missing data).
+- **MR3 and beyond — the Meta-Truth gates.** Subsequent iterations apply the **Meta-Truth catalogue** (twelve well-established Meta-Truths in current canon, twenty-four in extended form). The most frequently encountered Meta-Truth is **Moot** — a statement whose base-4 truth-evaluation is *technically settled* but *practically dispensable* in the relevant frame. Meta-Truths compose with the base four (e.g., "Moot-True", "Moot-False"), they do not replace them.
+
+The original first-edition three-step procedure described in this chapter is preserved below for historical continuity; the gated architecture above is the canonical reading.
+
+### The (Original) Three Steps
 
 **Step 1: Identify the apparent contradiction**
 - "Either X or not-X"
@@ -2848,7 +2891,21 @@ TI is a young framework. Many predictions await testing. The evidence so far is 
 
 **TI Sigma:** Application of TI to biological and pharmacological prediction.
 
-**Tralse:** Three-valued logic (True, False, Indeterminate); the third state.
+**Tralse (the universal quality):** The structured imperfection embedded in **every** coherent truth-label. Present inside True, inside False, and inside Indeterminate. **Not** a fifth (or third) base value — listing it as one would double-count, since it is universal. Where this book's body says "Tralse is the third value," read "Tralse-quality is the universal property carried by every coherent label." (See Canonical Update Note in the preface and Appendix E.)
+
+**Indeterminate (the state):** One of the four canonical MR Truth Labels — a coherent 50/50 balance ("45-degree door"), recognized as a positive logical state. Distinct from Tralse-the-quality.
+
+**MR Truth Labels (base-4):** The canonical four-label set produced by the Myrion Resolution gates: **True, False, Indeterminate, Double Tralse**. (Per the May 2026 canonical ruling.)
+
+**Double Tralse (DT):** The structurally incoherent label: a statement that both *is* and *is not* Tralse — formally, DT(P) ⟺ τ(P) ∧ ¬τ(P). Discarded at the MR1 gate. Always nonsense. **DT means Double Tralse exclusively.**
+
+**DefT (Defective Truth):** A coordinate label on the PD imaginary axis (truth-absent vs truth-present) — **not** a base truth value. Renamed from earlier overloaded "DT scheme B" usage to eliminate the collision with Double Tralse. Where the book body says "DT" in the coordinate sense, read DefT.
+
+**Meta-Truths (MTs):** Outcomes that operate **on top of** the base-4 labels, applied at MR3 and beyond. Twelve well-established Meta-Truths in canon (twenty-four in extended form). The most common is *Moot*.
+
+**Moot (MT-B1):** A Meta-Truth: a statement whose base-4 truth-evaluation is technically settled but practically dispensable in the relevant frame. Composes with base labels ("Moot-True", "Moot-False"). **Independent of Double Tralse** — Moot is never nonsense; DT is always nonsense.
+
+**Authority Axis (AA / "Double A"):** The fifth truth-axis. The dimension along which a person grants **operative authority** to a claim — the willingness to act on it, defer to it, treat it as a load-bearing premise — independent of whether the claim is settled. Applies symmetrically to one's own beliefs (AA-self) and others' claims (AA-other). Operating principle: *"Believe what you currently are entertaining as well as leave subconscious room for doubt."* See `papers/AUTHORITY_AXIS_AA_2026-05-07.md`.
 
 **Φ (Phi):** The balance point (GILE = 0); center of the Sacred Interval.
 
@@ -10089,4 +10146,113 @@ Seligman, M. E. P. (2011). *Flourish*. Free Press.
 
 *Total Word Count: Approximately 50,000+ words*
 *Estimated Page Count: 200+ pages*
-*Status: Complete First Edition*
+*Status: Complete First Edition (January 2026), with Canonical Update Layer (May 2026)*
+
+---
+
+# Appendix E: Canonical Update — May 2026
+
+This appendix consolidates the May-2026 canonical clarifications introduced in the front-matter Canonical Update Note. It is the authoritative reference for the framework's current truth-architecture; where the body of the book contradicts this appendix, this appendix wins. (The body of the book has not yet been fully rewritten; that pass is in progress for the second edition.)
+
+For the full standalone treatment, including the structural reasoning, the four prior incompatible draft schemes that were reconciled, and the open research questions, see the canonical paper `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
+
+## E.1 The Four Canonical MR Truth Labels
+
+The framework's base set is **four labels**:
+
+> **{ True, False, Indeterminate, Double Tralse }**
+
+This is the **base-4 set**. Every other truth-flavored outcome — Mootness, Moot-True, Moot-False, Moot-Indeterminate, and the broader catalogue of Meta-Truths discussed in §E.5 — operates **on top of** these four, not as a peer of them.
+
+- **True** — the statement is sufficiently coherent (passes MR1) and the Truth Gate (MR2) resolves toward true. The universal Tralse-quality is still embedded.
+- **False** — the statement is sufficiently coherent (passes MR1) and the Truth Gate resolves toward false. The universal Tralse-quality is still embedded.
+- **Indeterminate** — the statement is sufficiently coherent (passes MR1) and the Truth Gate stops at the "45-degree door" — a coherent 50/50 balance. **Not** ignorance, **not** missing data, **not** a placeholder.
+- **Double Tralse (DT)** — the statement is structurally incoherent (fails MR1). Always nonsense. Discarded.
+
+Earlier drafts (including the body of this book) sometimes listed five base values — variously {T, F, Tralse, I-state, DT}, {T, F, Tralse, Moot, DT}, {Nonsense, Moot, T, F, I}, or {T, F, TI, DT, EV}. All four such schemes are superseded; the base-4 above is canonical.
+
+## E.2 Tralse is a Universal Quality, Indeterminate is a State
+
+This is the most important vocabulary distinction in the May-2026 update:
+
+| | **Tralse (the universal quality)** | **Indeterminate (the state)** |
+|---|---|---|
+| What it is | Structured imperfection carried by every coherent label | One of the four discrete labels |
+| Where it lives | Embedded inside True, False, *and* Indeterminate | A specific position the gate resolves to |
+| Quantification | Always nonzero for any coherent statement (captured on the PD-imaginary axis) | Categorical assignment by MR2 |
+| Failure mode | If a statement has zero Tralse-quality, it has been collapsed to a sloppy classical-T or classical-F label (which the framework rejects) | If MR2 cannot resolve to T or F, it stops here |
+
+A True statement still has Tralse-quality. A False statement still has Tralse-quality. An Indeterminate statement has Tralse-quality. **Only DT *contradicts* its own Tralse-quality** (per the formal definition in §E.3) and is therefore discarded.
+
+Earlier text that says "Tralse is the third value" or "Tralse is the fifth value" — including the body of this book — is using the older draft vocabulary. Read it as the *quality*, not the *label*.
+
+## E.3 Double Tralse — The Formal Definition
+
+A statement P is Double Tralse precisely when it both *is* and *is not* Tralse:
+
+> **DT(P) ⟺ τ(P) ∧ ¬τ(P)**
+
+In plain English: the statement carries the universal Tralse-quality and contradicts it at the same time. Such statements have no coherent storage slot; the framework discards them at MR1.
+
+This formal surface definition reconciles cleanly with the algebraic definition given in earlier work (`urb_677`), where Double Tralse is treated as the nilpotent zero element produced by applying the Tralse operator to itself: T(T(P)) = τ² = 0. The two are the same object at two levels of formalization — the surface form names *what is contradictory*, the algebraic form gives the operator-theoretic instantiation.
+
+## E.4 The Myrion Resolution Gates
+
+The framework's truth-evaluation procedure is a sequence of **gates**:
+
+- **MR1 — Existence Gate.** Detects Double Tralse and discards it.
+- **MR2 — Truth Gate.** For statements passing MR1: assigns True, False, or Indeterminate.
+- **MR3, MR4, … — Meta-Truth gates.** Apply Meta-Truths (see §E.5) on top of the MR2 verdict.
+
+Each full pass through the pipeline produces **one overall truth-claim**.
+
+## E.5 Meta-Truths (the Home for Moot)
+
+Outcomes beyond the base-4 — for example, statements that are *technically* settled but *practically dispensable* — are catalogued as **Meta-Truths** (MTs), which operate at MR3 and beyond. The current well-established catalogue is twelve MTs in six categories (Reversal, Dissolution, Scope-Shift, Contextual, Acceptance, Integration); an extended catalogue lists twenty-four. The MTs include:
+
+- **Moot (MT-B1)** — the most frequently encountered MT. The base-4 evaluation is technically settled but practically dispensable in the relevant frame. Examples: "Whether the lamp was on or off five minutes before I arrived in the empty room is technically a fact, but moot." Composes with base labels: a statement can be Moot-True, Moot-False, or Moot-Indeterminate.
+- Other categories handle reversal of prior verdicts, dissolution of the question, scope-shifts, contextual re-frames, acceptance moves, and integrative resolutions.
+
+**Moot is independent of Double Tralse.** A Moot statement is not nonsense; it is well-formed, evaluable, and has a base-4 verdict. DT is always nonsense; Moot is never nonsense. They are categorically separate.
+
+## E.6 Classical True and False are Rejected as Standalone Values
+
+The framework explicitly rejects "pure classical True" and "pure classical False" as available standalone values. Every coherent statement carries the universal Tralse-quality. Classical T/F are useful idealizations (and the framework is *conservative* over classical logic on the bivalent fragment, in the sense that any classical inference remains valid when restricted to determinate propositions) — but they are not destinations on the framework's truth-richness spectrum.
+
+## E.7 The Five Truth-Axes
+
+A truth-claim in the framework is described by **five orthogonal dimensions**, not one:
+
+| # | Axis | What it varies |
+|---|---|---|
+| 1 | **PD real axis** | Degree of trueness (continuous, [0, 1]) |
+| 2 | **PD imaginary axis** | Modality / DefT — the "Defective Truth" coordinate |
+| 3 | **MR Truth Labels** | Categorical: base-4 {T, F, I, DT} + N Meta-Truths |
+| 4 | **τ / δ separability** | Internal calibration vs external selection |
+| 5 | **Authority Axis (AA)** | Operative authority granted to the claim |
+
+Axes 1–3 are properties *of the proposition itself*. Axes 4–5 are properties *of the agent's relation to the proposition*.
+
+The **Authority Axis (AA)** in particular is new in this canonical update. It tracks the willingness to act on a claim, defer to it, build on it, or treat it as a load-bearing premise — independent of whether the claim is epistemically settled. AA applies symmetrically to oneself (AA-self) and to others (AA-other), and is governed by a single operating principle:
+
+> *"Whether it's believing oneself or someone else, you MUST believe in what you currently are entertaining as well as leave subconscious room for doubt."*
+
+See the standalone paper `papers/AUTHORITY_AXIS_AA_2026-05-07.md` for the full treatment.
+
+## E.8 Notation Cleanup: DT vs DefT
+
+Earlier drafts used the abbreviation "DT" in two distinct senses:
+
+- **DT** — Double Tralse (the discarded-nonsense label, gate MR1).
+- **DT** — Defective Truth (a coordinate label on the PD imaginary axis).
+
+This was a real source of confusion. As of May 2026:
+
+- **DT** means **Double Tralse** — exclusively and canonically.
+- **DefT** means **Defective Truth** — a PD-imaginary-axis coordinate, *not* a truth value.
+
+Where the body of the book says "DT" in the PD-coordinate sense, read DefT. Where it says "DT" in the discarded-nonsense sense, the meaning is unchanged.
+
+---
+
+**End of Appendix E. Canonical Update — May 2026. For the full standalone consolidating ruling, see `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.**

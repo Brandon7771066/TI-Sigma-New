@@ -138,7 +138,7 @@ Prior to the 2026-05-08 ruling, the corpus contained four mutually inconsistent 
 | {Nonsense, Moot, T, F, I} | Brandon 2026-05-08 morning first-pass | **Refined** to base-4 + Moot-as-MT (Moot is independent of DT, not a DT-compartment) |
 | 4 base + 12 MTs | `urb_608` | **Ratified as canonical** |
 
-**DT abbreviation collision** with `urb_628`'s scheme-B "DT = Defective Truth / Down Truth / Direct-Tralse" (PD-coordinate notation on axis 2) remains OPEN — recommended rename of scheme B to **DefT** is proposed but not committed pending Brandon ruling. Until then, every "DT" use must be tagged scheme A or scheme B at point of use.
+**DT abbreviation collision RESOLVED (Brandon ruling 2026-05-08)**: **DT = Double Tralse, exclusively and canonically.** The prior overloaded "DT scheme B" (Defective Truth / Down Truth / Direct-Tralse) is renamed to **DefT**. Legacy `urb_628`-derivative papers that still write "DT" in the PD-coordinate sense should be read as DefT until individually patched.
 
 ### §4.9 — Established in
 

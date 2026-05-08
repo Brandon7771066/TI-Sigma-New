@@ -239,7 +239,7 @@ What §10 reveals, when read alongside the existing PD/tralse architecture, is t
 | Axis | What it varies | Established in |
 |---|---|---|
 | **(1) PD real axis** — degree of trueness | Position in (−π, +π) partitioned at named constants {2/3, √2−1, 1/√2, 1, φ, e} | `urb_628`, `urb_734`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` |
-| **(2) PD imaginary axis** — modality (DT/Defective Truth, truth-absent vs truth-present) | Position on (0, i·π) | `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `urb_733`, `urb_734` |
+| **(2) PD imaginary axis** — modality (DefT / Defective Truth, truth-absent vs truth-present; renamed from legacy "DT scheme B" per Brandon 2026-05-08 — DT now exclusively = Double Tralse) | Position on (0, i·π) | `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `urb_733`, `urb_734` |
 | **(3) Tralse-vs-binary axis** — five-valued logic categories {TT, TI, TF, DT, EV} | Categorical, not graded | `urb_628` §4 |
 | **(4) τ-vs-δ axis (NEW, §10)** — internal calibration vs external selection-bias | Two channels with independent values, no contradiction when divergent | `ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` §4, §10.3 |
 

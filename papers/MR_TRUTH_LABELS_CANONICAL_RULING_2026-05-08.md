@@ -127,7 +127,7 @@ The four prior 5-value schemes (urb_639, urb_677, urb_713, May-8 first-pass) are
 
 (e) **Cluster impact**: this is a **canonical correction**, not a new dimension. Cluster axis-count remains at 5 (the truth-axis is axis 3 of the 5-axis system; this ruling refines its internal structure without adding or removing axes). Cluster dimensions count unchanged.
 
-(f) **DT abbreviation collision still OPEN.** Scheme A (Double Tralse, this paper) vs scheme B (Defective Truth, `urb_628` PD-coordinate notation) remain distinct concepts. Recommended rename of scheme B to **DefT** is still proposed but not committed pending Brandon ruling. Until then, every "DT" use must be tagged scheme A or scheme B at point of use.
+(f) **DT abbreviation collision RESOLVED (Brandon ruling, 2026-05-08, same-day follow-up).** **DT = Double Tralse, exclusively and canonically.** The prior "DT scheme B" (Defective Truth / Down Truth / Direct-Tralse, `urb_628` PD-coordinate notation) is renamed to **DefT**. The PRIMARY constants set is unchanged; only the letter code on the truth-absent ternary digit changes. Legacy papers that write "DT" in the PD-coordinate sense should be read as DefT until individually patched; new work uses DT exclusively for Double Tralse and DefT exclusively for Defective Truth.
 
 ---
 
