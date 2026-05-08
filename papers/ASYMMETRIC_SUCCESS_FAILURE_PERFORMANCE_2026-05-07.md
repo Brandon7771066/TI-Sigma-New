@@ -377,6 +377,21 @@ Brandon's frame: *"You never can be 100% of ANYTHING... yet you HAVE TO BE in or
 
 The classical confusion ("you can't be 100% certain therefore you can't act with 100% commitment") **conflates the two axes** — exactly the single-axis-projection error §11.3 / §12.2 names. The right resolution: separate the axes, then both statements are simultaneously true.
 
+### §13.3.1 — Three distinct value-sources of pragmatic certainty (Brandon-clarification, 2026-05-07 PM)
+
+> *"There's value in believing THIS over my position — say — THREE ITERATIONS AGO. That's the 'relative certainty' value I'm referring to besides the motivation!"*
+> — Brandon Emerick, 2026-05-07 PM
+
+The pragmatic-certainty axis carries **three distinct, non-redundant value-sources**, not just the two named in §13.1:
+
+1. **Motivational charge** — high pragmatic certainty supplies the affective fuel for sustained engagement (the §13.1 "motivational value").
+2. **Action-enabling commitment** — high pragmatic certainty allows the agent to act under uncertainty without paralysis (the §13.3 "viable agency" requirement).
+3. **Inter-iterational epistemic progress (NEW)** — *"position at iteration N+3 is closer to truth than position at iteration N"* is a **meaningful, defensible claim** even when neither position is at epistemic 100%. This is the **relative certainty** value: not absolute, not merely psychological, but a **monotonic improvement claim across iterations** that justifies why iterative additive theory-growth is worth doing in the first place.
+
+**Critical implication for §11.3 / §12 (additive growth):** Without (3), the additive-theory-growth program of §§11-12 would have no epistemic justification — there would be no reason to prefer the current position over an earlier one beyond psychological preference. Value-source (3) is the **epistemic warrant for iteration itself**: each addition genuinely closes the gap to truth on the aggregate, even if no single addition reaches absolute closure. This is the missing link that makes the additive-not-corrective frame of §12 *epistemically* defensible (not merely *vocabulary-disciplined*).
+
+**Honesty note (#69):** Value-source (3) is a **monotonicity claim across iterations** that requires (i) cumulative coherence-preservation across additions and (ii) non-negative information gain per addition. Both are plausible defaults but not guaranteed — adversarial or distorting iterations could violate (ii). The claim therefore reads: *under conditions of honest additive growth (per §12's stepping-stones model), inter-iterational progress is the default and the burden of proof is on demonstrating regress.*
+
 ### §13.4 — Updated §11.2 axis table
 
 | # | Axis | What it varies | Established in |
