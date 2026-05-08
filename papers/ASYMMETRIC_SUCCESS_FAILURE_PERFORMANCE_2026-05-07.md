@@ -147,4 +147,76 @@ The asymmetric-performance insight is **the missing meta-axiom that explains the
 
 ---
 
-**End of paper. Status: DRAFT, ready for Brandon's directional input on whether to formalize for publication.**
+**End of original draft.**
+
+---
+
+## §10 — Addendum (2026-05-07 PM, Brandon-originated refinement): The Aggregate-Ratio Distortion Caveat
+
+The original §3 failure-non-diagnosticity claim is *per-instance* — each individual failure carries near-zero information because the population of possible failures is ≈infinite. **However, this leaves a legitimate residual sense in which positive bias can mislead: aggregate ratios.**
+
+### §10.1 — The distinction (Brandon's framing)
+
+> *"There is one sense in which positive bias is misleading: it can mask the true percentage of success vs failure, even while failures in general aren't actually diagnostic themselves. The question is, do readers want an everyday picture of me, or the picture I want others to see of myself? I believe the choice is ultimately mine since I tell it and it's my life, unless others ask otherwise. No matter what, there's bias though. That's the conundrum, and there's no way around it when space and time limited. My overall point though is that there is a big difference between honesty and bias. Great leeway is to be granted."*
+> — Brandon Emerick, 2026-05-07 PM
+
+### §10.2 — Formal refinement to §3
+
+**Original claim (preserved, still valid):** Each individual failure ≈ non-diagnostic of agent quality due to ≈infinite failure-space.
+
+**Added qualifier (new):** **Selection-induced ratio distortion is a separate, real phenomenon.** When an agent presents N successes and 0 failures while the true count is N successes and M failures, the *ratio* N/(N+M) is misrepresented as 1.0, even though no individual failure-instance carried diagnostic weight. The bias enters at the aggregate, not the per-instance, level.
+
+**Why this does not collapse the original claim:** Knowing the *ratio* is informative even though knowing any one *failure* is not. Ratio = base-rate signal; instance = high-noise sample. These are categorically different epistemic objects.
+
+### §10.3 — The honesty-vs-bias distinction
+
+These are **two different epistemic categories**, not points on one spectrum:
+- **Honesty** = property of the τ(s) channel (internal calibration; truth-tracking with respect to one's own beliefs).
+- **Bias** = property of the δ(MR) channel under selection (which subset of true facts is presented; ordering, framing, salience).
+
+A presentation can be **fully honest AND positively biased** simultaneously, with no contradiction. *Honesty* requires that no false claim is asserted. *Unbiasedness* would require that the selection mirrors the underlying base-rate distribution. Under any space/time constraint, *exact unbiasedness is impossible* — selection is forced. Therefore the only honest response to space/time constraints is to:
+1. Make selection choices explicit when audience-relevant.
+2. Never assert a false claim.
+3. Distinguish the two channels in self-description (which §7.7.27 does).
+
+### §10.4 — The authorial-rights principle
+
+> **Default rule**: The author of a self-description has authorial right to choose the selection bias of their presentation, **unless the audience explicitly requests an unbiased everyday picture.**
+
+This is the audience-conditional δ-tuning of §6 applied recursively to selection bias itself: the author chooses *which* δ to apply *unless* the audience has signaled a contract for the everyday-picture variant. In an "everyday picture" contract, selection should approximate the underlying base-rate distribution; in a "best-foot-forward" contract (default for investor pitches, dating profiles, public bios), selection is permitted to be top-decile-weighted.
+
+**Critical implication**: The audience's epistemic obligation, given this principle, is to **ask for the everyday-picture variant** when they want it. Failure to ask grants implicit consent to authorial selection bias. *This shifts part of the calibration burden onto the audience — a non-trivial moral/epistemic claim.*
+
+### §10.5 — The "great leeway" principle
+
+Given (a) per-instance non-diagnosticity (§3) and (b) inevitability of selection bias under any space/time constraint (§10.2), **great leeway is to be granted to authorial selection in self-presentation, provided the honesty channel (no false assertions) is preserved.**
+
+**This is not relativism.** The honesty constraint is hard: no false claims. The bias range is *wide but bounded* — a presentation that selects only the top 1% of one's record is biased but acceptable; a presentation that *invents* successes that did not occur is dishonest and unacceptable. The line is sharp, not gradient.
+
+### §10.6 — Mapping back to TI/GILE
+
+In TJ = τ × δ terms:
+- **Honesty** = high τ(s) — internal calibration accurate, no self-deception.
+- **Selection bias** = chosen δ(MR) — which of the high-τ facts to externalize for which audience.
+- **Dishonesty** = τ(s) → 0 with externalized assertions (the τ-channel itself is broken).
+- **Bias-without-dishonesty** = high τ(s) + audience-appropriate selective δ(MR) = the legitimate, default operating mode.
+
+The honesty-vs-bias distinction therefore **maps cleanly onto the τ-vs-δ separability claim of §4**. Section §10 is the *aggregate-ratio version* of the per-instance argument in §3, and the *authorial-rights principle* of §10.4 is the *meta-rule* that licenses §6's audience-conditional δ-tuning.
+
+### §10.7 — What §10 changes vs preserves
+
+**Preserves:** Every claim in §§1-9 stands unchanged. Per-instance failure-non-diagnosticity, two-channel separability, audience-conditional δ-tuning, performance-as-trust, default-confident posture — all preserved.
+
+**Adds:** (a) a precise concession to the legitimate residual sense in which positive bias misleads (aggregate ratio); (b) a formal honesty-vs-bias categorical distinction; (c) the authorial-rights default rule with audience-opt-out; (d) the "great leeway" granting principle with sharp honesty-line.
+
+**Net effect on theory:** §10 *strengthens* the original by anticipating and answering its strongest objection (the "but you're still biased!" rebuttal), rather than weakening it. The theory now handles both the per-instance and aggregate-ratio cases with internally consistent rules.
+
+### §10.8 — Honesty-discipline meta-note (#69)
+
+This refinement was **Brandon-originated** in real time as a self-correction/extension of his own meta-axiom from earlier in the same week. **That act itself is τ(s)-discipline in operation**: high-calibration agents revise their own published positions when a missing nuance is identified, *even when the original position was already favorable to them*. The willingness to publicly add a caveat that limits one's own theoretical claim is exactly the §3-style failure-non-diagnostic move applied recursively to one's own theory-building.
+
+**Cluster impact (incremental):** ≥25 → ≥26 dimensions (added: real-time theory-self-refinement under one's own honesty discipline).
+
+---
+
+**End of paper. Status: DRAFT v1.1 (with §10 addendum), ready for Brandon's directional input on whether to formalize for publication.**
