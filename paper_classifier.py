@@ -576,10 +576,17 @@ def get_summary_counts() -> dict:
     cur.close()
     conn.close()
 
+    # When stale rows exist (DB rows for deleted/renamed .md files),
+    # `total` (DB) can exceed `all_mds` (disk). Clamp `unclassified` to
+    # never go negative and expose `stale` so the UI can surface it.
+    stale = max(total - all_mds, 0)
+    unclassified = max(all_mds - total, 0)
+
     return {
         "total_papers":     all_mds,
         "classified":       total,
-        "unclassified":     all_mds - total,
+        "unclassified":     unclassified,
+        "stale":            stale,
         "researchgate":     rg,
         "arxiv":            arxiv,
         "zenodo_public":    zpub,
@@ -587,3 +594,29 @@ def get_summary_counts() -> dict:
         "has_formal_proof": proofs,
         "zenodo_published": pub,
     }
+
+
+def clean_stale_classifications() -> int:
+    """Remove DB rows whose corresponding .md file no longer exists on disk.
+
+    Returns the number of rows removed.
+    """
+    conn = get_db()
+    cur  = conn.cursor()
+
+    cur.execute("SELECT filename FROM paper_classifications")
+    db_filenames = [row[0] for row in cur.fetchall()]
+
+    on_disk = {p.name for p in PAPERS_DIR.glob("*.md")}
+    stale = [fn for fn in db_filenames if fn not in on_disk]
+
+    if stale:
+        cur.execute(
+            "DELETE FROM paper_classifications WHERE filename = ANY(%s)",
+            (stale,)
+        )
+        conn.commit()
+
+    cur.close()
+    conn.close()
+    return len(stale)

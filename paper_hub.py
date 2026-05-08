@@ -15,6 +15,7 @@ from paper_classifier import (
     get_arxiv_list,
     get_zenodo_privacy_map,
     get_summary_counts,
+    clean_stale_classifications,
     PAPERS_DIR,
 )
 
@@ -103,9 +104,29 @@ def _render_classify_tab(counts: dict):
     classified   = counts["classified"]
     total        = counts["total_papers"]
 
+    stale = counts.get("stale", 0)
+
     if classified > 0:
-        st.progress(classified / max(total, 1),
-                    text=f"{classified}/{total} papers classified")
+        progress_pct = min(classified / max(total, 1), 1.0)
+        if stale > 0:
+            st.progress(progress_pct,
+                        text=f"{classified}/{total} papers classified "
+                             f"(⚠ {stale} stale DB rows for deleted papers)")
+        else:
+            st.progress(progress_pct,
+                        text=f"{classified}/{total} papers classified")
+
+    if stale > 0:
+        st.warning(
+            f"⚠ **{stale} stale classification row(s) detected** — the database "
+            f"contains {classified} rows but only {total} `.md` files exist on disk. "
+            f"This happens when papers are renamed or deleted after classification. "
+            f"Clean up to restore accurate counts."
+        )
+        if st.button(f"🧹 Remove {stale} stale row(s)", key="clean_stale_btn"):
+            removed = clean_stale_classifications()
+            st.success(f"Removed {removed} stale row(s).")
+            st.rerun()
 
     col1, col2 = st.columns(2)
     with col1:
@@ -179,7 +200,7 @@ def _run_classification(force: bool):
     status_text  = st.empty()
 
     def update_progress(done, total):
-        pct = done / max(total, 1)
+        pct = min(done / max(total, 1), 1.0)
         progress_bar.progress(pct, text=f"Classifying paper {done}/{total}...")
         status_text.info(f"Processing batch... {done}/{total} papers")
 
