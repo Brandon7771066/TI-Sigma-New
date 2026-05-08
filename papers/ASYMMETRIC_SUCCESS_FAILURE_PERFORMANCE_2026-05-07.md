@@ -344,4 +344,74 @@ Two honesty notes specific to §12:
 
 ---
 
-**End of paper. Status: DRAFT v1.3 (§§10-12 addenda). Pattern note: §§10-12 form a coherent triplet — §10 adds an axis, §11 names the move, §12 applies the move to the meta-vocabulary. The asymmetric-performance paper is now arguably TWO papers fused: the original §§1-9 on τ/δ separability, and §§10-12 on the axis-addition meta-heuristic. Recommended next-action: split §§10-12 into a standalone companion paper *"TI Sigma Axis-Addition Heuristic + Stepping-Stones Failure Model"* — currently flagged as DPES-defer pending Brandon's directional input.**
+**End of v1.3.**
+
+---
+
+## §13 — Addendum (2026-05-07 PM, Brandon-originated): The Pragmatic-Certainty Axis — True-Tralse Compatibility of "I've Figured This Out" + "Something Is Still Missing"
+
+### §13.1 — The observation
+
+> *"There's also the true-tralse compatibility of holding 'I've totally figured out this solution with this refinement!' and 'There's probably something we're still missing!' The former provides relative certainty and motivational value, both of which are nontrivial even though they may not be factually true in an absolute sense. That, again, is a fundamental aspect of truth's tralseness. You never can be 100% of ANYTHING... yet you HAVE TO BE in order to live!!!"*
+> — Brandon Emerick, 2026-05-07 PM
+
+§13 identifies a **fifth orthogonal axis** of TI Sigma truth-richness, completing what §11 began: the **pragmatic-certainty axis**, which is independent of the four already-named (PD-real, PD-imaginary, tralse five-valued, τ/δ separability).
+
+### §13.2 — The simultaneous-hold structure
+
+Two propositions held simultaneously:
+- **P1**: *"I've figured this out."* — High pragmatic certainty; high motivational charge; action-enabling.
+- **P2**: *"There's probably something I'm still missing."* — High epistemic humility; non-foreclosing; revision-enabling.
+
+Under classical logic (binary, single-axis), holding P1 and P2 simultaneously is **Moore's-paradoxical** — *"P, but I don't know P"* is treated as performatively self-defeating. Under TI Sigma's multi-axis truth-richness, **P1 and P2 are held on different axes and are therefore simultaneously consistent.** P1 lives on the pragmatic-certainty axis; P2 lives on the epistemic-completeness axis. Neither contradicts the other because they are not points on the same axis.
+
+This is the **textbook tralse case**: a proposition that classical logic flags as paradoxical resolves cleanly when the underlying truth-structure is recognized as multi-axial.
+
+### §13.3 — The "have to be 100%" pragmatic necessity
+
+Brandon's frame: *"You never can be 100% of ANYTHING... yet you HAVE TO BE in order to live."* This is a **pragmatic necessity claim** that has clean TI Sigma machinery:
+
+- **Epistemically**: 100% certainty is unavailable for any non-trivial proposition (Cromwell's rule; absence of certainty is the default state across all real propositions).
+- **Pragmatically**: action requires functional commitment. An agent who waits for 100% epistemic certainty before acting *never acts* and is therefore not a viable agent.
+- **TI Sigma resolution**: the "100%" of pragmatic certainty is a **different quantity** than the "100%" of epistemic certainty — same word, different axes. The pragmatic 100% is achievable and necessary; the epistemic 100% is unachievable and dispensable.
+
+The classical confusion ("you can't be 100% certain therefore you can't act with 100% commitment") **conflates the two axes** — exactly the single-axis-projection error §11.3 / §12.2 names. The right resolution: separate the axes, then both statements are simultaneously true.
+
+### §13.4 — Updated §11.2 axis table
+
+| # | Axis | What it varies | Established in |
+|---|---|---|---|
+| 1 | **PD real axis** | degree of trueness | `urb_628`, `urb_734`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` |
+| 2 | **PD imaginary axis** | modality / DT | `UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md`, `urb_733`, `urb_734` |
+| 3 | **Tralse five-valued logic** | categorical {TT, TI, TF, DT, EV} | `urb_628` §4 |
+| 4 | **τ vs δ separability** | internal calibration vs external selection | this paper §4, §10.3 |
+| 5 | **Pragmatic vs epistemic certainty** (NEW, §13) | action-enabling commitment vs absolute factual completeness | this paper §13 |
+
+A TI Sigma truth-claim's full description is now **a 5D vector**, not a scalar. P1 + P2 simultaneous hold is a single point in 5D space with high values on axes 4-pragmatic and low values on axes 4-epistemic; perfectly well-defined.
+
+### §13.5 — Connections to existing literature
+
+This is not a new philosophical insight in absolute terms — it's well-known territory:
+- **William James (1896)** "The Will to Believe" — pragmatic justification of commitment beyond evidence.
+- **Kierkegaard** — the "leap of faith" requires acted-on commitment in the absence of epistemic completion.
+- **Pascal's Wager** — decision-theoretic structure of pragmatic-certainty-vs-epistemic-uncertainty.
+- **Moore's Paradox (1942)** — "P, but I don't know P" as the canonical statement of the surface tension §13 dissolves.
+- **Pragmatist epistemology** generally — Peirce, Dewey on truth-as-what-works.
+
+**What is novel in §13**: the cross-mapping to TI Sigma's existing multi-axis machinery, which provides the *formal* justification (axis-orthogonality) for what these traditions assert *informally* (pragmatic and epistemic are different categories). The TI Sigma frame answers the residual classical objection ("but they really are the same thing under the hood, aren't they?") with a structural negation: no, they are *categorically separate axes*, not points on a shared spectrum.
+
+### §13.6 — Honesty discipline note (#69)
+
+Three honest calibrations:
+
+(a) **The pragmatic-vs-epistemic distinction is well-established in philosophy** (per §13.5). What §13 contributes is the *TI-Sigma-specific formalization*, not the underlying insight. To claim §13 as wholly original would be inflation; the honest framing is "§13 maps an established philosophical distinction onto TI Sigma's existing multi-axis structure, gaining a formal-orthogonality justification it did not previously have in TI Sigma."
+
+(b) **The 5-axis count itself is now at the threshold where dimensional inflation becomes a risk.** §11 established 4 axes; §13 adds a 5th; future additions need to clear a higher bar. The axis-addition heuristic of §11.3 is a license, not a blank check — adding axes that are not genuinely orthogonal would be a graded-resolution-disguised-as-axis-addition error (the inverse failure mode of §12). Each future proposed axis should pass an explicit orthogonality test against the existing five.
+
+(c) **The "you have to be 100%" claim is a pragmatic-necessity claim, not a metaphysical one.** It applies to functioning agents under action-pressure; it does not assert that 100% pragmatic commitment is *always* virtuous (over-commitment is a known failure mode — see overconfidence literature, the Dunning-Kruger calibration work). The honest frame: *under conditions where action is required, pragmatic 100% is necessary; under conditions where deliberation is appropriate, partial pragmatic commitment is correct.* The two-axis structure preserves the agent's ability to modulate pragmatic certainty by context, which classical single-axis framings cannot.
+
+**Cluster impact (incremental):** ≥28 → ≥29 dimensions (added: pragmatic-vs-epistemic-certainty axis-recognition + ability to hold Moore's-paradoxical pairs without classical contradiction).
+
+---
+
+**End of paper. Status: DRAFT v1.4 (§§10-13 addenda). Pattern note: §§10-13 form a coherent quartet — §10 adds an axis, §11 names the axis-addition move, §12 applies the move to the meta-vocabulary, §13 adds another axis (pragmatic-certainty) using the now-established move. The asymmetric-performance paper is increasingly bifurcated: §§1-9 on τ/δ separability for performance contexts, §§10-13 on TI Sigma's multi-axis truth-richness in general. Recommended next-action: extract §§10-13 into a standalone companion paper *"TI Sigma Axis-Addition Heuristic, Stepping-Stones Failure Model, and Five-Axis Truth-Richness"* — currently flagged as DPES-defer pending Brandon's directional input.**
