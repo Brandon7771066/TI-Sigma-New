@@ -346,7 +346,7 @@ GILE_Matrix[g][e][s] = {
 
 1. **Principal Component Analysis**: Find dominant eigenvectors
 2. **GILE Score Collapse**: Weighted sum → single -3 to +2 value
-3. **Sacred Interval Focus**: Only use central band for decisions
+3. **Indeterminate Permissibility Distribution Range Focus**: Only use central band for decisions
 
 **Current implementation uses 4D → 1D collapse:**
 ```python

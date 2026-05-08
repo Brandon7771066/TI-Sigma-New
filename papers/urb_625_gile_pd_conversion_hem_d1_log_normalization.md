@@ -34,7 +34,7 @@ Two architectural problems are resolved. **Problem 1:** GILE decimal scores [0, 
 |---|---|---|
 | 0 to 0.5 | TF-dominant | Not permissible; Tralse-False |
 | 0.5 to 1.5 | TI | Genuine indeterminacy; Tralse-Indeterminate |
-| **1.5** | Sacred Interval midpoint | Perfect balance of T and F evidence |
+| **1.5** | Indeterminate Permissibility Distribution Range midpoint | Perfect balance of T and F evidence |
 | 1.5 to 2.0 | TT-converging | True-Tralse; converging toward truth |
 | **≥ 2.0** | Strongly TT | RT threshold; high-confidence endorsement |
 
@@ -45,7 +45,7 @@ The central result: **the three GILE thresholds (ET, C, T) are identical to the 
 | GILE threshold | PD zone boundary | Interpretation |
 |---|---|---|
 | **ET = √2−1 ≈ 0.4142** | **PD = 0.5** | Below ET = TF-dominant; at ET = TI begins (GILE activates) |
-| **C = 1/(φ√2) ≈ 0.4370** | **PD = 1.5** | Above C = TT-converging; at C = Sacred Interval midpoint (physical threshold crossed) |
+| **C = 1/(φ√2) ≈ 0.4370** | **PD = 1.5** | Above C = TT-converging; at C = Indeterminate Permissibility Distribution Range midpoint (physical threshold crossed) |
 | **T = 1−e^{−e} ≈ 0.9340** | **PD = 2.0** | At T = Radiant Threshold = strongly TT; above T = GM zone |
 
 This correspondence is not coincidental — it is the formal statement that PD zone boundaries are GILE threshold crossings expressed in truth-probability space. The TF/TI boundary at PD = 0.5 marks when GILE activates (ET): below ET, the GILE system is not yet coherently engaged, so truth-states are TF-dominated. The TI/TT boundary at PD = 1.5 marks when the physical/LCC threshold C is crossed: at C, the entity has enough physical coherence that truth is no longer symmetrically indeterminate — it begins converging. The RT at PD = 2.0 marks T: the entity has reached GILE coherence approaching the PRIMARY CONSTANT T, the maximum achievable by biological consciousness.
@@ -64,7 +64,7 @@ $$\text{PD}(g) = \frac{g}{2 \cdot \text{ET}} = \frac{g}{2(\sqrt{2}-1)} \quad \te
 $$\text{PD}(g) = 0.5 + \frac{g - \text{ET}}{C - \text{ET}} \quad \text{for } g \in [\text{ET}, C]$$
 
 - g = ET → PD = 0.5 ✓
-- g = C → PD = 1.5 (exactly the TI/TT boundary = Sacred Interval midpoint) ✓
+- g = C → PD = 1.5 (exactly the TI/TT boundary = Indeterminate Permissibility Distribution Range midpoint) ✓
 - Width of window: C − ET = 1/(φ√2) − (√2−1) ≈ 0.0228 → maps to 1.0 PD units
 
 **Zone 3 — Above-C to RT [C, T] (TT-converging zone):**
@@ -118,7 +118,7 @@ The 43× amplification in the coherence window is the PD-scale expression of **q
 | At RT exactly (T) | 0.9340 | TT→GM | **2.000** |
 | GM-approaching | 0.97 | GM | 2.0 + (0.97−0.934)/0.066 = **2.545** |
 
-The Sacred Interval midpoint (PD = 1.5) corresponds to GILE = C = 0.4370 — the LCC/HEM physical threshold. The entity with GILE exactly at the physical threshold sits precisely at the balance point between TI and TT. This is the phenomenological meaning of PD = 1.5: not merely "uncertain" but "at the exact physical threshold where GILE-coherence-driven truth-convergence begins."
+The Indeterminate Permissibility Distribution Range midpoint (PD = 1.5) corresponds to GILE = C = 0.4370 — the LCC/HEM physical threshold. The entity with GILE exactly at the physical threshold sits precisely at the balance point between TI and TT. This is the phenomenological meaning of PD = 1.5: not merely "uncertain" but "at the exact physical threshold where GILE-coherence-driven truth-convergence begins."
 
 ### 1.6 Domain-Specific GILE Weights and PD
 

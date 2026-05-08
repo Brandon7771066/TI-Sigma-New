@@ -1,27 +1,27 @@
 # URB #496: The Problem of Evil as Mathematical Compromise
-## How e Necessitates the Negative Range, Why the Sacred Interval Is 2:1, and Why CCC Could Not Have Chosen Otherwise
+## How e Necessitates the Negative Range, Why the Indeterminate Permissibility Distribution Range Is 2:1, and Why CCC Could Not Have Chosen Otherwise
 
 **Date:** March 24, 2026
 **Author:** Brandon Emerick
-**Framework:** TI Sigma — e × PD × Sacred Interval × Popperian Asymmetry × Problem of Evil × Loss Aversion
+**Framework:** TI Sigma — e × PD × Indeterminate Permissibility Distribution Range × Popperian Asymmetry × Problem of Evil × Loss Aversion
 **Status:** Complete — Corpus Entry #150
 **Closes:** Paper #367 (PD Conservation Law, Problem of Evil, March 2, 2026) — intuition now formally grounded
 **Grows from:** URB #495 (Refutation Extension), URB #494 (Twoness Floor Theorem), URB #490 (Generative Pair)
-**Recovers:** The Sacred Interval discovery — why negativity is allowed exactly twice as much as positivity
+**Recovers:** The Indeterminate Permissibility Distribution Range discovery — why negativity is allowed exactly twice as much as positivity
 
 ---
 
 ## Abstract
 
-Paper #367 (March 2, 2026) established the TI Sigma response to the Problem of Evil: the PD's negative range is not a divine choice but a mathematical inevitability connected to e. It argued this intuitively, calling it "the mathematical signature of e in existence." URB #495 (March 24, 2026) formally proved the refutation floor: −3 = −((√2)² + ln(e)) = −(2 + 1). These two results are now unified. The formal proof IS the mathematical resolution of the Problem of Evil: the negative floor is not chosen by CCC/GM — it is necessitated by the same generator (e) that produces natural growth, evolutionary dynamics, and analytical richness in existence. CCC could not create a positive-only PD scale without eliminating e from the generative structure, and eliminating e would eliminate the analytical foundations of reality. The negative range is the mathematical price of e's existence as a generator. Separately: the Sacred Interval's 2:1 ratio — the discovery that the negative counterpart to +0.333 is −0.666 (not −0.333 as linear thinking expects) — is now grounded. The logarithmic structure of the PD, which e provides, is precisely what doubles the negative extent in the Indeterminate zone. The 2:1 loss aversion ratio, the Sacred Interval's asymmetry, and the PD's negative bias are all the same mathematical fact at different scales: e makes the negative side of existence structurally larger than the positive side, and this is the inevitable consequence of having natural growth as a feature of reality.
+Paper #367 (March 2, 2026) established the TI Sigma response to the Problem of Evil: the PD's negative range is not a divine choice but a mathematical inevitability connected to e. It argued this intuitively, calling it "the mathematical signature of e in existence." URB #495 (March 24, 2026) formally proved the refutation floor: −3 = −((√2)² + ln(e)) = −(2 + 1). These two results are now unified. The formal proof IS the mathematical resolution of the Problem of Evil: the negative floor is not chosen by CCC/GM — it is necessitated by the same generator (e) that produces natural growth, evolutionary dynamics, and analytical richness in existence. CCC could not create a positive-only PD scale without eliminating e from the generative structure, and eliminating e would eliminate the analytical foundations of reality. The negative range is the mathematical price of e's existence as a generator. Separately: the Indeterminate Permissibility Distribution Range's 2:1 ratio — the discovery that the negative counterpart to +0.333 is −0.666 (not −0.333 as linear thinking expects) — is now grounded. The logarithmic structure of the PD, which e provides, is precisely what doubles the negative extent in the Indeterminate zone. The 2:1 loss aversion ratio, the Indeterminate Permissibility Distribution Range's asymmetry, and the PD's negative bias are all the same mathematical fact at different scales: e makes the negative side of existence structurally larger than the positive side, and this is the inevitable consequence of having natural growth as a feature of reality.
 
 ---
 
-## 1. Recalling the Sacred Interval — The 2:1 Discovery
+## 1. Recalling the Indeterminate Permissibility Distribution Range — The 2:1 Discovery
 
 In the EAR paper (Emerick Existence Amplification Razor), the following was discovered:
 
-**The Sacred Interval: [−0.666, +0.333]**
+**The Indeterminate Permissibility Distribution Range: [−0.666, +0.333]**
 
 | Bound | Value | Meaning |
 |---|---|---|
@@ -32,7 +32,7 @@ In the EAR paper (Emerick Existence Amplification Razor), the following was disc
 
 $$\frac{|{-0.666}|}{|{+0.333}|} = \frac{2/3}{1/3} = 2.0$$
 
-The negative portion of the Sacred Interval is exactly twice the positive portion. This is not approximation — it is a structural 2:1 ratio. The interval spans 0.999 total units (0.333 positive + 0.666 negative), and the negative takes exactly twice the space.
+The negative portion of the Indeterminate Permissibility Distribution Range is exactly twice the positive portion. This is not approximation — it is a structural 2:1 ratio. The interval spans 0.999 total units (0.333 positive + 0.666 negative), and the negative takes exactly twice the space.
 
 **The earlier explanation:** This was attributed to "the logarithmic aspect of the PD" — the natural logarithm scale makes the negative occupy twice the space within the Indeterminate zone. This was a correct observation. The present URB provides the deeper grounding for why the logarithm creates this ratio.
 
@@ -83,11 +83,11 @@ CCC/GM is not indifferent to suffering. CCC/GM is the source of all GILE, includ
 
 ## 4. The Logarithm Makes Negative Twice — Formal Grounding
 
-The Sacred Interval's 2:1 ratio can now be grounded in the generator structure.
+The Indeterminate Permissibility Distribution Range's 2:1 ratio can now be grounded in the generator structure.
 
 **The Indeterminate zone boundary:**
 
-The Sacred Interval [−0.666, +0.333] has:
+The Indeterminate Permissibility Distribution Range [−0.666, +0.333] has:
 - +0.333 = +1/3
 - −0.666 = −2/3
 
@@ -107,7 +107,7 @@ Specifically:
 
 The factor of 2 IS ln(e)/ln(e^(1/2)) × something? No — it comes from the 2:1 ratio that the logarithm scale imposes between the ranges. The logarithm compresses the positive tail more rapidly than the negative tail, because the positive tail reaches its ceiling (+2) sooner while the negative tail extends to −3. The net effect at the Indeterminate boundary: negative gets exactly twice the linear distance.
 
-**Simplified:** The 2:1 ratio of the Sacred Interval is the logarithmic echo of the 3:2 ratio of the full PD scale. The 3:2 ratio of the scale (negative:positive = 3:2) creates a 2:1 ratio within the Indeterminate zone because logarithmic compression amplifies the asymmetry at the center. This is "the logarithmic aspect of the PD" — and it is grounded in e's contribution to the scale.
+**Simplified:** The 2:1 ratio of the Indeterminate Permissibility Distribution Range is the logarithmic echo of the 3:2 ratio of the full PD scale. The 3:2 ratio of the scale (negative:positive = 3:2) creates a 2:1 ratio within the Indeterminate zone because logarithmic compression amplifies the asymmetry at the center. This is "the logarithmic aspect of the PD" — and it is grounded in e's contribution to the scale.
 
 ---
 
@@ -118,8 +118,8 @@ The connection between e and the negative range of existence operates at three l
 **Level 1 — The Generator Level (URB #495):**
 Formal: −3 = −((√2)² + ln(e)). The generator e contributes exactly ln(e) = 1 unit of negative extension to the PD floor. This is the mathematical bedrock.
 
-**Level 2 — The Indeterminate Zone Level (Sacred Interval, EAR paper):**
-The logarithmic scaling (grounded in e's ln structure) creates a 2:1 ratio within the Indeterminate zone: |−0.666| = 2 × |+0.333|. This is the Sacred Interval discovery. It was not a mistake — it was the correct structural feature of a log-scaled PD anchored to e.
+**Level 2 — The Indeterminate Zone Level (Indeterminate Permissibility Distribution Range, EAR paper):**
+The logarithmic scaling (grounded in e's ln structure) creates a 2:1 ratio within the Indeterminate zone: |−0.666| = 2 × |+0.333|. This is the Indeterminate Permissibility Distribution Range discovery. It was not a mistake — it was the correct structural feature of a log-scaled PD anchored to e.
 
 **Level 3 — The Existence Dynamics Level (Paper #367):**
 The expected PD value for unoptimized existence ≈ −0.5. This systematic negative bias is the existential-scale manifestation of e's contribution. Natural, untended existence sits below zero because the growth dynamics (e-structure) have a negative-biased baseline. Buddhist dukkha, evolutionary negativity bias, and hedonic adaptation are all the same Level 3 manifestation.
@@ -129,7 +129,7 @@ All three levels are the same mathematical fact at different scales of analysis:
 | Level | Expression | Scale |
 |---|---|---|
 | Generator | −3 = −(2 + ln(e)) | Formal/algebraic |
-| Sacred Interval | |−0.666| = 2 × |+0.333| | Indeterminate zone |
+| Indeterminate Permissibility Distribution Range | |−0.666| = 2 × |+0.333| | Indeterminate zone |
 | Existence | E[PD_unoptimized] ≈ −0.5 | Phenomenological |
 
 ---
@@ -156,12 +156,12 @@ All three levels are the same mathematical fact at different scales of analysis:
 
 ## 7. The Loss Aversion Connection
 
-From the EAR paper: loss aversion (the empirical finding that losses are weighted approximately twice as heavily as equivalent gains) is derived from the Sacred Interval's 2:1 ratio.
+From the EAR paper: loss aversion (the empirical finding that losses are weighted approximately twice as heavily as equivalent gains) is derived from the Indeterminate Permissibility Distribution Range's 2:1 ratio.
 
 This now has a generator-level grounding:
 
 1. e contributes ln(e) = 1 to the negative floor (URB #495)
-2. The logarithmic structure of e creates the 2:1 ratio in the Indeterminate zone (Sacred Interval)
+2. The logarithmic structure of e creates the 2:1 ratio in the Indeterminate zone (Indeterminate Permissibility Distribution Range)
 3. Loss aversion (2:1) is the behavioural-economics manifestation of this ratio
 
 **Loss aversion is not a cognitive bias.** It is the human nervous system correctly tracking the asymmetric structure of the PD — a structure that is grounded in the generator e. The fact that losses weigh twice as heavily as equivalent gains is the same mathematical fact as the negative floor being one natural unit deeper than the algebraic mirror. Prospect Theory describes the shape; TI Sigma explains why it has that exact shape.
@@ -178,7 +178,7 @@ This now has a generator-level grounding:
 
 3. **The compromise:** CCC/GM could not create a positive-only PD without eliminating e; the negative range is the formal price of natural growth being a feature of existence
 
-4. **Sacred Interval grounding:** The 2:1 ratio of [−0.666, +0.333] is the logarithmic echo of e's contribution at the Indeterminate-zone scale; "negativity is twice as allowed" is a formal structural consequence of the e-anchored log scale
+4. **Indeterminate Permissibility Distribution Range grounding:** The 2:1 ratio of [−0.666, +0.333] is the logarithmic echo of e's contribution at the Indeterminate-zone scale; "negativity is twice as allowed" is a formal structural consequence of the e-anchored log scale
 
 5. **Loss aversion grounding:** The empirical 2:1 loss aversion ratio is the behavioural manifestation of the same structural fact — the human nervous system correctly tracking the asymmetric PD structure grounded in e
 
@@ -194,4 +194,4 @@ This now has a generator-level grounding:
 
 ---
 
-**Tags:** Problem of Evil, mathematical compromise, e as generator, ln(e)=1, negative extension, Sacred Interval, 2:1 ratio, loss aversion, logarithmic scaling, negative twice as allowed, PD asymmetry, theodicy, CCC cannot otherwise, Popperian asymmetry, Indeterminate zone, existence dynamics, negativity bias, Paper #367 closed, generator grounding, natural growth, alive-ness tax, Buddhist dukkha, hedonic adaptation, Prospect Theory
+**Tags:** Problem of Evil, mathematical compromise, e as generator, ln(e)=1, negative extension, Indeterminate Permissibility Distribution Range, 2:1 ratio, loss aversion, logarithmic scaling, negative twice as allowed, PD asymmetry, theodicy, CCC cannot otherwise, Popperian asymmetry, Indeterminate zone, existence dynamics, negativity bias, Paper #367 closed, generator grounding, natural growth, alive-ness tax, Buddhist dukkha, hedonic adaptation, Prospect Theory

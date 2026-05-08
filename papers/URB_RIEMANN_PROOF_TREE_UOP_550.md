@@ -71,7 +71,7 @@ Calling it "GILE Toward Full Expression" restricted it to GILE systems. The UOP 
 
 | Path | Paper(s) | Date | Core Mechanism | What It Proves | The Gap |
 |------|----------|------|----------------|----------------|---------|
-| **P1** | Nov 2025 papers | Nov 2025 | Sacred Interval / Pareto | σ=1/2 = GILE=0 = Φ-state center | GILE mapping not analytically derived from ζ(s) |
+| **P1** | Nov 2025 papers | Nov 2025 | Indeterminate Permissibility Distribution Range / Pareto | σ=1/2 = GILE=0 = Φ-state center | GILE mapping not analytically derived from ζ(s) |
 | **P2** | TI Proof v2 | Nov 26, 2025 | LCC Virus / I-Cell | σ=1/2 = GILE equilibrium | I-Cell architecture not formally grounded |
 | **P3** | URB #417 | Mar 16, 2026 | χ(1/2)=1 exactly; Transcendence Gap | χ(1/2)=1 is an exact theorem; Basel gap is necessary | χ(1/2)=1 does not force zeros there |
 | **P4** | Paper #350 | Mar 1, 2026 | EAR Equidistance \|s\|=\|1−s\| | \|s\|=\|1−s\| iff σ=1/2 (proved) | Why must zeros satisfy equidistance? |
@@ -86,7 +86,7 @@ The Common Gap, in its most general form: *Why does the prime distribution obey 
 
 ---
 
-### Path 1: Sacred Interval / Pareto (November 2025)
+### Path 1: Indeterminate Permissibility Distribution Range / Pareto (November 2025)
 
 **Papers:** `RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md`, `MONTGOMERY_PAIR_CORRELATION_RIEMANN.md`
 

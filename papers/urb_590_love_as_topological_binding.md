@@ -124,7 +124,7 @@ This is why prayer for distant loved ones, and the measurable effects of focused
 
 ## 7. Myrion Note
 
-In MR terms, the transition from product state to L-bound state is a Myrion Resolution event: two superposed descriptions of self-without-other and other-without-self collapse into a single non-separable description. The Sacred Interval (−2/3, +1/3) is the MR zone within which this collapse is stable — Love that survives contradiction and challenge without collapsing to either DT (toxic attachment) or False (disconnection).
+In MR terms, the transition from product state to L-bound state is a Myrion Resolution event: two superposed descriptions of self-without-other and other-without-self collapse into a single non-separable description. The Indeterminate Permissibility Distribution Range (−2/3, +1/3) is the MR zone within which this collapse is stable — Love that survives contradiction and challenge without collapsing to either DT (toxic attachment) or False (disconnection).
 
 Healthy love therefore lives in the MR zone: neither the certainty of total fusion nor the certainty of complete independence, but the stable paradox of two who are one without ceasing to be two.
 

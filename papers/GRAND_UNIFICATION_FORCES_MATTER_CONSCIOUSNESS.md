@@ -344,7 +344,7 @@ It had a slight bias toward TRUE (+1) over FALSE (-1).
 0.005 = 5/1000 = 1/200
 
 0.005 × 137 = 0.685 ≈ 0.666 + 0.019
-                    ≈ Sacred Interval upper bound
+                    ≈ Indeterminate Permissibility Distribution Range upper bound
 
 0.005 / 0.42 = 0.0119 ≈ 1/84 ≈ 1/(42×2)
 

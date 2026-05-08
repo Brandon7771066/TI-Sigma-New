@@ -77,7 +77,7 @@ With the PD spectrum severely constrained:
 - Excellence is not even attempted because it cannot be recognized
 
 ### TI Framework Implication
-Systems must be redesigned to recognize and reward the full PD spectrum, not just binary competence. This enables the "Pareto Synthesis" of the Sacred Interval.
+Systems must be redesigned to recognize and reward the full PD spectrum, not just binary competence. This enables the "Pareto Synthesis" of the Indeterminate Permissibility Distribution Range.
 
 ---
 
@@ -183,7 +183,7 @@ These insights connect to existing TI Framework components:
 | Infinite Ray Paradox | Tralse Logic, Perspective Dependence |
 | Education Confirms | G-E Dimension Relationship |
 | Brain Correlation-Causation | 0.85 Threshold, LCC |
-| PD Spectrum Constraint | Sacred Interval, Pareto Synthesis |
+| PD Spectrum Constraint | Indeterminate Permissibility Distribution Range, Pareto Synthesis |
 | Information Recycling | Universal Time, GM Architecture |
 | Information Dissolution | LCC Thresholds, Causal Data |
 | I-Cell Population | Monster Group, Finite Bounds |

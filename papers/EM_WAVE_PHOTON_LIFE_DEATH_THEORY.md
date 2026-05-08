@@ -392,7 +392,7 @@ THE UNIVERSAL LIGHT FIELD:
            LOW GILE (-3)
 ```
 
-### 9.2 The Sacred Interval in Light
+### 9.2 The Indeterminate Permissibility Distribution Range in Light
 
 The Sacred GILE Interval (-0.666, +0.333) may represent:
 - The "habitable zone" of consciousness

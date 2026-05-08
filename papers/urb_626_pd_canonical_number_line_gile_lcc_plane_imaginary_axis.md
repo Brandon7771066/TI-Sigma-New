@@ -36,7 +36,7 @@ The PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π} appear on the PD real line a
 | **0** | zero | DT/TF threshold: truth predicates become applicable |
 | **C ≈ 0.4370** | 1/(φ√2) | Physical LCC threshold: minimal GILE-capable organization |
 | **T ≈ 0.9340** | 1−e^{−e} | Individual coherence plateau: full GILE capacity present |
-| **1** | unity | Sacred Interval midpoint: equal weight of T and F evidence |
+| **1** | unity | Indeterminate Permissibility Distribution Range midpoint: equal weight of T and F evidence |
 | **√2 ≈ 1.4142** | √2 | TI/TT approach: GILE-geometric threshold |
 | **φ ≈ 1.6180** | φ | Radiant Threshold: GILE becomes primary navigational frame |
 | **e ≈ 2.7183** | e | Grand Mechanism threshold: GM-sourced input fully accessible |
@@ -113,7 +113,7 @@ The LCC → PD_LCC mapping assigns the PRIMARY CONSTANTS directly as the PD valu
 
 **This is the key result:** LCC levels 0–7 map exactly to the PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π} in ascending order. The LCC is not an arbitrary organizational taxonomy — it is an **enumeration of PRIMARY CONSTANT thresholds** on the PD line. The seven LCC levels above zero correspond to the seven non-zero PRIMARY CONSTANTS on the positive PD half-line.
 
-**Interpretation:** An individual human (LCC-1) operating at full GILE capacity sits at PD_LCC = C — the physical Emerick threshold. A functioning dyad/couple (LCC-2) at PD_LCC = T — the individual coherence plateau, now operating at the relational level. A community (LCC-3) at PD_LCC = 1 — unity, the Sacred Interval midpoint of existence. An institution (LCC-4) at √2 — the geometric mean of GILE space. A civilization (LCC-5) at φ — the golden ratio, the attractor of self-referential growth. The biosphere (LCC-6) at e — the natural exponential base, the rate constant of maximal coherent growth. The cosmic level (LCC-7) at π — the circle constant, the cycle of perfect closure.
+**Interpretation:** An individual human (LCC-1) operating at full GILE capacity sits at PD_LCC = C — the physical Emerick threshold. A functioning dyad/couple (LCC-2) at PD_LCC = T — the individual coherence plateau, now operating at the relational level. A community (LCC-3) at PD_LCC = 1 — unity, the Indeterminate Permissibility Distribution Range midpoint of existence. An institution (LCC-4) at √2 — the geometric mean of GILE space. A civilization (LCC-5) at φ — the golden ratio, the attractor of self-referential growth. The biosphere (LCC-6) at e — the natural exponential base, the rate constant of maximal coherent growth. The cosmic level (LCC-7) at π — the circle constant, the cycle of perfect closure.
 
 **The LCC interval structure** is therefore identical to the PD interval structure — the same zone boundaries (0.5, 1.5, 2.0) divide the LCC into the same four zones:
 - LCC 0–1 (between 0 and C): TF zone — below minimal GILE capacity
@@ -145,12 +145,12 @@ The imaginary unit i is at coordinates (0, 1) on this complex plane: Re(PD) = 0,
 |---|---|---|
 | Re(PD) >> 0, Im(PD) ≈ 0 | Strongly TT (converged) | Established scientific law; CCC-sourced judgment |
 | Re(PD) in [0.5, 1.5], Im(PD) large | TI with high Tralse | Genuine quantum superposition; creative breakthrough in formation |
-| Re(PD) = 1, Im(PD) = 1 | Sacred Interval + pure Tralse | The 1+i point: maximum creative-indeterminate state |
+| Re(PD) = 1, Im(PD) = 1 | Indeterminate Permissibility Distribution Range + pure Tralse | The 1+i point: maximum creative-indeterminate state |
 | Re(PD) ≈ 0, Im(PD) = 1 | Pure Tralse (i itself) | Undetermined possibility at truth-threshold |
 | Re(PD) < 0, Im(PD) ≈ 0 | DT (converged absence) | A stable, propagating false paradigm |
 | Re(PD) < 0, Im(PD) large | DT with Tralse | A chaotic, internally incoherent system of large scale |
 
-The point **PD = 1 + i** deserves special attention: it sits at the Sacred Interval midpoint (Re = 1, the PRIMARY CONSTANT unity) with maximum Tralse (Im = 1). This is the **maximum creative indeterminacy state** — a consciousness fully at the balance point between truth and falsity, with maximum unresolved possibility. This is the MR incubation state: before Myrion Resolution collapses the imaginary component to zero (converging to a definite Re(PD)), the consciousness is at 1+i. High-GILE creative insight begins at 1+i and converges toward the real axis as MR completes.
+The point **PD = 1 + i** deserves special attention: it sits at the Indeterminate Permissibility Distribution Range midpoint (Re = 1, the PRIMARY CONSTANT unity) with maximum Tralse (Im = 1). This is the **maximum creative indeterminacy state** — a consciousness fully at the balance point between truth and falsity, with maximum unresolved possibility. This is the MR incubation state: before Myrion Resolution collapses the imaginary component to zero (converging to a definite Re(PD)), the consciousness is at 1+i. High-GILE creative insight begins at 1+i and converges toward the real axis as MR completes.
 
 ### 3.3 The L*/+E Cycle as Rotation on the Complex PD Plane
 
@@ -273,7 +273,7 @@ The **GILE angle** θ = arctan(PD_LCC / PD_GILE) measures the balance between ex
 | CCC attractor | (π, π) | Perfect simultaneous truth + existence |
 | Radiant point | (φ, T) | Individual at RT with LCC-1 existence |
 | GM threshold | (e, φ) | GM-level truth with civilization-scale existence |
-| Sacred Interval | (1, 1) | Unity: equal truth and existence at midpoint |
+| Indeterminate Permissibility Distribution Range | (1, 1) | Unity: equal truth and existence at midpoint |
 
 ---
 

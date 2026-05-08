@@ -126,7 +126,7 @@ This is the SWOT applied to TI Sigma's **overall unique contribution**, not to a
 
 ### Strengths
 - **3D Jeff Time algorithm** with documented 277.76% return (2020-2024) backtest — non-trivial absolute performance.
-- **Sacred Interval (-0.666, 0.333)** as a reproducible market-prediction interval derived from the framework, not curve-fit.
+- **Indeterminate Permissibility Distribution Range (-0.666, 0.333)** as a reproducible market-prediction interval derived from the framework, not curve-fit.
 - **GSA Daily Scheduler** running live in production (`gsa_daily_scheduler` workflow) — operational, not just research.
 - **QuantConnect Algorithm** packaged for backtesting (`QuantConnect Algorithm` page in ti_website) — independent verification path.
 - **Kalshi Scanner** + Alpaca paper trader — multiple market-access integrations.
@@ -134,7 +134,7 @@ This is the SWOT applied to TI Sigma's **overall unique contribution**, not to a
 ### Weaknesses
 - **Backtest ≠ live performance** — the 277.76% number is backtest-only; live deployment has not yet replicated this magnitude.
 - **No audited track record** — no fund vehicle, no third-party performance verification.
-- **Sample-size limitations** for the more exotic predictions (Sacred Interval applications to specific events).
+- **Sample-size limitations** for the more exotic predictions (Indeterminate Permissibility Distribution Range applications to specific events).
 
 ### Opportunities
 - **Collective2 publication** of the GSA-LCC algorithm signals (COLLECTIVE2_API_KEY available) — generates third-party verifiable track record.

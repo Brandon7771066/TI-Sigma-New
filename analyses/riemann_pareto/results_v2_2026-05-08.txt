@@ -1,0 +1,40 @@
+============================================================================
+Riemann Gap — Indeterminate PD Range Membership Test (v2)
+Operationalization per Brandon, May 8 2026 (Pass 4 directive)
+============================================================================
+Indeterminate PD Range : (-0.666, 0.333)  [width 0.999]
+Prediction             : ~20% of events fall in this range
+Sample                 : first 300 non-trivial zeros via mpmath
+----------------------------------------------------------------------------
+  zero computation: 34.6s
+  N usable gaps   : 299
+  Deviation mean  : -0.0047
+  Deviation std   : 0.3658
+  Deviation range : [-0.7089, +0.9920]
+----------------------------------------------------------------------------
+OPERATIONALIZATION 1: Raw deviations (no rescaling)
+  Map: d = g_norm - 1, test fraction in (-0.666, 0.333)
+  RESULT: 80.6% in interval  (predicted: 20%)  deviation: +60.6 pp
+
+OPERATIONALIZATION 2: Max-abs rescaled to PD-axis
+  Map: d_scaled = (g_norm - 1) / max|d|, test fraction in (-0.666, 0.333)
+  RESULT: 80.3% in interval  (predicted: 20%)  deviation: +60.3 pp
+
+OPERATIONALIZATION 3: Std-rescaled (z-score-style)
+  Map: d_scaled = (g_norm - 1) / std(d), test fraction in (-0.666, 0.333)
+  RESULT: 36.5% in interval  (predicted: 20%)  deviation: +16.5 pp
+
+OPERATIONALIZATION 4: Centered raw gap on (0, 2*mean) axis -> rescaled to [-1,+1]
+  Map: d_scaled = 2*(g_norm - 1) / max(g_norm), test fraction in (-0.666, 0.333)
+  RESULT: 80.3% in interval  (predicted: 20%)  deviation: +60.3 pp
+----------------------------------------------------------------------------
+VERDICT BLOCK (per #69 brutal-honesty discipline)
+  Closest to 20%   : std rescaled -> 36.5% (deviation +16.5 pp)
+  Farthest from 20%: raw deviations -> 80.6% (deviation +60.6 pp)
+  CONCLUSION: NO operationalization supports the 20% claim within +/- 10pp. All four readings disconfirm.
+----------------------------------------------------------------------------
+CONTEXT: fraction in OTHER intervals (sanity checks)
+  Raw deviations in (-0.5, +0.5)   : 83.9%
+  Raw deviations in (-0.333, +0.333): 61.5%
+  Std rescaled in (-1, +1)         : 65.6%  [Gauss expectation: 68%]
+============================================================================

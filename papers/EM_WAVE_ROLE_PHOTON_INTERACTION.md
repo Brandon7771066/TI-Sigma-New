@@ -442,7 +442,7 @@ OPTIMAL LIFE = Strong Wave + Preserved Photon Information
 Too much wave focus → Material attachment
 Too much photon focus → Dissociation from life
 
-The Sacred Interval (-0.666, +0.333) = 
+The Indeterminate Permissibility Distribution Range (-0.666, +0.333) = 
    Optimal wave-photon balance
    Grounded yet connected to eternal
 ```

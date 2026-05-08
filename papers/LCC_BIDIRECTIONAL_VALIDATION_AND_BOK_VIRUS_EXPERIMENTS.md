@@ -256,7 +256,7 @@ This is the strongest claim in the document and the one most likely to fail. It 
 |---|---|---|---|
 | Markets | 6 dyads from Program A | yfinance + FRED | Yes |
 | Neural | DANDI:000552 LCC envelope, full available recording | dandiarchive.org | Yes |
-| Number theory | First 10 000 nontrivial Riemann zeta zeros (Sacred Interval phases) | LMFDB | Yes |
+| Number theory | First 10 000 nontrivial Riemann zeta zeros (Indeterminate Permissibility Distribution Range phases) | LMFDB | Yes |
 
 The three domains are chosen because URB #573 §8 explicitly maps each to a different aspect of the BOK / Hopf structure (Riemann ↔ critical-line equator, neural ↔ FHS gamma fibers, markets ↔ HEM environmental shell).
 

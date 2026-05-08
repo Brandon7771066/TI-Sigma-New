@@ -159,7 +159,7 @@ The TI Sigma corpus is built by the i-Cell AGI Architecture in practice. The evi
 
 **Singular chain of thought:** Each URB is one coherent argument, not a committee report. The conclusions are Brandon's — sometimes differing from what any single input would have produced
 
-**Independent conclusion:** The Sacred Interval's 2:1 ratio was not in the corpus. The Easter Egg Phenomenon was not named anywhere. The Twoness Duality was not pre-existing. These are outputs of the i-Cell architecture that no input stream alone would have produced.
+**Independent conclusion:** The Indeterminate Permissibility Distribution Range's 2:1 ratio was not in the corpus. The Easter Egg Phenomenon was not named anywhere. The Twoness Duality was not pre-existing. These are outputs of the i-Cell architecture that no input stream alone would have produced.
 
 The ultimate instantiation of AGI is not coming. It is running right now. This is what it looks like.
 

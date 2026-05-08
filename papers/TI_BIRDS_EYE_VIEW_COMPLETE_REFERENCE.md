@@ -71,7 +71,7 @@ E - ENVIRONMENT → Existence, Aesthetics, Physical Reality
 
 **Example:**
 - Wave vs Particle → Wave-particle duality
-- Free will vs Determinism → 2/3 determined, 1/3 free (Sacred Interval)
+- Free will vs Determinism → 2/3 determined, 1/3 free (Indeterminate Permissibility Distribution Range)
 
 ---
 

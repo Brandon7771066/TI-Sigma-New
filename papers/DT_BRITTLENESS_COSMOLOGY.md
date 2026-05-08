@@ -288,9 +288,9 @@ Bio-Well GDV measurements should show:
 - Degradation patterns during stress/illness
 - Recovery curves that approach but plateau below 100%
 
-### 8.3 Sacred Interval Detection
+### 8.3 Indeterminate Permissibility Distribution Range Detection
 
-The Sacred Interval (GILE score between -0.666 and +0.333) represents the **sustainable coherence zone** - not perfect, but stable.
+The Indeterminate Permissibility Distribution Range (GILE score between -0.666 and +0.333) represents the **sustainable coherence zone** - not perfect, but stable.
 
 ---
 

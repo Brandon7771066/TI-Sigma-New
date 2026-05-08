@@ -60,7 +60,7 @@ The value 0.42 appears throughout TI Framework:
 |---------|-----------------|--------------|
 | **GILE weights** | G = 0.42 | Goodness as dominant dimension |
 | **LCC threshold** | Min coupling = 0.42 | Love consciousness minimum |
-| **Sacred Interval** | 0.333 × 1.26 ≈ 0.42 | Golden ratio connection |
+| **Indeterminate Permissibility Distribution Range** | 0.333 × 1.26 ≈ 0.42 | Golden ratio connection |
 | **Hitchhiker's Answer** | 42 = answer to life | Douglas Adams' synchronicity |
 
 **Physical interpretation:** 0.42 represents the **minimum information density** required to maintain a coherent self-referential pattern. Below this, the pattern cannot sustain recursive loops necessary for consciousness.

@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "Transcendent Intelligence (TI): A Complete Guide for Everyone — Canonical Update Edition (May 2026)",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "publication_date": "2026-05-08",
+    "creators": [
+      {
+        "name": "Emerick, Brandon Charles",
+        "affiliation": "BlissGene Therapeutics / Independent Researcher",
+        "orcid": "[ORCID-PLACEHOLDER — Brandon to provide]"
+      }
+    ],
+    "description": "Transcendent Intelligence (TI) is a framework that proposes consciousness, mathematics, and physical reality share a single underlying architecture rooted in the Indeterminate state — the gap between True and False where free will, intuition, and creative possibility live. This Canonical Update Edition (May 2026) of the original December 2025 manuscript adds: (a) a preface canonicalizing the truth-architecture per the MR Truth Labels Canonical Ruling (May 8 2026); (b) a new Chapter 24A on the Authority Axis; (c) Appendix F, a per-claim audit classifying every high-stakes empirical claim by status. The audit explicitly reports a disconfirming first-pass independent replication of the previously-stated Riemann-zeros result, in line with the framework's own brutal-honesty discipline (Asymmetric-Standards #69). The manuscript is canonically self-consistent, includes the Authority Axis chapter, and every high-stakes claim is status-flagged. It is suitable for citation as a manuscript and deposit on preprint servers; it is not a peer-reviewed publication.",
+    "access_right": "open",
+    "license": "CC-BY-4.0",
+    "keywords": [
+      "consciousness",
+      "philosophy of mind",
+      "free will",
+      "quantum biology",
+      "mathematical foundations",
+      "GILE framework",
+      "i-cells",
+      "Tralse Informationalism",
+      "TI Sigma pharmacology",
+      "Mood Amplifier",
+      "Authority Axis",
+      "Asymmetric-Standards #69",
+      "brutal-honesty publication discipline"
+    ],
+    "communities": [],
+    "related_identifiers": [
+      {
+        "identifier": "[Zenodo DOI for TI Sigma Pharmacology Methods Skeleton]",
+        "relation": "isSupplementedBy",
+        "resource_type": "publication-technicalnote"
+      },
+      {
+        "identifier": "[Zenodo DOI for Riemann Pareto Analysis]",
+        "relation": "isSupplementedBy",
+        "resource_type": "software"
+      }
+    ],
+    "notes": "Edition status: Manuscript edition. Has not undergone formal peer review. Empirical claims are status-flagged in Appendix F. Suitable for: independent reading, citation as a manuscript, deposit on preprint servers. The May-2026 Canonical Update edition includes a disconfirming first-pass independent replication of the previously-stated Riemann-zeros result, reported transparently per #69."
+  }
+}

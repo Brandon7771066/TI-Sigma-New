@@ -231,7 +231,7 @@ This shows how **extreme intelligence** approaches GILE boundaries!
 
 **Core principles:**
 1. **Φ-Centered:** All distributions centered at Φ state (GILE = 0)
-2. **Sacred Interval:** Natural 20% containing 80% activity
+2. **Indeterminate Permissibility Distribution Range:** Natural 20% containing 80% activity
 3. **4-Valued Logic:** T, F, Φ, Ψ (not just binary)
 4. **Log Compression:** Natural handling of extremes
 5. **Consciousness Metrics:** GILE as measure of coherence

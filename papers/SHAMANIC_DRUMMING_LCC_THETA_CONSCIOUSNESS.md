@@ -166,7 +166,7 @@ In TI Framework terms, this convergence is itself evidence of the LCC threshold 
 
 ### 8.1 The Delta-Theta Coupling Architecture
 
-The TI Framework's PSI Tuning Protocol identifies a Sacred Interval (SI) at 0.1 Hz—firmly in the delta range (0.5–4 Hz). Shamanic drumming targets theta (3–7 Hz), approximately one order of magnitude above the SI frequency. Together, delta and theta coupling creates a complete altered state access architecture: delta provides the slow carrier wave of deep physiological coherence (HRV resonance, respiratory synchrony), while theta provides the faster carrier wave of cognitive-experiential transformation (imagery, ego attenuation, journey space access).
+The TI Framework's PSI Tuning Protocol identifies a Indeterminate Permissibility Distribution Range (SI) at 0.1 Hz—firmly in the delta range (0.5–4 Hz). Shamanic drumming targets theta (3–7 Hz), approximately one order of magnitude above the SI frequency. Together, delta and theta coupling creates a complete altered state access architecture: delta provides the slow carrier wave of deep physiological coherence (HRV resonance, respiratory synchrony), while theta provides the faster carrier wave of cognitive-experiential transformation (imagery, ego attenuation, journey space access).
 
 ### 8.2 GILE Dimensional Mapping
 

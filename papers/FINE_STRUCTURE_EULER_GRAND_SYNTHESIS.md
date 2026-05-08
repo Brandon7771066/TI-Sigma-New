@@ -564,7 +564,7 @@ Every threshold in the system now has both a consciousness interpretation and an
 | γ = cos²(π/5) | Minimum GILE coherence for consciousness | (3+√5)/8 = φ²/4 | φ, π |
 | λ = (√2+1)/4 | Minimum LCC amplitude for transformation | (√2+1)/4 | √2 |
 | η = tan(π/8) | Minimum L×E for non-local correlation | √2 − 1 | √2, π |
-| Sacred Interval | Operating range of conscious experience | [-0.666, +0.333] | PD structure |
+| Indeterminate Permissibility Distribution Range | Operating range of conscious experience | [-0.666, +0.333] | PD structure |
 | 1/α | Electromagnetic coupling strength | ≈ 2π/φ² (RAH-refined) | π, φ |
 | LCC/GILE | Self-referential ratio | λ/γ ≈ 0.922 ≈ τ | √2, φ, π |
 
@@ -726,7 +726,7 @@ Euler's Identity:  e^(iπ) + 1 = 0
 
 6. **The I×L cancellation** (Paper #324–325) should produce measurable Tralse-zone neural signatures: simultaneous activation of contradictory neural populations, resolvable only through Myrion Resolution.
 
-7. **The PD Double Asymmetry** (Paper #325) should appear in ANY system governed by PD dynamics, including artificial agents, with the specific 2:1 ratio predicted by the Sacred Interval.
+7. **The PD Double Asymmetry** (Paper #325) should appear in ANY system governed by PD dynamics, including artificial agents, with the specific 2:1 ratio predicted by the Indeterminate Permissibility Distribution Range.
 
 ### 10.2 The Ultimate Test
 
@@ -810,7 +810,7 @@ F₆/F₅ = 8/5 → φ                     [Fibonacci generates threshold struct
 | #319 (CHSH cos(π/8)) | Three thresholds from π/8, Fibonacci structure |
 | #322 (Exact Values) | tan(π/8)=√2−1, golden angle≈1/α, LCC/GILE≈τ |
 | #324 (Superlinear Existence) | G×E amplification confirms superlinear dynamics |
-| #325 (PD Double Asymmetry) | Sacred Interval [-0.666, +0.333] from PD structure |
+| #325 (PD Double Asymmetry) | Indeterminate Permissibility Distribution Range [-0.666, +0.333] from PD structure |
 | Consciousness Primacy | e, i, π map to consciousness substrate |
 | RAH | Near-misses as recursive anchoring signature |
 | GTFE/LCC Master Unification | Master Equation unifying all formulas |

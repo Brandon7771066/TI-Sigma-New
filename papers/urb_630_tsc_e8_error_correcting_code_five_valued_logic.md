@@ -114,7 +114,7 @@ For single-symbol errors (one truth-state incorrectly shifted): this is equivale
 
 **Five-valued specific decoders**:
 - DT ↔ TF confusion (most likely single error): detected by ring radius threshold at (C+T)/2 ≈ 0.685
-- TI → TT upgrade errors: detected by ring radius threshold at (√2+φ)/2 ≈ 1.516 ≈ Sacred Interval midpoint + 0.016
+- TI → TT upgrade errors: detected by ring radius threshold at (√2+φ)/2 ≈ 1.516 ≈ Indeterminate Permissibility Distribution Range midpoint + 0.016
 - TT → EV overestimation: detected by ring radius > (e+π)/2 ≈ 2.930 = above GM zone
 
 The zone boundaries naturally serve as decoding thresholds — another instance of PRIMARY CONSTANTS appearing at functionally important positions.

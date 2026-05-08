@@ -52,7 +52,7 @@ PD(H) = {
 The scalar summary of PD is the **Permissibility Level** (PL or "PD score"), ranging roughly:
 - PD ≤ 0.5: not permissible — Tralse-False dominant
 - 0.5 < PD < 1.5: Tralse-Indeterminate — genuine uncertainty
-- PD = 1.5: Sacred Interval midpoint — genuine balance between True and False
+- PD = 1.5: Indeterminate Permissibility Distribution Range midpoint — genuine balance between True and False
 - 1.5 < PD < 2.0: True-Tralse — converging toward Truth
 - PD ≥ 2.0: strongly True-Tralse — the proposition meets the standard for high-confidence endorsement; GM-sourced input accessible
 

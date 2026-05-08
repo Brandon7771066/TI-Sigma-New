@@ -224,7 +224,7 @@ BLUE (450-495 nm):
 GREEN (495-570 nm):
 - Balance point
 - Neutral/calming
-- GILE mapping: Sacred Interval (indeterminate zone)
+- GILE mapping: Indeterminate Permissibility Distribution Range (indeterminate zone)
 
 INFRARED (>750 nm):
 - Deep tissue

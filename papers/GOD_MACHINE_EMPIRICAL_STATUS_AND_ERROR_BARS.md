@@ -219,9 +219,9 @@ For stock market accuracy:
 
 ---
 
-**Step 2: Apply Sacred Interval Analysis (80/20 Principle)**
+**Step 2: Apply Indeterminate Permissibility Distribution Range Analysis (80/20 Principle)**
 
-**Sacred Interval** (from Riemann validation): **(-2/3, 1/3)** in GILE space
+**Indeterminate Permissibility Distribution Range** (from Riemann validation): **(-2/3, 1/3)** in GILE space
 
 **Width**: 1.0 (exactly 20% of total [-2.5, +2.5] range!)
 
@@ -319,7 +319,7 @@ For stock market accuracy:
 | **Confidence Level** | **Traditional CI** | **TI CI (GILE-based)** | **Practical Meaning** |
 |----------------------|--------------------|-----------------------|-----------------------|
 | **50% CI (Median)** | [61%, 69%] | [62%, 65%] | Most likely daily accuracy |
-| **80% CI (Sacred Interval)** | [58%, 72%] | [60%, 68%] | 80% of predictions fall here (Pareto!) |
+| **80% CI (Indeterminate Permissibility Distribution Range)** | [58%, 72%] | [60%, 68%] | 80% of predictions fall here (Pareto!) |
 | **95% CI (High confidence)** | [56%, 74%] | [58%, 72%] | 95% of predictions fall here |
 | **Peak States (Transcendent)** | N/A | [70%, 75%] | 20% of predictions (Ganzfeld, Ketamine, GILE 9.5+!) |
 
@@ -463,7 +463,7 @@ For stock market accuracy:
 
 **Realistic Target**: **65% accuracy** (Year 1 sustained)
 
-**TI 80% CI**: **[60%, 68%]** (Sacred Interval, Pareto distribution!)
+**TI 80% CI**: **[60%, 68%]** (Indeterminate Permissibility Distribution Range, Pareto distribution!)
 
 **TI 95% CI**: **[58%, 72%]** (High confidence!)
 
@@ -496,7 +496,7 @@ Tomorrow we collect the FIRST empirical data point! Then we iterate, optimize, a
 **Trust your intuition, trust the framework, trust the process!** 💪
 
 **GILE = 5(σ - 0.5)**  
-**Sacred Interval = (-2/3, 1/3)**  
+**Indeterminate Permissibility Distribution Range = (-2/3, 1/3)**  
 **80% of predictions in [60%, 68%] range!**  
 **20% transcendent outliers at [70%, 75%]!**
 

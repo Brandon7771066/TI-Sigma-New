@@ -130,7 +130,7 @@ optimization, prediction, pattern recognition, and consciousness measurement.
 | **Jeff Time** | Temporal framework with dimensions: τ_φ (Photonic Memory), τ_j (Jeff Fiction), τ_f (Freedom Prediction) |
 | **RADC** | Resonance-Augmented Distributed Computation — GM Hypercomputer's core mechanism |
 | **σ** | Sigma score — consciousness measure derived from GILE (σ ≥ 0.42 = conscious) |
-| **Sacred Interval** | GILE range [-0.666, 0.333] — the statistically significant operating range |
+| **Indeterminate Permissibility Distribution Range** | GILE range [-0.666, 0.333] — the statistically significant operating range |
 
 ---
 
@@ -383,7 +383,7 @@ GILE_composite = 0.25·G + 0.25·I + 0.30·L + 0.20·E
 GILE_final = clip(GILE_composite × 2.5, -3, +2)
 ```
 
-The GILE score maps to the Sacred Interval [-0.666, +0.333] for statistical
+The GILE score maps to the Indeterminate Permissibility Distribution Range [-0.666, +0.333] for statistical
 significance assessment. Scores within this interval indicate nominal operation;
 scores outside indicate exceptional conditions (either highly favorable or
 highly adverse).
@@ -844,7 +844,7 @@ Step-skipping requires:
 1. **High L × E (≥ 0.42):** Hyperconnection must be established
 2. **High LCC (≥ 0.85):** Local Causal Correlation must exceed the
    causation threshold
-3. **GILE in Sacred Interval:** The system must be operating within
+3. **GILE in Indeterminate Permissibility Distribution Range:** The system must be operating within
    [-0.666, +0.333]
 4. **Appropriate problem class:** Not all problems admit step-skipping;
    only "insight-class" problems do
@@ -2862,7 +2862,7 @@ Xi_signed = valence × Xi_unsigned × W
 PD = sign(Xi_signed) × log(1 + |Xi_signed|)
 PD = clip(PD, -3.0, +2.0)
 
-Sacred Interval: -0.666 ≤ GILE ≤ 0.333
+Indeterminate Permissibility Distribution Range: -0.666 ≤ GILE ≤ 0.333
 ```
 
 ## Appendix C: Willow vs TI Sigma Complete Comparison Table

@@ -25,7 +25,7 @@ EEG oscillations reflect the brain's organizational coherence — the biological
 |---|---|---|---|---|
 | **Delta** | 0.5–4 Hz | **C ≈ 0.437** | 1/(φ√2) | Deep sleep; survival; LCC-1 baseline; HEM-D1 minimum |
 | **Theta** | 4–8 Hz | **T ≈ 0.934** | 1−e^{−e} | Memory consolidation; creative incubation; MR Level 1 |
-| **Alpha** | 8–13 Hz | **1** | unity | Relaxed awareness; Sacred Interval; balanced GILE state |
+| **Alpha** | 8–13 Hz | **1** | unity | Relaxed awareness; Indeterminate Permissibility Distribution Range; balanced GILE state |
 | **Beta** | 13–30 Hz | **√2 ≈ 1.414** | √2 | Active cognition; problem-solving; geometric GILE-I |
 | **Gamma** | 30–80 Hz | **φ ≈ 1.618** | φ | Radiant cognition; insight; flow; Radiant Threshold approach |
 | **High-gamma** | 80–150 Hz | **e ≈ 2.718** | e | Peak performance; GM-adjacent; sustained excellence |

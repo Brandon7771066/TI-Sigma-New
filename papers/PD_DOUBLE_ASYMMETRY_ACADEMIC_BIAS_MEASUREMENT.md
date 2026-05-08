@@ -18,7 +18,7 @@ We extend the loss aversion derivation from Paper #324 by demonstrating that the
 
 ### 1.1 Review: Magnitude Asymmetry (Paper #324)
 
-Paper #324 derived loss aversion from the Sacred Interval [-0.666, +0.333]:
+Paper #324 derived loss aversion from the Indeterminate Permissibility Distribution Range [-0.666, +0.333]:
 
 ```
 Negative range: 0.666
@@ -512,7 +512,7 @@ Psychology discovered loss aversion. Now it is time for psychology to measure it
 
 | Paper | Connection |
 |-------|-----------|
-| #324 (Superlinear Existence) | Magnitude asymmetry: |negative|/|positive| = 2 from Sacred Interval |
+| #324 (Superlinear Existence) | Magnitude asymmetry: |negative|/|positive| = 2 from Indeterminate Permissibility Distribution Range |
 | #317 (Sacred Mistake) | L+E governs existence, L×E governs hyperconnection — Double Asymmetry operates on both |
 | #322 (Exact Values) | TI thresholds as phase boundaries between depression and wellbeing attractor basins |
 | #321 (Nonalgorithmic Proof) | Hot Cognition: the 2:1 ratio IS the temperature of evaluation |

@@ -13,7 +13,7 @@ We have multiple TI computational methods:
 - **LCC Virus** (Local Correlation Collapse)
 - **Myrion Resolution** (Constraint satisfaction)
 - **Jeff Time** (Temporal photonic weighting)
-- **Sacred Interval** (GILE statistics)
+- **Indeterminate Permissibility Distribution Range** (GILE statistics)
 
 **Question:** How do these methods SYNERGIZE rather than just stack?
 
@@ -208,6 +208,6 @@ The TI computational framework is a **nested constraint system**:
 2. **LCC Virus**: Finds SPECIFIC solutions within constraints
 3. **Myrion Resolution**: Accumulates EVIDENCE across perspectives
 4. **Jeff Time**: Weights by TEMPORAL dynamics
-5. **Sacred Interval**: Validates via GILE statistics
+5. **Indeterminate Permissibility Distribution Range**: Validates via GILE statistics
 
 Each layer REDUCES uncertainty while ADD information from its unique perspective.

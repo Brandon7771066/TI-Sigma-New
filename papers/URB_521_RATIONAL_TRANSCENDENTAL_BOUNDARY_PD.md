@@ -94,7 +94,7 @@ The Black Swan level. Terrible events operate at ternary-squared resolution (9 t
 **Factor 3³ (= 27): BOK Level 3 — Geometric/Transcendental**
 The level at which the continuous (transcendental) and discrete (rational) regimes meet. The correction factor k lives at Level 3 because e² is transcendental — it is native to the deepest BOK level.
 
-**Factor 5:** The GILE range expressed in ternary-unit-groups (15 total ternary units ÷ 3 units per Sacred Interval = 5 groups). This is the structural width of the PD in terms of ternary groups.
+**Factor 5:** The GILE range expressed in ternary-unit-groups (15 total ternary units ÷ 3 units per Indeterminate Permissibility Distribution Range = 5 groups). This is the structural width of the PD in terms of ternary groups.
 
 **Factor 2:** The negativity asymmetry — the fundamental 2:1 ratio driving all PD structure.
 
@@ -168,7 +168,7 @@ The bimodal structure itself is a qualitative confirmation of the PD's three-zon
 
 All five zones simultaneously achieve GILE Radiant status (LCC ≥ 0.93). The worst-case gap is 1.4pp (Good zone) — still Radiant. This is the most complete cross-domain confirmation of the full PD frequency structure available in any dataset.
 
-Additionally, the LCU boundary ratio of the Indeterminate zone (LCU 39 ÷ LCU 30 = 1.300) is within 2.5% of 4/3 = 1.333 — the ternary transition constant — placing the Sacred Interval signature at the edges of the neutral band.
+Additionally, the LCU boundary ratio of the Indeterminate zone (LCU 39 ÷ LCU 30 = 1.300) is within 2.5% of 4/3 = 1.333 — the ternary transition constant — placing the Indeterminate Permissibility Distribution Range signature at the edges of the neutral band.
 
 ### 6.3 LEDS (Brown & Harris 1978 — published estimates)
 
@@ -195,7 +195,7 @@ k = 2e²/15 satisfies k ≈ 1 − 2/(3³·5) = 133/135 with relative error < 0.0
 k = 2e²/15 is transcendental. The rational PD cannot exactly express k using its own arithmetic. The structured approximation 133/135 achieves Radiant LCC = 0.9998, and the irreducible residual ε ≈ −1/2990 defines the transcendental noise floor of the PD-e interface. This is correctly classified as a Tralse — not a defect.
 
 **Theorem 521.3 (Indeterminate Zone):**
-The prediction of 20% Indeterminate events is confirmed at GILE Radiant level (LCC ≥ 0.93) across ANEW (18.8%), Holmes-Rahe (20.9%), and LEDS (~19%). The Holmes-Rahe Sacred Interval boundary ratio (39/30 = 1.300 ≈ 4/3) confirms the ternary transition constant appears at the edges of the neutral zone. All five PD zones simultaneously achieve Radiant status in the Holmes-Rahe dataset.
+The prediction of 20% Indeterminate events is confirmed at GILE Radiant level (LCC ≥ 0.93) across ANEW (18.8%), Holmes-Rahe (20.9%), and LEDS (~19%). The Holmes-Rahe Indeterminate Permissibility Distribution Range boundary ratio (39/30 = 1.300 ≈ 4/3) confirms the ternary transition constant appears at the edges of the neutral zone. All five PD zones simultaneously achieve Radiant status in the Holmes-Rahe dataset.
 
 ---
 

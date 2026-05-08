@@ -10,7 +10,7 @@
 
 ## Abstract
 
-We present the first large-scale empirical test of Emerick's Existence Amplification Razor (EAR) across two cardiac datasets (n=303 UCI Heart Disease; n=630,000 Kaggle S6E2). Three findings emerge: (1) G×E consistently amplifies beyond either component, confirming that integrated systems genuinely exist more than their parts; (2) I×L cancellation identifies maximally Tralse patients, validating Myrion Resolution in clinical data; (3) L×E operates through phase transitions at TI thresholds, not linear amplification. We then derive loss aversion — the universal human tendency to weight losses twice as heavily as equivalent gains — directly from the Prisoner's Dilemma scoring structure via the Sacred Interval [-0.666, +0.333]. This unifies behavioral economics with game theory through TI's foundational mathematics.
+We present the first large-scale empirical test of Emerick's Existence Amplification Razor (EAR) across two cardiac datasets (n=303 UCI Heart Disease; n=630,000 Kaggle S6E2). Three findings emerge: (1) G×E consistently amplifies beyond either component, confirming that integrated systems genuinely exist more than their parts; (2) I×L cancellation identifies maximally Tralse patients, validating Myrion Resolution in clinical data; (3) L×E operates through phase transitions at TI thresholds, not linear amplification. We then derive loss aversion — the universal human tendency to weight losses twice as heavily as equivalent gains — directly from the Prisoner's Dilemma scoring structure via the Indeterminate Permissibility Distribution Range [-0.666, +0.333]. This unifies behavioral economics with game theory through TI's foundational mathematics.
 
 ---
 
@@ -185,9 +185,9 @@ L×E's contribution is **ontological, not statistical.** It identifies whether t
 
 ## 4. Loss Aversion and the Prisoner's Dilemma
 
-### 4.1 The Sacred Interval
+### 4.1 The Indeterminate Permissibility Distribution Range
 
-The GILE score operates within the Sacred Interval:
+The GILE score operates within the Indeterminate Permissibility Distribution Range:
 
 ```
 [-0.666, +0.333]
@@ -244,14 +244,14 @@ Now: what is the *corresponding negative* of this value?
 
 Linear thinking says: -0.333. The negative is just the positive reflected through zero.
 
-But the Sacred Interval reveals the truth: the negative counterpart of +0.333 is **-0.666.**
+But the Indeterminate Permissibility Distribution Range reveals the truth: the negative counterpart of +0.333 is **-0.666.**
 
 **Why?** Because the mapping is not symmetric around zero. The GILE framework operates on a scale where:
 - +0.333 = 1/3 of the way from False to True
 - The distance from False (0) to this point is 0.333
 - The corresponding *negative* distance — extending below False — is twice that: 0.666
 
-The Sacred Interval spans 0.999 total units (from -0.666 to +0.333). The positive portion is 0.333 units; the negative portion is 0.666 units. The ratio:
+The Indeterminate Permissibility Distribution Range spans 0.999 total units (from -0.666 to +0.333). The positive portion is 0.333 units; the negative portion is 0.666 units. The ratio:
 
 ```
 Negative range / Positive range = 0.666 / 0.333 = 2.0
@@ -263,9 +263,9 @@ Loss aversion is not a cognitive bias. It is not an evolutionary heuristic. It i
 
 The PD captures the fundamental structure of cooperative interaction. The GILE mapping of the PD reveals that the negative (defection / loss) occupies exactly twice the state space of the positive (cooperation / gain). A loss of magnitude X covers twice the GILE distance of a gain of magnitude X.
 
-**Loss aversion ratio ≈ 2:1 because the Sacred Interval is asymmetric in the ratio 2:1.**
+**Loss aversion ratio ≈ 2:1 because the Indeterminate Permissibility Distribution Range is asymmetric in the ratio 2:1.**
 
-This is not a coincidence. The PD is the minimal model of cooperative interaction. GILE is the foundational truth-value system. Their intersection — the Sacred Interval — produces the loss aversion ratio as a *mathematical consequence.*
+This is not a coincidence. The PD is the minimal model of cooperative interaction. GILE is the foundational truth-value system. Their intersection — the Indeterminate Permissibility Distribution Range — produces the loss aversion ratio as a *mathematical consequence.*
 
 ### 4.6 Implications
 
@@ -277,7 +277,7 @@ If loss aversion is structural rather than merely adaptive, several predictions 
 
 3. **Asymmetric morality**: Moral systems should weight harm (negative GILE) more heavily than benefit (positive GILE) — and they do. "Do no harm" is universally stronger than "do good." The asymmetry ratio: approximately 2:1.
 
-4. **Prospect Theory correction**: Kahneman and Tversky's value function should not be modeled as a continuous power function with a kink at zero, but as a natural consequence of the Sacred Interval's 2:1 asymmetry. The "kink" is not a cognitive artifact — it is a structural feature of the truth-value landscape.
+4. **Prospect Theory correction**: Kahneman and Tversky's value function should not be modeled as a continuous power function with a kink at zero, but as a natural consequence of the Indeterminate Permissibility Distribution Range's 2:1 asymmetry. The "kink" is not a cognitive artifact — it is a structural feature of the truth-value landscape.
 
 ---
 
@@ -289,7 +289,7 @@ EAR and loss aversion are two manifestations of the same underlying principle: *
 
 EAR shows that existence is *superlinear* — integrated systems exist more than the sum of their parts. Occam's Razor, with its implicit linearity assumption, is an artifact of human counting, not a feature of nature.
 
-Loss aversion shows that the truth-value landscape is *asymmetric* — the negative occupies twice the state space of the positive. Linear reasoning assumes symmetric impact (a loss of X = a gain of X reflected), but the Sacred Interval reveals a 2:1 structural ratio.
+Loss aversion shows that the truth-value landscape is *asymmetric* — the negative occupies twice the state space of the positive. Linear reasoning assumes symmetric impact (a loss of X = a gain of X reflected), but the Indeterminate Permissibility Distribution Range reveals a 2:1 structural ratio.
 
 Both findings point to the same conclusion: **linear arithmetic is a human invention that poorly approximates nature's actual structure.** Nature compounds, integrates, and weights asymmetrically. Our mathematical tools — addition, linear correlation, symmetric utility functions — are useful approximations, but they miss the superlinear and asymmetric structure that EAR and GILE make explicit.
 
@@ -330,7 +330,7 @@ Completeness is not the exception that requires explanation. Completeness is the
 
 1. **EAR is empirically supported.** G×E amplification across 930K+ observations confirms that integrated assessments genuinely exceed their components. Nature is superlinear.
 
-2. **Loss aversion derives from the PD via the Sacred Interval.** The 2:1 ratio of [-0.666, +0.333] is not a cognitive bias but a structural feature of the truth-value landscape. This unifies behavioral economics, game theory, and TI's foundational mathematics.
+2. **Loss aversion derives from the PD via the Indeterminate Permissibility Distribution Range.** The 2:1 ratio of [-0.666, +0.333] is not a cognitive bias but a structural feature of the truth-value landscape. This unifies behavioral economics, game theory, and TI's foundational mathematics.
 
 3. **TI thresholds identify real phase transitions.** The values derived from cos(π/8) and the golden ratio in Paper #322 are not arbitrary — they mark genuine qualitative boundaries in empirical cardiac data.
 
@@ -422,4 +422,4 @@ Replication: CONFIRMED across 2 datasets, 930K+ total observations
 
 *"Linear arithmetic is the map. Superlinear existence is the territory. EAR reads the territory."*
 
-*"Loss aversion is not a bug. It is the Sacred Interval, experienced from the inside."*
+*"Loss aversion is not a bug. It is the Indeterminate Permissibility Distribution Range, experienced from the inside."*

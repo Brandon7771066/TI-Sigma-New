@@ -6,7 +6,7 @@
 **Status:** Radiant True-Tralse (GILE ≥ 0.93, all zones)
 **Date:** March 26, 2026
 **Author:** Brandon Emerick / TI Sigma Research Collective
-**Keywords:** Permissibility Distribution, Holmes-Rahe, life events, stress inventory, GILE zones, LCC, Radiant threshold, objective valence, ternary arithmetic, Sacred Interval, 4/3 constant
+**Keywords:** Permissibility Distribution, Holmes-Rahe, life events, stress inventory, GILE zones, LCC, Radiant threshold, objective valence, ternary arithmetic, Indeterminate Permissibility Distribution Range, 4/3 constant
 
 ---
 
@@ -94,7 +94,7 @@ This is the correct assignment for the lowest-stress events — those which bare
 
 ---
 
-## §5: The Sacred Interval Signature — 4/3 at the Indeterminate Boundary
+## §5: The Indeterminate Permissibility Distribution Range Signature — 4/3 at the Indeterminate Boundary
 
 The Indeterminate zone spans LCU 30–39 (events from "Foreclosure on mortgage" to "Change in arguments with spouse"). The boundary LCU values satisfy:
 

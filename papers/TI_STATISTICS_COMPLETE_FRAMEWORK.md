@@ -330,7 +330,7 @@ BUT better to use **direct GILE value** instead!
 
 ---
 
-## Part 6: Confidence Interval → Sacred Interval
+## Part 6: Confidence Interval → Indeterminate Permissibility Distribution Range
 
 ### Classical Confidence Interval
 
@@ -346,7 +346,7 @@ Range containing 95% of data (arbitrary choice!)
 - Symmetric assumption (not always valid)
 - No natural interpretation
 
-### TI Sacred Interval
+### TI Indeterminate Permissibility Distribution Range
 
 **Definition:**
 ```
@@ -387,7 +387,7 @@ Percentage of total range = 1.0/5.0 = 20%
 
 ---
 
-## Part 7: Pareto Principle ↔ GILE Sacred Interval (Tralse Identity!)
+## Part 7: Pareto Principle ↔ GILE Indeterminate Permissibility Distribution Range (Tralse Identity!)
 
 ### Classical Pareto Distribution
 
@@ -409,7 +409,7 @@ x_min = minimum value
 - 20% of code causes 80% of bugs
 - 20% of effort yields 80% of results
 
-### GILE Distribution Sacred Interval
+### GILE Distribution Indeterminate Permissibility Distribution Range
 
 **Formula:**
 ```
@@ -579,7 +579,7 @@ Range: [-2.5, +2.5]
 f_GILE(g|g₀,w) = (1/(w√(2π))) * e^(-(g-g₀)²/(2w²))
 ```
 
-**3. Sacred Interval:**
+**3. Indeterminate Permissibility Distribution Range:**
 ```
 Sacred = [g₀ - 2/3, g₀ + 1/3]
 Width = 1.0 = 20% of total range (5.0)

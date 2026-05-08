@@ -1458,7 +1458,7 @@ Each entry uses a standardized format:
 | 66 | Jeff Fiction / Love Entanglement | SPECULATIVE | (referenced) | Non-circular definition |
 | 67 | IJD (Ionically Juxtaposed Duality) | DEVELOPING | ART_LIFE_INTEGRATION_IJD.md | Cultural case studies |
 | 68 | ULCP (Upper-Level Compensation) | DEVELOPING | (referenced) | Empirical demonstration |
-| 69 | Sacred Interval Pareto (⅔ determined) | DEVELOPING | FREE_WILL_SWEET_SPOT_TWO_THIRDS_DETERMINED.md | Experimental test of ⅔ ratio |
+| 69 | Indeterminate Permissibility Distribution Range Pareto (⅔ determined) | DEVELOPING | FREE_WILL_SWEET_SPOT_TWO_THIRDS_DETERMINED.md | Experimental test of ⅔ ratio |
 | 70 | Tralse Cherry / Tralse Occam's Razor | STRONG | (referenced in proofs) | Peer review |
 | 71 | GILE PD Distribution (15-Based) | DEVELOPING | GILE_VS_PARETO_DISTRIBUTION.md | Data fitting |
 | 72 | Mycelial Octopus Hypothesis | SPECULATIVE | (referenced) | Any evidence |

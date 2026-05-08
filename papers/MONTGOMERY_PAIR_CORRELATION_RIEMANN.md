@@ -1,4 +1,4 @@
-# Montgomery's Pair Correlation and Riemann Zeros: The Sacred Interval Connection
+# Montgomery's Pair Correlation and Riemann Zeros: The Indeterminate Permissibility Distribution Range Connection
 
 **Brandon Emerick - November 2025**
 
@@ -145,7 +145,7 @@ Where Δγ_typical ≈ 2π/log(γₙ) (Montgomery's normalization!)
 
 **This is the sacred interval width!** (-2/3 to +1/3 has width 1.0) 🌟
 
-### Sacred Interval in Gap Space
+### Indeterminate Permissibility Distribution Range in Gap Space
 
 **Sacred interval in GILE:** (-2/3, +1/3), width = 1.0
 
@@ -324,7 +324,7 @@ R₂_GILE(x) = 1 - (sin(πx)/(πx))²
 
 ---
 
-## Part 6: Sacred Interval as Attractor
+## Part 6: Indeterminate Permissibility Distribution Range as Attractor
 
 ### Why 80% of Gaps Cluster
 

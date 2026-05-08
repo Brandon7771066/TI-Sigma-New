@@ -40,7 +40,7 @@ Under MR, every proposition occupies one of five states:
 |-------|--------|------------|----------------|
 | **True-Tralse** | T-Tr | Converging toward Truth; currently imperfect but directionally correct | Yes |
 | **Tralse-False** | Tr-F | Diverging from Truth; currently imperfect and heading away | Yes |
-| **Tralse-Indeterminate** | Tr-I | Genuinely undetermined direction; PD in Sacred Interval | Yes |
+| **Tralse-Indeterminate** | Tr-I | Genuinely undetermined direction; PD in Indeterminate Permissibility Distribution Range | Yes |
 | **Double Tralse** | DT | Incoherent; collapses under resolution; cannot yield a stable PD | No — eliminated at MR-1 |
 | **Ontological Truth** | T | Perfect, necessary, invariant; approached asymptotically only | N/A — not an MR output |
 
@@ -76,7 +76,7 @@ Question: What is the direction of this proposition?
 Apply MR formula to all evidence sources pairwise.
 Output PD zones (see Section II for exact thresholds):
   • PD > +0.333 → True-Tralse (converging)
-  • PD in (−0.666, +0.333) → Tralse-Indeterminate (Sacred Interval)
+  • PD in (−0.666, +0.333) → Tralse-Indeterminate (Indeterminate Permissibility Distribution Range)
   • PD < −0.666 → Tralse-False (diverging)
     ↓
 ══════════════════════════════════
@@ -136,9 +136,9 @@ z_extended_neg = −(3 + ln(|z| − 3))
 
 ---
 
-## 2.2 The Sacred Interval (Indeterminate Zone)
+## 2.2 The Indeterminate Permissibility Distribution Range (Indeterminate Zone)
 
-**Definition:** The Sacred Interval is the PD range (−0.666, +0.333).
+**Definition:** The Indeterminate Permissibility Distribution Range is the PD range (−0.666, +0.333).
 
 **Formal notation:** SI = (−2/3, +1/3)
 
@@ -154,7 +154,7 @@ z_extended_neg = −(3 + ln(|z| − 3))
 |------|----------|------|-------------|
 | Great | PD ≥ +2.0 | Conclusive True | True-Tralse (converging) |
 | Good / Approaching Great | +0.333 < PD < +2.0 | True-leaning | True-Tralse |
-| **Sacred Interval** | **−0.666 ≤ PD ≤ +0.333** | **Indeterminate** | **Tralse-Indeterminate** |
+| **Indeterminate Permissibility Distribution Range** | **−0.666 ≤ PD ≤ +0.333** | **Indeterminate** | **Tralse-Indeterminate** |
 | Approaching Terrible | −3.0 < PD < −0.666 | False-leaning | Tralse-False |
 | Terrible | PD ≤ −3.0 | Conclusive False | Tralse-False (diverging) |
 
@@ -171,7 +171,7 @@ z_extended_neg = −(3 + ln(|z| − 3))
 | Bad | P = 6/15 (40%) |
 | Terrible | P = 2/15 (13.3%) |
 
-**Practical implication:** 60% of propositions resolve to Bad or below — most claims are harder to support than to refute. The Sacred Interval (20%) represents genuine uncertainty, not lack of effort.
+**Practical implication:** 60% of propositions resolve to Bad or below — most claims are harder to support than to refute. The Indeterminate Permissibility Distribution Range (20%) represents genuine uncertainty, not lack of effort.
 
 ---
 
@@ -592,7 +592,7 @@ MR does NOT replace Bayesian inference for probability estimation. It addresses 
 - `MYRION_RESOLUTION_METHODOLOGY.md` (methodology paper): Indeterminate = (−0.666, +0.333)
 - `gile_pd_distribution.py`, `anti_gile_evil_theory.py`: Indeterminate = (−0.666, +0.333)
 
-**Resolution:** The single-point "0" in the spec is shorthand for "the neutral point at the center of the Sacred Interval." The correct full definition is the Sacred Interval (−2/3, +1/3) = (−0.666, +0.333). Code and methodology paper are correct. The spec shorthand should be updated.
+**Resolution:** The single-point "0" in the spec is shorthand for "the neutral point at the center of the Indeterminate Permissibility Distribution Range." The correct full definition is the Indeterminate Permissibility Distribution Range (−2/3, +1/3) = (−0.666, +0.333). Code and methodology paper are correct. The spec shorthand should be updated.
 
 ### Inconsistency 3: Two separate MR threshold systems (PD-based vs. LCC-based)
 **Evidence:** Methodology paper uses PD thresholds (−0.666, +0.333). ARC-TI solver uses LCC thresholds (0.8647, 0.9323). Both are described as "MR thresholds."

@@ -178,14 +178,14 @@ IIT struggles with why Φ > 0 **feels like something**. The GILE framework sugge
 
 Consciousness isn't just high Φ - it's **coherent GILE across all 8 loops**.
 
-### 5.3 The Sacred Interval Connection
+### 5.3 The Indeterminate Permissibility Distribution Range Connection
 
-The Sacred Interval (GILE score -0.666 to +0.333) represents the **optimal Φ range**:
+The Indeterminate Permissibility Distribution Range (GILE score -0.666 to +0.333) represents the **optimal Φ range**:
 
 | GILE Score | Φ Interpretation | State |
 |------------|------------------|-------|
 | < -0.666 | Very low integration | Fragmented |
-| -0.666 to +0.333 | Optimal integration | Sacred Interval |
+| -0.666 to +0.333 | Optimal integration | Indeterminate Permissibility Distribution Range |
 | > +0.333 | Hyper-integration | Potentially unstable |
 
 This explains why perfect integration (+2.0) might be unsustainable - it corresponds to the **DT Brittleness** that caused the original shattering.
@@ -243,7 +243,7 @@ During high Φ/GILE states:
 
 Standard IIT experiments should show:
 - Φ correlates with GILE score
-- Peak Φ within Sacred Interval range
+- Peak Φ within Indeterminate Permissibility Distribution Range range
 - Φ decline with fragmentation (low Love)
 
 ### 7.3 BOK Validation

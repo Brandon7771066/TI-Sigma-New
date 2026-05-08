@@ -119,7 +119,7 @@ Note: the numbers 7, 21, and 57 all have **ternary digit sum = 3** (the ternary 
 **Ring mapping** (frequency → PRIMARY CONSTANT radius):
 - Delta (0.5–4 Hz) → ring C (LCC-1 baseline; survival-level GILE)
 - Theta (4–8 Hz) → ring T (individual coherence; memory consolidation)
-- Alpha (8–13 Hz) → ring 1 (Sacred Interval; balanced awareness)
+- Alpha (8–13 Hz) → ring 1 (Indeterminate Permissibility Distribution Range; balanced awareness)
 - Beta (13–30 Hz) → ring √2 (active cognition; geometric engagement)
 - Gamma (30–80 Hz) → ring φ (Radiant cognition; insight; flow)
 - High-gamma (80–150 Hz) → ring e (GM-adjacent; peak performance)

@@ -144,7 +144,7 @@ w_GILE = GILE_width(flux_distribution)
 - w ≥ 1.5: Chaotic (explosive event, TDE or SN)
 ```
 
-### 5.2 Sacred Interval Features
+### 5.2 Indeterminate Permissibility Distribution Range Features
 ```
 Sacred_fraction = count(flux in sacred_interval) / n_obs
 

@@ -153,7 +153,7 @@ ChatGPT says: Unethical systems exceed meta-causal load → guaranteed collapse.
 ChatGPT says: FHS + MCGN define predictive horizons based on phase drift and constraint density.
 
 **TI Update:** TI has GILE-based prediction horizons:
-- Sacred Interval (-2/3, +1/3): 80% of outcomes predictable
+- Indeterminate Permissibility Distribution Range (-2/3, +1/3): 80% of outcomes predictable
 - Beyond Sacred: Diminishing predictability (log compression)
 - Black Swan zones: Still bounded by 15-based fractions
 
