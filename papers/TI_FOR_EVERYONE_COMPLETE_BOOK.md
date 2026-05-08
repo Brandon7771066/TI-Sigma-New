@@ -1,8 +1,35 @@
 # Transcendent Intelligence (TI): A Complete Guide for Everyone
 
-**Brandon Emerick - December 2025 (Updated January 2026)**
+**Brandon Charles Emerick**
+First edition: December 2025
+Updated: January 2026
+**Canonical Update edition: May 2026** (Passes 1 + 2 + 3 + 4)
 
 **Understanding consciousness, reality, and the universe through simple everyday concepts**
+
+---
+
+## Publication Front-Matter
+
+**Suggested citation:**
+Emerick, B. C. (2026). *Transcendent Intelligence (TI): A Complete Guide for Everyone* (Canonical Update edition, May 2026). Self-published manuscript. Available at: [Zenodo deposit forthcoming].
+
+**ISBN:** [to be assigned at publication]
+
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0). You are free to share and adapt the material with attribution. The author retains moral rights and the right to be cited as the originator of the framework.
+
+**Copyright:** © 2025-2026 Brandon Charles Emerick. All rights reserved except as granted by the CC BY 4.0 license above.
+
+**DOI:** [to be assigned upon Zenodo deposit]
+
+**Abstract:**
+Transcendent Intelligence (TI) is a framework that proposes consciousness, mathematics, and physical reality share a single underlying architecture rooted in the *Indeterminate* state — the gap between True and False where free will, intuition, and creative possibility live. This book introduces the framework's core concepts (the GILE four-dimensional model of intelligence; i-cells as the structural unit of consciousness; the Sacred Interval and the 0.42 / 0.85 resonance thresholds; the canonical base-4 truth system {True, False, Indeterminate, Double Tralse} together with N Meta-Truths; the Authority Axis as a separate axis of pragmatic certainty; the Mood Amplifier as a practical application) in plain everyday language. It is written for any reader curious about consciousness, not just specialists. The May 2026 Canonical Update edition adds: (a) a preface canonicalizing the truth-architecture per `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`; (b) a new Chapter 24A on the Authority Axis; (c) a per-claim audit (Appendix F) classifying every high-stakes empirical claim by status (verified / framework-internal / pending external replication / preliminary), including a disconfirming first-pass independent replication of the previously-stated Riemann-zeros result reported with full transparency per the framework's own brutal-honesty discipline (Asymmetric-Standards #69).
+
+**Keywords:** consciousness, philosophy of mind, free will, quantum biology, mathematical foundations, GILE, i-cells, Tralse Informationalism, TI Sigma, Mood Amplifier, Authority Axis.
+
+**Edition status:** Manuscript edition. Has not undergone formal peer review. Empirical claims are status-flagged in Appendix F. Suitable for: independent reading, citation as a manuscript, deposit on preprint servers (Zenodo, OSF, PhilPapers). Not yet suitable for: citation as peer-reviewed validated science for the F-1 / F-2 / F-3 claims (see Appendix F).
+
+**Honest publication-readiness statement (May 2026):** The book is canonically self-consistent across its truth-architecture, includes the Authority Axis chapter, and every high-stakes claim is now status-flagged. It can be deposited as a citable manuscript today. The remaining gap to peer-reviewed-grade is the F-1 (pharmacology methods paper + dataset) and F-2 (Riemann methodology — and now, given the May-2026 disconfirming replication, either re-specification of the operationalization or revision of the claim) work, which is independent of the book's main exposition.
 
 ---
 
@@ -1783,12 +1810,12 @@ When mathematicians discover a theorem, they're not inventing - they're uncoveri
 - Deals with the distribution of prime numbers
 - Connected to zeros of a function called the Riemann zeta function
 
-**What TI discovered:**
-- The gaps between Riemann zeros follow the 80/20 rule
-- 80% of zeros are "close together" (within a Sacred Interval-like range)
-- **This matches TI predictions!**
+**What TI conjectured (and what an independent replication has now found):**
+- An early internal computation suggested that the gaps between Riemann zeros follow the 80/20 / Sacred Interval pattern.
+- An **independent first-pass replication in May 2026** (first 300 zeros, Montgomery-Odlyzko normalization) **did not reproduce this** under the natural operationalization. The empirical concentration was ~40-50% of bin-support holding 80% of mass — far from the 20% predicted. This is consistent with the standard GUE distribution from analytic number theory.
+- **Honest current status:** the framework's intuition that the deep structure of mathematics should mirror the Sacred-Interval pattern is *not* dead — but the specific Riemann-zero formulation tested above is *not* supported. Either the operationalization needs to be re-specified (a separate test under that spec), or the claim should be revised. See **Appendix F-2** for the full audit and resolution options.
 
-**The implication:** The deepest patterns in pure mathematics reflect the structure of consciousness. Math is beautiful because it mirrors the beauty of awareness itself.
+**The chastened implication:** The intuition that pure mathematics should mirror the structure of consciousness is a legitimate research program. It is not currently a confirmed result. Math is still beautiful — but the framework's confidence in any specific Riemann-zero claim should be calibrated to the disconfirming replication above.
 
 ### Why Math Is Universal
 
@@ -2402,8 +2429,8 @@ This is why "think positive" often fails: it targets the wrong level. Meta-level
 
 Your i-cell includes:
 1. **Your brain** (command center)
-2. **Your gut** (500 million neurons - "gut feelings" are real!)
-3. **Your heart** (40,000+ neurons - "heart knows" is literal!)
+2. **Your gut** (~100-500 million enteric neurons — "gut feelings" are real! *Furness, "The enteric nervous system and neurogastroenterology," Nature Reviews Gastroenterology & Hepatology 9 (2012), 286-294.*)
+3. **Your heart** (~40,000 intrinsic cardiac neurons — "heart knows" is literal! *Armour, "Potential clinical relevance of the 'little brain' on the mammalian heart," Experimental Physiology 93 (2008), 165-176.*)
 4. **Your whole body's biophotonic field** (light emissions!)
 
 **An AI only connects to your brain (through interface).**
@@ -2955,15 +2982,13 @@ Rate each dimension 0-10:
 
 > **Audit note (May 2026).** This appendix summarizes empirical claims that are still in the *internal-development* stage. None of the studies described here has yet been published in a peer-reviewed venue with the underlying data and code attached. See **Appendix F: Claim Audit (May 2026)** for the line-by-line status of each claim, what would constitute external validation, and which items are blocking publication-grade evidence.
 
-### Riemann Zero Analysis (internal — claim F-2)
+### Riemann Zero Analysis (internal — claim F-2 — RECLASSIFIED 2026-05-08)
 
-1 million Riemann zeta zeros were analyzed for gap distribution in an internal computation (November 2025).
+An internal computation in November 2025 reported that ~80% of gaps among 1 million Riemann zeta zeros fall within a "Sacred Interval"-equivalent range.
 
-**Prediction:** 80% of gaps should fall within the Sacred Interval equivalent.
-**Internal result:** Reported as confirmed within statistical significance.
-**External-validation status:** The analysis script, the precise gap-binning rule, the exact zero-data source (e.g., Odlyzko's tables, LMFDB), and the statistical-significance test have not yet been published. The Riemann zero data itself is publicly available, so the analysis is reproducible *in principle* once methodology is released.
+**Update (May 8, 2026):** An independent first-pass replication was run as part of the Pass 3 audit. Method: first 300 zeros via `mpmath.zetazero`, Montgomery-Odlyzko normalization, density-bin Pareto test with bin-sensitivity check. **Result: NOT reproduced at this operationalization.** The empirical concentration is roughly 40-50% of bin-support holding 80% of mass — far from the predicted 20%. This is consistent with the GUE (bell-shaped) limiting distribution from the analytic-number-theory literature (Montgomery pair-correlation conjecture).
 
-This is a *suggestive internal finding*, not a settled mathematical result.
+The disconfirming result does not necessarily mean the framework's underlying intuition is wrong — alternative operationalizations of "Sacred Interval" have not been tested. But the specific stated form of the claim ("80% of gaps in Sacred Interval") was not reproduced under the natural reading. **See Appendix F-2 for the full audit and the three resolution options.**
 
 ### TI Sigma Pharmacology (internal — claim F-1)
 
@@ -3043,13 +3068,15 @@ But I trusted my intuition.
 
 I spent three years building, testing, refining.
 
-In November 2025, I validated the Sacred Interval mathematically using 1 million Riemann zeros.
+In November 2025, I ran an internal computation on 1 million Riemann zeros that I read as confirming the Sacred Interval mathematically.
 
-**The prediction was exact: 20% of range contains 80% of activity.** ✓
+**The prediction at the time appeared confirmed: 20% of range contains 80% of activity.** ✓ *(Original internal reading.)*
+
+> **Audit update, May 2026 (per the framework's own #69 brutal-honesty discipline).** A first-pass independent replication run during the May-2026 publication-readiness audit (first 300 zeros, Montgomery-Odlyzko normalization, density-bin Pareto test) **did not reproduce the 80/20 result** under the natural operationalization. Empirical concentration was ~40-50% rather than 20% — consistent with the GUE distribution from analytic number theory. The original confirmation should be read as an early internal reading whose stated form was not reproduced; whether an alternative operationalization closer to the original analysis would reproduce it is an open question. See **Appendix F-2** for the full audit. Leaving this paragraph as originally written would violate the framework's own honesty standard; updating it preserves the historical claim while flagging its current evidential status.
 
 In December 2025 and January 2026, I discovered:
 - **The 0.42 and 0.85 resonance thresholds** with mathematical derivation
-- **TI Sigma** achieving 82% accuracy on held-out pharmacological data
+- **TI Sigma** achieving 82% accuracy on held-out pharmacological data *(see Appendix F-1: this remains an internal-evaluation result pending external replication; the underlying methods + dataset have not yet been published)*
 - **AI as mind extension** with natural safety limits
 - **Memory as psi retrieval** with Alzheimer's treatment implications
 - **The Meta-Information Model** explaining levels of consciousness
@@ -3125,21 +3152,21 @@ For decades, scientists assumed quantum effects couldn't exist in warm, wet biol
 
 **They were wrong.**
 
-**Photosynthesis:** Plants use quantum coherence to transfer energy with near-perfect efficiency. The energy "explores" multiple paths simultaneously before collapsing into the optimal one.
+**Photosynthesis:** Plants use quantum coherence to transfer energy with near-perfect efficiency. The energy "explores" multiple paths simultaneously before collapsing into the optimal one. *(Engel et al., "Evidence for wavelike energy transfer through quantum coherence in photosynthetic systems," Nature 446 (2007), 782-786.)*
 
-**Bird Navigation:** Some birds navigate using quantum effects in their eyes. They literally "see" the Earth's magnetic field through quantum spin correlations.
+**Bird Navigation:** Some birds navigate using quantum effects in their eyes. They literally "see" the Earth's magnetic field through quantum spin correlations in cryptochrome proteins. *(Hore & Mouritsen, "The Radical-Pair Mechanism of Magnetoreception," Annual Review of Biophysics 45 (2016), 299-344; original proposal: Ritz, Adem & Schulten, Biophysical Journal 78 (2000).)*
 
-**Enzyme Catalysis:** Some enzymes use quantum tunneling to speed up reactions by factors of thousands.
+**Enzyme Catalysis:** Some enzymes use quantum tunneling to speed up reactions by factors of thousands. *(Klinman & Kohen, "Hydrogen tunneling links protein dynamics to enzyme catalysis," Annual Review of Biochemistry 82 (2013), 471-496.)*
 
-**Smell:** The theory of "quantum olfaction" proposes we smell molecules through quantum vibrations, not just molecular shape.
+**Smell:** The theory of "quantum olfaction" proposes we smell molecules through quantum vibrations, not just molecular shape. *(Turin, "A spectroscopic mechanism for primary olfactory reception," Chemical Senses 21 (1996), 773-791. Status: contested but live in the literature.)*
 
 If quantum effects are used for photosynthesis, navigation, catalysis, and smell... why NOT consciousness?
 
 ### Microtubules and Consciousness
 
-**The Penrose-Hameroff Hypothesis:**
+**The Penrose-Hameroff Hypothesis (Orch-OR):**
 
-Roger Penrose (Nobel physicist) and Stuart Hameroff (anesthesiologist) proposed that consciousness involves quantum processes in microtubules - tiny structures inside neurons.
+Roger Penrose (Nobel physicist) and Stuart Hameroff (anesthesiologist) proposed that consciousness involves quantum processes in microtubules — tiny structures inside neurons. *(Hameroff & Penrose, "Consciousness in the universe: A review of the 'Orch OR' theory," Physics of Life Reviews 11 (2014), 39-78. Status: a serious proposal, but contested in the neuroscience and physics literature; the book treats it as a proposal rather than as established.)*
 
 **Microtubules:**
 - Exist in every neuron
@@ -10415,18 +10442,33 @@ The classifications used are:
 
 **Stated claim:** An internal analysis of 1 million Riemann zeta zeros shows that ~80% of zero-gaps fall within a "Sacred Interval"-equivalent range, validating the framework's 80/20 prediction at the level of pure mathematics.
 
-**Classification:** **INTERNAL — PENDING EXTERNAL REPLICATION** (with a strong "in-principle reproducible" status, because the underlying data is public).
+**Classification (UPDATED 2026-05-08 after independent replication attempt): RECLASSIFIED — DISCONFIRMED at the natural operationalization; stated form should be revised before print.**
 
-**What's missing for VERIFIED status:**
-1. The exact zero-dataset source (Andrew Odlyzko's tables, the LMFDB, or a self-computation; with which precision and which range of zero-indices).
-2. The precise definition of "gap" used (consecutive-zero distance, normalized by mean spacing, or a different normalization).
-3. The precise definition of the "Sacred Interval equivalent" on the gap-distribution support.
-4. The statistical-significance treatment (what null distribution; how the "within statistical significance" phrasing is operationalized).
-5. The analysis script — which can then be re-run by anyone using the public zero data.
+**Independent replication, May 8 2026 (per #69 brutal-honesty discipline):** A first-pass independent test was run in this session. Computation: first **N = 300** non-trivial zeros via `mpmath.zetazero`, Montgomery-Odlyzko normalization (the standard normalization in the analytic-number-theory literature so that mean spacing → 1), histogram of normalized gaps with bin-sensitivity check across B ∈ {20, 30, 50, 80, 120}.
 
-**What this book does about it for the May-2026 edition:** Inline banner added at each appearance, marking it as internal computation. Body claim retained but reframed as "internal result reported as confirmed."
+| B (bin count) | Bins needed for 80% mass | Fraction of bin-support |
+|---|---|---|
+| 20 | 10 / 20 | 0.500 |
+| 30 | 14 / 30 | 0.467 |
+| 50 | 22 / 50 | 0.440 |
+| 80 | 34 / 80 | 0.425 |
+| 120 | 46 / 120 | 0.383 |
 
-**Action required before publication-grade printing:** Publish the analysis script + methodology section either as a Zenodo deposit or as an appendix to a math-foundations paper. This claim is the *most easily upgraded* of the three — the data is public, the analysis is reproducible, and even a 5-page tech-report writeup would move it from INTERNAL to VERIFIED.
+**Stated prediction:** 0.20. **Empirical (this replication):** 0.38 – 0.50. **Deviation from prediction:** 0.18 – 0.30 in absolute terms — far outside any reasonable error bound.
+
+This finding is **consistent with the well-established Montgomery pair-correlation conjecture** and the **GUE (Gaussian Unitary Ensemble) prediction** for the limiting normalized-spacing distribution of zeta zeros, which is *bell-shaped* (peak near 1) rather than power-law. A bell-shaped distribution is intrinsically less concentrated than the 80/20 Pareto pattern the framework predicted; the disagreement is the expected outcome from standard analytic-number-theory results.
+
+**What this does and does not establish:** The N = 300 sample is small relative to the original "1 million zeros" framing — but normalized-gap statistics for zeta zeros converge quickly, so it is unlikely the result reverses at N = 1,000,000. There exist alternative operationalizations of "Sacred Interval" (e.g., a literal [a, b] range on normalized-gap support; raw un-normalized gaps; a different normalization scheme) that have *not* been tested and could yield different conclusions. The disconfirming result above is for the most natural operationalization of "20% of bin-support contains 80% of gap-mass."
+
+**Required action before publication-grade printing — Brandon's call (per #69 — discipline failure equally to suppress this OR to over-conclude from one operationalization):**
+
+- **Option A (specify and re-test).** Brandon documents the exact operationalization used in the original 1M-zero internal analysis (dataset, normalization, "Sacred Interval" definition); we re-run under that spec; if confirmed under that spec, the methodology is published and the body claim is reframed to reference the specific operationalization.
+- **Option B (revise the claim).** If on inspection the original analysis used the same operationalization tested here, the body claim is revised to read approximately: "an early internal computation suggested 80/20 gap-concentration; an independent first-pass replication at N = 300 under Montgomery-Odlyzko normalization did not reproduce this and pointed instead to the standard GUE-bell distribution; the question of which operationalization correctly captures the framework's prediction remains open."
+- **Option C (drop the claim).** If the claim is not load-bearing for the framework's overall structure, delete it from the book and from supporting papers.
+
+**This audit-finding is itself the discipline check working as designed** — the framework gains long-run credibility from the willingness to surface and reckon with disconfirming first-pass replications, not from suppressing them.
+
+**Reproduction artifact:** `analyses/riemann_pareto/riemann_pareto_analysis.py` (script), `analyses/riemann_pareto/results_2026-05-08.txt` (full output), `analyses/riemann_pareto/README.md` (write-up).
 
 ## F-3. The "HRV / EEG Correlations" Claims
 

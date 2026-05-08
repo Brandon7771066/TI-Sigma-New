@@ -1,0 +1,43 @@
+========================================================================
+Riemann Zero Gap Pareto Analysis — TI Sigma Sacred Interval Test
+========================================================================
+Parameters: N = 300 zeros, B = 50 bins
+Source    : mpmath.zetazero (in-session computation)
+Normalize : Montgomery-Odlyzko local-mean normalization
+Hypothesis: densest 20% of bins should hold ~80% of gap mass
+------------------------------------------------------------------------
+  computed zero 50/300 (t = 143.1118)
+  computed zero 100/300 (t = 236.5242)
+  computed zero 150/300 (t = 318.8531)
+  computed zero 200/300 (t = 396.3819)
+  computed zero 250/300 (t = 470.7737)
+  computed zero 300/300 (t = 541.8474)
+  zero computation time: 34.3s
+  normalized-gap range: [0.2911, 1.9920], mean = 0.9953
+------------------------------------------------------------------------
+RESULT
+  Bins needed for 80% of mass : 22 of 50
+  Fraction of bin-support     : 0.440
+  TI Sigma prediction         : 0.20 (the 80/20 / Pareto target)
+  Absolute deviation from 0.20: 0.240
+  Verdict                     : NOT SUPPORTED at this resolution
+------------------------------------------------------------------------
+CAVEATS (#69 honesty section)
+  1. N = 1000 is small relative to the original claim of 1M zeros.
+     For asymptotic claims a larger N from Odlyzko or LMFDB is
+     required; the shape result here is a first-pass replication.
+  2. The 'Sacred Interval equivalent' interpreted here as 'top-
+     density 20% of bin-support holds 80% of mass' is one of
+     several reasonable operationalizations; alternative
+     definitions (e.g., density-quantile vs bin-quantile) may
+     give different numbers.
+  3. Bin choice (here B = 50) affects the result; we report a
+     sensitivity check below.
+------------------------------------------------------------------------
+BIN-COUNT SENSITIVITY (fraction-of-bins for 80% mass):
+  B =   20 : 10/20 bins  =>  fraction = 0.500
+  B =   30 : 14/30 bins  =>  fraction = 0.467
+  B =   50 : 22/50 bins  =>  fraction = 0.440
+  B =   80 : 34/80 bins  =>  fraction = 0.425
+  B =  120 : 46/120 bins  =>  fraction = 0.383
+========================================================================
