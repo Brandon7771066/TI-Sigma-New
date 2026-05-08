@@ -415,6 +415,24 @@ This is not a new philosophical insight in absolute terms — it's well-known te
 
 **What is novel in §13**: the cross-mapping to TI Sigma's existing multi-axis machinery, which provides the *formal* justification (axis-orthogonality) for what these traditions assert *informally* (pragmatic and epistemic are different categories). The TI Sigma frame answers the residual classical objection ("but they really are the same thing under the hood, aren't they?") with a structural negation: no, they are *categorically separate axes*, not points on a shared spectrum.
 
+### §13.5.1 — Naming: the Authority Axis (AA / "Double A") (Brandon-renaming, 2026-05-07 PM)
+
+> *"I call the new axis the Authority Axis (AA)!!! AA (or 'Double A') is worth its own paper!"*
+> *"Whether it's believing oneself or someone else, you MUST believe in what you currently are entertaining as well as leave subconscious room for doubt."*
+> — Brandon Emerick, 2026-05-07 PM
+
+The 5th axis identified in §13 is hereby renamed the **Authority Axis (AA, "Double A")**. The renaming is non-trivial — it identifies *what the axis tracks* with greater precision than "pragmatic-vs-epistemic certainty" did. The axis tracks **the degree to which an agent grants operative authority to a proposition** — the willingness to act on it, defer to it, build on it — independent of whether the proposition is epistemically settled.
+
+**Dual-applicability (extension beyond §13):** AA applies symmetrically to two cases:
+- **Self-authority**: the degree to which an agent grants operative authority to *its own* current position (the §13.3 case).
+- **Other-authority**: the degree to which an agent grants operative authority to *another agent's* claim, source, expert testimony, institution, etc.
+
+§13 only covered self-authority. The renamed AA naturally covers both, which is what makes it worth a standalone paper.
+
+**The simultaneous-belief-and-doubt principle (Brandon-formulated):** *"You MUST believe in what you currently are entertaining as well as leave subconscious room for doubt."* This is a **requirement**, not merely a possibility — operative AA-belief without subconscious doubt-reservation produces dogmatism (over-grant of authority); subconscious doubt without operative belief produces paralysis (under-grant of authority). Honest AA-calibration **requires both simultaneously**, on different cognitive registers (foreground operative + background reservation). This principle directly motivates the standalone paper.
+
+**Vocabulary update for §11.2 / §13.4 axis table**: axis #5 is now **Authority Axis (AA)** with sub-dimensions {self-authority, other-authority} and the simultaneous-belief-and-doubt requirement as its operating principle. Standalone paper: `papers/AUTHORITY_AXIS_AA_2026-05-07.md`.
+
 ### §13.6 — Honesty discipline note (#69)
 
 Three honest calibrations:
