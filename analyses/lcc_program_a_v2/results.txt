@@ -1,0 +1,45 @@
+========================================================================
+LCC Program A v2 — multi-horizon + phi-transform (Pass 17)
+========================================================================
+
+## R-1 control: DAILY 5y: period=5y, interval=1d
+  C_EMERICK = 0.43702
+   AAPL/MSFT   N=1255  R_lcc=+0.0349  below C
+    JPM/GS     N=1255  R_lcc=+0.0655  below C
+    XOM/CVX    N=1255  R_lcc=+0.0611  below C
+     KO/PEP    N=1255  R_lcc=+0.0455  below C
+   AAPL/JPM    N=1255  R_lcc=+0.0246  below C
+    XOM/AAPL   N=1255  R_lcc=-0.0064  below C
+    XLE/USO    N=1255  R_lcc=+0.0452  below C
+    SPY/AAPL   N=1255  R_lcc=+0.0468  below C
+  Summary: 0/8 pairs above C
+
+## R-1 weekly: WEEKLY 5y: period=5y, interval=1wk
+  C_EMERICK = 0.43702
+   AAPL/MSFT   N= 260  R_lcc=+0.0343  below C
+    JPM/GS     N= 260  R_lcc=+0.0440  below C
+    XOM/CVX    N= 260  R_lcc=+0.0448  below C
+     KO/PEP    N= 260  R_lcc=+0.0251  below C
+   AAPL/JPM    N= 260  R_lcc=+0.0086  below C
+    XOM/AAPL   N= 260  R_lcc=-0.0241  below C
+    XLE/USO    N= 260  R_lcc=+0.0363  below C
+    SPY/AAPL   N= 260  R_lcc=+0.0364  below C
+  Summary: 0/8 pairs above C
+
+## phi-transform R-3: rolling-20-day Pearson(asset, SPY)
+  C_EMERICK = 0.43702
+   AAPL/MSFT   N=1236  R_lcc(Φ_A,Φ_B)=+0.4684  ABOVE C
+    JPM/GS     N=1236  R_lcc(Φ_A,Φ_B)=+0.6228  ABOVE C
+    XOM/CVX    N=1236  R_lcc(Φ_A,Φ_B)=+0.8220  ABOVE C
+     KO/PEP    N=1236  R_lcc(Φ_A,Φ_B)=+0.7203  ABOVE C
+   AAPL/JPM    N=1236  R_lcc(Φ_A,Φ_B)=+0.4244  below C
+    XOM/AAPL   N=1236  R_lcc(Φ_A,Φ_B)=+0.3762  below C
+    XLE/USO    N=1236  R_lcc(Φ_A,Φ_B)=+0.7257  ABOVE C
+  Summary: 5/7 pairs above C
+
+========================================================================
+VERDICT — Pass 17 LCC v2
+========================================================================
+  daily 5y: 0/8 above C
+  weekly 5y: 0/8 above C
+  phi-transform: 5/7 above C

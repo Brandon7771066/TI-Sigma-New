@@ -1,0 +1,12 @@
+{
+  "kind": "auto_baseline_synthetic_penrose",
+  "n_trials": 2000,
+  "n_patches": 10,
+  "hits_mean": 5.0205,
+  "hits_std": 1.574585472340222,
+  "hits_min": 0,
+  "hits_max": 10,
+  "p_at_or_above_8_of_10": 0.0525,
+  "p_at_or_above_9_of_10": 0.0115,
+  "p_at_or_above_10_of_10": 0.0005
+}

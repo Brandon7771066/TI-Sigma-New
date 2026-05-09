@@ -1,0 +1,41 @@
+======================================================================
+GSA Sharpe + SPY-benchmark + alpha decomposition (Pass 17)
+======================================================================
+Window: 2026-02-10 -> 2026-05-09  N=63 trading days
+GSA equity: $100,000.00 -> $104,507.19  total +4.51%
+SPY: $690.23 -> $737.62  total +6.87%   (N_aligned=61)
+
+## GSA risk metrics
+  Annualized Sharpe (rf=4%):  +1.144
+  Max drawdown:               -4.05%
+  Daily return mean:          +0.0744%
+  Daily return std:           0.8169%
+  Annualized volatility:      12.97%
+
+## SPY benchmark risk metrics (same window)
+  Annualized Sharpe (rf=4%):  +1.654
+  Max drawdown:               -8.58%
+  Daily return mean:          +0.1132%
+  Daily return std:           0.9369%
+
+## Alpha / beta decomposition (GSA vs SPY)
+  Beta:                       -0.009
+  Alpha (daily):              +0.0766%
+  Alpha (annualized):         +21.28%
+  R^2:                        0.000
+
+## Framework-vs-conventional reading
+  Total return:               +4.51%
+  Explained by SPY beta:      ~-0.06%
+  Residual (alpha-portion):   ~+4.67%
+  GSA - SPY total:            -2.36%
+
+## #69 caveats
+  - N=63 trading days is small; Sharpe/beta CIs are wide.
+  - Sharpe SE ~ sqrt(2/N) for unit-Sharpe sample => ~0.18; reported Sharpe is point estimate.
+  - Alpha decomposition is signal-overlap only, not
+    per-layer GSA attribution; the residual could be
+    framework-alpha OR sector-tilt OR luck.
+  - Paper trading: no slippage / commission / borrow drag.
+
+Saved results.json (15 keys)

@@ -1,0 +1,17 @@
+{
+  "window_first_date": "2026-02-10",
+  "window_last_date": "2026-05-09",
+  "n_days": 63,
+  "gsa_total_return_pct": 4.507189999999994,
+  "gsa_sharpe_annualized": 1.1435700385517216,
+  "gsa_max_drawdown_pct": -4.04569910222777,
+  "gsa_daily_mean_pct": 0.07441048954549966,
+  "gsa_daily_std_pct": 0.8168659312608674,
+  "spy_total_return_pct": 6.8650642167535025,
+  "spy_sharpe_annualized": 1.6544508012762733,
+  "spy_max_drawdown_pct": -8.577387238160483,
+  "alpha_annualized_pct": 21.282778824771942,
+  "beta": -0.008552819722748501,
+  "r2": 9.467184905320725e-05,
+  "gsa_minus_spy_total_pct": -2.3578742167535083
+}
