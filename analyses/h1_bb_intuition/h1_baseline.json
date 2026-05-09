@@ -1,0 +1,13 @@
+{
+  "kind": "auto_baseline_synthetic",
+  "n_trials": 1000,
+  "n_machines": 30,
+  "hits_mean": 15.017,
+  "hits_median": 15,
+  "hits_min": 5,
+  "hits_max": 23,
+  "hits_std": 2.6581528881493597,
+  "p_at_or_above_22_of_30": 0.008,
+  "p_at_or_above_20_of_30": 0.042,
+  "p_at_or_above_18_of_30": 0.176
+}

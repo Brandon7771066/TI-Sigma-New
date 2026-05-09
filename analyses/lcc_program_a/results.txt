@@ -1,0 +1,27 @@
+======================================================================
+LCC Program A — Bidirectional LCC stock-market runner (Pass 16)
+======================================================================
+C_EMERICK = 1/(phi*sqrt(2)) = 0.43702
+Pairs: 8; sigma_lag = 5.0; lag-window = +/- 20
+
+   AAPL/MSFT   N= 250  R_lcc=+0.0080 [-0.116,+0.132]      below C  fwd=-0.054 rev=-0.021  |asym|=0.033
+    JPM/GS     N= 250  R_lcc=+0.0457 [-0.079,+0.169]      below C  fwd=-0.051 rev=+0.066  |asym|=0.118
+    XOM/CVX    N= 250  R_lcc=+0.0644 [-0.060,+0.187]      below C  fwd=+0.031 rev=-0.000  |asym|=0.032
+     KO/PEP    N= 250  R_lcc=+0.0456 [-0.079,+0.169]      below C  fwd=+0.034 rev=-0.082  |asym|=0.117
+   AAPL/JPM    N= 250  R_lcc=+0.0248 [-0.100,+0.148]      below C  fwd=+0.002 rev=-0.045  |asym|=0.047
+    XOM/AAPL   N= 250  R_lcc=-0.0191 [-0.143,+0.105]      below C  fwd=-0.056 rev=+0.049  |asym|=0.105
+    XLE/USO    N= 250  R_lcc=+0.0378 [-0.087,+0.161]      below C  fwd=-0.028 rev=+0.053  |asym|=0.081
+    SPY/AAPL   N= 250  R_lcc=+0.0388 [-0.086,+0.162]      below C  fwd=+0.036 rev=-0.063  |asym|=0.099
+
+## Summary
+  Pairs at or above C_EMERICK = 0.4370: 0 / 8
+
+  Pre-reg falsification anchor: pairs above C should show LARGER
+  bidirectional-asymmetry magnitude than pairs below C, IF the
+  C_EMERICK-gated bidirectionality conjecture holds.
+
+## #69 caveats
+  - statsmodels not installed; no formal Granger causality this run.
+  - N pairs = 8 (curated); look-elsewhere correction not applied.
+  - Lag-1 asymmetry is a coarse proxy for bidirectional causality.
+  - Sector-pair selection is non-blind; future runs should sample randomly.
