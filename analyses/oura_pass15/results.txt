@@ -1,0 +1,47 @@
+======================================================================
+Pass 15 — Oura Ring empirical analysis
+======================================================================
+Harvest range: 2026-04-01 to 2026-05-01 (30 days requested)
+Daily records: 12; sleep sessions: 12; workouts: 1; sessions: 3
+
+## T1 — Sleep HRV (rmssd) per day
+  Days with HRV: 0 / 12
+  Falling back to sleep_sessions HRV: found 8 entries.
+  HRV mean 78.5 ms, std 7.1 ms, min 69.0, max 87.0
+
+## T2 — Sleep-score lag-1 autocorrelation (persistence)
+  Days with sleep_score: 8
+  Lag-1 autocorr: r = +0.428  (N pairs = 7)
+  Fisher-z 95% CI: [-0.480, +0.893]
+
+## T3 — Sleep score(d) -> Readiness score(d+1) lag cross-correlation
+  Aligned pairs: 6
+  Pearson r(sleep_d, readiness_d+1) = -0.428
+
+## T4 — Heart-rate sample complexity (std of first differences)
+  Days with HR samples: 31
+  Days with >=30 HR samples: 12
+    2026-04-16: std(diff) =   3.95 bpm  (N samples = 63)
+    2026-04-17: std(diff) =   3.11 bpm  (N samples = 112)
+    2026-04-19: std(diff) =   2.24 bpm  (N samples = 723)
+    2026-04-20: std(diff) =   1.87 bpm  (N samples = 126)
+    2026-04-21: std(diff) =   1.88 bpm  (N samples = 2109)
+    2026-04-22: std(diff) =   2.37 bpm  (N samples = 1378)
+    2026-04-23: std(diff) =   1.82 bpm  (N samples = 1325)
+    2026-04-24: std(diff) =   2.59 bpm  (N samples = 1563)
+  Across-day complexity: mean 2.55, std 0.70, CV = 0.274
+
+## T5 — Activity-day vs no-activity-day deltas
+  Activity-tagged days: ['2026-04-16', '2026-04-19']
+  Sleep_score   active-days: N=0
+  Sleep_score   quiet-days : N=  8  mean= 83.25  std= 8.92
+  Readiness     active-days: N=0
+  Readiness     quiet-days : N=  8  mean= 83.12  std= 4.64
+
+## Honest #69 caveats
+  - N=12 daily records: power is poor; treat all numbers as exploratory.
+  - HRV fields may be sparse in this harvest window — null-counts shown.
+  - Lag-1 autocorr 95% CIs are Fisher-z, parametric; not bootstrap.
+  - Activity tagging conflates workouts with passive sessions.
+  - These are personal data on a single individual — no MBE-correction needed
+    here (the per-individual base-rate IS the unit of analysis).
