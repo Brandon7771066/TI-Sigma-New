@@ -118,7 +118,7 @@ PD is not a free-parameter framework. It commits to specific predictions across 
   - **DNA helical pitch/diameter within 5% of φ**; 10 base pairs per turn = Power-of-8 boundary.
   - **CHSH Bell inequality maximum 2√2** = 2 × Ring 4.
   - **HRV LF/HF coherence ratio ≈ φ**.
-- **Pharmacology validation** (book F-1): TI Sigma's predictions hold **75–83% magnitude correctness** with **+8 pp margin over the best linear baseline (mean-magnitude 67%)** per `analyses/pharma_baseline/linear_baseline.py`. The single most-tested empirical claim in the corpus.
+- **Pharmacology validation** (book F-1): TI Sigma's predictions reach **75% strict-within-2× magnitude correctness** as a within-sample point estimate on N=12; the headline **+8 pp margin over the best simple baseline (mean-magnitude 67%)** is the fold=2 reading from `analyses/pharma_baseline/linear_baseline.py`. **However: Pass 10 (May 9 2026) bootstrap CI on the +8 pp margin DOES NOT survive 95% at N=12 (CI [−33.3, +33.3] pp; bootstrap median −8.3 pp; P(margin > 0) = 31.6%); fold-sensitivity flips the margin sign at 1.5× and 3×.** See `analyses/pharma_baseline_pass9/bootstrap_ci_sensitivity.py` and `papers/TIER_1_RESULTS_PASS_9_2026-05-09.md`. Honest current status: **within-sample point estimate, bootstrap-fragile at N=12; T3-A external held-out replication required for publication-grade claim.** This is the framework's most-tested empirical claim AND its most small-N-vulnerable; the structural claims (4/3 invariant, TSC signatures, affine Riemann mapping) are the more robust empirical anchors.
 
 ### 5.2 Partially confirmed
 

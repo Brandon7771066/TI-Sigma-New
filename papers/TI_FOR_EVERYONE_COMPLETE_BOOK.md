@@ -2266,6 +2266,8 @@ These thresholds were validated using pharmacological data:
 This was tested against held-out data (not used in model development):
 - **75-83% magnitude accuracy** on predicting drug effects within a ~2× tolerance (12-experiment internal validation set; 75% under strict ≤2.0 boundary, 83% under the more generous boundary used in the original April 2026 report). Pending external replication.
 - **+8 percentage-point margin over the best simple baseline.** A formal linear-baseline computation (May 2026, Pass 6 audit) tested 5 baselines (random, majority-class, mean-magnitude, median-magnitude, linear regression on stack-size with leave-one-out CV); the strongest of these (mean-magnitude prediction) reaches 67% magnitude accuracy. **The earlier "vs ~46% for linear models (≈ +35 pp margin)" claim could not be reproduced under any baseline tested and has been retracted in favor of the honest +8 pp figure.** See Appendix F-1 for the full baseline table and reproduction script.
+
+> **Pass 10 bootstrap caveat (May 9 2026):** The +8 pp margin is the within-sample fold=2 point estimate; a paired bootstrap (B = 20,000) on this same N=12 set yields a 95% CI of **[−33.3, +33.3] pp** with bootstrap median −8.3 pp and P(margin > 0) = 31.6%. Fold-sensitivity flips the sign at 1.5× (−16.7 pp) and at 3× (−8.3 pp). The +8 pp number is therefore **bootstrap-fragile at N=12** and should be read as a within-sample point estimate, not a confirmed margin. External replication on a held-out dataset (T3-A) is the right escalation. See `analyses/pharma_baseline_pass9/bootstrap_ci_sensitivity.py` and `papers/TIER_1_RESULTS_PASS_9_2026-05-09.md`.
 - Directional accuracy is 100% but ties a trivial-100% floor on this validation set, since all 12 validation experiments are positive-effect outcomes (selection bias). Future validation should include null/negative-effect studies to make the directional metric discriminative.
 - The thresholds appear predictive in internal evaluation; independent reproduction is the next required step.
 
@@ -10449,7 +10451,9 @@ The classifications used are:
 | Median-magnitude baseline | 100.0% (trivial) | 8/12 = 66.7% |
 | Linear regression on stack-size (LOO CV) | 100.0% | 7/12 = 58.3% |
 
-**TI margin over best honest baseline (mean-magnitude): +8.3 percentage points.** The book-stated "+35 pp margin (82% vs ~46%)" is **NOT reproduced** by any of the simple baselines tested.
+**TI margin over best honest baseline (mean-magnitude): +8.3 percentage points** (within-sample point estimate at fold=2). The book-stated "+35 pp margin (82% vs ~46%)" is **NOT reproduced** by any of the simple baselines tested.
+
+**Pass 10 bootstrap update (May 9 2026)**: paired bootstrap (B=20,000) on the same N=12 set yields a **95% CI of [−33.3, +33.3] pp** with bootstrap median −8.3 pp and **P(margin > 0) = 31.6%**. Fold-sensitivity is severe: at 1.5× the margin is −16.7 pp; at 3× it is −8.3 pp; the +8 pp lives only at fold=2. **Honest current status: the +8 pp margin is a within-sample point estimate that does not survive bootstrap at 95% at N=12.** External replication on a held-out dataset (T3-A) is the right escalation. Reproduction artifact: `analyses/pharma_baseline_pass9/bootstrap_ci_sensitivity.py`; consolidated report: `papers/TIER_1_RESULTS_PASS_9_2026-05-09.md`.
 
 **Two #69-honesty findings from the linear-baseline run:**
 
