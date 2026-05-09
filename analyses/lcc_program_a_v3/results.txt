@@ -1,0 +1,46 @@
+========================================================================
+LCC Program A v3 — second φ-transform proxy (Pass 18)
+========================================================================
+
+## Proxy A: rolling-20-day Pearson(asset, SPY) (Pass-17 R-3 control)
+  C_EMERICK = 0.43702
+   AAPL/MSFT   N=1236  R_lcc=+0.4684  ABOVE C
+    JPM/GS     N=1236  R_lcc=+0.6228  ABOVE C
+    XOM/CVX    N=1236  R_lcc=+0.8220  ABOVE C
+     KO/PEP    N=1236  R_lcc=+0.7203  ABOVE C
+   AAPL/JPM    N=1236  R_lcc=+0.4244  below C
+    XOM/AAPL   N=1236  R_lcc=+0.3762  below C
+    XLE/USO    N=1236  R_lcc=+0.7257  ABOVE C
+  Summary: 5/7 pairs above C  (mean R = +0.5943)
+
+## Proxy B: rolling-20-day normalized MI(asset, SPY) (Pass-18 NEW)
+  C_EMERICK = 0.43702
+   AAPL/MSFT   N=1236  R_lcc=+0.1778  below C
+    JPM/GS     N=1236  R_lcc=+0.2308  below C
+    XOM/CVX    N=1236  R_lcc=+0.2478  below C
+     KO/PEP    N=1236  R_lcc=+0.1140  below C
+   AAPL/JPM    N=1236  R_lcc=+0.1322  below C
+    XOM/AAPL   N=1236  R_lcc=+0.1714  below C
+    XLE/USO    N=1236  R_lcc=+0.0893  below C
+  Summary: 0/7 pairs above C  (mean R = +0.1662)
+
+========================================================================
+VERDICT — Pass 18 LCC v3
+========================================================================
+  Proxy A (Pearson-rolling): 5/7 above C, mean R = +0.5943
+  Proxy B (MI-rolling):      0/7 above C, mean R = +0.1662
+
+  → Proxy A clears as many or more pairs than Proxy B.
+  → DIRECTIVE: Pearson-rolling RATIFIED as canonical R-3.
+    MI proxy did not produce 'better results' per Brandon's bar.
+
+## Pair-level agreement (above-C)
+  pair          Pearson       MI    agree
+  AAPL/MSFT         YES       no       NO
+  JPM/GS            YES       no       NO
+  XOM/CVX           YES       no       NO
+  KO/PEP            YES       no       NO
+  AAPL/JPM           no       no      YES
+  XOM/AAPL           no       no      YES
+  XLE/USO           YES       no       NO
+  Agreement: 2/7 pairs

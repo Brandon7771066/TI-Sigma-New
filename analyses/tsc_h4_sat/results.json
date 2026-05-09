@@ -1,0 +1,13 @@
+{
+  "n_instances": 200,
+  "n_sat": 141,
+  "n_unsat": 59,
+  "sat_mean_E": 2.3680898906715764,
+  "unsat_mean_E": 1.9653881070437786,
+  "roc_auc": 0.26782065152061546,
+  "verdict": "weak / inconclusive",
+  "p_perm": 1.0,
+  "null_mean_auc": 0.4992833273229956,
+  "null_std_auc": 0.04526441105329955,
+  "seed": 20260509
+}

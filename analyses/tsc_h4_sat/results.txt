@@ -1,0 +1,18 @@
+======================================================================
+H4-TSC SAT prototype (Pass 18 h17)
+======================================================================
+Instances: N=200, vars 3-5, clauses/var ratio 3.0-7.0
+TSC: 57-vertex polytope (B.4 graph-Laplacian H).
+Seed: 20260509
+
+N_sat = 141, N_unsat = 59
+<E> SAT  : mean=2.3681  std=0.4761  N=141
+<E> UNSAT: mean=1.9654  std=0.4579  N=59
+
+ROC-AUC (lower-energy ⇒ SAT prediction): 0.2678
+Verdict: weak / inconclusive
+
+Permutation null (N=1000): mean AUC=0.4993  std=0.0453
+P(null >= observed) = 1.0000
+
+Saved analyses/tsc_h4_sat/results.json
