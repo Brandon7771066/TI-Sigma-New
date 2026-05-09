@@ -1,0 +1,21 @@
+{
+  "study_id": "r20_prospective_replication_2026-05-09",
+  "instance_seed": 31415927,
+  "n_instances_attempted": 200,
+  "n_instances_used": 200,
+  "n_sat": 138,
+  "n_unsat": 62,
+  "K": 100,
+  "averaged_energy_auc_lower": 0.26823281907433383,
+  "averaged_energy_auc_inverted": 0.7317671809256662,
+  "per_mapping_inverted_mean": 0.7194933380084153,
+  "per_mapping_inverted_std": 0.01763158980552946,
+  "per_mapping_inverted_min": 0.6831463300607761,
+  "per_mapping_inverted_max": 0.7575970079476391,
+  "z_per_map_inverted_vs_half": 124.48868220583252,
+  "primary_metric_value": 0.7317671809256662,
+  "confirm_threshold": 0.65,
+  "disconfirm_threshold": 0.55,
+  "verdict": "CONFIRMED \u2014 averaged_energy_auc_inverted = 0.7318 >= confirm threshold 0.65. R-A upgraded to corpus-confirmed; 3rd-corpus / 3rd-party replication still required for external claim.",
+  "pre_registration_path": "analyses/tsc_h4_sat_r20_replication/PRE_REGISTRATION.json"
+}

@@ -1,0 +1,5 @@
+r20 prospective replication — r20_prospective_replication_2026-05-09
+Fresh seed: 31415927; M=200 (SAT=138, UNSAT=62); K=100
+Averaged-energy AUC (HIGHER-E ⇒ SAT): 0.7318
+Per-mapping inverted AUC: 0.7195 ± 0.0176 (N=100)
+Pre-registered decision: CONFIRMED — averaged_energy_auc_inverted = 0.7318 >= confirm threshold 0.65. R-A upgraded to corpus-confirmed; 3rd-corpus / 3rd-party replication still required for external claim.

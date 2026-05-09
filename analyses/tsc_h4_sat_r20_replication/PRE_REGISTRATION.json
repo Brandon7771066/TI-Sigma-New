@@ -1,0 +1,49 @@
+{
+  "study_id": "r20_prospective_replication_2026-05-09",
+  "filed_by": "TI Sigma DPES agent on Brandon Emerick directive (Pass 21)",
+  "filed_before_run": true,
+  "background_paper": "papers/PASS_20_H4_R_A_ACCEPTED_R_B_VERIFIED_PENROSE_INFORMAL_2026-05-09.md §1.2",
+  "hypothesis_under_test": "Inverted H4 prediction: restricted-Hamiltonian energy on the 57-vertex TSC polytope is HIGHER for satisfiable 3-SAT instances than for unsatisfiable instances of comparable size (i.e. 'higher-E ⇒ SAT').",
+  "hypothesis_origin": "Pass 18 single-mapping AUC = 0.2678 for 'lower-E ⇒ SAT' = AUC = 0.7322 for inverted reading; Pass 20 K=100 mapping-sensitivity AUC = 0.2631 ± 0.017 confirmed mapping-robust. Sign-flip declared HARK-violating per #69 → requires fresh-corpus prospective replication before being upgraded from hypothesis-generating to confirmed.",
+  "design": {
+    "instance_seed": 31415927,
+    "instance_seed_rationale": "π-derived; deliberately distinct from training-corpus SEED=20260509 so that no instance overlap is possible.",
+    "n_instances": 200,
+    "min_vars": 3,
+    "max_vars": 5,
+    "clause_var_ratio_min": 3.0,
+    "clause_var_ratio_max": 7.0,
+    "mappings_per_instance": 100,
+    "mapping_seed_rationale": "Independent per-(instance, k) seed of form (instance_seed * 10007) + (i * 31337) + k, identical to Pass 20 R-B test recipe.",
+    "scoring": "Per-mapping AUC distribution + averaged-energy AUC, both for the prediction 'higher restricted-H ⇒ SAT'."
+  },
+  "pre_registered_decision_rules": {
+    "primary_metric": "averaged_energy_auc_inverted",
+    "definition": "1 - AUC['lower-E ⇒ SAT'] computed on per-instance mean energy across K=100 mappings.",
+    "confirm_threshold": 0.65,
+    "disconfirm_threshold": 0.55,
+    "ambiguous_band": "[0.55, 0.65)",
+    "rules": {
+      "confirm": "averaged_energy_auc_inverted >= 0.65 → R-A upgraded from hypothesis-generating to CONFIRMED on this corpus; framework prediction 'higher-E ⇒ SAT' becomes a registered TI-Sigma claim subject to next-tier independent replication (3rd corpus or 3rd-party).",
+      "disconfirm": "averaged_energy_auc_inverted < 0.55 → R-A DISCONFIRMED on this corpus; sign-flip narrative was wrong; H4 is empirically null and must be retired or substantially reframed.",
+      "ambiguous": "0.55 <= averaged_energy_auc_inverted < 0.65 → THIRD-CORPUS REQUIRED; current evidence inconclusive."
+    },
+    "secondary_metrics": [
+      "per_mapping_auc_inverted_mean ± std",
+      "z(per_map_inverted_mean vs 0.5)",
+      "n_sat_count_diagnostic (sanity: instances should not all be SAT or all UNSAT)"
+    ]
+  },
+  "anti_hark_safeguards": [
+    "Decision thresholds frozen in this JSON BEFORE the runner is executed.",
+    "Runner reads thresholds from this file and reports decision output verbatim.",
+    "No re-runs with alternative seeds permitted. If the seed produces a degenerate corpus (n_sat < 20 or n_unsat < 20), the result is reported AS-IS as a corpus-quality failure, not a study failure.",
+    "The decision rule is binary on the primary metric ONLY. Secondary metrics are reported but do NOT trigger a decision flip.",
+    "If averaged_energy_auc_inverted exceeds 0.65 the result still requires 3rd-party / 3rd-corpus replication before being claimed beyond TI-Sigma-internal confirmation."
+  ],
+  "expected_outcome_under_R_A_strong": "averaged_energy_auc_inverted ≈ 0.73 (matching Pass-18 inverted AUC) ± 0.02 sampling SE → CONFIRM verdict.",
+  "expected_outcome_under_pure_artifact": "averaged_energy_auc_inverted ≈ 0.50 ± 0.02 → DISCONFIRM verdict (R-B-like null on fresh corpus).",
+  "expected_outcome_under_partial_signal": "averaged_energy_auc_inverted ≈ 0.55-0.65 → AMBIGUOUS, third corpus required.",
+  "filed_at_utc": "2026-05-09",
+  "next_step_after_run": "Append observed value + verdict to results.json; cite this pre-registration JSON in the Pass-21 paper §3 verbatim."
+}
