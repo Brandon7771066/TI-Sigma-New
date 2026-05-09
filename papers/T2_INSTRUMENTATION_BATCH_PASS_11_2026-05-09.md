@@ -3,6 +3,7 @@
 **Date:** 2026-05-09
 **Author:** Brandon Charles Emerick (rig owner); agent (status assessment per Pass 11 directive)
 **Scope:** T2-A Mendi fNIRS, T2-B Polar H10 BPS, T2-C EEG band-power asymmetry — three Tier-2 instrumentation items from `papers/PD_EMPIRICAL_RESEARCH_AGENDA_2026-05-08.md`.
+**Status:** **RATIFIED by Brandon 2026-05-09 (Pass 12).** All three protocols accepted. urb_755 GILE 5-item self-report scale operationalized as written. **T2-B path: Option A (Polar AccessLink API) primary + Option B (live BLE GATT) parallel** — Brandon noted only one BLE GATT capture session exists, so additional BLE GATT capture is also greenlit alongside AccessLink. AccessLink client scaffold delivered as `hardware/POLAR_ACCESSLINK_CLIENT.py`; BLE GATT capture script delivered as `hardware/POLAR_H10_BLE_RR_CAPTURE.py`.
 
 ---
 

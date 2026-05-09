@@ -2,7 +2,7 @@
 
 **Author:** Brandon Charles Emerick (PI); agent (drafting per Pass 11 directive)
 **Date:** 2026-05-09
-**Status:** Pre-registration. No data collected for this study yet. Filed *before* execution to lock the analysis plan, per #69 honesty discipline.
+**Status:** **RATIFIED by Brandon 2026-05-09 (Pass 12).** Pre-registration locked. No data collected for this study yet; filed *before* execution to lock the analysis plan, per #69 honesty discipline. Search-term list (§3.4), reviewer-identity (Brandon-self for the pilot search; RA for any expansion), and simulator commit-pin (current main branch HEAD) are now LOCKED at the git commit recording this ratification.
 **Companion:** `papers/TIER_1_RESULTS_PASS_9_2026-05-09.md` §T1-A (motivation); `analyses/pharma_baseline/linear_baseline.py` (reference baseline code).
 
 ---
