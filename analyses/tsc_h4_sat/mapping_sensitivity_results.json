@@ -1,0 +1,14 @@
+{
+  "K": 100,
+  "n_instances": 200,
+  "seed": 20260509,
+  "per_mapping_auc_mean": 0.26312339505338556,
+  "per_mapping_auc_std": 0.01676907983566986,
+  "per_mapping_auc_min": 0.1978645762940938,
+  "per_mapping_auc_max": 0.293620759562103,
+  "averaged_energy_auc": 0.2402351669144479,
+  "z_vs_half": -141.25796243318567,
+  "verdict": "R-A SUPPORTED (signal is mapping-robust; sign-flip required per HARK declaration)",
+  "h18_decision_R_A_target_auc": 0.2678,
+  "h18_decision_R_B_target_auc": 0.5
+}

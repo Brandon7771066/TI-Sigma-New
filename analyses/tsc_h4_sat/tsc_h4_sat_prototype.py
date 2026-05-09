@@ -36,7 +36,7 @@ Per #69:
 
 Seed: 20260509.
 """
-import json, math, random
+import argparse, json, math, random
 from pathlib import Path
 
 import numpy as np
@@ -136,7 +136,107 @@ def roc_auc(scores, labels):
     return n / total
 
 
+def generate_instances(n=N_INSTANCES, seed=SEED):
+    """Deterministic instance generation (independent of mapping RNG).
+    Returns list of (n_vars, instance, sat_label) tuples."""
+    rng = random.Random(seed)
+    out = []
+    for _ in range(n):
+        n_vars = rng.randint(MIN_VARS, MAX_VARS)
+        ratio = CLAUSE_RATIO_MIN + rng.random() * (CLAUSE_RATIO_MAX - CLAUSE_RATIO_MIN)
+        n_clauses = max(3, int(round(n_vars * ratio)))
+        inst = gen_3sat(rng, n_vars, n_clauses)
+        sat = is_sat(inst, n_vars)
+        if n_vars + n_clauses <= 57:
+            out.append((n_vars, n_clauses, inst, sat))
+    return out
+
+
+def run_mapping_sensitivity(K=100, n_instances=N_INSTANCES, seed=SEED):
+    """R-B test (h18 verification): for each instance, draw K different
+    random vertex mappings; report (a) AUC computed on per-instance
+    energy averaged across K mappings, and (b) distribution of K AUCs
+    each computed under a single mapping per instance.
+
+    R-B (mapping artifact) confirmed if: per-mapping AUC distribution
+    is centered near 0.5, and/or averaged-energy AUC → 0.5 as K↑.
+    R-A (signal is real but inverted) supported if: per-mapping AUC
+    distribution is centered near the original 0.27 (or its inverse 0.73)
+    with low variance, and averaged-energy AUC stays in that band.
+    """
+    H, _ = build_tsc_hamiltonian()
+    instances = generate_instances(n=n_instances, seed=seed)
+    M = len(instances)
+    print(f"  Generating {M} instances; running K={K} mappings each...")
+
+    energies = np.zeros((M, K))
+    labels = np.array([0 if s else 1 for (_, _, _, s) in instances])
+    for i, (n_vars, n_clauses, _inst, _sat) in enumerate(instances):
+        n_needed = n_vars + n_clauses
+        # Independent mapping RNG per instance per mapping_k
+        for k in range(K):
+            map_rng = random.Random((seed * 10007) + (i * 31337) + k)
+            indices = map_rng.sample(range(57), n_needed)
+            energies[i, k] = restricted_ground(H, indices)
+
+    # (a) Averaged-energy AUC
+    mean_e = energies.mean(axis=1)
+    auc_avg = roc_auc(mean_e.tolist(), labels.tolist())
+
+    # (b) Per-mapping AUCs
+    per_map_aucs = []
+    for k in range(K):
+        per_map_aucs.append(roc_auc(energies[:, k].tolist(), labels.tolist()))
+    per_map_aucs = np.array([a for a in per_map_aucs if not np.isnan(a)])
+
+    # Decision logic per h18 §1.4
+    z_avg_vs_half = (per_map_aucs.mean() - 0.5) / (per_map_aucs.std(ddof=1) / math.sqrt(K))
+    if abs(per_map_aucs.mean() - 0.5) < 0.05:
+        verdict = "R-B CONFIRMED (mapping artifact — signal averages to chance)"
+    elif abs(per_map_aucs.mean() - 0.2678) < 0.05 or abs(per_map_aucs.mean() - 0.7322) < 0.05:
+        verdict = "R-A SUPPORTED (signal is mapping-robust; sign-flip required per HARK declaration)"
+    else:
+        verdict = "AMBIGUOUS (mapping-averaged AUC neither at 0.5 nor at 0.27/0.73)"
+
+    print(f"\n## R-B Mapping-Sensitivity Verification (K={K} mappings/instance)")
+    print(f"  Per-mapping AUC distribution: mean={per_map_aucs.mean():.4f}  "
+          f"std={per_map_aucs.std(ddof=1):.4f}  N={len(per_map_aucs)}")
+    print(f"  Per-mapping AUC range: [{per_map_aucs.min():.4f}, {per_map_aucs.max():.4f}]")
+    print(f"  Averaged-energy AUC (mean E across K maps per instance): {auc_avg:.4f}")
+    print(f"  z(per-map mean AUC vs 0.5) = {z_avg_vs_half:+.2f}")
+    print(f"  VERDICT: {verdict}")
+
+    out = {
+        "K": K, "n_instances": int(M), "seed": seed,
+        "per_mapping_auc_mean": float(per_map_aucs.mean()),
+        "per_mapping_auc_std": float(per_map_aucs.std(ddof=1)),
+        "per_mapping_auc_min": float(per_map_aucs.min()),
+        "per_mapping_auc_max": float(per_map_aucs.max()),
+        "averaged_energy_auc": float(auc_avg),
+        "z_vs_half": float(z_avg_vs_half),
+        "verdict": verdict,
+        "h18_decision_R_A_target_auc": 0.2678,
+        "h18_decision_R_B_target_auc": 0.5,
+    }
+    (OUT_DIR / "mapping_sensitivity_results.json").write_text(json.dumps(out, indent=2))
+    print(f"  Saved {OUT_DIR/'mapping_sensitivity_results.json'}")
+    return out
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mappings", type=int, default=0,
+                        help="If >0, run R-B mapping-sensitivity test with K mappings/instance "
+                             "instead of single-mapping protocol.")
+    args = parser.parse_args()
+
+    if args.mappings > 0:
+        print("=" * 70)
+        print(f"H4-TSC R-B Mapping-Sensitivity Test (Pass 20, h18 verification)")
+        print("=" * 70)
+        run_mapping_sensitivity(K=args.mappings)
+        return
+
     H, ring_offsets = build_tsc_hamiltonian()
     rng = random.Random(SEED); np.random.seed(SEED)
 
