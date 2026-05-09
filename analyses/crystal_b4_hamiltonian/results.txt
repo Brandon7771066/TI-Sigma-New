@@ -1,0 +1,53 @@
+Polytope built: N=57 vertices across 8 rings.
+  Ring counts: [1, 6, 6, 8, 8, 10, 10, 8]
+  Ring radii:  [0.0, 0.7071, 1.0, 1.4142, 1.618, 2.7183, 3.1416, 6.2832]
+
+Adjacency built: 110 edges.
+Hamiltonian H = D - A constructed (real, symmetric, 57x57).
+
+## Spectrum
+  Ground state λ_0      = -5.998551e-16  (expect 0 by construction)
+  Spectral gap λ_1      = 0.191440
+  Highest eigenvalue    = 7.531746
+  Mean spacing          = 0.134495
+  First 8 eigenvalues:  [-0.0, 0.1914, 0.4902, 0.5584, 0.6948, 1.0274, 1.0685, 1.3565]
+  Last 4 eigenvalues:   [7.2002, 7.2129, 7.4965, 7.5317]
+
+## Phase energies <H>
+           BEC: <H> = 0.000000
+    Supersolid: <H> = 0.919886
+      FQH-like: <H> = 2.400000
+          Mott: <H> = 2.000000
+    Fragmented: <H> = 3.465261
+
+## Energy ordering (low → high):
+           BEC  0.000000
+    Supersolid  0.919886
+          Mott  2.000000
+      FQH-like  2.400000
+    Fragmented  3.465261
+
+  Expected order (urb_645): BEC < Supersolid < FQH < Mott < Fragmented
+  Match: False
+  → Pass 14 work item: tune w_intra/w_inter/w_center until ordering matches,
+    OR accept that with unit weights the polytope structure already gives
+    a different but well-defined ordering. Per #69 we report the bare result.
+
+## Sample perturbation V_ii = ring_radius(i)
+  First 5 first-order shifts ⟨n|V|n⟩:
+    n=0  λ=-0.0000  shift=2.5152
+    n=1  λ=0.1914  shift=2.3241
+    n=2  λ=0.4902  shift=3.3715
+    n=3  λ=0.5584  shift=3.5571
+    n=4  λ=0.6948  shift=2.3116
+  Max first-order shift across all 57 modes: 3.9803
+  Min first-order shift across all 57 modes: 0.1490
+  → C.7 (perturbation theory) opening: rings of higher radius shift
+    higher in energy under this perturbation, as expected by inspection.
+
+## Connection to C.6 cross-ring CHSH:
+  Ground-state amplitude on ring r = 1/√57 (BEC uniform).
+  Local-radius bounding under bipartite projection gives:
+    CHSH_ij ≤ 2 × min(ρ_i, ρ_j)  (the C.6 first-pass envelope).
+  Pass 14 work item: rigorous derivation requires two-particle
+    Hamiltonian on TSC ⊗ TSC.

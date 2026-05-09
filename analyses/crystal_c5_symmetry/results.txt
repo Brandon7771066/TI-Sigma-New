@@ -1,0 +1,42 @@
+## TSC polytope: N=57 vertices in 8 rings [1, 6, 6, 8, 8, 10, 10, 8]
+## gcd of nontrivial ring counts = 2
+## → cyclic part of point group = C_2
+## With reflection through real axis (every regular polygon has it):
+## → full point group G_TSC = C_2 × C_2 = V_4 (the Klein four-group)
+## Order of group: 4 = 4
+
+## Group-axiom checks (numerical, on random vector):
+  r∘r = e?  True
+  m∘m = e?  True
+  r∘m = m∘r? (abelian) True
+  (rm)∘(rm) = e?  True
+
+## V_4 character table:
+  irrep   χ(e)   χ(r)   χ(m)  χ(rm)
+      A      1      1      1      1
+     B1      1      1     -1     -1
+     B2      1     -1      1     -1
+     B3      1     -1     -1      1
+
+## Irrep classification of canonical phases:
+  Each phase tested for invariance under each V_4 element.
+  Reports the eigenvalue under each element (should be ±1 for irrep).
+                       Phase      e       r       m      rm   irrep
+                         BEC   1.00   1.000   1.000   1.000       A
+               Mott (ring 6)   1.00   1.000   1.000   1.000       A
+                  Supersolid   1.00  -0.931   1.000  -0.931      B2
+     FQH-like (ν=5/8 ring 4)   1.00   0.400   0.400   1.000     MIX
+                  Fragmented   1.00  -0.132   0.151   0.505     MIX
+
+## Selection rules from V_4 character analysis:
+  Transitions between phases of different irreps require an external
+  perturbation carrying the matching irrep (Wigner-Eckart).
+  
+  BEC (A)       ↔ Mott (A):       free (both A)
+  BEC (A)       ↔ Supersolid:    requires B_1 perturbation
+  Supersolid    ↔ FQH:            requires irrep-matching perturbation
+  Fragmented    : no definite irrep — only induced by symmetry-breaking V
+  
+  → Pass 14 candidate (e): does V_4 ↔ base-4 truth-labels?
+     {T, F, I, DT} = {A, B_1, B_2, B_3} as candidate map?
+     If ratified, TSC point group ENCODES canonical truth-labels.

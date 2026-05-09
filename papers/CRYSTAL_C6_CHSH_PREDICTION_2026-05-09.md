@@ -75,11 +75,13 @@ Under this interpretation: rings above √2 predict a regime that experiments mu
 
 ## 5. Recommended framework framing
 
-Per #69, both interpretations are reported. The framework's *honest current status* is:
+**Pass 13 default-setting (2026-05-09):** the framework adopts **Interpretation A as the default** for all rings above √2. This is the more conservative reading and is consistent with #69 brutal-honesty discipline (extraordinary claims require extraordinary evidence; absent such evidence, classify as structural-coherence rather than super-quantum). Interpretation B is **held in reserve as a parenthetical hypothesis** — not retracted, not promoted to default — pending an experimental setup that could discriminate (see Pass 13 candidate (b) below). Brandon retains override authority to reverse this default.
+
+The framework's *honest current status* is therefore:
 
 - The cross-ring CHSH matrix is **structurally implied** by the framework's ring scheme + entanglement-bounded-by-min-radius hypothesis.
 - The values up to and including 2√2 (Tsirelson) are **physically interpretable** as standard CHSH outcomes.
-- Values above Tsirelson should be interpreted as **framework-internal coherence measures** by default (Interpretation A), with Interpretation B held in reserve as an extraordinary-claim hypothesis.
+- Values above Tsirelson are **framework-internal coherence measures** by default (Interpretation A, Pass-13 default); Interpretation B is held parenthetically pending discriminating experiment.
 - The cross-ring matrix is therefore a *structural* prediction, not a physical CHSH prediction beyond Tsirelson.
 
 This dual-status framing is the same #69 discipline applied in Pass 10 (T1-A pharma small-N caveat) and Pass 11 (T4-A spectral disconfirmation).
