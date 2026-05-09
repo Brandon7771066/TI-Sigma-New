@@ -1,0 +1,30 @@
+======================================================================
+GSA Residual Sharpe — canonical s18 metric (Pass 19)
+======================================================================
+Window: 2026-02-10 -> 2026-05-09  N=63 trading days
+SPY aligned N=61
+
+## Comparison: raw Sharpe vs residual Sharpe (canonical)
+  Raw Sharpe (GSA, vs cash):       +1.1436
+  Raw Sharpe (SPY, vs cash):       +1.6545
+  RESIDUAL Sharpe (alpha-only):    +1.1765  <- s18 canonical
+
+## Decomposition
+  Beta (GSA vs SPY):               -0.008553
+  Alpha (daily):                   +0.076599%
+  Alpha (annualized):              +21.28%
+  Residual return std (annual.):   13.07%
+
+## Reading
+  Beta ≈ 0 (|-0.0086| < 0.05) — true diversifier;
+  residual Sharpe (+1.176) ≈ raw Sharpe
+  (+1.144) by construction (delta=+0.0329).
+  Going forward, this metric will diverge from raw Sharpe
+  if beta drifts non-zero — that drift is what residual
+  Sharpe correctly strips out per UOP §3.5.
+
+## #69 caveats
+  - N=61 → Sharpe SE ~ sqrt(2/N) ≈ 0.181; CI is wide.
+  - Paper trading data; no transaction-cost drag.
+  - Residual Sharpe assumes OLS linearity; if GSA has non-
+    linear market exposure, OLS residual is approximate.

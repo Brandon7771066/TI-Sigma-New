@@ -96,13 +96,79 @@ def binom_p_one_sided(hits, n, p_null=0.5):
     return p, z
 
 
+SYNTH = Path("analyses/h1_combined_runner/synthetic_baseline.json")
+
+
+def synthetic_baseline(n_trials=5000, bb_n=30, pen_n=10, seed=SEED):
+    """Bernoulli(0.5) random rater baseline. Reports empirical
+    percentiles of hits/N for both harnesses + joint distribution."""
+    import numpy as np
+    rng = np.random.default_rng(seed)
+    bb_hits = rng.binomial(bb_n, 0.5, n_trials)
+    pen_hits = rng.binomial(pen_n, 0.5, n_trials)
+
+    pcts = [50, 75, 90, 95, 99]
+    bb_pct = {p: int(np.percentile(bb_hits, p)) for p in pcts}
+    pen_pct = {p: int(np.percentile(pen_hits, p)) for p in pcts}
+
+    p_bb_clear = float((bb_hits >= bb_pct[95]).mean())
+    p_pen_clear = float((pen_hits >= pen_pct[95]).mean())
+    p_both_95 = float(((bb_hits >= bb_pct[95]) & (pen_hits >= pen_pct[95])).mean())
+
+    print("=" * 70)
+    print(f"H1 combined SYNTHETIC baseline (Bernoulli(0.5), N={n_trials} trials)")
+    print("=" * 70)
+    print(f"  Seed: {seed}; bb_n={bb_n}; pen_n={pen_n}")
+    print()
+    print("## H1-BB hits/30 distribution under chance")
+    for pct in pcts:
+        print(f"  {pct}th percentile: {bb_pct[pct]:>2}/{bb_n}")
+    print()
+    print("## H1-Penrose hits/10 distribution under chance")
+    for pct in pcts:
+        print(f"  {pct}th percentile: {pen_pct[pct]:>2}/{pen_n}")
+    print()
+    print("## Joint distribution")
+    print(f"  P(BB ≥ 95th pct = {bb_pct[95]}/30) = {p_bb_clear:.4f}")
+    print(f"  P(Penrose ≥ 95th pct = {pen_pct[95]}/10) = {p_pen_clear:.4f}")
+    print(f"  P(BOTH simultaneously) = {p_both_95:.4f}")
+    print(f"  Independent expectation = {p_bb_clear * p_pen_clear:.4f}")
+    print()
+    print("## Reading")
+    print("  Use these thresholds to contextualize a real sit-down score.")
+    print("  Brandon's score is 'unusual' if it exceeds the 95th-pct")
+    print("  thresholds in BOTH harnesses, which happens by chance with")
+    print(f"  probability {p_both_95:.4f} (≈ {1/p_both_95:.0f}-to-1).")
+
+    out = {
+        "n_trials": n_trials, "bb_n": bb_n, "pen_n": pen_n, "seed": seed,
+        "bb_percentiles": bb_pct, "pen_percentiles": pen_pct,
+        "p_bb_clear_95th": p_bb_clear,
+        "p_pen_clear_95th": p_pen_clear,
+        "p_both_clear_95th": p_both_95,
+    }
+    SYNTH.parent.mkdir(parents=True, exist_ok=True)
+    SYNTH.write_text(json.dumps(out, indent=2))
+    print()
+    print(f"Saved {SYNTH}")
+    return out
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--rate", action="store_true")
     parser.add_argument("--score-only", action="store_true")
+    parser.add_argument("--synthetic", action="store_true",
+                        help="Run Bernoulli(0.5) baseline for context")
+    parser.add_argument("--n", type=int, default=5000,
+                        help="Synthetic trial count (default 5000)")
     args = parser.parse_args()
 
     RESULTS.parent.mkdir(parents=True, exist_ok=True)
+
+    if args.synthetic:
+        synthetic_baseline(n_trials=args.n)
+        return
 
     if args.score_only and RESULTS.exists():
         rec = json.loads(RESULTS.read_text())[-1]
@@ -181,6 +247,18 @@ def print_results(bb_n, bb_hits, pen_n, pen_hits, rec):
     print()
     print(f"  GILE-I self-rating: {rec.get('gile_i','?')}")
     print(f"  GILE-G self-rating: {rec.get('gile_g','?')}")
+
+    if SYNTH.exists():
+        try:
+            sb = json.loads(SYNTH.read_text())
+            print()
+            print("## Context vs synthetic Bernoulli(0.5) baseline")
+            print(f"  BB hits {bb_hits}/{bb_n}: vs 95th-pct {sb['bb_percentiles']['95']}/30")
+            print(f"  Penrose hits {pen_hits}/{pen_n}: vs 95th-pct {sb['pen_percentiles']['95']}/10")
+            print(f"  P(chance produces BOTH simultaneously): "
+                  f"{sb['p_both_clear_95th']:.4f}")
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":

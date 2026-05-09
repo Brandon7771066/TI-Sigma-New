@@ -1,0 +1,15 @@
+{
+  "window_first_date": "2026-02-10",
+  "window_last_date": "2026-05-09",
+  "n_aligned": 61,
+  "raw_sharpe_gsa": 1.1435700385517216,
+  "raw_sharpe_spy": 1.6544508012762733,
+  "alpha_daily": 0.0007659862658383068,
+  "beta": -0.008552819722748501,
+  "residual_std_daily": 0.008235490908166127,
+  "residual_std_annualized_pct": 13.073436520524629,
+  "alpha_annualized_pct": 21.282778824771942,
+  "residual_sharpe_annualized": 1.176467819508585,
+  "residual_minus_raw_sharpe": 0.032897780956863354,
+  "metric_role": "canonical_GSA_performance_metric_per_Pass19_s18"
+}
