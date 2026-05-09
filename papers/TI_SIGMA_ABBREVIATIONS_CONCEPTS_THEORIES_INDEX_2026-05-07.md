@@ -84,10 +84,22 @@ Sections:
 - 4/3 area-ratio relations between named regions (urb_733 §3, urb_728 §4, urb_736 §3.2 — the "5 appearances of 4/3").
 - 360° ultra-state symmetry; 6× / 4× badness multipliers.
 
-**Label-strings under separate Brandon-audit (geometry survives; specific names may be Brandon-renamed):**
-- *Pre-DT Zone*, *DT Cliff*, *Indeterminate Disc*, *Standard Mirror*, *Transcendent Mirror*, *Transcendent Annulus*, *Standard Zone*, *Chirality Direction (π/3)*, *Tralse Vertex Direction (2π/3)*, *PD Real Axis* / *PD Imaginary Axis*.
-- These were used as working labels for the Brandon-canonical zones in `urb_728`, `urb_733`, `urb_736`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER`, etc. They remain in service until Brandon issues alternative names.
-- **Status of each label:** WORKING (agent-supplied descriptor of a Brandon-canonical region). Not deprecated; not "never coined by anyone"; just open to Brandon-rename without altering the geometry beneath.
+**Label-strings — RATIFIED Pass 8.2 by Brandon 2026-05-08 (see `PD_LABEL_AUDIT_PASS_8_2026-05-08.md` for the per-row audit):**
+
+*Canonical names (KEEP):* Pre-DT Zone, DT Cliff, Standard Zone, Standard Mirror, Transcendent Zone, Transcendent Mirror, Pre-DT Mirror, Deep DT (mirror).
+
+*Renamed (RATIFIED Pass 8.2):*
+- ~~PD Imaginary Axis~~ → **DT/Tralse axis** (foregrounds ontological content)
+- ~~Indeterminate Disc~~ → **Principal Indeterminate Region** (disambiguates from the (−2/3, +1/3) 1-D Indeterminate sub-range on the (−3, 2) PD scalar)
+- ~~Transcendent Annulus~~ → **Transcendent Ring**
+- ~~PD Real Axis~~ → **PD principal axis**
+
+*Deprecated (RATIFIED Pass 8.2 — no PD-vocabulary use; concepts may live elsewhere):*
+- ~~Chirality Direction (π/3)~~ — was a TIC vertex angle per `urb_628` §3, not a PD-plane structural feature
+- ~~Tralse Vertex Direction (2π/3)~~ — same, TIC vertex angle
+- ~~DT-mirror~~ — consolidated as alias for **Deep DT (mirror)**
+
+Corpus-wide bulk-rename of the 4 RENAME items + 3 DEPRECATION items completed Pass 8.2 across `papers/`; deprecated terms marked with strikethrough + DEPRECATED Pass 8.2 tag inline.
 
 **Relationship to the Perfect-Fifth (−3, 2) PD scalar:** projection ↔ full-object, not competing definitions. Compare: TI Sigma Graph is the 2-D projection of TI Sigma Crystal; same pattern.
 

@@ -31,7 +31,7 @@ The five axes:
 
 ---
 
-## §2 — Axis 1: PD Real Axis (Degree-of-Trueness)
+## §2 — Axis 1: PD principal axis (Degree-of-Trueness)
 
 ### §2.1 — Definition
 
@@ -51,7 +51,7 @@ Fuzzy logic: fuzzy values are *the* truth value of the proposition. PD-real is *
 
 ---
 
-## §3 — Axis 2: PD Imaginary Axis (DT Axis)
+## §3 — Axis 2: DT/Tralse axis (DT Axis)
 
 ### §3.1 — Definition
 

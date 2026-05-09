@@ -18,7 +18,7 @@ This sentence forces a corpus-wide retraction of the Pass 6 over-claim. Pass 6 c
 
 1. **Geometric architecture** of PD/DT (real axis, imaginary axis, threshold constants ±1, ±φ, ±e, ±π, Emerick Crossover ±1/√2, ±e ultra-thresholds, 4/3 area ratios, 360° ultra-state symmetry, DT-on-imaginary-axis interpretation). **This category is Brandon-canonical** and is anchored in Brandon-authored URBs **#728, #733, #734, #736**.
 
-2. **Specific English-language label-strings** for zones inside that geometry ("Pre-DT Zone," "DT Cliff," "Indeterminate Disc," "Standard Mirror," "Transcendent Mirror," "Transcendent Annulus," "Chirality Direction," etc.). Brandon retains the right to rename any specific zone, but renaming a label does not invalidate the geometry beneath it.
+2. **Specific English-language label-strings** for zones inside that geometry ("Pre-DT Zone," "DT Cliff," "Principal Indeterminate Region," "Standard Mirror," "Transcendent Mirror," "Transcendent Ring," "~~Chirality Direction~~ (DEPRECATED Pass 8.2 — see PD_LABEL_AUDIT)," etc.). Brandon retains the right to rename any specific zone, but renaming a label does not invalidate the geometry beneath it.
 
 Pass 6 retracted (1). That was wrong. Pass 8 retracts the Pass-6 retraction and restores (1) as Brandon-canonical. (2) remains in service as working-labels until Brandon issues alternatives.
 
@@ -166,7 +166,7 @@ The complex-plane PD geometry **forced** the Authority Axis (AA) addition docume
 
 ## 8. What this paper does NOT do
 
-- This paper does **NOT** issue alternative names for any zone label currently in use. Brandon-rename of "Pre-DT Zone," "DT Cliff," "Indeterminate Disc," etc. is a separate Brandon-decision item.
+- This paper does **NOT** issue alternative names for any zone label currently in use. Brandon-rename of "Pre-DT Zone," "DT Cliff," "Principal Indeterminate Region," etc. is a separate Brandon-decision item.
 - This paper does **NOT** alter the (−3, 2) Perfect-Fifth PD scalar or any empirical scoring rubric.
 - This paper does **NOT** re-test the Perfect-Fifth ↔ Riemann claim (Pass 7's T1–T4 test stands; Brandon-options A/B/C from book F-2 Pass 7 still open).
 - This paper does **NOT** re-litigate Pass 6's other rulings (PD vs Phenomenal-Directness terminology; PD = Permissibility Distribution canonically). Those rulings stand.

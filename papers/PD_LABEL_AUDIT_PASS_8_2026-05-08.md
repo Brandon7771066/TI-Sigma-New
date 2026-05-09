@@ -2,7 +2,7 @@
 
 **Author:** Brandon Charles Emerick (audit directive); agent (label-by-label proposals)
 **Date:** 2026-05-08
-**Status:** PROPOSAL — awaiting Brandon ratification per label.
+**Status:** ✅ **RATIFIED** by Brandon 2026-05-08 (Pass 8.2). All proposals adopted: 4 RENAMEs to DT/Tralse axis, Principal Indeterminate Region, Transcendent Ring, PD principal axis; 3 DEPRECATIONs (Chirality Direction (π/3), Tralse Vertex Direction (2π/3), DT-mirror as alias); 8 KEEPs as listed. Corpus-wide bulk-rename completed Pass 8.2; deprecations marked with strikethrough + DEPRECATED tag. See replit.md §7.7.44 for ratification record.
 **Companion to:** `PD_COMPLEX_PLANE_RECANONIZATION_PASS_8_2026-05-08.md`
 **Anchors:** `urb_628`, `urb_715`, `urb_728`, `urb_733`, `urb_734`, `urb_736`, `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER`.
 

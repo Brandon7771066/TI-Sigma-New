@@ -6,7 +6,7 @@
 > This paper was flagged Tier A in the Pass 6 abbreviations-index audit (§2.3) because earlier versions used the Replit-distorted "Phenomenal Directness" terminology. The Pass 5 sed-rename (`Phenomenal Directness → Permissibility Distribution`) was applied here, and a Pass 7 content audit confirms:
 >
 > - **The MR PD scoring rubric (rows below) uses Permissibility Distribution canonically — values from −2 to +2 on the canonical (−3, 2) PD axis (with sign indicating signal-direction). This is consistent with Brandon's Pass 6 ruling and the `MR_ARITHMETIC_REVOLUTION.md` (−3, 2) usage.**
-> - **The synchronicity content itself is descriptive (real events with attached MR PD scores) rather than PD-mathematical, so the Replit-introduced complex-plane vocabulary (Indeterminate Disc, Pre-DT Zone, DT Cliff) was never used in this paper.**
+> - **The synchronicity content itself is descriptive (real events with attached MR PD scores) rather than PD-mathematical, so the Replit-introduced complex-plane vocabulary (Principal Indeterminate Region, Pre-DT Zone, DT Cliff) was never used in this paper.**
 > - **Verdict: AUDIT-PASSED. Reclassified from Tier A to Tier B (low-priority, canonical-language).** No content changes needed; PD usage is honest and matches canonical.
 >
 > Minor follow-up suggestions for Brandon (non-blocking): (i) the +2 / +1.5 / +1 / +0.5 / 0 score scale could be widened to use the full (−3, +2) PD interval if Brandon wants stronger discriminability for negative-direction synchronicities; (ii) the "Polarity" field already captures inverted signals — this is consistent with the canonical PD-axis sign convention.

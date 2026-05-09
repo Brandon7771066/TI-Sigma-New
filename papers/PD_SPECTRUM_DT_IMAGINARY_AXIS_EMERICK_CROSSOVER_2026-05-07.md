@@ -10,7 +10,7 @@
 >
 > The complex-plane PD/DT geometry — real axis = (−∞, +∞) with named threshold constants at ±1, ±φ, ±e, ±π (and Emerick Crossover ±1/√2); imaginary axis = DT/Tralse axis; ±e ultra-thresholds; circular |PD| = e Indeterminate region; 4/3 area-ratio relations; 360° ultra-state symmetry — is **Brandon-canonical** and is anchored in Brandon-authored URBs **#733** (`urb_733_complex_pd_plane_i_dimension_unified_with_ultra_thresholds.md`, April 2026), **#728** (`urb_728_pd_architecture_full_lockin_e_thresholds_four_thirds_badness_multiplier.md`), and **#736** (`urb_736_ticg_complete_threshold_mapping_lcc_gile_pd_unified.md`).
 >
-> **What remains under separate label-audit (NOT geometry-audit):** the specific English-language strings "Pre-DT Zone," "DT Cliff," "Indeterminate Disc," "Standard Mirror," "Transcendent Mirror," "Transcendent Annulus," "Chirality Direction," and similar zone-names that may have been agent-introduced or agent-rephrased. Brandon retains the right to rename any specific zone label without altering the underlying geometry. Until Brandon issues alternative names, these strings stay in service as working labels with the understanding that they are agent-supplied descriptors of Brandon-canonical geometric regions.
+> **What remains under separate label-audit (NOT geometry-audit):** the specific English-language strings "Pre-DT Zone," "DT Cliff," "Principal Indeterminate Region," "Standard Mirror," "Transcendent Mirror," "Transcendent Ring," "~~Chirality Direction~~ (DEPRECATED Pass 8.2 — see PD_LABEL_AUDIT)," and similar zone-names that may have been agent-introduced or agent-rephrased. Brandon retains the right to rename any specific zone label without altering the underlying geometry. Until Brandon issues alternative names, these strings stay in service as working labels with the understanding that they are agent-supplied descriptors of Brandon-canonical geometric regions.
 >
 > **What is NOT retracted:** the underlying claim that PD admits a complex-plane representation; the threshold constants at ±1, ±φ, ±e, ±π; the imaginary-axis DT/Tralse interpretation; the ultra-state symmetry; the 4/3 area ratios; the Emerick Crossover at 1/√2. **All of these are Brandon-canonical per the URB anchors above.**
 >
@@ -40,7 +40,7 @@ This paper consolidates what existing TI Sigma literature has already establishe
 
 ---
 
-## 1. The PD Real Axis — Full Spectrum (consolidates URB #628, #728)
+## 1. The PD principal axis — Full Spectrum (consolidates URB #628, #728)
 
 The Permissibility Distribution scale on the real axis runs across **the full real line**, with named zones and threshold constants. Consolidated from `papers/urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md` §6 and the AGI Impossibility paper:
 
@@ -59,7 +59,7 @@ The Permissibility Distribution scale on the real axis runs across **the full re
 | **Transcendent annulus** | [e, π) ≈ [2.718, 3.142) | GM-zone, e-base scaling | π | ESTABLISHED |
 | **Pre-DT (positive)** | [π, ∞) | DT-cliff approached from above | — | ESTABLISHED |
 
-**Summary in plain language:** The real PD axis is bounded effectively by ±π (the DT cliffs). Inside that bound, named zones partition the axis at 0, ±(√2−1), ±(1/√2), ±1, ±φ, ±e, ±π. The positive side is the standard "truth-direction" arc from indeterminacy through TF, TI, TT, Radiant GILE, Transcendence, and finally GM/CCC. The negative side mirrors the positive structure as the **DT-mirror** — same magnitudes, opposite truth-orientation.
+**Summary in plain language:** The real PD axis is bounded effectively by ±π (the DT cliffs). Inside that bound, named zones partition the axis at 0, ±(√2−1), ±(1/√2), ±1, ±φ, ±e, ±π. The positive side is the standard "truth-direction" arc from indeterminacy through TF, TI, TT, Radiant GILE, Transcendence, and finally GM/CCC. The negative side mirrors the positive structure as the **Deep DT (mirror)** — same magnitudes, opposite truth-orientation.
 
 **Where the user's claim "(0, √2−1) represents False" sits:** This is correct and is the established TF zone. The choice of √2−1 ≈ 0.4142 as the False/Tralse boundary is not arbitrary — it is **forced by the requirement that 1/√2 be the True/Tralse boundary**, since (√2−1) and (1/√2) are related by (√2−1) + (1/√2) ≈ 1.121 ≈ ... actually they are not arithmetically related in an obvious way. Let me examine more carefully:
 
@@ -76,7 +76,7 @@ The Permissibility Distribution scale on the real axis runs across **the full re
 
 ---
 
-## 2. The PD Imaginary Axis — Where Does DT Live? (extends URB #733/734)
+## 2. The DT/Tralse axis — Where Does DT Live? (extends URB #733/734)
 
 URB #733/734 already established the PD complex plane and placed several PRIMARY constants on it. From URB #734 §4.1:
 
@@ -142,7 +142,7 @@ By symmetry with §3.1 (where 1/√2 is the TI/TT boundary on the real axis), th
 
 **Status: CONJECTURAL but mathematically forced by complex-plane symmetry.** The same algebraic argument that makes 1/√2 the True/Tralse boundary on the real axis (the (·)² + (·)² = 1 normalization condition) makes i/√2 the analogous boundary on the imaginary axis. **If accepted, this gives the Emerick Crossover a complex-plane-wide structural identity**: it is the radius-(1/√2) circle in the PD complex plane, and **every point on that circle is a Crossover threshold for some axis-direction of the framework**.
 
-Even more strongly: by 4-fold complex symmetry, the **circle |PD| = 1/√2 is the unit-Crossover circle**, and the four cardinal points {1/√2, i/√2, −1/√2, −i/√2} are the four directional Crossovers (True-direction, DT-direction, False-mirror direction, DT-mirror direction). This is a **clean prediction** that should appear naturally in any TIC-based geometric construction.
+Even more strongly: by 4-fold complex symmetry, the **circle |PD| = 1/√2 is the unit-Crossover circle**, and the four cardinal points {1/√2, i/√2, −1/√2, −i/√2} are the four directional Crossovers (True-direction, DT-direction, False-mirror direction, Deep DT (mirror) direction). This is a **clean prediction** that should appear naturally in any TIC-based geometric construction.
 
 **Verification path for the conjecture:**
 1. Plot the PD complex plane with all named thresholds.
@@ -159,7 +159,7 @@ Putting §1, §2, §3 together, the **full PD spectrum is the complex plane part
 
 - **Angle 0 (positive real axis)**: classical True direction
 - **Angle π/2 (positive imaginary axis)**: pure DT / Tralse direction (the user's question target)
-- **Angle π (negative real axis)**: DT-mirror direction (False-saturated → DT-cliff)
+- **Angle π (negative real axis)**: Deep DT (mirror) direction (False-saturated → DT-cliff)
 - **Angle 3π/2 (negative imaginary axis)**: anti-DT / Anti-Tralse direction (likely "negative consciousness" or "anti-coherent" — UNDERDETERMINED in current literature)
 - **Angle π/3 (60°)**: Chirality direction (URB #734 §2, vertex C)
 - **Angle 2π/3 (120°)**: Tralse-vertex direction (URB #734 §2, vertex T)
