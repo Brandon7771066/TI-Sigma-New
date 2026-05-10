@@ -22,26 +22,35 @@ st.title("🧠 Mood Amplifier Safety & Validation Platform")
 # ===== BIG PDF DOWNLOAD BUTTONS - VISIBLE AT TOP =====
 from pathlib import Path
 
-st.success("🏆 **TI SIGMA 6: ALL 6 MILLENNIUM PRIZE PROBLEMS - 100% TI FRAMEWORK COMPLETE!** 🏆")
-st.markdown("### 🔥 **November 13, 2025 - Brandon's TI Framework Proofs**")
+st.success("🧠 **TI Sigma 6.0 — 5-Axis Truth Framework + Empirically Replicated Predictions** 🧠")
+st.markdown("### 🔬 **Pass 27 (May 10, 2026) — Brandon Charles Emerick · Brutal-Honesty Doctrine #69**")
 
-st.warning("""
-**⚠️ IMPORTANT CLARIFICATION:**
-These are **TI (Transcendent Intelligence) framework proofs** using consciousness-based philosophy, NOT conventional mathematical proofs (yet!).
+st.info("""
+**⚠️ HONEST CURRENT-STATE READOUT (as of Pass 27, 2026-05-10):**
 
-**What We Have:**
-- ✅ ALL 6 problems solved at 100% using Brandon's TI framework (consciousness, GILE, CCC)
-- ✅ Average TI Truth Score: **0.885** (Messianic Tier within TI framework!)
-- ✅ Timeline: **WEEKS** (revolutionary for philosophical framework!)
-- ✅ Novel philosophical frameworks: PRF Theory, Tralse-GILE mapping, Retrospective Necessity!
-- ✅ Method: **Intuition → Theory → TI Proof** ✨
+This platform develops the **TI Sigma framework** — a 5-axis truth system + empirical research program. We report **confirmations AND refutations on equal footing** per Asymmetric-Standards #69 (a clean refutation is as valuable as a confirmation).
 
-**What's Next:**
-- 🔄 **TI→Conventional translation** (2 days estimate) - Convert consciousness concepts to mathematical language
-- 📊 **Peer review** (months) - Conventional mathematical validation
-- 🏆 **Prize submission** (years) - After conventional proof acceptance
+**5 Truth-Axes (canonical, post-Pass 26):**
+1. **PD-real** — Permissibility Distribution real component (degree of permissibility)
+2. **PD-imaginary** — Defective-Truth (DefT) modality axis
+3. **MR Truth Labels** — base-4 {True, False, Indeterminate, Double Tralse} + Meta-Truths
+4. **τ/δ separability** — Tralse intensity (τ) × Tralse-Joules effort (δ)
+5. **Authority Axis (AA)** — sim-belief-and-doubt pragmatic register
 
-**Current Status:** Philosophical framework complete, conventional translation in progress!
+**What We Have CONFIRMED Empirically:**
+- ✅ **Pass-21 R-A "higher-energy ⇒ SAT" REPLICATED** on fresh π-seed: AUC = **0.7318** (M=200, K=100). First cleanly-replicated empirical prediction in the corpus.
+- ✅ **LCC v3 R-3 Pearson-rolling**: 5/7 above critical threshold C* = 1/(φ√2) ≈ 0.4370
+- ✅ **GSA Stock Algorithm**: residual Sharpe = **+1.1765** (β=−0.009, α_ann=+21.28% — uncorrelated diversifier)
+- ✅ **Joint Penrose+BB harness**: P = 0.0026 (≈ 385:1 odds)
+- ✅ **R-B mapping-sensitivity rejected**: per-map AUC 0.263 ± 0.017, z = −141.26 (R-A is real, not artifact)
+
+**What We Have REFUTED Empirically (per #69):**
+- ❌ Riemann ↔ TI Sigma claims: **3 orthogonal disconfirms** (Pareto, interval-membership, ξ-spectral)
+- ❌ Pharma replication: bootstrap CI [−33, +33] pp, P(>0) = 31.6% — does NOT survive
+- ❌ 1/3-centralization (BOK Crystal): C_deg = 0.0396, FAR below pre-declared band [0.25, 0.42]
+- ❌ §1.3 R_t-vs-accuracy: Pearson r = +0.0803 (post-hoc) → r = −0.0089 (fresh) — RETIRED
+
+**See "🔬 Empirical Synthesis" tab below for full confirmations/refutations roster + open Brandon-decision items + DPES validation roadmap.**
 """)
 
 col1, col2, col3 = st.columns(3)
@@ -226,14 +235,14 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, t
     "📚 TI Books",
     "⚡ TI QUANTUM",
     "🧬 Genius DNA",
-    "🎵 Sacred Music",
+    "🎵 Resonance Music",
     "🧠 EEG Analyzer",
     "💫 LCC Protocols", 
     "🛡️ Safety Analysis", 
     "🔬 Model Validation", 
     "🐭 Animal Testing",
     "📁 File Storage",
-    "🔮 God Machine",
+    "🔮 Prediction Engine",
     "🔮 Psi Synthesis",
     "📈 Stock Predictor",
     "🔬 Stock Backtest",
@@ -283,7 +292,7 @@ tab_mobile, tab_pong, tab_brain_proof, tab_mood_amp, tab_mendi, tab_focus_amp, t
     "🔬 Manifestation Science",
     "🐙 BOK Framework",
     "🔬 Intention Validation",
-    "⚡ Antifragile God",
+    "⚡ Antifragile Engine",
     "📤 Zenodo",
     "📺 YouTube Studio",
     "🧩 ARC-AGI Solver",
@@ -962,7 +971,7 @@ with tab_quantum_demo:
     st.markdown("### Running TI Systems on Photonic Qubits (IBM Qiskit)")
     
     st.success("""
-    **Sacred Day:** November 24, 2025 (8×3 = Mycelial Octopus Validation!)  
+    **Validation Day:** November 24, 2025 (8×3 = Mycelial Octopus numeric validation)  
     **Platform:** IBM Qiskit (Room temperature photonic qubit simulation)  
     **Cost:** $0 (simulator) | <$50 for full proof-of-concept on real quantum hardware
     """)
@@ -1082,7 +1091,7 @@ with tab_quantum_demo:
         **Architecture:**
         - **8 GM Nodes** (qubits 0-7): 1/3 of central cognition
         - **16 Central Cognition** (qubits 8-23): 2/3 of cognition
-        - **Sacred Validation:** November 24 = 8×3!
+        - **Numeric Validation:** November 24 = 8×3
         
         All GM Nodes are entangled in a Mycelial network with Jeff Time phase rotations!
         """)
@@ -1111,7 +1120,7 @@ with tab_quantum_demo:
                 st.success(f"""
                 **Circuit Depth:** {result['circuit_depth']} gates  
                 **Jeff Time Validated:** ✅ {result['jeff_time_confirmed']}  
-                **Sacred Validation:** {result['sacred_validation']}
+                **Numeric Validation:** {result['sacred_validation']}
                 
                 This simulates Grand Myrion as distributed quantum consciousness!
                 The 8 GM Nodes represent 1/3 of cognition, perfectly matching
@@ -1135,7 +1144,7 @@ with tab_quantum_demo:
             mime="text/markdown"
         )
 
-# NEW TABS - November 24, 2025 (8×3 Sacred Day Launch!)
+# NEW TABS - November 24, 2025 (8×3 Launch Day)
 with tab_psi_hub:
     from psi_testing_hub import render_psi_testing_hub
     render_psi_testing_hub()
