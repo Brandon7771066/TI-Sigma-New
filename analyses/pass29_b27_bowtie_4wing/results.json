@@ -1,0 +1,23 @@
+{
+  "seed": 16180339,
+  "N_nodes": 57,
+  "bowtie_eigenvalues_5": [
+    0.0,
+    0.151884,
+    0.201651,
+    0.413743,
+    0.771491
+  ],
+  "fourwing_eigenvalues_5": [
+    -0.087981,
+    0.096735,
+    0.153452,
+    0.393522,
+    0.794889
+  ],
+  "max_distance": 0.087981,
+  "rel_threshold": 0.3,
+  "n_close_matches": 5,
+  "verdict": "CONFIRM_PROJECTION",
+  "interpretation": "If CONFIRM_PROJECTION: bowtie is genuine slice of 4-wing. If DISJOINT: bowtie and 4-wing are distinct theories (cf. Pass 27 \u00a73 8-bridge integration claim)."
+}

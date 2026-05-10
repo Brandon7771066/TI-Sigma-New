@@ -1,0 +1,10 @@
+{
+  "seed": 41421356,
+  "K": 500,
+  "pearson_r": -0.0108,
+  "perm_p": 0.834,
+  "n_permutations": 1000,
+  "verdict": "ACCEPT_RETIREMENT",
+  "pass26_baseline": "r=\u22120.0089, p=0.8396 (RETIRED)",
+  "interpretation": "Second-seed null-confirmation supports Pass-26 retirement decision per #69 multi-seed discipline."
+}

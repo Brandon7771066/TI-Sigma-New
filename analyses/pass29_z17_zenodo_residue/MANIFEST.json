@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "PUBLISH": 0,
+    "KEEP_INTERNAL": 19,
+    "NEEDS_REVIEW": 5
+  },
+  "total_files": 24,
+  "pass17_baseline": "1 publish / 14 keep / 20 review (35/37 of 929-file inventory)",
+  "manifest": {
+    "PUBLISH": [],
+    "KEEP_INTERNAL": [
+      "zenodo_articles/03_LOVE_BINDER_ROBOTICS_SAFETY.md",
+      "zenodo_articles/04_TRALSE_LOGIC_UNCERTAINTY.md",
+      "zenodo_articles/07_QUANTUM_CONSCIOUSNESS_FINANCE.md",
+      "zenodo_articles/08_FOUR_DIMENSIONAL_VALUE_ETHICS.md",
+      "zenodo_articles/09_PSI_PHENOMENA_SCIENTIFIC_FRAMEWORK.md",
+      "zenodo_articles/10_META_INFORMATION_CONSCIOUSNESS.md",
+      "zenodo_articles/00_ARTICLE_INDEX.md",
+      "zenodo_articles/02_CONSCIOUSNESS_AWARE_TRADING.md",
+      "zenodo_articles/01_CLINICAL_EEG_EMPATHY_VALIDATION.md",
+      "zenodo_articles/05_HRV_COHERENCE_DECISION_QUALITY.md",
+      "zenodo_articles/06_INTER_BRAIN_SYNCHRONY_TEAMS.md",
+      "zenodo_bundle/01_ti_paper_352_consciousness_equation.md",
+      "zenodo_bundle/02_ti_paper_347_emerick_constant.md",
+      "zenodo_bundle/03_ti_paper_358_somatic_coherence_eep.md",
+      "zenodo_bundle/04_ti_paper_349_agi_impossibility.md",
+      "zenodo_bundle/07_ti_chsh_0_85_coherence_defense.md",
+      "zenodo_bundle/09_ti_empirical_consciousness_7_predictions.md",
+      "zenodo_bundle/10_ti_paper_355_ear_existence_indispensability.md",
+      "zenodo_bundle/UPLOAD_GUIDE.md"
+    ],
+    "NEEDS_REVIEW": [
+      "zenodo_bundle/05_ti_tralse_topos_formalization.md",
+      "zenodo_bundle/06_ti_aperiodic_lxe_lpe_einstein_tiling.md",
+      "zenodo_bundle/08_ti_bok_orchor_gile_synthesis.md",
+      "zenodo_deposit_dryrun/README.md",
+      "zenodo_deposit_dryrun/MANIFEST.md"
+    ]
+  }
+}

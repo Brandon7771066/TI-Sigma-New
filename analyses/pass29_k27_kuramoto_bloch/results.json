@@ -1,0 +1,10 @@
+{
+  "seed": 14142135,
+  "N_oscillators": 50,
+  "T_steps": 2000,
+  "K_coupling": 2.0,
+  "rms_phi_diff": 1.4923160511679544e-17,
+  "kuramoto_R_final": 0.9583,
+  "verdict": "CONFIRM",
+  "interpretation": "Kuramoto \u03a6 and Bloch-equator azimuth are definitionally identical when |\u03c8\u27e9=(|0\u27e9+e^{i\u03a6}|1\u27e9)/\u221a2; this is an existence-of-mapping confirmation, NOT a physical claim."
+}

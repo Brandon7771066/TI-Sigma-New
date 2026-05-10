@@ -1,0 +1,45 @@
+{
+  "seed": 27182818,
+  "C_emerick": 0.437,
+  "n_pairs_above_C": 7,
+  "n_total_pairs": 7,
+  "verdict": "CONFIRM",
+  "pre_reg_threshold": "\u22654/7 CONFIRM, \u22642/7 REFUTE",
+  "results": [
+    {
+      "pair": "ch0-ch1",
+      "rolling_R": 0.7805,
+      "above_C": true
+    },
+    {
+      "pair": "ch0-ch2",
+      "rolling_R": 0.7527,
+      "above_C": true
+    },
+    {
+      "pair": "ch1-ch3",
+      "rolling_R": 0.7534,
+      "above_C": true
+    },
+    {
+      "pair": "ch2-ch4",
+      "rolling_R": 0.7491,
+      "above_C": true
+    },
+    {
+      "pair": "ch3-ch5",
+      "rolling_R": 0.7181,
+      "above_C": true
+    },
+    {
+      "pair": "ch0-ch5",
+      "rolling_R": 0.7138,
+      "above_C": true
+    },
+    {
+      "pair": "ch2-ch3",
+      "rolling_R": 0.7448,
+      "above_C": true
+    }
+  ]
+}

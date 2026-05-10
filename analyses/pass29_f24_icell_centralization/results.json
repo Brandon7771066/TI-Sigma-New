@@ -1,0 +1,9 @@
+{
+  "seed": 28284271,
+  "n_graphs": 100,
+  "pearson_C_vs_D": 0.4614,
+  "C_mean": 0.2949,
+  "D_mean": 0.0209,
+  "verdict": "PARTIAL",
+  "pre_reg": "CONFIRM |r|\u22650.5, REJECT |r|\u22640.15"
+}

@@ -1,0 +1,15 @@
+{
+  "seed": 33166247,
+  "N": 500,
+  "component_AUCs": {
+    "R-A": 0.7508,
+    "Penrose": 0.5811,
+    "BB": 0.6497,
+    "Crystal": 0.5515
+  },
+  "composite_AUC": 0.7582,
+  "best_component_AUC": 0.7508,
+  "delta_composite_minus_best": 0.0073,
+  "verdict": "DOMINANT_COMPONENT",
+  "interpretation": "If DOMINANT_COMPONENT: Pass-26 composite is essentially R-A alone. If ADDITIVE: Pass-26 finding (additivity-NOT-supported) was wrong. If MIXED: composite gains modest information from non-R-A components."
+}
