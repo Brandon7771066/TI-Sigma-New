@@ -1,0 +1,38 @@
+{
+  "study_id": "g25_rt_vs_accuracy_fresh_corpus_2026-05-10",
+  "filed_by": "TI Sigma DPES agent on Brandon Emerick directive (Pass 26)",
+  "filed_before_run": true,
+  "background_paper": "papers/PASS_25_M24A_CENTRALIZATION_RT_REGRESSION_TWA_FHS_TJ_CONSCIOUSNESS_TRIM_OPTIONS_QUANTUM_PSYCH_2026-05-10.md §2 (Reading 2 — power problem mitigation)",
+  "predecessor_studies": [
+    "Pass-25 §2: r20 K=100 post-hoc Pearson r(R_t, AUC) = +0.0803, p=0.4254 (NULL)"
+  ],
+  "hypothesis_under_test": "On a fresh 3-SAT corpus seeded distinctly from r20, with K=500 mappings per instance, the Pearson correlation between per-mapping R_t (entropy-discounted attention concentration on softmax(-energies/T)) and per-mapping inverted-AUC ('higher-E ⇒ SAT') is positive and significant.",
+  "design": {
+    "instance_seed": 27182818,
+    "instance_seed_rationale": "e-derived; deliberately distinct from r20's pi-derived seed=31415927.",
+    "n_instances": 200,
+    "min_vars": 3, "max_vars": 5,
+    "clause_var_ratio_min": 3.0, "clause_var_ratio_max": 7.0,
+    "mappings_per_instance": 500,
+    "mapping_seed_rationale": "Independent per-(instance, k) seed of form (instance_seed * 10007) + (i * 31337) + k, identical recipe to r20.",
+    "R_t_definition": "R_t(k) = 1 - H(softmax(-energies[:, k]/T)) / log(M); T = mean per-mapping std(energies). Frozen pre-data per #69.",
+    "scoring": "Pearson r(R_t, per_map_inverted_AUC) across K=500 mappings; permutation null with n=10000."
+  },
+  "pre_registered_decision_rules": {
+    "primary_metric": "pearson_r_Rt_vs_AUC",
+    "rules": {
+      "CONFIRM": "r > 0.15 AND permutation_p_two_sided < 0.01 → §1.3 prediction CONFIRMED on fresh corpus; R_t is a meaningful within-model retrieval-quality proxy.",
+      "WEAK_CONFIRM": "r > 0.10 AND p < 0.05 → marginal positive evidence; third corpus required.",
+      "NULL": "r > 0 AND p >= 0.05 → trend-positive but underpowered; predictive value is empirically unsupported.",
+      "DISCONFIRM": "r <= 0 → §1.3 prediction REJECTED on fresh corpus; the joint RR(V,S,T̂) operator's only novel-falsifiable claim retired."
+    }
+  },
+  "anti_hark_safeguards": [
+    "Decision thresholds frozen in this JSON BEFORE the runner is executed.",
+    "T (softmax temperature) computed as mean per-mapping std(energies); frozen.",
+    "No re-runs with alternative seeds permitted.",
+    "Decision rule deterministic on primary metric; secondary metrics reported but do NOT trigger flip."
+  ],
+  "filed_at_utc": "2026-05-10",
+  "next_step_after_run": "Append observed value + verdict to results.json; cite this prereg verbatim in the Pass-26 paper."
+}

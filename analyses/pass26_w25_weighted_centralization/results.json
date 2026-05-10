@@ -1,0 +1,29 @@
+{
+  "per_scheme": {
+    "W0_unit_baseline": {
+      "C_deg": 0.03961038961038961,
+      "C_eig": 0.12855643976944284,
+      "gini": 0.046411483253588307,
+      "in_band_1_3": "no"
+    },
+    "W1_radius_weighted": {
+      "C_deg": 0.27614029119332556,
+      "C_eig": 0.11461733052708706,
+      "gini": 0.32038114024585035,
+      "in_band_1_3": "YES"
+    },
+    "W2_inverse_radius_weighted": {
+      "C_deg": 0.06176185681874623,
+      "C_eig": 0.2683811364347888,
+      "gini": 0.3054513012689636,
+      "in_band_1_3": "YES"
+    },
+    "W3_golden_graded": {
+      "C_deg": 0.034487623104742515,
+      "C_eig": 0.2548141297152503,
+      "gini": 0.21275213301045534,
+      "in_band_1_3": "YES"
+    }
+  },
+  "verdict": "PARTIAL_RESCUE \u2014 at least one weighting puts a metric in [0.25, 0.42]"
+}

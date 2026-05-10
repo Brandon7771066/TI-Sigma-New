@@ -1,0 +1,21 @@
+{
+  "study_id": "r25_composite_2026-05-10",
+  "M": 300,
+  "K": 100,
+  "seed": 27182818,
+  "n_sat": 221,
+  "n_unsat": 79,
+  "lambda_P": 0.5,
+  "lambda_LCC": 0.3,
+  "C_star": 0.43701602444882104,
+  "averaged_energy_auc_inverted": 0.7035912709777192,
+  "per_map_auc_mean": 0.6532238387078299,
+  "per_map_auc_std": 0.02359046647893639,
+  "delta_vs_r20_baseline": -0.028208729022280776,
+  "verdict": "CONFIRM_composite",
+  "model_substitutions_declared": [
+    "H_Penrose_pinning = quasi-periodic on-site V(v) = cos(2\u03c0\u00b7\u03c1(r)\u00b7k/\u03c6); not a literal Penrose-tiling embedding.",
+    "LCC_static = Watts-Strogatz local clustering coefficient minus C*; static analog of temporal LCC_v3-rolling."
+  ],
+  "pre_registration_path": "analyses/pass25_r24_composite_prereg/PRE_REGISTRATION.json"
+}

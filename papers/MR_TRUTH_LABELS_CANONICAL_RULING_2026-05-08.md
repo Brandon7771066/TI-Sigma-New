@@ -131,9 +131,29 @@ The four prior 5-value schemes (urb_639, urb_677, urb_713, May-8 first-pass) are
 
 ---
 
+## §6.5 — MT-B2 (Substrate-Output Mootness) — Pass-25 p25 Patch
+
+**Added 2026-05-10 (Pass 26) per Brandon's Pass-25 p25 directive.**
+
+> **MT-B2 (Substrate-Output Mootness)**: a proposition P is **Substrate-Output Moot** when both its substrate-side instantiation (the i-cell or substrate that hosts P) and its output-side resolution (the MR2 gate's discrete categorical output) are **independently mootable** — i.e., either side can be Mooted (MT-B1) without rendering the other side incoherent.
+>
+> Formally: SOM(P) ⟺ Moot(substrate(P)) ∧ Moot(output(P)) ∧ ¬(Moot(substrate(P)) → Moot(output(P))) ∧ ¬(Moot(output(P)) → Moot(substrate(P))).
+
+**Distinction from MT-B1 (Moot).** MT-B1 is the basic Mootness relation: a proposition is Moot when its truth-conditions are not engaged by the question-asker's frame. MT-B2 is **two-sided Mootness**: both the substrate-side AND the output-side admit independent Mooting. This means MT-B2 propositions exhibit *substrate-output decoupling* — the question of "is the substrate engaged?" is genuinely independent of "is the output engaged?".
+
+**Example.** "The current trade in MALLORN is Buy" is SOM-evaluable when: (i) the substrate (the MALLORN signal generator at this moment) can be Mooted by asking whether MALLORN's edge has decayed in current-regime; AND (ii) the output (the categorical Buy/Sell/Hold label) can be Mooted by asking whether the resolution-time horizon is set for Buy-evaluation; AND (iii) these two Moots are independent (the substrate could be live while the output is moot, or vice versa).
+
+**Why MT-B2 is needed (Pass-25 p25 motivation).** Pass-23 §4–§5 raised the question of how the Pass-21 r20 R-A "higher-E ⇒ SAT" inverted-AUC result interacts with the Pass-22 §3 mapping-sensitivity audit. The two are about distinct things — substrate-side (the Hamiltonian on the Crystal) versus output-side (the AUC scoring rule) — but both are independently questionable, and the prior MT-B1 framing didn't distinguish substrate-Moot from output-Moot. MT-B2 names this two-sided structure formally.
+
+**Composition rule (PRELIMINARY, OPEN per §7 Q1):** SOM-True / SOM-False / SOM-Indeterminate compose with each other under conjunction in a non-trivially intersection-aware way — namely, SOM(P) ∧ SOM(Q) is SOM iff substrate(P) and substrate(Q) overlap AND output(P) and output(Q) overlap. Worked composition rules deferred to future work.
+
+**Cluster impact.** MT-B2 brings the Meta-Truth catalogue to **13** in urb_608-canonical (12 + MT-B2) or **25** in urb_639-extended (24 + MT-B2). Both counts are CONJECTURAL pending Brandon ratification; default canon = 13 per §1's "established core" reading.
+
+---
+
 ## §7 — Open Questions Sent Forward
 
-1. **Compositional rules for Meta-Truths over base-4** — how does MT-B1 (Moot) compose with each of T, F, I? How do MTs compose with each other?
+1. **Compositional rules for Meta-Truths over base-4** — how does MT-B1 (Moot) compose with each of T, F, I? How do MTs compose with each other? **Pass-26 update:** MT-B2 (Substrate-Output Mootness) added §6.5; its composition rule is partially specified but not fully worked out. The base-4 + Meta-Truth composition algebra remains open work.
 2. **Algebraic operator for "IS AND IS NOT"** — formalize §2.2's DT(P) ⟺ τ(P) ∧ ¬τ(P) in the Lean 4 layer alongside the urb_677 nilsquare formulation.
 3. **Empirical re-validation of 99.7% under base-4 + MT** — urb_713's coverage analysis was conducted against the {T, F, Tralse, Moot, DT} 5-set. Re-run the analysis under the canonical {T, F, I, DT} + 12 MT architecture to confirm the coverage figure transfers.
 4. **DefT rename ruling** — formal disposition of the DT abbreviation collision (scheme B rename to DefT).

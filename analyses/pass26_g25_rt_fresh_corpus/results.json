@@ -1,0 +1,18 @@
+{
+  "study_id": "g25_rt_vs_accuracy_fresh_corpus_2026-05-10",
+  "M": 200,
+  "K": 500,
+  "seed": 27182818,
+  "softmax_T": 0.5027637183343581,
+  "pearson_r": -0.008942973868560803,
+  "permutation_p_two_sided": 0.8396,
+  "permutation_n": 10000,
+  "permutation_null_mean": 0.0003960763635499954,
+  "permutation_null_std": 0.04473039737014215,
+  "per_map_auc_mean": 0.6671762666666667,
+  "per_map_auc_std": 0.01792348493693245,
+  "R_t_mean": 0.08333789398213724,
+  "R_t_std": 0.0044488496758574355,
+  "verdict": "DISCONFIRM",
+  "pre_registration_path": "analyses/pass26_g25_rt_fresh_corpus/PRE_REGISTRATION.json"
+}
