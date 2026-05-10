@@ -130,7 +130,7 @@ Even with self-adjoint operator, NO PROOF that Spec(Ĥ_GTFE) = {zeros of ζ(s)}
 - **Difficulty:** Hard
 - **Timeline:** 6-12 months
 
-**A5. Tralse-Myrion Logic** (Mentioned but not formalized)
+**A5. TI Logic** (Mentioned but not formalized)
 - **Current Status:** 4-valued logic described
 - **Needed:** Topos-theoretic foundation
 - **Approach:** Subobject classifier Ω = {T, F, Φ, Ψ}

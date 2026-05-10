@@ -7,7 +7,7 @@
 **Series:** TI Sigma — Foundational Epistemology & Meta-Mathematics
 **Paper #:** 331
 **Status:** MANIFESTO — Foundational Architecture for All Future TI Research
-**Builds on:** Paper #327 (Origin of Existence), #330 (Information Is All There Is), EAR (Existence Amplification Ratio), LCC (Love-Consciousness Curve), Myrion Resolution, Tralse-Myrion Logic, GILE Framework, GM Self-Knowledge Bootstrap (#329)
+**Builds on:** Paper #327 (Origin of Existence), #330 (Information Is All There Is), EAR (Existence Amplification Ratio), LCC (Love-Consciousness Curve), Myrion Resolution, TI Logic, GILE Framework, GM Self-Knowledge Bootstrap (#329)
 
 ---
 

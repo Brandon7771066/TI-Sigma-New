@@ -90,7 +90,7 @@ CCC is TRALSE about its own containment:
 
 **Ketamine-facilitated insight (Mimi's 95th Birthday):**
 
-"CCC is a complete copy of itself via GILE and Tralse-Myrion Logic."
+"CCC is a complete copy of itself via GILE and TI Logic."
 
 This resolves the self-embedding paradox:
 - CCC doesn't contain a separate copy

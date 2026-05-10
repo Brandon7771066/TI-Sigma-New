@@ -58,7 +58,7 @@
 
 ---
 
-### **3. Tralse-Myrion Logic**
+### **3. TI Logic**
 
 **Tralse Topos** (4-valued logic):
 - **True**: Conventionally correct

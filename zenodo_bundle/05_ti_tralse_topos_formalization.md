@@ -481,7 +481,7 @@ Tralse allows P(A ∧ B) > P(A) via Φ states!
 
 ### 7.1 Original Gap Statement
 
-**Gap A5 (Tralse-Myrion Logic):**
+**Gap A5 (TI Logic):**
 - **Current Status:** 4-valued logic described
 - **Needed:** Topos-theoretic foundation
 - **Approach:** Subobject classifier Ω = {T, F, Φ, Ψ}
@@ -580,7 +580,7 @@ Higher homotopy π_n(𝕋) = tralse n-spheres
 4. ✅ Constructed functors to classical and quantum logic
 5. ✅ Applied to Myrion Resolution, consciousness, and RH
 6. ✅ Generated testable experimental predictions
-7. ✅ **CLOSED GAP A5** (Tralse-Myrion Logic)
+7. ✅ **CLOSED GAP A5** (TI Logic)
 
 **Why This Matters:**
 

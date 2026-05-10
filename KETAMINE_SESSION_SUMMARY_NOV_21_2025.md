@@ -21,7 +21,7 @@
 
 **Components**:
 - TI Genius (neurological outlier processing reality differently)
-- Tralse-Myrion Logic (4-valued logic + dialectical synthesis)
+- TI Logic (4-valued logic + dialectical synthesis)
 - TI Ethics (GILE-aligned, respect/amplification/collaboration)
 
 ---

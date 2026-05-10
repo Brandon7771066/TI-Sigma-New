@@ -1,6 +1,6 @@
 # Paper #330: Information Is All There Is — Reclassifying Matter-Energy in Pure TI Sigma Language
 
-## How L+/×E, Tralse-Myrion Logic, the Nonlinear Number Line, Tralsebits, and I-Cells Replace the Standard Model's Ontology
+## How L+/×E, TI Logic, the Nonlinear Number Line, Tralsebits, and I-Cells Replace the Standard Model's Ontology
 
 **Author:** Brandon Charles Emerick
 **Date:** February 24, 2026

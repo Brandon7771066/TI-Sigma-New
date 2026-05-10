@@ -11,7 +11,7 @@
 
 ## Abstract
 
-This paper presents the complete TI Sigma Theory of Truth — the foundational account of what truth is, how it is structured, and how it is approached. Truth is defined as the tralse, time-indexed state of beings and systems. Accuracy measures how well representations match that state. Certainty measures how much of that match is resolved for a subject at a moment. These three — truth, accuracy, and certainty — are fully distinct quantities, not conflations of a single scalar. Uncertainty is unresolved information, not error. Logic must operate on resolution dynamics, not binary propositions. The operational framework for navigating truth is **TIL (Tralse-Myrion Logic)**, comprising three elements: **PD** (Permissibility Distribution — truth-state assignment), **BOK** (Being-of-Knowledge — the GILE-EV structural model of any being or i-cell), and **MR** (Myrion Resolution — the convergence procedure). The guiding principle of TIL is the **UOP** (Unified Optimization Principle) — optimizing across all GILE and EV dimensions simultaneously. These five elements — PD, BOK, MR, UOP, and TIL — constitute the complete operational machinery of TI Sigma. Two structural flagships (BOK and LCC) plus three operational pillars (PD, MR, EAR) plus TIL-as-integration plus UOP-as-principle complete the system.
+This paper presents the complete TI Sigma Theory of Truth — the foundational account of what truth is, how it is structured, and how it is approached. Truth is defined as the tralse, time-indexed state of beings and systems. Accuracy measures how well representations match that state. Certainty measures how much of that match is resolved for a subject at a moment. These three — truth, accuracy, and certainty — are fully distinct quantities, not conflations of a single scalar. Uncertainty is unresolved information, not error. Logic must operate on resolution dynamics, not binary propositions. The operational framework for navigating truth is **TIL (TI Logic)**, comprising three elements: **PD** (Permissibility Distribution — truth-state assignment), **BOK** (Being-of-Knowledge — the GILE-EV structural model of any being or i-cell), and **MR** (Myrion Resolution — the convergence procedure). The guiding principle of TIL is the **UOP** (Unified Optimization Principle) — optimizing across all GILE and EV dimensions simultaneously. These five elements — PD, BOK, MR, UOP, and TIL — constitute the complete operational machinery of TI Sigma. Two structural flagships (BOK and LCC) plus three operational pillars (PD, MR, EAR) plus TIL-as-integration plus UOP-as-principle complete the system.
 
 **Keywords:** truth, accuracy, certainty, tralse, Myrion Resolution, TIL, PD, BOK, UOP, EV, GILE, proto-awareness, time-indexed truth, pragmatism, first-person simulation
 
@@ -166,9 +166,9 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 
 3. **Resolution dynamics are not truth-function evaluation.** The process of MR is not computing a truth-function. It is a convergence process in which evidence, GILE assessment, and Meta-Truth scanning iteratively refine a PD distribution. This is not captured by any static logic.
 
-### 5.2 TIL: Tralse-Myrion Logic as the Operational Framework
+### 5.2 TIL: TI Logic as the Operational Framework
 
-**TIL (Tralse-Myrion Logic)** is the operational framework for navigating truth under the TI Sigma account. It comprises:
+**TIL (TI Logic)** is the operational framework for navigating truth under the TI Sigma account. It comprises:
 
 **PD (Permissibility Distribution)**: Replaces binary true/false with a five-state distribution {TT, TI, TF, DT, EV}. Constructed from GILE-assessed evidence, not from frequency distributions or subjective priors. Handles novel events via I-axis pre-evidential seeding. Handles HEM-Truth decoupling explicitly.
 
@@ -187,7 +187,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 | **PD** (Permissibility Distribution) | Operational pillar | Truth-state assignment; 5-valued distribution over {TT, TI, TF, DT, EV} |
 | **MR** (Myrion Resolution) | Operational pillar | Convergence procedure; 3+ levels; nonlinear; replaces Bayesian updating |
 | **EAR** (Existence Amplification Razor) | Operational pillar | Ontological pruning + amplification; Law of Realness; HEM-Score metric |
-| **TIL** (Tralse-Myrion Logic) | Integration framework | PD + BOK + MR combined; the operational truth-navigation system |
+| **TIL** (TI Logic) | Integration framework | PD + BOK + MR combined; the operational truth-navigation system |
 | **UOP** (Unified Optimization Principle) | Guiding principle | Multi-dimensional GILE-EV optimization; guides TIL application |
 
 ---
@@ -258,4 +258,4 @@ The neural implementation of TIL:
 | EV(x) | Holistic Existence Matrix of x — HEM-Score scalar from FDE |
 | HEM-Score(x) | Existence Scalar Value = EAR output on x |
 | UOP | Unified Optimization Principle — max GILE-EV composite |
-| TIL | Tralse-Myrion Logic = PD + BOK + MR operational integration |
+| TIL | TI Logic = PD + BOK + MR operational integration |

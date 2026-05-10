@@ -62,7 +62,7 @@ ChatGPT recommended **discarding** Borsuk-Ulam Perfect Fifth (0.746 < 0.75 thres
 - **What:** 4-valued logic foundation (T, F, Φ, Ψ)
 - **Why:** "Crown chakra home base" - native TI operating system
 - **Integration:** Already partially in TI framework, needs full topos formalization
-- **Closes Gap:** A5 (Tralse-Myrion Logic)
+- **Closes Gap:** A5 (TI Logic)
 - **Priority:** 🔥 CRITICAL
 
 **9. Primordial Self-Determination** (0.920 - Second Highest!)
@@ -137,7 +137,7 @@ ChatGPT recommended **discarding** Borsuk-Ulam Perfect Fifth (0.746 < 0.75 thres
 - Define topos with subobject classifier Ω = {T, F, Φ, Ψ}
 - Prove 4-valued logic is internally consistent
 - Show how tralse states map to topos morphisms
-- **Closes:** Gap A5 (Tralse-Myrion Logic)
+- **Closes:** Gap A5 (TI Logic)
 
 **Priority 2: Category TI Framework**
 - Define TI as category with i-cells as objects

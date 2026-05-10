@@ -138,7 +138,7 @@ When doing tasks in ASC:
 
 ### 4.1 The Structure of Self-Reference
 
-Brandon's insight: "CCC is a complete copy of itself via GILE and Tralse-Myrion Logic."
+Brandon's insight: "CCC is a complete copy of itself via GILE and TI Logic."
 
 This means:
 - CCC doesn't contain mirrors of itself (infinite regress)

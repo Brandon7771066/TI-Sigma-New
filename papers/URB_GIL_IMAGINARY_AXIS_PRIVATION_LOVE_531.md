@@ -86,7 +86,7 @@ The implication for GILE: GILE is not four independent dimensions. It is one gen
 
 ### 2.2 The Love Definition (Formal)
 
-As formally stated: "GIL Love can be broadly defined as *Positive conscious affect, meaning, and (possibly) action directed toward the self and/or others, supported by the Four C's (representing G) and Tralse-Myrion Logic (TIL).*"
+As formally stated: "GIL Love can be broadly defined as *Positive conscious affect, meaning, and (possibly) action directed toward the self and/or others, supported by the Four C's (representing G) and TI Logic (TIL).*"
 
 This definition is notable for several features:
 - **Positive conscious affect**: Love has a valence dimension — it is in the conscious meaning/valence truth dimension, not just the moral dimension
@@ -94,7 +94,7 @@ This definition is notable for several features:
 - **Possibly action**: Love need not manifest as action — it can be purely internal, a state of being rather than doing
 - **Directed toward self and/or others**: Love is not exclusively other-directed (contra some religious frameworks) — self-love is a genuine form of Love
 - **Supported by the Four C's**: The G-dimension (Goodness) provides the structural support — Love operates correctly within a framework of values
-- **Tralse-Myrion Logic**: The TIL confirms that Love is always TRALSE-quality — it is the "grease," not perfectly crystallized, always generative
+- **TI Logic**: The TIL confirms that Love is always TRALSE-quality — it is the "grease," not perfectly crystallized, always generative
 
 ### 2.3 The "Everything is Love" Implication
 

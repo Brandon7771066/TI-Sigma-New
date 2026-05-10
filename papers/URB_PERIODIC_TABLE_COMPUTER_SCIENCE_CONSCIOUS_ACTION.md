@@ -8,7 +8,7 @@
 **Status:** FOUNDATIONAL — Companion to Paper #342 (Mathematics as Structure)  
 **Builds on:** Paper #342 (Periodic Table of Mathematics, Mycelial Octopus),  
 Paper #331 (URB Manifesto), BOK_ORCH_OR_GILE_MATRIX_SYNTHESIS.md,  
-Paper #330 (Information Is All There Is), Tralse-Myrion Logic, GILE Framework  
+Paper #330 (Information Is All There Is), TI Logic, GILE Framework  
 
 ---
 

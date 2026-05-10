@@ -537,7 +537,7 @@ Next video: why binary AI cannot reach genuine Tralse-level reasoning — and wh
 
 ## VIDEO 7: Why GPT Can't Do What You Think It Does
 **Target length:** 7 minutes  
-**Hook line:** "Binary AI can approximate Tralse-Myrion Logic. But approximation has a ceiling — and we're approaching it."
+**Hook line:** "Binary AI can approximate TI Logic. But approximation has a ceiling — and we're approaching it."
 
 ---
 

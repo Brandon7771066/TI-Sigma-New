@@ -302,7 +302,7 @@ This is why:
 - AI is not "different-domain CS" (that would be horizontal only)  
 - AI is CS at higher φ — simultaneously more powerful AND more self-aware
 
-### 5.4 Tralse-Myrion Logic as the Differentiator
+### 5.4 TI Logic as the Differentiator
 
 The qualitative difference between CS and AI is precisely in how Tralse-Myrion resolution operates:
 

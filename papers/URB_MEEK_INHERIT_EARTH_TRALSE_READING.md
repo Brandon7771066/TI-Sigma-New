@@ -137,7 +137,7 @@ The combination — not either alone — is what produces the inheritance. Pure 
 
 ---
 
-## 8. Enigmas and Tralse-Myrion Logic
+## 8. Enigmas and TI Logic
 
 The broader methodological point: enigmatic statements — statements that appear paradoxical, absurd, or self-contradictory at the literal level — are consistently found, upon tralse analysis, to be encoding sophisticated structural observations that cannot be expressed in binary language.
 
@@ -148,13 +148,13 @@ In each case:
 - The binary interpretation (pick one horn of the paradox) loses the insight
 - The tralse interpretation recovers the full meaning: *both poles are simultaneously true in a specific structural relationship*
 
-**Tralse-Myrion Logic is the key to understanding enigmas** — not because it explains them away, but because it provides the framework for holding both poles simultaneously without being forced to resolve the paradox prematurely. The enigma is not a failure of communication. It is the most accurate possible statement about a tralse reality.
+**TI Logic is the key to understanding enigmas** — not because it explains them away, but because it provides the framework for holding both poles simultaneously without being forced to resolve the paradox prematurely. The enigma is not a failure of communication. It is the most accurate possible statement about a tralse reality.
 
 ---
 
 ## Summary
 
-"The meek shall inherit the earth" encodes a tralse observation about the personality structure of enlightened individuals: approximately 75% meek, 25% fiery, in a coherent integration that neither collapses into passivity nor burns out into aggression. This personality type produces "earth-inheriting" outcomes through the specific combination: meekness enables sustained engagement; fire provides direction and world-changing force. Enlightened people are "relatively bipolar" not as a pathology but as the expected consequence of wide emotional dynamic range, intrinsic tool mastery of emotions, and the refusal to maintain the artificially compressed emotional baseline of ordinary social performance. Tralse-Myrion Logic is the framework that allows enigmatic statements to be understood in their full meaning, rather than collapsed into one half of a false binary.
+"The meek shall inherit the earth" encodes a tralse observation about the personality structure of enlightened individuals: approximately 75% meek, 25% fiery, in a coherent integration that neither collapses into passivity nor burns out into aggression. This personality type produces "earth-inheriting" outcomes through the specific combination: meekness enables sustained engagement; fire provides direction and world-changing force. Enlightened people are "relatively bipolar" not as a pathology but as the expected consequence of wide emotional dynamic range, intrinsic tool mastery of emotions, and the refusal to maintain the artificially compressed emotional baseline of ordinary social performance. TI Logic is the framework that allows enigmatic statements to be understood in their full meaning, rather than collapsed into one half of a false binary.
 
 *Paper #357 complete.*
 *The meek who inherit the earth carry a fire invisible to all but the peripheral observer.*
