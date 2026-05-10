@@ -1,0 +1,26 @@
+{
+  "000003": {
+    "size": 4658016531,
+    "path": "sub-YutaMouse41/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+    "asset_id": "70aaf3be-9f95-40af-8abc-a8316cbe50ca",
+    "version_pinned": "0.210812.1448",
+    "version_immutability_note": "asset_id 70aaf3be-9f95-40af-8abc-a8316cbe50ca is content-addressed and immutable. Pinned version: 0.210812.1448 (published)",
+    "version": "0.210812.1448"
+  },
+  "000053": {
+    "size": 40257605991,
+    "path": "sub-npI1/sub-npI1_ses-20190413_behavior+ecephys.nwb",
+    "asset_id": "22f70021-de36-44c4-8f29-4998b9ff1123",
+    "version_pinned": "0.210819.0345",
+    "version_immutability_note": "asset_id 22f70021-de36-44c4-8f29-4998b9ff1123 is content-addressed and immutable. Pinned version: 0.210819.0345 (published)",
+    "version": "0.210819.0345"
+  },
+  "000114": {
+    "size": 9560728,
+    "path": "sub-ROV45/sub-ROV45_ses-Day 1-obs_ophys.nwb",
+    "asset_id": "5542077b-2813-4ed3-8066-23dd39987cbf",
+    "version": "0.230602.1643",
+    "version_pinned": "0.230602.1643",
+    "version_immutability_note": "asset_id 5542077b-2813-4ed3-8066-23dd39987cbf is content-addressed and immutable. Pinned version: 0.230602.1643 (published)"
+  }
+}

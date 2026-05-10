@@ -1,0 +1,109 @@
+{
+  "seed": 27182818,
+  "prereg": "u27_v2_prereg.json",
+  "per_dandiset": {
+    "000003": {
+      "dandiset": "000003",
+      "selected_path": "sub-YutaMouse41/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+      "size_bytes": 4658016531,
+      "s3_url_resolved": true,
+      "dataset_path": "processing/ecephys/LFP/LFP/data",
+      "dataset_shape": [
+        21312875,
+        64
+      ],
+      "time_axis": 0,
+      "channels_source": "first_6_channels",
+      "channels_used_shape": [
+        10000,
+        6
+      ],
+      "channels_after_dropping_constant": 6,
+      "n_pairs_used": 15,
+      "U_scores": [
+        0.9876930412505923,
+        0.9007733462246676,
+        0.9614674792567627,
+        0.8537414640200827,
+        0.9331762488928788,
+        0.9272111867625581,
+        0.9765669884902376,
+        0.8848044892127839,
+        0.9554367417257389,
+        0.9683913412791245,
+        0.9760250816122329,
+        0.988468721352442,
+        0.9268410662091456,
+        0.9890733581874914,
+        0.9530503847416553
+      ],
+      "LCC_above_C_scores": [
+        0.999499048191564,
+        0.8172527802825368,
+        0.9676385131750326,
+        0.7240757439134355,
+        0.9017132551848512,
+        0.8819757539324717,
+        0.9976956216811943,
+        0.7765754934375313,
+        0.9626289950906722,
+        0.9648331830477908,
+        0.9807634505560565,
+        0.9922853421500851,
+        0.8571285442340447,
+        0.9983969542130047,
+        0.9134355275022543
+      ],
+      "pearson_r": 0.9880041283574752,
+      "pearson_p": 6.231322240940666e-12,
+      "verdict": "CONFIRM",
+      "elapsed_sec": 35.33
+    },
+    "000114": {
+      "dandiset": "000114",
+      "selected_path": "sub-ROV45/sub-ROV45_ses-Day 1-obs_ophys.nwb",
+      "size_bytes": 9560728,
+      "s3_url_resolved": true,
+      "dataset_path": "acquisition/RoiResponseSeries/data",
+      "dataset_shape": [
+        777472
+      ],
+      "time_axis": 0,
+      "channels_source": "1D_only_no_independent_channels",
+      "verdict": "INELIGIBLE",
+      "ineligibility_reason": "NWB session contains no 2D channel x time array; 1D-only data cannot test cross-channel coupling per u27-v2."
+    },
+    "000053": {
+      "dandiset": "000053",
+      "selected_path": "sub-npI1/sub-npI1_ses-20190413_behavior+ecephys.nwb",
+      "size_bytes": 40257605991,
+      "s3_url_resolved": true,
+      "dataset_path": "acquisition/ElectricalSeries/data",
+      "dataset_shape": [
+        141969007,
+        384
+      ],
+      "time_axis": 0,
+      "channels_source": "first_6_channels",
+      "channels_used_shape": [
+        10000,
+        6
+      ],
+      "channels_after_dropping_constant": 6,
+      "n_pairs_used": 15,
+      "pearson_r": 0.0925316653697581,
+      "verdict": "REJECT",
+      "elapsed_sec": 298.86,
+      "_provenance_note": "Re-execution of 000053 was attempted multiple times in Pass-32 finalization but each background launch (nohup, setsid, foreground orphan) was terminated by the Replit shell sandbox before the ~5min stream completed. The values above are INJECTED from the original 2026-05-10 21:46 first-run results.json (commit-tracked in git history). The patch applied between runs only added an INELIGIBLE branch for 1D-only datasets; the 2D code path that 000053 traverses is byte-identical to the first-run code path, the asset_id is content-addressed and immutable, the subset (first 10k samples * first 6 channels) is exact, and the runner is deterministically seeded (27182818). A future re-run with the same patched runner.py is expected to produce identical numbers; verification is deferred to Pass-33 r32-D (full-session re-run on 000003 + 000053 verification)."
+    }
+  },
+  "aggregate_verdict": "MIXED",
+  "verdicts_summary": {
+    "CONFIRM": 1,
+    "REJECT": 1,
+    "PARTIAL": 0,
+    "INELIGIBLE": 1,
+    "OTHER": 0,
+    "n_eligible": 2
+  }
+}

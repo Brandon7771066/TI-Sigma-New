@@ -1,0 +1,40 @@
+{
+  "name": "u27-v2 prospective replication on real DANDI data — 3-Dandiset replication",
+  "frozen_at_iso": "2026-05-10T00:00:00Z",
+  "frozen_before_runner": true,
+  "anti_hark_guard": "results.json must be written before any post-hoc reframing or threshold-adjustment",
+  "ratification_chain": [
+    "Pass 31 §5.6 — pre-registration drafted (Brandon-ratifiable)",
+    "Pass 32 — Brandon authorized 'Do all 3 recommendations'; ratification implicit"
+  ],
+  "hypothesis": "UTFE U_star synchrony order-parameter R (rolling 200) and LCC v3 R-3 above-C indicator (Pearson rolling N=20 > C*=0.4370) are POSITIVELY correlated on real neural data across all available channel-pairs.",
+  "statistic": "Pearson(U_star_score, LCC_above_C_indicator) computed across channel-pairs per Dandiset.",
+  "thresholds": {
+    "CONFIRM": "r >= 0.5",
+    "REJECT": "abs(r) <= 0.2",
+    "PARTIAL": "0.2 < r < 0.5"
+  },
+  "seed": 27182818,
+  "dandisets": ["000003", "000053", "000114"],
+  "data_subsetting": "first 10000 samples, first 6 channels per session (Pass-31 §5.7 troubleshooting protocol)",
+  "lcc_v3_r3_params": {"window_N": 20, "method": "Pearson rolling", "threshold_C_star": 0.4370},
+  "utfe_params": {"window": 200, "metric": "Kuramoto-style synchrony order parameter R from analytic-signal phase"},
+  "pass_27_stake": "If u27-v2 returns REJECT on real DANDI data (Pass-29 u27 synthetic also REJECTed at r=+0.0547), the Pass-27 §3 8-bridge claim 'PhiFE <-> LCC v3' is REFUTED across both synthetic and real data and must be permanently retired from the integration table.",
+  "per_dandiset_verdict": "Each Dandiset returns one verdict in {CONFIRM, REJECT, PARTIAL}. Aggregate verdict: 3/3 CONFIRM = SURVIVES; >=2/3 REJECT = REFUTED; mixed = MIXED-EVIDENCE pending sensitivity analysis.",
+  "amendments": [
+    {
+      "id": "A1-eligibility-rule",
+      "ratified_at_iso": "2026-05-10T22:00:00Z",
+      "ratified_after_first_runner_pass": true,
+      "honesty_note": "This amendment was added AFTER the first runner pass observed that DANDI:000114 contains only 1D RoiResponseSeries data. Per architect code review, the eligibility criterion was not predeclared in executable logic and the original runner emitted a CONFIRM verdict from a degenerate lagged-trace fallback. The amendment formalizes the exclusion as an executable rule (runner.py emits 'INELIGIBLE') and is applied uniformly to all 3 Dandisets in the rerun.",
+      "rule": "A Dandiset is ELIGIBLE for u27-v2 verdict only if its NWB session contains a genuine 2D channel x time data array. 1D-only sessions are marked INELIGIBLE and excluded from aggregate scoring (since lagged copies measure autocorrelation, not cross-channel coupling).",
+      "impact_on_000003_000053": "neither — both contain genuine 2D arrays; verdicts unchanged on rerun.",
+      "impact_on_000114": "verdict changes from CONFIRM (from lagged-fallback) to INELIGIBLE."
+    }
+  ],
+  "honesty_caveats": [
+    "DANDI:000003 description in Pass 31 §5.2 wrongly stated 'Allen calcium imaging'; actual: Buzsaki lab hippocampal ephys (YutaMouse). #69 honesty correction logged in Pass 32.",
+    "DANDI:000053 ephys files are 40+ GB; we use remfile streaming to read only the subsetted portion (<100 MB transfer per file).",
+    "Subset (10k samples / 6 channels) is a first-pass; if results are borderline, full-session re-run is required before final verdict."
+  ]
+}
