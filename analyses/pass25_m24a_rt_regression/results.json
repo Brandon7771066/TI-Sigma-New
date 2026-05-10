@@ -1,0 +1,39 @@
+{
+  "m24a_BOK_Crystal_centralization": {
+    "N": 57,
+    "edges": 110,
+    "d_max": 6,
+    "d_mean": 3.8596491228070176,
+    "C_freeman_degree": 0.03961038961038961,
+    "C_freeman_eigenvector": 0.12855643976946743,
+    "hub_dominance_normalised": 0.009902597402774233,
+    "gini_degree": 0.046411483253588515,
+    "prediction_band_one_third": [
+      0.25,
+      0.42
+    ],
+    "prediction_band_two_thirds": [
+      0.58,
+      0.75
+    ]
+  },
+  "rt_vs_accuracy_regression_r20": {
+    "M": 200,
+    "K": 100,
+    "seed": 31415927,
+    "softmax_T": 0.5226318258940633,
+    "R_t_min": 0.08633239872897769,
+    "R_t_max": 0.10813535156832621,
+    "R_t_mean": 0.09636928989200352,
+    "per_map_auc_min": 0.6831463300607761,
+    "per_map_auc_max": 0.7575970079476391,
+    "per_map_auc_mean": 0.7194933380084153,
+    "pearson_r": 0.08033691289822188,
+    "permutation_p_two_sided": 0.4254,
+    "permutation_n": 10000,
+    "permutation_null_mean": -0.0007996102687075986,
+    "permutation_null_std": 0.0996789326821792,
+    "decision": "TREND-POSITIVE BUT NOT SIGNIFICANT",
+    "note": "POST-HOC on existing r20 K=100 mappings. Pre-registered fresh-corpus replication filed as g25."
+  }
+}

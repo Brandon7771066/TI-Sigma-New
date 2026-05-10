@@ -1,0 +1,54 @@
+{
+  "study_id": "r25_composite_crystal_penrose_lcc_2026-05-10",
+  "filed_by": "TI Sigma DPES agent on Brandon Emerick directive (Pass 25)",
+  "filed_before_run": true,
+  "background_paper": "papers/PASS_25_M24A_CENTRALIZATION_RT_REGRESSION_TWA_FHS_TJ_CONSCIOUSNESS_TRIM_OPTIONS_QUANTUM_PSYCH_2026-05-10.md §5",
+  "predecessor_studies": [
+    "analyses/tsc_h4_sat_r20_replication/ (r20: averaged_energy_auc_inverted = 0.7318, bare H_TSC, π-derived seed)",
+    "Pass-24 §5 four-way conjecture: BOK Crystal × Penrose × Orch-OR × LCC composite, predicted AUC band [0.65, 0.78]"
+  ],
+  "hypothesis_under_test": "The composite augmented Hamiltonian H_composite = H_TSC + lambda_P * H_Penrose_pinning + lambda_LCC * diag(LCC_v3_rolling) produces averaged-energy AUC inside the predicted [0.65, 0.78] band on a fresh 3-SAT corpus. CONFIRM in-band; PARTIAL if R-A inverted-H4 survives but Penrose+LCC additivity is null; DISCONFIRM otherwise.",
+  "design": {
+    "instance_seed": 27182818,
+    "instance_seed_rationale": "e-derived; deliberately distinct from r20's pi-derived seed=31415927 to guarantee zero instance overlap.",
+    "n_instances": 300,
+    "min_vars": 3,
+    "max_vars": 5,
+    "clause_var_ratio_min": 3.0,
+    "clause_var_ratio_max": 7.0,
+    "mappings_per_instance": 100,
+    "lambda_P": 0.5,
+    "lambda_LCC": 0.3,
+    "lambda_rationale": "Both fixed BEFORE any data collection per anti-HARK; no tuning permitted post-hoc.",
+    "mapping_seed_rationale": "Independent per-(instance, k) seed of form (instance_seed * 10007) + (i * 31337) + k, identical recipe to r20.",
+    "scoring": "averaged_energy_auc_inverted as primary; per-mapping AUC distribution + per-mapping R_t logged simultaneously (also discharges Pass-25 g25)."
+  },
+  "pre_registered_decision_rules": {
+    "primary_metric": "averaged_energy_auc_inverted",
+    "definition": "1 - AUC['lower-E ⇒ SAT'] computed on per-instance mean H_composite-energy across K=100 mappings.",
+    "rules": {
+      "CONFIRM_composite": "0.65 <= AUC <= 0.78 → Pass-24 §5 composite prediction CONFIRMED on this corpus; the four-way fit BOK + Penrose + Orch-OR + LCC is empirically supported.",
+      "PARTIAL_R_A_only": "0.55 <= AUC < 0.65 OR 0.78 < AUC <= 0.85 → R-A inverted-H4 survives on H_composite but composite prediction itself does not distinguish from bare H_TSC (Penrose + LCC additivity is null).",
+      "DISCONFIRM": "AUC < 0.55 OR AUC > 0.85 → composite prediction REJECTED; either R-A fails on H_composite (low) or composite over-shoots (high)."
+    },
+    "secondary_metrics": [
+      "per_mapping_auc_inverted_mean ± std",
+      "per_mapping_R_t_mean ± std",
+      "Pearson r(per_map_R_t, per_map_auc_inverted) with permutation p (n=10000)",
+      "delta_vs_r20: (this AUC) - 0.7318 (positive means composite outperforms bare H_TSC)"
+    ]
+  },
+  "anti_hark_safeguards": [
+    "Decision thresholds frozen in this JSON BEFORE the runner is executed.",
+    "lambda_P and lambda_LCC frozen at 0.5 and 0.3; no tuning permitted post-hoc.",
+    "No re-runs with alternative seeds permitted. If the seed produces a degenerate corpus (n_sat < 30 or n_unsat < 30), the result is reported AS-IS as a corpus-quality failure.",
+    "The decision rule is deterministic and tri-state (CONFIRM_composite / PARTIAL_R_A_only / DISCONFIRM) on the primary metric ONLY. Secondary metrics are reported but do NOT trigger a decision flip.",
+    "If CONFIRM, the result still requires 3rd-party / 3rd-corpus replication before being claimed beyond TI-Sigma-internal confirmation."
+  ],
+  "expected_outcome_under_composite_strong": "averaged_energy_auc_inverted in [0.72, 0.78] (above r20 baseline 0.7318) → CONFIRM verdict.",
+  "expected_outcome_under_R_A_only": "averaged_energy_auc_inverted in [0.55, 0.65) → PARTIAL verdict; Penrose + LCC are within-noise of bare Hamiltonian.",
+  "expected_outcome_under_pure_artifact": "averaged_energy_auc_inverted ~ 0.50 → DISCONFIRM verdict.",
+  "filed_at_utc": "2026-05-10",
+  "run_trigger": "Brandon ratification of either g25-MATRIX-V2 (Pass-25 §4.3) OR a separate explicit go-ahead for r25-COMPOSITE.",
+  "next_step_after_run": "Append observed value + verdict to results.json; cite this pre-registration JSON in the Pass-26 paper §1 verbatim."
+}
