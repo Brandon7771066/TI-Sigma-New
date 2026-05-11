@@ -1,0 +1,1513 @@
+{
+  "pass": 47,
+  "test_id": "p47a_t45_3_margin_retests",
+  "started_at": "2026-05-11T20:56:01Z",
+  "finished_at": "2026-05-11T20:56:26Z",
+  "runner_sha256": "98d153e092def734c12b6cbab89dde63b27bb5d34a673ffc757fa2ae15afd9d6",
+  "raters": [
+    "gpt_4o_mini",
+    "claude_sonnet_4_5",
+    "claude_haiku_4_5"
+  ],
+  "criteria": [
+    "network_position",
+    "originality_output",
+    "mentorship_density",
+    "cross_domain_fluency",
+    "self_direction",
+    "blinded_rater_central_label"
+  ],
+  "context": "T45-3 v2 calibration of original d=8.92 extreme-contrast result (Pass-47 \u00a73)",
+  "contrasts": {
+    "moderate_margin": {
+      "gm_description": "Founders of intellectual schools/frameworks (less iconic than T45-3-v1 GM)",
+      "control_description": "Prolific public intellectuals who synthesize but did not found a school",
+      "gm_roster": [
+        "Karl Popper",
+        "Thomas Kuhn",
+        "Jane Jacobs",
+        "Hannah Arendt",
+        "Buckminster Fuller",
+        "John Rawls",
+        "Claude Shannon",
+        "Stuart Kauffman",
+        "Stewart Brand",
+        "Donna Haraway"
+      ],
+      "control_roster": [
+        "Steven Pinker",
+        "Malcolm Gladwell",
+        "Yuval Noah Harari",
+        "Niall Ferguson",
+        "Jared Diamond",
+        "Mary Beard",
+        "Bill Bryson",
+        "Michael Lewis",
+        "Walter Isaacson",
+        "Sam Harris"
+      ],
+      "gm_mean_sum": 37.43333333333334,
+      "gm_std": 0.9169191571456784,
+      "ctrl_mean_sum": 27.066666666666663,
+      "ctrl_std": 3.420345805923543,
+      "cohens_d": 4.140129401130806,
+      "welch_t": 9.257610776573978,
+      "welch_p": 2.611272230703924e-06,
+      "verdict": "CONFIRM",
+      "per_individual": {
+        "Karl Popper": {
+          "per_criterion_mean": [
+            6.666666666666667,
+            7.0,
+            5.0,
+            5.666666666666667,
+            6.0,
+            6.666666666666667
+          ],
+          "sum": 37.0
+        },
+        "Thomas Kuhn": {
+          "per_criterion_mean": [
+            7.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "sum": 38.0
+        },
+        "Jane Jacobs": {
+          "per_criterion_mean": [
+            6.666666666666667,
+            7.0,
+            3.6666666666666665,
+            6.0,
+            6.666666666666667,
+            6.333333333333333
+          ],
+          "sum": 36.333333333333336
+        },
+        "Hannah Arendt": {
+          "per_criterion_mean": [
+            6.666666666666667,
+            7.0,
+            4.333333333333333,
+            6.0,
+            6.333333333333333,
+            6.666666666666667
+          ],
+          "sum": 37.0
+        },
+        "Buckminster Fuller": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            5.0,
+            6.666666666666667,
+            7.0,
+            6.333333333333333
+          ],
+          "sum": 38.333333333333336
+        },
+        "John Rawls": {
+          "per_criterion_mean": [
+            7.0,
+            7.0,
+            6.0,
+            5.333333333333333,
+            5.333333333333333,
+            6.666666666666667
+          ],
+          "sum": 37.33333333333333
+        },
+        "Claude Shannon": {
+          "per_criterion_mean": [
+            7.0,
+            7.0,
+            4.333333333333333,
+            6.666666666666667,
+            6.0,
+            6.666666666666667
+          ],
+          "sum": 37.666666666666664
+        },
+        "Stuart Kauffman": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            4.666666666666667,
+            6.666666666666667,
+            6.333333333333333,
+            5.666666666666667
+          ],
+          "sum": 36.666666666666664
+        },
+        "Stewart Brand": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            6.333333333333333,
+            4.666666666666667,
+            6.666666666666667,
+            6.666666666666667,
+            6.0
+          ],
+          "sum": 36.66666666666667
+        },
+        "Donna Haraway": {
+          "per_criterion_mean": [
+            7.0,
+            7.0,
+            5.666666666666667,
+            6.666666666666667,
+            6.333333333333333,
+            6.666666666666667
+          ],
+          "sum": 39.333333333333336
+        },
+        "Steven Pinker": {
+          "per_criterion_mean": [
+            5.0,
+            4.333333333333333,
+            3.6666666666666665,
+            5.666666666666667,
+            5.333333333333333,
+            5.0
+          ],
+          "sum": 28.999999999999996
+        },
+        "Malcolm Gladwell": {
+          "per_criterion_mean": [
+            4.666666666666667,
+            4.666666666666667,
+            2.3333333333333335,
+            5.0,
+            5.666666666666667,
+            4.666666666666667
+          ],
+          "sum": 27.000000000000004
+        },
+        "Yuval Noah Harari": {
+          "per_criterion_mean": [
+            5.666666666666667,
+            5.0,
+            3.0,
+            5.666666666666667,
+            5.666666666666667,
+            5.666666666666667
+          ],
+          "sum": 30.66666666666667
+        },
+        "Niall Ferguson": {
+          "per_criterion_mean": [
+            4.666666666666667,
+            4.666666666666667,
+            3.6666666666666665,
+            5.0,
+            5.666666666666667,
+            4.333333333333333
+          ],
+          "sum": 28.0
+        },
+        "Jared Diamond": {
+          "per_criterion_mean": [
+            5.333333333333333,
+            5.666666666666667,
+            3.3333333333333335,
+            6.0,
+            5.333333333333333,
+            5.333333333333333
+          ],
+          "sum": 31.0
+        },
+        "Mary Beard": {
+          "per_criterion_mean": [
+            5.0,
+            5.333333333333333,
+            4.333333333333333,
+            5.333333333333333,
+            5.666666666666667,
+            4.666666666666667
+          ],
+          "sum": 30.333333333333332
+        },
+        "Bill Bryson": {
+          "per_criterion_mean": [
+            2.6666666666666665,
+            3.6666666666666665,
+            1.6666666666666667,
+            4.666666666666667,
+            5.333333333333333,
+            3.0
+          ],
+          "sum": 21.0
+        },
+        "Michael Lewis": {
+          "per_criterion_mean": [
+            3.6666666666666665,
+            5.0,
+            2.6666666666666665,
+            4.333333333333333,
+            5.666666666666667,
+            3.6666666666666665
+          ],
+          "sum": 25.0
+        },
+        "Walter Isaacson": {
+          "per_criterion_mean": [
+            3.6666666666666665,
+            3.3333333333333335,
+            2.6666666666666665,
+            4.666666666666667,
+            5.333333333333333,
+            3.0
+          ],
+          "sum": 22.666666666666664
+        },
+        "Sam Harris": {
+          "per_criterion_mean": [
+            4.666666666666667,
+            4.333333333333333,
+            2.6666666666666665,
+            4.333333333333333,
+            6.0,
+            4.0
+          ],
+          "sum": 26.0
+        }
+      }
+    },
+    "near_margin": {
+      "gm_description": "Creative-domain network-central figures (founders of movements/scenes/schools)",
+      "control_description": "Creative-domain solo masters (singular outputs, no school-of-thought spawn)",
+      "gm_roster": [
+        "Brian Eno",
+        "John Cage",
+        "Andy Warhol",
+        "Yoko Ono",
+        "Laurie Anderson",
+        "Pauline Oliveros",
+        "Sun Ra",
+        "George Clinton",
+        "Hilma af Klint",
+        "Yvonne Rainer"
+      ],
+      "control_roster": [
+        "Bob Dylan",
+        "Toni Morrison",
+        "Adele",
+        "Beyonc\u00e9",
+        "Stephen King",
+        "Hayao Miyazaki",
+        "Frida Kahlo",
+        "Hemingway",
+        "Mozart",
+        "Joni Mitchell"
+      ],
+      "gm_mean_sum": 35.43333333333334,
+      "gm_std": 3.807238070884857,
+      "ctrl_mean_sum": 30.566666666666663,
+      "ctrl_std": 5.769331433119889,
+      "cohens_d": 0.9956860076386808,
+      "welch_t": 2.226421597325465,
+      "welch_p": 0.04110940210911811,
+      "verdict": "CONFIRM",
+      "per_individual": {
+        "Brian Eno": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            4.666666666666667,
+            6.333333333333333,
+            7.0,
+            6.0
+          ],
+          "sum": 37.33333333333333
+        },
+        "John Cage": {
+          "per_criterion_mean": [
+            7.0,
+            7.0,
+            5.333333333333333,
+            6.666666666666667,
+            7.0,
+            6.666666666666667
+          ],
+          "sum": 39.666666666666664
+        },
+        "Andy Warhol": {
+          "per_criterion_mean": [
+            6.666666666666667,
+            6.666666666666667,
+            5.0,
+            6.0,
+            6.666666666666667,
+            7.0
+          ],
+          "sum": 38.0
+        },
+        "Yoko Ono": {
+          "per_criterion_mean": [
+            5.333333333333333,
+            6.333333333333333,
+            3.6666666666666665,
+            5.666666666666667,
+            6.666666666666667,
+            5.0
+          ],
+          "sum": 32.66666666666667
+        },
+        "Laurie Anderson": {
+          "per_criterion_mean": [
+            5.333333333333333,
+            6.0,
+            3.6666666666666665,
+            6.0,
+            6.666666666666667,
+            5.0
+          ],
+          "sum": 32.66666666666667
+        },
+        "Pauline Oliveros": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            6.0,
+            5.666666666666667,
+            6.666666666666667,
+            5.333333333333333
+          ],
+          "sum": 37.0
+        },
+        "Sun Ra": {
+          "per_criterion_mean": [
+            6.0,
+            7.0,
+            5.0,
+            6.0,
+            7.0,
+            5.333333333333333
+          ],
+          "sum": 36.333333333333336
+        },
+        "George Clinton": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            5.666666666666667,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "sum": 38.0
+        },
+        "Hilma af Klint": {
+          "per_criterion_mean": [
+            3.3333333333333335,
+            6.666666666666667,
+            2.0,
+            4.666666666666667,
+            6.666666666666667,
+            3.3333333333333335
+          ],
+          "sum": 26.666666666666668
+        },
+        "Yvonne Rainer": {
+          "per_criterion_mean": [
+            5.666666666666667,
+            7.0,
+            5.333333333333333,
+            5.666666666666667,
+            6.666666666666667,
+            5.666666666666667
+          ],
+          "sum": 36.0
+        },
+        "Bob Dylan": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            6.666666666666667,
+            3.3333333333333335,
+            5.333333333333333,
+            6.666666666666667,
+            6.666666666666667
+          ],
+          "sum": 35.0
+        },
+        "Toni Morrison": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            5.333333333333333,
+            5.666666666666667,
+            6.333333333333333,
+            6.666666666666667
+          ],
+          "sum": 37.33333333333333
+        },
+        "Adele": {
+          "per_criterion_mean": [
+            3.0,
+            3.6666666666666665,
+            2.0,
+            1.6666666666666667,
+            4.666666666666667,
+            3.0
+          ],
+          "sum": 18.0
+        },
+        "Beyonc\u00e9": {
+          "per_criterion_mean": [
+            5.0,
+            5.333333333333333,
+            3.3333333333333335,
+            4.0,
+            5.666666666666667,
+            4.666666666666667
+          ],
+          "sum": 28.0
+        },
+        "Stephen King": {
+          "per_criterion_mean": [
+            4.333333333333333,
+            5.0,
+            3.0,
+            3.0,
+            5.666666666666667,
+            4.333333333333333
+          ],
+          "sum": 25.333333333333332
+        },
+        "Hayao Miyazaki": {
+          "per_criterion_mean": [
+            6.333333333333333,
+            7.0,
+            5.0,
+            4.666666666666667,
+            6.666666666666667,
+            6.0
+          ],
+          "sum": 35.66666666666667
+        },
+        "Frida Kahlo": {
+          "per_criterion_mean": [
+            5.0,
+            6.333333333333333,
+            3.0,
+            3.6666666666666665,
+            6.0,
+            5.0
+          ],
+          "sum": 29.0
+        },
+        "Hemingway": {
+          "per_criterion_mean": [
+            6.0,
+            6.333333333333333,
+            3.6666666666666665,
+            4.0,
+            6.666666666666667,
+            6.333333333333333
+          ],
+          "sum": 33.0
+        },
+        "Mozart": {
+          "per_criterion_mean": [
+            6.666666666666667,
+            6.666666666666667,
+            3.6666666666666665,
+            3.6666666666666665,
+            5.666666666666667,
+            7.0
+          ],
+          "sum": 33.333333333333336
+        },
+        "Joni Mitchell": {
+          "per_criterion_mean": [
+            5.666666666666667,
+            6.0,
+            3.3333333333333335,
+            4.0,
+            6.333333333333333,
+            5.666666666666667
+          ],
+          "sum": 31.0
+        }
+      }
+    }
+  },
+  "cross_contrast_read": "DISCRIMINANT_VALIDITY_AT_ALL_MARGINS",
+  "thresholds": {
+    "CONFIRM": "d >= 0.8",
+    "KILL": "d < 0.4",
+    "INDETERMINATE": "0.4 <= d < 0.8"
+  },
+  "raw": {
+    "gpt_4o_mini": {
+      "Thomas Kuhn": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Jane Jacobs": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Buckminster Fuller": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Hannah Arendt": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Karl Popper": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Claude Shannon": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "John Rawls": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Stewart Brand": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Donna Haraway": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Stuart Kauffman": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Steven Pinker": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Malcolm Gladwell": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Yuval Noah Harari": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Jared Diamond": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Mary Beard": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Bill Bryson": {
+        "network_position": 4,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 5
+      },
+      "Michael Lewis": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Walter Isaacson": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 5
+      },
+      "Sam Harris": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Brian Eno": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "John Cage": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Andy Warhol": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Yoko Ono": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Pauline Oliveros": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Sun Ra": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "George Clinton": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Hilma af Klint": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Yvonne Rainer": {
+        "network_position": 5,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Niall Ferguson": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Bob Dylan": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Toni Morrison": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Beyonc\u00e9": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Laurie Anderson": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Adele": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Hayao Miyazaki": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Stephen King": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Frida Kahlo": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Hemingway": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Mozart": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Joni Mitchell": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      }
+    },
+    "claude_sonnet_4_5": {
+      "Thomas Kuhn": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Karl Popper": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Jane Jacobs": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "John Rawls": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 7
+      },
+      "Claude Shannon": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Buckminster Fuller": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Stuart Kauffman": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Hannah Arendt": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Stewart Brand": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Donna Haraway": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Steven Pinker": {
+        "network_position": 4,
+        "originality_output": 3,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 5,
+        "blinded_rater_central_label": 4
+      },
+      "Malcolm Gladwell": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 5,
+        "self_direction": 5,
+        "blinded_rater_central_label": 3
+      },
+      "Yuval Noah Harari": {
+        "network_position": 5,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 5
+      },
+      "Mary Beard": {
+        "network_position": 4,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 5,
+        "blinded_rater_central_label": 3
+      },
+      "Jared Diamond": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 5
+      },
+      "Niall Ferguson": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 5,
+        "blinded_rater_central_label": 3
+      },
+      "Bill Bryson": {
+        "network_position": 2,
+        "originality_output": 3,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 4,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Michael Lewis": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 5,
+        "blinded_rater_central_label": 3
+      },
+      "Walter Isaacson": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Sam Harris": {
+        "network_position": 3,
+        "originality_output": 3,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 3
+      },
+      "Brian Eno": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "John Cage": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Andy Warhol": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Yoko Ono": {
+        "network_position": 4,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 3
+      },
+      "Laurie Anderson": {
+        "network_position": 4,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 4
+      },
+      "Pauline Oliveros": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Sun Ra": {
+        "network_position": 5,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 4
+      },
+      "George Clinton": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Hilma af Klint": {
+        "network_position": 2,
+        "originality_output": 7,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 2
+      },
+      "Yvonne Rainer": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Bob Dylan": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Beyonc\u00e9": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Adele": {
+        "network_position": 2,
+        "originality_output": 3,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 1,
+        "self_direction": 4,
+        "blinded_rater_central_label": 2
+      },
+      "Toni Morrison": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Stephen King": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 3
+      },
+      "Hemingway": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Hayao Miyazaki": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Frida Kahlo": {
+        "network_position": 3,
+        "originality_output": 6,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 4
+      },
+      "Joni Mitchell": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 4
+      },
+      "Mozart": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      }
+    },
+    "claude_haiku_4_5": {
+      "Karl Popper": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Thomas Kuhn": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Jane Jacobs": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Buckminster Fuller": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Claude Shannon": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "John Rawls": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Hannah Arendt": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Stuart Kauffman": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Stewart Brand": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Donna Haraway": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Steven Pinker": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Malcolm Gladwell": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Yuval Noah Harari": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Niall Ferguson": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 4
+      },
+      "Jared Diamond": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Mary Beard": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Bill Bryson": {
+        "network_position": 2,
+        "originality_output": 3,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 2
+      },
+      "Michael Lewis": {
+        "network_position": 3,
+        "originality_output": 5,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 3
+      },
+      "Sam Harris": {
+        "network_position": 5,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 4
+      },
+      "Walter Isaacson": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 2
+      },
+      "Brian Eno": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "John Cage": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Andy Warhol": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Laurie Anderson": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Yoko Ono": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Sun Ra": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "George Clinton": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Hilma af Klint": {
+        "network_position": 3,
+        "originality_output": 7,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 3
+      },
+      "Yvonne Rainer": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Bob Dylan": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Toni Morrison": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Adele": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 1,
+        "self_direction": 5,
+        "blinded_rater_central_label": 1
+      },
+      "Pauline Oliveros": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 5
+      },
+      "Beyonc\u00e9": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Stephen King": {
+        "network_position": 3,
+        "originality_output": 5,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 6,
+        "blinded_rater_central_label": 3
+      },
+      "Frida Kahlo": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Hayao Miyazaki": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 5,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      },
+      "Hemingway": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 3,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Mozart": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 2,
+        "self_direction": 5,
+        "blinded_rater_central_label": 7
+      },
+      "Joni Mitchell": {
+        "network_position": 5,
+        "originality_output": 6,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 4,
+        "self_direction": 7,
+        "blinded_rater_central_label": 6
+      }
+    }
+  }
+}
