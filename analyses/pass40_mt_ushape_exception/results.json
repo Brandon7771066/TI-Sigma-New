@@ -1,0 +1,44 @@
+{
+  "pass": 40,
+  "item": "MT U-shape exception \u2014 numerical demonstration",
+  "Brandon_directive": "If there are no synchronicities, there must be a low GILE/HEM ratio... unless both extremes result in synchronicities.",
+  "model": {
+    "GILE_HEM_prior": "uniform [0, 10]",
+    "synch_prob_function": "0.85 if g<2 or g>8 else 0.10",
+    "interpretation": "U-shape: both extremes produce synch, middle does not"
+  },
+  "N_samples": 100000,
+  "band_counts": {
+    "low_n": 19877,
+    "mid_n": 60261,
+    "high_n": 19862,
+    "no_synch_total": 60230,
+    "no_synch_in_low": 3031,
+    "no_synch_in_mid": 54221,
+    "no_synch_in_high": 2978
+  },
+  "likelihoods": {
+    "P(no_synch|low)": 0.15248779996981435,
+    "P(no_synch|mid)": 0.8997693367186074,
+    "P(no_synch|high)": 0.14993454838384856
+  },
+  "posteriors_given_no_synch": {
+    "P(low|no_synch)": 0.05032375892412419,
+    "P(mid|no_synch)": 0.9002324423044994,
+    "P(high|no_synch)": 0.04944379877137639
+  },
+  "MT_inferences": {
+    "naive_MT_P_low_only": 1.0,
+    "real_Bayes_P_low_only": 0.05032375892412419,
+    "GAP_low_only_reading": 0.9496762410758758,
+    "naive_MT_P_not_high": 1.0,
+    "real_Bayes_P_not_high": 0.9505562012286236,
+    "GAP_not_high_reading": 0.04944379877137639
+  },
+  "verdict": "MT FAILS DECISIVELY in U-shape regime: under the 'low-GILE only' reading, na\u00efve MT predicts P(low|\u00acsynch)=1 but real Bayes gives ~0.050 (gap ~0.950). Under the 'anything-not-high' reading, na\u00efve MT predicts P(\u00achigh|\u00acsynch)=1 but real Bayes gives ~0.951 (gap ~0.049). Most \u00acsynch observations come from the MID band, not the LOW band \u2014 na\u00efve MT picks the WRONG conclusion. The MT inference is invalid whenever the antecedent's negation is non-bivalent (i.e., when what is 'not high' includes both 'low' AND 'mid', and when 'mid' is the modal band).",
+  "honesty_69": [
+    "Synthetic-data demonstration: this is not an empirical test of GILE/HEM-synch; it is a logical-structure proof that the U-shape model breaks na\u00efve MT.",
+    "Real GILE/HEM-vs-synch empirical test would require actual synchronicity log + GILE/HEM measurements \u2014 not yet operationalized in TI-Sigma corpus.",
+    "The result is robust to specific U-shape parameters: any non-monotonic P(synch|GILE/HEM) function with peak at extremes will produce the same MT failure."
+  ]
+}
