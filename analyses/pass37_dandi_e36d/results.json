@@ -1,0 +1,54 @@
+{
+  "pass": 37,
+  "item": "e36-D",
+  "seed": 27182818,
+  "prereg_locked": true,
+  "scan_target": "stim + behavioral-report co-occurrence per Pass-35 \u00a73.1 LCC->P3b precedence pre-reg",
+  "per_dandiset": {
+    "000003": {
+      "dandiset": "000003",
+      "asset_path": "sub-YutaMouse41/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+      "stim_count": 69,
+      "report_count_raw_keyword_match": 5,
+      "verdict_raw_keyword": "ELIGIBLE_FOR_PASS_38_LCC_P3B",
+      "verdict_post_69_audit": "INELIGIBLE_NO_TRUE_BEHAVIORAL_REPORT",
+      "reason_post_69_audit": "Buzsaki rodent hippocampal LFP + behavioral states; 'behavior/states' substring matched but rodent-state-classification (sleep/wake/REM) is NOT a conscious-stimulus-report trigger per Pass-35 \u00a73.1. PulseStim_*V_*ms_* events are sensory/electrical-stim epochs without behavioral-report response. SECONDARY-EVIDENCE path only."
+    },
+    "000053": {
+      "dandiset": "000053",
+      "asset_path": "sub-npI1/sub-npI1_ses-20190413_behavior+ecephys.nwb",
+      "verdict": "INELIGIBLE_TIMEOUT",
+      "reason": "DANDI streaming timed out at 90s and 110s. 40GB asset; remfile+h5py.visititems walk did not complete within Pass-37 budget. Independent Pass-32 u27-v2 result on the same asset (r=+0.093 REJECT) confirms accessibility is feasible but slow; Pass-38 should pre-cache with longer timeout or sub-asset selection."
+    },
+    "000114": {
+      "dandiset": "000114",
+      "asset_path": "sub-ROV45/sub-ROV45_ses-Day 1-obs_ophys.nwb",
+      "stim_count": 3,
+      "report_count_raw_keyword_match": 4,
+      "verdict_raw_keyword": "ELIGIBLE_FOR_PASS_38_LCC_P3B",
+      "verdict_post_69_audit": "INELIGIBLE_NO_TRUE_BEHAVIORAL_REPORT",
+      "reason_post_69_audit": "Mayo rodent ophys session; 'response' substring matched RoiResponseSeries (calcium-imaging neural response, NOT behavioral report). Stim entries are template/presentation metadata containers, not stim-onset-locked epoch tables. No behavioral-report trigger present. SECONDARY-EVIDENCE path only."
+    }
+  },
+  "false_positive_audit_per_69": {
+    "raw_keyword_matcher_overcounted_report_in": [
+      "000003 (behavior/states != conscious-report)",
+      "000114 (RoiResponseSeries = neural-not-behavioral)"
+    ],
+    "true_behavioral_report_count": "0/3 Dandisets",
+    "lesson": "Keyword-substring matching for 'response' / 'behavior' is too permissive at the eligibility-gate. Pass-38 should use NWB-Schema-typed lookup (DynamicTable rows of trial-table with response_time/choice columns) instead of substring matching."
+  },
+  "aggregate_verdict": "MIXED: 2_AUDITED_INELIGIBLE + 1_TIMEOUT_UNRESOLVED",
+  "aggregate_reason": "Per architect Pass-37 review point (d), aggregate verdict separates (i) AUDITED-INELIGIBLE (000003 + 000114, both fail post-#69 schema-aware audit on 'no true behavioral-report trigger' criterion per Pass-35 \u00a73.1) from (ii) TIMEOUT-UNRESOLVED (000053, 40GB asset, scan did not complete in 110s budget; semantic-ineligibility status remains unknown). Original INELIGIBLE_PRIMARY_ALL_3 framing was overreach. e36-D-v2 OpenNeuro path remains the recommended primary-test path for Pass 38.",
+  "items_raised": [
+    "e36-D-v2: OpenNeuro human-EEG (ds002336 visual-oddball or ds003020) -> Pass 38 PRIMARY",
+    "e36-D-v3: 000003 + 000114 SECONDARY-EVIDENCE rodent-cross-species sensitivity check (Pass-39+)",
+    "e36-D-v4: 000053 retry with sub-asset Neuropixels-channel pre-selection + 5-min timeout (Pass 38)"
+  ],
+  "aggregate_verdict_provenance": {
+    "raw_runner_logic": "runner.py + scan_one.py implement permissive substring keyword matching (REPORT_KEYWORDS = lick/button/press/response/report/choice/vocaliz/blink/saccade/wheel/trial_outcome/behavior/states/feedback/reward). Under raw logic alone, 000003 returned ELIGIBLE (69 stim + 5 report) and 000114 returned ELIGIBLE (3 stim + 4 report).",
+    "post_hoc_69_audit": "Per architect Pass-37 review point (d), the raw keyword matches were manually-audited and downgraded for: (000003) 'behavior/states' substring matched rodent-state-classification (sleep/wake/REM) which is NOT a conscious-stimulus-report trigger; PulseStim_*V_*ms_* events are sensory/electrical-stim epochs without behavioral-report response. (000114) 'response' substring matched RoiResponseSeries (calcium-imaging neural response, NOT behavioral); stim entries are template/presentation metadata containers.",
+    "code_results_mismatch_acknowledged": true,
+    "remediation_raised": "e36-D-v5: implement NWB-Schema-typed lookup directly in runner.py (check for nwb.trials DynamicTable with response_time/choice columns; check for /processing/behavior/BehavioralEvents/ neurodata_type=BehavioralEpochs with non-zero choice/response columns) so that Pass-38+ runs are code-only-reproducible without manual-audit augmentation."
+  }
+}
