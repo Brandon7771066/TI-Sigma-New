@@ -85,7 +85,7 @@ Pass-29 C5 ratifies V₄ = C₂ × C₂ as the BOK Crystal symmetry group. Pass-
 **Pass-35 honest answer:** UNDETERMINED. With 6 independent generators in V₄³ and 8 Meijer dimensions, no clean injection or surjection holds out-of-the-box. Three possible reconciliations, each requiring formal work in Pass 36 (t35-A):
 
 1. **6+2 split:** 6 Meijer dimensions map to V₄³ generators; the remaining 2 (e.g., "amplitude" and "density") are non-V₄³ ESS-LAYER-3 quantities.
-2. **8 ↔ 12 involutions:** Meijer's 8 dimensions map onto a *subset* of V₄³'s 12 order-2 involutions, leaving 4 involutions absorbed by ESS info-topology.
+2. **8 ↔ subset of 63 involutions:** Meijer's 8 dimensions map onto a *subset* of V₄³'s 63 non-identity involutions; selection rule pending t35-A formal treatment. *(Pass-36 #69 correction: the original "12 involutions" wording was a count error — V₄³ has 63 non-identity involutions, since every non-identity element of V₄³ has order 2. See `PASS_36_T35_A_V4_CUBED_MEIJER_8D_FORMAL_MAPPING_2026-05-11.md` §2 for the rigorous derivation.)*
 3. **Reject the mapping:** Meijer-8D and V₄³ are independent structures; their co-canonization in the 14D model is conceptual, not algebraic.
 
 **Status:** SPECULATIVE pending t35-A formal treatment. The earlier "12 generators" framing has been retracted; the 8D ↔ V₄³ correspondence is now an open question, not a claimed result. Per URB-830 §6.3, this is symmetric — t35-A may CONFIRM (one of the 3 reconciliations holds) or REJECT (no clean mapping exists).
@@ -188,11 +188,15 @@ The original paper's MR Assessment (+2.0 TRUE) would, per URB-830, be re-stated 
 
 ## §8 — Items raised
 
-- **t35-A** — formal V₄³ ↔ Meijer-8D mapping; quantify whether the 12-generator V₄³ basis subsumes Meijer's 8 harmonic dimensions with 4-axis ESS overlap; Pass-36 candidate.
+- **t35-A** — formal V₄³ ↔ Meijer-8D mapping; quantify whether the 6-independent-generator V₄³ basis subsumes Meijer's 8 harmonic dimensions with HEM-D4/D5 absorbing the 2 extra; **DISCHARGED at Pass 36** in `PASS_36_T35_A_V4_CUBED_MEIJER_8D_FORMAL_MAPPING_2026-05-11.md` (Reconciliation A 6+2 default, B 8-of-63-involutions parallel, C independence REJECT outcome). *(Pass-36 #69 correction: original "12-generator" wording was a count error per architect Pass-35-review; corrected count is 6 independent generators, 64 elements, 63 non-identity involutions.)*
 - **t35-B** — rigorous Tozzi-Banach-Tarski treatment: AC role; finite-system interpretation; relation to Crystal 57-vertex Hermitian operator basis; Pass-36 candidate.
 - **t35-C** — once Pass-35 e34-A returns a P1 verdict, re-evaluate the LAYER 5.5 (GWT ignition) insertion empirically.
 - **t35-D** — Pass-36+ implementation of P2 (toroidal-topology-lesion correlation); requires open-access connectome-lesion dataset survey.
 - **t35-E** — Pass-36+ pre-registration of P3 (meditation harmonic decomposition test); requires existing-literature meta-analysis.
+
+## §10 — Pass-36 HEM-supersedes-ESS migration patch
+
+**Pass-36 (2026-05-11) ruling:** Brandon ratified that ESS (Existence-Symmetry-Structure 6D) is **superseded by HEM** (HEM Existence Matrix 6D, per `HEM_DIMENSIONAL_SYNTHESIS.md` §1.3). The 14D dimensional accounting is unchanged: 1D (Tozzi torus) + 6D (HEM, formerly ESS) + 8D (Meijer) − 1D (overlap) + 1D (CCC) = 14D. All ESS references in this Pass-35 paper are to be read as HEM with the ESS-Dᵢ → HEM-Dᵢ mapping per `PASS_36_HEM_SUPERSEDES_ESS_MIGRATION_NOTE_2026-05-11.md` §3. Body text preserved as historical record. Specifically: §3.4's "ESS-LAYER-3 absorption" → "HEM-LAYER-3 absorption" (HEM D4 + D5 are the natural absorption candidates, making the 6+2 split MORE natural, not less, per Pass-36 t35-A §6).
 
 ## §9 — One-line summary for replit.md
 

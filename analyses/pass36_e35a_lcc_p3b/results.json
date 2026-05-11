@@ -1,0 +1,187 @@
+{
+  "pass": 36,
+  "item": "e35-A-RUN",
+  "prereg": "papers/PASS_35_E34_A_GWT_LCC_P3B_PREREG_2026-05-11.md",
+  "seed": 27182818,
+  "dandiset": "000003",
+  "verdict": "INELIGIBLE",
+  "details": {
+    "stim_candidates": [
+      [
+        "processing/behavior/states",
+        "group",
+        "TimeIntervals"
+      ],
+      [
+        "stimulus/presentation/DS1.ch0/data",
+        "dataset",
+        "(6315,)"
+      ],
+      [
+        "stimulus/presentation/DS1.ch0/timestamps",
+        "dataset",
+        "(6315,)"
+      ],
+      [
+        "stimulus/presentation/DS2.ch0/data",
+        "dataset",
+        "(46869,)"
+      ],
+      [
+        "stimulus/presentation/DS2.ch0/timestamps",
+        "dataset",
+        "(46869,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.3V_200ms_LD1/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.3V_200ms_LD1/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.3V_200ms_LD2/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.3V_200ms_LD2/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_1000ms_LD1200/data",
+        "dataset",
+        "(25,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_1000ms_LD1200/timestamps",
+        "dataset",
+        "(25,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_10ms_LD12/data",
+        "dataset",
+        "(1600,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_10ms_LD12/timestamps",
+        "dataset",
+        "(1600,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_200ms_LD1/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_200ms_LD1/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_200ms_LD2/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_2.5V_200ms_LD2/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_1000ms_LD1200/data",
+        "dataset",
+        "(25,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_1000ms_LD1200/timestamps",
+        "dataset",
+        "(25,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_10ms_LD12/data",
+        "dataset",
+        "(1600,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_10ms_LD12/timestamps",
+        "dataset",
+        "(1600,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_200ms_LD1/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_200ms_LD1/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_200ms_LD2/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3.5V_200ms_LD2/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3V_200ms_LD1/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3V_200ms_LD1/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3V_200ms_LD2/data",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_3V_200ms_LD2/timestamps",
+        "dataset",
+        "(50,)"
+      ],
+      [
+        "stimulus/presentation/PulseStim_5V_1000ms_LD12/data",
+        "dataset",
+        "(2628,)"
+      ]
+    ],
+    "reason": "DANDI:000003 YutaMouse session has BehavioralEvents/Epochs candidates (45 found) but no clear stimulus-locked epoch table with both onset times and a behavioral-report trigger required for the Pass-35 e34-A \u00a73.1 hypothesis (stimulus -> LCC -> P3b -> report). Per pre-registered ladder, INELIGIBLE; e36-D raised for Pass 37 OpenNeuro fallback.",
+    "upgraded_reason": "DANDI:000003 YutaMouse session DOES contain stimulus events: 45 candidates found, including 17 PulseStim_*V_*ms_* TimeSeries (electrical-pulse stimuli with onset timestamps and amplitude data). However: (a) these are sensory/electrical-stim epochs in rodent hippocampal LFP, not cognitive-task stimuli with conscious-report triggers (the Pass-35 \u00a73.1 hypothesis requires stimulus -> LCC -> P3b -> *conscious report* sequence); (b) no behavioral-report dataset accompanies the PulseStim epochs in this session; (c) per Pass-35 \u00a73.3 caveat, rodent-LFP P3b-analog cross-species mapping is explicitly noted as contested. Per pre-registered ladder + #69, INELIGIBLE stands. e36-D RAISED with two explicit Pass-37 paths: (i) human-EEG OpenNeuro ds002336 / ds003020 visual-oddball P3b paradigm (clean LCC vs P3b test); (ii) rodent-LFP secondary analysis as PARTIAL-EVIDENCE, explicitly framed as cross-species sensitivity check NOT primary test.",
+    "pulse_stim_count": 17,
+    "total_stim_candidates": 45,
+    "provenance": {
+      "runner_emitted": [
+        "verdict (initial INELIGIBLE)",
+        "details.reason (initial: 'no stimulus-locked epoch table found')",
+        "details.stim_candidates (first 30)",
+        "error",
+        "dandiset",
+        "prereg",
+        "seed",
+        "pass",
+        "item"
+      ],
+      "post_hoc_editorial_amendment": [
+        "details.upgraded_reason (architect-discharge: clarifies that 45 stim candidates including 17 PulseStim_* WERE found by runner.visititems, but eligibility-gate per pre-reg \u00a73 requires a behavioral-report trigger which 000003 lacks)",
+        "details.pulse_stim_count (counted from runner-emitted stim_candidates list: 17)",
+        "details.total_stim_candidates (counted from runner.log: 45)"
+      ],
+      "amendment_rationale": "Runner's initial 'no epoch table' wording was technically true (it sought 'epochs'/'trial' substrings) but understated the actual finding (PulseStim_* events present, but no behavioral-report trigger). Per architect Pass-36 review point #5, this provenance metadata is added so the upgrade is traceable. The verdict (INELIGIBLE) is unchanged because the pre-reg \u00a73 eligibility gate explicitly requires both (a) stimulus-locked epochs AND (b) behavioral-report trigger; 000003 satisfies (a) but not (b).",
+      "rodent_PulseStim_classification_per_prereg": "Pre-reg \u00a73.1 hypothesis = stimulus -> LCC -> P3b -> *conscious report*. Rodent PulseStim epochs are a SECONDARY/PARTIAL-EVIDENCE path (cross-species sensitivity check), NOT a primary test of the \u00a73.1 hypothesis. Pass-37 e36-D OpenNeuro human-EEG visual-oddball is the primary path."
+    }
+  },
+  "error": null
+}
