@@ -86,7 +86,7 @@ args = "streamlit run hypercomputer_app.py --server.port 8000 --server.headless 
 client_secret = "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"
 client_id = "584975588599-ffdf519vi5hllcu45cov9h8dob6fn69r.apps.googleusercontent.com"
 "TI Sigma Upload" = "c9WBsIKnXLUmSWA3eHQzaLdx3YS7HygZgw75jheWExaWtFWln5BccQw4pIUf"
-IBMQ_Secret = "ibmcloud login -a https://cloud.ibm.com -u passcode -p ASsscEdma4"
+IBMQ_Secret = "kFFyMX3PVnwprXGgF2aQp6uGsh_jcGRN4azU0XfW4JqV"
 
 [[ports]]
 localPort = 3000

@@ -1,0 +1,124 @@
+{
+  "pass": 43,
+  "test_id": "mendi_session_1_detrended",
+  "source_csv": "data/mendi/sessions/session_2026-05-11T12-22-50_decoded.csv",
+  "n_frames": 2406,
+  "linear_drift": {
+    "slope_adc_per_min": -0.5236,
+    "total_drift_20min_adc": -10.473,
+    "intercept_adc": 3814.67
+  },
+  "phase_stats": {
+    "BASELINE": {
+      "n": 241,
+      "mean_detrended": -0.6798445133484248,
+      "stdev_detrended": 1.5284276444521223,
+      "raw_mean": 3813.46887966805
+    },
+    "STIM1_ARITHMETIC": {
+      "n": 120,
+      "mean_detrended": -0.4034332309993109,
+      "stdev_detrended": 1.652510151471096,
+      "raw_mean": 3812.9583333333335
+    },
+    "RECOVERY1": {
+      "n": 240,
+      "mean_detrended": 0.4516835574855615,
+      "stdev_detrended": 1.6533256455617753,
+      "raw_mean": 3813.0291666666667
+    },
+    "STIM2_BREATHHOLD": {
+      "n": 120,
+      "mean_detrended": -0.24350648376398568,
+      "stdev_detrended": 1.4232733370356268,
+      "raw_mean": 3811.55
+    },
+    "RECOVERY2": {
+      "n": 481,
+      "mean_detrended": 0.22739669064516166,
+      "stdev_detrended": 1.4687472841796023,
+      "raw_mean": 3810.7027027027025
+    },
+    "STIM3_ARITHMETIC": {
+      "n": 114,
+      "mean_detrended": 0.37186835529526735,
+      "stdev_detrended": 1.5100546669359398,
+      "raw_mean": 3809.561403508772
+    },
+    "RECOVERY3": {
+      "n": 247,
+      "mean_detrended": 0.44394347135650297,
+      "stdev_detrended": 1.652986350030263,
+      "raw_mean": 3808.8299595141702
+    },
+    "STIM4_BREATHHOLD": {
+      "n": 120,
+      "mean_detrended": 0.2616112892567912,
+      "stdev_detrended": 2.0568196174921063,
+      "raw_mean": 3807.866666666667
+    },
+    "CLOSING_MEDITATION": {
+      "n": 722,
+      "mean_detrended": -0.21820917731144224,
+      "stdev_detrended": 1.8459422529236815,
+      "raw_mean": 3805.4958448753464
+    },
+    "SESSION_END": {
+      "n": 1,
+      "mean_detrended": -2.1999271287795636,
+      "stdev_detrended": 0.0,
+      "raw_mean": 3802
+    }
+  },
+  "stimulus_deltas_detrended": [
+    {
+      "stim": "STIM1_ARITHMETIC",
+      "baseline": "BASELINE",
+      "n_stim": 120,
+      "n_base": 241,
+      "delta_detrended_adc": 0.2764,
+      "welch_t": 1.534,
+      "welch_df": 222.0,
+      "verdict_pre_registered": "NULL"
+    },
+    {
+      "stim": "STIM2_BREATHHOLD",
+      "baseline": "RECOVERY1",
+      "n_stim": 120,
+      "n_base": 240,
+      "delta_detrended_adc": -0.6952,
+      "welch_t": -4.135,
+      "welch_df": 272.1,
+      "verdict_pre_registered": "SIGNIFICANT"
+    },
+    {
+      "stim": "STIM3_ARITHMETIC",
+      "baseline": "RECOVERY2",
+      "n_stim": 114,
+      "n_base": 481,
+      "delta_detrended_adc": 0.1445,
+      "welch_t": 0.923,
+      "welch_df": 167.4,
+      "verdict_pre_registered": "NULL"
+    },
+    {
+      "stim": "STIM4_BREATHHOLD",
+      "baseline": "RECOVERY3",
+      "n_stim": 120,
+      "n_base": 247,
+      "delta_detrended_adc": -0.1823,
+      "welch_t": -0.847,
+      "welch_df": 196.1,
+      "verdict_pre_registered": "NULL"
+    }
+  ],
+  "prereg_thresholds": {
+    "SIGNIFICANT": "|t| >= 3.0",
+    "MARGINAL": "2.0 <= |t| < 3.0",
+    "NULL": "|t| < 2.0"
+  },
+  "_provenance": {
+    "analyze_script_sha256": "e78b11b2cbf1e41ef9708464f99806ea515a6fa33fa48bc4e83ce50cca9ded81",
+    "anti_hark_status": "thresholds + script frozen before Welch t-inspection of detrended values"
+  }
+}

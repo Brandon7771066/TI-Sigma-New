@@ -1,0 +1,27 @@
+Mendi 20-min session summary — 'session' @ 2026-05-11T12-22-50
+Total frames: 2406
+Total duration: 1200s
+Effective sample rate: 2.00 Hz
+
+Per-phase stats (raw bb4 ADC values; lower = more absorption):
+phase                      n     mean   min   max   stdev
+------------------------------------------------------------
+BASELINE                 241  3813.47  3810  3818    1.58
+STIM1_ARITHMETIC         120  3812.96  3809  3818    1.64
+RECOVERY1                240  3813.03  3808  3818    1.75
+STIM2_BREATHHOLD         120  3811.55  3809  3815    1.42
+RECOVERY2                481  3810.70  3805  3815    1.57
+STIM3_ARITHMETIC         114  3809.56  3805  3813    1.53
+RECOVERY3                247  3808.83  3804  3812    1.69
+STIM4_BREATHHOLD         120  3807.87  3804  3813    2.07
+CLOSING_MEDITATION       722  3805.50  3801  3812    2.12
+
+Stimulus deltas (mean during stim − mean during preceding recovery/baseline):
+  STIM1_ARITHMETIC     − BASELINE     =   -0.51 ADC units (n_stim=120, n_base=241)
+  STIM2_BREATHHOLD     − RECOVERY1    =   -1.48 ADC units (n_stim=120, n_base=240)
+  STIM3_ARITHMETIC     − RECOVERY2    =   -1.14 ADC units (n_stim=114, n_base=481)
+  STIM4_BREATHHOLD     − RECOVERY3    =   -0.96 ADC units (n_stim=120, n_base=247)
+
+Interpretation note: per Pass-2 audit, only deltas >|3| ADC units are
+above device noise floor (~2.4 stdev). Deltas of 5-50 units would be
+consistent with a real prefrontal hemodynamic response.

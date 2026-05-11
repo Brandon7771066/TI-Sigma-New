@@ -1,0 +1,107 @@
+{
+  "label": "session",
+  "address": "F8:1C:96:82:73:AD",
+  "started_at": "2026-05-11T12-22-50",
+  "duration_s": 1200.0,
+  "schedule": [
+    {
+      "scheduled_s": 0,
+      "name": "BASELINE",
+      "prompt": "Sit comfortably. Breathe normally. Eyes soft-focus on a fixed point. Stay still. (2 min)"
+    },
+    {
+      "scheduled_s": 120,
+      "name": "STIM1_ARITHMETIC",
+      "prompt": "STIMULUS 1 \u2014 Count backwards from 1000 by 7s OUT LOUD for 60 seconds. Begin NOW."
+    },
+    {
+      "scheduled_s": 180,
+      "name": "RECOVERY1",
+      "prompt": "Stop counting. Relax. Breathe normally. (2 min recovery)"
+    },
+    {
+      "scheduled_s": 300,
+      "name": "STIM2_BREATHHOLD",
+      "prompt": "STIMULUS 2 \u2014 Exhale fully, then HOLD your breath for 30-45 seconds. Resume normal breathing when uncomfortable."
+    },
+    {
+      "scheduled_s": 360,
+      "name": "RECOVERY2",
+      "prompt": "Recovery \u2014 eyes closed, meditation posture, breath natural. (4 min)"
+    },
+    {
+      "scheduled_s": 600,
+      "name": "STIM3_ARITHMETIC",
+      "prompt": "STIMULUS 3 (replication) \u2014 Count backwards from 999 by 13s OUT LOUD for 60 seconds. Begin NOW."
+    },
+    {
+      "scheduled_s": 660,
+      "name": "RECOVERY3",
+      "prompt": "Stop counting. Relax. (2 min)"
+    },
+    {
+      "scheduled_s": 780,
+      "name": "STIM4_BREATHHOLD",
+      "prompt": "STIMULUS 4 (replication) \u2014 Exhale fully, HOLD 30-45 seconds. Resume."
+    },
+    {
+      "scheduled_s": 840,
+      "name": "CLOSING_MEDITATION",
+      "prompt": "Closing meditation \u2014 eyes closed, breath natural, no task. (6 min)"
+    },
+    {
+      "scheduled_s": 1200,
+      "name": "SESSION_END",
+      "prompt": "Session complete. Remove headband. Stop the script with Ctrl+C if it doesn't auto-stop."
+    }
+  ],
+  "actual_event_starts": {
+    "BASELINE": {
+      "scheduled_s": 0,
+      "actual_elapsed_s": 0.041,
+      "wallclock": "2026-05-11T12:23:40.071026"
+    },
+    "STIM1_ARITHMETIC": {
+      "scheduled_s": 120,
+      "actual_elapsed_s": 120.233,
+      "wallclock": "2026-05-11T12:25:40.263742"
+    },
+    "RECOVERY1": {
+      "scheduled_s": 180,
+      "actual_elapsed_s": 180.086,
+      "wallclock": "2026-05-11T12:26:40.116876"
+    },
+    "STIM2_BREATHHOLD": {
+      "scheduled_s": 300,
+      "actual_elapsed_s": 300.129,
+      "wallclock": "2026-05-11T12:28:40.159612"
+    },
+    "RECOVERY2": {
+      "scheduled_s": 360,
+      "actual_elapsed_s": 360.019,
+      "wallclock": "2026-05-11T12:29:40.049033"
+    },
+    "STIM3_ARITHMETIC": {
+      "scheduled_s": 600,
+      "actual_elapsed_s": 600.186,
+      "wallclock": "2026-05-11T12:33:40.216234"
+    },
+    "RECOVERY3": {
+      "scheduled_s": 660,
+      "actual_elapsed_s": 678.044,
+      "wallclock": "2026-05-11T12:34:58.074736"
+    },
+    "STIM4_BREATHHOLD": {
+      "scheduled_s": 780,
+      "actual_elapsed_s": 780.208,
+      "wallclock": "2026-05-11T12:36:40.237922"
+    },
+    "CLOSING_MEDITATION": {
+      "scheduled_s": 840,
+      "actual_elapsed_s": 840.07,
+      "wallclock": "2026-05-11T12:37:40.100485"
+    }
+  },
+  "n_frames": 2406,
+  "stream_char_uuid": "fc3eabb4-c6c4-49e6-922a-6e551c455af5"
+}
