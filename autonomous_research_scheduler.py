@@ -5,12 +5,18 @@ Runs continuously, generates discoveries, saves to database
 """
 
 import logging
+import hashlib
 from datetime import datetime, timedelta
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import random
 from apscheduler.schedulers.background import BackgroundScheduler
 from cosmic_ai_band_discoveries import CosmicAIBand
 from db_utils import db
+
+# Pass-44 dedup constants
+DEDUP_LOOKBACK_DAYS = 7      # Reject titles seen in this window
+DEDUP_MAX_RETRIES = 10       # Try up to 10 candidates before giving up
+DEDUP_TITLE_HASH_TABLE_TTL = 300  # Refresh recent-titles cache every 5 min
 
 # Configure logging
 logging.basicConfig(
@@ -37,21 +43,62 @@ class AutonomousResearchScheduler:
         self.running = False
         self.last_discovery_time = None
         
+    def _recent_title_hashes(self) -> set:
+        """Pull title-hashes seen in last DEDUP_LOOKBACK_DAYS days from DB.
+        Returns set of sha256(title)[:16] strings. Best-effort: any DB error
+        returns empty set so dedup degrades gracefully (we still write)."""
+        try:
+            import psycopg2, os
+            conn = psycopg2.connect(os.environ["DATABASE_URL"])
+            cur = conn.cursor()
+            cur.execute(
+                "SELECT title FROM research_assets "
+                "WHERE asset_type='autonomous_discovery' "
+                "AND created_at > NOW() - INTERVAL %s",
+                (f"{DEDUP_LOOKBACK_DAYS} days",))
+            hashes = {hashlib.sha256(r[0].encode()).hexdigest()[:16]
+                      for r in cur.fetchall()}
+            cur.close(); conn.close()
+            return hashes
+        except Exception as e:
+            logger.warning(f"Dedup lookup failed (degrading gracefully): {e}")
+            return set()
+
+    def _pick_novel_discovery(self) -> Optional[Dict[str, Any]]:
+        """Sample up to DEDUP_MAX_RETRIES discoveries; return the first
+        whose title-hash is NOT in the recent-titles set. Returns None if
+        every sample collides (means corpus is truly exhausted right now)."""
+        discoveries = self.cosmic_band.get_overnight_discoveries()
+        if not discoveries:
+            return None
+        recent = self._recent_title_hashes()
+        random.shuffle(discoveries)
+        for cand in discoveries[:DEDUP_MAX_RETRIES]:
+            h = hashlib.sha256(cand['title'].encode()).hexdigest()[:16]
+            if h not in recent:
+                return cand
+        # All sampled discoveries are duplicates within lookback window
+        return None
+
     def generate_and_save_discovery(self) -> Dict[str, Any]:
         """
-        Generate one discovery and save to database
-        
+        Generate one discovery and save to database (with Pass-44 dedup).
+
         Returns:
-            Discovery object
+            Discovery object, or skip-marker dict if all candidates were dupes.
         """
         logger.info("🔍 Generating new autonomous discovery...")
-        
-        # Get discoveries from Cosmic AI Band
-        discoveries = self.cosmic_band.get_overnight_discoveries()
-        
-        # Pick one random discovery (simulate continuous generation)
-        discovery = random.choice(discoveries)
-        
+
+        # Pass-44 dedup: pick a title we have NOT used in last 7 days
+        discovery = self._pick_novel_discovery()
+        if discovery is None:
+            logger.info(
+                f"⏭️  All {DEDUP_MAX_RETRIES} candidate discoveries were "
+                f"duplicates within last {DEDUP_LOOKBACK_DAYS} days. "
+                f"Skipping this cycle (corpus saturation). "
+                f"Add new templates to CosmicAIBand to resume novelty.")
+            return {"skipped": True, "reason": "all_candidates_recent_dupes"}
+
         # Add metadata
         discovery['generated_by'] = 'autonomous_scheduler'
         discovery['discovery_id'] = f"auto_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
