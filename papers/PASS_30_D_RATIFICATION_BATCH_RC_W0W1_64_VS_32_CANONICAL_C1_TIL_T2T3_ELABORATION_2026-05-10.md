@@ -410,6 +410,7 @@ T3 = ~$50 hardware items.
 
 **Total cost for Brandon to unblock all 5 (i25, qc25, e25, t25-MEASURE, m25-m26): $0.** All hardware owned; all accounts free. Brandon-time total: ~45 minutes spread over a session. **This is the highest-leverage zero-budget upgrade path for the corpus.**
 
+
 ---
 
 ## §11 — DPES Discipline Audit
