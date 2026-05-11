@@ -1,0 +1,265 @@
+{
+  "pass": 38,
+  "item": "p37-N MBE celebrity numerology execution",
+  "prereg_locked_at_pass": 37,
+  "anti_hark_freeze_path": "/home/runner/workspace/analyses/pass38_mbe_celebrity_numerology/archetypes_frozen.json",
+  "n_eligible": 12,
+  "n_total": 12,
+  "matches": 3,
+  "mc_null_mean": 4.74634,
+  "mc_null_sd": 1.6949798241867506,
+  "mc_iters": 50000,
+  "mc_seed": 27182818,
+  "z_score": -1.030301349361425,
+  "tiu": -0.5,
+  "verdict": "PARTIAL_NEG",
+  "per_celebrity": [
+    {
+      "id": 1,
+      "name": "Albert Einstein",
+      "wiki_revid": 1352684507,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 14,
+      "phoneme_count": 4,
+      "letter_mod9": 5,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 2,
+      "name": "Nikola Tesla",
+      "wiki_revid": 1353504101,
+      "top2": [
+        4,
+        1
+      ],
+      "top2_named": [
+        "structure",
+        "leadership"
+      ],
+      "letter_count": 11,
+      "phoneme_count": 5,
+      "letter_mod9": 2,
+      "phoneme_mod9": 5,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 3,
+      "name": "Srinivasa Ramanujan",
+      "wiki_revid": 1351753652,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 18,
+      "phoneme_count": 8,
+      "letter_mod9": 9,
+      "phoneme_mod9": 8,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 4,
+      "name": "Carl Gustav Jung",
+      "wiki_revid": 1353605172,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 14,
+      "phoneme_count": 4,
+      "letter_mod9": 5,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 5,
+      "name": "Wolfgang Pauli",
+      "wiki_revid": 1352660382,
+      "top2": [
+        1,
+        4
+      ],
+      "top2_named": [
+        "leadership",
+        "structure"
+      ],
+      "letter_count": 13,
+      "phoneme_count": 4,
+      "letter_mod9": 4,
+      "phoneme_mod9": 4,
+      "match": true,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 6,
+      "name": "Jiddu Krishnamurti",
+      "wiki_revid": 1350919246,
+      "top2": [
+        6,
+        5
+      ],
+      "top2_named": [
+        "responsibility",
+        "freedom"
+      ],
+      "letter_count": 17,
+      "phoneme_count": 6,
+      "letter_mod9": 8,
+      "phoneme_mod9": 6,
+      "match": true,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 7,
+      "name": "Ramana Maharshi",
+      "wiki_revid": 1351561520,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 14,
+      "phoneme_count": 6,
+      "letter_mod9": 5,
+      "phoneme_mod9": 6,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 8,
+      "name": "Marie Curie",
+      "wiki_revid": 1352258046,
+      "top2": [
+        1,
+        6
+      ],
+      "top2_named": [
+        "leadership",
+        "responsibility"
+      ],
+      "letter_count": 10,
+      "phoneme_count": 4,
+      "letter_mod9": 1,
+      "phoneme_mod9": 4,
+      "match": true,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 9,
+      "name": "Kurt Godel",
+      "wiki_revid": 1350605131,
+      "top2": [
+        4,
+        7
+      ],
+      "top2_named": [
+        "structure",
+        "wisdom"
+      ],
+      "letter_count": 9,
+      "phoneme_count": 3,
+      "letter_mod9": 9,
+      "phoneme_mod9": 3,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 10,
+      "name": "Wayne Gretzky",
+      "wiki_revid": 1353396358,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 12,
+      "phoneme_count": 4,
+      "letter_mod9": 3,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 11,
+      "name": "Bobby Fischer",
+      "wiki_revid": 1353136368,
+      "top2": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 12,
+      "phoneme_count": 4,
+      "letter_mod9": 3,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 12,
+      "name": "Hildegard of Bingen",
+      "wiki_revid": 1353364590,
+      "top2": [
+        1,
+        7
+      ],
+      "top2_named": [
+        "leadership",
+        "wisdom"
+      ],
+      "letter_count": 17,
+      "phoneme_count": 6,
+      "letter_mod9": 8,
+      "phoneme_mod9": 6,
+      "match": false,
+      "verdict_eligible": true,
+      "fetch_error": null
+    }
+  ],
+  "honesty_69": [
+    "Wikipedia fetch is live; revids recorded for reproducibility.",
+    "Archetype JSON committed BEFORE Step 4 MC computation per anti-HARK gate.",
+    "Brandon-DPES convergence on roster: NOT independent confirmation.",
+    "Numerology is not mainstream-validated; this is an MBE probe via numerology, not numerology vindication.",
+    "Top-2-archetype tiebreak (count-desc, then archetype-num-asc) is deterministic; reruns reproduce."
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "pass": 37,
+  "executed_at_pass": 38,
+  "freeze_timestamp": "2026-05-11T12:34:16Z",
+  "rubric_source": "papers/PASS_37_MBE_CELEBRITY_NUMEROLOGY_STUDY_DESIGN_2026-05-11.md \u00a74 Step 2b/2c",
+  "keyword_sets": {
+    "1": [
+      "first",
+      "founder",
+      "head",
+      "leader",
+      "leadership",
+      "leading",
+      "originator",
+      "pioneer"
+    ],
+    "2": [
+      "balance",
+      "collaborator",
+      "cooperation",
+      "diplomat",
+      "harmony",
+      "mediator",
+      "partner",
+      "peace"
+    ],
+    "3": [
+      "art",
+      "artist",
+      "creative",
+      "creativity",
+      "expression",
+      "imagination",
+      "invent",
+      "original"
+    ],
+    "4": [
+      "builder",
+      "foundation",
+      "methodical",
+      "organizer",
+      "structural",
+      "structure",
+      "system",
+      "systematic"
+    ],
+    "5": [
+      "adventure",
+      "change",
+      "dynamic",
+      "free",
+      "freedom",
+      "independent",
+      "traveler",
+      "unconventional"
+    ],
+    "6": [
+      "caregiver",
+      "devoted",
+      "family",
+      "healer",
+      "nurturing",
+      "responsibility",
+      "service",
+      "teacher"
+    ],
+    "7": [
+      "contemplative",
+      "intuition",
+      "intuitive",
+      "mystic",
+      "pattern",
+      "philosopher",
+      "wisdom",
+      "wise"
+    ],
+    "8": [
+      "accomplish",
+      "achievement",
+      "authority",
+      "executive",
+      "leader",
+      "master",
+      "mastery",
+      "success"
+    ],
+    "9": [
+      "completed",
+      "completion",
+      "culminating",
+      "humanitarian",
+      "legacy",
+      "transformation",
+      "universal",
+      "visionary"
+    ]
+  },
+  "archetypes_per_celebrity": [
+    {
+      "id": 1,
+      "name": "Albert Einstein",
+      "wiki_slug": "Albert_Einstein",
+      "wiki_revid": 1352684507,
+      "rev_timestamp": "2026-05-05T17:28:13Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 2,
+      "name": "Nikola Tesla",
+      "wiki_slug": "Nikola_Tesla",
+      "wiki_revid": 1353504101,
+      "rev_timestamp": "2026-05-10T17:25:45Z",
+      "top2_archetypes": [
+        4,
+        1
+      ],
+      "top2_named": [
+        "structure",
+        "leadership"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 3,
+      "name": "Srinivasa Ramanujan",
+      "wiki_slug": "Srinivasa_Ramanujan",
+      "wiki_revid": 1351753652,
+      "rev_timestamp": "2026-04-29T23:16:22Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 4,
+      "name": "Carl Gustav Jung",
+      "wiki_slug": "Carl_Jung",
+      "wiki_revid": 1353605172,
+      "rev_timestamp": "2026-05-11T07:25:44Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 5,
+      "name": "Wolfgang Pauli",
+      "wiki_slug": "Wolfgang_Pauli",
+      "wiki_revid": 1352660382,
+      "rev_timestamp": "2026-05-05T14:39:24Z",
+      "top2_archetypes": [
+        1,
+        4
+      ],
+      "top2_named": [
+        "leadership",
+        "structure"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 6,
+      "name": "Jiddu Krishnamurti",
+      "wiki_slug": "Jiddu_Krishnamurti",
+      "wiki_revid": 1350919246,
+      "rev_timestamp": "2026-04-24T20:37:31Z",
+      "top2_archetypes": [
+        6,
+        5
+      ],
+      "top2_named": [
+        "responsibility",
+        "freedom"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 7,
+      "name": "Ramana Maharshi",
+      "wiki_slug": "Ramana_Maharshi",
+      "wiki_revid": 1351561520,
+      "rev_timestamp": "2026-04-28T19:18:08Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 8,
+      "name": "Marie Curie",
+      "wiki_slug": "Marie_Curie",
+      "wiki_revid": 1352258046,
+      "rev_timestamp": "2026-05-03T03:14:23Z",
+      "top2_archetypes": [
+        1,
+        6
+      ],
+      "top2_named": [
+        "leadership",
+        "responsibility"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 9,
+      "name": "Kurt Godel",
+      "wiki_slug": "Kurt_G\u00f6del",
+      "wiki_revid": 1350605131,
+      "rev_timestamp": "2026-04-22T22:14:07Z",
+      "top2_archetypes": [
+        4,
+        7
+      ],
+      "top2_named": [
+        "structure",
+        "wisdom"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 10,
+      "name": "Wayne Gretzky",
+      "wiki_slug": "Wayne_Gretzky",
+      "wiki_revid": 1353396358,
+      "rev_timestamp": "2026-05-10T01:24:37Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 11,
+      "name": "Bobby Fischer",
+      "wiki_slug": "Bobby_Fischer",
+      "wiki_revid": 1353136368,
+      "rev_timestamp": "2026-05-08T11:52:38Z",
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    },
+    {
+      "id": 12,
+      "name": "Hildegard of Bingen",
+      "wiki_slug": "Hildegard_of_Bingen",
+      "wiki_revid": 1353364590,
+      "rev_timestamp": "2026-05-09T21:04:18Z",
+      "top2_archetypes": [
+        1,
+        7
+      ],
+      "top2_named": [
+        "leadership",
+        "wisdom"
+      ],
+      "verdict_eligible": true,
+      "fetch_error": null
+    }
+  ],
+  "_provenance": {
+    "sha256_of_payload_pre_provenance": "c09ca99f991cc0f3c3eedde1f871977049ae757969a14bae53a0c90a1085be17",
+    "freeze_pid": 1518,
+    "git_head_at_freeze": "bbac05a9d8121579c3013d123a7aa4656d60a002"
+  }
+}
