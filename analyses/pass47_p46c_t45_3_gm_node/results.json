@@ -1,0 +1,790 @@
+{
+  "pass": 47,
+  "test_id": "p46c_t45_3_gm_node_validity",
+  "started_at": "2026-05-11T20:14:35Z",
+  "finished_at": "2026-05-11T20:14:53Z",
+  "runner_sha256": "01e7219c626bdd5b5322e136a5bf209bed40e0a575084accd9472e0e308d6fb2",
+  "n_gm": 10,
+  "n_ctrl": 10,
+  "raters": [
+    "gpt_4o_mini",
+    "claude_sonnet_4_5",
+    "claude_haiku_4_5"
+  ],
+  "criteria": [
+    "network_position",
+    "originality_output",
+    "mentorship_density",
+    "cross_domain_fluency",
+    "self_direction",
+    "blinded_rater_central_label"
+  ],
+  "deviations": [
+    "D1: GM roster substituted (URB-829 private \u2192 10 famous network-central thinkers)",
+    "D2: Control roster substituted (MacArthur 2024 \u2192 10 high-achievement solo-achievers)",
+    "D3: Raters substituted (GPT-4/Claude/Gemini \u2192 GPT-4o-mini/Sonnet-4.5/Haiku-4.5; 2 are Anthropic family)"
+  ],
+  "gm_mean_sum": 37.6,
+  "gm_std": 1.2352837430833143,
+  "ctrl_mean_sum": 18.4,
+  "ctrl_std": 2.783549559132754,
+  "cohens_d": 8.91622350177172,
+  "welch_t": 19.93728185254278,
+  "welch_p": 8.428538260467453e-11,
+  "verdict": "CONFIRM",
+  "thresholds": {
+    "CONFIRM": "d >= 0.8",
+    "KILL": "d < 0.4",
+    "INDETERMINATE": "0.4 <= d < 0.8"
+  },
+  "raw": {
+    "gpt_4o_mini": {
+      "Norbert Wiener": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 7
+      },
+      "Gregory Bateson": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Marshall McLuhan": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Bertrand Russell": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Douglas Hofstadter": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Tim Cook": {
+        "network_position": 5,
+        "originality_output": 4,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Murray Gell-Mann": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Ludwig Wittgenstein": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Mary Barra": {
+        "network_position": 5,
+        "originality_output": 4,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "LeBron James": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Tiger Woods": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Roger Federer": {
+        "network_position": 4,
+        "originality_output": 3,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "Serena Williams": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 4,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Lionel Messi": {
+        "network_position": 7,
+        "originality_output": 6,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 7
+      },
+      "Alfred North Whitehead": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 5,
+        "blinded_rater_central_label": 7
+      },
+      "Carl Jung": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Michael Phelps": {
+        "network_position": 3,
+        "originality_output": 4,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 5,
+        "blinded_rater_central_label": 5
+      },
+      "Magnus Carlsen": {
+        "network_position": 6,
+        "originality_output": 5,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 4,
+        "self_direction": 5,
+        "blinded_rater_central_label": 6
+      },
+      "David Bohm": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Usain Bolt": {
+        "network_position": 5,
+        "originality_output": 4,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 2,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      }
+    },
+    "claude_sonnet_4_5": {
+      "Carl Jung": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Marshall McLuhan": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "David Bohm": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Bertrand Russell": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Alfred North Whitehead": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Douglas Hofstadter": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Gregory Bateson": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 5
+      },
+      "Norbert Wiener": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Murray Gell-Mann": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Ludwig Wittgenstein": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Mary Barra": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 2,
+        "self_direction": 3,
+        "blinded_rater_central_label": 2
+      },
+      "Tim Cook": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 3,
+        "blinded_rater_central_label": 2
+      },
+      "Serena Williams": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Lionel Messi": {
+        "network_position": 2,
+        "originality_output": 3,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 1,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      },
+      "LeBron James": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 3,
+        "cross_domain_fluency": 2,
+        "self_direction": 4,
+        "blinded_rater_central_label": 1
+      },
+      "Tiger Woods": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Roger Federer": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 1,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      },
+      "Usain Bolt": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      },
+      "Magnus Carlsen": {
+        "network_position": 3,
+        "originality_output": 3,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 5,
+        "blinded_rater_central_label": 2
+      },
+      "Michael Phelps": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      }
+    },
+    "claude_haiku_4_5": {
+      "Marshall McLuhan": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Carl Jung": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "David Bohm": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Alfred North Whitehead": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Bertrand Russell": {
+        "network_position": 6,
+        "originality_output": 6,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 7,
+        "blinded_rater_central_label": 7
+      },
+      "Norbert Wiener": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Douglas Hofstadter": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 4,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Gregory Bateson": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 7,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Murray Gell-Mann": {
+        "network_position": 6,
+        "originality_output": 7,
+        "mentorship_density": 5,
+        "cross_domain_fluency": 6,
+        "self_direction": 6,
+        "blinded_rater_central_label": 6
+      },
+      "Ludwig Wittgenstein": {
+        "network_position": 7,
+        "originality_output": 7,
+        "mentorship_density": 6,
+        "cross_domain_fluency": 5,
+        "self_direction": 6,
+        "blinded_rater_central_label": 7
+      },
+      "Tim Cook": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 2,
+        "blinded_rater_central_label": 2
+      },
+      "Mary Barra": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 2,
+        "self_direction": 3,
+        "blinded_rater_central_label": 2
+      },
+      "Serena Williams": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 6,
+        "blinded_rater_central_label": 2
+      },
+      "LeBron James": {
+        "network_position": 3,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 3,
+        "self_direction": 6,
+        "blinded_rater_central_label": 2
+      },
+      "Lionel Messi": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 1,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      },
+      "Tiger Woods": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 1,
+        "self_direction": 5,
+        "blinded_rater_central_label": 1
+      },
+      "Roger Federer": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 1,
+        "self_direction": 5,
+        "blinded_rater_central_label": 1
+      },
+      "Magnus Carlsen": {
+        "network_position": 2,
+        "originality_output": 2,
+        "mentorship_density": 2,
+        "cross_domain_fluency": 1,
+        "self_direction": 5,
+        "blinded_rater_central_label": 1
+      },
+      "Usain Bolt": {
+        "network_position": 2,
+        "originality_output": 1,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 1,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      },
+      "Michael Phelps": {
+        "network_position": 2,
+        "originality_output": 1,
+        "mentorship_density": 1,
+        "cross_domain_fluency": 1,
+        "self_direction": 3,
+        "blinded_rater_central_label": 1
+      }
+    }
+  },
+  "per_individual": {
+    "Carl Jung": {
+      "label": "GM",
+      "per_criterion_mean": [
+        7.0,
+        7.0,
+        5.666666666666667,
+        6.666666666666667,
+        6.333333333333333,
+        7.0
+      ],
+      "sum": 39.66666666666667,
+      "n_raters_ok": 3
+    },
+    "Marshall McLuhan": {
+      "label": "GM",
+      "per_criterion_mean": [
+        7.0,
+        7.0,
+        5.333333333333333,
+        6.666666666666667,
+        6.0,
+        7.0
+      ],
+      "sum": 39.0,
+      "n_raters_ok": 3
+    },
+    "David Bohm": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.333333333333333,
+        7.0,
+        4.666666666666667,
+        6.666666666666667,
+        6.0,
+        5.666666666666667
+      ],
+      "sum": 36.333333333333336,
+      "n_raters_ok": 3
+    },
+    "Alfred North Whitehead": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.333333333333333,
+        7.0,
+        5.0,
+        6.666666666666667,
+        5.666666666666667,
+        6.0
+      ],
+      "sum": 36.66666666666667,
+      "n_raters_ok": 3
+    },
+    "Bertrand Russell": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.666666666666667,
+        6.333333333333333,
+        5.0,
+        6.333333333333333,
+        6.666666666666667,
+        7.0
+      ],
+      "sum": 38.0,
+      "n_raters_ok": 3
+    },
+    "Norbert Wiener": {
+      "label": "GM",
+      "per_criterion_mean": [
+        7.0,
+        7.0,
+        5.0,
+        6.666666666666667,
+        5.666666666666667,
+        6.666666666666667
+      ],
+      "sum": 38.0,
+      "n_raters_ok": 3
+    },
+    "Gregory Bateson": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.333333333333333,
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "sum": 37.33333333333333,
+      "n_raters_ok": 3
+    },
+    "Douglas Hofstadter": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.333333333333333,
+        6.666666666666667,
+        4.0,
+        6.666666666666667,
+        6.0,
+        6.0
+      ],
+      "sum": 35.66666666666667,
+      "n_raters_ok": 3
+    },
+    "Murray Gell-Mann": {
+      "label": "GM",
+      "per_criterion_mean": [
+        6.666666666666667,
+        7.0,
+        5.0,
+        6.0,
+        6.0,
+        6.333333333333333
+      ],
+      "sum": 37.0,
+      "n_raters_ok": 3
+    },
+    "Ludwig Wittgenstein": {
+      "label": "GM",
+      "per_criterion_mean": [
+        7.0,
+        7.0,
+        5.333333333333333,
+        5.666666666666667,
+        6.333333333333333,
+        7.0
+      ],
+      "sum": 38.33333333333333,
+      "n_raters_ok": 3
+    },
+    "Tim Cook": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        2.6666666666666665,
+        2.3333333333333335,
+        2.6666666666666665,
+        3.3333333333333335,
+        3.3333333333333335
+      ],
+      "sum": 18.0,
+      "n_raters_ok": 3
+    },
+    "Mary Barra": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        2.6666666666666665,
+        2.6666666666666665,
+        2.6666666666666665,
+        4.0,
+        3.0
+      ],
+      "sum": 18.666666666666664,
+      "n_raters_ok": 3
+    },
+    "Serena Williams": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        4.0,
+        3.3333333333333335,
+        3.0,
+        3.3333333333333335,
+        5.666666666666667,
+        3.6666666666666665
+      ],
+      "sum": 23.000000000000004,
+      "n_raters_ok": 3
+    },
+    "LeBron James": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        3.0,
+        3.0,
+        3.3333333333333335,
+        5.333333333333333,
+        3.3333333333333335
+      ],
+      "sum": 21.666666666666664,
+      "n_raters_ok": 3
+    },
+    "Lionel Messi": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        3.6666666666666665,
+        2.3333333333333335,
+        1.6666666666666667,
+        3.6666666666666665,
+        3.0
+      ],
+      "sum": 18.0,
+      "n_raters_ok": 3
+    },
+    "Tiger Woods": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        3.0,
+        2.3333333333333335,
+        2.3333333333333335,
+        5.333333333333333,
+        3.0
+      ],
+      "sum": 19.666666666666668,
+      "n_raters_ok": 3
+    },
+    "Roger Federer": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        2.6666666666666665,
+        2.3333333333333335,
+        2.0,
+        1.6666666666666667,
+        4.333333333333333,
+        2.6666666666666665
+      ],
+      "sum": 15.666666666666666,
+      "n_raters_ok": 3
+    },
+    "Magnus Carlsen": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.6666666666666665,
+        3.3333333333333335,
+        2.3333333333333335,
+        2.3333333333333335,
+        5.0,
+        3.0
+      ],
+      "sum": 19.666666666666668,
+      "n_raters_ok": 3
+    },
+    "Usain Bolt": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        3.0,
+        2.3333333333333335,
+        2.0,
+        1.6666666666666667,
+        4.0,
+        2.6666666666666665
+      ],
+      "sum": 15.666666666666666,
+      "n_raters_ok": 3
+    },
+    "Michael Phelps": {
+      "label": "CONTROL",
+      "per_criterion_mean": [
+        2.3333333333333335,
+        2.3333333333333335,
+        1.6666666666666667,
+        1.6666666666666667,
+        3.6666666666666665,
+        2.3333333333333335
+      ],
+      "sum": 14.0,
+      "n_raters_ok": 3
+    }
+  }
+}

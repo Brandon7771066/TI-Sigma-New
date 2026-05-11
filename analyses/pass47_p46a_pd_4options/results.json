@@ -1,0 +1,57 @@
+{
+  "pass": 47,
+  "test_id": "p46a_pd_4options",
+  "started_at": "2026-05-11T20:14:33Z",
+  "runner_sha256": "aab0c5b42a570b02818937e52e8c1c24a8cc22561e4dcd81f5eac6dbf83cce00",
+  "n_zeros_loaded": 100000,
+  "prereg": "see runner.py docstring; thresholds frozen at commit-time",
+  "options": {
+    "A_gamma_window_first5": {
+      "n_spacings": 4,
+      "spacings": [
+        0.8887119300190707,
+        0.7666927785202766,
+        1.1903363246164582,
+        0.6301779970882553
+      ],
+      "ks_stat": 0.32007877110173794,
+      "p_value": 0.7064244043918609,
+      "median_spacing": 0.8277023542696736,
+      "median_in_window": true,
+      "verdict": "KILL",
+      "interpretation": "\u03b3-window: first 5 zeros' unfolded spacings vs GUE (small-n)"
+    },
+    "B_sigma_coordinate": {
+      "all_zeros_have_sigma_one_half": true,
+      "in_PD_window": true,
+      "fraction_in_window": 1.0,
+      "verdict": "CONFIRM_VACUOUS",
+      "interpretation": "\u03c3-axis interpretation. RH-respecting zeros all have \u03c3=1/2 which is trivially inside any (-3, 2)-derived window. CONFIRM is content-free; this interpretation says nothing structural about PD."
+    },
+    "C_log_window_filter": {
+      "n_total_spacings": 99999,
+      "n_in_window": 99999,
+      "fraction_in_window": 1.0,
+      "log10_s_range_in_window": [
+        -3.0,
+        2.0
+      ],
+      "ks_stat": 0.019259936245325293,
+      "p_value": 1.1838713914758247e-32,
+      "verdict": "KILL",
+      "interpretation": "Log-window: spacings with log_10(s) \u2208 (-3, 2) vs GUE"
+    },
+    "D_perfect_fifth_musical": {
+      "verdict": "NOT_APPLICABLE_NOT_A_RIEMANN_CLAIM",
+      "interpretation": "PD = (-3, 2) interpreted as semitone interval (musical Perfect-Fifth-related). Under interpretation D, the Riemann-connection claim of Pass-37 PD-canonical-final is categorically mismatched (musical-interval \u2260 Riemann-coordinate). Recommendation: if Brandon picks D, retract the Riemann-connection clause from PD-canonical-final and re-spec PD as a musical-interval claim with separate (non-Riemann) operationalization.",
+      "implication_for_pass37": "PARTIAL_RETRACTION_OF_RIEMANN_CLAUSE_NEEDED_IF_D_CHOSEN"
+    }
+  },
+  "summary": {
+    "A_gamma_window_first5": "KILL",
+    "B_sigma_coordinate": "CONFIRM_VACUOUS",
+    "C_log_window_filter": "KILL",
+    "D_perfect_fifth_musical": "NOT_APPLICABLE_NOT_A_RIEMANN_CLAIM"
+  },
+  "finished_at": "2026-05-11T20:14:33Z"
+}

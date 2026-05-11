@@ -1,0 +1,19 @@
+{
+  "pass": 47,
+  "test_id": "p46b_qc26_v2",
+  "started_at": "2026-05-11T20:12:00Z",
+  "stub_written_at": "2026-05-11T20:30:01Z",
+  "status": "IN_FLIGHT_QUEUED",
+  "verdict": "INCOMPLETE_THIS_TURN_QUEUE_PENDING",
+  "n_qubits": 5,
+  "n_shots_per_setting": 4096,
+  "backend_name": "ibm_marrakesh",
+  "ibmq_channel": "ibm_quantum_platform",
+  "ibmq_instance": "open-instance",
+  "ibmq_plan": "open",
+  "first_job_id": "d813hcg0bvlc73d0ilgg",
+  "queue_wait_observed_seconds": 1380,
+  "reason_for_stub": "IBMQ free-tier queue stuck >13min on first of 3 settings. Pass-46 v1 already CONFIRMED at 71sigma; v2 is incremental error-bar tightening only. Killed bg process to ship Pass-47.",
+  "next_session_action": "svc.job(\"d813hcg0bvlc73d0ilgg\").result()",
+  "honest_caveat": "Logged as queue-limited not failure; resubmit may succeed in <5min next session."
+}
