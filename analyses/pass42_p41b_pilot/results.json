@@ -1,0 +1,550 @@
+{
+  "pass": 42,
+  "discharges": "p41-B",
+  "n_individuals_total": 24,
+  "n_with_scores": 19,
+  "per_individual": [
+    {
+      "name": "Albert Einstein",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1352684507,
+      "scores": {
+        "n_words": 229,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Marie Curie",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1352258046,
+      "scores": {
+        "n_words": 246,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 1
+    },
+    {
+      "name": "Nikola Tesla",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1353504101,
+      "scores": {
+        "n_words": 219,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Carl Jung",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1353605172,
+      "scores": {
+        "n_words": 265,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": null
+    },
+    {
+      "name": "Bobby Fischer",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1353136368,
+      "scores": {
+        "n_words": 183,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "John Nash",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1352212884,
+      "scores": {
+        "n_words": 143,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": null
+    },
+    {
+      "name": "Srinivasa Ramanujan",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1351753652,
+      "scores": {
+        "n_words": 231,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Alan Turing",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1352875803,
+      "scores": {
+        "n_words": 211,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": null
+    },
+    {
+      "name": "Richard Feynman",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1353369447,
+      "scores": {
+        "n_words": 267,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": null
+    },
+    {
+      "name": "Wolfgang Pauli",
+      "group": "GM",
+      "Y": 1,
+      "revid": 1352660382,
+      "scores": {
+        "n_words": 186,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 1
+    },
+    {
+      "name": "Erwin Schrodinger",
+      "group": "GM",
+      "Y": 1,
+      "scores": null
+    },
+    {
+      "name": "Werner Heisenberg",
+      "group": "GM",
+      "Y": 1,
+      "scores": null
+    },
+    {
+      "name": "Tom Cruise",
+      "group": "control",
+      "Y": 0,
+      "scores": null
+    },
+    {
+      "name": "Brad Pitt",
+      "group": "control",
+      "Y": 0,
+      "scores": null
+    },
+    {
+      "name": "Jennifer Aniston",
+      "group": "control",
+      "Y": 0,
+      "scores": null
+    },
+    {
+      "name": "Reese Witherspoon",
+      "group": "control",
+      "Y": 0,
+      "revid": 1352617828,
+      "scores": {
+        "n_words": 255,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Will Smith",
+      "group": "control",
+      "Y": 0,
+      "revid": 1349888812,
+      "scores": {
+        "n_words": 317,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 1
+    },
+    {
+      "name": "Julia Roberts",
+      "group": "control",
+      "Y": 0,
+      "revid": 1353570452,
+      "scores": {
+        "n_words": 285,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Adam Sandler",
+      "group": "control",
+      "Y": 0,
+      "revid": 1353048045,
+      "scores": {
+        "n_words": 234,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Sandra Bullock",
+      "group": "control",
+      "Y": 0,
+      "revid": 1351598021,
+      "scores": {
+        "n_words": 275,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Matthew McConaughey",
+      "group": "control",
+      "Y": 0,
+      "revid": 1349560852,
+      "scores": {
+        "n_words": 279,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    },
+    {
+      "name": "Cameron Diaz",
+      "group": "control",
+      "Y": 0,
+      "revid": 1353583275,
+      "scores": {
+        "n_words": 237,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 1
+    },
+    {
+      "name": "Ben Affleck",
+      "group": "control",
+      "Y": 0,
+      "revid": 1346914435,
+      "scores": {
+        "n_words": 217,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 1
+    },
+    {
+      "name": "Jennifer Lawrence",
+      "group": "control",
+      "Y": 0,
+      "revid": 1353517488,
+      "scores": {
+        "n_words": 186,
+        "C1_pos": 0,
+        "C1_neg": 0,
+        "C1_net": 0,
+        "C1_bin": 0,
+        "C2_count": 0,
+        "C2_per1k": 0.0,
+        "C3_pos": 0,
+        "C3_neg": 0,
+        "C3_per1k": 0.0,
+        "C4_count": 0,
+        "C4_per1k": 0.0,
+        "C5_count": 0,
+        "C5_bin": 0
+      },
+      "synch_score": 0
+    }
+  ],
+  "group_summary": {
+    "C1_bin": {
+      "GM_mean": 0.0,
+      "control_mean": 0.0,
+      "GM_n": 10,
+      "control_n": 9,
+      "fisher_one_sided_p_GMhigher": 0.9999999999999964,
+      "counts": {
+        "GM_yes": 0,
+        "GM_no": 10,
+        "control_yes": 0,
+        "control_no": 9
+      }
+    },
+    "C2_per1k": {
+      "GM_mean": 0.0,
+      "control_mean": 0.0,
+      "GM_n": 10,
+      "control_n": 9
+    },
+    "C3_per1k": {
+      "GM_mean": 0.0,
+      "control_mean": 0.0,
+      "GM_n": 10,
+      "control_n": 9
+    },
+    "C4_per1k": {
+      "GM_mean": 0.0,
+      "control_mean": 0.0,
+      "GM_n": 10,
+      "control_n": 9
+    },
+    "C5_bin": {
+      "GM_mean": 0.0,
+      "control_mean": 0.0,
+      "GM_n": 10,
+      "control_n": 9,
+      "fisher_one_sided_p_GMhigher": 0.9999999999999964,
+      "counts": {
+        "GM_yes": 0,
+        "GM_no": 10,
+        "control_yes": 0,
+        "control_no": 9
+      }
+    }
+  },
+  "interaction_logistic": {
+    "predictors": [
+      "intercept",
+      "synch_score",
+      "C2_per1k",
+      "synch_score:C2_per1k"
+    ],
+    "betas": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "converged": false,
+    "n_used": 15,
+    "honesty_note": "N=24 (or fewer if any individual missing data) is GROSSLY underpowered for 4-parameter logistic (target \u226510 events per parameter = \u226540 GM cases). Betas are descriptive only. NO p-values reported because they would be misleading at this N. Use these betas as effect-size seeds for power calculations in TRACK-B prospective study."
+  },
+  "verdict": "DESCRIPTIVE pilot only; N=24 underpowered for interaction inference. Effect-size estimates for TRACK-B power planning. URB-830-symmetric: a strong pilot effect justifies TRACK-B funding; a null pilot effect is informative as effect-size upper-bound, NOT a refutation of D3.",
+  "honesty_69": [
+    "Synch_score reused from Pass-37 frozen rubric (no re-derivation, no rubric drift).",
+    "Wikipedia bio survivorship bias is a known confounder for C1 + C5 in particular.",
+    "C4 EQ text-proxy has notoriously low convergent validity (~0.1-0.3) with MSCEIT.",
+    "Logistic with 4 parameters at N\u226424 is descriptive-only by epidemiological rule-of-thumb (\u226510 events per parameter); inferential p-values intentionally omitted.",
+    "Group-summary Fisher tests reported for binary proxies (C1, C5) only; even those are at the edge of validity at this N."
+  ],
+  "_provenance": {
+    "frozen_sha256": "811a48aebe8ba70801981707740b8170b2c5b8aaad15771f04f1bbe0a0a093cd",
+    "ran_at_unix": 1778512626
+  }
+}

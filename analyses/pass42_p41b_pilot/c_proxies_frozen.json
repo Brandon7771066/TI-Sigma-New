@@ -1,0 +1,45 @@
+{
+  "pass": 42,
+  "discharges": "p41-B (Pass-38/39 N=24 pilot interaction analysis)",
+  "frozen_at": "2026-05-11",
+  "anti_hark_note": "All keyword lists below frozen BEFORE Wikipedia fetch + descriptive analysis, per Pass-38 anti-HARK protocol. SHA256 of this file recorded in results.json _provenance.",
+  "c_proxies": {
+    "C1_family_pred": {
+      "positive_pattern": "(parent|mother|father|grandparent|grandmother|grandfather|sibling|brother|sister|family).{0,80}(predict|expect|believ|knew|destined|prodigy|gifted|special|extraordinary)",
+      "negative_pattern": "(parent|mother|father|grandparent|sibling|family).{0,80}(never amount|disappoint|worried|doubted|did not believe|skeptical of|unimpressed)",
+      "scoring": "net = positive_count - negative_count; binary_hit = (net >= 1)"
+    },
+    "C2_contemplative": {
+      "lexical_field": ["meditation", "meditate", "mindful", "mindfulness", "contemplat", "silent retreat", "prayer", "praying", "journaling", "introspection", "introspective", "reflection", "reflective", "solitude", "solitary", "yoga", "zazen", "vipassana", "devotional", "monastic"],
+      "scoring": "count_of_field_hits per 1000 words"
+    },
+    "C3_metacognitive": {
+      "positive_meta_patterns": ["I was wrong", "I changed my mind", "I underestimated", "I had to revise", "self-correction", "in retrospect", "I realized I", "I admitted", "I came to see", "I revised", "I learned that I"],
+      "negative_meta_patterns": ["never wrong", "refused to admit", "doubled down", "would not concede"],
+      "scoring": "positive_meta_count per 1000 words"
+    },
+    "C4_eq": {
+      "perception": ["read the room", "sensed the mood", "noticed his unease", "noticed her unease", "could tell that"],
+      "use": ["channeled his", "channeled her", "used his grief", "used her grief", "turned anger into"],
+      "understanding": ["recognized that", "saw beneath the surface", "understood why"],
+      "management": ["composed himself", "composed herself", "kept his temper", "kept her temper", "stayed calm", "remained calm"],
+      "scoring": "sum of normalized hits across 4 branches; report branches separately"
+    },
+    "C5_altruism": {
+      "patterns": ["donated", "volunteered", "founded a charity", "founded a foundation", "founded a nonprofit", "gave away", "philanthropy", "philanthropic", "mentored", "took on at no cost", "saved [a-z ]{0,15}life"],
+      "scoring": "binary_hit = (>=1 substantive altruism mention) + count_distinct_acts"
+    }
+  },
+  "rosters": {
+    "GM_roster_pass38": [
+      "Albert Einstein", "Marie Curie", "Nikola Tesla", "Carl Jung",
+      "Bobby Fischer", "John Nash", "Srinivasa Ramanujan", "Alan Turing",
+      "Richard Feynman", "Wolfgang Pauli", "Erwin Schrodinger", "Werner Heisenberg"
+    ],
+    "control_roster_pass39": [
+      "Tom Cruise", "Brad Pitt", "Jennifer Aniston", "Reese Witherspoon",
+      "Will Smith", "Julia Roberts", "Adam Sandler", "Sandra Bullock",
+      "Matthew McConaughey", "Cameron Diaz", "Ben Affleck", "Jennifer Lawrence"
+    ]
+  }
+}
