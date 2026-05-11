@@ -1,0 +1,415 @@
+{
+  "pass": 39,
+  "rubric_source": "Pass-37 frozen rubric (imported from Pass-38 runner)",
+  "control_roster_frozen_in_code_at_pass": 39,
+  "freeze_timestamp": "2026-05-11T12:44:13Z",
+  "verdict_ladder_frozen_pre_execution": {
+    "CONFIRM_FORWARD": "P(match|control) \u2264 1/12 AND Fisher p < 0.05",
+    "PARTIAL_POS": "P(match|control) = 1-2/12 AND Fisher p in [0.05, 0.20]",
+    "NULL": "P(match|control) = 3-4/12 AND Fisher p > 0.20",
+    "PARTIAL_NEG": "P(match|control) = 5-6/12; control matches MORE than GM",
+    "REJECT_FORWARD": "P(match|control) \u2265 7/12; numerology predicts NON-GM"
+  },
+  "control_per_celebrity": [
+    {
+      "id": 1,
+      "name": "Tom Cruise",
+      "wiki": "Tom_Cruise",
+      "wiki_revid": 1353571568,
+      "rev_timestamp": "2026-05-11T02:00:11Z",
+      "first500_chars": 1204,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 9,
+      "phoneme_count": 3,
+      "letter_mod9": 9,
+      "phoneme_mod9": 3,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 2,
+      "name": "Brad Pitt",
+      "wiki": "Brad_Pitt",
+      "wiki_revid": 1353215368,
+      "rev_timestamp": "2026-05-08T22:02:58Z",
+      "first500_chars": 1201,
+      "archetype_counts": {
+        "1": 3,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 8,
+      "phoneme_count": 2,
+      "letter_mod9": 8,
+      "phoneme_mod9": 2,
+      "match": true,
+      "verdict_eligible": true
+    },
+    {
+      "id": 3,
+      "name": "Jennifer Aniston",
+      "wiki": "Jennifer_Aniston",
+      "wiki_revid": 1353544293,
+      "rev_timestamp": "2026-05-10T21:57:30Z",
+      "first500_chars": 1207,
+      "archetype_counts": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        5
+      ],
+      "top2_named": [
+        "leadership",
+        "freedom"
+      ],
+      "letter_count": 15,
+      "phoneme_count": 6,
+      "letter_mod9": 6,
+      "phoneme_mod9": 6,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 4,
+      "name": "Reese Witherspoon",
+      "wiki": "Reese_Witherspoon",
+      "wiki_revid": 1352617828,
+      "rev_timestamp": "2026-05-05T07:50:50Z",
+      "first500_chars": 1205,
+      "archetype_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 0
+      },
+      "top2_archetypes": [
+        8,
+        1
+      ],
+      "top2_named": [
+        "mastery",
+        "leadership"
+      ],
+      "letter_count": 16,
+      "phoneme_count": 5,
+      "letter_mod9": 7,
+      "phoneme_mod9": 5,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 5,
+      "name": "Will Smith",
+      "wiki": "Will_Smith",
+      "wiki_revid": 1349888812,
+      "rev_timestamp": "2026-04-19T09:50:25Z",
+      "first500_chars": 1208,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 9,
+      "phoneme_count": 2,
+      "letter_mod9": 9,
+      "phoneme_mod9": 2,
+      "match": true,
+      "verdict_eligible": true
+    },
+    {
+      "id": 6,
+      "name": "Julia Roberts",
+      "wiki": "Julia_Roberts",
+      "wiki_revid": 1353570452,
+      "rev_timestamp": "2026-05-11T01:52:03Z",
+      "first500_chars": 1205,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 1,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        5
+      ],
+      "top2_named": [
+        "leadership",
+        "freedom"
+      ],
+      "letter_count": 12,
+      "phoneme_count": 4,
+      "letter_mod9": 3,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 7,
+      "name": "Adam Sandler",
+      "wiki": "Adam_Sandler",
+      "wiki_revid": 1353048045,
+      "rev_timestamp": "2026-05-07T21:02:16Z",
+      "first500_chars": 1202,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        5
+      ],
+      "top2_named": [
+        "leadership",
+        "freedom"
+      ],
+      "letter_count": 11,
+      "phoneme_count": 4,
+      "letter_mod9": 2,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 8,
+      "name": "Sandra Bullock",
+      "wiki": "Sandra_Bullock",
+      "wiki_revid": 1351598021,
+      "rev_timestamp": "2026-04-29T00:14:43Z",
+      "first500_chars": 1206,
+      "archetype_counts": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        8
+      ],
+      "top2_named": [
+        "leadership",
+        "mastery"
+      ],
+      "letter_count": 13,
+      "phoneme_count": 4,
+      "letter_mod9": 4,
+      "phoneme_mod9": 4,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 9,
+      "name": "Matthew McConaughey",
+      "wiki": "Matthew_McConaughey",
+      "wiki_revid": 1349560852,
+      "rev_timestamp": "2026-04-17T21:52:33Z",
+      "first500_chars": 1207,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 1,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        8
+      ],
+      "top2_named": [
+        "leadership",
+        "mastery"
+      ],
+      "letter_count": 18,
+      "phoneme_count": 5,
+      "letter_mod9": 9,
+      "phoneme_mod9": 5,
+      "match": false,
+      "verdict_eligible": true
+    },
+    {
+      "id": 10,
+      "name": "Cameron Diaz",
+      "wiki": "Cameron_Diaz",
+      "wiki_revid": 1353583275,
+      "rev_timestamp": "2026-05-11T03:32:49Z",
+      "first500_chars": 1203,
+      "archetype_counts": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        2
+      ],
+      "top2_named": [
+        "leadership",
+        "cooperation"
+      ],
+      "letter_count": 11,
+      "phoneme_count": 4,
+      "letter_mod9": 2,
+      "phoneme_mod9": 4,
+      "match": true,
+      "verdict_eligible": true
+    },
+    {
+      "id": 11,
+      "name": "Ben Affleck",
+      "wiki": "Ben_Affleck",
+      "wiki_revid": 1346914435,
+      "rev_timestamp": "2026-04-03T16:48:33Z",
+      "first500_chars": 1203,
+      "archetype_counts": {
+        "1": 1,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        3
+      ],
+      "top2_named": [
+        "leadership",
+        "creativity"
+      ],
+      "letter_count": 10,
+      "phoneme_count": 3,
+      "letter_mod9": 1,
+      "phoneme_mod9": 3,
+      "match": true,
+      "verdict_eligible": true
+    },
+    {
+      "id": 12,
+      "name": "Jennifer Lawrence",
+      "wiki": "Jennifer_Lawrence",
+      "wiki_revid": 1353517488,
+      "rev_timestamp": "2026-05-10T18:50:03Z",
+      "first500_chars": 1208,
+      "archetype_counts": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 2,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "top2_archetypes": [
+        1,
+        5
+      ],
+      "top2_named": [
+        "leadership",
+        "freedom"
+      ],
+      "letter_count": 16,
+      "phoneme_count": 6,
+      "letter_mod9": 7,
+      "phoneme_mod9": 6,
+      "match": false,
+      "verdict_eligible": true
+    }
+  ],
+  "_provenance": {
+    "sha256_of_payload_pre_provenance": "f66d2a784d6b22d0f47c1aed6a6240aca437153a80578b1ff9e9477d54dbf090",
+    "git_head_at_freeze": "562e4380f8497ca22b99fd0e3fa0a02467a88270"
+  }
+}
