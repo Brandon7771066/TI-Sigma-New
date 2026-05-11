@@ -1,0 +1,45 @@
+{
+  "pass": 45,
+  "test_id": "T45-6_pd_riemann",
+  "started_at": "2026-05-11T19:59:57Z",
+  "runner_sha256": "d680e1618f31457d34e34e945f93bf673af8485c8d6ddbcdea6d2c1e99e394f9",
+  "prereg": "see runner.py docstring (frozen at commit-time)",
+  "honesty_disclosure": "Literal pre-reg filter \u03b3 \u2208 (-3, 2) yields 0 zeros from Odlyzko (smallest \u03b3_1 \u2248 14.1347). LITERAL VERDICT = INDETERMINATE_VACUOUS_FILTER. Two amendment-tests run as exploratory, NOT counting as CONFIRM/KILL of original claim.",
+  "n_zeros_loaded": 100000,
+  "gamma_min": 14.134725142,
+  "gamma_max": 74920.827498994,
+  "literal_prereg": {
+    "filter": "\u03b3 \u2208 (-3, 2)",
+    "n_in_filter": 0,
+    "verdict": "INDETERMINATE_VACUOUS_FILTER",
+    "note": "Odlyzko zeros are positive imaginary parts \u2265 14.1347; no Riemann zeros lie in (-3, 2) under standard \u03b3 convention. Pass-45 \u00a76 spec underdetermined."
+  },
+  "amendment_A1_all_zeros_vs_GUE": {
+    "n": 99999,
+    "ks_stat": 0.019259936245325293,
+    "p_value": 1.1838713914758247e-32,
+    "mean_spacing": 0.9999857239394276,
+    "median_spacing": 0.9655277875866288,
+    "min_spacing": 0.021860465815746643,
+    "max_spacing": 2.805228308179787,
+    "amendment_id": "A1-T6",
+    "amendment_status": "EXPLORATORY_NOT_PREREG",
+    "amendment_timestamp": "2026-05-11T19:59:57Z",
+    "interpretation": "Tests Hilbert-P\u00f3lya / Montgomery conjecture: Riemann zero spacings should be GUE-consistent. Established literature finds GUE agreement for large n. KS p > 0.05 \u2192 spacings consistent with GUE \u2192 standard physics. KS p < 0.05 \u2192 departure from GUE \u2192 would be a major result independent of TI Sigma."
+  },
+  "amendment_A2_first10_zeros_vs_GUE": {
+    "n": 9,
+    "ks_stat": 0.18070107552270692,
+    "p_value": 0.8825857958792757,
+    "mean_spacing": 0.9310251740925845,
+    "median_spacing": 0.8887119300190707,
+    "min_spacing": 0.5723995477804258,
+    "max_spacing": 1.4376311547266691,
+    "amendment_id": "A2-T6",
+    "amendment_status": "EXPLORATORY_NOT_PREREG_VERY_LOW_POWER",
+    "amendment_timestamp": "2026-05-11T19:59:57Z",
+    "interpretation": "Stretch interpretation of 'Perfect-Fifth' as 'first 5-related cluster'. n=9 spacings \u2192 KS power very low. Reportable but not actionable."
+  },
+  "overall_verdict": "LITERAL_PREREG_INDETERMINATE_VACUOUS_FILTER. Recommend Brandon clarify PD=(-3,2) \u2194 Riemann-coordinate mapping before re-running. Per Pass-45 \u00a711, original \u00a76 claim is now marked REQUIRES_SPEC_CLARIFICATION rather than KILL/CONFIRM.",
+  "finished_at": "2026-05-11T19:59:57Z"
+}
