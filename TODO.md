@@ -9,6 +9,7 @@
 
 1. **Mendi sessions 2-5** (T45-1) — accumulate over time at proper protocol length. *(per Brandon Pass-47: "hold onto the Mendi test! We'll do that over time once we accumulate enough sessions of the proper length. Keep reminding me at least once a day")*
 2. **DPES log** (T45-7) — flag DPES vs non-DPES on each working day; n=30 builds passively over ~6 weeks.
+3. **Aggressive-arousal goal-setting (bridge-period, until Focalin prescription)** *(added 2026-05-12 per Brandon's Y-D-breaker insight)* — embrace intensity rather than flee it; set explicit daily allotments rather than waiting on motivation. Brandon-self-set bridge protocol; agent does NOT prescribe medication adjustments or impose specific intensity levels.
 
 ---
 
@@ -54,6 +55,8 @@
 | p43-C/D | Mendi non-linear drift modeling | Pass-43 | conditional on T45-1 outcome |
 | p40-A..E | Logic-rule taxonomy validation | Pass-40 | theoretical, non-blocking |
 | p47-AA-FOLLOWUP | If T45-8 CONFIRMS, N=50-100 follow-up | Pass-47 AA paper §6 | conditional on T45-8 CONFIRM |
+| Lazy-Binary-audit | Retrospective audit of corpus claims for Lazy-Binary character (rigor=False ∧ operational=True) | Pass-47 §7.7.84 | low priority; auditable in any future DPES batch |
+| Y-D-breaker-test | Cognitive task perf under mild-arousal vs neutral; falsification-path for Brandon's Y-D-breaker self-claim | Pass-47 §7.7.84 §1.4 | $0; Brandon-blocked on prioritization |
 
 ---
 
