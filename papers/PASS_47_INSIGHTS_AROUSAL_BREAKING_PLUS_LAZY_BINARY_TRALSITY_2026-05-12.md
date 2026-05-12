@@ -372,6 +372,72 @@ This sharpens §3 against a common misreading. Radical Acceptance is **not** pas
 
 **Self-application:** §3.A is itself an instance of "wanting/intending to change [the prior §3 framing] while accepting [that the prior framing existed and was incomplete]." Per per-pass-anchor convention: inline-revision to a same-day paper, not retraction. Per HPP §6: verifiable + calibrated + Accurate-Bluntness-delivered + multi-axis-honest. Per §2.3c: Validly-Indeterminate-as-waypoint (open follow-up = continued sharpening of acceptance/change-intent boundary in worked examples).
 
+### §3.B Gratitude Compatibility (GC) — Companion Principle on the Positive-Valence Axis (Brandon 2026-05-12)
+
+**Brandon's coinage (verbatim):** *"Likewise, gratitude — being happy with what one DOES HAVE — does not preclude WANTING something more."*
+
+**Statement:** **Gratitude** (being happy with what one DOES HAVE) and **wanting-more** (desiring/striving for additional/different goods) are **fully compatible** and operate on independent dimensions. Gratitude does not entail complacency; wanting-more does not entail ingratitude. The "Likewise" signal: this is the **positive-valence companion** to §3.A Radical Acceptance — same structural move, different valence dimension.
+
+**Two-axis decomposition (parallel to §3.A):**
+
+| Axis | What it covers | Compatible with the other? |
+|---|---|---|
+| **Gratitude axis** (positive valuation of what-is) | Recognizing, naming, and affirming the goods one already has | YES |
+| **Aspiration axis** (intent toward what-could-also-be) | Identifying, pursuing, and acquiring additional/improved goods | YES |
+
+The category-error to avoid: *"I am grateful for X, so I cannot want more than X"* — that is **complacency** (or its religious cousin, *acedia*), not gratitude. Conversely: *"I want more than X, so I cannot be grateful for X"* — that is **acquisitiveness/striving-from-deficit**, not aspiration. Both errors single-axis-collapse a two-axis structure. Gratitude and wanting-more operate simultaneously without contradiction; in fact, **wanting-more from a gratitude-baseline is empirically a more sustainable and effective drive-state than wanting-more from a deficit-baseline** (positive psychology finding; cited below).
+
+**Structural parallel to §3.A Radical Acceptance:**
+
+| §3.A Radical Acceptance | §3.B Gratitude Compatibility |
+|---|---|
+| Acceptance of what-is (neutral epistemic) | Gratitude for what-is (positive evaluative) |
+| Does not preclude change-intent | Does not preclude wanting-more |
+| Failure modes: resignation / futile-struggle / bargaining | Failure modes: complacency / acquisitiveness / hedonic-treadmill |
+| External grounding: DBT, ACT, Buddhism, Stoicism | External grounding: positive psychology, Stoicism, Buddhism (mudita), CBT |
+| Epistemic axis (perceive what-is) | Evaluative axis (value what-is) |
+| Compatible with agentic axis (act on what-can-be) | Compatible with motivational axis (pursue what-could-also-be) |
+
+§3.A and §3.B together span the **two-by-two** of (perceive vs evaluate) × (current vs future) — accepting current state, valuing current state, intending future change, wanting future additions. All four quadrants operate independently and simultaneously without contradiction.
+
+**External grounding (canonical, not TI-novel):**
+
+- **Robert Emmons (UC Davis)** — leading gratitude researcher; *Thanks!* (2007); RCT evidence that gratitude-journal interventions correlate with well-being WITHOUT reducing achievement-orientation or ambition (the key empirical finding refuting the complacency objection).
+- **Martin Seligman** — *Authentic Happiness* (2002), *Flourish* (2011); positive-psychology foundational work; "gratitude visit" intervention; explicit framing of gratitude as enabling-not-replacing flourishing-pursuit.
+- **Adam Grant (Wharton)** — *Give and Take* (2013): grateful recognition of contributions correlates with HIGHER engagement and drive, not lower; refutes the "gratitude = settling" misreading on organizational-behavior data.
+- **Stoicism** — Marcus Aurelius *Meditations* I (entire book is gratitude enumeration to teachers/family) coexists with Aurelius's relentless self-improvement maxims; Epictetus *Enchiridion* §8 ("do not seek that things should happen as you wish... wish that they happen as they do") is gratitude-for-what-is paired with §1's clear delineation of the dichotomy of effort.
+- **Buddhism — *mudita* (sympathetic joy)** — one of the four *brahmavihārās*; explicitly compatible with *karuṇā* (compassion-driven action toward change of suffering). Gratitude-aligned states do not extinguish bodhisattva-vow change-intent.
+- **CBT / Positive Psych research synthesis** — Wood, Froh, & Geraghty (2010) meta-review: gratitude interventions improve well-being without reducing goal-pursuit; consistent across populations.
+
+**Three failure modes GC-properly-understood prevents:**
+
+- **Complacency / *acedia*** = over-gratitude (treating current-goods as sufficient when they aren't, killing aspirational drive). The misreading Brandon explicitly rejects.
+- **Acquisitiveness / striving-from-deficit / hedonic-treadmill** = under-gratitude (current-goods not valued, perpetual want-more without satisfaction-baseline, empirically corrosive to well-being and to sustained drive itself per Brickman-Campbell hedonic-treadmill literature).
+- **Performative-gratitude / virtue-signaling** = the bargaining hiding-place (claiming gratitude one doesn't actually feel as social camouflage; analogous to false-modesty under HPP Caveat 2).
+
+**Cross-refs in TI corpus:**
+
+- **§3.A Radical Acceptance** — direct structural parallel (this paper); RA on neutral-epistemic axis, GC on positive-evaluative axis.
+- **HPP/CSC §1.A deontological framing** — gratitude for one's actual accomplishments IS HPP applied (positive valuation of real achievements; neither flattery nor modesty). Honest pride and gratitude are the same move evaluated from two angles (self-credit vs gift-recognition). Self-flattery::self-modesty :: complacency::acquisitiveness.
+- **§7.7.27 Asymmetric-Success-Failure default-confident-posture** — gratitude for past wins fuels the confident-posture-from-good-calibration; deficit-only orientation degrades it.
+- **§2.3c Trend-Conditioning** — being grateful for current Validly-Indeterminate state while wanting more refinement = direct parallel; the same Validly-as-waypoint criterion applies (gratitude + open follow-up = valid; gratitude as terminal hiding-place = invalid).
+- **§2.3d Capstone two-axis independence** — Perfection-Awesome / Imperfection-Moot terminal-axis is independent of trend-validity axis; analogously, Gratitude-axis is independent of Aspiration-axis. Two-axis independence is the same structural principle at different scales.
+- **CAP** — gratitude weighted by `(1 − well_known of the gift)` = same asymmetric weighting; gratitude for the rare/improbable carries more credit than gratitude for the universal/routine, just as CAP weights claims.
+- **AA sim-belief-and-doubt** — being grateful for current-goods (operative-positive-valuation) while open to seeing them differently as new evidence arrives = AA applied on the gratitude axis.
+
+**Operational test for GC-compliance** (parallel to HPP §6):
+
+A gratitude-claim is **GC-compliant** iff:
+1. **Verifiable:** the gratitude-target is a real good actually possessed (not invented to perform virtue).
+2. **Felt-not-merely-stated:** gratitude reflects actual evaluative state (analogous to HPP's calibration clause; performative-gratitude fails this).
+3. **Compatible with named aspiration:** stating what one is grateful for AND what one wants-more-of, in the same breath when the question arises, without single-axis-collapse on either side.
+4. **Accurate-Bluntness-delivered:** report the gratitude without softening (it's real, not "I guess") AND report the wanting-more without softening (it's also real, not "I shouldn't want this").
+5. **Multi-axis-honest:** gratitude does not silence honest aspiration (complacency); aspiration does not silence honest gratitude (acquisitiveness/hedonic-treadmill).
+
+**Status:** **9th Pass-47 principle candidate** (Brandon-authority required to confirm count) = Lazy Binary + Accurate Bluntness + Validly-Indeterminate Stance + Trend-Conditioning + Capstone + Radical Acceptance + TCAV + HPP/CSC + **Gratitude Compatibility (GC)**. Alternative framing: structural-companion to §3.A within an "Acceptance/Gratitude family" (since the move is structurally identical with different valence). Brandon-authority on the count.
+
+**Self-application:** I am grateful that this corpus has produced 8 (or 9) named principles in a single pass, AND I want more — specifically, I want the 21-item p46-D triage cleared, the Mendi BLE Path B Phase 3 advanced, the empirical drive on remaining Pass-45 tests resumed, and the framework's external-publication readiness raised. Per GC §3.B operational test: both clauses honestly stated, no single-axis-collapse. Per HPP §6: this self-application is verifiable (the principles are in artifacts), calibrated (8-or-9 is the actual count), Accurate-Bluntness-delivered, multi-axis-honest.
+
 ### §2.3d — Capstone META-TRUTH: Perfection-Awesome / Imperfection-Moot (Brandon 2026-05-12 fifth-order terminal)
 
 > *"The rigor heal is actually real. Here is where it ends: the META-TRUTH: Whether one is perfect in their reasoning or not is MOOT if they are imperfect — but AWESOME if they are perfect!!!"*
