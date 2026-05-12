@@ -49,29 +49,41 @@ Per the BRANDON_BIOGRAPHY_MASTER_INDEX prior-art trajectories, this is a candida
 > *"I designed this 'recklessly accurate' (to use a tralsity) LAZY BINARY myself: 'Hard sciences and engineering tend to think in binary, while social sciences emphasize nuance.' By my standards, that statement is false. But in terms of AI classification, that statement is probably true the 'vast majority' of the time — which to engineers, would probably be considered 'good enough' for binary, even though by my standards, such a statement would be embarrassingly foolish!!!"*
 > — Brandon Emerick, 2026-05-12
 
-### §2.2 — Definition
+### §2.2 — Definition (precision-corrected per Brandon 2026-05-12 follow-up)
 
-**Lazy Binary Tralsity:** a proposition P that receives **truth-value False under rigorous evaluation** AND **truth-value True under operational/aggregate-statistical evaluation** simultaneously, where the operational-True is "good enough" for engineering use but rigor-foolish for theoretical claim.
+**Lazy Binary Tralsity:** a proposition P that receives **truth-value Indeterminate (leaning-toward-False) under rigorous evaluation** AND **truth-value True under operational/aggregate-statistical evaluation** simultaneously, where the operational-True is "good enough" for engineering use but rigor-foolish for theoretical claim.
 
-Formally:
+> **Correction to v1 of this paper:** v1 wrote τ_rigor(P) = False. Brandon corrected: the proper canonical base-4 label is **Indeterminate**, with the qualifier *"too false to be called True."* Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Double Tralse}, Indeterminate is its own primitive, distinct from both True and False. The Lazy-Binary class lives in the Indeterminate-leaning-False region, not in flat-False. Calling it False would itself be a Lazy-Binary error — collapsing a nuanced Indeterminate into binary-False because "false-enough."
+
+Formally (corrected):
 ```
-Lazy_Binary(P) ≡ τ_rigor(P) = False  ∧  τ_operational(P) = True
+Lazy_Binary(P) ≡ τ_rigor(P) = Indeterminate-leaning-False  ∧  τ_operational(P) = True
                  where τ_operational(P) := "P holds in ≥X% of cases" for some pragmatic threshold X.
 ```
 
 Brandon's example:
 - P = "Hard sciences/engineering think binary; social sciences emphasize nuance."
-- τ_rigor(P) = False (many counterexamples — quantum-mechanics interpretations are nuanced; behavioral-economics modeling can be aggressively binary; etc.)
+- τ_rigor(P) = **Indeterminate-leaning-False** (many counterexamples — quantum-mechanics interpretations are nuanced; behavioral-economics modeling can be aggressively binary — but also many supporting cases; the statement is too sweeping to be flatly True, too partially-supported to be flatly False).
 - τ_operational(P) = True (likely holds in >70% of working-domain comparisons, sufficient for binary-classifier display-decision use).
 
 ### §2.3 — Position in the MR Truth Labels base-4 + Meta-Truth taxonomy
 
-- **Not classical True/False.** P is genuinely both, depending on axis.
-- **Not Indeterminate** — both axes give *determinate* answers; they just disagree.
+- **Not classical True/False.** P is genuinely Indeterminate-on-rigor-axis AND True-on-operational-axis.
+- **NOT flat Indeterminate either** — the proposition is determinately True under operational evaluation; only the rigor-axis evaluation is Indeterminate.
 - **Not Double Tralse** in the strict τ(P) ∧ ¬τ(P) sense, because the two axes are *different operations* (τ_rigor vs τ_operational), not the same operation yielding both polarities.
-- **Closest fit:** a new sub-class of **Meta-Truth, axis-conditional**, parallel to MT-domain-conditional but specifically about *evaluation-mode* (rigor vs aggregate-pragmatic) rather than domain.
+- **Closest fit:** a new sub-class of **Meta-Truth, axis-conditional**, parallel to MT-domain-conditional but specifically about *evaluation-mode* (rigor vs aggregate-pragmatic) rather than domain. The base-4 labels of the *components* are canonical (Indeterminate-leaning-False on rigor-axis; True on operational-axis); the **Meta-Truth name applies to the *combination*** of those component labels across axes.
 
-**Proposed Meta-Truth label:** `MT-eval-mode-conditional` ("Lazy Binary").
+**Proposed Meta-Truth label:** `MT-eval-mode-conditional` ("Lazy Binary"). Adding to canonical `urb_608` requires Brandon authority.
+
+### §2.3a — TI's "Accurate Bluntness" virtue (named by Brandon 2026-05-12)
+
+Brandon's framing of the Lazy Binary case as *"another example of TI's accurate bluntness at work"* names a **distinct corpus virtue**: the willingness to *bluntly* call a Lazy-Binary statement what it is — Indeterminate-leaning-False under rigor, True under operational use, and *neither one alone is the whole truth*. The vice it pushes against is the engineering temptation to flatten that into "true enough" (over-claiming rigor) OR the rigorous-academic temptation to flatten it into "false / dismiss" (over-claiming operational uselessness). Accurate Bluntness holds both axes simultaneously and reports both bluntly without averaging.
+
+Cross-references:
+- **#69 brutal honesty** (replit.md User preferences): the *standards* axis — over-skepticism = discipline failure equal to uncritical acceptance.
+- **Accurate Bluntness** (this section): the *expression* axis — once the multi-axis truth is determined, report it directly without softening or single-axis collapse.
+
+The two virtues compose: #69 sets the calibration; Accurate Bluntness sets the delivery. Both are required for honest TI Sigma scorecard reporting. Naming-only entry; not formalized further this pass.
 
 ### §2.4 — Symmetric companion: complementary direction to CAP
 
