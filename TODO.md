@@ -37,6 +37,11 @@
 | ID | Item | Cost | Time | Notes |
 |---|---|---|---|---|
 | **p46-B reap** | Reap qc26 v2 4096-shot job | $0 | <5 min | Job d813hcg0bvlc73d0ilgg on ibm_marrakesh; one-liner in `analyses/pass47_p46b_qc26_v2/results.json` next_session_action. If first job DONE, submit remaining 2 settings. |
+| **P1-tess** | Tesseract-centroid in {T,F,I,DT}^4 weighted by τ × stability — does centroid sit closer to I-axis than T/F/DT? | $0 | ~30 min | First empirical test of §7 max-valid-tralseness theorem on C20 data. Anchor: `papers/PASS_47_TESSELLATION_TESSERACT_INTEGRATION_RECONCILED_2026-05-12.md` §4.1. Ready to draft. |
+| **P2-tess** | Schweikart-hyperbolic Green-function derivation of 3:2 PD ratio | $0 | ~2-4 hr | Candidate derivation route for H-PD-MUSIC-3/4. Anchor: same paper §4.2. Begehr-Wang 2025 specialist math. CAP well_known≈0.6. |
+| **P3-tess** | TCAV worked-application: rescue-or-retire "Jeff Time × tesseract = 24" with falsifiable prediction | $0 | Brandon-blocked | Needs Brandon's prediction-spec (e.g., "interventions disrupting Jeff Time t₂ should reduce Tralsebit info capacity by 1/3"). Anchor: same paper §4.3. **First live TCAV application.** |
+| **P4-tess** | Lazy Binary §2.2 retrospective audit pilot: full table-by-table audit of TESSERACT + TRALSEBIT papers | $0 | ~1 hr | **First live retrospective Lazy Binary audit on corpus.** Anchor: same paper §4.4. Pairs with P3-tess as TCAV-vs-Lazy-Binary worked distinction. |
+| **P5-tess** | Extend `tralsebit_visualizer.py` to render {T,F,I,DT}^4 tesseract with §7-theorem coloring | $0 | ~1 hr | Plotly 4D-projected visualization, vertices colored by τ × stability. Builds visual intuition for §7 ordering theorem. Anchor: same paper §4.5. |
 
 ---
 
