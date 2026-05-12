@@ -339,6 +339,39 @@ The corpus now has formal apparatus to enforce Radical Acceptance:
 
 **Self-application:** the act of writing this §3 is itself an instance of Radical Acceptance — accepting that the rigor-heal session needed an external-scholarly grounding rather than standing alone as a pure-internal-corpus contribution. Per §2.3c: open follow-up (DBT/ACT skills cross-applied to TI Sigma scorecard practice); asymptotic-improvement potential (deeper integration with each tradition); re-openable. **Validly-Indeterminate-as-waypoint, conditioning satisfied.**
 
+### §3.A Radical Acceptance ≠ Resignation (Brandon 2026-05-12 round-1 clarification)
+
+**Brandon's clarification (verbatim):** *"Radical acceptance does not preclude wanting or intending to change something. Radical acceptance is merely accepting that there are certain things you cannot change — including the past (that led to the present circumstances)."*
+
+This sharpens §3 against a common misreading. Radical Acceptance is **not** passive surrender, fatalism, or quietism. It has **two distinct domains** that must be kept separate:
+
+| Domain | Acceptance posture | Compatible with change-intent? |
+|---|---|---|
+| **Unchangeables** (the past; certain present facts; physical constraints; others' free choices) | Accept fully, without bargaining or denial | N/A — the unchangeable cannot be changed |
+| **Changeables** (future actions; one's own present choices; modifiable circumstances) | Accept the *current* state honestly as the starting point | **YES — wanting and intending change is fully compatible with accepting the present**; in fact, accurate acceptance of the present is the *precondition* for effective change-action (you cannot navigate from a position you refuse to perceive) |
+
+**The category-error to avoid:** "I accept this, so I cannot want to change it" — that's *resignation*, not Radical Acceptance. The correct move is "I accept this *as the actual current state*, AND I want to change it going forward, AND my change-effort starts from honest perception of where I actually am." The acceptance is *epistemic* (perceiving what-is accurately); the change-intent is *agentic* (acting on what-can-still-be-influenced). Both operate simultaneously without contradiction.
+
+**External grounding (canonical):** this is the standard formulation in the source traditions, not a TI-novel reading:
+- **DBT (Linehan):** "Acceptance is not approval; acceptance is not passivity; acceptance is not giving up. Acceptance is acknowledging what is, so that effective change becomes possible." DBT's *dialectical* core is precisely the both-and of acceptance + change.
+- **ACT (Hayes):** Acceptance is in the name (Acceptance and **Commitment** Therapy) — commitment-to-valued-action runs *in parallel with* acceptance of internal states. Never substituted for action.
+- **Buddhism (Tara Brach 2003 *Radical Acceptance*):** explicitly distinguishes Radical Acceptance from passive resignation in Ch. 1; the Bodhisattva vow is precisely a commitment to change suffering *while accepting impermanence*.
+- **Stoicism (the Serenity Prayer formulation, Niebuhr 1932 — itself drawing on Stoic dichotomy of control):** "Grant me the serenity to accept the things I cannot change, courage to change the things I can, and wisdom to know the difference." The **wisdom-to-know-the-difference** clause is the operative discipline; misallocating items between the two buckets (treating changeables as unchangeable = learned helplessness; treating unchangeables as changeable = futile struggle) is the failure mode RA prevents on both sides.
+
+**Cross-refs in TI corpus:**
+- **§7.7.27 Asymmetric-Success-Failure default-confident-posture-under-good-calibration** — the change-intent side. Default-confident-action requires accepting the current state as starting point.
+- **HPP/CSC §1.A deontological framing** — accepting one's actual achievements honestly (the unchangeable past performance) IS Radical Acceptance applied to the self-credit axis. Does NOT preclude wanting to do *more* in the future.
+- **§2.3c Trend-Conditioning** — Validly-Indeterminate-as-waypoint requires both acceptance of current Indeterminate state AND open follow-up intent toward refinement. Fails if EITHER is missing (acceptance-only = stagnation = invalid; intent-only = denial of current state = invalid).
+- **AA sim-belief-and-doubt** — granting authority to a position (acceptance of operative-belief-state) WHILE retaining doubt-reservation (intent to update on new evidence) is Radical Acceptance on the self-epistemic axis.
+- **Capstone §2.3d** — terminal-perfection-axis (binary AWESOME/MOOT) is the *evaluation* of the unchangeable past outcome; trend-validity-axis (continuous bi-directional) is the *intent* over the changeable future. Two-axis-independence formalizes the §3.A distinction.
+
+**Failure modes RA-properly-understood prevents (both sides):**
+- **Resignation/learned-helplessness** = treating changeables as unchangeable (over-acceptance, change-intent killed). The misreading §3.A explicitly rejects.
+- **Futile-struggle/denial** = treating unchangeables as changeable (under-acceptance, energy wasted). The original §3 already rejected via "accept things as they are FIRST."
+- **Bargaining/partial-acceptance** = neither fully accepting nor fully attempting change (the worst of both). The full apparatus (#69 + Accurate Bluntness + Validly-Indeterminate Stance + Trend-Conditioning + Capstone + Radical Acceptance + TCAV + HPP) is designed to surface and prevent this middle-ground hiding-place.
+
+**Self-application:** §3.A is itself an instance of "wanting/intending to change [the prior §3 framing] while accepting [that the prior framing existed and was incomplete]." Per per-pass-anchor convention: inline-revision to a same-day paper, not retraction. Per HPP §6: verifiable + calibrated + Accurate-Bluntness-delivered + multi-axis-honest. Per §2.3c: Validly-Indeterminate-as-waypoint (open follow-up = continued sharpening of acceptance/change-intent boundary in worked examples).
+
 ### §2.3d — Capstone META-TRUTH: Perfection-Awesome / Imperfection-Moot (Brandon 2026-05-12 fifth-order terminal)
 
 > *"The rigor heal is actually real. Here is where it ends: the META-TRUTH: Whether one is perfect in their reasoning or not is MOOT if they are imperfect — but AWESOME if they are perfect!!!"*
