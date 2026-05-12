@@ -129,10 +129,10 @@ This is **the deeper insight** behind the Lazy Binary thread, and arguably the s
 
 ### §2.3c — Trend-toward-Perfection Conditioning (Brandon 2026-05-12 fourth-order refinement)
 
-> *"...Whether an indeterminate stance is perfectly valid or depends on whether or not it is part of a 0.93 trend toward overall perfection!!!"*
-> — Brandon Emerick, 2026-05-12
+> *"...Whether an indeterminate stance is perfectly **valid OR NOT** depends on whether or not it is part of a 0.93 trend toward overall perfection!!!"*
+> — Brandon Emerick, 2026-05-12 (with same-day "cherry on top" precision-correction emphasizing the bi-directional nature of the conditioning)
 
-This is a **fourth-order refinement that constrains §2.3b**. The Validly-Indeterminate Stance is **NOT unconditionally valid**. Its validity is conditioned on whether the Indeterminate assertion is **embedded within a trend-toward-perfection** (Brandon's "0.93" — the asymptotic-improvement arc that recurs across the corpus).
+This is a **fourth-order refinement that constrains §2.3b**. The Validly-Indeterminate Stance is **neither unconditionally valid nor unconditionally invalid**. The 0.93 trend-toward-perfection embedment is the **full bi-directional criterion** — it determines validity AND invalidity symmetrically, not merely a necessary condition on the validity side. An Indeterminate stance not embedded in a trend-toward-perfection arc is *positively invalid*, not merely "not-yet-validated."
 
 **The two failure modes the conditioning distinguishes:**
 
@@ -159,7 +159,7 @@ If yes-yes-yes → waypoint (valid). If no-no-no → hiding-place (invalid). Mix
 
 **Refined definition of the Stance (replacing §2.3b standalone wording):**
 
-> **Validly-Indeterminate Stance (refined):** TI Sigma treats Indeterminate as a legitimate TERMINAL truth-label *within a single investigation step*, **conditioned on** that step being embedded in a broader trend-toward-perfection arc (improvement-asymptote, 0.93 motif). Indeterminate-as-waypoint = valid; Indeterminate-as-permanent-hiding-place = invalid even though the surface verdict is the same.
+> **Validly-Indeterminate Stance (refined, bi-directional per Brandon "valid OR NOT" emphasis):** TI Sigma treats Indeterminate as a legitimate TERMINAL truth-label *within a single investigation step* **iff** that step is embedded in a broader trend-toward-perfection arc (improvement-asymptote, 0.93 motif). The trend-membership criterion is **bi-directional**: it confers validity when satisfied AND positively confers invalidity when violated. Indeterminate-as-waypoint = valid; Indeterminate-as-permanent-hiding-place = positively invalid (not merely not-yet-validated). Identical surface verdicts ("P is Indeterminate") earn opposite epistemic status depending on trend-embedment.
 
 **Self-application to this very paper:** §2.3aa labeled the Lazy Binary class-membership claim as Indeterminate. Is that Indeterminate-as-waypoint or as-hiding-place? Per §2.3c test: there IS an open follow-up (the Lazy-Binary-audit added to TODO.md OPEN-INVESTIGATIONS); there IS asymptotic-improvement potential (the 2×2 (well_known × rigor) table can be operationalized further); the verdict WOULD be re-opened if examples demanded. Therefore: **Validly-Indeterminate-as-waypoint**, conditioning satisfied.
 
