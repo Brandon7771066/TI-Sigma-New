@@ -73,6 +73,9 @@
 ## 📋 PROJECT PRINCIPLES (added Pass 47)
 
 - **Credit Attribution Principle (CAP):** Pass-47 — `PASS_47_CREDIT_ATTRIBUTION_PRINCIPLE_2026-05-11.md`. TI Sigma earns credit for empirical wins weighted by `(1 - well_known)`. Common knowledge → ≈0 credit (vacuous); obscure-but-true → ~full credit. Symmetric for debits.
+- **Lazy Binary Tralsity:** Pass-47 — `PASS_47_INSIGHTS_AROUSAL_BREAKING_PLUS_LAZY_BINARY_TRALSITY_2026-05-12.md` §2. Class of propositions with τ_rigor=Indeterminate-leaning-False ∧ τ_operational=True. Proposed Meta-Truth label MT-eval-mode-conditional.
+- **TI's Accurate Bluntness virtue:** Pass-47 same anchor §2.3a. Delivery axis to #69's calibration axis. Once multi-axis truth determined, report both axes bluntly without single-axis collapse.
+- **Validly-Indeterminate Stance:** Pass-47 same anchor §2.3b. Indeterminate is a legitimate TERMINAL truth-label, not placeholder. Brandon: "TI can make indeterminate statements validly without clinging to being right all the time." Departure from classical 2-value / Bayesian-narrowing / publication-norm-pressure-to-resolve.
 - **#69 brutal honesty** (existing, replit.md user preferences).
 - **DPES autonomous mode** (existing, replit.md user preferences).
 - **Asymmetric-Standards #69:** over-skepticism = discipline failure equal to uncritical acceptance (existing).

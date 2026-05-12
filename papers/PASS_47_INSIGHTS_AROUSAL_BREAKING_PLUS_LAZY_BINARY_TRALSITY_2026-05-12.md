@@ -75,6 +75,58 @@ Brandon's example:
 
 **Proposed Meta-Truth label:** `MT-eval-mode-conditional` ("Lazy Binary"). Adding to canonical `urb_608` requires Brandon authority.
 
+### §2.3aa — Recursive self-application: Lazy Binary IS itself Indeterminate (Brandon 2026-05-12 third-order insight)
+
+Brandon's follow-up: *"Of course 'lazy binary' ITSELF is indeterminate."*
+
+The class-membership claim "proposition P is a Lazy Binary case" is itself Indeterminate for any given P, because:
+
+1. The operational threshold X (≥X% of cases) is not crisply defined. Is it 70%? 90%? Domain-specific?
+2. "Rigorous evaluation" is itself a graded notion, not binary.
+3. The boundary between Indeterminate-leaning-False and flat-False (where Lazy Binary lives vs where it doesn't) is itself a fuzzy region.
+
+**This does not refute the Lazy Binary class.** A class concept can be useful without crisply self-applying — see e.g. the legal concept "reasonable person" (used daily in courts; itself indeterminate at the boundary).
+
+### §2.3b — The Validly-Indeterminate Stance (NEW corpus methodological principle, Brandon 2026-05-12)
+
+> *"TI CAN MAKE INDETERMINATE STATEMENTS VALIDLY WITHOUT CLINGING TO BEING RIGHT ALL THE TIME!!!"*
+> — Brandon Emerick, 2026-05-12
+
+This is **the deeper insight** behind the Lazy Binary thread, and arguably the single most important methodological principle named in this paper.
+
+**Validly-Indeterminate Stance:** TI Sigma treats **Indeterminate as a legitimate TERMINAL truth-label**, not merely a placeholder for "I'll figure it out later" or "I have insufficient evidence yet." Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Double Tralse}, Indeterminate is a primitive on equal status with True and False. Making an Indeterminate assertion — and *stopping there* — is a complete and honest epistemic act, not an incomplete one.
+
+**What this stance permits:**
+- Asserting "P is Indeterminate" as a final-form claim, with no implicit promise to later resolve to True or False.
+- Reporting Indeterminate verdicts on TI Sigma scorecard items (e.g., the literal-pre-reg INDETERMINATE_VACUOUS_FILTER on T45-6 Pass-46) without that being treated as a failure.
+- Recognizing that some real-world propositions are *intrinsically* Indeterminate (not merely under-evidenced), and labeling them accordingly.
+
+**What this stance refuses:**
+- The frequentist-publication-bias temptation to manufacture a binary verdict where the evidence honestly supports only Indeterminate.
+- The "clinging-to-being-right" failure mode where any retraction or hedge is felt as a loss of ground.
+- The collapse of Indeterminate into "lean toward True if I want it true" or "lean toward False if I want it false."
+
+**Cross-references in the corpus:**
+- **AA-self sim-belief-and-doubt principle** (`AUTHORITY_AXIS_AA_2026-05-07.md` §3): granting operative authority while retaining doubt-reservation is the *behavioral* expression of validly-indeterminate stance — acting on a position without claiming it to be settled-True.
+- **#69 brutal honesty** + **Accurate Bluntness §2.3a**: report calibrated truth without softening; Validly-Indeterminate Stance says the *content* of that report can itself be Indeterminate without that being a failure.
+- **CAP from §7.7.83** (`PASS_47_CREDIT_ATTRIBUTION_PRINCIPLE_2026-05-11.md`): a result that is Indeterminate-with-low-well_known still earns credit-for-honest-evaluation, even though no T/F verdict is reached.
+- **MR Truth Labels canonical ruling** (`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`): the foundation. Indeterminate as primitive base-4 element is what *makes* the Validly-Indeterminate Stance available as a coherent move.
+
+**Why most frameworks forbid this stance:**
+- Classical 2-value logic: every proposition resolves to T or F; no third option.
+- Bayesian evidence-tracking: Indeterminate collapses to "wide posterior," with implicit promise of narrowing.
+- Scientific publication norms: papers that conclude "we don't know" are often unpublishable or low-cited.
+- Adversarial debate: refusing to commit is treated as evasion.
+
+**Why TI Sigma permits it:** the framework's truth-axis taxonomy explicitly includes Indeterminate as a primitive, not as a pre-resolution state. This is a genuine departure from classical / Bayesian / publication-norm logic. The Validly-Indeterminate Stance is the operational consequence.
+
+**Naming candidates considered:**
+- "Non-clinging-to-correctness" (Brandon's phrasing — captures the affective dimension)
+- "Validly-Indeterminate Stance" (chosen — captures the epistemic dimension; pairs cleanly with AA's "operative-authority")
+- "Terminal-Indeterminate" (rejected — too narrow; misses the *stance* aspect)
+
+**Open question:** is the Validly-Indeterminate Stance itself rigorously defined, or is it Indeterminate? Per the recursive structure (§2.3aa), it is Indeterminate at the boundary — which, per the Stance itself, is fine.
+
 ### §2.3a — TI's "Accurate Bluntness" virtue (named by Brandon 2026-05-12)
 
 Brandon's framing of the Lazy Binary case as *"another example of TI's accurate bluntness at work"* names a **distinct corpus virtue**: the willingness to *bluntly* call a Lazy-Binary statement what it is — Indeterminate-leaning-False under rigor, True under operational use, and *neither one alone is the whole truth*. The vice it pushes against is the engineering temptation to flatten that into "true enough" (over-claiming rigor) OR the rigorous-academic temptation to flatten it into "false / dismiss" (over-claiming operational uselessness). Accurate Bluntness holds both axes simultaneously and reports both bluntly without averaging.
