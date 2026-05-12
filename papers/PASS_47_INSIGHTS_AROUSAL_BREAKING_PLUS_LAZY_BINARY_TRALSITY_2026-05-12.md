@@ -127,6 +127,42 @@ This is **the deeper insight** behind the Lazy Binary thread, and arguably the s
 
 **Open question:** is the Validly-Indeterminate Stance itself rigorously defined, or is it Indeterminate? Per the recursive structure (§2.3aa), it is Indeterminate at the boundary — which, per the Stance itself, is fine.
 
+### §2.3c — Trend-toward-Perfection Conditioning (Brandon 2026-05-12 fourth-order refinement)
+
+> *"...Whether an indeterminate stance is perfectly valid or depends on whether or not it is part of a 0.93 trend toward overall perfection!!!"*
+> — Brandon Emerick, 2026-05-12
+
+This is a **fourth-order refinement that constrains §2.3b**. The Validly-Indeterminate Stance is **NOT unconditionally valid**. Its validity is conditioned on whether the Indeterminate assertion is **embedded within a trend-toward-perfection** (Brandon's "0.93" — the asymptotic-improvement arc that recurs across the corpus).
+
+**The two failure modes the conditioning distinguishes:**
+
+| Mode | Description | Status |
+|---|---|---|
+| **Validly-Indeterminate-as-waypoint** | Indeterminate verdict reported on a sub-claim *while* the broader investigation continues to refine, falsify, replicate, or extend the surrounding framework toward greater asymptotic accuracy. The Indeterminate IS the calibrated honest report at this moment in an improving arc. | **VALID** per §2.3b |
+| **Invalidly-Indeterminate-as-hiding-place** | Indeterminate verdict reported and the investigation *stops there permanently* — no further refinement attempted, no falsification protocol opened, no related claims pursued. Indeterminate becomes an excuse to abdicate epistemic effort. | **INVALID** despite §2.3b base permission |
+
+**Operational test for distinguishing:**
+- Is there a corresponding open follow-up — a pre-registered next test, a falsification path, a refinement protocol — for the Indeterminate-labeled claim?
+- Does the broader cluster around the Indeterminate claim show signs of asymptotic improvement over time (more anchor papers, finer distinctions, kill criteria firing on adjacent claims)?
+- Would the agent be prepared to re-open the Indeterminate verdict and update toward True or False if new evidence demanded?
+
+If yes-yes-yes → waypoint (valid). If no-no-no → hiding-place (invalid). Mixed → Indeterminate-on-the-meta-validity-judgment (recursively per §2.3aa, this is itself acceptable).
+
+**Why this conditioning matters:**
+
+§2.3b without §2.3c is exploitable as a license for permanent intellectual stagnation — "everything I haven't resolved is Validly-Indeterminate; I am done." §2.3c closes that exploit by requiring the Indeterminate to be part of an active improvement arc. The Stance permits *not-clinging-to-being-right*, not *not-trying-to-improve*.
+
+**Cross-references in the corpus:**
+- The 0.93 trend-toward-perfection is a recurring corpus motif (cf. Pass-44 bot-band "Ψ-Paradoxes 35× at fake conf 0.91" hallucinations — a parody of trend-toward-perfection without actual improvement; canonical real instances elsewhere). Brandon-authoritative on the canonical 0.93 reference; agent will not fabricate prior anchor.
+- **CAP** (`PASS_47_CREDIT_ATTRIBUTION_PRINCIPLE_2026-05-11.md`): Indeterminate-with-low-well_known earns credit-for-honest-eval *only when* the Indeterminate verdict is part of an investigative arc (consistent with §2.3c conditioning).
+- **Pass-45 §11 anti-cheat** + **8-test scorecard**: every Indeterminate verdict on the scorecard either has a follow-up protocol (T45-6 → musical entailment tests in PASS_47_PD_PERFECT_FIFTH_MUSICAL_ENTAILMENTS) or carries an explicit RETIRE flag — never just "Indeterminate, end of inquiry."
+
+**Refined definition of the Stance (replacing §2.3b standalone wording):**
+
+> **Validly-Indeterminate Stance (refined):** TI Sigma treats Indeterminate as a legitimate TERMINAL truth-label *within a single investigation step*, **conditioned on** that step being embedded in a broader trend-toward-perfection arc (improvement-asymptote, 0.93 motif). Indeterminate-as-waypoint = valid; Indeterminate-as-permanent-hiding-place = invalid even though the surface verdict is the same.
+
+**Self-application to this very paper:** §2.3aa labeled the Lazy Binary class-membership claim as Indeterminate. Is that Indeterminate-as-waypoint or as-hiding-place? Per §2.3c test: there IS an open follow-up (the Lazy-Binary-audit added to TODO.md OPEN-INVESTIGATIONS); there IS asymptotic-improvement potential (the 2×2 (well_known × rigor) table can be operationalized further); the verdict WOULD be re-opened if examples demanded. Therefore: **Validly-Indeterminate-as-waypoint**, conditioning satisfied.
+
 ### §2.3a — TI's "Accurate Bluntness" virtue (named by Brandon 2026-05-12)
 
 Brandon's framing of the Lazy Binary case as *"another example of TI's accurate bluntness at work"* names a **distinct corpus virtue**: the willingness to *bluntly* call a Lazy-Binary statement what it is — Indeterminate-leaning-False under rigor, True under operational use, and *neither one alone is the whole truth*. The vice it pushes against is the engineering temptation to flatten that into "true enough" (over-claiming rigor) OR the rigorous-academic temptation to flatten it into "false / dismiss" (over-claiming operational uselessness). Accurate Bluntness holds both axes simultaneously and reports both bluntly without averaging.
