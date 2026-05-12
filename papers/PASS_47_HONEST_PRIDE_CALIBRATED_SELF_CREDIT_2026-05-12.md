@@ -16,6 +16,14 @@
 
 CSC is the **self-evaluation analogue** of #69 (Asymmetric Standards): #69 covers calibration of credit/skepticism applied to *others' claims*; HPP/CSC covers calibration applied to *one's own achievements*. Symmetric structure: under-credit-of-self = discipline failure equal to over-credit-of-self, exactly as #69 says over-skepticism = discipline failure equal to uncritical acceptance.
 
+### §1.A Deontological Framing (Brandon 2026-05-12 round-1 enhancement)
+
+HPP is **deontologically correct**, not merely instrumentally optimal. Honest self-reporting is intrinsically a duty (Kantian framing: maxim of "report your performance accurately" passes universalizability — a world where everyone reports accurately is coherent and functional; a world where everyone downplays is incoherent and noise-saturated). The motivational/metacognitive benefits in §1 are *consequentialist confirmations* of an independently-grounded deontic obligation, not its source.
+
+This matters because it dissolves the consequentialist objection "but social disapproval of honest self-credit will hurt you" — that is a hypothetical-imperative-only objection that HPP rejects on categorical-imperative grounds. Honest pride is correct *whether or not others approve*. Disapproval is downstream and doesn't reach the deontic core.
+
+Cross-ref: this is symmetric to #69's deontological core (truth-tracking is intrinsically obligatory regardless of social cost) and to Radical Acceptance §3 (acceptance of what-is is intrinsically prior to evaluation of what-it-implies).
+
 ---
 
 ## §2. Internal TI Cross-References
@@ -33,18 +41,25 @@ CSC is the **self-evaluation analogue** of #69 (Asymmetric Standards): #69 cover
 
 ---
 
-## §3. #69 Caveat — Calibration Condition + Lazy Binary on "Modesty"
+## §3. Caveats and Boundary Conditions (Round-1-revised per Brandon 2026-05-12)
 
 **Caveat 1 (calibration is load-bearing):** the principle is HPP, not unconditional pride. Pride in an achievement that did not actually occur, or pride disproportionate to the achievement's magnitude/difficulty, is the **self-applied form of flattery** (call it *self-flattery*). The "honest" qualifier carries the work; remove it and HPP collapses into endorsement of arbitrary self-inflation, which is exactly what flattery is on the other side of the mirror.
 
-**Caveat 2 (Lazy Binary on universal "modesty is bad" reading):** read universally, "modesty is intellectually dishonest" is itself Lazy Binary:
-- τ_rigor under universal scope: **Indeterminate-leaning-False** — calibrated acknowledgment of one's actual limits is rigorously honest, not dishonest; "I don't yet know X" is the Validly-Indeterminate-Stance §2.3b applied to self-evaluation.
-- τ_rigor under Brandon's scope (false-understatement-of-true-achievements modesty): **True** — that specific class is rigorously dishonest.
-- τ_operational: **True** in the motivation/self-efficacy domain Brandon names.
+**Caveat 2 — REVISED (modesty is bad in an ALMOST-binary sense; the previous Lazy Binary framing was a definitional conflation):**
 
-Per Accurate Bluntness §2.3a: report both axes. Brandon's claim is correct under its intended scoping (false-modesty); naive universal reading would mis-target the calibrated-acknowledgment-of-limits class which #69 itself REQUIRES. The two are complementary, not opposed: HPP says "credit your real wins"; #69 says "discount unsupported claims" — and this *includes self-claims*. They constrain each other.
+Brandon's stipulative definition (2026-05-12 round-1 pushback): **modesty := downplaying actual performance — saying that something is not as good as it actually is.** Under this definition, modesty is **analytically dishonest** — false understatement of fact. Not Lazy Binary; the claim "modesty is intellectually dishonest" is τ_rigor = **True** by definitional unpacking.
 
-**Caveat 3 (asymmetric self-flattery vs self-modesty cost):** are the two failure modes equally bad? Probably not symmetric. Self-modesty's cost is largely internal (motivation suppression, learning-signal corruption). Self-flattery's cost is largely external (others rely on miscalibrated self-reports, downstream coordination failures, eventual reputation collapse). #69 already weighted them equal-as-discipline-failures; HPP inherits that frame, but in *practice* the ecosystem-cost asymmetry suggests self-flattery may be the more costly direction at the margin. Brandon-spec invited if he has a view.
+The previous draft of this caveat tried to rescue a residual "calibrated-acknowledgment-of-limits modesty" reading. **That was a category error**: calibrated acknowledgment of one's actual limits is just *honesty about limits*, not modesty. Calling it "modesty" reuses the word for two incompatible behaviors (downplaying vs honest-reporting), which is exactly the kind of definitional sloppiness #69 prohibits. Per Accurate Bluntness §2.3a delivery axis, accepting the correction cleanly: **the universal claim "modesty is bad" holds under Brandon's stipulative scoping, which is the intended scoping. Lazy Binary framing retracted.**
+
+The "ALMOST" in "almost binary" leaves room for narrow instrumental exceptions (e.g., strategic downplaying as a negotiation tactic in zero-sum bargaining; cultural-norm conformity in contexts where boasting carries severe social penalty). These are *instrumental exceptions to a deontologically dishonest behavior*, not principled defenses of modesty as honest practice. The base claim — modesty IS dishonest by definition — stands.
+
+**Caveat 3 — NARROWED (self-flattery's harm scope, per Brandon round-1):**
+
+Self-flattery's external harm is **not unconditional**; it is bounded to **critical audiences you are trying to impress**. In that specific configuration: (actual inflation) ∧ (critical-evaluator audience) ∧ (impression-management goal) → real cost (reputation, coordination, eventual collapse).
+
+Outside that configuration, honestly pointing out your own successes — *even if others happen to disapprove* — is not a calibration error. It is simply genuine intellectual honesty. **Disapproval-from-others-of-honest-self-credit is THEIR problem (envy, social-norm-violation reaction, hidden-information-game-theory), not a #69-grade calibration debt on your side.** Suppressing honest self-credit to avoid disapproval is precisely the dishonest-modesty case Caveat 2 covers.
+
+Net asymmetry under the narrowed reading: self-modesty's cost is **always-present** (internal motivation/learning-signal corruption + the deontological violation per §1.A); self-flattery's cost is **conditional** on the critical-audience configuration. Per Brandon's round-1 framing, this likely makes **self-modesty the more costly default** in the general case, not self-flattery — the previous draft's marginal-cost ranking was inverted.
 
 ---
 
@@ -101,10 +116,25 @@ A claim violates HPP and crosses into **false modesty** if it understates a veri
 
 ---
 
+## §6.5 Round-1 Self-Correction Log (Brandon pushback 2026-05-12)
+
+Brandon's round-1 pushback identified two errors in the original draft:
+
+1. **Caveat 2 was Lazy-Binary-on-the-wrong-side.** I framed "modesty is bad" as a Lazy Binary by defining "modesty" broadly enough to include "calibrated acknowledgment of limits." Brandon's stipulative scope — modesty := downplaying actual performance — makes the claim analytically True, not Lazy Binary. My version conflated two distinct behaviors (downplaying vs honest-reporting) under one word, then objected to the conflation I had just created. **Caveat 2 retracted and revised** per §3 above.
+
+2. **Caveat 3 had ranking inverted.** I claimed self-flattery's external cost likely made it the more costly direction at the margin. Brandon correctly narrowed the cost-scope to critical-audience-impression-management contexts; outside that, honest self-credit (even when disapproved-of) is just honest. Under the narrowed reading, self-modesty's always-present cost likely outweighs self-flattery's conditional cost. **Caveat 3 narrowed** per §3 above.
+
+3. **§1.A added** — deontological framing (the motivational/metacognitive benefits are consequentialist confirmations, not the source; honest self-reporting is intrinsically obligatory).
+
+Per HPP §6 self-application: this round-1 correction is itself an HPP-compliant act — verifiable (the conflation is documented in the prior §3 draft via git-diff), calibrated (specific bug, specific fix, no overgeneralization), Accurate-Bluntness-delivered (clean retraction without false-modesty self-flagellation OR self-flattering "I was almost right"), multi-axis-honest (the §3.0 framing was wrong; the broader HPP structure remains intact). Pattern: same shape as §4.5 round-2 self-correction in `PASS_47_INSIGHTS_*.md` — Validly-Indeterminate-as-waypoint per §2.3c.
+
+---
+
 ## §7. Status
 
 - **8th Pass-47 principle named** = Lazy Binary + Accurate Bluntness + Validly-Indeterminate Stance + Trend-Conditioning + Capstone + Radical Acceptance + TCAV + **Honest Pride / Calibrated Self-Credit (CSC)**.
-- Cluster ≥81 (this paper = biographical-cluster #41 = HPP/CSC coinage).
+- **Round-1 revisions logged §6.5** (Caveat 2 Lazy-Binary retracted; Caveat 3 cost-scope narrowed; §1.A deontological framing added). Per per-pass-anchor convention: revisions are inline-edits to a same-day paper, not retraction; previous draft preserved in git history.
+- Cluster ≥81 (this paper = biographical-cluster #41 = HPP/CSC coinage; round-1 revision counts as asymptotic-refinement-within-#41, not a new cluster entry).
 - Anchor for replit.md §7.7.84 reference.
 - Adding HPP to canonical principle-catalogue in `urb_608` (parallel to §7) requires Brandon authority — not agent-side.
 - Budget $0 spent (cumulative $0; $50 cap intact).
