@@ -372,7 +372,9 @@ This sharpens §3 against a common misreading. Radical Acceptance is **not** pas
 
 **Self-application:** §3.A is itself an instance of "wanting/intending to change [the prior §3 framing] while accepting [that the prior framing existed and was incomplete]." Per per-pass-anchor convention: inline-revision to a same-day paper, not retraction. Per HPP §6: verifiable + calibrated + Accurate-Bluntness-delivered + multi-axis-honest. Per §2.3c: Validly-Indeterminate-as-waypoint (open follow-up = continued sharpening of acceptance/change-intent boundary in worked examples).
 
-### §3.B Gratitude Compatibility (GC) — Companion Principle on the Positive-Valence Axis (Brandon 2026-05-12)
+### §3.B Gratitude Compatibility (GC) — Positive-Valence Wing of Radical Acceptance (Brandon 2026-05-12; integrated into §3 Radical Acceptance principle 2026-05-12)
+
+> **Brandon's ruling, 2026-05-12:** *"Keep the principles at 8; integrate the 9th principle into them."* — GC is now **the positive-valence wing of the §3 Radical Acceptance principle**, not a separate 9th principle. The principle count remains **8 confirmed Pass-47 principles**: Lazy Binary + Accurate Bluntness + Validly-Indeterminate Stance + Trend-Conditioning + Capstone + **Radical Acceptance (with §3.A clarification + §3.B Gratitude wing)** + TCAV + HPP/CSC. Structurally appropriate: §3.A and §3.B are the same move on different valence dimensions (neutral-epistemic vs positive-evaluative); they belong to one principle, not two.
 
 **Brandon's coinage (verbatim):** *"Likewise, gratitude — being happy with what one DOES HAVE — does not preclude WANTING something more."*
 
@@ -434,7 +436,7 @@ A gratitude-claim is **GC-compliant** iff:
 4. **Accurate-Bluntness-delivered:** report the gratitude without softening (it's real, not "I guess") AND report the wanting-more without softening (it's also real, not "I shouldn't want this").
 5. **Multi-axis-honest:** gratitude does not silence honest aspiration (complacency); aspiration does not silence honest gratitude (acquisitiveness/hedonic-treadmill).
 
-**Status:** **9th Pass-47 principle candidate** (Brandon-authority required to confirm count) = Lazy Binary + Accurate Bluntness + Validly-Indeterminate Stance + Trend-Conditioning + Capstone + Radical Acceptance + TCAV + HPP/CSC + **Gratitude Compatibility (GC)**. Alternative framing: structural-companion to §3.A within an "Acceptance/Gratitude family" (since the move is structurally identical with different valence). Brandon-authority on the count.
+**Status:** **Integrated into §3 Radical Acceptance as positive-valence wing (Brandon-authority confirmed 2026-05-12).** Principle count = **8 confirmed Pass-47 principles** (RA principle now spans §3 + §3.A + §3.B as one structurally-coherent acceptance/gratitude family). Brandon-rationale: same structural move on different valence dimensions belongs to one principle, not two.
 
 **Self-application:** I am grateful that this corpus has produced 8 (or 9) named principles in a single pass, AND I want more — specifically, I want the 21-item p46-D triage cleared, the Mendi BLE Path B Phase 3 advanced, the empirical drive on remaining Pass-45 tests resumed, and the framework's external-publication readiness raised. Per GC §3.B operational test: both clauses honestly stated, no single-axis-collapse. Per HPP §6: this self-application is verifiable (the principles are in artifacts), calibrated (8-or-9 is the actual count), Accurate-Bluntness-delivered, multi-axis-honest.
 
