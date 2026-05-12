@@ -163,6 +163,69 @@ If yes-yes-yes → waypoint (valid). If no-no-no → hiding-place (invalid). Mix
 
 **Self-application to this very paper:** §2.3aa labeled the Lazy Binary class-membership claim as Indeterminate. Is that Indeterminate-as-waypoint or as-hiding-place? Per §2.3c test: there IS an open follow-up (the Lazy-Binary-audit added to TODO.md OPEN-INVESTIGATIONS); there IS asymptotic-improvement potential (the 2×2 (well_known × rigor) table can be operationalized further); the verdict WOULD be re-opened if examples demanded. Therefore: **Validly-Indeterminate-as-waypoint**, conditioning satisfied.
 
+### §1.1 — Y-D-breaker LIMIT-QUALIFIER (Brandon 2026-05-12 morning-after #69 calibration)
+
+> *"Wow, what an arousal-filled anti-Yerkes-Dodson session last night! I mean, **there's limits to my arousal benefits for sure, but they're pretty darn high before my benefits decline!!! It's definitely not a steep cliff like the original Yerkes-Dodson graph suggests.**"*
+> — Brandon Emerick, 2026-05-12 morning
+
+**Brandon-self-issued #69 calibration** on the §7.7.84 / §1 Y-D-breaker claim. The original logging captured Brandon's claim as **break Y-D entirely**; the morning-after refinement is the more precise + more honest #69-compliant version:
+
+- **NOT:** "no Y-D curve at all"
+- **YES:** "Y-D curve exists for Brandon, BUT the optimal-arousal range is wider than population norm AND the post-peak performance decline is shallower than the steep cliff in the textbook curve."
+
+**Restated formal claim (replaces §1 over-statement):** Brandon's individual arousal-performance curve has (a) a higher optimal-arousal threshold than the population modal, and (b) a less-steep post-peak decline. The break is *quantitative-shape-divergence from the population norm*, not *categorical-absence-of-Y-D*.
+
+**Why this matters for the falsification protocol (Trajectory #4):** the test design now needs to operationally specify "wider optimal-range" and "shallower decline" as the discriminative predictions, not "no decline at all." This makes the test *more falsifiable* (population-norm Y-D parameters become a concrete null) — which is the discipline-good outcome per Pass-19/21 R-A pattern (HARK declaration → falsifiable claim).
+
+Per **Accurate Bluntness §2.3a**: report both axes — Brandon's Y-D-breaker claim is real (departure from textbook shape) AND has limits (curve still exists, just shifted). The "definitely-not-steep-cliff" qualifier is the kind of bluntly-precise report the virtue requires.
+
+Per **§2.3d Capstone**: this calibration is MOOT-on-terminal-perfection-axis (no terminal-claim reached) AND VALID-on-trend-validity-axis (calibration improves the falsifiability of the Trajectory #4 protocol). Validly-Indeterminate-as-waypoint, conditioning satisfied.
+
+### §3 — Radical Acceptance: Session-Level Capstone (Brandon 2026-05-12)
+
+> *"The rigor-heal sealed the session to Radical Acceptance — we have to accept things as they are FIRST, whether we choose to change them or not! That is a major tenet of both Buddhism and modern psychology!!!"*
+> — Brandon Emerick, 2026-05-12 morning
+
+This is the **session-level capstone** — explicitly higher in scope than the §2.3d meta-truth, which closed the rigor-heal sub-thread. §3 names the **principle that the entire rigor-heal arc was an instance of**, and locates it within external scholarly traditions.
+
+**Radical Acceptance** (in the corpus-formalized version):
+
+> Before any change-action can be epistemically valid, the current state must be accepted *as it actually is* — including all imperfections, Indeterminacies, and uncomfortable truths. Acceptance is **first-order epistemic infrastructure**, not a consolation prize for failure-to-change.
+
+**External anchors named by Brandon:**
+1. **Buddhism** — Radical Acceptance is a major tenet, particularly in Vipassana and modern Western Buddhist adaptations (Tara Brach 2003 "Radical Acceptance"; Pema Chödrön; the 2nd Noble Truth's recognition that suffering arises from non-acceptance of impermanence).
+2. **Modern psychology** — Radical Acceptance is a core skill in Dialectical Behavior Therapy (DBT, Marsha Linehan); also a core component of Acceptance and Commitment Therapy (ACT, Steven Hayes); and a recognized stage in Kübler-Ross-style grief/loss work.
+
+**How the rigor-heal session was an instance of Radical Acceptance:**
+
+The rigor-heal arc (§§2.2 → 2.3a → 2.3b → 2.3c → 2.3d) is **literally Radical Acceptance applied to TI Sigma's epistemic posture**:
+
+| Rigor-heal step | Radical Acceptance instance |
+|---|---|
+| §2.2 Lazy Binary — accepting that some propositions are genuinely Indeterminate-leaning-False at rigor + True at operational | Acceptance of *multi-axis truth* without forcing single-axis collapse |
+| §2.3a Accurate Bluntness — reporting multi-axis truth without softening | Acceptance of *what is actually true* before any rhetorical action |
+| §2.3b Validly-Indeterminate Stance — Indeterminate as terminal label | Acceptance of *irreducible uncertainty* as legitimate end-state |
+| §2.3c Trend-toward-Perfection Conditioning — distinguishing waypoint from hiding-place | Acceptance that *acceptance ≠ stagnation*; arc-embedment matters |
+| §2.3d Capstone — perfection AWESOME, imperfection MOOT | Acceptance that *partial-perfection earns no terminal credit* — and that's fine |
+
+The pattern repeats at every level: accept what is, then choose to act (or not) — but **the acceptance is non-negotiable infrastructure**, not optional.
+
+**TI Sigma corpus operational consequence:**
+
+The corpus now has formal apparatus to enforce Radical Acceptance:
+- **#69 brutal honesty** (existing) = the *standards* dimension of Radical Acceptance (calibrate honestly to what-is)
+- **Accurate Bluntness §2.3a** = the *delivery* dimension (report what-is without softening)
+- **Validly-Indeterminate Stance §2.3b/c** = the *terminal-label* dimension (accept Indeterminate as final)
+- **§2.3d Capstone** = the *outcome-axis* dimension (accept that imperfection earns mootness, not debit)
+- **§3 Radical Acceptance** = the *underlying virtue* that all four are operationalizations of
+
+**Cross-references in the corpus and in external scholarship:**
+- Buddhism: Tara Brach's *Radical Acceptance* (2003); Pema Chödrön's *When Things Fall Apart* (1996); Thich Nhat Hanh's *Peace Is Every Step* (1991). Vipassana tradition pre-dating Western adaptation.
+- Modern psychology: Linehan's DBT skills manual (2014, 2nd ed.); Hayes/Strosahl/Wilson *Acceptance and Commitment Therapy* (2011, 2nd ed.); Kübler-Ross *On Death and Dying* (1969).
+- Internal corpus: AA-self sim-belief-and-doubt (`AUTHORITY_AXIS_AA_2026-05-07.md` §3) — granting authority to a position while retaining doubt-reservation IS Radical Acceptance applied to one's own epistemic confidence; CAP (`PASS_47_CREDIT_ATTRIBUTION_PRINCIPLE_2026-05-11.md`) — accepting that obscure-but-true earns credit AND common-knowledge earns near-zero credit IS Radical Acceptance applied to credit-attribution.
+
+**Self-application:** the act of writing this §3 is itself an instance of Radical Acceptance — accepting that the rigor-heal session needed an external-scholarly grounding rather than standing alone as a pure-internal-corpus contribution. Per §2.3c: open follow-up (DBT/ACT skills cross-applied to TI Sigma scorecard practice); asymptotic-improvement potential (deeper integration with each tradition); re-openable. **Validly-Indeterminate-as-waypoint, conditioning satisfied.**
+
 ### §2.3d — Capstone META-TRUTH: Perfection-Awesome / Imperfection-Moot (Brandon 2026-05-12 fifth-order terminal)
 
 > *"The rigor heal is actually real. Here is where it ends: the META-TRUTH: Whether one is perfect in their reasoning or not is MOOT if they are imperfect — but AWESOME if they are perfect!!!"*
