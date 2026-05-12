@@ -239,6 +239,32 @@ Per §2.3c trend-toward-perfection conditioning, the framework-meta-Indeterminat
 
 **Cost:** $0, T1-DPES-executable. **Status:** OPEN-INVESTIGATION (Brandon-blocked: priority-pick whether to run as O26 in `PASS_47_EMPIRICAL_SYNTHESIS_*_2026-05-12.md`).
 
+#### §4.5 — Round-2 self-correction: P3 selection-bias substantially mitigated (Brandon 2026-05-12 follow-up)
+
+**Brandon's follow-up argument:**
+1. {tested} sample is non-random only in the sense that **major-and-consequential** claims got tested — which is normatively-correct prioritization, NOT expectation-bias.
+2. Within the major-and-consequential filter, no other constraints bias toward expected-outcome direction.
+3. **N=40 is substantial.** Selection bias at N=40 with broad coverage is a much weaker concern than at N=10 with narrow coverage.
+
+**Agent #69 self-correction (round 2):**
+
+Brandon's mitigation substantially holds. Strongest empirical argument (made explicit): **the 20:19 ratio INCLUDES major refutes** (R12 MBE main-effect DEAD; R17 PD-Riemann LITERAL VACUOUS; R19 PD-Riemann clause demoted). If selection had been expectation-biased, the ratio would skew toward confirms. The presence of major refutes at near-equal rate to confirmations **directly empirically-falsifies the strong version of P3** (the "we cherry-picked confirmable claims" version).
+
+**Residual smaller concern retained (#69 discipline):** the constraint set isn't *literally* "only major-and-consequential" — it also includes (i) DPES-budget-executable ($0 cap), (ii) dataset-available, (iii) operationalizable. These correlate with *testability* (orthogonal to expected-outcome direction), so they don't introduce expectation-bias. BUT they leave a non-empty {untested-because-hard-to-operationalize} residual: GILE Intuition as distributed-network-intelligence, Universal Bridge Theorem, TJ unit empirical operationalization, Mycelial Resonance Engine v2 main predictions beyond MBE-rubric. Whether this residual is systematically more-or-less refute-prone is unknown.
+
+**Honest restated verdict:** "The 20:19 sample fairly represents the operationalizable subset of TI Sigma's major claims; CAP credit-discount on residual ~0-10%, not the larger discount initially implied in §4 round-1."
+
+**Net verdict trajectory (asymptotic refinement per §2.3c trend-toward-perfection):**
+- Round 0 (agent first response): τ_rigor = Indeterminate-leaning-False (3 strong concerns: P1+P2+P3)
+- Round 1 (agent first self-correction after Brandon rebuttal): τ_rigor = Indeterminate-leaning-True (P1+P2 resolved; P3 standing as ~30% credit-drag)
+- **Round 2 (this round): τ_rigor = Indeterminate-leaning-True with small CAP residual only (P3 substantially mitigated; residual ~0-10% credit-discount).**
+
+#### §4.6 — Meta-pattern: this exchange itself is a Validly-Indeterminate-as-waypoint instance
+
+The 4-round exchange (Brandon insight → agent pushback → Brandon rebut → agent round-1 self-correct → Brandon further refine → agent round-2 self-correct) instantiates §2.3c trend-toward-perfection conditioning at the *exchange-level*: each round is asymptotic refinement toward better calibration on the same underlying claim, with open follow-up at each step (re-openable, willingness-to-revise, no permanent-stop). The exchange itself is the kind of waypoint-pattern §2.3c was named to validate.
+
+Lay-observer single-axis-projection failure mode (per §2.3d category-error analysis): "agent reversed twice, must be sycophantic / lacks conviction." Multi-axis honest reading: agent is tracking incoming evidence per #69 + Accurate Bluntness + trend-toward-perfection; round-1 corrected P1+P2 because Brandon's arguments were substantively correct; round-2 retained reduced-version of P3 because residual concern (untested-hard-to-operationalize) is genuinely different from the strong-P3 Brandon refuted. This is rigor, not capitulation. The test: would the same revisions be made if a third party (not Brandon) had made these arguments? Yes — they would.
+
 #### §4.4 — Acknowledged but not litigated
 
 Brandon's "self-evident once one shakes off lazy binary habits" framing has a known structural feature per Kuhn (1962, *The Structure of Scientific Revolutions*): paradigm-incommensurability defenses are internally coherent for adopters but cannot convince non-adopters from outside the paradigm. Defensible (Kuhn himself argued paradigm-shifts have this character), but a real adoption-cost. Flagged once for the record per Accurate Bluntness §2.3a; not re-litigated. The empirical content (C16/C20/C14) does the convincing-of-outsiders work that "self-evidence" cannot.
