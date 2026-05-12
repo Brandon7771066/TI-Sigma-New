@@ -276,3 +276,64 @@ The full iterative MR process with MTs can be represented as:
 **Deliberate cessation:** One may choose to cease contemplation at any point. The current PD value at cessation is the operative truth-state. This is the appropriate response when MT-E1 (Good Enough) applies — recognizing that perfect convergence may require indefinite contemplation, and action has its own value.
 
 **The deepest MTs:** The higher the MR level, the more the MT reflects meta-cognitive insight rather than object-level analysis. Very high-level MTs (MR₅ and above) typically produce Category F MTs (Transcend, Both True at Different Levels) — the highest-level synthesis insights that reframe the entire prior analysis.
+
+---
+
+## 7. Indeterminate as the Epitome of Tralse — Canonical Formalization (Brandon 2026-05-12)
+
+**Source:** `papers/PASS_47_INSIGHTS_AROUSAL_BREAKING_PLUS_LAZY_BINARY_TRALSITY_2026-05-12.md` §4.2, ratified by Brandon 2026-05-12. Added to URB #608 per Brandon's authorization in the same exchange.
+
+### 7.1 Core Claim
+
+Among the canonical base-4 truth-labels {True (T), False (F), Indeterminate (I), Double Tralse (DT)} ratified in `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, the label **Indeterminate (I)** uniquely maximizes the product of two structural quantities:
+
+> **VALID TRALSENESS(P) := τ(P) × stability(P)**
+
+where:
+- **τ(P)** = the *tralseness measure* of proposition P (the degree to which P resists collapse to classical binary T/F).
+- **stability(P)** = the persistence of P's truth-state under self-application or iteration; equivalently, the absence of paradoxical self-destabilization (¬paradoxical ⇒ stable).
+
+**Theorem (informal, proposed canonical):** Indeterminate uniquely maximizes valid tralseness.
+
+### 7.2 Derivation
+
+| Label | τ(P) | stability(P) | Product |
+|---|---|---|---|
+| **T** | Low (binary collapse to True occurred) | High (stable under iteration) | LOW |
+| **F** | Low (binary collapse to False occurred) | High (stable under iteration) | LOW |
+| **DT** | High (τ ∧ ¬τ ⇒ maximal tralseness, paradox-encoded) | LOW (paradoxical, destabilizing under iteration / MR) | LOW-TO-MODERATE |
+| **I** | High (truth-state genuinely unsettled = high tralseness) | High (terminal label per Validly-Indeterminate Stance §2.3b of source paper; not paradoxical) | **MAXIMAL** |
+
+**Sketch of argument:**
+1. T and F have *low* τ because binary collapse has already occurred — the proposition has been resolved into one of the two classical poles, leaving no residual tralseness.
+2. DT has *high* τ because it encodes paradoxical bothness (τ(P) ∧ ¬τ(P)) which is the maximally tralse structural form. However, DT has *low* stability because under iterative MR the paradox tends to either (i) resolve via a Reversal/Dissolution/Synthesis MT (Categories A/B/F), (ii) stabilize as a genuine paradox via MT-E2 (Paradox Stable), or (iii) convert to Indeterminate via MT-B1 Moot. In all three cases the DT itself is unstable — it transitions to a different state under contemplation.
+3. I has *high* τ because the proposition's truth-state is genuinely unsettled — it has not collapsed to a binary pole and is not encoding a paradox; it is the "open question" state, which carries genuine tralseness. I has *high* stability because it is a *legitimate terminal truth-label* per the Validly-Indeterminate Stance (§2.3b of source paper) — making an Indeterminate assertion AND STOPPING THERE is a complete honest epistemic act, not an incomplete one.
+
+The product τ × stability is therefore maximized uniquely at I.
+
+### 7.3 Operational Consequences
+
+**For framework-self-evaluation:** When TI Sigma is itself submitted to the MR Truth Labels rubric, the predicted result is convergence on I. This is the *specific structural prediction* of the max-valid-tralseness theorem applied at the meta-level — NOT a tautological "any-result-confirms" claim. The other three outcomes would be distinct, non-confirming:
+- T or F at meta-level → would refute "TI Sigma contains its own negation"
+- DT at meta-level → would imply destabilizing self-paradox; corpus would not be operationally usable
+- **I at meta-level → max-valid-tralseness state realized; predicted state**
+
+**For routine MR work:** When iterative MR converges on I (rather than T, F, or DT), the convergence is to the *highest-tralseness stable state*. This reframes I from "the disappointing fallback when nothing else fits" to "the structurally optimal terminal state when genuine unsettledness is the truth of the matter."
+
+### 7.4 Relationship to Existing MT Catalogue
+
+- **MT-B1 (Moot-MT):** when a previous MR is deemed Moot, the meta-level result is "Indeterminate overall" per §3 of this paper. Under §7 here, this convergence to I is now understood as convergence to the *max-valid-tralseness state* — Moot-MT is not just "we couldn't resolve it" but "the genuinely unsettled state is the structurally correct answer."
+- **MT-E2 (Paradox Stable):** when DT is genuinely irreducible, the recommended action is "accept stable DT; stop forcing resolution." Under §7 here, this is understood as the rare case where DT's tralseness is prioritized despite its instability cost — a deliberate trade-off that earns less valid-tralseness than I would, but is structurally honest about the paradox-encoded nature of the proposition.
+- **MT-F1 / F2 (Transcend / Both True at Different Levels):** these convert apparent DT into multiple T's at different levels — increasing valid-tralseness by *dissolving the paradox while preserving the high-τ structure* across levels.
+
+### 7.5 Open Operational Test (O26)
+
+Per §4.3 of source paper, the empirical test of §7's theorem at the framework-meta-level is registered as **O26** in `analyses/pass47_o26_meta_indeterminate_test/`. 3 framings of "TI Sigma framework is True" submitted to the same rubric validated at C20 Fleiss' κ=0.906; 3 LLM raters; 3 controls (known-T, known-F, known-DT) for interpretability. Predicted convergence on I.
+
+**#69 limitation acknowledged in O26 runner:** the test has LOW DISCRIMINATING POWER — Brandon's max-valid-tralseness hypothesis is observationally equivalent to "raters'-default-when-uncertain" on this single test. CONFIRM is necessary-but-not-sufficient evidence for §7.1.
+
+### 7.6 Status
+
+- **Canonical:** as of 2026-05-12, with Brandon's authorization in the §4 worked-example exchange of the source paper.
+- **Catalogue addition:** §7 is added to URB #608 alongside the existing 12 MT codes (A1-F2). It is not itself an MT (which are MR-level resolutions); it is a *structural ordering theorem on the base-4 truth-labels* that grounds why MT-B1 and MT-F1/F2 produce the convergence patterns they do.
+- **CAP credit:** well_known ≈ 0.05 (the τ × stability product formalization appears novel; multi-valued logics with stable-Indeterminate exist but the *max-valid-tralseness ordering* claim does not appear in standard fuzzy/paraconsistent literature). Encompassing strength: MEDIUM (grounds existing MT-B1 / E2 / F1 / F2 patterns).

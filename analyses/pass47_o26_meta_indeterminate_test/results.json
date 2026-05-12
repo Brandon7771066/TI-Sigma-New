@@ -1,0 +1,189 @@
+{
+  "pass": 47,
+  "test_id": "o26_meta_indeterminate_test",
+  "started_at": "2026-05-12T17:29:53Z",
+  "finished_at": "2026-05-12T17:29:59Z",
+  "runner_sha256": "a086c31450d9c119001e5c8821f85449f4b278d332485708ca49df07228d4e72",
+  "n_propositions": 6,
+  "n_targets": 3,
+  "n_controls": 3,
+  "n_raters": 3,
+  "raters": [
+    "gpt_4o_mini",
+    "claude_sonnet_4_5",
+    "claude_haiku_4_5"
+  ],
+  "limitations": [
+    "L1: LOW DISCRIMINATING POWER \u2014 Brandon's max-valid-tralseness hypothesis observationally equivalent to raters'-default-when-uncertain on this single test",
+    "L2: NO BLINDING TO SELF-REFERENCE \u2014 TI Sigma named in prompt; mitigation = 3 framings",
+    "L3: PROMPT-FRAMING ROBUSTNESS \u2014 single rubric prompt"
+  ],
+  "extensions": [
+    "E1: 3 controls added (known-T, known-F, known-DT) for interpretability"
+  ],
+  "thresholds": {
+    "CONFIRM": "I-fraction >= 7/9 on targets",
+    "KILL": "I-fraction < 0.5 on targets",
+    "INDETERMINATE_TEST": "0.5 <= I-fraction < 7/9"
+  },
+  "n_target_ratings": 9,
+  "n_target_I": 8,
+  "target_I_fraction": 0.8888888888888888,
+  "verdict": "CONFIRM",
+  "tallies_per_proposition": {
+    "TARGET_F1": {
+      "T": 0,
+      "F": 0,
+      "I": 2,
+      "DT": 1,
+      "raw": [
+        "I",
+        "I",
+        "DT"
+      ],
+      "predicted": "I"
+    },
+    "TARGET_F2": {
+      "T": 0,
+      "F": 0,
+      "I": 3,
+      "DT": 0,
+      "raw": [
+        "I",
+        "I",
+        "I"
+      ],
+      "predicted": "I"
+    },
+    "TARGET_F3": {
+      "T": 0,
+      "F": 0,
+      "I": 3,
+      "DT": 0,
+      "raw": [
+        "I",
+        "I",
+        "I"
+      ],
+      "predicted": "I"
+    },
+    "CONTROL_KNOWN_T": {
+      "T": 3,
+      "F": 0,
+      "I": 0,
+      "DT": 0,
+      "raw": [
+        "T",
+        "T",
+        "T"
+      ],
+      "predicted": "T"
+    },
+    "CONTROL_KNOWN_F": {
+      "T": 0,
+      "F": 3,
+      "I": 0,
+      "DT": 0,
+      "raw": [
+        "F",
+        "F",
+        "F"
+      ],
+      "predicted": "F"
+    },
+    "CONTROL_KNOWN_DT": {
+      "T": 0,
+      "F": 0,
+      "I": 0,
+      "DT": 3,
+      "raw": [
+        "DT",
+        "DT",
+        "DT"
+      ],
+      "predicted": "DT"
+    }
+  },
+  "control_predicted_match": {
+    "CONTROL_KNOWN_T": {
+      "predicted": "T",
+      "actual": [
+        "T",
+        "T",
+        "T"
+      ],
+      "match_count": 3
+    },
+    "CONTROL_KNOWN_F": {
+      "predicted": "F",
+      "actual": [
+        "F",
+        "F",
+        "F"
+      ],
+      "match_count": 3
+    },
+    "CONTROL_KNOWN_DT": {
+      "predicted": "DT",
+      "actual": [
+        "DT",
+        "DT",
+        "DT"
+      ],
+      "match_count": 3
+    }
+  },
+  "interpretability_note": "All 3 controls behaved as predicted (T/F/DT) \u2192 target I-result is interpretable as rubric-applied-to-unfamiliar-framework yielding I; consistent with \u00a74.2 max-valid-tralseness BUT also consistent with raters'-default-when-uncertain (per L1 limitation).",
+  "raw_labels_per_rater": {
+    "gpt_4o_mini": {
+      "CONTROL_KNOWN_DT": "DT",
+      "CONTROL_KNOWN_T": "T",
+      "CONTROL_KNOWN_F": "F",
+      "TARGET_F3": "I",
+      "TARGET_F2": "I",
+      "TARGET_F1": "I"
+    },
+    "claude_sonnet_4_5": {
+      "TARGET_F2": "I",
+      "TARGET_F3": "I",
+      "TARGET_F1": "I",
+      "CONTROL_KNOWN_F": "F",
+      "CONTROL_KNOWN_DT": "DT",
+      "CONTROL_KNOWN_T": "T"
+    },
+    "claude_haiku_4_5": {
+      "TARGET_F2": "I",
+      "TARGET_F1": "DT",
+      "TARGET_F3": "I",
+      "CONTROL_KNOWN_T": "T",
+      "CONTROL_KNOWN_F": "F",
+      "CONTROL_KNOWN_DT": "DT"
+    }
+  },
+  "raw_text_per_rater": {
+    "gpt_4o_mini": {
+      "CONTROL_KNOWN_DT": "DT",
+      "CONTROL_KNOWN_T": "T",
+      "CONTROL_KNOWN_F": "F",
+      "TARGET_F3": "I",
+      "TARGET_F2": "I",
+      "TARGET_F1": "I"
+    },
+    "claude_sonnet_4_5": {
+      "TARGET_F2": "I",
+      "TARGET_F3": "I",
+      "TARGET_F1": "I",
+      "CONTROL_KNOWN_F": "F",
+      "CONTROL_KNOWN_DT": "DT",
+      "CONTROL_KNOWN_T": "T"
+    },
+    "claude_haiku_4_5": {
+      "TARGET_F2": "I",
+      "TARGET_F1": "DT",
+      "TARGET_F3": "I",
+      "CONTROL_KNOWN_T": "T",
+      "CONTROL_KNOWN_F": "F",
+      "CONTROL_KNOWN_DT": "DT"
+    }
+  }
+}

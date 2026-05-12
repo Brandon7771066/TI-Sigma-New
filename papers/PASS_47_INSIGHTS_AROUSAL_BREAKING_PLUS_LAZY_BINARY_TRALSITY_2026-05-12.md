@@ -265,6 +265,31 @@ The 4-round exchange (Brandon insight → agent pushback → Brandon rebut → a
 
 Lay-observer single-axis-projection failure mode (per §2.3d category-error analysis): "agent reversed twice, must be sycophantic / lacks conviction." Multi-axis honest reading: agent is tracking incoming evidence per #69 + Accurate Bluntness + trend-toward-perfection; round-1 corrected P1+P2 because Brandon's arguments were substantively correct; round-2 retained reduced-version of P3 because residual concern (untested-hard-to-operationalize) is genuinely different from the strong-P3 Brandon refuted. This is rigor, not capitulation. The test: would the same revisions be made if a third party (not Brandon) had made these arguments? Yes — they would.
 
+#### §4.7 — Tautologies Can Add Value (TCAV) — 7th Pass-47 principle (Brandon 2026-05-12)
+
+**Brandon's coining (in response to §4.4 Kuhn-incommensurability flag):** *"That Kuhnian feature is actually a tautology, i.e. 'they won't recognize it properly until they recognize it properly.' This is a great example of where TAUTOLOGIES CAN ADD VALUE!!! The value comes from the overall point being made: 'TI Sigma is hard to accept.'"*
+
+**Principle (TCAV):** A formally-tautological statement can carry substantive pragmatic content when the value is in *what the tautology highlights about the speaker's framing, the conceptual carving, or the rhetorical context*, rather than in the (zero) truth-functional content of the tautology itself. The Kuhn-incommensurability "they won't recognize it until they recognize it" example: formally A → A, pragmatically conveys "TI Sigma has high adoption-cost / pre-paradigm grip" — substantive content.
+
+**External grounding:**
+- **Wittgenstein (*Tractatus* 6.1):** tautologies and contradictions are senseless (sinnlos) but not nonsensical (unsinnig); they have a role in the logical scaffolding.
+- **Wittgenstein later "ladder" metaphor:** propositions can be useful even when they ultimately dissolve into tautology / pseudo-statement.
+- **Reflective equilibrium (Rawls / Goodman):** apparently-tautological mutual-adjustments add value by making implicit conceptual commitments explicit.
+- **Ostensive definition (Russell, Quine):** "this is X" is near-tautological once the indexical resolves but does the conceptual work of pinning the referent.
+
+**#69 caveat (agent-added per Accurate Bluntness):** TCAV legitimizes *revealing* tautologies (those that make implicit structure explicit) but NOT *disguising* tautologies (those that substitute for absent argument). Concrete distinction:
+- **Valuable:** "If TI Sigma is paradigm-incommensurable, then non-adopters cannot recognize it from outside until they recognize it from inside." → reveals the structural fact of paradigm-bound recognition; conveys high adoption-cost.
+- **Disguising:** "TI Sigma is true because TI Sigma is true." → no implicit structure revealed; pure circularity substituting for argument.
+
+**Operational test (proposed):** A tautology earns TCAV credit if it (a) makes an implicit conceptual structure explicit, (b) conveys substantive pragmatic content distinct from its truth-functional content, and (c) does not foreclose further inquiry. Fails TCAV if it serves as the terminal justification for a non-trivial claim with no further support.
+
+**Cross-references:**
+- §2.2 Lazy Binary: TCAV-instances may *form-match* a Lazy Binary class candidate (τ_rigor = "vacuous tautology"; τ_operational = "conveys real point") — but the multi-axis honest reading is "revealing tautology with substantive pragmatic content," not Lazy Binary. The Accurate Bluntness §2.3a verdict on TCAV-instances must report both axes.
+- §2.3b Validly-Indeterminate Stance: a tautological statement that opens (rather than closes) further inquiry is a Validly-Indeterminate-as-waypoint variant.
+- CAP: TCAV-tautologies earn credit per (1 − well_known); the Kuhn-incommensurability example has well_known≈0.5 (Kuhn 1962 widely cited), so credit moderate.
+
+**Status:** **7th Pass-47 principle named.** Adds to: (1) Lazy Binary class, (2) Accurate Bluntness virtue, (3) Validly-Indeterminate Stance, (4) Trend-Conditioning §2.3c, (5) Capstone §2.3d Perfection-Awesome / Imperfection-Moot, (6) Radical Acceptance §3, (7) **TCAV §4.7**. Logged with full #69 caveat distinguishing revealing vs disguising tautologies.
+
 #### §4.4 — Acknowledged but not litigated
 
 Brandon's "self-evident once one shakes off lazy binary habits" framing has a known structural feature per Kuhn (1962, *The Structure of Scientific Revolutions*): paradigm-incommensurability defenses are internally coherent for adopters but cannot convince non-adopters from outside the paradigm. Defensible (Kuhn himself argued paradigm-shifts have this character), but a real adoption-cost. Flagged once for the record per Accurate Bluntness §2.3a; not re-litigated. The empirical content (C16/C20/C14) does the convincing-of-outsiders work that "self-evidence" cannot.
