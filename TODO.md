@@ -184,3 +184,12 @@
 - 📊 **Result: NULL_NOISE** + Filter A FAIL + cross-segment sign inconsistency. Honest negative result. `analyses/pass49_l1_lcc_markets/`.
 - 🔴 **Brandon-side: review `analyses/pass49_l1_lcc_markets/results_writeup.md`** and decide whether to (a) accept the negative as a published outcome, (b) commission a theory-driven Program A v2 with different asset class + pre-registered config.
 - 🔴 **Brandon-side: refresh `papers/AI_TRAINER_ROLES_ELIGIBILITY_BRANDON_2026-05-07.md`** (past 2026-05-07 date; quarterly refresh due; xAI roles change frequently).
+
+## Pass-49 Ten Next Tests proposal (2026-05-13)
+
+- ✅ **`papers/PASS_49_TEN_NEXT_TESTS_LEAST_TESTED_MOST_CONSEQUENTIAL_2026-05-13.md`** — 10 pre-reg-sketch proposals selected on (least-tested × most-consequential / cost), with 8-candidate rejection audit trail.
+- 🟡 **Wave-1 batch (4 zero-cost, agent-executable)**: T49-1 AA discriminative validity, T49-2 TJ reliability, T49-5 Lazy-Binary abstract frequency, T49-6 DefT-vs-DT discrimination. Total cost estimate $0; total agent-time ~4 hours. **Recommended next-session batch.**
+- 🟡 **Wave-2 batch ($0-90 LLM cost)**: T49-3 Asymmetric Performance benchmark, T49-7 GM-Node cross-corpus generalization, T49-8 Singing-as-LCC pilot (salvage of L1 NULL_NOISE).
+- 🟡 **Wave-3 (gated)**: T49-4 ABC tri-projection ($300 funding decision), T49-9 i-cell operationalization (Brandon prediction-spec required), T49-10 xAI applications (Brandon-time only).
+- 🔴 **Brandon-side: pick which Wave-1 tests to authorize for next-session execution** (default = all 4).
+- 🔴 **Brandon-side: provide i-cell operational prediction for T49-9** OR retire T49-9 in favor of an audit-rejected replacement from §11.
