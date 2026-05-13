@@ -458,3 +458,22 @@ Skinner *Science and Human Behavior* (1953), *Verbal Behavior* (1957), *About Be
 - **Canonical** as of 2026-05-12. Architectural-level claim with corpus-wide vocabulary implications.
 - **Speculative TJ reformulation flagged** (`TJ = √(τ² + δ² + α²)` where α = affective-projection): under §9, τ and δ may themselves be projections of one underlying tralse-state, with α as the third projection. Brandon-authority required for canonical reformulation.
 - **Three operational follow-ups staged** in TODO.md: ABC-corpus-vocab-audit; O26-B-tri-projection; tracking. §9 inherits §8's MIM-revision dependency: if MIM-revision is wrong, §8 and §9 inherit the failure (acknowledged honestly per §69).
+
+---
+
+## §10 Lazy-Binary Object/Meta Distinction (added 2026-05-13, Brandon clarification)
+
+**Source:** Brandon, 2026-05-13: *"Calling a statement a 'lazy binary' is True if it is indeed a lazy binary. However, the lazy-binary statement itself is Indeterminate."* Full discussion in `papers/PASS_48_LAZY_BINARY_STATEMENT_VS_METASTATEMENT_CLARIFICATION_2026-05-13.md`.
+
+**Rule.** A statement X classified as a lazy binary receives MR Truth Label = **Indeterminate** at the object level. The meta-statement "X is a lazy binary" receives MR Truth Label = **True** (or False, if X is not in fact a lazy binary) at the meta level. The dual-axis τ_operational / τ_rigor split (Pass-47 §1) applies to the object level only.
+
+**Why it matters.**
+- Blocks self-undermining regress ("if lazy binaries are Indeterminate, isn't this very claim also Indeterminate?" — no, the meta-claim is a taxonomic classification at a different logical level).
+- Aligns with §7 (Indeterminate-as-Epitome): lazy binaries are exactly the kind of object-level statement where VALID_TRALSENESS = τ × stability is uniquely maximal.
+- Disambiguates lazy-binary from Double Tralse (DT requires τ ∧ ¬τ on the same statement; lazy-binary has a single τ value with operational/rigor split) and from Moot (MT-B1; Moot is truth-irrelevant, lazy-binary is truth-relevant-but-mis-framed).
+
+**Worked example.**
+- X = "Either consciousness is fundamental or it is emergent." → object-level MR Truth Label = Indeterminate.
+- Y = "X is a lazy binary." → meta-level MR Truth Label = True.
+
+**Status:** Canonized 2026-05-13. Subordinate to §7.

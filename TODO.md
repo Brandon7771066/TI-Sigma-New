@@ -154,3 +154,15 @@
 - 🟢 **Pass-49 LCC-Virus L1-L4** — Program A first window + lcc_virus package skeleton + pseudocode + holdout-blind amendment ($0, ~6.5 hr)
 - 🟢 **Zenodo defensive-publication batch (P-1)** — 8 priority DOIs ($0, ~30 min/each)
 - 🔴 **Brandon-side: Maintain `papers/PATENTS_TRIGGER_LOG.md`** — log any LOI/MOU/customer interest
+
+## Pass-48 follow-up batch (2026-05-13 evening)
+
+- ✅ **Patents addendum (mood amp / cybersecurity / GSA)** — `papers/PASS_48_PATENTS_ADDENDUM_MOOD_CYBER_GSA_2026-05-13.md`. Net: $0 spend, mood-amp safety-protocol Zenodo OK, cybersec defer entirely, GSA trade-secret only.
+- ✅ **Lazy Binary clarification** — object-level Indeterminate, meta-statement True. Canonized as `urb_608` §10.
+- ✅ **D4 (qc26 → MR re-classification)** — CONFIRM_STRONG, f_DT=0.6201 across all 3 settings. `analyses/pass49_d4_qc26_mr_reclassification/`.
+- ✅ **L2 lcc_virus/ package skeleton** — alpha 0.1.0a1, lazy-import wrapping legacy modules, smoke-tested.
+- ✅ **L3 LCC formal pseudocode** — `papers/PASS_49_LCC_FORMAL_PSEUDOCODE_2026-05-13.md`. Source-of-truth for M2 implementation.
+- ✅ **L4 LCC holdout-blind protocol** — `papers/PASS_49_LCC_HOLDOUT_BLIND_PROTOCOL_2026-05-13.md`. Filters A-E + ceremony spec.
+- ✅ **Architect findings — layman explanation** — `papers/PASS_48_ARCHITECT_FINDINGS_LAYMAN_EXPLANATION_2026-05-13.md`.
+- 🔴 **D1 (4-spinor DT-witness on IBM Quantum)** — NOT executed this session (live QPU credential submission flagged out of scope here). Pre-reg + runner template ready in `papers/PASS_48_IBM_QUANTUM_DIRAC_EXPERIMENTS_2026-05-13.md` + `analyses/pass47_p46b_qc26_v2/runner.py` template. Brandon-side: run locally with `IBMQ_Secret`, OR direct agent in next session.
+- 🔴 **L1 (Program A: LCC bidirectional in markets via yfinance/FRED)** — NOT executed this session (external network execution deferred). Pre-registered window + holdout-blind harness now exist; ready for next-session execution.
