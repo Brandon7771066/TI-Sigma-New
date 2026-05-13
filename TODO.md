@@ -141,3 +141,16 @@
 - `papers/PASS_45_REAL_EMPIRICAL_TESTS_TI_SIGMA_TOP_8_UNTESTED_CLAIMS_2026-05-11.md`
 - `papers/PASS_44_LLM_E_ARM_FRACTAL_SCALING_FORMAL_PROMOTION_2026-05-11.md`
 - `papers/PASS_43_MENDI_SESSION_1_DETRENDED_PLUS_QC25_HW_CONFIRM_2026-05-11.md`
+
+---
+
+## Pass-48 additions (2026-05-13)
+
+- ✅ **ABC-corpus-vocab-audit** — COMPLETE (zero edits required; `analyses/pass48_abc_corpus_vocab_audit/audit_report.md`)
+- 🟢 **O26-B-affect EXECUTE** — protocol pre-registered; awaits $300 funding decision
+- 🟢 **O26-B-tri-projection EXECUTE** — protocol pre-registered; combine with O26-B-affect for ~$450
+- 🟢 **Book Pass-2 voice + Pass-47 principles integration** — Pass-1 4 targeted edits applied; Pass-2 deferred
+- 🟢 **Pass-49 quantum batch (D4 + D1)** — qc26 re-classification + 4-spinor DT-witness, ~$0-144, ~1.5 hr
+- 🟢 **Pass-49 LCC-Virus L1-L4** — Program A first window + lcc_virus package skeleton + pseudocode + holdout-blind amendment ($0, ~6.5 hr)
+- 🟢 **Zenodo defensive-publication batch (P-1)** — 8 priority DOIs ($0, ~30 min/each)
+- 🔴 **Brandon-side: Maintain `papers/PATENTS_TRIGGER_LOG.md`** — log any LOI/MOU/customer interest
