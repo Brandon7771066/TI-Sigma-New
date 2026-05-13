@@ -139,7 +139,9 @@ The first sustained challenges to bivalence came in the early twentieth century.
 
 Each of these systems acknowledged what bivalence ignored, and each captured something real. But each also stopped short. The third value was typically read as *unknown*, *undefined*, or *neither* — that is, as a placeholder for an absence rather than as a positive logical state in its own right. Fuzzy logic blurred the boundary between true and false but did not change its endpoints. None of these systems gave a principled account of propositions that are *stably between* true and false in a way that further inquiry will not, even in principle, resolve.
 
-Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a universal **Tralse-quality** — a structured imperfection — that is embedded in every coherent truth-claim, and a categorical scheme of **four base truth labels** that the framework's resolution procedure assigns: **True, False, Indeterminate, and Double Tralse**. *Indeterminate* is not a placeholder for missing information; it is a stable, coherent 50/50 balance — the framework's "45-degree door" — recognized as a positive logical state. *Double Tralse* is reserved for statements that are structurally incoherent (formally: a statement that both is and is not Tralse), which the framework discards rather than smuggling into the rest of the calculus. Outcomes beyond these four — for example, statements whose truth-value is technically settled but practically *dispensable* in the relevant frame — live in a separate catalogue called *Meta-Truths*, layered on top of the base four. The full architecture is laid out in Chapters 3 through 5 in the original first-edition presentation, and consolidated in Appendix E (Canonical Update — May 2026).
+Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a universal **Tralse-quality** — a structured imperfection — that is embedded in every coherent truth-claim, and a categorical scheme of **four base truth labels** that the framework's resolution procedure assigns: **True, False, Indeterminate, and Double Tralse**. *Indeterminate* is not a placeholder for missing information; it is a stable, coherent 50/50 balance — the framework's "45-degree door" — recognized as a positive logical state. *Double Tralse* is reserved for statements that are structurally incoherent (formally: a statement that both is and is not Tralse), which the framework discards rather than smuggling into the rest of the calculus. Outcomes beyond these four — for example, statements whose truth-value is technically settled but practically *dispensable* in the relevant frame — live in a separate catalogue called *Meta-Truths*, layered on top of the base four (twelve well-established Meta-Truths catalogued in `urb_608`; twenty-four entries in the extended-form `urb_639` register). The full architecture is laid out in Chapters 3 through 5 in the original first-edition presentation, and consolidated in Appendix E (Canonical Update — May 2026).
+
+> **Canonical-currency note (per the 2026-05-08 ruling, see `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`):** in the current canonical vocabulary, *Double Tralse (DT)* refers exclusively to the structurally-incoherent base label defined here. *Defective Truth (DefT)* is the renamed concept formerly called "DT scheme B" in earlier corpus material, and is treated separately in Appendix E. Readers encountering older papers that use "DT scheme B" should mentally substitute "DefT" to avoid conflation with the base-label DT.
 
 ### 1.3 What the Framework Provides
 
@@ -152,6 +154,16 @@ The second is the *GILE framework* — Goodness, Intuition, Love, and Environmen
 The third is *Myrion Resolution* (MR), an iterative convergence procedure for moving from a state of indeterminate truth to a stable assignment, where such an assignment is available, and for recognizing when it is not. MR is the practical core of the book. Where Bayesian inference asks the agent to assign and update credences, MR asks the agent to perform a sequence of structured inquiries and to register honestly the point at which further inquiry ceases to change the assignment. Chapter 7 develops the procedure in detail; Chapter 10 illustrates it through three extended case studies.
 
 The fourth is the *HEAR score* (Holistic Existence Amplification Razor), a derived measure that integrates GILE, MR convergence behavior, and contextual variables into a single scalar. HEAR is intended to play, for the inner life of an agent, a role analogous to that played by gross domestic product for an economy: a coarse, contestable, but useful aggregate that supports comparison across time and across decisions.
+
+**A preview of the wider architecture.** The base-four truth labels developed in this book are the *third* of five truth-axes that the framework recognizes. The complete set, treated in `TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md` and previewed here for orientation, is:
+
+1. **PD-real** — the *degree* of permissibility (Permissibility Distribution, real-component); a continuous gradation
+2. **PD-imaginary** — the *modality* of permissibility (the DefT axis; how a partial-truth fails to be fully True)
+3. **MR Truth Labels** — the categorical four base labels developed throughout this book (T, F, I, DT) plus the layered Meta-Truth catalogue
+4. **τ/δ separability** — the formal independence of the truth-degree component (τ) from the resolution-depth component (δ); together they yield the Tralse-Joule unit `TJ = τ × δ`
+5. **Authority Axis (AA)** — the agent's *operative position* on a claim, distinct from the agent's confidence in the claim; permits the simultaneous operative-belief-with-retained-sim-doubt that working scientists routinely employ
+
+The book treats axis 3 (MR Truth Labels) as the entry point because it is the most accessible to general readers and provides the vocabulary the other four axes refine. Axes 1, 2, 4, and 5 are introduced briefly in Appendix E and developed in Part Four.
 
 ### 1.4 Scope and Limits of This Book
 
@@ -186,6 +198,8 @@ It stands for four dimensions:
 4. **E** - Environment (does it fit the context?)
 
 **Everything has a GILE score** - from atoms to emotions to ideas to actions.
+
+> **Canonical-expansion note (2026):** the canonical TI Sigma expansion of GILE in the current corpus is *Goodness, Intuition, Love, Environment*, as developed below. Earlier corpus material occasionally used variant expansions (e.g., "Goodness, Intuition, Love, Effort"); the 2026 canonical expansion is the one used throughout this book and is the version cross-referenced in Appendix E.
 
 Think of GILE like the GPS of consciousness. Just as GPS tells you where you are in physical space, GILE tells you where you are in consciousness space.
 
@@ -362,6 +376,8 @@ But with asymmetry (-3 to +2):
 - The negative region is LARGER but less dense
 - The positive region is SMALLER but more achievable
 - There's a "pull" toward the positive
+
+> **Honest caveat (per #69 — Asymmetric Standards):** the *gravity* analogy in the next paragraph is **heuristic motivation, not derivation**. The mathematical justification for fixing the GILE range at exactly (−3, +2) — rather than some other asymmetric pair — is developed in Chapter 9 / Appendix C and rests on a separate argument from the asymmetry-of-suffering data. The reader is invited to take the gravity analogy as suggestive imagery, not as the load-bearing argument.
 
 Think of it like gravity. Gravity creates asymmetry (things fall down, not up), and that asymmetry creates structure. Without gravity, there would be no planets, stars, or galaxies.
 
