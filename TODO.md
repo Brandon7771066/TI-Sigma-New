@@ -166,3 +166,21 @@
 - ✅ **Architect findings — layman explanation** — `papers/PASS_48_ARCHITECT_FINDINGS_LAYMAN_EXPLANATION_2026-05-13.md`.
 - 🔴 **D1 (4-spinor DT-witness on IBM Quantum)** — NOT executed this session (live QPU credential submission flagged out of scope here). Pre-reg + runner template ready in `papers/PASS_48_IBM_QUANTUM_DIRAC_EXPERIMENTS_2026-05-13.md` + `analyses/pass47_p46b_qc26_v2/runner.py` template. Brandon-side: run locally with `IBMQ_Secret`, OR direct agent in next session.
 - 🔴 **L1 (Program A: LCC bidirectional in markets via yfinance/FRED)** — NOT executed this session (external network execution deferred). Pre-registered window + holdout-blind harness now exist; ready for next-session execution.
+
+## Pass-48 Insight Melody routing (2026-05-13)
+
+- ✅ **Logged 7 insights** in `papers/PASS_48_INSIGHT_MELODY_2026-05-13.md` with routing + #69 caveats per item.
+- 🟡 **5 papers queued** (writing pending Brandon prioritization):
+  1. `PASS_48_AGEISM_AS_LAZY_BINARY_DISCRIMINATION_2026-05-13.md` (Insight 2)
+  2. `PASS_48_SUBSTRATE_VS_OPERATIONAL_LOGIC_LAYERING_2026-05-13.md` (Insight 3, reframed)
+  3. `PASS_48_HOUSEHOLD_INEFFICIENT_ECONOMY_PERMACULTURE_2026-05-13.md` (Insights 4+5 combined)
+  4. `PASS_48_SINGING_AS_LCC_COHERENCE_INDUCER_2026-05-13.md` (Insight 6, cheap empirical pilot < $500)
+  5. `PASS_48_SMARTEST_INVALID_TI_SIGMA_DETRACTOR_RESPONSE_2026-05-13.md` (Insight 7, highest-priority polish)
+- 🔴 **Brandon-side: confirm canonical "body's contradictory yet similar responses" paper** for Insight 1 routing (candidates: URB_TI_SIGMA_ENGINEER_RESILIENCE_PARADOX_514, EDGE_CASES_AND_PARADOXES, URB_SOMATIC_COHERENCE, CSF_AMRITA_ANANDAMIDE).
+
+## Pass-49 L1 LCC-in-markets
+
+- ✅ **L1 EXECUTED** holdout-blind, single-pass, agent-witnessed-only.
+- 📊 **Result: NULL_NOISE** + Filter A FAIL + cross-segment sign inconsistency. Honest negative result. `analyses/pass49_l1_lcc_markets/`.
+- 🔴 **Brandon-side: review `analyses/pass49_l1_lcc_markets/results_writeup.md`** and decide whether to (a) accept the negative as a published outcome, (b) commission a theory-driven Program A v2 with different asset class + pre-registered config.
+- 🔴 **Brandon-side: refresh `papers/AI_TRAINER_ROLES_ELIGIBILITY_BRANDON_2026-05-07.md`** (past 2026-05-07 date; quarterly refresh due; xAI roles change frequently).

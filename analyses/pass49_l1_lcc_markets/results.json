@@ -1,0 +1,62 @@
+{
+  "test_id": "L1_lcc_markets_program_a_first_window",
+  "pass": 49,
+  "started_at": "2026-05-13T21:45:21.252261+00:00",
+  "tickers": [
+    "SPY",
+    "TLT"
+  ],
+  "window": [
+    "2022-01-01",
+    "2026-04-30"
+  ],
+  "n_trading_days_after_dropna": 1083,
+  "panel_sha256": "0ba0c3d19d93e6337885b105a6f065663ad1e8dff5487111bf3962d78303b8a6",
+  "runner_sha256": "bf80ce8107ae84e91df7377eb9cb16fddc205415be80128a701dc81242c9ecd7",
+  "frozen_params": {
+    "tau_max": 5,
+    "kernel": "triangular",
+    "partition_frac": [
+      0.4,
+      0.3,
+      0.3
+    ],
+    "primary_margin": 0.05,
+    "noise_floor": 0.05
+  },
+  "partition_sizes": {
+    "TUNE": 433,
+    "VALIDATION": 325,
+    "HOLDOUT": 325
+  },
+  "per_segment": {
+    "TUNE": {
+      "n": 433,
+      "pearson": 0.14578118027808742,
+      "R_LCC": 0.04311462137732324
+    },
+    "VALIDATION": {
+      "n": 325,
+      "pearson": 0.01435065857801344,
+      "R_LCC": -0.010246186561906871
+    },
+    "HOLDOUT": {
+      "n": 325,
+      "pearson": 0.12426126418514366,
+      "R_LCC": 0.020522328389094523
+    }
+  },
+  "tests": {
+    "drift_ratio_tune_vs_val_on_R_LCC": 4.207870032116551,
+    "filter_A_drift_check": "FAIL",
+    "holdout_margin_R_LCC_minus_pearson_abs": -0.10373893579604913,
+    "holdout_sign_match": true,
+    "cross_segment_sign_consistency": false,
+    "H_PRIMARY_met": false,
+    "H_SECONDARY_met": false
+  },
+  "verdict": "NULL_NOISE",
+  "ceremony_witness": "AGENT_ONLY",
+  "brandon_witness_pending": true,
+  "notes": "Pass-49 L4 protocol \u00a71.3 requires Brandon-witness for the HOLDOUT ceremony. This run is agent-witnessed-only; result is reported as honest first-pass and flagged for Brandon review. Re-running on the same HOLDOUT for a different configuration is forbidden per L4 anti-cheat regardless of this result."
+}

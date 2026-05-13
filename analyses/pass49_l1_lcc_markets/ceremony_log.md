@@ -1,0 +1,13 @@
+# L1 ceremony log — 2026-05-13T21:45:21.252261+00:00
+- runner SHA-256: `bf80ce8107ae84e91df7377eb9cb16fddc205415be80128a701dc81242c9ecd7`
+- panel SHA-256: `0ba0c3d19d93e6337885b105a6f065663ad1e8dff5487111bf3962d78303b8a6`
+- window: 2022-01-01 → 2026-04-30
+- tickers: ('SPY', 'TLT')
+- partition: TUNE=433 / VAL=325 / HOLDOUT=325
+- Filter A (drift): FAIL  (ratio=4.2079)
+- HOLDOUT R_LCC: 0.020522
+- HOLDOUT Pearson: 0.124261
+- HOLDOUT margin (|R_LCC|-|Pearson|): -0.103739
+- Cross-segment signs: [1.0, -1.0, 1.0]
+- VERDICT: **NULL_NOISE**
+- Witness: AGENT_ONLY (Brandon-async; flagged in results.json)
