@@ -1,0 +1,202 @@
+{
+  "test_id": "T49-2_TJ_measurement_reliability",
+  "rater_independence": "same_model_two_personas",
+  "pilot_flag": true,
+  "n_stimuli": 15,
+  "corpus_sha256": "7753b777ad00ad2ecc2769612a66d35b147ff2f91ff95b7d31d9cee18a290b38",
+  "tune_ids": [
+    0,
+    3,
+    5,
+    7,
+    8,
+    9,
+    11,
+    12,
+    14
+  ],
+  "holdout_ids": [
+    1,
+    2,
+    4,
+    6,
+    10,
+    13
+  ],
+  "ratings_A": {
+    "0": {
+      "id": 0,
+      "tau": 9,
+      "delta": 1
+    },
+    "1": {
+      "id": 1,
+      "tau": 2,
+      "delta": 0
+    },
+    "2": {
+      "id": 2,
+      "tau": 10,
+      "delta": 5
+    },
+    "3": {
+      "id": 3,
+      "tau": 4,
+      "delta": 1
+    },
+    "4": {
+      "id": 4,
+      "tau": 10,
+      "delta": 2
+    },
+    "5": {
+      "id": 5,
+      "tau": 0,
+      "delta": 0
+    },
+    "6": {
+      "id": 6,
+      "tau": 9,
+      "delta": 1
+    },
+    "7": {
+      "id": 7,
+      "tau": 0,
+      "delta": 0
+    },
+    "8": {
+      "id": 8,
+      "tau": 10,
+      "delta": 4
+    },
+    "9": {
+      "id": 9,
+      "tau": 0,
+      "delta": 0
+    },
+    "10": {
+      "id": 10,
+      "tau": 10,
+      "delta": 8
+    },
+    "11": {
+      "id": 11,
+      "tau": 3,
+      "delta": 0
+    },
+    "12": {
+      "id": 12,
+      "tau": 10,
+      "delta": 4
+    },
+    "13": {
+      "id": 13,
+      "tau": 1,
+      "delta": 0
+    },
+    "14": {
+      "id": 14,
+      "tau": 10,
+      "delta": 7
+    }
+  },
+  "ratings_B": {
+    "0": {
+      "id": 0,
+      "tau": 8,
+      "delta": 1
+    },
+    "1": {
+      "id": 1,
+      "tau": 2,
+      "delta": 0
+    },
+    "2": {
+      "id": 2,
+      "tau": 10,
+      "delta": 4
+    },
+    "3": {
+      "id": 3,
+      "tau": 4,
+      "delta": 0
+    },
+    "4": {
+      "id": 4,
+      "tau": 9,
+      "delta": 2
+    },
+    "5": {
+      "id": 5,
+      "tau": 0,
+      "delta": 0
+    },
+    "6": {
+      "id": 6,
+      "tau": 8,
+      "delta": 1
+    },
+    "7": {
+      "id": 7,
+      "tau": 0,
+      "delta": 0
+    },
+    "8": {
+      "id": 8,
+      "tau": 9,
+      "delta": 3
+    },
+    "9": {
+      "id": 9,
+      "tau": 0,
+      "delta": 0
+    },
+    "10": {
+      "id": 10,
+      "tau": 10,
+      "delta": 7
+    },
+    "11": {
+      "id": 11,
+      "tau": 3,
+      "delta": 0
+    },
+    "12": {
+      "id": 12,
+      "tau": 9,
+      "delta": 3
+    },
+    "13": {
+      "id": 13,
+      "tau": 1,
+      "delta": 0
+    },
+    "14": {
+      "id": 14,
+      "tau": 10,
+      "delta": 5
+    }
+  },
+  "metrics": {
+    "holdout_ICC_TJ": 0.9810749432248297,
+    "holdout_ICC_tau": 0.9905123339658445,
+    "holdout_ICC_delta": 0.9812734082397004,
+    "TJ_A": [
+      0,
+      50,
+      20,
+      9,
+      80,
+      0
+    ],
+    "TJ_B": [
+      0,
+      40,
+      18,
+      8,
+      70,
+      0
+    ]
+  },
+  "verdict": "CONFIRM_STRONG_PILOT"
+}

@@ -193,3 +193,19 @@
 - 🟡 **Wave-3 (gated)**: T49-4 ABC tri-projection ($300 funding decision), T49-9 i-cell operationalization (Brandon prediction-spec required), T49-10 xAI applications (Brandon-time only).
 - 🔴 **Brandon-side: pick which Wave-1 tests to authorize for next-session execution** (default = all 4).
 - 🔴 **Brandon-side: provide i-cell operational prediction for T49-9** OR retire T49-9 in favor of an audit-rejected replacement from §11.
+
+## Pass-49 Wave-1 EXECUTED (2026-05-13)
+
+- ✅ **T49-1 AA discriminative validity → DISCONFIRM** (κ=0.385, AA-PD_real corr=0.982). AA demoted to PROVISIONAL pending rubric-redesign + orthogonal-corpus retest. **Material framework finding.**
+- ✅ **T49-2 TJ reliability → CONFIRM_STRONG_PILOT** (ICC=0.981; same-model rater inflation flagged).
+- ✅ **T49-5 Lazy-Binary frequency → CONFIRM_STRONG_PILOT** (consensus-LB 41.7%; constructed-corpus caveat).
+- ✅ **T49-6 DefT vs DT → CONFIRM_STRONG_PILOT** (κ=1.0; same-model + construction caveats).
+- 🔴 **Brandon decision (high priority):** AA — invest in rubric-redesign-and-retest cycle, or accept demotion to derived score?
+- 🔴 **Brandon decision:** authorize Wave-1 v2 with OPENAI_API_KEY for truly-independent 2nd rater?
+- 🟡 **`analyses/pass49_wave1/RESULTS_WRITEUP.md`** — full writeup with three-reading interpretation of AA disconfirm + per-test inflation/construction caveats + Wave-1 v2 replication path.
+
+## Pass-49 Plain LCC Framework (2026-05-13)
+
+- ✅ **`papers/PASS_49_LCC_PLAIN_FRAMEWORK_SUPERVISED_VS_UNSUPERVISED_2026-05-13.md`** — first canonical formalization. Supervised (S1+S2+S3+S4) vs Unsupervised (S1+S2+S3+U4). LCC Drift Index $D_{LCC}$ formalized. 5 concrete predictions (P1-P5). Domain-ordering Quantum > Ecosystems > Workplaces > Markets. L1 NULL reconciled as predicted-weakest-cell.
+- 🟡 **L2 Unsupervised-LCC pilot pre-registered:** paleoclimate δ¹⁸O cross-site, NOAA open data, $0, Pass-50 agent-executable. Agent self-bound prediction: CONFIRM.
+- 🟡 **Deferred Track-L pre-regs:** L3 workplace-Slack, L4 supervised-vs-unsupervised, L5 quantum-unsupervised (~$72).
