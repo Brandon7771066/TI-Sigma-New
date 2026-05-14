@@ -1,6 +1,6 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-11 (Pass 47, post-CAP/PD-musical/AA/p47-A/meta-collapse batch)
+**Last updated:** 2026-05-13 (Pass 49, post AA-v2-orthogonal-retest + LCC-Virus L-1..L-4 batch)
 **Convention:** Agent reads this file at the start of every session and surfaces the **Daily Reminder** + any HIGH-priority Brandon-side items in the opening response.
 
 ---
@@ -17,6 +17,10 @@
 
 | ID | Item | Source | Deadline | Notes |
 |---|---|---|---|---|
+| **T49-1-v3** | T49-1 v3 — naturally-sampled-claim corpus AA retest (random Wikipedia + tweet + PubMed). Brandon-blocked on Wave-1 v2 corpus-curation OR agent-self-execution authorization. | Pass-49 v2 §3.3 | rolling | v2 REAFFIRMED AA on orthogonally-constructed corpus (corr=0.129, κ=0.66, 100% quadrant recovery). v3 needed to confirm AA-PD orthogonality survives in NATURAL claim-language. |
+| **AA-rubric-amendment** | Amend `papers/AUTHORITY_AXIS_AA_2026-05-07.md` to deprecate v1 rubric + reference v2 redesigned rubric (in `analyses/pass49_wave1_v2_aa/t49_1_v2_aa_orthogonal_runner.py` REDESIGNED_RUBRIC). | Pass-49 v2 §3.2 | next pass | Pure documentation update; agent-executable but Brandon should authority-stamp the rubric language change. |
+| **L-1-PRIMARY** | Execute Program A PRIMARY dyad #6 UMCSENT × SPY (monthly) using new `lcc_virus.data_adapters.fred_csv_adapter` | Pass-49 L-1 deviation | next pass | Pass-49 L-1 ran SECONDARY dyad #1 SPY×^VIX (NULL_NOISE). PRIMARY deferred because pandas_datareader unavailable; FRED CSV adapter NOW AVAILABLE in `lcc_virus/`. ~30 min agent-executable. |
+| **statsmodels-install** | Install statsmodels (resolve broken `github` build dep so uv can resolve) and replicate L-1 Granger numbers as sanity check | Pass-49 L-1 §5 | next pass | Hand-rolled Granger F-test currently used; unit-tested but not cross-validated against statsmodels reference. |
 | **T45-6** | PD-Riemann coordinate spec pick (or retract Riemann clause) | Pass-46 §6 / Pass-47 §1 | none | All 4 candidate ops KILL/vacuous/N-A. Brandon ruled Pass-47: keep musical, demote Riemann clause to OPEN-INVESTIGATION. **Sub-action:** pick at least one of H-PD-MUSIC-1..4 (see `PASS_47_PD_PERFECT_FIFTH_MUSICAL_ENTAILMENTS_2026-05-11.md` §2) for Pass-48+ test. |
 | **T45-5** | BPS RR-acquisition decision | Pass-45 §5 | **2026-06-10** | Hard deadline. Either AccessLink API access or live BLE GATT capture, OR retire BPS as untestable. |
 | **T45-1** | Mendi sessions 2-5 (breath-hold replication) | Pass-45 §1 | rolling | Pass-43 session #1 STIM2 t=−4.13 needs replication. Brandon-side biometric. *(per Pass-47: hold and accumulate over time)* |
