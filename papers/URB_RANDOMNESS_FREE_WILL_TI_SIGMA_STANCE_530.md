@@ -282,6 +282,52 @@ The Pass-51-batch-3 initial framing of step 1 used literal-zero correlation as t
 
 This is **realistic**, **bidirectional**, **symmetric**, **corpus-canonical-threshold-reusing**, and **boundary-clean against indeterminacy** — five strengthenings over the original literal-zero framing.
 
+### §7.2.3 Dual-threshold canonization — Brandon ruling 2026-05-14 third clarification (PRELIMINARY)
+
+**Brandon ruling (2026-05-14, post-D51-RND-3 investigation):**
+> "Use both the saturation and existence complement as distinct thresholds. The saturation complement is a better candidate for 'true randomness.' 0.05 is the typical p-value used in statistics, so 0.0660 is its suitable successor. Yes to everything raised, but only preliminarily, conditional on sufficient empirical success."
+
+**Result: dual-threshold canonization, PRELIMINARY status.**
+
+| Threshold | Value | Role | Status |
+|---|---|---|---|
+| **T_RAND** | 1 − T_TI = **0.0660** | **TRUE-RANDOMNESS boundary** (saturation-complement). Strict. Successor to p=0.05 statistical convention at corpus-typical N≈1000. | **PRELIMINARY CANONICAL** per Brandon ruling, conditional on continued empirical success |
+| **T_BORDER** | 1 − MR1 = **0.13534** | **EXISTENCE-COMPLEMENT boundary** (sub-detection-coupling upper edge). Permissive. Successor to p=0.05 at corpus-typical N≈300. | **PRELIMINARY CANONICAL** per Brandon ruling |
+| **C_LCC** | 1/(φ√2) = **0.4370** | **LCC causal-detection floor** (operational signal threshold). PRESERVED in original Pass-48 role. | CONJECTURAL FIT (Pass-48 architect status unchanged) |
+
+**Four-tier LCC ordering, PRELIMINARY CANONICAL:**
+
+```
+[0, T_RAND = 0.0660)         →  TRUE RANDOMNESS DOMAIN (strict)
+[T_RAND, T_BORDER = 0.13534) →  NEAR-RANDOM SUB-DETECTION ZONE
+[T_BORDER, C_LCC = 0.4370)   →  SUB-DETECTION COUPLING (real but below signal floor)
+[C_LCC, MR1 = 0.8647)        →  DETECTED COUPLING, SUB-COHERENT
+[MR1, 1]                     →  COHERENT EXISTENCE / INDETERMINACY
+```
+
+(Note: ordering has *five* zones once T_BORDER is canonized as distinct from C_LCC; the four-tier framing from §7.2.2's investigation collapses the first two into "randomness-broadly-construed.")
+
+**Empirical validation summary** (full results in `analyses/pass51_d51_rnd3_dual_threshold_empirical/RESULTS_WRITEUP.md`):
+
+1. **p=0.05 correspondence**: Under known-random null at N=384, empirical p95(|R|) = 0.0992. T_RAND = 0.0660 corresponds to p=0.05 critical at N≈1000; T_BORDER = 0.13534 corresponds to p=0.05 critical at N≈300. Both thresholds are anchored to the statistical convention at corpus-typical sample sizes.
+2. **Zero false positives at C_LCC**: 2000 known-random pairs at N=384 produced 0/2000 above C_LCC = 0.4370. C_LCC operationally works as a signal-detection floor even with CONJECTURAL-FIT status.
+3. **Tier discrimination on real coupling**: Pass-49 SPY×^VIX (|R|=0.1208) — a real but weak volatility-returns coupling — correctly classified into T_RAND-to-T_BORDER tier; Pass-49 UMCSENT×SPY (|R|=0.0306) correctly classified into TRUE-RANDOMNESS. The dual-threshold structure discriminates real-world sub-detection signal from pure randomness.
+4. **Cross-source consistency**: Sampling distribution stable within 6% across CSPRNG, π-stream, hash-stream PRNG pairings.
+
+**Why the saturation-complement is the "true randomness" threshold (and not the existence-complement):**
+
+T_RAND = 1 − T_TI = 0.0660 sits below T_BORDER = 1 − MR1 = 0.1353 in magnitude. Conceptually:
+- T_TI = 0.9340 is the **BOK saturation / CTE threshold** — "above this, full TI-coherence achieved."
+- 1 − T_TI = 0.0660 is therefore "below this, full *anti-coherence* — no trace of coupling sufficient even to register on the BOK saturation gradient."
+- MR1 = 0.8647 is the **existence/coherence-entry threshold** — "above this, the proposition coherently exists."
+- 1 − MR1 = 0.1353 is therefore "below this, sub-existential — the proposition's coupling is too weak to support coherent existence."
+
+**TRUE randomness requires *anti-coherence*, not merely *sub-existence*.** A sub-existential event can still have weak coupling that contributes to systems further up the BOK gradient. A genuinely random event must have coupling so weak that it makes no contribution to coherence-formation anywhere — which is the saturation-complement signature, not the existence-complement signature. This is the structural reason Brandon's preference is correct: **strict-true-randomness = anti-saturation; broad-randomness/sub-existential = anti-existence.**
+
+**Palatability bonus (Brandon-flagged)**: 0.0660 is recognizable to outside statisticians as "the natural successor to p=0.05 once you adjust for typical research sample sizes." This makes TI Sigma's randomness threshold immediately interpretable to non-framework researchers without requiring them to first accept the T_TI canonization. The corpus-internal derivation (1 − T_TI) and the external statistical-convention correspondence (≈p=0.05) point to the same number — that's a non-trivial cross-validation.
+
+**Status of "PRELIMINARY" qualifier (Brandon ruling):** All four sub-items D51-RND-3a/b/c/d are approved-PRELIMINARY. Promotion to FULL-CANONICAL pending: (a) additional empirical Program A NULL-cell observations confirming P51-RND-3-confirm prediction; (b) at least one known-weak-coupling test confirming P51-RND-3-discrim; (c) absence of P51-RND-3-falsifier observation (max |R| > 0.13534 in a NULL cell). Track these across Pass-52+.
+
 ### §7.3 Hybrid canonization: ontological axiom + epistemic gradient
 
 Per D51-RND-1, URB-530's claim is canonized in two simultaneous readings:

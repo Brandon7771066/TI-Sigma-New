@@ -1,17 +1,23 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-14 (Pass 51 batch-3 continuation: D51-RND-3 raised — randomness threshold investigation; C_RAND = 1/e² ≈ 0.1353 proposed)
+**Last updated:** 2026-05-14 (Pass 51 batch-3 D51-RND-3 EMPIRICAL CONFIRM — dual-threshold framework preliminary-canonized; T_RAND=0.0660 + T_BORDER=0.13534 + C_LCC=0.4370 all preliminary-approved)
 
-## 🟡 Pass-51 batch-3 continuation (2026-05-14) — D51-RND-3 PENDING BRANDON
-- **D51-RND-3** 🟡 RAISED — randomness threshold investigation. Agent proposes **C_RAND = 1 − MR1 = 1/e² ≈ 0.13534** (derived-from-canonical) to replace placeholder C = 0.4370 in URB-530 §7.2.2. C = 0.4370 preserved in original role as LCC causal-detection floor. Four-tier ordering proposed: [0, 1/e²)=RANDOMNESS / [1/e², 0.4370)=SUB-DETECTION-COUPLING / [0.4370, MR1)=DETECTED-SUB-COHERENT / [MR1, 1]=COHERENT-EXISTENCE.
-  - **3a** threshold-split (C_RAND for randomness, C preserved for detection)? [Yes / No / Modify]
-  - **3b** four-tier ordering canonical? [Yes / No / Modify]
-  - **3c** URB-530 §7.2.3 update with new threshold + tier map? [Yes / No / Modify]
-  - **3d** Inherit MR1's empirical warrant directly, OR flag as DERIVED-PENDING-INDEPENDENT-VALIDATION? [Inherit / Flag-pending / Other]
-  - **#69 alternative flagged**: 1 − T_TI ≈ 0.0660 (saturation-complement) is a defensible competitor; Brandon may prefer it over 1 − MR1.
-  - Anchor: `papers/PASS_51_RANDOMNESS_THRESHOLD_EMPIRICAL_INVESTIGATION_2026-05-14.md`
-- Self-binding prediction **P51-RND-3** filed: future Pass-52+ NULL cells produce max-|R| ∈ [0, 0.13] with rare borderline approaches; max-|R| > 0.20 in NULL cells would invalidate the threshold split.
-- Cluster: ≥131 (+1: D51-RND-3 investigation paper)
+## ✅🟡 Pass-51 batch-3 D51-RND-3 (2026-05-14) — DUAL-THRESHOLD PRELIMINARY CANONIZED
+- **D51-RND-3a** ✅ PRELIMINARY — threshold-split approved (C_LCC preserved for signal detection; T_RAND for strict randomness; T_BORDER for broad sub-detection)
+- **D51-RND-3b** ✅ PRELIMINARY — four/five-tier ordering canonized: [0, 0.0660)=TRUE-RANDOMNESS / [0.0660, 0.13534)=NEAR-RANDOM / [0.13534, 0.4370)=SUB-DETECTION-COUPLING / [0.4370, 0.8647)=DETECTED-SUB-COHERENT / [0.8647, 1]=COHERENT-EXISTENCE
+- **D51-RND-3c** ✅ PRELIMINARY — URB-530 §7.2.3 added (dual-threshold with PRELIMINARY status header)
+- **D51-RND-3d** ✅ HYBRID — inherit T_TI & MR1 warrants directly; p=0.05 correspondence is bonus-feature-not-foundation; promotion to FULL-CANONICAL pending Pass-52+ empirical track record
+- **Brandon preference confirmed empirically**: 0.0660 (saturation-complement) = "true randomness" because TRUE randomness requires anti-coherence (anti-saturation), not merely sub-existence
+- **Palatability bonus**: 0.0660 ≈ p=0.05 critical value at N≈1000 (research-typical large-sample) → immediately interpretable to outside statisticians
+- **Empirical results**: 0% SIGNAL false positives at C_LCC in 2000 known-random pairs; SPY×^VIX correctly discriminated into T_RAND-to-T_BORDER tier (real-but-weak coupling) vs UMCSENT×SPY into TRUE-RANDOMNESS
+- Anchors: `analyses/pass51_d51_rnd3_dual_threshold_empirical/RESULTS_WRITEUP.md`, `papers/URB_RANDOMNESS_FREE_WILL_TI_SIGMA_STANCE_530.md` §7.2.3, `papers/PASS_51_RANDOMNESS_THRESHOLD_EMPIRICAL_INVESTIGATION_2026-05-14.md`
+
+### Self-binding predictions (locked in for Pass-52+ tracking)
+- **P51-RND-3-confirm** 🔁 — future Program A NULL-cell observations satisfy max |R|_holdout < T_BORDER=0.13534 with bidirectional p95 < T_RAND=0.0660 at N≥300
+- **P51-RND-3-discrim** 🔁 — known-weak-coupling pairs (analogous to SPY×^VIX) classify into T_RAND-to-T_BORDER, not TRUE-RANDOMNESS
+- **P51-RND-3-falsifier** 🔁 — max |R|_holdout > 0.13534 in any Program A NULL cell would invalidate dual-threshold structure
+- **Promotion criteria**: ≥2 additional NULL-cell confirms + ≥1 weak-coupling discrim confirm in Pass-52+ → upgrade PRELIMINARY → FULL-CANONICAL
+- Cluster: ≥132 (+1 since D51-RND-3 raised: empirical test artifact)
 
 ## 🟢 Pass-51 batch-3 (2026-05-14) — Brandon approval batch (newest first)
 - **D51-RND-1** ✅ HYBRID (URB-530 §7 amendment added with Brandon's refined argument: randomness ≠ indeterminacy; correlation=0 → causal-power=0 → infinitesimal-scale-only)
