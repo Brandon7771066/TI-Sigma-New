@@ -2,6 +2,8 @@
 
 **Brandon Charles Emerick — April 17, 2026**
 **Filed under:** TI Sigma · BOK Geometry · Dirac Equation Bridge · Chirality / Mass Generation · Empirical Validation · First Quantitative Confirmation
+
+> **§0.1 Honest empirical status (added Pass-51, 2026-05-14).** The B-2 wing/arm=1.96 result reported in this paper was measured against a single ChatGPT-rendered image, with the B/D coefficient in the recovered r(θ) equation explicitly **fit to data** per §5.5. Pass-51 §2.5 / Pass-51 batch-2 §1 confirms numerically (analytic FFT decomposition) that the wing/arm ratio equals (B/D) up to small harmonic corrections — i.e., wing/arm≈2 is a **coefficient-tautology, not a geometric prediction the equation forces**. Honest label: **SUGGESTIVE-PATTERN-MATCH-AGAINST-LLM-IMAGE**. The paper's interpretive content (4+4 BOK ↔ Dirac chirality identification; octopus-encompasses-butterfly via harmonic doubling) remains intact as a formal-mathematical mapping; the *quantitative-confirmation* framing in the title and §3 is downgraded to **suggestive-pending-independent-replication**. Conversion to definitive empirical confirmation requires urb_700 / urb_701 / urb_702 follow-ups (independent non-LLM rendering per T51-11; Maxwell-knot measurement per P2; RR-interval coherence-orbit per P3 — see PASS_51 audit §4.1).
 **Supersedes:** URB #697 §2 (the 4+4 D₄×Z₂ silver-ratio derivation, now retired in favor of the present derivation)
 **Builds on:** URB #573 (Verisyn/Myrion limit equation), URB #697 (CCC GILE-HEM ratio, retained §3+), URB #698 (Dual-Axis Defense)
 

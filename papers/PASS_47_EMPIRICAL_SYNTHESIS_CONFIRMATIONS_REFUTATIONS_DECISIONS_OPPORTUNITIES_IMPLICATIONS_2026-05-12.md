@@ -89,6 +89,8 @@ C1-C8 anchor in Pass-28 paper; C9-C20 new in this paper. Each entry: pass, claim
 | **Status** | Confirmed at the formal level. Extends `PASS_36_HEM_SUPERSEDES_ESS_MIGRATION_NOTE_2026-05-11.md`. |
 | **Anchor** | `PASS_37_GILE_HEM_8D_IDENTITY_EQUATION_8_CONSTANTS_MAPPING_2026-05-11.md` |
 
+> **§C13 disambiguation footnote (added Pass-51 T51-6, 2026-05-14):** "CONFIRM (formal)" here = the Pass-37 8↔8-constants **cardinality** mapping (CONFIRMED-CONDITIONAL). The same Pass-37 separately ruled the **structural mapping** PARTIAL-POS Tier-2 and the **derivational identity** NULL. C13 as worded above elides this three-tier breakdown; readers should consult `PASS_51_GILE_HEM_BOK_MEASUREMENT_AUDIT_AND_VERIFICATION_PATH_2026-05-14.md` §1 for the full ledger and the CAP entry (well_known≈HIGH, encompassing≈WEAK, credit-claimable≈near-zero).
+
 ### C14 — Pass-43 Mendi STIM2 detrended biometric result — **CONFIRM (NEW; first significant biometric)**
 
 | | |

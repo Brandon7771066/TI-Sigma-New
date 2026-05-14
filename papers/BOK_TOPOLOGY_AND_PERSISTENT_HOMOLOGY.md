@@ -8,6 +8,10 @@
 
 ---
 
+> **§0.1 Honest empirical status (added Pass-51, 2026-05-14).** The β₁=6 result reported here was measured on **15 real ESP32 biometric points + 400 synthetic padding points** in 8D. Without an independent competing-topology null run using the same synthetic-generator parameters, the result is **synthetic-generator-dominated** — β₁=6 cannot be attributed to the BOK structure as opposed to the padding. Pass-51 T51-2 attempted a numpy-only Vietoris-Rips β₁ proxy at the matching scale (N=415, dim=8); the proxy returned 0 for both pure-Gaussian and 6-loop point clouds due to curse-of-dimensionality concentration in the distance distribution. A definitive call requires either `ripser` / `gudhi` / `giotto-tda` (proper persistent homology) or a higher-N real-data acquisition that doesn't need synthetic padding. Honest label: **NON-DISCRIMINATIVE-AT-CURRENT-N-WITHOUT-PROPER-PH-SOFTWARE**. See `PASS_51_GILE_HEM_BOK_MEASUREMENT_AUDIT_AND_VERIFICATION_PATH_2026-05-14.md` §2.5 and `PASS_51_T51_BATCH_EXECUTION_LCC_RANDOMNESS_UOP_VS_FEP_HYPERCOMPUTER_VIRAL_2026-05-14.md` §2.
+
+---
+
 ## Abstract
 
 This paper develops the mathematical theory of the Butterfly-Octopus Knot (BOK), a topological structure hypothesized to encode consciousness architecture. We provide rigorous definitions of knot theory, persistent homology, and topological data analysis (TDA), then demonstrate how biometric data exhibits BOK topology. Our empirical tests detected 6 persistent loop structures in 8-dimensional biometric phase space, validating the BOK hypothesis.

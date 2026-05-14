@@ -1,0 +1,972 @@
+{
+  "meta": {
+    "pass": 51,
+    "executed_at": "2026-05-14 10:34:08",
+    "scope": "T51-1, T51-2, T51-5, LCC-RANDOMNESS-ABSENCE",
+    "seed": 51
+  },
+  "T51_1_analytic_wing_arm": {
+    "equation": "r(\u03b8) = A\u00b7e^sin(\u03b8) \u2212 B\u00b7cos(4\u03b8) + C\u00b7sin\u2075((2\u03b8\u2212\u03c0)/24) + D\u00b7cos(8\u03b8)",
+    "default_coeffs": {
+      "A": 1.0,
+      "B": 0.9,
+      "C": 1.0,
+      "D": 0.4
+    },
+    "default_wing": 0.8943695449511583,
+    "default_arm": 0.4000385721823537,
+    "default_wing_arm_ratio": 2.2357082720100014,
+    "urb_699_predicted_ratio": 2.0,
+    "deviation_from_prediction_at_default": 0.23570827201000144,
+    "grid_scan_min_ratio": 0.7405687199948213,
+    "grid_scan_max_ratio": 6.720546824122056,
+    "grid_scan_median_ratio": 2.2357082720100014,
+    "grid_scan_n_within_pm15pct_of_2": 9,
+    "grid_scan_n_total": 35,
+    "interpretation": "Wing/arm ratio is the analytic ratio |B\u00b7cos(4\u03b8)|_FFT / |D\u00b7cos(8\u03b8)|_FFT = B/D. At default B=0.9, D=0.4 \u2192 2.25 (NOT 2.0). At B=D it equals 1. The 'wing/arm=1.96' B-2 measurement is recoverable ONLY IF B/D is set close to 2, which urb_699 \u00a75.5 already concedes is fit-to-data. Conclusion: B-2 is a tautology of the chosen coefficients, not a confirmation of a geometric prediction."
+  },
+  "T51_2_tda_competing_null": {
+    "N_total": 415,
+    "dim": 8,
+    "gauss_eps30_b1_proxy": 0,
+    "loop6_eps30_b1_proxy": 0,
+    "gauss_b1_max_over_sweep": 0,
+    "loop6_b1_max_over_sweep": 0,
+    "gauss_sweep": [
+      {
+        "pct": 10,
+        "V": 415,
+        "E": 8591,
+        "F": 74681,
+        "comp": 7,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 20,
+        "V": 415,
+        "E": 17181,
+        "F": 321503,
+        "comp": 2,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 30,
+        "V": 415,
+        "E": 25772,
+        "F": 764998,
+        "comp": 1,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 40,
+        "V": 415,
+        "E": 34362,
+        "F": 1428027,
+        "comp": 1,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 50,
+        "V": 415,
+        "E": 42952,
+        "F": 2329334,
+        "comp": 1,
+        "b1_proxy": 0
+      }
+    ],
+    "loop6_sweep": [
+      {
+        "pct": 10,
+        "V": 415,
+        "E": 8591,
+        "F": 95801,
+        "comp": 4,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 20,
+        "V": 415,
+        "E": 17181,
+        "F": 405287,
+        "comp": 1,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 30,
+        "V": 415,
+        "E": 25772,
+        "F": 874599,
+        "comp": 1,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 40,
+        "V": 415,
+        "E": 34362,
+        "F": 1550655,
+        "comp": 1,
+        "b1_proxy": 0
+      },
+      {
+        "pct": 50,
+        "V": 415,
+        "E": 42952,
+        "F": 2422901,
+        "comp": 1,
+        "b1_proxy": 0
+      }
+    ],
+    "interpretation": "If pure 8D Gaussian noise produces \u03b2\u2081 proxy values comparable to or larger than the 6-loop structured cloud at common \u03b5, then \u03b2\u2081=6 cannot discriminate the BOK topology from random noise at this N/dim/scale. Note: this is a proxy, not a full Vietoris-Rips persistence diagram, but it captures the gross discriminability question."
+  },
+  "T51_5_polar_lf_hf": {
+    "n_sessions_found": 0,
+    "n_sessions_analyzed": 0,
+    "lf_hf_ratios": [],
+    "mean_lf_hf": null,
+    "median_lf_hf": null,
+    "urb_699_P3_predicted": 2.0,
+    "n_within_pm25pct_of_2": 0,
+    "per_session": [],
+    "caveat": "Polar H10 'training session' export contains 1Hz HR samples, not true RR intervals. Genuine HRV LF/HF requires RR-interval series. This analysis is therefore a coarse approximation; result is SUGGESTIVE-PILOT, not definitive. Brandon RR-export would upgrade."
+  },
+  "LCC_RANDOMNESS_ABSENCE": {
+    "n_sources": 8,
+    "n_samples_per_source_bytes": 32768,
+    "n_sources_with_at_least_one_structure_signal_alpha_0.001": 2,
+    "csprng_mean_compression_structure": -0.00048828125,
+    "patterned_mean_compression_structure": 0.515411376953125,
+    "P_LCC_RAND_1_all_sources_show_some_structure_or_compression_under_1": false,
+    "P_LCC_RAND_2_patterned_compression_exceeds_csprng": true,
+    "P_LCC_RAND_3_no_source_passes_all_seven_tests": false,
+    "per_source": {
+      "numpy_MT19937": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": -0.828125,
+          "p": 0.4075997126637061,
+          "fraction_ones": 0.4991912841796875
+        },
+        "autocorr": {
+          "lag1": {
+            "r": -0.0008888301787552051,
+            "z": -0.45508105152266504,
+            "p": 0.6490509294693303
+          },
+          "lag2": {
+            "r": 0.005172782489721954,
+            "z": 2.6484646347376404,
+            "p": 0.00808583087759951
+          },
+          "lag5": {
+            "r": -0.0006981047411671974,
+            "z": -0.3574296274776051,
+            "p": 0.7207702001410463
+          },
+          "lag10": {
+            "r": 0.001960834323938388,
+            "z": 1.0039471738564547,
+            "p": 0.31540407676522797
+          },
+          "lag50": {
+            "r": -0.0023655696886499223,
+            "z": -1.2111716805887602,
+            "p": 0.2258296139069067
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.00048828125,
+          "structure_signal": -0.00048828125
+        },
+        "spectral": {
+          "var_norm_power": 1.0023519932326965,
+          "deviation_from_white": 0.0023519932326965254
+        },
+        "block_chi2": {
+          "chi2": 2086.25,
+          "df": 2048,
+          "p": 0.2727967439294433
+        },
+        "runs": {
+          "runs": 131189,
+          "expected": 131071.65710449219,
+          "z": 0.45837243412979295,
+          "p": 0.6466848925887947
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.5843486259185475,
+          "normalized": 0.9998661112708093,
+          "deficit_from_max": 0.00013388872919073425
+        },
+        "n_structure_signals_alpha_0.001": 0
+      },
+      "numpy_PCG64": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": 0.7421875,
+          "p": 0.457973740997192,
+          "fraction_ones": 0.5007247924804688
+        },
+        "autocorr": {
+          "lag1": {
+            "r": -0.002635971404916299,
+            "z": -1.349617359317145,
+            "p": 0.17713875295022108
+          },
+          "lag2": {
+            "r": -0.00044250918872562595,
+            "z": -0.22656470462752049,
+            "p": 0.8207622402213577
+          },
+          "lag5": {
+            "r": -0.00040055169446973673,
+            "z": -0.2050824675685052,
+            "p": 0.8375076941593402
+          },
+          "lag10": {
+            "r": -0.0027848410887168825,
+            "z": -1.4258386374230438,
+            "p": 0.1539149252379477
+          },
+          "lag50": {
+            "r": 0.0023426758727738838,
+            "z": 1.1994500468602285,
+            "p": 0.2303529973869538
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.00048828125,
+          "structure_signal": -0.00048828125
+        },
+        "spectral": {
+          "var_norm_power": 1.0005261208553438,
+          "deviation_from_white": 0.0005261208553437591
+        },
+        "block_chi2": {
+          "chi2": 2087.0,
+          "df": 2048,
+          "p": 0.26896383117862477
+        },
+        "runs": {
+          "runs": 131418,
+          "expected": 131071.72457885742,
+          "z": 1.3526435237657328,
+          "p": 0.17616954085795622
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.584467469722641,
+          "normalized": 0.9998920316145581,
+          "deficit_from_max": 0.00010796838544191445
+        },
+        "n_structure_signals_alpha_0.001": 0
+      },
+      "os_urandom": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": 0.80859375,
+          "p": 0.41874886098361963,
+          "fraction_ones": 0.5007896423339844
+        },
+        "autocorr": {
+          "lag1": {
+            "r": -0.004650145303762905,
+            "z": -2.3808743955266074,
+            "p": 0.017271599947455973
+          },
+          "lag2": {
+            "r": -0.0009765723863457536,
+            "z": -0.5000050618090258,
+            "p": 0.6170715132815867
+          },
+          "lag5": {
+            "r": -0.0007362524514484021,
+            "z": -0.37696125514158185,
+            "p": 0.706202398408867
+          },
+          "lag10": {
+            "r": -0.001037639826988445,
+            "z": -0.5312715914180839,
+            "p": 0.5952305886492928
+          },
+          "lag50": {
+            "r": -0.0007478251652180955,
+            "z": -0.3828864845916649,
+            "p": 0.7018039328906638
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.00048828125,
+          "structure_signal": -0.00048828125
+        },
+        "spectral": {
+          "var_norm_power": 1.004473315715905,
+          "deviation_from_white": 0.004473315715904924
+        },
+        "block_chi2": {
+          "chi2": 1958.78125,
+          "df": 2048,
+          "p": 0.9198943934827251
+        },
+        "runs": {
+          "runs": 131682,
+          "expected": 131071.67308807373,
+          "z": 2.384098594328458,
+          "p": 0.017121014679474245
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.584620400644415,
+          "normalized": 0.9999253865049741,
+          "deficit_from_max": 7.46134950259103e-05
+        },
+        "n_structure_signals_alpha_0.001": 0
+      },
+      "sha256_counter": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": 0.5234375,
+          "p": 0.6006698338286784,
+          "fraction_ones": 0.5005111694335938
+        },
+        "autocorr": {
+          "lag1": {
+            "r": -0.0015983659221475296,
+            "z": -0.8183633521395351,
+            "p": 0.41314974139986815
+          },
+          "lag2": {
+            "r": 0.0014572269962765958,
+            "z": 0.746100222093617,
+            "p": 0.4556068751819453
+          },
+          "lag5": {
+            "r": -0.0022545314420979344,
+            "z": -1.1543200983541424,
+            "p": 0.24836895956276783
+          },
+          "lag10": {
+            "r": -0.0025406879538268567,
+            "z": -1.3008322323593506,
+            "p": 0.1933158864723694
+          },
+          "lag50": {
+            "r": -0.00036628118284689375,
+            "z": -0.1875359656176096,
+            "p": 0.8512404273937775
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.00048828125,
+          "structure_signal": -0.00048828125
+        },
+        "spectral": {
+          "var_norm_power": 1.0007181029075238,
+          "deviation_from_white": 0.0007181029075238321
+        },
+        "block_chi2": {
+          "chi2": 1926.875,
+          "df": 2048,
+          "p": 0.9726191735447144
+        },
+        "runs": {
+          "runs": 131282,
+          "expected": 131071.8630065918,
+          "z": 0.8208507618010981,
+          "p": 0.41173128027193684
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.584560574731413,
+          "normalized": 0.9999123382165765,
+          "deficit_from_max": 8.766178342345388e-05
+        },
+        "n_structure_signals_alpha_0.001": 0
+      },
+      "python_random": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": -0.0390625,
+          "p": 0.9688405588007578,
+          "fraction_ones": 0.49996185302734375
+        },
+        "autocorr": {
+          "lag1": {
+            "r": -0.0003471387774218259,
+            "z": -0.17773505403997486,
+            "p": 0.8589310543826314
+          },
+          "lag2": {
+            "r": 0.00114441791756464,
+            "z": 0.5859419737930956,
+            "p": 0.5579145094121565
+          },
+          "lag5": {
+            "r": -0.0010948390040038296,
+            "z": -0.5605575700499608,
+            "p": 0.5750991832512138
+          },
+          "lag10": {
+            "r": -0.0013123059275116679,
+            "z": -0.671900634885974,
+            "p": 0.5016469561871708
+          },
+          "lag50": {
+            "r": 0.0021442688625885006,
+            "z": 1.0978656576453123,
+            "p": 0.27226315594562633
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.00048828125,
+          "structure_signal": -0.00048828125
+        },
+        "spectral": {
+          "var_norm_power": 1.0036867064486183,
+          "deviation_from_white": 0.0036867064486183487
+        },
+        "block_chi2": {
+          "chi2": 2132.25,
+          "df": 2048,
+          "p": 0.09524045849477736
+        },
+        "runs": {
+          "runs": 131118,
+          "expected": 131071.99923706055,
+          "z": 0.17969116570094065,
+          "p": 0.8573950293044059
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.584330058283434,
+          "normalized": 0.999862061589899,
+          "deficit_from_max": 0.00013793841010101282
+        },
+        "n_structure_signals_alpha_0.001": 0
+      },
+      "phi_mod1": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": 0.09375,
+          "p": 0.9253077508893466,
+          "fraction_ones": 0.500091552734375
+        },
+        "autocorr": {
+          "lag1": {
+            "r": 5.722067918240886e-05,
+            "z": 0.029296987741393336,
+            "p": 0.9766277293068037
+          },
+          "lag2": {
+            "r": -9.155343594182822e-05,
+            "z": -0.04687535920221605,
+            "p": 0.9626125670083203
+          },
+          "lag5": {
+            "r": 0.00014877603602507424,
+            "z": 0.07617333044483801,
+            "p": 0.9392812002501312
+          },
+          "lag10": {
+            "r": -0.0002441499467667959,
+            "z": -0.1250047727445995,
+            "p": 0.9005197718765361
+          },
+          "lag50": {
+            "r": 0.00021366380717432055,
+            "z": 0.10939586927325212,
+            "p": 0.9128885099290531
+          }
+        },
+        "compression": {
+          "compression_ratio": 0.07867431640625,
+          "structure_signal": 0.92132568359375
+        },
+        "spectral": {
+          "var_norm_power": 883.8268667128846,
+          "deviation_from_white": 882.8268667128846
+        },
+        "block_chi2": {
+          "chi2": 455.3124999999999,
+          "df": 2048,
+          "p": 1.0
+        },
+        "runs": {
+          "runs": 131065,
+          "expected": 131071.99560546875,
+          "z": -0.02732668810554243,
+          "p": 0.9781991707836517
+        },
+        "perm_entropy": {
+          "entropy_bits": 1.9188537102283467,
+          "normalized": 0.4185102298931639,
+          "deficit_from_max": 0.5814897701068361
+        },
+        "n_structure_signals_alpha_0.001": 2
+      },
+      "logistic_map": {
+        "n_bytes": 32768,
+        "n_bits": 262144,
+        "monobit": {
+          "z": -2.4375,
+          "p": 0.014789214221761382,
+          "fraction_ones": 0.49761962890625
+        },
+        "autocorr": {
+          "lag1": {
+            "r": 0.13909136004060152,
+            "z": 71.21477634078798,
+            "p": 0.0
+          },
+          "lag2": {
+            "r": 0.10585342643838515,
+            "z": 54.196954336453196,
+            "p": 0.0
+          },
+          "lag5": {
+            "r": 0.032628467550740135,
+            "z": 16.70577538597895,
+            "p": 0.0
+          },
+          "lag10": {
+            "r": 0.003517364772581368,
+            "z": 1.8008907635616604,
+            "p": 0.07172009909457255
+          },
+          "lag50": {
+            "r": 0.0022282587028510637,
+            "z": 1.1408684558597446,
+            "p": 0.2539246679743954
+          }
+        },
+        "compression": {
+          "compression_ratio": 0.372406005859375,
+          "structure_signal": 0.627593994140625
+        },
+        "spectral": {
+          "var_norm_power": 1.1799760630932072,
+          "deviation_from_white": 0.17997606309320724
+        },
+        "block_chi2": {
+          "chi2": 4151.5,
+          "df": 2048,
+          "p": 0.0
+        },
+        "runs": {
+          "runs": 112842,
+          "expected": 131069.029296875,
+          "z": -71.19960480850516,
+          "p": 0.0
+        },
+        "perm_entropy": {
+          "entropy_bits": 3.3916099336880863,
+          "normalized": 0.7397246832781357,
+          "deficit_from_max": 0.2602753167218643
+        },
+        "n_structure_signals_alpha_0.001": 4
+      },
+      "pi_BBP_4kB": {
+        "n_bytes": 4096,
+        "n_bits": 32768,
+        "monobit": {
+          "z": 0.2320194125768359,
+          "p": 0.8165229361213759,
+          "fraction_ones": 0.500640869140625
+        },
+        "autocorr": {
+          "lag1": {
+            "r": 0.003021337401737002,
+            "z": 0.5469204902453193,
+            "p": 0.5844333578848386
+          },
+          "lag2": {
+            "r": 0.0004883118563660968,
+            "z": 0.08839388799238616,
+            "p": 0.9295636189578085
+          },
+          "lag5": {
+            "r": -0.0013735028516469012,
+            "z": -0.2486305741769176,
+            "p": 0.8036465562142765
+          },
+          "lag10": {
+            "r": 0.0053116883160417416,
+            "z": 0.9615182919225521,
+            "p": 0.33629163270499696
+          },
+          "lag50": {
+            "r": 0.0022617556565597934,
+            "z": 0.40942150710795827,
+            "p": 0.682230359019687
+          }
+        },
+        "compression": {
+          "compression_ratio": 1.002685546875,
+          "structure_signal": -0.002685546875
+        },
+        "spectral": {
+          "var_norm_power": 1.0152879700333914,
+          "deviation_from_white": 0.01528797003339144
+        },
+        "block_chi2": {
+          "chi2": 262.59375,
+          "df": 256,
+          "p": 0.3751112513560573
+        },
+        "runs": {
+          "runs": 16335,
+          "expected": 16383.973083496094,
+          "z": -0.5410977544014278,
+          "p": 0.5884402059666292
+        },
+        "perm_entropy": {
+          "entropy_bits": 4.582250706023537,
+          "normalized": 0.9994085459374656,
+          "deficit_from_max": 0.0005914540625343578
+        },
+        "n_structure_signals_alpha_0.001": 0
+      }
+    },
+    "interpretation": "P-LCC-RAND-1 (all sources show some structure OR compression<1.0): tests whether the 'true-random floor' is empty. P-LCC-RAND-2 tests whether the spectrum from CSPRNG \u2192 patterned is monotonic in structure signal \u2014 if so, the LCC framework's claim of a continuous structure gradient is corroborated. P-LCC-RAND-3 tests the strongest form: no source is perfectly random across ALL panel tests. NOTE: compression < 1.0 for any finite bytestream is expected even for ideal random sources due to header overhead, so the compression-only signal is interpreted with the threshold structure_signal > 0.01."
+  },
+  "T51_2_v2_tda_null": {
+    "N_total": 415,
+    "dim": 8,
+    "single_run_sweep_gauss": [
+      {
+        "pct": 5,
+        "eps": 2.3684440832550635,
+        "V": 415,
+        "E": 4296,
+        "F": 18009,
+        "comp": 19,
+        "cyclomatic": 3900,
+        "b1_lower": 0
+      },
+      {
+        "pct": 10,
+        "eps": 2.6713284704092244,
+        "V": 415,
+        "E": 8591,
+        "F": 74681,
+        "comp": 7,
+        "cyclomatic": 8183,
+        "b1_lower": 0
+      },
+      {
+        "pct": 15,
+        "eps": 2.886075051418348,
+        "V": 415,
+        "E": 12886,
+        "F": 175259,
+        "comp": 3,
+        "cyclomatic": 12474,
+        "b1_lower": 0
+      },
+      {
+        "pct": 20,
+        "eps": 3.0621687241158635,
+        "V": 415,
+        "E": 17181,
+        "F": 321503,
+        "comp": 2,
+        "cyclomatic": 16768,
+        "b1_lower": 0
+      },
+      {
+        "pct": 25,
+        "eps": 3.212792119561894,
+        "V": 415,
+        "E": 21476,
+        "F": 516975,
+        "comp": 1,
+        "cyclomatic": 21062,
+        "b1_lower": 0
+      },
+      {
+        "pct": 30,
+        "eps": 3.3528589644885005,
+        "V": 415,
+        "E": 25772,
+        "F": 764998,
+        "comp": 1,
+        "cyclomatic": 25358,
+        "b1_lower": 0
+      },
+      {
+        "pct": 35,
+        "eps": 3.4833241395877255,
+        "V": 415,
+        "E": 30067,
+        "F": 1067904,
+        "comp": 1,
+        "cyclomatic": 29653,
+        "b1_lower": 0
+      },
+      {
+        "pct": 40,
+        "eps": 3.6117135341771687,
+        "V": 415,
+        "E": 34362,
+        "F": 1428027,
+        "comp": 1,
+        "cyclomatic": 33948,
+        "b1_lower": 0
+      },
+      {
+        "pct": 50,
+        "eps": 3.8565234081912094,
+        "V": 415,
+        "E": 42952,
+        "F": 2329334,
+        "comp": 1,
+        "cyclomatic": 42538,
+        "b1_lower": 0
+      },
+      {
+        "pct": 60,
+        "eps": 4.103573042659225,
+        "V": 415,
+        "E": 51543,
+        "F": 3505712,
+        "comp": 1,
+        "cyclomatic": 51129,
+        "b1_lower": 0
+      }
+    ],
+    "single_run_sweep_loop6": [
+      {
+        "pct": 5,
+        "eps": 0.4975338081280367,
+        "V": 415,
+        "E": 4296,
+        "F": 21199,
+        "comp": 7,
+        "cyclomatic": 3888,
+        "b1_lower": 0
+      },
+      {
+        "pct": 10,
+        "eps": 0.6096594499660823,
+        "V": 415,
+        "E": 8591,
+        "F": 95801,
+        "comp": 4,
+        "cyclomatic": 8180,
+        "b1_lower": 0
+      },
+      {
+        "pct": 15,
+        "eps": 0.7515254815795801,
+        "V": 415,
+        "E": 12886,
+        "F": 236958,
+        "comp": 2,
+        "cyclomatic": 12473,
+        "b1_lower": 0
+      },
+      {
+        "pct": 20,
+        "eps": 0.9944030044299479,
+        "V": 415,
+        "E": 17181,
+        "F": 405287,
+        "comp": 1,
+        "cyclomatic": 16767,
+        "b1_lower": 0
+      },
+      {
+        "pct": 25,
+        "eps": 1.125701920200963,
+        "V": 415,
+        "E": 21476,
+        "F": 611334,
+        "comp": 1,
+        "cyclomatic": 21062,
+        "b1_lower": 0
+      },
+      {
+        "pct": 30,
+        "eps": 1.2156095400595268,
+        "V": 415,
+        "E": 25772,
+        "F": 874599,
+        "comp": 1,
+        "cyclomatic": 25358,
+        "b1_lower": 0
+      },
+      {
+        "pct": 35,
+        "eps": 1.2883170416756597,
+        "V": 415,
+        "E": 30067,
+        "F": 1187230,
+        "comp": 1,
+        "cyclomatic": 29653,
+        "b1_lower": 0
+      },
+      {
+        "pct": 40,
+        "eps": 1.3512543935132304,
+        "V": 415,
+        "E": 34362,
+        "F": 1550655,
+        "comp": 1,
+        "cyclomatic": 33948,
+        "b1_lower": 0
+      },
+      {
+        "pct": 50,
+        "eps": 1.4546547723084182,
+        "V": 415,
+        "E": 42952,
+        "F": 2422901,
+        "comp": 1,
+        "cyclomatic": 42538,
+        "b1_lower": 0
+      },
+      {
+        "pct": 60,
+        "eps": 1.547078955207392,
+        "V": 415,
+        "E": 51543,
+        "F": 3539245,
+        "comp": 1,
+        "cyclomatic": 51129,
+        "b1_lower": 0
+      }
+    ],
+    "null_b1_dist_n20": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "h1_b1_dist_n20": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "null_mean_max_b1": 0.0,
+    "null_p95_max_b1": 0.0,
+    "h1_mean_max_b1": 0.0,
+    "h1_p5_max_b1": 0.0,
+    "n_null_runs_b1_geq_6": 0,
+    "n_h1_runs_b1_geq_6": 0,
+    "bok_topology_reported_b1": 6,
+    "interpretation": "Pure 8D Gaussian noise (H0) max-\u03b2\u2081-over-\u03b5-sweep distribution vs. 6-cluster structured cloud (H1). If null_p95 >= 6 then \u03b2\u2081=6 cannot discriminate the BOK topology from random Gaussian noise at this N=415 in dim=8. If h1_p5 << 6 then the H1 structure also fails to reliably hit \u03b2\u2081=6 \u2014 the value is filtration-scale-sensitive."
+  },
+  "T51_5_v2_polar_lf_hf": {
+    "n_sessions_found": 0,
+    "n_sessions_analyzed": 0,
+    "lf_hf_ratios": [],
+    "mean_lf_hf": null,
+    "median_lf_hf": null,
+    "std_lf_hf": null,
+    "urb_699_P3_predicted": 2.0,
+    "n_within_pm25pct_of_2": 0,
+    "per_session": [],
+    "caveat": "Polar H10 'training-session' export gives 1-Hz HR (bpm) samples, NOT RR-interval (ms) series. Strict HRV LF/HF needs RR intervals. The 1-Hz bpm-derived spectrum has frequency content but with different amplitude calibration than standard HRV. Therefore this is SUGGESTIVE-PILOT only. urb_699 P3 prediction of 2:1 LF/HF in 'deep coherence' states is not directly testable without (a) RR intervals, (b) labeled coherence-state segments. Brandon-export of RR data would upgrade this to a clean test."
+  },
+  "T51_5_v3_polar_lf_hf": {
+    "n_sessions_found": 7,
+    "n_sessions_analyzed": 6,
+    "ratios": [
+      2.423472372549118,
+      7.851982064913647,
+      6.310011110166537,
+      8.688049820225032,
+      7.292068796503024,
+      5.867296726020765
+    ],
+    "mean_lf_hf": 6.405480148396355,
+    "median_lf_hf": 6.80103995333478,
+    "std_lf_hf": 2.0101274085855096,
+    "urb_699_P3_predicted": 2.0,
+    "n_within_pm25pct_of_2": 1,
+    "per_session": [
+      {
+        "file": "training-session-2025-02-03T09:44:24-805",
+        "status": "short",
+        "n": 116
+      },
+      {
+        "n": 502,
+        "lf": 0.2112472621117724,
+        "hf": 0.08716718395661881,
+        "ratio": 2.423472372549118,
+        "file": "training-session-2025-02-09T13:38:22-827"
+      },
+      {
+        "n": 12577,
+        "lf": 0.3664882968258837,
+        "hf": 0.04667462225410905,
+        "ratio": 7.851982064913647,
+        "file": "training-session-2026-05-01T11:29:20-0e1"
+      },
+      {
+        "n": 7339,
+        "lf": 0.2661066965357463,
+        "hf": 0.04217214389797217,
+        "ratio": 6.310011110166537,
+        "file": "training-session-2026-05-02T14:16:44-0e1"
+      },
+      {
+        "n": 12827,
+        "lf": 0.4266609296997477,
+        "hf": 0.04910894142279408,
+        "ratio": 8.688049820225032,
+        "file": "training-session-2026-05-02T17:44:35-0e1"
+      },
+      {
+        "n": 5986,
+        "lf": 0.31755325519849104,
+        "hf": 0.04354775908734933,
+        "ratio": 7.292068796503024,
+        "file": "training-session-2026-05-03T06:16:48-0e1"
+      },
+      {
+        "n": 15889,
+        "lf": 0.5661218203651374,
+        "hf": 0.0964876751254891,
+        "ratio": 5.867296726020765,
+        "file": "training-session-2026-05-03T08:05:11-0e1"
+      }
+    ],
+    "caveat": "1-Hz HR (bpm) samples, NOT RR-interval ms; coarse approximation; SUGGESTIVE-PILOT only; sessions are TRAINING (sympathetic-dominant), not coherence-state-labeled."
+  }
+}
