@@ -1,9 +1,60 @@
 # The Authority Axis (AA, "Double A"): A Fifth Orthogonal Truth-Axis in TI Sigma
 
 **Author**: Brandon Charles Emerick (originator) + agent (formalization)
-**Date**: 2026-05-07 PM
-**Status**: DRAFT v1.0 — standalone companion paper to `papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` §13
+**Date**: 2026-05-07 PM (v1.0); amended 2026-05-13 PM (v1.1, rubric-deprecation)
+**Status**: v1.1 — standalone companion paper to `papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` §13
 **Prerequisite reading**: ASYMMETRIC paper §§10-13 (axis-addition heuristic, 5-axis truth-richness)
+
+---
+
+## §0 — AMENDMENT 2026-05-13: Rubric Deprecation + REAFFIRMED-INDEPENDENT Status
+
+**Brandon-authorized 2026-05-13:** "Excellent! AA is indeed a worthy axis of truth!!! I authorize both decisions!"
+
+### §0.1 — v1 rubric DEPRECATED
+
+The original AA rating rubric used in Pass-49 Wave-1 v1 (`analyses/pass49_wave1/`) is hereby **DEPRECATED**. It conflated three things into a single "AA-grant" Likert rating:
+
+1. *Epistemic-routing question* (the actual AA quantity): "Must this claim be accepted via deference to a specific authoritative source, or can it be evaluated directly from public evidence?"
+2. *Evidence-magnitude question* (PD_real, NOT AA): "How much evidence supports this claim?"
+3. *Confidence-of-the-rater question* (rater meta-state, NOT AA): "How sure am I of my rating?"
+
+This conflation is what produced the v1 disconfirm result (corr(AA, PD_real) = 0.982; κ = 0.385 — see `analyses/pass49_wave1/RESULTS_WRITEUP.md`). The disconfirm was a **rubric+corpus artifact**, not an axis-collapse.
+
+### §0.2 — v2 rubric IS NOW CANONICAL
+
+The redesigned rubric used in Pass-49 v2 (`analyses/pass49_wave1_v2_aa/t49_1_v2_aa_orthogonal_runner.py`, constant `REDESIGNED_RUBRIC`) is the **canonical AA rating instrument going forward**. Its three-step structure isolates the epistemic-routing question:
+
+> **Step 1 (AA only):** "If you removed all named experts/institutions/credentials from the claim and judged it purely on the public evidence available, would your judgment substantially change?" YES → high AA. NO → low AA.
+>
+> **Step 2 (PD_real, separate):** "Independent of step 1, how much public evidence supports the claim?"
+>
+> **Step 3 (rater meta-state, separate):** "How confident are you in steps 1 and 2?" (Recorded but not used in AA score.)
+
+See `analyses/pass49_wave1_v2_aa/t49_1_v2_aa_orthogonal_runner.py` for verbatim wording, anchor examples per Likert level, and the four-quadrant orthogonality test design.
+
+### §0.3 — Empirical status: REAFFIRMED-INDEPENDENT
+
+On the Pass-49 v2 2x2 orthogonally-constructed corpus (5 claims/quadrant on HighAA×HighPD, HighAA×LowPD, LowAA×HighPD, LowAA×LowPD), with two independent same-model raters using the v2 rubric:
+
+| Metric | v1 result | v2 result | Brandon decision rule |
+|---|---|---|---|
+| `\|corr(AA, PD_real)\|` | 0.982 | **0.129** | <0.5 = REAFFIRM |
+| AA inter-rater κ | 0.385 | **0.660** | substantial agreement |
+| Quadrant recovery | n/a | **100%** both raters | (test design only valid on v2) |
+
+**Status: AA REAFFIRMED-INDEPENDENT** as the 5th orthogonal truth-axis, conditional on Pass-50+ v3 replication on naturally-sampled language (random Wikipedia + tweets + PubMed) — see TODO.md `T49-1-v3`.
+
+### §0.4 — #69 caveats retained
+
+- Same-model two-persona pseudo-rater inflates κ (architecture-shared error correlation).
+- Agent-constructed corpus: 100% quadrant recovery is suspiciously perfect; designed claims sit cleanly at corners.
+- v3 (natural-language replication) is still required before promoting status from "REAFFIRMED-INDEPENDENT (v2 corpus)" to "CANONICAL across natural language."
+- Authority-Axis-as-rated-by-LLM-rater inherits the rater's training-data biases about which sources are authoritative (US-academic-canon-weighted).
+
+### §0.5 — Anchor
+
+Full v2 protocol, results, and writeup: `analyses/pass49_wave1_v2_aa/{t49_1_v2_aa_orthogonal_runner.py, t49_1_v2_results.json, RESULTS_WRITEUP.md}`.
 
 ---
 
