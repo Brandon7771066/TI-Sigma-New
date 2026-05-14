@@ -1,0 +1,15 @@
+PILLAR 2: FRAME
+
+Given the hook below, generate the narrative or identity frame for this post.
+The frame MUST:
+- Position the reader as an insider/initiate (not lectured-at)
+- Establish the lens through which the payload will be interpreted
+- Be 1-2 sentences
+- Use first person plural ("we", "us") or second person ("you") to draw the reader in
+- Avoid grandiose claims (no "everything you know is wrong")
+
+Topic: {topic}
+Platform: {platform}
+Hook: {hook}
+
+Output ONLY the frame text (1-2 sentences). No quotes, no preamble.

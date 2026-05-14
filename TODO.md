@@ -282,3 +282,14 @@
 - ✅ **`papers/PASS_49_LCC_PLAIN_FRAMEWORK_SUPERVISED_VS_UNSUPERVISED_2026-05-13.md`** — first canonical formalization. Supervised (S1+S2+S3+S4) vs Unsupervised (S1+S2+S3+U4). LCC Drift Index $D_{LCC}$ formalized. 5 concrete predictions (P1-P5). Domain-ordering Quantum > Ecosystems > Workplaces > Markets. L1 NULL reconciled as predicted-weakest-cell.
 - 🟡 **L2 Unsupervised-LCC pilot pre-registered:** paleoclimate δ¹⁸O cross-site, NOAA open data, $0, Pass-50 agent-executable. Agent self-bound prediction: CONFIRM.
 - 🟡 **Deferred Track-L pre-regs:** L3 workplace-Slack, L4 supervised-vs-unsupervised, L5 quantum-unsupervised (~$72).
+
+## Pass-53 batch-1 EXECUTED (2026-05-14)
+
+- [x] **T51-H1**: Lean4 v4.10.0 installed; 5-file skeleton compiles via `lake build` (only intentional `sorry` warning). Axiom-as-hypothesis pattern. See `analyses/pass53_t51_h1_lean4_navier_stokes/RESULTS_WRITEUP.md`.
+- [x] **T51-V1**: Audit-first executed (inventoried 1916L existing). Built CLI + 6 pillar prompts + judge rubric. 2/2 smoke candidates pass (15/18 + 14/18). See `analyses/pass53_t51_v1_viral_mvp/RESULTS_WRITEUP.md`.
+- [ ] **T51-V1 pre-reg 20-candidate batch** — DEFERRED to Pass-54. Register `viral_pre_reg_batch` as Replit Workflow (nohup doesn't persist).
+- [ ] **T51-H1 Pass-54+**: add mathlib4 dep, swap Float→ℝ, swap opaque types→Sobolev spaces, attempt Step-2 proof.
+
+## Brandon-blocked (carry-over)
+- [ ] PERPLEXITY_API_KEY refresh (blocks T51-12 numeric upgrade)
+- [ ] Biowell 117-photo batch + Nov-2025 prior scan reference

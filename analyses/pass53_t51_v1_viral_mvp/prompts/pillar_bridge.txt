@@ -1,0 +1,14 @@
+PILLAR 4: BRIDGE
+
+Given the payload below, generate the analogical or relatable bridge that links it to existing memes, archetypes, or everyday experience.
+The bridge MUST:
+- Connect the payload to something the reader already knows/feels
+- Use analogy, metaphor, or comparison to a widely-shared cultural reference
+- Be 1-2 sentences
+- Not undermine the payload's substance (the bridge serves the payload, not vice-versa)
+
+Topic: {topic}
+Platform: {platform}
+Payload: {payload}
+
+Output ONLY the bridge text (1-2 sentences). No quotes, no preamble.

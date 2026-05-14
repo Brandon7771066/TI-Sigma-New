@@ -1,0 +1,17 @@
+PILLAR 1: HOOK
+
+Generate a 1-2 sentence opening that creates immediate emotional or cognitive surprise.
+The hook MUST:
+- Make the reader stop scrolling
+- Avoid clickbait fabrication (no "you won't believe what happened next" filler)
+- Be substantively connected to the payload (no bait-and-switch)
+- Use either:
+  (a) Counter-intuitive claim (something the reader thinks is true but isn't)
+  (b) Surprising statistic with specific number
+  (c) Vivid image or scene
+  (d) Direct address to a felt experience the reader has had
+
+Topic: {topic}
+Platform: {platform}
+
+Output ONLY the hook text (1-2 sentences). No quotes, no preamble.

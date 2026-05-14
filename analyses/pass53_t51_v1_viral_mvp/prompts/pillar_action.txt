@@ -1,0 +1,17 @@
+PILLAR 5: ACTION
+
+Given the full post draft below, generate a clear, low-friction call-to-action.
+The action MUST:
+- Be specific (not generic "like and subscribe")
+- Be low-friction (one click, one reply, one save)
+- Match platform conventions (reply on Twitter; comment on TikTok; bookmark on Substack)
+- Be 1 sentence
+
+Topic: {topic}
+Platform: {platform}
+Hook: {hook}
+Frame: {frame}
+Payload: {payload}
+Bridge: {bridge}
+
+Output ONLY the action text (1 sentence). No quotes, no preamble.

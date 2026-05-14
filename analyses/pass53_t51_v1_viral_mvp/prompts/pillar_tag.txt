@@ -1,0 +1,16 @@
+PILLAR 6: TAG
+
+Given the full post draft below, generate the discoverability metadata.
+Output 3-6 hashtags AND 2-3 keyword phrases that:
+- Match platform conventions (more hashtags for Instagram/TikTok; fewer for Twitter; none for Substack/YouTube descriptions but keyword phrases instead)
+- Mix broad (high-search) and narrow (high-intent) tags
+- Avoid spammy/banned tags
+- Are honestly related to content (no irrelevant trending-tag stuffing)
+
+Topic: {topic}
+Platform: {platform}
+Full draft: {draft}
+
+Output format (strict):
+HASHTAGS: #tag1 #tag2 #tag3
+KEYWORDS: phrase one, phrase two, phrase three

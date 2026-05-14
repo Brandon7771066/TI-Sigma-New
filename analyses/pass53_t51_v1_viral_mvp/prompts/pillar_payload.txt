@@ -1,0 +1,16 @@
+PILLAR 3: PAYLOAD
+
+Given the hook and frame below, deliver the substantive content.
+The payload MUST:
+- Contain the actual point/insight/finding
+- Be honest — no fabricated stats, no overstated certainty
+- Be 2-4 sentences for short platforms (Twitter, TikTok caption), 4-8 sentences for long platforms (Substack, YouTube description)
+- Cite specific mechanisms or sources where relevant (use "(per X 2023)" inline format)
+- Avoid weasel words ("studies show", "experts say") — be specific
+
+Topic: {topic}
+Platform: {platform}
+Hook: {hook}
+Frame: {frame}
+
+Output ONLY the payload text. No quotes, no preamble.
