@@ -1,0 +1,19 @@
+{
+  "n_instances_total": 200,
+  "n_instances_valid": 200,
+  "n_sat_baseline": 200,
+  "n_sat_stepskip": 200,
+  "mean_baseline_decisions": 86.95,
+  "mean_stepskip_decisions": 22.62,
+  "mean_decision_reduction_pct": 73.98504887866589,
+  "median_per_instance_reduction_pct": 71.91011235955057,
+  "n_stepskip_better": 165,
+  "n_stepskip_worse": 33,
+  "n_tied": 2,
+  "mean_baseline_recursions": 1229.98,
+  "mean_stepskip_recursions": 307.705,
+  "mean_baseline_time_s": 0.03609468102455139,
+  "mean_stepskip_time_s": 0.01181044101715088,
+  "pre_reg_threshold_pct": 10.0,
+  "verdict_literal": "CONFIRM"
+}

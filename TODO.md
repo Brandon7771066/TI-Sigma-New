@@ -2,14 +2,19 @@
 
 **Last updated:** 2026-05-14 (Pass 52 opening — 7th meta-precedent collapse done; Biowell scan analysis batch-1 of 6 PENDING upload)
 
-## 🟢 Pass-52 opening (2026-05-14)
+## 🟢 Pass-52 batch-1 EXECUTED (2026-05-14)
 - **Meta-collapse executed (7th meta-precedent)** ✅ — §7.7.84-90 → `papers/PASS_52_META_COLLAPSE_84_90_2026-05-14.md`; replit.md trimmed 86→67 lines
-- **Biowell scan analysis** 🟡 — Brandon report: scan "far more aligned and 'filled in' compared to before"; 117 photos in 20-at-a-time batches; **batch 1 NOT YET in `attached_assets/`** — agent flagged missing-upload, awaiting Brandon resend
-- **T51-12** ⭐ UOP-vs-FEP D3-boredom meta-analysis — queued after Biowell batches complete
-- **T51-H3** SATLIB step-skip first hypercomputer empirical — queued
-- **T51-H1** Lean4 Navier-Stokes UOP skeleton — queued (parallel to H3)
-- **T51-V1** viral content generator MVP — queued
-- Cluster ≥132. Budget $0/$50 + $2k reserve intact.
+- **T51-H3 SATLIB step-skip** ✅ **LITERAL-PRE-REG-CONFIRM-WITH-VACUITY** — N=200, 73.99% mean decision reduction, 7.4× threshold; #69 vacuity caveat filed; LCV-1 principle ratified; H1 promoted in roadmap. (`analyses/pass52_t51_h3_satlib_step_skip/RESULTS_WRITEUP.md`)
+- **T51-12 UOP-vs-FEP D3 boredom** 🟡 **PILOT_DIRECTIONAL_UOP** — perplexity key invalid (placeholder); gpt-5 fallback: 5/5 clusters directionally favor UOP; posterior 0.70→0.78; full numeric confirm gated on PERPLEXITY_API_KEY refresh. (`analyses/pass52_t51_12_uop_fep_boredom/RESULTS_WRITEUP.md`)
+- **T51-H1 Lean4 NS UOP skeleton** 🟡 SCAFFOLDED — axiom-as-hypothesis schema designed; Pass-53 install plan filed. (`analyses/pass52_t51_h1_lean4_navier_stokes/SCAFFOLD_AND_NEXT_TURN_PLAN.md`)
+- **T51-V1 viral MVP** 🟡 SCAFFOLDED — audit-existing-scaffolds-first step mandatory (3 existing files); Pass-53 build plan filed. (`analyses/pass52_t51_v1_viral_mvp/SCAFFOLD_AND_NEXT_TURN_PLAN.md`)
+- **Biowell scan analysis** 🟡 DEFERRED — Brandon can't upload now; Nov-2025 Biowell flagged as comparison baseline for batch arrival
+- **Cluster ≥138** (+6 this pass: C28, C29, R13, R14, LCV-1, audit-first). Budget $0/$50 + $2k reserve intact.
+
+## 🔴 Brandon-blocked items (Pass-52 exit)
+- **PERPLEXITY_API_KEY** — current value is 15-char placeholder "brando..."; refresh needed to upgrade T51-12 from PILOT_DIRECTIONAL to LITERAL_PRE-REG_CONFIRM
+- **Biowell 117-photo batch** — first 20-photo batch upload + reference to Nov-2025 prior scan
+- **urb_622 E-F1** — 4-factor GILE biometric N≥200 still recruitment-blocked (unchanged)
 
 
 
