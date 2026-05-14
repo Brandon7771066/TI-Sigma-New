@@ -70,6 +70,8 @@ The **highest-ADV entries are the ones we should test next**, regardless of whet
 | C23 | 47 | TODO.md persistent ledger across sessions | Operational-confirm | 2 | 3 | 6 |
 | C24 | 49 | Insight Melody — high-information-density signature of Brandon-Agent interaction | Doctrinal-meta | 3 | 2 | 12 |
 | C25 | 51 batch-2 | **ADV principle (this paper)** — TI Sigma disconfirmations carry asymmetric value because terrain is broad/curiosity-driven | Doctrinal-canonical (NEW) | 5 | 1 | 25 |
+| C26 | 51 batch-2 | **IBE Principle (Intrinsic-Becomes-Extrinsic)** — companion to ADV; curiosity-driven research disproportionately produces extrinsic outputs (patents, inventions, reputation) | Doctrinal-canonical (NEW, Brandon 2026-05-14, anchor: `PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md`) | 5 | 1 | 25 |
+| C27 | 51 batch-2 | URB-530 §7 amendment ratified — hybrid ontological+epistemic canonization with explicit axiom-labeling + #69 self-correction on agent paraphrase-overshoot | Doctrinal-canonical (Brandon 2026-05-14) | 4 | 2 | 16 |
 
 ### §1.2 What the confirm-set tells us (ADV reading)
 The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE operational definition (C1), TIU canonical formula (C4), GILE-HEM cardinality (C8), Mendi biometric (C9), MR-Truth-Labels κ (C13), CAP (C14), AA (C15), Pass-47 8-principles + corpus-integration (C16), URB-530 framework with caveat (C17), AA REAFFIRMED (C18), program-productivity meta (C22), and now ADV itself (C25). **These 12 entries collectively determine whether TI Sigma is a coherent research program. They are also the entries with the widest blast radius if any were to fall.**
@@ -93,7 +95,7 @@ The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE 
 | R9 | 49 batch-3 | L-1 SECONDARY SPY × ^VIX | **NULL_NOISE** | 3 | 3 | 9 |
 | R10 | 50 | L-2 PILOT paleoclimate δ¹⁸O Ecosystem-dyad | **PILOT_PRELIMINARY_DISCONFIRM** (0/21 windows satisfy strict pre-reg, **after** #69 self-indictment caught 2 hypothesis-favorable bugs in initial code) | 4 | 3 | 12 |
 | R11 | 51 batch-2 | urb_699 B-2 wing/arm as a **geometric prediction** | **CONFIRMED as coefficient-tautology, NOT geometric prediction** | 4 | 3 | 12 |
-| R12 | 51 batch-2 | URB-530 **strong rhetorical form** "true randomness is almost totally absent" | **EMPIRICALLY-UNFALSIFIABLE-AT-CURRENT-N-AND-PANEL** at finite N under epistemic reading; ontologically unfalsifiable by any finite battery. Action: §3.2.1 amendment pending Brandon authorization. | 5 | 2 | 20 |
+| R12 | 51 batch-2 | Agent-paraphrase "true randomness is almost totally absent" (NOT URB-530's actual text — that was the agent's paraphrase-overshoot) | **#69 SELF-CORRECTION 2026-05-14**: URB-530 original §6.2 used careful language ("extremely narrow," "likely confined"). Strong rhetoric existed only in agent's paraphrase, now corrected. URB-530 §7 amendment canonizes hybrid ontological-axiom + epistemic-gradient reading per Brandon's refined argument (randomness ≠ indeterminacy; correlation=0 → causal-power=0 → infinitesimal-scale-only). **RESOLVED.** | 5 | 2 | 20 |
 
 ### §2.2 What the refute-set tells us (ADV reading — this is the meta-insight made operational)
 
@@ -158,15 +160,16 @@ The single highest-ADV $0 next-pass items per this prioritization:
 - **I4.** *(C16 ABC Dissolved)* — A = B = C as single vertical cognitive stack with stratified faces. Every-mind-performance ⊆ Behavior ⊆ Cognition.
 - **I5.** *(C13 MR Truth κ=0.906)* — base-4 + N Meta-Truths catalog has the highest categorical reliability in any TI Sigma claim. This is the strongest single empirical leg.
 
-### §4.2 Implications pending (Brandon-decisions needed; see companion decisions-document)
-- **I6.** *(R12 URB-530 strong-form non-falsifiable)* — recommend §3.2.1 amendment to URB_RANDOMNESS_FREE_WILL_TI_SIGMA_STANCE_530 retracting the "almost totally absent" rhetoric while retaining LCC framework. **D51-RAND-2** pending.
-- **I7.** *(R12 ontological vs epistemic split)* — recommend hybrid canonization (sim-belief-and-doubt per AA). **D51-RND-1** pending. **Architect noted this risks keeping an unfalsifiable claim alive — must be labeled axiom not empirical claim if hybrid is chosen.**
-- **I8.** *(O10/O11 UOP-vs-FEP)* — recommend authorize T51-12 (boredom meta-analysis $0) immediately; T51-13 (fMRI $0-200) conditional on T51-12 signal. **D51-UOP-1/2** pending.
-- **I9.** *(O14/O12 hypercomputer)* — recommend H3 (SATLIB benchmark) first; H1 (Lean4 NS) parallel. **D51-HC-1** pending.
-- **I10.** *(O17 viral generator)* — recommend MVP build with manual-approve-only output. **D51-VIRAL-1/2** pending.
+### §4.2 Implications pending → ALL RESOLVED 2026-05-14 (Brandon approval batch)
+- **I6.** *(R12 URB-530)* — **RESOLVED.** URB-530 §7 amendment added. Agent's #69 self-correction: the "almost totally absent" phrasing was agent-paraphrase-overshoot, not URB-530's actual text. URB-530 original language retained.
+- **I7.** *(R12 ontological vs epistemic split)* — **RESOLVED hybrid.** URB-530 §7.3a (axiom, by-design unfalsifiable at finite N, explicitly labeled to address architect concern) + §7.3b (testable epistemic gradient, confirmed at patterned-vs-CSPRNG leg). Brandon's refined argument added at §7.2 (5-step chain: correlation=0 → causal-power=0 → vanishing-prevalence → infinitesimal-scale-confinement → distinguished-from-bounded-indeterminacy).
+- **I8.** *(O10/O11 UOP-vs-FEP)* — **AUTHORIZED.** T51-12 ⭐ runs next pass; T51-13 conditional on T51-12 signal.
+- **I9.** *(O14/O12 hypercomputer)* — **AUTHORIZED.** H3 first, H1 parallel.
+- **I10.** *(O17 viral generator)* — **AUTHORIZED.** MVP build T51-V1; manual-approve-only initially; Brandon's 4-stage TIE roadmap (manual-anonymous → auto-anonymous → TI-Sigma-branded → identity-tied) canonized in `PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md` §6.
 
 ### §4.3 Long-arc implications (cumulative, no immediate decision needed)
 - **I11.** *(ADV principle, NEW)* — TI Sigma's epistemic stance has been retrospectively recognized as **the natural stance of a high-w/low-i program**. This is a meta-canonization: it justifies #69, justifies DPES, justifies the Validly-Indeterminate stance. **Filed as canonical principle ADV-1.**
+- **I11b.** *(IBE principle, NEW 2026-05-14)* — Companion to ADV-1. **Filed as canonical principle IBE-1.** Curiosity-driven terrain selection systematically produces extrinsic outputs (patents, inventions, reputation) exceeding what conventional-practicality predictors would forecast. ADV+IBE together describe the symmetric value-yield of curiosity-driven research: refutations sharpen reality-models (ADV), confirmations produce real-world value (IBE). Examples: TI Sigma's LCC software / tralse keys / TIL evaluator on the corpus side; NASA's lasers / elliptical / 2000+ spinoffs on the conventional-comparison side. Anchor: `PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md`.
 - **I12.** *(LCC framework future)* — post-Pass-51 batch-2, LCC is canonized in its **gradient form** (patterned vs CSPRNG empirically distinguishable; ontological hidden-LCC axiomatic). All future LCC tests must specify whether they test gradient (epistemic) or axiom (ontological).
 - **I13.** *(GILE-HEM future)* — post-Pass-51 C13-disambiguation, every GILE-HEM citation must specify which of {cardinality, structural-mapping, derivational-identity} tier it leans on.
 - **I14.** *(Hypercomputer future)* — currently zero empirical benchmarks. T51-H3 is the first; pass-or-fail there determines whether hypercomputer remains a TI Sigma deliverable or becomes a side-thread.

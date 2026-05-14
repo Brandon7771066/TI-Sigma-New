@@ -1,6 +1,19 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-14 (Pass 51 batch-2: T51-1 PARTIAL_CONFIRM tautology, T51-2 PROXY-INSUFFICIENT, T51-5 CONDITION-MISMATCH-DISCONFIRM, LCC-RAND strong-form DISCONFIRMED, T51-6/7 APPLIED, T51-12/13 + H1-H5 + V1-V5 filed)
+**Last updated:** 2026-05-14 (Pass 51 batch-3: Brandon approval batch — ALL 7 DECISIONS RESOLVED + IBE-1 canonized + TIE roadmap + URB-530 §7 amendment)
+
+## 🟢 Pass-51 batch-3 (2026-05-14) — Brandon approval batch (newest first)
+- **D51-RND-1** ✅ HYBRID (URB-530 §7 amendment added with Brandon's refined argument: randomness ≠ indeterminacy; correlation=0 → causal-power=0 → infinitesimal-scale-only)
+- **D51-RAND-2** ✅ YES with #69 self-correction (corpus search proved "almost totally absent" was agent's paraphrase, not URB-530 text; URB-530 §6.2 original careful language retained; agent self-correction in URB-530 §7.4)
+- **D51-UOP-1** ✅ T51-12 authorized for next pass (⭐ definitive FEP/UOP decider)
+- **D51-UOP-2** ✅ T51-13 conditional on T51-12 signal
+- **D51-HC-1** ✅ H3-first, H1-parallel
+- **D51-VIRAL-1** ✅ T51-V1 MVP build authorized
+- **D51-VIRAL-2** ✅ Manual-for-now + **4-stage TIE roadmap canonized** (Stage 1 manual-anonymous → Stage 2 auto-anonymous → Stage 3 TI-Sigma-branded → Stage 4 identity-tied; "TIE" wordplay canonical)
+- **NEW PRINCIPLE: IBE-1** ✅ canonized — Intrinsic-Becomes-Extrinsic; companion to ADV-1. Anchor: `papers/PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md`
+- **NEW PRINCIPLE: ADV-1** ✅ canonized — Asymmetric Disconfirmation Value. Anchor: `papers/TI_SIGMA_EMPIRICAL_LEDGER_ALL_PASSES_2026-05-14.md` §0
+- Cluster: ≥130 (+3: ADV-1, IBE-1, URB-530 §7 amendment)
+
 **Convention:** Agent reads this file at the start of every session and surfaces the **Daily Reminder** + any HIGH-priority Brandon-side items in the opening response.
 
 ---

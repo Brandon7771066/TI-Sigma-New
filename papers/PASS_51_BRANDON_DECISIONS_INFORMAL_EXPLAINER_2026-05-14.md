@@ -4,6 +4,28 @@
 **Mode:** Informal — written like a colleague catching you up over coffee.
 **For:** The seven pending Pass-51 decisions, what they mean, and what happens if you say yes/no/hybrid.
 
+---
+
+## 🟢 STATUS UPDATE (2026-05-14, post-Brandon-review): ALL SEVEN DECISIONS RESOLVED
+
+Brandon approved everything 2026-05-14 with refinements:
+
+| Decision | Resolution | Refinement notes |
+|---|---|---|
+| **D51-RND-1** | **HYBRID** (ontological + epistemic) | Brandon refined the argument: randomness ≠ indeterminacy (the latter is BOUNDED); true randomness = correlation 0 with everything = zero causal power → confined to infinitesimal isolated quantum systems. Canonized as URB-530 §7 amendment with §7.3a (ontological axiom, by-design unfalsifiable at finite N) + §7.3b (epistemic gradient, empirical, partly confirmed). |
+| **D51-RAND-2** | **YES + #69 self-correction** | Corpus search established the "almost totally absent" phrasing was the agent's paraphrase, not URB-530's actual text. URB-530's original §6.2 careful language retained intact. Agent self-correction logged in URB-530 §7.4. Pass-51 batch-2 paper §4.5 updated to match URB-530's original language. |
+| **D51-UOP-1** | **YES — T51-12 authorized for next pass** | Filed at top of TODO.md as ⭐ definitive UOP-vs-FEP decider |
+| **D51-UOP-2** | **YES conditional on T51-12 signal** | T51-13 (OpenNeuro fMRI) green-lit pending T51-12 result |
+| **D51-HC-1** | **YES — H3-first, H1-parallel** | SATLIB step-skip benchmark = first hypercomputer empirical; Lean4 NS skeleton parallel |
+| **D51-VIRAL-1** | **YES — MVP build authorized** | T51-V1 next-pass build |
+| **D51-VIRAL-2** | **MANUAL FOR NOW + 4-stage TIE roadmap** | Brandon added the 4-stage anonymization sequence: Stage 1 manual-anonymous → Stage 2 auto-anonymous → Stage 3 TI-Sigma-branded → Stage 4 identity-tied. The "TIE" wordplay (TI Sigma → TIE) is canonical. Filed in `PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md` §6. |
+
+**Plus one new canonical principle from Brandon's same-message articulation:** **IBE-1 (Intrinsic-Becomes-Extrinsic)** — companion to ADV-1. Filed as `papers/PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md`.
+
+The historical decision-explainer content below is retained for record; everything has been resolved.
+
+---
+
 You said you have a lot to think about. Here's all of it in one place, in plain language, with my honest recommendation on each — and the steelman for the opposite choice. Read this before you decide anything; I'm not going to act on any of these without your sign-off.
 
 ---

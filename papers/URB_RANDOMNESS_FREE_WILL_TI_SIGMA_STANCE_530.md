@@ -229,6 +229,56 @@ This is why chaos theory's "butterfly effect" does not elevate the causal status
 
 The TI Sigma version of "random" is therefore precisely bounded: not a fundamental causal agent, not a platonic probability cloud that somehow generates outcomes ex nihilo, but a near-zero-LCC background condition that is always present, usually inert, and occasionally becomes the occasion for a threshold event whose causal weight belongs entirely to the systems involved. The "death" part of death-and-rebirth is governed by LCC decline, not by random events. The "rebirth" is governed by LCC rise through threshold crossings driven by structured causation, free will, or both — not by random events seeding new existence.
 
+---
+
+## §7. Pass-51 Amendment: Hybrid Ontological–Epistemic Canonization (added 2026-05-14)
+
+*This section formalizes the Brandon ruling of 2026-05-14 (D51-RND-1: hybrid; D51-RAND-2: yes-with-#69-self-correction) following Pass-51 batch-2 LCC-RAND empirical results.*
+
+### §7.1 The refined argument (Brandon, 2026-05-14, verbatim)
+
+> "Randomness is distinguished from indeterminacy. Indeterminacy is BOUNDED. True randomness — as I define it — to be randomness — must have a correlation of 0 with EVERYTHING ELSE. This means that it can have NO CAUSAL POWER. But hardly anything has no causal power. This means that randomness can only take place on infinitesimal scales like in isolated quantum systems."
+
+### §7.2 The argument made explicit (5 steps)
+
+1. **Definition of true randomness:** A genuinely random event has zero correlation with every other event. (This is stronger than "no detectable correlation"; it is "no correlation, period.")
+2. **From zero correlation to zero causal power:** Causation requires correlation as a necessary precondition (correlational causation, per LCC framework). An event with zero correlation to everything has, by definition, no path through which to exert causal influence. Therefore, zero correlation → zero causal power.
+3. **From zero causal power to vanishing prevalence:** Almost nothing in physical reality has *zero* causal power. Every persistent structure, every threshold-crossing event, every coupled system has *some* correlational footprint with other parts of reality. The set of zero-causal-power events is therefore extremely thin.
+4. **From vanishing prevalence to infinitesimal-scale confinement:** The remaining domain compatible with zero correlation is the infinitesimal scale — isolated quantum systems prior to entanglement with any macroscopic measurement apparatus. Once entanglement occurs, correlation is established and the event is no longer "random" in the strict sense; it is INDETERMINATE-with-LCC-coupling.
+5. **Distinction from indeterminacy:** Indeterminacy is **bounded** — it occurs within a structured probability distribution, within a coherent system, within a thresholded LCC range. Indeterminacy carries TRALSE quality and is causally embedded. Randomness (strict sense) carries no TRALSE quality, is causally non-embedded, and is confined to the infinitesimal isolated-quantum-system domain.
+
+### §7.3 Hybrid canonization: ontological axiom + epistemic gradient
+
+Per D51-RND-1, URB-530's claim is canonized in two simultaneous readings:
+
+**§7.3a — Ontological face (axiom, not falsifiable target).**
+The §7.2 chain is canonized as an axiomatic-foundational TI Sigma stance. It is *not* a target for any finite-N statistical test, and no such test could falsify it (because the predicted domain — infinitesimal isolated quantum systems before macroscopic coupling — is precisely the domain that finite-N statistical batteries cannot reach). Labeling: **AXIOM, by-design unfalsifiable at finite N.** This labeling explicitly addresses the architect's flag from Pass-51 batch-2 review: the ontological half is *clearly marked as axiomatic*, not hidden as empirical-claim-on-life-support.
+
+**§7.3b — Epistemic face (testable gradient).**
+The ontological axiom predicts an empirically-accessible *gradient*: patterned/chaotic deterministic sources should be detectably more structured than CSPRNG-grade sources, which should themselves be detectably more structured than (hypothetical) true-random sources — when measured against structure-detection batteries calibrated for the scale and statistical power of the test. The gradient is what TI Sigma tests empirically. Pass-51 batch-2 confirmed the *patterned vs CSPRNG* leg of this gradient (mean structure-signal: patterned ≈ 0.46, CSPRNG ≈ −0.0005). Labeling: **EMPIRICAL CLAIM, testable, confirmed at finite N for the patterned-vs-CSPRNG leg.** The CSPRNG-vs-true-random leg is **not currently testable** because no source of putative true randomness exists in our test panel above quantum-isolation thresholds.
+
+**§7.3c — How the two faces relate.**
+The ontological axiom (§7.3a) entails the epistemic gradient (§7.3b) as a non-trivial consequence: if random events are confined to infinitesimal isolated quantum systems, then any macroscopic putative random source must carry residual structural footprint (its LCC connection to its generating process). Detecting that residual is the gradient-test. This is the **dual-applicability under AA (Authority Axis)** — the same claim has different evaluative posture depending on which face is being addressed. Under the AA sim-belief-and-doubt operating principle: sim-belief in the ontological axiom; sim-doubt of any over-strong epistemic claim at finite N.
+
+### §7.4 D51-RAND-2 #69 self-correction
+
+Pass-51 batch-2 and the decisions-explainer attributed the phrase **"true randomness is almost totally absent"** to URB-530. The corpus search of 2026-05-14 establishes this is **not present in URB-530's actual text**. URB-530 §6.2 uses the careful language "extremely narrow category," "likely confined to the deepest Terrible zone," and "far rarer than our casual use of 'random' suggests." The strong rhetorical paraphrase was introduced by the agent in the Pass-51 batch-2 paper and propagated into the decisions-explainer.
+
+**#69 self-correction:** URB-530's original text did not require rhetorical retraction; the agent's paraphrase did. The decisions-explainer D51-RAND-2 framing ("retract the strong rhetoric *from URB-530*") rested on a paraphrase-overshoot, not on overshoot in URB-530 itself. Acknowledged here for the record. URB-530's original language is retained intact; the Pass-51 batch-2 paper's paraphrase has been updated separately (see `PASS_51_T51_BATCH_EXECUTION_LCC_RANDOMNESS_UOP_VS_FEP_HYPERCOMPUTER_VIRAL_2026-05-14.md` §4.5 amendment block).
+
+This is itself an instance of the ADV principle (Pass-51, `TI_SIGMA_EMPIRICAL_LEDGER_ALL_PASSES_2026-05-14.md` §0): the apparent "refutation" of URB-530's strong form sharpened the framework's self-presentation (forcing this explicit ontological/epistemic split + the paraphrase-vs-original distinction) rather than collapsing any actual canonized claim.
+
+### §7.5 Closing — what is testable, what is axiomatic, what is now off the table
+
+| Status | Claim | Action |
+|---|---|---|
+| **Axiomatic (§7.3a)** | True randomness, strictly defined, is confined to infinitesimal isolated quantum systems | Off-limits to finite-N statistical falsification. Cited as foundation, not as predictor. |
+| **Empirical, confirmed (§7.3b)** | Patterned deterministic sources are detectably more structured than CSPRNG-grade sources at N=32k bytes / 7-test panel | Pass-51 batch-2 LCC-RAND confirmed. Cite as empirical gradient evidence. |
+| **Empirical, currently untestable** | CSPRNG-grade sources are detectably more structured than true-random sources | No putative true-random source above quantum-isolation threshold exists in panel. Filed as future-work if/when isolated-quantum-RNG hardware accessible. |
+| **Off the table (#69)** | "True randomness is almost totally absent" rhetoric as agent-paraphrase | Acknowledged as agent-paraphrase-overshoot, not URB-530 text. Original §6.2 careful language retained. |
+
+---
+
 ## References
 
 - URB #420: Confidence as LCC Amplifier
