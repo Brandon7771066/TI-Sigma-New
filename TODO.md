@@ -1,6 +1,13 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-14 (Pass 52 opening — 7th meta-precedent collapse done; Biowell scan analysis batch-1 of 6 PENDING upload)
+**Last updated:** 2026-05-15 (Pass 54 setup — H1 mathlib4-builds-clean; V1 pre-reg batch running as Workflow)
+
+## 🟢 Pass-54 setup items EXECUTED (2026-05-15, Brandon "proceed with both Pass-54 setup items")
+- **T51-H1 Pass-54 mathlib4 upgrade** ✅ **SKELETON-COMPILES-OVER-REAL-ℝ + AXIOMS-LIST-MACHINE-VERIFIED** — mathlib4 v4.10.0 installed (4.5 GB `.lake/`), all 4 NavierStokes modules compile, only `sorry` warning is intentional in Step-2. `#print axioms UOP_implies_NS_smoothness` → `[propext, sorryAx, Classical.choice, Quot.sound, UOP_existence_claim]` — Pass-53 dependency banner now machine-checked. Persistent build pipeline via `lean_mathlib4_install` workflow + idempotent `install_and_build.sh` (auto-bootstraps elan if `.elan/` wiped). (`analyses/pass54_t51_h1_lean4_mathlib4/RESULTS_WRITEUP.md`)
+- **T51-V1 pre-reg batch as Workflow** ✅ **REGISTERED + RUNNING** — `viral_pre_reg_batch` workflow live; 4 topics × 5 candidates with gpt-5-as-judge; persists per-topic INCREMENTAL jsonl + final `pre_reg_summary.json`. Solves Pass-53 I13 (nohup/agent-tool 2-min cap can't run 30-min jobs). Result appears in `viral_outputs/` when batch completes; verdict CONFIRM/DISCONFIRM at pass_rate ≥ 0.60.
+- **Ledger additions:** C32 (H1 mathlib4-build-confirmed + axioms-machine-verified), C33 (V1 pre-reg batch registered as persistent Workflow), I15 (mathlib4 v4.10.0 builds on Replit free-tier; 4.5 GB OK in 32 GB workspace), I16 (`#print axioms` is the canonical dependency-banner verifier), I17 (`.elan/` outside workspace NOT persistent across session resets; install scripts must auto-bootstrap), I18 (Replit Workflows are the correct infra for long-running >2-min jobs; Pass-53 I13 closed)
+- **Cluster ≥145 → ≥150** (+5: C32, C33, I15, I16, I17, I18 — I15-18 grouped as Lean-on-Replit-infra cluster)
+- Budget $0/$50 + $2k reserve intact.
 
 ## 🟢 Pass-52 batch-1 EXECUTED (2026-05-14)
 - **Meta-collapse executed (7th meta-precedent)** ✅ — §7.7.84-90 → `papers/PASS_52_META_COLLAPSE_84_90_2026-05-14.md`; replit.md trimmed 86→67 lines

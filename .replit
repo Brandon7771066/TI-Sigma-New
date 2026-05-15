@@ -35,6 +35,14 @@ args = "gsa_daily_scheduler"
 task = "workflow.run"
 args = "hypercomputer"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "viral_pre_reg_batch"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "lean_mathlib4_install"
+
 [[workflows.workflow]]
 name = "discovery_scheduler"
 author = "agent"
@@ -79,6 +87,28 @@ outputType = "console"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "streamlit run hypercomputer_app.py --server.port 8000 --server.headless true"
+
+[[workflows.workflow]]
+name = "viral_pre_reg_batch"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python viral_gen_pass53.py --batch"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "lean_mathlib4_install"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash lean4_ns_uop_pass54_mathlib/install_and_build.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
 
 [userenv]
 
