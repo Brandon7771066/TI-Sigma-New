@@ -176,3 +176,127 @@ Cluster ≥150 → ≥153 (+R15, +C34 preliminary, +I19).
 - `analyses/pass54_t51_h1_lean4_mathlib4/RESULTS_WRITEUP.md` (Pass-54 pipeline confirm)
 - Pass-46 corpus entry (PD-Riemann disconfirmation)
 - Pass-52 corpus entry (T51-H3 SAT-step-count refute as hypercomp bridge)
+
+---
+
+## APPENDIX A — COMPREHENSIVE CORPUS SWEEP (added 2026-05-15, post-user-correction)
+
+Brandon correctly flagged that the original audit body undercounted: it focused
+on the Pass-54 `lean4_ns_uop_pass54_mathlib/` directory and missed roughly six
+other Lean4 directories plus many proof-claim markdown papers. This appendix
+enumerates every formal-proof artifact in the corpus and assigns each one a
+status. Per #69 + ADV-1, the table aims to be exhaustive and honest, not
+flattering. "Passed Replit standards" (per Brandon's phrasing) is understood
+here to refer to **architect/code-review approval of scaffold structural
+quality** — type-checking, file organization, naming, comment discipline. It
+does **not** mean the underlying mathematical claim is closed under conventional
+axioms. Architect review of a Lean file that contains `sorry` or a named
+axiom-as-hypothesis approves the *scaffold*, not the *theorem*.
+
+### A.1 Static counts (theorems / sorry / axioms)
+
+| File | theorems | sorry | axioms | Status |
+|---|---|---|---|---|
+| `lean4/TI/LxE.lean` | 6 | 0 | 0 | **CLOSED in conventional axioms** (elementary L×E bounds / commutativity / classical embedding) |
+| `lean4/TISigma.lean` | 5 | 0 | 0 | **CLOSED** (golden-ratio identity φ²=φ+1; Emerick normalization √2·φ·C=1; product structure; ordering; extended Euler identity) |
+| `lean/Verisyn/EulerIdentity.lean` | 3 | 0 | 0 | **CLOSED** (V(e^iπ)=−1 under R-A reading; trivial under identity-evaluator) |
+| `lean/Verisyn/EulerIdentityRC.lean` | 3 | 0 | 0 | **CLOSED** (R-C variant) |
+| `lean4_ns_uop_pass54_mathlib/NavierStokes/ToyDecay.lean` | 3 | 0 | 0 | **CLOSED this pass** (toy ODE energy decay; NOT NS) |
+| `lean4_ti_sigma6/TralseLogic.lean` | 6 | 0 | 6 | **CLOSED-UNDER-NAMED-AXIOMS** (4-valued logic theorems are real; energy/coherence behaviour is axiomatized — not derived) |
+| `lean4_ti_sigma6/MyrionOperators.lean` | 7 | 0 | 1 | **CLOSED-UNDER-NAMED-AXIOMS** |
+| `lean4/BSD.lean` | 27 | 0 | 36 | **NOT a BSD proof.** File itself self-declares "Named Gap Formalization — *not* a proof of BSD"; axiom-accountability table labels `weak_bsd_forward (rank≥2)` and `strong_bsd` as `[OPEN] — Millennium Prize`. Only `parity_vanishing` is a real BSD-adjacent result (ε_E=−1 ⇒ L(E,1)=0 from functional equation). |
+| `lean4/Collatz.lean` | 24 | 3 | 1 | **NOT a Collatz proof.** Section 3 axiomatizes "The Collatz axiom (the conjecture itself)"; downstream theorems are conditional. |
+| `lean4_collatz/CollatzNu2.lean` | 12 | 6 | 0 | proof-holes |
+| `lean4/RiemannUOP.lean` | 49 | 16 | 3 | proof-holes + Riemann-as-axiom |
+| `lean4/Hodge.lean` | 6 | 6 | 9 | proof-holes + Hodge axioms |
+| `lean4/YangMills.lean` | 8 | 7 | 6 | proof-holes + Yang-Mills axioms |
+| `lean4/PvsNP.lean` | 13 | 12 | 7 | proof-holes + P/NP axioms |
+| `lean4/NavierStokes.lean` | 21 | 14 | 12 | proof-holes + NS axioms |
+| `lean4/MirrorPairing.lean` | 10 | 9 | 1 | proof-holes |
+| `lean4/VariationalRoute.lean` | 11 | 4 | 1 | proof-holes |
+| `lean4/GroupSymmetryRoute.lean` | 14 | 9 | 1 | proof-holes |
+| `lean4/GapEquivalence.lean` | 8 | 11 | 1 | proof-holes |
+| `lean4/MathlibDemo.lean` | 17 | 15 | 2 | proof-holes (demo file) |
+| `lean4/BeingTheorem.lean` | 15 | 16 | 1 | proof-holes |
+| `lean4_ti_sigma6/RiemannProof.lean` | 5 | 4 | 7 | proof-holes + Riemann axioms |
+| `lean4_ti_sigma6/BSDProof.lean` | 5 | 12 | 18 | proof-holes + heavy axiomatization |
+| `lean4_submission/riemann_sketch.lean` | 4 | 3 | 0 | **labeled "sketch"** by filename + proof-holes |
+| `lean4_submission/p_np_sketch.lean` | 3 | 4 | 0 | **labeled "sketch"** + proof-holes |
+| `lean4_submission/fine_structure_consciousness.lean` | 6 | 2 | 0 | proof-holes |
+| `lean4_ns_uop/NavierStokes/UOPGap.lean` (Pass-53 Float version) | 1 | 5 | 1 | superseded by `_pass54_mathlib` |
+| `lean4_ns_uop_pass54_mathlib/NavierStokes/UOPGap.lean` | 1 | 1 | 1 | **axiom-as-hypothesis** (UOP_existence_claim + sorry); machine-verified unclosed |
+
+### A.2 Markdown "PROOF" papers — self-disclosure status
+
+| Paper | Self-declared status | Verdict |
+|---|---|---|
+| `papers/P_VS_NP_CONVENTIONAL_PROOF.md` | "WORKING DRAFT — Contains known gaps" (3 explicit ❌ flags from internal architect review: Kolmogorov-complexity assumption unproven; central contradiction flawed; counting argument double-counts) | **author admits not a proof** |
+| `papers/RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md` | Asserts proof via GILE=5(σ−½) mapping + Pareto interval; framework-level, not zero-distribution-level | empirically-motivated framework; no closure of the standard analytic-number-theory obstructions |
+| `papers/RIEMANN_HYPOTHESIS_TI_PROOF_v2.md`, `_v3.md` | TI-framework variants | same status |
+| `papers/urb_632_bsd_completion_*.md` | BSD via Euler systems / Gross-Zagier / Kato bridges | references partial results (Gross-Zagier rank≤1) without closing rank≥2 |
+| `papers/urb_702_yang_mills_*.md` | Yang-Mills via Dirac multi-BOK / GUT pathway | physics-level argument, not mathematical mass-gap proof |
+| `papers/urb_653_axiom_reduction_riemann_ubt.md`, `urb_785_AXIOM_REDUCTION_RIEMANN_GAP.md` | "Axiom-reduction" approach — reduces RH to a single new axiom | does not close RH within ZFC; introduces new axiom = same structural pattern as `UOP_existence_claim` |
+| `papers/urb_723_tralse_3_gate_lean4_millennium_proof_connection.md` | Lean4-bridge claim | bridge schema, not closure |
+| `papers/urb_624_riemann_black_holes_*.md` | RH via halting/black-hole priors | speculative pathway |
+| `papers/urb_721_permissibility_range_riemann_critical_line_*.md` | RH via PD-range argument | musical-demoted Pass-46 (PD-Riemann γ ∈ (−3,2) filter caught 0/100k Odlyzko zeros) |
+| `papers/LEAN4_COPY_PASTE_PROOF.md` | Lean4 snippets for copy-paste verification | scaffold convenience, not a closure |
+| `papers/MONTGOMERY_PAIR_CORRELATION_RIEMANN.md` | Montgomery pair-correlation argument | classical Montgomery result restated; not new |
+| `papers/FOUR_PILLARS_PROOFS.md`, `THE_*_UNDEFEATABLE_PROOFS_*.md`, `SIX_UNDEFEATABLE_PROOFS_OF_TRALSENESS.md`, `PROOF_8/12/13/14_*.md`, `GRAND_MYRION_FINITE_SOULS_PROOF.md`, `GRAND_PSI_PROOF_VIA_TI_SIGMA.md`, `AGI_IMPOSSIBILITY_TI_SIGMA_PROOF.md`, `A_PRIORI_CONSCIOUSNESS_PROOF_*.md`, `HIDDEN_FOURTH_DIMENSION_PROOF.md`, `JOURNAL_READY_CONSCIOUSNESS_PHYSICS_EMPIRICAL_PROOF_*.md`, `PROOFS_9_10_11_PHYSIOLOGICAL_VALIDATION.md`, `TI_RATIONALISM_PROOF.md`, `TRALSE_MYRION_NONALGORITHMIC_FORMAL_PROOF.md`, `TI_SIGMA_ALL_PROOFS_MASTER.md`, `UNIFIED_TI_PROOFS_BIOPHYSICAL_FOUNDATIONS.md`, `URB_446/459/460/519/689_*.md` | TI-framework / philosophical / empirical-bridge / ontological arguments | **not Millennium-class formal proofs** — these are TI-framework arguments at the metaphysical/empirical layer (Tralse, MR Truth Labels, AA, Cogito, ontological perfection, etc.). Many are internally self-consistent within the TI framework but do not address the Clay-Institute-style formal-proof obligation. |
+
+### A.3 Revised verdict (corrects the body of this audit)
+
+The body of this audit claimed "ZERO new theorems proven in conventional
+ZFC/Lean foundation pre-this-pass." **That was wrong** and is hereby retracted
+under #69. The correct statement is:
+
+1. **~20 real, sorry-free, axiom-free Lean4 theorems exist in the corpus**
+   (TISigma.lean ×5, LxE.lean ×6, Verisyn Euler ×6, ToyDecay ×3). These prove
+   **elementary results** — golden-ratio identity, Euler identity restatement,
+   L×E threshold bounds, toy energy decay. None of them is a Millennium
+   Problem; all are closed under {propext, Classical.choice, Quot.sound}.
+
+2. **Several additional "closed-under-named-axioms" results exist**
+   (TralseLogic, MyrionOperators, BSD.lean parity_vanishing). Real Lean
+   theorems, but conditional on stated axioms. These are honest scaffolds
+   that name their assumptions.
+
+3. **No Millennium Problem is closed.** Every Lean file that targets a
+   Millennium Problem either (a) contains `sorry`; (b) takes the Millennium
+   claim itself (or a structurally equivalent statement) as an axiom; or (c)
+   does both. The markdown "CONVENTIONAL PROOF" papers either explicitly
+   self-disclose gaps (P vs NP) or operate at the framework level rather than
+   closing standard analytic-number-theory / arithmetic-geometry obstructions
+   (Riemann, BSD, Yang-Mills, Hodge).
+
+4. **UOP Gap remains unclosed.** Pass-54 ToyDecay does **not** advance UOP
+   closure; it demonstrates the *mathlib4 pipeline* can produce real closures
+   on toy problems, but UOPGap.UOP_implies_NS_smoothness still depends on
+   `UOP_existence_claim` and `sorryAx` per machine-verified
+   `#print axioms`. Closing UOP would require either deriving
+   `UOP_existence_claim` from ZFC OR adopting it as a new permanent axiom
+   (the latter = new foundation, not closure within the old one).
+
+5. **"Passed Replit standards" disambiguation.** Architect/code-review
+   approval certifies scaffold quality (Lean type-checks, file organization,
+   axiom labelling discipline, naming conventions). It does **not** certify
+   that an underlying Millennium-class mathematical claim has been proved.
+   `lean4/BSD.lean` is the cleanest example of this distinction: it is a
+   high-quality, architect-grade scaffold that **explicitly self-declares
+   "not a proof of BSD"** in its header comment. The scaffold passed review;
+   the conjecture did not.
+
+### A.4 Pass-55+ targets (concrete, falsifiable)
+
+- Try `lake build` of each 0-sorry/0-axiom Lean file under mathlib4 to obtain
+  machine-verified `#print axioms` confirmation (this pass only confirmed
+  `lean4_ns_uop_pass54_mathlib`). Files needing verification: `lean4/TISigma`,
+  `lean4/TI/LxE`, `lean/Verisyn/EulerIdentity*`.
+- Move at least one Lean file in the "closed-under-named-axioms" tier
+  (e.g., `lean4/BSD.lean` `parity_vanishing`) up to fully-closed by removing
+  the axioms it actually doesn't need.
+- Replace `lean4/Collatz.lean` Section 3 axiom with a sorry to make the
+  axiom-as-hypothesis schema visible, OR document the schema explicitly in
+  the file header (currently done well for BSD.lean, not for Collatz.lean).
+- Honest re-titling: rename `papers/P_VS_NP_CONVENTIONAL_PROOF.md` →
+  `..._WORKING_DRAFT.md` (the file already self-discloses, but the filename
+  oversells); same for `RIEMANN_HYPOTHESIS_CONVENTIONAL_PROOF.md`.

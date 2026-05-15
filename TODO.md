@@ -1,8 +1,20 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-15 (Pass 54 honesty-audit + ToyDecay real Lean4 theorems landed)
+**Last updated:** 2026-05-15 (Pass 54 audit CORRECTED via corpus-wide sweep — original §7.7.96 retracted, §7.7.96b filed)
 
-## 🟢 Pass-54 honesty-audit + ToyDecay EXECUTED (2026-05-15, Brandon "what theorems proven; has UOP Gap been closed; seal Millennium gaps")
+## 🟢 Pass-54 audit-correction (2026-05-15, Brandon "check ALL our math proof attempts, you might've missed some")
+- **Original §7.7.96 RETRACTED** — claim "ZERO theorems proven in conventional axioms" was wrong under #69
+- **Comprehensive sweep** ✅ Appendix A added to `papers/MATHEMATICAL_PROOF_STATUS_AUDIT_2026-05-15.md` — enumerates 28 Lean files across 7 directories + ~30 markdown PROOF papers, status per file
+- **Revised findings**:
+  - **~20 real, sorry-free, axiom-free Lean4 theorems** exist: TISigma.lean (5), LxE.lean (6), Verisyn/EulerIdentity*.lean (6), ToyDecay.lean (3). All elementary, none Millennium.
+  - **Closed-under-named-axioms tier**: TralseLogic.lean (6/6ax), MyrionOperators (7/1ax), BSD.lean parity_vanishing — honest scaffolds with stated axioms.
+  - **No Millennium Problem closed**: BSD.lean self-declares "Named Gap Formalization — not a proof of BSD" with axiom-table marking weak_bsd_forward(rank≥2) + strong_bsd as `[OPEN] — Millennium Prize`. P_VS_NP_CONVENTIONAL_PROOF.md self-declares "WORKING DRAFT — Contains known gaps". RiemannUOP, Hodge, YangMills, PvsNP, lean4/NavierStokes, Collatz, lean4_submission/*_sketch — all sorry-laden or axiom-as-hypothesis.
+- **"Passed Replit standards" disambiguation**: architect review certifies scaffold quality, NOT closure of the underlying Millennium claim. BSD.lean = clearest example of scaffold-approved-without-conjecture-proved.
+- **Ledger additions:** I21 (scaffold-review ≠ claim-closure), I22 (BSD.lean axiom-accountability table is canonical template for honest Millennium-Lean scaffolds), I23 (corpus-wide enumeration is mandatory before publishing audit; original sweep missed ~6 directories)
+- **Cluster ≥153 → ≥156** (+3: I21, I22, I23). Budget $0/$50 + $2k reserve intact.
+- **Pass-55+ concrete targets:** (a) `lake build` each 0-sorry/0-axiom Lean file under mathlib4 for machine-verified `#print axioms`; (b) honest re-titling of `*CONVENTIONAL_PROOF.md` papers that self-disclose gaps; (c) port `parity_vanishing` from `lean4/BSD.lean` into the mathlib4 environment to verify it's truly axiom-free at the BSD level.
+
+## 🟢 Pass-54 honesty-audit + ToyDecay EXECUTED (2026-05-15, Brandon "what theorems proven; has UOP Gap been closed; seal Millennium gaps") — ⚠️ §7.7.96 BODY RETRACTED, see §7.7.96b above for corrections
 - **Brutal-honesty audit** ✅ `papers/MATHEMATICAL_PROOF_STATUS_AUDIT_2026-05-15.md` — ZERO new theorems in conventional axioms pre-this-pass; UOP Gap NOT CLOSED (axiom-as-hypothesis is structural opposite of closure); Riemann musical-demoted Pass-46; P vs NP T51-H3 R13 refuted Pass-52; Yang-Mills/Hodge/BSD untouched; Poincaré already closed by Perelman (not TI Sigma).
 - **First real Lean4 theorems landed** ✅ `lean4_ns_uop_pass54_mathlib/NavierStokes/ToyDecay.lean` — three theorems on toy energy `u₀²·exp(−c·t)`: `energy_nonneg`, `energy_at_zero`, `energy_monotone_decay`. NO sorry, NO UOP axiom. **Machine-verified contrast** at install_and_build.sh step [5/6]:
   - `UOP_implies_NS_smoothness` → `[propext, sorryAx, Classical.choice, Quot.sound, UOP_existence_claim]` (unclosed)
