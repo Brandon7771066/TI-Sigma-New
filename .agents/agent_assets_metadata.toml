@@ -276,3 +276,9 @@ id = "kDu_o6qkuleeagBxI-3vX"
 uri = "file://tracks/mre_calm_focus_101_to_105.wav"
 type = "audio"
 title = "MRE v1 — Block 3 Calm Focus track (10.17 → 10.5 Hz, 5 min)"
+
+[[outputs]]
+id = "3pUD5pM7iJrq_Gu9X4Zyn"
+uri = "file://career/AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md"
+type = "text"
+title = "Brandon Emerick — AI Trainer Resume (2026-05-15)"
