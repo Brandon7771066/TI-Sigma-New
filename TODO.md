@@ -1,6 +1,16 @@
 # TI Sigma — Continuous TODO Ledger
 
-**Last updated:** 2026-05-15 (Pass 54 setup — H1 mathlib4-builds-clean; V1 pre-reg batch running as Workflow)
+**Last updated:** 2026-05-15 (Pass 54 honesty-audit + ToyDecay real Lean4 theorems landed)
+
+## 🟢 Pass-54 honesty-audit + ToyDecay EXECUTED (2026-05-15, Brandon "what theorems proven; has UOP Gap been closed; seal Millennium gaps")
+- **Brutal-honesty audit** ✅ `papers/MATHEMATICAL_PROOF_STATUS_AUDIT_2026-05-15.md` — ZERO new theorems in conventional axioms pre-this-pass; UOP Gap NOT CLOSED (axiom-as-hypothesis is structural opposite of closure); Riemann musical-demoted Pass-46; P vs NP T51-H3 R13 refuted Pass-52; Yang-Mills/Hodge/BSD untouched; Poincaré already closed by Perelman (not TI Sigma).
+- **First real Lean4 theorems landed** ✅ `lean4_ns_uop_pass54_mathlib/NavierStokes/ToyDecay.lean` — three theorems on toy energy `u₀²·exp(−c·t)`: `energy_nonneg`, `energy_at_zero`, `energy_monotone_decay`. NO sorry, NO UOP axiom. **Machine-verified contrast** at install_and_build.sh step [5/6]:
+  - `UOP_implies_NS_smoothness` → `[propext, sorryAx, Classical.choice, Quot.sound, UOP_existence_claim]` (unclosed)
+  - `energy_monotone_decay` → `[propext, Classical.choice, Quot.sound]` (closed, Lean-foundation-only)
+- **First formal-method machine-confirmed closed result in corpus.** Toy scope (1D linear damped scalar ODE), not Millennium.
+- **Ledger additions:** R15 (UOP-Gap-Closure-via-axiom-as-hypothesis REFUTED per #69), C34 (ToyDecay 3 theorems closed under Lean foundation), I19 (empirical confirmation ≠ formal proof — distinct disciplines), I20 (AxiomsCheck dual-output = canonical regression check).
+- **Cluster ≥150 → ≥153** (+3: R15, C34, I19+I20 grouped). Budget $0/$50 + $2k reserve intact.
+- **Pass-55+ targets:** replace opaque types with concrete Sobolev spaces; attempt energy-bound proof from infimum hypothesis; active inconsistency search as falsifier; expand ToyDecay to 2D/3D incompressible analogue.
 
 ## 🟢 Pass-54 setup items EXECUTED (2026-05-15, Brandon "proceed with both Pass-54 setup items")
 - **T51-H1 Pass-54 mathlib4 upgrade** ✅ **SKELETON-COMPILES-OVER-REAL-ℝ + AXIOMS-LIST-MACHINE-VERIFIED** — mathlib4 v4.10.0 installed (4.5 GB `.lake/`), all 4 NavierStokes modules compile, only `sorry` warning is intentional in Step-2. `#print axioms UOP_implies_NS_smoothness` → `[propext, sorryAx, Classical.choice, Quot.sound, UOP_existence_claim]` — Pass-53 dependency banner now machine-checked. Persistent build pipeline via `lean_mathlib4_install` workflow + idempotent `install_and_build.sh` (auto-bootstraps elan if `.elan/` wiped). (`analyses/pass54_t51_h1_lean4_mathlib4/RESULTS_WRITEUP.md`)

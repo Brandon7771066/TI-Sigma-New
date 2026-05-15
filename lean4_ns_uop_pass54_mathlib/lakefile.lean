@@ -8,4 +8,4 @@ package «ns_uop_mathlib» where
 
 @[default_target]
 lean_lib «NavierStokes» where
-  roots := #[`NavierStokes.Basic, `NavierStokes.Equation, `NavierStokes.EnergyIneq, `NavierStokes.UOPGap]
+  roots := #[`NavierStokes.Basic, `NavierStokes.Equation, `NavierStokes.EnergyIneq, `NavierStokes.UOPGap, `NavierStokes.ToyDecay]

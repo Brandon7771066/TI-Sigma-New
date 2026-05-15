@@ -49,12 +49,17 @@ lake build 2>&1 | tee -a $LOG | tail -40 || {
     echo "(lake build returned non-zero; see log for details)" | tee -a $LOG
 }
 
-echo "[5/6] Running #print axioms on UOP_implies_NS_smoothness..." | tee -a $LOG
+echo "[5/6] Running #print axioms on TWO theorems (contrast: UOP-conditional vs ToyDecay-real)..." | tee -a $LOG
 cat > AxiomsCheck.lean << 'EOF'
 import NavierStokes.UOPGap
+import NavierStokes.ToyDecay
+-- UOPGap theorem: should list sorryAx + UOP_existence_claim (NOT closed)
 #print axioms NavierStokes.UOPGap.UOP_implies_NS_smoothness
+-- ToyDecay theorem: should list ONLY built-in foundations (real proof)
+#print axioms NavierStokes.ToyDecay.energy_monotone_decay
+#print axioms NavierStokes.ToyDecay.energy_nonneg
 EOF
-lake env lean AxiomsCheck.lean 2>&1 | tee -a $LOG | tail -20 || {
+lake env lean AxiomsCheck.lean 2>&1 | tee -a $LOG | tail -40 || {
     echo "(axioms check failed; see log)" | tee -a $LOG
 }
 
