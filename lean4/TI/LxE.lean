@@ -71,13 +71,15 @@ theorem LxE_comm (L : Love) (E : Existence) :
 /-- The TI Range: [0.42, 1.0] represents meaningful signal territory -/
 def in_signal_range (x : ℝ) : Prop := noise_floor ≤ x ∧ x ≤ 1
 
-/-- If both L and E exceed √0.85, then L×E exceeds causation threshold -/
+/-- If both L and E exceed 0.93 (>√0.85 ≈ 0.92195), then L×E exceeds causation
+threshold. Note: the earlier draft used 0.92, but 0.92² = 0.8464 < 0.85, so
+the bound must be tightened. -/
 theorem sqrt_causation (L : Love) (E : Existence)
-    (hL : L.val > 0.92) (hE : E.val > 0.92) :
+    (hL : L.val > 0.93) (hE : E.val > 0.93) :
     LxE L E > causation_threshold := by
   unfold LxE causation_threshold
-  calc L.val * E.val > 0.92 * 0.92 := mul_lt_mul hL hE (by norm_num : 0 ≤ 0.92) (by linarith)
-    _ = 0.8464 := by norm_num
+  calc L.val * E.val > 0.93 * 0.93 := mul_lt_mul hL hE (by norm_num : 0 ≤ 0.93) (by linarith)
+    _ = 0.8649 := by norm_num
     _ > 0.85 := by norm_num
 
 /-!
