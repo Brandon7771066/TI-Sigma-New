@@ -288,3 +288,9 @@ id = "YFE2EMfZRDTe1u2Fmf6bP"
 uri = "file://papers/BIOWELL_2026_05_14_BATCH1_FIRST_LOOK.md"
 type = "text"
 title = "Biowell 2026-05-14 — Batch 1 First-Look Analysis"
+
+[[outputs]]
+id = "XQbZTlCMmWw6e6X9DOtEx"
+uri = "file://papers/BIOWELL_2026_05_14_FULL_SYNTHESIS.md"
+type = "text"
+title = "Biowell 2026-05-14 — Full Synthesis (vs 2025-11-25 baseline)"
