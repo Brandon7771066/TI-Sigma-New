@@ -282,3 +282,9 @@ id = "3pUD5pM7iJrq_Gu9X4Zyn"
 uri = "file://career/AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md"
 type = "text"
 title = "Brandon Emerick — AI Trainer Resume (2026-05-15)"
+
+[[outputs]]
+id = "YFE2EMfZRDTe1u2Fmf6bP"
+uri = "file://papers/BIOWELL_2026_05_14_BATCH1_FIRST_LOOK.md"
+type = "text"
+title = "Biowell 2026-05-14 — Batch 1 First-Look Analysis"
