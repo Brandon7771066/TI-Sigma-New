@@ -306,3 +306,9 @@ id = "5-hruhZZLEsKwKsLTuQb2"
 uri = "file://papers/PASS_55_BATCH2_FIVE_THREADS_2026-05-17.md"
 type = "text"
 title = "Pass 55 Batch 2 — Five Theoretical Threads (PD interval, ternary, binary-fails, GILE-instantiation, Greatest Reversal, junk-food hormesis)"
+
+[[outputs]]
+id = "TpEqbD58VvWB9yifrD471"
+uri = "file://papers/PASS_55_BATCH2_COIN_ADDENDUM_2026-05-17.md"
+type = "text"
+title = "Coin-Flip Addendum — Binary-Failure Proof Extended from 3 Axes to 6"
