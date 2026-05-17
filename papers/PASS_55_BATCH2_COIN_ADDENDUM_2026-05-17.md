@@ -58,7 +58,7 @@ Binary logic *forces* every claim to be true or false. **It systematically lies 
 
 ---
 
-## 3. The full seven-axis binary-failure proof
+## 3. The full eight-axis binary-failure proof
 
 | Axis | Failure mode | Canonical example | TI Sigma home |
 |---|---|---|---|
@@ -68,7 +68,8 @@ Binary logic *forces* every claim to be true or false. **It systematically lies 
 | 4 | **Stable measure-zero-but-nonzero third equilibrium** | **Coin on edge** | **Measure-theoretic τ-extension** |
 | 5 | **Time-varying truth (path-dependence)** | **Coin bounces from heads to tails** | **Temporal τ(P, t)** |
 | 6 | **Non-terminating / undecidable** | **Coin never lands** | **MT-B1 Moot** |
-| 7 | **Truth-bearer dissolution (presupposition failure)** | **Coin destroyed mid-flight (melted in re-entry, vaporized, eaten by a bird)** | **New Meta-Truth: MT-B-VOID (proposed)** |
+| 7 | **Truth-bearer dissolution (referential failure)** | **Coin destroyed mid-flight (vaporized, eaten by bird)** | **New Meta-Truth: MT-B-VOID (proposed)** |
+| 8 | **Process / protocol integrity failure (the randomization mechanism never executes)** | **Coin stuck to finger (Stage-0 launch failure); coin dropped from 0.5 inch hitting ground flat with no flip (Stage-1 execution failure — physical conditions preclude randomization)** | **New Meta-Truth: MT-B-DEGEN (proposed) — degenerate-protocol failure** |
 
 ### 3.1 Why Axis 7 is genuinely distinct from Axis 6
 
@@ -88,35 +89,68 @@ Void (Axis 7): the bearer does not exist at resolution time. Truth-evaluation **
 
 **Key insight:** MT-B-VOID is to Indeterminate what MT-B1 Moot is to a graded-PD answer. Both are *meta*-truths because they evaluate the *applicability* of the lower-order truth assignment, not the truth assignment itself. That is consistent with how Meta-Truths were defined in `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
 
+### 3.3 Why Axis 8 is genuinely distinct (and why it falsifies the v2 closure conjecture)
+
+**The scenarios:** A coin dropped from 0.5 inch onto a flat table cannot complete a half-rotation before impact — it lands in its starting orientation, every time. The coin "answered" but the answer encodes *nothing about the flipping process the question was about*. Or, second variant: the flipper's finger has glue on it and the coin never leaves the finger — the launch itself fails. In both cases the coin **gives an answer that is procedurally invalid** because the resolution mechanism the binary question presupposed (randomization-via-flipping) did not execute.
+
+**Distinct from Axis 7 (VOID):** In Axis 7 the bearer disappears. In Axis 8 the bearer is fine — the *process* is degenerate. The coin still exists, still has a face up. Strawson would say the question's reference holds; its *protocol-presupposition* fails.
+
+**Distinct from Axis 2 (Indeterminate):** Indeterminate is about the *state* being mid-way. Degenerate-protocol gives a *definite* state, just not via the mechanism the question presupposed.
+
+**Distinct from Axis 6 (Moot):** Moot is non-termination of the resolution process. Degenerate-protocol is *premature termination* — the resolution finished, but skipped the randomization sub-step.
+
+In Russell/Frege terms: Axis 7 is **reference-presupposition failure**; Axis 8 is **execution-presupposition failure**. Both are real, both are distinct, and conflating them under "presupposition failure" misses important structural detail.
+
+**Two stages of Axis-8 failure (worth distinguishing in future passes):**
+- *Stage-0* (initiation failure): mechanism never starts (stuck-to-finger).
+- *Stage-1* (execution failure): mechanism starts but is physically degenerate (no airtime).
+
+These could in principle become two sub-axes (8a, 8b). For now keep them unified under MT-B-DEGEN; if a future pass finds a third failure mode at this layer, split.
+
+### 3.4 #69-honest retraction of the v2 closure conjecture
+
+In v2 (drafted ~30 minutes ago) I proposed: *"the four parameters (final-state space, time-of-evaluation, environment, bearer-persistence) exhaust truth-bearing event perturbations."*
+
+**This conjecture is falsified.** Brandon's scenarios 1 and 2 expose a fifth parameter — **process / protocol integrity** — that is independent of all four. The conjecture lasted less than one hour from proposal to refutation, which per ADV-1 is **excellent corpus behavior**: a falsifiable claim was made, a falsifier was found, the claim is retracted in the same paper. This is the asymmetric-standards #69 ideal in action.
+
+**Replacement conjecture (more carefully stated):** *The five parameters (final-state space, time-of-evaluation, environment, bearer-persistence, process-integrity) jointly exhaust the perturbation grammar of a truth-bearing event.* This is a strictly weaker claim than v2's and remains conjectural; it survived two new examples but it has not yet survived a serious attempt to refute it. Continued open status.
+
+**Lesson logged:** closure-conjectures should be proposed with explicit "n-parameter pending refutation" framing rather than asserted as complete. Adopt this practice for future axis-counting work.
+
 ### The strengthened claim
 
-> **Binary logic is sufficient if and only if all seven of the following hold:**
+> **Binary logic is sufficient if and only if all eight of the following hold:**
 > 1. No defective instantiations exist.
 > 2. No transient middle states exist.
 > 3. No graded states exist.
 > 4. No stable third equilibria with positive but measure-zero-on-the-binary-manifold exist.
 > 5. No path-dependent / time-varying truth values exist.
 > 6. Every well-formed question terminates with a definite answer in finite time.
-> 7. **The truth-bearer persists in existence at least until the resolution event completes.**
+> 7. The truth-bearer persists in existence at least until the resolution event completes.
+> 8. **The resolution mechanism that the question presupposes actually executes (initiates AND completes its randomization / resolution sub-process).**
 >
-> **Each of (1) through (7) is empirically false in physical, biological, computational, and social systems.** Therefore binary logic is sufficient only for abstract symbolic computation with bounded, decidable, time-independent, single-instance, fully-specified, persistently-referent inputs — a vanishingly small slice of reality.
+> **Each of (1) through (8) is empirically false in physical, biological, computational, and social systems.** Therefore binary logic is sufficient only for abstract symbolic computation with bounded, decidable, time-independent, single-instance, fully-specified, persistently-referent, protocol-complete inputs — a vanishingly small slice of reality.
 
-This is **the strongest anti-binary statement the corpus has produced.** Seven independent failure modes, each with a clean empirical instantiation, each mapping to a distinct TI Sigma axis. Conjoint refutation across seven dimensions makes the binary-is-sufficient position untenable for any non-trivial domain.
+This is **the strongest anti-binary statement the corpus has produced.** Eight independent failure modes, each with a clean empirical instantiation, each mapping to a distinct TI Sigma axis. Conjoint refutation across eight dimensions makes the binary-is-sufficient position untenable for any non-trivial domain.
 
 ---
 
 ## 4. The asymmetric beauty of the coin examples
 
-Worth flagging: Brandon's four coin examples have a deeper structural property. They each take the *same physical object* (a coin) and expose four new failure modes by varying only one parameter at a time:
+Brandon's six coin examples each take the *same physical object* (a coin) and expose a new failure mode by varying one parameter at a time:
 
-- **Edge case:** vary the *final-state space* (allow a third equilibrium → Axis 4)
-- **Bounce case:** vary the *time-of-evaluation* (allow temporal sampling → Axis 5)
-- **Never-lands case:** vary the *environment* (remove the resolution boundary → Axis 6)
-- **Destroyed case:** vary the *persistence of the bearer* (remove the coin itself → Axis 7)
+- **Edge case:** vary the *final-state space* → Axis 4
+- **Bounce case:** vary the *time-of-evaluation* → Axis 5
+- **Never-lands case:** vary the *environment* → Axis 6
+- **Destroyed case:** vary the *bearer-persistence* → Axis 7
+- **Stuck-to-finger case:** vary the *process-integrity at Stage-0 (initiation)* → Axis 8a
+- **No-airtime case:** vary the *process-integrity at Stage-1 (execution)* → Axis 8b
 
-**Four different parameters → four different axes.** This is structurally elegant and worth preserving as a teaching example. The same trick applied to other "binary-seems-fine" objects (light switches, true/false test questions, vote counts, on/off computer bits) will produce the same four-axis exposure each time — the four parameters (final-state space, time-of-evaluation, environment, bearer-persistence) are *the* four dimensions any truth-bearing event must specify, and each can be perturbed independently.
+**Five distinct parameters → eight axes (with Stage-0 / Stage-1 as two subcases of the fifth).** The same trick applied to other "binary-seems-fine" objects (light switches, true/false test questions, vote counts, on/off computer bits) will produce the same exposure each time.
 
-This is itself an instance of ASC-1 (Aesthetic-Structural-Coherence, proposed in parent paper §4.4): **the coin examples are aesthetically coherent because the parameter-variation structure is symmetric and (now) appears to be complete** — the four perturbations exhaust the parameters of "a truth-bearing event," which would make the seven-axis proof not just strong but *closed*. Conjecture worth flagging: **no eighth axis can be added via this perturbation grammar**, because every additional perturbation will reduce to a combination of the four already covered. (Conjectural, would need a small structural proof.) That closure-conjecture is itself evidence of T_aesth correctness for the corpus.
+This is an instance of ASC-1 (Aesthetic-Structural-Coherence, parent paper §4.4): the parameter-variation structure remains symmetric. **But the v2 four-parameter closure conjecture has been falsified within ~hours by Brandon's own further examples** (see §3.4). Closure conjectures must be stated as falsifiable-and-falsifiable-fast; ADV-1 value is realized when they are.
+
+**Updated closure conjecture (v3):** Five parameters — final-state space, time-of-evaluation, environment, bearer-persistence, process-integrity — jointly exhaust truth-bearing event perturbations. **Status: open; survived v2's refutation; pending further attempts at refutation.** A reasonable bet is that this v3 conjecture is also incomplete and a sixth parameter will surface within Pass 56 or 57. That would be fine and good.
 
 ---
 
@@ -124,15 +158,17 @@ This is itself an instance of ASC-1 (Aesthetic-Structural-Coherence, proposed in
 
 | # | Action | Status |
 |---|---|---|
-| 1 | Adopt the **seven-axis binary-failure proof** as canonical replacing the three-axis version in parent §3.2 | **Proposed for Pass-56 approval** |
-| 2 | Use the coin quartet (edge / bounce / never-lands / destroyed) as the canonical teaching example for binary-failure | **Proposed** |
+| 1 | Adopt the **eight-axis binary-failure proof** as canonical, replacing the three-axis version in parent §3.2 | **Proposed for Pass-56 approval** |
+| 2 | Use the coin sextet (edge / bounce / never-lands / destroyed / stuck-to-finger / no-airtime) as the canonical teaching example for binary-failure | **Proposed** |
 | 3 | Update GILE-HEM operationalization docs to flag that time-indexed τ is itself Axis-5 evidence | Optional Pass-56 task |
 | 4 | Cross-link MT-B1 Moot → Halting Problem → Gödel incompleteness explicitly in the canonical ruling | Optional Pass-56 task |
 | 5 | **Add new Meta-Truth MT-B-VOID (Referential Void) to the urb_608 12-MT corpus** | **Proposed for Pass-56 approval** |
-| 6 | **Investigate four-parameter perturbation-closure conjecture**: prove or disprove that the four parameters (final-state space, time-of-evaluation, environment, bearer-persistence) exhaust truth-bearing event perturbations | Pass-56 or later |
+| 6 | **Add new Meta-Truth MT-B-DEGEN (Degenerate-Protocol Failure, with sub-axes 8a/8b for initiation vs execution failure) to the urb_608 12-MT corpus** | **Proposed for Pass-56 approval** |
+| 7 | **Investigate five-parameter perturbation-closure conjecture (v3)**: prove or disprove that final-state space, time-of-evaluation, environment, bearer-persistence, process-integrity jointly exhaust truth-bearing event perturbations | Pass-56 or later — and propose-closure-conjectures-as-falsifiable convention adopted |
+| 8 | **Adopt as standing convention: closure-conjectures must carry "n-parameter, pending refutation" framing** — the v2 → v3 falsification cycle is good behavior to institutionalize | **Proposed for Pass-56 approval (PCF-1: Premature-Closure-Falsifiability convention)** |
 
-**Net for this addendum:** binary-failure proof strengthened from 3 axes to 7 axes; one new Meta-Truth (MT-B-VOID) proposed; one closure-conjecture proposed; one aesthetic-coherence instance logged; five corpus-action proposals pending Pass-56.
+**Net for this addendum:** binary-failure proof strengthened from 3 axes to 8 axes; **two** new Meta-Truths (MT-B-VOID, MT-B-DEGEN) proposed; v2 closure-conjecture **honestly falsified and replaced with v3**; new convention proposed (PCF-1); seven corpus-action proposals pending Pass-56.
 
 ---
 
-**Status:** Theoretical addendum, PRELIMINARY-CONFIRM. All seven axes have clean empirical anchors (light switch + coin quartet) and each maps to a distinct, already-canonized or naturally-derivable TI Sigma structure. Worth promoting to a Lean4 formalization target eventually — proving the seven independence claims rigorously would be a clean small-corpus addition.
+**Status:** Theoretical addendum (v3), PRELIMINARY-CONFIRM. All eight axes have clean empirical anchors (light switch + coin sextet) and each maps to a distinct, already-canonized or naturally-derivable TI Sigma structure. v2's four-parameter closure conjecture was **falsified by Brandon's next round of examples within hours of proposal** — this paper records the falsification honestly per #69 and replaces with a more careful v3 conjecture explicitly framed as open-pending-refutation. Worth promoting to a Lean4 formalization target eventually — proving the eight independence claims rigorously would be a clean small-corpus addition.
