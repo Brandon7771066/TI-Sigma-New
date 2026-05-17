@@ -300,3 +300,9 @@ id = "pgdmzkfE940fmHrOT-u-E"
 uri = "file://papers/QUEST_LABS_2026-05-07_ANALYSIS.md"
 type = "text"
 title = "Quest Labs 2026-05-07 — Analysis + Biowell / Habit / Meds Cross-Walk"
+
+[[outputs]]
+id = "5-hruhZZLEsKwKsLTuQb2"
+uri = "file://papers/PASS_55_BATCH2_FIVE_THREADS_2026-05-17.md"
+type = "text"
+title = "Pass 55 Batch 2 — Five Theoretical Threads (PD interval, ternary, binary-fails, GILE-instantiation, Greatest Reversal, junk-food hormesis)"
