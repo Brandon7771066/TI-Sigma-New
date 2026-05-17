@@ -317,4 +317,10 @@ title = "Coin-Flip Addendum v3 — 8 axes, MT-B-VOID + MT-B-DEGEN, v2 closure co
 id = "7IOvNct2pAm3XEZ6gGKUn"
 uri = "file://papers/PASS_55_BATCH2_TI_SIGMA_DISPROVES_2026-05-17.md"
 type = "text"
-title = "TI Sigma vs Major Mathematical Theories — 23 mappings across 4 tiers (DISPROVE / TRIVIALIZE / BOX IN / REINTERPRET)"
+title = "TI Sigma vs Major Math Theories v2 — CCC carved out from Anselm/Gödel disproof per Brandon correction"
+
+[[outputs]]
+id = "7jzAhSF_elIGrLucdr3PN"
+uri = "file://papers/PASS_55_BATCH2_CCC_REFINEMENT_2026-05-17.md"
+type = "text"
+title = "CCC Argument Refinement Analysis — 6 honest improvement suggestions ranked by impact"

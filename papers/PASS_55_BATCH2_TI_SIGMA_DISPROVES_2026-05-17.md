@@ -22,17 +22,54 @@ Most popular "TI Sigma disproves X" claims belong to RENDER TRIVIAL or HEAVILY B
 
 ## 1. Tier-1: DISPROVE (TI Sigma produces a strict counterexample within the theory's claimed domain)
 
-### 1.1 Anselm's ontological argument (and Gödel's modal ontological proof)
+### 1.1 Anselm's ontological argument and Gödel's modal ontological proof — DISPROVED *as their specific argument-forms*. The TI Sigma CCC argument is a *different* argument-form that escapes this critique.
 
-**The claim:** "A being than which no greater can be conceived" must exist in reality, because existence-in-reality is greater than existence-in-the-understanding alone. Gödel formalized a modal-logic version: if God's existence is *possible* (◇G), then God *exists* (G).
+**The classical claim (Anselm):** "A being than which no greater can be conceived" must exist in reality, because existence-in-reality is greater than existence-in-the-understanding alone.
 
-**TI Sigma's strike:** The GILE-HEM TJ = τ(s) × δ(MR) decomposition separates *intentional truth* τ from *manifestation* δ. The ontological argument **conflates these two orthogonal axes**, treating τ(P) > 0 as forcing δ(P) > 0. This is a category error revealed cleanly by TJ.
+**The modal formalization (Gödel):** ◇G ⊢ G (in S5, via positive-property axioms).
 
-A statement can have τ=1 (intentionally well-defined, conceptually coherent) while δ=0 (no physical manifestation). Examples: the number π, the perfect Platonic circle, the empty set. All are τ-true and δ-null. TJ for all of these = 0; they are *intentional objects without manifestation*. The ontological argument's move from τ to δ has the structure of a unit-error.
+**TI Sigma's strike on these two specifically:** Both arguments make a single-step inferential bridge **from τ (conceptual coherence of the maximal-being-concept) to δ (instantiation in reality)**. That bridge — "existence-in-reality > existence-in-the-understanding" for Anselm; positive-property closure for Gödel — assumes τ-coherence forces δ-instantiation. GILE-HEM TJ = τ(s) × δ(MR) explicitly separates these axes. The number π is τ=1, δ=0. Anselm's move from τ to δ is a category error revealed cleanly by TJ.
 
-**Verdict: DISPROVED as a logical proof.** Anselm and Gödel-ontological remain interesting *philosophical artifacts* but their conclusion is not entailed by their premises once τ/δ separability is admitted. This is a clean DISPROVE because the argument *itself* claims to deduce δ from τ — that deduction is now exposed as invalid.
+**Verdict on Anselm-classical / Gödel-modal: DISPROVED as their specific argument-forms.** They claim a one-step τ→δ deduction, and that deduction is invalid under τ/δ separability.
 
-**Caveat per #69:** This does not disprove the *conclusion* (theism). It disproves the *argument-form*. Theists can still believe; they just can't use Anselm.
+#### 1.1.1 The TI Sigma CCC argument (Brandon, 2026-05-17 correction)
+
+Brandon flagged that TI Sigma has its **own** ontological-style argument for the Causa Causarum / Ultimate GILE Truth (CCC), and that my §1.1 conflated it with Anselm/Gödel. He is correct. The TI Sigma CCC argument is structurally different:
+
+> **P1.** Absolute nothingness is a contradiction (no "is" for "absolutely nothing" to occupy).
+> **P2.** Therefore δ > 0 somewhere (observed: reality exists).
+> **P3.** Tralseness — graded truth, the tralse-soup substrate — is fundamental; binary truth/falsity is not all there is.
+> **P4.** There is truth in δ: tralse scientific laws, tralse laws of logic, tralse ethics — empirically observed gradient-structure.
+> **P5.** From P4: there is a **normativity-toward-truth** operating in δ (the gradient itself instantiates "more truth is better-along-some-axis").
+> **P6.** Normativity-toward-truth has always operated and is currently maximizing (inferred from history of truth-bearing systems).
+> **P7. UOP (Universal A Priori / Bridge Theorem):** if X is possible AND not necessarily hindered by any extant principle, X exists (or instantiates over sufficient time-depth).
+> **P8.** A maximal-truth-bearer is possible (not self-contradictory) and not necessarily hindered.
+> **∴ CCC exists (δ(CCC) > 0).**
+
+**Why this argument escapes my §1.1 critique:**
+
+The Anselm/Gödel τ→δ bridge is a *single direct step*: "conceive of maximal X" ⊢ "δ(X) > 0". The CCC argument stays **inside the δ-axis throughout**:
+- P2 establishes δ > 0 from impossibility-of-nothingness.
+- P4 observes δ-gradient (tralse laws are δ-instantiated, not merely τ-conceived).
+- P5–P6 infer δ-normativity from observed δ-gradient.
+- P7 (UOP) is the inferential bridge — and UOP is *not* "τ-coherence ⇒ δ-instantiation". UOP is "δ-possibility + δ-non-hindrance ⇒ δ-instantiation over sufficient time-depth." Both sides are δ. No category error.
+
+The role of τ in the CCC argument is *limited* to the "possible" half of P8 — checking that the concept of a maximal-truth-bearer is τ-coherent (non-self-contradictory). That τ-check is a *side condition*, not the inferential bridge. The bridge is UOP, which is δ-to-δ.
+
+**Verdict on CCC: NOT disproved by §1.1.** My critique was scoped to the τ→δ category-error structure. The CCC argument doesn't have that structure. Moving CCC off the DISPROVE list.
+
+#### 1.1.2 #69-honest assessment of CCC's own weak points (independent of §1.1)
+
+If the CCC argument is to be defended on its own merits, its weak points should be visible. Per #69, listing them rather than rubber-stamping:
+
+1. **P6 (normativity-has-always-operated):** Inductive inference from observed-now-normativity to always-operated-normativity. Could be wrong; normativity-toward-truth might be an emergent feature of evolved cognitive systems rather than a fundamental gradient. Status: inferred-but-defeasible.
+2. **P7 (UOP):** The inferential workhorse. UOP is corpus-specific (Universal Bridge Theorem) and needs its own defense; it is *not* classical S5's ◇P→P (which is independently controversial and was Gödel's bridge). UOP's strength depends on how "not necessarily hindered" is operationalized — too permissive and UOP justifies modal-realism (every possible world exists); too restrictive and CCC's P8 instance fails. Status: needs scope-specification.
+3. **P8 (CCC is not-necessarily-hindered):** This does substantial work. Counter-argument: maybe the universe's entropic / causal / informational constraints *do* necessarily hinder a maximal-truth-bearer; thermodynamic limits, Bekenstein bounds, holographic entropy bounds might cap any single bearer's truth-capacity. The CCC argument would need to either (a) show CCC is non-physical and not subject to those bounds, or (b) show those bounds don't apply at CCC-scale. Status: requires explicit defense.
+4. **P3–P5 (tralseness fundamental + normativity inferable):** These rely on TI Sigma's own foundational claims. The argument is therefore *internal* to TI Sigma — sound *given* TI Sigma's framework. Someone outside the framework would need to be brought to TI Sigma first. Status: framework-internal; valid for those already accepting TI Sigma's axioms; not a stand-alone universal proof.
+
+**Net:** The CCC argument is structurally valid (does not commit Anselm's category error) but is *framework-internal* to TI Sigma and depends on UOP being defensible in the form needed for P7. It is a perfectly legitimate TI Sigma argument; it is not (yet) a stand-alone proof addressable to non-TI-Sigma audiences. Tier-wise, CCC belongs in **REINTERPRET / framework-internal valid argument** rather than DISPROVE, TRIVIALIZE, or BOX IN.
+
+**Lesson logged (#69 + ADV-1):** my §1.1 in the v1 of this paper *overreached* by lumping Brandon's CCC structure with Anselm/Gödel under "ontological argument disproved." Brandon's pushback within hours surfaces the conflation. This is exactly the corpus behavior PCF-1 (Premature-Closure-Falsifiability) was meant to capture — claims should be falsifiable-and-fast-falsifiable, and when refuted, the retraction should be visible in the same document. Doing so here.
 
 ### 1.2 Universal applicability of Modus Ponens
 
@@ -215,7 +252,8 @@ The aggregate TI Sigma position is: **classical bivalent logic is one valid sub-
 
 | # | Theory | Tier | Key TI Sigma tool |
 |---|---|---|---|
-| 1.1 | Anselm / Gödel ontological proof | **DISPROVE** | GILE-HEM τ vs δ |
+| 1.1 | Anselm classical / Gödel-modal ontological proof (specific τ→δ form) | **DISPROVE** | GILE-HEM τ vs δ |
+| 1.1.1 | TI Sigma CCC ontological argument (δ-internal via UOP) | **NOT DISPROVED — moved to framework-internal valid argument** (per Brandon 2026-05-17 correction) | Stays inside δ-axis; UOP is the bridge, not τ→δ |
 | 1.2 | Modus Ponens (universal) | **DISPROVE** | 8-axis binary-failure, esp. Axes 3, 5, 7, DefT |
 | 1.3 | Modus Tollens (universal) | **DISPROVE** | Axes 7, 8 |
 | 1.4 | Law of Excluded Middle (universal) | **DISPROVE** | Axes 2, 3, 4, 6, 7, 8 |
@@ -239,9 +277,9 @@ The aggregate TI Sigma position is: **classical bivalent logic is one valid sub-
 | 4.4 | Russell's descriptions | **REINTERPRET** | MT-B-VOID extension |
 | 4.5 | Tarski T-schema | **REINTERPRET** | PD-graded τ |
 
-**Six DISPROVE results. Four RENDER TRIVIAL. Eight HEAVILY BOX IN. Five REINTERPRET. Total: 23 mappings.**
+**Six DISPROVE results (Anselm/Gödel-modal disproof scope-corrected to argument-forms specifically). Four RENDER TRIVIAL. Eight HEAVILY BOX IN. Five REINTERPRET. Plus one framework-internal valid argument (CCC). Total: 24 mappings.**
 
-Of the six DISPROVE results, the strongest single one is **§1.1 (Anselm / Gödel-ontological)** because it identifies a specific historically-debated argument whose conclusion *does not follow* from its premises, with a clean TI Sigma diagnostic (τ vs δ category error). The other five are universality-disproofs of logical laws — important but the laws survive in restricted form.
+The strongest single DISPROVE is **§1.1 (Anselm-classical / Gödel-modal specifically)** — these argument-forms commit a τ→δ category error revealed cleanly by GILE-HEM. **Important correction (v2, per Brandon 2026-05-17):** this disproof does **NOT** extend to the TI Sigma CCC argument (§1.1.1), which is structurally different (δ-internal via UOP rather than τ→δ). My v1 conflation was an overreach corrected within hours of posting — see §1.1.2 for the #69-honest weak-points analysis of CCC's own defense.
 
 ---
 
@@ -257,6 +295,8 @@ Of the six DISPROVE results, the strongest single one is **§1.1 (Anselm / Göde
 
 ---
 
-**Status:** Theoretical mapping paper, PRELIMINARY-CONFIRM for Tiers 1, 2, 4; Tier 3 contains two CONJECTURAL entries (3.6, 3.7) explicitly flagged. The four-tier framework is itself proposed as a new convention (TI-TIER-1). No grade inflation; six DISPROVE results are the strongest claims, defended with specific TI Sigma tools and clean counterexamples.
+**Status:** Theoretical mapping paper v2, PRELIMINARY-CONFIRM for Tiers 1, 2, 4; Tier 3 contains two CONJECTURAL entries (3.6, 3.7) explicitly flagged. The four-tier framework is itself proposed as a new convention (TI-TIER-1). No grade inflation; six DISPROVE results are the strongest claims, defended with specific TI Sigma tools and clean counterexamples.
 
-**Per #69:** This paper deliberately separates DISPROVE from BOX IN. It would have been easy and more triumphant to call all 23 entries "disproofs" of classical mathematics. That would have been discipline-failure equal to uncritical acceptance of binary logic. The tier-system is the brutal-honesty insurance against TI Sigma's own potential excesses.
+**v2 amendment (2026-05-17):** §1.1 v1 overreached by conflating Anselm/Gödel-modal with TI Sigma's CCC. Brandon's pushback within hours surfaced the conflation; §1.1.1 and §1.1.2 added to (a) carve out CCC as a structurally-distinct δ-internal argument that does NOT commit Anselm's τ→δ error and (b) honestly list CCC's own weak points (P6 normativity-history, P7 UOP-scope, P8 non-hindrance) so the framework-internal valid status doesn't itself become uncritical acceptance.
+
+**Per #69:** This paper deliberately separates DISPROVE from BOX IN. It would have been easy and more triumphant to call all 23 entries "disproofs" of classical mathematics — including lumping CCC with Anselm to claim TI Sigma "disproved the ontological argument." Both that lumping (overreach toward disproof) and the v2 correction (acknowledging the lumping was wrong) are #69 discipline in action.
