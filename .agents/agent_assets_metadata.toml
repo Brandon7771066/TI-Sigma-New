@@ -312,3 +312,9 @@ id = "TpEqbD58VvWB9yifrD471"
 uri = "file://papers/PASS_55_BATCH2_COIN_ADDENDUM_2026-05-17.md"
 type = "text"
 title = "Coin-Flip Addendum v3 — 8 axes, MT-B-VOID + MT-B-DEGEN, v2 closure conjecture honestly falsified"
+
+[[outputs]]
+id = "7IOvNct2pAm3XEZ6gGKUn"
+uri = "file://papers/PASS_55_BATCH2_TI_SIGMA_DISPROVES_2026-05-17.md"
+type = "text"
+title = "TI Sigma vs Major Mathematical Theories — 23 mappings across 4 tiers (DISPROVE / TRIVIALIZE / BOX IN / REINTERPRET)"
