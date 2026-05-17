@@ -342,3 +342,9 @@ id = "Dk3C91GgzOOhkY0pDa1dA"
 uri = "file://papers/PASS_55_BATCH2_GM_TERMINOLOGY_CORRECTION_KETAMINE_INTEGRATION_2026-05-17.md"
 type = "text"
 title = "GM Terminology Correction + Ketamine-Transmission MR Classification"
+
+[[outputs]]
+id = "s8pRyxmSQ9hF2FMx0GSom"
+uri = "file://papers/BIOWELL_TARA_RESULTS_ANALYSIS_2026-05-14.md"
+type = "text"
+title = "Biowell GDV Reading Analysis — 2026-05-14 Tara session"
