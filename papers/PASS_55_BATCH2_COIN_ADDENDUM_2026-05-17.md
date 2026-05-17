@@ -54,11 +54,11 @@ This is exactly the Halting Problem at a metaphysical level. Binary forces every
 - The Halting Problem says there is no algorithm that decides, for every program, whether it terminates. That is the never-lands coin in computability.
 - MT-B1 Moot is TI Sigma's home for these phenomena.
 
-Binary logic *forces* every claim to be true or false. **It systematically lies about the existence of moot / undecidable / non-terminating claims.** This is a different lie from the other five axes.
+Binary logic *forces* every claim to be true or false. **It systematically lies about the existence of moot / undecidable / non-terminating claims.** This is a different lie from the other five axes (and distinct again from Axis 7 below).
 
 ---
 
-## 3. The full six-axis binary-failure proof
+## 3. The full seven-axis binary-failure proof
 
 | Axis | Failure mode | Canonical example | TI Sigma home |
 |---|---|---|---|
@@ -68,34 +68,55 @@ Binary logic *forces* every claim to be true or false. **It systematically lies 
 | 4 | **Stable measure-zero-but-nonzero third equilibrium** | **Coin on edge** | **Measure-theoretic τ-extension** |
 | 5 | **Time-varying truth (path-dependence)** | **Coin bounces from heads to tails** | **Temporal τ(P, t)** |
 | 6 | **Non-terminating / undecidable** | **Coin never lands** | **MT-B1 Moot** |
+| 7 | **Truth-bearer dissolution (presupposition failure)** | **Coin destroyed mid-flight (melted in re-entry, vaporized, eaten by a bird)** | **New Meta-Truth: MT-B-VOID (proposed)** |
+
+### 3.1 Why Axis 7 is genuinely distinct from Axis 6
+
+Axis 6 (never lands) keeps the coin in existence — the *referent* of "did the coin land on heads?" persists; only the *resolution event* fails to occur. The question retains its meaning indefinitely.
+
+Axis 7 (coin destroyed) eliminates the referent. The question "did the coin land on heads?" *loses its presupposition mid-evaluation*. There is no coin to land. The question does not become false; it becomes **referentially void**.
+
+This is exactly the structure of Russell's "the present king of France is bald" (no king, so neither bald nor not-bald) and Frege's sense-without-reference. Strawson called this "presupposition failure" — the claim is neither true nor false; it has fallen out of the truth-evaluation domain entirely. Binary cannot represent this without lying — it must call the destroyed-coin question either heads or not-heads, both of which falsely imply the coin exists at resolution time.
+
+**Connection to existing corpus:** This is a *distinct* form of vacuity from the one logged in T45-6 PD-Riemann γ ∈ (−3, 2) `LITERAL_PRE-REG_INDETERMINATE_VACUOUS_FILTER`. That vacuity was "the parameter band caught nothing" — the bearer (the band, the prediction) persists, the catch-set is empty. Axis 7 vacuity is "the bearer itself dissolved" — different structural failure, different home in MR Truth Labels. Propose a new Meta-Truth: **MT-B-VOID — Referential Void (the truth-bearer ceases to exist before resolution).**
+
+### 3.2 Asymmetry with Axis 2 (Indeterminate)
+
+Indeterminate (Axis 2, MR2): the bearer exists, the resolution exists, but the state is mid-way. Truth-evaluation succeeds with the value "neither pure-true nor pure-false."
+
+Void (Axis 7): the bearer does not exist at resolution time. Truth-evaluation **does not even apply**. This is one level meta- relative to Indeterminate.
+
+**Key insight:** MT-B-VOID is to Indeterminate what MT-B1 Moot is to a graded-PD answer. Both are *meta*-truths because they evaluate the *applicability* of the lower-order truth assignment, not the truth assignment itself. That is consistent with how Meta-Truths were defined in `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
 
 ### The strengthened claim
 
-> **Binary logic is sufficient if and only if all six of the following hold:**
+> **Binary logic is sufficient if and only if all seven of the following hold:**
 > 1. No defective instantiations exist.
 > 2. No transient middle states exist.
 > 3. No graded states exist.
-> 4. **No stable third equilibria with positive but measure-zero-on-the-binary-manifold exist.**
-> 5. **No path-dependent / time-varying truth values exist.**
-> 6. **Every well-formed question terminates with a definite answer in finite time.**
+> 4. No stable third equilibria with positive but measure-zero-on-the-binary-manifold exist.
+> 5. No path-dependent / time-varying truth values exist.
+> 6. Every well-formed question terminates with a definite answer in finite time.
+> 7. **The truth-bearer persists in existence at least until the resolution event completes.**
 >
-> **Each of (1) through (6) is empirically false in physical, biological, computational, and social systems.** Therefore binary logic is sufficient only for abstract symbolic computation with bounded, decidable, time-independent, single-instance, fully-specified inputs — a vanishingly small slice of reality.
+> **Each of (1) through (7) is empirically false in physical, biological, computational, and social systems.** Therefore binary logic is sufficient only for abstract symbolic computation with bounded, decidable, time-independent, single-instance, fully-specified, persistently-referent inputs — a vanishingly small slice of reality.
 
-This is **the strongest anti-binary statement the corpus has produced.** Six independent failure modes, each with a clean empirical instantiation, each mapping to a distinct TI Sigma axis. Conjoint refutation across six dimensions makes the binary-is-sufficient position untenable for any non-trivial domain.
+This is **the strongest anti-binary statement the corpus has produced.** Seven independent failure modes, each with a clean empirical instantiation, each mapping to a distinct TI Sigma axis. Conjoint refutation across seven dimensions makes the binary-is-sufficient position untenable for any non-trivial domain.
 
 ---
 
 ## 4. The asymmetric beauty of the coin examples
 
-Worth flagging: Brandon's three coin examples have a deeper structural property. They each take the *same physical object* (a coin) and expose three new failure modes by varying only one parameter at a time:
+Worth flagging: Brandon's four coin examples have a deeper structural property. They each take the *same physical object* (a coin) and expose four new failure modes by varying only one parameter at a time:
 
 - **Edge case:** vary the *final-state space* (allow a third equilibrium → Axis 4)
 - **Bounce case:** vary the *time-of-evaluation* (allow temporal sampling → Axis 5)
 - **Never-lands case:** vary the *environment* (remove the resolution boundary → Axis 6)
+- **Destroyed case:** vary the *persistence of the bearer* (remove the coin itself → Axis 7)
 
-**Three different parameters → three different axes.** This is structurally elegant and worth preserving as a teaching example. The same trick applied to other "binary-seems-fine" objects (light switches, true/false test questions, vote counts, on/off computer bits) will produce the same three-axis exposure each time.
+**Four different parameters → four different axes.** This is structurally elegant and worth preserving as a teaching example. The same trick applied to other "binary-seems-fine" objects (light switches, true/false test questions, vote counts, on/off computer bits) will produce the same four-axis exposure each time — the four parameters (final-state space, time-of-evaluation, environment, bearer-persistence) are *the* four dimensions any truth-bearing event must specify, and each can be perturbed independently.
 
-This is itself an instance of ASC-1 (Aesthetic-Structural-Coherence, proposed in parent paper §4.4): **the coin examples are aesthetically coherent because the parameter-variation structure is symmetric.** That coherence is evidence of correctness on the T_aesth axis of T_GILE.
+This is itself an instance of ASC-1 (Aesthetic-Structural-Coherence, proposed in parent paper §4.4): **the coin examples are aesthetically coherent because the parameter-variation structure is symmetric and (now) appears to be complete** — the four perturbations exhaust the parameters of "a truth-bearing event," which would make the seven-axis proof not just strong but *closed*. Conjecture worth flagging: **no eighth axis can be added via this perturbation grammar**, because every additional perturbation will reduce to a combination of the four already covered. (Conjectural, would need a small structural proof.) That closure-conjecture is itself evidence of T_aesth correctness for the corpus.
 
 ---
 
@@ -103,13 +124,15 @@ This is itself an instance of ASC-1 (Aesthetic-Structural-Coherence, proposed in
 
 | # | Action | Status |
 |---|---|---|
-| 1 | Adopt the **six-axis binary-failure proof** as canonical replacing the three-axis version in parent §3.2 | **Proposed for Pass-56 approval** |
-| 2 | Use the coin trio as the canonical teaching example for binary-failure (memorable, structurally symmetric, empirically grounded) | **Proposed** |
+| 1 | Adopt the **seven-axis binary-failure proof** as canonical replacing the three-axis version in parent §3.2 | **Proposed for Pass-56 approval** |
+| 2 | Use the coin quartet (edge / bounce / never-lands / destroyed) as the canonical teaching example for binary-failure | **Proposed** |
 | 3 | Update GILE-HEM operationalization docs to flag that time-indexed τ is itself Axis-5 evidence | Optional Pass-56 task |
 | 4 | Cross-link MT-B1 Moot → Halting Problem → Gödel incompleteness explicitly in the canonical ruling | Optional Pass-56 task |
+| 5 | **Add new Meta-Truth MT-B-VOID (Referential Void) to the urb_608 12-MT corpus** | **Proposed for Pass-56 approval** |
+| 6 | **Investigate four-parameter perturbation-closure conjecture**: prove or disprove that the four parameters (final-state space, time-of-evaluation, environment, bearer-persistence) exhaust truth-bearing event perturbations | Pass-56 or later |
 
-**Net for this addendum:** binary-failure proof strengthened from 3 axes to 6 axes; one new aesthetic-coherence instance logged; three corpus-action proposals pending Pass-56.
+**Net for this addendum:** binary-failure proof strengthened from 3 axes to 7 axes; one new Meta-Truth (MT-B-VOID) proposed; one closure-conjecture proposed; one aesthetic-coherence instance logged; five corpus-action proposals pending Pass-56.
 
 ---
 
-**Status:** Theoretical addendum, PRELIMINARY-CONFIRM. All six axes have clean empirical anchors (light switch + coin) and each maps to a distinct, already-canonized or naturally-derivable TI Sigma structure. Worth promoting to a Lean4 formalization target eventually — proving the six independence claims rigorously would be a clean small-corpus addition.
+**Status:** Theoretical addendum, PRELIMINARY-CONFIRM. All seven axes have clean empirical anchors (light switch + coin quartet) and each maps to a distinct, already-canonized or naturally-derivable TI Sigma structure. Worth promoting to a Lean4 formalization target eventually — proving the seven independence claims rigorously would be a clean small-corpus addition.
