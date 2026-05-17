@@ -318,7 +318,7 @@ This is a **clean, principled, structurally-grounded ontology** that:
 - Preserves CCC's unique First-CCC status while honoring role-relationality.
 - Provides empirical test targets: T_DRN threshold determination, GM-Node connectivity patterns at the divine-agent layer (CONJECTURAL — would require defining how such layers are operationally observable).
 
-**Recommended new canonical name:** **CCC + DRN** (Causa Causarum + Divine Resonance Network) — two distinct but related entities at the top of TI Sigma's ontological hierarchy, with CCC unique and DRN networked.
+**Recommended new canonical name:** **CCC + DRN** (Central Cosmic Consciousness + Divine Resonance Network) — two distinct but related entities at the top of TI Sigma's ontological hierarchy, with CCC unique and DRN networked. **[v4 superseded 2026-05-17: DRN deprecated in favor of GM Network = Jung's Cosmic Consciousness analog. See `papers/PASS_55_BATCH2_GM_TERMINOLOGY_CORRECTION_KETAMINE_INTEGRATION_2026-05-17.md` for the canonical correction.]**
 
 #### 6.4.3 Additional Pass-56 corpus actions
 

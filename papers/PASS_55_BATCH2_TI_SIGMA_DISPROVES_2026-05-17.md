@@ -34,7 +34,7 @@ Most popular "TI Sigma disproves X" claims belong to RENDER TRIVIAL or HEAVILY B
 
 #### 1.1.1 The TI Sigma CCC argument (Brandon, 2026-05-17 correction)
 
-Brandon flagged that TI Sigma has its **own** ontological-style argument for the Causa Causarum / Ultimate GILE Truth (CCC), and that my §1.1 conflated it with Anselm/Gödel. He is correct. The TI Sigma CCC argument is structurally different:
+Brandon flagged that TI Sigma has its **own** ontological-style argument for the Central Cosmic Consciousness / Ultimate GILE Truth (CCC), and that my §1.1 conflated it with Anselm/Gödel. He is correct. **[v4 terminology correction 2026-05-17: CCC = Central Cosmic Consciousness per Brandon's standing definition, not the Latin "Causa Causarum" I had assumed.]** The TI Sigma CCC argument is structurally different:
 
 > **P1.** Absolute nothingness is a contradiction (no "is" for "absolutely nothing" to occupy).
 > **P2.** Therefore δ > 0 somewhere (observed: reality exists).
