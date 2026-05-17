@@ -294,3 +294,9 @@ id = "XQbZTlCMmWw6e6X9DOtEx"
 uri = "file://papers/BIOWELL_2026_05_14_FULL_SYNTHESIS.md"
 type = "text"
 title = "Biowell 2026-05-14 — Full Synthesis (vs 2025-11-25 baseline)"
+
+[[outputs]]
+id = "pgdmzkfE940fmHrOT-u-E"
+uri = "file://papers/QUEST_LABS_2026-05-07_ANALYSIS.md"
+type = "text"
+title = "Quest Labs 2026-05-07 — Analysis + Biowell / Habit / Meds Cross-Walk"
