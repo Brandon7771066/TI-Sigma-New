@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brandon Emerick — Resume</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.5in 0.55in 0.5in 0.55in;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #222;
+    background: #fff;
+  }
+  .header {
+    border-bottom: 2.5pt solid #1a4d6e;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+  .name {
+    font-size: 24pt;
+    font-weight: 600;
+    color: #1a4d6e;
+    letter-spacing: 0.5pt;
+    margin: 0;
+    line-height: 1.1;
+  }
+  .role-line {
+    font-size: 11pt;
+    color: #555;
+    margin: 4pt 0 6pt 0;
+    font-weight: 400;
+  }
+  .contact {
+    font-size: 9pt;
+    color: #444;
+  }
+  .contact span {
+    margin-right: 12pt;
+  }
+  .contact .sep {
+    color: #1a4d6e;
+    margin: 0 8pt 0 0;
+  }
+  h2 {
+    font-size: 11pt;
+    color: #1a4d6e;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    border-bottom: 0.7pt solid #c8d4dc;
+    padding-bottom: 2pt;
+    margin: 14pt 0 6pt 0;
+    font-weight: 600;
+  }
+  h2:first-of-type {
+    margin-top: 0;
+  }
+  .summary {
+    margin: 0 0 4pt 0;
+  }
+  .summary ul {
+    margin: 4pt 0 0 0;
+    padding-left: 14pt;
+  }
+  .summary li {
+    margin-bottom: 4pt;
+  }
+  .summary li strong {
+    color: #1a4d6e;
+  }
+  .competencies {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4pt;
+  }
+  .competencies td {
+    vertical-align: top;
+    padding: 3pt 6pt 3pt 0;
+    border-bottom: 0.4pt solid #eaeaea;
+  }
+  .competencies td.label {
+    width: 24%;
+    font-weight: 600;
+    color: #1a4d6e;
+    white-space: nowrap;
+  }
+  .project {
+    margin-bottom: 8pt;
+  }
+  .project .title {
+    font-weight: 600;
+    color: #222;
+  }
+  .project .body {
+    margin-top: 2pt;
+  }
+  .experience-item {
+    margin-bottom: 9pt;
+  }
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .exp-role {
+    font-weight: 600;
+    color: #1a4d6e;
+  }
+  .exp-org {
+    color: #444;
+  }
+  .exp-dates {
+    color: #777;
+    font-size: 9pt;
+    font-style: italic;
+    white-space: nowrap;
+  }
+  .exp-body {
+    margin-top: 2pt;
+  }
+  .education {
+    margin-top: 2pt;
+  }
+  .ed-school {
+    font-weight: 600;
+    color: #1a4d6e;
+  }
+  .why-fit {
+    counter-reset: fitlist;
+    padding-left: 0;
+    list-style: none;
+    margin: 4pt 0 0 0;
+  }
+  .why-fit li {
+    counter-increment: fitlist;
+    position: relative;
+    padding-left: 22pt;
+    margin-bottom: 5pt;
+  }
+  .why-fit li::before {
+    content: counter(fitlist);
+    position: absolute;
+    left: 0;
+    top: -1pt;
+    width: 16pt;
+    height: 16pt;
+    line-height: 16pt;
+    text-align: center;
+    background: #1a4d6e;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+  .footer {
+    margin-top: 12pt;
+    font-size: 8.5pt;
+    color: #888;
+    font-style: italic;
+    border-top: 0.5pt solid #ddd;
+    padding-top: 4pt;
+    text-align: center;
+  }
+  .pill {
+    display: inline-block;
+    background: #eef4f8;
+    color: #1a4d6e;
+    border: 0.4pt solid #c8d4dc;
+    border-radius: 8pt;
+    padding: 1pt 6pt;
+    font-size: 8.5pt;
+    margin: 1pt 2pt 1pt 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 class="name">Brandon Charles Emerick</h1>
+  <div class="role-line">AI Trainer &middot; Formal-Methods Researcher &middot; Mathematics &amp; Philosophy SME</div>
+  <div class="contact">
+    <span><strong>Watertown, CT</strong></span>
+    <span class="sep">&middot;</span>
+    <span>860-483-1425</span>
+    <span class="sep">&middot;</span>
+    <span>brandonemerick91@gmail.com</span>
+    <span class="sep">&middot;</span>
+    <span>Zenodo: 100+ papers under "Brandon Emerick" / "TI Sigma"</span>
+  </div>
+</div>
+
+<h2>Professional Summary</h2>
+<div class="summary">
+<ul>
+  <li><strong>Formal-methods practitioner.</strong> Authored 20 machine-checked theorems in Lean 4 / mathlib4 (golden-ratio identity, extended Euler identity, threshold-logic lemmas, evaluator-injectivity, scalar energy decay) closed under the three standard Lean 4 axioms &mdash; <em>#print axioms</em> verified. Companion audit candidly distinguishes closed theorems from sorry-laden scaffolds and states no Millennium Prize problem has been closed by this work.</li>
+  <li><strong>High inter-rater reliability on multi-axis labeling.</strong> Designed a five-axis truth-richness rubric (PD-real, PD-imaginary, MR categorical labels, &tau;/&delta; separability, Authority Axis) and achieved <strong>Fleiss &kappa; = 0.906</strong> on the categorical-taxonomic axis &mdash; well above the AI-trainer-quality benchmark of &kappa; &ge; 0.80.</li>
+  <li><strong>Pre-registration and brutal-honesty discipline.</strong> Operate under a published methodology ("Asymmetric-Standards #69": over-skepticism counts as a discipline failure equal to uncritical acceptance). Register confirmation, indeterminate, and disconfirmation criteria <em>before</em> running tests; report NULL and disconfirmed outcomes with the same rigor as positive ones.</li>
+  <li><strong>Quantum-hardware experimental result.</strong> Designed and executed a GHZ-5 Mermin-inequality test on <em>ibm_marrakesh</em>: |M&#8325;| = 14.535 (91% of theoretical max, <strong>71&sigma; violation of the LHV bound</strong>) &mdash; first hardware-confirmed multipartite-entanglement witness in the research corpus.</li>
+  <li><strong>Output volume.</strong> 100+ research papers archived on Zenodo (open-access, citable DOIs) across AI, consciousness science, formal logic, statistics, quantum computing, and philosophy of mind.</li>
+</ul>
+</div>
+
+<h2>Core Competencies</h2>
+<table class="competencies">
+  <tr>
+    <td class="label">Formal Reasoning</td>
+    <td>Lean 4 / mathlib4 &middot; first- and higher-order logic &middot; four-valued ("Tralse") logic &middot; axiom accounting via <em>#print axioms</em> &middot; named-gap formalization (Buzzard / LTE-style)</td>
+  </tr>
+  <tr>
+    <td class="label">Mathematics</td>
+    <td>Real &amp; complex analysis (Euler identity, exponential decay) &middot; elementary number theory &middot; statistics (Fleiss &kappa;, NIST SP 800-22 randomness suite, pre-registered ROC/AUC, dual-threshold inference)</td>
+  </tr>
+  <tr>
+    <td class="label">Scientific Writing</td>
+    <td>Abstract &rarr; definitions &rarr; proofs &rarr; axiom-list &rarr; reproducibility, end-to-end &middot; honest-positioning sections that explicitly delimit what was and was not shown</td>
+  </tr>
+  <tr>
+    <td class="label">Evaluation &amp; Red-teaming</td>
+    <td>Adversarial criteria design ("vacuous-confirm" filters, pre-registered indeterminate clauses) &middot; inconsistency search &middot; falsifier specification</td>
+  </tr>
+  <tr>
+    <td class="label">Philosophy &amp; Cog Sci</td>
+    <td>Philosophy of mind (consciousness, intentionality, causation, four-valued truth) &middot; epistemology &middot; cognitive psychology (UConn major)</td>
+  </tr>
+  <tr>
+    <td class="label">Programming &amp; Data</td>
+    <td>Python (NumPy, Pandas, scikit-learn, SciPy, Streamlit) &middot; SQL (PostgreSQL) &middot; Lean 4 + Lake &middot; Bash &middot; Qiskit &middot; basic JavaScript</td>
+  </tr>
+  <tr>
+    <td class="label">Methodology</td>
+    <td>Pre-registration &middot; reproducible builds &middot; idempotent install scripts &middot; persistent workflow orchestration &middot; honest retraction &amp; revision (publicly retracted a prior audit claim within 48 hours when a corpus sweep falsified it)</td>
+  </tr>
+</table>
+
+<h2>Selected Research &amp; Verification Projects</h2>
+
+<div class="project">
+  <div class="title">Lean 4 / mathlib4 formal verification &mdash; 20 closed theorems</div>
+  <div class="body">All 20 theorems close under <em>{propext, Classical.choice, Quot.sound}</em> with <em>#print axioms</em> verification. Spans the golden-ratio identity, extended Euler identity, threshold-logic (LxE) lemmas, evaluator-injectivity (Verisyn), and scalar energy decay (ToyDecay). Four peer-review packets prepared and ready for Archive of Formal Proofs, Journal of Formalized Reasoning, arXiv math.LO / cs.LO, or mathlib4 contributions.</div>
+</div>
+
+<div class="project">
+  <div class="title">Multi-axis truth labeling &mdash; Fleiss &kappa; = 0.906</div>
+  <div class="body">Designed a four-element categorical truth-label scheme (True, False, Indeterminate, Double-Tralse) plus 12 meta-truth extensions. Inter-rater agreement on the categorical axis reached Fleiss &kappa; = 0.906 across three independent raters &mdash; the strongest categorical-taxonomic confirmation in the research corpus. Directly relevant to RLHF rubric design and trainer-consistency benchmarking.</div>
+</div>
+
+<div class="project">
+  <div class="title">Quantum-hardware GHZ-5 Mermin test &mdash; 71&sigma; LHV-bound violation</div>
+  <div class="body">End-to-end design and execution on <em>ibm_marrakesh</em> (real superconducting hardware, not simulator). |M&#8325;| = 14.535, 91% of the theoretical |M&#8325;|<sub>max</sub> = 16. Confirms multipartite entanglement past the Mermin LHV bound by 71 standard deviations.</div>
+</div>
+
+<div class="project">
+  <div class="title">LCC randomness benchmark vs. NIST SP 800-22</div>
+  <div class="body">Tested 8 candidate random-generation sources against the NIST suite: 6 passed, 2 failed. Designed a dual-threshold framework (T<sub>RAND</sub> = 0.0660, T<sub>BORDER</sub> = 0.13534) that empirically discriminates true randomness from weak signal coupling at N = 384 with <strong>0.00% false-positive rate over 2,000 draws</strong>.</div>
+</div>
+
+<div class="project">
+  <div class="title">Pre-registered Navier&ndash;Stokes UOP scaffold &mdash; honest open status</div>
+  <div class="body">Built a Lean 4 / mathlib4 axiom-as-hypothesis scaffold for the conditional theorem <em>UOP_existence_claim &rarr; NS_smoothness</em>. Pipeline <em>lake build</em> green; <em>#print axioms</em> confirms the conditional depends on a domain axiom. <strong>Not</strong> claimed as a proof of Navier&ndash;Stokes &mdash; documented openly as an honest open scaffold, with candid contrast against the closed 1-D <em>energy_monotone_decay</em> theorem in the same repository.</div>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="experience-item">
+  <div class="exp-head">
+    <div><span class="exp-role">Founder &amp; CEO</span> &mdash; <span class="exp-org">BlissGene Therapeutics, Inc.</span></div>
+    <div class="exp-dates">July 2024 &ndash; Present</div>
+  </div>
+  <div class="exp-body">Hired PhD scientists to develop a novel gene-therapy candidate for chronic pain, anxiety, and depression. Microbiology lab work underway. Met the competitive threshold for administrative review in a prior FDA SBIR funding round. Featured in a <em>CEO Weekly</em> press release.</div>
+</div>
+
+<div class="experience-item">
+  <div class="exp-head">
+    <div><span class="exp-role">Independent Researcher, Inventor &amp; Philosopher</span> &mdash; <span class="exp-org">Transcendent Intelligence (TI) Sigma</span></div>
+    <div class="exp-dates">June 2025 &ndash; Present</div>
+  </div>
+  <div class="exp-body">Originator of the TI Sigma experimental meta-philosophy. 100+ research papers published on Zenodo spanning AI, consciousness, formal logic, statistics, quantum computing, brain&ndash;computer interfaces, and finance. Maintain a continuous pre-registration ledger of self-binding predictions with explicit confirm / indeterminate / disconfirm criteria. Notable inventions include an AI neurofeedback prototype for mood modulation, a brain-metric-based consensual cybersecurity concept, and a multi-year backtested stock-market algorithm.</div>
+</div>
+
+<div class="experience-item">
+  <div class="exp-head">
+    <div><span class="exp-role">ABA Behavior Technician</span> &mdash; <span class="exp-org">A Brand New Day</span></div>
+    <div class="exp-dates">October 2025 &ndash; Present</div>
+  </div>
+  <div class="exp-body">One-on-one therapy with an autism client. Discrete-trial-training protocol adherence; session data logging; behavior-plan implementation.</div>
+</div>
+
+<div class="experience-item">
+  <div class="exp-head">
+    <div><span class="exp-role">ABA Behavior Technician</span> &mdash; <span class="exp-org">Altura Care</span></div>
+    <div class="exp-dates">January 2025 &ndash; May 2025</div>
+  </div>
+  <div class="exp-body">Same role as above with a different client.</div>
+</div>
+
+<h2>Education &amp; Certifications</h2>
+<div class="education">
+  <div><span class="ed-school">University of Connecticut, Storrs</span> &mdash; B.S. General Studies (Cognitive Science &frac34;, Business Administration &frac14;)</div>
+  <div style="color:#555; margin-top:1pt;">Graduated August 2024 &middot; <strong>Magna Cum Laude</strong> &middot; Honors Program &middot; GPA 3.56 &middot; Good Standing</div>
+  <div style="margin-top: 5pt;">
+    <span class="pill">CPR Certified</span>
+    <span class="pill">Assault Prevention Training</span>
+    <span class="pill">HIPAA Certified</span>
+  </div>
+</div>
+
+<h2>Talks &amp; Public Output</h2>
+<ul style="margin: 4pt 0 0 0; padding-left: 14pt;">
+  <li><strong>TEDx speaker, 2019</strong> &mdash; talk on curiosity, motivation, and the comfort zone.</li>
+  <li><strong>Zenodo</strong> &mdash; 100+ open-access research papers under TI Sigma; each with a citable DOI.</li>
+  <li><strong>Internal corpus</strong> &mdash; peer-review submission packets prepared (May 2026) for the 20 closed Lean 4 theorems, ready for AFP, JFR, arXiv, or mathlib4 submission.</li>
+</ul>
+
+<h2>Why I'm a Strong Fit for an AI Trainer Role</h2>
+<ol class="why-fit">
+  <li>I generate and grade chain-of-thought at the level model trainers need. I write step-by-step proofs in Lean 4 and have already produced 20 of them at a foundation-axiom level &mdash; the literal artifact most math-AI-trainer pipelines want SMEs to produce.</li>
+  <li>I score well on inter-rater reliability. Fleiss &kappa; = 0.906 on multi-axis categorical labeling is in the range model-rubric designers want from senior labelers.</li>
+  <li>I default to brutal-honest pre-registration &mdash; the operating discipline behind high-quality RLHF data. I openly retract overclaims (my "ZERO theorems" audit was publicly corrected within 48 hours of a corpus sweep) and distinguish "scaffold-approved" from "claim-closed" rigorously.</li>
+  <li>I can red-team. Documented track record of designing falsifiers and vacuous-confirm filters that catch under-discriminating tests &mdash; useful for adversarial-evaluation pipelines.</li>
+  <li>I bring philosophy and cognitive-science depth alongside the math &mdash; useful for the epistemology and AI-alignment side of trainer work.</li>
+</ol>
+
+<div class="footer">References, full publication list, and source-repository access available on request.</div>
+
+</body>
+</html>
