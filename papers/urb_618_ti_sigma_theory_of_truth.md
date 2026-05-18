@@ -9,6 +9,21 @@
 
 ---
 
+## Canonical Notation Clarification (2026-05-17)
+
+This paper uses the **5-state PD-coordinate notation** {TT, TI, TF, DT, EV} throughout. Per the **MR Truth-Labels Canonical Ruling (2026-05-08)** this is now distinguished from the **base-4 MR Truth-Labels** used elsewhere in the corpus:
+
+| Object | Labels | Role |
+|---|---|---|
+| **MR Truth-Labels (base-4)** | {True, False, **Indeterminate**, **Double Tralse**} + N Meta-Truths | The canonical categorical truth-value set. DT formally = τ(P)∧¬τ(P). |
+| **PD-coordinates (this paper)** | {TT, TI, TF, **DefT**, EV} | The 5-axis structural coordinate system over which the **Permissibility Distribution** is defined. |
+
+**Critical rename (2026-05-08):** What this paper calls **"DT"** in the PD-coordinate {TT, TI, TF, **DT**, EV} is now canonically **DefT** (Defective Truth), to disambiguate from base-4 Double Tralse. Read every occurrence of "DT" in §§3-6 of this paper as **DefT** in current corpus notation. The acronym **PD** stands for **Permissibility Distribution** (canonized Pass 6, 2026-05-08) — not "probability density."
+
+Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, `papers/urb_607_truth_architecture_three_states_dt_absence.md`, `papers/urb_608_meta_truths_myrion_resolution_catalogue.md`.
+
+---
+
 ## Abstract
 
 This paper presents the complete TI Sigma Theory of Truth — the foundational account of what truth is, how it is structured, and how it is approached. Truth is defined as the tralse, time-indexed state of beings and systems. Accuracy measures how well representations match that state. Certainty measures how much of that match is resolved for a subject at a moment. These three — truth, accuracy, and certainty — are fully distinct quantities, not conflations of a single scalar. Uncertainty is unresolved information, not error. Logic must operate on resolution dynamics, not binary propositions. The operational framework for navigating truth is **TIL (TI Logic)**, comprising three elements: **PD** (Permissibility Distribution — truth-state assignment), **BOK** (Being-of-Knowledge — the GILE-EV structural model of any being or i-cell), and **MR** (Myrion Resolution — the convergence procedure). The guiding principle of TIL is the **UOP** (Unified Optimization Principle) — optimizing across all GILE and EV dimensions simultaneously. These five elements — PD, BOK, MR, UOP, and TIL — constitute the complete operational machinery of TI Sigma. Two structural flagships (BOK and LCC) plus three operational pillars (PD, MR, EAR) plus TIL-as-integration plus UOP-as-principle complete the system.

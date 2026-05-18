@@ -8,6 +8,24 @@
 **Status:** Major Refinement — Supersedes prior separation of Tralse and Indeterminate  
 **Keywords:** truth architecture, Tralse, Indeterminate, Double Tralse, truth states, truth spectrum, truth-absence, Myrion Resolution, 5-valued logic revision, stable states, truth modifier  
 **Grows from:** URB #528 (original 5-valued Tralse logic), URB #530 (Tralse Topos Engine), URB #606 (binary AI limits — Double Tralse at quantum level)  
+
+---
+
+## Canonical Update Notice (2026-05-08, applied 2026-05-17)
+
+This paper's central move — **"Unification: Tralse = Indeterminate"** (§2) — has been **partially superseded** by the **MR Truth Labels Canonical Ruling (2026-05-08)** (`papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`).
+
+**Current canonical position:**
+- **Tralse** is the **universal quality** of any state holding multiple truth-values in tension. It is *not* a single label.
+- **Indeterminate** is a **specific MR2-state** within the base-4 truth-label set {True, False, **Indeterminate**, Double Tralse}.
+- The two are **not identical**: Indeterminate is *one specific instance* of tralsity; Tralse names the broader phenomenon.
+
+**What this paper got right (still canonical):**
+- DT is the **label for truth-absence**, not a positive truth-state.
+- Three stable truth-bearing states + one absence-label is the correct structural picture.
+- The category-collapse of "Tralse vs Indeterminate as two separate stable states" was correct — they aren't two parallel states.
+
+**What was refined on 2026-05-08:** the relationship is *quality vs instance*, not strict identity. Read this paper's §2 with that lens. The base-4 label set used corpus-wide is {T, F, I, DT}, with DT formally defined as τ(P) ∧ ¬τ(P).
 **Status:** Complete — Corpus Entry #261
 
 ---
