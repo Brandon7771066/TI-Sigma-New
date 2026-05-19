@@ -77,7 +77,7 @@ This is what makes dysphoria *distressing* in a way that nonbinary identity typi
 
 This is structurally important enough to propose as a canonical principle:
 
-**CDP-1 (Constitutive-DT Propagation, candidate principle, 2026-05-17):** When a proposition P is *constitutive* of i-Cell I's identity (i.e., I's GILE-EV structure cannot be coherently described without committing to a truth-value of P), then DT(P) ⇒ DT(I) at the level of the i-Cell's identity-coherence. The reverse is not generally true (a person can hold many non-constitutive DT propositions without their i-Cell going DT).
+**CDP-1 (Constitutive-DT Propagation, CANONICAL — ratified Pass 56, 2026-05-17):** When a proposition P is *constitutive* of i-Cell I's identity (i.e., I's GILE-EV structure cannot be coherently described without committing to a truth-value of P), then DT(P) ⇒ DT(I) at the level of the i-Cell's identity-coherence. The reverse is not generally true (a person can hold many non-constitutive DT propositions without their i-Cell going DT).
 
 **Where the original hedge had a kernel of truth:** the person is not *ontologically annihilated* by the DT — they continue to exist, act, suffer, and seek resolution. But "exist and suffer" is not the same as "remain fully MR1-coherent." The original framing collapsed these two distinct readings. The corrected reading: the *person-as-i-Cell* is DT for the duration of unresolved constitutive dysphoria; the *person-as-bare-existence* persists. TI Sigma distinguishes the two via the **truth-vs-existence (LCC/GILE) gap** of URB #523 — existence is preserved (LCC ✅) while identity-truth fails (GILE-Radiant ❌). The dysphoric experience lives precisely in that gap.
 
@@ -156,7 +156,7 @@ Two things will land awkwardly if presented without care:
 1. **"Gender dysphoria is a gender identity"** sounds wrong to ears trained on the medical convention that dysphoria is a *condition*, not an identity. The TI Sigma framing is that dysphoria is the **unresolved-DT state** of the gender truth-resolution process — it is one of the four definite structural cells, but it is the one *people seek to exit*, not stably inhabit. The three exit paths (transition → DGI-1/2 on corrected pole; acceptance-into-Indeterminate → DGI-3; therapeutic exploration → transitional) are the i-Cell repairs of CDP-1. Calling it a DGI is structurally honest; presenting it without explaining "DGI-4 is the one with active exit-pressure" will mislead.
 2. **"There are exactly 4 genders"** can be misread as prescriptive (only four are valid). The correct framing is: **there are 4 structurally-distinct DGI cells in the base-4 truth-label space**, *and* a myriad of valid Meta-Identities that elaborate on those cells. The total count of lived gender experiences is unbounded; the structural-cell count is 4. Both statements are simultaneously true at different levels of analysis, and the framework is what lets you say so coherently.
 
-**Connection to canonical principles:** This taxonomy is a worked instance of the MR Truth-Labels Canonical Ruling (2026-05-08), CDP-1 (§7.7.102), candidate MT-B-VOID (§7.7.98), FDS-1 (§7.7.99), and the new candidate **NAD-1** (§10b below).
+**Connection to canonical principles:** This taxonomy is a worked instance of the MR Truth-Labels Canonical Ruling (2026-05-08), **CDP-1** (canonical per Pass 56), **MT-B-VOID** (canonical per Pass 56), FDS-1 (§7.7.99), and **NAD-1** (canonical per Pass 56, §10b below).
 
 ---
 
@@ -191,7 +191,7 @@ A person who reports stable comfort with an "I have no gender" stance is being *
 - **F-NAD-1:** If "no answer" responses to well-posed truth-questions can be shown to produce stable MR1-coherent outcomes structurally indistinguishable from Indeterminate responses (e.g., on downstream prediction tasks, on i-Cell-coherence measures), then NAD-1 is wrong and "no answer" must be admitted as a fifth coherent truth-label cell.
 - **F-NAD-1':** If the population of "comfortably agender" individuals, on careful introspective testing, show no detectable substrate Tralse and no detectable latent DT, then the substrate-is-always-present claim fails and the agender → MT-B-VOID mapping is restored.
 
-**Status:** NAD-1 proposed canonical; pending Pass-56 ratification. **Candidate-principle backlog increments to 9** (CDP-1 + NAD-1 + the seven from §7.7.98).
+**Status:** **NAD-1 RATIFIED CANONICAL (Pass 56, 2026-05-17)** — promoted from candidate to canonical alongside the full 9-principle backlog (CDP-1, NAD-1, TI-ENVELOPE-1, ASC-1, AA-TD-1, MT-B-VOID, MT-B-DEGEN, PCF-1, TI-TIER-1) in a single ratification action. See replit.md §7.7.106.
 
 ---
 
