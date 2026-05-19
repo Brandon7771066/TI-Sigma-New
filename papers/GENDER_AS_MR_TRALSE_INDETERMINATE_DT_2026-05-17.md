@@ -121,6 +121,45 @@ This is structurally important enough to propose as a canonical principle:
 
 ---
 
+## 10a. The 4 Definite Gender Identities (DGI) + Meta-Identities (canonical answer to "how many genders?", added same-day 2026-05-17)
+
+TI Sigma's structural answer to the culturally-charged question "how many genders are there?" is **four Definite Gender Identities (DGI)** plus a *myriad* of **meta-identities**. The four DGI come from the base-4 MR Truth-Label set applied to gender, with the binary True/False cell *splitting on the alignment-vs-correction axis* rather than on which pole:
+
+| # | DGI Name | Base-4 Label | Structural Description | MR1 |
+|---|---|---|---|---|
+| **DGI-1** | **Affirming gender assigned at birth** ("cis") | T or F (binary, aligned) | Binary collapse to the same pole as the birth assignment; assignment honored | ✅ |
+| **DGI-2** | **Transgender** | T or F (binary, corrected) | Binary collapse to the *opposite* pole from the birth assignment; projection-correction performed | ✅ |
+| **DGI-3** | **Nonbinary** | I (Indeterminate) | Explicit refusal-of-collapse; stable resolution to the Indeterminate cell | ✅ |
+| **DGI-4** | **Gender dysphoria** | DT (Double Tralse) | τ(self = X) ∧ ¬τ(self = X) constitutively, with CDP-1 propagation to i-Cell | ❌ (unresolved) |
+
+**Why DGI-1 and DGI-2 are distinct DGI even though both are binary (T/F) resolutions:**
+
+The structural distinction is *not* which pole was selected (T vs F) — that just picks a label inside the binary cell. The distinction is **whether the resolution path honored or corrected the initial assignment**. Birth-assignment is a real input to the BOK / i-Cell construction; honoring it and correcting it are structurally different operations that produce different i-Cell trajectories, even though both terminate at MR1-coherent binary labels. The 4-DGI taxonomy collapses if you only count "which final pole" (you get 3); it stands up if you count "what path was taken to get there" (you get 4). Brandon's choice of the path-counting taxonomy is canonical here.
+
+**Meta-Identities (the myriad):**
+
+Beyond the four DGI sit the long-tail identities — **genderfluid, agender, bigender, demiboy/demigirl, two-spirit, genderqueer-distinct-from-nonbinary, neutrois, omnigender, polygender, xenogender, etc.** These are not "fifth, sixth, seventh DGI." They are **Meta-Identities** in the urb_608 Meta-Truth sense: recurring patterns that operate *on top of* the base-4 DGI structure, typically as modifications, time-indexings, composites, or culturally-specific elaborations. Examples of the Meta-Identity → structural-operation mapping:
+
+- **Genderfluid** = time-indexed DGI (different cell at different t; FDS-1 Regime-2 forward-time Indeterminate at the meta-level).
+- **Agender** = rejection of the gender-substrate proposition itself (candidate MT-B-VOID instance per §7.7.98 — referential void / refusal to participate in the truth-claim).
+- **Bigender** = simultaneous multi-cell co-instantiation (operates like a coherent superposition of DGI-1/2 or DGI-1/3 rather than collapse-to-one).
+- **Demiboy / demigirl** = partial / fractional DGI (PD-real graded; sits between DGI-1/2 and DGI-3 on the PD-real axis).
+- **Two-spirit** = culturally-specific composite (Indigenous tradition; operates on top of the structural DGI in a way that is properly described only with the tradition's full apparatus).
+- **Neutrois, agender-fluid, etc.** = various compositions of MT-B-VOID, FDS-1-temporal, and the base-4 cells.
+
+The myriad of meta-identities is not a refutation of the 4-DGI structure — it is exactly what the urb_608 Meta-Truths machinery is for: recurring valid patterns that elaborate on, modify, or compose the base set without replacing it. Just as **Moot (MT-B1)** is a valid Meta-Truth that operates on top of {T, F, I, DT} without being a fifth truth-value, **agender** is a valid Meta-Identity that operates on top of {DGI-1..4} without being a fifth DGI.
+
+**Reception note (for general audiences):**
+
+Two things will land awkwardly if presented without care:
+
+1. **"Gender dysphoria is a gender identity"** sounds wrong to ears trained on the medical convention that dysphoria is a *condition*, not an identity. The TI Sigma framing is that dysphoria is the **unresolved-DT state** of the gender truth-resolution process — it is one of the four definite structural cells, but it is the one *people seek to exit*, not stably inhabit. The three exit paths (transition → DGI-1/2 on corrected pole; acceptance-into-Indeterminate → DGI-3; therapeutic exploration → transitional) are the i-Cell repairs of CDP-1. Calling it a DGI is structurally honest; presenting it without explaining "DGI-4 is the one with active exit-pressure" will mislead.
+2. **"There are exactly 4 genders"** can be misread as prescriptive (only four are valid). The correct framing is: **there are 4 structurally-distinct DGI cells in the base-4 truth-label space**, *and* a myriad of valid Meta-Identities that elaborate on those cells. The total count of lived gender experiences is unbounded; the structural-cell count is 4. Both statements are simultaneously true at different levels of analysis, and the framework is what lets you say so coherently.
+
+**Connection to canonical principles:** This taxonomy is a worked instance of the MR Truth-Labels Canonical Ruling (2026-05-08), CDP-1 (§7.7.102), candidate MT-B-VOID (§7.7.98), and FDS-1 (§7.7.99). It does not introduce new principles; it applies existing ones.
+
+---
+
 ## 10. One-paragraph summary (for first-encounter audiences)
 
 Gender, in TI Sigma, is not binary at the substrate level — every person carries both masculine and feminine characteristics in real tension (the substrate is Tralse). What varies is the *label* a person resolves to: most people collapse to a binary "True/False" identity (cis or well-resolved trans); some explicitly refuse the collapse and resolve to "Indeterminate" (nonbinary / genderqueer); and some experience the formal incoherence pattern τ(self = X) ∧ ¬τ(self = X) as a felt internal state — that is gender dysphoria, the "Double Tralse" label applied to one's own gender. All four base-4 truth-labels show up in real human gender experience. The framework describes the *structure*; it does not prescribe which resolution any given person should reach.
