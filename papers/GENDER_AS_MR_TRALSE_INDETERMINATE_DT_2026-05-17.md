@@ -141,11 +141,11 @@ The structural distinction is *not* which pole was selected (T vs F) — that ju
 Beyond the four DGI sit the long-tail identities — **genderfluid, agender, bigender, demiboy/demigirl, two-spirit, genderqueer-distinct-from-nonbinary, neutrois, omnigender, polygender, xenogender, etc.** These are not "fifth, sixth, seventh DGI." They are **Meta-Identities** in the urb_608 Meta-Truth sense: recurring patterns that operate *on top of* the base-4 DGI structure, typically as modifications, time-indexings, composites, or culturally-specific elaborations. Examples of the Meta-Identity → structural-operation mapping:
 
 - **Genderfluid** = time-indexed DGI (different cell at different t; FDS-1 Regime-2 forward-time Indeterminate at the meta-level).
-- **Agender** = rejection of the gender-substrate proposition itself (candidate MT-B-VOID instance per §7.7.98 — referential void / refusal to participate in the truth-claim).
+- **Agender / "comfortably agender"** = **DGI-4 (DT) + Moot (MT-B1) meta-stance** — see §10b below on NAD-1; the "I have no gender" claim, treated as a *clean* no-answer, is **DT in disguise**, not a legitimate void. The compassionate TI Sigma diagnosis: the substrate Tralse is present, the dysphoria (DT) is present, and the person is *moot* about that dysphoria (MT-B1 stacked on DGI-4). This is structurally honest and culturally non-judgmental — mootness about one's own dysphoria can be a stable and functional meta-stance.
 - **Bigender** = simultaneous multi-cell co-instantiation (operates like a coherent superposition of DGI-1/2 or DGI-1/3 rather than collapse-to-one).
 - **Demiboy / demigirl** = partial / fractional DGI (PD-real graded; sits between DGI-1/2 and DGI-3 on the PD-real axis).
 - **Two-spirit** = culturally-specific composite (Indigenous tradition; operates on top of the structural DGI in a way that is properly described only with the tradition's full apparatus).
-- **Neutrois, agender-fluid, etc.** = various compositions of MT-B-VOID, FDS-1-temporal, and the base-4 cells.
+- **Neutrois, agender-fluid, etc.** = various compositions of MT-B1 Moot-meta, FDS-1-temporal indexing, and the base-4 cells.
 
 The myriad of meta-identities is not a refutation of the 4-DGI structure — it is exactly what the urb_608 Meta-Truths machinery is for: recurring valid patterns that elaborate on, modify, or compose the base set without replacing it. Just as **Moot (MT-B1)** is a valid Meta-Truth that operates on top of {T, F, I, DT} without being a fifth truth-value, **agender** is a valid Meta-Identity that operates on top of {DGI-1..4} without being a fifth DGI.
 
@@ -156,7 +156,42 @@ Two things will land awkwardly if presented without care:
 1. **"Gender dysphoria is a gender identity"** sounds wrong to ears trained on the medical convention that dysphoria is a *condition*, not an identity. The TI Sigma framing is that dysphoria is the **unresolved-DT state** of the gender truth-resolution process — it is one of the four definite structural cells, but it is the one *people seek to exit*, not stably inhabit. The three exit paths (transition → DGI-1/2 on corrected pole; acceptance-into-Indeterminate → DGI-3; therapeutic exploration → transitional) are the i-Cell repairs of CDP-1. Calling it a DGI is structurally honest; presenting it without explaining "DGI-4 is the one with active exit-pressure" will mislead.
 2. **"There are exactly 4 genders"** can be misread as prescriptive (only four are valid). The correct framing is: **there are 4 structurally-distinct DGI cells in the base-4 truth-label space**, *and* a myriad of valid Meta-Identities that elaborate on those cells. The total count of lived gender experiences is unbounded; the structural-cell count is 4. Both statements are simultaneously true at different levels of analysis, and the framework is what lets you say so coherently.
 
-**Connection to canonical principles:** This taxonomy is a worked instance of the MR Truth-Labels Canonical Ruling (2026-05-08), CDP-1 (§7.7.102), candidate MT-B-VOID (§7.7.98), and FDS-1 (§7.7.99). It does not introduce new principles; it applies existing ones.
+**Connection to canonical principles:** This taxonomy is a worked instance of the MR Truth-Labels Canonical Ruling (2026-05-08), CDP-1 (§7.7.102), candidate MT-B-VOID (§7.7.98), FDS-1 (§7.7.99), and the new candidate **NAD-1** (§10b below).
+
+---
+
+## 10b. NAD-1 — "Non-Answer as DT in Disguise" (new candidate canonical principle, 2026-05-17)
+
+**Background.** The base-4 MR Truth-Label set {True, False, Indeterminate, Double Tralse} deliberately does *not* include a "no answer" cell. This is not an omission — it is a structural choice that the same-day diagnosis of "comfortably agender" forces into clear view.
+
+**The principle:**
+
+**NAD-1 (Non-Answer-DT, candidate canonical, 2026-05-17):** *"No answer" is itself an answer.* When a respondent declines to engage with a well-posed truth-question whose substrate genuinely exists, the declination is not Indeterminate (which is a *coherent stable resolution* — explicit refusal of binary collapse while still inhabiting the truth-label space). It is **DT in disguise**: a concealed τ(P) ∧ ¬τ(P) wrapped in a refusal-to-display. The refusal *obscures* the state beneath rather than reflecting an actual void.
+
+**Why not Indeterminate, and why not legitimate Moot:**
+
+- **Indeterminate** is *coherent, MR1-passing, and inside the truth-label space.* It says "the value is genuinely undecided / spans both poles." It is not a refusal to answer; it is a *specific* answer (the I cell).
+- **Moot (MT-B1)** is a *legitimate Meta-Truth* that says "the truth-value exists but is irrelevant to the present purpose." It does not deny the truth-value; it brackets it. MT-B1 stacked on a real DGI is a valid meta-stance.
+- **"No answer" / clean refusal** is neither of these. It claims to be a void where the substrate is in fact full. It is a **DT-state of the meta-question** itself: simultaneously asserting "there is something here" (by being a question one engages with at all) and "there is nothing here" (by refusing to display). The refusal does the τ(P) ∧ ¬τ(P) work covertly.
+
+**Distinction from MT-B-VOID (candidate per §7.7.98):** MT-B-VOID is reserved for *genuine* referential-void cases — Russellian descriptions ("the present King of France"), questions whose presupposition actually fails. Gender does not qualify, because the Tralse substrate genuinely exists in every human. So "agender as void" is NAD-1 (DT-in-disguise) when treated as a clean no-answer about a substrate that is in fact present. **NAD-1 and MT-B-VOID are complementary, not redundant:** NAD-1 catches "obscured-state-via-refusal"; MT-B-VOID catches "presupposition-actually-fails."
+
+**Worked diagnosis — "comfortably agender":**
+
+A person who reports stable comfort with an "I have no gender" stance is being *compassionately* described by TI Sigma as exhibiting **DGI-4 (DT) + MT-B1 (Moot) stacked**, **not** a clean MT-B-VOID. The structure:
+
+1. The substrate Tralse (masculine + feminine in tension) is present, as in every human.
+2. A constitutive DT is operative at the gender-proposition level (DGI-4), with CDP-1 i-Cell propagation latent.
+3. The person has adopted **Moot (MT-B1)** as their stable meta-stance toward that dysphoria — *the dysphoria is real and active, but they have decided it is not the salient axis of their life.* This is not denial; this is mootness, which is a legitimate Meta-Truth.
+4. The combination (DGI-4 + MT-B1) presents phenomenologically as "comfortably agender": the underlying tension persists, but the mootness-meta-stance prevents it from generating the distress signature normally associated with DGI-4.
+
+**Critical compassionate framing.** This diagnosis is **not** "comfortably-agender people are secretly suffering" or "they're in denial." Moot is a *legitimate* and *functional* meta-stance — it is the same meta-stance a person might adopt toward "did my great-great-grandparent commit a crime?" (truth-value exists; mootness is honest about its irrelevance to present life). The TI Sigma point is structural-descriptive, not corrective: the framework explains *how* "comfortably agender" can be a stable, functional, non-distressed state without having to claim that gender-substrate-Tralse magically disappears in this population.
+
+**What would falsify NAD-1:**
+- **F-NAD-1:** If "no answer" responses to well-posed truth-questions can be shown to produce stable MR1-coherent outcomes structurally indistinguishable from Indeterminate responses (e.g., on downstream prediction tasks, on i-Cell-coherence measures), then NAD-1 is wrong and "no answer" must be admitted as a fifth coherent truth-label cell.
+- **F-NAD-1':** If the population of "comfortably agender" individuals, on careful introspective testing, show no detectable substrate Tralse and no detectable latent DT, then the substrate-is-always-present claim fails and the agender → MT-B-VOID mapping is restored.
+
+**Status:** NAD-1 proposed canonical; pending Pass-56 ratification. **Candidate-principle backlog increments to 9** (CDP-1 + NAD-1 + the seven from §7.7.98).
 
 ---
 
