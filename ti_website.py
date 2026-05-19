@@ -116,6 +116,7 @@ ENGINEERING_SUBS = {
 
 TOP_PAGES = [
     "Home",
+    "💼 Career",
     "🔬 TI Sigma",
     "🏆 Proofs & Theorems",
     "📚 Research & Papers",
@@ -4676,6 +4677,57 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
         st.markdown("---")
     
         st.success("**Remember:** When you quote Judge Judy, you get protection. She said it first!")
+
+elif page == "💼 Career":
+    st.markdown("## 💼 Brandon Emerick — Career")
+    st.markdown("*AI Trainer · Researcher · Founder of Tralse Informationalism*")
+
+    st.markdown("---")
+
+    st.markdown("""
+    **📞 Phone:** [(425) 588-1581](tel:+14255881581)  
+    **✉️ Email:** [brandon.emerick@gmail.com](mailto:brandon.emerick@gmail.com)  
+    **🔗 LinkedIn:** [linkedin.com/in/brandonemerick](https://www.linkedin.com/in/brandonemerick/)  
+    **📚 Zenodo:** [zenodo.org/communities/ti-sigma](https://zenodo.org/communities/ti-sigma)
+    """)
+
+    import os as _os
+    _resume_pdf = "career/resume.pdf"
+    if _os.path.exists(_resume_pdf):
+        with open(_resume_pdf, "rb") as _f:
+            st.download_button(
+                label="⬇️ Download Resume (PDF)",
+                data=_f.read(),
+                file_name="Brandon_Emerick_Resume.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+    else:
+        st.info("Resume PDF not found at career/resume.pdf")
+
+    st.markdown("---")
+
+    def _safe_read(path):
+        try:
+            with open(path, "r", encoding="utf-8") as _fh:
+                return _fh.read()
+        except Exception as _e:
+            return f"_Could not load `{path}`: {_e}_"
+
+    career_tab1, career_tab2, career_tab3 = st.tabs([
+        "📄 Resume",
+        "🔗 LinkedIn Profile",
+        "🎯 Recruiter Summary",
+    ])
+
+    with career_tab1:
+        st.markdown(_safe_read("career/AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md"))
+
+    with career_tab2:
+        st.markdown(_safe_read("career/LINKEDIN_PROFILE_PASTE_READY_2026-05-17.md"))
+
+    with career_tab3:
+        st.markdown(_safe_read("career/RECRUITER_SUMMARY.md"))
 
 elif page == "About":
     st.markdown("## About the TI Framework")
