@@ -1,0 +1,217 @@
+{
+  "pass": "57-batch-2",
+  "date": "2026-05-17",
+  "config": {
+    "N_TRIALS": 1000,
+    "N_MC": 1000,
+    "DELTAS": [
+      0.0,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "P_ENGAGED_LIST": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "CHANCE_BASELINE": 0.25,
+    "ALPHA": 0.05,
+    "seed": 20260517
+  },
+  "results": [
+    {
+      "p_engaged": 0.3,
+      "delta_signal": 0.0,
+      "auc_method_a": 0.502,
+      "auc_method_b": 0.5027,
+      "auc_advantage_b_minus_a": 0.0006,
+      "tpr_method_a": 0.043,
+      "tpr_method_b": 0.06,
+      "tpr_advantage_b_minus_a": 0.017,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.3,
+      "delta_signal": 0.02,
+      "auc_method_a": 0.6116,
+      "auc_method_b": 0.7181,
+      "auc_advantage_b_minus_a": 0.1065,
+      "tpr_method_a": 0.101,
+      "tpr_method_b": 0.221,
+      "tpr_advantage_b_minus_a": 0.12,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.3,
+      "delta_signal": 0.05,
+      "auc_method_a": 0.7944,
+      "auc_method_b": 0.9223,
+      "auc_advantage_b_minus_a": 0.1278,
+      "tpr_method_a": 0.308,
+      "tpr_method_b": 0.668,
+      "tpr_advantage_b_minus_a": 0.36,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.3,
+      "delta_signal": 0.1,
+      "auc_method_a": 0.9336,
+      "auc_method_b": 0.996,
+      "auc_advantage_b_minus_a": 0.0624,
+      "tpr_method_a": 0.698,
+      "tpr_method_b": 0.987,
+      "tpr_advantage_b_minus_a": 0.289,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.3,
+      "delta_signal": 0.2,
+      "auc_method_a": 0.9993,
+      "auc_method_b": 1.0,
+      "auc_advantage_b_minus_a": 0.0007,
+      "tpr_method_a": 0.998,
+      "tpr_method_b": 1.0,
+      "tpr_advantage_b_minus_a": 0.002,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.5,
+      "delta_signal": 0.0,
+      "auc_method_a": 0.5129,
+      "auc_method_b": 0.5148,
+      "auc_advantage_b_minus_a": 0.0019,
+      "tpr_method_a": 0.055,
+      "tpr_method_b": 0.057,
+      "tpr_advantage_b_minus_a": 0.002,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.5,
+      "delta_signal": 0.02,
+      "auc_method_a": 0.6941,
+      "auc_method_b": 0.773,
+      "auc_advantage_b_minus_a": 0.0789,
+      "tpr_method_a": 0.181,
+      "tpr_method_b": 0.297,
+      "tpr_advantage_b_minus_a": 0.116,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.5,
+      "delta_signal": 0.05,
+      "auc_method_a": 0.9021,
+      "auc_method_b": 0.9599,
+      "auc_advantage_b_minus_a": 0.0578,
+      "tpr_method_a": 0.558,
+      "tpr_method_b": 0.821,
+      "tpr_advantage_b_minus_a": 0.263,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.5,
+      "delta_signal": 0.1,
+      "auc_method_a": 0.9946,
+      "auc_method_b": 0.9997,
+      "auc_advantage_b_minus_a": 0.0051,
+      "tpr_method_a": 0.974,
+      "tpr_method_b": 0.999,
+      "tpr_advantage_b_minus_a": 0.025,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.5,
+      "delta_signal": 0.2,
+      "auc_method_a": 1.0,
+      "auc_method_b": 1.0,
+      "auc_advantage_b_minus_a": 0.0,
+      "tpr_method_a": 1.0,
+      "tpr_method_b": 1.0,
+      "tpr_advantage_b_minus_a": 0.0,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.7,
+      "delta_signal": 0.0,
+      "auc_method_a": 0.4978,
+      "auc_method_b": 0.5079,
+      "auc_advantage_b_minus_a": 0.0101,
+      "tpr_method_a": 0.045,
+      "tpr_method_b": 0.05,
+      "tpr_advantage_b_minus_a": 0.005,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.7,
+      "delta_signal": 0.02,
+      "auc_method_a": 0.7478,
+      "auc_method_b": 0.7939,
+      "auc_advantage_b_minus_a": 0.0461,
+      "tpr_method_a": 0.244,
+      "tpr_method_b": 0.3,
+      "tpr_advantage_b_minus_a": 0.056,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.7,
+      "delta_signal": 0.05,
+      "auc_method_a": 0.9578,
+      "auc_method_b": 0.9806,
+      "auc_advantage_b_minus_a": 0.0228,
+      "tpr_method_a": 0.783,
+      "tpr_method_b": 0.896,
+      "tpr_advantage_b_minus_a": 0.113,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.7,
+      "delta_signal": 0.1,
+      "auc_method_a": 0.9996,
+      "auc_method_b": 0.9999,
+      "auc_advantage_b_minus_a": 0.0003,
+      "tpr_method_a": 0.999,
+      "tpr_method_b": 1.0,
+      "tpr_advantage_b_minus_a": 0.001,
+      "n_trials": 1000,
+      "n_mc": 1000
+    },
+    {
+      "p_engaged": 0.7,
+      "delta_signal": 0.2,
+      "auc_method_a": 1.0,
+      "auc_method_b": 1.0,
+      "auc_advantage_b_minus_a": 0.0,
+      "tpr_method_a": 1.0,
+      "tpr_method_b": 1.0,
+      "tpr_advantage_b_minus_a": 0.0,
+      "n_trials": 1000,
+      "n_mc": 1000
+    }
+  ],
+  "summary": {
+    "n_cells_signal": 12,
+    "auc_advantage_mean": 0.0424,
+    "auc_advantage_min": 0.0,
+    "auc_advantage_max": 0.1278,
+    "n_cells_where_B_beats_A_auc": 10,
+    "tpr_advantage_mean": 0.1121,
+    "n_cells_where_B_beats_A_tpr": 10,
+    "fpr_method_a_target": 0.05,
+    "fpr_method_b_target": 0.05,
+    "pre_reg_falsifier_F_PASS_57_1": "REFUTED if B's AUC \u2264 A's AUC in ALL cells. Observed: B>A in 10/12 cells \u2192 NOT REFUTED."
+  }
+}
