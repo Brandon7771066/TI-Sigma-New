@@ -417,12 +417,59 @@ with st.sidebar:
     st.metric("φ (golden ratio)",     f"{PHI:.4f}")
     st.metric("Vertices",             f"{N_VERTICES}")
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13 = st.tabs([
+tab_career, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13 = st.tabs([
+    "💼 Career",
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
     "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine", "🔬 Halting Experiment",
     "💊 OEA Protocol", "🎯 Spectre (VMP)", "🍄 Mycelial Resonance",
 ])
+
+with tab_career:
+    st.subheader("💼 Brandon Charles Emerick — Career")
+    st.caption("AI Trainer & SME · Formal Verification · Mathematics & Philosophy of Mind")
+
+    st.markdown(
+        "**📍 Watertown, CT · 📞 860-483-1425 · ✉️ brandonemerick91@gmail.com**  \n"
+        "**🔗 [LinkedIn](https://www.linkedin.com/in/brandon-emerick) · "
+        "🌐 [Zenodo (100+ papers)](https://zenodo.org/search?q=Brandon+Emerick)**"
+    )
+
+    _career_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "career")
+
+    # Resume PDF download button (mobile-friendly one-tap)
+    _resume_pdf = os.path.join(_career_dir, "resume.pdf")
+    if os.path.exists(_resume_pdf):
+        with open(_resume_pdf, "rb") as _f:
+            st.download_button(
+                "⬇️ Download Resume (PDF)",
+                data=_f.read(),
+                file_name="Brandon_Emerick_Resume.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+
+    st.markdown("---")
+
+    career_sub_resume, career_sub_linkedin, career_sub_recruiter = st.tabs([
+        "📄 Resume", "🔗 LinkedIn Profile", "🎯 Recruiter Summary",
+    ])
+
+    def _safe_read(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            return f"_(could not load `{os.path.basename(path)}`: {e})_"
+
+    with career_sub_resume:
+        st.markdown(_safe_read(os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md")))
+
+    with career_sub_linkedin:
+        st.markdown(_safe_read(os.path.join(_career_dir, "LINKEDIN_PROFILE_PASTE_READY_2026-05-17.md")))
+
+    with career_sub_recruiter:
+        st.markdown(_safe_read(os.path.join(_career_dir, "RECRUITER_SUMMARY.md")))
 
 with tab1:
     st.subheader("TI Sigma Crystal — 3D Structure Viewer")
@@ -2899,143 +2946,143 @@ with tab13:
         mre_left, mre_right = st.columns([1, 1])
 
         with mre_left:
-        st.markdown("**Live state (latest Muse sample)**")
-        try:
-            mre_state = _mre.read_current_state()
-        except Exception as e:
-            mre_state = {}
-            st.caption(f"(state read failed: {e})")
+            st.markdown("**Live state (latest Muse sample)**")
+            try:
+                mre_state = _mre.read_current_state()
+            except Exception as e:
+                mre_state = {}
+                st.caption(f"(state read failed: {e})")
 
-        if mre_state:
-            mre_alpha_peak = _mre.estimate_alpha_peak(mre_state)
-            sc1, sc2, sc3 = st.columns(3)
-            sc1.metric("α", f"{(mre_state.get('alpha') or 0):.3f}")
-            sc2.metric("β", f"{(mre_state.get('beta') or 0):.3f}")
-            sc3.metric("θ", f"{(mre_state.get('theta') or 0):.3f}")
-            st.metric("Estimated α-peak (Hz)", f"{mre_alpha_peak:.2f}")
-            st.caption(f"Session: `{mre_state.get('session_id', '—')}`  ·  "
-                       f"updated {mre_state.get('created_at', '—')}")
-        else:
-            st.warning("No live Muse data — start the bridge to enable state-aware drift.")
-            mre_alpha_peak = 10.0
+            if mre_state:
+                mre_alpha_peak = _mre.estimate_alpha_peak(mre_state)
+                sc1, sc2, sc3 = st.columns(3)
+                sc1.metric("α", f"{(mre_state.get('alpha') or 0):.3f}")
+                sc2.metric("β", f"{(mre_state.get('beta') or 0):.3f}")
+                sc3.metric("θ", f"{(mre_state.get('theta') or 0):.3f}")
+                st.metric("Estimated α-peak (Hz)", f"{mre_alpha_peak:.2f}")
+                st.caption(f"Session: `{mre_state.get('session_id', '—')}`  ·  "
+                           f"updated {mre_state.get('created_at', '—')}")
+            else:
+                st.warning("No live Muse data — start the bridge to enable state-aware drift.")
+                mre_alpha_peak = 10.0
 
-        st.markdown("---")
-        st.markdown("**Generation parameters**")
-        mre_mood = st.selectbox(
-            "Mood attractor",
-            list(_mre.MOOD_ATTRACTORS.keys()),
-            format_func=lambda k: f"{_mre.MOOD_ATTRACTORS[k].name} ({_mre.MOOD_ATTRACTORS[k].target_hz} Hz)",
-            key="mre_mood",
-        )
-        mre_attractor = _mre.MOOD_ATTRACTORS[mre_mood]
-        st.caption(mre_attractor.description)
+            st.markdown("---")
+            st.markdown("**Generation parameters**")
+            mre_mood = st.selectbox(
+                "Mood attractor",
+                list(_mre.MOOD_ATTRACTORS.keys()),
+                format_func=lambda k: f"{_mre.MOOD_ATTRACTORS[k].name} ({_mre.MOOD_ATTRACTORS[k].target_hz} Hz)",
+                key="mre_mood",
+            )
+            mre_attractor = _mre.MOOD_ATTRACTORS[mre_mood]
+            st.caption(mre_attractor.description)
 
-        mre_duration = st.slider("Duration (minutes)", 1, 30, 5, key="mre_duration")
-        mre_mode = st.radio("Output mode", ["isochronic", "binaural"],
-                            help="isochronic = mono, speaker-safe; binaural = stereo, headphones required",
-                            key="mre_mode", horizontal=True)
-        mre_use_state = st.checkbox(
-            "Drift from current α-peak (vs. start at target)",
-            value=True, key="mre_use_state",
-            help="If on, the track ramps from your estimated current peak to the target. "
-                 "If off, the entire track sits at the target frequency.",
-        )
-        mre_bed = st.checkbox(
-            "L4 — GILE-coherent harmonic bed (URB #781 §B)",
-            value=False, key="mre_bed",
-            help="Replaces the bare 200 Hz carrier with a sparse just-intonation chord "
-                 "progression (I → IV → V → I) on a low root, with a slow breath tremolo. "
-                 "Sounds less clinical, more pleasant for ambient daily use.",
-        )
-        mre_session_kind = st.radio(
-            "Generation strategy",
-            ["Single drift (v1)", "Adaptive session (v2)"],
-            help="v1: one linear drift from your current α-peak to the target. "
-                 "v2: anticipatory pre-adaptation — reads recent Muse history, estimates "
-                 "α-velocity, builds a multi-segment WAV that meets you where you'll be.",
-            key="mre_session_kind", horizontal=True,
-        )
-        mre_run = st.button("Generate track", type="primary",
-                            use_container_width=True, key="mre_run")
+            mre_duration = st.slider("Duration (minutes)", 1, 30, 5, key="mre_duration")
+            mre_mode = st.radio("Output mode", ["isochronic", "binaural"],
+                                help="isochronic = mono, speaker-safe; binaural = stereo, headphones required",
+                                key="mre_mode", horizontal=True)
+            mre_use_state = st.checkbox(
+                "Drift from current α-peak (vs. start at target)",
+                value=True, key="mre_use_state",
+                help="If on, the track ramps from your estimated current peak to the target. "
+                     "If off, the entire track sits at the target frequency.",
+            )
+            mre_bed = st.checkbox(
+                "L4 — GILE-coherent harmonic bed (URB #781 §B)",
+                value=False, key="mre_bed",
+                help="Replaces the bare 200 Hz carrier with a sparse just-intonation chord "
+                     "progression (I → IV → V → I) on a low root, with a slow breath tremolo. "
+                     "Sounds less clinical, more pleasant for ambient daily use.",
+            )
+            mre_session_kind = st.radio(
+                "Generation strategy",
+                ["Single drift (v1)", "Adaptive session (v2)"],
+                help="v1: one linear drift from your current α-peak to the target. "
+                     "v2: anticipatory pre-adaptation — reads recent Muse history, estimates "
+                     "α-velocity, builds a multi-segment WAV that meets you where you'll be.",
+                key="mre_session_kind", horizontal=True,
+            )
+            mre_run = st.button("Generate track", type="primary",
+                                use_container_width=True, key="mre_run")
 
-    with mre_right:
-        if mre_run:
-            with st.spinner(f"Synthesizing {mre_duration}-minute {mre_attractor.name} track…"):
-                try:
-                    if mre_session_kind.startswith("Adaptive"):
-                        result = _mre.generate_adaptive_session(
-                            mood_key=mre_mood,
-                            duration_s=int(mre_duration * 60),
-                            segment_s=30,
-                            mode=mre_mode,
-                            harmonic_bed=mre_bed,
-                        )
-                        result["start_hz"] = result["current_peak_hz"]
-                    else:
-                        result = _mre.generate_for_mood(
-                            mood_key=mre_mood,
-                            duration_s=int(mre_duration * 60),
-                            use_current_state=mre_use_state,
-                            mode=mre_mode,
-                            harmonic_bed=mre_bed,
-                        )
-                except Exception as e:
-                    st.error(f"Generation failed: {e}")
-                    result = None
+        with mre_right:
+            if mre_run:
+                with st.spinner(f"Synthesizing {mre_duration}-minute {mre_attractor.name} track…"):
+                    try:
+                        if mre_session_kind.startswith("Adaptive"):
+                            result = _mre.generate_adaptive_session(
+                                mood_key=mre_mood,
+                                duration_s=int(mre_duration * 60),
+                                segment_s=30,
+                                mode=mre_mode,
+                                harmonic_bed=mre_bed,
+                            )
+                            result["start_hz"] = result["current_peak_hz"]
+                        else:
+                            result = _mre.generate_for_mood(
+                                mood_key=mre_mood,
+                                duration_s=int(mre_duration * 60),
+                                use_current_state=mre_use_state,
+                                mode=mre_mode,
+                                harmonic_bed=mre_bed,
+                            )
+                    except Exception as e:
+                        st.error(f"Generation failed: {e}")
+                        result = None
 
-            if result is not None:
-                st.success(
-                    f"Track ready · drift {result['start_hz']} Hz → {result['target_hz']} Hz · "
-                    f"{result['duration_s']}s · {result['mode']}"
-                )
-                try:
-                    with open(result["path"], "rb") as f:
-                        audio_bytes = f.read()
-                    st.audio(audio_bytes, format="audio/wav")
-                    st.download_button(
-                        "Download WAV",
-                        data=audio_bytes,
-                        file_name=os.path.basename(result["path"]),
-                        mime="audio/wav",
-                        use_container_width=True,
+                if result is not None:
+                    st.success(
+                        f"Track ready · drift {result['start_hz']} Hz → {result['target_hz']} Hz · "
+                        f"{result['duration_s']}s · {result['mode']}"
                     )
-                except Exception as e:
-                    st.warning(f"(playback unavailable: {e})")
-                with st.expander("Track metadata"):
-                    st.json(result)
+                    try:
+                        with open(result["path"], "rb") as f:
+                            audio_bytes = f.read()
+                        st.audio(audio_bytes, format="audio/wav")
+                        st.download_button(
+                            "Download WAV",
+                            data=audio_bytes,
+                            file_name=os.path.basename(result["path"]),
+                            mime="audio/wav",
+                            use_container_width=True,
+                        )
+                    except Exception as e:
+                        st.warning(f"(playback unavailable: {e})")
+                    with st.expander("Track metadata"):
+                        st.json(result)
 
-        st.markdown("---")
-        st.markdown("**L5 — Visual SSVEP overlay (v3 preview)**")
-        st.caption(
-            "Soft sinusoidal flicker at the target frequency for steady-state visual "
-            "evoked-potential coupling. Use in peripheral vision only — do not stare. "
-            "Stop after 5–10 minutes or at any discomfort. Photosensitive-epilepsy warning applies."
-        )
-        ssvep_freq = st.number_input(
-            "SSVEP frequency (Hz)", min_value=4.0, max_value=40.0,
-            value=float(_mre.MOOD_ATTRACTORS[mre_mood].target_hz),
-            step=0.1, key="mre_ssvep_freq",
-        )
-        if st.button("Open SSVEP overlay", use_container_width=True, key="mre_ssvep_open"):
-            from streamlit.components.v1 import html as _html
-            _html(_mre.ssvep_html(ssvep_freq, _mre.MOOD_ATTRACTORS[mre_mood].name),
-                  height=420, scrolling=False)
+            st.markdown("---")
+            st.markdown("**L5 — Visual SSVEP overlay (v3 preview)**")
+            st.caption(
+                "Soft sinusoidal flicker at the target frequency for steady-state visual "
+                "evoked-potential coupling. Use in peripheral vision only — do not stare. "
+                "Stop after 5–10 minutes or at any discomfort. Photosensitive-epilepsy warning applies."
+            )
+            ssvep_freq = st.number_input(
+                "SSVEP frequency (Hz)", min_value=4.0, max_value=40.0,
+                value=float(_mre.MOOD_ATTRACTORS[mre_mood].target_hz),
+                step=0.1, key="mre_ssvep_freq",
+            )
+            if st.button("Open SSVEP overlay", use_container_width=True, key="mre_ssvep_open"):
+                from streamlit.components.v1 import html as _html
+                _html(_mre.ssvep_html(ssvep_freq, _mre.MOOD_ATTRACTORS[mre_mood].name),
+                      height=420, scrolling=False)
 
-        st.markdown("---")
-        st.markdown("**Usage notes**")
-        st.markdown(
-            "- **Casual ambient use:** play at low volume in the background while you do "
-            "anything — reading, eating, conversation. The entrainment works subliminally.\n"
-            "- **Active session use:** play through good speakers or headphones at "
-            "comfortable volume. Close eyes if you want stronger lock-in.\n"
-            "- **Headphones required for binaural mode.** Isochronic works on speakers.\n"
-            "- **Cardiac coupling:** every track has a 5.5-BPM amplitude envelope so "
-            "HRV resonance and EEG entrainment lock simultaneously.\n"
-            "- **L4 harmonic bed:** turn it on for ambient daily use; off for clinical "
-            "verification (the bare 200 Hz carrier makes the modulation more measurable).\n"
-            "- **L5 SSVEP overlay:** strongest entrainment when audio + visual are both on. "
-            "Look slightly past the screen, not at the center fixation dot.\n"
-            "- **Verification:** glance at the Muse terminal readout 3–5 minutes in. "
-            "α/β should rise for CALM_FOCUS / GILE_COHERENCE; β should rise for FLOW; "
-            "θ should rise for DEEP_REST / CREATIVE_IDEATION."
-        )
+            st.markdown("---")
+            st.markdown("**Usage notes**")
+            st.markdown(
+                "- **Casual ambient use:** play at low volume in the background while you do "
+                "anything — reading, eating, conversation. The entrainment works subliminally.\n"
+                "- **Active session use:** play through good speakers or headphones at "
+                "comfortable volume. Close eyes if you want stronger lock-in.\n"
+                "- **Headphones required for binaural mode.** Isochronic works on speakers.\n"
+                "- **Cardiac coupling:** every track has a 5.5-BPM amplitude envelope so "
+                "HRV resonance and EEG entrainment lock simultaneously.\n"
+                "- **L4 harmonic bed:** turn it on for ambient daily use; off for clinical "
+                "verification (the bare 200 Hz carrier makes the modulation more measurable).\n"
+                "- **L5 SSVEP overlay:** strongest entrainment when audio + visual are both on. "
+                "Look slightly past the screen, not at the center fixation dot.\n"
+                "- **Verification:** glance at the Muse terminal readout 3–5 minutes in. "
+                "α/β should rise for CALM_FOCUS / GILE_COHERENCE; β should rise for FLOW; "
+                "θ should rise for DEEP_REST / CREATIVE_IDEATION."
+            )
