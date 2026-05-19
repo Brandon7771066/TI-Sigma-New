@@ -1,0 +1,60 @@
+{
+  "pass": "58-batch-1-TSS-EMP-3",
+  "date": "2026-05-17",
+  "config": {
+    "DELTA": 0.05,
+    "P_ENG": 0.5,
+    "N_TRIALS": 1000,
+    "N_MC": 300,
+    "UTILITY_RATIOS": [
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "seed": 20260519
+  },
+  "results": [
+    {
+      "utility_ratio": 1.0,
+      "tpr_A": 0.443,
+      "tpr_B": 0.843,
+      "tpr_C": 0.827,
+      "celebrate_rate_C_under_signal": 0.907,
+      "celebrate_rate_C_under_null": 0.1
+    },
+    {
+      "utility_ratio": 2.0,
+      "tpr_A": 0.587,
+      "tpr_B": 0.797,
+      "tpr_C": 0.797,
+      "celebrate_rate_C_under_signal": 0.947,
+      "celebrate_rate_C_under_null": 0.143
+    },
+    {
+      "utility_ratio": 5.0,
+      "tpr_A": 0.54,
+      "tpr_B": 0.823,
+      "tpr_C": 0.83,
+      "celebrate_rate_C_under_signal": 0.98,
+      "celebrate_rate_C_under_null": 0.29
+    },
+    {
+      "utility_ratio": 10.0,
+      "tpr_A": 0.52,
+      "tpr_B": 0.8,
+      "tpr_C": 0.797,
+      "celebrate_rate_C_under_signal": 0.987,
+      "celebrate_rate_C_under_null": 0.423
+    }
+  ],
+  "summary": {
+    "celeb_rate_C_signal_range": [
+      0.907,
+      0.987
+    ],
+    "celeb_rate_C_signal_monotone_decreasing": false,
+    "celeb_rate_C_null_monotone_decreasing": false,
+    "F_TSS_EMP_3_1": "REFUTED if M-C celebrate rate invariant across utility ratios. Observed signal range: [0.907, 0.987], monotone-decreasing: False. NOT REFUTED."
+  }
+}

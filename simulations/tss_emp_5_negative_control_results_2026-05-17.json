@@ -1,0 +1,46 @@
+{
+  "pass": "58-batch-1-TSS-EMP-5",
+  "date": "2026-05-17",
+  "config": {
+    "CHANCE": 0.5,
+    "N_TRIALS": 1000,
+    "N_MC": 500,
+    "DELTAS": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "ALPHA": 0.05,
+    "seed": 20260520
+  },
+  "results": [
+    {
+      "delta": 0.0,
+      "auc_A": 0.4871,
+      "auc_B": 0.5098,
+      "auc_C": 0.5083,
+      "C_minus_A": 0.0212,
+      "C_minus_B": -0.0015
+    },
+    {
+      "delta": 0.05,
+      "auc_A": 0.985,
+      "auc_B": 0.934,
+      "auc_C": 0.9341,
+      "C_minus_A": -0.0509,
+      "C_minus_B": 0.0002
+    },
+    {
+      "delta": 0.1,
+      "auc_A": 1.0,
+      "auc_B": 0.9978,
+      "auc_C": 0.9978,
+      "C_minus_A": -0.0022,
+      "C_minus_B": -0.0
+    }
+  ],
+  "summary": {
+    "max_C_advantage_over_others": 0.0002,
+    "F_PASS_57_2_falsifier": "MFD-1 OVER-BROAD if M-C dominates A and B in this negative-control domain. Max C-advantage over A or B: +0.0002. NOT OVER-BROAD (passes negative control)."
+  }
+}

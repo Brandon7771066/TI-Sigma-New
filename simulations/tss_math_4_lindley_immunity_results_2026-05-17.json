@@ -1,0 +1,46 @@
+{
+  "pass": "58-batch-1-TSS-MATH-4",
+  "date": "2026-05-17",
+  "config": {
+    "CHANCE": 0.25,
+    "N_VALUES": [
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "N_MC": 300,
+    "DELTA_TINY": 0.001,
+    "P_ENG": 0.5,
+    "T_RAND": 0.066,
+    "C_LCC": 0.437,
+    "seed": 20260521
+  },
+  "results": [
+    {
+      "N": 100,
+      "m_a_reject_rate_at_tiny_effect": 0.0467,
+      "m_c_confirm_rate_at_tiny_effect": 0.0
+    },
+    {
+      "N": 1000,
+      "m_a_reject_rate_at_tiny_effect": 0.0567,
+      "m_c_confirm_rate_at_tiny_effect": 0.0
+    },
+    {
+      "N": 10000,
+      "m_a_reject_rate_at_tiny_effect": 0.0467,
+      "m_c_confirm_rate_at_tiny_effect": 0.0
+    },
+    {
+      "N": 100000,
+      "m_a_reject_rate_at_tiny_effect": 0.1067,
+      "m_c_confirm_rate_at_tiny_effect": 0.0
+    }
+  ],
+  "summary": {
+    "m_a_lindley_behavior_observed": false,
+    "m_c_lindley_behavior_observed": false,
+    "F_TSS_MATH_4_1": "REFUTED if M-C shows Lindley behavior like M-A. M-A rates [0.0467, 0.0567, 0.0467, 0.1067]; M-C rates [0.0, 0.0, 0.0, 0.0]. NOT REFUTED (M-C Lindley-immune)."
+  }
+}
