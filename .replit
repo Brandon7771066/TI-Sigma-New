@@ -133,6 +133,7 @@ externalPort = 3000
 [[ports]]
 localPort = 5002
 externalPort = 80
+exposeLocalhost = true
 
 [[ports]]
 localPort = 8000
