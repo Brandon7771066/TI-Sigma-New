@@ -4693,7 +4693,7 @@ elif page == "💼 Career":
 
     import os as _os
     _resume_pdf = "career/resume.pdf"
-    _resume_md = "career/AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md"
+    _resume_md = "career/AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md"
     _dl_col1, _dl_col2 = st.columns(2)
     with _dl_col1:
         if _os.path.exists(_resume_pdf):
@@ -4739,7 +4739,7 @@ elif page == "💼 Career":
     ])
 
     with career_tab1:
-        st.markdown(_safe_read("career/AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md"))
+        st.markdown(_safe_read("career/AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md"))
 
     with career_tab1b:
         _html_path = "career/resume.html"

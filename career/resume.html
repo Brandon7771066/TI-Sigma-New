@@ -65,22 +65,31 @@
   header .sep { color: var(--rule); padding: 0 0.35rem; }
 
   /* Section */
-  section { margin-top: 0.85rem; page-break-inside: avoid; }
+  section { margin-top: 0.95rem; page-break-inside: avoid; }
   h2 {
-    font-size: 10.5pt;
+    font-size: 11pt;
     font-weight: 700;
     color: var(--accent);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin: 0 0 0.4rem 0;
-    padding-bottom: 0.18rem;
+    letter-spacing: 0.14em;
+    margin: 0 0 0.45rem 0;
+    padding-bottom: 0.2rem;
     border-bottom: 1px solid var(--rule);
   }
+  /* Experience as visual anchor — slightly more prominent than peers */
+  section.experience { margin-top: 1.15rem; }
+  section.experience h2 {
+    font-size: 12pt;
+    letter-spacing: 0.18em;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 0.28rem;
+  }
+
   p, li { margin: 0 0 0.25rem 0; }
   p.lead {
-    font-size: 10pt;
+    font-size: 10.5pt;
     color: var(--ink-soft);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     line-height: 1.55;
   }
   strong { color: var(--ink); }
@@ -102,11 +111,12 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 1rem;
     margin-bottom: 0.1rem;
   }
   .job-title { font-weight: 700; font-size: 10.5pt; color: var(--ink); }
   .job-org { color: var(--accent); font-weight: 600; }
-  .job-meta { font-size: 9pt; color: var(--ink-muted); font-style: italic; white-space: nowrap; }
+  .job-meta { font-size: 9pt; color: var(--ink-muted); font-style: italic; white-space: nowrap; flex-shrink: 0; }
   .job ul { margin: 0.2rem 0 0 1.05rem; padding: 0; font-size: 9.7pt; }
   .job ul li { margin-bottom: 0.15rem; }
 
@@ -116,9 +126,9 @@
   .project-desc { color: var(--ink-soft); }
 
   /* Education */
-  .edu { display: flex; justify-content: space-between; align-items: baseline; font-size: 9.8pt; }
+  .edu { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 9.8pt; }
   .edu strong { color: var(--ink); }
-  .edu-meta { color: var(--ink-muted); font-size: 9pt; font-style: italic; }
+  .edu-meta { color: var(--ink-muted); font-size: 9pt; font-style: italic; flex-shrink: 0; }
 
   /* Why-fit list */
   .why { padding-left: 1.1rem; margin: 0; font-size: 9.7pt; }
@@ -159,50 +169,11 @@
 <section>
   <h2>Summary</h2>
   <p class="lead">
-    Independent researcher and formal-methods practitioner with <strong>20 machine-checked Lean 4 / mathlib4 theorems</strong> (axiom-verified via <code>#print axioms</code>), <strong>Fleiss κ = 0.906</strong> inter-rater reliability on multi-axis truth labeling, and a <strong>71σ Bell-inequality violation</strong> on IBM quantum hardware. Author of 100+ open-access papers across AI alignment, formal logic, quantum computing, and cognitive science. Operates under a published pre-registration discipline with documented public retractions.
-  </p>
-  <p style="font-size:9.5pt; color: var(--ink-muted); margin:0;">
-    <strong>Open to:</strong> AI Trainer / SME (math · formal reasoning · STEM · alignment · red-teaming) · Lean 4 / formal-verification engineering · RLHF data quality · research engineering.
+    Independent researcher with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 0.906 truth-labeling reliability, and a 71σ Bell violation on IBM quantum hardware. Author of 100+ AI / cognitive-science papers. Seeking AI Trainer, RLHF, and formal-methods roles.
   </p>
 </section>
 
-<section>
-  <h2>Core Skills</h2>
-  <dl class="skills">
-    <dt>Formal Verification</dt>
-    <dd>Lean 4 · mathlib4 · <code>lake</code> · type theory · dependent types · interactive theorem proving · proof assistants · higher-order logic · four-valued (Tralse) logic · named-gap formalization (Buzzard / LTE style)</dd>
-
-    <dt>AI Trainer / Alignment</dt>
-    <dd>RLHF rubric design · chain-of-thought generation and grading · adversarial evaluation · red-teaming · falsifier specification · inter-rater reliability (Fleiss κ) · annotation guidelines · constitutional-AI methodology · pre-registration discipline</dd>
-
-    <dt>Mathematics</dt>
-    <dd>Real and complex analysis · elementary number theory · combinatorics · statistics (Fleiss κ, NIST SP 800-22, ROC/AUC, dual-threshold inference, Lindley-paradox analysis) · linear algebra</dd>
-
-    <dt>Programming</dt>
-    <dd>Python (advanced) · NumPy · Pandas · scikit-learn · SciPy · Streamlit · Flask · SQL · PostgreSQL · Bash · Lean 4 · Qiskit · Git · JavaScript (basic)</dd>
-
-    <dt>Quantum Computing</dt>
-    <dd>Qiskit · IBM Quantum hardware (ibm_marrakesh) · GHZ-state preparation · Bell / Mermin inequality testing · multipartite entanglement witnesses</dd>
-
-    <dt>Domains</dt>
-    <dd>AI alignment · philosophy of mind · epistemology · cognitive science · consciousness science · quantitative finance · biometric signal processing (EEG, HRV, fNIRS) · brain-computer interfaces</dd>
-  </dl>
-</section>
-
-<section>
-  <h2>Selected Achievements</h2>
-  <ul class="achievements">
-    <li><strong>Authored <span class="metric">20 machine-checked Lean 4 theorems</span></strong> closed under <code>{propext, Classical.choice, Quot.sound}</code> — covering golden-ratio identity, extended Euler identity, threshold-logic lemmas, evaluator injectivity, scalar energy decay. All verified via <code>#print axioms</code>.</li>
-    <li><strong>Achieved <span class="metric">Fleiss κ = 0.906</span></strong> on a 4-element categorical truth-label rubric across three independent raters — well above the κ ≥ 0.80 senior-labeler benchmark.</li>
-    <li><strong>Executed <span class="metric">71σ Bell-inequality violation</span></strong> on IBM quantum hardware (<code>ibm_marrakesh</code>): GHZ-5 Mermin test, |M₅| = 14.535 (91% of theoretical max). First hardware-confirmed multipartite-entanglement witness in my research corpus.</li>
-    <li>Published <strong>100+ open-access research papers</strong> on Zenodo with citable DOIs across AI alignment, consciousness science, formal logic, statistics, quantum computing, and philosophy of mind.</li>
-    <li>Designed a dual-threshold randomness benchmark (T_RAND = 0.0660, T_BORDER = 0.13534) achieving <span class="metric">0.00% false-positive rate over 2,000 draws</span> at N=384. 6 of 8 candidate sources passed NIST SP 800-22.</li>
-    <li><strong>Publicly retracted an overclaim within 48 hours</strong> when a corpus sweep falsified a prior audit — documented case study in honest scientific revision.</li>
-    <li><strong>TEDx speaker (2019)</strong> — talk on curiosity, motivation, and the comfort zone.</li>
-  </ul>
-</section>
-
-<section>
+<section class="experience">
   <h2>Experience</h2>
 
   <div class="job">
@@ -252,6 +223,19 @@
 </section>
 
 <section>
+  <h2>Selected Achievements</h2>
+  <ul class="achievements">
+    <li>Authored <span class="metric">20 machine-checked Lean 4 theorems</span> closed under <code>{propext, Classical.choice, Quot.sound}</code> — covering golden-ratio identity, extended Euler identity, threshold-logic lemmas, evaluator injectivity, scalar energy decay. All verified via <code>#print axioms</code>.</li>
+    <li>Achieved <span class="metric">Fleiss κ = 0.906</span> on a 4-element categorical truth-label rubric across three independent raters — well above the κ ≥ 0.80 senior-labeler benchmark.</li>
+    <li>Executed <span class="metric">71σ Bell-inequality violation</span> on IBM quantum hardware (<code>ibm_marrakesh</code>): GHZ-5 Mermin test, |M₅| = 14.535 (91% of theoretical max). First hardware-confirmed multipartite-entanglement witness in my research corpus.</li>
+    <li>Published <span class="metric">100+ open-access research papers</span> on Zenodo with citable DOIs across AI alignment, consciousness science, formal logic, statistics, quantum computing, and philosophy of mind.</li>
+    <li>Designed a dual-threshold randomness benchmark (T_RAND = 0.0660, T_BORDER = 0.13534) achieving <span class="metric">0.00% false-positive rate over 2,000 draws</span> at N=384. 6 of 8 candidate sources passed NIST SP 800-22.</li>
+    <li>Publicly retracted an overclaim within 48 hours when a corpus sweep falsified a prior audit — documented case study in honest scientific revision.</li>
+    <li>TEDx speaker (2019) — talk on curiosity, motivation, and the comfort zone.</li>
+  </ul>
+</section>
+
+<section>
   <h2>Selected Projects</h2>
 
   <div class="project">
@@ -276,13 +260,36 @@
 </section>
 
 <section>
+  <h2>Core Skills</h2>
+  <dl class="skills">
+    <dt>Formal Verification</dt>
+    <dd>Lean 4 · mathlib4 · <code>lake</code> · type theory · dependent types · interactive theorem proving · proof assistants · higher-order logic · four-valued (Tralse) logic · named-gap formalization (Buzzard / LTE style)</dd>
+
+    <dt>AI Trainer / Alignment</dt>
+    <dd>RLHF rubric design · chain-of-thought generation and grading · adversarial evaluation · red-teaming · falsifier specification · inter-rater reliability (Fleiss κ) · annotation guidelines · constitutional-AI methodology · pre-registration discipline</dd>
+
+    <dt>Mathematics</dt>
+    <dd>Real and complex analysis · elementary number theory · combinatorics · statistics (Fleiss κ, NIST SP 800-22, ROC/AUC, dual-threshold inference, Lindley-paradox analysis) · linear algebra</dd>
+
+    <dt>Programming</dt>
+    <dd>Python (advanced) · NumPy · Pandas · scikit-learn · SciPy · Streamlit · Flask · SQL · PostgreSQL · Bash · Lean 4 · Qiskit · Git · JavaScript (basic)</dd>
+
+    <dt>Quantum Computing</dt>
+    <dd>Qiskit · IBM Quantum hardware (ibm_marrakesh) · GHZ-state preparation · Bell / Mermin inequality testing · multipartite entanglement witnesses</dd>
+
+    <dt>Domains</dt>
+    <dd>AI alignment · philosophy of mind · epistemology · cognitive science · consciousness science · quantitative finance · biometric signal processing (EEG, HRV, fNIRS) · brain-computer interfaces</dd>
+  </dl>
+</section>
+
+<section>
   <h2>Education</h2>
   <div class="edu">
     <div><strong>B.S., General Studies</strong> — Cognitive Science (¾) &amp; Business Administration (¼) · <em>University of Connecticut, Storrs</em></div>
     <div class="edu-meta">August 2024 · Magna Cum Laude · Honors · GPA 3.56</div>
   </div>
   <p style="font-size:9pt; color: var(--ink-muted); margin-top:0.3rem;">
-    <strong>Certifications:</strong> CPR · Assault Prevention Training · HIPAA
+    <strong>Certifications:</strong> CPR · Assault Prevention Training · HIPAA &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Awards:</strong> Magna Cum Laude (UConn, August 2024)
   </p>
 </section>
 

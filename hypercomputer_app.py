@@ -439,7 +439,7 @@ with tab_career:
 
     # Resume downloads — separate PDF (styled) and Markdown (plain) one-tap buttons
     _resume_pdf = os.path.join(_career_dir, "resume.pdf")
-    _resume_md = os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md")
+    _resume_md = os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md")
     _dl_col1, _dl_col2 = st.columns(2)
     with _dl_col1:
         if os.path.exists(_resume_pdf):
@@ -478,7 +478,7 @@ with tab_career:
             return f"_(could not load `{os.path.basename(path)}`: {e})_"
 
     with career_sub_resume:
-        st.markdown(_safe_read(os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md")))
+        st.markdown(_safe_read(os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md")))
 
     with career_sub_linkedin:
         st.markdown(_safe_read(os.path.join(_career_dir, "LINKEDIN_PROFILE_PASTE_READY_2026-05-17.md")))
