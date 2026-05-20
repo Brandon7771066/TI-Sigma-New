@@ -463,7 +463,7 @@ with tab_career:
             return f"_(could not load `{os.path.basename(path)}`: {e})_"
 
     with career_sub_resume:
-        st.markdown(_safe_read(os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md")))
+        st.markdown(_safe_read(os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md")))
 
     with career_sub_linkedin:
         st.markdown(_safe_read(os.path.join(_career_dir, "LINKEDIN_PROFILE_PASTE_READY_2026-05-17.md")))

@@ -4714,14 +4714,26 @@ elif page == "💼 Career":
         except Exception as _e:
             return f"_Could not load `{path}`: {_e}_"
 
-    career_tab1, career_tab2, career_tab3 = st.tabs([
-        "📄 Resume",
+    career_tab1, career_tab1b, career_tab2, career_tab3 = st.tabs([
+        "📄 Resume (Markdown)",
+        "🎨 Resume (Styled HTML)",
         "🔗 LinkedIn Profile",
         "🎯 Recruiter Summary",
     ])
 
     with career_tab1:
-        st.markdown(_safe_read("career/AI_TRAINER_RESUME_BRANDON_EMERICK_2026-05-15.md"))
+        st.markdown(_safe_read("career/AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md"))
+
+    with career_tab1b:
+        _html_path = "career/resume.html"
+        try:
+            with open(_html_path, "r", encoding="utf-8") as _fh:
+                _html_resume = _fh.read()
+            st.info("📱 **On phone:** scroll inside the frame to view. **To save as PDF:** open this page in Chrome/Safari → tap Share/Print → Save as PDF.")
+            import streamlit.components.v1 as _components
+            _components.html(_html_resume, height=2400, scrolling=True)
+        except Exception as _e:
+            st.error(f"Could not load styled resume: {_e}")
 
     with career_tab2:
         st.markdown(_safe_read("career/LINKEDIN_PROFILE_PASTE_READY_2026-05-17.md"))
