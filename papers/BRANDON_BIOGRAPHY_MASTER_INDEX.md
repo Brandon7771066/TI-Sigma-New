@@ -301,6 +301,8 @@ Brandon wore round-frame glasses from roughly ages 7 to 10 and was widely told h
 | Spiritual background | Magical heritage, deeply spiritual world | Mimi + Ray + Emerick spiritual / mediumistic lineage (§2 lineage spine) |
 | Family lineage | Gifted ancestral line, parents departed | Multi-generation gifted lineage (TEDx, music, mediumship; §2) |
 | Skeptical-relative environment | Raised by skeptical Dursleys | Raised among relatives with skepticism of the spiritual side of the lineage |
+| Childhood self-esteem | Persistently low (canon: years pre-Hogwarts) | Low childhood self-esteem (Brandon-reported, 2026-05-19) |
+| School bullying | Severe (Dudley + gang; pre-Hogwarts era) | Severe school bullying (Brandon-reported, 2026-05-19) |
 
 **TI Sigma classification.** Both incidents are **retrospective TSD-A** events (per §7.7.108) — the per-event TIU is high because:
 
