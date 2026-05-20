@@ -437,17 +437,32 @@ with tab_career:
 
     _career_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "career")
 
-    # Resume PDF download button (mobile-friendly one-tap)
+    # Resume downloads — separate PDF (styled) and Markdown (plain) one-tap buttons
     _resume_pdf = os.path.join(_career_dir, "resume.pdf")
-    if os.path.exists(_resume_pdf):
-        with open(_resume_pdf, "rb") as _f:
-            st.download_button(
-                "⬇️ Download Resume (PDF)",
-                data=_f.read(),
-                file_name="Brandon_Emerick_Resume.pdf",
-                mime="application/pdf",
-                use_container_width=True,
-            )
+    _resume_md = os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md")
+    _dl_col1, _dl_col2 = st.columns(2)
+    with _dl_col1:
+        if os.path.exists(_resume_pdf):
+            with open(_resume_pdf, "rb") as _f:
+                st.download_button(
+                    "⬇️ Styled Resume (PDF)",
+                    data=_f.read(),
+                    file_name="Brandon_Emerick_Resume.pdf",
+                    mime="application/pdf",
+                    use_container_width=True,
+                    help="Aesthetic single-page PDF — best for emailing to recruiters or printing.",
+                )
+    with _dl_col2:
+        if os.path.exists(_resume_md):
+            with open(_resume_md, "rb") as _f:
+                st.download_button(
+                    "⬇️ Plain Resume (Markdown)",
+                    data=_f.read(),
+                    file_name="Brandon_Emerick_Resume.md",
+                    mime="text/markdown",
+                    use_container_width=True,
+                    help="Plain-text Markdown — best for ATS systems, copy-pasting into job applications, or editing.",
+                )
 
     st.markdown("---")
 

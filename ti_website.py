@@ -4693,17 +4693,34 @@ elif page == "💼 Career":
 
     import os as _os
     _resume_pdf = "career/resume.pdf"
-    if _os.path.exists(_resume_pdf):
-        with open(_resume_pdf, "rb") as _f:
-            st.download_button(
-                label="⬇️ Download Resume (PDF)",
-                data=_f.read(),
-                file_name="Brandon_Emerick_Resume.pdf",
-                mime="application/pdf",
-                use_container_width=True,
-            )
-    else:
-        st.info("Resume PDF not found at career/resume.pdf")
+    _resume_md = "career/AI_TRAINER_RESUME_BRANDON_EMERICK_v2_2026-05-19.md"
+    _dl_col1, _dl_col2 = st.columns(2)
+    with _dl_col1:
+        if _os.path.exists(_resume_pdf):
+            with open(_resume_pdf, "rb") as _f:
+                st.download_button(
+                    label="⬇️ Styled Resume (PDF)",
+                    data=_f.read(),
+                    file_name="Brandon_Emerick_Resume.pdf",
+                    mime="application/pdf",
+                    use_container_width=True,
+                    help="Aesthetic single-page PDF — best for emailing to recruiters or printing.",
+                )
+        else:
+            st.info("PDF missing")
+    with _dl_col2:
+        if _os.path.exists(_resume_md):
+            with open(_resume_md, "rb") as _f:
+                st.download_button(
+                    label="⬇️ Plain Resume (Markdown)",
+                    data=_f.read(),
+                    file_name="Brandon_Emerick_Resume.md",
+                    mime="text/markdown",
+                    use_container_width=True,
+                    help="Plain-text Markdown — best for ATS systems, copy-pasting into job applications, or editing in any text editor.",
+                )
+        else:
+            st.info("Markdown missing")
 
     st.markdown("---")
 
