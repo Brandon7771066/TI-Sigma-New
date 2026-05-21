@@ -4685,8 +4685,9 @@ elif page == "💼 Career":
     st.markdown("---")
 
     st.markdown("""
-    **📞 Phone:** [(425) 588-1581](tel:+14255881581)  
-    **✉️ Email:** [brandon.emerick@gmail.com](mailto:brandon.emerick@gmail.com)  
+    **📍 Location:** Watertown, CT  
+    **📞 Phone:** [860-483-1425](tel:+18604831425)  
+    **✉️ Email:** [brandonemerick91@gmail.com](mailto:brandonemerick91@gmail.com)  
     **🔗 LinkedIn:** [linkedin.com/in/brandonemerick](https://www.linkedin.com/in/brandonemerick/)  
     **📚 Zenodo:** [zenodo.org/communities/ti-sigma](https://zenodo.org/communities/ti-sigma)
     """)

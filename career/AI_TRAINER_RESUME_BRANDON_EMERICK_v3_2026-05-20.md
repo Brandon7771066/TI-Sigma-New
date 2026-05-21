@@ -15,9 +15,9 @@ Independent researcher with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 
 
 ### Founder & CEO — BlissGene Therapeutics Incorporated
 *July 2024 – Present · Remote / US*
-- Hired PhD scientists to develop a novel gene-therapy candidate for chronic pain, anxiety, and depression.
+- Hired 7 PhD scientists to develop a novel gene-therapy candidate for chronic pain, anxiety, and depression.
 - Met the competitive threshold for administrative review in an FDA SBIR funding round.
-- Currently raising via Qubit Capital (placement-agent engagement, May 2026); featured in CEO Weekly press release.
+- Currently raising a $1–4M preclinical research budget via Qubit Capital (placement-agent engagement, May 2026); featured in CEO Weekly press release.
 
 ### Independent Researcher — Transcendent Intelligence (TI) Sigma
 *June 2025 – Present · Remote*
@@ -28,6 +28,7 @@ Independent researcher with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 
 
 ### ABA Behavior Technician — A Brand New Day
 *October 2025 – Present · Connecticut*
+- Achieved 95% of developmental objectives across sessions with autism clients, ages 9–19.
 - Direct one-on-one therapy with an autism client; discrete-trial-training protocol adherence; session data logging; behavior-plan implementation.
 
 ### ABA Behavior Technician — Altura Care
