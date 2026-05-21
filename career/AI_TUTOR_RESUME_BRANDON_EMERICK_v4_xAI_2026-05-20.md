@@ -7,7 +7,7 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ## Summary
 
-Philosopher of science and formal-methods practitioner specializing in truth-seeking reasoning, motivated-reasoning resistance, and primary-source verification. 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 0.906 inter-rater reliability, and a 71σ Bell-inequality result on IBM quantum hardware. Habitual public-retraction discipline; pre-registered falsifier specifications. Author of 100+ open-access papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment.
+**Highly motivated** philosopher of science and formal-methods practitioner specializing in truth-seeking reasoning, motivated-reasoning resistance, and primary-source verification. **Intrinsically driven** — authored 100+ open-access research papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment, with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 0.906 inter-rater reliability, and a 71σ Bell-inequality result on IBM quantum hardware. Habitual public-retraction discipline; pre-registered falsifier specifications. Investigative-journalism-grade source rigor; academic peer-review practice (4 submission packets prepared).
 
 ---
 
@@ -85,7 +85,9 @@ Lean 4 axiom-as-hypothesis scaffold for `UOP_existence_claim → NS_smoothness`.
 
 ## Core Skills
 
-**Philosophy of Science & Epistemology:** philosophy of science · philosophy of mind · epistemology · constitutional-AI methodology · steel-manning opposing views · primary-source verification · base-rate reasoning · settled-vs-speculation discrimination · public updating on errors · pre-registered falsifier specifications
+**Philosophy of Science & Epistemology:** philosophy of science · philosophy of mind · epistemology · constitutional-AI methodology · steel-manning opposing views · primary-source verification · base-rate reasoning · settled-vs-speculation discrimination · public updating on errors · pre-registered falsifier specifications · investigative-journalism source rigor · academic peer review
+
+**Linguistics & Philosophical Logic:** formal semantics · philosophical logic · four-valued (Tralse) logic semantics · paraconsistent logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary (True / False / Indeterminate / Double-Tralse + 12 Meta-Truths)
 
 **Statistics:** Fleiss κ inter-rater reliability · NIST SP 800-22 randomness testing · ROC/AUC · dual-threshold inference · Lindley-paradox analysis · statistical fallacy detection · adversarial / red-team evaluation · base-rate reasoning · pre-registration discipline
 
@@ -107,11 +109,14 @@ Lean 4 axiom-as-hypothesis scaffold for `UOP_existence_claim → NS_smoothness`.
 
 ## Education
 
-**B.S., General Studies — Cognitive Science (¾) and Business Administration (¼)**
-University of Connecticut, Storrs · 08/2024 · **Magna Cum Laude · Honors Program** · GPA 3.56
+**Bachelor of Science, General Studies — Cognitive Science (¾) and Business Administration (¼)**
+University of Connecticut, Storrs, CT · Graduated 08/2024 · **Magna Cum Laude · Honors Program** · GPA 3.56
+
+Relevant coursework: cognitive psychology · philosophy of science · formal logic · statistics · economics · linguistics (cognitive-science track) · neuroscience · research methods · academic peer review
+
+**Honors & Awards:** Magna Cum Laude (UConn, 08/2024) · Honors Program member · TEDx speaker (2019)
 
 **Certifications:** CPR · Assault Prevention Training · HIPAA
-**Awards & Honors:** Magna Cum Laude (UConn, 08/2024)
 
 ---
 
