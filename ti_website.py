@@ -4694,6 +4694,10 @@ elif page == "💼 Career":
     import os as _os
     _resume_pdf = "career/resume.pdf"
     _resume_md = "career/AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md"
+    _import_dt = __import__("datetime")
+    _md_mtime = _import_dt.datetime.fromtimestamp(_os.path.getmtime(_resume_md)).strftime("%Y-%m-%d %H:%M") if _os.path.exists(_resume_md) else "n/a"
+    _pdf_mtime = _import_dt.datetime.fromtimestamp(_os.path.getmtime(_resume_pdf)).strftime("%Y-%m-%d %H:%M") if _os.path.exists(_resume_pdf) else "n/a"
+    st.caption(f"📌 Current version: **v3 (2026-05-20)** · Markdown updated {_md_mtime} · PDF regenerated {_pdf_mtime}. If you don't see the latest, hard-refresh your browser (Ctrl+Shift+R / Cmd+Shift+R, or pull-to-refresh on mobile).")
     _dl_col1, _dl_col2 = st.columns(2)
     with _dl_col1:
         if _os.path.exists(_resume_pdf):

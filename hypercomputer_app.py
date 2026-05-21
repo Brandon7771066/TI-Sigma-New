@@ -440,6 +440,10 @@ with tab_career:
     # Resume downloads — separate PDF (styled) and Markdown (plain) one-tap buttons
     _resume_pdf = os.path.join(_career_dir, "resume.pdf")
     _resume_md = os.path.join(_career_dir, "AI_TRAINER_RESUME_BRANDON_EMERICK_v3_2026-05-20.md")
+    import datetime as _dt_mod
+    _md_mtime = _dt_mod.datetime.fromtimestamp(os.path.getmtime(_resume_md)).strftime("%Y-%m-%d %H:%M") if os.path.exists(_resume_md) else "n/a"
+    _pdf_mtime = _dt_mod.datetime.fromtimestamp(os.path.getmtime(_resume_pdf)).strftime("%Y-%m-%d %H:%M") if os.path.exists(_resume_pdf) else "n/a"
+    st.caption(f"📌 Current version: **v3 (2026-05-20)** · Markdown updated {_md_mtime} · PDF regenerated {_pdf_mtime}. If you don't see the latest, hard-refresh your browser (Ctrl+Shift+R / Cmd+Shift+R, or pull-to-refresh on mobile).")
     _dl_col1, _dl_col2 = st.columns(2)
     with _dl_col1:
         if os.path.exists(_resume_pdf):
