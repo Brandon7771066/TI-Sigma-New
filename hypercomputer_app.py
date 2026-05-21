@@ -468,6 +468,39 @@ with tab_career:
                     help="Plain-text Markdown — best for ATS systems, copy-pasting into job applications, or editing.",
                 )
 
+    # xAI-targeted v4 variant — for the Grok Truth-Seeking AI Tutor role
+    _resume_pdf_xai = os.path.join(_career_dir, "resume_xai.pdf")
+    _resume_md_xai = os.path.join(_career_dir, "AI_TUTOR_RESUME_BRANDON_EMERICK_v4_xAI_2026-05-20.md")
+    if os.path.exists(_resume_pdf_xai) or os.path.exists(_resume_md_xai):
+        st.markdown("##### 🎯 xAI-Targeted Variant — Grok Truth-Seeking AI Tutor")
+        st.caption("Rewritten to surface xAI's Jobscan keywords: motivated reasoning, primary sources, base rates, steel-manning, philosophy of science, cognitive psychology, forecasting (Kalshi), MM/YYYY dates, soft skills.")
+        _xai_md_mtime = _dt_mod.datetime.fromtimestamp(os.path.getmtime(_resume_md_xai)).strftime("%Y-%m-%d %H:%M") if os.path.exists(_resume_md_xai) else "n/a"
+        _xai_pdf_mtime = _dt_mod.datetime.fromtimestamp(os.path.getmtime(_resume_pdf_xai)).strftime("%Y-%m-%d %H:%M") if os.path.exists(_resume_pdf_xai) else "n/a"
+        st.caption(f"📌 v4 (xAI) · Markdown updated {_xai_md_mtime} · PDF regenerated {_xai_pdf_mtime}")
+        _xc1, _xc2 = st.columns(2)
+        with _xc1:
+            if os.path.exists(_resume_pdf_xai):
+                with open(_resume_pdf_xai, "rb") as _f:
+                    st.download_button(
+                        "⬇️ xAI Resume (PDF)",
+                        data=_f.read(),
+                        file_name="Brandon_Emerick_Resume_xAI.pdf",
+                        mime="application/pdf",
+                        use_container_width=True,
+                        help="xAI-targeted styled PDF — upload to Jobscan to compare against the v3 score of 43.",
+                    )
+        with _xc2:
+            if os.path.exists(_resume_md_xai):
+                with open(_resume_md_xai, "rb") as _f:
+                    st.download_button(
+                        "⬇️ xAI Resume (Markdown)",
+                        data=_f.read(),
+                        file_name="Brandon_Emerick_Resume_xAI.md",
+                        mime="text/markdown",
+                        use_container_width=True,
+                        help="xAI-targeted plain Markdown — best for pasting into xAI's application form.",
+                    )
+
     st.markdown("---")
 
     career_sub_resume, career_sub_linkedin, career_sub_recruiter = st.tabs([

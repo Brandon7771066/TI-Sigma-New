@@ -1,0 +1,38 @@
+ABOUT xAI
+
+xAI’s mission is to create AI systems that can accurately understand the universe and aid humanity in its pursuit of knowledge. Our team is small, highly motivated, and focused on engineering excellence. This organization is for individuals who appreciate challenging themselves and thrive on curiosity. We operate with a flat organizational structure. All employees are expected to be hands-on and to contribute directly to the company’s mission. Leadership is given to those who show initiative and consistently deliver excellence. Work ethic and strong prioritization skills are important. All employees are expected to have strong communication skills. They should be able to concisely and accurately share knowledge with their teammates.
+
+ABOUT THE ROLE:
+
+You will ensure Grok reasons carefully, resists motivated reasoning, and communicates uncertainty and evidence proportionately.
+
+RESPONSIBILITIES:
+
+Assess model outputs for factual accuracy, logical coherence, fallacious reasoning, and hidden assumptions.
+Identify subtle ideological capture, statistical fallacies, and rhetorical sleights of hand.
+Write exemplary reasoning that models intellectual honesty, source evaluation, nuanced weighing of primary and secondary sources, and scoping of confidence.
+Construct adversarial examples and red-team prompts to expose remaining epistemic weaknesses.
+Contribute to the definition and scaling of constitutional principles for truth-seeking behavior.
+BASIC QUALIFICATIONS:
+
+Published analytical work and academic training in a high-rigor field.
+Strong Forecasting track record (e.g., Metaculus, Good Judgment), rigorous analysis, or public updating on errors.
+Deep knowledge in at least three of: philosophy of science, cognitive psychology, statistics, logic, linguistics, history, economics, or related disciplines.
+Ability to steel-man opposing views and separate settled knowledge from speculation.
+Habitual reliance on primary sources and base rates.
+PREFERRED SKILLS AND EXPERIENCE:
+
+Experience in intelligence analysis, investigative journalism, or academic peer review.
+LOCATION AND OTHER EXPECTATIONS:
+
+Tutor roles may be offered as full-time, part-time, or contractor positions, depending on role needs and candidate fit.
+For contractor positions, hours will vary widely based on project scope and contractor availability, with no fixed commitments required.  On average most projects may involve at least 10 hours per week to achieve deliverables effectively though this is not a fixed commitment and depends on the scope of work. Contractors have full flexibility to set their own hours and determine the exact amount of time needed to complete deliverables. 
+Tutor roles may be performed remotely from any location worldwide, subject to legal eligibility, time-zone compatibility, and role specific needs.
+For US based candidates, please note we are unable to hire in the states of Wyoming and Illinois at this time.
+We are unable to provide visa sponsorship.
+For those who will be working from a personal device, your computer must be a Chromebook, Mac with MacOS 11.0 or later, or Windows 10 or later.
+COMPENSATION AND BENEFITS:
+
+US based candidates: $40/hour - $70/hour depending on factors including relevant experience, skills, education, geographic location, and qualifications. International candidates: Information will be provided to you during the recruitment process.
+
+Benefits vary based on employment type, location and jurisdiction. Benefits for eligible U.S. based positions include health insurance, 401(k) plan, and paid sick leave. Specific details and role specific information will be provided to you during the interview process.

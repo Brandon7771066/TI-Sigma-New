@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brandon Charles Emerick — Resume (xAI Grok Tutor)</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #444;
+    --ink-muted: #6a6a6a;
+    --accent: #1a1a1a;
+    --accent-soft: #f1f1f3;
+    --rule: #d8dde2;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f4f5f7;
+    color: var(--ink);
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+  .page {
+    max-width: 8.5in;
+    margin: 0.4in auto;
+    padding: 0.55in 0.65in;
+    background: var(--bg);
+    box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+    border-radius: 6px;
+  }
+  header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.45rem;
+    margin-bottom: 0.85rem;
+  }
+  header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    margin: 0 0 0.15rem 0;
+    letter-spacing: -0.01em;
+  }
+  header .role {
+    font-size: 10.5pt;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.35rem;
+  }
+  header .contact {
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  header .contact a { color: var(--ink-soft); text-decoration: none; }
+  header .sep { color: var(--rule); padding: 0 0.35rem; }
+
+  section { margin-top: 0.95rem; page-break-inside: avoid; }
+  h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 0 0 0.45rem 0;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  section.experience { margin-top: 1.15rem; }
+  section.experience h2 {
+    font-size: 12pt;
+    letter-spacing: 0.18em;
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 0.28rem;
+  }
+
+  p, li { margin: 0 0 0.25rem 0; }
+  p.lead { font-size: 10.5pt; color: var(--ink-soft); margin-bottom: 0.2rem; line-height: 1.55; }
+  strong { color: var(--ink); }
+
+  .skills { display: grid; grid-template-columns: 175px 1fr; gap: 0.35rem 0.85rem; font-size: 9.5pt; }
+  .skills dt { font-weight: 600; color: var(--accent); }
+  .skills dd { margin: 0; color: var(--ink-soft); }
+
+  .achievements { padding-left: 1.05rem; margin: 0; }
+  .achievements li { margin-bottom: 0.3rem; font-size: 9.8pt; }
+  .achievements li::marker { color: var(--accent); }
+  .metric { color: var(--accent); font-weight: 700; }
+
+  .job { margin-bottom: 0.7rem; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.1rem;
+  }
+  .job-title { font-weight: 700; font-size: 10.5pt; color: var(--ink); }
+  .job-org { color: var(--accent); font-weight: 600; }
+  .job-meta { font-size: 9pt; color: var(--ink-muted); font-style: italic; white-space: nowrap; flex-shrink: 0; }
+  .job ul { margin: 0.2rem 0 0 1.05rem; padding: 0; font-size: 9.7pt; }
+  .job ul li { margin-bottom: 0.15rem; }
+
+  .project { margin-bottom: 0.55rem; font-size: 9.7pt; }
+  .project-title { font-weight: 700; color: var(--ink); }
+  .project-desc { color: var(--ink-soft); }
+
+  .edu { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 9.8pt; }
+  .edu-meta { color: var(--ink-muted); font-size: 9pt; font-style: italic; flex-shrink: 0; }
+
+  .why { padding-left: 1.1rem; margin: 0; font-size: 9.7pt; }
+  .why li { margin-bottom: 0.22rem; }
+  .why li::marker { color: var(--accent); font-weight: 700; }
+
+  @page { size: letter; margin: 0.5in; }
+  @media print {
+    html, body { background: white; font-size: 9.8pt; }
+    .page { max-width: 100%; margin: 0; padding: 0; box-shadow: none; border-radius: 0; }
+    a { color: inherit; text-decoration: none; }
+    section { page-break-inside: avoid; }
+  }
+
+  .footnote { font-size: 8.5pt; color: var(--ink-muted); font-style: italic; text-align: center; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>Brandon Charles Emerick</h1>
+  <div class="role">AI Tutor — Truth-Seeking Reasoning · Philosophy of Science · Formal Verification (Lean 4)</div>
+  <div class="contact">
+    Watertown, CT
+    <span class="sep">·</span>
+    <a href="tel:+18604831425">860-483-1425</a>
+    <span class="sep">·</span>
+    <a href="mailto:brandonemerick91@gmail.com">brandonemerick91@gmail.com</a>
+    <br>
+    <a href="https://www.linkedin.com/in/brandonemerick/">linkedin.com/in/brandonemerick</a>
+    <span class="sep">·</span>
+    Zenodo: 100+ open-access papers (DOIs available on request)
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="lead">
+    Philosopher of science and formal-methods practitioner specializing in truth-seeking reasoning, motivated-reasoning resistance, and primary-source verification. 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 0.906 inter-rater reliability, and a 71σ Bell-inequality result on IBM quantum hardware. Habitual public-retraction discipline; pre-registered falsifier specifications. Author of 100+ open-access papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment.
+  </p>
+</section>
+
+<section class="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="job-title">Founder &amp; CEO</span> · <span class="job-org">BlissGene Therapeutics Incorporated</span></div>
+      <div class="job-meta">07/2024 – Present · Remote / US</div>
+    </div>
+    <ul>
+      <li><strong>Leadership:</strong> hired <strong>7 PhD scientists</strong> to develop a novel gene-therapy candidate for chronic pain, anxiety, and depression.</li>
+      <li>Met the competitive threshold for administrative review in an FDA SBIR funding round.</li>
+      <li><strong>Project scope:</strong> currently raising a <strong>$1–4M preclinical research budget</strong> via Qubit Capital (placement-agent engagement, 05/2026); featured in CEO Weekly press release.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="job-title">Independent Researcher</span> · <span class="job-org">Transcendent Intelligence (TI) Sigma</span></div>
+      <div class="job-meta">06/2025 – Present · Remote</div>
+    </div>
+    <ul>
+      <li><strong>Originator</strong> of the TI Sigma experimental meta-philosophy framework spanning philosophy of science, formal logic, statistics, cognitive psychology, and AI alignment — <strong>100+ Zenodo papers</strong> with citable DOIs.</li>
+      <li><strong>Analytical rigor:</strong> authored 20 Lean 4 / mathlib4 theorems with full axiom accounting (<code>#print axioms</code> verified) — all close under <code>{propext, Classical.choice, Quot.sound}</code>, no <code>sorry</code> or <code>axiom</code> cheats.</li>
+      <li><strong>Communicates uncertainty proportionately:</strong> continuous pre-registration ledger of falsifiable predictions with explicit confirm / indeterminate / disconfirm criteria; dual-threshold inference (T_RAND = 0.0660, T_BORDER = 0.13534); explicit Lindley-paradox-immunity argument.</li>
+      <li><strong>Public updating on errors:</strong> documented 48-hour public retraction when corpus sweep falsified a prior audit; formal retraction catalog (<code>apologetics/05_RETRACTIONS_AND_HONESTY.md</code>, R1–R10).</li>
+      <li><strong>Adversarial / red-team:</strong> designed vacuous-confirm filters and pre-registered indeterminate clauses to expose under-discriminating tests.</li>
+      <li><strong>Steel-manning:</strong> 6-paper Apologetics series states the strongest objection FIRST per academic-audience convention; ASYMMETRIC theory treats over-skepticism as discipline failure equal to uncritical acceptance.</li>
+      <li><strong>Forecasting / prediction markets:</strong> active on Kalshi (event-futures), Collective2 (algorithmic-trading signals), Alpaca; multi-year backtested stock-market algorithm.</li>
+      <li>Invented an AI neurofeedback prototype for mood modulation and a brain-metric-based consensual cybersecurity concept.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="job-title">ABA Behavior Technician</span> · <span class="job-org">A Brand New Day</span></div>
+      <div class="job-meta">10/2025 – Present · Connecticut</div>
+    </div>
+    <ul>
+      <li><strong>Accuracy &amp; work ethic:</strong> achieved <span class="metric">95% of developmental objectives</span> across sessions with autism clients, ages 9–19.</li>
+      <li>Direct one-on-one therapy; discrete-trial-training protocol adherence; session data logging; behavior-plan implementation.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="job-title">ABA Behavior Technician</span> · <span class="job-org">Altura Care</span></div>
+      <div class="job-meta">01/2025 – 05/2025 · Connecticut</div>
+    </div>
+    <ul>
+      <li>Same role as above with a different client.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Match to xAI Grok Truth-Seeking Tutor Role</h2>
+  <ol class="why">
+    <li><strong>Resists motivated reasoning.</strong> TI Sigma's MR Truth Labels (Fleiss κ = 0.906) operationalize a 4-element categorical reasoning rubric (True / False / Indeterminate / Double-Tralse) to detect motivated-reasoning failures, hidden assumptions, and rhetorical sleights.</li>
+    <li><strong>Communicates uncertainty and evidence proportionately.</strong> Pre-registered falsifiers with confirm / indeterminate / disconfirm criteria; dual-threshold inference at N = 384 with 0.00% FPR over 2,000 draws; Lindley-paradox-immunity argument.</li>
+    <li><strong>Public updating on errors.</strong> Documented 48-hour public retraction; formal retraction catalog (R1–R10).</li>
+    <li><strong>Adversarial examples + red-team prompts.</strong> Vacuous-confirm filters, pre-registered indeterminate clauses, pre-emptive directional-monotone falsifiers — directly transferable to Grok red-team engineering.</li>
+    <li><strong>Primary sources + base rates.</strong> 100+ DOIs on Zenodo; raw IBM Quantum hardware results (<code>ibm_marrakesh</code>); NIST SP 800-22 against 8 randomness sources; habitual citation of primary over secondary sources.</li>
+    <li><strong>Steel-manning opposing views.</strong> 6-paper TI Sigma Apologetics series states strongest objection FIRST per academic-audience convention before responding.</li>
+    <li><strong>Settled-vs-speculation discrimination.</strong> Formally distinguish <code>#print axioms</code>-closed theorems from axiom-as-hypothesis scaffolds; Navier-Stokes UOP scaffold openly labeled "Honest Open Status."</li>
+    <li><strong>Constitutional principles for truth-seeking.</strong> 9-principle TI Sigma backlog ratified in Pass-56 (CDP-1, NAD-1, TI-ENVELOPE-1, ASC-1, AA-TD-1, MT-B-VOID, MT-B-DEGEN, PCF-1, TI-TIER-1).</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Selected Achievements</h2>
+  <ul class="achievements">
+    <li>Authored <span class="metric">20 machine-checked Lean 4 theorems</span> closed under <code>{propext, Classical.choice, Quot.sound}</code> — golden-ratio identity, extended Euler identity, threshold-logic lemmas, evaluator injectivity, scalar energy decay. All verified via <code>#print axioms</code>.</li>
+    <li><span class="metric">Fleiss κ = 0.906</span> inter-rater reliability on a 4-element categorical truth-label rubric across three independent raters — well above the κ ≥ 0.80 senior-labeler benchmark.</li>
+    <li><span class="metric">71σ Bell-inequality violation</span> on IBM quantum hardware (<code>ibm_marrakesh</code>): GHZ-5 Mermin test, |M₅| = 14.535 (91% of theoretical max).</li>
+    <li>Statistical fallacy detection: dual-threshold randomness benchmark (T_RAND = 0.0660, T_BORDER = 0.13534) at N = 384 with <span class="metric">0.00% false-positive rate over 2,000 draws</span>; Lindley-paradox immunity; 6 of 8 sources passed NIST SP 800-22.</li>
+    <li>Published <span class="metric">100+ open-access research papers</span> on Zenodo (citable DOIs) across philosophy of science, AI alignment, formal logic, statistics, cognitive psychology, quantum computing, consciousness science.</li>
+    <li><strong>Public retraction within 48 hours</strong> when corpus sweep falsified a prior audit — documented case study in honest scientific revision.</li>
+    <li>Forecasting / prediction markets: active on Kalshi (event-futures), Collective2 (algorithmic-trading signals); multi-year backtested algorithmic-trading strategy.</li>
+    <li>TEDx speaker (2019) — talk on curiosity, motivation, and the comfort zone.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Core Skills</h2>
+  <dl class="skills">
+    <dt>Philosophy of Science</dt>
+    <dd>philosophy of science · philosophy of mind · epistemology · constitutional-AI methodology · steel-manning opposing views · primary-source verification · base-rate reasoning · settled-vs-speculation discrimination · public updating on errors · pre-registered falsifier specifications</dd>
+
+    <dt>Statistics</dt>
+    <dd>Fleiss κ inter-rater reliability · NIST SP 800-22 randomness testing · ROC/AUC · dual-threshold inference · Lindley-paradox analysis · statistical fallacy detection · adversarial / red-team evaluation · base-rate reasoning</dd>
+
+    <dt>Logic &amp; Formal Verification</dt>
+    <dd>Lean 4 · mathlib4 · <code>lake</code> · type theory · dependent types · interactive theorem proving · higher-order logic · first-order logic · four-valued (Tralse) logic · named-gap formalization (Buzzard / LTE style)</dd>
+
+    <dt>Cognitive Psychology</dt>
+    <dd>UConn cognitive science · cognitive psychology · brain-computer interfaces · biometric signal processing (EEG, HRV, fNIRS) · mood modulation prototype · Tralse Success Distinction operationalization</dd>
+
+    <dt>AI Alignment / Trainer</dt>
+    <dd>RLHF rubric design · chain-of-thought generation and grading · adversarial evaluation · red-teaming · falsifier specification · constitutional-AI methodology · motivated-reasoning resistance · rhetorical-sleight detection</dd>
+
+    <dt>Forecasting &amp; Markets</dt>
+    <dd>Kalshi event-futures · Collective2 algorithmic-trading signals · Alpaca trading API · multi-year backtesting · prediction-market analysis · economics (UConn Business Administration coursework)</dd>
+
+    <dt>Programming</dt>
+    <dd>Python (advanced) · NumPy · Pandas · scikit-learn · SciPy · Streamlit · Flask · SQL · PostgreSQL · Bash · Lean 4 · Qiskit · Git · JavaScript (basic)</dd>
+
+    <dt>Quantum Computing</dt>
+    <dd>Qiskit · IBM Quantum hardware (<code>ibm_marrakesh</code>) · GHZ-state preparation · Bell / Mermin inequality testing · multipartite entanglement witnesses</dd>
+
+    <dt>History of Science</dt>
+    <dd>Popper retirement (URB-830 ratified canonical TIU = |log P(H|e)/P(H)|) · Lindbergh / Tesla historical-lineage research · Jung Cosmic-Consciousness external-anchor mapping</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="edu">
+    <div><strong>B.S., General Studies</strong> — Cognitive Science (¾) &amp; Business Administration (¼) · <em>University of Connecticut, Storrs</em></div>
+    <div class="edu-meta">08/2024 · Magna Cum Laude · Honors · GPA 3.56</div>
+  </div>
+  <p style="font-size:9pt; color: var(--ink-muted); margin-top:0.3rem;">
+    <strong>Certifications:</strong> CPR · Assault Prevention Training · HIPAA &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Awards:</strong> Magna Cum Laude (UConn, 08/2024)
+  </p>
+</section>
+
+<div class="footnote">References, full publication list, and source-repository access available on request.</div>
+
+</div>
+</body>
+</html>
