@@ -7,7 +7,7 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ## Summary
 
-**Highly motivated** philosopher of science and formal-methods practitioner specializing in truth-seeking reasoning, motivated-reasoning resistance, and primary-source verification. **Intrinsically driven** — authored 100+ open-access research papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment, with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 0.906 inter-rater reliability, and a 71σ Bell-inequality result on IBM quantum hardware. Habitual public-retraction discipline; pre-registered falsifier specifications. Investigative-journalism-grade source rigor; academic peer-review practice (4 submission packets prepared).
+**Highly motivated** philosopher of science and formal-methods practitioner with **strong prioritization skills** and proven **communication skills**. **Intrinsically driven** author of 100+ open-access papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment. 20 verified Lean 4 theorems, Fleiss κ = 0.906 inter-rater reliability, 71σ Bell-inequality result on IBM quantum hardware. Habitual public retractions, pre-registered falsifiers, investigative-journalism source rigor, and **intelligence-analysis-grade evaluation** of primary and secondary sources.
 
 ---
 
@@ -15,19 +15,20 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ### Founder & CEO — BlissGene Therapeutics Incorporated
 *07/2024 – Present · Remote / US*
-- **Leadership:** Hired 7 PhD scientists to develop a novel gene-therapy candidate for chronic pain, anxiety, and depression.
-- Met the competitive threshold for administrative review in an FDA SBIR funding round.
-- **Project scope:** currently raising a $1–4M preclinical research budget via Qubit Capital (placement-agent engagement, 05/2026); featured in CEO Weekly press release.
+- **Leadership:** hired 7 PhD scientists for a novel gene-therapy candidate targeting chronic pain, anxiety, and depression.
+- Met competitive threshold for administrative review in an FDA SBIR funding round.
+- **Project scope + communication skills:** raising a $1–4M preclinical research budget via Qubit Capital placement agents (05/2026); CEO Weekly press feature; direct sales and marketing engagement with FDA reviewers, investors, and recruits.
 
 ### Independent Researcher — Transcendent Intelligence (TI) Sigma
 *06/2025 – Present · Remote*
-- **Originator** of the TI Sigma experimental meta-philosophy framework spanning philosophy of science, formal logic, statistics, cognitive psychology, and AI alignment — **100+ Zenodo papers** with citable DOIs.
-- **Analytical rigor:** authored 20 Lean 4 / mathlib4 theorems with full axiom accounting (`#print axioms` verified); all close under `{propext, Classical.choice, Quot.sound}` with no `sorry` or `axiom` cheats.
-- **Communicates uncertainty proportionately:** maintain a continuous pre-registration ledger of falsifiable predictions with explicit confirm / indeterminate / disconfirm criteria; dual-threshold inference (T_RAND = 0.0660, T_BORDER = 0.13534) with explicit Lindley-paradox immunity argument.
-- **Public updating on errors:** documented 48-hour public retraction when corpus sweep falsified a prior audit; maintain a formal retraction catalog (`apologetics/05_RETRACTIONS_AND_HONESTY.md`, R1–R10).
-- **Adversarial / red-team:** designed vacuous-confirm filters and pre-registered indeterminate clauses to expose under-discriminating tests — direct application to adversarial-evaluation and red-team prompt engineering.
-- **Steel-manning:** authored a 6-paper TI Sigma Apologetics series that states the strongest objection FIRST per academic-audience convention before responding; ASYMMETRIC theory treats over-skepticism as discipline failure equal to uncritical acceptance.
-- **Forecasting / prediction markets:** active on Kalshi (event-futures), Collective2 (algorithmic-trading signals), and Alpaca; multi-year backtested stock-market algorithm.
+- **Originator** of the TI Sigma meta-philosophy framework — philosophy of science, formal logic, statistics, cognitive psychology, AI alignment — **100+ Zenodo papers** with citable DOIs.
+- **Analytical rigor:** authored 20 Lean 4 / mathlib4 theorems with full axiom accounting (`#print axioms` verified); all close under `{propext, Classical.choice, Quot.sound}` with no `sorry` cheats.
+- **Strong prioritization skills:** ranked 240+ research-backlog entries against pre-registered priority criteria; ASYMMETRIC theory operationalizes prioritization of disconfirmation work over confirmation work.
+- **Communicates uncertainty proportionately:** continuous pre-registration ledger with explicit confirm / indeterminate / disconfirm criteria; dual-threshold inference (T_RAND = 0.0660) with Lindley-paradox immunity.
+- **Public updating on errors:** documented 48-hour retraction when corpus sweep falsified a prior audit; formal retraction catalog (R1–R10).
+- **Intelligence-analysis-grade source evaluation + red-team:** vacuous-confirm filters, pre-registered indeterminate clauses, and adversarial directional-monotone falsifiers — directly transferable to Grok red-team prompt engineering.
+- **Steel-manning:** 6-paper Apologetics series states strongest objection FIRST per academic-audience convention; ASYMMETRIC theory treats over-skepticism as discipline failure.
+- **Forecasting / prediction markets:** active on Kalshi (event-futures), Collective2 (algorithmic-trading signals), Alpaca; multi-year backtested algorithm.
 - Invented an AI neurofeedback prototype for mood modulation and a brain-metric-based consensual cybersecurity concept.
 
 ### ABA Behavior Technician — A Brand New Day
@@ -43,14 +44,14 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ## Match to xAI Grok Truth-Seeking Tutor Role
 
-1. **Resists motivated reasoning.** TI Sigma's MR Truth Labels (Fleiss κ = 0.906) operationalize a 4-element categorical reasoning rubric (True / False / Indeterminate / Double-Tralse) precisely to detect motivated-reasoning failures, hidden assumptions, and rhetorical sleights. Strongest categorical-taxonomic confirm in my corpus.
-2. **Communicates uncertainty and evidence proportionately.** Pre-registered falsifier specifications with explicit confirm / indeterminate / disconfirm criteria; dual-threshold inference at N = 384 with 0.00% false-positive rate over 2,000 draws; explicit Lindley-paradox-immunity structural argument.
-3. **Public updating on errors.** Documented 48-hour public retraction when a corpus sweep falsified a prior audit; maintain a formal retraction catalog (R1–R10) within an Apologetics tab.
-4. **Adversarial examples + red-team prompts.** Vacuous-confirm filters, pre-registered indeterminate clauses, and pre-emptive directional-monotone falsifiers — all directly transferable to xAI red-team prompt engineering.
-5. **Primary sources + base rates.** 100+ Zenodo papers with DOIs; raw IBM Quantum hardware results (`ibm_marrakesh`); NIST SP 800-22 against 8 candidate randomness sources (base-rate analysis); habitual citation of primary over secondary sources.
-6. **Steel-manning opposing views.** TI Sigma Apologetics tab — six papers covering logical, scientific, gender-social, metaphysical, and retraction-honesty objections — state the strongest objection FIRST in reading order before responding.
-7. **Settled-vs-speculation discrimination.** Formally distinguish `#print axioms`-closed theorems from axiom-as-hypothesis scaffolds; canonical-vs-conjectural status preserved across 240+ logged research entries; public Navier-Stokes UOP scaffold openly labeled as "Honest Open Status" rather than claimed as a proof.
-8. **Constitutional principles for truth-seeking.** 9-principle TI Sigma backlog ratified in Pass-56 (CDP-1, NAD-1, TI-ENVELOPE-1, ASC-1, AA-TD-1, MT-B-VOID, MT-B-DEGEN, PCF-1, TI-TIER-1) — directly transferable to constitutional-AI methodology for Grok.
+1. **Resists motivated reasoning.** MR Truth Labels (Fleiss κ = 0.906) — a 4-element rubric (True / False / Indeterminate / Double-Tralse) — detect motivated-reasoning failures, hidden assumptions, and rhetorical sleights.
+2. **Communicates uncertainty proportionately.** Pre-registered falsifiers with confirm / indeterminate / disconfirm criteria; dual-threshold inference at N = 384 with 0.00% FPR over 2,000 draws; Lindley-paradox immunity.
+3. **Public updating on errors.** 48-hour retraction documented; formal R1–R10 retraction catalog within the Apologetics tab.
+4. **Adversarial + red-team.** Vacuous-confirm filters, pre-registered indeterminate clauses, directional-monotone falsifiers — transferable to Grok red-team engineering.
+5. **Primary sources + base rates.** 100+ DOIs on Zenodo; raw IBM Quantum hardware results; NIST SP 800-22 on 8 candidate sources; intelligence-analysis-grade habit of citing primaries over secondaries.
+6. **Steel-manning.** 6-paper Apologetics series states the strongest objection FIRST per academic-audience convention.
+7. **Settled-vs-speculation.** `#print axioms`-closed theorems distinguished from axiom-as-hypothesis scaffolds; Navier-Stokes UOP scaffold openly labeled "Honest Open Status."
+8. **Constitutional principles for truth-seeking.** 9-principle backlog ratified in Pass-56 (CDP-1, NAD-1, TI-ENVELOPE-1, ASC-1, AA-TD-1, MT-B-VOID, MT-B-DEGEN, PCF-1, TI-TIER-1) — directly transferable to constitutional-AI for Grok.
 
 ---
 
@@ -69,23 +70,21 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ## Selected Projects
 
-**Lean 4 / mathlib4 Formal Verification — 20 Closed Theorems**
-Source files: `lean4/TISigma.lean`, `lean4/TI/LxE.lean`, `lean/Verisyn/EulerIdentity{,RC}.lean`, `lean4_ns_uop_pass54_mathlib/NavierStokes/ToyDecay.lean`. All close under standard Lean 4 axioms with `#print axioms` verification. Four peer-review submission packets prepared for AFP, Journal of Formalized Reasoning, arXiv math.LO / cs.LO, and mathlib4 contributions.
+**Lean 4 / mathlib4 — 20 Closed Theorems.** All close under standard Lean 4 axioms with `#print axioms` verified. Four peer-review submission packets prepared for AFP, Journal of Formalized Reasoning, arXiv math.LO / cs.LO, and mathlib4.
 
-**Multi-Axis Truth Labeling — Fleiss κ = 0.906**
-Designed a 4-element categorical truth-label scheme (True, False, Indeterminate, Double-Tralse) plus 12 meta-truth extensions. Inter-rater agreement κ = 0.906 across three independent raters. Direct application to motivated-reasoning detection and trainer-consistency benchmarking.
+**Multi-Axis Truth Labeling — Fleiss κ = 0.906.** 4-element categorical truth-label scheme + 12 meta-truth extensions; three-rater agreement. Direct application to motivated-reasoning detection and trainer-consistency benchmarking.
 
-**TI Sigma Apologetics Series (6 papers)**
-Logical / scientific / gender-social / metaphysical / retractions-and-honesty objection responses. Each paper states the strongest objection FIRST in reading order, then provides an anchor-response plus a falsifier per objection. Direct application to steel-manning practice for Grok training.
+**TI Sigma Apologetics Series (6 papers).** Logical, scientific, gender-social, metaphysical, and retraction-honesty objections — each states strongest objection FIRST, then anchor-response + falsifier. Direct application to steel-manning for Grok.
 
-**Pre-Registered Navier-Stokes UOP Scaffold (Honest Open Status)**
-Lean 4 axiom-as-hypothesis scaffold for `UOP_existence_claim → NS_smoothness`. Pipeline `lake build` green; `#print axioms` confirms dependency on a domain axiom. **Not** claimed as a proof of Navier-Stokes — documented openly as an honest open scaffold contrasted with the closed 1-D `energy_monotone_decay` theorem in the same repository.
+**Navier-Stokes UOP Scaffold (Honest Open Status).** Lean 4 axiom-as-hypothesis scaffold for `UOP_existence_claim → NS_smoothness`. Openly labeled "Honest Open Status" — **not** claimed as a proof.
 
 ---
 
 ## Core Skills
 
-**Philosophy of Science & Epistemology:** philosophy of science · philosophy of mind · epistemology · constitutional-AI methodology · steel-manning opposing views · primary-source verification · base-rate reasoning · settled-vs-speculation discrimination · public updating on errors · pre-registered falsifier specifications · investigative-journalism source rigor · academic peer review
+**Philosophy of Science & Epistemology:** philosophy of science · epistemology · constitutional-AI methodology · steel-manning · primary-source verification · base-rate reasoning · settled-vs-speculation discrimination · public updating on errors · pre-registered falsifiers · investigative-journalism source rigor · intelligence-analysis-grade source evaluation · academic peer review
+
+**Soft Skills:** strong prioritization skills · communication skills · leadership · analytical · accuracy · work ethic · project scope · highly motivated · intrinsically driven · marketing and sales engagement
 
 **Linguistics & Philosophical Logic:** formal semantics · philosophical logic · four-valued (Tralse) logic semantics · paraconsistent logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary (True / False / Indeterminate / Double-Tralse + 12 Meta-Truths)
 
