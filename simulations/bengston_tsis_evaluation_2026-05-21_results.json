@@ -1,0 +1,267 @@
+{
+  "pass": "Pass 59",
+  "date": "2026-05-22T00:54:53.614783Z",
+  "thresholds": {
+    "T_RAND": 0.066,
+    "T_BORDER": 0.13534,
+    "C_LCC": 0.437
+  },
+  "results": [
+    {
+      "name": "Ganzfeld (meta)",
+      "effect": 0.07,
+      "N_per_arm": 3000,
+      "app1_score": 2.0,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 0.07,
+          "pass": true,
+          "margin_x": 1.0606060606060606
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 0.07,
+          "pass": false,
+          "margin_x": 0.5172159006945471
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 2.0,
+          "pass": true
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 2,
+      "failed_gates": 1,
+      "unmeasured_gates": 1,
+      "verdict": "INDETERMINATE"
+    },
+    {
+      "name": "Radin presentiment",
+      "effect": 0.21,
+      "N_per_arm": 500,
+      "app1_score": 2.0,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 0.21,
+          "pass": true,
+          "margin_x": 3.1818181818181817
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 0.21,
+          "pass": true,
+          "margin_x": 1.5516477020836412
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 2.0,
+          "pass": true
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 3,
+      "failed_gates": 0,
+      "unmeasured_gates": 1,
+      "verdict": "CONFIRM-likely"
+    },
+    {
+      "name": "Bem 2011",
+      "effect": 0.022,
+      "N_per_arm": 1000,
+      "app1_score": 1.0,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 0.022,
+          "pass": false,
+          "margin_x": 0.3333333333333333
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 0.022,
+          "pass": false,
+          "margin_x": 0.1625535687897148
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 1.0,
+          "pass": false
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 0,
+      "failed_gates": 3,
+      "unmeasured_gates": 1,
+      "verdict": "DISCONFIRMED"
+    },
+    {
+      "name": "PEAR REG",
+      "effect": 0.0002,
+      "N_per_arm": 10000000.0,
+      "app1_score": 0.5,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 0.0002,
+          "pass": false,
+          "margin_x": 0.0030303030303030303
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 0.0002,
+          "pass": false,
+          "margin_x": 0.0014777597162701347
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 0.5,
+          "pass": false
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 0,
+      "failed_gates": 3,
+      "unmeasured_gates": 1,
+      "verdict": "DISCONFIRMED"
+    },
+    {
+      "name": "GCP",
+      "effect": 5e-05,
+      "N_per_arm": 1000000000.0,
+      "app1_score": 0.5,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 5e-05,
+          "pass": false,
+          "margin_x": 0.0007575757575757576
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 5e-05,
+          "pass": false,
+          "margin_x": 0.0003694399290675337
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 0.5,
+          "pass": false
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 0,
+      "failed_gates": 3,
+      "unmeasured_gates": 1,
+      "verdict": "DISCONFIRMED"
+    },
+    {
+      "name": "Bengston & Krinsley 2000",
+      "effect": 0.515,
+      "N_per_arm": 33,
+      "app1_score": 2.5,
+      "gates": {
+        "effect_vs_T_RAND": {
+          "threshold": 0.066,
+          "observed": 0.515,
+          "pass": true,
+          "margin_x": 7.803030303030303
+        },
+        "effect_vs_T_BORDER": {
+          "threshold": 0.13534,
+          "observed": 0.515,
+          "pass": true,
+          "margin_x": 3.8052312693955965
+        },
+        "app1_engagement": {
+          "threshold": 2.0,
+          "observed": 2.5,
+          "pass": true
+        },
+        "lcc_coherence": {
+          "threshold": 0.437,
+          "observed": null,
+          "pass": null,
+          "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+        }
+      },
+      "passed_gates": 3,
+      "failed_gates": 0,
+      "unmeasured_gates": 1,
+      "verdict": "CONFIRM-likely"
+    }
+  ],
+  "bengston_spotlight": {
+    "name": "Bengston & Krinsley 2000",
+    "effect": 0.515,
+    "N_per_arm": 33,
+    "app1_score": 2.5,
+    "gates": {
+      "effect_vs_T_RAND": {
+        "threshold": 0.066,
+        "observed": 0.515,
+        "pass": true,
+        "margin_x": 7.803030303030303
+      },
+      "effect_vs_T_BORDER": {
+        "threshold": 0.13534,
+        "observed": 0.515,
+        "pass": true,
+        "margin_x": 3.8052312693955965
+      },
+      "app1_engagement": {
+        "threshold": 2.0,
+        "observed": 2.5,
+        "pass": true
+      },
+      "lcc_coherence": {
+        "threshold": 0.437,
+        "observed": null,
+        "pass": null,
+        "note": "UNMEASURED \u2014 see TSS-EMP-8 replication design"
+      }
+    },
+    "passed_gates": 3,
+    "failed_gates": 0,
+    "unmeasured_gates": 1,
+    "verdict": "CONFIRM-likely"
+  },
+  "falsifier": {
+    "id": "F-BENGSTON-1",
+    "condition": "Delta_p < 0.30 in independent oncology lab replication N>=60/arm",
+    "current_status": "NOT REFUTED (replication not yet executed)"
+  },
+  "honesty_notes": [
+    "Bengston & Krinsley 2000 numbers reconstructed from secondary sources; verify against JSE original before publication.",
+    "Resonant-bonding contamination of control groups is a real design concern; sham-attention control is the proper fix.",
+    "TSS-EMP-8 budget ($50k-$200k) is OUTSIDE Brandon's $0/$50 personal budget \u2014 flagged for grant or partnership.",
+    "TSS-EMP-9 retrospective meta-analysis ACROSS all Bengston JSE papers is $0-budget feasible from open-access archives."
+  ]
+}
