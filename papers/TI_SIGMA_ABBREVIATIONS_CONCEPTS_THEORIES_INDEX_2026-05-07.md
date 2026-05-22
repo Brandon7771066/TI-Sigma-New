@@ -3,6 +3,16 @@
 **Author:** Brandon Charles Emerick (curated with the agent)
 **Date:** 2026-05-07
 **Status:** Living index — append new entries as the framework grows
+
+---
+
+## Pass-63 additions (2026-05-22)
+
+- **FFF** — Four Fundamental Features of Existence. Acronym registered Pass-63 per Brandon directive. Component definitions pending Brandon disclosure (placeholder entry — Brandon to enumerate the four features when ready).
+- **Chance (4-mode taxonomy, CANDIDATE):** proposal in `papers/PASS_63_BELL_CHANCE_LCC_TI_SIGMA_2026-05-22.md`. C₁ Classical (PD-spread Kolmogorov), C₂ Indeterminate (MR2 epistemic), **C₃ Tralse-quality (proposed canonical default)**, C₄ Double-Tralse (τ(P) ∧ ¬τ(P) physically realized in Bell violation). Ratification pending F-BCL-2 (3-rater N=20).
+
+---
+
 **Purpose:** Single source of truth for the vocabulary of TI Sigma. Resolves ambiguities, anchors definitions, prevents drift.
 
 ---
