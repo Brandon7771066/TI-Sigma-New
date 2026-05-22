@@ -7,7 +7,7 @@ LinkedIn: linkedin.com/in/brandonemerick · Zenodo: 100+ papers (DOIs available 
 
 ## Summary
 
-**Highly motivated** philosopher of science and formal-methods practitioner with **strong prioritization skills** and proven **communication skills**. **Intrinsically driven** author of 100+ open-access papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment. 20 verified Lean 4 theorems, Fleiss κ = 0.906 inter-rater reliability, 71σ Bell-inequality result on IBM quantum hardware. Habitual public retractions, pre-registered falsifiers, investigative-journalism source rigor, and **intelligence-analysis-grade evaluation** of primary and secondary sources.
+**AI Tutor** — target role. **Highly motivated** philosopher of science and formal-methods practitioner with **strong prioritization skills** and proven **communication skills**. **Intrinsically driven** author of 100+ open-access papers across philosophy of science, statistics, logic, cognitive psychology, and AI alignment. 20 verified Lean 4 theorems, Fleiss κ = 0.906 inter-rater reliability, 71σ Bell-inequality result on IBM quantum hardware. Habitual public retractions, pre-registered falsifiers, investigative-journalism source rigor, and **intelligence-analysis-grade evaluation** of primary and secondary sources.
 
 ---
 

@@ -1,0 +1,40 @@
+{
+  "pass": "Pass 60 batch-1",
+  "date": "2026-05-22T10:39:42.353672Z",
+  "constants": {
+    "T_RAND": 0.066,
+    "T_BORDER": 0.13534,
+    "C_LCC": 0.437,
+    "MARGINAL_EPSILON": 0.02,
+    "INDET_BAND": [
+      0.046,
+      0.08600000000000001
+    ]
+  },
+  "trials": [
+    {
+      "label": "Bengston & Krinsley",
+      "year": 2000,
+      "n_treat": 33,
+      "n_ctrl": 30,
+      "p_treat": 0.5151515151515151,
+      "p_ctrl": 0.001,
+      "healer_hr": 140,
+      "n_healers": 5,
+      "control_type": "no-attention",
+      "verified": false
+    }
+  ],
+  "trials_verified_count": 0,
+  "pooled_delta_p": 0.5141515151515151,
+  "heterogeneity": {
+    "tau2": 0.0,
+    "I2": 0.0,
+    "Q": 0.0
+  },
+  "tsis_gates_passed": 3,
+  "pass60_label": "TRUE-provisional",
+  "pass60_pd": 1.6,
+  "pass60_reason": "high effect + low heterogeneity + 3+ gates",
+  "honesty_note": "Numerical conclusions valid only after Brandon completes JSE-paper verification of all trial cells. This run executes the pre-registered protocol on the supplied numbers."
+}

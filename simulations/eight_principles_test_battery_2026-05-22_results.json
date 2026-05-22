@@ -1,0 +1,229 @@
+{
+  "pass": "Pass 60 batch-1",
+  "date": "2026-05-22T10:39:41.615993Z",
+  "ready_count": 6,
+  "provisional_count": 2,
+  "principles": [
+    {
+      "id": "TSD-1",
+      "name": "Tralse Success Distinction",
+      "origin_pass": "Pass-57 batch-1",
+      "anchor": "papers/TI_SIGMA_TRALSE_SUCCESS_DISTINCTION_TSD_2026-05-17.md",
+      "statement": "TSD-A (additive per-event TIU over successes) is the correct metric for high-intentionality-per-event regimes; TSD-B (conventional success-vs-failure rate) is the correct metric for high-N-low-intentionality regimes.",
+      "falsifiers": [
+        {
+          "id": "F-TSD-1-1",
+          "status": "NOT REFUTED",
+          "evidence": "breathwork-revelation self-example + 4-pronged ESP straw-man composite ruling"
+        },
+        {
+          "id": "F-TSD-1-2",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-59 Bengston: high TSD-A registers, TSD-B also high \u2014 both metrics concur"
+        }
+      ],
+      "ratification_readiness": "READY \u2014 strong worked examples; no falsifier tripped"
+    },
+    {
+      "id": "APP-1",
+      "name": "Active-Pragmatism Principle",
+      "origin_pass": "Pass-57 batch-2",
+      "anchor": "papers/PASS_58_META_COLLAPSE_110_111_112_2026-05-17.md (\u00a7111)",
+      "statement": "Inference frameworks require \u22652 of 3 active-engagement criteria (intentional engagement, stakes/consequence, skill/discipline asymmetry) to be credited as confirming an intentionality-mediated outcome.",
+      "falsifiers": [
+        {
+          "id": "F-APP-1-1",
+          "status": "NOT REFUTED",
+          "evidence": "10/12 simulation cells beat conventional; mean \u0394AUC +0.042"
+        },
+        {
+          "id": "F-APP-1-2 (cross-domain)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 TSS-EMP-5 medical-RCT negative control: M-C does not artifactually win where engagement absent"
+        }
+      ],
+      "ratification_readiness": "READY \u2014 sim + negative control both pass"
+    },
+    {
+      "id": "CSR-1",
+      "name": "Confirmation-Sufficiency Refinement",
+      "origin_pass": "Pass-57 batch-2",
+      "anchor": "papers/PASS_58_META_COLLAPSE_110_111_112_2026-05-17.md",
+      "statement": "TSIS four-gate stack confirmation requires structural pass on all gates; partial pass (\u22642/4) is structurally INDETERMINATE regardless of conventional p-value.",
+      "falsifiers": [
+        {
+          "id": "F-CSR-1-1",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 batch-1 corpus re-eval: PEAR/GCP correctly retracted, Ganzfeld/Radin correctly retained"
+        }
+      ],
+      "ratification_readiness": "READY \u2014 corpus-level confirmation"
+    },
+    {
+      "id": "MBE-Acc-1",
+      "name": "Model-Belief-Evidence Accumulation Coherence",
+      "origin_pass": "Pass-57 batch-2",
+      "anchor": "papers/PASS_58_META_COLLAPSE_110_111_112_2026-05-17.md",
+      "statement": "A confirmation procedure must show coherent posterior-evidence accumulation tracking ground truth across the experimental tape \u2014 pure noise cannot fake coherent accumulation.",
+      "falsifiers": [
+        {
+          "id": "F-MBE-Acc-1-1",
+          "status": "NOT REFUTED",
+          "evidence": "ECE M-C 0.0196 vs M-A 0.0235 vs M-B 0.0413 \u2014 TSIS calibration superior"
+        }
+      ],
+      "ratification_readiness": "READY"
+    },
+    {
+      "id": "TSIS-1",
+      "name": "TSIS Four-Gate Inference Stack",
+      "origin_pass": "Pass-57 batch-2",
+      "anchor": "papers/PASS_58_META_COLLAPSE_110_111_112_2026-05-17.md",
+      "statement": "Canonical inference stack = TSD-A coherent \u2227 LCC \u2265 0.4370 \u2227 effect \u2265 T_RAND = 0.0660 \u2227 MBE-Acc coherent. Replaces binary p<0.05 NHST as the canonical confirmation procedure.",
+      "falsifiers": [
+        {
+          "id": "F-TSIS-1-1 (Lindley immunity)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 TSS-MATH-4: 0/N at N=100k under null; absolute thresholds structurally N-invariant"
+        },
+        {
+          "id": "F-TSIS-1-2 (sensitivity)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 re-eval: Ganzfeld, Radin, Bengston correctly retained"
+        }
+      ],
+      "ratification_readiness": "READY \u2014 Lindley-immune + sensitivity confirmed"
+    },
+    {
+      "id": "MFD-1",
+      "name": "Moot-Failure Duality (dual-axis)",
+      "origin_pass": "Pass-57 batch-3",
+      "anchor": "papers/PASS_58_META_COLLAPSE_110_111_112_2026-05-17.md",
+      "statement": "Epistemic verdict and pragmatic verdict are separable axes. An effect can be epistemic-CONFIRM-likely while pragmatic-Moot (awaiting independent replication, or methodology open). The two axes do not collapse into a single boolean.",
+      "falsifiers": [
+        {
+          "id": "F-MFD-1-1",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 TSS-EMP-3 utility-sweep: MFD-1 celebrate-rate utility-responsive (0.907\u21920.987 under signal)"
+        },
+        {
+          "id": "F-MFD-1-2 (over-broad?)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 TSS-EMP-5: negative control confirms MFD-1 does NOT artifactually win in engagement-absent domain"
+        }
+      ],
+      "ratification_readiness": "READY \u2014 utility + cross-domain both pass"
+    },
+    {
+      "id": "APP-2-Passive",
+      "name": "Active-Pragmatism Passive Variant",
+      "origin_pass": "Pass-58 batch-1",
+      "anchor": "papers/PASS_58_PSI_RE_EVALUATION_TI_SIGMA_STATS_2026-05-17.md",
+      "statement": "For physiological-only-engagement paradigms (presentiment), reduce APP-1 to \u22651 of 3 criteria, with compensatory effect-strength gate raised to T_BORDER = 0.13534.",
+      "falsifiers": [
+        {
+          "id": "F-APP-2-Passive-1",
+          "status": "NOT REFUTED",
+          "evidence": "Radin presentiment d=0.21 \u2265 T_BORDER \u2713; passes the strengthened gate"
+        },
+        {
+          "id": "F-APP-2-Passive-2 (false-positive on null)",
+          "status": "OPEN",
+          "evidence": "Pass-61 simulation needed"
+        }
+      ],
+      "ratification_readiness": "PROVISIONAL \u2014 needs Pass-61 false-positive sim"
+    },
+    {
+      "id": "ROS-1",
+      "name": "Reverse-Osmosis Statistical-Significance",
+      "origin_pass": "Pass-59 batch-1",
+      "anchor": "papers/PASS_59_REVERSE_OSMOSIS_STATISTICAL_SIGNIFICANCE_2026-05-21.md",
+      "statement": "Confirmation procedures must operate as active separation under applied pressure against a noise-concentration gradient. Equivalently: thresholds must be N-invariant absolute values.",
+      "falsifiers": [
+        {
+          "id": "F-ROS-1-1 (N-invariance)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 TSS-MATH-4: 0.0000 false-positive rate at N=100k under null"
+        },
+        {
+          "id": "F-ROS-1-2 (real-signal sensitivity)",
+          "status": "NOT REFUTED",
+          "evidence": "Pass-58 Ganzfeld + Radin confirms; Pass-59 Bengston confirms"
+        },
+        {
+          "id": "F-ROS-1-3 (insight-retrieval mapping)",
+          "status": "OPEN",
+          "evidence": "Pass-60 \u00a75 formalization pending"
+        }
+      ],
+      "ratification_readiness": "PROVISIONAL \u2014 F-3 mapping work open"
+    }
+  ],
+  "summary_rows": [
+    {
+      "id": "TSD-1",
+      "name": "Tralse Success Distinction",
+      "passed": 2,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "APP-1",
+      "name": "Active-Pragmatism Principle",
+      "passed": 2,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "CSR-1",
+      "name": "Confirmation-Sufficiency Refinement",
+      "passed": 1,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "MBE-Acc-1",
+      "name": "Model-Belief-Evidence Accumulation Coherence",
+      "passed": 1,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "TSIS-1",
+      "name": "TSIS Four-Gate Inference Stack",
+      "passed": 2,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "MFD-1",
+      "name": "Moot-Failure Duality (dual-axis)",
+      "passed": 2,
+      "open": 0,
+      "refuted": 0,
+      "ready": true
+    },
+    {
+      "id": "APP-2-Passive",
+      "name": "Active-Pragmatism Passive Variant",
+      "passed": 1,
+      "open": 1,
+      "refuted": 0,
+      "ready": false
+    },
+    {
+      "id": "ROS-1",
+      "name": "Reverse-Osmosis Statistical-Significance",
+      "passed": 2,
+      "open": 1,
+      "refuted": 0,
+      "ready": false
+    }
+  ]
+}
