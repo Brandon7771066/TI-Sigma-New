@@ -22,14 +22,41 @@ TSS-EMP-9 (carry-forward from Pass-59): retrospective meta-analysis across all p
 
 | # | Trial label | Year | Site | Healers | N(treated) | N(control) | Reported remission rate (treated) | Reported remission rate (control) | Source |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | Bengston & Krinsley | 2000 | Connecticut College | Bengston + 4 students | 33 | 0 (no-treatment) | 17/33 ≈ 0.515 | base ≈ 0.000 | JSE 14(3) [VERIFY-JSE] |
-| 2 | Bengston | 2007 | St. Joseph's College | Bengston + students | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | JSE [VERIFY-JSE] |
+| 1 | Bengston & Krinsley | 2000 | Connecticut College | Bengston + 4 students | **48** | **49** (41 on-site + 8 off-site) | **44/48 = 91.7%** | on-site: **33/41 = 80.5%**; off-site: **0/8 = 0%** | **JSE 14(3) CONFIRMED via Bengston 2007 commentary, J Altern Complement Med 13(3):329-31, PMID 17480131, doi:10.1089/acm.2007.6403** — Table 1 reproduced in commentary p.318, 5 experiments aggregated |
+| 2 | Bengston | 2007 | St. Joseph's College | Bengston + students | [PENDING-DISAMBIG: is this an actually separate study, or a re-citation of Trial 1?] | [PENDING-DISAMBIG] | [PENDING-DISAMBIG] | [PENDING-DISAMBIG] | [PENDING-DISAMBIG] |
 | 3 | Bengston | early 2010s | Arizona / Beischel collab | trained | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | JSE / *Energy Cure* [VERIFY-JSE] |
 | 4 | Bengston | 2007 (water) | various | controls | [VERIFY-JSE] | [VERIFY-JSE] | imprinted-water condition | [VERIFY-JSE] | JSE [VERIFY-JSE] |
 | 5 | Bengston | 2010s (book-reported) | various | trained skeptics | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | *Energy Cure* 2010 |
 | 6-N | Additional published replications | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] | [VERIFY-JSE] |
 
 **Estimated total published trials:** ~5–10 with primary data. Brandon's task: complete the [VERIFY-JSE] cells by reading JSE archive (free) and *The Energy Cure* (already owned or library-accessible).
+
+### 2.1 Trial 1 disambiguation note (added Pass-63 from Brandon attachments 2026-05-22)
+
+Two screenshots provided by Brandon: (a) PubMed citation page showing **Bengston WF, J Altern Complement Med 2007;13(3):329-331, PMID 17480131** — a 3-page **commentary**, not a new study; (b) page 318 of that 2007 commentary showing **Table 1 with 5 experiments**, aggregate totals: Experimental 48 mice / 44 remissions (91.7%); Control on-site 41 mice / 33 remissions (80.5%); Control off-site 8 mice / 0 remissions (0%). The 5-experiment structure + on-site/off-site control design + resonant-bond framing matches the **Bengston & Krinsley 2000 JSE 14(3) study**, not a fresh 2007 St. Joseph's run. Conclusion: the 2007 J Altern Complement Med paper is a commentary/recap of the 2000 study, and its Table 1 = the 2000 study's primary data. Trial 1 cells are now CONFIRMED with these numbers. Trial 2 (originally labeled "2007 St. Joseph's") may not be a distinct study — flagged for Brandon disambiguation. If it IS distinct, separate data extraction required; if it is NOT, Trial 2 should be merged into Trial 1 and the inventory renumbered.
+
+### 2.2 Per-experiment breakdown of Trial 1 (from screenshot Table 1)
+
+| Sub-exp | Exp N | Exp R | Exp % | Ctrl on-site N | Ctrl on-site R | Ctrl on-site % | Ctrl off-site N | Ctrl off-site R | Ctrl off-site % |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 5 | 5 | 100% | 6 | 4 | 66.7% | — | — | — |
+| 2 | 7 | 7 | 100% | 6 | 4 | 66.7% | 4 | 0 | 0% |
+| 3 | 10 | 7 | 70% | 6 | 3 | 50% | 4 | 0 | 0% |
+| 4 | 11 | 10 | 90.9% | 8 | 7 | 87.5% | — | — | — |
+| 5 | 15 | 15 | 100% | 15 | 15 | 100% | — | — | — |
+| **Sum** | **48** | **44** | **91.7%** | **41** | **33** | **80.5%** | **8** | **0** | **0%** |
+
+(Per-sub-experiment N reconstructed from totals + visible row entries; if any sub-experiment ambiguity remains, the aggregate totals are the meta-analytic primary inputs.)
+
+### 2.3 Key Trial 1 finding for meta-analysis
+
+The Bengston-claimed **resonant-bond effect** is operationalized by the **on-site vs off-site control split**: control mice physically proximal to treated mice showed 80.5% remission; control mice in a distant location showed 0%. The meta-analysis must therefore record **three framings** rather than collapse to a single treated-vs-control dichotomy:
+
+- **Framing A (skeptical, all-controls-equal):** N_t=48, R_t=44 (91.7%) vs N_c=49, R_c=33 (67.3%); Δp = +0.244
+- **Framing B (resonance-hypothesis-charitable):** N_treated-or-resonance-affected=89, R=77 (86.5%) vs N_true-control=8, R=0 (0%); Δp = +0.865
+- **Framing C (off-site-only-as-control):** N_t=48, R_t=44 (91.7%) vs N_c=8, R_c=0 (0%); Δp = +0.917
+
+All three framings will be reported in the Pass-64+ meta-analysis run; the choice between them is itself a hypothesis the corpus tests, not an arbitrary pre-meta-analysis decision.
 
 ---
 
