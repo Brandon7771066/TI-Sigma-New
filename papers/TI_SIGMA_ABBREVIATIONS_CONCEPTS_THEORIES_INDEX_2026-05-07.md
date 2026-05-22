@@ -9,7 +9,7 @@
 ## Pass-63 additions (2026-05-22)
 
 - **FFF** — Four Fundamental Features of Existence. Acronym registered Pass-63 per Brandon directive. Component definitions pending Brandon disclosure (placeholder entry — Brandon to enumerate the four features when ready).
-- **Chance (4-mode taxonomy, CANDIDATE):** proposal in `papers/PASS_63_BELL_CHANCE_LCC_TI_SIGMA_2026-05-22.md`. C₁ Classical (PD-spread Kolmogorov), C₂ Indeterminate (MR2 epistemic), **C₃ Tralse-quality (proposed canonical default)**, C₄ Double-Tralse (τ(P) ∧ ¬τ(P) physically realized in Bell violation). Ratification pending F-BCL-2 (3-rater N=20).
+- **Chance (4-mode taxonomy, REVISED post-F-BCL-2/3 Pass-63 batch-3):** C₁ Classical (PD-spread Kolmogorov; well-defined sample space + frequencies), C₂ Indeterminate (MR2; decidable-in-principle but not-yet-decided), C₃ Tralse-quality (irreducible formal-symbol/world separability; no decision-protocol exists), C₄ Double-Tralse (τ(P) ∧ ¬τ(P) under different sub-measures; physically realized in Bell violation). **No single canonical default** (original C₃-canonical proposal REFUTED by F-BCL-2 rule-based classifier: C₃=35%, well below 60% threshold). Convention: unmodified "chance" without disambiguation = C₃-or-C₄ cluster (genuinely-irreducible cases); C₁/C₂ called out explicitly when applicable. F-BCL-3 NOT REFUTED: minimum sufficient set for QM phenomenology = {C₃, C₄} + amplitude algebra. F-BCL-1 MARGINAL-PASS (|S_LCC|=2.0488, 1.63σ above LHV bound; replication required). Anchor: `papers/PASS_63_FBCL_2_AND_3_CHANCE_MODE_FALSIFIERS_2026-05-22.md`.
 
 ---
 
