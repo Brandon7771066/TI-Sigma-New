@@ -1,5 +1,8 @@
 # Pass 64 batch-3 — CTC-1-S Catalyst Strong-Form + VFP-1 Valence-as-Functional + Meta-Spectrum Scope Condition on Disability-as-Superpower
 
+> **ERRATA (2026-05-23, per Brandon canonical ruling — `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md`):**
+> §2.1 below originally placed the catalyst-strong-form reading in the **DT cell** of the MR-Truth-Label spectrum. This was incorrect. Per the canonical refinement, DT is reserved for propositions that produce **inconceivability under mental actualization** (Russell/liar/square-circles/faulty-arithmetic class). The catalyst reading is a **coherent tangential offshoot** — surprising and mechanistically interesting but mentally actualizable — and therefore belongs in the **strong-T-with-mechanism cell**, NOT DT. CTC-1-S itself is unchanged in content; only its location in the spectrum table is corrected. See the canonical refinement paper for the corrected spectrum table and the 3-step DT-assignment heuristic.
+
 **Date:** 2026-05-23
 **Pass:** 64 batch-3
 **Status:** One sub-principle promoted (CTC-1-S) + one new candidate canonical principle (VFP-1) + one meta-correction (explicit MR-Truth-Label spectrum-scope on the disability-as-superpower claim itself). Each carries pre-registered falsifiers.
