@@ -1,14 +1,14 @@
 {
   "n_candidates": 20,
-  "n_passes_min_quality": 20,
-  "pass_rate": 1.0,
+  "n_passes_min_quality": 18,
+  "pass_rate": 0.9,
   "pre_reg_threshold": 0.6,
   "verdict": "CONFIRM",
   "n_parse_errors": 0,
-  "n_factual_errors_flagged": 0,
+  "n_factual_errors_flagged": 2,
   "n_bait_and_switch_flagged": 0,
   "n_all_six_pillars_present": 20,
-  "mean_total_score": 14.5,
+  "mean_total_score": 14.35,
   "max_total_score": 17,
-  "min_total_score": 13
+  "min_total_score": 12
 }
