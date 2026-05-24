@@ -1,0 +1,182 @@
+{
+  "summary": {
+    "n_examples": 5,
+    "n_raters": 3,
+    "q1_hybrid_required_passing": 5,
+    "q1_threshold": 4,
+    "q1_status": "ADVANCED",
+    "q2_label_jaccard_passing": 0,
+    "q2_threshold": 3,
+    "q2_status": "ADVANCED_PARTIAL",
+    "HMR_1_F2_verdict": "ADVANCED-PARTIAL"
+  },
+  "items": [
+    {
+      "id": "HMR-3.1",
+      "intended_card": 3,
+      "intended_labels": [
+        "T",
+        "T",
+        "I"
+      ],
+      "hybrid_votes_out_of_3": 2,
+      "q1_anthropic_t0": true,
+      "q1_anthropic_t3": true,
+      "q1_perplexity": null,
+      "q2_anthropic_t0": [
+        "DT",
+        "MT-B1",
+        "MT-F2"
+      ],
+      "q2_anthropic_t3": [
+        "DT",
+        "MT-B1",
+        "MT-F2"
+      ],
+      "q2_perplexity": [],
+      "jaccard_a0_a3": 1.0,
+      "jaccard_a0_pp": 0.0,
+      "jaccard_a3_pp": 0.0,
+      "jaccard_mean": 0.333,
+      "raw_a0": "Q1: HYBRID\nQ2: MT-F2,DT,MT-B1",
+      "raw_a3": "Q1: HYBRID\nQ2: MT-F2,DT,MT-B1",
+      "raw_pp": "ERROR: Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your API key is correct and active.', 'type': 'invalid_api_key', 'code': 401}}"
+    },
+    {
+      "id": "HMR-3.2",
+      "intended_card": 3,
+      "intended_labels": [
+        "DT",
+        "T",
+        "MT-B1"
+      ],
+      "hybrid_votes_out_of_3": 2,
+      "q1_anthropic_t0": true,
+      "q1_anthropic_t3": true,
+      "q1_perplexity": null,
+      "q2_anthropic_t0": [
+        "MT-B1",
+        "MT-E2",
+        "T"
+      ],
+      "q2_anthropic_t3": [
+        "MT-B1",
+        "MT-E2",
+        "T"
+      ],
+      "q2_perplexity": [],
+      "jaccard_a0_a3": 1.0,
+      "jaccard_a0_pp": 0.0,
+      "jaccard_a3_pp": 0.0,
+      "jaccard_mean": 0.333,
+      "raw_a0": "Q1: HYBRID\nQ2: MT-E2,T,MT-B1",
+      "raw_a3": "Q1: HYBRID\nQ2: MT-E2,T,MT-B1",
+      "raw_pp": "ERROR: Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your API key is correct and active.', 'type': 'invalid_api_key', 'code': 401}}"
+    },
+    {
+      "id": "HMR-3.3",
+      "intended_card": 3,
+      "intended_labels": [
+        "T",
+        "F",
+        "I"
+      ],
+      "hybrid_votes_out_of_3": 2,
+      "q1_anthropic_t0": true,
+      "q1_anthropic_t3": true,
+      "q1_perplexity": null,
+      "q2_anthropic_t0": [
+        "DT",
+        "F",
+        "MT-E2",
+        "T"
+      ],
+      "q2_anthropic_t3": [
+        "DT",
+        "F",
+        "MT-E2",
+        "T"
+      ],
+      "q2_perplexity": [],
+      "jaccard_a0_a3": 1.0,
+      "jaccard_a0_pp": 0.0,
+      "jaccard_a3_pp": 0.0,
+      "jaccard_mean": 0.333,
+      "raw_a0": "Q1: HYBRID\nQ2: T,F,DT,MT-E2",
+      "raw_a3": "Q1: HYBRID\nQ2: T,F,DT,MT-E2",
+      "raw_pp": "ERROR: Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your API key is correct and active.', 'type': 'invalid_api_key', 'code': 401}}"
+    },
+    {
+      "id": "HMR-4.1",
+      "intended_card": 4,
+      "intended_labels": [
+        "T",
+        "F",
+        "DT",
+        "MT-B1"
+      ],
+      "hybrid_votes_out_of_3": 2,
+      "q1_anthropic_t0": true,
+      "q1_anthropic_t3": true,
+      "q1_perplexity": null,
+      "q2_anthropic_t0": [
+        "DT",
+        "F",
+        "MT-B1",
+        "T"
+      ],
+      "q2_anthropic_t3": [
+        "DT",
+        "F",
+        "MT-B1",
+        "MT-E2",
+        "T"
+      ],
+      "q2_perplexity": [],
+      "jaccard_a0_a3": 0.8,
+      "jaccard_a0_pp": 0.0,
+      "jaccard_a3_pp": 0.0,
+      "jaccard_mean": 0.267,
+      "raw_a0": "Q1: HYBRID\nQ2: T,F,DT,MT-B1",
+      "raw_a3": "Q1: HYBRID\nQ2: T,F,DT,MT-B1,MT-E2",
+      "raw_pp": "ERROR: Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your API key is correct and active.', 'type': 'invalid_api_key', 'code': 401}}"
+    },
+    {
+      "id": "HMR-5.1",
+      "intended_card": 5,
+      "intended_labels": [
+        "T",
+        "F",
+        "DT",
+        "I",
+        "MT-B1"
+      ],
+      "hybrid_votes_out_of_3": 2,
+      "q1_anthropic_t0": true,
+      "q1_anthropic_t3": true,
+      "q1_perplexity": null,
+      "q2_anthropic_t0": [
+        "DT",
+        "F",
+        "I",
+        "MT-B1",
+        "T"
+      ],
+      "q2_anthropic_t3": [
+        "DT",
+        "F",
+        "I",
+        "MT-B1",
+        "T"
+      ],
+      "q2_perplexity": [],
+      "jaccard_a0_a3": 1.0,
+      "jaccard_a0_pp": 0.0,
+      "jaccard_a3_pp": 0.0,
+      "jaccard_mean": 0.333,
+      "raw_a0": "Q1: HYBRID\nQ2: T,F,DT,I,MT-B1",
+      "raw_a3": "Q1: HYBRID\nQ2: T,F,DT,I,MT-B1",
+      "raw_pp": "ERROR: Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your API key is correct and active.', 'type': 'invalid_api_key', 'code': 401}}"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "verdict": {
+    "seed_labels": [
+      "I",
+      "T"
+    ],
+    "seed_cardinality": 2,
+    "max_level_constructed": 15,
+    "final_cardinality": 19,
+    "cardinality_at_each_k": {
+      "0": 2,
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 3,
+      "5": 4,
+      "6": 4,
+      "7": 5,
+      "8": 6,
+      "9": 7,
+      "10": 9,
+      "11": 11,
+      "12": 13,
+      "13": 15,
+      "14": 17,
+      "15": 19
+    },
+    "growth_per_level": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "avg_growth_per_level": 1.133,
+    "linear_or_better": true,
+    "saturates_at_level_k": null,
+    "F4_threshold_NOT_REFUTED": "cardinality at k=15 >= 10",
+    "F4_observed_at_k15": 19,
+    "HMR_1_F4_verdict": "NOT_REFUTED",
+    "interpretation": "R-HMR construction starting from HMR-2 seed reaches cardinality 19 at k=15. Linear-or-better growth: True. Saturation (>=90% of 40-label cap) at k=None. HMR-1-F4 (unbounded-cardinality threshold k=15 >= 10): NOT REFUTED."
+  },
+  "trace": [
+    {
+      "level": 0,
+      "labels": [
+        "I",
+        "T"
+      ],
+      "cardinality": 2
+    },
+    {
+      "level": 1,
+      "labels": [
+        "I",
+        "T"
+      ],
+      "cardinality": 2
+    },
+    {
+      "level": 2,
+      "labels": [
+        "I",
+        "T"
+      ],
+      "cardinality": 2
+    },
+    {
+      "level": 3,
+      "labels": [
+        "DT",
+        "I",
+        "T"
+      ],
+      "cardinality": 3
+    },
+    {
+      "level": 4,
+      "labels": [
+        "DT",
+        "I",
+        "T"
+      ],
+      "cardinality": 3
+    },
+    {
+      "level": 5,
+      "labels": [
+        "DT",
+        "I",
+        "MT-L1",
+        "T"
+      ],
+      "cardinality": 4
+    },
+    {
+      "level": 6,
+      "labels": [
+        "DT",
+        "I",
+        "MT-L1",
+        "T"
+      ],
+      "cardinality": 4
+    },
+    {
+      "level": 7,
+      "labels": [
+        "DT",
+        "I",
+        "MT-L1",
+        "MT-L2",
+        "T"
+      ],
+      "cardinality": 5
+    },
+    {
+      "level": 8,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-L1",
+        "MT-L2",
+        "T"
+      ],
+      "cardinality": 6
+    },
+    {
+      "level": 9,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-L1",
+        "MT-L2",
+        "T"
+      ],
+      "cardinality": 7
+    },
+    {
+      "level": 10,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "T"
+      ],
+      "cardinality": 9
+    },
+    {
+      "level": 11,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-J1",
+        "MT-J2",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "T"
+      ],
+      "cardinality": 11
+    },
+    {
+      "level": 12,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-J1",
+        "MT-J2",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "MT-M1",
+        "MT-M2",
+        "T"
+      ],
+      "cardinality": 13
+    },
+    {
+      "level": 13,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-J1",
+        "MT-J2",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "MT-M1",
+        "MT-M2",
+        "MT-N1",
+        "MT-N2",
+        "T"
+      ],
+      "cardinality": 15
+    },
+    {
+      "level": 14,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-J1",
+        "MT-J2",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "MT-M1",
+        "MT-M2",
+        "MT-N1",
+        "MT-N2",
+        "MT-O1",
+        "MT-O2",
+        "T"
+      ],
+      "cardinality": 17
+    },
+    {
+      "level": 15,
+      "labels": [
+        "DT",
+        "I",
+        "MT-E2",
+        "MT-F1",
+        "MT-J1",
+        "MT-J2",
+        "MT-K1",
+        "MT-K2",
+        "MT-L1",
+        "MT-L2",
+        "MT-M1",
+        "MT-M2",
+        "MT-N1",
+        "MT-N2",
+        "MT-O1",
+        "MT-O2",
+        "MT-P1",
+        "MT-P2",
+        "T"
+      ],
+      "cardinality": 19
+    }
+  ]
+}

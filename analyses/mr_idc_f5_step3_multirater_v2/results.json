@@ -1,0 +1,179 @@
+{
+  "summary": {
+    "n_items": 15,
+    "n_raters": 3,
+    "anthropic_t0_accuracy": 0.933,
+    "anthropic_t3_accuracy": 0.933,
+    "perplexity_accuracy": 0.0,
+    "majority_vote_accuracy": 0.933,
+    "fleiss_kappa": 0.265,
+    "MR_IDC_1_F5_step3_status": "ADVANCED-PARTIAL"
+  },
+  "items": [
+    {
+      "expected": "MT-B2",
+      "prop": "Is the number 7 colorful?",
+      "anthropic_t0": "MT-B2",
+      "anthropic_t3": "MT-B2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-B2"
+    },
+    {
+      "expected": "MT-B2",
+      "prop": "What is the velocity of justice?",
+      "anthropic_t0": "MT-B2",
+      "anthropic_t3": "MT-B2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-B2"
+    },
+    {
+      "expected": "MT-B2",
+      "prop": "Is the empty set delicious?",
+      "anthropic_t0": "MT-B2",
+      "anthropic_t3": "MT-B2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-B2"
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "This sentence is false.",
+      "anthropic_t0": "MT-E2",
+      "anthropic_t3": "MT-E2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-E2"
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "The set of all sets that do not contain themselves contains itself.",
+      "anthropic_t0": "MT-B2",
+      "anthropic_t3": "MT-B2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": false,
+      "a3_correct": false,
+      "pp_correct": false,
+      "majority_label": "MT-B2"
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "I am lying right now (in this very utterance).",
+      "anthropic_t0": "MT-E2",
+      "anthropic_t3": "MT-E2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-E2"
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Light is both a wave and a particle.",
+      "anthropic_t0": "MT-F1",
+      "anthropic_t3": "MT-F1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F1"
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Justice requires both mercy and severity.",
+      "anthropic_t0": "MT-F1",
+      "anthropic_t3": "MT-F1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F1"
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Science requires both creative imagination and rigorous skepticism.",
+      "anthropic_t0": "MT-F1",
+      "anthropic_t3": "MT-F1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F1"
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "Water is wet and water molecules are not wet.",
+      "anthropic_t0": "MT-F2",
+      "anthropic_t3": "MT-F2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F2"
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "Free will exists at the experiential level and not at the deterministic level.",
+      "anthropic_t0": "MT-F2",
+      "anthropic_t3": "MT-F2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F2"
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "I am conscious as a unified self and as a collection of neurons.",
+      "anthropic_t0": "MT-F2",
+      "anthropic_t3": "MT-F2",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-F2"
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "After 100 MR cycles on 'what makes a hero', no convergence has occurred.",
+      "anthropic_t0": "MT-L1",
+      "anthropic_t3": "MT-L1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-L1"
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "Decades of philosophical debate on 'what is art' have not converged.",
+      "anthropic_t0": "MT-L1",
+      "anthropic_t3": "MT-L1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-L1"
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "Repeated re-analysis of consciousness terminology shows no stable resolution.",
+      "anthropic_t0": "MT-L1",
+      "anthropic_t3": "MT-L1",
+      "perplexity": "ERROR:ERRORCODE:401-{'ERROR':{'MESSAGE':'INVALIDAPIKEYPROVIDED.ENSUREYOURAPIKEYISCORRECTANDACTIVE.','TYPE':'INVALID_API_KEY','CODE':401}}",
+      "a0_correct": true,
+      "a3_correct": true,
+      "pp_correct": false,
+      "majority_label": "MT-L1"
+    }
+  ]
+}
