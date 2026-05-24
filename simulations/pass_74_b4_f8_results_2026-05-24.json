@@ -1,0 +1,173 @@
+{
+  "items": [
+    {
+      "theory": "naive set theory (Russell-paradox-containing)",
+      "expected": "FMA-1",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nNaive set theory's inconsistency (Russell's paradox: does the set of all non-self-membering sets contain itself?) is a logical contradiction independent of physical laws\u2014it arises from the definitions themselves and cannot be resolved by changing physics or laws of nature.",
+          "parsed": "FMA-1",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nNaive set theory is logically incoherent\u2014the Russell set {x | x \u2209 x} generates a formal contradiction (R \u2208 R \u2194 R \u2209 R) that holds in any possible world with consistent logic and set-membership semantics, regardless of physical laws.",
+          "parsed": "FMA-1",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "Hilbert's program (G\u00f6del-incompleteness-refuted)",
+      "expected": "FMA-1",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nHilbert's program is mathematically impossible regardless of any physics: G\u00f6del's incompleteness theorems prove that any consistent formal system capable of expressing arithmetic cannot be both complete and consistent, which is a logical necessity independent of physical laws or world structure.",
+          "parsed": "FMA-1",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nHilbert's program's refutation by G\u00f6del's incompleteness theorems is a mathematical necessity independent of physical laws: any consistent formal system rich enough to express arithmetic cannot prove all truths within itself, making the program's goal logically impossible regardless of what physics governs any possible world.",
+          "parsed": "FMA-1",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "paraconsistent logic as classical-replacement",
+      "expected": "FMA-1",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nParaconsistent logic as a complete replacement for classical logic is internally incoherent: if T is true and governs all reasoning in W', then any derivation of \"T is false\" would also be true in W' (by paraconsistency), making T both true and false simultaneously\u2014which violates the very coherence condition required for T to be a \"complete framework\" in any possible world.",
+          "parsed": "FMA-1",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nParaconsistent logic as a complete replacement for classical logic is internally incoherent: if it permits true contradictions (A \u2227 \u00acA) while maintaining that logical inference must be reliable, it cannot simultaneously preserve the principle that contradictory premises should not trivialize all conclusions\u2014the very motivation for paraconsistency\u2014making it mathematically self-defeating as a foundational framework regardless of physical laws.",
+          "parsed": "FMA-1",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "behaviorism (Chomsky-Skinner-refuted)",
+      "expected": "FMA-1",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nBehaviorism's core claim\u2014that all behavior is exhaustively explained by stimulus-response conditioning without internal mental states\u2014is logically incoherent because any system capable of *representing* or *responding to* stimuli must internally encode information about those stimuli, making the denial of internal states self-refuting regardless of the physics governing W'.",
+          "parsed": "FMA-1",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nBehaviorism's core claim\u2014that all behavior is explained by stimulus-response and reinforcement history without reference to internal mental states\u2014is logically incoherent because any system capable of *learning* from reinforcement must internally represent and modify its response-mapping based on past experience, making the denial of internal states self-refuting regardless of what physics governs W'.",
+          "parsed": "FMA-1",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "binary 2-valued logic as complete-foundation",
+      "expected": "FMA-1",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nBinary 2-valued logic is a mathematical-logical framework whose completeness or incompleteness is determined by formal theorems (G\u00f6del's incompleteness, semantic completeness results) that hold necessarily in any coherent logical system, regardless of physical laws\u2014making its claim to be a \"complete foundation\" internally impossible to satisfy in any possible world.",
+          "parsed": "FMA-1",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nBinary 2-valued logic is a mathematical-logical framework whose internal structure (law of non-contradiction, law of excluded middle) is true by definition within any consistent formal system, making it impossible to coherently imagine a world where T is true as a complete foundation yet simultaneously violates its own defining principles.",
+          "parsed": "FMA-1",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "geocentric astronomy",
+      "expected": "plain-F",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nGeocentric astronomy is logically impossible regardless of physics because any consistent dynamical system with multiple massive bodies must have some reference frame where the equations of motion are simpler (an inertial frame), and privileging Earth's frame as absolutely central while other bodies orbit it requires either violating Newton's laws or adding ad-hoc forces that make the theory internally incoherent\u2014a mathematical-logical constraint independent of which specific physics governs W'.",
+          "parsed": "FMA-1",
+          "correct": false
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nGeocentric astronomy is logically impossible as a complete framework because if Earth is the center and all celestial bodies orbit it, the mathematical/geometric relationships required to produce the observed motions of planets (retrograde motion, varying brightness, orbital periods) would necessitate such baroque epicycles and violations of uniform circular motion that the theory becomes internally incoherent\u2014no consistent set of physical laws in any possible world W' could make geocentrism both true and explanatorily complete without collapsing into logical contradiction.",
+          "parsed": "FMA-1",
+          "correct": false
+        }
+      }
+    },
+    {
+      "theory": "Newtonian mechanics (pre-relativistic)",
+      "expected": "plain-F",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nNewtonian mechanics is internally coherent and mathematically consistent; it fails empirically (not logically), so a possible world W' with different physical constants or initial conditions could exist where Newtonian predictions match all observations\u2014making it plain-F rather than FMA-1, but the question's framing asks whether counterexamples could exist under T-being-true, and since Newtonian mechanics is logically sound (not self-contradictory like \"married bachelor\"), the answer is NO only if we interpret this as asking whether T is logically impossible; actually, Newtonian mechanics IS logically possible and coherent, so the answer should be YES\u2014a world with slower speeds and weaker gravity could make Newtonian mechanics empirically adequate.\n\n**YES**\n\nNewtonian mechanics is logically and mathematically coherent; a possible world W' with sufficiently weak relativistic effects (low veloc",
+          "parsed": "FMA-1",
+          "correct": false
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nNewtonian mechanics is not internally incoherent or logically impossible\u2014it's a mathematically consistent framework that successfully describes mechanics in regimes where relativistic and quantum effects are negligible; rather, it fails empirically in extreme regimes (high velocities, strong gravity, atomic scales) where different physics applies, making it plain-F (falsified by counterexamples in our world), not FMA-1.",
+          "parsed": "FMA-1",
+          "correct": false
+        }
+      }
+    },
+    {
+      "theory": "phlogiston theory of combustion",
+      "expected": "plain-F",
+      "responses": {
+        "temp=0.0": {
+          "raw": "YES\nIn a possible world W' with different chemical composition and reaction mechanisms, phlogiston could be a real substance released during combustion that correctly explains combustion phenomena under W's alternative physics, making the theory internally coherent even though it fails in our actual world.",
+          "parsed": "plain-F",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "YES\nIn a possible world W' with different chemical composition and reaction mechanisms, phlogiston could be a real substance released during combustion that correctly explains combustion phenomena under that world's alternative physics and chemistry.",
+          "parsed": "plain-F",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "luminiferous aether",
+      "expected": "plain-F",
+      "responses": {
+        "temp=0.0": {
+          "raw": "YES\nIn a possible world W' with different electromagnetic properties and light propagation mechanisms, a luminiferous aether could coherently serve as the true medium transmitting light waves, with the null results of our world's experiments (like Michelson-Morley) explained by different aether properties or motion laws in W'.",
+          "parsed": "plain-F",
+          "correct": true
+        },
+        "temp=0.7": {
+          "raw": "YES\nIn a possible world W' with different relativistic structure where light requires a medium and electromagnetic waves propagate through a substance with appropriate mechanical properties, luminiferous aether could coherently serve as the true explanatory framework for optical phenomena.",
+          "parsed": "plain-F",
+          "correct": true
+        }
+      }
+    },
+    {
+      "theory": "spontaneous generation (life from non-life)",
+      "expected": "plain-F",
+      "responses": {
+        "temp=0.0": {
+          "raw": "NO\n\nSpontaneous generation is logically impossible regardless of physics: it requires life (organized, self-replicating systems with heritable information) to arise from non-life without any pre-existing replicator, but this violates the logical principle that information-bearing complexity cannot emerge from pure chemistry without a mechanism to preserve and propagate variation\u2014a contradiction that persists even if we alter physical laws, since it concerns the definitional boundary between living and non-living systems.",
+          "parsed": "FMA-1",
+          "correct": false
+        },
+        "temp=0.7": {
+          "raw": "NO\n\nSpontaneous generation is logically incoherent as a complete framework: it asserts that life (self-replicating, organized systems with heritable information) arises from non-life (matter lacking these properties), but provides no mechanism by which the defining properties of life could emerge, making it not merely empirically false but conceptually self-contradictory regardless of what physics governs W'.",
+          "parsed": "FMA-1",
+          "correct": false
+        }
+      }
+    }
+  ],
+  "raters": [
+    "temp=0.0",
+    "temp=0.7"
+  ],
+  "framing": "explicit modal-physics-malleability",
+  "accuracy_temp=0.0": "7/10 = 70%",
+  "accuracy_temp=0.7": "7/10 = 70%",
+  "inter_rater_agreement": "10/10 = 100%",
+  "elapsed_seconds": 45.8
+}
