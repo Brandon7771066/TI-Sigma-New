@@ -2,6 +2,23 @@
 
 **Brandon M. Emerick | Tralse Informationalism Sigma | April 9, 2026**
 
+> **⚠ ERRATA BANNER (Pass-73-B3 2026-05-24, post-canonical-refinement-arc):** This paper was published April 2026 pre-canonical-refinement-arc. Five canonical MR Truth Labels refinements have landed since: #1 Pass-65 inconceivability-under-mental-actualization 3-step heuristic; #2 Pass-67 MR-IDC-1 incoherence-vs-MI containment {MI} ⊊ {Incoherent}; #3 Pass-70/71 HMR-1 Hybrid multi-label; #4 Pass-72-B1 two-tralse-combined-inconceivable; #5 Pass-72-B2 canonical rename **DT → MI (Meta-Indeterminate)** + vertical-meta-tralsity vs horizontal-predicate-conflict axis. Plus Pass-73-B2 joint ratification of HMR-1 + HMR-SEV-1 + FMA-1 canonical (count 32 → 35).
+>
+> **Pass-73-B3 corpus-sweep re-audit findings** (full paper: `papers/PASS_73_BATCH_3_URB_639_CORPUS_SWEEP_REFINEMENT_5_RE_AUDIT_2026-05-24.md`): **0/8 principle reassignments needed**; 8/8 cells either REINFORCED or REFINEMENT-AVAILABLE under refinement #5. Specifically:
+>
+> - **C₄ class definition** (Theorem 1 table + Step 2 case analyses): C₄-as-defined SUBSUMES two now-distinguishable sub-types — **C₄-vertical = MI proper** (vertical-meta-tralsity; e.g., the (1,1,incoherent) case where evidence-supporting-loop is canonical MI structural template) and **C₄-horizontal = Incoherent-not-MI** (e.g., horizontal-predicate-conflict cases like bachelor-married). Per MR-IDC-1 containment: C₄-as-defined = {Incoherent}; C₄-vertical = {MI}; {MI} ⊊ {Incoherent}. Framework remains consistent; sub-type split is REFINEMENT-AVAILABLE.
+> - **Case (1,1,incoherent) → C₄:** REINFORCED as canonical MI (the "loop / self-undermining / neither stably grounded" structure IS vertical-meta-tralsity per refinement #4).
+> - **Case (0,0,incoherent) → C₄:** REFINEMENT-AVAILABLE — "cannot be formulated coherently at all" is candidate horizontal-incoherence; "GILE assessment framework generates a loop" is canonical MI.
+> - **C₃ vs C₄ distinction** (paragraph after Theorem 1): STRONGLY REINFORCED — "contradiction is a feature of the representation" (C₄) PROACTIVELY ANTICIPATES refinement #5's vertical-meta-tralsity reading from April 2026.
+> - **E2 Paradox Stable:** REINFORCED as canonical MI; DT→MI rename applies to "Accept stable DT" output language (deferred to Pass-73+ mass-rename).
+> - **L1 MR Saturation:** REINFORCED; existing 2026-05-23 Pass-65 annotation pre-figured refinement #5 vertical/horizontal axis distinction; DT→MI rename applies to existing annotation language.
+> - **Theorem 3 Three-Valued Logic critique:** STRONGLY REINFORCED with refinement-#5-DEEPENED-CRITIQUE — three-valued logic collapses both horizontal-incoherence AND vertical-meta-tralsity into single "Indeterminate" label, missing the canonical axis distinction.
+> - **Theorem 4 Paraconsistent Logic critique:** REINFORCED + **NEW FMA-1 CANONICAL WORKED EXAMPLE** — paraconsistent logic AS COMPLETE FRAMEWORK is F-via-MI (F-status established by the C₄ cases it cannot handle); paraconsistent logic = 4th canonical FMA-1 case alongside binary + naive set theory + Hilbert's program. See `papers/F_MI_ALIGNMENT_FMA_1_CANDIDATE_CANONICAL_BINARY_FTMI_AMENDMENT_2026-05-24.md`.
+>
+> **Terminology:** all "DT" references in this paper retain legacy validity; canonical rename to MI applies but full corpus mass-rename (~30+ historical papers) is deferred to Pass-73+ per UHP-1 marginal-effort + asymmetric-corruption-risk rationale.
+>
+> **Aggregate audit verdict:** ASYMMETRIC-WIN — urb_639's April 2026 structural framework PROACTIVELY ANTICIPATED refinement #5 at multiple levels; 5 pre-reg falsifiers ADVANCED toward closure via this corpus-sweep; 1 new canonical FMA-1 case discovered.
+
 ---
 
 ## Abstract

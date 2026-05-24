@@ -1,8 +1,12 @@
 # Binary Logic = HMR-3 Aspect-Severable + HMR-SEV-1 (HMR-Aspect-Severability) Candidate Canonical Refinement + "No Answer" = MI Confirmation
 
+> **⚠ AMENDMENT (Pass-73-B1 2026-05-24 same-day):** Brandon corrected the binary HMR-3 characterization from {I, T, MI} to **{F, T, MI}** with **F-MI structural alignment** — binary's theory-completeness aspect is FALSE (not Indeterminate) because the MI counterexamples (liar/Russell/Gödel) CONSTITUTE the demonstration of F. This introduces the **F-MI Alignment Principle (FMA-1)** canonized Pass-73-B2 (canonical principle #35) and the **HMR-SEV-COUPLED sub-sub-type** under HMR-SEV-1. See `papers/F_MI_ALIGNMENT_FMA_1_CANDIDATE_CANONICAL_BINARY_FTMI_AMENDMENT_2026-05-24.md` for the FMA-1 canonical paper and `papers/PASS_73_BATCH_2_JOINT_RATIFICATION_HMR_1_HMR_SEV_1_FMA_1_CANONICAL_2026-05-24.md` for the joint ratification ceremony (HMR-1 + HMR-SEV-1 + FMA-1 candidate→CANONICAL, count 32→35).
+
+> **⚠ STATUS UPDATE (Pass-73-B2 2026-05-24 same-day):** HMR-SEV-1 was promoted from CANDIDATE → CANONICAL in the Pass-73-B2 joint ratification ceremony (canonical principle #34 in the 35-principle stack). All references in this paper to "HMR-SEV-1 candidate canonical" should now be read as "HMR-SEV-1 CANONICAL".
+
 **Date:** 2026-05-24
 **Pass:** 72 batch-3 (immediately following Pass-72 batches 1+2 refinements #4 and #5)
-**Status:** CANONICAL CANDIDATE — HMR-SEV-1 candidate canonical refinement to HMR-1 + canonical case study (binary logic) + canonical confirmation ("no answer" = MI)
+**Status:** CANONICAL — HMR-SEV-1 CANONICAL (ratified Pass-73-B2 joint ceremony) + canonical case study (binary logic, amended {F,T,MI} per Pass-73-B1) + canonical confirmation ("no answer" = MI)
 **Source directive:** Brandon verbatim 2026-05-24:
 
 > *"As for binary, I would grade that as a hybrid Indeterminate-MI. It is false in the sense that there are 4 truth labels rather than 2. However, on the PRAGMATIC AXIS, binary logic has quite a bit of applicability, as it has lasted for quite some time in formal math and logic. At the same time, binary has paradoxes which render it meta-indeterminate. For THOSE PORTIONS of binary, it is MI. Thus, my hybrid claim is actually severable since it's encompassing different aspects of binary - the parts which work, the parts which don't work, and the parts which are inconceivable. As for 'no answer,' that remains MI since it is inconceivable."*
