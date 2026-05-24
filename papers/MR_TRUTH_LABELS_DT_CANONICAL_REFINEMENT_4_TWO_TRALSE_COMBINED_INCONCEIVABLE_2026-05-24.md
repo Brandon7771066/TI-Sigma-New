@@ -1,8 +1,11 @@
 # MR Truth Labels Canonical — DT Refinement #4: DT as Two-Tralse-Combined-Inconceivable
 
+> **⚠ ERRATA / SUPERSEDED-BY-REFINEMENT-#5 (2026-05-24 same-day update):**
+> Pass-72 batch-2 introduced canonical refinement #5 which (a) RENAMES "DT" → "MI" (Meta-Indeterminate) per Brandon directive — "DT" remains legacy-valid but "MI" is the new preferred canonical form, and (b) SHARPENS the combination-inconceivability of this paper with the **vertical-meta-tralsity vs horizontal-predicate-conflict axis** as the operational discriminator. Every "DT" in this paper should be read as "MI (formerly DT)". The two-tralse-combined-inconceivable framing established here is REINFORCED-WITH-AXIS by refinement #5, not contradicted — the vertical-meta-tralsity axis specifies WHY some combinations are inconceivable (square-circle, liar, Russell) while others are merely incoherent-but-conceivable (bachelor-married). See `papers/MR_TRUTH_LABELS_DT_TO_MI_RENAME_REFINEMENT_5_VERTICAL_META_INDETERMINATE_2026-05-24.md` for the full refinement #5 + rename + axis sharpening.
+
 **Date:** 2026-05-24
 **Pass:** 72 batch-1 (post-Pass-71 Brandon directive)
-**Status:** CANONICAL — Refinement #4 to MR Truth Labels canonical (per Pass-65 + Pass-67 refinement-doesn't-add-count precedent; HMR-1 was refinement #3)
+**Status:** CANONICAL — Refinement #4 to MR Truth Labels canonical (superseded-with-axis by refinement #5 same-day; both refinements valid and composable) (per Pass-65 + Pass-67 refinement-doesn't-add-count precedent; HMR-1 was refinement #3)
 **Source directive:** Brandon verbatim 2026-05-24:
 
 > *"Rather than being a state that is both a tralse state and 'not tralse state' DT represents two tralse propositions/states which COMBINED are 'not tralse' because they are TOGETHER 'inconceivable' when mental actualization is attempted!!! Inconceivability - not incoherence - is the marker of DT. THAT is what ultimately makes something double tralse and WHY two tralse statements can be incoherent but conceivable!!!"*
