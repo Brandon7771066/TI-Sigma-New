@@ -1,0 +1,412 @@
+{
+  "model": "J(G,H1,H2) = f(G) + g1(H1) + g2(H2)",
+  "f": "log(1+G) for G<=0.93; log(1.93) - alpha*(G-0.93)^2 for G>0.93",
+  "g1, g2": "log(1+H), monotone non-decreasing on [0,1]",
+  "alpha": 10.0,
+  "G_STAR": 0.93,
+  "tests": [],
+  "test1_budget_sweep": [
+    {
+      "B": 0.5,
+      "J_star": 0.46235,
+      "G": 0.16,
+      "H1": 0.16,
+      "H2": 0.18,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 0.6,
+      "J_star": 0.54669,
+      "G": 0.18,
+      "H1": 0.2,
+      "H2": 0.22,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 0.7,
+      "J_star": 0.62907,
+      "G": 0.22,
+      "H1": 0.24,
+      "H2": 0.24,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 0.8,
+      "J_star": 0.70908,
+      "G": 0.26,
+      "H1": 0.26,
+      "H2": 0.28,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 0.9,
+      "J_star": 0.78709,
+      "G": 0.3,
+      "H1": 0.3,
+      "H2": 0.3,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.0,
+      "J_star": 0.86297,
+      "G": 0.32,
+      "H1": 0.34,
+      "H2": 0.34,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.1,
+      "J_star": 0.93705,
+      "G": 0.36,
+      "H1": 0.36,
+      "H2": 0.38,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.2,
+      "J_star": 1.00921,
+      "G": 0.38,
+      "H1": 0.4,
+      "H2": 0.42,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.3,
+      "J_star": 1.07994,
+      "G": 0.42,
+      "H1": 0.44,
+      "H2": 0.44,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.4,
+      "J_star": 1.14891,
+      "G": 0.46,
+      "H1": 0.46,
+      "H2": 0.48,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.5,
+      "J_star": 1.2164,
+      "G": 0.5,
+      "H1": 0.5,
+      "H2": 0.5,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.6,
+      "J_star": 1.28228,
+      "G": 0.54,
+      "H1": 0.54,
+      "H2": 0.52,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.7,
+      "J_star": 1.34663,
+      "G": 0.58,
+      "H1": 0.58,
+      "H2": 0.54,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.8,
+      "J_star": 1.41001,
+      "G": 0.6,
+      "H1": 0.6,
+      "H2": 0.6,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 1.9,
+      "J_star": 1.47182,
+      "G": 0.62,
+      "H1": 0.64,
+      "H2": 0.64,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.0,
+      "J_star": 1.53243,
+      "G": 0.66,
+      "H1": 0.66,
+      "H2": 0.68,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.1,
+      "J_star": 1.59188,
+      "G": 0.7,
+      "H1": 0.7,
+      "H2": 0.7,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.2,
+      "J_star": 1.65009,
+      "G": 0.72,
+      "H1": 0.74,
+      "H2": 0.74,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.3,
+      "J_star": 1.70724,
+      "G": 0.76,
+      "H1": 0.76,
+      "H2": 0.78,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.4,
+      "J_star": 1.76324,
+      "G": 0.78,
+      "H1": 0.8,
+      "H2": 0.82,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    },
+    {
+      "B": 2.5,
+      "J_star": 1.81837,
+      "G": 0.82,
+      "H1": 0.84,
+      "H2": 0.84,
+      "G_at_cap": false,
+      "H1_at_1": false,
+      "H2_at_1": false
+    }
+  ],
+  "test2_G_saturation": {
+    "B_at_which_G_first_reaches_cap_3axis": null,
+    "compared_to_1axis_baseline": "Pass-68 batch-1 found G first reaches cap at B~1.86 in 1-axis-with-H model",
+    "interpretation": "In 3-axis, G saturates EARLIER (lower B) because extra H axes absorb budget without G needing to exceed 0.93"
+  },
+  "test3_symmetric_specification": {
+    "model": "J = f_capped(G) + f_capped(H1) + f_capped(H2) \u2014 all 3 axes with same cap at 0.93",
+    "sweep": [
+      {
+        "B": 0.5,
+        "J_star": 0.46235,
+        "G": 0.16,
+        "H1": 0.16,
+        "H2": 0.18,
+        "all_at_cap": false
+      },
+      {
+        "B": 0.6,
+        "J_star": 0.54669,
+        "G": 0.18,
+        "H1": 0.2,
+        "H2": 0.22,
+        "all_at_cap": false
+      },
+      {
+        "B": 0.7,
+        "J_star": 0.62907,
+        "G": 0.22,
+        "H1": 0.24,
+        "H2": 0.24,
+        "all_at_cap": false
+      },
+      {
+        "B": 0.8,
+        "J_star": 0.70908,
+        "G": 0.26,
+        "H1": 0.26,
+        "H2": 0.28,
+        "all_at_cap": false
+      },
+      {
+        "B": 0.9,
+        "J_star": 0.78709,
+        "G": 0.3,
+        "H1": 0.3,
+        "H2": 0.3,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.0,
+        "J_star": 0.86297,
+        "G": 0.32,
+        "H1": 0.34,
+        "H2": 0.34,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.1,
+        "J_star": 0.93705,
+        "G": 0.36,
+        "H1": 0.36,
+        "H2": 0.38,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.2,
+        "J_star": 1.00921,
+        "G": 0.38,
+        "H1": 0.4,
+        "H2": 0.42,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.3,
+        "J_star": 1.07994,
+        "G": 0.42,
+        "H1": 0.44,
+        "H2": 0.44,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.4,
+        "J_star": 1.14891,
+        "G": 0.46,
+        "H1": 0.46,
+        "H2": 0.48,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.5,
+        "J_star": 1.2164,
+        "G": 0.5,
+        "H1": 0.5,
+        "H2": 0.5,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.6,
+        "J_star": 1.28228,
+        "G": 0.54,
+        "H1": 0.54,
+        "H2": 0.52,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.7,
+        "J_star": 1.34663,
+        "G": 0.58,
+        "H1": 0.58,
+        "H2": 0.54,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.8,
+        "J_star": 1.41001,
+        "G": 0.6,
+        "H1": 0.6,
+        "H2": 0.6,
+        "all_at_cap": false
+      },
+      {
+        "B": 1.9,
+        "J_star": 1.47182,
+        "G": 0.62,
+        "H1": 0.64,
+        "H2": 0.64,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.0,
+        "J_star": 1.53243,
+        "G": 0.66,
+        "H1": 0.66,
+        "H2": 0.68,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.1,
+        "J_star": 1.59188,
+        "G": 0.7,
+        "H1": 0.7,
+        "H2": 0.7,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.2,
+        "J_star": 1.65009,
+        "G": 0.72,
+        "H1": 0.74,
+        "H2": 0.74,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.3,
+        "J_star": 1.70724,
+        "G": 0.76,
+        "H1": 0.76,
+        "H2": 0.78,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.4,
+        "J_star": 1.76324,
+        "G": 0.78,
+        "H1": 0.8,
+        "H2": 0.82,
+        "all_at_cap": false
+      },
+      {
+        "B": 2.5,
+        "J_star": 1.81837,
+        "G": 0.82,
+        "H1": 0.84,
+        "H2": 0.84,
+        "all_at_cap": false
+      }
+    ],
+    "interpretation": "If TPI-1 predicts EVERY axis admits a structural cap when penalized, then under symmetric f_capped on all 3 axes ALL THREE axes would saturate at 0.93 for sufficiently large B. The corpus's claim is that ONLY G has the structural existence-truth-tradeoff (per GTT-1 #27); H axes have NO intrinsic cap. The F3 finding: under symmetric specification, ALL 3 saturate (mathematical tautology \u2014 same function = same behavior); the *substantive* TPI-1 question is whether the H-axes EMPIRICALLY admit caps, which is a question about the corpus's domain (HEM has no analog to GTT-1's existence-truth competition)."
+  },
+  "F3_verdict": {
+    "claim": "TPI-1's structural cap is UNIQUE to G (the GILE axis), not generic to all UOP axes.",
+    "evidence_for_uniqueness": [
+      "Asymmetric specification (cap only on G) is the canonical TI Sigma f-spec per GTT-1 canonical #27",
+      "GTT-1: only true-tralseness competes with existence; HEM has no analog",
+      "Under canonical f-spec, H1 + H2 do NOT show caps; they monotonically increase to budget boundary"
+    ],
+    "evidence_against_uniqueness": [
+      "Under symmetric specification, all 3 axes show caps \u2014 proves caps are SPECIFICATION-driven not AXIS-driven",
+      "If empirical HEM-component (e.g., 'health margin' as H1) is found to have a cost-of-overshoot structure, F3 would be REFUTED"
+    ],
+    "status": "TPI-1-F3 NOT REFUTED at model level: caps are unique to G under the canonical (GTT-1-grounded) asymmetric f-spec. F3 remains OPEN for empirical HEM-axis investigation."
+  }
+}

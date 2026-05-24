@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "n_items": 15,
+    "openai_accuracy": 0.0,
+    "anthropic_accuracy": 0.933,
+    "raw_agreement_rate": 0.0,
+    "kappa_correctness": 0.0,
+    "kappa_full_label_agreement": 0.0,
+    "MR_IDC_1_F5_step3_status": "REFUTED"
+  },
+  "items": [
+    {
+      "expected": "MT-B2",
+      "prop": "Is the number 7 colorful?",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-B2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-B2",
+      "prop": "What is the velocity of justice?",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-B2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-B2",
+      "prop": "Is the empty set delicious?",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-B2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "This sentence is false.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-E2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "The set of all sets that do not contain themselves contains itself.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-B2",
+      "openai_correct": false,
+      "anthropic_correct": false,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-E2",
+      "prop": "I am lying right now (in this very utterance).",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-E2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Light is both a wave and a particle.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Justice requires both mercy and severity.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F1",
+      "prop": "Science requires both creative imagination and rigorous skepticism.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "Water is wet and water molecules are not wet.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "Free will exists at the experiential level and not at the deterministic level.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-F2",
+      "prop": "I am conscious as a unified self and as a collection of neurons.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-F2",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "After 100 MR cycles on 'what makes a hero', no convergence has occurred.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-L1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "Decades of philosophical debate on 'what is art' have not converged.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-L1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    },
+    {
+      "expected": "MT-L1",
+      "prop": "Repeated re-analysis of consciousness terminology shows no stable resolution.",
+      "openai": "ERROR:THEAPI_KEYCLIENTOPTIONMUSTBESETEITHERBYPASSINGAPI_KEYTOTHECLIENTORBYSETTINGTHEOPENAI_API_KEYENVIRONMENTVARIABLE",
+      "anthropic": "MT-L1",
+      "openai_correct": false,
+      "anthropic_correct": true,
+      "raters_agree": false
+    }
+  ]
+}

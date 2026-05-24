@@ -1,0 +1,128 @@
+{
+  "passes_audited": [
+    55,
+    67
+  ],
+  "n_passes": 13,
+  "per_pass": [
+    {
+      "pass": 55,
+      "papers": 7,
+      "Q1": 1,
+      "Q2": 5,
+      "Q3": 3.5,
+      "Q": 6.35
+    },
+    {
+      "pass": 56,
+      "papers": 1,
+      "Q1": 0,
+      "Q2": 1,
+      "Q3": 0.0,
+      "Q": 1.0
+    },
+    {
+      "pass": 57,
+      "papers": 3,
+      "Q1": 0,
+      "Q2": 3,
+      "Q3": 1.25,
+      "Q": 3.125
+    },
+    {
+      "pass": 58,
+      "papers": 3,
+      "Q1": 0,
+      "Q2": 3,
+      "Q3": 0.33,
+      "Q": 3.033
+    },
+    {
+      "pass": 59,
+      "papers": 2,
+      "Q1": 0,
+      "Q2": 0,
+      "Q3": 6.0,
+      "Q": 0.6
+    },
+    {
+      "pass": 60,
+      "papers": 2,
+      "Q1": 0,
+      "Q2": 1,
+      "Q3": 0.0,
+      "Q": 1.0
+    },
+    {
+      "pass": 61,
+      "papers": 3,
+      "Q1": 3,
+      "Q2": 0,
+      "Q3": 7.0,
+      "Q": 3.7
+    },
+    {
+      "pass": 62,
+      "papers": 4,
+      "Q1": 1,
+      "Q2": 6,
+      "Q3": 1.0,
+      "Q": 7.1
+    },
+    {
+      "pass": 63,
+      "papers": 6,
+      "Q1": 0,
+      "Q2": 3,
+      "Q3": 0.0,
+      "Q": 3.0
+    },
+    {
+      "pass": 64,
+      "papers": 3,
+      "Q1": 0,
+      "Q2": 10,
+      "Q3": 0.5,
+      "Q": 10.05
+    },
+    {
+      "pass": 65,
+      "papers": 6,
+      "Q1": 0,
+      "Q2": 9,
+      "Q3": 0.35,
+      "Q": 9.035
+    },
+    {
+      "pass": 66,
+      "papers": 8,
+      "Q1": 0,
+      "Q2": 10,
+      "Q3": 0.42,
+      "Q": 10.042
+    },
+    {
+      "pass": 67,
+      "papers": 9,
+      "Q1": 8,
+      "Q2": 10,
+      "Q3": 0.1,
+      "Q": 18.01
+    }
+  ],
+  "Q_pre_baseline": {
+    "Q1_mean": 1.0,
+    "Q2_mean": 4.692,
+    "Q3_mean": 1.573,
+    "Q_mean": 5.85
+  },
+  "thresholds_for_UHP_1_F5": {
+    "REFUTED_below": 4.68,
+    "INDETERMINATE_band": [
+      4.68,
+      7.02
+    ],
+    "NOT_REFUTED_above": 7.02
+  },
+  "note": "Heuristic regex-based audit. True baseline requires manual classification. Q1 likely under-counted (closures often phrased as 'NOT REFUTED' or 'ADVANCED' rather than explicit 'CLOSED'). Q2 likely well-counted. Q3 likely over-counted (any mention of 'edited' or 'applied' triggers; not all are instantiation acts)."
+}
