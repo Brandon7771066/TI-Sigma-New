@@ -1,2 +1,0 @@
-import Batteries.Linter.UnreachableTactic
-import Batteries.Linter.UnnecessarySeqFocus
