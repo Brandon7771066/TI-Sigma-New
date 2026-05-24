@@ -1,0 +1,414 @@
+{
+  "threshold": 0.93,
+  "alpha_default": 10.0,
+  "P1_sweep": [
+    {
+      "B": 0.1,
+      "G_star": 0.05,
+      "H_star": 0.05,
+      "J_star": 0.09758032833886408,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.15000000000000002,
+      "G_star": 0.07500000000000001,
+      "H_star": 0.07500000000000001,
+      "J_star": 0.14464132315925216,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.20000000000000004,
+      "G_star": 0.10000000000000002,
+      "H_star": 0.10000000000000002,
+      "J_star": 0.19062035960864987,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.25000000000000006,
+      "G_star": 0.12500000000000003,
+      "H_star": 0.12500000000000003,
+      "J_star": 0.2355660713127669,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.30000000000000004,
+      "G_star": 0.15000000000000002,
+      "H_star": 0.15000000000000002,
+      "J_star": 0.27952388475031725,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.3500000000000001,
+      "G_star": 0.17500000000000004,
+      "H_star": 0.17500000000000004,
+      "J_star": 0.32253629519224464,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.40000000000000013,
+      "G_star": 0.20000000000000007,
+      "H_star": 0.20000000000000007,
+      "J_star": 0.3646431135879096,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.45000000000000007,
+      "G_star": 0.22500000000000003,
+      "H_star": 0.22500000000000003,
+      "J_star": 0.40588168799338076,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.5000000000000001,
+      "G_star": 0.25000000000000006,
+      "H_star": 0.25000000000000006,
+      "J_star": 0.44628710262841953,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.5500000000000002,
+      "G_star": 0.2750000000000001,
+      "H_star": 0.2750000000000001,
+      "J_star": 0.48589235722077917,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.6000000000000002,
+      "G_star": 0.3000000000000001,
+      "H_star": 0.3000000000000001,
+      "J_star": 0.5247285289349821,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.6500000000000001,
+      "G_star": 0.32500000000000007,
+      "H_star": 0.32500000000000007,
+      "J_star": 0.5628249188763713,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.7000000000000002,
+      "G_star": 0.3500000000000001,
+      "H_star": 0.3500000000000001,
+      "J_star": 0.6002091849006763,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.7500000000000002,
+      "G_star": 0.3750000000000001,
+      "H_star": 0.3750000000000001,
+      "J_star": 0.6369074622370692,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.8000000000000002,
+      "G_star": 0.4000000000000001,
+      "H_star": 0.4000000000000001,
+      "J_star": 0.672944473242426,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.8500000000000002,
+      "G_star": 0.4250000000000001,
+      "H_star": 0.4250000000000001,
+      "J_star": 0.7083436274412278,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.9000000000000002,
+      "G_star": 0.4500000000000001,
+      "H_star": 0.4500000000000001,
+      "J_star": 0.7431271128649664,
+      "binding_threshold": false
+    },
+    {
+      "B": 0.9500000000000003,
+      "G_star": 0.47500000000000014,
+      "H_star": 0.47500000000000014,
+      "J_star": 0.7773159795835665,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.0000000000000004,
+      "G_star": 0.5,
+      "H_star": 0.5000000000000004,
+      "J_star": 0.810930216216329,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.0500000000000003,
+      "G_star": 0.525,
+      "H_star": 0.5250000000000002,
+      "J_star": 0.84398882011875,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.1000000000000005,
+      "G_star": 0.55,
+      "H_star": 0.5500000000000005,
+      "J_star": 0.8765098618623108,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.1500000000000004,
+      "G_star": 0.5750000000000001,
+      "H_star": 0.5750000000000003,
+      "J_star": 0.908510544555193,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.2000000000000004,
+      "G_star": 0.6,
+      "H_star": 0.6000000000000004,
+      "J_star": 0.9400072584914716,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.2500000000000004,
+      "G_star": 0.625,
+      "H_star": 0.6250000000000004,
+      "J_star": 0.971015631563402,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.3000000000000005,
+      "G_star": 0.65,
+      "H_star": 0.6500000000000005,
+      "J_star": 1.0015505758249788,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.3500000000000005,
+      "G_star": 0.675,
+      "H_star": 0.6750000000000005,
+      "J_star": 1.0316263305540598,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.4000000000000006,
+      "G_star": 0.7000000000000001,
+      "H_star": 0.7000000000000005,
+      "J_star": 1.0612565021243412,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.4500000000000006,
+      "G_star": 0.725,
+      "H_star": 0.7250000000000006,
+      "J_star": 1.0904541009666464,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.5000000000000004,
+      "G_star": 0.75,
+      "H_star": 0.7500000000000004,
+      "J_star": 1.1192315758708458,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.5500000000000005,
+      "G_star": 0.775,
+      "H_star": 0.7750000000000005,
+      "J_star": 1.1476008458547584,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.6000000000000005,
+      "G_star": 0.8,
+      "H_star": 0.8000000000000005,
+      "J_star": 1.1755733298042383,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.6500000000000006,
+      "G_star": 0.8250000000000001,
+      "H_star": 0.8250000000000005,
+      "J_star": 1.20315997406891,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.7000000000000006,
+      "G_star": 0.85,
+      "H_star": 0.8500000000000006,
+      "J_star": 1.2303712781804672,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.7500000000000007,
+      "G_star": 0.875,
+      "H_star": 0.8750000000000007,
+      "J_star": 1.2572173188447486,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.8000000000000007,
+      "G_star": 0.9,
+      "H_star": 0.9000000000000007,
+      "J_star": 1.28370777234479,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.8500000000000008,
+      "G_star": 0.925,
+      "H_star": 0.9250000000000007,
+      "J_star": 1.3098519354794953,
+      "binding_threshold": false
+    },
+    {
+      "B": 1.9000000000000008,
+      "G_star": 0.93,
+      "H_star": 0.9700000000000008,
+      "J_star": 1.3355535456666918,
+      "binding_threshold": true
+    },
+    {
+      "B": 1.9500000000000006,
+      "G_star": 0.93,
+      "H_star": 1.0,
+      "J_star": 1.3506671834767396,
+      "binding_threshold": true
+    },
+    {
+      "B": 2.0000000000000004,
+      "G_star": 0.93,
+      "H_star": 1.0,
+      "J_star": 1.3506671834767396,
+      "binding_threshold": true
+    }
+  ],
+  "P1_phase_transition": {
+    "first_budget_at_threshold": 1.9000000000000008,
+    "saturation_persists": true,
+    "phase_transition_detected": true
+  },
+  "P2_strategic_trades": [
+    {
+      "G_before": 0.95,
+      "H_before": 0.5,
+      "J_before": 1.0589851110249586,
+      "G_after": 0.93,
+      "H_after": 0.5199999999999999,
+      "J_after": 1.0762303377749793,
+      "delta_J": 0.017245226750020715,
+      "trade_improves_J": true
+    },
+    {
+      "G_before": 0.97,
+      "H_before": 0.5,
+      "J_before": 1.0469851110249588,
+      "G_after": 0.93,
+      "H_after": 0.5399999999999999,
+      "J_after": 1.089302419342332,
+      "delta_J": 0.042317308317373126,
+      "trade_improves_J": true
+    },
+    {
+      "G_before": 0.99,
+      "H_before": 0.5,
+      "J_before": 1.0269851110249588,
+      "G_after": 0.93,
+      "H_after": 0.5599999999999999,
+      "J_after": 1.10220582417824,
+      "delta_J": 0.07522071315328116,
+      "trade_improves_J": true
+    },
+    {
+      "G_before": 1.0,
+      "H_before": 0.5,
+      "J_before": 1.0139851110249587,
+      "G_after": 0.93,
+      "H_after": 0.57,
+      "J_after": 1.1085956222770108,
+      "delta_J": 0.09461051125205211,
+      "trade_improves_J": true
+    },
+    {
+      "G_before": 0.99,
+      "H_before": 0.8,
+      "J_before": 1.2093066678189133,
+      "G_after": 0.93,
+      "H_after": 0.86,
+      "J_after": 1.2780964906419041,
+      "delta_J": 0.06878982282299084,
+      "trade_improves_J": true
+    },
+    {
+      "G_before": 1.0,
+      "H_before": 0.9,
+      "J_before": 1.2503738890891891,
+      "G_after": 0.93,
+      "H_after": 0.97,
+      "J_after": 1.3355535456666914,
+      "delta_J": 0.08517965657750226,
+      "trade_improves_J": true
+    }
+  ],
+  "P2_all_trades_improve": true,
+  "P3_irrationality_test": {
+    "n_perturbations": 10000,
+    "fraction_reducing_J": 1.0,
+    "mean_delta_J": -0.1189128385765177,
+    "all_irrationality_reduces_J": true
+  },
+  "P4_moot_status_test": {
+    "agent_A_above_threshold": {
+      "G": 0.99,
+      "H": 0.51,
+      "J": 1.0336296537436274
+    },
+    "agent_B_threshold_shifter": {
+      "G": 0.93,
+      "H": 0.57,
+      "J": 1.1085956222770108
+    },
+    "B_dominates_in_J": true,
+    "A_strictly_higher_G": true,
+    "moot_status_applies": true,
+    "interpretation": "Agent A is suboptimal in J (UOP true-tralseness sense) but strictly higher in G alone -- A is NOT erring per Brandon's canonical nuance, just suboptimal in true-tralse sense. MT-B1 Moot applies."
+  },
+  "alpha_sensitivity": [
+    {
+      "alpha": 1.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    },
+    {
+      "alpha": 2.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    },
+    {
+      "alpha": 5.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    },
+    {
+      "alpha": 10.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    },
+    {
+      "alpha": 25.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    },
+    {
+      "alpha": 100.0,
+      "first_budget_at_threshold": 1.9000000000000008,
+      "saturation_persists": true,
+      "phase_transition_detected": true
+    }
+  ],
+  "predictions_summary": {
+    "P1_phase_transition_at_0.93": true,
+    "P2_strategic_trade_increases_J": true,
+    "P3_irrationality_decreases_J": true,
+    "P4_moot_status_applies": true
+  },
+  "n_confirmed": 4
+}
