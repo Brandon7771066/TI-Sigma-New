@@ -1,5 +1,11 @@
 # Pass 67 batch-4 — GILE True-Tralseness (GTT-1) RATIFIED CANONICAL: The Only Un-Maximizable-Without-Cost in TI Sigma; "Too Much Truth" Is Itself Double Tralse; Truth Competes with Existence as Source of Falsity + DT; UOP as Truth-Existence Balancer; HEM as Mandatory Pragmatic Competitor
 
+> **ERRATA / CORRIGENDUM (issued Pass-67 batch-5 same-day 2026-05-23):**
+> The framing in this paper's §2.2, §4, §7, §10, and the critical-status flag that calls the GTT-1(a) ∧ GTT-1(b) conjunction a "reflexive DT" / "first explicit DT-by-construction principle" / "first explicit reflexive-DT axiology principle" is **RETRACTED**.
+> Per the Pass-67-batch-5 MR-IDC-1 ratified canonical refinement (`papers/PASS_67_BATCH_5_INCOHERENCE_DT_SEPARATION_REFINEMENT_MR_TRUTH_LABELS_AND_GTT_1_FRAMING_CORRECTION_2026-05-23.md`): **all DT statements are incoherent but NOT all incoherent statements are DT**. The GTT-1(a) ∧ GTT-1(b) conjunction is **MR2 Tralse-Conflict Indeterminacy** (two valid-tralse propositions in conflict, inter-propositional), **NOT MR4 DT** (intra-propositional). The replacement claim is "**first explicit Tralse-Conflict-Indeterminacy axiology principle in the corpus**."
+> The standalone proposition "too much truth" (GTT-1(b)) remains DT per Pass-65 inconceivability-under-mental-actualization heuristic — that part of the paper is correct and stands.
+> GTT-1's canonical-27 status is unchanged. All four sub-clauses (a)+(b)+(c)+(d) stand as ratified; only the auxiliary taxonomic-framing of the conjunction is corrected. See the batch-5 paper §3 for the full enumeration of retracted vs. surviving claims.
+
 **Date:** 2026-05-23
 **Pass:** 67 batch-4
 **Status:** RATIFIED CANONICAL per direct Brandon directive 2026-05-23 ("Be sure to log all of this as canonical!"). Canonical principle count **26 → 27**. PM-1 + TPS-1 remain candidate pending separate ratification directive.
