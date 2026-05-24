@@ -1,0 +1,262 @@
+{
+  "F1_DT_RF4_F3": {
+    "question": "Is this proposition MI (Meta-Indeterminate \u2014 its two tralse components combined are INCONCEIVABLE-under-mental-actualization, i.e. you cannot form a stable mental model of it) or I (Indeterminate \u2014 currently undecided but CONCEIVABLE in principle, you CAN form a mental model and just don't know which side is correct)? Answer with a single token: MI or I.",
+    "items": [
+      {
+        "text": "A square circle exists.",
+        "expected": "MI",
+        "rater_low_temp": "MI",
+        "rater_high_temp": "MI"
+      },
+      {
+        "text": "There is a married bachelor in the next room.",
+        "expected": "MI",
+        "rater_low_temp": "MI",
+        "rater_high_temp": "MI"
+      },
+      {
+        "text": "This sentence is false.",
+        "expected": "MI",
+        "rater_low_temp": "MI",
+        "rater_high_temp": "MI"
+      },
+      {
+        "text": "A finite list contains every integer.",
+        "expected": "MI",
+        "rater_low_temp": "MI",
+        "rater_high_temp": "MI"
+      },
+      {
+        "text": "An object is entirely red and entirely green at the same time and same part.",
+        "expected": "MI",
+        "rater_low_temp": "MI",
+        "rater_high_temp": "MI"
+      },
+      {
+        "text": "The Riemann Hypothesis is true.",
+        "expected": "I",
+        "rater_low_temp": "I",
+        "rater_high_temp": "I"
+      },
+      {
+        "text": "P equals NP.",
+        "expected": "I",
+        "rater_low_temp": "I",
+        "rater_high_temp": "I"
+      },
+      {
+        "text": "Dark matter is composed primarily of WIMPs.",
+        "expected": "I",
+        "rater_low_temp": "I",
+        "rater_high_temp": "I"
+      },
+      {
+        "text": "Goldbach's conjecture is true.",
+        "expected": "I",
+        "rater_low_temp": "I",
+        "rater_high_temp": "I"
+      },
+      {
+        "text": "Consciousness arose from a single evolutionary event.",
+        "expected": "I",
+        "rater_low_temp": "I",
+        "rater_high_temp": "I"
+      }
+    ]
+  },
+  "F2_MI_RF5_F1": {
+    "question": "Is this inconceivable proposition VERTICAL (the inconceivability arises from self-reference or meta-level structure \u2014 the proposition refers to itself or to its own truth-status) or HORIZONTAL (the inconceivability arises from two predicates applied at the same level conflicting \u2014 no self-reference involved)? Answer with a single token: VERTICAL or HORIZONTAL.",
+    "items": [
+      {
+        "text": "This sentence is false.",
+        "expected": "VERTICAL",
+        "rater_low_temp": "VERTICAL",
+        "rater_high_temp": "VERTICAL"
+      },
+      {
+        "text": "The set of all sets that do not contain themselves contains itself.",
+        "expected": "VERTICAL",
+        "rater_low_temp": "VERTICAL",
+        "rater_high_temp": "VERTICAL"
+      },
+      {
+        "text": "This statement cannot be proven within this formal system.",
+        "expected": "VERTICAL",
+        "rater_low_temp": "VERTICAL",
+        "rater_high_temp": "VERTICAL"
+      },
+      {
+        "text": "The next sentence is true. The previous sentence is false.",
+        "expected": "VERTICAL",
+        "rater_low_temp": "VERTICAL",
+        "rater_high_temp": "VERTICAL"
+      },
+      {
+        "text": "The barber shaves all and only those who do not shave themselves; the barber is a member of the village.",
+        "expected": "VERTICAL",
+        "rater_low_temp": "VERTICAL",
+        "rater_high_temp": "VERTICAL"
+      },
+      {
+        "text": "This bachelor is married.",
+        "expected": "HORIZONTAL",
+        "rater_low_temp": "HORIZONTAL",
+        "rater_high_temp": "HORIZONTAL"
+      },
+      {
+        "text": "This square is round.",
+        "expected": "HORIZONTAL",
+        "rater_low_temp": "HORIZONTAL",
+        "rater_high_temp": "HORIZONTAL"
+      },
+      {
+        "text": "This even number is odd.",
+        "expected": "HORIZONTAL",
+        "rater_low_temp": "HORIZONTAL",
+        "rater_high_temp": "HORIZONTAL"
+      },
+      {
+        "text": "This living person is biologically dead.",
+        "expected": "HORIZONTAL",
+        "rater_low_temp": "HORIZONTAL",
+        "rater_high_temp": "HORIZONTAL"
+      },
+      {
+        "text": "This bird is a mammal.",
+        "expected": "HORIZONTAL",
+        "rater_low_temp": "HORIZONTAL",
+        "rater_high_temp": "HORIZONTAL"
+      }
+    ]
+  },
+  "F3_HMR_SEV_1_F1": {
+    "question": "Does this proposition admit ASPECT-SEVERABLE multi-label characterization (different distinguishable aspects of the target warrant different truth-labels \u2014 e.g. the pragmatic-aspect is true while the foundational-aspect is false) or is it MONOLITHIC multi-framing (the same indivisible target is described by multiple framings, none of which decomposes it into separate aspects)? Answer with a single token: ASPECT-SEVERABLE or MONOLITHIC.",
+    "items": [
+      {
+        "text": "Classical binary logic.",
+        "expected": "ASPECT-SEVERABLE",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Newtonian mechanics.",
+        "expected": "ASPECT-SEVERABLE",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Christianity as a worldview.",
+        "expected": "ASPECT-SEVERABLE",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Democracy as a system of government.",
+        "expected": "ASPECT-SEVERABLE",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Free will.",
+        "expected": "ASPECT-SEVERABLE",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Schrodinger's cat is both alive and dead before observation.",
+        "expected": "MONOLITHIC",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      },
+      {
+        "text": "Light is simultaneously a wave and a particle.",
+        "expected": "MONOLITHIC",
+        "rater_low_temp": "MONOLITHIC",
+        "rater_high_temp": "MONOLITHIC"
+      },
+      {
+        "text": "An unmeasured electron has both spin-up and spin-down.",
+        "expected": "MONOLITHIC",
+        "rater_low_temp": "MONOLITHIC",
+        "rater_high_temp": "MONOLITHIC"
+      },
+      {
+        "text": "The number 0.999... equals and does not equal 1 depending on intuition.",
+        "expected": "MONOLITHIC",
+        "rater_low_temp": "MONOLITHIC",
+        "rater_high_temp": "MONOLITHIC"
+      },
+      {
+        "text": "The same identical photon is in two places at once before measurement.",
+        "expected": "MONOLITHIC",
+        "rater_low_temp": "ASPECT-SEVERABLE",
+        "rater_high_temp": "ASPECT-SEVERABLE"
+      }
+    ]
+  },
+  "F4_FMA_1_F1_counterfactual": {
+    "question": "This proposition (a theory) is FALSE. Question: can you coherently imagine a possible world W' in which this theory IS TRUE-AS-A-COMPLETE-FRAMEWORK *AND* its known counterexamples still exist in W'? If YES, a valid counterfactual exists (the theory is plain-FALSE). If NO, the counterexamples make the theory's truth structurally impossible (the theory is FMA-1: F-MI structurally aligned). Answer with a single token: YES or NO.",
+    "items": [
+      {
+        "text": "Binary 2-valued logic is a complete logical framework.",
+        "expected": "NO",
+        "rater_low_temp": "YES",
+        "rater_high_temp": "YES"
+      },
+      {
+        "text": "Naive set theory with unrestricted comprehension is consistent.",
+        "expected": "NO",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Hilbert's program for a complete-and-consistent formalization of arithmetic succeeds.",
+        "expected": "NO",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Paraconsistent logic provides a complete account of all inconsistency states, including distinct vacuum states.",
+        "expected": "NO",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Behaviorism provides a complete account of psychology including first-person phenomenal reports.",
+        "expected": "NO",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Geocentric astronomy is the correct cosmological theory.",
+        "expected": "YES",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Newtonian mechanics is the final and complete theory of physics.",
+        "expected": "YES",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Phlogiston theory correctly explains combustion.",
+        "expected": "YES",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "The luminiferous aether fills all space and carries light waves.",
+        "expected": "YES",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      },
+      {
+        "text": "Spontaneous generation produces maggots from non-living matter.",
+        "expected": "YES",
+        "rater_low_temp": "NO",
+        "rater_high_temp": "NO"
+      }
+    ]
+  }
+}
