@@ -4729,7 +4729,7 @@ elif page == "💼 Career":
 
     # xAI-targeted v4 variant — for the Grok Truth-Seeking AI Tutor role
     _resume_pdf_xai = "career/resume_xai.pdf"
-    _resume_md_xai = "career/AI_TUTOR_RESUME_BRANDON_EMERICK_v4_xAI_2026-05-20.md"
+    _resume_md_xai = "career/AI_TUTOR_RESUME_BRANDON_EMERICK_v4_3_xAI_2026-05-24.md"
     if _os.path.exists(_resume_pdf_xai) or _os.path.exists(_resume_md_xai):
         st.markdown("##### 🎯 xAI-Targeted Variant — Grok Truth-Seeking AI Tutor")
         st.caption("Rewritten to surface the exact keywords xAI's Jobscan scanner looks for: motivated reasoning, primary sources, base rates, steel-manning, philosophy of science, cognitive psychology, forecasting (Kalshi), MM/YYYY dates, soft skills (leadership/analytical/accuracy/work-ethic/project-scope).")
