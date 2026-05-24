@@ -120,7 +120,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **Trigger:** The third MR recognizes that the original proposition — and therefore all previous MRs — was answering the wrong question. The proposition itself was ill-formed in a way that previous MRs did not recognize.
 
-**Common structure:** The DT arose from a category error in the original question, not from genuine complexity in the subject matter. The resolution should have been dissolution from the start.
+**Common structure:** The apparent-DT was actually MR2 Indeterminate arising from a category error in the original question, not from genuine inconceivability-under-mental-actualization in the subject matter. Per Pass-65 DT canonical refinement (2026-05-23), ill-formed-proposition cases are MR2-Indeterminate-from-malformed-input rather than true-DT. The resolution should have been dissolution from the start.
 
 **Example:** Extended MR process about "whether consciousness is physical or non-physical" — third MR recognizes that "physical" in this question is being used incoherently; the question dissolves, not resolves.
 
@@ -209,7 +209,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **Common structure:** Multiple MRs have each produced different conclusions; the instability is itself informative — this proposition genuinely admits no stable resolution. Forcing one would be distortion.
 
-**Example:** "Is consciousness physical?" — after repeated MRs, each producing contradictory resolutions, the third MR recognizes: the question is genuinely paradox-stable at current understanding. Neither collapse is warranted. MT = Paradox Stable.
+**Example:** The Liar Sentence ("This sentence is false") fully mentally-actualized — when an agent genuinely tries to assign truth-value while holding both the sentence's content and its self-referential structure simultaneously in working memory, the result is genuine τ(P) ∧ ¬τ(P) inconceivability per Pass-65 DT canonical refinement (2026-05-23). The third MR recognizes: forcing collapse to T or F would distort the structural feature; the paradox-stable state IS the correct resolution. MT = Paradox Stable. *(Prior example "Is consciousness physical?" was withdrawn 2026-05-23 — that case is multi-reading-spectrum MR2 Indeterminate properly handled by MT-F2 Both True at Different Levels, NOT MT-E2 true-DT-Paradox-Stable per Pass-68 batch-3 MT audit gloss-refinement.)*
 
 **PD outcome:** PD remains centered on Tralse; DT is accepted as the stable state; no further resolution is attempted.
 
@@ -224,7 +224,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **Trigger:** The third MR recognizes that the second MR's resolution was correct at one level but missed a higher-level synthesis that incorporates both arms of the original contradiction. Neither previous MR was wrong — they were both incomplete.
 
-**Common structure:** The DT arose from two genuine partial truths. The second MR chose one. The third MR finds the frame in which both are preserved.
+**Common structure:** The apparent-DT or MR2-tension arose from two genuine partial truths (NOT from true-DT inconceivability per Pass-65 DT canonical refinement 2026-05-23 — true-DTs go to MT-E2 Paradox Stable; MT-F1 dissolves tensions and apparent-DTs). The second MR chose one. The third MR finds the frame in which both are preserved.
 
 **Example:** DT: "This system must be both rigorous and accessible." Second MR resolves: "Prioritize rigor; accessibility is secondary." Third MR recognizes: there is a framing in which rigor and accessibility are not in tension — the apparent conflict was a false dilemma. MT = Transcend.
 
@@ -234,7 +234,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **MT-F2: "Both True at Different Levels" (BT)**
 
-**Trigger:** The third MR recognizes that the contradiction in the DT was real, but the two contradicting claims operate at different levels of description — both are true within their appropriate domain.
+**Trigger:** The third MR recognizes that the apparent-contradiction was actually an MR2 level-confusion (NOT true-DT inconceivability per Pass-65 DT canonical refinement 2026-05-23) — the two contradicting claims operate at different levels of description, and both are true within their appropriate domain. Level-confusion is mental-actualization-without-cross-level-disambiguation, not inconceivability-under-mental-actualization.
 
 **Common structure:** The apparent contradiction arose from applying the same proposition across levels where different GILE weights apply or different existence footprints are relevant.
 

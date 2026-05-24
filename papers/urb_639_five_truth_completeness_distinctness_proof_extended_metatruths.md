@@ -248,7 +248,7 @@ Output: **I-Restoration** — create conditions for GILE-I to re-activate (rest,
 #### Category L: Meta-Meta-Truth — Resolution of the Resolution Process Itself
 
 **MT-L1: MR Saturation**
-> *The third MR determines that this proposition has undergone so many MR cycles without convergence that the MR process itself is DT-contaminated — further MR iterations will not improve but may worsen the PD.*
+> *The third MR determines that this proposition has undergone so many MR cycles without convergence that the MR process itself is MR2-Indeterminate-contaminated (convergence-failure-contaminated; NOT true-DT-contaminated per Pass-65 DT canonical refinement 2026-05-23 — MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization) — further MR iterations will not improve but may worsen the PD.*
 
 Output: **MR Suspension** — explicitly halt MR, assign a temporary PD based on the best available convergence, and place the proposition in a "suspended MR" pool for later re-entry when conditions change. This is not abandonment but recognition that MR saturation is a real failure mode: over-thinking a question past its resolvable limit.
 

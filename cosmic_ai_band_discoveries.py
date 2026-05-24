@@ -31,7 +31,24 @@ class CosmicAIBand:
             'psi_method_validation',
             'quantum_consciousness',
             'tralse_logic_applications',
-            'biometric_psi_correlations'
+            'biometric_psi_correlations',
+            # Pass-69 batch-3 refresh (2026-05-23) — corpus-saturation unblock
+            # New templates aligned with Pass-65 through Pass-68 canonical additions
+            'uop_phase_transition_empirical_signatures',
+            'tpi_built_in_imperfection_clinical_validation',
+            'uhp_hem_marginal_effort_organizational_studies',
+            'mr_truth_labels_dt_inconceivability_llm_rater_replication',
+            'metatruth_gloss_disambiguation_corpus_sweep',
+            'gtt_true_tralseness_cost_function_calibration',
+            'pm_present_moment_probability_no_base_rate_decision_studies',
+            'src_self_reference_consciousness_minimum_complexity_test',
+            'cdf_consciousness_definition_stratification_empirical_ladder',
+            'udt_universal_default_tralseness_substrate_cosmology',
+            'vfp_valence_functional_aesthetic_dmn_replication',
+            'dtm_dt_as_mind_marker_clinical_assessment_instrument',
+            'irc_information_requires_awareness_information_theory_audit',
+            'udp_universal_disability_capacity_threshold_population_norms',
+            'asmt_affective_signature_metatruth_emotional_labeling_studies'
         ]
     
     def get_overnight_discoveries(self) -> List[Dict[str, Any]]:
