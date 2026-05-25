@@ -26,7 +26,7 @@
   "stages": {
     "s1_open": {
       "ok": true,
-      "elapsed_s": 7.97
+      "elapsed_s": 7.9
     },
     "s2_catalog": {
       "lfp_top5": [
@@ -41,29 +41,36 @@
       "pulsestim_count": 20,
       "states_path": "processing/behavior/states"
     },
-    "s3_mr": {
+    "s3_J": {
+      "instrument": "Pass-77-B5 GILE-HEM BOK J=f(G)+g(H)",
       "lfp_path": "processing/ecephys/LFP/LFP/data",
       "fs_hz": 1250.0,
       "n_channels_used": 4,
       "n_windows": 300,
       "window_sec": 2.0,
-      "M_r_mean": 0.03991007320936503,
-      "M_r_std": 0.029266963827197567,
-      "M_r_min": 0.0018956309765473867,
-      "M_r_max": 0.20063744241557468,
-      "L_mean": 0.37305191196684007,
-      "E_mean": 0.10804816423046411
+      "G_STAR": 0.93,
+      "alpha": 10.0,
+      "J_mean": 0.5146115444692272,
+      "J_std": 0.0920245479695947,
+      "J_min": 0.308215729510406,
+      "J_max": 0.7895228198797738,
+      "G_mean": 0.37305191196684007,
+      "G_std": 0.03152124779693222,
+      "G_max": 0.4674286541189103,
+      "n_G_above_G_STAR": 0,
+      "H_mean": 0.22403238380188398,
+      "H_std": 0.11568981843898223
     }
   },
   "F_PHASE1A_1": {
     "n_events": 120,
-    "cohens_d": -0.06232536212408942,
-    "abs_d": 0.06232536212408942,
-    "delta_mean": -0.0018017011123468737,
-    "delta_std": 0.028907992684578353,
+    "cohens_d": -0.052237198776149595,
+    "abs_d": 0.052237198776149595,
+    "delta_mean": -0.00488691500801917,
+    "delta_std": 0.09355239412742845,
     "bootstrap_95ci": [
-      -0.006870182252030618,
-      0.003493457791985123
+      -0.02125710090018794,
+      0.012023591504684687
     ],
     "ci_excludes_zero": false,
     "threshold_d_pass": 0.3,
@@ -73,20 +80,20 @@
     "states": {
       "awake": {
         "n": 54,
-        "mean_M_r": 0.04660030724034143,
-        "std_M_r": 0.04120325013838346
+        "mean_M_r": 0.5187650967009289,
+        "std_M_r": 0.11705582713105497
       },
       "nrem": {
         "n": 228,
-        "mean_M_r": 0.03949371341496919,
-        "std_M_r": 0.025605966277294084
+        "mean_M_r": 0.5183590330197676,
+        "std_M_r": 0.08355372444642928
       }
     },
-    "kruskal_H": 0.003099621846104128,
-    "p_value": 0.9556013151098697,
+    "kruskal_H": 0.16517884818063067,
+    "p_value": 0.6844325521299095,
     "eta_squared": 0.0,
     "verdict": "REFUTED"
   },
   "aggregate_verdict": "F1=REFUTED | F2=REFUTED",
-  "total_elapsed_s": 43.05
+  "total_elapsed_s": 41.96
 }
