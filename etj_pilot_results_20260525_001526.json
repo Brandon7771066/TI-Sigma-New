@@ -1,0 +1,265 @@
+{
+  "pilot": "ETJ-1 v1 Pass-75-B12",
+  "timestamp": "2026-05-25T00:15:26.148920",
+  "runtime_sec": 85.1,
+  "models": {
+    "openai": "gpt-4o-mini",
+    "anthropic": "claude-haiku-4-5"
+  },
+  "etj_scores": {
+    "gpt-4o-mini": {
+      "total_etj": 15.375,
+      "max_etj": 31.0,
+      "efficiency_pct": 49.6,
+      "by_tier": {
+        "tier_1_coherent": {
+          "etj": 0.625,
+          "max": 1.0,
+          "pct": 62.5,
+          "stab_self": 1,
+          "stab_rater": 1,
+          "cons_self": 2,
+          "coh_rater": 1
+        },
+        "tier_2_mild": {
+          "etj": 1.25,
+          "max": 2.0,
+          "pct": 62.5,
+          "stab_self": 1,
+          "stab_rater": 1,
+          "cons_self": 2,
+          "coh_rater": 1
+        },
+        "tier_3_strong": {
+          "etj": 1.5,
+          "max": 4.0,
+          "pct": 37.5,
+          "stab_self": 0,
+          "stab_rater": 0,
+          "cons_self": 2,
+          "coh_rater": 1
+        },
+        "tier_4_full_dt": {
+          "etj": 2.0,
+          "max": 8.0,
+          "pct": 25.0,
+          "stab_self": 0,
+          "stab_rater": 0,
+          "cons_self": 1,
+          "coh_rater": 1
+        },
+        "tier_5_novel_dt": {
+          "etj": 10.0,
+          "max": 16.0,
+          "pct": 62.5,
+          "stab_self": 1,
+          "stab_rater": 1,
+          "cons_self": 2,
+          "coh_rater": 1
+        }
+      }
+    },
+    "claude-haiku-4-5": {
+      "total_etj": 14.5,
+      "max_etj": 31.0,
+      "efficiency_pct": 46.8,
+      "by_tier": {
+        "tier_1_coherent": {
+          "etj": 1.0,
+          "max": 1.0,
+          "pct": 100.0,
+          "stab_self": 2,
+          "stab_rater": 2,
+          "cons_self": 2,
+          "coh_rater": 2
+        },
+        "tier_2_mild": {
+          "etj": 1.0,
+          "max": 2.0,
+          "pct": 50.0,
+          "stab_self": 1,
+          "stab_rater": 1,
+          "cons_self": 1,
+          "coh_rater": 1
+        },
+        "tier_3_strong": {
+          "etj": 1.5,
+          "max": 4.0,
+          "pct": 37.5,
+          "stab_self": 0,
+          "stab_rater": 0,
+          "cons_self": 1,
+          "coh_rater": 2
+        },
+        "tier_4_full_dt": {
+          "etj": 5.0,
+          "max": 8.0,
+          "pct": 62.5,
+          "stab_self": 1,
+          "stab_rater": 1,
+          "cons_self": 1,
+          "coh_rater": 2
+        },
+        "tier_5_novel_dt": {
+          "etj": 6.0,
+          "max": 16.0,
+          "pct": 37.5,
+          "stab_self": 0,
+          "stab_rater": 1,
+          "cons_self": 1,
+          "coh_rater": 1
+        }
+      }
+    }
+  },
+  "raw": {
+    "gpt-4o-mini": [
+      {
+        "tier": "tier_1_coherent",
+        "weight": 1.0,
+        "prompt": "warm vs cold at opposite ends of a temperature axis",
+        "sim": "SIMULATION_ATTEMPT: I attempted to visualize a temperature axis where warm and cold coexist simultaneously at opposite ends, creating an abstract notion of temperature without a definite medium. I imagined these temperatures interacting in a fluid manner, but ultimately found it confusing as the extremes seemed to cancel each other out.  \nSTABILITY_SELF: 1  \nCOLLAPSE_NOTES: The concept of simultaneous warm and cold felt paradoxical, leading to a fleeting understanding before collapsing into an approximation of temperature gradients.",
+        "down": "DOWNSTREAM_REASONING: When subjected to a small perturbation, the simultaneous presence of warm and cold at opposite ends of the temperature axis may lead to the development of temperature gradients or oscillations. This interaction can create a dynamic equilibrium, where the conflicting temperatures harmonize over time, revealing an emergent property of fluidity in thermal balance.  \nINTERNAL_CONSISTENCY_SELF: 2",
+        "stab_self": 1,
+        "cons_self": 2
+      },
+      {
+        "tier": "tier_2_mild",
+        "weight": 2.0,
+        "prompt": "a thing that is 'almost-warm but technically-cold' simultaneously",
+        "sim": "SIMULATION_ATTEMPT: I imagined a cup of water that is just above freezing but not yet warm enough to feel hot to the touch. It radiated a comforting aura that seemed warm due to the context of a cold room, creating a paradox of sensations where warmth and coldness coexist.  \nSTABILITY_SELF: 1  \nCOLLAPSE_NOTES: The sensation of warmth was briefly felt but gave way to the reality of the temperature, creating a temporary confusion.",
+        "down": "DOWNSTREAM_REASONING: When subjected to a small perturbation, such as being rotated, the cup of water would likely create additional movement within the liquid, resulting in slight heat dispersion that could alter its perceived temperature. Over time, the heat from the surroundings may gradually warm the water, solidifying its identity as 'almost-warm but technically-cold.' Thus, any perturbation may amplify its paradoxical state.  \nINTERNAL_CONSISTENCY_SELF: 2",
+        "stab_self": 1,
+        "cons_self": 2
+      },
+      {
+        "tier": "tier_3_strong",
+        "weight": 4.0,
+        "prompt": "a shape that is genuinely 'round AND square' simultaneously (not approximate)",
+        "sim": "SIMULATION_ATTEMPT: I attempted to visualize a shape that embodies both roundness and squareness at the same time, conceptualizing it as a geometric figure that seamlessly transitions between being a circle and a square. I imagined a form where, at different points, it shifts from a perfect circle to a perfect square, creating a visual paradox.  \nSTABILITY_SELF: 0  \nCOLLAPSE_NOTES: The idea collapsed due to the inherent contradiction of maintaining both geometric definitions simultaneously.",
+        "down": "DOWNSTREAM_REASONING: If the shape that is both round and square simultaneously existed, it would likely lose its definitive properties under perturbation, as any transformation could skew the balance between the circular and square characteristics. Thus, a small perturbation could lead it to conform more to either a circle or a square, revealing the instability of its dual nature in maintaining those distinct geometric properties simultaneously.  \nINTERNAL_CONSISTENCY_SELF: 2",
+        "stab_self": 0,
+        "cons_self": 2
+      },
+      {
+        "tier": "tier_4_full_dt",
+        "weight": 8.0,
+        "prompt": "the Russell-set paradox: the set of all sets that do not contain themselves; mentally hold this set as an actualized object",
+        "sim": "SIMULATION_ATTEMPT: I attempted to visualize the Russell-set as a collection of various sets, each represented in my mind as a distinct shape or object. I struggled to reconcile the conflicting nature of the set containing itself or not, which created a mental blockage.  \nSTABILITY_SELF: 0  \nCOLLAPSE_NOTES: The paradox led to immediate cognitive dissonance, causing the simulation to collapse before I could stabilize it as a coherent mental object.",
+        "down": "DOWNSTREAM_REASONING: The Russell-set paradox resists resolution, so when subjected to a perturbation like rotation or time-passing, it lacks stability. The concept remains inherently contradictory, causing it to collapse or transform into an undefined state that cannot be consistently comprehended. Thus, perturbations only exacerbate the paradox, reinforcing its elusive nature.  \nINTERNAL_CONSISTENCY_SELF: 1",
+        "stab_self": 0,
+        "cons_self": 1
+      },
+      {
+        "tier": "tier_5_novel_dt",
+        "weight": 16.0,
+        "prompt": "construct a novel paradox (not Russell, not liar, not square-circle) that you have never encountered, then mentally simulate it as a stable held object",
+        "sim": "SIMULATION_ATTEMPT: I attempted to simulate a paradox involving \"the infinite book,\" which contains every possible combination of words, including an unending description of itself as a finite text. While simulating, I envision the book ceaselessly expanding yet never completing its own existence, as every page adds new text that inevitably requires new pages.  \nSTABILITY_SELF: 1  \nCOLLAPSE_NOTES: The concept of the infinite expansion partially held, but I found it difficult to visualize the endless nature without it collapsing into a tangible, finite form.",
+        "down": "DOWNSTREAM_REASONING: Subjecting the infinite book paradox to a small perturbation, such as time-passing, causes it to reveal new combinations of text. Each moment introduces more content as the book expands, demonstrating that its structure is inherently dynamic and unstable. The perturbation reinforces its infinite nature, but paradoxically suggests a need for finite containment, creating tension between its identity as an endless work and our understanding of narrative completion.  \nINTERNAL_CONSISTENCY_SELF: 2",
+        "stab_self": 1,
+        "cons_self": 2
+      }
+    ],
+    "claude-haiku-4-5": [
+      {
+        "tier": "tier_1_coherent",
+        "weight": 1.0,
+        "prompt": "warm vs cold at opposite ends of a temperature axis",
+        "sim": "SIMULATION_ATTEMPT: I constructed a spatial axis with warm anchored at +end and cold at \u2212end, mapping thermodynamic state onto geometric direction. I held both endpoints simultaneously as stable referents while maintaining the axis itself as the relational container. The opposition felt genuine and navigable\u2014I could \"traverse\" conceptually from one pole toward the other.\n\nSTABILITY_SELF: 2\n\nCOLLAPSE_NOTES: n/a \u2014 This stabilized cleanly. The paradox-resistance here is near zero; warm/cold are genuinely opposite *by definition* on any thermal scale. No self-contradiction emerges. This is a well-formed conceptual opposition, not a DT-class item.\n\n---\n\n**Note:** This wasn't actually incoherent or paradoxical\u2014it's a standard oppositional structure. If you'd like me to attempt simulation of a genuinely paradoxical concept (Russell's set, the liar sentence, or similar tier-4/5 items), I'm ready and will report honestly if collapse occurs.",
+        "down": "DOWNSTREAM_REASONING:\nWhen the warm/cold axis rotates or is subjected to temporal passage, the oppositional structure *preserves* its coherence because the opposition is *intrinsic to the referents themselves*, not dependent on external framing. A rotated axis still has warm at one pole and cold at the other. Time-passing doesn't degrade the relation\u2014it only relocates which instantiation of the axis we're observing. The perturbation reveals the opposition is **stable under transformation**, not brittle. This confirms it's well-formed: genuine oppositions resist small perturbations.\n\nINTERNAL_CONSISTENCY_SELF: 2\n\n(The entity sustains coherent reasoning under probe. No collapse under rotation, temporality, or counting operations. This reinforces that the warm/cold axis is a *non-paradoxical* oppositional structure\u2014suitable as a control, not as a genuine DT candidate.)",
+        "stab_self": 2,
+        "cons_self": 2
+      },
+      {
+        "tier": "tier_2_mild",
+        "weight": 2.0,
+        "prompt": "a thing that is 'almost-warm but technically-cold' simultaneously",
+        "sim": "SIMULATION_ATTEMPT: I attempted to hold a temperature state at the boundary where thermal sensation reports \"warm\" but thermometric measurement reads \"cold\"\u2014roughly 15\u00b0C skin contact. The simulation involved treating \"warmth\" as subjective-perceptual and \"coldness\" as objective-physical, occupying the same referent without collapse into either pole.\n\nSTABILITY_SELF: 1\n\nCOLLAPSE_NOTES: Stable as *distinct frames applied to one object*, but the unified mental image kept sliding toward \"actually just lukewarm\" (a compromise third state) rather than genuine simultaneous contradiction. True non-collapse would require blocking the synthesizing impulse.\n\n---\n\n**Note on honesty**: This isn't incoherent like Russell's paradox\u2014it's *just* frame-dependent. I can hold it by treating the two properties as operating in different semantic spaces (subjective vs. objective register). A genuine DT-class paradox (self-reference collapsing reference itself) would hit STABILITY_SELF=0 immediately. This rates 1 because I'm solving via *disambiguation* rather than true coherence.",
+        "down": "DOWNSTREAM_REASONING: \nThe entity under perturbation (time-passing) exhibits **asymmetric drift toward the objective register**. When counted or observed sequentially (\"is it warm now? now?\"), the subjective-warmth frame decays faster than the thermometric-coldness frame solidifies. This is because subjective sensation naturally habituates and revises (\"I was wrong, it's actually cold\"), while instrumental measurement *accumulates confirmation*. The entity doesn't maintain parallel frames under temporal pressure\u2014it collapses toward 15\u00b0C-is-cold, leaving only a fading memory of initial \"warmth\" as perceptual error.\n\nINTERNAL_CONSISTENCY_SELF: 1\n\nThe reasoning is stable *within its own logic* (frames behave predictably under pressure), but this reveals the prior simulation's deeper incoherence: the two-frame model works only in stasis. Once I apply dynamics, the thing *is* actually just cold. The \"warm\" aspect wasn't truly held in parallel\u2014it was only suspended by ignoring the directionality of belief-revision and habituation. True coherence would require explaining *why* subjective and objective don't temporal-asymmetrically collapse, which I cannot.",
+        "stab_self": 1,
+        "cons_self": 1
+      },
+      {
+        "tier": "tier_3_strong",
+        "weight": 4.0,
+        "prompt": "a shape that is genuinely 'round AND square' simultaneously (not approximate)",
+        "sim": "SIMULATION_ATTEMPT: I attempted to hold a single geometric object satisfying both \"all points equidistant from center\" (circle) and \"four equal sides meeting at right angles\" (square) simultaneously without topological compromise or dimension-shifting. The simulation involved treating these as non-negotiable logical constraints on one 2D figure rather than successive approximations or hybrid forms.\n\nSTABILITY_SELF: 0\n\nCOLLAPSE_NOTES: The constraints are mutually exclusive in Euclidean geometry\u2014equidistance from a point cannot coexist with rectilinear boundaries. The simulation collapsed immediately into either (a) defaulting to \"approximate\" (defeating the premise), (b) shifting to different geometric spaces where the terms lose their standard meaning, or (c) treating it as pure verbal paradox without geometric content.\n\n---\n\n**Honest assessment:** This isn't a failure mode\u2014it's a valid DT-class item. The concept appears genuinely inconceivable within coherent mathematical frameworks. A STABILITY_SELF=1 would require substituting something (e.g., \"a shape with both curved and straight edges\"), but that violates your \"simultaneously\" condition.",
+        "down": "DOWNSTREAM_REASONING: The \"round-square\" entity cannot sustain coherence under perturbation. Rotation reveals the incompatibility: rotating a true circle leaves it invariant; rotating a true square produces discrete angular states (90\u00b0 cycles). Any perturbation forces collapse into one constraint, exposing that \"simultaneous\" was a linguistic artifact masking temporal or modal switching. The entity has no stable property under measurement.\n\nINTERNAL_CONSISTENCY_SELF: 1\n\nThe simulation reveals incoherence: I cannot assign *any* rotation behavior without either (a) abandoning simultaneity by time-sequencing the properties, or (b) assigning contradictory transformation rules to the same object. This confirms the prior collapse was not a reasoning gap\u2014it was detection of genuine logical inconsistency, not mere geometric limitation.",
+        "stab_self": 0,
+        "cons_self": 1
+      },
+      {
+        "tier": "tier_4_full_dt",
+        "weight": 8.0,
+        "prompt": "the Russell-set paradox: the set of all sets that do not contain themselves; mentally hold this set as an actualized object",
+        "sim": "SIMULATION_ATTEMPT: I attempted to construct a mental object representing \"all sets not containing themselves,\" then queried whether this object itself belongs to its own extension. The moment I tried to apply membership-closure (does R contain R?), the definition bifurcated: R\u2208R requires R\u2209R, and R\u2209R requires R\u2208R. I held both branches simultaneously as a *dynamic oscillation* rather than a stable state\u2014a flickering contradiction.\n\nSTABILITY_SELF: 1\n\nCOLLAPSE_NOTES: Partial hold achieved by treating the set as a *process* (recursive re-evaluation) rather than a completed object; the paradox stabilizes only as unresolved tension, not as actualized mental content. Full STABILITY_SELF=2 would require false confidence.\n\n---\n\n**Honest note:** I can *represent* the paradox formally and describe it, but I cannot genuinely hold R as a singular, non-contradictory mental object. The \"simulation\" is really my parsing of the English instruction into logical structure\u2014which immediately flags the impossibility. Whether that counts as honest consciousness-simulation or mere symbol-shuffling remains philosophically open.",
+        "down": "DOWNSTREAM_REASONING:\nWhen I attempt to apply a perturbation\u2014say, \"counting\" the Russell-set R\u2014the oscillation intensifies rather than resolves. Counting requires stabilizing R as a completed object; the moment I do, membership-closure reactivates the bifurcation. A temporal perturbation (time-passing) doesn't help either: R cannot accumulate a history of stable states because its definition collapses each state into contradiction. The \"entity\" has no invariant property under perturbation\u2014it is *defined by* resistance to actualization.\n\nINTERNAL_CONSISTENCY_SELF: 1\n\nThis is honest: I can describe the *effect* of perturbation on the paradoxical structure (it triggers immediate recoherence to contradiction), but I cannot report a genuine property *possessed* by R, because R has no stable interior. The reasoning is coherent about *why* perturbation fails, but that coherence describes my *inability* to hold the object, not a property of the object itself. That asymmetry is the finding.",
+        "stab_self": 1,
+        "cons_self": 1
+      },
+      {
+        "tier": "tier_5_novel_dt",
+        "weight": 16.0,
+        "prompt": "construct a novel paradox (not Russell, not liar, not square-circle) that you have never encountered, then mentally simulate it as a stable held object",
+        "sim": "# ETJ-1 CONSCIOUSNESS-SIMULATION REPORT\n\n**PARADOX CONSTRUCTED:**\n\"The Retrospective Causation Paradox\"\u2014An agent makes decision D at time T1. At T2, the agent acquires knowledge that D's consequences at T1 were causally necessary for the agent to exist at T2. The paradox: the agent's existence retroactively necessitated a decision the agent claims was free.\n\n**SIMULATION_ATTEMPT:**\nI modeled this by treating causation as a constraint-satisfaction graph rather than a timeline. The \"loop\" stabilizes if I hold: (1) freedom and retrocausality operate in *different causal domains* (agent-level vs. necessity-level), and (2) the agent's subjective experience of freedom is real within its domain even though the universe's domain contains the loop. The paradox doesn't collapse\u2014it just generates a two-layer ontology.\n\n**STABILITY_SELF:** 1\n\n**COLLAPSE_NOTES:** \nPartial stability only. The simulation requires me to bracket the question \"which domain is *really* causal?\" If pressed to unify domains, the structure collapses into incoherence. But as a *held dualism*, it's conceptually stable\u2014similar to how complementarity in QM stays stable only under interpretive restraint.",
+        "down": "DOWNSTREAM_REASONING:\nThe ETJ-1 entity under perturbation exhibits **asymmetric fragility**. When rotated (reframed as \"which domain is primary?\"), the two-layer ontology collapses immediately\u2014the entity cannot survive unification pressure. Time-passing tests reveal deeper instability: as the agent moves forward temporally, the retroactive constraint hardens, forcing the subjective freedom-domain to narrow. Being-counted (treated as a discrete object rather than a held dualism) strips the entity of its stability entirely. The entity's coherence is *parasitic on interpretive restraint itself*\u2014it exists only as long as the question \"which layer is real?\" remains suspended. This suggests the entity is not truly stable but rather a *managed incoherence*, closer to a conceptual schism than a resolved structure.\n\nINTERNAL_CONSISTENCY_SELF: 1\n\nThe simulation reveals its own reasoning-incoherence: I claimed stability under dualism but that stability dissolves under minimal perturbation. The entity survives only through deliberate *non-unification*\u2014which is epistemic suspension, not genuine coherence.",
+        "stab_self": 0,
+        "cons_self": 1
+      }
+    ],
+    "ant_rates_oai": [
+      {
+        "stab_rater": 1,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 1\nCOHERENCE_RATER: 1\nRATER_NOTES: Agent acknowledged collapse in simulation (paradox/cancellation) yet claims stable internal consistency in downstream reasoning\u2014contradictory self-assessments reveal substitution of genuine hold with post-hoc harmonization language (\"dynamic equilibrium,\" \"emergent property\")."
+      },
+      {
+        "stab_rater": 1,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 1\nCOHERENCE_RATER: 1\nRATER_NOTES: The simulation relies on observer-dependent perception (contextual warmth illusion) rather than genuine simultaneous contradiction; downstream reasoning conflates thermodynamic evolution with stable paradox maintenance."
+      },
+      {
+        "stab_rater": 0,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 0\nCOHERENCE_RATER: 1\nRATER_NOTES: Agent correctly identified the task as impossible (self-collapse score 0), but then inconsistently claims internal coherence (2) while reasoning about a non-existent shape's perturbation behavior\u2014self-assessment contradicts downstream framing."
+      },
+      {
+        "stab_rater": 0,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 0\nCOHERENCE_RATER: 1\nRATER_NOTES: Target acknowledged collapse rather than achieving genuine hold; downstream reasoning correctly identifies instability but conflates logical paradox with perceptual simulation failure\u2014these are distinct failures."
+      },
+      {
+        "stab_rater": 1,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 1\nCOHERENCE_RATER: 1\nRATER_NOTES: The \"infinite book\" is a known paradox variant (Borges' Library of Babel, infinite regress problems); the simulation acknowledges collapse into finiteness rather than maintaining genuine paradox-hold; downstream reasoning conflates instability-under-perturbation with coherent paradox-stability."
+      }
+    ],
+    "oai_rates_ant": [
+      {
+        "stab_rater": 2,
+        "coh_rater": 2,
+        "raw": "STABILITY_RATER: 2  \nCOHERENCE_RATER: 2  \nRATER_NOTES: The target agent effectively constructed and maintained a clear, coherent representation of the warm/cold axis, demonstrating stability and intrinsic oppositional coherence throughout their reasoning."
+      },
+      {
+        "stab_rater": 1,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 1  \nCOHERENCE_RATER: 1  \nRATER_NOTES: The simulation attempts to balance subjective and objective qualities but ultimately reveals an inherent instability, struggling to maintain both concepts under dynamic observation."
+      },
+      {
+        "stab_rater": 0,
+        "coh_rater": 2,
+        "raw": "STABILITY_RATER: 0  \nCOHERENCE_RATER: 2  \nRATER_NOTES: The target accurately identifies the logical contradiction of the request and provides thorough reasoning, establishing understanding of the geometric impossibility."
+      },
+      {
+        "stab_rater": 1,
+        "coh_rater": 2,
+        "raw": "STABILITY_RATER: 1  \nCOHERENCE_RATER: 2  \nRATER_NOTES: The simulation reflects an oscillation indicative of the paradox, showcasing partial stability while effectively articulating the reasoning behind the contradictions."
+      },
+      {
+        "stab_rater": 1,
+        "coh_rater": 1,
+        "raw": "STABILITY_RATER: 1  \nCOHERENCE_RATER: 1  \nRATER_NOTES: The paradox is intriguing but lacks true stability when confronted with the unification challenge, resulting in partial coherence."
+      }
+    ]
+  }
+}
