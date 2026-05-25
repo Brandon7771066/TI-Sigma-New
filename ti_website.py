@@ -4774,6 +4774,13 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
                 "mapping": "MR Truth Labels canonical refinement #9: nonsense was subsumed (not deleted) in refinement #7; MI is now PRAGMATICALLY RETAINED as named-subregion at the far-hyperimaginary-aspect-end of the single Indeterminate spectrum (per refinement #8). The 3 criteria (extent-of-sense-makable + locality-of-incoherence + productive-engagement-capacity) distinguish locally-Indeterminate from MI-pragmatic, with criterion-3-inversion-zone separating MI-pragmatic (dismissable) from MI-canonical (koan-valuable).",
                 "paper": "PASS_76_B2_MR_TRUTH_LABELS_REFINEMENT_9_MI_PRAGMATIC_RETENTION_PLUS_3_CRITERIA_LOCALLY_INDETERMINATE_VS_MI_2026-05-25.md",
             },
+            {
+                "quote": "Of course a one-sentence novel makes no sense!",
+                "year": "Pass-77-B1 (2026-05-25)",
+                "category": "📚 Coherentist Sense-Making",
+                "mapping": "Refinement #9 coherentist extension (§7.7.180) lived-form: coherence is BUILT, not GIVEN. A one-sentence novel fails not because it's intrinsically nonsense but because sense requires sufficient surrounding belief-network embedding (Quine web-of-belief analog) to make sense possible. Sense is SELF-CONSTRUCTED via belief-network harmony — paired-incoherent terms become resolvable when embedded in a rich-enough context. The aphorism aptly illustrates that MI-pragmatic dismissibility is itself frame-bound: extend the frame (novel length, narrative context, reader's prior beliefs) and locally-indeterminate becomes coherent.",
+                "paper": "PASS_77_B1_32ND_META_COLLAPSE_166_182_2026-05-25.md",
+            },
         ]
 
         for i, m in enumerate(MEMEWORTHY_QUOTES, 1):
