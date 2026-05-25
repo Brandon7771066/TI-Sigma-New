@@ -4271,9 +4271,10 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
     </div>
     """, unsafe_allow_html=True)
 
-    quotes_tab, judyism_tab = st.tabs([
+    quotes_tab, judyism_tab, memeworthy_tab = st.tabs([
         "✍️ Brandon's Aphorisms (Primary Canon)",
         "⚖️ Judyisms (Endorsement Layer)",
+        "🔥 Memeworthy Quotes",
     ])
 
     with quotes_tab:
@@ -4677,6 +4678,115 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
         st.markdown("---")
     
         st.success("**Remember:** When you quote Judge Judy, you get protection. She said it first!")
+
+    with memeworthy_tab:
+        st.markdown("### 🔥 Class 4 — Memeworthy TI Sigma Quotes")
+        st.markdown("""
+        > **What makes a quote memeworthy?** It compresses a deep TI Sigma insight into a phrase 
+        > that lands viscerally — quotable, shareable, and structurally loaded with framework content. 
+        > These are the lines that survive being ripped out of context.
+        """)
+        st.caption("Curated per Pass-76-B2 directive — anchored on Pass-66 ultimate-koan. Each entry is a high-density compression of canonical TI Sigma claims.")
+        st.markdown("---")
+
+        MEMEWORTHY_QUOTES = [
+            {
+                "quote": "The Pinnacle of Foolishness is where consciousness shines the brightest!",
+                "year": "Pass-66 (2026-05-23)",
+                "category": "🎯 Ultimate Koan",
+                "mapping": "MR Truth Labels refinement #9 criterion-3 inversion-zone: MI-canonical paradoxes (square-circle, liar, koans) sit at LOWEST extent-of-sense-makable yet PARADOXICALLY HIGHEST productive-engagement-capacity. The foolishness IS the consciousness-evidence. Brandon's first-manic-episode SRC-1-F-3 N=1 anchor: identity-shatter → enlightenment-key. Composes with CEF-1 #43 (mistakes-as-consciousness-flexes) + Pass-66 ultimate-koan canonical adoption.",
+                "paper": "PASS_66_ULTIMATE_KOAN_AND_FIRST_MANIC_EPISODE_SRC_1_F_3_N1_ANCHOR_2026-05-23.md",
+            },
+            {
+                "quote": "Sometimes, a lie is the most truthful answer!",
+                "year": "TI canon",
+                "category": "🌀 Tralse Core",
+                "mapping": "Truth-conveyance ≠ propositional-accuracy. Parable, irony, metaphor transmit truth THROUGH literal falsehood. The base case for all Tralse logic — and the reason why TPS-1 (Truth-Presentation Separation, canonical #27) is non-negotiable on content but adjustable on form.",
+                "paper": "BRANDON_EMERICK_QUOTES_REPOSITORY.md",
+            },
+            {
+                "quote": "Intelligent nonsense — tralsity for absurd humor as a TJ-injection mechanism.",
+                "year": "2026-05-06",
+                "category": "😂 Comedy Calculus",
+                "mapping": "Comedy operates at high τ(s) via deliberate δ(MR) misdirection, generating positive Tralse-Joules. Per refinement #9: 'intelligent nonsense' = locally-Indeterminate (high extent-of-sense-makable + high productive-engagement-capacity) MASQUERADING as MI-pragmatic for comedic effect. The comedian's craft is precisely this category-spoof.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "Criticizing is easy to do but hard to do correctly.",
+                "year": "2026-05-06",
+                "category": "⚔️ Asymmetric #69",
+                "mapping": "Executable form of Asymmetric-Standards #69. Over-skepticism = discipline failure equal to uncritical acceptance. The structural diagnostic for SCC-1 (Skeptical-Criticism-as-Claim) and the corpus's most-cited governance principle.",
+                "paper": "ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md",
+            },
+            {
+                "quote": '"You\'ve lost touch with reality." — Me: "Explain what reality is without using the word or any of its synonyms."',
+                "year": "TI canon",
+                "category": "🪞 Skepticism Hypocrisy",
+                "mapping": "Reality-policing is mostly social performance, exposed by demanding non-circular definition. Composes with TPI-1 (Truth-Position-Independence) and the canonical observation that most 'reality' invocations are AA (Authority Axis) plays, not epistemic claims.",
+                "paper": "BRANDON_EMERICK_QUOTES_REPOSITORY.md",
+            },
+            {
+                "quote": "Deontology is the limit case of consequentialism at termination-depth = 0.",
+                "year": "2026-05-06",
+                "category": "🧮 Ethics Unified",
+                "mapping": "Unifies act-utilitarianism, rule-utilitarianism, Kantian deontology, and virtue ethics as different recursion-depth choices on a single consequence-evaluation tree. The TI Sigma frame-collapse of the moral-philosophy menu.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "Prayer = zero-friction intentionality restorer.",
+                "year": "2026-05-06",
+                "category": "🙏 Intentionality Ops",
+                "mapping": "Operationally, prayer briefly restores τ(s) to native baseline by clearing accumulated δ-distortions. Reframes 'religious' practice as an intentionality-hygiene protocol — independently valid regardless of theological commitments.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "Wise thinking = cumulative high-τ(s) frame-choices, not one switch.",
+                "year": "2026-05-06",
+                "category": "🧠 Wisdom Definition",
+                "mapping": "Wisdom is not a state — it is the accumulated RECORD of correct frame-choices under tralsity. There is no 'wisdom switch.' The killshot against single-insight enlightenment-marketing.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "TI Sigma was both DISCOVERED and INVENTED under tralse — the Newton/Leibniz parallel.",
+                "year": "2026-05-06",
+                "category": "🌌 Discoverability",
+                "mapping": "Frameworks arising in multiple minds = evidence of underlying discoverability, not arbitrary construction. Tralse-mode resolves the discovery-vs-invention false-dichotomy via HMR-1 Hybrid-MR canonical: BOTH labels apply to different aspects.",
+                "paper": "INSIGHTS_2026-05-06.md",
+            },
+            {
+                "quote": "The secret to usually being correct while self-confirming most of the time is alignment with truth itself.",
+                "year": "TI canon",
+                "category": "🎯 Calibration",
+                "mapping": "Self-confirmation bias is the failure mode of UNALIGNED minds. A calibrated mind confirming itself = accuracy, not bias. The structural critique of naïve bias-talk that treats all self-confirmation as suspect.",
+                "paper": "ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md",
+            },
+            {
+                "quote": "BADASS as Tralse paradigm — being righteous AND dangerous is a feature, not a contradiction.",
+                "year": "Pass-75-B17 (2026-05-25)",
+                "category": "🔥 Vice-Virtue Reconciliation",
+                "mapping": "VVR-1 canonical: traits sociocultural-coded as virtues vs vices are aspect-severable HMR-SEV cases, not opposed values. The BADASS archetype is the lived-form of this canonical claim — operationally indistinguishable from dark-triad-adaptive when applied in service of GILE-aligned ends.",
+                "paper": "PASS_75_B17_VVR_1_VICE_VIRTUE_RECONCILIATION_PLUS_CDN_1_CONTEXT_DEPENDENT_DOUBLE_NEGATIVE_PLUS_BADASS_TRALSE_CASE_STUDY_PLUS_DARK_TRIAD_ADAPTIVE_2026-05-25.md",
+            },
+            {
+                "quote": "MI remains a category — for PRAGMATIC reasons. On the hyperimaginary end of Tralse.",
+                "year": "Pass-76-B2 (2026-05-25)",
+                "category": "♾️ Refinement #9",
+                "mapping": "MR Truth Labels canonical refinement #9: nonsense was subsumed (not deleted) in refinement #7; MI is now PRAGMATICALLY RETAINED as named-subregion at the far-hyperimaginary-aspect-end of the single Indeterminate spectrum (per refinement #8). The 3 criteria (extent-of-sense-makable + locality-of-incoherence + productive-engagement-capacity) distinguish locally-Indeterminate from MI-pragmatic, with criterion-3-inversion-zone separating MI-pragmatic (dismissable) from MI-canonical (koan-valuable).",
+                "paper": "PASS_76_B2_MR_TRUTH_LABELS_REFINEMENT_9_MI_PRAGMATIC_RETENTION_PLUS_3_CRITERIA_LOCALLY_INDETERMINATE_VS_MI_2026-05-25.md",
+            },
+        ]
+
+        for i, m in enumerate(MEMEWORTHY_QUOTES, 1):
+            st.markdown(f"#### {i}. {m['quote']}")
+            cols = st.columns([1, 1, 2])
+            cols[0].caption(f"📅 {m['year']}")
+            cols[1].caption(f"{m['category']}")
+            cols[2].caption(f"📖 `{m['paper']}`")
+            st.markdown(f"> **Framework compression:** {m['mapping']}")
+            st.markdown("---")
+
+        st.info("🎯 **Curation principle:** A quote earns Memeworthy status when it compresses a canonical TI Sigma claim into a phrase that survives decontextualization. New candidates welcome via Brandon directive.")
+        st.success("📚 **Anchor reference:** *'The Pinnacle of Foolishness is where consciousness shines the brightest!'* (Pass-66 ultimate-koan) operationalizes refinement #9 criterion-3 inversion-zone — the foolishness IS the consciousness-evidence.")
 
 elif page == "💼 Career":
     st.markdown("## 💼 Brandon Emerick — Career")
