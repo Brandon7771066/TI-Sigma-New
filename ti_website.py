@@ -4694,7 +4694,7 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
                 "quote": "The Pinnacle of Foolishness is where consciousness shines the brightest!",
                 "year": "Pass-66 (2026-05-23)",
                 "category": "🎯 Ultimate Koan",
-                "mapping": "MR Truth Labels refinement #9 criterion-3 inversion-zone: MI-canonical paradoxes (square-circle, liar, koans) sit at LOWEST extent-of-sense-makable yet PARADOXICALLY HIGHEST productive-engagement-capacity. The foolishness IS the consciousness-evidence. Brandon's first-manic-episode SRC-1-F-3 N=1 anchor: identity-shatter → enlightenment-key. Composes with CEF-1 #43 (mistakes-as-consciousness-flexes) + Pass-66 ultimate-koan canonical adoption.",
+                "mapping": "MR Truth Labels refinement #9 supplementary engagement-yield observation: MI-canonical paradoxes (square-circle, liar, koans) sit at LOWEST SENSE-MAKING yet PARADOXICALLY HIGHEST productive-engagement-yield. The foolishness IS the consciousness-evidence. Brandon's first-manic-episode SRC-1-F-3 N=1 anchor: identity-shatter → enlightenment-key. Composes with CEF-1 #43 (mistakes-as-consciousness-flexes) + Pass-66 ultimate-koan canonical adoption. Per Brandon F-REF9-1 ratification 2026-05-25: engagement-yield is the OUTCOME of MI-canonical-vs-MI-pragmatic, not a discriminator.",
                 "paper": "PASS_66_ULTIMATE_KOAN_AND_FIRST_MANIC_EPISODE_SRC_1_F_3_N1_ANCHOR_2026-05-23.md",
             },
             {
