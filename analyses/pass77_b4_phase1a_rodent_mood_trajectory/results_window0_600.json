@@ -1,0 +1,78 @@
+{
+  "pass": "77-B4",
+  "phase": "1A",
+  "dandiset": "000003",
+  "asset": "sub-YutaMouse41/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+  "seed": 27182818,
+  "prereg_locked": true,
+  "instrument_canonical": "L=gamma-PLV, E_rodent=theta/delta normalized, M_r=L*E (TLC-1 Pass-74)",
+  "config": {
+    "gamma_band_hz": [
+      30.0,
+      80.0
+    ],
+    "theta_band_hz": [
+      6.0,
+      10.0
+    ],
+    "delta_band_hz": [
+      1.0,
+      4.0
+    ],
+    "window_sec": 2.0,
+    "max_channels": 8,
+    "max_duration_sec": 600
+  },
+  "stages": {
+    "s1_open": {
+      "ok": true,
+      "elapsed_s": 9.47
+    },
+    "s2_catalog": {
+      "lfp_top5": [
+        {
+          "name": "processing/ecephys/LFP/LFP/data",
+          "shape": [
+            21312875,
+            64
+          ]
+        }
+      ],
+      "pulsestim_count": 20,
+      "states_path": "processing/behavior/states"
+    },
+    "s3_mr": {
+      "lfp_path": "processing/ecephys/LFP/LFP/data",
+      "fs_hz": 1250.0,
+      "n_channels_used": 8,
+      "n_windows": 300,
+      "window_sec": 2.0,
+      "M_r_mean": 0.1156798760996935,
+      "M_r_std": 0.07722033619702612,
+      "M_r_min": 0.01882330932263766,
+      "M_r_max": 0.4285946280072879,
+      "L_mean": 0.3948339362684942,
+      "E_mean": 0.29278462603029887
+    }
+  },
+  "F_PHASE1A_1": {
+    "n_events": 871,
+    "cohens_d": -0.018842350562856804,
+    "abs_d": 0.018842350562856804,
+    "delta_mean": -0.0012233266053311763,
+    "delta_std": 0.06492430980148903,
+    "bootstrap_95ci": [
+      -0.005464929199831496,
+      0.0031857258797988925
+    ],
+    "ci_excludes_zero": false,
+    "threshold_d_pass": 0.3,
+    "verdict": "REFUTED"
+  },
+  "F_PHASE1A_2": {
+    "verdict": "INSUFFICIENT_STATES",
+    "n_states": 1
+  },
+  "aggregate_verdict": "F1=REFUTED | F2=INSUFFICIENT_STATES",
+  "total_elapsed_s": 55.25
+}
