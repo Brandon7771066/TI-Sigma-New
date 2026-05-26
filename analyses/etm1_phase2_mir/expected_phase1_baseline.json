@@ -1,0 +1,107 @@
+{
+  "_metadata": {
+    "schema_version": "1.0-Pass77B7-2026-05-26",
+    "purpose": "Phase-1 expert-judgment baseline ETM-1 v2 scores for Pearson-validation against Phase-2 MIR-extracted scores once audio arrives.",
+    "expert": "AGENT (single-rater Phase-1; Brandon independent re-scoring deferred to Phase-2 review)",
+    "honest_69": "Phase-1 scores are agent-perceptual-judgment from training-knowledge of these songs, NOT audio-derived. Phase-2 validates by automated MIR.",
+    "source_papers": [
+      "papers/PASS_77_B6_ENLIGHTENMENT_MUSIC_GAITHER_PMD_ETM_1_CANDIDATE_AND_BCP_1_CANDIDATE_2026-05-26.md (8-feature scoring)",
+      "papers/PASS_77_B7_RATIFICATION_ETM_1_BCP_1_P48_1_CANONICAL_PLUS_GVB_VOCAL_ADDENDUM_AND_PHASE_2_MIR_SCAFFOLDING_2026-05-26.md (VPS 9th feature + per-song VPS scoring)"
+    ],
+    "scoring_scale": "Each feature in [0.0, 1.0]; ETM_v2_aggregate = mean of 9 features; threshold for transformational-grade = 0.65"
+  },
+  "songs": {
+    "gaither_i_bowed_on_my_knees_and_cried_holy": {
+      "source": "GVB",
+      "title": "I Bowed on My Knees and Cried Holy",
+      "lead_vocalist": "David Phelps",
+      "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.90,
+      "LBS": 0.40, "AKM": 0.75, "MCC": 0.50, "RRF": 0.75,
+      "VPS": 0.89,
+      "ETM_v2_aggregate": 0.74
+    },
+    "gaither_alpha_and_omega": {
+      "source": "GVB",
+      "title": "Alpha and Omega",
+      "lead_vocalist": "GVB quartet",
+      "TRD": 0.70, "HS": 0.65, "DAM": 0.80, "SFD": 0.95,
+      "LBS": 0.30, "AKM": 0.85, "MCC": 0.55, "RRF": 0.50,
+      "VPS": 0.82,
+      "ETM_v2_aggregate": 0.68
+    },
+    "gaither_then_came_the_morning": {
+      "source": "GVB",
+      "title": "Then Came the Morning",
+      "lead_vocalist": "varies (Michael English / Mark Lowry / Russ Taff)",
+      "TRD": 0.90, "HS": 0.75, "DAM": 0.85, "SFD": 0.85,
+      "LBS": 0.85, "AKM": 0.65, "MCC": 0.60, "RRF": 0.55,
+      "VPS": 0.82,
+      "ETM_v2_aggregate": 0.76
+    },
+    "gaither_because_he_lives_multi_modulation_live": {
+      "source": "GVB",
+      "title": "Because He Lives (live, multi-modulation arrangement)",
+      "lead_vocalist": "varies",
+      "TRD": 0.60, "HS": 0.55, "DAM": 0.85, "SFD": 0.85,
+      "LBS": 0.20, "AKM": 0.95, "MCC": 0.60, "RRF": 0.45,
+      "VPS": 0.84,
+      "ETM_v2_aggregate": 0.65
+    },
+    "gaither_it_is_well_with_my_soul": {
+      "source": "GVB",
+      "title": "It Is Well with My Soul",
+      "lead_vocalist": "GVB quartet (hymn-traditional)",
+      "TRD": 0.75, "HS": 0.60, "DAM": 0.80, "SFD": 0.85,
+      "LBS": 0.85, "AKM": 0.55, "MCC": 0.70, "RRF": 0.60,
+      "VPS": 0.77,
+      "ETM_v2_aggregate": 0.72
+    },
+    "pmd_dont_ever_forget_in_the_morning_sun": {
+      "source": "PMD_Sky",
+      "title": "Don't Ever Forget... / In the Morning Sun (ending + reprise)",
+      "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.85,
+      "LBS": 0.85, "AKM": 0.25, "MCC": 0.95, "RRF": 0.85,
+      "VPS": 0.78,
+      "ETM_v2_aggregate": 0.78
+    },
+    "pmd_heartbeat_heartbreak_time_gear": {
+      "source": "PMD_Sky",
+      "title": "Heartbeat // Heartbreak (Time Gear sequence)",
+      "TRD": 0.95, "HS": 0.80, "DAM": 0.90, "SFD": 0.80,
+      "LBS": 0.70, "AKM": 0.20, "MCC": 0.65, "RRF": 0.75,
+      "VPS": 0.73,
+      "ETM_v2_aggregate": 0.72
+    },
+    "pmd_through_the_sea_of_time": {
+      "source": "PMD_Sky",
+      "title": "Through the Sea of Time / Wayfarer's Hill",
+      "TRD": 0.85, "HS": 0.75, "DAM": 0.90, "SFD": 0.90,
+      "LBS": 0.85, "AKM": 0.30, "MCC": 0.70, "RRF": 0.85,
+      "VPS": 0.80,
+      "ETM_v2_aggregate": 0.77
+    },
+    "pmd_dialgas_fight_to_the_finish": {
+      "source": "PMD_Sky",
+      "title": "Dialga's Fight to the Finish (Primal Dialga)",
+      "TRD": 0.90, "HS": 0.90, "DAM": 0.90, "SFD": 0.80,
+      "LBS": 0.50, "AKM": 0.35, "MCC": 0.55, "RRF": 0.70,
+      "VPS": 0.78,
+      "ETM_v2_aggregate": 0.71
+    },
+    "pmd_in_the_hands_of_fate_top_floor": {
+      "source": "PMD_Sky",
+      "title": "In the Hands of Fate / Top Floor (Temporal Pinnacle)",
+      "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.85,
+      "LBS": 0.75, "AKM": 0.40, "MCC": 0.75, "RRF": 0.80,
+      "VPS": 0.81,
+      "ETM_v2_aggregate": 0.76
+    }
+  },
+  "_summary": {
+    "all_10_songs_aggregate_mean": 0.73,
+    "all_10_songs_aggregate_min": 0.65,
+    "all_10_songs_aggregate_max": 0.78,
+    "all_10_above_transformational_threshold_0_65": true,
+    "phase_2_validation_target": "Pearson r >= 0.6 between MIR-extracted aggregate and Phase-1 expert-judgment aggregate over the 10-song set; per-feature r reported for diagnostic"
+  }
+}

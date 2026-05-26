@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0-Pass77B7-2026-05-26",
+  "model": "ETM-1 v2 (Enlightenment-Triggering Music, 9-feature)",
+  "canonical_reference_papers": [
+    "papers/PASS_77_B6_ENLIGHTENMENT_MUSIC_GAITHER_PMD_ETM_1_CANDIDATE_AND_BCP_1_CANDIDATE_2026-05-26.md",
+    "papers/PASS_77_B7_RATIFICATION_ETM_1_BCP_1_P48_1_CANONICAL_PLUS_GVB_VOCAL_ADDENDUM_AND_PHASE_2_MIR_SCAFFOLDING_2026-05-26.md"
+  ],
+  "composite_formula": "ETM_v2 = mean(TRD, HS, DAM, SFD, LBS, AKM, MCC, RRF, VPS)  with each feature in [0,1]",
+  "transformational_threshold": 0.65,
+  "features": {
+    "TRD": {
+      "name": "Tension-Resolution Depth",
+      "range": [0, 1],
+      "extraction": "Sethares roughness dissonance curve over time; integrate (peak - resolution) * delay; normalize by max-window-roughness.",
+      "audio_dependency": "librosa.cqt OR scipy.signal.spectrogram (partial)",
+      "fallback_status_without_librosa": "PARTIAL — scipy spectrogram + custom roughness implementation possible but less accurate"
+    },
+    "HS": {
+      "name": "Harmonic Surprise",
+      "range": [0, 1],
+      "extraction": "Estimate chord sequence via chromagram + Krumhansl-Schmuckler template matching; compute Bayesian surprise of each transition under Western-tonal n-gram prior.",
+      "audio_dependency": "librosa.feature.chroma_cqt required",
+      "fallback_status_without_librosa": "BLOCKED_NEEDS_LIBROSA"
+    },
+    "DAM": {
+      "name": "Dynamic Arc Magnitude",
+      "range": [0, 1],
+      "extraction": "RMS energy envelope; compute (max_rms - min_rms) in dB; normalize by /60dB clipped to [0,1].",
+      "audio_dependency": "scipy.signal only",
+      "fallback_status_without_librosa": "FULL"
+    },
+    "SFD": {
+      "name": "Spectral Fusion Density",
+      "range": [0, 1],
+      "extraction": "1 - spectral_flatness averaged across the piece; bonus for high harmonic/percussive ratio (HPSS).",
+      "audio_dependency": "librosa.feature.spectral_flatness preferred; scipy partial",
+      "fallback_status_without_librosa": "PARTIAL"
+    },
+    "LBS": {
+      "name": "Lament-Bass Descent",
+      "range": [0, 1],
+      "extraction": "Bass-pitch tracker (lowest-formant or pYIN low band); detect stepwise-descending sequences of >= 4 notes within a tetrachord; score by total descent count weighted by length.",
+      "audio_dependency": "librosa.pyin required",
+      "fallback_status_without_librosa": "BLOCKED_NEEDS_LIBROSA"
+    },
+    "AKM": {
+      "name": "Ascending Key Modulation",
+      "range": [0, 1],
+      "extraction": "Segment-wise key detection (Krumhansl-Schmuckler, 8-second windows); count ascending-key-change events; normalize by piece length minutes.",
+      "audio_dependency": "librosa.feature.chroma_cqt + key estimation",
+      "fallback_status_without_librosa": "BLOCKED_NEEDS_LIBROSA"
+    },
+    "MCC": {
+      "name": "Motif Circularity Closure",
+      "range": [0, 1],
+      "extraction": "DTW similarity between first-N seconds and last-N seconds of piece (N = 15s default); higher similarity = higher MCC.",
+      "audio_dependency": "scipy + custom DTW; librosa.feature.mfcc preferred for features",
+      "fallback_status_without_librosa": "PARTIAL — raw-spectrogram-DTW possible without librosa"
+    },
+    "RRF": {
+      "name": "Tempo Rubato Flexibility",
+      "range": [0, 1],
+      "extraction": "Beat-tracker tempo curve over time; compute std(tempo) / mean(tempo); normalize to [0,1] via tanh scaling.",
+      "audio_dependency": "librosa.beat.beat_track required",
+      "fallback_status_without_librosa": "BLOCKED_NEEDS_LIBROSA"
+    },
+    "VPS": {
+      "name": "Vocal Performance Signature (composite, 6 sub-features)",
+      "range": [0, 1],
+      "composite_formula": "mean(VSF, LTS, VCM, GMP, TEI, CRA)",
+      "sub_features": {
+        "VSF": {
+          "name": "Vocal-stack Spectral Fusion",
+          "extraction": "LPC formant estimation per voice; cross-channel formant-coherence + spectral-flatness inversion within 200-3500 Hz vocal band.",
+          "audio_dependency": "librosa.lpc OR scipy.signal.lfilter (custom LPC)",
+          "fallback_status_without_librosa": "PARTIAL"
+        },
+        "LTS": {
+          "name": "Lead-voice Tessitura + Strain",
+          "extraction": "Pitch tracker (pYIN); upper-quartile pitch relative to typical-male-tenor-range (130-525 Hz) for vocal music; vibrato-rate via autocorrelation on pitch trace.",
+          "audio_dependency": "librosa.pyin required",
+          "fallback_status_without_librosa": "BLOCKED_NEEDS_LIBROSA"
+        },
+        "VCM": {
+          "name": "Vocal-Color Modulation across arc",
+          "extraction": "Spectral-centroid trajectory; segment-wise mean-shift detection; per-segment vowel/timbre classification via formant pattern.",
+          "audio_dependency": "scipy.signal + librosa.feature.spectral_centroid preferred",
+          "fallback_status_without_librosa": "PARTIAL"
+        },
+        "GMP": {
+          "name": "Grit/Melisma at Peaks",
+          "extraction": "Spectral-kurtosis at energy-peak windows (top 10% RMS); melisma-density via pitch-trajectory note-density at peaks.",
+          "audio_dependency": "librosa.pyin preferred for melisma; scipy.stats.kurtosis for grit",
+          "fallback_status_without_librosa": "PARTIAL — grit-component only"
+        },
+        "TEI": {
+          "name": "Tag-Ending Intensification",
+          "extraction": "Compare final-third RMS-mean + pitch-mean to middle-third; detect repeated final-phrase via self-similarity matrix in last 30 seconds.",
+          "audio_dependency": "scipy + librosa.segment.recurrence_matrix preferred",
+          "fallback_status_without_librosa": "PARTIAL — RMS-comparison-only"
+        },
+        "CRA": {
+          "name": "Call-and-Response Architecture",
+          "extraction": "Voice-activity-detection alternation pattern; count antiphonal entries; speaker-diarization-light via spectral-clustering of frames.",
+          "audio_dependency": "librosa.effects.split + scipy.cluster",
+          "fallback_status_without_librosa": "PARTIAL"
+        }
+      },
+      "audio_dependency": "see sub-features",
+      "fallback_status_without_librosa": "PARTIAL (mean of available sub-features)"
+    }
+  }
+}
