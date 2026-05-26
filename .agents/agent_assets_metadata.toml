@@ -1,5 +1,10 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "WfgIDCNu0It5XshKtnB8M"
+uri = "file://papers/visual_assets/CCC_CENTRAL_COSMIC_CONSCIOUSNESS_2026-05-26.png"
+type = "image"
+title = "CCC central cosmic consciousness"
 
 [[outputs]]
 id = "vHQ8fH9REFbx43NdAaGiM"
@@ -384,3 +389,9 @@ id = "utFqg5j40e_kh62v9qziY"
 uri = "file://papers/visual_assets/BOK_VERISYN_BUTTERFLY_OCTOPUS_KNOT_2026-05-26.png"
 type = "image"
 title = "BOK Verisyn — The Butterfly-Octopus Knot (Pass-77-B16 canonical archive)"
+
+[[outputs]]
+id = "KVaARP8uz_xCH65514GFH"
+uri = "file://papers/visual_assets/CCC_CENTRAL_COSMIC_CONSCIOUSNESS_2026-05-26.png"
+type = "image"
+title = "CCC — Central Cosmic Consciousness (Pass-77-B17 clean rebrand)"
