@@ -70,6 +70,7 @@ dependencies = [
     "cirq-core>=1.6.1",
     "qiskit-ibm-runtime>=0.46.1",
     "librosa>=0.11.0",
+    "spotipy>=2.26.0",
 ]
 
 [[tool.uv.index]]

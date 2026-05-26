@@ -1,60 +1,72 @@
 {
   "_metadata": {
-    "schema_version": "1.0-Pass77B7-2026-05-26",
+    "schema_version": "2.0-Pass77B9-2026-05-26",
     "purpose": "Phase-1 expert-judgment baseline ETM-1 v2 scores for Pearson-validation against Phase-2 MIR-extracted scores once audio arrives.",
-    "expert": "AGENT (single-rater Phase-1; Brandon independent re-scoring deferred to Phase-2 review)",
-    "honest_69": "Phase-1 scores are agent-perceptual-judgment from training-knowledge of these songs, NOT audio-derived. Phase-2 validates by automated MIR.",
+    "expert": "AGENT (single-rater Phase-1; Brandon-canonical GVB-top-5 list incorporated B9; Brandon independent per-feature re-scoring deferred to Phase-2 review)",
+    "honest_69": "Phase-1 scores are agent-perceptual-judgment from training-knowledge of these songs, NOT audio-derived. Phase-2 validates by automated MIR. Pass-77-B9 INCORPORATED Brandon-canonical GVB top-5 list and REPLACED prior agent-nominated GVB placeholders. Agent's prior Gaither-catalogue rating-intuition failed the 'He Touched Me' case (agent listed it as mild B8 §1.4 — Brandon rates it transformational top-5), so agent confidence on per-feature breakdown for the new Brandon-canonical 5 is LOW; only the aggregate-transformational-grade assignment is high-confidence (Brandon authored).",
     "source_papers": [
       "papers/PASS_77_B6_ENLIGHTENMENT_MUSIC_GAITHER_PMD_ETM_1_CANDIDATE_AND_BCP_1_CANDIDATE_2026-05-26.md (8-feature scoring)",
-      "papers/PASS_77_B7_RATIFICATION_ETM_1_BCP_1_P48_1_CANONICAL_PLUS_GVB_VOCAL_ADDENDUM_AND_PHASE_2_MIR_SCAFFOLDING_2026-05-26.md (VPS 9th feature + per-song VPS scoring)"
+      "papers/PASS_77_B7_RATIFICATION_ETM_1_BCP_1_P48_1_CANONICAL_PLUS_GVB_VOCAL_ADDENDUM_AND_PHASE_2_MIR_SCAFFOLDING_2026-05-26.md (VPS 9th feature + per-song VPS scoring; AGENT-NOMINATED GVB top-5 NOW SUPERSEDED)",
+      "papers/PASS_77_B9_FOUR_PRINCIPLE_RATIFICATION_CEREMONY_TPH_1_SOA_1_DEC_1_GMP_1_CANONICAL_60_PLUS_5TH_MAXIM_PLUS_BIO_93_PLUS_P48_1_SCOPE_PLUS_BRE_1_HUM_1_YGA_1_NEW_CANDIDATES_PLUS_GVB_TOP_5_BRANDON_CANONICAL_CORRECTION_2026-05-26.md (this batch — Brandon GVB top-5 correction)"
     ],
     "scoring_scale": "Each feature in [0.0, 1.0]; ETM_v2_aggregate = mean of 9 features; threshold for transformational-grade = 0.65"
   },
   "songs": {
-    "gaither_i_bowed_on_my_knees_and_cried_holy": {
+    "gaither_clean": {
       "source": "GVB",
-      "title": "I Bowed on My Knees and Cried Holy",
-      "lead_vocalist": "David Phelps",
-      "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.90,
-      "LBS": 0.40, "AKM": 0.75, "MCC": 0.50, "RRF": 0.75,
-      "VPS": 0.89,
-      "ETM_v2_aggregate": 0.74
+      "title": "Clean",
+      "lead_vocalist": "GVB (modern era)",
+      "TRD": 0.80, "HS": 0.65, "DAM": 0.85, "SFD": 0.85,
+      "LBS": 0.40, "AKM": 0.60, "MCC": 0.60, "RRF": 0.65,
+      "VPS": 0.83,
+      "ETM_v2_aggregate": 0.69,
+      "_brandon_canonical_top_5": true,
+      "_agent_confidence": "LOW per-feature (post He-Touched-Me-miss correction); HIGH aggregate-grade (Brandon-authored)"
     },
-    "gaither_alpha_and_omega": {
+    "gaither_the_time_i_must_sing": {
       "source": "GVB",
-      "title": "Alpha and Omega",
-      "lead_vocalist": "GVB quartet",
-      "TRD": 0.70, "HS": 0.65, "DAM": 0.80, "SFD": 0.95,
-      "LBS": 0.30, "AKM": 0.85, "MCC": 0.55, "RRF": 0.50,
+      "title": "The Time I Must Sing",
+      "lead_vocalist": "GVB (modern era)",
+      "TRD": 0.75, "HS": 0.65, "DAM": 0.80, "SFD": 0.85,
+      "LBS": 0.45, "AKM": 0.65, "MCC": 0.65, "RRF": 0.70,
+      "VPS": 0.85,
+      "ETM_v2_aggregate": 0.71,
+      "_brandon_canonical_top_5": true,
+      "_agent_confidence": "LOW per-feature; HIGH aggregate-grade"
+    },
+    "gaither_god_gave_the_song": {
+      "source": "GVB",
+      "title": "God Gave the Song",
+      "lead_vocalist": "Gaither (classic)",
+      "TRD": 0.70, "HS": 0.60, "DAM": 0.75, "SFD": 0.85,
+      "LBS": 0.40, "AKM": 0.55, "MCC": 0.70, "RRF": 0.70,
+      "VPS": 0.78,
+      "ETM_v2_aggregate": 0.67,
+      "_brandon_canonical_top_5": true,
+      "_agent_confidence": "LOW per-feature; HIGH aggregate-grade"
+    },
+    "gaither_he_touched_me": {
+      "source": "GVB",
+      "title": "He Touched Me",
+      "lead_vocalist": "GVB / Bill Gaither composition",
+      "TRD": 0.75, "HS": 0.55, "DAM": 0.75, "SFD": 0.85,
+      "LBS": 0.40, "AKM": 0.50, "MCC": 0.70, "RRF": 0.70,
       "VPS": 0.82,
-      "ETM_v2_aggregate": 0.68
+      "ETM_v2_aggregate": 0.67,
+      "_brandon_canonical_top_5": true,
+      "_agent_confidence": "LOW per-feature (agent's B8 §1.4 mild-rating was wrong); HIGH aggregate-grade (Brandon-corrected)",
+      "_honest_69_anchor": "agent's prior Gaither-rating-intuition failed on this song — explicit corpus-internal calibration anchor"
     },
-    "gaither_then_came_the_morning": {
+    "gaither_i_just_want_to_thank_you_lord": {
       "source": "GVB",
-      "title": "Then Came the Morning",
-      "lead_vocalist": "varies (Michael English / Mark Lowry / Russ Taff)",
-      "TRD": 0.90, "HS": 0.75, "DAM": 0.85, "SFD": 0.85,
-      "LBS": 0.85, "AKM": 0.65, "MCC": 0.60, "RRF": 0.55,
-      "VPS": 0.82,
-      "ETM_v2_aggregate": 0.76
-    },
-    "gaither_because_he_lives_multi_modulation_live": {
-      "source": "GVB",
-      "title": "Because He Lives (live, multi-modulation arrangement)",
-      "lead_vocalist": "varies",
-      "TRD": 0.60, "HS": 0.55, "DAM": 0.85, "SFD": 0.85,
-      "LBS": 0.20, "AKM": 0.95, "MCC": 0.60, "RRF": 0.45,
-      "VPS": 0.84,
-      "ETM_v2_aggregate": 0.65
-    },
-    "gaither_it_is_well_with_my_soul": {
-      "source": "GVB",
-      "title": "It Is Well with My Soul",
-      "lead_vocalist": "GVB quartet (hymn-traditional)",
-      "TRD": 0.75, "HS": 0.60, "DAM": 0.80, "SFD": 0.85,
-      "LBS": 0.85, "AKM": 0.55, "MCC": 0.70, "RRF": 0.60,
-      "VPS": 0.77,
-      "ETM_v2_aggregate": 0.72
+      "title": "I Just Want to Thank You Lord",
+      "lead_vocalist": "GVB",
+      "TRD": 0.70, "HS": 0.55, "DAM": 0.75, "SFD": 0.80,
+      "LBS": 0.40, "AKM": 0.55, "MCC": 0.65, "RRF": 0.65,
+      "VPS": 0.80,
+      "ETM_v2_aggregate": 0.65,
+      "_brandon_canonical_top_5": true,
+      "_agent_confidence": "LOW per-feature; HIGH aggregate-grade"
     },
     "pmd_dont_ever_forget_in_the_morning_sun": {
       "source": "PMD_Sky",
@@ -62,7 +74,8 @@
       "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.85,
       "LBS": 0.85, "AKM": 0.25, "MCC": 0.95, "RRF": 0.85,
       "VPS": 0.78,
-      "ETM_v2_aggregate": 0.78
+      "ETM_v2_aggregate": 0.78,
+      "_brandon_silence_implicit_acceptance": true
     },
     "pmd_heartbeat_heartbreak_time_gear": {
       "source": "PMD_Sky",
@@ -70,7 +83,8 @@
       "TRD": 0.95, "HS": 0.80, "DAM": 0.90, "SFD": 0.80,
       "LBS": 0.70, "AKM": 0.20, "MCC": 0.65, "RRF": 0.75,
       "VPS": 0.73,
-      "ETM_v2_aggregate": 0.72
+      "ETM_v2_aggregate": 0.72,
+      "_brandon_silence_implicit_acceptance": true
     },
     "pmd_through_the_sea_of_time": {
       "source": "PMD_Sky",
@@ -78,7 +92,8 @@
       "TRD": 0.85, "HS": 0.75, "DAM": 0.90, "SFD": 0.90,
       "LBS": 0.85, "AKM": 0.30, "MCC": 0.70, "RRF": 0.85,
       "VPS": 0.80,
-      "ETM_v2_aggregate": 0.77
+      "ETM_v2_aggregate": 0.77,
+      "_brandon_silence_implicit_acceptance": true
     },
     "pmd_dialgas_fight_to_the_finish": {
       "source": "PMD_Sky",
@@ -86,7 +101,8 @@
       "TRD": 0.90, "HS": 0.90, "DAM": 0.90, "SFD": 0.80,
       "LBS": 0.50, "AKM": 0.35, "MCC": 0.55, "RRF": 0.70,
       "VPS": 0.78,
-      "ETM_v2_aggregate": 0.71
+      "ETM_v2_aggregate": 0.71,
+      "_brandon_silence_implicit_acceptance": true
     },
     "pmd_in_the_hands_of_fate_top_floor": {
       "source": "PMD_Sky",
@@ -94,14 +110,30 @@
       "TRD": 0.85, "HS": 0.70, "DAM": 0.95, "SFD": 0.85,
       "LBS": 0.75, "AKM": 0.40, "MCC": 0.75, "RRF": 0.80,
       "VPS": 0.81,
-      "ETM_v2_aggregate": 0.76
+      "ETM_v2_aggregate": 0.76,
+      "_brandon_silence_implicit_acceptance": true
     }
   },
+  "_prior_gvb_picks_superseded_b9": {
+    "_note": "Agent-nominated GVB picks from B6/B7 SUPERSEDED by Brandon-canonical list B9. Records preserved here for honest-corpus-history.",
+    "superseded": [
+      "gaither_i_bowed_on_my_knees_and_cried_holy (was top-1 agent-pick; not in Brandon-canonical-5)",
+      "gaither_alpha_and_omega (was top-2 agent-pick; not in Brandon-canonical-5)",
+      "gaither_then_came_the_morning (was top-3 agent-pick; not in Brandon-canonical-5)",
+      "gaither_because_he_lives_multi_modulation_live (was top-4 agent-pick; not in Brandon-canonical-5)",
+      "gaither_it_is_well_with_my_soul (was top-5 agent-pick; not in Brandon-canonical-5)"
+    ],
+    "_disposition": "Phase-2 acquisition will still acquire these 5 as SECONDARY-COMPARISON (Brandon-NOT-rated-top-5; agent-perceived-transformational) — they serve as an interesting middle-tier sanity-check: if they score comparably high on ETM_v2, the agent's intuition is *partial* not zero (agent picked transformational-grade Gaither songs even if not Brandon's-specific-top-5); if they score lower, the agent's intuition is genuinely miscalibrated and the model trained on Brandon's-canonical-list has better discriminant validity."
+  },
   "_summary": {
-    "all_10_songs_aggregate_mean": 0.73,
-    "all_10_songs_aggregate_min": 0.65,
-    "all_10_songs_aggregate_max": 0.78,
-    "all_10_above_transformational_threshold_0_65": true,
-    "phase_2_validation_target": "Pearson r >= 0.6 between MIR-extracted aggregate and Phase-1 expert-judgment aggregate over the 10-song set; per-feature r reported for diagnostic"
+    "brandon_canonical_top_5_aggregate_mean": 0.68,
+    "brandon_canonical_top_5_aggregate_min": 0.65,
+    "brandon_canonical_top_5_aggregate_max": 0.71,
+    "all_5_brandon_canonical_above_transformational_threshold_0_65": true,
+    "pmd_5_aggregate_mean": 0.75,
+    "pmd_5_aggregate_min": 0.71,
+    "pmd_5_aggregate_max": 0.78,
+    "phase_2_validation_target": "Pearson r >= 0.6 between MIR-extracted aggregate and Phase-1 expert-judgment aggregate over the 10-song set; per-feature r reported for diagnostic",
+    "honest_69_brandon_canonical_lower_mean_than_pmd": "Brandon-canonical GVB-5 mean (0.68) is LOWER than PMD-Sky-5 mean (0.75) — agent's per-feature estimates skew conservative for the new Brandon-canonical list pending Brandon direct re-rating. PMD-Sky estimates retain prior B6/B7 calibration."
   }
 }

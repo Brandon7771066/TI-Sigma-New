@@ -45,18 +45,20 @@ except ImportError:
 OUT_DIR = Path(__file__).parent / "audio"
 MANIFEST_PATH = OUT_DIR / "_spotify_acquisition_manifest.json"
 
-# 10 Phase-1-baseline songs (Pass-77-B7 §3-§4)
+# 10 Phase-1-baseline songs (Pass-77-B9 BRANDON-CANONICAL GVB top-5 + PMD-Sky top-5)
+# Honest #69: B7's agent-nominated GVB list was SUPERSEDED by Brandon-canonical list B9.
+# Prior agent-picks acquired as SECONDARY_COMPARISON below.
 SONGS = [
-    {"slug": "gaither_i_bowed_on_my_knees_and_cried_holy",
-     "query": "I Bowed on My Knees and Cried Holy", "artist": "Gaither Vocal Band"},
-    {"slug": "gaither_alpha_and_omega",
-     "query": "Alpha and Omega", "artist": "Gaither Vocal Band"},
-    {"slug": "gaither_then_came_the_morning",
-     "query": "Then Came the Morning", "artist": "Gaither Vocal Band"},
-    {"slug": "gaither_because_he_lives_live",
-     "query": "Because He Lives (Live)", "artist": "Gaither Vocal Band"},
-    {"slug": "gaither_it_is_well_with_my_soul",
-     "query": "It Is Well with My Soul", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_clean",
+     "query": "Clean", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_the_time_i_must_sing",
+     "query": "The Time I Must Sing", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_god_gave_the_song",
+     "query": "God Gave the Song", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_he_touched_me",
+     "query": "He Touched Me", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_i_just_want_to_thank_you_lord",
+     "query": "I Just Want to Thank You Lord", "artist": "Gaither Vocal Band"},
     {"slug": "pmd_dont_ever_forget",
      "query": "Don't Ever Forget", "artist": "Pokémon Mystery Dungeon Explorers of Sky"},
     {"slug": "pmd_heartbeat_heartbreak",
@@ -83,7 +85,22 @@ RAP_CONTROLS = [
      "query": "Dior", "artist": "Pop Smoke"},
 ]
 
-ALL_TARGETS = SONGS + RAP_CONTROLS
+# Pass-77-B9 secondary-comparison: agent's prior-nominated GVB picks (NOT in Brandon-canonical-5)
+# Acquired to test agent's intuition partial-vs-zero calibration on Gaither catalogue
+SECONDARY_COMPARISON_AGENT_PRIOR_GVB = [
+    {"slug": "gaither_secondary_i_bowed_on_my_knees",
+     "query": "I Bowed on My Knees and Cried Holy", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_secondary_alpha_and_omega",
+     "query": "Alpha and Omega", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_secondary_then_came_the_morning",
+     "query": "Then Came the Morning", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_secondary_because_he_lives_live",
+     "query": "Because He Lives (Live)", "artist": "Gaither Vocal Band"},
+    {"slug": "gaither_secondary_it_is_well_with_my_soul",
+     "query": "It Is Well with My Soul", "artist": "Gaither Vocal Band"},
+]
+
+ALL_TARGETS = SONGS + RAP_CONTROLS + SECONDARY_COMPARISON_AGENT_PRIOR_GVB
 
 
 def get_client():
