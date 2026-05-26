@@ -69,6 +69,7 @@ dependencies = [
     "h5py>=3.16.0",
     "cirq-core>=1.6.1",
     "qiskit-ibm-runtime>=0.46.1",
+    "librosa>=0.11.0",
 ]
 
 [[tool.uv.index]]
