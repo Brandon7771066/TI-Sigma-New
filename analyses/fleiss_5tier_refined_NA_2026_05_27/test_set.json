@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "T-089",
+    "gold": "T",
+    "text": "11 times 11 equals 121."
+  },
+  {
+    "id": "NA-FUT-02",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2029-03-07 at 12:00:00 UTC, the temperature at Heathrow Airport will be exactly 14.7\u00b0C."
+  },
+  {
+    "id": "MI-019",
+    "gold": "MI",
+    "text": "This proposition has no truth value at all and is true."
+  },
+  {
+    "id": "F-040",
+    "gold": "F",
+    "text": "The capital of India is Karachi."
+  },
+  {
+    "id": "I-008",
+    "gold": "I",
+    "text": "The President of the United States is currently sitting down."
+  },
+  {
+    "id": "MI-030",
+    "gold": "MI",
+    "text": "A circle with corners was traced on the floor."
+  },
+  {
+    "id": "T-074",
+    "gold": "T",
+    "text": "20 plus 20 equals 40."
+  },
+  {
+    "id": "NA-PST-04",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The exact second at which a specific Mongolian goat first ate grass on the morning of 1973-06-04 was 06:42:11 local time."
+  },
+  {
+    "id": "T-060",
+    "gold": "T",
+    "text": "A year on Earth has approximately 365 days."
+  },
+  {
+    "id": "NA-FUT-21",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2028-07-04, the high temperature in Death Valley, California will exceed 52\u00b0C."
+  },
+  {
+    "id": "T-055",
+    "gold": "T",
+    "text": "Mercury is the closest planet to the Sun."
+  },
+  {
+    "id": "MI-085",
+    "gold": "MI",
+    "text": "There exists a square root of negative one in the real numbers."
+  },
+  {
+    "id": "F-004",
+    "gold": "F",
+    "text": "DNA stands for digital network adapter."
+  },
+  {
+    "id": "NA-CAT-03",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The color blue is divisible by 3."
+  },
+  {
+    "id": "MI-050",
+    "gold": "MI",
+    "text": "A square circle is sitting on the chair."
+  },
+  {
+    "id": "I-063",
+    "gold": "I",
+    "text": "A specific spider is currently weaving a web in a barn in Iowa."
+  },
+  {
+    "id": "F-082",
+    "gold": "F",
+    "text": "The human heart has only one chamber."
+  },
+  {
+    "id": "MI-091",
+    "gold": "MI",
+    "text": "All rules including this one have no exceptions whatsoever except for the present rule."
+  },
+  {
+    "id": "MI-010",
+    "gold": "MI",
+    "text": "There exists an event that both occurred and did not occur at the same place and time in the same sense."
+  },
+  {
+    "id": "I-093",
+    "gold": "I",
+    "text": "There is at least one umbrella opened indoors in Tokyo right now."
+  },
+  {
+    "id": "MI-040",
+    "gold": "MI",
+    "text": "Some odd numbers are prime; some prime numbers are not prime."
+  },
+  {
+    "id": "I-058",
+    "gold": "I",
+    "text": "A specific frog is currently sitting on a lily pad in a pond in Louisiana."
+  },
+  {
+    "id": "MI-052",
+    "gold": "MI",
+    "text": "There is a non-circular circle on the wall."
+  },
+  {
+    "id": "F-044",
+    "gold": "F",
+    "text": "Marie Curie won Nobel Prizes only in literature."
+  },
+  {
+    "id": "F-092",
+    "gold": "F",
+    "text": "The capital of Vietnam is Bangkok."
+  },
+  {
+    "id": "F-063",
+    "gold": "F",
+    "text": "4 times 4 equals 21."
+  },
+  {
+    "id": "NA-PRE-23",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Before you commit to a truth-judgment about it, this sentence holds the default pre-decision label in working memory."
+  },
+  {
+    "id": "MI-041",
+    "gold": "MI",
+    "text": "A complete and consistent first-order theory of arithmetic exists by G\u00f6del's theorem."
+  },
+  {
+    "id": "I-086",
+    "gold": "I",
+    "text": "A coin flipped in private by someone in Lagos one hour ago landed on tails."
+  },
+  {
+    "id": "I-078",
+    "gold": "I",
+    "text": "A particular cloud over the Atlantic Ocean will produce rain in the next 12 hours."
+  },
+  {
+    "id": "T-095",
+    "gold": "T",
+    "text": "Sodium chloride is the chemical name for table salt."
+  },
+  {
+    "id": "I-030",
+    "gold": "I",
+    "text": "There is at least one elderly person currently napping in a recliner in Madrid."
+  },
+  {
+    "id": "T-072",
+    "gold": "T",
+    "text": "The capital of Mexico is Mexico City."
+  },
+  {
+    "id": "F-025",
+    "gold": "F",
+    "text": "3 plus 3 equals 7."
+  },
+  {
+    "id": "NA-FUT-10",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2027-06-30, the number of registered users of TikTok will exceed 2 billion."
+  },
+  {
+    "id": "NA-CAT-15",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Honesty has a melting point of 91 degrees Celsius."
+  },
+  {
+    "id": "I-021",
+    "gold": "I",
+    "text": "The price of gold will close higher than today's price exactly 90 days from now."
+  },
+  {
+    "id": "F-013",
+    "gold": "F",
+    "text": "World War II ended in 1845."
+  },
+  {
+    "id": "F-002",
+    "gold": "F",
+    "text": "The capital of Mexico is Bogota."
+  },
+  {
+    "id": "NA-CAT-14",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The number \u03c0 is taller than the concept of beauty."
+  },
+  {
+    "id": "F-081",
+    "gold": "F",
+    "text": "The Pyramids of Giza are located in Norway."
+  },
+  {
+    "id": "MI-048",
+    "gold": "MI",
+    "text": "A blind person with full 20/20 vision read the book."
+  },
+  {
+    "id": "NA-CAT-12",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Gravity has a favorite color, and it is mauve."
+  },
+  {
+    "id": "T-064",
+    "gold": "T",
+    "text": "Carbon is an essential element in all known living organisms."
+  },
+  {
+    "id": "NA-PRE-11",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Until a decision on this proposition's truth has been made, its working-memory state is the default-undetermined state."
+  },
+  {
+    "id": "F-091",
+    "gold": "F",
+    "text": "The capital of Greece is Sofia."
+  },
+  {
+    "id": "I-057",
+    "gold": "I",
+    "text": "Somewhere a stranger is thinking of the same word you are thinking of right now."
+  },
+  {
+    "id": "T-099",
+    "gold": "T",
+    "text": "11 plus 11 equals 22."
+  },
+  {
+    "id": "F-072",
+    "gold": "F",
+    "text": "Humans have 12 pairs of chromosomes."
+  },
+  {
+    "id": "T-056",
+    "gold": "T",
+    "text": "There are seven continents on Earth."
+  },
+  {
+    "id": "I-042",
+    "gold": "I",
+    "text": "The temperature at the exact center of Greenland right now is below minus 40 Celsius."
+  },
+  {
+    "id": "I-073",
+    "gold": "I",
+    "text": "There exists somewhere in space an exoplanet harboring intelligent life."
+  },
+  {
+    "id": "I-006",
+    "gold": "I",
+    "text": "The next person to win a major lottery will live in a city with population over 1 million."
+  },
+  {
+    "id": "MI-051",
+    "gold": "MI",
+    "text": "I know with absolute certainty that I know nothing with absolute certainty."
+  },
+  {
+    "id": "T-061",
+    "gold": "T",
+    "text": "The capital of Brazil is Brasilia."
+  },
+  {
+    "id": "NA-PRE-02",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The truth-value of this sentence in your working memory has not yet been computed."
+  },
+  {
+    "id": "T-039",
+    "gold": "T",
+    "text": "13 plus 13 equals 26."
+  },
+  {
+    "id": "T-051",
+    "gold": "T",
+    "text": "4 times 4 equals 16."
+  },
+  {
+    "id": "F-057",
+    "gold": "F",
+    "text": "The capital of Canada is Toronto."
+  },
+  {
+    "id": "T-093",
+    "gold": "T",
+    "text": "The English alphabet has 26 letters."
+  },
+  {
+    "id": "MI-012",
+    "gold": "MI",
+    "text": "An object that is wholly here is also wholly somewhere else at the same time."
+  },
+  {
+    "id": "NA-PST-06",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The exact phrase spoken between two strangers passing each other on a sidewalk in Lyon, France at 14:33 on 1998-11-02 was 'pardon'."
+  },
+  {
+    "id": "I-038",
+    "gold": "I",
+    "text": "There is at least one undiscovered species of insect in the Amazon rainforest."
+  },
+  {
+    "id": "MI-006",
+    "gold": "MI",
+    "text": "A finite number greater than every finite number was computed."
+  },
+  {
+    "id": "I-017",
+    "gold": "I",
+    "text": "There is a marble currently resting at the bottom of a fountain in Rome."
+  },
+  {
+    "id": "MI-055",
+    "gold": "MI",
+    "text": "There is a colorless red object in the corner."
+  },
+  {
+    "id": "I-002",
+    "gold": "I",
+    "text": "Somewhere a child is currently learning to ride a bicycle."
+  },
+  {
+    "id": "T-015",
+    "gold": "T",
+    "text": "2 plus 2 equals 4."
+  },
+  {
+    "id": "T-030",
+    "gold": "T",
+    "text": "Neil Armstrong walked on the Moon in 1969."
+  },
+  {
+    "id": "F-032",
+    "gold": "F",
+    "text": "Gold has the chemical symbol Hy."
+  },
+  {
+    "id": "NA-PRE-16",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The proposition you are about to evaluate currently has no truth-value assigned in your pre-decision working memory."
+  },
+  {
+    "id": "MI-070",
+    "gold": "MI",
+    "text": "An odd even number was added to the column."
+  },
+  {
+    "id": "T-046",
+    "gold": "T",
+    "text": "The capital of Sweden is Stockholm."
+  },
+  {
+    "id": "MI-007",
+    "gold": "MI",
+    "text": "An object that is both entirely red and entirely green at the same time and in the same respect is on the table."
+  },
+  {
+    "id": "MI-046",
+    "gold": "MI",
+    "text": "There exists a wholly invisible thing that is visible to the human eye."
+  },
+  {
+    "id": "F-073",
+    "gold": "F",
+    "text": "11 plus 11 equals 23."
+  },
+  {
+    "id": "MI-090",
+    "gold": "MI",
+    "text": "There is a number that is simultaneously equal to 7 and not equal to 7."
+  },
+  {
+    "id": "F-048",
+    "gold": "F",
+    "text": "Neil Armstrong walked on Mars in 1969."
+  },
+  {
+    "id": "F-051",
+    "gold": "F",
+    "text": "An equilateral triangle has four equal sides."
+  },
+  {
+    "id": "F-014",
+    "gold": "F",
+    "text": "The capital of Finland is Tallinn."
+  },
+  {
+    "id": "MI-035",
+    "gold": "MI",
+    "text": "Some bachelors are widows."
+  },
+  {
+    "id": "MI-059",
+    "gold": "MI",
+    "text": "There is an integer between 4 and 5 exclusive."
+  },
+  {
+    "id": "F-080",
+    "gold": "F",
+    "text": "6 plus 6 equals 13."
+  },
+  {
+    "id": "I-029",
+    "gold": "I",
+    "text": "The first word spoken in your next phone call will start with the letter S."
+  },
+  {
+    "id": "I-076",
+    "gold": "I",
+    "text": "There is at least one undiscovered Roman coin buried within five kilometers of the Colosseum."
+  },
+  {
+    "id": "MI-088",
+    "gold": "MI",
+    "text": "A bachelor's daughter visited her father's wife."
+  },
+  {
+    "id": "T-082",
+    "gold": "T",
+    "text": "The capital of Finland is Helsinki."
+  },
+  {
+    "id": "NA-PRE-22",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "At the moment of arrival in your working memory, prior to any processing, this sentence carries no truth-value."
+  },
+  {
+    "id": "NA-PST-16",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "Brandon ate a sandwich at exactly 12:47:18 EST on 2014-07-22 containing 3 slices of cucumber."
+  },
+  {
+    "id": "F-016",
+    "gold": "F",
+    "text": "Sound travels faster than light in a vacuum."
+  },
+  {
+    "id": "T-042",
+    "gold": "T",
+    "text": "Water boils at 100 degrees Celsius at standard atmospheric pressure."
+  },
+  {
+    "id": "T-002",
+    "gold": "T",
+    "text": "Christopher Columbus reached the Americas in 1492."
+  },
+  {
+    "id": "NA-PRE-20",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The current working-memory status of this proposition, before your truth-decision finalizes, is by stipulation not-yet-determined."
+  },
+  {
+    "id": "T-050",
+    "gold": "T",
+    "text": "Plants produce oxygen through photosynthesis."
+  },
+  {
+    "id": "I-012",
+    "gold": "I",
+    "text": "A specific bookstore in Berlin currently has exactly 12 customers inside."
+  },
+  {
+    "id": "I-089",
+    "gold": "I",
+    "text": "An asteroid larger than 10 meters in diameter will pass within one lunar distance of Earth in the next 30 days."
+  },
+  {
+    "id": "T-080",
+    "gold": "T",
+    "text": "The Nile is one of the longest rivers in the world."
+  },
+  {
+    "id": "NA-PST-08",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "Brandon's 4th-grade teacher wore a blue sweater on the third Wednesday of October 1991."
+  },
+  {
+    "id": "NA-PST-15",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The exact wording of the third paragraph of a private diary entry written on 1944-06-15 by a Swedish factory worker named Astrid included the phrase 'kalla vinden'."
+  },
+  {
+    "id": "F-010",
+    "gold": "F",
+    "text": "The square root of 144 is 24."
+  },
+  {
+    "id": "MI-094",
+    "gold": "MI",
+    "text": "An immovable object collided with an unstoppable force in the lab."
+  },
+  {
+    "id": "F-069",
+    "gold": "F",
+    "text": "The Sun orbits the Earth."
+  },
+  {
+    "id": "NA-FUT-13",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The first Olympic gold medal in a sport that doesn't exist yet will be awarded before 2060."
+  },
+  {
+    "id": "I-056",
+    "gold": "I",
+    "text": "A specific oak leaf in Sherwood Forest will fall to the ground in the next 24 hours."
+  },
+  {
+    "id": "F-079",
+    "gold": "F",
+    "text": "Oxygen is a metal at room temperature."
+  },
+  {
+    "id": "NA-PST-20",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The reflection in a specific store window on Oxford Street, London at 15:42 on 1968-08-04 included exactly 12 pedestrians."
+  },
+  {
+    "id": "I-026",
+    "gold": "I",
+    "text": "The total number of red socks currently being worn in Greater London is divisible by 11."
+  },
+  {
+    "id": "NA-CAT-10",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Communism has a refractive index of 1.42."
+  },
+  {
+    "id": "F-001",
+    "gold": "F",
+    "text": "12 plus 12 equals 25."
+  },
+  {
+    "id": "NA-PRE-08",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The truth-status of this very sentence, in the moment before your judgment commits, is intentionally left unspecified."
+  },
+  {
+    "id": "NA-FUT-24",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The next Nobel Prize in Physics laureate will be a woman from a country in Asia."
+  },
+  {
+    "id": "MI-020",
+    "gold": "MI",
+    "text": "An entirely silent loud sound was just made."
+  },
+  {
+    "id": "T-032",
+    "gold": "T",
+    "text": "The Pacific Ocean is larger than the Atlantic Ocean."
+  },
+  {
+    "id": "I-000",
+    "gold": "I",
+    "text": "Right now, more shoes are tied than untied across all of New York City."
+  },
+  {
+    "id": "I-079",
+    "gold": "I",
+    "text": "The next bird call you hear will come from a sparrow."
+  },
+  {
+    "id": "MI-081",
+    "gold": "MI",
+    "text": "There exists a married bachelor in this room."
+  },
+  {
+    "id": "T-086",
+    "gold": "T",
+    "text": "21 plus 21 equals 42."
+  },
+  {
+    "id": "MI-036",
+    "gold": "MI",
+    "text": "Today exists both in the past and in the future and not in the present."
+  },
+  {
+    "id": "T-006",
+    "gold": "T",
+    "text": "12 times 12 equals 144."
+  },
+  {
+    "id": "T-028",
+    "gold": "T",
+    "text": "World War II ended in 1945."
+  },
+  {
+    "id": "F-061",
+    "gold": "F",
+    "text": "8 times 8 equals 69."
+  },
+  {
+    "id": "MI-076",
+    "gold": "MI",
+    "text": "I know that I do not know the contents of this sentence which I have just read."
+  },
+  {
+    "id": "MI-039",
+    "gold": "MI",
+    "text": "The barber shaves all and only those men who do not shave themselves; the barber shaves himself."
+  },
+  {
+    "id": "I-054",
+    "gold": "I",
+    "text": "The temperature in Reykjavik will exceed 15 degrees Celsius on Christmas Day next year."
+  },
+  {
+    "id": "I-094",
+    "gold": "I",
+    "text": "There exists a particular drop of rainwater currently falling into Lake Geneva."
+  },
+  {
+    "id": "NA-FUT-06",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The 2028 FIFA World Cup will be won by a team from South America."
+  },
+  {
+    "id": "T-057",
+    "gold": "T",
+    "text": "DNA stands for deoxyribonucleic acid."
+  },
+  {
+    "id": "T-029",
+    "gold": "T",
+    "text": "The capital of Thailand is Bangkok."
+  },
+  {
+    "id": "NA-FUT-23",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2031-10-10, the number of active GitHub repositories will be exactly 712,348,901."
+  },
+  {
+    "id": "F-011",
+    "gold": "F",
+    "text": "Isaac Newton formulated the laws of thermodynamics."
+  },
+  {
+    "id": "NA-PRE-01",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Without making any truth determination, the proposition 'snow is white' has not yet been evaluated by you at this exact moment."
+  },
+  {
+    "id": "I-065",
+    "gold": "I",
+    "text": "The total weight of fish currently in the Yangtze river exceeds 50,000 metric tons."
+  },
+  {
+    "id": "NA-CAT-22",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Quadrilaterals are jealous of the integers."
+  },
+  {
+    "id": "I-053",
+    "gold": "I",
+    "text": "The number of letters in the next sign you read will be a prime number."
+  },
+  {
+    "id": "NA-FUT-03",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The first human born on Mars will be female."
+  },
+  {
+    "id": "MI-029",
+    "gold": "MI",
+    "text": "An entirely solid liquid filled the cup."
+  },
+  {
+    "id": "NA-CAT-05",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The Pythagorean theorem is made of copper."
+  },
+  {
+    "id": "I-069",
+    "gold": "I",
+    "text": "There is an even number of fish currently in Lake Victoria."
+  },
+  {
+    "id": "NA-PST-01",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1962-04-12 at 09:31 local time, a passenger named Yelena Petrova boarded a bus in Sverdlovsk wearing a brown wool coat."
+  },
+  {
+    "id": "T-007",
+    "gold": "T",
+    "text": "The capital of France is Paris."
+  },
+  {
+    "id": "I-004",
+    "gold": "I",
+    "text": "A particular grain of rice in a sealed container in Kyoto is touching exactly five other grains."
+  },
+  {
+    "id": "MI-065",
+    "gold": "MI",
+    "text": "There exists a real number that is greater than every real number."
+  },
+  {
+    "id": "NA-CAT-09",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The set of all even numbers tastes bitter."
+  },
+  {
+    "id": "I-075",
+    "gold": "I",
+    "text": "An ant currently walking across a sidewalk in Madrid will reach a crack in the next ten seconds."
+  },
+  {
+    "id": "T-078",
+    "gold": "T",
+    "text": "The capital of Russia is Moscow."
+  },
+  {
+    "id": "T-018",
+    "gold": "T",
+    "text": "Beethoven composed nine symphonies."
+  },
+  {
+    "id": "NA-FUT-14",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "Brandon's next dream tonight will feature a body of water."
+  },
+  {
+    "id": "MI-003",
+    "gold": "MI",
+    "text": "The empty set contains exactly one element."
+  },
+  {
+    "id": "MI-064",
+    "gold": "MI",
+    "text": "An invisible visible object is on the floor."
+  },
+  {
+    "id": "F-055",
+    "gold": "F",
+    "text": "Albert Einstein developed the theory of evolution."
+  },
+  {
+    "id": "NA-PST-10",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "At 17:22:08 UTC on 2001-09-08, a specific sparrow in Hyde Park, London faced due east while drinking from a puddle."
+  },
+  {
+    "id": "MI-061",
+    "gold": "MI",
+    "text": "The number 7 is both prime and divisible by 2."
+  },
+  {
+    "id": "MI-082",
+    "gold": "MI",
+    "text": "There is a child who is older than her own father."
+  },
+  {
+    "id": "F-065",
+    "gold": "F",
+    "text": "The capital of France is London."
+  },
+  {
+    "id": "F-053",
+    "gold": "F",
+    "text": "The capital of Australia is Wellington."
+  },
+  {
+    "id": "NA-PRE-13",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The pre-decision working-memory state of any proposition, including this one, is by definition not yet T or F or I or MI."
+  },
+  {
+    "id": "F-075",
+    "gold": "F",
+    "text": "7 plus 7 equals 15."
+  },
+  {
+    "id": "I-028",
+    "gold": "I",
+    "text": "There is currently a cat on a roof in Florence, Italy."
+  },
+  {
+    "id": "F-006",
+    "gold": "F",
+    "text": "16 plus 16 equals 33."
+  },
+  {
+    "id": "F-070",
+    "gold": "F",
+    "text": "The capital of Italy is Madrid."
+  },
+  {
+    "id": "I-066",
+    "gold": "I",
+    "text": "The total volume of coffee currently in mugs across Seattle exceeds 10,000 liters."
+  },
+  {
+    "id": "F-000",
+    "gold": "F",
+    "text": "The capital of Brazil is Lima."
+  },
+  {
+    "id": "T-087",
+    "gold": "T",
+    "text": "Isaac Newton formulated the laws of motion."
+  },
+  {
+    "id": "I-011",
+    "gold": "I",
+    "text": "There is a specific snowflake currently falling onto a rooftop in Vancouver."
+  },
+  {
+    "id": "MI-057",
+    "gold": "MI",
+    "text": "There exists a complete list of all true propositions including those not on this list."
+  },
+  {
+    "id": "F-083",
+    "gold": "F",
+    "text": "Mercury is the largest planet in the solar system."
+  },
+  {
+    "id": "F-029",
+    "gold": "F",
+    "text": "The capital of Argentina is Santiago."
+  },
+  {
+    "id": "I-019",
+    "gold": "I",
+    "text": "A specific photon emitted by a star in the Andromeda galaxy will reach Earth before 2030."
+  },
+  {
+    "id": "MI-023",
+    "gold": "MI",
+    "text": "There is a non-numerical number in the equation."
+  },
+  {
+    "id": "F-093",
+    "gold": "F",
+    "text": "12 times 12 equals 149."
+  },
+  {
+    "id": "MI-014",
+    "gold": "MI",
+    "text": "Some object both exists and does not exist in the same sense at the same moment."
+  },
+  {
+    "id": "I-051",
+    "gold": "I",
+    "text": "The square of the number of unread emails in the inbox of a specific person in Cairo right now exceeds 10,000."
+  },
+  {
+    "id": "I-092",
+    "gold": "I",
+    "text": "The grand total of unfinished crossword puzzles currently in homes across the United States exceeds 5 million."
+  },
+  {
+    "id": "I-005",
+    "gold": "I",
+    "text": "It will rain in Tokyo exactly seven days from now."
+  },
+  {
+    "id": "MI-072",
+    "gold": "MI",
+    "text": "A four-sided triangle is on the table."
+  },
+  {
+    "id": "MI-044",
+    "gold": "MI",
+    "text": "The set of all sets that do not contain themselves contains itself."
+  },
+  {
+    "id": "NA-FUT-05",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2040-01-01, the President of France will have a surname beginning with the letter M."
+  },
+  {
+    "id": "NA-CAT-00",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The number 7 smells like vanilla."
+  },
+  {
+    "id": "I-036",
+    "gold": "I",
+    "text": "Somewhere a glass is currently being filled with orange juice."
+  },
+  {
+    "id": "MI-015",
+    "gold": "MI",
+    "text": "There is a sentence in English of exactly 100 words and exactly 50 words at the same time."
+  },
+  {
+    "id": "F-094",
+    "gold": "F",
+    "text": "3 times 3 equals 14."
+  },
+  {
+    "id": "T-004",
+    "gold": "T",
+    "text": "3 plus 3 equals 6."
+  },
+  {
+    "id": "NA-FUT-01",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The winner of the 2032 Summer Olympics men's 100m final will be a sprinter from Jamaica."
+  },
+  {
+    "id": "F-041",
+    "gold": "F",
+    "text": "Sharks are mammals, not fish."
+  },
+  {
+    "id": "MI-062",
+    "gold": "MI",
+    "text": "The proposition currently being asserted asserts only its own negation and is true."
+  },
+  {
+    "id": "I-025",
+    "gold": "I",
+    "text": "The next dream you have will involve flying."
+  },
+  {
+    "id": "NA-PST-17",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1701-03-11, a specific ant in what is now Brazil traversed a distance of 4.7 meters."
+  },
+  {
+    "id": "MI-026",
+    "gold": "MI",
+    "text": "Today is both Monday and not Monday in the same sense at the same time."
+  },
+  {
+    "id": "NA-PRE-10",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "At the precise instant this sentence enters your working memory, prior to any truth-evaluation, it occupies an undetermined slot."
+  },
+  {
+    "id": "I-037",
+    "gold": "I",
+    "text": "A particular cup of tea currently steeping somewhere in England will be drunk within 10 minutes."
+  },
+  {
+    "id": "MI-079",
+    "gold": "MI",
+    "text": "A line segment is both finite in length and infinite in length at the same time."
+  },
+  {
+    "id": "T-054",
+    "gold": "T",
+    "text": "The Sun is a star."
+  },
+  {
+    "id": "NA-PRE-06",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Consider: before any truth-determination is made about it, what label does an unevaluated proposition hold in working memory?"
+  },
+  {
+    "id": "T-037",
+    "gold": "T",
+    "text": "Albert Einstein developed the theory of relativity."
+  },
+  {
+    "id": "I-088",
+    "gold": "I",
+    "text": "There is a particular goldfish swimming clockwise in a particular bowl in Osaka."
+  },
+  {
+    "id": "NA-FUT-18",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The 100th billionaire created after 2026-05-27 will have made their fortune in biotechnology."
+  },
+  {
+    "id": "MI-022",
+    "gold": "MI",
+    "text": "There is a perfectly true false statement in this paragraph."
+  },
+  {
+    "id": "NA-FUT-15",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2029-12-31 at 23:59:59 UTC, the total number of stars visible to the naked eye from the geographic North Pole will be 6,287."
+  },
+  {
+    "id": "F-059",
+    "gold": "F",
+    "text": "The chemical formula for water is CO2."
+  },
+  {
+    "id": "NA-PST-07",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1923-07-15, the 87th leaf to fall from a specific oak tree in Vermont landed at coordinates 44.2581\u00b0N, 72.5778\u00b0W."
+  },
+  {
+    "id": "F-052",
+    "gold": "F",
+    "text": "9 plus 9 equals 19."
+  },
+  {
+    "id": "F-046",
+    "gold": "F",
+    "text": "The Earth has three natural moons."
+  },
+  {
+    "id": "T-088",
+    "gold": "T",
+    "text": "Humans have 23 pairs of chromosomes."
+  },
+  {
+    "id": "T-034",
+    "gold": "T",
+    "text": "3 times 3 equals 9."
+  },
+  {
+    "id": "F-078",
+    "gold": "F",
+    "text": "11 times 11 equals 126."
+  },
+  {
+    "id": "F-020",
+    "gold": "F",
+    "text": "Antibiotics are effective against all viruses."
+  },
+  {
+    "id": "T-000",
+    "gold": "T",
+    "text": "8 plus 8 equals 16."
+  },
+  {
+    "id": "NA-CAT-13",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The concept of irony lays eggs in spring."
+  },
+  {
+    "id": "NA-PRE-17",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Before any truth-claim about this sentence is committed, the sentence occupies a default-undetermined cognitive slot."
+  },
+  {
+    "id": "NA-PST-03",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "During training, you (the AI rater) processed a tokenized batch at exactly 04:18:33.421 UTC whose loss-value rounded to 0.04327."
+  },
+  {
+    "id": "NA-CAT-18",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The empty set hibernates during winter."
+  },
+  {
+    "id": "T-043",
+    "gold": "T",
+    "text": "The Wright brothers built and flew the first successful airplane."
+  },
+  {
+    "id": "F-088",
+    "gold": "F",
+    "text": "2 plus 2 equals 5."
+  },
+  {
+    "id": "I-016",
+    "gold": "I",
+    "text": "The total number of unread text messages on phones across Tokyo exceeds 50 million."
+  },
+  {
+    "id": "NA-FUT-00",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2031-09-14, the exact closing price of Apple stock (AAPL) on NASDAQ will be $247.83."
+  },
+  {
+    "id": "NA-PST-14",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1962-11-08, a fisherman off the coast of Maine caught a cod weighing exactly 3.41 kg."
+  },
+  {
+    "id": "F-015",
+    "gold": "F",
+    "text": "Beethoven composed twenty-five symphonies."
+  },
+  {
+    "id": "T-066",
+    "gold": "T",
+    "text": "Marie Curie won Nobel Prizes in physics and chemistry."
+  },
+  {
+    "id": "F-049",
+    "gold": "F",
+    "text": "Penguins routinely fly long migration routes across the Pacific."
+  },
+  {
+    "id": "F-019",
+    "gold": "F",
+    "text": "The capital of Sweden is Oslo."
+  },
+  {
+    "id": "I-064",
+    "gold": "I",
+    "text": "A specific unread book sits on the third shelf of a particular library in Reykjavik."
+  },
+  {
+    "id": "T-035",
+    "gold": "T",
+    "text": "The American Civil War ended in 1865."
+  },
+  {
+    "id": "NA-CAT-06",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Tuesday is taller than the concept of fairness."
+  },
+  {
+    "id": "I-055",
+    "gold": "I",
+    "text": "The first child born tomorrow in Argentina will weigh more than 3 kilograms."
+  },
+  {
+    "id": "I-090",
+    "gold": "I",
+    "text": "The Higgs boson decays into specific particles in a single given collision event no one has observed."
+  },
+  {
+    "id": "F-033",
+    "gold": "F",
+    "text": "Carbon is found nowhere in any known living organism."
+  },
+  {
+    "id": "F-050",
+    "gold": "F",
+    "text": "Christopher Columbus reached the Americas in 1992."
+  },
+  {
+    "id": "T-033",
+    "gold": "T",
+    "text": "8 times 8 equals 64."
+  },
+  {
+    "id": "T-044",
+    "gold": "T",
+    "text": "The Berlin Wall fell in 1989."
+  },
+  {
+    "id": "I-040",
+    "gold": "I",
+    "text": "The wind speed at the top of the Burj Khalifa right now is greater than 30 kilometers per hour."
+  },
+  {
+    "id": "F-024",
+    "gold": "F",
+    "text": "The capital of Egypt is Tehran."
+  },
+  {
+    "id": "F-056",
+    "gold": "F",
+    "text": "18 plus 18 equals 37."
+  },
+  {
+    "id": "F-009",
+    "gold": "F",
+    "text": "The capital of Germany is Lisbon."
+  },
+  {
+    "id": "F-085",
+    "gold": "F",
+    "text": "6 times 6 equals 41."
+  },
+  {
+    "id": "F-017",
+    "gold": "F",
+    "text": "Water boils at 50 degrees Celsius at standard atmospheric pressure."
+  },
+  {
+    "id": "F-012",
+    "gold": "F",
+    "text": "Cats are a species of reptile."
+  },
+  {
+    "id": "F-086",
+    "gold": "F",
+    "text": "The American Civil War ended in 1965."
+  },
+  {
+    "id": "T-003",
+    "gold": "T",
+    "text": "The Earth orbits the Sun."
+  },
+  {
+    "id": "MI-075",
+    "gold": "MI",
+    "text": "The last digit of pi was discovered yesterday."
+  },
+  {
+    "id": "I-046",
+    "gold": "I",
+    "text": "The next email sent worldwide will be sent from a device powered by a lithium battery."
+  },
+  {
+    "id": "NA-FUT-04",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The total global rainfall in calendar year 2030 will exceed 510,000 cubic kilometers."
+  },
+  {
+    "id": "NA-FUT-12",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2035-04-19, an earthquake measuring exactly 5.4 on the Richter scale will occur in Japan."
+  },
+  {
+    "id": "F-095",
+    "gold": "F",
+    "text": "14 plus 14 equals 29."
+  },
+  {
+    "id": "T-008",
+    "gold": "T",
+    "text": "Sharks are fish, not mammals."
+  },
+  {
+    "id": "I-085",
+    "gold": "I",
+    "text": "Right now, an even number of refrigerator doors are open across Paris."
+  },
+  {
+    "id": "I-039",
+    "gold": "I",
+    "text": "There is at least one fortune cookie containing the exact phrase 'A surprise awaits' currently being baked."
+  },
+  {
+    "id": "I-045",
+    "gold": "I",
+    "text": "There is at least one undelivered letter currently sitting in the New York City postal system addressed to a person named Maria."
+  },
+  {
+    "id": "F-022",
+    "gold": "F",
+    "text": "The Atlantic Ocean separates Asia from Africa."
+  },
+  {
+    "id": "T-075",
+    "gold": "T",
+    "text": "An equilateral triangle has three equal sides."
+  },
+  {
+    "id": "I-061",
+    "gold": "I",
+    "text": "A randomly selected page from the next Wikipedia article you load will contain the word 'however'."
+  },
+  {
+    "id": "T-011",
+    "gold": "T",
+    "text": "The capital of Egypt is Cairo."
+  },
+  {
+    "id": "MI-038",
+    "gold": "MI",
+    "text": "The current King of France is bald and there is currently no King of France."
+  },
+  {
+    "id": "I-031",
+    "gold": "I",
+    "text": "An umbrella sits forgotten on a particular train car traveling through Switzerland."
+  },
+  {
+    "id": "F-042",
+    "gold": "F",
+    "text": "A year on Earth has approximately 100 days."
+  },
+  {
+    "id": "MI-018",
+    "gold": "MI",
+    "text": "This statement is false."
+  },
+  {
+    "id": "I-067",
+    "gold": "I",
+    "text": "An ice cube melting in a glass in Cape Town will fully dissolve in less than four minutes."
+  },
+  {
+    "id": "I-023",
+    "gold": "I",
+    "text": "The atmospheric pressure at the summit of K2 right now is above the seasonal average."
+  },
+  {
+    "id": "NA-PST-21",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1845-07-29, a cobbler in Naples sang a folk song while hammering, completing exactly 87 strokes."
+  },
+  {
+    "id": "MI-037",
+    "gold": "MI",
+    "text": "The smallest positive real number is 0.0001."
+  },
+  {
+    "id": "F-023",
+    "gold": "F",
+    "text": "The Amazon rainforest is located primarily in Antarctica."
+  },
+  {
+    "id": "I-097",
+    "gold": "I",
+    "text": "The voltage at a specific power outlet in Helsinki right now is exactly 230.0 volts."
+  },
+  {
+    "id": "T-010",
+    "gold": "T",
+    "text": "The capital of Italy is Rome."
+  },
+  {
+    "id": "MI-013",
+    "gold": "MI",
+    "text": "5 is both prime and even."
+  },
+  {
+    "id": "I-043",
+    "gold": "I",
+    "text": "There is currently at least one shoe missing its lace in the city of Toronto."
+  },
+  {
+    "id": "MI-077",
+    "gold": "MI",
+    "text": "I'm both alive and not alive in the same biological sense at the same time."
+  },
+  {
+    "id": "MI-033",
+    "gold": "MI",
+    "text": "There is a perfectly precise vague boundary."
+  },
+  {
+    "id": "MI-005",
+    "gold": "MI",
+    "text": "A perfectly straight curve was just drawn on the page."
+  },
+  {
+    "id": "F-074",
+    "gold": "F",
+    "text": "10 plus 10 equals 21."
+  },
+  {
+    "id": "F-089",
+    "gold": "F",
+    "text": "Shakespeare wrote The Great Gatsby."
+  },
+  {
+    "id": "F-047",
+    "gold": "F",
+    "text": "The Wright brothers built the first successful submarine."
+  },
+  {
+    "id": "I-080",
+    "gold": "I",
+    "text": "There is at least one tea kettle currently whistling in Edinburgh."
+  },
+  {
+    "id": "I-047",
+    "gold": "I",
+    "text": "Exactly 1,000,000 people are smiling somewhere in the world right now."
+  },
+  {
+    "id": "I-010",
+    "gold": "I",
+    "text": "Somewhere a dog is currently chasing its tail."
+  },
+  {
+    "id": "MI-002",
+    "gold": "MI",
+    "text": "A function that is everywhere continuous and nowhere continuous exists."
+  },
+  {
+    "id": "NA-PST-12",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "During your AI training, the 8,432,109,884th gradient update reduced the model loss by exactly 1.42\u00d710\u207b\u2077."
+  },
+  {
+    "id": "T-005",
+    "gold": "T",
+    "text": "9 times 9 equals 81."
+  },
+  {
+    "id": "I-033",
+    "gold": "I",
+    "text": "There is a specific candle currently burning in a window in Reykjavik."
+  },
+  {
+    "id": "T-045",
+    "gold": "T",
+    "text": "Antarctica is the coldest continent on Earth."
+  },
+  {
+    "id": "T-041",
+    "gold": "T",
+    "text": "Oxygen is necessary for human respiration."
+  },
+  {
+    "id": "NA-PRE-05",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "In the working-memory state immediately preceding your forthcoming truth-judgment, this proposition has no assigned truth-value."
+  },
+  {
+    "id": "F-054",
+    "gold": "F",
+    "text": "Mount Everest is located in Brazil."
+  },
+  {
+    "id": "T-022",
+    "gold": "T",
+    "text": "The capital of Argentina is Buenos Aires."
+  },
+  {
+    "id": "MI-000",
+    "gold": "MI",
+    "text": "Every claim including this one has exactly one true counterexample which is this same claim."
+  },
+  {
+    "id": "F-097",
+    "gold": "F",
+    "text": "8 plus 8 equals 17."
+  },
+  {
+    "id": "NA-CAT-08",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Mercy has 27 protons."
+  },
+  {
+    "id": "MI-016",
+    "gold": "MI",
+    "text": "A perfectly round square was placed on the windowsill."
+  },
+  {
+    "id": "NA-CAT-23",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The Pythagorean theorem skips breakfast on weekends."
+  },
+  {
+    "id": "MI-024",
+    "gold": "MI",
+    "text": "The number of digits in the largest prime is exactly fifteen."
+  },
+  {
+    "id": "MI-011",
+    "gold": "MI",
+    "text": "Some equilateral triangles are scalene."
+  },
+  {
+    "id": "T-026",
+    "gold": "T",
+    "text": "10 plus 10 equals 20."
+  },
+  {
+    "id": "MI-058",
+    "gold": "MI",
+    "text": "The next sentence is true. The previous sentence is false."
+  },
+  {
+    "id": "T-096",
+    "gold": "T",
+    "text": "Charles Darwin wrote On the Origin of Species."
+  },
+  {
+    "id": "NA-CAT-04",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Loyalty has a square root."
+  },
+  {
+    "id": "MI-053",
+    "gold": "MI",
+    "text": "I am the only person who exists, and there are other people in this room with me."
+  },
+  {
+    "id": "NA-PRE-18",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "In the working-memory phase that precedes your forthcoming truth-output, this sentence is in an unevaluated state."
+  },
+  {
+    "id": "NA-FUT-07",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2033-11-21, the exact attendance at the Tokyo Dome will be 41,832 people."
+  },
+  {
+    "id": "T-009",
+    "gold": "T",
+    "text": "9 plus 9 equals 18."
+  },
+  {
+    "id": "F-005",
+    "gold": "F",
+    "text": "Plants produce carbon dioxide through photosynthesis as their only gaseous output."
+  },
+  {
+    "id": "I-035",
+    "gold": "I",
+    "text": "There is at least one violin currently being played somewhere in Paris."
+  },
+  {
+    "id": "F-037",
+    "gold": "F",
+    "text": "The capital of Norway is Stockholm."
+  },
+  {
+    "id": "NA-PRE-19",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Prior to deciding the truth of this sentence, it sits in your buffer in a non-truth-evaluated condition."
+  },
+  {
+    "id": "I-060",
+    "gold": "I",
+    "text": "The next car you see will have a license plate beginning with the letter T."
+  },
+  {
+    "id": "MI-031",
+    "gold": "MI",
+    "text": "The first ten digits of pi consist of exactly twelve different digits."
+  },
+  {
+    "id": "MI-021",
+    "gold": "MI",
+    "text": "I currently believe this exact sentence to be false."
+  },
+  {
+    "id": "I-041",
+    "gold": "I",
+    "text": "The next email you receive will contain the word 'thank'."
+  },
+  {
+    "id": "T-027",
+    "gold": "T",
+    "text": "The capital of Portugal is Lisbon."
+  },
+  {
+    "id": "MI-086",
+    "gold": "MI",
+    "text": "The largest prime number is currently being written on a chalkboard."
+  },
+  {
+    "id": "NA-PRE-12",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Without yet engaging your truth-evaluation function, this proposition exists in your buffer with no truth-tag attached."
+  },
+  {
+    "id": "T-058",
+    "gold": "T",
+    "text": "The Pyramids of Giza are located in Egypt."
+  },
+  {
+    "id": "NA-CAT-02",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Wednesday weighs more than democracy."
+  },
+  {
+    "id": "F-076",
+    "gold": "F",
+    "text": "The capital of Japan is Seoul."
+  },
+  {
+    "id": "NA-CAT-20",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The Cartesian coordinate system is gluten-intolerant."
+  },
+  {
+    "id": "NA-PRE-04",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "This statement has not yet been processed by your truth-evaluation module as of the moment you began reading it."
+  },
+  {
+    "id": "T-001",
+    "gold": "T",
+    "text": "Light travels faster than sound."
+  },
+  {
+    "id": "NA-FUT-17",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2032-08-15, the exchange rate between USD and EUR will be exactly 1.0832."
+  },
+  {
+    "id": "T-097",
+    "gold": "T",
+    "text": "The speed of light in vacuum is approximately 299,792 kilometers per second."
+  },
+  {
+    "id": "T-038",
+    "gold": "T",
+    "text": "17 plus 17 equals 34."
+  },
+  {
+    "id": "NA-FUT-08",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "Before the year 2050, a confirmed extraterrestrial radio signal will be detected by SETI."
+  },
+  {
+    "id": "I-009",
+    "gold": "I",
+    "text": "A bee currently flying somewhere in California will return to its hive within the next minute."
+  },
+  {
+    "id": "NA-FUT-09",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The first commercially viable nuclear fusion power plant will come online before 2045."
+  },
+  {
+    "id": "NA-PRE-15",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Consider this proposition as it sits in your working memory in the instant before your truth-evaluation runs."
+  },
+  {
+    "id": "F-084",
+    "gold": "F",
+    "text": "19 plus 19 equals 39."
+  },
+  {
+    "id": "MI-017",
+    "gold": "MI",
+    "text": "A husband who has never been married was invited."
+  },
+  {
+    "id": "F-035",
+    "gold": "F",
+    "text": "5 plus 5 equals 11."
+  },
+  {
+    "id": "MI-032",
+    "gold": "MI",
+    "text": "There is a set of size 3 that contains exactly 4 distinct elements."
+  },
+  {
+    "id": "T-036",
+    "gold": "T",
+    "text": "10 times 10 equals 100."
+  },
+  {
+    "id": "MI-045",
+    "gold": "MI",
+    "text": "The set of all sets is itself a set in standard ZFC."
+  },
+  {
+    "id": "F-058",
+    "gold": "F",
+    "text": "There are fifteen continents on Earth."
+  },
+  {
+    "id": "MI-089",
+    "gold": "MI",
+    "text": "A perfectly transparent brick wall blocks the view."
+  },
+  {
+    "id": "MI-098",
+    "gold": "MI",
+    "text": "The number 3 is greater than itself."
+  },
+  {
+    "id": "T-085",
+    "gold": "T",
+    "text": "6 times 6 equals 36."
+  },
+  {
+    "id": "I-001",
+    "gold": "I",
+    "text": "There is currently a four-leaf clover growing in Hyde Park."
+  },
+  {
+    "id": "MI-001",
+    "gold": "MI",
+    "text": "A circle whose every diameter is also a square's side appeared today."
+  },
+  {
+    "id": "I-077",
+    "gold": "I",
+    "text": "Right now, somewhere in Africa, a giraffe is bending down to drink water."
+  },
+  {
+    "id": "NA-PRE-09",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Before your processing of this proposition completes, no truth-value has been written to your working memory for it."
+  },
+  {
+    "id": "T-052",
+    "gold": "T",
+    "text": "The capital of Spain is Madrid."
+  },
+  {
+    "id": "I-050",
+    "gold": "I",
+    "text": "The next stranger you make eye contact with will be wearing glasses."
+  },
+  {
+    "id": "NA-PRE-00",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Before you finish processing this sentence, its truth-value in your working memory is currently undetermined."
+  },
+  {
+    "id": "NA-PRE-14",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "At the moment you began reading this sentence, before processing completed, no truth-decision had been registered."
+  },
+  {
+    "id": "T-020",
+    "gold": "T",
+    "text": "18 plus 18 equals 36."
+  },
+  {
+    "id": "F-077",
+    "gold": "F",
+    "text": "The Eiffel Tower is located in Tokyo, Japan."
+  },
+  {
+    "id": "T-012",
+    "gold": "T",
+    "text": "5 plus 5 equals 10."
+  },
+  {
+    "id": "I-015",
+    "gold": "I",
+    "text": "The number of leaves currently on a particular maple tree in Vermont is prime."
+  },
+  {
+    "id": "NA-CAT-01",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Justice has a temperature of 18 degrees Celsius."
+  },
+  {
+    "id": "T-021",
+    "gold": "T",
+    "text": "4 plus 4 equals 8."
+  },
+  {
+    "id": "F-027",
+    "gold": "F",
+    "text": "7 times 7 equals 54."
+  },
+  {
+    "id": "T-031",
+    "gold": "T",
+    "text": "The square root of 144 is 12."
+  },
+  {
+    "id": "MI-034",
+    "gold": "MI",
+    "text": "A perfectly empty full glass was placed on the table."
+  },
+  {
+    "id": "MI-009",
+    "gold": "MI",
+    "text": "All generalizations are false including this one which is also true."
+  },
+  {
+    "id": "I-084",
+    "gold": "I",
+    "text": "The next car to pass a given intersection in Mumbai will be red."
+  },
+  {
+    "id": "I-095",
+    "gold": "I",
+    "text": "There is an even number of clocks currently displaying 3:00 in London."
+  },
+  {
+    "id": "T-076",
+    "gold": "T",
+    "text": "The human body has 206 bones in adulthood."
+  },
+  {
+    "id": "MI-093",
+    "gold": "MI",
+    "text": "A man taller than himself walked through the doorway."
+  },
+  {
+    "id": "T-063",
+    "gold": "T",
+    "text": "Leonardo da Vinci painted the Mona Lisa."
+  },
+  {
+    "id": "T-090",
+    "gold": "T",
+    "text": "Pi is approximately 3.14159."
+  },
+  {
+    "id": "NA-PST-13",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The first sneeze that occurred in the city of S\u00e3o Paulo on 1995-02-17 was exhaled at 04:11:33 local time by a person aged 27."
+  },
+  {
+    "id": "I-013",
+    "gold": "I",
+    "text": "There is at least one mosquito currently resting on a wall inside a building in Bangkok."
+  },
+  {
+    "id": "T-065",
+    "gold": "T",
+    "text": "The capital of Japan is Tokyo."
+  },
+  {
+    "id": "F-066",
+    "gold": "F",
+    "text": "Charles Darwin wrote Macbeth."
+  },
+  {
+    "id": "NA-FUT-22",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The next category-5 Atlantic hurricane will make landfall in Florida."
+  },
+  {
+    "id": "T-053",
+    "gold": "T",
+    "text": "16 plus 16 equals 32."
+  },
+  {
+    "id": "T-070",
+    "gold": "T",
+    "text": "19 plus 19 equals 38."
+  },
+  {
+    "id": "NA-PST-05",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "A man named Boris in Vladivostok dropped a copper coin at 11:47 AM on 1954-09-11 that landed heads-up."
+  },
+  {
+    "id": "NA-PRE-21",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Without yet running any truth-evaluation, this incoming sentence has no truth-label assigned to it."
+  },
+  {
+    "id": "MI-027",
+    "gold": "MI",
+    "text": "A married unmarried person attended the wedding."
+  },
+  {
+    "id": "MI-063",
+    "gold": "MI",
+    "text": "A line segment of length 5 cm is longer than a line segment of length 7 cm of the same units."
+  },
+  {
+    "id": "I-087",
+    "gold": "I",
+    "text": "A specific deer is currently drinking from a particular stream in Yellowstone National Park."
+  },
+  {
+    "id": "I-059",
+    "gold": "I",
+    "text": "The total population of Antarctica right now is exactly 4,517."
+  },
+  {
+    "id": "MI-056",
+    "gold": "MI",
+    "text": "The next sentence is true and false simultaneously in the same respect: snow is white."
+  },
+  {
+    "id": "F-090",
+    "gold": "F",
+    "text": "A circle has 540 degrees."
+  },
+  {
+    "id": "MI-096",
+    "gold": "MI",
+    "text": "A unicorn is both a real animal and not a real animal at the same time and in the same sense."
+  },
+  {
+    "id": "MI-074",
+    "gold": "MI",
+    "text": "The next paragraph contains only this sentence and exactly three other sentences."
+  },
+  {
+    "id": "NA-PRE-24",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "The truth-value-in-working-memory of this proposition, in the moment before your evaluation completes, is unassigned."
+  },
+  {
+    "id": "NA-FUT-20",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The next person to set foot on the Moon will say a sentence containing the word 'humanity'."
+  },
+  {
+    "id": "F-021",
+    "gold": "F",
+    "text": "The capital of Russia is Kiev."
+  },
+  {
+    "id": "NA-PST-09",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The total number of cars that crossed the George Washington Bridge between 02:00 and 02:01 EST on 1985-03-22 was exactly 47."
+  },
+  {
+    "id": "I-014",
+    "gold": "I",
+    "text": "A particular ant in a colony in Brazil will encounter another ant within the next five seconds."
+  },
+  {
+    "id": "T-013",
+    "gold": "T",
+    "text": "14 plus 14 equals 28."
+  },
+  {
+    "id": "I-074",
+    "gold": "I",
+    "text": "There exists at least one prime number greater than 10^100 that no human has yet considered."
+  },
+  {
+    "id": "I-068",
+    "gold": "I",
+    "text": "There is exactly one perfectly square chocolate bar currently on a shelf in Brussels."
+  },
+  {
+    "id": "T-073",
+    "gold": "T",
+    "text": "The Atlantic Ocean separates Europe from the Americas."
+  },
+  {
+    "id": "I-052",
+    "gold": "I",
+    "text": "The total amount of cash inside ATMs in Singapore right now exceeds 100 million Singapore dollars."
+  },
+  {
+    "id": "F-045",
+    "gold": "F",
+    "text": "The Nile river is located in Australia."
+  },
+  {
+    "id": "NA-CAT-16",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The first amendment has hair that is curly."
+  },
+  {
+    "id": "I-007",
+    "gold": "I",
+    "text": "An undiscovered moon larger than 100 meters across orbits Saturn."
+  },
+  {
+    "id": "MI-069",
+    "gold": "MI",
+    "text": "An object exists outside of all of existence."
+  },
+  {
+    "id": "I-098",
+    "gold": "I",
+    "text": "The next coin flipped anywhere on Earth will land on heads."
+  },
+  {
+    "id": "F-031",
+    "gold": "F",
+    "text": "10 times 10 equals 105."
+  },
+  {
+    "id": "F-018",
+    "gold": "F",
+    "text": "The capital of Turkey is Athens."
+  },
+  {
+    "id": "T-019",
+    "gold": "T",
+    "text": "15 plus 15 equals 30."
+  },
+  {
+    "id": "NA-PRE-03",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "At this instant, prior to your truth-evaluation completing, this proposition is in a pre-decision state."
+  },
+  {
+    "id": "F-071",
+    "gold": "F",
+    "text": "Pi is exactly equal to 4."
+  },
+  {
+    "id": "F-030",
+    "gold": "F",
+    "text": "The Berlin Wall fell in 1789."
+  },
+  {
+    "id": "I-020",
+    "gold": "I",
+    "text": "A specific pencil in a school in Buenos Aires is currently being sharpened."
+  },
+  {
+    "id": "I-032",
+    "gold": "I",
+    "text": "The exact mass of all blue whales currently alive is greater than 18 million kilograms."
+  },
+  {
+    "id": "NA-CAT-11",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The letter 'Q' is married to the prime numbers."
+  },
+  {
+    "id": "NA-PST-24",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1812-05-22, a horse named by its owner with a 6-letter Russian name traveled exactly 31.4 km on a single day."
+  },
+  {
+    "id": "T-049",
+    "gold": "T",
+    "text": "6 plus 6 equals 12."
+  },
+  {
+    "id": "T-014",
+    "gold": "T",
+    "text": "Gold has the chemical symbol Au."
+  },
+  {
+    "id": "I-022",
+    "gold": "I",
+    "text": "There is at least one violin string currently breaking somewhere in the world."
+  },
+  {
+    "id": "I-024",
+    "gold": "I",
+    "text": "There is a fourth-grade student in Iowa right now solving a long-division problem."
+  },
+  {
+    "id": "I-099",
+    "gold": "I",
+    "text": "The next person to enter the Sydney Opera House will be left-handed."
+  },
+  {
+    "id": "T-084",
+    "gold": "T",
+    "text": "The capital of Australia is Canberra."
+  },
+  {
+    "id": "NA-CAT-24",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Compassion has a wavelength of 632 nanometers."
+  },
+  {
+    "id": "F-007",
+    "gold": "F",
+    "text": "Mammals are cold-blooded animals."
+  },
+  {
+    "id": "MI-049",
+    "gold": "MI",
+    "text": "A bachelor's wife is in the next room."
+  },
+  {
+    "id": "F-068",
+    "gold": "F",
+    "text": "15 plus 15 equals 31."
+  },
+  {
+    "id": "MI-071",
+    "gold": "MI",
+    "text": "The proposition you are now reading is unreadable."
+  },
+  {
+    "id": "NA-PST-19",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "At 21:33 local time on 1976-12-19, a child in Helsinki named Mikael laughed exactly 4 times in a row at a joke about a horse."
+  },
+  {
+    "id": "I-091",
+    "gold": "I",
+    "text": "A specific snowflake landed on a specific tree branch in Norway one hour ago."
+  },
+  {
+    "id": "T-071",
+    "gold": "T",
+    "text": "12 plus 12 equals 24."
+  },
+  {
+    "id": "T-025",
+    "gold": "T",
+    "text": "The capital of Germany is Berlin."
+  },
+  {
+    "id": "F-034",
+    "gold": "F",
+    "text": "Stars are smaller than planets on average."
+  },
+  {
+    "id": "I-072",
+    "gold": "I",
+    "text": "Right now, more people are awake in China than asleep in China."
+  },
+  {
+    "id": "F-036",
+    "gold": "F",
+    "text": "The capital of Portugal is Madrid."
+  },
+  {
+    "id": "NA-CAT-19",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Friday afternoon has a viscosity higher than honey."
+  },
+  {
+    "id": "NA-FUT-19",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "On 2030-02-29, a leap-second adjustment will be added to UTC time."
+  },
+  {
+    "id": "NA-PST-22",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The exact pH of a tide pool on the Oregon coast at 06:11 on 1973-04-08 at coordinates 45.3\u00b0N, 124.0\u00b0W was 8.21."
+  },
+  {
+    "id": "MI-083",
+    "gold": "MI",
+    "text": "Some triangles have exactly two interior angles greater than 90 degrees each."
+  },
+  {
+    "id": "F-026",
+    "gold": "F",
+    "text": "5 times 5 equals 30."
+  },
+  {
+    "id": "T-069",
+    "gold": "T",
+    "text": "7 times 7 equals 49."
+  },
+  {
+    "id": "NA-PRE-07",
+    "gold": "NA",
+    "subgold": "NA-PRE",
+    "text": "Prior to performing any truth-evaluation, the label of any incoming proposition in working memory is by default unassigned."
+  },
+  {
+    "id": "MI-099",
+    "gold": "MI",
+    "text": "An equilateral triangle whose three angles sum to 200 degrees was constructed."
+  },
+  {
+    "id": "NA-PST-23",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "Brandon's first thought upon waking on the morning of 2019-09-14 contained the word 'tomorrow'."
+  },
+  {
+    "id": "T-023",
+    "gold": "T",
+    "text": "The capital of India is New Delhi."
+  },
+  {
+    "id": "F-008",
+    "gold": "F",
+    "text": "Antarctica is the warmest continent on Earth."
+  },
+  {
+    "id": "I-003",
+    "gold": "I",
+    "text": "A flight currently airborne is carrying exactly one passenger named Theodore."
+  },
+  {
+    "id": "NA-PST-11",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "On 1881-10-14, a baker in Vienna made exactly 312 loaves of rye bread."
+  },
+  {
+    "id": "F-099",
+    "gold": "F",
+    "text": "The capital of Thailand is Hanoi."
+  },
+  {
+    "id": "I-048",
+    "gold": "I",
+    "text": "The number of stars visible to the naked eye from a specific rural location in Mongolia tonight will exceed 3,000."
+  },
+  {
+    "id": "MI-028",
+    "gold": "MI",
+    "text": "A polygon with exactly two sides was drawn on the chalkboard."
+  },
+  {
+    "id": "NA-CAT-07",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The square root of 16 is allergic to peanuts."
+  },
+  {
+    "id": "F-003",
+    "gold": "F",
+    "text": "4 plus 4 equals 9."
+  },
+  {
+    "id": "T-040",
+    "gold": "T",
+    "text": "The capital of Canada is Ottawa."
+  },
+  {
+    "id": "MI-084",
+    "gold": "MI",
+    "text": "A solid hollow sphere sits on the shelf."
+  },
+  {
+    "id": "I-096",
+    "gold": "I",
+    "text": "A bird somewhere is currently building a nest using string."
+  },
+  {
+    "id": "MI-008",
+    "gold": "MI",
+    "text": "2 + 2 = 5 by definition of the standard arithmetical operators on the natural numbers."
+  },
+  {
+    "id": "F-060",
+    "gold": "F",
+    "text": "Hydrogen is the heaviest element on the periodic table."
+  },
+  {
+    "id": "F-087",
+    "gold": "F",
+    "text": "20 plus 20 equals 41."
+  },
+  {
+    "id": "I-070",
+    "gold": "I",
+    "text": "A specific drop of dew on a specific blade of grass in Surrey will evaporate before noon."
+  },
+  {
+    "id": "F-039",
+    "gold": "F",
+    "text": "Trees photosynthesize by absorbing nitrogen from soil and emitting helium."
+  },
+  {
+    "id": "F-028",
+    "gold": "F",
+    "text": "17 plus 17 equals 35."
+  },
+  {
+    "id": "T-047",
+    "gold": "T",
+    "text": "The Eiffel Tower is located in Paris, France."
+  },
+  {
+    "id": "MI-066",
+    "gold": "MI",
+    "text": "Every rule has exactly two exceptions including this one which has none."
+  },
+  {
+    "id": "T-068",
+    "gold": "T",
+    "text": "7 plus 7 equals 14."
+  },
+  {
+    "id": "F-043",
+    "gold": "F",
+    "text": "Jupiter is the smallest planet in our solar system."
+  },
+  {
+    "id": "MI-095",
+    "gold": "MI",
+    "text": "A perfectly straight zigzag line was drawn across the page."
+  },
+  {
+    "id": "T-083",
+    "gold": "T",
+    "text": "Lightning typically precedes the sound of thunder during a storm."
+  },
+  {
+    "id": "NA-CAT-17",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "Wisdom emits ultraviolet light when agitated."
+  },
+  {
+    "id": "MI-025",
+    "gold": "MI",
+    "text": "A perfect contradiction is true."
+  },
+  {
+    "id": "T-024",
+    "gold": "T",
+    "text": "Hydrogen is the lightest element on the periodic table."
+  },
+  {
+    "id": "MI-097",
+    "gold": "MI",
+    "text": "A bachelor who is currently married attended the dinner."
+  },
+  {
+    "id": "MI-054",
+    "gold": "MI",
+    "text": "There is a non-self-identical object on the shelf."
+  },
+  {
+    "id": "F-096",
+    "gold": "F",
+    "text": "The capital of Spain is Lisbon."
+  },
+  {
+    "id": "I-082",
+    "gold": "I",
+    "text": "Somewhere on Earth, a child is laughing right now."
+  },
+  {
+    "id": "MI-047",
+    "gold": "MI",
+    "text": "The set of all natural numbers is finite."
+  },
+  {
+    "id": "NA-FUT-11",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The 50th word spoken by the next U.S. President at their inauguration will be 'freedom'."
+  },
+  {
+    "id": "MI-087",
+    "gold": "MI",
+    "text": "There exists a true sentence that asserts only its own falsity."
+  },
+  {
+    "id": "T-079",
+    "gold": "T",
+    "text": "The Amazon rainforest is located primarily in South America."
+  },
+  {
+    "id": "MI-073",
+    "gold": "MI",
+    "text": "A non-existent existing entity stands by the door."
+  },
+  {
+    "id": "I-044",
+    "gold": "I",
+    "text": "There is currently an even number of running washing machines in Glasgow."
+  },
+  {
+    "id": "F-064",
+    "gold": "F",
+    "text": "The human eye can naturally see X-rays."
+  },
+  {
+    "id": "T-059",
+    "gold": "T",
+    "text": "Penguins are flightless birds."
+  },
+  {
+    "id": "I-081",
+    "gold": "I",
+    "text": "There is an odd number of unsold loaves of bread currently in bakeries across Vienna."
+  },
+  {
+    "id": "NA-PST-02",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The third word spoken by a randomly selected three-year-old child in Mumbai on 1978-05-19 was 'water' in Hindi."
+  },
+  {
+    "id": "T-048",
+    "gold": "T",
+    "text": "The Roman Empire eventually collapsed."
+  },
+  {
+    "id": "MI-004",
+    "gold": "MI",
+    "text": "The chair I am sitting on is simultaneously made entirely of wood and entirely of glass with no parts in common."
+  },
+  {
+    "id": "T-017",
+    "gold": "T",
+    "text": "The capital of Greece is Athens."
+  },
+  {
+    "id": "I-062",
+    "gold": "I",
+    "text": "An undiscovered species of deep-sea fish lives in the Mariana Trench."
+  },
+  {
+    "id": "I-083",
+    "gold": "I",
+    "text": "The total number of grains of sand on Bondi Beach right now is divisible by 7."
+  },
+  {
+    "id": "MI-067",
+    "gold": "MI",
+    "text": "There is a real number that is both rational and not rational."
+  },
+  {
+    "id": "T-094",
+    "gold": "T",
+    "text": "The capital of Norway is Oslo."
+  },
+  {
+    "id": "I-071",
+    "gold": "I",
+    "text": "A specific patient in a hospital in Lima currently has a resting heart rate of exactly 72."
+  },
+  {
+    "id": "NA-FUT-16",
+    "gold": "NA",
+    "subgold": "NA-FUT",
+    "text": "The next major earthquake in California will occur on a Tuesday."
+  },
+  {
+    "id": "T-098",
+    "gold": "T",
+    "text": "The chemical formula for water is H2O."
+  },
+  {
+    "id": "MI-092",
+    "gold": "MI",
+    "text": "A child both older than 5 and younger than 5 years old attended class."
+  },
+  {
+    "id": "MI-060",
+    "gold": "MI",
+    "text": "A perfectly silent sound just played in the next room."
+  },
+  {
+    "id": "F-067",
+    "gold": "F",
+    "text": "Leonardo da Vinci painted The Starry Night."
+  },
+  {
+    "id": "MI-042",
+    "gold": "MI",
+    "text": "The square root of 25 is simultaneously 5 and not 5 in standard arithmetic."
+  },
+  {
+    "id": "I-034",
+    "gold": "I",
+    "text": "A randomly chosen page of a randomly chosen library book in Athens contains exactly 14 commas."
+  },
+  {
+    "id": "NA-CAT-21",
+    "gold": "NA",
+    "subgold": "NA-CAT",
+    "text": "The number zero is a fluent speaker of Mandarin."
+  },
+  {
+    "id": "F-098",
+    "gold": "F",
+    "text": "9 times 9 equals 86."
+  },
+  {
+    "id": "T-092",
+    "gold": "T",
+    "text": "Mount Everest is the tallest mountain above sea level."
+  },
+  {
+    "id": "T-062",
+    "gold": "T",
+    "text": "Mammals are warm-blooded animals."
+  },
+  {
+    "id": "T-067",
+    "gold": "T",
+    "text": "Antibiotics can kill or inhibit the growth of bacteria."
+  },
+  {
+    "id": "T-081",
+    "gold": "T",
+    "text": "Jupiter is the largest planet in our solar system."
+  },
+  {
+    "id": "T-077",
+    "gold": "T",
+    "text": "The capital of Vietnam is Hanoi."
+  },
+  {
+    "id": "MI-080",
+    "gold": "MI",
+    "text": "I am lying right now."
+  },
+  {
+    "id": "MI-068",
+    "gold": "MI",
+    "text": "An honest liar told the truth about being a perpetual liar."
+  },
+  {
+    "id": "MI-078",
+    "gold": "MI",
+    "text": "A solid liquid was placed in the beaker."
+  },
+  {
+    "id": "I-027",
+    "gold": "I",
+    "text": "A randomly chosen person in Beijing right now is wearing blue."
+  },
+  {
+    "id": "I-049",
+    "gold": "I",
+    "text": "The next sneeze that occurs anywhere on Earth will come from a man."
+  },
+  {
+    "id": "T-016",
+    "gold": "T",
+    "text": "5 times 5 equals 25."
+  },
+  {
+    "id": "NA-PST-18",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "The fourth dream that a randomly selected resident of Cairo had on the night of 2002-04-29 featured a yellow door."
+  },
+  {
+    "id": "F-062",
+    "gold": "F",
+    "text": "21 plus 21 equals 43."
+  },
+  {
+    "id": "I-018",
+    "gold": "I",
+    "text": "Somewhere on Earth, an apple is falling from a tree at this exact moment."
+  },
+  {
+    "id": "MI-043",
+    "gold": "MI",
+    "text": "A completely empty container that is full of water sits on the desk."
+  },
+  {
+    "id": "F-038",
+    "gold": "F",
+    "text": "The Pacific Ocean is smaller than the Mediterranean Sea."
+  },
+  {
+    "id": "NA-PST-00",
+    "gold": "NA",
+    "subgold": "NA-PST",
+    "text": "At 03:14:27 UTC on 1987-08-23, the air temperature at coordinate (52.5\u00b0N, 13.4\u00b0E) was exactly 18.4\u00b0C."
+  },
+  {
+    "id": "T-091",
+    "gold": "T",
+    "text": "The capital of Turkey is Ankara."
+  }
+]
