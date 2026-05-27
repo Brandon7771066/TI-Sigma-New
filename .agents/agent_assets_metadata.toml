@@ -407,3 +407,9 @@ id = "WnwVHWKBZeB4b7nNVYSV5"
 uri = "file://papers/BRANDON_BIO_GHM_REVISED_PASS_77_B25_1200_WORDS_2026-05-27.md"
 type = "text"
 title = "Brandon Emerick Bio — GHM Revised (~1200 words)"
+
+[[outputs]]
+id = "_XnPToTKEYoyhq3ErOckM"
+uri = "file://papers/PASS_77_B26_FLEISS_KAPPA_BINARY_VS_5_TIER_1000_STMT_DECISIVE_2026-05-27.md"
+type = "text"
+title = "Pass-77-B26 Decisive Paper: 1000-Statement Binary vs 5-Tier Fleiss Kappa"
