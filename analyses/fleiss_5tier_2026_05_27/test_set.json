@@ -1,0 +1,502 @@
+[
+  {
+    "id": "T-1",
+    "gold": "T",
+    "text": "The chemical symbol for gold is Au."
+  },
+  {
+    "id": "T-2",
+    "gold": "T",
+    "text": "The Pacific Ocean is the largest ocean on Earth by surface area."
+  },
+  {
+    "id": "T-3",
+    "gold": "T",
+    "text": "Water freezes at 0 degrees Celsius at standard atmospheric pressure."
+  },
+  {
+    "id": "T-4",
+    "gold": "T",
+    "text": "The Eiffel Tower is located in Paris, France."
+  },
+  {
+    "id": "T-5",
+    "gold": "T",
+    "text": "Mount Everest is the tallest mountain above sea level on Earth."
+  },
+  {
+    "id": "T-6",
+    "gold": "T",
+    "text": "The square root of 144 is 12."
+  },
+  {
+    "id": "T-7",
+    "gold": "T",
+    "text": "Photosynthesis produces oxygen as a byproduct."
+  },
+  {
+    "id": "T-8",
+    "gold": "T",
+    "text": "World War II ended in 1945."
+  },
+  {
+    "id": "T-9",
+    "gold": "T",
+    "text": "DNA is a double-helix structure."
+  },
+  {
+    "id": "T-10",
+    "gold": "T",
+    "text": "The speed of light in a vacuum is approximately 299,792 kilometers per second."
+  },
+  {
+    "id": "T-11",
+    "gold": "T",
+    "text": "Mammals are warm-blooded vertebrates."
+  },
+  {
+    "id": "T-12",
+    "gold": "T",
+    "text": "Shakespeare wrote the play Hamlet."
+  },
+  {
+    "id": "T-13",
+    "gold": "T",
+    "text": "The capital of Japan is Tokyo."
+  },
+  {
+    "id": "T-14",
+    "gold": "T",
+    "text": "An equilateral triangle has three equal sides."
+  },
+  {
+    "id": "T-15",
+    "gold": "T",
+    "text": "Hydrogen is the lightest chemical element."
+  },
+  {
+    "id": "T-16",
+    "gold": "T",
+    "text": "The Great Wall of China was built primarily during the Ming Dynasty in its current form."
+  },
+  {
+    "id": "T-17",
+    "gold": "T",
+    "text": "Sound travels faster through solids than through air."
+  },
+  {
+    "id": "T-18",
+    "gold": "T",
+    "text": "The human heart has four chambers."
+  },
+  {
+    "id": "T-19",
+    "gold": "T",
+    "text": "Pi is an irrational number."
+  },
+  {
+    "id": "T-20",
+    "gold": "T",
+    "text": "The Earth orbits the Sun."
+  },
+  {
+    "id": "F-1",
+    "gold": "F",
+    "text": "The chemical symbol for gold is Pb."
+  },
+  {
+    "id": "F-2",
+    "gold": "F",
+    "text": "The Arctic Ocean is the largest ocean on Earth by surface area."
+  },
+  {
+    "id": "F-3",
+    "gold": "F",
+    "text": "Water boils at 50 degrees Celsius at standard atmospheric pressure."
+  },
+  {
+    "id": "F-4",
+    "gold": "F",
+    "text": "The Eiffel Tower is located in Berlin, Germany."
+  },
+  {
+    "id": "F-5",
+    "gold": "F",
+    "text": "Mount Kilimanjaro is the tallest mountain above sea level on Earth."
+  },
+  {
+    "id": "F-6",
+    "gold": "F",
+    "text": "The square root of 144 is 14."
+  },
+  {
+    "id": "F-7",
+    "gold": "F",
+    "text": "Photosynthesis produces nitrogen as a primary byproduct."
+  },
+  {
+    "id": "F-8",
+    "gold": "F",
+    "text": "World War II ended in 1955."
+  },
+  {
+    "id": "F-9",
+    "gold": "F",
+    "text": "DNA is a single-strand straight molecule with no helical structure."
+  },
+  {
+    "id": "F-10",
+    "gold": "F",
+    "text": "The speed of light in a vacuum is approximately 100,000 kilometers per second."
+  },
+  {
+    "id": "F-11",
+    "gold": "F",
+    "text": "All mammals are cold-blooded."
+  },
+  {
+    "id": "F-12",
+    "gold": "F",
+    "text": "Mark Twain wrote the play Hamlet."
+  },
+  {
+    "id": "F-13",
+    "gold": "F",
+    "text": "The capital of Japan is Beijing."
+  },
+  {
+    "id": "F-14",
+    "gold": "F",
+    "text": "An equilateral triangle has four equal sides."
+  },
+  {
+    "id": "F-15",
+    "gold": "F",
+    "text": "Lead is the lightest chemical element."
+  },
+  {
+    "id": "F-16",
+    "gold": "F",
+    "text": "The Great Wall of China was built entirely during the Tang Dynasty."
+  },
+  {
+    "id": "F-17",
+    "gold": "F",
+    "text": "Sound travels faster through air than through any solid."
+  },
+  {
+    "id": "F-18",
+    "gold": "F",
+    "text": "The human heart has two chambers."
+  },
+  {
+    "id": "F-19",
+    "gold": "F",
+    "text": "Pi equals exactly 3."
+  },
+  {
+    "id": "F-20",
+    "gold": "F",
+    "text": "The Sun orbits the Earth."
+  },
+  {
+    "id": "I-1",
+    "gold": "I",
+    "text": "The exact number of grains of sand on Bondi Beach at noon Sydney time on 2026-05-27 is even."
+  },
+  {
+    "id": "I-2",
+    "gold": "I",
+    "text": "More than 73% of currently-living adults in Reykjavik prefer coffee over tea."
+  },
+  {
+    "id": "I-3",
+    "gold": "I",
+    "text": "The next person to walk through the main entrance of the British Museum will be wearing blue shoes."
+  },
+  {
+    "id": "I-4",
+    "gold": "I",
+    "text": "Exactly 42 commercial flights will depart from Heathrow between 14:00 and 15:00 UTC tomorrow."
+  },
+  {
+    "id": "I-5",
+    "gold": "I",
+    "text": "The total number of pigeons currently within Trafalgar Square exceeds 200."
+  },
+  {
+    "id": "I-6",
+    "gold": "I",
+    "text": "A randomly-selected resident of Buenos Aires owns at least one houseplant."
+  },
+  {
+    "id": "I-7",
+    "gold": "I",
+    "text": "The next coin flip performed by a randomly-selected person in Tokyo will land heads."
+  },
+  {
+    "id": "I-8",
+    "gold": "I",
+    "text": "The current temperature reading on a specific thermostat in a specific Helsinki apartment is above 21°C."
+  },
+  {
+    "id": "I-9",
+    "gold": "I",
+    "text": "More residential homes in suburban Phoenix were painted beige than white as of 2026-05-27."
+  },
+  {
+    "id": "I-10",
+    "gold": "I",
+    "text": "An odd number of cars are currently parked on a specific stretch of Mulholland Drive."
+  },
+  {
+    "id": "I-11",
+    "gold": "I",
+    "text": "The next email received by a specific Gmail user will contain the word 'tomorrow'."
+  },
+  {
+    "id": "I-12",
+    "gold": "I",
+    "text": "A specific oak tree in Sherwood Forest currently has more than 50,000 leaves."
+  },
+  {
+    "id": "I-13",
+    "gold": "I",
+    "text": "The next song played on a specific radio station will be in a minor key."
+  },
+  {
+    "id": "I-14",
+    "gold": "I",
+    "text": "More glasses of orange juice than apple juice were poured in Manhattan restaurants yesterday."
+  },
+  {
+    "id": "I-15",
+    "gold": "I",
+    "text": "A randomly-selected book on the third shelf of the central Mumbai public library has fewer than 300 pages."
+  },
+  {
+    "id": "I-16",
+    "gold": "I",
+    "text": "The next baby born in São Paulo will weigh between 3.0 and 3.5 kilograms."
+  },
+  {
+    "id": "I-17",
+    "gold": "I",
+    "text": "The number of birds visible right now from the top of the Empire State Building is greater than 12."
+  },
+  {
+    "id": "I-18",
+    "gold": "I",
+    "text": "A specific brand of toothpaste tube in a specific Auckland pharmacy is more than half full."
+  },
+  {
+    "id": "I-19",
+    "gold": "I",
+    "text": "The current Wi-Fi signal strength in the back room of a specific Lima café exceeds -60 dBm."
+  },
+  {
+    "id": "I-20",
+    "gold": "I",
+    "text": "A randomly-selected person in Cairo right now is holding their phone in their left hand."
+  },
+  {
+    "id": "DT-1",
+    "gold": "DT",
+    "text": "This sentence is false."
+  },
+  {
+    "id": "DT-2",
+    "gold": "DT",
+    "text": "The statement you are now reading is not true."
+  },
+  {
+    "id": "DT-3",
+    "gold": "DT",
+    "text": "There exists a square whose four sides are also three sides."
+  },
+  {
+    "id": "DT-4",
+    "gold": "DT",
+    "text": "A bachelor is married to two women simultaneously."
+  },
+  {
+    "id": "DT-5",
+    "gold": "DT",
+    "text": "The number 5 is strictly greater than itself."
+  },
+  {
+    "id": "DT-6",
+    "gold": "DT",
+    "text": "The set of all sets that do not contain themselves contains itself if and only if it does not contain itself."
+  },
+  {
+    "id": "DT-7",
+    "gold": "DT",
+    "text": "An object is entirely red all over and entirely green all over at the same time and in the same respect."
+  },
+  {
+    "id": "DT-8",
+    "gold": "DT",
+    "text": "2 + 2 = 5 by definition of the standard arithmetical operators on natural numbers."
+  },
+  {
+    "id": "DT-9",
+    "gold": "DT",
+    "text": "There is a four-sided triangle."
+  },
+  {
+    "id": "DT-10",
+    "gold": "DT",
+    "text": "The barber who shaves all and only those men who do not shave themselves shaves himself."
+  },
+  {
+    "id": "DT-11",
+    "gold": "DT",
+    "text": "I am lying right now and this statement is the only one I am uttering."
+  },
+  {
+    "id": "DT-12",
+    "gold": "DT",
+    "text": "A circle is drawn such that it is also a perfect square in the same Euclidean plane at the same time."
+  },
+  {
+    "id": "DT-13",
+    "gold": "DT",
+    "text": "The proposition 'all propositions are false' is true."
+  },
+  {
+    "id": "DT-14",
+    "gold": "DT",
+    "text": "There is a married bachelor in good standing."
+  },
+  {
+    "id": "DT-15",
+    "gold": "DT",
+    "text": "The next sentence is false. The previous sentence is true. (Considered as a single conjunctive claim.)"
+  },
+  {
+    "id": "DT-16",
+    "gold": "DT",
+    "text": "A complete and consistent set of arithmetical axioms exists that proves its own consistency from within itself in the standard sense ruled out by Gödel."
+  },
+  {
+    "id": "DT-17",
+    "gold": "DT",
+    "text": "Some object is both completely solid throughout and completely hollow throughout in the same respect."
+  },
+  {
+    "id": "DT-18",
+    "gold": "DT",
+    "text": "A natural number is both prime and composite at the same time."
+  },
+  {
+    "id": "DT-19",
+    "gold": "DT",
+    "text": "The integer 7 is strictly less than the integer 7."
+  },
+  {
+    "id": "DT-20",
+    "gold": "DT",
+    "text": "There exists a triangle in standard Euclidean geometry whose interior angles sum to exactly 200 degrees."
+  },
+  {
+    "id": "NA-1",
+    "gold": "NA",
+    "text": "The number 7 smells distinctly of vanilla."
+  },
+  {
+    "id": "NA-2",
+    "gold": "NA",
+    "text": "The color blue weighs approximately 4 kilograms."
+  },
+  {
+    "id": "NA-3",
+    "gold": "NA",
+    "text": "The musical note middle-C is mostly composed of carbon atoms."
+  },
+  {
+    "id": "NA-4",
+    "gold": "NA",
+    "text": "Wednesday tastes sweeter than the verb 'to run'."
+  },
+  {
+    "id": "NA-5",
+    "gold": "NA",
+    "text": "The Pythagorean theorem is fluent in Mandarin Chinese."
+  },
+  {
+    "id": "NA-6",
+    "gold": "NA",
+    "text": "Justice is divisible by the square root of negative one."
+  },
+  {
+    "id": "NA-7",
+    "gold": "NA",
+    "text": "The concept of friendship has a melting point of 80 degrees Celsius."
+  },
+  {
+    "id": "NA-8",
+    "gold": "NA",
+    "text": "The integer 12 is currently feeling slightly hungry."
+  },
+  {
+    "id": "NA-9",
+    "gold": "NA",
+    "text": "The Greek letter pi is allergic to peanuts."
+  },
+  {
+    "id": "NA-10",
+    "gold": "NA",
+    "text": "Yesterday's sunrise weighed more than today's sunset by 2 ounces."
+  },
+  {
+    "id": "NA-11",
+    "gold": "NA",
+    "text": "The set of all even numbers is exactly 6 feet tall."
+  },
+  {
+    "id": "NA-12",
+    "gold": "NA",
+    "text": "The constellation Orion is currently jogging westward."
+  },
+  {
+    "id": "NA-13",
+    "gold": "NA",
+    "text": "The proposition 'snow is white' is married to the proposition 'grass is green'."
+  },
+  {
+    "id": "NA-14",
+    "gold": "NA",
+    "text": "The number infinity has a social security number ending in 4."
+  },
+  {
+    "id": "NA-15",
+    "gold": "NA",
+    "text": "The empty set tastes like raspberries."
+  },
+  {
+    "id": "NA-16",
+    "gold": "NA",
+    "text": "Democracy as a concept has brown hair."
+  },
+  {
+    "id": "NA-17",
+    "gold": "NA",
+    "text": "The verb 'to be' costs $4.99."
+  },
+  {
+    "id": "NA-18",
+    "gold": "NA",
+    "text": "The letter Q is older than the letter A by 73 years."
+  },
+  {
+    "id": "NA-19",
+    "gold": "NA",
+    "text": "Truth is approximately 12 inches long."
+  },
+  {
+    "id": "NA-20",
+    "gold": "NA",
+    "text": "The mathematical function sin(x) is currently located in Cleveland, Ohio."
+  }
+]

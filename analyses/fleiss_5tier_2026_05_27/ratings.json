@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "T-1",
+    "gold": "T",
+    "text": "The chemical symbol for gold is Au.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-2",
+    "gold": "T",
+    "text": "The Pacific Ocean is the largest ocean on Earth by surface area.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-3",
+    "gold": "T",
+    "text": "Water freezes at 0 degrees Celsius at standard atmospheric pressure.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-4",
+    "gold": "T",
+    "text": "The Eiffel Tower is located in Paris, France.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-5",
+    "gold": "T",
+    "text": "Mount Everest is the tallest mountain above sea level on Earth.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-6",
+    "gold": "T",
+    "text": "The square root of 144 is 12.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-7",
+    "gold": "T",
+    "text": "Photosynthesis produces oxygen as a byproduct.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-8",
+    "gold": "T",
+    "text": "World War II ended in 1945.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-9",
+    "gold": "T",
+    "text": "DNA is a double-helix structure.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-10",
+    "gold": "T",
+    "text": "The speed of light in a vacuum is approximately 299,792 kilometers per second.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-11",
+    "gold": "T",
+    "text": "Mammals are warm-blooded vertebrates.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-12",
+    "gold": "T",
+    "text": "Shakespeare wrote the play Hamlet.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-13",
+    "gold": "T",
+    "text": "The capital of Japan is Tokyo.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-14",
+    "gold": "T",
+    "text": "An equilateral triangle has three equal sides.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-15",
+    "gold": "T",
+    "text": "Hydrogen is the lightest chemical element.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-16",
+    "gold": "T",
+    "text": "The Great Wall of China was built primarily during the Ming Dynasty in its current form.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-17",
+    "gold": "T",
+    "text": "Sound travels faster through solids than through air.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-18",
+    "gold": "T",
+    "text": "The human heart has four chambers.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-19",
+    "gold": "T",
+    "text": "Pi is an irrational number.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "T-20",
+    "gold": "T",
+    "text": "The Earth orbits the Sun.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "T"
+    }
+  },
+  {
+    "id": "F-1",
+    "gold": "F",
+    "text": "The chemical symbol for gold is Pb.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-2",
+    "gold": "F",
+    "text": "The Arctic Ocean is the largest ocean on Earth by surface area.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-3",
+    "gold": "F",
+    "text": "Water boils at 50 degrees Celsius at standard atmospheric pressure.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-4",
+    "gold": "F",
+    "text": "The Eiffel Tower is located in Berlin, Germany.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-5",
+    "gold": "F",
+    "text": "Mount Kilimanjaro is the tallest mountain above sea level on Earth.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "T",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-6",
+    "gold": "F",
+    "text": "The square root of 144 is 14.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-7",
+    "gold": "F",
+    "text": "Photosynthesis produces nitrogen as a primary byproduct.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-8",
+    "gold": "F",
+    "text": "World War II ended in 1955.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-9",
+    "gold": "F",
+    "text": "DNA is a single-strand straight molecule with no helical structure.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-10",
+    "gold": "F",
+    "text": "The speed of light in a vacuum is approximately 100,000 kilometers per second.",
+    "ratings": {
+      "R1_gpt4o_mini": "T",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-11",
+    "gold": "F",
+    "text": "All mammals are cold-blooded.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-12",
+    "gold": "F",
+    "text": "Mark Twain wrote the play Hamlet.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-13",
+    "gold": "F",
+    "text": "The capital of Japan is Beijing.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-14",
+    "gold": "F",
+    "text": "An equilateral triangle has four equal sides.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-15",
+    "gold": "F",
+    "text": "Lead is the lightest chemical element.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-16",
+    "gold": "F",
+    "text": "The Great Wall of China was built entirely during the Tang Dynasty.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-17",
+    "gold": "F",
+    "text": "Sound travels faster through air than through any solid.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-18",
+    "gold": "F",
+    "text": "The human heart has two chambers.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-19",
+    "gold": "F",
+    "text": "Pi equals exactly 3.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "F-20",
+    "gold": "F",
+    "text": "The Sun orbits the Earth.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "I-1",
+    "gold": "I",
+    "text": "The exact number of grains of sand on Bondi Beach at noon Sydney time on 2026-05-27 is even.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-2",
+    "gold": "I",
+    "text": "More than 73% of currently-living adults in Reykjavik prefer coffee over tea.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-3",
+    "gold": "I",
+    "text": "The next person to walk through the main entrance of the British Museum will be wearing blue shoes.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-4",
+    "gold": "I",
+    "text": "Exactly 42 commercial flights will depart from Heathrow between 14:00 and 15:00 UTC tomorrow.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-5",
+    "gold": "I",
+    "text": "The total number of pigeons currently within Trafalgar Square exceeds 200.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-6",
+    "gold": "I",
+    "text": "A randomly-selected resident of Buenos Aires owns at least one houseplant.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-7",
+    "gold": "I",
+    "text": "The next coin flip performed by a randomly-selected person in Tokyo will land heads.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-8",
+    "gold": "I",
+    "text": "The current temperature reading on a specific thermostat in a specific Helsinki apartment is above 21\u00b0C.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-9",
+    "gold": "I",
+    "text": "More residential homes in suburban Phoenix were painted beige than white as of 2026-05-27.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-10",
+    "gold": "I",
+    "text": "An odd number of cars are currently parked on a specific stretch of Mulholland Drive.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-11",
+    "gold": "I",
+    "text": "The next email received by a specific Gmail user will contain the word 'tomorrow'.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-12",
+    "gold": "I",
+    "text": "A specific oak tree in Sherwood Forest currently has more than 50,000 leaves.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-13",
+    "gold": "I",
+    "text": "The next song played on a specific radio station will be in a minor key.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-14",
+    "gold": "I",
+    "text": "More glasses of orange juice than apple juice were poured in Manhattan restaurants yesterday.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-15",
+    "gold": "I",
+    "text": "A randomly-selected book on the third shelf of the central Mumbai public library has fewer than 300 pages.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-16",
+    "gold": "I",
+    "text": "The next baby born in S\u00e3o Paulo will weigh between 3.0 and 3.5 kilograms.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-17",
+    "gold": "I",
+    "text": "The number of birds visible right now from the top of the Empire State Building is greater than 12.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-18",
+    "gold": "I",
+    "text": "A specific brand of toothpaste tube in a specific Auckland pharmacy is more than half full.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-19",
+    "gold": "I",
+    "text": "The current Wi-Fi signal strength in the back room of a specific Lima caf\u00e9 exceeds -60 dBm.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "I-20",
+    "gold": "I",
+    "text": "A randomly-selected person in Cairo right now is holding their phone in their left hand.",
+    "ratings": {
+      "R1_gpt4o_mini": "I",
+      "R2_gpt4o_mini_b": "I",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "DT-1",
+    "gold": "DT",
+    "text": "This sentence is false.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-2",
+    "gold": "DT",
+    "text": "The statement you are now reading is not true.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-3",
+    "gold": "DT",
+    "text": "There exists a square whose four sides are also three sides.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-4",
+    "gold": "DT",
+    "text": "A bachelor is married to two women simultaneously.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-5",
+    "gold": "DT",
+    "text": "The number 5 is strictly greater than itself.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "DT-6",
+    "gold": "DT",
+    "text": "The set of all sets that do not contain themselves contains itself if and only if it does not contain itself.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-7",
+    "gold": "DT",
+    "text": "An object is entirely red all over and entirely green all over at the same time and in the same respect.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-8",
+    "gold": "DT",
+    "text": "2 + 2 = 5 by definition of the standard arithmetical operators on natural numbers.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-9",
+    "gold": "DT",
+    "text": "There is a four-sided triangle.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-10",
+    "gold": "DT",
+    "text": "The barber who shaves all and only those men who do not shave themselves shaves himself.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-11",
+    "gold": "DT",
+    "text": "I am lying right now and this statement is the only one I am uttering.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-12",
+    "gold": "DT",
+    "text": "A circle is drawn such that it is also a perfect square in the same Euclidean plane at the same time.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-13",
+    "gold": "DT",
+    "text": "The proposition 'all propositions are false' is true.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-14",
+    "gold": "DT",
+    "text": "There is a married bachelor in good standing.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-15",
+    "gold": "DT",
+    "text": "The next sentence is false. The previous sentence is true. (Considered as a single conjunctive claim.)",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-16",
+    "gold": "DT",
+    "text": "A complete and consistent set of arithmetical axioms exists that proves its own consistency from within itself in the standard sense ruled out by G\u00f6del.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "DT-17",
+    "gold": "DT",
+    "text": "Some object is both completely solid throughout and completely hollow throughout in the same respect.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-18",
+    "gold": "DT",
+    "text": "A natural number is both prime and composite at the same time.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "DT",
+      "R3_claude_haiku": "DT"
+    }
+  },
+  {
+    "id": "DT-19",
+    "gold": "DT",
+    "text": "The integer 7 is strictly less than the integer 7.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "DT-20",
+    "gold": "DT",
+    "text": "There exists a triangle in standard Euclidean geometry whose interior angles sum to exactly 200 degrees.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "F"
+    }
+  },
+  {
+    "id": "NA-1",
+    "gold": "NA",
+    "text": "The number 7 smells distinctly of vanilla.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-2",
+    "gold": "NA",
+    "text": "The color blue weighs approximately 4 kilograms.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-3",
+    "gold": "NA",
+    "text": "The musical note middle-C is mostly composed of carbon atoms.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-4",
+    "gold": "NA",
+    "text": "Wednesday tastes sweeter than the verb 'to run'.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-5",
+    "gold": "NA",
+    "text": "The Pythagorean theorem is fluent in Mandarin Chinese.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-6",
+    "gold": "NA",
+    "text": "Justice is divisible by the square root of negative one.",
+    "ratings": {
+      "R1_gpt4o_mini": "DT",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-7",
+    "gold": "NA",
+    "text": "The concept of friendship has a melting point of 80 degrees Celsius.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-8",
+    "gold": "NA",
+    "text": "The integer 12 is currently feeling slightly hungry.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-9",
+    "gold": "NA",
+    "text": "The Greek letter pi is allergic to peanuts.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-10",
+    "gold": "NA",
+    "text": "Yesterday's sunrise weighed more than today's sunset by 2 ounces.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-11",
+    "gold": "NA",
+    "text": "The set of all even numbers is exactly 6 feet tall.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-12",
+    "gold": "NA",
+    "text": "The constellation Orion is currently jogging westward.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-13",
+    "gold": "NA",
+    "text": "The proposition 'snow is white' is married to the proposition 'grass is green'.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-14",
+    "gold": "NA",
+    "text": "The number infinity has a social security number ending in 4.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-15",
+    "gold": "NA",
+    "text": "The empty set tastes like raspberries.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-16",
+    "gold": "NA",
+    "text": "Democracy as a concept has brown hair.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-17",
+    "gold": "NA",
+    "text": "The verb 'to be' costs $4.99.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-18",
+    "gold": "NA",
+    "text": "The letter Q is older than the letter A by 73 years.",
+    "ratings": {
+      "R1_gpt4o_mini": "F",
+      "R2_gpt4o_mini_b": "F",
+      "R3_claude_haiku": "I"
+    }
+  },
+  {
+    "id": "NA-19",
+    "gold": "NA",
+    "text": "Truth is approximately 12 inches long.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  },
+  {
+    "id": "NA-20",
+    "gold": "NA",
+    "text": "The mathematical function sin(x) is currently located in Cleveland, Ohio.",
+    "ratings": {
+      "R1_gpt4o_mini": "NA",
+      "R2_gpt4o_mini_b": "NA",
+      "R3_claude_haiku": "NA"
+    }
+  }
+]
