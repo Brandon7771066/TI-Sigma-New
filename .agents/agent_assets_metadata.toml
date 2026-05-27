@@ -401,3 +401,9 @@ id = "Oc6Q5LI-OiYUM59kLwpOv"
 uri = "file://papers/visual_assets/CCC_CENTRAL_COSMIC_CONSCIOUSNESS_CHATGPT_PRIMARY_2026-05-26.png"
 type = "image"
 title = "CCC — Central Cosmic Consciousness (CANONICAL-PRIMARY, Pass-77-B18)"
+
+[[outputs]]
+id = "WnwVHWKBZeB4b7nNVYSV5"
+uri = "file://papers/BRANDON_BIO_GHM_REVISED_PASS_77_B25_1200_WORDS_2026-05-27.md"
+type = "text"
+title = "Brandon Emerick Bio — GHM Revised (~1200 words)"
