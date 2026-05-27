@@ -413,3 +413,9 @@ id = "_XnPToTKEYoyhq3ErOckM"
 uri = "file://papers/PASS_77_B26_FLEISS_KAPPA_BINARY_VS_5_TIER_1000_STMT_DECISIVE_2026-05-27.md"
 type = "text"
 title = "Pass-77-B26 Decisive Paper: 1000-Statement Binary vs 5-Tier Fleiss Kappa"
+
+[[outputs]]
+id = "MPuZ0cjOTFcCxxmSXXz4_"
+uri = "file://papers/PASS_77_B27_SPECTRUM_DISTINCTNESS_DISCRIMINANT_VALIDITY_BATTERY_2026-05-27.md"
+type = "text"
+title = "Pass-77-B27 Spectrum-Distinctness Battery — Proof That 5-Tier Truth Values Are Truly Distinct Clusters"
