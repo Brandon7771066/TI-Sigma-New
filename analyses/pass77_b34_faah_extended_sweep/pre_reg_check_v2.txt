@@ -1,0 +1,31 @@
+========================================================================
+Pass-77-B34 — Pre-Registered Falsifier Checks (v2)
+========================================================================
+
+P-LONG-1 (lifespan REDUCTION per Lucanic 2011 NAE-direction, |g|>=0.3):
+  kd_faah1=0.50  pct_WT=0.897  |g|=0.514
+  kd_faah1=0.80  pct_WT=0.821  |g|=0.837
+  kd_faah1=0.95  pct_WT=0.855  |g|=0.719
+  P-LONG-1 VERDICT: PASS
+
+P-MULTI-1 (dual-FAAH stronger than single-FAAH on osmotic-aversion, gap>=0.15):
+  single kd_faah1=0.80  |g|=1.369  pct_WT=0.779
+  dual   kd_faah1=0.80, kd_faah2=0.80  |g|=1.569  pct_WT=0.762
+  gap (dual - single) = 0.199
+  P-MULTI-1 VERDICT: PASS
+
+P1-RECAL (B34a re-spec: |g|>=0.5 on osmotic-aversion at kd_faah1>=0.50, magnitude clause DROPPED per B33 #69 self-indictment):
+  kd_faah1=0.50  |g|=1.306
+  kd_faah1=0.80  |g|=1.539
+  kd_faah1=0.95  |g|=1.868
+  P1-RECAL VERDICT: PASS
+
+F1 carry (some signature, |g|>=0.2 at any kd_faah1>0):
+  max |g| = 1.868
+  F1 VERDICT: NOT REFUTED
+
+Per-longevity-readout max-effect at kd_faah1=0.95:
+  mean_lifespan                   pct_WT=0.855  |g|=0.719
+  heat_shock_survival             pct_WT=0.857  |g|=0.753
+  oxidative_stress_survival       pct_WT=0.941  |g|=0.337
+  starvation_tolerance            pct_WT=1.106  |g|=0.602
