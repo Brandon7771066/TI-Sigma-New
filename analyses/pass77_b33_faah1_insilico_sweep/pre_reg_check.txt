@@ -1,0 +1,23 @@
+========================================================================
+Pass-77-B33 — Pre-Registered Falsifier Checks
+========================================================================
+
+P1 (osmotic-aversion < 70% WT AND |g| >= 0.5 at kd >= 0.50):
+  kd=0.50  mean=0.821  pct_WT=0.817  |g|=1.306
+  kd=0.80  mean=0.769  pct_WT=0.766  |g|=1.539
+  kd=0.95  mean=0.732  pct_WT=0.729  |g|=1.868
+  P1 VERDICT: FAIL
+
+F1 (some signature present, |g| >= 0.2 at any kd):
+  max |g| across all (behavior, kd>0) cells = 1.868
+  F1 VERDICT: NOT REFUTED
+
+Per-behavior max-effect at kd=0.95:
+  locomotion_speed                pct_WT=0.856  |g|=1.217
+  reversal_rate                   pct_WT=0.815  |g|=1.117
+  omega_turn_rate                 pct_WT=0.820  |g|=1.032
+  foraging_bout_duration          pct_WT=1.097  |g|=0.610
+  chemotaxis_index                pct_WT=0.909  |g|=0.900
+  thermotaxis_index               pct_WT=0.971  |g|=0.306
+  osmotic_aversion_response       pct_WT=0.729  |g|=1.868
+  mechano_aversion_response       pct_WT=0.853  |g|=0.956
