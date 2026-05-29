@@ -1,0 +1,114 @@
+
+======================================================================
+F1  TSC-B4 Laplacian: phase ordering + can weighting fix Mott/FQH swap?
+======================================================================
+unit-weight: lambda_0=4.25e-15 (expect 0), gap=0.1915, top=8.7034
+           BEC: <H>=0.0000
+    Supersolid: <H>=0.9199
+      FQH-like: <H>=2.4000
+          Mott: <H>=2.0000
+    Fragmented: <H>=4.3182
+   ordering : BEC < Supersolid < Mott < FQH-like < Fragmented
+   matches urb_645? False  (prior result: Mott/FQH swapped)
+   [     inter ~ radius(r+1)] -> BEC < Supersolid < FQH-like < Fragmented < Mott  match=False
+   [   inter ~ 1/radius(r+1)] -> BEC < Mott < Supersolid < FQH-like < Fragmented  match=False
+   [   inter ~ radius(r+1)^2] -> BEC < Supersolid < FQH-like < Fragmented < Mott  match=False
+   [inter ~ sqrt(radius(r+1))] -> BEC < Supersolid < FQH-like < Mott < Fragmented  match=True
+
+F1 VERDICT: unit-weight reproduces the Mott/FQH swap (prior result CONFIRMED).
+   Any tested natural weighting restores urb_645 ordering? True
+   => Falsifier status: the qualitative phase-ordering claim is NOT robust;
+      it survives only as 'BEC lowest / Fragmented highest', which is trivial.
+
+======================================================================
+F2  TECC decoding radius vs claimed sin(18deg)=0.309
+======================================================================
+C=0.4370  T=0.9330  (T-C=0.4960)  sin18=0.3090
+urb_630 claim: d_min = sqrt(2)*C = 0.6180 ~ 1/phi=0.6180,
+               correction radius = d_min/2 = 0.3090 = sin18.
+
+Actual min pairwise distance over the 5 codewords (table coords):
+   d_min = 0.4960 between ('DT', 'TF') ; correction radius = 0.2480
+   claimed correction radius (sin18) = 0.3090
+
+If DT/TF placed in SEPARATE dims (sec 2.2 orthogonal assumption):
+   d(DT,TF)=sqrt(C^2+T^2)=1.0303 (>0.6180);
+   then binding min would be sqrt(2)*C only if all radii equal C — they are not.
+
+F2 VERDICT: the sin(18)=0.309 correction radius is NOT robust.
+   Under urb_630's OWN encoding table (DT,TF collinear in dim-1), the binding
+   minimum distance is the DT-TF gap T-C=0.4960 -> correction radius 0.2480,
+   ~20% BELOW the advertised 0.309. The elegant 'pentagon threshold' holds only
+   under a special orthogonal embedding that contradicts the same paper's table.
+
+======================================================================
+F3  Mendi crystal crossover: is pre-registered n~=10 adequate? (d=0.4)
+======================================================================
+   n= 10  power(d=0.4, two-sided a=.05) = 0.205
+   n= 20  power(d=0.4, two-sided a=.05) = 0.397
+   n= 30  power(d=0.4, two-sided a=.05) = 0.563
+   n= 52  power(d=0.4, two-sided a=.05) = 0.808
+   n= 64  power(d=0.4, two-sided a=.05) = 0.883
+
+F3 VERDICT: n=10 gives power=0.21 (badly underpowered).
+   ~52 paired sessions needed for 80% power at d=0.4.
+   The pre-registered n=10 would miss a true d=0.4 effect ~80% of the time.
+
+======================================================================
+F4  phi-sighting look-elsewhere: is phi=1.618 doing real work?
+======================================================================
+   menu of 8 'special' constants in [0.5,3.5], +-5% windows
+   P(random ratio lands within tol of SOME special constant) = 0.473
+   => a single 'phi coincidence' within 5% is a ~47% chance event,
+      i.e. roughly 1-in-2.1. Finding a few across many measured ratios
+      is expected under the null (look-elsewhere). p(>=4 hits in 8 ratios | null)
+      = 0.576  (NOT significant at .05).
+F4 VERDICT: the phi-sightings are consistent with chance once look-elsewhere
+   over the standard-constant menu is accounted for. phi is SUGGESTIVE, not
+   load-bearing, absent a pre-registered single-target prediction.
+
+======================================================================
+F5  CHSH Ring(T) null test (must NOT violate classical bound 2)
+======================================================================
+   Ring(T): CHSH=2*min(r,r)=1.4142  <2 classical-OK
+   Ring(1): CHSH=2*min(r,r)=2.0000  =2 boundary
+   Ring(sqrt2): CHSH=2*min(r,r)=2.8284  (2,2.828] quantum
+   Ring(phi): CHSH=2*min(r,r)=3.2361  >2.828 SUPER-Tsirelson
+
+F5 VERDICT: Ring(T) CHSH=1.4142 < 2  => prediction CONFIRMED (null holds):
+   pure-Tralse-axis i-cells do NOT violate CHSH. This is the one cleanly
+   PASSING falsifier — but note it is a NON-violation (consistent with classical),
+   so it confirms the framework's internal consistency, not new physics.
+
+======================================================================
+BIO  Quartz coherence-storage: charge-relaxation + mechanical test
+======================================================================
+Claim (URB#508): 'coherence imprint held for GEOLOGICAL timescales,
+   mechanically locked, actively re-emitted via converse piezo.'
+Clause (URB#373): 'no mechanism for persistent information storage.'
+
+Test 1 - dielectric charge relaxation  tau = eps0*eps_r*rho :
+   rho=1e+12 Ohm*m -> tau=39.8s (0.0111 h, 0.000461 d); tau/geological=1.3e-12
+   rho=1e+14 Ohm*m -> tau=3.98e+03s (1.11 h, 0.0461 d); tau/geological=1.3e-10
+   rho=1e+16 Ohm*m -> tau=3.98e+05s (111 h, 4.61 d); tau/geological=1.3e-08
+
+   Geological reference = 3.16e+13 s. Even at the most-insulating end
+   (rho=1e16), tau ~ 4.6 days -- ~8e+07x SHORT of geological.
+
+Test 2 - mechanical strain: room-T alpha-quartz is brittle-ELASTIC; elastic
+   strain releases instantly on stress removal (Hooke). Persistent strain needs
+   plastic flow (dislocation glide), negligible below ~300C -- and a frozen
+   dislocation is a static defect, not a re-emittable 'coherence imprint'.
+
+BIO VERDICT: the GEOLOGICAL-timescale / 'mechanically locked' storage claim is
+   REFUTED by mainstream physics (charge relaxation bounds any electrical store
+   to <= O(days); elastic strain is not retained). URB#373's no-persistent-
+   storage clause WINS. Reconciliation: a TRANSIENT store of <= O(days) is
+   physically allowed (same order as Bengston's 'hours-to-days' WATER result),
+   so quartz is NOT 'superior to water' for storage -- it is at best comparable
+   and only transiently. Net: bio active-storage downgraded speculative->REFUTED
+   for the geological/superior version; transient-only survives as candidate.
+
+======================================================================
+DONE — all falsifiers + bio storage test executed ($0, deterministic)
+======================================================================
