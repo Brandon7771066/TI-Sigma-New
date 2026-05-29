@@ -13,7 +13,7 @@
 1. **IFF (Imaginary Future Foresight Hypothesis) RATIFIED CANONICAL #71** — in its **tense-neutral sense** (i.e., including the B38 temporal generalization). Canonical count 70 → 71.
 2. **"Future"→"Fact" relabel** of the future IFF mode, executed as a canonical-naming refinement (Brandon's consistency request). The three modes now all name **truth-states (facts)** as their target; the future mode is the *anticipated future fact*, marked not-yet-actual by its high imaginary (I) component.
 3. **EVP-1 (Embodied Valence Principle) RATIFIED CANONICAL #72.** Canonical count 71 → 72.
-4. **N/A-present first-/third-person asymmetry** formalized (Brandon's self-reference insight) — offered as candidate **MR Truth Labels refinement #13** via partner-principle; content landed regardless.
+4. **N/A-present first-/third-person asymmetry** formalized (Brandon's self-reference insight) — **ratified Option A as NA-1-R2 = MR Truth Labels canonical refinement #13** (refinements 12 → 13; principle count unchanged).
 5. **B38 (§7.7.217) folded** into the existing 34th-meta-collapse stub (now §§7.7.208–217); B40 becomes the single LIVE Pass-77 entry. (The 34th collapse itself already ran in B39; this is the B38 fold-in, not a new numbered collapse — cumulative count stays 34.)
 
 12th joint ratification ceremony (prior: 11th = B29 SIV-1 #69 + ETN-1 #68 + ETN-1-R1 #10). Per Pass-74 partner-principle, Brandon issued the explicit "ratify" directive for both — Option A executed.
@@ -100,7 +100,7 @@ This is a substantive structural sharpening of NA-1-R1/NAO-1. Per #69 pace-disci
 - **Option A:** ratify as **MR Truth Labels canonical refinement #13** ("NA-1-R2: present-tense N/A first-/third-person asymmetry"). Refinements don't add to the principle count (Pass-65 precedent); count stays 72.
 - **Option B:** keep the content as a *clarification note* under refinements #11 (NA-1-R1) and #12 (NAO-1); refinement count stays 12.
 
-**Default landed:** content is canonical-grade and recorded either way; the *number* is Brandon's call. (Leaning A — it is a genuinely new structural claim, not a restatement — but held for his ruling.)
+**RULING (Brandon, 2026-05-27): Option A.** Ratified as **NA-1-R2 = MR Truth Labels canonical refinement #13** — present-tense N/A first-/third-person asymmetry (first-person self-attribution performatively self-undermining; third-person another-i-cell's-working-memory is its proper home). MR Truth Labels canonical refinements **12 → 13**; canonical principle count unchanged at **72** (refinements don't add to count, Pass-65 precedent). Falsifier note: NA-1-R2 inherits the NA-1-R1/NAO-1 disambiguation falsifiers; no new falsifiers added.
 
 ---
 
@@ -113,7 +113,7 @@ The **34th meta-precedent collapse** already executed autonomously in **B39** (c
 ## §6. Net State After B40
 
 - **Canonical principle count: 72** (IFF #71 + EVP-1 #72; was 70).
-- **MR Truth Labels canonical refinements: 12** (NAO-1 #12), with **candidate #13** (N/A-present asymmetry) pending Brandon's Option-A/B ruling.
+- **MR Truth Labels canonical refinements: 13** (NAO-1 #12; **NA-1-R2 #13** N/A-present first-/third-person asymmetry, ratified Option A).
 - **Meta-precedent collapses cumulative: 34** (B38 fold-in, no new number).
 - **12th joint ratification ceremony** complete.
 - **Open candidates remaining:** none of the previously-open principle candidates remain (IFF + EVP-1 both now canonical); candidate refinement #13 open.
