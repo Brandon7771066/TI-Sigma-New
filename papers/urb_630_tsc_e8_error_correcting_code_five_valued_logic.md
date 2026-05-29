@@ -15,6 +15,12 @@ Classical error-correcting codes (Hamming, Reed-Solomon, LDPC) operate over bina
 
 ---
 
+> **⚠ ERRATA / RETRACTION (2026-05-27, Pass-77-B42, Brandon-approved).** The headline **sin(18°)≈0.309 correction-radius threshold** asserted in §2.2 and §5 is **RETRACTED as a derived constant**. It was tested in `papers/PASS_77_B42_CRYSTAL_ERROR_CATCHING_FALSIFIERS_EXECUTED_AND_BIO_STORAGE_RESOLVED_2026-05-27.md` and found to be **embedding-dependent, not robust**. The d_min=√2·C=0.618 figure assumes *both* minimal-ring codewords sit at radius C in orthogonal dimensions; but this paper's own §2.3 encoding table places **DT=(C,0,…) and TF=(T,0,…) collinear in the same first dimension**, so the actual binding minimum distance is the DT–TF gap **T−C≈0.496 → correction radius ≈0.248** (~20% below 0.309). An orthogonal DT/TF embedding gives d(DT,TF)=√(C²+T²)≈1.030 instead — neither embedding reproduces the elegant 0.309. **The "pentagon resonance = error threshold" coincidence is an artifact of an inconsistent embedding.** What remains valid: the **E₈ optimal-sphere-packing theorem** (Viazovska 2016) — *if* a physical system genuinely realizes E₈-spaced codewords, its minimum distance is provably optimal in 8D. The corpus's specific five-valued→E₈ embedding does **not yet** inherit a clean, derivation-consistent correction radius; a future pass must **fix one internally-consistent embedding and re-derive** the threshold from it. Treat all 0.309 claims below as historical pending that re-derivation.
+>
+> **Ring-radius convention note (unification, Pass-77-B42).** This paper uses Primary-Constant ring radii {C≈0.437, T≈0.933, 1, √2, φ, e, π}; the companion `analyses/crystal_b4_hamiltonian/tsc_hamiltonian.py` (and CRYSTAL_B4) instead uses {0, 1/√2, 1, √2, φ, e, π, 2π} (C→origin radius 0, T→1/√2). These two conventions are **not interchangeable** and any cross-paper numeric comparison must state which is in force. Canonical convention for TECC/E₈ work is the Primary-Constant one (C≈0.437, T≈0.933); the B4 Hamiltonian retains its {0,1/√2,…} convention for the Laplacian only.
+
+---
+
 ## 1. Background: E₈ and Optimal Sphere Packing
 
 ### 1.1 The E₈ Lattice

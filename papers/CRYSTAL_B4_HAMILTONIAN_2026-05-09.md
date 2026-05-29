@@ -64,6 +64,8 @@ The companion script computes ⟨H⟩ for each canonical phase and reports the e
 
 If the numerical ordering matches, the Hamiltonian validates the framework's qualitative phase-ordering claim from `urb_645`. If it fails, the Hamiltonian needs refinement (likely via tuned weights *w_intra* / *w_inter* / *w_center* or via a Hubbard-style on-site term).
 
+> **⚠ UPDATE (2026-05-27, Pass-77-B42, Brandon-approved).** The phase-ordering below was re-tested in `papers/PASS_77_B42_CRYSTAL_ERROR_CATCHING_FALSIFIERS_EXECUTED_AND_BIO_STORAGE_RESOLVED_2026-05-27.md`. The Mott↔FQH swap reproduces under unit weights, **but the ordering is WEIGHT-DEPENDENT, not a robust prediction**: a different natural inter-ring weighting (∝√radius) restores the urb_645 order `BEC<Supersolid<FQH<Mott<Fragmented`, while other natural weightings (∝radius, ∝radius², ∝1/radius) give yet other orderings. The ordering can therefore be tuned *into or out of* agreement with urb_645. What survives weight-independently is only **"BEC lowest, Fragmented highest"** — trivially true of any graph-Laplacian on an ordered polytope and carrying no error-correction content. The detailed phase ordering should be regarded as **a free parameter of the weighting choice**, not a derived result, pending Brandon ratification of a single canonical weighting scheme (Pass-14 candidate (d)). Also note: the FQH-like ansatz here is ν=5/8 (script) vs ν=2/5 (this paper's §2 text) — a separate unresolved discrepancy.
+
 **Pass 13 numerical result (per #69, reported as-is):** the unit-weight graph-Laplacian gives:
 
 | Phase | ⟨H⟩ |

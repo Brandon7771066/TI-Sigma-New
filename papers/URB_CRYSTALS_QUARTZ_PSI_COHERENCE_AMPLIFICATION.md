@@ -196,7 +196,7 @@ The **Pitch Crystals** system in TI Sigma already combines quartz resonance with
 | Prediction | Method | Expected |
 |------------|--------|---------|
 | Vogel crystal adjacent to RNG → enhanced deviation during human intention | REG + crystal vs. REG alone | 2–5× larger deviation with crystal |
-| Mendi LCC higher with crystal present during session | Within-subject crossover (n=10) | p < 0.05, effect size d > 0.4 |
+| Mendi LCC higher with crystal present during session | Within-subject crossover (**n≈52**, re-spec'd 2026-05-27 Pass-77-B42) | p < 0.05, effect size d > 0.4 |
 | Clock crystal phase noise correlates with adjacent human LCC | Spectrum analyzer on PC clock + Mendi during session | r > 0.3 |
 | Fibonacci-timed Pitch Crystal strikes produce LCC spike in next 30 seconds | Mendi time-series around strike events | LCC elevation 3–8% post-strike |
 | Vogel-cut outperforms tumbled quartz for RNG effects | Two-crystal comparison, same mass | Vogel-cut shows 2–3× larger REG deviation |
@@ -211,6 +211,7 @@ To maintain scientific integrity:
 - Crystals cannot "store" intentions — there is no mechanism for persistent information storage in a crystalline lattice beyond its own structure (i.e., no "programming" of crystals persists after the high-φ source is removed)
 - Crystals do not "choose" which intentions to amplify — they are isotropic amplifiers, not filters
 - The healing claims around crystal therapy that go beyond environmental coherence amplification lack mechanistic support
+- **φ-resonance/φ-sighting caveat (2026-05-27, Pass-77-B42, Brandon-approved):** the framework's φ-coincidences (Vogel apex tan≈φ, DNA pitch/diameter≈φ, EEG θ/α≈φ, FQH filling ratios, etc.) are **demoted to SUGGESTIVE — look-elsewhere UNCORRECTED.** A look-elsewhere audit (`papers/PASS_77_B42_..._2026-05-27.md`) found that, given a standard menu of "special" constants {1/φ, 1, √2, φ, e/φ, 2, e, π} with ±5% windows over a plausible ratio range, the probability a *random* ratio lands near *some* special constant is ≈0.47, and P(≥4 such hits in 8 measured ratios | null) ≈ 0.576 — not significant. φ-sightings therefore carry **no evidential weight** absent a **pre-registered single-target φ-prediction with a tight tolerance**. φ remains a motivating heuristic, not a confirmed signature.
 
 The TI Sigma framework is specific: **quartz amplifies φ-field effects from existing high-φ sources. It does not create them.**
 
