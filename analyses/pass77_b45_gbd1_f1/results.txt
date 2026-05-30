@@ -1,0 +1,24 @@
+=== GBD-1-F1: payoff ~ base + slack + base*slack (standardized) ===
+N=4000 agents, T=400 rounds, seed=20260527
+  intercept    coef=+105.286  se= 0.437  t= +240.87
+  base         coef= +59.265  se= 0.437  t= +135.58
+  slack        coef= -26.071  se= 0.437  t=  -59.64
+  base*slack   coef= -39.638  se= 0.433  t=  -91.60
+
+=== 2x2 cell mean payoffs (median split) ===
+  low-base  low-slack :    47.17
+  low-base  high-slack:    62.22
+  high-base low-slack :   212.12
+  high-base high-slack:    98.94
+
+=== marginal effect of slack within base stratum ===
+  slack effect | LOW  base =   +15.04
+  slack effect | HIGH base =  -113.18
+
+=== slack slope within base terciles (sign should rise low->high) ===
+  low-base    d(payoff)/d(slack): coef=  +45.79  t= +33.02
+  mid-base    d(payoff)/d(slack): coef=  -44.61  t= -15.87
+  high-base   d(payoff)/d(slack): coef= -271.89  t= -60.70
+
+=== VERDICT: GBD-1-F1 REFUTED or inconclusive ===
+    interaction coef=-39.638, t=-91.60

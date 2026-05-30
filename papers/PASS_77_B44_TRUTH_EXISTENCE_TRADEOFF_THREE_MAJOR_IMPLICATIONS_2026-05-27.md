@@ -83,6 +83,8 @@ Formally, in the UOP model: moving from `G = 1` down toward `G*` *increases* `J`
 
 ## 5. Candidate sub-principle + falsifier (NOT ratified; count stays 72)
 
+> **✔ UPDATE (2026-05-27, Pass-77-B45):** GBD-1 was **RATIFIED CANONICAL #73** after GBD-1-F1 was executed (`papers/PASS_77_B45_GBD1_F1_EXECUTED_CHEAP_SLACK_SCOPE_CONDITION_AND_RATIFICATION_2026-05-27.md`). **#69 note:** the *literal* pre-registered F1 was **REFUTED** (slack-as-observable-betrayal → interaction t=−91.6, sign reversed; betrayal hurts high-base agents *most*). A diagnostic variant (slack-as-*cheap*-discretion) **confirmed** the predicted positive interaction (t=+27.0). Net: GBD-1 ratified in **scope-conditioned form (GBD-1-R1: slack must be *cheap*/base-non-eroding)**; base-eroding "slack" reverses the effect. Count 72→73. F1 CLOSED; F2/F3 OPEN.
+
 **GBD-1 (GILE-Backdrop Discriminator) — CANDIDATE CANONICAL, offered for Brandon ratification.** *Sub-maximal-G slack is virtuous iff it sits atop a high-G backdrop (`G ≳ G*`); the identical slack atop a low-G base is the corresponding vice. The backdrop, not the slack-behavior, is the discriminator.* Specializes GTT-1; composes with Policy-W critique, SRC-1, the koan maxims, and #69. Per Pass-65 precedent, candidate status adds nothing to the canonical count (held at **72**).
 
 **Pre-registered falsifiers (OPEN):**

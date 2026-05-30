@@ -1,0 +1,19 @@
+scn        mean_HI mean_LO  diff
+costume     5.33    3.67   +1.67
+dance       6.00    3.67   +2.33
+doodle      6.00    3.33   +2.67
+juggle      5.00    1.67   +3.33
+meme        3.33    1.67   +1.67
+nap         5.33    1.00   +4.33
+pun         3.67    2.00   +1.67
+riddle      2.67    1.67   +1.00
+song        5.00    2.67   +2.33
+whisper     2.00    1.00   +1.00
+
+mean HI=4.43  mean LO=2.23  mean diff=+2.20
+paired t(9)=6.66, p=9.27e-05
+Cohen dz (paired, scenario-level)=2.11
+Cohen d (pooled item-level)=1.62
+scenarios with HI>LO: 10/10
+
+=== VERDICT: GBD-1-F2 NOT REFUTED (backdrop shifts judgment, large effect) ===

@@ -1,0 +1,19 @@
+=== GBD-1-F1b (CHEAP slack): payoff ~ base + slack + base*slack (standardized) ===
+N=4000 agents, T=400 rounds, seed=20260527
+  intercept    coef=+297.474  se= 0.718  t= +414.58
+  base         coef=+150.202  se= 0.718  t= +209.33
+  slack        coef= +22.662  se= 0.718  t=  +31.58
+  base*slack   coef= +19.181  se= 0.710  t=  +27.00
+
+=== 2x2 cell mean payoffs ===
+  low-base  low-slack :   161.80
+  low-base  high-slack:   170.45
+  high-base low-slack :   395.42
+  high-base high-slack:   462.49
+
+=== marginal effect of slack within base stratum ===
+  slack effect | LOW  base =    +8.64
+  slack effect | HIGH base =   +67.07
+
+=== VERDICT: GBD-1-F1b CONFIRMS GBD-1 under cheap-slack (interaction>0, significant) ===
+    interaction coef=+19.181, t=+27.00
