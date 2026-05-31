@@ -32,6 +32,8 @@ Items crossed on two factors: **polarity** {true-leaning, false-leaning} × **in
 
 **#69 honest finding (reported against the stronger version of Brandon's claim):** the raters **floored** `indet` at ~1.0 for canonical truths/falsehoods (TL=1.00, FL=1.17). So the empirical data **confirms** the spectrum and the pole-independence, but does **NOT** support the stronger sub-claim that *even maximally-true/false statements carry nonzero indeterminacy* — these raters treated "2+2=4" as fully determinate. That stronger claim remains a TI Sigma theoretical posit needing a finer instrument (e.g., a forced sub-integer or log scale); it is not established here. Asymmetric-Standards #69 requires flagging this rather than rounding the floor up.
 
+> **Clarifying note (added B51):** This is an *instrument-scope* limit, not a refutation. Per Brandon, the residual indeterminacy of even "2+2=4" is **FFF-existential** (sourced in the Four Fundamental Features of Existence — the statement exists only as an abstraction enacted by a sufficiently-intelligent i-cell, never timelessly saturated), **not** content-level ambiguity. Study 1 measured content-unsettledness only, so it could not see FFF-existential indeterminacy. The stronger claim is rehabilitated and sharpened in `PASS_77_B51_FFF_INDETERMINACY_SOURCE_PLUS_CALLING_ACCEPTANCE_AND_HEM_AFTERLIFE_2026-05-27.md`.
+
 ---
 
 ## Study 2 — "Neither" is a shrug that conflates MI and N/A
