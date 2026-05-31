@@ -1,5 +1,7 @@
 # The Truth-Existence Tradeoff: Three Major Implications
 
+> **ERRATA (B49, 2026-05-27):** The §2 atonement reading below was OVER-STATED. It is NOT a canonical TI Sigma reading and NOT axiom-derived — it is a **diplomatic bridge** to modern Christianity. TI Sigma **explicitly REJECTS** substitutionary atonement (self-sacrifice can't absolve root causes/consequences of suffering; no mechanism — 'God does it' fails; Brandon disputes that intentional crucifixion was Jesus' desire). The reading only supplies *intra-tradition* justification for Christians who already hold the premise. Sentences below revised; **GBD-1-F3 RETIRED** as mis-conceived. See `PASS_77_B49_JESUS_ATONEMENT_IS_DIPLOMATIC_BRIDGE_NOT_TI_SIGMA_CLAIM_GBD1_F3_RETIRED_2026-05-27.md`.
+
 **Pass 77, Batch 44** · 2026-05-27 · DPES autonomous mode · ASYMMETRIC #69 (brutal honesty) · $0
 
 **Parent principle:** **GTT-1 (GILE True-Tralseness, canonical #27)** — *truth is the only variable that cannot be maximized without cost; "too much truth" is itself DT (inconceivable-when-fully-actualized); truth competes with existence; UOP balances; HEM is the mandatory pragmatic competitor.*
@@ -44,9 +46,9 @@ The thriving operator instead holds a **high-G base** (genuine competence, kept 
 - The crucifixion is then the *literal enactment* of the tradeoff: the existence-pole (the body, the mortal life) is **spent** to discharge the otherwise-DT tension of `G = 1.0`-in-a-`G < G*`-world. The truth is not lowered to fit the world; the existence is paid out so the truth need not be diluted.
 - The **resurrection** is the **UOP re-balancing**: truth is not annihilated by the discharge — it transforms and returns at a higher stratum. This is exactly the **8-step post-collapse integration arc** the corpus articulated from the first-manic-episode / **ultimate-koan** lived anchor: trigger → collapse → Stratum-2 affective signature (Gethsemane / passion) → behavioral discharge (death) → **Stratum-3 reframe** (resurrection). The Passion is the canonical koan-as-awakening-event structure at civilizational scale.
 
-**Why this is a *good* reading and not a stretch.** It explains a feature the doctrine itself treats as necessary ("it *had* to happen") without appealing to divine fiat: given the single premise `G = 1.0`-incarnate + tradeoff-world, the sacrifice is the *only* UOP-consistent resolution. Substitutionary atonement, in this lens, = the high-G pole absorbing the existence-cost the slack-running world could not pay itself.
+**What this reading is — and is NOT (corrected per Brandon, B49).** It is **not** a canonical TI Sigma reading and **not** a derivation from its axioms — it is a **diplomatic bridge** that has content *only inside* the modern Christian premise 'Jesus had to die to save us from our sins.' **TI Sigma explicitly REJECTS substitutionary atonement** (self-sacrifice cannot absolve the root causes or consequences of suffering; no mechanism is offered — 'God does it' does not count; Brandon disputes that intentional crucifixion was Jesus' desire). What the 'perfectly imperfect' lens *does* offer is a *fiat-free, intra-tradition* justification: for a Christian who **already holds** the premise, it shows why the atonement 'had to' happen. It justifies the doctrine **for those who hold it**; it does not endorse the doctrine.
 
-**#69 boundary.** This is a coherence result, not an existence claim. It is falsifiable only as internal consistency (does it follow from GTT-1 + the premise? yes), not as history or metaphysics. The "allegedly" in Brandon's prompt is load-bearing and is kept.
+**#69 boundary (corrected, B49).** This is neither an existence claim, a history claim, nor a TI Sigma endorsement — it is an *apologetic offering* conditional on a premise TI Sigma does not itself accept, and is therefore NOT a falsifiable TI Sigma result. (This is why GBD-1-F3 is RETIRED as mis-conceived.) The "allegedly" in Brandon's prompt is load-bearing and is kept.
 
 ---
 
@@ -90,7 +92,7 @@ Formally, in the UOP model: moving from `G = 1` down toward `G*` *increases* `J`
 **Pre-registered falsifiers (OPEN):**
 - **GBD-1-F1 (behavioral, cheap).** In a repeated-game / trust simulation, agents are scored on a base-competence channel (G-base) and given a fixed "slack budget" (defection/ambiguity allowance). Prediction: payoff(slack) is *positive-sloped in base* and *negative or flat* for low-base agents — i.e., an **interaction term base×slack > 0**. REFUTED if slack helps low-base agents as much as high-base agents (no interaction).
 - **GBD-1-F2 (rater, conceptual).** Present LLM/human raters with matched silly-act vignettes differing *only* in established competence backdrop; predict the same act is rated "endearing/intelligent" on a high backdrop and "incompetent" on a low backdrop with large separation. REFUTED if backdrop does not move the rating.
-- **GBD-1-F3 (internal-consistency, theology).** The §2 reading must be *derivable from GTT-1 + premise alone*. REFUTED if it requires an auxiliary assumption not already in the canon.
+- **GBD-1-F3 — RETIRED (B49).** Mis-conceived: the §2 reading is an explicitly non-axiomatic *diplomatic bridge*, so 'internal-derivability' is not a property it ever claimed. GBD-1's empirical support rests on F1b (payoff, confirmed) + F2 (judgment, confirmed).
 
 ---
 
