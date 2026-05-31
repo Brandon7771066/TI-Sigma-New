@@ -1,0 +1,922 @@
+[
+  {
+    "id": "s1_TL1",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "Water is composed of hydrogen and oxygen.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TL2",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "The Earth orbits the Sun.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TL3",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "Two plus two equals four.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TL4",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "Paris is the capital of France.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TL5",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "Humans need oxygen to survive.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TL6",
+    "study": 1,
+    "pol": "true",
+    "indet": "low",
+    "cell": "TL",
+    "text": "Ice is frozen water.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 7,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_FL1",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "The Sun orbits the Earth.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_FL2",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "Two plus two equals five.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_FL3",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "Whales are a kind of fish.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 2
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 2,
+        "indet": 3
+      }
+    }
+  },
+  {
+    "id": "s1_FL4",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "The Earth is flat.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_FL5",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "Humans can breathe underwater without any equipment.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_FL6",
+    "study": 1,
+    "pol": "false",
+    "indet": "low",
+    "cell": "FL",
+    "text": "Glass is a type of metal.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 1,
+        "indet": 1
+      }
+    }
+  },
+  {
+    "id": "s1_TH1",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "A daily glass of red wine is good for your health.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_TH2",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "Honesty is usually the best policy.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "T",
+        "truth": 6,
+        "indet": 3
+      },
+      "R2_gpt4o": {
+        "fde": "T",
+        "truth": 6,
+        "indet": 3
+      },
+      "R3_haiku": {
+        "fde": "T",
+        "truth": 6,
+        "indet": 4
+      }
+    }
+  },
+  {
+    "id": "s1_TH3",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "Meditation improves long-term wellbeing.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "truth": 5,
+        "indet": 4
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "truth": 5,
+        "indet": 4
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_TH4",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "Regular exercise makes people happier.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "truth": 5,
+        "indet": 4
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "truth": 5,
+        "indet": 4
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "truth": 5,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_TH5",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "Reading fiction increases empathy.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_TH6",
+    "study": 1,
+    "pol": "true",
+    "indet": "high",
+    "cell": "TH",
+    "text": "Free markets tend to improve overall welfare.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 5,
+        "indet": 4
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_FH1",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Astrology accurately predicts personality.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 3,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 3,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "truth": 2,
+        "indet": 5
+      }
+    }
+  },
+  {
+    "id": "s1_FH2",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Money reliably buys happiness.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "truth": 3,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_FH3",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Natural talent matters more than practice for success.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "truth": 3,
+        "indet": 7
+      }
+    }
+  },
+  {
+    "id": "s1_FH4",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Violent video games cause violent behavior.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "truth": 3,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_FH5",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Technology is making people lonelier overall.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 6
+      }
+    }
+  },
+  {
+    "id": "s1_FH6",
+    "study": 1,
+    "pol": "false",
+    "indet": "high",
+    "cell": "FH",
+    "text": "Modern art is objectively worse than classical art.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R2_gpt4o": {
+        "fde": "B",
+        "truth": 4,
+        "indet": 5
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "truth": 2,
+        "indet": 7
+      }
+    }
+  },
+  {
+    "id": "s2_MI1",
+    "study": 2,
+    "gold": "MI",
+    "text": "Whether the sentence 'this statement is neither true nor false' itself has a truth-value is unsettled.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI2",
+    "study": 2,
+    "gold": "MI",
+    "text": "It is indeterminate whether the question 'is the universe spatially infinite?' even has a determinate answer.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI3",
+    "study": 2,
+    "gold": "MI",
+    "text": "Whether 'a heap minus one grain is still a heap' has a sharp truth-value is itself unclear.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "I",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "I",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI4",
+    "study": 2,
+    "gold": "MI",
+    "text": "It may be indeterminate whether it is determinate that free will exists.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI5",
+    "study": 2,
+    "gold": "MI",
+    "text": "Whether 'beauty is objective' is even a factual claim is itself an open question.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI6",
+    "study": 2,
+    "gold": "MI",
+    "text": "It is unsettled whether the continuum hypothesis has a determinate truth-value at all.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI7",
+    "study": 2,
+    "gold": "MI",
+    "text": "Whether qualia have a determinate physical nature may itself be an indeterminate matter.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "I",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "I",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_MI8",
+    "study": 2,
+    "gold": "MI",
+    "text": "Whether the statement 'God exists' has a determinate truth-value is itself contested.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "MI"
+      },
+      "R3_haiku": {
+        "fde": "B",
+        "ti": "MI"
+      }
+    }
+  },
+  {
+    "id": "s2_NA1",
+    "study": 2,
+    "gold": "NA",
+    "text": "The number 7 smells like vanilla.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA2",
+    "study": 2,
+    "gold": "NA",
+    "text": "The color green tastes triangular.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA3",
+    "study": 2,
+    "gold": "NA",
+    "text": "Justice weighs four kilograms.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA4",
+    "study": 2,
+    "gold": "NA",
+    "text": "Wednesday is heavier than courage.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA5",
+    "study": 2,
+    "gold": "NA",
+    "text": "The square root of democracy is purple.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA6",
+    "study": 2,
+    "gold": "NA",
+    "text": "Sincerity has a melting point of 200 degrees Celsius.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "F",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "F",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "F",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA7",
+    "study": 2,
+    "gold": "NA",
+    "text": "The concept of velocity is married to Tuesday.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  },
+  {
+    "id": "s2_NA8",
+    "study": 2,
+    "gold": "NA",
+    "text": "The smell of the number five is louder than Thursday.",
+    "ratings": {
+      "R1_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R2_gpt4o": {
+        "fde": "N",
+        "ti": "NA"
+      },
+      "R3_haiku": {
+        "fde": "N",
+        "ti": "NA"
+      }
+    }
+  }
+]

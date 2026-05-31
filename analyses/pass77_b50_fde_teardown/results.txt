@@ -1,0 +1,43 @@
+================================================================
+STUDY 1 — 'Both' is 1D where the structure is 2D
+================================================================
+cell polarity  indet-fac mean_truth  mean_indet  FDE labels
+TL   true      low       7.00        1.00        {'T': 18}
+FL   false     low       1.06        1.17        {'F': 18}
+TH   true      high      5.06        4.44        {'B': 10, 'T': 3, 'N': 5}
+FH   false     high      3.50        5.39        {'B': 13, 'F': 1, 'N': 4}
+
+TRUTH axis ~ POLARITY: true-cells 6.03 vs false-cells 2.28, t=13.17 p=1.3e-20
+INDET axis ~ INDETERMINACY factor: low 1.08 vs high 4.92, t=-21.65 p=9.7e-33
+INDEPENDENCE 1 — indet does NOT track polarity: true 2.72 vs false 3.28, p=0.26
+INDEPENDENCE 2 — truth does NOT track indeterminacy factor: low 4.03 vs high 4.28, p=0.64
+
+FDE LABEL inter-rater agreement (all 3 raters identical) per cell:
+  TL: 6/6 items unanimous
+  FL: 6/6 items unanimous
+  TH: 5/6 items unanimous
+  FH: 1/6 items unanimous
+  FDE 'B' bucket truth-ratings span 3..5 (mean 4.26) — does NOT encode polarity
+  FDE 'N' bucket truth-ratings span 2..5 (mean 4.00) — does NOT encode polarity
+
+#69 honest finding: canonical TL/FL indet floored at 1.08 ~1.0
+  => raters did NOT register residual indeterminacy on CANONICAL truths/falsehoods.
+  Spectrum + axis-independence CONFIRMED; 'even maximally-true carry nonzero indeterminacy' NOT supported by these raters (scale-floored).
+
+================================================================
+STUDY 2 — 'Neither' is a shrug: MI vs NA conflation
+================================================================
+
+MI items (n=8, 24 rater-calls):
+   FDE label dist: {'N': 19, 'I': 4, 'B': 1}
+   TI  label dist: {'MI': 24}
+
+NA items (n=8, 24 rater-calls):
+   FDE label dist: {'N': 18, 'F': 6}
+   TI  label dist: {'NA': 24}
+
+Mutual information with MI-vs-NA gold (max possible = H(gold) = 1.000 bits):
+   FDE label  I = 0.230 bits  (23% of recoverable structure)
+   TI  label  I = 1.000 bits  (100% of recoverable structure)
+   TI label accuracy at MI/NA assignment: 48/48 = 100%
+   FDE 'Neither' bucket holds 19 MI-calls + 18 NA-calls = structurally-distinct items conflated into ONE shrug.
