@@ -1,0 +1,16 @@
+{
+  "job_id": "d8fjqcg7jphs739md1a0",
+  "backend": "ibm_marrakesh",
+  "E": {
+    "a0b0": 0.6929,
+    "a0b1": -0.6519,
+    "a1b0": 0.6367,
+    "a1b1": 0.7256
+  },
+  "S_measured": 2.707,
+  "classical_bound": 2.0,
+  "tsirelson": 2.8284,
+  "shots": 4096,
+  "violation_gt2": true,
+  "fraction_of_tsirelson": 0.9571
+}
