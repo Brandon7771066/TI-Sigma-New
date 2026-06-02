@@ -1,0 +1,28 @@
+======================================================================
+CHSH on Aer simulator (sampled, shots=8192) — Bell state |Phi+>
+======================================================================
+
+[OPTIMAL 22.5-deg-spaced angles  A={0,45}, B={22.5,67.5}]  (the sqrt2 DIAGONAL)
+  S_quantum (measured) = 2.8333   theory Tsirelson 2*sqrt2 = 2.8284
+
+[45-deg-spaced angles            A={0,90}, B={45,135}]  (the BINARY STAIRCASE)
+  S_45 (measured)      = 0.0059   (collapses toward the classical/binary regime)
+
+[corpus single-parameter sweep  A={0,2T}, B={T,3T}, S(T)=2|cos2T+sin2T|]
+  theta(deg)    S measured    S theory     matching Ring
+           0        2.0000      2.0000            Ring 1
+        22.5        2.8000      2.8284        Ring sqrt2
+          45        0.0034      0.0000       (node, S=0)
+        67.5        2.8315      2.8284        Ring sqrt2
+          90        2.0000      2.0000            Ring 1
+
+======================================================================
+THE 45-DEGREE / sqrt(2) UNIFICATION
+======================================================================
+  staircase: binary length 2  ->  efficient diagonal sqrt2   ratio = 1.4142
+  CHSH:      classical 2      ->  quantum 2*sqrt2            ratio = 1.4142
+  SAME NUMBER: sqrt(2) = 1.414214
+  The sqrt2 the binary staircase CANNOT reach on its 45-deg diagonal
+  IS the sqrt2 advantage quantum mechanics gains over classical (binary) LHV.
+  45-deg polarization = Hadamard |+> = equal 50/50 superposition = physical TRALSE state
+  (urb_623: Hadamard |+> = maximal superposition = balanced E=GIL=1/sqrt2 equator).
