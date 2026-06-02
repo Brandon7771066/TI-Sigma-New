@@ -1,0 +1,20 @@
+STAIRCASE PARADOX — binary step-approximation of the unit-square diagonal
+True (efficient) diagonal length = sqrt(2) = 1.414214
+   n steps   staircase len   max dev from diag  inefficiency 2/sqrt2
+         1        2.000000           7.071e-01              1.414214
+         2        2.000000           3.536e-01              1.414214
+         4        2.000000           1.768e-01              1.414214
+        10        2.000000           7.071e-02              1.414214
+       100        2.000000           7.071e-03              1.414214
+      1000        2.000000           7.071e-04              1.414214
+    100000        2.000000           7.071e-06              1.414214
+   1000000        2.000000           7.071e-07              1.414214
+
+=> POINTWISE: max deviation -> 0  (the staircase LOOKS like it becomes the diagonal)
+=> LENGTH:    stays EXACTLY 2 for every n  (never converges to sqrt(2))
+=> Irreducible inefficiency = 2/sqrt(2) = sqrt(2) = 1.4142x  (≈41% waste, CONSTANT in n)
+
+TRUTH-DOMAIN INSTANCE (from B50): FDE binary/discrete scheme on MI-vs-NA
+  pointwise: you can describe I/MI/NA in more and more binary words (looks closable)
+  efficiency-metric: FDE recovered only 0.230 / 1.000 bits and the gap NEVER closes,
+  exactly like the staircase stuck at 2 — TI's native non-binary label = the sqrt(2) diagonal (1.000 bit).
