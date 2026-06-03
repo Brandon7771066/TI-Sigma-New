@@ -1,0 +1,362 @@
+{
+  "summary": {
+    "raters": {
+      "anthropic": {
+        "n": 30,
+        "pearson_intellect_vs_silliness": -0.447,
+        "mean_intellect": 9.17,
+        "mean_silliness": 6.23
+      },
+      "perplexity": {
+        "n": 0,
+        "error_sample": [
+          [
+            "ERR",
+            "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+          ],
+          [
+            "ERR",
+            "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+          ]
+        ]
+      }
+    },
+    "combined": {
+      "n": 30,
+      "pearson_intellect_vs_silliness": -0.447,
+      "SIV_1_F1": "REFUTED (negative corr)"
+    }
+  },
+  "rows": [
+    {
+      "name": "Richard Feynman",
+      "anthropic": [
+        9.0,
+        8.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Albert Einstein",
+      "anthropic": [
+        9.5,
+        7.5
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Niels Bohr",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Bertrand Russell",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Srinivasa Ramanujan",
+      "anthropic": [
+        10.0,
+        6.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Nikola Tesla",
+      "anthropic": [
+        9.0,
+        3.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Marie Curie",
+      "anthropic": [
+        9.5,
+        3.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Charles Darwin",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Isaac Newton",
+      "anthropic": [
+        10.0,
+        2.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Kurt G\u00f6del",
+      "anthropic": [
+        10.0,
+        2.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Alan Turing",
+      "anthropic": [
+        9.5,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "John von Neumann",
+      "anthropic": [
+        10.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Paul Erd\u0151s",
+      "anthropic": [
+        9.5,
+        8.5
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Paul Dirac",
+      "anthropic": [
+        10.0,
+        2.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Wolfgang Pauli",
+      "anthropic": [
+        9.0,
+        8.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Stephen Hawking",
+      "anthropic": [
+        10.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Carl Sagan",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Ludwig Wittgenstein",
+      "anthropic": [
+        9.0,
+        4.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Buckminster Fuller",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Socrates",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Diogenes of Sinope",
+      "anthropic": [
+        8.0,
+        9.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Zhuangzi",
+      "anthropic": [
+        9.0,
+        8.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Alan Watts",
+      "anthropic": [
+        8.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Ram Dass",
+      "anthropic": [
+        8.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Thich Nhat Hanh",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Tenzin Gyatso (14th Dalai Lama)",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Rumi",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Friedrich Nietzsche",
+      "anthropic": [
+        9.0,
+        3.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Galileo Galilei",
+      "anthropic": [
+        9.0,
+        7.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    },
+    {
+      "name": "Benjamin Franklin",
+      "anthropic": [
+        9.0,
+        8.0
+      ],
+      "perplexity": [
+        "ERR",
+        "Error code: 401 - {'error': {'message': 'Invalid API key provided. Ensure your A"
+      ]
+    }
+  ]
+}

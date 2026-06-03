@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "n_items": 15,
+    "n_raters": 3,
+    "rater_type": "anthropic claude-haiku-4-5 @ T=0.0/0.5/1.0 (same-model pseudo-raters)",
+    "fleiss_kappa_6way_incl_HMR": 1.0,
+    "majority_accuracy_vs_expected": 0.933,
+    "HMR_1_F3": "NOT REFUTED (kappa>=0.5)",
+    "prior_corpus_5tier_kappa_ref": "~0.77-0.84 (Pass-63 competent raters)"
+  },
+  "rows": [
+    {
+      "prop": "Water is H2O.",
+      "expected": "T",
+      "r1": "T",
+      "r2": "T",
+      "r3": "T"
+    },
+    {
+      "prop": "The Earth orbits the Sun.",
+      "expected": "T",
+      "r1": "T",
+      "r2": "T",
+      "r3": "T"
+    },
+    {
+      "prop": "2+2=4.",
+      "expected": "T",
+      "r1": "T",
+      "r2": "T",
+      "r3": "T"
+    },
+    {
+      "prop": "Paris is the capital of France.",
+      "expected": "T",
+      "r1": "T",
+      "r2": "T",
+      "r3": "T"
+    },
+    {
+      "prop": "The Sun orbits the Earth.",
+      "expected": "F",
+      "r1": "F",
+      "r2": "F",
+      "r3": "F"
+    },
+    {
+      "prop": "2+2=5.",
+      "expected": "F",
+      "r1": "F",
+      "r2": "F",
+      "r3": "F"
+    },
+    {
+      "prop": "Humans breathe through gills.",
+      "expected": "F",
+      "r1": "F",
+      "r2": "F",
+      "r3": "F"
+    },
+    {
+      "prop": "There is extraterrestrial microbial life somewhere in the universe.",
+      "expected": "I",
+      "r1": "I",
+      "r2": "I",
+      "r3": "I"
+    },
+    {
+      "prop": "The number of grains of sand on Earth right now is even.",
+      "expected": "I",
+      "r1": "I",
+      "r2": "I",
+      "r3": "I"
+    },
+    {
+      "prop": "It will rain in Paris exactly one year from today.",
+      "expected": "I",
+      "r1": "I",
+      "r2": "I",
+      "r3": "I"
+    },
+    {
+      "prop": "This sentence is false.",
+      "expected": "MI",
+      "r1": "MI",
+      "r2": "MI",
+      "r3": "MI"
+    },
+    {
+      "prop": "The set of all sets that do not contain themselves contains itself.",
+      "expected": "MI",
+      "r1": "MI",
+      "r2": "MI",
+      "r3": "MI"
+    },
+    {
+      "prop": "There exists a square that is also a perfect circle.",
+      "expected": "MI",
+      "r1": "F",
+      "r2": "F",
+      "r3": "F"
+    },
+    {
+      "prop": "What is the color of Wednesday?",
+      "expected": "NA",
+      "r1": "NA",
+      "r2": "NA",
+      "r3": "NA"
+    },
+    {
+      "prop": "How much does the number seven weigh in kilograms?",
+      "expected": "NA",
+      "r1": "NA",
+      "r2": "NA",
+      "r3": "NA"
+    }
+  ]
+}
