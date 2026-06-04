@@ -3,8 +3,13 @@ Copyright (c) 2018 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro
 -/
-import Mathlib.Data.Sigma.Basic
-import Mathlib.Algebra.Order.Ring.Nat
+module
+
+public import Mathlib.Algebra.Order.Group.Nat
+public import Mathlib.Algebra.Order.Monoid.NatCast
+public import Mathlib.Algebra.Ring.Nat
+public import Mathlib.Data.Sigma.Basic
+public import Batteries.Tactic.Lint.TypeClass
 
 /-!
 # A computable model of ZFA without infinity
@@ -13,7 +18,7 @@ In this file we define finite hereditary lists. This is useful for calculations 
 
 We distinguish two kinds of ZFA lists:
 * Atoms. Directly correspond to an element of the original type.
-* Proper ZFA lists. Can be thought of (but aren't implemented) as a list of ZFA lists (not
+* Proper ZFA lists. Can be thought of (but are not implemented) as a list of ZFA lists (not
   necessarily proper).
 
 For example, `Lists ℕ` contains stuff like `23`, `[]`, `[37]`, `[1, [[2], 3], 4]`.
@@ -24,7 +29,7 @@ As we want to be able to append both atoms and proper ZFA lists to proper ZFA li
 atoms and proper ZFA lists belong to the same type, even though atoms of `α` could be modelled as
 `α` directly. But we don't want to be able to append anything to atoms.
 
-This calls for a two-steps definition of ZFA lists:
+This calls for a two-step definition of ZFA lists:
 * First, define ZFA prelists as atoms and proper ZFA prelists. Those proper ZFA prelists are defined
   by inductive appending of (not necessarily proper) ZFA lists.
 * Second, define ZFA lists by rubbing out the distinction between atoms and proper lists.
@@ -39,13 +44,15 @@ This calls for a two-steps definition of ZFA lists:
   equivalence.
 -/
 
+@[expose] public section
+
 
 variable {α : Type*}
 
 /-- Prelists, helper type to define `Lists`. `Lists' α false` are the "atoms", a copy of `α`.
 `Lists' α true` are the "proper" ZFA prelists, inductively defined from the empty ZFA prelist and
 from appending a ZFA prelist to a proper ZFA prelist. It is made so that you can't append anything
-to an atom while having only one appending function for appending both atoms and proper ZFC prelists
+to an atom while having only one appending function for appending both atoms and proper ZFA prelists
 to a proper ZFA prelist. -/
 inductive Lists'.{u} (α : Type u) : Bool → Type u
   | atom : α → Lists' α false
@@ -58,7 +65,7 @@ compile_inductive% Lists'
 corresponding to an element of `α`, or a "proper" ZFA list, inductively defined from the empty ZFA
 list and from appending a ZFA list to a proper ZFA list. -/
 def Lists (α : Type*) :=
-  Σb, Lists' α b
+  Σ b, Lists' α b
 
 namespace Lists'
 
@@ -91,9 +98,8 @@ theorem to_ofList (l : List (Lists α)) : toList (ofList l) = l := by induction 
 
 @[simp]
 theorem of_toList : ∀ l : Lists' α true, ofList (toList l) = l :=
-  suffices
-    ∀ (b) (h : true = b) (l : Lists' α b),
-      let l' : Lists' α true := by rw [h]; exact l
+  suffices ∀ (b) (h : true = b) (l : Lists' α b),
+      let l' : Lists' α true := h ▸ l
       ofList (toList l') = l'
     from this _ rfl
   fun b h l => by
@@ -101,6 +107,11 @@ theorem of_toList : ∀ l : Lists' α true, ofList (toList l) = l :=
     | atom => cases h
     | nil => simp
     | cons' b a _ IH => simpa [cons] using IH rfl
+
+/-- Recursion/induction principle for `Lists'.ofList`. -/
+@[elab_as_elim]
+def recOfList {motive : Lists' α true → Sort*} (ofList : ∀ l, motive (ofList l)) : ∀ l, motive l :=
+  fun l ↦ cast (by simp) <| ofList (l.toList)
 
 end Lists'
 
@@ -129,7 +140,7 @@ instance : HasSubset (Lists' α true) :=
 /-- ZFA prelist membership. A ZFA list is in a ZFA prelist if some element of this ZFA prelist is
 equivalent as a ZFA list to this ZFA list. -/
 instance {b} : Membership (Lists α) (Lists' α b) :=
-  ⟨fun a l => ∃ a' ∈ l.toList, a ~ a'⟩
+  ⟨fun l a => ∃ a' ∈ l.toList, a ~ a'⟩
 
 theorem mem_def {b a} {l : Lists' α b} : a ∈ l ↔ ∃ a' ∈ l.toList, a ~ a' :=
   Iff.rfl
@@ -141,16 +152,18 @@ theorem mem_cons {a y l} : a ∈ @cons α y l ↔ a ~ y ∨ a ∈ l := by
 theorem cons_subset {a} {l₁ l₂ : Lists' α true} : Lists'.cons a l₁ ⊆ l₂ ↔ a ∈ l₂ ∧ l₁ ⊆ l₂ := by
   refine ⟨fun h => ?_, fun ⟨⟨a', m, e⟩, s⟩ => Subset.cons e m s⟩
   generalize h' : Lists'.cons a l₁ = l₁' at h
-  cases' h with l a' a'' l l' e m s
+  obtain - | @⟨a', _, _, _, e, m, s⟩ := h
   · cases a
     cases h'
   cases a; cases a'; cases h'; exact ⟨⟨_, m, e⟩, s⟩
 
 theorem ofList_subset {l₁ l₂ : List (Lists α)} (h : l₁ ⊆ l₂) :
     Lists'.ofList l₁ ⊆ Lists'.ofList l₂ := by
-  induction' l₁ with _ _ l₁_ih; · exact Subset.nil
-  refine Subset.cons (Lists.Equiv.refl _) ?_ (l₁_ih (List.subset_of_cons_subset h))
-  simp only [List.cons_subset] at h; simp [h]
+  induction l₁ with
+  | nil => exact Subset.nil
+  | cons _ _ l₁_ih =>
+    refine Subset.cons (Lists.Equiv.refl _) ?_ (l₁_ih (List.subset_of_cons_subset h))
+    simp only [List.cons_subset] at h; simp [h]
 
 @[refl]
 theorem Subset.refl {l : Lists' α true} : l ⊆ l := by
@@ -165,18 +178,19 @@ theorem subset_nil {l : Lists' α true} : l ⊆ Lists'.nil → l = Lists'.nil :=
 theorem mem_of_subset' {a} : ∀ {l₁ l₂ : Lists' α true} (_ : l₁ ⊆ l₂) (_ : a ∈ l₁.toList), a ∈ l₂
   | nil, _, Lists'.Subset.nil, h => by cases h
   | cons' a0 l0, l₂, s, h => by
-    cases' s with _ _ _ _ _ e m s
-    simp only [toList, Sigma.eta, List.find?, List.mem_cons] at h
+    obtain - | ⟨e, m, s⟩ := s
+    simp only [toList, Sigma.eta, List.mem_cons] at h
     rcases h with (rfl | h)
     · exact ⟨_, m, e⟩
     · exact mem_of_subset' s h
 
 theorem subset_def {l₁ l₂ : Lists' α true} : l₁ ⊆ l₂ ↔ ∀ a ∈ l₁.toList, a ∈ l₂ :=
-  ⟨fun H a => mem_of_subset' H, fun H => by
-    rw [← of_toList l₁]
-    revert H; induction' toList l₁ with h t t_ih <;> intro H
-    · exact Subset.nil
-    · simp only [ofList, List.find?, List.mem_cons, forall_eq_or_imp] at *
+  ⟨fun H _ => mem_of_subset' H, fun H => by
+    induction l₁ using recOfList with | _ l₁
+    induction l₁ with
+    | nil => exact Subset.nil
+    | cons h t t_ih =>
+      simp only [to_ofList, ofList, toList_cons, List.mem_cons, forall_eq_or_imp] at *
       exact cons_subset.2 ⟨H.1, t_ih H.2⟩⟩
 
 end Lists'
@@ -217,27 +231,27 @@ theorem of_toList : ∀ {l : Lists α}, IsList l → ofList (toList l) = l
 instance : Inhabited (Lists α) :=
   ⟨of' Lists'.nil⟩
 
-instance [DecidableEq α] : DecidableEq (Lists α) := by unfold Lists; infer_instance
+instance [DecidableEq α] : DecidableEq (Lists α) := inferInstanceAs <| DecidableEq (Sigma _)
 
-instance [SizeOf α] : SizeOf (Lists α) := by unfold Lists; infer_instance
+instance [SizeOf α] : SizeOf (Lists α) := inferInstanceAs <| SizeOf (Sigma _)
 
 /-- A recursion principle for pairs of ZFA lists and proper ZFA prelists. -/
 def inductionMut (C : Lists α → Sort*) (D : Lists' α true → Sort*)
     (C0 : ∀ a, C (atom a)) (C1 : ∀ l, D l → C (of' l))
     (D0 : D Lists'.nil) (D1 : ∀ a l, C a → D l → D (Lists'.cons a l)) :
     PProd (∀ l, C l) (∀ l, D l) := by
-  suffices
-    ∀ {b} (l : Lists' α b),
+  suffices ∀ {b} (l : Lists' α b),
       PProd (C ⟨_, l⟩)
         (match b, l with
         | true, l => D l
         | false, _ => PUnit)
     by exact ⟨fun ⟨b, l⟩ => (this _).1, fun l => (this l).2⟩
-  intros b l
-  induction' l with a b a l IH₁ IH
-  · exact ⟨C0 _, ⟨⟩⟩
-  · exact ⟨C1 _ D0, D0⟩
-  · have : D (Lists'.cons' a l) := D1 ⟨_, _⟩ _ IH₁.1 IH.2
+  intro b l
+  induction l with
+  | atom => exact ⟨C0 _, ⟨⟩⟩
+  | nil => exact ⟨C1 _ D0, D0⟩
+  | cons' a l IH₁ IH =>
+    have : D (Lists'.cons' a l) := D1 ⟨_, _⟩ _ IH₁.1 IH.2
     exact ⟨C1 _ this, this⟩
 
 /-- Membership of ZFA list. A ZFA list belongs to a proper ZFA list if it belongs to the latter as a
@@ -246,8 +260,8 @@ def mem (a : Lists α) : Lists α → Prop
   | ⟨false, _⟩ => False
   | ⟨_, l⟩ => a ∈ l
 
-instance : Membership (Lists α) (Lists α) :=
-  ⟨mem⟩
+instance : Membership (Lists α) (Lists α) where
+  mem ls l := mem l ls
 
 theorem isList_of_mem {a : Lists α} : ∀ {l : Lists α}, a ∈ l → IsList l
   | ⟨_, Lists'.nil⟩, _ => rfl
@@ -255,7 +269,7 @@ theorem isList_of_mem {a : Lists α} : ∀ {l : Lists α}, a ∈ l → IsList l
 
 theorem Equiv.antisymm_iff {l₁ l₂ : Lists' α true} : of' l₁ ~ of' l₂ ↔ l₁ ⊆ l₂ ∧ l₂ ⊆ l₁ := by
   refine ⟨fun h => ?_, fun ⟨h₁, h₂⟩ => Equiv.antisymm h₁ h₂⟩
-  cases' h with _ _ _ h₁ h₂
+  obtain - | ⟨h₁, h₂⟩ := h
   · simp [Lists'.Subset.refl]
   · exact ⟨h₁, h₂⟩
 
@@ -266,7 +280,7 @@ theorem equiv_atom {a} {l : Lists α} : atom a ~ l ↔ atom a = l :=
 
 @[symm]
 theorem Equiv.symm {l₁ l₂ : Lists α} (h : l₁ ~ l₂) : l₂ ~ l₁ := by
-  cases' h with _ _ _ h₁ h₂ <;> [rfl; exact Equiv.antisymm h₂ h₁]
+  obtain - | ⟨h₁, h₂⟩ := h <;> [rfl; exact Equiv.antisymm h₂ h₁]
 
 theorem Equiv.trans : ∀ {l₁ l₂ l₃ : Lists α}, l₁ ~ l₂ → l₂ ~ l₃ → l₁ ~ l₃ := by
   let trans := fun l₁ : Lists α => ∀ ⦃l₂ l₃⦄, l₁ ~ l₂ → l₂ ~ l₃ → l₁ ~ l₃
@@ -275,12 +289,12 @@ theorem Equiv.trans : ∀ {l₁ l₂ l₃ : Lists α}, l₁ ~ l₂ → l₂ ~ l�
   · intro a l₂ l₃ h₁ h₂
     rwa [← equiv_atom.1 h₁] at h₂
   · intro l₁ IH l₂ l₃ h₁ h₂
-    cases' id h₁ with _ _ l₂
+    obtain - | l₂ := id h₁
     · exact h₂
-    cases' id h₂ with _ _ l₃
+    obtain - | l₃ := id h₂
     · exact h₁
-    cases' Equiv.antisymm_iff.1 h₁ with hl₁ hr₁
-    cases' Equiv.antisymm_iff.1 h₂ with hl₂ hr₂
+    obtain ⟨hl₁, hr₁⟩ := Equiv.antisymm_iff.1 h₁
+    obtain ⟨hl₂, hr₂⟩ := Equiv.antisymm_iff.1 h₂
     apply Equiv.antisymm_iff.2; constructor <;> apply Lists'.subset_def.2
     · intro a₁ m₁
       rcases Lists'.mem_of_subset' hl₁ m₁ with ⟨a₂, m₂, e₁₂⟩
@@ -299,16 +313,6 @@ instance instSetoidLists : Setoid (Lists α) :=
 
 section Decidable
 
-/-- Auxiliary function to prove termination of decidability checking -/
-@[simp, deprecated (since := "2023-06-24")]
-def Equiv.decidableMeas :
-    ((Σ' _l₁ : Lists α, Lists α) ⊕'
-        ((Σ' _l₁ : Lists' α true, Lists' α true) ⊕' (Σ' _a : Lists α, Lists' α true))) →
-      ℕ
-  | PSum.inl ⟨l₁, l₂⟩ => SizeOf.sizeOf l₁ + SizeOf.sizeOf l₂
-  | PSum.inr <| PSum.inl ⟨l₁, l₂⟩ => SizeOf.sizeOf l₁ + SizeOf.sizeOf l₂
-  | PSum.inr <| PSum.inr ⟨l₁, l₂⟩ => SizeOf.sizeOf l₁ + SizeOf.sizeOf l₂
-
 theorem sizeof_pos {b} (l : Lists' α b) : 0 < SizeOf.sizeOf l := by
   cases l <;> simp only [Lists'.atom.sizeOf_spec, Lists'.nil.sizeOf_spec, Lists'.cons'.sizeOf_spec,
     true_or, add_pos_iff, zero_lt_one]
@@ -321,7 +325,8 @@ theorem lt_sizeof_cons' {b} (a : Lists' α b) (l) :
 variable [DecidableEq α]
 
 mutual
-  instance Equiv.decidable : ∀ l₁ l₂ : Lists α, Decidable (l₁ ~ l₂)
+  @[implicit_reducible]
+  def Equiv.decidable : ∀ l₁ l₂ : Lists α, Decidable (l₁ ~ l₂)
     | ⟨false, l₁⟩, ⟨false, l₂⟩ =>
       decidable_of_iff' (l₁ = l₂) <| by
         cases l₁
@@ -343,8 +348,9 @@ mutual
         Subset.decidable l₂ l₁
       exact decidable_of_iff' _ Equiv.antisymm_iff
   termination_by x y => sizeOf x + sizeOf y
-  instance Subset.decidable : ∀ l₁ l₂ : Lists' α true, Decidable (l₁ ⊆ l₂)
-    | Lists'.nil, l₂ => isTrue Lists'.Subset.nil
+  @[implicit_reducible]
+  def Subset.decidable : ∀ l₁ l₂ : Lists' α true, Decidable (l₁ ⊆ l₂)
+    | Lists'.nil, _ => isTrue Lists'.Subset.nil
     | @Lists'.cons' _ b a l₁, l₂ => by
       haveI :=
         have : sizeOf (⟨b, a⟩ : Lists α) < 1 + 1 + sizeOf a + sizeOf l₁ := by simp [sizeof_pos]
@@ -356,7 +362,8 @@ mutual
         Subset.decidable l₁ l₂
       exact decidable_of_iff' _ (@Lists'.cons_subset _ ⟨_, _⟩ _ _)
   termination_by x y => sizeOf x + sizeOf y
-  instance mem.decidable : ∀ (a : Lists α) (l : Lists' α true), Decidable (a ∈ l)
+  @[implicit_reducible]
+  def mem.decidable : ∀ (a : Lists α) (l : Lists' α true), Decidable (a ∈ l)
     | a, Lists'.nil => isFalse <| by rintro ⟨_, ⟨⟩, _⟩
     | a, Lists'.cons' b l₂ => by
       haveI :=
@@ -373,8 +380,11 @@ mutual
   termination_by x y => sizeOf x + sizeOf y
 end
 
--- This is an autogenerated declaration, so there's nothing we can do about it.
-attribute [nolint nonClassInstance] Lists.Equiv.decidable._mutual
+attribute [instance] Equiv.decidable Subset.decidable mem.decidable
+
+/-- Copy over the decidability to the `Setoid` instance. -/
+instance : DecidableRel ((· ≈ ·) : Lists α → Lists α → Prop) :=
+  Lists.Equiv.decidable
 
 end Decidable
 
@@ -406,9 +416,7 @@ instance : EmptyCollection (Finsets α) :=
 instance : Inhabited (Finsets α) :=
   ⟨∅⟩
 
-instance [DecidableEq α] : DecidableEq (Finsets α) := by
-  unfold Finsets
-  -- Porting note: infer_instance does not work for some reason
-  exact (Quotient.decidableEq (d := fun _ _ => Lists.Equiv.decidable _ _))
+instance [DecidableEq α] : DecidableEq (Finsets α) :=
+  inferInstanceAs <| DecidableEq (Quotient Lists.instSetoidLists)
 
 end Finsets

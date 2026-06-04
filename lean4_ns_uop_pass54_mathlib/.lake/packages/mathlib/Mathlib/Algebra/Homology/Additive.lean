@@ -1,10 +1,13 @@
 /-
-Copyright (c) 2021 Scott Morrison. All rights reserved.
+Copyright (c) 2021 Kim Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Scott Morrison
+Authors: Kim Morrison
 -/
-import Mathlib.Algebra.Homology.Single
-import Mathlib.CategoryTheory.Preadditive.AdditiveFunctor
+module
+
+public import Mathlib.Algebra.Group.Pi.Basic
+public import Mathlib.Algebra.Homology.Single
+public import Mathlib.CategoryTheory.Preadditive.AdditiveFunctor
 
 /-!
 # Homology is an additive functor
@@ -14,6 +17,8 @@ and `homologyFunctor` is additive.
 
 -/
 
+@[expose] public section
+
 
 universe v u
 
@@ -21,15 +26,15 @@ open CategoryTheory CategoryTheory.Category CategoryTheory.Limits HomologicalCom
 
 variable {ι : Type*}
 variable {V : Type u} [Category.{v} V] [Preadditive V]
-variable {W : Type*} [Category W] [Preadditive W]
-variable {W₁ W₂ : Type*} [Category W₁] [Category W₂] [HasZeroMorphisms W₁] [HasZeroMorphisms W₂]
-variable {c : ComplexShape ι} {C D E : HomologicalComplex V c}
-variable (f g : C ⟶ D) (h k : D ⟶ E) (i : ι)
+variable {W : Type*} [Category* W] [Preadditive W]
+variable {W₁ W₂ : Type*} [Category* W₁] [Category* W₂] [HasZeroMorphisms W₁] [HasZeroMorphisms W₂]
+variable {c : ComplexShape ι} {C D : HomologicalComplex V c}
+variable (f : C ⟶ D) (i : ι)
 
 namespace HomologicalComplex
 
 instance : Zero (C ⟶ D) :=
-  ⟨{ f := fun i => 0 }⟩
+  ⟨{ f := fun _ => 0 }⟩
 
 instance : Add (C ⟶ D) :=
   ⟨fun f g => { f := fun i => f.f i + g.f i }⟩
@@ -76,19 +81,9 @@ theorem zsmul_f_apply (n : ℤ) (f : C ⟶ D) (i : ι) : (n • f).f i = n • f
 
 instance : AddCommGroup (C ⟶ D) :=
   Function.Injective.addCommGroup Hom.f HomologicalComplex.hom_f_injective
-    (by aesop_cat) (by aesop_cat) (by aesop_cat) (by aesop_cat) (by aesop_cat) (by aesop_cat)
+    (by cat_disch) (by cat_disch) (by cat_disch) (by cat_disch) (by cat_disch) (by cat_disch)
 
--- Porting note: proofs had to be provided here, otherwise Lean tries to apply
--- `Preadditive.add_comp/comp_add` to `HomologicalComplex V c`
 instance : Preadditive (HomologicalComplex V c) where
-  add_comp _ _ _ f f' g := by
-    ext
-    simp only [comp_f, add_f_apply]
-    rw [Preadditive.add_comp]
-  comp_add _ _ _ f g g' := by
-    ext
-    simp only [comp_f, add_f_apply]
-    rw [Preadditive.comp_add]
 
 /-- The `i`-th component of a chain map, as an additive map from chain maps to morphisms. -/
 @[simps!]
@@ -111,7 +106,6 @@ def Functor.mapHomologicalComplex (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms]
     { X := fun i => F.obj (C.X i)
       d := fun i j => F.map (C.d i j)
       shape := fun i j w => by
-        dsimp only
         rw [C.shape _ _ w, F.map_zero]
       d_comp_d' := fun i j k _ _ => by rw [← F.map_comp, C.d_comp_d, F.map_zero] }
   map f :=
@@ -128,12 +122,13 @@ instance Functor.map_homogical_complex_additive (F : V ⥤ W) [F.Additive] (c : 
 
 variable (W₁)
 
+set_option backward.defeqAttrib.useBackward true in
 /-- The functor on homological complexes induced by the identity functor is
 isomorphic to the identity functor. -/
 @[simps!]
 def Functor.mapHomologicalComplexIdIso (c : ComplexShape ι) :
     (𝟭 W₁).mapHomologicalComplex c ≅ 𝟭 _ :=
-  NatIso.ofComponents fun K => Hom.isoOfComponents fun i => Iso.refl _
+  NatIso.ofComponents fun K => Hom.isoOfComponents fun _ => Iso.refl _
 
 instance Functor.mapHomologicalComplex_reflects_iso (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms]
     [ReflectsIsomorphisms F] (c : ComplexShape ι) :
@@ -148,6 +143,7 @@ instance Functor.mapHomologicalComplex_reflects_iso (F : W₁ ⥤ W₂) [F.Prese
 
 variable {W₁}
 
+set_option backward.defeqAttrib.useBackward true in
 /-- A natural transformation between functors induces a natural transformation
 between those functors applied to homological complexes.
 -/
@@ -155,12 +151,12 @@ between those functors applied to homological complexes.
 def NatTrans.mapHomologicalComplex {F G : W₁ ⥤ W₂}
     [F.PreservesZeroMorphisms] [G.PreservesZeroMorphisms] (α : F ⟶ G)
     (c : ComplexShape ι) : F.mapHomologicalComplex c ⟶ G.mapHomologicalComplex c where
-  app C := { f := fun i => α.app _ }
+  app C := { f := fun _ => α.app _ }
 
 @[simp]
 theorem NatTrans.mapHomologicalComplex_id
     (c : ComplexShape ι) (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms] :
-    NatTrans.mapHomologicalComplex (𝟙 F) c = 𝟙 (F.mapHomologicalComplex c) := by aesop_cat
+    NatTrans.mapHomologicalComplex (𝟙 F) c = 𝟙 (F.mapHomologicalComplex c) := by cat_disch
 
 @[simp]
 theorem NatTrans.mapHomologicalComplex_comp (c : ComplexShape ι) {F G H : W₁ ⥤ W₂}
@@ -168,15 +164,15 @@ theorem NatTrans.mapHomologicalComplex_comp (c : ComplexShape ι) {F G H : W₁ 
     (α : F ⟶ G) (β : G ⟶ H) :
     NatTrans.mapHomologicalComplex (α ≫ β) c =
       NatTrans.mapHomologicalComplex α c ≫ NatTrans.mapHomologicalComplex β c := by
-  aesop_cat
+  cat_disch
 
-@[reassoc (attr := simp 1100)]
+@[reassoc]
 theorem NatTrans.mapHomologicalComplex_naturality {c : ComplexShape ι} {F G : W₁ ⥤ W₂}
     [F.PreservesZeroMorphisms] [G.PreservesZeroMorphisms]
     (α : F ⟶ G) {C D : HomologicalComplex W₁ c} (f : C ⟶ D) :
     (F.mapHomologicalComplex c).map f ≫ (NatTrans.mapHomologicalComplex α c).app D =
       (NatTrans.mapHomologicalComplex α c).app C ≫ (G.mapHomologicalComplex c).map f := by
-  aesop_cat
+  simp
 
 /-- A natural isomorphism between functors induces a natural isomorphism
 between those functors applied to homological complexes.
@@ -192,6 +188,7 @@ def NatIso.mapHomologicalComplex {F G : W₁ ⥤ W₂} [F.PreservesZeroMorphisms
   inv_hom_id := by simp only [← NatTrans.mapHomologicalComplex_comp, α.inv_hom_id,
     NatTrans.mapHomologicalComplex_id]
 
+set_option backward.defeqAttrib.useBackward true in
 /-- An equivalence of categories induces an equivalences between the respective categories
 of homological complex.
 -/
@@ -212,6 +209,7 @@ namespace ChainComplex
 
 variable {α : Type*} [AddRightCancelSemigroup α] [One α] [DecidableEq α]
 
+set_option backward.defeqAttrib.useBackward true in
 theorem map_chain_complex_of (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms] (X : α → W₁)
     (d : ∀ n, X (n + 1) ⟶ X n) (sq : ∀ n, d (n + 1) ≫ d n = 0) :
     (F.mapHomologicalComplex _).obj (ChainComplex.of X d sq) =
@@ -219,8 +217,7 @@ theorem map_chain_complex_of (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms] (X :
         rw [← F.map_comp, sq n, Functor.map_zero] := by
   refine HomologicalComplex.ext rfl ?_
   rintro i j (rfl : j + 1 = i)
-  simp only [CategoryTheory.Functor.mapHomologicalComplex_obj_d, of_d, eqToHom_refl, comp_id,
-    id_comp]
+  simp
 
 end ChainComplex
 
@@ -228,13 +225,16 @@ variable [HasZeroObject W₁] [HasZeroObject W₂]
 
 namespace HomologicalComplex
 
-instance (W : Type*) [Category W] [Preadditive W] [HasZeroObject W] [DecidableEq ι] (j : ι) :
+set_option backward.isDefEq.respectTransparency false in
+instance (W : Type*) [Category* W] [Preadditive W] [HasZeroObject W] [DecidableEq ι] (j : ι) :
     (single W c j).Additive where
   map_add {_ _ f g} := by ext; simp [single]
 
 variable (F : W₁ ⥤ W₂) [F.PreservesZeroMorphisms]
     (c : ComplexShape ι) [DecidableEq ι]
 
+set_option backward.defeqAttrib.useBackward true in
+set_option backward.isDefEq.respectTransparency false in
 /-- Turning an object into a complex supported at `j` then applying a functor is
 the same as applying the functor then forming the complex.
 -/
@@ -248,14 +248,14 @@ noncomputable def singleMapHomologicalComplex (j : ι) :
           ext i
           dsimp
           split_ifs with h
-          · simp [h]
+          · simp
           · rw [zero_comp, ← F.map_id,
               (isZero_single_obj_X c j X _ h).eq_of_src (𝟙 _) 0, F.map_zero]
         inv_hom_id := by
           ext i
           dsimp
           split_ifs with h
-          · simp [h]
+          · simp
           · apply (isZero_single_obj_X c j _ _ h).eq_of_src })
     fun f => by
       ext i
@@ -265,6 +265,7 @@ noncomputable def singleMapHomologicalComplex (j : ι) :
         simp [single_map_f_self, singleObjXSelf, singleObjXIsoOfEq, eqToHom_map]
       · apply (isZero_single_obj_X c j _ _ h).eq_of_tgt
 
+set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem singleMapHomologicalComplex_hom_app_self (j : ι) (X : W₁) :
     ((singleMapHomologicalComplex F c j).hom.app X).f j =
@@ -276,6 +277,7 @@ theorem singleMapHomologicalComplex_hom_app_ne {i j : ι} (h : i ≠ j) (X : W�
     ((singleMapHomologicalComplex F c j).hom.app X).f i = 0 := by
   simp [singleMapHomologicalComplex, h]
 
+set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem singleMapHomologicalComplex_inv_app_self (j : ι) (X : W₁) :
     ((singleMapHomologicalComplex F c j).inv.app X).f j =

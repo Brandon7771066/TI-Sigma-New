@@ -3,8 +3,10 @@ Copyright (c) 2022 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Topology.FiberBundle.IsHomeomorphicTrivialBundle
+module
+
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Topology.FiberBundle.IsHomeomorphicTrivialBundle
 
 /-!
 # Closure, interior, and frontier of preimages under `re` and `im`
@@ -18,7 +20,7 @@ Each statement about `Complex.re` listed below has a counterpart about `Complex.
 
 * `Complex.isHomeomorphicTrivialFiberBundle_re`: `Complex.re` turns `ℂ` into a trivial
   topological fiber bundle over `ℝ`;
-* `Complex.isOpenMap_re`, `Complex.quotientMap_re`: in particular, `Complex.re` is an open map
+* `Complex.isOpenMap_re`, `Complex.isQuotientMap_re`: in particular, `Complex.re` is an open map
   and is a quotient map;
 * `Complex.interior_preimage_re`, `Complex.closure_preimage_re`, `Complex.frontier_preimage_re`:
   formulas for `interior (Complex.re ⁻¹' s)` etc;
@@ -31,8 +33,9 @@ Each statement about `Complex.re` listed below has a counterpart about `Complex.
 complex, real part, imaginary part, closure, interior, frontier
 -/
 
+public section
 
-open Set
+open Set Topology
 
 noncomputable section
 
@@ -52,11 +55,11 @@ theorem isOpenMap_re : IsOpenMap re :=
 theorem isOpenMap_im : IsOpenMap im :=
   isHomeomorphicTrivialFiberBundle_im.isOpenMap_proj
 
-theorem quotientMap_re : QuotientMap re :=
-  isHomeomorphicTrivialFiberBundle_re.quotientMap_proj
+theorem isQuotientMap_re : IsQuotientMap re :=
+  isHomeomorphicTrivialFiberBundle_re.isQuotientMap_proj
 
-theorem quotientMap_im : QuotientMap im :=
-  isHomeomorphicTrivialFiberBundle_im.quotientMap_proj
+theorem isQuotientMap_im : IsQuotientMap im :=
+  isHomeomorphicTrivialFiberBundle_im.isQuotientMap_proj
 
 theorem interior_preimage_re (s : Set ℝ) : interior (re ⁻¹' s) = re ⁻¹' interior s :=
   (isOpenMap_re.preimage_interior_eq_interior_preimage continuous_re _).symm
@@ -78,87 +81,87 @@ theorem frontier_preimage_im (s : Set ℝ) : frontier (im ⁻¹' s) = im ⁻¹' 
 
 @[simp]
 theorem interior_setOf_re_le (a : ℝ) : interior { z : ℂ | z.re ≤ a } = { z | z.re < a } := by
-  simpa only [interior_Iic] using interior_preimage_re (Iic a)
+  simpa only [interior_Iic] using! interior_preimage_re (Iic a)
 
 @[simp]
 theorem interior_setOf_im_le (a : ℝ) : interior { z : ℂ | z.im ≤ a } = { z | z.im < a } := by
-  simpa only [interior_Iic] using interior_preimage_im (Iic a)
+  simpa only [interior_Iic] using! interior_preimage_im (Iic a)
 
 @[simp]
 theorem interior_setOf_le_re (a : ℝ) : interior { z : ℂ | a ≤ z.re } = { z | a < z.re } := by
-  simpa only [interior_Ici] using interior_preimage_re (Ici a)
+  simpa only [interior_Ici] using! interior_preimage_re (Ici a)
 
 @[simp]
 theorem interior_setOf_le_im (a : ℝ) : interior { z : ℂ | a ≤ z.im } = { z | a < z.im } := by
-  simpa only [interior_Ici] using interior_preimage_im (Ici a)
+  simpa only [interior_Ici] using! interior_preimage_im (Ici a)
 
 @[simp]
 theorem closure_setOf_re_lt (a : ℝ) : closure { z : ℂ | z.re < a } = { z | z.re ≤ a } := by
-  simpa only [closure_Iio] using closure_preimage_re (Iio a)
+  simpa only [closure_Iio] using! closure_preimage_re (Iio a)
 
 @[simp]
 theorem closure_setOf_im_lt (a : ℝ) : closure { z : ℂ | z.im < a } = { z | z.im ≤ a } := by
-  simpa only [closure_Iio] using closure_preimage_im (Iio a)
+  simpa only [closure_Iio] using! closure_preimage_im (Iio a)
 
 @[simp]
 theorem closure_setOf_lt_re (a : ℝ) : closure { z : ℂ | a < z.re } = { z | a ≤ z.re } := by
-  simpa only [closure_Ioi] using closure_preimage_re (Ioi a)
+  simpa only [closure_Ioi] using! closure_preimage_re (Ioi a)
 
 @[simp]
 theorem closure_setOf_lt_im (a : ℝ) : closure { z : ℂ | a < z.im } = { z | a ≤ z.im } := by
-  simpa only [closure_Ioi] using closure_preimage_im (Ioi a)
+  simpa only [closure_Ioi] using! closure_preimage_im (Ioi a)
 
 @[simp]
 theorem frontier_setOf_re_le (a : ℝ) : frontier { z : ℂ | z.re ≤ a } = { z | z.re = a } := by
-  simpa only [frontier_Iic] using frontier_preimage_re (Iic a)
+  simpa only [frontier_Iic] using! frontier_preimage_re (Iic a)
 
 @[simp]
 theorem frontier_setOf_im_le (a : ℝ) : frontier { z : ℂ | z.im ≤ a } = { z | z.im = a } := by
-  simpa only [frontier_Iic] using frontier_preimage_im (Iic a)
+  simpa only [frontier_Iic] using! frontier_preimage_im (Iic a)
 
 @[simp]
 theorem frontier_setOf_le_re (a : ℝ) : frontier { z : ℂ | a ≤ z.re } = { z | z.re = a } := by
-  simpa only [frontier_Ici] using frontier_preimage_re (Ici a)
+  simpa only [frontier_Ici] using! frontier_preimage_re (Ici a)
 
 @[simp]
 theorem frontier_setOf_le_im (a : ℝ) : frontier { z : ℂ | a ≤ z.im } = { z | z.im = a } := by
-  simpa only [frontier_Ici] using frontier_preimage_im (Ici a)
+  simpa only [frontier_Ici] using! frontier_preimage_im (Ici a)
 
 @[simp]
 theorem frontier_setOf_re_lt (a : ℝ) : frontier { z : ℂ | z.re < a } = { z | z.re = a } := by
-  simpa only [frontier_Iio] using frontier_preimage_re (Iio a)
+  simpa only [frontier_Iio] using! frontier_preimage_re (Iio a)
 
 @[simp]
 theorem frontier_setOf_im_lt (a : ℝ) : frontier { z : ℂ | z.im < a } = { z | z.im = a } := by
-  simpa only [frontier_Iio] using frontier_preimage_im (Iio a)
+  simpa only [frontier_Iio] using! frontier_preimage_im (Iio a)
 
 @[simp]
 theorem frontier_setOf_lt_re (a : ℝ) : frontier { z : ℂ | a < z.re } = { z | z.re = a } := by
-  simpa only [frontier_Ioi] using frontier_preimage_re (Ioi a)
+  simpa only [frontier_Ioi] using! frontier_preimage_re (Ioi a)
 
 @[simp]
 theorem frontier_setOf_lt_im (a : ℝ) : frontier { z : ℂ | a < z.im } = { z | z.im = a } := by
-  simpa only [frontier_Ioi] using frontier_preimage_im (Ioi a)
+  simpa only [frontier_Ioi] using! frontier_preimage_im (Ioi a)
 
 theorem closure_reProdIm (s t : Set ℝ) : closure (s ×ℂ t) = closure s ×ℂ closure t := by
   simpa only [← preimage_eq_preimage equivRealProdCLM.symm.toHomeomorph.surjective,
-    equivRealProdCLM.symm.toHomeomorph.preimage_closure] using @closure_prod_eq _ _ _ _ s t
+    equivRealProdCLM.symm.toHomeomorph.preimage_closure] using! @closure_prod_eq _ _ _ _ s t
 
 theorem interior_reProdIm (s t : Set ℝ) : interior (s ×ℂ t) = interior s ×ℂ interior t := by
-  rw [Set.reProdIm, Set.reProdIm, interior_inter, interior_preimage_re, interior_preimage_im]
+  rw [reProdIm, reProdIm, interior_inter, interior_preimage_re, interior_preimage_im]
 
 theorem frontier_reProdIm (s t : Set ℝ) :
     frontier (s ×ℂ t) = closure s ×ℂ frontier t ∪ frontier s ×ℂ closure t := by
   simpa only [← preimage_eq_preimage equivRealProdCLM.symm.toHomeomorph.surjective,
-    equivRealProdCLM.symm.toHomeomorph.preimage_frontier] using frontier_prod_eq s t
+    equivRealProdCLM.symm.toHomeomorph.preimage_frontier] using! frontier_prod_eq s t
 
 theorem frontier_setOf_le_re_and_le_im (a b : ℝ) :
     frontier { z | a ≤ re z ∧ b ≤ im z } = { z | a ≤ re z ∧ im z = b ∨ re z = a ∧ b ≤ im z } := by
-  simpa only [closure_Ici, frontier_Ici] using frontier_reProdIm (Ici a) (Ici b)
+  simpa only [closure_Ici, frontier_Ici] using! frontier_reProdIm (Ici a) (Ici b)
 
 theorem frontier_setOf_le_re_and_im_le (a b : ℝ) :
     frontier { z | a ≤ re z ∧ im z ≤ b } = { z | a ≤ re z ∧ im z = b ∨ re z = a ∧ im z ≤ b } := by
-  simpa only [closure_Ici, closure_Iic, frontier_Ici, frontier_Iic] using
+  simpa only [closure_Ici, closure_Iic, frontier_Ici, frontier_Iic] using!
     frontier_reProdIm (Ici a) (Iic b)
 
 end Complex
@@ -175,3 +178,29 @@ theorem IsClosed.reProdIm (hs : IsClosed s) (ht : IsClosed t) : IsClosed (s ×�
 
 theorem Bornology.IsBounded.reProdIm (hs : IsBounded s) (ht : IsBounded t) : IsBounded (s ×ℂ t) :=
   antilipschitz_equivRealProd.isBounded_preimage (hs.prod ht)
+
+section continuity
+
+variable {α ι : Type*}
+
+protected lemma TendstoUniformlyOn.re {f : ι → α → ℂ} {p : Filter ι} {g : α → ℂ} {K : Set α}
+    (hf : TendstoUniformlyOn f g p K) :
+    TendstoUniformlyOn (fun n x => (f n x).re) (fun y => (g y).re) p K := by
+  apply UniformContinuous.comp_tendstoUniformlyOn uniformContinuous_re hf
+
+protected lemma TendstoUniformly.re {f : ι → α → ℂ} {p : Filter ι} {g : α → ℂ}
+    (hf : TendstoUniformly f g p) :
+    TendstoUniformly (fun n x => (f n x).re) (fun y => (g y).re) p := by
+  apply UniformContinuous.comp_tendstoUniformly uniformContinuous_re hf
+
+protected lemma TendstoUniformlyOn.im {f : ι → α → ℂ} {p : Filter ι} {g : α → ℂ} {K : Set α}
+    (hf : TendstoUniformlyOn f g p K) :
+    TendstoUniformlyOn (fun n x => (f n x).im) (fun y => (g y).im) p K := by
+  apply UniformContinuous.comp_tendstoUniformlyOn uniformContinuous_im hf
+
+protected lemma TendstoUniformly.im {f : ι → α → ℂ} {p : Filter ι} {g : α → ℂ}
+    (hf : TendstoUniformly f g p) :
+    TendstoUniformly (fun n x => (f n x).im) (fun y => (g y).im) p := by
+  apply UniformContinuous.comp_tendstoUniformly uniformContinuous_im hf
+
+end continuity

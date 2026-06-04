@@ -3,7 +3,9 @@ Copyright (c) 2018 Jeremy Avigad. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jeremy Avigad
 -/
-import Mathlib.Data.PFunctor.Univariate.M
+module
+
+public import Mathlib.Data.PFunctor.Univariate.M
 
 /-!
 
@@ -37,8 +39,10 @@ The present theory focuses on the univariate case for qpfs
 
 -/
 
+@[expose] public section
 
-universe u
+
+universe u u' v
 
 /-- Quotients of polynomial functors.
 
@@ -46,8 +50,8 @@ Roughly speaking, saying that `F` is a quotient of a polynomial functor means th
 elements of `F α` are represented by pairs `⟨a, f⟩`, where `a` is the shape of the object and
 `f` indexes the relevant elements of `α`, in a suitably natural manner.
 -/
-class QPF (F : Type u → Type u) extends Functor F where
-  P : PFunctor.{u}
+class QPF (F : Type u → Type v) extends Functor F where
+  P : PFunctor.{u, u'}
   abs : ∀ {α}, P α → F α
   repr : ∀ {α}, F α → P α
   abs_repr : ∀ {α} (x : F α), abs (repr x) = x
@@ -55,7 +59,7 @@ class QPF (F : Type u → Type u) extends Functor F where
 
 namespace QPF
 
-variable {F : Type u → Type u} [q : QPF F]
+variable {F : Type u → Type v} [q : QPF F]
 
 open Functor (Liftp Liftr)
 
@@ -67,14 +71,13 @@ characterization. We can only propagate the assumption.
 -/
 theorem id_map {α : Type _} (x : F α) : id <$> x = x := by
   rw [← abs_repr x]
-  cases' repr x with a f
+  obtain ⟨a, f⟩ := repr x
   rw [← abs_map]
   rfl
 
 theorem comp_map {α β γ : Type _} (f : α → β) (g : β → γ) (x : F α) :
     (g ∘ f) <$> x = g <$> f <$> x := by
   rw [← abs_repr x]
-  cases' repr x with a f
   rw [← abs_map, ← abs_map, ← abs_map]
   rfl
 
@@ -96,7 +99,7 @@ theorem liftp_iff {α : Type u} (p : α → Prop) (x : F α) :
     Liftp p x ↔ ∃ a f, x = abs ⟨a, f⟩ ∧ ∀ i, p (f i) := by
   constructor
   · rintro ⟨y, hy⟩
-    cases' h : repr y with a f
+    rcases h : repr y with ⟨a, f⟩
     use a, fun i => (f i).val
     constructor
     · rw [← hy, ← abs_repr y, h, ← abs_map]
@@ -111,7 +114,7 @@ theorem liftp_iff' {α : Type u} (p : α → Prop) (x : F α) :
     Liftp p x ↔ ∃ u : q.P α, abs u = x ∧ ∀ i, p (u.snd i) := by
   constructor
   · rintro ⟨y, hy⟩
-    cases' h : repr y with a f
+    rcases h : repr y with ⟨a, f⟩
     use ⟨a, fun i => (f i).val⟩
     dsimp
     constructor
@@ -127,7 +130,7 @@ theorem liftr_iff {α : Type u} (r : α → α → Prop) (x y : F α) :
     Liftr r x y ↔ ∃ a f₀ f₁, x = abs ⟨a, f₀⟩ ∧ y = abs ⟨a, f₁⟩ ∧ ∀ i, r (f₀ i) (f₁ i) := by
   constructor
   · rintro ⟨u, xeq, yeq⟩
-    cases' h : repr u with a f
+    rcases h : repr u with ⟨a, f⟩
     use a, fun i => (f i).val.fst, fun i => (f i).val.snd
     constructor
     · rw [← xeq, ← abs_repr u, h, ← abs_map]
@@ -176,7 +179,7 @@ theorem recF_eq_of_Wequiv {α : Type u} (u : F α → α) (x y : q.P.W) :
     Wequiv x y → recF u x = recF u y := by
   intro h
   induction h with
-  | ind a f f' _ ih => simp only [recF_eq', PFunctor.map_eq, Function.comp, ih]
+  | ind a f f' _ ih => simp only [recF_eq', PFunctor.map_eq, Function.comp_def, ih]
   | abs a f a' f' h => simp only [recF_eq', abs_map, h]
   | trans x y z _ _ ih₁ ih₂ => exact Eq.trans ih₁ ih₂
 
@@ -187,7 +190,7 @@ theorem Wequiv.abs' (x y : q.P.W) (h : QPF.abs x.dest = QPF.abs y.dest) : Wequiv
   apply h
 
 theorem Wequiv.refl (x : q.P.W) : Wequiv x x := by
-  cases' x with a f
+  obtain ⟨a, f⟩ := x
   exact Wequiv.abs a f a f rfl
 
 theorem Wequiv.symm (x y : q.P.W) : Wequiv x y → Wequiv y x := by
@@ -202,26 +205,26 @@ def Wrepr : q.P.W → q.P.W :=
   recF (PFunctor.W.mk ∘ repr)
 
 theorem Wrepr_equiv (x : q.P.W) : Wequiv (Wrepr x) x := by
-  induction' x with a f ih
-  apply Wequiv.trans
-  · change Wequiv (Wrepr ⟨a, f⟩) (PFunctor.W.mk (q.P.map Wrepr ⟨a, f⟩))
-    apply Wequiv.abs'
+  induction x with | _ a f ih
+  apply Wequiv.trans (v := PFunctor.W.mk (q.P.map Wrepr ⟨a, f⟩))
+  · apply Wequiv.abs'
     have : Wrepr ⟨a, f⟩ = PFunctor.W.mk (repr (abs (q.P.map Wrepr ⟨a, f⟩))) := rfl
     rw [this, PFunctor.W.dest_mk, abs_repr]
     rfl
   apply Wequiv.ind; exact ih
 
 /-- Define the fixed point as the quotient of trees under the equivalence relation `Wequiv`. -/
+@[instance_reducible]
 def Wsetoid : Setoid q.P.W :=
   ⟨Wequiv, @Wequiv.refl _ _, @Wequiv.symm _ _, @Wequiv.trans _ _⟩
 
 attribute [local instance] Wsetoid
 
 /-- inductive type defined as initial algebra of a Quotient of Polynomial Functor -/
--- Porting note(#5171): this linter isn't ported yet.
--- @[nolint has_nonempty_instance]
 def Fix (F : Type u → Type u) [q : QPF F] :=
   Quotient (Wsetoid : Setoid q.P.W)
+
+variable {F : Type u → Type u} [q : QPF F]
 
 /-- recursor of a type defined by a qpf -/
 def Fix.rec {α : Type _} (g : F α → α) : Fix F → α :=
@@ -250,7 +253,7 @@ theorem Fix.rec_eq {α : Type _} (g : F α → α) (x : F (Fix F)) :
     lhs
     rw [Fix.rec, Fix.mk]
     dsimp
-  cases' h : repr x with a f
+  rcases h : repr x with ⟨a, f⟩
   rw [PFunctor.map_eq, recF_eq, ← PFunctor.map_eq, PFunctor.W.dest_mk, PFunctor.map_map, abs_map,
     ← h, abs_repr, this]
 
@@ -269,11 +272,11 @@ theorem Fix.ind_rec {α : Type u} (g₁ g₂ : Fix F → α)
     (h : ∀ x : F (Fix F), g₁ <$> x = g₂ <$> x → g₁ (Fix.mk x) = g₂ (Fix.mk x)) :
     ∀ x, g₁ x = g₂ x := by
   rintro ⟨x⟩
-  induction' x with a f ih
+  induction x with | _ a f ih
   change g₁ ⟦⟨a, f⟩⟧ = g₂ ⟦⟨a, f⟩⟧
   rw [← Fix.ind_aux a f]; apply h
   rw [← abs_map, ← abs_map, PFunctor.map_eq, PFunctor.map_eq]
-  congr with x
+  congr 2 with x
   apply ih
 
 theorem Fix.rec_unique {α : Type u} (g : F α → α) (h : Fix F → α)
@@ -301,13 +304,13 @@ theorem Fix.dest_mk (x : F (Fix F)) : Fix.dest (Fix.mk x) = x := by
 
 theorem Fix.ind (p : Fix F → Prop) (h : ∀ x : F (Fix F), Liftp p x → p (Fix.mk x)) : ∀ x, p x := by
   rintro ⟨x⟩
-  induction' x with a f ih
+  induction x with | _ a f ih
   change p ⟦⟨a, f⟩⟧
   rw [← Fix.ind_aux a f]
   apply h
   rw [liftp_iff]
   refine ⟨_, _, rfl, ?_⟩
-  convert ih
+  convert! ih
 
 end QPF
 
@@ -348,12 +351,12 @@ instance [Inhabited q.P.A] : Inhabited (Cofix F) :=
 def Cofix.corec {α : Type _} (g : α → F α) (x : α) : Cofix F :=
   Quot.mk _ (corecF g x)
 
+set_option backward.isDefEq.respectTransparency false in
 /-- destructor for type defined by `Cofix` -/
 def Cofix.dest : Cofix F → F (Cofix F) :=
   Quot.lift (fun x => Quot.mk Mcongr <$> abs (PFunctor.M.dest x))
     (by
       rintro x y ⟨r, pr, rxy⟩
-      dsimp
       have : ∀ x y, r x y → Mcongr x y := by
         intro x y h
         exact ⟨r, pr, h⟩
@@ -408,7 +411,7 @@ theorem Cofix.bisim_rel (r : Cofix F → Cofix F → Prop)
     left
     rfl
   · intro x y r'xy
-    cases' r'xy with r'xy r'xy
+    rcases r'xy with r'xy | r'xy
     · rw [r'xy]
     have : ∀ x y, r x y → r' x y := fun x y h => Or.inr h
     rw [← Quot.factor_mk_eq _ _ this]
@@ -450,6 +453,7 @@ variable {F₂ : Type u → Type u} [q₂ : QPF F₂]
 variable {F₁ : Type u → Type u} [q₁ : QPF F₁]
 
 /-- composition of qpfs gives another qpf -/
+@[implicit_reducible]
 def comp : QPF (Functor.Comp F₂ F₁) where
   P := PFunctor.comp q₂.P q₁.P
   abs {α} := by
@@ -469,16 +473,16 @@ def comp : QPF (Functor.Comp F₂ F₁) where
     conv =>
       rhs
       rw [← abs_repr x]
-    cases' repr x with a f
+    obtain ⟨a, f⟩ := repr x
     dsimp
     congr with x
-    cases' h' : repr (f x) with b g
+    rcases h' : repr (f x) with ⟨b, g⟩
     dsimp; rw [← h', abs_repr]
   abs_map {α β} f := by
-    dsimp (config := { unfoldPartialApp := true }) [Functor.Comp, PFunctor.comp]
+    dsimp +unfoldPartialApp [Functor.Comp, PFunctor.comp]
     intro p
-    cases' p with a g; dsimp
-    cases' a with b h; dsimp
+    obtain ⟨a, g⟩ := p; dsimp
+    obtain ⟨b, h⟩ := a; dsimp
     symm
     trans
     · symm
@@ -509,13 +513,14 @@ variable {FG_repr : ∀ {α}, G α → F α}
 functor `G α`, `G` is a qpf. We can consider `G` a quotient on `F` where
 elements `x y : F α` are in the same equivalence class if
 `FG_abs x = FG_abs y`. -/
+@[implicit_reducible]
 def quotientQPF (FG_abs_repr : ∀ {α} (x : G α), FG_abs (FG_repr x) = x)
     (FG_abs_map : ∀ {α β} (f : α → β) (x : F α), FG_abs (f <$> x) = f <$> FG_abs x) : QPF G where
   P := q.P
-  abs {α} p := FG_abs (abs p)
-  repr {α} x := repr (FG_repr x)
-  abs_repr {α} x := by simp only; rw [abs_repr, FG_abs_repr]
-  abs_map {α β} f x := by simp only; rw [abs_map, FG_abs_map]
+  abs {_} p := FG_abs (abs p)
+  repr {_} x := repr (FG_repr x)
+  abs_repr {α} x := by rw [abs_repr, FG_abs_repr]
+  abs_map {α β} f x := by rw [abs_map, FG_abs_map]
 
 end QPF
 
@@ -553,7 +558,7 @@ theorem has_good_supp_iff {α : Type u} (x : F α) :
       ∃ a f, abs ⟨a, f⟩ = x ∧ ∀ a' f', abs ⟨a', f'⟩ = x → f '' univ ⊆ f' '' univ := by
   constructor
   · intro h
-    have : Liftp (supp x) x := by rw [h]; intro u; exact id
+    have : Liftp (· ∈ supp x) x := by rw [h]; intro u; exact id
     rw [liftp_iff] at this
     rcases this with ⟨a, f, xeq, h'⟩
     refine ⟨a, f, xeq.symm, ?_⟩
@@ -598,7 +603,7 @@ theorem supp_eq_of_isUniform (h : q.IsUniform) {α : Type u} (a : q.P.A) (f : q.
 theorem liftp_iff_of_isUniform (h : q.IsUniform) {α : Type u} (x : F α) (p : α → Prop) :
     Liftp p x ↔ ∀ u ∈ supp x, p u := by
   rw [liftp_iff, ← abs_repr x]
-  cases' repr x with a f; constructor
+  obtain ⟨a, f⟩ := repr x; constructor
   · rintro ⟨a', f', abseq, hf⟩ u
     rw [supp_eq_of_isUniform h, h _ _ _ _ abseq]
     rintro ⟨i, _, hi⟩
@@ -611,7 +616,7 @@ theorem liftp_iff_of_isUniform (h : q.IsUniform) {α : Type u} (x : F α) (p : �
 
 theorem supp_map (h : q.IsUniform) {α β : Type u} (g : α → β) (x : F α) :
     supp (g <$> x) = g '' supp x := by
-  rw [← abs_repr x]; cases' repr x with a f; rw [← abs_map, PFunctor.map_eq]
+  rw [← abs_repr x]; obtain ⟨a, f⟩ := repr x; rw [← abs_map, PFunctor.map_eq]
   rw [supp_eq_of_isUniform h, supp_eq_of_isUniform h, image_comp]
 
 theorem suppPreservation_iff_uniform : q.SuppPreservation ↔ q.IsUniform := by
@@ -628,8 +633,7 @@ theorem suppPreservation_iff_liftpPreservation : q.SuppPreservation ↔ q.LiftpP
     rw [suppPreservation_iff_uniform] at h'
     dsimp only [SuppPreservation, supp] at h
     rw [liftp_iff_of_isUniform h', supp_eq_of_isUniform h', PFunctor.liftp_iff']
-    simp only [image_univ, mem_range, exists_imp]
-    constructor <;> intros <;> subst_vars <;> solve_by_elim
+    simp
   · rintro α ⟨a, f⟩
     simp only [LiftpPreservation] at h
     simp only [supp, h]

@@ -1,13 +1,15 @@
 /-
-Copyright (c) 2020 Scott Morrison. All rights reserved.
+Copyright (c) 2020 Kim Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Markus Himmel, Scott Morrison
+Authors: Markus Himmel, Kim Morrison
 -/
-import Mathlib.Algebra.Group.Ext
-import Mathlib.CategoryTheory.Simple
-import Mathlib.CategoryTheory.Linear.Basic
-import Mathlib.CategoryTheory.Endomorphism
-import Mathlib.FieldTheory.IsAlgClosed.Spectrum
+module
+
+public import Mathlib.Algebra.Group.Ext
+public import Mathlib.CategoryTheory.Simple
+public import Mathlib.CategoryTheory.Linear.Basic
+public import Mathlib.CategoryTheory.Endomorphism
+public import Mathlib.FieldTheory.IsAlgClosed.Spectrum
 
 /-!
 # Schur's lemma
@@ -15,18 +17,20 @@ We first prove the part of Schur's Lemma that holds in any preadditive category 
 that any nonzero morphism between simple objects
 is an isomorphism.
 
-Second, we prove Schur's lemma for `𝕜`-linear categories with finite dimensional hom spaces,
+Second, we prove Schur's lemma for `𝕜`-linear categories with finite-dimensional hom spaces,
 over an algebraically closed field `𝕜`:
 the hom space `X ⟶ Y` between simple objects `X` and `Y` is at most one dimensional,
 and is 1-dimensional iff `X` and `Y` are isomorphic.
 -/
+
+@[expose] public section
 
 
 namespace CategoryTheory
 
 open CategoryTheory.Limits
 
-variable {C : Type*} [Category C]
+variable {C : Type*} [Category* C]
 variable [Preadditive C]
 
 -- See also `epi_of_nonzero_to_simple`, which does not require `Preadditive C`.
@@ -66,9 +70,11 @@ noncomputable instance [HasKernels C] {X : C} [Simple X] : DivisionRing (End X) 
     haveI := isIso_of_hom_simple hf
     exact IsIso.inv_hom_id f
   nnqsmul := _
+  nnqsmul_def := fun _ _ => rfl
   qsmul := _
+  qsmul_def := fun _ _ => rfl
 
-open FiniteDimensional
+open Module
 
 section
 
@@ -91,12 +97,7 @@ end
 variable (𝕜 : Type*) [Field 𝕜]
 variable [IsAlgClosed 𝕜] [Linear 𝕜 C]
 
--- Porting note: the defeq issue in lean3 described below is no longer a problem in Lean4.
--- In the proof below we have some difficulty using `I : FiniteDimensional 𝕜 (X ⟶ X)`
--- where we need a `FiniteDimensional 𝕜 (End X)`.
--- These are definitionally equal, but without eta reduction Lean can't see this.
--- To get around this, we use `convert I`,
--- then check the various instances agree field-by-field,
+set_option backward.isDefEq.respectTransparency false in
 -- We prove this with the explicit `isIso_iff_nonzero` assumption,
 -- rather than just `[Simple X]`, as this form is useful for
 -- Müger's formulation of semisimplicity.
@@ -134,6 +135,7 @@ theorem endomorphism_simple_eq_smul_id {X : C} [Simple X] [FiniteDimensional �
 /-- Endomorphisms of a simple object form a field if they are finite dimensional.
 This can't be an instance as `𝕜` would be undetermined.
 -/
+@[implicit_reducible]
 noncomputable def fieldEndOfFiniteDimensional (X : C) [Simple X] [I : FiniteDimensional 𝕜 (X ⟶ X)] :
     Field (End X) := by
   classical exact
@@ -153,7 +155,7 @@ for the refinements when we know whether or not the simples are isomorphic.
 -/
 theorem finrank_hom_simple_simple_le_one (X Y : C) [FiniteDimensional 𝕜 (X ⟶ X)] [Simple X]
     [Simple Y] : finrank 𝕜 (X ⟶ Y) ≤ 1 := by
-  obtain (h|h) := subsingleton_or_nontrivial (X ⟶ Y)
+  obtain (h | h) := subsingleton_or_nontrivial (X ⟶ Y)
   · rw [finrank_zero_of_subsingleton]
     exact zero_le_one
   · obtain ⟨f, nz⟩ := (nontrivial_iff_exists_ne 0).mp h
@@ -176,20 +178,16 @@ theorem finrank_hom_simple_simple_eq_one_iff (X Y : C) [FiniteDimensional 𝕜 (
     have le_one := finrank_hom_simple_simple_le_one 𝕜 X Y
     have zero_lt : 0 < finrank 𝕜 (X ⟶ Y) :=
       finrank_pos_iff_exists_ne_zero.mpr ⟨f.hom, (isIso_iff_nonzero f.hom).mp inferInstance⟩
-    omega
+    lia
 
 theorem finrank_hom_simple_simple_eq_zero_iff (X Y : C) [FiniteDimensional 𝕜 (X ⟶ X)]
     [FiniteDimensional 𝕜 (X ⟶ Y)] [Simple X] [Simple Y] :
     finrank 𝕜 (X ⟶ Y) = 0 ↔ IsEmpty (X ≅ Y) := by
   rw [← not_nonempty_iff, ← not_congr (finrank_hom_simple_simple_eq_one_iff 𝕜 X Y)]
-  refine ⟨fun h => by rw [h]; simp, fun h => ?_⟩
   have := finrank_hom_simple_simple_le_one 𝕜 X Y
-  interval_cases finrank 𝕜 (X ⟶ Y)
-  · rfl
-  · exact False.elim (h rfl)
+  lia
 
-open scoped Classical
-
+open scoped Classical in
 theorem finrank_hom_simple_simple (X Y : C) [∀ X Y : C, FiniteDimensional 𝕜 (X ⟶ Y)] [Simple X]
     [Simple Y] : finrank 𝕜 (X ⟶ Y) = if Nonempty (X ≅ Y) then 1 else 0 := by
   split_ifs with h

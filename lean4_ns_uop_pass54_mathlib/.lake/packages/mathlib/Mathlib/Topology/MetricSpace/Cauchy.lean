@@ -1,9 +1,12 @@
 /-
-Copyright (c) 2015, 2017 Jeremy Avigad. All rights reserved.
+Copyright (c) 2015 Jeremy Avigad. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jeremy Avigad, Robert Y. Lewis, Johannes Hölzl, Mario Carneiro, Sébastien Gouëzel
 -/
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+module
+
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+public import Mathlib.Topology.EMetricSpace.Basic
 
 /-!
 ## Cauchy sequences in (pseudo-)metric spaces
@@ -11,14 +14,16 @@ import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
 Various results on Cauchy sequences in (pseudo-)metric spaces, including
 
 * `Metric.complete_of_cauchySeq_tendsto` A pseudo-metric space is complete iff each Cauchy sequences
-converges to some limit point.
+  converges to some limit point.
 * `cauchySeq_bdd`: a Cauchy sequence on the natural numbers is bounded
 * various characterisation of Cauchy and uniformly Cauchy sequences
 
 ## Tags
 
-metric, pseudo_metric, Cauchy sequence
+metric, pseudometric space, Cauchy sequence
 -/
+
+public section
 
 open Filter
 open scoped Uniformity Topology
@@ -51,7 +56,6 @@ variable [Nonempty β] [SemilatticeSup β]
 
 /-- In a pseudometric space, Cauchy sequences are characterized by the fact that, eventually,
 the distance between its elements is arbitrarily small -/
--- Porting note: @[nolint ge_or_gt] doesn't exist
 theorem Metric.cauchySeq_iff {u : β → α} :
     CauchySeq u ↔ ∀ ε > 0, ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist (u m) (u n) < ε :=
   uniformity_basis_dist.cauchySeq_iff
@@ -61,10 +65,8 @@ theorem Metric.cauchySeq_iff' {u : β → α} :
     CauchySeq u ↔ ∀ ε > 0, ∃ N, ∀ n ≥ N, dist (u n) (u N) < ε :=
   uniformity_basis_dist.cauchySeq_iff'
 
--- see Note [nolint_ge]
 /-- In a pseudometric space, uniform Cauchy sequences are characterized by the fact that,
 eventually, the distance between all its elements is uniformly, arbitrarily small. -/
--- Porting note: no attr @[nolint ge_or_gt]
 theorem Metric.uniformCauchySeqOn_iff {γ : Type*} {F : β → γ → α} {s : Set γ} :
     UniformCauchySeqOn F atTop s ↔ ∀ ε > (0 : ℝ),
       ∃ N : β, ∀ m ≥ N, ∀ n ≥ N, ∀ x ∈ s, dist (F m x) (F n x) < ε := by
@@ -72,8 +74,8 @@ theorem Metric.uniformCauchySeqOn_iff {γ : Type*} {F : β → γ → α} {s : S
   · intro h ε hε
     let u := { a : α × α | dist a.fst a.snd < ε }
     have hu : u ∈ 𝓤 α := Metric.mem_uniformity_dist.mpr ⟨ε, hε, by simp [u]⟩
-    rw [← @Filter.eventually_atTop_prod_self' _ _ _ fun m =>
-      ∀ x ∈ s, dist (F m.fst x) (F m.snd x) < ε]
+    rw [← Filter.eventually_atTop_prod_self' (p := fun m =>
+      ∀ x ∈ s, dist (F m.fst x) (F m.snd x) < ε)]
     specialize h u hu
     rw [prod_atTop_atTop_eq] at h
     exact h.mono fun n h x hx => h x hx
@@ -87,7 +89,7 @@ theorem Metric.uniformCauchySeqOn_iff {γ : Type*} {F : β → γ → α} {s : S
     exact hab (hN b.fst hbl.ge b.snd hbr.ge x hx)
 
 /-- If the distance between `s n` and `s m`, `n ≤ m` is bounded above by `b n`
-and `b` converges to zero, then `s` is a Cauchy sequence.  -/
+and `b` converges to zero, then `s` is a Cauchy sequence. -/
 theorem cauchySeq_of_le_tendsto_0' {s : β → α} (b : β → ℝ)
     (h : ∀ n m : β, n ≤ m → dist (s n) (s m) ≤ b n) (h₀ : Tendsto b atTop (𝓝 0)) : CauchySeq s :=
   Metric.cauchySeq_iff'.2 fun ε ε0 => (h₀.eventually (gt_mem_nhds ε0)).exists.imp fun N hN n hn =>
@@ -96,7 +98,7 @@ theorem cauchySeq_of_le_tendsto_0' {s : β → α} (b : β → ℝ)
     _ < ε := hN
 
 /-- If the distance between `s n` and `s m`, `n, m ≥ N` is bounded above by `b N`
-and `b` converges to zero, then `s` is a Cauchy sequence.  -/
+and `b` converges to zero, then `s` is a Cauchy sequence. -/
 theorem cauchySeq_of_le_tendsto_0 {s : β → α} (b : β → ℝ)
     (h : ∀ n m N : β, N ≤ n → N ≤ m → dist (s n) (s m) ≤ b N) (h₀ : Tendsto b atTop (𝓝 0)) :
     CauchySeq s :=
@@ -110,7 +112,7 @@ theorem cauchySeq_bdd {u : ℕ → α} (hu : CauchySeq u) : ∃ R > 0, ∀ m n, 
       lt_of_le_of_lt (dist_triangle_right _ _ _) (add_lt_add (H m) (H n))⟩
   let R := Finset.sup (Finset.range N) fun n => nndist (u n) (u N)
   refine ⟨↑R + 1, add_pos_of_nonneg_of_pos R.2 zero_lt_one, fun n => ?_⟩
-  rcases le_or_lt N n with h | h
+  rcases le_or_gt N n with h | h
   · exact lt_of_lt_of_le (hN _ h) (le_add_of_nonneg_left R.2)
   · have : _ ≤ R := Finset.le_sup (Finset.mem_range.2 h)
     exact lt_of_le_of_lt this (lt_add_of_pos_right _ zero_lt_one)
