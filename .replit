@@ -119,21 +119,12 @@ client_id = "584975588599-ffdf519vi5hllcu45cov9h8dob6fn69r.apps.googleuserconten
 IBMQ_Secret = "kFFyMX3PVnwprXGgF2aQp6uGsh_jcGRN4azU0XfW4JqV"
 
 [[ports]]
-localPort = 3000
-externalPort = 3001
-
-[[ports]]
 localPort = 5000
-externalPort = 5000
+externalPort = 80
 
 [[ports]]
 localPort = 5001
 externalPort = 3000
-
-[[ports]]
-localPort = 5002
-externalPort = 80
-exposeLocalhost = true
 
 [[ports]]
 localPort = 8000

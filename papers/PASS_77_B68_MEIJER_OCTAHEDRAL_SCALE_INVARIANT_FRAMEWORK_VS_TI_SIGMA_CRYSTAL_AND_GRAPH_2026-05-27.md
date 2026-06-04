@@ -15,11 +15,15 @@ programs that agree on three deep moves — (i) a single geometric object underw
 (iii) **music/harmonics** are a privileged window onto that signature — but they realize those
 moves with opposite design priorities. Meijer picks the **octahedron**, a maximally-symmetric
 Platonic solid (6 vertices, group O_h of order 48), and nests it toroidally. TI Sigma picks
-**constant-labelled** vertices: the 9-vertex **TI Sigma Crystal (TIC)** whose vertices *are* the
-PRIMARY constants {0,1,i,√2,e,φ,π,C,T}, and its 15-edge **TI Sigma Graph (TIG)**. Symmetry is
-*sacrificed* in the TIC/TIG for semantic content; it is *recovered* in TI's 57-vertex **TSC-E₈**
-quasicrystal (Weyl(E₈) order 696,729,600) — so the correct TI counterpart to Meijer's
-high-symmetry octahedron is the **TSC-E₈, not the TIG**. Two concrete computational results land:
+**constant-labelled** vertices: the 9-vertex complex-PD-plane vertex set whose vertices *are* the
+PRIMARY constants {0,1,i,√2,e,φ,π,C,T}, and its 15-edge **TI Sigma Graph (TIG)**. **[B70 CANONICAL
+CORRECTION:** this 9-vertex object is **NOT** "the TI Sigma Crystal" — it is the **TIG / PD-complex-
+plane vertex layer** (urb_734-735). The **canonical TI Sigma Crystal (TSC) IS the 57-vertex E₈
+object** (56 Primary-Constant-determined E₈-root vertices + origin; urb_627-630). My original "TIC"
+label here was wrong.**]** Symmetry is *sacrificed* in the TIG for semantic content; it is the
+defining feature of TI's 57-vertex **TSC-E₈ Crystal** (Weyl(E₈) order 696,729,600) — so the correct
+TI counterpart to Meijer's high-symmetry octahedron is the **TSC-E₈ Crystal, not the TIG**. Two
+concrete computational results land:
 (1) **#69 falsification** — the TIG as specified in URB #735 contains the clique K₄={0,1,i,√2},
 forcing **chromatic number 4, not the 3 the paper claims**, which trips URB #735's own F2
 falsifier; both the octahedron and the TIG nonetheless share **diameter 2**. (2) **Empirical

@@ -1,0 +1,93 @@
+{
+  "E8": {
+    "num_roots": 240,
+    "all_norm2_equal_2": true,
+    "kissing_number": 240,
+    "antipodal_pairs": 120,
+    "dimension": 8,
+    "weyl_order": 696729600,
+    "packing_density_8D": 0.253669507901048
+  },
+  "octahedron": {
+    "num_vertices": 6,
+    "antipodal_pairs": 3,
+    "dimension": 3,
+    "symmetry_order_Oh": 48,
+    "kissing_number_cross_polytope_3D": 6
+  },
+  "superiority": {
+    "symmetry_order_ratio_E8_over_Oh": 14515200.0,
+    "dimension_ratio": 2.6666666666666665,
+    "kissing_ratio": 40.0,
+    "E8_provably_optimal_packing": true,
+    "oct_provably_optimal_packing": false,
+    "TSC_vertices_57": "56 non-origin E8-root subset + origin (one-photon 57 partitions)",
+    "five_valued_ECC_native_to_E8": true
+  },
+  "PD_range": {
+    "foundational_scale_interval": [
+      -3,
+      2
+    ],
+    "true_role": "Foundational PD Scale = continuous param of 5-valued logic (5-unit span)",
+    "sacred_interval_moved_to": [
+      -0.5,
+      0.333
+    ],
+    "thresholds": {
+      "-3 DT_Cliff": -3,
+      "-e Ultra_Terrible": -2.718281828459045,
+      "-2 False": -2,
+      "-2/3 Indet_lower": -0.6666666666666666,
+      "-0.5 Riemann_midpoint": -0.5,
+      "0 Neutral": 0,
+      "+1/3 Indet_upper": 0.3333333333333333,
+      "+1 True": 1,
+      "+2 Verisyn_saturation": 2,
+      "+e Transcendent": 2.718281828459045,
+      "+pi CCC_level": 3.141592653589793
+    },
+    "midpoint_of_-3_2": -0.5,
+    "riemann_u_at_midpoint": 0.5,
+    "ratio_4_3": 1.3333333333333333,
+    "badness_multiplier_4x": 4,
+    "integrated_load_ratio_6_to_1": 6.0,
+    "GM_zone_log_scaling_PD=2+ln(r)": "for PD>2.0",
+    "radiance_at_CCC_e^(pi-2)": 3.1317521917485784,
+    "radiance_near_identity_with_pi_error_pct": 0.3132316288672979
+  },
+  "radiant_time": {
+    "tau_DE_pi_over_e_phi_years": 0.7142787838986283,
+    "tau_DE_seconds": 22540924.150759354,
+    "tau_DE_years": 0.7142787838986283,
+    "matches_corpus_1.47e8s_4.66yr": false,
+    "dilation_at_GILE_phi2": 1.5470331472032943,
+    "RT_state_GILE": 2.618033988749895,
+    "GM_limit": "GILE->inf => tau_eff->inf (Eternal Now / CCC)",
+    "LHC_ratio_4.1_over_2.3": 1.7826086956521738,
+    "sqrt_pi": 1.7724538509055159,
+    "LHC_ratio_matches_sqrtpi_err_pct": 0.5729257628609072,
+    "E_DE_joules_approx": 2.39e-52,
+    "autonomy_floor_e^-e": 0.06598803584531254,
+    "tau_eff_curve": {
+      "GILE=0": 0.7142787838986283,
+      "GILE=1": 0.8438206790476551,
+      "GILE=2.618033988749895": 1.1050129550352368,
+      "GILE=3": 1.1776466242234889,
+      "GILE=6": 1.9416110387254666,
+      "GILE=12": 5.277846004502927
+    }
+  },
+  "ABP1_F3_proxy": {
+    "status": "run",
+    "n_hi": 82,
+    "n_lo": 82,
+    "high_arousal_antipodal_d": 818.782438576847,
+    "high_arousal_random_d": 845.7838506670084,
+    "low_arousal_antipodal_d": 483.9274623695441,
+    "low_arousal_random_d": 551.5070413831638,
+    "interpretation": "F3 asks if altered/low-binding states show BETTER antipodal matching (antipodal_d < random_d). Report ratios honestly.",
+    "hi_ratio_anti_over_rand": 0.9680752806182485,
+    "lo_ratio_anti_over_rand": 0.8774637965743247
+  }
+}

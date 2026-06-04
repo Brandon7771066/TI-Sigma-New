@@ -51,17 +51,22 @@ The dots the corpus said would connect, connect through this one structure.
 
 ### 1.3 TI Sigma — UOP, PD, TIL (corpus: GTT-1, UOP phase-transition, MR Truth Labels canonical, Nonsense-Extinguishment refinement #7)
 
-- **UOP** — Universal Ontological Principle / Universal a-priori / **Universal Bridge Theorem.**
-  Balances **truth-optimization against existence-optimization.** Formalized in **GTT-1
-  (canonical #27)** as `J(G,H) = f(G) + g(H)` with an **interior optimum G*≈0.93** — above which
-  marginal truth costs more existence than it adds value ("Radiant Cap"; pushing past = MR2
-  Indeterminate, DT if fully actualized).
-- **PD** — Permissibility Distribution. Valence × existence-footprint on the working interval
-  **(−3, 2)** (anchored to the **3:2 Perfect Fifth**). Admits a **complex plane** (the *Merged
-  Real-Imaginary Truth Plane*, refinement #7, 2026-05-24): **real axis = valence**, **imaginary
-  axis = the DT/Tralse axis.** Base-4 labels **{True, False, Indeterminate, Double Tralse}** +
-  Meta-Truths; "Nonsense" extinguished into "Indeterminate on the hyperimaginary end."
-- **TIL** — Tralse Informationalism (coined 2025-06-25). The logic layer; **Tralseness** =
+- **UOP** — **Unified Optimization Principle** (B70 canonical rename; NOT "Universal Ontological");
+  the **Universal Bridge Theorem.** Balances **truth-optimization against existence-optimization.**
+  Formalized in **GTT-1 (canonical #27)** as `J(G,H) = f(G) + g(H)` with an **interior optimum
+  G*≈0.93** — above which marginal truth costs more existence than it adds value ("Radiant Cap";
+  pushing past = MR2 Indeterminate, DT if fully actualized). The name now matches the math: J is
+  literally a *unified optimization*.
+- **PD** — Permissibility Distribution. Valence × existence-footprint. **[B70 CORRECTION:** the PD
+  is **NOT centered on (−3, 2)**; (−3, 2) is the **Foundational PD Scale** (5-unit param of 5-valued
+  logic, urb_714/728), and the broader range runs from the **−3 DT Cliff up to the +π CCC Level**
+  with critical thresholds at ±e, ±2, ±2/3, ±1/3, −0.5, +1, +2 — see B70 §5. Sacred interval =
+  (−0.5, +0.333).**]** Admits a **complex plane** (the *Merged Real-Imaginary Truth Plane*,
+  refinement #7, 2026-05-24): **real axis = valence**, **imaginary axis = the DT/Tralse axis.**
+  Base-4 labels **{True, False, Indeterminate, Double Tralse}** + Meta-Truths; "Nonsense"
+  extinguished into "Indeterminate on the hyperimaginary end."
+- **TIL** — **TI Logic** (B70 canonical: TIL = TI Logic, NOT "Tralse Informationalism"; the latter
+  remains the name of the *philosophy*, coined 2025-06-25). The logic layer; **Tralseness** =
   structured imperfection in every coherent truth label. Runs the **MR gate architecture**: MR1
   existence gate (discards DT), MR2 truth gate (T/F/I), MR3+ meta-truths.
 
