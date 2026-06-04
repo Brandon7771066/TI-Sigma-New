@@ -1,0 +1,83 @@
+{
+  "weights": {
+    "G": 0.4142,
+    "I": 0.25,
+    "L": 0.18,
+    "E": 0.15
+  },
+  "weight_sum": 0.9942,
+  "fragility_costs": {
+    "G": 0.3,
+    "L": 0.3,
+    "E": 0.15,
+    "I": 0.0
+  },
+  "A_aggregate_wellposed_single_capped_quantity": {
+    "model": "max f_capped(A)+g(H), A+H<=B, A,H comparable scale; A=weighted aggregate scalar",
+    "results": {
+      "B=1.0": {
+        "aggregate_A_star": 0.4685,
+        "H": 0.4733,
+        "aggregate_at_0.93": false
+      },
+      "B=1.5": {
+        "aggregate_A_star": 0.76,
+        "H": 0.7376,
+        "aggregate_at_0.93": false
+      },
+      "B=1.93": {
+        "aggregate_A_star": 0.9228,
+        "H": 1.0062,
+        "aggregate_at_0.93": true
+      },
+      "B=2.5": {
+        "aggregate_A_star": 0.9298,
+        "H": 1.5694,
+        "aggregate_at_0.93": true
+      }
+    },
+    "reading": "Treated as a single capped truth quantity on a scale comparable to existence, the weighted aggregate DOES cap at 0.93 once budget is sufficient (B>=1.93) -- the aggregate claim is WELL-POSED and structurally holds, exactly like GTT-1. BUT this is the GTT-1 0.93 INPUT reflected back; weights do not even enter a single scalar. It confirms well-posedness, NOT that 0.93 is emergent."
+  },
+  "B_optimal_interior_allocation": {
+    "model": "max f_capped(weighted_agg) + g(H), H = 1 - sum(fragility_i * x_i)",
+    "optimal_per_trait": {
+      "G": 1.0,
+      "I": 1.0,
+      "L": 0.0,
+      "E": 0.139
+    },
+    "weight_per_cost_ratio": {
+      "G": 1.381,
+      "I": "inf",
+      "L": 0.6,
+      "E": 1.0
+    },
+    "aggregate_A_star": 0.689,
+    "aggregate_at_0.93": false,
+    "existence_H": 0.6792,
+    "reading": "Under a genuine fragility-priced existence cost, the optimal aggregate sits at 0.689 -- BELOW 0.93. The optimizer stops short of the cap because near the top, marginal truth-gain is small while existence is still valuable. The ROBUST qualitative result: allocation is HETEROGENEOUS -- load robust dims (I, zero cost -> 1.0) and the high-weight-per-cost dim (G -> 1.0), economize the worst-ratio dim (L=0.6 -> dropped to 0). 0.93 is a CEILING, not the realized optimum at this tradeoff strength."
+  },
+  "C_crosscheck_b72_independent_optima": {
+    "b72_independent_optima": {
+      "G": 0.93,
+      "L": 0.93,
+      "E": 1.0,
+      "I": 1.0
+    },
+    "weighted_aggregate": 0.9582,
+    "delta_from_0.93": 0.0282,
+    "reading": "With NO aggregate cap imposed -- each trait optimized independently per its own QM fragility (B72) -- the weighted aggregate is 0.958, ~2.8pp ABOVE 0.93 (uncapped robust traits I,E->1.0 pull it up; fragile G,L sit at 0.93). Near the 0.93 neighborhood but NOT exactly 0.93."
+  },
+  "verdict": {
+    "aggregate_value_across_models": {
+      "A_single_capped_scalar": 0.9228,
+      "B_fragility_priced_allocation": 0.689,
+      "C_independent_optima_weighted": 0.9582
+    },
+    "range": "0.689 to 0.9582",
+    "what_survives_robustly": "(1) The aggregate claim is WELL-POSED (Part A). (2) The aggregate optimum is SUB-MAXIMAL in every model (always < 1.0) = tralseness, model-INDEPENDENT. (3) Optimal allocation is HETEROGENEOUS (proper weights + fragility), exactly the precision Brandon asked for.",
+    "what_is_model_dependent_69": "The SPECIFIC value 0.93 is NOT robustly reproduced as the realized aggregate optimum: it ranges 0.69-0.96 across reasonable formulations and falls to ~0.42 if existence is over-rewarded. 0.93 is an imposed GTT-1 CEILING (upper bound), reached only in a strong-truth-preference regime -- not an emergent constant.",
+    "honest_status_of_brandon_claim": "SUPPORTED in the defensible form: 'the GILE aggregate is sub-maximal and bounded near ~0.93' (cleanest non-circular estimate Part C = 0.958). NOT supported in the strong form '0.93 exactly, emergent.' The proper-weights test ADDS the precision Brandon wanted: the aggregate decomposes heterogeneously, robust dims carry more of the load.",
+    "principle_count_effect": "no new principle; refinement of GTT-1 aggregate reading. Count 74."
+  }
+}
