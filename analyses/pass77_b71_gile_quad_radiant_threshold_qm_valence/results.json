@@ -1,0 +1,151 @@
+{
+  "A_canonical_states": {
+    "product |00>": {
+      "G": 0.0,
+      "I": 1.0,
+      "L": 0.0,
+      "E": 1.0
+    },
+    "Bell Phi+ (|00>+|11>)": {
+      "G": 0.3333,
+      "I": 1.0,
+      "L": 1.0,
+      "E": 1.0
+    },
+    "Bell Psi+ (|01>+|10>)": {
+      "G": 0.3333,
+      "I": 1.0,
+      "L": 1.0,
+      "E": 1.0
+    },
+    "singlet (|01>-|10>)": {
+      "G": 0.3333,
+      "I": 1.0,
+      "L": 1.0,
+      "E": 0.0
+    }
+  },
+  "B_trait_control": {
+    "G": {
+      "t=0": 0.0,
+      "t=0.5": 0.2357,
+      "t=1": 0.3333
+    },
+    "I": {
+      "t=0": 0.0,
+      "t=0.5": 0.6866,
+      "t=1": 1.0
+    },
+    "L": {
+      "t=0": 0.0,
+      "t=0.5": 0.7071,
+      "t=1": 1.0
+    },
+    "E": {
+      "t=0": 1.0,
+      "t=0.5": 0.5,
+      "t=1": 0.0
+    }
+  },
+  "C_per_trait_optimum": {
+    "note": "identical functional for EVERY GILE trait G,I,L,E -> identical 0.93 cap",
+    "sweeps": {
+      "B=1.5": {
+        "x_star": 0.75,
+        "H": 0.75,
+        "J": 1.11923,
+        "x_at_0.93": false
+      },
+      "B=1.93": {
+        "x_star": 0.93,
+        "H": 1.0,
+        "J": 1.35067,
+        "x_at_0.93": true
+      },
+      "B=2.0": {
+        "x_star": 0.93,
+        "H": 1.0,
+        "J": 1.35067,
+        "x_at_0.93": true
+      }
+    }
+  },
+  "D_unified_4trait": {
+    "weights": {
+      "G": 0.4142,
+      "I": 0.25,
+      "L": 0.18,
+      "E": 0.15
+    },
+    "model": "J = wG f(G)+wI f(I)+wL f(L)+wE f(E) + g(H); all four GILE capped at 0.93, H uncapped",
+    "sweeps": {
+      "B=3.5": {
+        "each_GILE_trait": 0.62,
+        "all_four_at_0.93": false,
+        "H_existence": 1.0,
+        "J": 1.17278
+      },
+      "B=4.72": {
+        "each_GILE_trait": 0.92,
+        "all_four_at_0.93": true,
+        "H_existence": 1.0,
+        "J": 1.3417
+      },
+      "B=5.0": {
+        "each_GILE_trait": 0.94,
+        "all_four_at_0.93": true,
+        "H_existence": 1.0,
+        "J": 1.34587
+      }
+    },
+    "composite_GILE_at_cap": 0.9246,
+    "composite_weight_sum": 0.9942
+  },
+  "E_decoherence_fragility": {
+    "channel": "computational-basis dephasing, gamma=0.3 (state-dependent, unlike depolarizing-purity)",
+    "discarded_proxy": "depolarizing-channel purity = identical for all pure states (p-only) -> #69 rejected",
+    "per_trait": {
+      "G": {
+        "trait_clean": 1.0,
+        "trait_after_dephasing": 0.7,
+        "absolute_loss": 0.3,
+        "truth_is_fragile": true
+      },
+      "I": {
+        "trait_clean": 1.0,
+        "trait_after_dephasing": 1.0,
+        "absolute_loss": 0.0,
+        "truth_is_fragile": false
+      },
+      "L": {
+        "trait_clean": 1.0,
+        "trait_after_dephasing": 0.7,
+        "absolute_loss": 0.3,
+        "truth_is_fragile": true
+      },
+      "E": {
+        "trait_clean": 1.0,
+        "trait_after_dephasing": 0.85,
+        "absolute_loss": 0.15,
+        "truth_is_fragile": true
+      }
+    },
+    "reading": "Under dephasing, every high-GILE-trait state loses trait-value (G/L/E rely on off-diagonal coherence; I=ZZ-certainty is the dephasing-robust exception, honest asymmetry). The coherence-bearing GILE traits are FRAGILE: pushing them toward 1 maximizes exposure to decoherence -> existence(robustness) competes with each truth-trait, QM-grounding why all four carry the cap. 0.93 itself is the canonical GTT-1 parameter, not re-derived here."
+  },
+  "F_structured_imperfection": {
+    "optimal_L_state_amps_|00>,|11>": [
+      0.8269,
+      0.5623
+    ],
+    "concurrence_check": 0.93,
+    "fidelity_to_Bell_Phi+": 0.965,
+    "reading": "The 0.93-capped optimum is NOT the maximally-entangled Bell state (fidelity<1). Each GILE trait optimally rests at structured imperfection = GTT-1 true-tralseness: 'too much truth' (perfect coherence/entanglement/certainty) costs more existence than it adds value. The compromise of Truth vs Existence is per-trait."
+  },
+  "summary": {
+    "claim": "The 0.93 Radiant Threshold applies to ALL FOUR GILE traits (G,I,L,E), not just G.",
+    "supersedes": "Pass-70 TPI-1-F3 'cap unique to G' (which mis-assigned I/L/E to the HEM side).",
+    "canonical_division": "GILE (G,I,L,E) = capped truth-side @0.93; HEM (existence) = uncapped.",
+    "QM_operationalization": "QVF-1: G=l1-coherence, I=meas accuracy*certainty, L=concurrence, E=SWAP-symmetry.",
+    "principle_count_effect": "refinement to GTT-1(#27)+TPI-1; no new principle; count stays 74."
+  }
+}
