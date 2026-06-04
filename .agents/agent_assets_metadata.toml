@@ -425,3 +425,27 @@ id = "1Ib5UX_68IBt9KhbmNweS"
 uri = "file://papers/PASS_77_B28_NA_CANONICAL_REFINEMENT_3_TEMPORAL_MODES_MIND_RELATIVE_2026-05-27.md"
 type = "text"
 title = "Pass-77-B28 NA Refinement — 3 Temporal Modes + Mind-Relative Process-Stateful"
+
+[[outputs]]
+id = "Bc9aV5MHzt4wKRud7ixgC"
+uri = "file://analyses/pass77_b75_uop_discipline_survey/fig1_J_shape_vs_truth.png"
+type = "image"
+title = "Fig 1 — Shape of the UOP objective as truth is prioritized (rise → peak @0.93 → over-reach decline)"
+
+[[outputs]]
+id = "Sn1Pfsp4POKZcGEndRO3w"
+uri = "file://analyses/pass77_b75_uop_discipline_survey/fig3_time_trajectories.png"
+type = "image"
+title = "Fig 3 — Four trajectory shapes over time (healthy climber / truth-zealot / existence-stuck / self-correcting)"
+
+[[outputs]]
+id = "TOkvs293ktKbpeVBQ8NBA"
+uri = "file://analyses/pass77_b75_uop_discipline_survey/fig2_survey_adherence.png"
+type = "image"
+title = "Fig 2 — UOP-adherence by discipline (agent archetype estimate, #69)"
+
+[[outputs]]
+id = "uy3X6yg_py4d_CoI5cKRy"
+uri = "file://analyses/pass77_b75_uop_discipline_survey/fig4_truth_existence_tradeoff.png"
+type = "image"
+title = "Fig 4 — Truth-vs-existence tradeoff under the UOP"
