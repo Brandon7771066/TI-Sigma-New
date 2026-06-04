@@ -1,0 +1,119 @@
+{
+  "pass": "77-B68",
+  "geometry": {
+    "octahedron": {
+      "name": "Octahedron (Meijer)",
+      "V": 6,
+      "E": 12,
+      "F": 8,
+      "symmetry_group_order": 48,
+      "dimension": 3,
+      "clique_number": 3,
+      "chromatic_number": 3,
+      "diameter": 2,
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "adjacency_spectrum": [
+        4.0,
+        -0.0,
+        0.0,
+        0.0,
+        -2.0,
+        -2.0
+      ],
+      "note": "Platonic solid; group O_h order 48; self-dual to cube; graph=K_{2,2,2}"
+    },
+    "TIG": {
+      "name": "TI Sigma Graph (URB #735)",
+      "V": 9,
+      "E": 15,
+      "F": null,
+      "symmetry_group_order": 1,
+      "dimension": 2,
+      "clique_number": 4,
+      "chromatic_number": 4,
+      "diameter": 2,
+      "degree_sequence": [
+        8,
+        5,
+        4,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "adjacency_spectrum": [
+        4.052,
+        1.354,
+        0.797,
+        0.094,
+        0.0,
+        -1.0,
+        -1.166,
+        -1.741,
+        -2.39
+      ],
+      "note": "vertex '0' adjacent to all 8 others; {0,1,i,r2} induce K4"
+    },
+    "TSC_E8": {
+      "name": "TSC-E8 (URB #627-630)",
+      "V": 57,
+      "E": "E8 root adjacency",
+      "F": null,
+      "symmetry_group_order": 696729600,
+      "dimension": 8,
+      "note": "origin + 56 E8 roots; Weyl(E8)=696,729,600; optimal 8D sphere packing (Viazovska)"
+    }
+  },
+  "urb735_F2_chromatic_check": {
+    "claimed_chromatic": 3,
+    "computed_chromatic": 4,
+    "computed_clique": 4,
+    "verdict": "CLAIM REFUTED (#69) \u2014 TIG contains K4 => chromatic >= 4, not 3"
+  },
+  "scale_invariance": {
+    "mendi_fnirs": {
+      "fs_hz": 2.075,
+      "n": 2406,
+      "fit": {
+        "beta": 0.2647344564491946,
+        "R2": 0.03260496111325595,
+        "n_freqs": 1071,
+        "band_hz": [
+          0.01,
+          0.9336099585062805
+        ]
+      }
+    },
+    "rodent_lfp": {
+      "fs_hz": 1250.0,
+      "n": 75000,
+      "fit": {
+        "beta": 2.383973857432921,
+        "R2": 0.7116490787723707,
+        "n_freqs": 17941,
+        "band_hz": [
+          1,
+          300
+        ]
+      }
+    },
+    "_ref_brown_noise": {
+      "beta": 1.8680531904540318,
+      "R2": 0.6653601899687819,
+      "n_freqs": 7981,
+      "band_hz": [
+        0.1,
+        40
+      ]
+    }
+  }
+}
