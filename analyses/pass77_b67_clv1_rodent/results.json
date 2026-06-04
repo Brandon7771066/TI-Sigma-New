@@ -1,0 +1,28 @@
+{
+  "pass": "77-B67",
+  "dandiset": "000003",
+  "asset": "sub-YutaMouse41/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+  "fs": 1250.0,
+  "n_windows": 199,
+  "channels_used": 8,
+  "R2_corr_level_asym": 0.2381428847929299,
+  "R1_kruskal_level_vs_state": {
+    "H": 48.79200686689171,
+    "p": 1.4444645468615806e-10,
+    "k": 4,
+    "N": 190,
+    "eta2": 0.2461935853058694,
+    "state_mean_level": {
+      "awake": 0.6976152561518306,
+      "nrem": 0.6410421333650529,
+      "transit": 0.6430862186255286,
+      "rem": 0.7308428416815003
+    }
+  },
+  "states_found": [
+    "awake",
+    "nrem",
+    "rem",
+    "transit"
+  ]
+}
