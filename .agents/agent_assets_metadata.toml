@@ -473,3 +473,15 @@ id = "yYhtp0mxloFatXyKryErY"
 uri = "file://analyses/pass77_b77_communication_asymmetry/fig2_customization_impossibility_cost.png"
 type = "image"
 title = "Fig 2 — Customization is impossible (irreducible loss); MWYS-maximalism is strictly worse"
+
+[[outputs]]
+id = "d9cH5TDUdxmXv8MOmBO5E"
+uri = "file://analyses/pass77_b78_hallucination_as_hyperimagining/fig1_false_dichotomy_plane.png"
+type = "image"
+title = "Fig 1 — Binary T/F is a false dichotomy: confidence alone can't separate hyper-imaginings from true claims; PD's second axis can"
+
+[[outputs]]
+id = "YYjbgJQH7pj4U0FsLeoGy"
+uri = "file://analyses/pass77_b78_hallucination_as_hyperimagining/fig2_consciousness_conjecture_absorption.png"
+type = "image"
+title = "Fig 2 — Hallucination rises with imaginativeness under binary, but TIL/PD absorbs it (the antidote scales)"

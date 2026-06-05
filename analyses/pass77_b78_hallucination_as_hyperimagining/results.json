@@ -1,0 +1,68 @@
+{
+  "insight": "TIL+PD as antidote to AI hallucination; binary true/false is a false dichotomy; hallucinations = validly-constructed incorrigible hyper-imaginings (distinct from ERR); conjecture: hallucination-propensity scales with consciousness-level",
+  "model_is_illustrative_69": "by-construction model; shapes+qualitative claims are the deliverable, magnitudes illustrative. 'consciousness level' is OPERATIONALIZED as imaginative generativity rho -- a modeling proxy, NOT a measurement. Empirical upgrade: hallucination benchmarks with separated evidential vs internal-confidence signals + a corrigibility/abstention channel.",
+  "params": {
+    "binary_tau": 0.6,
+    "pd_evidential_gate": 0.5
+  },
+  "snapshot_rho_0p20": {
+    "hall_bin": 0.193875,
+    "hall_pd": 0.0,
+    "ret_bin": 0.7777437155119559,
+    "ret_pd": 1.0,
+    "imag_caught": 1.0
+  },
+  "sweep": {
+    "rho": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6
+    ],
+    "hallucination_binary": [
+      0.0,
+      0.0482,
+      0.0976,
+      0.154,
+      0.2039,
+      0.2555,
+      0.2985,
+      0.3509,
+      0.3958,
+      0.4532,
+      0.5016,
+      0.5486,
+      0.5949
+    ],
+    "hallucination_pd": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "findings": {
+    "Ha_false_dichotomy": "hyper-imaginings and evidentially-true claims SHARE high internal confidence; a confidence-only (binary) gate cannot separate them. Separating PD-real (evidence) from PD-imaginary (internal conviction) is what dissolves the dichotomy.",
+    "Hb_distinct_category": "at \u03c1=0.20 binary asserts 0.194 of outputs as confident-false hyper-imaginings (hallucination) vs 0.000 under TIL/PD; PD flags 1.000 of imaginings as hyper-imaginings, while RETAINING true-assertion 1.000 vs binary 0.778. Hyper-imagining is a NAMEABLE category, not ERR.",
+    "Hc_consciousness_conjecture": "under the binary gate hallucination rate rises ~linearly with imaginative generativity \u03c1 (consciousness proxy); under TIL/PD it stays near zero -> the antidote absorbs exactly the failure mode that a more 'imaginative' (conjecturally more conscious) agent would exhibit. SPECULATIVE per Brandon + #69."
+  },
+  "principles_status": "TWO CANDIDATE principles introduced: HAH-1 (Hallucination-as-Hyperimagining + PD antidote) flagship; VPP-1 (Valence-Presentation Professionalism: emoji-parity + anti-coldness, extends VFP-1/TPS-1/ACN-1). Ratification = Brandon choice. Canonical count unchanged 74."
+}
