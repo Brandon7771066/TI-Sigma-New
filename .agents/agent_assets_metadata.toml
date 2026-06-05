@@ -509,3 +509,15 @@ id = "qE4UppsgtAXAq_SvFHZAa"
 uri = "file://analyses/pass77_b80_intuition_general_capacity/fig2_overlap_gated_transfer.png"
 type = "image"
 title = "B80 Fig 2 — Intuition is general but overlap-gated: zero overlap → zero transfer (#69 honest reading)"
+
+[[outputs]]
+id = "NzPUdpBbXW4JJtSGrMGBv"
+uri = "file://analyses/pass77_b81_common_resonance_shared_substrate/fig1_harmony_vs_isolated_trajectories.png"
+type = "image"
+title = "B81 Fig 1 — Unity in potential → synchrony in practice: facets developed in harmony rise together; isolated practice lags and desyncs"
+
+[[outputs]]
+id = "_OJBo0rssXZc9hcLqPu6h"
+uri = "file://analyses/pass77_b81_common_resonance_shared_substrate/fig2_manifold_vs_transfer.png"
+type = "image"
+title = "B81 Fig 2 — Common resonance: a strong positive manifold (correlation) WITHOUT strong transfer reconciles g with far-transfer skepticism"

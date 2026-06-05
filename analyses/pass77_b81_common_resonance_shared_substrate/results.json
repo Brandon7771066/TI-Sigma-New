@@ -1,0 +1,35 @@
+{
+  "refinement": "IGC-1 v2 (IGC-1-CR): intuition's generality is COMMON RESONANCE with a SHARED, DEVELOPED SUBSTRATE (g-analogue) \u2014 neither strong nor weak transfer. Singing and philosophical intuition TAP A COMMON SOURCE; they correlate via shared substrate, not via training spillover.",
+  "both_true_TI_sigma": "DT/Tralse-middle: 'intelligence/intuition is many specialized capacities' AND 'intelligence/intuition is a general substrate' are simultaneously true; unity exists IN POTENTIAL, realized as synchrony IN PRACTICE via intentional harmonization.",
+  "cogsci_grounding": {
+    "positive_manifold": "Spearman 1904 g summarizes universal positive correlations among abilities.",
+    "emergentist_support": [
+      "van der Maas et al. 2006 mutualism model (manifold EMERGES from developmental mutual benefit among specialized processes)",
+      "Kovacs & Conway 2016 Process Overlap Theory (g = statistical overlap of executive processes, not a unitary cause)",
+      "Cattell investment theory; Thomson 1916 / Bartholomew, Deary & Lawn 2009 sampling-bonds theory"
+    ],
+    "reconciliation": "shared common cause predicts HIGH correlation but NOT strong transfer; high correlation + weak transfer is the literature's actual position and Brandon's COMMON-RESONANCE claim."
+  },
+  "composition": "resonates with corpus Mycelial Resonance Engine (MRE) 'resonance' motif; composes with IGC-1 (B80), PM-1, GILE-I, canonical DT/both-true handling, ASYMMETRIC #69.",
+  "model": {
+    "type": "van der Maas mutualism",
+    "N": 6,
+    "K": 1.0,
+    "dt": 0.1,
+    "steps": 55,
+    "M_harmony": 0.3,
+    "M_isolated": 0.0
+  },
+  "results": {
+    "positive_manifold_harmony": 0.339,
+    "positive_manifold_isolated": -0.005,
+    "transfer_fraction_harmony": 0.101,
+    "transfer_fraction_isolated": 0.0,
+    "reading": "harmony yields a STRONG positive manifold (corr ~0.34) but only MODEST localized transfer (~10% of own gain): high correlation WITHOUT strong transfer = common resonance, exactly as Brandon argues."
+  },
+  "honesty_69": [
+    "model is by-construction; shapes (manifold emerges under coupling; transfer stays modest) are the deliverable, magnitudes illustrative",
+    "this refinement RETRACTS the 'overlap-gated transfer' framing of B80 fig2 as the PRIMARY mechanism \u2014 overlap still matters, but the governing mechanism is common-cause resonance, not training spillover; B80 stands as the transfer-bound, B81 as the corrected mechanism"
+  ],
+  "principle_status": "IGC-1 REFINED to v2 (common-resonance/shared-substrate). Remains CANDIDATE (awaits Brandon ratification). Canonical count UNCHANGED 74; this is a candidate-refinement, not a new principle and not an MR-Truth-Labels refinement."
+}
