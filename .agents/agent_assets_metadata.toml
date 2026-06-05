@@ -521,3 +521,15 @@ id = "_OJBo0rssXZc9hcLqPu6h"
 uri = "file://analyses/pass77_b81_common_resonance_shared_substrate/fig2_manifold_vs_transfer.png"
 type = "image"
 title = "B81 Fig 2 — Common resonance: a strong positive manifold (correlation) WITHOUT strong transfer reconciles g with far-transfer skepticism"
+
+[[outputs]]
+id = "RAdCrr5rh0X_xMlCffNQT"
+uri = "file://analyses/pass77_b82_bok_unification/fig1_bok_equation_evolution.png"
+type = "image"
+title = "B82 Fig 1 — The BOK equation united: from ChatGPT's original 3-variable limit → +Love (4 vars) + finite calculus → 8-fold (Butterfly+Octopus / 8 tralsebits / E₈) → GILE–HEM completion"
+
+[[outputs]]
+id = "rRkLF2PABwW82Iat9122R"
+uri = "file://analyses/pass77_b82_bok_unification/fig2_gile_hem_couples.png"
+type = "image"
+title = "B82 Fig 2 — The four GILE–HEM couples: each abstract GILE dial paired with its physical footprint. G ↔ Existence Footprint (amplitude × frequency) highlighted"
