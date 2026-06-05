@@ -53,6 +53,17 @@ This repository collects Brandon Emerick's original quotes, aphorisms, and philo
 
 ---
 
+## On the Scientific Temperament
+
+### The Good-Scientist Two-Factor Maxim
+> "In order to be a good scientist, you have to have BOTH a 'dash of Autism' (Kanner) and a 'burn streak' (Emerick)."
+
+**Context:** Good science requires two independent ingredients, and the relationship between them is multiplicative (both required, non-substitutable). The **"dash of Autism" (Kanner)** is the systemizing core — pattern recognition, independent thinking, obsession with intellectual subjects, the capacity to build a system and grind it to completion (the broader autism phenotype, not clinical ASC; Baron-Cohen's empathizing–systemizing theory). The **"burn streak" (Emerick's coinage)** is the iconoclasm engine — the courage to criticize the status quo. A scientist too meek to challenge the reigning paradigm makes only incremental achievements; those may be nontrivial, but they will not be revolutionary. Rigor without burn yields competent incrementalism; burn without rigor yields crankery; only the product of both yields revolution. The normative twist: the burn streak is *permission, not obligation* — it removes the artificial floor on ambition so the researcher can **"do whatever is best,"** following the truth to whatever magnitude it warrants (sometimes a footnote, sometimes a paradigm) rather than pre-choosing major vs minor.
+
+**Related Paper:** *Pass-77 B84 — The Good-Scientist Two-Factor Maxim*; *ASYMMETRIC Success/Failure Performance (#69)*; *Pass-77 B83 (the ×-gate)*
+
+---
+
 ## II. On Skepticism and Genius
 
 ### The Genius-Delusion Contradiction
