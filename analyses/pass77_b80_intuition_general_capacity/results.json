@@ -1,0 +1,31 @@
+{
+  "insight": "intuition is a general mind capacity that leverages new domains IN PROPORTION to their representational overlap with existing capacities; arts ~ a new language (high overlap, leverages intuition/verbal intelligence) vs a new trade (low overlap)",
+  "model_is_illustrative_69": "by-construction; shapes are the deliverable. The model encodes the OVERLAP-CONDITIONED (not global) form of the claim, which is what the cog-sci literature supports.",
+  "cogsci_grounding": {
+    "for_general_mechanism": [
+      "CHC fluid intelligence Gf (domain-general)",
+      "Klein Recognition-Primed Decision (intuition = domain-general pattern recognition)",
+      "Patel OPERA hypothesis 2011 + Shared Syntactic Integration Resource Hypothesis 2003 (music<->language shared neural syntax)"
+    ],
+    "against_naive_far_transfer": [
+      "Sala & Gobet meta-analyses 2017+ (far transfer small-to-null)",
+      "Thorndike & Woodworth 1901 identical-elements (transfer needs shared elements)"
+    ],
+    "reconciliation": "IGC-1 must be stated OVERLAP-CONDITIONED: general mechanism accelerates acquisition only where representational structure is shared -> 'language not trade' is precisely this."
+  },
+  "params": {
+    "k0": 0.15,
+    "lam": 1.6
+  },
+  "time_to_proficiency": {
+    "arts/music (high overlap o=0.8) | high intuition G=0.9 (Brandon)": 1.24,
+    "arts/music (high overlap o=0.8) | baseline intuition G=0.4": 2.43,
+    "unrelated trade (low overlap o=0.15) | high intuition G=0.9 (Brandon)": 4.4,
+    "unrelated trade (low overlap o=0.15) | baseline intuition G=0.4": 6.54
+  },
+  "findings": {
+    "overlap_gated": "high intuition saves much practice time in high-overlap arts (time-to-0.8: 1.24 vs 2.43) but little in the low-overlap trade (4.4 vs 6.54).",
+    "honest_69": "the same literature Brandon cited as support ALSO refutes naive far-transfer; the defensible claim is overlap-gated, which is exactly his language-vs-trade distinction -> the honest reading STRENGTHENS the framing rather than weakening it."
+  },
+  "principle_status": "IGC-1 (Intuition-as-General-Capacity, overlap-conditioned; arts-as-language) introduced CANDIDATE canonical. Two biographical anchors logged (singing<->intuition integration; asymmetric-skepticism self-profile). Ratification = Brandon choice. Canonical count unchanged 74."
+}

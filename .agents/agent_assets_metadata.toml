@@ -485,3 +485,27 @@ id = "YYjbgJQH7pj4U0FsLeoGy"
 uri = "file://analyses/pass77_b78_hallucination_as_hyperimagining/fig2_consciousness_conjecture_absorption.png"
 type = "image"
 title = "Fig 2 — Hallucination rises with imaginativeness under binary, but TIL/PD absorbs it (the antidote scales)"
+
+[[outputs]]
+id = "hSvu0qUFQJ5F298MmuKLY"
+uri = "file://analyses/pass77_b79_error_vs_hallucination/fig1_error_vs_hallucination_plane.png"
+type = "image"
+title = "B79 Fig 1 — Cognitive error ≠ hallucination: both low-accuracy, certainty is the separator (GILE-HEM diagonal)"
+
+[[outputs]]
+id = "lkAYjNsNpHdvtQGCrb72v"
+uri = "file://analyses/pass77_b79_error_vs_hallucination/fig2_harm_scales_with_certainty.png"
+type = "image"
+title = "B79 Fig 2 — Same inaccuracy, harm scales with certainty (hallucination = high-certainty tail of being wrong)"
+
+[[outputs]]
+id = "3wdl0KM4rS0ywwKgaLIcr"
+uri = "file://analyses/pass77_b80_intuition_general_capacity/fig1_arts_as_language_learning_curves.png"
+type = "image"
+title = "B80 Fig 1 — Arts ≈ a new language: high intuition accelerates the high-overlap domain, barely the low-overlap one"
+
+[[outputs]]
+id = "qE4UppsgtAXAq_SvFHZAa"
+uri = "file://analyses/pass77_b80_intuition_general_capacity/fig2_overlap_gated_transfer.png"
+type = "image"
+title = "B80 Fig 2 — Intuition is general but overlap-gated: zero overlap → zero transfer (#69 honest reading)"
