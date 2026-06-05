@@ -533,3 +533,15 @@ id = "rRkLF2PABwW82Iat9122R"
 uri = "file://analyses/pass77_b82_bok_unification/fig2_gile_hem_couples.png"
 type = "image"
 title = "B82 Fig 2 — The four GILE–HEM couples: each abstract GILE dial paired with its physical footprint. G ↔ Existence Footprint (amplitude × frequency) highlighted"
+
+[[outputs]]
+id = "1hGm6U6w6Et5dxFVcLTuL"
+uri = "file://analyses/pass77_b83_gile_hem_operator/fig1_lstar_plus_e_to_gile_hem.png"
+type = "image"
+title = "B83 Fig 1 — L*+E → GILE +/× HEM lineage (one ×/+ switch generalizes to four)"
+
+[[outputs]]
+id = "uFvp8o5u3uAkH1p6GcuoK"
+uri = "file://analyses/pass77_b83_gile_hem_operator/fig2_multiplicative_gate_vs_additive_residue.png"
+type = "image"
+title = "B83 Fig 2 — Multiplicative gate vs additive residue (why imagined Love is only Maharishi-grade)"
