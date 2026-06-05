@@ -449,3 +449,15 @@ id = "uy3X6yg_py4d_CoI5cKRy"
 uri = "file://analyses/pass77_b75_uop_discipline_survey/fig4_truth_existence_tradeoff.png"
 type = "image"
 title = "Fig 4 — Truth-vs-existence tradeoff under the UOP"
+
+[[outputs]]
+id = "4OOB48lwgj1ICDs96anxT"
+uri = "file://analyses/pass77_b76_credibility_surface_vs_substance/fig1_accuracy_vs_coupling.png"
+type = "image"
+title = "Fig 1 — Surface markers are proxies that fail exactly when decoupled from substance (steelmanned)"
+
+[[outputs]]
+id = "prXfickNQ7wt3StA8tn7F"
+uri = "file://analyses/pass77_b76_credibility_surface_vs_substance/fig2_ai_cleanup_effect.png"
+type = "image"
+title = "Fig 2 — AI cleanup removes the aesthetic signal → penalizing human typos becomes less defensible"
