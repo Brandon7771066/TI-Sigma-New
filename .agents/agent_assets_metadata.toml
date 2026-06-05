@@ -461,3 +461,15 @@ id = "prXfickNQ7wt3StA8tn7F"
 uri = "file://analyses/pass77_b76_credibility_surface_vs_substance/fig2_ai_cleanup_effect.png"
 type = "image"
 title = "Fig 2 — AI cleanup removes the aesthetic signal → penalizing human typos becomes less defensible"
+
+[[outputs]]
+id = "eb2h-quD9Y_sCsy__UpC6"
+uri = "file://analyses/pass77_b77_communication_asymmetry/fig1_explicitness_optima_per_listener.png"
+type = "image"
+title = "Fig 1 — Explicitness has an interior optimum that depends on the listener (e* < 1 always)"
+
+[[outputs]]
+id = "yYhtp0mxloFatXyKryErY"
+uri = "file://analyses/pass77_b77_communication_asymmetry/fig2_customization_impossibility_cost.png"
+type = "image"
+title = "Fig 2 — Customization is impossible (irreducible loss); MWYS-maximalism is strictly worse"

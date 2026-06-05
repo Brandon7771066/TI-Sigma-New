@@ -1,0 +1,31 @@
+{
+  "insight": "MWYS is over-idealized; communication is asymmetrical; explicitness has an interior optimum; perfect per-listener customization is impossible",
+  "model_is_illustrative_69": "by-construction generative model; shapes+qualitative claims are the deliverable, parameters illustrative. Empirical upgrade: comprehension/engagement experiments.",
+  "params": {
+    "beta": 4.0,
+    "lam": 1.6,
+    "audience": "k~Beta(2,2)"
+  },
+  "optimal_explicitness_per_listener": {
+    "k=0.1": 0.927,
+    "k=0.3": 0.744,
+    "k=0.5": 0.566,
+    "k=0.7": 0.381,
+    "k=0.9": 0.165
+  },
+  "population": {
+    "idealized_per_listener": 0.9441,
+    "broadcast_value": 0.8957,
+    "best_broadcast_e": 0.477,
+    "mwys_maximal_value": 0.4988,
+    "customization_impossibility_cost": 0.0484,
+    "mwys_maximalism_extra_loss": 0.3969
+  },
+  "findings": {
+    "f1_interior_optimum": "for every informed listener (k>0) optimal explicitness e*<1 -> 'never spell it all out'; over-explaining past e=(1-k) is a quadratic OVER-REACH penalty, structurally identical to the UOP 0.93 cap (B75). Brandon's 'getting the other person to think for themselves has merit' = e* sits below maximal explicitness by construction of the saturating+penalized value.",
+    "f2_listener_dependence": "e* falls as k rises (well-informed listener -> be terse, let them infer; uninformed -> be explicit). No single e is right for everyone.",
+    "f3_customization_impossible": "the gap between idealized per-listener value and the best single broadcast value is IRREDUCIBLE (cannot read each mind) -> Brandon's 'speakers cannot customize to each person' is a quantified bound, not a failing.",
+    "f4_mwys_is_strictly_worse": "MWYS maximal-explicitness (e=1) scores BELOW even the single-broadcast optimum -> the 'neat-freak' standard is not just unattainable, it's actively suboptimal."
+  },
+  "principle_status": "ACN-1 (Asymmetric-Communication Norm) introduced CANDIDATE canonical; ratification = Brandon choice. Canonical count unchanged 74."
+}
