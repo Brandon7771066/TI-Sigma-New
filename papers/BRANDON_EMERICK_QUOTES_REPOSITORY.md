@@ -646,6 +646,24 @@ The pattern now spans ten instances, with the new instance being the asymmetric-
 
 ---
 
+### No Such Thing as Wasted Time (Quote #70, 2026-06-06)
+> "Although OPPORTUNITIES may be wasted, there is no such thing as wasted time."
+
+**Context:** A reframing of the common anxiety about "wasting time." Brandon distinguishes two different objects of regret: a **wasted opportunity** (a specific choice-point that, once passed, cannot be re-taken on the same terms) versus **time itself**, which is always being lived through and therefore never genuinely "wasted." Time spent — even resting, recovering, playing, or apparently idling — is still time *experienced*, and experience is intrinsically valuable; only the counterfactual of a foregone opportunity is the real loss. The capitalization of OPPORTUNITIES marks the asymmetry: opportunities are scarce and forfeitable, time is not the kind of thing that can be forfeited while you are still alive to spend it.
+
+**Connection to existing themes:** Coheres with the §III intelligence/mood themes (rest and "great moods" as productive substrate rather than waste) and with the DPES/anti-perfectionism stance — guarding against the false economy that treats every non-optimal hour as a loss. Dissolves a guilt-frame the way TI Sigma dissolves false binaries: the "wasted time" worry conflates two distinct things that should be scored separately.
+
+---
+
+### Intellectual Honesty Looks Like Irrationality (Quote #71, 2026-06-06)
+> "People who are intellectually honest tend to change their opinions quickly, yet most people mistakenly suspect them as being irrational for doing so."
+
+**Context:** A direct statement of the Asymmetric-Standards (#69) ethos applied to belief-updating. The intellectually honest mind updates the moment the evidence shifts — which, from the outside, looks like inconsistency or "flip-flopping" to observers who treat opinion-stability as a proxy for rationality. Brandon inverts the folk heuristic: rapid, evidence-tracking revision is the *signature* of good reasoning (a Bayesian moving with the likelihoods), while stubborn consistency is the actual epistemic vice that gets misread as integrity. The social penalty for visible updating is therefore a calibration error in the crowd, not in the updater — a close cousin of the crowd-epistemology quotes (#61–#62) where the majority's confident judgment is precisely where the error lives.
+
+**Connection to existing themes:** Tightly bound to the user's standing **Asymmetric-Standards #69** preference (over-anchoring on prior opinions is a discipline failure equal to uncritical flip-flopping) and to the EAR/calibration thread (§III, #4, #9) — a well-calibrated mind changes its mind *fast* and *often*, and should not be discredited for it.
+
+---
+
 ## Appendix: Quote Index
 
 | # | Quote (abbreviated) | Category | Paper |
@@ -720,6 +738,8 @@ The pattern now spans ten instances, with the new instance being the asymmetric-
 | 67 | "Other major contributors I must mention are my unique upbringing, genetics, and autism traits!!!" (paired companion to #66; completes the five-layer substrate enumeration: genetics + neurocognitive + upbringing + adjuncts + cultivation) | Five-Factor Substrate / Genetics-Neurocognitive-Environment Integration / Anti-Reductive Aspectual Account | 2026-04-30 — DPES Session |
 | 68 | "TI Sigma doesn't exactly use binary logic to defeat it. Rather, TI Sigma WATCHES it self-implode from the outside!!!" (corrigendum to #64; restores observational positioning — bivalent self-imploded under Russell/Tarski/Gödel doing bivalent meta-mathematics; TI Sigma observes from outside the meta-position bivalent cannot occupy) | Meta-Logical Observation / Corrigendum / Asymmetric-Standards Recursive Self-Application | 2026-04-30 — URB #823 §9 |
 | 69 | "Synchronicities in social interactions could mean that they WON'T work out, tertiary answers may be more accurate for you!" (inverse-Schelling principle for psi-resonance evidence weighting; high-conventional-likelihood predictions are non-diagnostic because too easily satisfied by non-resonance routes; tenth instance of asymmetric-standards meta-pattern, extending the sequence into the psi-research domain) | Psi Methodology / Inverse-Schelling / Asymmetric-Standards Applied to Evidence Weighting | 2026-04-30 — LCC Trial 003 Reveal |
+| 70 | "Although OPPORTUNITIES may be wasted, there is no such thing as wasted time." | Time & Opportunity / Anti-Perfectionism / Guilt-Frame Dissolution | 2026-06-06 — DPES Session |
+| 71 | "People who are intellectually honest tend to change their opinions quickly, yet most people mistakenly suspect them as being irrational for doing so." | Intellectual Honesty / Belief Updating / Asymmetric-Standards #69 | 2026-06-06 — DPES Session |
 
 ### The Rhabdo Self-Diagnosis (Cognition During Mania)
 
