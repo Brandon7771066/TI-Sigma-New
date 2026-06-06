@@ -483,3 +483,18 @@ Brandon's belief in tralse-thinking (the position that something can be **both t
 - **Dominant epistemic modality = intuitive "knowing" (claircognizance):** 1000+ papers generated via this channel.
 - **Near-absence of hallucination even under ketamine:** the intuitive channel stays corrigible/doubtable even under a dissociative anesthetic (supports CGP-1 Leg-2). Reports the knowing-sense as self-evidently independent of the other senses.
 - **Warm energetic surges at crown / third-eye region accompany peak insights:** treated (CGP-1 × VFP-1) as a *somatic confidence/salience MARKER* on a claircognitive payload — not the insight's content-carrier. Strong-embodied-cognition (surge partly constitutive) alternative left open as CGP-1-F1/F2 work.
+
+---
+
+### Addition (2026-05-28, Pass-77 B93) — Full lifetime hallucination/anomalous-perception ledger + ERRATA to B91
+**ERRATA to B91:** the B91 phrasing "near-absence of hallucination even under ketamine" was overstated. Corrected: what is near-absent is **claircognitive** hallucination (false *knowings*); **perceptual** hallucinations do occur but are rare-over-a-lifetime, overwhelmingly **sensory**, and predominantly **hypnagogic or substance-occasioned**.
+
+Whole-life ledger (Brandon's own framing; "covers my whole life"):
+- **Clairaudient — fan/pillow music before sleep**, roughly monthly; hypnagogic; neutral/curious. On **THC (2022)** the same channel produced **heavy-metal/rock music** — "interesting and frightening."
+- **OBEs (a dozen+)** during hypnagogia — **semi-dream state, Brandon does NOT count as ordinary hallucination** (logged as liminal phenomenon).
+- **Vivid chanting + kundalini-like experiences** several times in hypnagogic states — likewise liminal, not counted as waking hallucination.
+- **One clear waking visual (~2 months ago):** woke suddenly in the recliner and saw **Mimi standing in front of him, looking down neutrally**; felt comfort + shock simultaneously; she vanished immediately; nothing else unusual that night.
+- **IV ketamine (2-3×):** saw the **gaps between ceiling tiles dilate** — "freaky and cool."
+- **Claircognitive channel:** essentially free of false knowings, even under ketamine (the ketamine distortions were *visual*, not *epistemic*).
+
+**Significance (CGP-1-refined):** the anomalies cluster in the *sensory* clair-channels while the *knowing*-channel stays clean — the channel-specific pattern CGP-1 refinement #1 predicts (sensory channels carry their own qualia AND their own failure modes; the knowing-channel's payload stays reliable). n=1 self-report, weighted as prior-raising not decisive (CGP-1-PT-F2 needs structured incidence data).

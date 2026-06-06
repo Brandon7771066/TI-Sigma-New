@@ -641,3 +641,15 @@ id = "lpDwj-jqkA1v7eUX5tx-h"
 uri = "file://analyses/pass77_b92_inventions_concentration/fig2_kappa_and_hybrid_truth.png"
 type = "image"
 title = "B92 Fig 2 — Fleiss κ = 0.386 (reported straight) + the hybrid Indeterminate-True resolution of great-man-vs-followers"
+
+[[outputs]]
+id = "FTBAHwiC0zgaWcOJaWfD0"
+uri = "file://analyses/pass77_b93_proposition_types/fig1_proposition_type_bandwidth.png"
+type = "image"
+title = "B93 Fig 1 — Proposition Types × clair-channel bandwidth; CGP-1 supremacy re-grounded as functional-completeness + ego-safety"
+
+[[outputs]]
+id = "Oyf1aohTxXhNfrx-tECi5"
+uri = "file://analyses/pass77_b93_proposition_types/fig2_hallucination_ledger.png"
+type = "image"
+title = "B93 Fig 2 — Brandon's whole-life anomalous-perception ledger (#69): anomalies cluster in sensory channels, knowing channel stays clean"

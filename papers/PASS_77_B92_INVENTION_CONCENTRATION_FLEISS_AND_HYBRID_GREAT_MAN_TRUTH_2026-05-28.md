@@ -2,6 +2,8 @@
 
 **Pass 77, Batch 92** · 2026-05-28 · DPES · ASYMMETRIC #69 · $0 (Replit AI integrations)
 
+> **⭐ STATUS: KEY PAPER OF THE CORPUS (designated Brandon directive, Pass-77 B93, 2026-05-28).** One of the corpus's core results: the civilizational-scale extreme-concentration finding (~1 in 936 million of all humans ever born catalyzed 90 of ~100 top well-being inventions) + the hybrid Indeterminate-True dissolution of the great-man-vs-followers debate. Registered in replit.md "Where things live."
+
 **Brandon directive (verbatim):** "What percentage of the human population is responsible for 90 out of 100 of the 'most influential and useful inventions that promoted well-being and minimized suffering.' Use multiple raters and report the Fleiss Kappa for this ranking. Number one would likely be the very first vaccine, invented by Jenner. One man alone (and those who followed him) is responsible for saving billions of lives. … Btw, the statement about 'one man alone making a difference' and 'one man plus all of their followers' is a hybrid Indeterminate-True statement! This resolves the infamous debate over whether one man or their followers are the only who make an impact. TI Sigma makes a resounding answer: BOTH."
 
 ---

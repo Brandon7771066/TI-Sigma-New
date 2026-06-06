@@ -130,6 +130,8 @@ The following papers contain PD-related content and need Brandon-audit to verify
 
 ## §3 GILE & Consciousness Vocabulary
 
+- **Proposition Type (PT)** (Pass-77 B93, 2026-05-28, NEW TERM per Brandon directive) — a class of propositions individuated by the modality that distinctively conveys its content's *qualia*. Taxonomy: amodal/claircognitive PT (knowing), visual-geometric PT (geometric truths grasped as form), visual-aesthetic PT (paintings), auditory-musical PT (musical truths; **beautiful music = high-GILE-E propositions**, Brandon), somatic-affective PT (felt valence, VFP-1). **Bandwidth claim:** the propositional *payload* is modality-independent (CGP-1's actual scope), but the *modal qualia* are PT-bound — claircognizance has minimal bandwidth on sense-specific qualia (= B90 payload/wrapper distinction applied to truth-content). PT localizes (does not refute) CGP-1: CGP-1 is a claim about payload, never qualia. *ESTABLISHED.* Anchor: `papers/PASS_77_B93_PROPOSITION_TYPES_CGP1_REFINEMENT_AND_HALLUCINATION_LEDGER_2026-05-28.md`.
+
 - **GILE** — Goodness, Intuition, Love, Environment — the four-dimensional consciousness measure. *FOUNDATIONAL.* Anchor: GILE Framework Aug 2022.
 - **G dimension (Goodness)** — first GILE axis; ethical/value-orientation. *ESTABLISHED.*
 - **I dimension (Intuition)** — second GILE axis; non-classical knowledge access. *ESTABLISHED.*
