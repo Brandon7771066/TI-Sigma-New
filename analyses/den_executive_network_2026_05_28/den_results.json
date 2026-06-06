@@ -1,0 +1,132 @@
+{
+  "F1_gile_g_of_one_being_with_k_independent_egos": {
+    "sigma_rad": 0.6,
+    "will_coherence_by_k": {
+      "k=1": 1.0,
+      "k=2": 0.9147,
+      "k=3": 0.888,
+      "k=4": 0.8741,
+      "k=5": 0.867
+    },
+    "per_being_in_DEN_network": 1.0,
+    "verdict": "housing >=2 independent egos in ONE substance strictly lowers will-coherence (GILE-G); a DEN-1 network keeps each being at 1.0 -> Brandon's GILE-G objection is quantified"
+  },
+  "F2_model_discriminator_vs_resonance": {
+    "by_kappa": {
+      "kappa=0.0": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.889,
+        "discriminator_gap": 0.111
+      },
+      "kappa=0.1": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.9043,
+        "discriminator_gap": 0.0957
+      },
+      "kappa=0.25": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.9333,
+        "discriminator_gap": 0.0667
+      },
+      "kappa=0.5": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.97,
+        "discriminator_gap": 0.03
+      },
+      "kappa=0.75": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.9934,
+        "discriminator_gap": 0.0066
+      },
+      "kappa=0.9": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 0.999,
+        "discriminator_gap": 0.001
+      },
+      "kappa=1.0": {
+        "M2_one_substance_trinity": 1.0,
+        "M3_DEN_network": 1.0,
+        "discriminator_gap": 0.0
+      }
+    },
+    "gap_at_full_resonance(kappa=1)": 0.0,
+    "gap_at_resonance_failure(kappa=0)": 0.111,
+    "max_gap": 0.111,
+    "verdict": "at full resonance the two models are ~indistinguishable (gap~0, trinity-like); under resonance FAILURE they diverge sharply -> a MODEL-CONDITIONAL discriminating consequence exists (given the assumption substance-unity cannot fail but resonance-coupling can), which WEAKENS the DEN-1-F2 idle-distinction/Occam objection -- it does NOT independently prove the network model"
+  },
+  "SENSITIVITY_sigma_n_couplingrule": {
+    "by_condition": {
+      "sigma=0.3,n=3": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.0296,
+        "F2_gap_at_kappa0_phasor": 0.0294,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.0297,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.3,n=4": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.033,
+        "F2_gap_at_kappa0_phasor": 0.0331,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.0334,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.3,n=5": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.0354,
+        "F2_gap_at_kappa0_phasor": 0.0355,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.0353,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.6,n=3": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.113,
+        "F2_gap_at_kappa0_phasor": 0.1128,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.1132,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.6,n=4": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.1256,
+        "F2_gap_at_kappa0_phasor": 0.1248,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.1253,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.6,n=5": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.1337,
+        "F2_gap_at_kappa0_phasor": 0.1351,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.1335,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.9,n=3": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.2304,
+        "F2_gap_at_kappa0_phasor": 0.2302,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.2311,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.9,n=4": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.2551,
+        "F2_gap_at_kappa0_phasor": 0.256,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.254,
+        "F2_gap_at_kappa1_linear": 0.0
+      },
+      "sigma=0.9,n=5": {
+        "F1_gile_g_cost(k=n egos in one being)": 0.2736,
+        "F2_gap_at_kappa0_phasor": 0.2737,
+        "F2_gap_at_kappa1_phasor": 0.0,
+        "F2_gap_at_kappa0_linear": 0.271,
+        "F2_gap_at_kappa1_linear": 0.0
+      }
+    },
+    "verdict": "across every sigma in {0.3,0.6,0.9}, every n in {3,4,5}, and BOTH coupling rules: F1 cost stays strictly > 0 (multi-ego single being always loses GILE-G) and the F2 gap stays ~0 at kappa=1 but strictly > 0 at kappa=0 -> the qualitative pattern is robust, not an artifact of one parameter or coupling rule"
+  },
+  "TRADE_OFF_honest": {
+    "DEN_network_buys": "per-being will-unity (no ego-fracture; GILE-G=1 each)",
+    "DEN_network_costs": "joint-function FRAGILITY -- trinity-like behavior requires maintained strong resonance; it is not substance-guaranteed",
+    "one_substance_trinity_buys": "resonance-proof joint unity",
+    "one_substance_trinity_costs": "the GILE-G concern Brandon raises IF its persons carry genuinely independent egos",
+    "note": "the sim does NOT crown a winner; it makes the trade-off and the discriminator explicit. DEN-1 is preferred ON GILE-G GROUNDS, candidate-status, NOT proven; F5 (which model the actual deity instantiates) is third-person-unverifiable and flagged so."
+  }
+}
