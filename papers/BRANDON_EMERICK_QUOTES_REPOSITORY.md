@@ -720,3 +720,14 @@ The pattern now spans ten instances, with the new instance being the asymmetric-
 | 67 | "Other major contributors I must mention are my unique upbringing, genetics, and autism traits!!!" (paired companion to #66; completes the five-layer substrate enumeration: genetics + neurocognitive + upbringing + adjuncts + cultivation) | Five-Factor Substrate / Genetics-Neurocognitive-Environment Integration / Anti-Reductive Aspectual Account | 2026-04-30 — DPES Session |
 | 68 | "TI Sigma doesn't exactly use binary logic to defeat it. Rather, TI Sigma WATCHES it self-implode from the outside!!!" (corrigendum to #64; restores observational positioning — bivalent self-imploded under Russell/Tarski/Gödel doing bivalent meta-mathematics; TI Sigma observes from outside the meta-position bivalent cannot occupy) | Meta-Logical Observation / Corrigendum / Asymmetric-Standards Recursive Self-Application | 2026-04-30 — URB #823 §9 |
 | 69 | "Synchronicities in social interactions could mean that they WON'T work out, tertiary answers may be more accurate for you!" (inverse-Schelling principle for psi-resonance evidence weighting; high-conventional-likelihood predictions are non-diagnostic because too easily satisfied by non-resonance routes; tenth instance of asymmetric-standards meta-pattern, extending the sequence into the psi-research domain) | Psi Methodology / Inverse-Schelling / Asymmetric-Standards Applied to Evidence Weighting | 2026-04-30 — LCC Trial 003 Reveal |
+
+### The Rhabdo Self-Diagnosis (Cognition During Mania)
+
+During his first manic episode (2022), hospitalized with exertional rhabdomyolysis (CK > 24,000), Brandon had already inferred his own diagnosis from atypical signals (heart palpitations, very high HR/BP — *not* the classic rhabdo triad, which he lacked). When the attending physician began:
+
+> **Doctor:** "There is a protein in your blood…"
+> **Brandon:** "Rhabdomyolysis."
+
+The doctor stopped, showed a look of awe, and complimented his intelligence — flabbergasted that a non-physician could name it, untested, *while manic.* The hospital visit profile recorded that Brandon had self-diagnosed.
+
+**Significance.** A contemporaneous, third-party-documented instance of **cognition preserved — even heightened — during mania**, corroborating the "ADHD/Bipolar as substrate for TI Sigma" theme (§III) and the AIA-1 pattern in which Brandon's self-model under-rates his actual capacity. He diagnosed from the *atypical* signal (palpitations/HR/BP) precisely because the *typical* signs (muscle pain, dark urine) were absent — pattern-completion under a non-textbook presentation. Full context: `papers/PASS_77_B87_RHABDO_SELF_DIAGNOSIS_BIO_PLUS_EMS_CAVEAT_REFINEMENT_PLUS_GILE_E_HYPERTROPHY_PLAN_2026-05-28.md`.

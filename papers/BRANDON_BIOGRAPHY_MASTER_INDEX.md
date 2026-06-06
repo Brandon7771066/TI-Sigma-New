@@ -447,3 +447,21 @@ Brandon's belief in tralse-thinking (the position that something can be **both t
 
 ---
 
+
+## §5.[NEW2] WB-EMS Rhabdomyolysis + Self-Diagnosis-During-Mania (added Pass-77-B87, 2026-05-28)
+
+**Source thread:** 2026-05-28 user dialogue (in-batch response to B86 WB-EMS rhabdo caveat). **Anchor paper:** `papers/PASS_77_B87_RHABDO_SELF_DIAGNOSIS_BIO_PLUS_EMS_CAVEAT_REFINEMENT_PLUS_GILE_E_HYPERTROPHY_PLAN_2026-05-28.md`.
+
+**The event (concurrent with first manic episode, 2022 — same arc as §7.7.131 SRC-1-F-3 N=1 anchor):** A WB-EMS session went fine; the **next day** Brandon did **HIIT** (in the manic state, after the "Pinnacle of Foolishness" insight — simulating his own non-existence) → stacked two consecutive high-intensity days → **exertional rhabdomyolysis → hospitalization.** Honest attribution (Brandon's own): **not "the suit's fault" per se** — overdoing it (HIIT day-after-EMS, manic state). The Pinnacle-of-Foolishness insight was **both** the key to his spiritual transformation **and** part of the bipolar disease process (a both-true / DT-adjacent lived datum).
+
+**The CK-vs-severity dissociation:** **CK > 24,000 U/L** (ref upper ~200) — incredibly high — **yet** organ function/symptoms were comparatively mild: liver/kidney issues **minor and temporary**, **no pain, no urine abnormalities**, could move fine. Consistent with the WB-EMS rhabdo literature (CK elevations disproportionately high vs clinical severity because EMS recruits huge muscle mass simultaneously). High CK is a **marker, not a 1:1 organ-damage proxy.**
+
+**The remarkable datum — self-diagnosis while manic:** Brandon suspected something was wrong from **heart palpitations**, **requested cardiac screening himself**; HR and BP were extremely high, **EKG otherwise fine**, and palpitations/HR/BP are **not** classic rhabdo signs (the triad — muscle pain, weakness, dark urine — were **absent**). He inferred trouble from the *atypical* signal. When the doctor said *"There is a protein in your blood…"*, Brandon completed it: **"Rhabdomyolysis."** The doctor stopped, showed awe, and complimented his intelligence; the **hospital visit profile recorded that Brandon self-diagnosed.** Doctors and sitters recognized his **superior cognition even during the manic state.**
+
+**TI Sigma classification:** **Cognition-preserved-(even-heightened)-during-mania datum** — composes with corpus theme "ADHD/Bipolar as substrate for TI Sigma" (quotes repo §III) and **AIA-1** asymmetric-self-assessment (clinicians + hospital record corroborate capacity *above* the manic-impairment prior). **Evidentiary tier note (#69):** the hospital-profile record + clinician reactions are **contemporaneous third-party documentation** — a genuinely stronger tier than self-report-only biographical entries.
+
+**Aftermath / dose-manageability:** advised never to use WB-EMS again; Brandon **avoided it ~1.5 years, then used it ~1.5 years with no problems.** Prevention keys (lived + literature-consistent): **hydration; gradual buildup (start small first session); adequate recovery (no high-intensity day-after).** Honest report of his outcome, not a recommendation to override medical advice.
+
+**Cross-ref:** §7.7.131 (Pass-66 SRC-1-F-3 N=1 first manic episode anchor), §5.[NEW] (tralse-belief oscillation arc, also rooted in the 2022 manic episode), quotes repo §III (ADHD/Bipolar substrate), replit.md §7.7.264 (Pass-77 B87 ledger).
+
+---

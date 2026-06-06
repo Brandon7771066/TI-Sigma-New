@@ -581,3 +581,15 @@ id = "g6VdVbCIs-ES2CRbRrqRR"
 uri = "file://analyses/pass77_b86_two_corrections/fig2_truth_vs_existence_gap.png"
 type = "image"
 title = "B86 Fig 2 — GTT-1 truth-vs-existence: the BEST option is not the TOUGHEST; 'most-studied / most-salient' ≠ 'irreplaceable'"
+
+[[outputs]]
+id = "qvih4Z5VsnWePhMWfJx5l"
+uri = "file://analyses/pass77_b87_gile_e_hypertrophy/fig1_bottleneck_diagnosis.png"
+type = "image"
+title = "B87 Fig 1 — Muscle-building bottleneck diagnosis (Oura-grounded)"
+
+[[outputs]]
+id = "7BEf9PRPpIiD7GhP2xHKi"
+uri = "file://analyses/pass77_b87_gile_e_hypertrophy/fig2_intake_blind_spot.png"
+type = "image"
+title = "B87 Fig 2 — The intake blind spot (Oura tracks the burn, not the build)"
