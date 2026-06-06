@@ -3,11 +3,8 @@ Copyright (c) 2024 Jz Pan. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jz Pan
 -/
-module
-
-public import Mathlib.Algebra.Group.Submonoid.MulOpposite
-public import Mathlib.Algebra.Ring.Subsemiring.Basic
-public import Mathlib.Algebra.Ring.Opposite
+import Mathlib.Algebra.Group.Submonoid.MulOpposite
+import Mathlib.Algebra.Ring.Subsemiring.Basic
 
 /-!
 
@@ -17,32 +14,33 @@ For every semiring `R`, we construct an equivalence between subsemirings of `R` 
 
 -/
 
-@[expose] public section
-
 namespace Subsemiring
 
 variable {ι : Sort*} {R : Type*} [NonAssocSemiring R]
 
 /-- Pull a subsemiring back to an opposite subsemiring along `MulOpposite.unop` -/
-@[simps! coe toSubmonoid]
+@[simps toSubmonoid]
 protected def op (S : Subsemiring R) : Subsemiring Rᵐᵒᵖ where
   toSubmonoid := S.toSubmonoid.op
-  add_mem' hx hy := by simp_all [add_mem]
+  add_mem' {x} {y} hx hy := add_mem (show x.unop ∈ S from hx) (show y.unop ∈ S from hy)
   zero_mem' := zero_mem S
 
-attribute [norm_cast] coe_op
+@[simp, norm_cast]
+theorem op_coe (S : Subsemiring R) : S.op = MulOpposite.unop ⁻¹' (S : Set R) := rfl
 
 @[simp]
 theorem mem_op {x : Rᵐᵒᵖ} {S : Subsemiring R} : x ∈ S.op ↔ x.unop ∈ S := Iff.rfl
 
 /-- Pull an opposite subsemiring back to a subsemiring along `MulOpposite.op` -/
-@[simps! coe toSubmonoid]
+@[simps toSubmonoid]
 protected def unop (S : Subsemiring Rᵐᵒᵖ) : Subsemiring R where
   toSubmonoid := S.toSubmonoid.unop
-  add_mem' hx hy := by simp_all [add_mem]
+  add_mem' {x} {y} hx hy := add_mem
+    (show MulOpposite.op x ∈ S from hx) (show MulOpposite.op y ∈ S from hy)
   zero_mem' := zero_mem S
 
-attribute [norm_cast] coe_unop
+@[simp, norm_cast]
+theorem unop_coe (S : Subsemiring Rᵐᵒᵖ) : S.unop = MulOpposite.op ⁻¹' (S : Set Rᵐᵒᵖ) := rfl
 
 @[simp]
 theorem mem_unop {x : R} {S : Subsemiring Rᵐᵒᵖ} : x ∈ S.unop ↔ MulOpposite.op x ∈ S := Iff.rfl
@@ -78,37 +76,17 @@ def opEquiv : Subsemiring R ≃o Subsemiring Rᵐᵒᵖ where
   right_inv := op_unop
   map_rel_iff' := op_le_op_iff
 
-theorem op_injective : (@Subsemiring.op R _).Injective := opEquiv.injective
-theorem unop_injective : (@Subsemiring.unop R _).Injective := opEquiv.symm.injective
-
-@[simp] theorem op_inj {S T : Subsemiring R} : S.op = T.op ↔ S = T := opEquiv.eq_iff_eq
-
-@[simp]
-theorem unop_inj {S T : Subsemiring Rᵐᵒᵖ} : S.unop = T.unop ↔ S = T := opEquiv.symm.eq_iff_eq
-
 @[simp]
 theorem op_bot : (⊥ : Subsemiring R).op = ⊥ := opEquiv.map_bot
-
-@[simp]
-theorem op_eq_bot {S : Subsemiring R} : S.op = ⊥ ↔ S = ⊥ := op_injective.eq_iff' op_bot
 
 @[simp]
 theorem unop_bot : (⊥ : Subsemiring Rᵐᵒᵖ).unop = ⊥ := opEquiv.symm.map_bot
 
 @[simp]
-theorem unop_eq_bot {S : Subsemiring Rᵐᵒᵖ} : S.unop = ⊥ ↔ S = ⊥ := unop_injective.eq_iff' unop_bot
+theorem op_top : (⊤ : Subsemiring R).op = ⊤ := opEquiv.map_top
 
 @[simp]
-theorem op_top : (⊤ : Subsemiring R).op = ⊤ := rfl
-
-@[simp]
-theorem op_eq_top {S : Subsemiring R} : S.op = ⊤ ↔ S = ⊤ := op_injective.eq_iff' op_top
-
-@[simp]
-theorem unop_top : (⊤ : Subsemiring Rᵐᵒᵖ).unop = ⊤ := rfl
-
-@[simp]
-theorem unop_eq_top {S : Subsemiring Rᵐᵒᵖ} : S.unop = ⊤ ↔ S = ⊤ := unop_injective.eq_iff' unop_top
+theorem unop_top : (⊤ : Subsemiring Rᵐᵒᵖ).unop = ⊤ := opEquiv.symm.map_top
 
 theorem op_sup (S₁ S₂ : Subsemiring R) : (S₁ ⊔ S₂).op = S₁.op ⊔ S₂.op :=
   opEquiv.map_sup _ _
@@ -116,9 +94,10 @@ theorem op_sup (S₁ S₂ : Subsemiring R) : (S₁ ⊔ S₂).op = S₁.op ⊔ S�
 theorem unop_sup (S₁ S₂ : Subsemiring Rᵐᵒᵖ) : (S₁ ⊔ S₂).unop = S₁.unop ⊔ S₂.unop :=
   opEquiv.symm.map_sup _ _
 
-theorem op_inf (S₁ S₂ : Subsemiring R) : (S₁ ⊓ S₂).op = S₁.op ⊓ S₂.op := rfl
+theorem op_inf (S₁ S₂ : Subsemiring R) : (S₁ ⊓ S₂).op = S₁.op ⊓ S₂.op := opEquiv.map_inf _ _
 
-theorem unop_inf (S₁ S₂ : Subsemiring Rᵐᵒᵖ) : (S₁ ⊓ S₂).unop = S₁.unop ⊓ S₂.unop := rfl
+theorem unop_inf (S₁ S₂ : Subsemiring Rᵐᵒᵖ) : (S₁ ⊓ S₂).unop = S₁.unop ⊓ S₂.unop :=
+  opEquiv.symm.map_inf _ _
 
 theorem op_sSup (S : Set (Subsemiring R)) : (sSup S).op = sSup (.unop ⁻¹' S) :=
   opEquiv.map_sSup_eq_sSup_symm_preimage _
@@ -143,13 +122,14 @@ theorem unop_iInf (S : ι → Subsemiring Rᵐᵒᵖ) : (iInf S).unop = ⨅ i, (
   opEquiv.symm.map_iInf _
 
 theorem op_closure (s : Set R) : (closure s).op = closure (MulOpposite.unop ⁻¹' s) := by
-  simp_rw [closure, op_sInf, Set.preimage_setOf_eq, coe_unop]
+  simp_rw [closure, op_sInf, Set.preimage_setOf_eq, unop_coe]
   congr with a
   exact MulOpposite.unop_surjective.forall
 
 theorem unop_closure (s : Set Rᵐᵒᵖ) : (closure s).unop = closure (MulOpposite.op ⁻¹' s) := by
-  rw [← op_inj, op_unop, op_closure]
-  simp_rw [Set.preimage_preimage, MulOpposite.op_unop, Set.preimage_id']
+  simp_rw [closure, unop_sInf, Set.preimage_setOf_eq, op_coe]
+  congr with a
+  exact MulOpposite.op_surjective.forall
 
 /-- Bijection between a subsemiring `S` and its opposite. -/
 @[simps!]

@@ -3,10 +3,7 @@ Copyright (c) 2024 Kyle Miller. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kyle Miller
 -/
-module
-
-public meta import Lean.Meta.Tactic.Refl
-public import Mathlib.Logic.Basic
+import Mathlib.Logic.Basic
 
 /-!
 # `subsingleton` tactic
@@ -14,10 +11,8 @@ public import Mathlib.Logic.Basic
 The `subsingleton` tactic closes `Eq` or `HEq` goals using an argument
 that the types involved are subsingletons.
 To first approximation, it does `apply Subsingleton.elim` but it also will try `proof_irrel_heq`,
-and it is careful not to accidentally specialize `Sort _` to `Prop`.
+and it is careful not to accidentally specialize `Sort _` to `Prop.
 -/
-
-public meta section
 
 open Lean Meta
 
@@ -101,28 +96,40 @@ def Lean.MVarId.subsingleton (g : MVarId) (insts : Array (Term × AbstractMVarsR
       if ← (Meta.isProp xTy <&&> Meta.isProp yTy) then
         g.assign <| mkApp4 (.const ``proof_irrel_heq []) xTy yTy x y
         return
-      throwError "tactic 'subsingleton' could not prove heterogeneous equality"
-    throwError "tactic 'subsingleton' failed, goal is neither an equality nor a \
-      heterogeneous equality"
+      throwError "tactic 'subsingleton' could not prove heterogenous equality"
+    throwError "tactic 'subsingleton' failed, goal is neither an equality nor heterogenous equality"
 
 namespace Mathlib.Tactic
 
 /--
-`subsingleton` proves the main goal of the form `∀ a ... b, x = y` or `∀ a ... b, x ≍ y` using the
-fact that the type(s) of `x` and `y` are *subsingletons* (a type with exactly zero or one elements).
-If `subsingleton` cannot close the goal, it fails.
+The `subsingleton` tactic tries to prove a goal of the form `x = y` or `HEq x y`
+using the fact that the types involved are *subsingletons*
+(a type with exactly zero or one terms).
+To a first approximation, it does `apply Subsingleton.elim`.
+As a nicety, `subsingleton` first runs the `intros` tactic.
 
-Techniques the `subsingleton` tactic can apply:
-- proof irrelevance
-- heterogeneous proof irrelevance (via `proof_irrel_heq`)
-- using `Subsingleton` (via `Subsingleton.elim`)
-- proving instances of the type `BEq α` are equal if they are both lawful
-  (via `lawful_beq_subsingleton`)
-
-* `subsingleton [inst1, inst2, ...]` can be used to add additional `Subsingleton` instances
+- If the goal is an equality, it either closes the goal or fails.
+- `subsingleton [inst1, inst2, ...]` can be used to add additional `Subsingleton` instances
   to the local context. This can be more flexible than
   `have := inst1; have := inst2; ...; subsingleton` since the tactic does not require that
   all placeholders be solved for.
+
+Techniques the `subsingleton` tactic can apply:
+- proof irrelevance
+- heterogenous proof irrelevance (via `proof_irrel_heq`)
+- using `Subsingleton` (via `Subsingleton.elim`)
+- proving `BEq` instances are equal if they are both lawful (via `lawful_beq_subsingleton`)
+
+### Properties
+
+The tactic is careful not to accidentally specialize `Sort _` to `Prop`,
+avoiding the following surprising behavior of `apply Subsingleton.elim`:
+```lean
+example (α : Sort _) (x y : α) : x = y := by apply Subsingleton.elim
+```
+The reason this `example` goes through is that
+it applies the `∀ (p : Prop), Subsingleton p` instance,
+specializing the universe level metavariable in `Sort _` to `0`.
 -/
 syntax (name := subsingletonStx) "subsingleton" (ppSpace "[" term,* "]")? : tactic
 
@@ -165,7 +172,7 @@ where
                 mkLambdaFVars args (r.expr.beta args)
             pure { r with expr := e' }
           else
-            pure { paramNames := #[], mvars := #[], expr := e }
+            pure { paramNames := #[], numMVars := 0, expr := e }
       go instTerms (insts.push (instTerm, inst))
 
 elab_rules : tactic

@@ -3,10 +3,8 @@ Copyright (c) 2023 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.DualNumber
-public import Mathlib.Algebra.Quaternion
+import Mathlib.Algebra.DualNumber
+import Mathlib.Algebra.Quaternion
 
 /-!
 # Dual quaternions
@@ -24,8 +22,6 @@ rigid motions in 3D space can be represented by dual quaternions of unit length.
 * <https://en.wikipedia.org/wiki/Dual_quaternion>
 -/
 
-@[expose] public section
-
 
 variable {R : Type*} [CommRing R]
 
@@ -40,16 +36,20 @@ def dualNumberEquiv : Quaternion (DualNumber R) ≃ₐ[R] DualNumber (Quaternion
     (⟨q.re.fst, q.imI.fst, q.imJ.fst, q.imK.fst⟩, ⟨q.re.snd, q.imI.snd, q.imJ.snd, q.imK.snd⟩)
   invFun d :=
     ⟨(d.fst.re, d.snd.re), (d.fst.imI, d.snd.imI), (d.fst.imJ, d.snd.imJ), (d.fst.imK, d.snd.imK)⟩
+  left_inv := fun ⟨⟨r, rε⟩, ⟨i, iε⟩, ⟨j, jε⟩, ⟨k, kε⟩⟩ => rfl
+  right_inv := fun ⟨⟨r, i, j, k⟩, ⟨rε, iε, jε, kε⟩⟩ => rfl
   map_mul' := by
-    intros
+    rintro ⟨⟨xr, xrε⟩, ⟨xi, xiε⟩, ⟨xj, xjε⟩, ⟨xk, xkε⟩⟩
+    rintro ⟨⟨yr, yrε⟩, ⟨yi, yiε⟩, ⟨yj, yjε⟩, ⟨yk, ykε⟩⟩
     ext : 1
     · rfl
     · dsimp
       congr 1 <;> simp <;> ring
   map_add' := by
-    intros
+    rintro ⟨⟨xr, xrε⟩, ⟨xi, xiε⟩, ⟨xj, xjε⟩, ⟨xk, xkε⟩⟩
+    rintro ⟨⟨yr, yrε⟩, ⟨yi, yiε⟩, ⟨yj, yjε⟩, ⟨yk, ykε⟩⟩
     rfl
-  commutes' _ := rfl
+  commutes' r := rfl
 
 /-! Lemmas characterizing `Quaternion.dualNumberEquiv`. -/
 

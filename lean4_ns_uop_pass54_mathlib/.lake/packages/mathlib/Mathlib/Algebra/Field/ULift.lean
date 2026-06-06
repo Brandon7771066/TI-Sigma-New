@@ -3,24 +3,20 @@ Copyright (c) 2023 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Field.Defs
-public import Mathlib.Algebra.GroupWithZero.ULift
-public import Mathlib.Algebra.Ring.ULift
+import Mathlib.Algebra.Field.Defs
+import Mathlib.Algebra.GroupWithZero.ULift
+import Mathlib.Algebra.Ring.ULift
 
 /-!
 # Field instances for `ULift`
 
-This file defines instances for fields, semifields, and related structures on `ULift` types.
+This file defines instances for field, semifield and related structures on `ULift` types.
 
 (Recall `ULift α` is just a "copy" of a type `α` in a higher universe.)
 -/
 
-@[expose] public section
-
-universe u
-variable {α : Type u}
+universe u v
+variable {α : Type u} {x y : ULift.{v} α}
 
 namespace ULift
 
@@ -33,7 +29,8 @@ instance instRatCast [RatCast α] : RatCast (ULift α) where ratCast q := up q
 @[simp, norm_cast] lemma down_ratCast [RatCast α] (q : ℚ) : down (q : ULift α) = q := rfl
 
 instance divisionSemiring [DivisionSemiring α] : DivisionSemiring (ULift α) where
-  nnqsmul q x := up (DivisionSemiring.nnqsmul q x.down)
+  toSemiring := semiring
+  __ := groupWithZero
   nnqsmul_def _ _ := congrArg up <| DivisionSemiring.nnqsmul_def _ _
   nnratCast_def _ := congrArg up <| DivisionSemiring.nnratCast_def _
 
@@ -43,13 +40,12 @@ instance semifield [Semifield α] : Semifield (ULift α) :=
 instance divisionRing [DivisionRing α] : DivisionRing (ULift α) where
   toRing := ring
   __ := groupWithZero
-  nnqsmul q x := up (DivisionSemiring.nnqsmul q x.down)
   nnqsmul_def _ _ := congrArg up <| DivisionSemiring.nnqsmul_def _ _
   nnratCast_def _ := congrArg up <| DivisionSemiring.nnratCast_def _
-  qsmul q x := up (DivisionRing.qsmul q x.down)
   qsmul_def _ _ := congrArg up <| DivisionRing.qsmul_def _ _
   ratCast_def _ := congrArg up <| DivisionRing.ratCast_def _
 
-instance field [Field α] : Field (ULift α) := {}
+instance field [Field α] : Field (ULift α) :=
+  { ULift.semifield, ULift.divisionRing with }
 
 end ULift

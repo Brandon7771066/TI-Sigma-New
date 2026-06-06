@@ -3,11 +3,9 @@ Copyright (c) 2024 Christian Merten. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Christian Merten
 -/
-module
-
-public import Mathlib.LinearAlgebra.TensorProduct.RightExactness
-public import Mathlib.RingTheory.FinitePresentation
-public import Mathlib.RingTheory.TensorProduct.MvPolynomial
+import Mathlib.LinearAlgebra.TensorProduct.RightExactness
+import Mathlib.RingTheory.FinitePresentation
+import Mathlib.RingTheory.TensorProduct.MvPolynomial
 
 /-!
 
@@ -17,8 +15,6 @@ In this file we show that `Algebra.FiniteType` and `Algebra.FinitePresentation` 
 stable under base change.
 
 -/
-
-public section
 
 open scoped TensorProduct
 
@@ -34,7 +30,7 @@ namespace FiniteType
 
 theorem baseChangeAux_surj {σ : Type*} {f : MvPolynomial σ R →ₐ[R] A} (hf : Function.Surjective f) :
     Function.Surjective (Algebra.TensorProduct.map (AlgHom.id B B) f) := by
-  change Function.Surjective (TensorProduct.map (AlgHom.id R B) f)
+  show Function.Surjective (TensorProduct.map (AlgHom.id R B) f)
   apply TensorProduct.map_surjective
   · exact Function.RightInverse.surjective (congrFun rfl)
   · exact hf
@@ -66,7 +62,7 @@ instance baseChange [FinitePresentation R A] : FinitePresentation B (B ⊗[R] A)
     AlgHom.comp g (MvPolynomial.algebraTensorAlgEquiv R B).symm.toAlgHom
   refine ⟨n, g', ?_, Ideal.fg_ker_comp _ _ ?_ hfgg ?_⟩
   · simp_all [g, g']
-  · change Ideal.FG (RingHom.ker (AlgEquiv.symm (MvPolynomial.algebraTensorAlgEquiv R B)))
+  · show Ideal.FG (RingHom.ker (AlgEquiv.symm (MvPolynomial.algebraTensorAlgEquiv R B)))
     simp only [RingHom.ker_equiv]
     exact Submodule.fg_bot
   · simpa using EquivLike.surjective _

@@ -3,20 +3,16 @@ Copyright (c) 2020 Kenny Lau. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kenny Lau
 -/
-module
-
-public import Mathlib.Algebra.GroupWithZero.Action.Basic
-public import Mathlib.Algebra.Ring.Action.Basic
-public import Mathlib.Algebra.Ring.Equiv
+import Mathlib.Algebra.Ring.Action.Basic
+import Mathlib.GroupTheory.GroupAction.Group
+import Mathlib.Algebra.Ring.Equiv
 
 /-!
 # If a group acts multiplicatively on a semiring, each group element acts by a ring automorphism.
 
-This result is split out from `Mathlib/Algebra/Ring/Action/Basic.lean`
-to avoid needing the import of `Mathlib/Algebra/GroupWithZero/Action/Basic.lean`.
+This result is split out from `Mathlib.Algebra.Ring.Action.Basic`
+to avoid needing the import of `Mathlib.GroupTheory.GroupAction.Group`.
 -/
-
-@[expose] public section
 
 section Semiring
 

@@ -1,16 +1,12 @@
 /-
-Copyright (c) 2022 Kim Morrison. All rights reserved.
+Copyright (c) 2022. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison, Yuma Mizuno, Oleksandr Manzyuk
+Authors: Scott Morrison, Yuma Mizuno, Oleksandr Manzyuk
 -/
-module
-
-public meta import Mathlib.Lean.Meta
-public import Mathlib.CategoryTheory.Monoidal.Free.Basic
-public meta import Mathlib.CategoryTheory.Monoidal.Free.Basic
-public import Mathlib.Lean.Meta
-public import Mathlib.Tactic.CategoryTheory.BicategoryCoherence
-public import Mathlib.Tactic.CategoryTheory.MonoidalComp
+import Mathlib.CategoryTheory.Monoidal.Free.Coherence
+import Mathlib.Lean.Meta
+import Mathlib.Tactic.CategoryTheory.BicategoryCoherence
+import Mathlib.Tactic.CategoryTheory.MonoidalComp
 
 /-!
 # A `coherence` tactic for monoidal categories
@@ -27,8 +23,6 @@ are equal.
 
 -/
 
-public meta section
-
 universe v u
 
 open CategoryTheory FreeMonoidalCategory
@@ -37,75 +31,65 @@ open CategoryTheory FreeMonoidalCategory
 -- we put everything inside a namespace.
 namespace Mathlib.Tactic.Coherence
 
-variable {C : Type u} [Category.{v} C]
+variable {C : Type u} [Category.{v} C] [MonoidalCategory C]
 open scoped MonoidalCategory
 
 noncomputable section lifting
-
-variable [MonoidalCategory C]
 
 /-- A typeclass carrying a choice of lift of an object from `C` to `FreeMonoidalCategory C`.
 It must be the case that `projectObj id (LiftObj.lift x) = x` by defeq. -/
 class LiftObj (X : C) where
   protected lift : FreeMonoidalCategory C
 
-namespace LiftObj
+instance LiftObj_unit : LiftObj (𝟙_ C) := ⟨unit⟩
 
-nonrec instance unit : LiftObj (𝟙_ C) := ⟨unit⟩
-
-instance tensor (X Y : C) [LiftObj X] [LiftObj Y] : LiftObj (X ⊗ Y) where
+instance LiftObj_tensor (X Y : C) [LiftObj X] [LiftObj Y] : LiftObj (X ⊗ Y) where
   lift := LiftObj.lift X ⊗ LiftObj.lift Y
 
-nonrec instance (priority := 100) of (X : C) : LiftObj X := ⟨of X⟩
-
-end LiftObj
+instance (priority := 100) LiftObj_of (X : C) : LiftObj X := ⟨of X⟩
 
 /-- A typeclass carrying a choice of lift of a morphism from `C` to `FreeMonoidalCategory C`.
 It must be the case that `projectMap id _ _ (LiftHom.lift f) = f` by defeq. -/
 class LiftHom {X Y : C} [LiftObj X] [LiftObj Y] (f : X ⟶ Y) where
   protected lift : LiftObj.lift X ⟶ LiftObj.lift Y
 
-namespace LiftHom
+instance LiftHom_id (X : C) [LiftObj X] : LiftHom (𝟙 X) := ⟨𝟙 _⟩
 
-instance id (X : C) [LiftObj X] : LiftHom (𝟙 X) := ⟨𝟙 _⟩
-
-instance leftUnitorHom (X : C) [LiftObj X] : LiftHom (λ_ X).hom where
+instance LiftHom_left_unitor_hom (X : C) [LiftObj X] : LiftHom (λ_ X).hom where
   lift := (λ_ (LiftObj.lift X)).hom
 
-instance leftUnitorInv (X : C) [LiftObj X] : LiftHom (λ_ X).inv where
+instance LiftHom_left_unitor_inv (X : C) [LiftObj X] : LiftHom (λ_ X).inv where
   lift := (λ_ (LiftObj.lift X)).inv
 
-instance rightUnitorHom (X : C) [LiftObj X] : LiftHom (ρ_ X).hom where
+instance LiftHom_right_unitor_hom (X : C) [LiftObj X] : LiftHom (ρ_ X).hom where
   lift := (ρ_ (LiftObj.lift X)).hom
 
-instance rightUnitorInv (X : C) [LiftObj X] : LiftHom (ρ_ X).inv where
+instance LiftHom_right_unitor_inv (X : C) [LiftObj X] : LiftHom (ρ_ X).inv where
   lift := (ρ_ (LiftObj.lift X)).inv
 
-instance associatorHom (X Y Z : C) [LiftObj X] [LiftObj Y] [LiftObj Z] :
+instance LiftHom_associator_hom (X Y Z : C) [LiftObj X] [LiftObj Y] [LiftObj Z] :
     LiftHom (α_ X Y Z).hom where
   lift := (α_ (LiftObj.lift X) (LiftObj.lift Y) (LiftObj.lift Z)).hom
 
-instance associatorInv (X Y Z : C) [LiftObj X] [LiftObj Y] [LiftObj Z] :
+instance LiftHom_associator_inv (X Y Z : C) [LiftObj X] [LiftObj Y] [LiftObj Z] :
     LiftHom (α_ X Y Z).inv where
   lift := (α_ (LiftObj.lift X) (LiftObj.lift Y) (LiftObj.lift Z)).inv
 
-instance comp {X Y Z : C} [LiftObj X] [LiftObj Y] [LiftObj Z] (f : X ⟶ Y) (g : Y ⟶ Z)
+instance LiftHom_comp {X Y Z : C} [LiftObj X] [LiftObj Y] [LiftObj Z] (f : X ⟶ Y) (g : Y ⟶ Z)
     [LiftHom f] [LiftHom g] : LiftHom (f ≫ g) where
   lift := LiftHom.lift f ≫ LiftHom.lift g
 
-instance whiskerLeft (X : C) [LiftObj X] {Y Z : C} [LiftObj Y] [LiftObj Z]
+instance liftHom_WhiskerLeft (X : C) [LiftObj X] {Y Z : C} [LiftObj Y] [LiftObj Z]
     (f : Y ⟶ Z) [LiftHom f] : LiftHom (X ◁ f) where
   lift := LiftObj.lift X ◁ LiftHom.lift f
 
-instance whiskerRight {X Y : C} (f : X ⟶ Y) [LiftObj X] [LiftObj Y] [LiftHom f]
+instance liftHom_WhiskerRight {X Y : C} (f : X ⟶ Y) [LiftObj X] [LiftObj Y] [LiftHom f]
     {Z : C} [LiftObj Z] : LiftHom (f ▷ Z) where
   lift := LiftHom.lift f ▷ LiftObj.lift Z
 
-instance tensor {W X Y Z : C} [LiftObj W] [LiftObj X] [LiftObj Y] [LiftObj Z]
-    (f : W ⟶ X) (g : Y ⟶ Z) [LiftHom f] [LiftHom g] : LiftHom (f ⊗ₘ g) where
-  lift := LiftHom.lift f ⊗ₘ LiftHom.lift g
-
-end LiftHom
+instance LiftHom_tensor {W X Y Z : C} [LiftObj W] [LiftObj X] [LiftObj Y] [LiftObj Z]
+    (f : W ⟶ X) (g : Y ⟶ Z) [LiftHom f] [LiftHom g] : LiftHom (f ⊗ g) where
+  lift := LiftHom.lift f ⊗ LiftHom.lift g
 
 end lifting
 
@@ -132,13 +116,11 @@ def mkProjectMapExpr (e : Expr) : TermElabM Expr := do
     none
 
 /-- Coherence tactic for monoidal categories. -/
-def monoidalCoherence (g : MVarId) : TermElabM Unit := g.withContext do
+def monoidal_coherence (g : MVarId) : TermElabM Unit := g.withContext do
   withOptions (fun opts => synthInstance.maxSize.set opts
     (max 512 (synthInstance.maxSize.get opts))) do
-  let thms := [``MonoidalCoherence.iso, ``Iso.trans, ``Iso.symm, ``Iso.refl,
-    ``MonoidalCategory.whiskerRightIso, ``MonoidalCategory.whiskerLeftIso].foldl
-    (·.addDeclToUnfoldCore ·) {}
-  let (ty, _) ← dsimp (← g.getType) (← Simp.mkContext (simpTheorems := #[thms]))
+  -- TODO: is this `dsimp only` step necessary? It doesn't appear to be in the tests below.
+  let (ty, _) ← dsimp (← g.getType) (← Simp.Context.ofNames [] true)
   let some (_, lhs, rhs) := (← whnfR ty).eq? | exception g "Not an equation of morphisms."
   let projectMap_lhs ← mkProjectMapExpr lhs
   let projectMap_rhs ← mkProjectMapExpr rhs
@@ -150,23 +132,17 @@ def monoidalCoherence (g : MVarId) : TermElabM Unit := g.withContext do
   let [] ← g₂.applyConst ``Subsingleton.elim
     | exception g "This shouldn't happen; Subsingleton.elim does not create goals."
 
-@[deprecated (since := "2026-05-27")] alias monoidal_coherence := monoidalCoherence
+/-- Coherence tactic for monoidal categories.
+Use `pure_coherence` instead, which is a frontend to this one. -/
+elab "monoidal_coherence" : tactic => do monoidal_coherence (← getMainGoal)
 
 open Mathlib.Tactic.BicategoryCoherence
-
-/--
-If set to `false`, the warning on the use of the deprecated coherence tactic is disabled.
--/
-register_option warn.refl_coherence : Bool := {
-  defValue := true
-  descr := "warn when the deprecated coherence tactic is used"
-}
 
 /--
 `pure_coherence` uses the coherence theorem for monoidal categories to prove the goal.
 It can prove any equality made up only of associators, unitors, and identities.
 ```lean
-example {C : Type} [Category* C] [MonoidalCategory C] :
+example {C : Type} [Category C] [MonoidalCategory C] :
   (λ_ (𝟙_ C)).hom = (ρ_ (𝟙_ C)).hom := by
   pure_coherence
 ```
@@ -177,18 +153,8 @@ which can also cope with identities of the form
 where `a = a'`, `b = b'`, and `c = c'` can be proved using `pure_coherence`
 -/
 elab (name := pure_coherence) "pure_coherence" : tactic => do
-  if warn.refl_coherence.get (← getOptions) then
-    Lean.logWarning
-      "Usually, use `monoidal` or `bicategory` instead, depending on the context. \
-    They are given in `Mathlib.Tactic.CategoryTheory.Monoidal.Basic` and \
-    `Mathlib.Tactic.CategoryTheory.Bicategory.Basic.lean` respectively."
   let g ← getMainGoal
-  monoidalCoherence g <|> bicategoryCoherence g
-
-/-- The same as `pure_coherence`, but used internally in `coherence` without the warning. -/
-elab (name := pure_coherence_internal) "pure_coherence_internal" : tactic => do
-  let g ← getMainGoal
-  monoidalCoherence g <|> bicategoryCoherence g
+  monoidal_coherence g <|> bicategory_coherence g
 
 /--
 Auxiliary simp lemma for the `coherence` tactic:
@@ -215,20 +181,17 @@ elab (name := liftable_prefixes) "liftable_prefixes" : tactic => do
   withOptions (fun opts => synthInstance.maxSize.set opts
     (max 256 (synthInstance.maxSize.get opts))) do
   evalTactic (← `(tactic|
-    (simp -failIfUnchanged only
-      [monoidalComp, bicategoricalComp, Category.assoc, BicategoricalCoherence.iso,
-      MonoidalCoherence.iso, Iso.trans, Iso.symm, Iso.refl,
-      MonoidalCategory.whiskerRightIso, MonoidalCategory.whiskerLeftIso,
-      Bicategory.whiskerRightIso, Bicategory.whiskerLeftIso]) <;>
+    (simp (config := {failIfUnchanged := false}) only
+      [monoidalComp, Category.assoc, MonoidalCoherence.hom]) <;>
     (apply (cancel_epi (𝟙 _)).1 <;> try infer_instance) <;>
-    (simp -failIfUnchanged only
+    (simp (config := {failIfUnchanged := false}) only
       [assoc_liftHom, Mathlib.Tactic.BicategoryCoherence.assoc_liftHom₂])))
 
-lemma insert_id_lhs {C : Type*} [Category* C] {X Y : C} (f g : X ⟶ Y) (w : f ≫ 𝟙 _ = g) :
+lemma insert_id_lhs {C : Type*} [Category C] {X Y : C} (f g : X ⟶ Y) (w : f ≫ 𝟙 _ = g) :
     f = g := by
   simpa using w
 
-lemma insert_id_rhs {C : Type*} [Category* C] {X Y : C} (f g : X ⟶ Y) (w : f = g ≫ 𝟙 _) :
+lemma insert_id_rhs {C : Type*} [Category C] {X Y : C} (f g : X ⟶ Y) (w : f = g ≫ 𝟙 _) :
     f = g := by
   simpa using w
 
@@ -248,13 +211,13 @@ def insertTrailingIds (g : MVarId) : MetaM MVarId := do
 -- Porting note: this is an ugly port, using too many `evalTactic`s.
 -- We can refactor later into either a `macro` (but the flow control is awkward)
 -- or a `MetaM` tactic.
-def coherenceLoop (maxSteps := 37) : TacticM Unit :=
+def coherence_loop (maxSteps := 37) : TacticM Unit :=
   match maxSteps with
   | 0 => exception' "`coherence` tactic reached iteration limit"
   | maxSteps' + 1 => do
     -- To prove an equality `f = g` in a monoidal category,
     -- first try the `pure_coherence` tactic on the entire equation:
-    evalTactic (← `(tactic| pure_coherence_internal)) <|> do
+    evalTactic (← `(tactic| pure_coherence)) <|> do
     -- Otherwise, rearrange so we have a maximal prefix of each side
     -- that is built out of unitors and associators:
     evalTactic (← `(tactic| liftable_prefixes)) <|>
@@ -264,7 +227,7 @@ def coherenceLoop (maxSteps := 37) : TacticM Unit :=
     liftMetaTactic MVarId.congrCore
     -- and now we have two goals `f₀ = g₀` and `f₁ = g₁`.
     -- Discharge the first using `coherence`,
-    evalTactic (← `(tactic| { pure_coherence_internal })) <|>
+    evalTactic (← `(tactic| { pure_coherence })) <|>
       exception' "`coherence` tactic failed, subgoal not true in the free monoidal category"
     -- Then check that either `g₀` is identically `g₁`,
     evalTactic (← `(tactic| rfl)) <|> do
@@ -275,22 +238,20 @@ def coherenceLoop (maxSteps := 37) : TacticM Unit :=
       evalTactic (← `(tactic| rfl)) <|>
         exception' "`coherence` tactic failed, non-structural morphisms don't match"
       -- and whose second terms can be identified by recursively called `coherence`.
-      coherenceLoop maxSteps'
-
-@[deprecated (since := "2026-05-27")] alias coherence_loop := coherenceLoop
+      coherence_loop maxSteps'
 
 open Lean.Parser.Tactic
 
 /--
-Simp lemmas for rewriting a hom in monoidal categories into a normal form.
+Simp lemmas for rewriting a hom in monoical categories into a normal form.
 -/
-syntax (name := monoidal_simps) "monoidal_simps" optConfig : tactic
+syntax (name := monoidal_simps) "monoidal_simps" (config)? : tactic
 
 @[inherit_doc monoidal_simps]
 elab_rules : tactic
-| `(tactic| monoidal_simps $cfg:optConfig) => do
+| `(tactic| monoidal_simps $[$cfg]?) => do
   evalTactic (← `(tactic|
-    simp $cfg only [
+    simp $[$cfg]? only [
       Category.assoc, MonoidalCategory.tensor_whiskerLeft, MonoidalCategory.id_whiskerLeft,
       MonoidalCategory.whiskerRight_tensor, MonoidalCategory.whiskerRight_id,
       MonoidalCategory.whiskerLeft_comp, MonoidalCategory.whiskerLeft_id,
@@ -320,17 +281,16 @@ syntax (name := coherence) "coherence" : tactic
 @[inherit_doc coherence]
 elab_rules : tactic
 | `(tactic| coherence) => do
-  if warn.refl_coherence.get (← getOptions) then
-    Lean.logWarning
-      "Usually, use `monoidal` or `bicategory` instead, depending on the context. \
-    They are given in `Mathlib.Tactic.CategoryTheory.Monoidal.Basic` and \
-    `Mathlib.Tactic.CategoryTheory.Bicategory.Basic.lean` respectively."
   evalTactic (← `(tactic|
-    (simp -failIfUnchanged only [bicategoricalComp, monoidalComp]);
-    whisker_simps -failIfUnchanged;
-    monoidal_simps -failIfUnchanged))
-  coherenceLoop
+    (simp (config := {failIfUnchanged := false}) only [bicategoricalComp,
+      BicategoricalCoherence.hom,
+      monoidalComp]);
+    whisker_simps (config := {failIfUnchanged := false});
+    monoidal_simps (config := {failIfUnchanged := false})))
+  coherence_loop
 
 end Coherence
 
-end Mathlib.Tactic
+end Tactic
+
+end Mathlib

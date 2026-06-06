@@ -3,14 +3,10 @@ Copyright (c) 2020 Johan Commelin. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johan Commelin
 -/
-module
-
-public import Mathlib.Algebra.CharZero.Defs
-public import Mathlib.Data.Fintype.EquivFin
+import Mathlib.Algebra.CharZero.Defs
+import Mathlib.Data.Fintype.Card
 
 /-! # A characteristic-zero semiring is infinite -/
-
-public section
 
 
 open Set

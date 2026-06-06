@@ -3,19 +3,14 @@ Copyright (c) 2018 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro, Evgenia Karunus, Kyle Miller
 -/
-module
-
-public meta import Lean.Meta.Basic
-public meta import Mathlib.Tactic.Explode.Datatypes
-public import Mathlib.Tactic.Explode.Datatypes
+import Lean.Meta.Basic
+import Mathlib.Tactic.Explode.Datatypes
 
 /-!
 # Explode command: pretty
 
 This file contains UI code to render the Fitch table.
 -/
-
-public meta section
 
 open Lean
 namespace Mathlib.Explode
@@ -68,7 +63,3 @@ def entriesToMessageData (entries : Entries) : MetaM MessageData := do
   let paddedThms ← padRight <| entries.l.map (·.thm)
 
   rowToMessageData paddedLines paddedDeps paddedThms entries.l
-
-end Explode
-
-end Mathlib

@@ -1,13 +1,11 @@
 /-
 Copyright (c) 2018 Chris Hughes. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Chris Hughes, Johannes Hölzl, Kim Morrison, Jens Wagemaker
+Authors: Chris Hughes, Johannes Hölzl, Scott Morrison, Jens Wagemaker
 -/
-module
-
-public import Mathlib.Algebra.Polynomial.Derivative
-public import Mathlib.Tactic.LinearCombination
-public import Mathlib.Tactic.Ring
+import Mathlib.Algebra.Polynomial.Derivative
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Ring
 
 /-!
 # Theory of univariate polynomials
@@ -15,12 +13,12 @@ public import Mathlib.Tactic.Ring
 The main def is `Polynomial.binomExpansion`.
 -/
 
-@[expose] public section
-
 
 noncomputable section
 
 namespace Polynomial
+
+open Polynomial
 
 universe u v w x y z
 
@@ -33,7 +31,7 @@ section Identities
   These belong somewhere else. But not in group_power because they depend on tactic.ring_exp
 
   Maybe use `Data.Nat.Choose` to prove it.
--/
+ -/
 /-- `(x + y)^n` can be expressed as `x^n + n*x^(n-1)*y + k * y^2` for some `k` in the ring.
 -/
 def powAddExpansion {R : Type*} [CommSemiring R] (x y : R) :
@@ -41,7 +39,7 @@ def powAddExpansion {R : Type*} [CommSemiring R] (x y : R) :
   | 0 => ⟨0, by simp⟩
   | 1 => ⟨0, by simp⟩
   | n + 2 => by
-    obtain ⟨z, hz⟩ := (powAddExpansion x y (n + 1))
+    cases' (powAddExpansion x y (n + 1)) with z hz
     exists x * z + (n + 1) * x ^ n + z * y
     calc
       (x + y) ^ (n + 2) = (x + y) * (x + y) ^ (n + 1) := by ring
@@ -52,7 +50,6 @@ def powAddExpansion {R : Type*} [CommSemiring R] (x y : R) :
 
 variable [CommRing R]
 
-set_option backward.privateInPublic true in
 private def polyBinomAux1 (x y : R) (e : ℕ) (a : R) :
     { k : R // a * (x + y) ^ e = a * (x ^ e + e * x ^ (e - 1) * y + k * y ^ 2) } := by
   exists (powAddExpansion x y e).val
@@ -65,7 +62,6 @@ private theorem poly_binom_aux2 (f : R[X]) (x y : R) :
   unfold eval; rw [eval₂_eq_sum]; congr with (n z)
   apply (polyBinomAux1 x y _ _).property
 
-set_option backward.privateInPublic true in
 private theorem poly_binom_aux3 (f : R[X]) (x y : R) :
     f.eval (x + y) =
       ((f.sum fun e a => a * x ^ e) + f.sum fun e a => a * e * x ^ (e - 1) * y) +
@@ -73,8 +69,6 @@ private theorem poly_binom_aux3 (f : R[X]) (x y : R) :
   rw [poly_binom_aux2]
   simp [left_distrib, sum_add, mul_assoc]
 
-set_option backward.privateInPublic true in
-set_option backward.privateInPublic.warn false in
 /-- A polynomial `f` evaluated at `x + y` can be expressed as
 the evaluation of `f` at `x`, plus `y` times the (polynomial) derivative of `f` at `x`,
 plus some element `k : R` times `y^2`.
@@ -95,7 +89,7 @@ def powSubPowFactor (x y : R) : ∀ i : ℕ, { z : R // x ^ i - y ^ i = z * (x -
   | 0 => ⟨0, by simp⟩
   | 1 => ⟨1, by simp⟩
   | k + 2 => by
-    obtain ⟨z, hz⟩ := @powSubPowFactor x y (k + 1)
+    cases' @powSubPowFactor x y (k + 1) with z hz
     exists z * x + y ^ (k + 1)
     linear_combination (norm := ring) x * hz
 

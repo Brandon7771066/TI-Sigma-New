@@ -3,9 +3,7 @@ Copyright (c) 2021 Lu-Ming Zhang. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Lu-Ming Zhang
 -/
-module
-
-public import Mathlib.Data.Matrix.Mul
+import Mathlib.Data.Matrix.Basic
 
 /-!
 # Orthogonal
@@ -24,9 +22,6 @@ This file contains definitions and properties concerning orthogonality of rows a
 orthogonal
 -/
 
-@[expose] public section
-
-assert_not_exists Field
 
 namespace Matrix
 
@@ -37,12 +32,12 @@ variable (A : Matrix m n α)
 open Matrix
 
 /-- `A.HasOrthogonalRows` means matrix `A` has orthogonal rows (with respect to
-`dotProduct`). -/
+`Matrix.dotProduct`). -/
 def HasOrthogonalRows [Fintype n] : Prop :=
-  ∀ ⦃i₁ i₂⦄, i₁ ≠ i₂ → A i₁ ⬝ᵥ A i₂ = 0
+  ∀ ⦃i₁ i₂⦄, i₁ ≠ i₂ → dotProduct (A i₁) (A i₂) = 0
 
 /-- `A.HasOrthogonalCols` means matrix `A` has orthogonal columns (with respect to
-`dotProduct`). -/
+`Matrix.dotProduct`). -/
 def HasOrthogonalCols [Fintype m] : Prop :=
   HasOrthogonalRows Aᵀ
 

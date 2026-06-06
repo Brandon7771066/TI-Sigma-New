@@ -3,24 +3,18 @@ Copyright (c) 2024 Shanghe Chen. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Shanghe Chen
 -/
-module
-
-public import Mathlib.CategoryTheory.Products.Basic
-public import Mathlib.CategoryTheory.Discrete.Basic
+import Mathlib.CategoryTheory.Products.Basic
+import Mathlib.CategoryTheory.DiscreteCategory
 
 /-!
 # The left/right unitor equivalences `1 × C ≌ C` and `C × 1 ≌ C`.
 -/
-
-@[expose] public section
 
 universe w v u
 
 open CategoryTheory
 
 namespace CategoryTheory.prod
-
-open scoped Prod
 
 variable (C : Type u) [Category.{v} C]
 
@@ -40,16 +34,15 @@ def rightUnitor : C × Discrete (PUnit : Type w) ⥤ C where
 @[simps]
 def leftInverseUnitor : C ⥤ Discrete (PUnit : Type w) × C where
   obj X := ⟨⟨PUnit.unit⟩, X⟩
-  map f := 𝟙 _ ×ₘ f
+  map f := ⟨𝟙 _, f⟩
 
 /-- The right inverse unitor `C ⥤ C × 1` -/
 @[simps]
 def rightInverseUnitor : C ⥤ C × Discrete (PUnit : Type w) where
   obj X := ⟨X, ⟨PUnit.unit⟩⟩
-  map f := f ×ₘ 𝟙 _
+  map f := ⟨f, 𝟙 _⟩
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The equivalence of categories expressing left unity of products of categories. -/
+/-- The equivalence of categories expressing left unity of products of categories.  -/
 @[simps]
 def leftUnitorEquivalence : Discrete (PUnit : Type w) × C ≌ C where
   functor := leftUnitor C
@@ -57,8 +50,7 @@ def leftUnitorEquivalence : Discrete (PUnit : Type w) × C ≌ C where
   unitIso := Iso.refl _
   counitIso := Iso.refl _
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The equivalence of categories expressing right unity of products of categories. -/
+/-- The equivalence of categories expressing right unity of products of categories.  -/
 @[simps]
 def rightUnitorEquivalence : C × Discrete (PUnit : Type w) ≌ C where
   functor := rightUnitor C

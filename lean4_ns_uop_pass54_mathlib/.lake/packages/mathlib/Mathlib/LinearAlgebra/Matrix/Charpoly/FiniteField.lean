@@ -3,17 +3,13 @@ Copyright (c) 2020 Aaron Anderson, Jalex Stark. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Aaron Anderson, Jalex Stark
 -/
-module
-
-public import Mathlib.FieldTheory.Finite.Basic
-public import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
-public import Mathlib.LinearAlgebra.Matrix.CharP
+import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
+import Mathlib.FieldTheory.Finite.Basic
+import Mathlib.Data.Matrix.CharP
 
 /-!
 # Results on characteristic polynomials and traces over finite fields.
 -/
-
-public section
 
 
 noncomputable section
@@ -28,7 +24,7 @@ variable {n : Type*} [DecidableEq n] [Fintype n]
 theorem FiniteField.Matrix.charpoly_pow_card {K : Type*} [Field K] [Fintype K] (M : Matrix n n K) :
     (M ^ Fintype.card K).charpoly = M.charpoly := by
   cases (isEmpty_or_nonempty n).symm
-  · obtain ⟨p, hp⟩ := CharP.exists K
+  · cases' CharP.exists K with p hp; letI := hp
     rcases FiniteField.card K p with ⟨⟨k, kpos⟩, ⟨hp, hk⟩⟩
     haveI : Fact p.Prime := ⟨hp⟩
     dsimp at hk; rw [hk]
@@ -40,7 +36,7 @@ theorem FiniteField.Matrix.charpoly_pow_card {K : Type*} [Field K] [Fintype K] (
     apply congr_arg det
     refine matPolyEquiv.injective ?_
     rw [map_pow, matPolyEquiv_charmatrix, hk, sub_pow_char_pow_of_commute, ← C_pow]
-    · exact (id (matPolyEquiv_eq_X_pow_sub_C (p ^ k) M) :)
+    · exact (id (matPolyEquiv_eq_X_pow_sub_C (p ^ k) M) : _)
     · exact (C M).commute_X
   · exact congr_arg _ (Subsingleton.elim _ _)
 

@@ -1,13 +1,11 @@
 /-
-Copyright (c) 2021 Kim Morrison. All rights reserved.
+Copyright (c) 2021 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.Algebra.Homology.HomologicalComplex
-public import Mathlib.AlgebraicTopology.SimplicialObject.Basic
-public import Mathlib.CategoryTheory.Abelian.Basic
+import Mathlib.Algebra.Homology.HomologicalComplex
+import Mathlib.AlgebraicTopology.SimplicialObject
+import Mathlib.CategoryTheory.Abelian.Basic
 
 /-!
 ## Moore complex
@@ -30,8 +28,6 @@ This functor is one direction of the Dold-Kan equivalence, which we're still wor
 * https://ncatlab.org/nlab/show/Moore+complex
 -/
 
-@[expose] public section
-
 
 universe v u
 
@@ -41,11 +37,9 @@ open CategoryTheory CategoryTheory.Limits
 
 open Opposite
 
-open scoped Simplicial
-
 namespace AlgebraicTopology
 
-variable {C : Type*} [Category* C] [Abelian C]
+variable {C : Type*} [Category C] [Abelian C]
 
 attribute [local instance] Abelian.hasPullbacks
 
@@ -61,18 +55,20 @@ variable (X : SimplicialObject C)
 
 /-- The normalized Moore complex in degree `n`, as a subobject of `X n`.
 -/
-def objX : ∀ n : ℕ, Subobject (X.obj (op ⦋n⦌))
+def objX : ∀ n : ℕ, Subobject (X.obj (op (SimplexCategory.mk n)))
   | 0 => ⊤
   | n + 1 => Finset.univ.inf fun k : Fin (n + 1) => kernelSubobject (X.δ k.succ)
 
-@[simp] theorem objX_zero : objX X 0 = ⊤ :=
+theorem objX_zero : objX X 0 = ⊤ :=
   rfl
 
-@[simp] theorem objX_add_one (n) :
+theorem objX_add_one (n) :
     objX X (n + 1) = Finset.univ.inf fun k : Fin (n + 1) => kernelSubobject (X.δ k.succ) :=
   rfl
 
-set_option backward.isDefEq.respectTransparency false in
+attribute [eqns objX_zero objX_add_one] objX
+attribute [simp] objX
+
 /-- The differentials in the normalized Moore complex.
 -/
 @[simp]
@@ -89,23 +85,21 @@ def objD : ∀ n : ℕ, (objX X (n + 1) : C) ⟶ (objX X n : C)
     apply kernelSubobject_factors
     dsimp [objX]
     -- Use a simplicial identity
-    rw [Category.assoc, ← Fin.castSucc_zero, ← X.δ_comp_δ (Fin.zero_le i.succ)]
+    erw [Category.assoc, ← X.δ_comp_δ (Fin.zero_le i.succ)]
     -- We can rewrite the arrow out of the intersection of all the kernels as a composition
     -- of a morphism we don't care about with the arrow out of the kernel of `X.δ i.succ.succ`.
     rw [← factorThru_arrow _ _ (finset_inf_arrow_factors Finset.univ _ i.succ (by simp)),
       Category.assoc, kernelSubobject_arrow_comp_assoc, zero_comp, comp_zero]
 
-set_option backward.isDefEq.respectTransparency false in
 theorem d_squared (n : ℕ) : objD X (n + 1) ≫ objD X n = 0 := by
   -- It's a pity we need to do a case split here;
-    -- after the first rw the proofs are almost identical
+    -- after the first erw the proofs are almost identical
   rcases n with _ | n <;> dsimp [objD]
-  · rw [Subobject.factorThru_arrow_assoc, Category.assoc, ← Fin.castSucc_zero,
+  · erw [Subobject.factorThru_arrow_assoc, Category.assoc,
       ← X.δ_comp_δ_assoc (Fin.zero_le (0 : Fin 2)),
       ← factorThru_arrow _ _ (finset_inf_arrow_factors Finset.univ _ (0 : Fin 2) (by simp)),
       Category.assoc, kernelSubobject_arrow_comp_assoc, zero_comp, comp_zero]
-  · rw [factorThru_right, factorThru_eq_zero, factorThru_arrow_assoc, Category.assoc,
-      ← Fin.castSucc_zero,
+  · erw [factorThru_right, factorThru_eq_zero, factorThru_arrow_assoc, Category.assoc,
       ← X.δ_comp_δ (Fin.zero_le (0 : Fin (n + 3))),
       ← factorThru_arrow _ _ (finset_inf_arrow_factors Finset.univ _ (0 : Fin (n + 3)) (by simp)),
       Category.assoc, kernelSubobject_arrow_comp_assoc, zero_comp, comp_zero]
@@ -120,28 +114,27 @@ def obj (X : SimplicialObject C) : ChainComplex C ℕ :=
 
 variable {X} {Y : SimplicialObject C} (f : X ⟶ Y)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- The normalized Moore complex functor, on morphisms.
 -/
 @[simps!]
 def map (f : X ⟶ Y) : obj X ⟶ obj Y :=
-  ChainComplex.ofHom
-    (fun n => factorThru _ (arrow _ ≫ f.app (op ⦋n⦌)) (by
+  ChainComplex.ofHom _ _ _ _ _ _
+    (fun n => factorThru _ (arrow _ ≫ f.app (op (SimplexCategory.mk n))) (by
       cases n <;> dsimp
       · apply top_factors
       · refine (finset_inf_factors _).mpr fun i _ => kernelSubobject_factors _ _ ?_
-        rw [Category.assoc, SimplicialObject.δ, ← f.naturality,
+        erw [Category.assoc, ← f.naturality,
           ← factorThru_arrow _ _ (finset_inf_arrow_factors Finset.univ _ i (by simp)),
-          Category.assoc]
-        rw [← SimplicialObject.δ_def, kernelSubobject_arrow_comp_assoc, zero_comp, comp_zero]))
-    fun n => by cases n <;> dsimp [objD, objX, ChainComplex.of.d] <;> cat_disch
+          Category.assoc, kernelSubobject_arrow_comp_assoc, zero_comp, comp_zero]))
+    fun n => by
+    cases n <;> dsimp [objD, objX] <;> aesop_cat
 
 end NormalizedMooreComplex
 
 open NormalizedMooreComplex
 
-set_option backward.defeqAttrib.useBackward true in
-variable (C) in
+variable (C)
+
 /-- The (normalized) Moore complex of a simplicial object `X` in an abelian category `C`.
 
 The `n`-th object is intersection of
@@ -154,11 +147,16 @@ which maps each of these intersections of kernels to the next.
 def normalizedMooreComplex : SimplicialObject C ⥤ ChainComplex C ℕ where
   obj := obj
   map f := map f
+  -- Porting note: Why `aesop_cat` can't do `dsimp` steps?
+  map_id X := by ext (_ | _) <;> dsimp <;> aesop_cat
+  map_comp f g := by ext (_ | _) <;> apply Subobject.eq_of_comp_arrow_eq <;> dsimp <;> aesop_cat
 
-set_option backward.defeqAttrib.useBackward true in
--- Not `@[simp]` as `simp` can prove this.
+variable {C}
+
+-- Porting note: removed @[simp] as it is not in normal form
 theorem normalizedMooreComplex_objD (X : SimplicialObject C) (n : ℕ) :
-    ((normalizedMooreComplex C).obj X).d (n + 1) n = NormalizedMooreComplex.objD X n := by
-  simp [-objD, -obj_X]
+    ((normalizedMooreComplex C).obj X).d (n + 1) n = NormalizedMooreComplex.objD X n :=
+-- Porting note: in mathlib, `apply ChainComplex.of_d` was enough
+  ChainComplex.of_d _ _ (d_squared X) n
 
 end AlgebraicTopology

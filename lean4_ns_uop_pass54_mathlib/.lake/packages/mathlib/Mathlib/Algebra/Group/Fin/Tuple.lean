@@ -3,20 +3,16 @@ Copyright (c) 2019 Floris van Doorn. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Floris van Doorn, Yury Kudryashov, Sébastien Gouëzel, Chris Hughes
 -/
-module
-
-public import Mathlib.Algebra.Group.Basic
-public import Mathlib.Algebra.Notation.Pi.Basic
-public import Mathlib.Data.Fin.VecNotation
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Group.Pi.Basic
+import Mathlib.Data.Fin.VecNotation
 
 /-!
 # Algebraic properties of tuples
 -/
 
-public section
-
 namespace Fin
-variable {n : ℕ} {α : Fin (n + 1) → Type*}
+variable {m n : ℕ} {α : Fin (n + 1) → Type*}
 
 @[to_additive (attr := simp)]
 lemma insertNth_one_right [∀ j, One (α j)] (i : Fin (n + 1)) (x : α i) :
@@ -29,7 +25,7 @@ lemma insertNth_mul [∀ j, Mul (α j)] (i : Fin (n + 1)) (x y : α i) (p q : �
   insertNth_binop (fun _ ↦ (· * ·)) i x y p q
 
 @[to_additive (attr := simp)]
-lemma insertNth_div [∀ j, Div (α j)] (i : Fin (n + 1)) (x y : α i) (p q : ∀ j, α (i.succAbove j)) :
+lemma insertNth_div [∀ j, Div (α j)] (i : Fin (n + 1)) (x y : α i)(p q : ∀ j, α (i.succAbove j)) :
     i.insertNth (x / y) (p / q) = i.insertNth x p / i.insertNth y q :=
   insertNth_binop (fun _ ↦ (· / ·)) i x y p q
 
@@ -111,7 +107,7 @@ variable [Zero α]
 @[simp] lemma tail_zero : vecTail (0 : Fin n.succ → α) = 0 := rfl
 
 @[simp] lemma cons_eq_zero_iff {v : Fin n → α} {x : α} : vecCons x v = 0 ↔ x = 0 ∧ v = 0 where
-  mp h := ⟨congr_fun h 0, by convert! congr_arg vecTail h⟩
+  mp h := ⟨congr_fun h 0, by convert congr_arg vecTail h⟩
   mpr := fun ⟨hx, hv⟩ ↦ by simp [hx, hv]
 
 lemma cons_nonzero_iff {v : Fin n → α} {x : α} : vecCons x v ≠ 0 ↔ x ≠ 0 ∨ v ≠ 0 where

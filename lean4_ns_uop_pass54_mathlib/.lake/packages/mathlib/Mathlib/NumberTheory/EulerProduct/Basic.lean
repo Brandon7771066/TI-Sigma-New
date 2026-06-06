@@ -3,12 +3,10 @@ Copyright (c) 2023 Michael Stoll. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Michael Stoll
 -/
-module
-
-public import Mathlib.Analysis.Normed.Ring.InfiniteSum
-public import Mathlib.Analysis.SpecificLimits.Normed
-public import Mathlib.NumberTheory.ArithmeticFunction.Defs
-public import Mathlib.NumberTheory.SmoothNumbers
+import Mathlib.Analysis.Normed.Field.InfiniteSum
+import Mathlib.Analysis.SpecificLimits.Normed
+import Mathlib.NumberTheory.ArithmeticFunction
+import Mathlib.NumberTheory.SmoothNumbers
 
 /-!
 # Euler Products
@@ -44,11 +42,9 @@ for `s : Finset ℕ`.
 Euler product, multiplicative function
 -/
 
-public section
-
 /-- If `f` is multiplicative and summable, then its values at natural numbers `> 1`
 have norm strictly less than `1`. -/
-lemma Summable.norm_lt_one {F : Type*} [NormedDivisionRing F] [CompleteSpace F] {f : ℕ →* F}
+lemma Summable.norm_lt_one {F : Type*} [NormedField F] [CompleteSpace F] {f : ℕ →* F}
     (hsum : Summable f) {p : ℕ} (hp : 1 < p) :
     ‖f p‖ < 1 := by
   refine summable_geometric_iff_norm_lt_one.mp ?_
@@ -68,38 +64,32 @@ In this section we consider multiplicative (on coprime arguments) functions `f :
 where `R` is a complete normed commutative ring. The main result is `EulerProduct.eulerProduct`.
 -/
 
-variable {R : Type*} [NormedCommRing R] {f : ℕ → R}
+variable {R : Type*} [NormedCommRing R] [CompleteSpace R] {f : ℕ → R}
+variable (hf₁ : f 1 = 1) (hmul : ∀ {m n}, Nat.Coprime m n → f (m * n) = f m * f n)
 
 -- local instance to speed up typeclass search
 @[local instance] private lemma instT0Space : T0Space R := MetricSpace.instT0Space
 
-variable [CompleteSpace R]
-
 namespace EulerProduct
 
-variable (hf₁ : f 1 = 1) (hmul : ∀ {m n}, Nat.Coprime m n → f (m * n) = f m * f n)
-
-include hf₁ hmul in
 /-- We relate a finite product over primes in `s` to an infinite sum over `s`-factored numbers. -/
 lemma summable_and_hasSum_factoredNumbers_prod_filter_prime_tsum
     (hsum : ∀ {p : ℕ}, p.Prime → Summable (fun n : ℕ ↦ ‖f (p ^ n)‖)) (s : Finset ℕ) :
     Summable (fun m : factoredNumbers s ↦ ‖f m‖) ∧
       HasSum (fun m : factoredNumbers s ↦ f m)
-        (∏ p ∈ s with p.Prime, ∑' n : ℕ, f (p ^ n)) := by
-  induction s using Finset.induction with
-  | empty =>
-    rw [factoredNumbers_empty]
-    simp only [notMem_empty, IsEmpty.forall_iff, forall_const, filter_true_of_mem, prod_empty]
+        (∏ p ∈ s.filter Nat.Prime, ∑' n : ℕ, f (p ^ n)) := by
+  induction' s using Finset.induction with p s hp ih
+  · rw [factoredNumbers_empty]
+    simp only [not_mem_empty, IsEmpty.forall_iff, forall_const, filter_true_of_mem, prod_empty]
     exact ⟨(Set.finite_singleton 1).summable (‖f ·‖), hf₁ ▸ hasSum_singleton 1 f⟩
-  | insert p s hp ih =>
-    rw [filter_insert]
+  · rw [filter_insert]
     split_ifs with hpp
     · constructor
       · simp only [← (equivProdNatFactoredNumbers hpp hp).summable_iff, Function.comp_def,
           equivProdNatFactoredNumbers_apply', factoredNumbers.map_prime_pow_mul hmul hpp hp]
         refine Summable.of_nonneg_of_le (fun _ ↦ norm_nonneg _) (fun _ ↦ norm_mul_le ..) ?_
         apply Summable.mul_of_nonneg (hsum hpp) ih.1 <;> exact fun n ↦ norm_nonneg _
-      · have hp' : p ∉ {p ∈ s | p.Prime} := mt (mem_of_mem_filter p) hp
+      · have hp' : p ∉ s.filter Nat.Prime := mt (mem_of_mem_filter p) hp
         rw [prod_insert hp', ← (equivProdNatFactoredNumbers hpp hp).hasSum_iff, Function.comp_def]
         conv =>
           enter [1, x]
@@ -110,11 +100,10 @@ lemma summable_and_hasSum_factoredNumbers_prod_filter_prime_tsum
         apply summable_mul_of_summable_norm (hsum hpp) ih.1
     · rwa [factoredNumbers_insert s hpp]
 
-include hf₁ hmul in
 /-- A version of `EulerProduct.summable_and_hasSum_factoredNumbers_prod_filter_prime_tsum`
 in terms of the value of the series. -/
 lemma prod_filter_prime_tsum_eq_tsum_factoredNumbers (hsum : Summable (‖f ·‖)) (s : Finset ℕ) :
-    ∏ p ∈ s with p.Prime, ∑' n : ℕ, f (p ^ n) = ∑' m : factoredNumbers s, f m :=
+    ∏ p ∈ s.filter Nat.Prime, ∑' n : ℕ, f (p ^ n) = ∑' m : factoredNumbers s, f m :=
   (summable_and_hasSum_factoredNumbers_prod_filter_prime_tsum hf₁ hmul
     (fun hp ↦ hsum.comp_injective <| Nat.pow_right_injective hp.one_lt) _).2.tsum_eq.symm
 
@@ -131,12 +120,11 @@ lemma norm_tsum_factoredNumbers_sub_tsum_lt (hsum : Summable f) (hf₀ : f 0 = 0
   simp_rw [mem_ball_zero_iff] at hN
   refine ⟨N, fun s hs ↦ ?_⟩
   have := hN _ <| factoredNumbers_compl hs
-  rwa [← hsum.tsum_subtype_add_tsum_subtype_compl (factoredNumbers s),
+  rwa [← tsum_subtype_add_tsum_subtype_compl hsum (factoredNumbers s),
     add_sub_cancel_left, tsum_eq_tsum_diff_singleton (factoredNumbers s)ᶜ hf₀]
 
 -- Versions of the three lemmas above for `smoothNumbers N`
 
-include hf₁ hmul in
 /-- We relate a finite product over primes to an infinite sum over smooth numbers. -/
 lemma summable_and_hasSum_smoothNumbers_prod_primesBelow_tsum
     (hsum : ∀ {p : ℕ}, p.Prime → Summable (fun n : ℕ ↦ ‖f (p ^ n)‖)) (N : ℕ) :
@@ -145,7 +133,6 @@ lemma summable_and_hasSum_smoothNumbers_prod_primesBelow_tsum
   rw [smoothNumbers_eq_factoredNumbers, primesBelow]
   exact summable_and_hasSum_factoredNumbers_prod_filter_prime_tsum hf₁ hmul hsum _
 
-include hf₁ hmul in
 /-- A version of `EulerProduct.summable_and_hasSum_smoothNumbers_prod_primesBelow_tsum`
 in terms of the value of the series. -/
 lemma prod_primesBelow_tsum_eq_tsum_smoothNumbers (hsum : Summable (‖f ·‖)) (N : ℕ) :
@@ -165,7 +152,6 @@ lemma norm_tsum_smoothNumbers_sub_tsum_lt (hsum : Summable f) (hf₀ : f 0 = 0)
   exact mem_range.mpr <| (lt_of_mem_primesBelow hp).trans_le hN
 
 
-include hf₁ hmul in
 /-- The *Euler Product* for multiplicative (on coprime arguments) functions.
 
 If `f : ℕ → R`, where `R` is a complete normed commutative ring, `f 0 = 0`, `f 1 = 1`, `f` is
@@ -174,32 +160,31 @@ multiplicative on coprime arguments, and `‖f ·‖` is summable, then
 theorem eulerProduct_hasProd (hsum : Summable (‖f ·‖)) (hf₀ : f 0 = 0) :
     HasProd (fun p : Primes ↦ ∑' e, f (p ^ e)) (∑' n, f n) := by
   let F : ℕ → R := fun n ↦ ∑' e, f (n ^ e)
-  change HasProd (F ∘ Subtype.val (p := (· ∈ {x | Nat.Prime x}))) _
-  rw [hasProd_subtype_iff_mulIndicator, HasProd, SummationFilter.unconditional,
-    Metric.tendsto_atTop]
+  change HasProd (F ∘ Subtype.val) _
+  rw [hasProd_subtype_iff_mulIndicator,
+    show Set.mulIndicator (fun p : ℕ ↦ Irreducible p) =  {p | Nat.Prime p}.mulIndicator from rfl,
+    HasProd, Metric.tendsto_atTop]
   intro ε hε
   obtain ⟨N₀, hN₀⟩ := norm_tsum_factoredNumbers_sub_tsum_lt hsum.of_norm hf₀ hε
   refine ⟨range N₀, fun s hs ↦ ?_⟩
-  have : ∏ p ∈ s, {p | Nat.Prime p}.mulIndicator F p = ∏ p ∈ s with p.Prime, F p :=
+  have : ∏ p ∈ s, {p | Nat.Prime p}.mulIndicator F p = ∏ p ∈ s.filter Nat.Prime, F p :=
     prod_mulIndicator_eq_prod_filter s (fun _ ↦ F) _ id
   rw [this, dist_eq_norm, prod_filter_prime_tsum_eq_tsum_factoredNumbers hf₁ hmul hsum,
     norm_sub_rev]
   exact hN₀ s fun p hp ↦ hs <| mem_range.mpr <| lt_of_mem_primesBelow hp
 
-include hf₁ hmul in
 /-- The *Euler Product* for multiplicative (on coprime arguments) functions.
 
-If `f : ℕ → R`, where `R` is a complete normed commutative ring, `f 0 = 0`, `f 1 = 1`, `f` is
+If `f : ℕ → R`, where `R` is a complete normed commutative ring, `f 0 = 0`, `f 1 = 1`, `f` i
 multiplicative on coprime arguments, and `‖f ·‖` is summable, then
 `∏' p : ℕ, if p.Prime then ∑' e, f (p ^ e) else 1 = ∑' n, f n`.
 This version is stated using `HasProd` and `Set.mulIndicator`. -/
 theorem eulerProduct_hasProd_mulIndicator (hsum : Summable (‖f ·‖)) (hf₀ : f 0 = 0) :
-    HasProd (Set.mulIndicator {p | Nat.Prime p} fun p ↦ ∑' e, f (p ^ e)) (∑' n, f n) := by
+    HasProd (Set.mulIndicator {p | Nat.Prime p} fun p ↦  ∑' e, f (p ^ e)) (∑' n, f n) := by
   rw [← hasProd_subtype_iff_mulIndicator]
   exact eulerProduct_hasProd hf₁ hmul hsum hf₀
 
 open Filter in
-include hf₁ hmul in
 /-- The *Euler Product* for multiplicative (on coprime arguments) functions.
 
 If `f : ℕ → R`, where `R` is a complete normed commutative ring, `f 0 = 0`, `f 1 = 1`, `f` is
@@ -213,9 +198,8 @@ theorem eulerProduct (hsum : Summable (‖f ·‖)) (hf₀ : f 0 = 0) :
   have H (n : ℕ) : ∏ i ∈ range n, Set.mulIndicator {p | Nat.Prime p} F i =
                      ∏ p ∈ primesBelow n, ∑' (e : ℕ), f (p ^ e) :=
     prod_mulIndicator_eq_prod_filter (range n) (fun _ ↦ F) (fun _ ↦ {p | Nat.Prime p}) id
-  simpa only [F, H]
+  simpa only [H]
 
-include hf₁ hmul in
 /-- The *Euler Product* for multiplicative (on coprime arguments) functions.
 
 If `f : ℕ → R`, where `R` is a complete normed commutative ring, `f 0 = 0`, `f 1 = 1`, `f` is
@@ -297,10 +281,10 @@ we show that the sum involved converges absolutely. -/
 lemma summable_and_hasSum_factoredNumbers_prod_filter_prime_geometric {f : ℕ →* F}
     (h : ∀ {p : ℕ}, p.Prime → ‖f p‖ < 1) (s : Finset ℕ) :
     Summable (fun m : factoredNumbers s ↦ ‖f m‖) ∧
-      HasSum (fun m : factoredNumbers s ↦ f m) (∏ p ∈ s with p.Prime, (1 - f p)⁻¹) := by
+      HasSum (fun m : factoredNumbers s ↦ f m) (∏ p ∈ s.filter Nat.Prime, (1 - f p)⁻¹) := by
   have hmul {m n} (_ : Nat.Coprime m n) := f.map_mul m n
   have H₁ :
-      ∏ p ∈ s with p.Prime, ∑' n : ℕ, f (p ^ n) = ∏ p ∈ s with p.Prime, (1 - f p)⁻¹ := by
+      ∏ p ∈ s.filter Nat.Prime, ∑' n : ℕ, f (p ^ n) = ∏ p ∈ s.filter Nat.Prime, (1 - f p)⁻¹ := by
     refine prod_congr rfl fun p hp ↦ ?_
     simp only [map_pow]
     exact tsum_geometric_of_norm_lt_one <| h (mem_filter.mp hp).2
@@ -315,7 +299,7 @@ lemma summable_and_hasSum_factoredNumbers_prod_filter_prime_geometric {f : ℕ �
 in terms of the value of the series. -/
 lemma prod_filter_prime_geometric_eq_tsum_factoredNumbers {f : ℕ →* F} (hsum : Summable f)
     (s : Finset ℕ) :
-    ∏ p ∈ s with p.Prime, (1 - f p)⁻¹ = ∑' m : factoredNumbers s, f m := by
+    ∏ p ∈ s.filter Nat.Prime, (1 - f p)⁻¹ = ∑' m : factoredNumbers s, f m := by
   refine (summable_and_hasSum_factoredNumbers_prod_filter_prime_geometric ?_ s).2.tsum_eq.symm
   exact fun {_} hp ↦ hsum.norm_lt_one hp.one_lt
 

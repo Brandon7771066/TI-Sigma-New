@@ -3,9 +3,7 @@ Copyright (c) 2020 Anatole Dedecker. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Patrick Massot, Anatole Dedecker
 -/
-module
-
-public import Mathlib.Topology.Separation.Regular
+import Mathlib.Topology.Separation
 
 /-!
 # Extending a function from a subset
@@ -14,7 +12,7 @@ The main definition of this file is `extendFrom A f` where `f : X → Y`
 and `A : Set X`. This defines a new function `g : X → Y` which maps any
 `x₀ : X` to the limit of `f` as `x` tends to `x₀`, if such a limit exists.
 
-This is analogous to the way `IsDenseInducing.extend` "extends" a function
+This is analogous to the way `DenseInducing.extend` "extends" a function
 `f : X → Z` to a function `g : Y → Z` along a dense inducing `i : X → Y`.
 
 The main theorem we prove about this definition is `continuousOn_extendFrom`
@@ -23,8 +21,6 @@ it suffices that `f` converges within `A` at any point of `B`, provided that
 `f` is a function to a T₃ space.
 
 -/
-
-@[expose] public section
 
 
 noncomputable section
@@ -82,5 +78,5 @@ theorem continuousOn_extendFrom [RegularSpace Y] {f : X → Y} {A B : Set X} (hB
 dense set `A` for any `x`, then `extendFrom A f` is continuous. -/
 theorem continuous_extendFrom [RegularSpace Y] {f : X → Y} {A : Set X} (hA : Dense A)
     (hf : ∀ x, ∃ y, Tendsto f (𝓝[A] x) (𝓝 y)) : Continuous (extendFrom A f) := by
-  rw [← continuousOn_univ]
+  rw [continuous_iff_continuousOn_univ]
   exact continuousOn_extendFrom (fun x _ ↦ hA x) (by simpa using hf)

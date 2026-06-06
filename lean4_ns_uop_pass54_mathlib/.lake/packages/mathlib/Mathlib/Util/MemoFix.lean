@@ -1,33 +1,34 @@
 /-
 Copyright (c) 2022 Gabriel Ebner. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Gabriel Ebner, Edward Ayers
+Authors: Gabriel Ebner, E.W.Ayers
 -/
-module
-
-public import Std.Data.HashMap.Basic
-public import Mathlib.Init
+import Lean.Data.HashMap
 
 /-!
 # Fixpoint function with memoisation
 
 -/
 
-variable {α β : Type}
+universe u v
+open ShareCommon
 
-@[noinline, deprecated "deprecated without replacement" (since := "2026-01-24")]
-def injectIntoBaseIO {α : Type} (a : α) : BaseIO α := pure a
+private unsafe abbrev ObjectMap := @Lean.HashMap Object Object ⟨Object.ptrEq⟩ ⟨Object.hash⟩
 
-@[deprecated "deprecated without replacement" (since := "2026-01-24")]
-unsafe def memoFixImpl [Nonempty β] (f : (α → β) → (α → β)) : α → β := unsafeBaseIO do
-  let cache : IO.Ref (Lean.PtrMap α β) ← ST.mkRef Lean.mkPtrMap
-  let rec fix (a) : β := unsafeBaseIO do
+private unsafe def memoFixImplObj (f : (Object → Object) → (Object → Object)) (a : Object) :
+    Object := unsafeBaseIO do
+  let cache : IO.Ref ObjectMap ← ST.mkRef ∅
+  let rec fix (a) := unsafeBaseIO do
     if let some b := (← cache.get).find? a then
       return b
-    let b ← injectIntoBaseIO (f fix a)
+    let b := f fix a
     cache.modify (·.insert a b)
-    return b
-  return fix
+    pure b
+  pure <| fix a
+
+private unsafe def memoFixImpl {α : Type u} {β : Type v} [Nonempty β] :
+    (f : (α → β) → (α → β)) → (a : α) → β :=
+  unsafeCast memoFixImplObj
 
 /-- Takes the fixpoint of `f` with caching of values that have been seen before.
 Hashing makes use of a pointer hash.
@@ -35,6 +36,5 @@ Hashing makes use of a pointer hash.
 This is useful for implementing tree traversal functions where
 subtrees may be referenced in multiple places.
 -/
-@[implemented_by memoFixImpl,
-deprecated "use `MonadCacheT`  and `checkCache`" (since := "2026-01-24")]
-public opaque memoFix [Nonempty β] (f : (α → β) → (α → β)) : α → β
+@[implemented_by memoFixImpl]
+opaque memoFix {α : Type u} {β : Type v} [Nonempty β] (f : (α → β) → (α → β)) : α → β

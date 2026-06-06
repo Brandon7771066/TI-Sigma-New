@@ -3,10 +3,8 @@ Copyright (c) 2023 Fangming Li. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Fangming Li
 -/
-module
-
-public import Mathlib.RingTheory.GradedAlgebra.Basic
-public import Mathlib.RingTheory.Noetherian.Basic
+import Mathlib.RingTheory.Noetherian
+import Mathlib.RingTheory.GradedAlgebra.Basic
 
 /-!
 # The properties of a graded Noetherian ring.
@@ -15,11 +13,9 @@ This file proves that the 0-th grade of a Noetherian ring is
 also a Noetherian ring.
 -/
 
-public section
-
 variable {ι A σ : Type*}
 variable [Ring A] [IsNoetherianRing A]
-variable [DecidableEq ι] [AddCommMonoid ι] [PartialOrder ι] [CanonicallyOrderedAdd ι]
+variable [DecidableEq ι] [CanonicallyOrderedAddCommMonoid ι]
 variable [SetLike σ A] [AddSubgroupClass σ A]
 variable (𝒜 : ι → σ) [GradedRing 𝒜]
 

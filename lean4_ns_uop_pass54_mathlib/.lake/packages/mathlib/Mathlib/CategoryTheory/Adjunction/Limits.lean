@@ -3,21 +3,20 @@ Copyright (c) 2019 Reid Barton. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Reid Barton, Johan Commelin
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Creates
+import Mathlib.CategoryTheory.Adjunction.Basic
+import Mathlib.CategoryTheory.Limits.Creates
 
 /-!
 # Adjunctions and limits
 
-A left adjoint preserves colimits (`CategoryTheory.Adjunction.leftAdjoint_preservesColimits`),
-and a right adjoint preserves limits (`CategoryTheory.Adjunction.rightAdjoint_preservesLimits`).
+A left adjoint preserves colimits (`CategoryTheory.Adjunction.leftAdjointPreservesColimits`),
+and a right adjoint preserves limits (`CategoryTheory.Adjunction.rightAdjointPreservesLimits`).
 
 Equivalences create and reflect (co)limits.
-(`CategoryTheory.Functor.createsLimitsOfIsEquivalence`,
-`CategoryTheory.Functor.createsColimitsOfIsEquivalence`,
-`CategoryTheory.Functor.reflectsLimits_of_isEquivalence`,
-`CategoryTheory.Functor.reflectsColimits_of_isEquivalence`.)
+(`CategoryTheory.Adjunction.isEquivalenceCreatesLimits`,
+`CategoryTheory.Adjunction.isEquivalenceCreatesColimits`,
+`CategoryTheory.Adjunction.isEquivalenceReflectsLimits`,
+`CategoryTheory.Adjunction.isEquivalenceReflectsColimits`,)
 
 In `CategoryTheory.Adjunction.coconesIso` we show that
 when `F ⊣ G`,
@@ -25,8 +24,6 @@ the functor associating to each `Y` the cocones over `K ⋙ F` with cone point `
 is naturally isomorphic to
 the functor associating to each `Y` the cocones over `K` with cone point `G.obj Y`.
 -/
-
-@[expose] public section
 
 
 open Opposite
@@ -48,77 +45,69 @@ section PreservationColimits
 
 variable {J : Type u} [Category.{v} J] (K : J ⥤ C)
 
-/-- The right adjoint of `Cocone.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
+/-- The right adjoint of `Cocones.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
 
-Auxiliary definition for `functorialityAdjunction`.
+Auxiliary definition for `functorialityIsLeftAdjoint`.
 -/
 def functorialityRightAdjoint : Cocone (K ⋙ F) ⥤ Cocone K :=
-  Cocone.functoriality _ G ⋙
-    Cocone.precompose (K.rightUnitor.inv ≫ whiskerLeft K adj.unit ≫ (associator _ _ _).inv)
+  Cocones.functoriality _ G ⋙
+    Cocones.precompose (K.rightUnitor.inv ≫ whiskerLeft K adj.unit ≫ (associator _ _ _).inv)
 
 attribute [local simp] functorialityRightAdjoint
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The unit for the adjunction for `Cocone.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
+/-- The unit for the adjunction for `Cocones.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
 
-Auxiliary definition for `functorialityAdjunction`.
+Auxiliary definition for `functorialityIsLeftAdjoint`.
 -/
 @[simps]
 def functorialityUnit :
-    𝟭 (Cocone K) ⟶ Cocone.functoriality _ F ⋙ functorialityRightAdjoint adj K where
+    𝟭 (Cocone K) ⟶ Cocones.functoriality _ F ⋙ functorialityRightAdjoint adj K where
   app c := { hom := adj.unit.app c.pt }
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The counit for the adjunction for `Cocone.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
+/-- The counit for the adjunction for `Cocones.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)`.
 
-Auxiliary definition for `functorialityAdjunction`.
+Auxiliary definition for `functorialityIsLeftAdjoint`.
 -/
 @[simps]
 def functorialityCounit :
-    functorialityRightAdjoint adj K ⋙ Cocone.functoriality _ F ⟶ 𝟭 (Cocone (K ⋙ F)) where
+    functorialityRightAdjoint adj K ⋙ Cocones.functoriality _ F ⟶ 𝟭 (Cocone (K ⋙ F)) where
   app c := { hom := adj.counit.app c.pt }
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The functor `Cocone.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)` is a left adjoint. -/
-def functorialityAdjunction : Cocone.functoriality K F ⊣ functorialityRightAdjoint adj K where
-  unit := functorialityUnit adj K
-  counit := functorialityCounit adj K
+/-- The functor `Cocones.functoriality K F : Cocone K ⥤ Cocone (K ⋙ F)` is a left adjoint. -/
+def functorialityAdjunction : Cocones.functoriality K F ⊣ functorialityRightAdjoint adj K :=
+  mkOfUnitCounit
+    { unit := functorialityUnit adj K
+      counit := functorialityCounit adj K}
 
-include adj in
-/-- A left adjoint preserves colimits. -/
-@[stacks 0038]
-lemma leftAdjoint_preservesColimits : PreservesColimitsOfSize.{v, u} F where
+/-- A left adjoint preserves colimits.
+
+See <https://stacks.math.columbia.edu/tag/0038>.
+-/
+def leftAdjointPreservesColimits : PreservesColimitsOfSize.{v, u} F where
   preservesColimitsOfShape :=
     { preservesColimit :=
         { preserves := fun hc =>
-            ⟨IsColimit.isoUniqueCoconeMorphism.inv fun _ =>
+            IsColimit.isoUniqueCoconeMorphism.inv fun _ =>
               @Equiv.unique _ _ (IsColimit.isoUniqueCoconeMorphism.hom hc _)
-                ((adj.functorialityAdjunction _).homEquiv _ _)⟩ } }
-
-noncomputable
-instance colim_preservesColimits [HasColimitsOfShape J C] :
-    PreservesColimits (colim (J := J) (C := C)) :=
-  colimConstAdj.leftAdjoint_preservesColimits
+                ((adj.functorialityAdjunction _).homEquiv _ _) } }
 
 -- see Note [lower instance priority]
-noncomputable instance (priority := 100) isEquivalence_preservesColimits
+noncomputable instance (priority := 100) isEquivalencePreservesColimits
     (E : C ⥤ D) [E.IsEquivalence] :
     PreservesColimitsOfSize.{v, u} E :=
-  leftAdjoint_preservesColimits E.adjunction
+  leftAdjointPreservesColimits E.adjunction
 
 -- see Note [lower instance priority]
-noncomputable instance (priority := 100)
-    _root_.CategoryTheory.Functor.reflectsColimits_of_isEquivalence
+noncomputable instance (priority := 100) isEquivalenceReflectsColimits
     (E : D ⥤ C) [E.IsEquivalence] :
     ReflectsColimitsOfSize.{v, u} E where
   reflectsColimitsOfShape :=
     { reflectsColimit :=
         { reflects := fun t =>
-          ⟨(isColimitOfPreserves E.inv t).mapCoconeEquiv E.asEquivalence.unitIso.symm⟩ } }
+          (isColimitOfPreserves E.inv t).mapCoconeEquiv E.asEquivalence.unitIso.symm } }
 
 -- see Note [lower instance priority]
-noncomputable instance (priority := 100)
-    _root_.CategoryTheory.Functor.createsColimitsOfIsEquivalence (H : D ⥤ C)
+noncomputable instance (priority := 100) isEquivalenceCreatesColimits (H : D ⥤ C)
     [H.IsEquivalence] :
     CreatesColimitsOfSize.{v, u} H where
   CreatesColimitsOfShape :=
@@ -127,23 +116,22 @@ noncomputable instance (priority := 100)
             { liftedCocone := mapCoconeInv H c
               validLift := mapCoconeMapCoconeInv H c } } }
 
-
 -- verify the preserve_colimits instance works as expected:
 noncomputable example (E : C ⥤ D) [E.IsEquivalence] (c : Cocone K) (h : IsColimit c) :
     IsColimit (E.mapCocone c) :=
-  isColimitOfPreserves E h
+  PreservesColimit.preserves h
 
 theorem hasColimit_comp_equivalence (E : C ⥤ D) [E.IsEquivalence] [HasColimit K] :
     HasColimit (K ⋙ E) :=
   HasColimit.mk
     { cocone := E.mapCocone (colimit.cocone K)
-      isColimit := isColimitOfPreserves _ (colimit.isColimit K) }
+      isColimit := PreservesColimit.preserves (colimit.isColimit K) }
 
 theorem hasColimit_of_comp_equivalence (E : C ⥤ D) [E.IsEquivalence] [HasColimit (K ⋙ E)] :
-    HasColimit K := by
-  rw [hasColimit_iff_of_iso
-    ((Functor.rightUnitor _).symm ≪≫ isoWhiskerLeft K E.asEquivalence.unitIso)]
-  exact hasColimit_comp_equivalence (K ⋙ E) E.inv
+    HasColimit K :=
+  @hasColimitOfIso _ _ _ _ (K ⋙ E ⋙ E.inv) K
+    (@hasColimit_comp_equivalence _ _ _ _ _ _ (K ⋙ E) E.inv _ _)
+    ((Functor.rightUnitor _).symm ≪≫ isoWhiskerLeft K E.asEquivalence.unitIso)
 
 /-- Transport a `HasColimitsOfShape` instance across an equivalence. -/
 theorem hasColimitsOfShape_of_equivalence (E : C ⥤ D) [E.IsEquivalence] [HasColimitsOfShape J D] :
@@ -161,76 +149,69 @@ section PreservationLimits
 
 variable {J : Type u} [Category.{v} J] (K : J ⥤ D)
 
-/-- The left adjoint of `Cone.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
+/-- The left adjoint of `Cones.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
 
-Auxiliary definition for `functorialityAdjunction'`.
+Auxiliary definition for `functorialityIsRightAdjoint`.
 -/
 def functorialityLeftAdjoint : Cone (K ⋙ G) ⥤ Cone K :=
-  Cone.functoriality _ F ⋙
-    Cone.postcompose ((associator _ _ _).hom ≫ whiskerLeft K adj.counit ≫ K.rightUnitor.hom)
+  Cones.functoriality _ F ⋙
+    Cones.postcompose ((associator _ _ _).hom ≫ whiskerLeft K adj.counit ≫ K.rightUnitor.hom)
 
 attribute [local simp] functorialityLeftAdjoint
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The unit for the adjunction for `Cone.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
+/-- The unit for the adjunction for `Cones.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
 
-Auxiliary definition for `functorialityAdjunction'`.
+Auxiliary definition for `functorialityIsRightAdjoint`.
 -/
 @[simps]
 def functorialityUnit' :
-    𝟭 (Cone (K ⋙ G)) ⟶ functorialityLeftAdjoint adj K ⋙ Cone.functoriality _ G where
+    𝟭 (Cone (K ⋙ G)) ⟶ functorialityLeftAdjoint adj K ⋙ Cones.functoriality _ G where
   app c := { hom := adj.unit.app c.pt }
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The counit for the adjunction for `Cone.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
+/-- The counit for the adjunction for `Cones.functoriality K G : Cone K ⥤ Cone (K ⋙ G)`.
 
-Auxiliary definition for `functorialityAdjunction'`.
+Auxiliary definition for `functorialityIsRightAdjoint`.
 -/
 @[simps]
 def functorialityCounit' :
-    Cone.functoriality _ G ⋙ functorialityLeftAdjoint adj K ⟶ 𝟭 (Cone K) where
+    Cones.functoriality _ G ⋙ functorialityLeftAdjoint adj K ⟶ 𝟭 (Cone K) where
   app c := { hom := adj.counit.app c.pt }
 
-set_option backward.defeqAttrib.useBackward true in
-/-- The functor `Cone.functoriality K G : Cone K ⥤ Cone (K ⋙ G)` is a right adjoint. -/
-def functorialityAdjunction' : functorialityLeftAdjoint adj K ⊣ Cone.functoriality K G where
-  unit := functorialityUnit' adj K
-  counit := functorialityCounit' adj K
+/-- The functor `Cones.functoriality K G : Cone K ⥤ Cone (K ⋙ G)` is a right adjoint. -/
+def functorialityAdjunction' : functorialityLeftAdjoint adj K ⊣ Cones.functoriality K G :=
+  mkOfUnitCounit
+    { unit := functorialityUnit' adj K
+      counit := functorialityCounit' adj K }
 
-include adj in
-/-- A right adjoint preserves limits. -/
-@[stacks 0038]
-lemma rightAdjoint_preservesLimits : PreservesLimitsOfSize.{v, u} G where
+/-- A right adjoint preserves limits.
+
+See <https://stacks.math.columbia.edu/tag/0038>.
+-/
+def rightAdjointPreservesLimits : PreservesLimitsOfSize.{v, u} G where
   preservesLimitsOfShape :=
     { preservesLimit :=
         { preserves := fun hc =>
-            ⟨IsLimit.isoUniqueConeMorphism.inv fun _ =>
+            IsLimit.isoUniqueConeMorphism.inv fun _ =>
               @Equiv.unique _ _ (IsLimit.isoUniqueConeMorphism.hom hc _)
-                ((adj.functorialityAdjunction' _).homEquiv _ _).symm⟩ } }
-
-instance lim_preservesLimits [HasLimitsOfShape J C] :
-    PreservesLimits (lim (J := J) (C := C)) :=
-  constLimAdj.rightAdjoint_preservesLimits
+                ((adj.functorialityAdjunction' _).homEquiv _ _).symm } }
 
 -- see Note [lower instance priority]
-instance (priority := 100) isEquivalencePreservesLimits
+noncomputable instance (priority := 100) isEquivalencePreservesLimits
     (E : D ⥤ C) [E.IsEquivalence] :
     PreservesLimitsOfSize.{v, u} E :=
-  rightAdjoint_preservesLimits E.asEquivalence.symm.toAdjunction
+  rightAdjointPreservesLimits E.asEquivalence.symm.toAdjunction
 
 -- see Note [lower instance priority]
-noncomputable instance (priority := 100)
-    _root_.CategoryTheory.Functor.reflectsLimits_of_isEquivalence
+noncomputable instance (priority := 100) isEquivalenceReflectsLimits
     (E : D ⥤ C) [E.IsEquivalence] :
     ReflectsLimitsOfSize.{v, u} E where
   reflectsLimitsOfShape :=
     { reflectsLimit :=
         { reflects := fun t =>
-            ⟨(isLimitOfPreserves E.inv t).mapConeEquiv E.asEquivalence.unitIso.symm⟩ } }
+            (isLimitOfPreserves E.inv t).mapConeEquiv E.asEquivalence.unitIso.symm } }
 
 -- see Note [lower instance priority]
-noncomputable instance (priority := 100)
-    _root_.CategoryTheory.Functor.createsLimitsOfIsEquivalence (H : D ⥤ C) [H.IsEquivalence] :
+noncomputable instance (priority := 100) isEquivalenceCreatesLimits (H : D ⥤ C) [H.IsEquivalence] :
     CreatesLimitsOfSize.{v, u} H where
   CreatesLimitsOfShape :=
     { CreatesLimit :=
@@ -238,22 +219,21 @@ noncomputable instance (priority := 100)
             { liftedCone := mapConeInv H c
               validLift := mapConeMapConeInv H c } } }
 
-
 -- verify the preserve_limits instance works as expected:
 noncomputable example (E : D ⥤ C) [E.IsEquivalence] (c : Cone K) (h : IsLimit c) :
     IsLimit (E.mapCone c) :=
-  isLimitOfPreserves E h
+  PreservesLimit.preserves h
 
 theorem hasLimit_comp_equivalence (E : D ⥤ C) [E.IsEquivalence] [HasLimit K] : HasLimit (K ⋙ E) :=
   HasLimit.mk
     { cone := E.mapCone (limit.cone K)
-      isLimit := isLimitOfPreserves _ (limit.isLimit K) }
+      isLimit := PreservesLimit.preserves (limit.isLimit K) }
 
 theorem hasLimit_of_comp_equivalence (E : D ⥤ C) [E.IsEquivalence] [HasLimit (K ⋙ E)] :
-    HasLimit K := by
-  rw [← hasLimit_iff_of_iso
-    (isoWhiskerLeft K E.asEquivalence.unitIso.symm ≪≫ Functor.rightUnitor _)]
-  exact hasLimit_comp_equivalence (K ⋙ E) E.inv
+    HasLimit K :=
+  @hasLimitOfIso _ _ _ _ (K ⋙ E ⋙ E.inv) K
+    (@hasLimit_comp_equivalence _ _ _ _ _ _ (K ⋙ E) E.inv _ _)
+    (isoWhiskerLeft K E.asEquivalence.unitIso.symm ≪≫ Functor.rightUnitor _)
 
 /-- Transport a `HasLimitsOfShape` instance across an equivalence. -/
 theorem hasLimitsOfShape_of_equivalence (E : D ⥤ C) [E.IsEquivalence] [HasLimitsOfShape J C] :
@@ -267,18 +247,16 @@ theorem has_limits_of_equivalence (E : D ⥤ C) [E.IsEquivalence] [HasLimitsOfSi
 
 end PreservationLimits
 
-set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
 /-- auxiliary construction for `coconesIso` -/
 @[simp]
 def coconesIsoComponentHom {J : Type u} [Category.{v} J] {K : J ⥤ C} (Y : D)
     (t : ((cocones J D).obj (op (K ⋙ F))).obj Y) : (G ⋙ (cocones J C).obj (op K)).obj Y where
   app j := (adj.homEquiv (K.obj j) Y) (t.app j)
   naturality j j' f := by
-    rw [← adj.homEquiv_naturality_left, ← Functor.comp_map, t.naturality]
+    erw [← adj.homEquiv_naturality_left, t.naturality]
+    dsimp
     simp
 
-set_option backward.defeqAttrib.useBackward true in
 /-- auxiliary construction for `coconesIso` -/
 @[simp]
 def coconesIsoComponentInv {J : Type u} [Category.{v} J] {K : J ⥤ C} (Y : D)
@@ -286,7 +264,7 @@ def coconesIsoComponentInv {J : Type u} [Category.{v} J] {K : J ⥤ C} (Y : D)
   app j := (adj.homEquiv (K.obj j) Y).symm (t.app j)
   naturality j j' f := by
     erw [← adj.homEquiv_naturality_left_symm, ← adj.homEquiv_naturality_right_symm, t.naturality]
-    simp
+    dsimp; simp
 
 /-- auxiliary construction for `conesIso` -/
 @[simp]
@@ -310,9 +288,6 @@ end ArbitraryUniverse
 variable {C : Type u₁} [Category.{v₀} C] {D : Type u₂} [Category.{v₀} D] {F : C ⥤ D} {G : D ⥤ C}
   (adj : F ⊣ G)
 
-attribute [local simp] homEquiv_unit homEquiv_counit
-
-set_option backward.defeqAttrib.useBackward true in
 -- Note: this is natural in K, but we do not yet have the tools to formulate that.
 /-- When `F ⊣ G`,
 the functor associating to each `Y` the cocones over `K ⋙ F` with cone point `Y`
@@ -322,10 +297,9 @@ the functor associating to each `Y` the cocones over `K` with cone point `G.obj 
 def coconesIso {J : Type u} [Category.{v} J] {K : J ⥤ C} :
     (cocones J D).obj (op (K ⋙ F)) ≅ G ⋙ (cocones J C).obj (op K) :=
   NatIso.ofComponents fun Y =>
-    { hom := ↾(coconesIsoComponentHom adj Y)
-      inv := ↾(coconesIsoComponentInv adj Y) }
+    { hom := coconesIsoComponentHom adj Y
+      inv := coconesIsoComponentInv adj Y }
 
-set_option backward.defeqAttrib.useBackward true in
 -- Note: this is natural in K, but we do not yet have the tools to formulate that.
 /-- When `F ⊣ G`,
 the functor associating to each `X` the cones over `K` with cone point `F.op.obj X`
@@ -335,23 +309,23 @@ the functor associating to each `X` the cones over `K ⋙ G` with cone point `X`
 def conesIso {J : Type u} [Category.{v} J] {K : J ⥤ D} :
     F.op ⋙ (cones J D).obj K ≅ (cones J C).obj (K ⋙ G) :=
   NatIso.ofComponents fun X =>
-    { hom := ↾(conesIsoComponentHom adj X)
-      inv := ↾(conesIsoComponentInv adj X) }
+    { hom := conesIsoComponentHom adj X
+      inv := conesIsoComponentInv adj X }
 
 end Adjunction
 
 namespace Functor
 
-variable {J C D : Type*} [Category* J] [Category* C] [Category* D]
+variable {J C D : Type*} [Category J] [Category C] [Category D]
   (F : C ⥤ D)
 
 noncomputable instance [IsLeftAdjoint F] : PreservesColimitsOfShape J F :=
-  (Adjunction.ofIsLeftAdjoint F).leftAdjoint_preservesColimits.preservesColimitsOfShape
+  (Adjunction.ofIsLeftAdjoint F).leftAdjointPreservesColimits.preservesColimitsOfShape
 
 noncomputable instance [IsLeftAdjoint F] : PreservesColimitsOfSize.{v, u} F where
 
 noncomputable instance [IsRightAdjoint F] : PreservesLimitsOfShape J F :=
-  (Adjunction.ofIsRightAdjoint F).rightAdjoint_preservesLimits.preservesLimitsOfShape
+  (Adjunction.ofIsRightAdjoint F).rightAdjointPreservesLimits.preservesLimitsOfShape
 
 noncomputable instance [IsRightAdjoint F] : PreservesLimitsOfSize.{v, u} F where
 

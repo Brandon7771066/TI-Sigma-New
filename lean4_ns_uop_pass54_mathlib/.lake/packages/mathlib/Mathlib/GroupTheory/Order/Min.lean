@@ -3,11 +3,7 @@ Copyright (c) 2023 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Group.Torsion
-public import Mathlib.Data.ENat.Lattice
-public import Mathlib.Data.ZMod.QuotientGroup
+import Mathlib.GroupTheory.Torsion
 
 /-!
 # Minimum order of an element
@@ -18,14 +14,12 @@ This file defines the minimum order of an element of a monoid.
 
 * `Monoid.minOrder`: The minimum order of an element of a given monoid.
 * `Monoid.minOrder_eq_top`: The minimum order is infinite iff the monoid is torsion-free.
-* `ZMod.minOrder`: The minimum order of $ℤ/nℤ$ is the smallest factor of `n`, unless `n = 0, 1`.
+* `ZMod.minOrder`: The minimum order of $$ℤ/nℤ$$ is the smallest factor of `n`, unless `n = 0, 1`.
 -/
-
-@[expose] public section
 
 open Subgroup
 
-variable {G α : Type*}
+variable {α : Type*}
 
 namespace Monoid
 section Monoid
@@ -33,12 +27,17 @@ variable (α) [Monoid α]
 
 /-- The minimum order of a non-identity element. Also the minimum size of a nontrivial subgroup, see
 `Monoid.le_minOrder_iff_forall_subgroup`. Returns `∞` if the monoid is torsion-free. -/
-@[to_additive /-- The minimum order of a non-identity element. Also the minimum size of a nontrivial
+@[to_additive "The minimum order of a non-identity element. Also the minimum size of a nontrivial
 subgroup, see `AddMonoid.le_minOrder_iff_forall_addSubgroup`. Returns `∞` if the monoid is
-torsion-free. -/]
+torsion-free."]
 noncomputable def minOrder : ℕ∞ := ⨅ (a : α) (_ha : a ≠ 1) (_ha' : IsOfFinOrder a), orderOf a
 
 variable {α} {a : α}
+
+@[to_additive (attr := simp)]
+lemma minOrder_eq_top : minOrder α = ⊤ ↔ IsTorsionFree α := by simp [minOrder, IsTorsionFree]
+
+@[to_additive (attr := simp)] protected alias ⟨_, IsTorsionFree.minOrder⟩ := minOrder_eq_top
 
 @[to_additive (attr := simp)]
 lemma le_minOrder {n : ℕ∞} :
@@ -50,12 +49,11 @@ lemma minOrder_le_orderOf (ha : a ≠ 1) (ha' : IsOfFinOrder a) : minOrder α �
 
 end Monoid
 
-section Group
-variable [Group G] {s : Subgroup G}
+variable [Group α] {s : Subgroup α} {n : ℕ}
 
 @[to_additive]
 lemma le_minOrder_iff_forall_subgroup {n : ℕ∞} :
-    n ≤ minOrder G ↔ ∀ ⦃s : Subgroup G⦄, s ≠ ⊥ → (s : Set G).Finite → n ≤ Nat.card s := by
+    n ≤ minOrder α ↔ ∀ ⦃s : Subgroup α⦄, s ≠ ⊥ → (s : Set α).Finite → n ≤ Nat.card s := by
   rw [le_minOrder]
   refine ⟨fun h s hs hs' ↦ ?_, fun h a ha ha' ↦ ?_⟩
   · obtain ⟨a, has, ha⟩ := s.bot_or_exists_ne_one.resolve_left hs
@@ -65,23 +63,9 @@ lemma le_minOrder_iff_forall_subgroup {n : ℕ∞} :
   · simpa using h (zpowers_ne_bot.2 ha) ha'.finite_zpowers
 
 @[to_additive]
-lemma minOrder_le_natCard (hs : s ≠ ⊥) (hs' : (s : Set G).Finite) : minOrder G ≤ Nat.card s :=
+lemma minOrder_le_natCard (hs : s ≠ ⊥) (hs' : (s : Set α).Finite) : minOrder α ≤ Nat.card s :=
   le_minOrder_iff_forall_subgroup.1 le_rfl hs hs'
 
-@[to_additive (attr := simp)]
-lemma minOrder_eq_top [IsMulTorsionFree G] : minOrder G = ⊤ := by
-  simpa [minOrder] using fun _ ↦ not_isOfFinOrder_of_isMulTorsionFree
-
-end Group
-
-section CommGroup
-variable [CommGroup G] {s : Subgroup G}
-
-@[to_additive (attr := simp)]
-lemma minOrder_eq_top_iff : minOrder G = ⊤ ↔ IsMulTorsionFree G := by
-  simp [minOrder, isMulTorsionFree_iff_not_isOfFinOrder]
-
-end CommGroup
 end Monoid
 
 open AddMonoid AddSubgroup Nat Set

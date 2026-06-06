@@ -3,12 +3,10 @@ Copyright (c) 2022 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.Data.Finite.Defs
-public import Mathlib.Data.Bool.Basic
-public import Mathlib.Data.Subtype
-public import Mathlib.Tactic.MkIffOfInductiveProp
+import Mathlib.Data.Finite.Defs
+import Mathlib.Data.Bool.Basic
+import Mathlib.Data.Subtype
+import Mathlib.Tactic.MkIffOfInductiveProp
 
 /-!
 # Countable and uncountable types
@@ -22,8 +20,6 @@ a specific encoding of elements of `α` by natural numbers.
 This file also provides a few instances of these typeclasses.
 More instances can be found in other files.
 -/
-
-public section
 
 open Function
 
@@ -110,10 +106,10 @@ instance Prop.countable' : Countable Prop :=
 
 instance (priority := 500) Quotient.countable [Countable α] {r : α → α → Prop} :
     Countable (Quot r) :=
-  Quot.mk_surjective.countable
+  (surjective_quot_mk r).countable
 
 instance (priority := 500) [Countable α] {s : Setoid α} : Countable (Quotient s) :=
-  inferInstanceAs <| Countable (@Quot α _)
+  (inferInstance : Countable (@Quot α _))
 
 /-!
 ### Uncountable types
@@ -125,11 +121,9 @@ class Uncountable (α : Sort*) : Prop where
   /-- A type `α` is uncountable if it is not countable. -/
   not_countable : ¬Countable α
 
-@[push]
 lemma not_uncountable_iff : ¬Uncountable α ↔ Countable α := by
   rw [uncountable_iff_not_countable, not_not]
 
-@[push]
 lemma not_countable_iff : ¬Countable α ↔ Uncountable α := (uncountable_iff_not_countable α).symm
 
 @[simp]

@@ -1,14 +1,11 @@
 /-
-Copyright (c) 2023 Kim Morrison. All rights reserved.
+Copyright (c) 2023 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public meta import Mathlib.Lean.Name
-public meta import Mathlib.Lean.Expr.Basic
-public meta import Lean.Elab.Command
-public import Mathlib.Init
+import Batteries.Data.HashMap.WF
+import Mathlib.Lean.Name
+import Mathlib.Lean.Expr.Basic
 
 /-!
 # Commands `#long_names` and `#long_instances`
@@ -16,12 +13,10 @@ public import Mathlib.Init
 For finding declarations with excessively long names.
 -/
 
-public meta section
-
 open Lean Meta Elab
 
 /-- Helper function for `#long_names` and `#long_instances`. -/
-def printNameHashMap (h : Std.HashMap Name (Array Name)) : IO Unit :=
+def printNameHashMap (h : Batteries.HashMap Name (Array Name)) : IO Unit :=
   for (m, names) in h.toList do
     IO.println "----"
     IO.println <| m.toString ++ ":"

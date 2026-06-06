@@ -3,22 +3,18 @@ Copyright (c) 2020 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.Star.Basic
-public import Mathlib.Algebra.FreeAlgebra
+import Mathlib.Algebra.Star.Basic
+import Mathlib.Algebra.FreeAlgebra
 
 /-!
-# A \*-algebra structure on the free algebra.
+# A *-algebra structure on the free algebra.
 
-Reversing words gives a \*-structure on the free monoid or on the free algebra on a type.
+Reversing words gives a *-structure on the free monoid or on the free algebra on a type.
 
 ## Implementation note
 We have this in a separate file, rather than in `Algebra.FreeMonoid` and `Algebra.FreeAlgebra`,
 to avoid importing `Algebra.Star.Basic` into the entire hierarchy.
 -/
-
-@[expose] public section
 
 
 namespace FreeMonoid
@@ -28,7 +24,7 @@ variable {α : Type*}
 instance : StarMul (FreeMonoid α) where
   star := List.reverse
   star_involutive := List.reverse_reverse
-  star_mul := fun _ _ => List.reverse_append
+  star_mul := List.reverse_append
 
 @[simp]
 theorem star_of (x : α) : star (of x) = of x :=
@@ -49,9 +45,10 @@ variable {R : Type*} [CommSemiring R] {X : Type*}
 instance : StarRing (FreeAlgebra R X) where
   star := MulOpposite.unop ∘ lift R (MulOpposite.op ∘ ι R)
   star_involutive x := by
+    unfold Star.star
     simp only [Function.comp_apply]
     let y := lift R (X := X) (MulOpposite.op ∘ ι R)
-    refine induction (motive := fun x ↦ (y (y x).unop).unop = x) _ _ ?_ ?_ ?_ ?_ x
+    apply induction (C := fun x ↦ (y (y x).unop).unop = x) _ _ _ _ x
     · intros
       simp only [AlgHom.commutes, MulOpposite.algebraMap_apply, MulOpposite.unop_op]
     · intros

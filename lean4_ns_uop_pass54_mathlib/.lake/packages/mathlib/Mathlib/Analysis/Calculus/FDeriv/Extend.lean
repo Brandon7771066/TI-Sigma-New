@@ -3,9 +3,7 @@ Copyright (c) 2019 Sébastien Gouëzel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sébastien Gouëzel
 -/
-module
-
-public import Mathlib.Analysis.Calculus.MeanValue
+import Mathlib.Analysis.Calculus.MeanValue
 
 /-!
 # Extending differentiability to the boundary
@@ -19,8 +17,6 @@ the right endpoint of an interval, are given in `hasDerivWithinAt_Ici_of_tendsto
 `hasDerivWithinAt_Iic_of_tendsto_deriv`.  These versions are formulated in terms of the
 one-dimensional derivative `deriv ℝ f`.
 -/
-
-public section
 
 
 variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] {F : Type*} [NormedAddCommGroup F]
@@ -41,9 +37,10 @@ theorem hasFDerivWithinAt_closure_of_tendsto_fderiv {f : E → F} {s : Set E} {x
   classical
     -- one can assume without loss of generality that `x` belongs to the closure of `s`, as the
     -- statement is empty otherwise
-    by_cases! hx : x ∉ closure s
-    · rw [← closure_closure] at hx; exact HasFDerivWithinAt.of_notMem_closure hx
-    rw [hasFDerivWithinAt_iff_isLittleO, Asymptotics.isLittleO_iff]
+    by_cases hx : x ∉ closure s
+    · rw [← closure_closure] at hx; exact hasFDerivWithinAt_of_nmem_closure hx
+    push_neg at hx
+    rw [HasFDerivWithinAt, hasFDerivAtFilter_iff_isLittleO, Asymptotics.isLittleO_iff]
     /- One needs to show that `‖f y - f x - f' (y - x)‖ ≤ ε ‖y - x‖` for `y` close to `x` in
       `closure s`, where `ε` is an arbitrary positive constant. By continuity of the functions, it
       suffices to prove this for nearby points inside `s`. In a neighborhood of `x`, the derivative
@@ -51,7 +48,7 @@ theorem hasFDerivWithinAt_closure_of_tendsto_fderiv {f : E → F} {s : Set E} {x
       proof. -/
     intro ε ε_pos
     obtain ⟨δ, δ_pos, hδ⟩ : ∃ δ > 0, ∀ y ∈ s, dist y x < δ → ‖fderiv ℝ f y - f'‖ < ε := by
-      simpa [dist_eq_norm] using tendsto_nhdsWithin_nhds.1 h ε ε_pos
+      simpa [dist_zero_right] using tendsto_nhdsWithin_nhds.1 h ε ε_pos
     set B := ball x δ
     suffices ∀ y ∈ B ∩ closure s, ‖f y - f x - (f' y - f' x)‖ ≤ ε * ‖y - x‖ from
       mem_nhdsWithin_iff.2 ⟨δ, δ_pos, fun y hy => by simpa using this y hy⟩
@@ -79,7 +76,7 @@ theorem hasFDerivWithinAt_closure_of_tendsto_fderiv {f : E → F} {s : Set E} {x
         exact le_of_lt (h z_in.2 z_in.1)
       simpa using conv.norm_image_sub_le_of_norm_fderivWithin_le' diff bound u_in v_in
     rintro ⟨u, v⟩ uv_in
-    have f_cont' : ∀ y ∈ closure s, ContinuousWithinAt (f - ⇑f') s y := by
+    have f_cont' : ∀ y ∈ closure s, ContinuousWithinAt (f -  ⇑f') s y := by
       intro y y_in
       exact Tendsto.sub (f_cont y y_in) f'.cont.continuousWithinAt
     refine ContinuousWithinAt.closure_le uv_in ?_ ?_ key
@@ -103,6 +100,9 @@ theorem hasFDerivWithinAt_closure_of_tendsto_fderiv {f : E → F} {s : Set E} {x
         tendsto_const_nhds.mul
           (Tendsto.comp continuous_norm.continuousAt <| tendsto_snd.sub tendsto_fst)
 
+@[deprecated (since := "2024-07-10")] alias has_fderiv_at_boundary_of_tendsto_fderiv :=
+  hasFDerivWithinAt_closure_of_tendsto_fderiv
+
 /-- If a function is differentiable on the right of a point `a : ℝ`, continuous at `a`, and
 its derivative also converges at `a`, then `f` is differentiable on the right at `a`. -/
 theorem hasDerivWithinAt_Ici_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ} {f : ℝ → E}
@@ -112,7 +112,7 @@ theorem hasDerivWithinAt_Ici_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ} {f
     setting of this theorem, we need to work on an open interval with closure contained in
     `s ∪ {a}`, that we call `t = (a, b)`. Then, we check all the assumptions of this theorem and
     we apply it. -/
-  obtain ⟨b, ab : a < b, sab : Ioc a b ⊆ s⟩ := mem_nhdsGT_iff_exists_Ioc_subset.1 hs
+  obtain ⟨b, ab : a < b, sab : Ioc a b ⊆ s⟩ := mem_nhdsWithin_Ioi_iff_exists_Ioc_subset.1 hs
   let t := Ioo a b
   have ts : t ⊆ s := Subset.trans Ioo_subset_Ioc_self sab
   have t_diff : DifferentiableOn ℝ f t := f_diff.mono ts
@@ -127,7 +127,7 @@ theorem hasDerivWithinAt_Ici_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ} {f
     · have : y ∈ s := sab ⟨lt_of_le_of_ne hy.1 (Ne.symm h), hy.2⟩
       exact (f_diff.continuousOn y this).mono ts
   have t_diff' : Tendsto (fun x => fderiv ℝ f x) (𝓝[t] a) (𝓝 (smulRight (1 : ℝ →L[ℝ] ℝ) e)) := by
-    simp only [toSpanSingleton_deriv.symm]
+    simp only [deriv_fderiv.symm]
     exact Tendsto.comp
       (isBoundedBilinearMap_smulRight : IsBoundedBilinearMap ℝ _).continuous_right.continuousAt
       (tendsto_nhdsWithin_mono_left Ioo_subset_Ioi_self f_lim')
@@ -135,7 +135,10 @@ theorem hasDerivWithinAt_Ici_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ} {f
   have : HasDerivWithinAt f e (Icc a b) a := by
     rw [hasDerivWithinAt_iff_hasFDerivWithinAt, ← t_closure]
     exact hasFDerivWithinAt_closure_of_tendsto_fderiv t_diff t_conv t_open t_cont t_diff'
-  exact this.mono_of_mem_nhdsWithin (Icc_mem_nhdsGE ab)
+  exact this.mono_of_mem (Icc_mem_nhdsWithin_Ici <| left_mem_Ico.2 ab)
+
+@[deprecated (since := "2024-07-10")] alias has_deriv_at_interval_left_endpoint_of_tendsto_deriv :=
+  hasDerivWithinAt_Ici_of_tendsto_deriv
 
 /-- If a function is differentiable on the left of a point `a : ℝ`, continuous at `a`, and
 its derivative also converges at `a`, then `f` is differentiable on the left at `a`. -/
@@ -147,7 +150,7 @@ theorem hasDerivWithinAt_Iic_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ}
     setting of this theorem, we need to work on an open interval with closure contained in
     `s ∪ {a}`, that we call `t = (b, a)`. Then, we check all the assumptions of this theorem and we
     apply it. -/
-  obtain ⟨b, ba, sab⟩ : ∃ b ∈ Iio a, Ico b a ⊆ s := mem_nhdsLT_iff_exists_Ico_subset.1 hs
+  obtain ⟨b, ba, sab⟩ : ∃ b ∈ Iio a, Ico b a ⊆ s := mem_nhdsWithin_Iio_iff_exists_Ico_subset.1 hs
   let t := Ioo b a
   have ts : t ⊆ s := Subset.trans Ioo_subset_Ico_self sab
   have t_diff : DifferentiableOn ℝ f t := f_diff.mono ts
@@ -162,7 +165,7 @@ theorem hasDerivWithinAt_Iic_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ}
     · have : y ∈ s := sab ⟨hy.1, lt_of_le_of_ne hy.2 h⟩
       exact (f_diff.continuousOn y this).mono ts
   have t_diff' : Tendsto (fun x => fderiv ℝ f x) (𝓝[t] a) (𝓝 (smulRight (1 : ℝ →L[ℝ] ℝ) e)) := by
-    simp only [toSpanSingleton_deriv.symm]
+    simp only [deriv_fderiv.symm]
     exact Tendsto.comp
       (isBoundedBilinearMap_smulRight : IsBoundedBilinearMap ℝ _).continuous_right.continuousAt
       (tendsto_nhdsWithin_mono_left Ioo_subset_Iio_self f_lim')
@@ -170,7 +173,10 @@ theorem hasDerivWithinAt_Iic_of_tendsto_deriv {s : Set ℝ} {e : E} {a : ℝ}
   have : HasDerivWithinAt f e (Icc b a) a := by
     rw [hasDerivWithinAt_iff_hasFDerivWithinAt, ← t_closure]
     exact hasFDerivWithinAt_closure_of_tendsto_fderiv t_diff t_conv t_open t_cont t_diff'
-  exact this.mono_of_mem_nhdsWithin (Icc_mem_nhdsLE ba)
+  exact this.mono_of_mem (Icc_mem_nhdsWithin_Iic <| right_mem_Ioc.2 ba)
+
+@[deprecated (since := "2024-07-10")] alias has_deriv_at_interval_right_endpoint_of_tendsto_deriv :=
+  hasDerivWithinAt_Iic_of_tendsto_deriv
 
 /-- If a real function `f` has a derivative `g` everywhere but at a point, and `f` and `g` are
 continuous at this point, then `g` is also the derivative of `f` at this point. -/
@@ -188,7 +194,7 @@ theorem hasDerivAt_of_hasDerivAt_of_ne {f g : ℝ → E} {x : ℝ}
     have : Tendsto g (𝓝[>] x) (𝓝 (g x)) := tendsto_inf_left hg
     apply this.congr' _
     apply mem_of_superset self_mem_nhdsWithin fun y hy => _
-    intro y hy
+    intros y hy
     exact (f_diff y (ne_of_gt hy)).deriv.symm
   have B : HasDerivWithinAt f (g x) (Iic x) x := by
     have diff : DifferentiableOn ℝ f (Iio x) := fun y hy =>
@@ -201,7 +207,7 @@ theorem hasDerivAt_of_hasDerivAt_of_ne {f g : ℝ → E} {x : ℝ}
     have : Tendsto g (𝓝[<] x) (𝓝 (g x)) := tendsto_inf_left hg
     apply this.congr' _
     apply mem_of_superset self_mem_nhdsWithin fun y hy => _
-    intro y hy
+    intros y hy
     exact (f_diff y (ne_of_lt hy)).deriv.symm
   simpa using B.union A
 

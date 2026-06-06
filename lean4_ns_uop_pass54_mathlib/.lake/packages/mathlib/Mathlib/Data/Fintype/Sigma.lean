@@ -3,16 +3,12 @@ Copyright (c) 2017 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro
 -/
-module
-
-public import Mathlib.Data.Finset.Sigma
-public import Mathlib.Data.Fintype.OfMap
+import Mathlib.Data.Fintype.Basic
+import Mathlib.Data.Finset.Sigma
 
 /-!
 # fintype instances for sigma types
 -/
-
-public section
 
 
 open Function
@@ -21,9 +17,9 @@ open Nat
 
 universe u v
 
-variable {ι α : Type*} {κ : ι → Type*} [Π i, Fintype (κ i)]
+variable {ι α β γ : Type*} {κ : ι → Type*} [Π i, Fintype (κ i)]
 
-open Finset
+open Finset Function
 
 lemma Set.biUnion_finsetSigma_univ (s : Finset ι) (f : Sigma κ → Set α) :
     ⋃ ij ∈ s.sigma fun _ ↦ Finset.univ, f ij = ⋃ i ∈ s, ⋃ j, f ⟨i, j⟩ := by aesop
@@ -34,7 +30,6 @@ lemma Set.biUnion_finsetSigma_univ' (s : Finset ι) (f : Π i, κ i → Set α) 
 lemma Set.biInter_finsetSigma_univ (s : Finset ι) (f : Sigma κ → Set α) :
     ⋂ ij ∈ s.sigma fun _ ↦ Finset.univ, f ij = ⋂ i ∈ s, ⋂ j, f ⟨i, j⟩ := by aesop
 
-attribute [local simp] Sigma.forall in
 lemma Set.biInter_finsetSigma_univ' (s : Finset ι) (f : Π i, κ i → Set α) :
     ⋂ i ∈ s, ⋂ j, f i j = ⋂ ij ∈ s.sigma fun _ ↦ Finset.univ, f ij.1 ij.2 := by aesop
 

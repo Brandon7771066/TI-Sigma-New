@@ -3,10 +3,8 @@ Copyright (c) 2021 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.Control.ULift
-public import Mathlib.Logic.Equiv.Basic
+import Mathlib.Control.ULift
+import Mathlib.Logic.Equiv.Basic
 
 /-!
 # Extra lemmas about `ULift` and `PLift`
@@ -16,8 +14,6 @@ In this file we provide `Subsingleton`, `Unique`, `DecidableEq`, and `isEmpty` i
 `PLift.exists`.
 -/
 
-public section
-
 universe u v u' v'
 
 open Function
@@ -25,6 +21,9 @@ open Function
 namespace PLift
 
 variable {α : Sort u} {β : Sort v} {f : α → β}
+
+instance [Subsingleton α] : Subsingleton (PLift α) :=
+  Equiv.plift.subsingleton
 
 instance [Nonempty α] : Nonempty (PLift α) :=
   Equiv.plift.nonempty
@@ -47,7 +46,9 @@ theorem up_surjective : Surjective (@up α) :=
 theorem up_bijective : Bijective (@up α) :=
   Equiv.plift.symm.bijective
 
-theorem up_inj {x y : α} : up x = up y ↔ x = y := by simp
+@[simp]
+theorem up_inj {x y : α} : up x = up y ↔ x = y :=
+  up_injective.eq_iff
 
 theorem down_surjective : Surjective (@down α) :=
   Equiv.plift.surjective
@@ -55,7 +56,7 @@ theorem down_surjective : Surjective (@down α) :=
 theorem down_bijective : Bijective (@down α) :=
   Equiv.plift.bijective
 
--- This is not a good simp lemma, as its discrimination tree key is just an arrow.
+@[simp]
 theorem «forall» {p : PLift α → Prop} : (∀ x, p x) ↔ ∀ x : α, p (PLift.up x) :=
   up_surjective.forall
 
@@ -78,6 +79,9 @@ namespace ULift
 
 variable {α : Type u} {β : Type v} {f : α → β}
 
+instance [Subsingleton α] : Subsingleton (ULift α) :=
+  Equiv.ulift.subsingleton
+
 instance [Nonempty α] : Nonempty (ULift α) :=
   Equiv.ulift.nonempty
 
@@ -99,7 +103,9 @@ theorem up_surjective : Surjective (@up α) :=
 theorem up_bijective : Bijective (@up α) :=
   Equiv.ulift.symm.bijective
 
-theorem up_inj {x y : α} : up x = up y ↔ x = y := by simp
+@[simp]
+theorem up_inj {x y : α} : up x = up y ↔ x = y :=
+  up_injective.eq_iff
 
 theorem down_surjective : Surjective (@down α) :=
   Equiv.ulift.surjective
@@ -129,11 +135,7 @@ theorem «exists» {p : ULift α → Prop} : (∃ x, p x) ↔ ∃ x : α, p (ULi
 theorem ext (x y : ULift α) (h : x.down = y.down) : x = y :=
   congrArg up h
 
-@[simp]
-lemma rec_update {β : ULift α → Type*} [DecidableEq α]
-    (f : ∀ a, β (.up a)) (a : α) (x : β (.up a)) :
-    ULift.rec (update f a x) = update (ULift.rec f) (.up a) x :=
-  Function.rec_update up_injective (ULift.rec ·) (fun _ _ => rfl) (fun
-    | _, _, .up _, h => (h _ rfl).elim) _ _ _
+theorem ext_iff {α : Type*} (x y : ULift α) : x = y ↔ x.down = y.down :=
+  ⟨congrArg _, ULift.ext _ _⟩
 
 end ULift

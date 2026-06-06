@@ -3,11 +3,8 @@ Copyright (c) 2023 Thomas Murrills. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Thomas Murrills
 -/
-module
-
-public import Mathlib.Init
-public meta import Lean.Elab.Tactic.Basic
-public meta import Lean.Meta.Tactic.Util
+import Lean.Elab.Tactic.Basic
+import Lean.Meta.Tactic.Util
 
 /-!
 # Fail if no progress
@@ -29,8 +26,6 @@ This tactic is useful in situations where we want to stop iterating some tactics
 having any effect, e.g. `repeat (fail_if_no_progress simp <;> ring_nf)`.
 
 -/
-
-public meta section
 
 namespace Mathlib.Tactic
 
@@ -85,5 +80,3 @@ elab_rules : tactic
   let goal ← getMainGoal
   let l ← runAndFailIfNoProgress goal (evalTactic tacs)
   replaceMainGoal l
-
-end Mathlib.Tactic

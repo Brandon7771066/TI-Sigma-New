@@ -3,11 +3,8 @@ Copyright (c) 2022 Sébastien Gouëzel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sébastien Gouëzel
 -/
-module
-
-public import Mathlib.Probability.HasLaw
-public import Mathlib.Probability.Moments.Variance
-public import Mathlib.MeasureTheory.Function.UniformIntegrable
+import Mathlib.Probability.Variance
+import Mathlib.MeasureTheory.Function.UniformIntegrable
 
 /-!
 # Identically distributed random variables
@@ -42,7 +39,7 @@ instance:
 
 * `IdentDistrib.aestronglyMeasurable_snd`: if `f` and `g` are identically distributed and `f`
   is almost everywhere strongly measurable, then so is `g`.
-* `IdentDistrib.memLp_snd`: if `f` and `g` are identically distributed and `f`
+* `IdentDistrib.memℒp_snd`: if `f` and `g` are identically distributed and `f`
   belongs to `ℒp`, then so does `g`.
 
 We also register several dot notation shortcuts for convenience.
@@ -50,8 +47,6 @@ For instance, if `h : IdentDistrib f g μ ν`, then `h.sq` states that `f^2` and
 identically distributed, and `h.norm` states that `‖f‖` and `‖g‖` are identically distributed, and
 so on.
 -/
-
-public section
 
 
 open MeasureTheory Filter Finset
@@ -142,23 +137,15 @@ theorem ae_mem_snd (h : IdentDistrib f g μ ν) {t : Set γ} (tmeas : Measurable
     (ht : ∀ᵐ x ∂μ, f x ∈ t) : ∀ᵐ x ∂ν, g x ∈ t :=
   h.ae_snd tmeas ht
 
-theorem _root_.ProbabilityTheory.HasLaw.identDistrib {κ : Measure γ} (h₀ : HasLaw f κ μ)
-    (h₁ : HasLaw g κ ν) : IdentDistrib f g μ ν :=
-  ⟨h₀.aemeasurable, h₁.aemeasurable, by simp [h₀.map_eq, h₁.map_eq]⟩
-
-theorem hasLaw {κ : Measure γ} (h₀ : IdentDistrib f g μ ν) (h₁ : HasLaw f κ μ) : HasLaw g κ ν :=
-  ⟨h₀.aemeasurable_snd, by simp [h₀.map_eq, ← h₁.map_eq]⟩
-
 /-- In a second countable topology, the first function in an identically distributed pair is a.e.
 strongly measurable. So is the second function, but use `h.symm.aestronglyMeasurable_fst` as
 `h.aestronglyMeasurable_snd` has a different meaning. -/
-theorem aestronglyMeasurable_fst [TopologicalSpace γ] [PseudoMetrizableSpace γ]
-    [OpensMeasurableSpace γ] [SecondCountableTopology γ] (h : IdentDistrib f g μ ν) :
-    AEStronglyMeasurable f μ :=
+theorem aestronglyMeasurable_fst [TopologicalSpace γ] [MetrizableSpace γ] [OpensMeasurableSpace γ]
+    [SecondCountableTopology γ] (h : IdentDistrib f g μ ν) : AEStronglyMeasurable f μ :=
   h.aemeasurable_fst.aestronglyMeasurable
 
 /-- If `f` and `g` are identically distributed and `f` is a.e. strongly measurable, so is `g`. -/
-theorem aestronglyMeasurable_snd [TopologicalSpace γ] [PseudoMetrizableSpace γ] [BorelSpace γ]
+theorem aestronglyMeasurable_snd [TopologicalSpace γ] [MetrizableSpace γ] [BorelSpace γ]
     (h : IdentDistrib f g μ ν) (hf : AEStronglyMeasurable f μ) : AEStronglyMeasurable g ν := by
   refine aestronglyMeasurable_iff_aemeasurable_separable.2 ⟨h.aemeasurable_snd, ?_⟩
   rcases (aestronglyMeasurable_iff_aemeasurable_separable.1 hf).2 with ⟨t, t_sep, ht⟩
@@ -166,7 +153,7 @@ theorem aestronglyMeasurable_snd [TopologicalSpace γ] [PseudoMetrizableSpace γ
   apply h.ae_mem_snd isClosed_closure.measurableSet
   filter_upwards [ht] with x hx using subset_closure hx
 
-theorem aestronglyMeasurable_iff [TopologicalSpace γ] [PseudoMetrizableSpace γ] [BorelSpace γ]
+theorem aestronglyMeasurable_iff [TopologicalSpace γ] [MetrizableSpace γ] [BorelSpace γ]
     (h : IdentDistrib f g μ ν) : AEStronglyMeasurable f μ ↔ AEStronglyMeasurable g ν :=
   ⟨fun hf => h.aestronglyMeasurable_snd hf, fun hg => h.symm.aestronglyMeasurable_snd hg⟩
 
@@ -205,7 +192,7 @@ theorem eLpNorm_eq [NormedAddCommGroup γ] [OpensMeasurableSpace γ] (h : IdentD
   by_cases h0 : p = 0
   · simp [h0]
   by_cases h_top : p = ∞
-  · simp only [h_top, eLpNorm, eLpNormEssSup, ENNReal.top_ne_zero, if_true,
+  · simp only [h_top, eLpNorm, eLpNormEssSup, ENNReal.top_ne_zero, eq_self_iff_true, if_true,
       if_false]
     apply essSup_eq
     exact h.comp (measurable_coe_nnreal_ennreal.comp measurable_nnnorm)
@@ -215,31 +202,33 @@ theorem eLpNorm_eq [NormedAddCommGroup γ] [OpensMeasurableSpace γ] (h : IdentD
   exact h.comp (Measurable.pow_const (measurable_coe_nnreal_ennreal.comp measurable_nnnorm)
     p.toReal)
 
-theorem memLp_snd [NormedAddCommGroup γ] [BorelSpace γ] {p : ℝ≥0∞} (h : IdentDistrib f g μ ν)
-    (hf : MemLp f p μ) : MemLp g p ν := by
+@[deprecated (since := "2024-07-27")]
+alias snorm_eq := eLpNorm_eq
+
+theorem memℒp_snd [NormedAddCommGroup γ] [BorelSpace γ] {p : ℝ≥0∞} (h : IdentDistrib f g μ ν)
+    (hf : Memℒp f p μ) : Memℒp g p ν := by
   refine ⟨h.aestronglyMeasurable_snd hf.aestronglyMeasurable, ?_⟩
   rw [← h.eLpNorm_eq]
   exact hf.2
 
-theorem memLp_iff [NormedAddCommGroup γ] [BorelSpace γ] {p : ℝ≥0∞} (h : IdentDistrib f g μ ν) :
-    MemLp f p μ ↔ MemLp g p ν :=
-  ⟨fun hf => h.memLp_snd hf, fun hg => h.symm.memLp_snd hg⟩
+theorem memℒp_iff [NormedAddCommGroup γ] [BorelSpace γ] {p : ℝ≥0∞} (h : IdentDistrib f g μ ν) :
+    Memℒp f p μ ↔ Memℒp g p ν :=
+  ⟨fun hf => h.memℒp_snd hf, fun hg => h.symm.memℒp_snd hg⟩
 
 theorem integrable_snd [NormedAddCommGroup γ] [BorelSpace γ] (h : IdentDistrib f g μ ν)
     (hf : Integrable f μ) : Integrable g ν := by
-  rw [← memLp_one_iff_integrable] at hf ⊢
-  exact h.memLp_snd hf
+  rw [← memℒp_one_iff_integrable] at hf ⊢
+  exact h.memℒp_snd hf
 
 theorem integrable_iff [NormedAddCommGroup γ] [BorelSpace γ] (h : IdentDistrib f g μ ν) :
     Integrable f μ ↔ Integrable g ν :=
   ⟨fun hf => h.integrable_snd hf, fun hg => h.symm.integrable_snd hg⟩
 
-protected theorem norm [NormedAddCommGroup γ] [OpensMeasurableSpace γ] (h : IdentDistrib f g μ ν) :
+protected theorem norm [NormedAddCommGroup γ] [BorelSpace γ] (h : IdentDistrib f g μ ν) :
     IdentDistrib (fun x => ‖f x‖) (fun x => ‖g x‖) μ ν :=
   h.comp measurable_norm
 
-protected theorem nnnorm [NormedAddCommGroup γ] [OpensMeasurableSpace γ]
-    (h : IdentDistrib f g μ ν) :
+protected theorem nnnorm [NormedAddCommGroup γ] [BorelSpace γ] (h : IdentDistrib f g μ ν) :
     IdentDistrib (fun x => ‖f x‖₊) (fun x => ‖g x‖₊) μ ν :=
   h.comp measurable_nnnorm
 
@@ -281,7 +270,7 @@ lemma inv [Inv γ] [MeasurableInv γ] (h : IdentDistrib f g μ ν) :
 
 theorem evariance_eq {f : α → ℝ} {g : β → ℝ} (h : IdentDistrib f g μ ν) :
     evariance f μ = evariance g ν := by
-  convert! (h.sub_const (∫ x, f x ∂μ)).nnnorm.coe_nnreal_ennreal.sq.lintegral_eq
+  convert (h.sub_const (∫ x, f x ∂μ)).nnnorm.coe_nnreal_ennreal.sq.lintegral_eq
   rw [h.integral_eq]
   rfl
 
@@ -297,11 +286,10 @@ open TopologicalSpace
 variable {E : Type*} [MeasurableSpace E] [NormedAddCommGroup E] [BorelSpace E]
   {μ : Measure α} [IsFiniteMeasure μ]
 
-set_option backward.isDefEq.respectTransparency false in
-/-- This lemma is superseded by `MemLp.uniformIntegrable_of_identDistrib` which only requires
+/-- This lemma is superseded by `Memℒp.uniformIntegrable_of_identDistrib` which only requires
 `AEStronglyMeasurable`. -/
-theorem MemLp.uniformIntegrable_of_identDistrib_aux {ι : Type*} {f : ι → α → E} {j : ι} {p : ℝ≥0∞}
-    (hp : 1 ≤ p) (hp' : p ≠ ∞) (hℒp : MemLp (f j) p μ) (hfmeas : ∀ i, StronglyMeasurable (f i))
+theorem Memℒp.uniformIntegrable_of_identDistrib_aux {ι : Type*} {f : ι → α → E} {j : ι} {p : ℝ≥0∞}
+    (hp : 1 ≤ p) (hp' : p ≠ ∞) (hℒp : Memℒp (f j) p μ) (hfmeas : ∀ i, StronglyMeasurable (f i))
     (hf : ∀ i, IdentDistrib (f i) (f j) μ μ) : UniformIntegrable f p μ := by
   refine uniformIntegrable_of' hp hp' hfmeas fun ε hε => ?_
   by_cases hι : Nonempty ι
@@ -325,17 +313,17 @@ theorem MemLp.uniformIntegrable_of_identDistrib_aux {ι : Type*} {f : ι → α 
     (hf i).map_eq, eLpNorm_map_measure F_meas.aestronglyMeasurable (hf j).aemeasurable_fst]
 
 /-- A sequence of identically distributed Lᵖ functions is p-uniformly integrable. -/
-theorem MemLp.uniformIntegrable_of_identDistrib {ι : Type*} {f : ι → α → E} {j : ι} {p : ℝ≥0∞}
-    (hp : 1 ≤ p) (hp' : p ≠ ∞) (hℒp : MemLp (f j) p μ) (hf : ∀ i, IdentDistrib (f i) (f j) μ μ) :
+theorem Memℒp.uniformIntegrable_of_identDistrib {ι : Type*} {f : ι → α → E} {j : ι} {p : ℝ≥0∞}
+    (hp : 1 ≤ p) (hp' : p ≠ ∞) (hℒp : Memℒp (f j) p μ) (hf : ∀ i, IdentDistrib (f i) (f j) μ μ) :
     UniformIntegrable f p μ := by
   have hfmeas : ∀ i, AEStronglyMeasurable (f i) μ := fun i =>
     (hf i).aestronglyMeasurable_iff.2 hℒp.1
   set g : ι → α → E := fun i => (hfmeas i).choose
   have hgmeas : ∀ i, StronglyMeasurable (g i) := fun i => (Exists.choose_spec <| hfmeas i).1
   have hgeq : ∀ i, g i =ᵐ[μ] f i := fun i => (Exists.choose_spec <| hfmeas i).2.symm
-  have hgℒp : MemLp (g j) p μ := hℒp.ae_eq (hgeq j).symm
+  have hgℒp : Memℒp (g j) p μ := hℒp.ae_eq (hgeq j).symm
   exact UniformIntegrable.ae_eq
-    (MemLp.uniformIntegrable_of_identDistrib_aux hp hp' hgℒp hgmeas fun i =>
+    (Memℒp.uniformIntegrable_of_identDistrib_aux hp hp' hgℒp hgmeas fun i =>
       (IdentDistrib.of_ae_eq (hgmeas i).aemeasurable (hgeq i)).trans
         ((hf i).trans <| IdentDistrib.of_ae_eq (hfmeas j).aemeasurable (hgeq j).symm)) hgeq
 
@@ -345,10 +333,11 @@ end UniformIntegrable
 then `X'` and `Y'` are independent. -/
 lemma indepFun_of_identDistrib_pair
     {μ : Measure γ} {μ' : Measure δ} [IsFiniteMeasure μ] [IsFiniteMeasure μ']
-    {X : γ → α} {X' : δ → α} {Y : γ → β} {Y' : δ → β} (h_indep : X ⟂ᵢ[μ] Y)
+    {X : γ → α} {X' : δ → α} {Y : γ → β} {Y' : δ → β} (h_indep : IndepFun X Y μ)
     (h_ident : IdentDistrib (fun ω ↦ (X ω, Y ω)) (fun ω ↦ (X' ω, Y' ω)) μ μ') :
-    X' ⟂ᵢ[μ'] Y' := by
-  rw [indepFun_iff_map_prod_eq_prod_map_map, ← h_ident.map_eq, h_indep.map_prod_eq_prod_map_map]
+    IndepFun X' Y' μ' := by
+  rw [indepFun_iff_map_prod_eq_prod_map_map _ _, ← h_ident.map_eq,
+    (indepFun_iff_map_prod_eq_prod_map_map _ _).1 h_indep]
   · exact congr (congrArg Measure.prod <| (h_ident.comp measurable_fst).map_eq)
       (h_ident.comp measurable_snd).map_eq
   · exact measurable_fst.aemeasurable.comp_aemeasurable h_ident.aemeasurable_fst

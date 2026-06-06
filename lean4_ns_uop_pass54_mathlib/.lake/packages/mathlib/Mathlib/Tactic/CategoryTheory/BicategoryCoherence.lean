@@ -3,11 +3,8 @@ Copyright (c) 2022 Yuma Mizuno. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yuma Mizuno
 -/
-module
-
-public meta import Mathlib.CategoryTheory.Bicategory.Free
-public import Mathlib.CategoryTheory.Bicategory.Free
-public import Mathlib.Tactic.CategoryTheory.BicategoricalComp
+import Mathlib.CategoryTheory.Bicategory.Coherence
+import Mathlib.Tactic.CategoryTheory.BicategoricalComp
 
 /-!
 # A `coherence` tactic for bicategories
@@ -18,11 +15,9 @@ in a bicategory which are built out of associators and unitors
 are equal.
 
 This file mainly deals with the type class setup for the coherence tactic. The actual front end
-tactic is given in `Mathlib/Tactic/CategoryTheory/Coherence.lean` at the same time as the coherence
+tactic is given in `Mathlib.Tactic.CategoryTheory.Coherence` at the same time as the coherence
 tactic for monoidal categories.
 -/
-
-public meta section
 
 noncomputable section
 
@@ -32,7 +27,7 @@ open CategoryTheory CategoryTheory.FreeBicategory
 
 open scoped Bicategory
 
-variable {B : Type u} [Bicategory.{w, v} B] {a b c d : B}
+variable {B : Type u} [Bicategory.{w, v} B] {a b c d e : B}
 
 namespace Mathlib.Tactic.BicategoryCoherence
 
@@ -114,13 +109,11 @@ def mkLiftMap₂LiftExpr (e : Expr) : TermElabM Expr := do
     none
 
 /-- Coherence tactic for bicategories. -/
-def bicategoryCoherence (g : MVarId) : TermElabM Unit := g.withContext do
+def bicategory_coherence (g : MVarId) : TermElabM Unit := g.withContext do
   withOptions (fun opts => synthInstance.maxSize.set opts
     (max 256 (synthInstance.maxSize.get opts))) do
-  let thms := [``BicategoricalCoherence.iso, ``Iso.trans, ``Iso.symm, ``Iso.refl,
-    ``Bicategory.whiskerRightIso, ``Bicategory.whiskerLeftIso].foldl
-    (·.addDeclToUnfoldCore ·) {}
-  let (ty, _) ← dsimp (← g.getType) (← Simp.mkContext (simpTheorems := #[thms]))
+  -- TODO: is this `dsimp only` step necessary? It doesn't appear to be in the tests below.
+  let (ty, _) ← dsimp (← g.getType) (← Simp.Context.ofNames [] true)
   let some (_, lhs, rhs) := (← whnfR ty).eq? | exception g "Not an equation of morphisms."
   let lift_lhs ← mkLiftMap₂LiftExpr lhs
   let lift_rhs ← mkLiftMap₂LiftExpr rhs
@@ -132,20 +125,22 @@ def bicategoryCoherence (g : MVarId) : TermElabM Unit := g.withContext do
   let [] ← g₂.applyConst ``Subsingleton.elim
     | exception g "This shouldn't happen; Subsingleton.elim does not create goals."
 
-@[deprecated (since := "2026-05-27")] alias bicategory_coherence := bicategoryCoherence
+/-- Coherence tactic for bicategories.
+Use `pure_coherence` instead, which is a frontend to this one. -/
+elab "bicategory_coherence" : tactic => do bicategory_coherence (← getMainGoal)
 
 open Lean.Parser.Tactic
 
 /--
 Simp lemmas for rewriting a 2-morphism into a normal form.
 -/
-syntax (name := whisker_simps) "whisker_simps" optConfig : tactic
+syntax (name := whisker_simps) "whisker_simps" (config)? : tactic
 
 @[inherit_doc whisker_simps]
 elab_rules : tactic
-| `(tactic| whisker_simps $cfg) => do
+| `(tactic| whisker_simps $[$cfg]?) => do
   evalTactic (← `(tactic|
-    simp $cfg only [Category.assoc,
+    simp $[$cfg]? only [Category.assoc,
       Bicategory.comp_whiskerLeft, Bicategory.id_whiskerLeft,
       Bicategory.whiskerRight_comp, Bicategory.whiskerRight_id,
       Bicategory.whiskerLeft_comp, Bicategory.whiskerLeft_id,
@@ -164,4 +159,8 @@ theorem assoc_liftHom₂ {f g h i : a ⟶ b} [LiftHom f] [LiftHom g] [LiftHom h]
     (η : f ⟶ g) (θ : g ⟶ h) (ι : h ⟶ i) [LiftHom₂ η] [LiftHom₂ θ] : η ≫ θ ≫ ι = (η ≫ θ) ≫ ι :=
   (Category.assoc _ _ _).symm
 
-end Mathlib.Tactic.BicategoryCoherence
+end BicategoryCoherence
+
+end Tactic
+
+end Mathlib

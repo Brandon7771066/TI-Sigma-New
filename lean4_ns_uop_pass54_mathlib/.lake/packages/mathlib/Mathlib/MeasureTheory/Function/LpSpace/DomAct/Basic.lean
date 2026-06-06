@@ -3,10 +3,8 @@ Copyright (c) 2023 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.MeasureTheory.Function.AEEqFun.DomAct
-public import Mathlib.MeasureTheory.Function.LpSpace.Indicator
+import Mathlib.MeasureTheory.Function.AEEqFun.DomAct
+import Mathlib.MeasureTheory.Function.LpSpace
 
 /-!
 # Action of `Mᵈᵐᵃ` on `Lᵖ` spaces
@@ -18,19 +16,17 @@ and `c : M`, then `(.mk c : Mᵈᵐᵃ) • [f]` is represented by the function 
 We also prove basic properties of this action.
 -/
 
-public section
-
 open MeasureTheory Filter
 open scoped ENNReal
 
 namespace DomMulAct
 
-variable {M N α E : Type*} [MeasurableSpace α] [NormedAddCommGroup E]
-  {μ : MeasureTheory.Measure α} {p : ℝ≥0∞}
+variable {M N α E : Type*} [MeasurableSpace M] [MeasurableSpace N]
+  [MeasurableSpace α] [NormedAddCommGroup E] {μ : MeasureTheory.Measure α} {p : ℝ≥0∞}
 
 section SMul
 
-variable [SMul M α] [SMulInvariantMeasure M α μ] [MeasurableConstSMul M α]
+variable [SMul M α] [SMulInvariantMeasure M α μ] [MeasurableSMul M α]
 
 @[to_additive]
 instance : SMul Mᵈᵐᵃ (Lp E p μ) where
@@ -44,7 +40,7 @@ theorem smul_Lp_ae_eq (c : Mᵈᵐᵃ) (f : Lp E p μ) : c • f =ᵐ[μ] (f <| 
   Lp.coeFn_compMeasurePreserving _ _
 
 @[to_additive]
-theorem mk_smul_toLp (c : M) {f : α → E} (hf : MemLp f p μ) :
+theorem mk_smul_toLp (c : M) {f : α → E} (hf : Memℒp f p μ) :
     mk c • hf.toLp f =
       (hf.comp_measurePreserving <| measurePreserving_smul c μ).toLp (f <| c • ·) :=
   rfl
@@ -62,15 +58,15 @@ theorem mk_smul_indicatorConstLp (c : M)
         (by rwa [SMulInvariantMeasure.measure_preimage_smul c hs]) b :=
   rfl
 
-instance [SMul N α] [SMulCommClass M N α] [SMulInvariantMeasure N α μ] [MeasurableConstSMul N α] :
+instance [SMul N α] [SMulCommClass M N α] [SMulInvariantMeasure N α μ] [MeasurableSMul N α] :
     SMulCommClass Mᵈᵐᵃ Nᵈᵐᵃ (Lp E p μ) :=
   Subtype.val_injective.smulCommClass (fun _ _ ↦ rfl) fun _ _ ↦ rfl
 
-instance {𝕜 : Type*} [NormedRing 𝕜] [Module 𝕜 E] [IsBoundedSMul 𝕜 E] :
+instance {𝕜 : Type*} [NormedRing 𝕜] [Module 𝕜 E] [BoundedSMul 𝕜 E] :
     SMulCommClass Mᵈᵐᵃ 𝕜 (Lp E p μ) :=
   Subtype.val_injective.smulCommClass (fun _ _ ↦ rfl) fun _ _ ↦ rfl
 
-instance {𝕜 : Type*} [NormedRing 𝕜] [Module 𝕜 E] [IsBoundedSMul 𝕜 E] :
+instance {𝕜 : Type*} [NormedRing 𝕜] [Module 𝕜 E] [BoundedSMul 𝕜 E] :
     SMulCommClass 𝕜 Mᵈᵐᵃ (Lp E p μ) :=
   .symm _ _ _
 
@@ -98,7 +94,7 @@ instance : DistribSMul Mᵈᵐᵃ (Lp E p μ) where
   smul_zero _ := rfl
   smul_add := by rintro _ ⟨⟨⟩, _⟩ ⟨⟨⟩, _⟩; rfl
 
--- The next few lemmas follow from the `IsIsometricSMul` instance if `1 ≤ p`
+-- The next few lemmas follow from the `IsometricSMul` instance if `1 ≤ p`
 @[to_additive (attr := simp)]
 theorem norm_smul_Lp (c : Mᵈᵐᵃ) (f : Lp E p μ) : ‖c • f‖ = ‖f‖ :=
   Lp.norm_compMeasurePreserving _ _
@@ -109,7 +105,7 @@ theorem nnnorm_smul_Lp (c : Mᵈᵐᵃ) (f : Lp E p μ) : ‖c • f‖₊ = ‖
 
 @[to_additive (attr := simp)]
 theorem dist_smul_Lp (c : Mᵈᵐᵃ) (f g : Lp E p μ) : dist (c • f) (c • g) = dist f g := by
-  simp only [dist, ← smul_Lp_neg, ← smul_Lp_add, norm_smul_Lp]
+  simp only [dist, ← smul_Lp_sub, norm_smul_Lp]
 
 @[to_additive (attr := simp)]
 theorem edist_smul_Lp (c : Mᵈᵐᵃ) (f g : Lp E p μ) : edist (c • f) (c • g) = edist f g := by
@@ -118,13 +114,13 @@ theorem edist_smul_Lp (c : Mᵈᵐᵃ) (f g : Lp E p μ) : edist (c • f) (c �
 variable [Fact (1 ≤ p)]
 
 @[to_additive]
-instance : IsIsometricSMul Mᵈᵐᵃ (Lp E p μ) := ⟨edist_smul_Lp⟩
+instance : IsometricSMul Mᵈᵐᵃ (Lp E p μ) := ⟨edist_smul_Lp⟩
 
 end SMul
 
 section MulAction
 
-variable [Monoid M] [MulAction M α] [SMulInvariantMeasure M α μ] [MeasurableConstSMul M α]
+variable [Monoid M] [MulAction M α] [SMulInvariantMeasure M α μ] [MeasurableSMul M α]
 
 @[to_additive]
 instance : MulAction Mᵈᵐᵃ (Lp E p μ) := Subtype.val_injective.mulAction _ fun _ _ ↦ rfl

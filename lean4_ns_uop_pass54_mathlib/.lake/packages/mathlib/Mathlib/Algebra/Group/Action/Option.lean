@@ -3,9 +3,7 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Group.Action.Faithful
+import Mathlib.Algebra.Group.Action.Defs
 
 /-!
 # Option instances for additive and multiplicative actions
@@ -15,12 +13,10 @@ multiplication is defined by `a • some b = some (a • b)` and `a • none = n
 
 ## See also
 
-* `Mathlib/Algebra/Group/Action/Pi.lean`
-* `Mathlib/Algebra/Group/Action/Sigma.lean`
-* `Mathlib/Algebra/Group/Action/Sum.lean`
+* `Mathlib.Algebra.Group.Action.Pi`
+* `Mathlib.Algebra.Group.Action.Sigma`
+* `Mathlib.Algebra.Group.Action.Sum`
 -/
-
-@[expose] public section
 
 assert_not_exists MonoidWithZero
 
@@ -72,6 +68,7 @@ end SMul
 
 instance [Monoid M] [MulAction M α] :
     MulAction M (Option α) where
+  smul := (· • ·)
   one_smul b := by
     cases b
     exacts [rfl, congr_arg some (one_smul _ _)]

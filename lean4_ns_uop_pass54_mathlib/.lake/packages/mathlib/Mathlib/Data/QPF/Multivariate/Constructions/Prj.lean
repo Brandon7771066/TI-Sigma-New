@@ -3,17 +3,13 @@ Copyright (c) 2020 Simon Hudon. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Simon Hudon
 -/
-module
-
-public import Mathlib.Control.Functor.Multivariate
-public import Mathlib.Data.QPF.Multivariate.Basic
+import Mathlib.Control.Functor.Multivariate
+import Mathlib.Data.QPF.Multivariate.Basic
 
 /-!
 Projection functors are QPFs. The `n`-ary projection functors on `i` is an `n`-ary
 functor `F` such that `F (α₀..αᵢ₋₁, αᵢ, αᵢ₊₁..αₙ₋₁) = αᵢ`
 -/
-
-@[expose] public section
 
 
 universe u v
@@ -53,6 +49,6 @@ instance Prj.mvqpf : MvQPF (Prj i) where
   abs := @Prj.abs _ i
   repr := @Prj.repr _ i
   abs_repr := by intros; rfl
-  abs_map := by intro α β f P; cases P; rfl
+  abs_map := by intros α β f P; cases P; rfl
 
 end MvQPF

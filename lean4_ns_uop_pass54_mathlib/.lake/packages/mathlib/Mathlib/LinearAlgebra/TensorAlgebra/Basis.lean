@@ -3,10 +3,8 @@ Copyright (c) 2023 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.LinearAlgebra.TensorAlgebra.Basic
-public import Mathlib.LinearAlgebra.FreeAlgebra
+import Mathlib.LinearAlgebra.TensorAlgebra.Basic
+import Mathlib.LinearAlgebra.FreeAlgebra
 
 /-!
 # A basis for `TensorAlgebra R M`
@@ -24,11 +22,6 @@ public import Mathlib.LinearAlgebra.FreeAlgebra
 * `TensorAlgebra.rank_eq`
 
 -/
-
-@[expose] public section
-
-open Module
-
 namespace TensorAlgebra
 
 universe uκ uR uM
@@ -42,7 +35,7 @@ with its index. -/
 noncomputable def equivFreeAlgebra (b : Basis κ R M) :
     TensorAlgebra R M ≃ₐ[R] FreeAlgebra R κ :=
   AlgEquiv.ofAlgHom
-    (TensorAlgebra.lift _ (Finsupp.linearCombination _ (FreeAlgebra.ι _) ∘ₗ b.repr.toLinearMap))
+    (TensorAlgebra.lift _ (Finsupp.total _ _ _ (FreeAlgebra.ι _) ∘ₗ b.repr.toLinearMap))
     (FreeAlgebra.lift _ (ι R ∘ b))
     (by ext; simp)
     (hom_ext <| b.ext fun i => by simp)
@@ -59,7 +52,7 @@ lemma equivFreeAlgebra_symm_ι (b : Basis κ R M) (i : κ) :
 
 /-- A basis on `M` can be lifted to a basis on `TensorAlgebra R M` -/
 @[simps! repr_apply]
-noncomputable def _root_.Module.Basis.tensorAlgebra (b : Basis κ R M) :
+noncomputable def _root_.Basis.tensorAlgebra (b : Basis κ R M) :
     Basis (FreeMonoid κ) R (TensorAlgebra R M) :=
   (FreeAlgebra.basisFreeMonoid R κ).map <| (equivFreeAlgebra b).symm.toLinearEquiv
 
@@ -72,7 +65,7 @@ instance instModuleFree [Module.Free R M] : Module.Free R (TensorAlgebra R M) :=
 no zero-divisors. -/
 instance instNoZeroDivisors [NoZeroDivisors R] [Module.Free R M] :
     NoZeroDivisors (TensorAlgebra R M) :=
-  have ⟨⟨_, b⟩⟩ := ‹Module.Free R M›
+  have ⟨⟨κ, b⟩⟩ := ‹Module.Free R M›
   (equivFreeAlgebra b).toMulEquiv.noZeroDivisors
 
 end CommSemiring

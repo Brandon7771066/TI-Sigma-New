@@ -1,13 +1,12 @@
 /-
-Copyright (c) 2020 Kim Morrison. All rights reserved.
+Copyright (c) 2020 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison, Joël Riou
+Authors: Scott Morrison, Joël Riou
 -/
-module
-
-public import Mathlib.CategoryTheory.Shift.Basic
-public import Mathlib.Data.Set.Subsingleton
-public import Mathlib.Algebra.Group.Int.Defs
+import Mathlib.Algebra.Group.Int
+import Mathlib.CategoryTheory.ConcreteCategory.Basic
+import Mathlib.CategoryTheory.Shift.Basic
+import Mathlib.Data.Set.Subsingleton
 
 /-!
 # The category of graded objects
@@ -30,8 +29,6 @@ introduced: if `p : I → J` is a map such that `C` has coproducts indexed by `p
 have a functor `map : GradedObject I C ⥤ GradedObject J C`.
 
 -/
-
-@[expose] public section
 
 namespace CategoryTheory
 
@@ -64,6 +61,7 @@ variable {C : Type u} [Category.{v} C]
 instance categoryOfGradedObjects (β : Type w) : Category.{max w v} (GradedObject β C) :=
   CategoryTheory.pi fun _ => C
 
+-- Porting note (#10688): added to ease automation
 @[ext]
 lemma hom_ext {β : Type*} {X Y : GradedObject β C} (f g : X ⟶ Y) (h : ∀ x, f x = g x) : f = g := by
   funext
@@ -103,7 +101,7 @@ end GradedObject
 
 namespace Iso
 
-variable {C D E J : Type*} [Category* C] [Category* D] [Category* E]
+variable {C D E J : Type*} [Category C] [Category D] [Category E]
   {X Y : GradedObject J C}
 
 @[reassoc (attr := simp)]
@@ -152,13 +150,15 @@ section
 
 variable (C)
 
+-- Porting note: added to ease the port
 /-- Pull back an `I`-graded object in `C` to a `J`-graded object along a function `J → I`. -/
 abbrev comap {I J : Type*} (h : J → I) : GradedObject I C ⥤ GradedObject J C :=
   Pi.comap (fun _ => C) h
 
+-- Porting note: added to ease the port, this is a special case of `Functor.eqToHom_proj`
 @[simp]
 theorem eqToHom_proj {I : Type*} {x x' : GradedObject I C} (h : x = x') (i : I) :
-    (eqToHom h : x ⟶ x') i = eqToHom (funext_iff.mp h i) := by
+    (eqToHom h : x ⟶ x') i = eqToHom (Function.funext_iff.mp h i) := by
   subst h
   rfl
 
@@ -171,17 +171,16 @@ def comapEq {β γ : Type w} {f g : β → γ} (h : f = g) : comap C f ≅ comap
   inv := { app := fun X b => eqToHom (by dsimp; simp only [h]) }
 
 theorem comapEq_symm {β γ : Type w} {f g : β → γ} (h : f = g) :
-    comapEq C h.symm = (comapEq C h).symm := by cat_disch
+    comapEq C h.symm = (comapEq C h).symm := by aesop_cat
 
 theorem comapEq_trans {β γ : Type w} {f g h : β → γ} (k : f = g) (l : g = h) :
-    comapEq C (k.trans l) = comapEq C k ≪≫ comapEq C l := by cat_disch
+    comapEq C (k.trans l) = comapEq C k ≪≫ comapEq C l := by aesop_cat
 
 theorem eqToHom_apply {β : Type w} {X Y : β → C} (h : X = Y) (b : β) :
     (eqToHom h : X ⟶ Y) b = eqToHom (by rw [h]) := by
   subst h
   rfl
 
-set_option backward.isDefEq.respectTransparency false in
 /-- The equivalence between β-graded objects and γ-graded objects,
 given an equivalence between β and γ.
 -/
@@ -196,11 +195,10 @@ def comapEquiv {β γ : Type w} (e : β ≃ γ) : GradedObject β C ≌ GradedOb
 
 end
 
-set_option backward.defeqAttrib.useBackward true in
 instance hasShift {β : Type*} [AddCommGroup β] (s : β) : HasShift (GradedObjectWithShift s C) ℤ :=
   hasShiftMk _ _
     { F := fun n => comap C fun b : β => b + n • s
-      zero := comapEq C (by cat_disch) ≪≫ Pi.comapId β fun _ => C
+      zero := comapEq C (by aesop_cat) ≪≫ Pi.comapId β fun _ => C
       add := fun m n => comapEq C (by ext; dsimp; rw [add_comm m n, add_zsmul, add_assoc]) ≪≫
           (Pi.comapComp _ _ _).symm }
 
@@ -215,10 +213,15 @@ theorem shiftFunctor_map_apply {β : Type*} [AddCommGroup β] (s : β)
     (shiftFunctor (GradedObjectWithShift s C) n).map f t = f (t + n • s) :=
   rfl
 
-instance [HasZeroMorphisms C] (β : Type w) (X Y : GradedObject β C) : Zero (X ⟶ Y) :=
-  ⟨fun _ => 0⟩
+instance [HasZeroMorphisms C] (β : Type w) (X Y : GradedObject β C) :
+  Zero (X ⟶ Y) := ⟨fun _ => 0⟩
 
-@[simp]
+#adaptation_note
+/--
+After https://github.com/leanprover/lean4/pull/4481
+the `simpNF` linter incorrectly claims this lemma can't be applied by `simp`.
+-/
+@[simp, nolint simpNF]
 theorem zero_apply [HasZeroMorphisms C] (β : Type w) (X Y : GradedObject β C) (b : β) :
     (0 : X ⟶ Y) b = 0 :=
   rfl
@@ -233,7 +236,7 @@ open ZeroObject
 instance hasZeroObject [HasZeroObject C] [HasZeroMorphisms C] (β : Type w) :
     HasZeroObject.{max w v} (GradedObject β C) := by
   refine ⟨⟨fun _ => 0, fun X => ⟨⟨⟨fun b => 0⟩, fun f => ?_⟩⟩, fun X =>
-    ⟨⟨⟨fun b => 0⟩, fun f => ?_⟩⟩⟩⟩ <;> cat_disch
+    ⟨⟨⟨fun b => 0⟩, fun f => ?_⟩⟩⟩⟩ <;> aesop_cat
 
 end
 
@@ -270,15 +273,30 @@ instance : (total β C).Faithful where
     ext i
     replace w := Sigma.ι (fun i : β => X i) i ≫= w
     erw [colimit.ι_map, colimit.ι_map] at w
-    replace w : f i ≫ colimit.ι (Discrete.functor Y) ⟨i⟩ =
-      g i ≫ colimit.ι (Discrete.functor Y) ⟨i⟩ := by simpa
+    simp? at * says simp only [Discrete.functor_obj_eq_as, Discrete.natTrans_app] at *
     exact Mono.right_cancellation _ _ w
 
 end GradedObject
 
 namespace GradedObject
 
-variable {I J K : Type*} {C : Type*} [Category* C]
+noncomputable section
+
+variable (β : Type)
+variable (C : Type (u + 1)) [LargeCategory C] [ConcreteCategory C] [HasCoproducts.{0} C]
+  [HasZeroMorphisms C]
+
+instance : ConcreteCategory (GradedObject β C) where forget := total β C ⋙ forget C
+
+instance : HasForget₂ (GradedObject β C) C where forget₂ := total β C
+
+end
+
+end GradedObject
+
+namespace GradedObject
+
+variable {I J K : Type*} {C : Type*} [Category C]
   (X Y Z : GradedObject I C) (φ : X ⟶ Y) (e : X ≅ Y) (ψ : Y ⟶ Z) (p : I → J)
 
 /-- If `X : GradedObject I C` and `p : I → J`, `X.mapObjFun p j` is the family of objects `X i`
@@ -292,13 +310,12 @@ for all `j : J`, the coproduct of all `X i` such `p i = j` exists. -/
 abbrev HasMap : Prop := ∀ (j : J), HasCoproduct (X.mapObjFun p j)
 
 variable {X Y} in
-lemma hasMap_of_iso (e : X ≅ Y) (p : I → J) [HasMap X p] : HasMap Y p := fun j => by
+lemma hasMap_of_iso (e : X ≅ Y) (p: I → J) [HasMap X p] : HasMap Y p := fun j => by
   have α : Discrete.functor (X.mapObjFun p j) ≅ Discrete.functor (Y.mapObjFun p j) :=
     Discrete.natIso (fun ⟨i, _⟩ => (GradedObject.eval i).mapIso e)
-  exact hasColimit_of_iso α.symm
+  exact hasColimitOfIso α.symm
 
-section
-variable [X.HasMap p] [Y.HasMap p]
+variable [X.HasMap p] [Y.HasMap p] [Z.HasMap p]
 
 /-- Given `X : GradedObject I C` and `p : I → J`, `X.mapObj p` is the graded object by `J`
 which in degree `j` consists of the coproduct of the `X i` such that `p i = j`. -/
@@ -350,15 +367,13 @@ lemma ι_descMapObj {A : C} {j : J}
     X.ιMapObj p i j hi ≫ X.descMapObj p φ = φ i hi := by
   apply Cofan.IsColimit.fac
 
-end
 namespace CofanMapObjFun
 
 lemma hasMap (c : ∀ j, CofanMapObjFun X p j) (hc : ∀ j, IsColimit (c j)) :
     X.HasMap p := fun j => ⟨_, hc j⟩
 
 variable {j X p}
-variable [X.HasMap p]
-variable {c : CofanMapObjFun X p j} (hc : IsColimit c)
+variable {c : CofanMapObjFun X p j} (hc : IsColimit c) [X.HasMap p]
 
 /-- If `c : CofanMapObjFun X p j` is a colimit cofan, this is the induced
 isomorphism `c.pt ≅ X.mapObj p j`. -/
@@ -378,7 +393,6 @@ lemma ιMapObj_iso_inv (i : I) (hi : p i = j) :
 end CofanMapObjFun
 
 variable {X Y}
-variable [X.HasMap p] [Y.HasMap p]
 
 /-- The canonical morphism of `J`-graded objects `X.mapObj p ⟶ Y.mapObj p` induced by
 a morphism `X ⟶ Y` of `I`-graded objects and a map `p : I → J`. -/
@@ -397,12 +411,12 @@ lemma congr_mapMap (φ₁ φ₂ : X ⟶ Y) (h : φ₁ = φ₂) : mapMap φ₁ p 
 variable (X)
 
 @[simp]
-lemma mapMap_id : mapMap (𝟙 X) p = 𝟙 _ := by cat_disch
+lemma mapMap_id : mapMap (𝟙 X) p = 𝟙 _ := by aesop_cat
 
 variable {X Z}
 
 @[simp, reassoc]
-lemma mapMap_comp [Z.HasMap p] : mapMap (φ ≫ ψ) p = mapMap φ p ≫ mapMap ψ p := by cat_disch
+lemma mapMap_comp : mapMap (φ ≫ ψ) p = mapMap φ p ≫ mapMap ψ p := by aesop_cat
 
 /-- The isomorphism of `J`-graded objects `X.mapObj p ≅ Y.mapObj p` induced by an
 isomorphism `X ≅ Y` of graded objects and a map `p : I → J`. -/
@@ -442,7 +456,6 @@ def cofanMapObjComp : X.CofanMapObjFun r k :=
     (c (p i) (by rw [hpqr, hi])).inj ⟨i, rfl⟩ ≫ c'.inj (⟨p i, by
       rw [Set.mem_preimage, Set.mem_singleton_iff, hpqr, hi]⟩))
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Given maps `p : I → J`, `q : J → K` and `r : I → K` such that `q.comp p = r`,
 `X : GradedObject I C`, `k : K`, the cofan constructed by `cofanMapObjComp` is a colimit.
 In other words, if we have, for all `j : J` such that `hj : q j = k`,
@@ -452,7 +465,7 @@ the point of this latter cofan computes the coproduct of the `X i` such that `r 
 @[simp]
 def isColimitCofanMapObjComp :
     IsColimit (cofanMapObjComp X p q r hpqr k c c') :=
-  Cofan.IsColimit.mk _
+  mkCofanColimit _
     (fun s => Cofan.IsColimit.desc hc'
       (fun ⟨j, (hj : q j = k)⟩ => Cofan.IsColimit.desc (hc j hj)
         (fun ⟨i, (hi : p i = j)⟩ => s.inj ⟨i, by
@@ -468,12 +481,15 @@ def isColimitCofanMapObjComp :
       dsimp
       rw [assoc])
 
-include hpqr in
-lemma hasMap_comp [(X.mapObj p).HasMap q] : X.HasMap r :=
+lemma hasMap_comp [X.HasMap p] [(X.mapObj p).HasMap q] : X.HasMap r :=
   fun k => ⟨_, isColimitCofanMapObjComp X p q r hpqr k _
     (fun j _ => X.isColimitCofanMapObj p j) _ ((X.mapObj p).isColimitCofanMapObj q k)⟩
 
 end
+
+section HasZeroMorphisms
+
+end HasZeroMorphisms
 
 variable [HasZeroMorphisms C] [DecidableEq J] (i : I) (j : J)
 

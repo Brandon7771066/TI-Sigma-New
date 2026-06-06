@@ -3,10 +3,7 @@ Copyright (c) 2022 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.GroupTheory.GroupAction.SubMulAction
-public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+import Mathlib.GroupTheory.GroupAction.SubMulAction
 
 /-!
 # Pointwise monoid structures on SubMulAction
@@ -18,10 +15,8 @@ To match `Submodule.idemSemiring`, we do not put these in the `Pointwise` locale
 
 -/
 
-public section
 
-
-open scoped Pointwise
+open Pointwise
 
 variable {R M : Type*}
 
@@ -71,7 +66,10 @@ section MulOneClass
 
 variable [Monoid R] [MulAction R M] [MulOneClass M] [IsScalarTower R M M] [SMulCommClass R M M]
 
-instance : MulOneClass (SubMulAction R M) where
+-- Porting note: giving the instance the name `mulOneClass`
+instance mulOneClass : MulOneClass (SubMulAction R M) where
+  mul := (· * ·)
+  one := 1
   mul_one a := by
     ext x
     simp only [mem_mul, mem_one, mul_smul_comm, exists_exists_eq_and, mul_one]
@@ -93,7 +91,9 @@ section Semigroup
 
 variable [Monoid R] [MulAction R M] [Semigroup M] [IsScalarTower R M M]
 
-instance : Semigroup (SubMulAction R M) where
+-- Porting note: giving the instance the name `semiGroup`
+instance semiGroup : Semigroup (SubMulAction R M) where
+  mul := (· * ·)
   mul_assoc _ _ _ := SetLike.coe_injective (mul_assoc (_ : Set _) _ _)
 
 end Semigroup
@@ -102,7 +102,9 @@ section Monoid
 
 variable [Monoid R] [MulAction R M] [Monoid M] [IsScalarTower R M M] [SMulCommClass R M M]
 
-instance : Monoid (SubMulAction R M) := { }
+instance : Monoid (SubMulAction R M) :=
+  { SubMulAction.semiGroup,
+    SubMulAction.mulOneClass with }
 
 theorem coe_pow (p : SubMulAction R M) : ∀ {n : ℕ} (_ : n ≠ 0), ↑(p ^ n) = (p : Set M) ^ n
   | 0, hn => (hn rfl).elim

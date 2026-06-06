@@ -3,27 +3,21 @@ Copyright (c) 2022 Aaron Anderson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Aaron Anderson
 -/
-module
-
-public import Mathlib.ModelTheory.ElementarySubstructures
-public import Mathlib.CategoryTheory.ConcreteCategory.Bundled
+import Mathlib.ModelTheory.ElementarySubstructures
+import Mathlib.CategoryTheory.ConcreteCategory.Bundled
 
 /-!
 # Bundled First-Order Structures
-
 This file bundles types together with their first-order structure.
 
 ## Main Definitions
-
-- `FirstOrder.Language.Theory.ModelType` is the type of nonempty models of a particular theory.
-- `FirstOrder.Language.equivSetoid` is the isomorphism equivalence relation on bundled structures.
+* `FirstOrder.Language.Theory.ModelType` is the type of nonempty models of a particular theory.
+* `FirstOrder.Language.equivSetoid` is the isomorphism equivalence relation on bundled structures.
 
 ## TODO
+* Define category structures on bundled structures and models.
 
-- Define category structures on bundled structures and models.
 -/
-
-@[expose] public section
 
 
 universe u v w w' x
@@ -71,7 +65,6 @@ namespace Theory
 
 /-- The type of nonempty models of a first-order theory. -/
 structure ModelType where
-  /-- The underlying type for the models -/
   Carrier : Type w
   [struc : L.Structure Carrier]
   [is_model : T.Model Carrier]
@@ -116,8 +109,7 @@ def equivInduced {M : ModelType.{u, v, w} T} {N : Type w'} (e : M ≃ N) :
     ModelType.{u, v, w'} T where
   Carrier := N
   struc := e.inducedStructure
-  is_model := @StrongHomClass.theory_model L M N _ e.inducedStructure T
-    _ _ _ e.inducedStructureEquiv _
+  is_model := @Equiv.theory_model L M N _ e.inducedStructure T e.inducedStructureEquiv _
   nonempty' := e.symm.nonempty
 
 instance of_small (M : Type w) [Nonempty M] [L.Structure M] [M ⊨ T] [h : Small.{w'} M] :

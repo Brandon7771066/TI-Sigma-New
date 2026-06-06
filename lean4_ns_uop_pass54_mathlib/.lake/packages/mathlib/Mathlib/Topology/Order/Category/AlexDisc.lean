@@ -3,9 +3,7 @@ Copyright (c) 2023 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Topology.Specialization
+import Mathlib.Topology.Specialization
 
 /-!
 # Category of Alexandrov-discrete topological spaces
@@ -14,58 +12,49 @@ This defines `AlexDisc`, the category of Alexandrov-discrete topological spaces 
 maps, and proves it's equivalent to the category of preorders.
 -/
 
-@[expose] public section
-
 open CategoryTheory Topology
 
+/-- Auxiliary typeclass to define the category of Alexandrov-discrete spaces. Do not use this
+directly. Use `AlexandrovDiscrete` instead. -/
+class AlexandrovDiscreteSpace (α : Type*) extends TopologicalSpace α, AlexandrovDiscrete α
+
 /-- The category of Alexandrov-discrete spaces. -/
-structure AlexDisc extends TopCat where
-  [is_alexandrovDiscrete : AlexandrovDiscrete carrier]
+def AlexDisc := Bundled AlexandrovDiscreteSpace
 
 namespace AlexDisc
 
-attribute [instance] is_alexandrovDiscrete
+instance instCoeSort : CoeSort AlexDisc Type* := Bundled.coeSort
+instance instTopologicalSpace (α : AlexDisc) : TopologicalSpace α := α.2.1
+instance instAlexandrovDiscrete (α : AlexDisc) : AlexandrovDiscrete α := α.2.2
 
-instance : CoeSort AlexDisc (Type _) :=
-  ⟨fun X => X.toTopCat⟩
+instance : BundledHom.ParentProjection @AlexandrovDiscreteSpace.toTopologicalSpace := ⟨⟩
 
-instance category : Category AlexDisc :=
-  inferInstanceAs <| Category (InducedCategory _ toTopCat)
+deriving instance LargeCategory for AlexDisc
 
-instance concreteCategory : ConcreteCategory AlexDisc (C(·, ·)) :=
-  inferInstanceAs <| ConcreteCategory (InducedCategory _ toTopCat) _
-
-instance instHasForgetToTop : HasForget₂ AlexDisc TopCat :=
-  inferInstanceAs <| HasForget₂ (InducedCategory _ toTopCat) _
-
--- TODO: generalize to `InducedCategory.forget₂_full`?
-instance forgetToTop_full : (forget₂ AlexDisc TopCat).Full where
-  map_surjective f := ⟨InducedCategory.homMk f, rfl⟩
-
+instance instConcreteCategory : ConcreteCategory AlexDisc := BundledHom.concreteCategory _
+instance instHasForgetToTop : HasForget₂ AlexDisc TopCat := BundledHom.forget₂ _ _
+instance forgetToTop_full : (forget₂ AlexDisc TopCat).Full := BundledHom.forget₂_full _ _
 instance forgetToTop_faithful : (forget₂ AlexDisc TopCat).Faithful where
-  map_injective {X Y f g} h := by
-    ext x
-    exact ConcreteCategory.congr_hom h x
-
-
-/-- Construct a bundled `AlexDisc` from the underlying topological space. -/
-abbrev of (X : Type*) [TopologicalSpace X] [AlexandrovDiscrete X] : AlexDisc where
-  toTopCat := TopCat.of X
-
-lemma coe_of (α : Type*) [TopologicalSpace α] [AlexandrovDiscrete α] : ↥(of α) = α := rfl
-
-@[simp] lemma forgetToTop_of (α : Type*) [TopologicalSpace α] [AlexandrovDiscrete α] :
-    (forget₂ AlexDisc TopCat).obj (of α) = TopCat.of α := rfl
 
 @[simp] lemma coe_forgetToTop (X : AlexDisc) : ↥((forget₂ _ TopCat).obj X) = X := rfl
+
+/-- Construct a bundled `AlexDisc` from the underlying topological space. -/
+def of (α : Type*) [TopologicalSpace α] [AlexandrovDiscrete α] : AlexDisc := ⟨α, ⟨⟩⟩
+
+@[simp] lemma coe_of (α : Type*) [TopologicalSpace α] [AlexandrovDiscrete α] : ↥(of α) = α := rfl
+@[simp] lemma forgetToTop_of (α : Type*) [TopologicalSpace α] [AlexandrovDiscrete α] :
+  (forget₂ AlexDisc TopCat).obj (of α) = TopCat.of α := rfl
+
+-- This was a global instance prior to #13170. We may experiment with removing it.
+attribute [local instance] CategoryTheory.ConcreteCategory.instFunLike
 
 /-- Constructs an equivalence between preorders from an order isomorphism between them. -/
 @[simps]
 def Iso.mk {α β : AlexDisc} (e : α ≃ₜ β) : α ≅ β where
-  hom := ConcreteCategory.ofHom (e : ContinuousMap α β)
-  inv := ConcreteCategory.ofHom (e.symm : ContinuousMap β α)
-  hom_inv_id := by ext; apply e.symm_apply_apply
-  inv_hom_id := by ext; apply e.apply_symm_apply
+  hom := (e : ContinuousMap α β)
+  inv := (e.symm : ContinuousMap β α)
+  hom_inv_id := DFunLike.ext _ _ e.symm_apply_apply
+  inv_hom_id := DFunLike.ext _ _ e.apply_symm_apply
 
 end AlexDisc
 
@@ -73,8 +62,7 @@ end AlexDisc
 @[simps]
 def alexDiscEquivPreord : AlexDisc ≌ Preord where
   functor := forget₂ _ _ ⋙ topToPreord
-  inverse.obj X := AlexDisc.of (WithUpperSet X)
-  inverse.map f := ConcreteCategory.ofHom (WithUpperSet.map f.hom)
+  inverse := { obj := fun X ↦ AlexDisc.of (WithUpperSet X), map := WithUpperSet.map }
   unitIso := NatIso.ofComponents fun X ↦ AlexDisc.Iso.mk <| by
     dsimp; exact homeoWithUpperSetTopologyorderIso X
   counitIso := NatIso.ofComponents fun X ↦ Preord.Iso.mk <| by

@@ -3,10 +3,7 @@ Copyright (c) 2023 Kyle Miller. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kyle Miller
 -/
-module
-
-public import Mathlib.Init
-public meta import Lean.Elab.Tactic.Conv.Basic
+import Mathlib.Tactic.Basic
 
 /-! # Tactics that transform types into definitionally equal types
 
@@ -15,8 +12,6 @@ change hypotheses and the goal to things that are definitionally equal.
 
 It then provides a number of tactics that transform local hypotheses and/or the target.
 -/
-
-public meta section
 
 namespace Mathlib.Tactic
 
@@ -40,7 +35,7 @@ def _root_.Lean.MVarId.changeLocalDecl' (mvarId : MVarId) (fvarId : FVarId) (typ
           throwTacticEx `changeLocalDecl mvarId
             m!"given type{indentExpr typeNew}\nis not definitionally equal to{indentExpr typeOld}"
     let finalize (targetNew : Expr) := do
-      return ((), fvars.map some, ← mvarId.replaceTargetDefEq targetNew)
+      return ((), fvars.map .some, ← mvarId.replaceTargetDefEq targetNew)
     match ← mvarId.getType with
     | .forallE n d b bi => do check d; finalize (.forallE n typeNew b bi)
     | .letE n t v b ndep => do check t; finalize (.letE n typeNew v b ndep)
@@ -135,6 +130,35 @@ def unfoldFVars (fvars : Array FVarId) (e : Expr) : MetaM Expr := do
         return .continue
     | _ => return .continue
 
+/--
+`unfold_let x y z at loc` unfolds the local definitions `x`, `y`, and `z` at the given
+location, which is known as "zeta reduction."
+This also exists as a `conv`-mode tactic.
+
+If no local definitions are given, then all local definitions are unfolded.
+This variant also exists as the `conv`-mode tactic `zeta`.
+
+This is similar to the `unfold` tactic, which instead is for unfolding global definitions.
+-/
+syntax (name := unfoldLetStx) "unfold_let" (ppSpace colGt term:max)*
+  (ppSpace Parser.Tactic.location)? : tactic
+
+elab_rules : tactic
+  | `(tactic| unfold_let $[$loc?]?) =>
+    runDefEqTactic (fun _ => zetaReduce) loc? "unfold_let"
+  | `(tactic| unfold_let $hs:term* $[$loc?]?) => do
+    let fvars ← getFVarIds hs
+    runDefEqTactic (fun _ => unfoldFVars fvars) loc? "unfold_let"
+
+@[inherit_doc unfoldLetStx]
+syntax "unfold_let" (ppSpace colGt term:max)* : conv
+
+elab_rules : conv
+  | `(conv| unfold_let) => runDefEqConvTactic zetaReduce
+  | `(conv| unfold_let $hs:term*) => do
+    runDefEqConvTactic (unfoldFVars (← getFVarIds hs))
+
+
 /-! ### `refold_let` -/
 
 /-- For each fvar, looks for its body in `e` and replaces it with the fvar. -/
@@ -223,46 +247,25 @@ elab "eta_reduce" : conv => runDefEqConvTactic etaReduceAll
 
 /-- Eta expand every sub-expression in the given expression.
 
-As a side-effect, beta reduces any pre-existing instances of eta expanded terms. -/
+As a side-effect, beta reduces any pre-existing instances of eta expanded terms.  -/
 partial def etaExpandAll (e : Expr) : MetaM Expr := do
-  if e.isLambda then
-    expandSubterms e
-  else
-    forallTelescopeReducing (← inferType e) fun xs _ => do
-      let e := mkAppN (e.instantiate xs) xs
-      mkLambdaFVars xs (← expandSubterms e)
-where
-  expandSubterms
-  | .forallE n t b bi =>
-    return .forallE n
-      (← etaExpandAll t)
-      (← withLocalDecl n bi t fun x => (·.abstract #[x]) <$> etaExpandAll (b.instantiate1 x))
-      bi
-  | .lam n t b bi =>
-    return .lam n
-      (← etaExpandAll t)
-      (← withLocalDecl n bi t fun x => (·.abstract #[x]) <$> etaExpandAll (b.instantiate1 x))
-      bi
-  | .letE n t v b ndep =>
-    return .letE n
-      (← etaExpandAll t)
-      (← etaExpandAll v)
-      (← withLetDecl n t v (nondep := ndep) fun x =>
-        (·.abstract #[x]) <$> etaExpandAll (b.instantiate1 x))
-      ndep
-  | e@(.app ..) =>
-    let f := e.getAppFn
-    let args := e.getAppArgs
-    if f.etaExpandedStrict?.isSome then
-      expandSubterms (f.beta args)
+  let betaOrApp (f : Expr) (args : Array Expr) : Expr :=
+    if f.etaExpanded?.isSome then f.beta args else mkAppN f args
+  let expand (e : Expr) : MetaM Expr := do
+    if e.isLambda then
+      return e
     else
-      -- We use `expandSubterms` for `f` to avoid creating a beta-redex
-      return mkAppN (← expandSubterms f) (← args.mapM etaExpandAll)
-  | .mdata d e =>
-    return .mdata d (← etaExpandAll e)
-  | .proj n i e =>
-    return .proj n i (← etaExpandAll e)
-  | e => return e
+      forallTelescopeReducing (← inferType e) fun xs _ => do
+        mkLambdaFVars xs (betaOrApp e xs)
+  transform e
+    (pre := fun node => do
+      if node.isApp then
+        let f ← etaExpandAll node.getAppFn
+        let args ← node.getAppArgs.mapM etaExpandAll
+        .done <$> expand (betaOrApp f args)
+      else
+        pure .continue)
+    (post := (.done <$> expand ·))
 
 /--
 `eta_expand at loc` eta expands all sub-expressions at the given location.
@@ -309,7 +312,7 @@ def etaStruct? (e : Expr) (tryWhnfR : Bool := true) : MetaM (Option Expr) := do
   let .const f _ := e.getAppFn | return none
   let some (ConstantInfo.ctorInfo fVal) := (← getEnv).find? f | return none
   unless 0 < fVal.numFields && e.getAppNumArgs == fVal.numParams + fVal.numFields do return none
-  unless isStructure (← getEnv) fVal.induct do return none
+  unless isStructureLike (← getEnv) fVal.induct do return none
   let args := e.getAppArgs
   let mut x? ← findProj fVal args pure
   if tryWhnfR then

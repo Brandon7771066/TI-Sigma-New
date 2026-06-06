@@ -3,9 +3,7 @@ Copyright (c) 2020 Google LLC. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Chris Wong
 -/
-module
-
-public import Mathlib.Data.List.Induction
+import Mathlib.Data.List.Basic
 
 /-!
 # Palindromes
@@ -25,8 +23,6 @@ principle. Also provided are conversions to and from other equivalent definition
 
 palindrome, reverse, induction
 -/
-
-public section
 
 
 variable {α β : Type*}

@@ -3,10 +3,8 @@ Copyright (c) 2021 Rémy Degenne. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Rémy Degenne
 -/
-module
-
-public import Mathlib.MeasureTheory.MeasurableSpace.Basic
-public import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
+import Mathlib.MeasureTheory.MeasurableSpace.Basic
+import Mathlib.MeasureTheory.Measure.MeasureSpaceDef
 
 /-!
 # Sequence of measurable functions associated to a sequence of a.e.-measurable functions
@@ -22,10 +20,10 @@ and a measurable set `aeSeqSet hf p`, such that
 * `x ∈ aeSeqSet hf p → p x (fun n ↦ f n x)`
 -/
 
-@[expose] public section
-
 
 open MeasureTheory
+
+open scoped Classical
 
 variable {ι : Sort*} {α β γ : Type*} [MeasurableSpace α] [MeasurableSpace β] {f : ι → α → β}
   {μ : Measure α} {p : α → (ι → β) → Prop}
@@ -36,7 +34,6 @@ whose complement has measure 0 such that for all `x ∈ aeSeqSet`, `f i x` is eq
 def aeSeqSet (hf : ∀ i, AEMeasurable (f i) μ) (p : α → (ι → β) → Prop) : Set α :=
   (toMeasurable μ { x | (∀ i, f i x = (hf i).mk (f i) x) ∧ p x fun n => f n x }ᶜ)ᶜ
 
-open Classical in
 /-- A sequence of measurable functions that are equal to `f` and verify property `p` on the
 measurable set `aeSeqSet hf p`. -/
 noncomputable def aeSeq (hf : ∀ i, AEMeasurable (f i) μ) (p : α → (ι → β) → Prop) : ι → α → β :=
@@ -112,12 +109,16 @@ theorem aeSeq_n_eq_fun_n_ae [Countable ι] (hf : ∀ i, AEMeasurable (f i) μ)
     (hp : ∀ᵐ x ∂μ, p x fun n => f n x) (n : ι) : aeSeq hf p n =ᵐ[μ] f n :=
   ae_all_iff.mp (aeSeq_eq_fun_ae hf hp) n
 
-theorem iSup [SupSet β] [Countable ι] (hf : ∀ i, AEMeasurable (f i) μ)
+theorem iSup [CompleteLattice β] [Countable ι] (hf : ∀ i, AEMeasurable (f i) μ)
     (hp : ∀ᵐ x ∂μ, p x fun n => f n x) : ⨆ n, aeSeq hf p n =ᵐ[μ] ⨆ n, f n := by
-  filter_upwards [aeSeq_eq_fun_ae hf hp] with x hx
-  simp [iSup_apply, hx]
+  simp_rw [Filter.EventuallyEq, ae_iff, iSup_apply]
+  have h_ss : aeSeqSet hf p ⊆ { a : α | ⨆ i : ι, aeSeq hf p i a = ⨆ i : ι, f i a } := by
+    intro x hx
+    congr
+    exact funext fun i => aeSeq_eq_fun_of_mem_aeSeqSet hf hx i
+  exact measure_mono_null (Set.compl_subset_compl.mpr h_ss) (measure_compl_aeSeqSet_eq_zero hf hp)
 
-theorem iInf [InfSet β] [Countable ι] (hf : ∀ i, AEMeasurable (f i) μ)
+theorem iInf [CompleteLattice β] [Countable ι] (hf : ∀ i, AEMeasurable (f i) μ)
     (hp : ∀ᵐ x ∂μ, p x fun n ↦ f n x) : ⨅ n, aeSeq hf p n =ᵐ[μ] ⨅ n, f n :=
   iSup (β := βᵒᵈ) hf hp
 

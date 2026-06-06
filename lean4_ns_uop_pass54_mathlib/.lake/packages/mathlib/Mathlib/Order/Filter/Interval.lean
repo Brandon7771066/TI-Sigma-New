@@ -1,14 +1,11 @@
 /-
-Copyright (c) 2020 Yury Kudryashov. All rights reserved.
+Copyright (c) 2020 Yury G. Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Yury Kudryashov
+Authors: Yury G. Kudryashov
 -/
-module
-
-public import Mathlib.Order.Interval.Set.OrdConnected
-public import Mathlib.Order.Filter.SmallSets
-public import Mathlib.Order.Filter.AtTopBot.Basic
-public import Mathlib.Order.Filter.Bases.Finite
+import Mathlib.Order.Interval.Set.OrdConnected
+import Mathlib.Order.Filter.SmallSets
+import Mathlib.Order.Filter.AtTopBot
 
 /-!
 # Convergence of intervals
@@ -21,7 +18,7 @@ from the left or from the right, or it could also be infinity, and "around this 
 to these directed neighborhoods. Therefore, the above theorem has many variants. Instead of stating
 all these variants, one can look for the common abstraction and have a single version. One has to
 be careful: if one considers convergence along a sequence, then the function may tend to infinity
-but have a derivative which is small along the sequence (with big jumps in between), so in the end
+but have a derivative which is small along the sequence (with big jumps inbetween), so in the end
 the derivative may be integrable on a neighborhood of the sequence. What really matters for such
 calculus issues in terms of derivatives is that whole intervals are included in the sets we
 consider.
@@ -75,8 +72,6 @@ that need topology are defined in `Mathlib/Topology/Algebra/Ordered`.
 
 -/
 
-public section
-
 
 variable {α β : Type*}
 
@@ -85,6 +80,8 @@ open Filter Set Function
 namespace Filter
 
 section Preorder
+
+variable [Preorder α]
 
 /-- A pair of filters `l₁`, `l₂` has `TendstoIxxClass Ixx` property if `Ixx a b` tends to
 `l₂.small_sets` as `a` and `b` tend to `l₁`. In all instances `Ixx` is one of `Set.Icc`, `Set.Ico`,
@@ -103,11 +100,31 @@ class TendstoIxxClass (Ixx : α → α → Set α) (l₁ : Filter α) (l₂ : ou
   Use lemmas like `Filter.Tendsto.Icc` instead. -/
   tendsto_Ixx : Tendsto (fun p : α × α => Ixx p.1 p.2) (l₁ ×ˢ l₁) l₂.smallSets
 
+protected theorem Tendsto.Icc {l₁ l₂ : Filter α} [TendstoIxxClass Icc l₁ l₂] {lb : Filter β}
+    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
+    Tendsto (fun x => Icc (u₁ x) (u₂ x)) lb l₂.smallSets :=
+  (@TendstoIxxClass.tendsto_Ixx α Set.Icc _ _ _).comp <| h₁.prod_mk h₂
+
+protected theorem Tendsto.Ioc {l₁ l₂ : Filter α} [TendstoIxxClass Ioc l₁ l₂] {lb : Filter β}
+    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
+    Tendsto (fun x => Ioc (u₁ x) (u₂ x)) lb l₂.smallSets :=
+  (@TendstoIxxClass.tendsto_Ixx α Set.Ioc _ _ _).comp <| h₁.prod_mk h₂
+
+protected theorem Tendsto.Ico {l₁ l₂ : Filter α} [TendstoIxxClass Ico l₁ l₂] {lb : Filter β}
+    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
+    Tendsto (fun x => Ico (u₁ x) (u₂ x)) lb l₂.smallSets :=
+  (@TendstoIxxClass.tendsto_Ixx α Set.Ico _ _ _).comp <| h₁.prod_mk h₂
+
+protected theorem Tendsto.Ioo {l₁ l₂ : Filter α} [TendstoIxxClass Ioo l₁ l₂] {lb : Filter β}
+    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
+    Tendsto (fun x => Ioo (u₁ x) (u₂ x)) lb l₂.smallSets :=
+  (@TendstoIxxClass.tendsto_Ixx α Set.Ioo _ _ _).comp <| h₁.prod_mk h₂
+
 theorem tendstoIxxClass_principal {s t : Set α} {Ixx : α → α → Set α} :
     TendstoIxxClass Ixx (𝓟 s) (𝓟 t) ↔ ∀ᵉ (x ∈ s) (y ∈ s), Ixx x y ⊆ t :=
   Iff.trans ⟨fun h => h.1, fun h => ⟨h⟩⟩ <| by
     simp only [smallSets_principal, prod_principal_principal, tendsto_principal_principal,
-      forall_prod_set, mem_powerset_iff]
+      forall_prod_set, mem_powerset_iff, mem_principal]
 
 theorem tendstoIxxClass_inf {l₁ l₁' l₂ l₂' : Filter α} {Ixx} [h : TendstoIxxClass Ixx l₁ l₂]
     [h' : TendstoIxxClass Ixx l₁' l₂'] : TendstoIxxClass Ixx (l₁ ⊓ l₁') (l₂ ⊓ l₂') :=
@@ -115,35 +132,12 @@ theorem tendstoIxxClass_inf {l₁ l₁' l₂ l₂' : Filter α} {Ixx} [h : Tends
 
 theorem tendstoIxxClass_of_subset {l₁ l₂ : Filter α} {Ixx Ixx' : α → α → Set α}
     (h : ∀ a b, Ixx a b ⊆ Ixx' a b) [h' : TendstoIxxClass Ixx' l₁ l₂] : TendstoIxxClass Ixx l₁ l₂ :=
-  ⟨h'.1.smallSets_mono <| Eventually.of_forall <| Prod.forall.2 h⟩
+  ⟨h'.1.smallSets_mono <| eventually_of_forall <| Prod.forall.2 h⟩
 
 theorem HasBasis.tendstoIxxClass {ι : Type*} {p : ι → Prop} {s} {l : Filter α}
     (hl : l.HasBasis p s) {Ixx : α → α → Set α}
     (H : ∀ i, p i → ∀ x ∈ s i, ∀ y ∈ s i, Ixx x y ⊆ s i) : TendstoIxxClass Ixx l l :=
   ⟨(hl.prod_self.tendsto_iff hl.smallSets).2 fun i hi => ⟨i, hi, fun _ h => H i hi _ h.1 _ h.2⟩⟩
-
-variable [Preorder α]
-
-protected theorem Tendsto.Icc {l₁ l₂ : Filter α} [TendstoIxxClass Icc l₁ l₂] {lb : Filter β}
-    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
-    Tendsto (fun x => Icc (u₁ x) (u₂ x)) lb l₂.smallSets :=
-  (@TendstoIxxClass.tendsto_Ixx α Set.Icc _ _ _).comp <| h₁.prodMk h₂
-
-protected theorem Tendsto.Ioc {l₁ l₂ : Filter α} [TendstoIxxClass Ioc l₁ l₂] {lb : Filter β}
-    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
-    Tendsto (fun x => Ioc (u₁ x) (u₂ x)) lb l₂.smallSets :=
-  (@TendstoIxxClass.tendsto_Ixx α Set.Ioc _ _ _).comp <| h₁.prodMk h₂
-
-protected theorem Tendsto.Ico {l₁ l₂ : Filter α} [TendstoIxxClass Ico l₁ l₂] {lb : Filter β}
-    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
-    Tendsto (fun x => Ico (u₁ x) (u₂ x)) lb l₂.smallSets :=
-  (@TendstoIxxClass.tendsto_Ixx α Set.Ico _ _ _).comp <| h₁.prodMk h₂
-
-protected theorem Tendsto.Ioo {l₁ l₂ : Filter α} [TendstoIxxClass Ioo l₁ l₂] {lb : Filter β}
-    {u₁ u₂ : β → α} (h₁ : Tendsto u₁ lb l₁) (h₂ : Tendsto u₂ lb l₁) :
-    Tendsto (fun x => Ioo (u₁ x) (u₂ x)) lb l₂.smallSets :=
-  (@TendstoIxxClass.tendsto_Ixx α Set.Ioo _ _ _).comp <| h₁.prodMk h₂
-
 
 instance tendsto_Icc_atTop_atTop : TendstoIxxClass Icc (atTop : Filter α) atTop :=
   (hasBasis_iInf_principal_finite _).tendstoIxxClass fun _ _ =>
@@ -265,7 +259,7 @@ instance tendsto_uIcc_of_Icc {l : Filter α} [TendstoIxxClass Icc l l] :
 protected theorem Tendsto.uIcc {l : Filter α} [TendstoIxxClass Icc l l] {f g : β → α}
     {lb : Filter β} (hf : Tendsto f lb l) (hg : Tendsto g lb l) :
     Tendsto (fun x => [[f x, g x]]) lb l.smallSets :=
-  (@TendstoIxxClass.tendsto_Ixx α Set.uIcc _ _ _).comp <| hf.prodMk hg
+  (@TendstoIxxClass.tendsto_Ixx α Set.uIcc _ _ _).comp <| hf.prod_mk hg
 
 end LinearOrder
 

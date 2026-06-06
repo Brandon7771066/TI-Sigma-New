@@ -3,9 +3,7 @@ Copyright (c) 2022 Junyan Xu. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Damiano Testa, Junyan Xu
 -/
-module
-
-public import Mathlib.Data.DFinsupp.Defs
+import Mathlib.Data.DFinsupp.Basic
 
 /-!
 # Locus of unequal values of finitely supported dependent functions
@@ -16,11 +14,9 @@ Let `N : α → Type*` be a type family, assume that `N a` has a `0` for all `a 
 ## Main definition
 
 * `DFinsupp.neLocus f g : Finset α`, the finite subset of `α` where `f` and `g` differ.
-  In the case in which `N a` is an additive group for all `a`, `DFinsupp.neLocus f g` coincides with
-  `DFinsupp.support (f - g)`.
+In the case in which `N a` is an additive group for all `a`, `DFinsupp.neLocus f g` coincides with
+`DFinsupp.support (f - g)`.
 -/
-
-@[expose] public section
 
 
 variable {α : Type*} {N : α → Type*}
@@ -43,7 +39,7 @@ theorem mem_neLocus {f g : Π₀ a, N a} {a : α} : a ∈ f.neLocus g ↔ f a �
   simpa only [neLocus, Finset.mem_filter, Finset.mem_union, mem_support_iff,
     and_iff_right_iff_imp] using Ne.ne_or_ne _
 
-theorem notMem_neLocus {f g : Π₀ a, N a} {a : α} : a ∉ f.neLocus g ↔ f a = g a :=
+theorem not_mem_neLocus {f g : Π₀ a, N a} {a : α} : a ∉ f.neLocus g ↔ f a = g a :=
   mem_neLocus.not.trans not_ne_iff
 
 @[simp]
@@ -53,8 +49,8 @@ theorem coe_neLocus : ↑(f.neLocus g) = { x | f x ≠ g x } :=
 @[simp]
 theorem neLocus_eq_empty {f g : Π₀ a, N a} : f.neLocus g = ∅ ↔ f = g :=
   ⟨fun h ↦
-    ext fun a ↦ not_not.mp (mem_neLocus.not.mp (Finset.eq_empty_iff_forall_notMem.mp h a)),
-    fun h ↦ h ▸ by simp only [neLocus, Ne, not_true, Finset.filter_false]⟩
+    ext fun a ↦ not_not.mp (mem_neLocus.not.mp (Finset.eq_empty_iff_forall_not_mem.mp h a)),
+    fun h ↦ h ▸ by simp only [neLocus, Ne, eq_self_iff_true, not_true, Finset.filter_False]⟩
 
 @[simp]
 theorem nonempty_neLocus_iff {f g : Π₀ a, N a} : (f.neLocus g).Nonempty ↔ f ≠ g :=
@@ -88,20 +84,20 @@ theorem zipWith_neLocus_eq_left [∀ a, DecidableEq (N a)] [∀ a, DecidableEq (
     (hF : ∀ a f, Function.Injective fun g ↦ F a f g) :
     (zipWith F F0 f g₁).neLocus (zipWith F F0 f g₂) = g₁.neLocus g₂ := by
   ext a
-  simpa only [mem_neLocus] using! (hF a _).ne_iff
+  simpa only [mem_neLocus] using (hF a _).ne_iff
 
 theorem zipWith_neLocus_eq_right [∀ a, DecidableEq (M a)] [∀ a, DecidableEq (P a)]
     {F : ∀ a, M a → N a → P a} (F0 : ∀ a, F a 0 0 = 0) (f₁ f₂ : Π₀ a, M a) (g : Π₀ a, N a)
     (hF : ∀ a g, Function.Injective fun f ↦ F a f g) :
     (zipWith F F0 f₁ g).neLocus (zipWith F F0 f₂ g) = f₁.neLocus f₂ := by
   ext a
-  simpa only [mem_neLocus] using! (hF a _).ne_iff
+  simpa only [mem_neLocus] using (hF a _).ne_iff
 
 theorem mapRange_neLocus_eq [∀ a, DecidableEq (N a)] [∀ a, DecidableEq (M a)] (f g : Π₀ a, N a)
     {F : ∀ a, N a → M a} (F0 : ∀ a, F a 0 = 0) (hF : ∀ a, Function.Injective (F a)) :
     (f.mapRange F F0).neLocus (g.mapRange F F0) = f.neLocus g := by
   ext a
-  simpa only [mem_neLocus] using! (hF a).ne_iff
+  simpa only [mem_neLocus] using (hF a).ne_iff
 
 end NeLocusAndMaps
 
@@ -128,7 +124,7 @@ theorem neLocus_neg_neg : neLocus (-f) (-g) = f.neLocus g :=
 theorem neLocus_neg : neLocus (-f) g = f.neLocus (-g) := by rw [← neLocus_neg_neg, neg_neg]
 
 theorem neLocus_eq_support_sub : f.neLocus g = (f - g).support := by
-  rw [← @neLocus_add_right α N _ _ _ _ _ (-g), add_neg_cancel, neLocus_zero_right, sub_eq_add_neg]
+  rw [← @neLocus_add_right α N _ _ _ _ _ (-g), add_right_neg, neLocus_zero_right, sub_eq_add_neg]
 
 @[simp]
 theorem neLocus_sub_left : neLocus (f - g₁) (f - g₂) = neLocus g₁ g₂ := by

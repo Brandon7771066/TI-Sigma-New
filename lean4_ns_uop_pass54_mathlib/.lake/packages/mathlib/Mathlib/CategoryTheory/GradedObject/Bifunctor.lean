@@ -3,15 +3,13 @@ Copyright (c) 2023 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.CategoryTheory.GradedObject
+import Mathlib.CategoryTheory.GradedObject
 /-!
 # The action of bifunctors on graded objects
 
 Given a bifunctor `F : C₁ ⥤ C₂ ⥤ C₃` and types `I` and `J`, we construct an obvious functor
 `mapBifunctor F I J : GradedObject I C₁ ⥤ GradedObject J C₂ ⥤ GradedObject (I × J) C₃`.
-When we have a map `p : I × J → K` and that suitable coproducts exist, we also get
+When we have a map `p : I × J → K` and that suitable coproducts exists, we also get
 a functor
 `mapBifunctorMap F p : GradedObject I C₁ ⥤ GradedObject J C₂ ⥤ GradedObject K C₃`.
 
@@ -21,13 +19,11 @@ on `GradedObject I C` (TODO @joelriou).
 
 -/
 
-@[expose] public section
-
 namespace CategoryTheory
 
 open Category
 
-variable {C₁ C₂ C₃ : Type*} [Category* C₁] [Category* C₂] [Category* C₃]
+variable {C₁ C₂ C₃ : Type*} [Category C₁] [Category C₂] [Category C₃]
   (F : C₁ ⥤ C₂ ⥤ C₃)
 
 namespace GradedObject
@@ -48,11 +44,12 @@ section
 variable {I J K : Type*} (p : I × J → K)
 
 /-- Given a bifunctor `F : C₁ ⥤ C₂ ⥤ C₃`, graded objects `X : GradedObject I C₁` and
-`Y : GradedObject J C₂` and a map `p : I × J → K`, this is the `K`-graded object sending
+ `Y : GradedObject J C₂` and a map `p : I × J → K`, this is the `K`-graded object sending
 `k` to the coproduct of `(F.obj (X i)).obj (Y j)` for `p ⟨i, j⟩ = k`. -/
+@[simp]
 noncomputable def mapBifunctorMapObj (X : GradedObject I C₁) (Y : GradedObject J C₂)
-    [HasMap (((mapBifunctor F I J).obj X).obj Y) p] : GradedObject K C₃ :=
-  (((mapBifunctor F I J).obj X).obj Y).mapObj p
+  [HasMap (((mapBifunctor F I J).obj X).obj Y) p] : GradedObject K C₃ :=
+    (((mapBifunctor F I J).obj X).obj Y).mapObj p
 
 /-- The inclusion of `(F.obj (X i)).obj (Y j)` in `mapBifunctorMapObj F p X Y k`
 when `i + j = k`. -/
@@ -73,7 +70,6 @@ noncomputable def mapBifunctorMapMap {X₁ X₂ : GradedObject I C₁} (f : X₁
   GradedObject.mapMap (((mapBifunctor F I J).map f).app Y₁ ≫
     ((mapBifunctor F I J).obj X₂).map g) p
 
-set_option backward.isDefEq.respectTransparency false in
 @[reassoc (attr := simp)]
 lemma ι_mapBifunctorMapMap {X₁ X₂ : GradedObject I C₁} (f : X₁ ⟶ X₂)
     {Y₁ Y₂ : GradedObject J C₂} (g : Y₁ ⟶ Y₂)
@@ -131,13 +127,12 @@ noncomputable def mapBifunctorMapMapIso (e : X₁ ≅ X₂) (e' : Y₁ ≅ Y₂)
 
 instance (f : X₁ ⟶ X₂) (g : Y₁ ⟶ Y₂) [IsIso f] [IsIso g] :
     IsIso (mapBifunctorMapMap F p f g) :=
-  inferInstanceAs <| IsIso (mapBifunctorMapMapIso F p (asIso f) (asIso g)).hom
+  (inferInstance : IsIso (mapBifunctorMapMapIso F p (asIso f) (asIso g)).hom)
 
 end
 
 attribute [local simp] mapBifunctorMapMap
 
-set_option backward.isDefEq.respectTransparency false in
 /-- Given a bifunctor `F : C₁ ⥤ C₂ ⥤ C₃` and a map `p : I × J → K`, this is the
 functor `GradedObject I C₁ ⥤ GradedObject J C₂ ⥤ GradedObject K C₃` sending
 `X : GradedObject I C₁` and `Y : GradedObject J C₂` to the `K`-graded object sending

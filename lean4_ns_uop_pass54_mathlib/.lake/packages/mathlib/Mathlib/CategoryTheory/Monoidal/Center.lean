@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2021 Kim Morrison. All rights reserved.
+Copyright (c) 2021 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.Monoidal.Braided.Basic
-public import Mathlib.CategoryTheory.Functor.ReflectsIso.Basic
+import Mathlib.CategoryTheory.Monoidal.Braided.Basic
+import Mathlib.CategoryTheory.Functor.ReflectsIso
 
 /-!
 # Half braidings and the Drinfeld center of a monoidal category
@@ -31,16 +29,16 @@ In this file, we take the second approach using the monoidal composition `⊗≫
 `coherence` tactic.
 -/
 
-@[expose] public section
 
+open CategoryTheory
+
+open CategoryTheory.MonoidalCategory
 
 universe v v₁ v₂ v₃ u u₁ u₂ u₃
 
 noncomputable section
 
 namespace CategoryTheory
-
-open MonoidalCategory Functor.LaxMonoidal Functor.OplaxMonoidal
 
 variable {C : Type u₁} [Category.{v₁} C] [MonoidalCategory C]
 
@@ -51,15 +49,15 @@ Thinking of `C` as a 2-category with a single `0`-morphism, these are the same a
 transformations (in the pseudo- sense) of the identity 2-functor on `C`, which send the unique
 `0`-morphism to `X`.
 -/
+-- @[nolint has_nonempty_instance] -- Porting note(#5171): This linter does not exist yet.
 structure HalfBraiding (X : C) where
-  /-- The family of isomorphisms `X ⊗ U ≅ U ⊗ X` -/
   β : ∀ U, X ⊗ U ≅ U ⊗ X
   monoidal : ∀ U U', (β (U ⊗ U')).hom =
       (α_ _ _ _).inv ≫
         ((β U).hom ▷ U') ≫ (α_ _ _ _).hom ≫ (U ◁ (β U').hom) ≫ (α_ _ _ _).inv := by
-    cat_disch
+    aesop_cat
   naturality : ∀ {U U'} (f : U ⟶ U'), (X ◁ f) ≫ (β U').hom = (β U).hom ≫ (f ▷ X) := by
-    cat_disch
+    aesop_cat
 
 attribute [reassoc, simp] HalfBraiding.monoidal -- the reassoc lemma is redundant as a simp lemma
 
@@ -70,6 +68,7 @@ variable (C)
 /-- The Drinfeld center of a monoidal category `C` has as objects pairs `⟨X, b⟩`, where `X : C`
 and `b` is a half-braiding on `X`.
 -/
+-- @[nolint has_nonempty_instance] -- Porting note(#5171): This linter does not exist yet.
 def Center :=
   Σ X : C, HalfBraiding X
 
@@ -78,11 +77,11 @@ namespace Center
 variable {C}
 
 /-- A morphism in the Drinfeld center of `C`. -/
-@[ext]
+-- Porting note(#5171): linter not ported yet
+@[ext] -- @[nolint has_nonempty_instance]
 structure Hom (X Y : Center C) where
-  /-- The underlying morphism between the first components of the objects involved -/
   f : X.1 ⟶ Y.1
-  comm : ∀ U, (f ▷ U) ≫ (Y.2.β U).hom = (X.2.β U).hom ≫ (U ◁ f) := by cat_disch
+  comm : ∀ U, (f ▷ U) ≫ (Y.2.β U).hom = (X.2.β U).hom ≫ (U ◁ f) := by aesop_cat
 
 attribute [reassoc (attr := simp)] Hom.comm
 
@@ -119,7 +118,6 @@ instance isIso_of_f_isIso {X Y : Center C} (f : X ⟶ Y) [IsIso f.f] : IsIso f :
   change IsIso (isoMk f).hom
   infer_instance
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 @[simps]
 def tensorObj (X Y : Center C) : Center C :=
@@ -139,21 +137,20 @@ def tensorObj (X Y : Center C) : Center C :=
             X.1 ◁ (HalfBraiding.β Y.2 U).hom ▷ U' ⊗≫
               (_ ◁ (HalfBraiding.β Y.2 U').hom ≫
                 (HalfBraiding.β X.2 U).hom ▷ _) ⊗≫
-                  U ◁ (HalfBraiding.β X.2 U').hom ▷ Y.1 ⊗≫ 𝟙 _ := by monoidal
-          _ = _ := by rw [whisker_exchange]; monoidal
+                  U ◁ (HalfBraiding.β X.2 U').hom ▷ Y.1 ⊗≫ 𝟙 _ := by coherence
+          _ = _ := by rw [whisker_exchange]; coherence
       naturality := fun {U U'} f => by
         dsimp only [Iso.trans_hom, whiskerLeftIso_hom, Iso.symm_hom, whiskerRightIso_hom]
         calc
           _ = 𝟙 _ ⊗≫
             (X.1 ◁ (Y.1 ◁ f ≫ (HalfBraiding.β Y.2 U').hom)) ⊗≫
-              (HalfBraiding.β X.2 U').hom ▷ Y.1 ⊗≫ 𝟙 _ := by monoidal
+              (HalfBraiding.β X.2 U').hom ▷ Y.1 ⊗≫ 𝟙 _ := by coherence
           _ = 𝟙 _ ⊗≫
             X.1 ◁ (HalfBraiding.β Y.2 U).hom ⊗≫
               (X.1 ◁ f ≫ (HalfBraiding.β X.2 U').hom) ▷ Y.1 ⊗≫ 𝟙 _ := by
-            rw [HalfBraiding.naturality]; monoidal
-          _ = _ := by rw [HalfBraiding.naturality]; monoidal }⟩
+            rw [HalfBraiding.naturality]; coherence
+          _ = _ := by rw [HalfBraiding.naturality]; coherence }⟩
 
-set_option backward.defeqAttrib.useBackward true in
 @[reassoc]
 theorem whiskerLeft_comm (X : Center C) {Y₁ Y₂ : Center C} (f : Y₁ ⟶ Y₂) (U : C) :
     (X.1 ◁ f.f) ▷ U ≫ ((tensorObj X Y₂).2.β U).hom =
@@ -163,12 +160,12 @@ theorem whiskerLeft_comm (X : Center C) {Y₁ Y₂ : Center C} (f : Y₁ ⟶ Y�
   calc
     _ = 𝟙 _ ⊗≫
       X.fst ◁ (f.f ▷ U ≫ (HalfBraiding.β Y₂.snd U).hom) ⊗≫
-        (HalfBraiding.β X.snd U).hom ▷ Y₂.fst ⊗≫ 𝟙 _ := by monoidal
+        (HalfBraiding.β X.snd U).hom ▷ Y₂.fst ⊗≫ 𝟙 _ := by coherence
     _ = 𝟙 _ ⊗≫
       X.fst ◁ (HalfBraiding.β Y₁.snd U).hom ⊗≫
         ((X.fst ⊗ U) ◁ f.f ≫ (HalfBraiding.β X.snd U).hom ▷ Y₂.fst) ⊗≫ 𝟙 _ := by
-      rw [f.comm]; monoidal
-    _ = _ := by rw [whisker_exchange]; monoidal
+      rw [f.comm]; coherence
+    _ = _ := by rw [whisker_exchange]; coherence
 
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 def whiskerLeft (X : Center C) {Y₁ Y₂ : Center C} (f : Y₁ ⟶ Y₂) :
@@ -176,8 +173,6 @@ def whiskerLeft (X : Center C) {Y₁ Y₂ : Center C} (f : Y₁ ⟶ Y₂) :
   f := X.1 ◁ f.f
   comm U := whiskerLeft_comm X f U
 
-set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in -- Needed below.
 @[reassoc]
 theorem whiskerRight_comm {X₁ X₂ : Center C} (f : X₁ ⟶ X₂) (Y : Center C) (U : C) :
     f.f ▷ Y.1 ▷ U ≫ ((tensorObj X₂ Y).2.β U).hom =
@@ -187,12 +182,12 @@ theorem whiskerRight_comm {X₁ X₂ : Center C} (f : X₁ ⟶ X₂) (Y : Center
   calc
     _ = 𝟙 _ ⊗≫
       (f.f ▷ (Y.fst ⊗ U) ≫ X₂.fst ◁ (HalfBraiding.β Y.snd U).hom) ⊗≫
-        (HalfBraiding.β X₂.snd U).hom ▷ Y.fst ⊗≫ 𝟙 _ := by monoidal
+        (HalfBraiding.β X₂.snd U).hom ▷ Y.fst ⊗≫ 𝟙 _ := by coherence
     _ = 𝟙 _ ⊗≫
       X₁.fst ◁ (HalfBraiding.β Y.snd U).hom ⊗≫
         (f.f ▷ U ≫ (HalfBraiding.β X₂.snd U).hom) ▷ Y.fst ⊗≫ 𝟙 _ := by
-      rw [← whisker_exchange]; monoidal
-    _ = _ := by rw [f.comm]; monoidal
+      rw [← whisker_exchange]; coherence
+    _ = _ := by rw [f.comm]; coherence
 
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 def whiskerRight {X₁ X₂ : Center C} (f : X₁ ⟶ X₂) (Y : Center C) :
@@ -200,12 +195,11 @@ def whiskerRight {X₁ X₂ : Center C} (f : X₁ ⟶ X₂) (Y : Center C) :
   f := f.f ▷ Y.1
   comm U := whiskerRight_comm f Y U
 
-set_option backward.isDefEq.respectTransparency false in
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 @[simps]
 def tensorHom {X₁ Y₁ X₂ Y₂ : Center C} (f : X₁ ⟶ Y₁) (g : X₂ ⟶ Y₂) :
     tensorObj X₁ X₂ ⟶ tensorObj Y₁ Y₂ where
-  f := f.f ⊗ₘ g.f
+  f := f.f ⊗ g.f
   comm U := by
     rw [tensorHom_def, comp_whiskerRight_assoc, whiskerLeft_comm, whiskerRight_comm_assoc,
       MonoidalCategory.whiskerLeft_comp]
@@ -217,17 +211,14 @@ section
 def tensorUnit : Center C :=
   ⟨𝟙_ C, { β := fun U => λ_ U ≪≫ (ρ_ U).symm }⟩
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 def associator (X Y Z : Center C) : tensorObj (tensorObj X Y) Z ≅ tensorObj X (tensorObj Y Z) :=
   isoMk ⟨(α_ X.1 Y.1 Z.1).hom, fun U => by simp⟩
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 def leftUnitor (X : Center C) : tensorObj tensorUnit X ≅ X :=
   isoMk ⟨(λ_ X.1).hom, fun U => by simp⟩
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Auxiliary definition for the `MonoidalCategory` instance on `Center C`. -/
 def rightUnitor (X : Center C) : tensorObj X tensorUnit ≅ X :=
   isoMk ⟨(ρ_ X.1).hom, fun U => by simp⟩
@@ -242,7 +233,6 @@ attribute [local simp] Center.associator Center.leftUnitor Center.rightUnitor
 
 attribute [local simp] Center.whiskerLeft Center.whiskerRight Center.tensorHom
 
-set_option backward.defeqAttrib.useBackward true in
 instance : MonoidalCategory (Center C) where
   tensorObj X Y := tensorObj X Y
   tensorHom f g := tensorHom f g
@@ -275,7 +265,7 @@ theorem whiskerRight_f {X₁ X₂ : Center C} (f : X₁ ⟶ X₂) (Y : Center C)
   rfl
 
 @[simp]
-theorem tensor_f {X₁ Y₁ X₂ Y₂ : Center C} (f : X₁ ⟶ Y₁) (g : X₂ ⟶ Y₂) : (f ⊗ₘ g).f = f.f ⊗ₘ g.f :=
+theorem tensor_f {X₁ Y₁ X₂ Y₂ : Center C} (f : X₁ ⟶ Y₁) (g : X₂ ⟶ Y₂) : (f ⊗ g).f = f.f ⊗ g.f :=
   rfl
 
 @[simp]
@@ -288,7 +278,7 @@ theorem associator_hom_f (X Y Z : Center C) : Hom.f (α_ X Y Z).hom = (α_ X.1 Y
 
 @[simp]
 theorem associator_inv_f (X Y Z : Center C) : Hom.f (α_ X Y Z).inv = (α_ X.1 Y.1 Z.1).inv := by
-  apply Iso.inv_ext' -- Porting note (https://github.com/leanprover-community/mathlib4/issues/11041): Originally `ext`
+  apply Iso.inv_ext' -- Porting note: Originally `ext`
   rw [← associator_hom_f, ← comp_f, Iso.hom_inv_id]; rfl
 
 @[simp]
@@ -297,7 +287,7 @@ theorem leftUnitor_hom_f (X : Center C) : Hom.f (λ_ X).hom = (λ_ X.1).hom :=
 
 @[simp]
 theorem leftUnitor_inv_f (X : Center C) : Hom.f (λ_ X).inv = (λ_ X.1).inv := by
-  apply Iso.inv_ext' -- Porting note (https://github.com/leanprover-community/mathlib4/issues/11041): Originally `ext`
+  apply Iso.inv_ext' -- Porting note: Originally `ext`
   rw [← leftUnitor_hom_f, ← comp_f, Iso.hom_inv_id]; rfl
 
 @[simp]
@@ -306,7 +296,7 @@ theorem rightUnitor_hom_f (X : Center C) : Hom.f (ρ_ X).hom = (ρ_ X.1).hom :=
 
 @[simp]
 theorem rightUnitor_inv_f (X : Center C) : Hom.f (ρ_ X).inv = (ρ_ X.1).inv := by
-  apply Iso.inv_ext' -- Porting note (https://github.com/leanprover-community/mathlib4/issues/11041): Originally `ext`
+  apply Iso.inv_ext' -- Porting note: Originally `ext`
   rw [← rightUnitor_hom_f, ← comp_f, Iso.hom_inv_id]; rfl
 
 end
@@ -317,31 +307,17 @@ variable (C)
 
 /-- The forgetful monoidal functor from the Drinfeld center to the original category. -/
 @[simps]
-def forget : Center C ⥤ C where
+def forget : MonoidalFunctor (Center C) C where
   obj X := X.1
   map f := f.f
+  ε := 𝟙 (𝟙_ C)
+  μ X Y := 𝟙 (X.1 ⊗ Y.1)
 
-set_option backward.isDefEq.respectTransparency false in
-instance : (forget C).Monoidal :=
-  Functor.CoreMonoidal.toMonoidal
-    { εIso := Iso.refl _
-      μIso := fun _ _ ↦ Iso.refl _ }
-
-@[simp] lemma forget_ε : ε (forget C) = 𝟙 _ := rfl
-@[simp] lemma forget_η : η (forget C) = 𝟙 _ := rfl
-
-variable {C}
-
-@[simp] lemma forget_μ (X Y : Center C) : μ (forget C) X Y = 𝟙 _ := rfl
-@[simp] lemma forget_δ (X Y : Center C) : δ (forget C) X Y = 𝟙 _ := rfl
-
-set_option backward.defeqAttrib.useBackward true in
 instance : (forget C).ReflectsIsomorphisms where
   reflects f i := by dsimp at i; change IsIso (isoMk f).hom; infer_instance
 
 end
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Auxiliary definition for the `BraidedCategory` instance on `Center C`. -/
 @[simps!]
 def braiding (X Y : Center C) : X ⊗ Y ≅ Y ⊗ X :=
@@ -356,7 +332,7 @@ def braiding (X Y : Center C) : X ⊗ Y ≅ Y ⊗ X :=
 instance braidedCategoryCenter : BraidedCategory (Center C) where
   braiding := braiding
 
--- `cat_disch` handles the hexagon axioms
+-- `aesop_cat` handles the hexagon axioms
 section
 
 variable [BraidedCategory C]
@@ -373,30 +349,13 @@ variable (C)
 /-- The functor lifting a braided category to its center, using the braiding as the half-braiding.
 -/
 @[simps]
-def ofBraided : C ⥤ Center C where
+def ofBraided : MonoidalFunctor C (Center C) where
   obj := ofBraidedObj
   map f :=
     { f
       comm := fun U => braiding_naturality_left f U }
-
-set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
-instance : (ofBraided C).Monoidal :=
-  Functor.CoreMonoidal.toMonoidal
-    { εIso :=
-        { hom := { f := 𝟙 _ }
-          inv := { f := 𝟙 _ } }
-      μIso := fun _ _ ↦
-        { hom := { f := 𝟙 _ }
-          inv := { f := 𝟙 _ } } }
-
-@[simp] lemma ofBraided_ε_f : (ε (ofBraided C)).f = 𝟙 _ := rfl
-@[simp] lemma ofBraided_η_f : (η (ofBraided C)).f = 𝟙 _ := rfl
-
-variable {C}
-
-@[simp] lemma ofBraided_μ_f (X Y : C) : (μ (ofBraided C) X Y).f = 𝟙 _ := rfl
-@[simp] lemma ofBraided_δ_f (X Y : C) : (δ (ofBraided C) X Y).f = 𝟙 _ := rfl
+  ε := { f := 𝟙 _ }
+  μ X Y := { f := 𝟙 _ }
 
 end
 

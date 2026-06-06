@@ -3,10 +3,8 @@ Copyright (c) 2021 Riccardo Brasca. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Riccardo Brasca
 -/
-module
-
-public import Mathlib.RingTheory.FiniteType
-public import Mathlib.LinearAlgebra.InvariantBasisNumber
+import Mathlib.RingTheory.FiniteType
+import Mathlib.LinearAlgebra.InvariantBasisNumber
 
 /-!
 
@@ -36,8 +34,6 @@ is injective.
   des isomorphismes*][ribenboim1971]
 
 -/
-
-public section
 
 
 variable (R : Type*) [CommRing R] [Nontrivial R]

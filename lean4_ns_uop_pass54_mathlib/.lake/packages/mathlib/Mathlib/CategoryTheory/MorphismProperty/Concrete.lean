@@ -3,18 +3,16 @@ Copyright (c) 2022 Andrew Yang. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang
 -/
-module
-
-public import Mathlib.CategoryTheory.ConcreteCategory.Forget
-public import Mathlib.CategoryTheory.MorphismProperty.Composition
-public import Mathlib.CategoryTheory.MorphismProperty.Factorization
+import Mathlib.CategoryTheory.ConcreteCategory.Basic
+import Mathlib.CategoryTheory.MorphismProperty.Composition
+import Mathlib.CategoryTheory.MorphismProperty.Factorization
 
 /-!
 # Morphism properties defined in concrete categories
 
 In this file, we define the class of morphisms `MorphismProperty.injective`,
 `MorphismProperty.surjective`, `MorphismProperty.bijective` in concrete
-categories, and show that it is stable under composition and respects isomorphisms.
+categories, and show that it is stable under composition and respect isomorphisms.
 
 We introduce type-classes `HasSurjectiveInjectiveFactorization` and
 `HasFunctorialSurjectiveInjectiveFactorization` expressing that in a concrete category `C`,
@@ -23,26 +21,25 @@ followed by an injective map.
 
 -/
 
-@[expose] public section
-
 universe v u
 
 namespace CategoryTheory
 
-variable (C : Type u) [Category.{v} C] {FC : C → C → Type*} {CC : C → Type*}
-variable [∀ X Y, FunLike (FC X Y) (CC X) (CC Y)] [ConcreteCategory C FC]
+variable (C : Type u) [Category.{v} C] [ConcreteCategory C]
 
 namespace MorphismProperty
 
 open Function
 
-/-- Injectivity (in a concrete category) as a `MorphismProperty` -/
+attribute [local instance] ConcreteCategory.instFunLike ConcreteCategory.hasCoeToSort
+
+/-- Injectiveness (in a concrete category) as a `MorphismProperty` -/
 protected def injective : MorphismProperty C := fun _ _ f => Injective f
 
-/-- Surjectivity (in a concrete category) as a `MorphismProperty` -/
+/-- Surjectiveness (in a concrete category) as a `MorphismProperty` -/
 protected def surjective : MorphismProperty C := fun _ _ f => Surjective f
 
-/-- Bijectivity (in a concrete category) as a `MorphismProperty` -/
+/-- Bijectiveness (in a concrete category) as a `MorphismProperty` -/
 protected def bijective : MorphismProperty C := fun _ _ f => Bijective f
 
 theorem bijective_eq_sup :
@@ -52,31 +49,31 @@ theorem bijective_eq_sup :
 instance : (MorphismProperty.injective C).IsMultiplicative where
   id_mem X := by
     delta MorphismProperty.injective
-    convert! injective_id
+    convert injective_id
     aesop
   comp_mem f g hf hg := by
     delta MorphismProperty.injective
-    rw [hom_comp]
+    rw [coe_comp]
     exact hg.comp hf
 
 instance : (MorphismProperty.surjective C).IsMultiplicative where
   id_mem X := by
     delta MorphismProperty.surjective
-    convert! surjective_id
+    convert surjective_id
     aesop
   comp_mem f g hf hg := by
     delta MorphismProperty.surjective
-    rw [hom_comp]
+    rw [coe_comp]
     exact hg.comp hf
 
 instance : (MorphismProperty.bijective C).IsMultiplicative where
   id_mem X := by
     delta MorphismProperty.bijective
-    convert! bijective_id
+    convert bijective_id
     aesop
   comp_mem f g hf hg := by
     delta MorphismProperty.bijective
-    rw [hom_comp]
+    rw [coe_comp]
     exact hg.comp hf
 
 instance injective_respectsIso : (MorphismProperty.injective C).RespectsIso :=
@@ -119,17 +116,17 @@ map followed by an injective map. -/
 def functorialSurjectiveInjectiveFactorizationData :
     FunctorialSurjectiveInjectiveFactorizationData (Type u) where
   Z :=
-    { obj := fun f => Subtype (Set.range f.hom.hom)
-      map := fun φ => ↾fun y => ⟨φ.right y.1, by
+    { obj := fun f => Subtype (Set.range f.hom)
+      map := fun φ y => ⟨φ.right y.1, by
         obtain ⟨_, x, rfl⟩ := y
-        exact ⟨φ.left x, congr_hom φ.w x⟩ ⟩ }
+        exact ⟨φ.left x, congr_fun φ.w x⟩ ⟩ }
   i :=
-    { app := fun f => ↾fun x => ⟨f.hom x, ⟨x, rfl⟩⟩
+    { app := fun f x => ⟨f.hom x, ⟨x, rfl⟩⟩
       naturality := fun f g φ => by
         ext x
-        exact congr_hom φ.w x }
+        exact congr_fun φ.w x }
   p :=
-    { app := fun _ => ↾fun y => y.1
+    { app := fun f y => y.1
       naturality := by intros; rfl; }
   fac := rfl
   hi := by

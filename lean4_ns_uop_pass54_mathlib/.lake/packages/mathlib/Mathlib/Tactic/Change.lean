@@ -3,11 +3,9 @@ Copyright (c) 2023 Damiano Testa. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Damiano Testa
 -/
-module
 
-public import Mathlib.Init
-public meta import Lean.Elab.Tactic.ElabTerm
-public meta import Lean.Meta.Tactic.TryThis
+import Lean.Elab.Tactic.ElabTerm
+import Lean.Meta.Tactic.TryThis
 /-!
 
 # Tactic `change? term`
@@ -19,8 +17,6 @@ in the suggestion.
 `term` can also be omitted, in which case `change?` simply suggests `change` with the main goal.
 This is helpful after tactics like `dsimp`, which can then be deleted.
 -/
-
-public meta section
 
 /-- `change? term` unifies `term` with the current goal, then suggests explicit `change` syntax
 that uses the resulting unified term.

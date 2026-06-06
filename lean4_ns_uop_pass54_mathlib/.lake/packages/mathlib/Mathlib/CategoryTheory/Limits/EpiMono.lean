@@ -3,10 +3,7 @@ Copyright (c) 2024 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.IsPullback.Defs
-public import Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono
+import Mathlib.CategoryTheory.Limits.Shapes.Pullback.CommSq
 
 /-!
 # Relation between mono/epi and pullback/pushout squares
@@ -28,13 +25,11 @@ is a pullback square.
 
 -/
 
-public section
-
 namespace CategoryTheory
 
 open Category Limits
 
-variable {C : Type*} [Category* C] {X Y : C} {f : X ⟶ Y}
+variable {C : Type*} [Category C] {X Y : C} {f : X ⟶ Y}
 
 section Mono
 
@@ -56,8 +51,10 @@ lemma mono_iff_isIso_fst (hc : IsLimit c) : Mono f ↔ IsIso c.fst := by
   · intro h
     obtain ⟨φ, hφ₁, hφ₂⟩ := PullbackCone.IsLimit.lift' hc (𝟙 X) (𝟙 X) (by simp)
     refine ⟨φ, PullbackCone.IsLimit.hom_ext hc ?_ ?_, hφ₁⟩
-    · simp only [assoc, hφ₁, id_comp, comp_id]
-    · simp only [assoc, hφ₂, id_comp, comp_id, h]
+    · dsimp
+      simp only [assoc, hφ₁, id_comp, comp_id]
+    · dsimp
+      simp only [assoc, hφ₂, id_comp, comp_id, h]
   · intro
     obtain ⟨φ, hφ₁, hφ₂⟩ := PullbackCone.IsLimit.lift' hc (𝟙 X) (𝟙 X) (by simp)
     have : IsSplitEpi φ := IsSplitEpi.mk ⟨SplitEpi.mk c.fst (by
@@ -98,8 +95,10 @@ lemma epi_iff_isIso_inl (hc : IsColimit c) : Epi f ↔ IsIso c.inl := by
   · intro h
     obtain ⟨φ, hφ₁, hφ₂⟩ := PushoutCocone.IsColimit.desc' hc (𝟙 Y) (𝟙 Y) (by simp)
     refine ⟨φ, hφ₁, PushoutCocone.IsColimit.hom_ext hc ?_ ?_⟩
-    · simp only [comp_id, reassoc_of% hφ₁]
-    · simp only [comp_id, h, reassoc_of% hφ₂]
+    · dsimp
+      simp only [comp_id, reassoc_of% hφ₁]
+    · dsimp
+      simp only [comp_id, h, reassoc_of% hφ₂]
   · intro
     obtain ⟨φ, hφ₁, hφ₂⟩ := PushoutCocone.IsColimit.desc' hc (𝟙 Y) (𝟙 Y) (by simp)
     have : IsSplitMono φ := IsSplitMono.mk ⟨SplitMono.mk c.inl (by

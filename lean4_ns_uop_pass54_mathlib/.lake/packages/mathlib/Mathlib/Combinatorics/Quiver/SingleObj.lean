@@ -3,10 +3,8 @@ Copyright (c) 2023 Antoine Labelle. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Antoine Labelle
 -/
-module
-
-public import Mathlib.Combinatorics.Quiver.Cast
-public import Mathlib.Combinatorics.Quiver.Symmetric
+import Mathlib.Combinatorics.Quiver.Cast
+import Mathlib.Combinatorics.Quiver.Symmetric
 
 /-!
 # Single-object quiver
@@ -23,15 +21,18 @@ More generally, a list of elements of `a` can be reinterpreted as a path from `s
 itself using `pathEquivList`.
 -/
 
-@[expose] public section
-
 namespace Quiver
 
 /-- Type tag on `Unit` used to define single-object quivers. -/
+-- Porting note: Removed `deriving Unique`.
 @[nolint unusedArguments]
 def SingleObj (_ : Type*) : Type :=
   Unit
-deriving Unique
+
+-- Porting note: `deriving` from above has been moved to below.
+instance {α : Type*} : Unique (SingleObj α) where
+  default := ⟨⟩
+  uniq := fun _ => rfl
 
 namespace SingleObj
 
@@ -41,7 +42,11 @@ instance : Quiver (SingleObj α) :=
   ⟨fun _ _ => α⟩
 
 /-- The single object in `SingleObj α`. -/
-def star : SingleObj α := default
+def star : SingleObj α :=
+  Unit.unit
+
+instance : Inhabited (SingleObj α) :=
+  ⟨star α⟩
 
 variable {α β γ}
 
@@ -70,6 +75,8 @@ arrows types.
 def toPrefunctor : (α → β) ≃ SingleObj α ⥤q SingleObj β where
   toFun f := ⟨id, f⟩
   invFun f a := f.map (toHom a)
+  left_inv _ := rfl
+  right_inv _ := rfl
 
 theorem toPrefunctor_id : toPrefunctor id = 𝟭q (SingleObj α) :=
   rfl
@@ -102,17 +109,16 @@ def listToPath : List α → Path (star α) (star α)
   | [] => Path.nil
   | a :: l => (listToPath l).cons a
 
-set_option backward.isDefEq.respectTransparency false in
 theorem listToPath_pathToList {x : SingleObj α} (p : Path (star α) x) :
     listToPath (pathToList p) = p.cast rfl ext := by
-  induction p with
-  | nil => rfl
-  | cons _ _ ih => dsimp [pathToList] at *; rw [ih]
+  induction' p with y z p a ih
+  · rfl
+  · dsimp at *; rw [ih]
 
 theorem pathToList_listToPath (l : List α) : pathToList (listToPath l) = l := by
-  induction l with
-  | nil => rfl
-  | cons a l ih => change a :: pathToList (listToPath l) = a :: l; rw [ih]
+  induction' l with a l ih
+  · rfl
+  · change a :: pathToList (listToPath l) = a :: l; rw [ih]
 
 /-- Paths in `SingleObj α` quiver correspond to lists of elements of type `α`. -/
 def pathEquivList : Path (star α) (star α) ≃ List α :=

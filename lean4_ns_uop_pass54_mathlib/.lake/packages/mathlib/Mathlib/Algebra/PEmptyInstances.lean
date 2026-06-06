@@ -3,9 +3,8 @@ Copyright (c) 2021 Julian Kuelshammer. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Julian Kuelshammer
 -/
-module
-
-public import Mathlib.Algebra.Group.Defs
+import Mathlib.Algebra.Group.Defs
+import Mathlib.Tactic.ToAdditive
 
 /-!
 # Instances on pempty
@@ -13,8 +12,6 @@ public import Mathlib.Algebra.Group.Defs
 This file collects facts about algebraic structures on the (universe-polymorphic) empty type, e.g.
 that it is a semigroup.
 -/
-
-public section
 
 
 universe u

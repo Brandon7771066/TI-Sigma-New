@@ -3,9 +3,7 @@ Copyright (c) 2023 Kyle Miller. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kyle Miller
 -/
-module
-
-public import Mathlib.Data.List.Sym
+import Mathlib.Data.List.Sym
 
 /-! # Unordered tuples of elements of a multiset
 
@@ -31,8 +29,6 @@ unordered n-tuples from a given multiset. These are multiset versions of `Nat.mu
 * `theorem strictMono_sym2 : StrictMono (Multiset.sym2 : Multiset α → _)`
 
 -/
-
-@[expose] public section
 
 namespace Multiset
 
@@ -70,17 +66,13 @@ theorem mem_sym2_iff {m : Multiset α} {z : Sym2 α} :
     z ∈ m.sym2 ↔ ∀ y ∈ z, y ∈ m :=
   m.inductionOn fun xs => by simp [List.mem_sym2_iff]
 
-lemma setOf_mem_sym2 {m : Multiset α} :
-    {z : Sym2 α | z ∈ m.sym2} = {x : α | x ∈ m}.sym2 :=
-  Set.ext fun z ↦ z.ind fun a b => by simp [mk_mem_sym2_iff]
-
 protected theorem Nodup.sym2 {m : Multiset α} (h : m.Nodup) : m.sym2.Nodup :=
   m.inductionOn (fun _ h => List.Nodup.sym2 h) h
 
 open scoped List in
 @[simp, mono]
 theorem sym2_mono {m m' : Multiset α} (h : m ≤ m') : m.sym2 ≤ m'.sym2 := by
-  induction m, m' using Quotient.inductionOn₂ with | _ xs ys
+  refine Quotient.inductionOn₂ m m' (fun xs ys h => ?_) h
   suffices xs <+~ ys from this.sym2
   simpa only [quot_mk_to_coe, coe_le, sym2_coe] using h
 

@@ -3,13 +3,11 @@ Copyright (c) 2018 Johan Commelin. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johan Commelin, Reid Barton, Bhavik Mehta
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Connected
-public import Mathlib.CategoryTheory.Limits.Constructions.Over.Products
-public import Mathlib.CategoryTheory.Limits.Constructions.Over.Connected
-public import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
-public import Mathlib.CategoryTheory.Limits.Constructions.Equalizers
+import Mathlib.CategoryTheory.Limits.Connected
+import Mathlib.CategoryTheory.Limits.Constructions.Over.Products
+import Mathlib.CategoryTheory.Limits.Constructions.Over.Connected
+import Mathlib.CategoryTheory.Limits.Constructions.LimitsOfProductsAndEqualizers
+import Mathlib.CategoryTheory.Limits.Constructions.Equalizers
 
 /-!
 # Limits in the over category
@@ -17,8 +15,6 @@ public import Mathlib.CategoryTheory.Limits.Constructions.Equalizers
 Declare instances for limits in the over category: If `C` has finite wide pullbacks, `Over B` has
 finite limits, and if `C` has arbitrary wide pullbacks then `Over B` has limits.
 -/
-
-public section
 
 
 universe w v u
@@ -32,32 +28,31 @@ variable {X : C}
 namespace CategoryTheory.Over
 
 /-- Make sure we can derive pullbacks in `Over B`. -/
-instance {B : C} [HasPullbacks C] : HasPullbacks (Over B) := inferInstance
+instance {B : C} [HasPullbacks C] : HasPullbacks (Over B) := by
+  letI : HasLimitsOfShape (ULiftHom.{v} (ULift.{v} WalkingCospan)) C :=
+    hasLimitsOfShape_of_equivalence (ULiftHomULiftCategory.equiv.{v} _)
+  letI : Category (ULiftHom.{v} (ULift.{v} WalkingCospan)) := inferInstance
+  exact hasLimitsOfShape_of_equivalence (ULiftHomULiftCategory.equiv.{v, v} _).symm
 
 /-- Make sure we can derive equalizers in `Over B`. -/
-instance {B : C} [HasEqualizers C] : HasEqualizers (Over B) := inferInstance
+instance {B : C} [HasEqualizers C] : HasEqualizers (Over B) := by
+  letI : HasLimitsOfShape (ULiftHom.{v} (ULift.{v} WalkingParallelPair)) C :=
+    hasLimitsOfShape_of_equivalence (ULiftHomULiftCategory.equiv.{v} _)
+  letI : Category (ULiftHom.{v} (ULift.{v} WalkingParallelPair)) := inferInstance
+  exact hasLimitsOfShape_of_equivalence (ULiftHomULiftCategory.equiv.{v, v} _).symm
 
 instance hasFiniteLimits {B : C} [HasFiniteWidePullbacks C] : HasFiniteLimits (Over B) := by
-  have := ConstructProducts.over_finiteProducts_of_finiteWidePullbacks (B := B)
-  have := hasEqualizers_of_hasPullbacks_and_binary_products (C := Over B)
-  apply hasFiniteLimits_of_hasEqualizers_and_finite_products
+  apply @hasFiniteLimits_of_hasEqualizers_and_finite_products _ _ ?_ ?_
+  · exact ConstructProducts.over_finiteProducts_of_finiteWidePullbacks
+  · apply @hasEqualizers_of_hasPullbacks_and_binary_products _ _ ?_ _
+    haveI : HasPullbacks C := ⟨inferInstance⟩
+    exact ConstructProducts.over_binaryProduct_of_pullback
 
 instance hasLimits {B : C} [HasWidePullbacks.{w} C] : HasLimitsOfSize.{w, w} (Over B) := by
-  have := ConstructProducts.over_binaryProduct_of_pullback (B := B)
-  have := hasEqualizers_of_hasPullbacks_and_binary_products (C := Over B)
-  have := ConstructProducts.over_products_of_widePullbacks (B := B)
-  apply has_limits_of_hasEqualizers_and_products
+  apply @has_limits_of_hasEqualizers_and_products _ _ ?_ ?_
+  · exact ConstructProducts.over_products_of_widePullbacks
+  · apply @hasEqualizers_of_hasPullbacks_and_binary_products _ _ ?_ _
+    haveI : HasPullbacks C := ⟨inferInstance⟩
+    exact ConstructProducts.over_binaryProduct_of_pullback
 
-end Over
-
-namespace Under
-
-instance {B : C} [HasFiniteWidePushouts C] : HasFiniteColimits (Under B) := by
-  rw [← hasFiniteLimits_opposite_iff]
-  exact hasFiniteLimits_of_hasLimitsLimits_of_createsFiniteLimits (Over.opEquivOpUnder _).inverse
-
-instance {B : C} [HasWidePushouts.{w} C] : HasColimitsOfSize.{w, w} (Under B) := by
-  rw [← hasLimitsOfSize_opposite_iff]
-  exact hasLimits_of_hasLimits_createsLimits (Over.opEquivOpUnder _).inverse
-
-end CategoryTheory.Under
+end CategoryTheory.Over

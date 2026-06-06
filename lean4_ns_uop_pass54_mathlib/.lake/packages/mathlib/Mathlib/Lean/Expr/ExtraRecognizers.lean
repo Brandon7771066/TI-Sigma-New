@@ -3,16 +3,12 @@ Copyright (c) 2023 Kyle Miller. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kyle Miller
 -/
-module
-
-public import Mathlib.Data.Set.CoeSort
+import Mathlib.Data.Set.Defs
 
 /-!
 # Additional Expr recognizers needing theory imports
 
 -/
-
-@[expose] public section
 
 namespace Lean.Expr
 

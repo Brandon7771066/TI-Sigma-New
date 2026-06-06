@@ -3,9 +3,7 @@ Copyright (c) 2021 Yuma Mizuno. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yuma Mizuno
 -/
-module
-
-public import Mathlib.CategoryTheory.NatIso
+import Mathlib.CategoryTheory.NatIso
 
 /-!
 # Bicategories
@@ -39,8 +37,6 @@ between 1-morphisms `f g : a ⟶ b` and a 1-morphism `f : b ⟶ c`, there is a 2
 which is required as an axiom in the definition here.
 -/
 
-@[expose] public section
-
 namespace CategoryTheory
 
 universe w v u
@@ -59,82 +55,82 @@ See https://ncatlab.org/nlab/show/bicategory.
 -/
 @[nolint checkUnivs]
 class Bicategory (B : Type u) extends CategoryStruct.{v} B where
-  /-- The category structure on the collection of 1-morphisms -/
+  -- category structure on the collection of 1-morphisms:
   homCategory : ∀ a b : B, Category.{w} (a ⟶ b) := by infer_instance
-  /-- Left whiskering for morphisms -/
+  -- left whiskering:
   whiskerLeft {a b c : B} (f : a ⟶ b) {g h : b ⟶ c} (η : g ⟶ h) : f ≫ g ⟶ f ≫ h
-  /-- Right whiskering for morphisms -/
+  -- right whiskering:
   whiskerRight {a b c : B} {f g : a ⟶ b} (η : f ⟶ g) (h : b ⟶ c) : f ≫ h ⟶ g ≫ h
-  /-- The associator isomorphism: `(f ≫ g) ≫ h ≅ f ≫ g ≫ h` -/
+  -- associator:
   associator {a b c d : B} (f : a ⟶ b) (g : b ⟶ c) (h : c ⟶ d) : (f ≫ g) ≫ h ≅ f ≫ g ≫ h
-  /-- The left unitor: `𝟙 a ≫ f ≅ f` -/
+  -- left unitor:
   leftUnitor {a b : B} (f : a ⟶ b) : 𝟙 a ≫ f ≅ f
-  /-- The right unitor: `f ≫ 𝟙 b ≅ f` -/
+  -- right unitor:
   rightUnitor {a b : B} (f : a ⟶ b) : f ≫ 𝟙 b ≅ f
   -- axioms for left whiskering:
   whiskerLeft_id : ∀ {a b c} (f : a ⟶ b) (g : b ⟶ c), whiskerLeft f (𝟙 g) = 𝟙 (f ≫ g) := by
-    cat_disch
+    aesop_cat
   whiskerLeft_comp :
     ∀ {a b c} (f : a ⟶ b) {g h i : b ⟶ c} (η : g ⟶ h) (θ : h ⟶ i),
       whiskerLeft f (η ≫ θ) = whiskerLeft f η ≫ whiskerLeft f θ := by
-    cat_disch
+    aesop_cat
   id_whiskerLeft :
     ∀ {a b} {f g : a ⟶ b} (η : f ⟶ g),
       whiskerLeft (𝟙 a) η = (leftUnitor f).hom ≫ η ≫ (leftUnitor g).inv := by
-    cat_disch
+    aesop_cat
   comp_whiskerLeft :
     ∀ {a b c d} (f : a ⟶ b) (g : b ⟶ c) {h h' : c ⟶ d} (η : h ⟶ h'),
       whiskerLeft (f ≫ g) η =
         (associator f g h).hom ≫ whiskerLeft f (whiskerLeft g η) ≫ (associator f g h').inv := by
-    cat_disch
+    aesop_cat
   -- axioms for right whiskering:
   id_whiskerRight : ∀ {a b c} (f : a ⟶ b) (g : b ⟶ c), whiskerRight (𝟙 f) g = 𝟙 (f ≫ g) := by
-    cat_disch
+    aesop_cat
   comp_whiskerRight :
     ∀ {a b c} {f g h : a ⟶ b} (η : f ⟶ g) (θ : g ⟶ h) (i : b ⟶ c),
       whiskerRight (η ≫ θ) i = whiskerRight η i ≫ whiskerRight θ i := by
-    cat_disch
+    aesop_cat
   whiskerRight_id :
     ∀ {a b} {f g : a ⟶ b} (η : f ⟶ g),
       whiskerRight η (𝟙 b) = (rightUnitor f).hom ≫ η ≫ (rightUnitor g).inv := by
-    cat_disch
+    aesop_cat
   whiskerRight_comp :
     ∀ {a b c d} {f f' : a ⟶ b} (η : f ⟶ f') (g : b ⟶ c) (h : c ⟶ d),
       whiskerRight η (g ≫ h) =
         (associator f g h).inv ≫ whiskerRight (whiskerRight η g) h ≫ (associator f' g h).hom := by
-    cat_disch
+    aesop_cat
   -- associativity of whiskerings:
   whisker_assoc :
     ∀ {a b c d} (f : a ⟶ b) {g g' : b ⟶ c} (η : g ⟶ g') (h : c ⟶ d),
       whiskerRight (whiskerLeft f η) h =
         (associator f g h).hom ≫ whiskerLeft f (whiskerRight η h) ≫ (associator f g' h).inv := by
-    cat_disch
+    aesop_cat
   -- exchange law of left and right whiskerings:
   whisker_exchange :
     ∀ {a b c} {f g : a ⟶ b} {h i : b ⟶ c} (η : f ⟶ g) (θ : h ⟶ i),
       whiskerLeft f θ ≫ whiskerRight η i = whiskerRight η h ≫ whiskerLeft g θ := by
-    cat_disch
+    aesop_cat
   -- pentagon identity:
   pentagon :
     ∀ {a b c d e} (f : a ⟶ b) (g : b ⟶ c) (h : c ⟶ d) (i : d ⟶ e),
       whiskerRight (associator f g h).hom i ≫
           (associator f (g ≫ h) i).hom ≫ whiskerLeft f (associator g h i).hom =
         (associator (f ≫ g) h i).hom ≫ (associator f g (h ≫ i)).hom := by
-    cat_disch
+    aesop_cat
   -- triangle identity:
   triangle :
     ∀ {a b c} (f : a ⟶ b) (g : b ⟶ c),
       (associator f (𝟙 b) g).hom ≫ whiskerLeft f (leftUnitor g).hom
       = whiskerRight (rightUnitor f).hom g := by
-    cat_disch
+    aesop_cat
 
 namespace Bicategory
 
-@[inherit_doc] scoped infixr:81 " ◁ " => Bicategory.whiskerLeft
-@[inherit_doc] scoped infixl:81 " ▷ " => Bicategory.whiskerRight
-@[inherit_doc] scoped notation "α_" => Bicategory.associator
-@[inherit_doc] scoped notation "λ_" => Bicategory.leftUnitor
-@[inherit_doc] scoped notation "ρ_" => Bicategory.rightUnitor
+scoped infixr:81 " ◁ " => Bicategory.whiskerLeft
+scoped infixl:81 " ▷ " => Bicategory.whiskerRight
+scoped notation "α_" => Bicategory.associator
+scoped notation "λ_" => Bicategory.leftUnitor
+scoped notation "ρ_" => Bicategory.rightUnitor
 
 /-!
 ### Simp-normal form for 2-morphisms
@@ -156,7 +152,7 @@ parentheses. More precisely,
 Note that `f₁ ◁ f₂ ◁ f₃ ◁ η ▷ f₄ ▷ f₅` is actually `f₁ ◁ (f₂ ◁ (f₃ ◁ ((η ▷ f₄) ▷ f₅)))`.
 -/
 
-attribute [instance_reducible, instance] homCategory
+attribute [instance] homCategory
 
 attribute [reassoc]
   whiskerLeft_comp id_whiskerLeft comp_whiskerLeft comp_whiskerRight whiskerRight_id
@@ -192,36 +188,6 @@ theorem whiskerLeft_inv_hom (f : a ⟶ b) {g h : b ⟶ c} (η : g ≅ h) :
 theorem inv_hom_whiskerRight {f g : a ⟶ b} (η : f ≅ g) (h : b ⟶ c) :
     η.inv ▷ h ≫ η.hom ▷ h = 𝟙 (g ≫ h) := by rw [← comp_whiskerRight, inv_hom_id, id_whiskerRight]
 
-@[reassoc (attr := simp)]
-theorem whiskerLeft_whiskerLeft_hom_inv (f : a ⟶ b) (g : b ⟶ c) {h k : c ⟶ d} (η : h ≅ k) :
-    f ◁ g ◁ η.hom ≫ f ◁ g ◁ η.inv = 𝟙 (f ≫ g ≫ h) := by
-  simp [← whiskerLeft_comp]
-
-@[reassoc (attr := simp)]
-theorem hom_inv_whiskerRight_whiskerRight {f g : a ⟶ b} (η : f ≅ g) (h : b ⟶ c) (k : c ⟶ d) :
-    η.hom ▷ h ▷ k ≫ η.inv ▷ h ▷ k = 𝟙 ((f ≫ h) ≫ k) := by
-  simp [← comp_whiskerRight]
-
-@[reassoc (attr := simp)]
-theorem whiskerLeft_whiskerLeft_inv_hom (f : a ⟶ b) (g : b ⟶ c) {h k : c ⟶ d} (η : h ≅ k) :
-    f ◁ g ◁ η.inv ≫ f ◁ g ◁ η.hom = 𝟙 (f ≫ g ≫ k) := by
-  simp [← whiskerLeft_comp]
-
-@[reassoc (attr := simp)]
-theorem inv_hom_whiskerRight_whiskerRight {f g : a ⟶ b} (η : f ≅ g) (h : b ⟶ c) (k : c ⟶ d) :
-    η.inv ▷ h ▷ k ≫ η.hom ▷ h ▷ k = 𝟙 ((g ≫ h) ≫ k) := by
-  simp [← comp_whiskerRight]
-
-@[reassoc (attr := simp)]
-theorem whiskerLeft_hom_inv_whiskerRight (f : a ⟶ b) {g h : b ⟶ c} (η : g ≅ h) (k : c ⟶ d) :
-    f ◁ η.hom ▷ k ≫ f ◁ η.inv ▷ k = 𝟙 (f ≫ g ≫ k) := by
-  simp [← whiskerLeft_comp]
-
-@[reassoc (attr := simp)]
-theorem whiskerLeft_inv_hom_whiskerRight (f : a ⟶ b) {g h : b ⟶ c} (η : g ≅ h) (k : c ⟶ d) :
-    f ◁ η.inv ▷ k ≫ f ◁ η.hom ▷ k = 𝟙 (f ≫ h ≫ k) := by
-  simp [← whiskerLeft_comp]
-
 /-- The left whiskering of a 2-isomorphism is a 2-isomorphism. -/
 @[simps]
 def whiskerLeftIso (f : a ⟶ b) {g h : b ⟶ c} (η : g ≅ h) : f ≫ g ≅ f ≫ h where
@@ -231,7 +197,7 @@ def whiskerLeftIso (f : a ⟶ b) {g h : b ⟶ c} (η : g ≅ h) : f ≫ g ≅ f 
 instance whiskerLeft_isIso (f : a ⟶ b) {g h : b ⟶ c} (η : g ⟶ h) [IsIso η] : IsIso (f ◁ η) :=
   (whiskerLeftIso f (asIso η)).isIso_hom
 
-@[simp, push]
+@[simp]
 theorem inv_whiskerLeft (f : a ⟶ b) {g h : b ⟶ c} (η : g ⟶ h) [IsIso η] :
     inv (f ◁ η) = f ◁ inv η := by
   apply IsIso.inv_eq_of_hom_inv_id
@@ -246,17 +212,11 @@ def whiskerRightIso {f g : a ⟶ b} (η : f ≅ g) (h : b ⟶ c) : f ≫ h ≅ g
 instance whiskerRight_isIso {f g : a ⟶ b} (η : f ⟶ g) (h : b ⟶ c) [IsIso η] : IsIso (η ▷ h) :=
   (whiskerRightIso (asIso η) h).isIso_hom
 
-@[simp, push]
+@[simp]
 theorem inv_whiskerRight {f g : a ⟶ b} (η : f ⟶ g) (h : b ⟶ c) [IsIso η] :
     inv (η ▷ h) = inv η ▷ h := by
   apply IsIso.inv_eq_of_hom_inv_id
   simp only [← comp_whiskerRight, id_whiskerRight, IsIso.hom_inv_id]
-
-@[inherit_doc whiskerLeftIso]
-scoped infixr:82 " ◁ᵢ " => whiskerLeftIso
-
-@[inherit_doc whiskerRightIso]
-scoped infixl:82 " ▷ᵢ " => whiskerRightIso
 
 @[reassoc (attr := simp)]
 theorem pentagon_inv (f : a ⟶ b) (g : b ⟶ c) (h : c ⟶ d) (i : d ⟶ e) :
@@ -465,7 +425,6 @@ def precomp (c : B) (f : a ⟶ b) : (b ⟶ c) ⥤ (a ⟶ c) where
   obj := (f ≫ ·)
   map := (f ◁ ·)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Precomposition of a 1-morphism as a functor from the category of 1-morphisms `a ⟶ b` into the
 category of functors `(b ⟶ c) ⥤ (a ⟶ c)`. -/
 @[simps]
@@ -479,7 +438,6 @@ def postcomp (a : B) (f : b ⟶ c) : (a ⟶ b) ⥤ (a ⟶ c) where
   obj := (· ≫ f)
   map := (· ▷ f)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Postcomposition of a 1-morphism as a functor from the category of 1-morphisms `b ⟶ c` into the
 category of functors `(a ⟶ b) ⥤ (a ⟶ c)`. -/
 @[simps]
@@ -487,14 +445,12 @@ def postcomposing (a b c : B) : (b ⟶ c) ⥤ (a ⟶ b) ⥤ (a ⟶ c) where
   obj f := postcomp a f
   map η := { app := (· ◁ η) }
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Left component of the associator as a natural isomorphism. -/
 @[simps!]
 def associatorNatIsoLeft (a : B) (g : b ⟶ c) (h : c ⟶ d) :
     (postcomposing a ..).obj g ⋙ (postcomposing ..).obj h ≅ (postcomposing ..).obj (g ≫ h) :=
   NatIso.ofComponents (α_ · g h)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Middle component of the associator as a natural isomorphism. -/
 @[simps!]
 def associatorNatIsoMiddle (f : a ⟶ b) (h : c ⟶ d) :
@@ -502,20 +458,17 @@ def associatorNatIsoMiddle (f : a ⟶ b) (h : c ⟶ d) :
       (postcomposing ..).obj h ⋙ (precomposing ..).obj f :=
   NatIso.ofComponents (α_ f · h)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Right component of the associator as a natural isomorphism. -/
 @[simps!]
 def associatorNatIsoRight (f : a ⟶ b) (g : b ⟶ c) (d : B) :
     (precomposing _ _ d).obj (f ≫ g) ≅ (precomposing ..).obj g ⋙ (precomposing ..).obj f :=
   NatIso.ofComponents (α_ f g ·)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Left unitor as a natural isomorphism. -/
 @[simps!]
 def leftUnitorNatIso (a b : B) : (precomposing _ _ b).obj (𝟙 a) ≅ 𝟭 (a ⟶ b) :=
   NatIso.ofComponents (λ_ ·)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Right unitor as a natural isomorphism. -/
 @[simps!]
 def rightUnitorNatIso (a b : B) : (postcomposing a _ _).obj (𝟙 b) ≅ 𝟭 (a ⟶ b) :=

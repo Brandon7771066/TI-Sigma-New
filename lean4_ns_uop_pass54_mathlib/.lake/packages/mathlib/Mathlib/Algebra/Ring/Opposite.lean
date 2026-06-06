@@ -3,211 +3,146 @@ Copyright (c) 2018 Kenny Lau. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kenny Lau
 -/
-module
-
-public import Mathlib.Algebra.Group.Equiv.Opposite
-public import Mathlib.Algebra.GroupWithZero.Opposite
-public import Mathlib.Algebra.Ring.Hom.Defs
-public import Mathlib.Data.Int.Cast.Basic
+import Mathlib.Algebra.GroupWithZero.Opposite
+import Mathlib.Algebra.Ring.Hom.Defs
 
 /-!
 # Ring structures on the multiplicative opposite
 -/
 
-@[expose] public section
-
-variable {R : Type*}
+variable {α : Type*}
 
 namespace MulOpposite
 
-instance instDistrib [Distrib R] : Distrib Rᵐᵒᵖ where
+instance instDistrib [Distrib α] : Distrib αᵐᵒᵖ where
   left_distrib _ _ _ := unop_injective <| add_mul _ _ _
   right_distrib _ _ _ := unop_injective <| mul_add _ _ _
 
-@[to_additive] instance instNatCast [NatCast R] : NatCast Rᵐᵒᵖ where natCast n := op n
-@[to_additive] instance instIntCast [IntCast R] : IntCast Rᵐᵒᵖ where intCast n := op n
-
-@[to_additive (attr := simp, norm_cast)]
-theorem op_natCast [NatCast R] (n : ℕ) : op (n : R) = n :=
-  rfl
-
-@[to_additive (attr := simp)]
-theorem op_ofNat [NatCast R] (n : ℕ) [n.AtLeastTwo] :
-    op (ofNat(n) : R) = ofNat(n) :=
-  rfl
-
-@[to_additive (attr := simp, norm_cast)]
-theorem op_intCast [IntCast R] (n : ℤ) : op (n : R) = n :=
-  rfl
-
-@[to_additive (attr := simp, norm_cast)]
-theorem unop_natCast [NatCast R] (n : ℕ) : unop (n : Rᵐᵒᵖ) = n :=
-  rfl
-
-@[to_additive (attr := simp)]
-theorem unop_ofNat [NatCast R] (n : ℕ) [n.AtLeastTwo] :
-    unop (ofNat(n) : Rᵐᵒᵖ) = ofNat(n) :=
-  rfl
-
-@[to_additive (attr := simp, norm_cast)]
-theorem unop_intCast [IntCast R] (n : ℤ) : unop (n : Rᵐᵒᵖ) = n :=
-  rfl
-
-instance instAddMonoidWithOne [AddMonoidWithOne R] : AddMonoidWithOne Rᵐᵒᵖ where
-  toNatCast := instNatCast
-  toAddMonoid := instAddMonoid
-  toOne := instOne
-  natCast_zero := show op ((0 : ℕ) : R) = 0 by rw [Nat.cast_zero, op_zero]
-  natCast_succ := show ∀ n, op ((n + 1 : ℕ) : R) = op ↑(n : ℕ) + 1 by simp
-
-instance instAddCommMonoidWithOne [AddCommMonoidWithOne R] : AddCommMonoidWithOne Rᵐᵒᵖ where
-  toAddMonoidWithOne := instAddMonoidWithOne
-  __ := instAddCommMonoid
-
-instance instAddGroupWithOne [AddGroupWithOne R] : AddGroupWithOne Rᵐᵒᵖ where
-  toAddMonoidWithOne := instAddMonoidWithOne
-  toIntCast := instIntCast
-  __ := instAddGroup
-  intCast_ofNat n := show op ((n : ℤ) : R) = op (n : R) by rw [Int.cast_natCast]
-  intCast_negSucc n := show op _ = op (-unop (op ((n + 1 : ℕ) : R))) by simp
-
-instance instAddCommGroupWithOne [AddCommGroupWithOne R] : AddCommGroupWithOne Rᵐᵒᵖ where
-  toAddCommGroup := instAddCommGroup
-  __ := instAddGroupWithOne
-
-instance instNonUnitalNonAssocSemiring [NonUnitalNonAssocSemiring R] :
-    NonUnitalNonAssocSemiring Rᵐᵒᵖ where
+instance instNonUnitalNonAssocSemiring [NonUnitalNonAssocSemiring α] :
+    NonUnitalNonAssocSemiring αᵐᵒᵖ where
   __ := instAddCommMonoid
   __ := instDistrib
   __ := instMulZeroClass
 
-instance instNonUnitalSemiring [NonUnitalSemiring R] : NonUnitalSemiring Rᵐᵒᵖ where
+instance instNonUnitalSemiring [NonUnitalSemiring α] : NonUnitalSemiring αᵐᵒᵖ where
   __ := instNonUnitalNonAssocSemiring
   __ := instSemigroupWithZero
 
-instance instNonAssocSemiring [NonAssocSemiring R] : NonAssocSemiring Rᵐᵒᵖ where
+instance instNonAssocSemiring [NonAssocSemiring α] : NonAssocSemiring αᵐᵒᵖ where
   __ := instNonUnitalNonAssocSemiring
   __ := instMulZeroOneClass
   __ := instAddCommMonoidWithOne
 
-instance instSemiring [Semiring R] : Semiring Rᵐᵒᵖ where
+instance instSemiring [Semiring α] : Semiring αᵐᵒᵖ where
   __ := instNonUnitalSemiring
   __ := instNonAssocSemiring
   __ := instMonoidWithZero
 
-instance instNonUnitalCommSemiring [NonUnitalCommSemiring R] : NonUnitalCommSemiring Rᵐᵒᵖ where
+instance instNonUnitalCommSemiring [NonUnitalCommSemiring α] : NonUnitalCommSemiring αᵐᵒᵖ where
   __ := instNonUnitalSemiring
   __ := instCommSemigroup
 
-instance instCommSemiring [CommSemiring R] : CommSemiring Rᵐᵒᵖ where
+instance instCommSemiring [CommSemiring α] : CommSemiring αᵐᵒᵖ where
   __ := instSemiring
   __ := instCommMonoid
 
-instance instNonUnitalNonAssocRing [NonUnitalNonAssocRing R] : NonUnitalNonAssocRing Rᵐᵒᵖ where
+instance instNonUnitalNonAssocRing [NonUnitalNonAssocRing α] : NonUnitalNonAssocRing αᵐᵒᵖ where
   __ := instAddCommGroup
   __ := instNonUnitalNonAssocSemiring
 
-instance instNonUnitalRing [NonUnitalRing R] : NonUnitalRing Rᵐᵒᵖ where
+instance instNonUnitalRing [NonUnitalRing α] : NonUnitalRing αᵐᵒᵖ where
   __ := instNonUnitalNonAssocRing
   __ := instNonUnitalSemiring
 
-instance instNonAssocRing [NonAssocRing R] : NonAssocRing Rᵐᵒᵖ where
+instance instNonAssocRing [NonAssocRing α] : NonAssocRing αᵐᵒᵖ where
   __ := instNonUnitalNonAssocRing
   __ := instNonAssocSemiring
   __ := instAddCommGroupWithOne
 
-instance instRing [Ring R] : Ring Rᵐᵒᵖ where
+instance instRing [Ring α] : Ring αᵐᵒᵖ where
   __ := instSemiring
   __ := instAddCommGroupWithOne
 
-instance instNonUnitalCommRing [NonUnitalCommRing R] : NonUnitalCommRing Rᵐᵒᵖ where
+instance instNonUnitalCommRing [NonUnitalCommRing α] : NonUnitalCommRing αᵐᵒᵖ where
   __ := instNonUnitalRing
   __ := instNonUnitalCommSemiring
 
-instance instCommRing [CommRing R] : CommRing Rᵐᵒᵖ where
+instance instCommRing [CommRing α] : CommRing αᵐᵒᵖ where
   __ := instRing
   __ := instCommMonoid
 
-instance instIsDomain [Ring R] [IsDomain R] : IsDomain Rᵐᵒᵖ :=
+instance instIsDomain [Ring α] [IsDomain α] : IsDomain αᵐᵒᵖ :=
   NoZeroDivisors.to_isDomain _
+
+instance instGroupWithZero [GroupWithZero α] : GroupWithZero αᵐᵒᵖ where
+  __ := instMonoidWithZero
+  __ := instNontrivial
+  __ := instDivInvMonoid
+  mul_inv_cancel _ hx := unop_injective <| inv_mul_cancel <| unop_injective.ne hx
+  inv_zero := unop_injective inv_zero
 
 end MulOpposite
 
 namespace AddOpposite
 
-instance instDistrib [Distrib R] : Distrib Rᵃᵒᵖ where
+instance instDistrib [Distrib α] : Distrib αᵃᵒᵖ where
   left_distrib _ _ _ := unop_injective <| mul_add _ _ _
   right_distrib _ _ _ := unop_injective <| add_mul _ _ _
 
--- NOTE: `addMonoidWithOne R → addMonoidWithOne Rᵃᵒᵖ` does not hold
-instance instAddCommMonoidWithOne [AddCommMonoidWithOne R] : AddCommMonoidWithOne Rᵃᵒᵖ where
-  toNatCast := instNatCast
-  toOne := instOne
-  __ := instAddCommMonoid
-  natCast_zero := show op ((0 : ℕ) : R) = 0 by rw [Nat.cast_zero, op_zero]
-  natCast_succ := show ∀ n, op ((n + 1 : ℕ) : R) = op ↑(n : ℕ) + 1 by simp [add_comm]
-
-instance instAddCommGroupWithOne [AddCommGroupWithOne R] : AddCommGroupWithOne Rᵃᵒᵖ where
-  toIntCast := instIntCast
-  toAddCommGroup := instAddCommGroup
-  __ := instAddCommMonoidWithOne
-  intCast_ofNat _ := congr_arg op <| Int.cast_natCast _
-  intCast_negSucc _ := congr_arg op <| Int.cast_negSucc _
-
-instance instNonUnitalNonAssocSemiring [NonUnitalNonAssocSemiring R] :
-    NonUnitalNonAssocSemiring Rᵃᵒᵖ where
+instance instNonUnitalNonAssocSemiring [NonUnitalNonAssocSemiring α] :
+    NonUnitalNonAssocSemiring αᵃᵒᵖ where
   __ := instAddCommMonoid
   __ := instDistrib
   __ := instMulZeroClass
 
-instance instNonUnitalSemiring [NonUnitalSemiring R] : NonUnitalSemiring Rᵃᵒᵖ where
+instance instNonUnitalSemiring [NonUnitalSemiring α] : NonUnitalSemiring αᵃᵒᵖ where
   __ := instNonUnitalNonAssocSemiring
   __ := instSemigroupWithZero
 
-instance instNonAssocSemiring [NonAssocSemiring R] : NonAssocSemiring Rᵃᵒᵖ where
+instance instNonAssocSemiring [NonAssocSemiring α] : NonAssocSemiring αᵃᵒᵖ where
   __ := instNonUnitalNonAssocSemiring
   __ := instMulZeroOneClass
   __ := instAddCommMonoidWithOne
 
-instance instSemiring [Semiring R] : Semiring Rᵃᵒᵖ where
+instance instSemiring [Semiring α] : Semiring αᵃᵒᵖ where
   __ := instNonUnitalSemiring
   __ := instNonAssocSemiring
   __ := instMonoidWithZero
 
-instance instNonUnitalCommSemiring [NonUnitalCommSemiring R] : NonUnitalCommSemiring Rᵃᵒᵖ where
+instance instNonUnitalCommSemiring [NonUnitalCommSemiring α] : NonUnitalCommSemiring αᵃᵒᵖ where
   __ := instNonUnitalSemiring
   __ := instCommSemigroup
 
-instance instCommSemiring [CommSemiring R] : CommSemiring Rᵃᵒᵖ where
+instance instCommSemiring [CommSemiring α] : CommSemiring αᵃᵒᵖ where
   __ := instSemiring
   __ := instCommMonoid
 
-instance instNonUnitalNonAssocRing [NonUnitalNonAssocRing R] : NonUnitalNonAssocRing Rᵃᵒᵖ where
+instance instNonUnitalNonAssocRing [NonUnitalNonAssocRing α] : NonUnitalNonAssocRing αᵃᵒᵖ where
   __ := instAddCommGroup
   __ := instNonUnitalNonAssocSemiring
 
-instance instNonUnitalRing [NonUnitalRing R] : NonUnitalRing Rᵃᵒᵖ where
+instance instNonUnitalRing [NonUnitalRing α] : NonUnitalRing αᵃᵒᵖ where
   __ := instNonUnitalNonAssocRing
   __ := instNonUnitalSemiring
 
-instance instNonAssocRing [NonAssocRing R] : NonAssocRing Rᵃᵒᵖ where
+instance instNonAssocRing [NonAssocRing α] : NonAssocRing αᵃᵒᵖ where
   __ := instNonUnitalNonAssocRing
   __ := instNonAssocSemiring
   __ := instAddCommGroupWithOne
 
-instance instRing [Ring R] : Ring Rᵃᵒᵖ where
+instance instRing [Ring α] : Ring αᵃᵒᵖ where
   __ := instSemiring
   __ := instAddCommGroupWithOne
 
-instance instNonUnitalCommRing [NonUnitalCommRing R] : NonUnitalCommRing Rᵃᵒᵖ where
+instance instNonUnitalCommRing [NonUnitalCommRing α] : NonUnitalCommRing αᵃᵒᵖ where
   __ := instNonUnitalRing
   __ := instNonUnitalCommSemiring
 
-instance instCommRing [CommRing R] : CommRing Rᵃᵒᵖ where
+instance instCommRing [CommRing α] : CommRing αᵃᵒᵖ where
   __ := instRing
   __ := instCommMonoid
 
-instance instIsDomain [Ring R] [IsDomain R] : IsDomain Rᵃᵒᵖ :=
+instance instIsDomain [Ring α] [IsDomain α] : IsDomain αᵃᵒᵖ :=
   NoZeroDivisors.to_isDomain _
 
 end AddOpposite
@@ -216,7 +151,7 @@ open MulOpposite
 
 /-- A non-unital ring homomorphism `f : R →ₙ+* S` such that `f x` commutes with `f y` for all `x, y`
 defines a non-unital ring homomorphism to `Sᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def NonUnitalRingHom.toOpposite {R S : Type*} [NonUnitalNonAssocSemiring R]
     [NonUnitalNonAssocSemiring S] (f : R →ₙ+* S) (hf : ∀ x y, Commute (f x) (f y)) : R →ₙ+* Sᵐᵒᵖ :=
   { ((opAddEquiv : S ≃+ Sᵐᵒᵖ).toAddMonoidHom.comp ↑f : R →+ Sᵐᵒᵖ), f.toMulHom.toOpposite hf with
@@ -224,30 +159,32 @@ def NonUnitalRingHom.toOpposite {R S : Type*} [NonUnitalNonAssocSemiring R]
 
 /-- A non-unital ring homomorphism `f : R →ₙ* S` such that `f x` commutes with `f y` for all `x, y`
 defines a non-unital ring homomorphism from `Rᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def NonUnitalRingHom.fromOpposite {R S : Type*} [NonUnitalNonAssocSemiring R]
     [NonUnitalNonAssocSemiring S] (f : R →ₙ+* S) (hf : ∀ x y, Commute (f x) (f y)) : Rᵐᵒᵖ →ₙ+* S :=
   { (f.toAddMonoidHom.comp (opAddEquiv : R ≃+ Rᵐᵒᵖ).symm.toAddMonoidHom : Rᵐᵒᵖ →+ S),
     f.toMulHom.fromOpposite hf with toFun := f ∘ MulOpposite.unop }
 
-/-- A non-unital ring hom `R →ₙ+* S` can equivalently be viewed as a non-unital ring hom
-`Rᵐᵒᵖ →+* Sᵐᵒᵖ`. This is the action of the (fully faithful) `ᵐᵒᵖ`-functor on morphisms. -/
+/-- A non-unital ring hom `α →ₙ+* β` can equivalently be viewed as a non-unital ring hom
+`αᵐᵒᵖ →+* βᵐᵒᵖ`. This is the action of the (fully faithful) `ᵐᵒᵖ`-functor on morphisms. -/
 @[simps]
-def NonUnitalRingHom.op {R S} [NonUnitalNonAssocSemiring R] [NonUnitalNonAssocSemiring S] :
-    (R →ₙ+* S) ≃ (Rᵐᵒᵖ →ₙ+* Sᵐᵒᵖ) where
+def NonUnitalRingHom.op {α β} [NonUnitalNonAssocSemiring α] [NonUnitalNonAssocSemiring β] :
+    (α →ₙ+* β) ≃ (αᵐᵒᵖ →ₙ+* βᵐᵒᵖ) where
   toFun f := { AddMonoidHom.mulOp f.toAddMonoidHom, MulHom.op f.toMulHom with }
   invFun f := { AddMonoidHom.mulUnop f.toAddMonoidHom, MulHom.unop f.toMulHom with }
+  left_inv _ := rfl
+  right_inv _ := rfl
 
-/-- The 'unopposite' of a non-unital ring hom `Rᵐᵒᵖ →ₙ+* Sᵐᵒᵖ`. Inverse to
+/-- The 'unopposite' of a non-unital ring hom `αᵐᵒᵖ →ₙ+* βᵐᵒᵖ`. Inverse to
 `NonUnitalRingHom.op`. -/
 @[simp]
-def NonUnitalRingHom.unop {R S} [NonUnitalNonAssocSemiring R] [NonUnitalNonAssocSemiring S] :
-    (Rᵐᵒᵖ →ₙ+* Sᵐᵒᵖ) ≃ (R →ₙ+* S) :=
+def NonUnitalRingHom.unop {α β} [NonUnitalNonAssocSemiring α] [NonUnitalNonAssocSemiring β] :
+    (αᵐᵒᵖ →ₙ+* βᵐᵒᵖ) ≃ (α →ₙ+* β) :=
   NonUnitalRingHom.op.symm
 
 /-- A ring homomorphism `f : R →+* S` such that `f x` commutes with `f y` for all `x, y` defines
 a ring homomorphism to `Sᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def RingHom.toOpposite {R S : Type*} [Semiring R] [Semiring S] (f : R →+* S)
     (hf : ∀ x y, Commute (f x) (f y)) : R →+* Sᵐᵒᵖ :=
   { ((opAddEquiv : S ≃+ Sᵐᵒᵖ).toAddMonoidHom.comp ↑f : R →+ Sᵐᵒᵖ), f.toMonoidHom.toOpposite hf with
@@ -255,21 +192,23 @@ def RingHom.toOpposite {R S : Type*} [Semiring R] [Semiring S] (f : R →+* S)
 
 /-- A ring homomorphism `f : R →+* S` such that `f x` commutes with `f y` for all `x, y` defines
 a ring homomorphism from `Rᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def RingHom.fromOpposite {R S : Type*} [Semiring R] [Semiring S] (f : R →+* S)
     (hf : ∀ x y, Commute (f x) (f y)) : Rᵐᵒᵖ →+* S :=
   { (f.toAddMonoidHom.comp (opAddEquiv : R ≃+ Rᵐᵒᵖ).symm.toAddMonoidHom : Rᵐᵒᵖ →+ S),
     f.toMonoidHom.fromOpposite hf with toFun := f ∘ MulOpposite.unop }
 
-/-- A ring hom `R →+* S` can equivalently be viewed as a ring hom `Rᵐᵒᵖ →+* Sᵐᵒᵖ`. This is the
+/-- A ring hom `α →+* β` can equivalently be viewed as a ring hom `αᵐᵒᵖ →+* βᵐᵒᵖ`. This is the
 action of the (fully faithful) `ᵐᵒᵖ`-functor on morphisms. -/
 @[simps!]
-def RingHom.op {R S} [NonAssocSemiring R] [NonAssocSemiring S] :
-    (R →+* S) ≃ (Rᵐᵒᵖ →+* Sᵐᵒᵖ) where
+def RingHom.op {α β} [NonAssocSemiring α] [NonAssocSemiring β] :
+    (α →+* β) ≃ (αᵐᵒᵖ →+* βᵐᵒᵖ) where
   toFun f := { AddMonoidHom.mulOp f.toAddMonoidHom, MonoidHom.op f.toMonoidHom with }
   invFun f := { AddMonoidHom.mulUnop f.toAddMonoidHom, MonoidHom.unop f.toMonoidHom with }
+  left_inv _ := rfl
+  right_inv _ := rfl
 
-/-- The 'unopposite' of a ring hom `Rᵐᵒᵖ →+* Sᵐᵒᵖ`. Inverse to `RingHom.op`. -/
+/-- The 'unopposite' of a ring hom `αᵐᵒᵖ →+* βᵐᵒᵖ`. Inverse to `RingHom.op`. -/
 @[simp]
-def RingHom.unop {R S} [NonAssocSemiring R] [NonAssocSemiring S] : (Rᵐᵒᵖ →+* Sᵐᵒᵖ) ≃ (R →+* S) :=
+def RingHom.unop {α β} [NonAssocSemiring α] [NonAssocSemiring β] : (αᵐᵒᵖ →+* βᵐᵒᵖ) ≃ (α →+* β) :=
   RingHom.op.symm

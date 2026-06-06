@@ -3,9 +3,7 @@ Copyright (c) 2022 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.AlgebraicTopology.AlternatingFaceMapComplex
+import Mathlib.AlgebraicTopology.AlternatingFaceMapComplex
 
 /-!
 
@@ -18,8 +16,6 @@ as `N[X]` for the normalized subcomplex in the case `C` is an abelian category.
 (See `Equivalence.lean` for the general strategy of proof of the Dold-Kan equivalence.)
 
 -/
-
-public section
 
 
 @[inherit_doc]

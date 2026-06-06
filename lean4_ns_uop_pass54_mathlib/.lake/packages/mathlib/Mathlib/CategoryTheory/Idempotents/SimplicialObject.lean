@@ -3,10 +3,8 @@ Copyright (c) 2022 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.AlgebraicTopology.SimplicialObject.Basic
-public import Mathlib.CategoryTheory.Idempotents.FunctorCategories
+import Mathlib.AlgebraicTopology.SimplicialObject
+import Mathlib.CategoryTheory.Idempotents.FunctorCategories
 
 /-!
 
@@ -18,14 +16,12 @@ category `C` is.
 
 -/
 
-public section
-
 
 namespace CategoryTheory
 
 namespace Idempotents
 
-variable {C : Type*} [Category* C] [IsIdempotentComplete C]
+variable {C : Type*} [Category C] [IsIdempotentComplete C]
 
 instance : IsIdempotentComplete (SimplicialObject C) :=
   Idempotents.functor_category_isIdempotentComplete _ _

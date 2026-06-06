@@ -3,18 +3,14 @@ Copyright (c) 2018 Chris Hughes. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Chris Hughes, Abhimanyu Pallavi Sudhir, Jean Lo, Calle Sönne, Benjamin Davidson
 -/
-module
-
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
-public import Mathlib.Analysis.SpecialFunctions.Trigonometric.ComplexDeriv
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.ComplexDeriv
 
 /-!
 # Derivatives of the `tan` and `arctan` functions.
 
 Continuity and derivatives of the tangent and arctangent functions.
 -/
-
-public section
 
 
 noncomputable section
@@ -34,8 +30,8 @@ theorem hasDerivAt_tan {x : ℝ} (h : cos x ≠ 0) : HasDerivAt tan (1 / cos x ^
 theorem tendsto_abs_tan_of_cos_eq_zero {x : ℝ} (hx : cos x = 0) :
     Tendsto (fun x => abs (tan x)) (𝓝[≠] x) atTop := by
   have hx : Complex.cos x = 0 := mod_cast hx
-  simp only [← Real.norm_eq_abs, ← Complex.norm_real, Complex.ofReal_tan]
-  refine (Complex.tendsto_norm_tan_of_cos_eq_zero hx).comp ?_
+  simp only [← Complex.abs_ofReal, Complex.ofReal_tan]
+  refine (Complex.tendsto_abs_tan_of_cos_eq_zero hx).comp ?_
   refine Tendsto.inf Complex.continuous_ofReal.continuousAt ?_
   exact tendsto_principal_principal.2 fun y => mt Complex.ofReal_inj.1
 
@@ -59,7 +55,7 @@ theorem deriv_tan (x : ℝ) : deriv tan x = 1 / cos x ^ 2 :=
   else (hasDerivAt_tan h).deriv
 
 @[simp]
-theorem contDiffAt_tan {n : WithTop ℕ∞} {x : ℝ} : ContDiffAt ℝ n tan x ↔ cos x ≠ 0 :=
+theorem contDiffAt_tan {n x} : ContDiffAt ℝ n tan x ↔ cos x ≠ 0 :=
   ⟨fun h => continuousAt_tan.1 h.continuousAt, fun h =>
     (Complex.contDiffAt_tan.2 <| mod_cast h).real_of_complex⟩
 
@@ -92,7 +88,7 @@ theorem differentiable_arctan : Differentiable ℝ arctan :=
 theorem deriv_arctan : deriv arctan = fun (x : ℝ) => 1 / (1 + x ^ 2) :=
   funext fun x => (hasDerivAt_arctan x).deriv
 
-theorem contDiff_arctan {n : WithTop ℕ∞} : ContDiff ℝ n arctan :=
+theorem contDiff_arctan {n : ℕ∞} : ContDiff ℝ n arctan :=
   contDiff_iff_contDiffAt.2 fun x =>
     have : cos (arctan x) ≠ 0 := (cos_arctan_pos x).ne'
     tanPartialHomeomorph.contDiffAt_symm_deriv (by simpa) trivial (hasDerivAt_tan this)
@@ -140,8 +136,8 @@ end deriv
 
 section fderiv
 
-variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → ℝ} {f' : StrongDual ℝ E}
-  {x : E} {s : Set E} {n : ℕ∞}
+variable {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → ℝ} {f' : E →L[ℝ] ℝ} {x : E}
+  {s : Set E} {n : ℕ∞}
 
 theorem HasStrictFDerivAt.arctan (hf : HasStrictFDerivAt f f' x) :
     HasStrictFDerivAt (fun x => arctan (f x)) ((1 / (1 + f x ^ 2)) • f') x :=

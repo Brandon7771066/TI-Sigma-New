@@ -3,20 +3,16 @@ Copyright (c) 2022 Rémi Bottinelli. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Rémi Bottinelli
 -/
-module
-
-public import Mathlib.Combinatorics.Quiver.Prefunctor
+import Mathlib.Combinatorics.Quiver.Basic
 
 /-!
 
 # Pushing a quiver structure along a map
 
-Given a map `σ : V → W` and a `Quiver` instance on `V`, this file defines a `Quiver` instance
+Given a map `σ : V → W` and a `Quiver` instance on `V`, this files defines a `Quiver` instance
 on `W` by associating to each arrow `v ⟶ v'` in `V` an arrow `σ v ⟶ σ v'` in `W`.
 
 -/
-
-@[expose] public section
 
 namespace Quiver
 
@@ -59,6 +55,7 @@ noncomputable def lift : Push σ ⥤q W' where
   obj := τ
   map :=
     @PushQuiver.rec V _ W σ (fun X Y _ => τ X ⟶ τ Y) @fun X Y f => by
+      dsimp only
       rw [← h X, ← h Y]
       exact φ.map f
 
@@ -75,7 +72,13 @@ theorem lift_comp : (of σ ⋙q lift σ φ τ h) = φ := by
     simp only [Prefunctor.comp_map]
     apply eq_of_heq
     iterate 2 apply (cast_heq _ _).trans
-    simp
+    apply HEq.symm
+    apply (eqRec_heq _ _).trans
+    have : ∀ {α γ} {β : α → γ → Sort _} {a a'} (p : a = a') g (b : β a g), HEq (p ▸ b) b := by
+      intros
+      subst_vars
+      rfl
+    apply this
 
 theorem lift_unique (Φ : Push σ ⥤q W') (Φ₀ : Φ.obj = τ) (Φcomp : (of σ ⋙q Φ) = φ) :
     Φ = lift σ φ τ h := by
@@ -86,7 +89,7 @@ theorem lift_unique (Φ : Push σ ⥤q W') (Φ₀ : Φ.obj = τ) (Φcomp : (of �
     rw [Φ₀]
   · rintro _ _ ⟨⟩
     subst_vars
-    simp only [Prefunctor.comp_map]
+    simp only [Prefunctor.comp_map, cast_eq]
     rfl
 
 end Push

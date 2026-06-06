@@ -3,9 +3,7 @@ Copyright (c) 2022 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.AlgebraicTopology.DoldKan.PInfty
+import Mathlib.AlgebraicTopology.DoldKan.PInfty
 
 /-!
 
@@ -32,8 +30,6 @@ normalized Moore complex functor shall be obtained in `Normalized.lean`.
 
 -/
 
-@[expose] public section
-
 
 open CategoryTheory CategoryTheory.Category CategoryTheory.Idempotents
 
@@ -43,9 +39,8 @@ namespace AlgebraicTopology
 
 namespace DoldKan
 
-variable {C : Type*} [Category* C] [Preadditive C]
+variable {C : Type*} [Category C] [Preadditive C]
 
-set_option backward.isDefEq.respectTransparency false in
 /-- The functor `SimplicialObject C ⥤ Karoubi (ChainComplex C ℕ)` which maps
 `X` to the formal direct factor of `K[X]` defined by `PInfty`. -/
 @[simps]

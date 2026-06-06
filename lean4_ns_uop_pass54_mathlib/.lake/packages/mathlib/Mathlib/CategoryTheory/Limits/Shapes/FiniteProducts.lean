@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2019 Kim Morrison. All rights reserved.
+Copyright (c) 2019 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.FiniteLimits
-public import Mathlib.CategoryTheory.Limits.Shapes.Products
+import Mathlib.CategoryTheory.Limits.Shapes.FiniteLimits
+import Mathlib.CategoryTheory.Limits.Shapes.Products
 
 /-!
 # Categories with finite (co)products
@@ -14,12 +12,12 @@ public import Mathlib.CategoryTheory.Limits.Shapes.Products
 Typeclasses representing categories with (co)products over finite indexing types.
 -/
 
-public section
-
 
 universe w v u
 
 open CategoryTheory
+
+open scoped Classical
 
 namespace CategoryTheory.Limits
 
@@ -64,6 +62,8 @@ We require this condition only for `J = Fin n` in the definition, then deduce a 
 class HasFiniteCoproducts : Prop where
   /-- `C` has all finite coproducts -/
   out (n : ℕ) : HasColimitsOfShape (Discrete (Fin n)) C
+
+-- attribute [class] HasFiniteCoproducts Porting note: this doesn't seem necessary in Lean 4
 
 instance hasColimitsOfShape_discrete [HasFiniteCoproducts C] (ι : Type w) [Finite ι] :
     HasColimitsOfShape (Discrete ι) C := by

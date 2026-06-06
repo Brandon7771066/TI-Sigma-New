@@ -3,10 +3,8 @@ Copyright (c) 2021 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.Analysis.BoxIntegral.Box.SubboxInduction
-public import Mathlib.Analysis.BoxIntegral.Partition.Tagged
+import Mathlib.Analysis.BoxIntegral.Box.SubboxInduction
+import Mathlib.Analysis.BoxIntegral.Partition.Tagged
 
 /-!
 # Induction on subboxes
@@ -28,13 +26,12 @@ integral is well-defined.
 partition, tagged partition, Henstock integral
 -/
 
-@[expose] public section
-
 
 namespace BoxIntegral
 
 open Set Metric
 
+open scoped Classical
 open Topology
 
 noncomputable section
@@ -103,7 +100,7 @@ well-defined. -/
 theorem exists_taggedPartition_isHenstock_isSubordinate_homothetic (I : Box ι)
     (r : (ι → ℝ) → Ioi (0 : ℝ)) :
     ∃ π : TaggedPrepartition I, π.IsPartition ∧ π.IsHenstock ∧ π.IsSubordinate r ∧
-      (∀ J ∈ π, ∃ m : ℕ, ∀ i, (J :).upper i - J.lower i = (I.upper i - I.lower i) / 2 ^ m) ∧
+      (∀ J ∈ π, ∃ m : ℕ, ∀ i, (J : _).upper i - J.lower i = (I.upper i - I.lower i) / 2 ^ m) ∧
         π.distortion = I.distortion := by
   refine subbox_induction_on I (fun J _ hJ => ?_) fun z _ => ?_
   · choose! πi hP hHen hr Hn _ using hJ
@@ -111,7 +108,7 @@ theorem exists_taggedPartition_isHenstock_isSubordinate_homothetic (I : Box ι)
     have hP : ((splitCenter J).biUnionTagged πi).IsPartition :=
       (isPartition_splitCenter _).biUnionTagged hP
     have hsub : ∀ J' ∈ (splitCenter J).biUnionTagged πi, ∃ n : ℕ, ∀ i,
-        (J' :).upper i - J'.lower i = (J.upper i - J.lower i) / 2 ^ n := by
+        (J' : _).upper i - J'.lower i = (J.upper i - J.lower i) / 2 ^ n := by
       intro J' hJ'
       rcases (splitCenter J).mem_biUnionTagged.1 hJ' with ⟨J₁, h₁, h₂⟩
       refine ⟨n J₁ J' + 1, fun i => ?_⟩
@@ -215,7 +212,6 @@ theorem isPartition_unionComplToSubordinate (π₁ : TaggedPrepartition I) (π�
     IsPartition (π₁.unionComplToSubordinate π₂ hU r) :=
   Prepartition.isPartitionDisjUnionOfEqDiff ((π₂.iUnion_toSubordinate r).trans hU)
 
-open scoped Classical in
 @[simp]
 theorem unionComplToSubordinate_boxes (π₁ : TaggedPrepartition I) (π₂ : Prepartition I)
     (hU : π₂.iUnion = ↑I \ π₁.iUnion) (r : (ι → ℝ) → Ioi (0 : ℝ)) :

@@ -3,17 +3,13 @@ Copyright (c) 2021 Gabriel Ebner. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Gabriel Ebner, Mario Carneiro
 -/
-module
-
-public import Mathlib.Util.WithWeakNamespace
+import Mathlib.Util.WithWeakNamespace
 
 /-! # `scoped[NS]` syntax
 
 This is a replacement for the `localized` command in mathlib. It is similar to `scoped`,
 but it scopes the syntax in the specified namespace instead of the current namespace.
 -/
-
-public meta section
 
 namespace Mathlib.Tactic
 open Lean
@@ -22,8 +18,8 @@ open Lean
 `scoped[NS]` is similar to the `scoped` modifier on attributes and notations,
 but it scopes the syntax in the specified namespace instead of the current namespace.
 ```
-scoped[Matrix] postfix:1024 "ᵀ" => Matrix.transpose
--- declares `ᵀ` as a notation for matrix transposition
+scoped[Matrix] infixl:72 " ⬝ᵥ " => Matrix.dotProduct
+-- declares `*` as a notation for vector dot productss
 -- which is only accessible if you `open Matrix` or `open scoped Matrix`.
 
 namespace Nat
@@ -57,5 +53,3 @@ macro_rules
   | `(scoped[$ns] attribute [$[$attr:attr],*] $ids*) =>
     `(with_weak_namespace $(mkIdentFrom ns <| rootNamespace ++ ns.getId)
       attribute [$[scoped $attr:attr],*] $ids*)
-
-end Mathlib.Tactic

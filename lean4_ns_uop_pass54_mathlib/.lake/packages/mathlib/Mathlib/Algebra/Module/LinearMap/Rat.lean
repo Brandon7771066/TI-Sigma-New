@@ -4,16 +4,12 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Nathaniel Thomas, Jeremy Avigad, Johannes Hölzl, Mario Carneiro, Anne Baanen,
   Frédéric Dupuis, Heather Macbeth
 -/
-module
-
-public import Mathlib.Algebra.Module.Rat
-public import Mathlib.Algebra.Module.LinearMap.Defs
+import Mathlib.Algebra.Module.Rat
+import Mathlib.Algebra.Module.LinearMap.Defs
 
 /-!
 # Reinterpret an additive homomorphism as a `ℚ`-linear map.
 -/
-
-@[expose] public section
 
 open Function
 

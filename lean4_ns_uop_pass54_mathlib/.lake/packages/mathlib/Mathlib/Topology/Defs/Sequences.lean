@@ -3,10 +3,7 @@ Copyright (c) 2018 Jan-David Salchow. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jan-David Salchow, Patrick Massot, Yury Kudryashov
 -/
-module
-
-public import Mathlib.Order.Filter.AtTopBot.Defs
-public import Mathlib.Topology.Defs.Filter
+import Mathlib.Topology.Defs.Filter
 
 /-!
 # Sequences in topological spaces
@@ -42,8 +39,6 @@ In this file we define sequential closure, continuity, compactness etc.
 sequentially closed, sequentially compact, sequential space
 -/
 
-@[expose] public section
-
 open Set Filter
 open scoped Topology
 
@@ -62,7 +57,7 @@ def IsSeqClosed (s : Set X) : Prop :=
   ∀ ⦃x : ℕ → X⦄ ⦃p : X⦄, (∀ n, x n ∈ s) → Tendsto x atTop (𝓝 p) → p ∈ s
 
 /-- A function between topological spaces is sequentially continuous if it commutes with limit of
-convergent sequences. -/
+ convergent sequences. -/
 def SeqContinuous (f : X → Y) : Prop :=
   ∀ ⦃x : ℕ → X⦄ ⦃p : X⦄, Tendsto x atTop (𝓝 p) → Tendsto (f ∘ x) atTop (𝓝 (f p))
 
@@ -80,6 +75,8 @@ class SeqCompactSpace : Prop where
   isSeqCompact_univ : IsSeqCompact (univ : Set X)
 
 export SeqCompactSpace (isSeqCompact_univ)
+
+@[deprecated (since := "2024-07-25")] alias seq_compact_univ := isSeqCompact_univ
 
 /-- A topological space is called a *Fréchet-Urysohn space*, if the sequential closure of any set
 is equal to its closure. Since one of the inclusions is trivial, we require only the non-trivial one

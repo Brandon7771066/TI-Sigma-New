@@ -3,13 +3,10 @@ Copyright (c) 2019 Sébastien Gouëzel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sébastien Gouëzel, Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.Polynomial.AlgebraMap
-public import Mathlib.Algebra.Polynomial.Derivative
-public import Mathlib.Analysis.Calculus.Deriv.Mul
-public import Mathlib.Analysis.Calculus.Deriv.Pow
-public import Mathlib.Analysis.Calculus.Deriv.Add
+import Mathlib.Algebra.Polynomial.AlgebraMap
+import Mathlib.Algebra.Polynomial.Derivative
+import Mathlib.Analysis.Calculus.Deriv.Pow
+import Mathlib.Analysis.Calculus.Deriv.Add
 
 /-!
 # Derivatives of polynomials
@@ -18,7 +15,7 @@ In this file we prove that derivatives of polynomials in the analysis sense agre
 derivatives in the algebraic sense.
 
 For a more detailed overview of one-dimensional derivatives in mathlib, see the module docstring of
-`Mathlib/Analysis/Calculus/Deriv/Basic.lean`.
+`analysis/calculus/deriv/basic`.
 
 ## TODO
 
@@ -30,16 +27,23 @@ For a more detailed overview of one-dimensional derivatives in mathlib, see the 
 derivative, polynomial
 -/
 
-public section
 
+universe u v w
 
-universe u
+open scoped Classical Topology Filter ENNReal Polynomial
 
-open scoped Polynomial
+open Filter Asymptotics Set
 
-open ContinuousLinearMap (smulRight)
+open ContinuousLinearMap (smulRight smulRight_one_eq_iff)
 
-variable {𝕜 : Type u} [NontriviallyNormedField 𝕜] {x : 𝕜} {s : Set 𝕜}
+variable {𝕜 : Type u} [NontriviallyNormedField 𝕜]
+variable {F : Type v} [NormedAddCommGroup F] [NormedSpace 𝕜 F]
+variable {E : Type w} [NormedAddCommGroup E] [NormedSpace 𝕜 E]
+variable {f f₀ f₁ g : 𝕜 → F}
+variable {f' f₀' f₁' g' : F}
+variable {x : 𝕜}
+variable {s t : Set 𝕜}
+variable {L L₁ L₂ : Filter 𝕜}
 
 namespace Polynomial
 
@@ -53,9 +57,8 @@ variable (p : 𝕜[X]) (q : R[X])
 protected theorem hasStrictDerivAt (x : 𝕜) :
     HasStrictDerivAt (fun x => p.eval x) (p.derivative.eval x) x := by
   induction p using Polynomial.induction_on' with
-  | add p q hp hq => simpa using! hp.add hq
-  | monomial n a => simpa [mul_assoc, derivative_monomial]
-                      using! (hasStrictDerivAt_pow n x).const_mul a
+  | h_add p q hp hq => simpa using hp.add hq
+  | h_monomial n a => simpa [mul_assoc] using (hasStrictDerivAt_pow n x).const_mul a
 
 protected theorem hasStrictDerivAt_aeval (x : 𝕜) :
     HasStrictDerivAt (fun x => aeval x q) (aeval x (derivative q)) x := by
@@ -91,7 +94,6 @@ protected theorem differentiableWithinAt_aeval :
     DifferentiableWithinAt 𝕜 (fun x => aeval x q) s x :=
   q.differentiableAt_aeval.differentiableWithinAt
 
-@[fun_prop]
 protected theorem differentiable : Differentiable 𝕜 fun x => p.eval x := fun _ => p.differentiableAt
 
 protected theorem differentiable_aeval : Differentiable 𝕜 fun x : 𝕜 => aeval x q := fun _ =>

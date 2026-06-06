@@ -3,12 +3,9 @@ Copyright (c) 2021 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser, Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Group.Prod
-public import Mathlib.Algebra.GroupWithZero.Hom
-public import Mathlib.Algebra.GroupWithZero.Units.Basic
-public import Mathlib.Algebra.GroupWithZero.WithZero
+import Mathlib.Algebra.Group.Prod
+import Mathlib.Algebra.GroupWithZero.Hom
+import Mathlib.Algebra.GroupWithZero.Units.Basic
 
 /-!
 # Products of monoids with zero, groups with zero
@@ -21,9 +18,7 @@ In this file we define `MonoidWithZero`, `GroupWithZero`, etc... instances for `
 * `divMonoidWithZeroHom`: Division bundled as a monoid with zero homomorphism.
 -/
 
-@[expose] public section
-
-assert_not_exists DenselyOrdered Ring
+assert_not_exists DenselyOrdered
 
 variable {M₀ N₀ : Type*}
 
@@ -35,32 +30,24 @@ instance instMulZeroClass [MulZeroClass M₀] [MulZeroClass N₀] : MulZeroClass
 
 instance instSemigroupWithZero [SemigroupWithZero M₀] [SemigroupWithZero N₀] :
     SemigroupWithZero (M₀ × N₀) where
-  zero_mul := by simp
-  mul_zero := by simp
+  zero_mul := by simp [Prod.mul_def]
+  mul_zero := by simp [Prod.mul_def]
 
 instance instMulZeroOneClass [MulZeroOneClass M₀] [MulZeroOneClass N₀] :
     MulZeroOneClass (M₀ × N₀) where
-  zero_mul := by simp
-  mul_zero := by simp
+  zero_mul := by simp [Prod.mul_def]
+  mul_zero := by simp [Prod.mul_def]
 
 instance instMonoidWithZero [MonoidWithZero M₀] [MonoidWithZero N₀] : MonoidWithZero (M₀ × N₀) where
-  zero_mul := by simp
-  mul_zero := by simp
+  zero_mul := by simp [Prod.mul_def]
+  mul_zero := by simp [Prod.mul_def]
 
 instance instCommMonoidWithZero [CommMonoidWithZero M₀] [CommMonoidWithZero N₀] :
     CommMonoidWithZero (M₀ × N₀) where
-  zero_mul := by simp
-  mul_zero := by simp
+  zero_mul := by simp [Prod.mul_def]
+  mul_zero := by simp [Prod.mul_def]
 
 end Prod
-
-variable (M₀) in
-@[simp]
-lemma WithZero.ofClass_withZeroUnitsEquiv [GroupWithZero M₀]
-    [DecidablePred fun x : M₀ ↦ x = 0] :
-    .ofClass WithZero.withZeroUnitsEquiv =
-      WithZero.lift' (Units.coeHom M₀) :=
-  rfl
 
 /-! ### Multiplication and division as homomorphisms -/
 

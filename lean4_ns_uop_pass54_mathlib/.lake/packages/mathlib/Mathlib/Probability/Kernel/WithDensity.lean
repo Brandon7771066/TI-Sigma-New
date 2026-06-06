@@ -3,10 +3,8 @@ Copyright (c) 2023 Rémy Degenne. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Rémy Degenne
 -/
-module
-
-public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
-public import Mathlib.Probability.Kernel.MeasurableLIntegral
+import Mathlib.Probability.Kernel.MeasurableIntegral
+import Mathlib.MeasureTheory.Integral.SetIntegral
 
 /-!
 # With Density
@@ -29,8 +27,6 @@ an s-finite kernel.
   `∫⁻ b, g b ∂(withDensity κ f a) = ∫⁻ b, f a b * g b ∂(κ a)`
 
 -/
-
-@[expose] public section
 
 
 open MeasureTheory ProbabilityTheory
@@ -74,7 +70,7 @@ nonrec lemma withDensity_congr_ae (κ : Kernel α β) [IsSFiniteKernel κ] {f g 
     (hfg : ∀ a, f a =ᵐ[κ a] g a) :
     withDensity κ f = withDensity κ g := by
   ext a
-  rw [Kernel.withDensity_apply _ hf, Kernel.withDensity_apply _ hg, withDensity_congr_ae (hfg a)]
+  rw [Kernel.withDensity_apply _ hf,Kernel.withDensity_apply _ hg, withDensity_congr_ae (hfg a)]
 
 nonrec lemma withDensity_absolutelyContinuous [IsSFiniteKernel κ]
     (f : α → β → ℝ≥0∞) (a : α) :
@@ -115,8 +111,8 @@ theorem integral_withDensity {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ
     (hg : Measurable (Function.uncurry g)) :
     ∫ b, f b ∂withDensity κ (fun a b => g a b) a = ∫ b, g a b • f b ∂κ a := by
   rw [Kernel.withDensity_apply, integral_withDensity_eq_integral_smul]
-  · fun_prop
-  · fun_prop
+  · exact Measurable.of_uncurry_left hg
+  · exact measurable_coe_nnreal_ennreal.comp hg
 
 theorem withDensity_add_left (κ η : Kernel α β) [IsSFiniteKernel κ] [IsSFiniteKernel η]
     (f : α → β → ℝ≥0∞) : withDensity (κ + η) f = withDensity κ f + withDensity η f := by
@@ -129,7 +125,8 @@ theorem withDensity_add_left (κ η : Kernel α β) [IsSFiniteKernel κ] [IsSFin
 
 theorem withDensity_kernel_sum [Countable ι] (κ : ι → Kernel α β) (hκ : ∀ i, IsSFiniteKernel (κ i))
     (f : α → β → ℝ≥0∞) :
-    withDensity (Kernel.sum κ) f = Kernel.sum fun i => withDensity (κ i) f := by
+    @withDensity _ _ _ _ (Kernel.sum κ) (isSFiniteKernel_sum hκ) f =
+      Kernel.sum fun i => withDensity (κ i) f := by
   by_cases hf : Measurable (Function.uncurry f)
   · ext1 a
     simp_rw [sum_apply, Kernel.withDensity_apply _ hf, sum_apply,
@@ -143,7 +140,7 @@ lemma withDensity_add_right [IsSFiniteKernel κ] {f g : α → β → ℝ≥0∞
   ext a
   rw [coe_add, Pi.add_apply, Kernel.withDensity_apply _ hf, Kernel.withDensity_apply _ hg,
     Kernel.withDensity_apply, Pi.add_apply, MeasureTheory.withDensity_add_right]
-  · fun_prop
+  · exact hg.comp measurable_prod_mk_left
   · exact hf.add hg
 
 lemma withDensity_sub_add_cancel [IsSFiniteKernel κ] {f g : α → β → ℝ≥0∞}
@@ -170,11 +167,11 @@ theorem withDensity_tsum [Countable ι] (κ : Kernel α β) [IsSFiniteKernel κ]
       rw [tsum_apply h_sum, tsum_apply (h_sum_a _), tsum_apply]
       exact Pi.summable.mpr fun p => ENNReal.summable
     rw [this]
-    fun_prop
+    exact Measurable.ennreal_tsum' hf
   have : ∫⁻ b in s, (∑' n, f n) a b ∂κ a = ∫⁻ b in s, ∑' n, (fun b => f n a b) b ∂κ a := by
     congr with b
     rw [tsum_apply h_sum, tsum_apply (h_sum_a a)]
-  rw [this, lintegral_tsum fun n => by fun_prop]
+  rw [this, lintegral_tsum fun n => (Measurable.of_uncurry_left (hf n)).aemeasurable]
   congr with n
   rw [Kernel.withDensity_apply' _ (hf n) a s]
 
@@ -183,13 +180,14 @@ is finite. -/
 theorem isFiniteKernel_withDensity_of_bounded (κ : Kernel α β) [IsFiniteKernel κ] {B : ℝ≥0∞}
     (hB_top : B ≠ ∞) (hf_B : ∀ a b, f a b ≤ B) : IsFiniteKernel (withDensity κ f) := by
   by_cases hf : Measurable (Function.uncurry f)
-  · exact ⟨⟨B * κ.bound, ENNReal.mul_lt_top hB_top.lt_top κ.bound_lt_top, fun a => by
+  · exact ⟨⟨B * IsFiniteKernel.bound κ, ENNReal.mul_lt_top hB_top (IsFiniteKernel.bound_ne_top κ),
+      fun a => by
         rw [Kernel.withDensity_apply' κ hf a Set.univ]
         calc
           ∫⁻ b in Set.univ, f a b ∂κ a ≤ ∫⁻ _ in Set.univ, B ∂κ a := lintegral_mono (hf_B a)
           _ = B * κ a Set.univ := by
             simp only [Measure.restrict_univ, MeasureTheory.lintegral_const]
-          _ ≤ B * κ.bound := by grw [measure_le_bound]⟩⟩
+          _ ≤ B * IsFiniteKernel.bound κ := mul_le_mul_left' (measure_le_bound κ a Set.univ) _⟩⟩
   · rw [withDensity_of_not_measurable _ hf]
     infer_instance
 
@@ -208,8 +206,10 @@ theorem isSFiniteKernel_withDensity_of_isFiniteKernel (κ : Kernel α β) [IsFin
     intro a b n hn
     have : (f a b).toReal ≤ n := Nat.le_of_ceil_le hn
     rw [← ENNReal.le_ofReal_iff_toReal_le (hf_ne_top a b) _] at this
-    · simpa
-    · exact n.cast_nonneg
+    · refine this.trans (le_of_eq ?_)
+      rw [ENNReal.ofReal_natCast]
+    · norm_cast
+      exact zero_le _
   have h_zero : ∀ a b n, ⌈(f a b).toReal⌉₊ ≤ n → fs n a b = 0 := by
     intro a b n hn
     suffices min (f a b) (n + 1) = f a b ∧ min (f a b) n = f a b by
@@ -217,28 +217,33 @@ theorem isSFiniteKernel_withDensity_of_isFiniteKernel (κ : Kernel α β) [IsFin
     exact ⟨min_eq_left ((h_le a b n hn).trans (le_add_of_nonneg_right zero_le_one)),
       min_eq_left (h_le a b n hn)⟩
   have hf_eq_tsum : f = ∑' n, fs n := by
-    have h_sum_a : ∀ a, Summable fun n => fs n a :=
-      fun _ => Pi.summable.mpr fun _ => ENNReal.summable
+    have h_sum_a : ∀ a, Summable fun n => fs n a := by
+      refine fun a => Pi.summable.mpr fun b => ?_
+      suffices ∀ n, n ∉ Finset.range ⌈(f a b).toReal⌉₊ → fs n a b = 0 from
+        summable_of_ne_finset_zero this
+      intro n hn_not_mem
+      rw [Finset.mem_range, not_lt] at hn_not_mem
+      exact h_zero a b n hn_not_mem
     ext a b : 2
     rw [tsum_apply (Pi.summable.mpr h_sum_a), tsum_apply (h_sum_a a),
       ENNReal.tsum_eq_liminf_sum_nat]
-    have h_finsetSum : ∀ n, ∑ i ∈ Finset.range n, fs i a b = min (f a b) n := fun n ↦ by
-      induction n with
-      | zero => simp
-      | succ n hn =>
-        rw [Finset.sum_range_succ, hn]
-        simp [fs]
-    simp_rw [h_finsetSum]
+    have h_finset_sum : ∀ n, ∑ i ∈ Finset.range n, fs i a b = min (f a b) n := by
+      intro n
+      induction' n with n hn
+      · simp
+      rw [Finset.sum_range_succ, hn]
+      simp [fs]
+    simp_rw [h_finset_sum]
     refine (Filter.Tendsto.liminf_eq ?_).symm
     refine Filter.Tendsto.congr' ?_ tendsto_const_nhds
     rw [Filter.EventuallyEq, Filter.eventually_atTop]
     exact ⟨⌈(f a b).toReal⌉₊, fun n hn => (min_eq_left (h_le a b n hn)).symm⟩
   rw [hf_eq_tsum, withDensity_tsum _ fun n : ℕ => _]
-  swap; · fun_prop
-  refine isSFiniteKernel_sum (hκs := fun n => ?_)
-  suffices IsFiniteKernel (withDensity κ (fs n)) by infer_instance
+  swap; · exact fun _ => (hf.min measurable_const).sub (hf.min measurable_const)
+  refine isSFiniteKernel_sum fun n => ?_
+  suffices IsFiniteKernel (withDensity κ (fs n)) by haveI := this; infer_instance
   refine isFiniteKernel_withDensity_of_bounded _ (ENNReal.coe_ne_top : ↑n + 1 ≠ ∞) fun a b => ?_
-  -- After https://github.com/leanprover/lean4/pull/2734, we need to do beta reduction before `norm_cast`
+  -- After leanprover/lean4#2734, we need to do beta reduction before `norm_cast`
   beta_reduce
   norm_cast
   calc
@@ -255,8 +260,8 @@ nonrec theorem IsSFiniteKernel.withDensity (κ : Kernel α β) [IsSFiniteKernel 
     congr
     exact (kernel_sum_seq κ).symm
   rw [h_eq_sum]
-  exact isSFiniteKernel_sum (hκs := fun n =>
-    isSFiniteKernel_withDensity_of_isFiniteKernel (seq κ n) hf_ne_top)
+  exact isSFiniteKernel_sum fun n =>
+    isSFiniteKernel_withDensity_of_isFiniteKernel (seq κ n) hf_ne_top
 
 /-- For an s-finite kernel `κ` and a function `f : α → β → ℝ≥0`, `withDensity κ f` is s-finite. -/
 instance (κ : Kernel α β) [IsSFiniteKernel κ] (f : α → β → ℝ≥0) :
@@ -269,13 +274,14 @@ nonrec lemma withDensity_mul [IsSFiniteKernel κ] {f : α → β → ℝ≥0} {g
       = withDensity (withDensity κ fun a x ↦ f a x) g := by
   ext a : 1
   rw [Kernel.withDensity_apply]
-  swap; · fun_prop
+  swap; · exact (measurable_coe_nnreal_ennreal.comp hf).mul hg
   change (Measure.withDensity (κ a) ((fun x ↦ (f a x : ℝ≥0∞)) * (fun x ↦ (g a x : ℝ≥0∞)))) =
       (withDensity (withDensity κ fun a x ↦ f a x) g) a
   rw [withDensity_mul]
   · rw [Kernel.withDensity_apply _ hg, Kernel.withDensity_apply]
     exact measurable_coe_nnreal_ennreal.comp hf
-  · fun_prop
-  · fun_prop
+  · rw [measurable_coe_nnreal_ennreal_iff]
+    exact hf.comp measurable_prod_mk_left
+  · exact hg.comp measurable_prod_mk_left
 
 end ProbabilityTheory.Kernel

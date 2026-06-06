@@ -3,9 +3,8 @@ Copyright (c) 2024 Moritz Doll. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Moritz Doll
 -/
-module
 
-public import Mathlib.Topology.ContinuousMap.ZeroAtInfty
+import Mathlib.Topology.ContinuousFunction.ZeroAtInfty
 
 /-!
 # ZeroAtInftyContinuousMapClass in normed additive groups
@@ -15,8 +14,6 @@ In this file we give a characterization of the predicate `zero_at_infty` from
 for every `ε > 0` there exists a `r : ℝ` such that for all `x : E` with `r < ‖x‖` it holds that
 `‖f x‖ < ε`.
 -/
-
-public section
 
 open Topology Filter
 
@@ -32,9 +29,9 @@ theorem ZeroAtInftyContinuousMapClass.norm_le (f : 𝓕) (ε : ℝ) (hε : 0 < �
   rcases Metric.closedBall_compl_subset_of_mem_cocompact h 0 with ⟨r, hr⟩
   use r
   intro x hr'
-  suffices x ∈ (fun x ↦ ‖f x‖) ⁻¹' Metric.ball 0 ε by simp_all
+  suffices x ∈ (fun x ↦ ‖f x‖) ⁻¹' Metric.ball 0 ε by aesop
   apply hr
-  simp_all
+  aesop
 
 variable [ProperSpace E]
 

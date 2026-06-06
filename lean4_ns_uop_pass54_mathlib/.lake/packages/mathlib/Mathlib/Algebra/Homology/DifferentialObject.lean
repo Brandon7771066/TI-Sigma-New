@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2021 Kim Morrison. All rights reserved.
+Copyright (c) 2021 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.Algebra.Homology.HomologicalComplex
-public import Mathlib.CategoryTheory.DifferentialObject
+import Mathlib.Algebra.Homology.HomologicalComplex
+import Mathlib.CategoryTheory.DifferentialObject
 
 /-!
 # Homological complexes are differential graded objects.
@@ -18,21 +16,21 @@ This equivalence is probably not particularly useful in practice;
 it's here to check that definitions match up as expected.
 -/
 
-@[expose] public section
-
 open CategoryTheory CategoryTheory.Limits
+
+open scoped Classical
 
 noncomputable section
 
 /-!
 We first prove some results about differential graded objects.
 
-TODO: We should move these to their own file.
+Porting note: after the port, move these to their own file.
 -/
 namespace CategoryTheory.DifferentialObject
 
 variable {β : Type*} [AddCommGroup β] {b : β}
-variable {V : Type*} [Category* V] [HasZeroMorphisms V]
+variable {V : Type*} [Category V] [HasZeroMorphisms V]
 variable (X : DifferentialObject ℤ (GradedObjectWithShift b V))
 
 /-- Since `eqToHom` only preserves the fact that `X.X i = X.X j` but not `i = j`, this definition
@@ -45,19 +43,14 @@ abbrev objEqToHom {i j : β} (h : i = j) :
 theorem objEqToHom_refl (i : β) : X.objEqToHom (refl i) = 𝟙 _ :=
   rfl
 
--- Removing `@[simp]`, because it is in the opposite direction of `eqToHom_naturality`.
--- Having both causes an infinite loop in the simpNF linter.
-set_option backward.isDefEq.respectTransparency false in -- Needed in dgoToHomologicalComplex
-@[reassoc]
+@[reassoc (attr := simp)]
 theorem objEqToHom_d {x y : β} (h : x = y) :
-    X.objEqToHom h ≫ X.d y = X.d x ≫ X.objEqToHom (by cases h; rfl) := by cases h; simp
+    X.objEqToHom h ≫ X.d y = X.d x ≫ X.objEqToHom (by cases h; rfl) := by cases h; dsimp; simp
 
 @[reassoc (attr := simp)]
 theorem d_squared_apply {x : β} : X.d x ≫ X.d _ = 0 := congr_fun X.d_squared _
 
--- Removing `@[simp]`, because it is in the opposite direction of `eqToHom_naturality`.
--- Having both causes an infinite loop in the simpNF linter.
-@[reassoc]
+@[reassoc (attr := simp)]
 theorem eqToHom_f' {X Y : DifferentialObject ℤ (GradedObjectWithShift b V)} (f : X ⟶ Y) {x y : β}
     (h : x = y) : X.objEqToHom h ≫ f.f y = f.f x ≫ Y.objEqToHom h := by cases h; simp
 
@@ -68,15 +61,16 @@ open CategoryTheory.DifferentialObject
 namespace HomologicalComplex
 
 variable {β : Type*} [AddCommGroup β] (b : β)
-variable (V : Type*) [Category* V] [HasZeroMorphisms V]
+variable (V : Type*) [Category V] [HasZeroMorphisms V]
 
-@[reassoc]
+-- Porting note: this should be moved to an earlier file.
+-- Porting note: simpNF linter silenced, both `d_eqToHom` and its `_assoc` version
+-- do not simplify under themselves
+@[reassoc (attr := simp, nolint simpNF)]
 theorem d_eqToHom (X : HomologicalComplex V (ComplexShape.up' b)) {x y z : β} (h : y = z) :
     X.d x y ≫ eqToHom (congr_arg X.X h) = X.d x z := by cases h; simp
 
-set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
-open Classical in
+set_option maxHeartbeats 400000 in
 /-- The functor from differential graded objects to homological complexes.
 -/
 @[simps]
@@ -87,17 +81,19 @@ def dgoToHomologicalComplex :
     { X := fun i => X.obj i
       d := fun i j =>
         if h : i + b = j then X.d i ≫ X.objEqToHom (show i + (1 : ℤ) • b = j by simp [h]) else 0
-      shape := fun i j w => by dsimp at w; convert! dif_neg w
+      shape := fun i j w => by dsimp at w; convert dif_neg w
       d_comp_d' := fun i j k hij hjk => by
-        dsimp at hij hjk; subst hij hjk
-        simp [objEqToHom_d_assoc] }
+        dsimp at hij hjk; substs hij hjk
+        simp }
   map {X Y} f :=
     { f := f.f
       comm' := fun i j h => by
         dsimp at h ⊢
         subst h
+        simp only [dite_true, Category.assoc, eqToHom_f']
+        -- Porting note: this `rw` used to be part of the `simp`.
         have : f.f i ≫ Y.d i = X.d i ≫ f.f _ := (congr_fun f.comm i).symm
-        simp only [dite_true, Category.assoc, eqToHom_f', reassoc_of% this] }
+        rw [reassoc_of% this] }
 
 /-- The functor from homological complexes to differential graded objects.
 -/
@@ -110,7 +106,6 @@ def homologicalComplexToDGO :
       d := fun i => X.d i _ }
   map {X Y} f := { f := f.f }
 
-set_option backward.defeqAttrib.useBackward true in
 /-- The unit isomorphism for `dgoEquivHomologicalComplex`.
 -/
 @[simps!]
@@ -121,8 +116,6 @@ def dgoEquivHomologicalComplexUnitIso :
     { hom := { f := fun i => 𝟙 (X.obj i) }
       inv := { f := fun i => 𝟙 (X.obj i) } })
 
-set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
 /-- The counit isomorphism for `dgoEquivHomologicalComplex`.
 -/
 @[simps!]
@@ -133,7 +126,6 @@ def dgoEquivHomologicalComplexCounitIso :
     { hom := { f := fun i => 𝟙 (X.X i) }
       inv := { f := fun i => 𝟙 (X.X i) } })
 
-set_option backward.defeqAttrib.useBackward true in
 /-- The category of differential graded objects in `V` is equivalent
 to the category of homological complexes in `V`.
 -/

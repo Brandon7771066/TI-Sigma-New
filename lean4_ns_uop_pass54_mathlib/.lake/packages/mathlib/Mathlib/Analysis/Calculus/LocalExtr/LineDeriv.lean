@@ -3,10 +3,8 @@ Copyright (c) 2024 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.Analysis.Calculus.LocalExtr.Basic
-public import Mathlib.Analysis.Calculus.LineDeriv.Basic
+import Mathlib.Analysis.Calculus.LocalExtr.Basic
+import Mathlib.Analysis.Calculus.LineDeriv.Basic
 
 /-!
 # Local extremum and line derivatives
@@ -15,10 +13,8 @@ If `f` has a local extremum at a point, then the derivative at this point is zer
 In this file we prove several versions of this fact for line derivatives.
 -/
 
-public section
-
 open Function Set Filter
-open scoped Topology
+open scoped Classical Topology
 
 section Module
 
@@ -29,9 +25,8 @@ theorem IsExtrFilter.hasLineDerivAt_eq_zero {l : Filter E} (h : IsExtrFilter f l
   IsLocalExtr.hasDerivAt_eq_zero (IsExtrFilter.comp_tendsto (by simpa using h) h') hd
 
 theorem IsExtrFilter.lineDeriv_eq_zero {l : Filter E} (h : IsExtrFilter f l a)
-    (h' : Tendsto (fun t : ℝ ↦ a + t • b) (𝓝 0) l) : lineDeriv ℝ f a b = 0 := by
-  classical
-  exact if hd : LineDifferentiableAt ℝ f a b then
+    (h' : Tendsto (fun t : ℝ ↦ a + t • b) (𝓝 0) l) : lineDeriv ℝ f a b = 0 :=
+  if hd : LineDifferentiableAt ℝ f a b then
     h.hasLineDerivAt_eq_zero hd.hasLineDerivAt h'
   else
     lineDeriv_zero_of_not_lineDifferentiableAt hd
@@ -65,9 +60,8 @@ theorem IsExtrOn.hasLineDerivWithinAt_eq_zero (h : IsExtrOn f s a)
   h.hasLineDerivAt_eq_zero (hd.hasLineDerivAt' h') h'
 
 theorem IsExtrOn.lineDerivWithin_eq_zero (h : IsExtrOn f s a)
-    (h' : ∀ᶠ t : ℝ in 𝓝 0, a + t • b ∈ s) : lineDerivWithin ℝ f s a b = 0 := by
-  classical
-  exact if hd : LineDifferentiableWithinAt ℝ f s a b then
+    (h' : ∀ᶠ t : ℝ in 𝓝 0, a + t • b ∈ s) : lineDerivWithin ℝ f s a b = 0 :=
+  if hd : LineDifferentiableWithinAt ℝ f s a b then
     h.hasLineDerivWithinAt_eq_zero hd.hasLineDerivWithinAt h'
   else
     lineDerivWithin_zero_of_not_lineDifferentiableWithinAt hd

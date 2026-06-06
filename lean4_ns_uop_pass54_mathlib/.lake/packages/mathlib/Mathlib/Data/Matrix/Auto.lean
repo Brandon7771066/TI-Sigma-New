@@ -3,14 +3,8 @@ Copyright (c) 2022 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Data.Finset.Attr
-public import Mathlib.Tactic.Bound.Init
-public import Mathlib.Tactic.Common
-public import Mathlib.Tactic.Finiteness.Attr
-public import Mathlib.Tactic.SetLike
-public import Mathlib.Util.CompileInductive
+import Mathlib.Algebra.Expr
+import Mathlib.Data.Matrix.Reflection
 
 /-! # Automatically generated lemmas for working with concrete matrices
 
@@ -25,9 +19,6 @@ example {α} [AddCommMonoid α] [Mul α] (a₁₁ a₁₂ a₂₁ a₂₂ b₁�
   rw [of_mul_of_fin]
 ```
 
-TODO: These magic lemmas have been skipped for now, though the plumbing lemmas in
-`Mathlib/Data/Matrix/Reflection.lean` are still available.
-They should probably be implemented as simprocs.
+Porting note: these magic lemmas have been skipped for now, though the plumbing lemmas in
+`Mathlib.Data.Matrix.Reflection` are still available
 -/
-
-public section

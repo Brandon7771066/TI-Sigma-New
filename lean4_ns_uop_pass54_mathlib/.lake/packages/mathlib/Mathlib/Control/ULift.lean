@@ -1,17 +1,13 @@
 /-
-Copyright (c) 2018 Kim Morrison. All rights reserved.
+Copyright (c) 2018 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison, Jannis Limperg
+Authors: Scott Morrison, Jannis Limperg
 -/
-module
 
-public import Mathlib.Init
 /-!
 # Monadic instances for `ULift` and `PLift`
 
 In this file we define `Monad` and `IsLawfulMonad` instances on `PLift` and `ULift`. -/
-
-@[expose] public section
 
 universe u v u' v'
 
@@ -81,7 +77,7 @@ end PLift
 
 namespace ULift
 
-variable {α : Type u} {β : Type v}
+variable {α : Type u} {β : Type v} {f : α → β}
 
 /-- Functorial action. -/
 protected def map (f : α → β) (a : ULift.{u'} α) : ULift.{v'} β := ULift.up.{v'} (f a.down)

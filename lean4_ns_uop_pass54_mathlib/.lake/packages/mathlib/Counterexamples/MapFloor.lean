@@ -3,9 +3,7 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-import Mathlib.Algebra.Order.Round
 import Mathlib.Algebra.Order.Group.PiLex
-import Mathlib.Algebra.Order.Hom.Ring
 import Mathlib.Algebra.Polynomial.Reverse
 
 /-!
@@ -42,9 +40,11 @@ noncomputable section
 
 open Function Int Polynomial
 
-/-- The integers with infinitesimals adjoined. Higher powers of `ε` are smaller than lower
-powers. -/
-abbrev IntWithEpsilon := ℤ[X]
+open scoped Polynomial
+
+/-- The integers with infinitesimals adjoined. -/
+def IntWithEpsilon :=
+  ℤ[X] deriving Nontrivial
 
 local notation "ℤ[ε]" => IntWithEpsilon
 
@@ -52,12 +52,21 @@ local notation "ε" => (X : ℤ[ε])
 
 namespace IntWithEpsilon
 
+instance nontrivial : Nontrivial IntWithEpsilon := inferInstance
+
+-- Porting note: `inhabited` and `commRing` were `deriving` instances in mathlib3
+instance commRing : CommRing IntWithEpsilon := Polynomial.commRing
+
+instance inhabited : Inhabited IntWithEpsilon := ⟨69⟩
+
 instance linearOrder : LinearOrder ℤ[ε] :=
   LinearOrder.lift' (toLex ∘ coeff) coeff_injective
 
-instance isOrderedAddMonoid : IsOrderedAddMonoid ℤ[ε] :=
-  Function.Injective.isOrderedAddMonoid
-    (toLex ∘ coeff) (fun _ _ => funext fun _ => coeff_add _ _ _) .rfl
+instance orderedAddCommGroup : OrderedAddCommGroup ℤ[ε] := by
+  refine (toLex.injective.comp coeff_injective).orderedAddCommGroup _ ?_ ?_ ?_ ?_ ?_ ?_ <;>
+  (first | rfl | intros) <;> funext <;>
+  (simp only [comp_apply, Pi.toLex_apply, coeff_add, coeff_neg, coeff_sub,
+    ← nsmul_eq_mul, ← zsmul_eq_mul]; rfl)
 
 theorem pos_iff {p : ℤ[ε]} : 0 < p ↔ 0 < p.trailingCoeff := by
   rw [trailingCoeff]
@@ -65,15 +74,15 @@ theorem pos_iff {p : ℤ[ε]} : 0 < p ↔ 0 < p.trailingCoeff := by
     ⟨?_, fun h =>
       ⟨p.natTrailingDegree, fun m hm => (coeff_eq_zero_of_lt_natTrailingDegree hm).symm, h⟩⟩
   rintro ⟨n, hn⟩
-  convert! hn.2
+  convert hn.2
   exact (natTrailingDegree_le_of_ne_zero hn.2.ne').antisymm
     (le_natTrailingDegree (by rintro rfl; cases hn.2.false) fun m hm => (hn.1 _ hm).symm)
 
-instance : ZeroLEOneClass ℤ[ε] :=
-  { zero_le_one := Or.inr ⟨0, by simp⟩ }
-
-instance : IsStrictOrderedRing ℤ[X] :=
-  .of_mul_pos fun p q => by simp_rw [pos_iff]; rw [trailingCoeff_mul]; exact mul_pos
+instance : LinearOrderedCommRing ℤ[ε] :=
+  { IntWithEpsilon.linearOrder, IntWithEpsilon.commRing, IntWithEpsilon.orderedAddCommGroup,
+    IntWithEpsilon.nontrivial with
+    zero_le_one := Or.inr ⟨0, by simp⟩
+    mul_pos := fun p q => by simp_rw [pos_iff]; rw [trailingCoeff_mul]; exact mul_pos}
 
 instance : FloorRing ℤ[ε] :=
   FloorRing.ofFloor _ (fun p => if (p.coeff 0 : ℤ[ε]) ≤ p then p.coeff 0 else p.coeff 0 - 1)
@@ -83,14 +92,15 @@ instance : FloorRing ℤ[ε] :=
     · split_ifs with h
       · rintro ⟨_ | n, hn⟩
         · apply (sub_one_lt _).trans _
-          simp_all
+          simp at hn
+          rwa [intCast_coeff_zero] at hn
         · dsimp at hn
-          simp only [hn.1 _ n.zero_lt_succ]
+          simp [hn.1 _ n.zero_lt_succ]
           rw [intCast_coeff_zero]; simp
       · exact fun h' => cast_lt.1 ((not_lt.1 h).trans_lt h')
     · split_ifs with h
       · exact fun h' => h.trans_le (cast_le.2 <| sub_one_lt_iff.1 h')
-      · exact fun h' => ⟨0, by simp_all⟩
+      · exact fun h' => ⟨0, by simp; rwa [intCast_coeff_zero]⟩
 
 /-- The ordered ring homomorphisms from `ℤ[ε]` to `ℤ` that "forgets" the `ε`s. -/
 def forgetEpsilons : ℤ[ε] →+*o ℤ where
@@ -101,7 +111,7 @@ def forgetEpsilons : ℤ[ε] →+*o ℤ where
   map_mul' := mul_coeff_zero
   monotone' := monotone_iff_forall_lt.2 (by
     rintro p q ⟨n, hn⟩
-    rcases n with - | n
+    cases' n with n
     · exact hn.2.le
     · exact (hn.1 _ n.zero_lt_succ).le)
 
@@ -113,7 +123,7 @@ theorem forgetEpsilons_apply (p : ℤ[ε]) : forgetEpsilons p = coeff p 0 :=
 itself. -/
 theorem forgetEpsilons_floor_lt (n : ℤ) :
     forgetEpsilons ⌊(n - ↑ε : ℤ[ε])⌋ < ⌊forgetEpsilons (n - ↑ε)⌋ := by
-  suffices ⌊(n - ↑ε : ℤ[ε])⌋ = n - 1 by simp [map_sub, this]
+  suffices ⌊(n - ↑ε : ℤ[ε])⌋ = n - 1 by simp [this]
   have : (0 : ℤ[ε]) < ε := ⟨1, by simp⟩
   exact (if_neg <| by rw [coeff_sub, intCast_coeff_zero]; simp [this]).trans (by
     rw [coeff_sub, intCast_coeff_zero]; simp)

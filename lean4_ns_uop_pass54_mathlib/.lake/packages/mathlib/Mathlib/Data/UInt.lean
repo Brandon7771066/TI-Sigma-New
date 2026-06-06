@@ -3,13 +3,7 @@ Copyright (c) 2021 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro
 -/
-module
-
-public import Mathlib.Init
-public import Mathlib.Algebra.Ring.InjSurj
-public import Mathlib.Data.ZMod.Defs
-public import Mathlib.Data.BitVec
-
+import Mathlib.Data.ZMod.Defs
 
 /-!
 # Adds Mathlib specific instances to the `UIntX` data types.
@@ -26,99 +20,65 @@ version also interferes more with software-verification use-cases, which is reas
 cautious here.
 -/
 
-@[expose] public section
+example : (0 : UInt8) = ⟨0⟩ := rfl
 
-set_option linter.style.emptyLine false in
--- these theorems are fragile, so do them first
 set_option hygiene false in
 run_cmd
   for typeName' in [`UInt8, `UInt16, `UInt32, `UInt64, `USize] do
   let typeName := Lean.mkIdent typeName'
   Lean.Elab.Command.elabCommand (← `(
     namespace $typeName
+      instance neZero : NeZero size := ⟨by decide⟩
 
-      open $typeName (toBitVec_mul) in
-      protected theorem toBitVec_nsmul (n : ℕ) (a : $typeName) :
-          (n • a).toBitVec = n • a.toBitVec := by
-        rw [Lean.Grind.Semiring.nsmul_eq_natCast_mul, toBitVec_mul,
-          nsmul_eq_mul, BitVec.natCast_eq_ofNat]
-        rfl
+      instance : Neg $typeName where
+        neg a := mk (-a.val)
 
-      attribute [local instance] natCast intCast
+      instance : Pow $typeName ℕ where
+        pow a n := mk (a.val ^ n)
 
-      @[simp, int_toBitVec]
-      protected theorem toBitVec_natCast (n : ℕ) :
-          (n : $typeName).toBitVec = n := rfl
+      instance : SMul ℕ $typeName where
+        smul n a := mk (n • a.val)
 
-      open $typeName (toBitVec_neg) in
-      @[simp, int_toBitVec]
-      protected theorem toBitVec_intCast (z : ℤ) :
-          (z : $typeName).toBitVec = z := by
-        obtain ⟨z, rfl | rfl⟩ := z.eq_nat_or_neg
-        · erw [intCast_ofNat]; rfl
-        · rw [intCast_neg, toBitVec_neg]
-          erw [intCast_ofNat]
-          simp
+      instance : SMul ℤ $typeName where
+        smul z a := mk (z • a.val)
 
-      open $typeName (toBitVec_mul toBitVec_intCast) in
-      @[simp, int_toBitVec]
-      protected theorem toBitVec_zsmul (z : ℤ) (a : $typeName) :
-          (z • a).toBitVec = z • a.toBitVec := by
-        change (z * a).toBitVec = BitVec.ofInt _ z * a.toBitVec
-        rw [toBitVec_mul]
-        congr 1
-        rw [toBitVec_intCast]
-        rfl
+      lemma neg_def (a : $typeName) : -a = ⟨-a.val⟩ := rfl
 
-    end $typeName
-  ))
+      lemma pow_def (a : $typeName) (n : ℕ) : a ^ n = ⟨a.val ^ n⟩ := rfl
 
-set_option linter.style.emptyLine false in
--- Note that these construct no new data, so cannot form diamonds with core.
-set_option hygiene false in
-run_cmd
-  for typeName' in [`UInt8, `UInt16, `UInt32, `UInt64, `USize] do
-  let typeName := Lean.mkIdent typeName'
-  Lean.Elab.Command.elabCommand (← `(
-    namespace $typeName
+      lemma nsmul_def (n : ℕ) (a : $typeName) : n • a = ⟨n • a.val⟩ := rfl
 
-      open $typeName (eq_of_toFin_eq) in
-      lemma toFin_injective : Function.Injective toFin := @eq_of_toFin_eq
+      lemma zsmul_def (z : ℤ) (a : $typeName) : z • a = ⟨z • a.val⟩ := rfl
 
-      open $typeName (eq_of_toBitVec_eq) in
-      lemma toBitVec_injective : Function.Injective toBitVec := @eq_of_toBitVec_eq
+      open $typeName (eq_of_val_eq) in
+      lemma val_injective : Function.Injective val := @eq_of_val_eq
 
-      open $typeName (toBitVec_one toBitVec_mul toBitVec_pow) in
       instance instCommMonoid : CommMonoid $typeName :=
-        Function.Injective.commMonoid toBitVec toBitVec_injective
-          toBitVec_one (fun _ _ => toBitVec_mul) (fun _ _ => toBitVec_pow _ _)
+        Function.Injective.commMonoid val val_injective
+          rfl (fun _ _ => rfl) (fun _ _ => rfl)
 
-      open $typeName (
-        toBitVec_zero toBitVec_add toBitVec_mul toBitVec_neg toBitVec_sub toBitVec_nsmul
-        toBitVec_zsmul) in
       instance instNonUnitalCommRing : NonUnitalCommRing $typeName :=
-        Function.Injective.nonUnitalCommRing toBitVec toBitVec_injective
-          toBitVec_zero (fun _ _ => toBitVec_add) (fun _ _ => toBitVec_mul) (fun _ => toBitVec_neg)
-          (fun _ _ => toBitVec_sub)
-          (fun _ _ => toBitVec_nsmul _ _) (fun _ _ => toBitVec_zsmul _ _)
+        Function.Injective.nonUnitalCommRing val val_injective
+          rfl (fun _ _ => rfl) (fun _ _ => rfl) (fun _ => rfl) (fun _ _ => rfl)
+          (fun _ _ => rfl) (fun _ _ => rfl)
 
-      attribute [local instance] intCast natCast
+      local instance instNatCast : NatCast $typeName where
+        natCast n := mk n
 
-      open $typeName (
-        toBitVec_zero toBitVec_one toBitVec_add toBitVec_mul toBitVec_neg
-        toBitVec_sub toBitVec_nsmul toBitVec_zsmul toBitVec_pow
-        toBitVec_natCast toBitVec_intCast) in
-      -- `noncomputable` should not be necessary but triggers some codegen assertion
-      noncomputable local instance instCommRing : CommRing $typeName :=
-        Function.Injective.commRing toBitVec toBitVec_injective
-          toBitVec_zero toBitVec_one (fun _ _ => toBitVec_add) (fun _ _ => toBitVec_mul)
-          (fun _ => toBitVec_neg) (fun _ _ => toBitVec_sub)
-          (fun _ _ => toBitVec_nsmul _ _) (fun _ _ => toBitVec_zsmul _ _)
-          (fun _ _ => toBitVec_pow _ _)
-          toBitVec_natCast toBitVec_intCast
+      local instance instIntCast : IntCast $typeName where
+        intCast z := mk z
+
+      lemma natCast_def (n : ℕ) : (n : $typeName) = ⟨n⟩ := rfl
+
+      lemma intCast_def (z : ℤ) : (z : $typeName) = ⟨z⟩ := rfl
+
+      local instance instCommRing : CommRing $typeName :=
+        Function.Injective.commRing val val_injective
+          rfl rfl (fun _ _ => rfl) (fun _ _ => rfl) (fun _ => rfl) (fun _ _ => rfl)
+          (fun _ _ => rfl) (fun _ _ => rfl) (fun _ _ => rfl) (fun _ => rfl) (fun _ => rfl)
 
       namespace CommRing
-      attribute [scoped instance] instCommRing natCast intCast
+      attribute [scoped instance] instCommRing instNatCast instIntCast
       end CommRing
 
     end $typeName
@@ -127,10 +87,9 @@ run_cmd
   let docString :=
     s!"To use this instance, use `open scoped {typeName'}.CommRing`.\n\n" ++
     "See the module docstring for an explanation"
-  Lean.addDocStringCore (typeName'.mkStr "instCommRing") docString
-  -- TODO: add these docstrings in core?
-  -- Lean.addDocStringCore (typeName'.mkStr "instNatCast") docString
-  -- Lean.addDocStringCore (typeName'.mkStr "instIntCast") docString
+  Lean.addDocString (typeName'.mkStr "instCommRing") docString
+  Lean.addDocString (typeName'.mkStr "instNatCast") docString
+  Lean.addDocString (typeName'.mkStr "instIntCast") docString
 
 namespace UInt8
 
@@ -154,7 +113,13 @@ def isASCIIDigit (c : UInt8) : Bool :=
 def isASCIIAlphanum (c : UInt8) : Bool :=
   c.isASCIIAlpha || c.isASCIIDigit
 
+@[deprecated (since := "2024-06-06")] alias isUpper := isASCIIUpper
+@[deprecated (since := "2024-06-06")] alias isLower := isASCIILower
+@[deprecated (since := "2024-06-06")] alias isAlpha := isASCIIAlpha
+@[deprecated (since := "2024-06-06")] alias isDigit := isASCIIDigit
+@[deprecated (since := "2024-06-06")] alias isAlphanum := isASCIIAlphanum
+
 /-- The numbers from 0 to 256 are all valid UTF-8 characters, so we can embed one in the other. -/
-def toChar (n : UInt8) : Char := ⟨n.toUInt32, .inl (Nat.lt_trans n.toBitVec.isLt (by decide))⟩
+def toChar (n : UInt8) : Char := ⟨n.toUInt32, .inl (n.1.2.trans (by decide))⟩
 
 end UInt8

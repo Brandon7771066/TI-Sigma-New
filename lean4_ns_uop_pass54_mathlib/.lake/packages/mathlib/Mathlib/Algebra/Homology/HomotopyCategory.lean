@@ -1,15 +1,13 @@
 /-
-Copyright (c) 2021 Kim Morrison. All rights reserved.
+Copyright (c) 2021 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.Algebra.Homology.Homotopy
-public import Mathlib.Algebra.Homology.Linear
-public import Mathlib.CategoryTheory.MorphismProperty.IsInvertedBy
-public import Mathlib.CategoryTheory.Quotient.Linear
-public import Mathlib.CategoryTheory.Quotient.Preadditive
+import Mathlib.Algebra.Homology.Homotopy
+import Mathlib.Algebra.Homology.Linear
+import Mathlib.CategoryTheory.MorphismProperty.IsInvertedBy
+import Mathlib.CategoryTheory.Quotient.Linear
+import Mathlib.CategoryTheory.Quotient.Preadditive
 
 /-!
 # The homotopy category
@@ -18,9 +16,9 @@ public import Mathlib.CategoryTheory.Quotient.Preadditive
 with chain maps identified when they are homotopic.
 -/
 
-@[expose] public section
-
 universe v u
+
+open scoped Classical
 
 noncomputable section
 
@@ -38,26 +36,24 @@ instance homotopy_congruence : Congruence (homotopic V c) where
     { refl := fun C => ⟨Homotopy.refl C⟩
       symm := fun ⟨w⟩ => ⟨w.symm⟩
       trans := fun ⟨w₁⟩ ⟨w₂⟩ => ⟨w₁.trans w₂⟩ }
-  comp_left := fun _ _ _ ⟨i⟩ => ⟨i.compLeft _⟩
-  comp_right := fun _ ⟨i⟩ => ⟨i.compRight _⟩
+  compLeft := fun _ _ _ ⟨i⟩ => ⟨i.compLeft _⟩
+  compRight := fun _ ⟨i⟩ => ⟨i.compRight _⟩
 
 /-- `HomotopyCategory V c` is the category of chain complexes of shape `c` in `V`,
 with chain maps identified when they are homotopic. -/
 def HomotopyCategory :=
   CategoryTheory.Quotient (homotopic V c)
 
-instance : Category (HomotopyCategory V c) :=
-  inferInstanceAs <| Category (CategoryTheory.Quotient (homotopic V c))
+instance : Category (HomotopyCategory V c) := by
+  dsimp only [HomotopyCategory]
+  infer_instance
 
+-- TODO the homotopy_category is preadditive
 namespace HomotopyCategory
 
-instance : Preadditive (CategoryTheory.Quotient (homotopic V c)) :=
-  Quotient.preadditive _ (by
-    rintro _ _ _ _ _ _ ⟨h⟩ ⟨h'⟩
-    exact ⟨Homotopy.add h h'⟩)
-
-instance : Preadditive (HomotopyCategory V c) :=
-  inferInstanceAs <| Preadditive (CategoryTheory.Quotient (homotopic V c))
+instance : Preadditive (HomotopyCategory V c) := Quotient.preadditive _ (by
+  rintro _ _ _ _ _ _ ⟨h⟩ ⟨h'⟩
+  exact ⟨Homotopy.add h h'⟩)
 
 /-- The quotient functor from complexes to the homotopy category. -/
 def quotient : HomologicalComplex V c ⥤ HomotopyCategory V c :=
@@ -69,13 +65,16 @@ instance : (quotient V c).EssSurj := Quotient.essSurj_functor _
 
 instance : (quotient V c).Additive where
 
+instance : Preadditive (CategoryTheory.Quotient (homotopic V c)) :=
+  (inferInstance : Preadditive (HomotopyCategory V c))
+
 instance : Functor.Additive (Quotient.functor (homotopic V c)) where
 
 instance [Linear R V] : Linear R (HomotopyCategory V c) :=
   Quotient.linear R (homotopic V c) (fun _ _ _ _ _ h => ⟨h.some.smul _⟩)
 
-instance [Linear R V] : Functor.Linear R (quotient V c) :=
-  Quotient.linear_functor _ (homotopic V c) _
+instance [Linear R V] : Functor.Linear R (HomotopyCategory.quotient V c) :=
+  Quotient.linear_functor _ _ _
 
 open ZeroObject
 
@@ -86,19 +85,16 @@ instance [HasZeroObject V] : HasZeroObject (HomotopyCategory V c) :=
   ⟨(quotient V c).obj 0, by
     rw [IsZero.iff_id_eq_zero, ← (quotient V c).map_id, id_zero, Functor.map_zero]⟩
 
-instance {D : Type*} [Category* D] : ((Functor.whiskeringLeft _ _ D).obj (quotient V c)).Full :=
+instance {D : Type*} [Category D] : ((whiskeringLeft _ _ D).obj (quotient V c)).Full :=
   Quotient.full_whiskeringLeft_functor _ _
 
-instance {D : Type*} [Category* D] : ((Functor.whiskeringLeft _ _ D).obj (quotient V c)).Faithful :=
+instance {D : Type*} [Category D] : ((whiskeringLeft _ _ D).obj (quotient V c)).Faithful :=
   Quotient.faithful_whiskeringLeft_functor _ _
 
 variable {V c}
 
-lemma quotient_obj_surjective (X : HomotopyCategory V c) :
-    ∃ (K : HomologicalComplex V c), (quotient _ _).obj K = X :=
-  ⟨_, rfl⟩
-
--- Not `@[simp]` because it hinders the automatic application of the more useful `quotient_map_out`
+-- Porting note: removed @[simp] attribute because it hinders the automatic application of the
+-- more useful `quotient_map_out`
 theorem quotient_obj_as (C : HomologicalComplex V c) : ((quotient V c).obj C).as = C :=
   rfl
 
@@ -106,6 +102,7 @@ theorem quotient_obj_as (C : HomologicalComplex V c) : ((quotient V c).obj C).as
 theorem quotient_map_out {C D : HomotopyCategory V c} (f : C ⟶ D) : (quotient V c).map f.out = f :=
   Quot.out_eq _
 
+-- Porting note: added to ease the port
 theorem quot_mk_eq_quotient_map {C D : HomologicalComplex V c} (f : C ⟶ D) :
     Quot.mk _ f = (quotient V c).map f := rfl
 
@@ -118,12 +115,6 @@ def homotopyOfEq {C D : HomologicalComplex V c} (f g : C ⟶ D)
     (w : (quotient V c).map f = (quotient V c).map g) : Homotopy f g :=
   ((Quotient.functor_map_eq_iff _ _ _).mp w).some
 
-lemma quotient_map_eq_zero_iff {C D : HomologicalComplex V c} (f : C ⟶ D) :
-    (quotient V c).map f = 0 ↔ Nonempty (Homotopy f 0) :=
-  ⟨fun h ↦ ⟨homotopyOfEq _ _ (by simpa using h)⟩,
-    fun ⟨h⟩ ↦ by simpa using eq_of_homotopy _ _ h⟩
-
-set_option backward.isDefEq.respectTransparency false in
 /-- An arbitrarily chosen representation of the image of a chain map in the homotopy category
 is homotopic to the original chain map.
 -/
@@ -132,7 +123,7 @@ def homotopyOutMap {C D : HomologicalComplex V c} (f : C ⟶ D) :
   apply homotopyOfEq
   simp
 
-set_option backward.isDefEq.respectTransparency false in
+@[simp 1100]
 theorem quotient_map_out_comp_out {C D E : HomotopyCategory V c} (f : C ⟶ D) (g : D ⟶ E) :
     (quotient V c).map (Quot.out f ≫ Quot.out g) = f ≫ g := by simp
 
@@ -149,7 +140,6 @@ def isoOfHomotopyEquiv {C D : HomologicalComplex V c} (f : HomotopyEquiv C D) :
     rw [← (quotient V c).map_comp, ← (quotient V c).map_id]
     exact eq_of_homotopy _ _ f.homotopyInvHomId
 
-set_option backward.isDefEq.respectTransparency false in
 /-- If two complexes become isomorphic in the homotopy category,
   then they were homotopy equivalent. -/
 def homotopyEquivOfIso {C D : HomologicalComplex V c}
@@ -170,20 +160,6 @@ lemma quotient_inverts_homotopyEquivalences :
   change IsIso (isoOfHomotopyEquiv e).hom
   infer_instance
 
-variable (V c) in
-lemma inverseImage_quotient_isomorphisms :
-    (MorphismProperty.isomorphisms _).inverseImage (HomotopyCategory.quotient V c) =
-      homotopyEquivalences V c := by
-  ext K L f
-  simp only [MorphismProperty.inverseImage_iff, MorphismProperty.isomorphisms.iff]
-  refine ⟨fun _ ↦ ?_, fun hf ↦ quotient_inverts_homotopyEquivalences _ _ _ hf⟩
-  obtain ⟨g, hg⟩ := (quotient V c).map_surjective (inv ((quotient _ _).map f))
-  exact ⟨{
-    hom := f
-    inv := g
-    homotopyHomInvId := homotopyOfEq _ _ (by simp [hg])
-    homotopyInvHomId := homotopyOfEq _ _ (by simp [hg]) }, rfl⟩
-
 lemma isZero_quotient_obj_iff (C : HomologicalComplex V c) :
     IsZero ((quotient _ _).obj C) ↔ Nonempty (Homotopy (𝟙 C) 0) := by
   rw [IsZero.iff_id_eq_zero]
@@ -199,7 +175,6 @@ section
 
 variable [CategoryWithHomology V]
 
-open Classical in
 /-- The `i`-th homology, as a functor from the homotopy category. -/
 noncomputable def homologyFunctor (i : ι) : HomotopyCategory V c ⥤ V :=
   CategoryTheory.Quotient.lift _ (HomologicalComplex.homologyFunctor V c i) (by
@@ -226,8 +201,9 @@ end HomotopyCategory
 
 namespace CategoryTheory
 
-variable {V} {W : Type*} [Category* W] [Preadditive W]
+variable {V} {W : Type*} [Category W] [Preadditive W]
 
+-- Porting note: given a simpler definition of this functor
 /-- An additive functor induces a functor between homotopy categories. -/
 @[simps! obj]
 def Functor.mapHomotopyCategory (F : V ⥤ W) [F.Additive] (c : ComplexShape ι) :
@@ -251,7 +227,7 @@ def Functor.mapHomotopyCategoryFactors (F : V ⥤ W) [F.Additive] (c : ComplexSh
       F.mapHomologicalComplex c ⋙ HomotopyCategory.quotient W c :=
   CategoryTheory.Quotient.lift.isLift _ _ _
 
-set_option backward.isDefEq.respectTransparency false in
+-- TODO `F.mapHomotopyCategory c` is additive (and linear when `F` is linear).
 -- TODO develop lifting of natural transformations for general quotient categories so that
 -- `NatTrans.mapHomotopyCategory` become a particular case of it
 /-- A natural transformation induces a natural transformation between
@@ -267,22 +243,12 @@ def NatTrans.mapHomotopyCategory {F G : V ⥤ W} [F.Additive] [G.Additive] (α :
 
 @[simp]
 theorem NatTrans.mapHomotopyCategory_id (c : ComplexShape ι) (F : V ⥤ W) [F.Additive] :
-    NatTrans.mapHomotopyCategory (𝟙 F) c = 𝟙 (F.mapHomotopyCategory c) := by cat_disch
+    NatTrans.mapHomotopyCategory (𝟙 F) c = 𝟙 (F.mapHomotopyCategory c) := by aesop_cat
 
 @[simp]
 theorem NatTrans.mapHomotopyCategory_comp (c : ComplexShape ι) {F G H : V ⥤ W} [F.Additive]
     [G.Additive] [H.Additive] (α : F ⟶ G) (β : G ⟶ H) :
     NatTrans.mapHomotopyCategory (α ≫ β) c =
-      NatTrans.mapHomotopyCategory α c ≫ NatTrans.mapHomotopyCategory β c := by cat_disch
-
-instance (F : V ⥤ W) [F.Additive] (c : ComplexShape ι) :
-    (F.mapHomotopyCategory c).Additive :=
-  have := Functor.additive_of_iso (F.mapHomotopyCategoryFactors c).symm
-  (HomotopyCategory.quotient V c).additive_of_full_essSurj_comp (F.mapHomotopyCategory c)
-
-instance (F : V ⥤ W) [F.Additive] (c : ComplexShape ι) [Linear R V] [Linear R W] [F.Linear R] :
-    Functor.Linear R (F.mapHomotopyCategory c) :=
-  have := Functor.linear_of_iso R (F.mapHomotopyCategoryFactors c).symm
-  (HomotopyCategory.quotient V c).linear_of_full_essSurj_comp (F.mapHomotopyCategory c)
+      NatTrans.mapHomotopyCategory α c ≫ NatTrans.mapHomotopyCategory β c := by aesop_cat
 
 end CategoryTheory

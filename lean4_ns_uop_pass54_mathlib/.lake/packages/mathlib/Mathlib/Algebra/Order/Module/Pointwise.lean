@@ -3,20 +3,15 @@ Copyright (c) 2023 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Group.Pointwise.Set.Scalar
-public import Mathlib.Algebra.Order.Module.Field
-public import Mathlib.Order.Bounds.OrderIso
-public import Mathlib.Order.GaloisConnection.Basic
+import Mathlib.Algebra.Order.Module.Defs
+import Mathlib.Data.Set.Pointwise.SMul
+import Mathlib.Order.Bounds.OrderIso
 
 /-!
 # Bounds on scalar multiplication of set
 
 This file proves order properties of pointwise operations of sets.
 -/
-
-public section
 
 open scoped Pointwise
 
@@ -62,9 +57,7 @@ end
 
 section OrderedRing
 
-variable [Ring α] [PartialOrder α] [IsOrderedRing α]
-  [AddCommGroup β] [PartialOrder β] [IsOrderedAddMonoid β]
-  [Module α β] [PosSMulMono α β] {s : Set β} {a : α}
+variable [OrderedRing α] [OrderedAddCommGroup β] [Module α β] [PosSMulMono α β] {s : Set β} {a : α}
 
 lemma smul_lowerBounds_subset_upperBounds_smul (ha : a ≤ 0) :
     a • lowerBounds s ⊆ upperBounds (a • s) :=
@@ -83,9 +76,7 @@ lemma BddAbove.smul_of_nonpos (ha : a ≤ 0) (hs : BddAbove s) : BddBelow (a •
 end OrderedRing
 
 section LinearOrderedField
-variable [Field α] [LinearOrder α] [IsStrictOrderedRing α]
-  [AddCommGroup β] [PartialOrder β] [IsOrderedAddMonoid β]
-  [Module α β] [PosSMulMono α β] {s : Set β}
+variable [LinearOrderedField α] [OrderedAddCommGroup β] [Module α β] [PosSMulMono α β] {s : Set β}
   {a : α}
 
 @[simp] lemma lowerBounds_smul_of_neg (ha : a < 0) : lowerBounds (a • s) = a • upperBounds s :=

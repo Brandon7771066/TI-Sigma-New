@@ -3,9 +3,7 @@ Copyright (c) 2022 Markus Himmel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Markus Himmel
 -/
-module
-
-public import Mathlib.CategoryTheory.EpiMono
+import Mathlib.CategoryTheory.EpiMono
 
 /-!
 # Balanced categories
@@ -17,8 +15,6 @@ Balanced categories arise frequently. For example, categories in which every mon
 as the category of types.
 
 -/
-
-public section
 
 
 universe v u
@@ -47,7 +43,7 @@ section
 
 attribute [local instance] isIso_of_mono_of_epi
 
-instance balanced_opposite [Balanced C] : Balanced Cᵒᵖ :=
+theorem balanced_opposite [Balanced C] : Balanced Cᵒᵖ :=
   { isIso_of_mono_of_epi := fun f fmono fepi => by
       rw [← Quiver.Hom.op_unop f]
       exact isIso_of_op _ }

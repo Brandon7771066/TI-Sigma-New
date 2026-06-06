@@ -3,10 +3,8 @@ Copyright (c) 2022 Thomas Browning. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Thomas Browning
 -/
-module
-
-public import Mathlib.Algebra.Polynomial.UnitTrinomial
-public import Mathlib.Analysis.Complex.Polynomial.Basic
+import Mathlib.Algebra.Polynomial.UnitTrinomial
+import Mathlib.Analysis.Complex.Polynomial.Basic
 
 /-!
 # Irreducibility of unit trinomials
@@ -16,8 +14,6 @@ public import Mathlib.Analysis.Complex.Polynomial.Basic
 Develop more theory (e.g., it suffices to check that `aeval z p ≠ 0` for `z = 0` and `z` a root of
 unity).
 -/
-
-public section
 
 namespace Polynomial.IsUnitTrinomial
 variable {p : ℤ[X]}
@@ -36,12 +32,12 @@ theorem irreducible_of_coprime' (hp : IsUnitTrinomial p)
   intro hq''
   rw [natDegree_pos_iff_degree_pos] at hq''
   rw [← degree_map_eq_of_injective (algebraMap ℤ ℂ).injective_int] at hq''
-  obtain ⟨z, hz⟩ := Complex.exists_root hq''
-  rw [IsRoot, eval_map_algebraMap] at hz
+  cases' Complex.exists_root hq'' with z hz
+  rw [IsRoot, eval_map, ← aeval_def] at hz
   refine h z ⟨?_, ?_⟩
-  · obtain ⟨g', hg'⟩ := hq
+  · cases' hq with g' hg'
     rw [hg', aeval_mul, hz, zero_mul]
-  · obtain ⟨g', hg'⟩ := hq'
+  · cases' hq' with g' hg'
     rw [hg', aeval_mul, hz, zero_mul]
 
 end Polynomial.IsUnitTrinomial

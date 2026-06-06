@@ -3,9 +3,7 @@ Copyright (c) 2021 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.LinearAlgebra.QuadraticForm.IsometryEquiv
+import Mathlib.LinearAlgebra.QuadraticForm.IsometryEquiv
 
 /-! # Quadratic form on product and pi types
 
@@ -31,8 +29,6 @@ forms specifically.
 
 -/
 
-@[expose] public section
-
 
 universe u v w
 
@@ -40,6 +36,8 @@ variable {ι : Type*} {R : Type*} {M₁ M₂ N₁ N₂ P : Type*} {Mᵢ Nᵢ : �
 
 
 namespace QuadraticMap
+
+open QuadraticMap
 
 section Prod
 
@@ -64,7 +62,7 @@ def IsometryEquiv.prod
     (e₁ : Q₁.IsometryEquiv Q₁') (e₂ : Q₂.IsometryEquiv Q₂') :
     (Q₁.prod Q₂).IsometryEquiv (Q₁'.prod Q₂') where
   map_app' x := congr_arg₂ (· + ·) (e₁.map_app x.1) (e₂.map_app x.2)
-  toLinearEquiv := LinearEquiv.prodCongr e₁.toLinearEquiv e₂.toLinearEquiv
+  toLinearEquiv := LinearEquiv.prod e₁.toLinearEquiv e₂.toLinearEquiv
 
 /-- `LinearMap.inl` as an isometry. -/
 @[simps!]
@@ -146,7 +144,7 @@ theorem anisotropic_of_prod
     refine (h 0 x ?_).2
     rw [hx, add_zero, map_zero]
 
-theorem nonneg_prod_iff [Preorder P] [AddLeftMono P]
+theorem nonneg_prod_iff [Preorder P] [CovariantClass P P (· + ·) (· ≤ ·)]
     {Q₁ : QuadraticMap R M₁ P} {Q₂ : QuadraticMap R M₂ P} :
     (∀ x, 0 ≤ (Q₁.prod Q₂) x) ↔ (∀ x, 0 ≤ Q₁ x) ∧ ∀ x, 0 ≤ Q₂ x := by
   simp_rw [Prod.forall, prod_apply]
@@ -158,7 +156,7 @@ theorem nonneg_prod_iff [Preorder P] [AddLeftMono P]
   · rintro ⟨h₁, h₂⟩ x₁ x₂
     exact add_nonneg (h₁ x₁) (h₂ x₂)
 
-theorem posDef_prod_iff [PartialOrder P] [AddLeftMono P]
+theorem posDef_prod_iff [PartialOrder P] [CovariantClass P P (· + ·) (· ≤ ·)]
     {Q₁ : QuadraticMap R M₁ P} {Q₂ : QuadraticMap R M₂ P} :
     (Q₁.prod Q₂).PosDef ↔ Q₁.PosDef ∧ Q₂.PosDef := by
   simp_rw [posDef_iff_nonneg, nonneg_prod_iff]
@@ -169,10 +167,10 @@ theorem posDef_prod_iff [PartialOrder P] [AddLeftMono P]
   · rintro ⟨⟨hle₁, ha₁⟩, ⟨hle₂, ha₂⟩⟩
     refine ⟨⟨hle₁, hle₂⟩, ?_⟩
     rintro ⟨x₁, x₂⟩ (hx : Q₁ x₁ + Q₂ x₂ = 0)
-    rw [add_eq_zero_iff_of_nonneg (hle₁ x₁) (hle₂ x₂), ha₁.eq_zero_iff, ha₂.eq_zero_iff] at hx
+    rw [add_eq_zero_iff' (hle₁ x₁) (hle₂ x₂), ha₁.eq_zero_iff, ha₂.eq_zero_iff] at hx
     rwa [Prod.mk_eq_zero]
 
-theorem PosDef.prod [PartialOrder P] [AddLeftMono P]
+theorem PosDef.prod [PartialOrder P] [CovariantClass P P (· + ·) (· ≤ ·)]
     {Q₁ : QuadraticMap R M₁ P} {Q₂ : QuadraticMap R M₂ P} (h₁ : Q₁.PosDef) (h₂ : Q₂.PosDef) :
     (Q₁.prod Q₂).PosDef :=
   posDef_prod_iff.mpr ⟨h₁, h₂⟩
@@ -209,7 +207,6 @@ variable [CommRing R]
 variable [AddCommGroup M₁] [AddCommGroup M₂] [AddCommGroup P]
 variable [Module R M₁] [Module R M₂] [Module R P]
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp] theorem polar_prod (Q₁ : QuadraticMap R M₁ P) (Q₂ : QuadraticMap R M₂ P) (x y : M₁ × M₂) :
     polar (Q₁.prod Q₂) x y = polar Q₁ x.1 y.1 + polar Q₂ x.2 y.2 := by
   dsimp [polar]
@@ -263,7 +260,7 @@ def IsometryEquiv.pi [Fintype ι]
     {Q : ∀ i, QuadraticMap R (Mᵢ i) P} {Q' : ∀ i, QuadraticMap R (Nᵢ i) P}
     (e : ∀ i, (Q i).IsometryEquiv (Q' i)) : (pi Q).IsometryEquiv (pi Q') where
   map_app' x := by
-    simp only [pi_apply, LinearEquiv.piCongrRight,
+    simp only [pi_apply, LinearEquiv.piCongrRight, LinearEquiv.toFun_eq_coe,
       IsometryEquiv.coe_toLinearEquiv, IsometryEquiv.map_app]
   toLinearEquiv := LinearEquiv.piCongrRight fun i => (e i : Mᵢ i ≃ₗ[R] Nᵢ i)
 
@@ -271,7 +268,7 @@ def IsometryEquiv.pi [Fintype ι]
 @[simps!]
 def Isometry.single [Fintype ι] [DecidableEq ι] (Q : ∀ i, QuadraticMap R (Mᵢ i) P) (i : ι) :
     Q i →qᵢ pi Q where
-  toLinearMap := LinearMap.single _ _ i
+  toLinearMap := LinearMap.single i
   map_app' := pi_apply_single _ _
 
 /-- `LinearMap.proj` as an isometry, when all but one quadratic form is zero. -/
@@ -285,7 +282,7 @@ def Isometry.proj [Fintype ι] [DecidableEq ι] (i : ι) (Q : QuadraticMap R (M�
     rw [Pi.single_eq_of_ne hij, zero_apply]
 
 /-- Note that `QuadraticMap.Isometry.id` would not be well-typed as the RHS. -/
-@[simp]
+@[simp, nolint simpNF]  -- ignore the bogus "Left-hand side does not simplify" lint error
 theorem Isometry.proj_comp_single_of_same [Fintype ι] [DecidableEq ι]
     (i : ι) (Q : QuadraticMap R (Mᵢ i) P) :
     (proj i Q).comp (single _ i) = .ofEq (Pi.single_eq_same _ _) :=
@@ -306,7 +303,7 @@ theorem Equivalent.pi [Fintype ι] {Q : ∀ i, QuadraticMap R (Mᵢ i) P}
 /-- If a family is anisotropic then its components must be. The converse is not true. -/
 theorem anisotropic_of_pi [Fintype ι]
     {Q : ∀ i, QuadraticMap R (Mᵢ i) P} (h : (pi Q).Anisotropic) : ∀ i, (Q i).Anisotropic := by
-  simp_rw [Anisotropic, pi_apply, funext_iff, Pi.zero_apply] at h
+  simp_rw [Anisotropic, pi_apply, Function.funext_iff, Pi.zero_apply] at h
   intro i x hx
   classical
   have := h (Pi.single i x) ?_ i
@@ -318,22 +315,20 @@ theorem anisotropic_of_pi [Fintype ι]
   · subst hji; rw [Pi.single_eq_same, hx]
   · rw [Pi.single_eq_of_ne hji, map_zero]
 
-theorem nonneg_pi_iff {P} [Fintype ι] [AddCommMonoid P] [PartialOrder P] [IsOrderedAddMonoid P]
-    [Module R P]
+theorem nonneg_pi_iff {P} [Fintype ι] [OrderedAddCommMonoid P] [Module R P]
     {Q : ∀ i, QuadraticMap R (Mᵢ i) P} : (∀ x, 0 ≤ pi Q x) ↔ ∀ i x, 0 ≤ Q i x := by
   simp_rw [pi, sum_apply, comp_apply, LinearMap.proj_apply]
   constructor
   -- TODO: does this generalize to a useful lemma independent of `QuadraticMap`?
   · intro h i x
     classical
-    convert! h (Pi.single i x) using 1
+    convert h (Pi.single i x) using 1
     rw [Finset.sum_eq_single_of_mem i (Finset.mem_univ _) fun j _ hji => ?_, Pi.single_eq_same]
     rw [Pi.single_eq_of_ne hji, map_zero]
   · rintro h x
     exact Finset.sum_nonneg fun i _ => h i (x i)
 
-theorem posDef_pi_iff {P} [Fintype ι] [AddCommMonoid P] [PartialOrder P] [IsOrderedAddMonoid P]
-    [Module R P]
+theorem posDef_pi_iff {P} [Fintype ι] [OrderedAddCommMonoid P] [Module R P]
     {Q : ∀ i, QuadraticMap R (Mᵢ i) P} : (pi Q).PosDef ↔ ∀ i, (Q i).PosDef := by
   simp_rw [posDef_iff_nonneg, nonneg_pi_iff]
   constructor
@@ -351,7 +346,9 @@ end Semiring
 namespace Ring
 
 variable [CommRing R]
-variable [∀ i, AddCommGroup (Mᵢ i)] [AddCommGroup P] [∀ i, Module R (Mᵢ i)] [Module R P] [Fintype ι]
+variable [∀ i, AddCommGroup (Mᵢ i)] [∀ i, AddCommGroup (Nᵢ i)] [AddCommGroup P]
+variable [∀ i, Module R (Mᵢ i)] [∀ i, Module R (Nᵢ i)] [Module R P]
+variable [Fintype ι]
 
 @[simp] theorem polar_pi (Q : ∀ i, QuadraticMap R (Mᵢ i) P) (x y : ∀ i, Mᵢ i) :
     polar (pi Q) x y = ∑ i, polar (Q i) (x i) (y i) := by

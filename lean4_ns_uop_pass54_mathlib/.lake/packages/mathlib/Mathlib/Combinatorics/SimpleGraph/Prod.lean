@@ -3,11 +3,7 @@ Copyright (c) 2022 George Peter Banyard, Yaël Dillies, Kyle Miller. All rights 
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: George Peter Banyard, Yaël Dillies, Kyle Miller
 -/
-module
-
-public import Mathlib.Combinatorics.SimpleGraph.Metric
-public import Mathlib.Combinatorics.SimpleGraph.Paths
-public import Mathlib.Combinatorics.SimpleGraph.Sum
+import Mathlib.Combinatorics.SimpleGraph.Path
 
 /-!
 # Graph products
@@ -30,19 +26,20 @@ two edges is a square.
 Define all other graph products!
 -/
 
-@[expose] public section
-
-variable {α β γ V V₁ V₂ W W₁ W₂ : Type*}
+variable {α β γ : Type*}
 
 namespace SimpleGraph
 
+-- Porting note: pruned variables to keep things out of local contexts, which
+-- can impact how generalization works, or what aesop does.
 variable {G : SimpleGraph α} {H : SimpleGraph β}
 
 /-- Box product of simple graphs. It relates `(a₁, b)` and `(a₂, b)` if `G` relates `a₁` and `a₂`,
 and `(a, b₁)` and `(a, b₂)` if `H` relates `b₁` and `b₂`. -/
 def boxProd (G : SimpleGraph α) (H : SimpleGraph β) : SimpleGraph (α × β) where
   Adj x y := G.Adj x.1 y.1 ∧ x.2 = y.2 ∨ H.Adj x.2 y.2 ∧ x.1 = y.1
-  symm x y := by simp [and_comm, eq_comm, adj_comm]
+  symm x y := by simp [and_comm, or_comm, eq_comm, adj_comm]
+  loopless x := by simp
 
 /-- Box product of simple graphs. It relates `(a₁, b)` and `(a₂, b)` if `G` relates `a₁` and `a₂`,
 and `(a, b₁)` and `(a, b₂)` if `H` relates `b₁` and `b₂`. -/
@@ -53,14 +50,16 @@ theorem boxProd_adj {x y : α × β} :
     (G □ H).Adj x y ↔ G.Adj x.1 y.1 ∧ x.2 = y.2 ∨ H.Adj x.2 y.2 ∧ x.1 = y.1 :=
   Iff.rfl
 
+--@[simp] Porting note (#10618): `simp` can prove
 theorem boxProd_adj_left {a₁ : α} {b : β} {a₂ : α} :
     (G □ H).Adj (a₁, b) (a₂, b) ↔ G.Adj a₁ a₂ := by
   simp only [boxProd_adj, and_true, SimpleGraph.irrefl, false_and, or_false]
 
+--@[simp] Porting note (#10618): `simp` can prove
 theorem boxProd_adj_right {a : α} {b₁ b₂ : β} : (G □ H).Adj (a, b₁) (a, b₂) ↔ H.Adj b₁ b₂ := by
   simp only [boxProd_adj, SimpleGraph.irrefl, false_and, and_true, false_or]
 
-theorem neighborSet_boxProd (x : α × β) :
+theorem boxProd_neighborSet (x : α × β) :
     (G □ H).neighborSet x = G.neighborSet x.1 ×ˢ {x.2} ∪ {x.1} ×ˢ H.neighborSet x.2 := by
   ext ⟨a', b'⟩
   simp only [mem_neighborSet, Set.mem_union, boxProd_adj, Set.mem_prod, Set.mem_singleton_iff]
@@ -92,24 +91,6 @@ def boxProdRight (a : α) : H ↪g G □ H where
   toFun := Prod.mk a
   inj' _ _ := congr_arg Prod.snd
   map_rel_iff' {_ _} := boxProd_adj_right
-
-namespace Iso
-
-/-- The box product distributes over the disjoint sum of graphs. -/
-@[simps!, simps toEquiv]
-def boxProdSumDistrib (G : SimpleGraph V) (H₁ : SimpleGraph W₁) (H₂ : SimpleGraph W₂) :
-    G □ (H₁ ⊕g H₂) ≃g G □ H₁ ⊕g G □ H₂ where
-  toEquiv := .prodSumDistrib ..
-  map_rel_iff' := by simp
-
-/-- The box product distributes over the disjoint sum of graphs. -/
-@[simps!, simps toEquiv]
-def sumBoxProdDistrib (G₁ : SimpleGraph V₁) (G₂ : SimpleGraph V₂) (H : SimpleGraph W) :
-    (G₁ ⊕g G₂) □ H ≃g G₁ □ H ⊕g G₂ □ H where
-  toEquiv := .sumProdDistrib ..
-  map_rel_iff' := by simp
-
-end Iso
 
 namespace Walk
 
@@ -145,7 +126,6 @@ def ofBoxProdRight [DecidableEq α] [DecidableRel H.Adj] {x y : α × β} :
       (fun hH => w.ofBoxProdRight.cons hH.1)
       (fun hG => hG.2 ▸ w.ofBoxProdRight)
 
-set_option backward.isDefEq.respectTransparency false in
 @[simp]
 theorem ofBoxProdLeft_boxProdLeft [DecidableEq β] [DecidableRel G.Adj] {a₁ a₂ : α} {b : β} :
     ∀ (w : G.Walk a₁ a₂), (w.boxProdLeft H b).ofBoxProdLeft = w
@@ -155,32 +135,15 @@ theorem ofBoxProdLeft_boxProdLeft [DecidableEq β] [DecidableRel G.Adj] {a₁ a�
     · simp [ofBoxProdLeft_boxProdLeft]
     · exact ⟨h, rfl⟩
 
-set_option backward.isDefEq.respectTransparency false in
 @[simp]
-theorem ofBoxProdRight_boxProdRight [DecidableEq α] [DecidableRel G.Adj] {a b₁ b₂ : α} :
+theorem ofBoxProdLeft_boxProdRight [DecidableEq α] [DecidableRel G.Adj] {a b₁ b₂ : α} :
     ∀ (w : G.Walk b₁ b₂), (w.boxProdRight G a).ofBoxProdRight = w
   | nil => rfl
   | cons' x y z h w => by
     rw [Walk.boxProdRight, map_cons, ofBoxProdRight, Or.by_cases, dif_pos, ←
       Walk.boxProdRight]
-    · simp [ofBoxProdRight_boxProdRight]
+    · simp [ofBoxProdLeft_boxProdRight]
     · exact ⟨h, rfl⟩
-
-lemma length_boxProd {a₁ a₂ : α} {b₁ b₂ : β} [DecidableEq α] [DecidableEq β]
-    [DecidableRel G.Adj] [DecidableRel H.Adj] (w : (G □ H).Walk (a₁, b₁) (a₂, b₂)) :
-    w.length = w.ofBoxProdLeft.length + w.ofBoxProdRight.length := by
-  match w with
-  | .nil => simp [ofBoxProdLeft, ofBoxProdRight]
-  | .cons x w' => next c =>
-    unfold ofBoxProdLeft ofBoxProdRight
-    rw [length_cons, length_boxProd w']
-    have disj : (G.Adj a₁ c.1 ∧ b₁ = c.2) ∨ (H.Adj b₁ c.2 ∧ a₁ = c.1) := by simp_all
-    rcases disj with h₁ | h₂
-    · simp only [h₁, and_self, ↓reduceDIte, length_cons, Or.by_cases]
-      rw [add_comm, add_comm w'.ofBoxProdLeft.length 1, add_assoc]
-      congr <;> simp [h₁.2.symm]
-    · simp only [h₂, add_assoc, Or.by_cases]
-      congr <;> simp [h₂.2.symm]
 
 end Walk
 
@@ -223,7 +186,7 @@ protected theorem Connected.ofBoxProdRight (h : (G □ H).Connected) : H.Connect
   exact ⟨h.preconnected.ofBoxProdRight⟩
 
 @[simp]
-theorem connected_boxProd : (G □ H).Connected ↔ G.Connected ∧ H.Connected :=
+theorem boxProd_connected : (G □ H).Connected ↔ G.Connected ∧ H.Connected :=
   ⟨fun h => ⟨h.ofBoxProdLeft, h.ofBoxProdRight⟩, fun h => h.1.boxProd h.2⟩
 
 instance boxProdFintypeNeighborSet (x : α × β)
@@ -237,7 +200,7 @@ instance boxProdFintypeNeighborSet (x : α × β)
         mem_neighborSet, Equiv.refl_apply, boxProd_adj]
       simp only [eq_comm, and_comm])
 
-theorem neighborFinset_boxProd (x : α × β)
+theorem boxProd_neighborFinset (x : α × β)
     [Fintype (G.neighborSet x.1)] [Fintype (H.neighborSet x.2)] [Fintype ((G □ H).neighborSet x)] :
     (G □ H).neighborFinset x =
       (G.neighborFinset x.1 ×ˢ {x.2}).disjUnion ({x.1} ×ˢ H.neighborFinset x.2)
@@ -247,44 +210,10 @@ theorem neighborFinset_boxProd (x : α × β)
   convert_to (G □ H).neighborFinset x = _ using 2
   exact Eq.trans (Finset.map_map _ _ _) Finset.attach_map_val
 
-theorem degree_boxProd (x : α × β)
+theorem boxProd_degree (x : α × β)
     [Fintype (G.neighborSet x.1)] [Fintype (H.neighborSet x.2)] [Fintype ((G □ H).neighborSet x)] :
     (G □ H).degree x = G.degree x.1 + H.degree x.2 := by
-  rw [degree, degree, degree, neighborFinset_boxProd, Finset.card_disjUnion]
+  rw [degree, degree, degree, boxProd_neighborFinset, Finset.card_disjUnion]
   simp_rw [Finset.card_product, Finset.card_singleton, mul_one, one_mul]
-
-lemma reachable_boxProd {x y : α × β} :
-    (G □ H).Reachable x y ↔ G.Reachable x.1 y.1 ∧ H.Reachable x.2 y.2 := by
-  classical
-  constructor
-  · intro ⟨w⟩
-    exact ⟨⟨w.ofBoxProdLeft⟩, ⟨w.ofBoxProdRight⟩⟩
-  · intro ⟨⟨w₁⟩, ⟨w₂⟩⟩
-    exact ⟨(w₁.boxProdLeft _ _).append (w₂.boxProdRight _ _)⟩
-
-set_option backward.isDefEq.respectTransparency false in
-@[simp]
-lemma edist_boxProd (x y : α × β) :
-    (G □ H).edist x y = G.edist x.1 y.1 + H.edist x.2 y.2 := by
-  classical
-  -- The case `(G □ H).edist x y = ⊤` is used twice, so better to factor it out.
-  have top_case : (G □ H).edist x y = ⊤ ↔ G.edist x.1 y.1 = ⊤ ∨ H.edist x.2 y.2 = ⊤ := by
-    simp_rw [← not_ne_iff, edist_ne_top_iff_reachable, reachable_boxProd, not_and_or]
-  by_cases h : (G □ H).edist x y = ⊤
-  · rw [top_case] at h
-    aesop
-  · have rGH : G.edist x.1 y.1 ≠ ⊤ ∧ H.edist x.2 y.2 ≠ ⊤ := by rw [top_case] at h; aesop
-    have ⟨wG, hwG⟩ := exists_walk_of_edist_ne_top rGH.1
-    have ⟨wH, hwH⟩ := exists_walk_of_edist_ne_top rGH.2
-    let w_app := (wG.boxProdLeft _ _).append (wH.boxProdRight _ _)
-    have w_len : w_app.length = wG.length + wH.length := by
-      unfold w_app Walk.boxProdLeft Walk.boxProdRight; simp
-    refine le_antisymm ?_ ?_
-    · calc (G □ H).edist x y ≤ w_app.length := by exact edist_le _
-          _ = wG.length + wH.length := by exact_mod_cast w_len
-          _ = G.edist x.1 y.1 + H.edist x.2 y.2 := by simp only [hwG, hwH]
-    · have ⟨w, hw⟩ := exists_walk_of_edist_ne_top h
-      rw [← hw, Walk.length_boxProd]
-      exact add_le_add (edist_le w.ofBoxProdLeft) (edist_le w.ofBoxProdRight)
 
 end SimpleGraph

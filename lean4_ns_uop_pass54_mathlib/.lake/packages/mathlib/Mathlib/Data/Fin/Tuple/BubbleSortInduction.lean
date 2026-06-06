@@ -3,12 +3,9 @@ Copyright (c) 2022 Michael Stoll. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Michael Stoll
 -/
-module
-
-public import Mathlib.Data.Fin.Tuple.Sort
-public import Mathlib.Order.WellFounded
-public import Mathlib.Order.PiLex
-public import Mathlib.Data.Finite.Prod
+import Mathlib.Data.Fin.Tuple.Sort
+import Mathlib.Order.WellFounded
+import Mathlib.Order.PiLex
 
 /-!
 # "Bubble sort" induction
@@ -26,8 +23,6 @@ requires the assumption only for `g` that are permutations of `f`.
 The latter is proved by well-founded induction via `WellFounded.induction_bot'`
 with respect to the lexicographic ordering on the finite set of all permutations of `f`.
 -/
-
-public section
 
 
 namespace Tuple

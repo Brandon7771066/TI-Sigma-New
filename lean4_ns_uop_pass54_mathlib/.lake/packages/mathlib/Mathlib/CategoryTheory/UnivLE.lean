@@ -1,21 +1,17 @@
 /-
-Copyright (c) 2023 Kim Morrison. All rights reserved.
+Copyright (c) 2023 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.EssentialImage
-public import Mathlib.CategoryTheory.Types.Basic
-public import Mathlib.Logic.UnivLE
+import Mathlib.Logic.UnivLE
+import Mathlib.CategoryTheory.EssentialImage
+import Mathlib.CategoryTheory.Types
 
 /-!
 # Universe inequalities and essential surjectivity of `uliftFunctor`.
 
 We show `UnivLE.{max u v, v} ↔ EssSurj (uliftFunctor.{u, v} : Type v ⥤ Type max u v)`.
 -/
-
-@[expose] public section
 
 open CategoryTheory
 
@@ -24,11 +20,10 @@ universe u v
 noncomputable section
 
 theorem UnivLE.ofEssSurj (w : (uliftFunctor.{u, v} : Type v ⥤ Type max u v).EssSurj) :
-    UnivLE.{max u v, v} where
-  small α := by
-    obtain ⟨a', m⟩ := w.mem_essImage α
-    obtain ⟨m'⟩ := m
-    exact ⟨a', ⟨(Iso.toEquiv m').symm.trans Equiv.ulift⟩⟩
+    UnivLE.{max u v, v} :=
+  fun α ↦ by
+    obtain ⟨a', ⟨m⟩⟩ := w.mem_essImage α
+    exact ⟨a', ⟨(Iso.toEquiv m).symm.trans Equiv.ulift⟩⟩
 
 instance EssSurj.ofUnivLE [UnivLE.{max u v, v}] :
     (uliftFunctor.{u, v} : Type v ⥤ Type max u v).EssSurj where

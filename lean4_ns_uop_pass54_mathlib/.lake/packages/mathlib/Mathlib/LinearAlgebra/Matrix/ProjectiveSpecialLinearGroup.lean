@@ -3,9 +3,7 @@ Copyright (c) 2023 Wen Yang. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Wen Yang
 -/
-module
-
-public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
 
 /-!
 # Projective Special Linear Group
@@ -16,8 +14,6 @@ In the `MatrixGroups` locale:
 
 * `PSL(n, R)` is a shorthand for `Matrix.ProjectiveSpecialLinearGroup (Fin n) R`
 -/
-
-public section
 
 namespace Matrix
 

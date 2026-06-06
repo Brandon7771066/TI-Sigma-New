@@ -3,10 +3,8 @@ Copyright (c) 2017 Johannes Hölzl. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johannes Hölzl, Mario Carneiro, Yury Kudryashov
 -/
-module
-
-public import Mathlib.Data.Set.BoolIndicator
-public import Mathlib.Topology.ContinuousOn
+import Mathlib.Topology.ContinuousOn
+import Mathlib.Data.Set.BoolIndicator
 
 /-!
 # Clopen sets
@@ -14,9 +12,7 @@ public import Mathlib.Topology.ContinuousOn
 A clopen set is a set that is both closed and open.
 -/
 
-public section
-
-open Set Filter Topology TopologicalSpace
+open Set Filter Topology TopologicalSpace Classical
 
 universe u v
 
@@ -63,27 +59,27 @@ lemma IsClopen.himp (hs : IsClopen s) (ht : IsClopen t) : IsClopen (s ⇨ t) := 
 theorem IsClopen.prod {t : Set Y} (hs : IsClopen s) (ht : IsClopen t) : IsClopen (s ×ˢ t) :=
   ⟨hs.1.prod ht.1, hs.2.prod ht.2⟩
 
-theorem isClopen_iUnion_of_finite {Y} [Finite Y] {s : Y → Set X} (h : ∀ i, IsClopen (s i)) :
+theorem isClopen_iUnion_of_finite [Finite Y] {s : Y → Set X} (h : ∀ i, IsClopen (s i)) :
     IsClopen (⋃ i, s i) :=
   ⟨isClosed_iUnion_of_finite (forall_and.1 h).1, isOpen_iUnion (forall_and.1 h).2⟩
 
-theorem Set.Finite.isClopen_biUnion {Y} {s : Set Y} {f : Y → Set X} (hs : s.Finite)
+theorem Set.Finite.isClopen_biUnion {s : Set Y} {f : Y → Set X} (hs : s.Finite)
     (h : ∀ i ∈ s, IsClopen <| f i) : IsClopen (⋃ i ∈ s, f i) :=
   ⟨hs.isClosed_biUnion fun i hi => (h i hi).1, isOpen_biUnion fun i hi => (h i hi).2⟩
 
-theorem isClopen_biUnion_finset {Y} {s : Finset Y} {f : Y → Set X}
+theorem isClopen_biUnion_finset {s : Finset Y} {f : Y → Set X}
     (h : ∀ i ∈ s, IsClopen <| f i) : IsClopen (⋃ i ∈ s, f i) :=
-  s.finite_toSet.isClopen_biUnion h
+ s.finite_toSet.isClopen_biUnion h
 
-theorem isClopen_iInter_of_finite {Y} [Finite Y] {s : Y → Set X} (h : ∀ i, IsClopen (s i)) :
+theorem isClopen_iInter_of_finite [Finite Y] {s : Y → Set X} (h : ∀ i, IsClopen (s i)) :
     IsClopen (⋂ i, s i) :=
   ⟨isClosed_iInter (forall_and.1 h).1, isOpen_iInter_of_finite (forall_and.1 h).2⟩
 
-theorem Set.Finite.isClopen_biInter {Y} {s : Set Y} (hs : s.Finite) {f : Y → Set X}
+theorem Set.Finite.isClopen_biInter {s : Set Y} (hs : s.Finite) {f : Y → Set X}
     (h : ∀ i ∈ s, IsClopen (f i)) : IsClopen (⋂ i ∈ s, f i) :=
   ⟨isClosed_biInter fun i hi => (h i hi).1, hs.isOpen_biInter fun i hi => (h i hi).2⟩
 
-theorem isClopen_biInter_finset {Y} {s : Finset Y} {f : Y → Set X}
+theorem isClopen_biInter_finset {s : Finset Y} {f : Y → Set X}
     (h : ∀ i ∈ s, IsClopen (f i)) : IsClopen (⋂ i ∈ s, f i) :=
   s.finite_toSet.isClopen_biInter h
 
@@ -101,23 +97,10 @@ theorem isClopen_inter_of_disjoint_cover_clopen {s a b : Set X} (h : IsClopen s)
     (ha : IsOpen a) (hb : IsOpen b) (hab : Disjoint a b) : IsClopen (s ∩ a) := by
   refine ⟨?_, IsOpen.inter h.2 ha⟩
   have : IsClosed (s ∩ bᶜ) := IsClosed.inter h.1 (isClosed_compl_iff.2 hb)
-  convert! this using 1
+  convert this using 1
   refine (inter_subset_inter_right s hab.subset_compl_right).antisymm ?_
   rintro x ⟨hx₁, hx₂⟩
-  exact ⟨hx₁, by simpa [notMem_of_mem_compl hx₂] using cover hx₁⟩
-
-/-- Variant of `isClopen_inter_of_disjoint_cover_clopen` with weaker disjointness condition. -/
-lemma isClopen_inter_of_disjoint_cover_clopen' {s a b : Set X} (h : IsClopen s) (cover : s ⊆ a ∪ b)
-    (ha : IsOpen a) (hb : IsOpen b) (hab : s ∩ a ∩ b = ∅) : IsClopen (s ∩ a) := by
-  rw [show s ∩ a = s ∩ (s ∩ a) by simp]
-  refine isClopen_inter_of_disjoint_cover_clopen h ?_ (h.2.inter ha) (h.2.inter hb) ?_
-  · rw [← inter_union_distrib_left]
-    exact subset_inter .rfl cover
-  · rw [disjoint_iff_inter_eq_empty, inter_comm s b, ← inter_assoc, hab, empty_inter]
-
-theorem isClopen_of_disjoint_cover_open {a b : Set X} (cover : univ ⊆ a ∪ b)
-    (ha : IsOpen a) (hb : IsOpen b) (hab : Disjoint a b) : IsClopen a :=
-  univ_inter a ▸ isClopen_inter_of_disjoint_cover_clopen isClopen_univ cover ha hb hab
+  exact ⟨hx₁, by simpa [not_mem_of_mem_compl hx₂] using cover hx₁⟩
 
 @[simp]
 theorem isClopen_discrete [DiscreteTopology X] (s : Set X) : IsClopen s :=
@@ -131,10 +114,10 @@ theorem isClopen_range_inr : IsClopen (range (Sum.inr : Y → X ⊕ Y)) :=
 
 theorem isClopen_range_sigmaMk {X : ι → Type*} [∀ i, TopologicalSpace (X i)] {i : ι} :
     IsClopen (Set.range (@Sigma.mk ι X i)) :=
-  ⟨IsClosedEmbedding.sigmaMk.isClosed_range, IsOpenEmbedding.sigmaMk.isOpen_range⟩
+  ⟨closedEmbedding_sigmaMk.isClosed_range, openEmbedding_sigmaMk.isOpen_range⟩
 
-protected theorem Topology.IsQuotientMap.isClopen_preimage {f : X → Y} (hf : IsQuotientMap f)
-    {s : Set Y} : IsClopen (f ⁻¹' s) ↔ IsClopen s :=
+protected theorem QuotientMap.isClopen_preimage {f : X → Y} (hf : QuotientMap f) {s : Set Y} :
+    IsClopen (f ⁻¹' s) ↔ IsClopen s :=
   and_congr hf.isClosed_preimage hf.isOpen_preimage
 
 theorem continuous_boolIndicator_iff_isClopen (U : Set X) :

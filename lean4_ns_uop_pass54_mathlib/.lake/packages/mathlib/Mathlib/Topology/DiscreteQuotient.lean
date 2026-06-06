@@ -3,12 +3,9 @@ Copyright (c) 2021 Adam Topaz. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Calle Sönne, Adam Topaz
 -/
-module
-
-public import Mathlib.Data.Setoid.Partition
-public import Mathlib.Topology.LocallyConstant.Basic
-public import Mathlib.Topology.Separation.Regular
-public import Mathlib.Topology.Connected.TotallyDisconnected
+import Mathlib.Data.Setoid.Partition
+import Mathlib.Topology.Separation
+import Mathlib.Topology.LocallyConstant.Basic
 
 /-!
 
@@ -63,18 +60,16 @@ The constructions in this file will be used to show that any profinite space is 
 of finite discrete spaces.
 -/
 
-@[expose] public section
 
-
-open Set Function TopologicalSpace Topology
+open Set Function TopologicalSpace
 
 variable {α X Y Z : Type*} [TopologicalSpace X] [TopologicalSpace Y] [TopologicalSpace Z]
 
 /-- The type of discrete quotients of a topological space. -/
-@[ext]
+@[ext] -- Porting note: in Lean 4, uses projection to `r` instead of `Setoid`.
 structure DiscreteQuotient (X : Type*) [TopologicalSpace X] extends Setoid X where
   /-- For every point `x`, the set `{ y | Rel x y }` is an open set. -/
-  protected isOpen_setOf_rel : ∀ x, IsOpen (setOf (toSetoid x))
+  protected isOpen_setOf_rel : ∀ x, IsOpen (setOf (toSetoid.Rel x))
 
 namespace DiscreteQuotient
 
@@ -86,13 +81,13 @@ lemma toSetoid_injective : Function.Injective (@toSetoid X _)
 /-- Construct a discrete quotient from a clopen set. -/
 def ofIsClopen {A : Set X} (h : IsClopen A) : DiscreteQuotient X where
   toSetoid := ⟨fun x y => x ∈ A ↔ y ∈ A, fun _ => Iff.rfl, Iff.symm, Iff.trans⟩
-  isOpen_setOf_rel x := by by_cases hx : x ∈ A <;> simp [hx, h.1, h.2, ← compl_setOf]
+  isOpen_setOf_rel x := by by_cases hx : x ∈ A <;> simp [Setoid.Rel, hx, h.1, h.2, ← compl_setOf]
 
-theorem refl : ∀ x, S.toSetoid x x := S.refl'
+theorem refl : ∀ x, S.Rel x x := S.refl'
 
-theorem symm (x y : X) : S.toSetoid x y → S.toSetoid y x := S.symm'
+theorem symm (x y : X) : S.Rel x y → S.Rel y x := S.symm'
 
-theorem trans (x y z : X) : S.toSetoid x y → S.toSetoid y z → S.toSetoid x z := S.trans'
+theorem trans (x y z : X) : S.Rel x y → S.Rel y z → S.Rel x z := S.trans'
 
 /-- The setoid whose quotient yields the discrete quotient. -/
 add_decl_doc toSetoid
@@ -106,21 +101,21 @@ instance : TopologicalSpace S :=
 /-- The projection from `X` to the given discrete quotient. -/
 def proj : X → S := Quotient.mk''
 
-theorem fiber_eq (x : X) : S.proj ⁻¹' {S.proj x} = setOf (S.toSetoid x) :=
+theorem fiber_eq (x : X) : S.proj ⁻¹' {S.proj x} = setOf (S.Rel x) :=
   Set.ext fun _ => eq_comm.trans Quotient.eq''
 
 theorem proj_surjective : Function.Surjective S.proj :=
-  Quotient.mk''_surjective
+  Quotient.surjective_Quotient_mk''
 
-theorem proj_isQuotientMap : IsQuotientMap S.proj :=
-  isQuotientMap_quot_mk
+theorem proj_quotientMap : QuotientMap S.proj :=
+  quotientMap_quot_mk
 
 theorem proj_continuous : Continuous S.proj :=
-  S.proj_isQuotientMap.continuous
+  S.proj_quotientMap.continuous
 
 instance : DiscreteTopology S :=
-  discreteTopology_iff_isOpen_singleton.2 <| S.proj_surjective.forall.2 fun x => by
-    rw [← S.proj_isQuotientMap.isOpen_preimage, fiber_eq]
+  singletons_open_iff_discrete.1 <| S.proj_surjective.forall.2 fun x => by
+    rw [← S.proj_quotientMap.isOpen_preimage, fiber_eq]
     exact S.isOpen_setOf_rel _
 
 theorem proj_isLocallyConstant : IsLocallyConstant S.proj :=
@@ -135,18 +130,15 @@ theorem isOpen_preimage (A : Set S) : IsOpen (S.proj ⁻¹' A) :=
 theorem isClosed_preimage (A : Set S) : IsClosed (S.proj ⁻¹' A) :=
   (S.isClopen_preimage A).1
 
-theorem isClopen_setOf_rel (x : X) : IsClopen (setOf (S.toSetoid x)) := by
+theorem isClopen_setOf_rel (x : X) : IsClopen (setOf (S.Rel x)) := by
   rw [← fiber_eq]
   apply isClopen_preimage
 
-instance : Min (DiscreteQuotient X) :=
+instance : Inf (DiscreteQuotient X) :=
   ⟨fun S₁ S₂ => ⟨S₁.1 ⊓ S₂.1, fun x => (S₁.2 x).inter (S₂.2 x)⟩⟩
 
-instance : PartialOrder (DiscreteQuotient X) :=
-  PartialOrder.lift _ toSetoid_injective
-
 instance : SemilatticeInf (DiscreteQuotient X) :=
-  toSetoid_injective.semilatticeInf _ .rfl .rfl fun _ _ ↦ rfl
+  Injective.semilatticeInf toSetoid toSetoid_injective fun _ _ => rfl
 
 instance : OrderTop (DiscreteQuotient X) where
   top := ⟨⊤, fun _ => isOpen_univ⟩
@@ -156,7 +148,7 @@ instance : Inhabited (DiscreteQuotient X) := ⟨⊤⟩
 
 instance inhabitedQuotient [Inhabited X] : Inhabited S := ⟨S.proj default⟩
 
--- TODO: add instances about `Nonempty (Quot _)`/`Nonempty (Quotient _)`
+-- Porting note (#11215): TODO: add instances about `Nonempty (Quot _)`/`Nonempty (Quotient _)`
 instance [Nonempty X] : Nonempty S := Nonempty.map S.proj ‹_›
 
 /-- The quotient by `⊤ : DiscreteQuotient X` is a `Subsingleton`. -/
@@ -179,7 +171,7 @@ theorem comap_id : S.comap (ContinuousMap.id X) = S := rfl
 theorem comap_comp (S : DiscreteQuotient Z) : S.comap (g.comp f) = (S.comap g).comap f :=
   rfl
 
-@[gcongr, mono]
+@[mono]
 theorem comap_mono {A B : DiscreteQuotient Y} (h : A ≤ B) : A.comap f ≤ B.comap f := by tauto
 
 end Comap
@@ -190,7 +182,7 @@ variable {A B C : DiscreteQuotient X}
 
 /-- The map induced by a refinement of a discrete quotient. -/
 def ofLE (h : A ≤ B) : A → B :=
-  Quotient.map' id h
+  Quotient.map' (fun x => x) h
 
 @[simp]
 theorem ofLE_refl : ofLE (le_refl A) = id := by
@@ -229,9 +221,9 @@ instance [LocallyConnectedSpace X] : OrderBot (DiscreteQuotient X) where
   bot :=
     { toSetoid := connectedComponentSetoid X
       isOpen_setOf_rel := fun x => by
-        convert! isOpen_connectedComponent (x := x)
+        convert isOpen_connectedComponent (x := x)
         ext y
-        simpa only [connectedComponentSetoid, ← connectedComponent_eq_iff_mem] using! eq_comm }
+        simpa only [connectedComponentSetoid, ← connectedComponent_eq_iff_mem] using eq_comm }
   bot_le S := fun x y (h : connectedComponent x = connectedComponent y) =>
     (S.isClopen_setOf_rel x).connectedComponent_subset (S.refl _) <| h.symm ▸ mem_connectedComponent
 
@@ -267,7 +259,7 @@ theorem leComap_id_iff : LEComap (ContinuousMap.id X) A A' ↔ A ≤ A' :=
 
 theorem LEComap.comp : LEComap g B C → LEComap f A B → LEComap (g.comp f) A C := by tauto
 
-@[gcongr, mono]
+@[mono]
 theorem LEComap.mono (h : LEComap f A B) (hA : A' ≤ A) (hB : B ≤ B') : LEComap f A' B' :=
   hA.trans <| h.trans <| comap_mono _ hB
 
@@ -288,7 +280,7 @@ theorem map_proj (cond : LEComap f A B) (x : X) : map f cond (A.proj x) = B.proj
 @[simp]
 theorem map_id : map _ (leComap_id A) = id := by ext ⟨⟩; rfl
 
--- This can't be a `@[simp]` lemma since `h1` and `h2` can't be found by unification in a Prop.
+-- Porting note (#11215): TODO: figure out why `simpNF` says this is a bad `@[simp]` lemma
 theorem map_comp (h1 : LEComap g B C) (h2 : LEComap f A B) :
     map (g.comp f) (h1.comp h2) = map g h1 ∘ map f h2 := by
   ext ⟨⟩
@@ -356,7 +348,7 @@ open Classical in
 If `X` is a compact space, then we associate to any discrete quotient on `X` a finite set of
 clopen subsets of `X`, given by the fibers of `proj`.
 
-TODO: prove that these form a partition of `X`
+TODO: prove that these form a partition of `X` 
 -/
 noncomputable def finsetClopens [CompactSpace X]
     (d : DiscreteQuotient X) : Finset (Clopens X) := have : Fintype d := Fintype.ofFinite _
@@ -364,22 +356,22 @@ noncomputable def finsetClopens [CompactSpace X]
 
 /-- A helper lemma to prove that `finsetClopens X` is injective, see `finsetClopens_inj`. -/
 lemma comp_finsetClopens [CompactSpace X] :
-    (Set.image (fun (t : Clopens X) ↦ t.carrier) ∘ (↑)) ∘
+    (Set.image (fun (t : Clopens X) ↦ t.carrier) ∘ Finset.toSet) ∘
       finsetClopens X = fun ⟨f, _⟩ ↦ f.classes := by
   ext d
-  simp only [Setoid.classes, Set.mem_setOf_eq, Function.comp_apply,
+  simp only [Setoid.classes, Setoid.Rel, Set.mem_setOf_eq, Function.comp_apply,
     finsetClopens, Set.coe_toFinset, Set.mem_image, Set.mem_range,
     exists_exists_eq_and]
   constructor
   · refine fun ⟨y, h⟩ ↦ ⟨Quotient.out (s := d.toSetoid) y, ?_⟩
     ext
-    simpa [← h] using! Quotient.mk_eq_iff_out (s := d.toSetoid)
-  · exact fun ⟨y, h⟩ ↦ ⟨d.proj y, by ext; simp [h, proj, Quotient.eq]⟩
+    simpa [← h] using Quotient.mk_eq_iff_out (s := d.toSetoid)
+  · exact fun ⟨y, h⟩ ↦ ⟨d.proj y, by ext; simp [h, proj]⟩
 
-/-- `finsetClopens X` is injective. -/
+/-- `finsetClopens X` is injective. -/
 theorem finsetClopens_inj [CompactSpace X] :
     (finsetClopens X).Injective := by
-  apply Function.Injective.of_comp (f := Set.image (fun (t : Clopens X) ↦ t.carrier) ∘ (↑))
+  apply Function.Injective.of_comp (f := Set.image (fun (t : Clopens X) ↦ t.carrier) ∘ Finset.toSet)
   rw [comp_finsetClopens]
   intro ⟨_, _⟩ ⟨_, _⟩ h
   congr
@@ -394,6 +386,8 @@ TODO: show that this is precisely those finsets of clopens which form a partitio
 -/
 noncomputable
 def equivFinsetClopens [CompactSpace X] := Equiv.ofInjective _ (finsetClopens_inj X)
+
+variable {X}
 
 end DiscreteQuotient
 

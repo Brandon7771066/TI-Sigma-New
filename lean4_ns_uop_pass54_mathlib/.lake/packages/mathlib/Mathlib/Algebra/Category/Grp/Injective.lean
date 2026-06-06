@@ -3,34 +3,44 @@ Copyright (c) 2022 Jujian Zhang. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jujian Zhang
 -/
-module
-
-public import Mathlib.Algebra.Category.Grp.ZModuleEquivalence
-public import Mathlib.Algebra.Category.ModuleCat.Injective
-public import Mathlib.Algebra.EuclideanDomain.Int
-public import Mathlib.GroupTheory.Divisible
-public import Mathlib.RingTheory.PrincipalIdealDomain
+import Mathlib.Algebra.Category.Grp.ZModuleEquivalence
+import Mathlib.Algebra.EuclideanDomain.Int
+import Mathlib.Algebra.Module.Injective
+import Mathlib.RingTheory.PrincipalIdealDomain
+import Mathlib.Topology.Instances.AddCircle
+import Mathlib.Topology.Instances.Rat
 
 /-!
 # Injective objects in the category of abelian groups
 
-In this file we prove that divisible groups are injective objects in category of (additive) abelian
-groups. The proof that the category of abelian groups has enough injective objects can be found
-in `Mathlib/Algebra/Category/Grp/EnoughInjectives.lean`.
+In this file we prove that divisible groups are injective object in category of (additive) abelian
+groups and that the category of abelian groups has enough injective objects.
 
 ## Main results
 
-- `AddCommGrpCat.injective_of_divisible` : a divisible group is also an injective object.
+- `AddCommGrp.injective_of_divisible` : a divisible group is also an injective object.
+- `AddCommGrp.enoughInjectives` : the category of abelian groups (written additively) has
+  enough injectives.
+- `CommGrp.enoughInjectives` : the category of abelian group (written multiplicatively) has
+  enough injectives.
+
+## Implementation notes
+
+The details of the proof that the category of abelian groups has enough injectives is hidden
+inside the namespace `AddCommGroup.enough_injectives_aux_proofs`. These are not marked `private`,
+but are not supposed to be used directly.
 
 -/
 
-public section
 
 open CategoryTheory
+
+open Pointwise
 
 universe u
 
 variable (A : Type u) [AddCommGroup A]
+
 
 theorem Module.Baer.of_divisible [DivisibleBy A ℤ] : Module.Baer ℤ A := fun I g ↦ by
   rcases IsPrincipalIdealRing.principal I with ⟨m, rfl⟩
@@ -45,15 +55,18 @@ theorem Module.Baer.of_divisible [DivisibleBy A ℤ] : Module.Baer ℤ A := fun 
   rw [map_zsmul, LinearMap.toSpanSingleton_apply, DivisibleBy.div_cancel gₘ h0, ← map_zsmul g,
     SetLike.mk_smul_mk]
 
-namespace AddCommGrpCat
+namespace AddCommGrp
 
-theorem injective_as_module_iff : Injective (ModuleCat.of ℤ A) ↔
-    Injective (C := AddCommGrpCat) (AddCommGrpCat.of A) :=
-  ((forget₂ (ModuleCat ℤ) AddCommGrpCat).asEquivalence.map_injective_iff (ModuleCat.of ℤ A)).symm
+theorem injective_as_module_iff : Injective (⟨A⟩ : ModuleCat ℤ) ↔
+    Injective (⟨A,inferInstance⟩ : AddCommGrp) :=
+  ((forget₂ (ModuleCat ℤ) AddCommGrp).asEquivalence.map_injective_iff ⟨A⟩).symm
 
 instance injective_of_divisible [DivisibleBy A ℤ] :
-    Injective (C := AddCommGrpCat) (AddCommGrpCat.of A) :=
+    Injective (⟨A,inferInstance⟩ : AddCommGrp) :=
   (injective_as_module_iff A).mp <|
     Module.injective_object_of_injective_module (inj := (Module.Baer.of_divisible A).injective)
 
-end AddCommGrpCat
+instance injective_ratCircle : Injective <| of <| ULift.{u} <| AddCircle (1 : ℚ) :=
+  injective_of_divisible _
+
+end AddCommGrp

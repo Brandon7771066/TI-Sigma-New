@@ -3,9 +3,7 @@ Copyright (c) 2022 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.LinearAlgebra.CliffordAlgebra.Conjugation
+import Mathlib.LinearAlgebra.CliffordAlgebra.Conjugation
 
 /-!
 # Star structure on `CliffordAlgebra`
@@ -23,8 +21,6 @@ Most results about `star` can be obtained by unfolding it via `CliffordAlgebra.s
 * `CliffordAlgebra.instStarRing`
 
 -/
-
-@[expose] public section
 
 
 variable {R : Type*} [CommRing R]

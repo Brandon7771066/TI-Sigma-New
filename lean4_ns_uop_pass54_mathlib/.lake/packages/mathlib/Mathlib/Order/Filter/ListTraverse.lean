@@ -3,18 +3,14 @@ Copyright (c) 2018 Johannes Hölzl. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johannes Hölzl
 -/
-module
-
-public import Mathlib.Control.Traversable.Instances
-public import Mathlib.Order.Filter.Map
+import Mathlib.Control.Traversable.Instances
+import Mathlib.Order.Filter.Basic
 /-!
 # Properties of `Traversable.traverse` on `List`s and `Filter`s
 
 In this file we prove basic properties (monotonicity, membership)
 for `Traversable.traverse f l`, where `f : β → Filter α` and `l : List β`.
 -/
-
-public section
 
 open Set List
 

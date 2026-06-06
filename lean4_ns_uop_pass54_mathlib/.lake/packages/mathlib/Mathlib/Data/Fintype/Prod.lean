@@ -3,26 +3,24 @@ Copyright (c) 2017 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro
 -/
-module
-
-public import Mathlib.Data.Finset.Prod
-public import Mathlib.Data.Fintype.EquivFin
+import Mathlib.Data.Fintype.Card
+import Mathlib.Data.Finset.Prod
 
 /-!
 # fintype instance for the product of two fintypes.
 
 -/
 
-public section
-
 
 open Function
+
+open Nat
 
 universe u v
 
 variable {α β γ : Type*}
 
-open Finset
+open Finset Function
 
 namespace Set
 
@@ -33,12 +31,9 @@ theorem toFinset_prod (s : Set α) (t : Set β) [Fintype s] [Fintype t] [Fintype
   ext
   simp
 
-theorem toFinset_offDiag {s : Set α} [Fintype s] [Fintype s.offDiag] :
+theorem toFinset_off_diag {s : Set α} [DecidableEq α] [Fintype s] [Fintype s.offDiag] :
     s.offDiag.toFinset = s.toFinset.offDiag :=
   Finset.ext <| by simp
-
-@[deprecated (since := "2026-01-09")]
-alias toFinset_off_diag := toFinset_offDiag
 
 end Set
 
@@ -62,31 +57,30 @@ theorem Fintype.card_prod (α β : Type*) [Fintype α] [Fintype β] :
 
 section
 
-attribute [local instance] Fintype.ofFinite in
+open scoped Classical
+
 @[simp]
 theorem infinite_prod : Infinite (α × β) ↔ Infinite α ∧ Nonempty β ∨ Nonempty α ∧ Infinite β := by
   refine
     ⟨fun H => ?_, fun H =>
       H.elim (and_imp.2 <| @Prod.infinite_of_left α β) (and_imp.2 <| @Prod.infinite_of_right α β)⟩
-  rw [and_comm]
+  rw [and_comm]; contrapose! H; intro H'
   rcases Infinite.nonempty (α × β) with ⟨a, b⟩
-  contrapose! H; haveI := H.1 ⟨b⟩; haveI := H.2 ⟨a⟩
-  infer_instance
+  haveI := fintypeOfNotInfinite (H.1 ⟨b⟩); haveI := fintypeOfNotInfinite (H.2 ⟨a⟩)
+  exact H'.false
 
 instance Pi.infinite_of_left {ι : Sort*} {π : ι → Type*} [∀ i, Nontrivial <| π i] [Infinite ι] :
     Infinite (∀ i : ι, π i) := by
-  classical
   choose m n hm using fun i => exists_pair_ne (π i)
   refine Infinite.of_injective (fun i => update m i (n i)) fun x y h => of_not_not fun hne => ?_
-  simp_rw [update_eq_iff, update_of_ne hne] at h
+  simp_rw [update_eq_iff, update_noteq hne] at h
   exact (hm x h.1.symm).elim
 
 /-- If at least one `π i` is infinite and the rest nonempty, the pi type of all `π` is infinite. -/
 theorem Pi.infinite_of_exists_right {ι : Sort*} {π : ι → Sort*} (i : ι) [Infinite <| π i]
-    [∀ i, Nonempty <| π i] : Infinite (∀ i : ι, π i) := by
-  classical
+    [∀ i, Nonempty <| π i] : Infinite (∀ i : ι, π i) :=
   let ⟨m⟩ := @Pi.instNonempty ι π _
-  exact Infinite.of_injective _ (update_injective m i)
+  Infinite.of_injective _ (update_injective m i)
 
 /-- See `Pi.infinite_of_exists_right` for the case that only one `π i` is infinite. -/
 instance Pi.infinite_of_right {ι : Sort*} {π : ι → Type*} [∀ i, Infinite <| π i] [Nonempty ι] :

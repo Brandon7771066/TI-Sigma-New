@@ -3,10 +3,8 @@ Copyright (c) 2024 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
 
-public import Mathlib.Init
-public import Qq.Macro
+import Qq.Macro
 
 /-!
 # The `eval%` term elaborator
@@ -14,8 +12,6 @@ public import Qq.Macro
 This file provides the `eval% x` term elaborator, which evaluates the constant `x` at compile-time
 in the interpreter, and interpolates it into the expression.
 -/
-
-public meta section
 
 
 open Qq Lean Elab Term

@@ -3,12 +3,9 @@ Copyright (c) 2024 Dagur Asgeirsson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Dagur Asgeirsson
 -/
-module
-
-public import Mathlib.CategoryTheory.Sites.Coherent.Basic
-public import Mathlib.Data.Finite.Sigma
-
+import Mathlib.CategoryTheory.Sites.Coherent.Basic
 /-!
+
 # Description of the covering sieves of the extensive topology
 
 This file characterises the covering sieves of the extensive topology.
@@ -20,16 +17,14 @@ This file characterises the covering sieves of the extensive topology.
   exhibiting the target as a coproduct of the sources.
 -/
 
-public section
-
 open CategoryTheory Limits
 
-variable {C : Type*} [Category* C] [FinitaryPreExtensive C]
+variable {C : Type*} [Category C] [FinitaryPreExtensive C]
 
 namespace CategoryTheory
 
 lemma extensiveTopology.mem_sieves_iff_contains_colimit_cofan {X : C} (S : Sieve X) :
-    S ∈ (extensiveTopology C) X ↔
+    S ∈ (extensiveTopology C).sieves X ↔
       (∃ (α : Type) (_ : Finite α) (Y : α → C) (π : (a : α) → (Y a ⟶ X)),
         Nonempty (IsColimit (Cofan.mk X π)) ∧ (∀ a : α, (S.arrows) (π a))) := by
   constructor
@@ -38,7 +33,7 @@ lemma extensiveTopology.mem_sieves_iff_contains_colimit_cofan {X : C} (S : Sieve
     | of X S hS =>
       obtain ⟨α, _, Y, π, h, h'⟩ := hS
       refine ⟨α, inferInstance, Y, π, ?_, fun a ↦ ?_⟩
-      · have : IsIso (Sigma.desc (Cofan.mk X π).inj) := by simpa using! h'
+      · have : IsIso (Sigma.desc (Cofan.mk X π).inj) := by simpa using h'
         exact ⟨Cofan.isColimitOfIsIsoSigmaDesc (Cofan.mk X π)⟩
       · obtain ⟨rfl, _⟩ := h
         exact ⟨Y a, 𝟙 Y a, π a, Presieve.ofArrows.mk a, by simp⟩
@@ -58,8 +53,7 @@ lemma extensiveTopology.mem_sieves_iff_contains_colimit_cofan {X : C} (S : Sieve
     apply (extensiveCoverage C).mem_toGrothendieck_sieves_of_superset (R := Presieve.ofArrows Y π)
     · exact fun _ _ hh ↦ by cases hh; exact h' _
     · refine ⟨α, inferInstance, Y, π, rfl, ?_⟩
-      rw [← show _ ↔ IsIso (Sigma.desc π) from
-        Limits.Cofan.nonempty_isColimit_iff_isIso_sigmaDesc (c := Cofan.mk X π)]
+      erw [Limits.Cofan.isColimit_iff_isIso_sigmaDesc (c := Cofan.mk X π)]
       exact h
 
 end CategoryTheory

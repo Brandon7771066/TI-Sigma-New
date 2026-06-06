@@ -3,12 +3,8 @@ Copyright (c) 2024 Joël Riou. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joël Riou
 -/
-module
-
-public import Mathlib.Algebra.Homology.ShortComplex.ShortExact
-public import Mathlib.CategoryTheory.MorphismProperty.Retract
-public import Mathlib.CategoryTheory.MorphismProperty.LiftingProperty
-public import Mathlib.CategoryTheory.Preadditive.Injective.LiftingProperties
+import Mathlib.Algebra.Homology.ShortComplex.ShortExact
+import Mathlib.CategoryTheory.MorphismProperty.Composition
 
 /-!
 # Epimorphisms with an injective kernel
@@ -16,19 +12,17 @@ public import Mathlib.CategoryTheory.Preadditive.Injective.LiftingProperties
 In this file, we define the class of morphisms `epiWithInjectiveKernel` in an
 abelian category. We show that this property of morphisms is multiplicative.
 
-This shall be used in the file `Mathlib/Algebra/Homology/Factorizations/Basic.lean` in
+This shall be used in the file `Mathlib.Algebra.Homology.Factorizations.Basic` in
 order to define morphisms of cochain complexes which satisfy this property
 degreewise.
 
 -/
 
-@[expose] public section
-
 namespace CategoryTheory
 
 open Category Limits ZeroObject Preadditive
 
-variable {C : Type*} [Category* C] [Abelian C]
+variable {C : Type*} [Category C] [Abelian C]
 
 namespace Abelian
 
@@ -49,8 +43,8 @@ lemma epiWithInjectiveKernel_iff {X Y : C} (g : X ⟶ Y) :
     exact ⟨_, inferInstance, _, S.zero,
       ⟨ShortComplex.Splitting.ofExactOfRetraction S
         (S.exact_of_f_is_kernel (kernelIsKernel g)) (Injective.factorThru (𝟙 _) (kernel.ι g))
-        (by simp [S]) inferInstance⟩⟩
-  · rintro ⟨I, _, f, w, ⟨σ⟩⟩
+        (by simp) inferInstance⟩⟩
+  · rintro ⟨I, _,  f, w, ⟨σ⟩⟩
     have : IsSplitEpi g := ⟨σ.s, σ.s_g⟩
     let e : I ≅ kernel g :=
       IsLimit.conePointUniqueUpToIso σ.shortExact.fIsKernel (limit.isLimit _)
@@ -60,14 +54,7 @@ lemma epiWithInjectiveKernel_of_iso {X Y : C} (f : X ⟶ Y) [IsIso f] :
     epiWithInjectiveKernel f := by
   rw [epiWithInjectiveKernel_iff]
   exact ⟨0, inferInstance, 0, by simp,
-    ⟨ShortComplex.Splitting.ofIsZeroOfIsIso _ (isZero_zero C) (by assumption)⟩⟩
-
-lemma epiWithInjectiveKernel_iff_of_isZero {X Y : C} (f : X ⟶ Y) (hY : IsZero Y) :
-    epiWithInjectiveKernel f ↔ Injective X := by
-  simp only [epiWithInjectiveKernel, hY.epi f, true_and]
-  exact Injective.iso_iff
-    { hom := kernel.ι f
-      inv := kernel.lift _ (𝟙 X) (hY.eq_of_tgt _ _) }
+    ⟨ShortComplex.Splitting.ofIsZeroOfIsIso _ (isZero_zero C) (by dsimp; infer_instance)⟩⟩
 
 instance : (epiWithInjectiveKernel : MorphismProperty C).IsMultiplicative where
   id_mem _ := epiWithInjectiveKernel_of_iso _
@@ -98,32 +85,6 @@ instance : (epiWithInjectiveKernel : MorphismProperty C).IsMultiplicative where
               BinaryBicone.inr_fst_assoc, zero_comp, comp_zero, add_zero,
               BinaryBicone.inl_snd_assoc, BinaryBicone.inr_snd_assoc, zero_add]
             abel }
-
-set_option backward.defeqAttrib.useBackward true in
-instance : (epiWithInjectiveKernel (C := C)).IsStableUnderRetracts where
-  of_retract := by
-    rintro X' Y' X Y f' f r ⟨_, hf⟩
-    have : Epi f' :=
-      (MorphismProperty.epimorphisms C).of_retract r (.infer_property _)
-    let r' : Retract (kernel f') (kernel f) :=
-      { i := kernel.map _ _ r.i.left r.i.right (Arrow.w r.i).symm
-        r := kernel.map _ _ r.r.left r.r.right (Arrow.w r.r).symm
-        retract := by ext; simp [dsimp% r.left.retract] }
-    exact ⟨inferInstance, r'.injective⟩
-
-lemma epiWithInjectiveKernel.hasLiftingProperty
-    {X Y : C} {p : X ⟶ Y} (hp : epiWithInjectiveKernel p)
-    {A B : C} (i : A ⟶ B) [Mono i] :
-    HasLiftingProperty i p := by
-  suffices (MorphismProperty.monomorphisms C).rlp p from this _ inferInstance
-  rw [epiWithInjectiveKernel_iff] at hp
-  obtain ⟨I, _, s, hs, ⟨σ⟩⟩ := hp
-  have hI : (MorphismProperty.monomorphisms C).rlp (0 : I ⟶ 0) :=
-    fun _ _ _ _ ↦ Injective.hasLiftingProperty_of_isZero _ _ (isZero_zero C)
-  refine MorphismProperty.of_isPullback (f' := σ.r) (f := 0) ⟨by simp, ⟨?_⟩⟩ hI
-  refine PullbackCone.IsLimit.mk _ (fun t ↦ t.fst ≫ s + t.snd ≫ σ.s)
-    (fun t ↦ by simp [dsimp% σ.f_r]) (fun t ↦ by simp [hs, dsimp% σ.s_g]) (fun t m hm₁ hm₂ ↦ ?_)
-  simp [← hm₁, ← hm₂, ← Preadditive.comp_add, dsimp% σ.id]
 
 end Abelian
 

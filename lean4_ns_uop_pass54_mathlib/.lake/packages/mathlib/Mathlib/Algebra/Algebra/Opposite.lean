@@ -3,11 +3,9 @@ Copyright (c) 2023 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.Algebra.Equiv
-public import Mathlib.Algebra.Module.Opposite
-public import Mathlib.Algebra.Ring.Opposite
+import Mathlib.Algebra.Algebra.Equiv
+import Mathlib.Algebra.Module.Opposites
+import Mathlib.Algebra.Ring.Opposite
 
 /-!
 # Algebra structures on the multiplicative opposite
@@ -26,8 +24,6 @@ public import Mathlib.Algebra.Ring.Opposite
 * `AlgEquiv.opComm`: swap which side of an isomorphism lies in the opposite algebra.
 -/
 
-@[expose] public section
-
 
 variable {R S A B : Type*}
 
@@ -42,10 +38,10 @@ variable [IsScalarTower R S A]
 namespace MulOpposite
 
 instance instAlgebra : Algebra R Aᵐᵒᵖ where
-  algebraMap := (algebraMap R A).toOpposite fun _ _ => Algebra.commutes _ _
+  toRingHom := (algebraMap R A).toOpposite fun x y => Algebra.commutes _ _
   smul_def' c x := unop_injective <| by
-    simp only [unop_smul, RingHom.toOpposite_apply, Function.comp_apply, unop_mul,
-      Algebra.smul_def, Algebra.commutes, unop_op]
+    simp only [unop_smul, RingHom.toOpposite_apply, Function.comp_apply, unop_mul, op_mul,
+      Algebra.smul_def, Algebra.commutes, op_unop, unop_op]
   commutes' r := MulOpposite.rec' fun x => by
     simp only [RingHom.toOpposite_apply, Function.comp_apply, ← op_mul, Algebra.commutes]
 
@@ -73,7 +69,7 @@ namespace AlgHom
 /--
 An algebra homomorphism `f : A →ₐ[R] B` such that `f x` commutes with `f y` for all `x, y` defines
 an algebra homomorphism from `Aᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def fromOpposite (f : A →ₐ[R] B) (hf : ∀ x y, Commute (f x) (f y)) : Aᵐᵒᵖ →ₐ[R] B :=
   { f.toRingHom.fromOpposite hf with
     toFun := f ∘ unop
@@ -92,7 +88,7 @@ theorem toRingHom_fromOpposite (f : A →ₐ[R] B) (hf : ∀ x y, Commute (f x) 
 /--
 An algebra homomorphism `f : A →ₐ[R] B` such that `f x` commutes with `f y` for all `x, y` defines
 an algebra homomorphism to `Bᵐᵒᵖ`. -/
-@[simps -fullyApplied]
+@[simps (config := .asFn)]
 def toOpposite (f : A →ₐ[R] B) (hf : ∀ x y, Commute (f x) (f y)) : A →ₐ[R] Bᵐᵒᵖ :=
   { f.toRingHom.toOpposite hf with
     toFun := op ∘ f
@@ -114,6 +110,8 @@ This is the action of the (fully faithful) `ᵐᵒᵖ`-functor on morphisms. -/
 protected def op : (A →ₐ[R] B) ≃ (Aᵐᵒᵖ →ₐ[R] Bᵐᵒᵖ) where
   toFun f := { RingHom.op f.toRingHom with commutes' := fun r => unop_injective <| f.commutes r }
   invFun f := { RingHom.unop f.toRingHom with commutes' := fun r => op_injective <| f.commutes r }
+  left_inv _f := AlgHom.ext fun _a => rfl
+  right_inv _f := AlgHom.ext fun _a => rfl
 
 theorem toRingHom_op (f : A →ₐ[R] B) : f.op.toRingHom = RingHom.op f.toRingHom :=
   rfl
@@ -143,6 +141,8 @@ def op : (A ≃ₐ[R] B) ≃ Aᵐᵒᵖ ≃ₐ[R] Bᵐᵒᵖ where
   invFun f :=
     { RingEquiv.unop f.toRingEquiv with
       commutes' := fun r => MulOpposite.op_injective <| f.commutes r }
+  left_inv _f := AlgEquiv.ext fun _a => rfl
+  right_inv _f := AlgEquiv.ext fun _a => rfl
 
 theorem toAlgHom_op (f : A ≃ₐ[R] B) :
     (AlgEquiv.op f).toAlgHom = AlgHom.op f.toAlgHom :=
@@ -166,20 +166,6 @@ theorem toRingEquiv_unop (f : Aᵐᵒᵖ ≃ₐ[R] Bᵐᵒᵖ) :
 @[simps!]
 def opComm : (A ≃ₐ[R] Bᵐᵒᵖ) ≃ (Aᵐᵒᵖ ≃ₐ[R] B) :=
   AlgEquiv.op.trans <| AlgEquiv.refl.equivCongr (opOp R B).symm
-
-variable (R S)
-
-/-- The canonical algebra isomorphism from `Aᵐᵒᵖ` to `Module.End A A` induced by the right
-multiplication. -/
-@[simps!] def moduleEndSelf : Aᵐᵒᵖ ≃ₐ[R] Module.End A A where
-  __ := RingEquiv.moduleEndSelf A
-  commutes' _ := by ext; simp [Algebra.algebraMap_eq_smul_one]
-
-/-- The canonical algebra isomorphism from `A` to `Module.End Aᵐᵒᵖ A` induced by the left
-multiplication. -/
-@[simps!] def moduleEndSelfOp : A ≃ₐ[R] Module.End Aᵐᵒᵖ A where
-  __ := RingEquiv.moduleEndSelfOp A
-  commutes' _ := by ext; simp [Algebra.algebraMap_eq_smul_one]
 
 end AlgEquiv
 

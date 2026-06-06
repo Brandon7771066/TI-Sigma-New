@@ -3,13 +3,10 @@ Copyright (c) 2014 Microsoft Corporation. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Leonardo de Moura, Mario Carneiro
 -/
-module
-
-public import Lean.Linter.Deprecated
-public import Mathlib.Data.Nat.Notation
-public import Mathlib.Data.Int.Notation
-public import Mathlib.Data.Nat.BinaryRec
-
+import Lean.Linter.Deprecated
+import Mathlib.Data.Int.Notation
+import Mathlib.Algebra.Group.ZeroOne
+import Mathlib.Data.Nat.Bits
 /-!
 # Binary representation of integers using inductive types
 
@@ -19,13 +16,9 @@ in favor of the "Peano" natural numbers `Nat`, and the purpose of this
 collection of theorems is to show the equivalence of the different approaches.
 -/
 
-@[expose] public section
-
 /-- The type of positive binary numbers.
 
-```
-13 = 1101(base 2) = bit1 (bit0 (bit1 one))
-``` -/
+     13 = 1101(base 2) = bit1 (bit0 (bit1 one)) -/
 inductive PosNum : Type
   | one : PosNum
   | bit1 : PosNum → PosNum
@@ -40,9 +33,7 @@ instance : Inhabited PosNum :=
 
 /-- The type of nonnegative binary numbers, using `PosNum`.
 
-```
-13 = 1101(base 2) = pos (bit1 (bit0 (bit1 one)))
-``` -/
+     13 = 1101(base 2) = pos (bit1 (bit0 (bit1 one))) -/
 inductive Num : Type
   | zero : Num
   | pos : PosNum → Num
@@ -59,10 +50,8 @@ instance : Inhabited Num :=
 
 /-- Representation of integers using trichotomy around zero.
 
-```
-13 = 1101(base 2) = pos (bit1 (bit0 (bit1 one)))
--13 = -1101(base 2) = neg (bit1 (bit0 (bit1 one)))
-``` -/
+     13 = 1101(base 2) = pos (bit1 (bit0 (bit1 one)))
+     -13 = -1101(base 2) = neg (bit1 (bit0 (bit1 one))) -/
 inductive ZNum : Type
   | zero : ZNum
   | pos : PosNum → ZNum
@@ -90,7 +79,7 @@ def succ : PosNum → PosNum
   | bit1 n => bit0 (succ n)
   | bit0 n => bit1 n
 
-/-- Returns a Boolean for whether the `PosNum` is `one`. -/
+/-- Returns a boolean for whether the `PosNum` is `one`. -/
 def isOne : PosNum → Bool
   | 1 => true
   | _ => false
@@ -147,7 +136,7 @@ def ofNatSucc : ℕ → PosNum
 def ofNat (n : ℕ) : PosNum :=
   ofNatSucc (Nat.pred n)
 
-instance (priority := low) {n : ℕ} : OfNat PosNum (n + 1) where
+instance {n : ℕ} : OfNat PosNum (n + 1) where
   ofNat := ofNat (n + 1)
 
 open Ordering
@@ -168,10 +157,10 @@ instance : LT PosNum :=
 instance : LE PosNum :=
   ⟨fun a b => ¬b < a⟩
 
-instance decidableLT : DecidableLT PosNum
+instance decidableLT : @DecidableRel PosNum (· < ·)
   | a, b => by dsimp [LT.lt]; infer_instance
 
-instance decidableLE : DecidableLE PosNum
+instance decidableLE : @DecidableRel PosNum (· ≤ ·)
   | a, b => by dsimp [LE.le]; infer_instance
 
 end PosNum
@@ -180,26 +169,32 @@ section
 
 variable {α : Type*} [One α] [Add α]
 
+section deprecated
+set_option linter.deprecated false
+
 /-- `castPosNum` casts a `PosNum` into any type which has `1` and `+`. -/
-@[coe]
+@[deprecated (since := "2022-11-18"), coe]
 def castPosNum : PosNum → α
   | 1 => 1
   | PosNum.bit0 a => castPosNum a + castPosNum a
   | PosNum.bit1 a => castPosNum a + castPosNum a + 1
 
 /-- `castNum` casts a `Num` into any type which has `0`, `1` and `+`. -/
-@[coe]
+@[deprecated (since := "2022-11-18"), coe]
 def castNum [Zero α] : Num → α
   | 0 => 0
   | Num.pos p => castPosNum p
 
 -- see Note [coercion into rings]
-instance (priority := 900) posNumCoe : CoeHTCT PosNum α :=
+@[deprecated (since := "2023-03-31")] instance (priority := 900) posNumCoe : CoeHTCT PosNum α :=
   ⟨castPosNum⟩
 
 -- see Note [coercion into rings]
+@[deprecated (since := "2023-03-31")]
 instance (priority := 900) numNatCoe [Zero α] : CoeHTCT Num α :=
   ⟨castNum⟩
+
+end deprecated
 
 instance : Repr PosNum :=
   ⟨fun n _ => repr (n : ℕ)⟩
@@ -279,10 +274,10 @@ instance : LT Num :=
 instance : LE Num :=
   ⟨fun a b => ¬b < a⟩
 
-instance decidableLT : DecidableLT Num
+instance decidableLT : @DecidableRel Num (· < ·)
   | a, b => by dsimp [LT.lt]; infer_instance
 
-instance decidableLE : DecidableLE Num
+instance decidableLE : @DecidableRel Num (· ≤ ·)
   | a, b => by dsimp [LE.le]; infer_instance
 
 /-- Converts a `Num` to a `ZNum`. -/
@@ -488,11 +483,11 @@ instance : LT ZNum :=
 instance : LE ZNum :=
   ⟨fun a b => ¬b < a⟩
 
-instance decidableLT : DecidableLT ZNum :=
-  inferInstanceAs <| DecidableRel fun a b => cmp a b = Ordering.lt
+instance decidableLT : @DecidableRel ZNum (· < ·)
+  | a, b => by dsimp [LT.lt]; infer_instance
 
-instance decidableLE : DecidableLE ZNum :=
-  inferInstanceAs <| DecidableRel fun a b => ¬b < a
+instance decidableLE : @DecidableRel ZNum (· ≤ ·)
+  | a, b => by dsimp [LE.le]; infer_instance
 
 end ZNum
 
@@ -514,7 +509,7 @@ def divMod (d : PosNum) : PosNum → Num × Num
     divModAux d q (Num.bit1 r₁)
   | 1 => divModAux d 0 1
 
-/-- Division of `PosNum` -/
+/-- Division of `PosNum`, -/
 def div' (n d : PosNum) : Num :=
   (divMod d n).1
 
@@ -532,7 +527,7 @@ private def sqrtAux1 (b : PosNum) (r n : Num) : Num × Num :=
 private def sqrtAux : PosNum → Num → Num → Num
   | b@(bit0 b') => fun r n => let (r', n') := sqrtAux1 b r n; sqrtAux b' r' n'
   | b@(bit1 b') => fun r n => let (r', n') := sqrtAux1 b r n; sqrtAux b' r' n'
-  | 1 => fun r n => (sqrtAux1 1 r n).1
+  | 1           => fun r n => (sqrtAux1 1 r n).1
 
 end PosNum
 
@@ -598,17 +593,19 @@ def gcd (a b : ZNum) : Num :=
 end ZNum
 
 section
+
+set_option linter.deprecated false
 variable {α : Type*} [Zero α] [One α] [Add α] [Neg α]
 
 /-- `castZNum` casts a `ZNum` into any type which has `0`, `1`, `+` and `neg` -/
-@[coe]
+@[deprecated (since := "2022-11-18"), coe]
 def castZNum : ZNum → α
   | 0 => 0
   | ZNum.pos p => p
   | ZNum.neg p => -p
 
 -- see Note [coercion into rings]
-instance (priority := 900) znumCoe : CoeHTCT ZNum α :=
+@[deprecated (since := "2023-03-31")] instance (priority := 900) znumCoe : CoeHTCT ZNum α :=
   ⟨castZNum⟩
 
 instance : Repr ZNum :=

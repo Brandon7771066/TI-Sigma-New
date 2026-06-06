@@ -3,10 +3,8 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Order.UpperLower.Basic
-public import Mathlib.Topology.Connected.TotallyDisconnected
+import Mathlib.Order.UpperLower.Basic
+import Mathlib.Topology.Separation
 
 /-!
 # Priestley spaces
@@ -29,8 +27,6 @@ We do not include compactness in the definition, so a Priestley space is to be d
 * [Wikipedia, *Priestley space*](https://en.wikipedia.org/wiki/Priestley_space)
 * [Davey, Priestley *Introduction to Lattices and Order*][davey_priestley]
 -/
-
-public section
 
 
 open Set
@@ -65,16 +61,15 @@ variable [PartialOrder α] [PriestleySpace α] {x y : α}
 
 theorem exists_isClopen_upper_or_lower_of_ne (h : x ≠ y) :
     ∃ U : Set α, IsClopen U ∧ (IsUpperSet U ∨ IsLowerSet U) ∧ x ∈ U ∧ y ∉ U := by
-  obtain h | h := h.not_le_or_not_ge
+  obtain h | h := h.not_le_or_not_le
   · exact (exists_isClopen_upper_of_not_le h).imp fun _ ↦ And.imp_right <| And.imp_left Or.inl
   · obtain ⟨U, hU, hU', hy, hx⟩ := exists_isClopen_lower_of_not_le h
     exact ⟨U, hU, Or.inr hU', hx, hy⟩
 
 -- See note [lower instance priority]
-instance (priority := 100) PriestleySpace.toTotallySeparatedSpace : TotallySeparatedSpace α where
-  isTotallySeparated_univ _ _ _ _ h :=
-    (exists_isClopen_upper_or_lower_of_ne h).elim fun U ⟨hU, _, hx, hy⟩ =>
-      ⟨U, Uᶜ, hU.isOpen, hU.compl.isOpen, hx, hy,
-        union_compl_self U ▸ subset_rfl, disjoint_compl_right⟩
+instance (priority := 100) PriestleySpace.toT2Space : T2Space α :=
+  ⟨fun _ _ h ↦
+    let ⟨U, hU, _, hx, hy⟩ := exists_isClopen_upper_or_lower_of_ne h
+    ⟨U, Uᶜ, hU.isOpen, hU.compl.isOpen, hx, hy, disjoint_compl_right⟩⟩
 
 end PartialOrder

@@ -3,19 +3,13 @@ Copyright (c) 2018 Kenny Lau. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kenny Lau
 -/
-module
-
-public import Mathlib.Algebra.Field.Defs
-public import Mathlib.Algebra.Ring.Opposite
-public import Mathlib.Data.Int.Cast.Lemmas
+import Mathlib.Algebra.Field.Defs
+import Mathlib.Algebra.Ring.Opposite
+import Mathlib.Data.Int.Cast.Lemmas
 
 /-!
 # Field structure on the multiplicative/additive opposite
 -/
-
-@[expose] public section
-
-assert_not_exists RelIso
 
 variable {α : Type*}
 
@@ -40,15 +34,15 @@ instance instDivisionSemiring [DivisionSemiring α] : DivisionSemiring αᵐᵒ�
   __ := instSemiring
   __ := instGroupWithZero
   nnqsmul := _
-  nnqsmul_def := fun _ _ => rfl
-  nnratCast_def q := unop_injective <| by rw [unop_nnratCast, unop_div, unop_natCast, unop_natCast,
+  nnqsmul_def := fun q a => rfl
+  nnratCast_def q := unop_injective $ by rw [unop_nnratCast, unop_div, unop_natCast, unop_natCast,
     NNRat.cast_def, div_eq_mul_inv, Nat.cast_comm]
 
 instance instDivisionRing [DivisionRing α] : DivisionRing αᵐᵒᵖ where
   __ := instRing
   __ := instDivisionSemiring
   qsmul := _
-  qsmul_def := fun _ _ => rfl
+  qsmul_def := fun q a => rfl
   ratCast_def q := unop_injective <| by rw [unop_ratCast, Rat.cast_def, unop_div,
     unop_natCast, unop_intCast, Int.commute_cast, div_eq_mul_inv]
 
@@ -68,15 +62,15 @@ instance instDivisionSemiring [DivisionSemiring α] : DivisionSemiring αᵃᵒ�
   __ := instSemiring
   __ := instGroupWithZero
   nnqsmul := _
-  nnqsmul_def := fun _ _ => rfl
-  nnratCast_def q := unop_injective <| by rw [unop_nnratCast, unop_div, unop_natCast, unop_natCast,
+  nnqsmul_def := fun q a => rfl
+  nnratCast_def q := unop_injective $ by rw [unop_nnratCast, unop_div, unop_natCast, unop_natCast,
     NNRat.cast_def, div_eq_mul_inv]
 
 instance instDivisionRing [DivisionRing α] : DivisionRing αᵃᵒᵖ where
   __ := instRing
   __ := instDivisionSemiring
   qsmul := _
-  qsmul_def := fun _ _ => rfl
+  qsmul_def := fun q a => rfl
   ratCast_def q := unop_injective <| by rw [unop_ratCast, Rat.cast_def, unop_div, unop_natCast,
     unop_intCast, div_eq_mul_inv]
 

@@ -3,12 +3,9 @@ Copyright (c) 2020 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.Group.Action.Faithful
-public import Mathlib.Algebra.Group.Action.Opposite
-public import Mathlib.Algebra.GroupWithZero.Action.Defs
-public import Mathlib.Algebra.GroupWithZero.NeZero
+import Mathlib.Algebra.Group.Action.Opposite
+import Mathlib.Algebra.GroupWithZero.Action.Defs
+import Mathlib.Algebra.GroupWithZero.NeZero
 
 /-!
 # Scalar actions on and by `Mᵐᵒᵖ`
@@ -29,30 +26,15 @@ With `open scoped RightActions`, this provides:
 * `p <+ᵥ v` as an alias for `AddOpposite.op v +ᵥ p`
 -/
 
-public section
-
-assert_not_exists Ring
-
-variable {M α : Type*}
+variable {R M N α : Type*}
 
 /-! ### Actions _on_ the opposite type
 
 Actions on the opposite type just act on the underlying type.
 -/
 
+
 namespace MulOpposite
-
-instance instSMulZeroClass [AddMonoid α] [SMulZeroClass M α] : SMulZeroClass M αᵐᵒᵖ where
-  smul_zero _ := unop_injective <| smul_zero _
-
-instance instSMulWithZero [MonoidWithZero M] [AddMonoid α] [SMulWithZero M α] :
-    SMulWithZero M αᵐᵒᵖ where
-  zero_smul _ := unop_injective <| zero_smul _ _
-
-instance instMulActionWithZero [MonoidWithZero M] [AddMonoid α] [MulActionWithZero M α] :
-    MulActionWithZero M αᵐᵒᵖ where
-  smul_zero _ := unop_injective <| smul_zero _
-  zero_smul _ := unop_injective <| zero_smul _ _
 
 instance instDistribMulAction [Monoid M] [AddMonoid α] [DistribMulAction M α] :
     DistribMulAction M αᵐᵒᵖ where
@@ -77,9 +59,6 @@ reversed.
 open MulOpposite
 
 /-- `Monoid.toOppositeMulAction` is faithful on nontrivial cancellative monoids with zero. -/
-instance IsLeftCancelMulZero.toFaithfulSMul_opposite [MonoidWithZero α] [IsLeftCancelMulZero α] :
-    FaithfulSMul αᵐᵒᵖ α where
-  eq_of_smul_eq_smul h := by
-    cases subsingleton_or_nontrivial α
-    · exact Subsingleton.elim ..
-    · exact unop_injective <| mul_left_cancel₀ one_ne_zero (h 1)
+instance CancelMonoidWithZero.toFaithfulSMul_opposite [CancelMonoidWithZero α]
+    [Nontrivial α] : FaithfulSMul αᵐᵒᵖ α :=
+  ⟨fun h => unop_injective <| mul_left_cancel₀ one_ne_zero (h 1)⟩

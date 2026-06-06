@@ -3,15 +3,10 @@ Copyright (c) 2022 Joshua Clune. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Joshua Clune
 -/
-module
-
-public import Mathlib.Init
-public meta import Lean.Meta.Tactic.Clear
-public meta import Lean.Elab.Tactic.Basic
+import Lean.Meta.Tactic.Clear
+import Lean.Elab.Tactic.Basic
 
 /-! # `clear_` tactic -/
-
-public meta section
 
 namespace Mathlib.Tactic
 open Lean Meta Elab.Tactic
@@ -26,5 +21,3 @@ elab (name := clear_) "clear_" : tactic =>
           if let none ← isClass? decl.type then
             toClear := toClear.push decl.fvarId
     goal.tryClearMany toClear
-
-end Mathlib.Tactic

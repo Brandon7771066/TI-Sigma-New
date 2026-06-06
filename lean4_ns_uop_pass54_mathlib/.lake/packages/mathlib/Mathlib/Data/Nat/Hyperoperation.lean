@@ -3,10 +3,7 @@ Copyright (c) 2023 Mark Andrew Gerads. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mark Andrew Gerads, Junyan Xu, Eric Wieser
 -/
-module
-
-public import Mathlib.Tactic.NormNum.Inv
-public import Mathlib.Tactic.NormNum.Pow
+import Mathlib.Tactic.Ring
 
 /-!
 # Hyperoperation sequence
@@ -28,8 +25,6 @@ This file defines the Hyperoperation sequence.
 hyperoperation
 -/
 
-@[expose] public section
-
 
 /-- Implementation of the hyperoperation sequence
 where `hyperoperation n m k` is the `n`th hyperoperation between `m` and `k`.
@@ -41,48 +36,78 @@ def hyperoperation : ℕ → ℕ → ℕ → ℕ
   | _ + 3, _, 0 => 1
   | n + 1, m, k + 1 => hyperoperation n m (hyperoperation (n + 1) m k)
 
-attribute [local grind] hyperoperation
-
 -- Basic hyperoperation lemmas
-@[simp, grind =]
-theorem hyperoperation_zero (m k : ℕ) : hyperoperation 0 m k = k + 1 := by
-  grind
+@[simp]
+theorem hyperoperation_zero (m : ℕ) : hyperoperation 0 m = Nat.succ :=
+  funext fun k => by rw [hyperoperation, Nat.succ_eq_add_one]
 
-@[grind =]
 theorem hyperoperation_ge_three_eq_one (n m : ℕ) : hyperoperation (n + 3) m 0 = 1 := by
-  grind
+  rw [hyperoperation]
 
-@[grind =]
 theorem hyperoperation_recursion (n m k : ℕ) :
     hyperoperation (n + 1) m (k + 1) = hyperoperation n m (hyperoperation (n + 1) m k) := by
-  grind
+  rw [hyperoperation]
 
 -- Interesting hyperoperation lemmas
-@[simp, grind =]
-theorem hyperoperation_one (m k : ℕ) : hyperoperation 1 m k = m + k := by
-  induction k with grind
+@[simp]
+theorem hyperoperation_one : hyperoperation 1 = (· + ·) := by
+  ext m k
+  induction' k with bn bih
+  · rw [Nat.add_zero m, hyperoperation]
+  · rw [hyperoperation_recursion, bih, hyperoperation_zero]
+    exact Nat.add_assoc m bn 1
 
-@[simp, grind =]
-theorem hyperoperation_two (m k : ℕ) : hyperoperation 2 m k = m * k := by
-  induction k with grind
+@[simp]
+theorem hyperoperation_two : hyperoperation 2 = (· * ·) := by
+  ext m k
+  induction' k with bn bih
+  · rw [hyperoperation]
+    exact (Nat.mul_zero m).symm
+  · rw [hyperoperation_recursion, hyperoperation_one, bih]
+    -- Porting note: was `ring`
+    dsimp only
+    nth_rewrite 1 [← mul_one m]
+    rw [← mul_add, add_comm]
 
-@[simp, grind =]
-theorem hyperoperation_three (m k : ℕ) : hyperoperation 3 m k = m ^ k := by
-  induction k with grind
+@[simp]
+theorem hyperoperation_three : hyperoperation 3 = (· ^ ·) := by
+  ext m k
+  induction' k with bn bih
+  · rw [hyperoperation_ge_three_eq_one]
+    exact (pow_zero m).symm
+  · rw [hyperoperation_recursion, hyperoperation_two, bih]
+    exact (pow_succ' m bn).symm
 
-@[grind =]
 theorem hyperoperation_ge_two_eq_self (n m : ℕ) : hyperoperation (n + 2) m 1 = m := by
-  induction n with grind
+  induction' n with nn nih
+  · rw [hyperoperation_two]
+    ring
+  · rw [hyperoperation_recursion, hyperoperation_ge_three_eq_one, nih]
 
-@[grind =]
 theorem hyperoperation_two_two_eq_four (n : ℕ) : hyperoperation (n + 1) 2 2 = 4 := by
-  induction n with grind
+  induction' n with nn nih
+  · rw [hyperoperation_one]
+  · rw [hyperoperation_recursion, hyperoperation_ge_two_eq_self, nih]
 
-@[grind =]
-theorem hyperoperation_ge_three_one (n k : ℕ) : hyperoperation (n + 3) 1 k = 1 := by
-  induction n generalizing k with grind [cases Nat]
+theorem hyperoperation_ge_three_one (n : ℕ) : ∀ k : ℕ, hyperoperation (n + 3) 1 k = 1 := by
+  induction' n with nn nih
+  · intro k
+    rw [hyperoperation_three]
+    dsimp
+    rw [one_pow]
+  · intro k
+    cases k
+    · rw [hyperoperation_ge_three_eq_one]
+    · rw [hyperoperation_recursion, nih]
 
-@[grind =]
 theorem hyperoperation_ge_four_zero (n k : ℕ) :
     hyperoperation (n + 4) 0 k = if Even k then 1 else 0 := by
-  induction k with grind
+  induction' k with kk kih
+  · rw [hyperoperation_ge_three_eq_one]
+    simp only [Nat.zero_eq, even_zero, if_true]
+  · rw [hyperoperation_recursion]
+    rw [kih]
+    simp_rw [Nat.even_add_one]
+    split_ifs
+    · exact hyperoperation_ge_two_eq_self (n + 1) 0
+    · exact hyperoperation_ge_three_eq_one n 0

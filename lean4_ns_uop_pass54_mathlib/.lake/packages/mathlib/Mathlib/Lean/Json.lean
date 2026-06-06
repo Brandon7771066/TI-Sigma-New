@@ -3,15 +3,12 @@ Copyright (c) 2022 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
 
-public import Mathlib.Init
+import Lean.Data.Json.FromToJson
 
 /-!
 # Json serialization typeclass for `PUnit` & `Fin n` & `Subtype p`
 -/
-
-public section
 
 universe u
 
@@ -19,9 +16,6 @@ universe u
 namespace Lean
 
 deriving instance FromJson, ToJson for PUnit
-
--- See https://github.com/leanprover/lean4/issues/10295
-attribute [nolint unusedArguments] Lean.instToJsonPUnit_mathlib.toJson
 
 instance {n : Nat} : FromJson (Fin n) where
   fromJson? j := do
@@ -44,5 +38,3 @@ instance {α : Type u} [FromJson α] (p : α → Prop) [DecidablePred p] : FromJ
 
 instance {α : Type u} [ToJson α] (p : α → Prop) : ToJson (Subtype p) where
   toJson x := toJson x.val
-
-end Lean

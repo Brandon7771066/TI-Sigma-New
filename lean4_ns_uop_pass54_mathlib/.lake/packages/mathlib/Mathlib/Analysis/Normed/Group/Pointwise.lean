@@ -3,11 +3,10 @@ Copyright (c) 2021 Sébastien Gouëzel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Sébastien Gouëzel, Yaël Dillies
 -/
-module
 
-public import Mathlib.Analysis.Normed.Group.Bounded
-public import Mathlib.Analysis.Normed.Group.Uniform
-public import Mathlib.Topology.MetricSpace.Thickening
+import Mathlib.Analysis.Normed.Group.Bounded
+import Mathlib.Analysis.Normed.Group.Uniform
+import Mathlib.Topology.MetricSpace.Thickening
 
 /-!
 # Properties of pointwise addition of sets in normed groups
@@ -16,8 +15,6 @@ We explore the relationships between pointwise addition of sets in normed groups
 Notably, we show that the sum of bounded sets remain bounded.
 -/
 
-public section
-
 
 open Metric Set Pointwise Topology
 
@@ -25,26 +22,24 @@ variable {E : Type*}
 
 section SeminormedGroup
 
-variable [SeminormedGroup E] {s t : Set E}
+variable [SeminormedGroup E] {ε δ : ℝ} {s t : Set E} {x y : E}
 
--- note: we can't use `LipschitzOnWith.isBounded_image2` here without adding `[IsIsometricSMul E E]`
+-- note: we can't use `LipschitzOnWith.isBounded_image2` here without adding `[IsometricSMul E E]`
 @[to_additive]
 theorem Bornology.IsBounded.mul (hs : IsBounded s) (ht : IsBounded t) : IsBounded (s * t) := by
   obtain ⟨Rs, hRs⟩ : ∃ R, ∀ x ∈ s, ‖x‖ ≤ R := hs.exists_norm_le'
   obtain ⟨Rt, hRt⟩ : ∃ R, ∀ x ∈ t, ‖x‖ ≤ R := ht.exists_norm_le'
   refine isBounded_iff_forall_norm_le'.2 ⟨Rs + Rt, ?_⟩
   rintro z ⟨x, hx, y, hy, rfl⟩
-  exact norm_mul_le_of_le' (hRs x hx) (hRt y hy)
+  exact norm_mul_le_of_le (hRs x hx) (hRt y hy)
 
 @[to_additive]
-theorem Bornology.IsBounded.of_mul (hst : IsBounded (s * t)) : IsBounded s ∨ IsBounded t := by
-  symm
-  exact AntilipschitzWith.isBounded_of_image2_left _ (fun x => (isometry_mul_left x).antilipschitz)
-    (by rwa [image2_swap])
+theorem Bornology.IsBounded.of_mul (hst : IsBounded (s * t)) : IsBounded s ∨ IsBounded t :=
+  AntilipschitzWith.isBounded_of_image2_left _ (fun x => (isometry_mul_right x).antilipschitz) hst
 
 @[to_additive]
 theorem Bornology.IsBounded.inv : IsBounded s → IsBounded s⁻¹ := by
-  simp_rw [isBounded_iff_forall_norm_le', ← image_inv_eq_inv, forall_mem_image, norm_inv']
+  simp_rw [isBounded_iff_forall_norm_le', ← image_inv, forall_mem_image, norm_inv']
   exact id
 
 @[to_additive]
@@ -55,52 +50,39 @@ end SeminormedGroup
 
 section SeminormedCommGroup
 
-variable [SeminormedCommGroup E] {δ : ℝ} {s : Set E} {x y : E}
+variable [SeminormedCommGroup E] {ε δ : ℝ} {s t : Set E} {x y : E}
 
 section EMetric
 
 open EMetric
 
 @[to_additive (attr := simp)]
-theorem infEDist_inv_inv (x : E) (s : Set E) : infEDist x⁻¹ s⁻¹ = infEDist x s := by
-  rw [← image_inv_eq_inv, infEDist_image isometry_inv]
-
-@[deprecated (since := "2026-01-08")]
-alias infEdist_neg_neg := infEDist_neg_neg
-
-@[to_additive existing, deprecated (since := "2026-01-08")]
-alias infEdist_inv_inv := infEDist_inv_inv
-
+theorem infEdist_inv_inv (x : E) (s : Set E) : infEdist x⁻¹ s⁻¹ = infEdist x s := by
+  rw [← image_inv, infEdist_image isometry_inv]
 
 @[to_additive]
-theorem infEDist_inv (x : E) (s : Set E) : infEDist x⁻¹ s = infEDist x s⁻¹ := by
-  rw [← infEDist_inv_inv, inv_inv]
-
-@[deprecated (since := "2026-01-08")]
-alias infEdist_neg := infEDist_neg
-
-@[to_additive existing, deprecated (since := "2026-01-08")]
-alias infEdist_inv := infEDist_inv
+theorem infEdist_inv (x : E) (s : Set E) : infEdist x⁻¹ s = infEdist x s⁻¹ := by
+  rw [← infEdist_inv_inv, inv_inv]
 
 @[to_additive]
-theorem ediam_mul_le (x y : Set E) : ediam (x * y) ≤ ediam x + ediam y :=
+theorem ediam_mul_le (x y : Set E) : EMetric.diam (x * y) ≤ EMetric.diam x + EMetric.diam y :=
   (LipschitzOnWith.ediam_image2_le (· * ·) _ _
-        (fun _ _ => (isometry_mul_right _).lipschitz.lipschitzOnWith) fun _ _ =>
-        (isometry_mul_left _).lipschitz.lipschitzOnWith).trans_eq <|
+        (fun _ _ => (isometry_mul_right _).lipschitz.lipschitzOnWith _) fun _ _ =>
+        (isometry_mul_left _).lipschitz.lipschitzOnWith _).trans_eq <|
     by simp only [ENNReal.coe_one, one_mul]
 
 end EMetric
 
-variable (δ s x y)
+variable (ε δ s t x y)
 
 @[to_additive (attr := simp)]
 theorem inv_thickening : (thickening δ s)⁻¹ = thickening δ s⁻¹ := by
-  simp_rw [thickening, ← infEDist_inv]
+  simp_rw [thickening, ← infEdist_inv]
   rfl
 
 @[to_additive (attr := simp)]
 theorem inv_cthickening : (cthickening δ s)⁻¹ = cthickening δ s⁻¹ := by
-  simp_rw [cthickening, ← infEDist_inv]
+  simp_rw [cthickening, ← infEdist_inv]
   rfl
 
 @[to_additive (attr := simp)]
@@ -134,7 +116,7 @@ theorem singleton_div_ball_one : {x} / ball 1 δ = ball x δ := by
   rw [singleton_div_ball, div_one]
 
 @[to_additive]
-theorem ball_one_mul_singleton : ball 1 δ * {x} = ball x δ := by simp
+theorem ball_one_mul_singleton : ball 1 δ * {x} = ball x δ := by simp [ball_mul_singleton]
 
 @[to_additive]
 theorem ball_one_div_singleton : ball 1 δ / {x} = ball x⁻¹ δ := by
@@ -179,7 +161,7 @@ theorem smul_closedBall_one : x • closedBall (1 : E) δ = closedBall x δ := b
 @[to_additive]
 theorem mul_ball_one : s * ball 1 δ = thickening δ s := by
   rw [thickening_eq_biUnion_ball]
-  convert! iUnion₂_mul (fun x (_ : x ∈ s) => { x }) (ball (1 : E) δ)
+  convert iUnion₂_mul (fun x (_ : x ∈ s) => {x}) (ball (1 : E) δ)
   · exact s.biUnion_of_singleton.symm
   ext x
   simp_rw [singleton_mul_ball, mul_one]
@@ -206,15 +188,15 @@ theorem ball_mul : ball x δ * s = x • thickening δ s := by rw [mul_comm, mul
 @[to_additive (attr := simp)]
 theorem ball_div : ball x δ / s = x • thickening δ s⁻¹ := by simp [div_eq_mul_inv]
 
-variable {δ s x y}
+variable {ε δ s t x y}
 
 @[to_additive]
 theorem IsCompact.mul_closedBall_one (hs : IsCompact s) (hδ : 0 ≤ δ) :
     s * closedBall (1 : E) δ = cthickening δ s := by
   rw [hs.cthickening_eq_biUnion_closedBall hδ]
   ext x
-  simp only [mem_mul, dist_eq_norm_div, exists_prop, mem_iUnion, mem_closedBall,
-    ← eq_div_iff_mul_eq'', div_one, exists_eq_right]
+  simp only [mem_mul, dist_eq_norm_div, exists_prop, mem_iUnion, mem_closedBall, exists_and_left,
+    mem_closedBall_one_iff, ← eq_div_iff_mul_eq'', div_one, exists_eq_right]
 
 @[to_additive]
 theorem IsCompact.div_closedBall_one (hs : IsCompact s) (hδ : 0 ≤ δ) :
@@ -237,7 +219,7 @@ theorem IsCompact.mul_closedBall (hs : IsCompact s) (hδ : 0 ≤ δ) (x : E) :
 @[to_additive]
 theorem IsCompact.div_closedBall (hs : IsCompact s) (hδ : 0 ≤ δ) (x : E) :
     s / closedBall x δ = x⁻¹ • cthickening δ s := by
-  simp [div_eq_mul_inv, hs.mul_closedBall hδ]
+  simp [div_eq_mul_inv, mul_comm, hs.mul_closedBall hδ]
 
 @[to_additive]
 theorem IsCompact.closedBall_mul (hs : IsCompact s) (hδ : 0 ≤ δ) (x : E) :
@@ -246,6 +228,6 @@ theorem IsCompact.closedBall_mul (hs : IsCompact s) (hδ : 0 ≤ δ) (x : E) :
 @[to_additive]
 theorem IsCompact.closedBall_div (hs : IsCompact s) (hδ : 0 ≤ δ) (x : E) :
     closedBall x δ * s = x • cthickening δ s := by
-  simp [hs.closedBall_mul hδ]
+  simp [div_eq_mul_inv, hs.closedBall_mul hδ]
 
 end SeminormedCommGroup

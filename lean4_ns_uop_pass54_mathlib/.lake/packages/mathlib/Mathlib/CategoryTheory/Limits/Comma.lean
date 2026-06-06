@@ -3,13 +3,11 @@ Copyright (c) 2021 Bhavik Mehta. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bhavik Mehta
 -/
-module
-
-public import Mathlib.CategoryTheory.Comma.Arrow
-public import Mathlib.CategoryTheory.Comma.Over.Basic
-public import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
-public import Mathlib.CategoryTheory.Limits.Creates
-public import Mathlib.CategoryTheory.Limits.Unit
+import Mathlib.CategoryTheory.Comma.Arrow
+import Mathlib.CategoryTheory.Comma.StructuredArrow
+import Mathlib.CategoryTheory.Limits.Constructions.EpiMono
+import Mathlib.CategoryTheory.Limits.Creates
+import Mathlib.CategoryTheory.Limits.Unit
 
 /-!
 # Limits and colimits in comma categories
@@ -22,12 +20,10 @@ category, and show that the appropriate forgetful functors create limits.
 The duals of all the above are also given.
 -/
 
-@[expose] public section
-
 
 namespace CategoryTheory
 
-open Category Limits Functor
+open Category Limits
 
 universe w' w v₁ v₂ v₃ u₁ u₂ u₃
 
@@ -45,15 +41,14 @@ variable (F : J ⥤ Comma L R)
 in the comma category. -/
 @[simps!]
 def limitAuxiliaryCone (c₁ : Cone (F ⋙ fst L R)) : Cone ((F ⋙ snd L R) ⋙ R) :=
-  (Cone.postcompose (whiskerLeft F (Comma.natTrans L R) :)).obj (L.mapCone c₁)
+  (Cones.postcompose (whiskerLeft F (Comma.natTrans L R) : _)).obj (L.mapCone c₁)
 
-set_option backward.defeqAttrib.useBackward true in
 /-- If `R` preserves the appropriate limit, then given a cone for `F ⋙ fst L R : J ⥤ L` and a
 limit cone for `F ⋙ snd L R : J ⥤ R` we can build a cone for `F` which will turn out to be a limit
 cone.
 -/
 @[simps]
-noncomputable def coneOfPreserves [PreservesLimit (F ⋙ snd L R) R] (c₁ : Cone (F ⋙ fst L R))
+def coneOfPreserves [PreservesLimit (F ⋙ snd L R) R] (c₁ : Cone (F ⋙ fst L R))
     {c₂ : Cone (F ⋙ snd L R)} (t₂ : IsLimit c₂) : Cone F where
   pt :=
     { left := c₁.pt
@@ -69,10 +64,9 @@ noncomputable def coneOfPreserves [PreservesLimit (F ⋙ snd L R) R] (c₁ : Con
         · simp [← c₁.w t]
         · simp [← c₂.w t] }
 
-set_option backward.isDefEq.respectTransparency false in
 /-- Provided that `R` preserves the appropriate limit, then the cone in `coneOfPreserves` is a
 limit. -/
-noncomputable def coneOfPreservesIsLimit [PreservesLimit (F ⋙ snd L R) R] {c₁ : Cone (F ⋙ fst L R)}
+def coneOfPreservesIsLimit [PreservesLimit (F ⋙ snd L R) R] {c₁ : Cone (F ⋙ fst L R)}
     (t₁ : IsLimit c₁) {c₂ : Cone (F ⋙ snd L R)} (t₂ : IsLimit c₂) :
     IsLimit (coneOfPreserves F c₁ t₂) where
   lift s :=
@@ -93,16 +87,15 @@ noncomputable def coneOfPreservesIsLimit [PreservesLimit (F ⋙ snd L R) R] {c�
 in the comma category. -/
 @[simps!]
 def colimitAuxiliaryCocone (c₂ : Cocone (F ⋙ snd L R)) : Cocone ((F ⋙ fst L R) ⋙ L) :=
-  (Cocone.precompose (whiskerLeft F (Comma.natTrans L R) :)).obj (R.mapCocone c₂)
+  (Cocones.precompose (whiskerLeft F (Comma.natTrans L R) : _)).obj (R.mapCocone c₂)
 
-set_option backward.defeqAttrib.useBackward true in
 /--
 If `L` preserves the appropriate colimit, then given a colimit cocone for `F ⋙ fst L R : J ⥤ L` and
 a cocone for `F ⋙ snd L R : J ⥤ R` we can build a cocone for `F` which will turn out to be a
 colimit cocone.
 -/
 @[simps]
-noncomputable def coconeOfPreserves [PreservesColimit (F ⋙ fst L R) L] {c₁ : Cocone (F ⋙ fst L R)}
+def coconeOfPreserves [PreservesColimit (F ⋙ fst L R) L] {c₁ : Cocone (F ⋙ fst L R)}
     (t₁ : IsColimit c₁) (c₂ : Cocone (F ⋙ snd L R)) : Cocone F where
   pt :=
     { left := c₁.pt
@@ -118,11 +111,9 @@ noncomputable def coconeOfPreserves [PreservesColimit (F ⋙ fst L R) L] {c₁ :
         · simp [← c₁.w t]
         · simp [← c₂.w t] }
 
-set_option backward.isDefEq.respectTransparency false in
 /-- Provided that `L` preserves the appropriate colimit, then the cocone in `coconeOfPreserves` is
 a colimit. -/
-noncomputable def coconeOfPreservesIsColimit [PreservesColimit (F ⋙ fst L R) L]
-    {c₁ : Cocone (F ⋙ fst L R)}
+def coconeOfPreservesIsColimit [PreservesColimit (F ⋙ fst L R) L] {c₁ : Cocone (F ⋙ fst L R)}
     (t₁ : IsColimit c₁) {c₂ : Cocone (F ⋙ snd L R)} (t₂ : IsColimit c₂) :
     IsColimit (coconeOfPreserves F t₁ c₂) where
   desc s :=
@@ -161,25 +152,10 @@ instance hasColimitsOfSize [HasColimitsOfSize.{w, w'} A] [HasColimitsOfSize.{w, 
     [PreservesColimitsOfSize.{w, w'} L] : HasColimitsOfSize.{w, w'} (Comma L R) :=
   ⟨fun _ _ => inferInstance⟩
 
-instance preservesColimitsOfShape_fst [HasColimitsOfShape J A] [HasColimitsOfShape J B]
-    [PreservesColimitsOfShape J L] : PreservesColimitsOfShape J (Comma.fst L R) where
-  preservesColimit :=
-    preservesColimit_of_preserves_colimit_cocone
-      (coconeOfPreservesIsColimit _ (colimit.isColimit _) (colimit.isColimit _))
-      (colimit.isColimit _)
-
-instance preservesColimitsOfShape_snd [HasColimitsOfShape J A] [HasColimitsOfShape J B]
-    [PreservesColimitsOfShape J L] : PreservesColimitsOfShape J (Comma.snd L R) where
-  preservesColimit :=
-    preservesColimit_of_preserves_colimit_cocone
-      (coconeOfPreservesIsColimit _ (colimit.isColimit _) (colimit.isColimit _))
-      (colimit.isColimit _)
-
 end Comma
 
 namespace Arrow
 
-set_option backward.isDefEq.respectTransparency false in
 instance hasLimit (F : J ⥤ Arrow T) [i₁ : HasLimit (F ⋙ leftFunc)] [i₂ : HasLimit (F ⋙ rightFunc)] :
     HasLimit F := by
   haveI : HasLimit (F ⋙ Comma.fst _ _) := i₁
@@ -191,7 +167,6 @@ instance hasLimitsOfShape [HasLimitsOfShape J T] : HasLimitsOfShape J (Arrow T) 
 instance hasLimits [HasLimits T] : HasLimits (Arrow T) :=
   ⟨fun _ _ => inferInstance⟩
 
-set_option backward.isDefEq.respectTransparency false in
 instance hasColimit (F : J ⥤ Arrow T) [i₁ : HasColimit (F ⋙ leftFunc)]
     [i₂ : HasColimit (F ⋙ rightFunc)] : HasColimit F := by
   haveI : HasColimit (F ⋙ Comma.fst _ _) := i₁
@@ -203,24 +178,12 @@ instance hasColimitsOfShape [HasColimitsOfShape J T] : HasColimitsOfShape J (Arr
 instance hasColimits [HasColimits T] : HasColimits (Arrow T) :=
   ⟨fun _ _ => inferInstance⟩
 
-instance preservesColimitsOfShape_leftFunc [HasColimitsOfShape J T] :
-    PreservesColimitsOfShape J (Arrow.leftFunc : _ ⥤ T) := by
-  apply Comma.preservesColimitsOfShape_fst
-
-instance preservesColimitsOfShape_rightFunc [HasColimitsOfShape J T] :
-    PreservesColimitsOfShape J (Arrow.rightFunc : _ ⥤ T) := by
-  apply Comma.preservesColimitsOfShape_snd
-
 end Arrow
 
 namespace StructuredArrow
 
 variable {X : T} {G : A ⥤ T} (F : J ⥤ StructuredArrow X G)
 
-instance [G.Faithful] [G.Full] {Y : A} : HasInitial (StructuredArrow (G.obj Y) G) :=
-  StructuredArrow.mkIdInitial.hasInitial
-
-set_option backward.isDefEq.respectTransparency false in
 instance hasLimit [i₁ : HasLimit (F ⋙ proj X G)] [i₂ : PreservesLimit (F ⋙ proj X G) G] :
     HasLimit F := by
   haveI : HasLimit (F ⋙ Comma.snd (Functor.fromPUnit X) G) := i₁
@@ -234,20 +197,19 @@ instance hasLimitsOfSize [HasLimitsOfSize.{w, w'} A] [PreservesLimitsOfSize.{w, 
     HasLimitsOfSize.{w, w'} (StructuredArrow X G) :=
   ⟨fun J hJ => by infer_instance⟩
 
-set_option backward.isDefEq.respectTransparency false in
 noncomputable instance createsLimit [i : PreservesLimit (F ⋙ proj X G) G] :
     CreatesLimit F (proj X G) :=
   letI : PreservesLimit (F ⋙ Comma.snd (Functor.fromPUnit X) G) G := i
   createsLimitOfReflectsIso fun _ t =>
     { liftedCone := Comma.coneOfPreserves F punitCone t
       makesLimit := Comma.coneOfPreservesIsLimit _ punitConeIsLimit _
-      validLift := Cone.ext (Iso.refl _) fun _ => (id_comp _).symm }
+      validLift := Cones.ext (Iso.refl _) fun _ => (id_comp _).symm }
 
 noncomputable instance createsLimitsOfShape [PreservesLimitsOfShape J G] :
     CreatesLimitsOfShape J (proj X G) where
 
 noncomputable instance createsLimitsOfSize [PreservesLimitsOfSize.{w, w'} G] :
-    CreatesLimitsOfSize.{w, w'} (proj X G :) where
+    CreatesLimitsOfSize.{w, w'} (proj X G : _) where
 
 instance mono_right_of_mono [HasPullbacks A] [PreservesLimitsOfShape WalkingCospan G]
     {Y Z : StructuredArrow X G} (f : Y ⟶ Z) [Mono f] : Mono f.right :=
@@ -263,11 +225,6 @@ namespace CostructuredArrow
 
 variable {G : A ⥤ T} {X : T} (F : J ⥤ CostructuredArrow G X)
 
-instance hasTerminal [G.Faithful] [G.Full] {Y : A} :
-    HasTerminal (CostructuredArrow G (G.obj Y)) :=
-  CostructuredArrow.mkIdTerminal.hasTerminal
-
-set_option backward.isDefEq.respectTransparency false in
 instance hasColimit [i₁ : HasColimit (F ⋙ proj G X)] [i₂ : PreservesColimit (F ⋙ proj G X) G] :
     HasColimit F := by
   haveI : HasColimit (F ⋙ Comma.fst G (Functor.fromPUnit X)) := i₁
@@ -281,20 +238,19 @@ instance hasColimitsOfSize [HasColimitsOfSize.{w, w'} A] [PreservesColimitsOfSiz
     HasColimitsOfSize.{w, w'} (CostructuredArrow G X) :=
   ⟨fun _ _ => inferInstance⟩
 
-set_option backward.isDefEq.respectTransparency false in
 noncomputable instance createsColimit [i : PreservesColimit (F ⋙ proj G X) G] :
     CreatesColimit F (proj G X) :=
   letI : PreservesColimit (F ⋙ Comma.fst G (Functor.fromPUnit X)) G := i
   createsColimitOfReflectsIso fun _ t =>
     { liftedCocone := Comma.coconeOfPreserves F t punitCocone
       makesColimit := Comma.coconeOfPreservesIsColimit _ _ punitCoconeIsColimit
-      validLift := Cocone.ext (Iso.refl _) fun _ => comp_id _ }
+      validLift := Cocones.ext (Iso.refl _) fun _ => comp_id _ }
 
 noncomputable instance createsColimitsOfShape [PreservesColimitsOfShape J G] :
     CreatesColimitsOfShape J (proj G X) where
 
 noncomputable instance createsColimitsOfSize [PreservesColimitsOfSize.{w, w'} G] :
-    CreatesColimitsOfSize.{w, w'} (proj G X :) where
+    CreatesColimitsOfSize.{w, w'} (proj G X : _) where
 
 instance epi_left_of_epi [HasPushouts A] [PreservesColimitsOfShape WalkingSpan G]
     {Y Z : CostructuredArrow G X} (f : Y ⟶ Z) [Epi f] : Epi f.left :=
@@ -305,17 +261,5 @@ theorem epi_iff_epi_left [HasPushouts A] [PreservesColimitsOfShape WalkingSpan G
   ⟨fun _ => inferInstance, fun _ => epi_of_epi_left f⟩
 
 end CostructuredArrow
-
-namespace Over
-
-instance {X : T} : HasTerminal (Over X) := CostructuredArrow.hasTerminal
-
-end Over
-
-namespace Under
-
-instance {X : T} : HasInitial (Under X) := Under.mkIdInitial.hasInitial
-
-end Under
 
 end CategoryTheory

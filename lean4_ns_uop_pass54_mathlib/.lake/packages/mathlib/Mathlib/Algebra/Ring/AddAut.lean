@@ -3,12 +3,8 @@ Copyright (c) 2022 Yury Kudryashov. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yury Kudryashov
 -/
-module
-
-public import Mathlib.Algebra.GroupWithZero.Action.Basic
-public import Mathlib.Algebra.GroupWithZero.Action.Units
-public import Mathlib.Algebra.Group.Units.Opposite
-public import Mathlib.Algebra.Module.Opposite
+import Mathlib.GroupTheory.GroupAction.Group
+import Mathlib.Algebra.Module.Defs
 
 /-!
 # Multiplication on the left/right as additive automorphisms
@@ -20,16 +16,14 @@ See also `AddMonoidHom.mulLeft`, `AddMonoidHom.mulRight`, `AddMonoid.End.mulLeft
 `Rˣ` as an automorphism.
 -/
 
-@[expose] public section
-
 
 namespace AddAut
 
 variable {R : Type*} [Semiring R]
 
 /-- Left multiplication by a unit of a semiring as an additive automorphism. -/
-@[simps! +simpRhs]
-def mulLeft : Rˣ →* Multiplicative (AddAut R) :=
+@[simps! (config := { simpRhs := true })]
+def mulLeft : Rˣ →* AddAut R :=
   DistribMulAction.toAddAut _ _
 
 /-- Right multiplication by a unit of a semiring as an additive automorphism. -/

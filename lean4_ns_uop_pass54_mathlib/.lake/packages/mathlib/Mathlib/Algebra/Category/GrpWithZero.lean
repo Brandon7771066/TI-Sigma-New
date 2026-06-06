@@ -3,11 +3,9 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Category.MonCat.Basic
-public import Mathlib.Algebra.GroupWithZero.WithZero
-public import Mathlib.CategoryTheory.Category.Bipointed
+import Mathlib.Algebra.Category.MonCat.Basic
+import Mathlib.Algebra.GroupWithZero.WithZero
+import Mathlib.CategoryTheory.Category.Bipointed
 
 /-!
 # The category of groups with zero
@@ -15,28 +13,25 @@ public import Mathlib.CategoryTheory.Category.Bipointed
 This file defines `GrpWithZero`, the category of groups with zero.
 -/
 
-@[expose] public section
-
-assert_not_exists Ring
-
 universe u
 
-open CategoryTheory
+open CategoryTheory Order
 
 /-- The category of groups with zero. -/
-structure GrpWithZero where
-  /-- Construct a bundled `GrpWithZero` from a `GroupWithZero`. -/
-  of ::
-  /-- The underlying group with zero. -/
-  carrier : Type*
-  [str : GroupWithZero carrier]
-
-attribute [instance] GrpWithZero.str
+def GrpWithZero :=
+  Bundled GroupWithZero
 
 namespace GrpWithZero
 
 instance : CoeSort GrpWithZero Type* :=
-  ⟨carrier⟩
+  Bundled.coeSort
+
+instance (X : GrpWithZero) : GroupWithZero X :=
+  X.str
+
+/-- Construct a bundled `GrpWithZero` from a `GroupWithZero`. -/
+def of (α : Type*) [GroupWithZero α] : GrpWithZero :=
+  Bundled.of α
 
 instance : Inhabited GrpWithZero :=
   ⟨of (WithZero PUnit)⟩
@@ -45,30 +40,30 @@ instance : LargeCategory.{u} GrpWithZero where
   Hom X Y := MonoidWithZeroHom X Y
   id X := MonoidWithZeroHom.id X
   comp f g := g.comp f
+  id_comp := MonoidWithZeroHom.comp_id
+  comp_id := MonoidWithZeroHom.id_comp
+  assoc _ _ _ := MonoidWithZeroHom.comp_assoc _ _ _
 
-instance groupWithZeroConcreteCategory : ConcreteCategory GrpWithZero (MonoidWithZeroHom · ·) where
-  hom f := f
-  ofHom f := f
-
-/-- Typecheck a `MonoidWithZeroHom` as a morphism in `GrpWithZero`. -/
-abbrev ofHom {X Y : Type u} [GroupWithZero X] [GroupWithZero Y]
-    (f : MonoidWithZeroHom X Y) : of X ⟶ of Y :=
-  ConcreteCategory.ofHom f
-
-@[simp]
-lemma hom_id {X : GrpWithZero} : ConcreteCategory.hom (𝟙 X : X ⟶ X) = MonoidWithZeroHom.id X := rfl
-
-@[simp]
-lemma hom_comp {X Y Z : GrpWithZero} {f : X ⟶ Y} {g : Y ⟶ Z} :
-    ConcreteCategory.hom (f ≫ g) = g.comp f := rfl
+instance {M N : GrpWithZero} : FunLike (M ⟶ N) M N :=
+  ⟨fun f => f.toFun, fun f g h => by
+    cases f
+    cases g
+    congr
+    apply DFunLike.coe_injective'
+    exact h⟩
 
 lemma coe_id {X : GrpWithZero} : (𝟙 X : X → X) = id := rfl
 
 lemma coe_comp {X Y Z : GrpWithZero} {f : X ⟶ Y} {g : Y ⟶ Z} : (f ≫ g : X → Z) = g ∘ f := rfl
 
+instance groupWithZeroConcreteCategory : ConcreteCategory GrpWithZero where
+  forget :=
+  { obj := fun G => G
+    map := fun f => f.toFun }
+  forget_faithful := ⟨fun h => DFunLike.coe_injective h⟩
+
 @[simp] lemma forget_map {X Y : GrpWithZero} (f : X ⟶ Y) :
-    (forget GrpWithZero).map f = (f : _ → _) :=
-  rfl
+  (forget GrpWithZero).map f = f := rfl
 
 instance hasForgetToBipointed : HasForget₂ GrpWithZero Bipointed where
   forget₂ :=
@@ -77,14 +72,14 @@ instance hasForgetToBipointed : HasForget₂ GrpWithZero Bipointed where
 
 instance hasForgetToMon : HasForget₂ GrpWithZero MonCat where
   forget₂ :=
-      { obj := fun X => MonCat.of X
-        map := fun f => MonCat.ofHom f.toMonoidHom }
+      { obj := fun X => ⟨ X , _ ⟩
+        map := fun f => f.toMonoidHom }
 
 /-- Constructs an isomorphism of groups with zero from a group isomorphism between them. -/
 @[simps]
 def Iso.mk {α β : GrpWithZero.{u}} (e : α ≃* β) : α ≅ β where
-  hom := ofHom (.ofClass e)
-  inv := ofHom (.ofClass e.symm)
+  hom := (e : α →*₀ β)
+  inv := (e.symm : β →*₀ α)
   hom_inv_id := by
     ext
     exact e.symm_apply_apply _

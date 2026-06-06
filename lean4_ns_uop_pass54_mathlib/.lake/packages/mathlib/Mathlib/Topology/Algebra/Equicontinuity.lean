@@ -3,16 +3,11 @@ Copyright (c) 2022 Anatole Dedecker. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Anatole Dedecker
 -/
-module
-
-public import Mathlib.Topology.Algebra.UniformConvergence
-public import Mathlib.Topology.UniformSpace.Equicontinuity
+import Mathlib.Topology.Algebra.UniformConvergence
 
 /-!
-# Algebra-related equicontinuity criteria
+# Algebra-related equicontinuity criterions
 -/
-
-public section
 
 
 open Function
@@ -21,7 +16,7 @@ open UniformConvergence
 
 @[to_additive]
 theorem equicontinuous_of_equicontinuousAt_one {ι G M hom : Type*} [TopologicalSpace G]
-    [UniformSpace M] [Group G] [Group M] [IsTopologicalGroup G] [IsUniformGroup M]
+    [UniformSpace M] [Group G] [Group M] [TopologicalGroup G] [UniformGroup M]
     [FunLike hom G M] [MonoidHomClass hom G M] (F : ι → hom)
     (hf : EquicontinuousAt ((↑) ∘ F) (1 : G)) :
     Equicontinuous ((↑) ∘ F) := by
@@ -35,7 +30,7 @@ theorem equicontinuous_of_equicontinuousAt_one {ι G M hom : Type*} [Topological
 
 @[to_additive]
 theorem uniformEquicontinuous_of_equicontinuousAt_one {ι G M hom : Type*} [UniformSpace G]
-    [UniformSpace M] [Group G] [Group M] [IsUniformGroup G] [IsUniformGroup M]
+    [UniformSpace M] [Group G] [Group M] [UniformGroup G] [UniformGroup M]
     [FunLike hom G M] [MonoidHomClass hom G M]
     (F : ι → hom) (hf : EquicontinuousAt ((↑) ∘ F) (1 : G)) :
     UniformEquicontinuous ((↑) ∘ F) := by

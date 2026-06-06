@@ -3,10 +3,8 @@ Copyright (c) 2018 Jeremy Avigad. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jeremy Avigad, Simon Hudon
 -/
-module
-
-public import Mathlib.Control.Functor.Multivariate
-public import Mathlib.Data.PFunctor.Univariate.Basic
+import Mathlib.Control.Functor.Multivariate
+import Mathlib.Data.PFunctor.Univariate.Basic
 
 /-!
 # Multivariate polynomial functors.
@@ -16,8 +14,6 @@ They map a type vector `α` to the type `Σ a : A, B a ⟹ α`, with `A : Type` 
 `B : A → TypeVec n`. They interact well with Lean's inductive definitions because
 they guarantee that occurrences of `α` are positive.
 -/
-
-@[expose] public section
 
 
 universe u v
@@ -113,7 +109,7 @@ end Const
 /-- Functor composition on polynomial functors -/
 def comp (P : MvPFunctor.{u} n) (Q : Fin2 n → MvPFunctor.{u} m) : MvPFunctor m where
   A := Σ a₂ : P.1, ∀ i, P.2 a₂ i → (Q i).1
-  B a i := Σ (j : _) (b : P.2 a.1 j), (Q j).2 (a.snd j b) i
+  B a i := Σ(j : _) (b : P.2 a.1 j), (Q j).2 (a.snd j b) i
 
 variable {P} {Q : Fin2 n → MvPFunctor.{u} m} {α β : TypeVec.{u} m}
 
@@ -144,7 +140,7 @@ theorem liftP_iff {α : TypeVec n} (p : ∀ ⦃i⦄, α i → Prop) (x : P α) :
     LiftP p x ↔ ∃ a f, x = ⟨a, f⟩ ∧ ∀ i j, p (f i j) := by
   constructor
   · rintro ⟨y, hy⟩
-    rcases h : y with ⟨a, f⟩
+    cases' h : y with a f
     refine ⟨a, fun i j => (f i j).val, ?_, fun i j => (f i j).property⟩
     rw [← hy, h, map_eq]
     rfl
@@ -154,17 +150,17 @@ theorem liftP_iff {α : TypeVec n} (p : ∀ ⦃i⦄, α i → Prop) (x : P α) :
 
 theorem liftP_iff' {α : TypeVec n} (p : ∀ ⦃i⦄, α i → Prop) (a : P.A) (f : P.B a ⟹ α) :
     @LiftP.{u} _ P.Obj _ α p ⟨a, f⟩ ↔ ∀ i x, p (f i x) := by
-  simp only [liftP_iff]; constructor
+  simp only [liftP_iff, Sigma.mk.inj_iff]; constructor
   · rintro ⟨_, _, ⟨⟩, _⟩
     assumption
   · intro
-    repeat' first | constructor | assumption
+    repeat' first |constructor|assumption
 
 theorem liftR_iff {α : TypeVec n} (r : ∀ ⦃i⦄, α i → α i → Prop) (x y : P α) :
     LiftR @r x y ↔ ∃ a f₀ f₁, x = ⟨a, f₀⟩ ∧ y = ⟨a, f₁⟩ ∧ ∀ i j, r (f₀ i j) (f₁ i j) := by
   constructor
   · rintro ⟨u, xeq, yeq⟩
-    rcases h : u with ⟨a, f⟩
+    cases' h : u with a f
     use a, fun i j => (f i j).val.fst, fun i j => (f i j).val.snd
     constructor
     · rw [← xeq, h]
@@ -175,9 +171,13 @@ theorem liftR_iff {α : TypeVec n} (r : ∀ ⦃i⦄, α i → α i → Prop) (x 
     intro i j
     exact (f i j).property
   rintro ⟨a, f₀, f₁, xeq, yeq, h⟩
-  exact ⟨⟨a, fun i j => ⟨(f₀ i j, f₁ i j), h i j⟩⟩, xeq.symm, yeq.symm⟩
+  use ⟨a, fun i j => ⟨(f₀ i j, f₁ i j), h i j⟩⟩
+  dsimp; constructor
+  · rw [xeq]
+    rfl
+  rw [yeq]; rfl
 
-open Set
+open Set MvFunctor
 
 theorem supp_eq {α : TypeVec n} (a : P.A) (f : P.B a ⟹ α) (i) :
     @supp.{u} _ P.Obj _ α (⟨a, f⟩ : P α) i = f i '' univ := by

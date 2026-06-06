@@ -3,42 +3,37 @@ Copyright (c) 2024 Lean FRO LLC. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kim Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.Monoidal.Comon_
+import Mathlib.CategoryTheory.Monoidal.Comon_
 
 /-!
 # The convolution monoid.
 
-When `M : Comon C` and `N : Mon C`, the morphisms `M.X ⟶ N.X` form a monoid (in Type).
+When `M : Comon_ C` and `N : Mon_ C`, the morphisms `M.X ⟶ N.X` form a monoid (in Type).
 -/
-
-@[expose] public section
 
 universe v₁ u₁
 namespace CategoryTheory
 open MonoidalCategory
-open MonObj ComonObj
 variable {C : Type u₁} [Category.{v₁} C] [MonoidalCategory C]
 
 /--
-The morphisms in `C` between the underlying objects of a pair of bimonoids in `C` naturally have a
+The morphisms in `C` between the underlying objects of a pair of bimonoids in `C` naturally has a
 (set-theoretic) monoid structure. -/
-def Conv (M N : C) : Type v₁ := M ⟶ N
+def Conv (M : Comon_ C) (N : Mon_ C) : Type v₁ := M.X ⟶ N.X
 
 namespace Conv
 
-variable {M : C} {N : C} [ComonObj M] [MonObj N]
+variable {M : Comon_ C} {N : Mon_ C}
 
 instance : One (Conv M N) where
-  one := ε[M] ≫ η[N]
+  one := M.counit ≫ N.one
 
-theorem one_eq : (1 : Conv M N) = ε[M] ≫ η[N] := rfl
+theorem one_eq : (1 : Conv M N) = M.counit ≫ N.one := rfl
 
 instance : Mul (Conv M N) where
-  mul := fun f g => Δ[M] ≫ f ▷ M ≫ N ◁ g ≫ μ[N]
+  mul := fun f g => M.comul ≫ f ▷ M.X ≫ N.X ◁ g ≫ N.mul
 
-theorem mul_eq (f g : Conv M N) : f * g = Δ[M] ≫ f ▷ M ≫ N ◁ g ≫ μ[N] := rfl
+theorem mul_eq (f g : Conv M N) : f * g = M.comul ≫ f ▷ M.X ≫ N.X ◁ g ≫ N.mul := rfl
 
 instance : Monoid (Conv M N) where
   one_mul f := by simp [one_eq, mul_eq, ← whisker_exchange_assoc]
@@ -51,6 +46,14 @@ instance : Monoid (Conv M N) where
       rw [← whisker_exchange]
     slice_rhs 2 3 =>
       rw [← whisker_exchange]
+    slice_rhs 1 2 =>
+      rw [M.comul_assoc]
+    slice_rhs 3 4 =>
+      rw [← associator_naturality_left]
+    slice_lhs 6 7 =>
+      rw [← associator_inv_naturality_right]
+    slice_lhs 8 9 =>
+      rw [N.mul_assoc]
     simp
 
 end Conv

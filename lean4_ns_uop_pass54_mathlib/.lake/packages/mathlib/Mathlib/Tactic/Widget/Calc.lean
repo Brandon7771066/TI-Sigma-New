@@ -3,19 +3,10 @@ Copyright (c) 2023 Patrick Massot. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Patrick Massot
 -/
-module
+import Lean.Elab.Tactic.Calc
 
-public meta import Lean.Elab.Tactic.Calc
-public meta import Lean.Meta.Tactic.TryThis
-
-public meta import Mathlib.Data.String.Defs
-public meta import Mathlib.Tactic.Widget.SelectPanelUtils
-public meta import Batteries.CodeAction.Attr
-public import Batteries.CodeAction.Attr
-public import Lean.Server.Rpc.RequestHandling
-public import Mathlib.Tactic.Widget.SelectPanelUtils
-public import ProofWidgets.Component.Basic
-public import ProofWidgets.Component.OfRpcMethod
+import Mathlib.Data.String.Defs
+import Mathlib.Tactic.Widget.SelectPanelUtils
 
 /-! # Calc widget
 
@@ -23,10 +14,8 @@ This file redefines the `calc` tactic so that it displays a widget panel allowin
 new calc steps with holes specified by selected sub-expressions in the goal.
 -/
 
-public meta section
-
 section code_action
-open Batteries.CodeAction
+open Std CodeAction
 open Lean Server RequestM
 
 /-- Code action to create a `calc` tactic from the current goal. -/
@@ -66,16 +55,18 @@ structure CalcParams extends SelectInsertParams where
   indent : Nat
   deriving SelectInsertParamsClass, RpcEncodable
 
+open Lean Meta
+
 /-- Return the link text and inserted text above and below of the calc widget. -/
 def suggestSteps (pos : Array Lean.SubExpr.GoalsLocation) (goalType : Expr) (params : CalcParams) :
-    MetaM (String × String × Option (String.Pos.Raw × String.Pos.Raw)) := do
+    MetaM (String × String × Option (String.Pos × String.Pos)) := do
   let subexprPos := getGoalLocations pos
   let some (rel, lhs, rhs) ← Lean.Elab.Term.getCalcRelation? goalType |
       throwError "invalid 'calc' step, relation expected{indentExpr goalType}"
   let relApp := mkApp2 rel
     (← mkFreshExprMVar none)
     (← mkFreshExprMVar none)
-  let some relStr := ((← Meta.ppExpr relApp) |> toString |>.splitOn)[1]?
+  let some relStr := (← Meta.ppExpr relApp) |> toString |>.splitOn |>.get? 1
     | throwError "could not find relation symbol in {relApp}"
   let isSelectedLeft := subexprPos.any (fun L ↦ #[0, 1].isPrefixOf L.toArray)
   let isSelectedRight := subexprPos.any (fun L ↦ #[1].isPrefixOf L.toArray)
@@ -83,8 +74,7 @@ def suggestSteps (pos : Array Lean.SubExpr.GoalsLocation) (goalType : Expr) (par
   let mut goalType := goalType
   for pos in subexprPos do
     goalType ← insertMetaVar goalType pos
-  let some (_, newLhs, newRhs) ← Lean.Elab.Term.getCalcRelation? goalType |
-      throwError "invalid 'calc' step, relation expected{indentExpr goalType}"
+  let some (_, newLhs, newRhs) ← Lean.Elab.Term.getCalcRelation? goalType | unreachable!
 
   let lhsStr := (toString <| ← Meta.ppExpr lhs).renameMetaVar
   let newLhsStr := (toString <| ← Meta.ppExpr newLhs).renameMetaVar
@@ -117,14 +107,14 @@ def suggestSteps (pos : Array Lean.SubExpr.GoalsLocation) (goalType : Expr) (par
   | true, true => "Create two new steps"
   | true, false | false, true => "Create a new step"
   | false, false => "This should not happen"
-  let pos : String.Pos.Raw := insertedCode.find (fun c => c == '?') |>.offset
+  let pos : String.Pos := insertedCode.find (fun c => c == '?')
   return (stepInfo, insertedCode, some (pos, ⟨pos.byteIdx + 2⟩) )
 
 /-- Rpc function for the calc widget. -/
 @[server_rpc_method]
 def CalcPanel.rpc := mkSelectionPanelRPC suggestSteps
-  "Please select subterms using Shift-click."
-  "Calc 🔍️"
+  "Please select subterms."
+  "Calc 🔍"
 
 /-- The calc widget. -/
 @[widget_module]
@@ -132,28 +122,21 @@ def CalcPanel : Component CalcParams :=
   mk_rpc_widget% CalcPanel.rpc
 
 namespace Lean.Elab.Tactic
-
-open Lean Meta Tactic TryThis in
-/-- Create a `calc` proof. -/
-elab stx:"calc?" : tactic => withMainContext do
-  let goalType ← whnfR (← getMainTarget)
-  unless (← Lean.Elab.Term.getCalcRelation? goalType).isSome do
-    throwError "Cannot start a calculation here: the goal{indentExpr goalType}\nis not a relation."
-  let s ← `(tactic| calc $(← Lean.PrettyPrinter.delab (← getMainTarget)) := by sorry)
-  addSuggestions stx #[.suggestion s] (header := "Create calc tactic:")
-  evalTactic (← `(tactic|sorry))
+open Meta
 
 /-- Elaborator for the `calc` tactic mode variant with widgets. -/
 elab_rules : tactic
-| `(tactic|calc%$calcstx $steps) => do
+| `(tactic|calc%$calcstx $stx) => do
+  let steps : TSyntax ``calcSteps := ⟨stx⟩
+  let some calcRange := (← getFileMap).rangeOfStx? calcstx | unreachable!
+  let indent := calcRange.start.character
   let mut isFirst := true
-  for step in ← Lean.Elab.Term.mkCalcStepViews steps do
-    let some replaceRange := (← getFileMap).lspRangeOfStx? step.ref | continue
+  for step in ← Lean.Elab.Term.getCalcSteps steps do
+    let some replaceRange := (← getFileMap).rangeOfStx? step | unreachable!
+    let `(calcStep| $(_) := $proofTerm) := step | unreachable!
     let json := json% {"replaceRange": $(replaceRange),
                         "isFirst": $(isFirst),
-                        "indent": $(replaceRange.start.character)}
-    Widget.savePanelWidgetInfo CalcPanel.javascriptHash (pure json) step.proof
+                        "indent": $(indent)}
+    Widget.savePanelWidgetInfo CalcPanel.javascriptHash (pure json) proofTerm
     isFirst := false
-  evalCalc (← `(tactic|calc%$calcstx $steps))
-
-end Lean.Elab.Tactic
+  evalCalc (← `(tactic|calc%$calcstx $stx))

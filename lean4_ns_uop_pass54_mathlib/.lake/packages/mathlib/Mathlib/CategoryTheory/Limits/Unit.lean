@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2020 Kim Morrison. All rights reserved.
+Copyright (c) 2020 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.PUnit
-public import Mathlib.CategoryTheory.Limits.HasLimits
+import Mathlib.CategoryTheory.PUnit
+import Mathlib.CategoryTheory.Limits.HasLimits
 
 /-!
 # `Discrete PUnit` has limits and colimits
@@ -15,8 +13,6 @@ Mostly for the sake of constructing trivial examples, we show all (co)cones into
 are (co)limit (co)cones. We also show that such (co)cones exist, and that `Discrete PUnit` has all
 (co)limits.
 -/
-
-@[expose] public section
 
 
 universe v' v

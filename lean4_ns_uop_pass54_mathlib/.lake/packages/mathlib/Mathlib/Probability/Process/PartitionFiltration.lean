@@ -3,10 +3,8 @@ Copyright (c) 2024 Rémy Degenne. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Rémy Degenne
 -/
-module
-
-public import Mathlib.MeasureTheory.MeasurableSpace.CountablyGenerated
-public import Mathlib.Probability.Process.Filtration
+import Mathlib.MeasureTheory.MeasurableSpace.CountablyGenerated
+import Mathlib.Probability.Process.Filtration
 
 /-!
 # Filtration built from the finite partitions of a countably generated measurable space
@@ -36,8 +34,6 @@ function on `α`.
   space on `α`.
 
 -/
-
-@[expose] public section
 
 open MeasureTheory MeasurableSpace
 
@@ -73,7 +69,7 @@ lemma measurable_memPartitionSet_subtype (ht : ∀ n, MeasurableSet (t n)) (n : 
     (partitionFiltration ht n) _ (fun s ↦ ?_)
   rcases s with ⟨s, hs⟩
   suffices MeasurableSet[partitionFiltration ht n] {x | memPartitionSet t n x = s} by
-    convert! this
+    convert this
     ext x
     simp
   simp_rw [memPartitionSet_eq_iff _ hs]

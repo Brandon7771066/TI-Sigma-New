@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2014 Robert Y. Lewis. All rights reserved.
+Copyright (c) 2014 Robert Lewis. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Robert Y. Lewis, Leonardo de Moura, Johannes Hölzl, Mario Carneiro, Yaël Dillies
+Authors: Robert Lewis, Leonardo de Moura, Johannes Hölzl, Mario Carneiro, Yaël Dillies
 -/
-module
-
-public import Mathlib.Algebra.Ring.Defs
-public import Mathlib.Data.Rat.Init
+import Mathlib.Algebra.Ring.Defs
+import Mathlib.Data.Rat.Init
 
 /-!
 # Division (semi)rings and (semi)fields
@@ -45,20 +43,19 @@ a `GroupWithZero` lemma instead.
 field, division ring, skew field, skew-field, skewfield
 -/
 
-@[expose] public section
+-- `NeZero` should not be needed in the basic algebraic hierarchy.
+assert_not_exists NeZero
 
-assert_not_imported Mathlib.Tactic.Common
+-- Check that we have not imported `Mathlib.Tactic.Common` yet.
+assert_not_exists Mathlib.Tactic.LibrarySearch.librarySearch
 
--- `NeZero` theory should not be needed in the basic algebraic hierarchy
-assert_not_imported Mathlib.Algebra.NeZero
+assert_not_exists MonoidHom
 
-assert_not_exists MonoidHom Set
-
-open Function
+open Function Set
 
 universe u
 
-variable {K : Type*}
+variable {α β K : Type*}
 
 /-- The default definition of the coercion `ℚ≥0 → K` for a division semiring `K`.
 
@@ -85,23 +82,23 @@ itself). See also note [forgetful inheritance].
 
 If the division semiring has positive characteristic `p`, our division by zero convention forces
 `nnratCast (1 / p) = 1 / 0 = 0`. -/
-class DivisionSemiring (K : Type*) extends Semiring K, GroupWithZero K, NNRatCast K where
+class DivisionSemiring (α : Type*) extends Semiring α, GroupWithZero α, NNRatCast α where
   protected nnratCast := NNRat.castRec
   /-- However `NNRat.cast` is defined, it must be propositionally equal to `a / b`.
 
   Do not use this lemma directly. Use `NNRat.cast_def` instead. -/
-  protected nnratCast_def (q : ℚ≥0) : (NNRat.cast q : K) = q.num / q.den := by intros; rfl
+  protected nnratCast_def (q : ℚ≥0) : (NNRat.cast q : α) = q.num / q.den := by intros; rfl
   /-- Scalar multiplication by a nonnegative rational number.
 
   Unless there is a risk of a `Module ℚ≥0 _` instance diamond, write `nnqsmul := _`. This will set
   `nnqsmul` to `(NNRat.cast · * ·)` thanks to unification in the default proof of `nnqsmul_def`.
 
   Do not use directly. Instead use the `•` notation. -/
-  protected nnqsmul : ℚ≥0 → K → K
+  protected nnqsmul : ℚ≥0 → α → α
   /-- However `qsmul` is defined, it must be propositionally equal to multiplication by `Rat.cast`.
 
   Do not use this lemma directly. Use `NNRat.smul_def` instead. -/
-  protected nnqsmul_def (q : ℚ≥0) (a : K) : nnqsmul q a = NNRat.cast q * a := by intros; rfl
+  protected nnqsmul_def (q : ℚ≥0) (a : α) : nnqsmul q a = NNRat.cast q * a := by intros; rfl
 
 /-- A `DivisionRing` is a `Ring` with multiplicative inverses for nonzero elements.
 
@@ -113,48 +110,48 @@ See also note [forgetful inheritance]. Similarly, there are maps `nnratCast ℚ�
 
 If the division ring has positive characteristic `p`, our division by zero convention forces
 `ratCast (1 / p) = 1 / 0 = 0`. -/
-class DivisionRing (K : Type*)
-  extends Ring K, DivInvMonoid K, Nontrivial K, NNRatCast K, RatCast K where
+class DivisionRing (α : Type*)
+  extends Ring α, DivInvMonoid α, Nontrivial α, NNRatCast α, RatCast α where
   /-- For a nonzero `a`, `a⁻¹` is a right multiplicative inverse. -/
-  protected mul_inv_cancel : ∀ (a : K), a ≠ 0 → a * a⁻¹ = 1
+  protected mul_inv_cancel : ∀ (a : α), a ≠ 0 → a * a⁻¹ = 1
   /-- The inverse of `0` is `0` by convention. -/
-  protected inv_zero : (0 : K)⁻¹ = 0
+  protected inv_zero : (0 : α)⁻¹ = 0
   protected nnratCast := NNRat.castRec
   /-- However `NNRat.cast` is defined, it must be equal to `a / b`.
 
   Do not use this lemma directly. Use `NNRat.cast_def` instead. -/
-  protected nnratCast_def (q : ℚ≥0) : (NNRat.cast q : K) = q.num / q.den := by intros; rfl
+  protected nnratCast_def (q : ℚ≥0) : (NNRat.cast q : α) = q.num / q.den := by intros; rfl
   /-- Scalar multiplication by a nonnegative rational number.
 
   Unless there is a risk of a `Module ℚ≥0 _` instance diamond, write `nnqsmul := _`. This will set
   `nnqsmul` to `(NNRat.cast · * ·)` thanks to unification in the default proof of `nnqsmul_def`.
 
   Do not use directly. Instead use the `•` notation. -/
-  protected nnqsmul : ℚ≥0 → K → K
+  protected nnqsmul : ℚ≥0 → α → α
   /-- However `qsmul` is defined, it must be propositionally equal to multiplication by `Rat.cast`.
 
   Do not use this lemma directly. Use `NNRat.smul_def` instead. -/
-  protected nnqsmul_def (q : ℚ≥0) (a : K) : nnqsmul q a = NNRat.cast q * a := by intros; rfl
+  protected nnqsmul_def (q : ℚ≥0) (a : α) : nnqsmul q a = NNRat.cast q * a := by intros; rfl
   protected ratCast := Rat.castRec
   /-- However `Rat.cast q` is defined, it must be propositionally equal to `q.num / q.den`.
 
   Do not use this lemma directly. Use `Rat.cast_def` instead. -/
-  protected ratCast_def (q : ℚ) : (Rat.cast q : K) = q.num / q.den := by intros; rfl
+  protected ratCast_def (q : ℚ) : (Rat.cast q : α) = q.num / q.den := by intros; rfl
   /-- Scalar multiplication by a rational number.
 
   Unless there is a risk of a `Module ℚ _` instance diamond, write `qsmul := _`. This will set
   `qsmul` to `(Rat.cast · * ·)` thanks to unification in the default proof of `qsmul_def`.
 
   Do not use directly. Instead use the `•` notation. -/
-  protected qsmul : ℚ → K → K
+  protected qsmul : ℚ → α → α
   /-- However `qsmul` is defined, it must be propositionally equal to multiplication by `Rat.cast`.
 
   Do not use this lemma directly. Use `Rat.cast_def` instead. -/
-  protected qsmul_def (a : ℚ) (x : K) : qsmul a x = Rat.cast a * x := by intros; rfl
+  protected qsmul_def (a : ℚ) (x : α) : qsmul a x = Rat.cast a * x := by intros; rfl
 
 -- see Note [lower instance priority]
-instance (priority := 100) DivisionRing.toDivisionSemiring [DivisionRing K] : DivisionSemiring K :=
-  { ‹DivisionRing K› with }
+instance (priority := 100) DivisionRing.toDivisionSemiring [DivisionRing α] : DivisionSemiring α :=
+  { ‹DivisionRing α› with }
 
 /-- A `Semifield` is a `CommSemiring` with multiplicative inverses for nonzero elements.
 
@@ -165,7 +162,7 @@ itself). See also note [forgetful inheritance].
 
 If the semifield has positive characteristic `p`, our division by zero convention forces
 `nnratCast (1 / p) = 1 / 0 = 0`. -/
-class Semifield (K : Type*) extends CommSemiring K, DivisionSemiring K, CommGroupWithZero K
+class Semifield (α : Type*) extends CommSemiring α, DivisionSemiring α, CommGroupWithZero α
 
 /-- A `Field` is a `CommRing` with multiplicative inverses for nonzero elements.
 
@@ -176,28 +173,29 @@ See also note [forgetful inheritance].
 
 If the field has positive characteristic `p`, our division by zero convention forces
 `ratCast (1 / p) = 1 / 0 = 0`. -/
-@[stacks 09FD "first part"]
 class Field (K : Type u) extends CommRing K, DivisionRing K
 
 -- see Note [lower instance priority]
-instance (priority := 100) Field.toSemifield [Field K] : Semifield K := { ‹Field K› with }
+instance (priority := 100) Field.toSemifield [Field α] : Semifield α := { ‹Field α› with }
 
 namespace NNRat
-variable [DivisionSemiring K]
+variable [DivisionSemiring α]
 
-instance (priority := 100) smulDivisionSemiring : SMul ℚ≥0 K := ⟨DivisionSemiring.nnqsmul⟩
+instance (priority := 100) smulDivisionSemiring : SMul ℚ≥0 α := ⟨DivisionSemiring.nnqsmul⟩
 
-lemma cast_def (q : ℚ≥0) : (q : K) = q.num / q.den := DivisionSemiring.nnratCast_def _
-lemma smul_def (q : ℚ≥0) (a : K) : q • a = q * a := DivisionSemiring.nnqsmul_def q a
+lemma cast_def (q : ℚ≥0) : (q : α) = q.num / q.den := DivisionSemiring.nnratCast_def _
+lemma smul_def (q : ℚ≥0) (a : α) : q • a = q * a := DivisionSemiring.nnqsmul_def q a
 
-variable (K)
+variable (α)
 
-@[simp] lemma smul_one_eq_cast (q : ℚ≥0) : q • (1 : K) = q := by rw [NNRat.smul_def, mul_one]
+@[simp] lemma smul_one_eq_cast (q : ℚ≥0) : q • (1 : α) = q := by rw [NNRat.smul_def, mul_one]
+
+@[deprecated (since := "2024-05-03")] alias smul_one_eq_coe := smul_one_eq_cast
 
 end NNRat
 
 namespace Rat
-variable [DivisionRing K]
+variable [DivisionRing K] {a b : K}
 
 lemma cast_def (q : ℚ) : (q : K) = q.num / q.den := DivisionRing.ratCast_def _
 
@@ -211,6 +209,8 @@ theorem smul_def (a : ℚ) (x : K) : a • x = ↑a * x := DivisionRing.qsmul_de
 @[simp]
 theorem smul_one_eq_cast (A : Type*) [DivisionRing A] (m : ℚ) : m • (1 : A) = ↑m := by
   rw [Rat.smul_def, mul_one]
+
+@[deprecated (since := "2024-05-03")] alias smul_one_eq_coe := smul_one_eq_cast
 
 end Rat
 

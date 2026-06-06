@@ -3,92 +3,80 @@ Copyright (c) 2023 Apurva Nakade. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Apurva Nakade
 -/
-module
-
-public import Mathlib.Algebra.Module.RingHom
-public import Mathlib.Algebra.Order.Module.Defs
-public import Mathlib.Algebra.Order.Nonneg.Basic
+import Mathlib.Algebra.Module.Defs
+import Mathlib.Algebra.Order.Module.OrderedSMul
+import Mathlib.Algebra.Order.Nonneg.Ring
 
 /-!
 # Modules over nonnegative elements
 
-For an ordered ring `R`, this file proves that any (ordered) `R`-module `M` is also an (ordered)
-`R≥0`-module.
+This file defines instances and prove some properties about modules over nonnegative elements
+`{c : 𝕜 // 0 ≤ c}` of an arbitrary `OrderedSemiring 𝕜`.
 
-Among other things, these instances are useful for working with `ConvexCone`.
+These instances are useful for working with `ConvexCone`.
+
 -/
 
-public section
+variable {𝕜 𝕜' E : Type*}
+variable [OrderedSemiring 𝕜]
 
-assert_not_exists Finset
-
-variable {R S M : Type*}
-
-local notation3 "R≥0" => {c : R // 0 ≤ c}
+local notation3 "𝕜≥0" => {c : 𝕜 // 0 ≤ c}
 
 namespace Nonneg
-variable [Semiring R] [PartialOrder R]
 
 section SMul
 
-variable [SMul R S]
+variable [SMul 𝕜 𝕜']
 
-instance instSMul : SMul R≥0 S where
+instance instSMul : SMul 𝕜≥0 𝕜' where
   smul c x := c.val • x
 
 @[simp, norm_cast]
-lemma coe_smul (a : R≥0) (x : S) : (a : R) • x = a • x :=
+lemma coe_smul (a : 𝕜≥0) (x : 𝕜') : (a : 𝕜) • x = a • x :=
   rfl
 
 @[simp]
-lemma mk_smul (a) (ha) (x : S) : (⟨a, ha⟩ : R≥0) • x = a • x :=
+lemma mk_smul (a) (ha) (x : 𝕜') : (⟨a, ha⟩ : 𝕜≥0) • x = a • x :=
   rfl
 
 end SMul
 
 section IsScalarTower
 
-variable [IsOrderedRing R] [SMul R S] [SMul R M] [SMul S M] [IsScalarTower R S M]
+variable [SMul 𝕜 𝕜'] [SMul 𝕜 E] [SMul 𝕜' E] [IsScalarTower 𝕜 𝕜' E]
 
-instance instIsScalarTower : IsScalarTower R≥0 S M :=
+instance instIsScalarTower : IsScalarTower 𝕜≥0 𝕜' E :=
   SMul.comp.isScalarTower ↑Nonneg.coeRingHom
 
 end IsScalarTower
 
 section SMulWithZero
 
-variable [Zero S] [SMulWithZero R S]
+variable [Zero 𝕜'] [SMulWithZero 𝕜 𝕜']
 
-instance instSMulWithZero : SMulWithZero R≥0 S where
+instance instSMulWithZero : SMulWithZero 𝕜≥0 𝕜' where
   smul_zero _ := smul_zero _
   zero_smul _ := zero_smul _ _
 
 end SMulWithZero
 
-section IsOrderedModule
+section OrderedSMul
 
-variable [IsOrderedRing R] [AddCommMonoid M] [PartialOrder M] [IsOrderedAddMonoid M]
-  [SMulWithZero R M]
+variable [OrderedAddCommMonoid E] [SMulWithZero 𝕜 E] [hE : OrderedSMul 𝕜 E]
 
-instance instIsOrderedModule [hM : IsOrderedModule R M] : IsOrderedModule R≥0 M where
-  smul_le_smul_of_nonneg_left _b hb _a₁ _a₂ ha := hM.smul_le_smul_of_nonneg_left hb ha
-  smul_le_smul_of_nonneg_right _b hb _a₁ _a₂ ha := hM.smul_le_smul_of_nonneg_right hb ha
+instance instOrderedSMul : OrderedSMul 𝕜≥0 E :=
+  ⟨hE.1, hE.2⟩
 
-instance instIsStrictOrderedModule [hM : IsStrictOrderedModule R M] :
-    IsStrictOrderedModule R≥0 M where
-  smul_lt_smul_of_pos_left _b hb _a₁ _a₂ ha := hM.smul_lt_smul_of_pos_left hb ha
-  smul_lt_smul_of_pos_right _b hb _a₁ _a₂ ha := hM.smul_lt_smul_of_pos_right hb ha
-
-end IsOrderedModule
+end OrderedSMul
 
 section Module
 
-variable [IsOrderedRing R] [AddCommMonoid M] [Module R M]
+variable [AddCommMonoid E] [Module 𝕜 E]
 
 /-- A module over an ordered semiring is also a module over just the non-negative scalars. -/
-instance instModule : Module R≥0 M where
-  smul := instSMul.smul
-  __ := Module.compHom M coeRingHom
+instance instModule : Module 𝕜≥0 E :=
+  Module.compHom E Nonneg.coeRingHom
 
 end Module
+
 end Nonneg

@@ -1,12 +1,9 @@
 /-
-Copyright (c) 2022 Edward Ayers. All rights reserved.
+Copyright (c) 2022 E.W.Ayers. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Edward Ayers
+Authors: E.W.Ayers
 -/
-module
-
-public import Mathlib.Init
-public import Lean.Exception
+import Lean.Exception
 
 /-!
 # Additional methods for working with `Exception`s
@@ -16,8 +13,6 @@ This file contains two additional methods for working with `Exception`s
 * `isFailedToSynthesize`: check if an exception is of the "failed to synthesize" form
 
 -/
-
-@[expose] public section
 
 open Lean
 
@@ -42,7 +37,3 @@ and the only commonality is the prefix of the string, so that's what we look for
 -/
 def isFailedToSynthesize (e : Exception) : IO Bool := do
   pure <| (← e.toMessageData.toString).startsWith "failed to synthesize"
-
-end Exception
-
-end Lean

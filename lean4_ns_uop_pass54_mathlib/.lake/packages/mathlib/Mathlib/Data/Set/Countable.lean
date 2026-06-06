@@ -3,13 +3,10 @@ Copyright (c) 2017 Johannes Hölzl. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johannes Hölzl
 -/
-module
-
-public import Mathlib.Data.Countable.Basic
-public import Mathlib.Data.Set.Finite.Basic
-public import Mathlib.Data.Set.Subsingleton
-public import Mathlib.Logic.Equiv.List
-public import Mathlib.Order.Preorder.Finite
+import Mathlib.Data.Set.Finite
+import Mathlib.Data.Countable.Basic
+import Mathlib.Logic.Equiv.List
+import Mathlib.Data.Set.Subsingleton
 
 /-!
 # Countable sets
@@ -25,12 +22,9 @@ For a noncomputable conversion to `Encodable s`, use `Set.Countable.nonempty_enc
 sets, countable set
 -/
 
-@[expose] public section
-
-assert_not_exists Monoid Multiset.sort
-
 noncomputable section
 
+open scoped Classical
 open Function Set Encodable
 
 universe u v w x
@@ -72,7 +66,6 @@ theorem countable_iff_nonempty_encodable {s : Set α} : s.Countable ↔ Nonempty
 alias ⟨Countable.nonempty_encodable, _⟩ := countable_iff_nonempty_encodable
 
 /-- Convert `Set.Countable s` to `Encodable s` (noncomputable). -/
-@[implicit_reducible]
 protected def Countable.toEncodable {s : Set α} (hs : s.Countable) : Encodable s :=
   Classical.choice hs.nonempty_encodable
 
@@ -88,6 +81,7 @@ def enumerateCountable {s : Set α} (h : s.Countable) (default : α) : ℕ → �
 theorem subset_range_enumerate {s : Set α} (h : s.Countable) (default : α) :
     s ⊆ range (enumerateCountable h default) := fun x hx =>
   ⟨@Encodable.encode s h.toEncodable ⟨x, hx⟩, by
+    letI := h.toEncodable
     simp [enumerateCountable, Encodable.encodek]⟩
 
 lemma range_enumerateCountable_subset {s : Set α} (h : s.Countable) (default : α) :
@@ -107,8 +101,8 @@ lemma range_enumerateCountable_of_mem {s : Set α} (h : s.Countable) {default : 
 lemma enumerateCountable_mem {s : Set α} (h : s.Countable) {default : α} (h_mem : default ∈ s)
     (n : ℕ) :
     enumerateCountable h default n ∈ s := by
-  convert! mem_range_self n
-  exact (range_enumerateCountable_of_mem h h_mem).symm
+  conv_rhs => rw [← range_enumerateCountable_of_mem h h_mem]
+  exact mem_range_self n
 
 end Enumerate
 
@@ -116,7 +110,7 @@ theorem Countable.mono {s₁ s₂ : Set α} (h : s₁ ⊆ s₂) (hs : s₂.Count
   have := hs.to_subtype; (inclusion_injective h).countable
 
 theorem countable_range [Countable ι] (f : ι → β) : (range f).Countable :=
-  rangeFactorization_surjective.countable.to_set
+  surjective_onto_range.countable.to_set
 
 theorem countable_iff_exists_subset_range [Nonempty α] {s : Set α} :
     s.Countable ↔ ∃ f : ℕ → α, s ⊆ range f :=
@@ -134,17 +128,11 @@ protected theorem countable_iff_exists_surjective {s : Set α} (hs : s.Nonempty)
 
 alias ⟨Countable.exists_surjective, _⟩ := Set.countable_iff_exists_surjective
 
-theorem countable_univ_iff : (univ : Set α).Countable ↔ Countable α :=
-  countable_coe_iff.symm.trans (Equiv.Set.univ _).countable_iff
-
 theorem countable_univ [Countable α] : (univ : Set α).Countable :=
   to_countable univ
 
-theorem not_countable_univ_iff : ¬ (univ : Set α).Countable ↔ Uncountable α := by
-  rw [countable_univ_iff, not_countable_iff]
-
-theorem not_countable_univ [Uncountable α] : ¬ (univ : Set α).Countable :=
-  not_countable_univ_iff.2 ‹_›
+theorem countable_univ_iff : (univ : Set α).Countable ↔ Countable α :=
+  countable_coe_iff.symm.trans (Equiv.Set.univ _).countable_iff
 
 /-- If `s : Set α` is a nonempty countable set, then there exists a map
 `f : ℕ → α` such that `s = range f`. -/
@@ -162,14 +150,6 @@ theorem Countable.image {s : Set α} (hs : s.Countable) (f : α → β) : (f '' 
   rw [image_eq_range]
   have := hs.to_subtype
   apply countable_range
-
-theorem Infinite.exists_subset_countable_infinite {α : Type u} {s : Set α} (hs : s.Infinite) :
-    ∃ t ⊆ s, t.Countable ∧ t.Infinite := by
-  obtain ⟨f, hf⟩ := Infinite.natEmbedding s hs
-  refine ⟨range (Subtype.val ∘ f), ?_, ?_, ?_⟩
-  · exact fun _ ⟨y, hy⟩ ↦ hy ▸ Subtype.coe_prop (f y)
-  · exact countable_range (Subtype.val ∘ f)
-  · exact infinite_range_of_injective <| Injective.comp Subtype.val_injective hf
 
 theorem MapsTo.countable_of_injOn {s : Set α} {t : Set β} {f : α → β} (hf : MapsTo f s t)
     (hf' : InjOn f s) (ht : t.Countable) : s.Countable :=
@@ -246,7 +226,7 @@ theorem Countable.of_diff {s t : Set α} (h : (s \ t).Countable) (ht : t.Countab
 
 @[simp]
 theorem countable_insert {s : Set α} {a : α} : (insert a s).Countable ↔ s.Countable := by
-  simp only [insert_eq, countable_union, countable_singleton, true_and]
+  simp only [insert_eq, countable_union, countable_singleton, true_and_iff]
 
 protected theorem Countable.insert {s : Set α} (a : α) (h : s.Countable) : (insert a s).Countable :=
   countable_insert.2 h
@@ -277,24 +257,13 @@ theorem countable_setOf_finite_subset {s : Set α} (hs : s.Countable) :
   lift t to Finset s using ht.of_finite_image Subtype.val_injective.injOn
   exact mem_range_self _
 
-/-- The set of finite sets in a countable type is countable. -/
-theorem Countable.setOf_finite [Countable α] : {s : Set α | s.Finite}.Countable := by
-  simpa using countable_setOf_finite_subset countable_univ
-
-/-- If the codomain of a map is countable and the fibres are countable, the domain
-is countable. -/
-theorem Countable.of_preimage_singleton {f : α → β} [Countable β]
-    (h : ∀ (b : β), (f ⁻¹' {b}).Countable) : Countable α := by
-  simp_rw [← Set.countable_univ_iff, ← Set.preimage_univ (f := f), ← Set.iUnion_of_singleton,
-    Set.preimage_iUnion, Set.countable_iUnion h]
-
 theorem countable_univ_pi {π : α → Type*} [Finite α] {s : ∀ a, Set (π a)}
     (hs : ∀ a, (s a).Countable) : (pi univ s).Countable :=
   have := fun a ↦ (hs a).to_subtype; .of_equiv _ (Equiv.Set.univPi s).symm
 
 theorem countable_pi {π : α → Type*} [Finite α] {s : ∀ a, Set (π a)} (hs : ∀ a, (s a).Countable) :
     { f : ∀ a, π a | ∀ a, f a ∈ s a }.Countable := by
-  simpa only [← mem_univ_pi] using! countable_univ_pi hs
+  simpa only [← mem_univ_pi] using countable_univ_pi hs
 
 protected theorem Countable.prod {s : Set α} {t : Set β} (hs : s.Countable) (ht : t.Countable) :
     Set.Countable (s ×ˢ t) :=
@@ -318,9 +287,9 @@ theorem countable_setOf_nonempty_of_disjoint {f : β → Set α}
   have A : Injective F := by
     rintro ⟨t, ht⟩ ⟨t', ht'⟩ htt'
     have A : (f t ∩ f t').Nonempty := by
-      refine ⟨F ⟨t, ht⟩, hF ⟨t, _⟩, ?_⟩
+      refine ⟨F ⟨t, ht⟩, hF _, ?_⟩
       rw [htt']
-      exact hF ⟨t', _⟩
+      exact hF _
     simp only [Subtype.mk.injEq]
     by_contra H
     exact not_disjoint_iff_nonempty_inter.2 A (hf H)

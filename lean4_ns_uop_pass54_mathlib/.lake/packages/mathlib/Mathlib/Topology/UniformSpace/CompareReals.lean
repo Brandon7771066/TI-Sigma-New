@@ -3,11 +3,10 @@ Copyright (c) 2019 Patrick Massot. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Patrick Massot
 -/
-module
-
-public import Mathlib.Topology.Instances.Rat
-public import Mathlib.Topology.UniformSpace.AbsoluteValue
-public import Mathlib.Topology.UniformSpace.Completion
+import Mathlib.Topology.UniformSpace.AbsoluteValue
+import Mathlib.Topology.Instances.Real
+import Mathlib.Topology.Instances.Rat
+import Mathlib.Topology.UniformSpace.Completion
 
 /-!
 # Comparison of Cauchy reals and Bourbaki reals
@@ -51,8 +50,6 @@ does use ℝ).
 real numbers, completion, uniform spaces
 -/
 
-@[expose] public section
-
 
 open Set Function Filter CauSeq UniformSpace
 
@@ -63,7 +60,7 @@ theorem Rat.uniformSpace_eq :
   ext s
   rw [(AbsoluteValue.hasBasis_uniformity _).mem_iff, Metric.uniformity_basis_dist_rat.mem_iff]
   simp only [Rat.dist_eq, AbsoluteValue.abs_apply, ← Rat.cast_sub, ← Rat.cast_abs, Rat.cast_lt,
-    _root_.abs_sub_comm]
+    abs_sub_comm]
 
 /-- Cauchy reals packaged as a completion of ℚ using the absolute value route. -/
 def rationalCauSeqPkg : @AbstractCompletion ℚ <| (@AbsoluteValue.abs ℚ _).uniformSpace :=
@@ -73,10 +70,10 @@ def rationalCauSeqPkg : @AbstractCompletion ℚ <| (@AbsoluteValue.abs ℚ _).un
     (uniformStruct := by infer_instance)
     (complete := by infer_instance)
     (separation := by infer_instance)
-    (isUniformInducing := by
+    (uniformInducing := by
       rw [Rat.uniformSpace_eq]
-      exact Rat.isUniformEmbedding_coe_real.isUniformInducing)
-    (dense := Rat.isDenseEmbedding_coe_real.dense)
+      exact Rat.uniformEmbedding_coe_real.toUniformInducing)
+    (dense := Rat.denseEmbedding_coe_real.dense)
 
 namespace CompareReals
 
@@ -88,14 +85,14 @@ def Q :=
   ℚ deriving CommRing, Inhabited
 
 instance uniformSpace : UniformSpace Q :=
-  fast_instance% (@AbsoluteValue.abs ℚ _).uniformSpace
+  (@AbsoluteValue.abs ℚ _).uniformSpace
 
 /-- Real numbers constructed as in Bourbaki. -/
 def Bourbakiℝ : Type :=
   Completion Q deriving Inhabited
 
 instance Bourbaki.uniformSpace : UniformSpace Bourbakiℝ :=
-  fast_instance% Completion.uniformSpace Q
+  Completion.uniformSpace Q
 
 /-- Bourbaki reals packaged as a completion of Q using the general theory. -/
 def bourbakiPkg : AbstractCompletion Q :=

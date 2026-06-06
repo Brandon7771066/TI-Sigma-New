@@ -3,44 +3,40 @@ Copyright (c) 2021 Mario Carneiro. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Arthur Paulino, Aurélien Saue, Mario Carneiro
 -/
-module
-
-public meta import Lean.Elab.PreDefinition.Basic
-public meta import Lean.Elab.Tactic.ElabTerm
-public meta import Lean.Elab.Tactic.RCases
-public meta import Batteries.Lean.Expr
-public import Mathlib.Init
+import Lean.Elab.PreDefinition.Basic
+import Lean.Util.Paths
+import Mathlib.Lean.Expr.Basic
+import Batteries.Tactic.OpenPrivate
 
 /-!
 # Generally useful tactics.
 
 -/
 
-public meta section
-
 open Lean.Elab.Tactic
 
 namespace Lean
 
-open Elab Meta
+open Elab
 
 /--
 Return the modifiers of declaration `nm` with (optional) docstring `newDoc`.
 Currently, recursive or partial definitions are not supported, and no attributes are provided.
 -/
-def toModifiers (nm : Name) (newDoc : Option (TSyntax `Lean.Parser.Command.docComment) := none) :
+def toModifiers (nm : Name) (newDoc : Option String := none) :
     CoreM Modifiers := do
   let env ← getEnv
   let d ← getConstInfo nm
   let mods : Modifiers :=
-  { docString? := newDoc.map (·, doc.verso.get (← getOptions))
+  { docString? := newDoc
     visibility :=
     if isPrivateNameExport nm then
       Visibility.private
-    else
+    else if isProtected env nm then
       Visibility.regular
-    isProtected := isProtected env nm
-    computeKind := if (env.find? <| nm.mkStr "_cstage1").isSome then .regular else .noncomputable
+    else
+      Visibility.protected
+    isNoncomputable := if (env.find? <| nm.mkStr "_cstage1").isSome then false else true
     recKind := RecKind.default -- nonrec only matters for name resolution, so is irrelevant (?)
     isUnsafe := d.isUnsafe
     attrs := #[] }
@@ -52,14 +48,12 @@ You can provide a new type, value and (optional) docstring, but the remaining in
 from `nm`.
 Currently only implemented for definitions and theorems. Also see docstring of `toModifiers`
 -/
-def toPreDefinition (nm newNm : Name) (newType newValue : Expr)
-    (newDoc : Option (TSyntax `Lean.Parser.Command.docComment) := none) :
+def toPreDefinition (nm newNm : Name) (newType newValue : Expr) (newDoc : Option String := none) :
     CoreM PreDefinition := do
   let d ← getConstInfo nm
   let mods ← toModifiers nm newDoc
   let predef : PreDefinition :=
   { ref := Syntax.missing
-    binders := mkNullNode #[]
     kind := if d.isDef then DefKind.def else DefKind.theorem
     levelParams := d.levelParams
     modifiers := mods
@@ -73,26 +67,14 @@ def toPreDefinition (nm newNm : Name) (newType newValue : Expr)
 def setProtected {m : Type → Type} [MonadEnv m] (nm : Name) : m Unit :=
   modifyEnv (addProtected · nm)
 
-/-- Introduce variables, using rintro patterns from a specified list. -/
-def MVarId.rintroWithPats (g : MVarId) (patterns : List (TSyntax `rintroPat))
-    (numIntros? : Option Nat := none) : MetaM (List MVarId × List (TSyntax `rintroPat)) := do
-  let n ← numIntros?.getDM (return getIntrosSize (← instantiateMVars (← g.getType)))
-  if n == 0 then
-    return ([g], patterns)
-  let (pats, remaining) := patterns.splitAt n
-  let pats := pats.toArray
-  let pats := (n - pats.size).repeat (·.push (Unhygienic.run `(rintroPat| _))) pats
-  return (← RCases.rintro pats none g |>.run', remaining)
-
+open private getIntrosSize from Lean.Meta.Tactic.Intro in
 /-- Introduce variables, giving them names from a specified list. -/
-@[deprecated MVarId.rintroWithPats (since := "2026-04-17")]
 def MVarId.introsWithBinderIdents
-    (g : MVarId) (ids : List (TSyntax ``binderIdent)) (maxIntros? : Option Nat := none) :
+    (g : MVarId) (ids : List (TSyntax ``binderIdent)) :
     MetaM (List (TSyntax ``binderIdent) × Array FVarId × MVarId) := do
   let type ← g.getType
-  let type ← Lean.instantiateMVars type
+  let type ← instantiateMVars type
   let n := getIntrosSize type
-  let n := match maxIntros? with | none => n | some maxIntros => min n maxIntros
   if n == 0 then
     return (ids, #[], g)
   let mut ids := ids
@@ -207,8 +189,8 @@ def allGoals (tac : TacticM Unit) : TacticM Unit := do
           throw ex
   setGoals mvarIdsNew.toList
 
-/-- Simulates the `<;>` tactic combinator.
-First runs `tac1` and then runs `tac2` on all newly-generated subgoals.
+/-- Simulates the `<;>` tactic combinator. First runs `tac1` and then runs
+    `tac2` on all newly-generated subgoals.
 -/
 def andThenOnSubgoals (tac1 : TacticM Unit) (tac2 : TacticM Unit) : TacticM Unit :=
   focus do tac1; allGoals tac2
@@ -226,7 +208,7 @@ def iterateAtMost : Nat → m Unit → m Unit
 -/
 def iterateExactly' : Nat → m Unit → m Unit
   | 0, _ => pure ()
-  | n + 1, tac => tac *> iterateExactly' n tac
+  | n+1, tac => tac *> iterateExactly' n tac
 
 /--
 `iterateRange m n t`: Repeat the given tactic at least `m` times and
@@ -265,7 +247,7 @@ open Lean
 
 /-- Returns the root directory which contains the package root file, e.g. `Mathlib.lean`. -/
 def getPackageDir (pkg : String) : IO System.FilePath := do
-  let sp ← getSrcSearchPath
+  let sp ← initSrcSearchPath
   let root? ← sp.findM? fun p =>
     (p / pkg).isDir <||> ((p / pkg).withExtension "lean").pathExists
   if let some root := root? then return root
@@ -274,5 +256,3 @@ def getPackageDir (pkg : String) : IO System.FilePath := do
 
 /-- Returns the mathlib root directory. -/
 def getMathlibDir := getPackageDir "Mathlib"
-
-end Mathlib

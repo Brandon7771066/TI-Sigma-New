@@ -3,15 +3,11 @@ Copyright (c) 2023 Mario Carneiro, Heather Macbeth. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Mario Carneiro, Heather Macbeth
 -/
-module
-
-public import Mathlib.Init
+import Batteries.Tactic.Basic
 
 /-!
 # Environment extension for the forward-reasoning part of the `gcongr` tactic
 -/
-
-public meta section
 
 open Lean Meta Elab Tactic
 
@@ -46,8 +42,7 @@ initialize registerBuiltinAttribute {
   add := fun declName stx kind => match stx with
     | `(attr| gcongr_forward) => do
       unless kind == AttributeKind.global do
-        throwAttrMustBeGlobal `gcongr_forward kind
-      ensureAttrDeclIsMeta `gcongr_forward declName kind
+        throwError "invalid attribute 'gcongr_forward', must be global"
       let env ← getEnv
       unless (env.getModuleIdxFor? declName).isNone do
         throwError "invalid attribute 'gcongr_forward', declaration is in an imported module"
@@ -56,7 +51,3 @@ initialize registerBuiltinAttribute {
       setEnv <| forwardExt.addEntry env (declName, ext)
     | _ => throwUnsupportedSyntax
 }
-
-end GCongr
-
-end Mathlib.Tactic

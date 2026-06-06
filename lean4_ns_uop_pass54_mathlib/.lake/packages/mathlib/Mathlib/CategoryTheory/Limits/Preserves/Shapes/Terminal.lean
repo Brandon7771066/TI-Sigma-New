@@ -3,10 +3,8 @@ Copyright (c) 2020 Bhavik Mehta. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bhavik Mehta
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.Terminal
-public import Mathlib.CategoryTheory.Limits.Preserves.Basic
+import Mathlib.CategoryTheory.Limits.Shapes.Terminal
+import Mathlib.CategoryTheory.Limits.Preserves.Basic
 
 /-!
 # Preserving terminal object
@@ -17,8 +15,6 @@ to concrete objects.
 In particular, we show that `terminalComparison G` is an isomorphism iff `G` preserves terminal
 objects.
 -/
-
-@[expose] public section
 
 
 universe w v v₁ v₂ u u₁ u₂
@@ -46,12 +42,12 @@ def isLimitMapConeEmptyConeEquiv :
 /-- The property of preserving terminal objects expressed in terms of `IsTerminal`. -/
 def IsTerminal.isTerminalObj [PreservesLimit (Functor.empty.{0} C) G] (l : IsTerminal X) :
     IsTerminal (G.obj X) :=
-  isLimitMapConeEmptyConeEquiv G X (isLimitOfPreserves G l)
+  isLimitMapConeEmptyConeEquiv G X (PreservesLimit.preserves l)
 
 /-- The property of reflecting terminal objects expressed in terms of `IsTerminal`. -/
 def IsTerminal.isTerminalOfObj [ReflectsLimit (Functor.empty.{0} C) G] (l : IsTerminal (G.obj X)) :
     IsTerminal X :=
-  isLimitOfReflects G ((isLimitMapConeEmptyConeEquiv G X).symm l)
+  ReflectsLimit.reflects ((isLimitMapConeEmptyConeEquiv G X).symm l)
 
 /-- A functor that preserves and reflects terminal objects induces an equivalence on
 `IsTerminal`. -/
@@ -60,13 +56,14 @@ def IsTerminal.isTerminalIffObj [PreservesLimit (Functor.empty.{0} C) G]
     IsTerminal X ≃ IsTerminal (G.obj X) where
   toFun := IsTerminal.isTerminalObj G X
   invFun := IsTerminal.isTerminalOfObj G X
-  left_inv := by cat_disch
-  right_inv := by cat_disch
+  left_inv := by aesop_cat
+  right_inv := by aesop_cat
 
 /-- Preserving the terminal object implies preserving all limits of the empty diagram. -/
-lemma preservesLimitsOfShape_pempty_of_preservesTerminal [PreservesLimit (Functor.empty.{0} C) G] :
-    PreservesLimitsOfShape (Discrete PEmpty.{1}) G where
-  preservesLimit := preservesLimit_of_iso_diagram G (Functor.emptyExt (Functor.empty.{0} C) _)
+def preservesLimitsOfShapePemptyOfPreservesTerminal [PreservesLimit (Functor.empty.{0} C) G] :
+    PreservesLimitsOfShape (Discrete PEmpty) G where
+  preservesLimit :=
+    preservesLimitOfIsoDiagram G (Functor.emptyExt (Functor.empty.{0} C) _)
 
 variable [HasTerminal C]
 
@@ -87,27 +84,27 @@ has limits of shape `J` and `G` preserves them, then `D` does not necessarily ha
 theorem hasTerminal_of_hasTerminal_of_preservesLimit [PreservesLimit (Functor.empty.{0} C) G] :
     HasTerminal D := ⟨fun F => by
   haveI := HasLimit.mk ⟨_, isLimitOfHasTerminalOfPreservesLimit G⟩
-  apply hasLimit_of_iso F.uniqueFromEmpty.symm⟩
+  apply hasLimitOfIso F.uniqueFromEmpty.symm⟩
 
 variable [HasTerminal D]
 
 /-- If the terminal comparison map for `G` is an isomorphism, then `G` preserves terminal objects.
 -/
-lemma PreservesTerminal.of_iso_comparison [i : IsIso (terminalComparison G)] :
-    PreservesLimit (Functor.empty.{0} C) G := by
-  apply preservesLimit_of_preserves_limit_cone terminalIsTerminal
+def PreservesTerminal.ofIsoComparison [i : IsIso (terminalComparison G)] :
+    PreservesLimit (Functor.empty C) G := by
+  apply preservesLimitOfPreservesLimitCone terminalIsTerminal
   apply (isLimitMapConeEmptyConeEquiv _ _).symm _
   exact @IsLimit.ofPointIso _ _ _ _ _ _ _ (limit.isLimit (Functor.empty.{0} D)) i
 
 /-- If there is any isomorphism `G.obj ⊤ ⟶ ⊤`, then `G` preserves terminal objects. -/
-lemma preservesTerminal_of_isIso (f : G.obj (⊤_ C) ⟶ ⊤_ D) [i : IsIso f] :
-    PreservesLimit (Functor.empty.{0} C) G := by
+def preservesTerminalOfIsIso (f : G.obj (⊤_ C) ⟶ ⊤_ D) [i : IsIso f] :
+    PreservesLimit (Functor.empty C) G := by
   rw [Subsingleton.elim f (terminalComparison G)] at i
-  exact PreservesTerminal.of_iso_comparison G
+  exact PreservesTerminal.ofIsoComparison G
 
 /-- If there is any isomorphism `G.obj ⊤ ≅ ⊤`, then `G` preserves terminal objects. -/
-lemma preservesTerminal_of_iso (f : G.obj (⊤_ C) ≅ ⊤_ D) : PreservesLimit (Functor.empty.{0} C) G :=
-  preservesTerminal_of_isIso G f.hom
+def preservesTerminalOfIso (f : G.obj (⊤_ C) ≅ ⊤_ D) : PreservesLimit (Functor.empty C) G :=
+  preservesTerminalOfIsIso G f.hom
 
 variable [PreservesLimit (Functor.empty.{0} C) G]
 
@@ -137,12 +134,12 @@ def isColimitMapCoconeEmptyCoconeEquiv :
 /-- The property of preserving initial objects expressed in terms of `IsInitial`. -/
 def IsInitial.isInitialObj [PreservesColimit (Functor.empty.{0} C) G] (l : IsInitial X) :
     IsInitial (G.obj X) :=
-  isColimitMapCoconeEmptyCoconeEquiv G X (isColimitOfPreserves G l)
+  isColimitMapCoconeEmptyCoconeEquiv G X (PreservesColimit.preserves l)
 
 /-- The property of reflecting initial objects expressed in terms of `IsInitial`. -/
 def IsInitial.isInitialOfObj [ReflectsColimit (Functor.empty.{0} C) G] (l : IsInitial (G.obj X)) :
     IsInitial X :=
-  isColimitOfReflects G ((isColimitMapCoconeEmptyCoconeEquiv G X).symm l)
+  ReflectsColimit.reflects ((isColimitMapCoconeEmptyCoconeEquiv G X).symm l)
 
 /-- A functor that preserves and reflects initial objects induces an equivalence on `IsInitial`. -/
 def IsInitial.isInitialIffObj [PreservesColimit (Functor.empty.{0} C) G]
@@ -150,15 +147,14 @@ def IsInitial.isInitialIffObj [PreservesColimit (Functor.empty.{0} C) G]
     IsInitial X ≃ IsInitial (G.obj X) where
   toFun := IsInitial.isInitialObj G X
   invFun := IsInitial.isInitialOfObj G X
-  left_inv := by cat_disch
-  right_inv := by cat_disch
+  left_inv := by aesop_cat
+  right_inv := by aesop_cat
 
 /-- Preserving the initial object implies preserving all colimits of the empty diagram. -/
-lemma preservesColimitsOfShape_pempty_of_preservesInitial
-    [PreservesColimit (Functor.empty.{0} C) G] :
-    PreservesColimitsOfShape (Discrete PEmpty.{1}) G where
+def preservesColimitsOfShapePemptyOfPreservesInitial [PreservesColimit (Functor.empty.{0} C) G] :
+    PreservesColimitsOfShape (Discrete PEmpty) G where
   preservesColimit :=
-    preservesColimit_of_iso_diagram G (Functor.emptyExt (Functor.empty.{0} C) _)
+    preservesColimitOfIsoDiagram G (Functor.emptyExt (Functor.empty.{0} C) _)
 
 variable [HasInitial C]
 
@@ -179,28 +175,27 @@ theorem hasInitial_of_hasInitial_of_preservesColimit [PreservesColimit (Functor.
     HasInitial D :=
   ⟨fun F => by
     haveI := HasColimit.mk ⟨_, isColimitOfHasInitialOfPreservesColimit G⟩
-    apply hasColimit_of_iso F.uniqueFromEmpty⟩
+    apply hasColimitOfIso F.uniqueFromEmpty⟩
 
 variable [HasInitial D]
 
 /-- If the initial comparison map for `G` is an isomorphism, then `G` preserves initial objects.
 -/
-lemma PreservesInitial.of_iso_comparison [i : IsIso (initialComparison G)] :
-    PreservesColimit (Functor.empty.{0} C) G := by
-  apply preservesColimit_of_preserves_colimit_cocone initialIsInitial
+def PreservesInitial.ofIsoComparison [i : IsIso (initialComparison G)] :
+    PreservesColimit (Functor.empty C) G := by
+  apply preservesColimitOfPreservesColimitCocone initialIsInitial
   apply (isColimitMapCoconeEmptyCoconeEquiv _ _).symm _
   exact @IsColimit.ofPointIso _ _ _ _ _ _ _ (colimit.isColimit (Functor.empty.{0} D)) i
 
 /-- If there is any isomorphism `⊥ ⟶ G.obj ⊥`, then `G` preserves initial objects. -/
-lemma preservesInitial_of_isIso (f : ⊥_ D ⟶ G.obj (⊥_ C)) [i : IsIso f] :
-    PreservesColimit (Functor.empty.{0} C) G := by
+def preservesInitialOfIsIso (f : ⊥_ D ⟶ G.obj (⊥_ C)) [i : IsIso f] :
+    PreservesColimit (Functor.empty C) G := by
   rw [Subsingleton.elim f (initialComparison G)] at i
-  exact PreservesInitial.of_iso_comparison G
+  exact PreservesInitial.ofIsoComparison G
 
 /-- If there is any isomorphism `⊥ ≅ G.obj ⊥`, then `G` preserves initial objects. -/
-lemma preservesInitial_of_iso (f : ⊥_ D ≅ G.obj (⊥_ C)) :
-    PreservesColimit (Functor.empty.{0} C) G :=
-  preservesInitial_of_isIso G f.hom
+def preservesInitialOfIso (f : ⊥_ D ≅ G.obj (⊥_ C)) : PreservesColimit (Functor.empty C) G :=
+  preservesInitialOfIsIso G f.hom
 
 variable [PreservesColimit (Functor.empty.{0} C) G]
 

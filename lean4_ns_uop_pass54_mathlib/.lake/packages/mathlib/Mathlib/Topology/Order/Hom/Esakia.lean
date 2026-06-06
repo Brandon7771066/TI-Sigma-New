@@ -3,10 +3,8 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Order.Hom.Bounded
-public import Mathlib.Topology.Order.Hom.Basic
+import Mathlib.Order.Hom.Bounded
+import Mathlib.Topology.Order.Hom.Basic
 
 /-!
 # Esakia morphisms
@@ -32,8 +30,6 @@ be satisfied by itself and all stricter types.
 * [Wikipedia, *Esakia space*](https://en.wikipedia.org/wiki/Esakia_space)
 -/
 
-@[expose] public section
-
 
 open Function
 
@@ -54,16 +50,16 @@ section
 
 You should extend this class when you extend `PseudoEpimorphism`. -/
 class PseudoEpimorphismClass (F : Type*) (α β : outParam Type*)
-    [Preorder α] [Preorder β] [FunLike F α β] : Prop
-    extends OrderHomClass F α β where
+    [Preorder α] [Preorder β] [FunLike F α β]
+    extends RelHomClass F ((· ≤ ·) : α → α → Prop) ((· ≤ ·) : β → β → Prop) : Prop where
   exists_map_eq_of_map_le (f : F) ⦃a : α⦄ ⦃b : β⦄ : f a ≤ b → ∃ c, a ≤ c ∧ f c = b
 
 /-- `EsakiaHomClass F α β` states that `F` is a type of lattice morphisms.
 
 You should extend this class when you extend `EsakiaHom`. -/
 class EsakiaHomClass (F : Type*) (α β : outParam Type*) [TopologicalSpace α] [Preorder α]
-    [TopologicalSpace β] [Preorder β] [FunLike F α β] : Prop
-    extends ContinuousOrderHomClass F α β where
+    [TopologicalSpace β] [Preorder β] [FunLike F α β]
+    extends ContinuousOrderHomClass F α β : Prop where
   exists_map_eq_of_map_le (f : F) ⦃a : α⦄ ⦃b : β⦄ : f a ≤ b → ∃ c, a ≤ c ∧ f c = b
 
 end
@@ -133,7 +129,7 @@ theorem ext {f g : PseudoEpimorphism α β} (h : ∀ a, f a = g a) : f = g :=
 /-- Copy of a `PseudoEpimorphism` with a new `toFun` equal to the old one. Useful to fix
 definitional equalities. -/
 protected def copy (f : PseudoEpimorphism α β) (f' : α → β) (h : f' = f) : PseudoEpimorphism α β :=
-  ⟨f.toOrderHom.copy f' h, by simpa only [h.symm, toFun_eq_coe] using! f.exists_map_eq_of_map_le'⟩
+  ⟨f.toOrderHom.copy f' h, by simpa only [h.symm, toFun_eq_coe] using f.exists_map_eq_of_map_le'⟩
 
 @[simp]
 theorem coe_copy (f : PseudoEpimorphism α β) (f' : α → β) (h : f' = f) : ⇑(f.copy f' h) = f' := rfl
@@ -150,10 +146,10 @@ protected def id : PseudoEpimorphism α α :=
 instance : Inhabited (PseudoEpimorphism α α) :=
   ⟨PseudoEpimorphism.id α⟩
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id : ⇑(PseudoEpimorphism.id α) = id := rfl
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id_orderHom : (PseudoEpimorphism.id α : α →o α) = OrderHom.id := rfl
 
 variable {α}
@@ -227,10 +223,12 @@ instance : EsakiaHomClass (EsakiaHom α β) α β where
   map_continuous f := f.continuous_toFun
   exists_map_eq_of_map_le f := f.exists_map_eq_of_map_le'
 
+-- Porting note: introduced this to appease simpNF linter with `toFun_eq_coe`
 @[simp]
 theorem toContinuousOrderHom_coe {f : EsakiaHom α β} :
     f.toContinuousOrderHom = (f : α → β) := rfl
 
+-- Porting note: removed simp attribute as simp now solves this
 theorem toFun_eq_coe {f : EsakiaHom α β} : f.toFun = (f : α → β) := rfl
 
 @[ext]
@@ -241,7 +239,7 @@ theorem ext {f g : EsakiaHom α β} (h : ∀ a, f a = g a) : f = g :=
 equalities. -/
 protected def copy (f : EsakiaHom α β) (f' : α → β) (h : f' = f) : EsakiaHom α β :=
   ⟨f.toContinuousOrderHom.copy f' h, by
-    simpa only [h.symm, toFun_eq_coe] using! f.exists_map_eq_of_map_le'⟩
+    simpa only [h.symm, toFun_eq_coe] using f.exists_map_eq_of_map_le'⟩
 
 @[simp]
 theorem coe_copy (f : EsakiaHom α β) (f' : α → β) (h : f' = f) : ⇑(f.copy f' h) = f' := rfl
@@ -258,10 +256,10 @@ protected def id : EsakiaHom α α :=
 instance : Inhabited (EsakiaHom α α) :=
   ⟨EsakiaHom.id α⟩
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id : ⇑(EsakiaHom.id α) = id := rfl
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id_pseudoEpimorphism :
     (EsakiaHom.id α : PseudoEpimorphism α α) = PseudoEpimorphism.id α := rfl
 
@@ -270,7 +268,7 @@ variable {α}
 @[simp]
 theorem id_apply (a : α) : EsakiaHom.id α a = a := rfl
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id_continuousOrderHom : (EsakiaHom.id α : α →Co α) = ContinuousOrderHom.id α := rfl
 
 /-- Composition of `EsakiaHom`s as an `EsakiaHom`. -/

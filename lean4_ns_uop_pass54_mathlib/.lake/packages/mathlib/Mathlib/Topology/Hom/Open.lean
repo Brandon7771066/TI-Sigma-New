@@ -3,9 +3,7 @@ Copyright (c) 2022 Yaël Dillies. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies
 -/
-module
-
-public import Mathlib.Topology.ContinuousMap.Basic
+import Mathlib.Topology.ContinuousFunction.Basic
 
 /-!
 # Continuous open maps
@@ -24,8 +22,6 @@ be satisfied by itself and all stricter types.
 * `ContinuousOpenMapClass`
 -/
 
-@[expose] public section
-
 
 open Function
 
@@ -36,7 +32,7 @@ structure ContinuousOpenMap (α β : Type*) [TopologicalSpace α] [TopologicalSp
   ContinuousMap α β where
   map_open' : IsOpenMap toFun
 
-@[inherit_doc] infixr:25 " →CO " => ContinuousOpenMap
+infixr:25 " →CO " => ContinuousOpenMap
 
 section
 
@@ -44,7 +40,7 @@ section
 
 You should extend this class when you extend `ContinuousOpenMap`. -/
 class ContinuousOpenMapClass (F : Type*) (α β : outParam Type*) [TopologicalSpace α]
-  [TopologicalSpace β] [FunLike F α β] : Prop extends ContinuousMapClass F α β where
+  [TopologicalSpace β] [FunLike F α β] extends ContinuousMapClass F α β : Prop where
   map_open (f : F) : IsOpenMap f
 
 end
@@ -77,8 +73,7 @@ instance : ContinuousOpenMapClass (α →CO β) α β where
 theorem toFun_eq_coe {f : α →CO β} : f.toFun = (f : α → β) :=
   rfl
 
-/-- `simp`-normal form of `toFun_eq_coe`. -/
-@[simp]
+@[simp] -- Porting note: new, simpNF of `toFun_eq_coe`
 theorem coe_toContinuousMap (f : α →CO β) : (f.toContinuousMap : α → β) = f := rfl
 
 @[ext]
@@ -106,7 +101,7 @@ protected def id : α →CO α :=
 instance : Inhabited (α →CO α) :=
   ⟨ContinuousOpenMap.id _⟩
 
-@[simp, norm_cast]
+@[simp]
 theorem coe_id : ⇑(ContinuousOpenMap.id α) = id :=
   rfl
 

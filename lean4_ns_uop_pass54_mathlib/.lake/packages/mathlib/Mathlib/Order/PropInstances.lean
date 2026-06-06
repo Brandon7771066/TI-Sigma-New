@@ -3,9 +3,7 @@ Copyright (c) 2017 Johannes Hölzl. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johannes Hölzl
 -/
-module
-
-public import Mathlib.Order.Disjoint
+import Mathlib.Order.Disjoint
 
 /-!
 
@@ -14,8 +12,6 @@ public import Mathlib.Order.Disjoint
 Instances on `Prop` such as `DistribLattice`, `BoundedOrder`, `LinearOrder`.
 
 -/
-
-public section
 
 /-- Propositions form a distributive lattice. -/
 instance Prop.instDistribLattice : DistribLattice Prop where
@@ -44,7 +40,7 @@ theorem Prop.bot_eq_false : (⊥ : Prop) = False :=
 theorem Prop.top_eq_true : (⊤ : Prop) = True :=
   rfl
 
-instance Prop.le_total : @Std.Total Prop (· ≤ ·) :=
+instance Prop.le_isTotal : IsTotal Prop (· ≤ ·) :=
   ⟨fun p q => by by_cases h : q <;> simp [h]⟩
 
 noncomputable instance Prop.linearOrder : LinearOrder Prop := by
@@ -61,7 +57,7 @@ theorem inf_Prop_eq : (· ⊓ ·) = (· ∧ ·) :=
 
 namespace Pi
 
-variable {ι α : Type*} {α' : ι → Type*} [∀ i, PartialOrder (α' i)]
+variable {ι : Type*} {α' : ι → Type*} [∀ i, PartialOrder (α' i)]
 
 theorem disjoint_iff [∀ i, OrderBot (α' i)] {f g : ∀ i, α' i} :
     Disjoint f g ↔ ∀ i, Disjoint (f i) (g i) := by
@@ -81,15 +77,6 @@ theorem isCompl_iff [∀ i, BoundedOrder (α' i)] {f g : ∀ i, α' i} :
     IsCompl f g ↔ ∀ i, IsCompl (f i) (g i) := by
   simp_rw [_root_.isCompl_iff, disjoint_iff, codisjoint_iff, forall_and]
 
-@[nontriviality]
-theorem eq_top_iff_refl_of_subsingleton [Subsingleton α] {r : α → α → Prop} : r = ⊤ ↔ Std.Refl r :=
-  ⟨fun h ↦ ⟨by simp [h]⟩, fun _ ↦ funext₂ <| by simp [rel_of_subsingleton]⟩
-
-@[nontriviality]
-theorem eq_bot_iff_irrefl_of_subsingleton [Subsingleton α] {r : α → α → Prop} :
-    r = ⊥ ↔ Std.Irrefl r :=
-  ⟨fun h ↦ ⟨by simp [h]⟩, fun _ ↦ funext₂ <| by simp [not_rel_of_subsingleton]⟩
-
 end Pi
 
 @[simp]
@@ -105,6 +92,7 @@ theorem Prop.isCompl_iff {P Q : Prop} : IsCompl P Q ↔ ¬(P ↔ Q) := by
   rw [_root_.isCompl_iff, Prop.disjoint_iff, Prop.codisjoint_iff, not_iff]
   by_cases P <;> by_cases Q <;> simp [*]
 
+-- Porting note: Lean 3 would unfold these for us, but we need to do it manually now
 section decidable_instances
 
 universe u

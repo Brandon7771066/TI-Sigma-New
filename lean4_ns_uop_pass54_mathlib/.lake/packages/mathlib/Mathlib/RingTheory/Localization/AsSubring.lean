@@ -3,11 +3,7 @@ Copyright (c) 2022 Adam Topaz. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Topaz, Junyan Xu
 -/
-module
-
-public import Mathlib.RingTheory.Localization.LocalizationLocalization
-public import Mathlib.LinearAlgebra.FreeModule.Basic
-public import Mathlib.Algebra.Algebra.Subalgebra.Tower
+import Mathlib.RingTheory.Localization.LocalizationLocalization
 
 /-!
 
@@ -18,8 +14,6 @@ does not contain zero, this file constructs the localization of `A` at `S`
 as a subalgebra of the field `K` over `A`.
 
 -/
-
-@[expose] public section
 
 
 namespace Localization
@@ -53,7 +47,7 @@ theorem mem_range_mapToFractionRing_iff (B : Type*) [CommRing B] [Algebra A B] [
       ∃ (a s : A) (hs : s ∈ S), x = IsLocalization.mk' K a ⟨s, hS hs⟩ :=
   ⟨by
     rintro ⟨x, rfl⟩
-    obtain ⟨a, s, rfl⟩ := IsLocalization.exists_mk'_eq S x
+    obtain ⟨a, s, rfl⟩ := IsLocalization.mk'_surjective S x
     use a, s, s.2
     apply IsLocalization.lift_mk', by
     rintro ⟨a, s, hs, rfl⟩
@@ -64,7 +58,7 @@ instance isLocalization_range_mapToFractionRing (B : Type*) [CommRing B] [Algebr
     [IsLocalization S B] (hS : S ≤ A⁰) : IsLocalization S (mapToFractionRing K S B hS).range :=
   IsLocalization.isLocalization_of_algEquiv S <|
     show B ≃ₐ[A] _ from AlgEquiv.ofBijective (mapToFractionRing K S B hS).rangeRestrict (by
-      refine ⟨fun a b h => ?_, Set.rangeFactorization_surjective⟩
+      refine ⟨fun a b h => ?_, Set.surjective_onto_range⟩
       refine (IsLocalization.lift_injective_iff _).2 (fun a b => ?_) (Subtype.ext_iff.1 h)
       exact ⟨fun h => congr_arg _ (IsLocalization.injective _ hS h),
         fun h => congr_arg _ (IsFractionRing.injective A K h)⟩)
@@ -90,7 +84,7 @@ noncomputable def subalgebra (hS : S ≤ A⁰) : Subalgebra A K :=
 namespace subalgebra
 
 instance isLocalization_subalgebra : IsLocalization S (subalgebra K S hS) := by
-  dsimp +instances only [Localization.subalgebra]
+  dsimp only [Localization.subalgebra]
   rw [Subalgebra.copy_eq]
   infer_instance
 
@@ -112,7 +106,7 @@ theorem mem_range_mapToFractionRing_iff_ofField (B : Type*) [CommRing B] [Algebr
     x ∈ (mapToFractionRing K S B hS).range ↔
       ∃ (a s : A) (_ : s ∈ S), x = algebraMap A K a * (algebraMap A K s)⁻¹ := by
   rw [mem_range_mapToFractionRing_iff]
-  convert! Iff.rfl
+  convert Iff.rfl
   congr
   rw [Units.val_inv_eq_inv_val]
   rfl
@@ -131,20 +125,13 @@ noncomputable def ofField : Subalgebra A K :=
     symm
     apply mem_range_mapToFractionRing_iff_ofField
 
-theorem ofField_eq : ofField K S hS = subalgebra K S hS := by
-  simp_rw [ofField, subalgebra, Subalgebra.copy_eq]
+instance isLocalization_ofField : IsLocalization S (subalgebra.ofField K S hS) := by
+  dsimp only [Localization.subalgebra.ofField]
+  rw [Subalgebra.copy_eq]
+  infer_instance
 
-instance isLocalization_ofField : IsLocalization S (ofField K S hS) := by
-  rw [ofField_eq]
-  exact isLocalization_subalgebra K S hS
-
-instance (S : Subalgebra A K) : IsFractionRing S K := by
-  refine IsFractionRing.of_field S K fun z ↦ ?_
-  rcases IsFractionRing.div_surjective A z with ⟨x, y, _, eq⟩
-  exact ⟨algebraMap A S x, algebraMap A S y, eq.symm⟩
-
-instance isFractionRing_ofField : IsFractionRing (ofField K S hS) K :=
-  inferInstance
+instance isFractionRing_ofField : IsFractionRing (subalgebra.ofField K S hS) K :=
+  IsFractionRing.isFractionRing_of_isLocalization S _ _ hS
 
 end subalgebra
 

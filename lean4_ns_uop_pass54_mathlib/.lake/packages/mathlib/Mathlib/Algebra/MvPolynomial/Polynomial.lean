@@ -1,17 +1,14 @@
 /-
-Copyright (c) 2023 Kim Morrison. All rights reserved.
+Copyright (c) 2023 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.Algebra.MvPolynomial.Equiv
+import Mathlib.Algebra.MvPolynomial.Equiv
+import Mathlib.Algebra.Polynomial.Eval
 
 /-!
 # Some lemmas relating polynomials and multivariable polynomials.
 -/
-
-public section
 
 namespace MvPolynomial
 

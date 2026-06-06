@@ -3,10 +3,8 @@ Copyright (c) 2021 Eric Wieser. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Eric Wieser
 -/
-module
-
-public import Mathlib.Algebra.Group.Submonoid.DistribMulAction
-public import Mathlib.GroupTheory.Subgroup.Center
+import Mathlib.Algebra.Group.Submonoid.DistribMulAction
+import Mathlib.GroupTheory.Subgroup.Center
 
 /-!
 # Actions by `Subgroup`s
@@ -18,8 +16,6 @@ subgroup, subgroups
 
 -/
 
-@[expose] public section
-
 
 namespace Subgroup
 variable {G α β : Type*} [Group G]
@@ -28,8 +24,7 @@ section MulAction
 variable [MulAction G α] {S : Subgroup G}
 
 /-- The action by a subgroup is the action by the underlying group. -/
-@[to_additive
-/-- The additive action by an `AddSubgroup` is the action by the underlying `AddGroup`. -/]
+@[to_additive "The additive action by an add_subgroup is the action by the underlying `AddGroup`. "]
 instance instMulAction : MulAction S α := inferInstanceAs (MulAction S.toSubmonoid α)
 
 @[to_additive] lemma smul_def (g : S) (m : α) : g • m = (g : G) • m := rfl
@@ -50,12 +45,10 @@ instance smulCommClass_right [SMul α β] [MulAction G β] [SMulCommClass α G �
   S.toSubmonoid.smulCommClass_right
 
 /-- Note that this provides `IsScalarTower S G G` which is needed by `smul_mul_assoc`. -/
-@[to_additive]
 instance [SMul α β] [MulAction G α] [MulAction G β] [IsScalarTower G α β] (S : Subgroup G) :
     IsScalarTower S α β :=
   inferInstanceAs (IsScalarTower S.toSubmonoid α β)
 
-@[to_additive]
 instance [MulAction G α] [FaithfulSMul G α] (S : Subgroup G) : FaithfulSMul S α :=
   inferInstanceAs (FaithfulSMul S.toSubmonoid α)
 
@@ -76,8 +69,3 @@ instance center.smulCommClass_right : SMulCommClass G (center G) G :=
   Submonoid.center.smulCommClass_right
 
 end Subgroup
-
-open MonoidHom in
-lemma MonoidWithZeroHom.comap_mker {M N P : Type*} [MulZeroOneClass M] [MulZeroOneClass N]
-    [MulZeroOneClass P] (g : N →*₀ P) (f : M →*₀ N) :
-    Submonoid.comap f (mker g) = mker (g.comp f) := rfl

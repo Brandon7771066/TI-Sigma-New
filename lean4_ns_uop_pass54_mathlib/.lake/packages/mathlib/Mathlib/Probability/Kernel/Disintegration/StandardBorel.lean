@@ -3,14 +3,12 @@ Copyright (c) 2024 Rémy Degenne. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Rémy Degenne
 -/
-module
-
-public import Mathlib.Probability.Kernel.Composition.MeasureCompProd
-public import Mathlib.Probability.Kernel.Disintegration.Basic
-public import Mathlib.Probability.Kernel.Disintegration.CondCDF
-public import Mathlib.Probability.Kernel.Disintegration.Density
-public import Mathlib.Probability.Kernel.Disintegration.CDFToKernel
-public import Mathlib.MeasureTheory.Constructions.Polish.EmbeddingReal
+import Mathlib.Probability.Kernel.MeasureCompProd
+import Mathlib.Probability.Kernel.Disintegration.Basic
+import Mathlib.Probability.Kernel.Disintegration.CondCdf
+import Mathlib.Probability.Kernel.Disintegration.Density
+import Mathlib.Probability.Kernel.Disintegration.CdfToKernel
+import Mathlib.MeasureTheory.Constructions.Polish.EmbeddingReal
 
 /-!
 # Existence of disintegration of measures and kernels for standard Borel spaces
@@ -27,19 +25,19 @@ measurably into `ℝ`: it then suffices to define a suitable kernel for `Ω = �
 
 For `κ : Kernel α (β × ℝ)`, the construction of the conditional kernel proceeds as follows:
 * Build a measurable function `f : (α × β) → ℚ → ℝ` such that for all measurable sets
-  `s` and all `q : ℚ`, `∫ x in s, f (a, x) q ∂(Kernel.fst κ a) = (κ a).real (s ×ˢ Iic (q : ℝ))`.
+  `s` and all `q : ℚ`, `∫ x in s, f (a, x) q ∂(Kernel.fst κ a) = (κ a (s ×ˢ Iic (q : ℝ))).toReal`.
   We restrict to `ℚ` here to be able to prove the measurability.
-* Extend that function to `(α × β) → StieltjesFunction ℝ`. See the file `MeasurableStieltjes.lean`.
+* Extend that function to `(α × β) → StieltjesFunction`. See the file `MeasurableStieltjes.lean`.
 * Finally obtain from the measurable Stieltjes function a measure on `ℝ` for each element of `α × β`
   in a measurable way: we have obtained a `Kernel (α × β) ℝ`.
-  See the file `CDFToKernel.lean` for that step.
+  See the file `CdfToKernel.lean` for that step.
 
 The first step (building the measurable function on `ℚ`) is done differently depending on whether
 `α` is countable or not.
 * If `α` is countable, we can provide for each `a : α` a function `f : β → ℚ → ℝ` and proceed as
   above to obtain a `Kernel β ℝ`. Since `α` is countable, measurability is not an issue and we can
   put those together into a `Kernel (α × β) ℝ`. The construction of that `f` is done in
-  the `CondCDF.lean` file.
+  the `CondCdf.lean` file.
 * If `α` is not countable, we can't proceed separately for each `a : α` and have to build a function
   `f : α × β → ℚ → ℝ` which is measurable on the product. We are able to do so if `β` has a
   countably generated σ-algebra (this is the case in particular for standard Borel spaces).
@@ -64,8 +62,6 @@ The conditional kernel is unique (almost everywhere w.r.t. `fst κ`): this is pr
 * `MeasureTheory.Measure.compProd_fst_condKernel`: `ρ.fst ⊗ₘ ρ.condKernel = ρ`
 -/
 
-@[expose] public section
-
 open MeasureTheory Set Filter MeasurableSpace
 
 open scoped ENNReal MeasureTheory Topology ProbabilityTheory
@@ -74,7 +70,7 @@ namespace ProbabilityTheory.Kernel
 
 variable {α β γ Ω : Type*} {mα : MeasurableSpace α} {mβ : MeasurableSpace β}
   {mγ : MeasurableSpace γ} [MeasurableSpace.CountablyGenerated γ]
-  {mΩ : MeasurableSpace Ω} [StandardBorelSpace Ω] [Nonempty Ω]
+  [MeasurableSpace Ω] [StandardBorelSpace Ω] [Nonempty Ω]
 
 section Real
 
@@ -85,8 +81,8 @@ lemma isRatCondKernelCDFAux_density_Iic (κ : Kernel α (γ × ℝ)) [IsFiniteKe
   measurable := measurable_pi_iff.mpr fun _ ↦ measurable_density κ (fst κ) measurableSet_Iic
   mono' a q r hqr :=
     ae_of_all _ fun c ↦ density_mono_set le_rfl a c (Iic_subset_Iic.mpr (by exact_mod_cast hqr))
-  nonneg' _ _ := ae_of_all _ fun _ ↦ density_nonneg le_rfl _ _ _
-  le_one' _ _ := ae_of_all _ fun _ ↦ density_le_one le_rfl _ _ _
+  nonneg' a q := ae_of_all _ fun c ↦ density_nonneg le_rfl _ _ _
+  le_one' a q := ae_of_all _ fun c ↦ density_le_one le_rfl _ _ _
   tendsto_integral_of_antitone a s hs_anti hs_tendsto := by
     let s' : ℕ → Set ℝ := fun n ↦ Iic (s n)
     refine tendsto_integral_density_of_antitone le_rfl a s' ?_ ?_ (fun _ ↦ measurableSet_Iic)
@@ -100,20 +96,20 @@ lemma isRatCondKernelCDFAux_density_Iic (κ : Kernel α (γ × ℝ)) [IsFiniteKe
       refine ⟨i, lt_of_le_of_lt ?_ hq⟩
       exact mod_cast hi i le_rfl
   tendsto_integral_of_monotone a s hs_mono hs_tendsto := by
-    rw [fst_real_apply _ _ MeasurableSet.univ]
+    rw [fst_apply' _ _ MeasurableSet.univ]
     let s' : ℕ → Set ℝ := fun n ↦ Iic (s n)
     refine tendsto_integral_density_of_monotone (le_rfl : fst κ ≤ fst κ)
       a s' ?_ ?_ (fun _ ↦ measurableSet_Iic)
     · exact fun i j hij ↦ Iic_subset_Iic.mpr (by exact mod_cast hs_mono hij)
     · ext x
-      simp only [mem_iUnion, mem_univ, iff_true]
+      simp only [mem_iUnion, mem_Iic, mem_univ, iff_true]
       rw [tendsto_atTop_atTop] at hs_tendsto
       have ⟨q, hq⟩ := exists_rat_gt x
       obtain ⟨i, hi⟩ := hs_tendsto q
       refine ⟨i, hq.le.trans ?_⟩
       exact mod_cast hi i le_rfl
-  integrable a _ := integrable_density le_rfl a measurableSet_Iic
-  setIntegral a _ hA _ := setIntegral_density le_rfl a measurableSet_Iic hA
+  integrable a q := integrable_density le_rfl a measurableSet_Iic
+  setIntegral a A hA q := setIntegral_density le_rfl a measurableSet_Iic hA
 
 /-- Taking the kernel density of intervals `Iic q` for `q : ℚ` gives a function with the property
 `isRatCondKernelCDF`. -/
@@ -124,7 +120,7 @@ lemma isRatCondKernelCDF_density_Iic (κ : Kernel α (γ × ℝ)) [IsFiniteKerne
 /-- The conditional kernel CDF of a kernel `κ : Kernel α (γ × ℝ)`, where `γ` is countably generated.
 -/
 noncomputable
-def condKernelCDF (κ : Kernel α (γ × ℝ)) [IsFiniteKernel κ] : α × γ → StieltjesFunction ℝ :=
+def condKernelCDF (κ : Kernel α (γ × ℝ)) [IsFiniteKernel κ] : α × γ → StieltjesFunction :=
   stieltjesOfMeasurableRat (fun (p : α × γ) q ↦ density κ (fst κ) p.1 p.2 (Iic q))
     (isRatCondKernelCDF_density_Iic κ).measurable
 
@@ -159,10 +155,13 @@ instance instIsMarkovKernelCondKernelUnitReal (κ : Kernel Unit (α × ℝ)) [Is
   rw [condKernelUnitReal]
   infer_instance
 
-set_option backward.isDefEq.respectTransparency false in
 instance condKernelUnitReal.instIsCondKernel (κ : Kernel Unit (α × ℝ)) [IsFiniteKernel κ] :
     κ.IsCondKernel κ.condKernelUnitReal where
   disintegrate := by rw [condKernelUnitReal, compProd_toKernel]; ext; simp
+
+@[deprecated disintegrate (since := "2024-07-26")]
+lemma compProd_fst_condKernelUnitReal (κ : Kernel Unit (α × ℝ)) [IsFiniteKernel κ] :
+    fst κ ⊗ₖ condKernelUnitReal κ = κ := disintegrate _ _
 
 end Real
 
@@ -235,38 +234,41 @@ instance instIsMarkovKernelBorelMarkovFromReal (η : Kernel α ℝ) [IsMarkovKer
   · rw [deterministic_apply]
     simp [(range_nonempty (embeddingReal Ω)).choose_spec]
 
-/-- For `κ' := map κ (Prod.map (id : β → β) e)`, the hypothesis `hη` is `fst κ' ⊗ₖ η = κ'`.
-The conclusion of the lemma is `fst κ ⊗ₖ borelMarkovFromReal Ω η = comapRight (fst κ' ⊗ₖ η) _`. -/
+/-- For `κ' := map κ (Prod.map (id : β → β) e) (measurable_id.prod_map he.measurable)`, the
+hypothesis `hη` is `fst κ' ⊗ₖ η = κ'`. The conclusion of the lemma is
+`fst κ ⊗ₖ borelMarkovFromReal Ω η = comapRight (fst κ' ⊗ₖ η) _`. -/
 lemma compProd_fst_borelMarkovFromReal_eq_comapRight_compProd
     (κ : Kernel α (β × Ω)) [IsSFiniteKernel κ] (η : Kernel (α × β) ℝ) [IsSFiniteKernel η]
-    (hη : (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω)))) ⊗ₖ η
-      = map κ (Prod.map (id : β → β) (embeddingReal Ω))) :
+    (hη : (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω))
+        (measurable_id.prod_map (measurableEmbedding_embeddingReal Ω).measurable))) ⊗ₖ η
+      = map κ (Prod.map (id : β → β) (embeddingReal Ω))
+        (measurable_id.prod_map (measurableEmbedding_embeddingReal Ω).measurable)) :
     fst κ ⊗ₖ borelMarkovFromReal Ω η
-      = comapRight (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω))) ⊗ₖ η)
-        (MeasurableEmbedding.id.prodMap (measurableEmbedding_embeddingReal Ω)) := by
+      = comapRight (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω))
+          (measurable_id.prod_map (measurableEmbedding_embeddingReal Ω).measurable)) ⊗ₖ η)
+        (MeasurableEmbedding.id.prod_mk (measurableEmbedding_embeddingReal Ω)) := by
   let e := embeddingReal Ω
   let he := measurableEmbedding_embeddingReal Ω
-  let κ' := map κ (Prod.map (id : β → β) e)
+  let κ' := map κ (Prod.map (id : β → β) e) (measurable_id.prod_map he.measurable)
   have hη' : fst κ' ⊗ₖ η = κ' := hη
   have h_prod_embed : MeasurableEmbedding (Prod.map (id : β → β) e) :=
-    MeasurableEmbedding.id.prodMap he
+    MeasurableEmbedding.id.prod_mk he
   change fst κ ⊗ₖ borelMarkovFromReal Ω η = comapRight (fst κ' ⊗ₖ η) h_prod_embed
   rw [comapRight_compProd_id_prod _ _ he]
   have h_fst : fst κ' = fst κ := by
     ext a u
-    unfold κ'
-    rw [fst_apply, map_apply _ (by fun_prop),
-      Measure.map_map measurable_fst h_prod_embed.measurable, fst_apply]
+    unfold_let κ'
+    rw [fst_apply, map_apply, Measure.map_map measurable_fst h_prod_embed.measurable, fst_apply]
     congr
   rw [h_fst]
   ext a t ht : 2
-  simp_rw [compProd_apply ht]
+  simp_rw [compProd_apply _ _ _ ht]
   refine lintegral_congr_ae ?_
   have h_ae : ∀ᵐ t ∂(fst κ a), (a, t) ∈ {p : α × β | η p (range e)ᶜ = 0} := by
     rw [← h_fst]
     have h_compProd : κ' a (univ ×ˢ range e)ᶜ = 0 := by
-      unfold κ'
-      rw [map_apply' _ (by fun_prop)]
+      unfold_let κ'
+      rw [map_apply']
       swap; · exact (MeasurableSet.univ.prod he.measurableSet_range).compl
       suffices Prod.map id e ⁻¹' (univ ×ˢ range e)ᶜ = ∅ by rw [this]; simp
       ext x
@@ -278,29 +280,32 @@ lemma compProd_fst_borelMarkovFromReal_eq_comapRight_compProd
   filter_upwards [h_ae] with a ha
   rw [borelMarkovFromReal, comapRight_apply', comapRight_apply']
   rotate_left
-  · exact measurable_prodMk_left ht
-  · exact measurable_prodMk_left ht
+  · exact measurable_prod_mk_left ht
+  · exact measurable_prod_mk_left ht
   classical
   rw [piecewise_apply, if_pos]
   exact ha
 
-/-- For `κ' := map κ (Prod.map (id : β → β) e)`, the hypothesis `hη` is `fst κ' ⊗ₖ η = κ'`.
-With that hypothesis, `fst κ ⊗ₖ borelMarkovFromReal κ η = κ`. -/
+/-- For `κ' := map κ (Prod.map (id : β → β) e) (measurable_id.prod_map he.measurable)`, the
+hypothesis `hη` is `fst κ' ⊗ₖ η = κ'`. With that hypothesis,
+`fst κ ⊗ₖ borelMarkovFromReal κ η = κ`.-/
 lemma compProd_fst_borelMarkovFromReal (κ : Kernel α (β × Ω)) [IsSFiniteKernel κ]
     (η : Kernel (α × β) ℝ) [IsSFiniteKernel η]
-    (hη : (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω)))) ⊗ₖ η
-      = map κ (Prod.map (id : β → β) (embeddingReal Ω))) :
+    (hη : (fst (map κ (Prod.map (id : β → β) (embeddingReal Ω))
+        (measurable_id.prod_map (measurableEmbedding_embeddingReal Ω).measurable))) ⊗ₖ η
+      = map κ (Prod.map (id : β → β) (embeddingReal Ω))
+        (measurable_id.prod_map (measurableEmbedding_embeddingReal Ω).measurable)) :
     fst κ ⊗ₖ borelMarkovFromReal Ω η = κ := by
   let e := embeddingReal Ω
   let he := measurableEmbedding_embeddingReal Ω
-  let κ' := map κ (Prod.map (id : β → β) e)
+  let κ' := map κ (Prod.map (id : β → β) e) (measurable_id.prod_map he.measurable)
   have hη' : fst κ' ⊗ₖ η = κ' := hη
   have h_prod_embed : MeasurableEmbedding (Prod.map (id : β → β) e) :=
-    MeasurableEmbedding.id.prodMap he
+    MeasurableEmbedding.id.prod_mk he
   have : κ = comapRight κ' h_prod_embed := by
     ext c t : 2
-    unfold κ'
-    rw [comapRight_apply, map_apply _ (by fun_prop), h_prod_embed.comap_map]
+    unfold_let κ'
+    rw [comapRight_apply, map_apply, h_prod_embed.comap_map]
   conv_rhs => rw [this, ← hη']
   exact compProd_fst_borelMarkovFromReal_eq_comapRight_compProd κ η hη
 
@@ -315,7 +320,9 @@ A conditional kernel for `κ : Kernel α (γ × Ω)` where `γ` is countably gen
 standard Borel. -/
 noncomputable
 def condKernelBorel (κ : Kernel α (γ × Ω)) [IsFiniteKernel κ] : Kernel (α × γ) Ω :=
-  let κ' := map κ (Prod.map (id : γ → γ) (embeddingReal Ω))
+  let e := embeddingReal Ω
+  let he := measurableEmbedding_embeddingReal Ω
+  let κ' := map κ (Prod.map (id : γ → γ) e) (measurable_id.prod_map he.measurable)
   borelMarkovFromReal Ω (condKernelReal κ')
 
 instance instIsMarkovKernelCondKernelBorel (κ : Kernel α (γ × Ω)) [IsFiniteKernel κ] :
@@ -328,6 +335,10 @@ instance condKernelBorel.instIsCondKernel (κ : Kernel α (γ × Ω)) [IsFiniteK
   disintegrate := by
     rw [condKernelBorel, compProd_fst_borelMarkovFromReal _ _ (compProd_fst_condKernelReal _)]
 
+@[deprecated disintegrate (since := "2024-07-26")]
+lemma compProd_fst_condKernelBorel (κ : Kernel α (γ × Ω)) [IsFiniteKernel κ] :
+    fst κ ⊗ₖ condKernelBorel κ = κ := disintegrate _ _
+
 end CountablyGenerated
 
 section Unit
@@ -338,7 +349,9 @@ variable (κ : Kernel Unit (α × Ω)) [IsFiniteKernel κ]
 A conditional kernel for `κ : Kernel Unit (α × Ω)` where `Ω` is standard Borel. -/
 noncomputable
 def condKernelUnitBorel : Kernel (Unit × α) Ω :=
-  let κ' := map κ (Prod.map (id : α → α) (embeddingReal Ω))
+  let e := embeddingReal Ω
+  let he := measurableEmbedding_embeddingReal Ω
+  let κ' := map κ (Prod.map (id : α → α) e) (measurable_id.prod_map he.measurable)
   borelMarkovFromReal Ω (condKernelUnitReal κ')
 
 instance instIsMarkovKernelCondKernelUnitBorel : IsMarkovKernel κ.condKernelUnitBorel := by
@@ -348,6 +361,10 @@ instance instIsMarkovKernelCondKernelUnitBorel : IsMarkovKernel κ.condKernelUni
 instance condKernelUnitBorel.instIsCondKernel : κ.IsCondKernel κ.condKernelUnitBorel where
   disintegrate := by
     rw [condKernelUnitBorel, compProd_fst_borelMarkovFromReal _ _ (disintegrate _ _)]
+
+@[deprecated disintegrate (since := "2024-07-26")]
+lemma compProd_fst_condKernelUnitBorel (κ : Kernel Unit (α × Ω)) [IsFiniteKernel κ] :
+    fst κ ⊗ₖ condKernelUnitBorel κ = κ := disintegrate _ _
 
 end Unit
 
@@ -360,7 +377,7 @@ variable {ρ : Measure (α × Ω)} [IsFiniteMeasure ρ]
 noncomputable
 irreducible_def _root_.MeasureTheory.Measure.condKernel (ρ : Measure (α × Ω)) [IsFiniteMeasure ρ] :
     Kernel α Ω :=
-  comap (condKernelUnitBorel (const Unit ρ)) (fun a ↦ ((), a)) measurable_prodMk_left
+  comap (condKernelUnitBorel (const Unit ρ)) (fun a ↦ ((), a)) measurable_prod_mk_left
 
 lemma _root_.MeasureTheory.Measure.condKernel_apply (ρ : Measure (α × Ω)) [IsFiniteMeasure ρ]
     (a : α) :
@@ -384,6 +401,22 @@ instance _root_.MeasureTheory.Measure.instIsMarkovKernelCondKernel
   rw [Measure.condKernel]
   infer_instance
 
+/-- **Disintegration** of finite product measures on `α × Ω`, where `Ω` is standard Borel. Such a
+measure can be written as the composition-product of `ρ.fst` (marginal measure over `α`) and
+a Markov kernel from `α` to `Ω`. We call that Markov kernel `ρ.condKernel`. -/
+@[deprecated Measure.disintegrate (since := "2024-07-24")]
+lemma _root_.MeasureTheory.Measure.compProd_fst_condKernel
+    (ρ : Measure (α × Ω)) [IsFiniteMeasure ρ] :
+    ρ.fst ⊗ₘ ρ.condKernel = ρ := ρ.disintegrate ρ.condKernel
+
+set_option linter.unusedVariables false in
+/-- Auxiliary lemma for `condKernel_apply_of_ne_zero`. -/
+@[deprecated Measure.IsCondKernel.apply_of_ne_zero (since := "2024-07-24"), nolint unusedArguments]
+lemma _root_.MeasureTheory.Measure.condKernel_apply_of_ne_zero_of_measurableSet
+    [MeasurableSingletonClass α] {x : α} (hx : ρ.fst {x} ≠ 0) {s : Set Ω} (hs : MeasurableSet s) :
+    ρ.condKernel x s = (ρ.fst {x})⁻¹ * ρ ({x} ×ˢ s) :=
+  Measure.IsCondKernel.apply_of_ne_zero _ _ hx _
+
 /-- If the singleton `{x}` has non-zero mass for `ρ.fst`, then for all `s : Set Ω`,
 `ρ.condKernel x s = (ρ.fst {x})⁻¹ * ρ ({x} ×ˢ s)` . -/
 lemma _root_.MeasureTheory.Measure.condKernel_apply_of_ne_zero [MeasurableSingletonClass α]
@@ -393,10 +426,22 @@ lemma _root_.MeasureTheory.Measure.condKernel_apply_of_ne_zero [MeasurableSingle
 
 end Measure
 
+section Countable
+
+variable [Countable α]
+
+@[deprecated disintegrate (since := "2024-07-24")]
+lemma compProd_fst_condKernelCountable (κ : Kernel α (β × Ω)) [IsFiniteKernel κ] :
+    fst κ ⊗ₖ condKernelCountable (fun a ↦ (κ a).condKernel)
+      (fun x y h ↦ by simp [apply_congr_of_mem_measurableAtom _ h]) = κ := disintegrate _ _
+
+end Countable
+
 section CountableOrCountablyGenerated
 variable [h : CountableOrCountablyGenerated α β] (κ : Kernel α (β × Ω)) [IsFiniteKernel κ]
 
 open Classical in
+
 /-- Conditional kernel of a kernel `κ : Kernel α (β × Ω)`: a Markov kernel such that
 `fst κ ⊗ₖ condKernel κ = κ` (see `MeasureTheory.Measure.compProd_fst_condKernel`).
 It exists whenever `Ω` is standard Borel and either `α` is countable
@@ -415,6 +460,11 @@ instance instIsMarkovKernelCondKernel : IsMarkovKernel (condKernel κ) := by
 
 instance condKernel.instIsCondKernel : κ.IsCondKernel κ.condKernel where
   disintegrate := by rw [condKernel_def]; split_ifs with hα <;> exact disintegrate _ _
+
+/-- **Disintegration** of finite kernels.
+The composition-product of `fst κ` and `condKernel κ` is equal to `κ`. -/
+@[deprecated Kernel.disintegrate (since := "2024-07-26")]
+lemma compProd_fst_condKernel : fst κ ⊗ₖ condKernel κ = κ := κ.disintegrate κ.condKernel
 
 end CountableOrCountablyGenerated
 

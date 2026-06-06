@@ -3,10 +3,8 @@ Copyright (c) 2021 Adam Topaz. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Topaz
 -/
-module
-
-public import Mathlib.CategoryTheory.Sites.CompatiblePlus
-public import Mathlib.CategoryTheory.Sites.ConcreteSheafification
+import Mathlib.CategoryTheory.Sites.CompatiblePlus
+import Mathlib.CategoryTheory.Sites.ConcreteSheafification
 
 /-!
 
@@ -15,26 +13,27 @@ preserve the correct limits and colimits.
 
 -/
 
-@[expose] public section
-
 
 namespace CategoryTheory.GrothendieckTopology
 
 open CategoryTheory
 
-open CategoryTheory.Limits CategoryTheory.Functor
+open CategoryTheory.Limits
 
 open Opposite
 
-universe v u
+universe w₁ w₂ v u
 
 variable {C : Type u} [Category.{v} C] (J : GrothendieckTopology C)
-variable {D : Type*} [Category* D]
-variable {E : Type*} [Category* E]
+variable {D : Type w₁} [Category.{max v u} D]
+variable {E : Type w₂} [Category.{max v u} E]
 variable (F : D ⥤ E)
 
-variable [∀ (J : MulticospanShape.{max v u, max v u}), HasLimitsOfShape (WalkingMulticospan J) D]
-variable [∀ (J : MulticospanShape.{max v u, max v u}), HasLimitsOfShape (WalkingMulticospan J) E]
+-- Porting note: Removed this and made whatever necessary noncomputable
+-- noncomputable section
+
+variable [∀ (α β : Type max v u) (fst snd : β → α), HasLimitsOfShape (WalkingMulticospan fst snd) D]
+variable [∀ (α β : Type max v u) (fst snd : β → α), HasLimitsOfShape (WalkingMulticospan fst snd) E]
 variable [∀ X : C, HasColimitsOfShape (J.Cover X)ᵒᵖ D]
 variable [∀ X : C, HasColimitsOfShape (J.Cover X)ᵒᵖ E]
 variable [∀ X : C, PreservesColimitsOfShape (J.Cover X)ᵒᵖ F]
@@ -46,7 +45,7 @@ the sheafification of `P ⋙ F`.
 
 Use the lemmas `whisker_right_to_sheafify_sheafify_comp_iso_hom`,
 `to_sheafify_comp_sheafify_comp_iso_inv` and `sheafify_comp_iso_inv_eq_sheafify_lift` to reduce
-the components of this isomorphism to a state that can be handled using the universal property
+the components of this isomorphisms to a state that can be handled using the universal property
 of sheafification. -/
 noncomputable def sheafifyCompIso : J.sheafify P ⋙ F ≅ J.sheafify (P ⋙ F) :=
   J.plusCompIso _ _ ≪≫ (J.plusFunctor _).mapIso (J.plusCompIso _ _)
@@ -59,11 +58,10 @@ noncomputable def sheafificationWhiskerLeftIso (P : Cᵒᵖ ⥤ D)
         PreservesLimit (W.index P).multicospan F] :
     (whiskeringLeft _ _ E).obj (J.sheafify P) ≅
     (whiskeringLeft _ _ _).obj P ⋙ J.sheafification E := by
-  refine J.plusFunctorWhiskerLeftIso _ ≪≫ ?_ ≪≫ associator _ _ _
+  refine J.plusFunctorWhiskerLeftIso _ ≪≫ ?_ ≪≫ Functor.associator _ _ _
   refine isoWhiskerRight ?_ _
   exact J.plusFunctorWhiskerLeftIso _
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem sheafificationWhiskerLeftIso_hom_app (P : Cᵒᵖ ⥤ D) (F : D ⥤ E)
     [∀ (F : D ⥤ E) (X : C), PreservesColimitsOfShape (J.Cover X)ᵒᵖ F]
@@ -71,9 +69,8 @@ theorem sheafificationWhiskerLeftIso_hom_app (P : Cᵒᵖ ⥤ D) (F : D ⥤ E)
         PreservesLimit (W.index P).multicospan F] :
     (sheafificationWhiskerLeftIso J P).hom.app F = (J.sheafifyCompIso F P).hom := by
   dsimp [sheafificationWhiskerLeftIso, sheafifyCompIso]
-  simp only [sheafify, Category.comp_id]
+  rw [Category.comp_id]
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem sheafificationWhiskerLeftIso_inv_app (P : Cᵒᵖ ⥤ D) (F : D ⥤ E)
     [∀ (F : D ⥤ E) (X : C), PreservesColimitsOfShape (J.Cover X)ᵒᵖ F]
@@ -81,42 +78,42 @@ theorem sheafificationWhiskerLeftIso_inv_app (P : Cᵒᵖ ⥤ D) (F : D ⥤ E)
         PreservesLimit (W.index P).multicospan F] :
     (sheafificationWhiskerLeftIso J P).inv.app F = (J.sheafifyCompIso F P).inv := by
   dsimp [sheafificationWhiskerLeftIso, sheafifyCompIso]
-  simp only [sheafify, Category.id_comp]
+  erw [Category.id_comp]
 
 /-- The isomorphism between the sheafification of `P` composed with `F` and
 the sheafification of `P ⋙ F`, functorially in `P`. -/
 noncomputable def sheafificationWhiskerRightIso :
     J.sheafification D ⋙ (whiskeringRight _ _ _).obj F ≅
       (whiskeringRight _ _ _).obj F ⋙ J.sheafification E := by
-  refine associator _ _ _ ≪≫ ?_
+  refine Functor.associator _ _ _ ≪≫ ?_
   refine isoWhiskerLeft (J.plusFunctor D) (J.plusFunctorWhiskerRightIso _) ≪≫ ?_
-  refine ?_ ≪≫ associator _ _ _
-  refine (associator _ _ _).symm ≪≫ ?_
+  refine ?_ ≪≫ Functor.associator _ _ _
+  refine (Functor.associator _ _ _).symm ≪≫ ?_
   exact isoWhiskerRight (J.plusFunctorWhiskerRightIso _) (J.plusFunctor E)
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem sheafificationWhiskerRightIso_hom_app :
     (J.sheafificationWhiskerRightIso F).hom.app P = (J.sheafifyCompIso F P).hom := by
   dsimp [sheafificationWhiskerRightIso, sheafifyCompIso]
-  simp only [sheafify, Category.id_comp, Category.comp_id]
+  simp only [Category.id_comp, Category.comp_id]
+  erw [Category.id_comp]
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp]
 theorem sheafificationWhiskerRightIso_inv_app :
     (J.sheafificationWhiskerRightIso F).inv.app P = (J.sheafifyCompIso F P).inv := by
   dsimp [sheafificationWhiskerRightIso, sheafifyCompIso]
-  simp only [sheafify, Category.id_comp, Category.comp_id]
+  simp only [Category.id_comp, Category.comp_id]
+  erw [Category.id_comp]
 
-set_option backward.defeqAttrib.useBackward true in
 @[simp, reassoc]
 theorem whiskerRight_toSheafify_sheafifyCompIso_hom :
     whiskerRight (J.toSheafify _) _ ≫ (J.sheafifyCompIso F P).hom = J.toSheafify _ := by
   dsimp [sheafifyCompIso]
-  simp only [toSheafify, sheafify, whiskerRight_comp, Category.assoc]
+  erw [whiskerRight_comp, Category.assoc]
   slice_lhs 2 3 => rw [plusCompIso_whiskerRight]
   rw [Category.assoc, ← J.plusMap_comp, whiskerRight_toPlus_comp_plusCompIso_hom, ←
     Category.assoc, whiskerRight_toPlus_comp_plusCompIso_hom]
+  rfl
 
 @[simp, reassoc]
 theorem toSheafify_comp_sheafifyCompIso_inv :
@@ -126,8 +123,7 @@ theorem toSheafify_comp_sheafifyCompIso_inv :
 section
 
 -- We will sheafify `D`-valued presheaves in this section.
-variable {FD : D → D → Type*} {CD : D → Type*} [∀ X Y, FunLike (FD X Y) (CD X) (CD Y)]
-variable [ConcreteCategory D FD] [PreservesLimitsOfSize.{max v u, max v u} (forget D)]
+variable [ConcreteCategory.{max v u} D] [PreservesLimits (forget D)]
   [∀ X : C, PreservesColimitsOfShape (J.Cover X)ᵒᵖ (forget D)] [(forget D).ReflectsIsomorphisms]
 
 @[simp]

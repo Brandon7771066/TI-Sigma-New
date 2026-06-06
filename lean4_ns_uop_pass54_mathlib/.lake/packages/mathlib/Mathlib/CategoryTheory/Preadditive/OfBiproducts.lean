@@ -3,11 +3,9 @@ Copyright (c) 2022 Markus Himmel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Markus Himmel
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.BinaryBiproducts
-public import Mathlib.GroupTheory.EckmannHilton
-public import Mathlib.Tactic.CategoryTheory.Reassoc
+import Mathlib.CategoryTheory.Limits.Shapes.Biproducts
+import Mathlib.GroupTheory.EckmannHilton
+import Mathlib.Tactic.CategoryTheory.Reassoc
 /-!
 # Constructing a semiadditive structure from binary biproducts
 
@@ -15,8 +13,6 @@ We show that any category with zero morphisms and binary biproducts is enriched 
 of commutative monoids.
 
 -/
-
-@[expose] public section
 
 
 noncomputable section
@@ -36,13 +32,13 @@ section
 variable (X Y : C)
 
 /-- `f +ₗ g` is the composite `X ⟶ Y ⊞ Y ⟶ Y`, where the first map is `(f, g)` and the second map
-is `(𝟙 𝟙)`. -/
+    is `(𝟙 𝟙)`. -/
 @[simp]
 def leftAdd (f g : X ⟶ Y) : X ⟶ Y :=
   biprod.lift f g ≫ biprod.desc (𝟙 Y) (𝟙 Y)
 
 /-- `f +ᵣ g` is the composite `X ⟶ X ⊞ X ⟶ Y`, where the first map is `(𝟙, 𝟙)` and the second map
-is `(f g)`. -/
+    is `(f g)`. -/
 @[simp]
 def rightAdd (f g : X ⟶ Y) : X ⟶ Y :=
   biprod.lift (𝟙 X) (𝟙 X) ≫ biprod.desc f g
@@ -55,13 +51,13 @@ theorem isUnital_leftAdd : EckmannHilton.IsUnital (· +ₗ ·) 0 := by
   have hr : ∀ f : X ⟶ Y, biprod.lift (0 : X ⟶ Y) f = f ≫ biprod.inr := by
     intro f
     ext
-    · simp
-    · simp [Category.assoc]
+    · aesop_cat
+    · simp [biprod.lift_fst, Category.assoc, biprod.inr_fst, comp_zero]
   have hl : ∀ f : X ⟶ Y, biprod.lift f (0 : X ⟶ Y) = f ≫ biprod.inl := by
     intro f
     ext
-    · simp
-    · simp [biprod.lift_snd, Category.assoc, comp_zero]
+    · aesop_cat
+    · simp [biprod.lift_snd, Category.assoc, biprod.inl_snd, comp_zero]
   exact {
     left_id := fun f => by simp [hr f, leftAdd, Category.assoc, Category.comp_id, biprod.inr_desc],
     right_id := fun f => by simp [hl f, leftAdd, Category.assoc, Category.comp_id, biprod.inl_desc]
@@ -71,12 +67,12 @@ theorem isUnital_rightAdd : EckmannHilton.IsUnital (· +ᵣ ·) 0 := by
   have h₂ : ∀ f : X ⟶ Y, biprod.desc (0 : X ⟶ Y) f = biprod.snd ≫ f := by
     intro f
     ext
-    · simp
+    · aesop_cat
     · simp only [biprod.inr_desc, BinaryBicone.inr_snd_assoc]
   have h₁ : ∀ f : X ⟶ Y, biprod.desc f (0 : X ⟶ Y) = biprod.fst ≫ f := by
     intro f
     ext
-    · simp
+    · aesop_cat
     · simp only [biprod.inr_desc, BinaryBicone.inr_fst_assoc, zero_comp]
   exact {
     left_id := fun f => by simp [h₂ f, rightAdd, biprod.lift_snd_assoc, Category.id_comp],
@@ -88,17 +84,17 @@ theorem distrib (f g h k : X ⟶ Y) : (f +ᵣ g) +ₗ h +ᵣ k = (f +ₗ h) +ᵣ
   have hd₁ : biprod.inl ≫ diag = biprod.lift f h := by ext <;> simp [diag]
   have hd₂ : biprod.inr ≫ diag = biprod.lift g k := by ext <;> simp [diag]
   have h₁ : biprod.lift (f +ᵣ g) (h +ᵣ k) = biprod.lift (𝟙 X) (𝟙 X) ≫ diag := by
-    ext <;> cat_disch
+    ext <;> aesop_cat
   have h₂ : diag ≫ biprod.desc (𝟙 Y) (𝟙 Y) = biprod.desc (f +ₗ h) (g +ₗ k) := by
     ext <;> simp [reassoc_of% hd₁, reassoc_of% hd₂]
   rw [leftAdd, h₁, Category.assoc, h₂, rightAdd]
 
 /-- In a category with binary biproducts, the morphisms form a commutative monoid. -/
-@[instance_reducible]
 def addCommMonoidHomOfHasBinaryBiproducts : AddCommMonoid (X ⟶ Y) where
   add := (· +ᵣ ·)
   add_assoc :=
     (EckmannHilton.mul_assoc (isUnital_leftAdd X Y) (isUnital_rightAdd X Y) (distrib X Y)).assoc
+  zero := 0
   zero_add := (isUnital_rightAdd X Y).left_id
   add_zero := (isUnital_rightAdd X Y).right_id
   add_comm :=

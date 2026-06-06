@@ -3,10 +3,9 @@ Copyright (c) 2018 Kenny Lau. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kenny Lau
 -/
-module
-
-public import Mathlib.Data.Nat.Sqrt
-public import Mathlib.Tactic.Common
+import Mathlib.Data.Int.Defs
+import Mathlib.Data.Nat.Defs
+import Mathlib.Tactic.Common
 
 /-!
 # Square root of integers
@@ -14,8 +13,6 @@ public import Mathlib.Tactic.Common
 This file defines the square root function on integers. `Int.sqrt z` is the greatest integer `r`
 such that `r * r ≤ z`. If `z ≤ 0`, then `Int.sqrt z = 0`.
 -/
-
-@[expose] public section
 
 
 namespace Int
@@ -31,16 +28,17 @@ theorem sqrt_eq (n : ℤ) : sqrt (n * n) = n.natAbs := by
   rw [sqrt, ← natAbs_mul_self, toNat_natCast, Nat.sqrt_eq]
 
 theorem exists_mul_self (x : ℤ) : (∃ n, n * n = x) ↔ sqrt x * sqrt x = x :=
-  ⟨fun ⟨n, hn⟩ => by rw [← hn, sqrt_eq, ← Int.natCast_mul, natAbs_mul_self], fun h => ⟨sqrt x, h⟩⟩
+  ⟨fun ⟨n, hn⟩ => by rw [← hn, sqrt_eq, ← Int.ofNat_mul, natAbs_mul_self], fun h => ⟨sqrt x, h⟩⟩
 
 theorem sqrt_nonneg (n : ℤ) : 0 ≤ sqrt n :=
   natCast_nonneg _
 
 @[simp, norm_cast]
-theorem sqrt_natCast (n : ℕ) : Int.sqrt (n : ℤ) = Nat.sqrt n := by rw [sqrt, toNat_natCast]
+theorem sqrt_natCast (n : ℕ) : Int.sqrt (n : ℤ) = Nat.sqrt n := by rw [sqrt, toNat_ofNat]
 
+-- See note [no_index around OfNat.ofNat]
 @[simp]
-theorem sqrt_ofNat (n : ℕ) : Int.sqrt ofNat(n) = Nat.sqrt ofNat(n) :=
+theorem sqrt_ofNat (n : ℕ) : Int.sqrt (no_index (OfNat.ofNat n) : ℤ) = Nat.sqrt (OfNat.ofNat n) :=
   sqrt_natCast _
 
 end Int

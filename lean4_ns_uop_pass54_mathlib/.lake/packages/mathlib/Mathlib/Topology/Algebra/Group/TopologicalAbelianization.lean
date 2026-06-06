@@ -3,11 +3,8 @@ Copyright (c) 2023 María Inés de Frutos-Fernández. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: María Inés de Frutos-Fernández
 -/
-module
-
-public import Mathlib.GroupTheory.Commutator.Basic
-public import Mathlib.Tactic.Group
-public import Mathlib.Topology.Algebra.Group.Basic
+import Mathlib.GroupTheory.Abelianization
+import Mathlib.Topology.Algebra.Group.Basic
 
 /-!
 # The topological abelianization of a group.
@@ -28,11 +25,7 @@ group, topological abelianization
 
 -/
 
-public section
-
-open scoped commutatorElement
-
-variable (G : Type*) [Group G] [TopologicalSpace G] [IsTopologicalGroup G]
+variable (G : Type*) [Group G] [TopologicalSpace G] [TopologicalGroup G]
 
 instance instNormalCommutatorClosure : (commutator G).topologicalClosure.Normal :=
   Subgroup.is_normal_topologicalClosure (commutator G)

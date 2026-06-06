@@ -3,9 +3,8 @@ Copyright (c) 2023 Miyahara Kō. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Miyahara Kō
 -/
-module
 
-public import Mathlib.Tactic.FBinop
+import Mathlib.Tactic.FBinop
 
 /-!
 # Set Product Notation
@@ -22,13 +21,11 @@ notation is desirable but this notation is defined in core for `Prod` so replaci
 `x × y` seems difficult.
 -/
 
-public section
-
 universe u v w
 
 /-- Notation type class for the set product `×ˢ`. -/
 class SProd (α : Type u) (β : Type v) (γ : outParam (Type w)) where
-  /-- The Cartesian product `s ×ˢ t` is the set of `(a, b)` such that `a ∈ s` and `b ∈ t`. -/
+  /-- The cartesian product `s ×ˢ t` is the set of `(a, b)` such that `a ∈ s` and `b ∈ t`. -/
   sprod : α → β → γ
 
 -- This notation binds more strongly than (pre)images, unions and intersections.

@@ -3,15 +3,8 @@ Copyright (c) 2021 Johan Commelin. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Johan Commelin, Aaron Anderson
 -/
-module
-
-public import Mathlib.Algebra.Order.BigOperators.Group.Finset
-public import Mathlib.Algebra.Order.Module.Defs
-public import Mathlib.Algebra.Order.Pi
-public import Mathlib.Algebra.Order.Sub.Basic
-public import Mathlib.Data.Finsupp.Basic
-public import Mathlib.Data.Finsupp.SMulWithZero
-public import Mathlib.Order.Preorder.Finsupp
+import Mathlib.Algebra.Order.Module.Defs
+import Mathlib.Data.Finsupp.Basic
 
 /-!
 # Pointwise order on finitely supported functions
@@ -24,13 +17,11 @@ This file lifts order structures on `α` to `ι →₀ α`.
   functions.
 -/
 
-public section
-
 noncomputable section
 
 open Finset
 
-variable {ι κ α β : Type*}
+variable {ι α β : Type*}
 
 namespace Finsupp
 
@@ -41,138 +32,104 @@ section Zero
 
 variable [Zero α]
 
-section OrderedAddCommMonoid
-variable [AddCommMonoid β] [Preorder β] [IsOrderedAddMonoid β] {f : ι →₀ α} {h₁ h₂ : ι → α → β}
+section LE
+variable [LE α] {f g : ι →₀ α}
 
-@[gcongr]
-lemma sum_le_sum (h : ∀ i ∈ f.support, h₁ i (f i) ≤ h₂ i (f i)) : f.sum h₁ ≤ f.sum h₂ :=
-  Finset.sum_le_sum h
+instance instLEFinsupp : LE (ι →₀ α) :=
+  ⟨fun f g => ∀ i, f i ≤ g i⟩
 
-theorem sum_nonneg (h : ∀ i ∈ f.support, 0 ≤ h₁ i (f i)) : 0 ≤ f.sum h₁ := Finset.sum_nonneg h
+lemma le_def : f ≤ g ↔ ∀ i, f i ≤ g i := Iff.rfl
 
-theorem sum_nonneg' (h : ∀ i, 0 ≤ h₁ i (f i)) : 0 ≤ f.sum h₁ := sum_nonneg fun _ _ ↦ h _
+@[simp, norm_cast] lemma coe_le_coe : ⇑f ≤ g ↔ f ≤ g := Iff.rfl
 
-theorem sum_nonpos (h : ∀ i ∈ f.support, h₁ i (f i) ≤ 0) : f.sum h₁ ≤ 0 := Finset.sum_nonpos h
+/-- The order on `Finsupp`s over a partial order embeds into the order on functions -/
+def orderEmbeddingToFun : (ι →₀ α) ↪o (ι → α) where
+  toFun f := f
+  inj' f g h :=
+    Finsupp.ext fun i => by
+      dsimp at h
+      rw [h]
+  map_rel_iff' := coe_le_coe
 
-end OrderedAddCommMonoid
+@[simp]
+theorem orderEmbeddingToFun_apply {f : ι →₀ α} {i : ι} : orderEmbeddingToFun f i = f i :=
+  rfl
 
-section IsOrderedCancelAddMonoid
-
-variable [AddCommMonoid β] [Preorder β] [IsOrderedCancelAddMonoid β] [AddLeftStrictMono β]
-variable {f : ι →₀ α} {g : ι → α → β}
-
-theorem sum_pos (h : ∀ i ∈ f.support, 0 < g i (f i)) (hf : f ≠ 0) : 0 < f.sum g :=
-  Finset.sum_pos h (by simpa)
-
-theorem sum_pos' (h : ∀ i ∈ f.support, 0 ≤ g i (f i)) (hf : ∃ i ∈ f.support, 0 < g i (f i)) :
-    0 < f.sum g := Finset.sum_pos' h hf
-
-end IsOrderedCancelAddMonoid
+end LE
 
 section Preorder
-variable [Preorder α] {f g : ι →₀ α} {i : ι} {a b : α}
+variable [Preorder α] {f g : ι →₀ α}
 
-@[simp, gcongr] lemma single_le_single : single i a ≤ single i b ↔ a ≤ b := by
-  classical exact Pi.single_le_single
+instance preorder : Preorder (ι →₀ α) :=
+  { Finsupp.instLEFinsupp with
+    le_refl := fun f i => le_rfl
+    le_trans := fun f g h hfg hgh i => (hfg i).trans (hgh i) }
 
-lemma single_mono : Monotone (single i : α → ι →₀ α) := fun _ _ ↦ single_le_single.2
+lemma lt_def : f < g ↔ f ≤ g ∧ ∃ i, f i < g i := Pi.lt_def
+@[simp, norm_cast] lemma coe_lt_coe : ⇑f < g ↔ f < g := Iff.rfl
 
-@[simp] lemma single_nonneg : 0 ≤ single i a ↔ 0 ≤ a := by classical exact Pi.single_nonneg
-@[simp] lemma single_nonpos : single i a ≤ 0 ↔ a ≤ 0 := by classical exact Pi.single_nonpos
+lemma coe_mono : Monotone (Finsupp.toFun : (ι →₀ α) → ι → α) := fun _ _ ↦ id
 
-variable [AddCommMonoid β] [Preorder β] [IsOrderedAddMonoid β]
-
-lemma sum_le_sum_index [DecidableEq ι] {f₁ f₂ : ι →₀ α} {h : ι → α → β} (hf : f₁ ≤ f₂)
-    (hh : ∀ i ∈ f₁.support ∪ f₂.support, Monotone (h i))
-    (hh₀ : ∀ i ∈ f₁.support ∪ f₂.support, h i 0 = 0) : f₁.sum h ≤ f₂.sum h := by
-  classical
-  rw [sum_of_support_subset _ Finset.subset_union_left _ hh₀,
-    sum_of_support_subset _ Finset.subset_union_right _ hh₀]
-  gcongr with i hi
-  exact hh _ hi <| hf _
+lemma coe_strictMono : Monotone (Finsupp.toFun : (ι →₀ α) → ι → α) := fun _ _ ↦ id
 
 end Preorder
 
-section EmbDomain
+instance partialorder [PartialOrder α] : PartialOrder (ι →₀ α) :=
+  { Finsupp.preorder with le_antisymm :=
+      fun _f _g hfg hgf => ext fun i => (hfg i).antisymm (hgf i) }
 
-@[gcongr]
-lemma embDomain_le_embDomain_iff_le [LE α] [@Std.Refl α (· ≤ ·)]
-    (f : ι ↪ κ) (g₁ g₂ : ι →₀ α) : g₁.embDomain f ≤ g₂.embDomain f ↔ g₁ ≤ g₂ := by
-  constructor
-  · rw [Finsupp.le_def]
-    intro h' x
-    simpa [Finsupp.embDomain_apply] using h' (f x)
-  intro h
-  simp [Finsupp.le_def, embDomain_apply, apply_dite₂, Finsupp.le_def.mp h]
+instance semilatticeInf [SemilatticeInf α] : SemilatticeInf (ι →₀ α) :=
+  { Finsupp.partialorder with
+    inf := zipWith (· ⊓ ·) (inf_idem _)
+    inf_le_left := fun _f _g _i => inf_le_left
+    inf_le_right := fun _f _g _i => inf_le_right
+    le_inf := fun _f _g _i h1 h2 s => le_inf (h1 s) (h2 s) }
 
-lemma embDomain_mono [Preorder α] (f : ι ↪ κ) : Monotone (embDomain f : (ι →₀ α) → (κ →₀ α)) :=
-  fun _ _ ↦ (embDomain_le_embDomain_iff_le f _ _).mpr
+@[simp]
+theorem inf_apply [SemilatticeInf α] {i : ι} {f g : ι →₀ α} : (f ⊓ g) i = f i ⊓ g i :=
+  rfl
 
-@[gcongr]
-lemma embDomain_lt_embDomain_iff_lt [Preorder α] (f : ι ↪ κ) (g₁ g₂ : ι →₀ α) :
-    g₁.embDomain f < g₂.embDomain f ↔ g₁ < g₂ := by
-  simp [lt_iff_le_not_ge, embDomain_le_embDomain_iff_le]
+instance semilatticeSup [SemilatticeSup α] : SemilatticeSup (ι →₀ α) :=
+  { Finsupp.partialorder with
+    sup := zipWith (· ⊔ ·) (sup_idem _)
+    le_sup_left := fun _f _g _i => le_sup_left
+    le_sup_right := fun _f _g _i => le_sup_right
+    sup_le := fun _f _g _h hf hg i => sup_le (hf i) (hg i) }
 
-end EmbDomain
+@[simp]
+theorem sup_apply [SemilatticeSup α] {i : ι} {f g : ι →₀ α} : (f ⊔ g) i = f i ⊔ g i :=
+  rfl
 
+instance lattice [Lattice α] : Lattice (ι →₀ α) :=
+  { Finsupp.semilatticeInf, Finsupp.semilatticeSup with }
+
+section Lattice
+variable [DecidableEq ι] [Lattice α] (f g : ι →₀ α)
+
+theorem support_inf_union_support_sup : (f ⊓ g).support ∪ (f ⊔ g).support = f.support ∪ g.support :=
+  coe_injective <| compl_injective <| by ext; simp [inf_eq_and_sup_eq_iff]
+
+theorem support_sup_union_support_inf : (f ⊔ g).support ∪ (f ⊓ g).support = f.support ∪ g.support :=
+  (union_comm _ _).trans <| support_inf_union_support_sup _ _
+
+end Lattice
 end Zero
-
-section MapDomain
-
-variable [AddCommMonoid α]
-
-lemma mapDomain_le_mapDomain_iff_le [LE α] [@Std.Refl α (· ≤ ·)] {f : ι → κ} (h : f.Injective)
-    (g₁ g₂ : ι →₀ α) : g₁.mapDomain f ≤ g₂.mapDomain f ↔ g₁ ≤ g₂ := by
-  simpa [Finsupp.embDomain_eq_mapDomain] using Finsupp.embDomain_le_embDomain_iff_le ⟨f, h⟩ g₁ g₂
-
-lemma mapDomain_lt_mapDomain_iff_lt [Preorder α] {f : ι → κ} (h : f.Injective)
-    (g₁ g₂ : ι →₀ α) : g₁.mapDomain f < g₂.mapDomain f ↔ g₁ < g₂ := by
-  simpa [Finsupp.embDomain_eq_mapDomain] using Finsupp.embDomain_lt_embDomain_iff_lt ⟨f, h⟩ g₁ g₂
-
-end MapDomain
 
 /-! ### Algebraic order structures -/
 
-section OrderedAddCommMonoid
-variable [AddCommMonoid α] [Preorder α] [IsOrderedAddMonoid α]
-  {i : ι} {f : ι → κ} {g g₁ g₂ : ι →₀ α}
 
-instance isOrderedAddMonoid : IsOrderedAddMonoid (ι →₀ α) :=
-  { add_le_add_left := fun _a _b h c s => add_le_add_left (h s) (c s) }
+instance orderedAddCommMonoid [OrderedAddCommMonoid α] : OrderedAddCommMonoid (ι →₀ α) :=
+  { Finsupp.instAddCommMonoid, Finsupp.partialorder with
+    add_le_add_left := fun _a _b h c s => add_le_add_left (h s) (c s) }
 
-@[gcongr]
-lemma mapDomain_mono : Monotone (mapDomain f : (ι →₀ α) → (κ →₀ α)) := by
-  classical exact fun g₁ g₂ h ↦ sum_le_sum_index h (fun _ _ ↦ single_mono) (by simp)
+instance orderedCancelAddCommMonoid [OrderedCancelAddCommMonoid α] :
+    OrderedCancelAddCommMonoid (ι →₀ α) :=
+  { Finsupp.orderedAddCommMonoid with
+    le_of_add_le_add_left := fun _f _g _i h s => le_of_add_le_add_left (h s) }
 
-lemma mapDomain_nonneg (hg : 0 ≤ g) : 0 ≤ g.mapDomain f := by simpa using mapDomain_mono hg
-lemma mapDomain_nonpos (hg : g ≤ 0) : g.mapDomain f ≤ 0 := by simpa using mapDomain_mono hg
-
-theorem single_le_sum {α M N : Type*} [Zero M] [AddCommMonoid N]
-    [PartialOrder N] [IsOrderedAddMonoid N] (f : α →₀ M) {g : α → M → N}
-    (h : 0 ≤ (g · ·)) (a : α) :
-    ((single a (f a)).sum g) ≤ f.sum g := by
-  rcases eq_or_ne (f a) 0 with H | H
-  · rw [H, single_zero, sum_zero_index]
-    exact sum_nonneg' (fun i ↦ h i (f i))
-  · rw [sum, support_single _ H, sum_singleton, single_eq_same]
-    apply Finset.single_le_sum (fun i hi ↦ h i (f i))
-    simpa [mem_support_iff, ne_eq] using H
-
-lemma single_eval_le_sum {α M N : Type*} [Zero M] [AddCommMonoid N] [PartialOrder N]
-    [IsOrderedAddMonoid N] (f : α →₀ M) {g : M → N} (hg : g 0 = 0) (h : 0 ≤ (g ·)) (a : α) :
-    g (f a) ≤ f.sum fun _ m ↦ g m := by
-  simp only [← sum_single_index (h := fun (_ : α) m ↦ g m) (a := a) (b := f a) hg]
-  apply single_le_sum _ (fun _ m ↦ h m)
-
-end OrderedAddCommMonoid
-
-instance isOrderedCancelAddMonoid [AddCommMonoid α] [Preorder α] [IsOrderedCancelAddMonoid α] :
-    IsOrderedCancelAddMonoid (ι →₀ α) :=
-  { le_of_add_le_add_left := fun _f _g _i h s => le_of_add_le_add_left (h s) }
-
-instance addLeftReflectLE [AddCommMonoid α] [Preorder α] [AddLeftReflectLE α] :
-    AddLeftReflectLE (ι →₀ α) where
-  le_of_add_le_add_left H x := le_of_add_le_add_left <| H x
+instance contravariantClass [OrderedAddCommMonoid α] [ContravariantClass α α (· + ·) (· ≤ ·)] :
+    ContravariantClass (ι →₀ α) (ι →₀ α) (· + ·) (· ≤ ·) :=
+  ⟨fun _f _g _h H x => le_of_add_le_add_left <| H x⟩
 
 section SMulZeroClass
 variable [Zero α] [Preorder α] [Zero β] [Preorder β] [SMulZeroClass α β]
@@ -207,33 +164,25 @@ instance instSMulPosReflectLT [SMulPosReflectLT α β] : SMulPosReflectLT α (ι
 
 end SMulWithZero
 
-section PartialOrder
+section CanonicallyOrderedAddCommMonoid
 
-variable [AddCommMonoid α] [PartialOrder α] {f g : ι →₀ α}
+variable [CanonicallyOrderedAddCommMonoid α] {f g : ι →₀ α}
 
-instance orderBot [IsBotZeroClass α] : OrderBot (ι →₀ α) where
+instance orderBot : OrderBot (ι →₀ α) where
   bot := 0
-  bot_le := by simp [le_def]
+  bot_le := by simp only [le_def, coe_zero, Pi.zero_apply, imp_true_iff, zero_le]
 
-instance [IsBotZeroClass α] : IsBotZeroClass (ι →₀ α) where
-  isBot_zero := isBot_bot
-
-@[deprecated _root_.bot_eq_zero (since := "2026-05-07")]
-protected theorem bot_eq_zero [IsBotZeroClass α] : (⊥ : ι →₀ α) = 0 :=
+protected theorem bot_eq_zero : (⊥ : ι →₀ α) = 0 :=
   rfl
-
-variable [CanonicallyOrderedAdd α]
 
 @[simp]
 theorem add_eq_zero_iff (f g : ι →₀ α) : f + g = 0 ↔ f = 0 ∧ g = 0 := by
   simp [DFunLike.ext_iff, forall_and]
 
-theorem le_iff' (f g : ι →₀ α) {s : Finset ι} (hf : f.support ⊆ s) :
-    f ≤ g ↔ ∀ i ∈ s, f i ≤ g i := by
-  refine ⟨fun h s _ ↦ h s, fun h s ↦ ?_⟩
-  by_cases H : s ∈ f.support
-  · exact h s (hf H)
-  · exact notMem_support_iff.1 H ▸ zero_le
+theorem le_iff' (f g : ι →₀ α) {s : Finset ι} (hf : f.support ⊆ s) : f ≤ g ↔ ∀ i ∈ s, f i ≤ g i :=
+  ⟨fun h s _hs => h s, fun h s => by
+    classical exact
+        if H : s ∈ f.support then h s (hf H) else (not_mem_support_iff.1 H).symm ▸ zero_le (g s)⟩
 
 theorem le_iff (f g : ι →₀ α) : f ≤ g ↔ ∀ i ∈ f.support, f i ≤ g i :=
   le_iff' f g <| Subset.refl _
@@ -243,10 +192,10 @@ lemma support_monotone : Monotone (support (α := ι) (M := α)) :=
 
 lemma support_mono (hfg : f ≤ g) : f.support ⊆ g.support := support_monotone hfg
 
-instance decidableLE [DecidableLE α] : DecidableLE (ι →₀ α) := fun f g =>
+instance decidableLE [DecidableRel (@LE.le α _)] : DecidableRel (@LE.le (ι →₀ α) _) := fun f g =>
   decidable_of_iff _ (le_iff f g).symm
 
-instance decidableLT [DecidableLE α] : DecidableLT (ι →₀ α) :=
+instance decidableLT [DecidableRel (@LE.le α _)] : DecidableRel (@LT.lt (ι →₀ α) _) :=
   decidableLTOfDecidableLE
 
 @[simp]
@@ -263,10 +212,11 @@ instance tsub : Sub (ι →₀ α) :=
 instance orderedSub : OrderedSub (ι →₀ α) :=
   ⟨fun _n _m _k => forall_congr' fun _x => tsub_le_iff_right⟩
 
-instance [AddLeftMono α] : CanonicallyOrderedAdd (ι →₀ α) where
-  exists_add_of_le := fun {f g} h => ⟨g - f, ext fun x => (add_tsub_cancel_of_le <| h x).symm⟩
-  le_add_self _ _ _ := le_add_self
-  le_self_add := fun _f _g _x => le_self_add
+instance : CanonicallyOrderedAddCommMonoid (ι →₀ α) :=
+  { Finsupp.orderBot,
+    Finsupp.orderedAddCommMonoid with
+    exists_add_of_le := fun {f g} h => ⟨g - f, ext fun x => (add_tsub_cancel_of_le <| h x).symm⟩
+    le_self_add := fun _f _g _x => le_self_add }
 
 @[simp, norm_cast] lemma coe_tsub (f g : ι →₀ α) : ⇑(f - g) = f - g := rfl
 
@@ -276,63 +226,47 @@ theorem tsub_apply (f g : ι →₀ α) (a : ι) : (f - g) a = f a - g a :=
 @[simp]
 theorem single_tsub : single i (a - b) = single i a - single i b := by
   ext j
-  obtain rfl | h := eq_or_ne j i
+  obtain rfl | h := eq_or_ne i j
   · rw [tsub_apply, single_eq_same, single_eq_same, single_eq_same]
   · rw [tsub_apply, single_eq_of_ne h, single_eq_of_ne h, single_eq_of_ne h, tsub_self]
 
 theorem support_tsub {f1 f2 : ι →₀ α} : (f1 - f2).support ⊆ f1.support := by
-  simp +contextual only [subset_iff, tsub_eq_zero_iff_le, mem_support_iff,
+  simp (config := { contextual := true }) only [subset_iff, tsub_eq_zero_iff_le, mem_support_iff,
     Ne, coe_tsub, Pi.sub_apply, not_imp_not, zero_le, imp_true_iff]
 
 theorem subset_support_tsub [DecidableEq ι] {f1 f2 : ι →₀ α} :
     f1.support \ f2.support ⊆ (f1 - f2).support := by
-  simp +contextual [subset_iff]
+  simp (config := { contextual := true }) [subset_iff]
 
-lemma mapDomain_tsub {f : ι → κ} (h : f.Injective) (f1 f2 : ι →₀ α) :
-    (f1 - f2).mapDomain f = f1.mapDomain f - f2.mapDomain f := by
-  ext y
-  by_cases! hy : y ∉ Set.range f
-  · simp [mapDomain_notin_range _ _ hy]
-  · obtain ⟨x, rfl⟩ := hy
-    simp [mapDomain_apply h]
+end CanonicallyOrderedAddCommMonoid
 
-lemma embDomain_tsub (f : ι ↪ κ) (f1 f2 : ι →₀ α) :
-    (f1 - f2).embDomain f = f1.embDomain f - f2.embDomain f := by
-  simp_rw [embDomain_eq_mapDomain, mapDomain_tsub f.injective]
+section CanonicallyLinearOrderedAddCommMonoid
 
-/-- The support of a sum is the union of the supports, when the coefficients satisfy
-`CanonicallyOrderedAdd`.
-
-In the case where the supports are disjoint, there is also `Finsupp.support_add_eq`,
-which holds in any `AddZeroClass`. -/
-lemma support_add_eq_union {f1 f2 : ι →₀ α} [DecidableEq ι] :
-    (f1 + f2).support = f1.support ∪ f2.support :=
-  le_antisymm support_add <| Finset.union_subset
-    (support_mono le_self_add) (support_mono le_add_self)
-
-end PartialOrder
-
-section LinearOrder
-
-variable [AddCommMonoid α] [LinearOrder α] [IsBotZeroClass α]
+variable [CanonicallyLinearOrderedAddCommMonoid α]
 
 @[simp]
 theorem support_inf [DecidableEq ι] (f g : ι →₀ α) : (f ⊓ g).support = f.support ∩ g.support := by
   ext
-  simp
+  simp only [inf_apply, mem_support_iff, Ne, Finset.mem_union, Finset.mem_filter,
+    Finset.mem_inter]
+  simp only [inf_eq_min, ← nonpos_iff_eq_zero, min_le_iff, not_or]
 
 @[simp]
 theorem support_sup [DecidableEq ι] (f g : ι →₀ α) : (f ⊔ g).support = f.support ∪ g.support := by
   ext
-  simp [imp_iff_not_or]
+  simp only [Finset.mem_union, mem_support_iff, sup_apply, Ne, ← bot_eq_zero]
+  rw [_root_.sup_eq_bot_iff, not_and_or]
 
 nonrec theorem disjoint_iff {f g : ι →₀ α} : Disjoint f g ↔ Disjoint f.support g.support := by
   classical
-  simp [disjoint_iff, bot_eq_zero, ← Finsupp.support_eq_empty]
+    rw [disjoint_iff, disjoint_iff, Finsupp.bot_eq_zero, ← Finsupp.support_eq_empty,
+      Finsupp.support_inf]
+    rfl
 
-end LinearOrder
+end CanonicallyLinearOrderedAddCommMonoid
 
 /-! ### Some lemmas about `ℕ` -/
+
 
 section Nat
 
@@ -343,19 +277,6 @@ theorem sub_single_one_add {a : ι} {u u' : ι →₀ ℕ} (h : u a ≠ 0) :
 theorem add_sub_single_one {a : ι} {u u' : ι →₀ ℕ} (h : u' a ≠ 0) :
     u + (u' - single a 1) = u + u' - single a 1 :=
   (add_tsub_assoc_of_le (single_le_iff.mpr <| Nat.one_le_iff_ne_zero.mpr h) _).symm
-
-lemma sub_add_single_one_cancel {u : ι →₀ ℕ} {i : ι} (h : u i ≠ 0) :
-    u - single i 1 + single i 1 = u := by
-  rw [sub_single_one_add h, add_tsub_cancel_right]
-
-theorem isLowerSet_range_embDomain (f : α ↪ β) :
-    IsLowerSet ((Set.range (embDomain f)) : Set (β →₀ ℕ)) := by
-  rintro _ y h ⟨z, rfl⟩
-  obtain ⟨w, hw⟩ := exists_add_of_le h
-  rw [mem_range_embDomain_iff]
-  trans ↑(y + w).support
-  · exact fun _ ↦ by simp; grind
-  · simp [← hw]
 
 end Nat
 

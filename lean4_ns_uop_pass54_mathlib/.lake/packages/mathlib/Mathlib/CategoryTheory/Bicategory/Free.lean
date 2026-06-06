@@ -3,9 +3,7 @@ Copyright (c) 2022 Yuma Mizuno. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yuma Mizuno
 -/
-module
-
-public import Mathlib.CategoryTheory.Bicategory.Functor.Pseudofunctor
+import Mathlib.CategoryTheory.Bicategory.Functor.Pseudofunctor
 
 /-!
 # Free bicategories
@@ -21,8 +19,6 @@ axioms of a bicategory.
 * `FreeBicategory.lift F`: the pseudofunctor from `FreeBicategory B` to `C` associated with a
   prefunctor `F` from `B` to `C`.
 -/
-
-@[expose] public section
 
 
 universe w w₁ w₂ v v₁ v₂ u u₁ u₂
@@ -45,7 +41,7 @@ namespace FreeBicategory
 
 section
 
-variable {B : Type u} [Quiver.{v} B]
+variable {B : Type u} [Quiver.{v + 1} B]
 
 /-- 1-morphisms in the free bicategory. -/
 inductive Hom : B → B → Type max u v
@@ -56,20 +52,21 @@ inductive Hom : B → B → Type max u v
 instance (a b : B) [Inhabited (a ⟶ b)] : Inhabited (Hom a b) :=
   ⟨Hom.of default⟩
 
-instance quiver : Quiver.{max u v} (FreeBicategory B) where
+instance quiver : Quiver.{max u v + 1} (FreeBicategory B) where
   Hom := fun a b : B => Hom a b
 
-set_option linter.style.whitespace false in -- manual alignment is not recognised
 instance categoryStruct : CategoryStruct.{max u v} (FreeBicategory B) where
   id   := fun a : B => Hom.id a
   comp := @fun _ _ _ => Hom.comp
 
 /-- Representatives of 2-morphisms in the free bicategory. -/
+-- Porting note(#5171): linter not ported yet
+-- @[nolint has_nonempty_instance]
 inductive Hom₂ : ∀ {a b : FreeBicategory B}, (a ⟶ b) → (a ⟶ b) → Type max u v
   | id {a b} (f : a ⟶ b) : Hom₂ f f
   | vcomp {a b} {f g h : a ⟶ b} (η : Hom₂ f g) (θ : Hom₂ g h) : Hom₂ f h
   | whisker_left {a b c} (f : a ⟶ b) {g h : b ⟶ c} (η : Hom₂ g h) :
-      Hom₂ (f ≫ g) (f ≫ h) -- `η` cannot be earlier than `h` since it is a recursive argument.
+      Hom₂ (f ≫ g) (f ≫ h)-- `η` cannot be earlier than `h` since it is a recursive argument.
   | whisker_right {a b c} {f g : a ⟶ b} (h : b ⟶ c) (η : Hom₂ f g) : Hom₂ (f.comp h) (g.comp h)
   | associator {a b c d} (f : a ⟶ b) (g : b ⟶ c) (h : c ⟶ d) :
       Hom₂ ((f ≫ g) ≫ h) (f ≫ (g ≫ h))
@@ -151,7 +148,7 @@ end
 instance homCategory (a b : FreeBicategory B) : Category (a ⟶ b) where
   Hom f g := Quot (@Rel _ _ a b f g)
   id f := Quot.mk Rel (Hom₂.id f)
-  comp := @fun _ _ _ => Quot.map₂ Hom₂.vcomp Rel.vcomp_right Rel.vcomp_left
+  comp := @fun f g h => Quot.map₂ Hom₂.vcomp Rel.vcomp_right Rel.vcomp_left
   id_comp := by
     rintro f g ⟨η⟩
     exact Quot.sound (Rel.id_comp η)
@@ -165,19 +162,19 @@ instance homCategory (a b : FreeBicategory B) : Category (a ⟶ b) where
 /-- Bicategory structure on the free bicategory. -/
 instance bicategory : Bicategory (FreeBicategory B) where
   homCategory := @fun (a b : B) => FreeBicategory.homCategory a b
-  whiskerLeft := @fun _ _ _ f g h η => Quot.map (Hom₂.whisker_left f) (Rel.whisker_left f g h) η
-  whiskerLeft_id := @fun _ _ _ f g => Quot.sound (Rel.whisker_left_id f g)
-  associator := @fun _ _ _ _ f g h =>
+  whiskerLeft := @fun a b c f g h η => Quot.map (Hom₂.whisker_left f) (Rel.whisker_left f g h) η
+  whiskerLeft_id := @fun a b c f g => Quot.sound (Rel.whisker_left_id f g)
+  associator := @fun a b c d f g h =>
     { hom := Quot.mk Rel (Hom₂.associator f g h)
       inv := Quot.mk Rel (Hom₂.associator_inv f g h)
       hom_inv_id := Quot.sound (Rel.associator_hom_inv f g h)
       inv_hom_id := Quot.sound (Rel.associator_inv_hom f g h) }
-  leftUnitor := @fun _ _ f =>
+  leftUnitor := @fun a b f =>
     { hom := Quot.mk Rel (Hom₂.left_unitor f)
       inv := Quot.mk Rel (Hom₂.left_unitor_inv f)
       hom_inv_id := Quot.sound (Rel.left_unitor_hom_inv f)
       inv_hom_id := Quot.sound (Rel.left_unitor_inv_hom f) }
-  rightUnitor := @fun _ _ f =>
+  rightUnitor := @fun a b f =>
     { hom := Quot.mk Rel (Hom₂.right_unitor f)
       inv := Quot.mk Rel (Hom₂.right_unitor_inv f)
       hom_inv_id := Quot.sound (Rel.right_unitor_hom_inv f)
@@ -191,8 +188,8 @@ instance bicategory : Bicategory (FreeBicategory B) where
   comp_whiskerLeft := by
     rintro a b c d f g h h' ⟨η⟩
     exact Quot.sound (Rel.comp_whisker_left f g η)
-  whiskerRight := @fun _ _ _ f g η h => Quot.map (Hom₂.whisker_right h) (Rel.whisker_right f g h) η
-  id_whiskerRight := @fun _ _ _ f g => Quot.sound (Rel.id_whisker_right f g)
+  whiskerRight := @fun a b c f g η h => Quot.map (Hom₂.whisker_right h) (Rel.whisker_right f g h) η
+  id_whiskerRight := @fun a b c f g => Quot.sound (Rel.id_whisker_right f g)
   comp_whiskerRight := by
     rintro a b c f g h ⟨η⟩ ⟨θ⟩ i
     exact Quot.sound (Rel.comp_whisker_right i η θ)
@@ -208,12 +205,11 @@ instance bicategory : Bicategory (FreeBicategory B) where
   whisker_exchange := by
     rintro a b c f g h i ⟨η⟩ ⟨θ⟩
     exact Quot.sound (Rel.whisker_exchange η θ)
-  pentagon := @fun _ _ _ _ _ f g h i => Quot.sound (Rel.pentagon f g h i)
-  triangle := @fun _ _ _ f g => Quot.sound (Rel.triangle f g)
+  pentagon := @fun a b c d e f g h i => Quot.sound (Rel.pentagon f g h i)
+  triangle := @fun a b c f g => Quot.sound (Rel.triangle f g)
 
 variable {a b c d : FreeBicategory B}
 
-/-- `Hom₂.mk η` is an abbreviation for `Quot.mk Rel η`. -/
 abbrev Hom₂.mk {f g : a ⟶ b} (η : Hom₂ f g) : f ⟶ g :=
   Quot.mk Rel η
 
@@ -234,8 +230,9 @@ theorem mk_whisker_right {f g : a ⟶ b} (η : Hom₂ f g) (h : b ⟶ c) :
 
 variable (f : a ⟶ b) (g : b ⟶ c) (h : c ⟶ d)
 
-theorem id_def : Hom.id (B := B) a = 𝟙 a :=
-  rfl
+-- Porting note: I can not get this to typecheck, and I don't understand why.
+-- theorem id_def : Hom.id a = 𝟙 a :=
+--   rfl
 
 theorem comp_def : Hom.comp f g = f ≫ g :=
   rfl
@@ -278,7 +275,7 @@ end
 
 section
 
-variable {B : Type u₁} [Quiver.{v₁} B] {C : Type u₂} [CategoryStruct.{v₂} C]
+variable {B : Type u₁} [Quiver.{v₁ + 1} B] {C : Type u₂} [CategoryStruct.{v₂} C]
 variable (F : Prefunctor B C)
 
 /-- Auxiliary definition for `lift`. -/
@@ -301,10 +298,11 @@ end
 
 section
 
-variable {B : Type u₁} [Quiver.{v₁} B] {C : Type u₂} [Bicategory.{w₂, v₂} C]
+variable {B : Type u₁} [Quiver.{v₁ + 1} B] {C : Type u₂} [Bicategory.{w₂, v₂} C]
 variable (F : Prefunctor B C)
 
 /-- Auxiliary definition for `lift`. -/
+-- @[simp] -- Porting note: adding `@[simp]` causes a PANIC.
 def liftHom₂ : ∀ {a b : FreeBicategory B} {f g : a ⟶ b}, Hom₂ f g → (liftHom F f ⟶ liftHom F g)
   | _, _, _, _, Hom₂.id _ => 𝟙 _
   | _, _, _, _, Hom₂.associator _ _ _ => (α_ _ _ _).hom
@@ -317,33 +315,38 @@ def liftHom₂ : ∀ {a b : FreeBicategory B} {f g : a ⟶ b}, Hom₂ f g → (l
   | _, _, _, _, Hom₂.whisker_left f η => liftHom F f ◁ liftHom₂ η
   | _, _, _, _, Hom₂.whisker_right h η => liftHom₂ η ▷ liftHom F h
 
-attribute [local simp] whisker_exchange in
+attribute [local simp] whisker_exchange
+
 theorem liftHom₂_congr {a b : FreeBicategory B} {f g : a ⟶ b} {η θ : Hom₂ f g} (H : Rel η θ) :
-    liftHom₂ F η = liftHom₂ F θ := by induction H <;> (dsimp [liftHom₂]; cat_disch)
+    liftHom₂ F η = liftHom₂ F θ := by induction H <;> (dsimp [liftHom₂]; aesop_cat)
 
 /-- A prefunctor from a quiver `B` to a bicategory `C` can be lifted to a pseudofunctor from
 `free_bicategory B` to `C`.
 -/
 @[simps]
-def lift : FreeBicategory B ⥤ᵖ C where
+def lift : Pseudofunctor (FreeBicategory B) C where
   obj := F.obj
   map := liftHom F
-  mapId _ := Iso.refl _
-  mapComp _ _ := Iso.refl _
-  map₂ := Quot.lift (liftHom₂ F) fun _ _ H => liftHom₂_congr F H
+  mapId a := Iso.refl _
+  mapComp f g := Iso.refl _
+  map₂ := Quot.lift (liftHom₂ F) fun η θ H => liftHom₂_congr F H
   -- Porting note: We'd really prefer not to be doing this by hand.
   -- in mathlib3 `tidy` did these inductions for us.
   map₂_comp := by
-    intro a b f g h η θ
-    induction η using Quot.rec
-    · induction θ using Quot.rec <;> rfl
-    · rfl
+    intros a b f g h η θ
+    apply Quot.rec _ _ η
+    · intro η
+      apply Quot.rec _ _ θ
+      · intro θ; rfl
+      · intros; rfl
+    · intros; rfl
+  -- Porting note: still borked from here. The infoview doesn't update properly for me.
   map₂_whisker_left := by
     intro a b c f g h η
-    induction η using Quot.rec
-    · cat_disch
-    · rfl
-  map₂_whisker_right := by intro _ _ _ _ _ η h; dsimp; induction η using Quot.rec <;> cat_disch
+    apply Quot.rec _ _ η
+    · intros; aesop_cat
+    · intros; rfl
+  map₂_whisker_right := by intro _ _ _ _ _ η h; dsimp; apply Quot.rec _ _ η <;> aesop_cat
 
 end
 

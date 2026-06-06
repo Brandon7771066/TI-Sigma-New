@@ -1,19 +1,15 @@
 /-
-Copyright (c) 2021 Kim Morrison. All rights reserved.
+Copyright (c) 2021 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison
+Authors: Scott Morrison
 -/
-module
-
-public import Mathlib.CategoryTheory.Preadditive.Basic
-public import Mathlib.CategoryTheory.SingleObj
+import Mathlib.CategoryTheory.Preadditive.Basic
+import Mathlib.CategoryTheory.SingleObj
 
 /-!
 # `SingleObj α` is preadditive when `α` is a ring.
 
 -/
-
-public section
 
 
 namespace CategoryTheory

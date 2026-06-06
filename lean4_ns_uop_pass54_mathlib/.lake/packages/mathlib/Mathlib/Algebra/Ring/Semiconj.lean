@@ -3,29 +3,25 @@ Copyright (c) 2014 Jeremy Avigad. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jeremy Avigad, Leonardo de Moura, Floris van Doorn, Yury Kudryashov, Neil Strickland
 -/
-module
-
-public import Mathlib.Algebra.Group.Semiconj.Defs
-public import Mathlib.Algebra.Ring.Defs
+import Mathlib.Algebra.Group.Semiconj.Defs
+import Mathlib.Algebra.Ring.Defs
 
 /-!
 # Semirings and rings
 
 This file gives lemmas about semirings, rings and domains.
-This is analogous to `Mathlib/Algebra/Group/Basic.lean`,
+This is analogous to `Mathlib.Algebra.Group.Basic`,
 the difference being that the former is about `+` and `*` separately, while
 the present file is about their interaction.
 
-For the definitions of semirings and rings see `Mathlib/Algebra/Ring/Defs.lean`.
+For the definitions of semirings and rings see `Mathlib.Algebra.Ring.Defs`.
 
 -/
 
-public section
 
+universe u v w x
 
-universe u
-
-variable {R : Type u}
+variable {α : Type u} {β : Type v} {γ : Type w} {R : Type x}
 
 open Function
 
@@ -63,11 +59,15 @@ end
 
 section
 
-variable [MulOneClass R] [HasDistribNeg R]
+variable [MulOneClass R] [HasDistribNeg R] {a x y : R}
 
-theorem neg_one_right (a : R) : SemiconjBy a (-1) (-1) := by simp
+-- Porting note: `simpNF` told me to remove `simp` attribute
+theorem neg_one_right (a : R) : SemiconjBy a (-1) (-1) :=
+  (one_right a).neg_right
 
-theorem neg_one_left (x : R) : SemiconjBy (-1) x x := by simp
+-- Porting note: `simpNF` told me to remove `simp` attribute
+theorem neg_one_left (x : R) : SemiconjBy (-1) x x :=
+  (SemiconjBy.one_left x).neg_left
 
 end
 

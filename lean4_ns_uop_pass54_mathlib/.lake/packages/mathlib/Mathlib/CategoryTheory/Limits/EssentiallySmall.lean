@@ -3,10 +3,8 @@ Copyright (c) 2022 Markus Himmel. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Markus Himmel
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.Products
-public import Mathlib.CategoryTheory.EssentiallySmall
+import Mathlib.CategoryTheory.Limits.Shapes.Products
+import Mathlib.CategoryTheory.EssentiallySmall
 
 /-!
 # Limits over essentially small indexing categories
@@ -16,8 +14,6 @@ If `C` has limits of size `w` and `J` is `w`-essentially small, then `C` has lim
 See also the file `FinallySmall.lean` for more general results.
 
 -/
-
-public section
 
 
 universe w₁ w₂ v₁ v₂ u₁ u₂

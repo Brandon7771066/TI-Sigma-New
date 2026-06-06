@@ -3,10 +3,8 @@ Copyright (c) 2021 Chris Hughes. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Chris Hughes
 -/
-module
-
-public import Mathlib.Data.Set.Lattice
-public import Mathlib.Order.Directed
+import Mathlib.Data.Set.Lattice
+import Mathlib.Order.Directed
 
 /-!
 # Union lift
@@ -29,16 +27,14 @@ There are also three lemmas about `iUnionLift` intended to aid with proving that
 homomorphism when defined on a Union of substructures. There is one lemma each to show that
 constants, unary functions, or binary functions are preserved. These lemmas are:
 
-* `Set.iUnionLift_const`
-* `Set.iUnionLift_unary`
-* `Set.iUnionLift_binary`
+*`Set.iUnionLift_const`
+*`Set.iUnionLift_unary`
+*`Set.iUnionLift_binary`
 
 ## Tags
 
 directed union, directed supremum, glue, gluing
 -/
-
-@[expose] public section
 
 variable {α : Type*} {ι β : Sort _}
 
@@ -66,16 +62,17 @@ variable {S : ι → Set α} {f : ∀ i, S i → β}
 theorem iUnionLift_mk {i : ι} (x : S i) (hx : (x : α) ∈ T) :
     iUnionLift S f hf T hT ⟨x, hx⟩ = f i x := hf _ i x _ _
 
+@[simp]
 theorem iUnionLift_inclusion {i : ι} (x : S i) (h : S i ⊆ T) :
     iUnionLift S f hf T hT (Set.inclusion h x) = f i x :=
   iUnionLift_mk x _
 
 theorem iUnionLift_of_mem (x : T) {i : ι} (hx : (x : α) ∈ S i) :
-    iUnionLift S f hf T hT x = f i ⟨x, hx⟩ := by obtain ⟨x, hx⟩ := x; exact hf _ _ _ _ _
+    iUnionLift S f hf T hT x = f i ⟨x, hx⟩ := by cases' x with x hx; exact hf _ _ _ _ _
 
 theorem preimage_iUnionLift (t : Set β) :
     iUnionLift S f hf T hT ⁻¹' t =
-      inclusion hT ⁻¹' (⋃ i, inclusion (subset_iUnion S i) '' f i ⁻¹' t) := by
+      inclusion hT ⁻¹' (⋃ i, inclusion (subset_iUnion S i) '' (f i ⁻¹' t)) := by
   ext x
   simp only [mem_preimage, mem_iUnion, mem_image]
   constructor
@@ -99,7 +96,7 @@ theorem iUnionLift_const (c : T) (ci : ∀ i, S i) (hci : ∀ i, (ci i : α) = c
 /-- `iUnionLift_unary` is useful for proving that `iUnionLift` is a homomorphism
   of algebraic structures when defined on the Union of algebraic subobjects.
   For example, it could be used to prove that the lift of a collection
-  of `LinearMap`s on a union of submodules preserves scalar multiplication. -/
+  of linear_maps on a union of submodules preserves scalar multiplication. -/
 theorem iUnionLift_unary (u : T → T) (ui : ∀ i, S i → S i)
     (hui :
       ∀ (i) (x : S i),
@@ -107,8 +104,9 @@ theorem iUnionLift_unary (u : T → T) (ui : ∀ i, S i → S i)
           Set.inclusion (show S i ⊆ T from hT'.symm ▸ Set.subset_iUnion S i) (ui i x))
     (uβ : β → β) (h : ∀ (i) (x : S i), f i (ui i x) = uβ (f i x)) (x : T) :
     iUnionLift S f hf T (le_of_eq hT') (u x) = uβ (iUnionLift S f hf T (le_of_eq hT') x) := by
+  clear hT -- this prevents the argument from getting inserted by accident.
   subst hT'
-  obtain ⟨i, hi⟩ := Set.mem_iUnion.1 x.prop
+  cases' Set.mem_iUnion.1 x.prop with i hi
   rw [iUnionLift_of_mem x hi, ← h i]
   have : x = Set.inclusion (Set.subset_iUnion S i) ⟨x, hi⟩ := by
     cases x
@@ -128,9 +126,10 @@ theorem iUnionLift_binary (dir : Directed (· ≤ ·) S) (op : T → T → T) (o
     (opβ : β → β → β) (h : ∀ (i) (x y : S i), f i (opi i x y) = opβ (f i x) (f i y)) (x y : T) :
     iUnionLift S f hf T (le_of_eq hT') (op x y) =
       opβ (iUnionLift S f hf T (le_of_eq hT') x) (iUnionLift S f hf T (le_of_eq hT') y) := by
+  clear hT -- this prevents the argument from getting inserted by accident.
   subst hT'
-  obtain ⟨i, hi⟩ := Set.mem_iUnion.1 x.prop
-  obtain ⟨j, hj⟩ := Set.mem_iUnion.1 y.prop
+  cases' Set.mem_iUnion.1 x.prop with i hi
+  cases' Set.mem_iUnion.1 y.prop with j hj
   rcases dir i j with ⟨k, hik, hjk⟩
   rw [iUnionLift_of_mem x (hik hi), iUnionLift_of_mem y (hjk hj), ← h k]
   have hx : x = Set.inclusion (Set.subset_iUnion S k) ⟨x, hik hi⟩ := by
@@ -142,6 +141,7 @@ theorem iUnionLift_binary (dir : Directed (· ≤ ·) S) (op : T → T → T) (o
   have hxy : (Set.inclusion (Set.subset_iUnion S k) (opi k ⟨x, hik hi⟩ ⟨y, hjk hj⟩) : α) ∈ S k :=
     (opi k ⟨x, hik hi⟩ ⟨y, hjk hj⟩).prop
   conv_lhs => rw [hx, hy, ← hopi, iUnionLift_of_mem _ hxy]
+  rfl
 
 end UnionLift
 
@@ -150,7 +150,7 @@ variable {S : ι → Set α} {f : ∀ i, S i → β}
   {hS : iUnion S = univ}
 
 /-- Glue together functions defined on each of a collection `S` of sets that cover a type. See
-also `Set.iUnionLift`. -/
+  also `Set.iUnionLift`.   -/
 noncomputable def liftCover (S : ι → Set α) (f : ∀ i, S i → β)
     (hf : ∀ (i j) (x : α) (hxi : x ∈ S i) (hxj : x ∈ S j), f i ⟨x, hxi⟩ = f j ⟨x, hxj⟩)
     (hS : iUnion S = univ) (a : α) : β :=
@@ -162,9 +162,9 @@ theorem liftCover_coe {i : ι} (x : S i) : liftCover S f hf hS x = f i x :=
 
 theorem liftCover_of_mem {i : ι} {x : α} (hx : (x : α) ∈ S i) :
     liftCover S f hf hS x = f i ⟨x, hx⟩ :=
-  iUnionLift_of_mem ⟨x, mem_univ x⟩ hx
+  iUnionLift_of_mem (⟨x, trivial⟩ : {_z // True}) hx
 
-theorem preimage_liftCover (t : Set β) : liftCover S f hf hS ⁻¹' t = ⋃ i, (↑) '' f i ⁻¹' t := by
+theorem preimage_liftCover (t : Set β) : liftCover S f hf hS ⁻¹' t = ⋃ i, (↑) '' (f i ⁻¹' t) := by
   change (iUnionLift S f hf univ hS.symm.subset ∘ fun a => ⟨a, mem_univ a⟩) ⁻¹' t = _
   rw [preimage_comp, preimage_iUnionLift]
   ext; simp

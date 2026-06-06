@@ -3,10 +3,9 @@ Copyright (c) 2021 Bhavik Mehta. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bhavik Mehta
 -/
-module
-
-public import Mathlib.CategoryTheory.Limits.Shapes.WideEqualizers
-public import Mathlib.CategoryTheory.Limits.Shapes.Products
+import Mathlib.CategoryTheory.Limits.Shapes.WideEqualizers
+import Mathlib.CategoryTheory.Limits.Shapes.Products
+import Mathlib.CategoryTheory.Limits.Shapes.Terminal
 
 /-!
 # Constructions related to weakly initial objects
@@ -18,8 +17,6 @@ This file gives constructions related to weakly initial objects, namely:
 
 These are primarily useful to show the General Adjoint Functor Theorem.
 -/
-
-public section
 
 
 universe v u

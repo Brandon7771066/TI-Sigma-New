@@ -3,10 +3,8 @@ Copyright (c) 2022 Michail Karatarakis. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Michail Karatarakis
 -/
-module
-
-public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
-public import Mathlib.RingTheory.Valuation.ValuationSubring
+import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+import Mathlib.RingTheory.Valuation.ValuationSubring
 
 /-!
 # Ramification groups
@@ -15,8 +13,6 @@ The decomposition subgroup and inertia subgroups.
 
 TODO: Define higher ramification groups in lower numbering
 -/
-
-@[expose] public section
 
 
 namespace ValuationSubring
@@ -43,12 +39,12 @@ instance decompositionSubgroupMulSemiringAction (A : ValuationSubring L) :
     smul_add := fun g k l => Subtype.ext <| smul_add (A := L) g k l
     smul_zero := fun g => Subtype.ext <| smul_zero g
     smul_one := fun g => Subtype.ext <| smul_one g
-    smul_mul := fun g k l => Subtype.ext <| smul_mul' (N := L) g k l }
+    smul_mul := fun g k l => Subtype.ext <| smul_mul' (A := L) g k l }
 
 /-- The inertia subgroup defined as the kernel of the group homomorphism from
 the decomposition subgroup to the group of automorphisms of the residue field of `A`. -/
-noncomputable def inertiaSubgroup (A : ValuationSubring L) : Subgroup (A.decompositionSubgroup K) :=
+def inertiaSubgroup (A : ValuationSubring L) : Subgroup (A.decompositionSubgroup K) :=
   MonoidHom.ker <|
-    MulSemiringAction.toRingAut (A.decompositionSubgroup K) (IsLocalRing.ResidueField A)
+    MulSemiringAction.toRingAut (A.decompositionSubgroup K) (LocalRing.ResidueField A)
 
 end ValuationSubring

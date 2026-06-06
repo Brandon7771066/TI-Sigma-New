@@ -1,12 +1,10 @@
 /-
-Copyright (c) 2018 Kim Morrison. All rights reserved.
+Copyright (c) 2018 Scott Morrison. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kim Morrison, Bhavik Mehta
+Authors: Scott Morrison, Bhavik Mehta
 -/
-module
-
-public import Mathlib.CategoryTheory.Discrete.Basic
-public import Mathlib.Data.ULift
+import Mathlib.CategoryTheory.Functor.Const
+import Mathlib.CategoryTheory.DiscreteCategory
 
 /-!
 # The category `Discrete PUnit`
@@ -16,11 +14,10 @@ show that any two functors to `Discrete PUnit` are naturally isomorphic,
 and construct the equivalence `(Discrete PUnit ⥤ C) ≌ C`.
 -/
 
-@[expose] public section
 
 universe w v u
 
--- morphism levels before object levels. See note [category theory universes].
+-- morphism levels before object levels. See note [CategoryTheory universes].
 namespace CategoryTheory
 
 variable (C : Type u) [Category.{v} C]
@@ -31,12 +28,16 @@ namespace Functor
 @[simps!]
 def star : C ⥤ Discrete PUnit.{w + 1} :=
   (Functor.const _).obj ⟨⟨⟩⟩
+-- Porting note (#10618): simp can simplify this
+attribute [nolint simpNF] star_map_down_down
 variable {C}
 
 /-- Any two functors to `Discrete PUnit` are isomorphic. -/
 @[simps!]
 def punitExt (F G : C ⥤ Discrete PUnit.{w + 1}) : F ≅ G :=
   NatIso.ofComponents fun X => eqToIso (by simp only [eq_iff_true_of_subsingleton])
+-- Porting note: simp does indeed fire for these despite the linter warning
+attribute [nolint simpNF] punitExt_hom_app_down_down punitExt_inv_app_down_down
 
 /-- Any two functors to `Discrete PUnit` are *equal*.
 You probably want to use `punitExt` instead of this. -/
@@ -47,7 +48,6 @@ theorem punit_ext' (F G : C ⥤ Discrete PUnit.{w + 1}) : F = G :=
 abbrev fromPUnit (X : C) : Discrete PUnit.{w + 1} ⥤ C :=
   (Functor.const _).obj X
 
-set_option backward.defeqAttrib.useBackward true in
 /-- Functors from `Discrete PUnit` are equivalent to the category itself. -/
 @[simps]
 def equiv : Discrete PUnit.{w + 1} ⥤ C ≌ C where
@@ -55,12 +55,11 @@ def equiv : Discrete PUnit.{w + 1} ⥤ C ≌ C where
     { obj := fun F => F.obj ⟨⟨⟩⟩
       map := fun θ => θ.app ⟨⟨⟩⟩ }
   inverse := Functor.const _
-  unitIso := NatIso.ofComponents fun _ => Discrete.natIso fun _ => Iso.refl _
+  unitIso := NatIso.ofComponents fun X => Discrete.natIso fun i => Iso.refl _
   counitIso := NatIso.ofComponents Iso.refl
 
 end Functor
 
-set_option backward.defeqAttrib.useBackward true in
 /-- A category being equivalent to `PUnit` is equivalent to it having a unique morphism between
   any two objects. (In fact, such a category is also a groupoid;
   see `CategoryTheory.Groupoid.ofHomUnique`) -/
@@ -70,12 +69,13 @@ theorem equiv_punit_iff_unique :
   · rintro ⟨h⟩
     refine ⟨⟨h.inverse.obj ⟨⟨⟩⟩⟩, fun x y => Nonempty.intro ?_⟩
     let f : x ⟶ y := by
-      have hx : x ⟶ h.inverse.obj ⟨⟨⟩⟩ := by convert! h.unit.app x
-      have hy : h.inverse.obj ⟨⟨⟩⟩ ⟶ y := by convert! h.unitInv.app y
+      have hx : x ⟶ h.inverse.obj ⟨⟨⟩⟩ := by convert h.unit.app x
+      have hy : h.inverse.obj ⟨⟨⟩⟩ ⟶ y := by convert h.unitInv.app y
       exact hx ≫ hy
     suffices sub : Subsingleton (x ⟶ y) from uniqueOfSubsingleton f
     have : ∀ z, z = h.unit.app x ≫ (h.functor ⋙ h.inverse).map z ≫ h.unitInv.app y := by
-      simp
+      intro z
+      simp [congrArg (· ≫ h.unitInv.app y) (h.unit.naturality z)]
     apply Subsingleton.intro
     intro a b
     rw [this a, this b]
