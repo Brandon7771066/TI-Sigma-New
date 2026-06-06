@@ -38,42 +38,45 @@ fig.savefig("analyses/pass77_b93_proposition_types/fig1_proposition_type_bandwid
             bbox_inches="tight")
 print("wrote fig1")
 
-# ---------- Fig 2: Brandon lifetime hallucination ledger by channel ----------
-# (channel, label, approx lifetime count, state, counted_waking)
+# ---------- Fig 2: Brandon lifetime hallucination ledger by channel (corrected B94) ----------
+# (channel, label, state, counted)
 events = [
-    ("Clairaudient", "Fan/pillow music (~monthly)", 1, "hypnagogic", "borderline"),
-    ("Clairaudient", "Heavy-metal (THC, 2022)", 1, "substance", "substance"),
-    ("Clairvoyant", "Mimi apparition (~2mo ago)", 1, "WAKING", "yes"),
-    ("Clairvoyant", "Ceiling-tile dilation (ketamine 2-3x)", 1, "substance", "substance"),
-    ("Liminal\n(not counted)", "OBEs (dozen+)", 1, "hypnagogic", "no"),
-    ("Liminal\n(not counted)", "Chanting + kundalini (several)", 1, "hypnagogic", "no"),
-    ("Claircognitive", "False knowings", 0, "waking incl. ketamine", "clean"),
+    ("Clairaudient", "Fan/pillow music (~monthly)", "hypnagogic", "borderline"),
+    ("Clairaudient", "Heavy-metal (THC, 2022)", "substance", "substance"),
+    ("Clairvoyant", "Mimi apparition (~2mo ago)", "WAKING", "yes"),
+    ("Clairvoyant", "Ceiling-tile dilation (ketamine 2-3 / ~200 \u2248 1-1.5%)", "substance", "substance"),
+    ("Somatic /\nwillful", "Kundalini / metta (waking)", "willful", "willful"),
+    ("Liminal\n(not counted)", "OBEs (dozen+)", "hypnagogic", "no"),
+    ("Liminal\n(not counted)", "Chanting + kundalini (hypnagogic)", "hypnagogic", "no"),
+    ("Claircognitive", "False knowings", "waking incl. ketamine", "clean"),
 ]
 state_color = {"hypnagogic": "#9ec6e0", "substance": "#e0b66e", "WAKING": "#d98b8b",
-               "waking incl. ketamine": "#bcd9c4"}
-fig, ax = plt.subplots(figsize=(11.2, 6.0))
+               "willful": "#c9b6e0", "waking incl. ketamine": "#bcd9c4"}
+fig, ax = plt.subplots(figsize=(11.4, 6.9))
 ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 10)
-ax.text(5, 9.6, "B93 Fig 2 — Brandon's WHOLE-LIFE anomalous-perception ledger",
+ax.text(5, 9.62, "B93 Fig 2 (corrected B94) — Brandon's WHOLE-LIFE anomalous-perception ledger",
         ha="center", fontsize=12, fontweight="bold")
-ax.text(5, 9.0, "#69 finding: anomalies cluster in the SENSORY clair-channels; the KNOWING channel stays clean",
+ax.text(5, 9.08, "#69 finding: anomalies cluster in the SENSORY clair-channels; the KNOWING channel stays clean",
         ha="center", fontsize=9.2, color="#444", style="italic")
-y = 8.35
-for chan, lab, cnt, state, counted in events:
+y = 8.55
+for chan, lab, state, counted in events:
     fc = state_color.get(state, "#dddddd")
-    ax.add_patch(plt.Rectangle((0.4, y-0.40), 9.2, 0.92, fc=fc, ec="k", lw=0.8, alpha=0.85))
-    ax.text(0.7, y+0.06, f"{chan}", fontsize=9, fontweight="bold", va="center")
-    ax.text(3.3, y+0.06, lab, fontsize=9, va="center")
+    ax.add_patch(plt.Rectangle((0.4, y-0.40), 9.2, 0.82, fc=fc, ec="k", lw=0.8, alpha=0.85))
+    ax.text(0.7, y+0.02, f"{chan}", fontsize=9, fontweight="bold", va="center")
+    ax.text(3.3, y+0.02, lab, fontsize=8.8, va="center")
     tag = {"yes": "WAKING HALLUCINATION", "no": "liminal (not counted)",
            "borderline": "hypnagogic (borderline)", "substance": "substance-occasioned",
+           "willful": "WILLFUL \u2014 meditation/mania (induced)",
            "clean": "\u2248 0  (channel clean)"}[counted]
-    tc = "#7a1d12" if counted == "yes" else ("#1e5e40" if counted == "clean" else "#555")
-    ax.text(9.4, y+0.06, tag, fontsize=8.2, ha="right", va="center", color=tc, fontweight="bold")
-    y -= 1.12
-ax.add_patch(plt.Rectangle((0.4, 0.02), 9.2, 0.82, fc="#e8eef5", ec="#2E7D5B", lw=1.6))
-ax.text(5, 0.43,
-        "ERRATA to B91: ketamine DID cause VISUAL distortion (tiles); near-absent is CLAIRCOGNITIVE\n"
-        "hallucination (false knowings). Rare over a lifetime \u2014 mostly hypnagogic/substance. Reinforces CGP-1-refined.",
-        ha="center", fontsize=8.4, fontweight="bold", color="#1e5e40")
+    tc = ("#7a1d12" if counted == "yes" else "#1e5e40" if counted == "clean"
+          else "#5b3a8a" if counted == "willful" else "#555")
+    ax.text(9.4, y+0.02, tag, fontsize=8.0, ha="right", va="center", color=tc, fontweight="bold")
+    y -= 1.0
+ax.add_patch(plt.Rectangle((0.4, 0.05), 9.2, 0.86, fc="#e8eef5", ec="#2E7D5B", lw=1.6))
+ax.text(5, 0.48,
+        "CORRECTED (B94): ketamine perceptual events 2-3 / ~200 sessions \u2248 1-1.5% \u2014 near-absence STANDS;\n"
+        "claircognitive false-knowings \u2248 0. Kundalini/metta waking = WILLFUL (practice/mania), not spontaneous hallucination.",
+        ha="center", fontsize=8.3, fontweight="bold", color="#1e5e40")
 fig.tight_layout()
 fig.savefig("analyses/pass77_b93_proposition_types/fig2_hallucination_ledger.png", dpi=130,
             bbox_inches="tight")

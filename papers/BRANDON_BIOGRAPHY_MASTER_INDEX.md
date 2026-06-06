@@ -498,3 +498,10 @@ Whole-life ledger (Brandon's own framing; "covers my whole life"):
 - **Claircognitive channel:** essentially free of false knowings, even under ketamine (the ketamine distortions were *visual*, not *epistemic*).
 
 **Significance (CGP-1-refined):** the anomalies cluster in the *sensory* clair-channels while the *knowing*-channel stays clean — the channel-specific pattern CGP-1 refinement #1 predicts (sensory channels carry their own qualia AND their own failure modes; the knowing-channel's payload stays reliable). n=1 self-report, weighted as prior-raising not decisive (CGP-1-PT-F2 needs structured incidence data).
+
+---
+
+### Correction addendum (2026-05-28, Pass-77 B94) — three corrections to the B93 ledger
+- **Ketamine near-absence RESTORED:** the ceiling-tile dilation occurred **2-3 times out of ~200 total sessions (possibly more) ≈ 1-1.5%** — genuinely near-absent. The B93 ERRATA over-corrected; the honest statement is: perceptual hallucination under ketamine is near-absent (~1-1.5%) and claircognitive hallucination (false knowings) is ≈0.
+- **Willful waking kundalini/metta added:** Brandon HAS had kundalini/metta experiences in **waking** life — but **WILLFULLY**, during disciplined meditation practice, or during **manic episodes (especially the first)**. These are *induced* somatic-affective phenomena (somatic-affective Proposition Type / VFP-1 valence), NOT spontaneous hallucinations and NOT merely hypnagogic.
+- **DT-fracture objection is trivial:** the first-manic-episode ego-fracture came from a DT *proposition*, which ANY traditional sense can entertain — so it carries no differential vulnerability to the knowing-channel and does not count against claircognizance's ego-safety advantage.
