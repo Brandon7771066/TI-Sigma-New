@@ -1,0 +1,45 @@
+{
+  "H0_felt_calling_prospective": {
+    "lift_pp": -0.088,
+    "rate_called": 10.3,
+    "rate_not": 10.39,
+    "verdict": "WITHIN-INDETERMINATE-BAND (~0, as it should be)"
+  },
+  "H0_reported_calling_retrospective": {
+    "lift_pp": 36.173,
+    "rate_called": 41.04,
+    "rate_not": 4.87,
+    "attribution": "P(report|success)=0.60, P(report|fail)=0.10",
+    "verdict": "SPURIOUS LIFT (artifact -- true effect is 0)"
+  },
+  "H0_reported_calling_retrospective_plus_survivorship": {
+    "lift_pp": 42.653,
+    "rate_called": 93.3,
+    "rate_not": 50.65,
+    "note": "notable-only sample = all successes + 5% of failures",
+    "verdict": "SPURIOUS LIFT (artifact -- true effect is 0)"
+  },
+  "H0_matched_prospective_FIX": {
+    "lift_pp": -0.063,
+    "verdict": "WITHIN-INDETERMINATE-BAND (~0, as it should be)"
+  },
+  "TRUE_effect": {
+    "g_logit": 0.7,
+    "felt_calling_prospective_lift_pp": 6.896,
+    "matched_prospective_lift_pp": 6.914,
+    "verdict": "matched design RECOVERS a real, non-zero lift"
+  },
+  "HEADLINE": {
+    "true_causal_effect": 0.0,
+    "naive_retrospective_apparent_lift_pp": 36.173,
+    "interpretation": "Zero true effect can present as a large apparent calling->success lift under retrospective self-report. The literal version of the question is confounded; only a prospective, competence-matched, pre-registered design can test MEP."
+  },
+  "sensitivity_H0_retrospective_artifact": {
+    "design": "5 seeds x 4 (P_report_success, P_report_fail) settings, true effect=0",
+    "min_pp": 10.59,
+    "max_pp": 58.47,
+    "mean_pp": 33.88,
+    "all_positive_and_large": false,
+    "note": "EXISTENCE PROOF: a large spurious lift appears across every seed and bias setting; the +36pp headline is illustrative of the phenomenon, NOT a universal effect-size estimate."
+  }
+}
