@@ -465,3 +465,14 @@ Brandon's belief in tralse-thinking (the position that something can be **both t
 **Cross-ref:** §7.7.131 (Pass-66 SRC-1-F-3 N=1 first manic episode anchor), §5.[NEW] (tralse-belief oscillation arc, also rooted in the 2022 manic episode), quotes repo §III (ADHD/Bipolar substrate), replit.md §7.7.264 (Pass-77 B87 ledger).
 
 ---
+
+### §5.[NEW2].1 Rhabdo clarifications — self-diagnosis-before-testing, Concerta-anchor correction, EKG-snaps datum (added Pass-77-B88, 2026-05-28)
+
+**Anchor:** `papers/PASS_77_B88_AMATEURISM_LIMITS_OF_EXPERTISE_SELF_ADVOCACY_AGAINST_HYPEREXPERTISE_2026-05-28.md`.
+
+- **Self-diagnosis PRECEDED testing.** Brandon raised rhabdomyolysis as a hypothesis **before** ER-floor admission and **before any CK draw**; his suggestion is what **prompted the doctors to order the CK test in the first place.** (Strengthens §5.[NEW2]: the self-diagnosis was not a post-hoc completion of the doctor's sentence but the *causal trigger* for the diagnostic workup.)
+- **He corrected a premature-closure anchor.** The physician attributed the rhabdo + heart-racing to Brandon's **54 mg Concerta** dose. Brandon rejected this; subsequent evidence supports him — he has since used **high stimulant dosages alongside the Katalyst WB-EMS suit with no recurrence**, inconsistent with stimulant-dose-as-cause and consistent with the EMS + next-day-HIIT overload cause. He volunteered the Katalyst-suit + HIIT history (the decisive **private information** the physician lacked), which reframed the diagnosis.
+- **EKG-snaps datum (honestly flagged).** During mania, Brandon reportedly identified *which* ECG electrode snaps were **not secured** — though they were **not visible to him** — while the technician, with full visual access, believed otherwise; he corrected her and was right. **#69 two non-exclusive readings:** (a) heightened interoceptive/attentional acuity during the manic state; (b) the "(apparent) extrasensory" framing is Brandon's own, logged as uncorroborated-mechanism (admissible within the corpus's stated non-local-correlation openness but **not asserted as psi**). Either way the **self-advocacy core is solid** — he overrode an authority with better physical access and was correct.
+- **TI Sigma framing:** this is the lived N=1 behind the B88 anti-hyperexpertise paper — an informed individual with **private information + broad literacy** catching an expert's **anchoring error** at the margin (Authority Axis: authority real but never decisive). Mechanism, not amateur-supremacy.
+
+---
