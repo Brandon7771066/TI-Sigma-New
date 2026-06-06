@@ -557,3 +557,15 @@ id = "CSA6oulc5CqP5euksBkSK"
 uri = "file://analyses/pass77_b84_good_scientist_two_factor/fig2_revolution_gate_vs_contribution_floor.png"
 type = "image"
 title = "B84 Fig 2 — Revolution = A×B gate vs Contribution = A+B floor (why rigor-without-burn is incrementalism)"
+
+[[outputs]]
+id = "SnU7WOsexwETnqnaSbwxh"
+uri = "file://analyses/pass77_b85_authentic_exercise_pluralism/fig1_modality_landscape.png"
+type = "image"
+title = "B85 Fig 1 — Authentic-exercise modality landscape (accessibility × benefit; conventional = strong but narrow slice)"
+
+[[outputs]]
+id = "dzOxXqGt_qjV17KelLi53"
+uri = "file://analyses/pass77_b85_authentic_exercise_pluralism/fig2_adaptation_usage_mismatch.png"
+type = "image"
+title = "B85 Fig 2 — The Adaptation–Usage Mismatch (running, yoga & weightlifting all sit off-diagonal)"
