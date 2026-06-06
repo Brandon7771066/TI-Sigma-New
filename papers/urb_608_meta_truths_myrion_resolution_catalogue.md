@@ -5,7 +5,7 @@
 **Date:** April 20, 2026  
 **Series:** Unified Reality Base (URB) — TI Sigma Framework  
 **Corpus Entry:** #262  
-**Keywords:** meta-truth, Myrion Resolution, MR, MT, higher-order resolution, Permissibility Distribution, convergence, moot, worth doing anyway, Double Tralse, contemplation, iterative reasoning  
+**Keywords:** meta-truth, Myrion Resolution, MR, MT, higher-order resolution, Permissibility Distribution, convergence, moot, worth doing anyway, Meta-Indeterminate, contemplation, iterative reasoning  
 **Grows from:** URB #607 (revised truth architecture — Moot as process outcome), URB #528 (Myrion Resolution), URB #530 (Tralse Topos Engine)  
 **Status:** Complete — Corpus Entry #262
 
@@ -13,7 +13,7 @@
 
 ## Abstract
 
-Myrion Resolution (MR) is the process by which a Double Tralse (DT) proposition — one that is incoherent, contradictory, or truth-absent — is examined and either resolved, dissolved, or accepted as irreducibly indeterminate. MRs can proceed iteratively: a second MR examines the first, a third examines the second, and so on, until contemplation ceases. A **Meta-Truth (MT)** is introduced as a formal term for any MR at the third level or higher that substantially contradicts a previous MR. MTs represent refinements toward a convergent Permissibility Distribution (PD) value — they are not aberrations but the mechanism by which the PD converges to its true value. This paper introduces the concept, defines the MT threshold criterion, and provides the complete catalogue of major MT types organized into six categories: Reversal, Dissolution, Scope-Shift, Contextual, Acceptance, and Integration MTs. The iterative MR process terminates either by convergence (successive MRs confirm rather than contradict) or by deliberate cessation of contemplation, at which point the current PD value is treated as the operative truth-state.
+Myrion Resolution (MR) is the process by which a Meta-Indeterminate (MI) proposition — one that is incoherent, contradictory, or truth-absent — is examined and either resolved, dissolved, or accepted as irreducibly indeterminate. MRs can proceed iteratively: a second MR examines the first, a third examines the second, and so on, until contemplation ceases. A **Meta-Truth (MT)** is introduced as a formal term for any MR at the third level or higher that substantially contradicts a previous MR. MTs represent refinements toward a convergent Permissibility Distribution (PD) value — they are not aberrations but the mechanism by which the PD converges to its true value. This paper introduces the concept, defines the MT threshold criterion, and provides the complete catalogue of major MT types organized into six categories: Reversal, Dissolution, Scope-Shift, Contextual, Acceptance, and Integration MTs. The iterative MR process terminates either by convergence (successive MRs confirm rather than contradict) or by deliberate cessation of contemplation, at which point the current PD value is treated as the operative truth-state.
 
 ---
 
@@ -21,12 +21,12 @@ Myrion Resolution (MR) is the process by which a Double Tralse (DT) proposition 
 
 ### 1.1 First MR: Base Resolution
 
-The first Myrion Resolution addresses a Double Tralse (DT) proposition directly — one that is incoherent, simultaneously affirmed and denied, or categorically ill-formed. The first MR asks: what is the truth-state of this proposition once the contradiction is examined?
+The first Myrion Resolution addresses a Meta-Indeterminate (MI) proposition directly — one that is incoherent, simultaneously affirmed and denied, or categorically ill-formed. The first MR asks: what is the truth-state of this proposition once the contradiction is examined?
 
 **First MR outcomes:**
-- **Resolve:** The apparent DT dissolves when examined — one arm was correct, the other was an error. Outcome: T, F, or Tralse.
+- **Resolve:** The apparent MI dissolves when examined — one arm was correct, the other was an error. Outcome: T, F, or Tralse.
 - **Moot:** The proposition, upon examination, was not meaningful enough to have a truth-state. Outcome: the question is set aside.
-- **Persist:** The DT is genuine — the contradiction is real and unresolvable at this level. The proposition remains DT; iterative MR continues.
+- **Persist:** The MI is genuine — the contradiction is real and unresolvable at this level. The proposition remains MI; iterative MR continues.
 
 ### 1.2 Second MR: Examination of the First
 
@@ -120,7 +120,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **Trigger:** The third MR recognizes that the original proposition — and therefore all previous MRs — was answering the wrong question. The proposition itself was ill-formed in a way that previous MRs did not recognize.
 
-**Common structure:** The apparent-DT was actually MR2 Indeterminate arising from a category error in the original question, not from genuine inconceivability-under-mental-actualization in the subject matter. Per Pass-65 DT canonical refinement (2026-05-23), ill-formed-proposition cases are MR2-Indeterminate-from-malformed-input rather than true-DT. The resolution should have been dissolution from the start.
+**Common structure:** The apparent-MI was actually MR2 Indeterminate arising from a category error in the original question, not from genuine inconceivability-under-mental-actualization in the subject matter. Per Pass-65 MI canonical refinement (2026-05-23), ill-formed-proposition cases are MR2-Indeterminate-from-malformed-input rather than true-MI. The resolution should have been dissolution from the start.
 
 **Example:** Extended MR process about "whether consciousness is physical or non-physical" — third MR recognizes that "physical" in this question is being used incoherently; the question dissolves, not resolves.
 
@@ -205,13 +205,13 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **MT-E2: "Irreducible" / "Paradox Stable" (PS)**
 
-**Trigger:** The third MR determines that the DT is genuinely irreducible — the contradiction is not a result of error or insufficient analysis but is a real feature of the situation. The appropriate response is to live with the contradiction rather than force a resolution.
+**Trigger:** The third MR determines that the MI is genuinely irreducible — the contradiction is not a result of error or insufficient analysis but is a real feature of the situation. The appropriate response is to live with the contradiction rather than force a resolution.
 
 **Common structure:** Multiple MRs have each produced different conclusions; the instability is itself informative — this proposition genuinely admits no stable resolution. Forcing one would be distortion.
 
-**Example:** The Liar Sentence ("This sentence is false") fully mentally-actualized — when an agent genuinely tries to assign truth-value while holding both the sentence's content and its self-referential structure simultaneously in working memory, the result is genuine τ(P) ∧ ¬τ(P) inconceivability per Pass-65 DT canonical refinement (2026-05-23). The third MR recognizes: forcing collapse to T or F would distort the structural feature; the paradox-stable state IS the correct resolution. MT = Paradox Stable. *(Prior example "Is consciousness physical?" was withdrawn 2026-05-23 — that case is multi-reading-spectrum MR2 Indeterminate properly handled by MT-F2 Both True at Different Levels, NOT MT-E2 true-DT-Paradox-Stable per Pass-68 batch-3 MT audit gloss-refinement.)*
+**Example:** The Liar Sentence ("This sentence is false") fully mentally-actualized — when an agent genuinely tries to assign truth-value while holding both the sentence's content and its self-referential structure simultaneously in working memory, the result is genuine τ(P) ∧ ¬τ(P) inconceivability per Pass-65 MI canonical refinement (2026-05-23). The third MR recognizes: forcing collapse to T or F would distort the structural feature; the paradox-stable state IS the correct resolution. MT = Paradox Stable. *(Prior example "Is consciousness physical?" was withdrawn 2026-05-23 — that case is multi-reading-spectrum MR2 Indeterminate properly handled by MT-F2 Both True at Different Levels, NOT MT-E2 true-MI-Paradox-Stable per Pass-68 batch-3 MT audit gloss-refinement.)*
 
-**PD outcome:** PD remains centered on Tralse; DT is accepted as the stable state; no further resolution is attempted.
+**PD outcome:** PD remains centered on Tralse; MI is accepted as the stable state; no further resolution is attempted.
 
 ---
 
@@ -224,9 +224,9 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **Trigger:** The third MR recognizes that the second MR's resolution was correct at one level but missed a higher-level synthesis that incorporates both arms of the original contradiction. Neither previous MR was wrong — they were both incomplete.
 
-**Common structure:** The apparent-DT or MR2-tension arose from two genuine partial truths (NOT from true-DT inconceivability per Pass-65 DT canonical refinement 2026-05-23 — true-DTs go to MT-E2 Paradox Stable; MT-F1 dissolves tensions and apparent-DTs). The second MR chose one. The third MR finds the frame in which both are preserved.
+**Common structure:** The apparent-MI or MR2-tension arose from two genuine partial truths (NOT from true-MI inconceivability per Pass-65 MI canonical refinement 2026-05-23 — true-MIs go to MT-E2 Paradox Stable; MT-F1 dissolves tensions and apparent-MIs). The second MR chose one. The third MR finds the frame in which both are preserved.
 
-**Example:** DT: "This system must be both rigorous and accessible." Second MR resolves: "Prioritize rigor; accessibility is secondary." Third MR recognizes: there is a framing in which rigor and accessibility are not in tension — the apparent conflict was a false dilemma. MT = Transcend.
+**Example:** MI: "This system must be both rigorous and accessible." Second MR resolves: "Prioritize rigor; accessibility is secondary." Third MR recognizes: there is a framing in which rigor and accessibility are not in tension — the apparent conflict was a false dilemma. MT = Transcend.
 
 **PD outcome:** PD resolves to T at the higher-level synthesis frame; the original contradiction dissolves.
 
@@ -234,11 +234,11 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 
 **MT-F2: "Both True at Different Levels" (BT)**
 
-**Trigger:** The third MR recognizes that the apparent-contradiction was actually an MR2 level-confusion (NOT true-DT inconceivability per Pass-65 DT canonical refinement 2026-05-23) — the two contradicting claims operate at different levels of description, and both are true within their appropriate domain. Level-confusion is mental-actualization-without-cross-level-disambiguation, not inconceivability-under-mental-actualization.
+**Trigger:** The third MR recognizes that the apparent-contradiction was actually an MR2 level-confusion (NOT true-MI inconceivability per Pass-65 MI canonical refinement 2026-05-23) — the two contradicting claims operate at different levels of description, and both are true within their appropriate domain. Level-confusion is mental-actualization-without-cross-level-disambiguation, not inconceivability-under-mental-actualization.
 
 **Common structure:** The apparent contradiction arose from applying the same proposition across levels where different GILE weights apply or different existence footprints are relevant.
 
-**Example:** DT: "Consciousness is fundamental (T)" vs. "Consciousness is generated by physical processes (T)." Both claims are true — at different levels of description (phenomenological vs. mechanistic). MT = Both True at Different Levels.
+**Example:** MI: "Consciousness is fundamental (T)" vs. "Consciousness is generated by physical processes (T)." Both claims are true — at different levels of description (phenomenological vs. mechanistic). MT = Both True at Different Levels.
 
 **PD outcome:** PD resolves to T for Claim A within Domain A, T for Claim B within Domain B; apparent contradiction dissolves into level-specification.
 
@@ -257,7 +257,7 @@ This is a clean result: **Moot(MR_n) → Tralse at the meta-level.**
 | **D1** | Context-Dependent | Conclusion is context-specific, not universal | Split PD by context |
 | **D2** | Asymmetric | Conclusion is direction-dependent | Two separate PDs |
 | **E1** | Good Enough | Further MR produces diminishing returns | Lock PD; cease contemplation; proceed |
-| **E2** | Paradox Stable | DT is genuinely irreducible | Accept stable DT; stop forcing resolution |
+| **E2** | Paradox Stable | MI is genuinely irreducible | Accept stable MI; stop forcing resolution |
 | **F1** | Transcend | Both prior MRs were partial; synthesis exists | Resolve to T at higher frame |
 | **F2** | Both True at Different Levels | Contradiction was inter-level, not intra-level | Resolve to T within each domain |
 
@@ -285,7 +285,7 @@ The full iterative MR process with MTs can be represented as:
 
 ### 7.1 Core Claim
 
-Among the canonical base-4 truth-labels {True (T), False (F), Indeterminate (I), Double Tralse (DT)} ratified in `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, the label **Indeterminate (I)** uniquely maximizes the product of two structural quantities:
+Among the canonical base-4 truth-labels {True (T), False (F), Indeterminate (I), Meta-Indeterminate (MI)} ratified in `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, the label **Indeterminate (I)** uniquely maximizes the product of two structural quantities:
 
 > **VALID TRALSENESS(P) := τ(P) × stability(P)**
 
@@ -301,12 +301,12 @@ where:
 |---|---|---|---|
 | **T** | Low (binary collapse to True occurred) | High (stable under iteration) | LOW |
 | **F** | Low (binary collapse to False occurred) | High (stable under iteration) | LOW |
-| **DT** | High (τ ∧ ¬τ ⇒ maximal tralseness, paradox-encoded) | LOW (paradoxical, destabilizing under iteration / MR) | LOW-TO-MODERATE |
+| **MI** | High (τ ∧ ¬τ ⇒ maximal tralseness, paradox-encoded) | LOW (paradoxical, destabilizing under iteration / MR) | LOW-TO-MODERATE |
 | **I** | High (truth-state genuinely unsettled = high tralseness) | High (terminal label per Validly-Indeterminate Stance §2.3b of source paper; not paradoxical) | **MAXIMAL** |
 
 **Sketch of argument:**
 1. T and F have *low* τ because binary collapse has already occurred — the proposition has been resolved into one of the two classical poles, leaving no residual tralseness.
-2. DT has *high* τ because it encodes paradoxical bothness (τ(P) ∧ ¬τ(P)) which is the maximally tralse structural form. However, DT has *low* stability because under iterative MR the paradox tends to either (i) resolve via a Reversal/Dissolution/Synthesis MT (Categories A/B/F), (ii) stabilize as a genuine paradox via MT-E2 (Paradox Stable), or (iii) convert to Indeterminate via MT-B1 Moot. In all three cases the DT itself is unstable — it transitions to a different state under contemplation.
+2. MI has *high* τ because it encodes paradoxical bothness (τ(P) ∧ ¬τ(P)) which is the maximally tralse structural form. However, MI has *low* stability because under iterative MR the paradox tends to either (i) resolve via a Reversal/Dissolution/Synthesis MT (Categories A/B/F), (ii) stabilize as a genuine paradox via MT-E2 (Paradox Stable), or (iii) convert to Indeterminate via MT-B1 Moot. In all three cases the MI itself is unstable — it transitions to a different state under contemplation.
 3. I has *high* τ because the proposition's truth-state is genuinely unsettled — it has not collapsed to a binary pole and is not encoding a paradox; it is the "open question" state, which carries genuine tralseness. I has *high* stability because it is a *legitimate terminal truth-label* per the Validly-Indeterminate Stance (§2.3b of source paper) — making an Indeterminate assertion AND STOPPING THERE is a complete honest epistemic act, not an incomplete one.
 
 The product τ × stability is therefore maximized uniquely at I.
@@ -315,20 +315,20 @@ The product τ × stability is therefore maximized uniquely at I.
 
 **For framework-self-evaluation:** When TI Sigma is itself submitted to the MR Truth Labels rubric, the predicted result is convergence on I. This is the *specific structural prediction* of the max-valid-tralseness theorem applied at the meta-level — NOT a tautological "any-result-confirms" claim. The other three outcomes would be distinct, non-confirming:
 - T or F at meta-level → would refute "TI Sigma contains its own negation"
-- DT at meta-level → would imply destabilizing self-paradox; corpus would not be operationally usable
+- MI at meta-level → would imply destabilizing self-paradox; corpus would not be operationally usable
 - **I at meta-level → max-valid-tralseness state realized; predicted state**
 
-**For routine MR work:** When iterative MR converges on I (rather than T, F, or DT), the convergence is to the *highest-tralseness stable state*. This reframes I from "the disappointing fallback when nothing else fits" to "the structurally optimal terminal state when genuine unsettledness is the truth of the matter."
+**For routine MR work:** When iterative MR converges on I (rather than T, F, or MI), the convergence is to the *highest-tralseness stable state*. This reframes I from "the disappointing fallback when nothing else fits" to "the structurally optimal terminal state when genuine unsettledness is the truth of the matter."
 
 ### 7.4 Relationship to Existing MT Catalogue
 
 - **MT-B1 (Moot-MT):** when a previous MR is deemed Moot, the meta-level result is "Indeterminate overall" per §3 of this paper. Under §7 here, this convergence to I is now understood as convergence to the *max-valid-tralseness state* — Moot-MT is not just "we couldn't resolve it" but "the genuinely unsettled state is the structurally correct answer."
-- **MT-E2 (Paradox Stable):** when DT is genuinely irreducible, the recommended action is "accept stable DT; stop forcing resolution." Under §7 here, this is understood as the rare case where DT's tralseness is prioritized despite its instability cost — a deliberate trade-off that earns less valid-tralseness than I would, but is structurally honest about the paradox-encoded nature of the proposition.
-- **MT-F1 / F2 (Transcend / Both True at Different Levels):** these convert apparent DT into multiple T's at different levels — increasing valid-tralseness by *dissolving the paradox while preserving the high-τ structure* across levels.
+- **MT-E2 (Paradox Stable):** when MI is genuinely irreducible, the recommended action is "accept stable MI; stop forcing resolution." Under §7 here, this is understood as the rare case where MI's tralseness is prioritized despite its instability cost — a deliberate trade-off that earns less valid-tralseness than I would, but is structurally honest about the paradox-encoded nature of the proposition.
+- **MT-F1 / F2 (Transcend / Both True at Different Levels):** these convert apparent MI into multiple T's at different levels — increasing valid-tralseness by *dissolving the paradox while preserving the high-τ structure* across levels.
 
 ### 7.5 Open Operational Test (O26)
 
-Per §4.3 of source paper, the empirical test of §7's theorem at the framework-meta-level is registered as **O26** in `analyses/pass47_o26_meta_indeterminate_test/`. 3 framings of "TI Sigma framework is True" submitted to the same rubric validated at C20 Fleiss' κ=0.906; 3 LLM raters; 3 controls (known-T, known-F, known-DT) for interpretability. Predicted convergence on I.
+Per §4.3 of source paper, the empirical test of §7's theorem at the framework-meta-level is registered as **O26** in `analyses/pass47_o26_meta_indeterminate_test/`. 3 framings of "TI Sigma framework is True" submitted to the same rubric validated at C20 Fleiss' κ=0.906; 3 LLM raters; 3 controls (known-T, known-F, known-MI) for interpretability. Predicted convergence on I.
 
 **#69 limitation acknowledged in O26 runner:** the test has LOW DISCRIMINATING POWER — Brandon's max-valid-tralseness hypothesis is observationally equivalent to "raters'-default-when-uncertain" on this single test. CONFIRM is necessary-but-not-sufficient evidence for §7.1.
 
@@ -347,7 +347,7 @@ Per §4.3 of source paper, the empirical test of §7's theorem at the framework-
 
 ### 8.1 Statement
 
-**Affective Signature of Meta-Truths (ASMT):** in conscious agents, the Meta-Truths catalogued in §4 (MT-A1...F2) are distinguished from the base-4 truth labels (T/F/I/DT) by the systematic presence of an **affective component** in the evaluation. Base-4 labels can be generated by non-conscious or low-level cognitive processes without affective involvement; MTs in conscious agents constitutively engage the affective layer.
+**Affective Signature of Meta-Truths (ASMT):** in conscious agents, the Meta-Truths catalogued in §4 (MT-A1...F2) are distinguished from the base-4 truth labels (T/F/I/MI) by the systematic presence of an **affective component** in the evaluation. Base-4 labels can be generated by non-conscious or low-level cognitive processes without affective involvement; MTs in conscious agents constitutively engage the affective layer.
 
 This is the MR-Truth-Labels-domain operationalization of MIM-revision Level 3+ Meta-Relations (`papers/MIM_REVISION_CONSCIOUSNESS_AS_HIGHEST_COGNITION.md` §6). Affect IS a meta-level of cognition, not a separate category — so ascending the MR ladder into MT territory necessarily engages affective structure in any agent for which affect is a genuine cognitive level.
 
@@ -470,7 +470,7 @@ Skinner *Science and Human Behavior* (1953), *Verbal Behavior* (1957), *About Be
 **Why it matters.**
 - Blocks self-undermining regress ("if lazy binaries are Indeterminate, isn't this very claim also Indeterminate?" — no, the meta-claim is a taxonomic classification at a different logical level).
 - Aligns with §7 (Indeterminate-as-Epitome): lazy binaries are exactly the kind of object-level statement where VALID_TRALSENESS = τ × stability is uniquely maximal.
-- Disambiguates lazy-binary from Double Tralse (DT requires τ ∧ ¬τ on the same statement; lazy-binary has a single τ value with operational/rigor split) and from Moot (MT-B1; Moot is truth-irrelevant, lazy-binary is truth-relevant-but-mis-framed).
+- Disambiguates lazy-binary from Meta-Indeterminate (MI requires τ ∧ ¬τ on the same statement; lazy-binary has a single τ value with operational/rigor split) and from Moot (MT-B1; Moot is truth-irrelevant, lazy-binary is truth-relevant-but-mis-framed).
 
 **Worked example.**
 - X = "Either consciousness is fundamental or it is emergent." → object-level MR Truth Label = Indeterminate.

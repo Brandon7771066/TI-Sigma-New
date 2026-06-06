@@ -29,7 +29,7 @@ MR, Ternary Logic, and the PD all overlap — they are different "slices" of the
 - Shannon's entropy H measures uncertainty across a probability distribution — but assumes the probability values are well-defined classical probabilities.
 - **Where Shannon falls short for TI Sigma:**
   - Shannon cannot represent TRALSE quality (coherent contradiction with no resolution forced)
-  - Shannon cannot represent DOUBLE_TRALSE (the DT immune response — recognition + discard)
+  - Shannon cannot represent DOUBLE_TRALSE (the MI immune response — recognition + discard)
   - Shannon's entropy is symmetric (H is the same formula whether outcome is 0 or 1) — TI Sigma is NOT symmetric (the PD zones are unequal: 1+3+3+6+2 = 15, not flat)
   - Shannon treats all probability values as equally valid — TI Sigma has threshold gates that create phase transitions (not smooth information curves)
   - Shannon has no concept of agentive coupling — whether a system's i-channel is coupled to the resolution of its uncertainty (free will)

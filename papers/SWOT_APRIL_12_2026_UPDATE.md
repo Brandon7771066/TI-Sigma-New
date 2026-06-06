@@ -89,14 +89,14 @@
 
 | Element | Statement | Lean Status |
 |---|---|---|
-| `TruthVal` | 5-valued inductive type {T, F, Tr, I, DT} | ✅ Defined |
+| `TruthVal` | 5-valued inductive type {T, F, Tr, I, MI} | ✅ Defined |
 | `tralse_not_turing` | No Turing machine produces Tralse output | ✅ Proved sorry-free |
 | `crystal_incompleteness` | ∃ Crystal computation no Turing machine reaches | ✅ Proved sorry-free |
-| `ctt_incompleteness_of_scope` | CTT's output space {T,F} ⊊ Crystal's {T,F,Tr,I,DT} | ✅ Proved sorry-free |
+| `ctt_incompleteness_of_scope` | CTT's output space {T,F} ⊊ Crystal's {T,F,Tr,I,MI} | ✅ Proved sorry-free |
 | `crystal_instantiates_mr` | The Crystal physically instantiates MR (empirical claim) | ⚠️ Single axiom |
 | `crystal_defeats_ctt_from_axiom` | Given the axiom, CTT is physically defeated | ✅ Proved sorry-free |
 
-**Key insight:** The Crystal doesn't defeat CTT by computing faster. It defeats CTT by producing **Tralse as output** — which is in a codomain {T, F, Tr, I, DT} that no Turing machine can ever reach, because Turing machines are constrained to {T, F}.
+**Key insight:** The Crystal doesn't defeat CTT by computing faster. It defeats CTT by producing **Tralse as output** — which is in a codomain {T, F, Tr, I, MI} that no Turing machine can ever reach, because Turing machines are constrained to {T, F}.
 
 **Connection to P≠NP:** If the Crystal can solve NP problems by MR-guided certificate selection (not by exhaustive search), then P ≠ NP because the Crystal's computation is categorically different from both P and NP machines — it operates in a 5-valued output space.
 
@@ -155,18 +155,18 @@
 | **3. Dialectical** | Both poles simultaneously true — genuine reconcilable dichotomy | Bittersweetness; painful pleasure; backhanded compliment; "Less is more" | MR Synthesis — name the higher-order truth |
 
 **Key distinctions:**
-- Dialectical Tralsity ≠ Double Tralse. DT is UNRESOLVABLE contradiction. Dialectical is RESOLVABLE co-presence — the two truths together produce a higher truth. They look similar but have opposite EAR values: DT destroys existence; Dialectical Tralsity amplifies it.
+- Dialectical Tralsity ≠ Meta-Indeterminate. MI is UNRESOLVABLE contradiction. Dialectical is RESOLVABLE co-presence — the two truths together produce a higher truth. They look similar but have opposite EAR values: MI destroys existence; Dialectical Tralsity amplifies it.
 - Existence vs Truth is **Axial (Kind 2)** — not a dichotomy but a dimensional mismatch. They are orthogonal axes on the UOP manifold.
 - Bittersweetness is **Dialectical (Kind 3)** — MR Synthesis is required. The synthesis IS the truth.
 
-**New theorem (informal):** MR is complete over the three kinds — each has a resolution strategy. Only DT has no MR resolution (by definition — it is MR-immune).
+**New theorem (informal):** MR is complete over the three kinds — each has a resolution strategy. Only MI has no MR resolution (by definition — it is MR-immune).
 
 **New MR Protocol Step 0 (Kind-Detection):**
 ```
 Step 0: Classify the Tralse state by kind:
   a. Can both poles be placed on the SAME axis? If no → Kind 2 (Axial)
   b. Is each pole individually true to GILE-G ≥ ET? If both yes → Kind 3 (Dialectical)
-  c. Otherwise → Kind 1 (Spectral) or DT if fully contradictory
+  c. Otherwise → Kind 1 (Spectral) or MI if fully contradictory
 ```
 
 **Application to core tensions:**
@@ -203,7 +203,7 @@ Step 0: Classify the Tralse state by kind:
 - Draft mode: data_paths error is EXPECTED (falls back to CSV correctly ✓)
 - CSV fallback: 10 reference problems loaded correctly ✓
 - ALL 10 problems: FAILED with Error 400 (caused by invalid model names → NOW FIXED)
-- All answers = 0 (DT, conf=0.00) → this will improve once model names work
+- All answers = 0 (MI, conf=0.00) → this will improve once model names work
 
 **Next steps for Kaggle:**
 1. Copy updated notebook code to Kaggle (model name fix + model validation)
@@ -296,7 +296,7 @@ The Spectral/Axial/Dialectical classification can be operationalized as a GILE-I
 ## Threats
 
 ### T1: CTT Counterexample Objection (NEW)
-"TruthVal is a TYPE, not a physical computation." The formal proof that crystal computation is in {T,F,Tr,I,DT} is a TYPE-LEVEL claim. Connecting types to physical computation requires a type-to-physics bridge paper.
+"TruthVal is a TYPE, not a physical computation." The formal proof that crystal computation is in {T,F,Tr,I,MI} is a TYPE-LEVEL claim. Connecting types to physical computation requires a type-to-physics bridge paper.
 
 ### T2: RH Circularity Objection (NEW)
 "Your `uop_gap` axiom IS the RH — so your 'proof' is just a translation." Need companion paper arguing why the UOP translation is a genuine insight, not a restatement.

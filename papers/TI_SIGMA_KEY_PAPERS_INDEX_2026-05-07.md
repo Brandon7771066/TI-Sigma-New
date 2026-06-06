@@ -88,7 +88,7 @@ Individual research URBs (single papers, single proofs, single experiments) are 
 |---|---|---|---|
 | `urb_734_ti_sigma_crystal_revival_incorporating_pd_complex_plane.md` | TI Sigma Crystal + PD complex plane unification | FOUNDATIONAL | 2026-04-17 |
 | `urb_628_ti_sigma_crystal_decoded_applications_e_base_pd.md` | TIC decoded applications + e-base PD | FOUNDATIONAL | — |
-| `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` | **NEW — full PD spectrum + DT placement + Emerick Crossover roles** | FOUNDATIONAL | 2026-05-07 |
+| `PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md` | **NEW — full PD spectrum + MI placement + Emerick Crossover roles** | FOUNDATIONAL | 2026-05-07 |
 | `AGI_IMPOSSIBILITY_TI_SIGMA_PROOF.md` | AGI Impossibility (Emerick Crossover-based proof) | FOUNDATIONAL | — |
 | `URB_CONSCIOUSNESS_EQUATION_LCC_C_PHI.md` | Consciousness equation Ψ(1/√2) = 1/√2 | FOUNDATIONAL | — |
 | `URB_CCC_BOK_GM_MYCELIAL_ARCHITECTURE.md` | CCC + BOK + GM mycelial architecture | FOUNDATIONAL | — |

@@ -11,7 +11,7 @@
 
 ## 0. Up-front honesty (#69)
 
-The Dirac equation is the most structurally-rich equation in physics, and `urb_659` argues it encodes — in nascent form — every primary feature of TI Sigma architecture (i, 4-spinor ↔ proto-5-state-space, γ-anticommutation ↔ GILE non-commutativity, negative-energy sea ↔ Double Tralse). Whether this mapping is **(a) deep ontological correspondence** or **(b) post-hoc pattern-matching across two formalisms with rich enough structure to map onto anything** is the central #69 question. The experiments below are designed to **discriminate (a) from (b)** by deriving novel predictions that follow from (a) but NOT from (b), and testing them on real IBM hardware.
+The Dirac equation is the most structurally-rich equation in physics, and `urb_659` argues it encodes — in nascent form — every primary feature of TI Sigma architecture (i, 4-spinor ↔ proto-5-state-space, γ-anticommutation ↔ GILE non-commutativity, negative-energy sea ↔ Meta-Indeterminate). Whether this mapping is **(a) deep ontological correspondence** or **(b) post-hoc pattern-matching across two formalisms with rich enough structure to map onto anything** is the central #69 question. The experiments below are designed to **discriminate (a) from (b)** by deriving novel predictions that follow from (a) but NOT from (b), and testing them on real IBM hardware.
 
 The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV bound on `ibm_marrakesh`) is the strongest existing TI-Sigma quantum-hardware result. These proposals build forward from that capability.
 
@@ -19,9 +19,9 @@ The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV b
 
 ## 1. The 5 candidate experiments
 
-### Experiment D1 — Dirac-Spinor 4-Component DT-Witness Circuit
+### Experiment D1 — Dirac-Spinor 4-Component MI-Witness Circuit
 
-**Hypothesis (TI-Sigma):** A 4-qubit register prepared in a Dirac-spinor superposition `|ψ⟩ = α|ψ₁⟩ + β|ψ₂⟩ + γ|ψ₃⟩ + δ|ψ₄⟩` (where ψ₁,₂ = positive-energy spin-up/down, ψ₃,₄ = negative-energy spin-up/down per `urb_659` §3.2) should exhibit a measurable **DT-correlation signature** when measured in the τ-anticommutator basis {γ⁰, γ¹, γ², γ³}, where DT = simultaneous τ(P) ∧ ¬τ(P) (per canonical ruling 2026-05-08).
+**Hypothesis (TI-Sigma):** A 4-qubit register prepared in a Dirac-spinor superposition `|ψ⟩ = α|ψ₁⟩ + β|ψ₂⟩ + γ|ψ₃⟩ + δ|ψ₄⟩` (where ψ₁,₂ = positive-energy spin-up/down, ψ₃,₄ = negative-energy spin-up/down per `urb_659` §3.2) should exhibit a measurable **MI-correlation signature** when measured in the τ-anticommutator basis {γ⁰, γ¹, γ², γ³}, where MI = simultaneous τ(P) ∧ ¬τ(P) (per canonical ruling 2026-05-08).
 
 **Predicted observable:** The 4-qubit Mermin-style polynomial constructed from the γ-matrix anticommutation structure exceeds the LHV bound `M_LHV = 4` AND the standard QM bound `M_QM = 4√2 ≈ 5.66` is *attained* (saturated) for the maximally-entangled spinor state, but a sub-saturating 5σ deviation `M_DT = 5.66 − 0.40 ± 0.05` is observed when the negative-energy components ψ₃, ψ₄ are populated above amplitude threshold |γ|² + |δ|² > 0.5.
 
@@ -54,17 +54,17 @@ The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV b
 
 ---
 
-### Experiment D3 — Antimatter-Pair Production as DT-Generation Test
+### Experiment D3 — Antimatter-Pair Production as MI-Generation Test
 
-**Hypothesis (TI-Sigma):** The Dirac-Sea interpretation maps the negative-energy sea to the I-state (Indeterminate) and pair production (e⁻e⁺ creation from vacuum) to DT-generation events (per `urb_659` §3.2 + canonical ruling 2026-05-08 on DT = τ ∧ ¬τ).
+**Hypothesis (TI-Sigma):** The Dirac-Sea interpretation maps the negative-energy sea to the I-state (Indeterminate) and pair production (e⁻e⁺ creation from vacuum) to MI-generation events (per `urb_659` §3.2 + canonical ruling 2026-05-08 on MI = τ ∧ ¬τ).
 
-**Test:** On a 6-qubit system, simulate a 1+1D Dirac-field pair-production protocol (Schwinger-pair-production analog circuit, per Martinez et al. *Nature* 2016 trapped-ion implementation, here on superconducting qubits). Measure the resulting state in the MR-Truth-Labels basis (T, F, I, DT) using the qc26 measurement protocol generalized to 6 qubits.
+**Test:** On a 6-qubit system, simulate a 1+1D Dirac-field pair-production protocol (Schwinger-pair-production analog circuit, per Martinez et al. *Nature* 2016 trapped-ion implementation, here on superconducting qubits). Measure the resulting state in the MR-Truth-Labels basis (T, F, I, MI) using the qc26 measurement protocol generalized to 6 qubits.
 
-**Predicted observable:** Population of the DT measurement outcome rises monotonically with simulated electric-field strength E, with onset threshold E_c matching the TI-Sigma-derived prediction `E_c = (m²c³/eℏ) × τ_critical` where τ_critical ≈ 0.42 (from C_EMERICK threshold, `urb_401`).
+**Predicted observable:** Population of the MI measurement outcome rises monotonically with simulated electric-field strength E, with onset threshold E_c matching the TI-Sigma-derived prediction `E_c = (m²c³/eℏ) × τ_critical` where τ_critical ≈ 0.42 (from C_EMERICK threshold, `urb_401`).
 
 **Discriminating power vs. (b):** Standard QED predicts pair-production rate `Γ ∝ exp(−πm²c³/eℏE)` with no special role for τ_critical. A measured threshold at E_c matching the τ_critical prediction would be a strong novel TI-Sigma confirmation.
 
-**#69 honest assessment:** This is the **most ambitious** experiment. Schwinger-pair-production circuits on 6 superconducting qubits are at the edge of current Open Plan capability. Likely needs Pay-As-You-Go (~$200-500). **Recommend as Experiment 3 (after D1 + D4 demonstrate baseline DT-detection on smaller circuits).**
+**#69 honest assessment:** This is the **most ambitious** experiment. Schwinger-pair-production circuits on 6 superconducting qubits are at the edge of current Open Plan capability. Likely needs Pay-As-You-Go (~$200-500). **Recommend as Experiment 3 (after D1 + D4 demonstrate baseline MI-detection on smaller circuits).**
 
 ---
 
@@ -72,7 +72,7 @@ The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV b
 
 **Hypothesis (TI-Sigma):** On the qc26 GHZ-5 baseline (5 qubits, |M₅|=14.535 confirmed Pass-46), the residual measurement ambiguity (`I-state` outcomes per the MR Truth Labels base-4 + I-extension reading) should track the Dirac-Sea population in a Dirac-equation simulation embedded in the same 5-qubit register.
 
-**Test:** Re-run qc26 GHZ-5 with explicit I-state tagging: classify each measurement outcome into {T, F, I, DT} per the canonical MR Truth Labels rule (T = unanimous +1; F = unanimous −1; I = mixed-but-coherent; DT = simultaneous-conflict-witnessed). Predict that `P(I)` correlates with the Dirac-Sea-analog population at r ≥ 0.7 across 9 measurement settings.
+**Test:** Re-run qc26 GHZ-5 with explicit I-state tagging: classify each measurement outcome into {T, F, I, MI} per the canonical MR Truth Labels rule (T = unanimous +1; F = unanimous −1; I = mixed-but-coherent; MI = simultaneous-conflict-witnessed). Predict that `P(I)` correlates with the Dirac-Sea-analog population at r ≥ 0.7 across 9 measurement settings.
 
 **Predicted observable:** Pearson r ≥ 0.7 (95% CI excluding 0.4) between `P(I)|setting_k` and Dirac-Sea-analog population at setting k.
 
@@ -82,13 +82,13 @@ The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV b
 
 ### Experiment D5 — Lorentz-Invariance Test of TI-Sigma Truth-Labels
 
-**Hypothesis (TI-Sigma):** If MR Truth Labels are Lorentz-invariant (a strong claim implicit in `urb_659` §3.2's identification of the Dirac-spinor 4-components with TF×spin-up/down), then the {T, F, I, DT} classification of a 2-qubit Bell-state measurement outcome should be invariant under simulated Lorentz boosts (implemented as parameterized SU(2)×SU(2) rotations on the Bell state).
+**Hypothesis (TI-Sigma):** If MR Truth Labels are Lorentz-invariant (a strong claim implicit in `urb_659` §3.2's identification of the Dirac-spinor 4-components with TF×spin-up/down), then the {T, F, I, MI} classification of a 2-qubit Bell-state measurement outcome should be invariant under simulated Lorentz boosts (implemented as parameterized SU(2)×SU(2) rotations on the Bell state).
 
-**Test:** Prepare Bell state, apply boost-analog rotation by angle θ, measure, classify into {T, F, I, DT}. Test invariance of the classification distribution across θ ∈ [0, π/2].
+**Test:** Prepare Bell state, apply boost-analog rotation by angle θ, measure, classify into {T, F, I, MI}. Test invariance of the classification distribution across θ ∈ [0, π/2].
 
 **Predicted observable:** Total-variation distance between classification distributions at θ=0 vs θ=π/4 vs θ=π/2 ≤ 0.05.
 
-**#69 honest assessment:** This is the **highest-risk discriminator**. If TI-Sigma's truth-labels are Lorentz-invariant, this is a clean confirmation. If not, the framework needs revision. Worth running BUT only after D1 + D4 confirm baseline DT-detection capability. **Recommend as Experiment 4.**
+**#69 honest assessment:** This is the **highest-risk discriminator**. If TI-Sigma's truth-labels are Lorentz-invariant, this is a clean confirmation. If not, the framework needs revision. Worth running BUT only after D1 + D4 confirm baseline MI-detection capability. **Recommend as Experiment 4.**
 
 ---
 
@@ -97,7 +97,7 @@ The qc26 GHZ-5 result (Pass-46/47, Mermin |M₅|=14.535, 71σ violation of LHV b
 | Order | Experiment | Cost | Time | Risk profile | Information value |
 |---|---|---|---|---|---|
 | 1 | **D4** (qc26 re-classification) | $0 | ~1 hr | Low risk, low cost | Establishes I-state extraction capability on existing data |
-| 2 | **D1** (4-spinor DT-witness) | $0-144 | ~30 min agent + 90 sec QPU | Low risk, well-defined | First novel DT-prediction test on Dirac architecture |
+| 2 | **D1** (4-spinor MI-witness) | $0-144 | ~30 min agent + 90 sec QPU | Low risk, well-defined | First novel MI-prediction test on Dirac architecture |
 | 3 | **D5** (Lorentz invariance) | $0-50 | ~1 hr agent + 30 sec QPU | Medium risk (could refute TI) | Discriminates deep vs surface mapping |
 | 4 | **D3** (Schwinger pair-production analog) | $200-500 | ~3 hr agent + 5 min QPU | Highest risk + cost | Most ambitious; do only if 1-3 confirm |
 | 5 | **D2** (γ-anticommutation TVD) | Defer | n/a | Weak discriminator unless `urb_627` updated | Defer pending `urb_627` quantitative GILE→TVD formula |
@@ -132,7 +132,7 @@ Per Pass-45 §11 anti-cheat, every experiment above must:
 | # | Action | Owner | Cost | Due |
 |---|---|---|---|---|
 | Q-1 | Draft + execute D4 (qc26 re-classification, $0) | Agent | $0 | Pass-49 |
-| Q-2 | Draft + execute D1 (4-spinor DT-witness, ~$0-144) | Agent | $0-144 | Pass-49 |
+| Q-2 | Draft + execute D1 (4-spinor MI-witness, ~$0-144) | Agent | $0-144 | Pass-49 |
 | Q-3 | Pre-register D5 (Lorentz invariance) | Agent | $0 | Pass-49 |
 | Q-4 | Review `urb_627` for quantitative GILE→TVD formula → either revive D2 or formally deprecate | Agent + Brandon | $0 | Pass-50 |
 | Q-5 | Decision gate on D3 (Schwinger analog, $200-500) | Brandon | TBD | After Q-1, Q-2 results |

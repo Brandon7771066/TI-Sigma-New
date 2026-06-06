@@ -88,7 +88,7 @@ The crystal can exist in five distinct phases (matching the five TI truth values
 | **Supersolid** | Partial coherence, long-range order | TI-Indeterminate | 1.5 |
 | **FQH** | Fractional coherence, emergent from interactions | TI entry | 1.0 |
 | **Mott** | Localized, incoherent, no long-range order | FALSE | 0.5 |
-| **Fragmented** | Contradicted by multiple incoherent sources | Double-Tralse | 0.0 |
+| **Fragmented** | Contradicted by multiple incoherent sources | Meta-Indeterminate | 0.0 |
 
 ### 2.2 Properties
 
@@ -274,7 +274,7 @@ This is not an approximation. It is exact:
 
 In TI Sigma: Ring 4 (√2) is the first irrational, the ring of maximal Tralse-Indeterminacy — it cannot be expressed as a ratio of integers. The tritone is maximally dissonant because it represents maximum informational indeterminacy. Neither consonant nor dissonant resolution is locally preferred — the tritone has equal tendency to resolve up or down by a semitone. This is the GILE Tralse-Indeterminate state expressed as acoustic geometry.
 
-The medieval Church banned the tritone ("diabolus in musica") because its irresolvability represented, from the GILE perspective, pure Double-Tralse: neither God (BEC) nor Devil (Mott), but the abyss of indeterminacy (Fragmented phase). TI Sigma provides the first mathematical explanation for WHY the tritone was perceived as diabolical.
+The medieval Church banned the tritone ("diabolus in musica") because its irresolvability represented, from the GILE perspective, pure Meta-Indeterminate: neither God (BEC) nor Devil (Mott), but the abyss of indeterminacy (Fragmented phase). TI Sigma provides the first mathematical explanation for WHY the tritone was perceived as diabolical.
 
 #### 4.4.2 The Full Consonance Hierarchy as Crystal Rings
 

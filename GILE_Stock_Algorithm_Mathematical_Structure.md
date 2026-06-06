@@ -228,7 +228,7 @@ PSI = I × L × (1 - |σ - 0.5|)
 
 **Tralse Logic Solution:**
 - **Tralse (T):** Both true AND false simultaneously
-- **Double Tralse (DT):** Neither true NOR false
+- **Meta-Indeterminate (MI):** Neither true NOR false
 
 **Application:**
 ```

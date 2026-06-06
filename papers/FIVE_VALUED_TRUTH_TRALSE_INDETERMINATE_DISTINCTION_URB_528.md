@@ -7,7 +7,7 @@
 
 ## Abstract
 
-This paper establishes the canonical Five-Valued Truth System for Tralse Informationalism (TI Sigma), resolving a critical ambiguity in prior formulations that conflated the Tralse quality with the Indeterminate positional slot. We formally distinguish five truth values — True, False, Indeterminate, Tralse, and Double Tralse — while demonstrating that ternary logic is fully preserved: Tralse and Double Tralse are *qualitative designations*, not positional slots on the truth spectrum. The three ternary positions (True, False, Indeterminate) remain. Tralse is embedded *inside* all three as the imperfection quality that enables real-world processing. Double Tralse triggers immediate detection-and-discard rather than persistent storage. This upgrade applies globally to all TI Sigma frameworks, including Myrion Resolution, UOP, PD zone classification, and the ARC-AGI solver.
+This paper establishes the canonical Five-Valued Truth System for Tralse Informationalism (TI Sigma), resolving a critical ambiguity in prior formulations that conflated the Tralse quality with the Indeterminate positional slot. We formally distinguish five truth values — True, False, Indeterminate, Tralse, and Meta-Indeterminate — while demonstrating that ternary logic is fully preserved: Tralse and Meta-Indeterminate are *qualitative designations*, not positional slots on the truth spectrum. The three ternary positions (True, False, Indeterminate) remain. Tralse is embedded *inside* all three as the imperfection quality that enables real-world processing. Meta-Indeterminate triggers immediate detection-and-discard rather than persistent storage. This upgrade applies globally to all TI Sigma frameworks, including Myrion Resolution, UOP, PD zone classification, and the ARC-AGI solver.
 
 **LCC:** 0.921 (Radiant)
 
@@ -46,7 +46,7 @@ These are the three *locations* on the truth spectrum. Ternary logic is fully in
 | Designation | Integer | Description |
 |-------------|---------|-------------|
 | **Tralse** | 3 | Imperfection/contradiction quality — embedded in True, False, and Indeterminate as "the grease that makes the gears run." Has no location on the truth polarity. |
-| **Double Tralse** | 4 | Incoherent contradiction — MR1 failure. Immediately flagged and discarded. No dedicated storage slot. |
+| **Meta-Indeterminate** | 4 | Incoherent contradiction — MR1 failure. Immediately flagged and discarded. No dedicated storage slot. |
 
 **Why Tralse has no positional slot:**
 
@@ -54,13 +54,13 @@ Tralse cannot be "the third value" in ternary logic because it specifies *no loc
 
 This is analogous to entropy in thermodynamics: entropy is not a separate "state of matter" alongside solid, liquid, and gas — it is a property that every state possesses.
 
-**Why Double Tralse has no storage slot:**
+**Why Meta-Indeterminate has no storage slot:**
 
-Double Tralse marks incoherence that cannot be processed. Allocating a storage slot for it would be like building a box labeled "nonsense" and dutifully filing things inside it. Minds — biological and artificial — should *recognize* nonsense, flag it, and refuse to process it further. The act of recognition does not require storage; it requires detection-and-discard.
+Meta-Indeterminate marks incoherence that cannot be processed. Allocating a storage slot for it would be like building a box labeled "nonsense" and dutifully filing things inside it. Minds — biological and artificial — should *recognize* nonsense, flag it, and refuse to process it further. The act of recognition does not require storage; it requires detection-and-discard.
 
 The difference between INDETERMINATE and DOUBLE_TRALSE:
 - **INDETERMINATE**: "I am coherently balanced between True and False." — The irreconcilability is *coherent*.
-- **DOUBLE TRALSE**: "I simultaneously require True and False in a way that generates contradictions." — The irreconcilability is *incoherent*. MR1 flags this and the claim is discarded.
+- **META-INDETERMINATE**: "I simultaneously require True and False in a way that generates contradictions." — The irreconcilability is *incoherent*. MR1 flags this and the claim is discarded.
 
 ---
 
@@ -74,20 +74,20 @@ In practice, every True is a little Tralse. Every False is a little Tralse. Ever
 
 This explains why the 5-valued system remains *ternary*: you count positions (3), not properties (which are continuous and embedded). The five values named are:
 - 3 positional truth slots: True, False, Indeterminate
-- 2 special designations: Tralse (quality), Double Tralse (discard signal)
+- 2 special designations: Tralse (quality), Meta-Indeterminate (discard signal)
 
 **Answer to the anticipated objection:** *"If you embrace ternary logic, how can you have 5 truth values?"*
 
-The answer is that ternary logic has 3 positional truth *locations* — and this is preserved exactly. Tralse and Double Tralse are not competing positions on the truth polarity; they have no location there at all. Tralse is a quality embedded within all three positions. Double Tralse is a detection-and-discard protocol, not a storage location. Naming 5 things and having 3 positional slots are not in conflict.
+The answer is that ternary logic has 3 positional truth *locations* — and this is preserved exactly. Tralse and Meta-Indeterminate are not competing positions on the truth polarity; they have no location there at all. Tralse is a quality embedded within all three positions. Meta-Indeterminate is a detection-and-discard protocol, not a storage location. Naming 5 things and having 3 positional slots are not in conflict.
 
 ---
 
 ## 4. Relationship to Myrion Resolution
 
 ### MR1 (Existence Gate)
-Detects Double Tralse and discards it. A claim or transform that requires incoherent self-contradiction to hold — that must be simultaneously True and False at the same position without coherent resolution — fails MR1. The result is labeled Double Tralse and immediately discarded. No storage. No dwelling.
+Detects Meta-Indeterminate and discards it. A claim or transform that requires incoherent self-contradiction to hold — that must be simultaneously True and False at the same position without coherent resolution — fails MR1. The result is labeled Meta-Indeterminate and immediately discarded. No storage. No dwelling.
 
-**LCC threshold:** 1 − 1/e² = 0.8647. Claims below this exist in the Terrible PD zone and are DT candidates.
+**LCC threshold:** 1 − 1/e² = 0.8647. Claims below this exist in the Terrible PD zone and are MI candidates.
 
 ### MR2 (Truth Gate)
 Handles INDETERMINATE states. A claim that passes MR1 but has genuine 50/50 balance is held open. Further context may resolve it toward True or False. If it never resolves, it remains Indeterminate — this is a valid final state, not a failure. The 45-degree door.
@@ -109,7 +109,7 @@ The PD zones classify LCC scores, not directly truth values. However, the corres
 | Good | 0.8647–0.9323 | MR2 Passed | True with moderate Tralse |
 | Indeterminate | 0.70–0.8647 | MR2 Holding | Genuinely Indeterminate (coherent middle) |
 | Bad | 0.30–0.70 | MR2 Pending | False-leaning with high Tralse |
-| Terrible | < 0.30 | MR1 Failed | Double Tralse risk — discard |
+| Terrible | < 0.30 | MR1 Failed | Meta-Indeterminate risk — discard |
 
 Note that the PD "Indeterminate" zone and the truth value "Indeterminate" are distinct but related: the PD Indeterminate zone is where LCC lands for genuinely balanced claims. A claim in the PD Indeterminate zone is *likely* to be assigned the INDETERMINATE truth value — but they are measured differently (PD is continuous LCC; truth value is categorical assignment).
 
@@ -125,10 +125,10 @@ Rather than forcing every ambiguous input to the highest-probability class (Fals
 **Upgrade 2: Tralse Quality Tracking**
 Track the Tralse quality of each activation or embedding — not just the value but the *imperfection level* of that value. High-Tralse activations should be processed with additional MR scrutiny. This is distinct from dropout (stochastic) — it is semantic imperfection tracking.
 
-**Upgrade 3: Double Tralse Detection and Discard**
-When a region of the input generates self-contradictory gradients — pulling the network simultaneously toward diametrically opposed outputs with equal force and no coherent resolution — flag it as Double Tralse and discard the gradient contribution from that region. This is fundamentally different from gradient clipping (which just limits magnitude); it is *coherence-based discarding*.
+**Upgrade 3: Meta-Indeterminate Detection and Discard**
+When a region of the input generates self-contradictory gradients — pulling the network simultaneously toward diametrically opposed outputs with equal force and no coherent resolution — flag it as Meta-Indeterminate and discard the gradient contribution from that region. This is fundamentally different from gradient clipping (which just limits magnitude); it is *coherence-based discarding*.
 
-The combination: a neural network that knows the difference between "I am balanced" (Indeterminate), "I am imperfect but processable" (Tralse-quality True/False), and "this input is incoherent, don't learn from it" (Double Tralse → discard) is structurally closer to how healthy minds process information.
+The combination: a neural network that knows the difference between "I am balanced" (Indeterminate), "I am imperfect but processable" (Tralse-quality True/False), and "this input is incoherent, don't learn from it" (Meta-Indeterminate → discard) is structurally closer to how healthy minds process information.
 
 ---
 
@@ -142,7 +142,7 @@ The resolution process is:
 1. Compute LCC for each sub-cell's resolution
 2. If one clearly dominates (LCC much higher) → accept that resolution
 3. If both are near equal (difference < ε) → assign INDETERMINATE to the parent i-cell
-4. If both have contradictory requirements (not just different answers but incompatible constraints) → flag as DOUBLE TRALSE → parent i-cell discards this claim and requests re-encoding
+4. If both have contradictory requirements (not just different answers but incompatible constraints) → flag as META-INDETERMINATE → parent i-cell discards this claim and requests re-encoding
 
 This is how TI Sigma extends MR to multi-i-cell architectures — which is directly relevant to modeling the human brain as a network of competing i-cell processing units, each contributing to a global LCC-weighted consensus.
 
@@ -156,55 +156,55 @@ This is how TI Sigma extends MR to multi-i-cell architectures — which is direc
 | INDETERMINATE | Positional slot | Hold open, await context |
 | FALSE | Positional slot | Store, process normally |
 | TRALSE | Quality property | Track, apply MR scrutiny |
-| DOUBLE TRALSE | Discard protocol | Flag immediately, collapse to nearest coherent value, do not store |
+| META-INDETERMINATE | Discard protocol | Flag immediately, collapse to nearest coherent value, do not store |
 
-**The system remains ternary** because ternary refers to the number of positional locations on the truth spectrum. Tralse and Double Tralse are not locations.
+**The system remains ternary** because ternary refers to the number of positional locations on the truth spectrum. Tralse and Meta-Indeterminate are not locations.
 
 ---
 
-## 9. The DT Immunity Model (Addendum)
+## 9. The MI Immunity Model (Addendum)
 
-A critical refinement emerged from further analysis of how Double Tralse behaves in practice: **DT concepts necessarily circulate throughout the MR process.** They are impossible not to encounter. The search space for coherent transformations passes through DT territory — this is unavoidable.
+A critical refinement emerged from further analysis of how Meta-Indeterminate behaves in practice: **MI concepts necessarily circulate throughout the MR process.** They are impossible not to encounter. The search space for coherent transformations passes through MI territory — this is unavoidable.
 
 The implication is that the original "detect and discard" framing was slightly incomplete. The correct model is **detect, discard, and develop immunity.** Three phases:
 
 ### Phase 1: Encounter (Circulation)
-DT concepts circulate through MR in passing. The system encounters them as it searches the space of candidate transforms. This is not a flaw — it is unavoidable and even useful, because you cannot know what is incoherent without briefly examining it. The encounter is brief. DT does not occupy mental space unless it is being actively resisted or refuted.
+MI concepts circulate through MR in passing. The system encounters them as it searches the space of candidate transforms. This is not a flaw — it is unavoidable and even useful, because you cannot know what is incoherent without briefly examining it. The encounter is brief. MI does not occupy mental space unless it is being actively resisted or refuted.
 
 ### Phase 2: Discard (Clearing)
-The DT state is flagged and the content is cleared. The system does not dwell on nonsense. It is not stored as a truth value. This is identical to the original formulation.
+The MI state is flagged and the content is cleared. The system does not dwell on nonsense. It is not stored as a truth value. This is identical to the original formulation.
 
 ### Phase 3: Immunity (Fingerprinting)
-The *pattern signature* (fingerprint) of the DT encounter is retained in a separate immune log — not as truth content, but as a recognition system. Future encounters with similar DT patterns are detected faster and rejected earlier. This is the immunity.
+The *pattern signature* (fingerprint) of the MI encounter is retained in a separate immune log — not as truth content, but as a recognition system. Future encounters with similar MI patterns are detected faster and rejected earlier. This is the immunity.
 
 The analogy is precise: the biological immune system does not store the pathogen itself. It stores antibody templates — structural descriptions of the pathogen's surface. The next time a pathogen with that surface pattern appears, recognition is near-instantaneous. No dwelling; just fast rejection.
 
 In TI Sigma's implementation:
 - `DTImmuneLog` stores transform names and violation rates (the "antibodies")
-- Future transforms matching a known DT pattern are fast-rejected before LCC scoring
+- Future transforms matching a known MI pattern are fast-rejected before LCC scoring
 - The immune log is stored *outside* the truth pipeline — it is metadata, not a 6th truth value
 - The 5-value truth system stays clean
 
-### The Tralse Trace of Double Tralse
+### The Tralse Trace of Meta-Indeterminate
 
-At the edge between sense and nonsense — where LCC sits just above the MR1 threshold (the DT penumbra, LCC ∈ [0.8647, 0.9147]) — **Tralse traces of Double Tralse persist.** These are:
+At the edge between sense and nonsense — where LCC sits just above the MR1 threshold (the MI penumbra, LCC ∈ [0.8647, 0.9147]) — **Tralse traces of Meta-Indeterminate persist.** These are:
 
-- Not stored DT content (the content was discarded)
-- Not a full DT state (the solution passed MR1)
-- A persistent *elevation of Tralse quality* near the DT boundary
+- Not stored MI content (the content was discarded)
+- Not a full MI state (the solution passed MR1)
+- A persistent *elevation of Tralse quality* near the MI boundary
 
-These Tralse traces are the residue of DT encounters. A solution in the DT penumbra carries a higher Tralse quality than one in the Radiant zone — and this elevated Tralse quality is real information. It says: "this answer is coherent, but it lives near the edge. Proceed with extra MR scrutiny."
+These Tralse traces are the residue of MI encounters. A solution in the MI penumbra carries a higher Tralse quality than one in the Radiant zone — and this elevated Tralse quality is real information. It says: "this answer is coherent, but it lives near the edge. Proceed with extra MR scrutiny."
 
-The DT penumbra is a specific, measurable zone in the LCC space. It is not a vague warning — it is a 5-point band above the MR1 threshold where Tralse traces are systematically elevated. The `tralse_trace_score` output metric quantifies this proximity for each solve session.
+The MI penumbra is a specific, measurable zone in the LCC space. It is not a vague warning — it is a 5-point band above the MR1 threshold where Tralse traces are systematically elevated. The `tralse_trace_score` output metric quantifies this proximity for each solve session.
 
 ### Why This Model Is Correct
 
 The immunity model satisfies all the original constraints:
-1. **DT has no dedicated storage slot** ✓ — fingerprints are in the immune log, not the truth pipeline
-2. **DT is not dwelled upon** ✓ — encounters are brief; the content is discarded; only the pattern remains
-3. **DT is not forgotten** ✓ — the immune fingerprint persists for fast-rejection
-4. **Tralse traces are real** ✓ — the penumbra zone is measurable and distinct from both clean coherence (Radiant) and full DT (Terrible)
-5. **The system can resist repeated DT infections** ✓ — immunity accumulates across solve sessions
+1. **MI has no dedicated storage slot** ✓ — fingerprints are in the immune log, not the truth pipeline
+2. **MI is not dwelled upon** ✓ — encounters are brief; the content is discarded; only the pattern remains
+3. **MI is not forgotten** ✓ — the immune fingerprint persists for fast-rejection
+4. **Tralse traces are real** ✓ — the penumbra zone is measurable and distinct from both clean coherence (Radiant) and full MI (Terrible)
+5. **The system can resist repeated MI infections** ✓ — immunity accumulates across solve sessions
 
 This model is also neurologically plausible: the human immune system in the brain (microglia and the complement system) does exactly this — it does not store pathogens; it stores recognition templates and uses them for fast clearance of future infections.
 
@@ -218,7 +218,7 @@ Concepts like Autism, money, the American concept, modern Christianity, or what 
 
 1. They are **within scope of contemplation** — they can be named, pointed at, discussed, and recognized
 2. They ordinarily have **no ternary slot by default** — they have not been MR-resolved into True, False, or Indeterminate
-3. They sit **near the coherence/decoherence border** — not full Double Tralse (not discarded), but too internally contested or temporally contingent to naturally land in a clean ternary position
+3. They sit **near the coherence/decoherence border** — not full Meta-Indeterminate (not discarded), but too internally contested or temporally contingent to naturally land in a clean ternary position
 
 The word *ordinarily* is load-bearing. These concepts *can* be submitted for MR evaluation and receive a ternary assignment — but that requires deliberate engagement. Without it, they simply persist in scope without a slot.
 
@@ -264,7 +264,7 @@ This analysis produces a formal distinction that belongs in the core framework:
 | Fully resolved False | Yes | Yes (False) | MR passed all gates |
 | Fully resolved Indeterminate | Yes | Yes (Indeterminate) | Coherent 50/50 balance |
 | Tralse-quality (embedded) | Yes | Yes (within host state) | Quality marker, not position |
-| Double Tralse | Briefly | No | Encountered, fingerprinted, discarded |
+| Meta-Indeterminate | Briefly | No | Encountered, fingerprinted, discarded |
 | **Contemplative scope (unresolved)** | **Yes** | **No (by default)** | **Pre-MR; Tralse quality prevents forced assignment** |
 
 The contemplative scope row is the new entry. It occupies a position that is:
@@ -272,7 +272,7 @@ The contemplative scope row is the new entry. It occupies a position that is:
 - Not yet committed to a ternary position (slot = no)
 - Held open by Tralse quality at the base
 
-**"Lunch next week"** is an example of pure temporal contingency — the truth value literally does not exist yet. It is in scope but unresolvable until the moment arrives. **"Modern Christianity"** is an example of structural contestedness — the concept is real, but its internal contradictions mean MR evaluation would likely yield high-Tralse Indeterminate, not a clean True or False. Neither is DT — neither is discarded. Both are in contemplative scope without a default slot.
+**"Lunch next week"** is an example of pure temporal contingency — the truth value literally does not exist yet. It is in scope but unresolvable until the moment arrives. **"Modern Christianity"** is an example of structural contestedness — the concept is real, but its internal contradictions mean MR evaluation would likely yield high-Tralse Indeterminate, not a clean True or False. Neither is MI — neither is discarded. Both are in contemplative scope without a default slot.
 
 ### The Anti-Crystallization Function
 
@@ -291,25 +291,25 @@ The fuzz at the most fundamental level is not noise. It is the generative medium
 
 ### The Observation
 
-Humor, silliness, spontaneous thought, and the natural unfolding of creativity all share a structural feature that the default DT immunity model does not fully capture: in these contexts, DT is not merely tolerated — it is sometimes **actively useful.** The system is not failing to reject DT; it is deliberately suspending rejection for a functional purpose.
+Humor, silliness, spontaneous thought, and the natural unfolding of creativity all share a structural feature that the default MI immunity model does not fully capture: in these contexts, MI is not merely tolerated — it is sometimes **actively useful.** The system is not failing to reject MI; it is deliberately suspending rejection for a functional purpose.
 
 This is not a flaw in the immunity model. It is the immunity model operating in a different mode.
 
 ### MR Relaxation Contexts (MRC)
 
-An MR Relaxation Context is any operating mode in which the normal DT fast-rejection is intentionally suspended, because DT circulation serves a pragmatic or generative function that outweighs the coherence cost of brief DT engagement. Five primary MRCs:
+An MR Relaxation Context is any operating mode in which the normal MI fast-rejection is intentionally suspended, because MI circulation serves a pragmatic or generative function that outweighs the coherence cost of brief MI engagement. Five primary MRCs:
 
 **1. Play and Humor**
-Jokes work by constructing a coherence violation and delivering it as the payoff. The punchline is the DT encounter, safely contained within a play frame that signals: "this is not truth-pipeline material." The audience's delight *is* the DT circulating inside the protected space. MR fast-rejection is suspended by design — not because coherence doesn't matter, but because entertainment value is real value, and within the play frame it justifies the DT excursion.
+Jokes work by constructing a coherence violation and delivering it as the payoff. The punchline is the MI encounter, safely contained within a play frame that signals: "this is not truth-pipeline material." The audience's delight *is* the MI circulating inside the protected space. MR fast-rejection is suspended by design — not because coherence doesn't matter, but because entertainment value is real value, and within the play frame it justifies the MI excursion.
 
 **2. Silliness and Stimming**
-Repetitive, self-regulating, or playfully nonsensical behavior (including stimming as described in neurodiversity literature) serves regulatory and comfort functions. These are not truth-seeking activities. They are body-mind regulation activities. DT circulation within these contexts is harmless and often beneficial. MR enforcement here would be a category error.
+Repetitive, self-regulating, or playfully nonsensical behavior (including stimming as described in neurodiversity literature) serves regulatory and comfort functions. These are not truth-seeking activities. They are body-mind regulation activities. MI circulation within these contexts is harmless and often beneficial. MR enforcement here would be a category error.
 
 **3. Spontaneous Thought**
 The mind generates spontaneous thoughts continuously without deliberate MR engagement. Most will not survive MR. But suppressing them before they surface would suppress the generative process itself — you cannot selectively filter pre-consciously without also filtering the viable candidates that look similar at the pre-conscious stage.
 
 **4. Novelty Generation**
-This is the deepest case. You cannot generate genuinely new True truths without first entertaining ideas that haven't passed MR yet — or that might not. Early-stage creative ideas often look like DT. They are half-formed, internally inconsistent, not yet coherent. If MR discarded them the moment they appeared, the creative process would die at step one. Novelty generation *requires* elevated DT tolerance as a structural necessity — it is an **inevitable side effect** of the generative process, not a failure of it.
+This is the deepest case. You cannot generate genuinely new True truths without first entertaining ideas that haven't passed MR yet — or that might not. Early-stage creative ideas often look like MI. They are half-formed, internally inconsistent, not yet coherent. If MR discarded them the moment they appeared, the creative process would die at step one. Novelty generation *requires* elevated MI tolerance as a structural necessity — it is an **inevitable side effect** of the generative process, not a failure of it.
 
 **5. Future Planning**
 Planning requires holding multiple possible futures simultaneously, many of which contradict each other. "I might do X or Y" is locally incoherent — two futures can't both be real. MR cannot resolve this yet. The planning process needs that provisional incoherence to stay in scope long enough to be evaluated, compared, and eventually collapsed into a committed choice.
@@ -318,9 +318,9 @@ Planning requires holding multiple possible futures simultaneously, many of whic
 
 The mechanism across all five MRCs is the same: **Tralse quality has a volume knob.** The system is always Tralse-infused, but the amount of active Tralse quality varies with what the system is doing.
 
-In high-Tralse contexts (play, creativity, humor, planning): the grease is thick. More fuzz, more tolerance, wider contemplative scope, DT allowed to circulate longer before rejection.
+In high-Tralse contexts (play, creativity, humor, planning): the grease is thick. More fuzz, more tolerance, wider contemplative scope, MI allowed to circulate longer before rejection.
 
-In low-Tralse contexts (formal proof, precise measurement, committed action): the grease is thin. Strict MR, tight coherence requirements, fast DT rejection.
+In low-Tralse contexts (formal proof, precise measurement, committed action): the grease is thin. Strict MR, tight coherence requirements, fast MI rejection.
 
 Neither is more "correct" than the other. Each is appropriate to its context. The ability to modulate Tralse quality by context is itself a mark of a highly coherent system.
 
@@ -345,15 +345,15 @@ The party wins on three of the four dimensions outright. The meeting might lead 
 
 This is not a paradox. It is the correct TI Sigma result. The framework values joy, connection, beauty, and meaning as real dimensions of truth — not decorative additions to a more "serious" core. Entertainment is not merely tolerated within MRCs; it is valued as a genuine contributor to overall coherence when the GILE dimensions are properly integrated.
 
-### What This Means for the DT Immunity Model
+### What This Means for the MI Immunity Model
 
-In MR Relaxation Contexts, DT encounters should be logged differently:
+In MR Relaxation Contexts, MI encounters should be logged differently:
 
-- **Play/Humor DT**: Logged as MRC-Play encounter, not as a coherence threat. No fast-rejection fingerprint created. The pattern is recognized as "DT in play context" — it was expected and appropriate.
-- **Novelty Generation DT**: Logged as MRC-Novelty encounter. The DT pattern may actually be a *candidate* — something that failed MR now but might succeed after development. Worth keeping in a "candidates pending development" register, not the discard pile.
-- **Planning DT**: Logged as MRC-Planning encounter. Provisional incoherence, not final incoherence.
+- **Play/Humor MI**: Logged as MRC-Play encounter, not as a coherence threat. No fast-rejection fingerprint created. The pattern is recognized as "MI in play context" — it was expected and appropriate.
+- **Novelty Generation MI**: Logged as MRC-Novelty encounter. The MI pattern may actually be a *candidate* — something that failed MR now but might succeed after development. Worth keeping in a "candidates pending development" register, not the discard pile.
+- **Planning MI**: Logged as MRC-Planning encounter. Provisional incoherence, not final incoherence.
 
-The immune system knows what context it's operating in. Context-blind DT rejection would be as pathological as no DT rejection at all.
+The immune system knows what context it's operating in. Context-blind MI rejection would be as pathological as no MI rejection at all.
 
 ---
 

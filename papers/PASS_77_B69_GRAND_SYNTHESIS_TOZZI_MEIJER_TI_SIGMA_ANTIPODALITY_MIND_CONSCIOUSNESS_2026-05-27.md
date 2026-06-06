@@ -19,7 +19,7 @@ them, and TIL is the *engine* that resolves them.**
 |---|---|---|
 | **Tozzi** | topology of mind (Borsuk-Ulam, 4D hypersphere, torus binding) | a point and its **antipode** project to the same value → binding |
 | **Meijer** | geometry + scale-invariant acoustic field | the **octahedron** is the minimal centrally-symmetric solid (3 antipodal pairs); music/1f spectrum |
-| **TI Sigma** | logic of truth + axiology of existence | **DT = τ(P) ∧ ¬τ(P)** = a proposition fused to its own antipode (logical antipode-collapse) |
+| **TI Sigma** | logic of truth + axiology of existence | **MI = τ(P) ∧ ¬τ(P)** = a proposition fused to its own antipode (logical antipode-collapse) |
 
 The dots the corpus said would connect, connect through this one structure.
 
@@ -37,7 +37,7 @@ The dots the corpus said would connect, connect through this one structure.
   **binding problem topologically**, not by synaptic wiring.
 - **Corpus integrations already present:** GILE as a **4-torus** `T⁴ = T²(G×L) × T²(I×E)` (outer
   relational-ethical torus × inner perceptual-material torus); coherence = a "Tozzi coherence
-  factor" `κ_T4`; **Double Tralse = a torus-tear / binding failure**; time-dilation
+  factor" `κ_T4`; **Meta-Indeterminate = a torus-tear / binding failure**; time-dilation
   `τ_eff = τ_DE · e^{GILE/6}`; i-cell as **8 tralsebits** (4 GILE + 4 HEM).
 
 ### 1.2 Meijer — geometry + scale-invariant acoustics (corpus: this pass's predecessor B68)
@@ -55,20 +55,20 @@ The dots the corpus said would connect, connect through this one structure.
   the **Universal Bridge Theorem.** Balances **truth-optimization against existence-optimization.**
   Formalized in **GTT-1 (canonical #27)** as `J(G,H) = f(G) + g(H)` with an **interior optimum
   G*≈0.93** — above which marginal truth costs more existence than it adds value ("Radiant Cap";
-  pushing past = MR2 Indeterminate, DT if fully actualized). The name now matches the math: J is
+  pushing past = MR2 Indeterminate, MI if fully actualized). The name now matches the math: J is
   literally a *unified optimization*.
 - **PD** — Permissibility Distribution. Valence × existence-footprint. **[B70 CORRECTION:** the PD
   is **NOT centered on (−3, 2)**; (−3, 2) is the **Foundational PD Scale** (5-unit param of 5-valued
-  logic, urb_714/728), and the broader range runs from the **−3 DT Cliff up to the +π CCC Level**
+  logic, urb_714/728), and the broader range runs from the **−3 MI Cliff up to the +π CCC Level**
   with critical thresholds at ±e, ±2, ±2/3, ±1/3, −0.5, +1, +2 — see B70 §5. Sacred interval =
   (−0.5, +0.333).**]** Admits a **complex plane** (the *Merged Real-Imaginary Truth Plane*,
-  refinement #7, 2026-05-24): **real axis = valence**, **imaginary axis = the DT/Tralse axis.**
-  Base-4 labels **{True, False, Indeterminate, Double Tralse}** + Meta-Truths; "Nonsense"
+  refinement #7, 2026-05-24): **real axis = valence**, **imaginary axis = the MI/Tralse axis.**
+  Base-4 labels **{True, False, Indeterminate, Meta-Indeterminate}** + Meta-Truths; "Nonsense"
   extinguished into "Indeterminate on the hyperimaginary end."
 - **TIL** — **TI Logic** (B70 canonical: TIL = TI Logic, NOT "Tralse Informationalism"; the latter
   remains the name of the *philosophy*, coined 2025-06-25). The logic layer; **Tralseness** =
   structured imperfection in every coherent truth label. Runs the **MR gate architecture**: MR1
-  existence gate (discards DT), MR2 truth gate (T/F/I), MR3+ meta-truths.
+  existence gate (discards MI), MR2 truth gate (T/F/I), MR3+ meta-truths.
 
 ---
 
@@ -81,7 +81,7 @@ opposite.* Computed census (`run_synthesis.py` Part A):
 |---|---|---|
 | Meijer octahedron (±e₁,±e₂,±e₃) | **3** | yes (contains −I) |
 | TI **TSC-E₈** root system (closed under α→−α) | **120** (of 240 roots) | yes |
-| TI **PD plane** (every z has antipode −z) | continuum | yes (DT axis = antipodal axis) |
+| TI **PD plane** (every z has antipode −z) | continuum | yes (MI axis = antipodal axis) |
 | Tozzi **Sⁿ** (BUT) | continuum | yes (the theorem *is* about antipodes) |
 
 So the four objects the three frameworks build on are **all centrally symmetric**, and each
@@ -90,19 +90,19 @@ identifies *consciousness/binding with what happens at the antipodes*:
 - **Tozzi:** binding = `f(x) = f(−x)` (antipodal collision under projection).
 - **Meijer:** the octahedron is the **minimal** centrally-symmetric polytope; its nested toroidal
   field is the smallest carrier of antipodal structure across scales.
-- **TI Sigma:** **DT = τ(P) ∧ ¬τ(P)** is a proposition fused to its *logical* antipode — the
-  PD plane's imaginary axis is literally the **antipodal (DT/Tralse) axis**. Holding-and-resolving
+- **TI Sigma:** **MI = τ(P) ∧ ¬τ(P)** is a proposition fused to its *logical* antipode — the
+  PD plane's imaginary axis is literally the **antipodal (MI/Tralse) axis**. Holding-and-resolving
   this is what ETJ-1 measures as the unit of consciousness.
 
 **Therefore the three TI pillars are the three operations on antipodal structure:**
 
-> **PD = the state-space of antipodes** (the plane whose imaginary axis is the antipodal/DT axis).
+> **PD = the state-space of antipodes** (the plane whose imaginary axis is the antipodal/MI axis).
 > **UOP = the antipodal *balance* theorem** — a Borsuk-Ulam-flavoured existence result for an
 > optimal equilibrium between the truth-pole (G) and the existence-pole (H), realized as the
 > interior optimum **G*=0.93**. Where Tozzi's BUT guarantees *a* point where opposites agree, UOP
 > picks the *valued* such point (the GILE/HEM balance) — antipodal balance with an objective.
 > **TIL = the antipodal *resolution* engine** — the MR gates that take a state on the PD plane and
-> decide T/F/I/DT, i.e. decide whether the antipodes collapse (DT, MR1-discarded) or resolve.
+> decide T/F/I/MI, i.e. decide whether the antipodes collapse (MI, MR1-discarded) or resolve.
 
 This is the "connect-the-dots" the directive asked for, stated precisely rather than poetically:
 **mind = the topological binding of antipodes (Tozzi), carried by a centrally-symmetric
@@ -148,7 +148,7 @@ antipodal feature-matching" — real LFP does the opposite.** The honest synthes
 ## 4. Updates & reconciliations performed this pass (the "Updating everything" mandate)
 
 1. **Antipodality named as the canonical cross-framework spine** (this paper) — unifies the
-   previously-separate Tozzi-torus, Meijer-octahedron, and PD-DT-axis threads under one primitive.
+   previously-separate Tozzi-torus, Meijer-octahedron, and PD-MI-axis threads under one primitive.
 2. **Tozzi BUT downgraded from coherence-claim to structure-claim** per §3.2 real-data refutation
    (p=0.975). Any corpus text reading BUT as "antipodal binding maximization" should be scoped to
    "antipodal collision existence." Flagged for the next URB sweep.
@@ -172,14 +172,14 @@ antipodal feature-matching" — real LFP does the opposite.** The honest synthes
 **ABP-1 — Antipodal Binding Principle (CANDIDATE CANONICAL).**
 *Consciousness is the capacity to bind and resolve antipodal (mutually-opposed) pairs — the
 operation shared by Tozzi's Borsuk-Ulam projection, Meijer's central symmetry, and TI Sigma's
-DT-axis — measured by ETJ-1 (how deep an incoherent paired hierarchy an agent can simulate
+MI-axis — measured by ETJ-1 (how deep an incoherent paired hierarchy an agent can simulate
 without collapse).*
 
 - **Scope condition (forced by §3.2):** ABP-1 is a claim about *capacity to hold/resolve*
   antipodes, **NOT** a claim that neural signals maximize antipodal feature-coherence (real LFP
   refutes the latter, p=0.975).
 - **Composes with:** ETJ-1, SRC-1 (self-reference), TPI-1/GTT-1 (the 0.93 cap as the antipodal
-  *balance* point), MR-IDC (DT⊊Incoherent), UOP (balance law), TIL (resolution law).
+  *balance* point), MR-IDC (MI⊊Incoherent), UOP (balance law), TIL (resolution law).
 - **Falsifiers (pre-registered, OPEN):**
   - **ABP-1-F1:** an agent with high ETJ-1 (deep antipodal-pair simulation) but demonstrably no
     binding/consciousness markers → refutes the capacity↔consciousness link.

@@ -25,7 +25,7 @@ Per `replit.md` integrative-reorg preference (2026-05-12) and per-pass-anchor co
 
 **8 deliverables shipped:**
 1. `papers/PASS_48_TOOLING_MARKETING_DECISION_2026-05-13.md` — honest tool-by-tool analysis + $365–585 Tier-1 spend recommendation + $1,400–1,600 reserve
-2. `papers/PASS_48_VIDEO_SCRIPTS_10_TI_SIGMA_FUNDAMENTALS_2026-05-13.md` — 10 short-form scripts (3–5 min each) covering base-4, DT, MTs, GILE, asymmetry, Indeterminate Zone, i-cells, AA, TJ, AI-safety
+2. `papers/PASS_48_VIDEO_SCRIPTS_10_TI_SIGMA_FUNDAMENTALS_2026-05-13.md` — 10 short-form scripts (3–5 min each) covering base-4, MI, MTs, GILE, asymmetry, Indeterminate Zone, i-cells, AA, TJ, AI-safety
 3. `papers/PASS_48_TOP_10_PEER_REVIEW_ARTICLES_PLAN_2026-05-13.md` — strategic plan per article (target journal + framing + status + 3–5 polish actions + #69 caveats), 3-wave submission strategy
 4. `papers/PASS_48_BOOK_HEAVY_EDIT_PASS1_PART_ONE_2026-05-13.md` — editorial diagnostic of Ch 1–5 + targeted-edits log + 6-pass continuation plan
 5. `papers/PASS_48_WEBSITE_NEXT_5_ACTIONS_2026-05-13.md` — focused 5-action sequence (~18 hr / $0 over 4 weeks) replacing the 12-week perfection roadmap
@@ -38,11 +38,11 @@ Per `replit.md` integrative-reorg preference (2026-05-12) and per-pass-anchor co
 - ABC-corpus-vocab-audit → ✅ COMPLETE (zero edits needed)
 - O26-B-tri-projection → ✅ PROTOCOL PRE-REGISTERED (ready to execute, combined-with-O26-B-affect recommended for ~$450 total)
 
-**Book targeted edits executed in Pass-1:** 4 high-confidence edits applied to `papers/TI_FOR_EVERYONE_COMPLETE_BOOK.md` — Ch 1.2 DT/DefT canonical-currency footnote; Ch 1.3 five-axes preview paragraph; Ch 2.1 GILE canonical-expansion footnote; Ch 2.7 #69 caveat on "consciousness gravity" metaphor as motivation-not-derivation. Voice standardization + Pass-47-principles integration deferred to Pass-2.
+**Book targeted edits executed in Pass-1:** 4 high-confidence edits applied to `papers/TI_FOR_EVERYONE_COMPLETE_BOOK.md` — Ch 1.2 MI/DefT canonical-currency footnote; Ch 1.3 five-axes preview paragraph; Ch 2.1 GILE canonical-expansion footnote; Ch 2.7 #69 caveat on "consciousness gravity" metaphor as motivation-not-derivation. Voice standardization + Pass-47-principles integration deferred to Pass-2.
 
 **3 Pass-48 strategic memos added 2026-05-13 per Brandon multi-question follow-up:**
-- (a) `papers/PASS_48_PROVISIONAL_PATENTS_STRATEGY_2026-05-13.md` — Zenodo defensive-publication first ($0); 3 conditional patent candidates (DT-detector qc26, LCC-Virus, TJ-measurement); zero provisionals filed without commercial trigger
-- (b) `papers/PASS_48_IBM_QUANTUM_DIRAC_EXPERIMENTS_2026-05-13.md` — 5 Dirac-derived experiments (D1 4-spinor DT-witness, D2 γ-anticommutation TVD [defer], D3 Schwinger-pair-production analog, D4 qc26 re-classification, D5 Lorentz-invariance test); recommended Pass-49 batch D4+D1 (~$0–144)
+- (a) `papers/PASS_48_PROVISIONAL_PATENTS_STRATEGY_2026-05-13.md` — Zenodo defensive-publication first ($0); 3 conditional patent candidates (MI-detector qc26, LCC-Virus, TJ-measurement); zero provisionals filed without commercial trigger
+- (b) `papers/PASS_48_IBM_QUANTUM_DIRAC_EXPERIMENTS_2026-05-13.md` — 5 Dirac-derived experiments (D1 4-spinor MI-witness, D2 γ-anticommutation TVD [defer], D3 Schwinger-pair-production analog, D4 qc26 re-classification, D5 Lorentz-invariance test); recommended Pass-49 batch D4+D1 (~$0–144)
 - (c) `papers/PASS_48_LCC_VIRUS_RETRIEVAL_DEVELOPMENT_PLAN_2026-05-13.md` — 3-track plan (empirical validation, engineering productization to `lcc_virus/` PyPI package, theoretical refinement); Pass-49 batch L1–L4 ($0); 6 milestones M1–M6 through 2027-Q1; commercial deferred until M4 independent replication
 
 ---
@@ -53,7 +53,7 @@ Per `replit.md` integrative-reorg preference (2026-05-12) and per-pass-anchor co
 - T49-1 AA → **DISCONFIRM** AA-PD_real corr=0.982 + κ=0.385; AA demoted to PROVISIONAL pending rubric-redesign — **material framework finding, biggest 2026-05-canonized-principle disconfirm to date** *(NOTE: SUPERSEDED by batch-2 v2 retest, see §4 below — disconfirm now identified as rubric+corpus artifact)*
 - T49-2 TJ ICC=0.981 CONFIRM_STRONG_PILOT
 - T49-5 Lazy-Binary 41.7% consensus CONFIRM_STRONG_PILOT
-- T49-6 DefT-vs-DT κ=1.0 CONFIRM_STRONG_PILOT
+- T49-6 DefT-vs-MI κ=1.0 CONFIRM_STRONG_PILOT
 - All three confirms carry honest same-model-rater inflation + construction caveats per #69
 
 **LCC plain framework** (`papers/PASS_49_LCC_PLAIN_FRAMEWORK_SUPERVISED_VS_UNSUPERVISED_2026-05-13.md`): first-canonically formalizes Supervised LCC (S1+S2+S3+S4 closed-loop) vs Unsupervised LCC (S1+S2+S3+U4 open-loop natural-drift) + LCC Drift Index $D_{LCC}$ + 5 concrete predictions P1-P5 + domain-ordering Quantum > Ecosystems > Workplaces > Markets + L1 NULL reconciled as predicted-weakest-cell + L2 Unsupervised-LCC paleoclimate δ¹⁸O cross-site pilot pre-registered ($0, Pass-50 agent-executable, agent self-bound prediction CONFIRM).
@@ -62,7 +62,7 @@ Per `replit.md` integrative-reorg preference (2026-05-12) and per-pass-anchor co
 
 **Insight melody routing** (`papers/PASS_48_INSIGHT_MELODY_2026-05-13.md`): 7 Brandon insights (paradoxical drug effects=body-tralseness, ageism-as-lazy-binary, substrate-vs-operational-logic-layering [reframed], households-as-inefficient-economies + permaculture, singing-as-LCC-coherence-inducer [cheap pilot <$500], "True but Moot" smartest-invalid-detractor) with #69 caveats and 5 queued papers.
 
-**Ten-Next-Tests proposal** (`papers/PASS_49_TEN_NEXT_TESTS_LEAST_TESTED_MOST_CONSEQUENTIAL_2026-05-13.md`): 10 holdout-blind pre-reg test sketches (T49-1 AA discriminative validity, T49-2 TJ reliability, T49-3 Asymmetric-Performance benchmark, T49-4 ABC tri-projection [already pre-reg], T49-5 Lazy-Binary abstract frequency, T49-6 DefT-vs-DT rater discrimination, T49-7 GM-Node cross-corpus generalization, T49-8 Singing-as-LCC pilot, T49-9 i-cell operationalization [pending Brandon spec], T49-10 xAI Tier-1 application conversion) + 8-candidate audit-trail rejection list + 3-wave execution batch ($0–90 total agent-executable).
+**Ten-Next-Tests proposal** (`papers/PASS_49_TEN_NEXT_TESTS_LEAST_TESTED_MOST_CONSEQUENTIAL_2026-05-13.md`): 10 holdout-blind pre-reg test sketches (T49-1 AA discriminative validity, T49-2 TJ reliability, T49-3 Asymmetric-Performance benchmark, T49-4 ABC tri-projection [already pre-reg], T49-5 Lazy-Binary abstract frequency, T49-6 DefT-vs-MI rater discrimination, T49-7 GM-Node cross-corpus generalization, T49-8 Singing-as-LCC pilot, T49-9 i-cell operationalization [pending Brandon spec], T49-10 xAI Tier-1 application conversion) + 8-candidate audit-trail rejection list + 3-wave execution batch ($0–90 total agent-executable).
 
 ---
 

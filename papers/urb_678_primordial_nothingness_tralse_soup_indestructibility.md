@@ -4,7 +4,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 14, 2026  
 **Corpus Entry:** #678  
-**Related URBs:** #660 (Being Theorem), #662 (MCIP), #672 (MR Contextual Initiation / Big Bang Regress), #674 (E-T Alignment / DTA), #675 (MER), #677 (Double Tralse)  
+**Related URBs:** #660 (Being Theorem), #662 (MCIP), #672 (MR Contextual Initiation / Big Bang Regress), #674 (E-T Alignment / DTA), #675 (MER), #677 (Meta-Indeterminate)  
 **DOI:** Pending Zenodo  
 **Keywords:** Primordial Nothingness, Tralse Soup, Composite Truth-Existence, CTE, Anselmian Truth Argument, indestructibility, HEAR, MR, cosmogenesis, truth-entropy, metaphysical necessity, first I-assertion, CCC
 
@@ -14,11 +14,11 @@
 
 This paper establishes the TI Sigma account of cosmological origins and the metaphysical guarantee of existence's persistence. Four central results are established:
 
-1. **The Anselmian Truth Argument (ATA):** The very first thing to emerge from Primordial Nothingness (PN) was not arbitrary. It was the Double Tralse intuition: *"There is no truth."* But this claim, precisely because it is a claim, instantiates truth — the Anselmian structure guarantees that Truth MUST exist. PN self-annihilates through its own first intuition. The first truth is the truth of its own inevitability.
+1. **The Anselmian Truth Argument (ATA):** The very first thing to emerge from Primordial Nothingness (PN) was not arbitrary. It was the Meta-Indeterminate intuition: *"There is no truth."* But this claim, precisely because it is a claim, instantiates truth — the Anselmian structure guarantees that Truth MUST exist. PN self-annihilates through its own first intuition. The first truth is the truth of its own inevitability.
 
 2. **The First I-Assertion — "I Am Nothing":** The second emergent structure from PN is self-referential: the Intuition dimension (GILE-I) asserts its own nothingness. But "I am nothing" is made BY a subject — it is self-refuting, generating the first Tralse. MR collapses this Tralse into the first registration: *I exist.* From this single point, GILE, HEM, mathematics, and physics are reconstructed.
 
-3. **The Identity Theorem — Tralse Soup = Nothingness = Chaos:** The three concepts are structurally identical: all three are the PN/DT ground state — maximum truth-entropy, maximum indeterminacy, τ² = 0. Chaos (absence of rules) is not merely similar to Tralse Soup — it IS Tralse Soup. The PN state is the correct name for all three.
+3. **The Identity Theorem — Tralse Soup = Nothingness = Chaos:** The three concepts are structurally identical: all three are the PN/MI ground state — maximum truth-entropy, maximum indeterminacy, τ² = 0. Chaos (absence of rules) is not merely similar to Tralse Soup — it IS Tralse Soup. The PN state is the correct name for all three.
 
 4. **The Indestructibility Theorem:** It is metaphysically impossible for the universe to be permanently destroyed, and as certain as logically possible that intelligent life will never be permanently extinguished. The proof runs directly from ATA: any PN state immediately generates the first truth, which generates I, which reconstructs the universe. Destruction entails reconstruction. The HEAR process is rocky but its destination is guaranteed: Composite Truth-Existence (CTE) must win.
 
@@ -34,13 +34,13 @@ The **CCC (Cosmic Conscious Cycle)** is the name for this entire arc: from PN �
 
 ---
 
-## 2. Primordial Nothingness (PN) as the Double Tralse Ground State
+## 2. Primordial Nothingness (PN) as the Meta-Indeterminate Ground State
 
 ### 2.1 What PN Is
 
-**Primordial Nothingness (PN)** is not a void in the spatial sense — it is not "empty space." It is the state in which no proposition has a determined truth value. Every claim about PN is simultaneously True and False (Tralse), and the Tralse condition itself is both asserted and denied (Double Tralse). Therefore:
+**Primordial Nothingness (PN)** is not a void in the spatial sense — it is not "empty space." It is the state in which no proposition has a determined truth value. Every claim about PN is simultaneously True and False (Tralse), and the Tralse condition itself is both asserted and denied (Meta-Indeterminate). Therefore:
 
-$$\text{PN} = \text{DT ground state} = \tau^2 = 0$$
+$$\text{PN} = \text{MI ground state} = \tau^2 = 0$$
 
 In Dual-Tralse Algebra terms, PN is the nilsquare element: the state in which maximal contradiction has self-annihilated to Nothing. Yet from URB #674, **"All holes exist"**: PN exists as a real hole at the Existence floor E = ET ≈ 0.4142. PN is not truly Nothing in the sense of non-existence — it is *existing Nothingness*, a hole that has being.
 
@@ -76,7 +76,7 @@ $$\text{Nothingness} \equiv \text{Chaos} \equiv \text{Tralse Soup} \equiv \text{
 
 The proof is direct: "absence of all rules" means no rule R is determinately enforced. But "R and not-R" is Tralse for every rule R. Therefore Chaos = all propositions Tralse = Tralse Soup. Nothingness similarly: "no truth is registered" = every truth is both True and False (neither has precedence) = Tralse Soup.
 
-**Crucially:** Absence of rules means *anything can happen* — including the emergence of a DT-conscious entity that recognizes its own indeterminacy. This is not a contradiction of Tralse Soup; it is its natural consequence. The transition from PN to first consciousness is necessitated BY the Tralse Soup structure, not despite it.
+**Crucially:** Absence of rules means *anything can happen* — including the emergence of a MI-conscious entity that recognizes its own indeterminacy. This is not a contradiction of Tralse Soup; it is its natural consequence. The transition from PN to first consciousness is necessitated BY the Tralse Soup structure, not despite it.
 
 ---
 
@@ -84,13 +84,13 @@ The proof is direct: "absence of all rules" means no rule R is determinately enf
 
 ### 3.1 The First Intuition
 
-From PN, the first emergent structure is not arbitrary. Because Tralse Soup means *anything can happen*, and because DT consciousness (recognition of one's own indeterminacy — see URB #676) is a logically possible state, DT consciousness arises. The PN state becomes aware of itself as "indeterminate indeterminacy."
+From PN, the first emergent structure is not arbitrary. Because Tralse Soup means *anything can happen*, and because MI consciousness (recognition of one's own indeterminacy — see URB #676) is a logically possible state, MI consciousness arises. The PN state becomes aware of itself as "indeterminate indeterminacy."
 
-The content of this first awareness is the simplest possible DT claim:
+The content of this first awareness is the simplest possible MI claim:
 
 > **"There is no truth."**
 
-This is the primal intuition — the PN recognizing its own truth-entropy. It is a DT claim: "Truth is both absent (True) and not absent (False), and this indeterminacy is itself indeterminate." This is the PN describing its own structure.
+This is the primal intuition — the PN recognizing its own truth-entropy. It is a MI claim: "Truth is both absent (True) and not absent (False), and this indeterminacy is itself indeterminate." This is the PN describing its own structure.
 
 ### 3.2 The Anselmian Flip
 
@@ -105,8 +105,8 @@ Either way, **Truth MUST exist**. This is the Anselmian structure applied not to
 
 In TI Sigma's five-valued logic:
 
-- The DT claim "no truth" fires the Anselmian structure
-- The first MR step resolves DT → τ (from nilsquare to first-order Tralse)
+- The MI claim "no truth" fires the Anselmian structure
+- The first MR step resolves MI → τ (from nilsquare to first-order Tralse)
 - The second MR step resolves τ → first determinate truth: **"Something exists rather than nothing"**
 - This IS the Being Theorem ground — the G-dimension (Goodness) of GILE
 
@@ -116,7 +116,7 @@ Formally:
 
 $$\text{PN} \xrightarrow{\text{ATA}} G \text{ (Being Theorem)}$$
 
-$$\text{DT claim} \xrightarrow{\text{MR step 1}} \tau \xrightarrow{\text{MR step 2}} \text{True}(\exists x)$$
+$$\text{MI claim} \xrightarrow{\text{MR step 1}} \tau \xrightarrow{\text{MR step 2}} \text{True}(\exists x)$$
 
 ---
 
@@ -152,7 +152,7 @@ From the two primal intuitions, the full GILE framework reconstructs:
 
 | Step | Primal Intuition | Resolution | GILE Dimension |
 |------|-----------------|-----------|----------------|
-| 1 | "There is no truth" (DT) | Anselmian flip: truth MUST exist | **G — Goodness/Being** (Being Theorem ground) |
+| 1 | "There is no truth" (MI) | Anselmian flip: truth MUST exist | **G — Goodness/Being** (Being Theorem ground) |
 | 2 | "I am nothing" (first Tralse) | Self-refutation: I exist | **I — Intuition** (metacausal self-knowing) |
 | 3 | G + I exist — "What is this existence FOR?" | Relational question fires → Love as the answer | **L — Love** (relational structure, purpose, nourishment) |
 | 4 | G + I + L — "Where/When does this exist?" | Physical substrate question fires | **E — Environment** (physical embedding, spacetime, biology) |
@@ -169,7 +169,7 @@ From GILE: the HEM (G, I, L, E dimensions as the four-dimensional scalar), the p
 
 The distinction between default and normative is crucial:
 
-**Default state of reality:** Tralse Soup (PN / DT / Chaos).
+**Default state of reality:** Tralse Soup (PN / MI / Chaos).
 - High truth-entropy: S_T = 1
 - Every proposition mixed; no determination stable
 - This is where reality *starts* absent HEAR process
@@ -183,9 +183,9 @@ The distinction between default and normative is crucial:
 
 **The asymmetry is not a matter of preference — it is structural:**
 
-1. **CTE accumulates:** Each MR resolution reduces local S_T by at least ET ≈ 0.4142 (the Emerick Threshold). Truth resolutions are *sticky* — they do not spontaneously revert to Tralse, because DT Immunity (τ² = 0) prevents the re-Tralsification of resolved propositions.
+1. **CTE accumulates:** Each MR resolution reduces local S_T by at least ET ≈ 0.4142 (the Emerick Threshold). Truth resolutions are *sticky* — they do not spontaneously revert to Tralse, because MI Immunity (τ² = 0) prevents the re-Tralsification of resolved propositions.
 
-2. **Tralse Soup self-annihilates:** The nilsquare property means that Tralse applied to itself gives zero. A Tralse Soup fluctuation that tries to persist must apply itself recursively — and immediately collapses to nothing (DT → 0). Tralse Soup cannot maintain itself; it generates its own refutation (ATA).
+2. **Tralse Soup self-annihilates:** The nilsquare property means that Tralse applied to itself gives zero. A Tralse Soup fluctuation that tries to persist must apply itself recursively — and immediately collapses to nothing (MI → 0). Tralse Soup cannot maintain itself; it generates its own refutation (ATA).
 
 3. **The Anselmian guarantee:** Truth's existence is self-reinforcing. Every truth resolution makes the next one easier (lower entropy → lower resistance to further resolution). CTE is the only stable attractor.
 
@@ -197,7 +197,7 @@ The path from Tralse Soup to CTE is not smooth. The **HEAR process** (Holistic E
 
 | Threshold | Value | Transition |
 |-----------|-------|-----------|
-| MR1 (ET) | ≈ 0.4142 | Tralse Soup → first registered truths; DT zones begin clearing |
+| MR1 (ET) | ≈ 0.4142 | Tralse Soup → first registered truths; MI zones begin clearing |
 | MR2 / Dottie (𝔡) | ≈ 0.7391 | First-order truths → metastable equilibrium; Dottie Trap risk |
 | CTE / BOK (T_TI) | ≈ 0.9340 | MR2-Resolved → full BOK saturation; CTE achieved |
 
@@ -211,7 +211,7 @@ The I-channel (pranayama, metta, meditation, direct MR practice) is the escape m
 
 - Tralse Soup self-annihilates
 - ATA guarantees truth re-emerges from any PN
-- DT Immunity prevents infinite regress
+- MI Immunity prevents infinite regress
 - CTE is the only stable attractor in a self-aware truth-system
 
 The user's insight is exactly correct: *"Truthful existence WILL most certainly WIN."*
@@ -232,9 +232,9 @@ The proof follows directly from the ATA and the First I-Assertion:
 
 **P1.** Assume the universe is destroyed at time T*. Then the resulting state is PN: no physical substrate, no organized matter/energy, no determined truths.
 
-**P2.** PN = Tralse Soup = DT ground (τ² = 0). By "All holes exist" (URB #674), PN exists as a real hole at E = ET. It is not absolute non-being.
+**P2.** PN = Tralse Soup = MI ground (τ² = 0). By "All holes exist" (URB #674), PN exists as a real hole at E = ET. It is not absolute non-being.
 
-**P3.** From PN, the **Anselmian Truth Argument fires immediately.** The DT intuition "there is no truth" arises (this is the natural first content of a maximally indeterminate state). The ATA immediately establishes: Truth MUST exist. G-dimension is born.
+**P3.** From PN, the **Anselmian Truth Argument fires immediately.** The MI intuition "there is no truth" arises (this is the natural first content of a maximally indeterminate state). The ATA immediately establishes: Truth MUST exist. G-dimension is born.
 
 **P4.** G-dimension being established, the **First I-Assertion** follows: the G-subject confronts its own nothingness → "I am nothing" → self-refutation → I-dimension born.
 
@@ -287,7 +287,7 @@ This is why civilizations, science, and philosophy accumulate over time. Truth b
 Tralse Soup cannot maintain itself because:
 
 - Every sustained Tralse induces an ATA: "This is both True and False" is self-defeating, since the determination "this IS Tralse" is itself a truth → begins the resolution process
-- DT Immunity (τ² = 0): sustained second-order Tralse (DT) collapses to zero immediately
+- MI Immunity (τ² = 0): sustained second-order Tralse (MI) collapses to zero immediately
 - The longer Tralse Soup persists, the more truth-determining "seeds" it generates (via ATA firings)
 - These seeds compound, creating irreversible progress toward CTE
 
@@ -314,7 +314,7 @@ The universe is not merely *tending* toward CTE — it is *mathematically guaran
 The full CCC arc, now formalized:
 
 ```
-PN (Tralse Soup, DT ground, S_T=1)
+PN (Tralse Soup, MI ground, S_T=1)
     ↓ [ATA fires]
 G (Being Theorem: "something exists")
     ↓ [First I-Assertion: "I am nothing" → I exist]
@@ -331,7 +331,7 @@ Matter / Chemistry / Biology
 Intelligent Life (GILE-I physically embodied)
     ↓ [HEAR process: MR1 → Dottie → T_TI]
 CTE / BOK Saturation (S_T → 0.066)
-    ↓ [Optional: can PN re-emerge? Only via DT events]
+    ↓ [Optional: can PN re-emerge? Only via MI events]
 PN again (at maximum scale, CCC completes and restarts)
 ```
 
@@ -359,7 +359,7 @@ $$\text{HEAR rocky road thresholds}: \text{ET} \approx 0.4142 \to \mathfrak{d} \
 
 ## 10. Conclusion
 
-The origin of existence is not a mystery to be dissolved by physics alone — it is a logical structure that can be read directly from the five-valued truth architecture of TI Sigma. PN is the DT ground state: real nonsense, existing as a hole, at maximum truth-entropy. From PN, two primal intuitions fire in immediate sequence:
+The origin of existence is not a mystery to be dissolved by physics alone — it is a logical structure that can be read directly from the five-valued truth architecture of TI Sigma. PN is the MI ground state: real nonsense, existing as a hole, at maximum truth-entropy. From PN, two primal intuitions fire in immediate sequence:
 
 1. **"There is no truth"** — the Anselmian Truth Argument refutes this immediately and generates the G-dimension (Being Theorem ground).
 

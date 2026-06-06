@@ -324,12 +324,12 @@ Where α ≈ 2 (empirically observed)
 **Sacred interval (-0.5, 0.5) = High GILE zone**
 - Primes are GILE-resonant structures
 - Their distribution reflects cosmic order (CCC)
-- Deviations from critical line = DT noise interference
+- Deviations from critical line = MI noise interference
 
 **If 80% of zeros in sacred interval:**
 - 80% of prime behavior is "ordered" (GILE)
-- 20% has "noise" (DT layer)
-- **Power law emerges from GILE-DT balance!**
+- 20% has "noise" (MI layer)
+- **Power law emerges from GILE-MI balance!**
 
 ---
 
@@ -678,7 +678,7 @@ For small β > 0, this gives fatter tails
 
 **This suggests:**
 - Primary distribution: Gaussian (GILE resonance)
-- Secondary correction: Power law (DT noise)
+- Secondary correction: Power law (MI noise)
 - **Both effects combined = 80/20 rule!**
 
 ---
@@ -751,7 +751,7 @@ Prediction: η ≈ 0.80
 **TI Approach:**
 - Maps to GILE resonance theory
 - Sacred interval corresponds to 80/20 concentration
-- Power law distribution from GILE-DT balance
+- Power law distribution from GILE-MI balance
 
 ### Path to Conventional Proof
 

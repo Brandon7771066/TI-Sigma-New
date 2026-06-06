@@ -9,7 +9,7 @@
 **Cross-refs:**
   - `papers/AUTHORITY_AXIS_AA_2026-05-07.md` (5th axis: pragmatic ↔ epistemic — directly applicable)
   - `papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` (#69 — over-skepticism = discipline failure equal to uncritical acceptance; the same symmetry argument)
-  - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (T / F / I / DT base-4 — F is one of four, not a privileged update target)
+  - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (T / F / I / MI base-4 — F is one of four, not a privileged update target)
   - `papers/PASS_15_MBE_GBRH_HYPERCOMPUTING_LCC_OURA_ZENODO_2026-05-09.md` (MBE — heavy-tailed individual base rates make population-marginal nulls inadmissible; same anti-Popper conclusion via different route)
 
 ---
@@ -89,7 +89,7 @@ TIU(H, e) := log( P(H | e) / P(H) )  =  log( P(e | H) / P(e) )
 
 | Axis | Verification side | Falsification side | Symmetry status |
 |---|---|---|---|
-| **MR Truth Labels** (T, F, I, DT + MTs) | T / DefT-positive | F / DefT-negative | base-4 already symmetric — F is one of four, not the privileged update target |
+| **MR Truth Labels** (T, F, I, MI + MTs) | T / DefT-positive | F / DefT-negative | base-4 already symmetric — F is one of four, not the privileged update target |
 | **PD-real** (degree of permissibility) | move toward σ = 1 | move toward σ = 0 | continuous-symmetric on (-3, 2) |
 | **PD-imaginary** (DefT modality axis) | converging modal evaluation | diverging modal evaluation | bidirectional |
 | **τ / δ separability** | δ-channel positive update | δ-channel negative update | symmetric |

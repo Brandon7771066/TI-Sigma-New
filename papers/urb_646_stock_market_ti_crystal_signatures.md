@@ -150,7 +150,7 @@ The GILE-LCC Graph places each stock on two axes:
 | FQH | ≥ ET (0.414) | < C | Watch — quality improving, not priced |
 | Mott | < ET | any | Avoid/short |
 
-**DT Gate:** When HEM-D2 > 0.65 (contradiction ratio: earnings miss + macro headwind simultaneously), override all signals → cash/hedge.
+**MI Gate:** When HEM-D2 > 0.65 (contradiction ratio: earnings miss + macro headwind simultaneously), override all signals → cash/hedge.
 
 ### 3.2 Crystal Level: Market Phase Classifier
 
@@ -172,7 +172,7 @@ The `market_crystal_phase()` function classifies the aggregate market into a Cry
 | Supersolid (lower) | Normal bull | 20–30 | 0.65–0.90 | Hold |
 | FQH | Early recovery | 25–40 | 0.85–1.10 | Selective buys |
 | Mott | Bear market | >40 | >1.0 | Wait/accumulate |
-| Fragmented (DT) | Flash crash | >50 | >1.2 | Hedge/cash |
+| Fragmented (MI) | Flash crash | >50 | >1.2 | Hedge/cash |
 
 **Current state (April 2026 — Liberation Day + tariffs):** Supersolid (lower)
 - VIX ≈ 30, SP500 5% below 200MA, sector corr 0.68, P/C ≈ 0.95
@@ -216,7 +216,7 @@ where 13.43 is the "Ring-3 VIX anchor" (normal market volatility in Ring-3):
 | 5 | φ = 1.618 | 21.7 | Elevated, watch closely |
 | 6 | e = 2.718 | 36.5 | Recession signal |
 | 7 | π = 3.142 | 42.2 | Crash territory |
-| > 7 | n/a | > 50 | DT/Fragmented phase |
+| > 7 | n/a | > 50 | MI/Fragmented phase |
 
 **Key result:** VIX long-run mean = 19.6 falls between Ring-3×√2 = 19.0 and Ring-5 = 21.7, consistent with the market spending most of its time near Ring-4 (the dissonance ring). The market lives in Ring-4 on average because it continuously oscillates between Ring-3 (order) and Ring-5 (growth), with √2 as the geometric mean.
 
@@ -244,7 +244,7 @@ The existing `gsa_tsc_signal.py` TSCMarketEngine already implements the Crystal 
 
 - `crystal_pd > 1.40 → hold` corresponds to Supersolid zone (between Ring2-T and Ring4-√2)
 - `signal_score > 0.65 → strong_buy` corresponds to 1/φ = 0.618 (one ring above the FQH floor)
-- `HEM-D2 > 0.65 → DT gate` = same threshold as strong_buy, confirming that conviction and risk are dual faces of the same crystal boundary
+- `HEM-D2 > 0.65 → MI gate` = same threshold as strong_buy, confirming that conviction and risk are dual faces of the same crystal boundary
 - Power-of-8 portfolio: 8 stocks gives 1-(1-C)^8 = 98.99% ≈ 99% BEC saturation — proven by Ring-1 self-application
 
 ---

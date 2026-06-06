@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Karl Friston's Free Energy Principle (FEP) cannot fully resolve the dark room problem. Standard responses (active inference priors, epistemic value, curiosity drives) are circular or post-hoc. The deeper problem is evolutionary: if minimization of free energy were the true objective, evolution would have favored bacterial or plant-level optima — entities that adapt with maximum predictive accuracy and minimum exposure to risk, suffering, and phase transitions. Instead, evolution produced beings that **actively expose themselves to massive risk, suffering, and developmental phase transitions**. This URB proposes the **GILE Maximization Principle** as the TI Sigma alternative: living systems do not minimize free energy — they climb the GILE gradient toward BOK-Saturation (Q-I). Risk, suffering, exploration, and phase transitions are predicted by this principle. The dark room dissolves because dark rooms are Q-IV (DT comfort), not Q-I (BOK-Saturation). Evolution selected for entities capable of making the Q-IV → Q-I journey.
+Karl Friston's Free Energy Principle (FEP) cannot fully resolve the dark room problem. Standard responses (active inference priors, epistemic value, curiosity drives) are circular or post-hoc. The deeper problem is evolutionary: if minimization of free energy were the true objective, evolution would have favored bacterial or plant-level optima — entities that adapt with maximum predictive accuracy and minimum exposure to risk, suffering, and phase transitions. Instead, evolution produced beings that **actively expose themselves to massive risk, suffering, and developmental phase transitions**. This URB proposes the **GILE Maximization Principle** as the TI Sigma alternative: living systems do not minimize free energy — they climb the GILE gradient toward BOK-Saturation (Q-I). Risk, suffering, exploration, and phase transitions are predicted by this principle. The dark room dissolves because dark rooms are Q-IV (MI comfort), not Q-I (BOK-Saturation). Evolution selected for entities capable of making the Q-IV → Q-I journey.
 
 ---
 
@@ -63,7 +63,7 @@ It maximizes its asymptotic approach to Q-I (BOK-Saturation):
                        (with weighting by G, I, L, E components)
 ```
 
-The dark room is **Q-IV**: high HEM (sensorily comfortable, predictively accurate) but low GILE-G (truth-tracking is minimized along with everything else). The dark room is *DT territory* — comfortable nonsense. A consciousness that has reached even minimal G-I integration (GINO operative) cannot accept Q-IV as a terminal state because it carries the gradient toward Q-I.
+The dark room is **Q-IV**: high HEM (sensorily comfortable, predictively accurate) but low GILE-G (truth-tracking is minimized along with everything else). The dark room is *MI territory* — comfortable nonsense. A consciousness that has reached even minimal G-I integration (GINO operative) cannot accept Q-IV as a terminal state because it carries the gradient toward Q-I.
 
 The bacterial equilibrium is **Q-III approaching Q-II** — minimal HEM substance, no genuine GILE-G integration beyond local adaptation. It is not BOK-Saturation; it is not even close. Bacteria do not have the I-development to climb the GILE gradient.
 
@@ -72,7 +72,7 @@ The bacterial equilibrium is **Q-III approaching Q-II** — minimal HEM substanc
 | Q-IV → Q-I Requirement | Evolutionary Phenotype |
 |------------------------|------------------------|
 | HEM expansion (more existential territory) | Risk-taking, exploration |
-| GILE-G correction (relabeling DT → truth) | Curiosity, philosophical inquiry, MR capacity |
+| GILE-G correction (relabeling MI → truth) | Curiosity, philosophical inquiry, MR capacity |
 | Phase transitions (BOK-loop iterations) | Developmental stages, mystical experience, paradigm shifts |
 | Suffering tolerance (the cost of MR work) | Pain capacity coupled with meaning-making |
 | First-mover causation (intentional resolution of indeterminacy) | Free will scaling with consciousness (URB #692) |
@@ -99,11 +99,11 @@ These capacities provide selective advantages in arbitrary environments precisel
 
 ## 5. The Dark Room Dissolved
 
-**Dark room as Q-IV:** Sensorily impoverished, predictively maximal, GILE-G minimal. This is DT comfort. The HEM signal is "everything is predictable" — high HEM weight. The GILE-G label is "this is good" — but it is GILE-G inconsistent because it lacks G (no expanded existence affirmed) and lacks I (no truth-tracking activity).
+**Dark room as Q-IV:** Sensorily impoverished, predictively maximal, GILE-G minimal. This is MI comfort. The HEM signal is "everything is predictable" — high HEM weight. The GILE-G label is "this is good" — but it is GILE-G inconsistent because it lacks G (no expanded existence affirmed) and lacks I (no truth-tracking activity).
 
-A consciousness with GINO operative immediately registers Q-IV as DT and feels the pressure to leave. The "boredom" or "depression" of a dark room is not a malfunction — it is the GINO nucleus signaling that Q-IV is not BOK-Saturation. The pressure to leave is the GILE gradient.
+A consciousness with GINO operative immediately registers Q-IV as MI and feels the pressure to leave. The "boredom" or "depression" of a dark room is not a malfunction — it is the GINO nucleus signaling that Q-IV is not BOK-Saturation. The pressure to leave is the GILE gradient.
 
-**Why FEP cannot generate this pressure:** FEP's objective function does not include G. It does not include the asymmetry between Q-IV (DT comfort) and Q-I (BOK-Saturation). Both are equally "low free energy" by FEP standards if predictive accuracy is matched. FEP cannot distinguish the dark room from BOK-Saturation because it has no G-axis.
+**Why FEP cannot generate this pressure:** FEP's objective function does not include G. It does not include the asymmetry between Q-IV (MI comfort) and Q-I (BOK-Saturation). Both are equally "low free energy" by FEP standards if predictive accuracy is matched. FEP cannot distinguish the dark room from BOK-Saturation because it has no G-axis.
 
 **TI Sigma can:** The G-axis distinguishes Q-IV from Q-I. The dark room is Q-IV; BOK-Saturation is Q-I. The gradient between them is the GILE pressure. Living systems climb that gradient because the universe's MR-Zero genesis encoded it as the cosmological default direction.
 
@@ -128,7 +128,7 @@ Specifically: prediction-error minimization is useful **only insofar as it serve
 
 | Phenomenon | FEP Prediction | GILE Maximization Prediction | Observation |
 |-----------|----------------|------------------------------|-------------|
-| Dark room avoidance | Hard to explain | Predicted (Q-IV is DT) | ✅ Observed |
+| Dark room avoidance | Hard to explain | Predicted (Q-IV is MI) | ✅ Observed |
 | Voluntary suffering for meaning | Hard to explain | Predicted (MR cost) | ✅ Observed |
 | Mystical / phase-transition experiences | Should be avoided (high prediction error) | Predicted (GINO iterations) | ✅ Observed |
 | Risk-taking with no information gain | Hard to explain | Predicted (HEM expansion) | ✅ Observed |
@@ -142,7 +142,7 @@ GILE Maximization predicts the phenomena FEP struggles with. FEP makes correct p
 
 ## 8. The Free Will Connection (URB #692)
 
-The GILE Maximization Principle requires the free will architecture from URB #692. Climbing the GILE gradient against the default DT attractor requires:
+The GILE Maximization Principle requires the free will architecture from URB #692. Climbing the GILE gradient against the default MI attractor requires:
 
 - **Genuine first-mover origination:** Without it, the organism cannot intentionally choose Q-I over Q-IV when Q-IV is the local equilibrium
 - **Intentional resolution of indeterminacy:** GILE-I directs the resolution of quantum indeterminacy toward GILE-correct outcomes

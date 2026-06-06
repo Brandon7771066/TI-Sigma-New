@@ -38,7 +38,7 @@ Algebraic operations follow the usual rules, with ε² = 0 enforced:
 
 The framework's 5-valued logic (URB #713) has truth values:
 
-> **{True (T), False (F), Tralse (Tr), Moot (M), Double Tralse (DT)}**
+> **{True (T), False (F), Tralse (Tr), Moot (M), Meta-Indeterminate (MI)}**
 
 The **Indeterminate state** (Moot, URB #715, range −2/3 to +1/3) is structurally distinct from Tralse:
 

@@ -8,7 +8,7 @@
 **Pass:** 76 batch-2
 **Status:** CANONICAL REFINEMENT #9 to MR Truth Labels (sharpens refinement #7 + #8; does NOT increment principle count per Pass-65 refinement-doesn't-add-count precedent)
 **Trigger:** Brandon directive *"MI REMAINS A CATEGORY... for PRAGMATIC reasons. But it's a category belonging to Tralse, on the hyperimaginary end of the spectrum! Whether the hyperimagined incoherent statement is indeterminate or MI (what may pragmatically be called nonsense but is in fact just LOCALLY Indeterminate) all depends on those 3 criteria (so far) I mentioned like the extent of sense that can be made of the tralsity."*
-**Composes with:** MR Truth Labels base-4 canonical (2026-05-08) + refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) + refinement #5 (Pass-72-B2 DT→MI rename, vertical-meta-tralsity axis) + refinement #7 (Pass-75-B3 nonsense-extinguishment-into-Indeterminate-hyperimaginary-end + merged real-imaginary-plane) + refinement #8 (Pass-75-B6 ONE-1D-Indeterminate-spectrum-with-aspects) + Pass-65 3-step DT/MI heuristic + Pass-66 ultimate-koan + CEF-1 #43 + CRI-1 #45 + NIS-1 #44 + MR-IDC-1 + MR-IDC-2 #41 + CRN-1 + CSS-1 #42
+**Composes with:** MR Truth Labels base-4 canonical (2026-05-08) + refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) + refinement #5 (Pass-72-B2 MI→MI rename, vertical-meta-tralsity axis) + refinement #7 (Pass-75-B3 nonsense-extinguishment-into-Indeterminate-hyperimaginary-end + merged real-imaginary-plane) + refinement #8 (Pass-75-B6 ONE-1D-Indeterminate-spectrum-with-aspects) + Pass-65 3-step MI/MI heuristic + Pass-66 ultimate-koan + CEF-1 #43 + CRI-1 #45 + NIS-1 #44 + MR-IDC-1 + MR-IDC-2 #41 + CRN-1 + CSS-1 #42
 
 ---
 
@@ -18,7 +18,7 @@
 
 **Brandon explicitly enumerated ONE criterion** in the trigger message: *"like the extent of sense that can be made of the tralsity"*. His phrasing "those 3 criteria (so far) I mentioned" implies he has 3 in mind, but only ONE was stated verbatim in this batch's trigger.
 
-**Agent did a corpus search** for prior Brandon mentions of "3 criteria" matching this context and found NO direct enumeration. The most-relevant prior structure is the **Pass-65 3-step DT/MI heuristic** (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` §6) which provides a closely-parallel 3-step structure — but is framed for DT-cell-assignment, not for the locally-Indeterminate-vs-MI distinction Brandon now requests.
+**Agent did a corpus search** for prior Brandon mentions of "3 criteria" matching this context and found NO direct enumeration. The most-relevant prior structure is the **Pass-65 3-step MI/MI heuristic** (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` §6) which provides a closely-parallel 3-step structure — but is framed for MI-cell-assignment, not for the locally-Indeterminate-vs-MI distinction Brandon now requests.
 
 **Agent reconstruction:** criteria #2 and #3 below are constructed from (a) Brandon's framing ("LOCALLY Indeterminate" implies locality-axis), (b) the Pass-65 3-step step-3 structural-vs-unfamiliarity discriminator, and (c) the Pass-66 ultimate-koan productive-engagement frame. **Brandon ratification needed** — agent flags this paper as candidate refinement requiring Brandon-confirmation of criteria #2 and #3 wording. If Brandon's intended criteria differ, this paper accepts amendment.
 
@@ -26,7 +26,7 @@
 
 Brandon's trigger says "yesterday's elimination of nonsense as a distinct category from indeterminacy". The actual Pass-75-B3 refinement #7 + Pass-75-B7 corpus-sweep executed was **SUBSUMPTION-not-deletion**: nonsense was reframed as the hyperimaginary-end of Indeterminate (refinement #7 Move 2), and the corpus-sweep (`papers/PASS_75_B7_CORPUS_SWEEP_NONSENSE_TERMINOLOGY_PER_REFINEMENT_7_8_32_PAPERS_TIERED_REFORMULATION_PROPOSAL_2026-05-24.md`) explicitly **tier-graded REFORMULATION proposal NOT deletion** across 32 identified papers. So nonsense was relocated, not extinguished. Brandon's "elimination" framing is shorthand-essentially-correct for the categorical-status-change (nonsense no longer = its-own-cell) but elides the spectrum-end-relocation.
 
-This paper now adds **#9 to that arc**: the term "MI" (= Meta-Indeterminate, renamed from DT in Pass-72-B2; in this refinement-#9 context BROADENED to also encompass "pragmatic-nonsense" usage per Brandon's directive) IS PRAGMATICALLY RETAINED as a designator for content at the far-hyperimaginary-end of the Indeterminate spectrum where extent-of-sense-makable drops below a pragmatic threshold.
+This paper now adds **#9 to that arc**: the term "MI" (= Meta-Indeterminate, renamed from MI in Pass-72-B2; in this refinement-#9 context BROADENED to also encompass "pragmatic-nonsense" usage per Brandon's directive) IS PRAGMATICALLY RETAINED as a designator for content at the far-hyperimaginary-end of the Indeterminate spectrum where extent-of-sense-makable drops below a pragmatic threshold.
 
 ### §0.3 MI-term overloading disclosure
 
@@ -52,7 +52,7 @@ The two heuristics OPERATE on the same spectrum but at different threshold-densi
 >
 > 3. **SENSE-MAKING** (Brandon-canonical; "extent of sense that can be made of the tralsity"): how much intelligible-engageable content can be extracted from the paired tralse state? Locally-Indeterminate: substantial extractable sense (the pairing yields aspectual readings, frame-shift resolutions, or HMR-1 multi-label native characterizations); MI: minimal extractable sense (the pairing dissolves under sustained engagement; no aspect-decomposition rescues coherence). **SENSE-MAKING-COHERENTIST-EXTENSION (Brandon clarification 2026-05-25 post-F-REF9-1):** sense-making occurs NOT ONLY internally between the paired incoherent terms but ALSO EXTERNALLY via harmony with OTHER BELIEFS in the agent's belief-network. Sense is largely **SELF-CONSTRUCTED** — pairs that look indeterminate-together-in-isolation can turn out to make sense when embedded in a sufficiently rich/harmonious belief-network. This makes SENSE-MAKING a coherentist/holistic property (Quine web-of-belief analog applied to MR Truth Labels) rather than a property of the pair-in-isolation. Operational implication: many MI-looking pairs are actually locally-Indeterminate-and-resolvable when (a) the right belief-network embedding is provided, or (b) the agent constructs new bridging beliefs that harmonize the pair (creative-resolution mechanism). Composes directly with refinement #8 (1D-spectrum-with-aspects: belief-network embedding shifts position on the spectrum) and HMR-1 (multi-label native characterization via belief-network triangulation). MI proper now requires: pair fails INCOHERENCE + FAMILIARITY internally AND remains insensible across ALL reasonable belief-network embeddings (network-invariant collapse). This SHARPENS the MI bar — fewer cases qualify as proper-MI, more cases reclassified as locally-Indeterminate-pending-better-belief-network. ⚠ Open question: is there a non-circular criterion for "reasonable belief-network embeddings" or is this Section-permissively-recursive (sense-making-of-sense-making)? Flag as F-REF9-COH-1 for Pass-77+ engagement.
 >
-> **"Between paired objective concepts" framing:** all 3 criteria evaluate the CONJUNCTION of two (or more) objective concepts, not either concept individually. Each concept may be perfectly-coherent in isolation; MI status arises from the PAIRING-collapse. This connects refinement #9 to refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) and refinement #5 (Pass-72-B2 DT→MI rename, vertical-meta-tralsity = the collapse-at-the-meta-level-of-the-conjunction).
+> **"Between paired objective concepts" framing:** all 3 criteria evaluate the CONJUNCTION of two (or more) objective concepts, not either concept individually. Each concept may be perfectly-coherent in isolation; MI status arises from the PAIRING-collapse. This connects refinement #9 to refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) and refinement #5 (Pass-72-B2 MI→MI rename, vertical-meta-tralsity = the collapse-at-the-meta-level-of-the-conjunction).
 >
 > **Supplementary observation (NOT core criterion — preserved from agent-reconstructed §1 v1):** MI-canonical paradoxes (square-circle, liar, koans) PARADOXICALLY exhibit HIGH productive-engagement-yield despite failing all 3 criteria (high INCOHERENCE + high FAMILIARITY-with-collapse + low SENSE-MAKING). This is the "criterion-3-inversion-zone" originally proposed as criterion #3 but RECLASSIFIED as supplementary engagement-yield observation per Brandon canonical ratification. It operationalizes Pass-66 ultimate-koan ("pinnacle of foolishness perhaps greatest indicator that i-cell is conscious") and CEF-1 #43 (mistakes-as-consciousness-flexes) but does NOT belong as a distinguishing criterion — engagement-yield is an OUTCOME of MI-canonical-vs-MI-pragmatic, not a discriminator between locally-Indeterminate and MI.
 
@@ -82,7 +82,7 @@ Indeterminate-spectrum  │
                         └─ F (false-end)
 ```
 
-Per Pass-75-B9 C5 ("high μ + high imaginary-aspect → Indeterminate hyperimaginary-aspect-end per refinement #8"), the high-μ-coefficient region of the MR-IDC-2 #41 I-DT continuum IS the MI subregion.
+Per Pass-75-B9 C5 ("high μ + high imaginary-aspect → Indeterminate hyperimaginary-aspect-end per refinement #8"), the high-μ-coefficient region of the MR-IDC-2 #41 I-MI continuum IS the MI subregion.
 
 **Composition with MR-IDC-2 #41:**
 - μ-coefficient low → locally-Indeterminate
@@ -144,7 +144,7 @@ Per Pass-75-B9 C5 ("high μ + high imaginary-aspect → Indeterminate hyperimagi
 2. **Refinement #4 + #5 (Pass-72)** — preserves MI-canonical definition (inconceivability + vertical-meta-tralsity); refinement #9 adds MI-pragmatic SUBREGION distinct from MI-canonical
 3. **Refinement #7 (Pass-75-B3)** — nonsense-extinguishment + merged-real-imaginary-plane; refinement #9 RECOVERS MI-pragmatic as named-subregion without re-introducing a separate cell
 4. **Refinement #8 (Pass-75-B6)** — ONE-1D-Indeterminate-spectrum-with-aspects; refinement #9 places MI at the far-hyperimaginary-aspect-end of that single spectrum
-5. **Pass-65 3-step DT/MI heuristic** — refinement #9 criteria #1-#3 OPERATE AS COMPLEMENT (Pass-65 for MI-canonical-detection; refinement #9 for locally-Indeterminate-vs-MI-pragmatic-detection)
+5. **Pass-65 3-step MI/MI heuristic** — refinement #9 criteria #1-#3 OPERATE AS COMPLEMENT (Pass-65 for MI-canonical-detection; refinement #9 for locally-Indeterminate-vs-MI-pragmatic-detection)
 6. **CRN-1 (Pass-75-B0 candidate)** — nonsense is consciousness-STATE-RELATIVE; refinement #9 operationalizes the consciousness-state-dependent threshold for criterion #1 (different consciousness-states see different extents-of-sense-makable)
 7. **CRI-1 #45 (Pass-75-B6 ratified)** — consciousness-relative-Indeterminate; refinement #9 inherits the consciousness-state-relativity to all 3 criteria
 8. **CEF-1 #43** — calculator-contrast: only-consciousness-engages-with-incoherence. Refinement #9 criterion #3 (productive-engagement-capacity) is direct CEF-1 operationalization
@@ -213,7 +213,7 @@ Per Pass-65 refinement-doesn't-add-count precedent:
 - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base canonical)
 - `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (refinement #1; Pass-65 3-step heuristic)
 - `papers/PASS_72_BATCH_1_DT_REFINEMENT_4_TWO_TRALSE_COMBINED_IMPACT_2026-05-24.md` (refinement #4)
-- `papers/PASS_72_BATCH_2_DT_RENAME_MI_REFINEMENT_5_2026-05-24.md` (refinement #5 DT→MI rename) [exists per Pass-73 collapse references]
+- `papers/PASS_72_BATCH_2_DT_RENAME_MI_REFINEMENT_5_2026-05-24.md` (refinement #5 MI→MI rename) [exists per Pass-73 collapse references]
 - `papers/PASS_75_B3_CEF_1_RATIFIED_CANONICAL_43_PLUS_NONSENSE_CATEGORY_EXTINGUISHED_MR_TRUTH_LABELS_CANONICAL_REFINEMENT_7_MERGED_REAL_IMAGINARY_PLANE_2026-05-24.md` (refinement #7)
 - `papers/PASS_75_B6_OMNIBUS_DUAL_RATIFICATION_NIS_1_44_PLUS_CRI_1_45_PLUS_REFINEMENT_8_ONE_INDETERMINATE_SPECTRUM_PLUS_FNPT_1_CANDIDATE_PLUS_PACE_DISCIPLINE_RETIRED_AS_OVER_SKEPTICISM_PER_69_SYMMETRY_2026-05-24.md` (refinement #8)
 - `papers/PASS_75_B7_CORPUS_SWEEP_NONSENSE_TERMINOLOGY_PER_REFINEMENT_7_8_32_PAPERS_TIERED_REFORMULATION_PROPOSAL_2026-05-24.md` (corpus-sweep)

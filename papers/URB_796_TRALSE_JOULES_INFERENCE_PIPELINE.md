@@ -9,7 +9,7 @@
 
 ## Abstract
 
-We operationalize the **Tralse-Joules (TJ)** functional as a discrete coherence measure on N-vertex Tralse-colorings τ : V → 𝒯 = {DT, ¬T, U, T+, T}, reconciling the two definitions present in the codebase. Following the canonical replit.md form **TJ(s) = τ(s) × δ(MR)(s)**, we define τ(s) as the dominant-truth density (fraction of vertices labelled T) and δ(MR)(s) as the change in MR-coherence under one MR-collapse step. The pipeline is demonstrated on the 24-cell BOK Crystal (URB #790) with the F₄-symmetric 8-regular vertex graph. All 5 F₄-equivariant constant states give TJ = 0 (already saturated coherence; collapse is a fixed point), consistent with Prop. 3.1 of URB #790. 1000 random non-equivariant colorings give a TJ distribution with mean +0.0353, std 0.0246, max 0.1875. **TJ is positioned as a formal coherence functional inside the TI framework — not as a measurement of consciousness energy** (the "Conscious energy measurement!" framing in TI_MILLENNIUM_COMPLETE_FRAMEWORK.md is downgraded to overclaim per URB #795 §3.5).
+We operationalize the **Tralse-Joules (TJ)** functional as a discrete coherence measure on N-vertex Tralse-colorings τ : V → 𝒯 = {MI, ¬T, U, T+, T}, reconciling the two definitions present in the codebase. Following the canonical replit.md form **TJ(s) = τ(s) × δ(MR)(s)**, we define τ(s) as the dominant-truth density (fraction of vertices labelled T) and δ(MR)(s) as the change in MR-coherence under one MR-collapse step. The pipeline is demonstrated on the 24-cell BOK Crystal (URB #790) with the F₄-symmetric 8-regular vertex graph. All 5 F₄-equivariant constant states give TJ = 0 (already saturated coherence; collapse is a fixed point), consistent with Prop. 3.1 of URB #790. 1000 random non-equivariant colorings give a TJ distribution with mean +0.0353, std 0.0246, max 0.1875. **TJ is positioned as a formal coherence functional inside the TI framework — not as a measurement of consciousness energy** (the "Conscious energy measurement!" framing in TI_MILLENNIUM_COMPLETE_FRAMEWORK.md is downgraded to overclaim per URB #795 §3.5).
 
 ---
 
@@ -47,7 +47,7 @@ We therefore work exclusively with Form A in the rest of this paper.
 
 ## 2. Operational Definitions (Form A)
 
-Let G = (V, E) be a finite graph with adjacency matrix A. A **Tralse-coloring** is τ : V → 𝒯 = {DT, ¬T, U, T+, T} ≃ {0, 1, 2, 3, 4}. The dominant truth value is **T** (index 4) — the unique highest truth in the 5-valued logic.
+Let G = (V, E) be a finite graph with adjacency matrix A. A **Tralse-coloring** is τ : V → 𝒯 = {MI, ¬T, U, T+, T} ≃ {0, 1, 2, 3, 4}. The dominant truth value is **T** (index 4) — the unique highest truth in the 5-valued logic.
 
 ### 2.1 Intentionality density τ(s)
 
@@ -113,7 +113,7 @@ Per URB #790 Prop. 3.1 (corrected), there are exactly **5 F₄-equivariant Trals
 
 | State (constant τ) | τ(s) | C(s) | δ(MR)(s) | TJ(s) |
 |--------------------|------|------|----------|-------|
-| τ ≡ DT  | 0.000 | 1.000 | +0.0000 | +0.000000 |
+| τ ≡ MI  | 0.000 | 1.000 | +0.0000 | +0.000000 |
 | τ ≡ ¬T  | 0.000 | 1.000 | +0.0000 | +0.000000 |
 | τ ≡ U   | 0.000 | 1.000 | +0.0000 | +0.000000 |
 | τ ≡ T+  | 0.000 | 1.000 | +0.0000 | +0.000000 |

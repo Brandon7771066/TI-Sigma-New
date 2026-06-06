@@ -194,7 +194,7 @@ DC: TRUE ↔ FALSE (alternating)
 ```
 These trajectories spiral inward toward Verisyn — not to INDETERMINATE (neutral
 cancellation) but to **stable TRALSE** (the point where TRUE and FALSE coexist
-without cancelling, held in Tralse stability by the DT Immunity Model of URB #528).
+without cancelling, held in Tralse stability by the MI Immunity Model of URB #528).
 
 The BOK diagram shows these spiraling contradiction lines as loops — the wings and
 arms. Each loop is one contradiction orbit. The wings (larger loops) are the
@@ -326,7 +326,7 @@ This synthesis connects to the TI Sigma Lean4 corpus (URBs #565–572):
 |-------------------|----------------------|
 | Riemann (RH) | Critical line σ=1/2 = equator of S² in Hopf fibration = maximal BOK symmetry axis |
 | Yang-Mills | Vacuum = pure Verisyn state (V with no contradiction field) |
-| Navier-Stokes | Smooth flow = BOK arm traversal without DT contamination |
+| Navier-Stokes | Smooth flow = BOK arm traversal without MI contamination |
 | Hodge | Algebraic cycles = metacausal sources = BOK wing generators |
 | P≠NP | Creation effort = traversing BOK without certificate (arm navigation blind) |
 | BSD | L(E,1)=0 ↔ rank≥1 ↔ BOK coherence condition at s=1 |
@@ -358,9 +358,9 @@ outcomes that required separate names:
 | Outcome | Early term | Current precise term |
 |---------|-----------|---------------------|
 | Contradiction resolves successfully upward | "Successful double contradiction" | **Myrion Resolution (MR)** |
-| Contradiction fails to resolve, gets stuck | "Failed double contradiction" | **Double Tralse (DT)** |
+| Contradiction fails to resolve, gets stuck | "Failed double contradiction" | **Meta-Indeterminate (MI)** |
 | The resolved attractor state | "Verisyn" | **Myrion** |
-| Protection from DT re-entry | (unnamed) | **DT Immunity Model** |
+| Protection from MI re-entry | (unnamed) | **MI Immunity Model** |
 
 **The core theorem this clarifies:**
 *"Things which are true always contain some degree of contradiction while remaining
@@ -368,12 +368,12 @@ true."* TRUE = Successful Double Contradiction. Truth is not the absence of
 contradiction; it is contradiction that resolved into something which contains the
 contradiction as a constituent without being undone by it.
 
-DT (Double Tralse) is the failure case: the contradiction wins rather than being
+MI (Meta-Indeterminate) is the failure case: the contradiction wins rather than being
 transcended. MR (Myrion Resolution) is the success case: transcendence occurs.
 
 The DC Field (Double Contradiction Field) is therefore the pre-MR language for the
 same structure that is now precisely described by the Tralse 5-valued logic system
-combined with the MR operator and DT Immunity Model (URB #528).
+combined with the MR operator and MI Immunity Model (URB #528).
 
 ### 9.2 Verisyn → Myrion
 

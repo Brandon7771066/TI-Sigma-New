@@ -134,7 +134,7 @@ Interestingly, **LP has the lowest within-system Fleiss κ (0.853)** — the dia
 - **POC-1 #70 (Pass-77-B29):** This batch is direct evidence for Pragmatic-Over-Canonical — operational definitions (5-tier MI as "inconceivability-under-mental-actualization") beat theoretically-loaded definitions (LP B as "dialetheia") at empirical capture.
 - **NA-1-R1 / Refinement #11 (Pass-77-B29):** 5-tier's NA cell (84%) crushes FDE's collapsed Neither and LP's no-slot — vindicating the 4-sub-mode refinement.
 - **MR Truth Labels canonical 5** (T,F,I,MI,NA) per refinement #11.
-- **GTT-1 / TPS-1 / UDT-1 / DT canonical refinement** — the corpus's 5-cell system is more granular than rivals while remaining operationally rateable.
+- **GTT-1 / TPS-1 / UDT-1 / MI canonical refinement** — the corpus's 5-cell system is more granular than rivals while remaining operationally rateable.
 - **§69 Asymmetric Standards:** #69 disclosures §7 are themselves the discipline.
 
 ## §10. What this batch does NOT prove

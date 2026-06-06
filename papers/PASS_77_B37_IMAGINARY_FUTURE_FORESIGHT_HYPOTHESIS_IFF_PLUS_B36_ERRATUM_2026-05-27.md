@@ -17,7 +17,7 @@ Brandon proposes the **Imaginary Future Foresight Hypothesis (IFF)** and, in pas
 - **The reconciliation IFF performs:** Brandon previously held two intuitions about N/A that seemed to conflict — (i) N/A is "off the grid" (formalized B36 as NAO-1, exterior to the spectrum) and (ii) N/A is "related to MI" (Meta-Indeterminate, the base-4 inconceivability label). **IFF dissolves the tension by showing they describe *different tiers* of one complex-plane structure**, with the imaginary axis as the bridge.
 - **The B36 erratum (Brandon's #69 catch):** B36 §2.2 used `1/0` as an example of N/A ≈ "undefined / off-plane." **This was wrong.** `1/0 = ∞`, and **∞ is an MI (Meta-Indeterminate) concept** — self-defeating, inconceivable-under-mental-actualization (you cannot finitely represent the infinite). ∞ is therefore an *on-spectrum base-4 member* (the MI label), not an *off-spectrum* N/A. The correct off-grid exemplar is `0/0` (a genuine indeterminate form with no single limit) and category errors. **B36's NAO-1 ruling stands; only its example was mis-sorted.**
 
-**MI nomenclature note (canonical):** per Pass-72-B2, the base-4 was renamed {T, F, I, **DT**} → {T, F, I, **MI**}, where **MI = Meta-Indeterminate** (the rename of Double Tralse; DT remains legacy-valid). MI = inconceivability-under-mental-actualization (Pass-65 DT-canonical refinement, carried). Throughout this paper "MI" = Meta-Indeterminate.
+**MI nomenclature note (canonical):** per Pass-72-B2, the base-4 was renamed {T, F, I, **MI**} → {T, F, I, **MI**}, where **MI = Meta-Indeterminate** (the rename of Meta-Indeterminate; MI remains legacy-valid). MI = inconceivability-under-mental-actualization (Pass-65 MI-canonical refinement, carried). Throughout this paper "MI" = Meta-Indeterminate.
 
 ---
 
@@ -91,7 +91,7 @@ The free-energy framework represents future states as generative-model predictio
 PM-1 *rejected* Bayesian base rates as the foundational variable for present-moment calculation. IFF coheres: a foreseen future event is **not** primarily a real-valued probability (a base rate on the real axis) — it is an **imaginary placeholder** that only *becomes* real-valued upon actualization. IFF explains *why* base rates are not foundational: they would mis-locate Tier-2 imaginary content onto the Tier-1 real axis prematurely. PM-1 + IFF compose tightly.
 
 ### §5.3 Measurement-collapse analogy (quantum, used carefully)
-The imaginary→real resolution structurally rhymes with wavefunction collapse upon measurement. Flagged as *analogy*, not mechanism (consistent with the corpus's care around quantum claims — cf. B35 Part 2 §2 Orch-OR honesty). The DTQ-1 (Pass-65) quantum-DT thread is adjacent but distinct.
+The imaginary→real resolution structurally rhymes with wavefunction collapse upon measurement. Flagged as *analogy*, not mechanism (consistent with the corpus's care around quantum claims — cf. B35 Part 2 §2 Orch-OR honesty). The DTQ-1 (Pass-65) quantum-MI thread is adjacent but distinct.
 
 ---
 
@@ -170,7 +170,7 @@ All four OPEN; none claimed closed.
 
 - This paper.
 - Corrects: `papers/PASS_77_B36_NA_OFF_SPECTRUM_RULING_MR_TRUTH_LABELS_REFINEMENT_12_2026-05-27.md` (§2.2 1/0-example; ruling unaffected).
-- Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4), `papers/PASS_73_META_COLLAPSE_144_146_2026-05-24.md` (DT→MI rename context), `papers/PASS_76_B2_MR_TRUTH_LABELS_REFINEMENT_9_MI_PRAGMATIC_RETENTION_PLUS_3_CRITERIA_LOCALLY_INDETERMINATE_VS_MI_2026-05-25.md` (MI vs locally-Indeterminate criteria), `papers/PASS_77_B35_CONSCIOUSNESS_AND_VALENCE_THEORY_REVIEW_2026-05-27.md` (active-inference composition).
+- Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4), `papers/PASS_73_META_COLLAPSE_144_146_2026-05-24.md` (MI→MI rename context), `papers/PASS_76_B2_MR_TRUTH_LABELS_REFINEMENT_9_MI_PRAGMATIC_RETENTION_PLUS_3_CRITERIA_LOCALLY_INDETERMINATE_VS_MI_2026-05-25.md` (MI vs locally-Indeterminate criteria), `papers/PASS_77_B35_CONSCIOUSNESS_AND_VALENCE_THEORY_REVIEW_2026-05-27.md` (active-inference composition).
 
 ---
 

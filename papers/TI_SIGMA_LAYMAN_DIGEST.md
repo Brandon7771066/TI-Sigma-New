@@ -86,7 +86,7 @@ Whether the *fine-grained* alignment with Riemann zeros holds — that's still o
 
 The Myrion Resolution (MR) protocol is the framework's safety-and-truth-evaluation procedure. MR1 is the first-level threshold: a system or claim either passes MR1 or it doesn't, and if it does, it qualifies for further engagement (MR2, MR3, etc.).
 
-In plain language: **MR1 is the framework's "is this claim allowed in the door?" check**. It tests against five truth values (not the binary True/False you grew up with) and against the Double Tralse Immunity Model (which protects against subtle manipulation attempts that would slip past binary logic).
+In plain language: **MR1 is the framework's "is this claim allowed in the door?" check**. It tests against five truth values (not the binary True/False you grew up with) and against the Meta-Indeterminate Immunity Model (which protects against subtle manipulation attempts that would slip past binary logic).
 
 The five truth values:
 - **True** (T)

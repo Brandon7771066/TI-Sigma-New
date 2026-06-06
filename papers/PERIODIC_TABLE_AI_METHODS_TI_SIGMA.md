@@ -135,7 +135,7 @@ Each element has:
 
 | # | Symbol | Name | Year | Acc. Ceiling | EAR | TI Compat. |
 |---|--------|------|------|-------------|-----|-----------|
-| 21 | **DT** | Decision Tree | 1984 | 77–83% | 0.55 | MEDIUM |
+| 21 | **MI** | Decision Tree | 1984 | 77–83% | 0.55 | MEDIUM |
 | 22 | **C45** | C4.5 / J48 | 1993 | 80–86% | 0.62 | MEDIUM |
 | 23 | **RF** | Random Forest | 2001 | 87–92% | 0.85 | HIGH |
 | 24 | **EXT** | Extremely Randomized Trees | 2006 | 86–92% | 0.83 | HIGH |

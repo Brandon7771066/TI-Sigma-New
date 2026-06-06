@@ -21,7 +21,7 @@ These four are a **monotone ladder on the single GILE/truth axis**, each marking
 
 1. **0.85 — the existence floor.** Below this, correlation has not yet condensed into causal reality. (= truth², "existence is truth applied to itself.")
 2. **0.92 — the truth threshold.** The canonical "perfectly imperfect" / True-Tralseness point: high enough to be true, short of the 1.00 that would leave no room for growth (the 8% Tralse-Cherry slack).
-3. **0.93 — the stability cap (Radiant Threshold).** The UOP phase-transition: *above* it the quadratic penalty kicks in and sustained perfection becomes self-undermining. This is already canonical elsewhere — "GILE-only above 0.93 = MR2 Indeterminate" (UDT-1/UHP-1, §7.7.140); GTT-1 "too much truth is itself DT."
+3. **0.93 — the stability cap (Radiant Threshold).** The UOP phase-transition: *above* it the quadratic penalty kicks in and sustained perfection becomes self-undermining. This is already canonical elsewhere — "GILE-only above 0.93 = MR2 Indeterminate" (UDT-1/UHP-1, §7.7.140); GTT-1 "too much truth is itself MI."
 4. **0.91 — retired.** See §4.
 
 So **0.91 and 0.93 are not rival truth thresholds** — they are the lower historical footnote and the upper stability cap that *bracket* the canonical 0.92. "Twin peaks around 0.92" is the right mental picture, but only 0.92 is the **truth** threshold; 0.93 is the **stability** threshold; they answer different questions.
@@ -54,5 +54,5 @@ The neat table above hides three roundings. Brutal honesty requires stating them
 Principles **73** (unchanged — this is a reconciliation/precision ruling, not a new principle; it sharpens existing GILE/UOP/GTT-1/UDT-1 canon). MR Truth Labels refinements **13** (unchanged). Meta-collapses **37 → 38** (companion FDE/metaphysics collapse). Pass-77 papers **24 → 26** (this + the collapse paper). $0.
 
 ### Files / coherence
-- Sharpens: `papers/GILE_TRUTH_THRESHOLD_CHSH_DUAL_IDENTITY.md`, `papers/GILE_FORMAL_METRICS.md`, `papers/FOUR_CS_TRUTH_PRESENTATION.md`, B54 root-2 unification (cos(π/8) flag), replit.md §7.7.139-140 (UOP G*=0.93 / above-0.93 = MR2 Indeterminate), GTT-1 (too-much-truth = DT).
+- Sharpens: `papers/GILE_TRUTH_THRESHOLD_CHSH_DUAL_IDENTITY.md`, `papers/GILE_FORMAL_METRICS.md`, `papers/FOUR_CS_TRUTH_PRESENTATION.md`, B54 root-2 unification (cos(π/8) flag), replit.md §7.7.139-140 (UOP G*=0.93 / above-0.93 = MR2 Indeterminate), GTT-1 (too-much-truth = MI).
 - Honesty lineage: same "two-decimal agreement ≠ identity" standard applied to cos(π/8)≈0.92 in B54.

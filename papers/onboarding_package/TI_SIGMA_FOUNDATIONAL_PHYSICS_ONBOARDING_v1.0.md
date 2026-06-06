@@ -187,7 +187,7 @@ A reader who works through all three has the framework's complete electromagneti
 
 ### Misconception 3: "The framework just relabels existing physics with new vocabulary"
 
-**Response**: A relabeling would predict the same things conventional physics predicts. The framework predicts **five things conventional physics does not** (§6 list). At least two of these (BOK-DT coupling at 10⁻³, scalar GW mode at 10⁻⁴) are testable with existing or near-future technology, and any null result would directly refute the framework's specific BOK-reading predictions while preserving conventional physics predictions intact.
+**Response**: A relabeling would predict the same things conventional physics predicts. The framework predicts **five things conventional physics does not** (§6 list). At least two of these (BOK-MI coupling at 10⁻³, scalar GW mode at 10⁻⁴) are testable with existing or near-future technology, and any null result would directly refute the framework's specific BOK-reading predictions while preserving conventional physics predictions intact.
 
 ---
 
@@ -198,7 +198,7 @@ For readers approaching the framework freshly, the recommended path:
 1. Read this URB (#720) for BOK overview (≈30 minutes)
 2. Read URB #699 for the BOK-Dirac structural confirmation (≈15 minutes)
 3. Read URB #707 for the Maxwell-knot lab-confirmation evidence (≈15 minutes)
-4. Read URB #712 for UCSB double-frustration as DT realization (≈20 minutes)
+4. Read URB #712 for UCSB double-frustration as MI realization (≈20 minutes)
 5. Read URB #713-#715 for the framework's 5-valued logic + (−3, +2) PD scale defenses (≈45 minutes)
 
 Total: ~2 hours for a complete framework picture, anchored in five empirical/structural confirmations.
@@ -574,7 +574,7 @@ The framework's six independent empirical anchors:
 2. **Charged-lepton mass-ratio** (URB #705): 1% precision against PDG.
 3. **BOK 4+4 = Dirac structure** (URB #699): 2% precision; deepest anchor.
 4. **Maxwell knots in Irvine lab** (URB #707): 5/5 predictions confirmed.
-5. **UCSB double-frustration as DT** (URB #712): structural realization.
+5. **UCSB double-frustration as MI** (URB #712): structural realization.
 6. **PD architecture loss aversion + negativity bias** (URB #728): 4× and 6× empirical match.
 
 ## Further Reading

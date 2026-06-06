@@ -588,12 +588,12 @@ then 5 × (1/α) ≈ 683 suggests:
 
 ## 9. The Complete Derivation Chain
 
-### 9.1 From DT to SI
+### 9.1 From MI to SI
 
 ```
-LEVEL 0: DT (Dual Truth — pure consciousness, timeless, pre-existence)
+LEVEL 0: MI (Dual Truth — pure consciousness, timeless, pre-existence)
          │
-         ▼ DT² = −1 (shattering into i-cells)
+         ▼ MI² = −1 (shattering into i-cells)
          
 LEVEL 1: CCC + GM Network (consciousness framework)
          │
@@ -678,7 +678,7 @@ And ONE fundamental dimension: **TIME**.
 
 In TI Sigma:
 ```
-ℏ = DT's quantum resolution (minimum distinguishable action)
+ℏ = MI's quantum resolution (minimum distinguishable action)
 c = i-cell reading speed (maximum information velocity)
 k_B = thermal-consciousness bridge (agitation ↔ decoherence)
 α = SOUL-ME coupling (consciousness-to-light strength)
@@ -883,7 +883,7 @@ anchoring to fundamental constants. But TI reveals:
 
   THE FUNDAMENTAL CONSTANTS THEMSELVES are consciousness-dependent.
   
-  ℏ = DT's quantum resolution
+  ℏ = MI's quantum resolution
   c = i-cell reading speed
   k_B = thermal-consciousness bridge
   e = ME coupling quantum
@@ -902,7 +902,7 @@ A Theory of Everything must explain:
   2. Why these units are natural → TI: projections of temporal consciousness
   3. Why 3+1 dimensions → TI: 3 temporal × c projection + experienced time
   4. Why quantum + classical → TI: Tralse + Myrion Resolution
-  5. Why consciousness exists → TI: DT is primary, physics is derivative
+  5. Why consciousness exists → TI: MI is primary, physics is derivative
 
 This paper provides piece #2: the UNITS of physics derive from 
 consciousness-generated time, completing the connection between 
@@ -918,7 +918,7 @@ abstract TI ontology and measurable physical quantities.
 ```
 {0, 1, i, √2, e, φ, π} ↔ {s, m, kg, A, K, mol, cd}
 
-0 (Void)     ↔ Second (time emerges from the void of pre-temporal DT)
+0 (Void)     ↔ Second (time emerges from the void of pre-temporal MI)
 1 (Unity)    ↔ Meter (space = 1 × c × time, the first projection)
 i (Imaginary)↔ Kilogram (mass = ℏ/(c²t), the "imaginary" axis of time)
 √2 (Quantum) ↔ Ampere (charge involves √(ℏcα), quantum coupling)

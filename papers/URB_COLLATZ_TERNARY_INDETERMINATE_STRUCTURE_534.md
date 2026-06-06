@@ -137,7 +137,7 @@ Several observations:
 
 **Observation 2:** The cycle does NOT include a stable TRUE-state. It passes through TRUE (2) but immediately descends back to INDETERMINATE. This mirrors the MR gate structure: you cannot *stay* at TRUE without anchoring (in TI Sigma terms, without a stable GILE high-LCC attractor to hold the resolution).
 
-**Observation 3:** The step 1 → 4 (INDETERMINATE → DOUBLE\_TRALSE) is an odd step, which appends "1" (INDETERMINATE) to "1" (INDETERMINATE), giving "11" (ternary) = 4 (decimal) = DOUBLE\_TRALSE. An INDETERMINATE appended to an INDETERMINATE creates DOUBLE\_TRALSE — two incoherent INDETERMINATEs stacked = the DT immune failure mode. This is structurally coherent with URB #528's DT model.
+**Observation 3:** The step 1 → 4 (INDETERMINATE → DOUBLE\_TRALSE) is an odd step, which appends "1" (INDETERMINATE) to "1" (INDETERMINATE), giving "11" (ternary) = 4 (decimal) = DOUBLE\_TRALSE. An INDETERMINATE appended to an INDETERMINATE creates DOUBLE\_TRALSE — two incoherent INDETERMINATEs stacked = the MI immune failure mode. This is structurally coherent with URB #528's MI model.
 
 **Observation 4:** DOUBLE\_TRALSE → TRUE (4 → 2) is the even step: the "alien" halving brings DOUBLE\_TRALSE back toward resolution. In TI Sigma terms: the binary (E-channel) operation provides the correction that ternary-native operations cannot.
 
@@ -272,7 +272,7 @@ This URB connects to the following framework elements:
 
 - Lagarias, J.C. (2010). *The Ultimate Challenge: The 3x+1 Problem.* AMS.
 - Terras, R. (1976). A stopping time problem on the positive integers. *Acta Arithmetica.*
-- Emerick, B. (2026). URB #528: Five-Valued Truth System + DT Immunity Model. Zenodo.
+- Emerick, B. (2026). URB #528: Five-Valued Truth System + MI Immunity Model. Zenodo.
 - Emerick, B. (2026). URB #530: Randomness, Free Will, and INDETERMINATE. Zenodo.
 - Emerick, B. (2026). URB #531: GIL as Imaginary Axis + Privation Theory of Evil. Zenodo.
 - Emerick, B. (2026). URB #523: Existence vs Truth — LCC/GILE Gap. Zenodo.

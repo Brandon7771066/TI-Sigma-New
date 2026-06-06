@@ -235,7 +235,7 @@ HRV RMSSD: indexes the cardiac coherence component of LCC. Most practical to mea
 
 EEG theta/alpha ratio: indexes the cortical coherence component of LCC. More direct window into the neural readiness state for GM network reception. C_EMERICK crossing: approximately theta power > 2x baseline at frontal midline (Fz), or alpha coherence between Fz and Pz > 0.45.
 
-EDA/GSR: inversely indexes LCC; high GSR signals DT-suppressing sympathetic arousal. C_EMERICK crossing (inverted): approximately EDA < 3 microsiemens baseline for ideomotor work.
+EDA/GSR: inversely indexes LCC; high GSR signals MI-suppressing sympathetic arousal. C_EMERICK crossing (inverted): approximately EDA < 3 microsiemens baseline for ideomotor work.
 
 A combined LCC estimate using all three biomarkers:
 LCC_combined = w_hrv × LCC_hrv + w_eeg × LCC_eeg + w_eda × LCC_eda

@@ -40,8 +40,8 @@ This file is the operational tracker. Each row gets updated as drafts go out and
 | **Institution** | Harvard Department of Physics (formerly UC Berkeley) |
 | **Email** | `nyao@fas.harvard.edu` (Harvard listing) |
 | **Lab interest** | Quantum many-body physics, time crystals, frustrated systems |
-| **Framework lead** | UCSB double-frustration as DT (URB #712) |
-| **Updated lead** | URB #730 §3 — DT framework as physics primitive; Verisyn as stable Tralse attractor; potential for DT-native quantum architectures |
+| **Framework lead** | UCSB double-frustration as MI (URB #712) |
+| **Updated lead** | URB #730 §3 — MI framework as physics primitive; Verisyn as stable Tralse attractor; potential for MI-native quantum architectures |
 | **Draft status** | ✅ Ready (URB #730 contains current draft text) |
 | **Sent date** | ☐ Pending Brandon's send |
 | **Response date** | ☐ Awaiting |
@@ -56,8 +56,8 @@ This file is the operational tracker. Each row gets updated as drafts go out and
 | **Institution** | UC Santa Barbara |
 | **Email** | (publicly listed) |
 | **Lab interest** | Frustrated magnetism, geometric frustration, quantum spin liquids |
-| **Framework lead** | URB #712 — UCSB's double-frustration result reads as direct DT realization |
-| **Updated lead** | URB #730 §4 — formal DT prediction with measurable signatures; framework's 5-valued logic provides analytical handle |
+| **Framework lead** | URB #712 — UCSB's double-frustration result reads as direct MI realization |
+| **Updated lead** | URB #730 §4 — formal MI prediction with measurable signatures; framework's 5-valued logic provides analytical handle |
 | **Draft status** | ✅ Ready (URB #730 contains current draft text) |
 | **Sent date** | ☐ Pending Brandon's send |
 | **Response date** | ☐ Awaiting |
@@ -83,7 +83,7 @@ For each outreach, lead with the **strongest empirical anchor relevant to the re
 | Brain-neutrino bridge (URB #727), 0.03σ across 7 studies | **#1** | All targets — strongest cross-domain signal |
 | SM coupling-hierarchy derivation (URB #729), no free parameters | **#2** | Yao (theoretical physics); Irvine (foundational physics) |
 | Maxwell knot 5/5 (URB #707) | **#3** | Irvine (direct lab match) |
-| UCSB double-frustration as DT (URB #712) | **#4** | UCSB group (direct lab match) |
+| UCSB double-frustration as MI (URB #712) | **#4** | UCSB group (direct lab match) |
 | Lepton mass-ratio 1% (URB #705) | **#5** | All targets — additional precision anchor |
 | BOK 4+4 = Dirac 2% (URB #699) | **#6** | All targets — foundational anchor |
 

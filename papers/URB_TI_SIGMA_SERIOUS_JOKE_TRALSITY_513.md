@@ -89,9 +89,9 @@ This is the institutional implication: environments that eliminate the Serious J
 | Serious | Serious | TRUE — conventional communication | Standard |
 | Joke | Joke | FALSE — entertainment, no claim | Play |
 | Joke | Serious | **TRALSE — the Serious Joke** | Major Tralsity; most truth-dense |
-| Serious | Joke | **Double Tralse** — deadpan or deception | Dangerous; often DT3 |
+| Serious | Joke | **Meta-Indeterminate** — deadpan or deception | Dangerous; often DT3 |
 
-The fourth case — something presented as serious but meant as a joke — includes deadpan comedy (which is philosophically interesting but not a Major Tralsity) and manipulation (presenting a joke or falsehood with the full delivery format of serious truth). This is the inverse of the Serious Joke and is structurally dangerous. The Serious Joke releases truth through humor; the False Seriousness traps falsehood in the serious frame. It is Double Tralse Type 3: it asserts serious truth-content while the content is not seriously held.
+The fourth case — something presented as serious but meant as a joke — includes deadpan comedy (which is philosophically interesting but not a Major Tralsity) and manipulation (presenting a joke or falsehood with the full delivery format of serious truth). This is the inverse of the Serious Joke and is structurally dangerous. The Serious Joke releases truth through humor; the False Seriousness traps falsehood in the serious frame. It is Meta-Indeterminate Type 3: it asserts serious truth-content while the content is not seriously held.
 
 ---
 

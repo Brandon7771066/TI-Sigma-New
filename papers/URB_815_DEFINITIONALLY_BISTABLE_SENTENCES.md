@@ -12,7 +12,7 @@
 
 ## 1. The phenomenon in one sentence
 
-> **A sentence is "definitionally bistable" when both "X is Y" and "X is not Y" can be defended without error, because at least one of the terms (X or Y) is polysemous and the two polarities track two legitimate explications of that term. Under each explication taken individually, the sentence has a single classical truth-value (T or F); without explication, the sentence sits in the t/f straddle or DT region of Tralse 5-valued logic, and forcing it into bivalent T/F before disambiguation is a category error.**
+> **A sentence is "definitionally bistable" when both "X is Y" and "X is not Y" can be defended without error, because at least one of the terms (X or Y) is polysemous and the two polarities track two legitimate explications of that term. Under each explication taken individually, the sentence has a single classical truth-value (T or F); without explication, the sentence sits in the t/f straddle or MI region of Tralse 5-valued logic, and forcing it into bivalent T/F before disambiguation is a category error.**
 >
 > — Brandon Charles Emerick, April 30, 2026, observing the pattern explicitly for the first time after multiple recurrences across the Tralse program.
 
@@ -64,22 +64,22 @@ Both names should be understood as describing **the same underlying phenomenon**
 
 In classical bivalent logic, every sentence has truth-value T or F simpliciter *once its terms have been disambiguated*. A definitionally bistable sentence is **under-parameterized**: its truth-value is well-defined under each explication individually (T under explication A; F under explication B), but the *unparameterized* surface sentence has no single bivalent value because the explication parameter has not been fixed. Standard formal treatments handle this by *indexing* truth-value to explication or context — and remain bivalent within each parameter setting — so the issue is properly described as natural-language **ambiguity** or **under-specification**, not as bivalent logic "becoming inconsistent." What bivalent logic *cannot* do without extension is **report the bistability itself** as a feature of the unparameterized sentence; it must either pick an explication or refuse to evaluate.
 
-The Tralse 5-valued logic (T, F, t = true-DT, f = false-DT, DT = double-tralse) represents the bistability **without forcing an early choice**:
+The Tralse 5-valued logic (T, F, t = true-MI, f = false-MI, MI = meta-indeterminate) represents the bistability **without forcing an early choice**:
 
 | Sentence state | Tralse value | Meaning |
 |---|---|---|
-| Bistable, no explication chosen | **DT** | Both polarities defensible; no fact-of-the-matter without explication. |
+| Bistable, no explication chosen | **MI** | Both polarities defensible; no fact-of-the-matter without explication. |
 | Bistable, leaning toward T under common usage | **t** | Mostly true under the dominant explication, with caveat that an alternative explication flips it. |
 | Bistable, leaning toward F under common usage | **f** | Mostly false under the dominant explication, with caveat that an alternative explication flips it. |
 | Disambiguated to explication-A → T | **T** | Classical truth under stipulated explication. |
 | Disambiguated to explication-B → F | **F** | Classical falsity under stipulated explication. |
 
 The five-valued representation lets us say things that bivalent logic cannot say cleanly:
-- *"'Balance is appropriateness' has Tralse value DT prior to explication, value T under the harmony-as-fit explication, and value F under the equilibrium explication."*
+- *"'Balance is appropriateness' has Tralse value MI prior to explication, value T under the harmony-as-fit explication, and value F under the equilibrium explication."*
 - *"'Knowledge is justified true belief' had Tralse value T under the pre-Gettier explication and value F under the post-Gettier (1963) explication; the historical sentence transitioned from T to F because the dominant explication of 'knowledge' shifted."*
-- *"'Numbers exist' has Tralse value DT in metaphysics; the long-running Platonist-vs-nominalist debate is largely a verbal dispute about which explication of 'exists' should be normative."*
+- *"'Numbers exist' has Tralse value MI in metaphysics; the long-running Platonist-vs-nominalist debate is largely a verbal dispute about which explication of 'exists' should be normative."*
 
-This is a place where the Tralse 5-valued vocabulary gives a single-symbol name (DT, t, f) to a state — *bistable, no explication chosen* — that bivalent logic can describe only by going meta (saying "the sentence is ambiguous; here are its readings"). The expressive gain is small but real, and it is **one-time and stable**: once the bistability is named with the value DT, the rest of the inferential machinery proceeds normally on whichever explication has been chosen. The point is not that bivalent logic is broken; it is that for the kind of philosophical-discourse work the Tralse program does, having a sentence-level name for "definitionally bistable" is convenient enough to be worth coining.
+This is a place where the Tralse 5-valued vocabulary gives a single-symbol name (MI, t, f) to a state — *bistable, no explication chosen* — that bivalent logic can describe only by going meta (saying "the sentence is ambiguous; here are its readings"). The expressive gain is small but real, and it is **one-time and stable**: once the bistability is named with the value MI, the rest of the inferential machinery proceeds normally on whichever explication has been chosen. The point is not that bivalent logic is broken; it is that for the kind of philosophical-discourse work the Tralse program does, having a sentence-level name for "definitionally bistable" is convenient enough to be worth coining.
 
 ---
 
@@ -87,10 +87,10 @@ This is a place where the Tralse 5-valued vocabulary gives a single-symbol name 
 
 | # | Sentence | Explication A | T-value(A) | Explication B | T-value(B) | Tralse value (unparameterized) |
 |---|---|---|---|---|---|---|
-| 1 | "Balance is appropriateness." | balance = equilibrium / equal-weight | F | balance = harmony as fit-for-purpose | T | DT |
-| 2 | "Freedom is constraint." | freedom = absence of external interference (negative liberty, Berlin) | F | freedom = capacity for self-direction, requires self-discipline (positive liberty / Stoic / Buddhist) | T | DT |
+| 1 | "Balance is appropriateness." | balance = equilibrium / equal-weight | F | balance = harmony as fit-for-purpose | T | MI |
+| 2 | "Freedom is constraint." | freedom = absence of external interference (negative liberty, Berlin) | F | freedom = capacity for self-direction, requires self-discipline (positive liberty / Stoic / Buddhist) | T | MI |
 | 3 | "Knowledge is justified true belief." | pre-Gettier dominant analytic analysis of knowledge (a tradition discussed back to Plato's *Theaetetus*, which itself entertains and rejects several candidate definitions) | T | post-Gettier (1963) — Gettier's counterexamples are widely accepted as showing JTB is insufficient as an *analysis* of knowledge | F | f (dominant analytic analysis shifted after Gettier; the historical claim is about the analysis, not about a wholesale change in the meaning of "knowledge") |
-| 4 | "Numbers exist." | Platonism (abstract objects exist independently of minds) | T | nominalism (only concrete particulars exist; numbers are useful fictions) | F | DT |
+| 4 | "Numbers exist." | Platonism (abstract objects exist independently of minds) | T | nominalism (only concrete particulars exist; numbers are useful fictions) | F | MI |
 | 5 | "A sentence is meaningful only if verifiable." | logical positivism / Vienna Circle (~1920s–1930s), in its early/strict formulations | T (with caveats — see note below) | mainstream post-positivist philosophy of science (Quine 1951, Kuhn 1962, etc.); the verifiability principle as stated is also widely held to be self-undermining (the sentence itself is not empirically verifiable) | F | f |
 
 (Sentence #5 is included as a historically important contested thesis with a classical-logic self-application problem layered on top of the definitional issue. The early-positivist T-assignment is itself a simplification — the Vienna Circle members went through several rounds of weakening the principle (verifiability → confirmability → testability) precisely *because* of the self-application objection and other problems. So this row is not a clean T-under-A / F-under-B case in the same way the first four rows are; it is included to illustrate that real philosophical sentences can have *both* definitional bistability *and* internal logical issues, and the Tralse-5-valued representation accommodates both kinds of complication via the t/f gradient.)
@@ -142,7 +142,7 @@ python3 definitionally_bistable_sentences.py
 #   (i)   the classical bivalent truth-value attempt — which is
 #         INCONSISTENT_UNDER_BIVALENCE for any sentence with at
 #         least one T-explication and one F-explication;
-#   (ii)  the Tralse 5-valued truth-value, which is DT (or t/f) for
+#   (ii)  the Tralse 5-valued truth-value, which is MI (or t/f) for
 #         the same sentences without the inconsistency;
 #   (iii) the per-explication truth-value, demonstrating that under
 #         each individual explication the sentence has a clean
@@ -168,4 +168,4 @@ python3 definitionally_bistable_sentences.py
 
 ## 10. One-line takeaway
 
-> **A sentence is "definitionally bistable" when both *"X is Y"* and *"X is not Y"* can be defended under different legitimate explications of one of its polysemous terms. The phenomenon is named by a four-layer stack from linguistics and philosophy of language — polysemy (mechanism), equivocation (fallacy form), verbal dispute (debate form), Carnapian explication (precision remedy) — with auto-antonyms / contronyms as the word-level cousin. Tralse 5-valued logic accommodates the bistability cleanly with the value DT for unparameterized statements; bivalent classical logic forces a silent explication-choice that is the source of equivocation and merely verbal disputes. This pattern is the linguistic substrate that made the conflations in URBs #811–#814 tempting in the first place; #815 is the meta-URB naming it.**
+> **A sentence is "definitionally bistable" when both *"X is Y"* and *"X is not Y"* can be defended under different legitimate explications of one of its polysemous terms. The phenomenon is named by a four-layer stack from linguistics and philosophy of language — polysemy (mechanism), equivocation (fallacy form), verbal dispute (debate form), Carnapian explication (precision remedy) — with auto-antonyms / contronyms as the word-level cousin. Tralse 5-valued logic accommodates the bistability cleanly with the value MI for unparameterized statements; bivalent classical logic forces a silent explication-choice that is the source of equivocation and merely verbal disputes. This pattern is the linguistic substrate that made the conflations in URBs #811–#814 tempting in the first place; #815 is the meta-URB naming it.**

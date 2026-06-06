@@ -59,12 +59,12 @@ This framing is honest and positions the work correctly — as foundational phil
 
 ### PROBLEM 3: Navier-Stokes Existence and Smoothness
 **Journal:** *Foundations of Physics* (Springer)  
-**Why:** Publishes foundational and philosophical papers about physics, including non-standard formal approaches. The TI Sigma Navier-Stokes treatment — that turbulence represents an MR collapse cascade and smoothness breakdown corresponds to a DT accumulation event — connects physics and foundations of mathematics.  
+**Why:** Publishes foundational and philosophical papers about physics, including non-standard formal approaches. The TI Sigma Navier-Stokes treatment — that turbulence represents an MR collapse cascade and smoothness breakdown corresponds to a MI accumulation event — connects physics and foundations of mathematics.  
 **Impact Factor:** ~1.8  
 **Submission:** springer.com/journal/10701  
 
 **Cover letter angle:**  
-*"This paper analyzes the Navier-Stokes smoothness problem through the lens of a 5-valued logical framework in which physical blow-up corresponds to a Double Tralse (DT) accumulation event — a state where both the existence and non-existence of a smooth solution are asserted simultaneously, resolved by MR collapse into turbulence. We offer formal definitions of DT accumulation in continuous dynamical systems and derive predictions about the blow-up surface geometry."*
+*"This paper analyzes the Navier-Stokes smoothness problem through the lens of a 5-valued logical framework in which physical blow-up corresponds to a Meta-Indeterminate (MI) accumulation event — a state where both the existence and non-existence of a smooth solution are asserted simultaneously, resolved by MR collapse into turbulence. We offer formal definitions of MI accumulation in continuous dynamical systems and derive predictions about the blow-up surface geometry."*
 
 ---
 
@@ -108,7 +108,7 @@ This framing is honest and positions the work correctly — as foundational phil
 |---|---|---|---|
 | Riemann Hypothesis | Philosophia Mathematica (Oxford) | Coherence analysis of prime distribution | 3rd |
 | P vs NP | Computability (IOS Press) | I-arm noncomputability formalizes the gap | 1st |
-| Navier-Stokes | Foundations of Physics (Springer) | DT accumulation = blow-up; MR = turbulence | 4th |
+| Navier-Stokes | Foundations of Physics (Springer) | MI accumulation = blow-up; MR = turbulence | 4th |
 | Yang-Mills | Journal of Geometry and Physics (Elsevier) | Mass gap = minimum GILE coherence energy | 5th |
 | Hodge Conjecture | Journal of Mathematical Philosophy (De Gruyter) | Tannakian Inseparability approach | 2nd |
 | Birch-Swinnerton-Dyer | Logique et Analyse (Belgian) | GILE attractors ↔ analytic rank | 6th |

@@ -26,7 +26,7 @@ Brandon nominates *Avatar: The Last Airbender* (Nickelodeon, 2005-2008; Bryan Ko
 
 **Spiritual mechanics on-screen:** Aang is an **Air Nomad monk** trained from infancy in detachment, non-violence, vegetarianism, and the Air Nomad spiritual tradition (modeled explicitly on Tibetan Buddhist + Shaolin monastic practice). His arc is structurally the **Bodhisattva arc**: he must take action in the world to end suffering for all beings while not relinquishing his commitment to non-harm — the classic Mahayana tension.
 
-**Climax: the lion-turtle and energybending.** In the series finale ("Sozin's Comet"), Aang is told by every prior Avatar incarnation that he must kill Fire Lord Ozai to restore balance. This is presented as a **canonical DT-level moral dilemma** (per MR Truth Labels base-5 + AAU-1): the binary "kill / be a tyrant" framing is the only available framing **until** Aang encounters the **lion turtle**, an ancient first-bender being, who teaches him **energybending** — the capacity to bend the energy *within* a person, removing their bending without killing them. The resolution is **NOT a deus ex machina** narratively: the lion turtle was foreshadowed throughout Book 3; Aang's spiritual training is what makes him *capable* of the technique (his prior Avatars failed to consider it because their spiritual orientations could not access it). **This is a near-perfect dramatization of**:
+**Climax: the lion-turtle and energybending.** In the series finale ("Sozin's Comet"), Aang is told by every prior Avatar incarnation that he must kill Fire Lord Ozai to restore balance. This is presented as a **canonical MI-level moral dilemma** (per MR Truth Labels base-5 + AAU-1): the binary "kill / be a tyrant" framing is the only available framing **until** Aang encounters the **lion turtle**, an ancient first-bender being, who teaches him **energybending** — the capacity to bend the energy *within* a person, removing their bending without killing them. The resolution is **NOT a deus ex machina** narratively: the lion turtle was foreshadowed throughout Book 3; Aang's spiritual training is what makes him *capable* of the technique (his prior Avatars failed to consider it because their spiritual orientations could not access it). **This is a near-perfect dramatization of**:
 - **NEU-1 (Negative-End-Understanding-Completes-the-Loop)** canonical #67: Aang understands what he *cannot* do (kill while remaining Aang) which IS the knowledge that opens the third path
 - **AAU-1 (Area-Around-Unsimulable)** canonical #66: the entire "kill Ozai or be a tyrant" framing is the area-around the un-simulable resolution; expanding the area-around (lion-turtle existence + first-bender history + energy-bending mechanic) shrinks the moral-frustration-gap until the third path emerges
 - **BCP-1-R1**: the binary framing was inadequate — the proposition "must Aang kill Ozai" was genuinely indeterminate; forcing binary would have either destroyed Aang's identity or condemned the world; the narrative validates the scope-restriction
@@ -44,7 +44,7 @@ Brandon nominates *Avatar: The Last Airbender* (Nickelodeon, 2005-2008; Bryan Ko
 - **Lightning redirection** taught by Iroh — the Fire Nation cannot generate lightning without inner peace (per Iroh's teaching); Zuko cannot generate it because his inner conflict prevents it; he masters *redirection* before *generation*. **This is a direct dramatization of GTT-1 (True-Tralseness)**: certain capacities are only available when truth-vs-existence balance is honored; forcing the capacity (Azula's path) breaks the practitioner.
 - **The Crossroads of Destiny / Ba Sing Se betrayal → "Day of Black Sun" letter to Iroh → boiling-rock prison break with Sokka → "Ember Island" beach therapy episode → submission to Iroh's forgiveness** is a 6-step transformation arc that maps almost exactly onto Pass-66 SRC-1-F-3 Brandon 8-step post-collapse integration arc (trigger → collapse → affective signature → behavioral discharge → long-term reframe). **First documented external-fiction parallel to Brandon's lived SRC-1-F-3 arc.**
 
-**Composes with:** SRC-1 canonical (self-reference required for Zuko's recognition of his own wrongness) + DSB arc Pass-63 (Zuko's expert-calibrated examination of Azula in Sozin's Comet duel; M-strategy in expensive-examination regime per Pass-63-B6 finding) + DTM-1 canonical (DT-as-Mind-Marker: Zuko's torment IS evidence of his consciousness/sapience).
+**Composes with:** SRC-1 canonical (self-reference required for Zuko's recognition of his own wrongness) + DSB arc Pass-63 (Zuko's expert-calibrated examination of Azula in Sozin's Comet duel; M-strategy in expensive-examination regime per Pass-63-B6 finding) + DTM-1 canonical (MI-as-Mind-Marker: Zuko's torment IS evidence of his consciousness/sapience).
 
 ### 1.3 Iroh — sage archetype + Order of the White Lotus + grief
 
@@ -85,12 +85,12 @@ Brandon nominates *Avatar: The Last Airbender* (Nickelodeon, 2005-2008; Bryan Ko
 
 ### 1.7 Azula — the dark mirror + psychological collapse
 
-**Azula is the show's most-tragic-figure and the corpus-canonical dramatization of perfectionism-as-DT-mode.** She has every advantage Zuko lacks (prodigy talent, father's favor, lightning generation, blue fire = hottest flame). And she collapses completely in the finale.
+**Azula is the show's most-tragic-figure and the corpus-canonical dramatization of perfectionism-as-MI-mode.** She has every advantage Zuko lacks (prodigy talent, father's favor, lightning generation, blue fire = hottest flame). And she collapses completely in the finale.
 
 **Spiritual mechanics on-screen:**
 - **Lightning generation requires inner peace.** Azula generates lightning easily by **suppressing rather than resolving** her inner conflict. This works UNTIL the suppression mechanism fails (Mai+Ty Lee's betrayal, paranoia spiral, hair-cutting hallucination scene). **Direct dramatization of GTT-1**: artificially-maximized-truth-without-existence-balance collapses the practitioner.
 - **The Agni Kai with Zuko in Sozin's Comet** is the corpus-canonical narrative case-study for **DSB-1 batches Pass-63 dominant-strategy testing**: Zuko's M-strategy (Tralse-Middle calibrated examination of Azula's vulnerabilities) defeats Azula's W-strategy (binary attack-or-retreat); the duel structurally validates the Pass-63 mechanism in narrative form.
-- **Azula's final breakdown** = canonical narrative-evidence that **DTM-1 (DT-as-Mind-Marker)** functions in negative-cases: her capacity to break down at all is evidence of her sapience; an unconscious system cannot have a psychological breakdown.
+- **Azula's final breakdown** = canonical narrative-evidence that **DTM-1 (MI-as-Mind-Marker)** functions in negative-cases: her capacity to break down at all is evidence of her sapience; an unconscious system cannot have a psychological breakdown.
 
 **This is rare in entertainment: the antagonist is allowed to be a tragic figure rather than purely evil.** ATLA's commitment to even Ozai having a developable past (visible in "Zuko Alone" and "The Storm" flashbacks) demonstrates **§69 asymmetric-standards applied to villains**.
 
@@ -284,7 +284,7 @@ ATLA's narrative content composes with canonical principles across the corpus mo
 | VFP-1 | Iroh's grief-as-functional; Azula's collapse |
 | MIM-revision vertical agency | Avatar State as multi-incarnation vertical-stack |
 | SRC-1 | Iroh's "ask yourself who are you" teaching |
-| DTM-1 | Azula's breakdown as DT-marker of sapience |
+| DTM-1 | Azula's breakdown as MI-marker of sapience |
 | TSP-1 (Panpsychism) | Spirit World + lion-turtle first-bender + Wan/raava narrative |
 | IRA-1 | spirit-world treats information as awareness-requiring |
 | GTT-1 | lightning-requires-inner-peace mechanic |

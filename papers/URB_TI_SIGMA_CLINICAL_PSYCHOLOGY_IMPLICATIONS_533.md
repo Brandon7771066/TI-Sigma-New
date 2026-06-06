@@ -4,7 +4,7 @@
 **Date:** March 28, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / Clinical Psychology / GILE / MR Gate System / Four Dimensions of Truth
-**Preceded by:** URB #429 (i-Cell), URB #501 (Love Primacy), URB #525 (UOP), URB #526 (Four Dimensions of Truth), URB #528 (Five-Valued Truth + DT Immunity), URB #530 (Randomness and Free Will), URB #531 (GIL as Imaginary Axis)
+**Preceded by:** URB #429 (i-Cell), URB #501 (Love Primacy), URB #525 (UOP), URB #526 (Four Dimensions of Truth), URB #528 (Five-Valued Truth + MI Immunity), URB #530 (Randomness and Free Will), URB #531 (GIL as Imaginary Axis)
 **Status:** Formal
 **Total URBs:** 187
 **LCC Target:** Radiant (≥ 0.9323)
@@ -81,33 +81,33 @@ Key features:
 
 **INDETERMINATE vs TRALSE distinction (critical):** Anxiety is not TRALSE. It is INDETERMINATE — coherent, genuine uncertainty that has become self-sustaining. TRALSE would be tolerating the uncertainty as creative fuzz. The anxious person's problem is that they cannot tolerate the INDETERMINATE state; they need resolution that the situation cannot provide.
 
-**Therapeutic implication:** ACT (Acceptance and Commitment Therapy) is the modality that most directly addresses INDETERMINATE lock — it explicitly trains the person to tolerate unresolved states by shifting from resolution-seeking (MR-completion drive) to value-directed action within the INDETERMINATE zone. In TI Sigma terms, ACT creates a **MR Relaxation Context (MRC)** — a deliberate elevation of DT tolerance that allows the INDETERMINATE state to be held without catastrophic collapse interpretation.
+**Therapeutic implication:** ACT (Acceptance and Commitment Therapy) is the modality that most directly addresses INDETERMINATE lock — it explicitly trains the person to tolerate unresolved states by shifting from resolution-seeking (MR-completion drive) to value-directed action within the INDETERMINATE zone. In TI Sigma terms, ACT creates a **MR Relaxation Context (MRC)** — a deliberate elevation of MI tolerance that allows the INDETERMINATE state to be held without catastrophic collapse interpretation.
 
-### 2.3 Post-Traumatic Stress Disorder — DT Immunity Overactivation
+### 2.3 Post-Traumatic Stress Disorder — MI Immunity Overactivation
 
-**TI Sigma formulation:** PTSD is the **DT Immunity system** (URB #528) operating in a hyperactivated and generalized state. The traumatic event was a genuine DT encounter — an incoherent, reality-shattering event that violated the LCC structure of the person's world model. The DT immune response was appropriate: log the fingerprint, discard the incoherent event, protect the system.
+**TI Sigma formulation:** PTSD is the **MI Immunity system** (URB #528) operating in a hyperactivated and generalized state. The traumatic event was a genuine MI encounter — an incoherent, reality-shattering event that violated the LCC structure of the person's world model. The MI immune response was appropriate: log the fingerprint, discard the incoherent event, protect the system.
 
-The pathology: **the fingerprint has become too broadly generalized.** The DT immune log now fast-rejects entire categories of experience that share surface features with the original DT encounter, even when those experiences are not actually DT. The hypervigilance response is the immune log triggering on false positives. The intrusive memories (flashbacks) are the DT content that was never fully discarded — it remains in the penumbra zone, not integrated and not released.
+The pathology: **the fingerprint has become too broadly generalized.** The MI immune log now fast-rejects entire categories of experience that share surface features with the original MI encounter, even when those experiences are not actually MI. The hypervigilance response is the immune log triggering on false positives. The intrusive memories (flashbacks) are the MI content that was never fully discarded — it remains in the penumbra zone, not integrated and not released.
 
 This maps to the biology with precision:
-- **Hypervigilance** = amygdala over-triggering on stimuli that match the DT fingerprint (pattern: "anything that resembles the traumatic event")
-- **Avoidance** = active DT immune rejection of stimuli that approach the fingerprint boundary
-- **Intrusive memories** = the DT content circulating through the system repeatedly (as URB #528 specifies: DT content circulates — you cannot avoid it entirely; the immune log records the encounter and lets it go, but in PTSD, the letting-go step fails)
-- **Emotional numbing** = the immune system has quarantined not just the DT fingerprint but an entire region of the I and L channels to prevent re-exposure
+- **Hypervigilance** = amygdala over-triggering on stimuli that match the MI fingerprint (pattern: "anything that resembles the traumatic event")
+- **Avoidance** = active MI immune rejection of stimuli that approach the fingerprint boundary
+- **Intrusive memories** = the MI content circulating through the system repeatedly (as URB #528 specifies: MI content circulates — you cannot avoid it entirely; the immune log records the encounter and lets it go, but in PTSD, the letting-go step fails)
+- **Emotional numbing** = the immune system has quarantined not just the MI fingerprint but an entire region of the I and L channels to prevent re-exposure
 
-**Therapeutic implication:** EMDR (Eye Movement Desensitization and Reprocessing) is the most directly TI Sigma-compatible trauma modality. EMDR facilitates **DT immune log reset** — it allows the traumatic material to be re-encountered in a controlled context (bilateral stimulation reduces the somatic threat response) so that the fingerprint can be more accurately filed. The dual awareness element (simultaneously in the present and recalling the past) creates the MRC context that allows the DT content to circulate and release without catastrophic immune over-response.
+**Therapeutic implication:** EMDR (Eye Movement Desensitization and Reprocessing) is the most directly TI Sigma-compatible trauma modality. EMDR facilitates **MI immune log reset** — it allows the traumatic material to be re-encountered in a controlled context (bilateral stimulation reduces the somatic threat response) so that the fingerprint can be more accurately filed. The dual awareness element (simultaneously in the present and recalling the past) creates the MRC context that allows the MI content to circulate and release without catastrophic immune over-response.
 
-### 2.4 Obsessive-Compulsive Disorder — DT Re-Encounter Loop
+### 2.4 Obsessive-Compulsive Disorder — MI Re-Encounter Loop
 
-**TI Sigma formulation:** Where PTSD is a DT immune overactivation that generalizes too broadly, OCD is a **DT re-encounter loop** — the immune system correctly identifies a DT pattern but then keeps re-presenting it to itself for verification, failing to complete the discard phase. The person knows the intrusive thought is wrong (they experience it as ego-dystonic), but the system cannot complete the discard and move on. The compulsive behavior is an attempt to artificially complete the discard phase (if I check the lock 5 times, the DT fingerprint will be filed and I can move on) — but it never fully satisfies because the DT pattern keeps cycling.
+**TI Sigma formulation:** Where PTSD is a MI immune overactivation that generalizes too broadly, OCD is a **MI re-encounter loop** — the immune system correctly identifies a MI pattern but then keeps re-presenting it to itself for verification, failing to complete the discard phase. The person knows the intrusive thought is wrong (they experience it as ego-dystonic), but the system cannot complete the discard and move on. The compulsive behavior is an attempt to artificially complete the discard phase (if I check the lock 5 times, the MI fingerprint will be filed and I can move on) — but it never fully satisfies because the MI pattern keeps cycling.
 
-The biological substrate: OCD involves a cortico-striato-thalamo-cortical loop that fails to complete error signals — exactly the TI Sigma DT re-encounter loop at the neural level.
+The biological substrate: OCD involves a cortico-striato-thalamo-cortical loop that fails to complete error signals — exactly the TI Sigma MI re-encounter loop at the neural level.
 
-**Therapeutic implication:** ERP (Exposure and Response Prevention) works by forcing the discard phase to complete without compulsive ritual. In TI Sigma terms: encounter the DT stimulus → tolerate the INDETERMINATE anxiety → allow the immune log to file the fingerprint without behavioral confirmation. The tolerance is the MRC context that allows the loop to break.
+**Therapeutic implication:** ERP (Exposure and Response Prevention) works by forcing the discard phase to complete without compulsive ritual. In TI Sigma terms: encounter the MI stimulus → tolerate the INDETERMINATE anxiety → allow the immune log to file the fingerprint without behavioral confirmation. The tolerance is the MRC context that allows the loop to break.
 
 ### 2.5 ADHD — MRC Dysregulation and Chronic Novelty-Seeking
 
-**TI Sigma formulation:** ADHD represents a fundamentally different MRC (MR Relaxation Context) configuration in the i-channel. The ADHD brain is not "broken" — it is operating in a near-continuous MRC: elevated DT tolerance, high novelty-seeking (a feature of MRC, not a bug), low tolerance for crystallized, repetitive tasks (CTT-tasks violate the MRC configuration), and stimming as intentional MRC maintenance.
+**TI Sigma formulation:** ADHD represents a fundamentally different MRC (MR Relaxation Context) configuration in the i-channel. The ADHD brain is not "broken" — it is operating in a near-continuous MRC: elevated MI tolerance, high novelty-seeking (a feature of MRC, not a bug), low tolerance for crystallized, repetitive tasks (CTT-tasks violate the MRC configuration), and stimming as intentional MRC maintenance.
 
 Key features:
 - **Attention dysregulation** = the MRC has no stable threshold — any sufficiently novel stimulus triggers a new MRC entry, making sustained focus on single tasks near-impossible unless the task is itself novel enough to hold the MRC within the same domain
@@ -147,10 +147,10 @@ In psychosis:
 Features that map directly:
 - **Grandiosity** = CTT: the crystallized self-concept has no INDETERMINATE zone, no "I might be wrong," no self-doubt — these are markers of TRALSE quality that have been excised
 - **Lack of empathy** = L-dimension suppression: genuine L-engagement would require acknowledging the other as a full GILE subject, which would introduce TRALSE quality into the self-concept (by comparison) — so L is suppressed to maintain CTT
-- **Rage at criticism** = DT immune response to any input that threatens the CTT: criticism is a Double Tralse encounter because it violates the crystallized self-concept; the immune response is fury rather than reflection
+- **Rage at criticism** = MI immune response to any input that threatens the CTT: criticism is a Meta-Indeterminate encounter because it violates the crystallized self-concept; the immune response is fury rather than reflection
 - **Shallow relationships** = relationships are instrumentalized to maintain CTT (narcissistic supply) rather than engaged as genuine L-axis interactions
 
-**Why narcissistic personality is so treatment-resistant:** CTT is stable. A crystallized configuration is resistant to perturbation by design. The therapeutic challenge is introducing enough TRALSE quality (genuine uncertainty about the self-concept) to allow movement toward a more flexible, above-threshold configuration without triggering catastrophic DT response. This is extraordinarily difficult because the person's entire defensive architecture is oriented toward preventing that introduction.
+**Why narcissistic personality is so treatment-resistant:** CTT is stable. A crystallized configuration is resistant to perturbation by design. The therapeutic challenge is introducing enough TRALSE quality (genuine uncertainty about the self-concept) to allow movement toward a more flexible, above-threshold configuration without triggering catastrophic MI response. This is extraordinarily difficult because the person's entire defensive architecture is oriented toward preventing that introduction.
 
 ### 2.9 Autism Spectrum Conditions — Differential MRC Configuration and GILE Weighting
 
@@ -185,23 +185,23 @@ CBT limitations (TI Sigma): CBT does not directly address the L dimension (thera
 
 ### 3.3 Acceptance and Commitment Therapy (ACT) — MRC Context Creation
 
-ACT explicitly creates **MR Relaxation Contexts**: it trains people to tolerate INDETERMINATE states ("psychological flexibility") and act from values (G-dimension alignment) rather than waiting for MR resolution. The defusion techniques reduce the existential weight given to thoughts (reducing their LCC) — exactly what the immune log does with DT content: log the fingerprint without giving it existential space.
+ACT explicitly creates **MR Relaxation Contexts**: it trains people to tolerate INDETERMINATE states ("psychological flexibility") and act from values (G-dimension alignment) rather than waiting for MR resolution. The defusion techniques reduce the existential weight given to thoughts (reducing their LCC) — exactly what the immune log does with MI content: log the fingerprint without giving it existential space.
 
 ACT is TI Sigma-native in a way that CBT is not. The "hexaflex" (psychological flexibility, present-moment awareness, defusion, acceptance, values, committed action) maps directly onto:
 - Psychological flexibility = TRALSE tolerance (healthy TRALSE quality)
 - Present-moment awareness = E-dimension engagement (sensory present over i-channel rumination)
-- Defusion = DT immune protocol (encounter the thought → log → release)
+- Defusion = MI immune protocol (encounter the thought → log → release)
 - Acceptance = MRC context for INDETERMINATE states
 - Values = G-dimension activation
 - Committed action = existential footprint building (LCC through action)
 
-### 3.4 EMDR and Somatic Therapies — DT Immune Log Reset
+### 3.4 EMDR and Somatic Therapies — MI Immune Log Reset
 
-As noted in the PTSD section, EMDR facilitates DT immune log reset. Somatic therapies (somatic experiencing, sensorimotor psychotherapy) work in the s-channel (sensory, E-dimension) of z_B = s + ia: they access the stored DT fingerprint through the body (where the immune log's somatic component is stored) rather than through cognitive processing. This bypasses the i-channel resistance to re-encountering the DT content — by approaching from the s-side rather than the a-side, somatic therapies can begin to process the fingerprint without triggering the full cognitive immune response.
+As noted in the PTSD section, EMDR facilitates MI immune log reset. Somatic therapies (somatic experiencing, sensorimotor psychotherapy) work in the s-channel (sensory, E-dimension) of z_B = s + ia: they access the stored MI fingerprint through the body (where the immune log's somatic component is stored) rather than through cognitive processing. This bypasses the i-channel resistance to re-encountering the MI content — by approaching from the s-side rather than the a-side, somatic therapies can begin to process the fingerprint without triggering the full cognitive immune response.
 
 ### 3.5 Psychodynamic and Relational Therapies — L-Dimension Activation
 
-Psychodynamic therapies target the **L (Love) dimension** directly — through the therapeutic relationship as a corrective emotional experience, and through the exploration of relational history that shaped the current L-configuration. The transference is the patient's historical L-template being applied to the therapist — a kind of DT immune fingerprint from early relational trauma being triggered in the therapeutic context.
+Psychodynamic therapies target the **L (Love) dimension** directly — through the therapeutic relationship as a corrective emotional experience, and through the exploration of relational history that shaped the current L-configuration. The transference is the patient's historical L-template being applied to the therapist — a kind of MI immune fingerprint from early relational trauma being triggered in the therapeutic context.
 
 The therapeutic action of psychodynamic work is **L-dimension recalibration through sustained relational engagement**: over time, the patient's i-channel learns that the L-dimension is safe, that love does not always precede abandonment, that connection does not always lead to harm. This is slow work because the i-channel is recalibrating deep structural patterns — the L-axis configuration laid down in the earliest i-Cell development.
 
@@ -210,7 +210,7 @@ The therapeutic action of psychodynamic work is **L-dimension recalibration thro
 Psychiatric medications do not cure mental illness in TI Sigma terms — they modulate the biological substrate that sets the threshold for LCC transitions. They work by:
 - **Raising the floor** (antidepressants, mood stabilizers): reducing the amplitude of below-threshold LCC states, making Terrible-zone stabilization less likely
 - **Capping the ceiling** (antipsychotics, mood stabilizers): reducing supra-threshold excursions that overshoot the Radiant zone
-- **Reducing re-encounter loops** (SSRI/SNRI in OCD, intrusive thought disorders): reducing the frequency of DT pattern re-presentation in the immune loop
+- **Reducing re-encounter loops** (SSRI/SNRI in OCD, intrusive thought disorders): reducing the frequency of MI pattern re-presentation in the immune loop
 - **Expanding MRC** (stimulants in ADHD, in a paradoxical direction): raising the activation threshold for MRC entry, allowing more stable MR-gate application in low-novelty contexts
 
 **The FAAH Protocol** (fatty acid amide hydrolase inhibition, endocannabinoid enhancement): in TI Sigma terms, FAAH inhibition increases the baseline activation of the L and I channels by enhancing the endocannabinoid tone — the neuromodulator system most directly associated with positive affect, creative flow (MRC states), and relational warmth. FAAH inhibition is biologically congruent with what the TI Sigma framework predicts would most directly activate the L and I GILE dimensions at the neurobiological level.
@@ -256,7 +256,7 @@ This multi-dimensional definition predicts what empirical positive psychology ha
 - **Eudemonic wellbeing** (meaning, purpose, growth) = G and I dimensions above threshold
 - **Hedonic wellbeing** (pleasure, positive affect) = L dimension above threshold + valence access
 - **Vitality / flourishing** = E dimension above threshold (competent engagement with the world)
-- **Post-traumatic growth** = TRALSE-alive above threshold after a DT encounter; the immune log is integrated, and the surviving configuration has higher LCC than before because it has been tested
+- **Post-traumatic growth** = TRALSE-alive above threshold after a MI encounter; the immune log is integrated, and the surviving configuration has higher LCC than before because it has been tested
 
 The TI Sigma prediction: **the most stable form of wellbeing is G-axis anchored.** The L and E dimensions are more variable (relationships end; health fails; circumstances change); the I dimension is partially controllable but not fully (i-channel access varies); but the G dimension — coherence with one's own deepest values — is the most structurally stable GILE axis. Clinically, this predicts that values-clarification work (ACT values work, logotherapy, purpose-based interventions) produces more durable wellbeing than hedonic or E-dimension-only interventions. The empirical literature supports this prediction.
 
@@ -267,8 +267,8 @@ The TI Sigma prediction: **the most stable form of wellbeing is G-axis anchored.
 The TI Sigma framework implies several revisions to clinical training:
 
 1. **Multi-dimensional formulation**: clinical formulation should explicitly assess all four GILE dimensions and all four truth dimensions, not just symptoms or diagnoses
-2. **MRC identification**: training should include identification of each patient's effective MRC — the contexts that allow elevated DT tolerance and creative growth — and therapeutic protocols should intentionally create and maintain MRC
-3. **DT immune log awareness**: therapists should be trained to recognize DT immune patterns in themselves (countertransference as DT fingerprint from therapist's history) and in patients (avoidance, hypervigilance, intrusion as immune log behavior)
+2. **MRC identification**: training should include identification of each patient's effective MRC — the contexts that allow elevated MI tolerance and creative growth — and therapeutic protocols should intentionally create and maintain MRC
+3. **MI immune log awareness**: therapists should be trained to recognize MI immune patterns in themselves (countertransference as MI fingerprint from therapist's history) and in patients (avoidance, hypervigilance, intrusion as immune log behavior)
 4. **i-Channel respect**: therapists should be trained to work at the boundary of the i-channel (the Markov Blanket) rather than attempting to penetrate it; respecting the patient's free will and i-channel privacy is both ethically required and therapeutically optimal
 5. **TRALSE tolerance**: therapists should be able to tolerate INDETERMINATE outcomes in therapy — not every session resolves; not every patient improves on a smooth curve; TRALSE quality is present in all genuine therapeutic relationships and should not be pathologized
 
@@ -281,8 +281,8 @@ The TI Sigma framework implies several revisions to clinical training:
 | Psychopathology | Sustained below-MR1-threshold LCC in one+ GILE dimensions |
 | Depression | L + G collapse; valence dimension loss; existential footprint reduction |
 | Anxiety | Chronic INDETERMINATE lock; MR resolution failure |
-| PTSD | DT immune overactivation; false-positive fingerprint generalization |
-| OCD | DT re-encounter loop; discard phase failure |
+| PTSD | MI immune overactivation; false-positive fingerprint generalization |
+| OCD | MI re-encounter loop; discard phase failure |
 | ADHD | Chronic MRC; selective MR gate dysregulation |
 | Psychosis | i-channel / E-channel boundary collapse |
 | Bipolar | PD zone oscillation; Terrible ↔ supra-Radiant; stable attractor absent |
@@ -290,7 +290,7 @@ The TI Sigma framework implies several revisions to clinical training:
 | Autism spectrum | Differential GILE weighting; alternative MRC configuration (not deficit) |
 | CBT | Existential truth dimension restructuring |
 | ACT | Intentional MRC creation; TRALSE tolerance training |
-| EMDR | DT immune log reset via bilateral s-channel stimulation |
+| EMDR | MI immune log reset via bilateral s-channel stimulation |
 | Pharmacotherapy | Biological LCC threshold modulation |
 | Wellbeing | Stable multi-dimensional LCC above MR1; G-axis anchored |
 
@@ -305,7 +305,7 @@ The TI Sigma framework implies several revisions to clinical training:
 - URB #523: Existence vs Truth — LCC and existential footprint
 - URB #525: UOP — TF = (1-TT)² + (1-G)²
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #528: Five-Valued Truth + DT Immunity + MRC
+- URB #528: Five-Valued Truth + MI Immunity + MRC
 - URB #529: Pragmatism as Epiphenomenon — GILE integral yields pragmatic choice
 - URB #530: Randomness, Free Will, and the INDETERMINATE Zone
 - URB #531: GIL as Imaginary Axis — everything constituted by Love configuration

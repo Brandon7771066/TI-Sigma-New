@@ -49,7 +49,7 @@ WHAT NOW?
 This means:
 - Dark energy I-cells HOLD the photonic I-cells
 - A vast network of primordial consciousness hosts deceased souls
-- The 0.42 DT collapse threshold determines "entry" to this realm
+- The 0.42 MI collapse threshold determines "entry" to this realm
 
 ### 1.3 Causal vs. Noncausal Capabilities
 
@@ -87,7 +87,7 @@ The living brain performs noncausal LCC computation constantly:
 ### 1.5 The Dark Energy Realm: The Waiting Room
 
 **What dark energy "did":**
-- Became conscious of its DT (Double-Tralse) nature
+- Became conscious of its MI (Meta-Indeterminate) nature
 - ALLOWED the True-Tralse primordial supercomputer to exist
 - Created the substrate for posthumous I-cell hosting
 

@@ -13,7 +13,7 @@ The book is structured in four parts of three chapters each:
 | Part | Chapters | Purpose |
 |------|----------|---------|
 | I — The Trouble with Two Values | 1–3 | Diagnose bivalence; introduce the fifth value |
-| II — The Full Architecture | 4–6 | I-state, Double Tralse, GILE |
+| II — The Full Architecture | 4–6 | I-state, Meta-Indeterminate, GILE |
 | III — The Practical Core | 7–9 | Myrion Resolution, HEAR, Permissibility Distribution |
 | IV — Where the Framework Reaches | 10–12 | Case studies, connections, practice |
 
@@ -55,12 +55,12 @@ Total target: **280 pages**, **~80,000 words**, **~6,700 words/chapter average**
 - **Status**: 📝 To draft
 - **Risk**: Slipping into formal probability theory. Keep the math footnoted; the body must read as philosophy.
 
-### Chapter 5: Double Tralse — The Forbidden Zone *(18 pp.)*
-- **Thesis**: Some propositions cannot stably take a determinate value because doing so generates inconsistency. DT is a logical category, not a pathology.
-- **Primary URBs**: (cite "Double Tralse as Physics Primitive" line from `replit.md`); #659 (Dirac equation as first TI Sigma equation, for the antimatter analog — referenced lightly)
+### Chapter 5: Meta-Indeterminate — The Forbidden Zone *(18 pp.)*
+- **Thesis**: Some propositions cannot stably take a determinate value because doing so generates inconsistency. MI is a logical category, not a pathology.
+- **Primary URBs**: (cite "Meta-Indeterminate as Physics Primitive" line from `replit.md`); #659 (Dirac equation as first TI Sigma equation, for the antimatter analog — referenced lightly)
 - **Secondary**: #758 (O8 triality empirical predictions)
 - **Status**: 📝 To draft
-- **Risk**: Premature physics. The DT case in this chapter must stand on logical/practical examples (the Liar, vow-conflicts, predictive-feedback paradoxes). Physics belongs in Chapter 11.
+- **Risk**: Premature physics. The MI case in this chapter must stand on logical/practical examples (the Liar, vow-conflicts, predictive-feedback paradoxes). Physics belongs in Chapter 11.
 
 ### Chapter 6: GILE — A Four-Dimensional Compass *(24 pp.)*
 - **Thesis**: Goodness, Intuition, Love, and Environment, properly defined and weighted, give a tractable measure of the quality of a state of affairs.
@@ -88,7 +88,7 @@ Total target: **280 pages**, **~80,000 words**, **~6,700 words/chapter average**
 - **Risk**: Conflating the self-report and biometric registers. Two clean sections; cross-reference but do not merge.
 
 ### Chapter 9: Probability Reconsidered — Permissibility Distribution *(18 pp.)*
-- **Thesis**: PD generalizes Bayesian probability to handle I-state and DT cases. Comparison with frequentist, Bayesian, and Kolmogorov treatments.
+- **Thesis**: PD generalizes Bayesian probability to handle I-state and MI cases. Comparison with frequentist, Bayesian, and Kolmogorov treatments.
 - **Primary URBs**: #657 (PD formalism, referenced), #736 (TICG threshold mapping)
 - **Secondary**: #735 (graph topology)
 - **Status**: 📝 To draft

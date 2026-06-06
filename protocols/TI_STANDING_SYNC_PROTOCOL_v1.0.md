@@ -27,7 +27,7 @@ Ensure that all substantive intellectual developments in the TI / Sigma framewor
 A sync is required whenever any of the following occur:
 
 - New definitions or corrections (e.g., PD thresholds, MR rules)
-- New philosophical distinctions (Truth vs expression, DT meaning)
+- New philosophical distinctions (Truth vs expression, MI meaning)
 - New operators, protocols, or algorithms
 - Any insight that would affect:
   - Interpretation

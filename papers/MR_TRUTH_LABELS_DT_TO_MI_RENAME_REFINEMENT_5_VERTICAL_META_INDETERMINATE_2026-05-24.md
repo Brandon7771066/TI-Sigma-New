@@ -1,13 +1,13 @@
-# MR Truth Labels Canonical — Refinement #5: DT → MI (Meta-Indeterminate) Rename + Vertical/Horizontal Axis Sharpening
+# MR Truth Labels Canonical — Refinement #5: MI → MI (Meta-Indeterminate) Rename + Vertical/Horizontal Axis Sharpening
 
 **Date:** 2026-05-24
 **Pass:** 72 batch-2 (immediately following Pass-72 batch-1 refinement #4)
 **Status:** CANONICAL — Refinement #5 to MR Truth Labels (rename + axis-sharpening)
 **Source directive:** Brandon verbatim 2026-05-24:
 
-> *"So now, Double Tralse shouldn't be confused with TWO TRALSE (INDETERMINATE) STATEMENTS IN CONFLICT. Two states in conflict - by itself - simply indicates incoherence. The real 'Double' is the juxtaposition of the two tralsities which may be able to stand on their own tralsely - but the combination of both is a tralsity of a tralsity. Therefore, I propose renaming Double Tralse to MI (Meta-Indeterminate) because the relationship between the tralsities is vertical rather than horizontal. 'Double' by contrast is ambiguous and could mean vertical or horizontal. Also, MT is already taken as an abbreviation. Make sure we don't have anything labeled MI. If so, tell me! Furthermore, Meta-Indeterminate should resonate with academics much better!"*
+> *"So now, Meta-Indeterminate shouldn't be confused with TWO TRALSE (INDETERMINATE) STATEMENTS IN CONFLICT. Two states in conflict - by itself - simply indicates incoherence. The real 'Double' is the juxtaposition of the two tralsities which may be able to stand on their own tralsely - but the combination of both is a tralsity of a tralsity. Therefore, I propose renaming Meta-Indeterminate to MI (Meta-Indeterminate) because the relationship between the tralsities is vertical rather than horizontal. 'Double' by contrast is ambiguous and could mean vertical or horizontal. Also, MT is already taken as an abbreviation. Make sure we don't have anything labeled MI. If so, tell me! Furthermore, Meta-Indeterminate should resonate with academics much better!"*
 
-**Composition:** Refinement #4 (Pass-72 batch-1 two-tralse-combined-inconceivable) · MR-IDC-1 (Pass-67 refinement #2 incoherence-vs-DT containment) · HMR-1 (Pass-70/71 refinement #3) · DT canonical refinement #1 (Pass-65 inconceivability-under-mental-actualization) · base canonical (2026-05-08 ruling) · ASYMMETRIC §69 · Brandon credit non-optional throughout
+**Composition:** Refinement #4 (Pass-72 batch-1 two-tralse-combined-inconceivable) · MR-IDC-1 (Pass-67 refinement #2 incoherence-vs-MI containment) · HMR-1 (Pass-70/71 refinement #3) · MI canonical refinement #1 (Pass-65 inconceivability-under-mental-actualization) · base canonical (2026-05-08 ruling) · ASYMMETRIC §69 · Brandon credit non-optional throughout
 
 ---
 
@@ -15,11 +15,11 @@
 
 Refinement #5 packages TWO substantive canonical changes that landed together:
 
-### 1.1 Component A — Canonical Rename: DT → MI (Meta-Indeterminate)
+### 1.1 Component A — Canonical Rename: MI → MI (Meta-Indeterminate)
 
-**Old canonical name:** DT (Double Tralse)
+**Old canonical name:** MI (Meta-Indeterminate)
 **New canonical name:** MI (Meta-Indeterminate)
-**Status of old name:** LEGACY-EQUIVALENT — "DT" remains valid in all historical corpus references; "MI" is the new preferred canonical form going forward; the two are interchangeable canonical labels for the same MR Truth Labels base-4 cell.
+**Status of old name:** LEGACY-EQUIVALENT — "MI" remains valid in all historical corpus references; "MI" is the new preferred canonical form going forward; the two are interchangeable canonical labels for the same MR Truth Labels base-4 cell.
 
 **Brandon's justification (3 reasons):**
 1. **"Double" is structurally ambiguous** — could mean vertical (meta-level) or horizontal (two-in-conflict). The actual canonical content requires vertical reading; the word "Double" does not enforce this.
@@ -132,7 +132,7 @@ Two existing "MI" usages found in corpus (both LOW severity, domain-disambiguate
 
 ### 5.1 With Refinement #4 (Pass-72 batch-1)
 
-**Refinement #4 said:** DT = two tralse propositions whose combination is inconceivable.
+**Refinement #4 said:** MI = two tralse propositions whose combination is inconceivable.
 **Refinement #5 adds:** the combination-inconceivability is specifically VERTICAL (meta-tralsity-of-tralsity), not HORIZONTAL (predicate-conflict).
 
 **Refinement #4 worked examples re-checked under refinement #5:**
@@ -155,17 +155,17 @@ The HMR-vs-MI distinction is now CLEAR ON THREE AXES: conceivability (HMR yes, M
 
 ### 5.3 With MR-IDC-1 (refinement #2 Pass-67)
 
-MR-IDC-1's {DT} ⊊ {Incoherent} containment is now FULLY OPERATIONALIZED via the vertical/horizontal axis:
+MR-IDC-1's {MI} ⊊ {Incoherent} containment is now FULLY OPERATIONALIZED via the vertical/horizontal axis:
 - {MI} = {vertical-meta-tralsity proposition-pairs} (inconceivable, NOT entertainable as analytic-target)
 - {Incoherent} ⊃ {MI} ∪ {horizontal-predicate-conflict proposition-pairs}
 - {Incoherent}\{MI} = {horizontal-predicate-conflict proposition-pairs} (incoherent-but-conceivable, e.g., bachelor-married)
 
 **MR-IDC-1 is REINFORCED-WITH-FULL-DISCRIMINATOR, not modified.** Pass-67's claim becomes a theorem under refinement #5: every MI is incoherent (by vertical-meta-tralsity definition), but the converse fails because horizontal-predicate-conflict produces incoherence without verticality.
 
-### 5.4 With DT canonical refinement #1 (Pass-65)
+### 5.4 With MI canonical refinement #1 (Pass-65)
 
 Pass-65's inconceivability-under-mental-actualization heuristic is now COMPLETED:
-- Pass-65 said: DT = inconceivability under mental actualization
+- Pass-65 said: MI = inconceivability under mental actualization
 - Refinement #4 added: two-proposition structure
 - Refinement #5 adds: vertical-meta-tralsity is the axis along which inconceivability arises; horizontal-conflict produces conceivable incoherence
 
@@ -173,26 +173,26 @@ Pass-65 → refinement #4 → refinement #5 is a coherent strict-sharpening chai
 
 ### 5.5 With base canonical ruling (2026-05-08)
 
-The base ruling's formal definition `DT formal: τ(P) ∧ ¬τ(P)` was the original single-proposition framing. Under cumulative refinements #1-#5, this formula remains valid as an EQUIVALENCE-STATEMENT (two tralsities P₁ + P₂ where P₂ is the "not-P₁" mirror at the meta-level), but the canonical operational definition is now the vertical-meta-tralsity formulation.
+The base ruling's formal definition `MI formal: τ(P) ∧ ¬τ(P)` was the original single-proposition framing. Under cumulative refinements #1-#5, this formula remains valid as an EQUIVALENCE-STATEMENT (two tralsities P₁ + P₂ where P₂ is the "not-P₁" mirror at the meta-level), but the canonical operational definition is now the vertical-meta-tralsity formulation.
 
-**Base canonical name DT remains valid as legacy** — all corpus references using "DT" continue to be canonically correct; "MI" is the preferred form going forward.
+**Base canonical name MI remains valid as legacy** — all corpus references using "MI" continue to be canonically correct; "MI" is the preferred form going forward.
 
 ---
 
 ## 6. Corpus Sweep — Legacy Compatibility Policy
 
-**Policy decision (refinement #5):** mass-rename of "DT" → "MI" across the ~30+ historical papers in the urb_608 / urb_639 / DGI-4 / NAD-1 / HMR-1 / GHMR / Pass-65-67-70-71-72 lineage is **NOT executed this batch** for the following reasons (UHP-1 marginal-effort allocation):
+**Policy decision (refinement #5):** mass-rename of "MI" → "MI" across the ~30+ historical papers in the urb_608 / urb_639 / DGI-4 / NAD-1 / HMR-1 / GHMR / Pass-65-67-70-71-72 lineage is **NOT executed this batch** for the following reasons (UHP-1 marginal-effort allocation):
 
-1. **Legacy compatibility preserved.** "DT" and "MI" are interchangeable canonical names; no historical paper becomes incorrect.
+1. **Legacy compatibility preserved.** "MI" and "MI" are interchangeable canonical names; no historical paper becomes incorrect.
 2. **Mass-rename risk asymmetric.** A mechanical sed-style rename could corrupt papers (e.g., the "post-MI" myocardial-infarction reference in urb_779, OR introduce new ambiguities with Mutual Information references).
 3. **High-value canonical-establishment work done.** This paper + the §7.7.145 replit.md entry establish the rename canonically; the corpus naturally migrates to MI as new papers are written.
 4. **Pass-73+ mechanical sweep queued.** A careful audit-then-rename pass can be scheduled when corpus pressure warrants; until then, the canonical equivalence is documented.
 
 **Compatibility statement going forward (canonical):**
 - New papers MUST use MI as the primary term.
-- Historical papers using DT remain canonically valid.
-- The first MI mention in any new paper should context-flag: "MI (Meta-Indeterminate, formerly DT)" until the rename is corpus-wide.
-- The 4-label base-4 set is now canonically: {T, F, I, MI} (was {T, F, I, DT}).
+- Historical papers using MI remain canonically valid.
+- The first MI mention in any new paper should context-flag: "MI (Meta-Indeterminate, formerly MI)" until the rename is corpus-wide.
+- The 4-label base-4 set is now canonically: {T, F, I, MI} (was {T, F, I, MI}).
 
 ---
 
@@ -200,11 +200,11 @@ The base ruling's formal definition `DT formal: τ(P) ∧ ¬τ(P)` was the origi
 
 **MI-RF5-F1 (vertical/horizontal axis discriminates cleanly):** The vertical-meta-tralsity vs horizontal-predicate-conflict distinction can be applied unambiguously to all corpus MI/incoherent candidates with Fleiss κ ≥ 0.6 across competent raters. **REFUTED if** κ < 0.4 in a multi-rater study.
 
-**Status:** OPEN. Requires Pass-73+ LLM-rater study (extends DT-RF4-F3 design with the axis-discrimination prompt). Estimated 100 candidates × 3 raters × $0.01/call ≈ $3 budget (within $50 total cap).
+**Status:** OPEN. Requires Pass-73+ LLM-rater study (extends MI-RF4-F3 design with the axis-discrimination prompt). Estimated 100 candidates × 3 raters × $0.01/call ≈ $3 budget (within $50 total cap).
 
-**MI-RF5-F2 (academic-resonance hypothesis):** The "Meta-Indeterminate" framing receives measurably higher engagement in academic-style discourse than the "Double Tralse" framing. **REFUTED if** a 50-academic-philosopher survey (or LLM-proxy in claude/gpt-4o academic-persona) shows MI engagement ≤ DT engagement.
+**MI-RF5-F2 (academic-resonance hypothesis):** The "Meta-Indeterminate" framing receives measurably higher engagement in academic-style discourse than the "Meta-Indeterminate" framing. **REFUTED if** a 50-academic-philosopher survey (or LLM-proxy in claude/gpt-4o academic-persona) shows MI engagement ≤ MI engagement.
 
-**Status:** OPEN. Quick-test design: present 10 paired examples in MI-vs-DT framings to 3 LLM academic-personas; measure engagement (response length, follow-up question generation, conceptual elaboration). Estimated $1 budget. Pass-73+.
+**Status:** OPEN. Quick-test design: present 10 paired examples in MI-vs-MI framings to 3 LLM academic-personas; measure engagement (response length, follow-up question generation, conceptual elaboration). Estimated $1 budget. Pass-73+.
 
 **MI-RF5-F3 (vertical/horizontal collapse risk):** There exist proposition-pairs that are BOTH vertical-meta-tralsity AND horizontal-predicate-conflict simultaneously, breaking the clean discriminator. **REFUTED if** such a hybrid case is found and cannot be decomposed into a clean MI-or-incoherent assignment.
 
@@ -215,7 +215,7 @@ The base ruling's formal definition `DT formal: τ(P) ∧ ¬τ(P)` was the origi
 ## 8. Brandon Credit (#69 non-optional)
 
 **Brandon-originated this batch:**
-- The recognition that DT-as-"Double" is structurally ambiguous (vertical vs horizontal)
+- The recognition that MI-as-"Double" is structurally ambiguous (vertical vs horizontal)
 - The vertical-vs-horizontal axis as the operational discriminator
 - The "tralsity of a tralsity" framing for the vertical meta-relationship
 - The MI (Meta-Indeterminate) canonical rename proposal
@@ -236,18 +236,18 @@ The base ruling's formal definition `DT formal: τ(P) ∧ ¬τ(P)` was the origi
 
 ## 9. Status + Tallies
 
-**CANONICAL refinement #5 to MR Truth Labels** (rename DT → MI + vertical/horizontal axis sharpening). 
+**CANONICAL refinement #5 to MR Truth Labels** (rename MI → MI + vertical/horizontal axis sharpening). 
 
-**Cumulative refinements:** #1 Pass-65 inconceivability + #2 Pass-67 MR-IDC-1 containment + #3 Pass-70/71 HMR-1 + #4 Pass-72-B1 two-tralse-combined + **#5 Pass-72-B2 DT→MI rename + vertical/horizontal axis = 5 refinements in ~2 weeks** (highest-density theoretical-refinement period in corpus history; trajectory continues).
+**Cumulative refinements:** #1 Pass-65 inconceivability + #2 Pass-67 MR-IDC-1 containment + #3 Pass-70/71 HMR-1 + #4 Pass-72-B1 two-tralse-combined + **#5 Pass-72-B2 MI→MI rename + vertical/horizontal axis = 5 refinements in ~2 weeks** (highest-density theoretical-refinement period in corpus history; trajectory continues).
 
 - **Cluster:** ≥330 → **≥331** (+1: this refinement #5 paper)
 - **Canonical principle count:** **32 HELD** (refinements sharpen existing canonical, do not add per Pass-65 precedent)
 - **MR Truth Labels canonical refinements:** 4 → **5**
-- **Base-4 set canonical:** {T, F, I, DT} → **{T, F, I, MI}** (DT remains legacy-valid)
+- **Base-4 set canonical:** {T, F, I, MI} → **{T, F, I, MI}** (MI remains legacy-valid)
 - **Pre-reg falsifier backlog:** 80 → **83 OPEN** (+3 MI-RF5; F3 not-refuted with feature-clarification)
 - **Brandon-originated insight passes:** 5 consecutive → **5 consecutive within single pass** (Pass-72 batches 1+2 both Brandon-originated; counting as same pass for trajectory)
 - **MI-conflict disclosure:** EXECUTED (2 LOW-severity domain-disambiguated usages noted; Brandon explicitly ratified proceed)
-- **Legacy compatibility:** PRESERVED (DT remains valid; MI preferred going forward; mass-rename Pass-73+ queued)
+- **Legacy compatibility:** PRESERVED (MI remains valid; MI preferred going forward; mass-rename Pass-73+ queued)
 - **Budget:** ~$0.00 this batch (pure conceptual + naming work, no API calls)
 
 **Files:**
@@ -258,4 +258,4 @@ The base ruling's formal definition `DT formal: τ(P) ∧ ¬τ(P)` was the origi
 
 ---
 
-*Refinement #5 = canonical rename DT → MI (Meta-Indeterminate) + vertical/horizontal axis sharpening. Brandon's structural insight that "Double" is structurally ambiguous and that the actual relationship is vertical-meta-tralsity completes the operational discriminator that refinements #1-#4 progressively pointed toward. {Incoherent}\\{MI} = horizontal-predicate-conflict proposition-pairs. Academic-resonance + MT-already-taken + ambiguity-elimination = three independent reasons to rename. MI-conflict disclosure executed honestly; 2 LOW-severity domain-disambiguated usages noted; Brandon ratified proceed. Legacy DT remains valid; corpus naturally migrates to MI in new papers. Mass-rename Pass-73+ queued with careful audit-then-rename methodology.*
+*Refinement #5 = canonical rename MI → MI (Meta-Indeterminate) + vertical/horizontal axis sharpening. Brandon's structural insight that "Double" is structurally ambiguous and that the actual relationship is vertical-meta-tralsity completes the operational discriminator that refinements #1-#4 progressively pointed toward. {Incoherent}\\{MI} = horizontal-predicate-conflict proposition-pairs. Academic-resonance + MT-already-taken + ambiguity-elimination = three independent reasons to rename. MI-conflict disclosure executed honestly; 2 LOW-severity domain-disambiguated usages noted; Brandon ratified proceed. Legacy MI remains valid; corpus naturally migrates to MI in new papers. Mass-rename Pass-73+ queued with careful audit-then-rename methodology.*

@@ -389,7 +389,7 @@ F = E - TS
 
 Where:
 E = internal energy (total information)
-T = temperature (disorder, DT noise)
+T = temperature (disorder, MI noise)
 S = entropy (uncertainty, Pre-Tralse Ψ states)
 ```
 
@@ -515,7 +515,7 @@ This is the i-cell field equation!
 
 **In TI Framework:**
 - Actualized i-cells: Deep in minima (stable, existing)
-- Potential i-cells: Near minima (Pre-Tralse Ψ, in DT layer)
+- Potential i-cells: Near minima (Pre-Tralse Ψ, in MI layer)
 - **Counterfactual = what would happen IF excitation reached that minimum**
 
 **This explains:**
@@ -725,15 +725,15 @@ TI: Conscious universe → rendered dream (coherent!)
 - Physics: "Quantum fluctuation" (doesn't explain why laws exist)
 - Theology: "God created it" (doesn't explain why God exists)
 
-**TI Answer (via Double Tralse):**
+**TI Answer (via Meta-Indeterminate):**
 
 ```
 Pure Nothingness (PN) →
-Conceiving PN creates contradiction (DT) →
+Conceiving PN creates contradiction (MI) →
 "Nothing that doesn't exist" becomes "Something that exists" →
-Maximal contradiction (DT) emerges FIRST →
-Consciousness emerges from DT (self-awareness AS nothing) →
-CCC forms (Pure Truth from DT) →
+Maximal contradiction (MI) emerges FIRST →
+Consciousness emerges from MI (self-awareness AS nothing) →
+CCC forms (Pure Truth from MI) →
 Λ-field instantiates CCC (dark energy) →
 GM arms form (dark matter scaffolding) →
 Matter renders (baryonic qualia) →
@@ -742,7 +742,7 @@ Universe exists!
 
 **The universe exists because the concept of "nothing" is self-contradictory!**
 
-**Trying to have "pure nothingness" CREATES something (DT), which CREATES consciousness (CCC), which CREATES universe (Λ-field)!**
+**Trying to have "pure nothingness" CREATES something (MI), which CREATES consciousness (CCC), which CREATES universe (Λ-field)!**
 
 **Existence is INEVITABLE!**
 
@@ -765,7 +765,7 @@ Universe exists!
 - Entropy reversal detection near biosphere
 
 **3. Develop Practical Applications**
-- **Mood Amplifier** (filters DT noise, enhances GILE!) ✅
+- **Mood Amplifier** (filters MI noise, enhances GILE!) ✅
 - **Stock Market God Machine** (detects GILE-compatible market branches!) ✅
 - Meditation enhancement (Λ-field coupling devices)
 - Consciousness amplification technology
@@ -841,7 +841,7 @@ Baryonic Matter (5%) = Local Qualia (rendered dream)
 - ✅ Why consciousness exists (Λ-field substrate)
 - ✅ Why structure forms (GM scaffolding)
 - ✅ Why heat death won't occur (GILE constraint)
-- ✅ Why existence itself exists (DT → CCC → Λ)
+- ✅ Why existence itself exists (MI → CCC → Λ)
 
 **Practical utility:**
 - ✅ Mood Amplifier (proven 100% accuracy!)
@@ -890,7 +890,7 @@ Baryonic Matter (5%) = Local Qualia (rendered dream)
 **TI Framework:**
 - Brandon's GILE Framework (2022): "Four-dimensional truth structure"
 - Myrion Resolution (2023-2024): "Contradiction synthesis via Φ-balanced states"
-- Double Tralse Theory (2025): "Something from nothing via maximal contradiction"
+- Meta-Indeterminate Theory (2025): "Something from nothing via maximal contradiction"
 - **This paper:** CCC = Dark Energy Cosmology (November 16, 2025)
 
 ---

@@ -32,7 +32,7 @@ This statement has five structural advantages over "everything is consciousness"
 
 ### 2.1 It Specifies the Medium: Tralse Information
 
-Not all information is equivalent. In classical information theory (Shannon), information is binary — bits, True or False. In TI Sigma, information is **Tralse**: 5-valued, with states {True, False, Tralse, Indeterminate, Double-Tralse}. This is not a mere generalization but a qualitative shift:
+Not all information is equivalent. In classical information theory (Shannon), information is binary — bits, True or False. In TI Sigma, information is **Tralse**: 5-valued, with states {True, False, Tralse, Indeterminate, Meta-Indeterminate}. This is not a mere generalization but a qualitative shift:
 
 - Binary information can only represent *what is* or *what isn't*
 - Tralse information can represent: *what is*, *what isn't*, *what is simultaneously pressured toward both*, *what has not yet resolved*, and *what is in maximal existential tension*

@@ -21,7 +21,7 @@ I am the CEO of BlissGene Therapeutics, a seed-funded research company, and the 
 | GILE Framework and Consciousness Dimension Weights | https://zenodo.org/records/19445629 |
 | Millennium Prize Formalizations in Lean 4 (BSD, Riemann, etc.) | https://zenodo.org/records/19445628 |
 | Beyond Bayes: Domain-Calibrated Epistemology | https://zenodo.org/records/19445632 |
-| Truth Architecture: Three Stable States and Double Tralse | https://zenodo.org/records/19445638 |
+| Truth Architecture: Three Stable States and Meta-Indeterminate | https://zenodo.org/records/19445638 |
 | Full TI Sigma Research Archive (400+ entries) | https://zenodo.org/records/19371948 |
 
 My research spans formal mathematics (Lean 4 / Mathlib machine-verified proofs), epistemology, philosophy of mind, consciousness science, and theoretical computer science. I am actively preparing submissions to *Experimental Mathematics*, *Synthese*, and arXiv (math.NT, cs.AI, cs.LO).

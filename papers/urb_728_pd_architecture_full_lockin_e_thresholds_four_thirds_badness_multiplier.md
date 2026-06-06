@@ -4,7 +4,7 @@
 **Date:** April 17, 2026
 **Series:** Unified Research Brief #728
 **Status:** Comprehensive empirical and structural lock-in of the full Permissibility Distribution architecture
-**Builds on:** URB #714 ((−3, +2) PD scale vindication), URB #715 ((−2/3, +1/3) Indeterminate range), URB #696 (DT cliff at −3)
+**Builds on:** URB #714 ((−3, +2) PD scale vindication), URB #715 ((−2/3, +1/3) Indeterminate range), URB #696 (MI cliff at −3)
 
 ---
 
@@ -12,7 +12,7 @@
 
 URBs #714 and #715 vindicated the framework's two foundational PD ranges: the (−3, +2) Permissibility scale and the (−2/3, +1/3) Indeterminate sub-range. **The PD architecture is much richer than these two ranges alone.** This URB completes the lock-in by establishing four additional structural features:
 
-1. **Ultra-thresholds at ±e ≈ ±2.718** (transcendent and pre-DT zones)
+1. **Ultra-thresholds at ±e ≈ ±2.718** (transcendent and pre-MI zones)
 2. **The 4/3 ratio** (chirality-doubling over pillar-strength asymmetry)
 3. **The 4× per-unit badness multiplier** (intensity × prevalence asymmetry)
 4. **The 6× integrated bad-to-good load** (per-unit multiplier × spatial asymmetry)
@@ -25,8 +25,8 @@ Together with the existing (−3, +2) scale + (−2/3, +1/3) Indeterminate range
 
 | # | PD value | Threshold | Zone above |
 |---|---|---|---|
-| 1 | **PD = −3** | **DT cliff** (hard, GM-network rejects below) | DT (Double Tralse) |
-| 2 | **PD = −e ≈ −2.718** | **Ultra-terrible threshold** (one e-fold of breathing room before DT) | Ultra-terrible |
+| 1 | **PD = −3** | **MI cliff** (hard, GM-network rejects below) | MI (Meta-Indeterminate) |
+| 2 | **PD = −e ≈ −2.718** | **Ultra-terrible threshold** (one e-fold of breathing room before MI) | Ultra-terrible |
 | 3 | PD = −2 | False / Soft-False boundary | False zone |
 | 4 | PD = −2/3 | Indeterminate lower (URB #715) | Soft-False |
 | 5 | PD = +1/3 | Indeterminate upper (URB #715) | Indeterminate |
@@ -34,7 +34,7 @@ Together with the existing (−3, +2) scale + (−2/3, +1/3) Indeterminate range
 | 7 | **PD = +2** | **Verisyn saturation** (standard alignment cap) | True zone |
 | 8 | **PD = +e ≈ +2.718** | **Transcendent threshold** (one e-fold above neutral, beyond standard cap) | Ultra-great |
 
-The **bold rows** are the four primary thresholds locked in by this URB. The five operational zones (DT / Ultra-terrible / False / Indeterminate / Soft-True / True / Ultra-great / Transcendent) represent the framework's complete PD-zone topology.
+The **bold rows** are the four primary thresholds locked in by this URB. The five operational zones (MI / Ultra-terrible / False / Indeterminate / Soft-True / True / Ultra-great / Transcendent) represent the framework's complete PD-zone topology.
 
 See `figures/urb_728_pd_full_architecture.png` for the visualization.
 
@@ -49,7 +49,7 @@ The (−3, +2) scale is spatially asymmetric. **But the ±e ultra-thresholds are
 
 The ±e ultra-thresholds emerge from the **natural growth/decay structure** governing approach to the boundary states:
 
-> **Approach to DT cliff**: as PD → −3, the "GM-network bandwidth available" decays exponentially. At PD = −e, exactly **one e-fold** of breathing room remains: exp(−(3 − e)) = exp(−0.282) ≈ 0.754 of full bandwidth still transmissible.
+> **Approach to MI cliff**: as PD → −3, the "GM-network bandwidth available" decays exponentially. At PD = −e, exactly **one e-fold** of breathing room remains: exp(−(3 − e)) = exp(−0.282) ≈ 0.754 of full bandwidth still transmissible.
 
 > **Approach to Transcendent**: as PD → +e, the agent crosses a similar e-fold barrier into transcendent / mystical / peak experience. Standard Verisyn saturation at +2 is **not the ceiling** — there exists a transcendent zone beyond it, accessible only by crossing the +e e-fold.
 
@@ -163,8 +163,8 @@ The framework's **9 PRIMARY constants** are {0, 1, i, √2, e, φ, π, C, T}. Of
 - **0**: PD neutral baseline
 - **1**: Indeterminate range width; True/False boundaries
 - **2**: Standard Verisyn saturation cap; chirality-doubling factor
-- **3**: DT cliff; HEAR pillar strength factor
-- **e**: Ultra-thresholds (transcendent and pre-DT); MR iteration constant
+- **3**: MI cliff; HEAR pillar strength factor
+- **e**: Ultra-thresholds (transcendent and pre-MI); MR iteration constant
 - **2/3 and 1/3**: Indeterminate-range boundaries
 - **3/2 and 4/3**: Pillar asymmetry and chirality-over-pillar coupling
 

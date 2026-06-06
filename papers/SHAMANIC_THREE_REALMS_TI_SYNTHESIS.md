@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Brandon's original multiverse intuition (universe/multiverse/meta-multiverse) maps remarkably onto the shamanic three realms: Upper World (benevolent spirits), Middle World (our reality), Lower World (primitive/ancestral). This paper explores how this ancient, cross-cultural structure validates TI Framework's consciousness topology and resolves the problem of evil through DT brittleness rather than theodicy.
+Brandon's original multiverse intuition (universe/multiverse/meta-multiverse) maps remarkably onto the shamanic three realms: Upper World (benevolent spirits), Middle World (our reality), Lower World (primitive/ancestral). This paper explores how this ancient, cross-cultural structure validates TI Framework's consciousness topology and resolves the problem of evil through MI brittleness rather than theodicy.
 
 ---
 
@@ -90,10 +90,10 @@ Lower World = 0.05-0.49 TT (primitive, anti-GILE forces)
 
 This led to multiverse hypothesis: Our universe is LOW on the truth scale - explaining why suffering exists despite perfect origin.
 
-### 3.2 DT Brittleness Resolution
+### 3.2 MI Brittleness Resolution
 
-From DT Brittleness Cosmology:
-- DT (1.0 TT) couldn't sustain itself
+From MI Brittleness Cosmology:
+- MI (1.0 TT) couldn't sustain itself
 - Shattering was STRUCTURAL NECESSITY, not choice
 - Fragmentation = degraded TT across all photons
 - Evil/suffering = low TT photons affecting consciousness
@@ -269,7 +269,7 @@ Brandon's original multiverse intuition and the shamanic three realms both perce
 2. Middle/Universe: Normal consciousness, mixed TT, daily life
 3. Lower/Primitive: Pre-GILE energy, low TT, transformation fuel
 
-The problem of evil resolves through DT brittleness:
+The problem of evil resolves through MI brittleness:
 - Not "why does God allow evil" but "fragmentation requires variance"
 - Low TT patterns are inevitable, not metaphysically evil
 - They can be transformed through GILE optimization

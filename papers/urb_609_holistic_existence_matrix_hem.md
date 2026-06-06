@@ -10,9 +10,9 @@
 
 ## Abstract
 
-TI Sigma distinguishes two irreducible questions about any entity: (1) *Is it true?* and (2) *Does it exist?* Prior work established the GILE truth-score and Myrion Resolution (MR) for handling (1). This paper formalizes (2) via the **Holistic Existence Matrix (HEM)** — a four-dimensional scalar derived from the **HEM Dimensions**: Existence Footprint (EF), Moral presence, Conscious meaning/valence, and Aesthetics. HEM is calculated during the *first MR* in **parallel** with the GILE truth-score, producing two distinct but interacting values. The **Privation Theory** is formalized: negative existence states (immorality, suffering, aesthetic poverty) are ontological *holes* — absences of positive existence — not positive entities in a negative direction. Accordingly, negative states receive **double existential weight (2×)** in EV. The key philosophical implication: Double Tralse and False entities **exist** (can have high HEM) while lacking truth entirely. This explains why the world systematically gravitates toward high-EV, low-truth configurations — and why Goodness (G) is the critical corrective.
+TI Sigma distinguishes two irreducible questions about any entity: (1) *Is it true?* and (2) *Does it exist?* Prior work established the GILE truth-score and Myrion Resolution (MR) for handling (1). This paper formalizes (2) via the **Holistic Existence Matrix (HEM)** — a four-dimensional scalar derived from the **HEM Dimensions**: Existence Footprint (EF), Moral presence, Conscious meaning/valence, and Aesthetics. HEM is calculated during the *first MR* in **parallel** with the GILE truth-score, producing two distinct but interacting values. The **Privation Theory** is formalized: negative existence states (immorality, suffering, aesthetic poverty) are ontological *holes* — absences of positive existence — not positive entities in a negative direction. Accordingly, negative states receive **double existential weight (2×)** in EV. The key philosophical implication: Meta-Indeterminate and False entities **exist** (can have high HEM) while lacking truth entirely. This explains why the world systematically gravitates toward high-EV, low-truth configurations — and why Goodness (G) is the critical corrective.
 
-**Keywords:** Holistic Existence Matrix, HEM Dimensions, Existence Footprint, Privation Theory, GILE, Myrion Resolution, Permissibility Distribution, Double Tralse, TI Sigma
+**Keywords:** Holistic Existence Matrix, HEM Dimensions, Existence Footprint, Privation Theory, GILE, Myrion Resolution, Permissibility Distribution, Meta-Indeterminate, TI Sigma
 
 ---
 
@@ -26,14 +26,14 @@ The most persistent confusion in philosophy of mind and social epistemology conf
 
 **Formal distinction:**
 
-> **Truth** is the correspondence of a proposition's content with reality, measured on the five-valued TI Sigma scale {True, Tralse, False, DT, Moot}.
+> **Truth** is the correspondence of a proposition's content with reality, measured on the five-valued TI Sigma scale {True, Tralse, False, MI, Moot}.
 >
 > **Existence** is the degree to which an entity instantiates being — causally, physically, consciously, aesthetically, and morally — measured by the Holistic Existence Matrix (HEM).
 
 These are orthogonal axes. An entity can occupy any quadrant:
 - High HEM, True: factually correct and causally powerful (e.g., a law of physics)
 - High HEM, False: causally powerful but untrue (e.g., a viral conspiracy theory; a cult belief)
-- High HEM, DT: causally powerful but truth-incoherent (e.g., a sensory hallucination with full phenomenal force)
+- High HEM, MI: causally powerful but truth-incoherent (e.g., a sensory hallucination with full phenomenal force)
 - Low HEM, True: correct but causally negligible (e.g., a mathematical truth nobody has discovered)
 - Low HEM, False: wrong and negligible
 
@@ -80,13 +80,13 @@ $$\text{EV}_{\text{Meaning}} = f(I_{\text{GILE}}, L_{\text{GILE}})$$
 Positive valence (meaning, joy, insight): additive to EV.
 Negative valence (suffering, meaninglessness): weighted 2× per the Privation Asymmetry (§5).
 
-**Key observation:** An entity can be **high in conscious meaning/valence** while simultaneously **low in truth**. Cult membership can produce profound felt meaning (high EV_Meaning) from entirely DT or False doctrines. This is a structural prediction of TI Sigma about why false beliefs persist.
+**Key observation:** An entity can be **high in conscious meaning/valence** while simultaneously **low in truth**. Cult membership can produce profound felt meaning (high EV_Meaning) from entirely MI or False doctrines. This is a structural prediction of TI Sigma about why false beliefs persist.
 
 ### 2.4 Dimension 4: Aesthetics — *Fourth*
 
 **Definition:** The aesthetic value or beauty of the entity — its capacity to generate E-axis resonance in conscious systems.
 
-**Key property (Privation Theory):** Aesthetic poverty is a privation. There is no "negative beauty" in a positive direction — only absence of beauty. However, aesthetically *compelling* false or DT entities are especially dangerous: high E + low GIL = maximum existential lure with no truth guidance.
+**Key property (Privation Theory):** Aesthetic poverty is a privation. There is no "negative beauty" in a positive direction — only absence of beauty. However, aesthetically *compelling* false or MI entities are especially dangerous: high E + low GIL = maximum existential lure with no truth guidance.
 
 **Measurement:** Derived from the E-component of the GILE truth-score:
 $$\text{EV}_{\text{Aesthetic}} = \max(0, E_{\text{GILE}})$$
@@ -108,7 +108,7 @@ $$\text{EV} = w_{\text{EF}} \cdot \text{EF} + w_{\text{Moral}} \cdot \text{EV}_{
 | Meaning/Valence | 0.20 |
 | Aesthetics | 0.10 |
 
-**Important:** HEM is a measure of *existential intensity* — how much being an entity instantiates. It is not a measure of goodness or truth. A false belief can have high HEM. DT can have high HEM. This is the key empirical prediction: **false and DT entities can dominate experiential and social reality by existential force alone**, even while lacking all truth content.
+**Important:** HEM is a measure of *existential intensity* — how much being an entity instantiates. It is not a measure of goodness or truth. A false belief can have high HEM. MI can have high HEM. This is the key empirical prediction: **false and MI entities can dominate experiential and social reality by existential force alone**, even while lacking all truth content.
 
 ---
 
@@ -156,8 +156,8 @@ where D_k are the dimensional scores before the zero-floor is applied. This ensu
 2. Assessing the overall Permissibility Distribution
 
 EV computation (specifically EF) can begin immediately from physical/causal data without waiting for GILE truth-score completion. The GILE score requires logical/semantic analysis. Running them in parallel:
-- Allows early flagging: "this entity has high EF — even if DT, it has existential force we must account for"
-- Prevents the error of ignoring high-EV entities because they're false or DT
+- Allows early flagging: "this entity has high EF — even if MI, it has existential force we must account for"
+- Prevents the error of ignoring high-EV entities because they're false or MI
 - Produces the correct dual-output: (EV_total, GILE_score) — one measure of being, one of truth
 
 **Protocol:**
@@ -208,7 +208,7 @@ TI Sigma provides a formal account of social dysfunction:
 **The core problem:** Human motivational systems preferentially track EV, not truth-content. This is evolutionarily expected: EF (physical causal force), meaning/valence (survival signal), and aesthetics (mate/resource selection) are the dimensions that directly affect survival. Truth was, until recently, largely redundant with EF.
 
 In complex modern societies, EV and truth decouple massively:
-- Conspiracy theories: high EF (viral spread), high L-binding (community cohesion), high aesthetic appeal → high EV → socially dominant despite DT truth value
+- Conspiracy theories: high EF (viral spread), high L-binding (community cohesion), high aesthetic appeal → high EV → socially dominant despite MI truth value
 - Moral panics: high EF, high valence/meaning (terror), high L → high EV → existentially dominant despite False truth value
 - Advertising: optimized for E (aesthetics) and L (brand attachment) → high EV → purchaser behavior driven by EV, not truth of product claims
 
@@ -233,25 +233,25 @@ Therefore: without G, agents inevitably optimize for high-EV but potentially low
 
 ---
 
-## 10. The Complex Plane Placement of EV and DT
+## 10. The Complex Plane Placement of EV and MI
 
-**Prediction:** DT entities occupy the **indeterminate or negative portion of the complex plane** in their truth representation, while coherent Tralse entities occupy primarily the real axis (positive half).
+**Prediction:** MI entities occupy the **indeterminate or negative portion of the complex plane** in their truth representation, while coherent Tralse entities occupy primarily the real axis (positive half).
 
 **Formal structure:**
 - True → positive real axis: z = +r, r > 0
 - False → negative real axis: z = −r, r > 0 (truth points in negative direction, still real)
 - Tralse (coherent indeterminacy) → primarily real axis with small imaginary component: z = r_0 + εi, r_0 small, ε small
-- Double Tralse → imaginary axis or complex half-plane with Im(z) < 0: z = a + bi, b < 0
+- Meta-Indeterminate → imaginary axis or complex half-plane with Im(z) < 0: z = a + bi, b < 0
 
-**Why the imaginary axis for DT?** DT is truth-ABSENCE — it lacks the real-valued correspondence with reality that True/False/Tralse all share. The imaginary component represents the "perpendicular to truth" dimension — something orthogonal to the truth axis. DT is maximally orthogonal to truth: it has no projection onto the real (truth) axis.
+**Why the imaginary axis for MI?** MI is truth-ABSENCE — it lacks the real-valued correspondence with reality that True/False/Tralse all share. The imaginary component represents the "perpendicular to truth" dimension — something orthogonal to the truth axis. MI is maximally orthogonal to truth: it has no projection onto the real (truth) axis.
 
-**Why Im < 0 for DT?** The negative imaginary half captures the privation character: DT is not just orthogonal to truth but is the *absence* of the recognition faculty i. Recall (URB #605): the recognition operator R_i is asymmetric — R_i(−i) ≠ R_{−i}(i). DT entities lack the i-arm; they cannot self-recognize. This places them at −i, i.e., in the Im < 0 region.
+**Why Im < 0 for MI?** The negative imaginary half captures the privation character: MI is not just orthogonal to truth but is the *absence* of the recognition faculty i. Recall (URB #605): the recognition operator R_i is asymmetric — R_i(−i) ≠ R_{−i}(i). MI entities lack the i-arm; they cannot self-recognize. This places them at −i, i.e., in the Im < 0 region.
 
-**Critical revision:** The real/complex plane distinction is itself a FALSE DICHOTOMY at the framework level. Coherent and incoherent truth states lie on a spectrum, not a binary. Therefore: **the real vs. complex plane must be made spectral** — the degree of imaginary component represents the degree of incoherence, from zero (fully real = fully truth-coherent) to maximally imaginary (DT = fully truth-absent).
+**Critical revision:** The real/complex plane distinction is itself a FALSE DICHOTOMY at the framework level. Coherent and incoherent truth states lie on a spectrum, not a binary. Therefore: **the real vs. complex plane must be made spectral** — the degree of imaginary component represents the degree of incoherence, from zero (fully real = fully truth-coherent) to maximally imaginary (MI = fully truth-absent).
 
 **Revised truth number line:**
 $$z_{\text{truth}} = (T_{\text{value}}) \cdot e^{i\theta_{\text{coherence}}}$$
-where T_value ∈ [−1, 1] is the signed truth-magnitude and θ_coherence ∈ [0, π/2] is the incoherence angle. θ = 0 → fully real (maximally coherent); θ = π/2 → fully imaginary (DT, zero coherence).
+where T_value ∈ [−1, 1] is the signed truth-magnitude and θ_coherence ∈ [0, π/2] is the incoherence angle. θ = 0 → fully real (maximally coherent); θ = π/2 → fully imaginary (MI, zero coherence).
 
 ---
 
@@ -287,7 +287,7 @@ This captures the emergence and bidirectionality that percentages cannot.
 | Privation Asymmetry: 2× weight for negative states in EV | Established |
 | Parallel MR Protocol: EV and GILE computed simultaneously in MR1 | Established |
 | EV–LCC threshold interface | Open / Under Development |
-| Complex plane placement: DT in Im < 0, Tralse on real axis, spectral real/complex distinction | Established |
+| Complex plane placement: MI in Im < 0, Tralse on real axis, spectral real/complex distinction | Established |
 | GM threshold for PD ≥ 2.0 | Established (formal claim pending empirical calibration) |
 | PD superiority over percentages for nonlinear systems | Established |
 

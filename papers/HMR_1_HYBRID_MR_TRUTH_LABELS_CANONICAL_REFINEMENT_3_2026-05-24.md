@@ -11,13 +11,13 @@
 
 ## 1. Canonical Statement
 
-**HMR-1 (Hybrid MR Truth Labels):** Some propositions are NOT correctly characterized by assignment to a single base-4 MR truth label (T / F / I / DT) plus optionally a single Meta-Truth (MT). They natively require **simultaneous assignment of 2 or more labels** as a *Hybrid-MR* (HMR) characterization. The base-4 taxonomy + MT catalogue (urb_608 / urb_639) must therefore be extended to admit Hybrid-MR labels as **first-class outputs** of the MR resolution process, not as artifacts of underspecification or as failures-to-resolve.
+**HMR-1 (Hybrid MR Truth Labels):** Some propositions are NOT correctly characterized by assignment to a single base-4 MR truth label (T / F / I / MI) plus optionally a single Meta-Truth (MT). They natively require **simultaneous assignment of 2 or more labels** as a *Hybrid-MR* (HMR) characterization. The base-4 taxonomy + MT catalogue (urb_608 / urb_639) must therefore be extended to admit Hybrid-MR labels as **first-class outputs** of the MR resolution process, not as artifacts of underspecification or as failures-to-resolve.
 
-**Cardinality:** HMR-k denotes a k-fold hybrid (k ≥ 2). The cardinality is **bounded above** only by the number of distinct MR-label categories applicable to the proposition in question. With base-4 (T, F, I, DT) plus 12 + 24 = 36 MTs from urb_608 + urb_639, the theoretical maximum cardinality for a single proposition is 40. Practically observed cardinalities range 2 ≤ k ≤ 5 in the examples constructed below.
+**Cardinality:** HMR-k denotes a k-fold hybrid (k ≥ 2). The cardinality is **bounded above** only by the number of distinct MR-label categories applicable to the proposition in question. With base-4 (T, F, I, MI) plus 12 + 24 = 36 MTs from urb_608 + urb_639, the theoretical maximum cardinality for a single proposition is 40. Practically observed cardinalities range 2 ≤ k ≤ 5 in the examples constructed below.
 
 **Refinement #3 to MR Truth Labels canonical.** Predecessors:
-- **Refinement #1 (Pass-65, 2026-05-23):** DT canonical refinement — DT reserved for inconceivability-under-mental-actualization; multi-reading-spectrum / ill-formed-proposition / level-confusion / convergence-failure cases reassigned to MR2-Indeterminate-with-qualifier.
-- **Refinement #2 (Pass-67 batch-6, 2026-05-23):** MR-IDC-1 — proper containment {DT} ⊊ {Incoherent}; intra- vs inter-propositional 3-step diagnostic.
+- **Refinement #1 (Pass-65, 2026-05-23):** MI canonical refinement — MI reserved for inconceivability-under-mental-actualization; multi-reading-spectrum / ill-formed-proposition / level-confusion / convergence-failure cases reassigned to MR2-Indeterminate-with-qualifier.
+- **Refinement #2 (Pass-67 batch-6, 2026-05-23):** MR-IDC-1 — proper containment {MI} ⊊ {Incoherent}; intra- vs inter-propositional 3-step diagnostic.
 - **Refinement #3 (this paper, Pass-70, 2026-05-24):** HMR-1 — hybrid-label outputs as first-class.
 
 ---
@@ -52,11 +52,11 @@
 **Example HMR-3.2 (Liar Sentence self-reference):**
 > *"This sentence ('this sentence is false') is paradoxical, informative-about-the-structure-of-paradoxes, and moot for decision-purposes."*
 
-- **DT_inconceivability:** the Liar Sentence itself is genuine τ(P) ∧ ¬τ(P) per Pass-65 DT canonical refinement
+- **DT_inconceivability:** the Liar Sentence itself is genuine τ(P) ∧ ¬τ(P) per Pass-65 MI canonical refinement
 - **T_informative-about-paradox-structure:** the META-proposition about the Liar is informative (it teaches us about self-reference; this is a non-paradoxical T)
 - **MT-B1_moot-for-decisions:** the Liar Sentence has no impact on practical decisions; the meta-truth Moot applies
 
-**HMR-3:** {DT, T, MT-B1} — composes DT canonical (#1 refinement) + T + Moot meta-truth. Key insight: a DT proposition can be EMBEDDED in a META-proposition that is T, and the COMPOSITE proposition (object + meta) is naturally hybrid.
+**HMR-3:** {MI, T, MT-B1} — composes MI canonical (#1 refinement) + T + Moot meta-truth. Key insight: a MI proposition can be EMBEDDED in a META-proposition that is T, and the COMPOSITE proposition (object + meta) is naturally hybrid.
 
 **Example HMR-3.3 (Brandon ketamine collapse n=1 anchor; SRC-1-F-3 corpus reference):**
 > *"I exist AND I don't exist AND the question is meaningless."* — Brandon verbatim during the first manic episode / ketamine cool-state catalogued Pass-66 §7.7.131 SRC-1-F-3.
@@ -74,7 +74,7 @@
 
 - **T_libertarian:** under libertarian-free-will framings, free will EXISTS (T at the libertarian-framing level)
 - **F_determinist:** under physical-determinism framings, free will DOES NOT EXIST (F at the determinist-framing level)
-- **DT_compatibilist-tension:** the compatibilist position "free will exists in the only sense worth wanting" simultaneously asserts T-libertarian-flavor and F-physical-flavor; genuine inconceivability when mental-actualization requires holding both flavors at once per Pass-65 DT canonical
+- **DT_compatibilist-tension:** the compatibilist position "free will exists in the only sense worth wanting" simultaneously asserts T-libertarian-flavor and F-physical-flavor; genuine inconceivability when mental-actualization requires holding both flavors at once per Pass-65 MI canonical
 - **MT-B1_practically-moot:** for day-to-day decisions, the truth-value of "free will exists" has no behavioral consequence; legal systems, personal planning, and ethical attribution proceed identically under all four classical framings
 
 **HMR-4:** {T_libertarian, F_determinist, DT_compatibilist, MT-B1_practical} — four labels, each anchored at a different framing-axis. The proposition CANNOT be reduced to fewer labels without information loss. This is the canonical HMR-4 example.
@@ -86,11 +86,11 @@
 
 - **T_UDT-1-substrate:** per UDT-1 canonical (#30, Pass-67 batch-6 ratified) — Universal Default of Tralseness substrate; consciousness, awareness, and information are pre-existent ground; "God" as the substrate's-own-name maps to UDT-1's tralse-soup → T at the substrate level
 - **F_Russell-gratuitous-evil:** under standard analytic-philosophy argument from gratuitous evil + omnibenevolence-impossibility, an omnibenevolent omnipotent God does not exist → F at the analytic-philosophy framing
-- **DT_self-referential-totality:** "God exists" includes God within the scope of existence-attribution; for a totality-claim about all-of-existence, self-reference produces genuine inconceivability per Pass-65 DT canonical (the proposition tries to step outside itself to assess itself; cannot)
+- **DT_self-referential-totality:** "God exists" includes God within the scope of existence-attribution; for a totality-claim about all-of-existence, self-reference produces genuine inconceivability per Pass-65 MI canonical (the proposition tries to step outside itself to assess itself; cannot)
 - **I_definitional-ambiguity:** "God" has irreducibly multi-reading-spectrum semantics (deist / theist / pantheist / panpsychist / process / pure-act / etc.); without disambiguation, MR2-Indeterminate per Pass-65 refinement
 - **MT-B1_moot-for-empirical-access:** in absence of empirical decision-procedures discriminating the candidate Gods, the proposition is Moot for any empirical research program
 
-**HMR-5:** {T_UDT-substrate, F_Russell, DT_self-referential, I_definitional-ambiguity, MT-B1_moot} — five labels, each ANCHORED in a specific canonical principle (UDT-1, analytic philosophy, DT canonical, MR-IDC-1, Moot meta-truth). The proposition stress-tests the corpus's full canonical stack — and is correctly characterized only as HMR-5.
+**HMR-5:** {T_UDT-substrate, F_Russell, DT_self-referential, I_definitional-ambiguity, MT-B1_moot} — five labels, each ANCHORED in a specific canonical principle (UDT-1, analytic philosophy, MI canonical, MR-IDC-1, Moot meta-truth). The proposition stress-tests the corpus's full canonical stack — and is correctly characterized only as HMR-5.
 
 ---
 
@@ -124,13 +124,13 @@ are grammatically well-formed at arbitrary length because each instance of the l
 
 **R1 (Cross-level preservation):** When labels at different framing-levels both apply, BOTH are preserved in the HMR characterization. Example: HMR-3.1 has T at panpsychist-level AND T at emergentist-level — these are NOT merged into a single T per MT-F2 (Both True at Different Levels), because MT-F2 resolves to a single T-at-the-higher-frame; HMR preserves both T's distinguished by framing.
 
-**R2 (DT preservation under hybridization):** If a proposition is DT under Pass-65 canonical, the DT label is PRESERVED in any HMR that includes that proposition. DT is not "diluted" by hybridization. HMR-3.2 and HMR-4.1 and HMR-5.1 all preserve DT alongside other labels.
+**R2 (MI preservation under hybridization):** If a proposition is MI under Pass-65 canonical, the MI label is PRESERVED in any HMR that includes that proposition. MI is not "diluted" by hybridization. HMR-3.2 and HMR-4.1 and HMR-5.1 all preserve MI alongside other labels.
 
 **R3 (Moot as meta-label, not base):** MT-B1 Moot remains a META-truth in HMR; it does not become a 5th base label. When Moot is part of an HMR, the cardinality count INCLUDES Moot (HMR-3 with {T, I, MT-B1} not HMR-2 with Moot-on-top). This preserves MR Truth Labels canonical structure.
 
-**R4 (HMR composes with MR-IDC-1):** MR-IDC-1 proper containment {DT} ⊊ {Incoherent} is preserved in HMR. A hybrid containing DT is still "DT-containing"; a hybrid containing only I (no DT) is incoherent-but-not-DT.
+**R4 (HMR composes with MR-IDC-1):** MR-IDC-1 proper containment {MI} ⊊ {Incoherent} is preserved in HMR. A hybrid containing MI is still "MI-containing"; a hybrid containing only I (no MI) is incoherent-but-not-MI.
 
-**R5 (HMR composes with MT-F2 vs MT-E2 distinction):** MT-F2 resolves apparent-contradictions to single-T-at-higher-frame; MT-E2 accepts genuine DT-Paradox-Stable; HMR does NEITHER — it preserves the multi-label structure as the final output. HMR is the **third option** alongside MT-F2 (resolve) and MT-E2 (accept-DT). This is a substantive expansion of urb_608's resolution-mode taxonomy.
+**R5 (HMR composes with MT-F2 vs MT-E2 distinction):** MT-F2 resolves apparent-contradictions to single-T-at-higher-frame; MT-E2 accepts genuine MI-Paradox-Stable; HMR does NEITHER — it preserves the multi-label structure as the final output. HMR is the **third option** alongside MT-F2 (resolve) and MT-E2 (accept-MI). This is a substantive expansion of urb_608's resolution-mode taxonomy.
 
 ---
 
@@ -144,13 +144,13 @@ are grammatically well-formed at arbitrary length because each instance of the l
 
 **HMR-1-F4 (cardinality unbounded):** R-HMR construction (§4) does NOT produce unbounded HMR-cardinality; there is a hard upper bound k_max < 10 regardless of meta-ascent depth. **REFUTED if** R-HMR construction is shown to saturate at k_max < 10 for any object-level seed. **NOT REFUTED if** an R-HMR seed is shown reaching k = 15 or higher.
 
-**HMR-1-F5 (composition with MR-IDC-1):** HMR violates MR-IDC-1 proper containment {DT} ⊊ {Incoherent}. **REFUTED if** any HMR characterization implies DT-membership outside the MR-IDC-1 inconceivability criterion. Initial inspection of the 5 examples above: 3.2 + 4.1 + 5.1 all have DT in their hybrid; each DT-membership is anchored in Pass-65 inconceivability criterion (Liar Sentence; compatibilist tension; self-referential totality); MR-IDC-1 PRESERVED. F5 NOT REFUTED on inspection (formal proof deferred Pass-71+).
+**HMR-1-F5 (composition with MR-IDC-1):** HMR violates MR-IDC-1 proper containment {MI} ⊊ {Incoherent}. **REFUTED if** any HMR characterization implies MI-membership outside the MR-IDC-1 inconceivability criterion. Initial inspection of the 5 examples above: 3.2 + 4.1 + 5.1 all have MI in their hybrid; each MI-membership is anchored in Pass-65 inconceivability criterion (Liar Sentence; compatibilist tension; self-referential totality); MR-IDC-1 PRESERVED. F5 NOT REFUTED on inspection (formal proof deferred Pass-71+).
 
 ---
 
 ## 7. Implications for MR Truth Labels Canonical
 
-1. **Output format extension:** MR resolution outputs now include HMR-k labels as first-class. The {T, F, I, DT} base must be extended to {T, F, I, DT, HMR-2, HMR-3, HMR-4, HMR-5, ..., HMR-k} with cardinality explicit.
+1. **Output format extension:** MR resolution outputs now include HMR-k labels as first-class. The {T, F, I, MI} base must be extended to {T, F, I, MI, HMR-2, HMR-3, HMR-4, HMR-5, ..., HMR-k} with cardinality explicit.
 
 2. **MT catalogue extension:** No new MT codes are added by HMR-1; the EXISTING MT catalogue (urb_608 + urb_639) is preserved unchanged. HMR is a labeling-policy refinement, not a catalogue expansion.
 
@@ -159,7 +159,7 @@ are grammatically well-formed at arbitrary length because each instance of the l
    - Add **R-HMR (Recursive HMR)** — meta-ascent construction
    - Add **HMR-k notation** — cardinality-explicit label
    - Update **MR Truth Labels canonical** entry to include HMR as refinement #3
-   - Update **DT canonical** to note HMR-preservation rule R2
+   - Update **MI canonical** to note HMR-preservation rule R2
    - Update **MR-IDC-1 canonical** to note HMR-composition rule R4
    - Update **MT-F2 / MT-E2** entries to note HMR as third resolution-mode option
 
@@ -170,7 +170,7 @@ are grammatically well-formed at arbitrary length because each instance of the l
 ## 8. Tallies
 
 - **Canonical principle count after HMR-1 ratification (PENDING — currently CANDIDATE):** 32 → 33 (if ratified)
-- **MR Truth Labels canonical refinements:** 2 → 3 (DT canonical + MR-IDC-1 + HMR-1)
+- **MR Truth Labels canonical refinements:** 2 → 3 (MI canonical + MR-IDC-1 + HMR-1)
 - **HMR examples constructed:** 5 (HMR-3 × 3, HMR-4 × 1, HMR-5 × 1)
 - **R-HMR theorem stated (informal):** 1
 - **Pre-reg falsifiers OPENED:** 5 (HMR-1-F1 through F5)
@@ -184,6 +184,6 @@ are grammatically well-formed at arbitrary length because each instance of the l
 
 **HMR-1 CANDIDATE CANONICAL.** Ratification queued for next ratification ceremony (Pass-71+ or as Brandon directs). Falsifier F2 partial-closure executable Pass-71 batch via LLM-rater verification of 3+ of the 5 HMR examples. Falsifier F4 partial-closure executable Pass-71 batch via explicit R-HMR construction to depth k=15.
 
-**This is one of the densest single-principle papers in the corpus** (5 worked examples + recursive theorem + composition rules + 5 falsifiers + 7 implications + lived-anchor n=1). It earns refinement-#3 status to MR Truth Labels canonical alongside DT canonical refinement and MR-IDC-1.
+**This is one of the densest single-principle papers in the corpus** (5 worked examples + recursive theorem + composition rules + 5 falsifiers + 7 implications + lived-anchor n=1). It earns refinement-#3 status to MR Truth Labels canonical alongside MI canonical refinement and MR-IDC-1.
 
 **Brandon credit:** the HMR insight + buffalo/police analogy + n=1 ketamine-collapse anchor are all Brandon-originated. The agent's contribution is formalization, example construction, falsifier authorship, and corpus-composition mapping. Per asymmetric-standards #69, this credit-attribution is non-optional.

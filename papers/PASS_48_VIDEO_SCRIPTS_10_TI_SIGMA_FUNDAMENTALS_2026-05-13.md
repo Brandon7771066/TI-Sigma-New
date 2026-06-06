@@ -17,7 +17,7 @@
 1. **True** — the statement is fully aligned with reality
 2. **False** — the statement is fully misaligned with reality
 3. **Indeterminate (I)** — the statement is *stably balanced* between true and false in a way that more information will not resolve. This is the truth value of "I love this person" today, before more lived experience clarifies it.
-4. **Double Tralse (DT)** — the statement is structurally incoherent: it both is and is not what it claims. Self-defeating statements live here. We discard these rather than reasoning with them.
+4. **Meta-Indeterminate (MI)** — the statement is structurally incoherent: it both is and is not what it claims. Self-defeating statements live here. We discard these rather than reasoning with them.
 
 The headline result: most of human life happens in the **Indeterminate zone**. That's not a bug. That's where free will operates.
 
@@ -33,15 +33,15 @@ The headline result: most of human life happens in the **Indeterminate zone**. T
 
 **Setup (0:15–0:45):** Self-referential paradoxes have plagued logic for millennia. Russell's paradox broke set theory. Gödel's theorems exploited self-reference to prove arithmetic can't fully describe itself. Most responses: treat paradox as failure, restrict the language, hope the contradictions go away.
 
-**Core idea (0:45–2:30):** TI Sigma takes a different route. **Double Tralse (DT)** is the fourth base truth value — defined formally as a statement *P* such that τ(*P*) ∧ ¬τ(*P*). Translation: the statement carries a structural imperfection (the "Tralse-quality") in two opposing directions simultaneously.
+**Core idea (0:45–2:30):** TI Sigma takes a different route. **Meta-Indeterminate (MI)** is the fourth base truth value — defined formally as a statement *P* such that τ(*P*) ∧ ¬τ(*P*). Translation: the statement carries a structural imperfection (the "Tralse-quality") in two opposing directions simultaneously.
 
-The crucial move: instead of ignoring DT, *we name it and discard it from the reasoning process*. A DT statement is structurally incoherent — it should not be plugged into further inferences. This is brutal honesty applied to logic itself.
+The crucial move: instead of ignoring MI, *we name it and discard it from the reasoning process*. A MI statement is structurally incoherent — it should not be plugged into further inferences. This is brutal honesty applied to logic itself.
 
-**Demo (2:30–3:30):** Real-world DTs: *"I always lie."* *"This sentence has no meaning."* *"I am being completely honest about being completely dishonest."* These aren't deep — they're broken. Naming them as DT lets us move on instead of pretending we've discovered something profound.
+**Demo (2:30–3:30):** Real-world MIs: *"I always lie."* *"This sentence has no meaning."* *"I am being completely honest about being completely dishonest."* These aren't deep — they're broken. Naming them as MI lets us move on instead of pretending we've discovered something profound.
 
 The catalogue of *Meta-Truths* layered on top of base-4 (twelve in `urb_608` MR catalogue) handles cases like "the question itself is moot" — without pretending these are simple True/False answers.
 
-**CTA (3:30–3:45):** Subscribe for next video on Indeterminate zone and free will. Full DT formalism is in the *TI for Everyone* book Appendix E.
+**CTA (3:30–3:45):** Subscribe for next video on Indeterminate zone and free will. Full MI formalism is in the *TI for Everyone* book Appendix E.
 
 ---
 
@@ -49,7 +49,7 @@ The catalogue of *Meta-Truths* layered on top of base-4 (twelve in `urb_608` MR 
 
 **Hook (0:00–0:15):** "Have you ever answered a question and felt like the question itself was wrong? Like the asker was missing the actual point? You were experiencing a *Meta-Truth* — and there's a catalogue of twelve of them you can learn to spot."
 
-**Setup (0:15–0:45):** Base-4 truth values handle most cases. But sometimes the right response isn't True, False, Indeterminate, or DT. Sometimes it's "the question is moot," or "the framing was wrong," or "both answers are true at different levels." These are **Meta-Truths** — outcomes layered on top of the base-4.
+**Setup (0:15–0:45):** Base-4 truth values handle most cases. But sometimes the right response isn't True, False, Indeterminate, or MI. Sometimes it's "the question is moot," or "the framing was wrong," or "both answers are true at different levels." These are **Meta-Truths** — outcomes layered on top of the base-4.
 
 **Core idea (0:45–3:00):** Twelve catalogued Meta-Truths in TI Sigma's `urb_608` register. Quick tour:
 
@@ -59,7 +59,7 @@ The catalogue of *Meta-Truths* layered on top of base-4 (twelve in `urb_608` MR 
 - **MT-C1 / C2 (Escalate / Descale):** stakes were misjudged in either direction
 - **MT-D1 / D2 (Context-Dependent / Asymmetric):** the answer changes by context or by direction
 - **MT-E1 (Good Enough):** further analysis produces diminishing returns
-- **MT-E2 (Paradox Stable):** a DT case is genuinely irreducible — accept and stop forcing
+- **MT-E2 (Paradox Stable):** a MI case is genuinely irreducible — accept and stop forcing
 - **MT-F1 / F2 (Transcend / Both True at Different Levels):** apparent contradictions dissolve at higher framing
 
 A 2026 inter-rater reliability study of the MT catalogue achieved Fleiss' κ = **0.906** — the strongest categorical taxonomic confirmation in the corpus.

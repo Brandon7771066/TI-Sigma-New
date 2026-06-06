@@ -46,7 +46,7 @@ Dual numbers (ε² = 0) identified as natural algebra for Indeterminate truth va
 | 2 | Charged-lepton mass-ratio (PDG) | #705 | 1% precision |
 | 3 | BOK 4+4 = Dirac equation structure | #699 | 2% precision |
 | 4 | Maxwell knots in Irvine lab | #707 | 5/5 predictions |
-| 5 | UCSB double-frustration as DT | #712 | structural realization |
+| 5 | UCSB double-frustration as MI | #712 | structural realization |
 | 6 | PD architecture loss aversion + negativity bias | #728 | 4× and 6× empirical match |
 
 **In line of sight (predicted, not yet measured)**:
@@ -99,7 +99,7 @@ Five Flagships (the framework's analytical pillars)
 └── HEAR (Holistic Existence Amplification Razor) — Existence-axis pillar (URB #743)
 
 GILE-HEM Architecture (URB #743 update)
-├── Existence axis: HEAR pillar; constants {0, √2, e}; anchors {BOK, Maxwell knots, UCSB DT}
+├── Existence axis: HEAR pillar; constants {0, √2, e}; anchors {BOK, Maxwell knots, UCSB MI}
 ├── Truth axis: MR + PD pillars; constants {1, φ, π}; anchors {Riemann, brain-neutrino, PD-psychology}
 └── Love: cross-axis modulator (bonding modulates E; recognition modulates T; care modulates E×T coupling)
 
@@ -121,7 +121,7 @@ Algebraic Foundation (URB #744)
 ├── False
 ├── Tralse (complex-plane algebra)
 ├── Indeterminate / Moot (dual-number algebra)
-└── Double Tralse (beyond DT magnitude horizon)
+└── Meta-Indeterminate (beyond MI magnitude horizon)
 ```
 
 ---

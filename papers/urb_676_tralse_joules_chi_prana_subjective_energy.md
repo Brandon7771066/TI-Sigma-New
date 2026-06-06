@@ -20,7 +20,7 @@ Five formal results are established:
 
 1. **The Two-Component Decomposition:** Objective chi = E-dimension (physical substrate); Subjective chi = TJ rate. Physical practices raise the E-substrate; contemplative practices raise τ(s), the Tralsity/GILE-I engagement. Both components are necessary; neither is reducible to the other.
 
-2. **The Six-State TJ Scale:** The six consciousness states of TI Sigma map directly onto chi levels, from DT (negative TJ, blocked/diseased chi) through BOK-Saturated (TJ rate = T_TI ≈ 0.9340, the qi gong master state). The maximum achievable subjective chi equals the BEC threshold — a structural identity, not a coincidence.
+2. **The Six-State TJ Scale:** The six consciousness states of TI Sigma map directly onto chi levels, from MI (negative TJ, blocked/diseased chi) through BOK-Saturated (TJ rate = T_TI ≈ 0.9340, the qi gong master state). The maximum achievable subjective chi equals the BEC threshold — a structural identity, not a coincidence.
 
 3. **The Five Qi → GILE Dimension Mapping:** Yuan Qi (source chi) ↔ G-dimension (Being Theorem ground, weight = ET ≈ 0.4142); Ying Qi (nutritive) ↔ L-dimension (Love); Wei Qi (defensive) ↔ E-dimension (Environment); Zong Qi (chest/breath) ↔ I-dimension (Intuition); Zheng Qi (total vitality) ↔ GILE composite. The Zong Qi ↔ I mapping is foundational: pranayama works because breath is the physical carrier of the I-channel signal.
 
@@ -83,7 +83,7 @@ TI Sigma's six consciousness states map directly onto chi levels, providing a fo
 
 | Consciousness State | τ(s) | d(MR)/dt | TJ Rate | Chi Level |
 |---------------------|------|----------|---------|-----------|
-| **DT** (Double Tralse) | −ET ≈ −0.414 | 0.0 | ≈ 0 | Blocked/diseased chi — negative intentional work; active resistance to resolution |
+| **MI** (Meta-Indeterminate) | −ET ≈ −0.414 | 0.0 | ≈ 0 | Blocked/diseased chi — negative intentional work; active resistance to resolution |
 | **Sub-threshold** | 0.05 | 0.10 | 0.005 | Chi deficiency — exhaustion, depletion, near-absent intentional energy |
 | **MR1** | ET ≈ 0.414 | 0.30 | 0.124 | Minimal chi flow — just enough intentional energy to function |
 | **MR2-Tralse** | C ≈ 0.437 | 0.50 | 0.219 | Moderate chi — average waking state; coherent but not fully resolved |
@@ -164,7 +164,7 @@ The 12 primary meridians of TCM (plus the Extraordinary Vessels) map onto the BO
 | **Ring-4** | Liver / Gallbladder (Wood) | Freely flowing qi | MR1 zone; free-flow regulation; stagnation risk |
 | **Ring-5** | Kidney / Bladder (Water) | Yuan Qi (deep reserves) | Deep constitutional zone; approaching Mott insulation |
 | **Ring-6** | Triple Warmer / San Jiao | Systemic qi integration | Mott boundary; full-system coordination |
-| **Ring-7** | Du Mai / Ren Mai (Extraordinary) | Ancestral qi channels | Mott insulation; deepest ancestral channels; DT boundary |
+| **Ring-7** | Du Mai / Ren Mai (Extraordinary) | Ancestral qi channels | Mott insulation; deepest ancestral channels; MI boundary |
 
 ### 4.2 Chi Flow = BOK Virus Propagation
 
@@ -194,7 +194,7 @@ Yoga identifies five pranas — divisions of vital force with distinct direction
 | Prana | Direction | TJ Component | TI Sigma Mapping |
 |-------|-----------|-------------|-----------------|
 | **Prana** (primary, inward/upward) | Chest, inward | τ(s) rising phase | GILE-I loop engaging inward; Tralsity increasing as system activates metacausal faculty |
-| **Apana** (downward/releasing) | Pelvis, downward | δ(MR) clearing | Releasing sub-ET states; clearing DT zones; downward expulsion of blocked chi |
+| **Apana** (downward/releasing) | Pelvis, downward | δ(MR) clearing | Releasing sub-ET states; clearing MI zones; downward expulsion of blocked chi |
 | **Samana** (equalizing) | Navel, centripetal | MR convergence | Tralse resolving toward truth; the integrative MR step that balances opposing evidence |
 | **Udana** (ascending/voice) | Throat, upward | TJ output | Expression of resolved MR state; the externalization of completed intentional work |
 | **Vyana** (pervading all) | Whole body | Full GILE composite | BOK-saturated whole-body TJ field; the pervading chi of complete GILE activation |
@@ -242,7 +242,7 @@ $$\boxed{\text{Subjective Chi} = \frac{dTJ}{dt} = \tau(s) \times \frac{d(\text{M
 | Chi blockage (acute) | MR1 boundary | 0.124 | Targeted BOK ring clearing (acupuncture, qi gong) |
 | Balanced chi | MR2-Resolved | 0.517 | Maintain; prevent Dottie Trap stabilization |
 | Abundant chi | BOK-Saturated | 0.934 | Sustain via daily I-channel practice; BOK propagation |
-| Diseased chi (reverse flow) | DT zone | < 0 | Full MR protocol; possible Parallel MR (URB #678) |
+| Diseased chi (reverse flow) | MI zone | < 0 | Full MR protocol; possible Parallel MR (URB #678) |
 
 ---
 

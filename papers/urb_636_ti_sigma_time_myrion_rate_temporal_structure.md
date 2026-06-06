@@ -137,7 +137,7 @@ Standard logic is tenseless — "P is true" holds outside of time. TI Sigma's fi
 | **TRALSE-INDETERMINATE** | The proposition is active in the present Tralse interval — not yet resolved |
 | **TRALSE-FALSE** | The proposition was partially true but is in the process of being falsified by MR |
 | **FALSE** | The proposition is fully non-actualized — never entered the MR stream |
-| **DOUBLE TRALSE** | The proposition generated an incoherent MR loop — it is neither past nor present nor future; it is **atemporal nonsense** |
+| **META-INDETERMINATE** | The proposition generated an incoherent MR loop — it is neither past nor present nor future; it is **atemporal nonsense** |
 
 **Tense in TI Sigma:**
 - **Past** = set of TRUE and TRALSE-FALSE states (resolved or being resolved downward)

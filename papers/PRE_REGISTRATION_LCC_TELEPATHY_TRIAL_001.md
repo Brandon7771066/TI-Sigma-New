@@ -12,7 +12,7 @@
 
 | Rank | Number | Subjective Probability | Chance Baseline | Lift | Primary Reasoning |
 |------|--------|-----------------------|-----------------|------|-------------------|
-| **Primary** | **7** | ~38% | 10% | 3.8× | (a) "Brandon" = 7 letters, name-number derivation cited in `MULTI_SOURCE_PSI_RECONCILIATION.md` as "NOT coincidence"; (b) Double-7 = Double Tralse symmetry, dedicated paper `IRIDIUM_77_TI_SYNCHRONICITY_ANALYSIS.md`; (c) universal human-7-bias in 1–10 range (~28% baseline across psychology lit — Kubovy & Psotka 1976, replicated extensively); (d) cooperative-contemplation framing favors high-Schelling-point picks |
+| **Primary** | **7** | ~38% | 10% | 3.8× | (a) "Brandon" = 7 letters, name-number derivation cited in `MULTI_SOURCE_PSI_RECONCILIATION.md` as "NOT coincidence"; (b) Double-7 = Meta-Indeterminate symmetry, dedicated paper `IRIDIUM_77_TI_SYNCHRONICITY_ANALYSIS.md`; (c) universal human-7-bias in 1–10 range (~28% baseline across psychology lit — Kubovy & Psotka 1976, replicated extensively); (d) cooperative-contemplation framing favors high-Schelling-point picks |
 | **Runner-up** | **5** | ~18% | 10% | 1.8× | 5-valued logic is foundational across the corpus; central operative number in TI Sigma; if you're in framework-contemplation mode (which your last message suggests), 5 is high-availability |
 | **Tertiary** | **3** | ~12% | 10% | 1.2× | Central truth value in 5-valued logic (the middle one); LCC three phases (LATCH/CORRELATE/DECODE); LCC three i-cell layers (VESSEL/ME/SOUL); "third eye" / triadic structures recur in the corpus |
 

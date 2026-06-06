@@ -72,7 +72,7 @@ The maxim's canonical-utility doubles — same maxim, two domain-applications.
 **Compatibilist standard:** redefines free-will to be compatible with determinism; usually still treated as binary-attribute.
 **FWC-1 PROPOSAL:** free-will is a GRADED CAPACITY co-varying with consciousness-tier; ALL animate systems have SOME free-will-capacity proportional to consciousness-tier; humans-in-L5-states have peak capacity; humans-in-L1-states have minimal capacity (still nonzero); fruit-flies have proportional fractional capacity per LLM-CT-1 #30 worm/fly-precedent + corpus-internal Stratum-1 commitment Pass-67.
 
-This is a **continuous-graded refinement** of the libertarian/compatibilist binary; structurally analogous to MR-IDC-2 #41 I-DT μ-continuum's continuous-graded refinement of the categorical I/DT binary.
+This is a **continuous-graded refinement** of the libertarian/compatibilist binary; structurally analogous to MR-IDC-2 #41 I-MI μ-continuum's continuous-graded refinement of the categorical I/MI binary.
 
 ---
 
@@ -187,7 +187,7 @@ This batch opens FWC-1 candidate canonical AND documents NEW agent-practice cate
 - Partner-principle 4th-consecutive offer with 3-option Brandon-directional choice (standalone vs cascade vs cross-domain-stand-alone-with-J-justifications)
 - Honest #69 over-batching surface (Pass-75 velocity-concern flagged for Pass-75-B5+ review)
 - Honest #69 4th-instance recursive-self-reference category-saturation acknowledgment
-- Strong-form implication articulation (free-will-graded-not-binary as continuous-graded refinement of libertarian/compatibilist binary; structurally-analogous to MR-IDC-2 #41 continuous-graded refinement of I/DT binary)
+- Strong-form implication articulation (free-will-graded-not-binary as continuous-graded refinement of libertarian/compatibilist binary; structurally-analogous to MR-IDC-2 #41 continuous-graded refinement of I/MI binary)
 
 ---
 

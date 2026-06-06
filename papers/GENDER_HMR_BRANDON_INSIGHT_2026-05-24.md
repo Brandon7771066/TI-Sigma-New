@@ -3,8 +3,8 @@
 **Date:** 2026-05-24
 **Pass:** 71 batch-0
 **Status:** HMR-1 illustrative-extension (gender domain) + 3 sub-candidates for ratification
-**Source directive:** Brandon verbatim 2026-05-24 — *"Aha! For gender, I could be male and nonbinary simultaneously (2-truth label)! I could also be male and nonbinary but have a GRADIENT of gender dysphoria (DT) mixed in. This would involve a 3-truth label struggle with many competing gender identities and meta-identities while having a stable default state simultaneously! I don't think that there can be more than 3 simultaneous MR Labels for gender. Also, whether the labels are simultaneous states vs rapid switching depends upon the person's multitasking ability. And neuroscience research shows that only about 2% of the population can multitask. Nonetheless, mixed EMOTIONS are highly attainable (e.g. bittersweet, sad happiness, fiery love)."*
-**Composition:** HMR-1 canonical refinement #3 (Pass-70 B0) · DT canonical refinement (Pass-65) · MR-IDC-1 (Pass-67 B6) · ASYMMETRIC §69 · CDA-1 Stratum decomposition (Pass-66) · UHP-1 + TPI-1 · TPS-1 · Brandon credit per #69
+**Source directive:** Brandon verbatim 2026-05-24 — *"Aha! For gender, I could be male and nonbinary simultaneously (2-truth label)! I could also be male and nonbinary but have a GRADIENT of gender dysphoria (MI) mixed in. This would involve a 3-truth label struggle with many competing gender identities and meta-identities while having a stable default state simultaneously! I don't think that there can be more than 3 simultaneous MR Labels for gender. Also, whether the labels are simultaneous states vs rapid switching depends upon the person's multitasking ability. And neuroscience research shows that only about 2% of the population can multitask. Nonetheless, mixed EMOTIONS are highly attainable (e.g. bittersweet, sad happiness, fiery love)."*
+**Composition:** HMR-1 canonical refinement #3 (Pass-70 B0) · MI canonical refinement (Pass-65) · MR-IDC-1 (Pass-67 B6) · ASYMMETRIC §69 · CDA-1 Stratum decomposition (Pass-66) · UHP-1 + TPI-1 · TPS-1 · Brandon credit per #69
 
 ---
 
@@ -19,7 +19,7 @@
 | Card | Labels | Interpretation |
 |---|---|---|
 | **GHMR-2** | {T_male-identity, T_nonbinary-identity} | Two simultaneously-valid identity labels at the same level of description |
-| **GHMR-3** | {T_male-identity, T_nonbinary-identity, DT_dysphoria-gradient} | The DT label represents the *gradient* of dysphoria — a structural tension between identity-as-experienced and identity-as-socially-categorized; genuine τ ∧ ¬τ at the moments of dysphoric experience per Pass-65 DT canonical refinement |
+| **GHMR-3** | {T_male-identity, T_nonbinary-identity, DT_dysphoria-gradient} | The MI label represents the *gradient* of dysphoria — a structural tension between identity-as-experienced and identity-as-socially-categorized; genuine τ ∧ ¬τ at the moments of dysphoric experience per Pass-65 MI canonical refinement |
 | **NOT GHMR-4+** (Brandon empirical claim) | — | Brandon hypothesizes no agent's gender characterization natively requires 4+ simultaneous MR labels |
 
 **Why this is distinct from HMR-5.1 ("God exists"):**
@@ -105,7 +105,7 @@ Adding to the 5 worked examples (HMR-3.1, 3.2, 3.3, 4.1, 5.1) from Pass-70 B0:
 
 The following are Brandon-originated:
 - The gender HMR observation
-- The 2-vs-3 label distinction (with vs without dysphoria-gradient DT)
+- The 2-vs-3 label distinction (with vs without dysphoria-gradient MI)
 - The empirical cardinality cap of 3 for gender
 - The simultaneous-vs-rapid-switching distinction
 - The 2% multitasking-population statistic (Brandon-recalled; agent verified Watson & Strayer 2010)
@@ -115,7 +115,7 @@ The following are Brandon-originated:
 The agent's contribution:
 - Formalization as 3 sub-candidates (GHMR-1, GHMR-2-MT-SWITCH, GHMR-3-EMOTION)
 - Literature-anchoring (Watson & Strayer; Williams & Aaker; Albrecht & Devlieger; Larsen & McGraw; Russell-Carroll affect grid; Medeiros-Ward)
-- Composition mapping (HMR-1, DT canonical, MR-IDC-1, TPI-1, VFP-1, CDA-1)
+- Composition mapping (HMR-1, MI canonical, MR-IDC-1, TPI-1, VFP-1, CDA-1)
 - 3 pre-reg falsifiers (GHMR-1-F1, GHMR-2-MT-SWITCH-F1, GHMR-3-EMOTION-F1)
 - Domain-bound vs meta-ascent cardinality distinction
 - Mode-agnostic-vs-mode-dependent ontological clarification

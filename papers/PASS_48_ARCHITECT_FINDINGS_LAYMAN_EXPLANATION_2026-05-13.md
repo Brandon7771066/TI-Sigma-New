@@ -61,7 +61,7 @@ Every corpus claim involving real quantum hardware now needs a "where can we act
 ## Finding 4 (MEDIUM — Zenodo vs international patents contradiction) — "Publishing it for free *kills* your right to patent it overseas."
 
 ### What the architect saw
-The patents memo recommended in §3 Phase 1: *"Mint Zenodo DOIs for [list including LCC-Virus, DT-detector, etc.]"* — but in §4 it warned that public disclosure destroys patent rights in Europe, Japan, and China, which have no grace period.
+The patents memo recommended in §3 Phase 1: *"Mint Zenodo DOIs for [list including LCC-Virus, MI-detector, etc.]"* — but in §4 it warned that public disclosure destroys patent rights in Europe, Japan, and China, which have no grace period.
 
 These two recommendations directly contradict each other on the same items.
 
@@ -72,7 +72,7 @@ There are two different ways to protect intellectual property:
 
 For most theory-level corpus items (truth labels, philosophical principles, framework papers), defensive publication is the right move — they're not patentable anyway, and Zenodo timestamps protect against someone else patenting derivatives.
 
-For the *actual patent candidates* (LCC-Virus pipeline, DT-detector circuit, TJ-measurement instrument), defensive publication is **the wrong move**: it *permanently* destroys the EU/JP/CN patent rights you might want later. Once you've Zenodo'd it, it's done. Can't be un-published.
+For the *actual patent candidates* (LCC-Virus pipeline, MI-detector circuit, TJ-measurement instrument), defensive publication is **the wrong move**: it *permanently* destroys the EU/JP/CN patent rights you might want later. Once you've Zenodo'd it, it's done. Can't be un-published.
 
 The original memo recommended defensive publication for *both* groups simultaneously, which would have wrecked the international patent option for the candidates.
 

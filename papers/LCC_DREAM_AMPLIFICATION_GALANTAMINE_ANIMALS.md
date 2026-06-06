@@ -238,7 +238,7 @@ This is a form of INTERNAL LCC:
 - One aspect of i-cell (waking self) connects with
 - Another aspect (dreaming self)
 - Creating self-referential consciousness loop
-- Double Tralse structure!
+- Meta-Indeterminate structure!
 ```
 
 ### 4.3 Galantamine Enhances I-Cell Coherence

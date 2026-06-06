@@ -228,7 +228,7 @@ These are not blocked by data — they await Brandon's authoritative canonizatio
 | **D5** | **m26 GM-Network graph** | Pass 26 | Choose among 3 sketched GM-Network candidates (C1/C2/C3) |
 | **D6** | **t26 i-cell-of-fields** | Pass 26 | Canonicalize i-cell-of-fields construction |
 | **D7** | **n26 TIL/TML naming** | Pass 26 | Resolve TIL vs TML naming |
-| **D8** | **v27 V(e^{iπ}) = −1 reading** | Pass 27 §5.2 | Choose among R-A (trivial, V=identity), R-B (i_TI as rotation operator), R-C (Brandon's "both correct" CCC=1, tralse=0, DT=i, T=−1) |
+| **D8** | **v27 V(e^{iπ}) = −1 reading** | Pass 27 §5.2 | Choose among R-A (trivial, V=identity), R-B (i_TI as rotation operator), R-C (Brandon's "both correct" CCC=1, tralse=0, MI=i, T=−1) |
 
 **Implication:** D4 directly affects whether we have a 9th confirmation (C7 → confirmed) or whether C7 is retired alongside R8. D8 directly affects whether v27 Lean4 formalization (T1 opportunity O3 below) is even meaningful.
 
@@ -280,7 +280,7 @@ Beyond clean confirmations and refutations, several Pass-actions reframed claims
 
 1. **R7 → C1 reframe**: H4-TSC original-direction refutation directly *generated* the R-A confirmation. The refutation was net-positive in information yield. (Pass 18 → 20 → 21.)
 2. **MBE / GBRH formalization (Pass 15)**: Recast Pass-14 numerology marginal-suggestiveness as "Matthew-Bayesian Effect: heavy-tailed individual base rates make population-marginal nulls inadmissible for Brandon-cluster." Not a confirmation, but a *principled framing* of why R6's standalone-evidence-failure does not falsify the cluster-claim.
-3. **DT/DefT rename (Pass 37 / §7.7.37)**: Resolved a terminological conflict that had been a hidden source of "false agreement." Discipline win, not empirical.
+3. **MI/DefT rename (Pass 37 / §7.7.37)**: Resolved a terminological conflict that had been a hidden source of "false agreement." Discipline win, not empirical.
 4. **PD canonization (Pass 6)**: Brandon ruled PD = Permissibility Distribution canonically; Phenomenal Directness retracted as Replit-distortion. PD = (−3, 2) Perfect-Fifth-derived Riemann-connected interval. Discipline + naming, not empirical.
 5. **PD complex-plane recanonization (Pass 8)**: PD geometry → complex plane, affine PD(s) = 5(σ−1/2) + i·γ/γ_1 ratified.
 6. **Jointly: Sacred-Interval globally renamed Indeterminate Permissibility Distribution Range** (Pass 5; 153 → 0 occurrences). Naming discipline.

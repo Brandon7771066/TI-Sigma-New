@@ -55,7 +55,7 @@ Three immediate consequences:
 3. **The L*/+E projection from URB #769 still holds, and now sharpens.** Under L*/+E:
    - The BT-as-self-presentation falls into **+E** (substrate-level, the BT being what it is)
    - The statement-about-BT falls into **L*** (qualitative-relational, the depicting relation)
-   - The mode-of-being indicator (existence vs. nonexistence) is preserved on the +E side as a 5-valued logic state under MR (the BT either exists or not, or sits in one of τ / ι / δ — Tralse, indeterminate, double-Tralse).
+   - The mode-of-being indicator (existence vs. nonexistence) is preserved on the +E side as a 5-valued logic state under MR (the BT either exists or not, or sits in one of τ / ι / δ — Tralse, indeterminate, meta-indeterminate).
 
 ### A.6 Updated PRIMARY-constant mapping for clause 4
 

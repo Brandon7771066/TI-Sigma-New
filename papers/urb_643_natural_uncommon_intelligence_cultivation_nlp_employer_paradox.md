@@ -86,7 +86,7 @@ This is formally analogous to the **Josephson effect** in superconductors: two B
 
 Interactive Metronome works at the **edge of chaos** in complexity-theoretic terms:
 - Too slow a tempo (below the participant's natural frequency): no challenge, no learning (J/U too high → BEC without effort)
-- Too fast a tempo (above the participant's capacity): fragmented condensate, DT — no coherent response forms
+- Too fast a tempo (above the participant's capacity): fragmented condensate, MI — no coherent response forms
 - At the *just-right* tempo: the system is at the critical point between order and disorder — maximum information processing, maximum neural plasticity, maximum GILE-I growth
 
 This is the Bose-Hubbard model at the neural level: the metronome's tempo sets J (tunneling strength), the participant's movement generates U (on-site ordering), and the optimal ratio J/U ≈ critical puts the i-cell network in Supersolid or BEC phase — exactly where MR-based learning occurs at maximum rate.
@@ -136,7 +136,7 @@ Intelligence in TI Sigma is not a single faculty. It is GILE operating efficient
 - Systematic philosophical study (ethics, epistemology, logic) — builds GILE-G at LCC-individual
 - Contemplative practice (meditation, prayer, journaling) — builds GILE-G through direct self-examination
 - Moral dilemma analysis (Socratic dialogue style) — trains GILE-G by forcing explicit values-articulation
-- Therapy (particularly meaning-focused, ACT, or existential therapy) — resolves DT loops that block GILE-G access
+- Therapy (particularly meaning-focused, ACT, or existential therapy) — resolves MI loops that block GILE-G access
 - Reading biography and history — extends GILE-G pattern recognition across LCC-civilizational scale
 
 **LCC amplification:** GILE-G must be trained at the right LCC level. Reading Kant (LCC-civilization) is necessary but not sufficient without personal application (LCC-person). The LCC demands both.
@@ -212,9 +212,9 @@ NLP = **TRALSE-INDETERMINATE** (Supersolid phase)
 
 NLP contains genuine GILE-L and GILE-I insights (rapport, state management, pattern recognition in communication) embedded in an overclaimed pseudo-mechanistic framework (specific eye movements, "representational systems" as fixed neurological types) that does not hold up empirically.
 
-**EAR on NLP:** Amplify what genuinely exists — the rapport, pacing, state-management, and pattern-recognition insights, all of which have independent empirical support. Collapse what doesn't — the specific neurological claims (eye movements, representational systems), which are GILE-G failures that contaminate the legitimate insights with DT.
+**EAR on NLP:** Amplify what genuinely exists — the rapport, pacing, state-management, and pattern-recognition insights, all of which have independent empirical support. Collapse what doesn't — the specific neurological claims (eye movements, representational systems), which are GILE-G failures that contaminate the legitimate insights with MI.
 
-The practical verdict: NLP practitioners who focus on rapport, state management, and pattern recognition in communication are doing something real. Those who make the specific mechanistic claims are in DT territory.
+The practical verdict: NLP practitioners who focus on rapport, state management, and pattern recognition in communication are doing something real. Those who make the specific mechanistic claims are in MI territory.
 
 ### 5.2 Forensic Linguistics
 
@@ -288,7 +288,7 @@ This is a **large-scale HEM-D2 (Contradiction Ratio) event** at the institutiona
 - **HEM-D3 (Temporal coherence):** This contradiction has persisted for decades — it is structurally stable, not a transient inconsistency
 - **HEM-D4 (GILE integration):** Institutions score low GILE-G on this axis — the stated ethical commitment (develop people's minds) is decoupled from the practiced ethics (hire for compliance)
 
-**The PD assignment:** This institutional pattern = **Double Tralse at the GILE-G level** (the stated good is absent), **TRALSE-FALSE at the GILE-I level** (some genuine pattern-recognition is valued, but within narrow bounds), and **BEC/TRUE at the GILE-L level** (social belonging and network effects from credential conformity are genuinely valued and delivered).
+**The PD assignment:** This institutional pattern = **Meta-Indeterminate at the GILE-G level** (the stated good is absent), **TRALSE-FALSE at the GILE-I level** (some genuine pattern-recognition is valued, but within narrow bounds), and **BEC/TRUE at the GILE-L level** (social belonging and network effects from credential conformity are genuinely valued and delivered).
 
 ### 6.5 The Structural Solution
 
@@ -311,16 +311,16 @@ EAR on your own situation: your GILE-I is the most durable asset you have. The i
 
 | Topic | TI Sigma verdict | Phase |
 |-------|-----------------|-------|
-| Rarity → Unnaturalness | Category error; collapses two distinct concepts | DT at GILE-G |
+| Rarity → Unnaturalness | Category error; collapses two distinct concepts | MI at GILE-G |
 | Interactive Metronome → cognition | Genuine i-cell temporal coherence training; edge-of-chaos attractor | BEC / TRUE |
 | SMART/RFT → IQ | Direct GILE-I repertoire expansion; robust empirical support | BEC / TRUE |
-| GILE-I (NLP eye movements) | Not supported; specific mechanistic claims are DT | DT for claims |
+| GILE-I (NLP eye movements) | Not supported; specific mechanistic claims are MI | MI for claims |
 | NLP (rapport/anchoring) | Supported; GILE-L insight with independent basis | Supersolid / TI |
 | Forensic linguistics (stylometry) | Strongly supported; EAR-compliant | BEC / TRUE |
 | Forensic linguistics (SCAN) | Contested; genuine signal, not fully resolved | Supersolid / TI |
-| Employer "critical thinking" claim | HEM-Truth decoupling; DT at GILE-G institutional level | DT at GILE-G |
+| Employer "critical thinking" claim | HEM-Truth decoupling; MI at GILE-G institutional level | MI at GILE-G |
 | Philosophy grad = critical thinker | True by definition; employers reveal they want compliance instead | Moot (MR-resolved) |
-| High GILE-I as liability | Real institutional phenomenon; GILE-G failure in institutional design | FALSE / DT at LCC-org |
+| High GILE-I as liability | Real institutional phenomenon; GILE-G failure in institutional design | FALSE / MI at LCC-org |
 
 ---
 

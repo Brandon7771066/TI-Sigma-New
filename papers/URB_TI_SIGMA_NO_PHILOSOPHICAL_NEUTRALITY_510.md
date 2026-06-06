@@ -10,7 +10,7 @@
 
 ## Abstract
 
-We prove the **Unavoidable Embedding Theorem (UET)**: for any foundational philosophical question encountered repeatedly across a human lifetime, the probability of a genuinely neutral prior approaches zero. Claimed neutrality on such questions is not the absence of a position but rather a **Double Tralse Type 3** error (Self-Refuting Meta-Statement): a claim of indeterminacy that is itself determinate. Philosophical priors are installed through lived experience long before formal philosophical inquiry begins. By the time a person consciously encounters the "free will debate," they have already voted on it hundreds of times through their attributions of praise, blame, regret, and effort. We distinguish three epistemic states — **Recognized Commitment** (TRUE/FALSE), **Unexamined Commitment** (MR_PEND), and **Claimed Neutrality** (Double Tralse Type 3) — and argue that genuine philosophical inquiry requires prior extraction before evaluation. The TI Sigma implication: authentic LCC scoring demands surfacing embedded priors, because unrecognized commitments bias coherence measurement from within.
+We prove the **Unavoidable Embedding Theorem (UET)**: for any foundational philosophical question encountered repeatedly across a human lifetime, the probability of a genuinely neutral prior approaches zero. Claimed neutrality on such questions is not the absence of a position but rather a **Meta-Indeterminate Type 3** error (Self-Refuting Meta-Statement): a claim of indeterminacy that is itself determinate. Philosophical priors are installed through lived experience long before formal philosophical inquiry begins. By the time a person consciously encounters the "free will debate," they have already voted on it hundreds of times through their attributions of praise, blame, regret, and effort. We distinguish three epistemic states — **Recognized Commitment** (TRUE/FALSE), **Unexamined Commitment** (MR_PEND), and **Claimed Neutrality** (Meta-Indeterminate Type 3) — and argue that genuine philosophical inquiry requires prior extraction before evaluation. The TI Sigma implication: authentic LCC scoring demands surfacing embedded priors, because unrecognized commitments bias coherence measurement from within.
 
 ---
 
@@ -74,10 +74,10 @@ The UET allows a precise classification of philosophical epistemic states using 
 |---|---|---|---|
 | **Recognized Commitment** | TRUE or FALSE | Person knows they hold a view and can articulate it | "I am a compatibilist and here is why" |
 | **Unexamined Commitment** | MR_PEND | View exists (embedded) but has not been surfaced or examined | Someone who has always blamed others freely but claims to be "undecided" on free will |
-| **Claimed Neutrality** | Double Tralse Type 3 | Asserts indeterminacy while the assertion itself is determinate; self-refuting | "I have no position on consciousness — I keep an open mind" (while consistently treating people as conscious and rocks as not) |
+| **Claimed Neutrality** | Meta-Indeterminate Type 3 | Asserts indeterminacy while the assertion itself is determinate; self-refuting | "I have no position on consciousness — I keep an open mind" (while consistently treating people as conscious and rocks as not) |
 | **Genuine Tralse** | TRALSE | Position genuinely underdetermined — prior not yet installed, evidence genuinely balanced | Rare; possible in specialized domains with low encounter frequency |
 
-**Claimed Neutrality (DT3) is the critical case.** It satisfies the definition of Double Tralse Type 3:
+**Claimed Neutrality (DT3) is the critical case.** It satisfies the definition of Meta-Indeterminate Type 3:
 - It asserts: "My position on X is indeterminate"
 - But the assertion is itself determinate (it takes a position: that philosophical positions cannot be pre-theoretically installed)
 - AND it denies what it presupposes: the speaker consistently acts as if they have a position while claiming they do not
@@ -153,20 +153,20 @@ The ideal of keeping an "open mind" is coherent for questions with low encounter
 | Claim | Status |
 |---|---|
 | Genuine philosophical neutrality is achievable for foundational topics | False |
-| Encountered neutrality is usually Double Tralse Type 3 | True |
+| Encountered neutrality is usually Meta-Indeterminate Type 3 | True |
 | Philosophical priors are installed through high-frequency lived encounters | True |
 | The embedding mechanism operates before formal philosophical training | True |
 | MR1 (prior extraction) is the correct first step of genuine inquiry | True |
 | TI Sigma priors are themselves installed, but explicitly so | True |
 | Recognized commitment is superior to claimed neutrality | True |
 
-**The Unavoidable Embedding Theorem**: For any philosophical question satisfying high encounter frequency, forced-choice structure, and foundational depth, the probability of genuine prior-free engagement is negligible. All claimed neutrality on such questions is Double Tralse Type 3: self-refuting epistemic occlusion. Authentic philosophical inquiry begins not with the pretense of neutrality but with the extraction and examination of the commitments that experience has already installed.
+**The Unavoidable Embedding Theorem**: For any philosophical question satisfying high encounter frequency, forced-choice structure, and foundational depth, the probability of genuine prior-free engagement is negligible. All claimed neutrality on such questions is Meta-Indeterminate Type 3: self-refuting epistemic occlusion. Authentic philosophical inquiry begins not with the pretense of neutrality but with the extraction and examination of the commitments that experience has already installed.
 
 ---
 
 ## References
 
-- URB #509 — TI Sigma Theory of Contradictions (Double Tralse taxonomy)
+- URB #509 — TI Sigma Theory of Contradictions (Meta-Indeterminate taxonomy)
 - URB #500 — BOK Closure Theorem (8 PRIMARY CONSTANTS)
 - URB #504 — The Telekinesis Formula (Release Axiom; holding vs. manifesting)
 - URB #462 — Bayesian Case Against Physicalist Dogmatism

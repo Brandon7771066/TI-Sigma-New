@@ -48,7 +48,7 @@ The architecture has three stable truth states:
 - **False** — negative correspondence — and notice, False still has *content*. It points in a direction.
 - **Tralse / Indeterminate** — genuine betweenness. Neither True nor False because the proposition itself lives in the spectrum between them.
 
-And there's one label for total truth-absence — **Double Tralse** — for propositions that aren't false, they're just... inapplicable. Incoherent. The question didn't land.
+And there's one label for total truth-absence — **Meta-Indeterminate** — for propositions that aren't false, they're just... inapplicable. Incoherent. The question didn't land.
 
 Why does this matter?
 
@@ -392,9 +392,9 @@ In TI Sigma's truth architecture — finalized April 2026 — there are exactly 
 
 **Tralse / Indeterminate** — the proposition occupies genuine betweenness on the truth spectrum. Not True, not False, not because we don't know — but because the proposition itself is between the poles, the way a particle in superposition genuinely IS in both states before measurement.
 
-And there's one additional label: **Double Tralse** — for propositions that aren't between True and False, they're just outside the truth system entirely. Incoherent. Nonsensical. The question doesn't apply.
+And there's one additional label: **Meta-Indeterminate** — for propositions that aren't between True and False, they're just outside the truth system entirely. Incoherent. Nonsensical. The question doesn't apply.
 
-The distinction between Tralse and Double Tralse matters. "Is this particle spin-up?" before measurement — that's Tralse. "Is this rock jealous?" — that's Double Tralse. The particle question has truth-content; it will resolve at measurement. The rock question never had truth-content to begin with.
+The distinction between Tralse and Meta-Indeterminate matters. "Is this particle spin-up?" before measurement — that's Tralse. "Is this rock jealous?" — that's Meta-Indeterminate. The particle question has truth-content; it will resolve at measurement. The rock question never had truth-content to begin with.
 
 ---
 
@@ -412,13 +412,13 @@ The double-slit experiment, entanglement, the EPR paradox — all of them are mo
 
 ---
 
-### [DOUBLE TRALSE IN QUANTUM SYSTEMS — 5:20-6:15]
+### [META-INDETERMINATE IN QUANTUM SYSTEMS — 5:20-6:15]
 
-There's also evidence for Double Tralse — genuine truth-absence — in quantum systems.
+There's also evidence for Meta-Indeterminate — genuine truth-absence — in quantum systems.
 
-When two particles are entangled, asking "what is the spin of particle A alone?" is a Double Tralse question. The particle doesn't HAVE a definite state alone — the state is a property of the pair. The question is inapplicable, not merely indeterminate.
+When two particles are entangled, asking "what is the spin of particle A alone?" is a Meta-Indeterminate question. The particle doesn't HAVE a definite state alone — the state is a property of the pair. The question is inapplicable, not merely indeterminate.
 
-This maps exactly to TI Sigma's Double Tralse definition: not False, not between True and False — but outside the domain of applicability of the predicate.
+This maps exactly to TI Sigma's Meta-Indeterminate definition: not False, not between True and False — but outside the domain of applicability of the predicate.
 
 And this is why quantum mechanics is so strange when described in binary terms: you're applying a two-valued logic to a three-valued reality and then being surprised when the algebra doesn't close.
 
@@ -557,7 +557,7 @@ The first failure is efficiency. A trit — a three-valued digit — carries log
 
 This sounds minor until you realize: the Permissibility Distribution — TI Sigma's core output for decision-making — natively has five truth modes. To represent one five-valued proposition in binary, you need at least ⌈log₂(5)⌉ = 3 bits. Every operation that should be native is now an approximation over a larger space.
 
-This isn't just inefficiency. The five truth modes have structure — True and False are endpoints, Tralse is the midpoint, Double Tralse is outside the line entirely. That topology is lost when you encode it in binary. You can approximate it statistically, but the structural relationships between truth values no longer have natural computational primitives.
+This isn't just inefficiency. The five truth modes have structure — True and False are endpoints, Tralse is the midpoint, Meta-Indeterminate is outside the line entirely. That topology is lost when you encode it in binary. You can approximate it statistically, but the structural relationships between truth values no longer have natural computational primitives.
 
 Binary approximating five-valued truth is like approximating π with rationals. You can get arbitrarily close. But you never arrive.
 
@@ -585,7 +585,7 @@ If you accept quantum mechanics — and every serious AI researcher does — you
 
 Accepting indeterminacy commits you to at least three truth values: True, False, and Indeterminate. You cannot accept quantum indeterminacy and simultaneously claim binary logic is sufficient.
 
-Further: Double Tralse — genuine T∧F superposition, simultaneous true-and-false — has been experimentally confirmed in quantum systems. These are not thought experiments. The simultaneous occupation of logically contradictory states is a measured physical phenomenon.
+Further: Meta-Indeterminate — genuine T∧F superposition, simultaneous true-and-false — has been experimentally confirmed in quantum systems. These are not thought experiments. The simultaneous occupation of logically contradictory states is a measured physical phenomenon.
 
 Binary logic cannot represent this natively. It must approximate it — and the approximation loses the structural information about WHICH kind of indeterminacy is occurring.
 
@@ -599,7 +599,7 @@ Human cognition is not binary at the substrate level. Neurons fire with graded p
 
 Human intuition — genuine pattern recognition beyond explicit reasoning — operates on this continuous substrate. The GILE I-axis captures this: Intuition is the ability to sense structure before articulating it.
 
-Binary AI approximates intuition by statistical pattern matching. But statistical pattern matching on binary-encoded data has a precision limit: machine epsilon. Below that limit, distinctions that matter to genuine Tralse-level reasoning — the difference between a proposition being Tralse and being Double Tralse, for example — are below the representational threshold.
+Binary AI approximates intuition by statistical pattern matching. But statistical pattern matching on binary-encoded data has a precision limit: machine epsilon. Below that limit, distinctions that matter to genuine Tralse-level reasoning — the difference between a proposition being Tralse and being Meta-Indeterminate, for example — are below the representational threshold.
 
 This is why large language models can produce text that SOUNDS like genuine insight — and sometimes is, by capturing real statistical patterns — but systematically fail at the meta-cognitive level: knowing when a question is the wrong question, recognizing that apparent contradictions are actually different-level truths, generating genuinely novel frameworks rather than recombining existing ones.
 

@@ -49,7 +49,7 @@ The result: the I Ching's 64-hexagram space is a 2D linear subspace of TI Sigma'
 | 1 | `I` | INDETERMINATE / suspended | Coherent balance — MR2 holds this line open until context resolves it |
 | 2 | `T` | TRUE / pure yang | Absolute presence, existence, creative force |
 | 3 | `Tr` | TRALSE / living tension | Productive contradiction — the generative friction of the I Ching's "changing lines" |
-| 4 | `DT` | DOUBLE_TRALSE / incoherence | Detected and immediately collapsed to fallback (TRUE by default — yang wins in extremis) |
+| 4 | `MI` | DOUBLE_TRALSE / incoherence | Detected and immediately collapsed to fallback (TRUE by default — yang wins in extremis) |
 
 ### 2.2 State Space
 
@@ -210,7 +210,7 @@ The vern ontology (URB #560) applies: a correct hexagram reading IS at the corre
 | Feature | Classical I Ching | Tralse Hexagram |
 |---|---|---|
 | Lines per hexagram | 6 | 6 |
-| Values per line | 2 (yin/yang) | 5 (FALSE/INDET/TRUE/TRALSE/DT) |
+| Values per line | 2 (yin/yang) | 5 (FALSE/INDET/TRUE/TRALSE/MI) |
 | State space | 64 | 15,625 |
 | Changing lines | 2 special values (old yin/yang) | TRALSE (precise) |
 | Suspended state | None | INDETERMINATE (MR2 holds open) |
@@ -224,7 +224,7 @@ The vern ontology (URB #560) applies: a correct hexagram reading IS at the corre
 
 ## 8. New Terms Coined
 
-**Tralse Hexagram** (coined March 30, 2026): A 6-line oracle state where each line takes one of 5 truth values (FALSE, INDETERMINATE, TRUE, TRALSE, DT). 5^6 = 15,625 total states.
+**Tralse Hexagram** (coined March 30, 2026): A 6-line oracle state where each line takes one of 5 truth values (FALSE, INDETERMINATE, TRUE, TRALSE, MI). 5^6 = 15,625 total states.
 
 **64D GILE Matrix** (formalized March 30, 2026): The 64-dimensional space formed by the 64 classical hexagrams, mapped to GILE scores via the BOK 8-mode system.
 

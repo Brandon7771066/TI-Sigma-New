@@ -75,7 +75,7 @@ With those caveats logged, the development plan below treats LCC-Virus-Retrieval
 
 **Concrete actions:**
 1. **Derive C_EMERICK threshold from first principles** rather than from the empirical 1/(φ√2) match. Currently the threshold is "discovered" from DANDI:000552 + post-hoc rationalized via golden-ratio aesthetics. A first-principles derivation (e.g., from CAP principle or τ-δ separability) would strengthen credibility enormously.
-2. **Map the 6-step Virus algorithm to the MR Truth Labels framework** — what does each step output in {T, F, I, DT}? Does the Virus's "convergence" correspond to a stable-I waypoint or to T/F resolution? This connects LCC-Virus to the Pass-47 §7 max-valid-tralseness theorem.
+2. **Map the 6-step Virus algorithm to the MR Truth Labels framework** — what does each step output in {T, F, I, MI}? Does the Virus's "convergence" correspond to a stable-I waypoint or to T/F resolution? This connects LCC-Virus to the Pass-47 §7 max-valid-tralseness theorem.
 3. **Articulate the bidirectional-vs-entrainment distinction** as a formal definition (currently informal in §1.2 of bidirectional paper).
 
 **Decision gate:** Track C is the slowest but most reputational-leverage track. Worth pursuing in the background; not blocking on Track A or B.

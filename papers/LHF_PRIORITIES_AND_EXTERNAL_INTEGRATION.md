@@ -507,7 +507,7 @@ Q_factor = 1 + β × (fraction of Ψ states)
 ```
 DE-Photon = Dark Energy's rhythmic interaction with photon field
           = Cosmic pulse of consciousness expansion
-          = The "breathing" of scattered DT
+          = The "breathing" of scattered MI
 ```
 
 ### 1.2 Relationship to Other Cycles

@@ -148,7 +148,7 @@ This is the relational structure that makes repair possible. Repair requires mut
 |---|---|---|---|
 | Pure apology ("I'm sorry, full stop") | The apologizer's genuine belief in their own justification | Performative apology; future resentment; dishonest moral record | False pole suppressed — Tralse unresolved |
 | Pure defense ("I had no choice") | Acknowledgment of the other person's real experience of harm | Other person feels unseen; relationship damaged | True pole suppressed — Tralse unresolved |
-| Pseudo-apology ("I'm sorry but you made me") | Both — neither genuine remorse nor honest context | Neither accountability nor explanation; defensive displacement | Double Tralse unresolved |
+| Pseudo-apology ("I'm sorry but you made me") | Both — neither genuine remorse nor honest context | Neither accountability nor explanation; defensive displacement | Meta-Indeterminate unresolved |
 | **Tralse Apology** ("I am genuinely sorry AND I want you to understand my situation") | Nothing — holds both simultaneously | Honest moral communication; mutual recognition; genuine repair possible | **MR achieved** |
 
 The norm against explanation in apology is a heuristic designed to prevent the pseudo-apology. It overshoots, banning the Tralse Apology along with the fake one. The distinction is not "apology vs. apology-with-excuse." The distinction is between:

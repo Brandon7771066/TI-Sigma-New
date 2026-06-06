@@ -34,10 +34,10 @@ R-C reading (per Pass 27 §5.2):
 V_RC : MRLabel → ℂ
   CCC      ↦ 1
   tralse   ↦ 0
-  DT       ↦ i
+  MI       ↦ i
   T        ↦ −1
 ```
-Source: V₄ Cayley group {T, F, I, DT} (Pass 21 §C.5).
+Source: V₄ Cayley group {T, F, I, MI} (Pass 21 §C.5).
 Target: {1, 0, i, −1} ⊂ ℂ.
 
 V(e^{iπ}) = −1 holds iff we identify e^{iπ} ∈ ℂ with the V₄ element T (the True label). This is **the** R-C labelling claim: "−1 in ℂ corresponds to True in V₄."
@@ -83,7 +83,7 @@ R-B is a **verb** (rotate the algebra); R-C is a **noun** (assign a value to eac
 
 ### §1.5 — Pass 30 raised follow-ups for D8
 
-- **v30-A:** define i_TI rotation operator on V₄ Cayley graph; verify whether {T,F,I,DT} ↦ {−1, 1, i, 0} extends to a valid ℝ-bilinear form preserved by i_TI. If yes, R-B + R-C unify to a Hermitian structure.
+- **v30-A:** define i_TI rotation operator on V₄ Cayley graph; verify whether {T,F,I,MI} ↦ {−1, 1, i, 0} extends to a valid ℝ-bilinear form preserved by i_TI. If yes, R-B + R-C unify to a Hermitian structure.
 - **v30-B:** prove/disprove that R-C 4-element 0-containing labelling can be recovered as a *semigroup* representation (since 0 ∈ image breaks group-rep status). Likely answer: yes via the **commutative semigroup with annihilator** structure — `tralse` acts as 0-element under multiplicative composition.
 
 ---

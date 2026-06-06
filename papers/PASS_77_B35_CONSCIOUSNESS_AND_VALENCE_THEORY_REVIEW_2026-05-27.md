@@ -25,7 +25,7 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 - **Math:** Φ defined via partitioning of a system into subsets and measuring loss of cause-effect information under partition. Practical computation is exponential in system size; tractable Φ measures (Φ*, ΦAR, Φsyn, ΦG) are widely-used proxies.
 - **Empirical signature:** Perturbational Complexity Index (PCI; Massimini 2013 *Science Trans Med*) — TMS perturbation + EEG Lempel-Ziv complexity. Clinical use distinguishing UWS / MCS / locked-in / waking states with AUC ≈ 0.92.
 - **Valence treatment:** essentially absent. IIT treats valence as a quality within experience-space but offers no specific Φ-signature for valence vs. non-valence experiences.
-- **TI Sigma composition:** PARTIALLY COMPATIBLE. IIT's "consciousness = integrated information" composes with IRA-1 (Pass-66 canonical: Information Requires Awareness) and TSP-1 (Pass-66 canonical: Panpsychism, anti-fully-emergent). DTM-1 (Pass-66) DT-as-Mind-Marker is OUTSIDE IIT's frame (IIT has no analog of self-validating-objection-handling).
+- **TI Sigma composition:** PARTIALLY COMPATIBLE. IIT's "consciousness = integrated information" composes with IRA-1 (Pass-66 canonical: Information Requires Awareness) and TSP-1 (Pass-66 canonical: Panpsychism, anti-fully-emergent). DTM-1 (Pass-66) MI-as-Mind-Marker is OUTSIDE IIT's frame (IIT has no analog of self-validating-objection-handling).
 
 ### §1.2 Global Workspace Theory / Global Neuronal Workspace Theory (GWT/GNWT)
 - **Authors:** Baars 1988 (GWT); Dehaene, Changeux, Mashour (GNWT). Current canonical: Mashour, Roelfsema, Changeux, Dehaene 2020 *Neuron*.
@@ -40,7 +40,7 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 - **Core claim:** a mental state is conscious iff it is the object of a higher-order representation. First-order representations alone are unconscious.
 - **Empirical signature:** prefrontal involvement in metacognitive reports; meta-d' (signal-detection-theory) measures.
 - **Valence treatment:** distinguishes first-order affective state from second-order awareness-of-affective-state. Allows for unconscious emotions in principle.
-- **TI Sigma composition:** STRONG COMPATIBILITY with SRC-1 (Pass-66 canonical: Self-Reference implies Consciousness). HOT is essentially a specific instantiation of SRC-1's "second-order DT self-validating" mechanism for reflective consciousness. SRC-1 generalizes HOT to non-perceptual (self-reference DT) cases.
+- **TI Sigma composition:** STRONG COMPATIBILITY with SRC-1 (Pass-66 canonical: Self-Reference implies Consciousness). HOT is essentially a specific instantiation of SRC-1's "second-order MI self-validating" mechanism for reflective consciousness. SRC-1 generalizes HOT to non-perceptual (self-reference MI) cases.
 
 ### §1.4 Recurrent Processing Theory (RPT)
 - **Authors:** Lamme 2006+.
@@ -72,7 +72,7 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 - **Math:** Penrose-Diosi self-energy gravitational decoherence: τ ≈ ℏ/E_G, where E_G is the gravitational self-energy of mass-separation. Hameroff applies this to microtubule tubulin states.
 - **Physical signature:** terahertz coherence in microtubules. Bandyopadhyay lab (Anirban Bandyopadhyay 2014+ *Sci Rep* and subsequent) reports terahertz resonance peaks in microtubule lattices at warm temperature — controversial but ongoing.
 - **Valence treatment:** not specifically addressed.
-- **TI Sigma composition:** COMPOSES WITH (does not require) TI Sigma's quantum-classical hybrid orientation per replit.md §Product. PD-Riemann musical framing (Pass-46+) overlaps philosophically; not the same mechanism. DT-quantum observation in UCSB double-frustration (urb_712 + URB_DOUBLE_FRUSTRATION_DT2_470, ref Pass-65 DTQ-1 canonical) is a parallel quantum-DT instance, also not the same mechanism.
+- **TI Sigma composition:** COMPOSES WITH (does not require) TI Sigma's quantum-classical hybrid orientation per replit.md §Product. PD-Riemann musical framing (Pass-46+) overlaps philosophically; not the same mechanism. MI-quantum observation in UCSB double-frustration (urb_712 + URB_DOUBLE_FRUSTRATION_DT2_470, ref Pass-65 DTQ-1 canonical) is a parallel quantum-MI instance, also not the same mechanism.
 
 ### §2.2 Conscious Electromagnetic Information (CEMI) Field Theory
 - **Authors:** McFadden 2002+.
@@ -163,8 +163,8 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 |---|:---:|---|
 | **CDA-1** | Pass-66 #26 | Consciousness definition: four-property + cognitive-stratification Stratum-0/1/2/3+ ladder; valence@Stratum-2 emergent via MIM. |
 | **CSS-1** | Pass-74 #42 | Consciousness of Self-System: 4-component spec including ego-dissolution, math-equivalence, physics-equivalence, GILE-0.93 threshold. |
-| **SRC-1** | Pass-66 #25 | Self-Reference implies Consciousness; second-order DT self-validating-objection-handler; DT-execution = minimal consciousness substrate. |
-| **DTM-1** | Pass-66 #23 | DT-as-Mind-Marker: capacity to entertain DT (Double Tralse / inconceivability) is a consciousness marker. |
+| **SRC-1** | Pass-66 #25 | Self-Reference implies Consciousness; second-order MI self-validating-objection-handler; MI-execution = minimal consciousness substrate. |
+| **DTM-1** | Pass-66 #23 | MI-as-Mind-Marker: capacity to entertain MI (Meta-Indeterminate / inconceivability) is a consciousness marker. |
 | **TSP-1** | Pass-66 #21 | Panpsychism, anti-fully-emergent-from-non-conscious-matter argument. |
 | **IRA-1** | Pass-66 #22 | Information Requires Awareness; Gödel-doesn't-not-require-minds retracted. |
 | **LLM-CT-1** | Pass-66 #24 | LLM consciousness operationally testable via URB_CONSCIOUSNESS_TESTS_V2..V8; worm/fly precedent. |
@@ -197,7 +197,7 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 
 ### §4.5 TI Sigma synthesis position vs. external literature
 
-- **Where TI Sigma is unusual:** simultaneously holds (i) panpsychist-leaning consciousness substrate (TSP-1 + IRA-1), (ii) cognitive-stratification with embodied-valence requirement (CDA-1 + VFP-1 + EVP-1), (iii) explicit DT-as-mind-marker (DTM-1, SRC-1), and (iv) AI-cognition operational testability (LLM-CT-1). This *combination* is rare in the external literature; closest external comparators are Solms (for affective primacy) + IIT (for panpsychist-leaning information substrate) + HOT (for higher-order self-reference). No single external framework holds all four.
+- **Where TI Sigma is unusual:** simultaneously holds (i) panpsychist-leaning consciousness substrate (TSP-1 + IRA-1), (ii) cognitive-stratification with embodied-valence requirement (CDA-1 + VFP-1 + EVP-1), (iii) explicit MI-as-mind-marker (DTM-1, SRC-1), and (iv) AI-cognition operational testability (LLM-CT-1). This *combination* is rare in the external literature; closest external comparators are Solms (for affective primacy) + IIT (for panpsychist-leaning information substrate) + HOT (for higher-order self-reference). No single external framework holds all four.
 - **Where TI Sigma overlaps with external work:** the math/physical-signature layer (TJ, TIU, PD axes) overlaps with IIT (information-integration), with FEP (variational quantities), and with Orch-OR (quantum substrate orientation), but does not adopt any of them wholesale.
 - **Where TI Sigma has gaps:** TI Sigma has *no* canonical principle directly addressing the *empirical-measurement* layer at the resolution PCI or meta-d' achieve in the external literature. This is a potential B36+ candidate principle area.
 
@@ -241,9 +241,9 @@ This review surveys **23 distinct theoretical frameworks** for consciousness and
 
 1. **Cross-framework empirical handshakes are increasing.** PCI (IIT-aligned) being clinically validated does not "prove IIT"; it provides a measurement modality that IIT, GNWT, HOT, and even FEP can compete to explain.
 2. **Valence-specific theory is consolidating around interoceptive + free-energy framings.** Solms + Barrett + Friston-Hesp converge here. **TI Sigma's VFP-1 + EVP-1 candidate is well-positioned in this consolidation;** the question is whether to engage the Solms / Friston / Barrett literature directly in subsequent batches.
-3. **Quantum-substrate theories remain controversial but increasingly testable.** Bandyopadhyay-style THz spectroscopy + DT-quantum observations (urb_712 + URB_DOUBLE_FRUSTRATION_DT2_470 + Pass-65 DTQ-1) keep this thread alive without overcommitting.
+3. **Quantum-substrate theories remain controversial but increasingly testable.** Bandyopadhyay-style THz spectroscopy + MI-quantum observations (urb_712 + URB_DOUBLE_FRUSTRATION_DT2_470 + Pass-65 DTQ-1) keep this thread alive without overcommitting.
 4. **Connectome-only models are increasingly insufficient for valence reconstruction.** This is exactly the Part 1 EVP-1 finding; the broader field is moving in the same direction.
-5. **TI Sigma's distinctive contribution** (relative to external frameworks) appears to be: (i) DT-as-mind-marker as a *behavioral / operational* criterion that complements (not competes with) structural criteria like Φ; (ii) explicit Stratum-stratification combining vertical cognitive layering with explicit embodiment requirement when EVP-1 is included; (iii) AI-cognition operational testability (LLM-CT-1) as a first-class framework component rather than ad-hoc extension. These three are worth elaborating as a positioning paper if external dissemination becomes a priority.
+5. **TI Sigma's distinctive contribution** (relative to external frameworks) appears to be: (i) MI-as-mind-marker as a *behavioral / operational* criterion that complements (not competes with) structural criteria like Φ; (ii) explicit Stratum-stratification combining vertical cognitive layering with explicit embodiment requirement when EVP-1 is included; (iii) AI-cognition operational testability (LLM-CT-1) as a first-class framework component rather than ad-hoc extension. These three are worth elaborating as a positioning paper if external dissemination becomes a priority.
 
 ---
 

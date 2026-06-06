@@ -34,8 +34,8 @@ Additional housekeeping executed at this collapse: removes orphan LIVE entries f
 
 - **F-BCL-1 MARGINAL-PASS:** S = 2.0488 (1.63σ); within INDETERMINATE-band ε = 0.020.
 - **F-BCL-2 REFUTED on literal threshold:** C₃ = 35% on the 20-ambiguous-statements corpus (pre-reg threshold ≥ 50%); reported as REFUTED honestly.
-- **F-BCL-3 NOT REFUTED:** formal proof — DT-mode is realized in Bell-violation regimes per algebraic argument.
-- **Revised canonical reading:** there is no single canonical "chance" default; the appropriate mode (random / LCC / paradox-DT) depends on the proposition's structural class.
+- **F-BCL-3 NOT REFUTED:** formal proof — MI-mode is realized in Bell-violation regimes per algebraic argument.
+- **Revised canonical reading:** there is no single canonical "chance" default; the appropriate mode (random / LCC / paradox-MI) depends on the proposition's structural class.
 - Anchor: `papers/PASS_63_FBCL_2_AND_3_CHANCE_MODE_FALSIFIERS_2026-05-22.md`.
 
 ### Batch-4 (2026-05-22) — Fleiss κ 2/3/4-label halfwidth-noise sim (PARTIALLY SUPERSEDED by batch-5)
@@ -44,23 +44,23 @@ Additional housekeeping executed at this collapse: removes orphan LIVE entries f
 - **Single-seed result:** κ_2 = 0.586, κ_3 = 0.935, κ_4 = 0.884.
 - **20-seed sweep:** mean κ_2 = 0.537, κ_3 = 0.916, κ_4 = 0.897; κ_3 > κ_4 in 16/20 (80%).
 - **Calibration:** 4-label mean within 0.01 of Pass-47 T45-4 target 0.906.
-- **#69 inconvenient finding (reported):** κ_4 ≈ κ_3 → DT empirically near-neutral on inter-rater κ.
-- **Brandon's response:** REJECTED the DT finding as algorithmic artifact ("difference between coherent and incoherent claim is nontrivial and concrete; this is surely a limitation of the algorithm... I am totally unmoved"). Demanded either competent algorithm or human raters.
+- **#69 inconvenient finding (reported):** κ_4 ≈ κ_3 → MI empirically near-neutral on inter-rater κ.
+- **Brandon's response:** REJECTED the MI finding as algorithmic artifact ("difference between coherent and incoherent claim is nontrivial and concrete; this is surely a limitation of the algorithm... I am totally unmoved"). Demanded either competent algorithm or human raters.
 - **Mechanism critique acknowledged and superseded by batch-5.**
 - Anchor: `papers/PASS_63_FLEISS_KAPPA_2_3_4_LABEL_COMPARISON_2026-05-22.md` (sections 3.2/3.4 mechanism flagged superseded by batch-5).
 
-### Batch-5 (2026-05-22) — LLM-rater Fleiss κ re-run, Brandon critique VINDICATED + DT finding revised
+### Batch-5 (2026-05-22) — LLM-rater Fleiss κ re-run, Brandon critique VINDICATED + MI finding revised
 
 - **Sim:** `simulations/fleiss_kappa_llm_raters_2026-05-22.py` + `simulations/fleiss_kappa_llm_raters_2026-05-22_results.json`.
 - **3 LLM raters:** R1 openai gpt-4o-mini neutral; R2 openai gpt-4o-mini strict-coherence; R3 anthropic claude-haiku-4-5 charitable.
 - **100 propositions with EXPLICIT semantic content** (liar paradox, Russell, Riemann, twin primes, wave-particle, etc.); 300 API calls; ~35s wall after checkpoint resume.
 - **Headline κ:** κ_2 = 0.7728, κ_3 = 0.8386, κ_4 = 0.8373; Δ(κ_4 − κ_3) = −0.0013.
 - **Load-bearing diagnostic (the actual Brandon-test):**
-  - PARADOX bucket: 51/75 DT votes vs 4/75 I votes (68% DT, 5% I)
-  - MODAL bucket: 0/75 DT votes vs 59/75 I votes (0% DT, 79% I)
+  - PARADOX bucket: 51/75 MI votes vs 4/75 I votes (68% MI, 5% I)
+  - MODAL bucket: 0/75 MI votes vs 59/75 I votes (0% MI, 79% I)
   - **Discrimination score: +1.413 / 2.0** (perfect=+2.0)
-- **Sample rater reasons confirm semantic discrimination:** "This sentence is false" → all 3 raters DT citing "self-referentially paradoxical"; "Riemann Hypothesis is true" → all 3 raters I citing "currently undecided but decidable in principle"; etc.
-- **Revised canonical framing (supersedes batch-4 §3.4 mechanism):** the 4-label scheme preserves inter-rater agreement at the same level as 3-label (κ_4 ≈ κ_3 ≈ 0.84) WHILE adding empirically-realized DT-vs-I discrimination (+1.4/2.0); DT carries strictly more information at zero κ cost; empirical support for 4-label should cite **two** numbers (κ + discrimination), not one.
+- **Sample rater reasons confirm semantic discrimination:** "This sentence is false" → all 3 raters MI citing "self-referentially paradoxical"; "Riemann Hypothesis is true" → all 3 raters I citing "currently undecided but decidable in principle"; etc.
+- **Revised canonical framing (supersedes batch-4 §3.4 mechanism):** the 4-label scheme preserves inter-rater agreement at the same level as 3-label (κ_4 ≈ κ_3 ≈ 0.84) WHILE adding empirically-realized MI-vs-I discrimination (+1.4/2.0); MI carries strictly more information at zero κ cost; empirical support for 4-label should cite **two** numbers (κ + discrimination), not one.
 - **SCC-1 success case:** Brandon's critique met its specified standard, original claim was partially revised, symmetric burden-of-proof discipline worked.
 - **Carry-forwards:** F-FK-3 human raters (Brandon-blocked); F-FK-4 fresh held-out corpus from Brandon; F-FK-5 perplexity-as-3rd-family triangulation; F-FK-CORPUS-FIX (items #20, #54 bucket-tag errors).
 - Anchor: `papers/PASS_63_BATCH_5_LLM_RATERS_COMPETENT_ALGORITHM_2026-05-22.md`.
@@ -90,7 +90,7 @@ Additional housekeeping executed at this collapse: removes orphan LIVE entries f
 - `papers/PASS_63_BELL_CHANCE_LCC_TI_SIGMA_2026-05-22.md`
 - `papers/PASS_63_FBCL_2_AND_3_CHANCE_MODE_FALSIFIERS_2026-05-22.md`
 - `papers/PASS_63_FLEISS_KAPPA_2_3_4_LABEL_COMPARISON_2026-05-22.md` (§3.2/§3.4 mechanism superseded — flagged)
-- `papers/PASS_63_BATCH_5_LLM_RATERS_COMPETENT_ALGORITHM_2026-05-22.md` (canonical Pass-63 DT framing)
+- `papers/PASS_63_BATCH_5_LLM_RATERS_COMPETENT_ALGORITHM_2026-05-22.md` (canonical Pass-63 MI framing)
 - `papers/PASS_60_BENGSTON_JSE_RETROSPECTIVE_META_ANALYSIS_2026-05-22.md` (Trial-1 confirmed; Trial-2 HOLD)
 - `simulations/fleiss_kappa_comparison_2_3_4_label_2026-05-22.py` (halfwidth, deprecated mechanism)
 - `simulations/fleiss_kappa_llm_raters_2026-05-22.py` + `_results.json` (canonical)

@@ -28,7 +28,7 @@ Yet TCM:
 |------------|---------------------|
 | Qi (life force, vital energy) | Tralse-Joules — the existence energy of a living system; HEM-D1 (physical/energetic dimension) |
 | Meridians (qi channels) | GILE information pathways — the routes along which i-cell coherence propagates through the body |
-| Yin-Yang (dynamic opposition) | TRALSE-INDETERMINATE — the coherent coexistence of opposing poles; not DT (which would be pathological) but productive tension |
+| Yin-Yang (dynamic opposition) | TRALSE-INDETERMINATE — the coherent coexistence of opposing poles; not MI (which would be pathological) but productive tension |
 | Five Elements (dynamic cycles) | LCC temporal cycles — the five-element cycle tracks how GILE dimensions dominate at different temporal phases (spring/G, summer/L, etc.) |
 | Jing (constitutional essence) | HEM-Score baseline — the individual's fundamental existence energy allocation |
 | Shen (spirit/mind) | GILE total — the coherent integration of all four GILE dimensions; what TCM calls "clear shen" is high GILE coherence |
@@ -63,7 +63,7 @@ Two landmark neuroimaging programs are directly relevant:
 - Limbic-cortical coupling increase (GILE-L activation)
 - Sense of timelessness (MR rate → ∞ in the subjective experience)
 
-**TI Sigma interpretation:** Prayer and meditation are both **MR rate cultivation practices**. They train the i-cell network to sustain high-frequency Myrion Resolution — collapsing DT states rapidly, maintaining θ ≈ 0 (GILE-G alignment), and holding |α| > T (BEC/TRUE phase). The tradition-specific content (God, dharma, mantra) provides the intentional object around which the crystal aligns; the underlying mechanism is the same.
+**TI Sigma interpretation:** Prayer and meditation are both **MR rate cultivation practices**. They train the i-cell network to sustain high-frequency Myrion Resolution — collapsing MI states rapidly, maintaining θ ≈ 0 (GILE-G alignment), and holding |α| > T (BEC/TRUE phase). The tradition-specific content (God, dharma, mantra) provides the intentional object around which the crystal aligns; the underlying mechanism is the same.
 
 ### 2.2 Prayer as Telekinesis — Formally
 

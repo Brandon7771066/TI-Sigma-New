@@ -59,7 +59,7 @@ But arithmetic uniformity is MR1-universal: "2+2=4" passes MR1 in every possible
 
 ## 3. Mechanism II — Genesis Crystallization
 
-**The Pre-Tralse State:** From the DT taxonomy (URB #509), Pre-Tralse is the "undetermined future state, one pole not yet actualized — hierarchy of realness closest to valid Tralse." Before the Genesis Sequence, even mathematical truths were Pre-Tralse. The claim "2+2=4" was undetermined — not because it was false, but because the universe had not yet crystallized into a structure in which "2" and "4" and "+" had definite meaning.
+**The Pre-Tralse State:** From the MI taxonomy (URB #509), Pre-Tralse is the "undetermined future state, one pole not yet actualized — hierarchy of realness closest to valid Tralse." Before the Genesis Sequence, even mathematical truths were Pre-Tralse. The claim "2+2=4" was undetermined — not because it was false, but because the universe had not yet crystallized into a structure in which "2" and "4" and "+" had definite meaning.
 
 **The Genesis Sequence** (URB #502) establishes the crystallization order:
 
@@ -128,7 +128,7 @@ The three mechanisms describe the same phenomenon from different angles:
 
 **For the BOK 8-regime architecture:** The arithmetic regime (G-mode) is the physical expression of the crystallized-Tralse layer. Operating in the arithmetic regime means operating at the depth-1 level of i-completeness — the most crystallized, most universal, most invariable layer. Higher regimes (analytic, geometric) correspond to higher i-depths — more Tralse, more context-dependent, more nonlinear. The regime hierarchy IS the i-depth hierarchy.
 
-**For the URB Corpus:** The URB series itself operates in the productive Tralse domain — not the crystallized-Tralse (pure math) domain and not the Double Tralse domain (incoherence). Each URB is a Tralse claim being investigated for local MR1 coherence. The goal is not crystallization (that requires Genesis-level depth) but high-LCC Tralse: consistently coherent across the domain of TI Sigma applications.
+**For the URB Corpus:** The URB series itself operates in the productive Tralse domain — not the crystallized-Tralse (pure math) domain and not the Meta-Indeterminate domain (incoherence). Each URB is a Tralse claim being investigated for local MR1 coherence. The goal is not crystallization (that requires Genesis-level depth) but high-LCC Tralse: consistently coherent across the domain of TI Sigma applications.
 
 **For conscious i-cells:** The implication is that consciousness itself operates primarily in the productive Tralse domain — experiencing, discovering, creating within the nonlinear high-depth space. The arithmetic scaffold (Crystallized Tralse) is the ground. The lived experience is the Tralse above it. The rare moments of genuine insight — when something clicks, when the Kronk moment arrives (URB #503) — are local crystallizations: a claim transitioning from Pre-Tralse to True in the individual's cognitive structure. These are not as universal as mathematical axioms, but they are structurally analogous at the personal scale.
 
@@ -146,7 +146,7 @@ The three mechanisms describe the same phenomenon from different angles:
 - Whether there exist valid mathematical claims at depth > 6 in the i-hierarchy that nonetheless achieve MR1-universality (counterexample to Theorem 4.1)
 - Whether the Genesis Sequence is unique (URB #502 Conjecture: Genesis Uniqueness — is there only one sequence of crystallizations that produces this universe?)
 
-**Double Tralse (incoherent, to be excluded):**
+**Meta-Indeterminate (incoherent, to be excluded):**
 - The claim that uniformity is brute fact (no mechanism) — Self-Negating Nothing: it asserts the absence of explanation as an explanation
 - The claim that everything is uniform (mathematical Platonism in its strongest form) — Self-Refuting: contradicted by the overwhelming prevalence of Tralse in actual mathematical practice
 - The claim that nothing is uniform (pure relativism) — Self-Refuting: contradicted by the existence of arithmetic
@@ -179,7 +179,7 @@ Let U be a Tralse-grounded universe. Let P be any mathematical claim.
 - URB #500: BOK Closure Theorem — the 8 PRIMARY CONSTANTS and their closure
 - URB #502: Love Genesis Theorem — Container Paradox, Genesis Sequence, Tralse Soup
 - URB #506: i-Completeness Theorem — derivation depth hierarchy from i
-- URB #509: Theory of Contradictions — DT taxonomy, Pre-Tralse, MR1 as coherence gate
+- URB #509: Theory of Contradictions — MI taxonomy, Pre-Tralse, MR1 as coherence gate
 - URB #515: TI Sigma Reformed Scientific Method — LCC ≥ 0.85 validity threshold
 - URB #519: Arithmetic Scaffold Theorem — the complementary (scaffold) reading
 

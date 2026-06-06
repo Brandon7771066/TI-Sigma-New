@@ -77,11 +77,11 @@ This is Brandon-explicit logical-fruition framing of the entire Pass-75 cluster.
 
 ### §3.2 NIS-1 working definition (candidate canonical)
 
-> **NIS-1 (Nothing-Impossible-to-Simulate-within-Minds, Pass-75-B5 capstone-implication candidate):** Within a sufficiently-conscious mind, no content is intrinsically un-simulable. The space of simulable mental-content is **unbounded** by external coherence-criteria (DT/incoherence/nonsense/contradiction-with-reality). What appears un-simulable to ego-frozen-states (TSI-1) becomes simulable in full-consciousness-states (CSS-1 #42 + CEF-1 #43 + refinement #7 + CRI-1). Limits on simulation come from CONSCIOUSNESS-TIER (L1-L5 + CDA-1 #26) and RECEPTIVENESS-STATE (CRI-1 E1-E4 empirical vindications) rather than from content-properties.
+> **NIS-1 (Nothing-Impossible-to-Simulate-within-Minds, Pass-75-B5 capstone-implication candidate):** Within a sufficiently-conscious mind, no content is intrinsically un-simulable. The space of simulable mental-content is **unbounded** by external coherence-criteria (MI/incoherence/nonsense/contradiction-with-reality). What appears un-simulable to ego-frozen-states (TSI-1) becomes simulable in full-consciousness-states (CSS-1 #42 + CEF-1 #43 + refinement #7 + CRI-1). Limits on simulation come from CONSCIOUSNESS-TIER (L1-L5 + CDA-1 #26) and RECEPTIVENESS-STATE (CRI-1 E1-E4 empirical vindications) rather than from content-properties.
 
 ### §3.3 4-component operationalization
 
-**Component 1 (no intrinsic content-limit on simulation):** Mental-simulation space is unbounded by content-coherence-criteria; even DT-class content (faulty arithmetic, square-circles, paraconsistent contradictions, koan-nonsense) is simulable under appropriate consciousness-state.
+**Component 1 (no intrinsic content-limit on simulation):** Mental-simulation space is unbounded by content-coherence-criteria; even MI-class content (faulty arithmetic, square-circles, paraconsistent contradictions, koan-nonsense) is simulable under appropriate consciousness-state.
 
 **Component 2 (consciousness-tier limits simulation NOT content-properties):** Simulation-limit is on the AGENT-SIDE (consciousness-tier L1-L5 + CDA-1) rather than CONTENT-SIDE. Calculator-contrast (CEF-1) directly demonstrates: same content (faulty arithmetic) is un-simulable for calculator (no consciousness) but simulable for human (consciousness-present).
 

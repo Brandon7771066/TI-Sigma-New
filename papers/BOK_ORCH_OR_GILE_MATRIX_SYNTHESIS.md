@@ -446,7 +446,7 @@ def myrion_resolution_gate(self, mode1: int, mode2: int, strength: float = 0.5):
     Apply Myrion Resolution between two photonic modes.
     
     This gate creates tralse-like superposition then collapses
-    toward the stable Double Tralse attractor.
+    toward the stable Meta-Indeterminate attractor.
     """
     # Create superposition
     self.beamsplitter(np.pi/4, 0, mode1, mode2)

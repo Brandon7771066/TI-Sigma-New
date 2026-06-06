@@ -347,7 +347,7 @@ Return to τ completes the cycle
 
 From Iridium paper:
 ```
-Iridium (Z=77) = Double Tralse element
+Iridium (Z=77) = Meta-Indeterminate element
 77 = 7 × 11 = (divine) × (master number)
 
 IN VERISYN TERMS:

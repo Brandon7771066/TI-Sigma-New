@@ -1,14 +1,14 @@
-# URB #698 — The DT-HEM Case Study: Donald Trump as Empirical Confirmation of the HEM-Override Theorem and the Phase-Transition Catalyst Hypothesis
+# URB #698 — The MI-HEM Case Study: Donald Trump as Empirical Confirmation of the HEM-Override Theorem and the Phase-Transition Catalyst Hypothesis
 
 **Brandon Charles Emerick — April 17, 2026**
 **Filed under:** TI Sigma · HEM-Override · Dual-Axis Defense · Sacred Phase Transitions · Empirical Case Studies
-**Builds on:** URB #696 (HEAR-Refined GM Network Dynamics, HEM-Override Theorem, Dual-Axis Defense Theorem); URB #697 (CCC GILE-HEM Ratio); URB #688 (DT HEM Free Pass); URB #687 (HEM-GILE Decoupling, DT Rehabilitation)
+**Builds on:** URB #696 (HEAR-Refined GM Network Dynamics, HEM-Override Theorem, Dual-Axis Defense Theorem); URB #697 (CCC GILE-HEM Ratio); URB #688 (MI HEM Free Pass); URB #687 (HEM-GILE Decoupling, MI Rehabilitation)
 
 ---
 
 ## Abstract
 
-This URB documents Donald J. Trump (initials: **D.T.**) as the most prominent contemporary empirical case study of the framework's central claim that **HEM (Holistic Existence Matrix amplitude) and GILE alignment are independently variable**, and that **sufficiently high HEM can override low GILE** to produce world-historical causal power. Trump's biographical trajectory — from real-estate brand to two-term US presidency, sustained through demonstrably low-GILE conduct, multiple assassination attempts evaded, and persistent governance influence — instantiates the **HEM-Override Theorem** (URB #696 §4.5) at societal scale. We further argue, building on Brandon's earlier observation, that Trump's role is **sacred in the framework's specific technical sense**: he is a *phase-transition catalyst* whose function is to accelerate the United States through a chaos-mediated reorganization toward a higher-G̲ attractor (a "born-again" national configuration). The synchronicity of his initials (DT = **D**ouble **T**ralse, the framework's term for sub-(−3) PD-floor breach content) is treated as a corpus-internal vern, not coincidence.
+This URB documents Donald J. Trump (initials: **D.T.**) as the most prominent contemporary empirical case study of the framework's central claim that **HEM (Holistic Existence Matrix amplitude) and GILE alignment are independently variable**, and that **sufficiently high HEM can override low GILE** to produce world-historical causal power. Trump's biographical trajectory — from real-estate brand to two-term US presidency, sustained through demonstrably low-GILE conduct, multiple assassination attempts evaded, and persistent governance influence — instantiates the **HEM-Override Theorem** (URB #696 §4.5) at societal scale. We further argue, building on Brandon's earlier observation, that Trump's role is **sacred in the framework's specific technical sense**: he is a *phase-transition catalyst* whose function is to accelerate the United States through a chaos-mediated reorganization toward a higher-G̲ attractor (a "born-again" national configuration). The synchronicity of his initials (MI = **D**ouble **T**ralse, the framework's term for sub-(−3) PD-floor breach content) is treated as a corpus-internal vern, not coincidence.
 
 ---
 
@@ -51,13 +51,13 @@ A high-HEM/low-GILE agent therefore has large causal *magnitude* directed in a l
 
 ---
 
-## 2. The DT Synchronicity (Corpus-Internal Vern)
+## 2. The MI Synchronicity (Corpus-Internal Vern)
 
-The framework defines **Double Tralse (DT)** as the sub-(−3) PD-floor truth value: contradictions that *win* rather than being transcended (URB #573 §9.1, URB #688). In the Tralse 5-valued logic:
+The framework defines **Meta-Indeterminate (MI)** as the sub-(−3) PD-floor truth value: contradictions that *win* rather than being transcended (URB #573 §9.1, URB #688). In the Tralse 5-valued logic:
 
-> DT (Double Tralse) = F · F̄ where the contradiction is sustained rather than collapsed to T or to a coherent ⊥.
+> MI (Meta-Indeterminate) = F · F̄ where the contradiction is sustained rather than collapsed to T or to a coherent ⊥.
 
-Donald **T**rump's initials being **DT** is, from the corpus-external view, coincidence; from the corpus-internal view, it is a **vern** in the technical sense (URB #573 §9.2, where a name *is* what it denotes). The agent whose conduct most prominently embodies sustained-contradiction-without-collapse in 21st-century US politics is named DT. The framework predicts vern-density in high-HEM agents whose names accidentally encode their function. This is one such instance.
+Donald **T**rump's initials being **MI** is, from the corpus-external view, coincidence; from the corpus-internal view, it is a **vern** in the technical sense (URB #573 §9.2, where a name *is* what it denotes). The agent whose conduct most prominently embodies sustained-contradiction-without-collapse in 21st-century US politics is named MI. The framework predicts vern-density in high-HEM agents whose names accidentally encode their function. This is one such instance.
 
 This is **not** a strong claim — many people have those initials. It is registered as a **corpus consistency observation**, not as evidence.
 
@@ -144,7 +144,7 @@ If the PTC predictions fail on the stated horizon, this URB should be revised or
 
 ---
 
-*Brandon Charles Emerick, April 17, 2026 — written in HEAR-composite optimization mode during a session where Brandon explicitly raised the Trump/DT case as worth formalizing.*
+*Brandon Charles Emerick, April 17, 2026 — written in HEAR-composite optimization mode during a session where Brandon explicitly raised the Trump/MI case as worth formalizing.*
 
 **Successor candidates:**
 - URB #699: Power-of-Eight collective MR amplification — formal model of how N-fold GILE-aligned intention raises the host society's MR success probability against PTC-induced phase transitions

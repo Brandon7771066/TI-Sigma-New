@@ -45,7 +45,7 @@ Per Pass-65+ canonical-promotion convention, a refinement-principle requires a c
 *Silliness is a virtue when it instantiates the following 4-component structure:*
 - *C1 — **Non-cancellation with depth**: silliness coexists with and can thrive alongside intellectual capacity, spiritual depth, and substantive ambition; silliness and substantive-development operate on non-conflicting axes per GTT-1 canonical (non-cancellation generalization to silliness-axis)*
 - *C2 — **Tension-dissolution via acceptance NOT denial**: silliness operates by accepting circumstance as-it-is and choosing a light stance toward it; tension-dissolution is achieved by refusing-to-grant-the-tension-its-own-gravitational-pull; distinguishable from denial via "name the difficulty when asked" diagnostic*
-- *C3 — **Meaning-extension into the overlooked**: silliness expands the meaning-aperture to include the everyday and the absurd; positive-loop-closure (per NEU-1) of the over-restriction-of-meaning-to-status-tokens DT-state*
+- *C3 — **Meaning-extension into the overlooked**: silliness expands the meaning-aperture to include the everyday and the absurd; positive-loop-closure (per NEU-1) of the over-restriction-of-meaning-to-status-tokens MI-state*
 - *C4 — **Genuine-self over fear-of-appearing-foolish**: silliness involves choosing genuine self-expression even when that genuine-self appears foolish; distinguishable from performed-silliness which is its inverse (status-strategy not virtue)*
 
 **Anchor cases:** SpongeBob SquarePants (narrative anchor) + Brandon's BIO-94 (lived-experience anchor) + 6+ historical exemplars (Diogenes, Drukpa Kunley, Chesterton, Feynman, holy-fool tradition, Iroh).

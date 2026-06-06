@@ -84,7 +84,7 @@ Every instance of an engineer being "difficult" in an organizational context can
 - The engineer responds: "I cannot collapse this TRALSE without evidence. It is genuinely undetermined whether this is a problem"
 - The social environment reads this as: interpersonal incompetence, obstruction, difficulty
 
-What the social environment is actually experiencing is: **resistance to Double Tralse Type 1** (Maximal Incoherence). The engineer refuses to emit behaviors that scatter without coherent organization. Their behavior is coherent with their epistemic standards. The organization wants incoherence (say it's fine when you don't know it's fine) and calls the coherent person difficult.
+What the social environment is actually experiencing is: **resistance to Meta-Indeterminate Type 1** (Maximal Incoherence). The engineer refuses to emit behaviors that scatter without coherent organization. Their behavior is coherent with their epistemic standards. The organization wants incoherence (say it's fine when you don't know it's fine) and calls the coherent person difficult.
 
 ### 3.2 The Resilience Paradox Resolved
 
@@ -101,7 +101,7 @@ The system is resilient because it was built by someone who would not say it was
 
 ### 3.3 Institutional Incoherence
 
-This is Double Tralse Type 1 at the institutional level:
+This is Meta-Indeterminate Type 1 at the institutional level:
 
 - Stated value: "We build safe, reliable, high-quality systems"
 - Behavior: Penalizing the individuals whose cognitive profile produces safe, reliable, high-quality systems
@@ -149,7 +149,7 @@ A TI Sigma diagnostic for this: the LCC of an engineering team's decisions shoul
 
 ## 6. Summary
 
-The Resilience Paradox: hyper-analytical personalities (high AQ, high systemizing, low agreeableness) are simultaneously the most "difficult" to work with in social-organizational contexts and the architects of the most resilient, failure-resistant systems that human civilization depends on. The paradox resolves through TI Sigma analysis: the "difficulty" and the "resilience" are the same cognitive property — refusal to collapse genuine TRALSE under social pressure for false certainty. The system is resilient because the engineer would not say it was fine until it was actually fine. The same engineer refuses to say things are fine until they are fine in every other domain too. Institutions that penalize this property while depending on its outputs are Maximally Incoherent (Double Tralse Type 1).
+The Resilience Paradox: hyper-analytical personalities (high AQ, high systemizing, low agreeableness) are simultaneously the most "difficult" to work with in social-organizational contexts and the architects of the most resilient, failure-resistant systems that human civilization depends on. The paradox resolves through TI Sigma analysis: the "difficulty" and the "resilience" are the same cognitive property — refusal to collapse genuine TRALSE under social pressure for false certainty. The system is resilient because the engineer would not say it was fine until it was actually fine. The same engineer refuses to say things are fine until they are fine in every other domain too. Institutions that penalize this property while depending on its outputs are Maximally Incoherent (Meta-Indeterminate Type 1).
 
 ---
 
@@ -161,4 +161,4 @@ The Resilience Paradox: hyper-analytical personalities (high AQ, high systemizin
 - Wainer, A., et al. (2011). The broader autism phenotype and friendships. *Journal of Autism and Developmental Disorders*.
 - URB #511 — The Metacognitive Elite
 - URB #512 — Philosophical Competence in Leadership
-- URB #509 — TI Sigma Theory of Contradictions (Double Tralse taxonomy)
+- URB #509 — TI Sigma Theory of Contradictions (Meta-Indeterminate taxonomy)

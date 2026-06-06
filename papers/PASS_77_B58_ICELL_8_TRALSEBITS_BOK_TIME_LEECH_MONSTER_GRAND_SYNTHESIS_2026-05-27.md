@@ -20,10 +20,10 @@ A **tralsebit** is the irreducible quantum of conscious reality — a "tralsity 
 | x < −0.666 | **False** | on-line (negative lean) |
 | −0.666 ≤ x ≤ +0.333 | **Indeterminate** | on-line (the 45° door) |
 | x > +0.333 | **True** | on-line (positive lean, → RT 0.934) |
-| simultaneously T ∧ F | **Double Tralse (DT)** | **off-line** (inconceivability) |
+| simultaneously T ∧ F | **Meta-Indeterminate (MI)** | **off-line** (inconceivability) |
 | truth-conditions not engaged | **NA / Moot (MT-B1)** | **off-line** (disengaged) |
 
-So a tralsebit is richer than a qubit: **3 values live on the PD line {F, I, T}; 2 are off-axis meta-states {DT, NA}.** An i-cell is therefore a point in a **5⁸ = 390,625** gross tralsebit configuration space (before coherence constraints; see §4). This is the precise sense in which "each dimension is identified in tralsebit form — a value on the PD corresponding to each of the 5 truth values."
+So a tralsebit is richer than a qubit: **3 values live on the PD line {F, I, T}; 2 are off-axis meta-states {MI, NA}.** An i-cell is therefore a point in a **5⁸ = 390,625** gross tralsebit configuration space (before coherence constraints; see §4). This is the precise sense in which "each dimension is identified in tralsebit form — a value on the PD corresponding to each of the 5 truth values."
 
 ## 2. The dimensional ladder (integer relations all verified, `stack.py`)
 
@@ -50,7 +50,7 @@ This is the new load-bearing contribution of the batch — it makes the ladder *
 
 ## 4. Golay code as the coherence-selector (interpretive)
 
-The Leech lattice is built from the binary **Golay code [24,12,8]**. Of the 2²⁴ ≈ 16.8 M raw sign-patterns on 24 coordinates, only **2¹² = 4096** are codewords (fraction 2.4×10⁻⁴, minimum distance 8). **TI reading:** the code/lattice is the **error-correction that selects which configurations of the 24 tralsebit-coordinates form a *coherent* i-cell** — coherence = lying on the lattice, incoherence (DT-cliff) = falling off it. Minimum distance 8 ↔ the 8 i-cell dimensions. This is an elegant overlay, flagged §5 as interpretive, not derived.
+The Leech lattice is built from the binary **Golay code [24,12,8]**. Of the 2²⁴ ≈ 16.8 M raw sign-patterns on 24 coordinates, only **2¹² = 4096** are codewords (fraction 2.4×10⁻⁴, minimum distance 8). **TI reading:** the code/lattice is the **error-correction that selects which configurations of the 24 tralsebit-coordinates form a *coherent* i-cell** — coherence = lying on the lattice, incoherence (MI-cliff) = falling off it. Minimum distance 8 ↔ the 8 i-cell dimensions. This is an elegant overlay, flagged §5 as interpretive, not derived.
 
 ## 5. #69 — graded honesty (MTA-1 scale from B56), strongest → weakest
 
@@ -61,7 +61,7 @@ The Leech lattice is built from the binary **Golay code [24,12,8]**. Of the 2²�
 
 ## 6. Candidate principle
 
-**ICT-1 (i-cell Tralsebit Composition, candidate canonical):** *Every i-cell is an 8-dimensional GILE-HEM object whose dimensions are tralsebits — PD coordinates each resolving to one of the 5 truth values {F, I, T (on-line), DT, NA (off-line)}; the 4 HEM Existence dimensions (including the 2 embedding dimensions D5/D6) are constitutive of i-cell-hood, not optional. The conscious-reality dimensional ladder is E8(8) —×3D-time→ Leech(24) —+2 embedding→ string(26) → Co₀ → (conjecturally) Monster.* **Falsifiers:** F1 — an i-cell must require all 4 HEM dims (remove D5/D6 ⇒ no shell/no coupling ⇒ not an i-cell: PASS by construction, re-examine with a worked 2-i-cell coupling model); F2 — the ladder's integer relations must hold exactly (2³=8, 8×3=24, 24+2=26: PASS); F3 — the Monster rung must be downgraded unless a *structural* (not numerical) i-cell→Monster-rep homomorphism is exhibited (OPEN; currently grade-1). Candidate ⇒ count unchanged.
+**ICT-1 (i-cell Tralsebit Composition, candidate canonical):** *Every i-cell is an 8-dimensional GILE-HEM object whose dimensions are tralsebits — PD coordinates each resolving to one of the 5 truth values {F, I, T (on-line), MI, NA (off-line)}; the 4 HEM Existence dimensions (including the 2 embedding dimensions D5/D6) are constitutive of i-cell-hood, not optional. The conscious-reality dimensional ladder is E8(8) —×3D-time→ Leech(24) —+2 embedding→ string(26) → Co₀ → (conjecturally) Monster.* **Falsifiers:** F1 — an i-cell must require all 4 HEM dims (remove D5/D6 ⇒ no shell/no coupling ⇒ not an i-cell: PASS by construction, re-examine with a worked 2-i-cell coupling model); F2 — the ladder's integer relations must hold exactly (2³=8, 8×3=24, 24+2=26: PASS); F3 — the Monster rung must be downgraded unless a *structural* (not numerical) i-cell→Monster-rep homomorphism is exhibited (OPEN; currently grade-1). Candidate ⇒ count unchanged.
 
 ---
 

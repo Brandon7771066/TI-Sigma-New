@@ -105,7 +105,7 @@ This is itself a worked instance of **TCAV** (Tautologies Can Add Value, Pass-47
 
 If §3.C is canonized, the TI corpus should systematically replace ABC-modular language with vertical-projection language. Concrete instances to audit (added to TODO.md):
 - Any use of "cognitive vs affective" / "cognitive vs behavioral" / "ABC model" in existing papers should be flagged for replacement with "cognitive-projection / affective-projection / behavioral-projection on the unified vertical stack."
-- The base-4 truth labels (T/F/I/DT) should be understood as cognitive-projection labels with implicit affective and behavioral counterparts (cf. ASMT §3 per-MT affective-signature analysis — same move can extend to per-MT behavioral-disposition analysis).
+- The base-4 truth labels (T/F/I/MI) should be understood as cognitive-projection labels with implicit affective and behavioral counterparts (cf. ASMT §3 per-MT affective-signature analysis — same move can extend to per-MT behavioral-disposition analysis).
 
 ### §5.2 Empirical predictions
 

@@ -151,7 +151,7 @@ Charged leptons have intermediate environmental coupling (EM interaction; weaker
 
 ### 8.3 Prediction P3 (Mythical "GCP-network mixing matrix")
 
-The framework's GM-Network (URB #696, #731) is implicitly a 3-state mixing system (LCC ↔ GILE ↔ DT). Its mixing matrix should be **PMNS-type**. Test: indirect via GCP correlations with other PMNS-type systems (URB #740 protocol).
+The framework's GM-Network (URB #696, #731) is implicitly a 3-state mixing system (LCC ↔ GILE ↔ MI). Its mixing matrix should be **PMNS-type**. Test: indirect via GCP correlations with other PMNS-type systems (URB #740 protocol).
 
 ---
 

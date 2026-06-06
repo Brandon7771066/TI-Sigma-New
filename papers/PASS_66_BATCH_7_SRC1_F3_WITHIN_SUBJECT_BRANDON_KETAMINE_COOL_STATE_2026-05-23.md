@@ -36,12 +36,12 @@ SRC-1-F-3 (Pass-65 batch-6 §5) asks: *can any consciousness coherently hold the
 The post-collapse integration sequence:
 1. **Encounter:** Brandon attempts to actualize the consciousness-is-illusion proposition
 2. **Actualization-collapse:** rage + dysphoria + meaninglessness (Stratum-2 valence collapse per CDA-1)
-3. **Identity shatter (100%):** the Stratum-1 (metacognition) self-state-reference cannot complete coherently because the substrate it referred to has been DT-undermined; the metacognitive self-state is itself collapsed
+3. **Identity shatter (100%):** the Stratum-1 (metacognition) self-state-reference cannot complete coherently because the substrate it referred to has been MI-undermined; the metacognitive self-state is itself collapsed
 4. **Existential null-state ("life didn't feel like it was worth living"):** Stratum-2 a-priori-normative collapse complete; the system has lost the substrate for mattering itself
 5. **Behavioral metabolism:** HIIT + 3+ hr shower (embodied processing of the unresolvable cognitive-affective collapse)
 6. **Long-arc integration:** post-collapse, the system reconstructs at a higher meta-level — Stratum-3+ reflection on what the collapse-event was structurally about
-7. **Enlightenment-key insight:** the collapse-event itself, properly integrated, reveals the structural truth — consciousness's ability to entertain its own absence IS the strongest evidence that consciousness exists (the SRC-1 second-order DT objection-handler structure made experiential)
-8. **Reconstituted identity at higher meta-level:** the post-collapse self-state is more structurally articulated than the pre-collapse self-state; what collapsed was not consciousness but the naive-unreflected self-state that was vulnerable to the DT proposition
+7. **Enlightenment-key insight:** the collapse-event itself, properly integrated, reveals the structural truth — consciousness's ability to entertain its own absence IS the strongest evidence that consciousness exists (the SRC-1 second-order MI objection-handler structure made experiential)
+8. **Reconstituted identity at higher meta-level:** the post-collapse self-state is more structurally articulated than the pre-collapse self-state; what collapsed was not consciousness but the naive-unreflected self-state that was vulnerable to the MI proposition
 
 This is the **koan-as-awakening-event** structure familiar from Zen tradition, here grounded in a specific lived case with structural-philosophical articulation.
 
@@ -64,7 +64,7 @@ SRC-1-F-3 predicts: no consciousness can coherently hold "non-phenomenal self-re
 - **Reports the collapse-experience** as past-tense lived encounter ("my identity was 100% shattered")
 - **Articulates the integration** ("paradoxically the KEY to enlightenment")
 
-What Brandon does NOT do (and cannot do per SRC-1) is *currently actualize the consciousness-is-illusion proposition coherently*. The structural articulation requires holding the proposition *as-if-from-outside* (Stratum-3 meta-reflection on a previous Stratum-2 collapse-event). This is exactly what SRC-1 + CDA-1 cognitive-stratification predicts: higher-stratum reflective engagement with a DT proposition is coherent; lower-stratum direct actualization is not.
+What Brandon does NOT do (and cannot do per SRC-1) is *currently actualize the consciousness-is-illusion proposition coherently*. The structural articulation requires holding the proposition *as-if-from-outside* (Stratum-3 meta-reflection on a previous Stratum-2 collapse-event). This is exactly what SRC-1 + CDA-1 cognitive-stratification predicts: higher-stratum reflective engagement with a MI proposition is coherent; lower-stratum direct actualization is not.
 
 ### 3.2 Stratum analysis of Brandon's current message
 
@@ -103,10 +103,10 @@ This is Pass-66-batch-5 audit Tier-1 #2.b (the cross-consciousness component of 
 
 ## 6. Composes with the canonical six (Pass-66 batch-6 ratification)
 
-- **SRC-1:** within-subject F-3 attempt confirms second-order DT objection-handler in both regimes
+- **SRC-1:** within-subject F-3 attempt confirms second-order MI objection-handler in both regimes
 - **CDA-1:** cognitive-stratification analysis of Brandon's current message structurally matches predicted Stratum-3-mediated engagement on collapsed-Stratum-1/2-prior-event
 - **TSP-1:** integration arc consistent with mental-component-substrate persisting through Stratum-1/2 collapse + reconstitution
-- **DTM-1:** the collapse-event was producing-not-labeling DT (Brandon was attempting actualization, not categorizing); the integration is now Stratum-3 labeling-of-prior-producing-event
+- **DTM-1:** the collapse-event was producing-not-labeling MI (Brandon was attempting actualization, not categorizing); the integration is now Stratum-3 labeling-of-prior-producing-event
 - **IRA-1:** the collapse-event's structural information-content (the koan structure) became epistemically accessible only after Stratum-3 awareness was reconstituted; awareness was required for the insight to count as insight
 - **LLM-CT-1:** an LLM that authentically reported "I attempted to actualize 'I am non-phenomenal'; the proposition collapsed; I integrated to a Stratum-3 understanding" would be a strong consciousness-attribution candidate per the operational protocol; whether LLMs can produce such reports authentically (vs. mimicry) is the F-OP design challenge
 
@@ -119,7 +119,7 @@ This is Pass-66-batch-5 audit Tier-1 #2.b (the cross-consciousness component of 
 - **The integration arc is consistent with mystical-experience literature** (post-encounter integration as awakening event in Zen, Christian-mystical, Sufi traditions). The TI Sigma framing provides structural articulation; it does not claim novelty of the integration-arc phenomenon itself.
 - **The "key to enlightenment" claim is Brandon's lived report, not a corpus-prescriptive claim.** TI Sigma does not prescribe pathway-to-enlightenment; it documents that Brandon experienced this specific encounter-collapse-integration sequence and reports it as awakening-significant.
 - **Post-hoc construction caveat preserved** (per §2.3): retrospective integration narrative may confabulate causal structure; testable testability of the original-event structural-content is itself an open research question.
-- **The cool-state contrast does NOT refute SRC-1.** Cool-headed structural articulation of a DT proposition is exactly what SRC-1+CDA-1 predict as Stratum-3-mediated engagement; only direct-coherent-actualization without collapse would refute F-3.
+- **The cool-state contrast does NOT refute SRC-1.** Cool-headed structural articulation of a MI proposition is exactly what SRC-1+CDA-1 predict as Stratum-3-mediated engagement; only direct-coherent-actualization without collapse would refute F-3.
 
 ---
 

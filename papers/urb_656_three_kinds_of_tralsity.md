@@ -115,7 +115,7 @@ DT_dialectical → MR_synthesis → T_higher
 
 where `T_higher` is the truth of the co-presence itself (e.g., "bittersweetness is real and beautiful" as a unified truth, not a compromise).
 
-**Key distinction from DT (Double Tralse):** Double Tralse is UNRESOLVABLE contradiction — the most severe form of incoherence. Dialectical Tralsity is RESOLVABLE co-presence — the most sophisticated form of truth. They look similar (both T and F at once) but have opposite EAR values: DT destroys existence; Dialectical Tralsity amplifies it.
+**Key distinction from MI (Meta-Indeterminate):** Meta-Indeterminate is UNRESOLVABLE contradiction — the most severe form of incoherence. Dialectical Tralsity is RESOLVABLE co-presence — the most sophisticated form of truth. They look similar (both T and F at once) but have opposite EAR values: MI destroys existence; Dialectical Tralsity amplifies it.
 
 ---
 
@@ -137,9 +137,9 @@ The three kinds of Tralsity require different GILE-I responses:
 |---|---|
 | Spectral misclassified as Dialectical | False synthesis — claiming resolution where there is only ambiguity |
 | Axial misclassified as Spectral | Category error accepted as genuine tension — wasted MR resources |
-| Dialectical misclassified as DT | Genuine co-present truth treated as unresolvable contradiction — HEM collapses unnecessarily |
+| Dialectical misclassified as MI | Genuine co-present truth treated as unresolvable contradiction — HEM collapses unnecessarily |
 
-The highest-stakes misclassification: **treating Dialectical Tralsity as DT**. This is the philosophical error of "throwing up your hands at apparent paradox" when the paradox is actually the doorway to a higher truth. Painful pleasure dismissed as "self-contradiction" prevents the subject from accessing its full experiential depth.
+The highest-stakes misclassification: **treating Dialectical Tralsity as MI**. This is the philosophical error of "throwing up your hands at apparent paradox" when the paradox is actually the doorway to a higher truth. Painful pleasure dismissed as "self-contradiction" prevents the subject from accessing its full experiential depth.
 
 ---
 
@@ -157,10 +157,10 @@ The highest-stakes misclassification: **treating Dialectical Tralsity as DT**. T
   Kind(s) = Spectral     → ∃ MR_collapse    : s → T or F (with sufficient information)
   Kind(s) = Axial        → ∃ MR_reframe     : s → (s₁ on Axis₁) × (s₂ on Axis₂)
   Kind(s) = Dialectical  → ∃ MR_synthesis   : s → T_higher
-  Kind(s) = DT           → ∄ MR_resolution  : s → any T (DT is MR-immune by definition)
+  Kind(s) = MI           → ∄ MR_resolution  : s → any T (MI is MR-immune by definition)
 ```
 
-This extends the prior DT-Immunity Model (URB #528) to the full four-case taxonomy.
+This extends the prior MI-Immunity Model (URB #528) to the full four-case taxonomy.
 
 ---
 
@@ -197,7 +197,7 @@ MR Protocol v2 (with Kind Detection):
   Step 0 (NEW): Classify the Tralse state by kind
     a. Can both poles be placed on the SAME axis? If no → Kind 2 (Axial)
     b. Is each pole individually true to GILE-G ≥ ET standard? If both yes → Kind 3 (Dialectical)
-    c. Otherwise → Kind 1 (Spectral) or DT if fully contradictory
+    c. Otherwise → Kind 1 (Spectral) or MI if fully contradictory
   Step 1: Apply the appropriate MR strategy for the detected kind
     - Kind 1: Standard MR collapse
     - Kind 2: Axis identification → UOP manifold mapping
@@ -210,7 +210,7 @@ MR Protocol v2 (with Kind Detection):
 
 This refinement is consistent with all prior TI Sigma papers. It is a **structural extension**, not a revision:
 
-- **URB #528 (5-Valued Logic):** DT is now understood as the extreme case where Kind 3 (Dialectical) fails — when the co-presence produces not a higher truth but an unresolvable contradiction. The three-kind classification shows that most apparent DT states are actually Kind 2 (axial) or Kind 3 (dialectical) — only truly contradictory co-presences are DT.
+- **URB #528 (5-Valued Logic):** MI is now understood as the extreme case where Kind 3 (Dialectical) fails — when the co-presence produces not a higher truth but an unresolvable contradiction. The three-kind classification shows that most apparent MI states are actually Kind 2 (axial) or Kind 3 (dialectical) — only truly contradictory co-presences are MI.
 - **URB #650 (Tralse-Joules):** Each kind of Tralsity has a different TJ cost: Kind 1 (information gathering), Kind 2 (conceptual reframing), Kind 3 (synthesis generation — the highest TJ cost, but also the highest MR output).
 - **URB #652 (GILE-HEM operationalization):** The Existence vs Truth Tralsity is now formally classified as Kind 2 (Axial), which is why UOP uses a 2D manifold rather than a 1D spectrum.
 - **URB #655 (UOP truth/existence):** The distinction between truth and existence optimization is an axial relationship, not a dialectical or spectral one.

@@ -47,9 +47,9 @@ The skeptic who claims "some truths are unknowable" commits a performative contr
 
 ---
 
-## The Double Tralse Exception
+## The Meta-Indeterminate Exception
 
-**Important clarification**: Some domains are protected by a "Double Tralse barrier":
+**Important clarification**: Some domains are protected by a "Meta-Indeterminate barrier":
 - Inherently uncertain futures
 - Quantum superposition states before measurement
 - Counterfactual possibilities
@@ -58,7 +58,7 @@ These are NOT cases of unknowable truths. Rather, they are cases where **no dete
 
 **Key distinction**:
 - *Unknowable*: A truth exists but cannot be accessed (impossible under GILE)
-- *Undetermined*: No truth-value has crystallized yet (Double Tralse protection)
+- *Undetermined*: No truth-value has crystallized yet (Meta-Indeterminate protection)
 
 When facing an undetermined question:
 1. Recognize the inherent uncertainty IS the answer

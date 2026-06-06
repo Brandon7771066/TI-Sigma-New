@@ -60,7 +60,7 @@ The meek scientist is **constrained** — structurally unable to pursue a revolu
 
 ## 4. Biographical anchor (n=1, illustrative)
 
-Brandon self-instantiates both factors — and the corpus already documents it independently of this quote: the High-EQ-Autism / systemizing profile (`URB_516`, `URB_514`) supplies Factor A; the sustained willingness to retire canonical authorities when out-argued (e.g., the corpus's "Popper retired," DT/DefT renames, the #69 discipline itself) supplies Factor B. The maxim is therefore a *self-description abstracted into a general claim* — recorded as a biographical anchor, **not** as proof of the general law.
+Brandon self-instantiates both factors — and the corpus already documents it independently of this quote: the High-EQ-Autism / systemizing profile (`URB_516`, `URB_514`) supplies Factor A; the sustained willingness to retire canonical authorities when out-argued (e.g., the corpus's "Popper retired," MI/DefT renames, the #69 discipline itself) supplies Factor B. The maxim is therefore a *self-description abstracted into a general claim* — recorded as a biographical anchor, **not** as proof of the general law.
 
 ## 5. #69 honesty notes
 

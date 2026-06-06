@@ -119,9 +119,9 @@ Key result: Verisyn V is the stable Tralse attractor — the fixed point of Myri
 ## TIER 5 — LOGIC (TRALSE Core)
 
 ### URB #528 | LOGIC | 📝 Written
-**Five-Valued Truth System + DT Immunity Model**
-*Formal definition of the five TRALSE values and the Double Tralse (DT) Immunity Model.*
-Key result: Three-phase DT Immunity: Encounter → Discard → Immunity. DT Trace defined as the penumbra metric.
+**Five-Valued Truth System + MI Immunity Model**
+*Formal definition of the five TRALSE values and the Meta-Indeterminate (MI) Immunity Model.*
+Key result: Three-phase MI Immunity: Encounter → Discard → Immunity. MI Trace defined as the penumbra metric.
 
 ### URB #563 | MATH/LOGIC | 📝 Written
 **Complex GILE Synthesis**

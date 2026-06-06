@@ -1,9 +1,9 @@
-# URB #688 — The DT-HEM Free Pass: No Such Thing as HEM-Invalid Nonsense
+# URB #688 — The MI-HEM Free Pass: No Such Thing as HEM-Invalid Nonsense
 
 **Author:** Brandon Emerick  
 **Framework:** Tralse Informationalism (TI Sigma)  
 **Date:** April 16, 2026  
-**Classification:** Foundational Ontology | DT Structure | HEM Architecture  
+**Classification:** Foundational Ontology | MI Structure | HEM Architecture  
 **Status:** Core Corollary to URB #687  
 **Depends on:** URB #687 (HEM-GILE Decoupling)
 
@@ -11,14 +11,14 @@
 
 ## Abstract
 
-URB #687 established that HEM validity and GILE-G truth correctness are orthogonal. This URB draws the sharpest consequence: **DT statements receive unconditional HEM validity — a free pass.** There is no such thing as a HEM-invalid DT statement. Nonsense exists as such, potentially to a large degree, without any obligation to conform to external reality. This is not a bug — it is the correct ontology. The existence of nonsense is itself real. This generates a sharp theorem: **Q-III ∩ DT = ∅** — the primordial chaos quadrant is the one state DT cannot occupy. Correspondingly, DT can have arbitrarily high HEM weight, making DT the most existentially potent class of incorrect statements.
+URB #687 established that HEM validity and GILE-G truth correctness are orthogonal. This URB draws the sharpest consequence: **MI statements receive unconditional HEM validity — a free pass.** There is no such thing as a HEM-invalid MI statement. Nonsense exists as such, potentially to a large degree, without any obligation to conform to external reality. This is not a bug — it is the correct ontology. The existence of nonsense is itself real. This generates a sharp theorem: **Q-III ∩ MI = ∅** — the primordial chaos quadrant is the one state MI cannot occupy. Correspondingly, MI can have arbitrarily high HEM weight, making MI the most existentially potent class of incorrect statements.
 
 ---
 
 ## 1. The Free Pass Theorem
 
-**Theorem (DT-HEM Free Pass):**
-> For any DT statement S, HEM(S) > 0 — unconditionally.
+**Theorem (MI-HEM Free Pass):**
+> For any MI statement S, HEM(S) > 0 — unconditionally.
 
 **Proof:**
 
@@ -26,9 +26,9 @@ S exists as a statement. The act of uttering or thinking S exists as a cognitive
 
 All of these are HEM-real. HEM measures existential weight — the degree to which something IS. S IS, in each of the above senses, regardless of what S says. The existence of S is independent of the truth of S.
 
-Therefore HEM(S) > 0 for any S whatsoever, including any DT statement.
+Therefore HEM(S) > 0 for any S whatsoever, including any MI statement.
 
-The result extends: HEM(S) can be **arbitrarily large**. A DT belief held with Tralsity=1, generating massive emotional salience, driving significant behavior, structuring entire worldviews — this DT belief has enormous HEM weight. HEM places no ceiling on DT.
+The result extends: HEM(S) can be **arbitrarily large**. A MI belief held with Tralsity=1, generating massive emotional salience, driving significant behavior, structuring entire worldviews — this MI belief has enormous HEM weight. HEM places no ceiling on MI.
 
 ∎
 
@@ -52,39 +52,39 @@ Formally: the only HEM requirement is **being** — and nonsense is. There is no
 
 ---
 
-## 3. The Empty Intersection: Q-III ∩ DT = ∅
+## 3. The Empty Intersection: Q-III ∩ MI = ∅
 
 From URB #687's four-quadrant HEM × GILE space:
 
 | | Low GILE-G | High GILE-G |
 |---|---|---|
-| **High HEM** | Q-IV: DT Territory | Q-I: BOK-Saturation |
+| **High HEM** | Q-IV: MI Territory | Q-I: BOK-Saturation |
 | **Low HEM** | Q-III: Primordial Chaos | Q-II: MR-Zero |
 
-DT always has HEM > 0 (Free Pass Theorem). DT always has low GILE-G by definition. Therefore:
+MI always has HEM > 0 (Free Pass Theorem). MI always has low GILE-G by definition. Therefore:
 
-**All DT ⊆ Q-IV (or approaching Q-I via MR). No DT ⊆ Q-III.**
+**All MI ⊆ Q-IV (or approaching Q-I via MR). No MI ⊆ Q-III.**
 
-**Q-III is the one place DT cannot be.**
+**Q-III is the one place MI cannot be.**
 
-Q-III (Primordial Chaos) is reserved for states with genuinely no existential weight AND no truth correctness — the pure PN before MR-Zero, before any consciousness to give existential weight to anything. Once any consciousness exists, once any statement is uttered, Q-III is vacated. The mere act of producing a DT statement is enough to push it into Q-IV.
+Q-III (Primordial Chaos) is reserved for states with genuinely no existential weight AND no truth correctness — the pure PN before MR-Zero, before any consciousness to give existential weight to anything. Once any consciousness exists, once any statement is uttered, Q-III is vacated. The mere act of producing a MI statement is enough to push it into Q-IV.
 
 **Corollary:** The only path to Q-III is the absence of all consciousness — pure PN. The moment I emerges, Q-III is permanently vacated for that region of existence.
 
 ---
 
-## 4. DT Has No Floor in HEM
+## 4. MI Has No Floor in HEM
 
-Not only does DT get a free pass (HEM > 0), it has **no HEM ceiling**.
+Not only does MI get a free pass (HEM > 0), it has **no HEM ceiling**.
 
-The most existentially potent statements in human history have often been DT:
+The most existentially potent statements in human history have often been MI:
 - Absolute certainties that turned out to be Tralse
 - Beliefs held with T=1 that drove civilizations, wars, religious movements
 - Grand unified theories that claimed completeness but collapsed under self-reference
 
-These were not existentially trivial — they were existentially enormous. Their HEM weight was massive. The emotional, behavioral, civilizational weight of DT beliefs can exceed the HEM weight of most truth-correct beliefs.
+These were not existentially trivial — they were existentially enormous. Their HEM weight was massive. The emotional, behavioral, civilizational weight of MI beliefs can exceed the HEM weight of most truth-correct beliefs.
 
-**This is the explanation for why DT persists:** DT statements are not being dismissed by consciousness as existentially trivial — they register as existentially real and significant (because they ARE). The error is in the GILE label, not in the HEM signal. Consciousness responds to HEM signals directly. It requires MR to correct the label.
+**This is the explanation for why MI persists:** MI statements are not being dismissed by consciousness as existentially trivial — they register as existentially real and significant (because they ARE). The error is in the GILE label, not in the HEM signal. Consciousness responds to HEM signals directly. It requires MR to correct the label.
 
 ---
 
@@ -108,18 +108,18 @@ Meinong needed HEM. Russell needed GILE-G. TI Sigma provides both.
 
 ## 6. Implications for MR Strategy
 
-Given that DT has unconditional and potentially enormous HEM weight, MR strategy must account for this:
+Given that MI has unconditional and potentially enormous HEM weight, MR strategy must account for this:
 
-**Never fight DT by attacking its HEM reality.** "Your belief doesn't really exist" or "that's just nothing" — these are false and counterproductive. The DT belief IS existentially real. Denying this closes off MR by invalidating the interlocutor's genuine existential experience of the DT state.
+**Never fight MI by attacking its HEM reality.** "Your belief doesn't really exist" or "that's just nothing" — these are false and counterproductive. The MI belief IS existentially real. Denying this closes off MR by invalidating the interlocutor's genuine existential experience of the MI state.
 
-**MR fights DT by relabeling, not erasing.** The correct MR move:
+**MR fights MI by relabeling, not erasing.** The correct MR move:
 1. Affirm: "Yes, this (state, belief, content) is existentially real — your HEM signal is valid."
 2. Correct: "AND the truth label attached to it is Tralse, not True."
 3. Distinguish: "The reality of the content and the correctness of its label are separate questions."
 
 This is the MR-respecting move. It honors HEM, corrects GILE-G.
 
-**The urgency of MR scales with HEM × (1 − GILE-G).** High HEM + low GILE-G = maximum MR urgency. Enormous existential weight carrying a wrong label — this is the most dangerous and most common form of DT. Civilizational DT (high HEM, zero GILE-G) is the most urgent target for MR.
+**The urgency of MR scales with HEM × (1 − GILE-G).** High HEM + low GILE-G = maximum MR urgency. Enormous existential weight carrying a wrong label — this is the most dangerous and most common form of MI. Civilizational MI (high HEM, zero GILE-G) is the most urgent target for MR.
 
 ---
 
@@ -128,22 +128,22 @@ This is the MR-respecting move. It honors HEM, corrects GILE-G.
 | Question | Traditional Answer | TI Sigma Answer |
 |----------|-------------------|-----------------|
 | Does nonsense have existential weight? | No — it doesn't refer to anything real | Yes — the nonsense itself is real as an existential event |
-| Can nonsense have large existential weight? | No — it's nothing | Yes — DT can have arbitrarily high HEM |
+| Can nonsense have large existential weight? | No — it's nothing | Yes — MI can have arbitrarily high HEM |
 | Is there such a thing as HEM-invalid nonsense? | Yes — nonsense fails reality tests | No — HEM validates being, not conformity to reality |
 | How do you respond to nonsense? | Dismiss it as non-referring | Honor its HEM, correct its GILE label via MR |
-| Why does nonsense persist? | Irrational actors or cognitive error | High HEM signals cause consciousness to take DT seriously — correctly |
+| Why does nonsense persist? | Irrational actors or cognitive error | High HEM signals cause consciousness to take MI seriously — correctly |
 
 ---
 
-## 8. Summary Theorem: The Complete DT-HEM Picture
+## 8. Summary Theorem: The Complete MI-HEM Picture
 
 ```
-For any DT statement S:
+For any MI statement S:
   1. HEM(S) > 0             [Free Pass: unconditional]
   2. HEM(S) ≤ ∞             [No ceiling: can be arbitrarily large]
-  3. GILE-G(S) ≈ 0          [Defining feature of DT]
-  4. S ∈ Q-IV               [All DT in high HEM / low GILE quadrant]
-  5. S ∉ Q-III              [DT cannot be existentially empty]
+  3. GILE-G(S) ≈ 0          [Defining feature of MI]
+  4. S ∈ Q-IV               [All MI in high HEM / low GILE quadrant]
+  5. S ∉ Q-III              [MI cannot be existentially empty]
 
 Corollary:
   There is no HEM-invalid nonsense.
@@ -154,4 +154,4 @@ Corollary:
 
 ---
 
-*URB #688 — The DT-HEM Free Pass | Tralse Informationalism | Brandon Emerick | April 16, 2026*
+*URB #688 — The MI-HEM Free Pass | Tralse Informationalism | Brandon Emerick | April 16, 2026*

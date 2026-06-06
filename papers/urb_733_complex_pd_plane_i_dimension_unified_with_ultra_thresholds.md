@@ -38,13 +38,13 @@ URB #715 established the Indeterminate range (−2/3, +1/3) on the real axis. **
 
 ## 3. The |PD| = e Circle: Unifying the Ultra-Thresholds
 
-**The deepest insight of this URB**: URB #728's ultra-thresholds at +e (transcendent) and −e (pre-DT) are the **real-axis projections of a single circular ultra-threshold in the complex plane**:
+**The deepest insight of this URB**: URB #728's ultra-thresholds at +e (transcendent) and −e (pre-MI) are the **real-axis projections of a single circular ultra-threshold in the complex plane**:
 
 > **|PD| = e ≈ 2.718** (the ultra-magnitude circle)
 
 Every point on this circle is an "ultra-state" in some direction:
 - **+e + 0i**: real-axis transcendent (URB #728)
-- **−e + 0i**: real-axis pre-DT (URB #728)
+- **−e + 0i**: real-axis pre-MI (URB #728)
 - **0 + ei**: pure-imaginary maximal Tralse (NEW)
 - **0 − ei**: pure-imaginary maximal anti-Tralse (NEW)
 - **(e/√2)(1 + i)**: 45° transcendent-Tralse mixture
@@ -65,9 +65,9 @@ The complex PD plane has **three structural concentric circles** corresponding t
 | **|PD| = 2/3** | Indeterminate range bounds (URB #715) | Indeterminate disc (uncollapsed states) |
 | **|PD| = 2** | Verisyn cap (positive) | Standard Verisyn saturation circle |
 | **|PD| = e** | ±e ultra-thresholds (URB #728) | Ultra-magnitude circle |
-| **|PD| = 3** | DT cliff (negative) | DT magnitude horizon (no states beyond) |
+| **|PD| = 3** | MI cliff (negative) | MI magnitude horizon (no states beyond) |
 
-Plus the **Indeterminate disc** at |PD| < 2/3, the **standard zone** at 2/3 < |PD| < 2, the **transcendent zone** at 2 < |PD| < e, and the **pre-DT zone** at e < |PD| < 3.
+Plus the **Indeterminate disc** at |PD| < 2/3, the **standard zone** at 2/3 < |PD| < 2, the **transcendent zone** at 2 < |PD| < e, and the **pre-MI zone** at e < |PD| < 3.
 
 This generalizes URB #728's five real-axis zones to **four 2D annular regions**, structurally cleaner than the original.
 

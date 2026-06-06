@@ -151,7 +151,7 @@ The framework now has **five independent empirical anchors**, the strongest comp
 
 1. **High-energy structural** — Dirac BOK 4+4 = 8 components (URB #699), 2% match
 2. **Optical experimental** — Maxwell knots in Irvine lab (URB #707), 5/5 predictions confirmed
-3. **Condensed-matter experimental** — UCSB double-frustration as DT realization (URB #712)
+3. **Condensed-matter experimental** — UCSB double-frustration as MI realization (URB #712)
 4. **Biological structural (lepton sector)** — lepton mass-ratio prediction 1.87 vs PDG 1.889 (URB #705), 1% match
 5. **Biological empirical (neutrino sector, NEW)** — brain scaling 2.566 ± 0.383 vs PDG neutrino 2.577 (URB #727), **0.03σ match across 7 independent published studies**
 

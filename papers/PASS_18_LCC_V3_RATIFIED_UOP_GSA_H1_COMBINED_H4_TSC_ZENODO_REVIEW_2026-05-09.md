@@ -330,7 +330,7 @@ predicted.
 **Pass-13 still open**: (i) ratify graph-Laplacian as canonical TSC
 Hamiltonian (now empirically tested by Pass-18 H4 — even with
 inverted sign, the Hamiltonian discriminates); (ii) ratify
-{1,6,6,8,8,10,10,8} vertex count; (iii) ratify V_4 ↔ {T,F,I,DT}
+{1,6,6,8,8,10,10,8} vertex count; (iii) ratify V_4 ↔ {T,F,I,MI}
 candidate map; (iv) Mott↔FQH ordering; (v) C.6 Cross-Ring CHSH
 Interpretation A vs B.
 

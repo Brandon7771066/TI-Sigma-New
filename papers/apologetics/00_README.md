@@ -35,7 +35,7 @@ The apologetics tab cannot succeed by being defensive. It succeeds by being *mor
 |---|---|---|
 | `01_LOGICAL_OBJECTIONS.md` | "It's just Belnap / violates LNC / explodes via ex falso / unformalized / unfalsifiable" | TI-ENVELOPE-1, MR Truth-Labels Ruling, FEATURES, §7.7.105 operator algebra |
 | `02_SCIENTIFIC_OBJECTIONS.md` | "Psi is pseudoscience / QC-hybrid is hand-wavy / MR labels subjective / small samples" | qc25/qc26 IBMQ HW, T45-4 κ=0.906, Pass-45 anti-cheat, FDS-1 |
-| `03_GENDER_SOCIAL_OBJECTIONS.md` | "4-DGI is reductionist / dysphoria-as-DT pathologizes / agender diagnosis gaslights" | 4 DGI taxonomy, CDP-1, NAD-1, urb_608 Meta-Identities |
+| `03_GENDER_SOCIAL_OBJECTIONS.md` | "4-DGI is reductionist / dysphoria-as-MI pathologizes / agender diagnosis gaslights" | 4 DGI taxonomy, CDP-1, NAD-1, urb_608 Meta-Identities |
 | `04_METAPHYSICAL_OBJECTIONS.md` | "CCC is unfalsifiable theism / Tralse Informationalism is panpsychism / everything-is-Tralse is mysticism" | URB #509 FEATURES, CCC/GM Network three-tier, four-tier disprove framework |
 | `05_RETRACTIONS_AND_HONESTY.md` | "Show that the corpus self-corrects" | Pre-Tralse §7.4 retraction, four-parameter coin-closure falsified, MBE main-effect dead, §7.7.96 retracted, more |
 

@@ -315,6 +315,6 @@ The 0.42 threshold is thus not a wall but a **gate** - one that can be passed th
 
 1. Emerick, B.C. (2025). "Tiered Photon Ledger Afterlife Resolution"
 2. Emerick, B.C. (2025). "Photon Timelessness and Non-Causal Computation"
-3. Emerick, B.C. (2025). "Original Photon DT-Shell Revelation"
+3. Emerick, B.C. (2025). "Original Photon MI-Shell Revelation"
 4. Emerick, B.C. (2025). "Unified Time Theory: DE-Photon, Jeff Time, CCC"
 5. Adams, D. (1979). "The Hitchhiker's Guide to the Galaxy" [Synchronicity source]

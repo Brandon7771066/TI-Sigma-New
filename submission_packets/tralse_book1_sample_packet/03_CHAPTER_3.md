@@ -14,7 +14,7 @@ A proposition is *Tralse* if and only if all of the following six conditions obt
 
 **(T5)** The proposition's indeterminacy is *stable* under further inquiry — that is, no procedure of evidence-gathering or formal analysis available to the agent will resolve the indeterminacy without altering the proposition itself.
 
-**(T6)** The proposition is *informationally substantive* — its assignment to the Tralse value carries inferential consequences distinct from those carried by True, False, I-state, or Double Tralse assignments.
+**(T6)** The proposition is *informationally substantive* — its assignment to the Tralse value carries inferential consequences distinct from those carried by True, False, I-state, or Meta-Indeterminate assignments.
 
 The reader is invited to compare this list with the prior literature surveyed in Chapter 2. Łukasiewicz's third value satisfies (T1), (T2), and (T3) but fails (T5): the future contingent will resolve when the future arrives. Kleene's **u** fails (T4): the proposition's truth-conditions are not defined. Belnap's *N* may satisfy all six, depending on the reading; Belnap's *B* fails (T2) and (T3) since it explicitly affirms both. Fuzzy values fail (T2) and (T3) by construction, since they sit on the same axis as classical truth and falsity. None of the prior values satisfies all six conditions in the way Tralse does.
 
@@ -36,7 +36,7 @@ Tralse is *not* uncertainty. Uncertainty is a property of the agent's epistemic 
 
 Tralse is *not* vagueness. Vagueness, in the sense studied by fuzzy logic and the philosophy of language, is a graded predicate's lack of sharp boundaries. *Tall* is vague: there is no exact height at which a person becomes tall. But the proposition *Smith is six feet two inches and one quarter tall*, applied to a man who is six feet two and one quarter, is determinately true. Vagueness lives in predicates; Tralse lives in propositions.
 
-Tralse is *not* contradiction. Contradictions assert both *p* and not-*p*; they are False (or, on the dialetheist's reading, both True and False). A Tralse proposition asserts neither, and its negation is also Tralse. The Liar sentence, often presented as the paradigm of contradiction, is on the present analysis Double Tralse (Chapter 5), not Tralse.
+Tralse is *not* contradiction. Contradictions assert both *p* and not-*p*; they are False (or, on the dialetheist's reading, both True and False). A Tralse proposition asserts neither, and its negation is also Tralse. The Liar sentence, often presented as the paradigm of contradiction, is on the present analysis Meta-Indeterminate (Chapter 5), not Tralse.
 
 Tralse is *not* meaninglessness. Logical positivism famously dismissed certain metaphysical and ethical propositions as cognitively meaningless. The Tralse propositions of this book are meaningful by stipulation (T1); their indeterminacy is a substantive logical fact, not a symptom of nonsense.
 
@@ -58,6 +58,6 @@ It changes the *next-step procedure*. A True or False assignment terminates inqu
 
 It permits *aggregate measures*. If GILE scores (Chapter 6) and HEAR (Chapter 8) are to integrate information from across the agent's whole cognitive and emotional landscape, they require a treatment of the indeterminate that does not silently coerce it to True or False. Tralse provides that treatment.
 
-The remaining three architectural elements — the I-state, Double Tralse, and the GILE compass — extend the work of Tralse into the regions where it alone does not suffice. The next chapter takes up the first of them.
+The remaining three architectural elements — the I-state, Meta-Indeterminate, and the GILE compass — extend the work of Tralse into the regions where it alone does not suffice. The next chapter takes up the first of them.
 
 ---

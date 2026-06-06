@@ -69,7 +69,7 @@ Last updated: March 12, 2026
 ### Paper #396 — The Book of James Was Wrong About Double-Mindedness
 - **File**: papers/URB_BOOK_OF_JAMES_DOUBLE_MINDEDNESS_TRALSE.md
 - **Type**: Journal article
-- **Abstract first line**: The Book of James identifies double-mindedness as a defect. James conflates Double Tralse (genuine incoherence) with Tralse (productive superposition). The correction: eliminate Double Tralse; cultivate Tralse.
+- **Abstract first line**: The Book of James identifies double-mindedness as a defect. James conflates Meta-Indeterminate (genuine incoherence) with Tralse (productive superposition). The correction: eliminate Meta-Indeterminate; cultivate Tralse.
 - **Keywords**: Book of James, double-mindedness, Tralse, self-assurance, confidence, biblical analysis, TI Sigma, mysticism
 
 ### Paper #397 — Confidence and Self-Assurance: A Formal Distinction and Their Tralse Foundation

@@ -106,14 +106,14 @@ The 2×2 itself is a contribution. Most phenomena that have been controversial i
 
 ## 7. TSD as Tralse-substrate phenomenon (connection to canon)
 
-Per the FEATURES (§7.7.105), every existent is τ — multiple truth-values held in tension. A statistical phenomenon X carrying both TSD-A and TSD-B measures is **τ at the significance level**: significant under one reading, not under the other. To force collapse to a single significance number is to commit the same error as forcing collapse of a Tralse substrate to a single base-4 cell — sometimes appropriate (the pragmatic-collapse case, DGI-1/DGI-2 in gender), often information-destructive (the dysphoria-as-DT case).
+Per the FEATURES (§7.7.105), every existent is τ — multiple truth-values held in tension. A statistical phenomenon X carrying both TSD-A and TSD-B measures is **τ at the significance level**: significant under one reading, not under the other. To force collapse to a single significance number is to commit the same error as forcing collapse of a Tralse substrate to a single base-4 cell — sometimes appropriate (the pragmatic-collapse case, DGI-1/DGI-2 in gender), often information-destructive (the dysphoria-as-MI case).
 
 The structural parallel:
 
 | Substrate layer | Two-axis tension | Collapse-to-one risk |
 |---|---|---|
-| Gender (§7.7.103) | Masculine ↔ Feminine on PD-real | Binary-claim becomes DT when asserted as substrate-truth |
-| Statistical significance | TSD-A ↔ TSD-B on per-event-vs-rate axis | Single-measure claim becomes DT when asserted without specifying which |
+| Gender (§7.7.103) | Masculine ↔ Feminine on PD-real | Binary-claim becomes MI when asserted as substrate-truth |
+| Statistical significance | TSD-A ↔ TSD-B on per-event-vs-rate axis | Single-measure claim becomes MI when asserted without specifying which |
 
 **TSD is the statistical-significance generalization of the ASYMMETRIC Success/Failure framework** (May 7, 2026 parent paper). Where ASYMMETRIC established that success and failure are governed by asymmetric standards in performance evaluation, TSD establishes that success and failure are governed by *different significance measures* — and that conflating the two measures is itself a #69 discipline failure.
 

@@ -479,7 +479,7 @@ L. The L×E / L+E dual captures the two modes of dynamic-substrate interaction a
 
 ## References
 
-- URB #528 (Corpus #182): Five-Valued Logic and DT Immunity Model
+- URB #528 (Corpus #182): Five-Valued Logic and MI Immunity Model
 - URB #543 (Corpus #197): E — Metaphysical and Empirical Implications
 - URB #448 (Corpus #202): Sin, LCC Indeterminacy, and the Science Spectrum (BT definition; LCC=0 for particles)
 - URB #565–572: Millennium Prize Problem Formalizations

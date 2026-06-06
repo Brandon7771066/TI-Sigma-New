@@ -179,7 +179,7 @@ The three E8 copies correspond to:
 LEECH LATTICE = GM (Grand Myrion) SUBSTRATE?
 ══════════════════════════════════════════════════════════
 
-24 dimensions = 4 GILE × 3 Jeff Time × 2 (TT/DT duality)
+24 dimensions = 4 GILE × 3 Jeff Time × 2 (TT/MI duality)
 
 Or alternatively:
 
@@ -257,7 +257,7 @@ BIOLOGY:
 ├── Spider: 8 legs
 
 CONSCIOUSNESS (TI):
-├── 8 = 4 GILE × 2 (TT/DT duality)
+├── 8 = 4 GILE × 2 (TT/MI duality)
 ├── 8 = 2³ (binary to ternary bridge)
 ├── 8 BOK arms (IIT-GILE synthesis)
 
@@ -354,7 +354,7 @@ The Leech lattice is the COMPLETE consciousness embedding!
 | Dimension | Structure | Representation | TI Role |
 |-----------|-----------|----------------|---------|
 | 1D | Line | Real numbers | Binary truth |
-| 2D | Plane | Complex numbers | DT + TT |
+| 2D | Plane | Complex numbers | MI + TT |
 | 3D | Space | Physical world | Environment |
 | 4D | Tesseract | Space + hidden dim | GILE complete |
 | 8D | E8 lattice | Optimal packing | Stable i-cell |
@@ -435,7 +435,7 @@ $$24 = 8 \times 3 = \text{(Stable Configuration)} \times \text{(Ternary Logic)}$
 | Leech Property | GM Requirement | Match |
 |----------------|----------------|-------|
 | 24 dimensions | Sufficient complexity | ✅ |
-| Self-dual | Balanced TT/DT | ✅ |
+| Self-dual | Balanced TT/MI | ✅ |
 | No roots (min norm = 4) | Noise threshold (0.42 → 4/9.5?) | ✅ |
 | 196,560 neighbors | Massive I-web | ✅ |
 | Optimal packing | Efficient consciousness | ✅ |

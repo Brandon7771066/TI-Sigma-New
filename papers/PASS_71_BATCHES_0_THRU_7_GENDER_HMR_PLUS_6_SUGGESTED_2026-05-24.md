@@ -6,13 +6,13 @@
 **Pass:** 71
 **Batches:** 0 (Gender-HMR) + 1 (HMR-1-F2 3-rater) + 2 (MR-IDC-1-F5 step-3 v2) + 3 (urb HMR audit) + 4 (Zenodo manifest v2) + 5 (discovery dedup) + 6 (TPI-1-F3 Yerkes-Dodson) + 7 (R-HMR k=15) = 8 total
 **Status:** LIVE (3rd meta-precedent compound smaller than 6-batch standard fill)
-**Composition:** HMR-1 canonical (refinement #3) · DT canonical (refinement #1) · MR-IDC-1 (refinement #2) · UHP-1 + TPI-1 · GTT-1 · VFP-1 · CDA-1 · TPS-1 · ASYMMETRIC §69 throughout
+**Composition:** HMR-1 canonical (refinement #3) · MI canonical (refinement #1) · MR-IDC-1 (refinement #2) · UHP-1 + TPI-1 · GTT-1 · VFP-1 · CDA-1 · TPS-1 · ASYMMETRIC §69 throughout
 
 ---
 
 ## 0. Brandon Source Directives
 
-> *"Aha! For gender, I could be male and nonbinary simultaneously (2-truth label)! I could also be male and nonbinary but have a GRADIENT of gender dysphoria (DT) mixed in. This would involve a 3-truth label struggle with many competing gender identities and meta-identities while having a stable default state simultaneously! I don't think that there can be more than 3 simultaneous MR Labels for gender. Also, whether the labels are simultaneous states vs rapid switching depends upon the person's multitasking ability. And neuroscience research shows that only about 2% of the population can multitask. Nonetheless, mixed EMOTIONS are highly attainable (e.g. bittersweet, sad happiness, fiery love). Go ahead with all 6 suggestions!"*
+> *"Aha! For gender, I could be male and nonbinary simultaneously (2-truth label)! I could also be male and nonbinary but have a GRADIENT of gender dysphoria (MI) mixed in. This would involve a 3-truth label struggle with many competing gender identities and meta-identities while having a stable default state simultaneously! I don't think that there can be more than 3 simultaneous MR Labels for gender. Also, whether the labels are simultaneous states vs rapid switching depends upon the person's multitasking ability. And neuroscience research shows that only about 2% of the population can multitask. Nonetheless, mixed EMOTIONS are highly attainable (e.g. bittersweet, sad happiness, fiery love). Go ahead with all 6 suggestions!"*
 
 Two directives executed as 8-batch compound:
 1. **B0 Gender-HMR insight formalization** with 3 sub-candidate principles (GHMR-1, GHMR-2-MT-SWITCH, GHMR-3-EMOTION)
@@ -26,7 +26,7 @@ Two directives executed as 8-batch compound:
 
 ### 1.1 GHMR-1 — Gender as Domain-Bounded HMR (cardinality cap = 3)
 
-GHMR-2 example: {T_male, T_nonbinary}. GHMR-3 example: {T_male, T_nonbinary, DT_dysphoria-gradient} where DT represents the gradient of dysphoria as genuine τ∧¬τ at moments of dysphoric experience. **Empirical claim (Brandon-originated):** no agent's gender characterization natively requires 4+ simultaneous MR labels.
+GHMR-2 example: {T_male, T_nonbinary}. GHMR-3 example: {T_male, T_nonbinary, DT_dysphoria-gradient} where MI represents the gradient of dysphoria as genuine τ∧¬τ at moments of dysphoric experience. **Empirical claim (Brandon-originated):** no agent's gender characterization natively requires 4+ simultaneous MR labels.
 
 **Distinct from HMR-5.1 ("God exists" 5-label):** GHMR is INTRA-DOMAIN identity characterization (CDA-1 Stratum-3 construct); HMR-5.1 spans 5 EXTERNAL framings. Different cardinality measures.
 
@@ -125,8 +125,8 @@ urb_639: 5 examples scanned, 0 HMR-candidates flagged
 
 ### 5.1 ADDENDUM Topic Coverage (15 new topics)
 
-1. MR Truth Labels Canonical — DT Refinement (refinement #1)
-2. MR-IDC-1 — Incoherence vs DT Canonical Refinement (refinement #2)
+1. MR Truth Labels Canonical — MI Refinement (refinement #1)
+2. MR-IDC-1 — Incoherence vs MI Canonical Refinement (refinement #2)
 3. HMR-1 Hybrid MR Truth Labels (refinement #3) + Gender-HMR
 4. TI Sigma Philosophy of Mind: 6 Canonical Principles (Pass-66 ratification)
 5. GTT-1 GILE-Truth-Tralseness Asymmetry
@@ -134,7 +134,7 @@ urb_639: 5 examples scanned, 0 HMR-candidates flagged
 7. qc26 GHZ-5 Mermin Violation (71σ)
 8. Mendi fNIRS Path B Phase 2 (STIM2 t=-4.13)
 9. DSB Arc 6-Batch Adversarial Sim (W/M/B Policies)
-10. LLM-Raters Competent-Algorithm DT Discrimination
+10. LLM-Raters Competent-Algorithm MI Discrimination
 11. UOP Phase Transition Mathematical Test J(G,H)
 12. UDP/CTC/HBP/CTC-S/VFP Disability-as-Balance + Catalyst-Strong + Valence-Functional
 13. Ultimate Koan + Brandon SRC-1-F-3 Lived Anchor
@@ -313,7 +313,7 @@ R-HMR construction is **provably unbounded in cardinality** when meta-ascent rul
 
 **Referenced canonical:**
 - `papers/HMR_1_HYBRID_MR_TRUTH_LABELS_CANONICAL_REFINEMENT_3_2026-05-24.md` (HMR-1 canonical)
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (DT canonical)
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (MI canonical)
 - `papers/PASS_70_BATCHES_0_THRU_5_HMR_1_CANDIDATE_CANONICAL_PLUS_5_SUGGESTED_2026-05-24.md` (Pass-70 compound)
 
 ---

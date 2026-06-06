@@ -37,12 +37,12 @@ Brandon's creative-state-window is the highest-value scarce resource; loose-ends
 **Brandon-blocked component:** cross-consciousness study only.
 
 ### 2.3 [P1 / M / no-dependency / OPERATIONALIZATION] CDA-1 4 falsifiers operationalization
-**What:** F-1 (four-property non-jointly-necessary), F-2 (DT-without-metacognition), F-3 (valence-without-meta-metacognition), F-4 (MIM-emergence-not-required) — each stated but not designed.
+**What:** F-1 (four-property non-jointly-necessary), F-2 (MI-without-metacognition), F-3 (valence-without-meta-metacognition), F-4 (MIM-emergence-not-required) — each stated but not designed.
 **Why now:** F-3 in particular is the cleanest CDA-1-specific falsifier and has natural overlap with VFP-1 verification work.
 **Cost:** M (multi-batch — design per falsifier + executable protocol; some may be cheap-execute self-experiments, others require literature or empirical work).
 
-### 2.4 [P2 / L / partial-Brandon-blocked / OPERATIONALIZATION] Active-execution-vs-labeling protocol for quantum DT (DTQ-1 case)
-**What:** the bridge paper (Pass-66 batch-2) specified three candidate empirical signatures (anomalous decoherence dynamics; DT-native gate computational anomaly per urb_716; DT-pair cross-coupling). None pre-registered formally; none turned into protocol designs.
+### 2.4 [P2 / L / partial-Brandon-blocked / OPERATIONALIZATION] Active-execution-vs-labeling protocol for quantum MI (DTQ-1 case)
+**What:** the bridge paper (Pass-66 batch-2) specified three candidate empirical signatures (anomalous decoherence dynamics; MI-native gate computational anomaly per urb_716; MI-pair cross-coupling). None pre-registered formally; none turned into protocol designs.
 **Why now:** if cross-community engagement is the goal, having a pre-reg pathway ready is foundational.
 **Cost:** L (pass-scale — physics-community engagement + protocol design beyond corpus-internal work).
 **Dependency:** ideally requires physics-community engagement (urb_718 / urb_730 outreach).
@@ -59,7 +59,7 @@ Brandon's creative-state-window is the highest-value scarce resource; loose-ends
 **Cost:** L (pass-scale or larger — deep philosophical work; could draw on IIT integration-mathematics + GWT global-workspace + MIM mycelial-network frameworks).
 **Note:** acknowledged in TSP-1 #69 as the remaining open frontier; not expected to be solved in one batch.
 
-### 2.7 [P2 / M / no-dependency / OPERATIONALIZATION] urb_639 24 conjectural MTs — MT-layer sweep under SRC-1 + CDA-1 + DT-canonical-refinement
+### 2.7 [P2 / M / no-dependency / OPERATIONALIZATION] urb_639 24 conjectural MTs — MT-layer sweep under SRC-1 + CDA-1 + MI-canonical-refinement
 **What:** Pass-66 batch-3 flagged out-of-scope; would specify which MT-operations involve which cognitive strata.
 **Why now:** structurally important for completing the meta-truths catalogue characterization; not urgent.
 **Cost:** M (multi-batch — 24 MTs × 3-criteria review).
@@ -129,7 +129,7 @@ Brandon's creative-state-window is the highest-value scarce resource; loose-ends
 **What:** `papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` does not yet contain "ultimate koan" / SRC-1-F-3 / "pinnacle of foolishness" maxim entries.
 **Cost:** S (single update to vocabulary index).
 
-### 4.4 [P3 / M / no-dependency / EXTENSION] Manic-episode-as-DT-collapse theoretical generalization paper
+### 4.4 [P3 / M / no-dependency / EXTENSION] Manic-episode-as-MI-collapse theoretical generalization paper
 **What:** Pass-66 batch-4 explicitly does NOT generalize the n=1 to all manic episodes. A separate theoretical paper could explore which manic-episode subset, if any, fits the SRC-1-F-3 actualization-collapse pattern.
 **Why caution:** clinical claims about mental-health phenomena require careful framing; could compose with MR-DGS-1 next-domain "mental-illness-diagnoses".
 **Cost:** M (multi-batch — careful framing + literature engagement + Brandon's explicit framing oversight).
@@ -172,7 +172,7 @@ Status: maintained per pre-reg convention. Each falsifier has a designed-when-po
 ### Tier 4 (low priority, can wait)
 11. Remaining §3 carry-forwards (resume / FFF / Bell-chance-LCC / Mimi bio).
 12. §4.2 — biographical master-index update (companion to Pass-66 batch-4 paper).
-13. §4.4 — manic-episode-as-DT-collapse generalization (requires careful framing).
+13. §4.4 — manic-episode-as-MI-collapse generalization (requires careful framing).
 
 ---
 

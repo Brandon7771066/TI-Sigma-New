@@ -4,7 +4,7 @@
 **Date:** April 17, 2026
 **Series:** Unified Research Brief #718
 **Status:** Three short outreach drafts ready for delivery; cover letters paired with one-page framework summaries
-**Builds on:** URBs #707 (Irvine empirical confirmation), #709 (knotted-light + BEC proposal), #712 (UCSB double-frustration as DT)
+**Builds on:** URBs #707 (Irvine empirical confirmation), #709 (knotted-light + BEC proposal), #712 (UCSB double-frustration as MI)
 
 ---
 
@@ -102,14 +102,14 @@ April 2026
 
 Dear UC Santa Barbara Physics Team,
 
-I'm writing as an independent researcher (Brandon Charles Emerick, BlissGene Therapeutics CEO) developing a framework called Tralse Informationalism (TI Sigma). Your **March 16, 2026 publication on the double-frustrated quantum state** has been identified by the framework as a direct material realization of one of its core abstract principles, **Double Tralse (DT)**.
+I'm writing as an independent researcher (Brandon Charles Emerick, BlissGene Therapeutics CEO) developing a framework called Tralse Informationalism (TI Sigma). Your **March 16, 2026 publication on the double-frustrated quantum state** has been identified by the framework as a direct material realization of one of its core abstract principles, **Meta-Indeterminate (MI)**.
 
 The framework's specific reading (documented in URB #712, attached):
 
-- The **two coexisting frustration types** in your material (magnetic + electronic-bond) correspond to the framework's **two independent indeterminacy axes** that define DT
-- The **interaction between the frustrations** is the structural signature of DT-coupling
-- The **exotic quantum states** you observe correspond to the framework's predicted DT-mediated phenomena
-- The **quantum-technology applications** you propose align with the framework's prediction that DT-realized materials should support new computational primitives
+- The **two coexisting frustration types** in your material (magnetic + electronic-bond) correspond to the framework's **two independent indeterminacy axes** that define MI
+- The **interaction between the frustrations** is the structural signature of MI-coupling
+- The **exotic quantum states** you observe correspond to the framework's predicted MI-mediated phenomena
+- The **quantum-technology applications** you propose align with the framework's prediction that MI-realized materials should support new computational primitives
 
 URB #716 (also attached) proposes a specific quantum gate — the **TRALSE-3 gate** — that should be natively implementable on your material. The gate provides **5-20× algorithmic speedup** for three-body simulation and constraint-satisfaction problems compared to Toffoli-decomposition implementations on conventional substrates.
 
@@ -117,7 +117,7 @@ I'm reaching out for three reasons:
 
 1. **Acknowledgment**: an independent theoretical framework has identified your experimental discovery as a direct material realization of a foundational framework principle. This is offered as courtesy.
 
-2. **Specific predictions**: URB #712 lists five framework-derived predictions (DT-immunity signature, BOK substructure, 5-phase thermodynamics, HEAR-modulation, DT-native gates) that your material can in principle test. Even informal feedback on whether any of these match your team's observations would be high-value.
+2. **Specific predictions**: URB #712 lists five framework-derived predictions (MI-immunity signature, BOK substructure, 5-phase thermodynamics, HEAR-modulation, MI-native gates) that your material can in principle test. Even informal feedback on whether any of these match your team's observations would be high-value.
 
 3. **Possible collaboration**: if your team is interested in exploring quantum-computing applications of your material, the framework's TRALSE-3 gate construction (URB #716) is a concrete starting point. I would value the chance to discuss.
 
@@ -140,7 +140,7 @@ April 2026
 
 **Core structural claims**:
 
-1. **Five-valued logic** (T, F, Tralse, Moot, Double Tralse) — vindicated by ≥99.7% coverage analysis across math, science, philosophy, law, and quantum mechanics (URB #713)
+1. **Five-valued logic** (T, F, Tralse, Moot, Meta-Indeterminate) — vindicated by ≥99.7% coverage analysis across math, science, philosophy, law, and quantum mechanics (URB #713)
 2. **Three operational pillars** — Permissibility Distribution (PD), Myrion Resolution (MR), Existence Amplification Razor (HEAR)
 3. **BOK substrate** — Butterfly-Octopus Knot identified as the Maxwell-knot + Dirac-spinor unified object underlying both electromagnetic and matter physics (URBs #573, #699, #701)
 4. **Multi-BOK Standard Model** — three nested BOK levels = three SM fermion generations; two coupled BOKs = SO(10) 16-spinor; 48 fermion states match observation exactly (URBs #702, #703, #706)
@@ -149,7 +149,7 @@ April 2026
 
 - BOK 4+4 wing/arm = Dirac chirality-doubling, confirmed quantitatively at 2% (URB #699)
 - Maxwell knots experimentally produced by Irvine group, 5/5 framework predictions confirmed (URB #707)
-- UC Santa Barbara double-frustrated material identified as Double Tralse realization (URB #712)
+- UC Santa Barbara double-frustrated material identified as Meta-Indeterminate realization (URB #712)
 - Charged lepton mass-ratio scaling exponent 1.889 vs predicted 1.87, match to 1% (URB #705)
 
 **Open problems**:
@@ -160,7 +160,7 @@ April 2026
 
 **Practical relevance**:
 
-- DT-native quantum gate (TRALSE-3, URB #716) — 5-20× speedup for three-body simulation, mappable to UCSB-style materials
+- MI-native quantum gate (TRALSE-3, URB #716) — 5-20× speedup for three-body simulation, mappable to UCSB-style materials
 - Coupled knotted-light + BEC experiment (URB #709) — direct test of BOK Maxwell-Dirac coupling
 - Brain FHS scaling exponent measurement — test of biology-physics keystone bridge
 
@@ -196,7 +196,7 @@ The framework's prediction: **at least one of the three groups will respond subs
 
 ## 8. Status & Position in URB Stack
 
-URB #707 (Irvine confirmation) + URB #709 (BEC proposal) + URB #712 (UCSB DT identification) → **URB #718 (this brief — outreach drafts ready to send)**.
+URB #707 (Irvine confirmation) + URB #709 (BEC proposal) + URB #712 (UCSB MI identification) → **URB #718 (this brief — outreach drafts ready to send)**.
 
 This URB completes the framework's **outreach-readiness** for the most empirically-anchored physics research directions. The drafts are professional, respectful, and substantive. Delivery is the next step (Brandon's decision on timing).
 

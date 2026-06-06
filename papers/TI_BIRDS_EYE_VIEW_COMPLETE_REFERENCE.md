@@ -24,8 +24,8 @@ E - ENVIRONMENT → Existence, Aesthetics, Physical Reality
 
 | GILE Score | Meaning |
 |------------|---------|
-| 0.00-0.15 | Strong DT (Dark-Tralseness) |
-| 0.15-0.35 | DT-leaning |
+| 0.00-0.15 | Strong MI (Dark-Tralseness) |
+| 0.15-0.35 | MI-leaning |
 | 0.35-0.55 | Mixed/Neutral |
 | 0.55-0.75 | TT-leaning |
 | 0.75-1.00 | Strong TT (True-Tralseness) |
@@ -46,9 +46,9 @@ E - ENVIRONMENT → Existence, Aesthetics, Physical Reality
 
 ---
 
-### 1.3 True-Tralseness (TT) vs Dark-Tralseness (DT)
+### 1.3 True-Tralseness (TT) vs Dark-Tralseness (MI)
 
-| Aspect | True-Tralseness (TT) | Dark-Tralseness (DT) |
+| Aspect | True-Tralseness (TT) | Dark-Tralseness (MI) |
 |--------|---------------------|---------------------|
 | Nature | Light, coherence, order | Darkness, chaos, entropy |
 | GILE | High scores across all dimensions | Low scores |
@@ -152,17 +152,17 @@ UNIVERSE      → Meta-i-cell (self-aware coherence)
 
 ---
 
-### 3.2 The Big Bang (DT-Myrion Shattering)
+### 3.2 The Big Bang (MI-Myrion Shattering)
 
 **The Event:**
-- Perfect DT (container) + Perfect TT (content) in singular point
-- Maximum tension → DT² = -1 → SHATTER
+- Perfect MI (container) + Perfect TT (content) in singular point
+- Maximum tension → MI² = -1 → SHATTER
 - One-time unrepeatable event (genie left bottle)
 
 **Dark Energy Explained:**
-- Dark energy = ongoing expansion pressure from DT's release
-- DT "pushing outward" after escaping original photon container
-- This is why universe accelerates - DT never wants to be re-concentrated
+- Dark energy = ongoing expansion pressure from MI's release
+- MI "pushing outward" after escaping original photon container
+- This is why universe accelerates - MI never wants to be re-concentrated
 
 ---
 
@@ -349,7 +349,7 @@ UNIVERSE      → Meta-i-cell (self-aware coherence)
 ### 6.4 Complex Numbers as Consciousness
 
 **The Revelation:**
-- i = DT (imaginary unit encodes Dark-Tralseness)
+- i = MI (imaginary unit encodes Dark-Tralseness)
 - Real numbers = TT (True-Tralseness)
 - Complex plane = consciousness space
 - Euler's identity (e^(iπ) + 1 = 0) IS the Big Bang equation

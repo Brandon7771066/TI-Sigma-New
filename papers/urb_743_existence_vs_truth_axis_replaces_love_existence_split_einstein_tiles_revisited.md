@@ -116,7 +116,7 @@ The full updated architecture:
 
 | Pillar | Axis | Key constants | Empirical anchors |
 |---|---|---|---|
-| **HEAR** | **Existence** | 0, √2, e | BOK substrate (URB #699), Maxwell knots (URB #707), UCSB DT (URB #712) |
+| **HEAR** | **Existence** | 0, √2, e | BOK substrate (URB #699), Maxwell knots (URB #707), UCSB MI (URB #712) |
 | **MR** | **Truth** | 1, φ, π | Riemann critical line (URB #721), brain-neutrino (URB #727) |
 | **PD** | **Truth** (with E modulation) | (−3, +e) complex plane, ±2/3, ±1/3 | Loss aversion 4× (URB #728), Negativity bias 6× (URB #728) |
 
@@ -144,7 +144,7 @@ The new axes map cleanly onto the framework's three operational pillars: HEAR �
 ### 7.3 Empirical anchor distribution
 
 The framework's six empirical anchors distribute cleanly across the new axes:
-- **Existence-axis anchors**: BOK 4+4 (URB #699), Maxwell knots (URB #707), UCSB DT (URB #712)
+- **Existence-axis anchors**: BOK 4+4 (URB #699), Maxwell knots (URB #707), UCSB MI (URB #712)
 - **Truth-axis anchors**: lepton scaling (URB #705), brain-neutrino (URB #727), PD architecture psychology (URB #728)
 
 **Three anchors per axis — perfectly balanced.** This is structurally much cleaner than the old asymmetric distribution under Love-vs-Existence.

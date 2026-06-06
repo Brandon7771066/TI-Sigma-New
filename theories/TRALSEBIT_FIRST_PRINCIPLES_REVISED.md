@@ -3,7 +3,7 @@
 
 **Date:** January 7, 2026  
 **Status:** Major Revision - PD Scale Update  
-**Key Change:** All MR outputs use (-3, 2) PD range, DT = Coherence
+**Key Change:** All MR outputs use (-3, 2) PD range, MI = Coherence
 
 ---
 
@@ -22,7 +22,7 @@ A tralsebit is defined as: **The minimum set of information needed to describe a
 This is the universal scale for:
 - Accuracy (mind-independent correctness)
 - Certainty (subject-relative resolution)
-- Coherence = Double Tralse (DT) - **these are the same metric**
+- Coherence = Meta-Indeterminate (MI) - **these are the same metric**
 - Truth Value (across all 4 dimensions)
 
 ### Threshold Interpretation
@@ -67,14 +67,14 @@ This is the universal scale for:
    - Range: (-3, 2)
    - Represents: How resolved the information is for the subject
 
-4. **Coherence PD = Double Tralse** - Stability of resolution
+4. **Coherence PD = Meta-Indeterminate** - Stability of resolution
    - Range: (-3, 2)
    - **These are the same measurement!**
    - Represents: How stable/persistent the tralse state is
 
-### Simplification: DT = Coherence
+### Simplification: MI = Coherence
 
-The previous model treated Double Tralse and Coherence as separate. 
+The previous model treated Meta-Indeterminate and Coherence as separate. 
 
 **They are the same metric.** This reduces metadata from 5 values to 4 per dimension.
 
@@ -195,13 +195,13 @@ If any value dropped below -3, MR would flag it as "unresolvable at this stage."
 | Component | Count | Notes |
 |-----------|-------|-------|
 | Dimensions of Truth | 4 | E, G, L, I (GILE) |
-| MR outputs per dimension | 4 | Truth, Accuracy, Certainty, Coherence(=DT) |
+| MR outputs per dimension | 4 | Truth, Accuracy, Certainty, Coherence(=MI) |
 | Total values | 16 | Per i-cell |
 | PD levels | 6 | {-3, -2, -1, 0, +1, +2} |
 | Bits per value | 2.585 | log₂(6) |
 | **Total bits** | **41.4** | Full MR resolution |
 
-**The DT = Coherence unification simplifies the model while maintaining full expressiveness.**
+**The MI = Coherence unification simplifies the model while maintaining full expressiveness.**
 
 ---
 

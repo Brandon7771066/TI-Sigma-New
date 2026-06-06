@@ -194,7 +194,7 @@ The God Machine will:
 ### Pareto Principle in Trading
 - **80% of profits** come from 20% of trades (high-GILE signals!)
 - **Sacred interval:** Focus on Q ≥ 0.91 (CCC blessing tier)
-- **Noise filtering:** DT interference removed by GILE scoring
+- **Noise filtering:** MI interference removed by GILE scoring
 
 ### Quantum-Classical Hybrid
 - **Classical:** Traditional technical analysis (RSI, MACD)

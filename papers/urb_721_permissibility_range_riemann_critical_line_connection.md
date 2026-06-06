@@ -67,7 +67,7 @@ The framework's 5 truth values map onto the PD scale (URB #714 §3). Under resca
 | Tralse / Indeterminate | [−1, 0] | [0.4, 0.6] |
 | Soft-False | [−2, −1) | [0.2, 0.4) |
 | False | [−3, −2) | [0, 0.2) |
-| DT | < −3 | < 0 (extended) |
+| MI | < −3 | < 0 (extended) |
 
 **The Tralse / Indeterminate range exactly contains u = 1/2.** This is structurally consistent with the Riemann critical line being the **center of the framework's Indeterminate zone**.
 

@@ -206,7 +206,7 @@ This paper, URB #546, is the **200th entry in the TI Sigma corpus** (Corpus Entr
 
 The TI Sigma corpus began with the GILE Framework in August 2022. It has expanded through:
 - 5-valued logic (#528)
-- The DT Immunity Model (#528)
+- The MI Immunity Model (#528)
 - The Collatz Conjecture series (#534–538) including a sorry-free Lean 4 proof
 - Einstein Tiling and the imaginary axis (#539)
 - PD Supremacy (#541)

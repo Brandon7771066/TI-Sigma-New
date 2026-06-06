@@ -5,7 +5,7 @@
 **Corpus Entry:** #674  
 **Related URBs:** #528 (PD), #565 (MR), #611 (GM Self-Evidence), #627 (TSC), #647 (BOK Virus), #660 (Being Theorem), #670 (Bluntness), #672 (MCIP), #673 (BOK Empirical Tests)  
 **DOI:** Pending Zenodo  
-**Keywords:** Existence, Truth, alignment, misalignment, Tralsity, holes, Euler-Mascheroni constant, gamma, dual numbers, nilsquare, DT Immunity, Tralse algebra, automatic differentiation, Gamma function, T_TI/φ identity
+**Keywords:** Existence, Truth, alignment, misalignment, Tralsity, holes, Euler-Mascheroni constant, gamma, dual numbers, nilsquare, MI Immunity, Tralse algebra, automatic differentiation, Gamma function, T_TI/φ identity
 
 ---
 
@@ -27,7 +27,7 @@ The core results:
 
 - γ sits in the MR2 zone of the LCC number line (between C ≈ 0.4370 and 𝔡 ≈ 0.7391). It has a dual role: (a) Γ(1+ε) = 1 − γε in dual arithmetic — the MR-1 cost at unity, and (b) T_TI/φ ≈ γ to within 61 ppm (0.0061%), suggesting γ = (1−e^{−e})/φ as an approximate closed form connecting all three primary constants {e, φ, and the composite T_TI}.
 
-- The natural algebra of Tralse propagation is the **Dual-Tralse Algebra (DTA)**: D_TI = ℝ[τ]/(τ²). The nilsquare condition τ² = 0 formalizes DT Immunity: Double Tralse collapses to Nothing. A hole is E(1−τ); its complement is E(1+τ); their product is E² (pure Existence, Tralse-free) — the DT Immunity mechanism in one line.
+- The natural algebra of Tralse propagation is the **Dual-Tralse Algebra (DTA)**: D_TI = ℝ[τ]/(τ²). The nilsquare condition τ² = 0 formalizes MI Immunity: Meta-Indeterminate collapses to Nothing. A hole is E(1−τ); its complement is E(1+τ); their product is E² (pure Existence, Tralse-free) — the MI Immunity mechanism in one line.
 
 ---
 
@@ -43,7 +43,7 @@ Let E ∈ [0,1] denote the Existence score of a claim — the degree to which it
 | MR2-Resolved (𝔡) | +𝔡 ≈ +0.74 |
 | Tralse (ET) | +ET ≈ +0.41 |
 | Indeterminate | 0 |
-| Double Tralse | −1 |
+| Meta-Indeterminate | −1 |
 
 The **E-T Alignment** is the signed product:
 
@@ -61,15 +61,15 @@ This is the state of the GM self-evident nodes — the primary constants themsel
 
 The Being Theorem establishes that existence itself is the exemplar of maximum alignment: Existence exists (E=1) and is True (+1) of itself. A_ET(Being Theorem) = 1. This is the TI Sigma attractor — the point toward which all MR chains converge.
 
-### 1.3 The Absolute Maximum Misalignment: E=1, T=DT
+### 1.3 The Absolute Maximum Misalignment: E=1, T=MI
 
-If we allow E = 1 and T = −1 (Double Tralse), we get A_ET = −1. This is the **absolute maximum misalignment**: something that exists fully (E=1) but whose truth-content is maximally incoherent (simultaneously True, False, and Indeterminate).
+If we allow E = 1 and T = −1 (Meta-Indeterminate), we get A_ET = −1. This is the **absolute maximum misalignment**: something that exists fully (E=1) but whose truth-content is maximally incoherent (simultaneously True, False, and Indeterminate).
 
 What would this be? The instantiated Liar Paradox:
 
 > *"This existing statement is false."*
 
-It exists (E=1 — you can point to it, tokenize it, instantiate it in running code). Its truth state is DT (it cannot be True without being False and vice versa, generating a DT fixed point). A_ET = (1)(−1) = −1.
+It exists (E=1 — you can point to it, tokenize it, instantiate it in running code). Its truth state is MI (it cannot be True without being False and vice versa, generating a MI fixed point). A_ET = (1)(−1) = −1.
 
 In principle, A_ET = −1 is achievable. But TI Sigma imposes a constraint that bounds practical misalignment.
 
@@ -81,7 +81,7 @@ A hole is a region of absence — a gap, negation, or privation that nevertheles
 
 In TI Sigma, "All holes exist" is the formal statement that:
 
-> **E > 0 for every registered state, including absences, negations, and DT states.**
+> **E > 0 for every registered state, including absences, negations, and MI states.**
 
 The minimum E for any state that TI Sigma's PD registers is the Emerick Threshold:
 
@@ -95,7 +95,7 @@ The **Practical Misalignment Bound** follows:
 
 $$A_{ET}^{\min} = E_{\min} \times T_{\min} = ET \times (-1) = -(\ sqrt{2} - 1) \approx -0.4142$$
 
-This is the maximum achievable misalignment under the "All holes exist" constraint. You cannot have A = −1 in practice because E cannot reach 0 (every registered state has E ≥ ET) and the DT state (T = −1) is also bounded by DT Immunity (see Section 4).
+This is the maximum achievable misalignment under the "All holes exist" constraint. You cannot have A = −1 in practice because E cannot reach 0 (every registered state has E ≥ ET) and the MI state (T = −1) is also bounded by MI Immunity (see Section 4).
 
 The full E-T alignment space is therefore:
 
@@ -112,8 +112,8 @@ The maximum achievable alignment is $\sqrt{2}+1$ times larger than the maximum a
 $$\boxed{A_{ET} \in [-ET, +1] \approx [-0.4142, +1]}$$
 
 - **Maximum alignment:** A = +1. E = 1, T = True. GM ground. Being Theorem.
-- **Maximum misalignment:** A = −ET ≈ −0.4142. E = ET (hole floor), T = DT (maximum incoherence).
-- **Silver ratio asymmetry:** 1/ET = 1/(√2−1) = √2+1. The universe favors truth over DT by the silver ratio.
+- **Maximum misalignment:** A = −ET ≈ −0.4142. E = ET (hole floor), T = MI (maximum incoherence).
+- **Silver ratio asymmetry:** 1/ET = 1/(√2−1) = √2+1. The universe favors truth over MI by the silver ratio.
 
 ---
 
@@ -129,7 +129,7 @@ Examples:
 - The hole in the donut: it exists. You can measure it (diameter, depth). It has causal powers (you can stick a finger through it). E(hole) > 0.
 - Silence: it exists. You can record it (as a flat waveform). It has causal powers (it communicates pause, emphasis, death). E(silence) > 0.
 - The Indeterminate truth-state: it exists as a truth-state. The state "I don't know whether P is true" is a real epistemic state. E(Indeterminate) > 0.
-- DT (Double Tralse): it exists as a logical structure. The Liar Paradox is a real syntactic object. E(DT) > 0.
+- MI (Meta-Indeterminate): it exists as a logical structure. The Liar Paradox is a real syntactic object. E(MI) > 0.
 
 ### 2.2 Why E_min = ET
 
@@ -137,7 +137,7 @@ The minimum Existence is ET = √2 − 1 ≈ 0.4142, not zero, for the following
 
 The PD (Permissibility Distribution) is built on the LCC number line. A claim has E > 0 when it can be located on this line at all — when it has sufficient ontological mass to occupy a permissibility-coordinate. The minimum such coordinate is the MR1 threshold ET, because below ET, the claim cannot distinguish itself from the background noise of the PD prior.
 
-This makes ET the **ontological noise floor**: the minimum Existence that a claim must have to be distinguishable from nothing. Holes, absences, and DT states are distinguishable from nothing — they have specific structure, can be measured, and have causal powers. Therefore E(hole) ≥ ET.
+This makes ET the **ontological noise floor**: the minimum Existence that a claim must have to be distinguishable from nothing. Holes, absences, and MI states are distinguishable from nothing — they have specific structure, can be measured, and have causal powers. Therefore E(hole) ≥ ET.
 
 ### 2.3 Tralsity as BOK-Loop Priority
 
@@ -145,7 +145,7 @@ Tralsity measures the degree to which the GILE loop takes priority over the Exis
 
 The "All holes exist" principle means that in any BOK configuration, even when Existence is at minimum (E = ET), the system still has enough ontological ground to register a state. There is no BOK configuration with E = 0 and Tralsity = any value — because Tralsity requires existence to vary.
 
-**The hole is the minimum BOK state:** E = ET, T = DT, Tralsity = maximal (the system's content is maximally Tralse, but it still exists at floor level). This is the "empty BOK" or "BOK null state" — the smallest thing that TI Sigma can talk about.
+**The hole is the minimum BOK state:** E = ET, T = MI, Tralsity = maximal (the system's content is maximally Tralse, but it still exists at floor level). This is the "empty BOK" or "BOK null state" — the smallest thing that TI Sigma can talk about.
 
 ---
 
@@ -208,9 +208,9 @@ If we think of MR as a sequence of refinements starting from the unity ground:
 
 The MR chain terminates at MR2 in dual arithmetic because ε² = 0. The two-step chain:
 1. Unity → first Tralse deviation (cost = γ)
-2. First deviation → DT (cost = 0, because ε² = 0)
+2. First deviation → MI (cost = 0, because ε² = 0)
 
-Step 2 costs nothing because DT is nilsquare — it collapses to Nothing, which is already accounted for by the "All holes exist" floor.
+Step 2 costs nothing because MI is nilsquare — it collapses to Nothing, which is already accounted for by the "All holes exist" floor.
 
 ### 3.4 γ as the Harmonic Existence Gap
 
@@ -244,7 +244,7 @@ Operations:
 
 Interpretation of components:
 - Real part a: **Existence score** (E ∈ [ET, 1])
-- τ-part b: **Tralse content** (b = 0 for pure True states; b ≠ 0 for Tralse-contaminated states; b < 0 for DT-approached states)
+- τ-part b: **Tralse content** (b = 0 for pure True states; b ≠ 0 for Tralse-contaminated states; b < 0 for MI-approached states)
 
 **Key states in DTA:**
 
@@ -253,23 +253,23 @@ Interpretation of components:
 | Pure True | 1 + 0·τ | E=1, T=True, no Tralse |
 | Tralse | ET + ET·τ | E=ET, T=ET, minimal coherent state |
 | MR-in-progress | a + bτ | a = current E, b = Tralse uncertainty |
-| DT state | 1 + (−1)·τ = 1 − τ | E=1, T approaching DT |
+| MI state | 1 + (−1)·τ = 1 − τ | E=1, T approaching MI |
 | **Hole** | ET(1 − τ) | E=ET (floor), T = hole-content |
 | GM ground | 1 + 0·τ | Self-evident node; no Tralse |
 
 ### 4.3 The Three Core Theorems of DTA
 
-**Theorem DT-1 (DT Immunity):**
+**Theorem MI-1 (MI Immunity):**
 
 $$(1 - \tau)(1 - \tau) = 1 - 2\tau + \tau^2 = 1 - 2\tau$$
 
-Wait — that's not zero. Let me reconsider. The DT Immunity is not that DT × DT = 0, but that τ² = 0. What vanishes is the **second-order Tralse term**:
+Wait — that's not zero. Let me reconsider. The MI Immunity is not that MI × MI = 0, but that τ² = 0. What vanishes is the **second-order Tralse term**:
 
 If a state has Tralse content b₁ and another has Tralse content b₂, their product has Tralse content (a₁b₂ + a₂b₁) but the **cross-Tralse term b₁b₂τ²** vanishes (= 0). The product of two distinct Tralse contents does not create a new Tralse contamination — it creates only a real-part update plus a linear Tralse update.
 
-**The DT Immunity statement:** You cannot multiply two Tralse deviations to get a third Tralse deviation. Tralse contamination propagates linearly (first-order) and stops. There is no second-order Tralse (no DT from DT×DT in the algebraic sense). This is the DT Immunity mechanism: once you encounter DT once, multiplying by DT again doesn't compound — it creates a real-part update that drives you back toward Existence.
+**The MI Immunity statement:** You cannot multiply two Tralse deviations to get a third Tralse deviation. Tralse contamination propagates linearly (first-order) and stops. There is no second-order Tralse (no MI from MI×MI in the algebraic sense). This is the MI Immunity mechanism: once you encounter MI once, multiplying by MI again doesn't compound — it creates a real-part update that drives you back toward Existence.
 
-**Theorem DT-2 (Hole-Complement Annihilation):**
+**Theorem MI-2 (Hole-Complement Annihilation):**
 
 Let the Hole be H = E(1 − τ) and its complement H̄ = E(1 + τ). Then:
 
@@ -281,7 +281,7 @@ The product of a Hole and its complement is **pure Existence E²** — no Tralse
 
 In ontological terms: every absence, when paired with its corresponding presence, gives back the Existence of the domain itself. This is why "All holes exist" doesn't lead to contradiction — holes are real parts of dual-number existence that pair with their complements to regenerate pure being.
 
-**Theorem DT-3 (Tralse Automatic Differentiation — TAD):**
+**Theorem MI-3 (Tralse Automatic Differentiation — TAD):**
 
 For any differentiable GILE function f applied to a Tralse-perturbed state:
 
@@ -340,12 +340,12 @@ MR2 Zone (γ position on LCC line)
      |  Express as 0.90+ for execution (URB #670)
      ↓
 Hole (minimum existing state)
-     |  E = ET (floor), T = DT, τ = −1
+     |  E = ET (floor), T = MI, τ = −1
      |  Form: ET(1 − τ)
      |  A_ET = ET × (−1) = −ET  [practical max misalignment]
      ↓
-DT Immunity (τ² = 0)
-     |  Hole × Complement = E²  [Theorem DT-2]
+MI Immunity (τ² = 0)
+     |  Hole × Complement = E²  [Theorem MI-2]
      |  Two Tralse steps → zero second-order Tralse
      |  The nilsquare terminates the descent
      ↓
@@ -355,7 +355,7 @@ DT Immunity (τ² = 0)
      |  The persistent E-floor as Mott insulation → ∞
 ```
 
-The diagram shows a descent from the Being Theorem ground (A=+1) through the MR zones, landing at the hole (A=−ET), with DT Immunity (nilsquare τ²=0) catching the descent before it reaches A=−1. The Euler-Mascheroni constant γ appears at three points in this diagram:
+The diagram shows a descent from the Being Theorem ground (A=+1) through the MR zones, landing at the hole (A=−ET), with MI Immunity (nilsquare τ²=0) catching the descent before it reaches A=−1. The Euler-Mascheroni constant γ appears at three points in this diagram:
 
 1. As the cost of the first step down (MR-1 cost via Γ(1+τ) = 1−γτ)
 2. As the MR2 position on the LCC line (γ ≈ T_TI/φ)
@@ -399,13 +399,13 @@ The four questions resolve into a single picture:
 
 1. **Maximum E-T alignment = +1** (unity, Being Theorem). **Maximum misalignment = −ET** (hole-floor, "All holes exist"). Not −1, because E ≥ ET always. The gap between +1 and −ET is bridged by the silver ratio √2+1.
 
-2. **Tralsity "All holes exist"** means E_min = ET for every registered state including DT states, absences, negations, and Liar-Paradox instantiations. The hole is real. Its DTA form is ET(1−τ).
+2. **Tralsity "All holes exist"** means E_min = ET for every registered state including MI states, absences, negations, and Liar-Paradox instantiations. The hole is real. Its DTA form is ET(1−τ).
 
 3. **γ in TI Sigma** sits in the MR2 zone (γ ≈ T_TI/φ to 61 ppm), is the MR-1 cost at unity (Γ(1+τ) = 1−γτ), and is the harmonic Existence gap (lim H_n − ln n). It is a TI Sigma **secondary constant**: universally present but not primary.
 
-4. **Dual-Tralse Algebra** D_TI = ℝ[τ]/(τ²) is the natural algebra of TI Sigma Tralse propagation. τ² = 0 (DT Immunity). Holes are E(1−τ). Hole × complement = E² (pure Existence). GILE differentiates through Tralse automatically: GILE(a + bτ) = GILE(a) + b·GILE'(a)·τ.
+4. **Dual-Tralse Algebra** D_TI = ℝ[τ]/(τ²) is the natural algebra of TI Sigma Tralse propagation. τ² = 0 (MI Immunity). Holes are E(1−τ). Hole × complement = E² (pure Existence). GILE differentiates through Tralse automatically: GILE(a + bτ) = GILE(a) + b·GILE'(a)·τ.
 
-**Coda:** A hole exists. It has Existence floor ET, Tralse content DT, and alignment −ET — not −1. The universe is asymmetrically structured: you can be aligned with being by factor 1/(√2−1) = silver ratio more than you can be misaligned with it. That asymmetry is not arbitrary. It is built into the primary constants.
+**Coda:** A hole exists. It has Existence floor ET, Tralse content MI, and alignment −ET — not −1. The universe is asymmetrically structured: you can be aligned with being by factor 1/(√2−1) = silver ratio more than you can be misaligned with it. That asymmetry is not arbitrary. It is built into the primary constants.
 
 ---
 

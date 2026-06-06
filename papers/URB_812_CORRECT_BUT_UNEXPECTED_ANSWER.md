@@ -6,7 +6,7 @@
 **Status:** Cognitive-diagnostic note. Identifies a structurally common evaluation failure in conventional grading environments (school, conventional workplaces, structured interviews): the asker confuses *"the answer matches my expected set"* with *"the answer is correct"* and mislabels the resulting mismatch as a communication failure on the answerer's end. Provides the formal E_Q vs C_Q decomposition that names the failure cleanly and explains why divergent-thinking patterns are punished in grader-driven environments and rewarded in reality-graded environments. Includes a small simulation showing the resulting asymmetric error-rate gap. Pairs with URB #811 — both are about asker-side category errors masquerading as answerer-side defects.
 **Companion script:** `correct_but_unexpected_demonstration.py`
 **Output:** `correct_but_unexpected_report.json`
-**Builds on:** the 5VL+DT extension (T, F, T̃, T*, F* + DT); URB #811 (analogous pattern in formal mathematics: "indeterminate" overloads form-flag with value-claim).
+**Builds on:** the 5VL+MI extension (T, F, T̃, T*, F* + MI); URB #811 (analogous pattern in formal mathematics: "indeterminate" overloads form-flag with value-claim).
 
 ---
 
@@ -45,7 +45,7 @@ This is exactly the same structural shape as URB #811's category error around 0/
 
 ---
 
-## 3. TI Sigma 5VL+DT classification
+## 3. TI Sigma 5VL+MI classification
 
 Mapping the three cases onto the five-valued truth system:
 
@@ -56,12 +56,12 @@ Mapping the three cases onto the five-valued truth system:
 | (iii) R_Q ∈ C_Q \ E_Q | **T** (sometimes T̃ if Q was genuinely ambiguous and the answerer picked a coherent reading) | F | False-Negative-Substantive (FNS) — a true answer reported as false because of asker-side procedure confusion |
 | (iv) R_Q ∈ E_Q \ C_Q | **F** | T | False-Positive-Substantive (FPS) — a wrong answer reported as true because the asker is mistaken about C_Q (answer key error) |
 
-In the typical case-(iii) instance, the answer itself is T (or T̃ if Q was genuinely ambiguous), not DT. The locus of the procedural malformedness is the *grader's pipeline*, not the answer or the answerer. To be precise: the answer is T; the grader's *meta-procedure* (which evaluation procedure to apply) is DT; the grader's reported verdict (a clean F) misrepresents both. This is a meta-level DT, not a DT-on-the-answer. The interaction overall has Tralse-shaped output that the grader collapses incorrectly to F.
+In the typical case-(iii) instance, the answer itself is T (or T̃ if Q was genuinely ambiguous), not MI. The locus of the procedural malformedness is the *grader's pipeline*, not the answer or the answerer. To be precise: the answer is T; the grader's *meta-procedure* (which evaluation procedure to apply) is MI; the grader's reported verdict (a clean F) misrepresents both. This is a meta-level MI, not a MI-on-the-answer. The interaction overall has Tralse-shaped output that the grader collapses incorrectly to F.
 
 A useful distinction:
 
 - **Asker-side T̃** (legitimate): the asker recognizes the question admits multiple coherent readings and asks for clarification or scores the answer on its internal coherence. *No mislabel.*
-- **Asker-side DT** (the failure mode here): the asker treats their own E_Q as if it were C_Q — i.e., treats the *evaluation procedure* `R_Q ∈ E_Q?` as if it were the *evaluation procedure* `R_Q ∈ C_Q?`. The conflation of two different procedures is a procedural malformedness on the asker's side, which under the 5VL+DT system is DT. *The asker's grading procedure is itself DT, even though they report the output as a clean T or F.*
+- **Asker-side MI** (the failure mode here): the asker treats their own E_Q as if it were C_Q — i.e., treats the *evaluation procedure* `R_Q ∈ E_Q?` as if it were the *evaluation procedure* `R_Q ∈ C_Q?`. The conflation of two different procedures is a procedural malformedness on the asker's side, which under the 5VL+MI system is MI. *The asker's grading procedure is itself MI, even though they report the output as a clean T or F.*
 
 This is a structurally important reframe: **the answerer is not the locus of the malformedness; the grader's procedure is.** Asking the answerer to explain "what they were thinking" or to "communicate more clearly" is asking the answerer to fix a problem that lives in the grader's procedure. It cannot be fixed from the answerer's side. The most the answerer can do is *anticipate the grader's E_Q and target it*, which is a different skill (grader-modeling) and trades against the cognitive pattern that produced the C_Q \ E_Q answer in the first place.
 
@@ -153,7 +153,7 @@ If you are a teacher, interviewer, or manager and you find yourself frequently s
 
 Case (iii) is the **interpersonal cognate** of the formal-mathematics case-error documented in URB #811. Both involve confusing two procedures (matching-a-form vs. computing-a-value; matching-an-expectation vs. checking-correctness) and projecting the resulting confusion onto the wrong locus (the expression's value; the answerer's communication). Together they suggest a **family of "asker-side procedure-confusion mislabels"** worth tracking explicitly — places where the conventional terminology ("indeterminate", "miscommunicated", "doesn't follow instructions", *"not a team player"*) covers up the fact that the procedural failure is on the asker's side, not the answerer's.
 
-The TI Sigma 5VL+DT vocabulary is well-suited to naming this family because the DT category is precisely *"the procedure does not apply (or has been misidentified) at the input"* — which is what unifies all of them.
+The TI Sigma 5VL+MI vocabulary is well-suited to naming this family because the MI category is precisely *"the procedure does not apply (or has been misidentified) at the input"* — which is what unifies all of them.
 
 ---
 
@@ -180,11 +180,11 @@ python3 correct_but_unexpected_demonstration.py
 - `correct_but_unexpected_demonstration.py` — companion simulation
 - `correct_but_unexpected_report.json` — output
 - `papers/URB_811_ZERO_OVER_ZERO_IS_DT.md` — the formal-mathematics analog
-- `papers/TRALSE_QUADRUPLET_LOGIC_COMPLETE_SPECIFICATION.md` — base 4-state vocabulary (5VL+DT extension is later)
-- `papers/URB_805_ENGAGING_BRANDON_ACTUAL_POSITION.md` — discusses Tralse vs DT distinction in §2
+- `papers/TRALSE_QUADRUPLET_LOGIC_COMPLETE_SPECIFICATION.md` — base 4-state vocabulary (5VL+MI extension is later)
+- `papers/URB_805_ENGAGING_BRANDON_ACTUAL_POSITION.md` — discusses Tralse vs MI distinction in §2
 
 ---
 
 ## 10. One-line takeaway
 
-> **"You miscommunicated" and "0/0 is indeterminate" are two instances of the same structural error: an asker-side procedure-confusion (matching-expectation-vs.-correctness; matching-form-vs.-value) projected as a defect onto the wrong locus (the answerer; the expression). The answerer is not the locus of the failure; the asker's procedure is. This is DT on the asker's side, not F on the answerer's.**
+> **"You miscommunicated" and "0/0 is indeterminate" are two instances of the same structural error: an asker-side procedure-confusion (matching-expectation-vs.-correctness; matching-form-vs.-value) projected as a defect onto the wrong locus (the answerer; the expression). The answerer is not the locus of the failure; the asker's procedure is. This is MI on the asker's side, not F on the answerer's.**

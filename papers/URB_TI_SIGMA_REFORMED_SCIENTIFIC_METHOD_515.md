@@ -129,7 +129,7 @@ Evidence that increases LCC is coherence-positive. Evidence that decreases LCC i
 
 Before publishing conclusions, apply the Myrion Resolution gate:
 
-**MR1 check**: Does the conclusion require asserting Double Tralse?
+**MR1 check**: Does the conclusion require asserting Meta-Indeterminate?
 - If the conclusion requires that evidence simultaneously supports and refutes the hypothesis without domain differentiation: **MR1 FAIL** — the conclusion is Maximally Incoherent (DT1). Revise.
 - If the conclusion asserts certainty beyond what the evidence warrants: **MR1 FAIL** — this is False Certainty. Revise.
 - If the conclusion's truth value cannot be determined (insufficient evidence): classify as **MR_PEND**, not FALSE. Publish as open.

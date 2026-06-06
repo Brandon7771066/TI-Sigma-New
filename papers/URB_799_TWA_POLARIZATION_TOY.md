@@ -9,7 +9,7 @@
 
 ## Abstract
 
-A pure-NumPy classical numerical simulation of a 5-mode complex amplitude vector ψ ∈ ℂ⁵ (basis labelled by 𝒯 = {DT, ¬T, U, T+, T}) evolving under a Hermitian 5×5 Hamiltonian H, with stochastic Born-rule projections to basis states at random times (Bernoulli rate 0.005/step). Demonstrates the characteristic "unitary drift + collapse spike" pattern in mode probabilities |a_k|² and Shannon entropy H(|a|²). 1500 steps × dt = 0.02 produced 4 stochastic collapses; collapse outcomes hit 4/5 basis states (DT, ¬T, U, T) with frequencies (0.25, 0.25, 0.25, 0, 0.25). Initial entropy 1.609 = log 5 (max), final entropy 1.314. **This is a classical numerical simulation of a wave equation. It is NOT a quantum optical experiment, NOT a Bose-Einstein condensate, NOT an Orch-OR test, and does NOT detect or produce consciousness.** Cost: $0. See URB #798 for the honest scope of what $0 can and cannot deliver.
+A pure-NumPy classical numerical simulation of a 5-mode complex amplitude vector ψ ∈ ℂ⁵ (basis labelled by 𝒯 = {MI, ¬T, U, T+, T}) evolving under a Hermitian 5×5 Hamiltonian H, with stochastic Born-rule projections to basis states at random times (Bernoulli rate 0.005/step). Demonstrates the characteristic "unitary drift + collapse spike" pattern in mode probabilities |a_k|² and Shannon entropy H(|a|²). 1500 steps × dt = 0.02 produced 4 stochastic collapses; collapse outcomes hit 4/5 basis states (MI, ¬T, U, T) with frequencies (0.25, 0.25, 0.25, 0, 0.25). Initial entropy 1.609 = log 5 (max), final entropy 1.314. **This is a classical numerical simulation of a wave equation. It is NOT a quantum optical experiment, NOT a Bose-Einstein condensate, NOT an Orch-OR test, and does NOT detect or produce consciousness.** Cost: $0. See URB #798 for the honest scope of what $0 can and cannot deliver.
 
 ---
 
@@ -63,7 +63,7 @@ Single run with seed 2026, T_steps = 1500, dt = 0.02, collapse_prob = 0.005:
 ```
 H eigenvalues: [-2.4070 -1.4897 -0.7330 +1.4413 +2.5305]
 Total collapses: 4
-Collapse outcomes (DT, ¬T, U, T+, T): [1, 1, 1, 0, 1]
+Collapse outcomes (MI, ¬T, U, T+, T): [1, 1, 1, 0, 1]
 Outcome frequencies:                    [0.250, 0.250, 0.250, 0.000, 0.250]
 Initial entropy: 1.609 (= log 5, max)
 Final entropy:   1.314
@@ -155,7 +155,7 @@ The two scripts are complementary. URB #797 is *classical multi-agent*; URB #799
 2. **Markov collapse model**. Real measurements have finite duration and back-action structure; the instantaneous Born projection is the simplest model, not the most realistic.
 3. **No spatial structure**. The 5 modes are abstract basis states; if mapped to (e.g.) photon polarization, only 2 modes are physically available, not 5.
 4. **No environment**. Closed-system unitary evolution is a textbook idealization; real systems decohere.
-5. **No physical interpretation of 5 truth values**. Mapping 𝒯 = {DT, ¬T, U, T+, T} to physical observables is *not* attempted here. Without that mapping, the simulation is mathematically clean but physically uncommitted.
+5. **No physical interpretation of 5 truth values**. Mapping 𝒯 = {MI, ¬T, U, T+, T} to physical observables is *not* attempted here. Without that mapping, the simulation is mathematically clean but physically uncommitted.
 
 ---
 

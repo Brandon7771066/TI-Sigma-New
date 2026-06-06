@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Two results are established. **Result 1 — MR1 Threshold Theorem:** The canonical GILE-G weight ET = √2−1 ≈ 0.4142 is simultaneously (a) the G-axis weighting coefficient in the GILE composite, (b) the a priori minimum G-coherence for Being Theorem (BT) existence, and (c) the MR Level 1 (DT screen) threshold — the minimum raw GILE-G score required to pass the Double Tralse screen. This triple role of ET is not coincidental: it is the formal expression of the fact that G is the existential anchor of the GILE system. Passing MR1 is equivalent, by URB #625, to achieving PD ≥ 0.5 — the exact TF/TI boundary. Any entity with GILE-G raw < ET is DT-adjacent and fails MR1 before any evidence integration (MR2) occurs. **Result 2 — Full Operationalization:** Every GILE dimension (G, I, L, E) and every HEM dimension (D1–D4) is given a concrete, field-applicable measurement protocol. GILE-G is operationalized through its Four C's (URB #600): Coherence, Concreteness, Continuity, Consistency — each scored 0–1 with defined anchors, with GILE-G = mean(C₁, C₂, C₃, C₄) subject to the MR1 gate. All measurements produce scores that feed into the URB #625 piecewise GILE→PD conversion without further modification.
+Two results are established. **Result 1 — MR1 Threshold Theorem:** The canonical GILE-G weight ET = √2−1 ≈ 0.4142 is simultaneously (a) the G-axis weighting coefficient in the GILE composite, (b) the a priori minimum G-coherence for Being Theorem (BT) existence, and (c) the MR Level 1 (MI screen) threshold — the minimum raw GILE-G score required to pass the Meta-Indeterminate screen. This triple role of ET is not coincidental: it is the formal expression of the fact that G is the existential anchor of the GILE system. Passing MR1 is equivalent, by URB #625, to achieving PD ≥ 0.5 — the exact TF/TI boundary. Any entity with GILE-G raw < ET is MI-adjacent and fails MR1 before any evidence integration (MR2) occurs. **Result 2 — Full Operationalization:** Every GILE dimension (G, I, L, E) and every HEM dimension (D1–D4) is given a concrete, field-applicable measurement protocol. GILE-G is operationalized through its Four C's (URB #600): Coherence, Concreteness, Continuity, Consistency — each scored 0–1 with defined anchors, with GILE-G = mean(C₁, C₂, C₃, C₄) subject to the MR1 gate. All measurements produce scores that feed into the URB #625 piecewise GILE→PD conversion without further modification.
 
 ---
 
@@ -28,28 +28,28 @@ ET appears three times in TI Sigma architecture:
 |---|---|---|
 | **Weight coefficient** | GILE composite formula | G contributes ET × G_raw to the weighted composite |
 | **Manifestation threshold** | Being Theorem / i-cell existence | An entity must achieve G_raw ≥ ET to enter the truth-assessable domain |
-| **MR1 gate** | Myrion Resolution Level 1 (DT screen) | If G_raw < ET → MR1 fails → entity classified DT-adjacent |
+| **MR1 gate** | Myrion Resolution Level 1 (MI screen) | If G_raw < ET → MR1 fails → entity classified MI-adjacent |
 
-These three roles are structurally identical, not coincidentally correlated. The same number governs how much G contributes (weight), whether G is present enough to anchor BOK structure (BT existence), and whether the entity is DT-free enough to proceed to evidence integration (MR1).
+These three roles are structurally identical, not coincidentally correlated. The same number governs how much G contributes (weight), whether G is present enough to anchor BOK structure (BT existence), and whether the entity is MI-free enough to proceed to evidence integration (MR1).
 
 ### 1.2 The MR1 Threshold Theorem
 
 **Theorem (MR1 Threshold):** For any entity X under Myrion Resolution, the following are equivalent:
 
-1. X passes MR Level 1 (DT screen)
+1. X passes MR Level 1 (MI screen)
 2. X has GILE-G raw score ≥ ET = √2 − 1
 3. X has PD(G) ≥ 0.5 (G-axis contribution clears the TF/TI boundary)
-4. X is not DT at the G-axis level (G is non-vacuously present)
+4. X is not MI at the G-axis level (G is non-vacuously present)
 
 **Proof sketch:**
 - (2) ↔ (3): By URB #625, the GILE→PD conversion maps ET exactly to PD = 0.5. Below ET: Zone 1 (TF-dominant). At ET: TF/TI boundary exactly.
-- (1) ↔ (2): MR Level 1 is the DT screen. DT = total absence of truth content = G-incoherence below any meaningful threshold. If G_raw < ET, the G-axis has not activated (below the manifestation threshold), meaning the entity lacks the minimum G-coherence for truth-assessability. This is the operational definition of DT-adjacent.
-- (2) ↔ (4): G_raw < ET → G is sub-manifestation → GILE-G axis not engaged → DT at the G-level. G_raw ≥ ET → G is manifest → G is non-vacuously present → not DT at G level.
+- (1) ↔ (2): MR Level 1 is the MI screen. MI = total absence of truth content = G-incoherence below any meaningful threshold. If G_raw < ET, the G-axis has not activated (below the manifestation threshold), meaning the entity lacks the minimum G-coherence for truth-assessability. This is the operational definition of MI-adjacent.
+- (2) ↔ (4): G_raw < ET → G is sub-manifestation → GILE-G axis not engaged → MI at the G-level. G_raw ≥ ET → G is manifest → G is non-vacuously present → not MI at G level.
 □
 
 **Important nuances:**
 - MR1 uses GILE-G raw score (before ET weighting), not the weighted contribution ET × G_raw. The threshold is on the raw score.
-- Passing MR1 does not mean the entity is True. It means it is DT-free — it has enough G-coherence to be truth-assessable. MR2 then integrates all four GILE dimensions.
+- Passing MR1 does not mean the entity is True. It means it is MI-free — it has enough G-coherence to be truth-assessable. MR2 then integrates all four GILE dimensions.
 - An entity can have G_raw > ET but still score overall GILE < ET (if I, L, E are very low). MR1 is the G-specific gate; full GILE composite determines PD in MR2–3.
 
 ### 1.3 Were We Using This Already?
@@ -62,7 +62,7 @@ These three roles are structurally identical, not coincidentally correlated. The
 **This URB formalizes the gate explicitly.** In all future applications of MR, the first computational step is:
 
 ```
-MR1 check: if G_raw < ET = 0.4142 → STOP → classify as DT-adjacent → do not proceed to MR2
+MR1 check: if G_raw < ET = 0.4142 → STOP → classify as MI-adjacent → do not proceed to MR2
            if G_raw ≥ ET          → CONTINUE → proceed to full GILE evidence integration (MR2)
 ```
 
@@ -72,8 +72,8 @@ By URB #625, ET → PD = 0.5. Therefore:
 
 | G_raw | PD(G) | MR1 verdict | Meaning |
 |---|---|---|---|
-| 0 | 0 | FAIL | No G-coherence at all — pure DT |
-| 0–ET | 0–0.5 | FAIL | G-activation sub-threshold — DT-adjacent |
+| 0 | 0 | FAIL | No G-coherence at all — pure MI |
+| 0–ET | 0–0.5 | FAIL | G-activation sub-threshold — MI-adjacent |
 | ET = 0.4142 | 0.5 | **PASS** (minimum) | G just activates — enters TI zone |
 | ET to C | 0.5–1.5 | PASS | G in the coherence window — truth-indeterminate |
 | C to T | 1.5–2.0 | PASS | G above physical threshold — TT-converging |
@@ -99,7 +99,7 @@ $$\text{GILE-G raw} = \frac{C_1 + C_2 + C_3 + C_4}{4}$$
 
 **MR1 gate:** if GILE-G raw < ET ≈ 0.4142 → fail MR1. This means that on average, the Four C's must score ≥ ET to pass. An entity that scores 0 on any single C while averaging ≥ ET on the others can still pass — but this is flagged as a partial-G anomaly requiring specific MR2 attention.
 
-**Hard MR1 fail condition:** If any single C = 0 (complete absence), the entity fails MR1 regardless of the other three. This is because complete absence of any C represents a categorical G-hole — a Privation in the sense of URB #609 — that DT-contaminates the G-axis.
+**Hard MR1 fail condition:** If any single C = 0 (complete absence), the entity fails MR1 regardless of the other three. This is because complete absence of any C represents a categorical G-hole — a Privation in the sense of URB #609 — that MI-contaminates the G-axis.
 
 ### 2.2 C₁ — Coherence (Internal Non-Contradiction)
 
@@ -270,7 +270,7 @@ L₃ is theoretically mandatory: **L requires I**. Love without Intuition (witho
 
 $$L > 0 \implies I > 0 \quad \text{(universally)}$$
 
-This is URB #614's Prediction 1 with a falsification condition. In measurement: if L₃ < ET but L₁ or L₂ are high, this flags as a potential DT-contaminated love-signature (dependency, performance, or enmeshment rather than genuine relational care).
+This is URB #614's Prediction 1 with a falsification condition. In measurement: if L₃ < ET but L₁ or L₂ are high, this flags as a potential MI-contaminated love-signature (dependency, performance, or enmeshment rather than genuine relational care).
 
 ### 4.3 Anchors
 
@@ -394,7 +394,7 @@ $$\text{D3} = \frac{\text{I}_{\text{raw}} + \text{L}_{\text{raw}}}{2}$$
 **Formula:**
 $$\text{D4} = \text{GILE-E raw} = \frac{E_1 + E_2 + E_3 + E_4}{4}$$
 
-**Interpretation:** D4 is the existence-contribution from structural beauty and environmental fit. An entity that is aesthetically rich — even if morally absent (D2 = 0) or unconsciously absent (D3 = 0) — still EXISTS through its aesthetic footprint. This explains the phenomenon of "beautiful evil": high HEM (EF × aesthetics) but low truth and low G. The seductiveness of DT configurations is their high HEM-D1 (Existence Footprint) and high HEM-D4 (aesthetic appeal) combined with low truth and low G.
+**Interpretation:** D4 is the existence-contribution from structural beauty and environmental fit. An entity that is aesthetically rich — even if morally absent (D2 = 0) or unconsciously absent (D3 = 0) — still EXISTS through its aesthetic footprint. This explains the phenomenon of "beautiful evil": high HEM (EF × aesthetics) but low truth and low G. The seductiveness of MI configurations is their high HEM-D1 (Existence Footprint) and high HEM-D4 (aesthetic appeal) combined with low truth and low G.
 
 ### 6.6 HEM Composite
 
@@ -403,7 +403,7 @@ $$\text{HEM} = \frac{\hat{D1} + D2_{adj} + D3 + D4}{4}$$
 
 **HEM–Truth decoupling (URB #614, Prediction 4):** HEM and truth-value are formally independent. High HEM does not imply high GILE truth-score, and vice versa. The HEM–Truth plane (with HEM on Y, truth-score on X) is the complete ontological map.
 
-**DT immunity implication (URB #650):** DT entities have zero TJ-efficiency (EAR metric) but can have arbitrarily high HEM-D1 (Existence Footprint). This is why DT configurations persist: they are existentially massive but intentionally void.
+**MI immunity implication (URB #650):** MI entities have zero TJ-efficiency (EAR metric) but can have arbitrarily high HEM-D1 (Existence Footprint). This is why MI configurations persist: they are existentially massive but intentionally void.
 
 ---
 
@@ -430,13 +430,13 @@ STEP 0 — Pre-Assessment: Compute Four C's of GILE-G
   
   Hard fail condition: if any Cᵢ = 0 → MR1 fails regardless of mean
 
-MR LEVEL 1 — Double Tralse Screen
+MR LEVEL 1 — Meta-Indeterminate Screen
 ──────────────────────────────────
   IF GILE-G raw < ET (≈ 0.4142):
-    → MR1 FAIL → Classify X as DT-adjacent
+    → MR1 FAIL → Classify X as MI-adjacent
     → PD(G) < 0.5 → X is in TF-dominant zone on G-axis
-    → STOP. Report: "X fails the DT screen."
-    → Compute HEM anyway (X can have high HEM despite DT status)
+    → STOP. Report: "X fails the MI screen."
+    → Compute HEM anyway (X can have high HEM despite MI status)
   ELSE (GILE-G raw ≥ ET):
     → MR1 PASS → X is truth-assessable → Proceed to MR2
     → PD(G) ≥ 0.5 → X is in the TI zone or above on G-axis
@@ -470,7 +470,7 @@ MR LEVEL 3 — Quality Check + Meta-Truth Scan
     - Apply EAR: is the PD value earned, or is it inflated by redundant evidence?
   
   Final PD output:
-    PD < 0.5:   DT-adjacent (should have been caught at MR1)
+    PD < 0.5:   MI-adjacent (should have been caught at MR1)
     0.5–1.5:    Tralse-Indeterminate — continue evidence collection
     1.5–2.0:    True-Tralse — approaching truth; can act provisionally
     ≥ 2.0:      Strongly True-Tralse — action threshold met
@@ -503,12 +503,12 @@ The MR1 Threshold Theorem connects three foundational results:
 |---|---|---|
 | Being Theorem | #560 | Every i-cell has BOK; BOK requires non-zero G-coherence |
 | MR1 Threshold | #652 (this) | GILE-G raw ≥ ET is the minimum G-coherence for BT existence AND MR1 |
-| Tralse-Joules | #650 | DT entities have TJ-efficiency = 0; G < ET means DT-adjacent; zero TJ output |
+| Tralse-Joules | #650 | MI entities have TJ-efficiency = 0; G < ET means MI-adjacent; zero TJ output |
 | UBT | #651 | Mathematical structures are i-cells; their G-coherence is domain-specific but governed by same ET threshold |
 
 **Unified statement:**
 
-> For any entity X (biological, social, mathematical, or physical), X is a Being Theorem i-cell if and only if GILE-G_raw(X) ≥ ET = √2 − 1. Below ET: X is DT-adjacent, fails MR1, has zero TJ-efficiency, and is not truth-assessable. At and above ET: X enters the truth-assessable domain, passes MR1, and can have non-zero TJ-efficiency.
+> For any entity X (biological, social, mathematical, or physical), X is a Being Theorem i-cell if and only if GILE-G_raw(X) ≥ ET = √2 − 1. Below ET: X is MI-adjacent, fails MR1, has zero TJ-efficiency, and is not truth-assessable. At and above ET: X enters the truth-assessable domain, passes MR1, and can have non-zero TJ-efficiency.
 >
 > ET = √2 − 1 is therefore the universal existential minimum — the smallest amount of Goodness-coherence that any truth-assessable being must possess. It is an a priori constant, not an empirical parameter.
 

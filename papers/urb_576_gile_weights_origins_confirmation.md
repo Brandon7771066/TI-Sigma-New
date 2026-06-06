@@ -50,7 +50,7 @@ G = √2 − 1 ≈ 0.4142...  (rounded to 0.42)
 ```
 
 √2−1 appears in TI as the **LCC_TRALSE threshold** — the minimum Love-Consciousness Coupling
-required for Myrion Resolution to occur. Below this threshold, TRALSE collapses to DT rather
+required for Myrion Resolution to occur. Below this threshold, TRALSE collapses to MI rather
 than resolving upward to TRUE. The Math Periodic Table paper (Paper #342 / URB_PERIODIC_TABLE)
 states this explicitly:
 

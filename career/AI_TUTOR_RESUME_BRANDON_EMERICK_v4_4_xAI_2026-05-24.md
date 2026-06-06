@@ -88,7 +88,7 @@ Philosopher of science and formal-methods practitioner who ships fast and priori
 
 **Logic & Formal Verification.** Lean 4 · mathlib4 · `lake` · type theory · dependent types · interactive theorem proving · higher-order logic · first-order logic · four-valued (Tralse) logic · paraconsistent logic · named-gap formalization (Buzzard / LTE style).
 
-**Linguistics & Philosophical Logic.** Formal semantics · philosophical logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary {True, False, Indeterminate, Double-Tralse} + 12 Meta-Truths.
+**Linguistics & Philosophical Logic.** Formal semantics · philosophical logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary {True, False, Indeterminate, Meta-Indeterminate} + 12 Meta-Truths.
 
 **Cognitive Science.** UConn cognitive science · cognitive psychology · brain-computer interfaces · biometric signal processing (EEG, HRV, fNIRS) · mood-modulation prototype · Tralse Success Distinction operationalization.
 

@@ -44,7 +44,7 @@ Under the new Existence-vs-Truth axis architecture, the dimensional accounting c
 
 - **2 fundamental axes** (Existence + Truth) — replaces the 4 GILE dimensions
 - **3 operational pillars** (PD + MR + HEAR) — replaces the 4 HEM sub-dimensions  
-- **4 PD ultra-zones** (Indeterminate disc / standard / transcendent / pre-DT) — replaces the 4 BOK states
+- **4 PD ultra-zones** (Indeterminate disc / standard / transcendent / pre-MI) — replaces the 4 BOK states
 - **3 SM-sector scaling exponents** (down/up/lepton/neutrino reduced to the 3 PMNS-type sectors lepton/neutrino/brain-CFC) — new dimension
 
 Combinatorial product: 2 × 3 × 4 × 3 = **72**, slightly larger than 64.

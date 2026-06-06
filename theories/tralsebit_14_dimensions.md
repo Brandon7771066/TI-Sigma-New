@@ -97,13 +97,13 @@ It's holistic — like a snowflake pattern vs. individual water molecules.
 
 **NEW BREAKTHROUGH (Dec 2025):**
 
-Double Tralse (dark energy) made the first photon by recognizing its own DT existence TRULY:
+Meta-Indeterminate (dark energy) made the first photon by recognizing its own MI existence TRULY:
 
 ```
-DT says: "I am both True and False"
+MI says: "I am both True and False"
 This statement IS True.
 Truth = dimension 9 collapse.
-The first photon = DT's self-recognition across all 14 dimensions.
+The first photon = MI's self-recognition across all 14 dimensions.
 ```
 
 The most contradictory state recognized its own state **truly** — creating the first tralsebit with a definite True value in dimension 9.

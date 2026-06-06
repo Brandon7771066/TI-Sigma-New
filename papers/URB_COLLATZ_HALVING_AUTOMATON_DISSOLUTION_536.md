@@ -290,7 +290,7 @@ The Collatz Conjecture then becomes: **The local MR engine cannot be trapped in 
 ## References
 
 - URB #534, #535 (Emerick, 2026): Collatz in Ternary — preceding papers
-- URB #528 (Emerick, 2026): Five-Valued Truth + DT Immunity
+- URB #528 (Emerick, 2026): Five-Valued Truth + MI Immunity
 - Lagarias, J.C. (2010): The Ultimate Challenge: The 3x+1 Problem
 - Tao, T. (2019): Almost all orbits attain almost bounded values
 

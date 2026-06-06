@@ -22,30 +22,30 @@ All four figures are reproducible by running `python papers/figures/pd_pass9/gen
 
 **What it shows:** the operational PD scalar — the 1-D real-axis projection on which all empirical scoring is performed. The figure displays:
 
-- The Brandon-canonical thresholds at ±1 (Standard), ±φ (Transcendent), ±e (Pre-DT), ±π (DT cliff).
+- The Brandon-canonical thresholds at ±1 (Standard), ±φ (Transcendent), ±e (Pre-MI), ±π (MI cliff).
 - The Emerick Crossover at ±1/√2 ≈ ±0.7071.
-- The DT cliff at −3 (urb_696) and the Verisyn saturation cap at +2 (urb_714) as hard boundaries.
+- The MI cliff at −3 (urb_696) and the Verisyn saturation cap at +2 (urb_714) as hard boundaries.
 - The Indeterminate sub-range (−2/3, +1/3) (urb_715) as a yellow band.
-- The eight named operational zones: DT / Ultra-terrible / False / Soft-False / Indeterminate / Soft-True / True / Ultra-great (Transcendent).
+- The eight named operational zones: MI / Ultra-terrible / False / Soft-False / Indeterminate / Soft-True / True / Ultra-great (Transcendent).
 
-**How to read it:** any empirical observation gets mapped to a PD value on this scalar. If the value falls in the yellow Indeterminate band, the framework returns Indeterminate. If it crosses the −3 DT cliff, the GM-network rejects it. If it sits at +2, it has hit Verisyn saturation; beyond +2, it is in the Transcendent zone (one e-fold of breathing room before +e).
+**How to read it:** any empirical observation gets mapped to a PD value on this scalar. If the value falls in the yellow Indeterminate band, the framework returns Indeterminate. If it crosses the −3 MI cliff, the GM-network rejects it. If it sits at +2, it has hit Verisyn saturation; beyond +2, it is in the Transcendent zone (one e-fold of breathing room before +e).
 
 ---
 
-## Figure 2 — PD Crystal: the full complex-plane PD/DT geometry
+## Figure 2 — PD Crystal: the full complex-plane PD/MI geometry
 
 **File:** `papers/figures/pd_pass9/fig2_pd_crystal_complex_plane.png`
 
-**What it shows:** the full complex-plane PD/DT geometry, Brandon-canonical (Pass 8 RECANONIZED). The figure displays:
+**What it shows:** the full complex-plane PD/MI geometry, Brandon-canonical (Pass 8 RECANONIZED). The figure displays:
 
 - The **PD principal axis** (real axis) carrying the same named thresholds as Figure 1.
-- The **DT/Tralse axis** (imaginary axis, RATIFIED Pass 8.2) — pure-imaginary values represent τ-without-δ states. The example DT marker (red star) sits at +1.5i.
+- The **MI/Tralse axis** (imaginary axis, RATIFIED Pass 8.2) — pure-imaginary values represent τ-without-δ states. The example MI marker (red star) sits at +1.5i.
 - The **Principal Indeterminate Region** (yellow disc, RATIFIED Pass 8.2 rename) — the region |PD| < e in the complex plane. This is the projection-source for the (−2/3, +1/3) Indeterminate sub-range on the scalar.
 - The **Transcendent Ring** (purple annulus, RATIFIED Pass 8.2 rename) — the region φ < |PD| < e.
-- The **±π DT cliff** as the dashed dark-red outer ring; outside this is Deep DT.
+- The **±π MI cliff** as the dashed dark-red outer ring; outside this is Deep MI.
 - The **Emerick Crossover ±1/√2** as green diamond markers on the real axis.
 
-**How to read it:** the radius |PD| of a point in the complex plane tells you which zone the state inhabits; the angle (argument) tells you how much of the state is Permissibility (real part) vs DT/Tralse content (imaginary part). A pure-real point with |PD| < 1 is a Standard-zone PD-only state; a pure-imaginary point at i·1.5 is a Tralse-with-no-Permissibility state inside the Principal Indeterminate Region.
+**How to read it:** the radius |PD| of a point in the complex plane tells you which zone the state inhabits; the angle (argument) tells you how much of the state is Permissibility (real part) vs MI/Tralse content (imaginary part). A pure-real point with |PD| < 1 is a Standard-zone PD-only state; a pure-imaginary point at i·1.5 is a Tralse-with-no-Permissibility state inside the Principal Indeterminate Region.
 
 ---
 
@@ -77,7 +77,7 @@ All four figures are reproducible by running `python papers/figures/pd_pass9/gen
 | Supersolid | Partial coherence, long-range order | TI-Indeterminate |
 | FQH | Fractional coherence, emergent | TI entry |
 | Mott | Localized, incoherent | FALSE |
-| Fragmented | Contradicted by multiple incoherent sources | Double-Tralse |
+| Fragmented | Contradicted by multiple incoherent sources | Meta-Indeterminate |
 
 ---
 
@@ -88,7 +88,7 @@ All four figures are reproducible by running `python papers/figures/pd_pass9/gen
 **What it shows:** a side-by-side panel illustrating the **Graph is the orthogonal projection of the Crystal** principle.
 
 - **Left panel:** the PD Crystal in the complex plane, with five sample points scattered at various positions and dashed projection lines dropping each point onto the real axis.
-- **Right panel:** the resulting PD Graph (1-D scalar), showing where each sample point lands after projection. The grayed text at the bottom — *"← Loses imaginary-axis (DT/Tralse) information →"* — is the punch line.
+- **Right panel:** the resulting PD Graph (1-D scalar), showing where each sample point lands after projection. The grayed text at the bottom — *"← Loses imaginary-axis (MI/Tralse) information →"* — is the punch line.
 
 **The relationship in one line:** **The Graph gives you the first moment (real-part) of the Crystal state.** Two different complex-plane states can project to the same scalar position; the scalar projection cannot tell them apart. This is exactly the same relationship as between the TI Sigma Graph and the TI Sigma Crystal: the projection is the empirically-tractable working object; the full object is the mathematical / theoretical object that contains structural information not visible in the projection.
 
@@ -115,7 +115,7 @@ python generate_pd_figures.py
 
 Requires `matplotlib` and `numpy` only. All four PNGs are regenerated; no external network access, no API keys, no random seeds. Output is byte-deterministic given the matplotlib version.
 
-The figures use Pass 8.2-ratified vocabulary throughout — DT/Tralse axis, Principal Indeterminate Region, Transcendent Ring, PD principal axis, Emerick Crossover. Any future Brandon-rename of these labels can be applied by editing the strings in the generator script and re-running.
+The figures use Pass 8.2-ratified vocabulary throughout — MI/Tralse axis, Principal Indeterminate Region, Transcendent Ring, PD principal axis, Emerick Crossover. Any future Brandon-rename of these labels can be applied by editing the strings in the generator script and re-running.
 
 ---
 

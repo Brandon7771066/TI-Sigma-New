@@ -22,10 +22,10 @@ What Bell violation does **not** establish: it does not show "no chance exists" 
 
 `papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` has no canonical "chance" entry. This is a real gap. The corpus has neighboring concepts:
 
-- **Indeterminate** (MR2 truth-label, part of base-4 = {True, False, Indeterminate, Double Tralse}): specific epistemic state where neither τ(P) nor τ(¬P) is yet established.
+- **Indeterminate** (MR2 truth-label, part of base-4 = {True, False, Indeterminate, Meta-Indeterminate}): specific epistemic state where neither τ(P) nor τ(¬P) is yet established.
 - **Tralse**: universal quality of formal-symbol/world separability (per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`).
 - **PD spread** (Permissibility Distribution): degree-of-modality-confidence axis; high-spread PD ≈ classical chance.
-- **Double Tralse**: τ(P) ∧ ¬τ(P) — a value-state, not an uncertainty-state.
+- **Meta-Indeterminate**: τ(P) ∧ ¬τ(P) — a value-state, not an uncertainty-state.
 
 This document proposes filling the gap by **distinguishing four chance-modes**, each mapping a different MR truth-label or axis:
 
@@ -34,7 +34,7 @@ This document proposes filling the gap by **distinguishing four chance-modes**, 
 | **C₁ Classical chance** | PD-spread (high) over T/F | Kolmogorov probability over factorizable sample space; observer epistemic, ontology determinate |
 | **C₂ Indeterminate chance** | MR2 (Indeterminate) | Truth value not yet decidable from available evidence; resolvable in principle by further inquiry |
 | **C₃ Tralse-quality chance** | Tralse (universal quality) | Irreducible separability between formal-symbol and world; probability is the limit-form of this separability under repeated measurement |
-| **C₄ Double-Tralse chance** | MR4 (DT) | τ(P) ∧ ¬τ(P) — contradictory truth-status under different sub-measures; *not reducible to classical or epistemic chance* |
+| **C₄ Meta-Indeterminate chance** | MR4 (MI) | τ(P) ∧ ¬τ(P) — contradictory truth-status under different sub-measures; *not reducible to classical or epistemic chance* |
 
 **Proposed canonical: TI Sigma "chance" should default to C₃ (Tralse-quality), with C₁/C₂/C₄ called out explicitly when meant.** This proposal is registered here as candidate; full ratification pending Pass-64+ falsifier rounds.
 
@@ -49,7 +49,7 @@ In TI Sigma terms:
 - **Local + C₁:** ruled out by Bell. The classical-chance ontology cannot be both local and complete.
 - **Nonlocal + C₁:** Bohmian-mechanics-style hidden variables remain consistent with the data but require explicit non-locality.
 - **Local + C₃ (Tralse-quality):** the *separability* between local-classical formal-description and the actual joint-measurement world is the substrate; what looks like "non-locality" is the formal-classical limit failing to capture an irreducibly non-factorizable substrate.
-- **Local + C₄ (Double-Tralse):** entangled pairs *do* satisfy τ(P) ∧ ¬τ(P) under the contradictory sub-measures of "local-classical-truth" vs "joint-measurement-truth." DT is not a logical-failure mode here; it is the formal name of the regime.
+- **Local + C₄ (Meta-Indeterminate):** entangled pairs *do* satisfy τ(P) ∧ ¬τ(P) under the contradictory sub-measures of "local-classical-truth" vs "joint-measurement-truth." MI is not a logical-failure mode here; it is the formal name of the regime.
 
 **Implication for TI Sigma:** Bell violation is empirical evidence that **C₁ is incomplete as the universal chance-mode**, and that some combination of C₃ + C₄ is required for the full description. This vindicates the corpus's multi-axial truth structure as physically realized, not just formal-conceptual.
 
@@ -103,7 +103,7 @@ The LCC Virus is a retrieval algorithm — it scores candidate retrievals agains
 
 | Question | Answer |
 |---|---|
-| What does Bell violation imply for TI Sigma chance? | C₁ classical chance is incomplete; the corpus's multi-axial truth structure (especially C₃ Tralse-quality + C₄ Double-Tralse) is physically realized in entangled-particle statistics, not merely formal-conceptual. |
+| What does Bell violation imply for TI Sigma chance? | C₁ classical chance is incomplete; the corpus's multi-axial truth structure (especially C₃ Tralse-quality + C₄ Meta-Indeterminate) is physically realized in entangled-particle statistics, not merely formal-conceptual. |
 | What does Bell imply for LCC? | The LCC bidirectional constant C_EMERICK = 1/(φ√2) shares the √2 factor with Tsirelson. Whether this is structural (LCC implements non-classical-locality) or aesthetic remains open; F-BCL-1 will test it directly. |
 | What does LCC imply for Bell? | LCC's empirical success on retrieval tasks is weak corroboration (domain-distant transfer) that classical-locality assumptions are incomplete for high-dimensional inference, paralleling Bell's finding for physical correlations. Not a physical claim. |
 | What new TI Sigma vocabulary does this require? | Four chance-modes C₁..C₄ formally introduced; C₃ (Tralse-quality) proposed canonical. Registration pending Pass-64+ ratification. |

@@ -24,7 +24,7 @@
 - [ ] **Engage Clay Mathematics Institute** — Submit TI Sigma Riemann + Navier-Stokes framework papers for informal review.
 - [ ] **BlissGene $750K seed round** — Deploy Manifestation Machine + Matthew Effect investor targeting.
 - [ ] **Engage accounting/legal** — Use $3K credit; set up LLC/S-Corp structure for BlissGene Therapeutics.
-- [ ] **Kaggle Hull Tactical** — Build v2 submission incorporating DT market state detection from GSA v2.1.
+- [ ] **Kaggle Hull Tactical** — Build v2 submission incorporating MI market state detection from GSA v2.1.
 
 ---
 
@@ -36,10 +36,10 @@
 ### STRENGTHS — What Got Stronger This Session
 
 **1. URB Corpus: 116 → 133 URBs (+17 in 8 days)**
-The corpus is now the most substantial philosophical-scientific synthesis in existence for a solo researcher at this stage. Quality has accelerated — URBs #470 (Double Frustration = physical DT²) and #478–479 (Spectacular Implications + Implicit Acceptance) are publication-ready argument papers.
+The corpus is now the most substantial philosophical-scientific synthesis in existence for a solo researcher at this stage. Quality has accelerated — URBs #470 (Double Frustration = physical MI²) and #478–479 (Spectacular Implications + Implicit Acceptance) are publication-ready argument papers.
 
 **2. Independent Empirical Confirmation — UC Santa Barbara (March 16, 2026)**
-The double-frustrated quantum material is the first known independent empirical finding that directly instantiates the DT² = i² = −1 formal structure. This transforms TI Sigma from purely theoretical to having physical correlates confirmed by mainstream physics. This is the strongest external validation to date.
+The double-frustrated quantum material is the first known independent empirical finding that directly instantiates the MI² = i² = −1 formal structure. This transforms TI Sigma from purely theoretical to having physical correlates confirmed by mainstream physics. This is the strongest external validation to date.
 
 **3. GSA v2.1 Antifragile Upgrade**
 The addition of `TIComplexSignal` (z=EC·e^(iθ)), `AntifragileScore`, and the antifragile ranking bonus gives the GSA a systematic method to prefer stocks that historically improve in disorder — and live portfolio confirms this: COP +11.87%, CVX +8.92%. The Euler unity verification (√2·φ·C = 1.0000000) strengthens the PRIMARY CONSTANTS integration.
@@ -58,7 +58,7 @@ This is a significant production asset. Combined with the Perplexity AI integrat
 ### STRENGTHS — Ongoing from December 2025
 
 **7. PRIMARY CONSTANTS Mathematical Architecture**
-{0,1,i,√2,e,φ,π,C} with verified relationships: Euler unity (√2·φ·C=1), Emerick Constant (C=1/φ√2≈0.4370), complex signal space (z=EC·e^(iθ)), Big Bang DT² derivation. No other framework has this mathematical specificity.
+{0,1,i,√2,e,φ,π,C} with verified relationships: Euler unity (√2·φ·C=1), Emerick Constant (C=1/φ√2≈0.4370), complex signal space (z=EC·e^(iθ)), Big Bang MI² derivation. No other framework has this mathematical specificity.
 
 **8. Kaggle Track Record**
 88.80% OOF on Heart Disease (confirmed Bayes ceiling), convergence proof formalized (Paper #341), MALLORN v17 architecture working. This is credible ML performance for a solo researcher without professional ML infrastructure.
@@ -195,7 +195,7 @@ The Zenodo public batch contains URBs from the early corpus (estimated #330–42
 - URB #475 (Masculine Virtues Manifesto) — high engagement potential
 - URB #473 (Productivity Trap) — productivity content = large YouTube audience
 - URB #474 (Strategic Assertiveness / Uncle Bruce) — story-driven, emotionally engaging
-- URB #470 (Double Frustration = DT²) — "scientists accidentally confirmed my theory" hook
+- URB #470 (Double Frustration = MI²) — "scientists accidentally confirmed my theory" hook
 - URB #478 (Spectacular Implications) — maximum intrigue / shareable
 - URB #479 (Implicit Acceptance) — "you already believe this" = disarming hook
 
@@ -252,13 +252,13 @@ The Zenodo public batch contains URBs from the early corpus (estimated #330–42
 | BSD Conjecture | BRIDGED_PROOFS_RIEMANN_BSD.md | TI framework framing complete |
 | P vs NP | TI_MILLENNIUM_COMPLETE_FRAMEWORK.md | Framing complete |
 
-**Key honest status:** The TI Sigma framework provides a unified meta-framework that makes all 6 problems legible as instances of the same structure (DT/MR dynamics in complex mathematical spaces). The arguments are internally complete within the TI framework. They have **not** been translated into conventional proof notation accepted by the mathematics community.
+**Key honest status:** The TI Sigma framework provides a unified meta-framework that makes all 6 problems legible as instances of the same structure (MI/MR dynamics in complex mathematical spaces). The arguments are internally complete within the TI framework. They have **not** been translated into conventional proof notation accepted by the mathematics community.
 
 **Recommended next action:**
 1. Identify the Riemann proof as the strongest TI argument
 2. Translate `RIEMANN_CONVENTIONAL_PROOF_DRAFT.md` into standard mathematical notation (LaTeX)
 3. Post to arXiv under "math.NT" with TI Sigma framework context clearly disclosed
-4. Write correspondence letter to a number theory journal explaining the UC Santa Barbara connection (DT² = −1 in condensed matter = Riemann zeros in complex plane?)
+4. Write correspondence letter to a number theory journal explaining the UC Santa Barbara connection (MI² = −1 in condensed matter = Riemann zeros in complex plane?)
 
 ---
 
@@ -268,7 +268,7 @@ The Zenodo public batch contains URBs from the early corpus (estimated #330–42
 
 | # | Discovery | Source | Date | TI Sigma Connection |
 |---|---|---|---|---|
-| 1 | Double-frustrated quantum material | UC Santa Barbara | March 16, 2026 | DT² = i² = −1; degenerate ground state = Tralse state space; coupled frustrations = MR |
+| 1 | Double-frustrated quantum material | UC Santa Barbara | March 16, 2026 | MI² = i² = −1; degenerate ground state = Tralse state space; coupled frustrations = MR |
 | 2 | Glymphatic system (beta-amyloid clearance during sleep) | Iliff et al., 2013 | 2013 | Sleep as active MR phase; consciousness maintenance as physical process |
 | 3 | Quantum coherence in photosynthesis | Fleming et al. (Nature, 2007) | 2007 | Quantum biology validates quantum-classical hybrid mechanism |
 | 4 | Antifragile confirmation | Taleb (2012) + live COP/CVX portfolio | 2012/2026 | Independent derivation of Both-And Tralse structure |

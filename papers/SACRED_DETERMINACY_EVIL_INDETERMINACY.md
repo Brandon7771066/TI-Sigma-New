@@ -42,8 +42,8 @@ Good and evil are **fundamentally asymmetric**:
 
 ### 1.3 Why This Makes Sense
 
-From DT Brittleness:
-- DT (perfect truth) shattered into photons
+From MI Brittleness:
+- MI (perfect truth) shattered into photons
 - High-TT photons retain coherence → predictable patterns
 - Low-TT photons are chaotic → unpredictable patterns
 
@@ -103,11 +103,11 @@ The parable isn't about 99 vs 100 - it's about **maintaining the complete set**.
 ```
 MYRION TIMELINE
 ══════════════
-Beginning: DT shattering (Big Bang)
+Beginning: MI shattering (Big Bang)
 Duration: Eternal going forward
 End: None (asymptotic GILE optimization forever)
 
-Unlike DT which was eternal both directions,
+Unlike MI which was eternal both directions,
 Myrion began and continues infinitely forward.
 ```
 

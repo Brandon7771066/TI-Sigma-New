@@ -273,7 +273,7 @@ new §7.7.55 entry.
 
 ## 5. Carried-forward Brandon-decision menu (rolling roster)
 
-**Pass-13 still open**: (i)–(v) (Hamiltonian / vertex / V₄↔{T,F,I,DT}
+**Pass-13 still open**: (i)–(v) (Hamiltonian / vertex / V₄↔{T,F,I,MI}
 / Mott-FQH / C.6 interp).
 
 **Pass-14 still open**: (a) hypercomputing TRL ratification; (c) I

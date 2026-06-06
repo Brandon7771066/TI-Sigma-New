@@ -39,7 +39,7 @@ The TI Sigma corpus has **strong meta-philosophical evidence** for noncomputatio
 
 | Structure | Anchor | Status |
 |---|---|---|
-| **TI Sigma Crystal symmetry group V₄ = C₂×C₂** | Pass-29 C5 (`papers/CRYSTAL_C5_SYMMETRY_GROUP_2026-05-09.md`) | RATIFIED; striking candidate isomorphism V₄ ↔ {T, F, I, DT} 4-truth-label group |
+| **TI Sigma Crystal symmetry group V₄ = C₂×C₂** | Pass-29 C5 (`papers/CRYSTAL_C5_SYMMETRY_GROUP_2026-05-09.md`) | RATIFIED; striking candidate isomorphism V₄ ↔ {T, F, I, MI} 4-truth-label group |
 | **Crystal B4 graph-Laplacian Hamiltonian, full 57-eigenvalue spectrum** | Pass-29 (`CRYSTAL_B4_HAMILTONIAN_2026-05-09.md`) | Phase-energies BEC=0 < Supersolid=0.92 < Mott=2.00 < FQH=2.40 < Fragmented=3.47 (Mott↔FQH swapped vs prior; 3 readings per #69) |
 | **Cross-Ring CHSH C.6** | Pass-28 (`CRYSTAL_C6_CHSH_PREDICTION_2026-05-09.md`) | Prediction CHSH_ij ≤ 2·min(r_i, r_j); Pass-29 c-batch defaulted Interpretation A |
 | **Pass-31 D2-HYBRID** | `PASS_31_*.md` | ℂ³² primary (5-qubit) AND I-Ching/V₄³/Hadamard simultaneously canonical; 32-D-complex GM-Network state space |
@@ -73,7 +73,7 @@ The TI Sigma corpus has **strong meta-philosophical evidence** for noncomputatio
 **TI Sigma reading:**
 - Penrose's mathematical argument (1994) survives Pass-14 audit at the level of "you can't algorithmically rule it out without already assuming the conclusion"; this is symmetric to URB-830's anti-Popperian point.
 - Hameroff's microtubule biology has improved since 2014 (Bandyopadhyay vibrational measurements; Reimers' decoherence-time critiques weakened by warm-coherence findings in cryptochromes). Status: *more credible than 2010, still not established.*
-- TI Sigma alignment: Pass-23 shortlist #4 (Orch-OR) was rated WEAK on AA per Pass-34 e25-d §3; rated Conjectural on A2 (PD-real) and DT-rich on A1 (MR Truth Labels).
+- TI Sigma alignment: Pass-23 shortlist #4 (Orch-OR) was rated WEAK on AA per Pass-34 e25-d §3; rated Conjectural on A2 (PD-real) and MI-rich on A1 (MR Truth Labels).
 
 **Pass-35 verdict:** Penrose's argument is **load-bearing for the meta-philosophical case** but does **not yet provide independent empirical leverage**.
 

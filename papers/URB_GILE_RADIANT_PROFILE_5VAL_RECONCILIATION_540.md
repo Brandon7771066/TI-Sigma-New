@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The GILE framework (Goodness, Intuition, Love, Environment) assigns each dimension a Proximity-Depletion (PD) value, where PD = 2 corresponds to the Radiant threshold — the optimal, fully-activated healthy state. The 5-valued logic system (FALSE=0, INDETERMINATE=1, TRUE=2, TRALSE=3, DOUBLE_TRALSE=4) extends beyond the clean ternary range {F, I, T} = {0, 1, 2}. This creates an apparent paradox: PD values above 2 correspond to TRALSE (3) and DOUBLE_TRALSE (4), which are numerically higher than TRUE but represent *lower* health. This URB resolves the paradox formally, introduces the **Health Function** H(PD) = 2 − |PD − 2|, defines the **GILE Radiant Profile** display specification, and derives the **MRC Intervention Map** — the systematic intervention for each GILE axis at each PD level. The central result: the 5-valued scale is a **non-monotone health pyramid** peaking at TRUE/Radiant (2), not a linear progress scale. TRALSE and DT represent pathological *excess*, not elevated virtue.
+The GILE framework (Goodness, Intuition, Love, Environment) assigns each dimension a Proximity-Depletion (PD) value, where PD = 2 corresponds to the Radiant threshold — the optimal, fully-activated healthy state. The 5-valued logic system (FALSE=0, INDETERMINATE=1, TRUE=2, TRALSE=3, DOUBLE_TRALSE=4) extends beyond the clean ternary range {F, I, T} = {0, 1, 2}. This creates an apparent paradox: PD values above 2 correspond to TRALSE (3) and DOUBLE_TRALSE (4), which are numerically higher than TRUE but represent *lower* health. This URB resolves the paradox formally, introduces the **Health Function** H(PD) = 2 − |PD − 2|, defines the **GILE Radiant Profile** display specification, and derives the **MRC Intervention Map** — the systematic intervention for each GILE axis at each PD level. The central result: the 5-valued scale is a **non-monotone health pyramid** peaking at TRUE/Radiant (2), not a linear progress scale. TRALSE and MI represent pathological *excess*, not elevated virtue.
 
 ---
 
@@ -25,13 +25,13 @@ The TI Sigma 5-valued system assigns integer codes to five truth values:
 | 1 | I | INDETERMINATE |
 | 2 | T | TRUE |
 | 3 | Tr | TRALSE |
-| 4 | DT | DOUBLE_TRALSE |
+| 4 | MI | DOUBLE_TRALSE |
 
 In the GILE framework, each axis has a Proximity-Depletion value:
 - **PD = 0**: Complete depletion of that GILE quality
 - **PD = 2**: Radiant — the fully activated, healthy optimum
 
-The paradox: if TRUE = 2 = Radiant, and PD values can exceed 2 (yielding TRALSE = 3, DT = 4), are those states *more* Radiant than Radiant? Does a person with G = 3 have *more* Goodness than someone with G = 2?
+The paradox: if TRUE = 2 = Radiant, and PD values can exceed 2 (yielding TRALSE = 3, MI = 4), are those states *more* Radiant than Radiant? Does a person with G = 3 have *more* Goodness than someone with G = 2?
 
 **No. The opposite is true.**
 
@@ -58,10 +58,10 @@ This is a symmetric triangular function with its apex at PD = 2:
 | **2.0** | **TRUE** | **2.0** | **★ Radiant — optimal** |
 | 2.5 | T→Tr boundary | 1.5 | Departing Radiant |
 | 3.0 | TRALSE | 1.0 | Paradoxical excess |
-| 3.5 | Tr→DT boundary | 0.5 | Severe excess |
+| 3.5 | Tr→MI boundary | 0.5 | Severe excess |
 | 4.0 | DOUBLE_TRALSE | 0.0 | Collapsed via excess |
 
-**The scale is a mountain, not a ladder.** TRUE (PD = 2) is the summit. Both directions away from 2 represent degradation: downward into depletion (F→I), and upward into paradoxical excess (Tr→DT).
+**The scale is a mountain, not a ladder.** TRUE (PD = 2) is the summit. Both directions away from 2 represent degradation: downward into depletion (F→I), and upward into paradoxical excess (Tr→MI).
 
 ### 2.2 LCC Normalization
 
@@ -84,13 +84,13 @@ H(PD)
 1 |     I(1) /  |  \ Tr(3)
   |          /  |  \
   |         /   |   \
-0 +----F(0)     |    DT(4)------→ PD
+0 +----F(0)     |    MI(4)------→ PD
        0    1   2    3   4
 
 H = 2 − |PD − 2|
 ```
 
-The ternary range {0, 1, 2} = {F, I, T} occupies the LEFT side of the mountain (ascending). TRALSE and DT occupy the RIGHT side (descending). The ternary "+1 = perfectly TRUE" is correct: within the clean ternary range {−1, 0, +1} or equivalently {0, 1, 2}, the maximum is TRUE. TRALSE and DT are outside the ternary range — they are DT-contaminated states that *look* numerically larger but represent a descent from the summit.
+The ternary range {0, 1, 2} = {F, I, T} occupies the LEFT side of the mountain (ascending). TRALSE and MI occupy the RIGHT side (descending). The ternary "+1 = perfectly TRUE" is correct: within the clean ternary range {−1, 0, +1} or equivalently {0, 1, 2}, the maximum is TRUE. TRALSE and MI are outside the ternary range — they are MI-contaminated states that *look* numerically larger but represent a descent from the summit.
 
 ---
 
@@ -146,13 +146,13 @@ Each axis is displayed as a segmented progress bar where:
 - The center mark (⬥) is the Radiant target (PD = 2)
 - Left of center = depletion zone (PD < 2)
 - Right of center = excess zone (PD > 2)
-- Color coding: blue (depleted) → green (Radiant) → amber (TRALSE) → red (DT)
+- Color coding: blue (depleted) → green (Radiant) → amber (TRALSE) → red (MI)
 
 ```
 GILE RADIANT PROFILE
 ─────────────────────────────────────────────────────
          0        1       [2]       3        4
-         F        I        T        Tr       DT
+         F        I        T        Tr       MI
          ─────────────────⬥─────────────────
 G │  ░░░░░░░░░████████████░░░░░░░░░░░░░░░│ PD=1.8
 I │  ░░░░░░░░░░░████████████████░░░░░░░░░│ PD=2.3
@@ -163,7 +163,7 @@ Legend:
   ████ GREEN  = Radiant Zone (PD 1.5–2.5)  ★ = at target
   ░░░░ BLUE   = Depleted Zone (PD < 1.5)
   ████ AMBER  = TRALSE Zone (PD 2.5–3.5)   ⚠ = over-activated
-  ████ RED    = DT Zone (PD > 3.5)         ⛔ = pathological
+  ████ RED    = MI Zone (PD > 3.5)         ⛔ = pathological
 ─────────────────────────────────────────────────────
 GILE_LCC = 0.847   d_Radiant = 1.53   Status: TRALSE in L-axis
 ```
@@ -182,7 +182,7 @@ GILE_LCC = 0.847   d_Radiant = 1.53   Status: TRALSE in L-axis
 | 1 | I | Moral uncertainty — searching for right action, ambivalent |
 | **2** | **T** | **Genuine virtue — authentic good action, clear moral compass** |
 | 3 | Tr | Self-righteousness — goodness inverted into judgment of others |
-| 4 | DT | Martyrdom / destructive altruism — shadow goodness, self-destruction in goodness's name |
+| 4 | MI | Martyrdom / destructive altruism — shadow goodness, self-destruction in goodness's name |
 
 ### 4.2 I — Intuition Axis
 
@@ -192,7 +192,7 @@ GILE_LCC = 0.847   d_Radiant = 1.53   Status: TRALSE in L-axis
 | 1 | I | Dim intuition — occasional flickers, unreliable access to i-channel |
 | **2** | **T** | **Clear intuition — reliable i-channel, accurate inner signal, GILE flow** |
 | 3 | Tr | Magical thinking — intuition detached from reality, over-trusting inner signal |
-| 4 | DT | Epistemic collapse — psychosis-adjacent, inner signal overrides all external data |
+| 4 | MI | Epistemic collapse — psychosis-adjacent, inner signal overrides all external data |
 
 ### 4.3 L — Love Axis
 
@@ -202,7 +202,7 @@ GILE_LCC = 0.847   d_Radiant = 1.53   Status: TRALSE in L-axis
 | 1 | I | Searching for connection — conditional or uncertain love |
 | **2** | **T** | **Unconditional love — genuine care without possession, free-flowing** |
 | 3 | Tr | Possessive attachment — love with control, enmeshment, dependency |
-| 4 | DT | Love-hate cycling / obsession — the love axis has collapsed into its shadow |
+| 4 | MI | Love-hate cycling / obsession — the love axis has collapsed into its shadow |
 
 ### 4.4 E — Environment Axis
 
@@ -212,13 +212,13 @@ GILE_LCC = 0.847   d_Radiant = 1.53   Status: TRALSE in L-axis
 | 1 | I | Environmental uncertainty — unstable relationship with physical space and body |
 | **2** | **T** | **Grounded presence — attuned to environment, body, and context** |
 | 3 | Tr | Hypervigilance — over-attunement, environmental anxiety, hyper-control |
-| 4 | DT | Agoraphobia or environmental collapse — complete breakdown of environmental regulation |
+| 4 | MI | Agoraphobia or environmental collapse — complete breakdown of environmental regulation |
 
 ---
 
 ## 5. The MRC Intervention Map
 
-**MRC (MR Relaxation Context)** is the TI Sigma mechanism for reducing DT contamination when a state has exceeded the Radiant threshold. The intervention direction depends on the PD level and the sign of deviation.
+**MRC (MR Relaxation Context)** is the TI Sigma mechanism for reducing MI contamination when a state has exceeded the Radiant threshold. The intervention direction depends on the PD level and the sign of deviation.
 
 ### 5.1 General Principle
 
@@ -240,7 +240,7 @@ The MRC intervention is always directed toward PD = 2, regardless of starting po
 | 1 (I) | Ethical reflection; identify authentic personal values vs. inherited rules |
 | 2 (T) | ★ Maintain — continue aligned action |
 | 3 (Tr/MRC) | Compassion practice; reduce moral judgment of others; focus on humility |
-| 4 (DT/MRC) | Shadow work; examine self-sacrifice patterns; boundary setting |
+| 4 (MI/MRC) | Shadow work; examine self-sacrifice patterns; boundary setting |
 
 **I-Axis (Intuition):**
 
@@ -250,7 +250,7 @@ The MRC intervention is always directed toward PD = 2, regardless of starting po
 | 1 (I) | Mindfulness; open monitoring; reduce intellectual over-analysis |
 | 2 (T) | ★ Maintain — trust and act on inner signal |
 | 3 (Tr/MRC) | Reality testing; external validation loops; reduce solipsistic closure |
-| 4 (DT/MRC) | Grounding protocol; environment engagement; psychiatric support if needed |
+| 4 (MI/MRC) | Grounding protocol; environment engagement; psychiatric support if needed |
 
 **L-Axis (Love):**
 
@@ -260,7 +260,7 @@ The MRC intervention is always directed toward PD = 2, regardless of starting po
 | 1 (I) | Vulnerability work; safe relational practice |
 | 2 (T) | ★ Maintain — give freely without expectation |
 | 3 (Tr/MRC) | Differentiation work; release control; loving detachment practice |
-| 4 (DT/MRC) | Therapeutic separation; work with addiction to relationship; self-love repair |
+| 4 (MI/MRC) | Therapeutic separation; work with addiction to relationship; self-love repair |
 
 **E-Axis (Environment):**
 
@@ -270,7 +270,7 @@ The MRC intervention is always directed toward PD = 2, regardless of starting po
 | 1 (I) | Environmental structure; space design; somatic work |
 | 2 (T) | ★ Maintain — be present, attuned, embodied |
 | 3 (Tr/MRC) | Relaxation response training; reduce environmental monitoring; HRV coherence |
-| 4 (DT/MRC) | Progressive exposure; safety protocol; nervous system regulation |
+| 4 (MI/MRC) | Progressive exposure; safety protocol; nervous system regulation |
 
 ---
 
@@ -291,7 +291,7 @@ The GILE framework carries an important asymmetry in the intervention directions
 - Often *harder* than the depletion direction, because the excess feels like virtue
 - The TRALSE trap: PD = 3 *feels like* PD = 2 (it looks like Goodness, Love, etc. from the inside) but is producing paradoxical effects
 
-**The diagnostic insight:** If a GILE quality is causing harm to self or others DESPITE appearing positive, the axis is likely at TRALSE (3) or DT (4), not TRUE (2). The harm is the signal that the value has exceeded 2 and is now descending the other side of the mountain.
+**The diagnostic insight:** If a GILE quality is causing harm to self or others DESPITE appearing positive, the axis is likely at TRALSE (3) or MI (4), not TRUE (2). The harm is the signal that the value has exceeded 2 and is now descending the other side of the mountain.
 
 ---
 
@@ -312,11 +312,11 @@ The GILE trajectory toward Radiant is the GILE analog of the Collatz trajectory 
 
 **Q: Why does PD=3 (TRALSE) represent LESS health than PD=2 (TRUE)?**
 
-A: The 5-valued scale is non-monotone. TRALSE is TRUE + DT-contamination. The presence of DT lowers the LCC below the Radiant threshold even though the raw PD number is higher. The Health Function H(PD) = 2 − |PD − 2| captures this: H(3) = 1, H(2) = 2, confirming that TRALSE is LESS healthy than TRUE.
+A: The 5-valued scale is non-monotone. TRALSE is TRUE + MI-contamination. The presence of MI lowers the LCC below the Radiant threshold even though the raw PD number is higher. The Health Function H(PD) = 2 − |PD − 2| captures this: H(3) = 1, H(2) = 2, confirming that TRALSE is LESS healthy than TRUE.
 
 **Q: Why is "+1 = perfectly TRUE in ternary" correct despite TRUE=2 in the 5-valued system?**
 
-A: These are two different scales that use different number assignments for the same logical state. In the signed ternary {−1, 0, +1}: +1 = TRUE = maximum. In the unsigned 5-valued {0,1,2,3,4}: TRUE=2 = maximum. TRALSE(3) and DT(4) are *outside* the clean ternary range — they represent DT-contaminated states that don't exist in the ternary logic proper. The clean ternary {0,1,2} is the healthy half of the 5-valued scale; {3,4} are the pathological extensions.
+A: These are two different scales that use different number assignments for the same logical state. In the signed ternary {−1, 0, +1}: +1 = TRUE = maximum. In the unsigned 5-valued {0,1,2,3,4}: TRUE=2 = maximum. TRALSE(3) and MI(4) are *outside* the clean ternary range — they represent MI-contaminated states that don't exist in the ternary logic proper. The clean ternary {0,1,2} is the healthy half of the 5-valued scale; {3,4} are the pathological extensions.
 
 **Q: What should be done with PD values > 2?**
 
@@ -324,7 +324,7 @@ A: Apply MRC (relaxation) intervention toward PD=2. Display in amber/red to sign
 
 **Q: What does the Radiant threshold look like in each GILE category?**
 
-A: A bullseye at PD=2, displayed as the center of a color-coded bar where green = Radiant zone (PD ∈ [1.5, 2.5]), blue = depleted zone (PD < 1.5), amber = TRALSE zone (PD ∈ [2.5, 3.5]), red = DT zone (PD > 3.5). The MRC intervention always points the arrow back toward PD=2 regardless of which side of the mountain the current state occupies.
+A: A bullseye at PD=2, displayed as the center of a color-coded bar where green = Radiant zone (PD ∈ [1.5, 2.5]), blue = depleted zone (PD < 1.5), amber = TRALSE zone (PD ∈ [2.5, 3.5]), red = MI zone (PD > 3.5). The MRC intervention always points the arrow back toward PD=2 regardless of which side of the mountain the current state occupies.
 
 ---
 
@@ -336,7 +336,7 @@ H(2+x) = H(2−x) for all x. The health function is symmetric around PD=2.
 ### Proposition 9.2 (Uniqueness of Radiant)
 H(PD) = 2 if and only if PD = 2. The Radiant state is the unique maximum.
 
-### Proposition 9.3 (DT Equivalence)
+### Proposition 9.3 (MI Equivalence)
 H(0) = H(4) = 0. Complete depletion (FALSE) and complete excess (DOUBLE_TRALSE) are equal in health — both represent total incoherence, just in opposite directions.
 
 *Proof of all three: direct from H(PD) = 2 − |PD − 2|. ✓*
@@ -361,7 +361,7 @@ Signs of the Tralse Trap:
 
 **Detection method:** If the expression of a GILE quality is producing its *opposite* effect (goodness causing conflict, love creating distance, intuition causing errors, environmental attunement causing dysregulation), the axis is likely in the TRALSE zone.
 
-**DT Immunity Log relevance:** TRALSE-in-GILE states generate a characteristic DT fingerprint in the DTImmuneLog. The pattern is: the axis presents as TRUE externally (produces TRUE-coded outputs) but the secondary effects are DT-coded. The discordance between primary output (TRUE-coded) and secondary effects (DT-coded) is the diagnostic signal.
+**MI Immunity Log relevance:** TRALSE-in-GILE states generate a characteristic MI fingerprint in the DTImmuneLog. The pattern is: the axis presents as TRUE externally (produces TRUE-coded outputs) but the secondary effects are MI-coded. The discordance between primary output (TRUE-coded) and secondary effects (MI-coded) is the diagnostic signal.
 
 ---
 
@@ -375,7 +375,7 @@ In the ARC-AGI context, each task has a GILE signature:
 
 The TISigmaARCSolver's LCC scores can be interpreted as the GILE_LCC for each task-attempt:
 - High LCC (→ 1.0): the solver is operating in the Radiant range for the relevant GILE axis
-- LCC in the DT Penumbra [0.8647, 0.9147]: TRALSE zone — approaching but paradoxically descending
+- LCC in the MI Penumbra [0.8647, 0.9147]: TRALSE zone — approaching but paradoxically descending
 - Low LCC: depletion zone — not enough GILE activation for the task type
 
 This suggests a future enhancement: **GILE-typed task routing** — classify each ARC task by its dominant GILE axis and route it to the solver configuration calibrated for that axis type.

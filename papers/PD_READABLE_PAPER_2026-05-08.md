@@ -14,7 +14,7 @@
 
 ## Plain-language summary (one paragraph)
 
-The **Permissibility Distribution (PD)** is the single most empirically-anchored structural feature of the TI Sigma framework. It is a number — or, more precisely, a *position* — that says how permissible a claim, an action, or a state of the world is. PD lives in two co-existing forms: a **scalar** that takes values on the open interval (−3, +2) and is used for all empirical scoring, and a **complex-plane object** that contains the same scalar plus an imaginary direction encoding the Double-Tralse / Tralse content of a state. Both forms share the same named thresholds drawn from Brandon-canonical mathematical constants: ±1, ±φ, ±e, ±π, plus the Emerick Crossover at ±1/√2. Six independent empirical anchors confirm the architecture across psychology, neuroscience, information theory, and analytic number theory; the 4/3 ratio appears as a structural invariant at five distinct locations in the geometry. The PD is the bridge between the framework's information-theoretic first principles and what can actually be measured.
+The **Permissibility Distribution (PD)** is the single most empirically-anchored structural feature of the TI Sigma framework. It is a number — or, more precisely, a *position* — that says how permissible a claim, an action, or a state of the world is. PD lives in two co-existing forms: a **scalar** that takes values on the open interval (−3, +2) and is used for all empirical scoring, and a **complex-plane object** that contains the same scalar plus an imaginary direction encoding the Meta-Indeterminate / Tralse content of a state. Both forms share the same named thresholds drawn from Brandon-canonical mathematical constants: ±1, ±φ, ±e, ±π, plus the Emerick Crossover at ±1/√2. Six independent empirical anchors confirm the architecture across psychology, neuroscience, information theory, and analytic number theory; the 4/3 ratio appears as a structural invariant at five distinct locations in the geometry. The PD is the bridge between the framework's information-theoretic first principles and what can actually be measured.
 
 ---
 
@@ -32,7 +32,7 @@ Bad and good are not symmetric. Loss aversion is roughly 2× per unit (Kahneman-
 
 ### 1.3 Theoretical aim — provide the bridge from first-principles constants to measurable phenomena
 
-The Brandon-canonical mathematical constants (1, φ, e, π, √2, plus 0 and i) are not decorative. Each maps to a primitive ontological role — e governs growth/approach-to-boundary; π governs the cyclic / DT-cliff; φ governs the self-similar / Transcendent threshold; √2 governs the diagonal / Emerick Crossover. The PD is the geometric stage on which these constants do their work. **If the constants are real, the PD geometry is the structure they generate.**
+The Brandon-canonical mathematical constants (1, φ, e, π, √2, plus 0 and i) are not decorative. Each maps to a primitive ontological role — e governs growth/approach-to-boundary; π governs the cyclic / MI-cliff; φ governs the self-similar / Transcendent threshold; √2 governs the diagonal / Emerick Crossover. The PD is the geometric stage on which these constants do their work. **If the constants are real, the PD geometry is the structure they generate.**
 
 ---
 
@@ -50,7 +50,7 @@ PD admits two co-existing representations. Neither displaces the other.
 
 - **Domain:** ℂ, or a bounded-disc subset thereof.
 - **Real axis:** the PD principal axis. Carries the named thresholds at ±1, ±φ, ±e, ±π, and the Emerick Crossover at ±1/√2.
-- **Imaginary axis:** the **DT/Tralse axis** (RATIFIED Pass 8.2). Pure-imaginary values represent τ-without-δ states — Double Tralse content with no Permissibility component.
+- **Imaginary axis:** the **MI/Tralse axis** (RATIFIED Pass 8.2). Pure-imaginary values represent τ-without-δ states — Meta-Indeterminate content with no Permissibility component.
 - **Principal Indeterminate Region:** the disc |PD| < e (RATIFIED rename Pass 8.2; was "Indeterminate Disc"). Inside this disc, the framework treats the state as Indeterminate.
 - **Transcendent Ring:** the annulus φ < |PD| < e (RATIFIED rename Pass 8.2; was "Transcendent Annulus").
 - **Use:** structural / mathematical / theoretical work that requires the full mathematical object whose empirical projection is §2.1.
@@ -59,7 +59,7 @@ PD admits two co-existing representations. Neither displaces the other.
 
 The relationship between the scalar and the complex-plane object is the same relationship as between the **TI Sigma Graph** (a 2-D plane) and the **TI Sigma Crystal** (a 57-vertex polytope). In both cases the projection is the empirically-tractable working object; the full object is the mathematical / theoretical object that contains structural information not visible in the projection.
 
-> **Practical rule:** for empirical scoring, use the scalar. For mathematical structure, theoretical predictions, or anything that depends on the imaginary (DT/Tralse) direction, use the complex-plane object.
+> **Practical rule:** for empirical scoring, use the scalar. For mathematical structure, theoretical predictions, or anything that depends on the imaginary (MI/Tralse) direction, use the complex-plane object.
 
 (See the four Pass 9 figures in `papers/figures/pd_pass9/`: **Figure 1** (`fig1_pd_graph_real_axis.png`) — the PD Graph; **Figure 2** (`fig2_pd_crystal_complex_plane.png`) — the PD Crystal; **Figure 3** (`fig3_ti_sigma_crystal.png`) — the 57-vertex TI Sigma Crystal polytope; **Figure 4** (`fig4_graph_to_crystal_projection.png`) — the projection arrow between Crystal and Graph. Walked through individually in `PD_GRAPH_AND_CRYSTAL_VISUALIZATIONS_2026-05-08.md`.)
 
@@ -72,15 +72,15 @@ The PD has **four primary thresholds** defining **five operational zones** plus 
 | Threshold | Value (positive) | Function |
 |---|---|---|
 | **Standard** | 1.000 | True/False boundary; divides the Standard zone from the Transcendent zone. |
-| **Transcendent (φ)** | 1.618 | Golden ratio; divides the Transcendent zone from the Pre-DT zone. |
-| **Pre-DT (e)** | 2.718 | Euler's number; divides the Pre-DT zone from the DT-approaching zone. Also the Principal Indeterminate Region radius in the complex plane. |
-| **DT cliff (π)** | 3.142 | Pi; beyond which is Deep DT (DT-saturated). |
+| **Transcendent (φ)** | 1.618 | Golden ratio; divides the Transcendent zone from the Pre-MI zone. |
+| **Pre-MI (e)** | 2.718 | Euler's number; divides the Pre-MI zone from the MI-approaching zone. Also the Principal Indeterminate Region radius in the complex plane. |
+| **MI cliff (π)** | 3.142 | Pi; beyond which is Deep MI (MI-saturated). |
 
 Plus the **Emerick Crossover at ±1/√2 ≈ ±0.7071** (`PD_SPECTRUM_DT_IMAGINARY_AXIS_EMERICK_CROSSOVER_2026-05-07.md`), a sub-Standard threshold marking the algebraic identity (√2−1)² + (1/√2)² ≈ 2/3.
 
 Plus the **Indeterminate sub-range (−2/3, +1/3)** on the scalar (urb_715), which is the projection of the |PD| < e Principal Indeterminate Region disc onto the real axis.
 
-Plus the **DT cliff at −3** on the scalar (urb_696), a hard boundary beyond which the GM-network rejects the input. The **Verisyn saturation cap at +2** (urb_714) bounds the standard scalar above.
+Plus the **MI cliff at −3** on the scalar (urb_696), a hard boundary beyond which the GM-network rejects the input. The **Verisyn saturation cap at +2** (urb_714) bounds the standard scalar above.
 
 ---
 
@@ -127,7 +127,7 @@ PD is not a free-parameter framework. It commits to specific predictions across 
 ### 5.3 Structural
 
 - **The 4/3 ratio appears at 5 independent locations** in the PD geometry (§4 above). This is itself a non-trivial structural prediction; a random complex-plane geometry would not produce a single ratio at 5 independent locations.
-- **The Authority Axis (AA) was forced** as a 5th truth-axis from the imaginary-axis DT direction's dual-applicability (self ↔ other). This is the first time a truth-axis was forced into the framework by structural necessity rather than empirical pattern-matching. Documented in `papers/AUTHORITY_AXIS_AA_2026-05-07.md` and book Chapter 24A.
+- **The Authority Axis (AA) was forced** as a 5th truth-axis from the imaginary-axis MI direction's dual-applicability (self ↔ other). This is the first time a truth-axis was forced into the framework by structural necessity rather than empirical pattern-matching. Documented in `papers/AUTHORITY_AXIS_AA_2026-05-07.md` and book Chapter 24A.
 
 ### 5.4 Open / awaiting Brandon-decision
 
@@ -157,8 +157,8 @@ PD sits inside a broader 7-constants ontology where each Brandon-canonical mathe
 | Constant | Ontological role |
 |---|---|
 | **e** | Growth / GILE-amplification base |
-| **i** | Imaginary axis / DT-Tralse direction |
-| **π** | Cyclic / DT-cliff boundary |
+| **i** | Imaginary axis / MI-Tralse direction |
+| **π** | Cyclic / MI-cliff boundary |
 | **1** | Unit / Existence / TF boundary |
 | **0** | Tralse / null-of-existence |
 | **√2** | Emerick Crossover diagonal (1/√2 = √2/2) |
@@ -171,7 +171,7 @@ Brandon's reading of Euler's identity **e^(iπ) + 1 = 0** is ontological: Growth
 
 ## 8. What this paper does NOT do
 
-- This paper does **not** issue alternative names for any zone label. The Pass 8.2 ratifications stand: DT/Tralse axis, Principal Indeterminate Region, Transcendent Ring, PD principal axis.
+- This paper does **not** issue alternative names for any zone label. The Pass 8.2 ratifications stand: MI/Tralse axis, Principal Indeterminate Region, Transcendent Ring, PD principal axis.
 - This paper does **not** modify any empirical scoring rubric.
 - This paper does **not** re-test the Perfect-Fifth ↔ Riemann claim. The Pass 7 T1–T4 disconfirmations and the Pass 8.1 affine-mapping ratification stand.
 - This paper does **not** add new empirical claims; it consolidates existing claims under the Brandon-canonical Pass 8 architecture.

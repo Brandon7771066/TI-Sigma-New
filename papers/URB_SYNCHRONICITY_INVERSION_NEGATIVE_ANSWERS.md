@@ -67,7 +67,7 @@ A synchronicity that is genuinely noise (near-chance) returns PD near Indetermin
 
 The Myrion Resolution procedure for synchronicity classification:
 
-MR1: Is the synchronicity sufficiently specific and coherent to analyze? A vague feeling of "something" is Double Tralse — too incoherent to classify. Specific imagery with clear correspondence passes MR1.
+MR1: Is the synchronicity sufficiently specific and coherent to analyze? A vague feeling of "something" is Meta-Indeterminate — too incoherent to classify. Specific imagery with clear correspondence passes MR1.
 
 MR2: What is the hit rate when the synchronicity is decoded as confirmation? If hit rate > 50%, classify as positive (confirm the signal). If hit rate < 50%, do not immediately dismiss — proceed to inversion test. If hit rate near 50%, classify as Indeterminate.
 

@@ -131,18 +131,18 @@ Numbering: T49-1 through T49-10. Internal numbering does not imply execution ord
 
 ---
 
-## T49-6 — DefT (Defective Truth) vs DT (Double Tralse) discrimination by raters
+## T49-6 — DefT (Defective Truth) vs MI (Meta-Indeterminate) discrimination by raters
 
-**Claim under test:** Per `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, DefT and DT are *categorically distinct* labels with disjoint semantic referents. Raters trained on the canonical ruling should distinguish DefT from DT with above-chance agreement.
+**Claim under test:** Per `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, DefT and MI are *categorically distinct* labels with disjoint semantic referents. Raters trained on the canonical ruling should distinguish DefT from MI with above-chance agreement.
 
-**Why consequential:** The DT/DefT rename was a major canonization (Pass-47 §3, 2026-05-08). The strong claim is that the pre-canonization confusion was a notational artifact, not a real semantic conflict. If trained raters cannot distinguish DefT from DT, the rename solved nothing and the labels need re-thinking. If they distinguish them robustly, the canonization is empirically vindicated and ready for academic publication.
+**Why consequential:** The MI/DefT rename was a major canonization (Pass-47 §3, 2026-05-08). The strong claim is that the pre-canonization confusion was a notational artifact, not a real semantic conflict. If trained raters cannot distinguish DefT from MI, the rename solved nothing and the labels need re-thinking. If they distinguish them robustly, the canonization is empirically vindicated and ready for academic publication.
 
-**Why under-tested:** The MR Truth Labels overall rater-agreement Fleiss κ=0.906 (T45-4) was on the 4-label base set (T, F, I, DT). The DefT-vs-DT specific discrimination has not been isolated.
+**Why under-tested:** The MR Truth Labels overall rater-agreement Fleiss κ=0.906 (T45-4) was on the 4-label base set (T, F, I, MI). The DefT-vs-MI specific discrimination has not been isolated.
 
 **Pre-reg sketch:**
-- Corpus: 30 claim-statements deliberately constructed to be *candidate DefT* (12), *candidate DT* (12), *clearly other-label* (6 distractors). Construction follows the canonical-ruling examples; pre-registered before rater exposure.
+- Corpus: 30 claim-statements deliberately constructed to be *candidate DefT* (12), *candidate MI* (12), *clearly other-label* (6 distractors). Construction follows the canonical-ruling examples; pre-registered before rater exposure.
 - Raters: 3 raters trained on the canonical-ruling document; each labels the 30 stimuli.
-- Primary metric: **Fleiss κ on the DefT-vs-DT subset (24 items)**. H_PRIMARY: κ ≥ 0.5 (moderate).
+- Primary metric: **Fleiss κ on the DefT-vs-MI subset (24 items)**. H_PRIMARY: κ ≥ 0.5 (moderate).
 - Filter A: split corpus 60/40; κ stable.
 - Filter D: require ≥ 5 of each label appearing in rater outputs.
 
@@ -249,7 +249,7 @@ For honest selection-traceability per #69:
 3. **R49-3 — Mendi BLE Phase 3 STIM3** — rejected: hardware-dependent, requires Mendi reconnection in good working order; previous Path-B work documented complications.
 4. **R49-4 — Mood Amp safety predictive model on existing literature** — rejected: would require constructing an animal-trial database from scratch (high agent-time, low return per session).
 5. **R49-5 — Mycelial GM-Node Architecture network-topology test** — rejected: the GM-Node mechanism is implicit in T49-7 (the cross-corpus generalization captures the consequential question).
-6. **R49-6 — Quantum-classical hybrid non-local correlations beyond classical neuroscience** — rejected as **already addressed** by qc26 GHZ-5 + queued D1 (4-spinor DT-witness) on IBM Quantum HW.
+6. **R49-6 — Quantum-classical hybrid non-local correlations beyond classical neuroscience** — rejected as **already addressed** by qc26 GHZ-5 + queued D1 (4-spinor MI-witness) on IBM Quantum HW.
 7. **R49-7 — "True but Moot" detractor invalidation empirics** — rejected: this is a *rhetorical* claim about detractor reasoning, not a measurable empirical claim; better-suited to the queued PASS_48_SMARTEST_INVALID_TI_SIGMA_DETRACTOR_RESPONSE paper than to a holdout-blind test.
 8. **R49-8 — Substrate-vs-operational-logic principle empirics** — rejected: the principle is a category-distinction, not a predictive claim; no holdout-blind test maps cleanly. Better-suited to the queued PASS_48_SUBSTRATE_VS_OPERATIONAL_LOGIC_LAYERING paper.
 
@@ -263,7 +263,7 @@ Pass-49 batch recommendation, prioritized by **(consequence × least-tested) / c
 - T49-1 (AA discriminative validity) — zero-cost, foundational confirm/disconfirm.
 - T49-2 (TJ reliability) — zero-cost, foundational measurement test.
 - T49-5 (Lazy-Binary frequency) — zero-cost, broad-applicability test of the most-deployed principle.
-- T49-6 (DefT vs DT discrimination) — zero-cost, validates a major canonization.
+- T49-6 (DefT vs MI discrimination) — zero-cost, validates a major canonization.
 
 **Wave 2 (low-cost, mixed dependencies):**
 - T49-3 (Asymmetric Performance benchmark) — $0-30 LLM cost; high publication-portfolio leverage.

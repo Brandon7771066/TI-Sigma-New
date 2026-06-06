@@ -92,7 +92,7 @@ All prior canonical-grounding analysis from B16 (Verisyn + BOK + DC + Eightfold 
 | New asset archived | `papers/visual_assets/CCC_CENTRAL_COSMIC_CONSCIOUSNESS_CHATGPT_PRIMARY_2026-05-26.png` (1.62 MB) |
 | Total visual artifacts in corpus | 3 (B16 historical + B17 secondary + B18 canonical-primary; total ~5.3 MB) |
 | Canonical principle count | 67 HELD (no change) |
-| MR Truth Labels canonical base | 5 HELD {T, F, I, DT, NA} |
+| MR Truth Labels canonical base | 5 HELD {T, F, I, MI, NA} |
 | Cluster delta | +1 → ≥412 (tiering-protocol-establishment third-order precedent counts as cluster-contribution per first-of-kind precedent) |
 | Honest #69 disclosures | 3 |
 | Brandon-blocked OPEN | 11 HELD (no new blockers; CCC-1 explicit-candidate-canonical-framing remains the only artifact-related blocker) |

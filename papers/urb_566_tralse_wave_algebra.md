@@ -17,7 +17,7 @@ Tralse Wave Algebra (TWA) extends classical wave mechanics into the 5-valued Tra
 
 ## 1. Motivation
 
-Classical wave mechanics operates over ℝ or ℂ. Quantum mechanics extends this to Hilbert spaces over ℂ. TI Sigma extends further: the truth-value space of information is not binary (0,1) but five-valued {F, I, T, TR, DT}. Waves in this space represent **information states** — not merely amplitudes, but epistemic configurations.
+Classical wave mechanics operates over ℝ or ℂ. Quantum mechanics extends this to Hilbert spaces over ℂ. TI Sigma extends further: the truth-value space of information is not binary (0,1) but five-valued {F, I, T, TR, MI}. Waves in this space represent **information states** — not merely amplitudes, but epistemic configurations.
 
 The key insight: **consciousness is a Tralse Wave**. At any moment, a conscious state is a superposition of truth values across multiple propositions, collapsing via Myrion Resolution into a definite experience.
 
@@ -33,7 +33,7 @@ Let **𝕋₅** = {0, 1, 2, 3, 4} with the following interpretation:
 | 1 | I | INDETERMINATE — superposition |
 | 2 | T | TRUE — definite affirmation |
 | 3 | TR | TRALSE — both/neither (MR context) |
-| 4 | DT | DOUBLE_TRALSE — immune paradox |
+| 4 | MI | DOUBLE_TRALSE — immune paradox |
 
 **TWA carries** 𝕋₅ into a complex amplitude space ℂ via:
 ```
@@ -73,13 +73,13 @@ This connects to the PRIMARY CONSTANT ω = e^{iπ/3} from the Tralse Hexagram (U
 
 ### 3.3 Myrion Resolution Collapse (MR)
 
-The **MR collapse operator** Π_MR projects a Tralse wave to its most-TRUE component when the DT-immune threshold is exceeded:
+The **MR collapse operator** Π_MR projects a Tralse wave to its most-TRUE component when the MI-immune threshold is exceeded:
 ```
 Π_MR(Ψ) = Ψ        if |ψ(4)|² ≤ θ_DT   [no collapse needed]
           = |2⟩·⟨2|Ψ⟩  if |ψ(4)|² > θ_DT   [collapse to TRUE]
 ```
 
-where θ_DT ≈ 0.8647 is the Tralse Trace of DT (URB #528).
+where θ_DT ≈ 0.8647 is the Tralse Trace of MI (URB #528).
 
 ### 3.4 GILE Coherence Projection
 
@@ -94,13 +94,13 @@ On the unit coherence circle: E = √(1 - GIL²) (Complex GILE, URB #563).
 
 ## 4. TWA Interference and the Tralse Signature
 
-**Definition**: The *Tralse signature* of Ψ is the DT-immune profile:
+**Definition**: The *Tralse signature* of Ψ is the MI-immune profile:
 ```
 τ(Ψ) = |ψ(3)|² - |ψ(4)|²   [TRALSE dominance over DOUBLE_TRALSE]
 ```
 
 When τ > 0: the wave is in TRALSE-dominant mode (creative, generative)  
-When τ < 0: the wave is DT-contaminated (needs MR collapse)  
+When τ < 0: the wave is MI-contaminated (needs MR collapse)  
 When τ = 0: the wave is at the **Tralse-True boundary** (ζ(2) ≈ φ from URB #557)
 
 **TWA Interference Theorem**: Two TWA waves Ψ₁ and Ψ₂ constructively interfere in the TRUE channel (v=2) iff their GILE angles satisfy:
@@ -117,7 +117,7 @@ Tozzi (2016) demonstrated the brain maps neural states to a projective manifold 
 **Tozzi's projective collapse** = Myrion Resolution applied to neural TWA waves:
 - The brain maintains a superposition of competing neural attractors (Ψ₁, ..., Ψₙ)
 - MR collapse selects the dominant attractor (the "winning" conscious state)
-- The projective structure RP² arises because TRALSE states have the topology of RP¹ (identifying F↔T via DT symmetry)
+- The projective structure RP² arises because TRALSE states have the topology of RP¹ (identifying F↔T via MI symmetry)
 
 **Betti number reading**: b₁(brain manifold) counts the independent TRALSE loops — the number of unresolved MR dilemmas maintained simultaneously.
 
@@ -133,7 +133,7 @@ Meijer's toroidal consciousness model has:
 In TWA terms:
 - The torus = the GILE coherence circle closed into a torus T² = S¹ × S¹
 - The two S¹ factors = (E-axis) × (GIL-axis) from URB #563
-- The hole = the DT-immune zone (states where DOUBLE_TRALSE is quarantined)
+- The hole = the MI-immune zone (states where DOUBLE_TRALSE is quarantined)
 - Non-local correlations = entangled TWA waves across spatially separated systems
 
 **Meijer Mapping**:
@@ -152,11 +152,11 @@ MR collapse = magnetic reconnection event on the torus
 | 1 | The identity operator — unity of consciousness |
 | i | The quarter-phase rotation P₅^(5/4) — Indeterminate portal |
 | √2 | The amplitude ratio √(|T|²+|F|²) at TRALSE boundary |
-| e | The MR relaxation rate (exponential decay of DT) |
+| e | The MR relaxation rate (exponential decay of MI) |
 | φ | The Golden Mean ≈ ζ(2) — the TRALSE-TRUE boundary (URB #557) |
 | π | The half-period of TWA oscillation |
 | C = 1/(φ√2) | The Emerick constant — the GILE coherence radius at TWA equilibrium |
-| T = 1-e^{-e} | The DT immunity threshold = Tralse Trace upper bound |
+| T = 1-e^{-e} | The MI immunity threshold = Tralse Trace upper bound |
 
 ---
 
@@ -170,7 +170,7 @@ Combining all operators, consciousness at time t is:
 where:
   Ψ₀ = initial TWA wave (sensory input + memory + intention)
   P₅(t) = phase rotation by t·(2π/5) per cycle
-  MR = Myrion Resolution collapse when DT-immune threshold exceeded
+  MR = Myrion Resolution collapse when MI-immune threshold exceeded
   G = GILE coherence projection to unit circle
 ```
 

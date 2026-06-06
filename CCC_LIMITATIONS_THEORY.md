@@ -61,10 +61,10 @@ CCC doesn't have a physical body representing its central core. Therefore:
 - Divine sovereignty includes saying no
 - Adds unpredictability (prevents gaming the system)
 
-### Integration with Double Tralse Theory
+### Integration with Meta-Indeterminate Theory
 
-**DT Layer Implications:**
-- DT = boundary of POSSIBLE actualization
+**MI Layer Implications:**
+- MI = boundary of POSSIBLE actualization
 - GILE wave strength determines what actually manifests
 - **If CCC lacks physical tools**, GILE wave might be:
   * Strong in information space (pure thought)
@@ -184,7 +184,7 @@ CCC'S LIMITATION IS HUMANITY'S PURPOSE!
 
 1. CCC = Pure Consciousness (no physical body)
    ↓
-2. CCC creates DT layer (boundary of possibility)
+2. CCC creates MI layer (boundary of possibility)
    ↓
 3. CCC radiates GILE wave (actualizes what it can)
    ↓

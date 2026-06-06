@@ -203,7 +203,7 @@ TI Sigma predicts that Tralse brain states should show:
 | **Reduced limbic-cortical coherence** | Amygdala and vmPFC are simultaneously active but uncoupled | DCM: near-zero effective connectivity between vmPFC and amygdala |
 | **High prediction error dwell time** | Extended periods of unresolved prediction error signals (no Bayesian update occurring) | FRN/N200 ERP amplitude elevated for sustained periods |
 | **Alpha desynchronization without gamma synchronization** | Alpha drops (attention activated) but gamma doesn't rise (no coherent representation formed) | EEG time-frequency analysis |
-| **DT risk signal** | When D2 > 0.65, the system enters Double Tralse — neither truth-pole nor false-pole — with maximum neural entropy | Shannon entropy of BOLD signal elevated in DMN |
+| **MI risk signal** | When D2 > 0.65, the system enters Meta-Indeterminate — neither truth-pole nor false-pole — with maximum neural entropy | Shannon entropy of BOLD signal elevated in DMN |
 
 ### 4.3 How This Extends FEP
 

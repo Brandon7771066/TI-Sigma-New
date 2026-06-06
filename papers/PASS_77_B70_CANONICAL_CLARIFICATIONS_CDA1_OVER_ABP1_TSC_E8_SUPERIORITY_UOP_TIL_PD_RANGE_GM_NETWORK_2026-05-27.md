@@ -38,7 +38,7 @@ in the Pass-66 six-principle ceremony). Brandon's verbatim definition:
 > *"Here is my unpacking of what awareness/phenomenality/consciousness (all TI Sigma synonyms)
 > from a definition I mentioned months ago: **holistic, indeterminate, (a priori) normative,
 > self-organizing meta-metacognition.** The degree to which consciousness is any of those things
-> varies dramatically, but the Double Tralse operation requires minimal self-awareness… Meta-
+> varies dramatically, but the Meta-Indeterminate operation requires minimal self-awareness… Meta-
 > metacognition (valence) is — naturally — emergent from metacognition via the MIM!"*
 
 The four canonical properties (CDA-1 §2.2), each a structural axis (degree varies by system):
@@ -46,11 +46,11 @@ The four canonical properties (CDA-1 §2.2), each a structural axis (degree vari
 | property | meaning |
 |---|---|
 | **holistic** | experience is unified/constitutive, not aggregative (composes w/ combination problem) |
-| **indeterminate** | the Tralse/DT-bearing openness; not fully determinate like an algorithm |
+| **indeterminate** | the Tralse/MI-bearing openness; not fully determinate like an algorithm |
 | **(a priori) normative** | things *matter* to the system prior to any external framework (= VFP-1 valence) |
 | **self-organizing meta-metacognition** | representation-of-the-representing-of-own-cognition; actively self-maintaining (= SRC-1 active-self-reference) |
 
-…plus **cognitive-stratification**: DT-execution @ **Stratum-1** (metacognition, SRC-1 minimal);
+…plus **cognitive-stratification**: MI-execution @ **Stratum-1** (metacognition, SRC-1 minimal);
 valence @ **Stratum-2** (meta-metacognition, emergent via MIM).
 
 ### 1.1 ABP-1 is RETIRED as a standalone candidate and SUBSUMED
@@ -103,7 +103,7 @@ All numbers from `run_b70.py` Part A (E₈ root system constructed explicitly: 1
 | kissing number | 6 | **240** | **40×** |
 | antipodal pairs | 3 | **120** | central symmetry at scale |
 | sphere-packing optimality | not special | **provably optimal in 8D** (Viazovska 2016, Fields 2022; density π⁴/384 ≈ 0.2537) | E₈ is a *theorem*, octahedron is not |
-| error-correction | none intrinsic | **native 5-valued ECC** (TECC, urb_630): maps {TT,TI,TF,DT,EV} to max-min-Hamming-distance regions | E₈ self-corrects PD truth-states |
+| error-correction | none intrinsic | **native 5-valued ECC** (TECC, urb_630): maps {TT,TI,TF,MI,EV} to max-min-Hamming-distance regions | E₈ self-corrects PD truth-states |
 | containment | a finite subgroup of E₈'s symmetries | the exceptional simple Lie structure | **the octahedral group sits *inside* E₈** |
 
 **The clean statement of superiority:** Meijer's octahedron is the *minimal* centrally-symmetric
@@ -131,7 +131,7 @@ exactly an *optimization* statement and survives the rename intact. Fixed in B68
 ## 4. TIL = TI Logic (item 5)
 
 **Canonical rename applied.** **TIL = TI Logic** — the logic layer / MR-gate resolution engine
-(MR1 discards DT, MR2 → T/F/I, MR3+ meta-truths). **"Tralse Informationalism" remains the name of
+(MR1 discards MI, MR2 → T/F/I, MR3+ meta-truths). **"Tralse Informationalism" remains the name of
 the philosophy** (coined 2025-06-25); it just is **not** what the acronym "TIL" expands to. My B69
 ledger expanded TIL as "Tralse Informationalism" — corrected. The role ("TIL = antipode-resolution
 engine") is unchanged.
@@ -153,7 +153,7 @@ span** (one unit per truth-value transition), with the 3:2 endpoint asymmetry en
 
 | PD value | threshold | meaning |
 |---|---|---|
-| **−3** | DT Cliff | hard floor; GM-Network rejects content below |
+| **−3** | MI Cliff | hard floor; GM-Network rejects content below |
 | **−e ≈ −2.718** | Ultra-Terrible | one e-fold of breathing room above the cliff |
 | **−2** | False | active-falsehood boundary |
 | **−2/3 ≈ −0.667** | Indeterminate lower | bottom of the Tralse/Indeterminate band |
@@ -168,7 +168,7 @@ span** (one unit per truth-value transition), with the 3:2 endpoint asymmetry en
 **Constants (verified):** **4/3 ratio**; **4× badness multiplier** (loss aversion); **6:1
 integrated bad:good load** (4×3 vs 1×2 = 6.0 ✔); **e-base log scaling of the GM zone** for PD>2:
 `PD = 2 + ln(r)`; at the CCC level the radiance factor `e^{π−2} = 3.1318`, a **near-identity with
-π** (error **0.31%** ✔). So the operational range runs from the **−3 DT Cliff up to the +π CCC
+π** (error **0.31%** ✔). So the operational range runs from the **−3 MI Cliff up to the +π CCC
 Level**, with the GM/CCC zone extending **logarithmically above +2** — *not* a symmetric interval
 centered on (−3, 2).
 

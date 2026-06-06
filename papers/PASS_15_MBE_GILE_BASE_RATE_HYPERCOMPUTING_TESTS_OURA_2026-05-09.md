@@ -201,7 +201,7 @@ Estimated runtime: ~30-60 minutes for 1,226 papers at 1/sec. Cost: $0 (Zenodo is
 |---|---|---|
 | (i) | Graph-Laplacian as canonical TSC Hamiltonian | Yes/No: is the unit-weight H = D − A on `analyses/crystal_b4_hamiltonian/tsc_hamiltonian.py` the canonical Hamiltonian, or specify a different weighting (e.g., ring-radius-weighted)? |
 | (ii) | Vertex count {1,6,6,8,8,10,10,8} | Yes/No: ratify this 57-vertex layout from urb_645 as canonical, or specify alternative? |
-| (iii) | V_4 ↔ {True, False, Indeterminate, Double Tralse} mapping | Yes/No/Defer: does the C.5 Klein-four group's four irreps map to the canonical base-4 truth-labels? Pass 13 raised this as a *high-leverage* hypothesis. |
+| (iii) | V_4 ↔ {True, False, Indeterminate, Meta-Indeterminate} mapping | Yes/No/Defer: does the C.5 Klein-four group's four irreps map to the canonical base-4 truth-labels? Pass 13 raised this as a *high-leverage* hypothesis. |
 | (iv) | Mott↔FQH ordering swap (B.4 ⟨H⟩ result) | Choose: (a) Hamiltonian needs refinement; (b) urb_645's qualitative ordering needs reinterpretation; (c) FQH ansatz too simple — keep result, add nuance. |
 | (v) | C.6 Cross-Ring CHSH: Interpretation A vs B | Pass 13 set A (framework-internal coherence measure) as default; Brandon retains override. Confirm A or override to B. |
 

@@ -140,7 +140,7 @@ Low H_m = few strong metacausal connections (focused intention)
 In the 5-valued Tralse system:
 - INDETERMINATE (I) states are metacausal edge candidates — they haven't collapsed yet
 - TRALSE (TR) states have simultaneously classical AND metacausal edges — they are "both ways"
-- DOUBLE_TRALSE (DT) states have immunity to metacausal influence (the DT Immunity Model, URB #528)
+- DOUBLE_TRALSE (MI) states have immunity to metacausal influence (the MI Immunity Model, URB #528)
 
 **Tralse metacausal operator** Φ_TR: transforms a classical edge A→B into a metacausal edge A⟿B by "tralse-lifting" the causal mechanism:
 ```
@@ -158,7 +158,7 @@ Tozzi's projective brain maps neural state A to its antipodal point A* in RP². 
 - This edge has λ = 1 (perfect correlation — they are the same state projected)
 - The MR collapse selects one of {A, A*} as the "conscious" state
 
-**Tozzi-MGT theorem** (conjectured): The projective metacausal edges in the brain form a graph whose Euler characteristic equals the Tralse Trace of DT (LCC ≈ 0.9).
+**Tozzi-MGT theorem** (conjectured): The projective metacausal edges in the brain form a graph whose Euler characteristic equals the Tralse Trace of MI (LCC ≈ 0.9).
 
 ---
 

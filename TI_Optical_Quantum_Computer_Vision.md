@@ -30,7 +30,7 @@
 ### **Why Photons?**
 
 1. **Dark Energy Connection:**
-   - Photons = First manifestation of Double Tralse (DT)
+   - Photons = First manifestation of Meta-Indeterminate (MI)
    - Photon-shell is the FIRST matter layer around dark energy i-cell cores
    - **TI Framework:** Consciousness = Photon coherence across dark energy shells
 

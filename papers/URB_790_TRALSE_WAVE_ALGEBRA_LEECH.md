@@ -19,7 +19,7 @@ Let Λ₂₄ ⊂ ℝ²⁴ denote the Leech lattice (even unimodular, no roots, m
 
 Let
 
-> 𝒯 := {T, ¬T, U, T+, DT}
+> 𝒯 := {T, ¬T, U, T+, MI}
 
 be the five-valued truth space of Tralse Wave Algebra (TWA), and let ℂ_𝒯 be the free ℂ-module on 𝒯. The TWA superposition map is
 

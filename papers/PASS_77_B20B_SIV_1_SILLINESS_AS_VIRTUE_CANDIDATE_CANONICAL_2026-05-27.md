@@ -34,7 +34,7 @@ Plus the directive-explicit *"We really need an article on 'silliness as a virtu
 
 **C2 — Tension-dissolution via acceptance (NOT denial):** *Silliness operates by accepting circumstance as-it-is and choosing a light stance toward it, NOT by denying or repressing the circumstance. Tension-dissolution is achieved by refusing-to-grant-the-tension-its-own-gravitational-pull; the underlying reality is acknowledged unchanged but the gravitational-pull is rejected. This distinguishes virtuous silliness from avoidance-coping or denial: virtuous silliness sees the difficulty clearly AND chooses light-stance; avoidance-coping refuses to see the difficulty.*
 
-**C3 — Meaning-extension into the overlooked:** *Silliness perceives meaning in the mundane, ordinary, overlooked, foolish-appearing, or low-status. Where serious-mode perception filters meaning to high-status-meaning-tokens (achievement / status / recognition / institutional-validation), silliness expands the meaning-aperture to include the everyday and the absurd. This composes with NEU-1 canonical (negative-end-understanding-completes-the-loop): silliness is a positive-loop-closure of the over-restriction-of-meaning-to-status-tokens DT-state.*
+**C3 — Meaning-extension into the overlooked:** *Silliness perceives meaning in the mundane, ordinary, overlooked, foolish-appearing, or low-status. Where serious-mode perception filters meaning to high-status-meaning-tokens (achievement / status / recognition / institutional-validation), silliness expands the meaning-aperture to include the everyday and the absurd. This composes with NEU-1 canonical (negative-end-understanding-completes-the-loop): silliness is a positive-loop-closure of the over-restriction-of-meaning-to-status-tokens MI-state.*
 
 **C4 — Genuine-self over fear-of-appearing-foolish:** *Silliness involves choosing genuine self-expression even when that genuine-self appears foolish to others. This is NOT performance-of-foolishness-for-attention (which is its inverse — performed-foolishness is a status-strategy not a virtue). Virtuous silliness presupposes a self that genuinely IS silly in some respect and chooses honest-display-of-that-self over costume-of-seriousness-to-avoid-judgment. Composes with #69 (over-skepticism = over-performance-of-seriousness = discipline-failure equal to uncritical-acceptance / unguarded-silliness).*
 
@@ -72,7 +72,7 @@ SIV-1's tension-dissolution mechanism composes with the Stoic tradition's distin
 
 Serious-mode perception tends to filter meaning to high-status-meaning-tokens: career advancement, institutional recognition, intellectual achievement, spiritual milestones. Silliness expands the meaning-aperture: a sponge can love making krabby patties; an octopus can play clarinet badly; a starfish can have profound dignity in his low-information-processing way; a snail can be a beloved family member.
 
-This meaning-extension is structurally important because so much of actual-lived-life consists of mundane and ordinary moments. A worldview that locates meaning only in high-status tokens leaves most of life unmeaningful. A worldview that includes silliness as a meaning-vehicle finds the unrecognized texture of daily experience meaningful. This is composable with NEU-1 canonical: silliness is one positive-loop-closure of the over-restriction-of-meaning DT-state.
+This meaning-extension is structurally important because so much of actual-lived-life consists of mundane and ordinary moments. A worldview that locates meaning only in high-status tokens leaves most of life unmeaningful. A worldview that includes silliness as a meaning-vehicle finds the unrecognized texture of daily experience meaningful. This is composable with NEU-1 canonical: silliness is one positive-loop-closure of the over-restriction-of-meaning MI-state.
 
 The meaning-extension thesis also explains why genuinely-silly people often report higher subjective well-being than the cultural-default predicts: they have more meaning-tokens available because their aperture is wider.
 
@@ -121,7 +121,7 @@ All 5 falsifiers are scoped for Pass-77-B21+ execution if Brandon ratifies SIV-1
 - **GTT-1 (canonical)** — SIV-1-C1 generalizes GTT-1's non-cancellation principle to silliness-axis; SIV-1 IS a worked-example of GTT-1's structural-claim
 - **#69 ASYMMETRIC (canonical)** — SIV-1-C4 explicitly composes; over-seriousness = over-performance-of-discipline-failure-symmetric-to-uncritical-silliness
 - **VFP-1 (canonical)** — SIV-1's emotional-register is functional-not-epiphenomenal; valence-of-silliness has real consequences in C2/C3 mechanisms
-- **NEU-1 (canonical)** — SIV-1-C3 is a positive-loop-closure of over-restriction-of-meaning DT-state
+- **NEU-1 (canonical)** — SIV-1-C3 is a positive-loop-closure of over-restriction-of-meaning MI-state
 - **UDT-1 (canonical)** — Universal Default of Tralseness composes with SIV-1's refusal-to-grant-grim-heaviness-its-default-status
 - **BIO-93 (canonical)** — work-as-mission-via-loving-the-work is silliness-compatible (krabby-patty-craft analogy)
 - **BIO-94 (companion paper)** — Brandon's lived-experience-anchor-case

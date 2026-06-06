@@ -162,7 +162,7 @@ These tests require only a computer, a timer, and a validated questionnaire. The
 ### T1-MR-1 — Myrion Resolution Speed Predicts Outcome Quality
 
 **Source URBs:** #565, #658  
-**Prediction:** The number of deliberation cycles before reaching a stable decision (proxy for MR iterations) predicts outcome quality with an inverted-U function: too few cycles (DT) or too many (stuck in MR1 loop) produce worse outcomes than the optimal 2-3 cycles (MR2-Resolved).  
+**Prediction:** The number of deliberation cycles before reaching a stable decision (proxy for MR iterations) predicts outcome quality with an inverted-U function: too few cycles (MI) or too many (stuck in MR1 loop) produce worse outcomes than the optimal 2-3 cycles (MR2-Resolved).  
 **Measurement:** Protocol analysis of decision-making recordings. Count revision cycles. Correlate with outcome quality rating.  
 **Falsification:** Monotonic relationship (more cycles = always better or always worse).
 

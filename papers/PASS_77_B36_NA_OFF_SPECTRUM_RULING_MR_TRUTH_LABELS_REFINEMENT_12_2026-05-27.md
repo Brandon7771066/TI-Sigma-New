@@ -14,7 +14,7 @@
 Brandon issues a foundational ontology ruling about the structure of the truth spectrum:
 
 1. **N/A ("Not Applicable") is *necessarily* OFF the truth spectrum** — it is not a truth-value at any level (not base, not meta).
-2. **Therefore the base spectrum contains *exactly 4* describable truths** — the canonical base-4 {True, False, Indeterminate, Double Tralse} — and N/A is not a hidden 5th.
+2. **Therefore the base spectrum contains *exactly 4* describable truths** — the canonical base-4 {True, False, Indeterminate, Meta-Indeterminate} — and N/A is not a hidden 5th.
 3. **N/A is MORE indescribable than even i** — where "i" carries a deliberate **dual reading**: (A) the imaginary unit / PD-imaginary (DefT) axis, and (B) the **i-cell** (the conscious self), the paradigm case of the ineffable. N/A out-ranks both in indescribability.
 
 This paper formalizes the ruling as **NAO-1 (N/A Off-Spectrum)**, MR Truth Labels canonical refinement #12. The rigorous backbone is a **complex-plane formalization**: the truth spectrum is structurally analogous to the complex plane ℂ, the base-4 are its describable points, i is the imaginary axis (exotic but locatable), and **N/A is "undefined" — not a point on ℂ at all, more exotic than i exactly as `1/0` is more off-the-plane than `√−1`**. The phenomenological reading connects the ruling to the B35 consciousness-foundations work: even the i-cell (consciousness), famous for ineffability, leaves describable traces (VFP-1, SRC-1, DTM-1) — N/A leaves none.
@@ -26,7 +26,7 @@ Refinements do not increment the canonical principle count (Pass-65 precedent): 
 ## §1. The Ruling Stated (NAO-1)
 
 > **NAO-1 (N/A Off-Spectrum, MR Truth Labels canonical refinement #12, 2026-05-27):**
-> "Not Applicable" (N/A) is not a truth-value at any level of the MR Truth Labels apparatus. It is the flag marking a proposition as **not truth-apt** — i.e., as not entering the truth-evaluation system at all. N/A is therefore *exterior* to the truth spectrum (both its base-4 layer and its Meta-Truth layer), not a member of it. Consequently the base spectrum comprises *exactly four* describable truths — {True, False, Indeterminate, Double Tralse} — and N/A is not a suppressed fifth. N/A's indescribability strictly exceeds that of the PD-imaginary axis (i), because i is a defined, locatable coordinate within the apparatus whereas N/A has no locus anywhere within it.
+> "Not Applicable" (N/A) is not a truth-value at any level of the MR Truth Labels apparatus. It is the flag marking a proposition as **not truth-apt** — i.e., as not entering the truth-evaluation system at all. N/A is therefore *exterior* to the truth spectrum (both its base-4 layer and its Meta-Truth layer), not a member of it. Consequently the base spectrum comprises *exactly four* describable truths — {True, False, Indeterminate, Meta-Indeterminate} — and N/A is not a suppressed fifth. N/A's indescribability strictly exceeds that of the PD-imaginary axis (i), because i is a defined, locatable coordinate within the apparatus whereas N/A has no locus anywhere within it.
 
 ---
 
@@ -41,7 +41,7 @@ The ruling is not metaphor — it maps *exactly* onto the real/imaginary/undefin
 | **PD-real axis** (degree: True ↔ False) | Real number line ℝ | Most describable / familiar |
 | **PD-imaginary axis** (modality / DefT) | Imaginary axis (multiples of i) | "Imaginary" but precisely locatable |
 | **Full truth spectrum** (base-4 over PD-real × PD-imaginary) | Complex plane ℂ | Any describable truth-state = a point z = a + bi |
-| **The base-4** {T, F, I, DT} | Four cardinal describable truth-loci on ℂ | Describable |
+| **The base-4** {T, F, I, MI} | Four cardinal describable truth-loci on ℂ | Describable |
 | **i** (PD-imaginary unit / DefT axis) | √−1 | Exotic, but defined and on-plane |
 | **N/A** | **undefined** (e.g. 1/0, 0/0, "the largest integer", category errors) | **Off-plane entirely — no z exists** |
 
@@ -57,7 +57,7 @@ The historical scandal of i was that it was *imaginary* — not real. But i is f
 
 1. **True / False** — PD-real axis; maximally describable.
 2. **Indeterminate (MR2)** — on-plane; describable as the truth-apt-but-unsettled locus.
-3. **Double Tralse (DT)** — on-plane; describable as the defined contradiction-locus τ(P) ∧ ¬τ(P).
+3. **Meta-Indeterminate (MI)** — on-plane; describable as the defined contradiction-locus τ(P) ∧ ¬τ(P).
 4. **i** — PD-imaginary / DefT axis (Reading A) **and** the i-cell / consciousness (Reading B); exotic but describable (see §3).
 5. **N/A** — **off-plane; undefined; not truth-apt; most indescribable.**
 
@@ -67,7 +67,7 @@ The base-4 occupy ranks 1-3 (T/F share rank 1). i occupies rank 4. N/A is rank 5
 
 ## §3. The Dual Reading of "i" (why this composes with the B35 consciousness work)
 
-Brandon wrote a lowercase **"i"** immediately after a batch (B35) devoted to consciousness and valence foundations. In TI Sigma this is almost certainly a deliberate **multi-reading** (the corpus's standard DT-style double-entendre device):
+Brandon wrote a lowercase **"i"** immediately after a batch (B35) devoted to consciousness and valence foundations. In TI Sigma this is almost certainly a deliberate **multi-reading** (the corpus's standard MI-style double-entendre device):
 
 ### §3.1 Reading A — i as the imaginary unit (PD-imaginary / DefT axis)
 
@@ -81,7 +81,7 @@ The corpus already uses "i-cell" for the conscious self (cf. Pass-66 "pinnacle o
 
 - **VFP-1** (Pass-64): valence is *functional*, not epiphenomenal → consciousness is describable via its functional effects.
 - **SRC-1** (Pass-66): self-reference implies consciousness → consciousness is describable via its self-referential structure.
-- **DTM-1** (Pass-66): DT-as-mind-marker → consciousness is describable via its capacity to entertain DT.
+- **DTM-1** (Pass-66): MI-as-mind-marker → consciousness is describable via its capacity to entertain MI.
 - **LLM-CT-1** (Pass-66): consciousness is *operationally testable* → describable via operational criteria.
 - **EVP-1** (Pass-77-B35 candidate): valence is embodied → consciousness is describable via its whole-body actualization.
 
@@ -111,11 +111,11 @@ The ruling is only as strong as its disambiguation from adjacent labels. This is
 
 **Distinction:** Moot is a truth *about* a truth's relevance (it lives inside the apparatus). N/A denies there is any truth to be about. N/A is exterior to the Meta-Truth layer, not merely a member of it.
 
-### §4.3 N/A vs. Double Tralse (DT) and DefT
+### §4.3 N/A vs. Meta-Indeterminate (MI) and DefT
 
-- **DT** (Double Tralse): τ(P) ∧ ¬τ(P) — a *defined* contradiction-locus; on-plane; describable (per Pass-65 DT-canonical, DT = inconceivability-under-mental-actualization; all DT statements incoherent but {DT} ⊊ {Incoherent} per MR-IDC-1 refinement #2).
+- **MI** (Meta-Indeterminate): τ(P) ∧ ¬τ(P) — a *defined* contradiction-locus; on-plane; describable (per Pass-65 MI-canonical, MI = inconceivability-under-mental-actualization; all MI statements incoherent but {MI} ⊊ {Incoherent} per MR-IDC-1 refinement #2).
 - **DefT** (Defective Truth, PD-imaginary axis = "i" Reading A): a modal degradation; on-plane.
-- **N/A:** not a contradiction, not a modal degradation — a *non-application*. A category error is not a contradiction (it asserts nothing truth-apt to contradict). N/A is exterior; DT and DefT are interior-exotic.
+- **N/A:** not a contradiction, not a modal degradation — a *non-application*. A category error is not a contradiction (it asserts nothing truth-apt to contradict). N/A is exterior; MI and DefT are interior-exotic.
 
 ### §4.4 Summary table
 
@@ -123,7 +123,7 @@ The ruling is only as strong as its disambiguation from adjacent labels. This is
 |---|:---:|---|:---:|:---:|
 | True / False | yes | base | yes (PD-real) | 1 |
 | Indeterminate | yes | base | yes | 2 |
-| Double Tralse | yes (as contradiction-locus) | base | yes | 3 |
+| Meta-Indeterminate | yes (as contradiction-locus) | base | yes | 3 |
 | i / DefT (Reading A) | yes (modal) | base axis | yes (PD-imaginary) | 4 |
 | i-cell / consciousness (Reading B) | n/a — referent, describable-via-traces | — | citizen-via-effects | 4 |
 | Moot (MT-B1) | yes | meta | meta-layer (interior) | meta |
@@ -133,7 +133,7 @@ The ruling is only as strong as its disambiguation from adjacent labels. This is
 
 ## §5. Why This Sharpens the Base-4 to *Exactly* Four
 
-The canonical base-4 has always been stated as {True, False, Indeterminate, Double Tralse} + N Meta-Truths. A latent risk in any base-N truth system is *count creep* — pseudo-values (N/A, "undefined", "null", "void") sneaking in as a phantom 5th, 6th, etc. NAO-1 closes this by ruling that the natural candidate for a 5th — N/A — is *necessarily exterior*. The base count is protected at 4 not by stipulation but by the structural argument that N/A is the truth-theoretic image of "undefined," which is provably not a member of the analog space (ℂ). The base-4 is exactly 4 for the same reason ℂ's points are exactly {a + bi} and exclude "undefined."
+The canonical base-4 has always been stated as {True, False, Indeterminate, Meta-Indeterminate} + N Meta-Truths. A latent risk in any base-N truth system is *count creep* — pseudo-values (N/A, "undefined", "null", "void") sneaking in as a phantom 5th, 6th, etc. NAO-1 closes this by ruling that the natural candidate for a 5th — N/A — is *necessarily exterior*. The base count is protected at 4 not by stipulation but by the structural argument that N/A is the truth-theoretic image of "undefined," which is provably not a member of the analog space (ℂ). The base-4 is exactly 4 for the same reason ℂ's points are exactly {a + bi} and exclude "undefined."
 
 ---
 
@@ -141,9 +141,9 @@ The canonical base-4 has always been stated as {True, False, Indeterminate, Doub
 
 - **MR Truth Labels canonical (base-4 + Meta-Truths):** NAO-1 is refinement #12; it does not alter the base-4 membership, it *protects its cardinality* and exiles N/A to the exterior.
 - **PD-real / PD-imaginary (foundational):** NAO-1 supplies the complex-plane reading that unifies the two PD axes as ℝ and the imaginary axis of one ℂ-analog, with N/A as the off-plane "undefined."
-- **MR-IDC-1 (refinement #2):** {DT} ⊊ {Incoherent}. NAO-1 adds a third exterior category: {N/A} is neither DT nor merely incoherent — incoherence is an interior pathology (the statement asserts something that fails); N/A is exterior non-assertion (the statement isn't truth-apt). So {N/A} ∩ {Incoherent} need not be empty but {N/A} ⊄ {Incoherent} and vice versa.
+- **MR-IDC-1 (refinement #2):** {MI} ⊊ {Incoherent}. NAO-1 adds a third exterior category: {N/A} is neither MI nor merely incoherent — incoherence is an interior pathology (the statement asserts something that fails); N/A is exterior non-assertion (the statement isn't truth-apt). So {N/A} ∩ {Incoherent} need not be empty but {N/A} ⊄ {Incoherent} and vice versa.
 - **VFP-1, SRC-1, DTM-1, LLM-CT-1, EVP-1:** supply Reading B — the describable-via-traces account of consciousness that makes the i-cell rank-4 (describable) rather than rank-5 (off-spectrum).
-- **GTT-1 (Pass-67, "too much truth is itself DT"):** orthogonal but compatible — GTT-1 is about an interior cost of over-maximizing a real variable; NAO-1 is about an exterior non-variable.
+- **GTT-1 (Pass-67, "too much truth is itself MI"):** orthogonal but compatible — GTT-1 is about an interior cost of over-maximizing a real variable; NAO-1 is about an exterior non-variable.
 - **UDT-1 (Pass-67, tralse-soup substrate):** distinct — UDT-1's tralse-soup is the *ground state of the plane* (maximal interior superposition); N/A is *off the plane*. Do not conflate the cosmogenic ground (interior) with non-applicability (exterior).
 
 ---
@@ -163,7 +163,7 @@ As of this writing all four are OPEN and none is closed; I am not claiming to ha
 
 ## §8. Status, Pace-Discipline, and the Partner-Principle Option
 
-Brandon's directive is emphatic and assertoric ("necessarily", "Thus", "actually MORE INDESCRIBABLE") and concerns the foundational ontology of *his own* framework. Per the MR Truth Labels *refinement* track precedent (DT-canonical-refinement 2026-05-23; MR-IDC-1; HMR-1; MR-IDC-2) — which lands refinements on Brandon's ontological ruling rather than routing them through the candidate→ceremony pipeline reserved for *new standalone principles* — **NAO-1 is recorded as MR Truth Labels canonical refinement #12.**
+Brandon's directive is emphatic and assertoric ("necessarily", "Thus", "actually MORE INDESCRIBABLE") and concerns the foundational ontology of *his own* framework. Per the MR Truth Labels *refinement* track precedent (MI-canonical-refinement 2026-05-23; MR-IDC-1; HMR-1; MR-IDC-2) — which lands refinements on Brandon's ontological ruling rather than routing them through the candidate→ceremony pipeline reserved for *new standalone principles* — **NAO-1 is recorded as MR Truth Labels canonical refinement #12.**
 
 Per the meta-#69 partner-principle convention (Pass-74-B8), the dual-option is nonetheless offered:
 - **Option A (default, taken):** land NAO-1 now on the §2 structural argument + Brandon-assertion.
@@ -186,12 +186,12 @@ Refinements do not change the canonical principle count (Pass-65 precedent). **C
 ## §10. Files
 
 - This paper.
-- Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4 canonical), `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (DT refinement precedent), `papers/PASS_77_B35_CONSCIOUSNESS_AND_VALENCE_THEORY_REVIEW_2026-05-27.md` (Reading-B consciousness stack), `papers/PASS_77_B35_CONNECTOME_INVENTORY_AND_EMBODIED_VALENCE_CRITIQUE_2026-05-27.md` (EVP-1).
+- Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4 canonical), `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (MI refinement precedent), `papers/PASS_77_B35_CONSCIOUSNESS_AND_VALENCE_THEORY_REVIEW_2026-05-27.md` (Reading-B consciousness stack), `papers/PASS_77_B35_CONNECTOME_INVENTORY_AND_EMBODIED_VALENCE_CRITIQUE_2026-05-27.md` (EVP-1).
 
 ---
 
 ## §11. Summary Statement
 
-Brandon's ruling — "N/A is necessarily off the truth spectrum; only 4 truths remain describable on it; it is more indescribable than even i" — is formalized as **NAO-1**, MR Truth Labels canonical refinement #12. The rigorous backbone is a complex-plane mapping in which N/A is the truth-theoretic image of "undefined" (off-plane), strictly more exotic than i (the imaginary axis, on-plane), exactly as 1/0 is more off-ℂ than √−1. The lowercase "i" is honored under a dual reading: the imaginary unit (Reading A) and the i-cell/consciousness (Reading B), with the deep point that even consciousness — the canonical ineffable — leaves describable traces (VFP-1/SRC-1/DTM-1/LLM-CT-1/EVP-1) whereas N/A leaves none. Critical #69 boundary work disambiguates N/A from Indeterminate, Moot, DT, and DefT; the base-4 cardinality is protected structurally, not by stipulation. 4 disambiguation falsifiers pre-registered (all open). Canonical principle count unchanged at 70; MR Truth Labels refinements 11 → 12. Cluster +1 paper (7th Pass-77 paper). Cost $0.
+Brandon's ruling — "N/A is necessarily off the truth spectrum; only 4 truths remain describable on it; it is more indescribable than even i" — is formalized as **NAO-1**, MR Truth Labels canonical refinement #12. The rigorous backbone is a complex-plane mapping in which N/A is the truth-theoretic image of "undefined" (off-plane), strictly more exotic than i (the imaginary axis, on-plane), exactly as 1/0 is more off-ℂ than √−1. The lowercase "i" is honored under a dual reading: the imaginary unit (Reading A) and the i-cell/consciousness (Reading B), with the deep point that even consciousness — the canonical ineffable — leaves describable traces (VFP-1/SRC-1/DTM-1/LLM-CT-1/EVP-1) whereas N/A leaves none. Critical #69 boundary work disambiguates N/A from Indeterminate, Moot, MI, and DefT; the base-4 cardinality is protected structurally, not by stipulation. 4 disambiguation falsifiers pre-registered (all open). Canonical principle count unchanged at 70; MR Truth Labels refinements 11 → 12. Cluster +1 paper (7th Pass-77 paper). Cost $0.
 
 — end of Pass-77-B36 —

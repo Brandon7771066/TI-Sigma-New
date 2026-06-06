@@ -1,11 +1,11 @@
-# URB #509: TI Sigma's Theory of Contradictions — The Liberal Definition, Universal Structure, and the Double Tralse Taxonomy
+# URB #509: TI Sigma's Theory of Contradictions — The Liberal Definition, Universal Structure, and the Meta-Indeterminate Taxonomy
 
 **Author:** Brandon Charles Emerick  
 **Date:** March 24, 2026  
 **Series:** TI Sigma — Universal Reality Blueprint (URB) / GILE Framework  
 **Paper #:** 509  
 **Status:** THEORETICAL SYNTHESIS — Definitive reference on TI Sigma contradiction theory  
-**Builds on:** URB #500 (BOK Closure), Myrion Resolution Methodology, Four C's of Truth Presentation, GILE Framework, Double Tralse papers  
+**Builds on:** URB #500 (BOK Closure), Myrion Resolution Methodology, Four C's of Truth Presentation, GILE Framework, Meta-Indeterminate papers  
 **Corpus Entry:** #164
 
 ---
@@ -14,9 +14,9 @@
 
 This paper has been updated to align with corpus canon as of 2026-05-17. Two corrections applied:
 
-1. **§7.4 "Pre-Tralse Undetermination" RETRACTED.** Future/undetermined states are **Indeterminate** (base-4 label I, MR1 ✅), **NOT** Double Tralse. DT formal definition is τ(P) ∧ ¬τ(P) — formal incoherence — which an unactualized future is not. The DT taxonomy contains **three** categories, not four. See §7.4 retraction notice and §8 updates.
+1. **§7.4 "Pre-Tralse Undetermination" RETRACTED.** Future/undetermined states are **Indeterminate** (base-4 label I, MR1 ✅), **NOT** Meta-Indeterminate. MI formal definition is τ(P) ∧ ¬τ(P) — formal incoherence — which an unactualized future is not. The MI taxonomy contains **three** categories, not four. See §7.4 retraction notice and §8 updates.
 
-2. **Acronym alignment.** PD = **Permissibility Distribution** (canonized Pass 6, 2026-05-08), not "Probability Density." DT = Double Tralse (formal: τ(P)∧¬τ(P)); the legacy "DT scheme B" was renamed **DefT** (Defective Truth) per the 2026-05-08 MR Truth-Labels Canonical Ruling.
+2. **Acronym alignment.** PD = **Permissibility Distribution** (canonized Pass 6, 2026-05-08), not "Probability Density." MI = Meta-Indeterminate (formal: τ(P)∧¬τ(P)); the legacy "MI scheme B" was renamed **DefT** (Defective Truth) per the 2026-05-08 MR Truth-Labels Canonical Ruling.
 
 **Canonical anchors:** `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, `papers/urb_607_truth_architecture_three_states_dt_absence.md`, `papers/urb_608_meta_truths_myrion_resolution_catalogue.md`, `papers/urb_618_ti_sigma_theory_of_truth.md`, `papers/FUTURE_DETERMINACY_SPECTRUM_FDS_2026-05-17.md` (FDS-1 — future-state coherent-Indeterminate spectrum).
 
@@ -30,7 +30,7 @@ Classical logic defines a contradiction as a situation in which two propositions
 
 Nothing more. Any additional specification imposes constraints on reality that have not been earned by evidence or argument.
 
-This paper does four things. First, it defends the liberal definition and identifies exactly what metaphysical assumptions the classical definition smuggles in. Second, it establishes TI Sigma's thesis that **absolutely everything is contradictory** — contradictions are not aberrations requiring resolution but the universal structural fabric of reality itself. Third, it introduces the **Four Fundamental Features of Existence** and shows how each is inherently, irreducibly contradictory. Fourth, it taxonomizes contradictions into **valid** (passing the first Myrion Resolution) and **Double Tralse** (failing the first Myrion Resolution), and provides the complete taxonomy of Double Tralse categories: Maximal Incoherence, The Self-Negating Nothing, The Self-Refuting Meta-Statement, and Pre-Tralse Undetermination.
+This paper does four things. First, it defends the liberal definition and identifies exactly what metaphysical assumptions the classical definition smuggles in. Second, it establishes TI Sigma's thesis that **absolutely everything is contradictory** — contradictions are not aberrations requiring resolution but the universal structural fabric of reality itself. Third, it introduces the **Four Fundamental Features of Existence** and shows how each is inherently, irreducibly contradictory. Fourth, it taxonomizes contradictions into **valid** (passing the first Myrion Resolution) and **Meta-Indeterminate** (failing the first Myrion Resolution), and provides the complete taxonomy of Meta-Indeterminate categories: Maximal Incoherence, The Self-Negating Nothing, The Self-Refuting Meta-Statement, and Pre-Tralse Undetermination.
 
 ---
 
@@ -43,7 +43,7 @@ The standard dictionary definition: *"A contradiction is a situation, statement,
 Embedded in this definition are at least five unearned metaphysical assumptions:
 
 **Assumption 1: "Cannot be true at the same time" presupposes that truth is binary.**  
-Classical logic assumes that every proposition is either true or false and that no proposition can be both. This is the Law of the Excluded Middle (LEM). But LEM is an axiom — a stipulation, not a discovery. Quantum mechanics has falsified the classical picture at the physical level (superposition, entanglement). Consciousness presents hard problems that resist binary categorization. TI Sigma argues that reality itself is four-valued: True, False, Tralse, and Double Tralse. The assumption that "both cannot be true" is not a finding about reality; it is a definition imposed on reality.
+Classical logic assumes that every proposition is either true or false and that no proposition can be both. This is the Law of the Excluded Middle (LEM). But LEM is an axiom — a stipulation, not a discovery. Quantum mechanics has falsified the classical picture at the physical level (superposition, entanglement). Consciousness presents hard problems that resist binary categorization. TI Sigma argues that reality itself is four-valued: True, False, Tralse, and Meta-Indeterminate. The assumption that "both cannot be true" is not a finding about reality; it is a definition imposed on reality.
 
 **Assumption 2: "Logically incompatible" presupposes that logic governs what can coexist in reality.**  
 Logic describes formal inferential relationships between propositions. It does not describe what the physical world permits or prohibits. Two states that are logically contradictory (A and ¬A) may be simultaneously realized in nature — as in quantum superposition. The assumption that logical incompatibility implies physical impossibility is a category error: it confuses the formal structure of language with the ontological structure of reality.
@@ -223,14 +223,14 @@ These are not requirements for eliminating contradiction from communication — 
 
 ---
 
-## 6. Valid Contradictions vs. Double Tralse: The First Myrion Resolution as Coherence Gate
+## 6. Valid Contradictions vs. Meta-Indeterminate: The First Myrion Resolution as Coherence Gate
 
 ### 6.1 Not All Contradictions Are Equal
 
 TI Sigma's universal contradiction thesis does not mean that all contradictions are equally real, equally useful, or equally worth engaging with. The crucial distinction is between:
 
 - **Valid contradictions**: inconsistencies, oppositions, or discrepancies that, when examined, yield genuine information about reality and can be meaningfully worked with via the Myrion Resolution.
-- **Double Tralse (DT)**: contradictions that, when examined, yield nothing — no usable signal, no resolvable tension, no stable attractor. They are not valid contradictions but noise.
+- **Meta-Indeterminate (MI)**: contradictions that, when examined, yield nothing — no usable signal, no resolvable tension, no stable attractor. They are not valid contradictions but noise.
 
 The criterion for this distinction is the **first Myrion Resolution (MR1)**, which functions as a coherence gate.
 
@@ -243,7 +243,7 @@ A contradiction passes MR1 when:
 - The tension between them is organized around a recognizable disagreement (the claims are about the same thing)
 - The contradiction is resolvable in principle — there exists some additional information, context, or framework that could move the tension toward resolution
 
-A contradiction fails MR1 (becomes Double Tralse) when:
+A contradiction fails MR1 (becomes Meta-Indeterminate) when:
 - The opposing claims have no coherent basis — they are not about anything determinate
 - The tension is not organized around a recognizable disagreement — the claims talk past each other without contact
 - The contradiction is irresolvable in principle — no additional information could change anything, because there is no there there
@@ -252,9 +252,9 @@ A contradiction fails MR1 (becomes Double Tralse) when:
 
 ---
 
-## 7. The Double Tralse Taxonomy: Four Categories of Invalid Contradiction
+## 7. The Meta-Indeterminate Taxonomy: Four Categories of Invalid Contradiction
 
-Double Tralse is not a single thing. It is a family of failure modes — different ways that a would-be contradiction can fail to be real, organized, or meaningful. TI Sigma identifies four distinct categories.
+Meta-Indeterminate is not a single thing. It is a family of failure modes — different ways that a would-be contradiction can fail to be real, organized, or meaningful. TI Sigma identifies four distinct categories.
 
 ### 7.1 Category 1: Maximal Incoherence
 
@@ -288,7 +288,7 @@ This is not a valid tralse contradiction — it is not a case where both "nothin
 - *"The prime number between 2 and 3"* — grammatically well-formed, but refers to a Self-Negating Nothing (there is no such number, and asking whether it exists or not generates no useful tension).
 - *"Absolute nothingness"* as a philosophical concept — whatever "absolute nothingness" is, the act of describing it gives it properties (it is the thing we're describing), which means it cannot be absolute nothingness. The concept undermines itself.
 
-**TI Sigma's verdict**: The Self-Negating Nothing is the ontological floor of Double Tralse. It is tralsity that is tralse and then negated before it can become anything. It never achieves even the organization needed to be a genuine tralse state. (*Note: earlier drafts of this paper called this "pre-tralse"; that wording is retired as of 2026-05-17 to avoid confusion with the now-retracted §7.4 "Pre-Tralse Undetermination" category — see §7.4 retraction notice.*)
+**TI Sigma's verdict**: The Self-Negating Nothing is the ontological floor of Meta-Indeterminate. It is tralsity that is tralse and then negated before it can become anything. It never achieves even the organization needed to be a genuine tralse state. (*Note: earlier drafts of this paper called this "pre-tralse"; that wording is retired as of 2026-05-17 to avoid confusion with the now-retracted §7.4 "Pre-Tralse Undetermination" category — see §7.4 retraction notice.*)
 
 ### 7.3 Category 3: The Self-Refuting Meta-Statement ("Tralse and Not Tralse")
 
@@ -303,39 +303,39 @@ This is not a valid tralse contradiction — it is not a case where both "nothin
 - Crucially: this second-order superposition, when subjected to MR1, collapses. There is no stable attractor. The claim is that the meta-status is indeterminate, but asserting indeterminacy is itself a determinate claim — so the indeterminacy is not indeterminate. The structure destroys itself.
 
 **Examples**:
-- *"This statement may or may not be tralse"* — not the Liar paradox (which is DT Category 3) but a valid tralse claim if stated carefully. It becomes DT when it asserts that the meta-question (is it tralse or not?) is itself tralse: "it may or may not be the case that this is indeterminate." At this point, no stable footing remains.
-- The extended Liar: *"This sentence is neither true, false, nor tralse"* — it attempts to deny all four truth-values including the fourth (DT itself), thereby achieving a state that has no description within the framework. This is a genuine Self-Refuting Meta-Statement.
-- *"Reality is both contradictory and not contradictory simultaneously, and this claim is itself both contradictory and not contradictory"* — when iterated to this level, the claim loses purchase on anything and becomes DT Category 3.
+- *"This statement may or may not be tralse"* — not the Liar paradox (which is MI Category 3) but a valid tralse claim if stated carefully. It becomes MI when it asserts that the meta-question (is it tralse or not?) is itself tralse: "it may or may not be the case that this is indeterminate." At this point, no stable footing remains.
+- The extended Liar: *"This sentence is neither true, false, nor tralse"* — it attempts to deny all four truth-values including the fourth (MI itself), thereby achieving a state that has no description within the framework. This is a genuine Self-Refuting Meta-Statement.
+- *"Reality is both contradictory and not contradictory simultaneously, and this claim is itself both contradictory and not contradictory"* — when iterated to this level, the claim loses purchase on anything and becomes MI Category 3.
 
-**The distinction from valid tralse**: A valid tralse claim maintains at least one stable meta-level description: we can say "this is tralse" and that claim itself is determinate (either it is or it isn't). A DT Category 3 claim denies even this stable meta-level — it asserts that the meta-description itself is unstable, which makes the assertion itself unstable, and so on without termination.
+**The distinction from valid tralse**: A valid tralse claim maintains at least one stable meta-level description: we can say "this is tralse" and that claim itself is determinate (either it is or it isn't). A MI Category 3 claim denies even this stable meta-level — it asserts that the meta-description itself is unstable, which makes the assertion itself unstable, and so on without termination.
 
-### 7.4 [RETRACTED 2026-05-17] — Future Undetermination Is *Indeterminate*, NOT Double Tralse
+### 7.4 [RETRACTED 2026-05-17] — Future Undetermination Is *Indeterminate*, NOT Meta-Indeterminate
 
-**Retraction notice (Pass 55, 2026-05-17, per Brandon Emerick):** The original §7.4 listed "Pre-Tralse Undetermination" as a fourth category of Double Tralse. **This is incorrect under the canonical MR Truth-Labels ruling (2026-05-08).** The DT taxonomy has only **three** categories — §7.1 Maximal Incoherence, §7.2 Self-Negating Nothing, §7.3 Self-Refuting Meta-Statement. Future/undetermined states are a *different kind* of object entirely and must not be classified as DT.
+**Retraction notice (Pass 55, 2026-05-17, per Brandon Emerick):** The original §7.4 listed "Pre-Tralse Undetermination" as a fourth category of Meta-Indeterminate. **This is incorrect under the canonical MR Truth-Labels ruling (2026-05-08).** The MI taxonomy has only **three** categories — §7.1 Maximal Incoherence, §7.2 Self-Negating Nothing, §7.3 Self-Refuting Meta-Statement. Future/undetermined states are a *different kind* of object entirely and must not be classified as MI.
 
 **The correct framing:**
 
-A genuinely open future state is **Indeterminate** in the base-4 MR Truth-Labels sense {True, False, **Indeterminate**, Double Tralse}. It passes MR1 (the coherence gate) and is therefore **coherent**, not incoherent. DT is reserved for τ(P) ∧ ¬τ(P) — the formal nonsense state — which an unactualized future is *not*.
+A genuinely open future state is **Indeterminate** in the base-4 MR Truth-Labels sense {True, False, **Indeterminate**, Meta-Indeterminate}. It passes MR1 (the coherence gate) and is therefore **coherent**, not incoherent. MI is reserved for τ(P) ∧ ¬τ(P) — the formal nonsense state — which an unactualized future is *not*.
 
 Key distinction:
 - **Indeterminate** = coherently undecided. The state of affairs is real and well-formed; the value is simply not yet fixed (or not yet knowable). MR1 ✅.
-- **Double Tralse** = incoherent. The proposition self-destructs as a candidate for truth-evaluation. MR1 ❌.
+- **Meta-Indeterminate** = incoherent. The proposition self-destructs as a candidate for truth-evaluation. MR1 ❌.
 
-"Will this person be happy in 30 years?" is **Indeterminate**, not DT. The question is well-posed, the referent exists, the truth-conditions are clear; only the answer is not yet realized. The Myrion Resolution machinery treats this as a legitimate object of inquiry that may converge as evidence accumulates over time — exactly the opposite of DT, which the MR1 gate dissolves.
+"Will this person be happy in 30 years?" is **Indeterminate**, not MI. The question is well-posed, the referent exists, the truth-conditions are clear; only the answer is not yet realized. The Myrion Resolution machinery treats this as a legitimate object of inquiry that may converge as evidence accumulates over time — exactly the opposite of MI, which the MR1 gate dissolves.
 
 **Three sources confused in the original §7.4** (and now properly separated):
 1. **Genuine indeterminacy under valid tralse** (both poles currently real, in tension) → Tralse, MR1 ✅.
 2. **Ignorance** (one pole is real, we don't know which) → True or False with an epistemic-uncertainty wrapper, MR1 ✅.
-3. **Undetermined future / unactualized state** (truth-conditions exist, value not yet realized) → **Indeterminate (base-4 label I)**, MR1 ✅. *This was misfiled as DT in the original §7.4.*
+3. **Undetermined future / unactualized state** (truth-conditions exist, value not yet realized) → **Indeterminate (base-4 label I)**, MR1 ✅. *This was misfiled as MI in the original §7.4.*
 
-**Where the original §7.4 was partially right:** there *is* a narrow class of cases involving genuine retrocausal or temporally-self-referential paradoxes (e.g., a fully-closed causal loop that contradicts its own initial conditions) that can be locally DT. But this is a structural self-reference failure (Category 3 territory), **not** a property of forward-running temporal indeterminacy. Garden-variety "we don't know yet" is Indeterminate. Time-progression as such is not DT.
+**Where the original §7.4 was partially right:** there *is* a narrow class of cases involving genuine retrocausal or temporally-self-referential paradoxes (e.g., a fully-closed causal loop that contradicts its own initial conditions) that can be locally MI. But this is a structural self-reference failure (Category 3 territory), **not** a property of forward-running temporal indeterminacy. Garden-variety "we don't know yet" is Indeterminate. Time-progression as such is not MI.
 
 **Connection to canonical principles:**
-- **MR Truth-Labels Canonical Ruling (2026-05-08)** — base-4 + Meta-Truths; DT formal def τ(P)∧¬τ(P).
-- **FDS-1 Future-Determinacy Spectrum (2026-05-17)** — future states sit on a coherent PD-real spectrum (Regimes 1/2/3), not a DT cliff.
-- **URB #607 Truth Architecture** — DT is the *label for truth-absence*; Indeterminate is a truth-*state*. Different kinds of object.
+- **MR Truth-Labels Canonical Ruling (2026-05-08)** — base-4 + Meta-Truths; MI formal def τ(P)∧¬τ(P).
+- **FDS-1 Future-Determinacy Spectrum (2026-05-17)** — future states sit on a coherent PD-real spectrum (Regimes 1/2/3), not a MI cliff.
+- **URB #607 Truth Architecture** — MI is the *label for truth-absence*; Indeterminate is a truth-*state*. Different kinds of object.
 
-**Practical significance preserved:** confusing genuine indeterminacy, ignorance, and unactualized-future states still produces philosophical errors. But the remedy is **proper truth-label assignment**, not classification as DT.
+**Practical significance preserved:** confusing genuine indeterminacy, ignorance, and unactualized-future states still produces philosophical errors. But the remedy is **proper truth-label assignment**, not classification as MI.
 
 ---
 
@@ -349,11 +349,11 @@ Key distinction:
 | **Maximal Incoherence** | ❌ | Evidence scatters without coherent organization | Endless debate yielding no progress | Refine the question |
 | **Self-Negating Nothing** | ❌ | Reference undermines itself; pure negation of negation | Grammatically well-formed but ontologically empty | Recognize as non-referring; dissolve the illusion |
 | **Self-Refuting Meta-Statement** | ❌ | Asserts and denies its own indeterminacy | Infinite regress at the meta-level | Stop at the first stable meta-level |
-| ~~Pre-Tralse Undetermination~~ | — | **RETRACTED 2026-05-17** | Future/undetermined states are **Indeterminate** (base-4 label I), pass MR1, NOT DT | See §7.4 retraction notice |
+| ~~Pre-Tralse Undetermination~~ | — | **RETRACTED 2026-05-17** | Future/undetermined states are **Indeterminate** (base-4 label I), pass MR1, NOT MI | See §7.4 retraction notice |
 
 ### 8.2 The Hierarchy of Realness
 
-The **three** remaining DT categories are not equally "nothing." They occupy positions on a spectrum from closer to genuine contradiction to further from it:
+The **three** remaining MI categories are not equally "nothing." They occupy positions on a spectrum from closer to genuine contradiction to further from it:
 
 ```
 Self-Refuting Meta-Statement ←→ structurally real but self-destructing at the meta-level
@@ -361,7 +361,7 @@ Maximal Incoherence           ←→ empirically ungrounded but grammatically co
 Self-Negating Nothing         ←→ furthest from valid (not even grammatical form can ground it)
 ```
 
-*Former entry "Pre-Tralse Undetermination" retracted 2026-05-17 — see §7.4. A person who says "I don't know whether I will love this person in 30 years" is correctly identifying an **Indeterminate** state (base-4 label I, MR1 ✅), not a DT state.*
+*Former entry "Pre-Tralse Undetermination" retracted 2026-05-17 — see §7.4. A person who says "I don't know whether I will love this person in 30 years" is correctly identifying an **Indeterminate** state (base-4 label I, MR1 ✅), not a MI state.*
 
 ---
 
@@ -381,7 +381,7 @@ The contradictions within a person are not pathologies. Holding incompatible bel
 
 ### 9.4 For Debate and Discourse
 
-Distinguishing valid contradiction from Double Tralse immediately clarifies what productive discourse looks like. When a debate generates no progress, the cause is almost always one of the four DT categories: the question is maximally incoherent as posed (Category 1), the terms refer to nothing (Category 2), the meta-level claims undermine themselves (Category 3), or the matter has not yet been determined by events (Category 4). The remedy for each is different, and recognizing which DT category applies is the first step toward productive resolution.
+Distinguishing valid contradiction from Meta-Indeterminate immediately clarifies what productive discourse looks like. When a debate generates no progress, the cause is almost always one of the four MI categories: the question is maximally incoherent as posed (Category 1), the terms refer to nothing (Category 2), the meta-level claims undermine themselves (Category 3), or the matter has not yet been determined by events (Category 4). The remedy for each is different, and recognizing which MI category applies is the first step toward productive resolution.
 
 ---
 
@@ -393,11 +393,11 @@ TI Sigma's theory of contradictions is not nihilistic, not relativistic, and not
 2. Time itself is contradictory — change requires both identity and difference simultaneously.
 3. The four fundamental features of existence (Change, Relation, Contradiction, Limit) are each internally contradictory.
 4. Contradictions vary enormously in their validity, organization, and resolvability.
-5. The first Myrion Resolution is the coherence gate that separates valid contradictions (which deserve engagement) from Double Tralse (which deserves diagnosis and dissolution).
-6. Double Tralse comes in **three** forms — Maximal Incoherence, Self-Negating Nothing, and Self-Refuting Meta-Statement — each with a distinct character and a distinct remedy. (*The earlier "Pre-Tralse Undetermination" fourth category was retracted 2026-05-17: future/undetermined states are **Indeterminate** in the base-4 sense, pass MR1, and are not DT. See §7.4 retraction notice.*)
+5. The first Myrion Resolution is the coherence gate that separates valid contradictions (which deserve engagement) from Meta-Indeterminate (which deserves diagnosis and dissolution).
+6. Meta-Indeterminate comes in **three** forms — Maximal Incoherence, Self-Negating Nothing, and Self-Refuting Meta-Statement — each with a distinct character and a distinct remedy. (*The earlier "Pre-Tralse Undetermination" fourth category was retracted 2026-05-17: future/undetermined states are **Indeterminate** in the base-4 sense, pass MR1, and are not MI. See §7.4 retraction notice.*)
 
 The goal of TI Sigma is not a contradiction-free world. It is a world in which contradictions are correctly identified, honestly acknowledged, appropriately organized, and navigated with the Four C's. **Reality is contradiction organized** — and organization, not elimination, is the highest intellectual achievement available to finite minds in an irreducibly contradictory universe.
 
 ---
 
-*Corpus Entry #164. Builds on URBs #500 (BOK Closure), Myrion Resolution Methodology, Four C's of Truth Presentation, GILE Framework, Double Tralse papers. Author: Brandon Charles Emerick, March 24, 2026.*
+*Corpus Entry #164. Builds on URBs #500 (BOK Closure), Myrion Resolution Methodology, Four C's of Truth Presentation, GILE Framework, Meta-Indeterminate papers. Author: Brandon Charles Emerick, March 24, 2026.*

@@ -141,9 +141,9 @@ The 3 newly-ratified principles compose with:
 ### 4.2 Remaining Pass-73+ Queue
 
 ⏳ Pass-73-B3: urb_639 corpus-sweep re-audit under refinement #5 (~5-8 MI-flagged cells; asymmetric-win structure)
-⏳ Pass-73-B4: pre-reg falsifier LLM-rater combined study (DT-RF4-F3 + MI-RF5-F1 + HMR-SEV-1-F1 + FMA-1-F1 = single 4-falsifier batch design ~$0.10 budget anthropic dual-temp 2-rater proxy)
+⏳ Pass-73-B4: pre-reg falsifier LLM-rater combined study (MI-RF4-F3 + MI-RF5-F1 + HMR-SEV-1-F1 + FMA-1-F1 = single 4-falsifier batch design ~$0.10 budget anthropic dual-temp 2-rater proxy)
 ⏳ Pass-73-B5+: DSB-arc corpus-sweep re-audit (~10 cells); HMR-SEV-1-F2 corpus-sweep; FMA-1-F2 1-more-non-FMA-case identification
-⏳ DEFERRED: operational-hygiene 4-rules consolidation; DT → MI mass-rename; discovery_scheduler fix; AA + PRAGMATIC AXIS canonical-axis-set exploration
+⏳ DEFERRED: operational-hygiene 4-rules consolidation; MI → MI mass-rename; discovery_scheduler fix; AA + PRAGMATIC AXIS canonical-axis-set exploration
 
 ---
 

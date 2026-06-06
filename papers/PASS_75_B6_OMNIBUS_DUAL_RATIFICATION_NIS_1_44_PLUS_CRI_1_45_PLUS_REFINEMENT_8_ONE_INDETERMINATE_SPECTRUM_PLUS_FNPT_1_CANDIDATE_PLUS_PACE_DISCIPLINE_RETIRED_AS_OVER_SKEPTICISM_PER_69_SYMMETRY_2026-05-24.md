@@ -36,7 +36,7 @@ This is Brandon's CORRECTION of the agent's pace-discipline-non-auto-ratificatio
 **Canonical principle count:** 43 → **44**.
 
 **Canonical definition (now in effect):**
-> **NIS-1 (Nothing-Impossible-to-Simulate-within-Minds, Pass-75-B6 ratified canonical #44):** Within a sufficiently-conscious mind, no content is intrinsically un-simulable. The space of simulable mental-content is unbounded by external coherence-criteria (DT/incoherence/extinguished-nonsense/contradiction-with-reality). Limits come from CONSCIOUSNESS-TIER (L1-L5 + CDA-1 #26) and RECEPTIVENESS-STATE (CRI-1 E1-E4) rather than content-properties. 4-component spec per B5 §3.2-3.3 + 11-canonical compositional anchor density per B5 §3.4 + 4 falsifiers F1-F4 OPEN.
+> **NIS-1 (Nothing-Impossible-to-Simulate-within-Minds, Pass-75-B6 ratified canonical #44):** Within a sufficiently-conscious mind, no content is intrinsically un-simulable. The space of simulable mental-content is unbounded by external coherence-criteria (MI/incoherence/extinguished-nonsense/contradiction-with-reality). Limits come from CONSCIOUSNESS-TIER (L1-L5 + CDA-1 #26) and RECEPTIVENESS-STATE (CRI-1 E1-E4) rather than content-properties. 4-component spec per B5 §3.2-3.3 + 11-canonical compositional anchor density per B5 §3.4 + 4 falsifiers F1-F4 OPEN.
 
 ### §2.2 CRI-1 RATIFIED CANONICAL #45
 

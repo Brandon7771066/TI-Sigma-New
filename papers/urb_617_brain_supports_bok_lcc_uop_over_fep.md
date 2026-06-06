@@ -127,7 +127,7 @@ TI Sigma's 5-valued truth system predicts that genuinely indeterminate propositi
 
 **Why TI Sigma's account is better:** The FEP bimodal posterior is still ONE posterior — a distribution that, at any moment, has a mean. But the neural data shows DISCRETE alternation — not a continuous distribution with varying mean. The brain isn't maintaining a probability distribution; it's switching between two distinct representational states. This is Tralse, not a Bayesian posterior. The Tralse state IS the bimodal attractor landscape, not a probability distribution over states.
 
-**Additionally:** The Myrion Resolution prediction is that, given sufficient processing time, the brain resolves multistable percepts — one interpretation wins. This is MR-1 (the DT screen eliminates the incoherent interpretation) applied to perception. Neuroimaging studies show that extended rivalry eventually leads to perceptual stabilization in many contexts (Long et al. 1992) — consistent with MR convergence.
+**Additionally:** The Myrion Resolution prediction is that, given sufficient processing time, the brain resolves multistable percepts — one interpretation wins. This is MR-1 (the MI screen eliminates the incoherent interpretation) applied to perception. Neuroimaging studies show that extended rivalry eventually leads to perceptual stabilization in many contexts (Long et al. 1992) — consistent with MR convergence.
 
 **Edge: TI Sigma.** FEP's bimodal posterior describes the phenomenology but mischaracterizes the state structure. Tralse correctly identifies the bistability as a genuinely two-state (not continuous-distribution) phenomenon.
 

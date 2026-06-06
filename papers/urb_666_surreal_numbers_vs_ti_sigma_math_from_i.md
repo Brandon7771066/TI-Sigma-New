@@ -127,7 +127,7 @@ This means Conway's construction, despite generating *all numbers*, generates th
 
 **Conway**: Total ordering. Every surreal x either x < y, x = y, or x > y for any other surreal y. This is beautiful but limits expressibility.
 
-**TI Sigma**: Partial ordering only. True and False are ordered (True > False). But Tralse, I-state, and Double-Tralse are **not comparable** to True, False, or each other in the same ordering — they are orthogonal dimensions. This is richer and more physically realistic: quantum states are not totally ordered either.
+**TI Sigma**: Partial ordering only. True and False are ordered (True > False). But Tralse, I-state, and Meta-Indeterminate are **not comparable** to True, False, or each other in the same ordering — they are orthogonal dimensions. This is richer and more physically realistic: quantum states are not totally ordered either.
 
 ### Dimension 3: Infinitesimals
 

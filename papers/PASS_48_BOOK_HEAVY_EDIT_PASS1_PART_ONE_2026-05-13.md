@@ -21,7 +21,7 @@
 
 **A — Voice inconsistency (most important problem in Part One).** Chapter 1 is written in academic register — careful, hedged, citation-aware. Chapter 2 switches abruptly to motivational/popularizer register — bold claims, "this is one of the most profound insights of TI", "consciousness gravity". The two voices clash; readers will feel whiplash. **Fix:** standardize Chapter 2 to Chapter 1's register OR (preferably for "Everyone" framing) standardize Chapter 1's openness to Chapter 2's accessibility — but consistently, not chapter-by-chapter.
 
-**B — Canonical-update integration is incomplete.** The book references "Canonical Update Note (May 2026)" at line 94 and Appendix E, but Chapter 1.2 still uses the older "four base truth labels" framing without explicit cross-reference to the **2026-05-08 canonical ruling** (`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`). Specifically: the DT/DefT rename (DT = Double Tralse exclusively; DefT = Defective Truth, formerly "DT scheme B") needs an explicit footnote in Chapter 1.2 to prevent reader confusion when they hit older corpus material that uses the legacy nomenclature.
+**B — Canonical-update integration is incomplete.** The book references "Canonical Update Note (May 2026)" at line 94 and Appendix E, but Chapter 1.2 still uses the older "four base truth labels" framing without explicit cross-reference to the **2026-05-08 canonical ruling** (`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`). Specifically: the MI/DefT rename (MI = Meta-Indeterminate exclusively; DefT = Defective Truth, formerly "MI scheme B") needs an explicit footnote in Chapter 1.2 to prevent reader confusion when they hit older corpus material that uses the legacy nomenclature.
 
 **C — GILE expansion in Chapter 2.** The "G" in the canonical TI Sigma corpus is **Goodness**, BUT Chapter 1.3 line 150 expands GILE as "Goodness, Intuition, Love, and Environment." Chapter 2 line 178+ confirms this expansion. There is **no internal inconsistency in Part One**, but earlier corpus material variably used "GILE = Goodness, Intuition, Love, Effort" or other expansions. **Fix:** add explicit footnote in Chapter 2 §2.1 noting the canonical 2026 expansion (G/I/L/E as currently presented) and pointing to Appendix E for cross-references.
 
@@ -58,12 +58,12 @@ For comparison: Daniel Kahneman's *Thinking, Fast and Slow* foundational section
 
 The following edits will be applied to `papers/TI_FOR_EVERYONE_COMPLETE_BOOK.md` in the same Pass-48 batch (see in-book edit log at end of book file). Edits are high-confidence — they fix factual or canonical-currency issues without revising arguments.
 
-### §2.1 Chapter 1.2 — Add canonical-update footnote on DT/DefT distinction
+### §2.1 Chapter 1.2 — Add canonical-update footnote on MI/DefT distinction
 
 **Location:** End of paragraph at line 142 (end of §1.2).
 **Edit type:** Insert footnote-style sentence.
-**Rationale:** Prevents reader confusion when they encounter older corpus material using legacy "DT scheme B" terminology.
-**New content:** "(Per the canonical ruling of 2026-05-08 — see Appendix E and `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` — *Double Tralse* refers exclusively to the structurally-incoherent base label defined here; *Defective Truth* (DefT) is the renamed concept formerly called 'DT scheme B' in earlier corpus material, and is treated separately in Appendix E.)"
+**Rationale:** Prevents reader confusion when they encounter older corpus material using legacy "MI scheme B" terminology.
+**New content:** "(Per the canonical ruling of 2026-05-08 — see Appendix E and `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` — *Meta-Indeterminate* refers exclusively to the structurally-incoherent base label defined here; *Defective Truth* (DefT) is the renamed concept formerly called 'MI scheme B' in earlier corpus material, and is treated separately in Appendix E.)"
 
 ### §2.2 Chapter 1.3 — Add Five-Axes Preview
 

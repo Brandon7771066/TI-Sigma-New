@@ -97,7 +97,7 @@ Each test has the same skeleton: **Claim → H1 → H0 → Protocol → Kill →
 
 ## §4 — TEST T45-4: MR Truth Labels Inter-Rater Reliability (Cohen's κ)
 
-**Claim being tested:** Pass-37 established canonical base-4 MR Truth Labels {True, False, Indeterminate, Double Tralse}. The claim that this 4-class scheme is **operationally usable** by trained raters — not just theoretically defined — is untested. If raters disagree wildly on which class a proposition belongs to, the scheme is theoretical-only.
+**Claim being tested:** Pass-37 established canonical base-4 MR Truth Labels {True, False, Indeterminate, Meta-Indeterminate}. The claim that this 4-class scheme is **operationally usable** by trained raters — not just theoretically defined — is untested. If raters disagree wildly on which class a proposition belongs to, the scheme is theoretical-only.
 
 **H1:** 3 raters (2 humans trained on `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` + 1 LLM with full ruling in context) classify 100 propositions drawn from the public corpus into the 4 classes with Fleiss' κ ≥ 0.6 (substantial agreement).
 

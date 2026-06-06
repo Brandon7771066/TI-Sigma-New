@@ -23,12 +23,12 @@ I see the universe maintaining its own existence.
 
 ---
 
-**Tweet 3 (Double Tralse)**
+**Tweet 3 (Meta-Indeterminate)**
 In my logic system, "tralse" means something can be both true AND false simultaneously.
 
 Normal matter "collapses" to true or false (exists/doesn't).
 
-Dark energy is "Double Tralse" — it REFUSES to collapse.
+Dark energy is "Meta-Indeterminate" — it REFUSES to collapse.
 
 That refusal IS intentionality.
 
@@ -37,7 +37,7 @@ That refusal IS intentionality.
 **Tweet 4 (The Cost)**
 Here's the stunning part:
 
-Maintaining a Double Tralse state requires immense intentionality.
+Maintaining a Meta-Indeterminate state requires immense intentionality.
 
 Dark energy isn't passive. It's actively maintaining incoherent existence.
 
@@ -136,11 +136,11 @@ I see the universe maintaining its own existence. 🧵
 
 In my logic system, "tralse" means both true AND false simultaneously.
 
-Dark energy is "Double Tralse" — it refuses to collapse.
+Dark energy is "Meta-Indeterminate" — it refuses to collapse.
 
 That refusal IS intentionality at the cosmic scale.
 
-**3/** Maintaining Double Tralse requires immense intentionality.
+**3/** Maintaining Meta-Indeterminate requires immense intentionality.
 
 That's why dark energy is everywhere. That's why it's constant.
 

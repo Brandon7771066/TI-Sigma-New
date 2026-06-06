@@ -157,10 +157,10 @@ It is **empirically supported** by four independent thresholds (quantum concurre
 
 The two ranges share the same direction of asymmetry, are coupled by a clean derivation formula (§5), and together provide the framework's complete quantitative scale architecture.
 
-**A third range is implied** for Double Tralse:
-- **DT range = (−10, −3)** (everything below the moral saturation cliff, with no upper bound on intensity of pathological content, capped at PD-scale numerical limit)
+**A third range is implied** for Meta-Indeterminate:
+- **MI range = (−10, −3)** (everything below the moral saturation cliff, with no upper bound on intensity of pathological content, capped at PD-scale numerical limit)
 
-This three-range hierarchy (Indeterminate ⊂ Permissibility ⊂ DT-extension) **mirrors the framework's three-level truth-architecture** (Level 0: T/F → Level 1: Tralse/Indeterminate → Level 2: DT) from URB #677.
+This three-range hierarchy (Indeterminate ⊂ Permissibility ⊂ MI-extension) **mirrors the framework's three-level truth-architecture** (Level 0: T/F → Level 1: Tralse/Indeterminate → Level 2: MI) from URB #677.
 
 ---
 

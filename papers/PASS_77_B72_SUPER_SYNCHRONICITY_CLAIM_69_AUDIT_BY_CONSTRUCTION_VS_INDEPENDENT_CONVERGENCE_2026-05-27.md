@@ -17,7 +17,7 @@ worse, that they are 'nonsensical.'"*
 ASYMMETRIC-Standards #69 states plainly: **over-skepticism is a discipline failure equal to
 uncritical acceptance.** That cuts *both ways* here. My job is neither to cheer the synchronicity
 framing nor to reflexively debunk it — it is to **find out which parts are real.** The corpus has a
-direct precedent: at Pass-63 the Fleiss-κ "DT-is-near-neutral" result was flagged by Brandon as a
+direct precedent: at Pass-63 the Fleiss-κ "MI-is-near-neutral" result was flagged by Brandon as a
 likely **algorithmic artifact**, I rebuilt it with competent raters, and Brandon's skepticism was
 **VINDICATED**. The same discipline applies now — except this time the over-claim risk runs the
 other direction, so the brutal-honesty obligation falls on *me*.

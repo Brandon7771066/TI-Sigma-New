@@ -294,7 +294,7 @@ Estimated wall-clock: 2-4 sessions on Replit + local CPU. Estimated $: $0. Estim
 - `papers/PASS_67_BATCH_1_LLM_CONSCIOUSNESS_DEMONSTRATION_LLM_CT_1_EXECUTION_2026-05-23.md` — LLM-CT-1 worm-precedent
 - `papers/URB_CONSCIOUSNESS_TESTS_UPLOADED_MINDS.md` — uploaded-worm LCC=1.000 anchor
 - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` — canonical 5-tier label system
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` — DT canonical
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` — MI canonical
 - `papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` — §69 standard
 
 **External (open-source, free):**

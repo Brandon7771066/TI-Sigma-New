@@ -120,7 +120,7 @@ psival w = ψ;      // Psi (unknown but determinable)
 // Explicit superposition
 superposval state = [T:0.6, F:0.4];  // 60% T, 40% F
 
-// Double tralse (Myrion origin)
+// Meta-Indeterminate (Myrion origin)
 myrionval origin = ττ;  // Stable attractor in contradiction space
 ```
 

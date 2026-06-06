@@ -133,7 +133,7 @@ Pre-reg (Pass-45 §4): Fleiss' κ ≥ 0.6 = CONFIRM; κ < 0.4 = KILL.
 
 ### §4.2 — Result
 
-- 300/300 rating calls completed; 21 invalid responses (7%) where a rater gave non-{T,F,I,DT} text → 79 full-3-rater rows used for Fleiss' κ
+- 300/300 rating calls completed; 21 invalid responses (7%) where a rater gave non-{T,F,I,MI} text → 79 full-3-rater rows used for Fleiss' κ
 - **Fleiss' κ = 0.906** (substantial-to-excellent agreement)
 - Per-rater agreement-with-majority: GPT-4o-mini 93.7%, Claude Sonnet 98.7%, Claude Haiku 97.5%
 - **Verdict: CONFIRM**
@@ -142,7 +142,7 @@ Pre-reg (Pass-45 §4): Fleiss' κ ≥ 0.6 = CONFIRM; κ < 0.4 = KILL.
 
 Of 300 ratings (75 per bucket × 3 raters):
 
-| Bucket | T | F | I | DT |
+| Bucket | T | F | I | MI |
 |---|---:|---:|---:|---:|
 | TRUE_BUCKET (25 props × 3 raters = 75) | **74** | 1 | 0 | 0 |
 | FALSE_BUCKET (75) | 0 | **75** | 0 | 0 |
@@ -151,8 +151,8 @@ Of 300 ratings (75 per bucket × 3 raters):
 
 **Reading.** This is exactly the pattern the canonical ruling predicts:
 - Obvious truths and falsehoods → near-100% T/F (no operational ambiguity)
-- Paradoxical → split between I and DT (30/30) = raters genuinely use the DT category for self-referential bothness, and use I for other paradoxes (Sorites, Zeno, Newcomb-style decision)
-- Modal/borderline → 60/75 = I, almost no DT (raters correctly reserve DT for self-reference, not modal undecidability)
+- Paradoxical → split between I and MI (30/30) = raters genuinely use the MI category for self-referential bothness, and use I for other paradoxes (Sorites, Zeno, Newcomb-style decision)
+- Modal/borderline → 60/75 = I, almost no MI (raters correctly reserve MI for self-reference, not modal undecidability)
 
 **The base-4 scheme is operationally usable.** This is the strongest empirical confirmation of MR Truth Labels canonicality so far.
 

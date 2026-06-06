@@ -89,7 +89,7 @@ TI INTERPRETATION:
 
 ### 3.1 Complete Dimensional Structure
 
-$$24 = 4_{\text{GILE}} \times 3_{\text{Jeff Time}} \times 2_{\text{TT/DT}}$$
+$$24 = 4_{\text{GILE}} \times 3_{\text{Jeff Time}} \times 2_{\text{TT/MI}}$$
 
 Or alternatively:
 

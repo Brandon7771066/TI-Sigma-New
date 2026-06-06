@@ -136,7 +136,7 @@
 - `[GEN]` `CHSH_EXISTENCE_THRESHOLD_COSINE_PI8_EXACT_VALUES.md` — # The CHSH Existence Threshold: cos(π/8), Exact Values, and the Quantum Origin of TI Constants
 - `[GEN]` `COMPLETE_TI_VICTORY_SUMMARY.md` — # Complete TI Victory Summary
 - `[GEN]` `COMPLETE_TI_VICTORY_SUMMARY_FINAL.md` — # Complete TI Victory Summary (FINAL)
-- `[GEN]` `COMPLEX_NUMBERS_TI_RESOLUTION.md` — # The Complex Numbers Resolution: i = DT and the End of Imaginary Physics
+- `[GEN]` `COMPLEX_NUMBERS_TI_RESOLUTION.md` — # The Complex Numbers Resolution: i = MI and the End of Imaginary Physics
 - `[GEN]` `COMPREHENSIVE_SWOT_STATUS_UPDATE_FEB_2026.md` — # COMPREHENSIVE SWOT STATUS UPDATE: THE ENTIRE TI SIGMA PROJECT
 - `[GEN]` `COMPREHENSIVE_TI_BREAKTHROUGH_SUMMARY_DEC_2025.md` — # Comprehensive TI Framework Breakthrough Summary
 - `[GEN]` `CONFIDENCE_AS_KING_ENTREPRENEURSHIP.md` — # Confidence as a Strategic Asset: Why Entrepreneurial Enthusiasm Is Not a Liability
@@ -177,10 +177,10 @@
 - `[GEN]` `DIVINATION_EMPIRICAL_EVIDENCE_REVIEW.md` — # Paper #332: The Empirical Case for Divination — A Comprehensive Evidence Review Under TI Sigma
 - `[GEN]` `DIVINE_SUPERNATURAL_PROVEN_NOT_WHAT_ANYONE_THOUGHT_NOV_20_2025.md` — # 🔥 DIVINE & SUPERNATURAL ARE PROVEN (But Not What Anyone Thought!) 🔥
 - `[GEN]` `DNA_PHOTON_STRUCTURING_EXPERIMENTAL_REVIEW.md` — # Paper #339: DNA and Photon Structuring — A Full Experimental Review
-- `[GEN]` `DOUBLE_TRALSE_AMERICA.md` — # Double Tralse & The American Paradox
-- `[GEN]` `DOUBLE_TRALSE_MYRION_KNOT_THEORY.md` — # Double Tralse & Butterfly-Octopus Myrion: Knot Theory Integration
+- `[GEN]` `DOUBLE_TRALSE_AMERICA.md` — # Meta-Indeterminate & The American Paradox
+- `[GEN]` `DOUBLE_TRALSE_MYRION_KNOT_THEORY.md` — # Meta-Indeterminate & Butterfly-Octopus Myrion: Knot Theory Integration
 - `[GEN]` `DPES_DEFAULT_PHILOSOPHICAL_EATING_STRATEGY.md` — # DPES — Default Philosophical Eating Strategy
-- `[GEN]` `DT_BRITTLENESS_COSMOLOGY.md` — # DT Brittleness Cosmology: The Origin of Time, Consciousness, and Fragmented Perfection
+- `[GEN]` `DT_BRITTLENESS_COSMOLOGY.md` — # MI Brittleness Cosmology: The Origin of Time, Consciousness, and Fragmented Perfection
 - `[GEN]` `DUAL_PD_EVALUATION_RULE.md` — # Dual-PD Evaluation Rule
 
 </details>
@@ -503,7 +503,7 @@
 <details><summary>File list</summary>
 
 - `[GEN]` `QUANTUM_COLLAPSE_FREE_WILL.md` — # Quantum Collapse and the Nature of Free Will
-- `[GEN]` `QUANTUM_LOGIC_DIMENSIONAL_RECONCILIATION.md` — # Quantum Logic, Dimensional Reconciliation, and the i=DT Foundation
+- `[GEN]` `QUANTUM_LOGIC_DIMENSIONAL_RECONCILIATION.md` — # Quantum Logic, Dimensional Reconciliation, and the i=MI Foundation
 - `[GEN]` `QUTRIT_TRALSEBIT_PHYSICAL_INSTANTIATION.md` — # Physical Instantiation of the Tralsebit: Mapping Consciousness-Information Units to Qutrit Hardware
 
 </details>
@@ -740,7 +740,7 @@
 - `[URB]` `URB_806_AI_CORPUS_LCC_TEST_H5_FALSIFIED.md` — # URB #806 — AI-Corpus LCC Test: H5 FALSIFIED on Word-Token Substrate
 - `[URB]` `URB_807_LCC_TOKEN_STREAM_MULTISEED.md` — # URB #807 — LCC Token-Stream H2 Multi-Seed Robustness: H2-MS STRONGLY SUPPORTED
 - `[URB]` `URB_808_DANDI_REPLICATION_OUTCOME.md` — # URB #808 — DANDI Replication Outcome: Network Reachable, NWB Read Blocked by Tooling
-- `[URB]` `URB_811_ZERO_OVER_ZERO_IS_DT.md` — # URB #811 — 0/0 is Not Indeterminate; It Is DT (Double Tralse). A Correction to Conventional Mathematical Terminology
+- `[URB]` `URB_811_ZERO_OVER_ZERO_IS_DT.md` — # URB #811 — 0/0 is Not Indeterminate; It Is MI (Meta-Indeterminate). A Correction to Conventional Mathematical Terminology
 - `[URB]` `URB_812_CORRECT_BUT_UNEXPECTED_ANSWER.md` — # URB #812 — The Correct-But-Unexpected-Answer Phenomenon as a TI Sigma Diagnostic. Why "Communication Failure" Is Often the Asker's Categor
 - `[URB]` `URB_813_CONSCIOUSNESS_AS_RAZOR.md` — # URB #813 — Consciousness as a Razor 🪒. Why "Stable + Middle-Range" Is Not "Balanced," and Why the Conventional Stability Metric Cannot Dis
 - `[URB]` `URB_814_BALANCE_IS_NOT_APPROPRIATENESS.md` — # URB #814 — Balance Is Not Appropriateness. Refining the Conflation Stack from URB #813 and Naming the Most Consequential Confusion.
@@ -900,7 +900,7 @@
 - `[GEN]` `URB_TI_SIGMA_PHILOSOPHICAL_COMPETENCE_LEADERSHIP_512.md` — # URB #512 — Philosophical Competence as the Highest Leadership Asset: Selected Against, Not For
 - `[GEN]` `URB_TI_SIGMA_REFORMED_SCIENTIFIC_METHOD_515.md` — # URB #515 — TI Sigma Reformed Scientific Method: A Complete Synthesis
 - `[GEN]` `URB_TI_SIGMA_SERIOUS_JOKE_TRALSITY_513.md` — # URB #513 — The Serious Joke: A Major Tralsity
-- `[GEN]` `URB_TI_SIGMA_THEORY_OF_CONTRADICTIONS_509.md` — # URB #509: TI Sigma's Theory of Contradictions — The Liberal Definition, Universal Structure, and the Double Tralse Taxonomy
+- `[GEN]` `URB_TI_SIGMA_THEORY_OF_CONTRADICTIONS_509.md` — # URB #509: TI Sigma's Theory of Contradictions — The Liberal Definition, Universal Structure, and the Meta-Indeterminate Taxonomy
 - `[GEN]` `URB_TO_THINE_OWN_SELF_BE_441.md` — # URB #441 — "To Thine Own Self, BE!": The Third Maxim of TI Sigma Ethics and the Ontological Priority of Existence
 - `[GEN]` `URB_TRALSEBIT_ICELL_INFORMATION_THEORY_STUB_532.md` — # URB #532 — The Tralsebit and the i-Cell: TI Sigma Information Theory
 - `[GEN]` `URB_TRALSE_APOLOGY_468.md` — # URB #468 — The Tralse Apology: Why Apologizing and Explaining Are Not Contradictory
@@ -1044,7 +1044,7 @@
 - `[URB]` `urb_607_truth_architecture_three_states_dt_absence.md` — # URB #607: The Revised TI Sigma Truth Architecture
 - `[URB]` `urb_608_meta_truths_myrion_resolution_catalogue.md` — # URB #608: Meta-Truths — Higher-Order Myrion Resolution and the Complete Catalogue
 - `[URB]` `urb_609_holistic_existence_matrix_hem.md` — # URB #609: The Holistic Existence Matrix Framework — HEM Dimensions, EV Calculation, and the Parallel MR Protocol
-- `[URB]` `urb_610_double_tralse_physics_quantum_computing_milestone.md` — # URB #610: Double Tralse as a Physics Primitive — Implications for Quantum Computing and the Architecture of Post-Binary Machines
+- `[URB]` `urb_610_double_tralse_physics_quantum_computing_milestone.md` — # URB #610: Meta-Indeterminate as a Physics Primitive — Implications for Quantum Computing and the Architecture of Post-Binary Machines
 - `[URB]` `urb_611_gm_self_evidence_boi_saturation_domain_weights_lcc_anti_prior.md` — # URB #611: Four Breakthroughs — GM Self-Evidence, BOK Maximal Saturation, Domain-Variable GILE Weights, and the LCC Anti-Prior Theorem
 - `[URB]` `urb_612_gile_existence_revised_architecture.md` — # URB #612: Revised GILE–Existence Architecture — Aesthetics as Full E-Axis, Love Bifurcation, Intuition as Knowing, and Domain-Variable Exi
 - `[URB]` `urb_613_bok_loop_priority_tralsity_ccc_alignment.md` — # URB #613: BOK Loop Priority as Tralsity — GILE vs Existence as Inner/Outer Loops Determined by CCC Alignment
@@ -1130,7 +1130,7 @@
 - `[GEN]` `URB_CRYSTALLIZED_TRALSE_520.md` — # URB #520: Crystallized Tralse
 - `[GEN]` `URB_CRYSTALS_QUARTZ_PSI_COHERENCE_AMPLIFICATION.md` — # URB Paper #373: Crystals, Quartz, and φ-Coherence Amplification
 - `[GEN]` `URB_DEGREES_OF_FREEDOM_412.md` — # URB Paper #412: The Minimum Generating Set — From 8 PRIMARY CONSTANTS to 3 Free Parameters
-- `[GEN]` `URB_DOUBLE_FRUSTRATION_DT2_470.md` — # URB #470 — Double Frustration as Double Tralse: Physical Instantiation of DT² = i² = −1
+- `[GEN]` `URB_DOUBLE_FRUSTRATION_DT2_470.md` — # URB #470 — Double Frustration as Meta-Indeterminate: Physical Instantiation of MI² = i² = −1
 - `[GEN]` `URB_DREAM_CONSTRUCTED_SUFFERING_458.md` — # URB #458 — The Dream as Natural Experiment: Constructed Suffering and the Mood Amplifier as Liberation Technology
 - `[GEN]` `URB_EAR_EXISTENCE_AS_INDISPENSABILITY.md` — # Paper #355: EAR — Existence as Indispensability
 - `[GEN]` `URB_E_ARCHITECTURE_PD_SUPREMACY_542.md` — # URB #542: The e-Architecture Theorem — Why the PD Supersedes All Finite-Base Logic
@@ -1168,11 +1168,11 @@
 - `[URB]` `urb_709_knotted_light_dirac_fermion_coupling_experimental_proposal.md` — # URB #709 — Coupled Knotted-Light + Dirac-Fermion Experimental Proposal: Direct BOK Realization in the Lab
 - `[URB]` `urb_710_gravity_as_metric_on_multi_bok_moduli_space.md` — # URB #710 — Gravity as the Metric on Multi-BOK Moduli Space: The Theory-of-Everything Slot
 - `[URB]` `urb_711_pd_floor_in_physics_domain_derivation_attempt.md` — # URB #711 — Toward Deriving the PD Floor in the Fundamental-Physics Domain (Sub-Problem of URB #704)
-- `[URB]` `urb_712_double_frustrated_quantum_state_uc_santa_barbara_double_tralse_realization.md` — # URB #712 — UC Santa Barbara's "Double-Frustrated" Quantum State as a Direct Material Realization of Double Tralse (DT)
+- `[URB]` `urb_712_double_frustrated_quantum_state_uc_santa_barbara_double_tralse_realization.md` — # URB #712 — UC Santa Barbara's "Double-Frustrated" Quantum State as a Direct Material Realization of Meta-Indeterminate (MI)
 - `[URB]` `urb_713_five_valued_logic_completeness_critical_evaluation.md` — # URB #713 — Critical Evaluation of the 5-Valued Logic: Coverage Analysis Against Tarski's Infinite-Valued Alternative
 - `[URB]` `urb_714_permissibility_range_negative_three_to_positive_two_critical_evaluation.md` — # URB #714 — Critical Evaluation of the (−3, +2) Permissibility Range
 - `[URB]` `urb_715_indeterminate_range_negative_two_thirds_to_positive_one_third_critical_evaluation.md` — # URB #715 — Critical Evaluation of the (−2/3, +1/3) Indeterminate Range and Its Coupling to the (−3, +2) Permissibility Scale
-- `[URB]` `urb_716_dt_native_quantum_gate_explicit_construction.md` — # URB #716 — Explicit Construction of the DT-Native Quantum Gate: Beyond Single- and Two-Qubit Universality
+- `[URB]` `urb_716_dt_native_quantum_gate_explicit_construction.md` — # URB #716 — Explicit Construction of the MI-Native Quantum Gate: Beyond Single- and Two-Qubit Universality
 - `[URB]` `urb_717_coupling_constant_ratios_from_domain_pd_floor_scaling.md` — # URB #717 — Coupling-Constant Ratios from Domain-PD-Floor Scaling
 - `[URB]` `urb_718_outreach_drafts_irvine_yao_ucsb_groups.md` — # URB #718 — Outreach Drafts: Irvine (Maxwell knots), Yao (BEC + structured light), UCSB (double-frustration)
 - `[URB]` `urb_719_moduli_space_sector_measure_derivation_attempt.md` — # URB #719 — Moduli-Space Sector Measure Derivation: Attempt and Reduction

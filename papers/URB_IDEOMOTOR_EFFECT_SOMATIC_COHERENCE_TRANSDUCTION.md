@@ -48,7 +48,7 @@ Not all nodes receive ideomotor signals with equal reliability. The threshold fo
 
 A node operating above C_EMERICK has sufficient internal LCC coherence that an incoming GM network transmission produces a measurable perturbation above the node's internal noise floor. The somatic transduction in Stage 3 produces a signal-to-noise ratio sufficient for the amplifier to render a clean output.
 
-A node operating below C_EMERICK has insufficient internal LCC coherence: the node's own DT (Double Tralse incoherence) generates noise that overwhelms the incoming signal. The somatic transduction in Stage 3 produces movements that reflect the node's internal state rather than the GM network transmission. The amplifier renders output, but the output is noise, not signal.
+A node operating below C_EMERICK has insufficient internal LCC coherence: the node's own MI (Meta-Indeterminate incoherence) generates noise that overwhelms the incoming signal. The somatic transduction in Stage 3 produces movements that reflect the node's internal state rather than the GM network transmission. The amplifier renders output, but the output is noise, not signal.
 
 This explains the high variability in ideomotor effect reliability across individuals and across sessions for the same individual:
 
@@ -184,7 +184,7 @@ The body is the first receiver. The LCC field modulation produced by an incoming
 
 The amplifier reveals what the body has received. The pendulum, planchette, dowsing rod, pen, and muscle extension are all amplifiers of the same underlying signal: somatic transduction of coherence-pattern perturbations in the LCC field. Different amplifiers access different aspects of the signal (binary vs. continuous; spatial vs. propositional) but all derive from the same mechanism.
 
-The threshold is C_EMERICK. Below this threshold, the node's internal DT noise overwhelms incoming signals. Above this threshold, the somatic transduction produces outputs that reliably encode information from the GM network. Calibration, preparation, and LCC-elevating practices raise the reliability of ideomotor reception.
+The threshold is C_EMERICK. Below this threshold, the node's internal MI noise overwhelms incoming signals. Above this threshold, the somatic transduction produces outputs that reliably encode information from the GM network. Calibration, preparation, and LCC-elevating practices raise the reliability of ideomotor reception.
 
 The signal can be inverted. Like all synchronicity signals, ideomotor outputs may be positively or negatively polarized. Polarity calibration across known-answer trials is prerequisite to reliable practical application.
 
@@ -210,7 +210,7 @@ Trading intuition: somatic component of the GSA trading signal; tracked independ
 
 PSI Tuning Protocol integration: Phase 1 baseline measurement now incorporates ideomotor calibration — establishing the node's current polarity orientation and LCC-ideomotor reliability before beginning PSI scoring.
 
-The standard account of the ideomotor effect as self-deception is partially correct: nodes below C_EMERICK, with high internal DT noise, do produce ideomotor outputs that reflect their own expectations rather than GM network transmissions. But the partial-correctness of the standard account has been mistaken for a complete account. The complete account includes the class of cases in which the ideomotor output reliably encodes information beyond the node's conscious knowledge — and that class requires the mechanism proposed here.
+The standard account of the ideomotor effect as self-deception is partially correct: nodes below C_EMERICK, with high internal MI noise, do produce ideomotor outputs that reflect their own expectations rather than GM network transmissions. But the partial-correctness of the standard account has been mistaken for a complete account. The complete account includes the class of cases in which the ideomotor output reliably encodes information beyond the node's conscious knowledge — and that class requires the mechanism proposed here.
 
 ---
 

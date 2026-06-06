@@ -26,7 +26,7 @@ Same 15 propositions as O26-B Affect protocol (`analyses/pass48_o26b_affect_prot
 
 ### §2.2 Three-Projection Instrument
 
-**(a) Cognitive-projection** (verdict): T/F/I/DT or MT-A1...F2 with one-sentence justification (same as O26-B Affect).
+**(a) Cognitive-projection** (verdict): T/F/I/MI or MT-A1...F2 with one-sentence justification (same as O26-B Affect).
 
 **(b) Affective-projection** (felt state): PANAS short-form + 8-item custom Likert (same as O26-B Affect).
 

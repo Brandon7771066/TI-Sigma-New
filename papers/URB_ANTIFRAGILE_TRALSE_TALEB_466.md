@@ -52,28 +52,28 @@ The mapping is exact. Every Taleb example of antifragility is a case of high-Tra
 
 **What Taleb adds to TI Sigma:** The specific domain analyses — financial markets, evolutionary biology, medical systems, political economies, individual development under hardship — and the empirical documentation of antifragility across these domains. Taleb's body of work provides the evidential base for the claim that high-Tralsity + MR is not merely philosophically interesting but is the actual mechanism of growth across virtually every domain of complex system behavior.
 
-**What TI Sigma adds to Taleb:** The formal four-valued logic (True, False, Tralse, Double Tralse), the Myrion Resolution as the specific mechanism of synthesis, the LCC threshold framework for identifying when a system is in a high-Tralsity state vs. ordinary fluctuation, and the GILE structure for evaluating whether a given MR is producing genuine growth or mere adaptation. TI Sigma extends Taleb's empirical observations into a formal logical and metaphysical framework.
+**What TI Sigma adds to Taleb:** The formal four-valued logic (True, False, Tralse, Meta-Indeterminate), the Myrion Resolution as the specific mechanism of synthesis, the LCC threshold framework for identifying when a system is in a high-Tralsity state vs. ordinary fluctuation, and the GILE structure for evaluating whether a given MR is producing genuine growth or mere adaptation. TI Sigma extends Taleb's empirical observations into a formal logical and metaphysical framework.
 
 ---
 
-## 3. The Black Swan as Double Tralse Event
+## 3. The Black Swan as Meta-Indeterminate Event
 
 Taleb's Black Swan is a high-impact, low-probability event that is unpredictable in advance and narrativized (explained) only after the fact. The Black Swan violates the assumption of normal distributions and reveals the "fat tails" of actual probability distributions — the extreme events are far more common than Gaussian models predict.
 
-In TI Sigma terms, the Black Swan is a **Double Tralse (DT) event**:
+In TI Sigma terms, the Black Swan is a **Meta-Indeterminate (MI) event**:
 
-- **Double Tralse:** A state in which the Tralse tension is so extreme that neither pole can be acknowledged within the existing framework. The system cannot hold the contradiction. The previous framework shatters.
+- **Meta-Indeterminate:** A state in which the Tralse tension is so extreme that neither pole can be acknowledged within the existing framework. The system cannot hold the contradiction. The previous framework shatters.
 - **Black Swan:** An event so far outside the previously modeled probability distribution that the model itself is revealed as inadequate. The previous framework shatters.
 
-The response to a DT/Black Swan event:
+The response to a MI/Black Swan event:
 
 **Fragile response:** The system breaks. The 2008 financial crisis broke institutions that were maximally leveraged and minimally resilient.
 
 **Resilient response:** The system absorbs the shock and returns to something like the pre-event state, possibly with some scarring.
 
-**Antifragile/MR response:** The system uses the Black Swan as data — the most expensive and powerful data available — to build a framework that can accommodate the fat tail it had previously ignored. The DT event becomes the source of the most important learning available, precisely because its amplitude makes it impossible to dismiss.
+**Antifragile/MR response:** The system uses the Black Swan as data — the most expensive and powerful data available — to build a framework that can accommodate the fat tail it had previously ignored. The MI event becomes the source of the most important learning available, precisely because its amplitude makes it impossible to dismiss.
 
-**Euler's identity as cosmic DT/Black Swan:** Per the December 2025 breakthrough (COMPREHENSIVE_TI_BREAKTHROUGH_SUMMARY_DEC_2025.md), the Big Bang itself was the primordial DT event — DT² = -1, the shattering that produced existence. The universe is the antifragile response to the primordial Black Swan. Existence is what grew from the ultimate disorder.
+**Euler's identity as cosmic MI/Black Swan:** Per the December 2025 breakthrough (COMPREHENSIVE_TI_BREAKTHROUGH_SUMMARY_DEC_2025.md), the Big Bang itself was the primordial MI event — MI² = -1, the shattering that produced existence. The universe is the antifragile response to the primordial Black Swan. Existence is what grew from the ultimate disorder.
 
 ---
 
@@ -138,7 +138,7 @@ The antifragile/Tralse framework has direct implications for the Grand Stock Alg
 | Fragile | Unresolved Tralse (breaks under pressure) | No MR occurs; disorder destroys |
 | Resilient | Partially resolved Tralse (returns to baseline) | Partial MR; survives but does not transcend |
 | Antifragile | Fully resolved high-Tralsity (synthesis emerges above baseline) | Complete MR; disorder produces transcendence |
-| Black Swan | Double Tralse (DT) event | Framework-shattering event; maximum MR potential |
+| Black Swan | Meta-Indeterminate (MI) event | Framework-shattering event; maximum MR potential |
 | Via negativa | Removing False-pole accumulation | Clearing the path for True-pole to activate |
 | Skin in the game | GILE Environment (E) full inhabitation | Authentic E-dimension engagement required |
 | Fat tails | Tralse distribution (extremes more common than Gaussian assumes) | Reality is Tralse-distributed, not normal-distributed |

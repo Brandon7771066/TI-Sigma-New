@@ -82,7 +82,7 @@ simultaneity, and τ_DE the *heartbeat* it dilates.
 
 **3+3 metric (Kletetschka 2025):** `ds² = dt₁² + dt₂² + dt₃² − dx² − dy² − dz²`. The three **time**
 dimensions ↔ the **three particle generations** (e/μ/τ-top as temporal-metric eigenvalues) ↔ TI
-Sigma's **three MR levels** (MR1 DT-screen, MR2 GILE-weight, MR3 Meta-Truth). "Space = frozen time"
+Sigma's **three MR levels** (MR1 MI-screen, MR2 GILE-weight, MR3 Meta-Truth). "Space = frozen time"
 converges with TI's **EAR** (space = residue/"paint" of completed Myrion Resolutions).
 
 **LHC predictions (falsifiable):** new resonances at **2.3 TeV** and **4.1 TeV**. TI note: the ratio

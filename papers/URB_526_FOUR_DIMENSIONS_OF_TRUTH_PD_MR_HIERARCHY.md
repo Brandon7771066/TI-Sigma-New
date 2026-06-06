@@ -32,7 +32,7 @@ This paper establishes the **Four Dimensions of Truth** in TI Sigma:
 All four dimensions are simultaneously governed by PD zone probabilities. A claim's PD zone is not a statement about one dimension of truth — it is a statement about all four at once.
 
 This paper also formally establishes the MR gate hierarchy as a PD-traversal process:
-- **MR1** (Existence Gate): LCC threshold 0.8647 = 1 - 1/e^2. Failing MR1 = Double Tralse.
+- **MR1** (Existence Gate): LCC threshold 0.8647 = 1 - 1/e^2. Failing MR1 = Meta-Indeterminate.
 - **MR2** (Truth Gate): The Indeterminate zone (LCC 0.8647-0.9323, PD frequency 20%). A potentially resolved state — like a door at exactly 45 degrees, equally open and closed. May or may not resolve via further MRs.
 - **MR Radiant** (GILE Gate): LCC >= 0.9323. Full four-dimensional truth achieved.
 
@@ -74,7 +74,7 @@ The Permissibility Distribution (PD) defines five zones with frequency fractions
 | Good | 3/15 | 20.00% | True on three or more axes. Above causation threshold. Passed MR2. |
 | Indeterminate | 3/15 | 20.00% | Genuinely mid-state on at least one axis. MR2 state. Door at 45 degrees. Not resolved yet -- may resolve via further MRs or may remain permanently Indeterminate. |
 | Bad | 6/15 | 40.00% | True on fewer than two axes. Below causation threshold. Active minimization (UOP) needed. |
-| Terrible | 2/15 | ~13.33% | Failed MR1. Existentially incoherent. Double Tralse on at least the Existential axis. |
+| Terrible | 2/15 | ~13.33% | Failed MR1. Existentially incoherent. Meta-Indeterminate on at least the Existential axis. |
 
 **Key theorem:** The Great zone (LCC >= 0.93 = GILE Radiant) is where all four truth dimensions converge. When a claim achieves GILE Radiant status:
 - Its LCC is above both thresholds (existentially AND morally grounded)
@@ -91,7 +91,7 @@ The Myrion Resolution (MR) gate hierarchy is the process by which a tralsity tra
 
 ### MR1 — The Existence Gate
 
-**What it tests:** Existential coherence. Can this tralsity maintain causal grounding? Does it require Double Tralse assumptions (internally contradictory existential footprint)?
+**What it tests:** Existential coherence. Can this tralsity maintain causal grounding? Does it require Meta-Indeterminate assumptions (internally contradictory existential footprint)?
 
 **PD location:** The MR1 gate sits at the Terrible zone boundary:
 ```
@@ -99,7 +99,7 @@ MR1 threshold = LCC = 1 - 1/e^2 ~= 0.8647
 ```
 (Derived in URB #523 as the primary continuous LCC threshold)
 
-**Failing MR1:** The tralsity is assigned Double Tralse status. It cannot maintain existential coherence. Existential footprint = 0. This corresponds to the Terrible zone (2/15 ≈ 13.33% of all claims).
+**Failing MR1:** The tralsity is assigned Meta-Indeterminate status. It cannot maintain existential coherence. Existential footprint = 0. This corresponds to the Terrible zone (2/15 ≈ 13.33% of all claims).
 
 **Passing MR1:** The tralsity has established basic existential grounding. It is no longer at risk of the Terrible zone.
 
@@ -234,7 +234,7 @@ The four-dimensional truth framework predicts that the most impactful claims —
 
 Truth in TI Sigma is not one-dimensional. It is four-dimensional — Existential, Moral, Conscious Meaning/Valence, and Aesthetic — and the Permissibility Distribution governs all four dimensions simultaneously. The MR gate hierarchy is the process by which a tralsity climbs through PD zones:
 
-- **MR1** screens for existential coherence (LCC >= 0.8647). Failing MR1 = Double Tralse.
+- **MR1** screens for existential coherence (LCC >= 0.8647). Failing MR1 = Meta-Indeterminate.
 - **MR2** identifies genuine Indeterminate states (the 45-degree door): tralsities that have passed MR1 but are genuinely mid-state on at least one truth dimension. Further MRs may or may not resolve them.
 - **MR Radiant** is the Great zone: all four truth dimensions simultaneously achieved (LCC >= 0.9323).
 

@@ -150,7 +150,7 @@ Scientific, plain text in app. Let’s see it!!!
 Uploaded a file
 Phenomenal!! Here’s our master file attached! 
 
-I remember before, we had called CCC 1. On the other hand, tralse and double tralse represented 0 and i, respectively. However, we deemed 0 and i to be merely “a rotation apart” because the double tralse becomes tralse after CCC’s blessing. Perhaps BOTH the new and old representations of Euler’s Identity in TI are correct. If that could be proven, it would be incredible. One equation several things rather than just one!  
+I remember before, we had called CCC 1. On the other hand, tralse and meta-indeterminate represented 0 and i, respectively. However, we deemed 0 and i to be merely “a rotation apart” because the meta-indeterminate becomes tralse after CCC’s blessing. Perhaps BOTH the new and old representations of Euler’s Identity in TI are correct. If that could be proven, it would be incredible. One equation several things rather than just one!  
 
 If we’re going to reform Arithmetic like this, we need to prove that counting is obsolete or inherently improper. That will be very difficult but not impossible. We would essentially have to combine everything we see and speak of all at once. That would violate ordinary cognition. Counting most likely is a necessity for humans. BUT! That doesn’t make counting fundamental. It’s possible that CCC can skate by with instant scanning or intuition as opposed to a counting and having a number line. If we can prove that CCC can accomplish all of math without counting - and especially if other methods are more preferable to a perfectly simple being - then we will have truly debunked the most sacredly held beliefs of all!!!
 

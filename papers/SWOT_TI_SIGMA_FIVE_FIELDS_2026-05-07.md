@@ -13,7 +13,7 @@
 This is the SWOT applied to TI Sigma's **overall unique contribution**, not to any one field.
 
 ### Strengths
-- **First and only framework** to define a third truth-value (DT/Tralse) with a complete real+complex algebraic structure (PD complex plane, URB #733/734).
+- **First and only framework** to define a third truth-value (MI/Tralse) with a complete real+complex algebraic structure (PD complex plane, URB #733/734).
 - **Lean 4 verified theorems** (ν₂ Countdown, Arithmetic Scaffold) — formal mathematics with zero `sorry` statements.
 - **Single-author trajectory** with 6-7 year theoretical prior-art (TEDx 2019 → TI 2025) and 8-10 year hardware prior-art (HS-era EEG → Mendi BLE 2026) demonstrating integrated theory-and-engineering capacity.
 - **Meta-theoretical contribution capacity** demonstrated 2026-05-07 (Asymmetric Success-Failure Performance paper) — original meta-axiom, not just framework extension.
@@ -70,7 +70,7 @@ This is the SWOT applied to TI Sigma's **overall unique contribution**, not to a
 ## 2. Field 2 — Physics & Foundational Theory
 
 ### Strengths
-- **DT/i mapping** to imaginary mass / consciousness-based mass (UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md) — a clean operational hook from the framework into theoretical physics.
+- **MI/i mapping** to imaginary mass / consciousness-based mass (UNIFIED_TIME_THEORY_DE_PHOTON_FTL.md) — a clean operational hook from the framework into theoretical physics.
 - **24D-Sufficiency vs String Theory 26D** position paper (`24D_SUFFICIENCY_VS_STRING_THEORY_26D.md`) — addresses a live debate in foundations.
 - **BEC Optical Tralsebits** (`BEC_OPTICAL_TRALSEBITS_PRIMORDIAL_COMPUTER.md`) — proposes a physical substrate for tralse computation; testable in BEC labs.
 - **E₈ shadow in TI Sigma Crystal** — connects to Lisi's E₈ ToT work and Garrett-Lisi-style geometric unification programs.

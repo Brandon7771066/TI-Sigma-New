@@ -118,7 +118,7 @@ Meditation practice: a significant positive moderator in all five domains. Remot
 
 Meditation elevates LCC (this is one of the best-supported relationships in psychophysiology, indexed by HRV RMSSD elevation, EEG theta/alpha increase, and EDA decrease). The universal positive moderating effect of meditation across all five psi domains is the strongest meta-analytic evidence that LCC is the shared general factor.
 
-Anxiety and cognitive load: a significant negative moderator in all five domains. High-stakes, evaluative conditions suppress psi performance across domains. In TI Sigma terms: anxiety and cognitive load suppress LCC below C_EMERICK by elevating sympathetic activity (increasing EDA, decreasing HRV RMSSD) and fragmenting attentional LCC coherence (increasing internal noise toward DT). The universal suppression effect of anxiety across all psi domains is the second-strongest evidence for a shared general factor.
+Anxiety and cognitive load: a significant negative moderator in all five domains. High-stakes, evaluative conditions suppress psi performance across domains. In TI Sigma terms: anxiety and cognitive load suppress LCC below C_EMERICK by elevating sympathetic activity (increasing EDA, decreasing HRV RMSSD) and fragmenting attentional LCC coherence (increasing internal noise toward MI). The universal suppression effect of anxiety across all psi domains is the second-strongest evidence for a shared general factor.
 
 Belief in psi ("sheep-goat effect"): significant positive moderator in all five domains (Lawrence, 1993). Belief may directly elevate LCC by reducing the self-suppression (forced-False collapse on psi reception) that prevents the Tralse necessary for open reception. Disbelief collapses the receptive stance into a forced-False before the signal can be received.
 
@@ -237,7 +237,7 @@ For a practitioner beginning psi development: the recommended sequence is DMILS 
 
 Each psi domain has a dominant GILE dimension that determines its specific calibration factor:
 
-Goodness (G): integrity and internal coherence. Dominant for all psi domains as the general foundation — DT (Double Tralse incoherence) suppresses psi performance across all domains. Specifically important for PK, where the transmission requires maximum G-coherence to sustain the output.
+Goodness (G): integrity and internal coherence. Dominant for all psi domains as the general foundation — MI (Meta-Indeterminate incoherence) suppresses psi performance across all domains. Specifically important for PK, where the transmission requires maximum G-coherence to sustain the output.
 
 Intuition (I): forward-directed felt knowing. Dominant for precognition — temporal orientation is primarily an I-dimension skill, the felt sense of the future trajectory rather than the present state.
 
@@ -246,7 +246,7 @@ Love (L): the binding force between nodes. Dominant for DMILS and Ganzfeld — b
 Environment (E): the structural ground of existence in context. Dominant for remote viewing — the spatial target is an environmental structure, and E-dimension sensitivity to environmental coherence patterns is the specific calibration factor for this domain.
 
 The GLEP targets all four GILE dimensions:
-- Phase 2 (cardiac coherence): primarily elevates G (reduces internal DT) and E (grounds the node in its present environment)
+- Phase 2 (cardiac coherence): primarily elevates G (reduces internal MI) and E (grounds the node in its present environment)
 - Phase 3 (theta entrainment): primarily elevates I (opens the intuitive channel) and L (reduces the ego-boundary that suppresses connection)
 - Phase 4 (domain calibration): targets the specific GILE dimension dominant for that domain
 

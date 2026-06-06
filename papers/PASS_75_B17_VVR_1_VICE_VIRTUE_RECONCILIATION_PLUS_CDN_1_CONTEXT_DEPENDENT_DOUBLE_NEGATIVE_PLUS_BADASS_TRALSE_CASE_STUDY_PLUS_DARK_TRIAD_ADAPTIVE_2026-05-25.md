@@ -30,7 +30,7 @@ The word's *meaning* IS the *context-dependent transformation* of negative-compo
 
 Per BSQ-1 Pass-75-B16 typographical convention (Binary "Logic" scarequoted): any attempt to *cleanly translate* BADASS into a Binary "Logic"-consistent vocabulary FAILS, because the act of translation forces choice between negative-aspect-preserved (which loses positive-attribution) or positive-aspect-preserved (which loses the *via-the-negative* mechanism). The word's meaning IS the simultaneous-both = Tralse.
 
-This is the same structural-pattern Brandon flagged in B16 (Princess Bride "inconceivable" misuse + Vizzini's misuse of "inconceivable" exactly mirroring Pass-65 DT canonical refinement's concern about loose-DT-overuse).
+This is the same structural-pattern Brandon flagged in B16 (Princess Bride "inconceivable" misuse + Vizzini's misuse of "inconceivable" exactly mirroring Pass-65 MI canonical refinement's concern about loose-MI-overuse).
 
 ### 1.3 Brandon-Self-Identification Alternatives (per directive)
 
@@ -237,14 +237,14 @@ The following are recommended for the canonical TI Sigma vocabulary index per Pa
 
 ## Part 9 — Composition Summary
 
-**14-canonical compositional density:** MR Truth Labels canonical (base-4 + Meta-Truths + refinements #5/#6/#8) + DRT-1 + AA dual + IFSM-1 + TEC-1 + SCV-1 + UDP-1 + MFD-1 + Klein RPD + VFP-1 + CTC-1 + TPS-1 + CDA-1 + SRC-1 + LLM-CT-1 + ETJ-1 + Emerick-unit + Pass-65 DT canonical + ASYMMETRIC #69 + BSQ-1 + TUM-1 + Pass-75-B16 Princess Bride + Pass-75-B16 SpongeBob Dennis + Pass-75-B16 DRAGON-EMPEROR + Pass-66-B5 Brandon-ketamine + Pass-66-B5 "ultimate koan + pinnacle of foolishness" + Pass-75-B14 Emerick + Pass-75-B14 X-application + Pass-75-B6 Buddhist-koan + Pass-75-B6 retired-pace-discipline + pace-skepticism-=-over-skepticism #69 sub-principle.
+**14-canonical compositional density:** MR Truth Labels canonical (base-4 + Meta-Truths + refinements #5/#6/#8) + DRT-1 + AA dual + IFSM-1 + TEC-1 + SCV-1 + UDP-1 + MFD-1 + Klein RPD + VFP-1 + CTC-1 + TPS-1 + CDA-1 + SRC-1 + LLM-CT-1 + ETJ-1 + Emerick-unit + Pass-65 MI canonical + ASYMMETRIC #69 + BSQ-1 + TUM-1 + Pass-75-B16 Princess Bride + Pass-75-B16 SpongeBob Dennis + Pass-75-B16 DRAGON-EMPEROR + Pass-66-B5 Brandon-ketamine + Pass-66-B5 "ultimate koan + pinnacle of foolishness" + Pass-75-B14 Emerick + Pass-75-B14 X-application + Pass-75-B6 Buddhist-koan + Pass-75-B6 retired-pace-discipline + pace-skepticism-=-over-skepticism #69 sub-principle.
 
 ---
 
 ## Part 10 — Files Referenced
 
 - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (MR base-4 canonical)
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 DT canonical)
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 MI canonical)
 - `papers/AUTHORITY_AXIS_AA_2026-05-07.md` (AA dual-applicability)
 - `papers/PASS_75_B15_DRT_1_TEC_1_IFSM_1_PLUS_SCV_1_SUBCONSCIOUS_EVIDENCE_CLUSTER_PLUS_AA_DUAL_INTEGRATION_2026-05-25.md` (DRT-1 + TEC-1 + IFSM-1 + SCV-1 + AA-dual)
 - `papers/PASS_75_B16_TJ_EXPERIMENT_DESIGNS_IBM_QUANTUM_PLUS_POWER_METERED_COMPUTE_PLUS_THERMO_DECISION_LIT_PLUS_ISMAEL_FREE_WILL_PLUS_BINARY_SCAREQUOTE_CANONICAL_2026-05-25.md` (BSQ-1 + Princess Bride + SpongeBob Dennis + DRAGON-EMPEROR adjacency)

@@ -50,7 +50,7 @@ These are **well-established mathematics** independent of TI. Their use in TI co
 | **"Tesseract 8 cells × Jeff Time 3 = 24 faces"** as substantive multiplication | The arithmetic 8×3=24 is correct but *trivial polytope geometry*; the tesseract has 24 faces independent of any Jeff Time hypothesis. The "by Jeff Time" claim is a **TCAV candidate**: it adds value only if it generates a falsifiable prediction. | **Apply TCAV (§4.7) test:** does "8 cells × Jeff Time = 24 faces" (a) reveal implicit structure, (b) carry pragmatic content distinct from the tautology, (c) not foreclose inquiry? — Currently fails (b): no concrete falsifiable prediction is attached. **Reclassify as disguising-tautology candidate** until a concrete prediction is registered. |
 | **"4th time dimension IS GILE itself"** (TESSERACT §5.2) | Speculative identification, no empirical support, conflates time-axis and value-axis without operational test. | **Mark SPECULATIVE / no-empirical-anchor.** Brandon may retain as intuition-grade conjecture; cannot be cited as established. |
 | **"33-bit Tralsebit" → Christ-years / Masonic-degrees / vertebrae alignment table** (TRALSEBIT §1.2 + §7) | Pure numerology pattern-matching; arithmetic 21 × log₂(3) = 33.28 is correct, but the *21 base dimensions* are a free design choice with no derivation, and the "33 sacred alignments" table is selection-bias-prone. **Lazy Binary candidate**: τ_rigor = Indeterminate-leaning-False (no falsifiable content); τ_operational = True (suggestive mnemonic). | **Apply Lazy Binary §2.2 audit + Accurate Bluntness §2.3a delivery:** report both axes. The 33-bit *arithmetic* is True; the *33-sacred-alignments interpretation* is τ_rigor=Indeterminate-leaning-False. CAP credit on numerology alignments ≈0 (well_known patterns; Christ years etc. are folkloric, not predictive). |
-| **"24 dimensions = 4 GILE × 3 Jeff Time × 2 (TT/DT duality)"** (TESSERACT §3.3) | Multiple non-unique factorizations; 24 = 8×3 = 4×6 = 2×12 etc. The factorization is post-hoc; no derivation forces this specific decomposition. | **Mark POST-HOC.** Acceptable as mnemonic, not as derivation. CAP credit ≈0. |
+| **"24 dimensions = 4 GILE × 3 Jeff Time × 2 (TT/MI duality)"** (TESSERACT §3.3) | Multiple non-unique factorizations; 24 = 8×3 = 4×6 = 2×12 etc. The factorization is post-hoc; no derivation forces this specific decomposition. | **Mark POST-HOC.** Acceptable as mnemonic, not as derivation. CAP credit ≈0. |
 | **"Myrion Assessment: +1.9 / +2.0 / +1.8 / +1.6 / +1.7"** (TESSELLATION integration scores) | Pre-canon scoring scheme; no longer aligned with MR Truth Labels base-4 + Meta-Truths catalogue. | **Translate** to canonical labels: each "+1.9" → "encompassing strength MEDIUM-to-STRONG" + CAP-credit per (1−well_known); explicit MR Truth Label = T or I as appropriate. |
 
 ### §2.3 Claims That Are DEAD or RETIRED Under Current Canon
@@ -89,11 +89,11 @@ These are opportunities the previous integration documents could not have identi
 
 ### §4.1 Tesseract as Visualizable Substrate for §7 Indeterminate-as-Epitome
 
-**Opportunity:** The base-4 truth labels {T, F, I, DT} naturally label 4 axes. A 4D tesseract with vertices in {T, F, I, DT}^4 = 256 vertices represents the *propositional state space* over 4 statements with 4 truth-label assignments each. The §7 max-valid-tralseness theorem predicts that the *centroid weighting* (mean truth-label weighted by τ × stability) lands at the I-coordinate axis. **This is novel as an integration AND it is pre-registerable.**
+**Opportunity:** The base-4 truth labels {T, F, I, MI} naturally label 4 axes. A 4D tesseract with vertices in {T, F, I, MI}^4 = 256 vertices represents the *propositional state space* over 4 statements with 4 truth-label assignments each. The §7 max-valid-tralseness theorem predicts that the *centroid weighting* (mean truth-label weighted by τ × stability) lands at the I-coordinate axis. **This is novel as an integration AND it is pre-registerable.**
 
-**Pre-reg sketch (P1-tesseract-centroid):** for a frozen test set of 100 propositions (the same C20 set), compute the rater-distribution-weighted centroid in {T, F, I, DT} space; predicted: closer to I than to T, F, or DT in L2 distance.
+**Pre-reg sketch (P1-tesseract-centroid):** for a frozen test set of 100 propositions (the same C20 set), compute the rater-distribution-weighted centroid in {T, F, I, MI} space; predicted: closer to I than to T, F, or MI in L2 distance.
 
-**Already partially executed:** C20 bucket distribution shows MODAL→60/75 I and PARADOXICAL→30/30 I+DT split. Centroid trivially computable from C20 data. **TODO** add to next-session list.
+**Already partially executed:** C20 bucket distribution shows MODAL→60/75 I and PARADOXICAL→30/30 I+MI split. Centroid trivially computable from C20 data. **TODO** add to next-session list.
 
 **CAP:** well_known≈0.05 (no prior literature combines tesseract polytope vertex labeling with multi-valued truth-label centroids); encompassing MED.
 
@@ -119,9 +119,9 @@ These are opportunities the previous integration documents could not have identi
 
 **This is the FIRST live retrospective Lazy Binary audit on corpus content.** Pairs with §4.3 as a worked TCAV-vs-Lazy-Binary distinction (TCAV when implicit structure IS revealed; Lazy Binary when it isn't).
 
-### §4.5 256-Vertex {T,F,I,DT}^4 Tesseract: Visualization for `tralsebit_visualizer.py`
+### §4.5 256-Vertex {T,F,I,MI}^4 Tesseract: Visualization for `tralsebit_visualizer.py`
 
-**Concrete code-task:** extend `tralsebit_visualizer.py` to render the {T,F,I,DT}^4 tesseract as a 4D-projected Plotly visualization, with vertex coloring by max-valid-tralseness score (τ × stability per §7 of `urb_608`). Cheap, $0, agent-executable, builds visual intuition for the canonized §7 ordering theorem.
+**Concrete code-task:** extend `tralsebit_visualizer.py` to render the {T,F,I,MI}^4 tesseract as a 4D-projected Plotly visualization, with vertex coloring by max-valid-tralseness score (τ × stability per §7 of `urb_608`). Cheap, $0, agent-executable, builds visual intuition for the canonized §7 ordering theorem.
 
 **Status:** TODO next-session, low priority.
 
@@ -131,11 +131,11 @@ These are opportunities the previous integration documents could not have identi
 
 | ID | Opportunity | Anchor | Cost | Pre-Reg Status |
 |---|---|---|---|---|
-| **P1-tess** | Tesseract-centroid in {T,F,I,DT}^4 weighted by τ × stability — does centroid sit closer to I-axis than to T/F/DT axes? | §4.1 | $0, agent-side, ~30min | **Ready to draft** |
+| **P1-tess** | Tesseract-centroid in {T,F,I,MI}^4 weighted by τ × stability — does centroid sit closer to I-axis than to T/F/MI axes? | §4.1 | $0, agent-side, ~30min | **Ready to draft** |
 | **P2-tess** | Schweikart-hyperbolic Green-function derivation of 3:2 PD ratio (links to H-PD-MUSIC-3/4) | §4.2 | $0, agent-side, ~2-4hr | **Candidate** |
 | **P3-tess** | TCAV worked-application: rescue or retire "Jeff Time × tesseract = 24" with falsifiable prediction | §4.3 | $0, Brandon-blocked (needs his prediction-spec) | **Brandon-spec-blocked** |
 | **P4-tess** | Lazy Binary audit pilot: full table-by-table audit of TESSERACT + TRALSEBIT papers under §2.2 + §2.3a | §4.4 | $0, agent-side, ~1hr | **Ready** |
-| **P5-tess** | `tralsebit_visualizer.py` extension: render {T,F,I,DT}^4 tesseract with §7-theorem coloring | §4.5 | $0, agent-side, ~1hr | **Ready** |
+| **P5-tess** | `tralsebit_visualizer.py` extension: render {T,F,I,MI}^4 tesseract with §7-theorem coloring | §4.5 | $0, agent-side, ~1hr | **Ready** |
 
 ---
 

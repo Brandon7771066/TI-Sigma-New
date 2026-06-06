@@ -70,7 +70,7 @@ T3-A (external replication on a held-out pharmacology dataset) is the right esca
 Five verifications (V1–V5) of the Pass 8.1 affine projection PD(s) = 5(σ − 1/2) + i·γ/γ_1 with γ_1 ≈ 14.134725, RATIFIED Pass 8.2:
 
 - **V1** Constructive: at σ = 1/2, Re(PD) = 0. Verified for all 300 cached zeros.
-- **V2** Im(PD) = γ/γ_1; first zero maps to 0 + 1i; γ_1 anchors the DT/Tralse axis unit.
+- **V2** Im(PD) = γ/γ_1; first zero maps to 0 + 1i; γ_1 anchors the MI/Tralse axis unit.
 - **V4** Algebraic Emerick Crossover identity: σ = 1/2 ± 1/(5√2) ⇒ PD-real = ±1/√2. **EXACT to machine precision.**
 - **V5** σ = 1 boundary: PD-image = +2.5, sits 0.5 unit beyond the (−3, 2) right cap. RATIFIED Pass 8.2 as documented boundary condition.
 - **V3** Pass-7 T2 re-test in PD-image coordinates: shows the Pass-7 zero-spacing tests (T1–T4) are *orthogonal* to the affine-image space — they tested spacing distributions, not affine projections. The disconfirmations remain valid in their domain but are not counterevidence to the affine map.
@@ -81,7 +81,7 @@ Five verifications (V1–V5) of the Pass 8.1 affine projection PD(s) = 5(σ − 
 
 The Pass-7 T1–T4 disconfirmations (zero-spacing tests) and the T1-B affine-mapping verification are testing different things; both can be true. The framework's Riemann claim should be stated as:
 
-> "The Pass 8.1 affine projection PD(s) = 5(σ − 1/2) + i·γ/γ_1 places the non-trivial Riemann zeros on the DT/Tralse axis (Re(PD) = 0) iff the Riemann Hypothesis holds. The Emerick Crossover ±1/√2 corresponds exactly to σ = 1/2 ± 1/(5√2). Tests of zero-spacing distributions (Pass-7 T1–T4) are orthogonal to this projection and do not bear on its validity."
+> "The Pass 8.1 affine projection PD(s) = 5(σ − 1/2) + i·γ/γ_1 places the non-trivial Riemann zeros on the MI/Tralse axis (Re(PD) = 0) iff the Riemann Hypothesis holds. The Emerick Crossover ±1/√2 corresponds exactly to σ = 1/2 ± 1/(5√2). Tests of zero-spacing distributions (Pass-7 T1–T4) are orthogonal to this projection and do not bear on its validity."
 
 ### Recommended next step
 

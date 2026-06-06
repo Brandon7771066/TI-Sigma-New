@@ -67,7 +67,7 @@ Every MR outcome carries **two PD values**:
 |-------|------------|-------------------|----------------|
 | "Free will exists" | +1.2 (Approaching Great) | High | Solid claim, positive direction |
 | "Time is an illusion" | 0 (Indeterminate) | Low | Fragile, barely coherent |
-| "Square circles exist" | N/A | Zero | DT, eliminated at MR-1 |
+| "Square circles exist" | N/A | Zero | MI, eliminated at MR-1 |
 
 ---
 

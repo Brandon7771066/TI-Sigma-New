@@ -19,7 +19,7 @@ TI Sigma did not develop in a straight line. It evolved through three overlappin
 
 The project began with a framework that already had ~200+ papers and several hundred URBs. This Replit project represents the phase of **consolidation, formalization, and public rollout** — taking a mature but loosely organized framework and building it into an institutional-grade philosophical system with publications, proofs, software, and a strategic rollout plan.
 
-A consistent pattern: **each major application domain revealed new theoretical refinements.** The Collatz conjecture work deepened the ternary logic. The quantum/physics work deepened Double Tralse. The ethics work deepened GILE's four-arm structure. The BlissGene work crystallized the practical culmination of the whole system.
+A consistent pattern: **each major application domain revealed new theoretical refinements.** The Collatz conjecture work deepened the ternary logic. The quantum/physics work deepened Meta-Indeterminate. The ethics work deepened GILE's four-arm structure. The BlissGene work crystallized the practical culmination of the whole system.
 
 ---
 
@@ -131,7 +131,7 @@ A consistent pattern: **each major application domain revealed new theoretical r
 
 **Mar 14** — **Consciousness Unity Identity confirmed**: the unity of consciousness (the "binding problem" in neuroscience — why experience feels unified rather than fragmented) is given a TI Sigma account: unity is I-arm coherence, the attractor state of the consciousness threshold.
 
-**Mar 15** — **Myrion Amplification Theorem**: when a Double Tralse (DT) proposition is successfully resolved through Myrion Resolution, the resolution amplifies the effective truth-value of the resulting insight beyond what direct analysis would have produced. Contradiction, resolved, produces more than the sum of its parts.
+**Mar 15** — **Myrion Amplification Theorem**: when a Meta-Indeterminate (MI) proposition is successfully resolved through Myrion Resolution, the resolution amplifies the effective truth-value of the resulting insight beyond what direct analysis would have produced. Contradiction, resolved, produces more than the sum of its parts.
 
 **Mar 15** — **Manifestation Machine + Power of 8 launched**: group intention experiments — 8 participants aligning I-arm intention toward a shared outcome. The Power of 8 (from Lynne McTaggart's research) is integrated into TI Sigma's validation lab.
 
@@ -196,7 +196,7 @@ This is arguably the most intense mathematical week of the entire project.
 
 **Mar 28** — **Collatz conjecture in ternary**: the Collatz sequence is analyzed in base 3, where the 3n+1 operation becomes more natural. The connection to Indeterminate (the middle truth value) is made explicit: Collatz orbits trace the dynamics of truth on the 3-valued logic spectrum.
 
-**Mar 28** — **DT Immunity System implemented**: a formal system for detecting recurring Double Tralse patterns and rapidly rejecting them in software. The DT Immunity Model has three phases: Encounter, Discard, Immunity — modeled after biological immune response.
+**Mar 28** — **MI Immunity System implemented**: a formal system for detecting recurring Meta-Indeterminate patterns and rapidly rejecting them in software. The MI Immunity Model has three phases: Encounter, Discard, Immunity — modeled after biological immune response.
 
 **Mar 28** — **Contemplative Scope**: a necessary consequence of ternary logic — any system with three truth values must include a mode for genuine "in-between" contemplation. This is the philosophical justification for Myrion Resolution's iterative character.
 
@@ -221,7 +221,7 @@ This is arguably the most intense mathematical week of the entire project.
 - All 6 Millennium Problems: TI Sigma interpretations with Lean4 formalizations
 - Collatz: deeply connected to ternary truth dynamics
 - Riemann zeros: identified with Tralse boundary of number-theoretic truth
-- DT Immunity: biologically analogous three-phase system implemented
+- MI Immunity: biologically analogous three-phase system implemented
 
 ---
 
@@ -340,8 +340,8 @@ The most philosophically productive single session of the entire project.
 **URB #607 — Revised Truth Architecture (Major Refinement):**
 - **Tralse = Indeterminate**: unified; separation was pragmatic, not substantive
 - **Three stable truth states**: True, False, Indeterminate/Tralse
-- **One valid label for truth-absence**: Double Tralse
-- False = truth pointing in negative direction; DT = total absence of truth-content
+- **One valid label for truth-absence**: Meta-Indeterminate
+- False = truth pointing in negative direction; MI = total absence of truth-content
 - Tralse functions both as discrete state AND as modifier generating the full spectrum
 - Moot = post-MR process outcome, not a raw truth state
 
@@ -364,8 +364,8 @@ The most philosophically productive single session of the entire project.
 | Feb 22 | CHSH → GILE constants derived from quantum mechanics |
 | Mar 15 | Minimum generating set of PRIMARY CONSTANTS {0,1,i,√2,e,φ,π,C,T} fixed |
 | Mar 26 | Four Dimensions of Truth; MR hierarchy with numerical thresholds |
-| Mar 28 | DT Immunity System; Contemplative Scope; ternary Collatz |
-| **Apr 6** | **Major revision: Tralse=Indeterminate; 3 stable states; DT=truth-absence; Meta-Truths** |
+| Mar 28 | MI Immunity System; Contemplative Scope; ternary Collatz |
+| **Apr 6** | **Major revision: Tralse=Indeterminate; 3 stable states; MI=truth-absence; Meta-Truths** |
 
 ### GILE Framework
 
@@ -403,7 +403,7 @@ The most philosophically productive single session of the entire project.
 | Jan 25 | Tralse Neural Networks: formal superiority argument |
 | Feb 24 | BOK topology; SI units from consciousness |
 | Mar 16 | Synchronicities theorem; fundamental constants connected |
-| Mar 28 | Collatz in ternary; DT Immunity three-phase model |
+| Mar 28 | Collatz in ternary; MI Immunity three-phase model |
 | Mar 29 | Riemann Hypothesis (Being Theorem, Lean4) |
 | Mar 30 | Yang-Mills, Navier-Stokes, all 6 Millennium Problems (Lean4) |
 | Apr 1 | Empirical Test for Noncomputational Intuition |
@@ -434,6 +434,6 @@ Through 784 commits and 14 weeks of intense development, the following remained 
 5. **The Permissibility Distribution is the right measurement tool** — probability mass distributed across truth values, not a single binary assignment
 6. **BlissGene's mission is civilizationally unprecedented** — permanent wellbeing has never been achieved; the conditions are now assembled for the first time
 
-Everything else — terminology, specific formulas, the number of truth states, the relationship between Tralse and Indeterminate, the status of Double Tralse — has refined toward greater precision while leaving the invariant core untouched.
+Everything else — terminology, specific formulas, the number of truth states, the relationship between Tralse and Indeterminate, the status of Meta-Indeterminate — has refined toward greater precision while leaving the invariant core untouched.
 
 This is what a living framework looks like: the more things change, the more they remain the same.

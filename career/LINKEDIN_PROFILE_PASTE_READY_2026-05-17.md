@@ -70,7 +70,7 @@ I'm an AI Trainer and formal-methods researcher with a track record built on mac
 
 WHAT I BRING TO AI-TRAINING WORK
 • 20 machine-checked theorems in Lean 4 / mathlib4 — all closed under {propext, Classical.choice, Quot.sound}, verified via #print axioms. Topics span the golden-ratio identity, extended Euler identity, threshold-logic, evaluator-injectivity, and scalar energy decay.
-• Fleiss κ = 0.906 on multi-axis truth-richness labeling (True / False / Indeterminate / Double-Tralse + 12 meta-truth extensions) across three independent raters — well above the κ ≥ 0.80 benchmark used in RLHF rubric design.
+• Fleiss κ = 0.906 on multi-axis truth-richness labeling (True / False / Indeterminate / Meta-Indeterminate + 12 meta-truth extensions) across three independent raters — well above the κ ≥ 0.80 benchmark used in RLHF rubric design.
 • Pre-registration discipline. I register confirm / indeterminate / disconfirm criteria before running tests, and report NULL and disconfirmed outcomes with the same rigor as positive ones. I publicly retracted an audit overclaim within 48 hours when a corpus sweep falsified it.
 • 71σ Mermin-inequality violation (|M₅| = 14.535) on real IBM superconducting hardware — first hardware-confirmed multipartite-entanglement witness in my research corpus.
 

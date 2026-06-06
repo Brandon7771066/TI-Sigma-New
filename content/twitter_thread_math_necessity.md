@@ -33,19 +33,19 @@ Just... potential.
 
 ---
 
-**Tweet 4 (Double Tralse)**
-For anything coherent to emerge from tralse soup, you need "double tralse"—
+**Tweet 4 (Meta-Indeterminate)**
+For anything coherent to emerge from tralse soup, you need "meta-indeterminate"—
 
 The recognition that something CAN be true AND can be false.
 
 This is the seed of logic.
 
-But double tralse can't arise on its own.
+But meta-indeterminate can't arise on its own.
 
 ---
 
 **Tweet 5 (The Breakthrough)**
-Double tralse sets off an unavoidable chain:
+Meta-Indeterminate sets off an unavoidable chain:
 
 Logic → Numbers → Mathematics → Structure → Reality
 

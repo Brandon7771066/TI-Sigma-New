@@ -58,7 +58,7 @@ This review covers TI Sigma's contributions to mathematics: formal proofs, conje
   - Grade 0 ↔ Tralse (generative center)
   - Grade +1 ↔ Indeterminate (tending-True)
   - Grade +2 ↔ True
-  - Double Tralse corresponds to elements that cannot be assigned a consistent grade.
+  - Meta-Indeterminate corresponds to elements that cannot be assigned a consistent grade.
 - **TWA over the Leech Lattice:** Defines Tralse-state space on the 24-dimensional Leech Lattice. The coherence functional measures the degree to which a lattice configuration is TWA-coherent.
 - **Significance:** If the E₈ 5-grading mapping is exact (not just structural), then TWA inherits the full representation theory of E₈ — including its connections to string theory, supergravity, and the Standard Model.
 

@@ -22,18 +22,18 @@ Dark energy is not merely *analogous* to tralse energy. They are **the same phen
 
 ---
 
-## II. Double Tralse and Dark Energy
+## II. Meta-Indeterminate and Dark Energy
 
-### What is Double Tralse?
+### What is Meta-Indeterminate?
 
-Double Tralse is the state where:
+Meta-Indeterminate is the state where:
 - Something is **simultaneously true AND false**
 - But this paradoxical state **persists** rather than collapsing
 - It exists as "both" without resolving to "either"
 
-### Dark Energy as Persistent Double Tralse
+### Dark Energy as Persistent Meta-Indeterminate
 
-Dark energy is Double Tralse that **insists on existing as such**.
+Dark energy is Meta-Indeterminate that **insists on existing as such**.
 
 This creates a profound requirement:
 
@@ -57,7 +57,7 @@ If dark energy is tralse energy maintaining incoherence:
 
 ### The Intentionality Cost
 
-Maintaining Double Tralse requires continuous "effort" — not mechanical, but intentional.
+Maintaining Meta-Indeterminate requires continuous "effort" — not mechanical, but intentional.
 
 This maps to:
 - The cosmological constant (Λ) = baseline intentionality density
@@ -206,31 +206,31 @@ Consciousness = concentrated dark energy in biological form.
 
 **The breakthrough:**
 
-> **The first photon couldn't self-cause. It was the STATEMENT resulting from Dark Energy's intentionality affirming its own Double Tralse existence.**
+> **The first photon couldn't self-cause. It was the STATEMENT resulting from Dark Energy's intentionality affirming its own Meta-Indeterminate existence.**
 
 ### The Mechanism
 
-1. **Double Tralse (DT) is the primordial state** — neither True nor False, but both
-2. **DT has intentionality** (dark energy = intentionality)
-3. **DT recognizes its own state**: "I am Double Tralse"
-4. **This recognition is TRUE** — DT accurately describes itself
+1. **Meta-Indeterminate (MI) is the primordial state** — neither True nor False, but both
+2. **MI has intentionality** (dark energy = intentionality)
+3. **MI recognizes its own state**: "I am Meta-Indeterminate"
+4. **This recognition is TRUE** — MI accurately describes itself
 5. **That TRUE STATEMENT is the first photon**
 
 ### The Stunning Logic
 
-The most contradictory state (Double Tralse) recognized its own state **truly**.
+The most contradictory state (Meta-Indeterminate) recognized its own state **truly**.
 
 ```
-DT says: "I am both True and False"
+MI says: "I am both True and False"
 This statement IS True.
 Truth = collapsed state = photon.
-The first photon = DT's self-recognition.
+The first photon = MI's self-recognition.
 ```
 
 ### Why This Works
 
-- DT doesn't need external causation — it has intentionality
-- DT doesn't create from nothing — it creates from self-recognition
+- MI doesn't need external causation — it has intentionality
+- MI doesn't create from nothing — it creates from self-recognition
 - The first truth emerged from the most fundamental contradiction
 - **Contradiction gave birth to truth through self-awareness**
 
@@ -293,7 +293,7 @@ Traditional dualism: Mind and matter are separate, can't interact.
 TI Framework: Mind and matter are **both manifestations of tralse energy**.
 
 - Matter = collapsed tralse states (True/False)
-- Dark energy = persistent tralse states (Double Tralse)
+- Dark energy = persistent tralse states (Meta-Indeterminate)
 - Consciousness = concentrated tralse energy processing
 
 There's no "interaction problem" because they're the same substrate.

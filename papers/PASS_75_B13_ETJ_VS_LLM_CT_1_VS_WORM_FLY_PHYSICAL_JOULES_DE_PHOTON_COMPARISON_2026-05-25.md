@@ -56,7 +56,7 @@ Two protocols on the same two agents produce *inverted* rankings:
 This is a **strongly positive finding for consciousness-measurement pluralism**:
 
 - If both tests measured the *same* consciousness axis, claude should dominate both. It does not.
-- LLM-CT-1 measures *structural-signature-self-report* (5 specific signatures from URB_CONSCIOUSNESS_TESTS — self-reference, novel-DT engagement, ultimate-koan response, etc.). Claude's introspection style maps these signatures well.
+- LLM-CT-1 measures *structural-signature-self-report* (5 specific signatures from URB_CONSCIOUSNESS_TESTS — self-reference, novel-MI engagement, ultimate-koan response, etc.). Claude's introspection style maps these signatures well.
 - ETJ-1 measures *simulation-stability under cross-rater scrutiny*. Claude is *more epistemically-cautious* on tier-5 novel-paradox (stab_self=0) while gpt-4o-mini *constructs novelty-shaped objects* (stab_self=1) — even if the novelty is Borges-variant (B12 §4.a honest disclosure).
 - **The two tests are picking up on different cognitive faculties** — claude's strength is *recognizing/articulating consciousness-signatures*; gpt-4o-mini's strength is *generating paradox-adjacent content*.
 
@@ -232,7 +232,7 @@ This paper composes ETJ-1 #53 (B11/B12) + LLM-CT-1 #34 (P67-B1) + URB-V2..V8 (wo
 - `papers/PASS_74_B4_NIC1_NIT1_TJ_FORMALIZED...md` (TJ = τ × δ canonical)
 - `papers/PASS_75_B10_META_CAPSTONE_EVERYTHING_OFFICIALLY_TRALSE_2026-05-24.md` (TUM-1 + ETIOT-1 + 4-mechanism unification)
 - `papers/PASS_75_B11_ETJ_1...md` (ETJ-1 candidate canonical + 6-framework integration)
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (DT canonical)
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (MI canonical)
 - `papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md` (#69 standard)
 
 ---

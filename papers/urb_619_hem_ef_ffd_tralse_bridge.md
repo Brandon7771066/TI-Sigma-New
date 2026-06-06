@@ -183,9 +183,9 @@ The key unification: **all three contradiction types describe the same fundament
 | Vagueness (V) | Tralse-Indeterminate (TI) | Inconsistency | Low (stable Tralse) | Extended MR; may require MRC |
 | Constraint (K) | Tralse-True or Tralse-False | Discrepancy | High | MR converges quickly |
 
-**Special case — Double Tralse (DT):**
+**Special case — Meta-Indeterminate (MI):**
 
-DT arises when Indeterminacy is *total* — no partial truth content remains. In FFD terms, this is extreme Vagueness combined with total Complexity collapse: a system so internally contradictory (Inconsistency + Opposition simultaneously) that no coherent truth-state can be assigned. DT is not simply "high Tralseness" — it is the *absence of truth content*, while existence may remain high (EV can be high for a DT entity).
+MI arises when Indeterminacy is *total* — no partial truth content remains. In FFD terms, this is extreme Vagueness combined with total Complexity collapse: a system so internally contradictory (Inconsistency + Opposition simultaneously) that no coherent truth-state can be assigned. MI is not simply "high Tralseness" — it is the *absence of truth content*, while existence may remain high (EV can be high for a MI entity).
 
 **Special case — Constraint and False:**
 
@@ -204,14 +204,14 @@ More precisely:
 - D2 = 0: no internal contradiction → system is at True or False (fully resolved)
 - D2 ∈ (0, 0.35): moderate contradiction → Tralse-True or Tralse-False (partial resolution)
 - D2 ∈ (0.35, 0.65): high contradiction → pure Tralse or Tralse-Indeterminate
-- D2 > 0.65: severe contradiction → risk of DT; MR DT-gate activates (GSA v3 threshold)
-- D2 → 1.0: maximal contradiction → DT state (no truth content remains)
+- D2 > 0.65: severe contradiction → risk of MI; MR MI-gate activates (GSA v3 threshold)
+- D2 → 1.0: maximal contradiction → MI state (no truth content remains)
 
 This gives the Contradiction Ratio a precise role in the PD (Permissibility Distribution):
 
 $$\text{PD}(x) = f(\text{GILE-truth}(x), \text{D2}(x), \text{EV}(x))$$
 
-The PD weight assigned to the DT state increases monotonically with D2. The PD weight assigned to True or False decreases monotonically with D2. The PD's Tralse-Indeterminate state peaks at D2 ≈ 0.5.
+The PD weight assigned to the MI state increases monotonically with D2. The PD weight assigned to True or False decreases monotonically with D2. The PD's Tralse-Indeterminate state peaks at D2 ≈ 0.5.
 
 ---
 
@@ -252,13 +252,13 @@ Not all Tralseness should be resolved immediately. The FFD framework provides th
 
 **Destructive Tralse** (Vagueness + Indeterminacy, high D2):
 - The system contains contradiction that, when maintained without MR, erodes coherence
-- Examples: Cognitive dissonance without resolution, political doublespeak, epistemic cowardice, DT-approaching belief states
+- Examples: Cognitive dissonance without resolution, political doublespeak, epistemic cowardice, MI-approaching belief states
 - FFD profile: High In, high V, low K (no constraining structure to enable resolution)
-- MR outcome: DT risk if D2 > 0.65; MRC required before standard MR can proceed
+- MR outcome: MI risk if D2 > 0.65; MRC required before standard MR can proceed
 
 **Constraint (K) as the Resolution Enabler:** High Constraint does not suppress resolution — it *enables* it. Constraint is what gives MR its directionality. A totally unconstrained Indeterminate system (high In, zero K) cannot be resolved by MR alone; it requires first establishing boundary conditions (raising K) to create the shape of the resolution space.
 
-This explains why **rules, structure, and commitment** (all forms of Constraint) are prerequisites for genuine Myrion Resolution, not obstacles to it. Freedom without Constraint is not Indeterminacy that MR can resolve; it is DT.
+This explains why **rules, structure, and commitment** (all forms of Constraint) are prerequisites for genuine Myrion Resolution, not obstacles to it. Freedom without Constraint is not Indeterminacy that MR can resolve; it is MI.
 
 ---
 
@@ -272,7 +272,7 @@ This explains why **rules, structure, and commitment** (all forms of Constraint)
 
 **Theorem 2 (Contradiction–Tralse Taxonomy):** The three contradiction types (Inconsistency, Opposition, Discrepancy) are linguistic manifestations of Tralseness at different intensities — Inconsistency → Tralse-Indeterminate; Opposition → pure Tralse; Discrepancy → partial Tralse.
 
-**Theorem 3 (D2 as Tralse Meter):** HEM D2 (Contradiction Ratio) is the primary empirical measurement of Tralseness. D2 = 0 → True/False resolved; D2 → 1.0 → DT state.
+**Theorem 3 (D2 as Tralse Meter):** HEM D2 (Contradiction Ratio) is the primary empirical measurement of Tralseness. D2 = 0 → True/False resolved; D2 → 1.0 → MI state.
 
 **Theorem 4 (MR as Universal Resolution):** Myrion Resolution is the universal collapse operator for Indeterminacy / Tralseness / high-D2 states across all domains — propositional, biometric, linguistic, physical.
 

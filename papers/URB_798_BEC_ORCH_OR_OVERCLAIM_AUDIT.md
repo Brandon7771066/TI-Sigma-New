@@ -81,7 +81,7 @@ The question of whether a *simulation* of a conscious system is itself conscious
 ### 2.5 Where TI Sigma stands relative to the compound claim
 
 TI Sigma is a formal framework with:
-- Defined truth values 𝒯 = {DT, ¬T, U, T+, T} (well-defined)
+- Defined truth values 𝒯 = {MI, ¬T, U, T+, T} (well-defined)
 - Defined coherence functional MR (well-defined; URB #796)
 - Defined collapse dynamics (well-defined; URB #796)
 - An empirical anchor at C_EMERICK = 1/(φ√2) (one corroboration from DANDI:000552, n=260; URB #795 §2)

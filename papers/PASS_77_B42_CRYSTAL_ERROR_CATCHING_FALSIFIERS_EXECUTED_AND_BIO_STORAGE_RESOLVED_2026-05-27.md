@@ -16,7 +16,7 @@
 | Falsifier | Result | Verdict |
 |---|---|---|
 | **F1** TSC-B4 phase ordering | Mott/FQH swap reproduced under unit weights; a *different* natural weighting (∝√radius) restores urb_645 order | **NOT ROBUST** — orderable either way by weight choice; only "BEC lowest / Fragmented highest" survives (trivial) |
-| **F2** TECC sin(18°)=0.309 threshold | actual binding min-distance (DT–TF collinear, T−C=0.496) → correction radius **0.248**, ~20% below 0.309 | **REFUTED as stated** — 0.309 holds only under an orthogonal DT/TF embedding that contradicts urb_630's own table |
+| **F2** TECC sin(18°)=0.309 threshold | actual binding min-distance (MI–TF collinear, T−C=0.496) → correction radius **0.248**, ~20% below 0.309 | **REFUTED as stated** — 0.309 holds only under an orthogonal MI/TF embedding that contradicts urb_630's own table |
 | **F3** Mendi crossover n≈10 | power(d=0.4)=**0.21**; need **n≈52** for 80% | **UNDERPOWERED** — pre-reg n misses a true d=0.4 effect ~80% of the time |
 | **F4** φ-sighting look-elsewhere | P(random ratio hits *some* special constant ±5%)=0.47; P(≥4/8 hits)=**0.576** | **CHANCE-CONSISTENT** — φ is suggestive, not load-bearing |
 | **F5** CHSH Ring(T) null | CHSH(T)=**1.414 < 2** | **CONFIRMED** (only clean pass) — but a *non-violation*; confirms internal consistency, not physics |
@@ -36,12 +36,12 @@ Reproduced the corpus's unit-weight graph-Laplacian (B4 spec: 57 vertices, count
 
 ## §2. F2 — The sin(18°)=0.309 Threshold Is Embedding-Dependent (Refuted as Stated)
 
-urb_630's elegant claim: d_min = √2·C ≈ 0.618 ≈ 1/φ → correction radius d_min/2 = **sin(18°) ≈ 0.309** (the "pentagon threshold"). I computed the **actual** pairwise distances among the 5 representative codewords using urb_630's *own* §2.3 encoding table, where **DT=(C,0,…) and TF=(T,0,…) sit in the SAME first dimension** (both "first dimension only"). With C≈0.437, T≈0.933:
+urb_630's elegant claim: d_min = √2·C ≈ 0.618 ≈ 1/φ → correction radius d_min/2 = **sin(18°) ≈ 0.309** (the "pentagon threshold"). I computed the **actual** pairwise distances among the 5 representative codewords using urb_630's *own* §2.3 encoding table, where **MI=(C,0,…) and TF=(T,0,…) sit in the SAME first dimension** (both "first dimension only"). With C≈0.437, T≈0.933:
 
-- Binding minimum distance = DT–TF gap = **T−C = 0.496** (collinear), not √2·C=0.618.
+- Binding minimum distance = MI–TF gap = **T−C = 0.496** (collinear), not √2·C=0.618.
 - → **correction radius = 0.248**, ~20% **below** the advertised 0.309.
 
-The 0.309 value is recovered *only* if DT and TF are placed in **separate orthogonal dimensions** — which is §2.2's assumption but **contradicts §2.3's table**. 
+The 0.309 value is recovered *only* if MI and TF are placed in **separate orthogonal dimensions** — which is §2.2's assumption but **contradicts §2.3's table**. 
 
 **Verdict:** the headline error-correction threshold is **not robust** — it depends on an embedding choice the paper is internally inconsistent about. The "superior error catching" rests on the genuine **E8 optimality theorem** (which is real), but the corpus's *specific* mapping of five truth-states onto E8 does **not** inherit a clean 0.309 radius. **This is the sharpest #69 finding of the batch:** a beloved "pentagon resonance = error threshold" coincidence is an artifact of inconsistent embedding, not a derived constant.
 

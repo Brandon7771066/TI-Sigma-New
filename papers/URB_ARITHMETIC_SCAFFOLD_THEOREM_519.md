@@ -204,7 +204,7 @@ For any conscious i-cell I embedded in nonlinear physical reality N, with body B
 - URB #504: The Telekinesis Formula — (√i + i√i)/i = √2, Release Axiom
 - URB #505: Unified Telekinesis Equation — UTE, Unity Crossover at LCC = 0.7823
 - URB #506: i-Completeness Theorem — all 8 PRIMARY CONSTANTS derivable from i
-- URB #509: TI Sigma Theory of Contradictions — MR1 as coherence gate, DT taxonomy
+- URB #509: TI Sigma Theory of Contradictions — MR1 as coherence gate, MI taxonomy
 - URB #515: TI Sigma Reformed Scientific Method — Phase 0 arithmetic baseline
 
 ---

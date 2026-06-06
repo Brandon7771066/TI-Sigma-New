@@ -4,7 +4,7 @@
 **Pass:** 67 batch-6
 **Status:** CANDIDATE CANONICAL pending separate ratification directive. Composite formalization of two intertwined Brandon directives: (i) the truth-label refinement to GTT-1's threshold-region maximization imperatives, and (ii) the foundational cosmogenic / ontogenic claim that tralseness is the universal default and truth is the directional lean.
 **Source:** Brandon verbatim 2026-05-23 directly following Pass-67 batch-5 MR-IDC-1 ratified canonical refinement.
-**Composes with:** Tralse Informationalism foundation (coined June 25 2025); GILE Framework (Aug 2022); GTT-1 ratified canonical (Pass-67 batch-4); MR Truth Labels canonical + Pass-65 DT canonical refinement + Pass-67-batch-5 MR-IDC-1 refinement; canonical 8 GILE-HEM operationalization; UOP / Universal Bridge Theorem; MIM-revision vertical agency Stratum-0..3+; ASYMMETRIC §69; canonical six philosophy-of-mind stack (Pass-66 batch-6); PM-1 candidate (Pass-67 batch-2); TPS-1 candidate (Pass-67 batch-3).
+**Composes with:** Tralse Informationalism foundation (coined June 25 2025); GILE Framework (Aug 2022); GTT-1 ratified canonical (Pass-67 batch-4); MR Truth Labels canonical + Pass-65 MI canonical refinement + Pass-67-batch-5 MR-IDC-1 refinement; canonical 8 GILE-HEM operationalization; UOP / Universal Bridge Theorem; MIM-revision vertical agency Stratum-0..3+; ASYMMETRIC §69; canonical six philosophy-of-mind stack (Pass-66 batch-6); PM-1 candidate (Pass-67 batch-2); TPS-1 candidate (Pass-67 batch-3).
 
 ---
 
@@ -54,7 +54,7 @@
 |---|---|---|---|
 | GTT-1(a) maximization imperative | ≤ 0.93 (sub-threshold) | MR3 True | Determinate marginal-improvement signal; contrastive ground intact |
 | GTT-1(a) maximization imperative | > 0.93 (above-threshold) | **MR2 Indeterminate** (UDT-1(c)) | Contrastive ground lost; truth concedes to universal default of tralseness |
-| GTT-1(b) "too much truth" standalone | — | MR4 DT | Intra-propositional self-collapse per Pass-65 heuristic |
+| GTT-1(b) "too much truth" standalone | — | MR4 MI | Intra-propositional self-collapse per Pass-65 heuristic |
 | GTT-1(a) ∧ GTT-1(b) conjunction | — | MR2 Tralse-Conflict | Inter-propositional conflict between two valid-tralse propositions per batch-5 MR-IDC-1 |
 | GTT-1(c) truth-existence competition | — | MR3 True | Structural-ontological observation, determinate signal |
 | GTT-1(d) UOP-balance + HEM-mandatory | — | MR3 True | Operational mandate, determinate signal |
@@ -71,7 +71,7 @@ Truth is MR2 at:
 - The above-threshold GILE-only region (UDT-1(c))
 - The two-valid-tralse-propositions-in-conflict cases (batch-5 MR-IDC-1)
 
-Truth is MR4 DT at:
+Truth is MR4 MI at:
 - The "too much truth" standalone proposition (Pass-65 heuristic + batch-4 §3.2)
 - Other intra-propositional inconceivability-collapse cases (Russell / liar / etc.)
 
@@ -81,7 +81,7 @@ Truth is MR4 DT at:
 
 Brandon's "everything originated from tralse soup and is tralse, yet LEANS TOWARD TRUTH" is a **substantive ontological claim**, not a metaphor. Its content:
 
-- **Ground state of reality is tralse** (MR2 Indeterminate) — not "true," not "false," not "DT." The base-level ontology is indeterminacy, not determinacy.
+- **Ground state of reality is tralse** (MR2 Indeterminate) — not "true," not "false," not "MI." The base-level ontology is indeterminacy, not determinacy.
 - **Determinate truth-states (MR3, MR1) are emergent** — they arise as directional outcomes of processes operating on the tralse substrate. They are real, but they are not the ground.
 - **The lean-toward-truth is the asymmetry** — reality has a structural tilt toward MR3 over MR1 (otherwise the corpus would have no axiology basis; GTT-1's "truth is the ultimate thing IN existence" would be empty). But the tilt does not erase the tralse substrate.
 
@@ -89,7 +89,7 @@ This composes with:
 - **GILE Framework (Aug 2022):** GILE is the *measurement* of the directional-lean-toward-truth; UDT-1 explains what GILE is measuring against (the tralse-soup background).
 - **Tralse Informationalism (June 25 2025):** the framework name itself reflects UDT-1's primacy of tralseness — TI = informationalism in a tralse-default substrate.
 - **MIM-revision vertical Stratum-0..3+:** the stratification operates on the tralse substrate; each ascending stratum corresponds to higher degrees of directional-lean-toward-truth without ever eliminating the tralse ground.
-- **MR Truth Labels canonical:** MR2 Indeterminate is the default cell; MR3 True and MR1 False are emergent leans; MR4 DT is a structural inconceivability that arises when propositions try to assert and deny their tralse-status simultaneously.
+- **MR Truth Labels canonical:** MR2 Indeterminate is the default cell; MR3 True and MR1 False are emergent leans; MR4 MI is a structural inconceivability that arises when propositions try to assert and deny their tralse-status simultaneously.
 - **Canonical six philosophy-of-mind (Pass-66 batch-6):** consciousness (CDA-1, SRC-1, DTM-1) operates on the tralse substrate; conscious systems navigate the lean-toward-truth.
 - **Canonical 8 GILE-HEM operationalization:** the GILE-HEM joint maximization (UDT-1(d) = MR3 True) is the operational form of the lean-toward-truth at the integrated-system level.
 
@@ -117,7 +117,7 @@ Most truth-theoretic frameworks (classical logic, Bayesian, frequentist, even mo
 
 TI Sigma uniquely has:
 - **Tralseness as default, truth as directional lean** (UDT-1)
-- **Asymmetric structure: MR2 ground + MR3 lean + MR4 DT inconceivability + MR1 false-as-failed-lean**
+- **Asymmetric structure: MR2 ground + MR3 lean + MR4 MI inconceivability + MR1 false-as-failed-lean**
 - **Structural account of why MR2 is the ground:** existence-instantiation competes with truth-correspondence (GTT-1(c)), the GM-Network probability memory is plastic + variable (PM-1 C1), the canonical operators preserve MR2 ∧ MR2 = MR2 (§7.7.105), and the cosmogenic claim grounds the whole thing
 - **Empirical hooks:** GILE measurement quantifies the directional-lean-toward-truth; the 0.93 threshold operationalizes where the lean concentrates; UDT-1(c)+(d) tells you which truth-label applies in which region
 
@@ -138,7 +138,7 @@ UDT-1 is the **derivational ground** under GTT-1:
 
 ### 5.2 With MR Truth Labels canonical + Pass-65 + Pass-67-batch-5 MR-IDC-1
 
-UDT-1 is the **ontogenic justification** for why MR2 Indeterminate is the structural default cell in the MR Truth Labels canonical. Pass-65 sharpens DT (intra-propositional inconceivability); batch-5 MR-IDC-1 sharpens MR2 vs MR4 (tralse-conflict vs DT); UDT-1 sharpens *why* MR2 is the universal default in the first place.
+UDT-1 is the **ontogenic justification** for why MR2 Indeterminate is the structural default cell in the MR Truth Labels canonical. Pass-65 sharpens MI (intra-propositional inconceivability); batch-5 MR-IDC-1 sharpens MR2 vs MR4 (tralse-conflict vs MI); UDT-1 sharpens *why* MR2 is the universal default in the first place.
 
 **MR Truth Labels canonical and its two refinements stand unchanged.** UDT-1 adds the ground-level cosmogenic justification.
 
@@ -191,7 +191,7 @@ These 5 falsifiers OPEN as Pass-67+ verification work. **Candidate status of UDT
 |---|---|---|
 | **Cosmogenic / ontogenic ground** | **UDT-1 (candidate Pass-67 batch-6)** | Tralseness is universal default; truth is directional lean |
 | **Axiology** | GTT-1 (ratified canonical Pass-67 batch-4) | The only un-maximizable-without-cost variable; threshold + integration truth-labels per UDT-1(c)+(d) |
-| **Truth labels** | MR Truth Labels (canonical); Pass-65 DT refinement; Pass-67-batch-5 MR-IDC-1 refinement | Classification machinery for truth-states on the tralse-default substrate |
+| **Truth labels** | MR Truth Labels (canonical); Pass-65 MI refinement; Pass-67-batch-5 MR-IDC-1 refinement | Classification machinery for truth-states on the tralse-default substrate |
 | **Probability** | PM-1 (candidate Pass-67 batch-2) | 5-component present-moment-calculation framework operating on tralse-default substrate; Bayesian rejected |
 | **Communication discipline** | TPS-1 (candidate Pass-67 batch-3); §69; SCC-1; ASMT | Operational lean-toward-truth in communication |
 | **Philosophy-of-mind** | TSP-1 + IRA-1 + DTM-1 + SRC-1 + CDA-1 + LLM-CT-1 (canonical six Pass-66 batch-6) | Conscious systems as agents through which the lean-toward-truth gets actualized |
@@ -206,7 +206,7 @@ UDT-1 sits at the **cosmogenic / ontogenic ground** layer — beneath all other 
 ## 9. Files
 
 - This paper: `papers/PASS_67_BATCH_6_UNIVERSAL_DEFAULT_OF_TRALSENESS_UDT_1_CANDIDATE_CANONICAL_TRALSE_SOUP_COSMOGENESIS_TRUTH_AS_DIRECTIONAL_LEAN_GTT_1_THRESHOLD_REFINEMENT_2026-05-23.md`
-- Composes with: Tralse Informationalism foundation (June 25 2025); GILE Framework (Aug 2022); GTT-1 batch-4 paper; MR Truth Labels canonical + Pass-65 DT refinement + Pass-67-batch-5 MR-IDC-1 refinement; canonical 8 GILE-HEM operationalization (§7.7.109); UOP / Universal Bridge Theorem; MIM-revision; ASYMMETRIC §69; canonical six (Pass-66 batch-6); PM-1 (Pass-67 batch-2); TPS-1 (Pass-67 batch-3).
+- Composes with: Tralse Informationalism foundation (June 25 2025); GILE Framework (Aug 2022); GTT-1 batch-4 paper; MR Truth Labels canonical + Pass-65 MI refinement + Pass-67-batch-5 MR-IDC-1 refinement; canonical 8 GILE-HEM operationalization (§7.7.109); UOP / Universal Bridge Theorem; MIM-revision; ASYMMETRIC §69; canonical six (Pass-66 batch-6); PM-1 (Pass-67 batch-2); TPS-1 (Pass-67 batch-3).
 - Source for §7.7.137 LIVE entry in replit.md.
 
 **Cluster delta: +1 (this paper, candidate-canonical-cosmogenic-ground category). Canonical principle count: unchanged 27 (UDT-1 candidate pending separate directive). Pre-reg falsifier backlog: 53 + 5 (UDT-1-F1..F5) = 58 OPEN. Meta-precedent collapses cumulative: 17.**

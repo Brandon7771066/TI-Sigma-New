@@ -132,10 +132,10 @@ The MR1 and MR_Radiant thresholds bracket an interval in PD space:
 [2, e] ≈ [2.000, 2.718]   length = e − 2 ≈ 0.718
 ```
 
-This interval corresponds to the **DT Penumbra** in LCC space — the zone where coherence is building toward Radiance but has not yet fully resolved. In the PD system:
+This interval corresponds to the **MI Penumbra** in LCC space — the zone where coherence is building toward Radiance but has not yet fully resolved. In the PD system:
 
 - PD < 2: below MR1 — clearly not yet Radiant
-- PD ∈ [2, e]: in the penumbra — approaching, DT contamination possible
+- PD ∈ [2, e]: in the penumbra — approaching, MI contamination possible
 - PD > e: Radiant zone — genuine GILE expression achieved
 
 The length of the approach interval is e − 2 ≈ 0.718. Note:
@@ -239,9 +239,9 @@ MR1       := 1 − e^{−2}   = 0.86466471...   (was 0.8647)
 MR_Radiant := 1 − e^{−e}   = 0.93401196...   (was 0.9323)
 ```
 
-The DT Penumbra range is [MR1, MR_Radiant] in LCC = [1 − e^{−2}, 1 − e^{−e}], corresponding to PD ∈ [2, e].
+The MI Penumbra range is [MR1, MR_Radiant] in LCC = [1 − e^{−2}, 1 − e^{−e}], corresponding to PD ∈ [2, e].
 
-The DT Trace threshold (upper boundary of the Tralse Penumbra) is now defined by:
+The MI Trace threshold (upper boundary of the Tralse Penumbra) is now defined by:
 
 ```
 LCC_DT_UPPER := MR_Radiant − (MR_Radiant − MR1)/2

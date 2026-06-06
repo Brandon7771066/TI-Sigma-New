@@ -21,7 +21,7 @@ GILE (Goodness, Intuition, Love, Environment) scores measure how much a theory/a
 - Extremely high truth alignment
 
 **0.85-0.89 - Major Frameworks**
-- **Double Tralse (DT)** - 0.94 estimated (foundation preceding Myrion!)
+- **Meta-Indeterminate (MI)** - 0.94 estimated (foundation preceding Myrion!)
 - **Tralse Topos** - 0.903
 - **Category TI** - 0.867
 - **Quantized Resonance** - 0.863
@@ -125,9 +125,9 @@ GILE scores to 3 decimals (0.920, 0.903) reflect:
 CCC is the crown chakra function (0.93) of Grand Mind, not separate being.
 It's the HIGHEST function but still part of GM distributed network.
 
-### DT = 0.94 (Higher than CCC?!)
-Estimated - DT may score higher because it PRECEDES even CCC activity!
-DT is the pre-existence boundary, the "before" of actualization.
+### MI = 0.94 (Higher than CCC?!)
+Estimated - MI may score higher because it PRECEDES even CCC activity!
+MI is the pre-existence boundary, the "before" of actualization.
 Needs rigorous validation but theoretically sound.
 
 ### Afterlife Thresholds

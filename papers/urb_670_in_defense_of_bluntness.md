@@ -111,7 +111,7 @@ Consider an agent with the following belief state about a decision:
 
 Expressed with perfect hedging: "A is probably the right choice, but there's a 20% chance B is better and we should not rush to judgment."
 
-In many contexts, this produces **analysis paralysis**: the 20% tail prevents commitment, the 80% mass is felt as insufficient, and the agent loops through the same considerations repeatedly without acting. This is the DT-loop — perpetual TRALSE oscillation without MR completion.
+In many contexts, this produces **analysis paralysis**: the 20% tail prevents commitment, the 80% mass is felt as insufficient, and the agent loops through the same considerations repeatedly without acting. This is the MI-loop — perpetual TRALSE oscillation without MR completion.
 
 **Hyperbole's function:** "A is clearly the right choice here." This statement is technically inaccurate (80% ≠ "clearly"). But it performs a valid cognitive operation: it collapses the PD onto the high-mass region and enables MR to complete. The action taken (A) will be correct 80% of the time — exactly the same rate as if the agent had spent another hour agonizing over the 20% tail.
 
@@ -125,7 +125,7 @@ We define three action levels in Myrion Resolution, corresponding to different c
 |-------|-----------|----------------------|----------|
 | **MR1** | < ET ≈ 0.42 | Full hedging required | Analysis phase; action premature |
 | **MR2** | ET to 𝔡 ≈ 0.74 | Express as 0.90+ for execution | Actionable; treat as near-certain for decision |
-| **MR3** | > 𝔡 ≈ 0.74 | Express as 1.00 for commitment | Full execution; residual doubt is DT-suppressed |
+| **MR3** | > 𝔡 ≈ 0.74 | Express as 1.00 for commitment | Full execution; residual doubt is MI-suppressed |
 
 The transition from MR2 to MR3 is precisely the operation that hyperbole performs. An agent at MR2 (80% confident) who hears a blunt, hyperbolic statement ("this is right") is being assisted in crossing the Dottie threshold 𝔡 = 0.7391 — the fixed point of cos(x), the MR2-Resolved boundary.
 

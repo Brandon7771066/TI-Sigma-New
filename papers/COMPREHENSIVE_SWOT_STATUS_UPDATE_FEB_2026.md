@@ -166,22 +166,22 @@ Each entry uses a standardized format:
 
 ---
 
-## 5. True-Tralseness (TT) vs Dark-Tralseness (DT)
+## 5. True-Tralseness (TT) vs Dark-Tralseness (MI)
 
 **Status:** DEVELOPING  
 **Papers:** ANTI_GILE_ONTOLOGICAL_HOLES.md, EVIL_AS_MORAL_EMPTY_SPACE.md, SACRED_DETERMINACY_EVIL_INDETERMINACY.md  
 **Evidence Level:** FORMAL (defined) + SPECULATIVE (cosmological applications)
 
 **STRENGTHS:**
-- S1: Clean moral ontology — TT = creation/coherence, DT = destruction/entropy
+- S1: Clean moral ontology — TT = creation/coherence, MI = destruction/entropy
 - S2: Evil as Moral Empty Space is philosophically sophisticated (extended privation theory)
-- S3: ~13% TT vs ~87% DT ratio maps to dark energy/matter ratio (~87% dark)
+- S3: ~13% TT vs ~87% MI ratio maps to dark energy/matter ratio (~87% dark)
 - S4: 90% sustainable TT ceiling provides realistic optimization target
 
 **WEAKNESSES:**
 - W1: The 13/87 ratio mapping to dark energy is numerological without demonstrated mechanism
-- W2: DT² = -1 as Big Bang mechanism is speculative cosmology
-- W3: Binary TT/DT categories seem to tension with spectral tralse logic
+- W2: MI² = -1 as Big Bang mechanism is speculative cosmology
+- W3: Binary TT/MI categories seem to tension with spectral tralse logic
 
 **OPPORTUNITIES:**
 - O1: If dark energy measurements converge on 87%, this becomes predictive
@@ -192,8 +192,8 @@ Each entry uses a standardized format:
 - T2: The 87% connection could be coincidental
 
 **HOLES TO FILL:**
-1. Mechanism linking TT/DT ratio to dark energy percentage
-2. Reconcile binary TT/DT with spectral tralse logic (aren't these contradictory?)
+1. Mechanism linking TT/MI ratio to dark energy percentage
+2. Reconcile binary TT/MI with spectral tralse logic (aren't these contradictory?)
 3. Empirical tests beyond numerological correspondence
 
 ---
@@ -528,7 +528,7 @@ Each entry uses a standardized format:
 
 ---
 
-## 19. Big Bang as DT-Myrion Shattering
+## 19. Big Bang as MI-Myrion Shattering
 
 **Status:** SPECULATIVE  
 **Papers:** DT_BRITTLENESS_COSMOLOGY.md, ORIGINAL_PHOTON_DT_SHELL_REVELATION.md  
@@ -536,7 +536,7 @@ Each entry uses a standardized format:
 
 **STRENGTHS:**
 - S1: Creative cosmological narrative
-- S2: DT = dark energy post-shattering is an interesting mapping
+- S2: MI = dark energy post-shattering is an interesting mapping
 
 **WEAKNESSES:**
 - W1: No empirical distinction from standard Big Bang theory
@@ -544,7 +544,7 @@ Each entry uses a standardized format:
 
 **HOLES TO FILL:**
 1. Unique prediction that differs from standard cosmology
-2. Calculate something — what does DT² = -1 predict quantitatively?
+2. Calculate something — what does MI² = -1 predict quantitatively?
 
 ---
 
@@ -745,7 +745,7 @@ Each entry uses a standardized format:
 **Evidence Level:** SPECULATIVE (analogy)
 
 **STRENGTHS:**
-- S1: i = DT mapping is poetic and memorable
+- S1: i = MI mapping is poetic and memorable
 - S2: Euler's identity as Big Bang equation is creative
 
 **WEAKNESSES:**
@@ -754,7 +754,7 @@ Each entry uses a standardized format:
 
 **HOLES TO FILL:**
 1. Why this specific mapping and not others?
-2. Prediction that follows from i = DT
+2. Prediction that follows from i = MI
 
 ---
 

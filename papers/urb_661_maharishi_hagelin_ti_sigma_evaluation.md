@@ -86,7 +86,7 @@ The convergence is strong. TI Sigma provides the mathematical framework (HEAR sc
 
 ### 4.1 The Vedic Completeness Claim
 
-Maharishi claimed that all scientific knowledge is already contained in the Vedic texts. TI Sigma respectfully rejects this claim as **DT-immune-failing** — it is a Double Tralse in disguise, masking as unity while actually enforcing closure. If all truth is already in the Vedas, there can be no genuine novelty, no emergent knowledge, no MR beyond what is already encoded. This contradicts MR's fundamental openness.
+Maharishi claimed that all scientific knowledge is already contained in the Vedic texts. TI Sigma respectfully rejects this claim as **MI-immune-failing** — it is a Meta-Indeterminate in disguise, masking as unity while actually enforcing closure. If all truth is already in the Vedas, there can be no genuine novelty, no emergent knowledge, no MR beyond what is already encoded. This contradicts MR's fundamental openness.
 
 **TI Sigma position**: Vedic texts contain *extraordinary* insights that function as pre-theoretical MR convergences — wisdom that anticipates physics without formalizing it. But this is different from containment. The Vedas are the beginning of TI Sigma, not its ceiling.
 

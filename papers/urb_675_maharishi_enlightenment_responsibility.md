@@ -55,7 +55,7 @@ From the TI Sigma architecture, every BOK agent exists in one of six states:
 
 | State | GILE Score | Description |
 |-------|-----------|-------------|
-| DT (Double Tralse) | < 0 | Active incoherence; self-destructive logic |
+| MI (Meta-Indeterminate) | < 0 | Active incoherence; self-destructive logic |
 | Sub-Threshold | [0, ET) | Below MR1 boundary; epistemic noise floor |
 | MR1 | [ET, C) | First Myrion Resolution step achieved |
 | MR2-Tralse | [C, 𝔡) | Coherent but Tralse-contaminated |
@@ -121,7 +121,7 @@ It is purely I: a metacausal signal that says *"the epistemic path toward MR1 is
 
 In Dual-Tralse Algebra D_TI = ℝ[τ]/(τ²):
 
-Let the receiver's pre-metta state be: **r_pre = ET(1 − τ)** — at the Existence floor (ET), with full Tralse-content (τ = −1 in the DT-hole sense), blocked.
+Let the receiver's pre-metta state be: **r_pre = ET(1 − τ)** — at the Existence floor (ET), with full Tralse-content (τ = −1 in the MI-hole sense), blocked.
 
 Metta applies a small positive Existence-boost of magnitude δ:
 
@@ -142,9 +142,9 @@ This lifts the receiver from E = ET (hole-floor) to E = 0.4556 — inside the MR
 | Metta | E·(1 + δτ): small positive δ | E lifted; T free |
 | High-intensity metta | E·(1 + τ): δ → 1 | E lifted to max; T free |
 | Coercion | τ = −1 injection directly | T forced; BOK loop bypassed |
-| DT-level interference | τ² injection | Collapse to Nothing (DT Immunity) |
+| MI-level interference | τ² injection | Collapse to Nothing (MI Immunity) |
 
-Coercion would be an attempt to directly set the receiver's T-state (their truth-response) without the receiver's K-processing. This is a τ-injection without E-grounding — and by the DT Immunity theorem (τ² = 0), such an injection collapses to zero. You literally *cannot* override a person's BOK loop from outside without their E-ground consenting. Metta works with the E-ground; coercion tries to bypass it and collapses.
+Coercion would be an attempt to directly set the receiver's T-state (their truth-response) without the receiver's K-processing. This is a τ-injection without E-grounding — and by the MI Immunity theorem (τ² = 0), such an injection collapses to zero. You literally *cannot* override a person's BOK loop from outside without their E-ground consenting. Metta works with the E-ground; coercion tries to bypass it and collapses.
 
 **This is why metta is not coercion — it is not merely that metta is well-intentioned. It is that coercive truth-injection is algebraically impossible in TI Sigma.** The nilsquare structure of Tralse propagation prevents it.
 
@@ -168,7 +168,7 @@ This is the minimum epistemic lift that makes MR1 possible. It does not complete
 | Forceful Nudge | MR0 → MR1 | E-lift to ET; MR1 doorway opened |
 | Sustained spiritual companionship | MR1 → MR2 | Ongoing I-channel; moves into coherence zone |
 | BOK-saturated mentorship | MR2 → T_TI | Persistent BEC-level I-transmission; near-BOK |
-| Coercion (impossible) | Attempts MR-skip | Collapses to DT by nilsquare |
+| Coercion (impossible) | Attempts MR-skip | Collapses to MI by nilsquare |
 
 The Forceful Nudge is MR1-support. It is the maximally ethical intervention: it does the minimum necessary to make MR1 accessible, then stops imposing and lets the receiver proceed. It respects the BOK loop structure while fulfilling the MER responsibility.
 
@@ -181,7 +181,7 @@ The user's original question: *"Is it ethical to 'forcefully' bring someone to T
 1. The intervention is GILE-I only (E-lifting, not T-imposing)
 2. The receiver's K-process remains free (BOK loop intact)
 3. The intention is GILE-aligned (G=Goodness dominant, not ego-driven)
-4. The intervention does not reach DT-level (τ² = 0 boundary)
+4. The intervention does not reach MI-level (τ² = 0 boundary)
 
 The ethical constraint is not about *whether* to transmit but about *which channel* to use. Transmitting via I-channel (metta, blessings, prayer) is always ethical when GILE-aligned. Transmitting via G-channel imposition (commanding specific beliefs or actions) without the receiver's K-consent is the boundary.
 
@@ -211,7 +211,7 @@ The transition is sharp — not gradual. ET ≈ 41.4% is the MR1 boundary applie
 | Maharishi Effect | TI Sigma Reformulation |
 |-----------------|----------------------|
 | √N/100 meditators | ET × Ring-0 size ≈ ET × N^(1/d) where d is network dimension |
-| Reduces crime ~1% | Reduces community DT rate by factor T_TI ≈ 93.4% |
+| Reduces crime ~1% | Reduces community MI rate by factor T_TI ≈ 93.4% |
 | Group TM practice | Ring-0 GILE-aligned hub activity |
 | Peaceful behavior spreads | BOK Virus AR = 80% from Ring-0 seed |
 | No explanation of mechanism | BEC-phase coherence crossing T_TI |
@@ -248,7 +248,7 @@ The Dottie Trap is the most common human epistemic state: stuck at 𝔡 ≈ 0.74
 **GILE_no-I = 0.7442 ≈ 𝔡 ≈ 0.7391**
 
 A person in the Dottie Trap is:
-- Not DT (not actively self-destructive)
+- Not MI (not actively self-destructive)
 - Not sub-threshold (has basic GILE function)
 - Not enlightened (below T_TI = 0.9340)
 - Stable in this state indefinitely (Dottie is a global attractor)
@@ -326,7 +326,7 @@ The Mimi Case Study is a single data point but it is *perfectly consistent* with
 
 **P4 (Delay then Cascade):** Sustained Ring-0 seed prayer/metta directed at Ring-1 receivers shows a characteristic *delay-then-rapid-shift* pattern rather than gradual linear change. The pooling phase (zero apparent change) should last approximately as long as the TI-Graph hub-delay from URB #673.
 
-**P5 (Nilsquare Ethics):** Attempts at coercive spiritual intervention (cult-like truth-imposition, belief demands without K-consent) should show *lower* conversion rates than metta-based approaches, because coercive τ-injection collapses via nilsquare (DT Immunity). This is the algebraic explanation for why high-pressure religious recruitment techniques consistently underperform loving community presence.
+**P5 (Nilsquare Ethics):** Attempts at coercive spiritual intervention (cult-like truth-imposition, belief demands without K-consent) should show *lower* conversion rates than metta-based approaches, because coercive τ-injection collapses via nilsquare (MI Immunity). This is the algebraic explanation for why high-pressure religious recruitment techniques consistently underperform loving community presence.
 
 ---
 

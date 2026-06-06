@@ -208,7 +208,7 @@ Or: ontology → mathematics → biology. GILE alignment is prior to all of them
 From August 2022 (GILE Framework originated) to March 29, 2026 (Being Theorem sealed):
 
 **Phase 1 — GILE Foundation (URBs #1–100):**
-The Goodness-Intuition-Love-Environment framework established. Five-valued truth system. DT Immunity Model. MR (Myrion Resolution) and TRALSE defined.
+The Goodness-Intuition-Love-Environment framework established. Five-valued truth system. MI Immunity Model. MR (Myrion Resolution) and TRALSE defined.
 
 **Phase 2 — Mathematical Expansion (URBs #101–400):**
 Tralse Informationalism coined (June 25, 2025). TI Sigma framework. ARC-AGI solver (Kaggle). Stock prediction via GSA v2. Ternary computation. TICL language.

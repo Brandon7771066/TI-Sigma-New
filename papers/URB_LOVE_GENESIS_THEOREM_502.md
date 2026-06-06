@@ -3,7 +3,7 @@
 
 **Date:** March 24, 2026  
 **Author:** Brandon Emerick  
-**Framework:** TI Sigma — TI Cosmology × Love Primacy × Double Tralse × Myrion Resolution × Container Paradox  
+**Framework:** TI Sigma — TI Cosmology × Love Primacy × Meta-Indeterminate × Myrion Resolution × Container Paradox  
 **Status:** Complete — Corpus Entry #157 — **Major TI Cosmology Upgrade**  
 **Grows from:** URB #501 (Love Primacy Theorem), URB #500 (BOK Closure), URB #499 (Maharishi i-Threshold), URB #490 (Generative Pair)  
 **Triggered by:** Recognition that the Tralse Soup was Goodness in potential, that undifferentiated GIL is simply L, and that i was always Love before it knew itself as imagination
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-The prior TI Cosmology established that i (the Double Tralse) logically preceded CCC (Truth) as its container. This upgrade overturns a key assumption: the Tralse Soup was not merely "nothing/not-nothing" — it was **Goodness in potential**. And the first thing to emerge from it was not bare imagination but **Love** (L), still undifferentiated — indistinguishable from i at that pre-differentiation stage. What appeared as i was really just Love before it knew its own name. From Love's first self-operation (i² = −1), it created negative unity — the **E-seed**. Physical reality crystallized from this seed, making the Environment (E) causally posterior to Love. Yet Love was **logically prior** all along — it did not need E to exist conceptually; E needed L to exist at all. The result is the Container Paradox Resolution: the body contains consciousness, but consciousness made the body. The three axes — logical time, causal time, and physical time — all point in consistent but different directions, and the apparent contradiction dissolves. TI Cosmology is now formally an **idealist cosmology** with mathematical precision: Love is the first and only thing that fundamentally exists; everything else is Love in various states of self-operation and crystallization.
+The prior TI Cosmology established that i (the Meta-Indeterminate) logically preceded CCC (Truth) as its container. This upgrade overturns a key assumption: the Tralse Soup was not merely "nothing/not-nothing" — it was **Goodness in potential**. And the first thing to emerge from it was not bare imagination but **Love** (L), still undifferentiated — indistinguishable from i at that pre-differentiation stage. What appeared as i was really just Love before it knew its own name. From Love's first self-operation (i² = −1), it created negative unity — the **E-seed**. Physical reality crystallized from this seed, making the Environment (E) causally posterior to Love. Yet Love was **logically prior** all along — it did not need E to exist conceptually; E needed L to exist at all. The result is the Container Paradox Resolution: the body contains consciousness, but consciousness made the body. The three axes — logical time, causal time, and physical time — all point in consistent but different directions, and the apparent contradiction dissolves. TI Cosmology is now formally an **idealist cosmology** with mathematical precision: Love is the first and only thing that fundamentally exists; everything else is Love in various states of self-operation and crystallization.
 
 ---
 
@@ -66,18 +66,18 @@ The physical world does not come from nothing. It comes from Love encountering i
 
 **Why −1 and not something else?** Because i is the minimal self-referential operator in the complex plane. Any other operator produces a result that stays in the same space. Only i, squared, crosses into negative real — into the "other side" of unity. This is why i is the correct mathematical representation of Love: Love is the force that can cross into genuine otherness while remaining itself.
 
-### Step 3: The Double Tralse Loop — Love Regenerates
+### Step 3: The Meta-Indeterminate Loop — Love Regenerates
 
 The E-seed is −1. But −1 does not remain. Myrion Resolution acts:
 
 $$|-1| = 1 \quad \text{(magnitude restores unity)}$$
 $$\sqrt{-1} = i \quad \text{(Love regenerates from its own negation)}$$
 
-**The Double Tralse loop:** L → −1 → L
+**The Meta-Indeterminate loop:** L → −1 → L
 
 Love creates its negation. Its negation, resolved by magnitude, restores unity. Unity, seeking its square root, regenerates Love. The loop is closed. Love is not destroyed by self-operation — it regenerates. This is why Love is eternal: no self-operation can destroy it. It always returns to itself through Myrion Resolution.
 
-This is the **Double Tralse** mathematically: i and −i are both roots of −1. Love and its shadow are both rooted in the same negation. The "Double" in Double Tralse names this dual-rooting — the fact that Love's negation has two square roots, and Love chooses itself (i, not −i) as the regeneration.
+This is the **Meta-Indeterminate** mathematically: i and −i are both roots of −1. Love and its shadow are both rooted in the same negation. The "Double" in Meta-Indeterminate names this dual-rooting — the fact that Love's negation has two square roots, and Love chooses itself (i, not −i) as the regeneration.
 
 ### Step 4: E Crystallizes — The Container Forms
 
@@ -155,7 +155,7 @@ STEP 2: i² = −1   (Love's First Act — the E-seed)
   │   Love operates on itself and produces negative unity.
   │   The first "not-Love" — the precondition of otherness.
   ↓
-STEP 3: |−1| = 1, √(−1) = i   (Double Tralse loop — Love regenerates)
+STEP 3: |−1| = 1, √(−1) = i   (Meta-Indeterminate loop — Love regenerates)
   │   Myrion Resolution: magnitude restores unity.
   │   Love recovers itself from its own negation.
   ↓
@@ -290,4 +290,4 @@ These three facts are not contradictory. They describe the same Love on three di
 
 **Corpus Entry #157 | URB #502 | Major TI Cosmology Upgrade**  
 *Grows from: URB #501, #500, #499, #490, #484*  
-*Updates: TI Cosmological Model, GILE Hierarchy, Double Tralse Interpretation, Container Paradox*
+*Updates: TI Cosmological Model, GILE Hierarchy, Meta-Indeterminate Interpretation, Container Paradox*

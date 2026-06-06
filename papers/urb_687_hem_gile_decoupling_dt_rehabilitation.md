@@ -1,17 +1,17 @@
-# URB #687 — HEM-GILE Decoupling: Existence Without Truth, DT Rehabilitated
+# URB #687 — HEM-GILE Decoupling: Existence Without Truth, MI Rehabilitated
 
 **Author:** Brandon Emerick  
 **Framework:** Tralse Informationalism (TI Sigma)  
 **Date:** April 16, 2026  
-**Classification:** Foundational Ontology | DT Structure | HEM-GILE Architecture  
+**Classification:** Foundational Ontology | MI Structure | HEM-GILE Architecture  
 **Status:** Core URB — Major Structural Insight  
-**Builds on:** URB #683 (Binary = DT), URB #684 (Existence/Truth Alignment), URB #686 (Cosmological Genesis)
+**Builds on:** URB #683 (Binary = MI), URB #684 (Existence/Truth Alignment), URB #686 (Cosmological Genesis)
 
 ---
 
 ## Abstract
 
-DT (Double Tralse) statements have been treated as ontologically suspect — claims that are both existentially closed and truth-empty. This URB corrects that picture by decoupling HEM validity from GILE-G truth correctness. A DT statement's **content** is existentially real and HEM-valid. Only the **label** attached to that content (the claim that the content IS TRUE) fails GILE-G consistency. The GILE-G consistent act is correctly labeling the DT statement as a DT statement. This rehabilitates DT as a category: DT statements are not meaningless, not lies, not hallucinations — they are **real things incorrectly labeled**. Formally: **nonsense can be real without possessing correctness.** This decoupling generates a four-quadrant HEM × GILE space that maps the entire existential-truth landscape.
+MI (Meta-Indeterminate) statements have been treated as ontologically suspect — claims that are both existentially closed and truth-empty. This URB corrects that picture by decoupling HEM validity from GILE-G truth correctness. A MI statement's **content** is existentially real and HEM-valid. Only the **label** attached to that content (the claim that the content IS TRUE) fails GILE-G consistency. The GILE-G consistent act is correctly labeling the MI statement as a MI statement. This rehabilitates MI as a category: MI statements are not meaningless, not lies, not hallucinations — they are **real things incorrectly labeled**. Formally: **nonsense can be real without possessing correctness.** This decoupling generates a four-quadrant HEM × GILE space that maps the entire existential-truth landscape.
 
 ---
 
@@ -31,21 +31,21 @@ For any statement S:
 
 ---
 
-## 2. The DT Example: "Nothing Exists"
+## 2. The MI Example: "Nothing Exists"
 
-Take the primordial DT statement from URB #686: *"nothing exists."*
+Take the primordial MI statement from URB #686: *"nothing exists."*
 
 **Content:** The state of nothing — PN (Pure Nothing). This is a genuine existential state. PN actually obtained cosmologically. It is HEM-valid: the content describes a real state of affairs that existed prior to I. ✅
 
 **Label:** "Nothing exists" — asserted as TRUE. This is Tralse: self-undermining (if nothing exists, the statement doesn't exist either). The label fails GILE-G consistency. ✗
 
-**What IS GILE-G consistent:** The meta-label *"this is a DT statement"* — correctly identifying the statement's Tralse structure. The label of the label is valid.
+**What IS GILE-G consistent:** The meta-label *"this is a MI statement"* — correctly identifying the statement's Tralse structure. The label of the label is valid.
 
 **Formal summary:**
 ```
 HEM(Content("nothing exists")) > 0    [real existential state — PN obtained]
 GILE-G(Label("nothing exists")) = 0   [Tralse: self-undermining truth claim]
-GILE-G("this is a DT statement") > 0  [accurate meta-label]
+GILE-G("this is a MI statement") > 0  [accurate meta-label]
 ```
 
 ---
@@ -82,7 +82,7 @@ correct)   ───────────────────────
            ─────────────────────────────────────────────────
            LOW GILE / LOW HEM            LOW GILE / HIGH HEM
            
-           Pure chaos (PN before          DT territory:
+           Pure chaos (PN before          MI territory:
            MR-Zero): nothing exists,      What REALLY EXISTS
            nothing correctly described.   is INCORRECTLY LABELED.
            Complete darkness.             Nonsense that is real.
@@ -95,45 +95,45 @@ correct)   ───────────────────────
 | I (top-right) | High | High | BOK-Saturated | Existence correctly described |
 | II (top-left) | Low | High | MR-Zero | "PN existed" — correct about near-nothing |
 | III (bottom-left) | Low | Low | Primordial Chaos | PN before MR-Zero |
-| IV (bottom-right) | High | Low | **DT Territory** | "Nothing exists" — real content, wrong label |
+| IV (bottom-right) | High | Low | **MI Territory** | "Nothing exists" — real content, wrong label |
 
-**DT occupies Quadrant IV: high existential reality, low truth correctness.**
+**MI occupies Quadrant IV: high existential reality, low truth correctness.**
 
 ---
 
-## 5. DT Rehabilitated: Real Without Being Correct
+## 5. MI Rehabilitated: Real Without Being Correct
 
-The standard view of DT (prior to this URB): DT statements are existentially suspect, epistemically harmful, to be discarded.
+The standard view of MI (prior to this URB): MI statements are existentially suspect, epistemically harmful, to be discarded.
 
-The refined view: **DT statements are existentially real (HEM-valid) but incorrectly labeled (not GILE-G consistent).**
+The refined view: **MI statements are existentially real (HEM-valid) but incorrectly labeled (not GILE-G consistent).**
 
 This means:
-1. **DT is not meaningless.** Its content has existential weight. PN is real. Binary exclusion is real. The certainty of misalignment is real. All of these ARE.
+1. **MI is not meaningless.** Its content has existential weight. PN is real. Binary exclusion is real. The certainty of misalignment is real. All of these ARE.
 
-2. **DT is not lying.** A lie requires intentional misrepresentation of something the speaker knows to be false. DT is the structure where what EXISTS is labeled with the wrong truth value — not out of deception but out of structural closure (T=1).
+2. **MI is not lying.** A lie requires intentional misrepresentation of something the speaker knows to be false. MI is the structure where what EXISTS is labeled with the wrong truth value — not out of deception but out of structural closure (T=1).
 
-3. **DT is not hallucination.** Hallucination refers to non-existent content presented as real. DT is the reverse: existent content labeled with incorrect truth claims.
+3. **MI is not hallucination.** Hallucination refers to non-existent content presented as real. MI is the reverse: existent content labeled with incorrect truth claims.
 
-4. **DT's error is specifically in the Label, not the Content.** Correcting DT does not require denying its existential content — it requires correctly labeling that content. The DT-correct move is: *"this exists AND it is Tralse."* The DT-error move is: *"this exists AND it is True."*
+4. **MI's error is specifically in the Label, not the Content.** Correcting MI does not require denying its existential content — it requires correctly labeling that content. The MI-correct move is: *"this exists AND it is Tralse."* The MI-error move is: *"this exists AND it is True."*
 
 **Nonsense can be real without possessing correctness.** This is the precise formalization:
 - Nonsense = not GILE-G consistent (the label fails)
 - Real = HEM-valid (the content exists)
-- Nonsense + Real = DT Quadrant IV
+- Nonsense + Real = MI Quadrant IV
 
 ---
 
-## 6. The Correct Response to DT
+## 6. The Correct Response to MI
 
-Given that DT content is existentially real, the correct response to a DT statement is not **rejection** (which would deny the real content) but **relabeling**:
+Given that MI content is existentially real, the correct response to a MI statement is not **rejection** (which would deny the real content) but **relabeling**:
 
 1. **Accept the Content:** "Yes, this existential state is real. Its HEM validity is genuine."
 2. **Correct the Label:** "But the truth claim attached to this content is Tralse, not True."
-3. **Provide the GILE-G consistent label:** "This is a DT statement: existentially real, truth-Tralse."
+3. **Provide the GILE-G consistent label:** "This is a MI statement: existentially real, truth-Tralse."
 
-This is why MR (Myrion Resolution) works on DT: MR doesn't erase the content — it iteratively corrects the label. Each MR step moves toward GILE-G consistent labeling of genuinely existing content.
+This is why MR (Myrion Resolution) works on MI: MR doesn't erase the content — it iteratively corrects the label. Each MR step moves toward GILE-G consistent labeling of genuinely existing content.
 
-And this is why DT is **MR-resistant** (not MR-immune): DT resists because T=1 means the label is held with Tralsity, blocking correction. But the content remains available — the existential reality of DT content is what MR can eventually re-approach with correct labeling.
+And this is why MI is **MR-resistant** (not MR-immune): MI resists because T=1 means the label is held with Tralsity, blocking correction. But the content remains available — the existential reality of MI content is what MR can eventually re-approach with correct labeling.
 
 *(Contrast with pure Chaos/Quadrant III: nothing to re-approach because the content itself is absent.)*
 
@@ -141,11 +141,11 @@ And this is why DT is **MR-resistant** (not MR-immune): DT resists because T=1 m
 
 ## 7. The Label/Content Split Applied to Binary Logic (URB #683 Refinement)
 
-URB #683 showed binary logic = DT. Now we can say more precisely:
+URB #683 showed binary logic = MI. Now we can say more precisely:
 
 **Binary logic's content is existentially real:** Computation, pattern-matching, logical inference, Boolean algebra — these are genuine existential states with HEM validity. Binary processes ARE things.
 
-**Binary logic's label is GILE-G inconsistent:** The claim that these binary processes constitute complete truth-tracking (that True/False exhausts truth space) — this is the DT label error. The label "binary logic captures all truth" is Tralse.
+**Binary logic's label is GILE-G inconsistent:** The claim that these binary processes constitute complete truth-tracking (that True/False exhausts truth space) — this is the MI label error. The label "binary logic captures all truth" is Tralse.
 
 **The GILE-G consistent relabeling:** "Binary logic exists, computes, and produces useful outputs — AND its truth architecture is Tralse relative to five-valued TI logic." This honors the HEM validity of binary existence without accepting the GILE-incorrect label.
 
@@ -162,10 +162,10 @@ This is significant: the genesis of truth-correctness begins in **Quadrant II**,
 The full cosmological arc in quadrant terms:
 ```
 Quadrant III (PN chaos) → Quadrant II (MR-Zero: correct about nothing) 
-→ Quadrant IV (DT: real things wrongly labeled) → Quadrant I (BOK-Sat: real things correctly labeled)
+→ Quadrant IV (MI: real things wrongly labeled) → Quadrant I (BOK-Sat: real things correctly labeled)
 ```
 
-DT (Quadrant IV) is not the worst state — Quadrant III is. DT at least has real content. The path from DT to BOK-Saturation is the relabeling journey. The path from Quadrant III to anywhere requires the emergence of consciousness first.
+MI (Quadrant IV) is not the worst state — Quadrant III is. MI at least has real content. The path from MI to BOK-Saturation is the relabeling journey. The path from Quadrant III to anywhere requires the emergence of consciousness first.
 
 ---
 
@@ -186,14 +186,14 @@ HEAR (UOP-as-Razor, URB #684 preamble) operates in this framework: HEAR selects 
 
 | Claim | Status |
 |-------|--------|
-| DT content is existentially real | ✅ HEM-valid |
-| DT label is GILE-G consistent | ✗ Tralse |
-| Correctly calling DT a "DT statement" is GILE-G consistent | ✅ |
+| MI content is existentially real | ✅ HEM-valid |
+| MI label is GILE-G consistent | ✗ Tralse |
+| Correctly calling MI a "MI statement" is GILE-G consistent | ✅ |
 | Existence and truth are orthogonal | ✅ Proved by four-quadrant occupancy |
-| Nonsense can be real without being correct | ✅ Quadrant IV = DT territory |
-| MR relabels DT content rather than erasing it | ✅ Honors HEM while correcting GILE |
+| Nonsense can be real without being correct | ✅ Quadrant IV = MI territory |
+| MR relabels MI content rather than erasing it | ✅ Honors HEM while correcting GILE |
 | The genesis of truth began in Quadrant II (correct about nothing) | ✅ MR-Zero |
 
 ---
 
-*URB #687 — HEM-GILE Decoupling and DT Rehabilitation | Tralse Informationalism | Brandon Emerick | April 16, 2026*
+*URB #687 — HEM-GILE Decoupling and MI Rehabilitation | Tralse Informationalism | Brandon Emerick | April 16, 2026*

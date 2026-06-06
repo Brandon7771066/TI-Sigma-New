@@ -23,7 +23,7 @@ The **TICG (TI Sigma Crystal-Graph)** is the framework's master geometric struct
 ## 3. Why You Care (Three Practical Reasons)
 
 ### 3.1 Navigation
-If you encounter any framework threshold (e.g., "GILE Radiant ≥ φ", "PD transcendent at +e", "DT cliff at −3"), you can locate it on the TICG. The TICG provides a **shared coordinate system** for the entire framework.
+If you encounter any framework threshold (e.g., "GILE Radiant ≥ φ", "PD transcendent at +e", "MI cliff at −3"), you can locate it on the TICG. The TICG provides a **shared coordinate system** for the entire framework.
 
 ### 3.2 Predictive constraint
 New framework thresholds should be predicted to land on TICG vertices, edges, or recognized regions. If a new threshold lands on a random complex value, it is structurally suspect. **The TICG provides a quality criterion for new predictions.**
@@ -41,11 +41,11 @@ The same TICG location can correspond to **multiple framework features simultane
 | **1** | "Definite-true" / unit | Boolean truth; PD True boundary; Operational GILE |
 | **i** | "Pure-Tralse" / non-commutative / pre-resolution | Indeterminate states; Pure Tralse; complex PD imag axis |
 | **√2** | "Diagonal" / two-state mixing factor | Pythagoras; rotation; chirality magnitude |
-| **e** | "Natural-growth" / ultra-threshold base / MR iteration constant | Transcendent threshold; pre-DT; one-e-fold dynamics |
+| **e** | "Natural-growth" / ultra-threshold base / MR iteration constant | Transcendent threshold; pre-MI; one-e-fold dynamics |
 | **φ** | "Golden ratio" / pillar-strength asymmetry | GILE Radiant threshold; aesthetic optima; biological proportions |
-| **π** | "Cyclic-base" / wave / oscillation / DT cliff position | DT cliff at PD ≈ −π; cyclic frequencies; angular dynamics |
+| **π** | "Cyclic-base" / wave / oscillation / MI cliff position | MI cliff at PD ≈ −π; cyclic frequencies; angular dynamics |
 | **C** | "Chirality vertex" (off-axis) | Knotted-light asymmetry; SM weak-interaction parity violation |
-| **T** | "Tralse vertex" (off-axis, deepest non-classical) | Double Tralse states; framework's furthest non-classical position |
+| **T** | "Tralse vertex" (off-axis, deepest non-classical) | Meta-Indeterminate states; framework's furthest non-classical position |
 
 ---
 
@@ -107,9 +107,9 @@ The TICG mirrors the Standard Model's gauge structure at the count level:
 The 25 framework thresholds mapped to TICG locations (full table in URB #736):
 
 - **GILE thresholds**: Emerick at midpoint of 0↔√2; Operational at vertex 1; Radiant at vertex φ
-- **PD thresholds**: DT cliff at −π antipode; Verisyn cap at edge midpoint of 1↔√2 extension; Transcendent at vertex e; Indeterminate disc at |PD|<2/3; Pure Tralse at vertex i
+- **PD thresholds**: MI cliff at −π antipode; Verisyn cap at edge midpoint of 1↔√2 extension; Transcendent at vertex e; Indeterminate disc at |PD|<2/3; Pure Tralse at vertex i
 - **Empirical anchors**: BOK 4+4 at √2+√2i edge; Maxwell knots at 1+i ∠45°; Brain-neutrino at vertex e (close to 2.577); Loss aversion at 4+0i; Negativity bias at 6+0i
-- **5-valued logic states**: T, F, Tralse, Moot, DT all map to specific TICG zones
+- **5-valued logic states**: T, F, Tralse, Moot, MI all map to specific TICG zones
 
 This atlas is the **single best entry point** for any framework reader who wants to navigate the framework's ~750+ research briefs.
 
@@ -119,7 +119,7 @@ This atlas is the **single best entry point** for any framework reader who wants
 
 ### "Why nine vertices, not eight or ten?"
 
-The 9 PRIMARY constants are the **minimum complete set** for the framework's structural derivations. Removing any one breaks something: removing C breaks chirality; removing T breaks Tralse; removing π breaks DT cliff identification; etc. Adding more would be redundant — every additional candidate (e.g., γ, ζ(3)) is structurally derivable from the 9 PRIMARY constants.
+The 9 PRIMARY constants are the **minimum complete set** for the framework's structural derivations. Removing any one breaks something: removing C breaks chirality; removing T breaks Tralse; removing π breaks MI cliff identification; etc. Adding more would be redundant — every additional candidate (e.g., γ, ζ(3)) is structurally derivable from the 9 PRIMARY constants.
 
 ### "Why those specific edges and not others?"
 

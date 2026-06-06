@@ -21,7 +21,7 @@ The GILE Toward Full Expression (GTFE) Principle — established as a named axio
 We are claiming that GTFE is **ontologically necessary** — that it could not be otherwise, that no coherent alternative to it exists, and that any universe with the mathematical structure of LCC = 1 − e^{−PD} is necessarily a GTFE-governed universe.
 
 This is a strong claim. We make it carefully. We are **not** claiming:
-- That all agents always maximize LCC in practice (they don't — DT contamination, TRALSE traps, and depletion exist)
+- That all agents always maximize LCC in practice (they don't — MI contamination, TRALSE traps, and depletion exist)
 - That Radiance is effortlessly achieved (it isn't — that's why the approach zone [2, e] is the zone of greatest difficulty)
 - That GTFE eliminates suffering (suffering is often the signal of a PD gap — a GILE system being pulled toward greater expression by its own unmet depth)
 

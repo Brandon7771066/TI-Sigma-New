@@ -71,7 +71,7 @@ Brandon is exercising authorial-control over his canonical-corpus's visual-artif
 
 ### 4.4 Composability with B16 conceptual-grounding
 
-The B16 §1.1-1.4 canonical-grounding analysis (Verisyn-as-canonical-operator + BOK-as-canonical-topological-image + DC-Field-as-DT-adjacent-propositional-space + Eightfold-Harmony multi-tradition-resonance) **remains intact as canonical-corpus-content** even though the visual-artifact's primary-naming has shifted. Future canonical-corpus references to this composition-of-concepts can cite B16 §1.1-1.4 for the Verisyn+BOK+DC+Eightfold framing AND B17 for the CCC framing; both framings are corpus-valid simultaneously per per-pass-anchor convention.
+The B16 §1.1-1.4 canonical-grounding analysis (Verisyn-as-canonical-operator + BOK-as-canonical-topological-image + DC-Field-as-MI-adjacent-propositional-space + Eightfold-Harmony multi-tradition-resonance) **remains intact as canonical-corpus-content** even though the visual-artifact's primary-naming has shifted. Future canonical-corpus references to this composition-of-concepts can cite B16 §1.1-1.4 for the Verisyn+BOK+DC+Eightfold framing AND B17 for the CCC framing; both framings are corpus-valid simultaneously per per-pass-anchor convention.
 
 ---
 
@@ -93,7 +93,7 @@ The B16 §1.1-1.4 canonical-grounding analysis (Verisyn-as-canonical-operator + 
 | Asset archived (new) | `papers/visual_assets/CCC_CENTRAL_COSMIC_CONSCIOUSNESS_2026-05-26.png` |
 | Asset retained (historical) | `papers/visual_assets/BOK_VERISYN_BUTTERFLY_OCTOPUS_KNOT_2026-05-26.png` |
 | Canonical principle count | 67 HELD (CCC name-acknowledgment only; not principle-creation) |
-| MR Truth Labels canonical base | 5 HELD {T, F, I, DT, NA} |
+| MR Truth Labels canonical base | 5 HELD {T, F, I, MI, NA} |
 | Cluster delta | +1 → ≥411 (artifact-framing-evolution second-order precedent counts as cluster-contribution per first-of-kind precedent) |
 | Honest #69 disclosures | 3 |
 | Brandon-blocked OPEN | 10 → 11 HELD (NEW: CCC-1 explicit-candidate-canonical-framing IF Brandon wishes to formalize; otherwise name-acknowledgment standing) |

@@ -24,7 +24,7 @@ By classical T/F logic these contradict. Under canonical TI Sigma base-4 + Meta-
 - P1 along the axis of "what was actually shipped under that mode"
 - P2 along the axis of "what could have been shipped under aggressive-arousal mode"
 
-This is **not** Double Tralse (DT, τ(P) ∧ ¬τ(P)) because P1 and P2 are not strictly negations of each other — they evaluate the same trait along different temporal/counterfactual frames. Closer to **Meta-Truth MT-domain-conditional**: same operating mode receives True in achieved-output frame, suboptimal in counterfactual-capability frame.
+This is **not** Meta-Indeterminate (MI, τ(P) ∧ ¬τ(P)) because P1 and P2 are not strictly negations of each other — they evaluate the same trait along different temporal/counterfactual frames. Closer to **Meta-Truth MT-domain-conditional**: same operating mode receives True in achieved-output frame, suboptimal in counterfactual-capability frame.
 
 ### §1.3 — AA-self connection
 
@@ -53,7 +53,7 @@ Per the BRANDON_BIOGRAPHY_MASTER_INDEX prior-art trajectories, this is a candida
 
 **Lazy Binary Tralsity:** a proposition P that receives **truth-value Indeterminate (leaning-toward-False) under rigorous evaluation** AND **truth-value True under operational/aggregate-statistical evaluation** simultaneously, where the operational-True is "good enough" for engineering use but rigor-foolish for theoretical claim.
 
-> **Correction to v1 of this paper:** v1 wrote τ_rigor(P) = False. Brandon corrected: the proper canonical base-4 label is **Indeterminate**, with the qualifier *"too false to be called True."* Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Double Tralse}, Indeterminate is its own primitive, distinct from both True and False. The Lazy-Binary class lives in the Indeterminate-leaning-False region, not in flat-False. Calling it False would itself be a Lazy-Binary error — collapsing a nuanced Indeterminate into binary-False because "false-enough."
+> **Correction to v1 of this paper:** v1 wrote τ_rigor(P) = False. Brandon corrected: the proper canonical base-4 label is **Indeterminate**, with the qualifier *"too false to be called True."* Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Meta-Indeterminate}, Indeterminate is its own primitive, distinct from both True and False. The Lazy-Binary class lives in the Indeterminate-leaning-False region, not in flat-False. Calling it False would itself be a Lazy-Binary error — collapsing a nuanced Indeterminate into binary-False because "false-enough."
 
 Formally (corrected):
 ```
@@ -70,7 +70,7 @@ Brandon's example:
 
 - **Not classical True/False.** P is genuinely Indeterminate-on-rigor-axis AND True-on-operational-axis.
 - **NOT flat Indeterminate either** — the proposition is determinately True under operational evaluation; only the rigor-axis evaluation is Indeterminate.
-- **Not Double Tralse** in the strict τ(P) ∧ ¬τ(P) sense, because the two axes are *different operations* (τ_rigor vs τ_operational), not the same operation yielding both polarities.
+- **Not Meta-Indeterminate** in the strict τ(P) ∧ ¬τ(P) sense, because the two axes are *different operations* (τ_rigor vs τ_operational), not the same operation yielding both polarities.
 - **Closest fit:** a new sub-class of **Meta-Truth, axis-conditional**, parallel to MT-domain-conditional but specifically about *evaluation-mode* (rigor vs aggregate-pragmatic) rather than domain. The base-4 labels of the *components* are canonical (Indeterminate-leaning-False on rigor-axis; True on operational-axis); the **Meta-Truth name applies to the *combination*** of those component labels across axes.
 
 **Proposed Meta-Truth label:** `MT-eval-mode-conditional` ("Lazy Binary"). Adding to canonical `urb_608` requires Brandon authority.
@@ -94,7 +94,7 @@ The class-membership claim "proposition P is a Lazy Binary case" is itself Indet
 
 This is **the deeper insight** behind the Lazy Binary thread, and arguably the single most important methodological principle named in this paper.
 
-**Validly-Indeterminate Stance:** TI Sigma treats **Indeterminate as a legitimate TERMINAL truth-label**, not merely a placeholder for "I'll figure it out later" or "I have insufficient evidence yet." Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Double Tralse}, Indeterminate is a primitive on equal status with True and False. Making an Indeterminate assertion — and *stopping there* — is a complete and honest epistemic act, not an incomplete one.
+**Validly-Indeterminate Stance:** TI Sigma treats **Indeterminate as a legitimate TERMINAL truth-label**, not merely a placeholder for "I'll figure it out later" or "I have insufficient evidence yet." Under canonical MR Truth Labels base-4 = {True, False, Indeterminate, Meta-Indeterminate}, Indeterminate is a primitive on equal status with True and False. Making an Indeterminate assertion — and *stopping there* — is a complete and honest epistemic act, not an incomplete one.
 
 **What this stance permits:**
 - Asserting "P is Indeterminate" as a final-form claim, with no implicit promise to later resolve to True or False.
@@ -221,12 +221,12 @@ Brandon's claim, made precise (proposed canonization for `urb_608` / `MR_TRUTH_L
 >
 > **Sketch:**
 > - True / False: low τ (binary collapse already occurred); high stability. Product: low.
-> - Double Tralse: high τ (τ ∧ ¬τ ⇒ maximal tralseness); LOW stability (paradoxical, destabilizing under iteration). Product: low-to-moderate.
+> - Meta-Indeterminate: high τ (τ ∧ ¬τ ⇒ maximal tralseness); LOW stability (paradoxical, destabilizing under iteration). Product: low-to-moderate.
 > - Indeterminate: high τ (truth-state genuinely unsettled = high tralseness); HIGH stability (Indeterminate is a stable terminal label per §2.3b Validly-Indeterminate Stance). **Product: maximal.**
 
-Under this formalization, framework-self-evaluation landing on Indeterminate is NOT tautological "any-result-confirms" — it is the *specific* prediction (max-valid-tralseness stable point) being realized. The other three labels (T/F/DT) would each have been distinct, non-confirming outcomes:
+Under this formalization, framework-self-evaluation landing on Indeterminate is NOT tautological "any-result-confirms" — it is the *specific* prediction (max-valid-tralseness stable point) being realized. The other three labels (T/F/MI) would each have been distinct, non-confirming outcomes:
 - T or F at the meta-level → would have refuted "TI Sigma contains its own negation"
-- DT at the meta-level → would have implied destabilizing self-paradox; corpus would not be operationally usable
+- MI at the meta-level → would have implied destabilizing self-paradox; corpus would not be operationally usable
 - **I at the meta-level → max-valid-tralseness; predicted state realized**
 
 **Status:** proposed canonization. Requires Brandon authority (analogous to MT-eval-mode-conditional D14) before landing in `urb_608` canonical Meta-Truth list.
@@ -235,7 +235,7 @@ Under this formalization, framework-self-evaluation landing on Indeterminate is 
 
 Per §2.3c trend-toward-perfection conditioning, the framework-meta-Indeterminate claim earns **direct empirical content** (vs aggregate-pattern-matching) via:
 
-> **Submit the proposition "TI Sigma framework is True" to the MR Truth Labels rubric** (same rubric C20 validated at Fleiss' κ=0.906). 3 LLM raters, frozen pre-reg, blinded to which framework is being rated. Predicted result: convergence on **I** (Indeterminate). If raters split T/F/I/DT, the §4.2 max-valid-tralseness claim collapses; if they converge on I, it earns moderate-to-high CAP credit (well_known≈0.05 — meta-self-consistent prediction is novel).
+> **Submit the proposition "TI Sigma framework is True" to the MR Truth Labels rubric** (same rubric C20 validated at Fleiss' κ=0.906). 3 LLM raters, frozen pre-reg, blinded to which framework is being rated. Predicted result: convergence on **I** (Indeterminate). If raters split T/F/I/MI, the §4.2 max-valid-tralseness claim collapses; if they converge on I, it earns moderate-to-high CAP credit (well_known≈0.05 — meta-self-consistent prediction is novel).
 
 **Cost:** $0, T1-DPES-executable. **Status:** OPEN-INVESTIGATION (Brandon-blocked: priority-pick whether to run as O26 in `PASS_47_EMPIRICAL_SYNTHESIS_*_2026-05-12.md`).
 

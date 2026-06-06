@@ -20,7 +20,7 @@ Every Myrion Resolution outcome is evaluated with **two PD values simultaneously
 ### Problem:
 Single-PD evaluation cannot distinguish between:
 - **Barely coherent claims** (low but non-zero coherence)
-- **True Double Tralse** (meaningless/incoherent)
+- **True Meta-Indeterminate** (meaningless/incoherent)
 
 ### Solution:
 Dual-PD tracks both:
@@ -37,7 +37,7 @@ Dual-PD tracks both:
 | **Medium** (0.4-0.7) | Adequate coherence | Proceed with awareness |
 | **Low** (0.1-0.4) | Fragile coherence | Consider refinement |
 | **Barely** (<0.1) | Edge case | May need reconsideration |
-| **Zero** | DT | Eliminated at MR-1 |
+| **Zero** | MI | Eliminated at MR-1 |
 
 ---
 
@@ -51,14 +51,14 @@ Dual-PD is **essential** for paradox handling.
 |-----------|-----------|----------|----------------|
 | "The future exists" | +0.3 | Medium | Tralse-Indeterminate |
 | "Present exists alongside past" | +0.1 | Low | Fragile but admissible |
-| "Past, present, future coexist" | N/A | Zero | DT (meaningless) |
+| "Past, present, future coexist" | N/A | Zero | MI (meaningless) |
 
 ### Self-Reference Paradoxes:
 
 | Statement | Current PD | Residual | Classification |
 |-----------|-----------|----------|----------------|
 | "This statement is meaningful" | +1 | High | True-Tralse |
-| "This statement is false" | N/A | Zero | DT (eliminable) |
+| "This statement is false" | N/A | Zero | MI (eliminable) |
 | "This statement may be false" | 0 | Low | Tralse-Indeterminate |
 
 ---
@@ -73,7 +73,7 @@ Dual-PD is **essential** for paradox handling.
 | Zero | Low | Flag for review |
 | Negative | High | Reject (Tralse-False) |
 | Negative | Low | Reject, note fragility |
-| N/A | Zero | Eliminate (DT) |
+| N/A | Zero | Eliminate (MI) |
 
 ---
 
@@ -83,7 +83,7 @@ Dual-PD is **essential** for paradox handling.
 Compute residual coherence:
 ```
 Residual = coherence_score(claim)
-If Residual == 0: return DT
+If Residual == 0: return MI
 Else: proceed to MR-2
 ```
 
@@ -114,7 +114,7 @@ Elif Current_PD < 0:
 
 | Concept | Value |
 |---------|-------|
-| Purpose | Distinguish barely-coherent from DT |
+| Purpose | Distinguish barely-coherent from MI |
 | Components | Current PD + Residual Coherence |
 | Key Use | Paradox handling |
 | Innovation | Two-dimensional truth evaluation |

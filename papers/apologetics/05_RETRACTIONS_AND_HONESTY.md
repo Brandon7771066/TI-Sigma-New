@@ -51,8 +51,8 @@ The following retractions are logged in the corpus and recoverable from the cite
 
 ### R5 — URB #509 §7.4 "Pre-Tralse Undetermination" RETRACTED
 
-**Original claim.** Future / undetermined states classified as "DT / pre-tralse" (a category that mixed temporal indeterminacy with substrate-incoherence).
-**Outcome.** Misclassification — future states are coherently *Indeterminate* (MR1 ✅), not DT (MR1 ❌). Forward-time indeterminacy is structurally distinct from substrate τ(P) ∧ ¬τ(P).
+**Original claim.** Future / undetermined states classified as "MI / pre-tralse" (a category that mixed temporal indeterminacy with substrate-incoherence).
+**Outcome.** Misclassification — future states are coherently *Indeterminate* (MR1 ✅), not MI (MR1 ❌). Forward-time indeterminacy is structurally distinct from substrate τ(P) ∧ ¬τ(P).
 **Response.** §7.4 fully retracted in Pass-55 curation (§7.7.100). §8.1 table row 5 marked RETRACTED; §8.2 hierarchy reduced 4→3 entries; §10 conclusion "four forms" → "three forms"; §7.2 wording neutralized. The retraction is what *enables* FDS-1 (§7.7.99) to give a coherent regime-decomposition of future determinacy.
 **Anchor.** `papers/URB_TI_SIGMA_THEORY_OF_CONTRADICTIONS_509.md` top-of-paper canonical-correction notice + `papers/FOUNDATIONAL_PAPERS_CURATION_PASS55_2026-05-17.md`.
 
@@ -66,7 +66,7 @@ The following retractions are logged in the corpus and recoverable from the cite
 ### R7 — §7.7.103 agender-as-MT-B-VOID retracted (within hours)
 
 **Original claim.** Pass-55 batch-2 nineteenth deliverable mapped "agender" to candidate MT-B-VOID.
-**Outcome.** Same-day correction by Brandon: "no answer" is itself an answer obscuring substrate; "comfortably agender" is DGI-4 (DT) + Moot (MT-B1) stacked, NOT MT-B-VOID.
+**Outcome.** Same-day correction by Brandon: "no answer" is itself an answer obscuring substrate; "comfortably agender" is DGI-4 (MI) + Moot (MT-B1) stacked, NOT MT-B-VOID.
 **Response.** §10a of the gender paper amended; §10b NAD-1 introduced as the principle that catches the obscuring-via-refusal case. NAD-1 ratified canonical at Pass 56.
 **Anchor.** `papers/GENDER_AS_MR_TRALSE_INDETERMINATE_DT_2026-05-17.md` §10a (amended) + §10b (new).
 

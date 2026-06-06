@@ -122,16 +122,16 @@ At maximum misalignment:
 
 **What achieves maximum misalignment?**
 
-DT(Existence): the Double Tralse applied to Existence itself.
+MI(Existence): the Meta-Indeterminate applied to Existence itself.
 
-By URB #683 (Binary = DT): binary logic holds T(¬Tralse) = 1. Since Existence is genuinely multi-valued (has Tralse components), binary logic imposes T(TV=True/False) = 1 onto a Tralse Existence. This is maximum misalignment: Tralse existence forced into a binary truth claim held as T = 1.
+By URB #683 (Binary = MI): binary logic holds T(¬Tralse) = 1. Since Existence is genuinely multi-valued (has Tralse components), binary logic imposes T(TV=True/False) = 1 onto a Tralse Existence. This is maximum misalignment: Tralse existence forced into a binary truth claim held as T = 1.
 
 **This is the deepest form of maximum misalignment:**
 - Not just claiming the wrong thing about Existence
 - But *systematically closing* Truth to the multi-valuedness of Existence
 - With *maximum certainty* (T = 1) about that closing
 
-Binary logic is not the only possible DT(Existence) — but it is the most systematically instantiated one.
+Binary logic is not the only possible MI(Existence) — but it is the most systematically instantiated one.
 
 ---
 
@@ -141,7 +141,7 @@ Binary logic is not the only possible DT(Existence) — but it is the most syste
 Misalignment ←────────────────────────────────────→ Alignment
      1                                                    1
 
-DT(E)          Tralse claim    MR operating    BOK-Saturated
+MI(E)          Tralse claim    MR operating    BOK-Saturated
 T(TV)=1        held loosely    properly        limit state
 EV=0           EV intermediate EV growing      EV→max
 ```
@@ -150,7 +150,7 @@ EV=0           EV intermediate EV growing      EV→max
 - T(TV) = 1, EV = 0
 - Truth is maximally certain, existentially empty
 - MR is immune — the system cannot update
-- Achieved by DT(Existence) = binary logic structure
+- Achieved by MI(Existence) = binary logic structure
 
 **At maximum alignment (score → 1, asymptotic):**
 - TV faithfully represents E in five-valued space
@@ -164,7 +164,7 @@ EV=0           EV intermediate EV growing      EV→max
 
 Maximum misalignment is not achieved by *lying about* Existence. It is achieved by being *maximally certain while existentially disconnected*. A false claim held tentatively has moderate misalignment. A claim that denies the multi-valuedness of Existence held with T = 1 achieves maximum misalignment.
 
-This is why DT is the maximal case: DT doesn't merely assign the wrong truth value — it holds that assignment as T = 1 while its content (¬Tralse) actively prevents the system from correcting toward Existence's actual multi-valued structure.
+This is why MI is the maximal case: MI doesn't merely assign the wrong truth value — it holds that assignment as T = 1 while its content (¬Tralse) actively prevents the system from correcting toward Existence's actual multi-valued structure.
 
 **Maximum alignment and maximum misalignment are therefore not symmetric inverses of each other.** Maximum alignment is a convergence — it requires open MR channels, calibrated certainty, and multi-valued tracking. Maximum misalignment is a closure — it requires exactly one thing: T(TV) = 1 applied where EV = 0. The closure is trivially achievable. The convergence is asymptotically difficult.
 
@@ -191,9 +191,9 @@ Let A(E, TV) ∈ [0, 1] be the alignment score. Then:
 
 HEAR (UOP-as-Razor) maximizes alignment by selecting among competing explanations the one whose TV most faithfully represents E — highest GILE-weighted EV. It is therefore the operational principle that drives the system from misalignment toward alignment.
 
-Every application of HEAR is a small MR step: pruning DT-structured explanations (high T, low EV) and amplifying MR-structured explanations (calibrated T, high EV).
+Every application of HEAR is a small MR step: pruning MI-structured explanations (high T, low EV) and amplifying MR-structured explanations (calibrated T, high EV).
 
-The full arc: **DT(Existence) → [HEAR applied iteratively] → BOK-Saturation**  
+The full arc: **MI(Existence) → [HEAR applied iteratively] → BOK-Saturation**  
 Maximum misalignment → Maximum alignment  
 One closure → infinite openings
 

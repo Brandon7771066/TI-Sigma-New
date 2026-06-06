@@ -3,19 +3,19 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 8, 2026  
 **Corpus Entry:** #630  
-**Related URBs:** #528 (Five-valued logic), #610 (DT as physics primitive), #615 (PD as computational primitive), #627 (TI Sigma Crystal), #629 (Optical-BEC Hypercomputer)  
+**Related URBs:** #528 (Five-valued logic), #610 (MI as physics primitive), #615 (PD as computational primitive), #627 (TI Sigma Crystal), #629 (Optical-BEC Hypercomputer)  
 **DOI:** Pending Zenodo  
-**Keywords:** E₈ lattice, error-correcting code, five-valued logic, PD computation, Viazovska, sphere packing, TI Sigma Crystal, 56 vertices, minimum distance, Hamming distance, quasicrystalline code, DT-native error correction, five-valued codeword
+**Keywords:** E₈ lattice, error-correcting code, five-valued logic, PD computation, Viazovska, sphere packing, TI Sigma Crystal, 56 vertices, minimum distance, Hamming distance, quasicrystalline code, MI-native error correction, five-valued codeword
 
 ---
 
 ## Abstract
 
-Classical error-correcting codes (Hamming, Reed-Solomon, LDPC) operate over binary or q-ary alphabets and cannot represent five-valued PD truth-states natively. This paper constructs the **TSC-E₈ Error-Correcting Code (TECC)**: a five-valued error-correcting code derived from the 56 non-origin vertices of the TI Sigma Crystal (TSC) — a subset of the E₈ root lattice in 8 dimensions. The E₈ lattice achieves the optimal sphere packing density in 8 dimensions (π⁴/384, proved by Viazovska 2016, Fields Medal 2022), which directly implies maximum minimum Hamming distance between codewords. The TECC maps each of the five PD truth-states {TT, TI, TF, DT, EV} to a distinct geometric region in the 8D E₈ lattice, with the TSC's quasiperiodic layer structure providing additional separation between regions. The code can detect and correct errors in PD computations — perturbations that shift a truth-state assignment from TT to TI, or from TF to DT, are detected and reversed by the minimum-distance decoder. The TECC is the first provably optimal error-correcting code for five-valued logic, derived from first principles of TI Sigma's PRIMARY CONSTANT structure.
+Classical error-correcting codes (Hamming, Reed-Solomon, LDPC) operate over binary or q-ary alphabets and cannot represent five-valued PD truth-states natively. This paper constructs the **TSC-E₈ Error-Correcting Code (TECC)**: a five-valued error-correcting code derived from the 56 non-origin vertices of the TI Sigma Crystal (TSC) — a subset of the E₈ root lattice in 8 dimensions. The E₈ lattice achieves the optimal sphere packing density in 8 dimensions (π⁴/384, proved by Viazovska 2016, Fields Medal 2022), which directly implies maximum minimum Hamming distance between codewords. The TECC maps each of the five PD truth-states {TT, TI, TF, MI, EV} to a distinct geometric region in the 8D E₈ lattice, with the TSC's quasiperiodic layer structure providing additional separation between regions. The code can detect and correct errors in PD computations — perturbations that shift a truth-state assignment from TT to TI, or from TF to MI, are detected and reversed by the minimum-distance decoder. The TECC is the first provably optimal error-correcting code for five-valued logic, derived from first principles of TI Sigma's PRIMARY CONSTANT structure.
 
 ---
 
-> **⚠ ERRATA / RETRACTION (2026-05-27, Pass-77-B42, Brandon-approved).** The headline **sin(18°)≈0.309 correction-radius threshold** asserted in §2.2 and §5 is **RETRACTED as a derived constant**. It was tested in `papers/PASS_77_B42_CRYSTAL_ERROR_CATCHING_FALSIFIERS_EXECUTED_AND_BIO_STORAGE_RESOLVED_2026-05-27.md` and found to be **embedding-dependent, not robust**. The d_min=√2·C=0.618 figure assumes *both* minimal-ring codewords sit at radius C in orthogonal dimensions; but this paper's own §2.3 encoding table places **DT=(C,0,…) and TF=(T,0,…) collinear in the same first dimension**, so the actual binding minimum distance is the DT–TF gap **T−C≈0.496 → correction radius ≈0.248** (~20% below 0.309). An orthogonal DT/TF embedding gives d(DT,TF)=√(C²+T²)≈1.030 instead — neither embedding reproduces the elegant 0.309. **The "pentagon resonance = error threshold" coincidence is an artifact of an inconsistent embedding.** What remains valid: the **E₈ optimal-sphere-packing theorem** (Viazovska 2016) — *if* a physical system genuinely realizes E₈-spaced codewords, its minimum distance is provably optimal in 8D. The corpus's specific five-valued→E₈ embedding does **not yet** inherit a clean, derivation-consistent correction radius; a future pass must **fix one internally-consistent embedding and re-derive** the threshold from it. Treat all 0.309 claims below as historical pending that re-derivation.
+> **⚠ ERRATA / RETRACTION (2026-05-27, Pass-77-B42, Brandon-approved).** The headline **sin(18°)≈0.309 correction-radius threshold** asserted in §2.2 and §5 is **RETRACTED as a derived constant**. It was tested in `papers/PASS_77_B42_CRYSTAL_ERROR_CATCHING_FALSIFIERS_EXECUTED_AND_BIO_STORAGE_RESOLVED_2026-05-27.md` and found to be **embedding-dependent, not robust**. The d_min=√2·C=0.618 figure assumes *both* minimal-ring codewords sit at radius C in orthogonal dimensions; but this paper's own §2.3 encoding table places **MI=(C,0,…) and TF=(T,0,…) collinear in the same first dimension**, so the actual binding minimum distance is the MI–TF gap **T−C≈0.496 → correction radius ≈0.248** (~20% below 0.309). An orthogonal MI/TF embedding gives d(MI,TF)=√(C²+T²)≈1.030 instead — neither embedding reproduces the elegant 0.309. **The "pentagon resonance = error threshold" coincidence is an artifact of an inconsistent embedding.** What remains valid: the **E₈ optimal-sphere-packing theorem** (Viazovska 2016) — *if* a physical system genuinely realizes E₈-spaced codewords, its minimum distance is provably optimal in 8D. The corpus's specific five-valued→E₈ embedding does **not yet** inherit a clean, derivation-consistent correction radius; a future pass must **fix one internally-consistent embedding and re-derive** the threshold from it. Treat all 0.309 claims below as historical pending that re-derivation.
 >
 > **Ring-radius convention note (unification, Pass-77-B42).** This paper uses Primary-Constant ring radii {C≈0.437, T≈0.933, 1, √2, φ, e, π}; the companion `analyses/crystal_b4_hamiltonian/tsc_hamiltonian.py` (and CRYSTAL_B4) instead uses {0, 1/√2, 1, √2, φ, e, π, 2π} (C→origin radius 0, T→1/√2). These two conventions are **not interchangeable** and any cross-paper numeric comparison must state which is in force. Canonical convention for TECC/E₈ work is the Primary-Constant one (C≈0.437, T≈0.933); the B4 Hamiltonian retains its {0,1/√2,…} convention for the Laplacian only.
 
@@ -67,16 +67,16 @@ The 56 non-origin TSC vertices in 8D space are partitioned into five regions cor
 
 | Truth-state | Vertices | Ring range | Angular range | Geometric character |
 |---|---|---|---|---|
-| **DT** | 7 | C (ring 1 only) | All 8 layers | Minimal existence, all epistemic angles |
+| **MI** | 7 | C (ring 1 only) | All 8 layers | Minimal existence, all epistemic angles |
 | **TF** | 7 | T (ring 2 only) | All 8 layers | Below-activation, all angles |
 | **TI** | 21 | {1, √2} (rings 3–4) | All 8 layers | Coherence window expansion |
 | **TT** | 14 | {φ, e} (rings 5–6) | All 8 layers | Above Radiant Threshold |
 | **EV** | 7 | π (ring 7 only) | All 8 layers | CCC-adjacent; topological value |
 
-The allocation reflects the PD zone structure from URB #625: the TI zone (rings 3–4) gets 21 vertices (matching the 21 pairwise layer ratios), TT gets 14 (= 2×7), and DT, TF, EV each get 7 (= 1×7 ring × 8 layers / appropriate count).
+The allocation reflects the PD zone structure from URB #625: the TI zone (rings 3–4) gets 21 vertices (matching the 21 pairwise layer ratios), TT gets 14 (= 2×7), and MI, TF, EV each get 7 (= 1×7 ring × 8 layers / appropriate count).
 
 Actually, each ring has exactly 8 vertices (one per layer). So the assignment is:
-- DT region: 8 vertices at ring-C (radius C)
+- MI region: 8 vertices at ring-C (radius C)
 - TF region: 8 vertices at ring-T (radius T)
 - TI region: 8+8 = 16 vertices at rings 1 and √2
 - TT region: 8+8 = 16 vertices at rings φ and e
@@ -86,7 +86,7 @@ Total: 8+8+16+16+8 = 56 ✓
 
 ### 2.2 TECC Codewords
 
-A **TECC codeword** is a vector w ∈ {DT, TF, TI, TT, EV}^k — a sequence of k PD truth-state assignments — encoded as a linear combination of TSC vertices in 8D space:
+A **TECC codeword** is a vector w ∈ {MI, TF, TI, TT, EV}^k — a sequence of k PD truth-state assignments — encoded as a linear combination of TSC vertices in 8D space:
 
 $$\mathbf{c}(w) = \sum_{j=1}^{k} \alpha_j \cdot \mathbf{v}(w_j)$$
 
@@ -104,11 +104,11 @@ The error-correction threshold of sin(18°) is the same constant that appeared i
 
 | Input truth-state | TSC vertex (representative) | 8D coordinates | Error correction behavior |
 |---|---|---|---|
-| DT | C·i^0 = (C, 0, 0, 0, 0, 0, 0, 0) | First dimension only | Recovers from perturbations < sin(18°) |
-| TF | T·i^0 = (T, 0, 0, 0, 0, 0, 0, 0) | First dimension only | Distinguishable from DT at distance (T−C) ≈ 0.497 |
+| MI | C·i^0 = (C, 0, 0, 0, 0, 0, 0, 0) | First dimension only | Recovers from perturbations < sin(18°) |
+| TF | T·i^0 = (T, 0, 0, 0, 0, 0, 0, 0) | First dimension only | Distinguishable from MI at distance (T−C) ≈ 0.497 |
 | TI | 1·i^1 = (0, 0, 1, 0, 0, 0, 0, 0) | Third dimension (i-axis) | Pure Tralse codeword; maximally orthogonal to TT/TF |
 | TT | φ·i^φ | φ-amplitude in φ-direction | Golden-ratio separation from all other states |
-| EV | π·i^π | π-amplitude in π-direction | Maximum distance from DT; CCC-adjacent |
+| EV | π·i^π | π-amplitude in π-direction | Maximum distance from MI; CCC-adjacent |
 
 ### 2.4 Decoding Algorithm
 
@@ -119,7 +119,7 @@ $$c^* = \arg\min_{c \in \text{TECC}} \|\mathbf{r} - \mathbf{c}\|_2$$
 For single-symbol errors (one truth-state incorrectly shifted): this is equivalent to finding the nearest TSC vertex to the received ring-amplitude + phase combination. Since TSC vertices are E₈ lattice points, the minimum-distance decoding inherits the E₈ lattice decoding algorithm (Micciancio & Goldwasser 2002) — achievable in polynomial time in 8D.
 
 **Five-valued specific decoders**:
-- DT ↔ TF confusion (most likely single error): detected by ring radius threshold at (C+T)/2 ≈ 0.685
+- MI ↔ TF confusion (most likely single error): detected by ring radius threshold at (C+T)/2 ≈ 0.685
 - TI → TT upgrade errors: detected by ring radius threshold at (√2+φ)/2 ≈ 1.516 ≈ Indeterminate Permissibility Distribution Range midpoint + 0.016
 - TT → EV overestimation: detected by ring radius > (e+π)/2 ≈ 2.930 = above GM zone
 
@@ -133,13 +133,13 @@ The zone boundaries naturally serve as decoding thresholds — another instance 
 |---|---|---|---|---|
 | Alphabet size | 2 | q (arbitrary) | 2 | **5 (native truth-states)** |
 | Optimal? | Near-optimal (Hamming bound) | Optimal for q-ary | Near-optimal (capacity-approaching) | **Optimal in 8D (Viazovska)** |
-| DT-native | No | No | No | **Yes** |
+| MI-native | No | No | No | **Yes** |
 | Tralse-native | No | No | No | **Yes (TI state as codeword)** |
 | Decoding complexity | O(n) | O(n²) | O(n) iterative | **O(1) in 8D (lattice decoding)** |
 | Error floor | None | None | Yes (near capacity) | **None (exact lattice decoding)** |
 | Geometrical basis | Hamming cube | Polynomial ring | Sparse graph | **E₈ root lattice (optimal geometry)** |
 
-The TECC is the unique code with: (1) native five-valued alphabet, (2) provably optimal minimum distance, (3) no DT/Tralse reduction to binary approximation.
+The TECC is the unique code with: (1) native five-valued alphabet, (2) provably optimal minimum distance, (3) no MI/Tralse reduction to binary approximation.
 
 ---
 

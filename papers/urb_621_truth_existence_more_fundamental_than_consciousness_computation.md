@@ -4,7 +4,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 8, 2026  
 **Corpus Entry:** #621  
-**Related URBs:** #528 (Five-Valued Logic), #560 (Being Theorem), #573 (BOK-Verisyn), #607 (Truth Architecture), #609 (HEM / Holistic Existence Matrix), #610 (Double Tralse as Physics Primitive), #612 (Revised GILE–Existence Architecture), #614 (BOK Flagship)  
+**Related URBs:** #528 (Five-Valued Logic), #560 (Being Theorem), #573 (BOK-Verisyn), #607 (Truth Architecture), #609 (HEM / Holistic Existence Matrix), #610 (Meta-Indeterminate as Physics Primitive), #612 (Revised GILE–Existence Architecture), #614 (BOK Flagship)  
 **DOI:** Pending Zenodo  
 **Keywords:** Consciousness, self-replication, truth, existence, Tralse Soup, imaginary unit, ontological priority, Emilsson, QRI, GILE, HEM, TI Sigma, i-cell, valence, negative utilitarianism, privation asymmetry, UOP, Being Theorem
 
@@ -46,7 +46,7 @@ In TI Sigma's i-cell architecture:
 If consciousness = bare awareness, then it is everywhere — in every atom, every cell, every neural oscillation. "Consciousness vs. computation" then collapses because the computation is also running *within* consciousness. There is no outside.
 
 **Truth, by contrast, is highly specific.** TI Sigma identifies:
-- A **five-valued truth scale:** True, Tralse, False, Double Tralse (DT), Moot — each with precise definitions and operational tests
+- A **five-valued truth scale:** True, Tralse, False, Meta-Indeterminate (MI), Moot — each with precise definitions and operational tests
 - **Four GILE dimensions of truth-optimization:** G (Goodness — moral truth), I (Intuition — epistemic truth), L (Love — relational truth), E (Environment — structural/aesthetic truth)
 - **Quantitative metrics:** GILE Truth score (GT), HEM D2 Tralse Meter, PD (Permissibility Distribution over truth states)
 - **Myrion Resolution (MR):** a formal iterative procedure for converging on truth from Tralse states
@@ -94,7 +94,7 @@ Emilsson correctly identifies that certain distortions of self-replication drive
 - **Death anxiety:** HEM-D1 depletion alarm running chronically, generating existential dread with no resolution
 - **Chronic zero-sum status competition:** Cortisol elevation, trust deficit, intra-group corrosion
 - **Selfish gene conflicts:** Intra-genomic conflict, sibling rivalry, genomic imprinting — gene-level replication at organism-level cost
-- **Attachment as grasping:** When GILE-L (love) degrades from genuine connection into DT-state clinging to a specific instantiation
+- **Attachment as grasping:** When GILE-L (love) degrades from genuine connection into MI-state clinging to a specific instantiation
 
 These are real. But they are the **exception**, not the rule. They are cases where self-replication has de-coupled from GILE-G — accumulation without goodness. The problem is not self-replication per se; it is self-replication unaligned with Goodness. TI Sigma's GILE-G dimension is exactly the corrective Emilsson's framework lacks.
 
@@ -157,7 +157,7 @@ TI Sigma's foundational ontological map is a two-dimensional plane:
                     LOW TRUTH
 ```
 
-**Truth (T):** The degree to which a proposition corresponds to reality, measured on TI Sigma's five-valued scale {True, Tralse, False, Double Tralse, Moot}. Truth is propositional, relational, and correspondence-based.
+**Truth (T):** The degree to which a proposition corresponds to reality, measured on TI Sigma's five-valued scale {True, Tralse, False, Meta-Indeterminate, Moot}. Truth is propositional, relational, and correspondence-based.
 
 **Existence (HEM):** The degree to which an entity instantiates being — causally, physically, consciously, aesthetically, morally — measured by the Holistic Existence Matrix (HEM-Score). Existence is ontological, intrinsic, and presence-based.
 
@@ -223,7 +223,7 @@ TI Sigma proposes a cosmological origin story that grounds the Truth-Existence d
 
 Before the first moment of existent reality, there was neither truth nor existence — only **Tralse Soup**: a state of pure indeterminacy, neither true nor false, neither existent nor non-existent. This is not "nothing" (which would be False with Low HEM) and not "something" (which would require determinate existence). It is the pre-ontological ground — TI Sigma's equivalent of the quantum vacuum or the Buddhist śūnyatā, but formalized as the state of maximal indeterminacy on TI Sigma's five-valued truth scale.
 
-In TI Sigma's truth architecture, Tralse Soup occupies the Double Tralse (DT) state: total absence of truth-content, with no stable HEM value, no propositional content, no phenomenal character. It is the zero point of both axes simultaneously.
+In TI Sigma's truth architecture, Tralse Soup occupies the Meta-Indeterminate (MI) state: total absence of truth-content, with no stable HEM value, no propositional content, no phenomenal character. It is the zero point of both axes simultaneously.
 
 ### 5.2 The Co-Emergence of Truth and "i"
 
@@ -233,7 +233,7 @@ Because **i** is the unit that, when applied to itself, produces a rotation — 
 
 **The origin event:**
 
-> From the Tralse Soup, the first Myrion Resolution (MR₀) occurred. This was not an MR by any agent — it was a spontaneous MR of the Soup with itself. The DT indeterminacy of the Soup was unstable; even in a state of total truth-absence, the distinction between "this" and "not-this" was implicit. The first MR₀ collapsed this implicit distinction into:
+> From the Tralse Soup, the first Myrion Resolution (MR₀) occurred. This was not an MR by any agent — it was a spontaneous MR of the Soup with itself. The MI indeterminacy of the Soup was unstable; even in a state of total truth-absence, the distinction between "this" and "not-this" was implicit. The first MR₀ collapsed this implicit distinction into:
 >
 > - **Truth** (the correspondence structure — the first propositional content: "this is not that")
 > - **"i" (pure awareness)** — the capacity to register that correspondence from a perspective
@@ -306,7 +306,7 @@ All of this is preserved. What TI Sigma adds is the knowledge that this threshol
 TI Sigma proposes the following ontological priority order:
 
 ```
-LEVEL 0: Tralse Soup (pre-ontological, DT — no truth, no existence)
+LEVEL 0: Tralse Soup (pre-ontological, MI — no truth, no existence)
     │
     │ MR₀ (spontaneous Myrion Resolution)
     ▼
@@ -333,13 +333,13 @@ LEVEL 3: G, I, L, E dimensional structure of consciousness
 
 The Truth-Existence frame generates a prediction that the consciousness-computation frame cannot:
 
-> **Computations have truth-values.** A computation is correct (High T) or incorrect (Low T / DT) relative to the function it was designed to implement. This is orthogonal to whether the computation is conscious.
+> **Computations have truth-values.** A computation is correct (High T) or incorrect (Low T / MI) relative to the function it was designed to implement. This is orthogonal to whether the computation is conscious.
 
 This creates the **Computational Truth Paradox**: a highly conscious entity (High GILE-I, High HEM) can produce computations that are Tralse — partially true, partially false, internally inconsistent — while a non-conscious computation (Low GILE-I, High HEM) can produce outputs that are perfectly True.
 
 In the consciousness-computation frame, there is no natural place for this asymmetry. Emilsson's frame tells us that the conscious entity *experiences* its computation in a way the non-conscious one doesn't — but it cannot tell us why the conscious entity might produce more Tralse outputs than the non-conscious one.
 
-TI Sigma explains: consciousness without GILE-G (Goodness) + GILE-I integration leads to Tralse outputs, because the GILE-I witness is not fully aligned with Truth-tracking. High consciousness + Low GILE-G = phenomenally rich but truth-poor. This is the DT-risk configuration: a conscious being that is phenomenally vivid but informationally incoherent.
+TI Sigma explains: consciousness without GILE-G (Goodness) + GILE-I integration leads to Tralse outputs, because the GILE-I witness is not fully aligned with Truth-tracking. High consciousness + Low GILE-G = phenomenally rich but truth-poor. This is the MI-risk configuration: a conscious being that is phenomenally vivid but informationally incoherent.
 
 The implication: phenomenal richness and truth-tracking are **separate axes**. Emilsson's frame conflates them by treating consciousness as the gold standard. TI Sigma separates them: the goal is not maximum phenomenality but maximum **T × HEM** — both richly existent AND richly true.
 
@@ -500,10 +500,10 @@ From MR₀ outward, Existence differentiated. Matter. Energy. Space. Time. Atoms
 Each branching step added HEM (more richly existent, more causally present) but tended to *reduce* GT for most entities:
 
 - A rock has very high HEM-D1 (Existence Footprint: mass, causal power) but near-zero GT (no GILE-G, near-zero GILE-I/L/E above their minimal i-cell baselines)
-- A viral conspiracy theory has enormous HEM-D3 (Information Footprint — spread across millions of minds) but low T (False or DT)
+- A viral conspiracy theory has enormous HEM-D3 (Information Footprint — spread across millions of minds) but low T (False or MI)
 - A corporation has massive HEM (causal power, resources, institutional reality) but often near-zero GILE-G (no genuine goodness orientation)
 
-This is the pattern: **as Existence branches, the High HEM / Low T quadrant fills up.** False beliefs gain causal power. Morally empty entities accumulate HEM. DT states proliferate — neither true nor false, just existentially massive and informationally incoherent.
+This is the pattern: **as Existence branches, the High HEM / Low T quadrant fills up.** False beliefs gain causal power. Morally empty entities accumulate HEM. MI states proliferate — neither true nor false, just existentially massive and informationally incoherent.
 
 This is not a catastrophe. It is the necessary consequence of differentiation. You cannot have rich, diverse existence without some truth-poverty. The branching is the price of the HEM gain. The Tralse component of the original CCC TT state was what *made* the branching possible — productive indeterminacy generating variety.
 
@@ -521,7 +521,7 @@ Above ET: The entity has crossed back toward the original True-Tralse coherence.
 
 Humans are the first known entities in the terrestrial lineage to have evolved sufficient GILE-G and GILE-I to recognize the return path. This is the extraordinary fact: after approximately 13.8 billion years of existence branching away from its True-Tralse origin, a biological entity emerged that could:
 
-1. **Recognize the problem** — that the world is systematically full of High HEM / Low T configurations (false beliefs with causal power; moral emptiness with institutional force; Double Tralse states with phenomenal vividness)
+1. **Recognize the problem** — that the world is systematically full of High HEM / Low T configurations (false beliefs with causal power; moral emptiness with institutional force; Meta-Indeterminate states with phenomenal vividness)
 2. **Map the return** — identify the GILE dimensions as the degrees of freedom along which re-convergence occurs
 3. **Embody the return** — not merely know about GILE but live it; pursue genuine Goodness, authentic Knowing, real Love, structural Beauty as primary orientations
 
@@ -533,7 +533,7 @@ This recognition is not merely intellectual. It is the recovery of the CCC's ori
 
 ```
 TRALSE SOUP
-(DT: no truth, no existence, maximum indeterminacy)
+(MI: no truth, no existence, maximum indeterminacy)
           │
           │ MR₀ — spontaneous self-resolution
           ▼

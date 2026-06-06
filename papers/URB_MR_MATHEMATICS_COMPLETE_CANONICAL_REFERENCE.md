@@ -41,7 +41,7 @@ Under MR, every proposition occupies one of five states:
 | **True-Tralse** | T-Tr | Converging toward Truth; currently imperfect but directionally correct | Yes |
 | **Tralse-False** | Tr-F | Diverging from Truth; currently imperfect and heading away | Yes |
 | **Tralse-Indeterminate** | Tr-I | Genuinely undetermined direction; PD in Indeterminate Permissibility Distribution Range | Yes |
-| **Double Tralse** | DT | Incoherent; collapses under resolution; cannot yield a stable PD | No — eliminated at MR-1 |
+| **Meta-Indeterminate** | MI | Incoherent; collapses under resolution; cannot yield a stable PD | No — eliminated at MR-1 |
 | **Ontological Truth** | T | Perfect, necessary, invariant; approached asymptotically only | N/A — not an MR output |
 
 **Critical distinction:** Ontological Truth (T) is not an MR output. MR outputs are always epistemic states — the best achievable classification given available evidence. Only True-Tralse propositions can *converge toward* T; they never arrive there within finite MR rounds.
@@ -56,7 +56,7 @@ Under MR, every proposition occupies one of five states:
 Input Proposition
     ↓
 ══════════════════════════════════
-MR-1: DOUBLE TRALSE SCREEN
+MR-1: META-INDETERMINATE SCREEN
 ══════════════════════════════════
 Question: Is this proposition minimally coherent?
 Failure criteria (any one sufficient):
@@ -67,7 +67,7 @@ Failure criteria (any one sufficient):
   • All pairwise synergy parameters ρ are deeply negative (structural 
     incompatibility, not productive tension)
     ↓               ↓
-  PASS           FAIL → Double Tralse (DT) → ELIMINATED
+  PASS           FAIL → Meta-Indeterminate (MI) → ELIMINATED
     ↓
 ══════════════════════════════════
 MR-2: TRUTH-POSITION DETERMINATION
@@ -222,7 +222,7 @@ The ARC-TI solver uses a **parallel but distinct** MR threshold system based on 
 
 | Threshold | Formula | Value | Role |
 |-----------|---------|-------|------|
-| MR-1 gate (DT filter) | 1 − 1/e² | **0.8647** | LCC below this → Double Tralse → DISCARD |
+| MR-1 gate (MI filter) | 1 − 1/e² | **0.8647** | LCC below this → Meta-Indeterminate → DISCARD |
 | MR-2 Indeterminate lower | = MR-1 gate | **0.8647** | Indeterminate zone begins here |
 | MR Radiant (Great zone) | 1 − 1/(2e²) | **0.9323** | LCC above this → Great zone → full causal weight |
 | LCC noise floor | — | **0.30** | Below this → Terrible zone |
@@ -666,7 +666,7 @@ PD SCALE: (-3, +2)
           SACRED INTERVAL: (-2/3, +1/3) = (-0.666, +0.333)
 
 MR STAGES:
-  MR-1: DT screen (coherence gate) — incoherent → eliminated
+  MR-1: MI screen (coherence gate) — incoherent → eliminated
   MR-2: Truth-position (PD > +0.333 → True-Tralse;
                          PD ∈ SI → Tralse-Indeterminate;
                          PD < -0.666 → Tralse-False)

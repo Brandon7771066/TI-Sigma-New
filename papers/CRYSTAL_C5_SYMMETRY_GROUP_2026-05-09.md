@@ -116,7 +116,7 @@ Combined with the B.4 Hamiltonian (`papers/CRYSTAL_B4_HAMILTONIAN_2026-05-09.md`
 - (b) Identify physical perturbations carrying each V_4 irrep (the standard solid-state-physics computation).
 - (c) Extend to two-particle V_4 × V_4 group analysis for C.6 cross-ring CHSH.
 - (d) Compare V_4 against alternative groups one might guess: D_4 (square symmetry), D_6 (hexagonal), etc., to confirm V_4 is correct.
-- (e) Check if the four V_4 irreps map onto the four base-4 truth labels {True, False, Indeterminate, Double Tralse}. **If yes, the TSC point group encodes the canonical truth-labels** — a striking framework-internal coherence.
+- (e) Check if the four V_4 irreps map onto the four base-4 truth labels {True, False, Indeterminate, Meta-Indeterminate}. **If yes, the TSC point group encodes the canonical truth-labels** — a striking framework-internal coherence.
 
 ## 8. Reproduction
 

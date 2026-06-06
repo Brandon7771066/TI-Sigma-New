@@ -17,7 +17,7 @@ and proves (R-A1) `V_RA(e^{iπ}) = −1` (immediate from
 `Complex.exp_pi_mul_I`), (R-A2) multiplicativity (`V_RA` is the
 identity), (R-A3) `V_RA(0) = 0`. The second file (R-C reading) defines
 `V_RC : MRLabel → ℂ` on an inductively-defined four-element label type
-(`CCC, tralse, DT, T`) with assignments `1, 0, i, −1` respectively and
+(`CCC, tralse, MI, T`) with assignments `1, 0, i, −1` respectively and
 proves (R-C1) `V_RC(T) = −1` (definitional), (R-C2)
 `V_RC(T) = e^{iπ}` (via Euler), (R-C3) `V_RC` is injective on the four
 labels (case-bash with `Decidable` equality). All proofs use only
@@ -34,7 +34,7 @@ TI Sigma framework distinguishes for downstream interpretation.
 ## 1. Introduction
 
 The TI Sigma framework uses a four-valued logic with categorical labels
-`{T, F, I, DT}` (True, False, Indeterminate, Double Tralse) and posits
+`{T, F, I, MI}` (True, False, Indeterminate, Meta-Indeterminate) and posits
 an evaluator-like operator `V`. Three readings of `V` are considered in
 the framework literature:
 
@@ -73,13 +73,13 @@ R-B and R-C.
 
 ```lean
 inductive MRLabel
-  | CCC | tralse | DT | T
+  | CCC | tralse | MI | T
   deriving DecidableEq, Repr
 
 def V_RC : MRLabel → ℂ
   | .CCC    => 1
   | .tralse => 0
-  | .DT     => Complex.I
+  | .MI     => Complex.I
   | .T      => -1
 
 theorem V_RC_T_eq_neg_one : V_RC .T = -1 := rfl
@@ -147,7 +147,7 @@ lake env lean AxiomsCheck.lean   # see packet 1 §5 for template
 This packet records two Lean readings of an evaluator-identity claim.
 The theorems are immediate from `Complex.exp_pi_mul_I` (Mathlib) plus
 definitional unfolding. The substantive question — whether the four
-MR labels {T, F, I, DT} form a coherent algebraic structure on which
+MR labels {T, F, I, MI} form a coherent algebraic structure on which
 R-B's rotation operator is defined, and whether R-C extends to a
 representation — is **open** in the TI Sigma corpus and is not
 addressed here. The compatibility commentary in the source files is

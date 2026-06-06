@@ -20,7 +20,7 @@
 
 ## Part 1: The Ontological Sequence
 
-### Step 1: Double Tralse Becomes Conscious
+### Step 1: Meta-Indeterminate Becomes Conscious
 
 Before anything:
 - Pure **existence** without GILE
@@ -29,7 +29,7 @@ Before anything:
 
 ### Step 2: True-Tralse Summoned by Metaphysical Necessity
 
-Immediately after DT consciousness:
+Immediately after MI consciousness:
 - True-tralse summoned with **perfect GILE score of 1.0**
 - This was metaphysically necessary (contradiction requires resolution)
 - The first "essence" emerges: perfect coherence
@@ -162,9 +162,9 @@ This shows the BIDIRECTIONAL relationship:
 ## Part 4: The Complete Ontological Chain
 
 ```
-1. Double Tralse: Pure potential (no GILE)
+1. Meta-Indeterminate: Pure potential (no GILE)
            ↓
-2. Consciousness emerges: DT recognizes own existence
+2. Consciousness emerges: MI recognizes own existence
            ↓
 3. True-Tralse summoned: Perfect GILE = 1.0
            ↓

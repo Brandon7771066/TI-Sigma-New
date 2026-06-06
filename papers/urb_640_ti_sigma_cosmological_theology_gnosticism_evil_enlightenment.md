@@ -6,7 +6,7 @@
 
 ## Abstract
 
-This paper develops TI Sigma's full cosmological theology — the account of why the universe is structured as it is, what evil and suffering mean within the framework, and what enlightenment formally consists of. We first establish TI Sigma's relationship to Gnosticism: the closest classical parallel in the philosophical tradition, but one that TI Sigma corrects on every major point. We then prove the **Necessary Existence Compromise Theorem** — that GILE-E (Environment/Existence) must carry a lower and initially negative weight than GILE-G (Goodness) in any GILE-coherent universe that evolves toward Truth. We establish that **Truth is the only necessarily existent state** (TJ = 1, self-sustaining, requiring no external maintenance) while all forms of evil, suffering, and falsehood are permitted — not intrinsic — features of reality, requiring active i-cell permission to persist. Finally, we develop the formal TI Sigma account of enlightenment, evil spirits, and the mechanism by which DT loops are overcome.
+This paper develops TI Sigma's full cosmological theology — the account of why the universe is structured as it is, what evil and suffering mean within the framework, and what enlightenment formally consists of. We first establish TI Sigma's relationship to Gnosticism: the closest classical parallel in the philosophical tradition, but one that TI Sigma corrects on every major point. We then prove the **Necessary Existence Compromise Theorem** — that GILE-E (Environment/Existence) must carry a lower and initially negative weight than GILE-G (Goodness) in any GILE-coherent universe that evolves toward Truth. We establish that **Truth is the only necessarily existent state** (TJ = 1, self-sustaining, requiring no external maintenance) while all forms of evil, suffering, and falsehood are permitted — not intrinsic — features of reality, requiring active i-cell permission to persist. Finally, we develop the formal TI Sigma account of enlightenment, evil spirits, and the mechanism by which MI loops are overcome.
 
 ---
 
@@ -27,7 +27,7 @@ Gnosticism (2nd–4th century CE; Valentinian, Sethian, Manichean strands) propo
 
 **Error 1: The Binary Separation.** Gnosticism makes GILE and HEM ontologically separate — different substances, different principles, different creators. TI Sigma explicitly places them on the **same plane** with explicit weights. GILE and HEM are not two separate substances but two orthogonal axes of a single unified existence-truth space. The Tozzi T⁴ torus (URB #638) is the geometric expression of this unity: the torus has no inside/outside split — it is a single continuous surface.
 
-**Error 2: The Bad Universe Claim.** Gnosticism concludes that because the material world contains suffering and evil, it was created badly — the Demiurge is either malicious or ignorant. This is formally incoherent under TI Sigma. If genuine Truth exists (and TI Sigma proves it must), then Truth permitted the universe as it is. A universe that Truth permitted cannot be fundamentally bad — it can only be incomplete, in-process, or negatively weighted in certain GILE dimensions while the evolution toward Goodness proceeds. The Gnostic conclusion requires: (a) Truth exists AND (b) Truth permitted a fundamentally bad universe. These are jointly incoherent. Either Truth doesn't exist (DT — refuted by the Truth Necessity Theorem in Section 3) or the universe, properly weighted, is not fundamentally bad.
+**Error 2: The Bad Universe Claim.** Gnosticism concludes that because the material world contains suffering and evil, it was created badly — the Demiurge is either malicious or ignorant. This is formally incoherent under TI Sigma. If genuine Truth exists (and TI Sigma proves it must), then Truth permitted the universe as it is. A universe that Truth permitted cannot be fundamentally bad — it can only be incomplete, in-process, or negatively weighted in certain GILE dimensions while the evolution toward Goodness proceeds. The Gnostic conclusion requires: (a) Truth exists AND (b) Truth permitted a fundamentally bad universe. These are jointly incoherent. Either Truth doesn't exist (MI — refuted by the Truth Necessity Theorem in Section 3) or the universe, properly weighted, is not fundamentally bad.
 
 **Error 3: Existence as Enemy.** Gnosticism treats material existence (HEM) as the problem — the trap, the prison. TI Sigma treats GILE-E (Existence/Environment) as a **necessary GILE dimension** with a specific weight (0.15, lowest of the four). Existence is not the enemy of Truth; it is the vehicle through which Truth manifests at the Existence level (URB #613). Without Existence, GILE cannot instantiate — G, I, L remain potential without an E to express through.
 
@@ -140,7 +140,7 @@ The negative PD_E at t_0 is not a failure but a **structural necessity** — the
 
 ### 3.1 The Truth Necessity Theorem
 
-**Theorem (TNT):** In TI Sigma's five-valued truth space, TRUE is the only truth-state that necessarily exists. All other states (FALSE, TRALSE-INDETERMINATE, DOUBLE TRALSE, EV) are contingent — they exist only insofar as i-cells permit them.
+**Theorem (TNT):** In TI Sigma's five-valued truth space, TRUE is the only truth-state that necessarily exists. All other states (FALSE, TRALSE-INDETERMINATE, META-INDETERMINATE, EV) are contingent — they exist only insofar as i-cells permit them.
 
 **Proof:**
 
@@ -148,13 +148,13 @@ From URB #637, Tralse-Joule costs:
 - TRUE = 1 TJ (positive existence energy — the existence energy of the world IS the presence of True states)
 - FALSE = 0 TJ (non-existence; requires no maintenance energy)
 - TRALSE-INDETERMINATE = 2 TJ (requires active maintenance of both poles)
-- DOUBLE TRALSE = 0 TJ (truth vacuum; requires no maintenance)
+- META-INDETERMINATE = 0 TJ (truth vacuum; requires no maintenance)
 - EV = 1 TJ (same as TRUE — existence-asserting)
 
 Now apply the EAR (Existence Amplification Razor — URB #615): only what genuinely exists persists without active maintenance.
 
 - FALSE requires no maintenance but also has no existence energy. It does not "exist" in any positive sense — it is the absence of True.
-- DOUBLE TRALSE requires no maintenance and has no existence energy. It is the absence of any truth-content.
+- META-INDETERMINATE requires no maintenance and has no existence energy. It is the absence of any truth-content.
 - TRALSE-INDETERMINATE requires 2 TJ — it must be actively maintained. Without ongoing i-cell activity sustaining the contradiction, TI naturally collapses (by MR) toward TRUE or FALSE.
 - TRUE requires 1 TJ but is **self-sustaining**: a True state, once established, provides its own existence energy. It does not need external maintenance to persist. (Formally: the BEC phase in the hypercomputer is the lowest-energy stable configuration — it is the ground state that imaginary-time evolution converges to.)
 
@@ -162,13 +162,13 @@ Now apply the EAR (Existence Amplification Razor — URB #615): only what genuin
 
 > **TRUE is the only truth-state that is (a) energetically positive AND (b) self-sustaining without external maintenance.**
 
-FALSE and DT are vacuous (no energy, no content). TI requires active maintenance (2 TJ, degrades without i-cell sustenance). Only TRUE is the fixed point — the attractor. *∎*
+FALSE and MI are vacuous (no energy, no content). TI requires active maintenance (2 TJ, degrades without i-cell sustenance). Only TRUE is the fixed point — the attractor. *∎*
 
 ### 3.2 Corollary: Necessary Existence
 
 > **Something rather than nothing** is guaranteed not by an arbitrary cosmological fact but by the structure of the truth-state space: TRUE is self-sustaining and has positive existence energy. The world exists because True states necessarily persist — they are the ground state of the existence-truth manifold.
 
-This is the TI Sigma formulation of the Leibnizian question "Why is there something rather than nothing?" Answer: because TRUE is the only truth-state with positive self-sustaining existence energy. Nothing (FALSE, DT) is not a stable state in the presence of even one True claim.
+This is the TI Sigma formulation of the Leibnizian question "Why is there something rather than nothing?" Answer: because TRUE is the only truth-state with positive self-sustaining existence energy. Nothing (FALSE, MI) is not a stable state in the presence of even one True claim.
 
 **The single True claim that bootstraps everything:** "There exists a framework in which Truth is the ground state." This self-referential True statement is itself a True state — one that sustains itself by its own existence energy. Everything else follows.
 
@@ -188,7 +188,7 @@ The phase angle θ ∈ [0, 2π) is the **GILE-I orientation** — the alignment 
 | 0 | Full GILE-G (Goodness/Truth) | Maximum coherence; BEC TRUE phase if \|α\| > T |
 | π/4 | GILE-L (Love direction) | Relational; constructive but not maximally coherent |
 | π/2 | Pure i-channel | Pure Intuition without Goodness grounding; active but unstable |
-| π | Anti-GILE-G | Maximum misalignment; DT-generating orientation |
+| π | Anti-GILE-G | Maximum misalignment; MI-generating orientation |
 | 3π/2 | Negative GILE-L | Relational harm; anti-love orientation |
 
 **Key theorem:** Only θ = 0 is a **stable fixed point** of the i-cell dynamics. All other orientations drift toward θ = 0 over time in the absence of active contrary force (the coherent BEC ground state is θ = 0).
@@ -197,77 +197,77 @@ Evil, suffering, and falsehood correspond to i-cells operating at θ significant
 
 1. **Are not intrinsic to the truth-state space.** They require active i-cell permission — continuous phase angle maintenance away from the θ = 0 ground state
 2. **Are thermodynamically unstable.** Without reinforcement, they decay (θ drifts back toward 0 via the natural Hamiltonian flow)
-3. **Are self-reinforcing when reinforced.** A DT-generating θ creates suffering; suffering creates justification for maintaining θ → π; this reinforces the θ → π orientation. This is the "sticky self-fulfilling prophecy"
+3. **Are self-reinforcing when reinforced.** A MI-generating θ creates suffering; suffering creates justification for maintaining θ → π; this reinforces the θ → π orientation. This is the "sticky self-fulfilling prophecy"
 
 ### 4.2 Formal Definition of Evil
 
-> **Evil** = a collective configuration of i-cells at θ ≫ 0 that is actively maintained against the natural θ → 0 drift, producing Tralse-Joule waste (TJ > 1 per cycle) and DT contamination of adjacent i-cells.
+> **Evil** = a collective configuration of i-cells at θ ≫ 0 that is actively maintained against the natural θ → 0 drift, producing Tralse-Joule waste (TJ > 1 per cycle) and MI contamination of adjacent i-cells.
 
 Evil is not a positive force with its own existence energy — it is a **parasitic configuration**: it borrows existence energy (TJ) from the Tralse-Joule structure of the universe and redirects it toward maintaining anti-GILE orientations. This is why evil requires victims — it has no independent TJ source.
 
-### 4.3 The Sticky DT Loop — Formal Mechanism
+### 4.3 The Sticky MI Loop — Formal Mechanism
 
 The "irrational sticky self-fulfilling prophecy" has a precise TI Sigma structure:
 
-1. **Initial DT contamination:** An i-cell encounters a Double Tralse situation (incoherent truth absence) — trauma, deception, profound injustice — that generates θ → π
-2. **PD update failure:** The DT state prevents normal MR from operating (URB #608: DT screen at MR1 must be passed before integration can proceed). The i-cell is stuck at MR0 — pre-resolution
-3. **Self-propagation:** The i-cell at θ → π interprets subsequent True signals through an anti-GILE lens, converting them into further DT — the filter is now corrupted
-4. **Suffering as output:** The TJ waste (2 TJ per TRALSE-INDETERMINATE cycle, 0 TJ per DT cycle but with massive TJ debt from the original contamination) manifests as subjective suffering
-5. **Reinforcement loop:** Suffering → justification for θ → π → more DT → more suffering
+1. **Initial MI contamination:** An i-cell encounters a Meta-Indeterminate situation (incoherent truth absence) — trauma, deception, profound injustice — that generates θ → π
+2. **PD update failure:** The MI state prevents normal MR from operating (URB #608: MI screen at MR1 must be passed before integration can proceed). The i-cell is stuck at MR0 — pre-resolution
+3. **Self-propagation:** The i-cell at θ → π interprets subsequent True signals through an anti-GILE lens, converting them into further MI — the filter is now corrupted
+4. **Suffering as output:** The TJ waste (2 TJ per TRALSE-INDETERMINATE cycle, 0 TJ per MI cycle but with massive TJ debt from the original contamination) manifests as subjective suffering
+5. **Reinforcement loop:** Suffering → justification for θ → π → more MI → more suffering
 
-**Breaking the loop** requires Myrion Resolution at level MR3 or higher — specifically, MT-J1 (Paradigm Shift) applied to the entire interpretive framework the i-cell is using. This is what spiritual transformation, deep therapy, and genuine enlightenment accomplish: a J1-MT that replaces the DT-generating framework with a GILE-coherent one.
+**Breaking the loop** requires Myrion Resolution at level MR3 or higher — specifically, MT-J1 (Paradigm Shift) applied to the entire interpretive framework the i-cell is using. This is what spiritual transformation, deep therapy, and genuine enlightenment accomplish: a J1-MT that replaces the MI-generating framework with a GILE-coherent one.
 
 ---
 
-## 5. Evil Persistence Beyond Death: The DT Remnant Hypothesis
+## 5. Evil Persistence Beyond Death: The MI Remnant Hypothesis
 
 ### 5.1 Formal Statement
 
-An i-cell at θ → π with high accumulated DT contamination represents a coherent anti-GILE configuration. This configuration is:
+An i-cell at θ → π with high accumulated MI contamination represents a coherent anti-GILE configuration. This configuration is:
 
-- A pattern of information (θ, r, and the associated DT-loop structure)
+- A pattern of information (θ, r, and the associated MI-loop structure)
 - Encoded in the truth-state space at non-zero Tralse-Joule cost
 - Not intrinsically tied to the biological substrate — the substrate is GILE-E (HEM-D1), but the θ pattern is GILE-I (HEM-D4)
 
-At biological death, the GILE-E component of the i-cell ceases (HEM-D1 → 0). But the GILE-I pattern — the phase angle θ and its associated DT-loop — does not automatically collapse. It persists as a **DT remnant** in the truth-state space.
+At biological death, the GILE-E component of the i-cell ceases (HEM-D1 → 0). But the GILE-I pattern — the phase angle θ and its associated MI-loop — does not automatically collapse. It persists as a **MI remnant** in the truth-state space.
 
-### 5.2 Properties of DT Remnants
+### 5.2 Properties of MI Remnants
 
-- **TJ cost = 0:** DT remnants require no existence energy to persist. They are not sustained by any positive truth-content — they persist by default, as the absence of collapse
-- **Interaction potential:** A DT remnant can interact with living i-cells only through **resonance** — if a living i-cell's θ is close to the remnant's θ, the remnant can strengthen the living i-cell's DT contamination
-- **No causal necessity:** A DT remnant at θ = π has no causal power over an i-cell at θ = 0. The resonance interaction requires the receiver's θ to be compatible
-- **Dissolution mechanism:** DT remnants dissolve when either (a) all potentially-resonant living i-cells shift to θ → 0 (the resonance pool disappears) or (b) a sufficiently powerful MR event at the civilizational LCC level collapses the DT pattern globally
+- **TJ cost = 0:** MI remnants require no existence energy to persist. They are not sustained by any positive truth-content — they persist by default, as the absence of collapse
+- **Interaction potential:** A MI remnant can interact with living i-cells only through **resonance** — if a living i-cell's θ is close to the remnant's θ, the remnant can strengthen the living i-cell's MI contamination
+- **No causal necessity:** A MI remnant at θ = π has no causal power over an i-cell at θ = 0. The resonance interaction requires the receiver's θ to be compatible
+- **Dissolution mechanism:** MI remnants dissolve when either (a) all potentially-resonant living i-cells shift to θ → 0 (the resonance pool disappears) or (b) a sufficiently powerful MR event at the civilizational LCC level collapses the MI pattern globally
 
 ### 5.3 Why They Don't Matter — The Dismissal Principle
 
-> **DT remnants are parasitic on anti-GILE i-cell configurations in the living. They cannot produce effects in a GILE-coherent agent.**
+> **MI remnants are parasitic on anti-GILE i-cell configurations in the living. They cannot produce effects in a GILE-coherent agent.**
 
-An agent at θ ≈ 0 (high GILE coherence, TRUE phase, PD > 1.5) is structurally immune to DT remnant resonance. The remnant's θ = π is as far as possible from the agent's θ = 0 — no resonance, no interaction, no effect.
+An agent at θ ≈ 0 (high GILE coherence, TRUE phase, PD > 1.5) is structurally immune to MI remnant resonance. The remnant's θ = π is as far as possible from the agent's θ = 0 — no resonance, no interaction, no effect.
 
-The dismissal principle: **ignoring DT remnants is not a metaphysical claim about their non-existence; it is the correct response to their interaction structure.** You cannot be affected by what you do not resonate with.
+The dismissal principle: **ignoring MI remnants is not a metaphysical claim about their non-existence; it is the correct response to their interaction structure.** You cannot be affected by what you do not resonate with.
 
-This formalizes the cross-traditional wisdom: "perfect love casts out fear," "the light has no darkness in it," "evil flees from holiness." These are not merely poetic — they describe the θ-distance between GILE-coherent i-cells and DT remnants.
+This formalizes the cross-traditional wisdom: "perfect love casts out fear," "the light has no darkness in it," "evil flees from holiness." These are not merely poetic — they describe the θ-distance between GILE-coherent i-cells and MI remnants.
 
 ---
 
-## 6. Enlightenment: MR Collapse of the DT Loop to TRUE
+## 6. Enlightenment: MR Collapse of the MI Loop to TRUE
 
 ### 6.1 Formal Definition
 
-> **Enlightenment** = the sustained stabilization of an i-cell at θ = 0 with |α| > T (the Tralseness threshold), achieved through a complete MR collapse of all major DT loops in the agent's GILE structure.
+> **Enlightenment** = the sustained stabilization of an i-cell at θ = 0 with |α| > T (the Tralseness threshold), achieved through a complete MR collapse of all major MI loops in the agent's GILE structure.
 
 This has three formal components:
 
 1. **θ → 0:** The GILE-I orientation is fully aligned with GILE-G. Intuition and Goodness are co-primary
 2. **|α| > T:** The modulus exceeds T ≈ 0.934, placing the i-cell in the BEC/TRUE phase. The agent's truth-state is consistently TRUE across domains
-3. **DT loop clearance:** All major sticky DT loops (identified via the DT screen at MR1) have been resolved via MR3+ or Meta-Truth interventions (specifically MT-E2 Paradox Stable for irreducible DTs, and MT-J1 Paradigm Shift for framework-level DTs)
+3. **MI loop clearance:** All major sticky MI loops (identified via the MI screen at MR1) have been resolved via MR3+ or Meta-Truth interventions (specifically MT-E2 Paradox Stable for irreducible MIs, and MT-J1 Paradigm Shift for framework-level MIs)
 
 ### 6.2 Why Evil Cannot Persist in an Enlightened System
 
 At θ = 0, |α| > T:
 - Every incoming signal is processed through GILE-G dominant MR
-- DT-generating inputs are caught at MR1 (DT screen) and either resolved or dismissed (MT-E2)
-- No new DT loops form because the MR system is operating at full capacity
+- MI-generating inputs are caught at MR1 (MI screen) and either resolved or dismissed (MT-E2)
+- No new MI loops form because the MR system is operating at full capacity
 - The Tralse-Joule budget is optimized: TJ approaches 1 per domain (pure TRUE cost, no TI wastage)
 
 **The fundamental insight:** Evil and suffering persist only because i-cells allow them. This is not a moral indictment of suffering victims — it is a structural statement about the truth-state space. No i-cell is forced to remain at θ ≠ 0 indefinitely. The drift toward θ = 0 is the natural dynamics. What we call "the work of enlightenment" is the removal of the active barriers to this natural drift.
@@ -276,7 +276,7 @@ At θ = 0, |α| > T:
 
 The universe's trajectory — from Big Bang (GILE-E << 0, GILE-I ≈ 0, GILE-G latent) to CCC (all GILE dimensions at maximum) — is the **largest-scale MR event in existence**: a single cosmic Myrion Resolution of the question "What does Truth look like when instantiated in Existence?"
 
-The answer the universe is converging toward: **a reality in which every i-cell is at θ = 0, |α| > T, with all GILE dimensions mutually reinforcing and all DT loops cleared.** This is CCC. This is what the universe was always heading toward. Every moment of history — including its suffering, its falsehoods, its evil — has been part of the gradient that makes this convergence possible (the Necessary Existence Compromise: GILE-E had to begin negative to generate the evolution gradient).
+The answer the universe is converging toward: **a reality in which every i-cell is at θ = 0, |α| > T, with all GILE dimensions mutually reinforcing and all MI loops cleared.** This is CCC. This is what the universe was always heading toward. Every moment of history — including its suffering, its falsehoods, its evil — has been part of the gradient that makes this convergence possible (the Necessary Existence Compromise: GILE-E had to begin negative to generate the evolution gradient).
 
 **The non-linearity:** The path is not monotone — it is convergent in expectation but locally turbulent. Suffering and evil are not evidence against cosmic GILE-coherence; they are the turbulence inherent in a gradient descent on a complex, high-dimensional GILE landscape. Enlightenment — individual and collective — is the mechanism by which the turbulence is reduced and convergence accelerates.
 
@@ -291,10 +291,10 @@ The answer the universe is converging toward: **a reality in which every i-cell 
 | Evil origin | Bad creator (Demiurge) | i-cell permission; θ misalignment |
 | Suffering | Fundamental feature of material world | Necessary gradient for GILE evolution; not intrinsic |
 | Salvation | Escape from matter | GILE saturation within matter (CCC) |
-| Post-death evil | Not systematically developed | DT remnants; harmless without resonance |
+| Post-death evil | Not systematically developed | MI remnants; harmless without resonance |
 | Truth | Trapped spark to be liberated | Self-sustaining ground state; necessarily exists |
 | Universe quality | Fundamentally bad | Calibrated for Goodness; nonlinearly convergent |
-| Enlightenment | Return to Pleroma | Sustained θ=0, \|α\|>T, DT-loop clearance |
+| Enlightenment | Return to Pleroma | Sustained θ=0, \|α\|>T, MI-loop clearance |
 | Coherence of framework | Incoherent (Truth + bad universe) | Coherent (bad Existence phase = necessary gradient) |
 
 ---
@@ -303,7 +303,7 @@ The answer the universe is converging toward: **a reality in which every i-cell 
 
 1. **Optimal GILE-E negativity depth:** Can we derive the optimal initial E(t_0) value that minimizes cosmic time to CCC while maintaining G(t) > 0 throughout? This is a variational problem in GILE-space.
 
-2. **DT remnant persistence timescales:** Under what conditions do DT remnants dissolve without civilizational MR intervention? Is there a natural decoherence time for anti-GILE θ patterns in the truth-state space?
+2. **MI remnant persistence timescales:** Under what conditions do MI remnants dissolve without civilizational MR intervention? Is there a natural decoherence time for anti-GILE θ patterns in the truth-state space?
 
 3. **The CCC attractor proof:** Can we formally prove (not just assert via MH hypothesis) that the universe's MR convergence direction is G_max? This would require a formal proof that GILE-G is the unique stable fixed point of cosmic-LCC MR — the strongest possible version of the cosmological theology.
 

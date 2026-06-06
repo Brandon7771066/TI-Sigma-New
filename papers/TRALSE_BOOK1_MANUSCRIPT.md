@@ -18,7 +18,7 @@ Brandon Emerick
 
 **Part II — The Full Architecture**
 4. The I-state — When the Sample Space Is Undefined
-5. Double Tralse — The Forbidden Zone
+5. Meta-Indeterminate — The Forbidden Zone
 6. GILE — A Four-Dimensional Compass
 
 **Part III — The Practical Core**
@@ -59,13 +59,13 @@ The first sustained challenges to bivalence came in the early twentieth century.
 
 Each of these systems acknowledged what bivalence ignored, and each captured something real. But each also stopped short. The third value was typically read as *unknown*, *undefined*, or *neither* — that is, as a placeholder for an absence rather than as a positive logical state in its own right. Fuzzy logic blurred the boundary between true and false but did not change its endpoints. None of these systems gave a principled account of propositions that are *stably between* true and false in a way that further inquiry will not, even in principle, resolve.
 
-Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a fifth truth value — *Tralse* — that is neither true, nor false, nor both, nor unknown, but something distinct: the stable logical state of a proposition whose truth-conditions are genuinely indeterminate, and whose indeterminacy is itself an informational fact about the world rather than a deficit in our access to it. The framework develops alongside it a sixth state, *Double Tralse*, for propositions that occupy a forbidden region in which their truth would generate logical or physical inconsistency, and a fourth state, the *I-state*, for propositions whose sample space is undefined. The full architecture is laid out in Chapters 3 through 5.
+Tralse Informationalism (TI Sigma) is an attempt to take that further step. It posits a fifth truth value — *Tralse* — that is neither true, nor false, nor both, nor unknown, but something distinct: the stable logical state of a proposition whose truth-conditions are genuinely indeterminate, and whose indeterminacy is itself an informational fact about the world rather than a deficit in our access to it. The framework develops alongside it a sixth state, *Meta-Indeterminate*, for propositions that occupy a forbidden region in which their truth would generate logical or physical inconsistency, and a fourth state, the *I-state*, for propositions whose sample space is undefined. The full architecture is laid out in Chapters 3 through 5.
 
 ### 1.3 What the Framework Provides
 
 Tralse Informationalism is a working framework rather than a programmatic suggestion. The chapters that follow develop, in order, four components.
 
-The first is a *five-valued truth architecture* — True, False, Tralse, I-state, Double Tralse — together with the inference rules and consistency conditions that govern transitions among them. The architecture is conservative over classical logic on the bivalent fragment, which is to say that any inference valid in classical two-valued logic remains valid here when restricted to determinate propositions. Nothing the reader knows about ordinary deductive reasoning is lost.
+The first is a *five-valued truth architecture* — True, False, Tralse, I-state, Meta-Indeterminate — together with the inference rules and consistency conditions that govern transitions among them. The architecture is conservative over classical logic on the bivalent fragment, which is to say that any inference valid in classical two-valued logic remains valid here when restricted to determinate propositions. Nothing the reader knows about ordinary deductive reasoning is lost.
 
 The second is the *GILE framework* — Goodness, Intuition, Love, and Environment — which the book treats as a four-dimensional compass for assessing the quality of a state of affairs, including the inner state of an agent making a decision. GILE is operationalized in two registers: as a self-report instrument suitable for everyday use, and as a biometric construct correlated with measurable physiological signals. The relation between the two registers is the subject of Chapter 6.
 
@@ -145,13 +145,13 @@ Fuzzy set theory and fuzzy logic have been extraordinarily successful in enginee
 
 A more radical departure from bivalence came with the work of Graham Priest and the rise of *dialetheism* in the 1980s and 1990s. Priest argued that some propositions — paradigmatically the Liar sentence ("This sentence is false") — are genuinely both true and false, and that a coherent logic must accommodate this rather than disqualify the offending sentences as ill-formed. The resulting paraconsistent logics permit contradictions without collapsing into triviality (in classical logic, a single contradiction entails every proposition; this is the principle of *ex contradictione quodlibet*, and it is what makes contradictions catastrophic).
 
-Dialetheism is philosophically controversial — most contemporary logicians reject it — but the technical machinery of paraconsistent logic has proven indispensable in domains where contradictions must be reasoned about without being eliminated: legal reasoning under conflicting statutes, scientific theorizing in periods of paradigm transition, and certain artificial intelligence applications. The Double Tralse value introduced in Chapter 5 inherits from this tradition the recognition that some logical configurations are stably contradictory — but it parts company with dialetheism in treating those configurations not as both true and false but as *forbidden*, in a sense to be made precise.
+Dialetheism is philosophically controversial — most contemporary logicians reject it — but the technical machinery of paraconsistent logic has proven indispensable in domains where contradictions must be reasoned about without being eliminated: legal reasoning under conflicting statutes, scientific theorizing in periods of paradigm transition, and certain artificial intelligence applications. The Meta-Indeterminate value introduced in Chapter 5 inherits from this tradition the recognition that some logical configurations are stably contradictory — but it parts company with dialetheism in treating those configurations not as both true and false but as *forbidden*, in a sense to be made precise.
 
 ### 2.7 What Was Achieved, and What Remained
 
 The cumulative achievement of the many-valued tradition is the demonstration that bivalence is not a logical necessity but a stipulation, and that alternatives to it can be made formally rigorous. The tradition has produced a rich technical apparatus, enduring applications in computing and engineering, and a substantial philosophical literature that has clarified the distinct roles played by epistemic indeterminacy, semantic vagueness, partial definition, and outright contradiction.
 
-What the tradition did not produce, and what this book undertakes to provide, is a single integrated framework that distinguishes these modes of departure from bivalence and assigns to each its own positive logical category — not as a placeholder for absent information, not as a graded calibration of True and False, not as a formal device for handling contradictions, but as a category of its own that picks out a structural feature of certain propositions. Five values, this book argues, are what the work requires: True, False, Tralse, I-state, Double Tralse. The next chapter introduces the central one.
+What the tradition did not produce, and what this book undertakes to provide, is a single integrated framework that distinguishes these modes of departure from bivalence and assigns to each its own positive logical category — not as a placeholder for absent information, not as a graded calibration of True and False, not as a formal device for handling contradictions, but as a category of its own that picks out a structural feature of certain propositions. Five values, this book argues, are what the work requires: True, False, Tralse, I-state, Meta-Indeterminate. The next chapter introduces the central one.
 
 ### 2.8 The Analytic-School Treatment of Vague Predicates
 
@@ -165,7 +165,7 @@ None of the three positions, in the present author's reading, is wrong on its ow
 
 A third strand of the many-valued tradition has come not from logic or philosophy but from computer science. The treatment of *null* values in relational databases, of partial functions in functional programming languages, of *option types* in type-theoretic languages such as ML and Haskell, and of *quiet NaN* in the IEEE 754 floating-point standard are all, structurally, three- or four-valued logics implemented at the level of working software. The engineers who designed these systems were not, for the most part, in dialogue with Łukasiewicz or Belnap; they arrived independently at the recognition that the bivalent inheritance of mathematics did not survive contact with the indeterminacies of practical computation.
 
-The framework inherits from this computer-science tradition both vocabulary (the I-state of Chapter 4 is recognizably descended from the *option*/*null* construct, and the Double Tralse of Chapter 5 from the IEEE *quiet NaN*) and a disposition: the disposition to take indeterminacy as a *first-class object* in the apparatus rather than as an exception to be handled by side-channels. The disposition is, in the present author's view, the most important thing the multi-valued tradition has produced. The technical machinery is reconstructible by any sufficiently determined logician; the disposition is harder won.
+The framework inherits from this computer-science tradition both vocabulary (the I-state of Chapter 4 is recognizably descended from the *option*/*null* construct, and the Meta-Indeterminate of Chapter 5 from the IEEE *quiet NaN*) and a disposition: the disposition to take indeterminacy as a *first-class object* in the apparatus rather than as an exception to be handled by side-channels. The disposition is, in the present author's view, the most important thing the multi-valued tradition has produced. The technical machinery is reconstructible by any sufficiently determined logician; the disposition is harder won.
 
 ### 2.10 What Was Achieved, Continued
 
@@ -189,7 +189,7 @@ A proposition is *Tralse* if and only if all of the following six conditions obt
 
 **(T5)** The proposition's indeterminacy is *stable* under further inquiry — that is, no procedure of evidence-gathering or formal analysis available to the agent will resolve the indeterminacy without altering the proposition itself.
 
-**(T6)** The proposition is *informationally substantive* — its assignment to the Tralse value carries inferential consequences distinct from those carried by True, False, I-state, or Double Tralse assignments.
+**(T6)** The proposition is *informationally substantive* — its assignment to the Tralse value carries inferential consequences distinct from those carried by True, False, I-state, or Meta-Indeterminate assignments.
 
 The reader is invited to compare this list with the prior literature surveyed in Chapter 2. Łukasiewicz's third value satisfies (T1), (T2), and (T3) but fails (T5): the future contingent will resolve when the future arrives. Kleene's **u** fails (T4): the proposition's truth-conditions are not defined. Belnap's *N* may satisfy all six, depending on the reading; Belnap's *B* fails (T2) and (T3) since it explicitly affirms both. Fuzzy values fail (T2) and (T3) by construction, since they sit on the same axis as classical truth and falsity. None of the prior values satisfies all six conditions in the way Tralse does.
 
@@ -211,7 +211,7 @@ Tralse is *not* uncertainty. Uncertainty is a property of the agent's epistemic 
 
 Tralse is *not* vagueness. Vagueness, in the sense studied by fuzzy logic and the philosophy of language, is a graded predicate's lack of sharp boundaries. *Tall* is vague: there is no exact height at which a person becomes tall. But the proposition *Smith is six feet two inches and one quarter tall*, applied to a man who is six feet two and one quarter, is determinately true. Vagueness lives in predicates; Tralse lives in propositions.
 
-Tralse is *not* contradiction. Contradictions assert both *p* and not-*p*; they are False (or, on the dialetheist's reading, both True and False). A Tralse proposition asserts neither, and its negation is also Tralse. The Liar sentence, often presented as the paradigm of contradiction, is on the present analysis Double Tralse (Chapter 5), not Tralse.
+Tralse is *not* contradiction. Contradictions assert both *p* and not-*p*; they are False (or, on the dialetheist's reading, both True and False). A Tralse proposition asserts neither, and its negation is also Tralse. The Liar sentence, often presented as the paradigm of contradiction, is on the present analysis Meta-Indeterminate (Chapter 5), not Tralse.
 
 Tralse is *not* meaninglessness. Logical positivism famously dismissed certain metaphysical and ethical propositions as cognitively meaningless. The Tralse propositions of this book are meaningful by stipulation (T1); their indeterminacy is a substantive logical fact, not a symptom of nonsense.
 
@@ -233,7 +233,7 @@ It changes the *next-step procedure*. A True or False assignment terminates inqu
 
 It permits *aggregate measures*. If GILE scores (Chapter 6) and HEAR (Chapter 8) are to integrate information from across the agent's whole cognitive and emotional landscape, they require a treatment of the indeterminate that does not silently coerce it to True or False. Tralse provides that treatment.
 
-The remaining three architectural elements — the I-state, Double Tralse, and the GILE compass — extend the work of Tralse into the regions where it alone does not suffice. The next chapter takes up the first of them.
+The remaining three architectural elements — the I-state, Meta-Indeterminate, and the GILE compass — extend the work of Tralse into the regions where it alone does not suffice. The next chapter takes up the first of them.
 
 ### 3.6 The Inferential Behavior of Tralse
 
@@ -305,7 +305,7 @@ Three rules govern the I-state's behavior under inference. Their full formal sta
 
 **(I-1) The I-state propagates through unbounded operations.** A proposition formed by applying a logical connective to one or more I-state propositions is itself in the I-state, unless one of the inputs is determinately True or False in a way that fixes the value of the compound. (For example, an I-state proposition disjoined with a True proposition is True; conjoined with a False proposition, it is False.)
 
-**(I-2) The I-state can transition to other values, but only by an explicit act of specification.** An agent moves a proposition out of the I-state by performing the work of constructing a sample space, an analogy, or a model that renders its truth-conditions specifiable. After such work, the proposition takes one of the other four values (True, False, Tralse, Double Tralse). The transition is not an update on evidence in the Bayesian sense; it is a constructive act.
+**(I-2) The I-state can transition to other values, but only by an explicit act of specification.** An agent moves a proposition out of the I-state by performing the work of constructing a sample space, an analogy, or a model that renders its truth-conditions specifiable. After such work, the proposition takes one of the other four values (True, False, Tralse, Meta-Indeterminate). The transition is not an update on evidence in the Bayesian sense; it is a constructive act.
 
 **(I-3) The I-state has a default action: inquiry rather than decision.** When a proposition relevant to a decision is in the I-state, the framework's recommended action is to defer the decision (where possible) in favor of the constructive work that would move the proposition into a determinate value. Where deferral is not possible, the framework provides, in the Permissibility Distribution apparatus of Chapter 9, a non-Bayesian procedure for acting under I-state conditions.
 
@@ -337,75 +337,75 @@ The I-state, on the framework's reading, is the propositional category in which 
 
 ---
 
-## Chapter 5: Double Tralse — The Forbidden Zone
+## Chapter 5: Meta-Indeterminate — The Forbidden Zone
 
 ### 5.1 The Liar, Reconsidered
 
 The Liar sentence — "This sentence is false" — has been an embarrassment to logic for more than two thousand years. Assigning it the value True yields a contradiction; assigning it False yields a contradiction. Tarski's response was to deny that the sentence is well-formed at the object-language level, requiring a hierarchy of meta-languages. Kripke's response was to assign the sentence a non-classical value at a fixed point of an iterative procedure. Priest's dialetheist response was to assign it both True and False simultaneously and to develop a paraconsistent logic that contains the resulting contradiction.
 
-The present framework offers a fourth response. The Liar sentence, on the proposed analysis, occupies a logical category that we have called *Double Tralse*: it is not True, not False, not Tralse (its indeterminacy is not stable in the Tralse sense, since each candidate assignment immediately generates instability), and not in the I-state (its truth-conditions are perfectly well-defined — that is precisely the source of the trouble). It is, instead, *forbidden*: a proposition whose truth-value cannot stably take any classical assignment without violating the conditions of consistency.
+The present framework offers a fourth response. The Liar sentence, on the proposed analysis, occupies a logical category that we have called *Meta-Indeterminate*: it is not True, not False, not Tralse (its indeterminacy is not stable in the Tralse sense, since each candidate assignment immediately generates instability), and not in the I-state (its truth-conditions are perfectly well-defined — that is precisely the source of the trouble). It is, instead, *forbidden*: a proposition whose truth-value cannot stably take any classical assignment without violating the conditions of consistency.
 
 The category is more general than the Liar. It is the framework's way of marking a structural feature that recurs across logic, decision theory, physics, and ordinary life: some propositions occupy a region in which determinate truth-values are not merely unknown or undefined but actively excluded.
 
 ### 5.2 Three Examples Beyond the Liar
 
-**Example 1 — Vow conflicts.** Consider an agent who has made two solemn commitments, both fully sincere when made, that turn out to be jointly unfulfillable: a doctor who has promised both to preserve life unconditionally and to honor patient autonomy unconditionally, faced with a competent patient refusing life-saving treatment. The proposition *I am keeping both vows* is not False (the agent is acting from both commitments simultaneously) and not True (the action will violate at least one). It is not Tralse (the commitments are precisely specified). It is not I-state (the truth-conditions are well-defined). It is forbidden: the joint specification creates a logical configuration that admits no stable classical assignment. The recognition that the proposition is Double Tralse is the first step toward the agent's renegotiating the commitments themselves.
+**Example 1 — Vow conflicts.** Consider an agent who has made two solemn commitments, both fully sincere when made, that turn out to be jointly unfulfillable: a doctor who has promised both to preserve life unconditionally and to honor patient autonomy unconditionally, faced with a competent patient refusing life-saving treatment. The proposition *I am keeping both vows* is not False (the agent is acting from both commitments simultaneously) and not True (the action will violate at least one). It is not Tralse (the commitments are precisely specified). It is not I-state (the truth-conditions are well-defined). It is forbidden: the joint specification creates a logical configuration that admits no stable classical assignment. The recognition that the proposition is Meta-Indeterminate is the first step toward the agent's renegotiating the commitments themselves.
 
-**Example 2 — Predictive feedback.** Consider a financial market in which a respected analyst publicly predicts a particular stock's collapse. If the prediction is believed, the predicted collapse occurs; if it is disbelieved, it does not. The proposition *the analyst's prediction is correct* exhibits the same forbidden structure as the Liar: any stable assignment of True or False to it generates a configuration that immediately destabilizes the assignment. The proposition is Double Tralse, and the recognition of this is the precondition for any honest treatment of the analyst's epistemic situation.
+**Example 2 — Predictive feedback.** Consider a financial market in which a respected analyst publicly predicts a particular stock's collapse. If the prediction is believed, the predicted collapse occurs; if it is disbelieved, it does not. The proposition *the analyst's prediction is correct* exhibits the same forbidden structure as the Liar: any stable assignment of True or False to it generates a configuration that immediately destabilizes the assignment. The proposition is Meta-Indeterminate, and the recognition of this is the precondition for any honest treatment of the analyst's epistemic situation.
 
-**Example 3 — Self-undermining beliefs.** Consider an agent whose well-being is causally dependent on holding a particular belief about themselves, and for whom the proposition *this belief, which is keeping me functional, is in fact false* is in question. To affirm the proposition is to undermine the functioning that depends on the belief; to deny it is to engage in self-deception that the agent's standards condemn. The proposition is Double Tralse, and the recognition that it is Double Tralse is what permits the agent to turn from the (insoluble) question of its truth-value to the (soluble) question of how to construct a different belief structure that is not similarly self-undermining.
+**Example 3 — Self-undermining beliefs.** Consider an agent whose well-being is causally dependent on holding a particular belief about themselves, and for whom the proposition *this belief, which is keeping me functional, is in fact false* is in question. To affirm the proposition is to undermine the functioning that depends on the belief; to deny it is to engage in self-deception that the agent's standards condemn. The proposition is Meta-Indeterminate, and the recognition that it is Meta-Indeterminate is what permits the agent to turn from the (insoluble) question of its truth-value to the (soluble) question of how to construct a different belief structure that is not similarly self-undermining.
 
-### 5.3 What Makes Double Tralse a Positive Category
+### 5.3 What Makes Meta-Indeterminate a Positive Category
 
-It would be tempting to treat Double Tralse as merely a defect — as the framework's elegant name for "the proposition is broken." Three considerations argue against this dismissal.
+It would be tempting to treat Meta-Indeterminate as merely a defect — as the framework's elegant name for "the proposition is broken." Three considerations argue against this dismissal.
 
-First, the recognition that a proposition is Double Tralse is itself informative. It tells the reasoner where to direct effort: not toward determining the proposition's truth-value (a wasted effort) but toward modifying the configuration that generated the forbidden status. The Liar sentence is informative about the structure of self-reference; vow conflicts are informative about the structure of commitment; predictive feedback is informative about the structure of public knowledge. The Double Tralse category does the work of marking propositions whose informativeness lies precisely in their resistance to truth-value assignment.
+First, the recognition that a proposition is Meta-Indeterminate is itself informative. It tells the reasoner where to direct effort: not toward determining the proposition's truth-value (a wasted effort) but toward modifying the configuration that generated the forbidden status. The Liar sentence is informative about the structure of self-reference; vow conflicts are informative about the structure of commitment; predictive feedback is informative about the structure of public knowledge. The Meta-Indeterminate category does the work of marking propositions whose informativeness lies precisely in their resistance to truth-value assignment.
 
-Second, Double Tralse propositions are not mere logical curiosities. They appear in every domain in which self-reference, multiple commitment, or public prediction operates — which is to say, in every domain in which intelligent agents act on each other and on themselves. A framework that lacks a category for them has no way of saying what is true of them, and is forced either to ignore them or to mishandle them.
+Second, Meta-Indeterminate propositions are not mere logical curiosities. They appear in every domain in which self-reference, multiple commitment, or public prediction operates — which is to say, in every domain in which intelligent agents act on each other and on themselves. A framework that lacks a category for them has no way of saying what is true of them, and is forced either to ignore them or to mishandle them.
 
-Third, the formal treatment of Double Tralse has technical consequences that simpler treatments lack. Within the five-value system, Double Tralse propositions are *quarantined* by inference rules that prevent them from propagating their inconsistency to other propositions. (The full statement is in Appendix B.) This is a generalization of paraconsistent logic's containment of contradictions, and it permits reasoning to continue around the forbidden zone without collapsing into triviality.
+Third, the formal treatment of Meta-Indeterminate has technical consequences that simpler treatments lack. Within the five-value system, Meta-Indeterminate propositions are *quarantined* by inference rules that prevent them from propagating their inconsistency to other propositions. (The full statement is in Appendix B.) This is a generalization of paraconsistent logic's containment of contradictions, and it permits reasoning to continue around the forbidden zone without collapsing into triviality.
 
 ### 5.4 A Note on Antimatter (For the Physically Inclined Reader)
 
-A more speculative claim, which is developed at greater length in Chapter 11, deserves a preliminary mention here because it illustrates the reach of the Double Tralse category. The framework's working hypothesis is that Double Tralse is not merely a logical category but a *physical* one: that the relationship between matter and antimatter, the structure of spin-½ particles, and certain features of quantum measurement reflect, at the level of physical law, the same forbidden-zone structure that the Liar sentence reflects at the level of propositional logic. The hypothesis is conjectural, the supporting work is partial, and the present chapter does not require it. Readers who find the suggestion implausible may set it aside; readers who find it intriguing may turn directly to §11.3, where the case is developed in more detail.
+A more speculative claim, which is developed at greater length in Chapter 11, deserves a preliminary mention here because it illustrates the reach of the Meta-Indeterminate category. The framework's working hypothesis is that Meta-Indeterminate is not merely a logical category but a *physical* one: that the relationship between matter and antimatter, the structure of spin-½ particles, and certain features of quantum measurement reflect, at the level of physical law, the same forbidden-zone structure that the Liar sentence reflects at the level of propositional logic. The hypothesis is conjectural, the supporting work is partial, and the present chapter does not require it. Readers who find the suggestion implausible may set it aside; readers who find it intriguing may turn directly to §11.3, where the case is developed in more detail.
 
-### 5.5 The Inferential Behavior of Double Tralse
+### 5.5 The Inferential Behavior of Meta-Indeterminate
 
-Three rules govern Double Tralse, parallel to the rules for the I-state in §4.4.
+Three rules govern Meta-Indeterminate, parallel to the rules for the I-state in §4.4.
 
-**(D-1) Double Tralse propositions are quarantined.** A proposition formed by applying a logical connective to a Double Tralse proposition is *not* automatically Double Tralse; it is evaluated by the truth tables of Appendix B, which are constructed so that the inconsistency of the Double Tralse input does not propagate.
+**(D-1) Meta-Indeterminate propositions are quarantined.** A proposition formed by applying a logical connective to a Meta-Indeterminate proposition is *not* automatically Meta-Indeterminate; it is evaluated by the truth tables of Appendix B, which are constructed so that the inconsistency of the Meta-Indeterminate input does not propagate.
 
-**(D-2) Double Tralse exits the category only by reconfiguration.** A Double Tralse proposition cannot be moved to another value by gathering more evidence (since its truth-value is not a function of evidence) or by constructive specification (since its truth-conditions are already specified). It exits the category only when the agent modifies the configuration — the self-referential structure, the conflicting commitments, the predictive feedback loop — that generated its forbidden status.
+**(D-2) Meta-Indeterminate exits the category only by reconfiguration.** A Meta-Indeterminate proposition cannot be moved to another value by gathering more evidence (since its truth-value is not a function of evidence) or by constructive specification (since its truth-conditions are already specified). It exits the category only when the agent modifies the configuration — the self-referential structure, the conflicting commitments, the predictive feedback loop — that generated its forbidden status.
 
-**(D-3) Double Tralse has a default action: structural change.** When a proposition is Double Tralse, the framework's recommended action is not deliberation about its truth-value but intervention on the structure that produced the forbidden zone. The doctor renegotiates the vows; the analyst declines to publish; the believer constructs a different belief structure.
+**(D-3) Meta-Indeterminate has a default action: structural change.** When a proposition is Meta-Indeterminate, the framework's recommended action is not deliberation about its truth-value but intervention on the structure that produced the forbidden zone. The doctor renegotiates the vows; the analyst declines to publish; the believer constructs a different belief structure.
 
 ### 5.6 The Truth Architecture, Complete
 
-With the introduction of Double Tralse, the truth architecture is complete. There are five values:
+With the introduction of Meta-Indeterminate, the truth architecture is complete. There are five values:
 
 - **True** — the proposition holds.
 - **False** — the proposition fails.
 - **Tralse** — the proposition is stably indeterminate; its truth-conditions are defined but no procedure resolves it.
 - **I-state** — the proposition's truth-conditions are not yet specifiable; it awaits constructive work.
-- **Double Tralse** — the proposition occupies a forbidden zone in which no stable classical assignment is consistent.
+- **Meta-Indeterminate** — the proposition occupies a forbidden zone in which no stable classical assignment is consistent.
 
 These five values, with the truth tables of Appendix B and the inference rules sketched in Chapters 3–5, constitute the formal core of Tralse Informationalism. The remaining chapters of the book develop the practical apparatus that surrounds the core: GILE as the four-dimensional evaluative compass (Chapter 6), Myrion Resolution as the iterative procedure for moving propositions through the values where movement is possible (Chapter 7), HEAR as the longitudinal aggregate measure (Chapter 8), and Permissibility Distribution as the generalized probability theory that the architecture supports (Chapter 9).
 
-### 5.7 Double Tralse in Public Discourse
+### 5.7 Meta-Indeterminate in Public Discourse
 
 The forbidden-zone structure that Chapter 5 has identified in propositional logic, in the structure of conflicting commitments, and in the structure of self-undermining beliefs has a fourth and increasingly consequential domain of appearance: the structure of public discourse under conditions of widespread, rapid, and reflexive information transmission. Three patterns warrant particular attention.
 
-The first is *predictive feedback in financial markets*. The propositions whose Double Tralse status was illustrated in §5.2 by the example of an analyst's stock prediction generalize to the entire structure of public market commentary. Any prediction widely enough disseminated alters the probability of its own confirmation; the alteration is not a Bayesian update on the prediction's truth but a causal intervention by the prediction on the system the prediction is about. The proposition *this market analysis is correct* is, in the limiting case of perfectly responsive markets, structurally Double Tralse. The framework's treatment of the case is the same as for vow conflicts and self-undermining beliefs: the appropriate response is not to determine the proposition's truth-value but to modify the configuration that generates the forbidden status. In the market case, this means publishing analyses with explicit acknowledgment of their reflexive character, separating analysis from prescription, and developing market structures (delayed disclosure, structured embargo, scaled release) that decouple the prediction from its capacity to alter the system it predicts. The framework offers no novel financial regulation, but it offers a logical vocabulary that names the structural problem and that places it in the same category as the more familiar paradoxes of self-reference.
+The first is *predictive feedback in financial markets*. The propositions whose Meta-Indeterminate status was illustrated in §5.2 by the example of an analyst's stock prediction generalize to the entire structure of public market commentary. Any prediction widely enough disseminated alters the probability of its own confirmation; the alteration is not a Bayesian update on the prediction's truth but a causal intervention by the prediction on the system the prediction is about. The proposition *this market analysis is correct* is, in the limiting case of perfectly responsive markets, structurally Meta-Indeterminate. The framework's treatment of the case is the same as for vow conflicts and self-undermining beliefs: the appropriate response is not to determine the proposition's truth-value but to modify the configuration that generates the forbidden status. In the market case, this means publishing analyses with explicit acknowledgment of their reflexive character, separating analysis from prescription, and developing market structures (delayed disclosure, structured embargo, scaled release) that decouple the prediction from its capacity to alter the system it predicts. The framework offers no novel financial regulation, but it offers a logical vocabulary that names the structural problem and that places it in the same category as the more familiar paradoxes of self-reference.
 
-The second is *predictive feedback in polling and election forecasting*. A presidential poll, widely disseminated, alters the probability of its own confirmation through several channels: voters who would have voted for the leading candidate may stay home in the belief that their vote is unnecessary; voters who would have voted for the trailing candidate may stay home in the belief that their vote is futile; donors and volunteers shift their resources in response to the poll; media coverage shifts in response to the poll. The proposition *this poll is correct* is, accordingly, Double Tralse in the same sense as the analyst's prediction. The framework's response is, again, structural: the forbidden status is not eliminated by improving the poll's methodology; it is eliminated only by altering the configuration that connects the poll to the behavior it predicts.
+The second is *predictive feedback in polling and election forecasting*. A presidential poll, widely disseminated, alters the probability of its own confirmation through several channels: voters who would have voted for the leading candidate may stay home in the belief that their vote is unnecessary; voters who would have voted for the trailing candidate may stay home in the belief that their vote is futile; donors and volunteers shift their resources in response to the poll; media coverage shifts in response to the poll. The proposition *this poll is correct* is, accordingly, Meta-Indeterminate in the same sense as the analyst's prediction. The framework's response is, again, structural: the forbidden status is not eliminated by improving the poll's methodology; it is eliminated only by altering the configuration that connects the poll to the behavior it predicts.
 
-The third is *central-bank communication*. Modern central banks face the structural problem that any statement about future interest-rate policy is causally connected to the future interest-rate environment they are predicting: the statement itself moves the markets that determine the variables on which the prediction depends. The doctrine of *forward guidance*, developed since the 2008 financial crisis, is in effect an attempt to navigate the Double Tralse zone by issuing statements whose specification is intentionally calibrated to anticipate and absorb the reflexive response. The framework offers no normative judgment on the doctrine; it offers the observation that central-bank communication is, structurally, a sustained engagement with Double Tralse propositions of high consequence, and that the discipline of recognizing the structure as Double Tralse is the precondition for any further normative discussion.
+The third is *central-bank communication*. Modern central banks face the structural problem that any statement about future interest-rate policy is causally connected to the future interest-rate environment they are predicting: the statement itself moves the markets that determine the variables on which the prediction depends. The doctrine of *forward guidance*, developed since the 2008 financial crisis, is in effect an attempt to navigate the Meta-Indeterminate zone by issuing statements whose specification is intentionally calibrated to anticipate and absorb the reflexive response. The framework offers no normative judgment on the doctrine; it offers the observation that central-bank communication is, structurally, a sustained engagement with Meta-Indeterminate propositions of high consequence, and that the discipline of recognizing the structure as Meta-Indeterminate is the precondition for any further normative discussion.
 
 ### 5.8 The Topology of the Forbidden Zone
 
-A more abstract observation, of interest principally to logicians and to readers attracted to the framework's connections with mathematics and physics (Chapter 11), is that the Double Tralse propositions are not scattered randomly across the proposition-space but cluster into characteristic *topological structures* of self-reference, mutual implication, and reflexive causation. The Liar sentence is the simplest example: a single proposition that asserts of itself that it is false. The Curry sentence ("If this sentence is true, then *q*") generalizes the Liar to the case where the inconsistency is mediated through an arbitrary further proposition *q*. The Yablo paradox replaces the Liar's single self-reference with an infinite descending chain of "this sentence and all subsequent sentences are false." The vow-conflict cases of §5.2 generalize the Liar's structure to the case of mutually inconsistent multiple commitments. The predictive-feedback cases of §5.7 generalize the Liar's structure to the case of self-causing proposition.
+A more abstract observation, of interest principally to logicians and to readers attracted to the framework's connections with mathematics and physics (Chapter 11), is that the Meta-Indeterminate propositions are not scattered randomly across the proposition-space but cluster into characteristic *topological structures* of self-reference, mutual implication, and reflexive causation. The Liar sentence is the simplest example: a single proposition that asserts of itself that it is false. The Curry sentence ("If this sentence is true, then *q*") generalizes the Liar to the case where the inconsistency is mediated through an arbitrary further proposition *q*. The Yablo paradox replaces the Liar's single self-reference with an infinite descending chain of "this sentence and all subsequent sentences are false." The vow-conflict cases of §5.2 generalize the Liar's structure to the case of mutually inconsistent multiple commitments. The predictive-feedback cases of §5.7 generalize the Liar's structure to the case of self-causing proposition.
 
-The framework's tentative position, developed at greater length in URBs #659 and #758, is that all Double Tralse propositions can be analyzed as occupying one of a small number of topological types, and that the topology of each type predicts the structural intervention required to exit the forbidden zone. The Liar topology requires the introduction of a meta-level (Tarski's solution); the Curry topology requires the bracketing of *q* (a structural separation); the Yablo topology requires a constraint on the reasoner's quantification over an infinite chain (a finite-context restriction); the vow-conflict topology requires the renegotiation of one of the conflicting commitments; the predictive-feedback topology requires a decoupling intervention of the kind discussed in §5.7. The unifying claim is that every Double Tralse proposition exits the forbidden zone only by an intervention on the topological feature that placed it in the zone, and that the framework's contribution is to make the topology visible.
+The framework's tentative position, developed at greater length in URBs #659 and #758, is that all Meta-Indeterminate propositions can be analyzed as occupying one of a small number of topological types, and that the topology of each type predicts the structural intervention required to exit the forbidden zone. The Liar topology requires the introduction of a meta-level (Tarski's solution); the Curry topology requires the bracketing of *q* (a structural separation); the Yablo topology requires a constraint on the reasoner's quantification over an infinite chain (a finite-context restriction); the vow-conflict topology requires the renegotiation of one of the conflicting commitments; the predictive-feedback topology requires a decoupling intervention of the kind discussed in §5.7. The unifying claim is that every Meta-Indeterminate proposition exits the forbidden zone only by an intervention on the topological feature that placed it in the zone, and that the framework's contribution is to make the topology visible.
 
 The contribution is, at present, conjectural. The topology has not been formally axiomatized in the form that the framework's logical apparatus has been. The full statement, when it is available, will appear in the philosophical monograph that accompanies this book and in the technical sequel currently in preparation.
 
@@ -415,7 +415,7 @@ The contribution is, at present, conjectural. The topology has not been formally
 
 ### 6.1 The Need for a Compass
 
-A logic of five truth values is necessary, but it is not sufficient. The propositions on which human lives turn require not only to be classified as True, False, Tralse, I-state, or Double Tralse; they require to be *evaluated*, in the sense of being placed within a structure that bears on the agent's well-being, choices, and direction. The classical logic offers no such structure, and neither does any of the multi-valued systems surveyed in Chapter 2. The framework introduces, for this purpose, a four-dimensional compass: GILE, an acronym formed from the names of its four dimensions — *Goodness*, *Intuition*, *Love*, and *Environment*.
+A logic of five truth values is necessary, but it is not sufficient. The propositions on which human lives turn require not only to be classified as True, False, Tralse, I-state, or Meta-Indeterminate; they require to be *evaluated*, in the sense of being placed within a structure that bears on the agent's well-being, choices, and direction. The classical logic offers no such structure, and neither does any of the multi-valued systems surveyed in Chapter 2. The framework introduces, for this purpose, a four-dimensional compass: GILE, an acronym formed from the names of its four dimensions — *Goodness*, *Intuition*, *Love*, and *Environment*.
 
 The choice of these four, rather than three or five or twelve, is defended on three grounds. First, they are jointly exhaustive in the relevant sense: every dimension along which a human state of affairs can be evaluated either reduces to one of the four or compounds two or more of them. (The case for joint exhaustivity is made at length in URB #774 and in the philosophical monograph that accompanies this book; it is summarized in §6.6 below.) Second, they are mutually irreducible: no dimension reduces to any combination of the others, as can be shown by exhibiting states that score high on three and low on one. Third, they admit operationalization in two registers — self-report and biometric — that converge under conditions specified in Chapter 8, providing the framework with empirical traction.
 
@@ -511,7 +511,7 @@ Chapter 7 takes up the procedure that connects the truth architecture and the GI
 
 Myrion Resolution is the framework's iterative convergence procedure for decision-making under genuine indeterminacy. It is the practical instrument that connects the abstract truth architecture of Chapters 3–5 to the lived choices of an agent. The chapter develops the procedure in detail and illustrates it with three full worked examples; it is the longest chapter in the book and, in the author's judgment, the one that does the most work for the working reader.
 
-To understand what MR is, it is useful to begin with what it is not. MR is not a Bayesian decision procedure. Bayesian decision theory, in its standard form, asks the agent to assign credences to propositions and utilities to outcomes, and then to choose the action that maximizes expected utility. The procedure presupposes that credences and utilities are available; for the propositions we have called Tralse, I-state, and Double Tralse, they are not. MR is the framework's response to this.
+To understand what MR is, it is useful to begin with what it is not. MR is not a Bayesian decision procedure. Bayesian decision theory, in its standard form, asks the agent to assign credences to propositions and utilities to outcomes, and then to choose the action that maximizes expected utility. The procedure presupposes that credences and utilities are available; for the propositions we have called Tralse, I-state, and Meta-Indeterminate, they are not. MR is the framework's response to this.
 
 MR is also not deliberation in the classical philosophical sense — a process of weighing reasons until one set of reasons preponderates over another. Classical deliberation presupposes that the reasons themselves are commensurable; for many of the most important decisions, they are not. MR is structured to make the incommensurability visible rather than to paper over it.
 
@@ -521,7 +521,7 @@ MR is, at its heart, an iterative *check-in* with the four GILE dimensions, cond
 
 A single MR cycle consists of six steps, each of which is described below. The cycle is repeated until convergence, with intervals between cycles long enough to permit the agent's pre-reflective processes to operate (typically several hours to several days, depending on the consequence of the decision).
 
-**Step 1 — Statement.** The agent writes down, in a single declarative sentence, the proposition under consideration. The discipline of writing forces precision; the discipline of a single sentence forces economy. The proposition should be one that, on inspection, is plausibly Tralse — that is, one whose truth-value is not yet determinate but whose truth-conditions are well enough defined for evaluation. Propositions in the I-state should be moved to the constructive work of §4.4 before being entered into MR; propositions in the Double Tralse zone should be moved to the structural reconfiguration of §5.5.
+**Step 1 — Statement.** The agent writes down, in a single declarative sentence, the proposition under consideration. The discipline of writing forces precision; the discipline of a single sentence forces economy. The proposition should be one that, on inspection, is plausibly Tralse — that is, one whose truth-value is not yet determinate but whose truth-conditions are well enough defined for evaluation. Propositions in the I-state should be moved to the constructive work of §4.4 before being entered into MR; propositions in the Meta-Indeterminate zone should be moved to the structural reconfiguration of §5.5.
 
 **Step 2 — GILE assessment.** The agent assigns scores in [0, 1] to each of G, I, L, and E for the *state of affairs that would result if the proposition were treated as True* — that is, if the agent acted as though it were settled. The scores are recorded, with brief notes on the reasoning behind each. The assessment is then repeated for the *state of affairs that would result if the proposition were treated as False*, again with notes.
 
@@ -599,7 +599,7 @@ The fourth failure mode is *dimensional collapse*: the agent, in performing the 
 
 The fifth failure mode is *rationalization-displacement*: the agent's explicit GILE scores reliably move, between cycles, in the direction that supports a decision the agent has covertly already made; the apparent convergence is the result of subtle rationalization rather than honest re-examination. The remedy is to *interleave cycles with a third-party check*: the agent shares, with a trusted other, the GILE notes from successive cycles and asks the third party to identify any pattern of motivated drift. Where the third party identifies such a pattern, the agent should suspend the procedure and return to first principles.
 
-The sixth failure mode is *propositional misclassification*: the agent enters MR on a proposition that is in fact in the I-state (Chapter 4) or in Double Tralse (Chapter 5), and the procedure fails to converge for the structural reason that MR is not the appropriate procedure for those values. The remedy is the *category check*: at the start of each cycle (or at the start of the second cycle if not at the first), the agent explicitly verifies that the proposition meets all six conditions of (T1)–(T6) in §3.1. Where the proposition fails (T4) — its truth-conditions are not specifiable — it should be moved to the constructive work of §4.4. Where the proposition fails the consistency conditions and falls into Double Tralse, it should be moved to the structural-reconfiguration work of §5.5.
+The sixth failure mode is *propositional misclassification*: the agent enters MR on a proposition that is in fact in the I-state (Chapter 4) or in Meta-Indeterminate (Chapter 5), and the procedure fails to converge for the structural reason that MR is not the appropriate procedure for those values. The remedy is the *category check*: at the start of each cycle (or at the start of the second cycle if not at the first), the agent explicitly verifies that the proposition meets all six conditions of (T1)–(T6) in §3.1. Where the proposition fails (T4) — its truth-conditions are not specifiable — it should be moved to the constructive work of §4.4. Where the proposition fails the consistency conditions and falls into Meta-Indeterminate, it should be moved to the structural-reconfiguration work of §5.5.
 
 The seventh failure mode is *practice-burnout*: the agent has been conducting MR cycles at high frequency and high consequence for an extended period and finds, after months, that the procedure has lost its felt quality of honest engagement and become a routine executed for its own sake. The remedy is the *practice-pause*: the agent suspends MR cycles entirely for a period (typically two to four weeks), continues the daily GILE practice of Chapter 12, and resumes MR only when a proposition arises that the agent feels genuine motivation to engage. Practice-burnout is, in the framework's experience, the most common reason mature practitioners leave the practice; the remedy of explicit pause is the framework's principal recommendation for sustaining the practice across decades.
 
@@ -684,7 +684,7 @@ The *steady plateau* — HEAR remaining within a narrow band (±0.05) over three
 
 The *gentle ascent* — HEAR rising at a rate of 0.02 to 0.05 per month over six or more months — typically reflects a successful intervention or a successful transition through a difficult period; the agent has done the work of the past months and the work is producing measurable result.
 
-The *gentle descent* — HEAR falling at a comparable rate over a similar window — typically reflects either an unrecognized environmental erosion (a relationship under sustained low-grade strain, a vocational situation gradually losing its alignment, a slow physical or financial deterioration) or an unaddressed Double Tralse proposition that is generating cumulative low-grade distress. The framework's recommendation, in either case, is the explicit examination of the trajectory's possible causes, with external counsel where the causes are not self-evident.
+The *gentle descent* — HEAR falling at a comparable rate over a similar window — typically reflects either an unrecognized environmental erosion (a relationship under sustained low-grade strain, a vocational situation gradually losing its alignment, a slow physical or financial deterioration) or an unaddressed Meta-Indeterminate proposition that is generating cumulative low-grade distress. The framework's recommendation, in either case, is the explicit examination of the trajectory's possible causes, with external counsel where the causes are not self-evident.
 
 The *step-discontinuity* — HEAR shifting abruptly by 0.10 or more in a single week — typically reflects a discrete event (a job change, a relational transition, a health event, a bereavement, a major creative success) whose effect the framework's apparatus has correctly captured. The step-discontinuity is informative about the agent's responsiveness to the event but does not, in itself, require remedial action; the agent's task is to allow the post-discontinuity trajectory to stabilize before drawing conclusions.
 
@@ -706,7 +706,7 @@ The reader who is uninterested in the foundations of probability may skim this c
 
 Bayesian probability theory, as introduced in §4.1, treats probability as the degree of credence that a rational agent assigns to a proposition. The theory's strengths are well known: it provides a unified treatment of inference under uncertainty, a coherent procedure (conditionalization) for updating credences on new evidence, and a powerful set of theorems (Cox's, Dutch book, representation results) that establish its credentials as the unique theory of rational credence.
 
-The theory presupposes, however, three conditions that are not always met. It presupposes that the *sample space* is well-defined (the I-state of Chapter 4 marks the failure of this presupposition). It presupposes that *each proposition can be assigned a determinate credence in [0, 1]* (the Tralse value of Chapter 3 marks propositions for which this is not the case). And it presupposes that *no proposition occupies a forbidden zone* in which credence assignment generates inconsistency (the Double Tralse value of Chapter 5 marks this third failure).
+The theory presupposes, however, three conditions that are not always met. It presupposes that the *sample space* is well-defined (the I-state of Chapter 4 marks the failure of this presupposition). It presupposes that *each proposition can be assigned a determinate credence in [0, 1]* (the Tralse value of Chapter 3 marks propositions for which this is not the case). And it presupposes that *no proposition occupies a forbidden zone* in which credence assignment generates inconsistency (the Meta-Indeterminate value of Chapter 5 marks this third failure).
 
 PD is the framework's response to these three failures. It is *not* a rejection of Bayesianism within the domain where Bayesianism applies — PD reduces to Bayesian probability on the subdomain where all three conditions are met. It is an extension of the apparatus into the regions where the conditions fail.
 
@@ -714,7 +714,7 @@ PD is the framework's response to these three failures. It is *not* a rejection 
 
 **Innovation 1 — The I-state cell.** Where Bayesian probability assigns to each proposition a single number in [0, 1], PD assigns a *cell*: either a single number (when the proposition is True, False, or has a determinate credence), an interval (when the credence is bounded but not determinate), or a designated *I-state cell* (when the sample space is not yet specifiable). The I-state cell is not a credence of zero, not a credence of one-half, and not an interval; it is a positive logical category that records the proposition's status as awaiting constructive specification, in the sense of §4.4.
 
-**Innovation 2 — The DT forbidden zone.** PD includes a *forbidden zone*, denoted DT, into which propositions occupying the Double Tralse status are placed. Propositions in the forbidden zone are not assigned credences; they are recorded as occupying a logical configuration whose stable resolution requires structural reconfiguration rather than further credence-update.
+**Innovation 2 — The MI forbidden zone.** PD includes a *forbidden zone*, denoted MI, into which propositions occupying the Meta-Indeterminate status are placed. Propositions in the forbidden zone are not assigned credences; they are recorded as occupying a logical configuration whose stable resolution requires structural reconfiguration rather than further credence-update.
 
 **Innovation 3 — The Tralse attractor.** PD includes a *Tralse attractor* — a stable region of the credence space toward which propositions with the Tralse logical value gravitate under repeated Myrion Resolution. The attractor is not a single point; it is a region, characterized by the agent-specific weights w_G, w_I, w_L, w_E and by the agent's history of resolution. Propositions in the Tralse attractor are not awaiting resolution; they have been resolved as stably indeterminate, and the framework's apparatus for acting under stable indeterminacy (the *permissible action set*, §9.5) operates on them.
 
@@ -724,9 +724,9 @@ Three results, given without proof here and proved in the philosophical monograp
 
 **Reduction Theorem.** When all propositions in the agent's credence assignment are bivalent (True or False, with credences in [0, 1] and sample space well-defined), PD reduces to standard Bayesian probability. All Bayesian theorems remain valid in this reduction.
 
-**Conservation Theorem.** When PD is applied to a problem in which some propositions are I-state, Tralse, or Double Tralse, the credences assigned to the remaining bivalent propositions agree with those a Bayesian would assign after explicitly excluding the non-bivalent propositions from the sample space. PD does not perturb Bayesian inference on its proper domain.
+**Conservation Theorem.** When PD is applied to a problem in which some propositions are I-state, Tralse, or Meta-Indeterminate, the credences assigned to the remaining bivalent propositions agree with those a Bayesian would assign after explicitly excluding the non-bivalent propositions from the sample space. PD does not perturb Bayesian inference on its proper domain.
 
-**Update Theorem.** PD provides update rules for transitions between cells (I-state to bivalent on constructive specification; Tralse to bivalent on resolution; bivalent to Tralse or Double Tralse on detection of indeterminacy or forbidden status). The update rules generalize Bayes' rule and reduce to it on the bivalent fragment.
+**Update Theorem.** PD provides update rules for transitions between cells (I-state to bivalent on constructive specification; Tralse to bivalent on resolution; bivalent to Tralse or Meta-Indeterminate on detection of indeterminacy or forbidden status). The update rules generalize Bayes' rule and reduce to it on the bivalent fragment.
 
 ### 9.5 The Permissible Action Set
 
@@ -736,13 +736,13 @@ The permissible action set is constructed by the procedure of §7.6: the agent i
 
 ### 9.6 The Empirical Status of PD
 
-PD has not yet been subjected to the kind of axiomatic and behavioral validation that Bayesian probability has received over the past century. The framework's claim is more modest: that PD is *internally consistent*, that it *reduces correctly* to Bayesian probability on the bivalent fragment, and that it *handles a class of problems* — the I-state, Tralse, and Double Tralse cases — that Bayesian probability does not.
+PD has not yet been subjected to the kind of axiomatic and behavioral validation that Bayesian probability has received over the past century. The framework's claim is more modest: that PD is *internally consistent*, that it *reduces correctly* to Bayesian probability on the bivalent fragment, and that it *handles a class of problems* — the I-state, Tralse, and Meta-Indeterminate cases — that Bayesian probability does not.
 
 The empirical work that would be required to test PD against Bayesian alternatives in cases of joint applicability is identified in URBs #736 and #756 and is a major component of the framework's open research program. The reader interested in contributing to that program is referred to the philosophical monograph and to the open empirical protocols posted on the framework's Zenodo repository.
 
 ### 9.7 Summary and Transition
 
-PD generalizes Bayesian probability by adding a positive logical category for unspecifiable sample spaces (the I-state cell), a forbidden zone for inconsistent configurations (the DT zone), and an attractor for stable indeterminacy (the Tralse attractor). It reduces to Bayesian probability on the bivalent fragment, conserves Bayesian inference on bivalent subproblems, and extends Bayesian decision theory by replacing point-valued credences with a permissible action set under stable indeterminacy.
+PD generalizes Bayesian probability by adding a positive logical category for unspecifiable sample spaces (the I-state cell), a forbidden zone for inconsistent configurations (the MI zone), and an attractor for stable indeterminacy (the Tralse attractor). It reduces to Bayesian probability on the bivalent fragment, conserves Bayesian inference on bivalent subproblems, and extends Bayesian decision theory by replacing point-valued credences with a permissible action set under stable indeterminacy.
 
 With PD in place, the framework's theoretical apparatus is complete. The remaining chapters of the book are devoted to its application: three extended case studies (Chapter 10), connections to mathematics, physics, and consciousness research (Chapter 11), and a 30-day starter protocol the reader can begin using on the day of their choice (Chapter 12).
 
@@ -752,7 +752,7 @@ A more technical statement of PD's relation to standard probability is owed to t
 
 PD generalizes Kolmogorov by relaxing the presupposition that Ω is a single fixed sample space and that every well-formed proposition admits a measure. Instead, PD specifies five regions of the proposition-space (corresponding to the five truth values), three of which (T, F, and τ) admit measure-like assignments that satisfy variants of Kolmogorov's axioms within their region, and two of which (ι and δ) require non-measure-theoretic treatment.
 
-For the *bivalent fragment* (propositions valued T or F), PD reduces exactly to Kolmogorov: the same axioms hold, with the same consequences. For the *Tralse fragment*, PD introduces a *Tralse attractor*: a designated location in the unit interval (typically near 0.5, but agent-specific) toward which Bayesian updates on Tralse propositions tend to converge under continued evidence-collection, with the convergence interpretable as the asymptotic recognition that the proposition is structurally Tralse rather than the asymptotic accumulation of credence in either direction. For the *I-state fragment*, PD assigns no measure but instead records the I-state as an *open set of possible measures*, each conditional on a particular constructive specification of the missing sample space, with the agent's task being the constructive work that selects among the open set. For the *Double Tralse fragment*, PD assigns no measure and instead records the proposition as occupying a *forbidden region*, with the agent's task being the structural intervention that exits the region.
+For the *bivalent fragment* (propositions valued T or F), PD reduces exactly to Kolmogorov: the same axioms hold, with the same consequences. For the *Tralse fragment*, PD introduces a *Tralse attractor*: a designated location in the unit interval (typically near 0.5, but agent-specific) toward which Bayesian updates on Tralse propositions tend to converge under continued evidence-collection, with the convergence interpretable as the asymptotic recognition that the proposition is structurally Tralse rather than the asymptotic accumulation of credence in either direction. For the *I-state fragment*, PD assigns no measure but instead records the I-state as an *open set of possible measures*, each conditional on a particular constructive specification of the missing sample space, with the agent's task being the constructive work that selects among the open set. For the *Meta-Indeterminate fragment*, PD assigns no measure and instead records the proposition as occupying a *forbidden region*, with the agent's task being the structural intervention that exits the region.
 
 The four cases together constitute a *partial probability measure* on the full proposition-space, with classical Kolmogorov measure recovered on the bivalent fragment and well-defined non-measure-theoretic structures on the other three fragments. The full axiomatization of the partial measure, with the consistency theorems and the reduction proofs, is the subject of the philosophical monograph that accompanies this book and is summarized in URB #657.
 
@@ -784,7 +784,7 @@ This chapter takes three extended cases — one medical, one relational, one voc
 
 The patient (whom we shall call A) has lived for two years with a chronic gastrointestinal condition that has resisted diagnosis and treatment. The condition is functionally disabling — it limits A's work, sleep, and social life — but it is not life-threatening. A specialist clinic now offers an experimental protocol involving a six-week residential commitment, substantial out-of-pocket cost, and uncertain probability of benefit. The proposition under MR is *I should enroll in the experimental protocol*.
 
-A's preparatory work, before entering MR, includes the following. A confirms that the proposition is Tralse rather than I-state: the truth-conditions are well-defined (the protocol's design is specified, the criteria of success are stipulated), the agent's evaluation depends on factors that no further information will resolve. A confirms the proposition is not Double Tralse: there is no self-undermining or feedback structure. A also confirms that the assessment is being conducted at sufficient E (E ≥ 0.6): the financial and relational supports for the deliberation itself are in place.
+A's preparatory work, before entering MR, includes the following. A confirms that the proposition is Tralse rather than I-state: the truth-conditions are well-defined (the protocol's design is specified, the criteria of success are stipulated), the agent's evaluation depends on factors that no further information will resolve. A confirms the proposition is not Meta-Indeterminate: there is no self-undermining or feedback structure. A also confirms that the assessment is being conducted at sufficient E (E ≥ 0.6): the financial and relational supports for the deliberation itself are in place.
 
 The first MR cycle, conducted over a single afternoon:
 
@@ -816,7 +816,7 @@ The third cycle, two weeks later, returns nearly identical scores. Convergence i
 
 The agent (B) has been close friends with another for nearly two decades. In the past year, the friendship has become characterized by a recurring pattern in which the friend's behavior leaves B feeling diminished and the friend's response to B's expressions of difficulty has been defensive rather than receptive. The proposition under MR is *I should formally end this friendship within the next month*.
 
-B's preparatory work confirms the proposition is Tralse: the truth-conditions are defined (the friendship's continuation or termination), the agent's evaluation depends on factors no further inquiry will resolve. B confirms the proposition is not Double Tralse, though the case is closer than Case A — there is some self-referential structure in the pattern, but the proposition's truth-value can stably take either value without inconsistency. B confirms the assessment is being conducted at adequate E.
+B's preparatory work confirms the proposition is Tralse: the truth-conditions are defined (the friendship's continuation or termination), the agent's evaluation depends on factors no further inquiry will resolve. B confirms the proposition is not Meta-Indeterminate, though the case is closer than Case A — there is some self-referential structure in the pattern, but the proposition's truth-value can stably take either value without inconsistency. B confirms the assessment is being conducted at adequate E.
 
 The first MR cycle:
 
@@ -948,13 +948,13 @@ The framework's reformulation is that the Riemann zeros, considered as a sequenc
 
 The work required to establish the result is substantial: a formal characterization of the MR convergence pattern, a proof that the Riemann zeros instantiate it, and an empirical search for the pattern in independent domains. The formal characterization is in progress; the proof is not. The empirical search has been undertaken in two preliminary domains (musical composition and brain-band oscillation) with suggestive results that have not yet been published. The reader interested in this line of work is referred to the framework's Zenodo repository.
 
-### 11.3 Physics: Double Tralse and the Antimatter Analog
+### 11.3 Physics: Meta-Indeterminate and the Antimatter Analog
 
-Theoretical physics inherited, from the Dirac equation of 1928, a structural feature whose interpretation has remained contested for almost a century: the equation's solutions naturally divide into a positive-energy sector (matter) and a negative-energy sector (antimatter), with the two sectors related by a symmetry whose physical realization is the existence of antiparticles. The framework's working hypothesis, developed in URB #659 and summarized in the working note on Double Tralse as a Physics Primitive, is that the matter–antimatter relationship is the physical instantiation of the Double Tralse logical category of Chapter 5.
+Theoretical physics inherited, from the Dirac equation of 1928, a structural feature whose interpretation has remained contested for almost a century: the equation's solutions naturally divide into a positive-energy sector (matter) and a negative-energy sector (antimatter), with the two sectors related by a symmetry whose physical realization is the existence of antiparticles. The framework's working hypothesis, developed in URB #659 and summarized in the working note on Meta-Indeterminate as a Physics Primitive, is that the matter–antimatter relationship is the physical instantiation of the Meta-Indeterminate logical category of Chapter 5.
 
-The hypothesis, in its strongest form, holds that a Double Tralse proposition and its physical analog (a particle and its antiparticle) share a structural property: each is the *forbidden zone complement* of the other, in the sense that the joint specification of both — the assignment of both True and False, or the colocation of particle and antiparticle — generates an inconsistency that the framework characterizes (logically) as the Double Tralse status and that physics characterizes (physically) as annihilation.
+The hypothesis, in its strongest form, holds that a Meta-Indeterminate proposition and its physical analog (a particle and its antiparticle) share a structural property: each is the *forbidden zone complement* of the other, in the sense that the joint specification of both — the assignment of both True and False, or the colocation of particle and antiparticle — generates an inconsistency that the framework characterizes (logically) as the Meta-Indeterminate status and that physics characterizes (physically) as annihilation.
 
-The hypothesis bears on three further structural features of physics that have resisted clean interpretation. Spin-½ — the property of fundamental fermions whose wavefunction returns to itself only after a 720° rotation — admits, on the hypothesis, a reading as a *Tralse residue*: the structural signature of a particle whose underlying logical status is stably indeterminate in a way that 360° rotation alone cannot resolve. Quantum measurement — the famous transition from superposition to definite outcome — admits a reading as a Myrion Resolution convergence, with the Born rule corresponding to the framework's permissible-action distribution. The Pauli exclusion principle admits a reading as the Double Tralse forbidden zone applied to fermionic occupancy.
+The hypothesis bears on three further structural features of physics that have resisted clean interpretation. Spin-½ — the property of fundamental fermions whose wavefunction returns to itself only after a 720° rotation — admits, on the hypothesis, a reading as a *Tralse residue*: the structural signature of a particle whose underlying logical status is stably indeterminate in a way that 360° rotation alone cannot resolve. Quantum measurement — the famous transition from superposition to definite outcome — admits a reading as a Myrion Resolution convergence, with the Born rule corresponding to the framework's permissible-action distribution. The Pauli exclusion principle admits a reading as the Meta-Indeterminate forbidden zone applied to fermionic occupancy.
 
 None of these readings is currently established. Each is consistent with the existing physical theory and adds, where the readings are tractable, no empirical content beyond what the existing theory predicts. The framework's case is that the readings are *interpretively unifying* — that they identify a common structural feature across logic and physics that the present interpretive apparatus does not — and that the unification is worth the further work required to test it.
 
@@ -1052,7 +1052,7 @@ Days 21–30 stabilize the practice. The daily GILE becomes routine; the weekly 
 
 **The agent cannot sustain the daily practice.** This is the most common difficulty. The remedy is to reduce the daily practice to its minimum form — a single composite GILE score with no per-dimension breakdown — until the habit is established, then re-introduce the per-dimension assessment.
 
-**The agent's MR cycles do not converge.** This is sometimes a sign of premature convergence-seeking; more often it is a sign that the proposition under MR is genuinely stably Tralse, in which case the agent should follow the procedure of §7.6 (permissible action set) rather than continuing to cycle. The agent should also examine whether the proposition has been correctly identified — agents new to the practice frequently choose propositions that are I-state or Double Tralse rather than Tralse, and the framework's procedures for those values are different.
+**The agent's MR cycles do not converge.** This is sometimes a sign of premature convergence-seeking; more often it is a sign that the proposition under MR is genuinely stably Tralse, in which case the agent should follow the procedure of §7.6 (permissible action set) rather than continuing to cycle. The agent should also examine whether the proposition has been correctly identified — agents new to the practice frequently choose propositions that are I-state or Meta-Indeterminate rather than Tralse, and the framework's procedures for those values are different.
 
 **The agent's HEAR is declining.** A declining HEAR over the first month is not, by itself, evidence of a problem; the act of beginning the practice often surfaces difficulties that were previously unrecognized, and the surfacing is itself valuable. A declining HEAR over three or more months, especially if accompanied by declining GILE_E and biometric anchors, is a more substantive signal and warrants attention. The framework's recommendation is the use of external counsel (a therapist, a trusted friend, a coach) rather than self-correction within the practice alone.
 
@@ -1096,7 +1096,7 @@ The author wishes the reader well.
 
 **Bivalence.** The principle that every well-formed proposition is either true or false. Foundational to classical logic; questioned by every system in the many-valued tradition (Chapter 2).
 
-**Double Tralse (DT).** The fifth truth value: the logical status of a proposition that occupies a forbidden zone in which no stable classical assignment is consistent. Examples include the Liar sentence, vow conflicts, and predictive feedback structures (Chapter 5).
+**Meta-Indeterminate (MI).** The fifth truth value: the logical status of a proposition that occupies a forbidden zone in which no stable classical assignment is consistent. Examples include the Liar sentence, vow conflicts, and predictive feedback structures (Chapter 5).
 
 **E (Environment).** The fourth GILE dimension: the supportiveness of an agent's physical, social, and informational surroundings (§6.5).
 
@@ -1114,7 +1114,7 @@ The author wishes the reader well.
 
 **Myrion Resolution (MR).** The framework's iterative convergence procedure for moving propositions from indeterminate to determinate values, where movement is possible (Chapter 7).
 
-**Permissibility Distribution (PD).** The framework's generalization of Bayesian probability theory, accommodating the I-state, Tralse, and Double Tralse logical categories (Chapter 9).
+**Permissibility Distribution (PD).** The framework's generalization of Bayesian probability theory, accommodating the I-state, Tralse, and Meta-Indeterminate logical categories (Chapter 9).
 
 **Tralse.** The third truth value: the logical status of a proposition that is meaningfully indeterminate, with defined truth-conditions but no procedure of resolution available to the agent (Chapter 3).
 
@@ -1124,7 +1124,7 @@ The author wishes the reader well.
 
 ## Appendix B: The Five-Value Truth Tables
 
-The five values are denoted T (True), F (False), τ (Tralse), ι (I-state), and δ (Double Tralse). The tables below give the framework's standard semantics for negation, conjunction, and disjunction. Implication and equivalence are derived from these in the standard manner; the derivations are given in the philosophical monograph that accompanies this book.
+The five values are denoted T (True), F (False), τ (Tralse), ι (I-state), and δ (Meta-Indeterminate). The tables below give the framework's standard semantics for negation, conjunction, and disjunction. Implication and equivalence are derived from these in the standard manner; the derivations are given in the philosophical monograph that accompanies this book.
 
 **Negation (¬p)**
 
@@ -1136,7 +1136,7 @@ The five values are denoted T (True), F (False), τ (Tralse), ι (I-state), and 
 | ι | ι |
 | δ | δ |
 
-(The Tralse, I-state, and Double Tralse values are *self-negating*: their negation is themselves. This is one of the features that distinguishes the framework most sharply from classical and standard many-valued logics.)
+(The Tralse, I-state, and Meta-Indeterminate values are *self-negating*: their negation is themselves. This is one of the features that distinguishes the framework most sharply from classical and standard many-valued logics.)
 
 **Conjunction (p ∧ q)** — read across, then down
 
@@ -1158,7 +1158,7 @@ The five values are denoted T (True), F (False), τ (Tralse), ι (I-state), and 
 | **ι** | T | ι | ι | ι | δ |
 | **δ** | T | δ | δ | δ | δ |
 
-The reader will verify by inspection that the tables reduce to the classical tables on the bivalent fragment (rows and columns T and F); that the Tralse value propagates through operations whose inputs include it but does not infect operations whose outputs are determined by other inputs; that the I-state similarly propagates but is more "infectious" than Tralse; and that Double Tralse occupies the most absorbing position, propagating through any operation that does not have a False conjunct or a True disjunct to short-circuit it. The asymmetry between the I-state and Double Tralse rows reflects the framework's structural distinction between *indeterminacy of specification* (I-state) and *forbidden inconsistency* (Double Tralse).
+The reader will verify by inspection that the tables reduce to the classical tables on the bivalent fragment (rows and columns T and F); that the Tralse value propagates through operations whose inputs include it but does not infect operations whose outputs are determined by other inputs; that the I-state similarly propagates but is more "infectious" than Tralse; and that Meta-Indeterminate occupies the most absorbing position, propagating through any operation that does not have a False conjunct or a True disjunct to short-circuit it. The asymmetry between the I-state and Meta-Indeterminate rows reflects the framework's structural distinction between *indeterminacy of specification* (I-state) and *forbidden inconsistency* (Meta-Indeterminate).
 
 ---
 
@@ -1277,14 +1277,14 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - URB #134*: *HEAR: Wellbeing as Longitudinal Aggregate.*
 - URB #220: *Tralse and Time: Constitutive vs. Temporal Indeterminacy.*
 - URB #287: *I-state and the Bootstrap Problem in Probability.*
-- URB #345: *Double Tralse: The Forbidden Zone in Propositional Logic.*
+- URB #345: *Meta-Indeterminate: The Forbidden Zone in Propositional Logic.*
 - URB #412: *Vow Conflicts and the Topology of Inconsistency.*
 - URB #478: *The Mycelial GM-Node Architecture.*
 - URB #534: *GILE Weights: Default Calibration and Domain-Specific Adjustment.*
 - URB #599: *FAAH Protocol: Endocannabinoid-System Integration.*
 - URB #623: *The Tralse Topos Engine.*
 - URB #657*: *Permissibility Distribution: Full Axiomatization.*
-- URB #659*: *The Topology of Double Tralse Propositions.*
+- URB #659*: *The Topology of Meta-Indeterminate Propositions.*
 - URB #696*: *GM Coherence-Rejection Signal as Non-GILE External Measurement.*
 - URB #738*: *GILE Profiles in Major Depressive Disorder: Pilot Findings.*
 - URB #748*: *GILE Profiles in Generalized Anxiety: Pilot Findings.*
@@ -1425,7 +1425,7 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - Dehaene (cognitive neuroscience), §11.4
 - Depression, GILE profile of, §6.9
 - DPES (Default Philosophical Eating Strategy), §12.4n
-- Double Tralse (DT), Chapter 5; in public discourse, §5.7
+- Meta-Indeterminate (MI), Chapter 5; in public discourse, §5.7
 - Dummett, M., on vagueness, §2.8
 
 **E**
@@ -1444,9 +1444,9 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - Failure modes of MR, §7.5, §7.8
 - Family conference (in MR), §10.6.E
 - FAAH Protocol, §6.5n, URB #599
-- Financial markets and Double Tralse, §5.7
+- Financial markets and Meta-Indeterminate, §5.7
 - Five-valued architecture, summary, §5.6
-- Forbidden zone, see Double Tralse
+- Forbidden zone, see Meta-Indeterminate
 - Forward guidance (central-bank communication), §5.7
 
 **G**
@@ -1535,14 +1535,14 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - Philanthropic allocation, §10.6.F
 - PMNS matrix, §11.6, URB #763
 - Polar H10 heart-rate strap, §6.10n
-- Polling and election forecasting (Double Tralse), §5.7
+- Polling and election forecasting (Meta-Indeterminate), §5.7
 - Power of Eight protocol, §7.7, URB #770
 - Practice-burnout, §7.8, §12.8
 - Practice-half-life effect, §10.7
 - Pre-reflective check (in MR), §7.2, §7.4
 - Privation Theory, §11.5n
 - Probability, see Bayesian probability; Permissibility Distribution
-- Propagation rules (Tralse, I-state, DT), §3.6, §4.4, §5.4
+- Propagation rules (Tralse, I-state, MI), §3.6, §4.4, §5.4
 
 **R**
 
@@ -1556,7 +1556,7 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 
 - Sample space, undefined, §4.7, §4.8
 - Scruton, R. (aesthetics), §6.10
-- Self-reference (in Double Tralse), §5.1, §5.8
+- Self-reference (in Meta-Indeterminate), §5.1, §5.8
 - Sigma (Σ), the framework's, §1.6
 - Single-dimension deep-dive, §7.8
 - Sorites paradox, §2.8

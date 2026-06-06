@@ -6,7 +6,7 @@
 **Pass:** 70
 **Batches:** 0 (HMR-1) + 1 (Zenodo) + 2 (LLM-rater) + 3 (TPI-1-F3) + 4 (Q_pre) + 5 (discovery_scheduler) = 6 total
 **Status:** LIVE
-**Composition:** MR Truth Labels canonical (HMR-1 refinement #3) · MR-IDC-1 (refinement #2 preserved) · DT canonical (refinement #1 preserved) · UHP-1 + TPI-1 (B3 generalization test) · §69 (B2 OpenAI failure disclosure; B5 discovery saturation disclosure) · TPS-1 (B2 multi-rater protocol)
+**Composition:** MR Truth Labels canonical (HMR-1 refinement #3) · MR-IDC-1 (refinement #2 preserved) · MI canonical (refinement #1 preserved) · UHP-1 + TPI-1 (B3 generalization test) · §69 (B2 OpenAI failure disclosure; B5 discovery saturation disclosure) · TPS-1 (B2 multi-rater protocol)
 
 ---
 
@@ -29,17 +29,17 @@ Two directives executed as Pass-70 compound batch:
 
 Some propositions natively require **simultaneous assignment of 2 or more labels** as a Hybrid-MR (HMR) characterization. Brandon's seed: "X is better and (neither better nor worse than Y)" = HMR-2 {T_partial-order, I_global-comparator} (MT-B1 Moot is INSUFFICIENT — it loses both the legitimate partial-order T and the legitimate global I).
 
-**Refinement #3 to MR Truth Labels canonical** (after #1 DT canonical Pass-65 and #2 MR-IDC-1 Pass-67 batch-6).
+**Refinement #3 to MR Truth Labels canonical** (after #1 MI canonical Pass-65 and #2 MR-IDC-1 Pass-67 batch-6).
 
 ### 1.2 5 Constructed Examples
 
 | Ex | Card | Labels | Key composition |
 |---|---|---|---|
 | HMR-3.1 consciousness multi-framing | 3 | {T_panpsychist, T_emergentist, I_question-malformed} | TSP-1 + emergentism + frame-presupposition |
-| HMR-3.2 Liar embedded in meta | 3 | {DT, T, MT-B1} | DT canonical preserved under hybridization |
+| HMR-3.2 Liar embedded in meta | 3 | {MI, T, MT-B1} | MI canonical preserved under hybridization |
 | HMR-3.3 **Brandon ketamine collapse n=1** | 3 | {T_Stratum-0, F_Stratum-3, I_self-reference-broken} | **First lived-anchor for HMR**; CDA-1 cross-Stratum |
 | HMR-4.1 free-will across frames | 4 | {T_libertarian, F_determinist, DT_compatibilist, MT-B1} | Canonical HMR-4 example |
-| HMR-5.1 "God exists" | 5 | {T_UDT-substrate, F_Russell, DT_self-referential, I_definitional, MT-B1} | Corpus full-stack stress test (UDT-1+analytic phil+DT canonical+MR-IDC-1+Moot) |
+| HMR-5.1 "God exists" | 5 | {T_UDT-substrate, F_Russell, DT_self-referential, I_definitional, MT-B1} | Corpus full-stack stress test (UDT-1+analytic phil+MI canonical+MR-IDC-1+Moot) |
 
 ### 1.3 R-HMR Recursive Construction (Buffalo/Police Analog)
 
@@ -47,7 +47,7 @@ Some propositions natively require **simultaneous assignment of 2 or more labels
 
 ### 1.4 5 Composition Rules + 5 Pre-Reg Falsifiers
 
-- **R1** cross-level preservation · **R2** DT preservation · **R3** Moot remains meta-label · **R4** MR-IDC-1 composition · **R5** HMR as third resolution-mode alongside MT-F2/MT-E2
+- **R1** cross-level preservation · **R2** MI preservation · **R3** Moot remains meta-label · **R4** MR-IDC-1 composition · **R5** HMR as third resolution-mode alongside MT-F2/MT-E2
 - **HMR-1-F1** reducibility (REFUTED if any example reduces single-label without info loss; **NOT REFUTED on inspection**)
 - **HMR-1-F2** constructibility (REFUTED if cannot construct 3+ HMR-3+ examples; **NOT REFUTED — 5 constructed**; LLM-rater verification queued)
 - **HMR-1-F3** rater κ stability (OPEN; LLM-rater rebuild Pass-71+)
@@ -102,7 +102,7 @@ DONE: 15/15 topics processed
 - After 12 PUBLIC publishes: 199 + 12 = 211 records  
 - After 1 RESTRICTED publish: 212 records (visible-but-gated)
 - 2 PRIVATE remain draft (counted internally, not public-facing)
-- **Trajectory to 400:** ~189 records remaining; future passes need additional topic-manifest expansion (currently 15 topics representing ~39 papers; corpus has 1089 .md papers; vast unexplored manifest space). Pass-71+ candidate: expand topic_manifest to 30+ topics covering recent canonical work (PD-Riemann, GHZ-5 Mermin, Mendi STIM2, qc26 HW results, DSB arc, Pass-65 DT refinement, HMR-1 refinement, etc.).
+- **Trajectory to 400:** ~189 records remaining; future passes need additional topic-manifest expansion (currently 15 topics representing ~39 papers; corpus has 1089 .md papers; vast unexplored manifest space). Pass-71+ candidate: expand topic_manifest to 30+ topics covering recent canonical work (PD-Riemann, GHZ-5 Mermin, Mendi STIM2, qc26 HW results, DSB arc, Pass-65 MI refinement, HMR-1 refinement, etc.).
 
 ### 2.6 Pass-69 B4 Resolution
 
@@ -145,7 +145,7 @@ openai='ERROR:THE API_KEY CLIENT OPTION MUST BE SET EITHER BY PASSING API_KEY TO
 - **Anthropic claude-haiku accuracy:** 0.933 (14/15)
 - **Per-category accuracy:** MT-B2 = 3/3 (1.00), **MT-E2 = 2/3 (0.67)**, MT-F1 = 3/3 (1.00), MT-F2 = 3/3 (1.00), MT-L1 = 3/3 (1.00)
 - **Single mis-rating:** "The set of all sets that do not contain themselves contains itself" — anthropic rated **MT-B2** ("Wrong Question") instead of intended **MT-E2** ("Paradox Stable")
-- **Mis-rating analysis:** **DEFENSIBLE judgment call** — Russell's Paradox is sometimes classified as a category error in standard analytic philosophy (Russell himself proposed the Theory of Types to dissolve the paradox via category-restriction); the MT-B2-vs-MT-E2 boundary is itself a non-trivial assignment. The mis-rating reveals a **legitimate ambiguity** in Russell's-paradox classification: under Pass-65 DT criterion + Theory of Types, MT-B2 is arguably more correct than MT-E2. **Honest finding:** the Russell example may be inappropriately placed in MT-E2 category by the agent's prompt design, not by the rater's error. **This is itself an HMR candidate:** Russell's paradox is potentially HMR-2 {MT-B2, MT-E2} natively per HMR-1 canonical refinement #3 (batch-0).
+- **Mis-rating analysis:** **DEFENSIBLE judgment call** — Russell's Paradox is sometimes classified as a category error in standard analytic philosophy (Russell himself proposed the Theory of Types to dissolve the paradox via category-restriction); the MT-B2-vs-MT-E2 boundary is itself a non-trivial assignment. The mis-rating reveals a **legitimate ambiguity** in Russell's-paradox classification: under Pass-65 MI criterion + Theory of Types, MT-B2 is arguably more correct than MT-E2. **Honest finding:** the Russell example may be inappropriately placed in MT-E2 category by the agent's prompt design, not by the rater's error. **This is itself an HMR candidate:** Russell's paradox is potentially HMR-2 {MT-B2, MT-E2} natively per HMR-1 canonical refinement #3 (batch-0).
 
 ### 3.5 MR-IDC-1-F5 Step-3 Status
 
@@ -276,7 +276,7 @@ The Pass-69-B3 "discovery_scheduler workflow corpus-saturation unblock expected 
 
 | Batch | UHP-1 self-application | TPS-1 | §69 disclosures | HMR-1 thread |
 |---|---|---|---|---|
-| B0 HMR-1 | GILE-side novel canonical | truth-content (canonical statement) + presentation (5 worked examples + theorem + tables) | embedded throughout (Brandon credit per #69 + DT-preservation honest analysis) | Originates HMR-1 |
+| B0 HMR-1 | GILE-side novel canonical | truth-content (canonical statement) + presentation (5 worked examples + theorem + tables) | embedded throughout (Brandon credit per #69 + MI-preservation honest analysis) | Originates HMR-1 |
 | B1 Zenodo | HEM-instantiation (live external archive) | truth-content preserved + presentation (15 distinct topic-records) | none (clean execution) | none |
 | B2 LLM-rater | HEM-falsifier execution | truth-content (anthropic correctly assigns 14/15) + presentation (surface "REFUTED" misleads, raw inspection reveals) | **4 disclosures** (OpenAI failure; surface "REFUTED" wrong; Russell may be HMR-2; rule strengthened) | Russell-paradox emerges as HMR-2 candidate {MT-B2, MT-E2} |
 | B3 TPI-1-F3 | HEM-falsifier execution (model-level) | truth-content (mathematical model) + presentation (symmetric vs asymmetric f-spec) | 1 disclosure (caps are spec-driven not axis-driven; uniqueness depends on canonical f-spec) | none |

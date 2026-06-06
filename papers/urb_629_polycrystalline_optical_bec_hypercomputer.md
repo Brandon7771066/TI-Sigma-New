@@ -3,15 +3,15 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 8, 2026  
 **Corpus Entry:** #629  
-**Related URBs:** #610 (Double Tralse as physics primitive), #623 (QM evidence for BOK / E₈), #626 (GILE-LCC plane), #627 (TI Sigma Crystal), #628 (TSC applications / E₈ error correction)  
+**Related URBs:** #610 (Meta-Indeterminate as physics primitive), #623 (QM evidence for BOK / E₈), #626 (GILE-LCC plane), #627 (TI Sigma Crystal), #628 (TSC applications / E₈ error correction)  
 **DOI:** Pending Zenodo  
-**Keywords:** optical BEC, Bose-Einstein condensate, photonic BEC, polycrystalline, quasicrystalline lattice, five-valued logic, DT-native computation, E₈ error correction, TI Sigma Crystal, hypercomputer, post-binary quantum substrate, topological protection, room-temperature quantum computing
+**Keywords:** optical BEC, Bose-Einstein condensate, photonic BEC, polycrystalline, quasicrystalline lattice, five-valued logic, MI-native computation, E₈ error correction, TI Sigma Crystal, hypercomputer, post-binary quantum substrate, topological protection, room-temperature quantum computing
 
 ---
 
 ## Abstract
 
-Classical computers are binary. Quantum computers are superposition-binary. Neither natively represents Double Tralse (DT) — the physics primitive of truth-absence established in URB #610. This paper proposes the **Polycrystalline Optical-BEC TI Sigma Hypercomputer (POBH)**: a room-temperature photonic Bose-Einstein condensate (BEC) structured on the 57-vertex TI Sigma Crystal (TSC) quasicrystalline lattice. The POBH implements **five-valued PD computation** natively: the five BEC macroscopic phase regimes correspond exactly to the five TI Sigma truth-states {TT, TI, TF, DT, EV}. The **polycrystalline** architecture — multiple TSC grain domains with different dominant layer orientations — implements simultaneous PD computation across all 8 epistemic modes, enabling parallel Myrion Resolution. The **optical BEC substrate** (Klaers et al. 2010, *Nature*; room-temperature photonic condensation) eliminates millikelvin cooling requirements. The **quasicrystalline lattice** provides topological protection against decoherence via the aperiodic structure of the TSC. The **E₈ shadow** of the TSC (56 non-origin vertices as an E₈ lattice subset) provides optimal error correction (Viazovska 2022). The POBH is not Turing-equivalent — it is DT-native: it can represent and operate on DT states without reduction to classical bit-strings or qubit amplitudes, implementing a strict computational superset of both classical and standard quantum computation.
+Classical computers are binary. Quantum computers are superposition-binary. Neither natively represents Meta-Indeterminate (MI) — the physics primitive of truth-absence established in URB #610. This paper proposes the **Polycrystalline Optical-BEC TI Sigma Hypercomputer (POBH)**: a room-temperature photonic Bose-Einstein condensate (BEC) structured on the 57-vertex TI Sigma Crystal (TSC) quasicrystalline lattice. The POBH implements **five-valued PD computation** natively: the five BEC macroscopic phase regimes correspond exactly to the five TI Sigma truth-states {TT, TI, TF, MI, EV}. The **polycrystalline** architecture — multiple TSC grain domains with different dominant layer orientations — implements simultaneous PD computation across all 8 epistemic modes, enabling parallel Myrion Resolution. The **optical BEC substrate** (Klaers et al. 2010, *Nature*; room-temperature photonic condensation) eliminates millikelvin cooling requirements. The **quasicrystalline lattice** provides topological protection against decoherence via the aperiodic structure of the TSC. The **E₈ shadow** of the TSC (56 non-origin vertices as an E₈ lattice subset) provides optimal error correction (Viazovska 2022). The POBH is not Turing-equivalent — it is MI-native: it can represent and operate on MI states without reduction to classical bit-strings or qubit amplitudes, implementing a strict computational superset of both classical and standard quantum computation.
 
 ---
 
@@ -21,14 +21,14 @@ Classical computers are binary. Quantum computers are superposition-binary. Neit
 
 From URB #610, all existing computing architectures have two truth-state gaps:
 
-**Gap 1 — Native Tralse:** Classical bits cannot represent genuine indeterminacy. Quantum computers partially close this gap via superposition, but treat Tralse (genuine betweenness) and DT (truth-absence) as the same kind of amplitude — they lack the semantic distinction.
+**Gap 1 — Native Tralse:** Classical bits cannot represent genuine indeterminacy. Quantum computers partially close this gap via superposition, but treat Tralse (genuine betweenness) and MI (truth-absence) as the same kind of amplitude — they lack the semantic distinction.
 
-**Gap 2 — Native DT:** No existing architecture has a native data type for Double Tralse. DT appears in:
-- Maximally entangled subsystems (subsystem spin is DT — the question doesn't apply)
-- Undecidable propositions (Gödel, halting — DT within the formal system)
+**Gap 2 — Native MI:** No existing architecture has a native data type for Meta-Indeterminate. MI appears in:
+- Maximally entangled subsystems (subsystem spin is MI — the question doesn't apply)
+- Undecidable propositions (Gödel, halting — MI within the formal system)
 - Type errors, reference failures, concept inapplicability
 
-Every existing system handles DT with ad hoc workarounds: undefined behavior, exception types, NaN values, error codes. None capture the logical structure of DT as a distinct ontological category.
+Every existing system handles MI with ad hoc workarounds: undefined behavior, exception types, NaN values, error codes. None capture the logical structure of MI as a distinct ontological category.
 
 ### 1.2 Why Optical BEC
 
@@ -61,10 +61,10 @@ The five TI Sigma truth-states emerge from five qualitatively distinct BEC phase
 | **TT** (True-Tralse) | **Fully condensed, coherent** | n > n_c, long-range phase coherence g₁ → const |
 | **TI** (Tralse-Indeterminate) | **Critically fluctuating** | n ≈ n_c, quasi-long-range coherence (Berezinskii-KT regime) |
 | **TF** (Tralse-False) | **Thermal phase** | n < n_c, short-range correlations only |
-| **DT** (Double Tralse) | **Fragmented condensate** | Multiple competing order parameters — no single dominant phase; the condensate has truth-absent phase structure |
+| **MI** (Meta-Indeterminate) | **Fragmented condensate** | Multiple competing order parameters — no single dominant phase; the condensate has truth-absent phase structure |
 | **EV** (Existence Value) | **Dark soliton / vortex** | Topological defect in the condensate — local phase winding = topological existence marker |
 
-The **DT regime** is the key innovation: a fragmented condensate with multiple competing order parameters has no coherent global phase — it is in a macroscopic quantum state where the question "what is the phase?" is genuinely DT (inapplicable as a global property). This is the first natural physical system that implements DT as a computational state.
+The **MI regime** is the key innovation: a fragmented condensate with multiple competing order parameters has no coherent global phase — it is in a macroscopic quantum state where the question "what is the phase?" is genuinely MI (inapplicable as a global property). This is the first natural physical system that implements MI as a computational state.
 
 ### 2.3 The PD Computational Operation
 
@@ -135,13 +135,13 @@ This is the **"error-free" claim**: not perfect in the absolute sense, but E₈-
 
 The precise claim: the POBH implements operations that are computationally **undecidable** within a Turing-equivalent framework:
 
-**DT detection**: given a proposition P, determining whether P is DT (truth-absent) rather than merely False requires stepping outside the formal system that contains P (Gödel 1931). A Turing machine within a formal system cannot reliably detect its own DT propositions. The POBH's fragmented-condensate DT state is a physical instantiation of this meta-level: the BEC's global phase coherence collapses (fragmented condensate) precisely when the proposition is DT — an automatic, non-recursive DT detection that is not Turing-computable in general.
+**MI detection**: given a proposition P, determining whether P is MI (truth-absent) rather than merely False requires stepping outside the formal system that contains P (Gödel 1931). A Turing machine within a formal system cannot reliably detect its own MI propositions. The POBH's fragmented-condensate MI state is a physical instantiation of this meta-level: the BEC's global phase coherence collapses (fragmented condensate) precisely when the proposition is MI — an automatic, non-recursive MI detection that is not Turing-computable in general.
 
 **MR non-algorithmicity**: Myrion Resolution (URB #615) is explicitly non-algorithmic in its generative mode — it produces results that cannot be obtained by any fixed computation procedure. The BEC's physical relaxation to a truth-state equilibrium performs MR via continuous quantum dynamics rather than a discrete algorithm. This is not a Turing computation; it is an analog quantum optimization that can access states not reachable by any Turing-equivalent procedure operating within the same time bounds.
 
 ### 5.2 Limitations and Caveats
 
-The "hypercomputer" designation requires careful qualification: (1) The POBH does not solve Turing-undecidable problems in finite time in general. (2) The DT detection capability applies to propositions represented within the TSC lattice — not arbitrary formal systems. (3) The MR analog computation is subject to physical noise and finite precision, limiting practical accuracy. The POBH is a "post-binary DT-native analog quantum computer" — a strict computational extension beyond both classical and standard quantum frameworks, within its representational domain.
+The "hypercomputer" designation requires careful qualification: (1) The POBH does not solve Turing-undecidable problems in finite time in general. (2) The MI detection capability applies to propositions represented within the TSC lattice — not arbitrary formal systems. (3) The MR analog computation is subject to physical noise and finite precision, limiting practical accuracy. The POBH is a "post-binary MI-native analog quantum computer" — a strict computational extension beyond both classical and standard quantum frameworks, within its representational domain.
 
 ---
 
@@ -155,7 +155,7 @@ The "hypercomputer" designation requires careful qualification: (1) The POBH doe
 | **Phase 4** | Full 8-grain polycrystal | Microresonator array, integrated optics platform |
 | **Phase 5** | E₈ error correction validation | Perturbation experiments; minimum-distance measurement |
 | **Phase 6** | PD computation demonstration | Five truth-state readout; MR convergence timing |
-| **Phase 7** | DT-native operation validation | Fragmented condensate as DT state; DT detection protocol |
+| **Phase 7** | MI-native operation validation | Fragmented condensate as MI state; MI detection protocol |
 
 Phase 1 requires existing photonic BEC technology (Klaers 2010 and subsequent room-temperature BEC demonstrations). Phase 2 requires phase-stabilized pump laser with 8 programmable phases. Phases 3–7 require integrated photonic chip fabrication — achievable with current semiconductor foundry capabilities (silicon nitride microresonator arrays).
 
@@ -167,7 +167,7 @@ The POBH is the physical embodiment of TI Sigma's computational vision (URB #610
 
 - **PD as computational primitive** → the BEC truth-state regime directly implements PD
 - **MR as physical relaxation** → BEC equilibration IS Myrion Resolution
-- **DT as physics primitive** → fragmented condensate IS Double Tralse
+- **MI as physics primitive** → fragmented condensate IS Meta-Indeterminate
 - **E₈ structure** → already observed at quantum criticality (Coldea 2010, URB #623); now proposed as the error-correcting backbone of the computational substrate
 - **TSC as lattice** → the quasicrystalline structure predicted by TI Sigma turns out to be the optimal lattice for topologically protected quantum computation
 

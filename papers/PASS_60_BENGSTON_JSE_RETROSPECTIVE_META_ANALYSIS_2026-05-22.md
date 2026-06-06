@@ -86,7 +86,7 @@ Apply Pass-58 TSIS four-gate stack to the pooled Δp:
 | ≥ 0.13534 | < 50% | 3/4 | INDETERMINATE-leaning-TRUE, PD ≈ +1.0 |
 | ∈ [0.046, 0.086] (marginal band) | any | any | INDETERMINATE-band, PD ≈ 0 |
 | ≥ 0.30 | ≥ 75% | 3/4 (but high heterogeneity) | INDETERMINATE (heterogeneity dominates), PD ≈ +0.3 |
-| ≥ 0.30 | with ≥ 2 trials sign-reversed | n/a | **DOUBLE TRALSE candidate** — escalate to formal DT analysis per Pass-60 §2 |
+| ≥ 0.30 | with ≥ 2 trials sign-reversed | n/a | **META-INDETERMINATE candidate** — escalate to formal MI analysis per Pass-60 §2 |
 | < 0.046 | n/a | ≤ 2/4 | FALSE-weak, PD ≈ −0.5 |
 
 ### 3.4 Pre-registered falsifier F-BENGSTON-META-1

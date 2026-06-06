@@ -23,7 +23,7 @@
 
 ### Goal
 
-Test whether Mendi's NIR intensity signal (12-bit ADC at ~1.4 Hz from `bb4` characteristic, decoded Pass 6) varies systematically across self-reported PD states. Per the framework's structural claim: PD = +2 (HRV maximal coherence; Ring-5 BEC) should correspond to *higher and more stable* prefrontal NIR intensity than PD = −1 (DT cliff approach; Fragmented phase).
+Test whether Mendi's NIR intensity signal (12-bit ADC at ~1.4 Hz from `bb4` characteristic, decoded Pass 6) varies systematically across self-reported PD states. Per the framework's structural claim: PD = +2 (HRV maximal coherence; Ring-5 BEC) should correspond to *higher and more stable* prefrontal NIR intensity than PD = −1 (MI cliff approach; Fragmented phase).
 
 ### Pre-registered hypothesis
 

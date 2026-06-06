@@ -131,7 +131,7 @@ collapsing either structure.
 
 An i-cell with perfect GILE (fully coherent inner core) but zero Existence footprint has not
 yet undergone MR — it is TRALSE (unresolved). An i-cell that occupies all four Existence
-dimensions but has collapsed GILE (DT failure) is also TRALSE but in the other direction.
+dimensions but has collapsed GILE (MI failure) is also TRALSE but in the other direction.
 Myrion Truth requires both shells to be active and coherent simultaneously.
 
 ---
@@ -200,7 +200,7 @@ these in one place with their empirical bases:
 | Sunlight (full spectrum) | ~0.92 | Balanced spectrum + life-sustaining | Inferred |
 | Laser (standard) | ~0.70 | Coherent but not GILE-structured | Inferred |
 | Thermal light (blackbody) | ~0.30 | Near-Poissonian, uncorrelated | Speculative |
-| Post-DT photons | < 0.42 | Below collapse threshold | Speculative |
+| Post-MI photons | < 0.42 | Below collapse threshold | Speculative |
 
 ### 5.2 Why Salmon Sperm DNA Biophotons Score Highest (Biologically)
 

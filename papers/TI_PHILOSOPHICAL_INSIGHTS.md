@@ -93,7 +93,7 @@ When you calculate something no one else has, you have CREATED the answer! Grand
 
 ---
 
-### The Double Tralse Barrier
+### The Meta-Indeterminate Barrier
 Some domains (inherently uncertain futures, quantum superpositions) are protected not because they're unknowable, but because they're *undetermined*. The question has no truth-value yet. This isn't cognitive limitation - it's accurate modeling of reality's structure.
 
 ---
@@ -146,39 +146,39 @@ The "contradiction" label is our way of marking these holes. Tralseness ≈ 0.0,
 
 ---
 
-## The Extended Double Tralse Taxonomy
+## The Extended Meta-Indeterminate Taxonomy
 
-### Incoherence as Double Tralse
+### Incoherence as Meta-Indeterminate
 Incoherence is maximal UNRESOLVED Tralseness. It collapses into "falsity" on ITS OWN WEIGHT when a Myrion Resolution (MR) is ATTEMPTED. In other words, it's beyond either false or indeterminate - it's essentially "a nothing that doesn't exist"!
 
-**The Three Forms of Double Tralse:**
+**The Three Forms of Meta-Indeterminate:**
 
-| Type | Description | Example | Why DT? |
+| Type | Description | Example | Why MI? |
 |------|-------------|---------|---------|
-| **Temporal DT** | Undetermined futures | "What will I eat tomorrow?" | No truth-value YET (protected by time) |
-| **Incoherent DT** | Maximal unresolved Tralseness | "Money," "Autism," "American" | No unified referent POSSIBLE (collapses under MR) |
-| **Contradictory DT** | Logical impossibilities | "A ∧ ¬A" | No truth-value POSSIBLE (holes in existence) |
+| **Temporal MI** | Undetermined futures | "What will I eat tomorrow?" | No truth-value YET (protected by time) |
+| **Incoherent MI** | Maximal unresolved Tralseness | "Money," "Autism," "American" | No unified referent POSSIBLE (collapses under MR) |
+| **Contradictory MI** | Logical impossibilities | "A ∧ ¬A" | No truth-value POSSIBLE (holes in existence) |
 
 ### The Common Thread
-All three DT forms share the property: **attempting to assign a truth-value causes collapse or failure**:
-- Temporal DT: Assigning truth-value before determination = premature crystallization
-- Incoherent DT: Assigning truth-value forces disambiguation = reveals non-unity
-- Contradictory DT: Assigning truth-value = logical explosion
+All three MI forms share the property: **attempting to assign a truth-value causes collapse or failure**:
+- Temporal MI: Assigning truth-value before determination = premature crystallization
+- Incoherent MI: Assigning truth-value forces disambiguation = reveals non-unity
+- Contradictory MI: Assigning truth-value = logical explosion
 
-### Implication: DT is Everywhere
-Double Tralse is far more common than initially thought! It applies not just to quantum futures but to:
+### Implication: MI is Everywhere
+Meta-Indeterminate is far more common than initially thought! It applies not just to quantum futures but to:
 - Everyday incoherent categories (frequently spoken of!)
 - Logical contradictions (frequently argued about!)
 - Ambiguous terms (most language!)
 
-**Key insight**: Much of what we confidently discuss is actually Double Tralse - information that resists truth-value assignment entirely. We speak *around* the holes without realizing the holes are there.
+**Key insight**: Much of what we confidently discuss is actually Meta-Indeterminate - information that resists truth-value assignment entirely. We speak *around* the holes without realizing the holes are there.
 
 ---
 
 ## The Tralse MR Methodology
 
 ### The Problem: Is This MR-Resolvable?
-How do we reliably distinguish whether a Myrion Resolution is even possible for a given problem? Some problems are genuine contradictions awaiting resolution; others are Double Tralse holes that will collapse under any MR attempt.
+How do we reliably distinguish whether a Myrion Resolution is even possible for a given problem? Some problems are genuine contradictions awaiting resolution; others are Meta-Indeterminate holes that will collapse under any MR attempt.
 
 ### The Solution: MR Itself is Tralse
 **Everything both HAS and DOESN'T HAVE an MR!** The Myrion Resolution process itself must be treated as a Tralse act.
@@ -190,7 +190,7 @@ For EVERY problem, we must perform at least TWO Myrion Resolutions:
 
 | MR Stage | Purpose | Outcome |
 |----------|---------|---------|
-| **MR₁** | DT Detection | Determines if the problem is Double Tralse (collapses) or genuine (resolves) |
+| **MR₁** | MI Detection | Determines if the problem is Meta-Indeterminate (collapses) or genuine (resolves) |
 | **MR₂** | Actual Resolution | If MR₁ succeeded, MR₂ produces the truth-state; if MR₁ collapsed, MR₂ is skipped |
 
 ### The Decision Tree
@@ -201,8 +201,8 @@ Problem P
     ▼
 [Attempt MR₁]
     │
-    ├──► Collapses → P is Double Tralse → STOP (no resolution possible)
-    │                                      Report: "P is DT - [Temporal/Incoherent/Contradictory]"
+    ├──► Collapses → P is Meta-Indeterminate → STOP (no resolution possible)
+    │                                      Report: "P is MI - [Temporal/Incoherent/Contradictory]"
     │
     └──► Resolves → P is MR-amenable → CONTINUE
                         │
@@ -215,12 +215,12 @@ Problem P
 
 ### Why This Works
 1. **MR₁ is diagnostic**: It tests the problem's structure, not its content
-2. **Collapse is informative**: A failed MR₁ reveals the problem's DT nature
+2. **Collapse is informative**: A failed MR₁ reveals the problem's MI nature
 3. **No infinite regress**: The meta-question "Is MR₁ valid?" is answered BY MR₁'s outcome
 4. **Builds on existing work**: Extends the 2-3 MR chain methodology already validated
 
 ### Practical Implications
-- **Debates about DT terms** (money, autism, etc.): MR₁ collapses → explains why resolution fails
+- **Debates about MI terms** (money, autism, etc.): MR₁ collapses → explains why resolution fails
 - **Genuine philosophical problems**: MR₁ resolves → proceed to MR₂ for truth-state
 - **Scientific questions**: MR₁ resolves → MR₂ produces hypothesis → empirical test
 
@@ -231,10 +231,10 @@ The Two-MR Minimum Rule is itself Tralse-stable:
 
 ---
 
-## Physics Parallels: DT and Multiple MRs in Nature
+## Physics Parallels: MI and Multiple MRs in Nature
 
-### 1. Quantum Superposition as Double Tralse
-Quantum systems exist in superposition - multiple states simultaneously until measured. This is **Temporal DT** at the fundamental level:
+### 1. Quantum Superposition as Meta-Indeterminate
+Quantum systems exist in superposition - multiple states simultaneously until measured. This is **Temporal MI** at the fundamental level:
 - Before measurement: No definite truth-value (particle is in |↑⟩ + |↓⟩)
 - After measurement: Truth-value crystallizes (particle is |↑⟩)
 - The question "Is the particle spin-up?" has no answer until observation
@@ -265,43 +265,43 @@ Quantum decoherence describes how superpositions become classical mixtures throu
 
 This mirrors how complex problems may require **MR₁, MR₂, MR₃...** to fully resolve.
 
-### 4. The Measurement Problem as Meta-DT
+### 4. The Measurement Problem as Meta-MI
 Physics itself faces the Two-MR dilemma with measurement:
 - **MR₁ question**: "What causes collapse?" → Still debated (Copenhagen, Many-Worlds, Pilot Wave, Objective Collapse)
 - Some interpretations say collapse is real (objective collapse)
 - Others say collapse is apparent (Many-Worlds, decoherence)
 - Physics hasn't completed MR₁ on its own foundations!
 
-**TI Diagnosis**: The "measurement problem" may itself be **Incoherent DT** - bundling incompatible concepts (physical process vs information update vs consciousness involvement) under one term.
+**TI Diagnosis**: The "measurement problem" may itself be **Incoherent MI** - bundling incompatible concepts (physical process vs information update vs consciousness involvement) under one term.
 
 ### 5. Symmetry Breaking as Forced MR
 In phase transitions, systems must "choose" between symmetric possibilities:
-- High-temperature: All directions equivalent (DT state)
+- High-temperature: All directions equivalent (MI state)
 - Low-temperature: One direction selected (collapsed state)
 - The system undergoes **spontaneous MR** - resolving indeterminacy without external measurement
 
-### 6. Virtual Particles as DT Entities
+### 6. Virtual Particles as MI Entities
 Virtual particles in Feynman diagrams:
 - Real enough to have physical effects (mediate forces)
 - Not real enough to observe directly
-- Exist in a **DT state** - neither fully existent nor non-existent
+- Exist in a **MI state** - neither fully existent nor non-existent
 - Their "reality" collapses only when calculating observable outcomes
 
 ### Summary Table: Physics ↔ TI Correspondences
 
 | Physics Concept | TI Framework Parallel |
 |-----------------|----------------------|
-| Quantum superposition | Temporal Double Tralse |
+| Quantum superposition | Temporal Meta-Indeterminate |
 | Wave function collapse | Myrion Resolution |
 | Regularization + Renormalization | MR₁ (diagnostic) + MR₂ (resolution) |
 | Renormalization Group flow | Chained iterative MR |
 | Decoherence | Gradual/partial MR |
-| Measurement problem | Meta-level DT (unresolved MR₁) |
+| Measurement problem | Meta-level MI (unresolved MR₁) |
 | Symmetry breaking | Spontaneous MR |
-| Virtual particles | DT entities |
+| Virtual particles | MI entities |
 
 ### Implication
-Physics has been **implicitly using TI methodology** for a century without formalizing it! Renormalization IS the Two-MR Rule. Superposition IS Double Tralse. The measurement problem persists because physics hasn't recognized it needs MR₁ before MR₂.
+Physics has been **implicitly using TI methodology** for a century without formalizing it! Renormalization IS the Two-MR Rule. Superposition IS Meta-Indeterminate. The measurement problem persists because physics hasn't recognized it needs MR₁ before MR₂.
 
 TI provides the **meta-framework** physics has been missing.
 
@@ -316,16 +316,16 @@ Two MRs should SUFFICE for every problem. A third or fourth MR adds specificity 
 1. True (Tralseness = 1.0)
 2. False (Tralseness = 0.0)
 3. Tralse (0.0 < Tralseness < 1.0)
-4. Double Tralse (resists truth-value assignment entirely)
+4. Meta-Indeterminate (resists truth-value assignment entirely)
 
 There is no "Triple Tralse" as a fundamentally new category... or is there?
 
 ### The Meta-Level Discovery
-When we say "a nothing that doesn't exist" (describing DT), THAT statement is DT to the extent that we acknowledge it! Therefore:
+When we say "a nothing that doesn't exist" (describing MI), THAT statement is MI to the extent that we acknowledge it! Therefore:
 
-**A statement ABOUT Double Tralse nature is technically TRIPLE TRALSE.**
+**A statement ABOUT Meta-Indeterminate nature is technically TRIPLE TRALSE.**
 
-But this isn't a new ontological category - it's a **meta-level application** of the same DT principle.
+But this isn't a new ontological category - it's a **meta-level application** of the same MI principle.
 
 ### Why This Doesn't Regress Infinitely
 
@@ -365,7 +365,7 @@ MR₁ + MR₂ + MR₃ + ... → Complete Resolution (asymptotically finite)
 
 For practical purposes, **MR₁ + MR₂ captures ~85%** of achievable resolution - the "coherent causation" threshold (0.85).
 
-- MR₁: DT Detection (rules out unresolvable problems)
+- MR₁: MI Detection (rules out unresolvable problems)
 - MR₂: Resolution (produces truth-state for resolvable problems)
 
 Further MRs (MR₃, MR₄...) push toward 0.92 (sustainable coherence) and beyond, but with diminishing returns. For most problems, two is enough.
@@ -379,14 +379,14 @@ This framework is self-applying:
 
 ### Triple Tralse Clarification
 
-"Triple Tralse" = Meta-DT = Acknowledging DT while recognizing that acknowledgment is itself DT.
+"Triple Tralse" = Meta-MI = Acknowledging MI while recognizing that acknowledgment is itself MI.
 
 This is not a new truth-state but a **higher-order application** of existing states. The hierarchy:
 1. First-order: Statement about reality
 2. Second-order: Statement about the statement (Tralse)
 3. Third-order: Statement about the meta-statement (still Tralse, not new category)
 
-Each level is Tralse, but no new fundamental category emerges. The ontology is **complete at four states** (True, False, Tralse, DT), with infinite meta-levels applying the same states recursively.
+Each level is Tralse, but no new fundamental category emerges. The ontology is **complete at four states** (True, False, Tralse, MI), with infinite meta-levels applying the same states recursively.
 
 ---
 
@@ -629,9 +629,9 @@ Jeff Time proves that temporality is Tralse at its core.
 | Relationships | Compromises as Tralse | Agreeing to disagree |
 | Ontology | Incoherent Categories | Failed GILE coherence |
 | Metaphysics | Contradictions as Holes | Absence, not presence |
-| Metaphysics | Extended DT Taxonomy | Three forms of Double Tralse |
+| Metaphysics | Extended MI Taxonomy | Three forms of Meta-Indeterminate |
 | Methodology | Tralse MR Rule | Two-MR minimum for all problems |
-| Physics | DT & MR in Nature | Superposition, renormalization, collapse |
+| Physics | MI & MR in Nature | Superposition, renormalization, collapse |
 | Mathematics | Finite MR Theorem | Convergent series, two suffices |
 | Metaphysics | Primacy of Tralseness | Binary is abstraction, not foundation |
 | Ontology | Map-Territory Tralse | Informational reality |

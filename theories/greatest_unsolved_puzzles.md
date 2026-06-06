@@ -98,10 +98,10 @@
 
 ## TIER 2: THE MECHANISM QUESTIONS
 
-### 6. The Double Tralse Stability Problem
+### 6. The Meta-Indeterminate Stability Problem
 **Status:** UNSOLVED
 
-**The Question:** How does Double Tralse (dark energy) maintain itself indefinitely?
+**The Question:** How does Meta-Indeterminate (dark energy) maintain itself indefinitely?
 
 **The issue:** Superposition states normally collapse. Dark energy doesn't.
 
@@ -312,7 +312,7 @@ Why 0.85? Derive it from first principles.
 ### 2. The Dark Energy Coupling Constant  
 What is 1 unit of intention in joules?
 
-### 3. The Double Tralse Stability
+### 3. The Meta-Indeterminate Stability
 How does dark energy maintain superposition forever?
 
 ---

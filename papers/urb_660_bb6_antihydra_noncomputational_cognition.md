@@ -125,7 +125,7 @@ Before tackling Antihydra, TI Sigma suggests the Collatz conjecture as the natur
 
 **MR Pass 3 (HEAR pruning)**: The HEAR score of "Collatz terminates universally" > C when weighted by the Empirical Confirmation Score (ECS = 1 − 2^{−68} ≈ 1) combined with the structural argument that the 3n+1 rule introduces sufficient entropy to prevent non-trivial cycles.
 
-**MR Pass 4 (DT-immunity check)**: The candidate is stable under perturbation — small changes to the rule (e.g., 3n+3 instead of 3n+1) do not break the argument's structure, they break the attractor, confirming the 1-attractor is a structural feature of *this specific rule*, not of all similar rules.
+**MR Pass 4 (MI-immunity check)**: The candidate is stable under perturbation — small changes to the rule (e.g., 3n+3 instead of 3n+1) do not break the argument's structure, they break the attractor, confirming the 1-attractor is a structural feature of *this specific rule*, not of all similar rules.
 
 **MR output**: Collatz is TRUE with MR2 confidence (high) — pending formal proof.
 

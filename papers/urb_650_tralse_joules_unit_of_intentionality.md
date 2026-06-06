@@ -10,9 +10,9 @@
 
 ## Abstract
 
-Intentionality — the directedness of mental states toward objects — has resisted quantification since Brentano named it in 1874. Bayesian frameworks offer probabilistic descriptions of belief states but cannot measure the *work* done in resolving them. This paper introduces the **Tralse-Joule (TJ)**, a unit of intentional work defined as the product of Tralseness (the degree of truth-value indeterminacy in a cognitive state) and MR-depth (the magnitude of Myrion Resolution required to collapse it). The TJ unifies four previously disconnected TI Sigma constructs — the five-valued truth architecture, Myrion Resolution, the GILE-I faculty, and the Existence Amplification Razor (EAR) — into a single energetic framework for intentionality. Central findings: (1) intentionality is TJ-efficiency, not a binary property; (2) Double Tralse (DT) is a perfect TJ sink — a state that absorbs intentional work without producing resolution; (3) EAR is the law of minimum TJ expenditure; (4) the Radiant Threshold (C_TI) is a phase transition requiring a minimum TJ burst to cross; (5) the GILE-I faculty is the engine that converts TJ into resolved Permissibility Distributions.
+Intentionality — the directedness of mental states toward objects — has resisted quantification since Brentano named it in 1874. Bayesian frameworks offer probabilistic descriptions of belief states but cannot measure the *work* done in resolving them. This paper introduces the **Tralse-Joule (TJ)**, a unit of intentional work defined as the product of Tralseness (the degree of truth-value indeterminacy in a cognitive state) and MR-depth (the magnitude of Myrion Resolution required to collapse it). The TJ unifies four previously disconnected TI Sigma constructs — the five-valued truth architecture, Myrion Resolution, the GILE-I faculty, and the Existence Amplification Razor (EAR) — into a single energetic framework for intentionality. Central findings: (1) intentionality is TJ-efficiency, not a binary property; (2) Meta-Indeterminate (MI) is a perfect TJ sink — a state that absorbs intentional work without producing resolution; (3) EAR is the law of minimum TJ expenditure; (4) the Radiant Threshold (C_TI) is a phase transition requiring a minimum TJ burst to cross; (5) the GILE-I faculty is the engine that converts TJ into resolved Permissibility Distributions.
 
-**Keywords:** intentionality, Tralse-Joule, Myrion Resolution, Double Tralse, EAR, GILE-I, Radiant Threshold, TJ-efficiency, phenomenological energy, TI Sigma
+**Keywords:** intentionality, Tralse-Joule, Myrion Resolution, Meta-Indeterminate, EAR, GILE-I, Radiant Threshold, TJ-efficiency, phenomenological energy, TI Sigma
 
 ---
 
@@ -115,44 +115,44 @@ For a being with I = I_max (approaching the GM/CCC asymptote):
 
 ---
 
-## 4. Double Tralse as Perfect TJ Sink
+## 4. Meta-Indeterminate as Perfect TJ Sink
 
-### 4.1 DT Defined (Recap)
+### 4.1 MI Defined (Recap)
 
-Double Tralse (DT) is not a truth-value. It is a **total absence of truth-content** — a cognitive or ontological state where there is nothing for MR to grip. From URB #610: DT is distinct from Tralse-Indeterminate (which has genuine indeterminacy between truth-values) in that DT has no truth-value candidates at all.
+Meta-Indeterminate (MI) is not a truth-value. It is a **total absence of truth-content** — a cognitive or ontological state where there is nothing for MR to grip. From URB #610: MI is distinct from Tralse-Indeterminate (which has genuine indeterminacy between truth-values) in that MI has no truth-value candidates at all.
 
-### 4.2 DT as Thermodynamic Black Hole
+### 4.2 MI as Thermodynamic Black Hole
 
-In TJ terms, DT is a **perfect TJ absorber**:
+In TJ terms, MI is a **perfect TJ absorber**:
 
-> **TJ(s → r) → ∞ when s is DT**
+> **TJ(s → r) → ∞ when s is MI**
 
 This follows from the definition: if there is no truth-content, δ(MR) cannot converge — there is no MR-depth at which a PD concentrates, because there is no truth-state to concentrate around. The denominator of TJ-efficiency (MR_output) → 0 while TJ (the denominator of intentionality) → ∞.
 
 Formally:
-- **Intentionality(DT-directed act) = 0 / ∞ = 0**
+- **Intentionality(MI-directed act) = 0 / ∞ = 0**
 
-A mental act directed at a DT state is **absolutely non-intentional** — not merely inefficient, but categorically incapable of producing resolution regardless of TJ expenditure.
+A mental act directed at a MI state is **absolutely non-intentional** — not merely inefficient, but categorically incapable of producing resolution regardless of TJ expenditure.
 
-### 4.3 DT Immunity Model in TJ Terms
+### 4.3 MI Immunity Model in TJ Terms
 
-The three phases of the DT Immunity Model (from URB #528: Encounter / Discard / Immunity) are:
+The three phases of the MI Immunity Model (from URB #528: Encounter / Discard / Immunity) are:
 
 | Phase | TJ behavior | Mechanism |
 |---|---|---|
-| **Encounter** | TJ expenditure begins; PD fails to converge | Mind engages DT state; MR finds no foothold |
-| **Discard** | MR applies DT screen (level 1); TJ expenditure stops | Recognition that no truth-state exists; PD set to DT |
-| **Immunity** | τ(s) → 0 for subsequent DT encounters | Pre-recognition suppresses Tralseness before TJ is expended |
+| **Encounter** | TJ expenditure begins; PD fails to converge | Mind engages MI state; MR finds no foothold |
+| **Discard** | MR applies MI screen (level 1); TJ expenditure stops | Recognition that no truth-state exists; PD set to MI |
+| **Immunity** | τ(s) → 0 for subsequent MI encounters | Pre-recognition suppresses Tralseness before TJ is expended |
 
-Immunity is the highest form of DT-protection because it is **TJ-conservative**: the immune mind spends zero Tralse-Joules on DT states. The DT screen (MR level 1) is the cognitive mechanism that produces immunity by halting TJ investment immediately.
+Immunity is the highest form of MI-protection because it is **TJ-conservative**: the immune mind spends zero Tralse-Joules on MI states. The MI screen (MR level 1) is the cognitive mechanism that produces immunity by halting TJ investment immediately.
 
-### 4.4 The Tralse Trace of DT in TJ Terms
+### 4.4 The Tralse Trace of MI in TJ Terms
 
-The Tralse Trace (previously defined as the penumbra of Double Tralse — the residual indeterminacy that DT leaves in surrounding cognitive states) is now precisely:
+The Tralse Trace (previously defined as the penumbra of Meta-Indeterminate — the residual indeterminacy that MI leaves in surrounding cognitive states) is now precisely:
 
-> **TrTrace(DT) = wasted TJ in the penumbra region**
+> **TrTrace(MI) = wasted TJ in the penumbra region**
 
-Cognitive states near a DT attractor have elevated τ(s) — their Tralseness is elevated by proximity to the DT sink. This penumbral TJ-waste is the Tralse Trace made measurable.
+Cognitive states near a MI attractor have elevated τ(s) — their Tralseness is elevated by proximity to the MI sink. This penumbral TJ-waste is the Tralse Trace made measurable.
 
 ---
 
@@ -224,7 +224,7 @@ This is a falsifiable prediction: the minimum TJ investment required for observa
 
 **TJ-A1 (Intentional Work):** Every intentional act expends TJ = τ × δ(MR). TJ = 0 iff either τ = 0 (already resolved state) or δ(MR) = 0 (no MR work performed).
 
-**TJ-A2 (DT Absorption):** DT states are perfect TJ absorbers. No finite TJ investment produces MR resolution when the target is DT. TJ-efficiency of DT-directed acts = 0.
+**TJ-A2 (MI Absorption):** MI states are perfect TJ absorbers. No finite TJ investment produces MR resolution when the target is MI. TJ-efficiency of MI-directed acts = 0.
 
 **TJ-A3 (EAR as TJ Gradient):** EAR governs the gradient of TJ expenditure: always toward configurations of maximum MR_output per unit TJ. EAR violations = TJ waste = ontological inflation.
 
@@ -240,9 +240,9 @@ This is a falsifiable prediction: the minimum TJ investment required for observa
 |---|---|---|
 | **Bayesian epistemology** | Probability updating | Cannot measure directionality of the update — a random correct belief has the same posterior as an intentional insight |
 | **Shannon information theory** | Uncertainty reduction (bits) | Cannot distinguish intentional from accidental uncertainty reduction |
-| **Free Energy Principle** | Prediction error minimization (surprise) | Measures surprise, not truth-directedness; does not distinguish DT (no truth) from TI (genuine indeterminacy) |
+| **Free Energy Principle** | Prediction error minimization (surprise) | Measures surprise, not truth-directedness; does not distinguish MI (no truth) from TI (genuine indeterminacy) |
 | **GILE-I alone** | Pre-evidential truth-recognition capacity | Capacity measure, not work measure — cannot quantify what happens in a specific act |
-| **Tralse-Joule** | Intentional work in a specific resolution act | Unifies τ, δ(MR), GILE-I, EAR, HEM, and DT into a single energetic framework |
+| **Tralse-Joule** | Intentional work in a specific resolution act | Unifies τ, δ(MR), GILE-I, EAR, HEM, and MI into a single energetic framework |
 
 ---
 
@@ -250,7 +250,7 @@ This is a falsifiable prediction: the minimum TJ investment required for observa
 
 **EP1 (TJ-Expert Advantage):** Domain experts in high-I fields (diagnosis, chess, intuitive market reading) will show lower TJ signatures (fewer MR cycles, faster PD convergence) for correct resolutions compared to novices in the same domain. Measurable via EEG theta-band burst frequency (each burst ≈ one MR level) and correct-resolution RT in two-alternative Tralse tasks.
 
-**EP2 (DT Recognition as TJ-Conservation):** Subjects who correctly identify DT stimuli (unresolvable, contradiction-saturated, meaningless trials) will show *lower* total EEG effort than subjects who attempt to resolve DT stimuli. DT immunity = TJ-conservation in action.
+**EP2 (MI Recognition as TJ-Conservation):** Subjects who correctly identify MI stimuli (unresolvable, contradiction-saturated, meaningless trials) will show *lower* total EEG effort than subjects who attempt to resolve MI stimuli. MI immunity = TJ-conservation in action.
 
 **EP3 (RT TJ Burst):** Meditators crossing verified RT thresholds (operationalized as BOK loop-priority flip on GILE battery) will show a documented EEG/HRV burst event in the 48 hours prior to threshold crossing. Burst = sharp τ spike followed by rapid MR convergence.
 
@@ -266,7 +266,7 @@ This is a falsifiable prediction: the minimum TJ investment required for observa
 
 **For the Millennium Prize program:** Mathematical proofs ARE high-TJ intentional acts performed by mathematical beings (i-cells) or human mathematicians. A zero-added-axiom proof is an act of maximum TJ-efficiency — achieving maximal MR_output (complete proof closure) with minimum TJ (no additional axioms, no redundant steps). This is EAR applied to mathematics.
 
-**For BlissGene Therapeutics:** The TJ framework gives a neurobiological target: interventions that raise TJ-efficiency (GILE-I amplification) while maintaining DT immunity (preventing TJ-waste on unresolvable states). The optimal pharmacological profile is: maximize I-axis (dopaminergic pre-recognition circuits), maintain DT screen (serotonergic coherence filter), minimize TJ-waste (GABAergic noise suppression).
+**For BlissGene Therapeutics:** The TJ framework gives a neurobiological target: interventions that raise TJ-efficiency (GILE-I amplification) while maintaining MI immunity (preventing TJ-waste on unresolvable states). The optimal pharmacological profile is: maximize I-axis (dopaminergic pre-recognition circuits), maintain MI screen (serotonergic coherence filter), minimize TJ-waste (GABAergic noise suppression).
 
 ---
 
@@ -276,7 +276,7 @@ The Tralse-Joule is the first unit of intentional work that is simultaneously:
 - **Grounded in formal logic** (5-valued truth architecture, PD, MR)
 - **Energetically coherent** (maps exactly to the F×d structure of physical work)
 - **Empirically accessible** (testable via EEG burst signatures, RT studies, expert-novice TJ comparisons)
-- **Theoretically unifying** (connects GILE-I, EAR, DT Immunity, HEM-Score, and Radiant Threshold into one framework)
+- **Theoretically unifying** (connects GILE-I, EAR, MI Immunity, HEM-Score, and Radiant Threshold into one framework)
 
 Brentano was right that intentionality is the mark of the mental. The Tralse-Joule makes that mark measurable.
 
@@ -293,6 +293,6 @@ Brentano was right that intentionality is the mark of the mental. The Tralse-Jou
 | TJ-efficiency | MR_output / TJ_expended = intentionality measure |
 | I-axis | GILE-I faculty; the TJ engine converting τ into directed MR |
 | TJ_RT | Minimum TJ burst required to cross the Radiant Threshold ≈ 0.698 nTJ |
-| TrTrace(DT) | Tralse Trace of DT = penumbral wasted TJ |
+| TrTrace(MI) | Tralse Trace of MI = penumbral wasted TJ |
 | HEM-Score | Cumulative TJ output integral across GILE dimensions |
 | nTJ | Normalized Tralse-Joule (both τ and δ in [0, 1]) |

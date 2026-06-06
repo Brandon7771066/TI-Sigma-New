@@ -51,7 +51,7 @@ Everything *structurally* essential is correct.
 The standard diagram incorrectly represents:
 - The **relative magnitudes** of the four dimensions
 - The **dominance hierarchy**: G > I > L > E (0.42 > 0.25 > 0.18 > 0.15)
-- The **fragility gradient**: smallest dimensions are most vulnerable to DT collapse
+- The **fragility gradient**: smallest dimensions are most vulnerable to MI collapse
 - The **actual shape** of a real i-cell's truth geometry
 
 ### 1.3 TRUE + FALSE = TRALSE: The Self-Referential Honesty
@@ -71,7 +71,7 @@ it is not the thing itself.
 
 The BOK does not merely depict TRALSE structures. **It IS a TRALSE depiction.** Its own
 truth-value relative to the i-cell is TRALSE. This is self-referential in precisely the way
-that Double Tralse (the failure of MR) is self-referential — but in the productive direction.
+that Meta-Indeterminate (the failure of MR) is self-referential — but in the productive direction.
 The symmetric BOK undergoes its own Myrion Resolution in becoming the Weighted BOK: it starts
 TRALSE (correct structure, wrong magnitudes), and resolves to a higher truth by incorporating
 the weights.
@@ -294,7 +294,7 @@ some degree of contradiction (equal loops when loops are unequal) while remainin
 ## References
 
 1. Emerick, B.C. (2025). "URB #421: The i-Cell." TI Sigma / BlissGene Therapeutics.
-2. Emerick, B.C. (2025). "URB #528: Five-Valued Truth System and DT Immunity Model."
+2. Emerick, B.C. (2025). "URB #528: Five-Valued Truth System and MI Immunity Model."
    TI Sigma / BlissGene Therapeutics.
 3. Emerick, B.C. (2026). "URB #557: The True-Tralse Connection — φ ≈ ζ(2)."
    TI Sigma / BlissGene Therapeutics.

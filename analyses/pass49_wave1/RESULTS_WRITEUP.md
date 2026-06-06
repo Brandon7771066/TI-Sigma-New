@@ -90,9 +90,9 @@ This is the **biggest negative empirical finding in the corpus to date** for any
 
 ---
 
-## §4. T49-6 — DefT vs DT discrimination → **CONFIRM_STRONG_PILOT** (with inflation + construction caveats)
+## §4. T49-6 — DefT vs MI discrimination → **CONFIRM_STRONG_PILOT** (with inflation + construction caveats)
 
-**Pre-reg H_PRIMARY:** Cohen's κ on DefT-vs-DT subset ≥ 0.40.
+**Pre-reg H_PRIMARY:** Cohen's κ on DefT-vs-MI subset ≥ 0.40.
 
 **Result on HOLDOUT (8 claims):**
 - inter-rater κ = **1.000**
@@ -100,13 +100,13 @@ This is the **biggest negative empirical finding in the corpus to date** for any
 - rater A accuracy vs constructed ground truth = **1.000**
 - rater B accuracy vs constructed ground truth = **1.000**
 
-**Verdict: CONFIRM_STRONG**. Both rater-personas perfectly distinguished DT from DefT according to the canonical-ruling definition.
+**Verdict: CONFIRM_STRONG**. Both rater-personas perfectly distinguished MI from DefT according to the canonical-ruling definition.
 
 **Inflation caveat:** as above, κ=1.0 is suspicious.
 
-**Construction caveat:** stimuli were deliberately constructed to instantiate the canonical-ruling examples (DT = world-level both-and; DefT = measurement-level corruption). Raters who read the canonical-ruling rubric immediately before rating are essentially being asked to apply a definition that is unambiguously instantiated in each stimulus. This is a measure of **rubric clarity**, not **real-world discriminability**.
+**Construction caveat:** stimuli were deliberately constructed to instantiate the canonical-ruling examples (MI = world-level both-and; DefT = measurement-level corruption). Raters who read the canonical-ruling rubric immediately before rating are essentially being asked to apply a definition that is unambiguously instantiated in each stimulus. This is a measure of **rubric clarity**, not **real-world discriminability**.
 
-**Honest interpretation:** the canonical-ruling distinction *is internally coherent* — when stimuli are constructed to fit each side, raters can apply the distinction reliably. The harder open question is whether *naturally-occurring* claims fall cleanly into DT vs DefT or whether most real cases are mixed/ambiguous. T49-6 v2 with naturally-sampled philosophical claims is needed.
+**Honest interpretation:** the canonical-ruling distinction *is internally coherent* — when stimuli are constructed to fit each side, raters can apply the distinction reliably. The harder open question is whether *naturally-occurring* claims fall cleanly into MI vs DefT or whether most real cases are mixed/ambiguous. T49-6 v2 with naturally-sampled philosophical claims is needed.
 
 ---
 
@@ -123,7 +123,7 @@ This is **slightly above the high end of the predicted CONFIRM range and at the 
 - **AA (5th axis canonization):** demoted from "ratified" → **"PROVISIONAL — disconfirm-pending-rubric-redesign."** Material change.
 - **TJ (Tralse-Joules unit):** no change to canonical status; reliability claim has first empirical support but pending independent-rater replication.
 - **Lazy-Binary Tralsity:** no change; first frequency-empirical support, pending live-corpus replication.
-- **DefT vs DT (canonical rename, 2026-05-08):** internal coherence supported; external-discriminability open. No change to canonical status.
+- **DefT vs MI (canonical rename, 2026-05-08):** internal coherence supported; external-discriminability open. No change to canonical status.
 
 ### Three-C grade impact
 
@@ -138,7 +138,7 @@ Net direction: **slightly positive** despite the AA disconfirm, because (a) thre
 - Add Brandon-as-third-rater on 1/4 of each corpus (sanity-floor check).
 - T49-1 AA: redesign rubric per §1 reading 1 + 2; orthogonal-corpus construction.
 - T49-5 LB: live PubMed E-utilities sampling + frozen pre-reg query.
-- T49-6 DefT/DT: naturally-sampled claims from `urb_608` examples + Stanford Encyclopedia of Philosophy entries.
+- T49-6 DefT/MI: naturally-sampled claims from `urb_608` examples + Stanford Encyclopedia of Philosophy entries.
 
 **Cost estimate Wave-1 v2: $0–30 LLM + Brandon time ~3 hours.**
 

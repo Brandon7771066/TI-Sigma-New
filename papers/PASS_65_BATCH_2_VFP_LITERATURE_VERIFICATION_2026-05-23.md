@@ -5,7 +5,7 @@
 **Status:** Literature anchor verification for VFP-1 (Valence-as-Functional Principle, canonical post-Pass-65 batch-1 ratification).
 **Method:** From-training-knowledge synthesis with explicit #69 disclosure on epistemic status of each citation. Primary-source PDF verification flagged where needed.
 **Composes with:** VFP-1 (canonical); AA; TIU; ASYMMETRIC §69; MIM-revision + ABC Fully Dissolved; MFD-1; Klein RPD; DSB-1/DSB-2.
-**Integrates DT canonical refinement (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md`):** valence-as-functional vs valence-as-epiphenomenal is a coherent two-reading proposition that lives on the conceivable side of the axis — both readings are mentally actualizable; the dispute is empirical, not DT.
+**Integrates MI canonical refinement (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md`):** valence-as-functional vs valence-as-epiphenomenal is a coherent two-reading proposition that lives on the conceivable side of the axis — both readings are mentally actualizable; the dispute is empirical, not MI.
 
 ---
 

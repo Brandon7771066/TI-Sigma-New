@@ -33,19 +33,19 @@ The framework is *more* expressive than informal gender taxonomies, not less. It
 
 ---
 
-## Objection 3.2 — "Calling gender dysphoria DT (Double Tralse) is pathologizing. Dysphoria is not a diagnosis-of-incoherence."
+## Objection 3.2 — "Calling gender dysphoria MI (Meta-Indeterminate) is pathologizing. Dysphoria is not a diagnosis-of-incoherence."
 
-**Strongest form.** Medical convention distinguishes between *gender identity* (an identity) and *gender dysphoria* (a condition). TI Sigma labelling dysphoria as DT collapses this distinction and re-medicalizes it as "incoherent thinking."
+**Strongest form.** Medical convention distinguishes between *gender identity* (an identity) and *gender dysphoria* (a condition). TI Sigma labelling dysphoria as MI collapses this distinction and re-medicalizes it as "incoherent thinking."
 
 **Response — three structural points.**
 
-1. **DT is structural-descriptive, not pejorative.** "Double Tralse" in TI Sigma means τ(P) ∧ ¬τ(P) — the substrate is asserting both poles vividly and simultaneously. This is *exactly* the phenomenology dysphoria-sufferers describe. The framework is *matching* lived experience, not imposing a pathology label.
-2. **CDP-1 explains the felt distress.** Pass-56 canonical CDP-1 (Constitutive-DT Propagation) shows that when a DT proposition is *constitutive* of an i-Cell's identity, the DT propagates from the proposition to the i-Cell itself. This is why dysphoria produces profound distress that downstream-emotion-of-incoherent-thinking cannot account for. **The distress is the felt signature of i-Cell-level DT** — a *more* respectful explanation than "you're sad about a logical contradiction," which is the strawman the objection assumes.
+1. **MI is structural-descriptive, not pejorative.** "Meta-Indeterminate" in TI Sigma means τ(P) ∧ ¬τ(P) — the substrate is asserting both poles vividly and simultaneously. This is *exactly* the phenomenology dysphoria-sufferers describe. The framework is *matching* lived experience, not imposing a pathology label.
+2. **CDP-1 explains the felt distress.** Pass-56 canonical CDP-1 (Constitutive-MI Propagation) shows that when a MI proposition is *constitutive* of an i-Cell's identity, the MI propagates from the proposition to the i-Cell itself. This is why dysphoria produces profound distress that downstream-emotion-of-incoherent-thinking cannot account for. **The distress is the felt signature of i-Cell-level MI** — a *more* respectful explanation than "you're sad about a logical contradiction," which is the strawman the objection assumes.
 3. **The three resolution paths are i-Cell repairs, not relabellings.** Transition (DGI-1/2 on corrected pole), acceptance-into-Indeterminate (DGI-3), therapeutic exploration (transitional). Each produces profound relief because i-Cell MR1-coherence is *restored*, not because a sentence is rephrased.
 
-**Reception-strategy implication.** When presenting to clinical / medical audiences, lead with CDP-1 + i-Cell-repair framing, *not* with "dysphoria is DT." The DT label is structurally honest but the structural honesty needs the CDP-1 frame to land as respectful.
+**Reception-strategy implication.** When presenting to clinical / medical audiences, lead with CDP-1 + i-Cell-repair framing, *not* with "dysphoria is MI." The MI label is structurally honest but the structural honesty needs the CDP-1 frame to land as respectful.
 
-**Falsifier.** If careful introspective measurement on dysphoria-sufferers shows that the felt distress *does not* correlate with the τ(self=X) ∧ ¬τ(self=X) substrate description (e.g., distress correlates only with social-stigma factors not internal-tension factors), the i-Cell-DT account weakens.
+**Falsifier.** If careful introspective measurement on dysphoria-sufferers shows that the felt distress *does not* correlate with the τ(self=X) ∧ ¬τ(self=X) substrate description (e.g., distress correlates only with social-stigma factors not internal-tension factors), the i-Cell-MI account weakens.
 
 ---
 
@@ -57,11 +57,11 @@ The framework is *more* expressive than informal gender taxonomies, not less. It
 
 1. **Moot (MT-B1) is a *legitimate* Meta-Truth, not a deficiency.** MT-B1 says "the truth-value of P exists but is irrelevant to the present purpose." It is the *same structural meta-stance* a person takes toward "did my great-great-grandparent commit a crime?" — the truth-value exists, the mootness is honest, the present life is not affected. Calling someone's stance Moot is *not* calling them confused; it is recognizing they have made a legitimate epistemic-hygiene choice.
 2. **The diagnosis is structural-descriptive, not corrective.** TI Sigma does *not* claim comfortably-agender people are *secretly* anything. It claims that the *combination* (DGI-4 substrate + MT-B1 meta-stance) explains how "comfortably agender" can be stable, functional, and non-distressed — *without* claiming the gender-substrate Tralse magically disappears in this population. The framework explains *how the comfort is achieved*, which is the opposite of denying it.
-3. **NAD-1 distinguishes legitimate Moot from DT-in-disguise refusal.** Pass-56 canonical NAD-1 catches the case where someone *refuses to engage* with a real-substrate question — this is DT-in-disguise. The "comfortably agender" person is *not* refusing to engage; they have engaged with the question and chosen Moot as their meta-stance. NAD-1 and Moot-as-DGI-4-supplement are *opposites* — one is structurally illegitimate (refusal), one is structurally legitimate (bracketing).
+3. **NAD-1 distinguishes legitimate Moot from MI-in-disguise refusal.** Pass-56 canonical NAD-1 catches the case where someone *refuses to engage* with a real-substrate question — this is MI-in-disguise. The "comfortably agender" person is *not* refusing to engage; they have engaged with the question and chosen Moot as their meta-stance. NAD-1 and Moot-as-DGI-4-supplement are *opposites* — one is structurally illegitimate (refusal), one is structurally legitimate (bracketing).
 
 **Compassionate framing baked in.** Every canonical version of the comfortably-agender analysis (§10a of the gender paper, §7.7.104 in replit.md, the collapse paper) includes the explicit clause: *"This is not 'comfortably-agender people are secretly suffering' or 'they're in denial.' Moot is a legitimate functional meta-stance and the diagnosis is structural-descriptive, not corrective."*
 
-**Falsifier.** F-NAD-1' from the gender paper: if comfortably-agender individuals on careful introspective testing show no detectable substrate Tralse and no detectable latent DT, the substrate-is-always-present claim fails and the agender → MT-B-VOID mapping is restored (the simpler version where agender is genuine referential-void, not DGI-4+Moot).
+**Falsifier.** F-NAD-1' from the gender paper: if comfortably-agender individuals on careful introspective testing show no detectable substrate Tralse and no detectable latent MI, the substrate-is-always-present claim fails and the agender → MT-B-VOID mapping is restored (the simpler version where agender is genuine referential-void, not DGI-4+Moot).
 
 ---
 

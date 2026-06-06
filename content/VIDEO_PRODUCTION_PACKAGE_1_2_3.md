@@ -83,10 +83,10 @@
 | 2:50–2:53 | Second dot glows GOLD | "golden light" | **INDETERMINATE** (gold) |
 | 2:53–2:56 | Third dot glows GREEN | "green glow neon" | **TRUE** (green, large) |
 | 2:56–3:05 | Fourth dot glows PURPLE | "purple energy glow" | **TRALSE** (purple) — below: *"genuine paradox"* |
-| 3:05–3:15 | Fifth dot is black with white spark | "lightning dark" | **DOUBLE TRALSE** (white on black) — below: *"self-undermining absurdity"* |
-| 3:15–3:45 | All five dots together, pulsing | Hold the 5-orb view | **"Most truth: False / Indeterminate / True"** then **"Tralse + Double Tralse: real but rare"** |
+| 3:05–3:15 | Fifth dot is black with white spark | "lightning dark" | **META-INDETERMINATE** (white on black) — below: *"self-undermining absurdity"* |
+| 3:15–3:45 | All five dots together, pulsing | Hold the 5-orb view | **"Most truth: False / Indeterminate / True"** then **"Tralse + Meta-Indeterminate: real but rare"** |
 
-**Key visual instruction:** Build the five orbs using CapCut's circle shape tool + glow effect. Colors: #CC0000 (False), #FFB300 (Indeterminate), #00AA44 (True), #7B2FBE (Tralse), #111111 with #FFFFFF spark (Double Tralse).
+**Key visual instruction:** Build the five orbs using CapCut's circle shape tool + glow effect. Colors: #CC0000 (False), #FFB300 (Indeterminate), #00AA44 (True), #7B2FBE (Tralse), #111111 with #FFFFFF spark (Meta-Indeterminate).
 
 ---
 
@@ -116,7 +116,7 @@
 ## VIDEO 1 THUMBNAIL SPEC (Canva: 1280×720px)
 
 **Background:** Pure black (#000000)  
-**Left side (40% of canvas):** The five colored orbs stacked vertically, glowing. Small labels: FALSE / INDETERMINATE / TRUE / TRALSE / DOUBLE TRALSE  
+**Left side (40% of canvas):** The five colored orbs stacked vertically, glowing. Small labels: FALSE / INDETERMINATE / TRUE / TRALSE / META-INDETERMINATE  
 **Center-right:** Bold white text, large font (Impact or Bebas Neue):  
 ```
 TRUTH IS

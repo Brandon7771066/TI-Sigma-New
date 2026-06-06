@@ -122,7 +122,7 @@ Given that linguistics has the technical machinery (§2) and the gap is about co
 
 ### 5.1 A unified semantic vocabulary
 
-Tralse 5-valued logic (T, F, t, f, DT) provides a single sentence-level vocabulary for the bistable / under-parameterized states that linguistics currently handles with a half-dozen specialized mechanisms (truth-value gaps for presupposition failure; degree-of-truth for vagueness; context indices for indexicality; explication-parameters for definitional bistability; etc.). The 5-valued vocabulary does not replace the specialized mechanisms — they remain technically valuable for their specific phenomena — but it provides a **single name for the general state** that all of them are addressing: *the sentence is not currently bivalent because some parameter is unfixed*.
+Tralse 5-valued logic (T, F, t, f, MI) provides a single sentence-level vocabulary for the bistable / under-parameterized states that linguistics currently handles with a half-dozen specialized mechanisms (truth-value gaps for presupposition failure; degree-of-truth for vagueness; context indices for indexicality; explication-parameters for definitional bistability; etc.). The 5-valued vocabulary does not replace the specialized mechanisms — they remain technically valuable for their specific phenomena — but it provides a **single name for the general state** that all of them are addressing: *the sentence is not currently bivalent because some parameter is unfixed*.
 
 ### 5.2 The constitutive polarity (proposed, not established)
 

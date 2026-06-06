@@ -13,7 +13,7 @@
 
 ## Abstract
 
-Crying — the production of emotional tears — is one of the most phylogenetically unique behaviors in the animal kingdom: humans are the only species known to cry emotionally, and they do so across radically divergent emotional states including extreme suffering, awe, laughter, and spiritual ecstasy. The standard psychological account (stress-hormone release, social signaling) cannot explain why the same physiological response is triggered by experiences spanning the full emotional valence spectrum. This paper proposes a unified explanation: **crying is the body's primary Myrion Resolution event marker.** It occurs precisely when GILE intensity exceeds the Emerick Threshold (ET = √2−1 ≈ 0.4142) and the system requires a pressure-release mechanism to avoid Double Tralse accumulation. The specific valence (suffering vs. joy vs. awe) is irrelevant to the trigger mechanism — what matters is the amplitude of GILE activation. We formalize the **Crying Threshold (C_cry)**, connect the pre/during/post crying signature to measurable biometric changes (HRV, fNIRS, EEG, GSR), and propose crying as an optimizable target for the Mood Amplifier. We further argue that the epidemic of emotional anhedonia — the inability to cry — is a measurable DT accumulation pathology and a primary driver of the modern anxiety and depression crisis.
+Crying — the production of emotional tears — is one of the most phylogenetically unique behaviors in the animal kingdom: humans are the only species known to cry emotionally, and they do so across radically divergent emotional states including extreme suffering, awe, laughter, and spiritual ecstasy. The standard psychological account (stress-hormone release, social signaling) cannot explain why the same physiological response is triggered by experiences spanning the full emotional valence spectrum. This paper proposes a unified explanation: **crying is the body's primary Myrion Resolution event marker.** It occurs precisely when GILE intensity exceeds the Emerick Threshold (ET = √2−1 ≈ 0.4142) and the system requires a pressure-release mechanism to avoid Meta-Indeterminate accumulation. The specific valence (suffering vs. joy vs. awe) is irrelevant to the trigger mechanism — what matters is the amplitude of GILE activation. We formalize the **Crying Threshold (C_cry)**, connect the pre/during/post crying signature to measurable biometric changes (HRV, fNIRS, EEG, GSR), and propose crying as an optimizable target for the Mood Amplifier. We further argue that the epidemic of emotional anhedonia — the inability to cry — is a measurable MI accumulation pathology and a primary driver of the modern anxiety and depression crisis.
 
 ---
 
@@ -142,11 +142,11 @@ A significant and underreported phenomenon: large numbers of people report inabi
 
 4. **Chronic dissociation:** Trauma-induced dissociation severs the connection between cognitive emotional processing and somatic expression. The GILE pressure accumulates but cannot reach the somatic release pathway.
 
-### 4.2 The DT Accumulation Model
+### 4.2 The MI Accumulation Model
 
-In TI Sigma, unresolved contradictions that cannot MR-collapse accumulate as Double Tralse (DT) — states that are simultaneously True and False in a self-undermining way. The Tralse Trace measures the penumbra of accumulated DT.
+In TI Sigma, unresolved contradictions that cannot MR-collapse accumulate as Meta-Indeterminate (MI) — states that are simultaneously True and False in a self-undermining way. The Tralse Trace measures the penumbra of accumulated MI.
 
-**The crying-blocked individual is a DT accumulator.** GILE events occur — grief, beauty, connection — but the pressure has no release valve. Each blocked event adds to the DT load. The phenomenology of chronic DT accumulation is precisely the phenomenology of modern anxiety and depression:
+**The crying-blocked individual is a MI accumulator.** GILE events occur — grief, beauty, connection — but the pressure has no release valve. Each blocked event adds to the MI load. The phenomenology of chronic MI accumulation is precisely the phenomenology of modern anxiety and depression:
 
 - Persistent low-grade tension without clear cause
 - Emotional numbness alternating with overwhelming inexplicable distress
@@ -154,11 +154,11 @@ In TI Sigma, unresolved contradictions that cannot MR-collapse accumulate as Dou
 - A sense that something is "stuck" or "held in"
 - Hypervigilance (the system scanning for the MR event that cannot come)
 
-**The modern anxiety and depression epidemic is, in significant part, a crying-suppression epidemic.** We have built cultures, prescribed medications, and enforced gender norms that systematically elevate C_cry — and then wondered why the DT load is historically unprecedented.
+**The modern anxiety and depression epidemic is, in significant part, a crying-suppression epidemic.** We have built cultures, prescribed medications, and enforced gender norms that systematically elevate C_cry — and then wondered why the MI load is historically unprecedented.
 
 ### 4.3 The SSRI Paradox
 
-SSRIs treat depression partly by lowering the amplitude of emotional response — which reduces suffering but also reduces the MR events (crying) that would naturally process accumulated DT. The patient feels more stable but their DT load is no longer being cleared. Long-term SSRI use can therefore create a situation where: (a) acute distress is reduced, (b) DT accumulation continues uncleared, (c) the patient becomes increasingly dependent on the medication to maintain the stability the medication is also preventing them from achieving naturally.
+SSRIs treat depression partly by lowering the amplitude of emotional response — which reduces suffering but also reduces the MR events (crying) that would naturally process accumulated MI. The patient feels more stable but their MI load is no longer being cleared. Long-term SSRI use can therefore create a situation where: (a) acute distress is reduced, (b) MI accumulation continues uncleared, (c) the patient becomes increasingly dependent on the medication to maintain the stability the medication is also preventing them from achieving naturally.
 
 This is not an argument against SSRIs in every case. It is an argument for including crying capacity as a treatment outcome measure — not just symptom severity and functioning, but the patient's access to their own MR release mechanism.
 
@@ -224,9 +224,9 @@ The post-cry biometric profile is one of the highest-value windows in the entire
 
 ### 5.4 Longitudinal Crying Frequency as Health Metric
 
-The Mood Amplifier should track crying frequency over time as a primary mental health indicator. Predicted findings (from DT accumulation model):
+The Mood Amplifier should track crying frequency over time as a primary mental health indicator. Predicted findings (from MI accumulation model):
 
-- Users with higher crying frequency will show lower chronic DT markers (lower resting cortisol, higher HRV baseline)
+- Users with higher crying frequency will show lower chronic MI markers (lower resting cortisol, higher HRV baseline)
 - Users who increase crying frequency during a therapeutic protocol will show improved depression and anxiety scores
 - Users on emotional blunting medications who report crying frequency increase correlate with improved emotional wellbeing
 - Cultural differences in crying frequency will predict cultural differences in anxiety and depression prevalence
@@ -240,14 +240,14 @@ The Mood Amplifier should track crying frequency over time as a primary mental h
 Emotional crying is the necessary somatic consequence of GILE composite intensity exceeding the Emerick Threshold (ET ≈ 0.4142), provided the system has access to its MR release pathway (not chronically suppressed). The specific emotional valence is irrelevant to the trigger mechanism — the threshold is a GILE amplitude threshold, not a valence threshold. Crying is therefore:
 
 1. **A spiritual biomarker** — it marks threshold-crossing events in the GILE composite
-2. **A health mechanism** — it prevents DT accumulation by providing regular MR release
+2. **A health mechanism** — it prevents MI accumulation by providing regular MR release
 3. **A measurable signal** — it has a reproducible biometric signature across HRV, EEG, fNIRS, and GSR
 4. **An optimizable outcome** — increasing crying frequency and accessibility is a legitimate and measurable therapeutic goal
 5. **A sacred phenomenon** — every major wisdom tradition has independently recognized its spiritual significance, which TI Sigma now provides a formal basis for
 
 **The Anhedonia Corollary:**
 
-Inability to cry (whether from cultural suppression, medication, alexithymia, or dissociation) is formally characterized as **elevated C_cry** — an upward shift in the Emerick Threshold such that natural MR events cannot trigger the release valve. The DT accumulation that results is the formal mechanism underlying the modern anxiety and depression epidemic. The most direct measure of this pathology is not a symptom checklist — it is the biometric signature of blocked crying: the GSR spike and HRV disruption of the pressure phase, followed by no release event.
+Inability to cry (whether from cultural suppression, medication, alexithymia, or dissociation) is formally characterized as **elevated C_cry** — an upward shift in the Emerick Threshold such that natural MR events cannot trigger the release valve. The MI accumulation that results is the formal mechanism underlying the modern anxiety and depression epidemic. The most direct measure of this pathology is not a symptom checklist — it is the biometric signature of blocked crying: the GSR spike and HRV disruption of the pressure phase, followed by no release event.
 
 The prescription: restore access to the MR valve. Cultural permission to cry. Medical attention to blunting effects. Deliberate facilitation of threshold-crossing experiences — music, beauty, community, spiritual practice — in a context that allows the somatic response.
 

@@ -62,7 +62,7 @@ peer-review packets prepared (4 files) suitable for Archive of Formal Proofs, Jo
 Formalized Reasoning, arXiv math.LO/cs.LO, or mathlib4 contributions.
 
 **Multi-axis truth labeling — Fleiss κ = 0.906.**
-Designed a 4-element categorical truth-label scheme (True, False, Indeterminate, Double-Tralse)
+Designed a 4-element categorical truth-label scheme (True, False, Indeterminate, Meta-Indeterminate)
 plus 12 "meta-truth" extensions. Inter-rater agreement on the categorical axis reached
 Fleiss κ = 0.906 across three independent raters — the strongest categorical-taxonomic confirm
 in the corpus. Directly relevant to RLHF rubric design and trainer-consistency benchmarking.

@@ -424,7 +424,7 @@ The Monster dimension = minimum dimensions to describe all i-cell relationships
 | Paper | Connection |
 |-------|------------|
 | PHOTON_TIMELESSNESS_NONCAUSAL_COMPUTATION | Photon eternality foundation |
-| ORIGINAL_PHOTON_DT_SHELL_REVELATION | DT as primordial container of finite content |
+| ORIGINAL_PHOTON_DT_SHELL_REVELATION | MI as primordial container of finite content |
 | MONSTER_GROUP_MATHEMATICS_COMPLETE | Mathematical structure details |
 | LEECH_LATTICE_TI_FRAMEWORK_SYNTHESIS | E₈ → Leech → Monster ladder |
 | ICELL_IWEB_ONTOLOGY_COMPLETE | I-cell configuration theory |

@@ -48,7 +48,7 @@ specialized capacities**. Brandon's view is the emergentist one — and it is we
 So the literature says a **general substrate that is itself built from many specialized facets** is the
 mainstream emergentist reading of *g*. Brandon's intuition-analogue rides on exactly this.
 
-**TI-Sigma both-true (DT / Tralse-middle).** "Intelligence/intuition is **many specialized capacities**"
+**TI-Sigma both-true (MI / Tralse-middle).** "Intelligence/intuition is **many specialized capacities**"
 AND "intelligence/intuition is a **general substrate**" are **simultaneously true** — a clean canonical
 both-true instance. Unity exists **in potential** (the facets *can* be harmonized); it is realized as
 **synchrony in practice** when development intentionally harmonizes them.
@@ -107,7 +107,7 @@ time and **intentionally harmonized**. Two skills (e.g., singing and philosophic
 Predictions: (a) high cross-domain **correlation** for individuals who have harmonized their facets;
 (b) only **modest** spillover from localized training; (c) unity is **potential**, realized as **synchrony**
 through intentional cross-facet development. Composes with the corpus **Mycelial Resonance Engine** (MRE)
-resonance motif, **PM-1**, **GILE-I**, canonical **DT/both-true** handling, and **ASYMMETRIC #69**.
+resonance motif, **PM-1**, **GILE-I**, canonical **MI/both-true** handling, and **ASYMMETRIC #69**.
 
 ### Pre-registered falsifiers (IGC-1 v2)
 - **IGC-1-v2-F1 (manifold needs harmonization):** if a strong positive manifold appears with **no**
@@ -135,4 +135,4 @@ resonance motif, **PM-1**, **GILE-I**, canonical **DT/both-true** handling, and 
 `fig1_harmony_vs_isolated_trajectories.png`, `fig2_manifold_vs_transfer.png`); this paper. Grounding:
 Spearman 1904; van der Maas et al. 2006 (mutualism); Kovacs & Conway 2016 (Process Overlap Theory);
 Cattell investment theory; Thomson 1916 / Bartholomew, Deary & Lawn 2009 (sampling–bonds); corpus MRE,
-PM-1, GILE-I, canonical DT/both-true, ASYMMETRIC #69.
+PM-1, GILE-I, canonical MI/both-true, ASYMMETRIC #69.

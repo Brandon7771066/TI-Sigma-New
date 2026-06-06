@@ -248,7 +248,7 @@ Pass 23 §1.1 noted Tegmark's microtubule-decoherence calculation (~10⁻¹³ s)
 | **Tralse retrieval cycle (§1.2)** | Multi-step attention with feedback (decoder cross-attention with autoregressive generation) | Direct |
 | **Reverse-osmosis pressure P_attention (§2.2)** | Scaling factor on Q before softmax (Q · K / √d) | Higher P → sharper α distribution |
 | **Reverse-osmosis selectivity A_boundary** | Temperature parameter in softmax (low temp = high selectivity) | Direct |
-| **MR Truth Labels {T, F, I, DT}** | Output-class distribution (multiclass with explicit Indeterminate class) | Add 2 labels beyond binary |
+| **MR Truth Labels {T, F, I, MI}** | Output-class distribution (multiclass with explicit Indeterminate class) | Add 2 labels beyond binary |
 | **PD-imaginary (DefT)** | Imaginary-amplitude in complex-valued attention (Trabelsi 2018) | Native quantum-cognition fit |
 | **τ/δ separability** | Encoder side (τ) vs decoder side (δ) of seq2seq transformers | Architectural fit |
 | **Authority Axis (AA)** | Mixture-of-experts with belief-weighted + doubt-weighted heads operating in parallel | Two-register fit |
@@ -274,7 +274,7 @@ From `BOK_ORCH_OR_GILE_MATRIX_SYNTHESIS.md` part 4:
 ```
 GILE Matrix dimensions:
   4 GILE pillars     × 4 truth states     × 4 truth elements   = 64-D
-  (G,I,L,E)            (T, F, I, DT)         (subject, predicate, copula, modality)
+  (G,I,L,E)            (T, F, I, MI)         (subject, predicate, copula, modality)
 ```
 
 This 4×4×4 = 64 was constructed *before* the 5-truth-axes consolidation in `TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REVIEW_2026-05-07.md`. The "4 truth states" slot is the MR-Truth-Labels axis only; the other four axes (PD-real, PD-imaginary, τ/δ, AA) are not represented in the 64-D structure.
@@ -301,7 +301,7 @@ Three candidate trims, ranked by structural cleanliness:
 NEW 64-D GILE Matrix (4-axis canonical):
   4 GILE pillars (G,I,L,E)
     × 4 PD-quadrants (PD-real ≷ 0 × PD-imaginary ≷ 0)
-       × 4 MR Truth Labels (T, F, Indeterminate, Double Tralse)
+       × 4 MR Truth Labels (T, F, Indeterminate, Meta-Indeterminate)
                                 = 64-D
   with τ/δ-AA two-register operating mode applied uniformly across all 64 entries
 ```
@@ -327,7 +327,7 @@ The six items are not six separate contributions. They are six facets of one und
 2. **An active query operator** (Q / probe / attention pressure / GILE-pillar-active mode).
 3. **A passive resonance gate** (LCC threshold / membrane selectivity / softmax temperature / AA π_baseline).
 4. **A retrieval output** (T̂ / J_insight / α·V / 64-D-matrix-projection).
-5. **A collapse step** that selects one element from a non-Boolean output space (Orch-OR collapse / sampling / MR-label argmax over {T, F, I, DT}).
+5. **A collapse step** that selects one element from a non-Boolean output space (Orch-OR collapse / sampling / MR-label argmax over {T, F, I, MI}).
 
 Items 1-2 (intersection + reverse-osmosis) refactor steps 2-4 of the architecture into a single intersecting operation. Item 3 (centralization) characterizes the substrate (step 1). Item 4 (quantum decision theory) provides the literature-anchored mathematical home for the non-Boolean output space (step 5). Item 5 (BOK-Penrose-Crystal-DANDI) provides the *empirical anchor* for the threshold values that govern step 3. Item 6 (cross-attention + 4-axis trim) provides the *structural template* (transformer cross-attention) and the *axis count* (4) for the entire architecture.
 

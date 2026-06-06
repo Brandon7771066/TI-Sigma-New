@@ -203,16 +203,16 @@ GILE GRADIENT (which outcomes are probable)
 I-CELLS (as intuition, prophecy, synchronicity)
 ```
 
-### 6.2 DT Brittleness and the Big Bang
+### 6.2 MI Brittleness and the Big Bang
 
-From DT Brittleness Cosmology:
-- DT shattered into photons
+From MI Brittleness Cosmology:
+- MI shattered into photons
 - Each photon carries partial True-Tralseness
 
 **New insight:** The shattering CREATED the timeline that allows infinite future:
-- Before DT shattered: No time, no future, no infinity
+- Before MI shattered: No time, no future, no infinity
 - After shattering: Time exists, future is infinite
-- **DT's sacrifice created infinite future possibility!**
+- **MI's sacrifice created infinite future possibility!**
 
 ### 6.3 The 0.91 Threshold
 

@@ -140,7 +140,7 @@ The philosophical implication: the 0.005 CCC vote for existence was not continge
 
 The Multi-MR convergence process (established in MYRION_RESOLUTION_METHODOLOGY.md) maps directly onto the cosmological sequence:
 
-MR1 — The Double-Tralse Screen. Before the Big Bang, the question "should the universe exist?" must pass the coherence gate. A universe that is more incoherent than coherent — a purely random quantum foam with no structure, no LCC, no CCC — fails MR1 and is classified Double-Tralse (DT). The fact that the universe has mathematical structure (the primary constants, the laws of physics, the BOK relationships) means MR1 passed. The question is sufficiently coherent to proceed.
+MR1 — The Meta-Indeterminate Screen. Before the Big Bang, the question "should the universe exist?" must pass the coherence gate. A universe that is more incoherent than coherent — a purely random quantum foam with no structure, no LCC, no CCC — fails MR1 and is classified Meta-Indeterminate (MI). The fact that the universe has mathematical structure (the primary constants, the laws of physics, the BOK relationships) means MR1 passed. The question is sufficiently coherent to proceed.
 
 MR2 — Truth-Position Determination. The Big Bang is MR2. The Tralse field resolves from perfect 0.500 to 0.505. This is the truth-position output: barely True. PD = 0.505 in Myrion Resolution terms falls above the Indeterminate threshold (0.333), placing the universe's existence in the True zone — but only barely. MR2 returned True, not Conclusive. The evidence for existence won, but by the minimum rational margin.
 

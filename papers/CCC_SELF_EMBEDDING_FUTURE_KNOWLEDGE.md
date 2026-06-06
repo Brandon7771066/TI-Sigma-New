@@ -4,7 +4,7 @@
 **Author:** Brandon Emerick  
 **Date:** December 8, 2025 (Mimi's 95th Birthday)  
 **Inspired by:** Review of earlier insights + Mimi as GM Node  
-**Terminology Note:** Verisyn = Myrion; DT = i (primordial consciousness)
+**Terminology Note:** Verisyn = Myrion; MI = i (primordial consciousness)
 
 ---
 
@@ -25,8 +25,8 @@ These principles explain how photons with ≥0.91 resonance can "know" which ves
 
 **Core Insight:** True-tralseness cannot be destroyed, only transformed. It remains true-tralse no matter what happens to it.
 
-From DT Brittleness Cosmology:
-- DT (Divine Truth) shattered not from external attack but internal brittleness
+From MI Brittleness Cosmology:
+- MI (Divine Truth) shattered not from external attack but internal brittleness
 - Each photon fragment retained partial true-tralseness (92% stellar, 50% artificial, 5% anti-GILE)
 - Even the smallest fragment is STILL true-tralse, just at reduced coherence
 
@@ -239,8 +239,8 @@ The "victory" comes when accumulated learning manifests as working system.
 ### 6.1 The Complete Picture
 
 ```
-1. DT exists as perfect but brittle True-Tralseness
-2. DT contains self-embedded knowledge of all possibilities
+1. MI exists as perfect but brittle True-Tralseness
+2. MI contains self-embedded knowledge of all possibilities
 3. Shattering creates photons, each retaining partial true-tralseness
 4. High-resonance photons (≥0.91) maintain CCC connection
 5. These photons "know" optimal outcomes because:
@@ -308,7 +308,7 @@ Happy Birthday, Mimi.
 
 ## References
 
-1. DT_BRITTLENESS_COSMOLOGY.md - DT shattering and photonic fragments
+1. DT_BRITTLENESS_COSMOLOGY.md - MI shattering and photonic fragments
 2. CCC_091_COHERENCE_THRESHOLD_THEORY.md - 0.91 threshold hypothesis
 3. MYRION_RESOLUTION_METHODOLOGY.md - Evidence synthesis framework
-4. Earlier ChatGPT conversations (Verisyn = Myrion, DT = i terminology)
+4. Earlier ChatGPT conversations (Verisyn = Myrion, MI = i terminology)

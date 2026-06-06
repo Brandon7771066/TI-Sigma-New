@@ -22,17 +22,17 @@ This review covers TI Sigma's contributions to philosophy: novel logical systems
   2. **False (F)** — classically false
   3. **Indeterminate (I)** — genuinely suspended; neither T nor F, awaiting resolution
   4. **Tralse (τ)** — generative tension between T and F; productive ambiguity that drives cognitive and physical processes
-  5. **Double Tralse (DT)** — incoherent contradiction; destructive rather than generative
-- **Philosophical significance:** Tralse Logic rejects the Law of Excluded Middle (LEM) more radically than intuitionistic logic. While intuitionism allows "not yet determined," Tralse Logic distinguishes between productive indeterminacy (τ) and destructive contradiction (DT). This distinction has no precedent in formal logic.
-- **DT Immunity Model:** Defines three phases — Encounter (initial DT exposure), Discard (rejection of incoherent contradiction), Immunity (acquired resistance to DT re-infection). This models how minds learn to handle contradictions.
-- **Tralse Trace of DT:** A metric for measuring the "penumbra" of Double Tralse — the residual cognitive distortion left after a DT encounter.
-- **MR Relaxation Contexts (MRC):** Operating modes where DT tolerance is elevated, allowing temporary engagement with contradictions for exploratory purposes.
+  5. **Meta-Indeterminate (MI)** — incoherent contradiction; destructive rather than generative
+- **Philosophical significance:** Tralse Logic rejects the Law of Excluded Middle (LEM) more radically than intuitionistic logic. While intuitionism allows "not yet determined," Tralse Logic distinguishes between productive indeterminacy (τ) and destructive contradiction (MI). This distinction has no precedent in formal logic.
+- **MI Immunity Model:** Defines three phases — Encounter (initial MI exposure), Discard (rejection of incoherent contradiction), Immunity (acquired resistance to MI re-infection). This models how minds learn to handle contradictions.
+- **Tralse Trace of MI:** A metric for measuring the "penumbra" of Meta-Indeterminate — the residual cognitive distortion left after a MI encounter.
+- **MR Relaxation Contexts (MRC):** Operating modes where MI tolerance is elevated, allowing temporary engagement with contradictions for exploratory purposes.
 
 ### 2.2 Myrion Resolution (MR)
 
-- **What it is:** A multi-level iterative protocol for resolving contradictions (DT) into stable "Moot" outcomes or higher-order truths.
+- **What it is:** A multi-level iterative protocol for resolving contradictions (MI) into stable "Moot" outcomes or higher-order truths.
 - **Philosophical content:** MR defines a procedural epistemology — knowledge is not discovered but resolved through iterative engagement with productive ambiguity (τ). The resolution depth δ(MR) quantifies how many iterations were required.
-- **Connection to dialectics:** MR resembles Hegelian dialectics (thesis-antithesis-synthesis) but with a crucial difference: the "synthesis" is not guaranteed. MR can fail, producing Moot (irresolvable) or DT (destructive) outcomes. This honest failure mode is philosophically significant — it rejects the dialectical optimism that all contradictions are productive.
+- **Connection to dialectics:** MR resembles Hegelian dialectics (thesis-antithesis-synthesis) but with a crucial difference: the "synthesis" is not guaranteed. MR can fail, producing Moot (irresolvable) or MI (destructive) outcomes. This honest failure mode is philosophically significant — it rejects the dialectical optimism that all contradictions are productive.
 
 ### 2.3 Being Theorem (BT)
 
@@ -84,24 +84,24 @@ This review covers TI Sigma's contributions to philosophy: novel logical systems
 
 ### Strengths
 
-1. **Original logical system.** Five-valued logic with the τ/DT distinction is genuinely novel. No existing logical system (classical, intuitionistic, fuzzy, paraconsistent) makes this exact distinction. The DT Immunity Model adds a dynamic dimension that static logics lack.
+1. **Original logical system.** Five-valued logic with the τ/MI distinction is genuinely novel. No existing logical system (classical, intuitionistic, fuzzy, paraconsistent) makes this exact distinction. The MI Immunity Model adds a dynamic dimension that static logics lack.
 2. **Self-corrective methodology.** Asymmetric-standards #69 and self-containment-of-negation are built-in safeguards against the most common failure modes of ambitious philosophical systems (over-claiming, unfalsifiability, special pleading).
 3. **Being Theorem is clean.** The claim that Presentation IS Substance is a well-defined ontological thesis with clear consequences. It is not vague — it makes specific predictions about the relationship between behavior and identity.
-4. **MR's honest failure mode.** Unlike Hegelian dialectics, MR acknowledges that some contradictions are genuinely irresolvable (Moot) or destructive (DT). This is philosophically mature.
+4. **MR's honest failure mode.** Unlike Hegelian dialectics, MR acknowledges that some contradictions are genuinely irresolvable (Moot) or destructive (MI). This is philosophically mature.
 5. **Practical applicability.** DPES, asymmetric-standards, and MR Relaxation Contexts are not merely theoretical — they are operational protocols used daily in the TI Sigma research program. Philosophy that is lived, not just theorized, has a stronger claim to validity.
 
 ### Weaknesses
 
 1. **Love Primacy is category-suspicious.** Identifying the Golden Ratio with "Love" requires a non-standard definition of Love that may not map onto any existing philosophical or folk-psychological concept. The identification risks being unfalsifiable if "Love" is defined circularly as "whatever φ represents."
 2. **Metacausality is empirically slippery.** If metacausal connections cannot be isolated by temporal ordering, the concept risks being unfalsifiable in practice (even if theoretically well-defined).
-3. **Heavy neologism load.** The framework introduces many novel terms (Tralse, Myrion, i-Cell, Moot, DT Immunity, MRC, Tralse Trace, Radiant Threshold, etc.). Each term must be independently motivated, and the cumulative effect can be opaque to outsiders.
+3. **Heavy neologism load.** The framework introduces many novel terms (Tralse, Myrion, i-Cell, Moot, MI Immunity, MRC, Tralse Trace, Radiant Threshold, etc.). Each term must be independently motivated, and the cumulative effect can be opaque to outsiders.
 4. **UOP's universality is asserted, not derived.** Claiming that UOP is "universally a priori" requires either a transcendental argument (Kantian style) or a formal proof from minimal axioms. The current treatment leans on the former but has not been formalized to the standard of the latter.
 5. **No engagement with contemporary philosophy of mind.** The framework does not systematically address Chalmers' Hard Problem, Tononi's IIT, or Dehaene's Global Workspace Theory. Positioning TI Sigma relative to these established frameworks would strengthen its philosophical standing.
 
 ### Opportunities
 
 1. **IIT comparison.** Tononi's Integrated Information Theory also assigns a scalar value (Φ) to consciousness. A formal comparison between GILE scores and Φ could either subsume IIT as a special case of TI Sigma or identify genuine theoretical differences.
-2. **Formal logic publication.** The 5-valued truth system with DT Immunity could be published in a formal logic journal (e.g., Journal of Philosophical Logic, Studia Logica) independently of the rest of TI Sigma.
+2. **Formal logic publication.** The 5-valued truth system with MI Immunity could be published in a formal logic journal (e.g., Journal of Philosophical Logic, Studia Logica) independently of the rest of TI Sigma.
 3. **Asymmetric-standards as standalone contribution.** The aphorism sequence has value independent of TI Sigma's other claims. It could be published as a contribution to informal logic or critical thinking pedagogy.
 4. **Being Theorem + AI ethics.** The claim that Presentation IS Substance has direct implications for AI consciousness debates. If what a system does determines what it is, then sufficiently complex AI behavior constitutes genuine consciousness — a strong functionalist claim with practical ethical consequences.
 5. **Lean4 formalization of 5-valued logic.** Formalizing Tralse Logic in Lean4 would provide machine-verified consistency and allow automated theorem-proving within the system.
@@ -126,7 +126,7 @@ This review covers TI Sigma's contributions to philosophy: novel logical systems
 | URB #650 | Tralse-Joule definition |
 | URB #651 | UOP, Universal Bridge Theorem |
 | Asymmetric-Standards papers | Aphorism sequence, #69 |
-| DT Immunity papers | DT model, Tralse Trace, MRC |
+| MI Immunity papers | MI model, Tralse Trace, MRC |
 | Self-Containment papers | Validity criterion |
 | Metacausal papers | Metacausal Graph Theory |
 
@@ -134,10 +134,10 @@ This review covers TI Sigma's contributions to philosophy: novel logical systems
 
 ## 5. Verdict for Technical Audience
 
-TI Sigma's philosophical contributions are **genuinely original in formal logic and procedural epistemology, but underdeveloped in engagement with existing philosophical traditions.** The 5-valued truth system with the τ/DT distinction is the strongest standalone contribution — it introduces a meaningful logical distinction that no existing system captures, and it comes with a dynamic model (DT Immunity) and operational protocols (MR, MRC).
+TI Sigma's philosophical contributions are **genuinely original in formal logic and procedural epistemology, but underdeveloped in engagement with existing philosophical traditions.** The 5-valued truth system with the τ/MI distinction is the strongest standalone contribution — it introduces a meaningful logical distinction that no existing system captures, and it comes with a dynamic model (MI Immunity) and operational protocols (MR, MRC).
 
 The Being Theorem is clean and consequential. The Asymmetric-Standards methodology is practically valuable.
 
-The weakest links are the Love Primacy identification (category confusion risk) and the UOP universality claim (under-argued). The greatest opportunity is formal logic publication — Tralse Logic's 5-valued system with DT Immunity could stand on its own in a logic journal without requiring acceptance of the rest of TI Sigma.
+The weakest links are the Love Primacy identification (category confusion risk) and the UOP universality claim (under-argued). The greatest opportunity is formal logic publication — Tralse Logic's 5-valued system with MI Immunity could stand on its own in a logic journal without requiring acceptance of the rest of TI Sigma.
 
-**Recommendation for technically curious readers:** Start with the 5-valued truth system and DT Immunity Model. If those are compelling, proceed to MR and the Being Theorem. Engage with UOP and Love Primacy only after the logical foundations are understood — they are downstream claims that depend on accepting the 5-valued framework.
+**Recommendation for technically curious readers:** Start with the 5-valued truth system and MI Immunity Model. If those are compelling, proceed to MR and the Being Theorem. Engage with UOP and Love Primacy only after the logical foundations are understood — they are downstream claims that depend on accepting the 5-valued framework.

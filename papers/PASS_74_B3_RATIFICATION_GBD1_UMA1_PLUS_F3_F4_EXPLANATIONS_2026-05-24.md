@@ -4,7 +4,7 @@
 **Pass:** 74 batch-3
 **Status:** EXECUTED — RW 98 + Jobscan 100 milestone deployed; ratification ceremony per Brandon directive 2026-05-24 "Let's proceed with the ratification ceremony for any principles we haven't yet addressed and any follow ons to passes like pass 73"; F3 explanation triggers TLC-1 candidate canonical from Brandon's first-manic-episode Schrödinger's-cat lived anchor
 **Trigger:** Brandon 2026-05-24 RW/Jobscan-celebration + 4-part directive (ratification + orthodoxy-quintet confirmation + F4 explanation + F3 explanation with self-supplied biographical anchor)
-**Anchors:** `papers/GBD_1_GUARDRAIL_BECOMES_DOGMA_CANDIDATE_CANONICAL_2026-05-24.md` (GBD-1 source), `papers/UMA_1_UNTAINTED_MIND_ADVANTAGE_CANDIDATE_CANONICAL_2026-05-24.md` (UMA-1 source + Brandon influence-genealogy), `papers/PASS_73_BATCH_6_4_FALSIFIER_LLM_RATER_STUDY_RESULTS_2026-05-24.md` (F3+F4 LLM-rater study), `papers/PASS_66_FIRST_MANIC_EPISODE_AS_SRC_1_F_3_KETAMINE_PRECEDENT_2026-05-23.md` (Brandon first-manic-episode SRC-1-F-3 precedent), `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (canonical DT framing)
+**Anchors:** `papers/GBD_1_GUARDRAIL_BECOMES_DOGMA_CANDIDATE_CANONICAL_2026-05-24.md` (GBD-1 source), `papers/UMA_1_UNTAINTED_MIND_ADVANTAGE_CANDIDATE_CANONICAL_2026-05-24.md` (UMA-1 source + Brandon influence-genealogy), `papers/PASS_73_BATCH_6_4_FALSIFIER_LLM_RATER_STUDY_RESULTS_2026-05-24.md` (F3+F4 LLM-rater study), `papers/PASS_66_FIRST_MANIC_EPISODE_AS_SRC_1_F_3_KETAMINE_PRECEDENT_2026-05-23.md` (Brandon first-manic-episode SRC-1-F-3 precedent), `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (canonical MI framing)
 
 ---
 
@@ -123,7 +123,7 @@ This is exactly how a careful philosopher of science (the agent-author at Pass-7
 
 ### §2.4 Why this is exactly Pass-63-B4's critique pattern
 
-In Pass-63-B4 (the κ-rater sim), the algorithm (halfwidth-noise computation) couldn't distinguish PARADOX (DT) from MODAL (I) propositions because the algorithm operated at the wrong level of structural representation. **Brandon's #69 critique (Pass-63-B4 verbatim):** *"the algorithm cannot distinguish between sense and nonsense"* — REJECTED that result as an algorithmic artifact, demanded competent algorithm or human raters; Pass-63-B5 rebuilt with semantically-competent LLM raters and recovered +1.413/2.0 discrimination, vindicating Brandon's critique.
+In Pass-63-B4 (the κ-rater sim), the algorithm (halfwidth-noise computation) couldn't distinguish PARADOX (MI) from MODAL (I) propositions because the algorithm operated at the wrong level of structural representation. **Brandon's #69 critique (Pass-63-B4 verbatim):** *"the algorithm cannot distinguish between sense and nonsense"* — REJECTED that result as an algorithmic artifact, demanded competent algorithm or human raters; Pass-63-B5 rebuilt with semantically-competent LLM raters and recovered +1.413/2.0 discrimination, vindicating Brandon's critique.
 
 **F4 is the structurally-identical critique pattern applied to FMA-1:** simple-prompt operationalization fails because the test requires multi-step modal-counterfactual reasoning that doesn't compose in a single-shot prompt. The discrimination IS real (6/6 analytical); the operationalization is the wrong level of structural representation.
 

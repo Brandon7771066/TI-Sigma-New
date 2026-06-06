@@ -9,7 +9,7 @@
 **Task:** Predict probability of each team winning each possible matchup in the NCAA Men's (and/or Women's) basketball tournament
 **Metric:** Log-loss on actual game outcomes
 **Schedule:** Selection Sunday → First Round → Final Four → Championship (March–April 2026)
-**TI Sigma Core Claim:** March Madness games are the highest-density Tralse events in American sports — games where genuine competitive parity (both teams could win = Tralse) is the norm, not the exception. Standard models ignore the Tralse structure. TI Sigma's DT detection and antifragile analysis provide systematic edges in specific matchup types.
+**TI Sigma Core Claim:** March Madness games are the highest-density Tralse events in American sports — games where genuine competitive parity (both teams could win = Tralse) is the norm, not the exception. Standard models ignore the Tralse structure. TI Sigma's MI detection and antifragile analysis provide systematic edges in specific matchup types.
 
 ---
 
@@ -28,7 +28,7 @@
 | 7 vs 10 | ~60% | High Tralse |
 | 8 vs 9 | ~51% | **Maximum Tralse** — nearly a coin flip |
 
-**TI Sigma implication:** The 8 vs 9 matchup is a DT event (both True simultaneously — either team is a valid winner). Standard models should assign ~50%/50%. The 12 vs 5 is the canonical Tralse event where the "upset" is genuinely on equal footing with the "expected" outcome. The highest information content (lowest log-loss opportunity) is in rounds 2–4, not round 1.
+**TI Sigma implication:** The 8 vs 9 matchup is a MI event (both True simultaneously — either team is a valid winner). Standard models should assign ~50%/50%. The 12 vs 5 is the canonical Tralse event where the "upset" is genuinely on equal footing with the "expected" outcome. The highest information content (lowest log-loss opportunity) is in rounds 2–4, not round 1.
 
 ### The Euler Inversion Rule for Basketball
 

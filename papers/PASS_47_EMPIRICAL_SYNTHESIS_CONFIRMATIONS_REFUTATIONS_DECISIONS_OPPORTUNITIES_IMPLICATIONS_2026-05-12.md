@@ -163,9 +163,9 @@ C1-C8 anchor in Pass-28 paper; C9-C20 new in this paper. Each entry: pass, claim
 | | |
 |---|---|
 | **Pass** | 47 (Pass-45 T45-4 frozen) |
-| **Claim** | MR Truth Labels base-4 = {True, False, Indeterminate, Double Tralse} canonicality is empirically agreement-stable across raters |
+| **Claim** | MR Truth Labels base-4 = {True, False, Indeterminate, Meta-Indeterminate} canonicality is empirically agreement-stable across raters |
 | **Test** | 100 propositions (25 obvious-T + 25 obvious-F + 25 paradoxical + 25 borderline-modal); 3 LLM raters; Fleiss' κ on 79 full-3-rater rows |
-| **Result** | **κ = 0.906** (textbook-strong agreement); per-rater majority-agreement 93.7-98.7%; bucket distribution textbook-perfect (TRUE→74/75 T, FALSE→75/75 F, PARADOXICAL→30/30 split I/DT, MODAL→60/75 I no DT) — raters correctly reserve DT for self-referential bothness vs I for modal undecidability |
+| **Result** | **κ = 0.906** (textbook-strong agreement); per-rater majority-agreement 93.7-98.7%; bucket distribution textbook-perfect (TRUE→74/75 T, FALSE→75/75 F, PARADOXICAL→30/30 split I/MI, MODAL→60/75 I no MI) — raters correctly reserve MI for self-referential bothness vs I for modal undecidability |
 | **Status** | **Strongest empirical confirmation of MR Truth Labels canonicality so far.** DEVIATIONS: D1 3 LLMs substituted for 2-humans+1-LLM (no humans recruitable this turn — establishes LLM-feasibility, NOT human-feasibility); D2 test set frozen. |
 | **CAP** | well_known≈0.1 (MR Truth Labels base-4 canonicality is novel TI Sigma contribution; Fleiss' κ on novel categorical schemes is unusual), encompassing≈STR (directly tests categorical scheme), credit≈moderate-to-high |
 | **Anchor** | `PASS_47_FOUR_DELIVERABLE_BATCH_P46A_THROUGH_P46D_2026-05-11.md` §4 (P46-C T45-4); `analyses/pass47_p46c_t45_4_mr_truth_kappa/` |

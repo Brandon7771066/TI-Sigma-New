@@ -26,7 +26,7 @@ The framework's empirical claim: **≥99.9%**. This URB tests that claim and ide
 | 2 | **False (F)** | Proposition is refuted by evidence or inconsistent with established framework structure |
 | 3 | **Tralse** | Proposition is genuinely between True and False — incommensurable evidence, genuine indeterminacy unified with the older "Indeterminate" |
 | 4 | **Moot** | Proposition is meta-resolved as not-applicable — the question itself is malformed, ill-posed, or category-error within the active framework |
-| 5 | **Double Tralse (DT)** | Two independent indeterminacy axes coexist and interact (URB family) — Tralse-of-Tralse as physics primitive |
+| 5 | **Meta-Indeterminate (MI)** | Two independent indeterminacy axes coexist and interact (URB family) — Tralse-of-Tralse as physics primitive |
 
 (The framework's earlier 5-value system separated "Tralse" and "Indeterminate"; the Revised Truth Architecture unified them. This URB uses the unified version. If the older system is preferred, the analysis below holds with one minor reordering.)
 
@@ -40,9 +40,9 @@ In classical mathematics, propositions are either True or False (assuming the la
 - T, F: standard mathematical propositions ≈ 95% of all encountered claims
 - Tralse: independent statements (Gödel-incomplete, undecidable in current axioms) ≈ 4%
 - Moot: ill-formed propositions ("the set of all sets is...") ≈ 1%
-- DT: rare — possibly some choice-axiom-dependent statements ≈ <0.1%
+- MI: rare — possibly some choice-axiom-dependent statements ≈ <0.1%
 
-**Coverage: ≥99.9%.** The 5 values handle classical math, Gödel-incompleteness, ill-formed propositions, and rare DT cases. Even Brouwer's intuitionistic logic (which rejects excluded middle) is recoverable as a sub-system: Brouwer's "neither True nor False" maps to Tralse.
+**Coverage: ≥99.9%.** The 5 values handle classical math, Gödel-incompleteness, ill-formed propositions, and rare MI cases. Even Brouwer's intuitionistic logic (which rejects excluded middle) is recoverable as a sub-system: Brouwer's "neither True nor False" maps to Tralse.
 
 ### 3.2 Empirical Science (physics, biology, chemistry)
 
@@ -50,7 +50,7 @@ Scientific claims fall into:
 - T, F: well-established empirical results ≈ 80%
 - Tralse: results pending more data, contested measurements (e.g., muon g-2 tension before resolution) ≈ 15%
 - Moot: questions outside science's scope, misframed questions ("does the wavefunction really exist?") ≈ 4%
-- DT: genuinely incommensurable measurement contexts (e.g., interpretations of quantum mechanics) ≈ 1%
+- MI: genuinely incommensurable measurement contexts (e.g., interpretations of quantum mechanics) ≈ 1%
 
 **Coverage: ≥99.9%.** Every scientific claim encountered in real practice can be assigned cleanly to one of the 5 values. The Tralse value accommodates the framework's GILE-aware uncertainty handling without requiring infinite gradations.
 
@@ -60,9 +60,9 @@ Philosophical claims often resist binary assignment:
 - T, F: claims for which philosophy has reached strong consensus ≈ 30%
 - Tralse: claims with genuine philosophical disagreement (free will, consciousness, ethics) ≈ 50%
 - Moot: claims that are framework-relative or category errors ≈ 15%
-- DT: claims with multiple incommensurable framework-readings (e.g., "is the self real?" answered differently in Buddhist vs analytic frameworks) ≈ 5%
+- MI: claims with multiple incommensurable framework-readings (e.g., "is the self real?" answered differently in Buddhist vs analytic frameworks) ≈ 5%
 
-**Coverage: ≥99.5%.** Philosophy is the domain where Tralse and DT carry the most weight. The 5 values handle this without requiring the full continuum of "credence levels" that Bayesian epistemology insists on. **The framework explicitly rejects credence-as-real-number** in favor of credence-as-discrete-truth-state with PD-floor handling for novelty (URB #696).
+**Coverage: ≥99.5%.** Philosophy is the domain where Tralse and MI carry the most weight. The 5 values handle this without requiring the full continuum of "credence levels" that Bayesian epistemology insists on. **The framework explicitly rejects credence-as-real-number** in favor of credence-as-discrete-truth-state with PD-floor handling for novelty (URB #696).
 
 ### 3.4 Everyday Cognition (perception, decision-making, social reasoning)
 
@@ -70,7 +70,7 @@ Everyday claims:
 - T, F: clear cases ≈ 70%
 - Tralse: ambiguous social or perceptual situations ≈ 20%
 - Moot: misunderstood questions, failed presuppositions ≈ 8%
-- DT: multi-frame ambiguities (e.g., "is X being rude?" depends on cultural frame) ≈ 2%
+- MI: multi-frame ambiguities (e.g., "is X being rude?" depends on cultural frame) ≈ 2%
 
 **Coverage: ≥99.9%.** Everyday cognition is well-served by the 5-value system; people in fact reason this way naturally without realizing it.
 
@@ -80,7 +80,7 @@ Legal claims:
 - T, F: clear-cut law application ≈ 60%
 - Tralse: cases requiring judicial interpretation ≈ 25%
 - Moot: cases dismissed for lack of standing, ripeness, etc. (literally "moot") ≈ 12%
-- DT: cases with conflicting legal frameworks (international, state vs federal, etc.) ≈ 3%
+- MI: cases with conflicting legal frameworks (international, state vs federal, etc.) ≈ 3%
 
 **Coverage: ≥99.9%.** Notably, the legal system already uses "moot" as a formal category — the framework's choice of this value is **vindicated by independent professional usage** in law.
 
@@ -90,7 +90,7 @@ QM is where Tarski-style infinite-valued logic might seem most needed:
 - T, F: definite measurement outcomes ≈ 50%
 - Tralse: superposition states, contextual measurements ≈ 30%
 - Moot: questions about hidden variables, "actual" trajectories ≈ 15%
-- DT: complementarity-type cases (position vs momentum) ≈ 5%
+- MI: complementarity-type cases (position vs momentum) ≈ 5%
 
 **Coverage: ≥99.9%.** A common objection: "QM probabilities are real numbers in [0,1], requiring infinite-valued logic." The framework's response: **probabilities are not truth values** (URB #696, PD framework). A 50% probability for spin-up is a *probability* of *truth* (definite outcome), not a *partial* *truth*. The 5-value system handles QM fully when probability and truth are properly distinguished.
 
@@ -98,7 +98,7 @@ QM is where Tarski-style infinite-valued logic might seem most needed:
 
 ## 4. Aggregate Coverage Estimate
 
-| Domain | T | F | Tralse | Moot | DT | Coverage |
+| Domain | T | F | Tralse | Moot | MI | Coverage |
 |---|---|---|---|---|---|---|
 | Math | 70 | 25 | 4 | 1 | <0.1 | ≥99.9% |
 | Science | 50 | 30 | 15 | 4 | 1 | ≥99.9% |
@@ -147,7 +147,7 @@ Tarski's infinite-valued logic (and Łukasiewicz's continuous-valued extensions)
 | Distinguishes truth from probability | Yes | No (conflates them) |
 | Handles meta-logical levels (Moot) | Yes (built-in) | No (requires extension) |
 | Handles framework-novelty (PD floor) | Yes (built-in) | No (requires extension) |
-| Handles dual indeterminacy (DT) | Yes (built-in) | Partially (no clean distinction from single Tralse) |
+| Handles dual indeterminacy (MI) | Yes (built-in) | Partially (no clean distinction from single Tralse) |
 
 **Verdict**: Tarski's infinite-valued logic is more general but loses the framework's structural advantages. The 5-valued system is **structurally richer per value** while being computationally and cognitively tractable.
 
@@ -162,9 +162,9 @@ The framework's specific choice of 5 is principled:
 - **2 base values** (T, F) — required for any logic
 - **+1 indeterminacy value** (Tralse) — required to handle genuine indeterminacy without forcing T/F (this is the framework's foundational insight)
 - **+1 meta-value** (Moot) — required to handle framework-relative malformed-ness without forcing the malformed proposition to take a base value
-- **+1 dual-indeterminacy value** (DT) — required to distinguish single-Tralse from multiplied-Tralse (URB #690 onward)
+- **+1 dual-indeterminacy value** (MI) — required to distinguish single-Tralse from multiplied-Tralse (URB #690 onward)
 
-**Why not 4?** Eliminating any of T, F, Tralse, Moot loses essential capability. DT could in principle be reduced to "Tralse of Tralse" (a meta-level structure), but the framework has empirical evidence (URB #712 UCSB material) that DT is structurally distinct as a physics primitive.
+**Why not 4?** Eliminating any of T, F, Tralse, Moot loses essential capability. MI could in principle be reduced to "Tralse of Tralse" (a meta-level structure), but the framework has empirical evidence (URB #712 UCSB material) that MI is structurally distinct as a physics primitive.
 
 **Why not 6+?** No empirical pressure has emerged. The framework's PD pillar provides the principled extensibility slot; if pressure arises, the framework extends.
 

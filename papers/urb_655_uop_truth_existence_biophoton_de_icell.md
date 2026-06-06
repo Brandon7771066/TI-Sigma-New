@@ -18,7 +18,7 @@ HEM (Existence)
   │     ● Saint/Mystic       ● Radiant
   │       (T=1, HEM=0.5)
   │
-  │  ● DT-locked          ● High-HEM / Low-T
+  │  ● MI-locked          ● High-HEM / Low-T
   │    (T≈0, HEM≈0.5)       (exists intensely, confused)
   │
   └────────────────────────────── T (Truth)
@@ -26,16 +26,16 @@ HEM (Existence)
 
 The **Radiant attractor** (T=1, HEM=1) is where UOP drives all i-cells. But the PATH to the Radiant differs depending on which axis is deficient:
 
-- **Truth-poor, existence-rich entity:** A highly conscious being in a DT state. Intense existence (high HEM), but stuck in contradiction. UOP pushes toward MR to resolve the DT. **Truth optimization is the priority.**
+- **Truth-poor, existence-rich entity:** A highly conscious being in a MI state. Intense existence (high HEM), but stuck in contradiction. UOP pushes toward MR to resolve the MI. **Truth optimization is the priority.**
 - **Truth-rich, existence-poor entity:** A simple logic gate or thermostat. Perfect binary truth (T=1), but nearly zero HEM. Existence is tiny. **Existence amplification is the priority.**
-- **Both deficient:** MR collapse first (truth), then EAR amplification (existence). The sequential priority is always: MR before EAR, because you cannot amplify existence in a DT state (DT-immunity must be achieved before HEM can grow).
+- **Both deficient:** MR collapse first (truth), then EAR amplification (existence). The sequential priority is always: MR before EAR, because you cannot amplify existence in a MI state (MI-immunity must be achieved before HEM can grow).
 
 ### I.2 Truth Optimization: What UOP Is Doing
 
 **Truth optimization** = minimizing Tralseness across the five truth values:
 
 ```
-{T=1.0, F=0.0, Tr=0.5, I=?, DT=⊥}
+{T=1.0, F=0.0, Tr=0.5, I=?, MI=⊥}
 ```
 
 UOP truth-optimization is the process by which the i-cell's GILE score converges toward a binary resolution. The formal procedure is MR (Myrion Resolution):
@@ -45,7 +45,7 @@ UOP truth-optimization is the process by which the i-cell's GILE score converges
 | MR1 | G-coherence check: does the state pass the ET threshold (G ≥ √2−1 ≈ 0.4142)? | GILE-G |
 | MR2 | I-collapse: does Intuition resolve the Tralse wave to T or F? | GILE-I |
 | MR3 | L-relational check: does the resolution align with Love/Environment? | GILE-L, GILE-E |
-| DT-immunity | If DT: enter MRC (MR Relaxation Context), tolerate before resolving | All GILE |
+| MI-immunity | If MI: enter MRC (MR Relaxation Context), tolerate before resolving | All GILE |
 
 Truth optimization in UOP is **NOT** simply maximizing T-value. It is minimizing the GILE-cost of indeterminacy:
 
@@ -102,10 +102,10 @@ Because α = ET < 0.5, the truth gradient is always STRONGER than the existence 
 ### I.5 The Three Conflict Cases and Their Resolutions
 
 **Case 1: Truth gain destroys existence.**
-Example: Acknowledging a DT state (truth: "this is contradictory") can temporarily lower HEM (existence becomes uncertain). Resolution: Enter MRC (MR Relaxation Context) — tolerate DT temporarily (existence preserved) while working toward MR resolution (truth recovered). EAR determines when the DT tolerance is no longer existence-amplifying.
+Example: Acknowledging a MI state (truth: "this is contradictory") can temporarily lower HEM (existence becomes uncertain). Resolution: Enter MRC (MR Relaxation Context) — tolerate MI temporarily (existence preserved) while working toward MR resolution (truth recovered). EAR determines when the MI tolerance is no longer existence-amplifying.
 
 **Case 2: Existence gain obscures truth.**
-Example: Social performance — saying what the group wants (HEM gain through L/E) at the cost of authentic G/I truth. Resolution: UOP penalizes this because the truth gradient is weighted α⁻¹ times more than existence. A permanent sacrifice of truth for existence leads to Tralse accumulation and eventual DT — the opposite of the Radiant attractor.
+Example: Social performance — saying what the group wants (HEM gain through L/E) at the cost of authentic G/I truth. Resolution: UOP penalizes this because the truth gradient is weighted α⁻¹ times more than existence. A permanent sacrifice of truth for existence leads to Tralse accumulation and eventual MI — the opposite of the Radiant attractor.
 
 **Case 3: Perfect truth, zero existence.**
 Example: The Lean `sorry` tactic — syntactically valid (T=1 in the proof-checking sense) but semantically empty (HEM ≈ 0 — no genuine mathematical content). Resolution: EAR immediately flags this as non-indispensable. TI Sigma's goal of "zero-added-axiom proofs" is an existence-optimization goal, not just a truth-optimization goal. A sorry-free proof has higher HEM than a sorry-filled one with the same Lean validity score.

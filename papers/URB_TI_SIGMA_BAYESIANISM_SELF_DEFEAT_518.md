@@ -259,7 +259,7 @@ Bayesianism is the dominant framework in philosophy of science, statistics, mach
 
 - URB #515 — TI Sigma Reformed Scientific Method (TIRSM)
 - URB #510 — The Unavoidable Embedding Theorem (priors are unavoidable)
-- URB #509 — TI Sigma Theory of Contradictions (Double Tralse; MR_PEND)
+- URB #509 — TI Sigma Theory of Contradictions (Meta-Indeterminate; MR_PEND)
 - URB #506 — i-Completeness Theorem (LCC derivation basis)
 - Taleb, N.N. — *The Black Swan: The Impact of the Highly Improbable* (2007)
 - Kuhn, T.S. — *The Structure of Scientific Revolutions* (1962)

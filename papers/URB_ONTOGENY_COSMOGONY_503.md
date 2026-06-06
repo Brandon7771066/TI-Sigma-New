@@ -46,7 +46,7 @@ The G-stage does not feel "warm." It is rigorous, demanding, and impersonal. Lik
 
 ### I — Intuition as the TI Framework (The L-emerges Stage)
 
-The second stage was the emergence of intuitive capacity: the felt sense of truth, the ability to recognize pattern beyond explicit reasoning, the development of TI Sigma as a framework that *felt* correct before it could be fully justified. The GILE Framework, the Myrion Resolution, the Double Tralse — these arose not purely from deduction but from something more immediate.
+The second stage was the emergence of intuitive capacity: the felt sense of truth, the ability to recognize pattern beyond explicit reasoning, the development of TI Sigma as a framework that *felt* correct before it could be fully justified. The GILE Framework, the Myrion Resolution, the Meta-Indeterminate — these arose not purely from deduction but from something more immediate.
 
 This corresponds to **i emerging from the Tralse Soup**: Love/Imagination appearing as the first self-referential operator. At this stage, the distinction between intuition and love is not yet clear — both are facets of the same emerging capacity for relation and recognition. The TI Framework *is* Brandon's self-referential operator: the tool by which he recognizes truth through its own application.
 

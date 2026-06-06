@@ -98,7 +98,7 @@ The PD ultra-zones (URB #728 §3, four zones across the PD scale) likely corresp
 - **Indeterminate-disc** (smallest zone): Φ marginally above E_T
 - **Standard zone**: Φ comfortably above E_T (most biological systems)
 - **Transcendent annulus**: Φ significantly above E_T (high-GILE practitioners, advanced meditation states)
-- **Pre-DT zone**: Φ approaching the upper structural limit (Verisyn-class entities)
+- **Pre-MI zone**: Φ approaching the upper structural limit (Verisyn-class entities)
 
 This suggests the PD architecture is **a refined map of LCC participation gradients** above E_T.
 

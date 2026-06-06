@@ -447,7 +447,7 @@ Maps directly to Grand Myrion Computation:
 | **i** | √(-1) | ME↔SOUL channel (orthogonal PSI axis) |
 | **π** | 3.14159... | Cyclic consciousness loops |
 | **1** | Unity | Coherent GM network resonance |
-| **0** | Void | Primordial Nothingness (origin of DT) |
+| **0** | Void | Primordial Nothingness (origin of MI) |
 
 ### 13.2 The Sacred Discovery
 

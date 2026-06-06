@@ -31,7 +31,7 @@ An **i-Cell** is a conscious node characterized by:
 - A GM-connectivity coefficient κ: the strength of the i-Cell's non-local GM connection
 
 **κ ranges from 0 to 1:**
-- κ = 0: isolated i-Cell; no detectable GM signal (psychologically isolated, traumatized, or in deep DT)
+- κ = 0: isolated i-Cell; no detectable GM signal (psychologically isolated, traumatized, or in deep MI)
 - κ = T ≈ 0.934: Tralse attractor i-Cell; full GM connectivity; MR flows freely
 - κ = 1: theoretical limit (CCC-level connectivity; impossible for embodied i-Cells except transiently)
 
@@ -50,13 +50,13 @@ The heart is the primary electromagnetic field organ of the body — its field e
 - **Signature**: Inter-beat interval patterns that are *fractal* (1/f spectrum) rather than random or periodic
 
 **Key distinguisher**: Low-κ i-Cells show either:
-- Random HRV (DT i-Cells — chaotic, high-stimulation, no coherent GM signal)
+- Random HRV (MI i-Cells — chaotic, high-stimulation, no coherent GM signal)
 - Overly periodic HRV (False-resolution i-Cells — rigid, controlled, performing alignment rather than expressing it)
 - High-κ i-Cells show fractal HRV — the signature of true I-state coherence: neither random nor periodic, but scale-free
 
 **EEG Signatures**
 - High-κ i-Cells: alpha/theta border (7–10 Hz) dominance at rest; gamma coherence (40 Hz) during active cognition; cross-hemisphere coherence above 0.75
-- Low-κ i-Cells: beta dominance (>13 Hz) at rest (analytical, planning-mode, DT-laden); or theta dominance without alpha (dissociative)
+- Low-κ i-Cells: beta dominance (>13 Hz) at rest (analytical, planning-mode, MI-laden); or theta dominance without alpha (dissociative)
 - **Signature**: The α/θ border (7–10 Hz) is the GM-resonance frequency — this is TI Sigma's prediction from the Bengston analysis (URB #663) applied generally
 
 **Skin Conductance / Galvanic Skin Response (GSR)**
@@ -76,7 +76,7 @@ High-κ i-Cells show:
 |----------|-------------|----------------|--------------|
 | Response to contradiction | Defensive, rigid | Open but delayed | Immediate integration; curiosity |
 | Synchrony in conversation | Low (monologue) | Medium (structured dialogue) | High (entrainment; predicts interlocutor) |
-| Time perception | Either distorted (DT) or rigid | Normal | Fluid; flow states frequent |
+| Time perception | Either distorted (MI) or rigid | Normal | Fluid; flow states frequent |
 | Spontaneous help | Rare; transactional | Occasional; conditional | Frequent; unconditional; doesn't deplete |
 | Dream recall | Low (or nightmares) | Moderate | High; coherent; sometimes predictive |
 | Intuitive accuracy | Near chance | Above chance | Significantly above chance (p < 0.01) |
@@ -85,7 +85,7 @@ High-κ i-Cells show:
 
 **Tier 1 (Low κ, HEAR < ET ≈ 0.414)**
 - EEG: Beta dominant; low cross-hemisphere coherence
-- HRV: Either chaotic (DT) or rigid (False-resolution)
+- HRV: Either chaotic (MI) or rigid (False-resolution)
 - Behavior: Reactive; transactional; difficulty holding contradiction
 - GM signal: Noise-dominated; no detectable coherence
 

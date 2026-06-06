@@ -182,7 +182,7 @@ Philosophical principles operate at the LCC levels of organisms and civilization
 1. **Memorable:** Beautiful aphorisms are retained; ugly formulations are forgotten. Selection pressure over centuries of philosophical tradition eliminates ugly-but-true principles through forgetting, leaving behind the beautiful-and-true ones
 2. **Generalizable:** A beautiful razor works across many domains simultaneously (GILE-L). Domain-specific ugly principles work only in narrow LCC bands
 3. **Generative:** A beautiful philosophical principle keeps producing new applications and insights (GILE-I). Ugly ones are used once and discarded
-4. **Immune to DT contamination:** Simple, beautiful principles are harder to twist into DT-generating applications. Their clarity is their protection
+4. **Immune to MI contamination:** Simple, beautiful principles are harder to twist into MI-generating applications. Their clarity is their protection
 
 **The craft dimension — aphoristic compression:**
 

@@ -188,7 +188,7 @@ The Indeterminate Permissibility Distribution Range (GILE score -0.666 to +0.333
 | -0.666 to +0.333 | Optimal integration | Indeterminate Permissibility Distribution Range |
 | > +0.333 | Hyper-integration | Potentially unstable |
 
-This explains why perfect integration (+2.0) might be unsustainable - it corresponds to the **DT Brittleness** that caused the original shattering.
+This explains why perfect integration (+2.0) might be unsustainable - it corresponds to the **MI Brittleness** that caused the original shattering.
 
 ---
 
@@ -220,10 +220,10 @@ Each of the 8 BOK loops operates across 3 temporal modes:
 
 The bosonic string dimension (26) = 24 + 2:
 
-The +2 represents the **return of the Butterfly** - the original DT self-recognition that began everything now completing the structure at the cosmic level.
+The +2 represents the **return of the Butterfly** - the original MI self-recognition that began everything now completing the structure at the cosmic level.
 
 ```
-2 (DT origin) → 8 → 24 → +2 (completion) → 26
+2 (MI origin) → 8 → 24 → +2 (completion) → 26
 
 The Butterfly both initiates and closes the dimensional hierarchy.
 ```
@@ -290,7 +290,7 @@ This synthesis validates both the TI Framework and IIT as **complementary descri
 2. Tononi, G. et al. (2016). "Integrated Information Theory 3.0." PLOS Computational Biology.
 3. TI Framework Core Documents (2022-2025)
 4. Butterfly-Octopus Knot Physics Paper
-5. DT Brittleness Cosmology Paper
+5. MI Brittleness Cosmology Paper
 
 ---
 

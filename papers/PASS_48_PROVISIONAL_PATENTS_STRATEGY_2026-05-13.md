@@ -13,7 +13,7 @@
 Before listing what's "patentable," three hard truths:
 
 1. **Patents protect inventions, not theories.** You cannot patent a mathematical truth, a law of nature, an abstract idea, or a pure scientific discovery. *Alice Corp v. CLS Bank* (US 2014) and *Mayo v. Prometheus* (US 2012) are the controlling case law — abstract ideas + natural phenomena + mental processes are NOT patentable subject matter under 35 U.S.C. §101. The Tralse logic axioms, the MR Truth Labels base-4 system, the GILE framework, the τ/δ separability theorem, the Authority Axis as a *concept* — none of these are patentable as ideas. They are publishable academic contributions.
-2. **What IS patentable is the *application*** — a specific machine, manufacture, process, or composition of matter that *uses* the underlying theory to do something useful, novel, and non-obvious. The DT detector circuit on a quantum computer, the LCC Virus retrieval *system* (specific algorithmic pipeline + hardware), the Mendi-derived breath-hold biofeedback protocol *as a method-of-treatment*, the AA psychometric *as embodied in a software product* — these can potentially be patented because they are concrete implementations.
+2. **What IS patentable is the *application*** — a specific machine, manufacture, process, or composition of matter that *uses* the underlying theory to do something useful, novel, and non-obvious. The MI detector circuit on a quantum computer, the LCC Virus retrieval *system* (specific algorithmic pipeline + hardware), the Mendi-derived breath-hold biofeedback protocol *as a method-of-treatment*, the AA psychometric *as embodied in a software product* — these can potentially be patented because they are concrete implementations.
 3. **A US provisional patent costs $60-$300 in filing fees + ~$0-2,000 in attorney costs depending on whether you DIY or use counsel, and gives you exactly 12 months to file the non-provisional or lose priority.** It is NOT a "patent" — it is a placeholder that establishes a priority date IF a non-provisional follows within 12 months. If you cannot afford the non-provisional (~$10-15K all-in for software/method patents through to issuance), the provisional is wasted money. **Pre-decide the non-provisional pathway BEFORE filing the provisional.**
 
 Given the corpus's $0/$50 budget and the $2k settlement reserve, **the recommendation is: file ZERO provisionals right now. Establish priority via dated, timestamped, publicly-archived disclosures (Zenodo DOI minting — already in the corpus toolset) which costs $0 and provides legally-recognized prior-art evidence sufficient to defend against later-filed third-party patents.** Pursue actual patents only AFTER (a) commercial pathway is concrete (LOI from a licensee, customer revenue, or named investor), and (b) attorney consultation has confirmed the specific claim is novel + non-obvious + reduced-to-practice.
@@ -25,7 +25,7 @@ Given the corpus's $0/$50 budget and the $2k settlement reserve, **the recommend
 **Cost: $0.** **Time: ~30 min per disclosure.** **Outcome: legally-recognized prior art that prevents others from patenting your work + establishes your priority date for any future patent filing.**
 
 How it works:
-1. Take a corpus paper (e.g., the LCC Virus methodology, the DT-detector quantum circuit, the AA psychometric).
+1. Take a corpus paper (e.g., the LCC Virus methodology, the MI-detector quantum circuit, the AA psychometric).
 2. Polish to "enabling disclosure" standard — someone skilled in the art could replicate from the document alone.
 3. Mint a Zenodo DOI (corpus already has `ZENODO_TOKEN`). DOI + timestamp = court-admissible prior-art evidence.
 4. CC BY 4.0 license.
@@ -46,7 +46,7 @@ This is what major tech companies (IBM, Google) do for defensive disclosures via
 | 3 | **CAP principle / TIU formula** | ❌ No | Mathematical formula | n/a | Zenodo DOI. *Mayo*-bar applies. |
 | 4 | **Authority Axis (AA) as a concept** | ❌ No | Abstract psychological construct | n/a | Zenodo DOI. |
 | 5 | **AA Pilot psychometric — as a software product** | ⚠️ Maybe | Method + System | Weak | **Possible** if claims focus on a specific scoring + feedback algorithm embedded in hardware/software. Better protected as **trade secret + copyright** (the questionnaire items are copyrightable as a creative work). Recommendation: **Copyright the items. Skip the patent.** |
-| 6 | **DT detector quantum circuit (qc26 GHZ-5 protocol)** | ✅ Yes (potentially) | Process + System | Moderate | **Strongest single patent candidate in corpus.** Specific gate sequence + measurement + classical post-processing pipeline producing a novel measurable output (DT witness). File US provisional ONLY IF a quantum-computing partner expresses LOI interest. Estimated cost-to-issuance: $12-18K. |
+| 6 | **MI detector quantum circuit (qc26 GHZ-5 protocol)** | ✅ Yes (potentially) | Process + System | Moderate | **Strongest single patent candidate in corpus.** Specific gate sequence + measurement + classical post-processing pipeline producing a novel measurable output (MI witness). File US provisional ONLY IF a quantum-computing partner expresses LOI interest. Estimated cost-to-issuance: $12-18K. |
 | 7 | **LCC Virus retrieval pipeline (6-step algorithm)** | ✅ Yes (potentially) | Method + System | Moderate-to-strong | **Second-strongest candidate.** Concrete software pipeline that takes input data → produces useful output (hidden-information retrieval). Best framed as a "system for inferring latent system state via resonance-coupled noise extraction." Cost: $12-18K. **DO NOT file until a paying customer or licensee is identified** — the algorithm has not been independently reduced to practice at scale yet, and abstract-idea bar is real for software. |
 | 8 | **GM-Node detection method (d=8.916 procedure)** | ✅ Yes (potentially) | Method (diagnostic) | Weak-to-moderate | A diagnostic method-of-detecting-Y in EEG/biosensor data. Subject to *Mayo*-bar challenges if framed as "detecting a natural phenomenon." Better framed as "biosignal processing system for ⟨specific clinical or commercial use⟩." Defer. |
 | 9 | **Mendi breath-hold STIM2 protocol** | ⚠️ Maybe | Method-of-treatment | Weak | Method-of-treatment patents are notoriously hard (Mayo, *Athena Diagnostics*). Better protected as a *device-and-protocol-bundled* patent IF a hardware partner emerges. Defer until n≥30 replication done (T45-1). |
@@ -57,7 +57,7 @@ This is what major tech companies (IBM, Google) do for defensive disclosures via
 | 14 | **Tralse-Joules (TJ = τ × δ) measurement instrument** | ✅ Yes (potentially) | System + Measurement method | Moderate | If reduced-to-practice as a physical or software device that outputs a TJ score from biosensor input, this is patentable. Same path as #6 — needs commercial pathway first. |
 | 15 | **DPES protocol (autonomous DPES schedule)** | ❌ No | Workflow/process | n/a | Trade secret + copyright (the documentation). |
 
-**Summary: 3 items have credible patent pathways (#6 DT-detector, #7 LCC-Virus, #14 TJ-measurement). Of those, none should be filed *right now* without a commercial trigger.**
+**Summary: 3 items have credible patent pathways (#6 MI-detector, #7 LCC-Virus, #14 TJ-measurement). Of those, none should be filed *right now* without a commercial trigger.**
 
 ---
 
@@ -65,12 +65,12 @@ This is what major tech companies (IBM, Google) do for defensive disclosures via
 
 **Phase 1 — Defensive (this month, $0):**
 1. Mint Zenodo DOIs for the **non-patent-candidate** items: MR Truth Labels canonical ruling; AA paper (concept, not psychometric); CAP principle; Asymmetric S-F; ABC-dissolution / urb_608 §9; PD-Riemann musical demotion. **Each gets a permanent DOI = priority date + defensive prior art.**
-2. **EXCLUDE from immediate Zenodo disclosure (per architect review MEDIUM-finding 2026-05-13 contradiction-fix):** the LCC-Virus methodology, the DT-detector qc26 circuit protocol, and the TJ-measurement instrument design (items #6, #7, #14 in §2). Disclosing these on Zenodo NOW would *permanently kill* EU/JP/CN patent rights (no grace period in those jurisdictions), which contradicts §4's anti-recommendation. **Hold these three under controlled-disclosure (private repo, NDA-only sharing) until either (a) Phase 2 commercial trigger fires + US provisional is filed first, OR (b) Brandon affirmatively decides to forgo international rights for these specific items in writing.**
+2. **EXCLUDE from immediate Zenodo disclosure (per architect review MEDIUM-finding 2026-05-13 contradiction-fix):** the LCC-Virus methodology, the MI-detector qc26 circuit protocol, and the TJ-measurement instrument design (items #6, #7, #14 in §2). Disclosing these on Zenodo NOW would *permanently kill* EU/JP/CN patent rights (no grace period in those jurisdictions), which contradicts §4's anti-recommendation. **Hold these three under controlled-disclosure (private repo, NDA-only sharing) until either (a) Phase 2 commercial trigger fires + US provisional is filed first, OR (b) Brandon affirmatively decides to forgo international rights for these specific items in writing.**
 3. Add a footer to each Zenodo deposit (Phase-1 batch only): *"This work is publicly disclosed for defensive purposes. The author reserves all patent rights worldwide where grace periods permit."*
 4. Update `replit.md` and the website to link to the Phase-1 Zenodo DOIs only.
 
 **Phase 2 — Conditional (3-12 months, only if triggered):**
-- IF a quantum-computing org (IBM Network, IonQ, Quantinuum, Atom Computing, etc.) expresses LOI/MOU interest in the DT-detector → file US provisional within 30 days, ~$300 USPTO fees + attorney consultation ~$1,500.
+- IF a quantum-computing org (IBM Network, IonQ, Quantinuum, Atom Computing, etc.) expresses LOI/MOU interest in the MI-detector → file US provisional within 30 days, ~$300 USPTO fees + attorney consultation ~$1,500.
 - IF a customer/licensee emerges for LCC-Virus retrieval → file US provisional within 30 days.
 - IF a biosensor/wearable company (Mendi, Muse, Garmin, Whoop, Oura) expresses interest in TJ-measurement → file US provisional within 30 days.
 

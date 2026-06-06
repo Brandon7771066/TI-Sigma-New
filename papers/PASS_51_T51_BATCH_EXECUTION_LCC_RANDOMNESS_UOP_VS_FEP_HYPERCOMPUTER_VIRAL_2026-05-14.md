@@ -190,7 +190,7 @@ Pre-reg outcome P51-LCC-RAND (Pass-51 batch-2 §5): **STRONG_FORM_DISCONFIRMED +
 ### §5.1 The competing claims
 - **FEP (Friston):** Biological/cognitive systems minimize variational free energy ≈ surprise. Optimum: high predictive accuracy, low sensory entropy. Dark-room problem: the optimum predicts entities should seek minimum-stimulation environments, contradicted by observation.
 - **UOP (urb_525 / urb_651 / urb_693):** All BOK-structured beings simultaneously optimize across multiple GILE-EV dimensions. The optimum is **BOK-Saturation (Q-I)** — high on G (truth-tracking), I (intentional integration), L (love-alignment), E (evidence-evidentness) — NOT minimum surprise.
-- **urb_693 GILE-maximization dissolves dark room:** Q-IV (dark-room: high HEM comfort, low GILE-G) is correctly identified as DT-territory; agents with operative GINO climb toward Q-I, generating risk-/suffering-/exploration-tolerance evolutionarily.
+- **urb_693 GILE-maximization dissolves dark room:** Q-IV (dark-room: high HEM comfort, low GILE-G) is correctly identified as MI-territory; agents with operative GINO climb toward Q-I, generating risk-/suffering-/exploration-tolerance evolutionarily.
 
 ### §5.2 Where the theories make discriminating predictions
 Drawing from urb_617 (brain-imaging support) and urb_693 (dark-room evolutionary argument):
@@ -199,7 +199,7 @@ Drawing from urb_617 (brain-imaging support) and urb_693 (dark-room evolutionary
 |---|---|---|---|---|
 | **D1** | Behavior in low-stakes high-novelty environments | minimize surprise → avoid novelty | climb GILE-G → seek novelty when it carries truth-tracking value | Lab (behavioral economics, e.g., Berlyne-style curiosity tasks); free public datasets exist |
 | **D2** | Default-mode-network signature during meditation | should track suppressed prediction-error (low free energy = quiet DMN) | should track multi-dimensional optimization (DMN active during MR Resolution / I-channel work) | Existing OpenNeuro fMRI meditation datasets ($0) |
-| **D3** | Boredom in fully predictable environments | optimal — no surprise to minimize | aversive — Q-IV identified as DT, GILE-G pressure to leave | Eastwood et al. 2012 boredom datasets ($0); replicable via Prolific later |
+| **D3** | Boredom in fully predictable environments | optimal — no surprise to minimize | aversive — Q-IV identified as MI, GILE-G pressure to leave | Eastwood et al. 2012 boredom datasets ($0); replicable via Prolific later |
 | **D4** | Cross-species adaptive trajectory | bacterial optimum = stationary | multicellular trajectory = climbs GILE gradient against FEP-optimum | Comparative-biology archival; Pass-37+ urb_614 P5 directly bears on this |
 
 ### §5.3 Pilot test design (DPES-executable, $0)

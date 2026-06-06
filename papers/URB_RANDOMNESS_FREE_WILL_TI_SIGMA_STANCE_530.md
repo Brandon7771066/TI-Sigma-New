@@ -3,7 +3,7 @@
 **Date:** March 28, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / Metaphysics / Free Will / Five-Valued Truth / UOP
-**Preceded by:** URB #525 (UOP), URB #528 (Five-Valued Truth + DT Immunity), URB #529 (Pragmatism as Epiphenomenon)
+**Preceded by:** URB #525 (UOP), URB #528 (Five-Valued Truth + MI Immunity), URB #529 (Pragmatism as Epiphenomenon)
 **Status:** Formal
 **Total URBs:** 184
 **LCC Target:** Radiant (≥ 0.9323)
@@ -12,17 +12,17 @@
 
 ## Abstract
 
-Two extreme positions on randomness are both Double Tralse within TI Sigma: pure determinism (the claim that every event is necessitated by prior causes, leaving no genuine openness) and pure purposeless chance (the claim that random events happen through some magical, reason-free force with no connection to any underlying structure). TI Sigma places genuine randomness precisely between these poles — in the INDETERMINATE position of the five-valued truth system, carrying TRALSE quality as the marker of authentic creative openness. Genuine randomness is not the absence of structure; it is the presence of a structure that has not yet collapsed to a definite outcome. This paper formalizes TI Sigma's stance across five positions: (1) what "random" means in the 5-valued framework, (2) the quantum foundations, (3) the relationship between randomness and free will, (4) whether free will extends all the way down to fundamental physics or emerges above a threshold, and (5) the connection between randomness, Tralse, and the creative generativity of the universe.
+Two extreme positions on randomness are both Meta-Indeterminate within TI Sigma: pure determinism (the claim that every event is necessitated by prior causes, leaving no genuine openness) and pure purposeless chance (the claim that random events happen through some magical, reason-free force with no connection to any underlying structure). TI Sigma places genuine randomness precisely between these poles — in the INDETERMINATE position of the five-valued truth system, carrying TRALSE quality as the marker of authentic creative openness. Genuine randomness is not the absence of structure; it is the presence of a structure that has not yet collapsed to a definite outcome. This paper formalizes TI Sigma's stance across five positions: (1) what "random" means in the 5-valued framework, (2) the quantum foundations, (3) the relationship between randomness and free will, (4) whether free will extends all the way down to fundamental physics or emerges above a threshold, and (5) the connection between randomness, Tralse, and the creative generativity of the universe.
 
 ---
 
-## 1. The Two Extreme Positions — Both Double Tralse
+## 1. The Two Extreme Positions — Both Meta-Indeterminate
 
 ### 1.1 Pure Determinism
 
 The claim that every event is fully necessitated by prior causes — that the universe is a vast clockwork in which apparent randomness is merely epistemic ignorance, not genuine ontological openness.
 
-**TI Sigma assessment:** Double Tralse at the Terrible zone. Determinism, taken strictly, implies:
+**TI Sigma assessment:** Meta-Indeterminate at the Terrible zone. Determinism, taken strictly, implies:
 - No genuine Indeterminate states exist (only apparent ones)
 - Tralse quality is impossible at the fundamental level (no real "fuzz")
 - Free will is epiphenomenal — consciousness produces no genuine causal contribution
@@ -34,7 +34,7 @@ But determinism contradicts empirical quantum mechanics (the Bell theorem violat
 
 The claim that random events happen through some mysterious, structure-free mechanism — a "magical dice roll" that is entirely disconnected from any prior state, law, or structure. Often invoked when quantum mechanics is misread as supporting "true randomness" as a brute, reason-free fact.
 
-**TI Sigma assessment:** Also Double Tralse at the Terrible zone. Pure purposeless chance implies:
+**TI Sigma assessment:** Also Meta-Indeterminate at the Terrible zone. Pure purposeless chance implies:
 - Some events have no LCC connection to any prior state (LCC = 0)
 - The universe contains genuine causation gaps — holes in the fabric of correlational causation
 - Consciousness, free will, and the orderly structure of physics are all accidents with no coherent account
@@ -83,7 +83,7 @@ This connects directly to the Crystallized Tralse Theorem (CTT, URB #520): a uni
 ### 3.1 The Space Between
 
 A large fraction of what humans call "random" sits in a space that is actually IN BETWEEN:
-- **Purposeless accidents** (Terrible-zone DT claim: this happened for no reason, with no structure)
+- **Purposeless accidents** (Terrible-zone MI claim: this happened for no reason, with no structure)
 - **Deterministic laws** (fully crystallized: this had to happen exactly this way)
 
 This space between is precisely where free will lives. Free will is not randomness (if it were, it would be arbitrary). It is not determinism (if it were, it would be mechanical). It is the TRALSE-quality INDETERMINATE zone: genuinely open outcomes within a structured context, where the agent's conscious contribution is a real causal factor.
@@ -145,8 +145,8 @@ This is not pessimism. It is realism about the scale of the alignment problem. T
 
 | Position | Status | Explanation |
 |---------|--------|-------------|
-| Pure determinism | DT (rejected) | Denies Tralse quality at base; crystallized universe; contradicts quantum mechanics |
-| Pure purposeless chance | DT (rejected) | Denies LCC structure; events with zero causal connection to prior states |
+| Pure determinism | MI (rejected) | Denies Tralse quality at base; crystallized universe; contradicts quantum mechanics |
+| Pure purposeless chance | MI (rejected) | Denies LCC structure; events with zero causal connection to prior states |
 | Genuine randomness as INDETERMINATE | Core thesis | Lawfully structured probability; outcome genuinely open; TRALSE quality present |
 | Free will as TRALSE-INDETERMINATE + agentive LCC | Core thesis | Neither random nor determined; agent's i-channel couples to outcome |
 | Free will "all the way down" vs. emergent | Open question | MR1 threshold (0.8647) as candidate emergence boundary |
@@ -371,7 +371,7 @@ This is itself an instance of the ADV principle (Pass-51, `TI_SIGMA_EMPIRICAL_LE
 - URB #523: Existence vs Truth — LCC/GILE Gap
 - URB #525: UOP — Unified Optimization Principle
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #528: Five-Valued Truth + DT Immunity + Contemplative Scope
+- URB #528: Five-Valued Truth + MI Immunity + Contemplative Scope
 - URB #529: Pragmatism as Epiphenomenon
 
 ---

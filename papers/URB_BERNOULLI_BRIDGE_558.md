@@ -191,7 +191,7 @@ The full chain: **B₂ = 1/6 determines ζ(2), ζ(-1), ξ(2), ξ(-1), the critic
 | **2** | **TRUE** | **π²/6 ≈ φ** | **π²·B₂** | **The Bernoulli Bridge enters** |
 | **-1** | **BEYOND-FALSE** | **-1/12** | **-B₂/2** | **Same B₂** |
 | 3 | TRALSE | ≈1.202 | No closed form | Apéry's constant |
-| 4 | DOUBLE-TRALSE | π⁴/90 | π⁴·B₄/... | B₄ = -1/30 |
+| 4 | META-INDETERMINATE | π⁴/90 | π⁴·B₄/... | B₄ = -1/30 |
 
 The TRUE-BEYOND-FALSE pairing is the most elegant:
 - Both governed by B₂ = 1/6

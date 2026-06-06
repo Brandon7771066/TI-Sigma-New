@@ -65,4 +65,4 @@ A photon polarized at **45°** passes a 0°/90° analyzer **50/50** — it is th
 
 ### Files
 - `analyses/pass77_b53_chsh_45deg/run_chsh.py`, `results.txt` (Aer CHSH run).
-- Coheres with B52 (staircase/BSI-1), `analyses/crystal_c6_chsh/` (CHSH-vs-angle, Ring values), urb_623 (Hadamard\|+⟩↔equator, GILE-I as collapse-resistance), urb_716 (DT-native gate, 1/√2 superposition coefficient), PASS_46 (qc26 GHZ-5 real-HW Mermin), PASS_43 (qc25 real-HW).
+- Coheres with B52 (staircase/BSI-1), `analyses/crystal_c6_chsh/` (CHSH-vs-angle, Ring values), urb_623 (Hadamard\|+⟩↔equator, GILE-I as collapse-resistance), urb_716 (MI-native gate, 1/√2 superposition coefficient), PASS_46 (qc26 GHZ-5 real-HW Mermin), PASS_43 (qc25 real-HW).

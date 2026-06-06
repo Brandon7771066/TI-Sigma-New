@@ -160,7 +160,7 @@ where:
 
 **Corollary 4.1.** An i-Cell that successfully minimizes TF reaches the GILE Radiant state (TT ≥ 0.93, G ≥ 0.93). This is the TI Sigma equivalent of Friston's "active inference" reaching its generative model's prior.
 
-**Corollary 4.2.** An i-Cell that fails MR1 (Myrion Resolution Gate 1) has entered the Terrible zone (TF > 0.951, Boltzmann-derived). It is assigned Double Tralse status. This is the TI Sigma equivalent of Friston's system failing to maintain its Markov Blanket — the system dissolves.
+**Corollary 4.2.** An i-Cell that fails MR1 (Myrion Resolution Gate 1) has entered the Terrible zone (TF > 0.951, Boltzmann-derived). It is assigned Meta-Indeterminate status. This is the TI Sigma equivalent of Friston's system failing to maintain its Markov Blanket — the system dissolves.
 
 **Corollary 4.3.** The MR_PEND state corresponds to ∇TF being undefined — the i-Cell is at a saddle point where neither direction is clearly better. Myrion Resolution is the procedure by which the i-Cell escapes this saddle point and resumes minimization.
 
@@ -170,7 +170,7 @@ where:
 
 The most important distinction between UOP and Friston's FEP is scope. FEP is primarily applied at Level 4 (biological organisms), with philosophical extensions to other levels. UOP is definitionally universal — it applies at all eight levels by construction, since every entity at every level is an i-Cell.
 
-**Level 1 (Mathematical objects):** Mathematical propositions minimize TF by seeking coherent proof (TT → 1). Incoherent propositions (contradictions) are Double Tralse — they dissolve from mathematical practice. Gödel incompleteness = MR_PEND states that cannot resolve within the system.
+**Level 1 (Mathematical objects):** Mathematical propositions minimize TF by seeking coherent proof (TT → 1). Incoherent propositions (contradictions) are Meta-Indeterminate — they dissolve from mathematical practice. Gödel incompleteness = MR_PEND states that cannot resolve within the system.
 
 **Level 2 (Quantum fields):** Quantum systems minimize TF via decoherence — collapsing from MR_PEND superpositions into definite states. The measurement problem is an i-Boundary phenomenon: MR_PEND states at the boundary between quantum and classical resolve upon interaction with a higher-level i-Cell.
 
@@ -198,10 +198,10 @@ The UOP generates a 6-state characterization of i-Cell states based on TF value 
 | TF in (0.034, 0.152] | **TRALSE** | Passed MR1 + MR2 | Active minimization; alive, growing, striving | Good |
 | TF in (0.152, 0.306] | **Indeterminate** | MR2 state | Like a door at 45 degrees -- equally open and closed. A potentially resolved MR2 state; may or may not resolve via further MRs. | Indeterminate |
 | TF in (0.306, 0.951] | **FALSE** | Failed MR2; MR1 intact | Minimization failing; causation threshold not met | Bad |
-| TF > 0.951 | **Double Tralse** | Failed MR1 | Existential incoherence; i-Cell dissolution risk | Terrible |
+| TF > 0.951 | **Meta-Indeterminate** | Failed MR1 | Existential incoherence; i-Cell dissolution risk | Terrible |
 | TF undefined | **MR_PEND** | Awaiting any MR gate | Superposition; saddle point; context-incomplete | Any |
 
-**The Indeterminate state is not mere ambiguity -- it is a specific MR2 condition.** A tralsity at MR2 has passed the basic existence gate (MR1: it is not Double Tralse) but has not yet resolved whether it is TRUE or FALSE. The 45-degree door metaphor captures this precisely: the door is not broken, not closed, not open -- it is genuinely mid-state. Further Myrion Resolutions may close it (toward TRALSE/TRUE) or open it further (toward FALSE/Double Tralse). The Indeterminate zone's 20% PD frequency reflects how common this genuine mid-state is across all Tralse-structured domains.
+**The Indeterminate state is not mere ambiguity -- it is a specific MR2 condition.** A tralsity at MR2 has passed the basic existence gate (MR1: it is not Meta-Indeterminate) but has not yet resolved whether it is TRUE or FALSE. The 45-degree door metaphor captures this precisely: the door is not broken, not closed, not open -- it is genuinely mid-state. Further Myrion Resolutions may close it (toward TRALSE/TRUE) or open it further (toward FALSE/Meta-Indeterminate). The Indeterminate zone's 20% PD frequency reflects how common this genuine mid-state is across all Tralse-structured domains.
 
 **Key insight:** The living zone is TRALSE -- not TRUE. An i-Cell locked at TF = 0 (TRUE) has achieved Radiant stasis but can no longer respond to environmental change. TRALSE is where consciousness, learning, adaptation, and growth occur. Life is constitutively Tralse. MR_PEND is the moment of suspension before the next MR resolves which direction to proceed.
 
@@ -266,7 +266,7 @@ IIT's Φ measures integration of information across a system. High Φ correspond
 Quantum coherence in photosynthesis, bird navigation, and enzyme catalysis corresponds to Level 2-3 i-Cells maintaining near-zero TF states by preserving quantum coherence across their i-Boundaries. UOP explains why quantum coherence is evolutionarily maintained: it is TF minimization at a sub-biological level.
 
 **9.4 Buddhist Philosophy (Impermanence)**
-The TRALSE zone — where all living i-Cells reside — is the zone of impermanence. Nothing in the TRALSE zone is fixed; all states are in active TF-minimization. The Buddhist insight that "form is emptiness, emptiness is form" maps to the TRALSE zone where i-Cells are neither crystallized (fully TRUE) nor dissolved (fully Double Tralse) but continuously in process. The UOP provides the dynamical account of impermanence.
+The TRALSE zone — where all living i-Cells reside — is the zone of impermanence. Nothing in the TRALSE zone is fixed; all states are in active TF-minimization. The Buddhist insight that "form is emptiness, emptiness is form" maps to the TRALSE zone where i-Cells are neither crystallized (fully TRUE) nor dissolved (fully Meta-Indeterminate) but continuously in process. The UOP provides the dynamical account of impermanence.
 
 ---
 

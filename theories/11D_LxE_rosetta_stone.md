@@ -103,13 +103,13 @@
 | True | Wave function collapsed to eigenstate |
 | False | Wave function collapsed to null state |
 | Tralse | Wave function in superposition |
-| Double Tralse | Persistent superposition (dark energy) |
+| Meta-Indeterminate | Persistent superposition (dark energy) |
 
 **Units:** Tralseness coefficient [0, 1]
 
 **Range:** 0 (fully binary) to 1 (fully tralse)
 
-**Key insight:** Dark energy = Double Tralse = ~68% of universe
+**Key insight:** Dark energy = Meta-Indeterminate = ~68% of universe
 
 ---
 

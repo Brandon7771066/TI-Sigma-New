@@ -34,7 +34,7 @@ Each block has 16 dimensions. Within each block, the 16 dimensions need explicit
 
 The Existence axis pillar (HEAR) operates across 3 SM sectors (down-quark, up-quark, lepton — with neutrino being the brain's bridge target rather than independent sector for E-axis).
 
-Within each (E_axis, sector) pair, the framework's **4 PD ultra-zones** (Indeterminate disc / standard / transcendent / pre-DT, URB #733) provide 4 sub-dimensions.
+Within each (E_axis, sector) pair, the framework's **4 PD ultra-zones** (Indeterminate disc / standard / transcendent / pre-MI, URB #733) provide 4 sub-dimensions.
 
 **Block 1 basis specification**: 4 PD ultra-zones × ~4 SM sub-sectors (with chirality reduction: 16 distinct cells out of 4×3+4 = 16 after reduction).
 
@@ -43,15 +43,15 @@ Within each (E_axis, sector) pair, the framework's **4 PD ultra-zones** (Indeter
 | 1 | E_HEAR ⊗ down-quark ⊗ Indeterminate-disc |
 | 2 | E_HEAR ⊗ down-quark ⊗ standard-zone |
 | 3 | E_HEAR ⊗ down-quark ⊗ transcendent-annulus |
-| 4 | E_HEAR ⊗ down-quark ⊗ pre-DT-zone |
+| 4 | E_HEAR ⊗ down-quark ⊗ pre-MI-zone |
 | 5 | E_HEAR ⊗ up-quark ⊗ Indeterminate-disc |
 | 6 | E_HEAR ⊗ up-quark ⊗ standard-zone |
 | 7 | E_HEAR ⊗ up-quark ⊗ transcendent-annulus |
-| 8 | E_HEAR ⊗ up-quark ⊗ pre-DT-zone |
+| 8 | E_HEAR ⊗ up-quark ⊗ pre-MI-zone |
 | 9 | E_HEAR ⊗ lepton ⊗ Indeterminate-disc |
 | 10 | E_HEAR ⊗ lepton ⊗ standard-zone |
 | 11 | E_HEAR ⊗ lepton ⊗ transcendent-annulus |
-| 12 | E_HEAR ⊗ lepton ⊗ pre-DT-zone |
+| 12 | E_HEAR ⊗ lepton ⊗ pre-MI-zone |
 | 13 | E_HEAR ⊗ chirality-reduced-cell-1 (combines two equivalent cells) |
 | 14 | E_HEAR ⊗ chirality-reduced-cell-2 |
 | 15 | E_HEAR ⊗ chirality-reduced-cell-3 |
@@ -83,19 +83,19 @@ These 16 indices (33-48) span the **interactions between Existence and Truth axe
 | 33 | E×T ⊗ Love-as-bonding ⊗ low-state |
 | 34 | E×T ⊗ Love-as-bonding ⊗ medium-state |
 | 35 | E×T ⊗ Love-as-bonding ⊗ high-state |
-| 36 | E×T ⊗ Love-as-bonding ⊗ DT-saturated |
+| 36 | E×T ⊗ Love-as-bonding ⊗ MI-saturated |
 | 37 | E×T ⊗ Love-as-recognition ⊗ low-state |
 | 38 | E×T ⊗ Love-as-recognition ⊗ medium-state |
 | 39 | E×T ⊗ Love-as-recognition ⊗ high-state |
-| 40 | E×T ⊗ Love-as-recognition ⊗ DT-saturated |
+| 40 | E×T ⊗ Love-as-recognition ⊗ MI-saturated |
 | 41 | E×T ⊗ Love-as-care ⊗ low-state |
 | 42 | E×T ⊗ Love-as-care ⊗ medium-state |
 | 43 | E×T ⊗ Love-as-care ⊗ high-state |
-| 44 | E×T ⊗ Love-as-care ⊗ DT-saturated |
+| 44 | E×T ⊗ Love-as-care ⊗ MI-saturated |
 | 45 | E×T ⊗ Goodness-integral ⊗ low-state |
 | 46 | E×T ⊗ Goodness-integral ⊗ medium-state |
 | 47 | E×T ⊗ Goodness-integral ⊗ high-state |
-| 48 | E×T ⊗ Goodness-integral ⊗ DT-saturated |
+| 48 | E×T ⊗ Goodness-integral ⊗ MI-saturated |
 
 These 16 basis vectors capture the **dynamic interaction patterns** between Existence and Truth, mediated by the three Love-distributions and the integrated Goodness measure.
 

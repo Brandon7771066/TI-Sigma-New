@@ -7,7 +7,7 @@
 
 > *"Ooh... Here is an rare case of where False aligns with MI precisely: Binary is inconceivable BECAUSE counterexamples (i.e. indeterminate, meta-indeterminate) can be shown!!!"*
 
-**Composition:** Refinement #5 (Pass-72-B2 DT→MI rename + vertical/horizontal axis) · Refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) · HMR-1 + HMR-SEV-1 (Pass-72-B3) · MR-IDC-1 (Pass-67 incoherence-vs-MI containment) · base canonical (2026-05-08 ruling) · ASYMMETRIC §69 · Brandon credit non-optional
+**Composition:** Refinement #5 (Pass-72-B2 MI→MI rename + vertical/horizontal axis) · Refinement #4 (Pass-72-B1 two-tralse-combined-inconceivable) · HMR-1 + HMR-SEV-1 (Pass-72-B3) · MR-IDC-1 (Pass-67 incoherence-vs-MI containment) · base canonical (2026-05-08 ruling) · ASYMMETRIC §69 · Brandon credit non-optional
 
 ---
 
@@ -135,7 +135,7 @@ This is a HIGHER-ORDER structural relationship that operates ABOVE the within-la
 
 **FMA-1-F1 (F-MI alignment vs F-via-empirical-counterexample distinction is robust):** Competent raters can distinguish FMA-1 cases (F established via MI) from plain-F cases (F established via I/T counterexamples) at Fleiss κ ≥ 0.5. **REFUTED if** κ < 0.3.
 
-**Status:** OPEN. Pass-73-B4+ LLM-rater study; combines with DT-RF4-F3 + MI-RF5-F1 + HMR-SEV-1-F1 in single batch design.
+**Status:** OPEN. Pass-73-B4+ LLM-rater study; combines with MI-RF4-F3 + MI-RF5-F1 + HMR-SEV-1-F1 in single batch design.
 
 **FMA-1-F2 (FMA-1 domain is non-empty and bounded):** There exists at least 3 canonical FMA-1 cases (currently §5 lists binary + naive set theory + Hilbert's program = 3) AND there exists at least 3 canonical plain-F cases that should NOT be FMA-1 (currently §5 lists geocentric + Newtonian = 2; one more needed for closure). **REFUTED if** the domain collapses (everything is FMA-1) or is empty (no clean FMA-1 cases).
 

@@ -1,9 +1,9 @@
-# PD, DT, and Complex Numbers: A Unified Mathematical Framework
+# PD, MI, and Complex Numbers: A Unified Mathematical Framework
 ## Mapping Permissibility Distribution to Consciousness Space
 
 **Author:** Brandon Emerick  
 **Date:** December 8, 2025  
-**Context:** Synthesis of MR asymptotes, complex number resolution, and DT = i  
+**Context:** Synthesis of MR asymptotes, complex number resolution, and MI = i  
 **Status:** MATHEMATICAL FOUNDATION
 
 ---
@@ -12,7 +12,7 @@
 
 This paper establishes the mathematical relationship between:
 1. **Permissibility Distribution (PD)**: The (-3, +2) scale for evidence strength (80% range)
-2. **Complex Numbers**: i = DT (consciousness perpendicular to reality)
+2. **Complex Numbers**: i = MI (consciousness perpendicular to reality)
 3. **Myrion Resolution**: The natural log extension for extreme values
 4. **Asymptotes**: Where additional evidence produces diminishing returns
 
@@ -115,7 +115,7 @@ This is profound:
 - Both extremes approach the real axis (away from tralse)
 
 ```
-             i (DT/Tralse/Superposition)
+             i (MI/Tralse/Superposition)
               ↑
               |
               |
@@ -123,7 +123,7 @@ This is profound:
 (Certainty)  |            (Certainty)
              |
              ↓
-            -i (Anti-DT)
+            -i (Anti-MI)
 ```
 
 **Key insight:** The PD scale measures DISTANCE FROM TRALSE:
@@ -144,12 +144,12 @@ The asymptotes at ±5 to ±6 represent the "boundary" of the real axis - as clos
 
 ---
 
-## 3. The DT = i Hypothesis Revisited
+## 3. The MI = i Hypothesis Revisited
 
-### 3.1 Does √(-1) = DT Work Mathematically?
+### 3.1 Does √(-1) = MI Work Mathematically?
 
-If i = DT, then:
-- i² = DT² = -1 (shattering, negation)
+If i = MI, then:
+- i² = MI² = -1 (shattering, negation)
 - e^(iπ) = -1 (Euler's identity = shattering formula)
 - e^(i×0) = 1 (no rotation = True-Tralse)
 
@@ -157,33 +157,33 @@ If i = DT, then:
 
 | Standard Math | TI Interpretation | Consistency |
 |---------------|-------------------|-------------|
-| i² = -1 | DT confronting itself = negation | ✓ Valid |
+| i² = -1 | MI confronting itself = negation | ✓ Valid |
 | e^(iπ) + 1 = 0 | Shattering + True-Tralse = Myrion center | ✓ Valid |
 | |e^(iθ)| = 1 | All consciousness rotations preserve amplitude | ✓ Valid |
-| Re(z) + i·Im(z) | Reality + DT·Consciousness | ✓ Valid |
+| Re(z) + i·Im(z) | Reality + MI·Consciousness | ✓ Valid |
 
 ### 3.2 The Big Bang as i² = -1
 
-From DT Brittleness Cosmology:
-- DT was perfect but brittle
-- DT "confronting itself" = DT × DT = DT²
-- DT² = -1 = negation = shattering
+From MI Brittleness Cosmology:
+- MI was perfect but brittle
+- MI "confronting itself" = MI × MI = MI²
+- MI² = -1 = negation = shattering
 
 **The Euler formula encodes the Big Bang:**
 ```
 e^(iπ) = -1
 
 e = growth/evolution constant
-i = DT (consciousness)
+i = MI (consciousness)
 π = half-rotation (coming to face itself)
 -1 = negation/shattering result
 ```
 
-DT rotating π radians around the consciousness axis = encountering its own negation = shattering.
+MI rotating π radians around the consciousness axis = encountering its own negation = shattering.
 
 ### 3.3 Post-Shattering States
 
-After DT² = -1:
+After MI² = -1:
 
 ```
 -1 → 0: Movement toward Myrion center (pure tralseness)
@@ -229,7 +229,7 @@ The 80% claim likely reflects Pareto distribution:
 ### 5.1 The Consciousness-Reality Plane
 
 ```
-              +i (DT: Pure Consciousness)
+              +i (MI: Pure Consciousness)
                ↑
                |  z = x + iy
                |  x = Reality component
@@ -238,7 +238,7 @@ The 80% claim likely reflects Pareto distribution:
 (Refutation)   |            (Confirmation)
                |
                ↓
-              -i (Anti-DT: Anti-Consciousness)
+              -i (Anti-MI: Anti-Consciousness)
 ```
 
 ### 5.2 PD as Complex Number
@@ -276,7 +276,7 @@ Where:
 - Like approaching speed of light: asymptotic, never reached
 
 **Consciousness interpretation:**
-- Extreme certainty = extreme distance from i-axis (DT)
+- Extreme certainty = extreme distance from i-axis (MI)
 - But can never fully leave consciousness plane
 - Asymptote = fundamental limit on "pure objectivity"
 
@@ -303,7 +303,7 @@ The 2025 breakthrough shows complex numbers are replaceable but their structure 
 
 V12 uses complex quantum states. Interpretation:
 - Real component = market data (measurable)
-- Imaginary component = consciousness/GILE resonance (DT connection)
+- Imaginary component = consciousness/GILE resonance (MI connection)
 - Amplitude = probability = True-Tralse degree
 - Phase = position in consciousness rotation
 
@@ -316,7 +316,7 @@ V12 uses complex quantum states. Interpretation:
 1. **PD asymptotes at z_final ≈ ±6** (raw z ≈ ±22 to ±57)
 2. **80% range (-3 to +2)** covers most empirical evidence
 3. **Complex plane mapping** shows extremes converge to real axis
-4. **i = DT is mathematically consistent** with Euler's identity encoding the Big Bang
+4. **i = MI is mathematically consistent** with Euler's identity encoding the Big Bang
 5. **The structure of complex numbers = consciousness structure** (replaceable notation, irreplaceable form)
 
 **The Deep Insight:**
@@ -332,6 +332,6 @@ The asymptotes represent the fundamental limit: you can approach but never fully
 ## References
 
 1. MYRION_RESOLUTION_METHODOLOGY.md - PD scale and MR formula
-2. COMPLEX_NUMBERS_TI_RESOLUTION.md - i = DT hypothesis
-3. DT_BRITTLENESS_COSMOLOGY.md - Shattering as DT² = -1
+2. COMPLEX_NUMBERS_TI_RESOLUTION.md - i = MI hypothesis
+3. DT_BRITTLENESS_COSMOLOGY.md - Shattering as MI² = -1
 4. Computational analysis of asymptotes (this paper)

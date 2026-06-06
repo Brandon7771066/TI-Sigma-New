@@ -6,7 +6,7 @@
 **Batches:** 2, 3, 4, 5 (compound)
 **Date:** 2026-05-23
 **Status:** LIVE
-**Composition:** UHP-1 (HEM-marginal-effort allocation; Pass-67 batch-7 candidate canonical) · TPS-1 (Truth-Presentation Separation; Pass-67 batch-3 candidate→canonical; F2 self-application demonstrated last batch) · ASYMMETRIC §69 (brutal honesty; over-skepticism = discipline failure equal to uncritical acceptance) · MR-IDC-1 + Pass-65 DT canonical refinement (inconceivability-under-mental-actualization; 3-step diagnostic) · ASMT (Affective Signature of Meta-Truths; urb_608 §8) · MFD-1 (Maximum-Falsifier Density; honest-failure-reporting-mandate).
+**Composition:** UHP-1 (HEM-marginal-effort allocation; Pass-67 batch-7 candidate canonical) · TPS-1 (Truth-Presentation Separation; Pass-67 batch-3 candidate→canonical; F2 self-application demonstrated last batch) · ASYMMETRIC §69 (brutal honesty; over-skepticism = discipline failure equal to uncritical acceptance) · MR-IDC-1 + Pass-65 MI canonical refinement (inconceivability-under-mental-actualization; 3-step diagnostic) · ASMT (Affective Signature of Meta-Truths; urb_608 §8) · MFD-1 (Maximum-Falsifier Density; honest-failure-reporting-mandate).
 
 ---
 
@@ -17,7 +17,7 @@
 The 4 bullets were the agent's own end-of-Pass-68-batch-1 proposals:
 
 1. **B2:** Pass-68 batch-2 corpus-application instantiation — turn 5 advanced UOP-phase-transition falsifiers into closures via real corpus runs (does the corpus's actual paper-throughput-per-pass align with UHP-1's TRUE-TRALSE-move predictions?)
-2. **B3:** MR-IDC-1-F5 urb_608/urb_639 MT audit — sweep 12 canonical + 24 conjectural Meta-Truth assignments for DT→MR2 reassignments per the Pass-65 inconceivability-under-mental-actualization heuristic
+2. **B3:** MR-IDC-1-F5 urb_608/urb_639 MT audit — sweep 12 canonical + 24 conjectural Meta-Truth assignments for MI→MR2 reassignments per the Pass-65 inconceivability-under-mental-actualization heuristic
 3. **B4:** HEM-side infrastructure — failing `hypercomputer` + `ti_website` workflows (existence-instantiation blockers UHP-1 prescribes addressing)
 4. **B5:** ZENODO 199→400 plan execution (carried from §7.7.120)
 
@@ -47,7 +47,7 @@ Counted pass-tagged `.md` papers in `papers/` via filename regex `^PASS_(\d+)_`.
 | 62 | 4 | |
 | 63 | 6 | LLM-rater rebuild |
 | 64 | 3 | UDP/CTC/HBP/VFP candidate-principle batch |
-| 65 | 6 | DT canonical refinement |
+| 65 | 6 | MI canonical refinement |
 | 66 | 8 | Ultimate Koan + 6-principle ratification |
 | 67 | 9 | UHP-1 + TPI-1 candidates; **highest in recent corpus** |
 | 68 | 1+ | UHP-1 LIVE; this batch ongoing |
@@ -79,35 +79,35 @@ Read full MT enumerations from:
 - `papers/urb_608_meta_truths_myrion_resolution_catalogue.md` §4 (Categories A–F, 12 canonical MTs)
 - `papers/urb_639_five_truth_completeness_distinctness_proof_extended_metatruths.md` §6 (Categories G–L, 12 new MTs; combined 24 in extended catalogue)
 
-Applied Pass-65 DT canonical refinement criterion: **DT reserved for inconceivability-under-mental-actualization** (Russell paradox class, liar class, square-circles, faulty-arithmetic). **NOT for:** surprising T, multi-reading-spectrum, tangential offshoots, level-confusion. Each MT's natural-language definition + example evaluated for whether its current invocation of "DT" matches the refined criterion or instead names an MR2-Indeterminate phenomenon now distinguishable from true-DT.
+Applied Pass-65 MI canonical refinement criterion: **MI reserved for inconceivability-under-mental-actualization** (Russell paradox class, liar class, square-circles, faulty-arithmetic). **NOT for:** surprising T, multi-reading-spectrum, tangential offshoots, level-confusion. Each MT's natural-language definition + example evaluated for whether its current invocation of "MI" matches the refined criterion or instead names an MR2-Indeterminate phenomenon now distinguishable from true-MI.
 
 ### 2.2 Per-MT Audit Verdicts (36 MTs Total)
 
-| Code | Name | DT in defn? | Verdict | Action |
+| Code | Name | MI in defn? | Verdict | Action |
 |---|---|---|---|---|
 | A1 | Worth Doing Anyway | No | REINFORCED | none |
 | A2 | Not Worth Doing After All | No | REINFORCED | none |
 | **B1** | **Moot-MT** | No (outputs Indeterminate) | **REINFORCED** | none |
-| **B2** | **Wrong Question** | **Yes — "DT arose from category error"** | **REFINEMENT CANDIDATE** | gloss: "DT or apparent-DT arose from category error" → "the apparent-DT was actually MR2 Indeterminate from ill-formed proposition" |
+| **B2** | **Wrong Question** | **Yes — "MI arose from category error"** | **REFINEMENT CANDIDATE** | gloss: "MI or apparent-MI arose from category error" → "the apparent-MI was actually MR2 Indeterminate from ill-formed proposition" |
 | C1 | Escalate | No | REINFORCED | none |
 | C2 | Descale | No | REINFORCED | none |
 | D1 | Context-Dependent | No | REINFORCED | none |
 | D2 | Asymmetric | No | REINFORCED | none |
 | E1 | Good Enough | No | REINFORCED | none |
-| **E2** | **Paradox Stable** | **Yes — principle correct; example wrong** | **EXAMPLE-LEVEL REFINEMENT** | principle ("DT genuinely irreducible") aligns with Pass-65; example ("Is consciousness physical?") is multi-reading-spectrum, NOT inconceivability — replace with liar-class or Russell-class example |
-| **F1** | **Transcend** | **Yes — "DT arose from two genuine partial truths"** | **REFINEMENT CANDIDATE** | gloss: "DT" → "apparent-DT or MR2-tension"; F1 dissolves *tensions*, not true-DTs (true-DTs go to E2) |
-| **F2** | **Both True at Different Levels** | **Yes — "contradiction in the DT was real, operates at different levels"** | **REFINEMENT CANDIDATE** | gloss: "DT" → "apparent-DT from level-confusion"; level-confusion is MR2, not inconceivability |
+| **E2** | **Paradox Stable** | **Yes — principle correct; example wrong** | **EXAMPLE-LEVEL REFINEMENT** | principle ("MI genuinely irreducible") aligns with Pass-65; example ("Is consciousness physical?") is multi-reading-spectrum, NOT inconceivability — replace with liar-class or Russell-class example |
+| **F1** | **Transcend** | **Yes — "MI arose from two genuine partial truths"** | **REFINEMENT CANDIDATE** | gloss: "MI" → "apparent-MI or MR2-tension"; F1 dissolves *tensions*, not true-MIs (true-MIs go to E2) |
+| **F2** | **Both True at Different Levels** | **Yes — "contradiction in the MI was real, operates at different levels"** | **REFINEMENT CANDIDATE** | gloss: "MI" → "apparent-MI from level-confusion"; level-confusion is MR2, not inconceivability |
 | G1 | Too Early | No | REINFORCED | none |
 | G2 | Too Late | No | REINFORCED | none |
 | H1 | Wrong Agent | No | REINFORCED | none |
 | H2 | Role Conflict | No | REINFORCED | none |
 | I1 | Non-Existence Revelation | No | REINFORCED | none |
 | I2 | EV Crystallization | No | REINFORCED | none |
-| J1 | Paradigm Shift | No (explicitly excludes DT in output) | REINFORCED | none |
+| J1 | Paradigm Shift | No (explicitly excludes MI in output) | REINFORCED | none |
 | J2 | Category Creation | No | REINFORCED | none |
 | K1 | G-Override | No | REINFORCED | none |
 | K2 | I-Suppression Correction | No | REINFORCED | none |
-| **L1** | **MR Saturation** | **Yes — "MR process itself is DT-contaminated"** | **REFINEMENT CANDIDATE** | gloss: "DT-contaminated" → "MR2-Indeterminate-contaminated" or "convergence-failure-contaminated"; MR-saturation is not inconceivability-under-mental-actualization, it's mental-actualization-without-convergence |
+| **L1** | **MR Saturation** | **Yes — "MR process itself is MI-contaminated"** | **REFINEMENT CANDIDATE** | gloss: "MI-contaminated" → "MR2-Indeterminate-contaminated" or "convergence-failure-contaminated"; MR-saturation is not inconceivability-under-mental-actualization, it's mental-actualization-without-convergence |
 | L2 | Recursive Self-Reference | No | REINFORCED | none |
 
 ### 2.3 Tally
@@ -115,13 +115,13 @@ Applied Pass-65 DT canonical refinement criterion: **DT reserved for inconceivab
 - **Total MTs audited:** 36 (12 canonical urb_608 + 24 extended urb_639; urb_608 12 fully subsumed into urb_639 enumeration so no double-count)
 - **REINFORCED (no change needed):** 31 (86%)
 - **NATURAL-LANGUAGE REFINEMENT CANDIDATES:** 5 (14%) = MT-B2, MT-E2 (example only, principle unchanged), MT-F1, MT-F2, MT-L1
-- **PRINCIPLE-LEVEL REASSIGNMENTS (DT-as-truth-label → MR2):** 0 (0%)
+- **PRINCIPLE-LEVEL REASSIGNMENTS (MI-as-truth-label → MR2):** 0 (0%)
 
 ### 2.4 Batch-3 #69 Honest Finding
 
-**HONEST DISCLOSURE:** The Pass-66 §7.7.131 corpus-sweep statement "ZERO reassignments needed, all surveyed assignments REINFORCED under sharpened criteria" was scoped to *DT-cell consciousness-attribution* corpus surveys, NOT to the *MT-as-meta-resolution-type* corpus. The MT corpus had not been swept against the Pass-65 refinement until this batch. The MT sweep finds **0 principle-level reassignments BUT 5 natural-language refinement candidates** — a meaningfully different result than "ZERO reassignments needed" would have predicted if extrapolated naively.
+**HONEST DISCLOSURE:** The Pass-66 §7.7.131 corpus-sweep statement "ZERO reassignments needed, all surveyed assignments REINFORCED under sharpened criteria" was scoped to *MI-cell consciousness-attribution* corpus surveys, NOT to the *MT-as-meta-resolution-type* corpus. The MT corpus had not been swept against the Pass-65 refinement until this batch. The MT sweep finds **0 principle-level reassignments BUT 5 natural-language refinement candidates** — a meaningfully different result than "ZERO reassignments needed" would have predicted if extrapolated naively.
 
-**Brutal #69:** The earlier "ZERO" finding was *correct for its scope* but *easy to over-read* as a corpus-wide claim. This MT-sweep result demonstrates that scope-specificity matters: different corpus surfaces yield different refinement-rates against the same canonical criterion. The corpus-wide claim "ZERO reassignments needed against Pass-65 refinement" is now **REFUTED at the natural-language-gloss level** for the MT-enumeration surface, even though it remains TRUE at the principle-assignment level. This is consistent with MR-IDC-1 (the proper containment {DT} ⊊ {Incoherent}): a gloss can be *incoherent* without the underlying principle being misassigned. The 5 candidates are gloss-level cleanups, not principle revisions.
+**Brutal #69:** The earlier "ZERO" finding was *correct for its scope* but *easy to over-read* as a corpus-wide claim. This MT-sweep result demonstrates that scope-specificity matters: different corpus surfaces yield different refinement-rates against the same canonical criterion. The corpus-wide claim "ZERO reassignments needed against Pass-65 refinement" is now **REFUTED at the natural-language-gloss level** for the MT-enumeration surface, even though it remains TRUE at the principle-assignment level. This is consistent with MR-IDC-1 (the proper containment {MI} ⊊ {Incoherent}): a gloss can be *incoherent* without the underlying principle being misassigned. The 5 candidates are gloss-level cleanups, not principle revisions.
 
 **MR-IDC-1-F5 status:** ADVANCED toward closure but NOT CLOSED. Full closure requires: (a) actually applying the 5 gloss refinements to urb_608 + urb_639 source files (queued — not done this batch to avoid scope-creep into MT-source-paper editing); (b) re-running the audit on the refined glosses to confirm the refinements eliminate the ambiguity; (c) external rater verification (κ measurement on whether refined glosses are correctly disambiguated). Three-step closure path is now specified. Estimated 1–2 future batches for full closure.
 
@@ -220,7 +220,7 @@ These 4 sub-tasks form the actual 199→400 plan operationalization. Estimated 1
 |---|---|---|---|---|
 | **UHP-1 (HEM-marginal-effort)** | F4 pre-reg opened | sweep IS HEM-side falsifier-execution | log-verify IS HEM-side instantiation | manifest-inspection IS HEM-side instantiation |
 | **TPS-1 (Truth-Presentation Separation)** | F4 quantified (truth), table presentation (flexible) | per-MT verdict table (presentation) preserves principle-level vs gloss-level distinction (truth) | stale-scratchpad caught (truth content) before any fabricated-fix presentation | "BLOCKED on manifest" honest finding (truth) preferred over premature-execution presentation |
-| **MR-IDC-1 + Pass-65 DT refinement** | n/a | core sweep criterion | n/a | n/a |
+| **MR-IDC-1 + Pass-65 MI refinement** | n/a | core sweep criterion | n/a | n/a |
 | **ASYMMETRIC §69** | "single-pass insufficient" disclosure | "ZERO reassignments was scope-bounded" disclosure | "stale scratchpad" disclosure | "skeleton not ready-to-run" disclosure |
 | **MFD-1** | F4 added with quantitative threshold | 5 refinement candidates surfaced (small-N MFD) | discovery_scheduler corpus-saturation surfaced as side-finding | 4 Pass-69+ action items surfaced |
 | **MFD-pattern** | new falsifier OPEN | 1 falsifier ADVANCED | side-discovery added | side-discovery added |
@@ -246,7 +246,7 @@ These 4 sub-tasks form the actual 199→400 plan operationalization. Estimated 1
 ## 7. Honest Aggregate Findings
 
 1. **B2:** UHP-1-F4 is NEWLY pre-registered with a quantitative 5-pass-window threshold (3.51 papers/pass = >20% decline = REFUTED). Cannot be tested until end of Pass 72 at earliest. **This batch opened, not closed, the throughput falsifier.**
-2. **B3:** 0/36 MT principle-level reassignments needed; 5/36 natural-language glosses need refinement to align with Pass-65 DT criterion. **MR-IDC-1-F5 ADVANCED with three-step closure path** (gloss-apply → re-audit → κ-verify); not closed this batch.
+2. **B3:** 0/36 MT principle-level reassignments needed; 5/36 natural-language glosses need refinement to align with Pass-65 MI criterion. **MR-IDC-1-F5 ADVANCED with three-step closure path** (gloss-apply → re-audit → κ-verify); not closed this batch.
 3. **B4:** All 6 workflows HEALTHY. Stale-scratchpad "failing workflows" assumption caught and reported within first action. **UHP-1 + TPS-1 + §69 stack operationally validated** as in-session error-catcher.
 4. **B5:** Zenodo bulk-upload infrastructure is SKELETON-only. **199→400 plan BLOCKED on topic_manifest paper_files population** + per-topic access_right assignment. Zero Zenodo API calls executed; live submission appropriately gated.
 

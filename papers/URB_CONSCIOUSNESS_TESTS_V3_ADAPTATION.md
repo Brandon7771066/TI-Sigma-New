@@ -126,7 +126,7 @@ W2/W1 = 0.588 and W4/W3 = 0.600 are both within 3% of 1/φ = 0.618. W3/W2 = 1.0 
 
 ### Noise Analysis
 
-At FR = 0.01 (1 spike per 100ms across all 6 neurons), the expected number of spikes per window is approximately 6 × 0.01 × 100 × (1/DT) = 6. A window might have 4, 6, or 8 spikes by pure chance — that's a ±30% fluctuation around the mean, compared to the signal we're trying to detect (1/φ = 38% decay). The signal is smaller than the noise for this system size.
+At FR = 0.01 (1 spike per 100ms across all 6 neurons), the expected number of spikes per window is approximately 6 × 0.01 × 100 × (1/MI) = 6. A window might have 4, 6, or 8 spikes by pure chance — that's a ±30% fluctuation around the mean, compared to the signal we're trying to detect (1/φ = 38% decay). The signal is smaller than the noise for this system size.
 
 **The critical prediction for larger networks:** In the full 302-neuron network:
 - ~50 neurons active per window → ratio noise drops to ±5%

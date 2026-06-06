@@ -12,7 +12,7 @@
 
 This document consolidates all meaningful TI framework developments since 11/30/25, including:
 
-- Formal logic refinements (MR, PD, DT)
+- Formal logic refinements (MR, PD, MI)
 - Epistemology and truth taxonomy
 - AI-native reasoning upgrades
 - Philosophical breakthroughs across:
@@ -38,7 +38,7 @@ MR is an **iterative, convergent coherence operator**, not a binary truth test.
 
 | Stage | Function |
 |-------|----------|
-| MR-1 | Coherence viability test (filters DT) |
+| MR-1 | Coherence viability test (filters MI) |
 | MR-2 | Truth-state classification |
 | MR-3+ | Refinement (diminishing returns) |
 
@@ -67,26 +67,26 @@ Examples:
 | True-Tralse | Converging toward Truth |
 | Tralse-False | Diverging from Truth |
 | Tralse-Indeterminate | Undetermined direction |
-| Double Tralse (DT) | Incoherent, collapses under resolution |
+| Meta-Indeterminate (MI) | Incoherent, collapses under resolution |
 
 **Only True-Tralse may converge toward Ontological Truth.**
 
-## 1.3 Double Tralse (DT)
+## 1.3 Meta-Indeterminate (MI)
 
-DT is:
+MI is:
 - A real, named state
 - A lack-of-coherence condition
 - Diagnosed via attempted MR
 
-DT:
+MI:
 - Typically collapses at MR-1
 - Is not Truth
 - Is not stable
 - Must be named to distinguish incoherence from uncertainty
 
-Some entities are barely-DT, but refining DT is usually pointless.
+Some entities are barely-MI, but refining MI is usually pointless.
 
-**DT = questions that dissolve when resolution is attempted**
+**MI = questions that dissolve when resolution is attempted**
 
 ## 1.4 Permissible Domain (PD) — Corrected
 
@@ -115,7 +115,7 @@ Every MR outcome must retain **two PD values** simultaneously:
 2. **Residual PD from MR-1** (coherence strength)
 
 This allows:
-- Differentiating barely coherent vs DT
+- Differentiating barely coherent vs MI
 - Diagnosing fragility
 - Preventing false confidence
 
@@ -142,7 +142,7 @@ MR functions as:
 | Bayesian Inference | Myrion Resolution |
 |--------------------|-------------------|
 | Assumes all hypotheses are coherent | Filters incoherence first |
-| Cannot represent DT | Explicitly names DT |
+| Cannot represent MI | Explicitly names MI |
 | Distributes belief over assumptions | Decides if assumptions deserve belief |
 
 > Bayes distributes belief over assumptions.  
@@ -174,9 +174,9 @@ Time statements have precise PD values.
 |-----------|---------------|
 | "The future exists" | Tralse-Indeterminate (low-positive PD) |
 | "The present exists alongside the past" | Fragile but admissible |
-| "Past, present, and future coexist" | DT (meaningless) |
+| "Past, present, and future coexist" | MI (meaningless) |
 
-**DT captures meaninglessness, not just uncertainty.**
+**MI captures meaninglessness, not just uncertainty.**
 
 ## 3.3 Epistemic Sovereignty
 
@@ -197,7 +197,7 @@ This underlies:
 The question:
 > "Am I intuitive enough to explore?"
 
-is a **Double Tralse red herring.**
+is a **Meta-Indeterminate red herring.**
 
 Correct posture:
 - Suspend ability judgments
@@ -269,7 +269,7 @@ This allows:
 |-----------|---------|
 | Truth is absolute; expression varies | Ontological vs phenomenological |
 | Indeterminacy is valid | Not a failure state |
-| DT is diagnosed incoherence | Named to distinguish from uncertainty |
+| MI is diagnosed incoherence | Named to distinguish from uncertainty |
 | MR is iterative and convergent | Not binary |
 | Action requires convergence, not certainty | Pragmatic epistemology |
 | Play is compressed intelligence | Joy accelerates coherence |

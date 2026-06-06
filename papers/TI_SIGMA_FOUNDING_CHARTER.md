@@ -68,7 +68,7 @@ The threshold **0.42 = √2 − 1** is not arbitrary. It is the geometric inters
 
 **Myrion Resolution (MR):** The active inquiry protocol for claims assigned TRALSE. MR is not indefinite suspension — it is purposive movement toward TRUE or FALSE by identifying and gathering the most decisive available evidence. The Myrion is named for the process of collapse — the moment TRALSE resolves to a pole.
 
-**Double Tralse (DT):** A claim assigned TRALSE where two or more contradictory explanations are each TRALSE+, and no current evidence can distinguish them. DT is a recognized epistemic state with its own formal theory.
+**Meta-Indeterminate (MI):** A claim assigned TRALSE where two or more contradictory explanations are each TRALSE+, and no current evidence can distinguish them. MI is a recognized epistemic state with its own formal theory.
 
 ---
 
@@ -126,7 +126,7 @@ When GILE(A,B) > T (the Tralse constant ≈ 0.934), the two systems have achieve
 - Consciousness/Neuroscience: OSF, Frontiers in Consciousness
 
 **Featured URBs at founding:**
-- URB #528: Five-Valued Truth System + DT Immunity Model
+- URB #528: Five-Valued Truth System + MI Immunity Model
 - URB #537: ν₂ Countdown Theorem (formally verified in Lean 4)
 - URB #538: Lean 4 Formalization of Collatz k=1 Run Structure
 - URBs #565, 569–572: Millennium Prize TI Sigma Formalizations

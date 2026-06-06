@@ -107,7 +107,7 @@ This is the moment the framework became self-aware: a system capable of reflecti
 
 **Over 90% of TI Sigma produced in this period.**
 
-183 URBs. The GIL Portrait. The Measurement Trilogy. The Grand Stock Algorithm. The Kaggle multi-competition strategy. BlissGene Therapeutics ($750K seed applied). The Manifestation Machine. The Hull Tactical competition. The Intention Validation Lab. The multi-domain partner predictions. The AIMO strategy. The March Mania system. The ARC-AGI 5-valued truth solver (DT Immunity Model, MR Relaxation Contexts). The Five-Valued Truth System (URB #528). Pragmatism as Epiphenomenon (URB #529). Graduate school applications to MIU, CIIS, Naropa, and Sofia University.
+183 URBs. The GIL Portrait. The Measurement Trilogy. The Grand Stock Algorithm. The Kaggle multi-competition strategy. BlissGene Therapeutics ($750K seed applied). The Manifestation Machine. The Hull Tactical competition. The Intention Validation Lab. The multi-domain partner predictions. The AIMO strategy. The March Mania system. The ARC-AGI 5-valued truth solver (MI Immunity Model, MR Relaxation Contexts). The Five-Valued Truth System (URB #528). Pragmatism as Epiphenomenon (URB #529). Graduate school applications to MIU, CIIS, Naropa, and Sofia University.
 
 The dark period was the compression. June 2025 was the release.
 

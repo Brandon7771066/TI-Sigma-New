@@ -212,7 +212,7 @@ per-bundle URLs once execution completes.)
 **Pass-13 ratifications still open**:
 - (i) ratify graph-Laplacian as canonical TSC Hamiltonian
 - (ii) ratify {1,6,6,8,8,10,10,8} as canonical vertex count
-- (iii) ratify V_4 ↔ {T,F,I,DT} candidate map
+- (iii) ratify V_4 ↔ {T,F,I,MI} candidate map
 - (iv) decide on Mott↔FQH ordering swap (Hamiltonian refinement vs
   urb_645 reinterpretation)
 - (v) Interpretation A vs B for C.6 Cross-Ring CHSH (Pass 13 set A

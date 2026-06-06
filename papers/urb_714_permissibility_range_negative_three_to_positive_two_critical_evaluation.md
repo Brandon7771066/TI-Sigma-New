@@ -30,7 +30,7 @@ The framework's empirical claim: the (−3, +2) range is principled by **three i
 | −1 | Weak prohibition / spam | Misinformation, mild error |
 | −2 | Strong prohibition | Active falsehood, but still framework-coherent |
 | **−3** | **Moral saturation cliff** | Boundary where GM Network treats content as pathological noise |
-| < −3 | DT regime | Weaponized malware-class content; not transmitted by GM Network |
+| < −3 | MI regime | Weaponized malware-class content; not transmitted by GM Network |
 
 The asymmetry **|−3| > |+2|** reflects a structural framework principle: **falsity (and especially weaponized falsity) requires more "distance from neutral" to be definitive than truth does**. This is not arbitrary — it has independent support in three structural arguments below.
 
@@ -38,7 +38,7 @@ The asymmetry **|−3| > |+2|** reflects a structural framework principle: **fal
 
 ## 3. Argument 1: 5-Valued Logic Span Match
 
-URB #713 vindicated the framework's 5-valued logic (T, F, Tralse, Moot, DT). The PD scale's **5-unit span** is structurally aligned with this: each unit of the PD scale corresponds to one truth-value transition.
+URB #713 vindicated the framework's 5-valued logic (T, F, Tralse, Moot, MI). The PD scale's **5-unit span** is structurally aligned with this: each unit of the PD scale corresponds to one truth-value transition.
 
 | PD score range | Truth value |
 |---|---|
@@ -47,7 +47,7 @@ URB #713 vindicated the framework's 5-valued logic (T, F, Tralse, Moot, DT). The
 | [−1, 0] | Tralse / Moot zone |
 | [−2, −1) | Soft-False / probable F |
 | [−3, −2) | False (F) |
-| < −3 | Double Tralse (DT) |
+| < −3 | Meta-Indeterminate (MI) |
 
 **The 5 units are not arbitrary** — they are the framework's 5 truth values mapped onto a continuous parameter. This is a **direct structural derivation of the span = 5** from the 5-valued logic system. URB #713's empirical defense of 5 truth values therefore also empirically supports the 5-unit PD span.
 

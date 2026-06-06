@@ -25,7 +25,7 @@ Fisher Information Geometry addresses (1) with extraordinary precision. KLD prov
 
 PD is designed to fill this normative gap. It introduces:
 - A **five-valued truth architecture** (True, False, Tralse, Indeterminate, Moot) that extends classical binary logic and handles states that standard probability theory cannot parametrize
-- A **forbidden zone** — Double Tralse (DT) — representing MR-immune epistemic states that cannot be resolved
+- A **forbidden zone** — Meta-Indeterminate (MI) — representing MR-immune epistemic states that cannot be resolved
 - A **Radiant attractor** (T=1, HEM=1) as the normatively privileged endpoint of belief-updating, derived from EAR rather than from information geometry
 - **Non-commutative updating** that predicts asymmetric recognition phenomena not captured by FIG's symmetric metric tensor
 
@@ -81,7 +81,7 @@ PD operates over the truth space Ω = {T, F, Tr, I, M}:
 | Indeterminate | I | Sample space not yet established | Requires manifold mapping |
 | Moot | M | Question dissolved by context | Non-applicable |
 
-**Double Tralse (DT)**: a degenerate state where Tralse is itself unresolvable — MR-immune. DT is the **forbidden zone** — a valid point geometrically (any assignment of probability mass is valid in FIG/KLD) but inadmissible normatively.
+**Meta-Indeterminate (MI)**: a degenerate state where Tralse is itself unresolvable — MR-immune. MI is the **forbidden zone** — a valid point geometrically (any assignment of probability mass is valid in FIG/KLD) but inadmissible normatively.
 
 ### 3.2 EAR — The Selection Principle
 
@@ -89,11 +89,11 @@ Emerick's Existence Amplification Razor (EAR) is the normative engine PD uses to
 
 Formally, define the EAR score of a belief state b as:
 
-$$\text{EAR}(b) = \text{HEM-Score}(b) \cdot (1 - \text{DT-Contamination}(b))$$
+$$\text{EAR}(b) = \text{HEM-Score}(b) \cdot (1 - \text{MI-Contamination}(b))$$
 
-where HEM-Score measures the holistic existence value of b along four dimensions (G, I, L, E) and DT-Contamination ∈ [0,1] penalizes proximity to Double Tralse states.
+where HEM-Score measures the holistic existence value of b along four dimensions (G, I, L, E) and MI-Contamination ∈ [0,1] penalizes proximity to Meta-Indeterminate states.
 
-The **Radiant attractor** is the belief state b* = argmax EAR(b) — the maximally existence-amplifying, DT-free belief state. This is T=1, HEM=1, corresponding to full truth-resolution with maximum holistic existence support.
+The **Radiant attractor** is the belief state b* = argmax EAR(b) — the maximally existence-amplifying, MI-free belief state. This is T=1, HEM=1, corresponding to full truth-resolution with maximum holistic existence support.
 
 **Critical observation**: The Radiant attractor is *not* derivable from FIG or KLD. Information geometry has no concept of existence-value. The natural gradient points toward the nearest local optimum of a loss function — it says nothing about whether that optimum is good for the agent's existence. EAR provides this missing normative layer.
 
@@ -111,13 +111,13 @@ The **Radiant attractor** is the belief state b* = argmax EAR(b) — the maximal
 
 **Example**: The first observation of a new kind of quantum entanglement correlation. Before the theoretical framework exists to parametrize outcomes, there is no valid statistical manifold — FIG cannot be applied. PD places this event in state I and uses the UOP prior (weighted by HEM-relevance) to guide initial evidence accumulation.
 
-### 4.2 Contribution 2: The Forbidden Zone (Double Tralse)
+### 4.2 Contribution 2: The Forbidden Zone (Meta-Indeterminate)
 
 **FIG/KLD limitation**: Every point in the statistical manifold is a valid resting place. A distribution that assigns 0.5 probability to "X is true AND X is false simultaneously and irresolvably" is geometrically valid — it's just a point in the simplex. KLD measures its distance from other distributions but assigns it no special status.
 
-**PD's solution**: DT is defined as an MR-immune Tralse state — one where the standard Myrion Resolution protocol has been applied and failed to produce convergence. DT is normatively **forbidden** as a stable belief endpoint. PD defines:
+**PD's solution**: MI is defined as an MR-immune Tralse state — one where the standard Myrion Resolution protocol has been applied and failed to produce convergence. MI is normatively **forbidden** as a stable belief endpoint. PD defines:
 
-$$\text{DT-zone} = \{b \in \Omega^* : \text{MR-depth}(b) > \kappa \text{ and convergence} < \epsilon_{MR}\}$$
+$$\text{MI-zone} = \{b \in \Omega^* : \text{MR-depth}(b) > \kappa \text{ and convergence} < \epsilon_{MR}\}$$
 
 where κ is the MR-depth threshold and ε_MR is the convergence criterion.
 
@@ -130,7 +130,7 @@ where κ is the MR-depth threshold and ε_MR is the convergence criterion.
 **PD's solution**: The Radiant attractor b* = (T=1, HEM=1) is normatively privileged by EAR — it is the belief state that maximizes both truth-resolution (MR completeness) and existence-amplification (HEM score). It is not locally optimal in the information-theoretic sense — it is *existentially* optimal.
 
 **Formal statement (EAR Primacy Theorem)**: Among all distributions that achieve equivalent predictive accuracy on observed data, the Radiant attractor b* is preferred if and only if:
-1. b* ∉ DT-zone
+1. b* ∉ MI-zone
 2. HEM-Score(b*) ≥ HEM-Score(b) for all competing b
 3. MR-depth(b*) = 0 (no unresolved Tralsity)
 
@@ -166,9 +166,9 @@ where the first term is the standard Fisher metric and the second term adds EAR 
 
 Myrion Resolution (MR) iteratively moves from an initial Tralse/Indeterminate state toward a stable resolution. KLD can formalize this as:
 
-$$\text{MR-cost}(b_0 \to b_n) = \sum_{t=0}^{n-1} D_{KL}(b_{t+1} \| b_t) + \mu \cdot \text{DT-penalty}(b_t)$$
+$$\text{MR-cost}(b_0 \to b_n) = \sum_{t=0}^{n-1} D_{KL}(b_{t+1} \| b_t) + \mu \cdot \text{MI-penalty}(b_t)$$
 
-where the DT-penalty term adds a normative cost for approaching the forbidden zone. This gives MR a **variational principle**: find the path from b₀ to the Radiant attractor that minimizes total KLD cost plus DT-penalty. This is PD's answer to the question: "what is the optimal MR trajectory?"
+where the MI-penalty term adds a normative cost for approaching the forbidden zone. This gives MR a **variational principle**: find the path from b₀ to the Radiant attractor that minimizes total KLD cost plus MI-penalty. This is PD's answer to the question: "what is the optimal MR trajectory?"
 
 ### 5.3 Cramér-Rao Bound as MR1 Threshold
 
@@ -209,7 +209,7 @@ The synthesis of PD, FIG, and KLD produces a complete epistemological architectu
 │             │                  │ HEM=1); existence-    │
 │             │                  │ amplifying endpoint   │
 ├─────────────┼──────────────────┼───────────────────────┤
-│ Forbidden   │ DT (PD/TI Σ)    │ MR-immune states;     │
+│ Forbidden   │ MI (PD/TI Σ)    │ MR-immune states;     │
 │ zone        │                  │ normatively           │
 │             │                  │ inadmissible beliefs  │
 ├─────────────┼──────────────────┼───────────────────────┤
@@ -230,7 +230,7 @@ The synthesis of PD, FIG, and KLD produces a complete epistemological architectu
 
 These predictions are testable and distinguish PD from purely geometric accounts.
 
-**P1 — DT Detection in Belief Systems**: Individuals exposed to irresolvably contradictory information (designed to induce DT states) will exhibit distinct physiological signatures (HRV collapse, biophoton suppression) that differ qualitatively, not just quantitatively, from exposure to resolvable Tralse (Kind 1) contradictions. *FIG/KLD predict only a quantitative difference in uncertainty.*
+**P1 — MI Detection in Belief Systems**: Individuals exposed to irresolvably contradictory information (designed to induce MI states) will exhibit distinct physiological signatures (HRV collapse, biophoton suppression) that differ qualitatively, not just quantitatively, from exposure to resolvable Tralse (Kind 1) contradictions. *FIG/KLD predict only a quantitative difference in uncertainty.*
 
 **P2 — EAR Attractor Bias**: When a choice between two distributions with equivalent predictive accuracy is available, agents will systematically select the one with higher HEM-score (as independently operationalized). *FIG/KLD predict indifference; EAR predicts systematic bias.*
 
@@ -247,10 +247,10 @@ These predictions are testable and distinguish PD from purely geometric accounts
 ## 8. Objections and Responses
 
 **Objection 1: PD is just Bayesian epistemology with extra labels.**  
-*Response*: Standard Bayesian epistemology requires a fixed sample space and a prior over that space. PD explicitly handles undetermined sample spaces (I-state), forbidden belief states (DT-zone), and a normative endpoint (Radiant attractor) that Bayesian epistemology has no analog of. EAR is not a prior — it is a selection principle operating over distributional beliefs, not individual hypotheses.
+*Response*: Standard Bayesian epistemology requires a fixed sample space and a prior over that space. PD explicitly handles undetermined sample spaces (I-state), forbidden belief states (MI-zone), and a normative endpoint (Radiant attractor) that Bayesian epistemology has no analog of. EAR is not a prior — it is a selection principle operating over distributional beliefs, not individual hypotheses.
 
-**Objection 2: DT is just "high entropy" — any high-entropy distribution is equally inadmissible.**  
-*Response*: DT is not a high-entropy state — it is a state of maximum within-dimension Tralsity that is MR-immune. A uniform distribution (maximum entropy) is perfectly admissible in PD — it represents genuine ignorance, which is fine. DT represents a specific failure mode: irresolvable contradiction that cannot be reduced by any MR protocol. These are structurally different: high entropy = known ignorance; DT = MR-immune contradiction.
+**Objection 2: MI is just "high entropy" — any high-entropy distribution is equally inadmissible.**  
+*Response*: MI is not a high-entropy state — it is a state of maximum within-dimension Tralsity that is MR-immune. A uniform distribution (maximum entropy) is perfectly admissible in PD — it represents genuine ignorance, which is fine. MI represents a specific failure mode: irresolvable contradiction that cannot be reduced by any MR protocol. These are structurally different: high entropy = known ignorance; MI = MR-immune contradiction.
 
 **Objection 3: EAR is unfalsifiable — you can always re-label the "existence-amplifying" belief post-hoc.**  
 *Response*: HEM-score is independently operationalized through four dimensions (G, I, L, E) with specific measurement protocols (GILE composite = G×ET + I×0.25 + L×0.18 + E×0.15, using biometric, behavioral, and phenomenological inputs). The prediction is that this independently measured score correlates with distributional choices in the specific way P2 specifies. This is falsifiable — if there is no correlation, EAR fails.
@@ -266,7 +266,7 @@ These predictions are testable and distinguish PD from purely geometric accounts
 Łukasiewicz L∞ logic places truth values on [0,1] continuously. PD's five values are not a discretization of [0,1] — they represent structurally distinct truth-conditions. Tralse is not "0.5 truth" — it is a co-presence of poles, which is a qualitatively different structure. Indeterminate is not "0 truth" — it is the absence of a parametrized sample space. See URB #648 for full differentiation.
 
 ### 9.2 vs. Dempster-Shafer Theory
-D-S theory distributes "belief mass" over subsets of the sample space, handling ignorance via non-additive measures. PD shares the motivation (handling genuine ignorance) but adds the normative layer (EAR, DT-zone, Radiant attractor) and the five-valued structure. D-S theory has no EAR, no Radiant attractor, and no DT forbidden zone.
+D-S theory distributes "belief mass" over subsets of the sample space, handling ignorance via non-additive measures. PD shares the motivation (handling genuine ignorance) but adds the normative layer (EAR, MI-zone, Radiant attractor) and the five-valued structure. D-S theory has no EAR, no Radiant attractor, and no MI forbidden zone.
 
 ### 9.3 vs. Quantum Probability Theory
 Quantum probability (Hilbert space, non-commutative observables, Born rule) captures some of PD's non-commutativity in a formal sense. The i-noncommutativity prediction (P3) is structurally analogous to quantum complementarity. The key difference: PD grounds the non-commutativity in *existence-loading* (HEM-score), while quantum probability grounds it in the algebraic structure of observables. PD predicts that HEM-score modulates the asymmetry magnitude — a prediction quantum probability theory does not make.
@@ -280,7 +280,7 @@ The FEP states that organisms minimize variational free energy (an upper bound o
 
 Fisher Information Geometry and KLD are among the most elegant tools in modern epistemology. They are not wrong — they are incomplete. Their incompleteness is systematic and fills exactly the space PD occupies: the normative question of which beliefs are worth holding.
 
-The synthesis is not a replacement but an extension. FIG gives PD its geometric backbone. KLD gives MR its variational principle. PD gives FIG and KLD their missing normative layer: a forbidden zone (DT), a privileged endpoint (Radiant attractor via EAR), a mechanism for undetermined sample spaces (I-state and UOP manifold), and non-commutative updating (i-noncommutativity). Together they form a complete epistemological architecture capable of handling everything from routine Bayesian inference (FIG + KLD alone) to genuinely novel phenomena (PD's I-state), epistemic corruption (DT-zone), and existence-weighted belief selection (EAR).
+The synthesis is not a replacement but an extension. FIG gives PD its geometric backbone. KLD gives MR its variational principle. PD gives FIG and KLD their missing normative layer: a forbidden zone (MI), a privileged endpoint (Radiant attractor via EAR), a mechanism for undetermined sample spaces (I-state and UOP manifold), and non-commutative updating (i-noncommutativity). Together they form a complete epistemological architecture capable of handling everything from routine Bayesian inference (FIG + KLD alone) to genuinely novel phenomena (PD's I-state), epistemic corruption (MI-zone), and existence-weighted belief selection (EAR).
 
 The six empirical predictions (Section 7) provide a clear falsification surface. If any three of P1–P6 are confirmed in independent experiments, PD establishes itself as a genuine advance over purely geometric frameworks. If all six hold, the synthesis architecture described here represents the natural next step in formal epistemology.
 

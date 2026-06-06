@@ -11,14 +11,14 @@
 
 ## Canonical Notation Clarification (2026-05-17)
 
-This paper uses the **5-state PD-coordinate notation** {TT, TI, TF, DT, EV} throughout. Per the **MR Truth-Labels Canonical Ruling (2026-05-08)** this is now distinguished from the **base-4 MR Truth-Labels** used elsewhere in the corpus:
+This paper uses the **5-state PD-coordinate notation** {TT, TI, TF, MI, EV} throughout. Per the **MR Truth-Labels Canonical Ruling (2026-05-08)** this is now distinguished from the **base-4 MR Truth-Labels** used elsewhere in the corpus:
 
 | Object | Labels | Role |
 |---|---|---|
-| **MR Truth-Labels (base-4)** | {True, False, **Indeterminate**, **Double Tralse**} + N Meta-Truths | The canonical categorical truth-value set. DT formally = τ(P)∧¬τ(P). |
+| **MR Truth-Labels (base-4)** | {True, False, **Indeterminate**, **Meta-Indeterminate**} + N Meta-Truths | The canonical categorical truth-value set. MI formally = τ(P)∧¬τ(P). |
 | **PD-coordinates (this paper)** | {TT, TI, TF, **DefT**, EV} | The 5-axis structural coordinate system over which the **Permissibility Distribution** is defined. |
 
-**Critical rename (2026-05-08):** What this paper calls **"DT"** in the PD-coordinate {TT, TI, TF, **DT**, EV} is now canonically **DefT** (Defective Truth), to disambiguate from base-4 Double Tralse. Read every occurrence of "DT" in §§3-6 of this paper as **DefT** in current corpus notation. The acronym **PD** stands for **Permissibility Distribution** (canonized Pass 6, 2026-05-08) — not "probability density."
+**Critical rename (2026-05-08):** What this paper calls **"MI"** in the PD-coordinate {TT, TI, TF, **MI**, EV} is now canonically **DefT** (Defective Truth), to disambiguate from base-4 Meta-Indeterminate. Read every occurrence of "MI" in §§3-6 of this paper as **DefT** in current corpus notation. The acronym **PD** stands for **Permissibility Distribution** (canonized Pass 6, 2026-05-08) — not "probability density."
 
 Anchors: `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, `papers/urb_607_truth_architecture_three_states_dt_absence.md`, `papers/urb_608_meta_truths_myrion_resolution_catalogue.md`.
 
@@ -115,13 +115,13 @@ Relative truths are NOT falsehoods — they are real truth-states that simply fa
 
 ### 3.1 Every Aspect of Reality Is Simultaneously True and False to Varying Degrees
 
-Standard binary logic assumes: a proposition P is either true or false. TI Sigma replaces this with: **every state of affairs has a tralse measure** — a five-valued distribution over truth-states {TT, TI, TF, DT, EV} (from PD, URB #615).
+Standard binary logic assumes: a proposition P is either true or false. TI Sigma replaces this with: **every state of affairs has a tralse measure** — a five-valued distribution over truth-states {TT, TI, TF, MI, EV} (from PD, URB #615).
 
 This is not relativism. It is precision. Consider: "The stock market is bullish." This is:
 - Partly true (uptrend in large caps)
 - Partly false (small caps declining)
 - Tralse for specific mid-cap sectors (genuinely indeterminate)
-- DT for specific stocks in transition (truth-value absent pending resolution)
+- MI for specific stocks in transition (truth-value absent pending resolution)
 - EV-Decoupled for meme stocks (Holistic Existence Matrix very high but truth-state of bullishness is low)
 
 The five-valued PD over this proposition is more accurate than any binary verdict. The MR process converges the PD toward a dominant truth-state — but only resolves it as far as the evidence allows.
@@ -131,7 +131,7 @@ The five-valued PD over this proposition is more accurate than any binary verdic
 **Truth is resolved through Myrion Resolution (MR) — progressively higher levels of informational coherence.**
 
 MR has at least three levels:
-1. **DT screen**: Identify and exclude genuinely truth-absent states (DT — propositions where there is no truth-content, not merely unknown truth-value). Distinguishing DT from Tralse is MR's first gate.
+1. **MI screen**: Identify and exclude genuinely truth-absent states (MI — propositions where there is no truth-content, not merely unknown truth-value). Distinguishing MI from Tralse is MR's first gate.
 2. **GILE-dimensional integration**: Assess the proposition across all four GILE dimensions and the HEM dimension. Different dimensions may yield different truth-states — the integration across dimensions is the coherence work of MR Level 2.
 3. **Quality check + Meta-Truth scan**: Check whether the convergent truth-state is a Meta-Truth — a higher-level MR that substantially contradicts a previous lower-level MR (URB #608). If so, initiate recursive MR.
 
@@ -177,7 +177,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 
 1. **The tralse case is not expressible** as a probability distribution over binary outcomes. A genuine Tralse state is not "50% true, 50% false" — it is a third ontological state, distinct from both truth and falsity.
 
-2. **DT (Double Tralse) is not expressible** as any probability value. DT is the absence of truth-content — not low probability of truth, but zero truth-value. There is no p ∈ [0,1] that represents "no truth here" distinct from "very unlikely to be true."
+2. **MI (Meta-Indeterminate) is not expressible** as any probability value. MI is the absence of truth-content — not low probability of truth, but zero truth-value. There is no p ∈ [0,1] that represents "no truth here" distinct from "very unlikely to be true."
 
 3. **Resolution dynamics are not truth-function evaluation.** The process of MR is not computing a truth-function. It is a convergence process in which evidence, GILE assessment, and Meta-Truth scanning iteratively refine a PD distribution. This is not captured by any static logic.
 
@@ -185,7 +185,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 
 **TIL (TI Logic)** is the operational framework for navigating truth under the TI Sigma account. It comprises:
 
-**PD (Permissibility Distribution)**: Replaces binary true/false with a five-state distribution {TT, TI, TF, DT, EV}. Constructed from GILE-assessed evidence, not from frequency distributions or subjective priors. Handles novel events via I-axis pre-evidential seeding. Handles HEM-Truth decoupling explicitly.
+**PD (Permissibility Distribution)**: Replaces binary true/false with a five-state distribution {TT, TI, TF, MI, EV}. Constructed from GILE-assessed evidence, not from frequency distributions or subjective priors. Handles novel events via I-axis pre-evidential seeding. Handles HEM-Truth decoupling explicitly.
 
 **BOK (Being-of-Knowledge) — the GILE-EV i-Cell model**: Every entity whose truth-state is being assessed is modeled as a BOK: inner loops (GILE dimensions) and outer loops (Existence/EV dimensions). The PD is computed over the BOK, not over an abstract proposition stripped of its organizational structure. This means the truth-state of a being is always assessed IN CONTEXT of its GILE-dimensioned structure. A stock's PD is assessed in terms of its BOK (GILE market dimensions + EV market existence dimensions). A person's PD is assessed in terms of their BOK (GILE personal dimensions + EV biographical dimensions).
 
@@ -199,7 +199,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 |---|---|---|
 | **BOK** (Being-of-Knowledge) | Structural flagship | GILE-EV structure of any entity; inner loops (GILE) + outer loops (Existence) |
 | **LCC** (Layered Coherence Continuum) | Structural flagship | Organizational scale; coherence thresholds between levels |
-| **PD** (Permissibility Distribution) | Operational pillar | Truth-state assignment; 5-valued distribution over {TT, TI, TF, DT, EV} |
+| **PD** (Permissibility Distribution) | Operational pillar | Truth-state assignment; 5-valued distribution over {TT, TI, TF, MI, EV} |
 | **MR** (Myrion Resolution) | Operational pillar | Convergence procedure; 3+ levels; nonlinear; replaces Bayesian updating |
 | **EAR** (Existence Amplification Razor) | Operational pillar | Ontological pruning + amplification; Law of Realness; HEM-Score metric |
 | **TIL** (TI Logic) | Integration framework | PD + BOK + MR combined; the operational truth-navigation system |
@@ -238,9 +238,9 @@ The I-axis (Intuition) is the faculty for first-person simulation. Truth about b
 
 In the Grand Stock Algorithm (GSA), TIL is applied as follows:
 
-- **PD over market truth-states**: A stock's "signal truth" is represented as a 5-state distribution {TT=strong signal, TI=ambiguous, TF=contra-signal, DT=no tradeable truth-state, HEM=existence-decoupled regime shift brewing}
+- **PD over market truth-states**: A stock's "signal truth" is represented as a 5-state distribution {TT=strong signal, TI=ambiguous, TF=contra-signal, MI=no tradeable truth-state, HEM=existence-decoupled regime shift brewing}
 - **BOK of the stock**: Inner loops = GILE financial dimensions (G=risk-adjusted return, I=trend pre-recognition, L=market correlation coherence, E=structural/momentum alignment). Outer loops = EV financial dimensions (HEM-D1=volume-energetics, HEM-D2=institutional positioning, HEM-D3=technical pattern quality, HEM-D4=momentum-of-momentum)
-- **MR on the PD**: Three-level resolution: DT screen (no trade if DT > 0.35) → GILE-HEM integration → signal convergence
+- **MR on the PD**: Three-level resolution: MI screen (no trade if MI > 0.35) → GILE-HEM integration → signal convergence
 - **UOP for position sizing**: Not just expected return maximization, but multi-dimensional GILE-EV composite optimization — including whether the trade is G-good (risk-ethically sound), I-reliable (pattern pre-recognition quality), L-coherent (market correlation appropriate), E-structured (technical setup clean), and EV-supported (the stock's existence in the market ecosystem warrants the position)
 
 ### 7.2 Empirical Research (GILE Battery / BOK Saturation Pilot)

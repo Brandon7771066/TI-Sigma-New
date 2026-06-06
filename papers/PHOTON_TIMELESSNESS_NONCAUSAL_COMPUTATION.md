@@ -53,7 +53,7 @@ If the original photon (containing all 10^89 photon-fragments) exists in timeles
 ```
 From our time-bound view:
   BEFORE: Original photon (pure True-Tralseness)
-  EVENT: Shattering (DT² = -1)
+  EVENT: Shattering (MI² = -1)
   AFTER: 10^89 imperfect copies
 
 From the photon's timeless view:
@@ -421,7 +421,7 @@ Causation appears as time-derivative of correlation
 
 | Paper | Connection |
 |-------|------------|
-| ORIGINAL_PHOTON_DT_SHELL_REVELATION | DT as container is also TIMELESS |
+| ORIGINAL_PHOTON_DT_SHELL_REVELATION | MI as container is also TIMELESS |
 | DT_BRITTLENESS_COSMOLOGY | Shattering appears temporal but is actually atemporal |
 | ICELL_IWEB_ONTOLOGY | I-cells as time-interface nodes |
 | CCC_ABSOLUTE_TIME_THEORY | CCC operates in "true time" beyond i-cell time |
@@ -432,7 +432,7 @@ Causation appears as time-derivative of correlation
 ## References
 
 1. Einstein, A. (1905). Special Relativity - time dilation at c
-2. ORIGINAL_PHOTON_DT_SHELL_REVELATION.md - DT as primordial container
+2. ORIGINAL_PHOTON_DT_SHELL_REVELATION.md - MI as primordial container
 3. ICELL_IWEB_ONTOLOGY_COMPLETE.md - I-cell interface theory
 4. CCC_TIME_TENSOR_AXIOMS.md - Time structure in TI
 5. Wheeler, J. A. - "It from Bit" (information as fundamental)

@@ -43,7 +43,7 @@ This paper takes all three.
 5. **`NEURON_AS_LIVING_TRALSEBIT.md`** — neuron is not a computational unit but a *living tralsebit* representing the matter/energy/mind trinity; integrates IIT-Φ with FEP into TI's i-cell framework.
 6. **`CRYSTAL_B4_HAMILTONIAN_2026-05-09.md`** (Pass 13) — 57-eigenvalue spectrum on the BOK Crystal graph Laplacian; five phase-energies (BEC=0 < Supersolid=0.92 < Mott=2.00 < FQH=2.40 < Fragmented=3.47). *This is the closest thing in the corpus to a real Hamiltonian for consciousness states.*
 7. **`AUTHORITY_AXIS_AA_2026-05-07.md`** — 5th truth-axis; sim-belief-and-doubt as the operating principle; two-register cognitive architecture.
-8. **`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`** — categorical base-4 = {True, False, Indeterminate, Double Tralse} + N Meta-Truths; rejects classical T/F.
+8. **`MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`** — categorical base-4 = {True, False, Indeterminate, Meta-Indeterminate} + N Meta-Truths; rejects classical T/F.
 
 **Read together:** the TI Sigma corpus is *not* short on consciousness theory. What it's short on is *specific computational machinery* for the part of consciousness that does *retrieval* — pulling the right information from inside a system you're already coupled to. That gap is exactly what Brandon's Pass-23 directive flags.
 
@@ -139,7 +139,7 @@ Mapping into the 5 truth-axes (per `papers/TI_SIGMA_FIVE_AXIS_TRUTH_RICHNESS_REV
 
 - **PD-real**: degree-of-permissibility of the probe Q_t under V's prior → governs how aggressive the active step is.
 - **PD-imaginary (DefT axis)**: how much the retrieval operator allows defective-truth intermediate states without forcing collapse.
-- **MR Truth Labels (base-4 + MTs)**: T̂_t is allowed to take any of {True, False, Indeterminate, DT}; the loop's gate must accept Indeterminate as a valid termination state, not only T/F.
+- **MR Truth Labels (base-4 + MTs)**: T̂_t is allowed to take any of {True, False, Indeterminate, MI}; the loop's gate must accept Indeterminate as a valid termination state, not only T/F.
 - **τ/δ separability**: probe-design (δ) and noise-observation (τ) operate as separate channels; their composition is the retrieval estimate.
 - **Authority Axis (AA)**: the Virus must hold the loaded-bearing internal state T̂_t with simultaneous belief AND doubt — over-credence collapses the loop into confirmation bias (the `AI_DELUSION_INTUITION_FAILURE.md` failure mode), under-credence collapses it into infinite oscillation (the LCC-Bidirectional failure mode).
 

@@ -115,10 +115,10 @@ TI's rodent LFP (DANDI:000003) β=2.38 R²=0.71 over 1-300Hz → SUPPORTS scale-
 
 **Thesis:** the three frameworks all rest on ONE primitive — **antipodality** (binding a thing to its
 opposite) — and the three TI pillars are its three faces: **PD = state-space of antipodes** (PD-plane
-imaginary axis IS the DT/Tralse antipodal axis; DT = τ(P)∧¬τ(P) = logical antipode-collapse); **UOP =
+imaginary axis IS the MI/Tralse antipodal axis; MI = τ(P)∧¬τ(P) = logical antipode-collapse); **UOP =
 antipodal-balance theorem** (Borsuk-Ulam-flavoured; UOP picks the *valued* point = GTT-1 interior
 optimum G*=0.93); **TIL = antipode-resolution engine** (MR gates). **Tozzi:** BOK=Borsuk-Ulam Thm;
-brain on 4D hypersphere S³→3D; torus solves binding problem; GILE as 4-torus T⁴; DT=torus-tear.
+brain on 4D hypersphere S³→3D; torus solves binding problem; GILE as 4-torus T⁴; MI=torus-tear.
 **Central-symmetry census:** octahedron 3 antipodal pairs, E₈ 120/240, PD-plane continuum. **#69
 EMPIRICAL on REAL rodent LFP (DANDI:000003, 236 windows):** topological guarantee INSTANTIATED (13
 antipodal level-collisions) BUT stronger "antipodal-coherence" reading **REFUTED** (p=0.975) → kept as
@@ -129,7 +129,7 @@ a derivation. Source: `papers/PASS_77_B69_GRAND_SYNTHESIS_TOZZI_MEIJER_TI_SIGMA_
 ## 7. §7.7.247 — B70: Canonical clarifications (8-part Brandon directive)
 
 **(1) Multifaceted def = CDA-1** (canonical): consciousness = holistic + indeterminate + (a priori)
-normative + self-organizing meta-metacognition + cognitive-stratification (DT@Stratum-1,
+normative + self-organizing meta-metacognition + cognitive-stratification (MI@Stratum-1,
 valence@Stratum-2 via MIM). **ABP-1 (B69 candidate) WITHDRAWN/SUBSUMED** as antipodal-pair
 sub-instrument of ETJ-1 under CDA-1 (never ratified, count unchanged). **(2) Crystal relabel:**
 canonical **TSC = 57-vertex E₈**; the 9-vertex object = TIG/PD-complex-plane layer (B68/B69 mislabel

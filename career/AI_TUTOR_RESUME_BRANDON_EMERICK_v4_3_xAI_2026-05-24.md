@@ -42,7 +42,7 @@ Philosopher of science and formal-methods practitioner who ships fast and priori
 
 ## Match to xAI Grok Truth-Seeking Tutor Role
 
-1. **Resists motivated reasoning.** MR Truth Labels (Fleiss κ = 0.906) — a 4-element rubric {True, False, Indeterminate, Double-Tralse} — detect motivated-reasoning failures, hidden assumptions, and rhetorical sleights.
+1. **Resists motivated reasoning.** MR Truth Labels (Fleiss κ = 0.906) — a 4-element rubric {True, False, Indeterminate, Meta-Indeterminate} — detect motivated-reasoning failures, hidden assumptions, and rhetorical sleights.
 2. **Communicates uncertainty proportionately.** Pre-registered falsifiers with confirm / indeterminate / disconfirm criteria; dual-threshold inference at N = 384 with 0.00% FPR over 2,000 draws; Lindley-paradox immunity.
 3. **Updates publicly on errors.** Documented 48-hour retraction; formal R1–R10 retraction catalog within the Apologetics tab.
 4. **Adversarial / red-team.** Vacuous-confirm filters, pre-registered indeterminate clauses, directional-monotone falsifiers — transferable to Grok red-team engineering.
@@ -88,7 +88,7 @@ Philosopher of science and formal-methods practitioner who ships fast and priori
 
 **Logic & Formal Verification.** Lean 4 · mathlib4 · `lake` · type theory · dependent types · interactive theorem proving · higher-order logic · first-order logic · four-valued (Tralse) logic · paraconsistent logic · named-gap formalization (Buzzard / LTE style).
 
-**Linguistics & Philosophical Logic.** Formal semantics · philosophical logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary {True, False, Indeterminate, Double-Tralse} + 12 Meta-Truths.
+**Linguistics & Philosophical Logic.** Formal semantics · philosophical logic · linguistic ambiguity resolution (PD = Permissibility Distribution canonicalization) · MR Truth Label vocabulary {True, False, Indeterminate, Meta-Indeterminate} + 12 Meta-Truths.
 
 **Cognitive Science.** UConn cognitive science · cognitive psychology · brain-computer interfaces · biometric signal processing (EEG, HRV, fNIRS) · mood-modulation prototype · Tralse Success Distinction operationalization.
 

@@ -76,7 +76,7 @@ Where:
 The term γ · Cov(GILE, HEM)(r) rewards candidates where GILE gains and HEM gains *co-occur* — where becoming more intentionally aligned also becomes more somatically/environmentally grounded. This is the TI Sigma operationalization of the **wholeness axiom**: genuine MR convergence is never compartmentalized.
 
 High positive covariance ≈ **Tralse attractor** (the sought resolution state)
-High negative covariance ≈ **Double Tralse zone** (spiritual bypass or somatic dissociation)
+High negative covariance ≈ **Meta-Indeterminate zone** (spiritual bypass or somatic dissociation)
 Near-zero covariance ≈ **Spectral Tralsity** (partial resolution; compartmentalized life)
 
 ---
@@ -97,11 +97,11 @@ Pass 1: Generate candidates from query
 Pass 2: Score GILE(r) AND HEM(r) for each
 Pass 3: Compute Cov(GILE, HEM) for each candidate
 Pass 4: HEAR prunes below C threshold on composite score
-Pass 5: Check for DT-immunity (HEAR score must be stable across small perturbations)
+Pass 5: Check for MI-immunity (HEAR score must be stable across small perturbations)
 Pass 6: Select argmax HEAR(r) — return as Composite MR
 ```
 
-The addition of Pass 5 (DT-immunity check) is new to HEAR. A candidate that has high HEAR(r) but whose score collapses under small perturbation (i.e., the resolution is brittle) is flagged as **MR-fragile** and returned with confidence penalty.
+The addition of Pass 5 (MI-immunity check) is new to HEAR. A candidate that has high HEAR(r) but whose score collapses under small perturbation (i.e., the resolution is brittle) is flagged as **MR-fragile** and returned with confidence penalty.
 
 ---
 
@@ -130,7 +130,7 @@ HEAR operates *across* causal levels — it prunes not just within-level optimiz
 | EAR | HEAR | Renamed; scope extended to composite MR |
 | EAR score | HEAR(r) | Now composite of GILE + HEM + Cov |
 | EAR threshold | C ≈ 0.4370 | Unchanged (Emerick constant) |
-| EAR pruning | HEAR pruning | Now includes DT-immunity pass |
+| EAR pruning | HEAR pruning | Now includes MI-immunity pass |
 | EAR attractor | Tralse attractor (via HEAR) | Unchanged name; path now through HEAR |
 
 All prior references to "EAR" in TI Sigma documentation are to be understood as HEAR under the extended definition, with the understanding that pre-HEM formulations approximate HEAR in contexts where GILE and HEM are empirically correlated (which they typically are for non-pathological agents).

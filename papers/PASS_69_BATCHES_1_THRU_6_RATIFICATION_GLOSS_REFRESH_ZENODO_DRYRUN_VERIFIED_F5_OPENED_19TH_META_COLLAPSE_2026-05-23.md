@@ -6,7 +6,7 @@
 **Batches:** 1, 2, 3, 4, 5, 6 (compound)
 **Date:** 2026-05-23
 **Status:** LIVE
-**Composition:** UHP-1 + TPI-1 (this batch ratifies them) · TPS-1 · MR-IDC-1 + Pass-65 DT canonical refinement (Pass-68 batch-3 gloss candidates applied here) · ASYMMETRIC §69 (B5 self-correction) · MFD-1 · UHP-1-F5 NEW.
+**Composition:** UHP-1 + TPI-1 (this batch ratifies them) · TPS-1 · MR-IDC-1 + Pass-65 MI canonical refinement (Pass-68 batch-3 gloss candidates applied here) · ASYMMETRIC §69 (B5 self-correction) · MFD-1 · UHP-1-F5 NEW.
 
 ---
 
@@ -46,7 +46,7 @@ Per Pass-67 batch-7 joint-ratification precedent (PM-1 + TPS-1 + UDT-1 candidate
 - **UHP-1-F4:** throughput-trend post-UHP-1 (OPENED Pass-68 batch-2; quantitative 5-pass window threshold; earliest evaluation end of Pass 72)
 - **UHP-1-F5:** quality-metric post-UHP-1 (OPENED this batch — see §5 below)
 
-**Composition:** with GTT-1 (#27 — truth-existence competition; J = f + g operationalizes), UDT-1 (#30 — GILE-only above 0.93 = MR2 Indeterminate; UHP-1 ratifies the threshold structurally), TPS-1 (#29 — truth content non-negotiable; functional-form-invariance), PM-1 (#28 — no Bayesian base rates; per-event), MR-IDC-1 (Pass-65 refinement #2 — Moot for above-threshold non-shifter respects canonical DT criterion).
+**Composition:** with GTT-1 (#27 — truth-existence competition; J = f + g operationalizes), UDT-1 (#30 — GILE-only above 0.93 = MR2 Indeterminate; UHP-1 ratifies the threshold structurally), TPS-1 (#29 — truth content non-negotiable; functional-form-invariance), PM-1 (#28 — no Bayesian base rates; per-event), MR-IDC-1 (Pass-65 refinement #2 — Moot for above-threshold non-shifter respects canonical MI criterion).
 
 **Canonical principle count: 30 → 31.**
 
@@ -78,17 +78,17 @@ Per Pass-67 batch-7 joint-ratification precedent (PM-1 + TPS-1 + UDT-1 candidate
 
 ### 2.1 Method
 
-Applied the 5 gloss-refinement candidates identified in Pass-68 batch-3 to source files `papers/urb_608_meta_truths_myrion_resolution_catalogue.md` and `papers/urb_639_five_truth_completeness_distinctness_proof_extended_metatruths.md`. Each refinement explicitly references Pass-65 DT canonical refinement (2026-05-23) for traceability.
+Applied the 5 gloss-refinement candidates identified in Pass-68 batch-3 to source files `papers/urb_608_meta_truths_myrion_resolution_catalogue.md` and `papers/urb_639_five_truth_completeness_distinctness_proof_extended_metatruths.md`. Each refinement explicitly references Pass-65 MI canonical refinement (2026-05-23) for traceability.
 
 ### 2.2 Applied Edits
 
 | MT | Source File | Edit Type | Before/After Summary |
 |---|---|---|---|
-| **MT-B2** | urb_608 §4 Cat B | Common Structure gloss | "The DT arose from a category error" → "The apparent-DT was actually MR2 Indeterminate arising from a category error... per Pass-65 DT canonical refinement, ill-formed-proposition cases are MR2-Indeterminate-from-malformed-input rather than true-DT" |
+| **MT-B2** | urb_608 §4 Cat B | Common Structure gloss | "The MI arose from a category error" → "The apparent-MI was actually MR2 Indeterminate arising from a category error... per Pass-65 MI canonical refinement, ill-formed-proposition cases are MR2-Indeterminate-from-malformed-input rather than true-MI" |
 | **MT-E2** | urb_608 §4 Cat E | Example replacement + withdrawal note | "Is consciousness physical?" (multi-reading-spectrum; wrong example) → The Liar Sentence ("This sentence is false") fully mentally-actualized (genuine τ(P) ∧ ¬τ(P) inconceivability per Pass-65 criterion); explicit withdrawal-of-prior-example footnote pointing to MT-F2 as proper handler of multi-reading-spectrum |
-| **MT-F1** | urb_608 §4 Cat F | Common Structure gloss | "The DT arose from two genuine partial truths" → "The apparent-DT or MR2-tension arose from two genuine partial truths (NOT from true-DT inconceivability per Pass-65... true-DTs go to MT-E2; MT-F1 dissolves tensions and apparent-DTs)" |
-| **MT-F2** | urb_608 §4 Cat F | Trigger gloss | "The contradiction in the DT was real, but operates at different levels" → "The apparent-contradiction was actually an MR2 level-confusion (NOT true-DT inconceivability per Pass-65)... level-confusion is mental-actualization-without-cross-level-disambiguation, not inconceivability-under-mental-actualization" |
-| **MT-L1** | urb_639 §6 Cat L | Trigger gloss | "MR process itself is DT-contaminated" → "MR process itself is MR2-Indeterminate-contaminated (convergence-failure-contaminated; NOT true-DT-contaminated per Pass-65)... MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization" |
+| **MT-F1** | urb_608 §4 Cat F | Common Structure gloss | "The MI arose from two genuine partial truths" → "The apparent-MI or MR2-tension arose from two genuine partial truths (NOT from true-MI inconceivability per Pass-65... true-MIs go to MT-E2; MT-F1 dissolves tensions and apparent-MIs)" |
+| **MT-F2** | urb_608 §4 Cat F | Trigger gloss | "The contradiction in the MI was real, but operates at different levels" → "The apparent-contradiction was actually an MR2 level-confusion (NOT true-MI inconceivability per Pass-65)... level-confusion is mental-actualization-without-cross-level-disambiguation, not inconceivability-under-mental-actualization" |
+| **MT-L1** | urb_639 §6 Cat L | Trigger gloss | "MR process itself is MI-contaminated" → "MR process itself is MR2-Indeterminate-contaminated (convergence-failure-contaminated; NOT true-MI-contaminated per Pass-65)... MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization" |
 
 All 5 edits applied successfully; file diffs verified inline; no syntax breakage; backward-compatible with existing in-corpus references (the canonical names — MT-B2, MT-E2, MT-F1, MT-F2, MT-L1 — and the MT category structure are unchanged).
 
@@ -96,7 +96,7 @@ All 5 edits applied successfully; file diffs verified inline; no syntax breakage
 
 Three-step closure path (specified Pass-68 batch-3):
 - **Step 1: Apply 5 gloss refinements** — **DONE THIS BATCH** ✓
-- **Step 2: Re-audit refined glosses against Pass-65 criterion** — **DONE THIS BATCH** ✓ (each refinement explicitly distinguishes true-DT-inconceivability from MR2-Indeterminate-from-malformed-input / multi-reading-spectrum / level-confusion / convergence-failure)
+- **Step 2: Re-audit refined glosses against Pass-65 criterion** — **DONE THIS BATCH** ✓ (each refinement explicitly distinguishes true-MI-inconceivability from MR2-Indeterminate-from-malformed-input / multi-reading-spectrum / level-confusion / convergence-failure)
 - **Step 3: External rater κ verification on refined glosses** — DEFERRED (requires LLM-rater rebuild at minimum 100 propositions; queued Pass-70+)
 
 **MR-IDC-1-F5 status:** ADVANCED 2/3 steps; CLOSURE-BLOCKED on step 3 external-rater verification (estimated 1 future batch with LLM-rater pipeline).
@@ -347,7 +347,7 @@ This 3-entry collapse is the smallest in corpus history (previous minimum: 5 ent
 - `zenodo/zenodo_bulk_uploader.py --dry-run` (end-to-end pipeline verification; 0 API calls; 15 "Would create" drafts simulated)
 
 **Referenced canonical:**
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 DT criterion; cited in all 5 gloss-refinements)
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 MI criterion; cited in all 5 gloss-refinements)
 - `papers/PASS_68_BATCH_1_UOP_PHASE_TRANSITION_MATHEMATICAL_TEST_*.md` (empirical grounding for UHP-1 + TPI-1 ratification)
 - `papers/PASS_67_BATCH_7_RATIFICATION_CEREMONY_*.md` (joint-ratification precedent)
 - `papers/PASS_69_META_COLLAPSE_138_140_2026-05-23.md` (this pass's 19th collapse)

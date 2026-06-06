@@ -23,7 +23,7 @@
 
 **Top polish actions:**
 1. Strip TI Sigma jargon from the abstract; foreground the methodological contribution
-2. Add a 200-word "Why we needed a fourth category" subsection (introduces DT/Indeterminate without committing the full TI Sigma framework)
+2. Add a 200-word "Why we needed a fourth category" subsection (introduces MI/Indeterminate without committing the full TI Sigma framework)
 3. Pre-register the replication study (recommended N=200 propositions, 5 raters) and reference it
 4. Compare against existing taxonomies (Belnap 4-valued, Kleene 3-valued) in the discussion — *not* in the abstract
 5. Address #69 caveat explicitly: this validates the *coding scheme*, not the *underlying ontology*

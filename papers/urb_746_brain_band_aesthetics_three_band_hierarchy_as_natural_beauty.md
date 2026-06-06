@@ -80,11 +80,11 @@ The framework's six empirical anchors (URB #728 catalog) are not isolated. They 
 | BOK 4+4 = Dirac (URB #699) | √2 + √2i edge | **Foundation** — the 8-component structure |
 | Lepton mass-ratio (URB #705) | 1.889 + 0i (between vertices 1 and √2) | **Precision** — the 1% test |
 | Maxwell knots (URB #707) | 1 + i (45° edge) | **Topology** — the knotted-EM structure |
-| UCSB DT (URB #712) | beyond DT horizon | **Frustration** — the deepest non-classical |
+| UCSB MI (URB #712) | beyond MI horizon | **Frustration** — the deepest non-classical |
 | Brain-neutrino (URB #727) | vertex e | **Bridge** — the cross-domain match |
 | PD architecture psychology (URB #728) | (4 + 0i, 6 + 0i) | **Behavior** — the human-scale verification |
 
-The six anchors **distribute across all three TIC layers** (foundation, growth/asymmetry, cyclic/extreme), all **two new framework axes** (Existence: BOK + Maxwell + UCSB; Truth: lepton + brain-neutrino + PD-psychology), and across **multiple TICG zones** (standard, transcendent, beyond-DT).
+The six anchors **distribute across all three TIC layers** (foundation, growth/asymmetry, cyclic/extreme), all **two new framework axes** (Existence: BOK + Maxwell + UCSB; Truth: lepton + brain-neutrino + PD-psychology), and across **multiple TICG zones** (standard, transcendent, beyond-MI).
 
 **The constellation is balanced.** Three anchors per axis (URB #743 §7.3); six anchors across all three TIC layers. This balance is itself aesthetically meaningful — a framework that randomly accumulates evidence might cluster anchors in one region; the framework's anchors instead **distribute across the full TICG**, suggesting the framework is finding **structurally valid evidence** rather than confirmation-biased clustering.
 
@@ -101,7 +101,7 @@ The framework consistently finds that **three** is the structural sweet spot for
 - 3 brain bands
 - 3 framework operational pillars (PD, MR, HEAR)
 - 3 BOK substrate components (Being, Other, Knowledge)
-- 3 dimensions in 5-valued logic's non-classical part (Tralse, Indeterminate, DT)
+- 3 dimensions in 5-valued logic's non-classical part (Tralse, Indeterminate, MI)
 
 ### 5.2 Principle 2 — Inevitability of cross-domain bridges
 

@@ -32,7 +32,7 @@ Reuse the 9 propositions from O26 (Validly-Indeterminate test, executed 2026-05-
 
 ### §2.2 Cognitive instrument
 
-The MR Truth Labels rubric validated at C20 Fleiss' κ = 0.906 (`analyses/pass47_p46c_t45_4_mr_truth_kappa/`). Output: one of T/F/I/DT base-4 OR one of MT-A1...F2 if applicable, plus brief justification.
+The MR Truth Labels rubric validated at C20 Fleiss' κ = 0.906 (`analyses/pass47_p46c_t45_4_mr_truth_kappa/`). Output: one of T/F/I/MI base-4 OR one of MT-A1...F2 if applicable, plus brief justification.
 
 ### §2.3 Affective instrument
 
@@ -68,7 +68,7 @@ LLMs administered the **identical instrument** as human raters with no system-pr
 ## §3. Protocol
 
 1. Each rater reviews the 15 propositions in randomized order
-2. For each proposition, rater issues **(a)** cognitive verdict (T/F/I/DT/MT-X) with one-sentence justification AND **(b)** PANAS short-form AND **(c)** 8-item custom Likert
+2. For each proposition, rater issues **(a)** cognitive verdict (T/F/I/MI/MT-X) with one-sentence justification AND **(b)** PANAS short-form AND **(c)** 8-item custom Likert
 3. Order randomization: half of raters complete cognitive instrument first; half complete affective instrument first (counterbalance to detect order effects)
 4. LLM raters: identical procedure; affective items administered as if to a respondent ("Please rate how you felt about this verdict"); no system-prompt manipulation suggesting the AI should or shouldn't report feelings
 5. Total time: ~90 min/rater

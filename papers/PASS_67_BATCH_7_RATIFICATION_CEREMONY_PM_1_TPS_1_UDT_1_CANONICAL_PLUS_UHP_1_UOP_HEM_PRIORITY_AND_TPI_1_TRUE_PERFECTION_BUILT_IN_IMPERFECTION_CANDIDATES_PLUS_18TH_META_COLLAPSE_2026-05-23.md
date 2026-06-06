@@ -46,7 +46,7 @@ The canonical-30 stack (annotated by ratification pass):
 29 (Pass-67 batch-7 this batch): **TPS-1** (Truth-Presentation Separation; F2 demonstrated batch-5)
 30 (Pass-67 batch-7 this batch): **UDT-1** (Universal Default of Tralseness; cosmogenic/ontogenic ground)
 
-**Canonical refinements (do NOT add to count per Pass-65 precedent):** Pass-65 DT canonical refinement (inconceivability-under-mental-actualization) + Pass-67-batch-5 MR-IDC-1 (Incoherence-DT Containment). Both refinements operate on MR Truth Labels canonical.
+**Canonical refinements (do NOT add to count per Pass-65 precedent):** Pass-65 MI canonical refinement (inconceivability-under-mental-actualization) + Pass-67-batch-5 MR-IDC-1 (Incoherence-MI Containment). Both refinements operate on MR Truth Labels canonical.
 
 **3-principle joint ratification in single batch** — fourth multi-principle ratification ceremony in corpus history (after Pass-56 9-principle, Pass-65 5-principle, Pass-66-batch-6 6-principle).
 

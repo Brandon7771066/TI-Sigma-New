@@ -7,13 +7,13 @@
 
 ## Objection 1.1 — "TI Sigma is just Belnap's 4-valued logic / Dunn-Belnap FOUR in new clothes."
 
-**Strongest form of the objection.** Belnap (1977) and Dunn (1976) gave us a 4-valued logic with the labels {True, False, Both, Neither} interpreted as the truth-values an agent might hold given inconsistent / incomplete information. Mapping {True ↔ T, False ↔ F, Both ↔ DT, Neither ↔ I} is mechanical. TI Sigma is therefore a re-labelling, not a contribution.
+**Strongest form of the objection.** Belnap (1977) and Dunn (1976) gave us a 4-valued logic with the labels {True, False, Both, Neither} interpreted as the truth-values an agent might hold given inconsistent / incomplete information. Mapping {True ↔ T, False ↔ F, Both ↔ MI, Neither ↔ I} is mechanical. TI Sigma is therefore a re-labelling, not a contribution.
 
 **Response.** Belnap-4 is contained in TI Sigma as a categorical substructure — this is **TI-ENVELOPE-1** (canonical per Pass 56). TI Sigma adds structure Belnap does not have:
 
-1. **The Tralse substrate.** Belnap's "Both" is an *epistemic* state of an agent; TI Sigma's DT is an *ontic* failure-state of a τ-substrate that is itself grounded in the four FEATURES (Change, Relation, Contradiction, Limit) of URB #509. Belnap-4 has no analogue of FEATURES; it cannot derive *why* contradictions arise.
+1. **The Tralse substrate.** Belnap's "Both" is an *epistemic* state of an agent; TI Sigma's MI is an *ontic* failure-state of a τ-substrate that is itself grounded in the four FEATURES (Change, Relation, Contradiction, Limit) of URB #509. Belnap-4 has no analogue of FEATURES; it cannot derive *why* contradictions arise.
 2. **The Meta-Truths catalogue.** urb_608 specifies 12 ratified Meta-Truths plus 24 conjectural; Pass-56 adds **MT-B-VOID** (referential-void) and **MT-B-DEGEN** (process-integrity-failure) as canonical. Belnap-4 has no Meta-Truth layer at all.
-3. **The operator-on-stances domain.** Belnap-4 operates only on propositional truth-values. TI Sigma defines operators on *stances* — NAD-1 (canonical per Pass 56) detects when "no answer" is DT-in-disguise, which has no expression at all inside Belnap-4 because Belnap-4 has no Indeterminate-vs-no-answer distinction.
+3. **The operator-on-stances domain.** Belnap-4 operates only on propositional truth-values. TI Sigma defines operators on *stances* — NAD-1 (canonical per Pass 56) detects when "no answer" is MI-in-disguise, which has no expression at all inside Belnap-4 because Belnap-4 has no Indeterminate-vs-no-answer distinction.
 4. **The graded PD-real axis.** Belnap-4 is purely categorical. TI Sigma's PD-real axis (Permissibility Distribution, ratified Pass-6) is continuous-graded, allowing FDS-1 regime decomposition (Regime 1 physical-law-dominant / Regime 2 conscious-agent / Regime 3 mixed). Belnap-4 cannot represent FDS-1 at all.
 5. **Authority Axis (AA).** The 5th truth-axis — track-record-weighted credibility composition. No analogue in Belnap.
 
@@ -29,9 +29,9 @@
 
 1. **PD-real axis.** P has graded permissibility in [0, 1]. Classical LNC operates here only at the endpoints {0, 1}.
 2. **τ axis (Tralse).** P holds multiple truth-values *in tension* at substrate level — this is a *universal-quality* observation, not an assertion of P ∧ ¬P in the classical sense. The FEATURES make every existent tralse because each FEATURE is internally contradictory in the *constitutive-of-identity* sense (not in the propositional-conjunction sense).
-3. **MR Truth-Labels axis.** P resolves to one of {T, F, I, DT} after Myrion Resolution.
+3. **MR Truth-Labels axis.** P resolves to one of {T, F, I, MI} after Myrion Resolution.
 
-Classical LNC is **axis-blind** — it does not distinguish these three axes. **Axis-aware LNC** is preserved in TI Sigma: for any given axis, ¬(P ∧ ¬P) holds within that axis. DT (Double Tralse) is *not* P ∧ ¬P; it is τ(P) ∧ ¬τ(P) — a failure of the Tralse-quality assertion itself, not a propositional contradiction in the classical sense.
+Classical LNC is **axis-blind** — it does not distinguish these three axes. **Axis-aware LNC** is preserved in TI Sigma: for any given axis, ¬(P ∧ ¬P) holds within that axis. MI (Meta-Indeterminate) is *not* P ∧ ¬P; it is τ(P) ∧ ¬τ(P) — a failure of the Tralse-quality assertion itself, not a propositional contradiction in the classical sense.
 
 The "TI Sigma disproves classical LNC" claim in §7.7.98 is specifically about **universality** of axis-blind LNC, not about LNC on a single axis. Within an axis, LNC holds.
 
@@ -39,19 +39,19 @@ The "TI Sigma disproves classical LNC" claim in §7.7.98 is specifically about *
 
 ---
 
-## Objection 1.3 — "DT is just inconsistency. Any system with DT explodes via ex falso quodlibet."
+## Objection 1.3 — "MI is just inconsistency. Any system with MI explodes via ex falso quodlibet."
 
-**Strongest form.** From P ∧ ¬P, classical logic derives anything. TI Sigma admits DT propositions. Therefore everything follows.
+**Strongest form.** From P ∧ ¬P, classical logic derives anything. TI Sigma admits MI propositions. Therefore everything follows.
 
 **Response.** TI Sigma uses **MR1 (the coherence gate) to *prevent* ex falso propagation**. The operator algebra (§7.7.105) makes this mechanical:
 
-- DT is *absorbing* in operators that do not have a determinate short-circuit. (T ∧ DT = DT, not T; I ∨ DT = DT, not I.)
+- MI is *absorbing* in operators that do not have a determinate short-circuit. (T ∧ MI = MI, not T; I ∨ MI = MI, not I.)
 - T-absorption in OR and F-absorption in AND preserve classical short-circuit reasoning where one input is determinate.
-- DT is *diagnosed*, not *propagated as truth*. A proposition flagged DT is excluded from inferential chains that would propagate it; instead it is referred for resolution (e.g., the three i-Cell repairs for DGI-4 in the gender paper).
+- MI is *diagnosed*, not *propagated as truth*. A proposition flagged MI is excluded from inferential chains that would propagate it; instead it is referred for resolution (e.g., the three i-Cell repairs for DGI-4 in the gender paper).
 
 This is structurally parallel to paraconsistent logics (Priest, da Costa, Routley) which the published literature already accepts as non-explosive. TI Sigma is paraconsistent by construction.
 
-**Falsifier.** Exhibit a TI Sigma derivation in which a DT proposition propagates through an inference chain producing an arbitrary T conclusion. Anti-cheat: the derivation must use only canonical operator rules from §7.7.105, not informal natural-language paraphrase.
+**Falsifier.** Exhibit a TI Sigma derivation in which a MI proposition propagates through an inference chain producing an arbitrary T conclusion. Anti-cheat: the derivation must use only canonical operator rules from §7.7.105, not informal natural-language paraphrase.
 
 ---
 

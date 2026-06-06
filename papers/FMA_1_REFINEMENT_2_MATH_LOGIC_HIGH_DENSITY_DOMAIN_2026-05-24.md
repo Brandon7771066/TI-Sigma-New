@@ -27,7 +27,7 @@
 
 **F-status:** TRUE (the claim is false). 2+2=4 is provable from Peano axioms.
 
-**MI-status:** TRUE (the claim is inconceivable-under-mental-actualization per refinement #4 + Pass-65 DT canonical heuristic). One cannot form a stable mental model of "2+2=5 while 2, 4, 5, +, = retain their standard meanings" — the attempt produces conceptual collapse.
+**MI-status:** TRUE (the claim is inconceivable-under-mental-actualization per refinement #4 + Pass-65 MI canonical heuristic). One cannot form a stable mental model of "2+2=5 while 2, 4, 5, +, = retain their standard meanings" — the attempt produces conceptual collapse.
 
 **Counterfactual test (refinement #1):** Can we imagine W' where 2+2=5 is true AND the standard arithmetic counterexamples (every actual calculation of 2+2 yielding 4) still exist?
 

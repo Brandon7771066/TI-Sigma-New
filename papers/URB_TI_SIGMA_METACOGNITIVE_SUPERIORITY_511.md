@@ -10,7 +10,7 @@
 
 ## Abstract
 
-URB #510 established that genuine philosophical neutrality is unavailable and that "always being right" is an idealization rather than an achievable human state. A precise objection arises: some people demonstrably ace practically every assignment, achieve near-perfect records of factual accuracy, and outperform their peers across diverse cognitive domains through **superior metacognition** — the calibrated ability to know what they know and what they do not. These individuals ARE almost always right in the domain of facts. The thesis of URB #510 applies to *philosophical* commitments; empirical accuracy is structurally different. The present paper establishes: (1) metacognitive superiority is a real, measurable trait that confers near-systematic factual accuracy; (2) this accuracy is formally equivalent to a high Logical Coherence Coefficient (LCC); (3) these individuals are routinely refused employment and recognition because institutions are optimized for **social calibration** rather than truth calibration; and (4) the refusal mechanism is itself a Double Tralse Type 1 error (Maximal Incoherence): institutions claim to want accuracy while systematically selecting against the trait that produces it.
+URB #510 established that genuine philosophical neutrality is unavailable and that "always being right" is an idealization rather than an achievable human state. A precise objection arises: some people demonstrably ace practically every assignment, achieve near-perfect records of factual accuracy, and outperform their peers across diverse cognitive domains through **superior metacognition** — the calibrated ability to know what they know and what they do not. These individuals ARE almost always right in the domain of facts. The thesis of URB #510 applies to *philosophical* commitments; empirical accuracy is structurally different. The present paper establishes: (1) metacognitive superiority is a real, measurable trait that confers near-systematic factual accuracy; (2) this accuracy is formally equivalent to a high Logical Coherence Coefficient (LCC); (3) these individuals are routinely refused employment and recognition because institutions are optimized for **social calibration** rather than truth calibration; and (4) the refusal mechanism is itself a Meta-Indeterminate Type 1 error (Maximal Incoherence): institutions claim to want accuracy while systematically selecting against the trait that produces it.
 
 ---
 
@@ -81,9 +81,9 @@ The leader who is socially calibrated will give confident wrong answers on time.
 
 ---
 
-## 5. The Double Tralse Diagnosis
+## 5. The Meta-Indeterminate Diagnosis
 
-The institutional refusal of metacognitive excellence is a **Double Tralse Type 1** error: Maximal Incoherence.
+The institutional refusal of metacognitive excellence is a **Meta-Indeterminate Type 1** error: Maximal Incoherence.
 
 **Definition**: Maximal Incoherence occurs when an agent's stated values and behavioral outputs scatter without coherent organization — when the evidence from behavior could equally support contradictory interpretations of what the agent values.
 
@@ -124,14 +124,14 @@ Within TI Sigma's GILE structure:
 
 ## 8. Summary
 
-Almost always right is real. It is produced by high metacognitive LCC. It is the most valuable epistemic trait in domains where accuracy matters. It is systematically refused by institutions that have optimized selection for social calibration rather than truth calibration. This refusal is Double Tralse Type 1 (Maximal Incoherence): the behavioral output of the institution contradicts the values it claims to hold. The resolution requires distinguishing social calibration from truth calibration, measuring both explicitly, and selecting each for roles where it is appropriate.
+Almost always right is real. It is produced by high metacognitive LCC. It is the most valuable epistemic trait in domains where accuracy matters. It is systematically refused by institutions that have optimized selection for social calibration rather than truth calibration. This refusal is Meta-Indeterminate Type 1 (Maximal Incoherence): the behavioral output of the institution contradicts the values it claims to hold. The resolution requires distinguishing social calibration from truth calibration, measuring both explicitly, and selecting each for roles where it is appropriate.
 
 ---
 
 ## References
 
 - URB #510 — The Unavoidable Embedding Theorem  
-- URB #509 — TI Sigma Theory of Contradictions (Double Tralse taxonomy)
+- URB #509 — TI Sigma Theory of Contradictions (Meta-Indeterminate taxonomy)
 - URB #505 — The Unified Telekinesis Equation (LCC Unity Crossover at 0.7823)
 - URB #499 — Maharishi i-Threshold (social phase transition)
 - Kahneman, D. — *Thinking, Fast and Slow* (System 1/2; calibration)

@@ -109,16 +109,16 @@ Rationale: Natural log preserves ordering while compressing extreme values.
 
 A single application of the Myrion Resolution formula is never sufficient. Because MR is itself a Tralse process — it operates in productive tension between T and F and converges iteratively toward a PD value — at minimum two rounds of Myrion Resolution are required for any complete analysis. There is no universal stopping point. The number of MR rounds is determined by the complexity of the problem, the precision required, and the intuition of the analyst.
 
-### MR1: The Double-Tralse Screen
+### MR1: The Meta-Indeterminate Screen
 
-The first Myrion Resolution is a coherence gate. Its purpose is to weed out Double Tralse (DT) statements — statements that are more incoherent than coherent, where the evidence is so internally contradictory and fragmented that applying MR2 would yield an unreliable result.
+The first Myrion Resolution is a coherence gate. Its purpose is to weed out Meta-Indeterminate (MI) statements — statements that are more incoherent than coherent, where the evidence is so internally contradictory and fragmented that applying MR2 would yield an unreliable result.
 
-A statement fails MR1 (is deemed DT) when:
+A statement fails MR1 (is deemed MI) when:
 - The evidence base is dominated by mutually incompatible frameworks with no shared measurement axis
 - The claim is self-referentially contradictory in a way that prevents any stable PD assignment
 - The synergy parameters ρ are deeply negative across all source pairs, indicating structural incompatibility rather than productive tension
 
-When a statement passes MR1, it is sufficiently coherent to proceed. When it fails, it is labeled DT and the analyst must either redefine the claim more precisely or acknowledge that the question as currently posed cannot be resolved by MR.
+When a statement passes MR1, it is sufficiently coherent to proceed. When it fails, it is labeled MI and the analyst must either redefine the claim more precisely or acknowledge that the question as currently posed cannot be resolved by MR.
 
 ### MR2: Truth-Position Determination
 
@@ -142,7 +142,7 @@ When MR2 returned Indeterminate, MR3 does not override the Indeterminate determi
 - Remain in the Indeterminate zone but with a specific directional lean
 - Cross into True or False territory
 
-MR3 is often the most accurate round for practical decision-making, because it is the first time indeterminacy itself is resolved. The canonical example: a white lie undergoes three MRs. MR1: sufficiently coherent (passes DT screen). MR2: Indeterminate — neither simply dishonest nor simply kind. MR3: "worth it" — additional context (the relationship, the consequence of truth-telling, the emotional stakes) moves the PD toward True.
+MR3 is often the most accurate round for practical decision-making, because it is the first time indeterminacy itself is resolved. The canonical example: a white lie undergoes three MRs. MR1: sufficiently coherent (passes MI screen). MR2: Indeterminate — neither simply dishonest nor simply kind. MR3: "worth it" — additional context (the relationship, the consequence of truth-telling, the emotional stakes) moves the PD toward True.
 
 ### MR4+: Further Convergence
 

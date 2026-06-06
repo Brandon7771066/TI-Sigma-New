@@ -21,7 +21,7 @@ where:
 - **√2**: diagonal / two-state mixing factor
 - **e**: natural growth / ultra-threshold base / MR iteration constant
 - **φ**: golden ratio / pillar-strength asymmetry origin
-- **π**: cyclic / wave / oscillation / DT-cliff position (= −3 ≈ −π)
+- **π**: cyclic / wave / oscillation / MI-cliff position (= −3 ≈ −π)
 - **C**: Chirality (the framework's chirality vertex)
 - **T**: Tralse (the framework's Tralse vertex)
 
@@ -89,7 +89,7 @@ The complex PD plane (URB #733) maps cleanly onto the TIC. Specifically:
 | **PD = +√2** (rotation marker) | TIC vertex **√2** |
 | **PD = +φ** (Radiant GILE threshold) | TIC vertex **φ** |
 | **PD = +e** (transcendent ultra-threshold) | TIC vertex **e** |
-| **PD = +π / −π** (DT cliff at ≈ −3) | TIC vertex **π** (and its antipode) |
+| **PD = +π / −π** (MI cliff at ≈ −3) | TIC vertex **π** (and its antipode) |
 | **PD = +i** (pure Tralse) | TIC vertex **i** |
 | **PD = (1+i)/√2** (chirality direction) | TIC vertex **C** |
 | **PD = e^(2πi/3)** (Tralse direction) | TIC vertex **T** |
@@ -103,9 +103,9 @@ The four annular zones of the complex PD plane (URB #733 §4) correspond to **TI
 - Indeterminate disc (|PD| < 2/3): contains only vertices **0**
 - Standard zone (2/3 < |PD| < 2): contains vertices **1, i, √2, φ, C**
 - Transcendent annulus (2 < |PD| < e): contains vertex **e** (and **T** on the boundary)
-- Pre-DT zone (e < |PD| < 3): contains vertex **π** (and **T** also passes through)
+- Pre-MI zone (e < |PD| < 3): contains vertex **π** (and **T** also passes through)
 
-**The TIC vertices distribute themselves across the PD zones in a structurally meaningful way**: foundational PRIMARY constants {1, i, √2, φ, C} populate the standard zone; transcendent constants {e, T} populate the transcendent annulus; the cyclic/extreme constant {π} populates the pre-DT zone.
+**The TIC vertices distribute themselves across the PD zones in a structurally meaningful way**: foundational PRIMARY constants {1, i, √2, φ, C} populate the standard zone; transcendent constants {e, T} populate the transcendent annulus; the cyclic/extreme constant {π} populates the pre-MI zone.
 
 ---
 

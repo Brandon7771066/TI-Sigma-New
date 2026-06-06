@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 8, 2026  
 **Corpus Entry:** #623  
-**Related URBs:** #528 (Five-Valued Logic), #563 (Complex GILE), #573 (BOK-Verisyn/Hopf), #609 (HEM), #610 (DT Physics), #612 (Revised GILE–Existence), #617 (Brain/BOK/LCC/UOP), #619 (HEM–EF Bridge), #622 (Empirical Foundations/Lattice)  
+**Related URBs:** #528 (Five-Valued Logic), #563 (Complex GILE), #573 (BOK-Verisyn/Hopf), #609 (HEM), #610 (MI Physics), #612 (Revised GILE–Existence), #617 (Brain/BOK/LCC/UOP), #619 (HEM–EF Bridge), #622 (Empirical Foundations/Lattice)  
 **DOI:** Pending Zenodo  
 **Keywords:** quantum mechanics, imaginary unit, wave function, Schrödinger equation, Hopf fibration, Bloch sphere, Berry phase, quantum entanglement, Bell inequality, decoherence, E₈ root system, Coldea experiment, quantum biology, photosynthesis, ORCH-OR, non-locality, GILE, HEM, TI Sigma, L*/+E, path integral, Noether's theorem, quasicrystal
 
@@ -411,7 +411,7 @@ Hawking (1974) showed that black holes emit thermal radiation and eventually eva
 
 The consensus (established by Maldacena's AdS/CFT correspondence, 1997, and recently by the island formula): **quantum information is conserved** — it is not destroyed by black holes. The Page curve of Hawking radiation encodes all the information of the infallen matter, recovered as quantum correlations in the radiation.
 
-**TI Sigma significance:** HEM-D3 (Information Footprint) is conserved even in the most extreme physical process — black hole evaporation. The universe does not destroy information. This is the physical grounding for TI Sigma's claim that Myrion Resolution preserves truth-content: information (HEM-D3) cannot be annihilated, only transformed. The DT state is a total absence of truth-content, but it is not a destruction of information — it is information in its maximally indeterminate state (Double Tralse), which MR can recover.
+**TI Sigma significance:** HEM-D3 (Information Footprint) is conserved even in the most extreme physical process — black hole evaporation. The universe does not destroy information. This is the physical grounding for TI Sigma's claim that Myrion Resolution preserves truth-content: information (HEM-D3) cannot be annihilated, only transformed. The MI state is a total absence of truth-content, but it is not a destruction of information — it is information in its maximally indeterminate state (Meta-Indeterminate), which MR can recover.
 
 ### 11.2 AdS/CFT and the T↔HEM Duality
 

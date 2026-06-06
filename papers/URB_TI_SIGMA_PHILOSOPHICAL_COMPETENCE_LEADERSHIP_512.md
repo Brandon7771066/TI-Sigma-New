@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Philosophical competence — the ability to navigate genuine contradictions, identify Double Tralse, maintain calibrated uncertainty, extract embedded priors (URB #510), and act decisively despite irreducible tralse — is formally the most valuable skill set for leadership in complex, uncertain, high-stakes environments. It is not selected for in leadership pipelines. It is frequently selected against, labeled "impractical," "overthinking," or "too theoretical." This paper establishes: (1) a precise definition of philosophical competence in TI Sigma terms; (2) why this competence is structurally superior to its alternatives in leadership contexts; (3) the mechanism by which it is selected against; and (4) why the "impractical" objection is itself a textbook example of Double Tralse Type 3 — a self-refuting claim that, in practice, is the most practically costly error an institution can make.
+Philosophical competence — the ability to navigate genuine contradictions, identify Meta-Indeterminate, maintain calibrated uncertainty, extract embedded priors (URB #510), and act decisively despite irreducible tralse — is formally the most valuable skill set for leadership in complex, uncertain, high-stakes environments. It is not selected for in leadership pipelines. It is frequently selected against, labeled "impractical," "overthinking," or "too theoretical." This paper establishes: (1) a precise definition of philosophical competence in TI Sigma terms; (2) why this competence is structurally superior to its alternatives in leadership contexts; (3) the mechanism by which it is selected against; and (4) why the "impractical" objection is itself a textbook example of Meta-Indeterminate Type 3 — a self-refuting claim that, in practice, is the most practically costly error an institution can make.
 
 ---
 
@@ -26,13 +26,13 @@ These are downstream effects of philosophical competence in some cases, but they
 
 **Philosophical competence, precisely defined, is the set of following capacities:**
 
-**1. Contradiction Navigation (4Cs fluency)**: The ability to hold genuinely opposing considerations simultaneously without premature resolution. Not to pretend the contradiction does not exist (Double Tralse); not to arbitrarily pick one side (False certainty); but to identify the productive tension between them and act from the synthesis point.
+**1. Contradiction Navigation (4Cs fluency)**: The ability to hold genuinely opposing considerations simultaneously without premature resolution. Not to pretend the contradiction does not exist (Meta-Indeterminate); not to arbitrarily pick one side (False certainty); but to identify the productive tension between them and act from the synthesis point.
 
 **2. Prior Extraction (UET awareness)**: The ability to surface one's own embedded philosophical commitments before evaluating new information (URB #510). Leaders who cannot do this are perpetually confusing their priors with the data.
 
 **3. TRALSE-tolerance**: The capacity to function effectively while holding genuine uncertainty — to take action at the C_EMERICK threshold (when crossing from uncertainty to actionable knowledge) without collapsing uncertainty prematurely or deferring indefinitely.
 
-**4. Double Tralse Detection**: The ability to identify when a seemingly valid position is actually self-refuting, incoherent, or evidence-scattering (URB #509). Most poor strategic decisions can be identified in advance as Double Tralse by a philosophically competent observer.
+**4. Meta-Indeterminate Detection**: The ability to identify when a seemingly valid position is actually self-refuting, incoherent, or evidence-scattering (URB #509). Most poor strategic decisions can be identified in advance as Meta-Indeterminate by a philosophically competent observer.
 
 **5. MR1 Application**: Applying the Myrion Resolution — finding the coherence attractor that preserves the valid aspects of conflicting positions — rather than simply eliminating one of them.
 
@@ -49,7 +49,7 @@ Leadership situations worth leading are characterized by:
 - **Genuine uncertainty**: If the answer were known, a manager could execute it. Leadership is required specifically when the answer is unknown.
 - **Real contradictions**: Competing legitimate interests, resource constraints, values in tension. Not pseudo-contradictions that dissolve with more information, but genuine 4-valued tralseness that must be navigated.
 - **Embedded institutional priors**: Organizations have philosophical commitments baked into their structures, processes, and cultures that nobody has examined. These priors drive outcomes invisibly.
-- **High stakes for errors**: Leadership errors cascade. A leader who cannot detect Double Tralse will make major strategic commitments that are self-refuting, and the organization will not realize why until significant damage has occurred.
+- **High stakes for errors**: Leadership errors cascade. A leader who cannot detect Meta-Indeterminate will make major strategic commitments that are self-refuting, and the organization will not realize why until significant damage has occurred.
 
 ### 2.2 What Low Philosophical Competence Produces
 
@@ -59,7 +59,7 @@ A leader without philosophical competence, facing a genuine contradiction, has t
 
 **b) Paralysis**: Recognize the contradiction, be unable to navigate it, defer indefinitely. This is the failure mode that gives philosophical thinking its bad reputation: the academic who can see all the problems but cannot act.
 
-**c) False certainty (Double Tralse)**: Project confidence that the contradiction does not exist, that one side is obviously correct, that dissenters are simply wrong. This is the failure mode of charismatic leaders who succeed by social calibration while making epistemically catastrophic decisions.
+**c) False certainty (Meta-Indeterminate)**: Project confidence that the contradiction does not exist, that one side is obviously correct, that dissenters are simply wrong. This is the failure mode of charismatic leaders who succeed by social calibration while making epistemically catastrophic decisions.
 
 The philosophically competent leader does none of these. They hold the contradiction (TRALSE), apply MR1 to find the coherence attractor, act at the C_EMERICK threshold, and remain genuinely open to revision as new information arrives. This is not paralysis — it is precision.
 
@@ -70,7 +70,7 @@ The leaders who are recognized in retrospect as great were almost uniformly phil
 - **Contradiction navigation**: Churchill held simultaneously that the war must be won at any cost AND that preserving Britain's moral character was non-negotiable. He did not resolve this contradiction — he acted from it.
 - **Prior extraction**: Lincoln explicitly examined his own embedded assumptions about race throughout his presidency, revising his positions as his examination proceeded. This is visible in his writings.
 - **TRALSE-tolerance**: Every genuinely great leader made major decisions under fundamental uncertainty and acknowledged the uncertainty while acting. False certainty is a mark of lesser leaders.
-- **Double Tralse detection**: Great leaders consistently identified when a seemingly compelling argument was actually incoherent — when a strategy would undermine its own goals.
+- **Meta-Indeterminate detection**: Great leaders consistently identified when a seemingly compelling argument was actually incoherent — when a strategy would undermine its own goals.
 
 ---
 
@@ -92,13 +92,13 @@ The philosophically incompetent alternative — affirm the strategy, project con
 
 ### 3.3 It Requires Conceptual Vocabulary That Institutions Lack
 
-Philosophical competence is difficult to evaluate without a vocabulary for it. Institutions have robust evaluation frameworks for: communication skills, track record, technical expertise, cultural fit, leadership presence. They have almost no framework for: contradiction navigation, prior extraction, TRALSE-tolerance, Double Tralse detection.
+Philosophical competence is difficult to evaluate without a vocabulary for it. Institutions have robust evaluation frameworks for: communication skills, track record, technical expertise, cultural fit, leadership presence. They have almost no framework for: contradiction navigation, prior extraction, TRALSE-tolerance, Meta-Indeterminate detection.
 
 What cannot be measured tends to be dismissed as unmeasurable rather than recognized as ungauged. "They seem like a thinker but I'm not sure they can execute" translates, in TI Sigma terms, to "I lack the instruments to detect their most important capability."
 
 ---
 
-## 4. The "Impractical" Objection Is Double Tralse Type 3
+## 4. The "Impractical" Objection Is Meta-Indeterminate Type 3
 
 The most common dismissal of philosophical competence in leadership contexts is the "impractical" objection:
 
@@ -106,7 +106,7 @@ The most common dismissal of philosophical competence in leadership contexts is 
 - "Philosophy is fine in academia; the real world requires different skills"
 - "We don't have time for that level of analysis — we need to move"
 
-This objection is a **Double Tralse Type 3** (Self-Refuting Meta-Statement):
+This objection is a **Meta-Indeterminate Type 3** (Self-Refuting Meta-Statement):
 
 - It claims: "Philosophical thinking is impractical for real-world leadership"
 - But: the most costly leadership failures are caused by contradictions that were not navigated, priors that were not extracted, certainty that was projected without warrant, and self-defeating strategies that were not identified before implementation
@@ -141,7 +141,7 @@ The "impractical" charge confuses familiarity with practicality. Conventional le
 | Detects self-defeating strategies | Looks like obstructionism | IS the most valuable form of quality control |
 | Acts at C_EMERICK threshold | Looks like hesitation | IS decision at the right moment |
 
-Philosophical competence is the greatest asset in leadership positions. It is selected against. The selection mechanism is: institutions optimize for social calibration (which is immediately visible) over truth calibration (which is only visible over time). The "impractical" objection is self-refuting: the practical costs of absent philosophical competence are the largest single category of organizational failure. TI Sigma provides the formal vocabulary — 4Cs, MR1, LCC, Double Tralse, TRALSE-tolerance — to identify, measure, and select for what has previously been nameless.
+Philosophical competence is the greatest asset in leadership positions. It is selected against. The selection mechanism is: institutions optimize for social calibration (which is immediately visible) over truth calibration (which is only visible over time). The "impractical" objection is self-refuting: the practical costs of absent philosophical competence are the largest single category of organizational failure. TI Sigma provides the formal vocabulary — 4Cs, MR1, LCC, Meta-Indeterminate, TRALSE-tolerance — to identify, measure, and select for what has previously been nameless.
 
 ---
 

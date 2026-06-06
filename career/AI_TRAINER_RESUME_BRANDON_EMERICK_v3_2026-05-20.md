@@ -55,7 +55,7 @@ Independent researcher with 20 Lean 4 / mathlib4 verified theorems, Fleiss κ = 
 Source files: `lean4/TISigma.lean`, `lean4/TI/LxE.lean`, `lean/Verisyn/EulerIdentity{,RC}.lean`, `lean4_ns_uop_pass54_mathlib/NavierStokes/ToyDecay.lean`. All close under standard Lean 4 axioms with `#print axioms` verification. Four peer-review submission packets prepared for AFP, Journal of Formalized Reasoning, arXiv math.LO / cs.LO, and mathlib4 contributions.
 
 **Multi-Axis Truth Labeling — Fleiss κ = 0.906**
-Designed a 4-element categorical truth-label scheme (True, False, Indeterminate, Double-Tralse) plus 12 meta-truth extensions. Inter-rater agreement κ = 0.906 across three raters. Directly applicable to RLHF rubric design and trainer-consistency benchmarking.
+Designed a 4-element categorical truth-label scheme (True, False, Indeterminate, Meta-Indeterminate) plus 12 meta-truth extensions. Inter-rater agreement κ = 0.906 across three raters. Directly applicable to RLHF rubric design and trainer-consistency benchmarking.
 
 **GHZ-5 Mermin Test on IBM Quantum Hardware**
 End-to-end design and execution on `ibm_marrakesh` (real superconducting hardware, not simulator). |M₅| = 14.535, 91% of theoretical max — confirms multipartite entanglement past the LHV bound by 71σ.

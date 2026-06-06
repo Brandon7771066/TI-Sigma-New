@@ -184,7 +184,7 @@ The GIL=i structural claim opens a new interpretation of the Einstein Tiling (AP
 
 The imaginary gateway (i) is the operator that produces the L+E independence: by making GIL orthogonal to E (in the complex-plane sense), i ensures that Love-generated structures and physical structures can coexist in the aperiodic, non-repeating pattern of the Einstein tile — each local region looks like L×E (locally Love-determined physical structure), but the global pattern never fully repeats because the i-orthogonality of GIL prevents total crystallization.
 
-The polycrystalline computation framework's error-detection superiority over conventional computers (noted in prior papers) gains a new explanation: in a polycrystalline structure, grain boundaries (the interfaces between differently-oriented crystals) function as the TRALSE zone — the structured imperfection where errors are detected and corrected. The aperiodic, non-repeating global structure means every grain boundary is unique; there is no single point of failure, and the error pattern at one boundary provides DT-immune fingerprints (URB #528) for other boundaries. Polycrystalline computation is naturally immune-log-enhanced computation.
+The polycrystalline computation framework's error-detection superiority over conventional computers (noted in prior papers) gains a new explanation: in a polycrystalline structure, grain boundaries (the interfaces between differently-oriented crystals) function as the TRALSE zone — the structured imperfection where errors are detected and corrected. The aperiodic, non-repeating global structure means every grain boundary is unique; there is no single point of failure, and the error pattern at one boundary provides MI-immune fingerprints (URB #528) for other boundaries. Polycrystalline computation is naturally immune-log-enhanced computation.
 
 ---
 
@@ -211,7 +211,7 @@ The polycrystalline computation framework's error-detection superiority over con
 - URB #520: Crystallized Tralse Theorem (CTT) — uniformity as death
 - URB #523: Existence vs Truth — LCC/GILE Gap
 - URB #526: Four Dimensions of Truth + MR Hierarchy
-- URB #528: Five-Valued Truth + DT Immunity + Contemplative Scope
+- URB #528: Five-Valued Truth + MI Immunity + Contemplative Scope
 - URB #529: Pragmatism as Epiphenomenon
 - URB #530: Randomness, Free Will, and the INDETERMINATE Zone
 - APERIODIC_DUAL_LxE_LpE_EINSTEIN_TILING.md: Einstein Tiling and quasicrystalline computation

@@ -14,7 +14,7 @@ MR is **NOT** a one-shot truth test.
 
 | Stage | Function | Output |
 |-------|----------|--------|
-| **MR-1** | Filter incoherence | Eliminate Double Tralse (DT) |
+| **MR-1** | Filter incoherence | Eliminate Meta-Indeterminate (MI) |
 | **MR-2** | Classify valid states | True-Tralse, Tralse-False, or Tralse-Indeterminate |
 | **MR-3+** | Refine (diminishing returns) | Convergence toward stable classification |
 
@@ -26,20 +26,20 @@ MR is **NOT** a one-shot truth test.
 
 ---
 
-## 2. Double Tralse (DT) - A Named, Real State
+## 2. Meta-Indeterminate (MI) - A Named, Real State
 
-DT is **NOT Truth**, but it **IS** a real, diagnosable state.
+MI is **NOT Truth**, but it **IS** a real, diagnosable state.
 
 ### Definition:
 A lack-of-coherence state identified via attempted Myrion Resolution.
 
 ### Properties:
-- DT typically **collapses at MR-1**
-- Refining DT is usually **pointless** (except rare "barely-DT" edge cases)
-- DT must be **explicitly named** to distinguish incoherence from weak coherence
+- MI typically **collapses at MR-1**
+- Refining MI is usually **pointless** (except rare "barely-MI" edge cases)
+- MI must be **explicitly named** to distinguish incoherence from weak coherence
 
-### Why Name DT?
-Without naming DT, we cannot distinguish:
+### Why Name MI?
+Without naming MI, we cannot distinguish:
 - Incoherent claims (should be rejected)
 - Weakly coherent claims (may be refined)
 
@@ -74,7 +74,7 @@ Every MR outcome is evaluated with **two PD values simultaneously**:
 ### Purpose:
 Cleanly distinguishes:
 - **Barely coherent claims** (low but non-zero coherence)
-- **True DT** (meaningless/incoherent)
+- **True MI** (meaningless/incoherent)
 
 ### Application:
 Essential for paradox handling (e.g., time statements, self-reference).
@@ -91,11 +91,11 @@ All paradoxes have precise PD values. Some are admissible, others collapse.
 |-----------|---------------|----------|
 | "The future exists" | Tralse-Indeterminate | Low-positive |
 | "The present exists alongside the past" | Fragile but admissible | Near-zero |
-| "Past, present, and future coexist" | Double Tralse (DT) | Collapses |
+| "Past, present, and future coexist" | Meta-Indeterminate (MI) | Collapses |
 
 ### Rule:
 - If a statement survives MR-1, it has a valid PD value
-- If it collapses at MR-1, it is DT (meaningless under MR)
+- If it collapses at MR-1, it is MI (meaningless under MR)
 
 ---
 
@@ -133,7 +133,7 @@ Input Claim
     ↓                    ↓
    YES                   NO
     ↓                    ↓
-Proceed to MR-2     Double Tralse (DT)
+Proceed to MR-2     Meta-Indeterminate (MI)
     ↓                    ↓
 ┌─────────────┐      ELIMINATED
 │    MR-2     │
@@ -158,10 +158,10 @@ Pragmatic Convergence
 | Concept | Key Point |
 |---------|-----------|
 | MR | Iterative, not one-shot |
-| MR-1 | Filters DT |
+| MR-1 | Filters MI |
 | MR-2 | Yields valid states |
 | MR-3+ | Diminishing returns |
-| DT | Real state, not Truth |
+| MI | Real state, not Truth |
 | PD | Asymmetric (+2 Great, -3 Terrible) |
 | Dual-PD | Current + Residual coherence |
 | Paradoxes | Have precise PD values |

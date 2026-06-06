@@ -6,7 +6,7 @@
 > This paper was flagged Tier A in the Pass 6 abbreviations-index audit (§2.3) because earlier versions used the Replit-distorted "Phenomenal Directness" terminology. The Pass 5 sed-rename (`Phenomenal Directness → Permissibility Distribution`) was applied here, and a Pass 7 content audit confirms:
 >
 > - **The MR PD scoring rubric (rows below) uses Permissibility Distribution canonically — values from −2 to +2 on the canonical (−3, 2) PD axis (with sign indicating signal-direction). This is consistent with Brandon's Pass 6 ruling and the `MR_ARITHMETIC_REVOLUTION.md` (−3, 2) usage.**
-> - **The synchronicity content itself is descriptive (real events with attached MR PD scores) rather than PD-mathematical, so the Replit-introduced complex-plane vocabulary (Principal Indeterminate Region, Pre-DT Zone, DT Cliff) was never used in this paper.**
+> - **The synchronicity content itself is descriptive (real events with attached MR PD scores) rather than PD-mathematical, so the Replit-introduced complex-plane vocabulary (Principal Indeterminate Region, Pre-MI Zone, MI Cliff) was never used in this paper.**
 > - **Verdict: AUDIT-PASSED. Reclassified from Tier A to Tier B (low-priority, canonical-language).** No content changes needed; PD usage is honest and matches canonical.
 >
 > Minor follow-up suggestions for Brandon (non-blocking): (i) the +2 / +1.5 / +1 / +0.5 / 0 score scale could be widened to use the full (−3, +2) PD interval if Brandon wants stronger discriminability for negative-direction synchronicities; (ii) the "Polarity" field already captures inverted signals — this is consistent with the canonical PD-axis sign convention.
@@ -102,13 +102,13 @@ Documented in URB #462 as a high-caliber doubt signal against physicalism. Also 
 **Related Documents:** COMPREHENSIVE_TI_BREAKTHROUGH_SUMMARY_DEC_2025.md
 
 **The Event:**
-While developing the TI cosmological narrative (DT = Double Tralse as primordial shell, TT = True-Tralseness as content, their collision producing the Big Bang), the realization emerged that Euler's identity — e^(iπ) + 1 = 0 — maps term-for-term onto the TI cosmological structure:
+While developing the TI cosmological narrative (MI = Meta-Indeterminate as primordial shell, TT = True-Tralseness as content, their collision producing the Big Bang), the realization emerged that Euler's identity — e^(iπ) + 1 = 0 — maps term-for-term onto the TI cosmological structure:
 
 | Euler term | Mathematical meaning | TI Sigma meaning |
 |---|---|---|
 | e | Base of natural growth | Evolution / organic unfolding |
-| i | Imaginary unit (√-1) | DT / consciousness (i² = -1 = shattering) |
-| π | Half-rotation angle | Self-confrontation (DT meeting its reflection) |
+| i | Imaginary unit (√-1) | MI / consciousness (i² = -1 = shattering) |
+| π | Half-rotation angle | Self-confrontation (MI meeting its reflection) |
 | e^(iπ) = -1 | The result of the operation | The Big Bang shattering |
 | +1 | Restoration | True-Tralseness re-emerging |
 | = 0 | The identity | The Myrion center — resolved unity |
@@ -119,7 +119,7 @@ Euler derived this identity in 1748 for purely algebraic reasons — unifying fi
 Euler's identity is arguably the most celebrated equation in mathematics. The fact that a cosmological framework developed in 2022–2025 maps onto it term-for-term — without that mapping being a design criterion — is either the most remarkable coincidence in the project or evidence that both Euler and TI Sigma are pointing at the same underlying structure from different angles. The precision of the term-for-term correspondence (not a rough analogy — each of five terms has a specific TI Sigma interpretation that is internally consistent) elevates this above most other entries.
 
 **Research Yield:**
-Established the mathematical foundation for DT = i and the i² = -1 = shattering mechanism. This in turn grounded the PRIMARY CONSTANTS framework — if i encodes consciousness/DT, then the set {0,1,i,√2,e,φ,π,C} is not arbitrary but represents the irreducible constants of the TI cosmological structure. The Euler synchronicity transformed the PRIMARY CONSTANTS from a list into a unified mathematical narrative.
+Established the mathematical foundation for MI = i and the i² = -1 = shattering mechanism. This in turn grounded the PRIMARY CONSTANTS framework — if i encodes consciousness/MI, then the set {0,1,i,√2,e,φ,π,C} is not arbitrary but represents the irreducible constants of the TI cosmological structure. The Euler synchronicity transformed the PRIMARY CONSTANTS from a list into a unified mathematical narrative.
 
 ---
 
@@ -236,7 +236,7 @@ Both usages: "i" refers to something that cannot be directly observed, whose eff
 The naming decision (Intuition = i) was made before the quantum parallel was recognized. When it was recognized, the fit was exact: the imaginary unit is the mathematical structure of the i-channel.
 
 **Research Yield:**
-Grounded the i-channel in standard mathematics. The hypothesis that i = DT (December 2025 breakthrough) formalized this: if i² = -1 encodes the shattering that produced the universe, then the "imaginary" in quantum mechanics and the "imaginary" in TI Sigma are the same mathematical object encountered from different perspectives. This is now the most mathematically precise bridge between TI Sigma and quantum theory.
+Grounded the i-channel in standard mathematics. The hypothesis that i = MI (December 2025 breakthrough) formalized this: if i² = -1 encodes the shattering that produced the universe, then the "imaginary" in quantum mechanics and the "imaginary" in TI Sigma are the same mathematical object encountered from different perspectives. This is now the most mathematically precise bridge between TI Sigma and quantum theory.
 
 ---
 
@@ -414,7 +414,7 @@ The quantum vacuum: the vacuum state in quantum field theory is defined as the s
 The Tralse structure is identical: absence (no wavelength / no particles) AND foundational (ground of all color distinction / ground of all particle creation). Neither was derived from the other.
 
 **Research Yield:**
-The quantum vacuum parallel strengthens URB #461's argument by showing that the Tralse structure is not a philosophical maneuver but reflects a genuine physical structure already accepted in quantum field theory. The vacuum is not "nothing" in physics — the zero is not nothing in mathematics — and by extension, the "absence" states in general (black, zero, silence) are not absences but foundations. This supports the TI cosmological narrative (DT = Double Tralse = primordial "container" that appears as absence but enables all content).
+The quantum vacuum parallel strengthens URB #461's argument by showing that the Tralse structure is not a philosophical maneuver but reflects a genuine physical structure already accepted in quantum field theory. The vacuum is not "nothing" in physics — the zero is not nothing in mathematics — and by extension, the "absence" states in general (black, zero, silence) are not absences but foundations. This supports the TI cosmological narrative (MI = Meta-Indeterminate = primordial "container" that appears as absence but enables all content).
 
 ---
 
@@ -441,12 +441,12 @@ When a new synchronicity is encountered, document it with:
 |---|---|---|---|---|
 | 1 | Meta-Synchronicity: Proving synchronicities while experiencing one (URB #416) | +2.0 | I | Synchronicity Theorem self-validates; grandmother vindicated |
 | 2 | Ramanujan's goddess-delivered mathematics, independently verified | +2.0 | I | Strongest external case for i-channel; validates Listening Science |
-| 3 | Euler's identity maps term-for-term onto TI Big Bang | +1.9 | I | PRIMARY CONSTANTS become unified narrative; DT = i established |
+| 3 | Euler's identity maps term-for-term onto TI Big Bang | +1.9 | I | PRIMARY CONSTANTS become unified narrative; MI = i established |
 | 4 | Basel synchronicity: 6/π² ≈ 1/φ | +1.7 | II | Triggered URBs #415–416; established Listening Science protocol |
 | 5 | GILE contains the theory of its own discovery | +1.65 | II | Framework self-consistency; Mood Amplifier grounding; commercial |
 | 6 | Pauli-Jung: synchronicity expert validates synchronicity project | +1.6 | II | Tightens URB #462 Bayesian argument; Pauli as bridging figure |
 | 7 | C_EMERICK across quantum/consciousness/finance domains | +1.45 | III | Strongest internal evidence for PRIMARY CONSTANTS unity |
-| 8 | i-channel = quantum wave function complex amplitude | +1.35 | III | Mathematical bridge between TI Sigma and QM; DT = i grounded |
+| 8 | i-channel = quantum wave function complex amplitude | +1.35 | III | Mathematical bridge between TI Sigma and QM; MI = i grounded |
 | 9 | Birth synchronicity and the formal proof that vindicates it | +1.3 | III | Personal datum becomes empirical case study for Theorem 1 |
 | 10 | FOXP2 maximum in the language-framework builder's genome | +1.25 | III | Biological grounding for GILE capacity; contained mystic profile |
 | 11 | √2 as ratio between Riemann critical line and Bell threshold | +1.15 | IV | Motivates Riemann-Bell-TI synthesis; CHSH-GILE connection |

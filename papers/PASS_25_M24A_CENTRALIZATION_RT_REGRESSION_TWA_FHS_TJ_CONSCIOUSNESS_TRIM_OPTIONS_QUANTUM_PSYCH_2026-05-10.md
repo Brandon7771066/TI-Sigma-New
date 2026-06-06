@@ -453,9 +453,9 @@ c25 for Brandon ratification.**
 ## 7. TWA + FHS + TJ for consciousness/intuition (Pass-25 directive)
 
 **TWA (`papers/urb_566_tralse_wave_algebra.md`):** 5-valued carrier
-𝕋₅ = {F, I, T, TR, DT}; phase operator P₅ = e^{2πi v / 5}; MR collapse
+𝕋₅ = {F, I, T, TR, MI}; phase operator P₅ = e^{2πi v / 5}; MR collapse
 threshold θ_DT ≈ 0.8647 (= cos(π/8)? — actually verifiable as the value
-above which superposition collapses to DT).
+above which superposition collapses to MI).
 
 **FHS (`papers/urb_568_fractal_harmonic_systems.md`):** three-level
 hierarchy prime FHS (ζ-zeros) ↔ toroidal FHS ↔ neural FHS; coherence
@@ -510,10 +510,10 @@ whose output is nonclassical (O(P) = nonclassical), the MR-truth value
 of "P is classical" simultaneously:
 - evaluates True (substrate-classical),
 - evaluates False (output-nonclassical),
-- → MR2 state τ(P) ∧ ¬τ(P) = **Double Tralse (DT)**.
+- → MR2 state τ(P) ∧ ¬τ(P) = **Meta-Indeterminate (MI)**.
 
-But Brandon's principle ADDS: in this DT state, the classification
-becomes **MOOT (MT-B1, Meta-Truth Moot)** — the system is in DT, but
+But Brandon's principle ADDS: in this MI state, the classification
+becomes **MOOT (MT-B1, Meta-Truth Moot)** — the system is in MI, but
 the *question* "is P classical?" has no operational consequences in
 the MOOT-condition.
 
@@ -523,14 +523,14 @@ quantum-cognition claims. The objection runs: "neurons are classical
 substrates, so there's no quantum cognition." Brandon's principle replies:
 "neurons (classical substrate) producing nonclassical outputs (e.g.,
 order-effect data of §3, contextuality data of Aerts 1995, the quantum
-QQ-equality of Wang–Busemeyer 2013) are MOOT-DT for classical
+QQ-equality of Wang–Busemeyer 2013) are MOOT-MI for classical
 classification" — the substrate-classical assertion remains True
 *and* False simultaneously and is operationally moot.
 
 This is a **principled defence against the Tegmark-decoherence objection**:
 Tegmark argues neuron decoherence is too fast for Orch-OR. Brandon's
 principle does not deny the substrate fact; it asserts the
-substrate-classification is MOOT in DT *given* the nonclassical
+substrate-classification is MOOT in MI *given* the nonclassical
 output evidence. The Orch-OR mechanism is allowed to be substrate-
 agnostic — only the inputs/outputs need to be quantum-coherent at the
 relevant scale.

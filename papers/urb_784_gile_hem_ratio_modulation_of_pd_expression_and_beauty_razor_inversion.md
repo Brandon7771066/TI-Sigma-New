@@ -47,7 +47,7 @@ The Verisyn balance point ρ = 1 marks the lower-mid / upper-mid split: above it
 
 ### 1.3 Why ρ Modulates PD Expression
 
-PD (Permissibility Distribution, URB #615) is a 5-valued probability mass over {True, False, Tralse, DT, Indeterminate}. The GILE→PD conversion (URB #625) is *piecewise*: at the BR-relevant margins it is approximately linear in GILE *given fixed HEM*, but the slope and even the **sign** of dPD/dGILE depend on the local HEM context. Two BTs with identical GILE scores can land in opposite PD-half-planes if their HEM contexts differ. The ratio ρ captures the relevant scaling:
+PD (Permissibility Distribution, URB #615) is a 5-valued probability mass over {True, False, Tralse, MI, Indeterminate}. The GILE→PD conversion (URB #625) is *piecewise*: at the BR-relevant margins it is approximately linear in GILE *given fixed HEM*, but the slope and even the **sign** of dPD/dGILE depend on the local HEM context. Two BTs with identical GILE scores can land in opposite PD-half-planes if their HEM contexts differ. The ratio ρ captures the relevant scaling:
 
 - ρ_high: GILE evidence is the rate-limiting input. Increasing GILE shifts PD toward T monotonically. BR's premise (aesthetic → truth) holds.
 - ρ_mid: GILE and HEM contributions are comparable. BR's premise holds in expectation but with noise scaling as |1 − ρ|.

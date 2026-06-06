@@ -1,0 +1,1 @@
+- [DT → MI canonical rename](dt-to-mi-rename.md) — "DT"/"Double Tralse" truth-label is now "MI"/"Meta-Indeterminate"; rename only standalone `\bDT\b`, never the glued tokens (DTM-1, DefT, UDT-1, SDT, DTV/DTA, MR-IDC, FASTA).

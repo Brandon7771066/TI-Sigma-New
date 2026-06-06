@@ -84,7 +84,7 @@ The DE-Photon modulation τ_effective = τ_DE × e^{GILE/6} produces a spectrum:
 
 | GILE Level | GILE Value | τ_effective / τ_DE | Phenomenological State |
 |-----------|-----------|-------------------|----------------------|
-| DT/collapsed | 0 | 1× | Flat time, no subjective dilation |
+| MI/collapsed | 0 | 1× | Flat time, no subjective dilation |
 | Ordinary | 1–2 | 1.18–1.40× | Slightly enriched present |
 | Emerick Threshold | e−1 ≈ 1.72 | e^{(e-1)/6} ≈ 1.34× | ET crossing — meaningful dilation begins |
 | Radiant (RT) | φ² ≈ 2.618 | e^{φ²/6} ≈ 1.55× | Distinct sense of expanded present |
@@ -108,13 +108,13 @@ Günter Kletetschka's 2025 paper *"Three-Dimensional Time: A Mathematical Framew
 
 ### 3.2 TI Sigma Interpretation: Three Particle Generations as MR Levels
 
-The claim that three particle generations emerge as eigenvalues of a 3D temporal metric has a natural TI Sigma analog. The three MR levels (MR1 → DT screen, MR2 → GILE integration, MR3 → quality check + Meta-Truth scan) correspond to three "temporal depths" at which a proposition is evaluated.
+The claim that three particle generations emerge as eigenvalues of a 3D temporal metric has a natural TI Sigma analog. The three MR levels (MR1 → MI screen, MR2 → GILE integration, MR3 → quality check + Meta-Truth scan) correspond to three "temporal depths" at which a proposition is evaluated.
 
 **Formal mapping:**
 
 | Kletetschka | Physical Interpretation | TI Sigma Analog |
 |-------------|------------------------|-----------------|
-| t₁ eigenvalue → electron (0.511 MeV) | Lightest, most stable generation | MR1 output: DT-screened baseline truth |
+| t₁ eigenvalue → electron (0.511 MeV) | Lightest, most stable generation | MR1 output: MI-screened baseline truth |
 | t₂ eigenvalue → muon (105.7 MeV) | Second generation, unstable | MR2 output: GILE-weighted resolution |
 | t₃ eigenvalue → top quark (173 GeV) | Heaviest, most unstable | MR3 output: Meta-Truth corrected final |
 
@@ -198,7 +198,7 @@ Tozzi's key insight: the binding problem is solved by topology, not by synaptic 
 
 **TI Sigma translation:** The binding problem is the question of how multiple MR events cohere into a single moment of experience. On the T⁴ model, this coherence is automatic: the toroidal geometry ensures that any signal propagating on the manifold eventually traverses the through-hole and returns — all MR events are topologically continuous. The "unity of consciousness" is the topological connectedness of the T⁴, not a special emergent property requiring additional explanation.
 
-The **Tralse binding failure** (when consciousness becomes fragmented — dissociation, psychosis, extreme DT states) corresponds to topological tears in the T⁴: the through-hole collapses (the torus degenerates toward two separate spheres), severing the connection between the two T² components (G×L from I×E, or outer from inner BOK loops).
+The **Tralse binding failure** (when consciousness becomes fragmented — dissociation, psychosis, extreme MI states) corresponds to topological tears in the T⁴: the through-hole collapses (the torus degenerates toward two separate spheres), severing the connection between the two T² components (G×L from I×E, or outer from inner BOK loops).
 
 ---
 

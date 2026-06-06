@@ -83,7 +83,7 @@ The candidate independent variables are:
 | V3 | Absolute GILE level (sum of all four) | G + I + L + E (un-normalized magnitude) | `urb_652` |
 | V4 | Absolute HEM level | D1 + D2 + D3 + D4 | `urb_652` Part 6 |
 | V5 | GILE/HEM ratio *ρ* | V3/V4 | `urb_697` + `urb_784` |
-| V6 | PD (Permissibility Distribution) | 5-valued probability mass {T, F, Tralse, DT, I} | `urb_615` |
+| V6 | PD (Permissibility Distribution) | 5-valued probability mass {T, F, Tralse, MI, I} | `urb_615` |
 
 Candidate dependent variables: psi/synchronicity rate, numerology-cluster hit rate, BR-vindication rate (URB #784 P781′), divinatory accuracy.
 
@@ -292,7 +292,7 @@ Per Brandon's *"Remind me about what Pass 13 i-v and Pass 14 a/c/d are!!"* — f
 
 - **(i) Graph-Laplacian as canonical TSC Hamiltonian.** Yes/No: is the unit-weight H = D − A on `analyses/crystal_b4_hamiltonian/tsc_hamiltonian.py` the canonical TSC Hamiltonian? Or specify a different weighting (e.g., ring-radius-weighted)?
 - **(ii) Vertex count {1, 6, 6, 8, 8, 10, 10, 8}.** Yes/No: ratify this 57-vertex layout from urb_645 as canonical?
-- **(iii) V_4 ↔ {True, False, Indeterminate, Double Tralse} mapping.** Yes/No/Defer: does Pass-13 C.5's Klein-four group's four irreps {A, B_1, B_2, B_3} map to the canonical base-4 truth-labels? **High-leverage** if ratified — would mean the TSC point group encodes the framework's canonical truth-architecture.
+- **(iii) V_4 ↔ {True, False, Indeterminate, Meta-Indeterminate} mapping.** Yes/No/Defer: does Pass-13 C.5's Klein-four group's four irreps {A, B_1, B_2, B_3} map to the canonical base-4 truth-labels? **High-leverage** if ratified — would mean the TSC point group encodes the framework's canonical truth-architecture.
 - **(iv) Mott ↔ FQH ordering swap.** Pass-13 B.4 ground-state energies came out BEC=0.000 < Supersolid=0.920 < Mott=2.000 < FQH-like=2.400 < Fragmented=3.465 — **Mott and FQH-like swapped** vs urb_645's qualitative expectation. Choose: (a) Hamiltonian needs refinement; (b) urb_645's qualitative ordering needs reinterpretation; (c) FQH ansatz too simple — keep result, add nuance.
 - **(v) C.6 Cross-Ring CHSH: Interpretation A vs B.** Pass-13 set Interpretation A (framework-internal coherence measure for above-Tsirelson rings) as default; Brandon retains override to Interpretation B (literal super-quantum). Confirm A or override to B.
 

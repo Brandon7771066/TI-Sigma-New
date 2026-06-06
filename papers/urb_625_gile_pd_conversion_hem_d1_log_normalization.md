@@ -28,7 +28,7 @@ Two architectural problems are resolved. **Problem 1:** GILE decimal scores [0, 
 | **T** | ≈ 0.9340 | 1 − e^{−e} | Primary constant; Radiant Threshold (RT) |
 | Coherence window | [ET, C] ≈ [0.4142, 0.4370] | — | Width ≈ 0.023; quantum criticality zone |
 
-**The PD scalar (Permissibility Level):** A number PD ∈ [0, ∞) summarizing the distribution over truth-states {TT, TI, TF, DT, EV}. Zone structure from URB #615:
+**The PD scalar (Permissibility Level):** A number PD ∈ [0, ∞) summarizing the distribution over truth-states {TT, TI, TF, MI, EV}. Zone structure from URB #615:
 
 | PD range | Zone | Meaning |
 |---|---|---|
@@ -57,7 +57,7 @@ Given a GILE decimal score g ∈ [0, 1], the corresponding PD score is:
 **Zone 1 — Below ET (TF-dominant zone):**
 $$\text{PD}(g) = \frac{g}{2 \cdot \text{ET}} = \frac{g}{2(\sqrt{2}-1)} \quad \text{for } g \in [0, \text{ET}]$$
 
-- g = 0 → PD = 0 (no GILE coherence, DT-adjacent)
+- g = 0 → PD = 0 (no GILE coherence, MI-adjacent)
 - g = ET → PD = 0.5 (exactly the TF/TI boundary) ✓
 
 **Zone 2 — Coherence Window [ET, C] (TI zone):**

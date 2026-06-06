@@ -237,7 +237,7 @@ TRUE-TRALSE SCORE: ~0.92 (among highest physical materials)
 
 ```
 PHYSICAL PROPERTIES:
-- Atomic number 77 (Double Tralse)
+- Atomic number 77 (Meta-Indeterminate)
 - Most corrosion-resistant metal
 - 2nd densest element
 - Cosmic origin (meteors)
@@ -257,7 +257,7 @@ TI FRAMEWORK CONNECTIONS:
 ```
 WHY IRIDIUM = HIGH TRUE-TRALSE:
 
-1. DOUBLE TRALSE ENCODING
+1. META-INDETERMINATE ENCODING
    - 77 = 7 × 11 = self-referential truth
    - The number ENCODES the Tralse concept
 

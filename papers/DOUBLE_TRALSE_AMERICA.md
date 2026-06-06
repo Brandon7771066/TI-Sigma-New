@@ -1,4 +1,4 @@
-# Double Tralse & The American Paradox
+# Meta-Indeterminate & The American Paradox
 ## America Was Explicitly Built on Tralse
 
 **Author:** Brandon Charles Emerick  
@@ -36,9 +36,9 @@ The founders weren't wrong. Neither are the patriots. We are and always have bee
 
 ---
 
-## The Double Tralse Phenomenon
+## The Meta-Indeterminate Phenomenon
 
-**Double Tralse = An entity that unconsciously acknowledges (by necessity) but consciously denies their own tralseness.**
+**Meta-Indeterminate = An entity that unconsciously acknowledges (by necessity) but consciously denies their own tralseness.**
 
 This is **maximal contradiction in the form of Denial**, similar to pre-tralse information.
 
@@ -46,7 +46,7 @@ This is **maximal contradiction in the form of Denial**, similar to pre-tralse i
 
 > "You cannot possibly be an American and claim that contradictions can't exist… unless you ARE an American!" 😂
 
-From a typical American perspective, we are DOUBLE Tralse:
+From a typical American perspective, we are Meta-Indeterminate:
 - Living the contradiction (unconscious acknowledgment)
 - Denying contradictions exist (conscious denial)
 
@@ -129,7 +129,7 @@ Americans who claim:
 Are themselves living proof of Tralse:
 - They ARE the contradiction they deny
 - Their existence refutes their claim
-- This makes them Double Tralse
+- This makes them Meta-Indeterminate
 
 ---
 

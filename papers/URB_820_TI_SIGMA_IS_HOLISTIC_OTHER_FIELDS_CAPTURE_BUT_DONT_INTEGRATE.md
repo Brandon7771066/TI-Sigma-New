@@ -71,7 +71,7 @@ The URB series spans:
 - Philosophy of academia / sociology of philosophy (URB #817's critique of academia not linguists; URB #818's GILE-E hypothesis applied to philosophy outside philosophy of language).
 - Philosophy of science (URB #818's GILE-E hypothesis as a philosophy-of-science thesis; URB #819's Lakatosian framing of EXP+RAD+ANA coherence; URB #820 §3 here engaging Wilber and Hegel as cautionary cases).
 - Structural philosophy of TI Sigma itself (URB #819's EXP+RAD+ANA grid; URB #820 here adding HOL).
-- Formal mathematics: 5-valued logic (T/F/t/f/DT) + Lean4 formalization of all six Millennium Prize Problems + Tralse Wave Algebra + BOK 24-cell + Leech lattice + E8 Heisenberg-Parabolic 5-grading + Monster character table + j-invariant work.
+- Formal mathematics: 5-valued logic (T/F/t/f/MI) + Lean4 formalization of all six Millennium Prize Problems + Tralse Wave Algebra + BOK 24-cell + Leech lattice + E8 Heisenberg-Parabolic 5-grading + Monster character table + j-invariant work.
 - Neuroscience and biometrics: EEG + fNIRS + HRV integration in the Mood Amplifier Hub; the FAAH protocol; the LCC (Lempel-Ziv complexity) anchor at DANDI:000552; URB #804's pre-registered DANDI replication protocol.
 - Quantum-classical hybrid mechanisms: TI Sigma's "non-local correlations beyond classical neuroscience" framing; URB #798's brutal-honesty audit of BEC/Orch-OR overclaims.
 - Economics and prediction markets: GSA v2 stock algorithm; Kalshi integration; TI Framework applied to prediction markets.

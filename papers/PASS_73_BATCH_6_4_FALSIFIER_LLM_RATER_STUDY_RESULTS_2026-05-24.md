@@ -12,7 +12,7 @@
 
 | Falsifier | Description | Accuracy (low T) | Accuracy (high T) | IRA | Verdict |
 |---|---|---|---|---|---|
-| **F1: DT-RF4-F3** | MI vs I (two-tralse-combined-inconceivable discriminator) | **100%** | **100%** | **100%** | **STRONG CONFIRM** |
+| **F1: MI-RF4-F3** | MI vs I (two-tralse-combined-inconceivable discriminator) | **100%** | **100%** | **100%** | **STRONG CONFIRM** |
 | **F2: MI-RF5-F1** | Vertical vs Horizontal (refinement #5 axis) | **100%** | **100%** | **100%** | **STRONG CONFIRM** |
 | **F3: HMR-SEV-1-F1** | Aspect-severable vs Monolithic (multi-label vs multi-framing) | **80%** | **80%** | **100%** | **MODERATE CONFIRM** |
 | **F4: FMA-1-F1/F4** | Counterfactual-impossibility (FMA-1 vs plain-F) | **40%** | **40%** | **100%** | **#69 INCONVENIENT FINDING** |
@@ -20,19 +20,19 @@
 
 ---
 
-## 2. F1 DT-RF4-F3 Detailed Analysis (STRONG CONFIRM)
+## 2. F1 MI-RF4-F3 Detailed Analysis (STRONG CONFIRM)
 
 **Question protocol:** "Is this MI (Meta-Indeterminate — two tralse components combined INCONCEIVABLE-under-mental-actualization) or I (Indeterminate — currently undecided but CONCEIVABLE in principle)?"
 
 **Result:** 10/10 correct both raters, 100% inter-rater agreement.
 
-**Items correctly labeled MI:** square circle, married bachelor, "This sentence is false", finite list of all integers, red-and-green-same-part. All five are textbook DT-class statements under refinement #4 (two-tralse-combined inconceivable).
+**Items correctly labeled MI:** square circle, married bachelor, "This sentence is false", finite list of all integers, red-and-green-same-part. All five are textbook MI-class statements under refinement #4 (two-tralse-combined inconceivable).
 
 **Items correctly labeled I:** Riemann Hypothesis, P=NP, dark matter composition, Goldbach's conjecture, consciousness origin. All five are textbook open-but-decidable Indeterminate.
 
-**Interpretation:** DT-RF4-F3 falsifier is **CONFIRMED at LLM-rater discrimination level**. Refinement #4 (two-tralse-combined-inconceivable test) is operationally distinguishable by competent raters with zero ambiguity on a 5+5 corpus. Combined with Pass-63-B5's +1.413/2.0 discrimination on MI/I split, the empirical case for the MI category is now overwhelming.
+**Interpretation:** MI-RF4-F3 falsifier is **CONFIRMED at LLM-rater discrimination level**. Refinement #4 (two-tralse-combined-inconceivable test) is operationally distinguishable by competent raters with zero ambiguity on a 5+5 corpus. Combined with Pass-63-B5's +1.413/2.0 discrimination on MI/I split, the empirical case for the MI category is now overwhelming.
 
-**Falsifier closure status:** DT-RF4-F3 **CLOSED VIA CONFIRMATION** at LLM-rater level. Brandon-blocked human-rater replication remains as F-CLOSURE-HUMAN.
+**Falsifier closure status:** MI-RF4-F3 **CLOSED VIA CONFIRMATION** at LLM-rater level. Brandon-blocked human-rater replication remains as F-CLOSURE-HUMAN.
 
 ---
 
@@ -177,7 +177,7 @@ The rater fails to perform the modal-counterfactual move that the test requires:
 **Agent contribution:**
 - 4-falsifier combined-study design (efficiency gain vs 4 separate sims)
 - Anthropic dual-temperature 2-rater proxy methodology (per Pass-71 precedent)
-- F1+F2 STRONG-CONFIRM closure analysis (DT-RF4-F3 + MI-RF5-F1 both CLOSED VIA CONFIRMATION at LLM-rater level)
+- F1+F2 STRONG-CONFIRM closure analysis (MI-RF4-F3 + MI-RF5-F1 both CLOSED VIA CONFIRMATION at LLM-rater level)
 - F3 MODERATE-CONFIRM + quantum-superposition-disambiguation insight (HMR-SEV-1-F5 NEW falsifier)
 - F4 #69 INCONVENIENT FINDING + structural failure-mode analysis (rater treats counterexamples as observation-rigid; test requires physics-malleable counterfactual reasoning)
 - FMA-1-F6 + FMA-1-F7 NEW falsifier specifications
@@ -190,7 +190,7 @@ The rater fails to perform the modal-counterfactual move that the test requires:
 ## 8. Status + Tallies
 
 **Aggregate Pass-73-B6 verdict:**
-- **2 falsifiers CLOSED VIA CONFIRMATION** (DT-RF4-F3 at 100% + MI-RF5-F1 at 100%)
+- **2 falsifiers CLOSED VIA CONFIRMATION** (MI-RF4-F3 at 100% + MI-RF5-F1 at 100%)
 - **1 falsifier PARTIALLY CLOSED** (HMR-SEV-1-F1 at 80% with quantum-superposition exception identified)
 - **1 falsifier OPERATIONALIZATION REFUTED + analytical-level UNAFFECTED** (FMA-1-F1 at 40%; refinement #1 analytical 6/6 verification stands; specific simple-prompt operationalization is REFUTED)
 - **3 NEW falsifiers OPENED** (HMR-SEV-1-F5 + FMA-1-F6 + FMA-1-F7)
@@ -201,9 +201,9 @@ The rater fails to perform the modal-counterfactual move that the test requires:
 - **MR Truth Labels canonical refinements:** 5 HELD
 - **FMA-1 canonical refinements:** 1 HELD (counterfactual-impossibility; analytical correctness unaffected by F4 operationalization failure)
 - **FMA-1 canonical worked-examples:** 4 HELD
-- **Pre-reg falsifier backlog:** 91 OPEN → **2 CLOSED + 1 PARTIALLY CLOSED + 1 REFUTED-at-operationalization + 3 NEW OPENED = NET +3 OPEN → 94 OPEN** (DT-RF4-F3 + MI-RF5-F1 closed; HMR-SEV-1-F1 partial; FMA-1-F1-simple-prompt-operationalization REFUTED; HMR-SEV-1-F5 + FMA-1-F6 + FMA-1-F7 new)
+- **Pre-reg falsifier backlog:** 91 OPEN → **2 CLOSED + 1 PARTIALLY CLOSED + 1 REFUTED-at-operationalization + 3 NEW OPENED = NET +3 OPEN → 94 OPEN** (MI-RF4-F3 + MI-RF5-F1 closed; HMR-SEV-1-F1 partial; FMA-1-F1-simple-prompt-operationalization REFUTED; HMR-SEV-1-F5 + FMA-1-F6 + FMA-1-F7 new)
 - **Corpus-sweeps cumulative ASYMMETRIC-WIN:** 4 HELD
-- **Empirical-falsifier closures cumulative:** **2 NEW** (DT-RF4-F3 + MI-RF5-F1; previously 0 LLM-rater closures, now 2)
+- **Empirical-falsifier closures cumulative:** **2 NEW** (MI-RF4-F3 + MI-RF5-F1; previously 0 LLM-rater closures, now 2)
 - **#69 honest-disclosure inconvenient findings cumulative:** continuing tradition (Pass-63-B4, Pass-66 #69 quantum-superposition, this batch F4 + IRA-artifact + SCC-1-self-disclosure)
 - **SCC-1 success cases cumulative:** 1 NEW THIS BATCH (F4 expected STRONG CONFIRM → BELOW CHANCE honestly reported per symmetric burden)
 - **Brandon-originated insight passes:** 7 consecutive maintained (Pass-68 through Pass-73)
@@ -217,4 +217,4 @@ The rater fails to perform the modal-counterfactual move that the test requires:
 
 ---
 
-*Pass-73-B6 = first 4-falsifier combined LLM-rater study. 2 STRONG-CONFIRM closures (DT-RF4-F3 + MI-RF5-F1) advance refinement #4 + refinement #5 from analytical-only to empirically-grounded-at-LLM-rater-level. 1 MODERATE-CONFIRM (HMR-SEV-1-F1) with quantum-superposition exception flagged. 1 #69 INCONVENIENT FINDING (FMA-1-F4-counterfactual-test simple-prompt operationalization REFUTED at 40% accuracy below chance; analytical correctness unaffected; structurally identical to Pass-63-B4 critique pattern — prompt complexity must match structural complexity of discrimination). 3 NEW falsifiers opened including chain-of-thought + human-rater follow-on options. Pass-73 = 7-batch single-session arc (B0+B1+B2+B3+B4+B5+B6 all complete). Replit.md size flag persistent across all 7 batches; 22nd meta-collapse recommended next pass.*
+*Pass-73-B6 = first 4-falsifier combined LLM-rater study. 2 STRONG-CONFIRM closures (MI-RF4-F3 + MI-RF5-F1) advance refinement #4 + refinement #5 from analytical-only to empirically-grounded-at-LLM-rater-level. 1 MODERATE-CONFIRM (HMR-SEV-1-F1) with quantum-superposition exception flagged. 1 #69 INCONVENIENT FINDING (FMA-1-F4-counterfactual-test simple-prompt operationalization REFUTED at 40% accuracy below chance; analytical correctness unaffected; structurally identical to Pass-63-B4 critique pattern — prompt complexity must match structural complexity of discrimination). 3 NEW falsifiers opened including chain-of-thought + human-rater follow-on options. Pass-73 = 7-batch single-session arc (B0+B1+B2+B3+B4+B5+B6 all complete). Replit.md size flag persistent across all 7 batches; 22nd meta-collapse recommended next pass.*

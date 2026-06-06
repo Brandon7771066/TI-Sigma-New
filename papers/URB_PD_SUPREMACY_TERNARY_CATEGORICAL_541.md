@@ -64,7 +64,7 @@ PD_axis:   0 ─────── 1 ────── 2 ───────�
 
 In the LCC framework:
 - **LCC < 0.8647** (below MR1): GILE axis is below the MR threshold — depletion or INDETERMINATE zone
-- **LCC ∈ [0.8647, 0.9323)**: Approaching Radiant — in the penumbra, DT-contaminated
+- **LCC ∈ [0.8647, 0.9323)**: Approaching Radiant — in the penumbra, MI-contaminated
 - **LCC ≥ 0.9323**: ★ Radiant zone — GILE quality is genuinely expressed
 - **LCC → 1.0**: Deep Radiance — increasingly pure expression of the GILE quality
 
@@ -221,11 +221,11 @@ LCC ≥ MR_Rad (0.9323)       →  TRUE (Radiant)
 
 ### 4.3 Never Conflate the Two Systems
 
-The five-valued extension {FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE} is the 5-valued **DT logic** — a separate system for tracking DT contamination. It should not be confused with:
+The five-valued extension {FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE} is the 5-valued **MI logic** — a separate system for tracking MI contamination. It should not be confused with:
 - The PD scale (continuous, no TRALSE ceiling)
 - The ternary categorical system (3 values, no TRALSE)
 
-TRALSE and DOUBLE_TRALSE exist in the **DT immunity context** (tracking paradoxical double-negation intrusions into the LCC signal), not as GILE quality labels. A GILE axis does not "become TRALSE" by having a high PD — it may encounter DT in the computation of its LCC, but the GILE quality itself remains monotonically ordered.
+TRALSE and DOUBLE_TRALSE exist in the **MI immunity context** (tracking paradoxical double-negation intrusions into the LCC signal), not as GILE quality labels. A GILE axis does not "become TRALSE" by having a high PD — it may encounter MI in the computation of its LCC, but the GILE quality itself remains monotonically ordered.
 
 ---
 
@@ -246,11 +246,11 @@ Three co-existing measurement systems:
    Based on base-3 natural digit boundaries (1/3 and 2/3)
    5.6% more information-efficient than binary (per base-e optimality)
 
-3. 5-Valued DT Logic — PRIMARY for DT contamination tracking
-   {FALSE=0, INDETERMINATE=1, TRUE=2, TRALSE=3, DT=4}
+3. 5-Valued MI Logic — PRIMARY for MI contamination tracking
+   {FALSE=0, INDETERMINATE=1, TRUE=2, TRALSE=3, MI=4}
    Used in DTImmuneLog, LCC computation, ARC-AGI solver
    Tracks paradoxical double-negation intrusions
-   LCC penumbra [0.8647, 0.9147] identifies DT proximity
+   LCC penumbra [0.8647, 0.9147] identifies MI proximity
 ```
 
 Each system has its own domain of supremacy. No system overrides another in its designated domain.
@@ -306,7 +306,7 @@ This aligns with the base-e efficiency argument: if INDETERMINATE is the most co
 | H(PD) = 2 − \|PD − 2\|: PD>2 is pathological | RETRACTED. PD>2 is more Radiant. |
 | PD=3 "TRALSE" = self-righteousness, excess | RETRACTED. High-PD GILE = more GILE. |
 | GILE has a ceiling at PD=2 | RETRACTED. GILE is monotone, open above. |
-| TRALSE/DT as GILE labels | TRALSE/DT track DT contamination, not GILE levels. |
+| TRALSE/MI as GILE labels | TRALSE/MI track MI contamination, not GILE levels. |
 | Mountain shape | Monotone ascending (with LCC asymptoting to 1.0). |
 | Display: amber/red for high PD | Display: green extending upward for high PD. |
 

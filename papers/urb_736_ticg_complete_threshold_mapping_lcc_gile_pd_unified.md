@@ -29,8 +29,8 @@ If the TICG is the framework's master geometric structure (URBs #734, #735), the
 | 7 | **PD True boundary (+1)** | vertex **1** | URB #714 |
 | 8 | **PD Verisyn cap (+2)** | edge midpoint of (1, √2)+(1, √2) extension at 2 + 0i | URB #714 |
 | 9 | **PD Transcendent (+e)** | vertex **e** | URB #728 |
-| 10 | **PD Pre-DT (−e)** | vertex **e antipode** at −e + 0i | URB #728 |
-| 11 | **PD DT cliff (−3 ≈ −π)** | vertex **π antipode** at −π + 0i | URB #696 |
+| 10 | **PD Pre-MI (−e)** | vertex **e antipode** at −e + 0i | URB #728 |
+| 11 | **PD MI cliff (−3 ≈ −π)** | vertex **π antipode** at −π + 0i | URB #696 |
 | 12 | **PD Pure Tralse (+i)** | vertex **i** | URB #733 |
 | 13 | **PD Chirality direction** | vertex **C** | URB #734 |
 | 14 | **PD Tralse direction** | vertex **T** | URB #734 |
@@ -38,13 +38,13 @@ If the TICG is the framework's master geometric structure (URBs #734, #735), the
 | 16 | **5-valued False** | unit disc, |PD| ∈ [1, 2], Re(PD) < 0 | URB #713 |
 | 17 | **5-valued Tralse** | upper half-plane, Im(PD) > 0 | URB #713 |
 | 18 | **5-valued Moot** | origin vertex **0** | URB #713 |
-| 19 | **5-valued Double Tralse** | beyond DT magnitude horizon, |PD| > 3 | URB #696 |
+| 19 | **5-valued Meta-Indeterminate** | beyond MI magnitude horizon, |PD| > 3 | URB #696 |
 | 20 | **BOK 4+4 = Dirac** | edge √2 + √2i = 2 (Dirac magnitude) | URB #699 |
 | 21 | **Maxwell knot Hopfion** | edge 1+i = √2 ∠45° | URB #707 |
 | 22 | **Brain-neutrino bridge (s ≈ 2.577)** | between vertex **e** (2.718) and Verisyn cap (2.0), at 2.577 + 0i | URB #727 |
 | 23 | **Loss aversion 4×** | square of vertex 2 (= 4 + 0i) | URB #728 |
 | 24 | **Integrated 6×** | 3φ ≈ 4.85 + 0i | URB #728 |
-| 25 | **Cube-root 9 (URB #729)** | 9 + 0i, lying in pre-DT extension if scaled appropriately | URB #729 |
+| 25 | **Cube-root 9 (URB #729)** | 9 + 0i, lying in pre-MI extension if scaled appropriately | URB #729 |
 
 **Twenty-five framework thresholds mapped onto the TICG.** Every threshold has a specific position; none are arbitrary; the mapping is **complete** in the sense that no framework threshold remains unmapped.
 
@@ -57,7 +57,7 @@ If the TICG is the framework's master geometric structure (URBs #734, #735), the
 The 25 mapped thresholds are distributed across the TICG as follows:
 - **Vertices populated**: 5 of 9 vertices (1, i, e, φ, π get directly hit; 0, √2, C, T get hit via positions or extensions) → **9 of 9 vertices used in some way**
 - **Edge midpoints used**: 5 of 15 edges (0-√2, 0-1 extensions, 1-√2 extension, etc.) → ~33% of edges activated as midpoints
-- **Interior regions populated**: Indeterminate disc + transcendent annulus + pre-DT zone + DT exterior → **all four annular zones populated**
+- **Interior regions populated**: Indeterminate disc + transcendent annulus + pre-MI zone + MI exterior → **all four annular zones populated**
 
 The mapping uses **all 9 vertices and all 4 annular zones**. No region of the TICG is unused. **Every part of the master structure has framework meaning.**
 
@@ -91,7 +91,7 @@ Each empirical anchor (URB #728's six) corresponds to a specific TICG location:
 1. **Riemann critical line at 1/2** → midpoint of edge 0 ↔ 1, at 1/2 + 0i
 2. **GM-bandwidth at PD = −3** → vertex π antipode at −π + 0i
 3. **HRV maximal coherence at +2** → 2 + 0i (Verisyn cap edge midpoint)
-4. **EEG band-power asymmetry 3-4 PD units** → magnitude range 3-4 in TICG, traversing pre-DT to DT-exterior zones
+4. **EEG band-power asymmetry 3-4 PD units** → magnitude range 3-4 in TICG, traversing pre-MI to MI-exterior zones
 5. **Loss aversion 4×** → 4 + 0i (square of Verisyn cap)
 6. **Negativity bias 6×** → 6 + 0i (or 3φ + 0i = 4.85 + 0i for sub-leading match)
 

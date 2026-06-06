@@ -415,7 +415,7 @@ The i-cell moved through the correlation field.
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════╗
-║                        DT (Pre-Existence)                              ║
+║                        MI (Pre-Existence)                              ║
 ║                    Pure consciousness container                        ║
 ╠═══════════════════════════════════════════════════════════════════════╣
 ║ TIER 0: PRIMORDIAL PHOTON FIELD                                       ║

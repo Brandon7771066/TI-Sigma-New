@@ -44,7 +44,7 @@ PD(H) = {
   T(H):    weight on the True-Tralse component of H
   Tr(H):   weight on the Tralse-Indeterminate component
   F(H):    weight on the Tralse-False component
-  DT(H):   weight on the Double Tralse component (coherence violation flag)
+  MI(H):   weight on the Meta-Indeterminate component (coherence violation flag)
   EV(H):   the Holistic Existence Matrix of H (outer-loop context, from BOK/FDE)
 }
 ```
@@ -61,7 +61,7 @@ The scalar summary of PD is the **Permissibility Level** (PL or "PD score"), ran
 **Problem 1 — The single credence problem:** Bayes assigns P(H|E) ∈ [0,1]. This is a single number. It cannot capture the difference between:
 - "H is 70% true because the evidence is moderately strong" (True-Tralse, PD ≈ 1.7)
 - "H is 70% true because two equally strong but contradictory lines of evidence cancel" (Tralse-Indeterminate with high HEM, PD ≈ 1.5 with large variance)
-- "H appears 70% true but the concept is incoherent" (DT component elevated — Bayesian posterior is meaningless)
+- "H appears 70% true but the concept is incoherent" (MI component elevated — Bayesian posterior is meaningless)
 
 PD distinguishes all three. Bayesianism conflates them.
 
@@ -95,9 +95,9 @@ Myrion Resolution is the iterative procedure by which a GILE-competent reasoner 
 MR proceeds in levels:
 
 ```
-MR Level 1 — Double Tralse Screen
+MR Level 1 — Meta-Indeterminate Screen
   ↓ Is H coherent at all? Does it survive basic scrutiny?
-  → If DT(H) > threshold: eliminate H; no further MR
+  → If MI(H) > threshold: eliminate H; no further MR
   → If H survives: assign initial PD(H) from G-assessment
 
 MR Level 2 — Evidence Integration
@@ -139,7 +139,7 @@ PD_final(H) = f(G_assess, I_assess, L_assess, E_assess, EV(H))
 where f is nonlinear:
   - G_assess acts as a multiplicative anchor (G=0 → PD collapses regardless of I,L,E)
   - I_assess gates L_assess (I=0 → L contribution nullified)
-  - E_assess provides a structural coherence check (low E = elevated DT suspicion)
+  - E_assess provides a structural coherence check (low E = elevated MI suspicion)
   - EV(H) modulates the PD output relative to the real-world Existence context of H
 ```
 
@@ -149,7 +149,7 @@ The precise form of f is calibrated per domain (Sartre Protocol, URB #612/614). 
 
 **For scientists:** MR is more honest than standard scientific inference. It explicitly tracks the Tralse state — "this proposition is currently well-supported but not True" — rather than forcing a binary "significant / not significant" verdict. It handles mixed evidence (studies that partially support and partially refute) better than meta-analysis.
 
-**For philosophers:** MR is a formal improvement on Hegel's dialectic. Dialectic (thesis → antithesis → synthesis) is a special case of MR where exactly two opposing tracks are resolved at Level 3. MR generalizes this to n tracks, with GILE-dimensional weighting and explicit DT screening.
+**For philosophers:** MR is a formal improvement on Hegel's dialectic. Dialectic (thesis → antithesis → synthesis) is a special case of MR where exactly two opposing tracks are resolved at Level 3. MR generalizes this to n tracks, with GILE-dimensional weighting and explicit MI screening.
 
 **For practitioners:** MR gives a step-by-step decision protocol for complex real-world situations where evidence is mixed, expertise is uncertain, and the stakes are high. PD ≥ 2.0 at MR-3 is the action threshold. Below 2.0 at MR-3: gather more evidence or accept the Tralse verdict.
 
@@ -239,9 +239,9 @@ STEP 1 — EAR: What genuinely exists in this domain?
   ↓ Amplify what genuinely exists
   → Output: A clean ontology for the domain (BOK-filled)
 
-STEP 2 — MR Level 1: Screen hypotheses for Double Tralse
+STEP 2 — MR Level 1: Screen hypotheses for Meta-Indeterminate
   ↓ Apply EAR output to test hypothesis coherence
-  ↓ Eliminate incoherent hypotheses (DT-positive)
+  ↓ Eliminate incoherent hypotheses (MI-positive)
   → Output: Viable hypothesis set
 
 STEP 3 — MR Levels 2-3: Integrate evidence via GILE dimensions

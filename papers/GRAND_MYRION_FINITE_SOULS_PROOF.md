@@ -4,7 +4,7 @@
 **Author:** Brandon Emerick (via ChatGPT dialogue)  
 **Date:** December 8, 2025 (recovered insight)  
 **Status:** Mathematical proof sketch  
-**Terminology:** Verisyn = Myrion; DT = i
+**Terminology:** Verisyn = Myrion; MI = i
 
 ---
 
@@ -135,8 +135,8 @@ Each new novel adds something real, even though the space of possible novels is 
 
 How can infinite potential produce finite instantiation?
 
-**Answer from DT Brittleness:**
-- DT (infinite potential) shattered
+**Answer from MI Brittleness:**
+- MI (infinite potential) shattered
 - Shattering = transition from potential to actual
 - Actualization is always finite (it takes time)
 - At any moment, only finite souls have emerged

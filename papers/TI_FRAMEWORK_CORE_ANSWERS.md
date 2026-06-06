@@ -11,14 +11,14 @@
 
 **Answer:**
 > CCC can only veto i-cells BEFORE the dark energy original info exists! True truth must 
-> ALWAYS interact with all new dark energy shells with 0.91 correlation. DT (Dark Truth) 
+> ALWAYS interact with all new dark energy shells with 0.91 correlation. MI (Dark Truth) 
 > is a lightning rod for new tralsities - literally!!! But somehow, there's no explosion 
 > like in the beginning.
 
 **Key Insights:**
 - CCC has a **temporal constraint** - can only veto BEFORE dark energy info exists
 - 0.91 correlation is mandatory for True Truth interaction with new shells
-- Dark Truth (DT) acts as a **lightning rod** for new tralsities
+- Dark Truth (MI) acts as a **lightning rod** for new tralsities
 - The "no explosion" suggests a dampening mechanism developed after cosmic origin
 
 **Open Question:** What prevents the explosion now that didn't exist at the beginning?

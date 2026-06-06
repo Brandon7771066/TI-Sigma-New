@@ -31,7 +31,7 @@
 - **Surreal numbers / non-standard analysis**: extended-arithmetic frames where standard equalities can be redefined
 - **Tropical geometry / max-plus algebra**: 2+2=2 (max), redefinition of "+" yields nonstandard equalities
 
-**Strengthening effect on CEF-1 J3c (Occam):** the "different category" violation is now AGGRAVATED — not only is faulty-arithmetic-held-with-conviction structurally-equivalent-to other-DT-content (B11 J3 argument), but the very content "2+2=5" is LITERALLY VALID in established mathematical frames. The brain holding it isn't even doing something "extra-curricular" — it's potentially accessing legitimate non-standard mathematical-content (even if the holder is unaware of the frame).
+**Strengthening effect on CEF-1 J3c (Occam):** the "different category" violation is now AGGRAVATED — not only is faulty-arithmetic-held-with-conviction structurally-equivalent-to other-MI-content (B11 J3 argument), but the very content "2+2=5" is LITERALLY VALID in established mathematical frames. The brain holding it isn't even doing something "extra-curricular" — it's potentially accessing legitimate non-standard mathematical-content (even if the holder is unaware of the frame).
 
 **D5 evidence-class:** corpus-internal (math-literature-grounded); third-person verifiable; NOT Brandon-N=1.
 
@@ -93,7 +93,7 @@
 - **CRN-1 (Pass-75-B0 secondary)** — koan-test-engagement consciousness-state-relative
 - **TSI-1 (Pass-75-B0 secondary)** — ego-vs-full-consciousness in test-response
 - **CDA-1 #26 + L1-L5** — test-construction L3+ tier requirement
-- **DTM-1 #29** — DT-as-Mind-Marker; nonsense-tests reveal mind-marker status
+- **DTM-1 #29** — MI-as-Mind-Marker; nonsense-tests reveal mind-marker status
 - **SRC-1 #25** — self-reference-implies-consciousness; redundant-tests are self-referential meta-evaluations
 - **Pass-66 ultimate-koan canonical** — Brandon first-manic-episode arc N=1 anchor pre-figures RTC-1
 

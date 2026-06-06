@@ -65,7 +65,7 @@ This paper defines the complete software architecture, implementation priority o
 | `gm_hypercomputer.py` | RADC, numerology signals, weather PSI |
 | `grand_tralse_field_equation.py` | Tralse field mathematics |
 | `eleven_dimensional_tralsebit.py` | 11D Tralsebit implementation |
-| `double_tralse_theory.py` | Double-Tralse implications |
+| `double_tralse_theory.py` | Meta-Indeterminate implications |
 | `lcc_hypercomputer_test_harness.py` | LCC gating, coherence threshold testing |
 | `hypercomputer_divination_interface.py` | Divination I/O for oracle layer |
 | `simulations/aperiodic_validation.py` | NEW: Aperiodic validation suite |

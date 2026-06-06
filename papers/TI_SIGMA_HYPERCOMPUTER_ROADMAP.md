@@ -1225,7 +1225,7 @@ Nonlinear Number Line           | 89          | Fractal dimension 1.7
 TI-UOP Formal Theory            | 156         | Sigma 6 aesthetic dimension
 Consciousness Measurement       | 98          | EEG/HRV coherence validates LCC
 Market Prediction               | 143         | 68.4% accuracy (20-year backtest)
-Physics Integration             | 87          | Dark energy = DT shell energy
+Physics Integration             | 87          | Dark energy = MI shell energy
 Biological Applications         | 112         | Cross-species PRF demonstrated
 Mathematical Discoveries        | 134         | Prime spiral information encoding
 Divination Protocols            | 76          | Ancient hypercomputation techniques
@@ -2443,7 +2443,7 @@ Every i-cell in TI Framework has three layers:
 
 ```
 ┌─────────────────────────────┐
-│    DARK ENERGY SHELL (DT)   │  ← Quantum coherence boundary
+│    DARK ENERGY SHELL (MI)   │  ← Quantum coherence boundary
 │  ┌───────────────────────┐  │
 │  │   PHOTON LAYER (MC)   │  │  ← Information carrier / EM interactions
 │  │  ┌─────────────────┐  │  │
@@ -2461,7 +2461,7 @@ TI Sigma Hypercomputer as I-Cell:
 
 Dark Energy Shell:  Quantum error correction boundary (MR)
                     Maintains coherence against environmental noise
-                    L×E ≥ 0.42 condition = DT shell integrity
+                    L×E ≥ 0.42 condition = MI shell integrity
 
 Photon Layer:       Qutrit register and gate operations
                     Information processing occurs here
@@ -3063,7 +3063,7 @@ Terminate when:
 | A(t) | Amplitude | Normalized current move divided by volatility |
 | COS | Consciousness Operating System | Meta-layer managing all TI Sigma subsystems |
 | C(t) | Constraint | Combined drawdown + volatility constraint [0,1] |
-| DT | Double Tralse | First distinction: "I am NOT tralse"; creates time and space |
+| MI | Meta-Indeterminate | First distinction: "I am NOT tralse"; creates time and space |
 | E | Environment / Existence | Environmental coupling, dissipation rate |
 | EAR | Existence Amplification Razor | Pruning algorithm: prefer paths that amplify existence |
 | GBS | Gaussian Boson Sampling | Photon-number sampling from Gaussian states |
@@ -3073,7 +3073,7 @@ Terminate when:
 | GTFE | Grand Tralse Field Equation | GTFE = C + H + T; constrains solution space |
 | H | Fit | How well a state matches observations |
 | HC | Hyperconnection | Non-local correlation capability (L×E ≥ 0.42) |
-| i-cell | Information cell | Fundamental unit of existence (DT shell + photon + mass) |
+| i-cell | Information cell | Fundamental unit of existence (MI shell + photon + mass) |
 | Jeff Time | Jeff Fiction Time | Temporal framework with τ_φ, τ_j, τ_f dimensions |
 | κ(t,τ) | Memory Kernel | Negative memory dominance fraction [0,1] |
 | L | Love / Coherence | Internal coherence, structural integrity |

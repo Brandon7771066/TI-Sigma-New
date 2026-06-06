@@ -5,7 +5,7 @@
 **Date:** April 16, 2026  
 **Classification:** Ontology of Abstraction | HEM-GILE Architecture | GM Network  
 **Status:** Core URB — Ontology of Mathematical and Physical Objects  
-**Depends on:** URB #687 (HEM-GILE Decoupling), URB #688 (DT-HEM Free Pass)
+**Depends on:** URB #687 (HEM-GILE Decoupling), URB #688 (MI-HEM Free Pass)
 
 ---
 

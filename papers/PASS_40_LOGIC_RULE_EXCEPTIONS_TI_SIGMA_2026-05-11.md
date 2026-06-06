@@ -17,7 +17,7 @@ This paper does **not** claim to invalidate classical Modus Tollens *as a formal
 - The inference crosses **modality / axis boundaries** (e.g., MP-3 AA-shift, ID-1 temporal/quantum).
 - The reasoner is performing **inverse inference / abduction** under non-monotonic structural conditions (e.g., MT-1 U-shape, MT-2 disjunctive antecedent compression).
 
-Some entries (NC-1, EFQ-1, RAA-1) are best read as TI-Sigma adopting **non-classical consequence relations** (paraconsistent / DT-tolerant), not as discovered exceptions inside classical logic. Each entry below is marked **[CLASSICAL-MIS-APPLICATION]**, **[NON-CLASSICAL-COMMITMENT]**, or **[ABDUCTIVE / INVERSE-INFERENCE FAILURE]**.
+Some entries (NC-1, EFQ-1, RAA-1) are best read as TI-Sigma adopting **non-classical consequence relations** (paraconsistent / MI-tolerant), not as discovered exceptions inside classical logic. Each entry below is marked **[CLASSICAL-MIS-APPLICATION]**, **[NON-CLASSICAL-COMMITMENT]**, or **[ABDUCTIVE / INVERSE-INFERENCE FAILURE]**.
 
 Headline-language in this paper has been calibrated against this scope: "MT fails" should always be read as "naïve MT-style inference fails when applied to a probabilistic/non-monotonic/non-classical setting" — not as a refutation of classical MT itself.
 
@@ -60,7 +60,7 @@ The first step (¬synch ⊢ ¬high) is correct under classical MT *if* "high →
 
 ### A. Modus Ponens — failure modes (P → Q, P ⊬ Q in TI-Sigma settings)
 
-**MP-1 [NCC] (TI-Sigma novel):** **DT antecedent.** If P is DT (τ(P) ∧ ¬τ(P), per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`), classical MP fires both directions. TI-Sigma chooses to register the conclusion as DT(Q) rather than as classical contradiction.
+**MP-1 [NCC] (TI-Sigma novel):** **MI antecedent.** If P is MI (τ(P) ∧ ¬τ(P), per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`), classical MP fires both directions. TI-Sigma chooses to register the conclusion as MI(Q) rather than as classical contradiction.
 
 **MP-2 [NCC] (literature-aligned: many-valued / partial logics):** **Indeterminate antecedent.** If P is in MR2 state (Indeterminate), τ(P) is not assertible with the strength classical MP requires. Indeterminate is an ontological gap, not an epistemic one.
 
@@ -76,7 +76,7 @@ The first step (¬synch ⊢ ¬high) is correct under classical MT *if* "high →
 
 **MT-2 [CLM] (literature-aligned: classical premise mis-specification):** **Disjunctive antecedent compression.** If (P ∨ R) → Q is mis-stated as "P → Q" (dropping R), naïve MT from ¬Q gives ¬P, but the correctly-stated antecedent gives ¬P AND ¬R. This is *premise mis-specification*, not a logic-rule failure — but endemic in informal TI-Sigma-style reasoning, so it is catalogued here as a practitioner pitfall.
 
-**MT-3 [NCC] (TI-Sigma novel):** **DT consequent.** If Q is DT, then ¬Q is also Tralse-true; the classical "¬Q is fully true" premise is denied in TI-Sigma's base-4 truth-space.
+**MT-3 [NCC] (TI-Sigma novel):** **MI consequent.** If Q is MI, then ¬Q is also Tralse-true; the classical "¬Q is fully true" premise is denied in TI-Sigma's base-4 truth-space.
 
 **MT-4 [CLM/ABD] (literature-aligned: measurement-error / observational uncertainty):** **Imperfect detection (epistemic ¬Q vs ontic ¬Q).** Observed "¬Q" may be measurement failure; the classical rule assumes the premise is ontically true. *Distinct from MT-2 in failure-locus:* MT-4 is about the truth-status of the observed premise; MT-2 is about completeness of the antecedent specification.
 
@@ -84,17 +84,17 @@ The first step (¬synch ⊢ ¬high) is correct under classical MT *if* "high →
 
 ### C. Other classical-rule failure modes
 
-**EM-1 [NCC] (literature-aligned: many-valued / FDE / paracomplete logics):** **Excluded-Middle exhaustiveness denial.** P ∨ ¬P is *not* exhaustive in base-4: I and DT are real ontological options. TI-Sigma exhaustive disjunction = **P ∨ ¬P ∨ I(P) ∨ DT(P)** + meta-truth attachments. Per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
+**EM-1 [NCC] (literature-aligned: many-valued / FDE / paracomplete logics):** **Excluded-Middle exhaustiveness denial.** P ∨ ¬P is *not* exhaustive in base-4: I and MI are real ontological options. TI-Sigma exhaustive disjunction = **P ∨ ¬P ∨ I(P) ∨ MI(P)** + meta-truth attachments. Per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`.
 
-**NC-1 [NCC] (literature-aligned: paraconsistent logic, Priest LP):** **Non-Contradiction suspended for DT-cases.** ¬(P ∧ ¬P) is denied for DT-cases by definition. TI-Sigma is paraconsistent at DT, classical elsewhere. NOT a discovered exception inside classical logic — it is an explicit TI-Sigma adoption of a non-classical consequence relation.
+**NC-1 [NCC] (literature-aligned: paraconsistent logic, Priest LP):** **Non-Contradiction suspended for MI-cases.** ¬(P ∧ ¬P) is denied for MI-cases by definition. TI-Sigma is paraconsistent at MI, classical elsewhere. NOT a discovered exception inside classical logic — it is an explicit TI-Sigma adoption of a non-classical consequence relation.
 
-**EFQ-1 [NCC] (literature-aligned: paraconsistent logic, relevance logic):** **Ex Falso Quodlibet rejected.** Classical logic: ⊥ ⊢ Q for any Q. TI-Sigma rejects explosion to keep DT informative; without rejection, every DT-state would trivialize the corpus. *Required-companion to NC-1.* Pass-37 implicit; here promoted to explicit canonical (TI-Sigma novel framing of a literature-standard paraconsistent commitment).
+**EFQ-1 [NCC] (literature-aligned: paraconsistent logic, relevance logic):** **Ex Falso Quodlibet rejected.** Classical logic: ⊥ ⊢ Q for any Q. TI-Sigma rejects explosion to keep MI informative; without rejection, every MI-state would trivialize the corpus. *Required-companion to NC-1.* Pass-37 implicit; here promoted to explicit canonical (TI-Sigma novel framing of a literature-standard paraconsistent commitment).
 
 **HS-1 [ABD/NCC] (literature-aligned: Sorites paradox, fuzzy logic):** **Hypothetical-Syllogism Sorites-chain failure.** P→Q, Q→R ⊬ P→R when the chain accumulates Indeterminate-tolerance at each step.
 
 **ID-1 [CLM] (literature-aligned: process philosophy, quantum logic):** **Identity in time-extended / quantum settings.** P=P fails for time-extended objects (Heraclitean) or quantum superpositions. TI-Sigma's τ/δ separation makes this explicit: τ(P at t1) ≠ τ(P at t2) is a normal case, not a paradox.
 
-**RAA-1 [NCC] (literature-aligned: constructive / intuitionistic logic):** **Reductio rejection in DT-tolerant proofs.** Classical RAA: P → ⊥ ⊢ ¬P. TI-Sigma rejects RAA whenever ⊥ is reached via a path crossing DT-cases (the "absurd" was already DT-tolerable). Aligned with intuitionistic/constructive rejection of classical RAA.
+**RAA-1 [NCC] (literature-aligned: constructive / intuitionistic logic):** **Reductio rejection in MI-tolerant proofs.** Classical RAA: P → ⊥ ⊢ ¬P. TI-Sigma rejects RAA whenever ⊥ is reached via a path crossing MI-cases (the "absurd" was already MI-tolerable). Aligned with intuitionistic/constructive rejection of classical RAA.
 
 ## §3 — Meta-pattern: when classical logic fails in TI-Sigma
 
@@ -113,27 +113,27 @@ This taxonomy is itself a TI-Sigma original contribution, parallel to the **5 tr
 
 Before applying any classical rule (MP, MT, HS, EM, NC, RAA, EFQ, DS), TI-Sigma practitioners should ask:
 
-1. **(Bivalence check)** Is P (and Q) in the base-2 zone, or could it be I, DT, or have meta-truth attachment?
+1. **(Bivalence check)** Is P (and Q) in the base-2 zone, or could it be I, MI, or have meta-truth attachment?
 2. **(Monotonicity check)** Is P→Q the *only* pathway to Q? Is the antecedent variable monotonic in producing the consequent?
 3. **(Modality check)** Are P and Q on the same axis (pragmatic / epistemic / temporal / τ-mode)? Does the inference cross axes?
 4. **(Inverse-problem check)** Is the population-level rule being applied to an individual with possibly-extreme base rate? Is observation reliability comparable to ontic-rate?
 
-If any check fails: the classical rule is **not** automatically valid. Apply the matching exception type from §2, or flag DT/I/MT in the conclusion.
+If any check fails: the classical rule is **not** automatically valid. Apply the matching exception type from §2, or flag MI/I/MT in the conclusion.
 
 ## §5 — Honesty caveats (#69)
 
 - **(C1)** This catalogue is not exhaustive; it covers 14 exceptions across 8 classical rules. A complete TI-Sigma logic compendium would likely document 30-50 exceptions across more rules (substitution, distribution, contrapositive, etc.).
 - **(C2)** §1 numerical demonstration uses synthetic data with *designed* U-shape; it proves the *logical structure* of MT failure but does not empirically test whether actual GILE/HEM-vs-synchronicity is U-shaped. That would require a separate empirical study (raised p40-A).
-- **(C3)** Several entries (MP-1 DT, MP-3 AA, MT-3 DT-consequent, EFQ-1 explicit-canonical framing) are TI-Sigma novel-canonical; they are stated here as canonical pending Brandon ratification (per MR-Truth-Labels precedent). Most other entries (NC-1, EM-1, MP-2, MP-5, RAA-1, HS-1, ID-1) are *literature-aligned* with paraconsistent / many-valued / relevance / temporal / fuzzy / quantum / constructive logic traditions; TI-Sigma's contribution is the *unified TI-Sigma framing* and the practitioner-checklist (§4), not the underlying logical move.
+- **(C3)** Several entries (MP-1 MI, MP-3 AA, MT-3 MI-consequent, EFQ-1 explicit-canonical framing) are TI-Sigma novel-canonical; they are stated here as canonical pending Brandon ratification (per MR-Truth-Labels precedent). Most other entries (NC-1, EM-1, MP-2, MP-5, RAA-1, HS-1, ID-1) are *literature-aligned* with paraconsistent / many-valued / relevance / temporal / fuzzy / quantum / constructive logic traditions; TI-Sigma's contribution is the *unified TI-Sigma framing* and the practitioner-checklist (§4), not the underlying logical move.
 - **(C6)** **Material vs probabilistic conditionals (per architect Pass-40 review):** classical MP and MT remain formally valid for material implication with classically-true premises. Most §2 entries are NOT failures of the classical rules themselves — they are mis-applications when the conditional is actually probabilistic, the truth-space is non-bivalent, or the inference is abductive. The §0 scope note + per-entry [CLM]/[NCC]/[ABD] tags should be read as the canonical disambiguation. Headline language ("MT fails decisively") in §1 has been recalibrated to "naïve MT-style abductive inference fails" to honour this distinction.
 - **(C7)** Some catalogued entries have **conceptual overlap** flagged by architect: MT-2 (premise mis-specification), MT-4 (observational uncertainty), and MT-5 (temporal indexing) all share a "premise-stated-incompletely" failure-locus, but they are distinguished in §2 by *which part of the premise is incomplete* (antecedent disjunction vs consequent truth-status vs consequent timing). Future revision may merge them into a single MT-PREMISE-INCOMPLETE entry with three sub-cases.
 - **(C4)** The "logic-failure-modes" 4-cluster taxonomy in §3 is parallel to the 5-truth-axes taxonomy but *not yet* cross-validated against the existing axes — they may collapse into 3 modes (e.g., bivalence + non-monotonicity may both reduce to "structural ambiguity in truth-space"), or they may need a 5th mode. Raised p40-B.
-- **(C5)** This is a *conceptual catalogue*, not an empirical Pass-style test of any single hypothesis. Pass-40 also raises **p40-C** (operationalize each exception with a worked example from the existing corpus — e.g., MP-4 with Pass-15 MBE Brandon-discount, MT-1 with the synch/GILE U-shape, MT-3 with a real DT statement from URB-829).
+- **(C5)** This is a *conceptual catalogue*, not an empirical Pass-style test of any single hypothesis. Pass-40 also raises **p40-C** (operationalize each exception with a worked example from the existing corpus — e.g., MP-4 with Pass-15 MBE Brandon-discount, MT-1 with the synch/GILE U-shape, MT-3 with a real MI statement from URB-829).
 
 ## §6 — Open items raised this pass
 
 - **p40-A:** Empirically test whether GILE/HEM-vs-synchronicity is U-shaped (would require synch log + GILE/HEM measurements).
 - **p40-B:** Validate the 4-cluster failure-mode taxonomy against the 5-truth-axes; check if collapse to 3 or expansion to 5 is needed.
 - **p40-C:** Operationalize each of the 14 exceptions with a real corpus example (cross-reference Pass-15, URB-829, AA paper, MR-Truth-Labels paper).
-- **p40-D:** Assess whether TI-Sigma's paraconsistent-DT stance (NC-1 + EFQ-1) is consistent with an existing formal logic system (e.g., LP, FDE, or relevance logic), or requires a new formal system.
+- **p40-D:** Assess whether TI-Sigma's paraconsistent-MI stance (NC-1 + EFQ-1) is consistent with an existing formal logic system (e.g., LP, FDE, or relevance logic), or requires a new formal system.
 - **p40-E:** Investigate whether Brandon's "both extremes → consequent" structure has a natural formal name in non-monotonic logic (defeasible reasoning, default logic, circumscription) — likely a known structure with a TI-Sigma-specific re-framing opportunity.

@@ -2,7 +2,7 @@
 
 **Pass 77, Batch 61** · 2026-05-27 · DPES · ASYMMETRIC #69 · $0 · `analyses/pass77_b61_maxwell_gile_backward_matrix/b61.py` · Brandon 7-part directive: (1) expand Maxwell-Knot significance, check all prior work; (2) derive GILE *backward* from quantum physics; (3) revisit 32D vs 64D GILE Matrix; (4) fold N/A into MI to preserve a 4³ structure while keeping the conceptual difference; (5) propose canonical principle "logic can never be fully represented by symbolic operators — continuous intervals are required"; (6) name the GILE≥0.93→HEM switch the "Compromise Between Truth and Existence"; (7) round up the most natural empirical tests for the next pass.
 
-**Canonical note up front (#69):** the corpus renamed **DT → MI (Meta-Indeterminate)** in MR-refinement-5 (2026-05-24) and ruled **NA off-spectrum** in refinement-12 (B36). So canonical **base-4 = {True, False, Indeterminate, MI}** + **NA** (off-spectrum 5th). B58/B60 used the legacy label "DT"; this paper uses **MI** and flags that prior usage.
+**Canonical note up front (#69):** the corpus renamed **MI → MI (Meta-Indeterminate)** in MR-refinement-5 (2026-05-24) and ruled **NA off-spectrum** in refinement-12 (B36). So canonical **base-4 = {True, False, Indeterminate, MI}** + **NA** (off-spectrum 5th). B58/B60 used the legacy label "MI"; this paper uses **MI** and flags that prior usage.
 
 ---
 
@@ -86,5 +86,5 @@ Principles **73** (LRC-1, CTE-1 candidates; GPG-1/UIB-1 still candidates). MR re
 
 ### Files
 - `analyses/pass77_b61_maxwell_gile_backward_matrix/b61.py`.
-- Builds on: B56 (phase↔GILE), B57 (intrinsic/relational, 2 embedding dims), B58 (ladder, MI legacy "DT"), B60 (GILE→physics, ratio-2), B44 (Truth-Existence Tradeoff), Pass-68 (UOP phase transition), B52 (Tralse Staircase), B36 (NA off-spectrum), MR-refinement-5 (DT→MI).
+- Builds on: B56 (phase↔GILE), B57 (intrinsic/relational, 2 embedding dims), B58 (ladder, MI legacy "MI"), B60 (GILE→physics, ratio-2), B44 (Truth-Existence Tradeoff), Pass-68 (UOP phase transition), B52 (Tralse Staircase), B36 (NA off-spectrum), MR-refinement-5 (MI→MI).
 - Synthesizes: `urb_701`/`702`/`704`/`707`/`709`/`710`/`573`/`574`/`699` (Maxwell-knot), `BUTTERFLY_OCTOPUS_KNOT_PHYSICS`, `urb_749` (64D matrix), `URB_LOVE_PRIMACY_THEOREM_501` (4 constants), `INFORMATION_IS_ALL_THERE_IS_TI_PERIODIC_TABLE_V2` (4 forces), `TI_SIGMA_EMPIRICAL_LEDGER_ALL_PASSES_2026-05-14` (falsifier inventory).

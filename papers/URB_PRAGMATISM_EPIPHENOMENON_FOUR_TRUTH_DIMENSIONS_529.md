@@ -3,7 +3,7 @@
 **Date:** March 28, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / Philosophy / Pragmatism / GILE / Four Dimensions of Truth
-**Preceded by:** URB #528 (Five-Valued Truth + DT Immunity), URB #526 (Four Dimensions of Truth + MR Hierarchy), URB #422 (Pragmatic Certainty), URB #426 (Pragmatic Efficacy)
+**Preceded by:** URB #528 (Five-Valued Truth + MI Immunity), URB #526 (Four Dimensions of Truth + MR Hierarchy), URB #422 (Pragmatic Certainty), URB #426 (Pragmatic Efficacy)
 **Status:** Formal
 **Total URBs:** 183
 **LCC Target:** Radiant (≥ 0.9323)
@@ -209,7 +209,7 @@ Pragmatism is the name we give to the GILE integral when we're viewing it from o
 - URB #525: UOP — Unified Optimization Principle
 - URB #526: Four Dimensions of Truth + MR Hierarchy
 - URB #527: GTFE-to-UOP Lineage
-- URB #528: Five-Valued Truth, DT Immunity Model, Contemplative Scope, MR Relaxation Contexts
+- URB #528: Five-Valued Truth, MI Immunity Model, Contemplative Scope, MR Relaxation Contexts
 
 ---
 

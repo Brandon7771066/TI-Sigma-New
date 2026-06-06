@@ -3,7 +3,7 @@
 **Date:** April 15, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / Myrion Resolution / EAR / Permissibility Distribution / Five-Valued Logic
-**Preceded by:** URB #680 (Positive Regard Operationalized), URB #679 (Valid Hyperbole), URB #677 (Double Tralse), URB #465 §7 (Autonomy Fallacy as Tralsity)
+**Preceded by:** URB #680 (Positive Regard Operationalized), URB #679 (Valid Hyperbole), URB #677 (Meta-Indeterminate), URB #465 §7 (Autonomy Fallacy as Tralsity)
 **Keywords:** binary logic, tightness, existential grounding, Tralsity, falsifiability, EAR, ontological weight, Myrion Resolution, five-valued logic, Gödel, Popper, reality contact
 **Status:** Formal — TI Sigma Logic and Epistemology
 **Total URBs: 131 est.**
@@ -76,7 +76,7 @@ This is Popper's falsifiability criterion stated in ontological terms. Popper ar
 
 In TI Sigma, claims participate in **Myrion Resolution (MR)** — the iterative convergence procedure that refines truth states across evidence, context, and dimension. MR can only operate on a claim if there exist conditions under which the claim's truth state could be updated.
 
-A maximally tight binary claim is **MR-immune** — not in the legitimate sense of DT Immunity (which prevents infinite regress), but in the pathological sense of being structurally closed to revision. No evidence can update it. No context can shift it. No new information can refine it. The claim is not resolving — it is frozen.
+A maximally tight binary claim is **MR-immune** — not in the legitimate sense of MI Immunity (which prevents infinite regress), but in the pathological sense of being structurally closed to revision. No evidence can update it. No context can shift it. No new information can refine it. The claim is not resolving — it is frozen.
 
 MR immunity of this kind is the signature of the Tralsity (URB #465 §7): a claim that has been sealed at the cost of removing itself from the processes of reality-contact through which truth is determined. The properly functioning five-valued system reaches resolution through MR. The pathologically tight binary claim has pre-empted resolution by declaring itself already resolved.
 
@@ -86,7 +86,7 @@ Reality is continuous. It operates at ∞-bit resolution. Binary claims encode a
 
 The statement "Everything happens for a reason" is a 1-bit encoding of a phenomenon that, if real, would require specifying: which reasons, with what strength, operating through what mechanisms, producing what kinds of outcomes. By compressing all of that into a tautological binary, you have achieved maximum generality at the cost of zero information. You are describing reality at zero resolution — which is to say, you are not describing it at all.
 
-The five-valued truth system (True/False/Tralse/Indeterminate/Double Tralse) operates at higher resolution than binary, and Myrion Resolution is the continuous-update mechanism. TI Sigma handles complexity not by sealing it but by naming it (Tralse = genuinely both/neither), by creating resolution pathways for it (MR), and by providing ontological pruning when a claim has no existence value (EAR).
+The five-valued truth system (True/False/Tralse/Indeterminate/Meta-Indeterminate) operates at higher resolution than binary, and Myrion Resolution is the continuous-update mechanism. TI Sigma handles complexity not by sealing it but by naming it (Tralse = genuinely both/neither), by creating resolution pathways for it (MR), and by providing ontological pruning when a claim has no existence value (EAR).
 
 ---
 
@@ -169,11 +169,11 @@ The TI Sigma response is to **name the complexity**:
 - False in frame β → FALSE
 - Both α and β simultaneously → TRALSE
 - Neither α nor β, nor the combination → INDETERMINATE
-- The meta-level condition where even the frame-assignment is contested → DOUBLE TRALSE
+- The meta-level condition where even the frame-assignment is contested → META-INDETERMINATE
 
 Then apply MR to converge across evidence and frames over time. The claim remains responsive to new information. EV remains high. Tightness is kept low by design — not out of philosophical cowardice, but out of commitment to reality-contact.
 
-**The key TI Sigma principle:** The appropriate response to a hard case is not to binary-seal it into false clarity. It is to name the truth state accurately (Tralse, Indeterminate, DT as appropriate) and then apply the resolution protocol appropriate to that truth state.
+**The key TI Sigma principle:** The appropriate response to a hard case is not to binary-seal it into false clarity. It is to name the truth state accurately (Tralse, Indeterminate, MI as appropriate) and then apply the resolution protocol appropriate to that truth state.
 
 This is why the five-valued system is not "weaker" than binary for handling real-world claims. Binary logic achieves artificial tightness by forcing claims into inappropriate truth values. TI Sigma maintains genuine grounding by accepting the full resolution-difficulty of reality and providing mechanisms to navigate it without collapsing it.
 

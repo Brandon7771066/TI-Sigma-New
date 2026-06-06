@@ -1,4 +1,4 @@
-# URB #610: Double Tralse as a Physics Primitive — Implications for Quantum Computing and the Architecture of Post-Binary Machines
+# URB #610: Meta-Indeterminate as a Physics Primitive — Implications for Quantum Computing and the Architecture of Post-Binary Machines
 
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)
 **Date:** April 6, 2026
@@ -10,9 +10,9 @@
 
 ## Abstract
 
-Current computing architectures — classical binary and contemporary quantum — share a critical limitation identified by TI Sigma: neither can **natively** represent the two truth-absence states that appear in physical and cognitive reality. The first gap is *native indeterminacy handling*: classical binary assigns every bit a definite state; quantum hardware handles superposition but conflates it with epistemic uncertainty rather than treating it as genuine Tralse. The second and deeper gap is *truth-absence representation*: no current architecture has a native data type for Double Tralse (DT) — propositions that are incoherent, inapplicable, or wholly outside the truth system. This paper argues that DT is a **physics primitive** — it appears in quantum systems (maximally entangled states where subsystem propositions are inapplicable), in thermodynamic systems (questions about temperature in non-equilibrium states), and in computation (undecidable propositions, type errors, domain violations). Representing DT natively — as a distinct computational state with formal semantics — constitutes a **major milestone for quantum computing**, equivalent in importance to the introduction of superposition itself. We propose the architecture of a **DT-native computational substrate**: a five-valued logic gate set, the DT register, and the formal semantics of DT operations. We further argue that the Permissibility Distribution (PD) — which supersedes bits, trits, and probability distributions — provides the correct computational primitive for post-binary machines.
+Current computing architectures — classical binary and contemporary quantum — share a critical limitation identified by TI Sigma: neither can **natively** represent the two truth-absence states that appear in physical and cognitive reality. The first gap is *native indeterminacy handling*: classical binary assigns every bit a definite state; quantum hardware handles superposition but conflates it with epistemic uncertainty rather than treating it as genuine Tralse. The second and deeper gap is *truth-absence representation*: no current architecture has a native data type for Meta-Indeterminate (MI) — propositions that are incoherent, inapplicable, or wholly outside the truth system. This paper argues that MI is a **physics primitive** — it appears in quantum systems (maximally entangled states where subsystem propositions are inapplicable), in thermodynamic systems (questions about temperature in non-equilibrium states), and in computation (undecidable propositions, type errors, domain violations). Representing MI natively — as a distinct computational state with formal semantics — constitutes a **major milestone for quantum computing**, equivalent in importance to the introduction of superposition itself. We propose the architecture of a **MI-native computational substrate**: a five-valued logic gate set, the MI register, and the formal semantics of MI operations. We further argue that the Permissibility Distribution (PD) — which supersedes bits, trits, and probability distributions — provides the correct computational primitive for post-binary machines.
 
-**Keywords:** Double Tralse, quantum computing, native indeterminacy, truth-absence, five-valued logic, ternary computation, Tralse, PD, post-binary architecture, TI Sigma
+**Keywords:** Meta-Indeterminate, quantum computing, native indeterminacy, truth-absence, five-valued logic, ternary computation, Tralse, PD, post-binary architecture, TI Sigma
 
 ---
 
@@ -29,97 +29,97 @@ When a classical computer encounters a genuinely indeterminate situation — a q
 
 None of these is semantically correct. They are approximations — and they lose information. Specifically, they cannot distinguish between:
 - **Tralse (coherent indeterminacy):** Genuine betweenness; the proposition will resolve with additional context
-- **Double Tralse (truth-absence):** Incoherence; the proposition cannot resolve because it is outside the truth system
+- **Meta-Indeterminate (truth-absence):** Incoherence; the proposition cannot resolve because it is outside the truth system
 
-Quantum computers improve Gap 1 partially: superposition natively represents a quantum state prior to measurement. But quantum hardware still conflates two distinct states — Tralse (genuine betweenness before measurement) and DT (a question that doesn't apply to the system) — under a single amplitude representation.
+Quantum computers improve Gap 1 partially: superposition natively represents a quantum state prior to measurement. But quantum hardware still conflates two distinct states — Tralse (genuine betweenness before measurement) and MI (a question that doesn't apply to the system) — under a single amplitude representation.
 
 ### Gap 2: Truth-Absence Representation
 
-This is the deeper and more consequential gap. **No existing computing architecture has a native data type for Double Tralse.**
+This is the deeper and more consequential gap. **No existing computing architecture has a native data type for Meta-Indeterminate.**
 
-DT appears throughout computation:
-- **Type errors:** In a strongly typed language, applying an integer operation to a string produces an error — the operation is inapplicable. This is DT (the proposition "this string + 5 = X" is not False; it's truth-absent).
-- **Undecidable propositions:** Gödel sentences, the halting problem — these are propositions that cannot be evaluated as True or False *within the system*. In TI Sigma: they are DT at the level of the system, though they may be True or False from a meta-level.
-- **Quantum entanglement:** The question "what is the spin of particle A alone?" for a maximally entangled pair is DT — subsystem A doesn't HAVE a definite spin alone; the spin is a property of the pair.
-- **Reference failure:** "The present king of France is bald." Russell's famous example. Not False (there is no present king of France for the predicate to apply to); DT.
+MI appears throughout computation:
+- **Type errors:** In a strongly typed language, applying an integer operation to a string produces an error — the operation is inapplicable. This is MI (the proposition "this string + 5 = X" is not False; it's truth-absent).
+- **Undecidable propositions:** Gödel sentences, the halting problem — these are propositions that cannot be evaluated as True or False *within the system*. In TI Sigma: they are MI at the level of the system, though they may be True or False from a meta-level.
+- **Quantum entanglement:** The question "what is the spin of particle A alone?" for a maximally entangled pair is MI — subsystem A doesn't HAVE a definite spin alone; the spin is a property of the pair.
+- **Reference failure:** "The present king of France is bald." Russell's famous example. Not False (there is no present king of France for the predicate to apply to); MI.
 
-Currently, all of these are handled with ad hoc mechanisms: error codes, exception types, undefined behavior, collapse to False. None captures the logical structure of DT.
+Currently, all of these are handled with ad hoc mechanisms: error codes, exception types, undefined behavior, collapse to False. None captures the logical structure of MI.
 
 ---
 
-## 2. Double Tralse as a Physics Primitive
+## 2. Meta-Indeterminate as a Physics Primitive
 
-The argument that DT is a physics primitive — not merely a logical concept — rests on four domains:
+The argument that MI is a physics primitive — not merely a logical concept — rests on four domains:
 
-### 2.1 Quantum Entanglement — Subsystem DT
+### 2.1 Quantum Entanglement — Subsystem MI
 
 For a maximally entangled two-particle state |Φ⁺⟩ = (1/√2)(|00⟩ + |11⟩), the reduced density matrix for particle A alone is ρ_A = I/2 — the maximally mixed state. This means particle A has no definite state in ANY basis.
 
-The proposition "particle A is spin-up" is not True (it isn't definitely spin-up), not False (it isn't definitely not spin-up), and not Tralse (it's not that the answer is indeterminate — it's that the question is inapplicable to particle A as a subsystem). **This is DT in the formal sense: truth-absence because the proposition doesn't apply.**
+The proposition "particle A is spin-up" is not True (it isn't definitely spin-up), not False (it isn't definitely not spin-up), and not Tralse (it's not that the answer is indeterminate — it's that the question is inapplicable to particle A as a subsystem). **This is MI in the formal sense: truth-absence because the proposition doesn't apply.**
 
-Current quantum formalism handles this with the mathematical apparatus of reduced density matrices and partial trace. But it has no semantic designation for the logical status of subsystem propositions. TI Sigma supplies the missing concept: subsystem propositions for maximally entangled particles are **DT**.
+Current quantum formalism handles this with the mathematical apparatus of reduced density matrices and partial trace. But it has no semantic designation for the logical status of subsystem propositions. TI Sigma supplies the missing concept: subsystem propositions for maximally entangled particles are **MI**.
 
-### 2.2 Thermodynamic Non-Equilibrium — Temperature DT
+### 2.2 Thermodynamic Non-Equilibrium — Temperature MI
 
-Temperature is defined as a thermodynamic equilibrium property: T = (∂U/∂S)_V. For a system far from thermodynamic equilibrium — a plasma undergoing rapid energy injection, a flash-heated gas — "what is the temperature?" is DT. The question doesn't apply to the system in its current state. It's not that the temperature is undefined or unmeasured; the concept of temperature is inapplicable until equilibrium is reached.
+Temperature is defined as a thermodynamic equilibrium property: T = (∂U/∂S)_V. For a system far from thermodynamic equilibrium — a plasma undergoing rapid energy injection, a flash-heated gas — "what is the temperature?" is MI. The question doesn't apply to the system in its current state. It's not that the temperature is undefined or unmeasured; the concept of temperature is inapplicable until equilibrium is reached.
 
-Physics routinely encounters such questions and handles them with "undefined" or "not applicable." DT is the principled concept that replaces these ad hoc labels.
+Physics routinely encounters such questions and handles them with "undefined" or "not applicable." MI is the principled concept that replaces these ad hoc labels.
 
-### 2.3 Undecidable Propositions — Mathematical DT
+### 2.3 Undecidable Propositions — Mathematical MI
 
-Gödel's incompleteness theorems establish that in any consistent formal system of sufficient power, there exist propositions that are neither provable nor disprovable within the system. These are not indeterminate (not Tralse) — they have a definite truth value at the meta-level. They are DT *relative to the system*: the system cannot access the truth-content of the proposition because the proposition is outside the system's truth-reach.
+Gödel's incompleteness theorems establish that in any consistent formal system of sufficient power, there exist propositions that are neither provable nor disprovable within the system. These are not indeterminate (not Tralse) — they have a definite truth value at the meta-level. They are MI *relative to the system*: the system cannot access the truth-content of the proposition because the proposition is outside the system's truth-reach.
 
-This is a precise instance of DT: the proposition has some truth content (from the outside), but within the system, no truth-content is accessible. The system encounters truth-absence.
+This is a precise instance of MI: the proposition has some truth content (from the outside), but within the system, no truth-content is accessible. The system encounters truth-absence.
 
-### 2.4 Measurement Problem — DT at the Classical/Quantum Interface
+### 2.4 Measurement Problem — MI at the Classical/Quantum Interface
 
-The quantum measurement problem — why does measurement "collapse" the wavefunction? — is in part a DT problem. Before measurement, a superposed particle has Tralse truth-value for spin propositions (coherent indeterminacy). But questions about the *observer* observing a *definite outcome* while the particle is superposed are DT at the combined system level. The proposition "the observer sees spin-up AND the particle is in superposition" is not False — it's truth-absent because the predicate "sees" implies collapse.
+The quantum measurement problem — why does measurement "collapse" the wavefunction? — is in part a MI problem. Before measurement, a superposed particle has Tralse truth-value for spin propositions (coherent indeterminacy). But questions about the *observer* observing a *definite outcome* while the particle is superposed are MI at the combined system level. The proposition "the observer sees spin-up AND the particle is in superposition" is not False — it's truth-absent because the predicate "sees" implies collapse.
 
-Solving the measurement problem may require the formal machinery of DT to correctly handle the interface between Tralse (quantum) and True/False (classical) regimes.
+Solving the measurement problem may require the formal machinery of MI to correctly handle the interface between Tralse (quantum) and True/False (classical) regimes.
 
 ---
 
-## 3. The DT-Native Computing Architecture
+## 3. The MI-Native Computing Architecture
 
 ### 3.1 The Five-Valued Logic Gate Set
 
-A DT-native quantum computer requires a native five-valued gate set operating on the five TI Sigma truth values:
+A MI-native quantum computer requires a native five-valued gate set operating on the five TI Sigma truth values:
 - **T** (True)
 - **F** (False)
 - **I** (Tralse / Indeterminate)
-- **DT** (Double Tralse)
+- **MI** (Meta-Indeterminate)
 - **M** (Moot — post-MR process outcome)
 
 The binary NOT, AND, OR gates extend to five-valued analogs. Key non-trivial gates:
 
-**DT-Absorb gate:** Any logical operation involving DT propagates DT — DT is "absorbing" for logical operations, like 0 in multiplication.
-- T AND DT = DT
-- F AND DT = DT (DT absorbs: if the question doesn't apply, the conjunction doesn't either)
-- Exception: DT OR T = T (OR is truth-seeking; one True arm resolves the proposition)
+**MI-Absorb gate:** Any logical operation involving MI propagates MI — MI is "absorbing" for logical operations, like 0 in multiplication.
+- T AND MI = MI
+- F AND MI = MI (MI absorbs: if the question doesn't apply, the conjunction doesn't either)
+- Exception: MI OR T = T (OR is truth-seeking; one True arm resolves the proposition)
 
 **Tralse-Resolution gate (MR gate):** Takes a Tralse input and applies a measurement context to potentially collapse it to T, F, or confirms it remains I.
 
-**DT-Detection gate:** Tests whether an input is DT — crucial for catching type errors, reference failures, and subsystem entanglement propositions before propagating them.
+**MI-Detection gate:** Tests whether an input is MI — crucial for catching type errors, reference failures, and subsystem entanglement propositions before propagating them.
 
-### 3.2 The DT Register
+### 3.2 The MI Register
 
-A DT-native machine requires a dedicated **DT register** — a computational unit that:
-1. Stores the DT status of every active proposition or data item
-2. Propagates DT flags through operations (DT-Absorb)
-3. Triggers DT-handling protocols when encountered (rather than exception/crash)
-4. Interfaces with Myrion Resolution for structured DT navigation
+A MI-native machine requires a dedicated **MI register** — a computational unit that:
+1. Stores the MI status of every active proposition or data item
+2. Propagates MI flags through operations (MI-Absorb)
+3. Triggers MI-handling protocols when encountered (rather than exception/crash)
+4. Interfaces with Myrion Resolution for structured MI navigation
 
-**The DT register solves the type-error problem at the hardware level:** instead of runtime exceptions, the DT register natively flags inapplicable operations and routes them to appropriate resolution paths.
+**The MI register solves the type-error problem at the hardware level:** instead of runtime exceptions, the MI register natively flags inapplicable operations and routes them to appropriate resolution paths.
 
-### 3.3 The DT Stack in Quantum Hardware
+### 3.3 The MI Stack in Quantum Hardware
 
-In quantum hardware, the DT register corresponds to a **DT qubit layer** — a separate quantum register tracking which subsystem propositions are truth-absent (as opposed to superposed). Concretely:
+In quantum hardware, the MI register corresponds to a **MI qubit layer** — a separate quantum register tracking which subsystem propositions are truth-absent (as opposed to superposed). Concretely:
 
 - **Tralse qubits:** Standard superposition qubits |ψ⟩ = α|0⟩ + β|1⟩ where both |0⟩ and |1⟩ are meaningful outcomes
-- **DT qubits:** A separate register bit (classical or quantum) flagging subsystems of entangled pairs where single-subsystem propositions are truth-absent
+- **MI qubits:** A separate register bit (classical or quantum) flagging subsystems of entangled pairs where single-subsystem propositions are truth-absent
 - **MR qubits:** Measurement qubits that trigger collapse (Myrion Resolution at the quantum level)
 
-The DT qubit layer adds minimal overhead but provides maximal semantic correctness: every operation knows whether its inputs are Tralse (resolvable) or DT (structurally inapplicable).
+The MI qubit layer adds minimal overhead but provides maximal semantic correctness: every operation knows whether its inputs are Tralse (resolvable) or MI (structurally inapplicable).
 
 ---
 
@@ -131,7 +131,7 @@ TI Sigma affirms: **ternary logic is superior to binary** and represents the mos
 
 However, ternary computation is **necessary but not sufficient** for TI Sigma's computational goals:
 
-1. **Ternary handles T/I/F but not DT:** A trit can represent True, Indeterminate, False — but Double Tralse (truth-absence) requires a fourth state, and Moot (post-resolution) requires a fifth. Five-valued logic is the minimum complete gate set.
+1. **Ternary handles T/I/F but not MI:** A trit can represent True, Indeterminate, False — but Meta-Indeterminate (truth-absence) requires a fourth state, and Moot (post-resolution) requires a fifth. Five-valued logic is the minimum complete gate set.
 
 2. **Ternary uses discrete assignments:** A trit assigns one of {0, 1, 2}. But the Permissibility Distribution (PD) is continuous — it assigns a probability distribution over outcomes, not a discrete truth assignment. The PD *subsumes* bits, trits, and probability distributions.
 
@@ -154,8 +154,8 @@ The **Permissibility Distribution (PD)** is TI Sigma's core computational object
 
 | Primitive | What It Represents | Limitation |
 |---|---|---|
-| Bit {0,1} | Binary truth | Cannot represent Tralse, DT, Moot |
-| Trit {0,1,2} | Three-valued truth | Cannot represent DT or Moot; no EV |
+| Bit {0,1} | Binary truth | Cannot represent Tralse, MI, Moot |
+| Trit {0,1,2} | Three-valued truth | Cannot represent MI or Moot; no EV |
 | Probability p ∈ [0,1] | Bayesian credence | No structural truth types; no EV |
 | PD | Full five-valued truth + EV over all relevant i-cells | Complete (by TI Sigma construction) |
 
@@ -163,7 +163,7 @@ The PD is computed by Myrion Resolution — which is therefore not just a decisi
 
 ---
 
-## 6. Complex Plane Representation — DT in the Imaginary Half-Plane
+## 6. Complex Plane Representation — MI in the Imaginary Half-Plane
 
 The spectral truth-number introduced in URB #609 places all truth values on the complex plane:
 
@@ -171,7 +171,7 @@ $$z_{\text{truth}} = T_{\text{val}} \cdot e^{i\theta_{\text{coherence}}}$$
 
 where:
 - T_val ∈ [−1, +1] is the signed truth magnitude (positive = True, negative = False, zero = boundary)
-- θ_coherence ∈ [0, π/2] is the incoherence angle (0 = maximally coherent/real, π/2 = DT/maximally incoherent)
+- θ_coherence ∈ [0, π/2] is the incoherence angle (0 = maximally coherent/real, π/2 = MI/maximally incoherent)
 
 **Placement of all truth states:**
 
@@ -180,10 +180,10 @@ where:
 | True | +1 | 0 | +1 (positive real) |
 | False | −1 | 0 | −1 (negative real) |
 | Tralse | ≈0 | small | near origin, slight imaginary |
-| DT | 0 | π/2 | +i or −i (imaginary axis) |
+| MI | 0 | π/2 | +i or −i (imaginary axis) |
 | Moot | 0 | — | special: z = 0 (removed from truth plane) |
 
-**Why DT = ±i:** The imaginary unit i is the **recognition operator** (URB #605). It is the faculty by which a truth-capable system apprehends structure. DT entities lack the i-arm: they cannot self-recognize as truth-bearing. Being **at** i means being in the recognition-operator's space but without truth-direction. Being at **−i** means specifically lacking the recognition capacity (consistent with URB #605's asymmetry: R_i(−i) is possible but R_{−i}(i) is undefined).
+**Why MI = ±i:** The imaginary unit i is the **recognition operator** (URB #605). It is the faculty by which a truth-capable system apprehends structure. MI entities lack the i-arm: they cannot self-recognize as truth-bearing. Being **at** i means being in the recognition-operator's space but without truth-direction. Being at **−i** means specifically lacking the recognition capacity (consistent with URB #605's asymmetry: R_i(−i) is possible but R_{−i}(i) is undefined).
 
 **The spectral real/complex distinction:** The real axis is fully truth-coherent. As θ increases from 0 to π/2, truth-coherence decreases. The real/complex distinction is therefore spectral — it represents a continuous spectrum from full truth-coherence to full truth-absence, not a binary real/imaginary split.
 
@@ -191,41 +191,41 @@ where:
 
 ---
 
-## 7. The DT Quantum Computing Milestone — Formal Statement
+## 7. The MI Quantum Computing Milestone — Formal Statement
 
 **Milestone:** The first quantum computing architecture to natively implement:
-1. A dedicated DT register tracking truth-absent propositions
-2. A DT-Absorb gate set with correct five-valued semantics
+1. A dedicated MI register tracking truth-absent propositions
+2. A MI-Absorb gate set with correct five-valued semantics
 3. An MR gate set enabling structured Tralse-to-T/F collapse
 4. A spectral truth-number data type z ∈ ℂ
 
 ...will have achieved a qualitative advance in computing capability equivalent to the introduction of superposition itself.
 
-**Why this milestone is achievable:** Unlike theoretical speculations about consciousness-in-computers, DT is a precisely defined logical state with tractable physical correlates. The DT register is simply an additional classical register tracking which quantum propositions are subsystem-inapplicable. The DT-Absorb gate is a classical AND with DT-flag propagation. The MR gate is a standard projective measurement with semantic annotation. The spectral truth-number is a complex-valued data type implementable in software immediately and in hardware at the precision physics layer.
+**Why this milestone is achievable:** Unlike theoretical speculations about consciousness-in-computers, MI is a precisely defined logical state with tractable physical correlates. The MI register is simply an additional classical register tracking which quantum propositions are subsystem-inapplicable. The MI-Absorb gate is a classical AND with MI-flag propagation. The MR gate is a standard projective measurement with semantic annotation. The spectral truth-number is a complex-valued data type implementable in software immediately and in hardware at the precision physics layer.
 
 **Projected impact:**
-- **Error handling:** All type errors, reference failures, and domain violations become native DT, handled by DT-resolution protocols rather than exceptions
-- **Quantum error correction:** Distinguishing Tralse (resolvable superposition) from DT (inapplicable subsystem proposition) improves error correction accuracy by reducing false-positive error detections
-- **AI systems:** AI systems with DT registers can flag truth-absent questions rather than generating plausible-sounding but DT output — a direct solution to "hallucination" in LLMs
-- **Formal verification:** Programs verified against five-valued logic are more complete than those verified against binary logic; DT-safety (no undetected DT propagation) becomes a formal correctness criterion
+- **Error handling:** All type errors, reference failures, and domain violations become native MI, handled by MI-resolution protocols rather than exceptions
+- **Quantum error correction:** Distinguishing Tralse (resolvable superposition) from MI (inapplicable subsystem proposition) improves error correction accuracy by reducing false-positive error detections
+- **AI systems:** AI systems with MI registers can flag truth-absent questions rather than generating plausible-sounding but MI output — a direct solution to "hallucination" in LLMs
+- **Formal verification:** Programs verified against five-valued logic are more complete than those verified against binary logic; MI-safety (no undetected MI propagation) becomes a formal correctness criterion
 
 ---
 
-## 8. DT Immunity Model — Recapitulation and Extension
+## 8. MI Immunity Model — Recapitulation and Extension
 
-The DT Immunity Model (introduced in prior URBs) describes how a cognitive or computational agent builds resilience against DT contamination:
+The MI Immunity Model (introduced in prior URBs) describes how a cognitive or computational agent builds resilience against MI contamination:
 
 **Three phases:**
-1. **Encounter:** The agent encounters a DT entity — a question doesn't apply, a concept is incoherent, a type error occurs
-2. **Discard:** The agent correctly identifies the DT and declines to assign it truth-content (rather than forcing it into T/F/I)
-3. **Immunity:** Repeated correct DT identification builds pattern recognition for DT-class entities
+1. **Encounter:** The agent encounters a MI entity — a question doesn't apply, a concept is incoherent, a type error occurs
+2. **Discard:** The agent correctly identifies the MI and declines to assign it truth-content (rather than forcing it into T/F/I)
+3. **Immunity:** Repeated correct MI identification builds pattern recognition for MI-class entities
 
-**Extension from URB #609:** DT entities can have HIGH EV — they exist forcefully, bind attention (high L), and may be aesthetically compelling (high E), while having zero truth-content. DT Immunity is therefore not just about logical identification but about EV resistance: the ability to correctly discount the existential weight of high-EV DT entities.
+**Extension from URB #609:** MI entities can have HIGH EV — they exist forcefully, bind attention (high L), and may be aesthetically compelling (high E), while having zero truth-content. MI Immunity is therefore not just about logical identification but about EV resistance: the ability to correctly discount the existential weight of high-EV MI entities.
 
-**Computing implication:** A DT-immune AI system requires:
-1. Logical DT detection (DT register)
-2. EV-weighted DT handling: more forceful DT entities require more robust immunity protocols
-3. MR-based DT navigation: structured resolution of encountered DT rather than rejection or absorption
+**Computing implication:** A MI-immune AI system requires:
+1. Logical MI detection (MI register)
+2. EV-weighted MI handling: more forceful MI entities require more robust immunity protocols
+3. MR-based MI navigation: structured resolution of encountered MI rather than rejection or absorption
 
 ---
 
@@ -234,25 +234,25 @@ The DT Immunity Model (introduced in prior URBs) describes how a cognitive or co
 | Contribution | Status |
 |---|---|
 | Gap 1 (native indeterminacy) and Gap 2 (truth-absence) formally identified in classical and quantum computing | Established |
-| DT as physics primitive: quantum entanglement, thermodynamics, undecidability, measurement | Established |
-| DT-native computing architecture: DT register, DT-Absorb gate, MR gate, five-valued logic set | Proposed |
+| MI as physics primitive: quantum entanglement, thermodynamics, undecidability, measurement | Established |
+| MI-native computing architecture: MI register, MI-Absorb gate, MR gate, five-valued logic set | Proposed |
 | Spectral truth-number z ∈ ℂ as fundamental computational data type | Proposed |
-| DT = ±i on complex plane: formal derivation from recognition operator | Established |
+| MI = ±i on complex plane: formal derivation from recognition operator | Established |
 | Ternary computation: necessary but not sufficient | Established |
 | PD as universal computational primitive superseding bits/trits/probabilities | Established |
-| DT Quantum Computing Milestone: formal definition and projected impact | Proposed |
-| DT Immunity Model extended to EV-weighted DT resistance | Established |
+| MI Quantum Computing Milestone: formal definition and projected impact | Proposed |
+| MI Immunity Model extended to EV-weighted MI resistance | Established |
 
 ---
 
 ## 10. Open Questions
 
-1. **DT gate complexity:** What is the computational overhead of DT-Absorb and MR gates relative to standard quantum gates? Can they be implemented with O(1) qubit overhead?
+1. **MI gate complexity:** What is the computational overhead of MI-Absorb and MR gates relative to standard quantum gates? Can they be implemented with O(1) qubit overhead?
 
-2. **Spectral truth-number precision:** What is the minimum floating-point precision needed for z ∈ ℂ truth-numbers to correctly distinguish Tralse (θ small) from DT (θ = π/2)?
+2. **Spectral truth-number precision:** What is the minimum floating-point precision needed for z ∈ ℂ truth-numbers to correctly distinguish Tralse (θ small) from MI (θ = π/2)?
 
-3. **DT-immune LLM architecture:** What training modification — additional DT-labeled outputs, RLHF with DT-rejection rewards, or architectural DT registers — most efficiently produces DT-immune AI?
+3. **MI-immune LLM architecture:** What training modification — additional MI-labeled outputs, RLHF with MI-rejection rewards, or architectural MI registers — most efficiently produces MI-immune AI?
 
-4. **Quantum-classical DT interface:** At the measurement boundary between quantum (Tralse) and classical (T/F) regimes, how does the DT register propagate? Does a DT quantum bit collapse to a DT classical flag?
+4. **Quantum-classical MI interface:** At the measurement boundary between quantum (Tralse) and classical (T/F) regimes, how does the MI register propagate? Does a MI quantum bit collapse to a MI classical flag?
 
-5. **Physical DT detector:** Is there a physical experimental test for subsystem DT in entangled systems that goes beyond the reduced density matrix calculation and produces a detectable DT signature?
+5. **Physical MI detector:** Is there a physical experimental test for subsystem MI in entangled systems that goes beyond the reduced density matrix calculation and produces a detectable MI signature?

@@ -24,19 +24,19 @@ f_DT exceeds the 0.50 prediction threshold simultaneously across all 3 measureme
 
 ## 2. Interpretation
 
-The qc26 GHZ-5 hardware data on `ibm_marrakesh` (n=1024 shots/setting, 3 settings, prior result: |M_5|=14.535, 71σ violation of the LHV bound) re-classifies under the Filter-D4-frozen Hamming-weight rule into a strongly DT-dominated distribution.
+The qc26 GHZ-5 hardware data on `ibm_marrakesh` (n=1024 shots/setting, 3 settings, prior result: |M_5|=14.535, 71σ violation of the LHV bound) re-classifies under the Filter-D4-frozen Hamming-weight rule into a strongly MI-dominated distribution.
 
 ### 2.1 Why this is non-trivial
 
 - **Classical-mixture null** (uniform Bernoulli per qubit, no entanglement): expected f_DT = 5/16 = 0.3125. **Observed f_DT = 0.6201 is ~98% above null.**
 - **Pure noiseless GHZ in Z basis only:** would give f_T → 1, f_DT → 0. Observed f_T = 0.066 confirms data is NOT pure-GHZ-Z-projection.
-- **The 3 qc26 settings rotate Y-basis on subsets of qubits**, redistributing probability mass from {00000, 11111} into the mid-Hamming-weight shell. This is exactly the regime where DT (HW ∈ {2,3}) dominates — and that's what the data shows.
+- **The 3 qc26 settings rotate Y-basis on subsets of qubits**, redistributing probability mass from {00000, 11111} into the mid-Hamming-weight shell. This is exactly the regime where MI (HW ∈ {2,3}) dominates — and that's what the data shows.
 
 ### 2.2 Connection to MR Truth Labels canonical (urb_608 + 2026-05-08 ruling)
 
-The DT prevalence ~62% is consistent with the qc26 data being a **physical realization of Double Tralse** under the formal definition τ(P) ∧ ¬τ(P): the same entangled state simultaneously projects onto canonical-pole eigenstates (T-aligned components, ~7%) and orthogonal-flip eigenstates (F-aligned, ~31%) — but the dominant signature is the mid-shell DT region where both pole-signatures coexist coherently.
+The MI prevalence ~62% is consistent with the qc26 data being a **physical realization of Meta-Indeterminate** under the formal definition τ(P) ∧ ¬τ(P): the same entangled state simultaneously projects onto canonical-pole eigenstates (T-aligned components, ~7%) and orthogonal-flip eigenstates (F-aligned, ~31%) — but the dominant signature is the mid-shell MI region where both pole-signatures coexist coherently.
 
-This is the **first hardware-confirmed quantitative signature of DT in MR Truth Labels** beyond the qualitative Mermin violation. It validates the Filter-D4 classification rule as a meaningful re-projection of the same data into the categorical-taxonomic axis.
+This is the **first hardware-confirmed quantitative signature of MI in MR Truth Labels** beyond the qualitative Mermin violation. It validates the Filter-D4 classification rule as a meaningful re-projection of the same data into the categorical-taxonomic axis.
 
 ### 2.3 I-bucket check (urb_608 §7 cross-validation)
 
@@ -60,7 +60,7 @@ f_I_aggregate = 0.0000 exactly (by construction: Z-basis projection has no nativ
 ## 4. Pass-49 status update
 
 - D4: ✅ COMPLETE, CONFIRM_STRONG
-- D1 (4-spinor DT-witness on IBM Quantum hardware): NOT executed in this session — see "Outstanding work" memo.
+- D1 (4-spinor MI-witness on IBM Quantum hardware): NOT executed in this session — see "Outstanding work" memo.
 
 ## 5. Outputs
 

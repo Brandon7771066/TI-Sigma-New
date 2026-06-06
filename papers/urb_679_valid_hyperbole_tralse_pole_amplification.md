@@ -4,7 +4,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 14, 2026  
 **Corpus Entry:** #679  
-**Related URBs:** #670 (In Defense of Bluntness), #528 (PD), #565 (MR), #658 (HEAR), #677 (Double Tralse), #677 (Indestructibility Theorem)  
+**Related URBs:** #670 (In Defense of Bluntness), #528 (PD), #565 (MR), #658 (HEAR), #677 (Meta-Indeterminate), #677 (Indestructibility Theorem)  
 **DOI:** Pending Zenodo  
 **Keywords:** valid hyperbole, Tralse, pole amplification, PD-corrective, pragmatic truth, HEAR, Permissibility Distribution, Myrion Resolution, communication ethics, rhetoric, bluntness, epistemic fairness
 
@@ -28,7 +28,7 @@ Four speech acts are commonly conflated. TI Sigma distinguishes them precisely.
 
 A lie asserts a claim that the speaker believes to be false, with the intention of creating a false belief in the listener. In five-valued logic terms: the speaker's internal PD has high mass on FALSE for proposition P, yet the speaker asserts TRUE(P).
 
-Lying is a **DT move** at the communication level: the speaker simultaneously knows P is false (their internal state) and asserts P as true (their public state). This is the Tralse of sincerity — saying-true AND knowing-false — but without the valid excuse of genuine uncertainty. It is a deliberate violation of the L-dimension (Love) in GILE: it treats the listener as a means to be deceived rather than a person to be communicated with.
+Lying is a **MI move** at the communication level: the speaker simultaneously knows P is false (their internal state) and asserts P as true (their public state). This is the Tralse of sincerity — saying-true AND knowing-false — but without the valid excuse of genuine uncertainty. It is a deliberate violation of the L-dimension (Love) in GILE: it treats the listener as a means to be deceived rather than a person to be communicated with.
 
 ### 1.2 Over-Hedging (addressed in URB #670)
 
@@ -49,7 +49,7 @@ Valid Hyperbole fails at neither commitment (it commits fully to the amplified p
 
 ### 1.4 Invalid Hyperbole (Tralse Suppression)
 
-Invalid Hyperbole occurs when the speaker amplifies one pole of a Tralse AND denies the existence of the other pole, claiming the amplified version is the complete and exclusive truth. This is a DT move: asserting one pole as exhaustive while simultaneously knowing the other pole is real.
+Invalid Hyperbole occurs when the speaker amplifies one pole of a Tralse AND denies the existence of the other pole, claiming the amplified version is the complete and exclusive truth. This is a MI move: asserting one pole as exhaustive while simultaneously knowing the other pole is real.
 
 The difference from Valid Hyperbole is **meta-awareness and intent**: Valid Hyperbole knows it is amplifying; Invalid Hyperbole claims to be reporting the whole truth.
 
@@ -224,7 +224,7 @@ The theorem's conditions define the failure modes precisely.
 
 **Failure of Condition 3 (No Meta-Awareness):** If the speaker genuinely believes their hyperbole to be the complete literal truth — if they have forgotten it is an amplification — the speech act becomes self-deception. The speaker is now propagating an imbalanced view sincerely, which is worse than lying (one can be corrected by evidence; sincere error resists correction because it feels like truth).
 
-**Failure of Condition 5 (Tralse Suppression):** If, when the other pole is directly engaged, the speaker doubles down ("no, it is NOT fragile at all, period") — they have moved from Valid Hyperbole to **Tralse Suppression**. This is Invalid Hyperbole: asserting one pole as exhaustive while denying the other. It is a DT move at the communicative level: simultaneously knowing the Tralse (internal state) while denying it (public state).
+**Failure of Condition 5 (Tralse Suppression):** If, when the other pole is directly engaged, the speaker doubles down ("no, it is NOT fragile at all, period") — they have moved from Valid Hyperbole to **Tralse Suppression**. This is Invalid Hyperbole: asserting one pole as exhaustive while denying the other. It is a MI move at the communicative level: simultaneously knowing the Tralse (internal state) while denying it (public state).
 
 ---
 

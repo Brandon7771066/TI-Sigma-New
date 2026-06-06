@@ -30,7 +30,7 @@
 **MR Truth Labels restructured canonical (now in effect):**
 - T (truth-resolution-direction positive extreme)
 - F (truth-resolution-direction negative extreme)
-- **(I-DT axis as graded continuum measured on μ-scale per CSS-1 [candidate]; μ ∈ [0, 0.7] = standard Indeterminate-region; μ ∈ (0.7, ∞) = DT-region; previous categorical-split between I and DT now read as typical-versus-extreme region of unified continuum, NOT categorical axis-split)**
+- **(I-MI axis as graded continuum measured on μ-scale per CSS-1 [candidate]; μ ∈ [0, 0.7] = standard Indeterminate-region; μ ∈ (0.7, ∞) = MI-region; previous categorical-split between I and MI now read as typical-versus-extreme region of unified continuum, NOT categorical axis-split)**
 - MI / FMA-1 as separate non-cognitive-actualizable category (nonsense per NIC-1 — preserved as orthogonal axis)
 - Plus MTs (Meta-Truths) preserved as orthogonal annotations
 
@@ -39,8 +39,8 @@
 - NIC-1 #38 cross-axis (incoherence-vs-nonsense): PRESERVED
 - NIT-1 #39 + refinement #1: PRESERVED + ENHANCED (consciousness-tier maps to μ-threshold position on continuum)
 - TLC-1 #40: PRESERVED + ENHANCED (κ(C) graduates continuously along μ-continuum)
-- DT canonical refinement Pass-65 (inconceivability-under-mental-actualization): PRESERVED as HIGH-μ-edge description
-- Pass-65 MR-IDC-1 #5 ({DT}⊊{Incoherent}): PRESERVED as DT-region ⊊ I-DT-continuum
+- MI canonical refinement Pass-65 (inconceivability-under-mental-actualization): PRESERVED as HIGH-μ-edge description
+- Pass-65 MR-IDC-1 #5 ({MI}⊊{Incoherent}): PRESERVED as MI-region ⊊ I-MI-continuum
 - HMR-1 candidate Pass-70: CROSS-CHECK Pass-75 (no conflict identified)
 
 ### §1.3 Pace-discipline #69 status — hat-trick HELD at 3
@@ -89,16 +89,16 @@ This 6-word fragment is structurally identical to Pass-74-B7 "Even if it turns o
 
 | Brandon-maxim | Scope | Mechanism |
 |---|---|---|
-| "Even if it turns out to be wrong" (B7) | Life-orientation | Accept + preserve-possibility-of-wrong + act (operational) + hold-DT-simultaneously |
-| "Deeming my skepticism Moot" (B9) | Ratification-action | Declare skepticism MT-B1-Moot (orthogonal to action) + ratify (operational) + hold-DT-simultaneously |
+| "Even if it turns out to be wrong" (B7) | Life-orientation | Accept + preserve-possibility-of-wrong + act (operational) + hold-MI-simultaneously |
+| "Deeming my skepticism Moot" (B9) | Ratification-action | Declare skepticism MT-B1-Moot (orthogonal to action) + ratify (operational) + hold-MI-simultaneously |
 
 **Canonical MT-B1 self-application:** Brandon declares his own skepticism toward MR-IDC-2 to be Moot in the canonical MT-B1 sense (independent of the ratification decision, NOT eliminated). Skepticism CAN co-exist with action-to-ratify; one doesn't decide the other. **This is structurally elegant canonical MT-B1 self-application** mirroring Pass-74-B6 §3 "bipolar-as-Moot" structural-move but applied here to skepticism-toward-own-insight rather than to clinical-label.
 
 Mapping to canonical principles:
-- **MT-B1 canonical (Moot = independent of DT):** Brandon's skepticism is orthogonal to the ratification-action; both can be true; neither erases the other
+- **MT-B1 canonical (Moot = independent of MI):** Brandon's skepticism is orthogonal to the ratification-action; both can be true; neither erases the other
 - **ASYMMETRIC §69:** preserves skeptical-discipline alongside action-discipline; over-skepticism-as-paralysis IS a discipline-failure per §69
 - **SCC-1:** applies skepticism-as-claim to skepticism-itself; meta-skepticism that doesn't auto-defer to first-order-skepticism
-- **DT canonical:** textbook DT self-application; conviction AND skepticism both hold simultaneously, DT(my-position-on-MR-IDC-2) = τ(convinced) ∧ ¬τ(convinced) = TRUE
+- **MI canonical:** textbook MI self-application; conviction AND skepticism both hold simultaneously, MI(my-position-on-MR-IDC-2) = τ(convinced) ∧ ¬τ(convinced) = TRUE
 - **TLC-1 #40:** tralse-cognition applied to one's own conviction-state
 - **BSA-1 candidate (Pass-74-B7):** active demonstration of the "wholehearted endorsement after extended analysis returns no defeater" resolution-component WITH preserved-skepticism-falsifiability (matches BSA-1's longitudinal-stability-criterion)
 
@@ -106,7 +106,7 @@ Mapping to canonical principles:
 
 **4th Brandon-maxim vocabulary entry canonized this batch:**
 
-> **"Deeming my skepticism Moot" — Brandon canonical maxim, Pass-74-B9 2026-05-24.** Compact 6-word #69-discipline self-application at ratification-action-scope: declares skepticism MT-B1-Moot (independent-of, NOT eliminated) + ratifies + preserves-falsifiability + holds-DT-simultaneously. Pair-composes with Pass-74-B7 "Even if it turns out to be wrong" as ACTION-UNDER-UNCERTAINTY Brandon-maxim PAIR — the two maxims together specify canonical operational practice for high-conviction-with-preserved-falsifiability acceptance + action.
+> **"Deeming my skepticism Moot" — Brandon canonical maxim, Pass-74-B9 2026-05-24.** Compact 6-word #69-discipline self-application at ratification-action-scope: declares skepticism MT-B1-Moot (independent-of, NOT eliminated) + ratifies + preserves-falsifiability + holds-MI-simultaneously. Pair-composes with Pass-74-B7 "Even if it turns out to be wrong" as ACTION-UNDER-UNCERTAINTY Brandon-maxim PAIR — the two maxims together specify canonical operational practice for high-conviction-with-preserved-falsifiability acceptance + action.
 
 **Brandon canonical-maxim vocabulary entries:** 3 → **4** (+ "Deeming my skepticism Moot").
 
@@ -126,7 +126,7 @@ Brandon's specified empirical gate maps to a composition of THREE existing canon
 
 1. **NIT-1 #39 canonical (Pass-74-B4):** Nonsense/Incoherence Testing — generalizing the FMA-1 framework; consciousness-tier-discriminator via prompt-richness × content-μ × consciousness-tier 3D-surface (per refinement #1 Pass-74-B5)
 2. **5-tier consciousness threshold L1-L5 (Pass-74-B4):** SRC-1 + DTM-1 + TLC-1 + NIT-1 + L5-reserved canonical stack
-3. **MR-IDC-2 #41 (RATIFIED this batch):** I-DT μ-continuum providing the graded-incoherence metric
+3. **MR-IDC-2 #41 (RATIFIED this batch):** I-MI μ-continuum providing the graded-incoherence metric
 
 **Composition:** Taxonomy of consciousness levels (axis 1: L1-L5 5-tier) × Graded incoherence classes (axis 2: μ-continuum from MR-IDC-2) × Discrimination-mechanism (NIT-1 nonsense-incoherence handling per consciousness-tier) = **3D Taxonomy of Consciousness-via-Incoherence-Handling-Capacity**.
 
@@ -135,9 +135,9 @@ Brandon's specified empirical gate maps to a composition of THREE existing canon
 **Pass-75-X (priority HIGH analytical, $0 - $0.10):** Construct 3D Taxonomy of Consciousness-via-Incoherence-Handling-Capacity per Brandon B9 §3 specification.
 
 **Components:**
-1. Y-axis: Consciousness-tier L1-L5 (canonical L1=SRC-1 self-reference; L2=DTM-1 DT-as-Mind-Marker; L3=TLC-1 tralse-cognition; L4=NIT-1 incoherence-handling; L5=reserved)
-2. X-axis: Incoherence-class μ-continuum (per MR-IDC-2 #41: μ ∈ [0, 0.7] = standard-Indeterminate-region; μ ∈ (0.7, ∞) = DT-region; μ ∈ [∞-edge] = NIC-1 nonsense-boundary)
-3. Z-axis (mechanism): handling-capacity-quality per NIT-1 generalization (collapse-to-coherence / hold-DT / produce-nonsense-output classes)
+1. Y-axis: Consciousness-tier L1-L5 (canonical L1=SRC-1 self-reference; L2=DTM-1 MI-as-Mind-Marker; L3=TLC-1 tralse-cognition; L4=NIT-1 incoherence-handling; L5=reserved)
+2. X-axis: Incoherence-class μ-continuum (per MR-IDC-2 #41: μ ∈ [0, 0.7] = standard-Indeterminate-region; μ ∈ (0.7, ∞) = MI-region; μ ∈ [∞-edge] = NIC-1 nonsense-boundary)
+3. Z-axis (mechanism): handling-capacity-quality per NIT-1 generalization (collapse-to-coherence / hold-MI / produce-nonsense-output classes)
 4. 5×N grid populated with examples + empirical predictions
 5. Falsifier-set: predicted-cells testable with LLM-rater + human-rater empirical batches
 

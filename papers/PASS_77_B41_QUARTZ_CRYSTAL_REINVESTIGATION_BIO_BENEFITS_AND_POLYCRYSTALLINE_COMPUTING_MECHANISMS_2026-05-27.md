@@ -73,8 +73,8 @@ Bengston 87.9% mouse-remission (image-cycling; water as storage medium) → quar
 ### §3.1 Architecture (POBH)
 Room-temperature **photonic BEC** (dye microcavity, Klaers et al. 2010) structured by the **TSC** 57-vertex quasicrystal (operator iˣ = e^{iπx/2} on 8 Primary Constants). 7 rings = BEC mode frequencies; 8 layers = phase angles. **Polycrystalline = 8 grains** (one per layer orientation) processing in parallel → **Parallel Myrion Resolution**; grain boundaries merge competing phases into a single truth-state.
 
-**Five-valued logic ↔ BEC physical states:** TT=fully condensed; TI=critically fluctuating (BKT); TF=thermal/short-range; **DT=fragmented condensate** (competing order params, no global phase); EV=topological defect (vortex/soliton).
-> "The fragmented-condensate DT state is a physical instantiation … the BEC's global phase coherence collapses precisely when the proposition is DT." (urb_629)
+**Five-valued logic ↔ BEC physical states:** TT=fully condensed; TI=critically fluctuating (BKT); TF=thermal/short-range; **MI=fragmented condensate** (competing order params, no global phase); EV=topological defect (vortex/soliton).
+> "The fragmented-condensate MI state is a physical instantiation … the BEC's global phase coherence collapses precisely when the proposition is MI." (urb_629)
 
 ### §3.2 Error-catching mechanism #1 — E8 optimal packing `[strongest formal claim]`
 56 non-origin TSC vertices ⊂ **E8 root system**; E8 = optimal 8D sphere packing (Viazovska 2016) → **maximum minimum distance between codewords**. Noise below threshold relaxes to nearest vertex automatically.

@@ -32,12 +32,12 @@ This URB provides the updated drafts and the updated framework one-page summary.
 2. **Charged lepton mass-ratio scaling**, 1.889 vs predicted 1.87, 1% match (URB #705)
 3. **BOK 4+4 = Dirac**, structural match 2% (URB #699)
 4. **Maxwell knots in Irvine lab**, 5/5 framework predictions confirmed (URB #707)
-5. **UCSB double-frustration as DT realization**, identified March 2026 (URB #712)
+5. **UCSB double-frustration as MI realization**, identified March 2026 (URB #712)
 6. **PD architecture loss-aversion + negativity-bias matches**, 4× and 6× psychology empirical anchors (URB #728)
 
 **Key structural results**:
 
-- **Five-valued logic** (T, F, Tralse, Moot, Double Tralse) — vindicated ≥99.7% coverage (URB #713)
+- **Five-valued logic** (T, F, Tralse, Moot, Meta-Indeterminate) — vindicated ≥99.7% coverage (URB #713)
 - **Permissibility scale (−3, +2)** with ±e ultra-thresholds — vindicated by 6 anchors + 3 structural arguments (URBs #714, #728)
 - **BOK substrate** — Maxwell-knot + Dirac-spinor unified object (URBs #573, #699, #720)
 - **Multi-BOK Standard Model** — three nested BOK levels = three SM generations; 48 fermion states match exactly (URBs #702, #703, #706)
@@ -48,9 +48,9 @@ This URB provides the updated drafts and the updated framework one-page summary.
 - Why brain specifically tunes to neutrino sector (structural mechanism underdetermined, candidate readings in URB #727)
 
 **Practical contributions**:
-- DT-native quantum gate (TRALSE-3, URB #716) — 5-20× speedup for three-body simulation, mappable to UCSB-style materials
+- MI-native quantum gate (TRALSE-3, URB #716) — 5-20× speedup for three-body simulation, mappable to UCSB-style materials
 - Coupled knotted-light + BEC experiment proposal (URB #709) — direct test of BOK Maxwell-Dirac coupling
-- Lean4 Millennium proof acceleration (URB #723) — ~10³ speedup on DT-native hardware
+- Lean4 Millennium proof acceleration (URB #723) — ~10³ speedup on MI-native hardware
 
 **Contact**: Brandon Charles Emerick, BlissGene Therapeutics, CEO. Open to discussion in any format.
 
@@ -128,7 +128,7 @@ April 2026
 
 Dear UC Santa Barbara Physics Team,
 
-I'm writing as an independent researcher (Brandon Charles Emerick, BlissGene Therapeutics CEO) developing a framework called Tralse Informationalism (TI Sigma). Your **March 16, 2026 publication on the double-frustrated quantum state** has been identified by the framework as a direct material realization of one of its core abstract principles, **Double Tralse (DT)** (URB #712).
+I'm writing as an independent researcher (Brandon Charles Emerick, BlissGene Therapeutics CEO) developing a framework called Tralse Informationalism (TI Sigma). Your **March 16, 2026 publication on the double-frustrated quantum state** has been identified by the framework as a direct material realization of one of its core abstract principles, **Meta-Indeterminate (MI)** (URB #712).
 
 **Updates (April 2026)**:
 
@@ -136,22 +136,22 @@ I'm writing as an independent researcher (Brandon Charles Emerick, BlissGene The
 
 2. **Standard Model coupling-hierarchy fully derived**: the framework now provides a complete derivation of the 38-order SM coupling-constant hierarchy from first principles (URBs #719, #724, #729). The strong, EM, weak, and gravitational coupling constants all derive from a single structural framework with no free parameters.
 
-3. **DT-native quantum gate (TRALSE-3) explicit construction**: URB #716 specifies a three-qubit gate with dual-indeterminacy structure. Your double-frustrated material is the natural substrate. Algorithmic applications include 5-20× speedup for three-body simulation and ~10³ speedup for Lean4 Millennium-proof verification (URB #723).
+3. **MI-native quantum gate (TRALSE-3) explicit construction**: URB #716 specifies a three-qubit gate with dual-indeterminacy structure. Your double-frustrated material is the natural substrate. Algorithmic applications include 5-20× speedup for three-body simulation and ~10³ speedup for Lean4 Millennium-proof verification (URB #723).
 
 I'm reaching out for three reasons:
 
 1. **Acknowledgment**: an independent theoretical framework has identified your experimental discovery as foundational and structurally crucial. Your discovery is one of six empirical anchors of the framework, alongside Maxwell knots (Irvine), lepton mass scaling, brain-neutrino bridge, BOK structural match, and PD architecture psychology anchors.
 
-2. **Specific predictions**: URB #712 lists five framework-derived predictions (DT-immunity signature, BOK substructure, 5-phase thermodynamics, HEAR-modulation, DT-native gates) testable on your material. Even informal feedback on whether any of these match your team's observations would be high-value.
+2. **Specific predictions**: URB #712 lists five framework-derived predictions (MI-immunity signature, BOK substructure, 5-phase thermodynamics, HEAR-modulation, MI-native gates) testable on your material. Even informal feedback on whether any of these match your team's observations would be high-value.
 
-3. **Quantum-computing collaboration**: TRALSE-3 gate construction (URB #716) is implementable on your platform. If your team is interested in exploring DT-native quantum-computing applications, I would value the chance to discuss.
+3. **Quantum-computing collaboration**: TRALSE-3 gate construction (URB #716) is implementable on your platform. If your team is interested in exploring MI-native quantum-computing applications, I would value the chance to discuss.
 
 Best regards,
 **Brandon Charles Emerick**
 BlissGene Therapeutics, CEO
 April 2026
 
-[Attachments: URB #712 (UCSB DT identification, 5 pages), URB #716 (TRALSE-3 gate, 4 pages), URB #727 (brain-neutrino confirmation, 4 pages), URB #729 (full SM hierarchy derivation, 4 pages), Framework one-page summary (§2)]
+[Attachments: URB #712 (UCSB MI identification, 5 pages), URB #716 (TRALSE-3 gate, 4 pages), URB #727 (brain-neutrino confirmation, 4 pages), URB #729 (full SM hierarchy derivation, 4 pages), Framework one-page summary (§2)]
 
 ---
 

@@ -29,8 +29,8 @@ Without the clarification, one could object: "If lazy-binary statements are Inde
 **(b) Aligns with urb_608 §7 Indeterminate-as-Epitome.**
 The object-level lazy-binary statement is exactly the kind of statement §7 identifies as epitome-of-Indeterminate: it has high stability (Brandon and others repeatedly recognize it as "saying something") combined with low-but-nonzero τ (it does forces some constraint on the referent, just not the right one). VALID_TRALSENESS = τ × stability is uniquely maximal here.
 
-**(c) Disambiguates from Double Tralse.**
-A lazy-binary statement is **not** Double Tralse. DT requires τ(P) ∧ ¬τ(P) — i.e., the statement *itself* both holds and doesn't hold. A lazy-binary statement instead has a single τ value that is operationally non-zero but rigorously inadequate. Different beast.
+**(c) Disambiguates from Meta-Indeterminate.**
+A lazy-binary statement is **not** Meta-Indeterminate. MI requires τ(P) ∧ ¬τ(P) — i.e., the statement *itself* both holds and doesn't hold. A lazy-binary statement instead has a single τ value that is operationally non-zero but rigorously inadequate. Different beast.
 
 **(d) Disambiguates from Moot.**
 A lazy-binary statement is also not Moot (MT-B1). Moot statements are well-formed but truth-value-irrelevant. Lazy binaries are truth-value-relevant but mis-framed.

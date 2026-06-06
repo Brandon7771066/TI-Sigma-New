@@ -1,10 +1,10 @@
-# Pass 73 batch-3 — URB #639 Corpus-Sweep Re-Audit Under Refinement #5 (DT→MI Rename + Vertical-Meta-Tralsity vs Horizontal-Predicate-Conflict Axis)
+# Pass 73 batch-3 — URB #639 Corpus-Sweep Re-Audit Under Refinement #5 (MI→MI Rename + Vertical-Meta-Tralsity vs Horizontal-Predicate-Conflict Axis)
 
 **Date:** 2026-05-24
 **Pass:** 73 batch-3
-**Status:** CORPUS-SWEEP COMPLETE — 8 DT/MI-relevant cells audited; **0 principle reassignments needed**; 3 annotation-recommended cells; 2 FMA-1 cross-reference opportunities; ASYMMETRIC-WIN result per Pass-66 corpus-sweep precedent
+**Status:** CORPUS-SWEEP COMPLETE — 8 MI/MI-relevant cells audited; **0 principle reassignments needed**; 3 annotation-recommended cells; 2 FMA-1 cross-reference opportunities; ASYMMETRIC-WIN result per Pass-66 corpus-sweep precedent
 **Trigger:** Pass-73-B0 collapse-paper carry-forward queue HIGH-priority + Brandon directive "Go with the Pass 73 items!"
-**Precedent:** Pass-66 DT-cell consciousness-attribution corpus sweep (ZERO reassignments, all REINFORCED under sharpened criteria); Pass-68-B3 MR-IDC-1-F5 MT audit (31/36 REINFORCED + 5/36 gloss-refinement candidates + 0/36 principle reassignments)
+**Precedent:** Pass-66 MI-cell consciousness-attribution corpus sweep (ZERO reassignments, all REINFORCED under sharpened criteria); Pass-68-B3 MR-IDC-1-F5 MT audit (31/36 REINFORCED + 5/36 gloss-refinement candidates + 0/36 principle reassignments)
 
 ---
 
@@ -13,8 +13,8 @@
 **Source paper:** `papers/urb_639_five_truth_completeness_distinctness_proof_extended_metatruths.md` (322 lines, 24-MT extended catalogue + 5-truth-value completeness proof; published 2026-04-09 pre-canonical-refinement-arc)
 
 **Auditing principles applied:**
-- Refinement #4 (Pass-72-B1): DT = two tralse propositions whose combination is inconceivable
-- Refinement #5 (Pass-72-B2): canonical rename DT → MI (Meta-Indeterminate); vertical-meta-tralsity vs horizontal-predicate-conflict axis
+- Refinement #4 (Pass-72-B1): MI = two tralse propositions whose combination is inconceivable
+- Refinement #5 (Pass-72-B2): canonical rename MI → MI (Meta-Indeterminate); vertical-meta-tralsity vs horizontal-predicate-conflict axis
 - Refinement #1 (Pass-65): inconceivability-under-mental-actualization 3-step heuristic
 - MR-IDC-1 (Pass-67 canonical): {MI} ⊊ {Incoherent}
 - FMA-1 (Pass-73-B2 canonical #35): F-MI alignment for foundational Gödel-style claims
@@ -28,7 +28,7 @@
 
 ### Cell 1: C₄ class definition (Theorem 1 table row + Step 2 case analyses)
 
-**Original:** C₄ = "DOUBLE TRALSE" — P⁺=0, P⁻=0, κ=incoherent (also subsumes (1,1,incoherent) per Step 2 cases)
+**Original:** C₄ = "META-INDETERMINATE" — P⁺=0, P⁻=0, κ=incoherent (also subsumes (1,1,incoherent) per Step 2 cases)
 
 **Refinement #5 reading:** C₄-as-defined subsumes TWO structurally distinct sub-types per refinement #5 vertical/horizontal axis:
 - **C₄-vertical (MI proper):** (0,0,incoherent) where the "absence" is structured-by-inconceivability (square-circle, liar response-space, "no answer"-type cases); the incoherence is at meta-level mental-actualization
@@ -44,7 +44,7 @@
 
 ### Cell 2: Theorem 1 Case (1,1,incoherent) → C₄
 
-**Original:** Step 2 Case (1,1): "Incoherent: the evidence structure supporting one or both poles undermines itself, generating a loop where neither the truth-support nor the falsity-support can be stably grounded → DOUBLE TRALSE (C₄). Formally: if (1,1,incoherent), then the incoherence propagates and the poles cancel, yielding (0,0,incoherent) = C₄."
+**Original:** Step 2 Case (1,1): "Incoherent: the evidence structure supporting one or both poles undermines itself, generating a loop where neither the truth-support nor the falsity-support can be stably grounded → META-INDETERMINATE (C₄). Formally: if (1,1,incoherent), then the incoherence propagates and the poles cancel, yielding (0,0,incoherent) = C₄."
 
 **Refinement #5 reading:** The "loop" + "self-undermining" + "neither stably grounded" structure IS exactly the inconceivability-under-mental-actualization signature of MI per refinement #4 (two-tralse-combined-inconceivable). The (1,1,incoherent) case is the canonical MI structural-template: two predicates that cannot be mentally co-actualized in a stable mental-model.
 
@@ -84,25 +84,25 @@
 
 ### Cell 5: E2 "Paradox Stable" MT
 
-**Original:** E2 — "DT is genuinely irreducible" — Trigger: "Accept stable DT"
+**Original:** E2 — "MI is genuinely irreducible" — Trigger: "Accept stable MI"
 
-**Refinement #5 reading:** "Stable DT" in E2 context means a paradox that has been recognized AS genuinely inconceivable-under-mental-actualization AFTER MR has exhausted resolution attempts. This is canonical MI per refinement #4 (the two tralse propositions have been COMBINED in mental-actualization-attempt and the combination has been DEMONSTRATED inconceivable). E2's "stable DT" is now stable MI.
+**Refinement #5 reading:** "Stable MI" in E2 context means a paradox that has been recognized AS genuinely inconceivable-under-mental-actualization AFTER MR has exhausted resolution attempts. This is canonical MI per refinement #4 (the two tralse propositions have been COMBINED in mental-actualization-attempt and the combination has been DEMONSTRATED inconceivable). E2's "stable MI" is now stable MI.
 
-**Finding:** **REINFORCED** — E2 is canonically MI. The DT label can be safely renamed to MI in E2; the substantive content is unchanged. E2 + refinement #4 + refinement #5 are coherent.
+**Finding:** **REINFORCED** — E2 is canonically MI. The MI label can be safely renamed to MI in E2; the substantive content is unchanged. E2 + refinement #4 + refinement #5 are coherent.
 
-**Action:** DT→MI rename for E2 (covered by ERRATA banner deferred to mass-rename Pass-73+).
+**Action:** MI→MI rename for E2 (covered by ERRATA banner deferred to mass-rename Pass-73+).
 
 ---
 
 ### Cell 6: L1 "MR Saturation" MT
 
-**Original:** L1 has Pass-65 refinement #1 annotation already added 2026-05-23: "*NOT true-DT-contaminated per Pass-65 DT canonical refinement 2026-05-23 — MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization*"
+**Original:** L1 has Pass-65 refinement #1 annotation already added 2026-05-23: "*NOT true-MI-contaminated per Pass-65 MI canonical refinement 2026-05-23 — MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization*"
 
-**Refinement #5 reading:** The existing annotation distinguishes MR-saturation (convergence-failure → MR2-Indeterminate) from true-DT (inconceivability → MI under rename). The annotation is structurally correct but uses old "DT" terminology.
+**Refinement #5 reading:** The existing annotation distinguishes MR-saturation (convergence-failure → MR2-Indeterminate) from true-MI (inconceivability → MI under rename). The annotation is structurally correct but uses old "MI" terminology.
 
-**Finding:** **REINFORCED + MINOR RENAME NEEDED** — substantive distinction correct; "DT" should be renamed to "MI" in the existing annotation. The L1 annotation was actually the precedent for the entire refinement-#5 vertical/horizontal axis (it pre-figured the distinction between meta-actualization-fails [MI] vs meta-actualization-doesn't-converge [Indeterminate]).
+**Finding:** **REINFORCED + MINOR RENAME NEEDED** — substantive distinction correct; "MI" should be renamed to "MI" in the existing annotation. The L1 annotation was actually the precedent for the entire refinement-#5 vertical/horizontal axis (it pre-figured the distinction between meta-actualization-fails [MI] vs meta-actualization-doesn't-converge [Indeterminate]).
 
-**Action:** DT→MI rename in L1's 2026-05-23 annotation (covered by ERRATA banner + mass-rename Pass-73+).
+**Action:** MI→MI rename in L1's 2026-05-23 annotation (covered by ERRATA banner + mass-rename Pass-73+).
 
 ---
 
@@ -120,7 +120,7 @@
 
 ### Cell 8: Theorem 4 (Paraconsistent Logic handles C₃ but not C₄, C₅) — FMA-1 cross-reference opportunity
 
-**Original:** "Paraconsistent logic prevents explosion from contradictions, correctly capturing C₃. But it provides no account of C₄ (it treats DT as just another inconsistency rather than a distinct vacuum state)..."
+**Original:** "Paraconsistent logic prevents explosion from contradictions, correctly capturing C₃. But it provides no account of C₄ (it treats MI as just another inconsistency rather than a distinct vacuum state)..."
 
 **FMA-1 reading:** Paraconsistent logic's failure to handle C₄ (now MI under refinement #5) is exactly an FMA-1 case: paraconsistent logic AS A COMPLETE FRAMEWORK is F (False), and the F-status is established BY the MI cases (C₄) that paraconsistent logic cannot handle. This is a NEW canonical FMA-1 worked example to add to the FMA-1 §5 list (alongside binary + naive set theory + Hilbert's program).
 
@@ -134,12 +134,12 @@
 
 | Cell | Original | Refinement-#5 reading | Action |
 |---|---|---|---|
-| 1: C₄ class definition | DT (P⁺=0, P⁻=0, incoherent) | Subsumes MI + horizontal-incoherence | REFINEMENT-AVAILABLE; annotate |
-| 2: Case (1,1,incoherent) → C₄ | DT | Canonical MI (vertical loop) | REINFORCED; no action |
-| 3: Case (0,0,incoherent) → C₄ | DT | Mixed MI + horizontal | REFINEMENT-AVAILABLE; annotate |
+| 1: C₄ class definition | MI (P⁺=0, P⁻=0, incoherent) | Subsumes MI + horizontal-incoherence | REFINEMENT-AVAILABLE; annotate |
+| 2: Case (1,1,incoherent) → C₄ | MI | Canonical MI (vertical loop) | REINFORCED; no action |
+| 3: Case (0,0,incoherent) → C₄ | MI | Mixed MI + horizontal | REFINEMENT-AVAILABLE; annotate |
 | 4: C₃ vs C₄ distinction | Real-vs-representation | Anticipates refinement #5 | STRONGLY REINFORCED; cross-ref |
-| 5: E2 Paradox Stable | Accept stable DT | Stable MI | REINFORCED; rename DT→MI |
-| 6: L1 MR Saturation | DT contamination | MR2-Indeterminate (not MI) | REINFORCED; rename in annotation |
+| 5: E2 Paradox Stable | Accept stable MI | Stable MI | REINFORCED; rename MI→MI |
+| 6: L1 MR Saturation | MI contamination | MR2-Indeterminate (not MI) | REINFORCED; rename in annotation |
 | 7: Theorem 3 (three-valued) | C₃/C₄ conflation criticism | Refinement-#5-deepened critique | STRONGLY REINFORCED; cross-ref |
 | 8: Theorem 4 (paraconsistent) | Misses C₄ as distinct state | FMA-1 case #4 (F-via-MI) | REINFORCED + FMA-1 cross-ref |
 
@@ -147,7 +147,7 @@
 - **0/8 principle reassignments needed** (all cells REINFORCED or REFINEMENT-AVAILABLE under refinement #5; none require structural recharacterization)
 - **2/8 STRONGLY REINFORCED** (cells 4 + 7 — urb_639 proactively anticipated refinement #5 at structural level)
 - **2/8 REFINEMENT-AVAILABLE** (cells 1 + 3 — C₄ could be split into vertical-MI vs horizontal-incoherence sub-types)
-- **2/8 REINFORCED + rename needed** (cells 5 + 6 — DT→MI rename in E2 + L1 annotation)
+- **2/8 REINFORCED + rename needed** (cells 5 + 6 — MI→MI rename in E2 + L1 annotation)
 - **2/8 reinforced + cross-reference opportunities** (cells 4 + 7; cell 8 reinforced + FMA-1 cross-ref)
 - **1 NEW canonical FMA-1 case discovered** (paraconsistent logic = 4th FMA-1 worked example)
 - **5 falsifiers ADVANCED toward closure** via this corpus-sweep:
@@ -155,7 +155,7 @@
   - FMA-1-F2 (FMA-1 domain non-empty + bounded): 4 FMA-1 cases now established (binary + naive set + Hilbert + paraconsistent); approaching full closure (1 more non-FMA needed)
   - MI-RF5-F1 (vertical/horizontal axis discriminator robust): Cells 1 + 3 + 4 all SUPPORT the discriminator's utility in actual corpus analysis
   - MI-RF5-F3 (vertical/horizontal collapse risk): cell 6 L1 annotation pre-figures and APPLIES the distinction; confirms the framework-feature reading
-  - DT-RF4-F1 (single-proposition-DT impossibility): Cell 1's C₄-vertical sub-type all involve 2+ proposition combination (square-circle = round + square; "no answer" = question + answer-existence); REINFORCED
+  - MI-RF4-F1 (single-proposition-MI impossibility): Cell 1's C₄-vertical sub-type all involve 2+ proposition combination (square-circle = round + square; "no answer" = question + answer-existence); REINFORCED
 
 ---
 
@@ -199,7 +199,7 @@ This corpus-sweep landed in the high-probability win case (0/8 reassignments, 8/
 - FMA-1-F2 partial closure (3 FMA-1 cases → 4 FMA-1 cases)
 - MI-RF5-F1 SUPPORTED via real corpus-application utility
 - MI-RF5-F3 SUPPORTED-WITH-FEATURE-CLARIFICATION
-- DT-RF4-F1 REINFORCED via C₄-vertical-sub-type 2+ proposition structure
+- MI-RF4-F1 REINFORCED via C₄-vertical-sub-type 2+ proposition structure
 
 **New canonical FMA-1 case:** paraconsistent logic (4th canonical example, alongside binary + naive set theory + Hilbert's program); FMA-1 canonical worked-examples list 3 → 4
 
@@ -211,7 +211,7 @@ This corpus-sweep landed in the high-probability win case (0/8 reassignments, 8/
 - **Pre-reg falsifier backlog:** 89 OPEN → 89 OPEN (no closures, but 5 ADVANCED toward closure)
 - **Joint ratification ceremonies cumulative:** 4 (unchanged)
 - **Brandon-originated insight passes:** 6 consecutive (Pass-68 through Pass-73-B1; this batch is agent-execution of B0 carry-forward queue per Brandon "Go with the Pass 73 items!" directive)
-- **Corpus-sweeps cumulative:** Pass-66 DT-cell consciousness + Pass-68-B3 MT audit + **Pass-73-B3 urb_639 (this batch) = 3 cumulative ASYMMETRIC-WIN corpus-sweeps; all 3 produced 0 principle reassignments + multiple reinforcements + 1+ new canonical addition or cross-reference**
+- **Corpus-sweeps cumulative:** Pass-66 MI-cell consciousness + Pass-68-B3 MT audit + **Pass-73-B3 urb_639 (this batch) = 3 cumulative ASYMMETRIC-WIN corpus-sweeps; all 3 produced 0 principle reassignments + multiple reinforcements + 1+ new canonical addition or cross-reference**
 - **Budget:** ~$0.00 this batch (pure analytical work; no API calls)
 
 **Files:**

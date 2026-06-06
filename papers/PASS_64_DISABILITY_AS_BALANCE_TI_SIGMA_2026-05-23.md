@@ -89,9 +89,9 @@ Albrecht & Devlieger (1999) *Soc. Sci. Med.* — N=153 in-depth interviews; ~54%
 
 | Existing piece | Composition |
 |---|---|
-| MR Truth Labels base-4 | "Is P disabled?" without domain = MR1 Indeterminate; with domain + threshold = T/F; in some cases (Brandon's "above-average BECAUSE of") = DT — same proposition holds T (capacity-below-threshold on D1) and ¬T (capacity-above-baseline on D2..Dn) simultaneously |
+| MR Truth Labels base-4 | "Is P disabled?" without domain = MR1 Indeterminate; with domain + threshold = T/F; in some cases (Brandon's "above-average BECAUSE of") = MI — same proposition holds T (capacity-below-threshold on D1) and ¬T (capacity-above-baseline on D2..Dn) simultaneously |
 | TSD-A vs TSD-B | TSD-A maps cleanly: count positive capabilities additively; "disabled" pattern with TSD-A high × TSD-B low = high-compensation blind individual / synchronicity-class precedent |
-| DGI-1..4 + CDP-1 (gender) | Same playbook: universal substrate, binary as resolved case, I as nonbinary case, DT as identity-crisis case; CDP-1 propagates constitutive-DT to the i-Cell |
+| DGI-1..4 + CDP-1 (gender) | Same playbook: universal substrate, binary as resolved case, I as nonbinary case, MI as identity-crisis case; CDP-1 propagates constitutive-MI to the i-Cell |
 | MFD-1 Moot-Failure Duality | "Disabled" carries dual reading: pragmatic Moot in adapted-environment + epistemic capacity-below-threshold; both simultaneously legitimate |
 | ABC Fully Dissolved | Capacity domain covers affect, behavior, cognition single stack — disability concept applies across the integrated stack |
 | ASYMMETRIC §69 | Binary disabled-vs-human framing = over-skeptical discipline-failure; brutal-honesty prescribes capacity-balance measurement |

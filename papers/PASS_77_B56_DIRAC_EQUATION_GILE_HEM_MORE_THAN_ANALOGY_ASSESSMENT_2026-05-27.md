@@ -41,7 +41,7 @@ All verified numerically in the Dirac basis:
 
 **Deflations (#69 — the inconvenient parts):**
 - **2 of the 8 real components are gauge/normalization.** So the headline "4 Existence + 4 Truth = 8" is physically **3+3 free + 2 gauge**. Any reading that needs all 8 to be independently meaningful overclaims.
-- **The "5-valued truth" mapping (URB #659: ψ₃,ψ₄ ↔ False/DT, Dirac Sea ↔ Indeterminate) is grade-1 at best** — the negative-energy/Dirac-sea picture is a *historical interpretation* superseded by QFT (antiparticles, not a filled sea). Mapping a deprecated interpretation lowers the grade; the *modern* load-bearing structure is the Clifford algebra + chiral split, which is what the grade-2 result rests on.
+- **The "5-valued truth" mapping (URB #659: ψ₃,ψ₄ ↔ False/MI, Dirac Sea ↔ Indeterminate) is grade-1 at best** — the negative-energy/Dirac-sea picture is a *historical interpretation* superseded by QFT (antiparticles, not a filled sea). Mapping a deprecated interpretation lowers the grade; the *modern* load-bearing structure is the Clifford algebra + chiral split, which is what the grade-2 result rests on.
 
 ## 4. The load-bearing open question (F1 — the honest crux)
 

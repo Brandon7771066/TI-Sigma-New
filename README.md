@@ -103,11 +103,11 @@ Four states encountered by imperfect agents:
 | **True-Tralse** | Converging toward Truth |
 | **Tralse-False** | Diverging from Truth |
 | **Tralse-Indeterminate** | Undetermined direction |
-| **Double Tralse (DT)** | Incoherent, collapses under resolution |
+| **Meta-Indeterminate (MI)** | Incoherent, collapses under resolution |
 
 **Only True-Tralse may converge toward Truth.**
 
-### Double Tralse (DT)
+### Meta-Indeterminate (MI)
 - A real, named state representing lack of coherence
 - NOT Truth, NOT stable
 - A failure mode: collapses under resolution

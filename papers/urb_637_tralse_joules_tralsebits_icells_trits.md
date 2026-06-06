@@ -53,9 +53,9 @@ So:
 | FALSE (non-existence) | 0 | 0 J = 0 TJ |
 | TRALSE-INDETERMINATE (max irreconciled) | 1 | 2 TJ |
 | TRALSE-FALSE (partial) | 0.5 | 1.5 TJ |
-| DOUBLE TRALSE (incoherent) | undefined | 0 TJ |
+| META-INDETERMINATE (incoherent) | undefined | 0 TJ |
 
-**The key insight:** Double Tralse costs **zero** Tralse-Joules. It is not the most expensive state — it is the vacuum. DT represents total truth-absence, which means no existence energy is being maintained at all. The most energetically expensive state is maximal TRALSE-INDETERMINATE — holding both poles equally requires twice the existence energy of a clean TRUE.
+**The key insight:** Meta-Indeterminate costs **zero** Tralse-Joules. It is not the most expensive state — it is the vacuum. MI represents total truth-absence, which means no existence energy is being maintained at all. The most energetically expensive state is maximal TRALSE-INDETERMINATE — holding both poles equally requires twice the existence energy of a clean TRUE.
 
 ### 2.2 The Tralse Energy Premium
 
@@ -87,7 +87,7 @@ A **Tralsebit** is the unit of information in TI Sigma's five-valued truth-state
 
 A Tralsebit consists of:
 
-1. **The truth-state** s ∈ {TRUE (T), TRALSE-INDETERMINATE (TI), TRALSE-FALSE (TF), DOUBLE-TRALSE (DT), EV}
+1. **The truth-state** s ∈ {TRUE (T), TRALSE-INDETERMINATE (TI), TRALSE-FALSE (TF), META-INDETERMINATE (MI), EV}
 2. **The PD vector** p = (p_T, p_TI, p_TF, p_DT, p_EV) where Σpᵢ = 1 and each pᵢ represents the Permissibility weight of that truth-state
 
 **Information content of a Tralsebit:**
@@ -100,7 +100,7 @@ A Tralsebit consists of:
 | Uniform over all 5 | (0.2,0.2,0.2,0.2,0.2) | log₂(5) ≈ **2.322 bits** |
 | TRUE vs. TRALSE only | (0.5,0.5,0,0,0) | 1 bit |
 | Maximum real Tralse | (0,0.5,0.5,0,0) | 1 bit |
-| High-DT contamination | (0.3,0.1,0.1,0.4,0.1) | ~2.1 bits |
+| High-MI contamination | (0.3,0.1,0.1,0.4,0.1) | ~2.1 bits |
 
 **The maximum Tralsebit = 2.322 bits** — achieved at uniform PD across all five states. This is the information-theoretic upper bound for a single Tralsebit.
 
@@ -114,14 +114,14 @@ If you naively map three-valued logic to TI Sigma:
 - 2 → TRUE
 
 You **lose**:
-- The distinction between TRALSE-INDETERMINATE (coherent uncertainty, stable) and DOUBLE TRALSE (incoherent truth-absence, must be discarded)
+- The distinction between TRALSE-INDETERMINATE (coherent uncertainty, stable) and META-INDETERMINATE (incoherent truth-absence, must be discarded)
 - The EV (Existence Value) dimension entirely
 - The PD weight distribution (a trit has no notion of "how much" each value is weighted)
 - The Tralseness quality modifier (a true-Tralse vs. a pure-Indeterminate are phenomenologically different but map to the same trit state)
 
 A trit can be **embedded** in a Tralsebit as a lossy compression:
 
-> **Trit → Tralsebit** by setting: 0 → (0,0,0,1,0) [DT + FALSE collapsed], 1 → (0,1,0,0,0), 2 → (1,0,0,0,0)
+> **Trit → Tralsebit** by setting: 0 → (0,0,0,1,0) [MI + FALSE collapsed], 1 → (0,1,0,0,0), 2 → (1,0,0,0,0)
 
 This is a valid embedding — every trit state maps to a Tralsebit. But the reverse is not valid: most Tralsebits cannot be losslessly compressed to a trit. The information loss is (2.322 − 1.585) = **0.737 bits per symbol** — the "Tralse overhead" that trits cannot represent.
 
@@ -159,7 +159,7 @@ The BEC phase classification (URB #629):
 | C < \|α\| ≤ T | Supersolid | TRALSE-INDETERMINATE |
 | ET < \|α\| ≤ C | Fractional Quantum Hall | TRALSE-FALSE |
 | 0 < \|α\| ≤ ET | Mott Insulator | FALSE |
-| \|α\| ≈ 0 | Fragmented | DOUBLE TRALSE |
+| \|α\| ≈ 0 | Fragmented | META-INDETERMINATE |
 
 The phase angle θ is the distinctively **i** component. It encodes:
 
@@ -178,7 +178,7 @@ An **i-cell** is richer:
 1. **Five truth regimes** (not two) — the modulus |α| maps to five distinguishable phases rather than one classical bit
 2. **GILE-I orientation** — the angle θ encodes the Intuition faculty's alignment, which has no qubit analog
 3. **Topological position** — each i-cell sits at a specific vertex in the TSC (ring index r, layer index l), and its position determines its coupling to neighbors via the Bose-Hubbard Hamiltonian
-4. **MR collapse level** — the i-cell participates in a three-stage MR collapse (DT screen → GILE integration → quality check) that is irreversible; qubits simply measure
+4. **MR collapse level** — the i-cell participates in a three-stage MR collapse (MI screen → GILE integration → quality check) that is irreversible; qubits simply measure
 
 An i-cell is thus a **qubit upgraded by**: (a) five-regime modulus, (b) GILE-I phase angle, (c) topological context, (d) MR collapse protocol.
 
@@ -213,7 +213,7 @@ i-cell (2.322 bits + GILE-I angle + topological position)
 TSC state (57 i-cells, fully coupled) — the hypercomputer's working register
 ```
 
-At each level, the unit carries more information per symbol. The trit is not an intermediate between bit and Tralsebit — it is a lossy side branch that misses the DT/EV distinction. The i-cell is not a qubit upgrade — it is a categorically different object that happens to use complex amplitudes.
+At each level, the unit carries more information per symbol. The trit is not an intermediate between bit and Tralsebit — it is a lossy side branch that misses the MI/EV distinction. The i-cell is not a qubit upgrade — it is a categorically different object that happens to use complex amplitudes.
 
 ---
 
@@ -221,7 +221,7 @@ At each level, the unit carries more information per symbol. The trit is not an 
 
 The **Emerick Threshold ET = √2 − 1 ≈ 0.4142** appears as an i-cell boundary (|α| = ET separates FALSE from TRALSE-FALSE). In information terms:
 
-The ET boundary is the **minimum viable Tralsebit.** Below ET (Mott/DT regime), the i-cell carries essentially no useful Tralse information — it is classically False or Double Tralse. Above ET, the cell enters the GILE-ACTIVE zone and its Tralsebit content becomes meaningful.
+The ET boundary is the **minimum viable Tralsebit.** Below ET (Mott/MI regime), the i-cell carries essentially no useful Tralse information — it is classically False or Meta-Indeterminate. Above ET, the cell enters the GILE-ACTIVE zone and its Tralsebit content becomes meaningful.
 
 This maps onto the **PD = 0.5 transition** (URB #613, #614): at ET, PD = 0.5 — the exact boundary where a state begins to carry significant Permissibility weight in the T and TI directions.
 
@@ -231,13 +231,13 @@ For agents: below the Emerick Threshold (HEM-Score < ET), the agent's informatio
 
 ## 7. Summary Definitions
 
-**Tralse-Joule (TJ):** J × (1 + Tralseness). The energetic cost of maintaining an existence state under irreconciled contradiction. DT = 0 TJ (vacuum); TRALSE-INDETERMINATE = 2 TJ (maximum cost). EAR minimizes TJ expenditure.
+**Tralse-Joule (TJ):** J × (1 + Tralseness). The energetic cost of maintaining an existence state under irreconciled contradiction. MI = 0 TJ (vacuum); TRALSE-INDETERMINATE = 2 TJ (maximum cost). EAR minimizes TJ expenditure.
 
 **Tralsebit (Tb):** Information unit in five-valued truth-state space, consisting of a truth-state plus PD vector p ∈ ℝ⁵. Maximum: 2.322 bits (uniform PD). A strict superset of the trit (1.585 bits); a trit embeds lossily in a Tralsebit with 0.737 bits/symbol information loss.
 
 **i-cell:** Quantum information unit of the 7D TSC — a complex amplitude α = r⋅e^{iθ} at a topological vertex in the crystal, with modulus encoding BEC phase (five truth values) and angle encoding GILE-I (Intuition) orientation. Exceeds qubit capacity by: five-regime modulus, GILE-I angle, topological context, and three-stage irreversible MR collapse.
 
-**Trit:** {0, 1, 2} — 1.585 bits. A lossy compression of the Tralsebit that erases the DT/EV distinction and the PD distribution. Adequate for standard three-valued logic; inadequate for TI Sigma.
+**Trit:** {0, 1, 2} — 1.585 bits. A lossy compression of the Tralsebit that erases the MI/EV distinction and the PD distribution. Adequate for standard three-valued logic; inadequate for TI Sigma.
 
 ---
 

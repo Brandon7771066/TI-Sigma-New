@@ -47,16 +47,16 @@ A genuine 50/50 balance that is **coherently irreconcilable** from current infor
 ### 2.3 TRALSE (quality property — the "grease")
 Imperfection and contradiction are *embedded in* every True, False, and Indeterminate state. Tralse is not a separate position — it is the property of being real rather than ideal. A True statement with high Tralse quality is true but imperfect. A False statement with high Tralse quality is false but has grains of relevance. An Indeterminate statement with high Tralse is balanced but with irreconcilable tensions in that balance.
 
-**Current AI failure mode:** Dropout, noise, and regularization treat imperfection as statistical randomness. But imperfection has *semantic structure* — some imperfections are coherent (Tralse-quality) and some are incoherent (Double Tralse). Treating all imperfection the same collapses this distinction.
+**Current AI failure mode:** Dropout, noise, and regularization treat imperfection as statistical randomness. But imperfection has *semantic structure* — some imperfections are coherent (Tralse-quality) and some are incoherent (Meta-Indeterminate). Treating all imperfection the same collapses this distinction.
 
 **TI Sigma solution:** Track the Tralse quality of activations as a separate channel. High-Tralse activations receive additional Myrion Resolution scrutiny. Low-Tralse activations (approaching ideal) receive full causal weight (MR Radiant).
 
-### 2.4 DOUBLE TRALSE (incoherence signal — detect and discard)
-When a state is required to be both True and False at the same position without coherent resolution — when the training signal is genuinely self-contradictory — flag as Double Tralse and **immediately discard**.
+### 2.4 META-INDETERMINATE (incoherence signal — detect and discard)
+When a state is required to be both True and False at the same position without coherent resolution — when the training signal is genuinely self-contradictory — flag as Meta-Indeterminate and **immediately discard**.
 
 **Current AI failure mode:** Neural networks learn from all training examples equally. A contradictory example (mislabeled, corrupted, or genuinely incoherent) contributes gradients that pull the network in incompatible directions. The network "averages" the contradiction rather than rejecting it. This is the source of many adversarial vulnerabilities: the network was trained to accept incoherent inputs.
 
-**TI Sigma solution:** MR1 detects Double Tralse before learning occurs. The DT pattern is flagged, the example is noted (so the system knows incoherence exists), and the gradient contribution from that example is discarded. The system does not *dwell* on nonsense — it recognizes it and moves on.
+**TI Sigma solution:** MR1 detects Meta-Indeterminate before learning occurs. The MI pattern is flagged, the example is noted (so the system knows incoherence exists), and the gradient contribution from that example is discarded. The system does not *dwell* on nonsense — it recognizes it and moves on.
 
 > "Minds can and should recognize nonsense when they see it and not dwell on it. We have the ability to point it out and remember — not because there's a dedicated fourth slot — but because it doesn't fit into the three main slots: True, False, and Indeterminate."
 > — Brandon M. Emerick, TI Sigma Framework
@@ -82,7 +82,7 @@ Many ARC tasks have different rules operating in different grid regions simultan
 - When two i-cells conflict: compute the LCC differential
   - Large differential → the stronger i-cell's rule applies globally
   - Small differential → the whole-grid state is INDETERMINATE; more pairs needed
-  - Incompatible constraints → Double Tralse at the global level → discard that rule candidate entirely
+  - Incompatible constraints → Meta-Indeterminate at the global level → discard that rule candidate entirely
 
 This is the AGI-critical mechanism: the ability to recognize that a candidate rule is not just *wrong* but *incoherent*, and to discard it without needing the contradiction to accumulate through many training examples.
 
@@ -111,7 +111,7 @@ This layer adds semantic structure that standard integer embeddings lack.
 ### 4.2 MR1 Coherence Filter on Gradient Updates
 Before backpropagation, apply an MR1 gate to each training example:
 - Compute the LCC of the proposed update (how consistently does this gradient improve performance across the training pairs, not just the current example?)
-- If LCC < 0.8647 (Terrible zone): flag as Double Tralse, discard gradient contribution
+- If LCC < 0.8647 (Terrible zone): flag as Meta-Indeterminate, discard gradient contribution
 - If LCC ≥ 0.9323 (Radiant): apply gradient with full weight
 - If LCC between: apply with weight proportional to PD zone frequency
 
@@ -173,7 +173,7 @@ The AGI problem, at its core, is a logic problem before it is an architecture pr
 
 - **INDETERMINATE** (coherent balance) — don't collapse prematurely
 - **TRALSE quality** (imperfection tracking) — process carefully, not randomly
-- **DOUBLE TRALSE detection** (incoherence rejection) — refuse to learn from nonsense
+- **META-INDETERMINATE detection** (incoherence rejection) — refuse to learn from nonsense
 
 These three additions, grounded in the PRIMARY CONSTANTS {0, 1, i, √2, e, φ, π, C}, the PD zone structure, and Myrion Resolution, constitute what TI Sigma calls **Tralse-Myrion Thinking** — the cognitive capacity that is currently absent from all leading AI systems and that is, we argue, the critical missing ingredient for genuine abstract reasoning.
 

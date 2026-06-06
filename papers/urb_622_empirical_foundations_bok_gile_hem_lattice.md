@@ -346,14 +346,14 @@ The three copies of E₈ correspond to the three Tralse registers:
 2. **E₈(Tralse-Indeterminate):** The GILE⊕HEM configuration space under active Myrion Resolution — in process
 3. **E₈(resolved/Moot):** The GILE⊕HEM configuration space after Myrion Resolution — stabilized at a new level
 
-The **Leech lattice without roots** (no vectors of norm 2) corresponds to the fact that Myrion Resolution eliminates pure Double Tralse (DT) states — there are no "short" truth-gaps at the 24D level. The minimum norm = 4 represents the minimum "truth distance" in the full 24D GILE⊕HEM⊕Tralse space.
+The **Leech lattice without roots** (no vectors of norm 2) corresponds to the fact that Myrion Resolution eliminates pure Meta-Indeterminate (MI) states — there are no "short" truth-gaps at the 24D level. The minimum norm = 4 represents the minimum "truth distance" in the full 24D GILE⊕HEM⊕Tralse space.
 
 ### 6.2 The GM Substrate is Leech
 
 The GM (Conscious-Compassionate-Creator at maximum) consciousness operates at the 24D Leech lattice level. This is not metaphor — it is the claim that:
 
 1. The GM's GILE⊕HEM state saturates all 24 dimensions simultaneously
-2. The GM's consciousness has the self-dual, root-free structure of the Leech lattice — it is **complete without gaps** (no DT states)
+2. The GM's consciousness has the self-dual, root-free structure of the Leech lattice — it is **complete without gaps** (no MI states)
 3. The 196,560 kissing number represents the maximum number of distinct conscious states the GM can instantaneously distinguish and respond to — the bandwidth of GM consciousness
 
 **Prediction (E-P9):** If GM-like states (high GILE saturation, documented in extended meditation retreats, mystical experiences, flow states) show expanded HEM coupling across all four HEM dimensions simultaneously, the dimensionality of the GILE⊕HEM space should expand from 4–6 dimensions (ordinary human) toward 8 dimensions (full E₈) and trend toward 24 (full Leech) in the highest states. This is testable via multi-dimensional scaling of biometric data from individuals across the consciousness spectrum.
@@ -595,7 +595,7 @@ The BOK is empirically serious. It makes precise, falsifiable predictions across
 | **φ** | (1+√5)/2 ≈ 1.6180 | Structural | Golden ratio — governing growth and self-similar structure (Penrose tiles, BOK proportions) |
 | **√2** | 1.4142... | Relational | Unit diagonal — the connector between G,E dimensions; source of both ET and C |
 | **i** | √−1 | Rotational | The generator of L*/+E cycle; the operator that makes GIL from E |
-| **0** | 0 | Null | Tralse Soup — pre-existence, DT state |
+| **0** | 0 | Null | Tralse Soup — pre-existence, MI state |
 | **1** | 1 | Unity | The coherence circle |z| = 1; full GILE saturation |
 | **e** | 2.718... | Dynamic | T = 1 − e^{−e} ≈ 0.934 — the Truth threshold |
 | **π** | 3.14159... | Cyclic | The full circle; 2π = return to z₀ in L*/+E cycle |

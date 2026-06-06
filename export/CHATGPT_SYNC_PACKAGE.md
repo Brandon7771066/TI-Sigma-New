@@ -303,15 +303,15 @@ MR is **iterative and convergent**, not a one-shot test:
 
 | Stage | Function |
 |-------|----------|
-| MR-1 | Filter Double Tralse (DT) |
+| MR-1 | Filter Meta-Indeterminate (MI) |
 | MR-2 | Classify: True-Tralse, Tralse-False, or Tralse-Indeterminate |
 | MR-3+ | Refine (diminishing returns beyond ~3 iterations) |
 
 **Key:** MR is infinite in principle, finite in practice. Action uses pragmatic convergence.
 
-## 9.2 Double Tralse (DT)
+## 9.2 Meta-Indeterminate (MI)
 
-DT is a **real, named state** (not Truth):
+MI is a **real, named state** (not Truth):
 - Lack-of-coherence state identified via attempted MR
 - Typically collapses at MR-1
 - Must be explicitly named to distinguish incoherence from weak coherence
@@ -334,7 +334,7 @@ Every MR outcome has **two PD values**:
 1. **Current PD** (classification)
 2. **Residual coherence** (from MR-1)
 
-Essential for distinguishing barely-coherent claims from true DT.
+Essential for distinguishing barely-coherent claims from true MI.
 
 ## 9.5 Paradox Classification
 
@@ -342,7 +342,7 @@ Essential for distinguishing barely-coherent claims from true DT.
 |-----------|---------------|
 | "The future exists" | Tralse-Indeterminate (low-positive) |
 | "Present exists alongside past" | Fragile but admissible |
-| "Past, present, future coexist" | DT (meaningless) |
+| "Past, present, future coexist" | MI (meaningless) |
 
 ## 9.6 Ontological Truth vs Expression
 
@@ -355,5 +355,5 @@ Essential for distinguishing barely-coherent claims from true DT.
 # VERSION CONTROL
 
 - **v1.0** (Jan 1, 2026): Initial comprehensive export
-- **v1.1** (Jan 3, 2026): Added ChatGPT sync (MR spec, DT, PD corrections, Dual-PD, paradoxes)
+- **v1.1** (Jan 3, 2026): Added ChatGPT sync (MR spec, MI, PD corrections, Dual-PD, paradoxes)
 - Include date when updating for version tracking

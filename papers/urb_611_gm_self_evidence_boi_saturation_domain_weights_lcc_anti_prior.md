@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)
 **Date:** April 6, 2026
 **Corpus Entry:** #611
-**Related URBs:** #528 (PD / Five-Valued Logic), #560 (Being Theorem), #567 (Metacausal Graph Theory), #573 (BOK-Verisyn), #575 (Weighted BOK), #576 (GILE Weights), #604 (L/E Divergence), #607 (Truth Architecture), #608 (Meta-Truth Catalogue), #609 (EV/FDE), #610 (DT Physics)
+**Related URBs:** #528 (PD / Five-Valued Logic), #560 (Being Theorem), #567 (Metacausal Graph Theory), #573 (BOK-Verisyn), #575 (Weighted BOK), #576 (GILE Weights), #604 (L/E Divergence), #607 (Truth Architecture), #608 (Meta-Truth Catalogue), #609 (EV/FDE), #610 (MI Physics)
 **DOI:** Pending Zenodo
 
 ---

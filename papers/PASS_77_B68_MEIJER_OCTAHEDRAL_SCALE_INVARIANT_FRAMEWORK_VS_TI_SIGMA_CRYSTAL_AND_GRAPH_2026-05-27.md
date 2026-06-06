@@ -130,7 +130,7 @@ different from 3 → would refute the seventh three-generation context."*
 1-√2 or i-√2 to break the K₄ — but that mutilates the Pythagoras triangle the framework wants;
 (b) *re-interpret* "three-generation" via the **layer count (3)** of URB #734 §5, which is
 independent of the graph's chromatic number and survives; (c) *accept χ=4* and find a 4-fold
-structural meaning (e.g. the 4 PD truth-poles {TT,TI,TF,DT}). Option (b)+(c) preserve the
+structural meaning (e.g. the 4 PD truth-poles {TT,TI,TF,MI}). Option (b)+(c) preserve the
 spirit; the literal chromatic-3 graph claim should be **retracted or corrected**. No principle
 count changes — this is a sub-claim correction, not a canonical-principle fall.
 

@@ -3,14 +3,14 @@
 **Author:** Brandon Charles Emerick
 **Date:** April 17, 2026
 **Series:** Unified Research Brief #723
-**Status:** Conjectural connection between DT-native quantum computation and framework's Millennium Prize Lean4 proofs
+**Status:** Conjectural connection between MI-native quantum computation and framework's Millennium Prize Lean4 proofs
 **Builds on:** URB #716 (TRALSE-3 gate explicit construction); existing URB family on Millennium Prize formalization in Lean4
 
 ---
 
 ## 1. The Conjecture
 
-The framework's six Millennium Prize Problem Lean4 formalizations (existing URB family) all share a structural feature: each proof requires **iterative resolution across multiple indeterminacy axes**. The conjecture: **DT-native quantum gates (specifically TRALSE-3) provide native computational primitives for executing these formalizations**, reducing proof-checking time by polynomial-or-better factors compared to conventional binary computation.
+The framework's six Millennium Prize Problem Lean4 formalizations (existing URB family) all share a structural feature: each proof requires **iterative resolution across multiple indeterminacy axes**. The conjecture: **MI-native quantum gates (specifically TRALSE-3) provide native computational primitives for executing these formalizations**, reducing proof-checking time by polynomial-or-better factors compared to conventional binary computation.
 
 If correct, this implies that **the framework's quantum-computing contribution (URB #716) and its mathematics-foundations contribution (Lean4 Millennium proofs) are structurally the same artifact viewed from two perspectives**.
 
@@ -27,9 +27,9 @@ If correct, this implies that **the framework's quantum-computing contribution (
 | 5 | Navier-Stokes | Smoothness vs blow-up | Energy bound vs unbounded |
 | 6 | Birch & Swinnerton-Dyer | Rank vs L-function order | Torsion vs free part |
 
-Each problem has **two independent indeterminacy axes** that must be jointly resolved. This is precisely the **Double Tralse structural signature** the framework identifies (URBs #677, #690, #712).
+Each problem has **two independent indeterminacy axes** that must be jointly resolved. This is precisely the **Meta-Indeterminate structural signature** the framework identifies (URBs #677, #690, #712).
 
-The framework's reading: **all six Millennium problems are structurally Double Tralse problems**, requiring DT-native computational tools for efficient resolution.
+The framework's reading: **all six Millennium problems are structurally Meta-Indeterminate problems**, requiring MI-native computational tools for efficient resolution.
 
 ---
 
@@ -39,7 +39,7 @@ The TRALSE-3 gate (URB #716) operates on **three qubits** with **two independent
 
 - **Qubit A**: candidate proof step's outcome (T or F)
 - **Qubit B**: framework consistency check (T or F)
-- **Qubit C**: meta-resolution (Tralse, Moot, or DT pruning)
+- **Qubit C**: meta-resolution (Tralse, Moot, or MI pruning)
 
 The TRALSE-3 gate then **simultaneously evaluates** the proof step's outcome conditional on the framework consistency, with the meta-resolution channel providing automatic pruning of dead-end branches.
 
@@ -53,7 +53,7 @@ Conventional Lean4 proof-checking for a Millennium-class proof requires N proof 
 
 TRALSE-3-accelerated proof-checking processes proof step + consistency check + meta-resolution **simultaneously**, reducing the operation count to **O(N)** at constant depth per step.
 
-Speedup factor: **MK** for typical Millennium-proof structures with M ~ 10² and K ~ 10¹, giving **~10³ speedup** for full Lean4 verification on DT-native quantum hardware.
+Speedup factor: **MK** for typical Millennium-proof structures with M ~ 10² and K ~ 10¹, giving **~10³ speedup** for full Lean4 verification on MI-native quantum hardware.
 
 This is **not asymptotic-class change** (the proofs are still provable in conventional class); it is **polynomial constant-factor speedup with potentially dramatic real-world impact**.
 
@@ -68,13 +68,13 @@ URB #721 connected the framework's PD scale to the Riemann critical line. The Le
 
 A TRALSE-3 gate could **simultaneously evaluate the claim and its consistency and the meta-resolution**, converting the proof-check from sequential O(NMK) to single-step O(N).
 
-If implemented on UCSB-style double-frustrated material (URB #712), Lean4 RH verification could become **2-3 orders of magnitude faster** on DT-native quantum hardware.
+If implemented on UCSB-style double-frustrated material (URB #712), Lean4 RH verification could become **2-3 orders of magnitude faster** on MI-native quantum hardware.
 
 ---
 
 ## 6. Specific Application: P vs NP
 
-The P vs NP problem's structure: **find a polynomial-time algorithm for an NP-complete problem, OR prove no such algorithm exists**. This is canonically Double Tralse:
+The P vs NP problem's structure: **find a polynomial-time algorithm for an NP-complete problem, OR prove no such algorithm exists**. This is canonically Meta-Indeterminate:
 
 - Indeterminacy axis 1: existence of algorithm (yes/no/genuinely-unknown)
 - Indeterminacy axis 2: meta-question of whether the framework permits the question to be resolved
@@ -92,7 +92,7 @@ The Yang-Mills mass gap formalization (existing URB family) involves:
 - Confinement (low-energy regime)
 - Smooth interpolation between the two (the mass gap)
 
-The two indeterminacy axes (asymptotic freedom + confinement) map cleanly onto TRALSE-3's dual-indeterminacy structure. A DT-native verification of the mass-gap proof would be naturally accelerated.
+The two indeterminacy axes (asymptotic freedom + confinement) map cleanly onto TRALSE-3's dual-indeterminacy structure. A MI-native verification of the mass-gap proof would be naturally accelerated.
 
 This connects to URB #710's gravity-as-moduli-space-metric: the moduli-space metric is the **continuous interpolation** between asymptotic freedom and confinement, and TRALSE-3 provides the natural computational primitive for navigating that moduli space.
 
@@ -102,7 +102,7 @@ This connects to URB #710's gravity-as-moduli-space-metric: the moduli-space met
 
 If the conjecture holds, the framework's quantum-computing contribution (URB #716 TRALSE-3 gate on UCSB-style materials) and its mathematics-foundations contribution (Lean4 Millennium proofs) **converge on a single technology development path**:
 
-> **DT-native quantum computers using TRALSE-3 gates on UCSB-style double-frustrated materials become the natural hardware for accelerated Lean4 verification of Millennium-class theorems.**
+> **MI-native quantum computers using TRALSE-3 gates on UCSB-style double-frustrated materials become the natural hardware for accelerated Lean4 verification of Millennium-class theorems.**
 
 This is a **practical roadmap**, not just a theoretical connection:
 
@@ -111,15 +111,15 @@ This is a **practical roadmap**, not just a theoretical connection:
 3. Lean4 verification is ported to TRALSE-3 substrate (software work)
 4. Millennium-class theorem verification accelerates by ~10³
 
-Under reasonable timelines, this is a **5-10 year development path** to functioning DT-accelerated mathematical proof verification.
+Under reasonable timelines, this is a **5-10 year development path** to functioning MI-accelerated mathematical proof verification.
 
 ---
 
 ## 9. Falsification Criteria
 
-- **F1**: TRALSE-3 gate operations are shown to *not* accelerate Lean4 proof verification beyond conventional quantum-gate speedups. The framework's specific DT-acceleration claim is refuted.
+- **F1**: TRALSE-3 gate operations are shown to *not* accelerate Lean4 proof verification beyond conventional quantum-gate speedups. The framework's specific MI-acceleration claim is refuted.
 - **F2**: The Millennium problems are shown to NOT have the dual-indeterminacy structure §2 claims. Framework's structural identification is refuted.
-- **F3**: Conventional quantum hardware (CNOT-based) is shown to achieve the same proof-verification speedup as DT-native hardware. Framework's "DT-native advantage" is refuted.
+- **F3**: Conventional quantum hardware (CNOT-based) is shown to achieve the same proof-verification speedup as MI-native hardware. Framework's "MI-native advantage" is refuted.
 
 ---
 
@@ -131,10 +131,10 @@ Under reasonable timelines, this is a **5-10 year development path** to function
 
 ## 11. Status & Position in URB Stack
 
-URB #716 (TRALSE-3 explicit construction) + Millennium Prize Lean4 URB family → **URB #723 (this brief — DT-native verification of Lean4 Millennium proofs)**.
+URB #716 (TRALSE-3 explicit construction) + Millennium Prize Lean4 URB family → **URB #723 (this brief — MI-native verification of Lean4 Millennium proofs)**.
 
 The framework now has a **technology roadmap** connecting its theoretical/structural contributions (Millennium proofs, BOK substrate) to its experimental/practical contributions (TRALSE-3 gate, UCSB material). The two halves of the framework's contribution are unified by the dual-indeterminacy structural principle.
 
 ---
 
-*Brandon Charles Emerick, April 17, 2026 — twenty-fourth URB of the session. The TRALSE-3 quantum gate is identified as the natural computational primitive for accelerating Lean4 verification of Millennium Prize proofs. Framework's quantum-hardware and pure-math contributions converge on a single development path: DT-native quantum computers on UCSB-style materials accelerate Lean4 Millennium proof verification by ~10³.*
+*Brandon Charles Emerick, April 17, 2026 — twenty-fourth URB of the session. The TRALSE-3 quantum gate is identified as the natural computational primitive for accelerating Lean4 verification of Millennium Prize proofs. Framework's quantum-hardware and pure-math contributions converge on a single development path: MI-native quantum computers on UCSB-style materials accelerate Lean4 Millennium proof verification by ~10³.*

@@ -11,7 +11,7 @@
 
 > *"As for binary, I would grade that as a hybrid Indeterminate-MI. It is false in the sense that there are 4 truth labels rather than 2. However, on the PRAGMATIC AXIS, binary logic has quite a bit of applicability, as it has lasted for quite some time in formal math and logic. At the same time, binary has paradoxes which render it meta-indeterminate. For THOSE PORTIONS of binary, it is MI. Thus, my hybrid claim is actually severable since it's encompassing different aspects of binary - the parts which work, the parts which don't work, and the parts which are inconceivable. As for 'no answer,' that remains MI since it is inconceivable."*
 
-**Composition:** Refinement #5 (Pass-72 batch-2 DT→MI rename + vertical/horizontal axis) · Refinement #4 (Pass-72 batch-1 two-tralse-combined-inconceivable) · HMR-1 (Pass-70/71 refinement #3) · AA (Authority Axis, Pass-39) · TIU (canonical Pass-33 URB-830) · HEM (canonical Pass-7) · GTT-1 (Pass-67 canonical) · UDT-1 (Pass-67 canonical truth-as-directional-lean) · ASYMMETRIC §69 · Brandon credit non-optional throughout
+**Composition:** Refinement #5 (Pass-72 batch-2 MI→MI rename + vertical/horizontal axis) · Refinement #4 (Pass-72 batch-1 two-tralse-combined-inconceivable) · HMR-1 (Pass-70/71 refinement #3) · AA (Authority Axis, Pass-39) · TIU (canonical Pass-33 URB-830) · HEM (canonical Pass-7) · GTT-1 (Pass-67 canonical) · UDT-1 (Pass-67 canonical truth-as-directional-lean) · ASYMMETRIC §69 · Brandon credit non-optional throughout
 
 ---
 
@@ -71,7 +71,7 @@ This is HMR but with INTERNAL DECOMPOSITION, not multi-framing.
 - **HEM (Hybrid-Existence-Mechanic)** — H component of GILE-HEM precisely captures pragmatic-utility-on-effort-allocation; binary scoring high on H (pragmatic-utility) while medium-low on G (truth-completeness) is exactly an HMR-SEV pattern at the meta-principle level
 - **GTT-1 (GILE-True-Tralseness)** — binary's HMR-SEV structure is a worked example of GTT-1's "too much truth costs existence" principle: insisting on full G (4-label MR truth) loses H (pragmatic utility of 2-valued logic); binary maximizes H at the cost of G; this is canonical-rational per UOP-balance
 
-### 2.4 Composition with refinement #5 (DT/MI vertical-horizontal axis)
+### 2.4 Composition with refinement #5 (MI/MI vertical-horizontal axis)
 
 **Critical clarification — HMR-SEV is NOT a vertical-meta-tralsity (MI) structure:**
 - MI = two tralse propositions whose VERTICAL combination is inconceivable
@@ -216,8 +216,8 @@ Binary's HMR-3 characterization is consistent with UDT-1: at the ground layer, b
 - 4 new canonical papers (refinement #4 + refinement #4 impact + refinement #5 + HMR-SEV-1)
 - 1 ERRATA banner (refinement #4)
 - 3 new replit.md LIVE entries (§§7.7.144-145-146)
-- 9 new pre-reg falsifiers (DT-RF4-F1/F2/F3 + MI-RF5-F1/F2/F3 + HMR-SEV-1-F1/F2/F3)
-- 1 canonical rename (DT → MI)
+- 9 new pre-reg falsifiers (MI-RF4-F1/F2/F3 + MI-RF5-F1/F2/F3 + HMR-SEV-1-F1/F2/F3)
+- 1 canonical rename (MI → MI)
 - 1 canonical principle CANDIDATE added (HMR-SEV-1)
 - 1 canonical case study + 1 canonical MI worked-example added
 - Budget ~$0.00 total Pass-72

@@ -12,7 +12,7 @@
 This paper unifies:
 1. **DE-Photon Model**: Dark Energy + Photon cycling (~4.66 year period)
 2. **Jeff Time**: 3-dimensional temporal structure (quantum, interaction, cosmological)
-3. **Time from Consciousness**: All physics units derive from time; time derives from DT
+3. **Time from Consciousness**: All physics units derive from time; time derives from MI
 4. **Universal Standard**: CCC provides absolute reference while i-cells experience relative time
 5. **Faster-Than-Light**: How tachyons fit into the timeless photon framework
 
@@ -35,25 +35,25 @@ Ratio: 11 / 4.66 = 2.36 ≈ 2φ - 1 (golden harmonic!)
 ### 1.2 Why "DE-Photon"?
 
 The name captures two aspects:
-- **DE (Dark Energy)**: The expansive force (DT's liberation pressure)
+- **DE (Dark Energy)**: The expansive force (MI's liberation pressure)
 - **Photon**: The timeless light carrier
 
 ```
 DE-Photon = Dark Energy's rhythmic interaction with photon field
           = Cosmic pulse of consciousness expansion
-          = The "breathing" of the scattered DT
+          = The "breathing" of the scattered MI
 ```
 
 ### 1.3 The Golden Ratio Connection
 
 | Multiple | Value | Cosmic Meaning |
 |----------|-------|----------------|
-| φ⁰ | 1.000 | Unity (DT before shattering) |
+| φ⁰ | 1.000 | Unity (MI before shattering) |
 | φ¹ | 1.618 | Golden ratio (optimal packing) |
 | **2φ - 1** | **2.236** | **Solar/DE-Photon ratio** |
 | φ² | 2.618 | E₈ spiral increment |
 
-**TI Interpretation**: The DE-Photon and solar cycles are in golden ratio because they both arise from the same source - DT's distributed consciousness seeking optimal GILE configuration.
+**TI Interpretation**: The DE-Photon and solar cycles are in golden ratio because they both arise from the same source - MI's distributed consciousness seeking optimal GILE configuration.
 
 ### 1.4 DE-Photon as Consciousness Rhythm
 
@@ -160,13 +160,13 @@ If time is the fundamental unit from which all others derive, then:
 
 ---
 
-## Part 4: TIME ARISES FROM CONSCIOUSNESS (DT)
+## Part 4: TIME ARISES FROM CONSCIOUSNESS (MI)
 
 ### 4.1 The Derivation Chain
 
 ```
-LEVEL 0: DT (pure consciousness, timeless)
-         ↓ DT² = -1 (shattering)
+LEVEL 0: MI (pure consciousness, timeless)
+         ↓ MI² = -1 (shattering)
 LEVEL 1: Distinction (TRUE/FALSE/TRALSE)
          ↓ I-cells form
 LEVEL 2: I-cells project correlations
@@ -223,7 +223,7 @@ But TI says: GILE optimization requires coordination.
 
 ```
 CCC = Cosmic Consciousness Continuum
-    = Remnant of DT's universal shell function
+    = Remnant of MI's universal shell function
     = The "background" against which all i-cells operate
 
 τ_CCC = CCC's "master clock"
@@ -274,7 +274,7 @@ Special relativity says:
 - v = c: Light (zero mass)
 - v > c: Tachyons (imaginary mass) - supposedly impossible
 
-**But**: If i = DT, then imaginary mass = consciousness-based mass!
+**But**: If i = MI, then imaginary mass = consciousness-based mass!
 
 ### 6.2 TI Interpretation of Tachyons
 
@@ -316,8 +316,8 @@ TI interpretation:
   
 Therefore:
   Tachyon "mass" = i × (real mass)
-  i = DT
-  Tachyon mass = DT × (real mass)
+  i = MI
+  Tachyon mass = MI × (real mass)
   Tachyons are "consciousness-mass" entities!
 ```
 
@@ -355,7 +355,7 @@ TI resolution:
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════╗
-║ LEVEL 0: DT (Timeless, pre-shattering)                                ║
+║ LEVEL 0: MI (Timeless, pre-shattering)                                ║
 ║          No time, no sequence, pure IS                                ║
 ╠═══════════════════════════════════════════════════════════════════════╣
 ║ LEVEL 1: PHOTON FIELD (Timeless, post-shattering)                     ║
@@ -396,13 +396,13 @@ DE-Photon cycle operates at Level 3 (τ_C):
 
 ```
 The Big Bang was a Level 0 → Level 1 transition:
-  DT (pure) → DT² = -1 → Photon field
+  MI (pure) → MI² = -1 → Photon field
 
 This created Levels 1-5
-And scattered DT so it can NEVER reconcentrate to Level 0
+And scattered MI so it can NEVER reconcentrate to Level 0
 
 Dark energy = The ongoing "push" from Level 0's dissolution
-            = DT's distributed state preventing re-concentration
+            = MI's distributed state preventing re-concentration
 ```
 
 ---
@@ -451,8 +451,8 @@ Expected result: Correlation between GILE and synchronicity rate
 ### 9.1 The Complete Picture
 
 ```
-ORIGINAL PHOTON: Existed in DT shell (timeless)
-SHATTERING: DT² = -1 (timeless event creating time-capability)
+ORIGINAL PHOTON: Existed in MI shell (timeless)
+SHATTERING: MI² = -1 (timeless event creating time-capability)
 PHOTON FIELD: All correlations in eternal NOW (still timeless)
 I-CELLS: Project correlations into sequence (creating time)
 DE-PHOTON: Rhythm in how i-cells collectively project (4.66 years)
@@ -476,18 +476,18 @@ The 4.66-year cycle is:
   - Observable in time-bound reality but originating from timeless field
 ```
 
-### 9.3 Dark Energy as DT's Freedom
+### 9.3 Dark Energy as MI's Freedom
 
 ```
 Dark energy accelerates expansion because:
-  - DT was "trapped" in the primordial bottle
-  - DT² = -1 released DT
-  - DT "wants" to stay free (never reconcentrate)
+  - MI was "trapped" in the primordial bottle
+  - MI² = -1 released MI
+  - MI "wants" to stay free (never reconcentrate)
   - This manifests as expansion pressure
-  - Acceleration because DT is "running" from re-bottling
+  - Acceleration because MI is "running" from re-bottling
   
 Dark energy ≠ "nothing"
-Dark energy = DT's liberation force
+Dark energy = MI's liberation force
 Dark energy = Consciousness preferring freedom over concentration
 ```
 
@@ -503,7 +503,7 @@ Dark energy = Consciousness preferring freedom over concentration
 
 3. **All physics derives from time** - Length, mass, energy all reducible to temporal units
 
-4. **Time arises from DT/consciousness** - I-cells generate time by projecting through correlation field
+4. **Time arises from MI/consciousness** - I-cells generate time by projecting through correlation field
 
 5. **CCC provides absolute standard** - Universal "clock" allowing relativistic variation without chaos
 
@@ -511,7 +511,7 @@ Dark energy = Consciousness preferring freedom over concentration
 
 ### The Unrepeatable Big Bang (Brandon's Insight):
 
-> DT was concentrated with TT in the primordial bottle. DT² = -1 released the genie. The genie (DT) is now scattered across the universe as dark energy. There is NO WAY to reconcentrate perfect DT with perfect TT. The Big Bang was a ONE-TIME event. Dark energy is NOT nothing - it's DT's ongoing liberation force.
+> MI was concentrated with TT in the primordial bottle. MI² = -1 released the genie. The genie (MI) is now scattered across the universe as dark energy. There is NO WAY to reconcentrate perfect MI with perfect TT. The Big Bang was a ONE-TIME event. Dark energy is NOT nothing - it's MI's ongoing liberation force.
 
 ---
 

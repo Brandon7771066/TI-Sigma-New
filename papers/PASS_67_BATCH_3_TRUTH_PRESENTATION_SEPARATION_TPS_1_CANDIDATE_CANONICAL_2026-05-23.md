@@ -66,7 +66,7 @@ A claim that someone has TPS-1-failed is itself a TPS-1-governed claim and must 
 ### 5.1 Standing commitments under TPS-1
 
 - **Caveats stay in.** The PM-1 caveat ("external readers may reject") stays in. The §69 caveats throughout the LLM-CT-1 paper stay in. The honest disclosures of n=2 model limitations, RLHF-shaping confounds, Chinese-Room concerns, ketamine-credit, etc. all stay in.
-- **Inconvenient findings stay in.** The Pass-43 MBE-via-Pass-37-frozen-rubric DEAD finding stays in. The Pass-50 L-2 paleo PILOT_PRELIMINARY_DISCONFIRM stays in. The §7.7.96 RETRACTION stays in. The Pass-63 batch-4 "DT empirically near-neutral on κ" inconvenient finding (later vindicated by batch-5 competent algorithm) stays in the corpus history.
+- **Inconvenient findings stay in.** The Pass-43 MBE-via-Pass-37-frozen-rubric DEAD finding stays in. The Pass-50 L-2 paleo PILOT_PRELIMINARY_DISCONFIRM stays in. The §7.7.96 RETRACTION stays in. The Pass-63 batch-4 "MI empirically near-neutral on κ" inconvenient finding (later vindicated by batch-5 competent algorithm) stays in the corpus history.
 - **Truth-content adjustments require evidentiary basis.** PM-1, LLM-CT-1, CDA-1 etc. were canonized because corpus-internal coherence + Brandon-anchored reasoning support them, NOT because they please any audience. If new evidence demands retraction of any, TPS-1 demands retraction regardless of the popularity cost.
 - **Presentation freely adjusts.** The apologetics tab v1 (`papers/apologetics/`) and the GILE-HEM nontechnical summary (`papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`) are TPS-1-compliant audience-adjustments of presentation. Same truth content, different presentation surfaces.
 

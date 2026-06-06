@@ -6,7 +6,7 @@
 **Status:** Cognitive-diagnostic note. Identifies a three-way conflation in conventional discourse on "normal" consciousness: **stability** (low variance over time), **middle-range** (mean near the center of the possible range), and **balance** (appropriateness to the current activity) are treated as if they were the same property, when they are three structurally independent properties. Argues, with Andres Gomez Emilsson (QRI), that conventional discourse privileges stable + middle-range states under the implicit assumption that consciousness is non-functional, while in fact consciousness is functional and is meant to fluctuate significantly (but not wildly) to fit the activity. Identifies the conventional "stability" metric as **incapable of distinguishing adaptive fluctuation from pathological fluctuation** — both produce high variance — while a correctly-designed activity-fit metric can. Pairs structurally with URB #811 and URB #812 as a third instance of the same family: a technically-valid conventional procedure applied to the wrong evaluation question, with the resulting mismatch projected as a defect onto the wrong target.
 **Companion script:** `consciousness_as_razor_demonstration.py`
 **Output:** `consciousness_as_razor_report.json`
-**Builds on:** Andres Gomez Emilsson / QRI work on the *energy parameter of mind* and *neural annealing*; Yerkes-Dodson (1908) inverted-U arousal-performance law; Csikszentmihalyi flow research on activity-state matching; the 5VL+DT vocabulary used in URBs #800/#805/#811/#812.
+**Builds on:** Andres Gomez Emilsson / QRI work on the *energy parameter of mind* and *neural annealing*; Yerkes-Dodson (1908) inverted-U arousal-performance law; Csikszentmihalyi flow research on activity-state matching; the 5VL+MI vocabulary used in URBs #800/#805/#811/#812.
 
 ---
 
@@ -125,7 +125,7 @@ This URB is the third in a short series of results in the **same structural fami
 
 In all three, the conventional procedure is **technically valid as the procedure it actually is**: the substitution does identify the syntactic form; the expectation-match check does check expectation-match; the variance computation does compute variance. The failure is **applying the procedure as if it answered a different question than it does**, and **projecting the resulting mismatch as a defect onto the wrong target** (the expression, the answerer, the person) rather than onto the procedure-mis-selection on the labeler's side.
 
-In TI Sigma 5VL+DT vocabulary, all three are **meta-procedural DT on the labeler's side** masquerading as **F on the answer's / expression's / person's side**. Brandon's phrase from the original observation captures the diagnostic exactly:
+In TI Sigma 5VL+MI vocabulary, all three are **meta-procedural MI on the labeler's side** masquerading as **F on the answer's / expression's / person's side**. Brandon's phrase from the original observation captures the diagnostic exactly:
 
 > *"Unstable" is technically correct yet pragmatically foolish.*
 

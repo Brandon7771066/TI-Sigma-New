@@ -113,7 +113,7 @@ FSI-1 + the 6-layer architecture composes with **20+ canonical principles** — 
 | HBP-1 #20 | health-as-balance-profile; FSI-1 personalizes to individual balance-profile |
 | TUM-1 #51 | unified manifold; all sensory modalities are projections of single underlying narrative-affective-trajectory |
 | MIM-revision Vertical Agency | affect ⊆ cognition ⊆ behavior all integrated stack; FSI-1 engages stack maximally |
-| MR Truth Labels canonical | FSI-1 deployments can be MR-label-assigned (T/F/I/DT) per refinement #8 1D-spectrum |
+| MR Truth Labels canonical | FSI-1 deployments can be MR-label-assigned (T/F/I/MI) per refinement #8 1D-spectrum |
 | LCV-1 (Pass-52 ratified) | LCC framework foundational; FSI-1 LCC-overlay extends LCV-1 |
 | ASYMMETRIC #69 | partial-modality deployments must honestly disclose ceiling-gap vs FSI-1; current PMD-EoS-style work is scope-limited not failed |
 | ETIOT-1 #52 META-canonical | the FSI-1-architecture itself becomes meta-empirically testable (does adding modalities monotonically improve enlightenment-effectiveness? F-1 below) |

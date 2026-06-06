@@ -3,7 +3,7 @@
 **Date:** 2026-05-22
 **Pass:** 63 batch-3
 **Status:** F-BCL-2 PARTIAL (rule-based deterministic classifier; human-rater round still required for canonical ratification). F-BCL-3 COMPLETED as formal proof sketch.
-**Anchors:** `papers/PASS_63_BELL_CHANCE_LCC_TI_SIGMA_2026-05-22.md` §6 (pre-registered falsifiers); `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4 + DT formal); `papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` (4-mode chance entry).
+**Anchors:** `papers/PASS_63_BELL_CHANCE_LCC_TI_SIGMA_2026-05-22.md` §6 (pre-registered falsifiers); `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (base-4 + MI formal); `papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md` (4-mode chance entry).
 
 ---
 
@@ -55,7 +55,7 @@ For each example, assign the dominant chance-mode by the following ordered tests
 ```
 function classify(statement):
     if statement asserts simultaneous-contradictory-truth under different sub-measures:
-        return C4 (Double-Tralse)
+        return C4 (Meta-Indeterminate)
     if statement has well-defined sample space with known frequencies:
         return C1 (Classical)
     if statement is decidable-in-principle but not-yet-decided:
@@ -74,12 +74,12 @@ function classify(statement):
 | 1 | Schrödinger cat pre-observation | **C4** | simultaneous τ(alive) ∧ ¬τ(alive) until measurement |
 | 2 | next coin flip heads | **C1** | well-defined sample space {H,T}, freq ≈ 0.5 |
 | 3 | largest prime gap exists | **C2** | decidable-in-principle (mathematical), not-yet-decided |
-| 4 | this sentence is false | **C4** | classical liar — DT formal: τ(F) ∧ ¬τ(F) |
+| 4 | this sentence is false | **C4** | classical liar — MI formal: τ(F) ∧ ¬τ(F) |
 | 5 | light particle / wave | **C4** | simultaneous-contradictory under different measurement contexts |
 | 6 | Riemann Hypothesis | **C2** | decidable-in-principle, not-yet-decided |
 | 7 | consciousness discrete units | **C3** | observer-interaction formal/world separability (no protocol-free answer) |
 | 8 | Bengston resonant bond | **C3** | pre-meta-analysis: formal-symbol/world gap is the substrate |
-| 9 | electron passed through slit A | **C4** | DT regime — which-path destroys interference |
+| 9 | electron passed through slit A | **C4** | MI regime — which-path destroys interference |
 | 10 | rain tomorrow noon | **C1** | classical forecast with weather-model frequency |
 | 11 | TI Sigma framework correct | **C3** | self-referential corpus — observer-interaction separability |
 | 12 | E(S) = 2.828 | **C1** | quantum theory gives well-defined frequency in long run |
@@ -99,7 +99,7 @@ function classify(statement):
 | C1 Classical | 3 | 0.15 |
 | C2 Indeterminate | 4 | 0.20 |
 | C3 Tralse-quality | 7 | 0.35 |
-| **C4 Double-Tralse** | **6** | **0.30** |
+| **C4 Meta-Indeterminate** | **6** | **0.30** |
 
 ### 1.5 F-BCL-2 verdict (rule-based, partial)
 
@@ -147,14 +147,14 @@ No single chance-mode from {C₁, C₂, C₃, C₄} alone can simultaneously rep
 #### Single-mode C₃ (Tralse-quality / formal-symbol-world separability)
 
 - **(a) Born rule:** C₃ gives the correct *structural* mode (irreducible formal-symbol/world separability is exactly what the wavefunction-collapse picture instantiates), but on its own does not specify the quantitative amplitude algebra. C₃ is necessary but not sufficient — it tells you that the chance is irreducible-not-epistemic but not what magnitude that chance takes.
-- **(b) Bell violation:** C₃ can accommodate Bell violations in principle (since it does not require local-hidden-variables), but only if augmented with amplitude algebra and the DT-regime treatment for contradictory-context cases.
+- **(b) Bell violation:** C₃ can accommodate Bell violations in principle (since it does not require local-hidden-variables), but only if augmented with amplitude algebra and the MI-regime treatment for contradictory-context cases.
 - **(c) No-signaling:** C₃ is compatible with no-signaling.
 - **Verdict:** C₃ alone FAILS (a) on magnitudes (needs amplitude structure), borderline-passes (b) and (c) only with additional structure.
 
-#### Single-mode C₄ (Double-Tralse / τ(P) ∧ ¬τ(P))
+#### Single-mode C₄ (Meta-Indeterminate / τ(P) ∧ ¬τ(P))
 
 - **(a) Born rule:** C₄ names the contradictory-truth-status regime where entangled-pair measurements live (local-classical-truth fails AND joint-measurement-truth succeeds simultaneously), but provides no quantitative magnitude on its own. It is a *label* for the regime, not a calculator within it.
-- **(b) Bell violation:** C₄ correctly identifies that Bell violations live in a DT regime — but cannot predict the specific 2√2 Tsirelson bound without amplitude algebra.
+- **(b) Bell violation:** C₄ correctly identifies that Bell violations live in a MI regime — but cannot predict the specific 2√2 Tsirelson bound without amplitude algebra.
 - **(c) No-signaling:** C₄ alone has no marginalization mechanism; cannot derive no-signaling without additional structure.
 - **Verdict:** C₄ alone FAILS quantitative predictions in (a), (b), (c).
 

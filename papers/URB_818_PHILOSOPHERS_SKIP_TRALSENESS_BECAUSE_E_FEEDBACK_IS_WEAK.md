@@ -144,7 +144,7 @@ So the refined version of the GILE-E hypothesis: **strong environmental feedback
 
 The GILE-E hypothesis applies to TI Sigma itself, and the application is uncomfortable.
 
-**TI Sigma is in the weak-E-feedback regime.** Its central concepts (tralse, DT, MR, TJ, the GILE weights themselves, the constitutive-vs-corrective polarity) are not directly checked by tight environmental feedback in the way that, say, lexical semantics is checked by corpus data or QM is checked by experimental measurement. TI Sigma's main checks are:
+**TI Sigma is in the weak-E-feedback regime.** Its central concepts (tralse, MI, MR, TJ, the GILE weights themselves, the constitutive-vs-corrective polarity) are not directly checked by tight environmental feedback in the way that, say, lexical semantics is checked by corpus data or QM is checked by experimental measurement. TI Sigma's main checks are:
 
 - **Internal coherence** — do the URBs hang together logically? (Currently audited by architect review, which is a useful but local check.)
 - **Cross-URB consistency** — do later URBs preserve the commitments of earlier ones? (Currently checked by the URB-numbering / explicit-cross-reference structure.)

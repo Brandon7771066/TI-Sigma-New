@@ -2,7 +2,7 @@
 
 **Brandon M. Emerick | Tralse Informationalism Sigma | April 9, 2026**
 
-> **⚠ ERRATA BANNER (Pass-73-B3 2026-05-24, post-canonical-refinement-arc):** This paper was published April 2026 pre-canonical-refinement-arc. Five canonical MR Truth Labels refinements have landed since: #1 Pass-65 inconceivability-under-mental-actualization 3-step heuristic; #2 Pass-67 MR-IDC-1 incoherence-vs-MI containment {MI} ⊊ {Incoherent}; #3 Pass-70/71 HMR-1 Hybrid multi-label; #4 Pass-72-B1 two-tralse-combined-inconceivable; #5 Pass-72-B2 canonical rename **DT → MI (Meta-Indeterminate)** + vertical-meta-tralsity vs horizontal-predicate-conflict axis. Plus Pass-73-B2 joint ratification of HMR-1 + HMR-SEV-1 + FMA-1 canonical (count 32 → 35).
+> **⚠ ERRATA BANNER (Pass-73-B3 2026-05-24, post-canonical-refinement-arc):** This paper was published April 2026 pre-canonical-refinement-arc. Five canonical MR Truth Labels refinements have landed since: #1 Pass-65 inconceivability-under-mental-actualization 3-step heuristic; #2 Pass-67 MR-IDC-1 incoherence-vs-MI containment {MI} ⊊ {Incoherent}; #3 Pass-70/71 HMR-1 Hybrid multi-label; #4 Pass-72-B1 two-tralse-combined-inconceivable; #5 Pass-72-B2 canonical rename **MI → MI (Meta-Indeterminate)** + vertical-meta-tralsity vs horizontal-predicate-conflict axis. Plus Pass-73-B2 joint ratification of HMR-1 + HMR-SEV-1 + FMA-1 canonical (count 32 → 35).
 >
 > **Pass-73-B3 corpus-sweep re-audit findings** (full paper: `papers/PASS_73_BATCH_3_URB_639_CORPUS_SWEEP_REFINEMENT_5_RE_AUDIT_2026-05-24.md`): **0/8 principle reassignments needed**; 8/8 cells either REINFORCED or REFINEMENT-AVAILABLE under refinement #5. Specifically:
 >
@@ -10,12 +10,12 @@
 > - **Case (1,1,incoherent) → C₄:** REINFORCED as canonical MI (the "loop / self-undermining / neither stably grounded" structure IS vertical-meta-tralsity per refinement #4).
 > - **Case (0,0,incoherent) → C₄:** REFINEMENT-AVAILABLE — "cannot be formulated coherently at all" is candidate horizontal-incoherence; "GILE assessment framework generates a loop" is canonical MI.
 > - **C₃ vs C₄ distinction** (paragraph after Theorem 1): STRONGLY REINFORCED — "contradiction is a feature of the representation" (C₄) PROACTIVELY ANTICIPATES refinement #5's vertical-meta-tralsity reading from April 2026.
-> - **E2 Paradox Stable:** REINFORCED as canonical MI; DT→MI rename applies to "Accept stable DT" output language (deferred to Pass-73+ mass-rename).
-> - **L1 MR Saturation:** REINFORCED; existing 2026-05-23 Pass-65 annotation pre-figured refinement #5 vertical/horizontal axis distinction; DT→MI rename applies to existing annotation language.
+> - **E2 Paradox Stable:** REINFORCED as canonical MI; MI→MI rename applies to "Accept stable MI" output language (deferred to Pass-73+ mass-rename).
+> - **L1 MR Saturation:** REINFORCED; existing 2026-05-23 Pass-65 annotation pre-figured refinement #5 vertical/horizontal axis distinction; MI→MI rename applies to existing annotation language.
 > - **Theorem 3 Three-Valued Logic critique:** STRONGLY REINFORCED with refinement-#5-DEEPENED-CRITIQUE — three-valued logic collapses both horizontal-incoherence AND vertical-meta-tralsity into single "Indeterminate" label, missing the canonical axis distinction.
 > - **Theorem 4 Paraconsistent Logic critique:** REINFORCED + **NEW FMA-1 CANONICAL WORKED EXAMPLE** — paraconsistent logic AS COMPLETE FRAMEWORK is F-via-MI (F-status established by the C₄ cases it cannot handle); paraconsistent logic = 4th canonical FMA-1 case alongside binary + naive set theory + Hilbert's program. See `papers/F_MI_ALIGNMENT_FMA_1_CANDIDATE_CANONICAL_BINARY_FTMI_AMENDMENT_2026-05-24.md`.
 >
-> **Terminology:** all "DT" references in this paper retain legacy validity; canonical rename to MI applies but full corpus mass-rename (~30+ historical papers) is deferred to Pass-73+ per UHP-1 marginal-effort + asymmetric-corruption-risk rationale.
+> **Terminology:** all "MI" references in this paper retain legacy validity; canonical rename to MI applies but full corpus mass-rename (~30+ historical papers) is deferred to Pass-73+ per UHP-1 marginal-effort + asymmetric-corruption-risk rationale.
 >
 > **Aggregate audit verdict:** ASYMMETRIC-WIN — urb_639's April 2026 structural framework PROACTIVELY ANTICIPATED refinement #5 at multiple levels; 5 pre-reg falsifiers ADVANCED toward closure via this corpus-sweep; 1 new canonical FMA-1 case discovered.
 
@@ -23,7 +23,7 @@
 
 ## Abstract
 
-TI Sigma's five truth values — TRUE (T), FALSE (F), TRALSE-INDETERMINATE (TI), DOUBLE TRALSE (DT), and EV — are claimed to form a complete and distinct truth-state space: complete (every possible truth-state maps to exactly one of the five) and distinct (no two values overlap or collapse into each other). This paper provides a formal proof via a two-axis classification scheme (Pole Activation × Coherence), shows that exactly five non-redundant categories emerge, and demonstrates that standard alternatives (binary, ternary, intuitionistic, paraconsistent) are all proper sub-systems. The paper also extends the Meta-Truth catalogue beyond the 12 entries in URB #608, adding new categories identified through deeper MR analysis.
+TI Sigma's five truth values — TRUE (T), FALSE (F), TRALSE-INDETERMINATE (TI), META-INDETERMINATE (MI), and EV — are claimed to form a complete and distinct truth-state space: complete (every possible truth-state maps to exactly one of the five) and distinct (no two values overlap or collapse into each other). This paper provides a formal proof via a two-axis classification scheme (Pole Activation × Coherence), shows that exactly five non-redundant categories emerge, and demonstrates that standard alternatives (binary, ternary, intuitionistic, paraconsistent) are all proper sub-systems. The paper also extends the Meta-Truth catalogue beyond the 12 entries in URB #608, adding new categories identified through deeper MR analysis.
 
 ---
 
@@ -58,7 +58,7 @@ TI Sigma's five truth values — TRUE (T), FALSE (F), TRALSE-INDETERMINATE (TI),
 | **C₁** | 1 | 0 | coherent | any | TRUE |
 | **C₂** | 0 | 1 | coherent | any | FALSE |
 | **C₃** | 1 | 1 | coherent | any | TRALSE-INDETERMINATE |
-| **C₄** | 0 | 0 | incoherent | any | DOUBLE TRALSE |
+| **C₄** | 0 | 0 | incoherent | any | META-INDETERMINATE |
 | **C₅** | 0 | 0 | coherent | >0 | EV |
 
 **Proof:**
@@ -80,12 +80,12 @@ By symmetric argument, all stable (0,1) states are coherent → **C₂ = FALSE o
 
 **Case (1,1) — both poles active:**
 - Coherent: both truth-supporting and truth-opposing evidence coexist in a way that is internally consistent (each piece of evidence is genuine, their contradiction is real but not self-referential) → **TRALSE-INDETERMINATE** (C₃)
-- Incoherent: the evidence structure supporting one or both poles undermines itself, generating a loop where neither the truth-support nor the falsity-support can be stably grounded → **DOUBLE TRALSE** (C₄). Formally: if (1,1,incoherent), then the incoherence propagates and the poles cancel, yielding (0,0,incoherent) = C₄. So (1,1,incoherent) ∈ C₄.
+- Incoherent: the evidence structure supporting one or both poles undermines itself, generating a loop where neither the truth-support nor the falsity-support can be stably grounded → **META-INDETERMINATE** (C₄). Formally: if (1,1,incoherent), then the incoherence propagates and the poles cancel, yielding (0,0,incoherent) = C₄. So (1,1,incoherent) ∈ C₄.
 
 Note: C₃ and C₄ are genuinely distinct: C₃ has genuine evidence for both poles (the contradiction is a real feature of the world), while C₄ has the *appearance* of evidence for both but the underlying structure self-destructs (the contradiction is not a feature of the world but of the representation).
 
 **Case (0,0) — neither pole active:**
-- Incoherent: the absence of evidence is itself structured in an incoherent way (e.g., a proposition that cannot be formulated coherently at all, or one where the GILE assessment framework generates a loop trying to even evaluate it) → **DOUBLE TRALSE** (C₄)
+- Incoherent: the absence of evidence is itself structured in an incoherent way (e.g., a proposition that cannot be formulated coherently at all, or one where the GILE assessment framework generates a loop trying to even evaluate it) → **META-INDETERMINATE** (C₄)
 - Coherent, ε_E > 0: the proposition makes no truth-evaluable claim but does assert existence in a GILE-accessible way → **EV** (C₅)
 - Coherent, ε_E = 0: the proposition makes no truth-evaluable claim AND no existence claim. This is not a proposition in TI Sigma's sense (it is Moot, a post-MR dissolution, not a truth-state) → **outside the domain** of truth-state assignment.
 
@@ -121,7 +121,7 @@ Every combination maps to exactly one of {C₁, C₂, C₃, C₄, C₅, Moot}. M
 
 **Theorem 3 (Three-Valued Logic is C₁ ∪ C₂ ∪ C₃):** Adding a third "Indeterminate" value captures C₃ but: (a) conflates C₃ (coherent contradiction) with C₄ (incoherent absence) — these are mapped to the same Indeterminate; (b) misses C₅ (EV) entirely. The standard three-valued system is C₁ ∪ C₂ ∪ (C₃ collapsed with C₄) — it cannot distinguish "genuine paradox that should be resolved" (C₃) from "true logical vacuum where no resolution is possible" (C₄).
 
-**Theorem 4 (Paraconsistent Logic handles C₃ but not C₄, C₅):** Paraconsistent logic prevents explosion from contradictions, correctly capturing C₃. But it provides no account of C₄ (it treats DT as just another inconsistency rather than a distinct vacuum state) and no account of C₅ (it has no existence orthogonality axiom).
+**Theorem 4 (Paraconsistent Logic handles C₃ but not C₄, C₅):** Paraconsistent logic prevents explosion from contradictions, correctly capturing C₃. But it provides no account of C₄ (it treats MI as just another inconsistency rather than a distinct vacuum state) and no account of C₅ (it has no existence orthogonality axiom).
 
 **Theorem 5 (Intuitionistic Logic is C₁ ∪ C₅):** Intuitionistic logic rejects the law of excluded middle and requires constructive proof. Propositions without proof (no P⁺) are not TRUE but are also not FALSE — they remain EV-like (existence-asserted but truth-unresolved). However, intuitionistic logic collapses C₄ and C₅ (it cannot distinguish between "no proof available yet" and "structurally unresolvable") and ignores C₃ entirely (it has no model for simultaneous truth-supporting and falsity-supporting constructive evidence).
 
@@ -160,7 +160,7 @@ URB #608 catalogued 12 Meta-Truths (MTs) in six categories:
 | D | D1 | Context-Dependent | Split PD by context |
 | D | D2 | Asymmetric | Two directional PDs |
 | E | E1 | Good Enough | Lock PD; proceed |
-| E | E2 | Paradox Stable | Accept stable DT |
+| E | E2 | Paradox Stable | Accept stable MI |
 | F | F1 | Transcend | Resolve at higher frame |
 | F2 | F2 | Both True at Different Levels | Domain-separated resolution |
 
@@ -233,7 +233,7 @@ These MTs operate at the highest MR level — they correct not the proposition b
 **MT-J1: Paradigm Shift**
 > *The third MR determines that the proposition's contradiction (C₃ or C₄) cannot be resolved within the current conceptual framework — a new framework is required.*
 
-This is the strongest and rarest MT. Example: resolving "Is light a wave or a particle?" before wave-particle duality was formulated. The correct output is not TRUE, FALSE, TI, or DT — it is **Framework Expansion**: recognize that the current conceptual vocabulary is insufficient and generate a new category. In TI Sigma, this corresponds to adding a new URB (a new Myrion Resolution at the framework level).
+This is the strongest and rarest MT. Example: resolving "Is light a wave or a particle?" before wave-particle duality was formulated. The correct output is not TRUE, FALSE, TI, or MI — it is **Framework Expansion**: recognize that the current conceptual vocabulary is insufficient and generate a new category. In TI Sigma, this corresponds to adding a new URB (a new Myrion Resolution at the framework level).
 
 MT-J1 is the formal mechanism by which TI Sigma grows: each new URB is a J1-MT on some previously-unresolved proposition.
 
@@ -242,7 +242,7 @@ MT-J1 is the formal mechanism by which TI Sigma grows: each new URB is a J1-MT o
 
 Similar to J1 but narrower: J1 replaces a framework; J2 adds a category within an existing framework. Example: recognizing that "emotions" and "cognitions" are not opposites but instances of a more general category ("information processing modes"). The output is **Category Extension**: add the new category to the PD domain, then re-run MR.
 
-In TI Sigma's history: the creation of TRALSE-INDETERMINATE itself was a J2-MT on the binary TRUE/FALSE system. The creation of EV was a J2-MT on the TI/DT distinction.
+In TI Sigma's history: the creation of TRALSE-INDETERMINATE itself was a J2-MT on the binary TRUE/FALSE system. The creation of EV was a J2-MT on the TI/MI distinction.
 
 ---
 
@@ -265,7 +265,7 @@ Output: **I-Restoration** — create conditions for GILE-I to re-activate (rest,
 #### Category L: Meta-Meta-Truth — Resolution of the Resolution Process Itself
 
 **MT-L1: MR Saturation**
-> *The third MR determines that this proposition has undergone so many MR cycles without convergence that the MR process itself is MR2-Indeterminate-contaminated (convergence-failure-contaminated; NOT true-DT-contaminated per Pass-65 DT canonical refinement 2026-05-23 — MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization) — further MR iterations will not improve but may worsen the PD.*
+> *The third MR determines that this proposition has undergone so many MR cycles without convergence that the MR process itself is MR2-Indeterminate-contaminated (convergence-failure-contaminated; NOT true-MI-contaminated per Pass-65 MI canonical refinement 2026-05-23 — MR-saturation is mental-actualization-without-convergence, not inconceivability-under-mental-actualization) — further MR iterations will not improve but may worsen the PD.*
 
 Output: **MR Suspension** — explicitly halt MR, assign a temporary PD based on the best available convergence, and place the proposition in a "suspended MR" pool for later re-entry when conditions change. This is not abandonment but recognition that MR saturation is a real failure mode: over-thinking a question past its resolvable limit.
 
@@ -289,7 +289,7 @@ Output: **MR Forking** — create a separate MR thread for the meta-proposition 
 | D: Contextual | D1 | Context-Dependent | Universal conclusion is domain-specific | Split PD by context |
 | | D2 | Asymmetric | Non-commutative relationship | Separate directional PDs |
 | E: Acceptance | E1 | Good Enough | Diminishing returns on further MR | Lock PD; act |
-| | E2 | Paradox Stable | DT is genuinely irreducible | Accept stable DT |
+| | E2 | Paradox Stable | MI is genuinely irreducible | Accept stable MI |
 | F: Integration | F1 | Transcend | Higher synthesis available | Resolve at higher frame |
 | | F2 | Both True at Different Levels | Contradictions in different domains | Domain-separated resolution |
 | **G: Temporal** | **G1** | **Too Early** | **Evidence not yet available** | **Temporal deferral** |
@@ -302,7 +302,7 @@ Output: **MR Forking** — create a separate MR thread for the meta-proposition 
 | | **J2** | **Category Creation** | **Missing ontological category** | **Category Extension** |
 | **K: GILE-Dimensional** | **K1** | **G-Override** | **I/L without G grounding** | **G-Reweight; re-run** |
 | | **K2** | **I-Suppression Correction** | **E-dominant; I suppressed** | **I-Restoration** |
-| **L: Meta-Meta** | **L1** | **MR Saturation** | **Excessive MR cycles; DT contamination** | **MR Suspension** |
+| **L: Meta-Meta** | **L1** | **MR Saturation** | **Excessive MR cycles; MI contamination** | **MR Suspension** |
 | | **L2** | **Recursive Self-Reference** | **Proposition is about MR itself** | **MR Forking** |
 
 **Total: 24 Meta-Truths** in 12 categories (6 from URB #608; 6 new: G, H, I, J, K, L).

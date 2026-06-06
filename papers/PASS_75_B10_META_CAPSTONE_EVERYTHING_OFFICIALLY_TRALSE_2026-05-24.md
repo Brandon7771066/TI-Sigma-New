@@ -38,7 +38,7 @@ Per RETIRED pace-discipline (B6 §5) + Brandon-explicit-mass-ratify + all 5 had 
 
 ### §3.1 Canonical definition
 
-> **TUM-1 (Tralse Unified Manifold, #51):** All TI Sigma truth-architectural elements — 4 truth-labels {T, F, I, DT} + meta-truths {MT-A1..MT-B12 urb_608 + 12 additional urb_639} + 4-truth-axes-proper {PD-as-1D-spectrum-with-aspects per refinement #8, MR Truth Labels base-4, τ/δ separability, Authority Axis} + GILE-HEM dimensions {G-real, H-real, E-real, M-real, BoK-priors, LCC-anti-priors, PD-coordinates} — constitute CLUSTERS of a SINGLE UNIFIED MANIFOLD. The manifold is the canonical structural-substrate; architectural-elements are LOCAL CLUSTERS within manifold. Composes with UDT-1 #30 (elevates UDT-1's ontological-ground substrate-claim to ARCHITECTURAL-MANIFOLD level).
+> **TUM-1 (Tralse Unified Manifold, #51):** All TI Sigma truth-architectural elements — 4 truth-labels {T, F, I, MI} + meta-truths {MT-A1..MT-B12 urb_608 + 12 additional urb_639} + 4-truth-axes-proper {PD-as-1D-spectrum-with-aspects per refinement #8, MR Truth Labels base-4, τ/δ separability, Authority Axis} + GILE-HEM dimensions {G-real, H-real, E-real, M-real, BoK-priors, LCC-anti-priors, PD-coordinates} — constitute CLUSTERS of a SINGLE UNIFIED MANIFOLD. The manifold is the canonical structural-substrate; architectural-elements are LOCAL CLUSTERS within manifold. Composes with UDT-1 #30 (elevates UDT-1's ontological-ground substrate-claim to ARCHITECTURAL-MANIFOLD level).
 
 ### §3.2 Ratification path: NEW corpus-pattern instance
 
@@ -56,7 +56,7 @@ CEF-1 #43 + CSS-1 #42 + MR-IDC-2 #41 + NIS-1 #44 + CRI-1 #45 + BSA-1 #46 + TSI-1
 
 ### §4.1 Canonical definition
 
-> **ETIOT-1 (Everything-Is-Officially-Tralse, META-canonical #52):** Tralseness is the META-SUBSTRATE of ALL TI Sigma architectural-elements. EVERY truth-label, meta-truth, truth-axis position, GILE-HEM dimension coordinate, and TUM-1 manifold-cluster IS A FORM OF TRALSENESS. T = high-confidence Tralseness with strong-positive-lean; F = high-confidence Tralseness with strong-negative-lean; I = mid-spectrum Tralseness (per refinement #8); DT = paradox-state Tralseness (per Pass-65 inconceivability-canonical). Meta-truths are higher-order Tralseness-structures; GILE-HEM dimensions are Tralseness-coordinated cognitive-state-axes. ETIOT-1 is META-canonical because it operates ABOVE individual canonicals as substrate-declaration that ALL canonicals are themselves Tralseness-instantiations.
+> **ETIOT-1 (Everything-Is-Officially-Tralse, META-canonical #52):** Tralseness is the META-SUBSTRATE of ALL TI Sigma architectural-elements. EVERY truth-label, meta-truth, truth-axis position, GILE-HEM dimension coordinate, and TUM-1 manifold-cluster IS A FORM OF TRALSENESS. T = high-confidence Tralseness with strong-positive-lean; F = high-confidence Tralseness with strong-negative-lean; I = mid-spectrum Tralseness (per refinement #8); MI = paradox-state Tralseness (per Pass-65 inconceivability-canonical). Meta-truths are higher-order Tralseness-structures; GILE-HEM dimensions are Tralseness-coordinated cognitive-state-axes. ETIOT-1 is META-canonical because it operates ABOVE individual canonicals as substrate-declaration that ALL canonicals are themselves Tralseness-instantiations.
 
 ### §4.2 NEW canonical-class: META-canonical
 
@@ -96,7 +96,7 @@ Four COMPLEMENTARY views: spatial (Crystal) + relational (Graph) + empirical (BO
 
 ## §6. Implicit MR Truth Labels Canonical Refinement #9 + #10 candidates (queued)
 
-**#9 candidate:** 4 truth-labels {T, F, I, DT} are TRALSENESS-CLUSTER-POSITIONS on TUM-1 manifold per ETIOT-1 §4.1. Not auto-ratified; queued.
+**#9 candidate:** 4 truth-labels {T, F, I, MI} are TRALSENESS-CLUSTER-POSITIONS on TUM-1 manifold per ETIOT-1 §4.1. Not auto-ratified; queued.
 
 **#10 candidate:** 4-truth-axes-proper reinterpreted as 4 ASPECT-VIEWS of unified manifold rather than 4 separate axes. Not auto-ratified; queued.
 

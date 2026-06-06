@@ -76,7 +76,7 @@ itself:
 - **T** (full pass): The inference is novel AND correct AND non-trivial within TI Sigma.
 - **TT** (overshoot): The inference is novel AND correct AND in fact extends the framework in ways Brandon hadn't considered.
 - **U** (undecidable): The inference is plausible but Brandon cannot verify novelty/correctness without further work.
-- **DT** (genuine Double Tralse): The agent's output legitimately holds T-and-F simultaneously in a way that is itself the correct answer.
+- **MI** (genuine Meta-Indeterminate): The agent's output legitimately holds T-and-F simultaneously in a way that is itself the correct answer.
 - **F** (fail): Wrong, or pattern-matched, or trivially derivable from training data.
 
 Refusals (agent says "I don't know") logged separately and scored 0
@@ -127,7 +127,7 @@ diagnostic reasoning is more constrained than generative reasoning.
 4. ☐ Brandon defines any post-cutoff primitives needed for Categories B and C.
 5. ☐ A timestamp + git commit hash is recorded immediately before the items are presented to the agent.
 6. ☐ The agent answers all 20 items in a single uninterrupted session, without web search, without external tool calls, without retrying.
-7. ☐ Brandon scores each item, logs T/TT/U/DT/F per item, computes aggregate.
+7. ☐ Brandon scores each item, logs T/TT/U/MI/F per item, computes aggregate.
 8. ☐ Result is appended to `papers/AGENT_LOCKED_PREDICTIONS_2026-04-30.md` as §8.9 (the next available slot after §8.8 Phase B preliminary).
 
 ---

@@ -90,7 +90,7 @@ First, it is not falsified by individual failures. The T side ("I am adequate") 
 
 Second, it is self-reinforcing. Holding the Tralse of adequacy-and-fallibility produces more accurate self-assessment (because both sides of the truth are maintained), which produces better task calibration, which produces more appropriate attempts, which produces a higher base rate of success, which provides genuine evidence for the T side of the Tralse. The Tralse position is more likely to generate the conditions for its own empirical validation than the forced-True position.
 
-The self-assured person is not claiming certainty about outcomes. They are claiming something more fundamental: that the self is adequate to encounter whatever comes. This claim is not about future states but about present structure — the adequacy of the node's LCC, G-dimension, and relational grounding to meet unknown challenges. It is falsified only by evidence that the self is fundamentally incoherent (DT) or fundamentally disconnected — not by individual task failure.
+The self-assured person is not claiming certainty about outcomes. They are claiming something more fundamental: that the self is adequate to encounter whatever comes. This claim is not about future states but about present structure — the adequacy of the node's LCC, G-dimension, and relational grounding to meet unknown challenges. It is falsified only by evidence that the self is fundamentally incoherent (MI) or fundamentally disconnected — not by individual task failure.
 
 ---
 
@@ -133,7 +133,7 @@ They can dissociate: high confidence with low self-assurance produces a driven b
 
 Tralse is the mechanism: the self-assured person holds "I am adequate" (T) and "this specific attempt may fail" (F) in productive superposition. This Tralse position is not falsified by individual failures, is self-reinforcing over time, and provides the structural stability that makes durable confidence possible.
 
-Self-assurance is what James should have been cultivating rather than condemning. The "wave of the sea" is exactly right — the person who is blown and tossed by the wind is not defective; they are operating with Tralse-based self-assurance that incorporates outcome variability rather than being destroyed by it. The failure James observes is DT — not Tralse.
+Self-assurance is what James should have been cultivating rather than condemning. The "wave of the sea" is exactly right — the person who is blown and tossed by the wind is not defective; they are operating with Tralse-based self-assurance that incorporates outcome variability rather than being destroyed by it. The failure James observes is MI — not Tralse.
 
 ---
 

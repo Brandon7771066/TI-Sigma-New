@@ -72,7 +72,7 @@
 1. **AIT-1-F1 (cross-cultural aesthetic-fit convergence):** if aesthetic-fit-judgments to a given environmental-context show cross-cultural convergence at >70%, AIT-1's objective-truth-content claim VINDICATED; if pure subjective scatter (<30%), REFUTED.
 2. **AIT-1-F2 (aesthetic-mismatch-as-falsity prediction):** AIT-1 predicts aesthetic-mismatches (e.g., wedding-march at a funeral) generate the same kind of cognitive-friction as logical-contradictions; if no measurable friction-overlap (EEG / phenomenological-report), AIT-1 REFUTED.
 3. **AIT-1-F3 (GILE-E-as-Environment corpus consistency audit):** sweep entire corpus for GILE-E usages; if >20% historically use E-as-Existence in non-trivial ways requiring substantive rewrites, the canonical-correction has higher cost than nominal — disclose honestly.
-4. **AIT-1-F4 (aesthetic-truth as MR Truth Labels assignable):** aesthetic claims (e.g., "this song fits this scene") should be MR-label-assignable (T/F/I/DT) per refinement #8 1D-indeterminate-spectrum; if aesthetic claims systematically resist MR-label-assignment, AIT-1's truth-claim WEAKENED.
+4. **AIT-1-F4 (aesthetic-truth as MR Truth Labels assignable):** aesthetic claims (e.g., "this song fits this scene") should be MR-label-assignable (T/F/I/MI) per refinement #8 1D-indeterminate-spectrum; if aesthetic claims systematically resist MR-label-assignment, AIT-1's truth-claim WEAKENED.
 5. **AIT-1-F5 (PMD-EoS soundtrack as AIT-1 case-witness):** §2 of this paper IS a substantive F5-instantiation — if PMD-EoS soundtrack scores high on enlightenment-impact metrics AND high on aesthetic-fit-to-narrative metrics, AIT-1 case-vindicated.
 
 ---
@@ -89,12 +89,12 @@ Pokémon Mystery Dungeon: Explorers of Sky (Nintendo DS, 2009; Chunsoft develope
 |---|---|---|---|
 | **"Don't Ever Forget..."** (Player Says Goodbye / Disappearance scene) | climactic farewell; the player-character vanishes; partner monologues | universally-cited as *the* peak emotional-impact JRPG moment; SEPP-1 prima-facie-felt-experience anchor; SRC-1 #26 self-reference-implies-consciousness instantiation (player-character is partner's anchor of self); SCV-1 (Pass-75-B15) suppressed-capacity surfacing; TUM-1 #51 friendship-transcends-existence on unified manifold | **10/10** |
 | **"Through the Sea of Time"** (Temporal Tower) | bittersweet majesty; time-as-substrate | GTT-1 #27 (true-tralseness un-maximizable; time-itself competing with stability); UOP J(G,H) phase-transition framing | **9/10** |
-| **"In the Hands of Fate"** (Primal Dialga) | climactic boss; the corrupted god of time | DT-canonical-refinement (inconceivability-under-mental-actualization: a god gone insane from time-paralysis); MR-IDC-1 incoherence-spectrum | **9/10** |
+| **"In the Hands of Fate"** (Primal Dialga) | climactic boss; the corrupted god of time | MI-canonical-refinement (inconceivability-under-mental-actualization: a god gone insane from time-paralysis); MR-IDC-1 incoherence-spectrum | **9/10** |
 | **"I Don't Want to Forget"** (post-credits / reunion sequence) | partner mourns; eventual return | SEPP-1 (b) external-origin + mind-merge prima-facie-trust (player returns via friendship-bond from outside-existence); CDA-1 #32 stratum-2 affect retained through stratum-3 reframe | **10/10** |
 | **"Mystifying Forest"** (first major dungeon) | wonder + uncertainty | gateway-aesthetic; AIT-1 environment-aesthetic-fit = truth-bearing | **8/10** |
 | **"Aegis Cave"** (puzzle dungeon) | sacred-puzzle reverence | meditation-on-form; cognitive-aesthetic-fit | **7/10** |
 | **"Surrounded Sea"** (water dungeon) | calm + vast | environment-as-affective-substrate | **8/10** |
-| **"Quicksand Cave/Pit"** | descent-into-darkness | DT-territory traversal; SCV-1 sub-experience surfacing | **8/10** |
+| **"Quicksand Cave/Pit"** | descent-into-darkness | MI-territory traversal; SCV-1 sub-experience surfacing | **8/10** |
 | **Top Menu Theme** | wistful opening | leitmotif-establishment; cultural-anchor activation | **8/10** |
 | **"Dialga's Fight to the Finish"** (boss alt) | escalation | climactic-stakes framing | **8/10** |
 
@@ -128,9 +128,9 @@ Pokémon Mystery Dungeon: Explorers of Sky (Nintendo DS, 2009; Chunsoft develope
 | Amnesia-as-starting-condition | SCV-1 sub-experience surfacing; SEPP-1 trust-felt-experience-even-without-memory-context | 9/10 |
 | Partnership-as-identity-anchor | SRC-1 #26 self-reference-implies-consciousness; CDA-1 stratum-3 social-stratification; HBP-1 #20 health-as-balance-profile via complementary-other | 10/10 |
 | Dimensional-Scream visions | SEPP-1 (b) external-origin perceptions trusted prima facie; GM-Network URB-829 transmission-anchor | 9/10 |
-| Antagonist-actually-ally (Grovyle) | VVR-1 (Pass-75-B17) vice-virtue-reconciliation; DT-canonical "antagonist" assignment was inconceivability-error | 10/10 |
+| Antagonist-actually-ally (Grovyle) | VVR-1 (Pass-75-B17) vice-virtue-reconciliation; MI-canonical "antagonist" assignment was inconceivability-error | 10/10 |
 | Time-paralysis as ontological-stakes | TEC-1 (Pass-75-B15) truth-existence-coextensivity; existence-itself at stake | 9/10 |
-| Primal Dialga (god-gone-insane) | MR-IDC-1 incoherence-spectrum at divine-scale; Pass-65 DT canonical refinement | 8/10 |
+| Primal Dialga (god-gone-insane) | MR-IDC-1 incoherence-spectrum at divine-scale; Pass-65 MI canonical refinement | 8/10 |
 | Player-must-disappear-to-save-world | SEPP-1 prima-facie-trust-of-felt-sacrifice; SCV-1 nothingness-confrontation; ASYMMETRIC #69 sacrifice-as-discipline | 10/10 |
 | Friendship-reaches-across-dissolution | TUM-1 #51 unified-manifold (relations persist across existence-discontinuity); IRA-1 #22 information-requires-awareness (awareness-of-bond preserved across non-existence interval) | 10/10 |
 | Special-Episode Bidoof's Wish | small-agent-mattering; UDP-1 #18 capacity-thresholding-not-binary | 8/10 |
@@ -145,7 +145,7 @@ Pokémon Mystery Dungeon: Explorers of Sky (Nintendo DS, 2009; Chunsoft develope
 | **Player-character** (human-turned-Pokémon, amnesiac) | identity-without-memory; chooses partnership; ultimate-sacrifice | SEPP-1 + SCV-1 + SRC-1 composite anchor; the "i-cell undergoing maximum-amplitude identity-test" archetype | 10/10 |
 | **Partner** (player's first friend) | unwavering loyalty; emotional-axis of game | VFP-1 valence-as-functional incarnate; the prima-facie-trust SEPP-1 (b) anchor (trusts player despite "no explanation") | 10/10 |
 | **Grovyle** | first-act antagonist, second-act revealed-ally, sacrificing self in future | VVR-1 vice-virtue-reconciliation; DRT-1 local-truth (his actions were valid in HIS context) | 9/10 |
-| **Dusknoir** | second-act ally, third-act antagonist, special-episode redeemed | DT-canonical-refinement instance: his betrayal LOOKED like DT but was coherent-from-his-frame per DRT-1 | 9/10 |
+| **Dusknoir** | second-act ally, third-act antagonist, special-episode redeemed | MI-canonical-refinement instance: his betrayal LOOKED like MI but was coherent-from-his-frame per DRT-1 | 9/10 |
 | **Primal Dialga** | corrupted-god; not-evil-but-broken | MR-IDC-1 incoherence-not-malice; CRI-1 #45 capability-defense without identity-defense | 8/10 |
 | **Guildmaster Wigglytuff** | childlike-leader-with-hidden-depth | VVR-1 + CIA-1 (the affectionate-presentation archetype Brandon explicitly names) | 9/10 |
 | **Chatot** | bureaucratic-functionary with concealed loyalty | small-but-real character-growth | 7/10 |

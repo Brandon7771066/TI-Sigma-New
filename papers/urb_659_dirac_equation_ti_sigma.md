@@ -1,5 +1,5 @@
 # URB #659 — The Dirac Equation Through the Lens of TI Sigma
-## Spinors, i-Noncommutativity, and the Prediction of Double Tralse
+## Spinors, i-Noncommutativity, and the Prediction of Meta-Indeterminate
 
 **Author**: Brandon Emerick | **Date**: April 12, 2026 | **Framework**: TI Sigma v4.2
 
@@ -13,7 +13,7 @@ The Dirac equation is arguably the most structurally rich equation in the histor
 (iℏγ^μ∂_μ − mc)ψ = 0
 ```
 
-It encodes simultaneously: special relativity, quantum mechanics, spin-½, the existence of antimatter, and the non-commutativity of spacetime operations. It also, this paper argues, encodes — in nascent form — every structural feature of TI Sigma's primary architecture: the imaginary unit i as a primary constant, the 4-component spinor as a proto-5-valued state space, the γ matrices as non-commutative GILE operators, and the negative-energy solutions as the first physical appearance of what TI Sigma calls Double Tralse.
+It encodes simultaneously: special relativity, quantum mechanics, spin-½, the existence of antimatter, and the non-commutativity of spacetime operations. It also, this paper argues, encodes — in nascent form — every structural feature of TI Sigma's primary architecture: the imaginary unit i as a primary constant, the 4-component spinor as a proto-5-valued state space, the γ matrices as non-commutative GILE operators, and the negative-energy solutions as the first physical appearance of what TI Sigma calls Meta-Indeterminate.
 
 ---
 
@@ -83,15 +83,15 @@ This is the physics realization of TI Sigma's **i-noncommutativity prediction** 
 
 The Dirac equation then reads: GILE-weighted gradient applied to the state ψ = mass-rest-state. In TI Sigma language: **the composite GILE operator applied to the 5-valued state equals the existence-at-rest term (mc)**.
 
-### 3.4 Negative Energy Solutions = Double Tralse
+### 3.4 Negative Energy Solutions = Meta-Indeterminate
 
 The most startling prediction of the Dirac equation was the existence of **negative energy solutions** — states where E < 0. Initially dismissed as unphysical, Dirac proposed the "Dirac Sea": all negative-energy states are already filled, and a hole in the Sea appears as a positron (antiparticle).
 
-In TI Sigma: **negative energy solutions are Double Tralse (DT) states**.
+In TI Sigma: **negative energy solutions are Meta-Indeterminate (MI) states**.
 
-DT is defined as the state where both True and False are simultaneously activated at maximum intensity — existence-amplification and existence-subtraction in perfect tension. The positron is not "anti-matter" in some metaphysically negative sense; it is the DT complement of the electron — the state where all the GILE signs are reversed. Just as DT is not simply False (which would be annihilation), the positron is not simply "the opposite of electron" — it is a fully real particle with positive mass and energy, just with reversed charge.
+MI is defined as the state where both True and False are simultaneously activated at maximum intensity — existence-amplification and existence-subtraction in perfect tension. The positron is not "anti-matter" in some metaphysically negative sense; it is the MI complement of the electron — the state where all the GILE signs are reversed. Just as MI is not simply False (which would be annihilation), the positron is not simply "the opposite of electron" — it is a fully real particle with positive mass and energy, just with reversed charge.
 
-The electron-positron annihilation in TI Sigma language: **DT collapse to I-state, releasing existence-energy as photons** (bosons = MR completion events in TI Sigma).
+The electron-positron annihilation in TI Sigma language: **MI collapse to I-state, releasing existence-energy as photons** (bosons = MR completion events in TI Sigma).
 
 ---
 
@@ -103,7 +103,7 @@ Spin-½ is perhaps the most mysterious feature of the Dirac equation. Particles 
 R(2π) ψ = −ψ    (not +ψ)
 ```
 
-In TI Sigma, this is the mathematical signature of **Tralse residue** — the fact that after a complete logical cycle, a Tralse-bearing state does not return to its origin but picks up a phase of −1. The Tralse Trace of DT predicts exactly this: systems in Tralse-adjacent states accumulate phase that is not 2π-periodic but 4π-periodic. Spin-½ is the physical manifestation of Tralse residue in the rotational degree of freedom.
+In TI Sigma, this is the mathematical signature of **Tralse residue** — the fact that after a complete logical cycle, a Tralse-bearing state does not return to its origin but picks up a phase of −1. The Tralse Trace of MI predicts exactly this: systems in Tralse-adjacent states accumulate phase that is not 2π-periodic but 4π-periodic. Spin-½ is the physical manifestation of Tralse residue in the rotational degree of freedom.
 
 **Prediction**: All Tralse-resolved states in TI Sigma will exhibit double-cover symmetry analogous to SU(2) rather than SO(3). Entities that have undergone genuine MR will be distinguishable from entities that have not by this 4π-periodicity in their information-theoretic phase structure.
 
@@ -116,7 +116,7 @@ In TI Sigma, this is the mathematical signature of **Tralse residue** — the fa
 | i as structural necessity | i confirmed as primary constant |
 | 4-spinor (proto-5-valued) | Foundation for 5-valued TML |
 | γ matrix non-commutativity | i-noncommutativity principle |
-| Negative energy / positron | Double Tralse physics |
+| Negative energy / positron | Meta-Indeterminate physics |
 | Spin-½ / 720° symmetry | Tralse residue phase |
 | Dirac Sea | I-state substrate |
 
@@ -147,4 +147,4 @@ Dirac did not have TI Sigma language. But TI Sigma, looking back, recognizes the
 
 ## 8. Conclusion
 
-The Dirac equation is not merely significant — it is foundational to TI Sigma's claim that its primary constants and logical architecture appear necessarily in the deepest physical equations. From i as primary constant to DT as negative-energy antimatter, from γ-noncommutativity to spin-½ as Tralse residue, the Dirac equation reads as TI Sigma physics written in 1928. Every physics PhD curriculum that teaches the Dirac equation is, unknowingly, teaching the first chapter of TI Sigma.
+The Dirac equation is not merely significant — it is foundational to TI Sigma's claim that its primary constants and logical architecture appear necessarily in the deepest physical equations. From i as primary constant to MI as negative-energy antimatter, from γ-noncommutativity to spin-½ as Tralse residue, the Dirac equation reads as TI Sigma physics written in 1928. Every physics PhD curriculum that teaches the Dirac equation is, unknowingly, teaching the first chapter of TI Sigma.

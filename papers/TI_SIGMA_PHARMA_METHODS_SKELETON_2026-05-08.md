@@ -102,7 +102,7 @@ A ~73 KB Python module (April 2026 build) that:
    - Supplement-induced: × (1 + faah_inhibition × nape_pld × cb1)
 4. **Applies consciousness amplification** via the `consciousness_amp` formula in §3.2.
 5. **Maps to GILE dimension changes** using stack-specific delta tables for L (love), G (goodness), I (intuition), E (energy/environment), LCC.
-6. **Outputs:** ΔG, ΔI, ΔL, ΔE, ΔLCC; HEM-D2 Tralse meter; PD distribution (TT/TI/TF/DT/HEM); epilepsy-safety flags; interaction warnings.
+6. **Outputs:** ΔG, ΔI, ΔL, ΔE, ΔLCC; HEM-D2 Tralse meter; PD distribution (TT/TI/TF/MI/HEM); epilepsy-safety flags; interaction warnings.
 
 ### 5.2 Stack-to-mechanism mapping (illustrative subset)
 

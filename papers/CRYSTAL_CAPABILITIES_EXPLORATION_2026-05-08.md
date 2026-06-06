@@ -14,7 +14,7 @@
 
 This paper takes the directive seriously. It catalogues what is established, what is partially explored, and what remains open — with the latter two being the actual focus. Per **Asymmetric-Standards #69**, items in the open and partially-explored sections are flagged as such; the established section carries citations to where each capability was nailed down.
 
-The TI Sigma Crystal (TSC) is the 57-vertex polytope at seven rings encoding all nine primary TI constants {0, 1, i, √2, e, φ, π, C, T}. The PD Crystal is the complex-plane PD/DT geometry. Both are "Crystals" in the structural sense — collective, many-body objects whose 2-D projections (TI Sigma Graph and PD Graph respectively) are the empirically-tractable working objects.
+The TI Sigma Crystal (TSC) is the 57-vertex polytope at seven rings encoding all nine primary TI constants {0, 1, i, √2, e, φ, π, C, T}. The PD Crystal is the complex-plane PD/MI geometry. Both are "Crystals" in the structural sense — collective, many-body objects whose 2-D projections (TI Sigma Graph and PD Graph respectively) are the empirically-tractable working objects.
 
 ---
 
@@ -45,7 +45,7 @@ The TSC's seven ring radii are simultaneously frequency ratios. Anchored at 40 H
 
 ### A.5 The PD Crystal's threshold geometry (Brandon-canonical Pass 8)
 
-The PD Crystal carries the four named thresholds at ±1, ±φ, ±e, ±π plus the Emerick Crossover at ±1/√2; the Principal Indeterminate Region is the |PD| < e disc; the Transcendent Ring is the φ < |PD| < e annulus; the imaginary axis is the DT/Tralse axis (RATIFIED Pass 8.2).
+The PD Crystal carries the four named thresholds at ±1, ±φ, ±e, ±π plus the Emerick Crossover at ±1/√2; the Principal Indeterminate Region is the |PD| < e disc; the Transcendent Ring is the φ < |PD| < e annulus; the imaginary axis is the MI/Tralse axis (RATIFIED Pass 8.2).
 
 ### A.6 The 4/3 structural invariant
 
@@ -53,7 +53,7 @@ The 4/3 ratio appears at five geometrically-distinct locations in the PD Crystal
 
 ### A.7 Forcing the Authority Axis (AA) into the framework
 
-The complex-plane PD Crystal **forced** the AA addition (`papers/AUTHORITY_AXIS_AA_2026-05-07.md` and book Chapter 24A) because the imaginary-axis DT direction has dual-applicability (self ↔ other), which is exactly the AA operating principle. This is the first time a truth-axis was forced by structural necessity rather than empirical pattern-matching.
+The complex-plane PD Crystal **forced** the AA addition (`papers/AUTHORITY_AXIS_AA_2026-05-07.md` and book Chapter 24A) because the imaginary-axis MI direction has dual-applicability (self ↔ other), which is exactly the AA operating principle. This is the first time a truth-axis was forced by structural necessity rather than empirical pattern-matching.
 
 ### A.8 Two-representations / projection ↔ full-object pattern
 
@@ -173,7 +173,7 @@ These are capabilities that the corpus has *not yet* explored substantively. Per
 
 ### C.11 Crystal-quenching: the Fragmented phase as a controlled-failure mode
 
-**Open question:** the Fragmented phase is the 5th phase (Double-Tralse / DT-saturated). It is the *bad* phase. **But can it be useful?** Quenching a system into a controlled-fragmented state could be a cryptographic resource (random-number generation), a creativity-induction state (controlled chaos), or a teaching tool (showing what coherence is by removing it).
+**Open question:** the Fragmented phase is the 5th phase (Meta-Indeterminate / MI-saturated). It is the *bad* phase. **But can it be useful?** Quenching a system into a controlled-fragmented state could be a cryptographic resource (random-number generation), a creativity-induction state (controlled chaos), or a teaching tool (showing what coherence is by removing it).
 
 **Why it might matter:** turns a "bad" phase into an applications-rich object. Most frameworks treat the failure-mode as something to avoid; the TSC's structured Fragmented phase could be deliberately invoked.
 

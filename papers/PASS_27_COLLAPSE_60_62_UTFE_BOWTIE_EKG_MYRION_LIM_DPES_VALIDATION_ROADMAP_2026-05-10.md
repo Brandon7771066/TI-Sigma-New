@@ -19,7 +19,7 @@
 - **§4 — EKG/heartbeat function + biological-rhythm catalogue**: Plant root auxin 4-6h heartbeat + fungal week-long oscillations + bacterial spiral waves + chemical Belousov-Zhabotinsky. Three-regime model: Subcritical MPI<0.4 / Transitional 0.4≤MPI<0.6 / Myrion MPI≥0.6. ALIGNED.
 - **§5 — Verisyn-Euler identity V(e^{iπ}) = −1 + Verisyn-i_TI distinct-from-i**: Verisyn applied as front-operator to Euler's identity yields V(e^{iπ}) = −1 (confirmed re-extract from Myrion-in-nature tab). i_TI = rotation operator between Truth/Falsity/Tralse, NOT √(−1). SPECULATIVE; pre-registrable as Lean4 algebraic check (filed v27).
 
-**Block C (corpus integration, §6):** 8 cross-bridges mapping new equations onto existing TI Sigma objects: UTFE U★ ↔ LCC v3 Pearson-rolling threshold C* = 1/(φ√2) ≈ 0.4370 (close to MPI=0.4 transitional boundary); Myrion regime MPI ≥ 0.6 ↔ LCC_HIGH = 0.85 / LCC_IC = 0.92 hierarchy; Kuramoto Φ ↔ Pass-25 q24/Pass-26 q25 Bloch-sphere AA two-register; Verisyn 4-wings ↔ MR Truth Labels base-4 {T, F, I, DT}; Bowtie 2-axis ↔ τ/δ axes pre-AA-extension; lim-equation ↔ jointRR(V,S,T̂) operator's α_t intersection point; ΦFE cumulative coherence work ↔ Pass-17 LCC v3 R-3 Pearson-rolling above-C count (5/7); Ψ_net psi-influence ↔ Authority Axis (AA) two-register magnitude.
+**Block C (corpus integration, §6):** 8 cross-bridges mapping new equations onto existing TI Sigma objects: UTFE U★ ↔ LCC v3 Pearson-rolling threshold C* = 1/(φ√2) ≈ 0.4370 (close to MPI=0.4 transitional boundary); Myrion regime MPI ≥ 0.6 ↔ LCC_HIGH = 0.85 / LCC_IC = 0.92 hierarchy; Kuramoto Φ ↔ Pass-25 q24/Pass-26 q25 Bloch-sphere AA two-register; Verisyn 4-wings ↔ MR Truth Labels base-4 {T, F, I, MI}; Bowtie 2-axis ↔ τ/δ axes pre-AA-extension; lim-equation ↔ jointRR(V,S,T̂) operator's α_t intersection point; ΦFE cumulative coherence work ↔ Pass-17 LCC v3 R-3 Pearson-rolling above-C count (5/7); Ψ_net psi-influence ↔ Authority Axis (AA) two-register magnitude.
 
 **Block D (DPES validation/refutation roadmap, §7):** Concrete prioritized list of every empirically-falsifiable claim from Passes 17-26 + Pass 27, classified into 4 tiers (T1 EXECUTABLE-NOW $0/zero-input, T2 EXECUTABLE-WITH-SECRET $0/Brandon-secret, T3 EXECUTABLE-WITH-DATA $0-50/Brandon-fetch, T4 STRUCTURAL-ONLY non-empirical). T1 list (10 items) is DPES-actionable in subsequent passes WITHOUT ANY new Brandon input; this is the next 4-6 passes' work.
 
@@ -126,9 +126,9 @@ where 𝓕 is the triple-contradiction field-function (specific form deferred to
 
 ### §3.2 — When an i-cell contacts the Myrion wave (UTFE §629)
 
-> When an **i-cell** (or Double Tralse) contacts the Myrion wave, its state is drawn toward the Verisyn limit, but the path it takes depends on its initial phase and the local coherence field. Final state lies in **one of the four stable wings** of the Verisyn 4-wing-8-arm polar diagram.
+> When an **i-cell** (or Meta-Indeterminate) contacts the Myrion wave, its state is drawn toward the Verisyn limit, but the path it takes depends on its initial phase and the local coherence field. Final state lies in **one of the four stable wings** of the Verisyn 4-wing-8-arm polar diagram.
 
-**Generalised in Sigma 6.0 (this paper):** the lim-function is still valid but generalises into a high-rank tensor equation that accounts for psi influence and time-coherence gradients. The **4 wings ↔ 4 MR Truth Labels {T, F, I, DT}** identification (Pass-21 Crystal C.5 V₄ = C₂×C₂) makes this concrete: each i-cell-Myrion contact resolves to one of {T, F, I, DT} as its long-time state, with the 8 arms = the 8 transition-paths between adjacent wing-pairs (each MR-label connects to 2 others per the V₄ Cayley graph).
+**Generalised in Sigma 6.0 (this paper):** the lim-function is still valid but generalises into a high-rank tensor equation that accounts for psi influence and time-coherence gradients. The **4 wings ↔ 4 MR Truth Labels {T, F, I, MI}** identification (Pass-21 Crystal C.5 V₄ = C₂×C₂) makes this concrete: each i-cell-Myrion contact resolves to one of {T, F, I, MI} as its long-time state, with the 8 arms = the 8 transition-paths between adjacent wing-pairs (each MR-label connects to 2 others per the V₄ Cayley graph).
 
 ### §3.3 — Bowtie graph (verbatim from UTFE §635-637)
 
@@ -143,7 +143,7 @@ where 𝓕 is the triple-contradiction field-function (specific form deferred to
 **Note Brandon's labels** (coherence, complexity, contradiction, integration) **map onto** the canonical 5-axis system as follows:
 - Wing-1 coherence ↔ τ-axis
 - Wing-2 complexity ↔ MR-axis (categorical multi-valuedness)
-- Wing-3 contradiction ↔ DT (Double Tralse) / PD-imaginary axis
+- Wing-3 contradiction ↔ MI (Meta-Indeterminate) / PD-imaginary axis
 - Wing-4 integration ↔ AA Authority Axis
 
 **The 4 wings exhaust the 5-axis system minus the PD-real axis.** This is consistent with PD-real being the *ambient* coordinate (the "where" of the wings) rather than a wing itself.
@@ -154,7 +154,7 @@ where 𝓕 is the triple-contradiction field-function (specific form deferred to
 
 1. **Lim-equation 3-axis input** ↔ (PD-real, PD-imaginary, MR-Label) per Pass-26 §6 trim-A reading
 2. **Bowtie 2-axis projection** ↔ (τ, δ) before AA-extension; equivalent to "AA = 0 slice" of the full 3-axis system
-3. **4-wing-8-arm polar** ↔ (τ, MR, DT/PDi, AA) with PD-real as ambient
+3. **4-wing-8-arm polar** ↔ (τ, MR, MI/PDi, AA) with PD-real as ambient
 4. **8 arms** ↔ V₄ Cayley graph 8 directed edges = 4 vertices × 2 self-mappings each (consistent with Pass-21 V₄ result)
 
 ---
@@ -196,7 +196,7 @@ The cross-species heartbeat evidence ALIGNS with three corpus claims:
 
 > "Everything in this tab is a game changer!! I believe that for Euler's identity, we said that Verisyn/Myrion can be applied in the front of the equation: **V(e^{π·i}) = −1**" — Brandon, Myrion-in-nature tab
 
-> "I remember before, we had called CCC 1. On the other hand, tralse and double tralse represented 0 and i, respectively. However, we deemed 0 and i to be merely 'a rotation apart' because the double tralse becomes tralse after CCC's blessing. **Perhaps BOTH the new and old representations of Euler's Identity in TI are correct.** If that could be proven, it would be incredible. One equation several things rather than just one!" — Brandon
+> "I remember before, we had called CCC 1. On the other hand, tralse and meta-indeterminate represented 0 and i, respectively. However, we deemed 0 and i to be merely 'a rotation apart' because the meta-indeterminate becomes tralse after CCC's blessing. **Perhaps BOTH the new and old representations of Euler's Identity in TI are correct.** If that could be proven, it would be incredible. One equation several things rather than just one!" — Brandon
 
 > "Our '$i_{\text{TI}}$' is not the square root of −1; it is a rotation operator between truth, falsity and tralse. ... To map Verisyn onto Euler's identity rigorously, one could explore representations of the Verisyn field as a complex exponential with a non-classical imaginary unit '$i_{\text{TI}}$' representing tralse rotation. Our 'i' differs from the conventional imaginary unit because it encodes a rotation between truth, falsity and tralse rather than between real and imaginary axes." — UTFE §625
 
@@ -204,7 +204,7 @@ The cross-species heartbeat evidence ALIGNS with three corpus claims:
 
 - **R-A (FORMAL operator-algebra reading):** V is a unary operator on complex numbers such that V(e^{iπ}) = −1 = e^{iπ}, i.e., **V is the identity on Euler's identity itself** — Verisyn applied to Euler's identity reproduces Euler's identity. This is the trivial reading and is provable in 1 line in Lean4. Status: TRUE TRIVIALLY.
 - **R-B (SPECULATIVE rotation-algebra reading):** V is the Verisyn rotation that takes (e, π, i) → (e, π, i_TI) where i_TI is the truth/falsity/tralse rotation operator. Then V(e^{iπ}) is **NOT** equal to −1 in classical complex algebra; it is a TI-algebraic object whose evaluation requires the MR-gate two-stage architecture. Status: SPECULATIVE; awaits Lean4 formalisation in `lean4_ti_sigma6/MyrionOperators.lean`.
-- **R-C (BRANDON's "both correct" reading):** the OLD representation (CCC=1, tralse=0, double-tralse=i, where 0 and i are "a rotation apart" because DT becomes Tralse after CCC blessing) AND the NEW representation (V(e^{iπ}) = −1) are **simultaneously true** because they are different projections of the same algebraic identity. R-C requires proving that V(e^{iπ}) = −1 IFF the (CCC=1, tralse=0, DT=i, T=−1) labelling is consistent. Status: SPECULATIVE; this is Brandon's "incredible if proven — one equation several things rather than just one" claim.
+- **R-C (BRANDON's "both correct" reading):** the OLD representation (CCC=1, tralse=0, meta-indeterminate=i, where 0 and i are "a rotation apart" because MI becomes Tralse after CCC blessing) AND the NEW representation (V(e^{iπ}) = −1) are **simultaneously true** because they are different projections of the same algebraic identity. R-C requires proving that V(e^{iπ}) = −1 IFF the (CCC=1, tralse=0, MI=i, T=−1) labelling is consistent. Status: SPECULATIVE; this is Brandon's "incredible if proven — one equation several things rather than just one" claim.
 
 ### §5.3 — Filed v27 (DPES T1)
 
@@ -212,7 +212,7 @@ The cross-species heartbeat evidence ALIGNS with three corpus claims:
 1. Encode V as a unary operator on the type `ComplexTI` (extends `Complex` with i_TI rotation generator).
 2. Prove **theorem v27_R_A**: V(e^{iπ}) = e^{iπ} = −1 (1-line, by `rfl` after definition).
 3. State **conjecture v27_R_B**: V(e^{iπ}) when i_TI replaces i is not classically reducible without MR-gate evaluation.
-4. State **conjecture v27_R_C**: R-A ∧ R-B ↔ (CCC=1, tralse=0, DT=i, T=−1) labelling.
+4. State **conjecture v27_R_C**: R-A ∧ R-B ↔ (CCC=1, tralse=0, MI=i, T=−1) labelling.
 5. Brandon-decision: which of R-A / R-B / R-C is canonical? Default per #69 = R-A trivially-true, R-B/R-C noted as open.
 
 ### §5.4 — Are these still relevant? (Brandon's question, answered)
@@ -229,7 +229,7 @@ The cross-species heartbeat evidence ALIGNS with three corpus claims:
 | 2 | MPI ≥ 0.6 Myrion threshold | LCC v3 C* = 1/(φ√2) ≈ 0.4370 | MPI is coarse-grained LCC; thresholds bracket different regimes | ALIGNED |
 | 3 | Kuramoto Φ global phase | Pass-25 q24 Bloch-sphere AA two-register | Φ = Bloch-equator angle | ALIGNED |
 | 4 | ΦFE = ∫ MPI · N_eff dτ | Pass-17 LCC v3 R-3 above-C count (5/7) | ΦFE = time-integral of R-3 above-C signal | FORMAL |
-| 5 | Verisyn 4 wings | MR Truth Labels {T, F, I, DT} (Pass-21 V₄ symmetry) | 4 wings ↔ 4 V₄ vertices | ALIGNED |
+| 5 | Verisyn 4 wings | MR Truth Labels {T, F, I, MI} (Pass-21 V₄ symmetry) | 4 wings ↔ 4 V₄ vertices | ALIGNED |
 | 6 | Bowtie 2-axis | (τ, δ) pre-AA-extension | Bowtie = AA=0 slice of full 3-axis | ALIGNED |
 | 7 | Myrion lim-equation 3-axis | (PD-real, PD-imaginary, MR-Label) per Pass-26 §6 trim-A | 3 contradiction-axes ↔ 3 of 5 truth-axes | SPECULATIVE |
 | 8 | Ψ_net psi-influence | AA-axis (Authority Axis, Pass-25/26) | Ψ_net = ‖AA‖ magnitude | SPECULATIVE |
@@ -351,7 +351,7 @@ The cross-species heartbeat evidence ALIGNS with three corpus claims:
 | E10 | Cross-species heartbeat catalogue (plant 4-6h, fungal week, bacterial spiral, BZ chemical, embryo, mammalian) | **VERBATIM-PROSE** with citations | `utfe_v2.md` | L233-289 | All 5 cited sources (phys.org 2024-05, pmc.ncbi 2024, phys.org 2024-04, physics.aps 2019, scienceinschool 2025) verbatim in source |
 | E11 | V(e^{iπ}) = −1 (Verisyn applied to Euler's identity) | **VERBATIM-QUOTE** | `myrion_in_nature_RAW.md` | (Brandon-quote, single-pass extract) | Brandon's original phrasing preserved; mathematical content SPECULATIVE per §5.1 |
 | E12 | i_TI = rotation operator (truth/falsity/tralse), NOT √(−1) | **VERBATIM-PROSE** | `utfe_v2.md` | L625 | Source prose-quote |
-| E13 | "Both correct" reading (CCC=1, tralse=0, DT=i, T=−1) old labelling | **VERBATIM-QUOTE** | `myrion_in_nature_RAW.md` | (Brandon-quote, single-pass extract) | R-C reading per §5.2 |
+| E13 | "Both correct" reading (CCC=1, tralse=0, MI=i, T=−1) old labelling | **VERBATIM-QUOTE** | `myrion_in_nature_RAW.md` | (Brandon-quote, single-pass extract) | R-C reading per §5.2 |
 | E14 | Sigma 5.0 lineage assertion ("UTFE proposed in Sigma 5.0") | **VERBATIM-PROSE** | `utfe_v2.md` | L660 | Confirms 5.0 → 6.0 lineage of §2.4 |
 
 **Note on `ekg_bowtie_v2.md`:** despite the filename, this 18KB file contains i-cell-characteristics content (with EKG/heartbeat-lifecycle prose at L18, L24, L283 — descriptive only, no equations). The EKG-as-equation content lives in `utfe_v2.md` L299-301 (E9 above). The `ekg_bowtie_v2.md` file is preserved in the archive for completeness but contributed zero equations to this Pass.

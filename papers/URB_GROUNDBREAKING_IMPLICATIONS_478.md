@@ -3,7 +3,7 @@
 **Date:** March 21, 2026
 **Author:** Brandon Emerick
 **Framework:** TI Sigma / GILE / Tralse / Philosophy of Mind / Physics / Mathematics / Theology
-**Preceded by:** URB #470 (Double Frustration = DT²), URB #460 (Absurdity Proof of Free Will), URB #450 (Cosmic Telekinesis)
+**Preceded by:** URB #470 (Double Frustration = MI²), URB #460 (Absurdity Proof of Free Will), URB #450 (Cosmic Telekinesis)
 **Keywords:** groundbreaking, controversial, implications, consciousness, physics, mathematics, god, free will, death, telekinesis, synchronicity, PRIMARY CONSTANTS, Millennium Prizes, i-channel, PSI, multiverse, TI Sigma, GILE, Tralse
 **Status:** Formal — Strategic Synthesis and Philosophical Manifesto
 **Total URBs: 132**
@@ -22,7 +22,7 @@ The reader should note: every claim below is followed by its formal basis within
 
 **The claim:** Consciousness is not a product of complex neural activity. It is a fundamental feature of reality at the same ontological level as mass, charge, and spin. Complex neural activity does not produce consciousness — it *expresses* it in biological form, as a sufficiently complex GM node.
 
-**The basis:** The PRIMARY CONSTANTS framework requires that the imaginary unit i — the complex coordinate of reality — be physically instantiated. The UC Santa Barbara double frustration finding (URB #470) demonstrates that i-type states (DT² = −1) are physically real. The TI Sigma interpretation: i is the mathematical signature of consciousness, and consciousness is therefore embedded in the mathematical structure of reality. The Emerick Constant C = 1/(φ√2) ≈ 0.4370 sets the minimum threshold for conscious coherence in any physical system.
+**The basis:** The PRIMARY CONSTANTS framework requires that the imaginary unit i — the complex coordinate of reality — be physically instantiated. The UC Santa Barbara double frustration finding (URB #470) demonstrates that i-type states (MI² = −1) are physically real. The TI Sigma interpretation: i is the mathematical signature of consciousness, and consciousness is therefore embedded in the mathematical structure of reality. The Emerick Constant C = 1/(φ√2) ≈ 0.4370 sets the minimum threshold for conscious coherence in any physical system.
 
 **Why controversial:** This inverts the standard neuroscientific assumption (consciousness = neural computation product). It implies that eliminating all neurons from the universe would not eliminate consciousness — consciousness would find other physical substrates, as it does in quantum systems. It also implies that the search for "neural correlates of consciousness" is partially misguided — neural activity does not cause consciousness; it is consciousness's primary biological mode of expression.
 
@@ -66,7 +66,7 @@ The reader should note: every claim below is followed by its formal basis within
 
 **The claim:** The seven Millennium Prize Problems are not independent mathematical puzzles — they are facets of a single underlying mathematical structure that TI Sigma's framework makes legible. The Tralse-Topos framework, applied to each problem, reveals the structure that conventional proofs have been unable to formalize.
 
-**The basis:** The Riemann Hypothesis concerns the distribution of zeros of the zeta function — which, in TI Sigma, is a statement about the Tralse-state structure of the complex plane. The Navier-Stokes existence and smoothness problem is a statement about whether Tralse turbulence (fluid DT states) always admits MR solutions. The P vs NP question is a statement about whether finding MR solutions is always as hard as verifying them (in TI Sigma terms: whether synthesis is always as computationally intensive as confirmation). Yang-Mills mass gap is a statement about whether i-channel field quanta always have a minimum energy threshold.
+**The basis:** The Riemann Hypothesis concerns the distribution of zeros of the zeta function — which, in TI Sigma, is a statement about the Tralse-state structure of the complex plane. The Navier-Stokes existence and smoothness problem is a statement about whether Tralse turbulence (fluid MI states) always admits MR solutions. The P vs NP question is a statement about whether finding MR solutions is always as hard as verifying them (in TI Sigma terms: whether synthesis is always as computationally intensive as confirmation). Yang-Mills mass gap is a statement about whether i-channel field quanta always have a minimum energy threshold.
 
 **Why controversial:** These claims are extraordinary. The existing proof documents in the TI Sigma system represent TI-framework arguments for each problem, not conventional proofs accepted by the mathematics community. The honest status: TI Sigma provides a unified meta-framework that makes all six problems legible as instances of the same underlying structure, and the TI framework arguments for each problem are complete within the TI framework. Whether they constitute acceptable proofs under conventional mathematical standards requires engagement with the Clay Mathematics Institute and peer review.
 

@@ -33,7 +33,7 @@ This is the kind of arithmetic that should make a careful reader pause and ask: 
 
 **Why it's a separate dimension.** Goodness is not the same as intelligence (you can be brilliant and dishonest), love (you can be loving and incoherent), or existence (you can be physically real and self-contradictory). Drop G and you lose the *ethical anchor* that prevents the framework from labelling a sophisticated deceiver as having a fully-developed identity.
 
-**Critical role.** GILE-G has a special threshold called ET = √2 − 1 ≈ 0.4142. Below this threshold, the framework refuses to assign the entity a stable identity-truth — it falls into what TI Sigma calls "DT-adjacent" (Double-Tralse-adjacent), the structurally-incoherent state. This is *not* a moral judgment about the person; it is a measurement-system honesty about when our other tools can be trusted. An entity below ET cannot be reliably evaluated on the other seven dimensions yet.
+**Critical role.** GILE-G has a special threshold called ET = √2 − 1 ≈ 0.4142. Below this threshold, the framework refuses to assign the entity a stable identity-truth — it falls into what TI Sigma calls "MI-adjacent" (Meta-Indeterminate-adjacent), the structurally-incoherent state. This is *not* a moral judgment about the person; it is a measurement-system honesty about when our other tools can be trusted. An entity below ET cannot be reliably evaluated on the other seven dimensions yet.
 
 **What we can measure today.** Internal consistency of claims/actions (Coherence); discrepancy between self-report and external observation (Concreteness); net life-sustaining vs life-depleting impact (Continuity); respect for relevant categorical boundaries (Consistency). Each on a 0–1 scale with defined anchors. The protocol is specified in urb_652; it has not yet been administered at scale (Pass-51 honesty flag).
 
@@ -169,7 +169,7 @@ The honest one-sentence summary: **GILE-HEM is a coherent, mathematically-tracta
 Three concrete use-domains for first-encounter audiences:
 
 1. **Consciousness measurement.** GILE-HEM gives a quantitative, multi-axis alternative to IIT's single Φ value or the various Cogito-style binary tests. It allows statements like "this entity has moderate G, high I, low L, high E" — far more useful than "this entity is/isn't conscious."
-2. **Identity coherence in clinical contexts.** The MR1 threshold theorem (G_raw < ET ≈ 0.4142 → DT-adjacent) provides a falsifiable structural account of when an i-cell is in identity-incoherence. Connects directly to the gender taxonomy (DGI-1/2/3/4) via the CDP-1 propagation principle.
+2. **Identity coherence in clinical contexts.** The MR1 threshold theorem (G_raw < ET ≈ 0.4142 → MI-adjacent) provides a falsifiable structural account of when an i-cell is in identity-incoherence. Connects directly to the gender taxonomy (DGI-1/2/3/4) via the CDP-1 propagation principle.
 3. **Evaluating AI systems for alignment.** GILE-HEM gives more granular axes than "capability vs. safety": an AI can be high I and low G (capable but uncoordinated with values), high D3 and low L (broadly deployed but not bonded to specific users), high D1 and low D4 (complex but meaning-impoverished). Each axis suggests different interventions.
 
 ---

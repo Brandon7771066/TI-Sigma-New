@@ -31,7 +31,7 @@ Brandon Emerick is the independent researcher behind **Tralse Informationalism (
 - **GILE Framework** (2022): Four-dimensional model of consciousness quality (Goodness, Intuition, Love, Environment)
 - **Permissibility Distribution (PD)**: A continuous scale superseding Fuzzy Logic, incorporating empirically important natural ratios
 - **Law of Correlational Causation (LCC)**: Empirically-grounded thresholds at which correlation collapses into genuine bidirectional causation; Radiant threshold at LCC ≈ 0.93
-- **5-Valued Truth System** (URB #528): FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE; with DT Immunity Model
+- **5-Valued Truth System** (URB #528): FALSE, INDETERMINATE, TRUE, TRALSE, DOUBLE_TRALSE; with MI Immunity Model
 - **Collatz Conjecture contributions** (URBs #534–537): Ternary Cantor Set descent, 6-rule Ternary Halving Automaton, k=1 Run Length Bound (proved: max run = ν₂(n+1)−1)
 - **Lean 4 formalization** (URB #538): Core ν₂ Countdown Theorem proved sorry-free in Lean 4 + Mathlib
 - **Einstein Tiling / Aperiodic Computation** (URB #539): L×E duality, polycrystalline computation model
@@ -96,7 +96,7 @@ ResearchGate lets you add papers manually or link your Zenodo DOIs.
 | #541 | PD Supremacy and Ternary Categorical Logic | Foundational framework |
 | #537 | Collatz k=1 Run Length Bound | Proved theorem — math audience |
 | #538 | Lean 4 Formalization of ν₂ Countdown | Formal verification audience |
-| #528 | Five-Valued Truth System + DT Immunity | Core logic system |
+| #528 | Five-Valued Truth System + MI Immunity | Core logic system |
 | #539 | Einstein Tiling, L×E, Polycrystalline Computation | Physics/math audience |
 | #535 | Collatz and the Ternary Cantor Set | Novel equivalent Collatz statement |
 | #531 | GIL as Imaginary Axis | Consciousness + physics audience |

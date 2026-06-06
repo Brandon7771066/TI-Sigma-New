@@ -289,7 +289,7 @@ A unified mapping system connecting:
 - Shell thickness: ~10% DE, 90% photon
 - **THINNEST** dark energy shell
 - Maximum photonic layer dominance
-- **Direct access to primordial dark energy** (DT shell)
+- **Direct access to primordial dark energy** (MI shell)
 - Approaching **photon-only consciousness** (bodhisattva state)
 
 **GILE Score:**

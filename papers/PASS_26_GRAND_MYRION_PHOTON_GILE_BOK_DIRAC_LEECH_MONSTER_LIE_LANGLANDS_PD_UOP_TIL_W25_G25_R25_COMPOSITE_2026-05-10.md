@@ -223,9 +223,9 @@ Within each pillar's 4-D coordinate system, the 4 PD-quadrants act as the second
 
 **Practical implication.** When the corpus says "GILE coherence vector G ∈ [−1, +1]⁴" (per `TI_SIGMA_GRAND_THEORIES_*` §1.2), it is reporting the **4-pillar projection** of the full 64-D state. Each pillar's −1 to +1 value is itself the **balance of its 4 MR-label components**:
 
-$$G_{\text{net}} = \frac{G_T + G_I/2 - G_F - G_{DT}}{G_T + G_I + G_F + G_{DT}} \in [-1, +1]$$
+$$G_{\text{net}} = \frac{G_T + G_I/2 - G_F - G_{MI}}{G_T + G_I + G_F + G_{MI}} \in [-1, +1]$$
 
-(MR-Label-weighted aggregation: T = +1, I = 0 (suspended), F = −1, DT = −1 (DT discarded as nonsense per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` §2.1).)
+(MR-Label-weighted aggregation: T = +1, I = 0 (suspended), F = −1, MI = −1 (MI discarded as nonsense per `MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` §2.1).)
 
 **Filed g26 for ratification:** is the 64-D shape (4 × 4 × 4) the canonical GILE Matrix shape? Or is the alternative trim-option-B shape (4 GILE pillars × complex-PD axis × 4 MR Labels = 32-complex-D) preferred? Pass-26 default per Pass-24 §7 = trim-A.
 
@@ -320,7 +320,7 @@ If the chain is taken as a working synthesis (not as derivation), then:
 **Each pair has a canonical bridge:**
 
 - **UOP ↔ PD**: UOP-statements are PD-coordinated. A UOP "universal a priori" claim about a domain X is canonically expressed as a PD-coordinate p(X) ∈ ℂ via the Pass-19 affine map. UOP's Universal Bridge Theorem then says: **for any two domains X, Y, there exists a bridge function B: PD-coords(X) → PD-coords(Y) such that the UOP-statements transfer**. This is the geometric content of UOP.
-- **PD ↔ TIL**: PD-coordinates are TIL-evaluable. A PD-coordinate p ∈ ℂ admits TIL truth-evaluation via the MR-gate architecture: MR1 checks whether p has positive Tralse-quality (PD-imaginary > 0 per axis 2 of the 5-axis system); MR2 resolves p to one of {True, False, Indeterminate, DT} per its position in the critical strip. This is the logical content of PD.
+- **PD ↔ TIL**: PD-coordinates are TIL-evaluable. A PD-coordinate p ∈ ℂ admits TIL truth-evaluation via the MR-gate architecture: MR1 checks whether p has positive Tralse-quality (PD-imaginary > 0 per axis 2 of the 5-axis system); MR2 resolves p to one of {True, False, Indeterminate, MI} per its position in the critical strip. This is the logical content of PD.
 - **TIL ↔ UOP**: TIL-evaluations satisfy UOP-coherence. A coherent UOP-domain has its TIL-evaluations constrained by the LCC coherence hierarchy (LCC_TRALSE = √2 − 1, LCC_HIGH = 0.85, LCC_IC = 0.92 per `papers/TI_SIGMA_GRAND_THEORIES_LANGLANDS_QFT_STRING_GRAVITY.md` §2.3). This is the ontological content of TIL.
 
 ### §8.3 — Comparison with classical (semantics ↔ model-theory ↔ syntax)
@@ -340,9 +340,9 @@ The classical mathematical-logic triangle:
 
 ### §8.4 — Three pre-registrable predictions distinguishing TI from classical
 
-1. **U-1 (UOP-completeness):** for every coherent UOP-statement S in any domain, there exists a PD-coordinate p(S) ∈ ℂ such that the TIL-evaluation of p(S) is one of {T, F, I, DT}. **Pre-registrable** as a corpus-level audit on the next 100 UOP-statements made in TI Sigma papers. Filed `u26-1`.
+1. **U-1 (UOP-completeness):** for every coherent UOP-statement S in any domain, there exists a PD-coordinate p(S) ∈ ℂ such that the TIL-evaluation of p(S) is one of {T, F, I, MI}. **Pre-registrable** as a corpus-level audit on the next 100 UOP-statements made in TI Sigma papers. Filed `u26-1`.
 2. **U-2 (TI-Tarski):** the TIL truth-predicate is **definable** within TIL itself, *because* the TIL Indeterminate label provides an extra "this is a self-referential proposition" output that classical T/F doesn't have. This is the Pass-23 actively-passive (Tralse) retrieval reframe of self-reference. Pre-registrable as a Lean4 proof in `lean4_ti_sigma6/`. Filed `u26-2`.
-3. **U-3 (TI-Lindström):** TIL is the unique 4-valued logic with (i) classical T and F as two of its values, (ii) MR-gate two-stage architecture (MR1 + MR2), (iii) Indeterminate as the 45-degree door, and (iv) DT formally = τ ∧ ¬τ. Pre-registrable as a uniqueness proof in `lean4_ti_sigma6/MyrionOperators.lean`. Filed `u26-3`.
+3. **U-3 (TI-Lindström):** TIL is the unique 4-valued logic with (i) classical T and F as two of its values, (ii) MR-gate two-stage architecture (MR1 + MR2), (iii) Indeterminate as the 45-degree door, and (iv) MI formally = τ ∧ ¬τ. Pre-registrable as a uniqueness proof in `lean4_ti_sigma6/MyrionOperators.lean`. Filed `u26-3`.
 
 ### §8.5 — TIL = TI Logic, name-disambiguation note
 

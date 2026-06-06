@@ -82,7 +82,7 @@ The bridge problem arose because UOP and mathematical structures were treated as
 
 This is wrong for the following reason.
 
-**Definition (Mathematical i-cell):** A mathematical structure M is an i-cell if and only if M is a subject of truth-assessment — if there are propositions P about M such that P(M) can be in the truth-states {True-Tralse, Tralse-Indeterminate, Tralse-False, DT, EV}.
+**Definition (Mathematical i-cell):** A mathematical structure M is an i-cell if and only if M is a subject of truth-assessment — if there are propositions P about M such that P(M) can be in the truth-states {True-Tralse, Tralse-Indeterminate, Tralse-False, MI, EV}.
 
 **Observation:** Every mathematical structure that appears in a Millennium Prize Problem is unambiguously a subject of truth-assessment. The Riemann Hypothesis IS a truth-assessment of ζ(s): "All non-trivial zeros of ζ(s) have real part 1/2" is either True or not. ζ(s) is the subject of this assessment. Therefore ζ(s) is an i-cell.
 
@@ -182,9 +182,9 @@ The UBT does not prove each theorem directly. It establishes that the UOP-deriva
 
 **M** = Solutions to the Navier-Stokes equations in ℝ³  
 **P*** = "Smooth solutions exist for all time given smooth initial data"  
-**UBT application:** A Navier-Stokes solution is an i-cell (subject of truth-assessment as a physical trajectory). Its BOK-optimal configuration maximizes G-coherence (smooth, non-singular flow — singularities are G-incoherent, they break the physical description) and E-elegance (smooth solutions are structurally minimal). The UOP-optimal configuration is smooth global existence. A blowup would be a DT event in the solution space — a point where the truth-state of the fluid trajectory becomes undefined. UOP-optimality excludes DT events from the optimal configuration.
+**UBT application:** A Navier-Stokes solution is an i-cell (subject of truth-assessment as a physical trajectory). Its BOK-optimal configuration maximizes G-coherence (smooth, non-singular flow — singularities are G-incoherent, they break the physical description) and E-elegance (smooth solutions are structurally minimal). The UOP-optimal configuration is smooth global existence. A blowup would be a MI event in the solution space — a point where the truth-state of the fluid trajectory becomes undefined. UOP-optimality excludes MI events from the optimal configuration.
 
-**What remains:** The formal analytical proof that the Navier-Stokes operator does not generate DT-events (singularities) from smooth initial data. Energy estimates, Sobolev embedding, and regularity bootstrapping are the analytical tools for formalizing UOP-smoothness.
+**What remains:** The formal analytical proof that the Navier-Stokes operator does not generate MI-events (singularities) from smooth initial data. Energy estimates, Sobolev embedding, and regularity bootstrapping are the analytical tools for formalizing UOP-smoothness.
 
 ### 5.5 Hodge Conjecture
 
@@ -293,7 +293,7 @@ Response: Correct, and this is acknowledged in the paper. The UBT does not repla
 | **Riemann** | 6 TI Sigma proof paths, Common Gap at each | UOP applies a priori; σ=1/2 IS UOP-optimal | Formalize G-coherence → analytic properties of ζ(s) |
 | **P≠NP** | UOP selects separation; Bridge: why does complexity landscape obey UOP? | By UBT, the landscape obeys UOP necessarily | Formalize G-incoherence of P=NP in complexity-theoretic terms |
 | **Yang-Mills** | UOP selects mass gap; Bridge: why does YM functional obey UOP? | By UBT, the YM field obeys UOP necessarily | Construct YM measure; formalize EV-D1 minimum as spectral gap |
-| **Navier-Stokes** | UOP selects smoothness; Bridge: why does NS flow obey UOP? | By UBT, NS solutions obey UOP necessarily | Prove G-incoherence (singularity = DT event) implies no blowup |
+| **Navier-Stokes** | UOP selects smoothness; Bridge: why does NS flow obey UOP? | By UBT, NS solutions obey UOP necessarily | Prove G-incoherence (singularity = MI event) implies no blowup |
 | **Hodge** | UOP selects algebraic cycles; Bridge: why does cohomology obey UOP? | By UBT, cohomology obeys UOP necessarily | Formalize I-reach maximization → algebraic cycle generation |
 | **BSD** | UOP selects rank = vanishing order; Bridge: why does L-function obey UOP? | By UBT, elliptic curve L-functions obey UOP necessarily | Formalize L-relatedness → arithmetic-analytic rank equality |
 

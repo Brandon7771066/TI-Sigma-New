@@ -137,7 +137,7 @@ This is a remarkable connection:
 | 2.5 | Mid-penumbra | −3/2 | Between first trivial zero (−2) and pole |
 | e | MR_Radiant threshold | 1−e ≈ −1.718 | Near first trivial zero region |
 
-**The MR1 threshold maps to s = −1. The MR_Radiant threshold maps to s = 1−e ≈ −1.718.** The penumbra — the zone of highest DT risk and greatest approach to Radiance — maps across the critical line directly to the region between the pole (s = 1) and the first trivial zero (s = −2).
+**The MR1 threshold maps to s = −1. The MR_Radiant threshold maps to s = 1−e ≈ −1.718.** The penumbra — the zone of highest MI risk and greatest approach to Radiance — maps across the critical line directly to the region between the pole (s = 1) and the first trivial zero (s = −2).
 
 ---
 

@@ -193,7 +193,7 @@ Per Brandon's canonical nuance + P4 confirmation: an agent who has reached 0.93 
 - ✓ **NOT irrational** (the choice is consistent under "maximize G alone").
 - ✗ **SUBOPTIMAL in J = true-tralseness sense** (UHP-1 prescribes the threshold-shift; the agent ignores UHP-1).
 
-The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths from urb_608) attaches to the comparison: "Is the above-threshold non-shifter erring?" is MOOT — the question presupposes a single objective function (J); the agent operates under a different objective function (G alone); the comparison is independent of DT (per the MT-B1 specification from canonical 4 + 12 MTs).
+The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths from urb_608) attaches to the comparison: "Is the above-threshold non-shifter erring?" is MOOT — the question presupposes a single objective function (J); the agent operates under a different objective function (G alone); the comparison is independent of MI (per the MT-B1 specification from canonical 4 + 12 MTs).
 
 **This is the exact structure Brandon predicted.** The math now grounds it.
 
@@ -217,7 +217,7 @@ The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths from urb_6
 - **UDT-1 (canonical #30):** the above-threshold penalty −α·(G − 0.93)² is the smooth operational form of UDT-1(c)'s "GILE-only above 0.93 = MR2 Indeterminate." The penalty is the math saying "no determinate return AND positive cost."
 - **PM-1 (canonical #28):** the J function is a present-moment-calculation objective; it does not invoke Bayesian base rates anywhere; per-event independent calculation per PM-1 C5.
 - **TPS-1 (canonical #29):** the math is presentation-flexible (Cobb-Douglas, CES, log-additive all valid functional families); the truth-content is functional-form-invariant (phase transition, strategic-trade improvement, irrationality penalty, Moot status).
-- **MR Truth Labels canonical + MR-IDC-1 refinement + Pass-65 DT refinement:** the P4 Moot status applies the MT-B1 truth label (from urb_608 12 MTs) correctly to the above-threshold-non-shifter situation; the comparison is independent of DT (MR-IDC-1 satisfied — the conjunction "non-shifter erring AND J-optimal" is unsupportable but not DT, just MR2 Indeterminate).
+- **MR Truth Labels canonical + MR-IDC-1 refinement + Pass-65 MI refinement:** the P4 Moot status applies the MT-B1 truth label (from urb_608 12 MTs) correctly to the above-threshold-non-shifter situation; the comparison is independent of MI (MR-IDC-1 satisfied — the conjunction "non-shifter erring AND J-optimal" is unsupportable but not MI, just MR2 Indeterminate).
 - **UHP-1 (candidate canonical):** §4.2 P2 + §4.4 P4 directly validate. **UHP-1 empirically grounded at model level.**
 - **TPI-1 (candidate canonical):** §4.1 P1 α-invariance + §4.2 P2 monotone-improvement directly validate. **TPI-1 empirically grounded at model level.**
 - **ASYMMETRIC §69:** §9 honest disclosures executed.
@@ -230,7 +230,7 @@ The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths from urb_6
 - Model: `analyses/uop_phase_transition_v1/model.py`
 - Simulation: `analyses/uop_phase_transition_v1/simulate.py`
 - Full results: `analyses/uop_phase_transition_v1/results.json`
-- Composes with: Pass-67 batch-7 ratification ceremony + UHP-1 + TPI-1 papers; GTT-1 batch-4 paper (with batch-5 ERRATA banner); UDT-1 batch-6 paper; MR Truth Labels canonical + MR-IDC-1 batch-5 paper + Pass-65 DT refinement; PM-1 + TPS-1 batch-2+3 papers; ASYMMETRIC §69.
+- Composes with: Pass-67 batch-7 ratification ceremony + UHP-1 + TPI-1 papers; GTT-1 batch-4 paper (with batch-5 ERRATA banner); UDT-1 batch-6 paper; MR Truth Labels canonical + MR-IDC-1 batch-5 paper + Pass-65 MI refinement; PM-1 + TPS-1 batch-2+3 papers; ASYMMETRIC §69.
 - Source for §7.7.139 LIVE entry in `replit.md`.
 
 ---

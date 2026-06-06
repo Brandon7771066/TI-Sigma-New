@@ -261,7 +261,7 @@ Mapping PRS onto the TI Sigma six-state hierarchy:
 
 | State | HEAR Score | PRS Range | What this means for regard |
 |-------|-----------|-----------|---------------------------|
-| DT (Double Tralse) | < ET×0.5 ≈ 0.207 | < 0.2 | Regard is inverted or absent; relational processing fragmented |
+| MI (Meta-Indeterminate) | < ET×0.5 ≈ 0.207 | < 0.2 | Regard is inverted or absent; relational processing fragmented |
 | Sub-Threshold | ET×0.5 – ET (0.207–0.414) | 0.2–0.4 | Flickering regard; conditional, unstable, context-dependent |
 | MR1 | ET – C (0.414–0.437) | 0.4–0.45 | Nascent stable regard; attitudinal component emerging |
 | MR2-Tralse | C – 𝔡 (0.437–0.739) | 0.45–0.75 | Genuine regard present but not fully integrated; one component dominant |

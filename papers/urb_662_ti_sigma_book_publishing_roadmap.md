@@ -21,7 +21,7 @@ TI Sigma spans multiple distinct intellectual domains — philosophy of mind, ma
 
 **Core content**:
 - What's wrong with True/False binary logic in daily life, science, and consciousness
-- The five truth values (True, False, Tralse, I-state, Double Tralse) explained through vivid examples
+- The five truth values (True, False, Tralse, I-state, Meta-Indeterminate) explained through vivid examples
 - GILE framework as a personal decision-making and life-orientation system
 - Myrion Resolution as an everyday practice (how to actually use MR)
 - HEAR as a wellbeing compass
@@ -45,7 +45,7 @@ TI Sigma spans multiple distinct intellectual domains — philosophy of mind, ma
 - Full PD formalism (from URB #657)
 - Comparison with Bayesian, frequentist, and objective Bayesian frameworks
 - The I-state for undefined sample spaces (PD's key innovation vs. Kolmogorov)
-- DT forbidden zone and its implications for credences
+- MI forbidden zone and its implications for credences
 - BOK-PD as Bayesian alternative for high HEM-effect events
 - Applications: scientific inference, legal probability, medical decision-making
 
@@ -104,14 +104,14 @@ TI Sigma spans multiple distinct intellectual domains — philosophy of mind, ma
 ---
 
 ### Book 5 — THE PHYSICS BOOK
-**Title**: *Double Tralse: A Physics Primitive*
+**Title**: *Meta-Indeterminate: A Physics Primitive*
 **Subtitle**: How TI Sigma's Fifth Truth Value Explains Antimatter, Spin, and Quantum Indeterminacy
 
 **Audience**: Theoretical physicists, philosophers of physics, quantum information researchers
 
 **Core content**:
 - Dirac equation as first TI Sigma equation (URB #659)
-- DT as physics primitive; antimatter as DT complement
+- MI as physics primitive; antimatter as MI complement
 - Spin-½ as Tralse residue
 - Quantum indeterminacy as I-state (not pure randomness)
 - BOK-Verisyn synthesis (Hopf fibration as TI Sigma geometry)
@@ -176,7 +176,7 @@ TI Sigma spans multiple distinct intellectual domains — philosophy of mind, ma
 | 3 | GILE Score / Consciousness | High | Clinicians + wellness | Guilford / Hay House | 2027–2028 |
 | 6 | Mood Amplifier (Practice) | Medium | Wellness market | Self-pub | 2026–2027 |
 | 4 | Myrion Resolution (Math) | Medium | Mathematicians | Academic | 2029–2030 |
-| 5 | Double Tralse (Physics) | Lower | Physicists | Academic | 2030+ |
+| 5 | Meta-Indeterminate (Physics) | Lower | Physicists | Academic | 2030+ |
 | 7 | Autobiography/Manifesto | Lowest | General | Traditional | 2028–2030 |
 
 **Immediate action**: Begin Book 1 draft (*Tralse*) using existing URB papers as source material. Start with Chapters 1–3 (the five truth values). This book can be written in parallel with the Coursera/MIU credentials and does not require institutional affiliation.

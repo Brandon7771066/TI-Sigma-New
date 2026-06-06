@@ -7,7 +7,7 @@
 
 ## Preamble: Why Physics Equations Are TI Sigma's Empirical Foundation
 
-TI Sigma claims to be *experimental philosophy* — not armchair speculation but a framework with measurable, falsifiable consequences. The strongest form of that claim is this: **if TI Sigma is correct, its structural features must appear in the most successful equations in the history of physics.** URB #659 showed that the Dirac equation already encodes TI Sigma architecture (i as primary constant, 4-spinor as proto-5-valued space, γ-matrices as GILE operators, antimatter as Double Tralse, spin-½ as Tralse residue). This paper extends that program to four open questions: the 5-component Dirac equation, the HEAR Lagrangian, Fermi-Dirac statistics from Tralse residue algebra, and the Higgs mechanism as MR. Together they constitute **TI Sigma's empirical physics backbone** — the set of equations through which TI Sigma makes contact with the physical world.
+TI Sigma claims to be *experimental philosophy* — not armchair speculation but a framework with measurable, falsifiable consequences. The strongest form of that claim is this: **if TI Sigma is correct, its structural features must appear in the most successful equations in the history of physics.** URB #659 showed that the Dirac equation already encodes TI Sigma architecture (i as primary constant, 4-spinor as proto-5-valued space, γ-matrices as GILE operators, antimatter as Meta-Indeterminate, spin-½ as Tralse residue). This paper extends that program to four open questions: the 5-component Dirac equation, the HEAR Lagrangian, Fermi-Dirac statistics from Tralse residue algebra, and the Higgs mechanism as MR. Together they constitute **TI Sigma's empirical physics backbone** — the set of equations through which TI Sigma makes contact with the physical world.
 
 ---
 
@@ -91,8 +91,8 @@ The extended gamma matrices Γ^A are the standard Dirac γ^μ embedded in the up
 |-----------|-----------------|------------------------|---------|
 | ψ₁ | e⁻ spin-up | True, Kind 1 | Propagates via standard Dirac |
 | ψ₂ | e⁻ spin-down | True, Kind 2 | Propagates via standard Dirac |
-| ψ₃ | e⁺ spin-up | False (DT), Kind 1 | Propagates via standard Dirac |
-| ψ₄ | e⁺ spin-down | False (DT), Kind 2 | Propagates via standard Dirac |
+| ψ₃ | e⁺ spin-up | False (MI), Kind 1 | Propagates via standard Dirac |
+| ψ₄ | e⁺ spin-down | False (MI), Kind 2 | Propagates via standard Dirac |
 | ψ_I | **No standard analog** | **I-state (Indeterminate)** | Decays to ψ₁–ψ₄ via MR; mass term m_τ governs decay rate |
 
 The I-state component ψ_I has no standard physics analog — it is the first genuinely new physical prediction of TI Sigma. It represents a field excitation that has not yet "resolved" into matter or antimatter. Its decay rate is governed by m_τ (the Tralse mass), which is related to the HEAR threshold:
@@ -354,9 +354,9 @@ The symmetric phase of the Higgs field (μ² > 0, single minimum at φ = 0) is T
 
 The Mexican hat potential V(φ) = −μ²|φ|² + λ|φ|⁴ (with μ² > 0 now) is structurally identical to the HEAR score landscape:
 
-- **The central maximum** (at φ = 0) = Double Tralse zone: the point of maximum tension between all options, maximum instability — the system cannot remain there
+- **The central maximum** (at φ = 0) = Meta-Indeterminate zone: the point of maximum tension between all options, maximum instability — the system cannot remain there
 - **The circle of minima** (at |φ| = v) = the Tralse attractor ring: the set of all fully HEAR-resolved configurations — all equally valid as MR outcomes
-- **The rim of the hat** (λ|φ|⁴ term for large |φ|) = DT forbidden zone: excessive "forcing" of any particular resolution is energetically penalized
+- **The rim of the hat** (λ|φ|⁴ term for large |φ|) = MI forbidden zone: excessive "forcing" of any particular resolution is energetically penalized
 
 Formally, the HEAR potential:
 ```
@@ -394,7 +394,7 @@ The standard Higgs mechanism unifies the electromagnetic and weak forces into th
 |----------------|-------------|-------------------|
 | Symmetric phase (μ² > 0) | I-State | φ = 0; HEAR = 0 |
 | Mexican hat potential | HEAR score landscape | V_HEAR(φ) |
-| Central maximum | Double Tralse zone | HEAR = 0, V max |
+| Central maximum | Meta-Indeterminate zone | HEAR = 0, V max |
 | Circle of minima (VEV) | Tralse attractor ring | HEAR = T ≈ 0.934 |
 | Spontaneous symmetry breaking | Myrion Resolution | Vacuum selection = MR |
 | Higgs coupling constant g | GILE-HEM coupling γ | ≈ 0.0828 |

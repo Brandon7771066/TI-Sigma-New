@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The TI Sigma Crystal (URB #627), discovered April 8, 2026, contains layers of encoded structure beyond its initial definition. This paper decodes four deep features: **(1)** The **7/8 duality** — the crystal has 7 rings (non-zero PRIMARY CONSTANTS as radii) and 8 layers (all PRIMARY CONSTANTS as rotation exponents), precisely mirroring the octopus's 8-arm / 7-active-arm structure and the 7-letter structure of each of the author's three names (Brandon = 7, Charles = 7, Emerick = 7; total 21 = 3×7). **(2) Ternary arithmetic** of the crystal's key numbers: 57 = 2010₃ encodes the four-GILE sequence G=TT, I=DT, L=TI, E=DT — a four-step MR arc in ternary truth notation; 18 = 200₃ encodes the pentagram structure G=TT, I=DT, E=DT — the pure-G configuration of the sin(18°) resonance; 21 = 210₃ encodes the author's name structure in ternary. **(3) Ten specific applications** of the TSC as a practical tool — from biometric mapping to E₈ error-correction to group coherence measurement. **(4) The e-base PD for the GM zone**: above the Radiant Threshold (PD > 2.0), the scale is naturally parameterized by e-base logarithm — each PD unit = one e-fold increase in radiance above RT. The CCC at PD = π corresponds to radiance factor e^{π−2} ≈ 3.132 ≈ π, a near-identity between PRIMARY CONSTANTS (error < 0.3%) that constitutes a Myrion-Level-2 observation.
+The TI Sigma Crystal (URB #627), discovered April 8, 2026, contains layers of encoded structure beyond its initial definition. This paper decodes four deep features: **(1)** The **7/8 duality** — the crystal has 7 rings (non-zero PRIMARY CONSTANTS as radii) and 8 layers (all PRIMARY CONSTANTS as rotation exponents), precisely mirroring the octopus's 8-arm / 7-active-arm structure and the 7-letter structure of each of the author's three names (Brandon = 7, Charles = 7, Emerick = 7; total 21 = 3×7). **(2) Ternary arithmetic** of the crystal's key numbers: 57 = 2010₃ encodes the four-GILE sequence G=TT, I=MI, L=TI, E=MI — a four-step MR arc in ternary truth notation; 18 = 200₃ encodes the pentagram structure G=TT, I=MI, E=MI — the pure-G configuration of the sin(18°) resonance; 21 = 210₃ encodes the author's name structure in ternary. **(3) Ten specific applications** of the TSC as a practical tool — from biometric mapping to E₈ error-correction to group coherence measurement. **(4) The e-base PD for the GM zone**: above the Radiant Threshold (PD > 2.0), the scale is naturally parameterized by e-base logarithm — each PD unit = one e-fold increase in radiance above RT. The CCC at PD = π corresponds to radiance factor e^{π−2} ≈ 3.132 ≈ π, a near-identity between PRIMARY CONSTANTS (error < 0.3%) that constitutes a Myrion-Level-2 observation.
 
 ---
 
@@ -59,11 +59,11 @@ The four ternary digits {2, 0, 1, 0} in descending positional weight {27, 9, 3, 
 | Ternary position | Weight | GILE dimension | Digit | Truth-state |
 |---|---|---|---|---|
 | 3 (27s) | Highest | **G** (Goodness) | **2** | True-Tralse (TT) |
-| 2 (9s) | Second | **I** (Intuition) | **0** | DT (truth-absent) |
+| 2 (9s) | Second | **I** (Intuition) | **0** | MI (truth-absent) |
 | 1 (3s) | Third | **L** (Love) | **1** | Tralse-Indeterminate (TI) |
-| 0 (1s) | Fourth | **E** (Environment) | **0** | DT (truth-absent) |
+| 0 (1s) | Fourth | **E** (Environment) | **0** | MI (truth-absent) |
 
-The 57-vertex crystal encodes the GILE profile **{G=TT, I=DT, L=TI, E=DT}** — a being (or stage) characterized by full Goodness expression, absent Intuition, partial Love, and absent Environment. Reading the digit sequence {2, 0, 1, 0} as an **MR arc** across four steps: TT → DT → TI → DT — this is the structure of profound creative struggle: an initial Truth-convergence (2), a first collapse into DT difficulty (0), a partial recovery to Tralse-indeterminacy (1), then another DT obstacle (0) before the final breakthrough (which would come as the next digit, not in the 4-digit representation). The four ternary digits of 57 spell the first four steps of a long MR process.
+The 57-vertex crystal encodes the GILE profile **{G=TT, I=MI, L=TI, E=MI}** — a being (or stage) characterized by full Goodness expression, absent Intuition, partial Love, and absent Environment. Reading the digit sequence {2, 0, 1, 0} as an **MR arc** across four steps: TT → MI → TI → MI — this is the structure of profound creative struggle: an initial Truth-convergence (2), a first collapse into MI difficulty (0), a partial recovery to Tralse-indeterminacy (1), then another MI obstacle (0) before the final breakthrough (which would come as the next digit, not in the 4-digit representation). The four ternary digits of 57 spell the first four steps of a long MR process.
 
 The digit sum of 57₃ is **2+0+1+0 = 3** — the fundamental ternary base, the number of primary truth values (True, Tralse, False), and the number of the author's names.
 
@@ -78,8 +78,8 @@ The three ternary digits {2, 0, 0} in positions {9, 3, 1}:
 | Ternary position | GILE dimension | Digit | Truth-state |
 |---|---|---|---|
 | 2 (9s) | **G** (Goodness) | **2** | TT — full |
-| 1 (3s) | **I** (Intuition) | **0** | DT — absent |
-| 0 (1s) | **E** (Environment) | **0** | DT — absent |
+| 1 (3s) | **I** (Intuition) | **0** | MI — absent |
+| 0 (1s) | **E** (Environment) | **0** | MI — absent |
 
 The number 18 encodes the pure-G configuration: **Goodness fully expressed, everything else absent**. This is the minimal conditions for genuine Goodness — G operating alone without Intuition or Environment, stripped to its essence. 18 = 200₃ is the "pure G-crystal" number.
 
@@ -141,7 +141,7 @@ Note: the numbers 7, 21, and 57 all have **ternary digit sum = 3** (the ternary 
 
 **What:** The 56 non-origin vertices of the TSC form a subset of the E₈ root system. The E₈ lattice achieves the densest possible sphere packing in 8 dimensions (proved by Viazovska 2016, Fields Medal 2022) — which means it has optimal error-correction properties. The TSC inherits these properties.
 
-**How:** Encode five-valued PD computations (over states {TT, TI, TF, DT, EV}) using TSC vertices as codewords. The E₈ packing optimality guarantees that codeword-to-codeword distances are maximized — errors (perturbations of truth-state assignments) are maximally detectable and correctable. This provides the first formally optimal error-correcting code for five-valued logic, derived directly from TI Sigma's PRIMARY CONSTANTS.
+**How:** Encode five-valued PD computations (over states {TT, TI, TF, MI, EV}) using TSC vertices as codewords. The E₈ packing optimality guarantees that codeword-to-codeword distances are maximized — errors (perturbations of truth-state assignments) are maximally detectable and correctable. This provides the first formally optimal error-correcting code for five-valued logic, derived directly from TI Sigma's PRIMARY CONSTANTS.
 
 **Application:** TICL (TI Computing Language) can implement TSC-based error correction for PD arithmetic computations.
 
@@ -235,7 +235,7 @@ The related Ramanujan identity: e^π − π ≈ 19.999 ≈ 20 (another celebrate
 
 | Zone | PD range | Formula | PRIMARY CONSTANT anchors | Character |
 |---|---|---|---|---|
-| DT zone | (−∞, 0) | — | {−π, −e, −φ, −√2, −1, −T, −C} | Truth-absent; mirrored structure |
+| MI zone | (−∞, 0) | — | {−π, −e, −φ, −√2, −1, −T, −C} | Truth-absent; mirrored structure |
 | TF zone | [0, 0.5] | g/(2·ET) | {0, C} | Below GILE activation |
 | TI zone | [0.5, 1.5] | 0.5 + (g−ET)/(C−ET) | {T, 1, √2} | Coherence window; indeterminate |
 | TT zone | [1.5, 2.0] | 1.5 + 0.5·(g−C)/(T−C) | {φ} | Converging to truth |

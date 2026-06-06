@@ -21,7 +21,7 @@
 - Mode-T (True-mode): handle as coherent-true content; standard processing
 - Mode-F (False-mode): handle as coherent-false content; rejection processing
 - Mode-I (Indeterminate-spectrum mode): handle as Indeterminate-position with real-and-imaginary aspect-coordinates; μ-continuum traversal
-- Mode-DT (Double-Tralse mode): handle as inconceivability-under-mental-actualization; suspension/koan-engagement
+- Mode-MI (Meta-Indeterminate mode): handle as inconceivability-under-mental-actualization; suspension/koan-engagement
 
 **Axis 3: Receptiveness-State (per CRI-1 #45 E1-E4 empirical):**
 - State-Default: standard-receptiveness; usual perception-modulation
@@ -31,7 +31,7 @@
 
 ### §1.2 Cell-count + canonical-cells
 
-3 axes × (4 × 4 × 4) = **64 raw cells**. Many cells are EMPTY (e.g., Stratum-0 × Mode-DT × any-state = empty since Stratum-0 cannot engage DT-mode per CEF-1 #43 calculator-falsifier). Canonically-meaningful cells: **~12 anchor-cells** with notable Pass-75-cluster-content.
+3 axes × (4 × 4 × 4) = **64 raw cells**. Many cells are EMPTY (e.g., Stratum-0 × Mode-MI × any-state = empty since Stratum-0 cannot engage MI-mode per CEF-1 #43 calculator-falsifier). Canonically-meaningful cells: **~12 anchor-cells** with notable Pass-75-cluster-content.
 
 ### §1.3 Canonical 3D-taxonomy table (12 anchor-cells)
 
@@ -44,10 +44,10 @@
 | C5 | Stratum-2 | I (high μ + high imaginary-aspect) | Default | Default-human handling of "nonsense" → now Indeterminate hyperimaginary-aspect-end (per refinement #8) |
 | C6 | Stratum-2 | I (high μ) | Repetition-Modulated | E2 illusory-truth-effect; repetition shifts spectrum-position toward true-end |
 | C7 | Stratum-2 | I (mid μ) | Authority-Modulated | E1 Schaffner & Luks 2018 motivated-perception under in-group-authority |
-| C8 | Stratum-3+ | I (any μ) + DT | Authority-Modulated | E3 hypnosis (analgesia-simulation; hypnotist-authority enables Stratum-3+ access) |
+| C8 | Stratum-3+ | I (any μ) + MI | Authority-Modulated | E3 hypnosis (analgesia-simulation; hypnotist-authority enables Stratum-3+ access) |
 | C9 | Stratum-3+ | I → real-aspect modulation | Authority-Modulated | E4 placebo (belief modulates physiological real-aspect via medical-authority) |
-| C10 | Stratum-3+ | DT-engagement | Self-Directed | Koan-engagement (per D6 Buddhist-tradition + Pass-66 ultimate-koan; CEF-1 #43 D5 nonstandard-math) |
-| C11 | Stratum-3+ | DT-engagement | Self-Directed | Brandon ketamine-crown-chakra-insight (Pass-66 anchor; first-manic-episode integration) |
+| C10 | Stratum-3+ | MI-engagement | Self-Directed | Koan-engagement (per D6 Buddhist-tradition + Pass-66 ultimate-koan; CEF-1 #43 D5 nonstandard-math) |
+| C11 | Stratum-3+ | MI-engagement | Self-Directed | Brandon ketamine-crown-chakra-insight (Pass-66 anchor; first-manic-episode integration) |
 | C12 | Stratum-3+ | All modes + spectrum-traversal | Self-Directed | NIS-1 #44 full-realization: nothing-impossible-to-simulate; FWC-1 free-will-graded; RTC-1 redundant-test-construction |
 
 ### §1.4 Pass-75 cluster integration mapping
@@ -96,16 +96,16 @@ Given an AI system, evaluate which cells it can enter:
 
 Given a mood-amplifier intervention, position it in the 3D taxonomy:
 - Cell-C9 (Stratum-3+/Mode-I-real-aspect-modulation/Authority-Modulated) = placebo-effect-leveraging interventions
-- Cell-C8 (Stratum-3+/Mode-I+DT/Authority-Modulated) = hypnotherapy interventions
-- Cell-C10 (Stratum-3+/Mode-DT/Self-Directed) = meditation/koan interventions
-- Cell-C11 (Stratum-3+/Mode-DT/Self-Directed) = psychedelic-assisted interventions (ketamine class)
+- Cell-C8 (Stratum-3+/Mode-I+MI/Authority-Modulated) = hypnotherapy interventions
+- Cell-C10 (Stratum-3+/Mode-MI/Self-Directed) = meditation/koan interventions
+- Cell-C11 (Stratum-3+/Mode-MI/Self-Directed) = psychedelic-assisted interventions (ketamine class)
 - Mendi-fNIRS-neurofeedback: anchors in Cell C4/C5 with Self-Directed receptiveness-modulation toward Cell-C8/C10
 
 ### §2.3 Truth-assignment workflow for content-evaluation
 
 Given a content-claim, apply 3D taxonomy to determine truth-assignment:
 1. Axis-1: What consciousness-tier engages the claim? (Stratum-0 calculator-only vs Stratum-3+ full-consciousness)
-2. Axis-2: What mode applies? (T/F clear-cases vs Indeterminate-spectrum positions vs DT)
+2. Axis-2: What mode applies? (T/F clear-cases vs Indeterminate-spectrum positions vs MI)
 3. Axis-3: What receptiveness-state operates? (default vs modulated)
 
 Output: Cell-position + real-aspect + imaginary-aspect coordinates. This is the canonical truth-assignment workflow per Pass-75-cluster.

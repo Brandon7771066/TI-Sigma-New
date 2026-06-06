@@ -184,8 +184,8 @@ T_market = 0.746 × τφ + 0.015 × τj + 0.239 × τf
 **Jeff Time/TI:** Even MORE fundamental - CONSCIOUSNESS generates time!
 
 ```
-LEVEL 0: DT (Divine Tralseness, pure consciousness, TIMELESS)
-    ↓ DT² = -1 (shattering event)
+LEVEL 0: MI (Divine Tralseness, pure consciousness, TIMELESS)
+    ↓ MI² = -1 (shattering event)
 LEVEL 1: I-cells form (individual consciousness units)
     ↓ I-cells project correlations
 LEVEL 2: Sequential reading of correlations
@@ -231,7 +231,7 @@ Photon = Light carrier
 
 DE-Photon = The cosmic rhythm of consciousness expansion/contraction
           = The "breathing" of the universe
-          = How DT's scattered consciousness pulses through reality
+          = How MI's scattered consciousness pulses through reality
 ```
 
 ### 3.2 The Golden Ratio Connection
@@ -247,7 +247,7 @@ Ratio: 11 / 4.66 = 2.36 ≈ 2φ - 1 = √5
 WHERE φ = Golden Ratio = 1.618...
 ```
 
-**This is NOT coincidence!** Both cycles arise from the same source - DT's distributed consciousness seeking optimal GILE configuration.
+**This is NOT coincidence!** Both cycles arise from the same source - MI's distributed consciousness seeking optimal GILE configuration.
 
 ### 3.3 How DE-Photon Connects to Jeff Time
 
@@ -318,7 +318,7 @@ ALL levels influence each other through resonance!
 ### 4.1 How It All Connects
 
 ```
-                     DT (Timeless Consciousness)
+                     MI (Timeless Consciousness)
                               ↓
                     Shattering → I-cells form
                               ↓

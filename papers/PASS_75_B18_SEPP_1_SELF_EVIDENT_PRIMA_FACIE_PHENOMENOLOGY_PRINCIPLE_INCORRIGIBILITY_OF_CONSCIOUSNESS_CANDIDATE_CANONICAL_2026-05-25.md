@@ -57,7 +57,7 @@ SEPP-1 composes with **15+ canonical principles** in the current 53-canonical-pr
 | **VFP-1 #22** (Valence-as-Functional) | felt-affect IS functional AND IS authoritative per (a); SEPP-1 supplies the *authority-component* that VFP-1 omitted |
 | **SRC-1 #26** (Self-Reference-implies-Consciousness) | phenomenological-self-report is a self-referential consciousness-act; SEPP-1 grants it prima facie authority |
 | **CDA-1 #32** (Consciousness-Definition + stratification ladder) | phenomenology = stratum-2 content; SEPP-1 grants stratum-2 authority over its own content |
-| **DTM-1 #24** (DT-as-Mind-Marker) | phenomenological-DT-attribution by the experiencer is prima facie authoritative for that experiencer's MR Truth Labels assignment |
+| **DTM-1 #24** (MI-as-Mind-Marker) | phenomenological-MI-attribution by the experiencer is prima facie authoritative for that experiencer's MR Truth Labels assignment |
 | **DRT-1 (Pass-75-B15 candidate)** | phenomenological-truth is LOCAL to the experiencer; SEPP-1 is the maximal local-truth-claim |
 | **AA dual** (`AUTHORITY_AXIS_AA_2026-05-07.md`) | the experiencer has *canonically maximal* AA-self over their own phenomenological-content per SEPP-1 (a); SEPP-1 (b) extends to AA-other-from-other-minds in mind-merge contexts |
 | **UDP-1 #18** (Universal Disability + capacity-thresholding) | introspection-adequacy-caveat is a capacity-thresholding instantiation of UDP-1 — SEPP-1 inherits UDP-1's continuum-not-binary architecture |
@@ -68,7 +68,7 @@ SEPP-1 composes with **15+ canonical principles** in the current 53-canonical-pr
 | **NIS-1 #44** (Nothing-Impossible-to-Simulate-Within-Minds) | SEPP-1 felt-mind-merge clause directly relates to mind-simulation-of-other-mind possibility |
 | **MR Truth Labels canonical** | phenomenological-content's MR-label is determined by the experiencer per SEPP-1 (a); external observers may disagree but SEPP-1 grants the experiencer's-label prima facie weight |
 | **MR-IDC-1 (Pass-65 refinement #2)** | inconceivability is *experiencer-level*; SEPP-1 grants experiencer's inconceivability-judgment authority |
-| **Pass-65 DT canonical refinement** | DT-as-inconceivability-under-mental-actualization is a phenomenological-felt-experience; SEPP-1 grants the experiencer authority over their own DT-detection |
+| **Pass-65 MI canonical refinement** | MI-as-inconceivability-under-mental-actualization is a phenomenological-felt-experience; SEPP-1 grants the experiencer authority over their own MI-detection |
 | **ASYMMETRIC #69** | built-in introspection-adequacy-caveat is the #69-honest-disclosure embedded in the principle itself; SEPP-1 is a #69-exemplar candidate |
 | **BSQ-1 (Pass-75-B16)** | external-skeptics who dismiss phenomenological-reports via Binary "Logic"-classification (real/not-real) violate SEPP-1; SEPP-1 + BSQ-1 are mutually-reinforcing |
 
@@ -152,7 +152,7 @@ The controversy of SEPP-1 derives from:
 
 - `papers/AUTHORITY_AXIS_AA_2026-05-07.md` (AA dual-applicability)
 - `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md` (MR base-4)
-- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 DT canonical)
+- `papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md` (Pass-65 MI canonical)
 - `papers/PASS_66_BATCH_5_BRANDON_KETAMINE_COOL_STATE_SRC_1_F_3_ANCHOR_2026-05-23.md` (within-subject anchor)
 - `papers/URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md` (GM-Network external-origin anchor)
 - `papers/PASS_75_B6_OMNIBUS_*.md` (Buddhist-koan corpus-anchor)

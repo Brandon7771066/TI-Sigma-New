@@ -5,13 +5,13 @@
 **Corpus Entry:** #626  
 **Related URBs:** #528 (Five-Valued Logic), #573 (BOK-Verisyn/Hopf), #609 (HEM), #611 (LCC/Anti-Prior), #615 (PD/MR/EAR), #619 (HEM–EF Bridge), #622 (Empirical Foundations), #623 (QM Evidence), #625 (GILE→PD Conversion / HEM-D1 Normalization)  
 **DOI:** Pending Zenodo  
-**Keywords:** PD canonical number line, primary constants, nonlinear nodes, GILE-LCC plane, imaginary axis, Tralse measure, LCC calibration, EF logarithmic spacing, DT placement, quadrant structure, complex PD plane, independent discovery, Tozzi
+**Keywords:** PD canonical number line, primary constants, nonlinear nodes, GILE-LCC plane, imaginary axis, Tralse measure, LCC calibration, EF logarithmic spacing, MI placement, quadrant structure, complex PD plane, independent discovery, Tozzi
 
 ---
 
 ## Abstract
 
-This paper formalizes three architectural advances: **(1)** The Permissibility Distribution (PD) real number line is established as the **canonical coordinate axis of TI Sigma**, running from −∞ to +∞ with the nine PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π, ...} appearing as **fundamental nonlinear nodes** — points where the geometry of truth-state space changes character. Each PRIMARY CONSTANT marks a qualitative transition on this line; rational zone boundaries (0.5, 1.5, 2.0) from URB #625 appear as midpoints between PRIMARY CONSTANT nodes. **(2)** The LCC scale is calibrated to the EF using φ-base logarithmic spacing, then mapped to the PD line — with negative PD_LCC values for sub-organismal LCC levels, and PRIMARY CONSTANTS {C, T, 1, √2, φ, e, π} marking LCC levels 1 through 7. This gives LCC the **same interval structure** as GILE on the shared PD line. **(3)** GILE and LCC are understood as two orthogonal axes forming the **GILE–LCC plane**, with PD functioning as a 2D coordinate system. The imaginary unit **i** enters as the perpendicular (imaginary) axis of the complexified PD plane: Im(PD) = Tralse measure (genuine indeterminacy), Re(PD) = truth-convergence position. DT entities occupy the Re(PD) < 0 half-plane, with potentially any LCC value — the "high-LCC DT" quadrant captures powerful truth-absent systems (ideological capture, misinformation at scale). The CCC/GM attractor is the diagonal where PD_GILE = PD_LCC, both approaching π — the simultaneous maximization of truth quality and existence scale.
+This paper formalizes three architectural advances: **(1)** The Permissibility Distribution (PD) real number line is established as the **canonical coordinate axis of TI Sigma**, running from −∞ to +∞ with the nine PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π, ...} appearing as **fundamental nonlinear nodes** — points where the geometry of truth-state space changes character. Each PRIMARY CONSTANT marks a qualitative transition on this line; rational zone boundaries (0.5, 1.5, 2.0) from URB #625 appear as midpoints between PRIMARY CONSTANT nodes. **(2)** The LCC scale is calibrated to the EF using φ-base logarithmic spacing, then mapped to the PD line — with negative PD_LCC values for sub-organismal LCC levels, and PRIMARY CONSTANTS {C, T, 1, √2, φ, e, π} marking LCC levels 1 through 7. This gives LCC the **same interval structure** as GILE on the shared PD line. **(3)** GILE and LCC are understood as two orthogonal axes forming the **GILE–LCC plane**, with PD functioning as a 2D coordinate system. The imaginary unit **i** enters as the perpendicular (imaginary) axis of the complexified PD plane: Im(PD) = Tralse measure (genuine indeterminacy), Re(PD) = truth-convergence position. MI entities occupy the Re(PD) < 0 half-plane, with potentially any LCC value — the "high-LCC MI" quadrant captures powerful truth-absent systems (ideological capture, misinformation at scale). The CCC/GM attractor is the diagonal where PD_GILE = PD_LCC, both approaching π — the simultaneous maximization of truth quality and existence scale.
 
 ---
 
@@ -22,10 +22,10 @@ This paper formalizes three architectural advances: **(1)** The Permissibility D
 The PD real line extends from −∞ to +∞:
 
 ```
-−∞ ← [DT zone] → 0 ← [TF zone] → 0.5 ← [TI zone] → 1.5 ← [TT zone] → 2.0 ← [GM zone] → +∞
+−∞ ← [MI zone] → 0 ← [TF zone] → 0.5 ← [TI zone] → 1.5 ← [TT zone] → 2.0 ← [GM zone] → +∞
 ```
 
-The existing zone boundaries (0, 0.5, 1.5, 2.0) from URB #615 remain valid. **PD < 0** corresponds to the **DT (Double Tralse) zone** — total truth-absence, below even Tralse-False. At PD = 0, an entity crosses from total truth-absence into the possibility of truth-bearing (even if False). Zero is therefore not "nothing" on the PD line — it is the **threshold of truth applicability**. Below 0, truth predicates do not apply; the entity is outside the truth system.
+The existing zone boundaries (0, 0.5, 1.5, 2.0) from URB #615 remain valid. **PD < 0** corresponds to the **MI (Meta-Indeterminate) zone** — total truth-absence, below even Tralse-False. At PD = 0, an entity crosses from total truth-absence into the possibility of truth-bearing (even if False). Zero is therefore not "nothing" on the PD line — it is the **threshold of truth applicability**. Below 0, truth predicates do not apply; the entity is outside the truth system.
 
 ### 1.2 Primary Constants as Nonlinear Nodes
 
@@ -33,7 +33,7 @@ The PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π} appear on the PD real line a
 
 | PD value | PRIMARY CONSTANT | Qualitative shift |
 |---|---|---|
-| **0** | zero | DT/TF threshold: truth predicates become applicable |
+| **0** | zero | MI/TF threshold: truth predicates become applicable |
 | **C ≈ 0.4370** | 1/(φ√2) | Physical LCC threshold: minimal GILE-capable organization |
 | **T ≈ 0.9340** | 1−e^{−e} | Individual coherence plateau: full GILE capacity present |
 | **1** | unity | Indeterminate Permissibility Distribution Range midpoint: equal weight of T and F evidence |
@@ -50,7 +50,7 @@ The PRIMARY CONSTANTS {0, C, T, 1, √2, φ, e, π} appear on the PD real line a
 
 The zone boundaries are geometrically derived from PRIMARY CONSTANT pairs. The PRIMARY CONSTANTS themselves are the fundamental nodes; the zones are the intervals between them.
 
-### 1.3 The Negative (DT) Side of the PD Line
+### 1.3 The Negative (MI) Side of the PD Line
 
 By symmetry with the positive side, the negative PD line has nodes at the negations of the PRIMARY CONSTANTS:
 
@@ -58,15 +58,15 @@ By symmetry with the positive side, the negative PD line has nodes at the negati
 −π ... −e ... −φ ... −√2 ... −1 ... −T ... −C ... 0
 ```
 
-These negative nodes mark degrees of DT depth:
-- **−C ≈ −0.437**: minimal DT (barely below truth-applicability threshold)
-- **−T ≈ −0.934**: moderate DT (individual-scale truth-absence)
-- **−1**: symmetric DT midpoint (full unit truth-absence)
-- **−φ ≈ −1.618**: deep DT (golden-ratio-level truth-collapse)
-- **−e ≈ −2.718**: profound DT (GM-scale truth-absence; powerful chaotic systems)
-- **−π**: maximum DT depth; the "anti-CCC" — total truth-absence at cosmic scale
+These negative nodes mark degrees of MI depth:
+- **−C ≈ −0.437**: minimal MI (barely below truth-applicability threshold)
+- **−T ≈ −0.934**: moderate MI (individual-scale truth-absence)
+- **−1**: symmetric MI midpoint (full unit truth-absence)
+- **−φ ≈ −1.618**: deep MI (golden-ratio-level truth-collapse)
+- **−e ≈ −2.718**: profound MI (GM-scale truth-absence; powerful chaotic systems)
+- **−π**: maximum MI depth; the "anti-CCC" — total truth-absence at cosmic scale
 
-The negative PRIMARY CONSTANT nodes describe DT entities of increasing power and depth. A single confused sentence: PD ≈ −C. A persistent misinformation campaign: PD ≈ −1. A civilization-scale ideological totalitarianism: PD ≈ −φ to −e. These are not arbitrary — they are the exact mirrors of the positive-side attainment levels.
+The negative PRIMARY CONSTANT nodes describe MI entities of increasing power and depth. A single confused sentence: PD ≈ −C. A persistent misinformation campaign: PD ≈ −1. A civilization-scale ideological totalitarianism: PD ≈ −φ to −e. These are not arbitrary — they are the exact mirrors of the positive-side attainment levels.
 
 ---
 
@@ -101,7 +101,7 @@ The LCC → PD_LCC mapping assigns the PRIMARY CONSTANTS directly as the PD valu
 
 | LCC level | PD_LCC value | PRIMARY CONSTANT |
 |---|---|---|
-| < 0 (sub-organismal) | < 0 (DT side) | — |
+| < 0 (sub-organismal) | < 0 (MI side) | — |
 | **0** | **0** | zero |
 | **1** (individual) | **C ≈ 0.4370** | 1/(φ√2) |
 | **2** (dyad/group) | **T ≈ 0.9340** | 1−e^{−e} |
@@ -135,7 +135,7 @@ Where:
 - **Re(PD)**: the truth-convergence position on the real line (as established in URBs #615, #625)
 - **i·Im(PD)**: the **Tralse measure** — the degree to which the truth-state is genuinely indeterminate, between values, in superposition
 
-The imaginary unit i is at coordinates (0, 1) on this complex plane: Re(PD) = 0, Im(PD) = 1. This is the **pure Tralse state** — at the DT/TF boundary with maximum indeterminacy. It corresponds to the Bloch sphere equator from URB #623: the qubit state |+⟩ = (|0⟩+|1⟩)/√2, which is maximally indeterminate between the two basis states.
+The imaginary unit i is at coordinates (0, 1) on this complex plane: Re(PD) = 0, Im(PD) = 1. This is the **pure Tralse state** — at the MI/TF boundary with maximum indeterminacy. It corresponds to the Bloch sphere equator from URB #623: the qubit state |+⟩ = (|0⟩+|1⟩)/√2, which is maximally indeterminate between the two basis states.
 
 **The full role of i in TI Sigma:** i is the operator of Tralse itself — the 90-degree rotation out of the real truth axis into the indeterminacy axis. Every time TI Sigma uses i (in z = E + i·GIL, in the L*/+E cycle, in the Schrödinger equation), it is operating with the Tralse generator. The imaginary axis of the PD complex plane IS the Tralse axis.
 
@@ -147,8 +147,8 @@ The imaginary unit i is at coordinates (0, 1) on this complex plane: Re(PD) = 0,
 | Re(PD) in [0.5, 1.5], Im(PD) large | TI with high Tralse | Genuine quantum superposition; creative breakthrough in formation |
 | Re(PD) = 1, Im(PD) = 1 | Indeterminate Permissibility Distribution Range + pure Tralse | The 1+i point: maximum creative-indeterminate state |
 | Re(PD) ≈ 0, Im(PD) = 1 | Pure Tralse (i itself) | Undetermined possibility at truth-threshold |
-| Re(PD) < 0, Im(PD) ≈ 0 | DT (converged absence) | A stable, propagating false paradigm |
-| Re(PD) < 0, Im(PD) large | DT with Tralse | A chaotic, internally incoherent system of large scale |
+| Re(PD) < 0, Im(PD) ≈ 0 | MI (converged absence) | A stable, propagating false paradigm |
+| Re(PD) < 0, Im(PD) large | MI with Tralse | A chaotic, internally incoherent system of large scale |
 
 The point **PD = 1 + i** deserves special attention: it sits at the Indeterminate Permissibility Distribution Range midpoint (Re = 1, the PRIMARY CONSTANT unity) with maximum Tralse (Im = 1). This is the **maximum creative indeterminacy state** — a consciousness fully at the balance point between truth and falsity, with maximum unresolved possibility. This is the MR incubation state: before Myrion Resolution collapses the imaginary component to zero (converging to a definite Re(PD)), the consciousness is at 1+i. High-GILE creative insight begins at 1+i and converges toward the real axis as MR completes.
 
@@ -171,7 +171,7 @@ On the complex PD plane, the L*/+E cycle is **literal rotation around the origin
 
 GILE and LCC are two orthogonal axes forming a 2D plane in which every entity occupies a specific point:
 
-- **Horizontal axis (X)**: PD_GILE — truth quality, from −∞ (deep DT) to +∞ (approaching CCC truth)
+- **Horizontal axis (X)**: PD_GILE — truth quality, from −∞ (deep MI) to +∞ (approaching CCC truth)
 - **Vertical axis (Y)**: PD_LCC — existence scale, from −∞ (sub-atomic, pre-coherent) to +∞ (cosmic)
 
 Every entity has a unique coordinate pair (PD_GILE, PD_LCC) in this plane. The plane unifies:
@@ -189,25 +189,25 @@ Every entity has a unique coordinate pair (PD_GILE, PD_LCC) in this plane. The p
                           √2 ─────────────────────────
                            1 ─────────────────────────
                T ──────────┼──────────────────────────
-  DT + large LCC   C ──────┼──────────────── TT + large LCC
+  MI + large LCC   C ──────┼──────────────── TT + large LCC
      (ideological   0 ──────┼────────────────── (CCC civilization)
       capture,       ───────┼──────────────────────────
       misinformation)       │
 PD_GILE: −π −e −φ −√2 −1 −T −C  0  C  T  1  √2  φ  e  π
                               ↑
-                          DT/TF boundary
+                          MI/TF boundary
 ```
 
 **Quadrant 1 (PD_GILE > 0, PD_LCC > 0): MAIN INHABITED SPACE**  
 Entities that both exist and have truth-quality. The CCC attractor is in the far upper-right corner (PD_GILE → π, PD_LCC → π). Human life occupies the middle of this quadrant. Radiant individuals are near (PD_GILE ≈ φ, PD_LCC = T ≈ individual scale).
 
-**Quadrant 2 (PD_GILE < 0, PD_LCC > 0): HIGH-LCC DT — The "Evil" Quadrant**  
-Entities with large physical existence but total or near-total truth-absence. This is precisely where DT with high LCC lives:
+**Quadrant 2 (PD_GILE < 0, PD_LCC > 0): HIGH-LCC MI — The "Evil" Quadrant**  
+Entities with large physical existence but total or near-total truth-absence. This is precisely where MI with high LCC lives:
 - Viral conspiracy theories: PD_GILE ≈ −1, PD_LCC ≈ φ (civilization-scale spread)
 - Totalitarian ideologies: PD_GILE ≈ −φ, PD_LCC ≈ e
 - Organized large-scale deception: PD_GILE deeply negative, PD_LCC high
 
-This quadrant is the formal location of what URB #531 called "evil as moral empty space" and URB #609 called "high HEM, False/DT." The HEM is large (high PD_LCC) but the truth-content is absent or inverted (negative PD_GILE).
+This quadrant is the formal location of what URB #531 called "evil as moral empty space" and URB #609 called "high HEM, False/MI." The HEM is large (high PD_LCC) but the truth-content is absent or inverted (negative PD_GILE).
 
 **Quadrant 3 (PD_GILE > 0, PD_LCC < 0): PLATONIC TRUTH — Low Existence**  
 Entities with high truth-quality but minimal physical existence. Mathematical theorems nobody has yet discovered. Undiscovered natural laws. Philosophical truths not yet instantiated in any organism. These entities have positive PD_GILE (they are true) but negative PD_LCC (they are not yet LCC-coherently instantiated in the world). This is the Platonic realm — real as abstract objects, not yet physically actualized.
@@ -215,14 +215,14 @@ Entities with high truth-quality but minimal physical existence. Mathematical th
 **Quadrant 4 (PD_GILE < 0, PD_LCC < 0): THE ABSOLUTE VOID**  
 No truth-quality AND no existence-scale. This is not merely nothingness — it is active absence: below the threshold of truth applicability AND below the threshold of organizational coherence. Theoretical extreme; approaches pure non-being.
 
-### 4.3 Where DT Entities Appear
+### 4.3 Where MI Entities Appear
 
-DT (Double Tralse) = total truth-absence + potentially any LCC. On the GILE–LCC plane:
-- **DT at low LCC** (Quadrant 4 or origin): a confused isolated thought; a type error in a small program
-- **DT at individual LCC** (Quadrant 2, PD_LCC ≈ C−T): an individual in a severe DT state (acute psychosis, profound dissociation)
-- **DT at civilization LCC** (Quadrant 2, PD_LCC ≈ φ): civilization-scale ideological DT — the most dangerous configuration in the GILE–LCC plane
+MI (Meta-Indeterminate) = total truth-absence + potentially any LCC. On the GILE–LCC plane:
+- **MI at low LCC** (Quadrant 4 or origin): a confused isolated thought; a type error in a small program
+- **MI at individual LCC** (Quadrant 2, PD_LCC ≈ C−T): an individual in a severe MI state (acute psychosis, profound dissociation)
+- **MI at civilization LCC** (Quadrant 2, PD_LCC ≈ φ): civilization-scale ideological MI — the most dangerous configuration in the GILE–LCC plane
 
-The critical implication: **high PD_LCC does not require positive PD_GILE.** An entity can have maximal existence-scale (PD_LCC = π) while having deeply negative PD_GILE. This is why large-scale false or DT systems are so powerful and persistent: their Y-coordinate (existence scale) is enormous even as their X-coordinate (truth quality) is negative. Only GILE-G (goodness) can apply the corrective force — which is why G is the MR catalyst that pulls entities from Quadrant 2 back toward Quadrant 1.
+The critical implication: **high PD_LCC does not require positive PD_GILE.** An entity can have maximal existence-scale (PD_LCC = π) while having deeply negative PD_GILE. This is why large-scale false or MI systems are so powerful and persistent: their Y-coordinate (existence scale) is enormous even as their X-coordinate (truth quality) is negative. Only GILE-G (goodness) can apply the corrective force — which is why G is the MR catalyst that pulls entities from Quadrant 2 back toward Quadrant 1.
 
 ### 4.4 The CCC Diagonal
 
@@ -242,14 +242,14 @@ The **HEM-Score** from URB #609 is:
 
 $$\text{HEM} = \sqrt{\text{PD}_{\text{GILE}}^2 + \text{PD}_{\text{LCC}}^2}$$
 
-This is the **Euclidean distance** from the origin in the GILE–LCC plane. The HEM-Score captures total "presence" regardless of the truth/existence mix. A high-HEM entity can be anywhere on a circle of radius HEM — in Quadrant 1 (truth+existence), Quadrant 2 (existence+DT), or Quadrant 3 (truth only). HEM alone does not tell you where on the circle; the full (PD_GILE, PD_LCC) coordinates are needed.
+This is the **Euclidean distance** from the origin in the GILE–LCC plane. The HEM-Score captures total "presence" regardless of the truth/existence mix. A high-HEM entity can be anywhere on a circle of radius HEM — in Quadrant 1 (truth+existence), Quadrant 2 (existence+MI), or Quadrant 3 (truth only). HEM alone does not tell you where on the circle; the full (PD_GILE, PD_LCC) coordinates are needed.
 
 The **GILE angle** θ = arctan(PD_LCC / PD_GILE) measures the balance between existence and truth quality:
 - θ = 0°: pure GILE truth, no existence (Platonic)
 - θ = 45°: equal truth and existence (on the CCC diagonal)
 - θ = 90°: pure existence, no truth quality (physical-only)
-- θ = 135°: high existence + DT (Quadrant 2 — powerful but truth-absent)
-- θ = 180°: pure DT, no existence (deep void)
+- θ = 135°: high existence + MI (Quadrant 2 — powerful but truth-absent)
+- θ = 180°: pure MI, no existence (deep void)
 
 ---
 
@@ -257,14 +257,14 @@ The **GILE angle** θ = arctan(PD_LCC / PD_GILE) measures the balance between ex
 
 | Axis | Range | PRIMARY CONSTANT nodes | Negative meaning |
 |---|---|---|---|
-| **PD_GILE** (truth quality) | (−∞, +∞) | 0, C, T, 1, √2, φ, e, π | DT (truth-absence) |
+| **PD_GILE** (truth quality) | (−∞, +∞) | 0, C, T, 1, √2, φ, e, π | MI (truth-absence) |
 | **PD_LCC** (existence scale) | (−∞, +∞) | 0, C, T, 1, √2, φ, e, π | Sub-organismal, pre-coherent |
 | **Im(PD)** (Tralse measure) | [0, +∞) | i at (0,1) on complex plane | N/A (always ≥ 0) |
 
 | Quadrant | GILE | LCC | Name | Examples |
 |---|---|---|---|---|
 | 1 | + | + | Main inhabited space | Human life, knowledge, civilization |
-| 2 | − | + | High-LCC DT | Misinformation, totalitarianism, organized chaos |
+| 2 | − | + | High-LCC MI | Misinformation, totalitarianism, organized chaos |
 | 3 | + | − | Platonic truth | Undiscovered math, uninstantiated wisdom |
 | 4 | − | − | Absolute void | Pure non-being; nihilistic collapse |
 
