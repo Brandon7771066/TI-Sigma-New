@@ -617,3 +617,15 @@ id = "cNOOBbfJ-AAiQsSGFLHTS"
 uri = "file://analyses/pass77_b89_heterodox_econ/fig2_honest_calibration.png"
 type = "image"
 title = "B89 Fig 2 — #69 calibration: endorsement ≠ proof; the five are not equally settled"
+
+[[outputs]]
+id = "zcTCemplizAtVM4wPSTBZ"
+uri = "file://analyses/pass77_b90_claircognizance/fig1_payload_vs_wrapper.png"
+type = "image"
+title = "B90 Fig 1 — The wrapper is not the payload: claircognizance adds no decode step or incorrigibility"
+
+[[outputs]]
+id = "dOpPDcISt3_LSTkwYyrAR"
+uri = "file://analyses/pass77_b90_claircognizance/fig2_advantage_flat_risk_rising.png"
+type = "image"
+title = "B90 Fig 2 — No decisive advantage from added senses; fragmentation risk rises → claircognizance is risk-dominant"
