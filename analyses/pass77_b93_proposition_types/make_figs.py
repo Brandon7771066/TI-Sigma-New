@@ -42,6 +42,7 @@ print("wrote fig1")
 # (channel, label, state, counted)
 events = [
     ("Clairaudient", "Fan/pillow music (~monthly)", "hypnagogic", "borderline"),
+    ("Clairaudient", "Whispers / \"mom calling\" (~2x/mo, evenings)", "hypnagogic", "borderline"),
     ("Clairaudient", "Heavy-metal (THC, 2022)", "substance", "substance"),
     ("Clairvoyant", "Mimi apparition (~2mo ago)", "WAKING", "yes"),
     ("Clairvoyant", "Ceiling-tile dilation (ketamine 2-3 / ~200 \u2248 1-1.5%)", "substance", "substance"),
@@ -52,7 +53,7 @@ events = [
 ]
 state_color = {"hypnagogic": "#9ec6e0", "substance": "#e0b66e", "WAKING": "#d98b8b",
                "willful": "#c9b6e0", "waking incl. ketamine": "#bcd9c4"}
-fig, ax = plt.subplots(figsize=(11.4, 6.9))
+fig, ax = plt.subplots(figsize=(11.4, 7.4))
 ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 10)
 ax.text(5, 9.62, "B93 Fig 2 (corrected B94) — Brandon's WHOLE-LIFE anomalous-perception ledger",
         ha="center", fontsize=12, fontweight="bold")
@@ -61,7 +62,7 @@ ax.text(5, 9.08, "#69 finding: anomalies cluster in the SENSORY clair-channels; 
 y = 8.55
 for chan, lab, state, counted in events:
     fc = state_color.get(state, "#dddddd")
-    ax.add_patch(plt.Rectangle((0.4, y-0.40), 9.2, 0.82, fc=fc, ec="k", lw=0.8, alpha=0.85))
+    ax.add_patch(plt.Rectangle((0.4, y-0.36), 9.2, 0.72, fc=fc, ec="k", lw=0.8, alpha=0.85))
     ax.text(0.7, y+0.02, f"{chan}", fontsize=9, fontweight="bold", va="center")
     ax.text(3.3, y+0.02, lab, fontsize=8.8, va="center")
     tag = {"yes": "WAKING HALLUCINATION", "no": "liminal (not counted)",
@@ -71,7 +72,7 @@ for chan, lab, state, counted in events:
     tc = ("#7a1d12" if counted == "yes" else "#1e5e40" if counted == "clean"
           else "#5b3a8a" if counted == "willful" else "#555")
     ax.text(9.4, y+0.02, tag, fontsize=8.0, ha="right", va="center", color=tc, fontweight="bold")
-    y -= 1.0
+    y -= 0.88
 ax.add_patch(plt.Rectangle((0.4, 0.05), 9.2, 0.86, fc="#e8eef5", ec="#2E7D5B", lw=1.6))
 ax.text(5, 0.48,
         "CORRECTED (B94): ketamine perceptual events 2-3 / ~200 sessions \u2248 1-1.5% \u2014 near-absence STANDS;\n"

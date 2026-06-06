@@ -72,6 +72,7 @@ B91 logged "very rare hallucination even under ketamine." Brandon's disclosure s
 | event | clair-channel | state | substance | valence | counted as waking hallucination? |
 |---|---|---|---|---|---|
 | Fan/pillow music pre-sleep | clairaudient | hypnagogic | none | neutral/curious | borderline (hypnagogic) |
+| Whispers / "mom (or someone nearby) calling my name" (**~2×/month, evenings pre-bed**) — added B95 | clairaudient | hypnagogic (sleep-onset) | none | mild/neutral | borderline (hypnagogic, recurrent) |
 | Heavy-metal/rock music (2022) | clairaudient | hypnagogic-ish | **THC** | interesting + frightening | substance-occasioned |
 | OBEs (a dozen+) | liminal/somatic | hypnagogic (semi-dream) | none | — | **NO** (Brandon: semi-dream) |
 | Vivid chanting + kundalini (several) | clairaudient/somatic | hypnagogic | none | — | **NO** (semi-dream) |
