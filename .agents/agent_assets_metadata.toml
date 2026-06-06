@@ -605,3 +605,15 @@ id = "PGqpvMMS2ZUPDioZXz6fi"
 uri = "file://analyses/pass77_b88_amateurism/fig2_private_information.png"
 type = "image"
 title = "B88 Fig 2 — Correct diagnosis needed the intersection (patient's private information)"
+
+[[outputs]]
+id = "pQ5Enz5iwlmXlm3UdfjSd"
+uri = "file://analyses/pass77_b89_heterodox_econ/fig1_contrarian_not_antiestablishment.png"
+type = "image"
+title = "B89 Fig 1 — The shared spine is contrarian empiricism, not anti-establishment (Cowen defends big business)"
+
+[[outputs]]
+id = "cNOOBbfJ-AAiQsSGFLHTS"
+uri = "file://analyses/pass77_b89_heterodox_econ/fig2_honest_calibration.png"
+type = "image"
+title = "B89 Fig 2 — #69 calibration: endorsement ≠ proof; the five are not equally settled"
