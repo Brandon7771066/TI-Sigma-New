@@ -476,3 +476,10 @@ Brandon's belief in tralse-thinking (the position that something can be **both t
 - **TI Sigma framing:** this is the lived N=1 behind the B88 anti-hyperexpertise paper — an informed individual with **private information + broad literacy** catching an expert's **anchoring error** at the margin (Authority Axis: authority real but never decisive). Mechanism, not amateur-supremacy.
 
 ---
+
+---
+
+### Addition (2026-05-28, Pass-77 B91) — Claircognitive modality + warm-surge somatic marker
+- **Dominant epistemic modality = intuitive "knowing" (claircognizance):** 1000+ papers generated via this channel.
+- **Near-absence of hallucination even under ketamine:** the intuitive channel stays corrigible/doubtable even under a dissociative anesthetic (supports CGP-1 Leg-2). Reports the knowing-sense as self-evidently independent of the other senses.
+- **Warm energetic surges at crown / third-eye region accompany peak insights:** treated (CGP-1 × VFP-1) as a *somatic confidence/salience MARKER* on a claircognitive payload — not the insight's content-carrier. Strong-embodied-cognition (surge partly constitutive) alternative left open as CGP-1-F1/F2 work.

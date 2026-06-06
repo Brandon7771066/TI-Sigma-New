@@ -629,3 +629,15 @@ id = "dOpPDcISt3_LSTkwYyrAR"
 uri = "file://analyses/pass77_b90_claircognizance/fig2_advantage_flat_risk_rising.png"
 type = "image"
 title = "B90 Fig 2 — No decisive advantage from added senses; fragmentation risk rises → claircognizance is risk-dominant"
+
+[[outputs]]
+id = "k4F9-9Kmy6Sbb58dtOWtz"
+uri = "file://analyses/pass77_b92_inventions_concentration/fig1_concentration.png"
+type = "image"
+title = "B92 Fig 1 — ~80–125 people catalyzed 90 of ~100 top well-being inventions: ~1 in 936 million of all humans ever born"
+
+[[outputs]]
+id = "lpDwj-jqkA1v7eUX5tx-h"
+uri = "file://analyses/pass77_b92_inventions_concentration/fig2_kappa_and_hybrid_truth.png"
+type = "image"
+title = "B92 Fig 2 — Fleiss κ = 0.386 (reported straight) + the hybrid Indeterminate-True resolution of great-man-vs-followers"

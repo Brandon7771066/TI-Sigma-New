@@ -1,0 +1,795 @@
+{
+  "summary": {
+    "n_inventions": 98,
+    "n_raters": 3,
+    "rater_names": [
+      "claude-haiku-4-5",
+      "claude-opus-4-1",
+      "gpt-5"
+    ],
+    "rater_logs": [
+      "claude-haiku-4-5: ok (98 items)",
+      "claude-opus-4-1: ok (98 items)",
+      "gpt-5: ok (98 items)"
+    ],
+    "fleiss_kappa": 0.3862,
+    "kappa_interp": "fair",
+    "category_marginals_0_1_2": [
+      0.211,
+      0.643,
+      0.146
+    ],
+    "n_common_items_rated_by_all": 98,
+    "top90_count": 90,
+    "top90_diffuse_no_named_catalyst": 7,
+    "n_distinct_catalysts": 81,
+    "n_distinct_named_individuals": 125,
+    "humans_ever_lived": 117000000000.0,
+    "currently_living": 8100000000.0,
+    "pct_of_humans_ever__catalysts": 6.923076923076923e-08,
+    "pct_of_humans_ever__named": 1.0683760683760683e-07,
+    "pct_of_living__catalysts": 1e-06,
+    "pct_of_living__named": 1.54320987654321e-06,
+    "one_in_X_humans_ever__named": 936000000
+  },
+  "top90": [
+    {
+      "rank": 1,
+      "invention": "Smallpox vaccine",
+      "score": 6,
+      "people": [
+        "Edward Jenner"
+      ]
+    },
+    {
+      "rank": 2,
+      "invention": "Antibiotics / penicillin",
+      "score": 6,
+      "people": [
+        "Alexander Fleming",
+        "Howard Florey",
+        "Ernst Chain"
+      ]
+    },
+    {
+      "rank": 3,
+      "invention": "Modern sewerage / sanitation",
+      "score": 6,
+      "people": [
+        "Joseph Bazalgette"
+      ]
+    },
+    {
+      "rank": 4,
+      "invention": "Germ theory of disease",
+      "score": 6,
+      "people": [
+        "Louis Pasteur",
+        "Robert Koch"
+      ]
+    },
+    {
+      "rank": 5,
+      "invention": "Drinking-water chlorination",
+      "score": 6,
+      "people": [
+        "John Leal",
+        "Abel Wolman"
+      ]
+    },
+    {
+      "rank": 6,
+      "invention": "Haber-Bosch nitrogen fixation",
+      "score": 6,
+      "people": [
+        "Fritz Haber",
+        "Carl Bosch"
+      ]
+    },
+    {
+      "rank": 7,
+      "invention": "Green Revolution high-yield wheat",
+      "score": 6,
+      "people": [
+        "Norman Borlaug"
+      ]
+    },
+    {
+      "rank": 8,
+      "invention": "Piped clean water at scale",
+      "score": 6,
+      "people": [
+        "Abel Wolman",
+        "John Leal"
+      ]
+    },
+    {
+      "rank": 9,
+      "invention": "Smallpox eradication program",
+      "score": 6,
+      "people": [
+        "Donald Henderson"
+      ]
+    },
+    {
+      "rank": 10,
+      "invention": "Measles vaccine",
+      "score": 5,
+      "people": [
+        "John Enders"
+      ]
+    },
+    {
+      "rank": 11,
+      "invention": "Oral rehydration therapy",
+      "score": 4,
+      "people": [
+        "Dilip Mahalanabis",
+        "Hemendra Nath Chatterjee"
+      ]
+    },
+    {
+      "rank": 12,
+      "invention": "Polio vaccine",
+      "score": 4,
+      "people": [
+        "Jonas Salk",
+        "Albert Sabin"
+      ]
+    },
+    {
+      "rank": 13,
+      "invention": "Blood typing / safe transfusion",
+      "score": 4,
+      "people": [
+        "Karl Landsteiner"
+      ]
+    },
+    {
+      "rank": 14,
+      "invention": "Electric generator / dynamo",
+      "score": 4,
+      "people": [
+        "Michael Faraday"
+      ]
+    },
+    {
+      "rank": 15,
+      "invention": "Eyeglasses",
+      "score": 4,
+      "people": []
+    },
+    {
+      "rank": 16,
+      "invention": "Hand hygiene (puerperal fever)",
+      "score": 4,
+      "people": [
+        "Ignaz Semmelweis"
+      ]
+    },
+    {
+      "rank": 17,
+      "invention": "Vitamin discovery",
+      "score": 4,
+      "people": [
+        "Casimir Funk",
+        "Christiaan Eijkman"
+      ]
+    },
+    {
+      "rank": 18,
+      "invention": "Iodized salt",
+      "score": 4,
+      "people": [
+        "David Marine"
+      ]
+    },
+    {
+      "rank": 19,
+      "invention": "Oral contraceptive pill",
+      "score": 4,
+      "people": [
+        "Gregory Pincus",
+        "Min Chueh Chang",
+        "John Rock"
+      ]
+    },
+    {
+      "rank": 20,
+      "invention": "Artemisinin antimalarial",
+      "score": 4,
+      "people": [
+        "Tu Youyou"
+      ]
+    },
+    {
+      "rank": 21,
+      "invention": "Anti-tuberculosis chemotherapy",
+      "score": 4,
+      "people": [
+        "Selman Waksman"
+      ]
+    },
+    {
+      "rank": 22,
+      "invention": "Refrigerated vaccine cold chain",
+      "score": 4,
+      "people": []
+    },
+    {
+      "rank": 23,
+      "invention": "Insecticide-treated bed nets",
+      "score": 4,
+      "people": []
+    },
+    {
+      "rank": 24,
+      "invention": "Sterile syringe / hypodermic needle",
+      "score": 4,
+      "people": [
+        "Alexander Wood",
+        "Charles Pravaz"
+      ]
+    },
+    {
+      "rank": 25,
+      "invention": "Pasteurization",
+      "score": 3,
+      "people": [
+        "Louis Pasteur"
+      ]
+    },
+    {
+      "rank": 26,
+      "invention": "Surgical anesthesia (ether)",
+      "score": 3,
+      "people": [
+        "William T. G. Morton",
+        "Crawford Long"
+      ]
+    },
+    {
+      "rank": 27,
+      "invention": "Antiseptic surgery",
+      "score": 3,
+      "people": [
+        "Joseph Lister"
+      ]
+    },
+    {
+      "rank": 28,
+      "invention": "Insulin",
+      "score": 3,
+      "people": [
+        "Frederick Banting",
+        "Charles Best",
+        "John Macleod",
+        "James Collip"
+      ]
+    },
+    {
+      "rank": 29,
+      "invention": "Attenuated-vaccine principle",
+      "score": 3,
+      "people": [
+        "Louis Pasteur"
+      ]
+    },
+    {
+      "rank": 30,
+      "invention": "Mechanical refrigeration",
+      "score": 3,
+      "people": [
+        "Carl von Linde",
+        "Jacob Perkins"
+      ]
+    },
+    {
+      "rank": 31,
+      "invention": "Printing press (movable type)",
+      "score": 3,
+      "people": [
+        "Johannes Gutenberg"
+      ]
+    },
+    {
+      "rank": 32,
+      "invention": "Steam engine",
+      "score": 3,
+      "people": [
+        "James Watt",
+        "Thomas Newcomen"
+      ]
+    },
+    {
+      "rank": 33,
+      "invention": "Internal combustion engine",
+      "score": 3,
+      "people": [
+        "Nikolaus Otto",
+        "Karl Benz"
+      ]
+    },
+    {
+      "rank": 34,
+      "invention": "Safe cesarean section",
+      "score": 3,
+      "people": []
+    },
+    {
+      "rank": 35,
+      "invention": "Quinine isolation (antimalarial)",
+      "score": 3,
+      "people": [
+        "Pierre-Joseph Pelletier",
+        "Joseph Caventou"
+      ]
+    },
+    {
+      "rank": 36,
+      "invention": "Antiretroviral therapy (HIV)",
+      "score": 3,
+      "people": [
+        "David Ho",
+        "Samuel Broder"
+      ]
+    },
+    {
+      "rank": 37,
+      "invention": "mRNA vaccine platform",
+      "score": 3,
+      "people": [
+        "Katalin Kariko",
+        "Drew Weissman"
+      ]
+    },
+    {
+      "rank": 38,
+      "invention": "Modern nursing / hospital sanitation",
+      "score": 3,
+      "people": [
+        "Florence Nightingale"
+      ]
+    },
+    {
+      "rank": 39,
+      "invention": "Kidney dialysis",
+      "score": 3,
+      "people": [
+        "Willem Kolff"
+      ]
+    },
+    {
+      "rank": 40,
+      "invention": "Aspirin",
+      "score": 3,
+      "people": [
+        "Felix Hoffmann"
+      ]
+    },
+    {
+      "rank": 41,
+      "invention": "Chlorpromazine (antipsychotic)",
+      "score": 3,
+      "people": [
+        "Henri Laborit",
+        "Jean Delay",
+        "Pierre Deniker"
+      ]
+    },
+    {
+      "rank": 42,
+      "invention": "Statins",
+      "score": 3,
+      "people": [
+        "Akira Endo"
+      ]
+    },
+    {
+      "rank": 43,
+      "invention": "Mechanized tractor",
+      "score": 3,
+      "people": [
+        "John Froelich"
+      ]
+    },
+    {
+      "rank": 44,
+      "invention": "Food canning / appertization",
+      "score": 3,
+      "people": [
+        "Nicolas Appert"
+      ]
+    },
+    {
+      "rank": 45,
+      "invention": "Flush toilet (S-trap)",
+      "score": 3,
+      "people": [
+        "Alexander Cumming"
+      ]
+    },
+    {
+      "rank": 46,
+      "invention": "Insecticide DDT (historical)",
+      "score": 3,
+      "people": [
+        "Paul Hermann Mueller"
+      ]
+    },
+    {
+      "rank": 47,
+      "invention": "Three-point seatbelt",
+      "score": 3,
+      "people": [
+        "Nils Bohlin"
+      ]
+    },
+    {
+      "rank": 48,
+      "invention": "Diphtheria/tetanus antitoxin",
+      "score": 3,
+      "people": [
+        "Emil von Behring",
+        "Kitasato Shibasaburo"
+      ]
+    },
+    {
+      "rank": 49,
+      "invention": "Blood bank / plasma storage",
+      "score": 3,
+      "people": [
+        "Charles Drew"
+      ]
+    },
+    {
+      "rank": 50,
+      "invention": "Chlorine disinfectant (Labarraque)",
+      "score": 3,
+      "people": [
+        "Antoine Labarraque",
+        "Claude Berthollet"
+      ]
+    },
+    {
+      "rank": 51,
+      "invention": "Hepatitis B vaccine",
+      "score": 3,
+      "people": [
+        "Baruch Blumberg"
+      ]
+    },
+    {
+      "rank": 52,
+      "invention": "Implantable defibrillator/CPR",
+      "score": 3,
+      "people": [
+        "Claude Beck",
+        "William Kouwenhoven"
+      ]
+    },
+    {
+      "rank": 53,
+      "invention": "Intraocular lens / cataract surgery",
+      "score": 3,
+      "people": [
+        "Harold Ridley"
+      ]
+    },
+    {
+      "rank": 54,
+      "invention": "Ivermectin (antiparasitic)",
+      "score": 3,
+      "people": [
+        "Satoshi Omura",
+        "William Campbell"
+      ]
+    },
+    {
+      "rank": 55,
+      "invention": "Anti-rejection transplant immunosuppression",
+      "score": 3,
+      "people": [
+        "Jean Borel",
+        "Roy Calne"
+      ]
+    },
+    {
+      "rank": 56,
+      "invention": "Organ transplantation (kidney)",
+      "score": 3,
+      "people": [
+        "Joseph Murray"
+      ]
+    },
+    {
+      "rank": 57,
+      "invention": "Cardiac bypass / heart-lung machine",
+      "score": 3,
+      "people": [
+        "John Gibbon"
+      ]
+    },
+    {
+      "rank": 58,
+      "invention": "Hip/joint replacement",
+      "score": 3,
+      "people": [
+        "John Charnley"
+      ]
+    },
+    {
+      "rank": 59,
+      "invention": "Antidepressants (SSRIs/MAOIs)",
+      "score": 3,
+      "people": []
+    },
+    {
+      "rank": 60,
+      "invention": "Anticoagulants (warfarin/heparin)",
+      "score": 3,
+      "people": [
+        "Karl Paul Link"
+      ]
+    },
+    {
+      "rank": 61,
+      "invention": "Water-sealed sand filtration",
+      "score": 3,
+      "people": [
+        "John Gibb"
+      ]
+    },
+    {
+      "rank": 62,
+      "invention": "X-ray imaging",
+      "score": 2,
+      "people": [
+        "Wilhelm Roentgen"
+      ]
+    },
+    {
+      "rank": 63,
+      "invention": "Incandescent light bulb",
+      "score": 2,
+      "people": [
+        "Thomas Edison",
+        "Joseph Swan"
+      ]
+    },
+    {
+      "rank": 64,
+      "invention": "Chloroform obstetric anesthesia",
+      "score": 2,
+      "people": [
+        "James Young Simpson"
+      ]
+    },
+    {
+      "rank": 65,
+      "invention": "Implantable pacemaker",
+      "score": 2,
+      "people": [
+        "Wilson Greatbatch",
+        "Rune Elmqvist"
+      ]
+    },
+    {
+      "rank": 66,
+      "invention": "Steel moldboard plow",
+      "score": 2,
+      "people": [
+        "John Deere"
+      ]
+    },
+    {
+      "rank": 67,
+      "invention": "Local anesthesia (procaine)",
+      "score": 2,
+      "people": [
+        "Karl Koller",
+        "Alfred Einhorn"
+      ]
+    },
+    {
+      "rank": 68,
+      "invention": "Medical ultrasound",
+      "score": 2,
+      "people": [
+        "Ian Donald"
+      ]
+    },
+    {
+      "rank": 69,
+      "invention": "CT scan",
+      "score": 2,
+      "people": [
+        "Godfrey Hounsfield",
+        "Allan Cormack"
+      ]
+    },
+    {
+      "rank": 70,
+      "invention": "Beta blockers + H2 antagonists",
+      "score": 2,
+      "people": [
+        "James Black"
+      ]
+    },
+    {
+      "rank": 71,
+      "invention": "Electronic hearing aid",
+      "score": 2,
+      "people": []
+    },
+    {
+      "rank": 72,
+      "invention": "Modern wheelchair (folding)",
+      "score": 2,
+      "people": [
+        "Herbert Everest",
+        "Harry Jennings"
+      ]
+    },
+    {
+      "rank": 73,
+      "invention": "Braille",
+      "score": 2,
+      "people": [
+        "Louis Braille"
+      ]
+    },
+    {
+      "rank": 74,
+      "invention": "Formal sign language education",
+      "score": 2,
+      "people": [
+        "Charles-Michel de l'Epee"
+      ]
+    },
+    {
+      "rank": 75,
+      "invention": "Portland cement / concrete",
+      "score": 2,
+      "people": [
+        "Joseph Aspdin"
+      ]
+    },
+    {
+      "rank": 76,
+      "invention": "HPV vaccine",
+      "score": 2,
+      "people": [
+        "Ian Frazer",
+        "Jian Zhou"
+      ]
+    },
+    {
+      "rank": 77,
+      "invention": "Cochlear implant",
+      "score": 2,
+      "people": [
+        "Graeme Clark"
+      ]
+    },
+    {
+      "rank": 78,
+      "invention": "Sanitary disposable menstrual products",
+      "score": 2,
+      "people": []
+    },
+    {
+      "rank": 79,
+      "invention": "Telephone",
+      "score": 1,
+      "people": [
+        "Alexander Graham Bell"
+      ]
+    },
+    {
+      "rank": 80,
+      "invention": "Radio",
+      "score": 1,
+      "people": [
+        "Guglielmo Marconi",
+        "Nikola Tesla"
+      ]
+    },
+    {
+      "rank": 81,
+      "invention": "Transistor",
+      "score": 1,
+      "people": [
+        "John Bardeen",
+        "Walter Brattain",
+        "William Shockley"
+      ]
+    },
+    {
+      "rank": 82,
+      "invention": "Internet (TCP/IP)",
+      "score": 1,
+      "people": [
+        "Vint Cerf",
+        "Bob Kahn"
+      ]
+    },
+    {
+      "rank": 83,
+      "invention": "World Wide Web",
+      "score": 1,
+      "people": [
+        "Tim Berners-Lee"
+      ]
+    },
+    {
+      "rank": 84,
+      "invention": "General-purpose computer",
+      "score": 1,
+      "people": [
+        "Alan Turing",
+        "John von Neumann",
+        "Charles Babbage"
+      ]
+    },
+    {
+      "rank": 85,
+      "invention": "PCR amplification",
+      "score": 1,
+      "people": [
+        "Kary Mullis"
+      ]
+    },
+    {
+      "rank": 86,
+      "invention": "Recombinant DNA",
+      "score": 1,
+      "people": [
+        "Stanley Cohen",
+        "Herbert Boyer"
+      ]
+    },
+    {
+      "rank": 87,
+      "invention": "MRI",
+      "score": 1,
+      "people": [
+        "Paul Lauterbur",
+        "Peter Mansfield"
+      ]
+    },
+    {
+      "rank": 88,
+      "invention": "Photovoltaic solar cell",
+      "score": 1,
+      "people": [
+        "Daryl Chapin",
+        "Calvin Fuller",
+        "Gerald Pearson"
+      ]
+    },
+    {
+      "rank": 89,
+      "invention": "Electric wind turbine",
+      "score": 1,
+      "people": [
+        "Poul la Cour",
+        "Charles Brush"
+      ]
+    },
+    {
+      "rank": 90,
+      "invention": "Archimedes water screw",
+      "score": 1,
+      "people": [
+        "Archimedes"
+      ]
+    }
+  ],
+  "p_j": [
+    0.2108843537414966,
+    0.6428571428571429,
+    0.14625850340136054
+  ],
+  "kappa": 0.3861667629159087
+}
