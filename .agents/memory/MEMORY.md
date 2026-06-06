@@ -1,1 +1,2 @@
 - [DT → MI canonical rename](dt-to-mi-rename.md) — "DT"/"Double Tralse" truth-label is now "MI"/"Meta-Indeterminate"; rename only standalone `\bDT\b`, never the glued tokens (DTM-1, DefT, UDT-1, SDT, DTV/DTA, MR-IDC, FASTA).
+- [TI Sigma batch & counter conventions](ti-sigma-batch-conventions.md) — per-batch deliverables (paper + replit.md §7.7.x ledger newest-at-top + commit msg + summary); refinements DON'T increment the canonical principle count; never restart the 6 workflows; don't mark_task_complete.
