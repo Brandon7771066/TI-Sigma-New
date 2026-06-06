@@ -569,3 +569,15 @@ id = "dzOxXqGt_qjV17KelLi53"
 uri = "file://analyses/pass77_b85_authentic_exercise_pluralism/fig2_adaptation_usage_mismatch.png"
 type = "image"
 title = "B85 Fig 2 — The Adaptation–Usage Mismatch (running, yoga & weightlifting all sit off-diagonal)"
+
+[[outputs]]
+id = "s0zv-JUSyO17NY6opj0p2"
+uri = "file://analyses/pass77_b86_two_corrections/fig1_running_evidence_balance.png"
+type = "image"
+title = "B86 Fig 1 — The cited 'refutation' is consistent with rarity/exaptation (ERH is contested; evidence leans toward Brandon)"
+
+[[outputs]]
+id = "g6VdVbCIs-ES2CRbRrqRR"
+uri = "file://analyses/pass77_b86_two_corrections/fig2_truth_vs_existence_gap.png"
+type = "image"
+title = "B86 Fig 2 — GTT-1 truth-vs-existence: the BEST option is not the TOUGHEST; 'most-studied / most-salient' ≠ 'irreplaceable'"
