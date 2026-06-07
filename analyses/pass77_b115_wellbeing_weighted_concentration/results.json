@@ -1,0 +1,1385 @@
+{
+  "summary": {
+    "n_inventions_total": 130,
+    "n_material": 98,
+    "n_abstract": 32,
+    "n_raters": 3,
+    "rater_names": [
+      "claude-haiku-4-5",
+      "claude-opus-4-1",
+      "gpt-5"
+    ],
+    "rater_logs": [
+      "claude-haiku-4-5: ok (130 items)",
+      "claude-opus-4-1: ok (130 items)",
+      "gpt-5: ok (130 items)"
+    ],
+    "fleiss_kappa": 0.3882,
+    "kappa_interp": "fair",
+    "category_marginals_0_1_2": [
+      0.156,
+      0.579,
+      0.264
+    ],
+    "n_common_items_rated_by_all": 130,
+    "total_wellbeing_weight": 432,
+    "diffuse_items_no_single_catalyst": 17,
+    "n_distinct_catalysts_all": 110,
+    "n_distinct_named_all": 172,
+    "pct_of_humans_ever__named_all": 1.47008547008547e-07,
+    "pct_of_humans_ever__catalysts_all": 9.401709401709401e-08,
+    "one_in_X_humans_ever__named_all": 680232558,
+    "one_in_X_humans_ever__catalysts_all": 1063636363,
+    "pct_of_living__named_all": 2.123456790123457e-06,
+    "wellbeing_share_levels": {
+      "50pct_wellbeing": {
+        "named_people": 52,
+        "diffuse_movements_included": 8,
+        "pct_of_humans_ever": 4.444444444444444e-08,
+        "one_in_X_humans_ever": 2250000000
+      },
+      "90pct_wellbeing": {
+        "named_people": 129,
+        "diffuse_movements_included": 13,
+        "pct_of_humans_ever": 1.1025641025641025e-07,
+        "one_in_X_humans_ever": 906976744
+      },
+      "95pct_wellbeing": {
+        "named_people": 147,
+        "diffuse_movements_included": 13,
+        "pct_of_humans_ever": 1.2564102564102566e-07,
+        "one_in_X_humans_ever": 795918367
+      },
+      "99pct_wellbeing": {
+        "named_people": 168,
+        "diffuse_movements_included": 16,
+        "pct_of_humans_ever": 1.435897435897436e-07,
+        "one_in_X_humans_ever": 696428571
+      },
+      "100pct_wellbeing": {
+        "named_people": 171,
+        "diffuse_movements_included": 17,
+        "pct_of_humans_ever": 1.4615384615384614e-07,
+        "one_in_X_humans_ever": 684210526
+      }
+    },
+    "named_wellbeing_mass_fraction": 0.8565,
+    "diffuse_wellbeing_mass_fraction": 0.1435,
+    "gini_named_contributors": 0.3708,
+    "humans_ever_lived": 117000000000.0,
+    "currently_living": 8100000000.0
+  },
+  "ranked": [
+    {
+      "rank": 1,
+      "invention": "Smallpox vaccine",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Edward Jenner"
+      ]
+    },
+    {
+      "rank": 2,
+      "invention": "Antibiotics / penicillin",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Alexander Fleming",
+        "Howard Florey",
+        "Ernst Chain"
+      ]
+    },
+    {
+      "rank": 3,
+      "invention": "Modern sewerage / sanitation",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Joseph Bazalgette"
+      ]
+    },
+    {
+      "rank": 4,
+      "invention": "Germ theory of disease",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Louis Pasteur",
+        "Robert Koch"
+      ]
+    },
+    {
+      "rank": 5,
+      "invention": "Haber-Bosch nitrogen fixation",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Fritz Haber",
+        "Carl Bosch"
+      ]
+    },
+    {
+      "rank": 6,
+      "invention": "Electric generator / dynamo",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Michael Faraday"
+      ]
+    },
+    {
+      "rank": 7,
+      "invention": "Printing press (movable type)",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Johannes Gutenberg"
+      ]
+    },
+    {
+      "rank": 8,
+      "invention": "Transistor",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "John Bardeen",
+        "Walter Brattain",
+        "William Shockley"
+      ]
+    },
+    {
+      "rank": 9,
+      "invention": "Internet (TCP/IP)",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Vint Cerf",
+        "Bob Kahn"
+      ]
+    },
+    {
+      "rank": 10,
+      "invention": "General-purpose computer",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Alan Turing",
+        "John von Neumann",
+        "Charles Babbage"
+      ]
+    },
+    {
+      "rank": 11,
+      "invention": "Steam engine",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "James Watt",
+        "Thomas Newcomen"
+      ]
+    },
+    {
+      "rank": 12,
+      "invention": "Green Revolution high-yield wheat",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Norman Borlaug"
+      ]
+    },
+    {
+      "rank": 13,
+      "invention": "Piped clean water at scale",
+      "weight": 6,
+      "domain": "material",
+      "people": [
+        "Abel Wolman",
+        "John Leal"
+      ]
+    },
+    {
+      "rank": 14,
+      "invention": "Spoken language",
+      "weight": 6,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 15,
+      "invention": "Writing system (cuneiform)",
+      "weight": 6,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 16,
+      "invention": "The scientific method",
+      "weight": 6,
+      "domain": "abstract",
+      "people": [
+        "Ibn al-Haytham",
+        "Francis Bacon",
+        "Galileo Galilei"
+      ]
+    },
+    {
+      "rank": 17,
+      "invention": "Codified law / rule of law",
+      "weight": 6,
+      "domain": "abstract",
+      "people": [
+        "Hammurabi"
+      ]
+    },
+    {
+      "rank": 18,
+      "invention": "Abolition of slavery (moral movement)",
+      "weight": 6,
+      "domain": "abstract",
+      "people": [
+        "William Wilberforce"
+      ]
+    },
+    {
+      "rank": 19,
+      "invention": "Universal public schooling",
+      "weight": 6,
+      "domain": "abstract",
+      "people": [
+        "Horace Mann",
+        "John Amos Comenius"
+      ]
+    },
+    {
+      "rank": 20,
+      "invention": "Agriculture (Neolithic cultivation)",
+      "weight": 6,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 21,
+      "invention": "Drinking-water chlorination",
+      "weight": 5,
+      "domain": "material",
+      "people": [
+        "John Leal",
+        "Abel Wolman"
+      ]
+    },
+    {
+      "rank": 22,
+      "invention": "Internal combustion engine",
+      "weight": 5,
+      "domain": "material",
+      "people": [
+        "Nikolaus Otto",
+        "Karl Benz"
+      ]
+    },
+    {
+      "rank": 23,
+      "invention": "Measles vaccine",
+      "weight": 5,
+      "domain": "material",
+      "people": [
+        "John Enders"
+      ]
+    },
+    {
+      "rank": 24,
+      "invention": "Smallpox eradication program",
+      "weight": 5,
+      "domain": "material",
+      "people": [
+        "Donald Henderson"
+      ]
+    },
+    {
+      "rank": 25,
+      "invention": "Phonetic alphabet",
+      "weight": 5,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 26,
+      "invention": "Zero & positional notation",
+      "weight": 5,
+      "domain": "abstract",
+      "people": [
+        "Brahmagupta"
+      ]
+    },
+    {
+      "rank": 27,
+      "invention": "Algebra",
+      "weight": 5,
+      "domain": "abstract",
+      "people": [
+        "Al-Khwarizmi"
+      ]
+    },
+    {
+      "rank": 28,
+      "invention": "Calculus",
+      "weight": 5,
+      "domain": "abstract",
+      "people": [
+        "Isaac Newton",
+        "Gottfried Leibniz"
+      ]
+    },
+    {
+      "rank": 29,
+      "invention": "Democracy (civic self-government)",
+      "weight": 5,
+      "domain": "abstract",
+      "people": [
+        "Cleisthenes",
+        "Solon"
+      ]
+    },
+    {
+      "rank": 30,
+      "invention": "Coined money / standardized currency",
+      "weight": 5,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 31,
+      "invention": "Written constitution & human rights",
+      "weight": 5,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 32,
+      "invention": "Oral rehydration therapy",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Dilip Mahalanabis",
+        "Hemendra Nath Chatterjee"
+      ]
+    },
+    {
+      "rank": 33,
+      "invention": "Surgical anesthesia (ether)",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "William T. G. Morton",
+        "Crawford Long"
+      ]
+    },
+    {
+      "rank": 34,
+      "invention": "Antiseptic surgery",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Joseph Lister"
+      ]
+    },
+    {
+      "rank": 35,
+      "invention": "Polio vaccine",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Jonas Salk",
+        "Albert Sabin"
+      ]
+    },
+    {
+      "rank": 36,
+      "invention": "Attenuated-vaccine principle",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Louis Pasteur"
+      ]
+    },
+    {
+      "rank": 37,
+      "invention": "World Wide Web",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Tim Berners-Lee"
+      ]
+    },
+    {
+      "rank": 38,
+      "invention": "Eyeglasses",
+      "weight": 4,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 39,
+      "invention": "Safe cesarean section",
+      "weight": 4,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 40,
+      "invention": "Hand hygiene (puerperal fever)",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Ignaz Semmelweis"
+      ]
+    },
+    {
+      "rank": 41,
+      "invention": "Modern nursing / hospital sanitation",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Florence Nightingale"
+      ]
+    },
+    {
+      "rank": 42,
+      "invention": "Flush toilet (S-trap)",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Alexander Cumming"
+      ]
+    },
+    {
+      "rank": 43,
+      "invention": "Oral contraceptive pill",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Gregory Pincus",
+        "Min Chueh Chang",
+        "John Rock"
+      ]
+    },
+    {
+      "rank": 44,
+      "invention": "Portland cement / concrete",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Joseph Aspdin"
+      ]
+    },
+    {
+      "rank": 45,
+      "invention": "Bessemer steel process",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Henry Bessemer"
+      ]
+    },
+    {
+      "rank": 46,
+      "invention": "Anti-tuberculosis chemotherapy",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Selman Waksman"
+      ]
+    },
+    {
+      "rank": 47,
+      "invention": "Refrigerated vaccine cold chain",
+      "weight": 4,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 48,
+      "invention": "Sterile syringe / hypodermic needle",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "Alexander Wood",
+        "Charles Pravaz"
+      ]
+    },
+    {
+      "rank": 49,
+      "invention": "Water-sealed sand filtration",
+      "weight": 4,
+      "domain": "material",
+      "people": [
+        "John Gibb"
+      ]
+    },
+    {
+      "rank": 50,
+      "invention": "Hindu-Arabic decimal numerals",
+      "weight": 4,
+      "domain": "abstract",
+      "people": [
+        "Aryabhata",
+        "Brahmagupta",
+        "Al-Khwarizmi"
+      ]
+    },
+    {
+      "rank": 51,
+      "invention": "Deductive proof / axiomatic geometry",
+      "weight": 4,
+      "domain": "abstract",
+      "people": [
+        "Euclid",
+        "Thales",
+        "Pythagoras"
+      ]
+    },
+    {
+      "rank": 52,
+      "invention": "The Golden Rule (ethic of reciprocity)",
+      "weight": 4,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 53,
+      "invention": "Pasteurization",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Louis Pasteur"
+      ]
+    },
+    {
+      "rank": 54,
+      "invention": "Insulin",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Frederick Banting",
+        "Charles Best",
+        "John Macleod",
+        "James Collip"
+      ]
+    },
+    {
+      "rank": 55,
+      "invention": "Blood typing / safe transfusion",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Karl Landsteiner"
+      ]
+    },
+    {
+      "rank": 56,
+      "invention": "Mechanical refrigeration",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Carl von Linde",
+        "Jacob Perkins"
+      ]
+    },
+    {
+      "rank": 57,
+      "invention": "Incandescent light bulb",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Thomas Edison",
+        "Joseph Swan"
+      ]
+    },
+    {
+      "rank": 58,
+      "invention": "Telephone",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Alexander Graham Bell"
+      ]
+    },
+    {
+      "rank": 59,
+      "invention": "Radio",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Guglielmo Marconi",
+        "Nikola Tesla"
+      ]
+    },
+    {
+      "rank": 60,
+      "invention": "Electric battery",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Alessandro Volta"
+      ]
+    },
+    {
+      "rank": 61,
+      "invention": "Telegraph",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Samuel Morse"
+      ]
+    },
+    {
+      "rank": 62,
+      "invention": "Quinine isolation (antimalarial)",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Pierre-Joseph Pelletier",
+        "Joseph Caventou"
+      ]
+    },
+    {
+      "rank": 63,
+      "invention": "Antiretroviral therapy (HIV)",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "David Ho",
+        "Samuel Broder"
+      ]
+    },
+    {
+      "rank": 64,
+      "invention": "mRNA vaccine platform",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Katalin Kariko",
+        "Drew Weissman"
+      ]
+    },
+    {
+      "rank": 65,
+      "invention": "DNA double-helix structure",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "James Watson",
+        "Francis Crick",
+        "Rosalind Franklin"
+      ]
+    },
+    {
+      "rank": 66,
+      "invention": "PCR amplification",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Kary Mullis"
+      ]
+    },
+    {
+      "rank": 67,
+      "invention": "Recombinant DNA",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Stanley Cohen",
+        "Herbert Boyer"
+      ]
+    },
+    {
+      "rank": 68,
+      "invention": "Aspirin",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Felix Hoffmann"
+      ]
+    },
+    {
+      "rank": 69,
+      "invention": "Statins",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Akira Endo"
+      ]
+    },
+    {
+      "rank": 70,
+      "invention": "Vitamin discovery",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Casimir Funk",
+        "Christiaan Eijkman"
+      ]
+    },
+    {
+      "rank": 71,
+      "invention": "Iodized salt",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "David Marine"
+      ]
+    },
+    {
+      "rank": 72,
+      "invention": "Mechanized tractor",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "John Froelich"
+      ]
+    },
+    {
+      "rank": 73,
+      "invention": "Steel moldboard plow",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "John Deere"
+      ]
+    },
+    {
+      "rank": 74,
+      "invention": "Food canning / appertization",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Nicolas Appert"
+      ]
+    },
+    {
+      "rank": 75,
+      "invention": "Insecticide DDT (historical)",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Paul Hermann Mueller"
+      ]
+    },
+    {
+      "rank": 76,
+      "invention": "Diphtheria/tetanus antitoxin",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Emil von Behring",
+        "Kitasato Shibasaburo"
+      ]
+    },
+    {
+      "rank": 77,
+      "invention": "Hepatitis B vaccine",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Baruch Blumberg"
+      ]
+    },
+    {
+      "rank": 78,
+      "invention": "Artemisinin antimalarial",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Tu Youyou"
+      ]
+    },
+    {
+      "rank": 79,
+      "invention": "Ivermectin (antiparasitic)",
+      "weight": 3,
+      "domain": "material",
+      "people": [
+        "Satoshi Omura",
+        "William Campbell"
+      ]
+    },
+    {
+      "rank": 80,
+      "invention": "Insecticide-treated bed nets",
+      "weight": 3,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 81,
+      "invention": "Antidepressants (SSRIs/MAOIs)",
+      "weight": 3,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 82,
+      "invention": "Formal logic",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Aristotle"
+      ]
+    },
+    {
+      "rank": 83,
+      "invention": "Probability theory",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Blaise Pascal",
+        "Pierre de Fermat"
+      ]
+    },
+    {
+      "rank": 84,
+      "invention": "Double-entry bookkeeping",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Luca Pacioli"
+      ]
+    },
+    {
+      "rank": 85,
+      "invention": "Systematic philosophy",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Socrates",
+        "Plato",
+        "Aristotle"
+      ]
+    },
+    {
+      "rank": 86,
+      "invention": "Practical ethics / Stoicism",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Zeno of Citium",
+        "Epictetus",
+        "Marcus Aurelius"
+      ]
+    },
+    {
+      "rank": 87,
+      "invention": "Contemplative practice / meditation",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Gautama Buddha",
+        "Patanjali"
+      ]
+    },
+    {
+      "rank": 88,
+      "invention": "Buddhism",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Gautama Buddha"
+      ]
+    },
+    {
+      "rank": 89,
+      "invention": "Christianity",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Jesus of Nazareth",
+        "Paul the Apostle"
+      ]
+    },
+    {
+      "rank": 90,
+      "invention": "Islam",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Muhammad"
+      ]
+    },
+    {
+      "rank": 91,
+      "invention": "Judaic monotheism",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Moses",
+        "Abraham"
+      ]
+    },
+    {
+      "rank": 92,
+      "invention": "Confucian social ethics",
+      "weight": 3,
+      "domain": "abstract",
+      "people": [
+        "Confucius"
+      ]
+    },
+    {
+      "rank": 93,
+      "invention": "Hindu / Vedic tradition",
+      "weight": 3,
+      "domain": "abstract",
+      "people": []
+    },
+    {
+      "rank": 94,
+      "invention": "X-ray imaging",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Wilhelm Roentgen"
+      ]
+    },
+    {
+      "rank": 95,
+      "invention": "Chloroform obstetric anesthesia",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "James Young Simpson"
+      ]
+    },
+    {
+      "rank": 96,
+      "invention": "Chlorpromazine (antipsychotic)",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Henri Laborit",
+        "Jean Delay",
+        "Pierre Deniker"
+      ]
+    },
+    {
+      "rank": 97,
+      "invention": "Three-point seatbelt",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Nils Bohlin"
+      ]
+    },
+    {
+      "rank": 98,
+      "invention": "Blood bank / plasma storage",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Charles Drew"
+      ]
+    },
+    {
+      "rank": 99,
+      "invention": "Beta blockers + H2 antagonists",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "James Black"
+      ]
+    },
+    {
+      "rank": 100,
+      "invention": "Photovoltaic solar cell",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Daryl Chapin",
+        "Calvin Fuller",
+        "Gerald Pearson"
+      ]
+    },
+    {
+      "rank": 101,
+      "invention": "Electric wind turbine",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Poul la Cour",
+        "Charles Brush"
+      ]
+    },
+    {
+      "rank": 102,
+      "invention": "Chlorine disinfectant (Labarraque)",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Antoine Labarraque",
+        "Claude Berthollet"
+      ]
+    },
+    {
+      "rank": 103,
+      "invention": "HPV vaccine",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Ian Frazer",
+        "Jian Zhou"
+      ]
+    },
+    {
+      "rank": 104,
+      "invention": "Intraocular lens / cataract surgery",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Harold Ridley"
+      ]
+    },
+    {
+      "rank": 105,
+      "invention": "Anticoagulants (warfarin/heparin)",
+      "weight": 2,
+      "domain": "material",
+      "people": [
+        "Karl Paul Link"
+      ]
+    },
+    {
+      "rank": 106,
+      "invention": "Utilitarian ethics",
+      "weight": 2,
+      "domain": "abstract",
+      "people": [
+        "Jeremy Bentham",
+        "John Stuart Mill"
+      ]
+    },
+    {
+      "rank": 107,
+      "invention": "Psychotherapy / talk therapy",
+      "weight": 2,
+      "domain": "abstract",
+      "people": [
+        "Sigmund Freud"
+      ]
+    },
+    {
+      "rank": 108,
+      "invention": "CRISPR gene editing",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Jennifer Doudna",
+        "Emmanuelle Charpentier"
+      ]
+    },
+    {
+      "rank": 109,
+      "invention": "Kidney dialysis",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Willem Kolff"
+      ]
+    },
+    {
+      "rank": 110,
+      "invention": "Implantable pacemaker",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Wilson Greatbatch",
+        "Rune Elmqvist"
+      ]
+    },
+    {
+      "rank": 111,
+      "invention": "Local anesthesia (procaine)",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Karl Koller",
+        "Alfred Einhorn"
+      ]
+    },
+    {
+      "rank": 112,
+      "invention": "Medical ultrasound",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Ian Donald"
+      ]
+    },
+    {
+      "rank": 113,
+      "invention": "MRI",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Paul Lauterbur",
+        "Peter Mansfield"
+      ]
+    },
+    {
+      "rank": 114,
+      "invention": "CT scan",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Godfrey Hounsfield",
+        "Allan Cormack"
+      ]
+    },
+    {
+      "rank": 115,
+      "invention": "Electronic hearing aid",
+      "weight": 1,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 116,
+      "invention": "Modern wheelchair (folding)",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Herbert Everest",
+        "Harry Jennings"
+      ]
+    },
+    {
+      "rank": 117,
+      "invention": "Braille",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Louis Braille"
+      ]
+    },
+    {
+      "rank": 118,
+      "invention": "Formal sign language education",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Charles-Michel de l'Epee"
+      ]
+    },
+    {
+      "rank": 119,
+      "invention": "Archimedes water screw",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Archimedes"
+      ]
+    },
+    {
+      "rank": 120,
+      "invention": "Bakelite (first plastic)",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Leo Baekeland"
+      ]
+    },
+    {
+      "rank": 121,
+      "invention": "Implantable defibrillator/CPR",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Claude Beck",
+        "William Kouwenhoven"
+      ]
+    },
+    {
+      "rank": 122,
+      "invention": "Smoke detector",
+      "weight": 1,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 123,
+      "invention": "Airbag",
+      "weight": 1,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 124,
+      "invention": "Anti-rejection transplant immunosuppression",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Jean Borel",
+        "Roy Calne"
+      ]
+    },
+    {
+      "rank": 125,
+      "invention": "Organ transplantation (kidney)",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Joseph Murray"
+      ]
+    },
+    {
+      "rank": 126,
+      "invention": "Cardiac bypass / heart-lung machine",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "John Gibbon"
+      ]
+    },
+    {
+      "rank": 127,
+      "invention": "Hip/joint replacement",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "John Charnley"
+      ]
+    },
+    {
+      "rank": 128,
+      "invention": "Cochlear implant",
+      "weight": 1,
+      "domain": "material",
+      "people": [
+        "Graeme Clark"
+      ]
+    },
+    {
+      "rank": 129,
+      "invention": "Sanitary disposable menstrual products",
+      "weight": 1,
+      "domain": "material",
+      "people": []
+    },
+    {
+      "rank": 130,
+      "invention": "Daoism",
+      "weight": 0,
+      "domain": "abstract",
+      "people": [
+        "Laozi"
+      ]
+    }
+  ],
+  "top_people_by_wellbeing_mass": [
+    {
+      "person": "Louis Pasteur",
+      "mass": 10.0
+    },
+    {
+      "person": "Brahmagupta",
+      "mass": 6.333
+    },
+    {
+      "person": "Al-Khwarizmi",
+      "mass": 6.333
+    },
+    {
+      "person": "Edward Jenner",
+      "mass": 6.0
+    },
+    {
+      "person": "Joseph Bazalgette",
+      "mass": 6.0
+    },
+    {
+      "person": "Michael Faraday",
+      "mass": 6.0
+    },
+    {
+      "person": "Johannes Gutenberg",
+      "mass": 6.0
+    },
+    {
+      "person": "Norman Borlaug",
+      "mass": 6.0
+    },
+    {
+      "person": "Hammurabi",
+      "mass": 6.0
+    },
+    {
+      "person": "William Wilberforce",
+      "mass": 6.0
+    },
+    {
+      "person": "Abel Wolman",
+      "mass": 5.5
+    },
+    {
+      "person": "John Leal",
+      "mass": 5.5
+    },
+    {
+      "person": "John Enders",
+      "mass": 5.0
+    },
+    {
+      "person": "Donald Henderson",
+      "mass": 5.0
+    },
+    {
+      "person": "Gautama Buddha",
+      "mass": 4.5
+    },
+    {
+      "person": "Joseph Lister",
+      "mass": 4.0
+    },
+    {
+      "person": "Tim Berners-Lee",
+      "mass": 4.0
+    },
+    {
+      "person": "Ignaz Semmelweis",
+      "mass": 4.0
+    },
+    {
+      "person": "Florence Nightingale",
+      "mass": 4.0
+    },
+    {
+      "person": "Alexander Cumming",
+      "mass": 4.0
+    },
+    {
+      "person": "Joseph Aspdin",
+      "mass": 4.0
+    },
+    {
+      "person": "Henry Bessemer",
+      "mass": 4.0
+    },
+    {
+      "person": "Selman Waksman",
+      "mass": 4.0
+    },
+    {
+      "person": "John Gibb",
+      "mass": 4.0
+    },
+    {
+      "person": "Aristotle",
+      "mass": 4.0
+    }
+  ],
+  "p_j": [
+    0.1564102564102564,
+    0.5794871794871795,
+    0.2641025641025641
+  ],
+  "kappa": 0.3881929545297258
+}
