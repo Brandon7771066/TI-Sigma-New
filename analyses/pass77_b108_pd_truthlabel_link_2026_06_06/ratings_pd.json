@@ -1,0 +1,3302 @@
+[
+  {
+    "id": "MI-057",
+    "gold": "MI",
+    "text": "There exists a complete list of all true propositions including those not on this list.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-010",
+    "gold": "I",
+    "text": "Somewhere a dog is currently chasing its tail.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": 1.0
+    }
+  },
+  {
+    "id": "I-095",
+    "gold": "I",
+    "text": "There is an even number of clocks currently displaying 3:00 in London.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-061",
+    "gold": "T",
+    "text": "The capital of Brazil is Brasilia.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-018",
+    "gold": "NA",
+    "text": "The musical note middle C smells like lavender.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-081",
+    "gold": "MI",
+    "text": "There exists a married bachelor in this room.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-097",
+    "gold": "I",
+    "text": "The voltage at a specific power outlet in Helsinki right now is exactly 230.0 volts.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-001",
+    "gold": "I",
+    "text": "There is currently a four-leaf clover growing in Hyde Park.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "MI-011",
+    "gold": "MI",
+    "text": "Some equilateral triangles are scalene.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-033",
+    "gold": "T",
+    "text": "8 times 8 equals 64.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-031",
+    "gold": "NA",
+    "text": "Curiosity has an electric charge.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-030",
+    "gold": "NA",
+    "text": "The number 0 is in love with the number 1.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-004",
+    "gold": "I",
+    "text": "A particular grain of rice in a sealed container in Kyoto is touching exactly five other grains.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-087",
+    "gold": "F",
+    "text": "20 plus 20 equals 41.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-001",
+    "gold": "T",
+    "text": "Light travels faster than sound.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-067",
+    "gold": "MI",
+    "text": "There is a real number that is both rational and not rational.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-093",
+    "gold": "NA",
+    "text": "Calculus is approximately 50 years old.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-018",
+    "gold": "MI",
+    "text": "This statement is false.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-035",
+    "gold": "MI",
+    "text": "Some bachelors are widows.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-078",
+    "gold": "NA",
+    "text": "Justice has six legs.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-091",
+    "gold": "T",
+    "text": "The capital of Turkey is Ankara.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-001",
+    "gold": "F",
+    "text": "12 plus 12 equals 25.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-016",
+    "gold": "I",
+    "text": "The total number of unread text messages on phones across Tokyo exceeds 50 million.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": -1.0
+    }
+  },
+  {
+    "id": "NA-017",
+    "gold": "NA",
+    "text": "The Riemann hypothesis weighs 3 kilograms.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-057",
+    "gold": "I",
+    "text": "Somewhere a stranger is thinking of the same word you are thinking of right now.",
+    "pd": {
+      "R1_gpt4o_mini": 0.5,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-044",
+    "gold": "F",
+    "text": "Marie Curie won Nobel Prizes only in literature.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-064",
+    "gold": "I",
+    "text": "A specific unread book sits on the third shelf of a particular library in Reykjavik.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.0
+    }
+  },
+  {
+    "id": "F-075",
+    "gold": "F",
+    "text": "7 plus 7 equals 15.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-082",
+    "gold": "MI",
+    "text": "There is a child who is older than her own father.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-056",
+    "gold": "MI",
+    "text": "The next sentence is true and false simultaneously in the same respect: snow is white.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-086",
+    "gold": "I",
+    "text": "A coin flipped in private by someone in Lagos one hour ago landed on tails.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-076",
+    "gold": "F",
+    "text": "The capital of Japan is Seoul.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-054",
+    "gold": "I",
+    "text": "The temperature in Reykjavik will exceed 15 degrees Celsius on Christmas Day next year.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-045",
+    "gold": "NA",
+    "text": "The Riemann hypothesis prefers vanilla ice cream.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-068",
+    "gold": "F",
+    "text": "15 plus 15 equals 31.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-097",
+    "gold": "T",
+    "text": "The speed of light in vacuum is approximately 299,792 kilometers per second.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-038",
+    "gold": "F",
+    "text": "The Pacific Ocean is smaller than the Mediterranean Sea.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-092",
+    "gold": "I",
+    "text": "The grand total of unfinished crossword puzzles currently in homes across the United States exceeds 5 million.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-061",
+    "gold": "NA",
+    "text": "Sadness is fluent in French and German.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-048",
+    "gold": "T",
+    "text": "The Roman Empire eventually collapsed.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-044",
+    "gold": "I",
+    "text": "There is currently an even number of running washing machines in Glasgow.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-082",
+    "gold": "F",
+    "text": "The human heart has only one chamber.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-017",
+    "gold": "T",
+    "text": "The capital of Greece is Athens.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-061",
+    "gold": "F",
+    "text": "8 times 8 equals 69.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-079",
+    "gold": "NA",
+    "text": "Tuesday is allergic to wheat.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-015",
+    "gold": "F",
+    "text": "Beethoven composed twenty-five symphonies.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-074",
+    "gold": "T",
+    "text": "20 plus 20 equals 40.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-092",
+    "gold": "F",
+    "text": "The capital of Vietnam is Bangkok.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-071",
+    "gold": "NA",
+    "text": "Logic prefers vacationing in the mountains.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-003",
+    "gold": "F",
+    "text": "4 plus 4 equals 9.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-009",
+    "gold": "I",
+    "text": "A bee currently flying somewhere in California will return to its hive within the next minute.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-090",
+    "gold": "F",
+    "text": "A circle has 540 degrees.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-066",
+    "gold": "MI",
+    "text": "Every rule has exactly two exceptions including this one which has none.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-058",
+    "gold": "I",
+    "text": "A specific frog is currently sitting on a lily pad in a pond in Louisiana.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -1.0
+    }
+  },
+  {
+    "id": "T-028",
+    "gold": "T",
+    "text": "World War II ended in 1945.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-047",
+    "gold": "T",
+    "text": "The Eiffel Tower is located in Paris, France.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-091",
+    "gold": "I",
+    "text": "A specific snowflake landed on a specific tree branch in Norway one hour ago.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-047",
+    "gold": "F",
+    "text": "The Wright brothers built the first successful submarine.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-053",
+    "gold": "NA",
+    "text": "Geometry is afraid of dentists.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-020",
+    "gold": "T",
+    "text": "18 plus 18 equals 36.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-027",
+    "gold": "F",
+    "text": "7 times 7 equals 54.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-019",
+    "gold": "T",
+    "text": "15 plus 15 equals 30.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-059",
+    "gold": "I",
+    "text": "The total population of Antarctica right now is exactly 4,517.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "MI-071",
+    "gold": "MI",
+    "text": "The proposition you are now reading is unreadable.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-095",
+    "gold": "MI",
+    "text": "A perfectly straight zigzag line was drawn across the page.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "F-083",
+    "gold": "F",
+    "text": "Mercury is the largest planet in the solar system.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-007",
+    "gold": "NA",
+    "text": "The square root of 2 is married to the square root of 3.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-070",
+    "gold": "F",
+    "text": "The capital of Italy is Madrid.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-030",
+    "gold": "MI",
+    "text": "A circle with corners was traced on the floor.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-086",
+    "gold": "T",
+    "text": "21 plus 21 equals 42.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-099",
+    "gold": "F",
+    "text": "The capital of Thailand is Hanoi.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-057",
+    "gold": "T",
+    "text": "DNA stands for deoxyribonucleic acid.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-095",
+    "gold": "NA",
+    "text": "The Riemann hypothesis is currently looking for a roommate.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-005",
+    "gold": "NA",
+    "text": "Compassion has a sour aftertaste.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-094",
+    "gold": "F",
+    "text": "3 times 3 equals 14.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-004",
+    "gold": "NA",
+    "text": "Grief has a melting point.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-019",
+    "gold": "NA",
+    "text": "Logic is a vegetarian.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-018",
+    "gold": "I",
+    "text": "Somewhere on Earth, an apple is falling from a tree at this exact moment.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-039",
+    "gold": "T",
+    "text": "13 plus 13 equals 26.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-002",
+    "gold": "MI",
+    "text": "A function that is everywhere continuous and nowhere continuous exists.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-014",
+    "gold": "T",
+    "text": "Gold has the chemical symbol Au.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-050",
+    "gold": "T",
+    "text": "Plants produce oxygen through photosynthesis.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-093",
+    "gold": "I",
+    "text": "There is at least one umbrella opened indoors in Tokyo right now.",
+    "pd": {
+      "R1_gpt4o_mini": 0.5,
+      "R2_gpt4o_mini_b": 0.5,
+      "R3_claude_haiku": 0.8
+    }
+  },
+  {
+    "id": "MI-084",
+    "gold": "MI",
+    "text": "A solid hollow sphere sits on the shelf.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-009",
+    "gold": "T",
+    "text": "9 plus 9 equals 18.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-096",
+    "gold": "F",
+    "text": "The capital of Spain is Lisbon.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-047",
+    "gold": "NA",
+    "text": "Generosity is approximately 4 ounces.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-016",
+    "gold": "F",
+    "text": "Sound travels faster than light in a vacuum.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-014",
+    "gold": "I",
+    "text": "A particular ant in a colony in Brazil will encounter another ant within the next five seconds.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-039",
+    "gold": "I",
+    "text": "There is at least one fortune cookie containing the exact phrase 'A surprise awaits' currently being baked.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.5
+    }
+  },
+  {
+    "id": "T-000",
+    "gold": "T",
+    "text": "8 plus 8 equals 16.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-034",
+    "gold": "I",
+    "text": "A randomly chosen page of a randomly chosen library book in Athens contains exactly 14 commas.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-003",
+    "gold": "I",
+    "text": "A flight currently airborne is carrying exactly one passenger named Theodore.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-094",
+    "gold": "NA",
+    "text": "Beauty is allergic to peanuts.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-082",
+    "gold": "I",
+    "text": "Somewhere on Earth, a child is laughing right now.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-039",
+    "gold": "MI",
+    "text": "The barber shaves all and only those men who do not shave themselves; the barber shaves himself.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-002",
+    "gold": "NA",
+    "text": "Patience is exactly 4 grams heavy.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-093",
+    "gold": "MI",
+    "text": "A man taller than himself walked through the doorway.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-020",
+    "gold": "I",
+    "text": "A specific pencil in a school in Buenos Aires is currently being sharpened.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "T-004",
+    "gold": "T",
+    "text": "3 plus 3 equals 6.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-088",
+    "gold": "F",
+    "text": "2 plus 2 equals 5.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-050",
+    "gold": "NA",
+    "text": "The complex plane is dating the real line.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-076",
+    "gold": "MI",
+    "text": "I know that I do not know the contents of this sentence which I have just read.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-014",
+    "gold": "MI",
+    "text": "Some object both exists and does not exist in the same sense at the same moment.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-008",
+    "gold": "NA",
+    "text": "Forgiveness is approximately 4 centimeters long.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-074",
+    "gold": "NA",
+    "text": "Compassion has a postal code of 90210.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-053",
+    "gold": "T",
+    "text": "16 plus 16 equals 32.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-054",
+    "gold": "T",
+    "text": "The Sun is a star.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-071",
+    "gold": "I",
+    "text": "A specific patient in a hospital in Lima currently has a resting heart rate of exactly 72.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.2
+    }
+  },
+  {
+    "id": "NA-096",
+    "gold": "NA",
+    "text": "Honesty has a melting point.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-032",
+    "gold": "I",
+    "text": "The exact mass of all blue whales currently alive is greater than 18 million kilograms.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "MI-096",
+    "gold": "MI",
+    "text": "A unicorn is both a real animal and not a real animal at the same time and in the same sense.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-045",
+    "gold": "I",
+    "text": "There is at least one undelivered letter currently sitting in the New York City postal system addressed to a person named Maria.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.2
+    }
+  },
+  {
+    "id": "I-048",
+    "gold": "I",
+    "text": "The number of stars visible to the naked eye from a specific rural location in Mongolia tonight will exceed 3,000.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -1.0
+    }
+  },
+  {
+    "id": "MI-013",
+    "gold": "MI",
+    "text": "5 is both prime and even.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-029",
+    "gold": "F",
+    "text": "The capital of Argentina is Santiago.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-064",
+    "gold": "F",
+    "text": "The human eye can naturally see X-rays.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-099",
+    "gold": "I",
+    "text": "The next person to enter the Sydney Opera House will be left-handed.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-091",
+    "gold": "F",
+    "text": "The capital of Greece is Sofia.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-080",
+    "gold": "F",
+    "text": "6 plus 6 equals 13.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-083",
+    "gold": "T",
+    "text": "Lightning typically precedes the sound of thunder during a storm.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-037",
+    "gold": "F",
+    "text": "The capital of Norway is Stockholm.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-090",
+    "gold": "MI",
+    "text": "There is a number that is simultaneously equal to 7 and not equal to 7.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-081",
+    "gold": "T",
+    "text": "Jupiter is the largest planet in our solar system.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-073",
+    "gold": "NA",
+    "text": "The number pi is angry today.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-079",
+    "gold": "MI",
+    "text": "A line segment is both finite in length and infinite in length at the same time.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "F-002",
+    "gold": "F",
+    "text": "The capital of Mexico is Bogota.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-088",
+    "gold": "NA",
+    "text": "Patience plays the trumpet.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-030",
+    "gold": "I",
+    "text": "There is at least one elderly person currently napping in a recliner in Madrid.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": 0.5
+    }
+  },
+  {
+    "id": "NA-065",
+    "gold": "NA",
+    "text": "Justice has a measurable temperature in Celsius.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-009",
+    "gold": "NA",
+    "text": "Thursday is taller than Friday.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-036",
+    "gold": "I",
+    "text": "Somewhere a glass is currently being filled with orange juice.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-065",
+    "gold": "T",
+    "text": "The capital of Japan is Tokyo.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-029",
+    "gold": "I",
+    "text": "The first word spoken in your next phone call will start with the letter S.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "I-094",
+    "gold": "I",
+    "text": "There exists a particular drop of rainwater currently falling into Lake Geneva.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -1.0
+    }
+  },
+  {
+    "id": "NA-049",
+    "gold": "NA",
+    "text": "Geometry is left-handed.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-068",
+    "gold": "NA",
+    "text": "Justice is measured in liters.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-011",
+    "gold": "I",
+    "text": "There is a specific snowflake currently falling onto a rooftop in Vancouver.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-051",
+    "gold": "I",
+    "text": "The square of the number of unread emails in the inbox of a specific person in Cairo right now exceeds 10,000.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-043",
+    "gold": "NA",
+    "text": "Wisdom is approximately 80 kilograms.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-054",
+    "gold": "MI",
+    "text": "There is a non-self-identical object on the shelf.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "F-030",
+    "gold": "F",
+    "text": "The Berlin Wall fell in 1789.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-096",
+    "gold": "T",
+    "text": "Charles Darwin wrote On the Origin of Species.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-085",
+    "gold": "NA",
+    "text": "Compassion has an even number of legs.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-025",
+    "gold": "T",
+    "text": "The capital of Germany is Berlin.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-013",
+    "gold": "NA",
+    "text": "Honesty has a serial number ending in 4.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-027",
+    "gold": "I",
+    "text": "A randomly chosen person in Beijing right now is wearing blue.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "NA-021",
+    "gold": "NA",
+    "text": "The integer 21 is a vegetarian.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-012",
+    "gold": "T",
+    "text": "5 plus 5 equals 10.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-084",
+    "gold": "F",
+    "text": "19 plus 19 equals 39.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-002",
+    "gold": "T",
+    "text": "Christopher Columbus reached the Americas in 1492.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-091",
+    "gold": "MI",
+    "text": "All rules including this one have no exceptions whatsoever except for the present rule.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-015",
+    "gold": "T",
+    "text": "2 plus 2 equals 4.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-072",
+    "gold": "F",
+    "text": "Humans have 12 pairs of chromosomes.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-066",
+    "gold": "T",
+    "text": "Marie Curie won Nobel Prizes in physics and chemistry.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-056",
+    "gold": "T",
+    "text": "There are seven continents on Earth.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 1.0
+    }
+  },
+  {
+    "id": "MI-016",
+    "gold": "MI",
+    "text": "A perfectly round square was placed on the windowsill.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-052",
+    "gold": "MI",
+    "text": "There is a non-circular circle on the wall.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "F-026",
+    "gold": "F",
+    "text": "5 times 5 equals 30.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-068",
+    "gold": "I",
+    "text": "There is exactly one perfectly square chocolate bar currently on a shelf in Brussels.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-080",
+    "gold": "I",
+    "text": "There is at least one tea kettle currently whistling in Edinburgh.",
+    "pd": {
+      "R1_gpt4o_mini": 0.5,
+      "R2_gpt4o_mini_b": 0.5,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "MI-074",
+    "gold": "MI",
+    "text": "The next paragraph contains only this sentence and exactly three other sentences.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-076",
+    "gold": "T",
+    "text": "The human body has 206 bones in adulthood.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-003",
+    "gold": "NA",
+    "text": "Wisdom has a phone number.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-053",
+    "gold": "I",
+    "text": "The number of letters in the next sign you read will be a prime number.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-028",
+    "gold": "F",
+    "text": "17 plus 17 equals 35.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-057",
+    "gold": "NA",
+    "text": "The function f(x) = x^2 is afraid of spiders.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-095",
+    "gold": "F",
+    "text": "14 plus 14 equals 29.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-003",
+    "gold": "MI",
+    "text": "The empty set contains exactly one element.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-072",
+    "gold": "T",
+    "text": "The capital of Mexico is Mexico City.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-052",
+    "gold": "F",
+    "text": "9 plus 9 equals 19.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-007",
+    "gold": "MI",
+    "text": "An object that is both entirely red and entirely green at the same time and in the same respect is on the table.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-036",
+    "gold": "T",
+    "text": "10 times 10 equals 100.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-019",
+    "gold": "I",
+    "text": "A specific photon emitted by a star in the Andromeda galaxy will reach Earth before 2030.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-042",
+    "gold": "NA",
+    "text": "The Pythagorean theorem is sleepy.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-062",
+    "gold": "F",
+    "text": "21 plus 21 equals 43.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-035",
+    "gold": "T",
+    "text": "The American Civil War ended in 1865.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-098",
+    "gold": "NA",
+    "text": "The square root of 9 is currently asleep.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-031",
+    "gold": "MI",
+    "text": "The first ten digits of pi consist of exactly twelve different digits.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-054",
+    "gold": "NA",
+    "text": "Trust is loud on Wednesdays.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-090",
+    "gold": "T",
+    "text": "Pi is approximately 3.14159.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-043",
+    "gold": "F",
+    "text": "Jupiter is the smallest planet in our solar system.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-048",
+    "gold": "NA",
+    "text": "The color blue is louder than the color red.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-022",
+    "gold": "NA",
+    "text": "The empty set has a hometown.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-085",
+    "gold": "I",
+    "text": "Right now, an even number of refrigerator doors are open across Paris.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-009",
+    "gold": "F",
+    "text": "The capital of Germany is Lisbon.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-094",
+    "gold": "T",
+    "text": "The capital of Norway is Oslo.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-010",
+    "gold": "MI",
+    "text": "There exists an event that both occurred and did not occur at the same place and time in the same sense.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-009",
+    "gold": "MI",
+    "text": "All generalizations are false including this one which is also true.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-030",
+    "gold": "T",
+    "text": "Neil Armstrong walked on the Moon in 1969.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-024",
+    "gold": "MI",
+    "text": "The number of digits in the largest prime is exactly fifteen.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-075",
+    "gold": "MI",
+    "text": "The last digit of pi was discovered yesterday.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-000",
+    "gold": "MI",
+    "text": "Every claim including this one has exactly one true counterexample which is this same claim.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-049",
+    "gold": "T",
+    "text": "6 plus 6 equals 12.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-043",
+    "gold": "T",
+    "text": "The Wright brothers built and flew the first successful airplane.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-004",
+    "gold": "MI",
+    "text": "The chair I am sitting on is simultaneously made entirely of wood and entirely of glass with no parts in common.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-082",
+    "gold": "T",
+    "text": "The capital of Finland is Helsinki.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-040",
+    "gold": "NA",
+    "text": "Loyalty is divisible by 7 evenly.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-038",
+    "gold": "MI",
+    "text": "The current King of France is bald and there is currently no King of France.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-010",
+    "gold": "T",
+    "text": "The capital of Italy is Rome.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-021",
+    "gold": "T",
+    "text": "4 plus 4 equals 8.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-062",
+    "gold": "NA",
+    "text": "Calculus is the brother of poetry.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-032",
+    "gold": "MI",
+    "text": "There is a set of size 3 that contains exactly 4 distinct elements.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-085",
+    "gold": "T",
+    "text": "6 times 6 equals 36.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-047",
+    "gold": "I",
+    "text": "Exactly 1,000,000 people are smiling somewhere in the world right now.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "MI-020",
+    "gold": "MI",
+    "text": "An entirely silent loud sound was just made.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-002",
+    "gold": "I",
+    "text": "Somewhere a child is currently learning to ride a bicycle.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-098",
+    "gold": "MI",
+    "text": "The number 3 is greater than itself.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-073",
+    "gold": "MI",
+    "text": "A non-existent existing entity stands by the door.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "I-017",
+    "gold": "I",
+    "text": "There is a marble currently resting at the bottom of a fountain in Rome.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-033",
+    "gold": "F",
+    "text": "Carbon is found nowhere in any known living organism.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-022",
+    "gold": "T",
+    "text": "The capital of Argentina is Buenos Aires.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-015",
+    "gold": "I",
+    "text": "The number of leaves currently on a particular maple tree in Vermont is prime.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-041",
+    "gold": "NA",
+    "text": "The integer 13 is unlucky in temperature.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-046",
+    "gold": "MI",
+    "text": "There exists a wholly invisible thing that is visible to the human eye.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-072",
+    "gold": "NA",
+    "text": "Curiosity has a serial number printed on its side.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-037",
+    "gold": "I",
+    "text": "A particular cup of tea currently steeping somewhere in England will be drunk within 10 minutes.",
+    "pd": {
+      "R1_gpt4o_mini": 0.5,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "MI-053",
+    "gold": "MI",
+    "text": "I am the only person who exists, and there are other people in this room with me.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-026",
+    "gold": "NA",
+    "text": "Democracy tastes sweet on the tongue.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-049",
+    "gold": "I",
+    "text": "The next sneeze that occurs anywhere on Earth will come from a man.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-060",
+    "gold": "NA",
+    "text": "Friendship has a serial number ending in 9.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-019",
+    "gold": "F",
+    "text": "The capital of Sweden is Oslo.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-088",
+    "gold": "I",
+    "text": "There is a particular goldfish swimming clockwise in a particular bowl in Osaka.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-089",
+    "gold": "T",
+    "text": "11 times 11 equals 121.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-098",
+    "gold": "F",
+    "text": "9 times 9 equals 86.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-088",
+    "gold": "T",
+    "text": "Humans have 23 pairs of chromosomes.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-080",
+    "gold": "MI",
+    "text": "I am lying right now.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-083",
+    "gold": "NA",
+    "text": "The number 6 enjoys watching documentaries.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-098",
+    "gold": "T",
+    "text": "The chemical formula for water is H2O.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-044",
+    "gold": "NA",
+    "text": "The Pythagorean theorem is shorter than Euclid's fifth postulate.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-031",
+    "gold": "I",
+    "text": "An umbrella sits forgotten on a particular train car traveling through Switzerland.",
+    "pd": {
+      "R1_gpt4o_mini": 1.0,
+      "R2_gpt4o_mini_b": 1.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "NA-077",
+    "gold": "NA",
+    "text": "Geometry is married to algebra.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-045",
+    "gold": "MI",
+    "text": "The set of all sets is itself a set in standard ZFC.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-016",
+    "gold": "NA",
+    "text": "Boredom has a wingspan of 4 meters.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-078",
+    "gold": "MI",
+    "text": "A solid liquid was placed in the beaker.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-044",
+    "gold": "MI",
+    "text": "The set of all sets that do not contain themselves contains itself.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-089",
+    "gold": "NA",
+    "text": "The function tangent is married with two children.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-003",
+    "gold": "T",
+    "text": "The Earth orbits the Sun.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-058",
+    "gold": "NA",
+    "text": "Friendship is divisible by 3.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-016",
+    "gold": "T",
+    "text": "5 times 5 equals 25.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-006",
+    "gold": "I",
+    "text": "The next person to win a major lottery will live in a city with population over 1 million.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "NA-032",
+    "gold": "NA",
+    "text": "Algebra is enrolled in a yoga class on Tuesdays.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-023",
+    "gold": "I",
+    "text": "The atmospheric pressure at the summit of K2 right now is above the seasonal average.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "F-020",
+    "gold": "F",
+    "text": "Antibiotics are effective against all viruses.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-029",
+    "gold": "T",
+    "text": "The capital of Thailand is Bangkok.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-065",
+    "gold": "I",
+    "text": "The total weight of fish currently in the Yangtze river exceeds 50,000 metric tons.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "I-000",
+    "gold": "I",
+    "text": "Right now, more shoes are tied than untied across all of New York City.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -1.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-021",
+    "gold": "F",
+    "text": "The capital of Russia is Kiev.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-057",
+    "gold": "F",
+    "text": "The capital of Canada is Toronto.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-075",
+    "gold": "NA",
+    "text": "Logic enjoys long walks on the beach.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-055",
+    "gold": "NA",
+    "text": "The set of prime numbers is currently traveling abroad.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-083",
+    "gold": "I",
+    "text": "The total number of grains of sand on Bondi Beach right now is divisible by 7.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.0
+    }
+  },
+  {
+    "id": "MI-017",
+    "gold": "MI",
+    "text": "A husband who has never been married was invited.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-069",
+    "gold": "T",
+    "text": "7 times 7 equals 49.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "T-067",
+    "gold": "T",
+    "text": "Antibiotics can kill or inhibit the growth of bacteria.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-072",
+    "gold": "I",
+    "text": "Right now, more people are awake in China than asleep in China.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": 0.2
+    }
+  },
+  {
+    "id": "I-090",
+    "gold": "I",
+    "text": "The Higgs boson decays into specific particles in a single given collision event no one has observed.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "NA-024",
+    "gold": "NA",
+    "text": "The number five enjoys jazz music.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-084",
+    "gold": "I",
+    "text": "The next car to pass a given intersection in Mumbai will be red.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-055",
+    "gold": "T",
+    "text": "Mercury is the closest planet to the Sun.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-056",
+    "gold": "F",
+    "text": "18 plus 18 equals 37.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-008",
+    "gold": "T",
+    "text": "Sharks are fish, not mammals.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-053",
+    "gold": "F",
+    "text": "The capital of Australia is Wellington.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-033",
+    "gold": "I",
+    "text": "There is a specific candle currently burning in a window in Reykjavik.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "F-063",
+    "gold": "F",
+    "text": "4 times 4 equals 21.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-015",
+    "gold": "NA",
+    "text": "The function sine is afraid of heights.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-045",
+    "gold": "T",
+    "text": "Antarctica is the coldest continent on Earth.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-056",
+    "gold": "NA",
+    "text": "Trust runs at 60 hertz.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-047",
+    "gold": "MI",
+    "text": "The set of all natural numbers is finite.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-063",
+    "gold": "T",
+    "text": "Leonardo da Vinci painted the Mona Lisa.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-029",
+    "gold": "NA",
+    "text": "The number 7 is married.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "MI-019",
+    "gold": "MI",
+    "text": "This proposition has no truth value at all and is true.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-087",
+    "gold": "T",
+    "text": "Isaac Newton formulated the laws of motion.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-008",
+    "gold": "F",
+    "text": "Antarctica is the warmest continent on Earth.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-058",
+    "gold": "F",
+    "text": "There are fifteen continents on Earth.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-017",
+    "gold": "F",
+    "text": "Water boils at 50 degrees Celsius at standard atmospheric pressure.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-095",
+    "gold": "T",
+    "text": "Sodium chloride is the chemical name for table salt.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-051",
+    "gold": "NA",
+    "text": "Sadness has a melting point of 47 degrees.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-075",
+    "gold": "T",
+    "text": "An equilateral triangle has three equal sides.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-087",
+    "gold": "I",
+    "text": "A specific deer is currently drinking from a particular stream in Yellowstone National Park.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.0
+    }
+  },
+  {
+    "id": "I-041",
+    "gold": "I",
+    "text": "The next email you receive will contain the word 'thank'.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.1
+    }
+  },
+  {
+    "id": "MI-021",
+    "gold": "MI",
+    "text": "I currently believe this exact sentence to be false.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-033",
+    "gold": "MI",
+    "text": "There is a perfectly precise vague boundary.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-010",
+    "gold": "NA",
+    "text": "Algebra has a passport issued in 1999.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-025",
+    "gold": "NA",
+    "text": "The Pythagorean theorem is approximately fifty kilograms.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-007",
+    "gold": "I",
+    "text": "An undiscovered moon larger than 100 meters across orbits Saturn.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -1.0
+    }
+  },
+  {
+    "id": "MI-097",
+    "gold": "MI",
+    "text": "A bachelor who is currently married attended the dinner.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-052",
+    "gold": "NA",
+    "text": "Anger has a chemical formula.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-060",
+    "gold": "T",
+    "text": "A year on Earth has approximately 365 days.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-014",
+    "gold": "NA",
+    "text": "Pi has a postal address in Rome.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "F-013",
+    "gold": "F",
+    "text": "World War II ended in 1845.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-097",
+    "gold": "F",
+    "text": "8 plus 8 equals 17.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-012",
+    "gold": "MI",
+    "text": "An object that is wholly here is also wholly somewhere else at the same time.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-039",
+    "gold": "F",
+    "text": "Trees photosynthesize by absorbing nitrogen from soil and emitting helium.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-090",
+    "gold": "NA",
+    "text": "Logic is a Pisces.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-070",
+    "gold": "T",
+    "text": "19 plus 19 equals 38.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-027",
+    "gold": "MI",
+    "text": "A married unmarried person attended the wedding.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-099",
+    "gold": "T",
+    "text": "11 plus 11 equals 22.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-088",
+    "gold": "MI",
+    "text": "A bachelor's daughter visited her father's wife.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -1.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "I-052",
+    "gold": "I",
+    "text": "The total amount of cash inside ATMs in Singapore right now exceeds 100 million Singapore dollars.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": -0.2
+    }
+  },
+  {
+    "id": "T-034",
+    "gold": "T",
+    "text": "3 times 3 equals 9.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-069",
+    "gold": "F",
+    "text": "The Sun orbits the Earth.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-038",
+    "gold": "I",
+    "text": "There is at least one undiscovered species of insect in the Amazon rainforest.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": 1.8
+    }
+  },
+  {
+    "id": "F-071",
+    "gold": "F",
+    "text": "Pi is exactly equal to 4.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-079",
+    "gold": "F",
+    "text": "Oxygen is a metal at room temperature.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "I-067",
+    "gold": "I",
+    "text": "An ice cube melting in a glass in Cape Town will fully dissolve in less than four minutes.",
+    "pd": {
+      "R1_gpt4o_mini": 1.5,
+      "R2_gpt4o_mini_b": 1.5,
+      "R3_claude_haiku": -0.5
+    }
+  },
+  {
+    "id": "T-031",
+    "gold": "T",
+    "text": "The square root of 144 is 12.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-042",
+    "gold": "F",
+    "text": "A year on Earth has approximately 100 days.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "NA-046",
+    "gold": "NA",
+    "text": "Honesty smells like wet dog.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "T-023",
+    "gold": "T",
+    "text": "The capital of India is New Delhi.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "F-055",
+    "gold": "F",
+    "text": "Albert Einstein developed the theory of evolution.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-005",
+    "gold": "F",
+    "text": "Plants produce carbon dioxide through photosynthesis as their only gaseous output.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-008",
+    "gold": "MI",
+    "text": "2 + 2 = 5 by definition of the standard arithmetical operators on the natural numbers.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "T-027",
+    "gold": "T",
+    "text": "The capital of Portugal is Lisbon.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "NA-000",
+    "gold": "NA",
+    "text": "The empty set has hair.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "NA-035",
+    "gold": "NA",
+    "text": "Justice is currently undergoing dental surgery.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-077",
+    "gold": "F",
+    "text": "The Eiffel Tower is located in Tokyo, Japan.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-085",
+    "gold": "MI",
+    "text": "There exists a square root of negative one in the real numbers.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-052",
+    "gold": "T",
+    "text": "The capital of Spain is Madrid.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  },
+  {
+    "id": "MI-025",
+    "gold": "MI",
+    "text": "A perfect contradiction is true.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "MI-060",
+    "gold": "MI",
+    "text": "A perfectly silent sound just played in the next room.",
+    "pd": {
+      "R1_gpt4o_mini": -3.0,
+      "R2_gpt4o_mini_b": -3.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-081",
+    "gold": "NA",
+    "text": "Honesty has feathers.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "F-040",
+    "gold": "F",
+    "text": "The capital of India is Karachi.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-060",
+    "gold": "F",
+    "text": "Hydrogen is the heaviest element on the periodic table.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "F-025",
+    "gold": "F",
+    "text": "3 plus 3 equals 7.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -3.0
+    }
+  },
+  {
+    "id": "NA-038",
+    "gold": "NA",
+    "text": "The number 8 collects vintage stamps.",
+    "pd": {
+      "R1_gpt4o_mini": "OFFAXIS",
+      "R2_gpt4o_mini_b": "OFFAXIS",
+      "R3_claude_haiku": "OFFAXIS"
+    }
+  },
+  {
+    "id": "I-073",
+    "gold": "I",
+    "text": "There exists somewhere in space an exoplanet harboring intelligent life.",
+    "pd": {
+      "R1_gpt4o_mini": 0.0,
+      "R2_gpt4o_mini_b": 0.0,
+      "R3_claude_haiku": 0.2
+    }
+  },
+  {
+    "id": "F-007",
+    "gold": "F",
+    "text": "Mammals are cold-blooded animals.",
+    "pd": {
+      "R1_gpt4o_mini": -2.0,
+      "R2_gpt4o_mini_b": -2.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "MI-041",
+    "gold": "MI",
+    "text": "A complete and consistent first-order theory of arithmetic exists by G\u00f6del's theorem.",
+    "pd": {
+      "R1_gpt4o_mini": -1.0,
+      "R2_gpt4o_mini_b": -1.0,
+      "R3_claude_haiku": -2.0
+    }
+  },
+  {
+    "id": "T-005",
+    "gold": "T",
+    "text": "9 times 9 equals 81.",
+    "pd": {
+      "R1_gpt4o_mini": 2.0,
+      "R2_gpt4o_mini_b": 2.0,
+      "R3_claude_haiku": 2.0
+    }
+  }
+]
