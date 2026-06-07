@@ -120,7 +120,7 @@ IBMQ_Secret = "kFFyMX3PVnwprXGgF2aQp6uGsh_jcGRN4azU0XfW4JqV"
 
 [[ports]]
 localPort = 5000
-externalPort = 80
+externalPort = 5000
 
 [[ports]]
 localPort = 5001
@@ -128,4 +128,4 @@ externalPort = 3000
 
 [[ports]]
 localPort = 8000
-externalPort = 8000
+externalPort = 80
