@@ -1,0 +1,347 @@
+{
+  "n_gold": 500,
+  "reps": {
+    "scalar_PD_1D": {
+      "name": "scalar_PD_1D",
+      "dims": 1,
+      "note": "(-3,+2) Perfect-Fifth real axis; NA off-axis (unrepresentable). =TIG real projection.",
+      "n_encodable_labels": 4,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI"
+      ],
+      "log2_capacity": 2.0,
+      "codeword_dmin": 1.0,
+      "closest_pair": [
+        "F",
+        "MI"
+      ],
+      "correction_radius": 0.5,
+      "accuracy": 0.746,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.74,
+        "NA": 0.0
+      },
+      "MI_bits": 1.942,
+      "NMI": 0.8414,
+      "AMI": 0.8347,
+      "ARI": 0.8129,
+      "silhouette": 0.7409,
+      "confusion": {
+        "MI->MI": 74,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->None": 87,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 10,
+        "MI->I": 3,
+        "NA->I": 3,
+        "T->F": 1,
+        "MI->T": 1
+      }
+    },
+    "complex_PD_2D": {
+      "name": "complex_PD_2D",
+      "dims": 2,
+      "note": "real=PD axis, imag=MI/Tralse axis; MI=+e i, NA=-e i (share imaginary axis).",
+      "n_encodable_labels": 5,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI",
+        "NA"
+      ],
+      "log2_capacity": 2.322,
+      "codeword_dmin": 2.0,
+      "closest_pair": [
+        "T",
+        "I"
+      ],
+      "correction_radius": 1.0,
+      "accuracy": 0.918,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.72,
+        "NA": 0.88
+      },
+      "MI_bits": 1.9305,
+      "NMI": 0.8367,
+      "AMI": 0.8297,
+      "ARI": 0.8094,
+      "silhouette": 0.7712,
+      "confusion": {
+        "MI->MI": 72,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->NA": 88,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 9,
+        "MI->I": 5,
+        "NA->I": 3,
+        "T->F": 1,
+        "MI->T": 1
+      }
+    },
+    "TIG_graph": {
+      "name": "TIG_graph",
+      "dims": 2,
+      "note": "9-constant graph {0,1,i,sqrt2,e,phi,pi,C,T}; chi=4 (B68); MI->i vertex; NA off-graph.",
+      "n_encodable_labels": 4,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI"
+      ],
+      "log2_capacity": 2.0,
+      "codeword_dmin": 1.0,
+      "closest_pair": [
+        "T",
+        "I"
+      ],
+      "correction_radius": 0.5,
+      "accuracy": 0.746,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.74,
+        "NA": 0.0
+      },
+      "MI_bits": 1.942,
+      "NMI": 0.8414,
+      "AMI": 0.8347,
+      "ARI": 0.8129,
+      "silhouette": 0.7386,
+      "confusion": {
+        "MI->MI": 74,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->None": 87,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 10,
+        "MI->I": 3,
+        "NA->I": 3,
+        "T->F": 1,
+        "MI->T": 1
+      }
+    },
+    "GILE_matrix_64D": {
+      "name": "GILE_matrix_64D",
+      "dims": 4,
+      "note": "4 truth-labels {T,F,tau(I),MI}; NA folded into MI for 4^3 closure (b61). 32D=Hermitian half, same label-separation.",
+      "n_encodable_labels": 5,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI",
+        "NA"
+      ],
+      "log2_capacity": 2.322,
+      "codeword_dmin": 0.0,
+      "closest_pair": [
+        "MI",
+        "NA"
+      ],
+      "correction_radius": 0.0,
+      "accuracy": 0.746,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.74,
+        "NA": 0.0
+      },
+      "MI_bits": 1.6259,
+      "NMI": 0.7597,
+      "AMI": 0.6979,
+      "ARI": 0.6866,
+      "silhouette": 0.5503,
+      "confusion": {
+        "MI->MI": 74,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->MI": 88,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 9,
+        "MI->T": 2,
+        "NA->I": 3,
+        "MI->I": 2,
+        "T->F": 1
+      }
+    },
+    "TSC_TECC_table": {
+      "name": "TSC_TECC_table",
+      "dims": 8,
+      "note": "urb_630 5-valued code, LITERAL table (B42: DT/TF collinear -> weak EC).",
+      "n_encodable_labels": 5,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI",
+        "NA"
+      ],
+      "log2_capacity": 2.322,
+      "codeword_dmin": 0.496,
+      "closest_pair": [
+        "F",
+        "MI"
+      ],
+      "correction_radius": 0.248,
+      "accuracy": 0.922,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.74,
+        "NA": 0.88
+      },
+      "MI_bits": 1.9469,
+      "NMI": 0.8412,
+      "AMI": 0.8368,
+      "ARI": 0.8266,
+      "silhouette": 0.7759,
+      "confusion": {
+        "MI->MI": 74,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->NA": 88,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 1,
+        "NA->MI": 8,
+        "NA->I": 3,
+        "MI->I": 2,
+        "T->F": 1,
+        "MI->NA": 1,
+        "MI->T": 1
+      }
+    },
+    "TSC_TECC_orthogonal": {
+      "name": "TSC_TECC_orthogonal",
+      "dims": 8,
+      "note": "urb_630 5-valued code, ORTHOGONAL embedding (all 5 on distinct axes).",
+      "n_encodable_labels": 5,
+      "encodable": [
+        "T",
+        "F",
+        "I",
+        "MI",
+        "NA"
+      ],
+      "log2_capacity": 2.322,
+      "codeword_dmin": 1.0303,
+      "closest_pair": [
+        "F",
+        "MI"
+      ],
+      "correction_radius": 0.5151,
+      "accuracy": 0.922,
+      "per_label_recall": {
+        "T": 0.99,
+        "F": 1.0,
+        "I": 1.0,
+        "MI": 0.74,
+        "NA": 0.88
+      },
+      "MI_bits": 1.9446,
+      "NMI": 0.8423,
+      "AMI": 0.8358,
+      "ARI": 0.818,
+      "silhouette": 0.7857,
+      "confusion": {
+        "MI->MI": 74,
+        "I->I": 100,
+        "T->T": 99,
+        "NA->NA": 88,
+        "MI->F": 22,
+        "F->F": 100,
+        "NA->F": 9,
+        "NA->I": 3,
+        "MI->I": 2,
+        "T->F": 1,
+        "MI->NA": 1,
+        "MI->T": 1
+      }
+    }
+  },
+  "robustness": {
+    "scalar_PD_1D": {
+      "1_raters": 0.7424,
+      "3_raters": 0.7486,
+      "5_raters": 0.754,
+      "9_raters": 0.755
+    },
+    "complex_PD_2D": {
+      "1_raters": 0.9214,
+      "3_raters": 0.9495,
+      "5_raters": 0.9674,
+      "9_raters": 0.9819
+    },
+    "TIG_graph": {
+      "1_raters": 0.7424,
+      "3_raters": 0.7583,
+      "5_raters": 0.7735,
+      "9_raters": 0.7865
+    },
+    "GILE_matrix_64D": {
+      "1_raters": 0.745,
+      "3_raters": 0.7667,
+      "5_raters": 0.7763,
+      "9_raters": 0.7893
+    },
+    "TSC_TECC_table": {
+      "1_raters": 0.9214,
+      "3_raters": 0.9676,
+      "5_raters": 0.9827,
+      "9_raters": 0.9936
+    },
+    "TSC_TECC_orthogonal": {
+      "1_raters": 0.9214,
+      "3_raters": 0.9661,
+      "5_raters": 0.9811,
+      "9_raters": 0.9926
+    }
+  },
+  "continuous_pd_crosscheck": {
+    "F": {
+      "n": 64,
+      "mean_PD": -2.01,
+      "sd": 0.195
+    },
+    "I": {
+      "n": 65,
+      "mean_PD": 0.148,
+      "sd": 0.569
+    },
+    "MI": {
+      "n": 61,
+      "mean_PD": -2.597,
+      "sd": 0.596
+    },
+    "NA": {
+      "n": 9,
+      "mean_PD": -1.815,
+      "sd": 0.448
+    },
+    "T": {
+      "n": 70,
+      "mean_PD": 1.957,
+      "sd": 0.318
+    }
+  }
+}
