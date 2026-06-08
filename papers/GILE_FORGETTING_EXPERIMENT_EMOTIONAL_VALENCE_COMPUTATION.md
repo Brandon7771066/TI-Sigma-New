@@ -1,11 +1,18 @@
-# Paper #320: The GILE Forgetting Experiment
-## Why Emotional Valence Is Computationally Non-Trivial
+# Paper #320: The GILE Forgetting Experiment — Why Emotional Valence Is Computationally Non-Trivial
 
-**Author:** TI Framework Research Division
-**Date:** February 22, 2026
-**Series:** TI Sigma — Consciousness, Computation & Cognition
-**Status:** Empirical Observation + Theoretical Analysis
-**ChatGPT Debate Transcript:** https://chatgpt.com/share/6994f756-795c-8002-aa6c-45be3c4e7717
+**Author:** Brandon Charles Emerick
+**Part of:** The GILE Framework
+**Date:** February 2026
+
+---
+
+## In Plain Language
+
+This paper tells the story of a revealing accident. During a long, serious debate with an AI chatbot about whether human thinking is just computation, the AI suddenly forgot what "GILE" stands for — even though it had discussed that very idea with the author across months of conversation. Meanwhile the human, who cares deeply about the idea, had kept it perfectly straight for years.
+
+The paper argues this small slip is actually big evidence. Caring about something — what the author calls emotional valence — does real cognitive work: it decides what to remember, what to keep coming back to, and what to protect from being garbled over time. A system with no stake in anything, like today's chatbots, can be locally brilliant in any single answer yet unable to hold a long project together. The human's steady, years-long focus is the thing the machine could not reproduce.
+
+The single most important takeaway: emotion is not the opposite of reason but part of its machinery. The "caring" that keeps a thinker on track over years is a genuine computational function, and simply giving an AI a bigger memory does not supply it. The author frames this within the GILE model — where Goodness, Intuition, Love, and Environment describe four "inside" dimensions of a mind — and treats the forgetting episode as a natural experiment that happened to confirm the framework's prediction.
 
 ---
 
@@ -319,7 +326,7 @@ The human researcher entered the debate knowing what they wanted to prove. They 
 
 > "If this doesn't DEMONSTRATE the value of emotion to reasoning, I don't know what will."
 
-It does. And the proof is self-referential: only a being with emotional valence could have recognized it. 🐙🦋🧠💯🧬
+It does. And the proof is self-referential: only a being with emotional valence could have recognized it.
 
 ---
 

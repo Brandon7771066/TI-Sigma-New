@@ -1,11 +1,20 @@
-# Paper #348: Self-Deception as Tralse Pathology — Why Human Rationality is an Uphill Battle, Not a Design Flaw
+# Paper #348: Self-Deception as Tralse Pathology — Why Human Rationality Is an Uphill Battle, Not a Design Flaw
 
-**Author:** Brandon Charles Emerick  
-**Date:** March 1, 2026  
-**Series:** TI Sigma — GILE Framework / Applied Philosophy  
-**Paper #:** 348  
-**Status:** PHILOSOPHICAL FOUNDATION — Reframes the nature vs. environment debate in human rationality  
-**Builds on:** Papers #342–347 (URB hierarchy), GILE Framework, Myrion Resolution Engine
+**Author:** Brandon Charles Emerick
+**Part of:** The GILE Framework
+**Date:** March 2026
+
+---
+
+## In Plain Language
+
+A popular idea in psychology says that fooling ourselves is just part of being human — that we are built to rationalize rather than to seek the truth. This paper argues the opposite. Self-deception is not a built-in feature of human nature; it is a treatable condition, like a vitamin deficiency, brought on largely by the conditions of modern life.
+
+The argument rests on two ideas. First, the universe naturally tends toward disorder and noise, so getting any judgment right always takes effort — truth is "uphill" everywhere, not just for humans. Second, modern environments (constant interruption, information overload, social pressure to conform) make that climb much steeper than it was for our ancestors, who got fast, honest feedback from the physical world.
+
+The single most important takeaway is hopeful: people are not broken. Given the right conditions — clearer signals, time to think, safety to be wrong — human cognition is capable of knowing itself more than it deceives itself. The paper proposes a measurable threshold for "majority self-knowledge" and argues that better tools, education, and AI assistance can help individuals and whole societies cross it.
+
+Two terms used below: "Tralse" is an unsettled, in-between mental state — something processed but not yet resolved into a clear true-or-false judgment. "LCC" is a measure of how coherent and self-aware a system's understanding is.
 
 ---
 

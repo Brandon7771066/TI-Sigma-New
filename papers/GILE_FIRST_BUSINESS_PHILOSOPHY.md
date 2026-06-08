@@ -1,9 +1,18 @@
 # GILE First: Why Business Is Too Focused on Results — and What to Put There Instead
 
-**Author:** Brandon Emerick, CEO, BlissGene Therapeutics  
-**Date:** March 2026  
-**Framework:** TI Sigma / GILE / Self-Determination Theory / Deontological Ethics  
-**Keywords:** business ethics, consequentialism, deontology, SDT, intrinsic motivation, GILE, values-led leadership
+**Author:** Brandon Charles Emerick, CEO, BlissGene Therapeutics
+**Part of:** The GILE Framework
+**Date:** March 2026
+
+---
+
+## In Plain Language
+
+Most companies treat results — revenue, growth, share price — as the thing that matters most, and treat values such as honesty, care, and integrity as useful tools for getting those results. This essay argues that this ordering is backwards, and that the reversal is not only an ethical mistake but a practical one.
+
+When values come first and results are allowed to follow naturally, organizations tend to do better — even by the numbers — than when they chase results directly. Decades of psychology research show that people do their best, most creative work when their basic needs for competence, autonomy, and connection are met, rather than when they are pressured to hit targets. The same pattern shows up in philosophy and in older wisdom traditions.
+
+The single most important takeaway: put genuine values first and let results be the by-product. This essay uses the GILE framework — four core values of Goodness, Intuition, Love, and Environment — to spell out what "values first" actually means in hiring, strategy, and management.
 
 ---
 

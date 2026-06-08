@@ -1,10 +1,20 @@
-# The GILE Psychometric Battery — Complete Item Bank
-## Validated Measurement Instruments for G, I, L, and E Dimensions
+# The GILE Psychometric Battery: Complete Item Bank
 
-**Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)
-**Date:** April 7, 2026
-**Status:** Draft v1.0 — Item Bank (pending factor analysis)
-**Related URBs:** #576 (GILE Weights), #586 (Emerick Threshold), #589 (Empirical Intuition Test), #612 (Revised GILE–Existence), #614 (Empirical Predictions), #615 (PD/MR/EAR Pillars)
+Validated measurement instruments for the G, I, L, and E dimensions.
+
+**Author:** Brandon Charles Emerick, BlissGene Therapeutics
+**Part of:** The GILE Framework
+**Date:** April 2026
+
+---
+
+## In Plain Language
+
+This document is a questionnaire toolkit for measuring four human qualities at the heart of the GILE framework: Goodness (genuine moral motivation), Intuition (how accurately a person knows themselves and others), Love (conscious, informed care for a specific person), and Existence/Aesthetics (the ability to recognize genuine quality and structure). Together these four are abbreviated GILE.
+
+Each quality is measured with a short set of agree/disagree statements rated on a 1-to-7 scale, plus a few hands-on tasks that check the self-reports against real behavior. The scores are combined into a single overall number between 0 and 1 using fixed weights, and the document explains how to read that number and how the four qualities relate to one another.
+
+The key idea: these are draft instruments meant to be tested and refined, not a finished diagnostic. They are offered so that researchers can pilot them, run the statistics, and see whether the four dimensions hold up as distinct, measurable traits.
 
 ---
 
@@ -25,7 +35,7 @@ This battery provides scored psychometric items for each of the four GILE dimens
 
 ---
 
-## SECTION 1: GILE-G (Goodness Orientation) — 12 Items
+## Section 1: GILE-G (Goodness Orientation) — 12 Items
 
 **Construct:** Genuine moral motivation — doing good because it is good, not for reward, reputation, or social pressure. G is the directional anchor of the inner loops.
 
@@ -67,7 +77,7 @@ This battery provides scored psychometric items for each of the four GILE dimens
 
 ---
 
-## SECTION 2: GILE-I (Knowing / Intuition) — 12 Items
+## Section 2: GILE-I (Knowing / Intuition) — 12 Items
 
 **Construct:** The value of genuinely knowing self and others — the pre-evidential apprehension faculty. I is the epistemic backbone; its accuracy and directedness determine whether L can be activated. Items cover both self-knowing and other-knowing, and the pre-evidential dimension.
 
@@ -112,7 +122,7 @@ Ask participants to rate 5 close others on 10 trait scales. Collect third-party 
 
 ---
 
-## SECTION 3: GILE-L (Love / Conscious Positive Regard) — 10 Items
+## Section 3: GILE-L (Love / Conscious Positive Regard) — 10 Items
 
 **Construct:** Conscious positive regard directed toward a specific person or group. L requires I > 0 (I→L dependency, Prediction 1). Items test whether the positive regard is conscious and directed (GILE-L) vs. automatic/habitual (Physical Bonds, HEM-D2). Items must be read in the context of a specific target person (participant specifies one person before answering).
 
@@ -146,7 +156,7 @@ Ask participants to rate 5 close others on 10 trait scales. Collect third-party 
 
 ---
 
-## SECTION 4: GILE-E (Aesthetics / Structural Recognition) — 10 Items
+## Section 4: GILE-E (Aesthetics / Structural Recognition) — 10 Items
 
 **Construct:** Recognition of structural excellence — the ability to perceive genuine quality, elegance, and coherence in any domain. E is the entire Aesthetics axis: the abstract substance of environment. Items distinguish aesthetic recognition (structural) from hedonic preference (pleasure-seeking).
 
@@ -181,7 +191,7 @@ Present 10 stimuli in a domain familiar to the participant (e.g., 10 mathematica
 
 ---
 
-## SECTION 5: Dependency and Composite Scoring
+## Section 5: Dependency and Composite Scoring
 
 ### 5.1 I→L Dependency Check (Prediction 1)
 After administering all sections:
@@ -224,7 +234,7 @@ Spectre condition: LxE_asymmetry < 0.10 AND L_plus_E > 0.80 (both high AND balan
 
 ---
 
-## SECTION 6: Administration Notes
+## Section 6: Administration Notes
 
 **Total time:** ~20–25 minutes for all four scales + behavioral supplements.
 

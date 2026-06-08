@@ -1,7 +1,18 @@
 # The Dual Identity: How the GILE Truth Threshold (0.92) and the CHSH/LCC Causation Threshold (0.85) Are Connected Through a Squaring Relationship
 
-**Brandon Emerick**
-**February 2026**
+**Author:** Brandon Charles Emerick
+**Part of:** The GILE Framework
+**Date:** February 2026
+
+---
+
+## In Plain Language
+
+This paper notices a striking numerical coincidence and asks whether it is more than a coincidence. The framework uses two important cutoff numbers: one near 0.92, which marks when a claim is solid enough to count as real knowledge ("truth"), and one near 0.85, which marks when a correlation between two systems is strong enough to count as a genuine causal link ("existence"). The observation is simply that 0.92 multiplied by itself is 0.8464, which rounds to 0.85.
+
+If that relationship is real rather than accidental, it suggests a tidy idea: existence is "truth applied to itself." Squaring shows up naturally in physics — for example, in quantum mechanics the probability of an outcome is the square of an underlying amplitude — so a square-root link between a "truth" number and an "existence" number has real precedent. The paper also notes that the value 0.85 turns up independently in brain-synchronization studies, heart-rate-variability research, and the math of a famous quantum-physics test, which makes the number harder to dismiss.
+
+The single most important takeaway is honesty about status: the arithmetic is a fact, but the interpretation is a hypothesis. The author is explicit that the match is close but not exact (0.8464 versus 0.8500), labels every claim as established, observed, proposed, or speculative, and offers a way the relationship could be made exact if the true truth threshold is slightly higher than 0.92. This document uses 0.92 throughout because its central arithmetic depends on that value; readers should note that elsewhere in the GILE framework the stability cap on the truth/"Radiant" threshold is approximately 0.9323, and the two are not in conflict — 0.92 is the working figure for this specific squaring argument.
 
 ---
 

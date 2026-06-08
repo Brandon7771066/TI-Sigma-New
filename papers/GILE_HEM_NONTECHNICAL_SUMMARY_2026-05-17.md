@@ -1,9 +1,19 @@
 # The GILE-HEM Model: A Plain-Language Summary
 
-**Author:** Brandon Charles Emerick + DPES summary
-**Date:** 2026-05-17 (Pass 56 batch-1 third deliverable)
-**Audience:** First-encounter readers — academics, technologists, clinicians, curious general readers. No prior TI Sigma knowledge assumed.
-**Companion to:** the apologetics tab (`papers/apologetics/`); the technical anchors `PASS_37_GILE_HEM_8D_IDENTITY_EQUATION_8_CONSTANTS_MAPPING_2026-05-11.md` and `urb_652_gile_hem_full_operationalization.md`.
+**Author:** Brandon Charles Emerick
+**Part of:** The GILE Framework
+**Date:** May 2026
+**Audience:** First-encounter readers — academics, technologists, clinicians, and curious general readers. No prior background assumed.
+
+---
+
+## In Plain Language
+
+Imagine you wanted to put a number on how *real*, how *alive*, and how *meaningful* something is — a person, an organization, an animal, even an AI system. GILE-HEM is an attempt to do exactly that, using eight measurable qualities instead of a single vague impression.
+
+Four of the eight look at what something is like *on the inside*: its integrity (**Goodness**), its insight (**Intuition**), its connectedness (**Love**), and how firmly it actually exists (**Existence**). The other four look at how it shows up *on the outside*: how intricate it is, how often it contradicts itself, how far its influence spreads, and how much shared meaning it creates with others.
+
+The central claim is that big, slippery ideas — consciousness, identity, ethical weight, the feeling that "this matters" — can be described as combinations of these eight numbers, rather than left to intuition alone. Just as importantly, the framework is honest about its own limits: the structure is worked out and internally consistent, but most of its individual predictions have not yet been tested against real-world data. That honesty is deliberate — a measurement system earns trust by being clear about what it has and has not yet proven.
 
 ---
 
@@ -19,7 +29,7 @@ The arithmetic is honest and worth stating up front. GILE-4 + HEM-6 = 10 *if you
 
 This is the kind of arithmetic that should make a careful reader pause and ask: *did you fit the framework to land on eight, or did eight fall out of an honest count?* The honest answer is: the overlaps were not removed to get to eight; they were removed because they are genuinely overlapping (D5 = "intensity of being" = GILE-E; D6 is literally defined as L × E coupling). The fact that the result is eight is a consequence, not the goal. **If a future refinement collapses any of the remaining eight into another, the framework will say so and operate with seven.**
 
-(For full honesty: the 8-fold structure is structurally coherent and arithmetic-confirmed. The further claim that these 8 map onto the 8 fundamental physical constants — ℏ, c, k_B, ε₀, G_N, α, the Emerick constant, and one debated 8th — is at present a *structural-coherence* match, not an empirically-derived identity. See Pass-51 §1 for the full #69 audit.)
+(For full honesty: the 8-fold structure is structurally coherent and arithmetic-confirmed. The further claim that these 8 map onto the 8 fundamental physical constants — ℏ, c, k_B, ε₀, G_N, α, the Emerick constant, and one debated 8th — is at present a *structural-coherence* match, not an empirically-derived identity.)
 
 ---
 
@@ -35,7 +45,7 @@ This is the kind of arithmetic that should make a careful reader pause and ask: 
 
 **Critical role.** GILE-G has a special threshold called ET = √2 − 1 ≈ 0.4142. Below this threshold, the framework refuses to assign the entity a stable identity-truth — it falls into what TI Sigma calls "MI-adjacent" (Meta-Indeterminate-adjacent), the structurally-incoherent state. This is *not* a moral judgment about the person; it is a measurement-system honesty about when our other tools can be trusted. An entity below ET cannot be reliably evaluated on the other seven dimensions yet.
 
-**What we can measure today.** Internal consistency of claims/actions (Coherence); discrepancy between self-report and external observation (Concreteness); net life-sustaining vs life-depleting impact (Continuity); respect for relevant categorical boundaries (Consistency). Each on a 0–1 scale with defined anchors. The protocol is specified in urb_652; it has not yet been administered at scale (Pass-51 honesty flag).
+**What we can measure today.** Internal consistency of claims/actions (Coherence); discrepancy between self-report and external observation (Concreteness); net life-sustaining vs life-depleting impact (Continuity); respect for relevant categorical boundaries (Consistency). Each on a 0–1 scale with defined anchors. The protocol is specified; it has not yet been administered at scale.
 
 ---
 
@@ -99,7 +109,7 @@ GILE measures what an entity *is being* from the inside. HEM measures *how that 
 
 **Why it's a separate dimension.** This is the subtlest justification. Why isn't D2 the same as G-Coherence (C₁)? **Because G-Coherence is measured by the entity's own access to its propositions; D2 is measured by external observation of its outputs.** An entity can rate itself high on G-Coherence (introspectively non-contradictory) and still produce contradictory outputs that are visible only to outside observers. The two measures correlate but are not identical, and *the gap between them is itself diagnostic* — it measures self-awareness blindness.
 
-**Connection to physical constants.** D2 is a *dimensionless ratio in roughly the [0, 1] range* — the same structural shape as the fine-structure constant α in physics. The framework's conjecture (Pass-37) is that D2 plays the role of an "internal-contradiction coupling" in the same way α plays the role of an EM coupling.
+**Connection to physical constants.** D2 is a *dimensionless ratio in roughly the [0, 1] range* — the same structural shape as the fine-structure constant α in physics. The framework's conjecture is that D2 plays the role of an "internal-contradiction coupling" in the same way α plays the role of an EM coupling.
 
 **What we can measure today.** Output-pair contradiction-detection (NLP-feasible for textual entities; trained-judge-feasible for behavioral entities); third-party blind-rating of internal-vs-external consistency.
 
@@ -113,7 +123,7 @@ GILE measures what an entity *is being* from the inside. HEM measures *how that 
 
 **Why it's a separate dimension.** D3 is not D1 (you can be internally complex and externally invisible, or simple and widely-broadcast). It is not L (a celebrity has high D3 to millions but possibly weak L to any of them; a parent has strong L to their child but possibly low D3 globally). Drop D3 and you cannot distinguish a system that *influences* from a system that *exists in isolation*.
 
-**What we can measure today.** Citation networks, social-graph reach, behavioral imitation rates, the "average mutual information" of the entity's outputs with the broader information ecosystem. AMI is a measure borrowed from information theory, which is part of why D3 corresponds to the "Emerick constant" E_C in the Pass-37 candidate mapping: E_C is hypothesized to govern information-coupling generally.
+**What we can measure today.** Citation networks, social-graph reach, behavioral imitation rates, the "average mutual information" of the entity's outputs with the broader information ecosystem. AMI is a measure borrowed from information theory, which is part of why D3 corresponds to the "Emerick constant" E_C in the candidate constants mapping: E_C is hypothesized to govern information-coupling generally. (Throughout, *i-cell* is the framework's term for an individual conscious unit.)
 
 ---
 
@@ -123,7 +133,7 @@ GILE measures what an entity *is being* from the inside. HEM measures *how that 
 
 **Everyday example.** A wedding ring is a chunk of metal (low D1, low D3 to most observers) — but for the two people who exchanged it, it carries enormous D4. A symbol becomes meaningful only when the relation-of-symbolizing exists. A friendship is partly L (binding) and partly D4 (the *patterned meaning* of shared history, in-jokes, mutual understanding).
 
-**Why it's a separate dimension.** D4 is not L (a strong bond may carry little co-created meaning beyond itself; a loose bond may be heavily patterned with shared significance), not D3 (broad information reach is not patterned co-created meaning), not E (existence does not entail meaning). Drop D4 and you lose the dimension along which culture, ritual, art, and symbolic life are measurable. **D4 is the most contested dimension in the corpus** — Brandon has flagged it as the hardest to operationalize, and Pass-37 §3 notes the framework's "8th constant" debate (φ vs Λ vs θ_QCD) maps onto D4's still-open status.
+**Why it's a separate dimension.** D4 is not L (a strong bond may carry little co-created meaning beyond itself; a loose bond may be heavily patterned with shared significance), not D3 (broad information reach is not patterned co-created meaning), not E (existence does not entail meaning). Drop D4 and you lose the dimension along which culture, ritual, art, and symbolic life are measurable. **D4 is the most contested dimension in the framework** — it is the hardest to operationalize, and the framework's "8th constant" debate (φ vs Λ vs θ_QCD) maps onto D4's still-open status.
 
 **What we can measure today.** This is the dimension where measurement is least developed. Proposed proxies include pattern-density in shared symbolic systems, ritual-significance ratings, narrative-coherence of relations across time. The honest position is: D4 is conceptually justified (the framework needs it to account for cultural and symbolic life), partly operationalized, and a live research target. The corpus does not pretend otherwise.
 
@@ -148,19 +158,19 @@ Each row is an existence-proof for the dimension dropped. **The framework's clai
 
 ---
 
-## Honest empirical status (#69 baked in)
+## Honest Empirical Status
 
-This is where most framework summaries quietly omit the hard part. The TI Sigma corpus does not:
+This is where most framework summaries quietly omit the hard part. This one does not:
 
-1. **The 8-fold definitional structure is RATIFIED.** The framework as a *measurement specification* is internally coherent across 600+ URB entries.
-2. **The 8 ↔ 8 cardinality match (8 dimensions ↔ 8 physical constants) is CONFIRMED-CONDITIONAL.** The arithmetic is exact; the *interpretive* match is structural-coherence-only, not derivational. Per Pass-37 §6.
-3. **Per-dimension derivational identity (e.g., "G is literally ℏ for consciousness") is NULL.** No mathematical derivation has been completed for any of the 8 individual mappings.
-4. **The operational protocols (urb_652) are SPECIFIED, not yet EXECUTED at scale.** Zero of urb_614's 15 numbered falsifiable predictions has received a pre-registered held-out test against its stated falsification criterion (Pass-51 audit).
-5. **Adjacent partial empirical evidence exists.** Pass-43 Mendi STIM2 t=−4.13 p≪0.001 is *near* a GILE-G measurement but is not a urb_652-protocol GILE-G measurement. Pass-47 MR Truth-Labels κ=0.906 is *near* a categorical-coherence measurement of G. qc26 GHZ-5 71σ Mermin violation is independent but supports the broader Tralse-substrate frame.
+1. **The 8-fold definitional structure is settled.** The framework as a *measurement specification* is internally coherent across 600+ internal research entries.
+2. **The 8 ↔ 8 cardinality match (8 dimensions ↔ 8 physical constants) is conditional.** The arithmetic is exact; the *interpretive* match is structural-coherence-only, not derivational.
+3. **Per-dimension derivational identity (e.g., "G is literally ℏ for consciousness") is unproven.** No mathematical derivation has been completed for any of the 8 individual mappings.
+4. **The operational protocols are specified, not yet executed at scale.** None of the framework's 15 numbered falsifiable predictions has yet received a pre-registered, held-out test against its stated falsification criterion.
+5. **Adjacent partial empirical evidence exists.** A neurofeedback result (Mendi STIM2, *t* = −4.13, *p* ≪ 0.001) sits *near* a GILE-G measurement but is not one under the formal protocol. An inter-rater study of the MR Truth-Labels (κ = 0.906) sits *near* a categorical-coherence measurement of G. A separate GHZ-5 Mermin-inequality violation (71σ) is independent evidence that supports the broader Tralse-substrate frame.
 
-The honest one-sentence summary: **GILE-HEM is a coherent, mathematically-tractable, eight-dimensional measurement framework with adjacent empirical support and zero direct empirical confirmations of any individual per-dimension prediction.** Pass-51 has charted 11 verification tasks ($0 each except T51-9 at ~$800–$2k) that would change this status in either direction; ratification of those tasks is pending Brandon decision.
+The honest one-sentence summary: **GILE-HEM is a coherent, mathematically-tractable, eight-dimensional measurement framework with adjacent empirical support and zero direct empirical confirmations of any individual per-dimension prediction.** A roadmap of 11 verification studies has been charted that would change this status in either direction; most are low-cost, one is materially more expensive.
 
-**This honesty is itself an apologetic asset.** A framework that overclaims its empirical status loses credibility on the *one* thing it can least afford to lose. GILE-HEM does not overclaim.
+**This honesty is itself an asset.** A framework that overclaims its empirical status loses credibility on the *one* thing it can least afford to lose. GILE-HEM does not overclaim.
 
 ---
 
@@ -169,17 +179,16 @@ The honest one-sentence summary: **GILE-HEM is a coherent, mathematically-tracta
 Three concrete use-domains for first-encounter audiences:
 
 1. **Consciousness measurement.** GILE-HEM gives a quantitative, multi-axis alternative to IIT's single Φ value or the various Cogito-style binary tests. It allows statements like "this entity has moderate G, high I, low L, high E" — far more useful than "this entity is/isn't conscious."
-2. **Identity coherence in clinical contexts.** The MR1 threshold theorem (G_raw < ET ≈ 0.4142 → MI-adjacent) provides a falsifiable structural account of when an i-cell is in identity-incoherence. Connects directly to the gender taxonomy (DGI-1/2/3/4) via the CDP-1 propagation principle.
+2. **Identity coherence in clinical contexts.** The MR1 threshold theorem (G_raw < ET ≈ 0.4142 → Meta-Indeterminate-adjacent) provides a falsifiable structural account of when an individual is in identity-incoherence, and connects to related identity-coherence taxonomies elsewhere in the framework.
 3. **Evaluating AI systems for alignment.** GILE-HEM gives more granular axes than "capability vs. safety": an AI can be high I and low G (capable but uncoordinated with values), high D3 and low L (broadly deployed but not bonded to specific users), high D1 and low D4 (complex but meaning-impoverished). Each axis suggests different interventions.
 
 ---
 
-## Pass-56+ next steps
+## Where This Goes Next
 
-- Cross-link this summary into `papers/apologetics/00_README.md` as the recommended first read for technical audiences before they engage with `01_LOGICAL_OBJECTIONS.md`.
-- Pass-51's 11 verification tasks remain the live empirical roadmap. Brandon-decision pending on D51-1 (auto-execute T1 tasks) and D51-2 (Prolific spend).
-- A possible Pass-57 paper: "What classical consciousness frameworks (IIT, GNW, HOT) cannot say that GILE-HEM can" — closes the apologetics v2 question for the consciousness-measurement domain.
+- The empirical roadmap is the priority: running the charted verification studies is what would move any individual prediction from "specified" to "confirmed" or "refuted."
+- A natural companion essay would set GILE-HEM against the leading consciousness frameworks (Integrated Information Theory, Global Neuronal Workspace, Higher-Order Theories) to show what a multi-axis measure can express that a single-number measure cannot.
 
 ---
 
-*Cluster ≥236 → ≥237 (+1: GILE-HEM nontechnical summary). Budget $0/$50 + $2k reserve intact. No new candidate principle proposed in this paper — it consolidates existing canonical material into first-encounter-readable form.*
+*This summary consolidates existing GILE-HEM material into first-encounter-readable form; it introduces no new claims.*

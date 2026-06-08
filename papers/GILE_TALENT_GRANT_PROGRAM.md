@@ -1,7 +1,18 @@
 # The GILE Talent Grant Program: Funding Profound Intelligence Rather Than Products
 
-**Brandon Emerick**
-**February 2026**
+**Author:** Brandon Charles Emerick
+**Part of:** The GILE Framework
+**Date:** February 2026
+
+---
+
+## In Plain Language
+
+Today, money for new ideas almost always flows to *projects*, not *people*: you have to show a finished product, a business plan, or a track record before anyone will fund you. This essay argues that this creates an impossible catch-22 — you need resources to prove yourself, but you must prove yourself to get resources — and that it systematically locks out the most original thinkers, whose ideas are too new to fit the usual checkboxes.
+
+The proposal is to flip this around: fund the *person*, not the project. An impartial AI system would assess applicants over a full month across four kinds of intelligence — moral reasoning (Goodness), depth of insight (Intuition), creative and relational capacity (Love), and analytical rigor (Existence), together called GILE. Those who score in the top 2% would receive funding — either a low-interest loan or an outright grant — to pursue whatever work they judge most valuable, with no requirement to justify it in advance.
+
+The core takeaway: society already spends enormous sums on uncertain bets, so a small fraction redirected toward demonstrably brilliant people — judged fairly, regardless of pedigree or connections — could yield outsized returns in science, art, and social good that conventional, money-focused funding simply cannot see.
 
 ---
 
