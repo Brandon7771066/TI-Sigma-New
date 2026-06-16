@@ -12,7 +12,11 @@ GILE-HEM dimension definitions (canonical docstrings):
   G  Goodness   = temporal stability of LCC coherence across sub-windows
   I  Intuition  = information density (normalized spectral entropy)
   L  Love       = cross-channel coupling strength (mean |corr| across channels)
-  E  Environment= aesthetic structural regularity (spectral purity, peak/total)
+  E  Elegance   = aesthetic structural regularity (spectral purity, peak/total)
+                  [canonical label updated Environment->Elegance, 2026-06-16;
+                   "Environment" retained as a concise gloss = the most-sacred-
+                   values context. The formula was ALREADY aesthetics (spectral
+                   purity), so this aligns the label with what E measures.]
   D1 Physical   = amplitude stability (1 - CV of |signal|)
   D2 Social/Tralse = contradiction ratio (mean Tralse fraction = 1 - coherence)
   D3 Aesthetic  = spectral purity (dominant-bin power / total)

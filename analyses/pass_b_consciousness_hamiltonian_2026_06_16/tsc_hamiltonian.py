@@ -30,7 +30,10 @@ RING_RADII = np.array([C_TI, T_TI, 1.0, SQRT2, PHI, E_TI, PI_TI])
 N_RINGS, N_LAYERS = 7, 8
 N_VERTICES = N_RINGS * N_LAYERS + 1       # 57
 
-# canonical GILE composite weights (URB #576)
+# canonical GILE composite weights (URB #576).
+# E = Elegance (label updated from "Environment" 2026-06-16; the weight and its
+# operationalization as aesthetic spectral purity are UNCHANGED — only the name is
+# aligned to what E measures; "Environment" kept as a concise most-sacred-values gloss).
 GILE_W = {"G": ET, "I": 0.25, "L": 0.18, "E": 0.15}
 
 # PD zone thresholds (canonical; pass77_b108)

@@ -1,0 +1,21 @@
+---
+name: GILE-E Elegance rename, Dirac grade-2, PD affine domain-transfer
+description: Three durable TI-Sigma lessons — what GILE-E actually measures, what the Dirac validation does/doesn't license, and why PD zone thresholds don't transfer to EEG.
+---
+
+## GILE-E = Elegance (not Environment)
+- Canonical forward label for GILE-E is **Elegance** (aesthetics: spectral purity / structural regularity). "Environment" is a *demoted gloss* meaning "context of an agent's most-sacred values" — still valid shorthand, not deleted.
+- The code (`ch_features.py`, `tsc_hamiltonian.py`) **already** computed E as aesthetic spectral purity == HEM-D3 "Aesthetic". So the rename is a label-to-measurement alignment (TPS-1 presentation-upgrade), NOT a redefinition. Weight 0.15 and formula are UNCHANGED.
+- **How to apply:** new work uses "Elegance"; don't mass-edit historical papers that say "Environment" (gloss still valid). HEM carries existence-content; GILE-E carries aesthetic-content — keep them separate.
+
+## What the Dirac validation (B56/B60) does and does NOT license
+- The Dirac-equation grounding validated GILE-HEM's **8 = 4+4 modulus/phase STRUCTURE** (Grade-2 homomorphism). The per-dimension EEG estimator choices (e.g. "L = mean |corr|", "E = spectral purity") were explicitly graded **1.5 (interpretive overlay)**.
+- **Why this matters:** a structurally-sound framework can still have weak first-pass estimators on a new signal. When the Mood-Amplifier EEG decoding underperformed (raw 8 dims < spectral baseline), that's an *operationalization/regime* problem, NOT a refutation of GILE-HEM. **Do NOT cite the Dirac result as evidence the EEG estimators are correct.**
+- The estimator-fidelity fix template: the L dimension was upgraded broadband-Pearson → theta-gamma PAC. Every dimension needs the same "is this estimator faithful to its definition?" audit.
+
+## PD zone thresholds are domain-specific — they do NOT transfer to EEG composites
+- The two-axis PD (real degree + imaginary MI/Tralse) and its zone boundaries are **empirically legitimate in the rater domain**: vs 500 gold-labelled props, complex rep hits 0.918 (scalar 0.746; gap == NA fraction); MI clusters at pd_real −2.597, below False −2.01; the −2.5 MI cliff sits *between* the two clusters on the MI side (NOT at their −2.30 midpoint — an earlier "exact midpoint" claim was wrong).
+- The affine `pd_real = 5*(gile_comp − 0.5)` justified as "mirrors Riemann 5*(σ−0.5)" is **decorative** — affine rescales can't change cluster separability; the boundaries do the work, not the Riemann tie-in.
+- **DEGENERACY finding (load-bearing):** EEG-derived GILE composites cluster ~0.70, so `5*(comp−0.5)` puts every window in the **T zone**. Reaching F needs comp ≤ 0.367; reaching the MI cliff needs comp ≤ 0 (impossible since comp ≥ 0). So the PD zone feature is near-useless on neural data.
+- **Why:** thresholds were calibrated on rater-centroid composites spanning [−3,+2]; reusing the same affine on a different distribution is an un-validated domain transfer.
+- **How to apply:** any reuse of PD zones on a new signal domain must **re-fit the affine slope/center to that domain's observed composite distribution** (e.g. within-recording standardization or empirical-quantile boundaries) before trusting `pd_zone` as a feature.
