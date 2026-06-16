@@ -1,0 +1,684 @@
+{
+  "sources": [
+    {
+      "label": "sim(seed=0)",
+      "source": "sim",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 319,
+      "n_train": 191,
+      "n_test": 128,
+      "n_states": 3,
+      "fs": 250.0,
+      "n_obs_channels": 4,
+      "class_balance_test": [
+        53,
+        0,
+        75
+      ],
+      "results": [
+        {
+          "operator": "P0_passive_resonance",
+          "bal_acc": 0.3904402515723271,
+          "ci95": [
+            0.3083242528019925,
+            0.4649691098321235
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        {
+          "operator": "P0b_nearest_centroid_matched",
+          "bal_acc": 0.8401257861635221,
+          "ci95": [
+            0.7777318098240085,
+            0.9021349846980705
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        {
+          "operator": "O1_cross_attention",
+          "bal_acc": 0.8739622641509435,
+          "ci95": [
+            0.8120302971383864,
+            0.9284490425767682
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4838084122204029,
+          "delta_ci95": [
+            0.3854705174089784,
+            0.5840495591889636
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.03398822472292818,
+          "delta_matched_ci95": [
+            -0.04545682045682052,
+            0.1164576587795765
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O2_hopfield_descent",
+          "bal_acc": 0.8012578616352202,
+          "ci95": [
+            0.7294226433160366,
+            0.8704550438596491
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4108324800476608,
+          "delta_ci95": [
+            0.3081667980036774,
+            0.5098726391811498
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.03771857154037565,
+          "delta_matched_ci95": [
+            -0.12011160714285715,
+            0.044916269179257076
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O3_reverse_osmosis",
+          "bal_acc": 0.8106918238993711,
+          "ci95": [
+            0.739363038428521,
+            0.8815388281469022
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4233903836047398,
+          "delta_ci95": [
+            0.308960843373494,
+            0.5314489432136491
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.02854707221495817,
+          "delta_matched_ci95": [
+            -0.10701471708321017,
+            0.05435552719591622
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O4_tisigma_active_inference",
+          "bal_acc": 0.7918238993710691,
+          "ci95": [
+            0.7191142551930635,
+            0.8578325865036501
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.399258546932492,
+          "delta_ci95": [
+            0.27928104941035975,
+            0.5111303053970067
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.04851174545306034,
+          "delta_matched_ci95": [
+            -0.13150388438017394,
+            0.03596755393873963
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C1_ensemble_vote",
+          "bal_acc": 0.8079245283018868,
+          "ci95": [
+            0.7400476193024113,
+            0.8715474699091132
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4134796626234339,
+          "delta_ci95": [
+            0.30917776000370933,
+            0.5207682276369275
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.03244214552017458,
+          "delta_matched_ci95": [
+            -0.11757146040234269,
+            0.050871989852252976
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C2_O4_xattn_prior",
+          "bal_acc": 0.8778616352201258,
+          "ci95": [
+            0.8116212824842856,
+            0.9316942955100851
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4877333454313117,
+          "delta_ci95": [
+            0.3869411677333246,
+            0.5812003968253967
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.03687018500183778,
+          "delta_matched_ci95": [
+            -0.04201709990216187,
+            0.10940163128930815
+          ],
+          "beats_matched": false
+        }
+      ]
+    },
+    {
+      "label": "sim(seed=7)",
+      "source": "sim",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 319,
+      "n_train": 191,
+      "n_test": 128,
+      "n_states": 3,
+      "fs": 250.0,
+      "n_obs_channels": 4,
+      "class_balance_test": [
+        69,
+        59,
+        0
+      ],
+      "results": [
+        {
+          "operator": "P0_passive_resonance",
+          "bal_acc": 0.26099238516335055,
+          "ci95": [
+            0.19683822537112008,
+            0.3272820034240531
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        {
+          "operator": "P0b_nearest_centroid_matched",
+          "bal_acc": 0.597150577253746,
+          "ci95": [
+            0.5148608390100113,
+            0.6786797911933455
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        {
+          "operator": "O1_cross_attention",
+          "bal_acc": 0.49778924097273397,
+          "ci95": [
+            0.4326869658119658,
+            0.5623125
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.23595864488916238,
+          "delta_ci95": [
+            0.1351982470604252,
+            0.3378170376749661
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.09961760397443806,
+          "delta_matched_ci95": [
+            -0.19148923992673997,
+            -0.003156512605042022
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O2_hopfield_descent",
+          "bal_acc": 0.5463031196266274,
+          "ci95": [
+            0.4651761593431109,
+            0.6241868977020014
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.2842821371674895,
+          "delta_ci95": [
+            0.17881706846334694,
+            0.3869295634920635
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.05229790319059872,
+          "delta_matched_ci95": [
+            -0.1545648222427571,
+            0.054610330568939956
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O3_reverse_osmosis",
+          "bal_acc": 0.6853352984524687,
+          "ci95": [
+            0.613852459674828,
+            0.7595504585020714
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4242142999103779,
+          "delta_ci95": [
+            0.3155244411692459,
+            0.5262029961140082
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.08743645718519528,
+          "delta_matched_ci95": [
+            -0.0043988269794721395,
+            0.18913937988988694
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O4_tisigma_active_inference",
+          "bal_acc": 0.7349545566199951,
+          "ci95": [
+            0.6640512099726255,
+            0.8028322963636152
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.46946056508383255,
+          "delta_ci95": [
+            0.35368815998341485,
+            0.571097712297889
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.1388346473885375,
+          "delta_matched_ci95": [
+            0.05575787469461404,
+            0.23443667763157888
+          ],
+          "beats_matched": true
+        },
+        {
+          "operator": "C1_ensemble_vote",
+          "bal_acc": 0.6853352984524687,
+          "ci95": [
+            0.6120339428588308,
+            0.7600290073340298
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4245505501345476,
+          "delta_ci95": [
+            0.3124831989247312,
+            0.5225102762336804
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.08837086029583864,
+          "delta_matched_ci95": [
+            -0.006796846611142574,
+            0.18055637058892987
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C2_O4_xattn_prior",
+          "bal_acc": 0.6731761238025056,
+          "ci95": [
+            0.6120656181412419,
+            0.7340310026915197
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.4106975663966871,
+          "delta_ci95": [
+            0.3178416771657911,
+            0.5046553312279118
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": 0.07700804173378809,
+          "delta_matched_ci95": [
+            -0.011158052489923086,
+            0.16695498651143814
+          ],
+          "beats_matched": false
+        }
+      ]
+    },
+    {
+      "label": "DANDI:000003/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+      "source": "dandi-cache",
+      "latent_kind": "cross-group k-means fit on TRAIN-ONLY group A; test labeled by nearest train centroid (label-free)",
+      "n_windows": 143,
+      "n_train": 85,
+      "n_test": 58,
+      "n_states": 3,
+      "fs": 250.0,
+      "n_obs_channels": 4,
+      "class_balance_test": [
+        28,
+        28,
+        2
+      ],
+      "results": [
+        {
+          "operator": "P0_passive_resonance",
+          "bal_acc": 0.3928571428571428,
+          "ci95": [
+            0.1851771436448856,
+            0.6037239250744998
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        {
+          "operator": "P0b_nearest_centroid_matched",
+          "bal_acc": 0.5238095238095238,
+          "ci95": [
+            0.44871794871794873,
+            0.8339442744755245
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        {
+          "operator": "O1_cross_attention",
+          "bal_acc": 0.48809523809523814,
+          "ci95": [
+            0.41268157130226096,
+            0.7824519230769231
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.12957178068750128,
+          "delta_ci95": [
+            -0.1346099537037036,
+            0.44186363636363624
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.03966541086580281,
+          "delta_matched_ci95": [
+            -0.12346102971102965,
+            0.03943431510051429
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O2_hopfield_descent",
+          "bal_acc": 0.4761904761904762,
+          "ci95": [
+            0.39440476190476187,
+            0.7599163679808841
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.1304911568766076,
+          "delta_ci95": [
+            -0.14328444543961782,
+            0.44392513848159004
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.05211025009289399,
+          "delta_matched_ci95": [
+            -0.14756571087216255,
+            0.025739583333333153
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O3_reverse_osmosis",
+          "bal_acc": 0.5119047619047619,
+          "ci95": [
+            0.4419182206682206,
+            0.8154595740281223
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.1572604430463779,
+          "delta_ci95": [
+            -0.11543209876543219,
+            0.49404761904761907
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.011876214151310264,
+          "delta_matched_ci95": [
+            -0.08611268939393942,
+            0.06897375684917399
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O4_tisigma_active_inference",
+          "bal_acc": 0.46428571428571425,
+          "ci95": [
+            0.3836800595238095,
+            0.7595260989010989
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.10972126991395714,
+          "delta_ci95": [
+            -0.1717171717171717,
+            0.4483189655172413
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.0641425802499406,
+          "delta_matched_ci95": [
+            -0.16488312295465177,
+            0.023577620967741984
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C1_ensemble_vote",
+          "bal_acc": 0.5,
+          "ci95": [
+            0.4237746305418719,
+            0.792897439148073
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.15102470229497367,
+          "delta_ci95": [
+            -0.13179075235109716,
+            0.47115384615384615
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.025133807073931046,
+          "delta_matched_ci95": [
+            -0.10147714604236349,
+            0.04957341269841264
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C2_O4_xattn_prior",
+          "bal_acc": 0.48809523809523814,
+          "ci95": [
+            0.41313932980599644,
+            0.7908653846153846
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.13480089289995933,
+          "delta_ci95": [
+            -0.14584911616161614,
+            0.4655172413793104
+          ],
+          "beats_passive": false,
+          "delta_vs_matched": -0.03877032032028039,
+          "delta_matched_ci95": [
+            -0.10683801617709675,
+            0.03336206896551721
+          ],
+          "beats_matched": false
+        }
+      ]
+    },
+    {
+      "label": "DANDI:000003/sub-YutaMouse20_ses-YutaMouse20-140327_behavior+ecephys.nwb",
+      "source": "dandi-cache",
+      "latent_kind": "cross-group k-means fit on TRAIN-ONLY group A; test labeled by nearest train centroid (label-free)",
+      "n_windows": 143,
+      "n_train": 85,
+      "n_test": 58,
+      "n_states": 3,
+      "fs": 250.0,
+      "n_obs_channels": 4,
+      "class_balance_test": [
+        15,
+        33,
+        10
+      ],
+      "results": [
+        {
+          "operator": "P0_passive_resonance",
+          "bal_acc": 0.4858585858585858,
+          "ci95": [
+            0.34249853937676433,
+            0.6185225318197455
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        {
+          "operator": "P0b_nearest_centroid_matched",
+          "bal_acc": 0.9131313131313131,
+          "ci95": [
+            0.8231791856791857,
+            0.9901960784313726
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        {
+          "operator": "O1_cross_attention",
+          "bal_acc": 0.7575757575757575,
+          "ci95": [
+            0.6200054466230936,
+            0.8767128804383706
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.2677562673777481,
+          "delta_ci95": [
+            0.04251163038314748,
+            0.4650616305788719
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.15368823130155185,
+          "delta_matched_ci95": [
+            -0.27711516424751714,
+            -0.02268699437817098
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O2_hopfield_descent",
+          "bal_acc": 0.8353535353535353,
+          "ci95": [
+            0.7173722051544633,
+            0.935312415288696
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.34721854638139515,
+          "delta_ci95": [
+            0.1666305916305916,
+            0.5258342731829573
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.08107201892037906,
+          "delta_matched_ci95": [
+            -0.1794871794871794,
+            0.027777777777777794
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O3_reverse_osmosis",
+          "bal_acc": 0.8696969696969697,
+          "ci95": [
+            0.7411593614718616,
+            0.9649561403508772
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.39154171850434255,
+          "delta_ci95": [
+            0.19370791245791247,
+            0.5795811891274685
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.04347831191227654,
+          "delta_matched_ci95": [
+            -0.12339891975308653,
+            0.0
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "O4_tisigma_active_inference",
+          "bal_acc": 0.8464646464646465,
+          "ci95": [
+            0.7432840722495896,
+            0.9553869047619047
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.357040323971229,
+          "delta_ci95": [
+            0.14629629629629637,
+            0.5682814276241
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.06655643056776958,
+          "delta_matched_ci95": [
+            -0.16666666666666663,
+            0.0
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C1_ensemble_vote",
+          "bal_acc": 0.8797979797979799,
+          "ci95": [
+            0.7761834733893557,
+            0.9814939939939941
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.39343215909536866,
+          "delta_ci95": [
+            0.2107230392156862,
+            0.5920370370370369
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.03246128008701538,
+          "delta_matched_ci95": [
+            -0.11111111111111116,
+            0.0
+          ],
+          "beats_matched": false
+        },
+        {
+          "operator": "C2_O4_xattn_prior",
+          "bal_acc": 0.8686868686868688,
+          "ci95": [
+            0.7410185185185185,
+            0.9666795366795368
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_passive": 0.38102187743700167,
+          "delta_ci95": [
+            0.17676419863919857,
+            0.5632180471967058
+          ],
+          "beats_passive": true,
+          "delta_vs_matched": -0.04312018415422441,
+          "delta_matched_ci95": [
+            -0.16666666666666663,
+            0.06202380952380942
+          ],
+          "beats_matched": false
+        }
+      ]
+    }
+  ]
+}
