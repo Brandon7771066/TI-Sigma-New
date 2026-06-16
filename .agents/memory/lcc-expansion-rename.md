@@ -17,7 +17,8 @@ keep appearing because always-on workflows regenerate papers, so expect to re-ru
 ## Two buckets — the load-bearing distinction
 1. **Drift of the core coupling measure → RENAME.** Any L-C-C backronym naming the
    consciousness/coherence/correlation/coupling/connection/causation measure
-   (e.g. Luminated/Living/Local/Latent/Layered Consciousness Correlation/Coupling,
+   (e.g. Luminated/Living/Local/Latent/Layered/Lateral Consciousness/Coherence Correlation/Coupling
+      ("Lateral Coherence Coupling" straggler in master index + ti_website.py, fixed 2026-06-16),
    Love-/Light-/Loving- variants, Limbic-Cortical Coherence, Logic/Life Coherence
    Coefficient, Lead-Correlation-Causation, Locally Coupled Consciousness, etc.).
 2. **Categorically different concept that merely abbreviates LCC → PRESERVE.** Renaming

@@ -5037,7 +5037,7 @@ elif page == "__app_catalog__":
 
     catalog = [
         ("🩺 Biometric & Brain Coupling", [
-            ("LCC Sleep Protocol", "lcc_optimization_simulator.py", "Lateral Coherence Coupling protocol applied to sleep-state optimization. Targets HRV-EEG coupling during NREM."),
+            ("LCC Sleep Protocol", "lcc_optimization_simulator.py", "Law of Correlational Causation protocol applied to sleep-state optimization. Targets HRV-EEG coupling during NREM."),
             ("LCC Attractor Visualization", "lcc_on_agent_trajectories.py", "Phase-space attractor visualization for LCC trajectories on agent timeseries (PNG export included)."),
             ("Heart Pong LCC", "heart_icell_theory.py", "Heart-rate-driven Pong control surface; LCC-coupled paddle position. Demo of cardiac→motor coupling."),
             ("Heart Disease Dashboard", "biometric_dashboard.py", "Risk-stratification dashboard using HRV, RMSSD, SDNN; GILE-weighted composite score."),

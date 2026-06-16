@@ -665,3 +665,9 @@ id = "fb55djhNweema2DA_vzKn"
 uri = "file://papers/PLAIN_LANGUAGE_LCC_VIRUS_TRALSE_JOULES_COMPLETE_2026-06-16.md"
 type = "text"
 title = "The LCC, the LCC Virus, and Tralse-Joules — Everything We Know, in Plain Language"
+
+[[outputs]]
+id = "wvy4H_ngLxCdAD0tumUiz"
+uri = "file://papers/TI_SIGMA_CORPUS_COMPLETE_OVERVIEW_2026-06-16.md"
+type = "text"
+title = "TI Sigma Corpus — Complete Overview (Theories, Concepts & Abbreviations)"
