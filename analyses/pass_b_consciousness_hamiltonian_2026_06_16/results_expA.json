@@ -1,0 +1,292 @@
+{
+  "sources": [
+    {
+      "label": "sim(seed=0)",
+      "source": "sim",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 319,
+      "n_train": 191,
+      "n_test": 128,
+      "n_states": 3,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 29,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 52
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.8401257861635221,
+          "ci95": [
+            0.7717654813739718,
+            0.9045685998464182
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        "GILEHEM": {
+          "bal_acc": 0.749559748427673,
+          "ci95": [
+            0.6707427045812354,
+            0.8234347147950088
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": -0.0935836585753691,
+          "delta_ci95": [
+            -0.1937965458126749,
+            0.0077686938229107145
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.9128301886792454,
+          "ci95": [
+            0.858286943319838,
+            0.9600965419982345
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.0725828831828109,
+          "delta_ci95": [
+            0.005868108548089344,
+            0.1432064234925482
+          ],
+          "beats_base": true
+        },
+        "BASE+CH": {
+          "bal_acc": 0.910062893081761,
+          "ci95": [
+            0.8560367185367185,
+            0.955758985164628
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.06977231623630033,
+          "delta_ci95": [
+            0.006314564236868939,
+            0.12833225911360505
+          ],
+          "beats_base": true
+        }
+      }
+    },
+    {
+      "label": "sim(seed=7)",
+      "source": "sim",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 319,
+      "n_train": 191,
+      "n_test": 128,
+      "n_states": 3,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 29,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 52
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.597150577253746,
+          "ci95": [
+            0.5159660966981131,
+            0.6769237645879657
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        "GILEHEM": {
+          "bal_acc": 0.6128715303365266,
+          "ci95": [
+            0.5312451879361125,
+            0.6908608771651041
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.012534019474063398,
+          "delta_ci95": [
+            -0.10019967903101473,
+            0.11661892029539091
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.7386391549987719,
+          "ci95": [
+            0.6685125072296124,
+            0.8125113993710692
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.14137648986034423,
+          "delta_ci95": [
+            0.04828622299537596,
+            0.23453993718699595
+          ],
+          "beats_base": true
+        },
+        "BASE+CH": {
+          "bal_acc": 0.7725374600835175,
+          "ci95": [
+            0.7010866910866911,
+            0.8397798459594453
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.1773748322561166,
+          "delta_ci95": [
+            0.1015485947327044,
+            0.2536709461456273
+          ],
+          "beats_base": true
+        }
+      }
+    },
+    {
+      "label": "DANDI:000003/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+      "source": "dandi",
+      "latent_kind": "TRAIN-ONLY k-means on disjoint group A; test=nearest train centroid",
+      "n_windows": 143,
+      "n_train": 85,
+      "n_test": 58,
+      "n_states": 3,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 29,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 52
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.5238095238095238,
+          "ci95": [
+            0.4458069507429908,
+            0.8341352872670807
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        "GILEHEM": {
+          "bal_acc": 0.38095238095238093,
+          "ci95": [
+            0.16332430213464696,
+            0.594874634367404
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.18120012159742538,
+          "delta_ci95": [
+            -0.5289847926566678,
+            0.0932365591397849
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.6785714285714285,
+          "ci95": [
+            0.4680023331447964,
+            0.7569452996715929
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": 0.10489159630901712,
+          "delta_ci95": [
+            -0.30815453355255157,
+            0.24056776556776555
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.5,
+          "ci95": [
+            0.4160149248367639,
+            0.8012128607809845
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": -0.025351861808374725,
+          "delta_ci95": [
+            -0.09223305676178659,
+            0.03448874521072798
+          ],
+          "beats_base": false
+        }
+      }
+    },
+    {
+      "label": "DANDI:000003/sub-YutaMouse20_ses-YutaMouse20-140327_behavior+ecephys.nwb",
+      "source": "dandi",
+      "latent_kind": "TRAIN-ONLY k-means on disjoint group A; test=nearest train centroid",
+      "n_windows": 143,
+      "n_train": 85,
+      "n_test": 58,
+      "n_states": 3,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 29,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 52
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.9131313131313131,
+          "ci95": [
+            0.8118971342031688,
+            0.9907407407407408
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        "GILEHEM": {
+          "bal_acc": 0.494949494949495,
+          "ci95": [
+            0.3299198010382221,
+            0.6343739341130232
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.4183852910950343,
+          "delta_ci95": [
+            -0.5736111111111111,
+            -0.25049465388007064
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.5555555555555555,
+          "ci95": [
+            0.3981651688453159,
+            0.703494487134193
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": -0.35852995237242496,
+          "delta_ci95": [
+            -0.5250346632710811,
+            -0.19433076814955363
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.8242424242424242,
+          "ci95": [
+            0.7018269579673089,
+            0.933392857142857
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true,
+          "delta_vs_base": -0.09025348779146701,
+          "delta_ci95": [
+            -0.20351364522417162,
+            0.0
+          ],
+          "beats_base": false
+        }
+      }
+    }
+  ]
+}

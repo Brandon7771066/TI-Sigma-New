@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "label": "DANDI:000003/sub-YutaMouse41_ses-YutaMouse41-150829_behavior+ecephys.nwb",
+      "source": "dandi-cache",
+      "n_windows": 143,
+      "n_states": 3,
+      "mean_gile_L_per_state": [
+        0.4908,
+        0.5319,
+        0.4989
+      ],
+      "target_state": 1,
+      "target_reachable_from_all": true,
+      "stationary_target_prob": 0.4286,
+      "mean_first_passage_to_target": {
+        "1": 0.0,
+        "0": 3.01,
+        "2": 3.21
+      },
+      "spectral_gap_mixing": 0.6271
+    },
+    {
+      "label": "DANDI:000003/sub-YutaMouse20_ses-YutaMouse20-140327_behavior+ecephys.nwb",
+      "source": "dandi-cache",
+      "n_windows": 143,
+      "n_states": 3,
+      "mean_gile_L_per_state": [
+        0.4363,
+        0.4832,
+        0.5094
+      ],
+      "target_state": 2,
+      "target_reachable_from_all": true,
+      "stationary_target_prob": 0.1727,
+      "mean_first_passage_to_target": {
+        "2": 0.0,
+        "0": 10.43,
+        "1": 13.73
+      },
+      "spectral_gap_mixing": 0.366
+    }
+  ]
+}
