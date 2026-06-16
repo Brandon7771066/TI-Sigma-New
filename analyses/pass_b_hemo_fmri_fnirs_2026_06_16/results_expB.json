@@ -1,0 +1,100 @@
+{
+  "modality": "hemodynamic (BOLD/fNIRS-class)",
+  "target_state": 2,
+  "n_states": 3,
+  "n_seeds": 30,
+  "n_steps": 120,
+  "burn": 30,
+  "open_loop_const_u": 0.16711317823742622,
+  "g_setpoint_target": 0.9657333521446135,
+  "g_setpoint_wrong": 0.6401620678589698,
+  "arms": {
+    "no_control": {
+      "occ_mean": 0.31999999999999995,
+      "occ_ci95": [
+        0.2636944444444444,
+        0.37703703703703706
+      ],
+      "kl_mean": 0.636696996181565,
+      "energy_mean": 0.0
+    },
+    "closed_loop": {
+      "occ_mean": 0.8170370370370371,
+      "occ_ci95": [
+        0.8007407407407409,
+        0.8329629629629629
+      ],
+      "kl_mean": 0.020016457819943344,
+      "energy_mean": 23.724533954489587
+    },
+    "open_loop": {
+      "occ_mean": 0.9288888888888885,
+      "occ_ci95": [
+        0.9174074074074071,
+        0.9396296296296293
+      ],
+      "kl_mean": 0.08132718885201268,
+      "energy_mean": 23.724533954489576
+    },
+    "sham": {
+      "occ_mean": 0.3166666666666667,
+      "occ_ci95": [
+        0.28036111111111106,
+        0.35444444444444445
+      ],
+      "kl_mean": 0.583551457758261,
+      "energy_mean": 23.724533954489587
+    },
+    "wrong_tgt": {
+      "occ_mean": 0.2396296296296296,
+      "occ_ci95": [
+        0.18592592592592594,
+        0.29259259259259257
+      ],
+      "kl_mean": 0.9206865628709751,
+      "energy_mean": 19.706486929623686
+    }
+  },
+  "contrasts": {
+    "efficacy vs baseline": {
+      "a": "closed_loop",
+      "b": "no_control",
+      "delta_occ": 0.49703703703703705,
+      "ci95": [
+        0.44518518518518513,
+        0.5462962962962963
+      ],
+      "significant": true
+    },
+    "phase specificity": {
+      "a": "closed_loop",
+      "b": "sham",
+      "delta_occ": 0.5003703703703704,
+      "ci95": [
+        0.4611111111111111,
+        0.537037037037037
+      ],
+      "significant": true
+    },
+    "target specificity": {
+      "a": "closed_loop",
+      "b": "wrong_tgt",
+      "delta_occ": 0.5774074074074075,
+      "ci95": [
+        0.5277777777777778,
+        0.6233333333333333
+      ],
+      "significant": true
+    },
+    "value of feedback (equal energy)": {
+      "a": "closed_loop",
+      "b": "open_loop",
+      "delta_occ": -0.11185185185185187,
+      "ci95": [
+        -0.12814814814814815,
+        -0.09703703703703705
+      ],
+      "significant": true
+    }
+  }
+}

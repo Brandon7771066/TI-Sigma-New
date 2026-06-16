@@ -1,0 +1,301 @@
+{
+  "sources": [
+    {
+      "label": "sim-fMRI-BOLD(seed=0)",
+      "source": "sim",
+      "modality": "fMRI-BOLD",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 185,
+      "n_train": 111,
+      "n_test": 74,
+      "n_states": 3,
+      "fs": 1.0,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 21,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 44
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.32779009608277904,
+          "ci95": [
+            0.21985802565707133,
+            0.43031781226903176
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        "GILEHEM": {
+          "bal_acc": 0.19696969696969696,
+          "ci95": [
+            0.11425115207373272,
+            0.2833333333333333
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.12714941728993157,
+          "delta_ci95": [
+            -0.26986337440381564,
+            0.010271942985746414
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.28898743532889876,
+          "ci95": [
+            0.19483908201315034,
+            0.38950768111150014
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.04008781668723104,
+          "delta_ci95": [
+            -0.16814692982456136,
+            0.09871156202590729
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.20953436807095344,
+          "ci95": [
+            0.1197459972061036,
+            0.3080601385909916
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.11966494556489812,
+          "delta_ci95": [
+            -0.21624641687141688,
+            -0.027104247104247123
+          ],
+          "beats_base": false
+        }
+      }
+    },
+    {
+      "label": "sim-fMRI-BOLD(seed=7)",
+      "source": "sim",
+      "modality": "fMRI-BOLD",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 185,
+      "n_train": 111,
+      "n_test": 74,
+      "n_states": 3,
+      "fs": 1.0,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 21,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 44
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.6930614825351666,
+          "ci95": [
+            0.5740360516676306,
+            0.8031633637225741
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": true
+        },
+        "GILEHEM": {
+          "bal_acc": 0.2803329645434908,
+          "ci95": [
+            0.191348858256753,
+            0.38800322927568576
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.41162686669946935,
+          "delta_ci95": [
+            -0.5468683378738098,
+            -0.25201930014430013
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.22622622622622623,
+          "ci95": [
+            0.15885599415204676,
+            0.3017213171818434
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.46674800744160894,
+          "delta_ci95": [
+            -0.5884683402346446,
+            -0.347275273071421
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.41797060218112847,
+          "ci95": [
+            0.3124673663324979,
+            0.5217107555474051
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.2775783093150045,
+          "delta_ci95": [
+            -0.38160426190949454,
+            -0.16760866722995718
+          ],
+          "beats_base": false
+        }
+      }
+    },
+    {
+      "label": "sim-fNIRS(seed=0)",
+      "source": "sim",
+      "modality": "fNIRS",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 160,
+      "n_train": 96,
+      "n_test": 64,
+      "n_states": 3,
+      "fs": 10.0,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 21,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 44
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.2916666666666667,
+          "ci95": [
+            0.20311444256756755,
+            0.37038530465949815
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        "GILEHEM": {
+          "bal_acc": 0.2738095238095238,
+          "ci95": [
+            0.17216589742451813,
+            0.3875538793103448
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.02010924511275122,
+          "delta_ci95": [
+            -0.13314123376623377,
+            0.1009990526714665
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.23412698412698413,
+          "ci95": [
+            0.13490980875108663,
+            0.33865041544477026
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.05913416415553263,
+          "delta_ci95": [
+            -0.1791840786901271,
+            0.059968836811360615
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.28174603174603174,
+          "ci95": [
+            0.18938882063882065,
+            0.3665713587487781
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.01196526920048381,
+          "delta_ci95": [
+            -0.10528309409888356,
+            0.0886699507389162
+          ],
+          "beats_base": false
+        }
+      }
+    },
+    {
+      "label": "sim-fNIRS(seed=7)",
+      "source": "sim",
+      "modality": "fNIRS",
+      "latent_kind": "ground-truth (simulated)",
+      "n_windows": 160,
+      "n_train": 96,
+      "n_test": 64,
+      "n_states": 3,
+      "fs": 10.0,
+      "n_obs_channels": 4,
+      "feature_dims": {
+        "BASE": 21,
+        "GILEHEM": 8,
+        "CH": 23,
+        "BASE+CH": 44
+      },
+      "sets": {
+        "BASE": {
+          "bal_acc": 0.17777777777777778,
+          "ci95": [
+            0.11108333333333333,
+            0.24469590525893214
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false
+        },
+        "GILEHEM": {
+          "bal_acc": 0.08888888888888889,
+          "ci95": [
+            0.03998684210526316,
+            0.14634146341463414
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.08768863076337134,
+          "delta_ci95": [
+            -0.16279069767441862,
+            -0.013496188496188513
+          ],
+          "beats_base": false
+        },
+        "CH": {
+          "bal_acc": 0.12631578947368421,
+          "ci95": [
+            0.056818181818181816,
+            0.21794871794871795
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.054550711819211506,
+          "delta_ci95": [
+            -0.13955528355773156,
+            0.03576010191310562
+          ],
+          "beats_base": false
+        },
+        "BASE+CH": {
+          "bal_acc": 0.1,
+          "ci95": [
+            0.04542929292929293,
+            0.16279069767441862
+          ],
+          "chance": 0.3333333333333333,
+          "above_chance": false,
+          "delta_vs_base": -0.07652815395963677,
+          "delta_ci95": [
+            -0.1320899114362726,
+            -0.024375725900116153
+          ],
+          "beats_base": false
+        }
+      }
+    }
+  ],
+  "live_retrieved": false
+}
