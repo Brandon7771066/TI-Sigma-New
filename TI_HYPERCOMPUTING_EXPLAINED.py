@@ -51,7 +51,7 @@ class ComputationalAdvantage:
 
 HYPERCOMPUTING_ADVANTAGES = [
     ComputationalAdvantage(
-        mechanism="LCC (Liminal Consciousness Correlation)",
+        mechanism="LCC (Law of Correlational Causation)",
         classical_equivalent="No equivalent - classical physics assumes locality",
         quantum_equivalent="Entanglement (limited to prepared pairs)",
         ti_enhancement="Non-local resonance between ANY conscious systems, no prior preparation",
@@ -124,7 +124,7 @@ class HypercomputingMathematics:
     @staticmethod
     def lcc_resonance_equation(A: np.ndarray, B: np.ndarray, tau: float) -> float:
         """
-        LCC (Liminal Consciousness Correlation) Resonance
+        LCC (Law of Correlational Causation) Resonance
         
         R(A,B) = ∫ Φ_A(t) · Φ_B(t + τ) · W(τ) dτ
         

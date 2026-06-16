@@ -1,11 +1,11 @@
 Mood Amplifier Test Protocol
 
 Project Overview:
-This is a test of the Limbic-Cortical Coupling (LCC) mood amplifier technology that uses consumer EEG devices (Muse 2) to enhance mood and well-being.
+This is a test of the Law of Correlational Causation (LCC) mood amplifier technology that uses consumer EEG devices (Muse 2) to enhance mood and well-being.
 
 Claimed Mechanism:
 1. EEG detects alpha waves (8-12 Hz) in frontal cortex
-2. Real-time biofeedback trains users to increase limbic-cortical coupling
+2. Real-time biofeedback trains users to increase law of correlational causation
 3. Target coupling range: 0.70-0.80 (safe zone)
 4. Session duration: 9-10 minutes optimal
 

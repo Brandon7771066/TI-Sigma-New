@@ -304,7 +304,7 @@ with tabs[3]:
     - Beta waves (13-30 Hz)
     - Gamma waves (30-100 Hz) - smallest scale
     
-    **LCC (Limbic Correlational Connection)** can be understood as 
+    **LCC (Law of Correlational Causation)** can be understood as 
     cross-scale coherence in this fractal hierarchy.
     """)
     

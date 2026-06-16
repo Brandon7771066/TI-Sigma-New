@@ -70,7 +70,7 @@ Optimized LCC → Alpha-theta synchrony
 
 **Standard LCC (for mood):**
 ```
-↑ Limbic-cortical coupling → Better mood regulation
+↑ Law of Correlational Causation → Better mood regulation
 ```
 
 **Mystical LCC (new protocol):**

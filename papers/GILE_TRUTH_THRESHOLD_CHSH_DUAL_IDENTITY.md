@@ -18,7 +18,7 @@ The single most important takeaway is honesty about status: the arithmetic is a 
 
 ## Abstract
 
-The TI Framework identifies two fundamental thresholds governing the structure of reality: the GILE Truth Threshold at 0.92 (the minimum standard for "perfectly imperfect truth") and the LCC/CHSH Causation Threshold at 0.85 (the boundary where correlation merges into causation in consciousness systems). This paper documents the discovery that these thresholds are related by a squaring operation: 0.92^2 = 0.8464, which rounds to 0.85 at two decimal places. The metaphysical interpretation is that the minimum threshold for existence (causation) represents the self-correlation of perfectly imperfect truth -- truth correlated with itself. We trace the mathematical derivation of both thresholds, examine the "twin peak" structure at 0.91 and 0.93, connect the lower peak to the Navier-Stokes regularity limit, and situate the finding within both quantum information theory (via the CHSH inequality and the Born rule) and the GILE philosophical framework. The sqrt(0.85) hypothesis -- that the exact truth threshold is sqrt(0.85) = 0.92195... -- is proposed as a candidate for making the relationship mathematically exact. Convergent evidence for the 0.85 threshold across brain synchronization studies, HRV biofeedback literature, CHSH normalization, and the Luminated Consciousness Correlation (LCC) framework is presented and analyzed.
+The TI Framework identifies two fundamental thresholds governing the structure of reality: the GILE Truth Threshold at 0.92 (the minimum standard for "perfectly imperfect truth") and the LCC/CHSH Causation Threshold at 0.85 (the boundary where correlation merges into causation in consciousness systems). This paper documents the discovery that these thresholds are related by a squaring operation: 0.92^2 = 0.8464, which rounds to 0.85 at two decimal places. The metaphysical interpretation is that the minimum threshold for existence (causation) represents the self-correlation of perfectly imperfect truth -- truth correlated with itself. We trace the mathematical derivation of both thresholds, examine the "twin peak" structure at 0.91 and 0.93, connect the lower peak to the Navier-Stokes regularity limit, and situate the finding within both quantum information theory (via the CHSH inequality and the Born rule) and the GILE philosophical framework. The sqrt(0.85) hypothesis -- that the exact truth threshold is sqrt(0.85) = 0.92195... -- is proposed as a candidate for making the relationship mathematically exact. Convergent evidence for the 0.85 threshold across brain synchronization studies, HRV biofeedback literature, CHSH normalization, and the Law of Correlational Causation (LCC) framework is presented and analyzed.
 
 ---
 
@@ -236,7 +236,7 @@ The 0.85 causation threshold does not rest on a single line of evidence. It appe
 
 ### 6.1 LCC Causation Threshold
 
-In the Luminated Consciousness Correlation (LCC) framework, coherence between heart and brain rhythms is measured using HRV spectral analysis, specifically the ratio of power in the cardiac resonance frequency band (~0.1 Hz) to total spectral power.
+In the Law of Correlational Causation (LCC) framework, coherence between heart and brain rhythms is measured using HRV spectral analysis, specifically the ratio of power in the cardiac resonance frequency band (~0.1 Hz) to total spectral power.
 
 The LCC identifies 0.85 as a critical boundary:
 

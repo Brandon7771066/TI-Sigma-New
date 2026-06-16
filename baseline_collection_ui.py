@@ -1292,7 +1292,7 @@ def render_baseline_collection_ui():
         st.header("🌟 Step 2: Optimize Your LCC Protocol")
         
         st.markdown("""
-        Now that we have your baseline, let's find the PERFECT Light-Consciousness Coupling protocol
+        Now that we have your baseline, let's find the PERFECT Law of Correlational Causation protocol
         personalized for YOUR unique biology + genome!
         """)
         

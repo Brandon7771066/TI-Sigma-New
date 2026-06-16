@@ -1065,7 +1065,7 @@ loadAttractors();
 
 
 async def api_lcc_handler(request):
-    """Calculate LCC (Love Consciousness Connection) proxy."""
+    """Calculate LCC (Law of Correlational Causation) proxy."""
     key_data, error = await validate_api_key(request)
     if error:
         return error

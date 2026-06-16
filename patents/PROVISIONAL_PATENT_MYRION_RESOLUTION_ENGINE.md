@@ -56,7 +56,7 @@ The Myrion Resolution Engine (MRE) is a computer-implemented system and method f
 
 1. **Encoding** any input data stream into a four-valued Tralsebit representation using the Primary Constant threshold hierarchy
 2. **Classifying** each encoded element into one of four truth values: True (T), False (F), Indeterminate (I), or Tralse (V)
-3. **Resolving** Tralse states through a deterministic multi-phase process (the Myrion Resolution) governed by the Love-Consciousness Coefficient (LCC) and its four physically-derived threshold constants
+3. **Resolving** Tralse states through a deterministic multi-phase process (the Myrion Resolution) governed by the Law of Correlational Causation (LCC) and its four physically-derived threshold constants
 4. **Outputting** a resolved truth value and associated confidence score that is usable for decision support, AI inference, biometric health assessment, and financial signal generation
 
 The key insight enabling this invention: while Myrion Resolution is a natural process (analogous to how crystal formation is a natural process), its *precise computation* — including threshold determination, phase classification, trajectory tracking, and output generation — requires the specific software architecture described herein. Just as a thermometer does not merely describe temperature (a natural phenomenon) but enables precise measurement and decision-making, the Myrion Resolution Engine does not merely describe epistemic resolution but enables precise computation of it.
@@ -114,10 +114,10 @@ where PHI = (1+√5)/2 (the golden ratio, Level 5 PRIMARY constant) scales the c
 
 **Claim B.1:** The specific use of φ (golden ratio) as the compression coefficient in Tralsebit encoding, producing outputs that align with the PRIMARY constant threshold hierarchy, is a novel and non-obvious element of this invention.
 
-### C. The Love-Consciousness Coefficient (LCC) Computation
+### C. The Law of Correlational Causation (LCC) Computation
 
 **Method C.1 (LCC Computation):**  
-The Love-Consciousness Coefficient of a system state s at time t is:
+The Law of Correlational Causation of a system state s at time t is:
 
 ```
 LCC(s, t) = (L_score(s,t) × E_score(s,t)) / (G_score(s,t) × I_score(s,t) + ε)
@@ -207,7 +207,7 @@ A self_deception_score > LCC_TRALSE (0.4142) indicates a clinically significant 
 **Claim 1.** A computer-implemented method for computing truth-value resolution comprising:
 - (a) receiving input data representing a physical, cognitive, or informational state;
 - (b) encoding said input into a Tralsebit representation using φ-scaled hyperbolic tangent compression;
-- (c) computing a Love-Consciousness Coefficient (LCC) value for the encoded representation;
+- (c) computing a Law of Correlational Causation (LCC) value for the encoded representation;
 - (d) classifying the LCC value against a hierarchy of physically-derived threshold constants comprising √2−1, 1/√2, (√10+3√2−4)/4, and √(e/π);
 - (e) assigning one of four truth-value states {True, False, Indeterminate, Tralse} based on said classification;
 - (f) tracking the temporal trajectory of LCC across said truth-value states;
@@ -238,14 +238,14 @@ A self_deception_score > LCC_TRALSE (0.4142) indicates a clinically significant 
 
 ## ABSTRACT
 
-A computer-implemented system and method for computing epistemic truth-value resolution using a four-valued logic framework (Tralse Logic) and a physically-derived threshold hierarchy. The system encodes inputs into Tralsebit representations using golden-ratio-scaled compression, computes a Love-Consciousness Coefficient (LCC) decomposed along four GILE axes, classifies states against thresholds derived from the PRIMARY constant hierarchy {√2−1, 1/√2, (√10+3√2−4)/4, √(e/π)}, and detects Myrion Resolution events — sequential transitions from Tralse to Indeterminate to True states — yielding resolved truth values and confidence scores. The Emerick Constant C = (√10−√2)/4 ≈ 0.437 serves as the key intermediate threshold, derived as the unique real solution to the constraint √2·φ·C = 1. Applications include AI inference, biometric health assessment, cardiac disease classification, protein function prediction, financial signal generation, and self-deception detection. The system operationalizes the insight that self-deception is a pathological Tralse state — a failure of natural Myrion Resolution — rather than a fundamental property of human cognition.
+A computer-implemented system and method for computing epistemic truth-value resolution using a four-valued logic framework (Tralse Logic) and a physically-derived threshold hierarchy. The system encodes inputs into Tralsebit representations using golden-ratio-scaled compression, computes a Law of Correlational Causation (LCC) decomposed along four GILE axes, classifies states against thresholds derived from the PRIMARY constant hierarchy {√2−1, 1/√2, (√10+3√2−4)/4, √(e/π)}, and detects Myrion Resolution events — sequential transitions from Tralse to Indeterminate to True states — yielding resolved truth values and confidence scores. The Emerick Constant C = (√10−√2)/4 ≈ 0.437 serves as the key intermediate threshold, derived as the unique real solution to the constraint √2·φ·C = 1. Applications include AI inference, biometric health assessment, cardiac disease classification, protein function prediction, financial signal generation, and self-deception detection. The system operationalizes the insight that self-deception is a pathological Tralse state — a failure of natural Myrion Resolution — rather than a fundamental property of human cognition.
 
 ---
 
 ## INVENTORS
 
 **Brandon Charles Emerick** — Primary inventor  
-Sole developer of the TI Sigma framework, Universal Reality Blueprint (URB), Tralse Logic, Myrion Resolution, Love-Consciousness Coefficient, Tralsebit encoding, GILE architecture, and the Emerick Constant (C).
+Sole developer of the TI Sigma framework, Universal Reality Blueprint (URB), Tralse Logic, Myrion Resolution, Law of Correlational Causation, Tralsebit encoding, GILE architecture, and the Emerick Constant (C).
 
 *"Charles sounds like 'tralse' stretched out. The Emerick Constant carries its meaning in the syllables of its discoverer's middle name."*
 

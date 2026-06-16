@@ -83,7 +83,7 @@ At R = 0: f(R) = 0, no subjective time
 At R = 7: f(R) = 0.63, subjective time emerges
 At R → ∞: f(R) → 1, full time perception
 
-### 2.3 LCC (Local Causation Correlation)
+### 2.3 LCC (Law of Correlational Causation)
 
 LCC measures how tightly local causes correlate with effects:
 
@@ -151,7 +151,7 @@ Where:
 - **Φ**: Integrated information (IIT)
 - **R**: Recursion depth (meta-information levels)
 - **R_crit = 7**: Critical recursion depth
-- **LCC**: Local causation correlation
+- **LCC**: Law of Correlational Causation
 - **β = 0.3**: LCC exponent
 - **G,I,L,E**: GILE dimensions (normalized 0-1)
 - **τ_DE**: Dark energy time
@@ -325,7 +325,7 @@ For different systems:
 |--------|------------------|----------------|
 | Φ | Integrated information | Perturbational complexity index |
 | R | Recursion depth | Self-model complexity analysis |
-| LCC | Local causal correlation | Reaction time/agency tests |
+| LCC | Law of Correlational Causation | Reaction time/agency tests |
 | G | Goodness | Moral reasoning scores |
 | I | Intuition | Pattern recognition speed |
 | L | Love | Empathy/coherence measures |

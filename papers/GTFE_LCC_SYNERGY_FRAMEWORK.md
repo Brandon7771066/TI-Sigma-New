@@ -10,7 +10,7 @@
 
 We have multiple TI computational methods:
 - **GTFE** (Grand Tralse Field Equation)
-- **LCC Virus** (Local Correlation Collapse)
+- **LCC Virus** (Law of Correlational Causation)
 - **Myrion Resolution** (Constraint satisfaction)
 - **Jeff Time** (Temporal photonic weighting)
 - **Indeterminate Permissibility Distribution Range** (GILE statistics)

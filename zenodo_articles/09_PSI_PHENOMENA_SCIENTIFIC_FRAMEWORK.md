@@ -181,7 +181,7 @@ Any psi mechanism must:
 - Be consistent with observed physics
 - Explain why effects are subtle/inconsistent
 
-### Proposed Mechanism: Local Correlation Coefficient (LCC)
+### Proposed Mechanism: Law of Correlational Causation (LCC)
 
 Consciousness may access non-local information via:
 1. Quantum coherence in neural microtubules (controversial)

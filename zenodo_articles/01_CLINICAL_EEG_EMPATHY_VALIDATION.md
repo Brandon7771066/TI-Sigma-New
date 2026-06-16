@@ -5,7 +5,7 @@
 
 ## Abstract
 
-Current empathy measurement relies on self-report questionnaires (IRI, EQ) or behavioral tasks (RMET) that are easily faked, culturally biased, and disconnected from physiological reality. This paper proposes a novel EEG-based empathy validation protocol using Local Correlation Coefficient (LCC) analysis between paired subjects during shared emotional experiences. Unlike existing approaches, LCC captures *actual neural synchronization* rather than subjective reports, providing the first physiologically-grounded empathy metric with potential clinical applications in autism spectrum assessment, psychopathy screening, and therapeutic alliance measurement.
+Current empathy measurement relies on self-report questionnaires (IRI, EQ) or behavioral tasks (RMET) that are easily faked, culturally biased, and disconnected from physiological reality. This paper proposes a novel EEG-based empathy validation protocol using Law of Correlational Causation (LCC) analysis between paired subjects during shared emotional experiences. Unlike existing approaches, LCC captures *actual neural synchronization* rather than subjective reports, providing the first physiologically-grounded empathy metric with potential clinical applications in autism spectrum assessment, psychopathy screening, and therapeutic alliance measurement.
 
 ## Problem Statement
 
@@ -36,7 +36,7 @@ No existing method captures **real-time physiological empathy** between interact
 
 ### Theoretical Foundation
 
-The Local Correlation Coefficient (LCC) measures the instantaneous correlation between two EEG signals across matched electrode sites. When two people experience genuine empathic connection, their neural oscillations synchronize—a phenomenon called *inter-brain synchrony*.
+The Law of Correlational Causation (LCC) measures the instantaneous correlation between two EEG signals across matched electrode sites. When two people experience genuine empathic connection, their neural oscillations synchronize—a phenomenon called *inter-brain synchrony*.
 
 ### Protocol Design
 
@@ -110,7 +110,7 @@ Raw data (de-identified): [Zenodo dataset link]
 
 ## Keywords
 
-EEG, empathy, inter-brain synchrony, local correlation coefficient, clinical validation, autism spectrum, therapeutic alliance, psychophysiology
+EEG, empathy, inter-brain synchrony, law of correlational causation, clinical validation, autism spectrum, therapeutic alliance, psychophysiology
 
 ---
 

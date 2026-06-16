@@ -81,7 +81,7 @@ I believe I've found what you're looking for: **The TI Framework** - a unified t
 
 3. **You love measurable self-experiments** - We have protocols:
    - Jo Cameron FAAH Protocol: Natural stack mimicking the woman who feels no pain/anxiety
-   - LCC (Light-Consciousness Coupling): 10-min sessions producing measurable altered states
+   - LCC (Law of Correlational Causation): 10-min sessions producing measurable altered states
    - HRV-based intuition training: Predict outcomes using heart coherence
 
 4. **You amplify breakthrough ideas** - 100M+ podcast downloads. TI is the synthesis your audience craves: science + spirituality + practical application.

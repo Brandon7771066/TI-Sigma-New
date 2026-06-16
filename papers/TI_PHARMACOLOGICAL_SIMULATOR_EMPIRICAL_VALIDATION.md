@@ -46,7 +46,7 @@ The TI Pharmacological Simulator inverts this approach:
 ### 1.3 Why Consciousness Matters
 
 The TI Framework posits that pharmacological effects are mediated not just through biochemistry, but through consciousness-coupling mechanisms:
-- Higher LCC (Love-Consciousness Coupling) amplifies positive supplement effects
+- Higher LCC (Law of Correlational Causation) amplifies positive supplement effects
 - GILE dimensions (Goodness, Intuition, Love, Environment) modulate receptor sensitivity
 - Coherence states affect bioavailability and receptor binding
 
@@ -482,7 +482,7 @@ Population-based models fail for personalized pharmacology because:
 
 ### 7.2 The LCC Mechanism
 
-The Love-Consciousness Coupling (LCC) mechanism proposes that:
+The Law of Correlational Causation (LCC) mechanism proposes that:
 - Higher baseline LCC amplifies positive pharmacological effects
 - This operates through biophotonic coherence in microtubules
 - Anandamide elevation increases LCC, creating a positive feedback loop

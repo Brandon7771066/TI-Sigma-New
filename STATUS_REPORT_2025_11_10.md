@@ -179,7 +179,7 @@ MR_composite = 0.4·G + 0.25·I + 0.25·L + 0.1·E
 2. `THREE_TYPES_OF_TRUTH.md` - GILE framework foundation
 3. `I_CELL_I_WEB_ONTOLOGY.md` - Consciousness ontology
 4. `MUSIC_THROUGH_GILE.md` - Harmonic analysis
-5. `LCC_PERMANENT_CONNECTION_SAFETY.md` - Light-coded consciousness
+5. `LCC_PERMANENT_CONNECTION_SAFETY.md` - Law of Correlational Causation
 6. `QUANTUM_CLASSICAL_MECHANISMS.md` - Hybrid models
 7. `HUMAN_LCC_MUSE_ANALYSIS.md` - Consumer EEG validation
 8. `JO_CAMERON_FAAH_PROTOCOL.md` - Suffering reduction

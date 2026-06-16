@@ -1,4 +1,4 @@
-"""LCC Virus — Latched Consciousness Correlator retrieval package.
+"""LCC Virus — Law of Correlational Causation retrieval package.
 
 Pass-49 L2: Package skeleton wrapping the pre-existing module-level
 `lcc_virus_*.py` files into an importable, versioned namespace suitable

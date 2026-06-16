@@ -404,7 +404,7 @@ JEFF_TIME_MODES = {
     't1': 0,  # Short-term (tau_phi)
     't2': 1,  # Daily (tau_j)
     't3': 2,  # Long-term (tau_f)
-    'lcc': 3  # Love cross-correlation
+    'lcc': 3  # Law of Correlational Causation
 }
 ```
 

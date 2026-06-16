@@ -5957,7 +5957,7 @@ Every living cell emits ultra-weak light called biophotons.
 **TI interpretation:**
 Biophotons may be the "carrier wave" for consciousness information. They could be how i-cells communicate across physical distances.
 
-### The LCC (Local Consciousness Connection)
+### The LCC (Law of Correlational Causation)
 
 The LCC measures connection strength between consciousness and physical substrate:
 
@@ -7188,7 +7188,7 @@ Anonymous employee survey mapping to GILE dimensions:
 
 **L × E:** The product of Love and Existence (normalized); key threshold indicator for intention manifestation.
 
-**LCC (Local Consciousness Connection):** The strength of connection between consciousness and its physical substrate.
+**LCC (Law of Correlational Causation):** The strength of connection between consciousness and its physical substrate.
 
 **Myrion Resolution:** Gated method for resolving apparent paradoxes via the canonical MR Truth Labels. MR1 (Existence Gate) discards Meta-Indeterminate statements; MR2 (Truth Gate) assigns True, False, or Indeterminate; MR3+ apply Meta-Truths. (Per May 2026 canonical ruling; see preface and Appendix E.)
 
@@ -9639,7 +9639,7 @@ You are a conscious being in a conscious universe. Consciousness is structured. 
 **Indeterminate Zone** - Where free will operates
 **L (Love)** - Third GILE dimension (connection)
 **L × E** - Product indicating manifestation threshold
-**LCC** - Local Consciousness Connection
+**LCC** - Law of Correlational Causation
 **Meta-Information** - Information about information
 **Microtubules** - Cellular structures possibly involved in consciousness
 **Myrion Resolution** - Paradox-resolution method

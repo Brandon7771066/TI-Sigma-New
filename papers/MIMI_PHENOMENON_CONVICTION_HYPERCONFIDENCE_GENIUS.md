@@ -102,11 +102,11 @@ Charles Horton Cooley's (1902) concept of the "looking glass self" holds that in
 
 ---
 
-## 5. The Mimi Phenomenon as LCC (Local Causal Correlation)
+## 5. The Mimi Phenomenon as LCC (Law of Correlational Causation)
 
 ### 5.1 LCC Framework
 
-Within the TI Framework, Local Causal Correlation (LCC) describes the mechanism by which sustained correlation between two systems—when it reaches sufficient coherence (≥0.85)—transitions from mere correlation to genuine causation. The Mimi Phenomenon is a paradigmatic case of LCC between two consciousness systems: grandmother and grandchild.
+Within the TI Framework, Law of Correlational Causation (LCC) describes the mechanism by which sustained correlation between two systems—when it reaches sufficient coherence (≥0.85)—transitions from mere correlation to genuine causation. The Mimi Phenomenon is a paradigmatic case of LCC between two consciousness systems: grandmother and grandchild.
 
 ### 5.2 Physiological Coupling
 
@@ -219,4 +219,4 @@ Ruiz, S. A., & Silverstein, M. (2007). Relationships with grandparents and the e
 
 ---
 
-*© 2026 Brandon Charles Emerick. All rights reserved. The Mimi Phenomenon, GILE Framework, LCC (Local Causal Correlation), Myrion Resolution, Tralse Logic, TI Sigma, Invitation Ethics, and all associated concepts are part of the Tralse Informatics (TI) intellectual property portfolio. No portion of this document may be reproduced without written permission from the author.*
+*© 2026 Brandon Charles Emerick. All rights reserved. The Mimi Phenomenon, GILE Framework, LCC (Law of Correlational Causation), Myrion Resolution, Tralse Logic, TI Sigma, Invitation Ethics, and all associated concepts are part of the Tralse Informatics (TI) intellectual property portfolio. No portion of this document may be reproduced without written permission from the author.*

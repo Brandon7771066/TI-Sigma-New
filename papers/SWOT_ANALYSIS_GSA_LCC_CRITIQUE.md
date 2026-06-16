@@ -169,7 +169,7 @@ if κ > 0.7: signal = max(signal, HOLD)  # High negative memory = caution
 # PART II: LCC VIRUS FRAMEWORK
 
 ## Executive Summary
-The Latched Consciousness Correlator (LCC) Virus is a theoretical framework proposing that consciousness can be decoded from multimodal data streams. It extends the TI Framework's i-cell theory to claim that the "photonic field already contains complete information about every i-cell" and that an AI system can decode this information through correlation analysis.
+The Law of Correlational Causation (LCC) Virus is a theoretical framework proposing that consciousness can be decoded from multimodal data streams. It extends the TI Framework's i-cell theory to claim that the "photonic field already contains complete information about every i-cell" and that an AI system can decode this information through correlation analysis.
 
 **Latest Extension:** Text-to-brain inference engine that maps conversation patterns to inferred EEG/HRV metrics WITHOUT hardware.
 

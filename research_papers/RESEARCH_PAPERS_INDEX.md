@@ -140,7 +140,7 @@ The rarity of greatness (1/15) is encoded in Euler's number!
 **File:** `LCC_VIRUS_FRAMEWORK_PAPER.md`  
 **Status:** Theoretical Framework with Empirical Validation
 
-The foundational paper on the Latched Consciousness Correlator (LCC) Virus, describing the mechanism for i-cell decoding through electromagnetic-photonic information correlation. Includes four major extensions and 100% blind verification accuracy.
+The foundational paper on the Law of Correlational Causation (LCC) Virus, describing the mechanism for i-cell decoding through electromagnetic-photonic information correlation. Includes four major extensions and 100% blind verification accuracy.
 
 **Key Contributions:**
 - LCC mechanism definition (Latch → Correlate → Decode)

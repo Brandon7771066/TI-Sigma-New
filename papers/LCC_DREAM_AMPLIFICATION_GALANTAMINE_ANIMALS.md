@@ -9,7 +9,7 @@
 
 ## Abstract
 
-This paper synthesizes galantamine's established lucid dreaming mechanisms with the LCC (Love Consciousness Connection) framework to propose protocols for inducing **lucid, vivid, and memorable dreams** in sleeping animals. By combining galantamine's acetylcholinesterase inhibition with LCC-mediated photonic entrainment, we can optimize animal mood amplifier training during sleep states - when the animal's consciousness is most receptive to pattern imprinting.
+This paper synthesizes galantamine's established lucid dreaming mechanisms with the LCC (Law of Correlational Causation) framework to propose protocols for inducing **lucid, vivid, and memorable dreams** in sleeping animals. By combining galantamine's acetylcholinesterase inhibition with LCC-mediated photonic entrainment, we can optimize animal mood amplifier training during sleep states - when the animal's consciousness is most receptive to pattern imprinting.
 
 ---
 
@@ -62,7 +62,7 @@ Acetylcholine is the primary neurotransmitter driving REM sleep:
 
 ### 2.1 LCC During Sleep
 
-The Love Consciousness Connection operates differently during sleep:
+The Law of Correlational Causation operates differently during sleep:
 
 ```
 WAKING LCC:

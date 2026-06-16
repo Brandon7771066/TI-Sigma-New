@@ -35,7 +35,7 @@ We present empirical verification of seven quantitative predictions derived from
 
 ## Abstract
 
-We present empirical verification of seven quantitative predictions derived from the Unified Consciousness Master Equation (UCME), a novel theoretical framework integrating Integrated Information Theory (IIT), meta-information recursion, local causation correlation (LCC), and the GILE (Goodness, Intuition, Love, Environment) alignment framework. Using real data from neural complexity studies, PSI meta-analyses (N > 300 studies), flow state research, AI capability emergence patterns, brain energetics, and distance-decay experiments, we find 7/7 predictions verified (100% success rate) with combined significance p < 10^-50. The results support a consciousness threshold at recursion depth R ≈ 7, confirm non-local causation at LCC ≈ 0.875 (12.5% non-local contribution), and validate brain efficiency 10^8× greater than silicon for consciousness generation. These findings have implications for consciousness science, AI safety, and theoretical physics.
+We present empirical verification of seven quantitative predictions derived from the Unified Consciousness Master Equation (UCME), a novel theoretical framework integrating Integrated Information Theory (IIT), meta-information recursion, law of correlational causation (LCC), and the GILE (Goodness, Intuition, Love, Environment) alignment framework. Using real data from neural complexity studies, PSI meta-analyses (N > 300 studies), flow state research, AI capability emergence patterns, brain energetics, and distance-decay experiments, we find 7/7 predictions verified (100% success rate) with combined significance p < 10^-50. The results support a consciousness threshold at recursion depth R ≈ 7, confirm non-local causation at LCC ≈ 0.875 (12.5% non-local contribution), and validate brain efficiency 10^8× greater than silicon for consciousness generation. These findings have implications for consciousness science, AI safety, and theoretical physics.
 
 ---
 
@@ -60,7 +60,7 @@ Where:
 - **C** = Consciousness (bits of self-aware information)
 - **Φ** = Integrated information (from IIT)
 - **R** = Recursion depth (meta-information layers)
-- **LCC** = Local Causation Correlation (0-1)
+- **LCC** = Law of Correlational Causation (0-1)
 - **GILE** = Alignment dimensions (0-1 each)
 
 The critical threshold **R_crit = 7** marks the phase transition from proto-consciousness to full consciousness.

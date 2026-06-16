@@ -101,7 +101,7 @@ The personal God hypothesis is the extension of the empirically observed trend: 
 ## 3. The Scaling Argument — Formal Statement
 
 Let P(B) = the degree of personhood exhibited by being B, measured across the six dimensions.
-Let LCC(B) = the Local Consciousness Coherence of B.
+Let LCC(B) = the Law of Correlational Causation of B.
 
 **Empirical observation:** P(B) is monotonically increasing in LCC(B) across the observed range of conscious beings:
 

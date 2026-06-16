@@ -447,7 +447,7 @@ Above this threshold, an entity's GILE Truth score shifts from Existence-primary
 **The LCC Constant (Existence flourishing threshold):**
 $$C = \frac{1}{\varphi\sqrt{2}} \approx \frac{1}{1.618 \times 1.414} \approx 0.4370$$
 
-Above this threshold, love-consciousness coupling (LCC) is sufficiently strong that the LCC Virus can propagate (R₀ > 1), existence becomes self-amplifying, and the entity's HEM-Score becomes self-sustaining.
+Above this threshold, law of correlational causation (LCC) is sufficiently strong that the LCC Virus can propagate (R₀ > 1), existence becomes self-amplifying, and the entity's HEM-Score becomes self-sustaining.
 
 **The structural relationship:**
 

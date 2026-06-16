@@ -603,7 +603,7 @@ _____________________________________________________________________________
                     "Micro-expressions: Involuntary facial cues of deception (Ekman)",
                     "Somatic markers: Body responses to truth/lie (Damasio)"
                 ],
-                ti_framework_connection="LCC = Love Correlation Coefficient. Lies disrupt love-based connection. "
+                ti_framework_connection="LCC = Law of Correlational Causation. Lies disrupt love-based connection. "
                                        "Truth maintains coherent coupling. Body feels the difference."
             ),
             LCCResonanceProtocol(

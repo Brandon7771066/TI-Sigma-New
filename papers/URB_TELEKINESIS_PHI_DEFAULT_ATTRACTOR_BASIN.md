@@ -48,7 +48,7 @@ In TI Sigma, φ is operationalized as:
 φ_TI = LCC × GILE_composite × (1 − determinism_fraction)
 
 where:
-  LCC             = Limbic-Cortical Coherence (measurable via HRV + fNIRS)
+  LCC             = Law of Correlational Causation (measurable via HRV + fNIRS)
   GILE_composite  = integrated four-dimensional consciousness score
   determinism_fraction = fraction of system's variance explained by mechanical causation alone
 ```

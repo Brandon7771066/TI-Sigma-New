@@ -139,7 +139,7 @@ Uses AI to:
 | Concept | Definition | Papers Using It |
 |---------|------------|-----------------|
 | **Tralseness** | Truth as spectrum (0.0-1.0) | All |
-| **LCC** | Love Consciousness Connection coefficient | 15+ |
+| **LCC** | Law of Correlational Causation | 15+ |
 | **Myrion Resolution** | Decision at boundary of contradiction | 20+ |
 | **GILE** | Goodness, Intuition, Love, Environment | All |
 | **0.85 Threshold** | Causation emergence point | 10+ |

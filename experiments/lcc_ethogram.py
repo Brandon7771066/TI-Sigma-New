@@ -8,7 +8,7 @@ Based on scientific standards from:
 - Elephant Ethogram by ElephantVoices
 
 This ethogram is designed for automated AI vision analysis
-to test LCC (Local Causation Correlation) predictions.
+to test LCC (Law of Correlational Causation) predictions.
 """
 
 from dataclasses import dataclass, field

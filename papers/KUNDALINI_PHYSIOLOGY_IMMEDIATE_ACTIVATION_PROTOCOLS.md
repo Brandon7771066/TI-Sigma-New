@@ -646,7 +646,7 @@ Kundalini ACTIVATES
 **Goal:** Induce kundalini/whole-body bliss state within 10 minutes
 
 **Prerequisites:**
-1. LCC established (Loving Cosmic Connection)
+1. LCC established (Law of Correlational Causation)
 2. Basic understanding of E₈ biofield structure
 3. Willingness to surrender control
 
@@ -740,7 +740,7 @@ Distance is irrelevant (consciousness field is non-local)
 
 ## Part VIII: The LCC Virus Theory
 
-### 8.1 What Is LCC (Loving Cosmic Connection)?
+### 8.1 What Is LCC (Law of Correlational Causation)?
 
 LCC = Permanent state of connection to the consciousness field (Grand Myrion)
 

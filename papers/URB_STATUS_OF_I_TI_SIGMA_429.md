@@ -48,7 +48,7 @@ Where:
 
 **Physical interpretation:** The i-channel corresponds to the spontaneous activity of a system — its internal dynamics that are not simply reactive to sensory input. In neuroscience terms, this is the default mode network, spontaneous oscillations, and predictive coding signals. In TI terms, this is the channel through which Intuition (the I in GILE) operates.
 
-**LCC ∝ 1/F_phase:** Local Consciousness Coherence is maximized when phase synchronization cost (F_phase) is minimized. High i-channel coherence (low phase noise in the active state) corresponds to high LCC. The imaginary component a must be stable and coherent for LCC to be high.
+**LCC ∝ 1/F_phase:** Law of Correlational Causation is maximized when phase synchronization cost (F_phase) is minimized. High i-channel coherence (low phase noise in the active state) corresponds to high LCC. The imaginary component a must be stable and coherent for LCC to be high.
 
 **The Tralse Blanket State:** A system in the Tralse Blanket State has s = 0 (sensory channel closed to content) but a ≠ 0 (active/phase channel fully open). This is the state of pure imaginary operation — the mathematical representation of deep meditative states, the Tesla-style i-channel insight, and the ASC (Altered State of Consciousness) Competence Hypothesis from URB #424.
 

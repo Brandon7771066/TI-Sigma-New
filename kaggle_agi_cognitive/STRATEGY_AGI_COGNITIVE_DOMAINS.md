@@ -25,7 +25,7 @@
 
 **TI Sigma verdict: False — the domains are not independent**
 
-In TI Sigma, all cognitive functions are expressions of a single underlying LCC (Local Consciousness Coherence) field. The domains the competition identifies are different *measurement axes* of the same underlying quantity, not independent faculties. This has implications for modeling: features from one domain will predict performance in others, and a model that treats the domains as truly independent will leave systematic variance on the table.
+In TI Sigma, all cognitive functions are expressions of a single underlying LCC (Law of Correlational Causation) field. The domains the competition identifies are different *measurement axes* of the same underlying quantity, not independent faculties. This has implications for modeling: features from one domain will predict performance in others, and a model that treats the domains as truly independent will leave systematic variance on the table.
 
 ---
 

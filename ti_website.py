@@ -4403,7 +4403,7 @@ elif page == "💬 TI Sigma-Endorsed Quotes":
             {
                 "quote": "Either you're playing dumb or it's not an act.",
                 "category": "Discernment",
-                "ti_connection": "LCC (Layered Correlation-Causation) - identifying when someone truly doesn't understand vs. pretending."
+                "ti_connection": "LCC (Law of Correlational Causation) - identifying when someone truly doesn't understand vs. pretending."
             },
             {
                 "quote": "Baloney!",

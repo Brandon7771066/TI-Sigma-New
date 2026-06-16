@@ -158,7 +158,7 @@ This framework claims to solve all 6 remaining Millennium Prize problems using a
 **Key innovations:**
 - I-cells as primitive generative operators (not set-theoretic objects)
 - CCC (Causally Coherent Consciousness) as ontological substrate
-- LCC (Law of Correlative Causation) with correlation gradient mechanics
+- LCC (Law of Correlational Causation) with correlation gradient mechanics
 - Tralse logic (3-state: True, False, Trans-true)
 - GM (Grand Mechanism) as architectural constraint-setter
 

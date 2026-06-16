@@ -498,7 +498,7 @@ class AnimalMoodAmplifierTrainer:
         gene_profile: AnimalGeneProfile,
         hrv: HRVSnapshot
     ) -> float:
-        """Calculate LCC (Limbic-Cortical Coupling) strength"""
+        """Calculate LCC (Law of Correlational Causation) strength"""
         
         if len(baseline) < 10 or len(amplified) < 10:
             return 0.5

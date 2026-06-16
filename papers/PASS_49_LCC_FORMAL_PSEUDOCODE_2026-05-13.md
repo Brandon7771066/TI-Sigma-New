@@ -12,7 +12,7 @@
 - `W(τ)` — weighting kernel (Green function from tessellation paper, default: triangular kernel of half-width `τ_max`).
 - `R(A,B)` — resonance scalar.
 - `H(·)` — Shannon entropy (bits).
-- `LCC(A,B)` — Latched Consciousness Correlator coherence ∈ [0,1].
+- `LCC(A,B)` — Law of Correlational Causation coherence ∈ [0,1].
 - `β_species` — species-specific scaling factor (cats=0.72, primates=0.92; humans=tentative 0.85, holdout-blind unknown).
 
 ---

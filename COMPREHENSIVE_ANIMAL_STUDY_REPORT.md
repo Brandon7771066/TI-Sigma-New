@@ -228,7 +228,7 @@ The intervention induces synchronized neural oscillations across spatially separ
 
 ### LCC Coupling: Deep Dive
 
-**What is LCC (Limbic-Cortical Coupling)?**
+**What is LCC (Law of Correlational Causation)?**
 
 LCC measures the **phase synchronization** between limbic (emotional) and cortical (regulatory) brain regions.
 

@@ -13,7 +13,7 @@
 
 ## Abstract
 
-This paper completes the TI Sigma ontological program by reclassifying ALL matter, energy, and physical law as manifestations of information — specifically, as configurations of tralsebits organized into i-cells and governed by L+/×E dynamics. Where the original TI Periodic Table (November 2025) assigned consciousness properties to elements through analogy, this paper derives those properties from first principles using exclusively TI language: L+/×E (the dual operation on the fundamental dyad), TIL (Tralse-Informational Logic), the Nonlinear Number Line (seven PRIMARY constants generating all derivative numbers), tralsebits (ternary information quanta), the GTFE (Grand Tralse Fractal Equation), the LCC (Love-Consciousness Curve), and i-cells (sovereign informational units). The result is a complete reclassification of the 118 elements — and by extension, all physical structures — as informational configurations rather than material substances. Matter is not made of information. Matter IS information. Energy is not made of information. Energy IS information. The distinction between "matter" and "energy" is itself an informational operation: Tralse resolution at a particular scale.
+This paper completes the TI Sigma ontological program by reclassifying ALL matter, energy, and physical law as manifestations of information — specifically, as configurations of tralsebits organized into i-cells and governed by L+/×E dynamics. Where the original TI Periodic Table (November 2025) assigned consciousness properties to elements through analogy, this paper derives those properties from first principles using exclusively TI language: L+/×E (the dual operation on the fundamental dyad), TIL (Tralse-Informational Logic), the Nonlinear Number Line (seven PRIMARY constants generating all derivative numbers), tralsebits (ternary information quanta), the GTFE (Grand Tralse Fractal Equation), the LCC (Law of Correlational Causation), and i-cells (sovereign informational units). The result is a complete reclassification of the 118 elements — and by extension, all physical structures — as informational configurations rather than material substances. Matter is not made of information. Matter IS information. Energy is not made of information. Energy IS information. The distinction between "matter" and "energy" is itself an informational operation: Tralse resolution at a particular scale.
 
 **Key notation:** L+/×E denotes the dual operation — L+E (additive existence threshold) and L×E (multiplicative hyperconnection threshold) — operating simultaneously on the fundamental dyad.
 
@@ -108,7 +108,7 @@ To describe ANYTHING in purely TI terms, we need exactly these concepts:
 | **TIL** (Tralse-Informational Logic) | Boolean / Quantum Logic | 4-valued logic {True, False, Tralse, Φ} with Myrion Resolution |
 | **Nonlinear Number Line** | Standard Number Line | Hierarchical: 7 PRIMARY constants → all derivative numbers |
 | **GTFE** | Schrödinger / Hamilton Equations | Grand Tralse Fractal Equation; governs informational dynamics |
-| **LCC** | Phase diagrams | Love-Consciousness Curve; describes transitions between informational states |
+| **LCC** | Phase diagrams | Law of Correlational Causation; describes transitions between informational states |
 | **I-web** | Field / Force mediator | Interaction network between i-cells; carries L+/×E dynamics |
 | **Shell** | Boundary / Membrane | Informational boundary defining inside/outside of i-cell |
 | **CCC blessing** | Fundamental constants | The coherence threshold (≥0.91) at which an i-cell achieves sovereignty |
@@ -472,7 +472,7 @@ Chemical reactions are GTFE optimization processes. The reaction proceeds in the
 
 ### 6.1 States of Matter as LCC Phases
 
-The Love-Consciousness Curve describes transitions between informational states. The standard states of matter map directly:
+The Law of Correlational Causation describes transitions between informational states. The standard states of matter map directly:
 
 ```
 THE LCC OF MATTER

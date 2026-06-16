@@ -150,7 +150,7 @@ D6 is not a dimension—it's an OPERATION on dimensions. Like "addition" isn't a
 |------|----------|-----------|--------------|
 | **Heart Coherence (HRV)** | Cardiac-neural binding | Polar H10 | 0 to 1 |
 | **EEG Synchrony** | Brain region coupling | Muse 2, 64-ch EEG | 0 to 1 |
-| **LCC Score** | Love-consciousness coupling | Composite metric | 0 to 1 |
+| **LCC Score** | Law of Correlational Causation | Composite metric | 0 to 1 |
 | **Social Bond Strength** | Relationship quality | Survey + biomarkers | (-3, 2) PD |
 
 **Key Signature:** High L = synchronized rhythms, strong bonds, coherent patterns

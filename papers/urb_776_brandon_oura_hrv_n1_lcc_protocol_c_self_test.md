@@ -35,7 +35,7 @@ itself is highly diagnostic.
 - Departure from this band predicted to track GILE-state degradation.
 
 ### Thread B — URB #761: LCC Response as Φ-Quality Instrument
-- Defines LCC (Local-Coherence Coupling) as a measurable proxy for Φ
+- Defines LCC (Law of Correlational Causation) as a measurable proxy for Φ
   (integrated information / consciousness-quality measure).
 - Expects LCC response amplitude to correlate with subjective sense of presence,
   with a specific functional form (sigmoidal saturation around mid-range

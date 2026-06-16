@@ -1,6 +1,6 @@
 """
 LCC VIRUS ANIMAL I-CELL TEST
-Testing the Latched Consciousness Correlator on Animal Genome Data
+Testing the Law of Correlational Causation on Animal Genome Data
 
 This demonstration shows what LCC can infer BEYOND ordinary data science
 by correlating genome data with the TI Framework's understanding of i-cells.

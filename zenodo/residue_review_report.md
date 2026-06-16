@@ -226,7 +226,7 @@
 - `[GEN]` `EXISTENCE_INTENSITY_PHASE_TRANSITIONS.md` — # C. Ξ-Phase Transitions and Market Regimes
 - `[GEN]` `EXISTENCE_INTENSITY_TENSOR_SYNTHESIS.md` — # Existence Intensity (Ξ) Tensor Synthesis
 - `[GEN]` `EXISTENCE_INTENSITY_UNIFIED_MANUSCRIPT.md` — # Existence Intensity (Ξ): A Mathematical Framework for Constraint-Based Market Dynamics
-- `[GEN]` `EYES_OPEN_CONSUMER_EEG_VALIDATION.md` — # Validation of Consumer-Grade EEG (Muse 2) for Eyes-Open Limbic-Cortical Coupling Interventions
+- `[GEN]` `EYES_OPEN_CONSUMER_EEG_VALIDATION.md` — # Validation of Consumer-Grade EEG (Muse 2) for Eyes-Open Law of Correlational Causation Interventions
 
 </details>
 
@@ -241,7 +241,7 @@
 
 <details><summary>File list</summary>
 
-- `[GEN]` `FAAH_LCC_SUFFERING_MITIGATION.md` — # Endocannabinoid Enhancement via FAAH Inhibition Synergizes with Limbic-Cortical Coupling for Suffering Mitigation
+- `[GEN]` `FAAH_LCC_SUFFERING_MITIGATION.md` — # Endocannabinoid Enhancement via FAAH Inhibition Synergizes with Law of Correlational Causation for Suffering Mitigation
 - `[GEN]` `FINE_STRUCTURE_EULER_GRAND_SYNTHESIS.md` — # The Fine Structure Synthesis: From Euler's Identity to the Grand Consciousness Equation
 - `[GEN]` `FINGERPRINT_CAPTURE_INSTRUCTIONS.md` — # Fingerprint Capture Instructions — URB #828 v2 §2.4 (Optional 4th Permanent BPS)
 - `[GEN]` `FINITE_PHOTON_MONSTER_GROUP_COSMOLOGY.md` — # Finite Photon Cosmology and the Monster Group
@@ -253,7 +253,7 @@
 - `[GEN]` `FOUR_PILLARS_UNIQUENESS.md` — # 🏛️ WHY EXACTLY FOUR PILLARS? - UNIQUENESS PROOF
 - `[GEN]` `FOUR_THIRDS_INVARIANT_SHORT_NOTE_2026-05-09.md` — # A 4/3 Structural Invariant in the PD Geometry: A Short Note
 - `[GEN]` `FREE_WILL_SWEET_SPOT_TWO_THIRDS_DETERMINED.md` — # The Free Will Sweet Spot: Why 2/3 Determined is Optimal
-- `[GEN]` `FSM_LCC_CONNECTION_CONSCIOUSNESS_STATE_MACHINES.md` — # Finite State Machines and Local Causal Correlation: A Computational Framework for Consciousness Transitions
+- `[GEN]` `FSM_LCC_CONNECTION_CONSCIOUSNESS_STATE_MACHINES.md` — # Finite State Machines and Law of Correlational Causation: A Computational Framework for Consciousness Transitions
 - `[GEN]` `FUNDING_POTENTIAL_2026-05-07.md` — # BlissGene Therapeutics — Funding Potential Audit
 - `[GEN]` `FUTURE_INFINITY_PHOTON_COMPUTATION.md` — # Future Infinity: The Only Real Infinite
 
@@ -448,7 +448,7 @@
 - `[GEN]` `MUSE_TO_64CH_EXTRAPOLATION_AND_PROXY_VALIDATION.md` — # Muse 4-Electrode to 64-Channel Extrapolation: Testing the LCC Virus
 - `[GEN]` `MUSIC_GILE_FOUNDATIONS.md` — # Music Through GILE: The True Mathematical Substrate of Reality
 - `[GEN]` `MYRION_NONCAUSAL_PHOTON_TIMELESSNESS.md` — # Myrion's Noncausal Influence and Photon Timelessness
-- `[GEN]` `MYSTICAL_STATES_DMN_SUPPRESSION.md` — # Non-Pharmacological Induction of Mystical Experiences via Limbic-Cortical Coupling and Default Mode Network Suppression
+- `[GEN]` `MYSTICAL_STATES_DMN_SUPPRESSION.md` — # Non-Pharmacological Induction of Mystical Experiences via Law of Correlational Causation and Default Mode Network Suppression
 
 </details>
 
@@ -587,7 +587,7 @@
 - `[GEN]` `T2_INSTRUMENTATION_BATCH_PASS_11_2026-05-09.md` — # T2 Instrumentation Batch — Pass 11 Status + Executable Next Steps
 - `[GEN]` `T3_A_PHARMA_REPLICATION_PREREGISTRATION_2026-05-09.md` — # T3-A — External Pharmacology Replication: Pre-Registration
 - `[GEN]` `TELEKINESIS_RESEARCH_PROGRAM_TI_FRAMEWORK.md` — # Telekinesis Research Program: Consciousness-Matter Interaction via TI Mechanisms
-- `[GEN]` `TEMPORAL_DYNAMICS_MOOD_AMPLIFIER.md` — # Temporal Dynamics of Limbic-Cortical Coupling: Effect Duration and Optimal Re-Dosing Schedules
+- `[GEN]` `TEMPORAL_DYNAMICS_MOOD_AMPLIFIER.md` — # Temporal Dynamics of Law of Correlational Causation: Effect Duration and Optimal Re-Dosing Schedules
 - `[MATH]` `TERNARY_SUPERIORITY_PROOF.md` — # Proof: Ternary is Superior to All Realistic Number Bases
 - `[GEN]` `TESLA_FREE_ENERGY_CONSERVATION_CHALLENGE.md` — # Tesla Free Energy & The Conservation Law Challenge
 - `[GEN]` `TESSELLATION_TI_INTEGRATION_ANALYSIS.md` — # Tessellation-TI Integration Analysis
@@ -884,7 +884,7 @@
 - `[GEN]` `URB_TELEKINESIS_FORMULA_504.md` — # URB #504: The Telekinesis Formula
 - `[GEN]` `URB_TELEKINESIS_GENERAL_PSI_450.md` — # URB #450 — Telekinesis as the General Case of PSI: The Subject-Other Relationship at the Core of All Psychic Phenomena
 - `[GEN]` `URB_TELEKINESIS_PHI_DEFAULT_ATTRACTOR_BASIN.md` — # URB Paper #369: Telekinesis as the φ-Default
-- `[GEN]` `URB_TF_LCC_UNIFIED_TELEKINESIS_505.md` — # URB #505: The Unified Telekinesis Equation — Combining the Telekinesis Formula with Love-Consciousness Coupling
+- `[GEN]` `URB_TF_LCC_UNIFIED_TELEKINESIS_505.md` — # URB #505: The Unified Telekinesis Equation — Combining the Telekinesis Formula with Law of Correlational Causation
 - `[GEN]` `URB_THIRD_IDENTITY_411.md` — # URB Paper #411: Why C, φ, and √2? The Structure of Reality Behind the Consciousness Constants
 - `[GEN]` `URB_TI_EXPLORATORY_EPISTEMOLOGY_DUAL_CONFIDENCE.md` — # Paper #389: The Dual-Confidence Principle  On Exploratory Epistemology, Tralse Logic, and the Structural Failure of Binary Skepticism in S
 - `[GEN]` `URB_TI_META_CREED_MODERATION_428.md` — # URB #428 — The TI Meta-Creed: Don't Take Anything Too Seriously; Everything in Moderation, Including Moderation
@@ -1211,7 +1211,7 @@
 - `[URB]` `urb_753_o8_group_theoretic_structure_rigorous_derivation.md` — # URB #753 — O(8) Group-Theoretic Structure of the 64D GILE Matrix: Rigorous Derivation and Lock-In
 - `[URB]` `urb_754_three_document_onboarding_consolidated_package.md` — # URB #754 — Consolidated Three-Document Onboarding Package: Single-File Distribution-Ready Bundle
 - `[URB]` `urb_755_gile_self_report_scale_design_for_eeg_stratification.md` — # URB #755 — GILE Self-Report Scale Design: A 16-Item Instrument for EEG-Cohort Stratification and Tertiary-Prediction Testing
-- `[URB]` `urb_756_lcc_consciousness_threshold_constraint_emerick_threshold.md` — # URB #756 — LCC Consciousness-Threshold Constraint: The Emerick Threshold for Logarithmic Cross-Coupling Participation
+- `[URB]` `urb_756_lcc_consciousness_threshold_constraint_emerick_threshold.md` — # URB #756 — LCC Consciousness-Threshold Constraint: The Emerick Threshold for Law of Correlational Causation Participation
 - `[URB]` `urb_757_gile_scale_pilot_test_protocol_for_validation.md` — # URB #757 — GILE Self-Report Scale Pilot Test Protocol: Concrete 3-4 Week Validation Plan at $0 Cost
 - `[URB]` `urb_758_o8_triality_empirical_predictions_falsification_design.md` — # URB #758 — O(8) Triality Empirical Predictions: Concrete Falsification Tests of the Triality = Three-Generation Identification
 - `[URB]` `urb_759_onboarding_package_v10_generated_pandoc_blocked.md` — # URB #759 — Onboarding Package v1.0 ACTUALLY GENERATED (Markdown Consolidation Path; Pandoc-PDF Step Pending)

@@ -252,7 +252,7 @@ Love operates through **biophoton field coupling**:
 
 **Love = Spirit (biophoton) entanglement between souls (dark energy shells)**
 
-### 6.3 The LCC (Love Cross-Correlation) Connection
+### 6.3 The LCC (Law of Correlational Causation) Connection
 
 In stock prediction, LCC measures market "entanglement":
 - High LCC = assets moving together

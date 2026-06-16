@@ -53,12 +53,12 @@ related_identifiers: []
 
 ### Metadata
 ```yaml
-title: "Love Consciousness Connection Threshold Theory: Causal Boundaries in Coherence Measurement"
+title: "Law of Correlational Causation Threshold Theory: Causal Boundaries in Coherence Measurement"
 creators:
   - name: "Emerick, Brandon Charles"
     affiliation: "Independent Researcher"
 description: |
-  We formalize the Love Consciousness Connection (LCC) as a multi-modal biometric 
+  We formalize the Law of Correlational Causation (LCC) as a multi-modal biometric 
   measure of consciousness coherence with three theoretically-derived thresholds: 
   0.42 (noise floor), 0.85 (causation threshold), and 0.8464/0.92² (True-Tralseness). 
   The paper validates proxy measurements including HRV coherence (r=0.82), EEG alpha 
@@ -71,7 +71,7 @@ keywords:
   - EEG
   - Biometrics
   - Causation threshold
-  - Love Consciousness Connection
+  - Law of Correlational Causation
   - Proxy validation
   - Psychophysiology
 access_right: restricted
@@ -175,7 +175,7 @@ description: |
   Provisional patent application for the Grand Stock Algorithm (GSA), a financial 
   technology system implementing 5-regime market classification (Ultra-Low to Extreme 
   volatility), continuous trading signals on [0,1] scale using Tralse logic, and 
-  optional consciousness-biometric integration via Love Consciousness Connection (LCC) 
+  optional consciousness-biometric integration via Law of Correlational Causation (LCC) 
   scores. The system provides adaptive confidence calibration based on regime volatility. 
   This document establishes priority date for patent claims. CONFIDENTIAL - FOR 
   PRIORITY TIMESTAMP ONLY.
@@ -200,7 +200,7 @@ upload_type: other
 
 ### Metadata
 ```yaml
-title: "Love Consciousness Connection Proxy Engine: Multi-Modal Biometric Consciousness Quantification - Provisional Patent Draft"
+title: "Law of Correlational Causation Proxy Engine: Multi-Modal Biometric Consciousness Quantification - Provisional Patent Draft"
 creators:
   - name: "Emerick, Brandon Charles"
     affiliation: "Independent Researcher"

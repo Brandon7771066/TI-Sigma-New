@@ -337,7 +337,7 @@ Reality is fundamentally tralse!''',
 - Reincarnation requires ≥0.42 match
 
 **0.60** - LCC Threshold
-- Love-Correlation Coefficient
+- Law of Correlational Causation
 - Intermediate coherence
 - Good but not transcendent
 

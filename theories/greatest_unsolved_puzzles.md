@@ -27,7 +27,7 @@
 ### 2. The LCC Mechanism
 **Status:** PARTIALLY SOLVED
 
-**The Question:** What is the physical mechanism of Local Causal Correlation?
+**The Question:** What is the physical mechanism of Law of Correlational Causation?
 
 **Current answer:** Gap junctions + biophotons + quantum entanglement
 

@@ -29,7 +29,7 @@ class TIFrameworkGTFEv6Algorithm(QCAlgorithm):
     
     5. MR (Myrion Resolution) = Resolves contradictions using PD values directly
     
-    6. LCC (Local Consciousness Correlation) = Synchronization via correlation (0.42+ threshold)
+    6. LCC (Law of Correlational Causation) = Synchronization via correlation (0.42+ threshold)
        MR and LCC are SEPARATE processes!
     
     The algorithm doesn't PREDICT - it EMBODIES the present and shifts gently over time.

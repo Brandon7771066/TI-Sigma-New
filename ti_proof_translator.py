@@ -110,7 +110,7 @@ TI_TO_CONVENTIONAL_MAPPINGS: Dict[str, TIConceptMapping] = {
     ),
     
     "lcc": TIConceptMapping(
-        ti_concept="LCC (Love Cross-Correlation)",
+        ti_concept="LCC (Law of Correlational Causation)",
         conventional_form="Correlation function / Connection",
         domain=ConventionalDomain.ANALYSIS,
         latex=r"\rho(x, y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}",
@@ -215,7 +215,7 @@ class TIProofTranslator:
             'myrion_resolution': ['myrion', 'resolution', 'harmonize'],
             'gile_score': ['gile', 'consciousness score', 'goodness intuition'],
             'ccc': ['ccc', 'collective coherence', 'consistency'],
-            'lcc': ['lcc', 'love correlation', 'cross-correlation'],
+            'lcc': ['lcc', 'law of correlational causation', 'cross-correlation'],
             'gtfe': ['gtfe', 'grand tralse', 'field equation'],
             'dark_energy_shell': ['dark energy', 'shell', 'cosmological'],
             'biophoton': ['biophoton', 'photon emission', 'uwe'],

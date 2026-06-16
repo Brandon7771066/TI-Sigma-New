@@ -904,7 +904,7 @@ class TIPerformanceCartography:
         
         observation should contain:
         - t1, t2, t3: Jeff Time dimensions
-        - lcc: Love Correlation
+        - lcc: Law of Correlational Causation
         - gile: Unified GILE
         - zone: Zone classification
         - mr_state: Myrion Resolution state

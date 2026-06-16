@@ -475,7 +475,7 @@ class Layer5_LCCResonance:
     """
     LAYER 5: LCC Market Resonance
     
-    LCC (Liminal Consciousness Correlation) extends beyond conventional correlation.
+    LCC (Law of Correlational Causation) extends beyond conventional correlation.
     
     While standard correlation measures price co-movement,
     LCC measures consciousness-level resonance between market entities.

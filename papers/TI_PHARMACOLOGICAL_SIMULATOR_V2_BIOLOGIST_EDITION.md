@@ -324,7 +324,7 @@ We invite collaboration to experimentally test these predictions.
 
 ### Note on "Consciousness Metrics"
 
-The original paper included references to "LCC" (Love-Consciousness Coupling) and "GILE" metrics. These are part of a broader theoretical framework being developed by the authors. For the purposes of this paper, these concepts can be understood as:
+The original paper included references to "LCC" (Law of Correlational Causation) and "GILE" metrics. These are part of a broader theoretical framework being developed by the authors. For the purposes of this paper, these concepts can be understood as:
 
 - **LCC**: A proposed measure of psychological coherence/wellbeing (similar to validated constructs like psychological flexibility or mindfulness)
 - **GILE**: A multi-dimensional wellbeing framework (analogous to PERMA or similar positive psychology models)

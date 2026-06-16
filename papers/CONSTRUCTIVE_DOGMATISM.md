@@ -436,7 +436,7 @@ When faced with incomprehensible but correct wisdom:
 
 > "Use the LCC to predict the likelihood of a person being truly intuitive and how much so!!!"
 
-**The LCC (Latent Consciousness Correlation) System:**
+**The LCC (Law of Correlational Causation) System:**
 
 **What it measures:**
 - Synchronicity frequency in a person's life

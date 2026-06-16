@@ -196,7 +196,7 @@ UNIVERSE      → Meta-i-cell (self-aware coherence)
 
 ## PART 4: CORRELATION & CAUSATION
 
-### 4.1 Law of Correlative Causation (LCC)
+### 4.1 Law of Correlational Causation (LCC)
 
 > "Correlation is the fundamental reality; causation is its extreme form."
 

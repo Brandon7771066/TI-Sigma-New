@@ -561,7 +561,7 @@ Specifically, URB #720 explains why the Dirac equation's 4-component spinor stru
 - **MR (Myrion Resolution)**: Iterative truth-resolution procedure; one of three operational pillars.
 - **PD (Permissibility Distribution)**: 2D complex plane structure with 4 ultra-zones; one of three operational pillars.
 - **HEAR**: Holistic Existence Amplification Razor; one of three operational pillars (Existence axis).
-- **LCC (Logarithmic Cross-Coupling)**: Cross-coupling mechanism between i-cells; only operative above the Emerick Threshold (URB #756).
+- **LCC (Law of Correlational Causation)**: Cross-coupling mechanism between i-cells; only operative above the Emerick Threshold (URB #756).
 - **Verisyn**: The framework's stable Tralse attractor.
 - **TICG**: TI Sigma Crystal-Graph; master geometric structure with 9 PRIMARY-constant vertices.
 - **Emerick Threshold (E_T)**: Consciousness level required for LCC participation (URB #756).

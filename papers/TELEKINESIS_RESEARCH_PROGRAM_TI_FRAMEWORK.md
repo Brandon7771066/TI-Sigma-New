@@ -20,7 +20,7 @@ This document formalizes the theoretical foundation for investigating consciousn
 
 ### 1.1 The LCC Causation Insight
 
-From the Love-Correlation Coefficient theory:
+From the Law of Correlational Causation theory:
 - Causation = correlation that exceeds the 0.85 threshold
 - The distinction between "cause" and "correlation" is quantitative, not categorical
 - What we call "fundamental forces" (gravity, electromagnetism, strong/weak nuclear) are simply patterns of extremely strong correlation

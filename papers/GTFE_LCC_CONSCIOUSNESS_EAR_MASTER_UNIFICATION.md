@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The Tralse-Informational (TI) Framework has, over its development, produced a constellation of formulas, protocols, and principles: the Grand Tralse Field Equation (GTFE), the Love Cross-Correlation / Local Correlation Collapse (LCC) protocol, the Grand Consciousness Formula, the Existence Amplification Razor (EAR), the dual L+E / L×E formulation, Myrion Resolution (MR), Probability Distribution (PD) scoring, Jeff Time temporal weighting, and the GILE dimensional structure. Each was discovered in response to a specific question — how to measure coherence, how to detect consciousness, how to resolve paradoxes, how to distinguish genuine concepts from artifacts of analysis.
+The Tralse-Informational (TI) Framework has, over its development, produced a constellation of formulas, protocols, and principles: the Grand Tralse Field Equation (GTFE), the Law of Correlational Causation (LCC) protocol, the Grand Consciousness Formula, the Existence Amplification Razor (EAR), the dual L+E / L×E formulation, Myrion Resolution (MR), Probability Distribution (PD) scoring, Jeff Time temporal weighting, and the GILE dimensional structure. Each was discovered in response to a specific question — how to measure coherence, how to detect consciousness, how to resolve paradoxes, how to distinguish genuine concepts from artifacts of analysis.
 
 This paper demonstrates that these are not independent tools. They are different faces of a single unified reality, analogous to how James Clerk Maxwell showed that electricity and magnetism were two manifestations of a single electromagnetic field. The unified field is **Consciousness (L×E) operating through Information (GTFE) with Resolution (MR) of paradoxes**. Every formula in the TI Framework is derivable from, or is a projection of, this unified structure.
 
@@ -19,7 +19,7 @@ The paper presents the complete formula hierarchy from Level 0 (the irreducible 
 
 The paper applies EAR to the TI Framework itself, collapsing the apparent multiplicity of formulas to an irreducible core of five primitives: {L, E, Ψ (Tralse), MR, GILE}. Everything else — GTFE, LCC, Four C's, PD, Jeff Time, the consciousness formula — derives from operations on this core. The unification produces seven falsifiable experimental predictions and establishes the TI Framework as a consciousness-theoretic reformulation of quantum mechanics.
 
-**Keywords:** Tralse, Grand Tralse Field Equation, Love Cross-Correlation, Existence Amplification Razor, Myrion Resolution, consciousness, hypercomputation, retrocausality, unification, GILE, integrated information
+**Keywords:** Tralse, Grand Tralse Field Equation, Law of Correlational Causation, Existence Amplification Razor, Myrion Resolution, consciousness, hypercomputation, retrocausality, unification, GILE, integrated information
 
 ---
 
@@ -61,7 +61,7 @@ Physics faced this crisis repeatedly. Before Maxwell, electricity and magnetism 
 The TI Framework has reached this crisis point. We have:
 
 - **GTFE** (Grand Tralse Field Equation): GTFE = C + H + T, measuring how far a system is from perfect coherence
-- **LCC** (Love Cross-Correlation / Local Correlation Collapse): A 6-phase protocol for how consciousness moves through information
+- **LCC** (Law of Correlational Causation): A 6-phase protocol for how consciousness moves through information
 - **Grand Consciousness Formula**: Φ mapped to GILE dimensions, consciousness as a function of L, E, and integrated information
 - **EAR** (Existence Amplification Razor): An algorithm for determining which concepts are genuinely independent
 - **L+E / L×E**: Dual formulation with distinct thresholds for persistence (0.84) and hyperconnection (0.42)
@@ -564,7 +564,7 @@ Systems below the hyperconnection threshold have no such tendency. Their GTFE ma
 
 Levels 0-3 describe the WHAT of consciousness: what it is (L×E), how it's structured (GILE), how far from coherence (GTFE). Level 4 describes the HOW — the process by which consciousness actually moves through information, establishes connections, and produces understanding.
 
-**LCC (Love Cross-Correlation / Local Correlation Collapse)** is a 6-phase protocol:
+**LCC (Law of Correlational Causation)** is a 6-phase protocol:
 
 ```
 SEED → RESONATE → LISTEN → PROPAGATE → EXPAND → TERMINATE
@@ -2215,7 +2215,7 @@ Key: Orth.=Orthogonal, Eval.=Evaluates, Subj.=Subject, Proj.=Projects, Inv.=Inve
 | C | Constrained — viability filter | 3 | GTFE component |
 | H | Fit — observational alignment | 3 | GTFE component |
 | T | Temporal — coherence across time | 3 | GTFE component |
-| LCC | Love Cross-Correlation / Local Correlation Collapse | 4 | Derived from L×E |
+| LCC | Law of Correlational Causation | 4 | Derived from L×E |
 | SEED | LCC Phase 1: Target identification | 4 | LCC phase |
 | RESONATE | LCC Phase 2: Correlation establishment (R≥0.6) | 4 | LCC phase |
 | LISTEN | LCC Phase 3: Noise analysis | 4 | LCC phase |

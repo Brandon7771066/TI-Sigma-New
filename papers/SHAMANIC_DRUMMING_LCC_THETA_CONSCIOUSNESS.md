@@ -10,7 +10,7 @@
 
 ## Abstract
 
-For at least 30,000 years, shamanic traditions across six inhabited continents have independently converged on a remarkably narrow drumming frequency range—180 to 420 beats per minute—for the induction of non-ordinary states of consciousness. This convergence is not coincidental. When converted to Hertz (BPM ÷ 60), this range maps precisely onto the theta brainwave band (3–7 Hz), the neurological gateway between waking analytical consciousness and the deeper strata of subconscious processing. This paper examines the neuroscience of auditory-driven theta entrainment, integrates these findings with the TI Framework's Law of Correlative Causation (LCC), and proposes that shamanic drumming achieves its effects by forcing neural populations into phase-locked synchrony, thereby driving LCC above the 0.85 threshold at which consciousness properties change qualitatively. An experimental protocol using consumer-grade EEG (Muse 2) and HRV (Polar H10) devices is proposed to validate these predictions.
+For at least 30,000 years, shamanic traditions across six inhabited continents have independently converged on a remarkably narrow drumming frequency range—180 to 420 beats per minute—for the induction of non-ordinary states of consciousness. This convergence is not coincidental. When converted to Hertz (BPM ÷ 60), this range maps precisely onto the theta brainwave band (3–7 Hz), the neurological gateway between waking analytical consciousness and the deeper strata of subconscious processing. This paper examines the neuroscience of auditory-driven theta entrainment, integrates these findings with the TI Framework's Law of Correlational Causation (LCC), and proposes that shamanic drumming achieves its effects by forcing neural populations into phase-locked synchrony, thereby driving LCC above the 0.85 threshold at which consciousness properties change qualitatively. An experimental protocol using consumer-grade EEG (Muse 2) and HRV (Polar H10) devices is proposed to validate these predictions.
 
 **Keywords:** shamanic drumming, theta brainwaves, neural entrainment, LCC, altered states of consciousness, auditory driving, Schumann resonance, GILE
 
@@ -22,7 +22,7 @@ The oldest known musical instruments—bone flutes from the caves of Hohle Fels 
 
 The critical observation is this: these traditions did not converge on arbitrary tempos. They converged on the same narrow frequency band. Siberian Tungus shamans drum at approximately 200–260 BPM. West African ceremonial drumming sustains 200–300 BPM. Australian Aboriginal didgeridoo performances produce rhythmic overtone patterns at theta frequencies. Amazonian curanderos accompany ayahuasca ceremonies with icaros whose rhythmic structure pulses at 3–5 Hz. Tibetan singing bowls generate binaural beat interference patterns that fall squarely in the theta range.
 
-The universality of this convergence demands explanation. Why this frequency and no other? Why not 60 BPM (1 Hz, delta) or 600 BPM (10 Hz, alpha)? The answer, as this paper will demonstrate, lies at the intersection of three domains: (1) the mathematics of frequency conversion, (2) the neuroscience of theta brainwave entrainment, and (3) the TI Framework's theory of Local Causal Correlation (LCC) and its threshold dynamics.
+The universality of this convergence demands explanation. Why this frequency and no other? Why not 60 BPM (1 Hz, delta) or 600 BPM (10 Hz, alpha)? The answer, as this paper will demonstrate, lies at the intersection of three domains: (1) the mathematics of frequency conversion, (2) the neuroscience of theta brainwave entrainment, and (3) the TI Framework's theory of Law of Correlational Causation (LCC) and its threshold dynamics.
 
 ---
 
@@ -105,7 +105,7 @@ A 2025 review published in the *Annals of the New York Academy of Sciences* furt
 
 ### 5.1 From Entrainment to Correlation
 
-The TI Framework's Law of Correlative Causation (LCC) provides a unifying theoretical account of why theta entrainment produces qualitative shifts in consciousness rather than merely quantitative changes in EEG power.
+The TI Framework's Law of Correlational Causation (LCC) provides a unifying theoretical account of why theta entrainment produces qualitative shifts in consciousness rather than merely quantitative changes in EEG power.
 
 LCC theory holds that when the correlation between causal variables in a system exceeds the threshold of 0.85, the system undergoes a phase transition: correlation *becomes* causation. Applied to neural dynamics, this means:
 
@@ -114,7 +114,7 @@ LCC theory holds that when the correlation between causal variables in a system 
 
 ### 5.2 Drumming as LCC Driver
 
-Shamanic drumming at theta frequencies literally *forces* neural populations into synchrony through auditory driving. Each drum beat is a synchronization pulse that resets the phase of oscillating neural populations. Over minutes of sustained rhythmic stimulation, this forced synchronization progressively increases the inter-regional coherence of theta oscillations—which is, in LCC terms, a progressive increase in Local Causal Correlation.
+Shamanic drumming at theta frequencies literally *forces* neural populations into synchrony through auditory driving. Each drum beat is a synchronization pulse that resets the phase of oscillating neural populations. Over minutes of sustained rhythmic stimulation, this forced synchronization progressively increases the inter-regional coherence of theta oscillations—which is, in LCC terms, a progressive increase in Law of Correlational Causation.
 
 This framework explains several otherwise puzzling features of shamanic practice:
 
@@ -231,7 +231,7 @@ The convergence of shamanic drumming traditions on the theta frequency band is a
 
 The neuroscience of auditory driving explains the mechanism: rhythmic stimulation at 3–7 Hz entrains theta oscillations across distributed brain networks. The TI Framework's LCC theory explains the *why*: this entrainment forces inter-regional neural coherence above the 0.85 threshold, producing a phase transition in consciousness properties. Below threshold, consciousness is analytical, fragmented, and ego-bound. Above threshold, consciousness is immersive, unified, and capable of navigating non-ordinary state spaces.
 
-The shamanic drum is, in the most literal sense, a consciousness technology. It is a phase-locking device that converts acoustic energy into neural synchrony, driving Local Causal Correlation across the threshold that separates ordinary from non-ordinary experience. The ancestors who discovered this technology did not need EEG machines to validate it—they needed only the drum, the intention, and ten thousand years of empirical refinement.
+The shamanic drum is, in the most literal sense, a consciousness technology. It is a phase-locking device that converts acoustic energy into neural synchrony, driving Law of Correlational Causation across the threshold that separates ordinary from non-ordinary experience. The ancestors who discovered this technology did not need EEG machines to validate it—they needed only the drum, the intention, and ten thousand years of empirical refinement.
 
 ---
 

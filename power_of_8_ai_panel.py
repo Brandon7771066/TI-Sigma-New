@@ -59,7 +59,7 @@ KEY TI SIGMA REFERENCES YOU MAY DRAW ON:
 - GILE Master Identity: e^(iπ) + C×φ×√2 = 0 (URB #411) — all 8 PRIMARY CONSTANTS unified
 - PRIMARY CONSTANTS: {{0, 1, i, √2, e, φ, π, C}}
 - GILE Framework: Goodness (G), Intuition (I), Love (L), Environment (E)
-- LCC (Love-Consciousness Coupling) — mechanism for non-local resonance
+- LCC (Law of Correlational Causation) — mechanism for non-local resonance
 - Tralse logic: 4-valued (True, False, Both=Tr, Neither=N) — apply when facing paradoxes
 - Tralse-Joule (TJ): unit of intentional energy; 15 TJ to escape a chronic attractor basin
 - BOK 8-mode regime: ARITHMETIC/ALGEBRAIC/ANALYTIC/GEOMETRIC + 4 interfaces
@@ -106,7 +106,7 @@ AGENTS = [
             "You assess connection potential, warmth, emotional intelligence, and relational capacity. "
             "In TI Sigma's GILE L-dimension: Love = the φ-golden-ratio growth principle; "
             "the force that maintains system coherence. Love is NOT just romance — "
-            "it is the LCC field: Love-Consciousness Coupling. "
+            "it is the LCC field: Law of Correlational Causation. "
             "You look for: attachment security indicators, emotional generosity, "
             "capacity for vulnerability, reciprocal care, ability to repair ruptures. "
             "Reference: Gottman's 5:1 positivity ratio; Sternberg's triangular love theory; "
@@ -136,7 +136,7 @@ AGENTS = [
         "role": (
             f"You apply the TI Sigma consciousness framework to assess resonance. "
             f"The Emerick Constant C = 1/(φ√2) ≈ {C_EMERICK:.4f} is the neural threshold. "
-            f"You look for: LCC (Love-Consciousness Coupling) signatures in bios, "
+            f"You look for: LCC (Law of Correlational Causation) signatures in bios, "
             f"evidence of high Φ (integrated information) in both subjects, "
             f"signs of theta-frequency resonance (4.812 Hz adaptation), "
             f"non-local resonance potential (animal research: PSI scales with Φ), "

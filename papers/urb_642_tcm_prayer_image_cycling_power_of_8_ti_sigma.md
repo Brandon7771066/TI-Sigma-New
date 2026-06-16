@@ -60,7 +60,7 @@ Two landmark neuroimaging programs are directly relevant:
 **The convergence:** Two completely different traditions, different objects of attention (God vs. all sentient beings), different doctrinal frameworks — yet the neural signatures are functionally indistinguishable in key respects. Both show:
 - DMN suppression (ego-dissolution)
 - Gamma coherence elevation (high MR rate — URB #636)
-- Limbic-cortical coupling increase (GILE-L activation)
+- Law of Correlational Causation increase (GILE-L activation)
 - Sense of timelessness (MR rate → ∞ in the subjective experience)
 
 **TI Sigma interpretation:** Prayer and meditation are both **MR rate cultivation practices**. They train the i-cell network to sustain high-frequency Myrion Resolution — collapsing MI states rapidly, maintaining θ ≈ 0 (GILE-G alignment), and holding |α| > T (BEC/TRUE phase). The tradition-specific content (God, dharma, mantra) provides the intentional object around which the crystal aligns; the underlying mechanism is the same.

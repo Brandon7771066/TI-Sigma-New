@@ -524,7 +524,7 @@ def get_algorithm_comparison() -> Dict:
     comparison = {
         "V3_Jeff_Time": {
             "return": 277.76,
-            "approach": "3D temporal dimensions (t1/t2/t3) + Love correlation",
+            "approach": "3D temporal dimensions (t1/t2/t3) + Law of Correlational Causation",
             "weights": {"t1": 0.25, "t2": 0.35, "t3": 0.25, "love": 0.15},
             "position_sizing": "Aggressive",
             "filtering": "None - trades all signals",

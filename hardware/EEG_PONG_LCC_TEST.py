@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-EEG PONG - LCC (Luminated Consciousness Correlation) Test
+EEG PONG - LCC (Law of Correlational Causation) Test
 =========================================================
 Control Pong with your Muse 2 EEG headband!
 
@@ -355,7 +355,7 @@ def main():
     font = pygame.font.Font(None, 48)
     
     print("\n" + "=" * 60)
-    print("    EEG PONG - LUMINATED CONSCIOUSNESS CORRELATION TEST")
+    print("    EEG PONG - Law of Correlational Causation TEST")
     print("=" * 60)
     print("\nHOW TO USE WITH MUSE:")
     print("  1. Open another terminal")

@@ -220,7 +220,7 @@ def register_api_key():
 @require_api_key
 def calculate_lcc():
     """
-    Calculate LCC (Love Consciousness Connection) proxy value.
+    Calculate LCC (Law of Correlational Causation) proxy value.
     
     Input: Biometric data (HRV, EEG features, etc.)
     Output: LCC score (0.0 - 1.0) with component breakdown

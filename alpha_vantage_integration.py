@@ -335,7 +335,7 @@ class TIFinancialAnalyzer:
     
     def calculate_lcc(self, symbol: str) -> float:
         """
-        Living Consciousness Coherence (LCC)
+        Law of Correlational Causation (LCC)
         Collective coherence score for the company i-web
         """
         gile_data = self.calculate_gile_from_financials(symbol)

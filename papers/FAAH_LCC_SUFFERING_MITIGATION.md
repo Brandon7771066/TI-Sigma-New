@@ -1,4 +1,4 @@
-# Endocannabinoid Enhancement via FAAH Inhibition Synergizes with Limbic-Cortical Coupling for Suffering Mitigation
+# Endocannabinoid Enhancement via FAAH Inhibition Synergizes with Law of Correlational Causation for Suffering Mitigation
 
 **Running Title:** FAAH-LCC Synergy for Pain, Anxiety, and Depression
 
@@ -6,13 +6,13 @@
 
 **Target Journal:** *Nature Medicine* or *Pain*
 
-**Keywords:** Endocannabinoid system, FAAH inhibition, anandamide, limbic-cortical coupling, chronic pain, anxiety, depression
+**Keywords:** Endocannabinoid system, FAAH inhibition, anandamide, law of correlational causation, chronic pain, anxiety, depression
 
 ---
 
 ## Abstract
 
-**Background:** Jo Cameron, with FAAH/FAAH-OUT genetic mutations, experiences zero pain, anxiety, and depression due to elevated anandamide (1.7× normal). We hypothesized pharmacological FAAH inhibition + limbic-cortical coupling (LCC) could mimic her phenotype.
+**Background:** Jo Cameron, with FAAH/FAAH-OUT genetic mutations, experiences zero pain, anxiety, and depression due to elevated anandamide (1.7× normal). We hypothesized pharmacological FAAH inhibition + law of correlational causation (LCC) could mimic her phenotype.
 
 **Methods:** Natural FAAH inhibitor stack (kaempferol 50mg, maca 1500mg, piperine 10mg, cacao 30g) was combined with 10-min LCC sessions. Predicted outcomes modeled from: (1) FAAH inhibitor clinical trials, (2) LCC mood data, (3) endocannabinoid-meditation literature. Personalization via FAAH rs324420 genotyping (CC genotype = best candidates).
 
@@ -64,7 +64,7 @@ Anandamide produced → Binds CB1/CB2 → FAAH degrades rapidly
     Zero pain + zero anxiety + optimism
 ```
 
-### Limbic-Cortical Coupling (LCC) & Endocannabinoids
+### Law of Correlational Causation (LCC) & Endocannabinoids
 
 **Hypothesis:** LCC ↑ anandamide production
 

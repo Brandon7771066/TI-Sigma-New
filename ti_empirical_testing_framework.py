@@ -526,10 +526,10 @@ class TIEmpiricalTestingFramework:
             "falsifiable": True
         })
         
-        # Prediction 5: Love correlation threshold
+        # Prediction 5: Law of Correlational Causation threshold
         predictions["verifiable_predictions"].append({
             "prediction_id": "DEPJT-5",
-            "description": "Trades with Love correlation >0.8 in uptrends have >60% win rate",
+            "description": "Trades with Law of Correlational Causation >0.8 in uptrends have >60% win rate",
             "derivation": "High Love = entangled with rising tide",
             "test_method": "Filter trades by Love score and market direction",
             "expected_result": "Win rate correlation with Love score",

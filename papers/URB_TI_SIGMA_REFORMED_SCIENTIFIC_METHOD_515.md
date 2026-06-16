@@ -34,7 +34,7 @@ This method has produced enormous success. It also has five systematic deficienc
 
 **Deficiency 3: Contradiction elimination.** When two well-supported findings contradict each other, the HD method treats this as a problem to be resolved by eliminating one. URB #509 establishes that many apparent contradictions are genuine TRALSE — both findings are TRUE within their domains, and the synthesis requires navigation rather than elimination.
 
-**Deficiency 4: No coherence measurement.** The HD method evaluates each hypothesis independently. It has no formal mechanism for evaluating whether the full set of accepted hypotheses in a domain forms a coherent system. LCC (Logical Coherence Coefficient) provides this metric; the HD method lacks it.
+**Deficiency 4: No coherence measurement.** The HD method evaluates each hypothesis independently. It has no formal mechanism for evaluating whether the full set of accepted hypotheses in a domain forms a coherent system. LCC (Law of Correlational Causation) provides this metric; the HD method lacks it.
 
 **Deficiency 5: Single-domain evidence.** The HD method was designed for physical sciences where empirical measurement is the primary evidence channel. It handles poorly: intuition-derived insights (I), value-laden judgments (G), and relational-context dependencies (L). The GILE framework provides a four-channel integration mechanism that the HD method does not.
 

@@ -63,7 +63,7 @@ Two distinct contexts produce ME layer rupture, and therefore SI:
 
 In depression and severe anxiety, the ME layer is overwhelmed from below — by accumulated evidence that the current self-model is not viable. The role fails. The story breaks. The identity that organized experience cannot sustain its coherence against mounting contradicting evidence.
 
-LCC (Life Coherence Coefficient) score drops below the TRALSE threshold (√2 − 1 ≈ 0.414). Below this threshold, the system can no longer maintain the attractor basin of the current self-model. The basin collapses.
+LCC (Law of Correlational Causation) score drops below the TRALSE threshold (√2 − 1 ≈ 0.414). Below this threshold, the system can no longer maintain the attractor basin of the current self-model. The basin collapses.
 
 The experience from inside: *I cannot continue to be who I am.* This is accurate. What would be inaccurate is the inference: *therefore I must cease to exist entirely.*
 

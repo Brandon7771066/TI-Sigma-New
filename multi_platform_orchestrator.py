@@ -555,7 +555,7 @@ class MasterCoordinator:
             },
             {
                 "title": "LCC Protocol Refinements",
-                "description": "Identify refinements for Light-Coded Consciousness protocols",
+                "description": "Identify refinements for Law of Correlational Causation protocols",
                 "capability": PlatformCapability.SIMPLE_EXTRACTION,
                 "model": "gpt-4o-mini"
             },

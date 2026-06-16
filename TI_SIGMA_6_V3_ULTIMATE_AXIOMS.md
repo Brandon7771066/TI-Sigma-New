@@ -106,7 +106,7 @@ They don't "have" properties - they GENERATE property-manifolds.
 
 ---
 
-### **Axiom 3: LCC (Law of Correlative Causation)**
+### **Axiom 3: LCC (Law of Correlational Causation)**
 
 **Causation flows preferentially along correlation gradients.**
 

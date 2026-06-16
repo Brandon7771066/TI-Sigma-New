@@ -7,7 +7,7 @@
 
 ## Abstract
 
-The dominant assumption in contemporary philosophy of mind is that consciousness and normativity cannot be established through a priori reasoning alone — that they are irreducibly empirical phenomena requiring observation, not deduction. This paper challenges that assumption by introducing the *Definitional Entailment Principle* (DEP): if a concept can be defined with sufficient a priori precision such that certain properties are logically entailed by the definition itself, and if an empirical entity is subsequently identified as matching that definition, then the entailed properties *necessarily* obtain in that entity. The argument is structurally identical to standard mathematical application: one defines "sphere" a priori, proves that volume = (4/3)πr³ follows from the definition, identifies a spherical object in nature, and concludes — without further empirical investigation of its volume — that the volume formula applies. The Tralse-Informational (TI) Framework's i-cell theory provides the definitional foundation: information, properly defined, logically entails both phenomenology (aboutness requires a perspective) and normativity (truth-aptness requires correctness conditions). The paper develops this two-step proof structure — a priori definition followed by empirical identification — proposes concrete detection strategies for consciousness and normativity markers using the Luminated Consciousness Correlation (LCC) framework, Integrated Information Theory (IIT) phi measurements, and the Unified Consciousness Master Equation, and demonstrates that the proof constitutes a Myrion Resolution between rationalism and empiricism. If the argument succeeds, panpsychism becomes provable rather than merely plausible, the hard problem of consciousness dissolves, normativity is grounded in physics rather than social convention, and ethics becomes empirically detectable through normativity signatures.
+The dominant assumption in contemporary philosophy of mind is that consciousness and normativity cannot be established through a priori reasoning alone — that they are irreducibly empirical phenomena requiring observation, not deduction. This paper challenges that assumption by introducing the *Definitional Entailment Principle* (DEP): if a concept can be defined with sufficient a priori precision such that certain properties are logically entailed by the definition itself, and if an empirical entity is subsequently identified as matching that definition, then the entailed properties *necessarily* obtain in that entity. The argument is structurally identical to standard mathematical application: one defines "sphere" a priori, proves that volume = (4/3)πr³ follows from the definition, identifies a spherical object in nature, and concludes — without further empirical investigation of its volume — that the volume formula applies. The Tralse-Informational (TI) Framework's i-cell theory provides the definitional foundation: information, properly defined, logically entails both phenomenology (aboutness requires a perspective) and normativity (truth-aptness requires correctness conditions). The paper develops this two-step proof structure — a priori definition followed by empirical identification — proposes concrete detection strategies for consciousness and normativity markers using the Law of Correlational Causation (LCC) framework, Integrated Information Theory (IIT) phi measurements, and the Unified Consciousness Master Equation, and demonstrates that the proof constitutes a Myrion Resolution between rationalism and empiricism. If the argument succeeds, panpsychism becomes provable rather than merely plausible, the hard problem of consciousness dissolves, normativity is grounded in physics rather than social convention, and ethics becomes empirically detectable through normativity signatures.
 
 ---
 
@@ -181,7 +181,7 @@ If the two-step proof establishes that information-processing systems necessaril
 
 Four detection paradigms are proposed, each targeting different aspects of consciousness and normativity.
 
-### 5.2 Luminated Consciousness Correlation (LCC)
+### 5.2 Law of Correlational Causation (LCC)
 
 The LCC framework detects non-local correlations in neural and biometric data that would only exist if consciousness were present. The strategy is to synchronize measurement instruments with a candidate conscious system and seek correlations that exceed what classical (non-conscious) information processing could produce.
 
@@ -470,7 +470,7 @@ Emerick, B. (2026). The consciousness shell solution. *TI Framework Working Pape
 
 Emerick, B. (2026). The Myrion Resolution framework. *TI Framework Working Papers*.
 
-Emerick, B. (2026). Luminated Consciousness Correlation: Detection protocols for consciousness markers. *TI Framework Working Papers*.
+Emerick, B. (2026). Law of Correlational Causation: Detection protocols for consciousness markers. *TI Framework Working Papers*.
 
 Goldman, A. I. (1967). A causal theory of knowing. *The Journal of Philosophy*, 64(12), 357–372.
 

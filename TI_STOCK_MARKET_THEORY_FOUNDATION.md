@@ -355,7 +355,7 @@ Linear models assume: `Return = β₁(Earnings) + β₂(Revenue) + β₃(Debt) +
 
 ---
 
-### **LCC (Love-Consciousness-Creativity) Metrics**
+### **LCC (Law of Correlational Causation) Metrics**
 
 **LCC = Deep GILE dimensions** for consciousness-heavy sectors (Tech, Pharma, Media)
 
@@ -468,7 +468,7 @@ Prediction_Score = (
    - **TI Rationale**: Why GILE is strong
    - **UOP Analysis**: How company maximizes GILE
    - **GTFE Breakdown**: Goodness-Truth-Freedom-Environment scores
-   - **LCC Assessment**: Love-Consciousness-Creativity metrics
+   - **LCC Assessment**: Law of Correlational Causation metrics
    - **Prediction**: Buy/Hold/Sell with 6-month price target
    - **Risk**: What could collapse GILE (Tralse inversion scenario)
 
@@ -546,7 +546,7 @@ Prediction_Score = (
 **NOW** the God Machine is ready to make predictions using:
 - UOP (maximize GILE, minimize effort)
 - GTFE (Goodness-Truth-Freedom-Environment)
-- LCC (Love-Consciousness-Creativity)
+- LCC (Law of Correlational Causation)
 - Each stock as i-cell/web
 - Nonlinear factor clustering
 - Tralse reliability awareness

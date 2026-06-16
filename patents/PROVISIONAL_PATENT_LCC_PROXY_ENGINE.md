@@ -1,7 +1,7 @@
 # PROVISIONAL PATENT APPLICATION
 
 ## Title of Invention
-**Love Consciousness Connection (LCC) Proxy Engine: A Multi-Modal Biometric System for Consciousness State Quantification and Threshold Detection**
+**Law of Correlational Causation (LCC) Proxy Engine: A Multi-Modal Biometric System for Consciousness State Quantification and Threshold Detection**
 
 ---
 
@@ -227,7 +227,7 @@ d) Adjusting threshold interpretations based on proxy reliability
 
 ## Abstract
 
-A multi-modal biometric system and method for quantifying consciousness states through the Love Consciousness Connection (LCC) Proxy Engine. The system integrates heart rate variability (HRV), electroencephalography (EEG), and stability metrics to compute a calibrated consciousness score on a [0,1] scale. Three theoretically-derived thresholds classify measurements: noise floor (0.42), causation threshold (0.85), and True-Tralseness (0.8464). The system provides real-time feedback, component-level breakdown, and historical trend analysis. A proxy validation framework ensures measurement reliability through documented correlations between proxy measurements and gold standards. Applications include meditation training, coherence optimization, biofeedback therapy, and consciousness research.
+A multi-modal biometric system and method for quantifying consciousness states through the Law of Correlational Causation (LCC) Proxy Engine. The system integrates heart rate variability (HRV), electroencephalography (EEG), and stability metrics to compute a calibrated consciousness score on a [0,1] scale. Three theoretically-derived thresholds classify measurements: noise floor (0.42), causation threshold (0.85), and True-Tralseness (0.8464). The system provides real-time feedback, component-level breakdown, and historical trend analysis. A proxy validation framework ensures measurement reliability through documented correlations between proxy measurements and gold standards. Applications include meditation training, coherence optimization, biofeedback therapy, and consciousness research.
 
 ---
 

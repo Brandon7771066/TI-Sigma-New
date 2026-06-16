@@ -194,7 +194,7 @@ Global Workspace Theory (Baars 1988; Dehaene & Changeux 2011) proposes that cons
 - **Neural criticality as the enabling condition:** Global ignition is only possible when the brain is operating near criticality (Shew & Plenz 2013). Too much order (sub-critical) → local processing stays local. Too much chaos (super-critical) → no organized global state. Criticality = the LCC coherence threshold.
 
 **The LCC prediction:**
-The LCC (Layered Coherence Continuum) predicts discrete coherence thresholds at each organizational level, with qualitative phase transitions (not smooth gradients) at threshold crossings. The LCC's "coherence threshold" between levels IS the Global Workspace ignition threshold at the neural level.
+The LCC (Law of Correlational Causation) predicts discrete coherence thresholds at each organizational level, with qualitative phase transitions (not smooth gradients) at threshold crossings. The LCC's "coherence threshold" between levels IS the Global Workspace ignition threshold at the neural level.
 
 Specifically:
 - Sub-threshold stimuli → LCC Level 1 activation (local sensory processing) only

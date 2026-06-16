@@ -138,7 +138,7 @@ and Φ denotes the phase distribution of internal and external oscillations.
 
 F_phase is the **phase-synchronization cost** — the energetic cost of maintaining phase coherence with the environment through the i-channel. A system minimizing only F_real (standard FEP) will become accurate about its environment's content while potentially drifting out of phase with it. A system minimizing F_complex simultaneously tracks content accuracy AND phase coherence.
 
-**LCC connection:** LCC (Local-to-CCC Coupling strength) is formally:
+**LCC connection:** LCC (Law of Correlational Causation) is formally:
 ```
 LCC ∝ 1/F_phase
 ```

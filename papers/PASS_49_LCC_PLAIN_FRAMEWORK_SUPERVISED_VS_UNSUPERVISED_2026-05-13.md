@@ -9,7 +9,7 @@
 
 ## §1. Plain-language framing
 
-**Lead-Correlation-Causation (LCC)** is the claim that one system can lead another system in a desired direction by correlating with it across time. The framework asks:
+**Law of Correlational Causation (LCC)** is the claim that one system can lead another system in a desired direction by correlating with it across time. The framework asks:
 
 > When does correlation between two systems begin to *behave like* causation — i.e., one system's trajectory comes to depend on the other's — and what conditions amplify or suppress that drift?
 

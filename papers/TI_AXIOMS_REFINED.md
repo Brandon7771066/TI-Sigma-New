@@ -167,7 +167,7 @@ These are NOT axioms - they're observations that could be refined with more data
 | # | Finding | Status | Evidence Type |
 |---|---------|--------|---------------|
 | EF1 | **0.42 = survival threshold** | 📊 EMPIRICAL | Trading data, biometric correlations |
-| EF2 | **0.60 = Love-Correlation Coefficient (LCC)** | 📊 EMPIRICAL | Heart coherence data |
+| EF2 | **0.60 = Law of Correlational Causation (LCC)** | 📊 EMPIRICAL | Heart coherence data |
 | EF3 | **0.91 = Cosmic Consciousness Coherence (CCC)** | 📊 EMPIRICAL | Peak experience correlations |
 | EF4 | **Alpha/Beta ratio > 1.0 enables PSI** | 📊 EMPIRICAL | EEG observations |
 | EF5 | **Gamma bursts indicate insight/integration** | 📊 EMPIRICAL | Neuroscience literature |

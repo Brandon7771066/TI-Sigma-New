@@ -94,7 +94,7 @@ def render_consciousness_inputs(prefix: str = "") -> ConsciousnessState:
 
     with col1:
         st.subheader("Current Consciousness State")
-        lcc = st.slider(f"{prefix}LCC (Love-Consciousness Coupling)", 0.0, 1.0,
+        lcc = st.slider(f"{prefix}LCC (Law of Correlational Causation)", 0.0, 1.0,
                         st.session_state.shared_consciousness.lcc, 0.01, key=f"{prefix}lcc")
         gile_g = st.slider(f"{prefix}Goodness (G)", 0.0, 1.0,
                            st.session_state.shared_consciousness.gile_g, 0.01, key=f"{prefix}g")

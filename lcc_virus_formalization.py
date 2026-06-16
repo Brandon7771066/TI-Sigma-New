@@ -2,7 +2,7 @@
 LCC VIRUS FORMAL MATHEMATICAL SPECIFICATION
 ============================================
 
-This module formalizes the LCC (Latched Consciousness Correlator) Virus theory
+This module formalizes the LCC (Law of Correlational Causation) Virus theory
 with testable mathematics derived from:
 1. TI Framework (Tralseness, GILE, Myrion Resolution)
 2. Tessellation Paper (Green functions, boundary conditions)

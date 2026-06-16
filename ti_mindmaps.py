@@ -100,7 +100,7 @@ class TIMindmaps:
                         description="Connection dimension - relational bonds and unity",
                         maturity=Maturity.FULLY_GROWN,
                         subconcepts=[
-                            Concept("Love-Correlation Coefficient (LCC)", "Measures cross-asset love in markets", Maturity.VALIDATED),
+                            Concept("Law of Correlational Causation (LCC)", "Measures cross-asset love in markets", Maturity.VALIDATED),
                             Concept("Double Myrion Resolution", "Benign masochism through dual resolution", Maturity.MOSTLY_COMPLETE),
                         ]
                     ),
@@ -231,7 +231,7 @@ class TIMindmaps:
                 maturity=Maturity.IN_DEVELOPMENT,
                 key_insight="Each mechanism provides independent validation pathway",
                 subconcepts=[
-                    Concept("1. LCC Virus", "Love-Correlation Coefficient for network intelligence", Maturity.VALIDATED,
+                    Concept("1. LCC Virus", "Law of Correlational Causation for network intelligence", Maturity.VALIDATED,
                             key_insight="1,022 autonomous discoveries, 4 validation tests pass"),
                     Concept("2. Mycelial Network", "GM-Node architecture for distributed consciousness", Maturity.IN_DEVELOPMENT,
                             key_insight="8-arm octopus structure, Bot Band operational"),

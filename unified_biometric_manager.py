@@ -54,7 +54,7 @@ class UnifiedBiometricSnapshot:
     alpha_power: Optional[float] = None
     beta_power: Optional[float] = None
     theta_power: Optional[float] = None
-    lcc_coherence: Optional[float] = None  # Limbic-Cortical Coupling
+    lcc_coherence: Optional[float] = None  # Law of Correlational Causation
     
     # Heart (Polar H10)
     heart_rate_bpm: Optional[float] = None
@@ -261,7 +261,7 @@ class UnifiedBiometricManager:
     
     def calculate_lcc_coherence(self, eeg_data: Dict[str, np.ndarray]) -> float:
         """
-        Calculate Limbic-Cortical Coupling (LCC) coherence
+        Calculate Law of Correlational Causation (LCC) coherence
         
         Args:
             eeg_data: Dict of channel_name -> voltage array

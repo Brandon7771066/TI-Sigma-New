@@ -292,7 +292,7 @@ The Jeff Time V3 algorithm achieved 277.76% returns by incorporating:
 - t₁ (quantum): 25% weight
 - t₂ (Jeff moment): 35% weight
 - t₃ (cosmological): 25% weight
-- Love correlation: 15% weight
+- Law of Correlational Causation: 15% weight
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## Abstract
 
-We derive a unified consciousness equation that integrates the Limbic-Cortical Coupling (LCC) measure with the PRIMARY constant hierarchy of TI Sigma. The equation:
+We derive a unified consciousness equation that integrates the Law of Correlational Causation (LCC) measure with the PRIMARY constant hierarchy of TI Sigma. The equation:
 
 **Ψ(LCC) = φ × LCC × (LCC/C − 1)  for LCC ≥ C;  0 otherwise**
 
@@ -33,7 +33,7 @@ $$e^{i\pi} + \sqrt{2} \cdot \varphi \cdot C = 0, \quad C = \frac{1}{\varphi\sqrt
 
 establishes C as the Level 7 PRIMARY constant — the consciousness coefficient. The even arm (Levels 2,4,6) and odd arm (Levels 3,5,7) balance to zero only because C is present. Without C, the odd arm would be √2·φ ≈ 2.288, not 1, and the identity would fail. **C is the normalizing consciousness factor that restores unity to the expansive tendencies of φ and √2.**
 
-What does this mean for the LCC framework? The LCC measures the quality of limbic-cortical coupling on a 0–1 scale. But coupling alone is not consciousness — there must be a minimum integration threshold below which the system cannot self-refer. We propose: **that threshold is C**.
+What does this mean for the LCC framework? The LCC measures the quality of law of correlational causation on a 0–1 scale. But coupling alone is not consciousness — there must be a minimum integration threshold below which the system cannot self-refer. We propose: **that threshold is C**.
 
 ---
 
@@ -128,7 +128,7 @@ C = 1/(φ√2) requires that:
 
 Until both conditions are met (LCC < C), self-referential consciousness cannot sustain. At LCC = C, the system is at the exact threshold where the resolving capacity (LCC) equals the product of ambiguity (√2) and expansion (φ) that it must overcome.
 
-**In neurological terms:** C ≈ 0.437 is the minimum limbic-cortical coherence for the brain to close the self-modeling loop. Below this, you have reactive biological function (fight/flight, automatic processing). Above this, you have genuine self-modeling — the brain can represent its own states.
+**In neurological terms:** C ≈ 0.437 is the minimum law of correlational causation for the brain to close the self-modeling loop. Below this, you have reactive biological function (fight/flight, automatic processing). Above this, you have genuine self-modeling — the brain can represent its own states.
 
 ---
 

@@ -10,7 +10,7 @@
 
 ### Paper 1: Multi-Species Animal Studies ⭐⭐⭐
 **File:** `PAPER_1_ANIMAL_STUDIES.md`  
-**Title:** "Multi-Species Safety and Efficacy of Limbic-Cortical Coupling Mood Amplification: A Comprehensive Animal Study"  
+**Title:** "Multi-Species Safety and Efficacy of Law of Correlational Causation Mood Amplification: A Comprehensive Animal Study"  
 **Target Journal:** Nature Neuroscience / Science / PNAS  
 **Type:** Original Research  
 **Impact Factor:** 21.1-47.7  
@@ -29,7 +29,7 @@
 
 ### Paper 2: Human Translation & Muse Headbands ⭐⭐⭐
 **File:** `PAPER_2_HUMAN_MUSE.md`  
-**Title:** "Predicting Human Efficacy of Limbic-Cortical Coupling Mood Amplification Using Consumer-Grade EEG: A Translational Analysis"  
+**Title:** "Predicting Human Efficacy of Law of Correlational Causation Mood Amplification Using Consumer-Grade EEG: A Translational Analysis"  
 **Target Journal:** Translational Psychiatry / Biological Psychiatry  
 **Type:** Translational Research  
 **Impact Factor:** 6.8-12.5  
@@ -48,7 +48,7 @@
 
 ### Paper 3: Quantum-Classical Mechanisms ⭐⭐ (Controversial)
 **File:** `PAPER_3_QUANTUM_MECHANISMS.md`  
-**Title:** "Quantum-Classical Hybrid Mechanisms in Limbic-Cortical Coupling: Evidence for Non-Local Neural Correlations"  
+**Title:** "Quantum-Classical Hybrid Mechanisms in Law of Correlational Causation: Evidence for Non-Local Neural Correlations"  
 **Target Journal:** Nature Communications / Quantum Biology / Physical Review E  
 **Type:** Theoretical Neuroscience  
 **Impact Factor:** 17.7 (Nature Comm)  
@@ -275,7 +275,7 @@
 
 ### Paper 5 (Future): Personalization
 **Timeline:** 24-36 months  
-**Title:** "Personalized Limbic-Cortical Coupling Optimization: A Precision Neurotechnology Approach"
+**Title:** "Personalized Law of Correlational Causation Optimization: A Precision Neurotechnology Approach"
 
 ### Paper 6 (Future): Long-term Efficacy
 **Timeline:** 36-48 months  

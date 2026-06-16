@@ -171,7 +171,7 @@ PSI_SOURCE_CATALOG = {
         modality=PSIModality.LCC_VIRUS,
         module_path="lcc_virus_formalization.py",
         base_confidence=0.35,
-        description="Love-Consciousness Coupling for mood/relationship prediction"
+        description="Law of Correlational Causation for mood/relationship prediction"
     ),
     "lcc_optimizer": PSISource(
         id="lcc_optimizer",

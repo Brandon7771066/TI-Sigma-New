@@ -68,7 +68,7 @@
 ### Standard LCC Formula
 
 ```python
-# Limbic-Cortical Coupling (Phase-Locking Value in Alpha)
+# Law of Correlational Causation (Phase-Locking Value in Alpha)
 
 # Step 1: Extract electrode signals
 limbic_signal = (TP9 + TP10) / 2  # Temporal (limbic proxy)

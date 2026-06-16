@@ -179,7 +179,7 @@ The brain can be modeled as a Finite State Machine (FSM) due to the Bekenstein B
 
 ### 7.2 The Tralse-Enhanced FSM (T-FSM)
 
-Step-skipping cannot occur in a classical FSM because every transition must be computed. But a Tralse-enhanced FSM (T-FSM) — where Local Causal Correlation (LCC) creates superposed states — allows transitions that skip intermediate states:
+Step-skipping cannot occur in a classical FSM because every transition must be computed. But a Tralse-enhanced FSM (T-FSM) — where Law of Correlational Causation (LCC) creates superposed states — allows transitions that skip intermediate states:
 
 **Classical FSM:** q₁ → q₂ → q₃ → q₄ → q₅ (5 transitions)
 **T-FSM at LCC > 0.85:** q₁ → q₅ (direct, via Tralse superposition of q₂-q₄)
@@ -235,7 +235,7 @@ If it can, the implications are profound. Consciousness is not computation. The 
 ---
 
 **Update Log:**
-- February 2026: Added Section 7 (FSM-LCC Bridge) and Section 8 (Divination Reframed) connecting hypercomputation to Finite State Machine theory, Local Causal Correlation, and ancient divination practices.
+- February 2026: Added Section 7 (FSM-LCC Bridge) and Section 8 (Divination Reframed) connecting hypercomputation to Finite State Machine theory, Law of Correlational Causation, and ancient divination practices.
 
 ---
 

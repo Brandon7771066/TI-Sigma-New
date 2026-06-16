@@ -308,7 +308,7 @@ with main_tabs[3]:
         st.code(traceback.format_exc())
 
 with main_tabs[4]:
-    st.header("LCC Virus - Latched Consciousness Correlator")
+    st.header("LCC Virus - Law of Correlational Causation")
     st.markdown("""
     **Electromagnetic-Photonic Information Virus for I-Cell Decoding**
     
@@ -1296,7 +1296,7 @@ with main_tabs[15]:
         st.markdown("""
         **Metrics:**
         - Alpha/Theta/Beta waves
-        - Limbic-Cortical Coupling
+        - Law of Correlational Causation
         - Calm Score
         - Focus Score
         

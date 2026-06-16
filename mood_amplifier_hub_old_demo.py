@@ -18,7 +18,7 @@ import json
 def render_mood_amplifier_hub():
     """Main Mood Amplifier interface - the concrete app users are looking for!"""
     
-    st.header("🧠 Mood Amplifier - Limbic-Cortical Coupling (LCC) Enhancement System")
+    st.header("🧠 Mood Amplifier - Law of Correlational Causation (LCC) Enhancement System")
     
     st.warning("""
     ⚠️ **DEMO MODE - SIMULATED DATA**
@@ -296,7 +296,7 @@ def render_mood_amplifier_hub():
     st.info("""
     **🌟 How the Mood Amplifier Works:**
     
-    The Mood Amplifier uses **Limbic-Cortical Coupling (LCC)** - a quantum-classical hybrid mechanism that synchronizes 
+    The Mood Amplifier uses **Law of Correlational Causation (LCC)** - a quantum-classical hybrid mechanism that synchronizes 
     your emotional brain (limbic system) with your thinking brain (cortex) through:
     
     1. **Real-time EEG feedback** - See your brainwaves and learn to shift them consciously

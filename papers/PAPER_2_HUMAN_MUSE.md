@@ -1,4 +1,4 @@
-# Predicting Human Efficacy of Limbic-Cortical Coupling Mood Amplification Using Consumer-Grade EEG: A Translational Analysis
+# Predicting Human Efficacy of Law of Correlational Causation Mood Amplification Using Consumer-Grade EEG: A Translational Analysis
 
 **Authors:** [To Be Determined]  
 **Affiliations:** [To Be Determined]  
@@ -9,7 +9,7 @@
 
 ## Abstract
 
-**Background:** Consumer EEG devices like Muse headbands offer accessible neurotechnology platforms, but their utility for neuropsychiatric interventions remains unclear. We developed translational models to predict human efficacy of limbic-cortical coupling (LCC) mood amplification using Muse hardware.
+**Background:** Consumer EEG devices like Muse headbands offer accessible neurotechnology platforms, but their utility for neuropsychiatric interventions remains unclear. We developed translational models to predict human efficacy of law of correlational causation (LCC) mood amplification using Muse hardware.
 
 **Methods:** Cross-species scaling models (n=328 animals across 7 species) were developed to predict human LCC parameters. Computational simulations validated Muse headband capability for LCC measurement. Primary outcome: predicted human success rate and optimal intervention parameters using commercially available hardware.
 

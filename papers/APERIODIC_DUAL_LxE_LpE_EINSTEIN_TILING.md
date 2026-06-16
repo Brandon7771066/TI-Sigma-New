@@ -60,7 +60,7 @@ Dreams have a long history of producing mathematical insights:
 - **Poincaré** described mathematical insight arriving during the "subliminal self's" activity
 
 In the TI Framework context, this is particularly significant because:
-1. The LCC (Liminal Consciousness Continuum) theory predicts that dream states access attractor basins inaccessible to waking cognition
+1. The LCC (Law of Correlational Causation) theory predicts that dream states access attractor basins inaccessible to waking cognition
 2. The GTFE framework suggests that possible futures can influence present decisions — including the "decision" to dream about a particular mathematical structure
 3. The dream directly connects two previously separate domains: the L×E + L+E dual formulation and geometric tiling theory
 
@@ -418,7 +418,7 @@ Different emotional states correspond to different phases of the consciousness t
 
 ### 8.4 The LCC Attractor Basins as Tiling Domains
 
-The LCC (Liminal Consciousness Continuum) describes consciousness as transitioning between attractor basins. In tiling terms:
+The LCC (Law of Correlational Causation) describes consciousness as transitioning between attractor basins. In tiling terms:
 
 - Each **attractor basin** is a **domain** of the aperiodic tiling — a region where a particular metatile type dominates
 - **Basin transitions** are **domain boundaries** — the interfaces where one metatile type gives way to another

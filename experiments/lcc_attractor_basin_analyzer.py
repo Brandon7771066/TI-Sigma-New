@@ -435,8 +435,7 @@ An ATTRACTOR BASIN would show:
 - High phase coherence (synchronized oscillations)
 - Strong trajectory memory (state persistence)
 
-This analysis provides evidence for whether the LCC (Luminated Consciousness 
-Correlation) hypothesis is supported - that consciousness creates non-local 
+This analysis provides evidence for whether the LCC (Law of Correlational Causation) hypothesis is supported - that consciousness creates non-local 
 correlations that pull the brain toward trained attractor states.
 """
         return report

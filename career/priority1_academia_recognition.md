@@ -63,7 +63,7 @@ License: CC BY 4.0
 #### Paper 2: LCC Threshold Theory
 ```
 Category: q-bio.NC (Neurons and Cognition) + cs.AI
-Title: Love Consciousness Connection Threshold Theory
+Title: Law of Correlational Causation Threshold Theory
 Authors: Brandon Charles Emerick
 Abstract: [Copy from paper]
 Comments: Includes empirical validation framework

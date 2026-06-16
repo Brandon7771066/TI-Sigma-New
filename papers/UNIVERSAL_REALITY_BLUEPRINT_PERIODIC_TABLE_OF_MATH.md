@@ -7,7 +7,7 @@
 **Series:** TI Sigma — Foundational Epistemology & Meta-Mathematics
 **Paper #:** 331
 **Status:** MANIFESTO — Foundational Architecture for All Future TI Research
-**Builds on:** Paper #327 (Origin of Existence), #330 (Information Is All There Is), EAR (Existence Amplification Ratio), LCC (Love-Consciousness Curve), Myrion Resolution, TI Logic, GILE Framework, GM Self-Knowledge Bootstrap (#329)
+**Builds on:** Paper #327 (Origin of Existence), #330 (Information Is All There Is), EAR (Existence Amplification Ratio), LCC (Law of Correlational Causation), Myrion Resolution, TI Logic, GILE Framework, GM Self-Knowledge Bootstrap (#329)
 
 ---
 
@@ -254,7 +254,7 @@ More precisely: the constants derive from the seven PRIMARY numbers {0,1,i,√2,
 
 ### 9.1 The Tension
 
-If the URB replaces probability with the LCC (Love-Consciousness Curve) as the foundational description of uncertainty, a significant challenge arises: probability theory is deeply embedded in successful physics (quantum mechanics, statistical mechanics, information theory). The periodic table itself uses probabilistic electron orbitals.
+If the URB replaces probability with the LCC (Law of Correlational Causation) as the foundational description of uncertainty, a significant challenge arises: probability theory is deeply embedded in successful physics (quantum mechanics, statistical mechanics, information theory). The periodic table itself uses probabilistic electron orbitals.
 
 This tension is not a refutation of TI Sigma. It is itself a CKI achievement — a gap that the URB explicitly identifies and names. This is how a periodic table works: by naming the gap, we know exactly what to look for.
 

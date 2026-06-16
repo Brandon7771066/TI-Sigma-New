@@ -36,7 +36,7 @@ The dominant foundational framework for mathematics — Zermelo-Fraenkel set the
 
 **The problem:** Probability discards phase information. When two quantum states interfere, the correct prediction requires tracking the complex amplitudes ψ, not just the probabilities |ψ|². Probability is |ψ|² — the squared modulus of the complex amplitude. Taking the modulus throws away the phase. This is why probability theory cannot describe quantum interference without adding special quantum mechanical rules on top.
 
-**The TI Sigma overhaul:** Replace probability with **LCC (Local Consciousness Coherence)** as the primary measure of state uncertainty and transition likelihood.
+**The TI Sigma overhaul:** Replace probability with **LCC (Law of Correlational Causation)** as the primary measure of state uncertainty and transition likelihood.
 
 $$\text{LCC}(A \to B) = |z_{A \to B}|^2 = (s_{A\to B})^2 + (a_{A\to B})^2$$
 

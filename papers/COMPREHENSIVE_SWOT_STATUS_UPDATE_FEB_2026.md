@@ -552,7 +552,7 @@ Each entry uses a standardized format:
 
 ---
 
-## 20. Law of Correlative Causation (LCC)
+## 20. Law of Correlational Causation (LCC)
 
 **Status:** DEVELOPING — KEY THEORY  
 **Papers:** NEURAL_LCC_CORRELATION_PRECEDES_CAUSATION.md, CORRELATION_CAUSATION_COLLAPSE_085_RESONANCE.md, LCC_SUPPLANTS_PROBABILITY_THEORY.md  

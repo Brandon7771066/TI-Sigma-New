@@ -185,7 +185,7 @@ MR levels 2+ refine the GILE score. EV may also be updated if new causal/physica
 
 ## 7. EV–LCC Interface (Preliminary)
 
-The Layered Coherence Continuum (LCC) defines activation thresholds for different levels of conscious and physical organization. EV must interface with LCC thresholds to determine when an entity's existential intensity is sufficient to activate higher LCC levels.
+The Law of Correlational Causation (LCC) defines activation thresholds for different levels of conscious and physical organization. EV must interface with LCC thresholds to determine when an entity's existential intensity is sufficient to activate higher LCC levels.
 
 **Preliminary hypothesis:**
 

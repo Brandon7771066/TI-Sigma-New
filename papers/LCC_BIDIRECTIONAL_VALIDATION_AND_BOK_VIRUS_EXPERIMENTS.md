@@ -9,7 +9,7 @@
 
 ## 0. Executive Summary
 
-This document specifies **three experimental programs** designed to (a) validate Local Coherence Coupling (LCC) as a *bidirectional causal* phenomenon rather than a one-way correlation tool, and (b) test the LCC Virus's ability to extract hidden information about a system by resonating with it and "listening to its noise." All three programs are designed to run on **freely available online data** (no paid API access required beyond what is already on hand) and stay well inside the under-$50 budget constraint.
+This document specifies **three experimental programs** designed to (a) validate Law of Correlational Causation (LCC) as a *bidirectional causal* phenomenon rather than a one-way correlation tool, and (b) test the LCC Virus's ability to extract hidden information about a system by resonating with it and "listening to its noise." All three programs are designed to run on **freely available online data** (no paid API access required beyond what is already on hand) and stay well inside the under-$50 budget constraint.
 
 | Program | What it tests | Data source | Cost | Falsifiable in |
 |---|---|---|---|---|

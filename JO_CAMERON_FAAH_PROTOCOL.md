@@ -63,7 +63,7 @@ Zero pain + Zero anxiety + Elevated mood!
 
 **1. LCC Enhances Endocannabinoid Tone**
 
-**Hypothesis:** Limbic-cortical coupling ↑ anandamide production
+**Hypothesis:** Law of Correlational Causation ↑ anandamide production
 
 **Evidence:**
 - Meditation ↑ anandamide (documented)

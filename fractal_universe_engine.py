@@ -334,7 +334,7 @@ class ConsciousnessFractalBridge:
     """
     Bridge between fractal universe theory and consciousness studies.
     
-    Key insight: LCC (Limbic Correlational Connection) exhibits
+    Key insight: LCC (Law of Correlational Causation) exhibits
     fractal patterns similar to Lehto's universal scaling.
     """
     

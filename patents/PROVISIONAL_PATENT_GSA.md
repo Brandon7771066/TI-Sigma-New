@@ -59,7 +59,7 @@ The Grand Stock Algorithm (GSA) comprises:
    - Sell: 0.15 - 0.35
    - Strong Sell: < 0.15
 
-3. **LCC Integration Layer**: Optional consciousness-correlation adjustment using Love Consciousness Connection proxy scores
+3. **LCC Integration Layer**: Optional consciousness-correlation adjustment using Law of Correlational Causation proxy scores
 
 4. **Adaptive Confidence Calibration**: Confidence scores adjusted by regime volatility
 
@@ -188,7 +188,7 @@ c) A weight adjustment module modifying indicator weights based on regime
 d) An output module providing regime classification and associated parameters
 
 **Claim 3**: A method for integrating consciousness metrics with trading systems comprising:
-a) Receiving Love Consciousness Connection (LCC) score from biometric analysis
+a) Receiving Law of Correlational Causation (LCC) score from biometric analysis
 b) Computing an adjustment factor based on LCC deviation from neutral (0.5)
 c) Scaling adjustment by regime sensitivity factor
 d) Incorporating adjustment into overall trading signal calculation
@@ -219,7 +219,7 @@ d) Incorporating adjustment into overall trading signal calculation
 
 ## Abstract
 
-A computer-implemented system and method for financial market analysis and trading signal generation. The Grand Stock Algorithm (GSA) classifies markets into five volatility regimes using Tralse logic for smooth transitions. Trading signals are generated on a continuous [0,1] scale rather than binary buy/sell, with dynamic weight adjustment based on current regime. An optional consciousness-integration layer incorporates Love Consciousness Connection (LCC) scores derived from biometric data to adjust prediction confidence. The system provides calibrated confidence scores accounting for regime volatility, signal strength, and data quality, enabling more nuanced and adaptive trading decisions.
+A computer-implemented system and method for financial market analysis and trading signal generation. The Grand Stock Algorithm (GSA) classifies markets into five volatility regimes using Tralse logic for smooth transitions. Trading signals are generated on a continuous [0,1] scale rather than binary buy/sell, with dynamic weight adjustment based on current regime. An optional consciousness-integration layer incorporates Law of Correlational Causation (LCC) scores derived from biometric data to adjust prediction confidence. The system provides calibrated confidence scores accounting for regime volatility, signal strength, and data quality, enabling more nuanced and adaptive trading decisions.
 
 ---
 

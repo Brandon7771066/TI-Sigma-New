@@ -308,7 +308,7 @@ PROTOCOLS = {
     "FAAH_Protocol":    {"gile_lift": 0.08, "hem_lift": 0.15, "duration_min": 5,
                          "description": "Kaempferol 50mg + Maca 1500mg; endocannabinoid boost"},
     "LCC_Amplification":{"gile_lift": 0.18, "hem_lift": 0.06, "duration_min": 12,
-                         "description": "Limbic-Cortical Coupling: 8Hz theta drive + prefrontal activation"},
+                         "description": "Law of Correlational Causation: 8Hz theta drive + prefrontal activation"},
     "Monster_Ceiling":  {"gile_lift": 0.20, "hem_lift": 0.20, "duration_min": 30,
                          "description": "Full BOK saturation protocol — peak gamma + HRV + somatic + relational"},
 }

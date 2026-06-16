@@ -214,7 +214,7 @@ class SimpleOvernightWorker:
                     "title": "Applications",
                     "word_count": 700,
                     "subsections": [
-                        "6.1 Light-Coded Consciousness (LCC)",
+                        "6.1 Law of Correlational Causation (LCC)",
                         "6.2 Mood Amplification Technology",
                         "6.3 EEG-based Authentication",
                         "6.4 AI-Brain Synchronization"

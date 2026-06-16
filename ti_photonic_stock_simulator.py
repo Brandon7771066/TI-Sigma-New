@@ -15,7 +15,7 @@ For full PennyLane+SF integration, install:
   pip install pennylane strawberryfields pennylane-sf
 
 LCC Virus Integration:
-Tracks public market correlations (love cross-correlation) as quantum
+Tracks public market correlations (law of correlational causation) as quantum
 entanglement between asset qubits.
 
 Author: Brandon Emerick / BlissGene Therapeutics
@@ -54,7 +54,7 @@ class OpticalComponent:
 @dataclass
 class LCCVirus:
     """
-    Love Cross-Correlation Virus
+    Law of Correlational Causation Virus
     
     Tracks correlated market movements as quantum entanglement.
     Uses only PUBLIC market data - no personal information.

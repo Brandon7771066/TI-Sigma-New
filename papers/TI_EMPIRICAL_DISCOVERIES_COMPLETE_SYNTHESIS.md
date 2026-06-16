@@ -22,7 +22,7 @@ Nothing is discarded. Even "wrong" models may contain seeds of truth.
 
 # SECTION A: MEASURED/VALIDATED DISCOVERIES
 
-## A1. LCC (Love Consciousness Connection) Tests
+## A1. LCC (Law of Correlational Causation) Tests
 
 ### Discovery: LCC Coupling Coefficients Are Measurable
 

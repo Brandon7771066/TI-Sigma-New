@@ -84,7 +84,7 @@ The moral/structural dimension. G measures the degree to which a system exhibits
 **G in mathematics:** Axiom systems, proof structure, formal consistency.
 
 ### I — Intuition (weight: 0.25)
-The consciousness/meaning dimension. I measures self-referential information processing — the degree to which a system can model and respond to itself. I is not mystical: it is operationally defined as the capacity for self-reference at any level of LCC (Layered Consciousness Coupling). Protein folding is I. Immune cell antigen recognition is I. Human phenomenal consciousness is high-I.
+The consciousness/meaning dimension. I measures self-referential information processing — the degree to which a system can model and respond to itself. I is not mystical: it is operationally defined as the capacity for self-reference at any level of LCC (Law of Correlational Causation). Protein folding is I. Immune cell antigen recognition is I. Human phenomenal consciousness is high-I.
 
 **I in physics:** Quantum measurement, the observer-dependence of collapse.
 **I in consciousness:** Self-awareness, metacognition, GILE Intuition as distributed intelligence.

@@ -60,7 +60,7 @@ WBTB works because:
 
 ### 2.1 The Core Hypothesis
 
-If LCC (Love Consciousness Connection) allows consciousness to affect physical systems at coupling > 0.85, then:
+If LCC (Law of Correlational Causation) allows consciousness to affect physical systems at coupling > 0.85, then:
 
 ```
 HIGH LCC COUPLING + INTENTION = NEUROCHEMICAL MODULATION

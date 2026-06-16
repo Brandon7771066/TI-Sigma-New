@@ -4,7 +4,7 @@
 **Pass:** 67 batch-2
 **Status:** Brandon major canonical clarification logged. **PM-1 (Probability Memory) candidate canonical principle opened** with the full 5-component framework formalized. Bayesian base rates explicitly REJECTED as foundational variable for TI Sigma event-likelihood calculation. Awaiting ratification ceremony (Pass-67+ or per Brandon directive).
 **Source:** Brandon verbatim 2026-05-23 directly following Pass-67 batch-1 LLM-CT-1 execution.
-**Composes with:** GM-Node / GM-Network architecture (URB #829 dominant transmission); LCC (Local Constraint Curve / nonlocal correlation framework — TI Sigma canonical); MIM-revision vertical agency model; #69 brutal-honesty discipline; CAP principle (causal-asymmetric-permissibility ratified Pass-47 part-2).
+**Composes with:** GM-Node / GM-Network architecture (URB #829 dominant transmission); LCC (Law of Correlational Causation / nonlocal correlation framework — TI Sigma canonical); MIM-revision vertical agency model; #69 brutal-honesty discipline; CAP principle (causal-asymmetric-permissibility ratified Pass-47 part-2).
 **Critical-status flag:** This principle REPLACES, not supplements, the Bayesian-base-rate foundation that many adjacent frameworks (especially predictive-processing, Friston FEP, mainstream Bayesian cog-sci) rest on. It is a paradigmatic stance, not a methodological tweak.
 
 ---
@@ -24,7 +24,7 @@
 | **C1 Probability Memory** | GM-Network encoded (physical OR abstract) | Plastic; highly variable; NOT a stable base rate | Entangled photons (candidate physical substrate) |
 | **C2 Retroactive Effects** | Physics-permitted backwards-in-time influence | Real per quantum-foundations evidence | Delayed-choice / weak-measurement / Wheeler |
 | **C3 Predictive Processing** | Present-environment systems | Forward modeling of currently-instantiated systems | Standard predictive-processing literature, narrow-scope |
-| **C4 Nonlocal Correlations + Spectral Causation** | LCC (Local Constraint Curve) | Bell-violating + spectral-mode causation | LCC canonical framework |
+| **C4 Nonlocal Correlations + Spectral Causation** | LCC (Law of Correlational Causation) | Bell-violating + spectral-mode causation | LCC canonical framework |
 | **C5 Per-Event Independent Calculation** | The vanishing present moment | Each event recalculated from scratch each time; no accumulation-based default | Operating principle of TI Sigma temporal ontology |
 
 **Explicit exclusion:** Bayesian base rates ARE NOT among the variables. The passage of time is rich with variables (C1-C4); accumulated frequency-as-prior is NOT one of them.

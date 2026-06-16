@@ -18,7 +18,7 @@ Photonic Operations Supported:
 
 TI Framework Integration:
 - Jeff Time temporal dimensions mapped to photonic modes
-- LCC (Love Cross-Correlation) via entanglement strength
+- LCC (Law of Correlational Causation) via entanglement strength
 - GILE scores from quantum measurement outcomes
 - DE-Photon cycle resonance detection
 
@@ -203,7 +203,7 @@ class TIPhotonicCircuit:
       * Mode 0: t1 (Short-term momentum) 
       * Mode 1: t2 (Daily observation)
       * Mode 2: t3 (Long-term trend)
-      * Mode 3: LCC (Love correlation)
+      * Mode 3: LCC (Law of Correlational Causation)
     
     - Gaussian state evolution
     - Measurement via homodyne/heterodyne detection
@@ -214,7 +214,7 @@ class TIPhotonicCircuit:
         't1': 0,  # Short-term
         't2': 1,  # Daily
         't3': 2,  # Long-term
-        'lcc': 3  # Love cross-correlation
+        'lcc': 3  # Law of Correlational Causation
     }
     
     V4_2025_WEIGHTS = {
@@ -358,7 +358,7 @@ class TIPhotonicCircuit:
         - t1 (short-term momentum) → Squeezed coherent state
         - t2 (daily observation) → Displacement amplitude
         - t3 (long-term trend) → Phase rotation
-        - lcc (love correlation) → Two-mode squeezing/entanglement
+        - lcc (law of correlational causation) → Two-mode squeezing/entanglement
         """
         self.reset()
         

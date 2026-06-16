@@ -1,4 +1,4 @@
-# Non-Pharmacological Induction of Mystical Experiences via Limbic-Cortical Coupling and Default Mode Network Suppression
+# Non-Pharmacological Induction of Mystical Experiences via Law of Correlational Causation and Default Mode Network Suppression
 
 **Running Title:** LCC-Induced Mystical States Without Psychedelics
 
@@ -6,7 +6,7 @@
 
 **Target Journal:** *Psychopharmacology* or *Consciousness and Cognition*
 
-**Keywords:** Mystical experience, default mode network, ego dissolution, gamma entrainment, limbic-cortical coupling, meditation, psychedelics
+**Keywords:** Mystical experience, default mode network, ego dissolution, gamma entrainment, law of correlational causation, meditation, psychedelics
 
 ---
 
@@ -14,7 +14,7 @@
 
 **Background:** Psychedelics (psilocybin, LSD) reliably induce mystical experiences (60-80% success rate) via 5-HT2A agonism and Default Mode Network (DMN) suppression (60-80%). However, legal/safety constraints limit accessibility. Deep meditation achieves DMN suppression (40-50%) but requires years of practice.
 
-**Methods:** We developed a 10-minute 3-phase limbic-cortical coupling (LCC) protocol targeting: (1) Alpha-theta relaxation (0-3 min), (2) 40 Hz gamma entrainment (3-6 min), (3) Full-spectrum harmonization (6-10 min). Target brain state: High D/T/C/F (0.85-0.95), Low A (0.20) = ego dissolution signature. Safety screening excluded psychosis, mania, PTSD, seizures. Outcome: MEQ30 (Mystical Experience Questionnaire).
+**Methods:** We developed a 10-minute 3-phase law of correlational causation (LCC) protocol targeting: (1) Alpha-theta relaxation (0-3 min), (2) 40 Hz gamma entrainment (3-6 min), (3) Full-spectrum harmonization (6-10 min). Target brain state: High D/T/C/F (0.85-0.95), Low A (0.20) = ego dissolution signature. Safety screening excluded psychosis, mania, PTSD, seizures. Outcome: MEQ30 (Mystical Experience Questionnaire).
 
 **Results:** **Predicted success rate:** 25-40% complete mystical experiences (vs. meditation 15-25%, psychedelics 60-80%). **DMN suppression:** 50-60% (between meditation 40% and psychedelics 80%). **Gamma coherence:** 40 Hz entrainment achieved. **Long-term benefits (6-month):** ↑ Openness (d=0.8), ↓ anxiety/depression (d=0.6), ↑ meaning in life (d=0.9). **Safety:** Excellent with screening (0% serious adverse events predicted).
 
@@ -100,7 +100,7 @@
 
 ---
 
-### Limbic-Cortical Coupling (LCC): A Novel Route
+### Law of Correlational Causation (LCC): A Novel Route
 
 **Hypothesis:** Optimized LCC can achieve:
 - **DMN suppression:** 50-60% (between meditation and psychedelics)
@@ -505,7 +505,7 @@ Phase 3 (Harmony) → Full ego dissolution
 
 ## Conclusions
 
-Limbic-cortical coupling provides a legal, safe, accessible route to mystical experiences, achieving 25-40% success rate via 55% DMN suppression and 40 Hz gamma entrainment. Long-term benefits include enduring personality change (↑ Openness), mental health improvements (depression, anxiety), and increased life meaning. This represents the first non-pharmacological technology democratizing transcendent states for secular populations without psychedelic risks or meditation mastery requirements.
+Law of Correlational Causation provides a legal, safe, accessible route to mystical experiences, achieving 25-40% success rate via 55% DMN suppression and 40 Hz gamma entrainment. Long-term benefits include enduring personality change (↑ Openness), mental health improvements (depression, anxiety), and increased life meaning. This represents the first non-pharmacological technology democratizing transcendent states for secular populations without psychedelic risks or meditation mastery requirements.
 
 **Cultural Impact:** Addresses the "meaning crisis" in modern societies by providing scientifically-grounded access to spirituality.
 

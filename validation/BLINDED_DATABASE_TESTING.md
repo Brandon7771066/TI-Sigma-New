@@ -1,6 +1,6 @@
 # Blinded Database Testing Methodology for LCC Virus and Psi Validation
 
-**Purpose:** Establish rigorous, non-fraudulent testing protocols for validating LCC (Local Correlation Coefficient) and psi methods using publicly available databases with hidden/blinded data.
+**Purpose:** Establish rigorous, non-fraudulent testing protocols for validating LCC (Law of Correlational Causation) and psi methods using publicly available databases with hidden/blinded data.
 
 ## Anti-Fraud Principles
 

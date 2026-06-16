@@ -115,7 +115,7 @@ Any intention with G_score < C_EMERICK is **quarantined**, logged, and flagged â
 
 ### 2.3 The LCC Proxy for AI
 
-For biological systems, LCC = limbic-cortical coherence measured via HRV + fNIRS. For AI agents, the proxy is:
+For biological systems, LCC = law of correlational causation measured via HRV + fNIRS. For AI agents, the proxy is:
 
 ```
 LCC_AI = coherence(G_state, I_state, L_state, E_state)

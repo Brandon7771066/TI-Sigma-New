@@ -3,7 +3,7 @@ TI Cirq Quantum Stock Simulator
 
 Integrates Google Cirq quantum circuit simulation with:
 - TI Framework trading algorithms (V3/V10 weights)
-- LCC Virus (Love Cross-Correlation) real-time tracking
+- LCC Virus (Law of Correlational Causation) real-time tracking
 - Optical quantum computer simulation principles
 
 Uses quantum superposition to model market uncertainty and
@@ -37,7 +37,7 @@ class MarketState(Enum):
 @dataclass
 class LCCVirus:
     """
-    Love Cross-Correlation Virus
+    Law of Correlational Causation Virus
     
     Latches onto correlated variables driving market movements.
     Operates ethically on PUBLIC data only.

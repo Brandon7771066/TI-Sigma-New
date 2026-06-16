@@ -185,7 +185,7 @@ Brandon's proposal (live):
 **Adopt as primary L-metric.** This is brilliant for several reasons:
 
 1. **L is inherently relational** (it's a "positive relational orientation")
-   — and LCC (Local-Coherence Coupling, the framework's bidirectional coherence
+   — and LCC (Law of Correlational Causation, the framework's bidirectional coherence
    measure between two systems) is the natural mathematical object.
 2. **LCC is already implemented** in the framework (autonomous_lcc page exists,
    LCC sleep protocol, LCC attractor visualization — there's tooling).

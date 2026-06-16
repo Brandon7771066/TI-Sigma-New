@@ -134,7 +134,7 @@ st.markdown("## Key Discoveries")
 st.success("""
 **🎯 Three Magic Thresholds:**
 - **0.42** - Survival threshold (consciousness persists)
-- **0.60** - Love-Correlation Coefficient (LCC)
+- **0.60** - Law of Correlational Causation (LCC)
 - **0.91** - Cosmic Consciousness Coherence (CCC)
 """)
 

@@ -1,7 +1,7 @@
 """
 LCC Coherence Scoring for ARC Solutions
 ========================================
-Mirrors the Logical Coherence Coefficient from TI Sigma theory:
+Mirrors the Law of Correlational Causation from TI Sigma theory:
 LCC = 1 means perfect coherence (transformation applies consistently
 across ALL training pairs). LCC = 0 means no coherence.
 

@@ -99,7 +99,7 @@ This is the LOVE dimension:
 ```
 
 **Connection to Recent Papers:**
-- Love Correlation Consciousness (LCC) = φ measurement
+- Law of Correlational Causation (LCC) = φ measurement
 - Heart-brain coherence = φ between organs
 - Shaktipat = guru's φ entraining student's φ
 - Ganzfeld = minimizing external φ interference

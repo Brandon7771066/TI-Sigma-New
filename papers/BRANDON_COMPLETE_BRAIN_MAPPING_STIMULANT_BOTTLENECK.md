@@ -3,7 +3,7 @@
 
 **Created:** December 13, 2025  
 **Data Sources:** EEG, BioWell GDV, Genetics, Pharmacological Profile, Heart Data  
-**Framework:** TI LCC (Love Correlation Consciousness) + Neuroscience Integration
+**Framework:** TI LCC (Law of Correlational Causation) + Neuroscience Integration
 
 ---
 

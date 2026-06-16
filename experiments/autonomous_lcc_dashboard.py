@@ -26,7 +26,7 @@ def render_autonomous_lcc_dashboard():
     
     st.header("🧠 Autonomous LCC Study System")
     st.markdown("""
-    **Fully automated analysis of Local Causation Correlation (LCC) using real neuroscience datasets.**
+    **Fully automated analysis of Law of Correlational Causation (LCC) using real neuroscience datasets.**
     
     This system tests whether consciousness enables non-local correlations (LCC < 1) by analyzing:
     - Neural activity patterns across different subjects/sessions
@@ -554,7 +554,7 @@ def _render_results_tab():
     st.markdown("### 📖 Theoretical Context")
     
     st.markdown("""
-    **Local Causation Correlation (LCC)** measures how much of the correlation between
+    **Law of Correlational Causation (LCC)** measures how much of the correlation between
     neural activity and behavior can be explained by local (known) causal mechanisms.
     
     | LCC Value | Meaning |

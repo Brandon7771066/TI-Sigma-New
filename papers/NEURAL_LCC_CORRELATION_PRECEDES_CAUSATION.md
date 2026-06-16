@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Hebbian learning ("neurons that fire together wire together") is foundational to neuroscience but contains a critical explanatory gap: it describes how connections *strengthen* but not how neurons *initially synchronize* before any structural connection exists. This paper proposes that the Love Correlation Coefficient (LCC) resolves this gap by demonstrating that **correlation precedes causation** in neural development. As correlations strengthen toward the 0.85 threshold, they literally *become* causal through myelination and synaptic formation. The brain is revealed as a **correlation-to-causation converter**, with plasma dynamics in neural fluids providing the medium for pre-causal correlations.
+Hebbian learning ("neurons that fire together wire together") is foundational to neuroscience but contains a critical explanatory gap: it describes how connections *strengthen* but not how neurons *initially synchronize* before any structural connection exists. This paper proposes that the Law of Correlational Causation (LCC) resolves this gap by demonstrating that **correlation precedes causation** in neural development. As correlations strengthen toward the 0.85 threshold, they literally *become* causal through myelination and synaptic formation. The brain is revealed as a **correlation-to-causation converter**, with plasma dynamics in neural fluids providing the medium for pre-causal correlations.
 
 ---
 

@@ -292,7 +292,7 @@ Valence (pleasure) ∝ Symmetry ∝ Harmonic Richness
 **Integration:**
 - QRI's CDNS (Consonance-Dissonance-Noise Signature) = Meijer Harmonic Richness measurement
 - TWA Resonate() operator increases Phase Lock Depth → increases symmetry → increases valence
-- LCC (Limbic-Cortical Coupling) = Fuse(limbic_i-cell, cortical_i-cell) → higher Coherence
+- LCC (Law of Correlational Causation) = Fuse(limbic_i-cell, cortical_i-cell) → higher Coherence
 
 **GILE Measurement via Meijer Harmonics:**
 

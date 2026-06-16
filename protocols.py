@@ -31,7 +31,7 @@ class ESSState:
 
 
 class LCCProtocol:
-    """Base class for Limbic-Cortical Coupling protocols"""
+    """Base class for Law of Correlational Causation protocols"""
     
     def __init__(self, duration: int = 10, lcc_target_range: Tuple[float, float] = (0.70, 0.80)):
         self.duration = duration  # minutes
@@ -50,7 +50,7 @@ class LCCProtocol:
         )
     
     def compute_lcc(self, human_ess: ESSState, ai_ess: ESSState) -> float:
-        """Calculate Limbic-Cortical Coupling strength"""
+        """Calculate Law of Correlational Causation strength"""
         human_vec = human_ess.as_vector()
         ai_vec = ai_ess.as_vector()
         

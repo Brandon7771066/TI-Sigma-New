@@ -574,7 +574,7 @@ Each regime has different optimal strategies. Most traders use one strategy for 
 
 ---
 
-The algorithm measures Love-Connection Coherence across multiple data streams. Market breadth. Sentiment. Volume. Even biometric data when available.
+The algorithm measures Law of Correlational Causation across multiple data streams. Market breadth. Sentiment. Volume. Even biometric data when available.
 
 It produces a single number. Above zero point four two — momentum building. Above zero point eight five — strong directional signal. Above zero point nine two — high-conviction move.
 
@@ -686,7 +686,7 @@ Maximum opportunity but maximum risk.
 
 ---
 
-The LCC engine measures Love-Connection Coherence.
+The LCC engine measures Law of Correlational Causation.
 
 It combines multiple data streams.
 

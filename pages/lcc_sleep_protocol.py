@@ -433,7 +433,7 @@ with tab_metrics:
     st.markdown("---")
     st.markdown("### LCC Theory")
     st.markdown("""
-    The Luminated Consciousness Correlation (LCC) framework treats consciousness states 
+    The Law of Correlational Causation (LCC) framework treats consciousness states 
     as attractors in a dynamical system. Sleep is one such attractor \u2014 with a well-defined 
     basin that the nervous system naturally falls into when conditions are right.
     

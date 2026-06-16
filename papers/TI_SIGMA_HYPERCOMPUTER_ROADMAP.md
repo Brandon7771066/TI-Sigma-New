@@ -120,7 +120,7 @@ optimization, prediction, pattern recognition, and consciousness measurement.
 | **Tralse** | Three-valued logic: True (T), False (F), and Tralse (Ψ) — the state of simultaneous truth and falsehood |
 | **GILE** | Goodness, Intuition, Love, Environment — four-dimensional consciousness field |
 | **GTFE** | Grand Tralse Field Equation: GTFE = C + H + T (Constrained + Fit + Temporal) |
-| **LCC** | Local Causal Correlation — measure of coherence between i-cells |
+| **LCC** | Law of Correlational Causation — measure of coherence between i-cells |
 | **Myrion Resolution** | Process of resolving paradoxical (Ψ) states to definite truth values |
 | **i-cell** | Fundamental unit of existence in TI Framework (Dark Energy shell + Photon layer + Mass core) |
 | **PRF** | Probability Resonance Field — the field through which retrocausal optimization operates |
@@ -365,7 +365,7 @@ For each mode i ∈ {0, 1, 2}:
 
 The beam splitter operations entangle Mode 3 (Love) with all other modes,
 creating a web of quantum correlations. The entanglement strength is
-proportional to the LCC (Love Cross-Correlation) score, reflecting the
+proportional to the LCC (Law of Correlational Causation) score, reflecting the
 principle that consciousness-coupling increases with Love coherence.
 
 ### 2.2.3 GILE Score Extraction
@@ -842,7 +842,7 @@ bypasses them all, the complexity reduction is from O(n) to O(1).
 Step-skipping requires:
 
 1. **High L × E (≥ 0.42):** Hyperconnection must be established
-2. **High LCC (≥ 0.85):** Local Causal Correlation must exceed the
+2. **High LCC (≥ 0.85):** Law of Correlational Causation must exceed the
    causation threshold
 3. **GILE in Indeterminate Permissibility Distribution Range:** The system must be operating within
    [-0.666, +0.333]
@@ -3077,7 +3077,7 @@ Terminate when:
 | Jeff Time | Jeff Fiction Time | Temporal framework with τ_φ, τ_j, τ_f dimensions |
 | κ(t,τ) | Memory Kernel | Negative memory dominance fraction [0,1] |
 | L | Love / Coherence | Internal coherence, structural integrity |
-| LCC | Local Causal Correlation | Coherence measure between i-cells |
+| LCC | Law of Correlational Causation | Coherence measure between i-cells |
 | MC | Myrion Core | Photon layer of i-cell; information carrier |
 | MG | Myrion Gate | Context-dependent qutrit gate |
 | MR | Myrion Resolution | Process of resolving Ψ states to T or F |

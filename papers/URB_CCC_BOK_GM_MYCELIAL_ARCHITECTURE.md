@@ -158,7 +158,7 @@ boundary = more CCC-dominant; looser boundary = more GM-dominant.
 
 ## 4. CCC and the LCC Threshold
 
-The LCC (Limbic-Cortical Coherence) measures the quality of integration within the
+The LCC (Law of Correlational Causation) measures the quality of integration within the
 CCC layer of a human i-cell. The Emerick Crossover (LCC ≥ 1/√2 ≈ 0.707) is the
 point at which the butterfly and octopus layers of CCC achieve mutual coherence —
 where the mathematical structure (butterfly/D₄) and the functional architecture

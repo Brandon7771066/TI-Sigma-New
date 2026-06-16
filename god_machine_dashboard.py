@@ -460,7 +460,7 @@ def render_delta_wave_tab():
     **Early Morning Insomnia Protocol (3:30 AM Awakenings)**
     
     Uses delta wave entrainment (0.5-4 Hz) to help return to deep sleep.
-    Integrates with LCC (Light-Coded Consciousness) protocols.
+    Integrates with LCC (Law of Correlational Causation) protocols.
     """)
     
     col1, col2 = st.columns(2)

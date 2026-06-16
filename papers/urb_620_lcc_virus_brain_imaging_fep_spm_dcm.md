@@ -59,16 +59,16 @@ Despite their power, these frameworks share five structural gaps:
 | **G.1: Dimensional blindness** | All GILE dimensions (G, I, L, E) are collapsed into a single "valence" or "reward prediction error." Love and goodness are not modeled separately. |
 | **G.2: No moral dimension** | FEP has no goodness (G) construct. Moral orientation, ethical coherence, and the Radiant Threshold are absent. |
 | **G.3: No threshold model** | FEP predicts smooth, continuous learning. The Emerick Threshold (GT ≈ 0.4142) predicts a phase transition in decision-making — a non-linear discontinuity that SPM mass-univariate models cannot detect without threshold-specific analysis. |
-| **G.4: No cross-individual LCC** | Friston's social FEP (shared Markov blankets; Kirchhoff et al., 2018) models social interaction as nested inference, but has no mechanism for love-consciousness coupling to propagate virally across individuals. |
+| **G.4: No cross-individual LCC** | Friston's social FEP (shared Markov blankets; Kirchhoff et al., 2018) models social interaction as nested inference, but has no mechanism for law of correlational causation to propagate virally across individuals. |
 | **G.5: No indeterminate truth states** | FEP processes are binary-ish: prediction errors are reduced or not. Tralse states (TI Sigma's partial indeterminacy) — where a neural claim is simultaneously partially true and partially false — have no FEP equivalent. |
 
 ---
 
 ## 2. The TI Sigma LCC Framework
 
-### 2.1 Limbic-Cortical Coupling (LCC) — Core Definition
+### 2.1 Law of Correlational Causation (LCC) — Core Definition
 
-In TI Sigma, **LCC (Love-Consciousness Coupling)** is the degree of coherent, reciprocal information exchange between the limbic system (affective/motivational substrate) and cortical networks (cognitive/executive substrate). Formally:
+In TI Sigma, **LCC (Law of Correlational Causation)** is the degree of coherent, reciprocal information exchange between the limbic system (affective/motivational substrate) and cortical networks (cognitive/executive substrate). Formally:
 
 ```
 LCC = Coh(Limbic, Cortex) × Direction(Cortex→Limbic dominant in low-LCC;
@@ -150,7 +150,7 @@ Friston's shared Markov blankets (Kirchhoff et al., 2018; Friston, 2019) model s
 
 *Testable: In hyperscanning EEG, the Granger causality from high-GILE-L participant's gamma to low-GILE-L participant's gamma should be significantly greater than the reverse direction.*
 
-**2. The love channel.** FEP models social interaction via prediction error minimization — there is no distinct "love" or "affiliation" signal. The LCC Virus specifically propagates via the GILE-L channel: what spreads is not just information but the limbic-cortical coherence pattern associated with love and affiliation. FEP has no analogue.
+**2. The love channel.** FEP models social interaction via prediction error minimization — there is no distinct "love" or "affiliation" signal. The LCC Virus specifically propagates via the GILE-L channel: what spreads is not just information but the law of correlational causation pattern associated with love and affiliation. FEP has no analogue.
 
 **3. Viral spreading dynamics.** LCC Virus propagation follows a contagion model (not a steady-state equilibrium). High-LCC nodes in a social network should show spreading with a basic reproductive number (R₀ > 1 in certain social conditions). This generates predictions about **network-level LCC elevation** that Friston's pairwise blanket model cannot produce.
 
@@ -200,7 +200,7 @@ TI Sigma predicts that Tralse brain states should show:
 | Feature | Prediction | Measurement |
 |---|---|---|
 | **Bistable dynamics** | Brain alternates between two competing attractor states, not settling | Multi-voxel pattern analysis (MVPA) showing bistability |
-| **Reduced limbic-cortical coherence** | Amygdala and vmPFC are simultaneously active but uncoupled | DCM: near-zero effective connectivity between vmPFC and amygdala |
+| **Reduced law of correlational causation** | Amygdala and vmPFC are simultaneously active but uncoupled | DCM: near-zero effective connectivity between vmPFC and amygdala |
 | **High prediction error dwell time** | Extended periods of unresolved prediction error signals (no Bayesian update occurring) | FRN/N200 ERP amplitude elevated for sustained periods |
 | **Alpha desynchronization without gamma synchronization** | Alpha drops (attention activated) but gamma doesn't rise (no coherent representation formed) | EEG time-frequency analysis |
 | **MI risk signal** | When D2 > 0.65, the system enters Meta-Indeterminate — neither truth-pole nor false-pole — with maximum neural entropy | Shannon entropy of BOLD signal elevated in DMN |
@@ -224,7 +224,7 @@ TI Sigma's D2 Tralse Meter provides a way to measure this distinction. When mult
 | **1. GILE anatomical mapping** | Four dissociable circuits (G: dlPFC-ACC; I: hippocampus-DMN; L: vmPFC-amygdala; E: insula-visual) | Single "valence" axis; no goodness/love distinction |
 | **2. Emerick Threshold detection** | Phase transition at GT ≈ 0.4142; requires threshold-detection models | Smooth learning curves only; no phase transition prediction |
 | **3. Tralse states** | Structured neural indeterminacy (bistability + uncoupled LCC + sustained prediction error) | Binary prediction error only; no Tralse category |
-| **4. LCC Virus social propagation** | Directed, asymmetric, contagion-model spreading of limbic-cortical coherence patterns | Symmetric shared Markov blankets; no viral spreading dynamics |
+| **4. LCC Virus social propagation** | Directed, asymmetric, contagion-model spreading of law of correlational causation patterns | Symmetric shared Markov blankets; no viral spreading dynamics |
 | **5. D2 Tralse Meter** | Quantitative cross-circuit variance as neural contradiction index | No equivalent internal contradiction measure |
 
 ---
@@ -301,7 +301,7 @@ The TI Sigma LCC framework and its propagating extension (the LCC Virus) offer f
 1. **GILE anatomical mapping** — four dissociable circuits that SPM can test and DCM can model
 2. **Emerick Threshold** — a neural phase transition that requires threshold-detection models absent from standard SPM practice
 3. **Tralse states** — a novel neural state category beyond FEP's prediction-error signal, measurable as cross-circuit D2 variance
-4. **LCC Virus social propagation** — directed, asymmetric, contagion-model spreading of limbic-cortical coherence, testable via hyperscanning EEG Granger causality
+4. **LCC Virus social propagation** — directed, asymmetric, contagion-model spreading of law of correlational causation, testable via hyperscanning EEG Granger causality
 5. **D2 Tralse Meter** — an objective neural contradiction index, operationalizable as BOLD variance across GILE circuits
 
 None of these require abandoning FEP/SPM/DCM. All five can be tested using existing neuroimaging tools. TI Sigma's contribution is the hypothesis structure — the specific, falsifiable predictions — that existing neuroscience lacks.

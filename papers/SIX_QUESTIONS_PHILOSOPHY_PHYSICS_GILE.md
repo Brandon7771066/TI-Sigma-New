@@ -174,7 +174,7 @@ This is the operationally critical point: **GILE is a verb, not a noun.** You do
 
 ### The Problem LCC Requires a Signal Pathway
 
-The Latent Conscious Correlate (LCC) posits that consciousness-like coordination operates across biological structures — between neurons, between organs, potentially between organisms. Classical neuroscience allows only two long-distance mechanisms: chemical signaling (slow, ~100ms) and action potentials (fast, ~1ms, but only along connected pathways). Both require physical adjacency.
+The Law of Correlational Causation (LCC) posits that consciousness-like coordination operates across biological structures — between neurons, between organs, potentially between organisms. Classical neuroscience allows only two long-distance mechanisms: chemical signaling (slow, ~100ms) and action potentials (fast, ~1ms, but only along connected pathways). Both require physical adjacency.
 
 If LCC involves non-local coordination — the L-dimension of GILE — it needs a physical mechanism that doesn't require adjacency.
 

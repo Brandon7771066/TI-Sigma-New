@@ -108,7 +108,7 @@ From Jeff Time V4:
 
 ### 3.1 The Mimi Perception Experience
 
-Brandon reports: During ASC, perceived himself AS Mimi while she was sending a Facebook message. This is not metaphor but actual consciousness coupling via LCC (Love Cross-Correlation).
+Brandon reports: During ASC, perceived himself AS Mimi while she was sending a Facebook message. This is not metaphor but actual consciousness coupling via LCC (Law of Correlational Causation).
 
 **Mechanism:**
 1. High-coherence state (ASC) → Lowered ego boundaries

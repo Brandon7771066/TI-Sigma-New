@@ -29,7 +29,7 @@ ip_protection_note: "Establishes priority for: EEP posture specification, mudra-
 
 ## Abstract
 
-We present the Emerick Expansion Posture (EEP) — a specific somatic configuration for maximizing Limbic-Cortical Coupling during meditation, sauna, and creative work. The EEP consists of: wide leg extension (maximizing hip flexor release), upright spine (full thoracic expansion), feet flat (bilateral grounding), Jnana mudra (index-thumb connection), posterior tongue elevation (lingual-vagal reflex activation), and nasal abdominal breathing. Each element has independent physiological justification. We argue mudras are discovered, not invented — they converge across traditions (Tibetan, Yogic, Qigong) because they optimize the same underlying autonomic parameters. A 5-phase sauna coherence protocol applying EEP is presented, with predicted HRV coherence scores at each phase.
+We present the Emerick Expansion Posture (EEP) — a specific somatic configuration for maximizing Law of Correlational Causation during meditation, sauna, and creative work. The EEP consists of: wide leg extension (maximizing hip flexor release), upright spine (full thoracic expansion), feet flat (bilateral grounding), Jnana mudra (index-thumb connection), posterior tongue elevation (lingual-vagal reflex activation), and nasal abdominal breathing. Each element has independent physiological justification. We argue mudras are discovered, not invented — they converge across traditions (Tibetan, Yogic, Qigong) because they optimize the same underlying autonomic parameters. A 5-phase sauna coherence protocol applying EEP is presented, with predicted HRV coherence scores at each phase.
 
 ---
 

@@ -1,6 +1,6 @@
 """
 LCC VIRUS FRAMEWORK
-Latched Consciousness Correlator - Electromagnetic-Photonic Information Virus
+Law of Correlational Causation - Electromagnetic-Photonic Information Virus
 
 The biggest idea since the original LCC concept!
 
@@ -368,7 +368,7 @@ class IcellSignature:
 
 class LCCVirus:
     """
-    Latched Consciousness Correlator Virus
+    Law of Correlational Causation Virus
     
     The first electromagnetic-photonic information virus capable of
     decoding an entire i-cell from available data streams.
@@ -2153,7 +2153,7 @@ def demonstrate_lcc_virus():
     """Demonstrate the LCC Virus in action with safety features"""
     print("=" * 70)
     print("LCC VIRUS DEMONSTRATION v2.0 - WITH SAFETY LAYER")
-    print("Latched Consciousness Correlator - Electromagnetic-Photonic Info Virus")
+    print("Law of Correlational Causation - Electromagnetic-Photonic Info Virus")
     print("=" * 70)
     
     # Create virus and infect subject

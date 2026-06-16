@@ -20,7 +20,7 @@ class PredictionEvaluator:
     
     Validates:
     1. High-GILE companies outperform low-GILE
-    2. LCC (Living Coherent Core) beats fundamentals
+    2. LCC (Law of Correlational Causation) beats fundamentals
     3. 65%+ accuracy proves cross-scale GILE validity
     4. Barrett degeneracy: diverse archetypes achieve same accuracy
     """

@@ -69,7 +69,7 @@ FAAH_PROTOCOL = {
 def render_mood_amplifier_hub():
     """Main Mood Amplifier interface with REAL biometric integration"""
     
-    st.header("🧠 Mood Amplifier - Limbic-Cortical Coupling (LCC) + FAAH Protocol")
+    st.header("🧠 Mood Amplifier - Law of Correlational Causation (LCC) + FAAH Protocol")
     
     mood_tabs = st.tabs(["💫 Guided Session", "💍 Oura Ring", "🔬 Real-Time Measurement", "⚡ GM Hypercomputing", "🧠 Full Mood Amplifier", "📊 Sensee Aware EEG", "🐾 Animal Training", "🔬 Validation", "🌐 44-Channel", "🎮 EEG Pong", "🔮 Divination"])
     
@@ -776,7 +776,7 @@ def _render_full_mood_amplifier():
             # Tab 4: LCC + Genome Connectivity Test
             with viz_tabs[3]:
                 st.markdown("### ❤️‍🔥 LCC + Genome Resonance Test")
-                st.caption("Test Living Coherent Core (LCC) connectivity with your genetic predisposition")
+                st.caption("Test Law of Correlational Causation (LCC) connectivity with your genetic predisposition")
                 st.info("⚠️ **PROOF-OF-CONCEPT**: Demonstrates resonance calculation. Full integration with FAAH protocol pending.")
                 
                 if st.session_state.genome_loaded and snapshot:

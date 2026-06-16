@@ -125,7 +125,7 @@ class OpenAccessValidator:
     def _init_claims_registry(self):
         """Initialize the claims we want to validate"""
         claims = [
-            ("stock_lcc_correlation", "LCC (Love Cross-Correlation) predicts stock price movements"),
+            ("stock_lcc_correlation", "LCC (Law of Correlational Causation) predicts stock price movements"),
             ("ti_weights_accuracy", "TI Algorithm weights (t1=74.6%, lcc=23.8%) outperform baseline"),
             ("sacred_interval_bounds", "GILE sacred interval (-0.666, 0.333) bounds market behavior"),
             ("tralse_market_states", "Markets exhibit True, False, and Indeterminate (Φ) states"),
@@ -218,7 +218,7 @@ class OpenAccessValidator:
     
     def calculate_lcc_correlation(self, symbol1: str, symbol2: str, period: str = "1y") -> Dict:
         """
-        Calculate Love Cross-Correlation between two assets.
+        Calculate Law of Correlational Causation between two assets.
         
         This is the PUBLIC market data version of LCC - no personal info!
         """

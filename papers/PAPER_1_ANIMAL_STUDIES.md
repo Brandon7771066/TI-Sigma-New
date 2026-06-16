@@ -1,4 +1,4 @@
-# Multi-Species Safety and Efficacy of Limbic-Cortical Coupling Mood Amplification: A Comprehensive Animal Study
+# Multi-Species Safety and Efficacy of Law of Correlational Causation Mood Amplification: A Comprehensive Animal Study
 
 **Authors:** [To Be Determined]  
 **Affiliations:** [To Be Determined]  
@@ -12,7 +12,7 @@
 
 **Background:** Mood disorders affect 264 million people worldwide, yet current treatments show limited efficacy (30-50% response rates) and significant side effects. Novel neurotherapeutic approaches are urgently needed.
 
-**Methods:** We conducted comprehensive safety and efficacy studies of limbic-cortical coupling (LCC) mood amplification across seven mammalian species (rats, mice, guinea pigs, cats, dogs, marmosets, and rhesus macaques; total n=328). Animals received non-invasive interventions of varying durations (3-7 minutes) while undergoing simultaneous EEG and fMRI monitoring. Primary outcomes were mood valence shift and safety profile. Secondary outcomes included behavioral changes and neurophysiological mechanisms.
+**Methods:** We conducted comprehensive safety and efficacy studies of law of correlational causation (LCC) mood amplification across seven mammalian species (rats, mice, guinea pigs, cats, dogs, marmosets, and rhesus macaques; total n=328). Animals received non-invasive interventions of varying durations (3-7 minutes) while undergoing simultaneous EEG and fMRI monitoring. Primary outcomes were mood valence shift and safety profile. Secondary outcomes included behavioral changes and neurophysiological mechanisms.
 
 **Results:** Overall success rate was 77.3% (254/328 subjects showed positive mood shifts). Effect sizes ranged from Cohen's d=0.72 (cats) to d=0.92 (rhesus macaques). Safety profile was excellent across all species: zero instances of structural brain damage, 2.4% seizure risk (not significantly different from baseline, p=0.18), and 3.8% transient behavioral effects. Optimal intervention duration scaled with brain volume (r²=0.86, p<0.001): 5 minutes for rodents, 6-7 minutes for primates. Multimodal EEG-fMRI validation showed 88.7% agreement. Cross-species analysis revealed conserved neural mechanisms: alpha power increase (+23-32%), enhanced prefrontal-limbic connectivity (+0.19-0.35), and optimal LCC range (0.60-0.90).
 
@@ -28,9 +28,9 @@
 
 Major depressive disorder (MDD) affects 264 million individuals globally, representing 3.4% of the world's population[1]. Current first-line treatments—selective serotonin reuptake inhibitors (SSRIs) and psychotherapy—show modest response rates (30-50%)[2,3] with significant side effects including sexual dysfunction, weight gain, and withdrawal symptoms[4]. Novel neurotherapeutic approaches that target fundamental brain mechanisms could revolutionize psychiatric treatment.
 
-### Limbic-Cortical Coupling as a Therapeutic Target
+### Law of Correlational Causation as a Therapeutic Target
 
-The limbic system (amygdala, hippocampus, nucleus accumbens) processes emotional valence, while prefrontal cortex (PFC) provides cognitive regulation[5-7]. Dysregulation of limbic-cortical coupling (LCC) is a hallmark of mood disorders: depressed individuals show reduced PFC-amygdala connectivity[8-10]. Enhancing LCC could restore emotional regulation.
+The limbic system (amygdala, hippocampus, nucleus accumbens) processes emotional valence, while prefrontal cortex (PFC) provides cognitive regulation[5-7]. Dysregulation of law of correlational causation (LCC) is a hallmark of mood disorders: depressed individuals show reduced PFC-amygdala connectivity[8-10]. Enhancing LCC could restore emotional regulation.
 
 ### Current Study
 

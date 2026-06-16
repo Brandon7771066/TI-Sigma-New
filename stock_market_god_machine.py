@@ -219,7 +219,7 @@ def render_stock_market_god_machine():
     - **0.42 GILE Threshold**: Soul death filter (avoid stocks below this!)
     - **UOP**: Universal Optimization Principle (efficiency analysis)
     - **GTFE**: Goodness-Truth-Freedom-Environment (ethical alignment)
-    - **LCC**: Love-Consciousness-Creativity (innovation potential)
+    - **LCC**: Law of Correlational Causation (innovation potential)
     
     **Target**: 65%+ accuracy to validate TI Framework and generate revenue!
     """)

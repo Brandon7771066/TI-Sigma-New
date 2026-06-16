@@ -93,7 +93,7 @@ TICG (master geometric structure, URB #734-736)
 
 Five Flagships (the framework's analytical pillars)
 ├── BOK (Being-Other-Knowledge) — substrate (URB #699, #720)
-├── LCC (Logarithmic Cross-Coupling) — substrate dynamics
+├── LCC (Law of Correlational Causation) — substrate dynamics
 ├── PD (Permissibility Distribution) — Truth-axis pillar with E-modulation (URB #728, #733)
 ├── MR (Myrion Resolution) — Truth-axis pillar (URB #714)
 └── HEAR (Holistic Existence Amplification Razor) — Existence-axis pillar (URB #743)

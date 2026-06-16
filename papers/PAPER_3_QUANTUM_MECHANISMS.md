@@ -1,4 +1,4 @@
-# Quantum-Classical Hybrid Mechanisms in Limbic-Cortical Coupling: Evidence for Non-Local Neural Correlations
+# Quantum-Classical Hybrid Mechanisms in Law of Correlational Causation: Evidence for Non-Local Neural Correlations
 
 **Authors:** [To Be Determined]  
 **Affiliations:** [To Be Determined]  
@@ -9,7 +9,7 @@
 
 ## Abstract
 
-**Background:** Classical neuroscience cannot fully explain instantaneous cross-regional neural synchronization observed in limbic-cortical coupling (LCC). We hypothesized quantum-classical hybrid mechanisms bridge molecular quantum coherence to macroscopic neural dynamics.
+**Background:** Classical neuroscience cannot fully explain instantaneous cross-regional neural synchronization observed in law of correlational causation (LCC). We hypothesized quantum-classical hybrid mechanisms bridge molecular quantum coherence to macroscopic neural dynamics.
 
 **Methods:** Multi-scale theoretical framework integrating quantum biology (ion channel tunneling, biophoton entanglement) with classical neural synchronization. Analyzed 328 animal subjects for quantum signatures: Bell-CHSH inequality violations, temperature/isotope sensitivity, non-local correlations. Computational models simulated quantum-classical transitions.
 
@@ -530,7 +530,7 @@ If mood (conscious experience) involves quantum-classical transitions:
 
 ## Conclusions
 
-Multiple converging lines of evidence support **quantum-classical hybrid mechanisms** in limbic-cortical coupling mood amplification:
+Multiple converging lines of evidence support **quantum-classical hybrid mechanisms** in law of correlational causation mood amplification:
 
 1. Neural correlations violate classical bounds (Bell-CHSH S=2.18)
 2. Synchronization faster than classical physics predicts

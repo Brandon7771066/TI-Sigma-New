@@ -209,7 +209,7 @@
 
 **Publications Enabled:**
 1. **TI-UOP Validation Paper** - "A 6-Dimensional Framework for Real-Time Emotion Recognition"
-2. **Duration & Persistence Paper** - "Temporal Dynamics of Limbic-Cortical Coupling Effects"
+2. **Duration & Persistence Paper** - "Temporal Dynamics of Law of Correlational Causation Effects"
 3. **FAAH-LCC Synergy Paper** - "Endocannabinoid Enhancement Amplifies Mood Intervention Efficacy"
 4. **Mystical States Paper** - "Non-Pharmacological Induction of Mystical Experiences via Neural Coupling"
 

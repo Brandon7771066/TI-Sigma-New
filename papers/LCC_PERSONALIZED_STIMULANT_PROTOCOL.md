@@ -3,7 +3,7 @@
 
 **Created:** December 12, 2025  
 **Author:** Brandon Charles Emerick  
-**Framework:** TI LCC (Love Correlation Consciousness) Bioenergetics  
+**Framework:** TI LCC (Law of Correlational Causation) Bioenergetics  
 **Purpose:** Sustainable energy protocol for dopamine/NE/adenosine non-responders
 
 ---

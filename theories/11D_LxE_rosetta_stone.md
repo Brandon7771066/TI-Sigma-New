@@ -118,7 +118,7 @@
 
 | Measure | Physical Correlate |
 |---------|-------------------|
-| Local Causal Correlation (LCC) | Spooky action at a distance |
+| Law of Correlational Causation (LCC) | Spooky action at a distance |
 | Heart-heart synchrony | Between lovers/twins |
 | Brain-brain synchrony | During empathy |
 | Random number generator deviation | During mass attention |

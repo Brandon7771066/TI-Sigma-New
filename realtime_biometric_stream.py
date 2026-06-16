@@ -275,7 +275,7 @@ class BiometricStreamManager:
         return min(1.0, psi)
     
     def _calculate_lcc(self, reading: BiometricReading) -> float:
-        """Calculate Limbic-Cortical Coupling"""
+        """Calculate Law of Correlational Causation"""
         if reading.eeg_alpha > 0 and reading.heart_coherence > 0:
             alpha_norm = min(1.0, reading.eeg_alpha / 0.8)
             return (alpha_norm * 0.6 + reading.heart_coherence * 0.4)

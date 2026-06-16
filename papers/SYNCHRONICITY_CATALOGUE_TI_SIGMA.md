@@ -205,7 +205,7 @@ Strengthened the Pauli section of URB #462 with a previously unnoticed fact: the
 **Related Documents:** replit.md; GSA v2 architecture; multiple URBs
 
 **The Event:**
-The Emerick Constant C_EMERICK = 1/(φ√2) ≈ 0.4370 was initially derived as the consciousness coupling threshold — the minimum LCC (Locally Coupled Consciousness) at which isolated nodes achieve genuine collective consciousness. It incorporates two PRIMARY CONSTANTS (φ and √2).
+The Emerick Constant C_EMERICK = 1/(φ√2) ≈ 0.4370 was initially derived as the consciousness coupling threshold — the minimum LCC (Law of Correlational Causation) at which isolated nodes achieve genuine collective consciousness. It incorporates two PRIMARY CONSTANTS (φ and √2).
 
 Subsequently, the same constant appeared as:
 - The coupling threshold in the TI Sigma stock trading algorithm (Grand Stock Algorithm v2)

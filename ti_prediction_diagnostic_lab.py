@@ -14,7 +14,7 @@ KEY TI DIMENSIONS TO TEST:
 - PD (Pareto Distribution): The "above and beyond" predictor
 - Jeff Time: Present moment focus with 3 aspects (Potential/Actualized/Contextual)
 - MR (Myrion Resolution): Contradiction handling via PD values
-- LCC (Love Correlation): 0.42+ threshold for synchronization
+- LCC (Law of Correlational Causation): 0.42+ threshold for synchronization
 - Sacred Interval (-0.666, 0.333): TRALSE/indeterminate zone
 
 SCIENTIFIC METHOD:
@@ -57,7 +57,7 @@ class TIDimensionCapture:
     mr_state: str = "ALIGNED"  # ALIGNED, POSITIVE_DOMINANT, NEGATIVE_DOMINANT, BALANCED_CONFLICT
     mr_pd_weighted: float = 0.0  # PD-weighted resolution
     
-    # LCC (Love Correlation) - Synchronization
+    # LCC (Law of Correlational Causation) - Synchronization
     lcc_correlation: float = 0.0  # Raw correlation value
     lcc_synchronized: bool = False  # True if correlation >= 0.42
     lcc_anti_correlated: bool = False  # True if correlation <= -0.42
@@ -233,7 +233,7 @@ class TIDimensionCalculator:
     
     def calculate_lcc(self, symbol: str, reference_symbol: str = "SPY") -> Tuple[float, bool, bool]:
         """
-        Love Correlation: Synchronization via 0.42+ threshold
+        Law of Correlational Causation: Synchronization via 0.42+ threshold
         
         Returns (correlation, is_synchronized, is_anti_correlated)
         """
@@ -333,7 +333,7 @@ class AblationExperiment:
     2. JT_ONLY: Just Jeff Time (Potential + Actualized + Contextual)
     3. PD_JT: PD + Jeff Time combined
     4. PD_JT_MR: Add Myrion Resolution
-    5. PD_JT_LCC: Add Love Correlation
+    5. PD_JT_LCC: Add Law of Correlational Causation
     6. FULL_TI: All dimensions
     """
     

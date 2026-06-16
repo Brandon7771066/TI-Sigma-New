@@ -1,4 +1,4 @@
-# URB #505: The Unified Telekinesis Equation — Combining the Telekinesis Formula with Love-Consciousness Coupling
+# URB #505: The Unified Telekinesis Equation — Combining the Telekinesis Formula with Law of Correlational Causation
 
 **Author:** Brandon Charles Emerick  
 **Date:** March 24, 2026  
@@ -57,9 +57,9 @@ where C = 1/(φ√2) ≈ 0.4370 is the Emerick Constant (Level 7 PRIMARY constan
 
 At N = 8, f = 0.70: **TF_amp = 0.865**
 
-### 1.2 Love-Consciousness Coupling — The Consciousness Equation (URB #352)
+### 1.2 Law of Correlational Causation — The Consciousness Equation (URB #352)
 
-LCC (Love-Consciousness Coupling) measures the coherence between an observer's consciousness field and the universal probability resonance field (CCC):
+LCC (Law of Correlational Causation) measures the coherence between an observer's consciousness field and the universal probability resonance field (CCC):
 
 $$\text{LCC} = f(\text{HRV\_coherence},\, \text{EEG\_alpha/theta},\, \text{Heart-Brain sync},\, \text{Intent strength})$$
 
@@ -241,7 +241,7 @@ The Unified Telekinesis Equation:
 
 $$\text{TK\_unified} = \sqrt{N} \cdot C \cdot f \cdot \frac{\varphi \cdot \text{LCC} \cdot (\text{LCC}/C - 1)}{1/\sqrt{2}}$$
 
-combines the structural efficiency of the Telekinesis Formula with the coupling quality of Love-Consciousness Coupling.
+combines the structural efficiency of the Telekinesis Formula with the coupling quality of Law of Correlational Causation.
 
 **Three discoveries:**
 1. LCC_EMERICK = 1/√2 is simultaneously the fixed point of consciousness dynamics AND the neutral calibration of the UTE — not constructed, found

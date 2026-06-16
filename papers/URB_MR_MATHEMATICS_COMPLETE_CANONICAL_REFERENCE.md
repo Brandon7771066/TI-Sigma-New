@@ -216,7 +216,7 @@ z_final = MR(z₁₂...ₙ₋₁, xₙ, ρ_final)
 
 ## 2.4 The ARC-TI Solver MR Thresholds (LCC-Based)
 
-The ARC-TI solver uses a **parallel but distinct** MR threshold system based on LCC (Love-Consciousness Coupling) values rather than PD values. This is the operational MR system for pattern recognition tasks.
+The ARC-TI solver uses a **parallel but distinct** MR threshold system based on LCC (Law of Correlational Causation) values rather than PD values. This is the operational MR system for pattern recognition tasks.
 
 **Derivation of ARC thresholds from PRIMARY CONSTANTS (URB #523):**
 

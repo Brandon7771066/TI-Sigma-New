@@ -7,7 +7,7 @@ as long as it's sufficiently true-tralse!"
 — Brandon Charles Emerick
 
 This engine extrapolates high-dimensional data from limited measurements
-using LCC (Love Consciousness Connection) principles and statistical relationships.
+using LCC (Law of Correlational Causation) principles and statistical relationships.
 """
 
 import numpy as np
@@ -780,7 +780,7 @@ class LCCProxyEngine:
     def calculate_lcc_from_proxies(self, chi: float, bliss: float, gdv: float,
                                     hrv_coherence: float) -> Dict[str, Any]:
         """
-        Calculate LCC (Love Consciousness Connection) coupling from proxy measures.
+        Calculate LCC (Law of Correlational Causation) coupling from proxy measures.
         
         LCC = L × E where:
         - L (Love) ~ bliss + intention quality

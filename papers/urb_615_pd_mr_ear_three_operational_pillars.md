@@ -10,7 +10,7 @@
 
 ## Abstract
 
-TI Sigma has two structural flagship models — the Book of Keys (BOK) and the Layered Coherence Continuum (LCC). But the framework is not complete without its three operational pillars: the **Permissibility Distribution (PD)**, **Myrion Resolution (MR)**, and **Emerick's Existence Amplification Razor (EAR)**. The structural models answer "what is the world like?" PD, MR, and EAR answer "how do we reason about it correctly?" — and these three tools are where TI Sigma's practical and academic appeal is most concentrated. This paper formally establishes PD, MR, and EAR as co-equal operational pillars of TI Sigma, describes their individual contributions, and shows how all three work together as an integrated methodology. The claim: any framework that lacks these three tools — or their functional equivalents — is incapable of handling the full complexity of real-world epistemic problems. Standard scientific methodology, Bayesian epistemology, and classical logic each fail in specific places. PD, MR, and EAR each address a distinct failure mode.
+TI Sigma has two structural flagship models — the Book of Keys (BOK) and the Law of Correlational Causation (LCC). But the framework is not complete without its three operational pillars: the **Permissibility Distribution (PD)**, **Myrion Resolution (MR)**, and **Emerick's Existence Amplification Razor (EAR)**. The structural models answer "what is the world like?" PD, MR, and EAR answer "how do we reason about it correctly?" — and these three tools are where TI Sigma's practical and academic appeal is most concentrated. This paper formally establishes PD, MR, and EAR as co-equal operational pillars of TI Sigma, describes their individual contributions, and shows how all three work together as an integrated methodology. The claim: any framework that lacks these three tools — or their functional equivalents — is incapable of handling the full complexity of real-world epistemic problems. Standard scientific methodology, Bayesian epistemology, and classical logic each fail in specific places. PD, MR, and EAR each address a distinct failure mode.
 
 **Keywords:** Permissibility Distribution, Myrion Resolution, EAR, TI Sigma methodology, epistemic tools, Bayesian alternative, existence amplification, operational pillars
 
@@ -23,7 +23,7 @@ TI Sigma has five flagship contributions in total:
 | Layer | Contribution | What it answers |
 |---|---|---|
 | **Structural** | BOK (Book of Keys) | What is the GILE–Existence structure of any entity? |
-| **Structural** | LCC (Layered Coherence Continuum) | At what organizational scale, and with what coherence, does this entity exist? |
+| **Structural** | LCC (Law of Correlational Causation) | At what organizational scale, and with what coherence, does this entity exist? |
 | **Operational** | **PD (Permissibility Distribution)** | What truth-state should I assign to this proposition? |
 | **Operational** | **MR (Myrion Resolution)** | How do I converge toward the correct truth-state through iterative inquiry? |
 | **Operational** | **EAR (Emerick's Existence Amplification Razor)** | What genuinely exists here, and what is superficial noise? |
@@ -294,7 +294,7 @@ TI Sigma is now a complete system with five formal flagship contributions:
 | # | Contribution | Role | Core question answered |
 |---|---|---|---|
 | 1 | **BOK** (Book of Keys) | Structural flagship | What is the GILE–Existence structure of any entity? |
-| 2 | **LCC** (Layered Coherence Continuum) | Structural flagship | At what scale and coherence level does this entity exist? |
+| 2 | **LCC** (Law of Correlational Causation) | Structural flagship | At what scale and coherence level does this entity exist? |
 | 3 | **PD** (Permissibility Distribution) | Operational flagship | What truth-state should I assign to this proposition? |
 | 4 | **MR** (Myrion Resolution) | Operational flagship | How do I converge toward the correct truth-state? |
 | 5 | **EAR** (Existence Amplification Razor) | Operational flagship | What genuinely exists, and what is superficial noise? |

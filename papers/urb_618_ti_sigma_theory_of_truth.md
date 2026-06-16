@@ -198,7 +198,7 @@ Standard propositional logic (and its probabilistic extensions) operates on bina
 | Element | Type | Function |
 |---|---|---|
 | **BOK** (Being-of-Knowledge) | Structural flagship | GILE-EV structure of any entity; inner loops (GILE) + outer loops (Existence) |
-| **LCC** (Layered Coherence Continuum) | Structural flagship | Organizational scale; coherence thresholds between levels |
+| **LCC** (Law of Correlational Causation) | Structural flagship | Organizational scale; coherence thresholds between levels |
 | **PD** (Permissibility Distribution) | Operational pillar | Truth-state assignment; 5-valued distribution over {TT, TI, TF, MI, EV} |
 | **MR** (Myrion Resolution) | Operational pillar | Convergence procedure; 3+ levels; nonlinear; replaces Bayesian updating |
 | **EAR** (Existence Amplification Razor) | Operational pillar | Ontological pruning + amplification; Law of Realness; HEM-Score metric |

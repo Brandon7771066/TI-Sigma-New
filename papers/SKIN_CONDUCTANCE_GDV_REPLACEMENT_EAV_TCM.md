@@ -258,7 +258,7 @@ Each measurement modality maps to a dimension of the GILE (Goodness, Intuition, 
 
 ### 6.3 LCC Measurement via Bilateral Skin Conductance
 
-The Law of Correlative Causation (LCC) posits that correlation becomes causation above a threshold of 0.85. This can be measured through simultaneous bilateral GSR:
+The Law of Correlational Causation (LCC) posits that correlation becomes causation above a threshold of 0.85. This can be measured through simultaneous bilateral GSR:
 
 1. Place GSR electrodes at **paired meridian points** (e.g., left and right LU-9)
 2. Record continuous bilateral SCL for 5+ minutes

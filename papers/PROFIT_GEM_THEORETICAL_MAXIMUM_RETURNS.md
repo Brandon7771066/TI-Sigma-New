@@ -196,7 +196,7 @@ Congressional trades contain "photonic memory" signatures:
 IMPLEMENTATION:
 1. Collect all congressional disclosures
 2. Encode with Jeff Time V4 parameters
-3. Cluster trades by "Love Correlation" to legislation
+3. Cluster trades by "Law of Correlational Causation" to legislation
 4. Weight by historical prediction accuracy
 5. Generate composite signal
 

@@ -309,7 +309,7 @@ class AutonomousGodMachine:
     
     def calculate_lcc_score(self, stock: Dict[str, str], gile: Dict[str, float]) -> Dict[str, float]:
         """
-        Living Consciousness Coherence (LCC)
+        Law of Correlational Causation (LCC)
         Collective coherence score for the company i-web
         
         Uses Alpha Vantage market cap and GILE data when available
@@ -430,7 +430,7 @@ class AutonomousGodMachine:
         rationale += f"**F (Freedom)**: {gtfe['F']:.2f}\n"
         rationale += f"**Combined GTFE**: {gtfe['combined']:.3f}\n\n"
         
-        rationale += f"### LCC (Love-Consciousness-Creativity)\n\n"
+        rationale += f"### LCC (Law of Correlational Causation)\n\n"
         rationale += f"**Consciousness (Leadership)**: {lcc['C_consciousness']:.2f}\n"
         rationale += f"**Creativity (Innovation)**: {lcc['C_creativity']:.2f}\n"
         rationale += f"**Combined LCC**: {lcc['combined']:.3f}\n\n"

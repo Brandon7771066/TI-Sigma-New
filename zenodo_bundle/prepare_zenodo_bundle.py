@@ -26,13 +26,13 @@ PAPERS = [
         subtitle="Integrating the Emerick Constant into a Unified Consciousness Framework",
         paper_num="352",
         date="2026-03-01",
-        keywords=["consciousness", "limbic-cortical coupling", "golden ratio",
+        keywords=["consciousness", "law of correlational causation", "golden ratio",
                   "attractor dynamics", "Emerick constant", "mood amplifier",
                   "heart coherence", "mathematical consciousness", "TI Sigma",
                   "fixed point theorem"],
         abstract=(
             "We derive a unified consciousness equation Ψ(LCC) = φ × LCC × (LCC/C − 1) "
-            "that integrates the Limbic-Cortical Coupling (LCC) measure with the PRIMARY "
+            "that integrates the Law of Correlational Causation (LCC) measure with the PRIMARY "
             "constant hierarchy of TI Sigma. The derivation produces three exact algebraic "
             "results: (1) a fixed point at LCC = 1/√2 where consciousness output equals "
             "input (the Emerick Crossover); (2) a recursive map showing the TRUE threshold "
@@ -85,7 +85,7 @@ PAPERS = [
                   "yoga", "consciousness optimization", "TI Sigma", "BlissGene"],
         abstract=(
             "We present the Emerick Expansion Posture (EEP) — a specific somatic configuration "
-            "for maximizing Limbic-Cortical Coupling during meditation, sauna, and creative "
+            "for maximizing Law of Correlational Causation during meditation, sauna, and creative "
             "work. The EEP consists of: wide leg extension (maximizing hip flexor release), "
             "upright spine (full thoracic expansion), feet flat (bilateral grounding), "
             "Jnana mudra (index-thumb connection), posterior tongue elevation (lingual-vagal "

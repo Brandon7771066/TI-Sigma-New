@@ -87,9 +87,9 @@ class TIBrainMetrics:
     @staticmethod
     def calculate_lcc(alpha: float, theta: float, gamma: float, heart_coherence: float) -> float:
         """
-        Love Correlation Coefficient (LCC)
+        Law of Correlational Causation (LCC)
         
-        Measures limbic-cortical coupling:
+        Measures law of correlational causation:
         - Heart coherence (L dimension)
         - Alpha coherence (I dimension - intuition)
         - Gamma binding (consciousness integration)
@@ -629,9 +629,9 @@ You'll see `❤️  HR=xx bpm ✅ sent` every 2 seconds.
     
     with col2:
         st.metric(
-            "LCC (Love Correlation)",
+            "LCC (Law of Correlational Causation)",
             f"{snapshot.lcc_coupling:.3f}",
-            help="Limbic-Cortical Coupling - heart-brain synchrony"
+            help="Law of Correlational Causation - heart-brain synchrony"
         )
         
         if snapshot.lcc_coupling >= CAUSATION_THRESHOLD:

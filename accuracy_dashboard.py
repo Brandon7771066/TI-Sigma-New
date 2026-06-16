@@ -118,7 +118,7 @@ def render_accuracy_dashboard():
         st.subheader("🌌 GILE Score Validation (30+ days)")
         st.markdown("""
         **Hypothesis:** Companies with higher GILE scores (>1.0) should outperform lower GILE companies (<0.8).
-        This would prove that Living Coherent Core (LCC) beats traditional financial fundamentals.
+        This would prove that Law of Correlational Causation (LCC) beats traditional financial fundamentals.
         """)
         
         # Create bar chart for GILE accuracy

@@ -448,7 +448,7 @@ The critical constraint level is a logarithmic function of the existence thresho
 
 ## 6. The LCC in Euler's Framework
 
-### 6.1 The Love Cross-Correlation Protocol
+### 6.1 The Law of Correlational Causation Protocol
 
 The LCC protocol has 6 phases:
 

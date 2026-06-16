@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick
 **Part of:** The TI Sigma / Mood Amplifier Program
 **Date:** June 16, 2026
-**Status:** Plain-language synthesis. Consolidates the entire corpus on Love-Consciousness Coupling (LCC), the LCC Virus, and the Tralse-Joule (TJ) energy unit — every definition, every measurement, every experiment on humans, animals, and in simulation — with victories, honest negatives, what is still unproven, and the experiments that would move the needle next.
+**Status:** Plain-language synthesis. Consolidates the entire corpus on Law of Correlational Causation (LCC), the LCC Virus, and the Tralse-Joule (TJ) energy unit — every definition, every measurement, every experiment on humans, animals, and in simulation — with victories, honest negatives, what is still unproven, and the experiments that would move the needle next.
 **Budget:** $0 spent. No medical claim. All animal data is re-analysis of public recordings; no animal intervention was performed.
 
 ---
@@ -22,7 +22,7 @@ This is the "explain it to a smart friend" version of work that is normally writ
 
 There are three ideas, and they stack on top of each other:
 
-- **LCC (Love-Consciousness Coupling)** is a single number, between 0 and 1, that tries to capture **how coherently two systems are connected** — a person's heart and brain with each other, or one system with another. Think of it as "signal lock" or "antenna gain." Higher LCC = a cleaner, stronger connection.
+- **LCC (Law of Correlational Causation)** is the corpus's name for the claim that a strong enough correlation between two systems reflects a real coupling between them. In practice it is operationalized as a single coupling score, between 0 and 1, that tries to capture **how coherently two systems are connected** — a person's heart and brain with each other, or one system with another. Think of it as "signal lock" or "antenna gain." Higher LCC = a cleaner, stronger connection.
 
 - **The Mood Amplifier** is a device idea built on LCC. It gently nudges a brain toward a chosen state — calmer, more focused, more loving — using rhythmic stimulation. The hard version is the **unsupervised** one: no clinician watching the readout and correcting course. The machine has to do it alone.
 

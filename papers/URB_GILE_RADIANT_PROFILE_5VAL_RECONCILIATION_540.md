@@ -65,7 +65,7 @@ This is a symmetric triangular function with its apex at PD = 2:
 
 ### 2.2 LCC Normalization
 
-For integration with the LCC (Logic Coherence Coefficient), normalize:
+For integration with the LCC (Law of Correlational Causation), normalize:
 
 ```
 LCC_GILE(axis) = H(PD) / 2 = 1 − |PD − 2| / 2    ∈ [0, 1]

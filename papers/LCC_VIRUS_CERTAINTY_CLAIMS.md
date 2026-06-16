@@ -45,7 +45,7 @@ Where:
 This is a **mathematical definition** derived from cross-correlation principles that are well-established in signal processing. The equation itself is valid by construction - it measures similarity between two signals accounting for time delays.
 
 ### Caveats
-- The interpretation that this measures "Love-Consciousness Coupling" is theoretical
+- The interpretation that this measures "Law of Correlational Causation" is theoretical
 - Real consciousness fields may not be captured by scalar functions
 - The optimal W(τ) for biological systems is unknown
 

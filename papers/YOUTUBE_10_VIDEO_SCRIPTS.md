@@ -169,7 +169,7 @@ This is why AI can generate a technically perfect essay that argues for somethin
 
 ### [GILE AS UNIVERSAL SCALE — 6:00-7:20]
 
-The GILE framework scales. It applies at every level of what TI Sigma calls the Layered Coherence Continuum (LCC):
+The GILE framework scales. It applies at every level of what TI Sigma calls the Law of Correlational Causation (LCC):
 
 - Protein folding: L = hydrogen bonding network, E = physical geometry, G = thermodynamic stability, I = cooperative folding prediction
 - Ecosystems: L = symbiotic relationships, E = physical niche, G = sustainability, I = adaptation

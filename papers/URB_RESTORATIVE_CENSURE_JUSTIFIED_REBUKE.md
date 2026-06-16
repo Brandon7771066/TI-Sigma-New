@@ -120,7 +120,7 @@ exactly what they need to stop doing or make right).
 target's LCC. It names a specific discrepancy between the person's behavior and their
 self-model in a way that activates the error-correction apparatus of the prefrontal
 cortex rather than triggering the threat response of the amygdala. When the rebuke is
-not an attack on the self — only on the action — the limbic-cortical coherence can
+not an attack on the self — only on the action — the law of correlational causation can
 increase as the person integrates the correction.
 
 **Verdict: Core case of RC. This is the target category.**

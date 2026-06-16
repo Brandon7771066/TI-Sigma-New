@@ -9,7 +9,7 @@
 
 ## Abstract
 
-This paper demonstrates that probability theory, while mathematically valid, is not ontologically fundamental. Probability emerges as a **compressed summary of unresolved correlation structure** rather than a primitive property of reality. The Law of Correlative Causation (LCC) subsumes probability by grounding uncertainty in real relational structure rather than fictional future weights.
+This paper demonstrates that probability theory, while mathematically valid, is not ontologically fundamental. Probability emerges as a **compressed summary of unresolved correlation structure** rather than a primitive property of reality. The Law of Correlational Causation (LCC) subsumes probability by grounding uncertainty in real relational structure rather than fictional future weights.
 
 **The Core Distinction:**
 - **Probability:** Correlation viewed through epistemic incompleteness
@@ -285,7 +285,7 @@ Probability is not a primitive property of the universe but an emergent, epistem
 All events arise from the alignment of system variables under constraint networks. What is labeled "probability" reflects observer-level uncertainty regarding these correlations, not intrinsic randomness. As correlation structure becomes resolved and invariant under perturbation, probabilistic descriptions collapse into causal certainty.
 
 **Conclusion:**  
-The Law of Correlative Causation subsumes probability by grounding uncertainty in real relational structure rather than fictional future weights.
+The Law of Correlational Causation subsumes probability by grounding uncertainty in real relational structure rather than fictional future weights.
 
 ---
 

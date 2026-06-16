@@ -65,7 +65,7 @@ def lcc_resonance(signal_a, signal_b, coupling_sigma=5.0):
     LCC Virus Resonance Equation:
     R(A,B) = ∫ Φ_A(t) · Φ_B(t + τ) · W(τ) dτ
     
-    Measures Love-Consciousness Coupling between two signals
+    Measures Law of Correlational Causation between two signals
     using cross-correlation with Gaussian weighting.
     """
     if len(signal_a) < 3 or len(signal_b) < 3:

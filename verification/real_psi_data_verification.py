@@ -186,7 +186,7 @@ class RealPSIDataVerification:
     
     def estimate_lcc_from_effect_sizes(self, meta_analyses, pear_data, gcp_data):
         """
-        Estimate LCC (Local Causation Correlation) from real effect sizes
+        Estimate LCC (Law of Correlational Causation) from real effect sizes
         
         Theory: LCC represents the degree to which local causal mechanisms
         can explain observed correlations. PSI effects represent the 

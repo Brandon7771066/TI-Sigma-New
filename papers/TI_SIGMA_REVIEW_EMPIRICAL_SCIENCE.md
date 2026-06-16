@@ -28,7 +28,7 @@ This review covers TI Sigma's contributions to empirical science: testable hypot
 - **Empirical content:** Retroactively validated against the Holmes-Rahe Life Stress Inventory item distribution (URB #522). The PD ratio bins (catastrophic : severe : moderate : mild : ambient) map onto Holmes-Rahe severity bands at p < 0.05 for 3 of 5 bins.
 - **SWOT note:** Retroactive validation is weaker than prospective prediction. The PD has not been tested prospectively on a novel stressor dataset.
 
-### 2.3 Logarithmic Cross-Coupling (LCC) & Emerick Threshold
+### 2.3 Law of Correlational Causation (LCC) & Emerick Threshold
 
 - **What it is:** A mechanism for interaction between i-Cells (units of consciousness) that becomes operative above the Emerick Threshold (E_T ≈ 0.414).
 - **Empirical content:** Pre-registered cooperative-contemplation psi-prediction trials (LCC-Telepathy series). Predictions are locked with SHA-256 hashes before trial execution.

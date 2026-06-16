@@ -349,7 +349,7 @@ def CCC_maintain_coherence(system, threshold=0.01):
 
 ---
 
-# ⭐ AXIOM 3: LCC (LAW OF CORRELATIVE CAUSATION)
+# ⭐ AXIOM 3: LCC (Law of Correlational Causation)
 
 ## **Statement**
 **Causation flows preferentially along correlation gradients.**

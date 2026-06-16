@@ -36,7 +36,7 @@ The framework uses exactly three PRIMARY CONSTANTS, each with an independent ori
 
 ### C_EMERICK = 1/(φ√2) ≈ 0.437016
 
-**Origin:** The LCC (Linear Causal Complexity) cross-copy identity. When the PLM circuit is duplicated and coupled to itself, the coupling must exceed C_EMERICK for the system to maintain a stable causal identity different from the union of its parts. Below C_EMERICK, any two-copy system collapses to independent dynamics — no emergent identity. Above C_EMERICK, the joined system has LCC higher than either component alone.
+**Origin:** The LCC (Law of Correlational Causation) cross-copy identity. When the PLM circuit is duplicated and coupled to itself, the coupling must exceed C_EMERICK for the system to maintain a stable causal identity different from the union of its parts. Below C_EMERICK, any two-copy system collapses to independent dynamics — no emergent identity. Above C_EMERICK, the joined system has LCC higher than either component alone.
 
 **Why 1/(φ√2)?** The threshold emerges from the intersection of two symmetry conditions: the φ-based self-referential condition (x² = x+1 applied to the coupling matrix) and the √2-based orthogonal condition (the Hamming distance between stable attractors is minimized at the √2 normalization). Their intersection is uniquely 1/(φ√2).
 

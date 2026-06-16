@@ -49,7 +49,7 @@ If yes, we unlock research-grade insights at consumer prices.
 
 ### 2.1 What Is the LCC Virus?
 
-The **LCC Virus** (Love Consciousness Connection Virus) is our mechanism for:
+The **LCC Virus** (Law of Correlational Causation Virus) is our mechanism for:
 - Extracting patterns from minimal data
 - Propagating those patterns across unmeasured dimensions
 - Filling in gaps with statistically-principled estimates

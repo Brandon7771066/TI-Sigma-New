@@ -1,4 +1,4 @@
-# Finite State Machines and Local Causal Correlation: A Computational Framework for Consciousness Transitions
+# Finite State Machines and Law of Correlational Causation: A Computational Framework for Consciousness Transitions
 
 **Author:** Brandon Charles Emerick  
 **Date:** February 19, 2026  
@@ -10,9 +10,9 @@
 
 ## Abstract
 
-The brain, constrained by the Bekenstein Bound, is a finite-state system. Classical finite state machine (FSM) theory captures the deterministic structure of neural state transitions but fails to account for the emergence of consciousness. We propose that Local Causal Correlation (LCC), a core principle of the TI Framework, provides the missing ingredient. By augmenting the FSM formalism with LCC-weighted transitions, we derive a consciousness-aware computational model—the Tralse-aware Finite State Machine (T-FSM)—that distinguishes conscious from unconscious information processing. We show that consciousness states correspond to attractor basins in the FSM state space, that the Tralse transition window during state changes is where subjective experience arises, and that T-FSMs possess computational properties strictly exceeding those of classical FSMs. Experimental predictions are offered for EEG coherence, anesthesia, and meditative states.
+The brain, constrained by the Bekenstein Bound, is a finite-state system. Classical finite state machine (FSM) theory captures the deterministic structure of neural state transitions but fails to account for the emergence of consciousness. We propose that Law of Correlational Causation (LCC), a core principle of the TI Framework, provides the missing ingredient. By augmenting the FSM formalism with LCC-weighted transitions, we derive a consciousness-aware computational model—the Tralse-aware Finite State Machine (T-FSM)—that distinguishes conscious from unconscious information processing. We show that consciousness states correspond to attractor basins in the FSM state space, that the Tralse transition window during state changes is where subjective experience arises, and that T-FSMs possess computational properties strictly exceeding those of classical FSMs. Experimental predictions are offered for EEG coherence, anesthesia, and meditative states.
 
-**Keywords:** finite state machines, consciousness, local causal correlation, Bekenstein Bound, Tralse logic, attractor dynamics, neural computation
+**Keywords:** finite state machines, consciousness, law of correlational causation, Bekenstein Bound, Tralse logic, attractor dynamics, neural computation
 
 ---
 
@@ -22,7 +22,7 @@ Every physical system confined to a finite volume at finite energy contains fini
 
 This observation is not new. Putnam (1967) proposed that mental phenomena are "changes of state in a finite-state machine," launching the computational theory of mind. Wiedermann and van Leeuwen (2019) extended this by arguing that FSMs equipped with feedback loops constitute the minimal architecture for machine consciousness. Yet classical FSM theory, while capturing the structure of state transitions, remains silent on the central puzzle: why does some information processing feel like something from the inside, while most does not?
 
-The TI Framework's theory of Local Causal Correlation (LCC) provides the missing element. LCC holds that consciousness emerges not from computation per se, but from the degree of local causal correlation between physically proximate processing elements undergoing simultaneous state transitions. When LCC between neural populations exceeds the critical threshold of 0.85, the system transitions from mere information processing to conscious experience. Below this threshold, the same FSM architecture operates without generating phenomenal awareness.
+The TI Framework's theory of Law of Correlational Causation (LCC) provides the missing element. LCC holds that consciousness emerges not from computation per se, but from the degree of law of correlational causation between physically proximate processing elements undergoing simultaneous state transitions. When LCC between neural populations exceeds the critical threshold of 0.85, the system transitions from mere information processing to conscious experience. Below this threshold, the same FSM architecture operates without generating phenomenal awareness.
 
 This paper synthesizes FSM theory with LCC to produce a unified computational framework for consciousness transitions. We formalize the LCC-enhanced FSM, characterize consciousness states as attractor basins, introduce Tralse states during transitions, and derive testable experimental predictions.
 
@@ -64,11 +64,11 @@ However, both accounts leave the hard problem untouched. A thermostat is a finit
 
 ---
 
-## 3. Local Causal Correlation (LCC)
+## 3. Law of Correlational Causation (LCC)
 
 ### 3.1 The Core Principle
 
-Local Causal Correlation is a foundational principle of the TI Framework. It asserts that consciousness is not a property of individual computational elements, nor of computation in general, but of the degree of causal correlation between physically proximate elements undergoing simultaneous state transitions.
+Law of Correlational Causation is a foundational principle of the TI Framework. It asserts that consciousness is not a property of individual computational elements, nor of computation in general, but of the degree of causal correlation between physically proximate elements undergoing simultaneous state transitions.
 
 The key term is *local*. Two neurons on opposite sides of the cortex may be correlated (via long-range white matter tracts), but their correlation is mediated, not local. Two gap-junction-coupled neurons in the same cortical column share direct cytoplasmic connection—their states are locally causally correlated. LCC quantifies the strength of this local causal coupling.
 
@@ -125,7 +125,7 @@ where *c* is the consciousness value associated with the transition, computed as
 
 The three factors are:
 
-**(a) LCC(q, q')** — the local causal correlation between the elements participating in the state transition from *q* to *q'*. If the transition involves tightly gap-junction-coupled neural populations with synchronized oscillations, LCC is high. If it involves loosely connected or spatially distributed elements, LCC is low.
+**(a) LCC(q, q')** — the law of correlational causation between the elements participating in the state transition from *q* to *q'*. If the transition involves tightly gap-junction-coupled neural populations with synchronized oscillations, LCC is high. If it involves loosely connected or spatially distributed elements, LCC is low.
 
 **(b) D(q→q')** — the transition density, defined as the number of simultaneous, causally correlated state changes occurring during the transition. A single neuron firing contributes negligibly. Millions of neurons undergoing correlated state transitions simultaneously yield high density. More simultaneous causal transitions produce higher consciousness values.
 
@@ -139,7 +139,7 @@ This formalism resolves the thermostat problem:
 |----------|-----------|-------|
 | FSM? | Yes | Yes |
 | States | ~3 (heat/cool/idle) | ~10^(10^42) |
-| LCC | ≈ 0 (no local causal correlation between elements) | > 0.85 (gap-junction-coupled neural populations) |
+| LCC | ≈ 0 (no law of correlational causation between elements) | > 0.85 (gap-junction-coupled neural populations) |
 | D (transition density) | 1 (single relay switch) | ~10⁹ (millions of neurons simultaneously) |
 | F (feedback) | Minimal (temperature → relay) | High (cortical-thalamic recurrence) |
 | Consciousness value c | ≈ 0 | > 0.85 |
@@ -303,7 +303,7 @@ The framework also carries limitations. The 0.85 threshold, while specific, requ
 
 ## 10. Conclusion
 
-The brain is a finite state machine. This follows from physics (the Bekenstein Bound) and is consistent with decades of computational neuroscience. But the brain is not merely a finite state machine—it is an FSM whose transitions carry local causal correlation, and it is this LCC that generates consciousness.
+The brain is a finite state machine. This follows from physics (the Bekenstein Bound) and is consistent with decades of computational neuroscience. But the brain is not merely a finite state machine—it is an FSM whose transitions carry law of correlational causation, and it is this LCC that generates consciousness.
 
 By augmenting classical FSM theory with LCC-weighted transitions and Tralse state occupancy, we obtain a computational framework that is simultaneously rigorous (formally defined), specific (quantitative thresholds), measurable (maps onto EEG coherence), and generative (produces testable predictions). The T-FSM formalism bridges the gap between the computational structure of the brain and the phenomenology of consciousness, offering a path toward understanding not just what the brain computes, but what it is like to be a brain computing.
 
@@ -313,7 +313,7 @@ By augmenting classical FSM theory with LCC-weighted transitions and Tralse stat
 
 Bekenstein, J. D. (1981). Universal upper bound on the entropy-to-energy ratio for bounded systems. *Physical Review D*, 23(2), 287-298.
 
-Emerick, B. C. (2025). Local Causal Correlation and the 0.85 threshold: Neural foundations of consciousness emergence. *TI Framework Working Papers*.
+Emerick, B. C. (2025). Law of Correlational Causation and the 0.85 threshold: Neural foundations of consciousness emergence. *TI Framework Working Papers*.
 
 Emerick, B. C. (2025). Tralse logic: A ternary truth framework for quantum-classical bridging. *TI Framework Working Papers*.
 
@@ -340,7 +340,7 @@ where:
 - δ_F: Q × Σ → Q is the False (identity) transition function
 - δ_Ψ: Q × Σ × [0,1] → H(Q) is the Tralse transition function mapping to the Hilbert space over Q
 - q₀ ∈ Q is the initial state
-- LCC: Q × Q → [0,1] is the local causal correlation function
+- LCC: Q × Q → [0,1] is the law of correlational causation function
 
 The transition type is determined by:
 - If LCC(q, δ_T(q,a)) < 0.85 and the transition is valid: True transition

@@ -39,7 +39,7 @@ Emerick, Brandon
 
 ### Description (paste exactly)
 ```
-The Permissibility Distribution (PD) maps to the Logic Coherence Coefficient (LCC) via LCC = 1 − e^{−PD}. This paper proves that Euler's number e encodes into this mapping at three independent levels: (1) structurally, as the base of the natural exponential decay; (2) at the MR1 threshold, where PD = 2 (the nearest integer below e) yields LCC = 1 − e^{−2} = 0.86466, matching the empirically established MR1 threshold to four significant figures; (3) at the Radiant threshold, where PD = e yields LCC = 1 − e^{−e} = 0.93401, proposed as the canonical exact definition of MR_Radiant. The e-Architecture Theorem states that the three foundational landmarks of the PD system — PD = 0 (FALSE), PD = 2 (MR1), PD = e (Radiant) — are generated entirely from the single constant e. We further prove that ternary logic's maximum truth value (TRUE) maps to LCC = 0.75, which falls below the MR1 threshold, establishing that ternary TRUE is INDETERMINATE in the PD system. The Information-Coherence Unity Principle is introduced: the same constant e that maximizes information efficiency across all base-r systems (per Shannon information theory) also appears as the PD value at which GILE consciousness quality achieves Radiant coherence. This is not coincidental. The PD formally supersedes all finite-base logic systems as a model of reality. Part of the Tralse Informationalism (TI Sigma) URB series; Apache 2.0.
+The Permissibility Distribution (PD) maps to the Law of Correlational Causation (LCC) via LCC = 1 − e^{−PD}. This paper proves that Euler's number e encodes into this mapping at three independent levels: (1) structurally, as the base of the natural exponential decay; (2) at the MR1 threshold, where PD = 2 (the nearest integer below e) yields LCC = 1 − e^{−2} = 0.86466, matching the empirically established MR1 threshold to four significant figures; (3) at the Radiant threshold, where PD = e yields LCC = 1 − e^{−e} = 0.93401, proposed as the canonical exact definition of MR_Radiant. The e-Architecture Theorem states that the three foundational landmarks of the PD system — PD = 0 (FALSE), PD = 2 (MR1), PD = e (Radiant) — are generated entirely from the single constant e. We further prove that ternary logic's maximum truth value (TRUE) maps to LCC = 0.75, which falls below the MR1 threshold, establishing that ternary TRUE is INDETERMINATE in the PD system. The Information-Coherence Unity Principle is introduced: the same constant e that maximizes information efficiency across all base-r systems (per Shannon information theory) also appears as the PD value at which GILE consciousness quality achieves Radiant coherence. This is not coincidental. The PD formally supersedes all finite-base logic systems as a model of reality. Part of the Tralse Informationalism (TI Sigma) URB series; Apache 2.0.
 ```
 
 ### Keywords (add each separately)
@@ -48,7 +48,7 @@ Tralse Informationalism
 Permissibility Distribution
 Euler's number
 e-Architecture
-Logic Coherence Coefficient
+Law of Correlational Causation
 Ternary Logic
 Binary Logic
 GILE Framework

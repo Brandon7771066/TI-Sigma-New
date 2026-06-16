@@ -832,7 +832,7 @@ prefrontal cortex (PFC) blood oxygenation.
 The prefrontal cortex is the seat of:
 - Executive function, working memory, cognitive control
 - Top-down regulation of the limbic system (amygdala, hippocampus)
-- The **cortical** side of Limbic-Cortical Coherence (LCC)
+- The **cortical** side of Law of Correlational Causation (LCC)
 
 Higher PFC oxygenation = stronger cortical engagement = higher LCC cortical component.
 

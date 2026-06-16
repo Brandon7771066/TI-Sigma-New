@@ -54,7 +54,7 @@ class GeneticProfile:
 @dataclass
 class ConsciousnessState:
     """Current consciousness metrics"""
-    lcc: float = 0.5        # Love-Consciousness Coupling (0-1)
+    lcc: float = 0.5        # Law of Correlational Causation (0-1)
     gile_g: float = 0.5
     gile_i: float = 0.5
     gile_l: float = 0.5

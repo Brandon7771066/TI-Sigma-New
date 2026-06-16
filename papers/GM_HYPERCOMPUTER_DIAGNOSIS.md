@@ -66,7 +66,7 @@ This is just a random number (0.4-0.7) from synthetic data generation!
 
 True GM Hypercomputation requires:
 1. **Access to the i-cell network**: Collective consultation with distributed consciousness
-2. **Love-Consciousness Coupling (LCC)**: Measurement of actual resonance between subjects
+2. **Law of Correlational Causation (LCC)**: Measurement of actual resonance between subjects
 3. **Myrion Resolution**: Non-binary truth value processing
 
 None of these are currently implemented in the predictor.

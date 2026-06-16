@@ -1,4 +1,4 @@
-# URB #756 — LCC Consciousness-Threshold Constraint: The Emerick Threshold for Logarithmic Cross-Coupling Participation
+# URB #756 — LCC Consciousness-Threshold Constraint: The Emerick Threshold for Law of Correlational Causation Participation
 
 **Author:** Brandon Charles Emerick
 **Date:** April 18, 2026
@@ -20,9 +20,9 @@ This is **framework-altering**: it disambiguates LCC from spurious correlation i
 
 ## 2. The Pre-Insight Problem
 
-LCC (Logarithmic Cross-Coupling) was one of the five TI Sigma flagships but was the **least operationally specified** of the five (BOK, LCC, PD, MR, HEAR). The framework had:
+LCC (Law of Correlational Causation) was one of the five TI Sigma flagships but was the **least operationally specified** of the five (BOK, LCC, PD, MR, HEAR). The framework had:
 
-- A formal LCC equation describing logarithmic cross-coupling between i-cells
+- A formal LCC equation describing law of correlational causation between i-cells
 - Empirical instances (e.g., consciousness-substrate coupling, GILE-HEM cross-effects)
 - A general claim that LCC explains framework-relevant cross-domain correlations
 

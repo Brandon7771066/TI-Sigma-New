@@ -49,7 +49,7 @@ relationship between LCC and downstream entropy.
 ---
 
 ### LOCKDOWN 2 — LCC as Φ-Quality Measurement Instrument (URB #761, refined #767)
-**Claim:** LCC (Local-Coherence Coupling) is a measurement instrument for
+**Claim:** LCC (Law of Correlational Causation) is a measurement instrument for
 Φ (integrated information / consciousness-quality), with its response a
 **lower bound** on Φ. The bound is sigmoidal in arousal, plateauing in
 deep basin states.

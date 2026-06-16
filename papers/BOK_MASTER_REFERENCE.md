@@ -300,7 +300,7 @@ The four BOK modes derive from the four dimensions of truth (Existential, Moral,
 
 ### 9.2 BOK and the LCC Scale
 
-The BOK Difficulty Spectrum has a direct analogue in the LCC (Limbic-Cortical Coupling) scale of consciousness coherence. Just as mathematical problems require more modes as they increase in structural complexity, consciousness states require higher LCC to access more integrated modes of cognition:
+The BOK Difficulty Spectrum has a direct analogue in the LCC (Law of Correlational Causation) scale of consciousness coherence. Just as mathematical problems require more modes as they increase in structural complexity, consciousness states require higher LCC to access more integrated modes of cognition:
 
 - Tier 1 problems / LCC below C_EMERICK: Single-mode access; basic pattern matching
 - Tier 2 problems / LCC near LCC_RADIANT: Two-mode integration; flow state problem solving

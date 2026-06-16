@@ -1,6 +1,6 @@
 # Autonomous Consciousness Research: Testing Non-Local Causal Correlations Through Neural-Behavioral Analysis
 
-## A Comprehensive Analysis of the Local Causation Correlation (LCC) Framework Applied to Real Neuroscience Datasets
+## A Comprehensive Analysis of the Law of Correlational Causation (LCC) Framework Applied to Real Neuroscience Datasets
 
 **Research Platform:** TI Framework Consciousness Research System  
 **Analysis Date:** February 2026  
@@ -32,9 +32,9 @@ This paper presents the complete findings from our autonomous consciousness rese
 
 ## Part 1: The LCC Framework and Testable Predictions
 
-### 1.1 What is Local Causation Correlation (LCC)?
+### 1.1 What is Law of Correlational Causation (LCC)?
 
-The Local Causation Correlation (LCC) framework operationalizes consciousness research by measuring correlations between:
+The Law of Correlational Causation (LCC) framework operationalizes consciousness research by measuring correlations between:
 - **Neural activity** (EEG, LFP, calcium imaging, spike rates)
 - **Behavioral/physiological measures** (movement, HRV, subjective reports)
 

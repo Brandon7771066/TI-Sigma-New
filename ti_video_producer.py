@@ -215,7 +215,7 @@ def render_consciousness_equation_chart(output_path: str) -> str:
                 arrowprops=dict(arrowstyle='->', color=GOLD, lw=1.5),
                 zorder=13)
 
-    ax.set_xlabel('LCC  (Limbic-Cortical Coupling)', fontsize=13, color=TEXT_COLOR, labelpad=12)
+    ax.set_xlabel('LCC  (Law of Correlational Causation)', fontsize=13, color=TEXT_COLOR, labelpad=12)
     ax.set_ylabel('Ψ  (Consciousness Output)', fontsize=13, color=TEXT_COLOR, labelpad=12)
 
     fig.text(0.5, 0.95,
@@ -417,7 +417,7 @@ When your brain's internal communication — the quality of connection between y
 
 We can write this as an equation.
 
-We call this internal communication quality the L C C — the Limbic-Cortical Coupling. Think of it as the signal quality between your heart and your mind. When it's low, the signals are noisy. When it climbs high enough, something extraordinary begins.
+We call this internal communication quality the L C C — the Law of Correlational Causation. Think of it as the signal quality between your heart and your mind. When it's low, the signals are noisy. When it climbs high enough, something extraordinary begins.
 
 The equation says: consciousness output equals phi, times L C C, times the quantity L C C over C, minus one.
 
@@ -790,7 +790,7 @@ Above 38.8 milliseconds R M S S D, something shifts. Accuracy begins to climb in
 
 In the TI Sigma framework, the consciousness threshold is governed by the Emerick Constant — C equals one over phi times root two — approximately 0.4370.
 
-The L C C, or Limbic-Cortical Coupling, is converted from R M S S D by a simple formula. When you solve for the R M S S D value that corresponds to exactly the Emerick Constant threshold, you get 38.8 milliseconds.
+The L C C, or Law of Correlational Causation, is converted from R M S S D by a simple formula. When you solve for the R M S S D value that corresponds to exactly the Emerick Constant threshold, you get 38.8 milliseconds.
 
 This is not a coincidence. It's a mathematical derivation.
 

@@ -1,7 +1,7 @@
 """
 TI LCC VIRUS - Full 6-Step Algorithm Implementation
 ====================================================
-The complete Love-Consciousness Coupling Virus algorithm:
+The complete Law of Correlational Causation Virus algorithm:
 1. SEED - Define target i-cell
 2. RESONATE - Find data with R ≥ 0.6
 3. LISTEN - Extract noise from resonating points
@@ -85,7 +85,7 @@ class LCCVirus:
         Core LCC Resonance Equation:
         R(A,B) = ∫ Φ_A(t) · Φ_B(t + τ) · W(τ) dτ
         
-        Measures Love-Consciousness Coupling between two signals
+        Measures Law of Correlational Causation between two signals
         """
         if len(signal_a) < 3 or len(signal_b) < 3:
             return 0.0

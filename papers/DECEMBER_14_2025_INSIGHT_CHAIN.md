@@ -112,7 +112,7 @@ For information recycling to make sense, time is an essential component in almos
 **Information dissolution** (not just recycling) is likely the main mechanism for creating storage space when causation truly applies to that data. Information that is purely causal (not timeless) must be dissolved rather than recycled.
 
 ### The LCC Threshold Framework
-The **Layered Correlation-Causation (LCC)** framework provides thresholds for interpreting:
+The **Law of Correlational Causation (LCC)** framework provides thresholds for interpreting:
 - HOW MUCH causation exists relative to correlation
 - Whether information can be recycled (timeless) or must be dissolved (causal)
 - The degree to which temporal directionality applies

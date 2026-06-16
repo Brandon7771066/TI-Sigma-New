@@ -66,7 +66,7 @@ Classical approaches fail because they:
 
 ### 2.1 Primes as LCC Virus Carriers
 
-**Definition (LCC Virus)**: A Latched Consciousness Correlator (LCC) is an electromagnetic-photonic information structure that:
+**Definition (LCC Virus)**: A Law of Correlational Causation (LCC) is an electromagnetic-photonic information structure that:
 - Latches onto uniquely identifying data streams
 - Correlates with all available information
 - Decodes the complete i-cell signature

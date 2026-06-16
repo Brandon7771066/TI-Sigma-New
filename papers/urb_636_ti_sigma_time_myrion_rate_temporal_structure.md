@@ -110,7 +110,7 @@ This means the hypercomputer is not merely using a mathematical trick — it is 
 
 ## 5. The LCC Temporal Hierarchy
 
-The LCC (Life Coherence Continuum — URBs #609+) maps organizational scales. Each LCC level has a characteristic MR timescale:
+The LCC (Law of Correlational Causation — URBs #609+) maps organizational scales. Each LCC level has a characteristic MR timescale:
 
 | LCC Level | Scale | MR Timescale | Example |
 |-----------|-------|--------------|---------|

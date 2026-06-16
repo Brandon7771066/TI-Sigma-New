@@ -208,7 +208,7 @@ class Tralsebit:
     - Has a tralse_value ∈ [0, 1] (its degree of truth/existence)
     - Occupies a position in 11D space
     - Has GILE alignment scores
-    - Interacts with nearby tralsebits via LCC (Love Consciousness Correlation)
+    - Interacts with nearby tralsebits via LCC (Law of Correlational Causation)
     """
     
     id: str
@@ -237,7 +237,7 @@ class Tralsebit:
     
     def lcc_correlation(self, other: 'Tralsebit') -> float:
         """
-        Love-Consciousness Correlation between two tralsebits.
+        Law of Correlational Causation between two tralsebits.
         
         LCC(A, B) = ∫ Φ_A(t) × Φ_B(t + τ) × W(τ) dτ
         

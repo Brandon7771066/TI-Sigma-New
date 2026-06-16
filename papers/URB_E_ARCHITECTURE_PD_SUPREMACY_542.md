@@ -11,7 +11,7 @@
 
 ## Abstract
 
-The Permissibility Distribution (PD) maps to the Logic Coherence Coefficient (LCC) via:
+The Permissibility Distribution (PD) maps to the Law of Correlational Causation (LCC) via:
 
 ```
 LCC = 1 − e^{−PD}

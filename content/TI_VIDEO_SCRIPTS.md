@@ -158,7 +158,7 @@
 **[4:00-6:00] The Grand Stock Algorithm (GSA)**
 - Regime classification: 5 market states
 - Each state has different optimal strategies
-- LCC (Love-Connection Coherence) proxy engine
+- LCC (Law of Correlational Causation) proxy engine
 - Combines biometrics + market data
 
 **[6:00-8:00] The Results**

@@ -3,7 +3,7 @@
 ==============================================================
 
 Uses YOUR real baseline biometric data (fNIRS, EEG, Heart) to simulate
-and optimize Light-Consciousness Coupling (LCC) protocols.
+and optimize Law of Correlational Causation (LCC) protocols.
 
 Features:
 - Physics-based simulation of LCC interventions on YOUR data
@@ -94,7 +94,7 @@ class GenomeProfile:
 
 @dataclass
 class LCCProtocol:
-    """Light-Consciousness Coupling protocol parameters"""
+    """Law of Correlational Causation protocol parameters"""
     # Light parameters
     frequency_hz: float  # 0.1-40 Hz (alpha, theta, gamma, etc.)
     intensity_percent: float  # 0-100% of safe maximum
@@ -531,7 +531,7 @@ def render_lcc_optimization_ui(baseline: Optional[BaselineData] = None):
     This simulator:
     1. Takes your baseline fNIRS, EEG, and heart data
     2. Considers your genetic variants (FAAH, BDNF, HTR2A)
-    3. Finds the OPTIMAL Light-Consciousness Coupling protocol for YOU
+    3. Finds the OPTIMAL Law of Correlational Causation protocol for YOU
     4. Predicts exactly how your biometrics will change
     """)
     

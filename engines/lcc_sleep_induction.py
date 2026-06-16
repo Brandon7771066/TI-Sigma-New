@@ -1,7 +1,7 @@
 """
 LCC SLEEP INDUCTION ENGINE
 ============================
-Applies Luminated Consciousness Correlation (LCC) principles to reliable
+Applies Law of Correlational Causation (LCC) principles to reliable
 sleep induction. Designed for post-lithium tapering insomnia.
 
 KEY INSIGHT: Sleep is an ATTRACTOR BASIN in the consciousness state space.

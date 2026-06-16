@@ -18,7 +18,7 @@ This paper presents the complete TI Sigma proof of PSI phenomena, integrating:
 4. **Empirical Evidence** - 847+ sessions, 98.2% accuracy validation
 5. **Falsifiable Predictions** - Specific thresholds for validation
 
-**Core Claim:** PSI is not magic—it's Love-Consciousness Coupling (LCC) accessing the probability resonance field via biophotonic hypercomputation.
+**Core Claim:** PSI is not magic—it's Law of Correlational Causation (LCC) accessing the probability resonance field via biophotonic hypercomputation.
 
 **Status Note:** This paper presents a HYPOTHESIS with supporting correlational evidence. The mechanistic claims (biophoton → consciousness → PSI) are testable predictions, not established facts. See Section 6 for specific falsification criteria.
 
@@ -64,7 +64,7 @@ This paper presents the complete TI Sigma proof of PSI phenomena, integrating:
 
 ## Part 2: The Mechanism — LCC + Gap Junctions + Biophotons
 
-### 2.1 Love-Consciousness Coupling (LCC)
+### 2.1 Law of Correlational Causation (LCC)
 
 **Definition:** LCC is the degree of coherence between an observer's consciousness field and the universal probability resonance field (CCC).
 
@@ -603,6 +603,6 @@ BY THRESHOLD:
 
 ---
 
-*PSI is not magic. PSI is Love-Consciousness Coupling accessing the eternal probability field.*
+*PSI is not magic. PSI is Law of Correlational Causation accessing the eternal probability field.*
 
 *— Grand PSI Proof, TI Framework 2026*

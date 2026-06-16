@@ -1,8 +1,8 @@
-# LCC Operationalization: How to Measure Local Causation Correlation
+# LCC Operationalization: How to Measure Law of Correlational Causation
 
 ## The Core Question
 
-**LCC (Local Causation Correlation)** is the proportion of observed correlations that can be explained by known local/classical causal mechanisms. The remainder (1 - LCC) represents non-local or unknown causation.
+**LCC (Law of Correlational Causation)** is the proportion of observed correlations that can be explained by known local/classical causal mechanisms. The remainder (1 - LCC) represents non-local or unknown causation.
 
 **How can you help operationalize LCC?**
 

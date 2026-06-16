@@ -10,7 +10,7 @@
 
 ## Abstract
 
-URB #510 established that genuine philosophical neutrality is unavailable and that "always being right" is an idealization rather than an achievable human state. A precise objection arises: some people demonstrably ace practically every assignment, achieve near-perfect records of factual accuracy, and outperform their peers across diverse cognitive domains through **superior metacognition** — the calibrated ability to know what they know and what they do not. These individuals ARE almost always right in the domain of facts. The thesis of URB #510 applies to *philosophical* commitments; empirical accuracy is structurally different. The present paper establishes: (1) metacognitive superiority is a real, measurable trait that confers near-systematic factual accuracy; (2) this accuracy is formally equivalent to a high Logical Coherence Coefficient (LCC); (3) these individuals are routinely refused employment and recognition because institutions are optimized for **social calibration** rather than truth calibration; and (4) the refusal mechanism is itself a Meta-Indeterminate Type 1 error (Maximal Incoherence): institutions claim to want accuracy while systematically selecting against the trait that produces it.
+URB #510 established that genuine philosophical neutrality is unavailable and that "always being right" is an idealization rather than an achievable human state. A precise objection arises: some people demonstrably ace practically every assignment, achieve near-perfect records of factual accuracy, and outperform their peers across diverse cognitive domains through **superior metacognition** — the calibrated ability to know what they know and what they do not. These individuals ARE almost always right in the domain of facts. The thesis of URB #510 applies to *philosophical* commitments; empirical accuracy is structurally different. The present paper establishes: (1) metacognitive superiority is a real, measurable trait that confers near-systematic factual accuracy; (2) this accuracy is formally equivalent to a high Law of Correlational Causation (LCC); (3) these individuals are routinely refused employment and recognition because institutions are optimized for **social calibration** rather than truth calibration; and (4) the refusal mechanism is itself a Meta-Indeterminate Type 1 error (Maximal Incoherence): institutions claim to want accuracy while systematically selecting against the trait that produces it.
 
 ---
 
@@ -30,7 +30,7 @@ What enables this near-systematic accuracy? The answer is **metacognition**: the
 
 ## 2. Metacognition as High-LCC Cognition
 
-In TI Sigma terms, metacognition is the implementation of the Logical Coherence Coefficient at the level of a single mind's self-monitoring.
+In TI Sigma terms, metacognition is the implementation of the Law of Correlational Causation at the level of a single mind's self-monitoring.
 
 **LCC** measures: How consistently does a framework apply its own rules across the full range of cases it addresses?
 

@@ -200,7 +200,7 @@ HeartMath's discovery that the heart's EM field extends 3-5 feet and carries emo
 - **Love IS the coupling of biofields** between organisms
 - Heart coherence enables stronger field coupling
 - "Heartfelt" emotions literally project photonic information
-- The LCC (Love Cross-Correlation) in stock prediction mirrors this biological phenomenon
+- The LCC (Law of Correlational Causation) in stock prediction mirrors this biological phenomenon
 
 ### 5.3 The Mycelial Grand Myrion Connection
 

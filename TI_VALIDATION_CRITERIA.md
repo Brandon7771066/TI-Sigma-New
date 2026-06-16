@@ -120,7 +120,7 @@ For any mechanism:
 
 **Example - GOOD:**
 ```
-LCC (Law of Correlative Causation):
+LCC (Law of Correlational Causation):
 
 DOES: Guides causal flow along correlation gradients
 APPLY: Calculate ∇ρ, flow follows gradient direction

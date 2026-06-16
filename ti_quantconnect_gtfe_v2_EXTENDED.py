@@ -170,7 +170,7 @@ class TIFrameworkGTFEv2Algorithm(QCAlgorithm):
     
     def CalculateLCCLove(self, ticker: str, history: list) -> float:
         """
-        LCC - Love Correlation Component
+        LCC - Law of Correlational Causation Component
         
         Evolution found this should be 23.8% of the signal.
         Cross-asset correlation (market entanglement) matters!

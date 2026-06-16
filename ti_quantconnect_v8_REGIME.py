@@ -4,7 +4,7 @@ TI FRAMEWORK V8: REGIME-AWARE ALGORITHM
 
 Built from diagnostic lab findings:
 1. Individual prediction accuracy is ~51% (barely above random)
-2. LCC (Love Correlation) is STRONGEST predictor at 52.7%
+2. LCC (Law of Correlational Causation) is STRONGEST predictor at 52.7%
 3. V3's success came from TRADING RULES, not prediction
 4. Market was 78% SIDEWAYS - need REGIME DETECTION
 
@@ -38,14 +38,14 @@ class TIFrameworkV8RegimeAlgorithm(QCAlgorithm):
     BULL_THRESHOLD = 0.03  # 3% above SMA
     BEAR_THRESHOLD = -0.03  # 3% below SMA
     
-    # LCC Threshold (Love Correlation)
+    # LCC Threshold (Law of Correlational Causation)
     LCC_SYNC_THRESHOLD = 0.42
     
     # V8 Weights: LCC gets boost (best predictor from diagnostic)
     W_T1 = 0.20  # Potential
     W_T2 = 0.30  # Actualized  
     W_T3 = 0.20  # Contextual
-    W_LCC = 0.30  # Love Correlation - BOOSTED (was 0.15)
+    W_LCC = 0.30  # Law of Correlational Causation - BOOSTED (was 0.15)
     
     def initialize(self):
         self.set_start_date(2020, 1, 1)
@@ -171,7 +171,7 @@ class TIFrameworkV8RegimeAlgorithm(QCAlgorithm):
     
     def calculate_lcc(self, symbol):
         """
-        LCC (Love Correlation): 52.7% accuracy - BEST predictor
+        LCC (Law of Correlational Causation): 52.7% accuracy - BEST predictor
         Returns correlation value and sync status
         """
         sym_rets = self.return_history.get(symbol, [])

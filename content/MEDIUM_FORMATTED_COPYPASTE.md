@@ -73,7 +73,7 @@ This is where I lose most people, so I'll keep it brief.
 
 The algorithm has an optional layer that integrates biometric data—heart rate variability, EEG coherence, other physiological signals. The hypothesis: human consciousness correlates with market movements in measurable ways.
 
-I call the metric **Local Causal Correlation (LCC)**. Above certain thresholds, pattern recognition improves. Below them, caution is warranted.
+I call the metric **Law of Correlational Causation (LCC)**. Above certain thresholds, pattern recognition improves. Below them, caution is warranted.
 
 You can run GSA without this layer. The 430% return I showed? That's pure algorithmic, no biometrics.
 

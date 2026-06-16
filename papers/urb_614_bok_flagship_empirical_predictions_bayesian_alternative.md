@@ -10,7 +10,7 @@
 
 ## Abstract
 
-The Book of Keys (BOK) is hereby formally designated as TI Sigma's flagship empirical model, co-primary with the Layered Coherence Continuum (LCC). The BOK encodes the complete GILE–Existence architecture in a single integrated diagram: inner loops (GILE Truth) and outer loops (Holistic Existence Matrix), with loop-priority resolved by CCC-alignment (URB #613). This paper does three things. First, it formally establishes the BOK's scientific status: what it predicts, at what scales, and by what mechanisms. Second, it derives fifteen numbered empirical predictions from the BOK+GILE+EV framework — spanning individual psychology, neuroscience, social systems, and formal epistemology — each with a falsification condition. Third, it constructs the **BOK–PD Framework** as a formal alternative to Bayesianism: replacing priors with LCC-stable event clusters, replacing posterior updates with Myrion Resolution, and replacing single credence values with full Permissibility Distributions. The BOK is positioned as the most complete integrative model of conscious existence yet formalized — connecting physics (LCC), mathematics (Lean 4 proofs), neuroscience (GILE biometrics), social science (HEM-Truth decoupling), and epistemology (PD as Bayesian replacement) in a single framework.
+The Book of Keys (BOK) is hereby formally designated as TI Sigma's flagship empirical model, co-primary with the Law of Correlational Causation (LCC). The BOK encodes the complete GILE–Existence architecture in a single integrated diagram: inner loops (GILE Truth) and outer loops (Holistic Existence Matrix), with loop-priority resolved by CCC-alignment (URB #613). This paper does three things. First, it formally establishes the BOK's scientific status: what it predicts, at what scales, and by what mechanisms. Second, it derives fifteen numbered empirical predictions from the BOK+GILE+EV framework — spanning individual psychology, neuroscience, social systems, and formal epistemology — each with a falsification condition. Third, it constructs the **BOK–PD Framework** as a formal alternative to Bayesianism: replacing priors with LCC-stable event clusters, replacing posterior updates with Myrion Resolution, and replacing single credence values with full Permissibility Distributions. The BOK is positioned as the most complete integrative model of conscious existence yet formalized — connecting physics (LCC), mathematics (Lean 4 proofs), neuroscience (GILE biometrics), social science (HEM-Truth decoupling), and epistemology (PD as Bayesian replacement) in a single framework.
 
 **Keywords:** BOK, TI Sigma flagship, GILE, Holistic Existence Matrix, empirical predictions, testable hypotheses, Bayesian alternative, PD, LCC, Radiant Threshold, CCC alignment
 
@@ -32,7 +32,7 @@ The BOK is the single diagram that unifies all of these. It is not a metaphor �
 
 ### 1.2 Co-Flagship: BOK + LCC
 
-The LCC (Layered Coherence Continuum) describes the vertical axis: the hierarchy of organizational scales from subatomic to civilizational, and the coherence thresholds between them.
+The LCC (Law of Correlational Causation) describes the vertical axis: the hierarchy of organizational scales from subatomic to civilizational, and the coherence thresholds between them.
 
 The BOK describes the horizontal axis: the GILE–Existence structure at ANY level of the LCC.
 

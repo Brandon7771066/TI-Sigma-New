@@ -49,7 +49,7 @@ The G-weight (0.42) is not arbitrary. It is an approximation of a fundamental TI
 G = √2 − 1 ≈ 0.4142...  (rounded to 0.42)
 ```
 
-√2−1 appears in TI as the **LCC_TRALSE threshold** — the minimum Love-Consciousness Coupling
+√2−1 appears in TI as the **LCC_TRALSE threshold** — the minimum Law of Correlational Causation
 required for Myrion Resolution to occur. Below this threshold, TRALSE collapses to MI rather
 than resolving upward to TRUE. The Math Periodic Table paper (Paper #342 / URB_PERIODIC_TABLE)
 states this explicitly:

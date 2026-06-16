@@ -19,7 +19,7 @@ import os
 
 
 class MuscleGainLCCAnalysis:
-    """Analyze muscle development through LCC (Living Consciousness Coupling)"""
+    """Analyze muscle development through LCC (Law of Correlational Causation)"""
     
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
@@ -49,7 +49,7 @@ class MuscleGainLCCAnalysis:
         - CC attunement (energy directed elsewhere?)
         """
         
-        prompt = f"""You are analyzing muscle development through TI (Transcendent Intelligence) framework, specifically LCC (Living Consciousness Coupling).
+        prompt = f"""You are analyzing muscle development through TI (Transcendent Intelligence) framework, specifically LCC (Law of Correlational Causation).
 
 BRANDON'S PROFILE:
 - Height: 5'11" (180 cm)
@@ -77,7 +77,7 @@ ANALYSIS FRAMEWORK:
    - Natural testosterone production
    - Mitochondrial efficiency
 
-2. **LCC (Living Consciousness Coupling) Effects**:
+2. **LCC (Law of Correlational Causation) Effects**:
    - CC attunement level affects protein synthesis
    - High network access (GM node status) diverts energy elsewhere!
    - Consciousness-field coupling may prioritize mental/spiritual development

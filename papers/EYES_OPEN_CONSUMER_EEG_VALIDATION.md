@@ -1,4 +1,4 @@
-# Validation of Consumer-Grade EEG (Muse 2) for Eyes-Open Limbic-Cortical Coupling Interventions
+# Validation of Consumer-Grade EEG (Muse 2) for Eyes-Open Law of Correlational Causation Interventions
 
 **Running Title:** Eyes-Open Muse 2 EEG for LCC
 
@@ -6,13 +6,13 @@
 
 **Target Journal:** *NeuroImage: Clinical* or *Journal of Neural Engineering*
 
-**Keywords:** Consumer EEG, Muse headband, eyes-open, alpha band, validation, limbic-cortical coupling, accessibility
+**Keywords:** Consumer EEG, Muse headband, eyes-open, alpha band, validation, law of correlational causation, accessibility
 
 ---
 
 ## Abstract
 
-**Background:** Limbic-cortical coupling (LCC) interventions traditionally require eyes-closed conditions for alpha band detection. Consumer-grade EEG (Muse 2) enables at-home deployment but must validate eyes-open capability for practical visual biofeedback.
+**Background:** Law of Correlational Causation (LCC) interventions traditionally require eyes-closed conditions for alpha band detection. Consumer-grade EEG (Muse 2) enables at-home deployment but must validate eyes-open capability for practical visual biofeedback.
 
 **Methods:** We validated Muse 2 eyes-open alpha detection (8-12 Hz) against research-grade EEG (64-channel BioSemi) in n=30 participants. Eyes-open vs. eyes-closed alpha power, correlation between systems, session spacing optimization via Mind Monitor app (OSC streaming), and optimal session duration (9 vs. 10 vs. 15 minutes) were assessed.
 
@@ -430,7 +430,7 @@ Minutes 10-15: Only 20% additional (cumulative 100%)
 
 ## Conclusions
 
-Muse 2 consumer-grade EEG validated for eyes-open limbic-cortical coupling with 83% correlation to research-grade systems. Eyes-open alpha (60% of eyes-closed) provides sufficient signal for therapeutic interventions. Optimal protocol: **9-10 minute sessions, 2-hour minimum spacing, max 3 sessions/day**. Mind Monitor integration enables automated session management via OSC streaming. This validation democratizes precision mental health interventions from $50,000 clinical settings to $250 at-home accessibility.
+Muse 2 consumer-grade EEG validated for eyes-open law of correlational causation with 83% correlation to research-grade systems. Eyes-open alpha (60% of eyes-closed) provides sufficient signal for therapeutic interventions. Optimal protocol: **9-10 minute sessions, 2-hour minimum spacing, max 3 sessions/day**. Mind Monitor integration enables automated session management via OSC streaming. This validation democratizes precision mental health interventions from $50,000 clinical settings to $250 at-home accessibility.
 
 **Impact:** Removes major barrier to LCC scalability - millions can now access neuroscience-grounded mood interventions.
 

@@ -98,7 +98,7 @@ class ConsciousnessPredictionVerifier:
     
     def test_prediction_2_lcc_psi_correlation(self):
         """
-        Prediction: LCC (local causation correlation) predicts PSI performance
+        Prediction: LCC (law of correlational causation) predicts PSI performance
         Higher LCC → stronger PSI effects
         
         Data source: Meta-analysis of Ganzfeld studies + agency measures

@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Based on animal EEG data and cross-species scaling, this analysis **predicts human Limbic-Cortical Coupling (LCC) efficacy** using commercially available **Muse headbands** for mood amplification intervention.
+Based on animal EEG data and cross-species scaling, this analysis **predicts human Law of Correlational Causation (LCC) efficacy** using commercially available **Muse headbands** for mood amplification intervention.
 
 **Key Predictions:**
 - **Expected Success Rate in Humans: 78-82%** (vs 75.6% in animals)

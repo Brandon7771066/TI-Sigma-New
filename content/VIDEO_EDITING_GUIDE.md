@@ -231,14 +231,14 @@ Stock Market Prediction: 82% Accuracy Using Consciousness Patterns | TI Sigma
 ```
 82% directional accuracy. No insider information. Just consciousness patterns applied to markets. Here's how TI Sigma — our experimental philosophy framework — predicts stocks.
 
-In this video, discover the Grand Stock Algorithm's five market regimes and how Love-Connection Coherence across multiple data streams produces actionable trading signals.
+In this video, discover the Grand Stock Algorithm's five market regimes and how Law of Correlational Causation across multiple data streams produces actionable trading signals.
 
 KEY CONCEPTS:
 0:00 - 82% accuracy claim
 0:10 - Why traditional analysis misses something
 0:25 - Consciousness analysis: the third dimension
 0:40 - Five market regimes explained
-1:00 - Love-Connection Coherence signals
+1:00 - Law of Correlational Causation signals
 1:15 - The three thresholds applied to trading
 1:35 - Results and disclaimer
 

@@ -1,4 +1,4 @@
-# Temporal Dynamics of Limbic-Cortical Coupling: Effect Duration and Optimal Re-Dosing Schedules
+# Temporal Dynamics of Law of Correlational Causation: Effect Duration and Optimal Re-Dosing Schedules
 
 **Running Title:** Mood Amplifier Effect Duration & Persistence
 
@@ -6,13 +6,13 @@
 
 **Target Journal:** *Biological Psychiatry* or *Translational Psychiatry*
 
-**Keywords:** Neuroplasticity, limbic-cortical coupling, duration, persistence, synaptic potentiation, intervention scheduling
+**Keywords:** Neuroplasticity, law of correlational causation, duration, persistence, synaptic potentiation, intervention scheduling
 
 ---
 
 ## Abstract
 
-**Background:** Novel limbic-cortical coupling (LCC) interventions show promise for depression treatment, but effect duration and optimal re-dosing remain unknown.
+**Background:** Novel law of correlational causation (LCC) interventions show promise for depression treatment, but effect duration and optimal re-dosing remain unknown.
 
 **Methods:** We modeled LCC effect persistence using established neuroplasticity timelines (synaptic → structural → epigenetic changes) and validated against analogous interventions (TMS, meditation). Simulated data (n=60) tracked mood (PANAS), neural coherence, and LCC values across 7 timepoints (0h, 2h, 6h, 24h, 48h, 72h, 1-week post-intervention).
 
@@ -40,7 +40,7 @@ Antidepressant interventions face a fundamental tradeoff:
 - Psychedelics: 6-12 months from single dose [4]
 - **Limitation:** Slow onset, poor patient adherence
 
-### Limbic-Cortical Coupling (LCC) as Novel Intervention
+### Law of Correlational Causation (LCC) as Novel Intervention
 
 LCC enhances synchronization between limbic (emotional) and cortical (regulatory) brain regions via:
 - Real-time EEG neurofeedback

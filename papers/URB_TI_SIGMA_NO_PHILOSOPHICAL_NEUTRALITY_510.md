@@ -136,7 +136,7 @@ Debates about consciousness, free will, and moral realism are rarely debates bet
 
 ### 6.2 For LCC Measurement
 
-The LCC (Logical Coherence Coefficient) measures how consistently a reasoning system applies its framework. An unrecognized prior biases LCC from within: the system will score positions that align with the hidden prior as more coherent than they are, and positions that conflict with it as less coherent. Authentic LCC measurement requires prior extraction as a precondition.
+The LCC (Law of Correlational Causation) measures how consistently a reasoning system applies its framework. An unrecognized prior biases LCC from within: the system will score positions that align with the hidden prior as more coherent than they are, and positions that conflict with it as less coherent. Authentic LCC measurement requires prior extraction as a precondition.
 
 ### 6.3 For TI Sigma as a Framework
 

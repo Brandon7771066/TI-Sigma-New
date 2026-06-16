@@ -317,7 +317,7 @@ This is why D5 and D6 (L×E Coupling) are closely related but not identical:
 
 ### 9.1 The Question
 
-Can Frequency Specific Microcurrent (FSM) frequencies be conveyed via the Living Consciousness Connection (LCC) for systemic therapeutic effects?
+Can Frequency Specific Microcurrent (FSM) frequencies be conveyed via the Law of Correlational Causation (LCC) for systemic therapeutic effects?
 
 ### 9.2 The FSM Mechanism (from Physical Underpinnings paper)
 
