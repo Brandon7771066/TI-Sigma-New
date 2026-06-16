@@ -122,6 +122,7 @@ To reach the **F** zone you need comp ≤ **0.367**; to reach the **MI cliff** y
 5. **Controllability/identifiability analysis** of the latent: quantify the gap between *reachability* (already shown) and *drivability* — reachability is necessary, not sufficient.
 
 ### Tier 3 — The only route to a real efficacy claim (out of $0 scope; flagged, not hidden)
+
 6. A genuine closed loop requires **live, interventable neural activity** (e.g. an optogenetic / closed-loop electrophysiology rig, or a human neurofeedback protocol). This converts the in-sim proof-of-principle into an efficacy test. **It cannot be done from recordings, and we will not pretend otherwise.** Document the minimal rig + pre-registered endpoint so the claim is *ready to run* if hardware/collaborators appear.
 
 ### The standing honesty ledger for this program
