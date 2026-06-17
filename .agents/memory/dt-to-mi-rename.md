@@ -20,3 +20,5 @@ The MR Truth Labels truth-label formerly written **DT** / **"Double Tralse"** is
 - `papers/PASS_77_B96_..._RENAME_2026-05-28.md` is the migration record and intentionally retains legacy strings — exclude it from any future rename pass.
 
 **Known collisions (disclosed, accepted):** MI also = Myocardial Infarction (medical) and Mutual Information (statistical); disambiguate by context.
+
+**Dark Triad content (added B119, 2026-06-17):** the corpus now discusses the psychology "Dark Triad" (narcissism/Machiavellianism/psychopathy). ALWAYS spell it "Dark Triad" — NEVER abbreviate it "DT" (collides with the renamed Double-Tralse→MI). The B119 principle code is the glued token `DTHI-1` (Dark-Triad-as-HEM-Indeterminacy), which is collision-safe by the glued-token rule.

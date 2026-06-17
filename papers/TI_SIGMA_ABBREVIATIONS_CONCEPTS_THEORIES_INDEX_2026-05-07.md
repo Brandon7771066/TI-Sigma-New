@@ -13,6 +13,20 @@
 
 ---
 
+## Pass-77 B119 additions (2026-06-17)
+
+All CANDIDATE (NOT ratified); canonical principle count UNCHANGED 79. Anchor for all: `papers/PASS_77_B119_TRALSE_THEOLOGY_DARK_TRIAD_INDETERMINACY_WORSHIP_HEM_AND_ASYMMETRIC_EPISTEMICS_2026-06-17.md` (= "B119" below).
+
+- **NOG-1** (Non-Omnipotent God) — God's will is maximally GILE-aligned but God is NOT omnipotent; CCC/GM = a Tralse-Soup *derivative* (TOF-1) under permanent law-errancy (RTI-1) with DSR-1 0.84→0.93 headroom, so "thy will be done" is a substantive petition and the problem-of-evil dissolves (unfairness = residual tralseness still being worked against). Open-theism / process-theology prior art. Read the archived "GM = God overall" gloss THROUGH NOG-1 (great ≠ omnipotent). *CANDIDATE.* Falsifiers NOG-1-F1/F2/F3 OPEN. Anchor: B119.
+- **DTHI-1** (Dark-Triad as HEM-Indeterminacy) — Dark-Triad traits are NOT GILE-truth-negative but **HEM-indeterminate** (off the truth axis), typically HEM-raising; "dark" is a binary-thinking artifact (no word for *indeterminate*); everyone needs some HEM-indeterminacy (Yin/Yang); score in harmony with all traits (Kaufman 2019 Dark/Light r≈−0.48 ⇒ coexist). ANTI-CHEAT: reframes the **trait**, not the **deed** — does NOT excuse harm. *CANDIDATE.* Falsifiers DTHI-1-F1/F2/F3 OPEN. Anchor: B119.
+- **WHM-1** (Worship-as-HEM-Maximization) — worship > veneration > admiration = descending-intensity **collective HEM-maximization** of a GM Node (unifies people + amplifies the node through the GM Network, URB-829); valence-NEUTRAL (same machinery = idolatry/cults at low-GILE nodes). *CANDIDATE.* Falsifiers WHM-1-F1/F2 OPEN. Anchor: B119.
+- **CRD-1** (Crank Defensibility / Reputational-Stake Asymmetry) — sustained costly reputational stake (psi / energy-healing) = WEAK Bayesian evidence of a defensible position; base-rate asymmetry favors "skeptics resist a new paradigm" over "a mass of cures were all fake." BOUNDED by UGI-1: raises the generation-phase hearing-prior, NEVER substitutes for validation. *CANDIDATE.* Falsifiers CRD-1-F1/F2 OPEN. Anchor: B119.
+- **IPA-1** (Individual↔Population Inference Asymmetry) — refusing case-study→population generalization is correct, but applying a population study→individual is the common, more-damaging error (ecological/atomistic fallacy); underwrites the MEP/#69 bias-sim discipline + GBD-1. *CANDIDATE.* Falsifier IPA-1-F1 OPEN. Anchor: B119.
+- **TSV** (Truth-Scarcity Value) — value tracks scarcity-against-the-default; tralseness is the omnipresent default (TOF-1/TRG-1) ⇒ truth is rare and therefore valuable, and tralseness's own ubiquity counts AGAINST its intrinsic value. *CANDIDATE.* Falsifier TSV-F1 OPEN. Anchor: B119.
+- **Tralse-real epigraphs (registered B119)** — Einstein-response *"Without chaos, there would be no God or universe"* (TOF-1/RTI-1 corollary to "God does not play dice"); Bohr *"Everything that we call real is made of things that cannot be regarded as real"* (verbatim TRG-1); Pilate *"What is Truth?"* (John 18:38; founding MR-labels question). Anchor: B119.
+
+---
+
 **Purpose:** Single source of truth for the vocabulary of TI Sigma. Resolves ambiguities, anchors definitions, prevents drift.
 
 ---
