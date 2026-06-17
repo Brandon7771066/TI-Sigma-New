@@ -25,8 +25,11 @@ The corpus is best understood as a small number of interlocking arcs:
 
 ### A. Truth-theory (the logical core)
 - **Tralse** — the universal indeterminacy quality embedded in *every* coherent truth label (True, False, and Indeterminate); **not** a separate 5th truth value (that would double-count). Quantified on the PD-imaginary (Tralse/MI) axis.
-- **MR Truth Labels (canonical, base-4 + N Meta-Truths)** — the canonical truth-value scheme: **{True, False, Indeterminate, Meta-Indeterminate}**, plus N **Meta-Truths** firing at MR3+. **N/A is not a 5th label** — it uses the high imaginary axis as a placeholder, which ties it to **MI**, keeping the structure at base-4.
-- **Myrion Resolution (MR)** — the resolution mechanism applied to apparent contradictions; **MR1** = Existence Gate (detects/discards MI), **MR2** = Truth Gate (True/False/Indeterminate), **MR3+** = Meta-Truth modifiers.
+- **MR Truth Labels (canonical, base-4 + N Meta-Truths)** — the canonical truth-value scheme: **{True, False, Indeterminate, Meta-Indeterminate}**, plus N **Meta-Truths** firing at MR3+. **N/A is not a 5th label** — it is screened *first* (the more specific filter) and positionally uses the high imaginary axis as a placeholder, which ties it to **MI**, keeping the base structure at base-4.
+- **MI = fundamental-nature clash.** MI is a **coherence-collapse between two or more concepts whose FUNDAMENTAL NATURE — not merely plain identity — is fundamentally incompatible** (a concept's fundamental nature cannot be separated from its plain identity and remain coherent). Example: *"the number 7 is insane and sleeps green"* = **MI**, not N/A — totally incompatible concepts collapsing coherence together.
+- **Myrion Resolution (MR) — fixed pipeline order:** **(1) N/A screening** → **(2) MI screening** → **(3) assignment** to True / False / Indeterminate; **MR3+** Meta-Truth modifiers fire after assignment.
+  - **N/A is screened BEFORE MI** because N/A is the *more specific* filter (past/present/future statements with **lacking information**), whereas MI is the coarser "**too incoherent, hyper-imaginative, or self-defeating**" filter.
+  - **Temporal statements must carry their Hybrid complement.** N/A sub-labels: **Past N/A** ("not enough data from the past"), **Present N/A** ("pending truth status"), **Future N/A** ("unknown future status pending"). When a true/false answer *can* be given for the future: **Indeterminate-True** ("will likely happen") or **Indeterminate-False** ("will likely not happen").
 
 ### B. PD geometry — the FULL SPECTRUM (valence/measurement core)
 - **PD — Permissibility Distribution** (canonical; the "Phenomenal Directness" naming was a distortion, retracted).
@@ -91,7 +94,9 @@ Truth in TI Sigma is **not scalar — it lives on the PD**. The canonical struct
 - **TI** — Tralse Informationalism (framework). *Also*, in ternary PD-coordinate notation, "TI" = Tralse-Indeterminate (digit 1) — context-disambiguated.
 - **MR** — Myrion Resolution. **Myrion** = the *compromise between truth and existence* — the depiction of **"Supreme"** (see GM below; ties to SUP-1).
 - **MR1 / MR2 / MR3+** — Existence Gate / Truth Gate / Meta-Truth modifiers.
-- **MI — Meta-Indeterminate** (canonical & exclusive; formal def **τ(P) ∧ ¬τ(P)**). *Rename:* the legacy "DT"/"Double Tralse" label was mass-renamed to **MI** (Pass-77 B96). **N/A** folds toward MI via the high imaginary axis.
+- **MI — Meta-Indeterminate** (canonical & exclusive; formal def **τ(P) ∧ ¬τ(P)**). **MI = a coherence-collapse between two or more concepts whose FUNDAMENTAL NATURE — not merely plain identity — is fundamentally incompatible** (fundamental nature is inseparable from plain identity if it is to stay coherent). Example: *"the number 7 is insane and sleeps green"* = **MI** (not N/A). Screened **after** N/A (MI is the coarser "too incoherent / hyper-imaginative / self-defeating" filter). *Rename:* legacy "DT"/"Double Tralse" → **MI** (Pass-77 B96).
+- **N/A** — the "**lacking-information**" status; screened **before** MI (it is the more specific filter). Sub-labels: **Past N/A** (not enough past data), **Present N/A** (pending truth status), **Future N/A** (unknown future status pending). Positionally uses the high imaginary axis → related to MI, but is a distinct, prior gate. When the future *is* answerable, use the Hybrid complement **Indeterminate-True** / **Indeterminate-False**.
+- **NGK — Negative Gap Knowledge** — genuinely *understanding* an **MI or N/A statement** by grasping the gap/absence it marks (knowing-via-what-cannot-coherently-land). One of **three distinct categories** of non-standard cognitive content: **(1) hallucinations**, **(2) errors**, and **(3) NGK**. NGK carries real meaning (clears the CAD value-floor); hallucinations and errors do not.
 - **DefT — Defective Truth / Down Truth / Direct-Tralse** (the legacy "scheme-B" defective-truth branch; ternary digit 0). Distinct from MI.
 - **MT — Meta-Truth** (12 established; 24 conjectural). **Moot = MT-B1** (most-fired; independent of MI; never nonsense).
 - **TT / TF / EV** — ternary PD-coordinate notation (True-True / False zone / Extreme Value); not base truth values.
@@ -105,7 +110,7 @@ Truth in TI Sigma is **not scalar — it lives on the PD**. The canonical struct
 - Canonical zone labels: Pre-MI Zone, MI Cliff, Standard Zone/Mirror, Transcendent Zone/Mirror/Ring, **Principal Indeterminate Region**, **MI/Tralse (imaginary) axis**, **PD real axis**.
 
 ### GILE & consciousness
-- **GILE** — **Goodness, Intuition, Love, Elegance** — the four-dimensional consciousness measure. *Rename:* **GILE-E = Elegance** (aesthetics: structural regularity / spectral purity / beauty-of-form), as of 2026-06-16 / Pass-77 B116. The legacy "Environment" is preserved only as a concise gloss (the context of an agent's most-sacred values). GILE-E numerically equals **HEM-D3 (Aesthetic)**.
+- **GILE** — **Goodness, Intuition, Love, Elegance** — the four-dimensional consciousness measure. **GILE-L (Love) has two components: relational closeness and positive valence.** *Rename:* **GILE-E = Elegance** (aesthetics: structural regularity / spectral purity / beauty-of-form), as of 2026-06-16 / Pass-77 B116. The legacy "Environment" is preserved only as a concise gloss (the context of an agent's most-sacred values). GILE-E numerically equals **HEM-D3 (Aesthetic)**.
 - **HEM** — the existence-dimensions pillar (existence-content; D3 = Aesthetic == GILE-E). GILE + HEM = the **BOK** tetrad / Being-Optimization model; the 64D GILE Matrix interfaces with HEM.
 - **GILE Score** — composite [0,1] optimization metric; **0.93** = stability-cap / "Radiant Threshold" (idealized), 0.92+ near-perfect.
 - **LCC — Law of Correlational Causation** (canonical, ruled Pass-76 B1; **all** prior drifted expansions of the consciousness-coupling measure — Lateral/Living/Local/Latent Consciousness/Coherence Coupling/Correlation, etc. — are **retracted**). Primary measurable correlate of consciousness. *Distinct concepts that merely abbreviate "LCC" are preserved* (e.g. Libertarian Causal Capacity, Lean Confidence Constant, Local Coherence Constraint/Crystal, Lempel-Ziv complexity, Local Correlation Clustering).
@@ -179,6 +184,10 @@ The corpus falls into these natural clusters (mirrored by the app's browser and 
 - **DT → MI** (Pass-77 B96) — "Meta-Indeterminate"; **DefT** is the separate defective-truth branch.
 - **PD = Permissibility Distribution** (2026-05-08) — "Phenomenal Directness" retracted.
 - **MR Truth Labels** = base-4 + N Meta-Truths (2026-05-08); N/A folds into MI (not a 5th label).
+- **MR pipeline order** — **N/A screening → MI screening → True/False/Indeterminate assignment** (N/A is the more specific filter, screened first; MI = fundamental-nature clash, the coarser filter). Temporal statements carry **Past/Present/Future N/A** and **Indeterminate-True/False** Hybrid complements.
+- **MI definition sharpened** — MI = coherence-collapse between concepts whose **fundamental nature** (inseparable from plain identity) is fundamentally incompatible (e.g. "the number 7 is insane and sleeps green"), distinct from N/A's lacking-information status.
+- **Love = relational closeness + positive valence** (GILE-L two-component definition).
+- **Three cognitive-content categories** — hallucinations, errors, and **NGK (Negative Gap Knowledge)** = understanding an MI/N/A statement via the gap it marks.
 
 ---
 
