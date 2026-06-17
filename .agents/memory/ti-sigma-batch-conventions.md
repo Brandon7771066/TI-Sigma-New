@@ -26,6 +26,12 @@ Do **NOT** call `mark_task_complete` (this is continuous DPES work). Ignore stal
 
 **Why:** the corpus prizes exact bookkeeping; mislabeling a refinement as a new principle (or vice-versa) corrupts the canonical count that every later batch cites.
 
+## replit.md per-pass-anchor TRIM (when ceiling approached)
+When Brandon OKs trimming `replit.md` (soft ceiling ≤120KB): condense every Architecture-decisions bullet and §7.7.x ledger entry to a pointer-stub, but **preserve verbatim**: principle names, canonical status `#NN`, candidate/CANDIDATE flags, open-falsifier names, and at least one anchor path per entry. Detail is recoverable from the linked papers, so prose density is the only thing to cut.
+- **Anchor-parity is the verification gate:** diff old-vs-new with `rg -o 'papers/[A-Za-z0-9_./-]+\.md' | sort -u` then `comm -23`. A removed per-entry anchor is **acceptable IFF** it's listed inside a still-linked collapse paper's Files section (collapse papers carry their source-paper lists). Restore only anchors with NO collapse-paper parent (e.g. the standalone empirical/clarification papers like CONSCIOUSNESS_HAMILTONIAN, B107_FIVE_CLARIFICATIONS, PASS_75 B7/B8/B9).
+- **Why:** the architect evaluate_task flags ALL removed anchors as FAIL, but the convention only requires recoverability, not 1:1 path parity. Don't over-restore.
+- Fix internal contradictions found while trimming (e.g. UOP = "Unified Optimization Principle" per §7.7.248/B70; "5 Truth-Axes"→4 per refinement #8) — the file's own ledger is the authority.
+
 ## Truth-label vocabulary (current canonical)
 Base set `{T, F, I, MI}` (MI = Meta-Indeterminate, formerly DT/"Double Tralse") + N Meta-Truths; plus **N/A** (MR_NA, off-spectrum / imaginary-axis placeholder). **HMR** = Hybrid MR (2+ labels, "successive MRs merged because the final MR is incomplete"; display the hybrid for faithfulness but the final MR is most present-applicable). `#69` = ASYMMETRIC brutal-honesty discipline (over-skepticism is as much a failure as uncritical acceptance).
 
