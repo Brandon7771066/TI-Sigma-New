@@ -1,0 +1,94 @@
+{
+  "params": {
+    "N": 400000,
+    "prior_vindicated_pi": 0.08,
+    "trait_means_T1_T0": {
+      "credential": [
+        0.45,
+        0.0
+      ],
+      "intelligence": [
+        0.45,
+        0.0
+      ],
+      "volume": [
+        0.0,
+        0.08
+      ],
+      "controversy": [
+        0.0,
+        0.0
+      ]
+    },
+    "profile_rule": "all four traits z>0.5",
+    "n_in_profile": 4410
+  },
+  "Q_TRUTH": {
+    "base_rate": 0.08,
+    "conjunction_mean_logLR_in_profile": 0.7594275468633329,
+    "event_level_posterior_profile_rule": 0.15405671735966867,
+    "within_profile_mean_persample_posterior": 0.1622489255497236,
+    "within_profile_median_persample_posterior": 0.1512827929727425,
+    "verdict": "WEAK->moderate for TRUTH: the 4-trait profile lifts the vindication posterior well above base rate but it stays a minority probability (<0.5). The traits do NOT make the claim likely-true.",
+    "singletons_alone": {
+      "credential": {
+        "mean_logLR_in_profile": 0.42439922388274004,
+        "mean_posterior_in_profile": 0.11976059394490923
+      },
+      "intelligence": {
+        "mean_logLR_in_profile": 0.42559635018583786,
+        "mean_posterior_in_profile": 0.11984368253585859
+      },
+      "volume": {
+        "mean_logLR_in_profile": -0.09056802720524494,
+        "mean_posterior_in_profile": 0.0736389185352694
+      },
+      "controversy": {
+        "mean_logLR_in_profile": 0.0,
+        "mean_posterior_in_profile": 0.08000000000000002
+      }
+    },
+    "super_additivity_note": "controversy-alone and volume-alone barely move (or lower) the posterior; only credential+intelligence carry signal, so the '4 together' lift is real but driven by 2 of the 4 traits."
+  },
+  "Q_HEAR": {
+    "rule": "listen iff P(vindicated) > c_hearing / V_true_idea",
+    "by_asymmetry": {
+      "V_to_c=10": {
+        "listen_threshold_posterior": 0.1,
+        "base_rate_clears_threshold": false,
+        "profile_posterior_clears_threshold": true,
+        "margin_profile_over_threshold": 0.05405671735966866
+      },
+      "V_to_c=50": {
+        "listen_threshold_posterior": 0.02,
+        "base_rate_clears_threshold": true,
+        "profile_posterior_clears_threshold": true,
+        "margin_profile_over_threshold": 0.13405671735966868
+      },
+      "V_to_c=200": {
+        "listen_threshold_posterior": 0.005,
+        "base_rate_clears_threshold": true,
+        "profile_posterior_clears_threshold": true,
+        "margin_profile_over_threshold": 0.14905671735966866
+      }
+    },
+    "verdict": "MODERATE-and-justified for HEARING: under a realistically asymmetric payoff (a missed true heterodox idea >> a cheap hearing), the 4-trait profile posterior clears the listen threshold by a wide margin -- and at high asymmetry even the bare base rate clears it. Brandon's 'AT LEAST be listened to' is the DEFENSIBLE reading."
+  },
+  "Q_BIAS": {
+    "p_profile_given_vindicated": 0.02122106571384185,
+    "p_profile_given_permanent_heterodox": 0.01013281133178364,
+    "true_profile_likelihood_ratio": 2.0942920004123264,
+    "illusion_operates_on": "impressive sub-signal (credential & intelligence), NOT the rare 4-way conjunction",
+    "event_level_P_vindicated_given_impressive": 0.17455234672809636,
+    "fame_model": {
+      "FAME_BASE": -1.0,
+      "FAME_SLOPE": 1.3,
+      "n_celebrated": 14584,
+      "note": "disclosed selection params, not fitted"
+    },
+    "illusion_perceived_P_impressive_given_celebrated_DERIVED": 0.38322819528250135,
+    "inflation_factor_illusion_over_true": 2.195491509944942,
+    "prospective_recovered_posterior": 0.15405671735966867,
+    "verdict": "INVERSE-PROBABILITY error sharpened by survivorship, operating on the IMPRESSIVE sub-signal (credentials+intelligence), which is what the 'they were ALL brilliant' intuition actually tracks. Under a DISCLOSED fame-selection model (legends are remembered in proportion to profile strength), almost all celebrated mavericks are impressive, so a hero-surveyor SEES a high P(impressive|celebrated) and mis-reads it as P(vindicated|impressive) -- which is far lower (the invisible denominator = equally-impressive heterodox who were simply wrong). Honest caveat: the illusion does NOT inflate the rare full 4-way conjunction (that stays rare even among legends), so the inflation is a statement about the competence sub-signal, not Brandon's full 4-trait profile. Mirrors the MEP #69 bias-sim; magnitude depends on the disclosed fame-selection strength."
+  }
+}
