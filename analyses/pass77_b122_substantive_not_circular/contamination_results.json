@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "seed": 20260618,
+    "N": 400000,
+    "realized_base_rate": 0.08014,
+    "contam_strength": 3.0,
+    "meas_sd": 0.55,
+    "thesis": "'Substantive, not circular.' B121 conflated definitional circularity with measurement contamination. Brandon is right: trait->truth is substantive like g->income. The AUC=1.0 artifact is universal contamination, relabel B121-Q4 'circularity trap' -> 'hindsight-contamination trap'."
+  },
+  "D1_substantive_blind_predictors": {
+    "auc_g_blind_like_g_predicts_income": 0.6262035302436486,
+    "auc_GILE_blind_constituent_traits_to_truth": 0.8601421648634306,
+    "note": "Both are SUBSTANTIVE empirical claims of the form 'trait measured independently predicts outcome' -- structurally identical to g->income or creativity->patents. Neither is circular."
+  },
+  "D2_contamination_is_universal": {
+    "auc_g_contaminated": 0.9911268512517538,
+    "auc_GILE_contaminated": 0.9995362892092426,
+    "inflation_g (contam - blind)": 0.3649233210081052,
+    "inflation_GILE (contam - blind)": 0.139394124345812,
+    "note": "The SAME outcome-peeking that B121 used to manufacture circular-GILE AUC=1.0 does the EXACT same thing to g. The artifact is a universal property of hindsight-contaminated MEASUREMENT, not of GILE's definition. This is Brandon's reductio, quantified: if it made GILE 'circular', it would make g 'circular' too -- absurd, so the right diagnosis is contamination, not circularity."
+  },
+  "D3_contamination_sweep": {
+    "sweep": [
+      {
+        "contamination": 0.0,
+        "auc_g": 0.6262035302436486,
+        "auc_GILE": 0.8601421648634306
+      },
+      {
+        "contamination": 0.5,
+        "auc_g": 0.7431011387006945,
+        "auc_GILE": 0.9203977073798532
+      },
+      {
+        "contamination": 1.0,
+        "auc_g": 0.8404914213821646,
+        "auc_GILE": 0.9635218426132717
+      },
+      {
+        "contamination": 1.5,
+        "auc_g": 0.9096471965865011,
+        "auc_GILE": 0.985297366647563
+      },
+      {
+        "contamination": 2.0,
+        "auc_g": 0.953838770544482,
+        "auc_GILE": 0.9947494749841247
+      },
+      {
+        "contamination": 3.0,
+        "auc_g": 0.9912031337676677,
+        "auc_GILE": 0.9995685282964062
+      }
+    ],
+    "note": "As hindsight bleed rises 0 -> 3, BOTH g and GILE inflate from their honest values toward ~1.0 along near-identical curves. The contamination response is construct-agnostic."
+  },
+  "D4_NAD1_TPS1_redefinition_has_cash_value": {
+    "corr_blind_GILE_with_truth_propensity": 0.6737756697554113,
+    "note": "Per NAD-1 (definitional realism) + TPS-1 (presentation-upgrade): a redefinition is substantive when it tracks a real joint. The blind trait-composite correlates with the underlying truth-propensity, so 'GILE is orientation-to-truth' read as a redefinition is a real-joint carving with empirical cash value (cf. FEP: 'life = maximizing model evidence'), NOT vacuity. The ONLY illegitimate move is scoring the predictor FROM the outcome (D2) or retroactively relabelling failures (No-True-Scotsman)."
+  }
+}
