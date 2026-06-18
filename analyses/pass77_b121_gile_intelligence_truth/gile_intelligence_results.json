@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "seed": 20260617,
+    "N": 400000,
+    "pi_base_target": 0.08,
+    "realized_base_rate": 0.0802175,
+    "weights": {
+      "R": 0.35,
+      "C": 0.15,
+      "A": 0.15,
+      "E": 0.35
+    },
+    "coeffs": {
+      "B_GILE": 2.3,
+      "B_g": 0.18,
+      "B_inter": 1.2,
+      "B_cred_alone": 0.05,
+      "B_controversy": 0.0
+    },
+    "RTI_ceiling": 0.85,
+    "meas_sd": 0.55
+  },
+  "Q1_generic_g_weak": {
+    "auc_generic_g": 0.6986846389248456,
+    "P_vindicated_top_quartile_g": 0.15785,
+    "base_rate": 0.0802175
+  },
+  "Q2_prospective_GILE_strong": {
+    "auc_GILE_prospective": 0.8620142778715462,
+    "P_vindicated_top_quartile_GILE": 0.24609,
+    "P_vindicated_top_decile_GILE": 0.376175,
+    "lift_over_base_top_quartile": 3.0677844609966654
+  },
+  "Q3a_quack_paradox": {
+    "n_high_g": 100000,
+    "n_quack_high_g_wrong": 84215,
+    "n_sage_high_g_right": 15785,
+    "component_means_quack_vs_sage (prospective, outcome-blind)": {
+      "rationality_R": {
+        "quack": 0.2461312226803773,
+        "sage": 1.0944268617240906
+      },
+      "creativity_C": {
+        "quack": 0.315073763043272,
+        "sage": 0.7195810199151346
+      },
+      "altruism_A": {
+        "quack": -0.06703379701971465,
+        "sage": 0.3867928246541382
+      },
+      "environ_integ_E": {
+        "quack": -0.14027068615865987,
+        "sage": 0.7314131074634597
+      },
+      "GILE_composite": {
+        "quack": 0.11973178825154385,
+        "sage": 1.2935245554666988
+      }
+    }
+  },
+  "Q3b_multiplier_GILE_lifts_resource": {
+    "low_GILE": {
+      "P_vindicated_high_resource": 0.0040736295870590425,
+      "P_vindicated_low_resource": 0.005284941960012403,
+      "resource_effect (hi - lo)": -0.0012113123729533609
+    },
+    "mid_GILE": {
+      "P_vindicated_high_resource": 0.04733887267011004,
+      "P_vindicated_low_resource": 0.01495386095163666,
+      "resource_effect (hi - lo)": 0.03238501171847338
+    },
+    "high_GILE": {
+      "P_vindicated_high_resource": 0.31023445518880666,
+      "P_vindicated_low_resource": 0.07296463087587916,
+      "resource_effect (hi - lo)": 0.23726982431292748
+    }
+  },
+  "Q4_circularity_trap": {
+    "auc_GILE_prospective_honest": 0.8620142778715462,
+    "auc_GILE_circular_peeks_at_outcome": 1.0,
+    "note": "The circular definition predicts near-perfectly BY CONSTRUCTION (it is scored from the outcome). It is UNFALSIFIABLE -- every wrong person is relabelled 'not truly GILE-intelligent' (No-True-Scotsman). GIT-1 uses ONLY the prospective, outcome-blind score, whose signal is strong but bounded and therefore TESTABLE."
+  },
+  "RTI1_ceiling": {
+    "RTI_ceiling_param": 0.85,
+    "max_realized_true_probability": 0.849999973881873,
+    "note": "Even the most GILE-intelligent agent never reaches certainty: RTI-1 residual tralseness / TRG-1 (reality is tralse, not true) cap the truth-lean below 1.0. 'High likelihood', not 'must'."
+  }
+}
