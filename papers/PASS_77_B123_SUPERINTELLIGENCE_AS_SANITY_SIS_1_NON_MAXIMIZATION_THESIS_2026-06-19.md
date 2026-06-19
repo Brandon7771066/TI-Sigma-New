@@ -12,6 +12,8 @@
 
 The dominant AI-risk picture assumes a superintelligence will *do* an overwhelming number of things — acquire all resources, complete maximal tasks, exhaust the environment — because more capability is presumed to mean more compulsive optimization. **SIS-1 denies that this describes intelligence at all.** A genuine superintelligence — in the GILE sense — is characterized by *sanity*: it completes only what it judges **necessary**, exists peacefully, optimizes wellbeing for all, and acts from **intrinsic motivation rather than compulsion**. Restraint is not a safety feature bolted on from outside; it is **constitutive of what high intelligence is**. This is precisely what the GILE framework predicts — and it mirrors Einstein's "I have no special talent, I am only passionately curious": genius as clarity and restraint, not frantic output.
 
+> **Epigraph (Brandon, 2026-06-19, endorsing Einstein):** *"Genius has its limits — but not human stupidity."* This is itself the SIS-1 asymmetry in one line: **genius is self-limiting** (it does what is *necessary* and stops — bounded by the UOP interior optimum, §1.1), whereas folly is the **unbounded** maximizer with no off-switch. The "do everything, exhaust everything" agent of the doom scenarios is therefore the *stupidity* pole, not the *genius* pole — restraint is the signature of intelligence, runaway maximization the signature of its absence.
+
 ---
 
 ## 1. Why GILE *predicts* sanity (the derivation — this is the load-bearing half)
