@@ -4118,22 +4118,15 @@ elif page == "📥 Downloads":
             sl = search_term.lower()
             filtered = [p for p in filtered if sl in p['title'].lower() or sl in p['filename'].lower()]
 
-        PAPERS_PER_PAGE = 20
-        if 'dl_page' not in st.session_state:
-            st.session_state.dl_page = 0
-        total_pages = max(1, (len(filtered) + PAPERS_PER_PAGE - 1) // PAPERS_PER_PAGE)
-        current_page = min(st.session_state.dl_page, total_pages - 1)
-        start = current_page * PAPERS_PER_PAGE
-        page_papers = filtered[start:start + PAPERS_PER_PAGE]
+        st.caption(f"Showing all {len(filtered)} papers — numbered; scroll within the list below")
 
-        st.caption(f"Showing {len(filtered)} papers | Page {current_page + 1} of {total_pages}")
-
-        for paper in page_papers:
-            with st.container():
+        list_box = st.container(height=600)
+        with list_box:
+            for idx, paper in enumerate(filtered, start=1):
                 pc1, pc2 = st.columns([3, 1])
                 with pc1:
                     disp = paper['title'] if len(paper['title']) <= 55 else paper['title'][:52] + "..."
-                    st.markdown(f"**{disp}**")
+                    st.markdown(f"**{idx}. {disp}**")
                     st.caption(f"{paper['category']} | {paper['size_kb']:.0f} KB")
                 with pc2:
                     pdf_key = f"gen_{paper['filename']}"
@@ -4162,19 +4155,6 @@ elif page == "📥 Downloads":
                                     st.rerun()
                                 except Exception as e:
                                     st.error(f"PDF generation failed: {e}")
-
-        if total_pages > 1:
-            nav1, nav2, nav3 = st.columns([1, 2, 1])
-            with nav1:
-                if current_page > 0 and st.button("← Previous", key="dl_prev", use_container_width=True):
-                    st.session_state.dl_page = current_page - 1
-                    st.rerun()
-            with nav2:
-                st.caption(f"Page {current_page + 1} of {total_pages}")
-            with nav3:
-                if current_page < total_pages - 1 and st.button("Next →", key="dl_next", use_container_width=True):
-                    st.session_state.dl_page = current_page + 1
-                    st.rerun()
 
 elif page == "__key_papers__":
     st.markdown("""

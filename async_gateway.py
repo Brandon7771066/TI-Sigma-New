@@ -390,12 +390,12 @@ async def proxy_http(request):
                         headers=response_headers,
                         body=resp_body
                     )
-        except aiohttp.ClientConnectorError:
+        except (aiohttp.ClientError, asyncio.TimeoutError, ConnectionError) as e:
             if attempt < max_retries - 1:
                 print(f"⏳ Streamlit not ready, retrying... ({attempt+1}/{max_retries})")
                 await asyncio.sleep(1)
             else:
-                print(f"Error handling request from {request.remote}")
+                print(f"Error handling request from {request.remote}: {type(e).__name__}")
                 return web.Response(status=502, text="Gateway Error: Streamlit not available")
     return web.Response(status=502, text="Gateway Error: Unexpected error")
 
@@ -1272,8 +1272,28 @@ async def get_stripe_client():
         print(f"Stripe client error: {e}")
         return None
 
+def _kill_stale_streamlit():
+    """Kill any orphaned Streamlit from a previous gateway instance.
+
+    On workflow restart the prior Streamlit child can survive and keep
+    holding STREAMLIT_PORT. The new Streamlit then fails to bind
+    ('Port already in use'), but the readiness check still sees the dead
+    orphan and falsely reports ready -> proxy 502 'Streamlit not available'.
+    Clearing it first guarantees we always start a fresh, healthy server.
+    """
+    import time
+    try:
+        subprocess.run(
+            ['pkill', '-f', f'streamlit run ti_website.py'],
+            capture_output=True, timeout=10
+        )
+        time.sleep(1.5)
+    except Exception as e:
+        print(f"(stale Streamlit cleanup skipped: {e})")
+
 def start_streamlit():
     global streamlit_proc
+    _kill_stale_streamlit()
     print(f"🚀 Starting Streamlit on internal port {STREAMLIT_PORT}...")
     streamlit_proc = subprocess.Popen([
         'streamlit', 'run', 'ti_website.py',
@@ -1290,17 +1310,23 @@ def cleanup(signum=None, frame=None):
     sys.exit(0)
 
 async def wait_for_streamlit(max_retries=30, delay=1.0):
-    """Wait for Streamlit to be ready by polling the health endpoint"""
-    import socket
+    """Wait for Streamlit to be ready with a real HTTP request.
+
+    A bare TCP connect can succeed against a half-dead / orphaned process
+    that holds the port but never answers HTTP, which made the gateway
+    falsely report ready and then 502. We require an actual HTTP response
+    from Streamlit's health endpoint before declaring readiness.
+    """
+    health_url = f"http://localhost:{STREAMLIT_PORT}/healthz"
     for i in range(max_retries):
         try:
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(1)
-            result = sock.connect_ex(('127.0.0.1', STREAMLIT_PORT))
-            sock.close()
-            if result == 0:
-                print(f"✅ Streamlit ready on port {STREAMLIT_PORT}")
-                return True
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    health_url, timeout=aiohttp.ClientTimeout(total=2)
+                ) as resp:
+                    if resp.status == 200:
+                        print(f"✅ Streamlit ready on port {STREAMLIT_PORT}")
+                        return True
         except Exception:
             pass
         print(f"⏳ Waiting for Streamlit... ({i+1}/{max_retries})")
