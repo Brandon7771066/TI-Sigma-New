@@ -51,11 +51,25 @@ Phase-1B failure was, and the diagnosis recipe generalizes to every new probe/da
   exact segments, not by masking a sliding grid by window-center time — that leaks ±½ window
   across interval edges).
 
-With both fixed, the instrument recovers the expected effects. **But check the E-ceiling:**
-in hippocampal CA1 the theta/delta arousal term `E` saturates at its cap on ~100% of
-windows, so `M_r` collapses to its `L` (gamma-PLV) factor alone — a PASS there validates
-**L only, not the full L·E**. A genuine full-instrument test needs a region where
-theta/delta is NOT saturated (neocortex). Always report E cap-hit fraction.
+With both fixed, the instrument recovers effects — **but match the Welch resolution to
+canonical Phase-1A: `nperseg=int(fs*1.0)` (Δf≈1 Hz).** Using `int(fs*0.5)` (Δf≈2 Hz)
+**undersamples the 1-4 Hz delta band to exactly 0**, which spuriously pegs ANY theta/delta
+existence term (legacy `E`, or canonical `H=theta/(theta+delta)`) at its ceiling and makes the
+Existence axis look "degenerate / delta high-passed out." That is a **measurement artifact, NOT
+a property of the IBL LF band** — at Δf=1 Hz delta is large and `H` is non-degenerate (≈0.30,
+0-0.97 range, 0% ceiling). (`runner_corrected.py` CA1 used `fs*0.5` too, so its "E saturates"
+caveat is plausibly the same artifact — unconfirmed.) Always report G cap-hit AND H ceiling
+fraction so a degenerate axis can't masquerade as a PASS.
+
+**Durable lesson from the corrected FULL canonical `J=f(G)+g(H)` cortex run:** activating the
+Existence term CHANGES the verdicts vs the Truth-only (M_r / capped-E) runs. The **valence
+contrast (reward>error)** keeps the correct sign and survives *when adequately powered* (it
+needs enough error trials — a handful is too few). The **bare stimulus-onset effect washes
+out** — it was a Truth/gamma-PLV-only phenomenon, and the arousal/Existence term dilutes it.
+Takeaway: a Truth-only metric can PASS "both" hypotheses while the full Truth+Existence
+instrument supports **valence only**; never read Truth-only PASSes as validating the joint
+instrument, and stabilize valence via more sessions (not longer windows). Current run numbers
+live in analyses/.../GILE_HEM_RESULTS.md.
 
 **Streaming budget:** one ~300 s contiguous LF read ≈288 MB is fine; a 600 s single stream
 (~1.15 GB) exceeds budget / times out — use two independent 300 s windows for power instead.
