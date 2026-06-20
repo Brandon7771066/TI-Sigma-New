@@ -1,0 +1,114 @@
+{
+  "pass": "77-B4",
+  "phase": "1B",
+  "dataset": "IBL Brain Wide Map",
+  "dandiset": "000409",
+  "session": "sub-NYU-37/sub-NYU-37_ses-21d21fc3-4201-4edc-802a-c67b61952548",
+  "seed": 27182818,
+  "prereg_locked": true,
+  "instrument_canonical": "L=gamma-PLV, E=theta/delta normalized, M_r=L*E (TLC-1 Pass-74); identical to Phase-1A",
+  "scope_limits": [
+    "pre-recorded => reachability necessary-condition ONLY (not closed-loop efficacy)",
+    "single session/probe => cross-animal reliability DEFERRED",
+    "F2 reward/error co-varies with licking/wheel/arousal => valence-CORRELATE not pure code"
+  ],
+  "config": {
+    "gamma_band_hz": [
+      30.0,
+      80.0
+    ],
+    "theta_band_hz": [
+      6.0,
+      10.0
+    ],
+    "delta_band_hz": [
+      1.0,
+      4.0
+    ],
+    "window_sec": 2.0,
+    "max_channels": 4,
+    "offset_sec": 10,
+    "max_duration_sec": 150
+  },
+  "stages": {
+    "s1_open": {
+      "ok": true,
+      "elapsed_s": 6.84
+    },
+    "s2_trials": {
+      "n_trials": 548,
+      "trial_cols": [
+        "auditory_cue_time",
+        "block_index",
+        "block_type",
+        "choice_registration_time",
+        "feedback_time",
+        "gabor_stimulus_contrast",
+        "gabor_stimulus_offset_time",
+        "gabor_stimulus_onset_time",
+        "gabor_stimulus_side",
+        "id",
+        "is_mouse_rewarded",
+        "mouse_wheel_choice",
+        "probability_left",
+        "quiescence_period",
+        "reward_volume_uL",
+        "start_time",
+        "stop_time",
+        "wheel_movement_onset_time"
+      ],
+      "n_rewarded": 435,
+      "n_error": 113,
+      "stim_range_s": [
+        16.653301170016654,
+        2985.7823919029856
+      ]
+    },
+    "s3_mr": {
+      "fs_hz": 2500.023058154127,
+      "t0_offset_s": -4.68242407665292e-05,
+      "n_channels_used": 4,
+      "n_windows": 75,
+      "window_sec": 2.0,
+      "analyzed_span_s": [
+        10.99985172081682,
+        158.99848669068254
+      ],
+      "M_r_mean": 0.23693661439834884,
+      "M_r_std": 0.18389964564435943,
+      "M_r_min": 0.019654509711162824,
+      "M_r_max": 0.7910824327290408,
+      "L_mean": 0.7051838094128365,
+      "E_mean": 0.3369619724966988
+    }
+  },
+  "F_PHASE1B_1": {
+    "n_events": 37,
+    "cohens_d": 0.08556996199684386,
+    "abs_d": 0.08556996199684386,
+    "delta_mean": 0.015203174440070718,
+    "delta_std": 0.1776695242733831,
+    "bootstrap_95ci": [
+      -0.038161192608890504,
+      0.07133472073891046
+    ],
+    "ci_excludes_zero": false,
+    "threshold_d_pass": 0.3,
+    "verdict": "REFUTED"
+  },
+  "F_PHASE1B_2": {
+    "n_rewarded": 26,
+    "n_error": 11,
+    "rewarded_mean_M_r": 0.22729101784466263,
+    "error_mean_M_r": 0.3167223697403949,
+    "mannwhitney_U": 92.0,
+    "p_mannwhitney": 0.09333561194061599,
+    "rank_biserial_rewarded_minus_error": -0.35664335664335667,
+    "kruskal_H": 2.8719175561280963,
+    "p_kruskal": 0.09013741550756268,
+    "eta_squared": 0.05348335874651704,
+    "verdict": "REFUTED"
+  },
+  "aggregate_verdict": "F1(stim-reaction)=REFUTED | F2(valence-proxy)=REFUTED",
+  "total_elapsed_s": 19.78
+}
