@@ -34,9 +34,30 @@ e.g. Probe01LF).
 
 **Phase-1B result + discipline.** Ported the identical canonical `M_r=L·E` instrument
 from rodent Phase-1A → pre-recorded data = **reachability necessary-condition only** (no
-closed-loop efficacy claim). On a single pre-registered 150 s window both F1 (stim
-reaction) and F2 (reward/error valence) came back REFUTED; F2 was underpowered
-(n_error=11) and trended in the **opposite** direction (error M_r 0.317 > reward 0.227,
-p≈0.09). **#69:** do NOT enlarge the window post-hoc to chase the threshold — that is the
-retrospective-design bias the corpus warns against; defer to a pre-specified
-adequately-powered multi-session Phase-1C instead.
+closed-loop efficacy claim).
+
+**A REFUTED can be an instrument-MISAPPLICATION artifact, not a real null** — the original
+Phase-1B failure was, and the diagnosis recipe generalizes to every new probe/dataset
+(full numbers in analyses/.../DIAGNOSIS.md). Two defects compounded:
+- *Anatomy (dominant):* the default session's only probe sat in midbrain/brainstem and
+  even included out-of-brain `void` channels; the cortical/hippocampal-tuned `M_r=L·E`
+  does NOT transfer to deep nuclei. **Always read the electrode `location` table and
+  restrict channels to ONE in-domain gray-matter region, excluding `void`, BEFORE
+  computing any M_r.** Use a pre-declared, outcome-blind session/tie-break rule so
+  anatomy-first selection can't be mistaken for HARKing.
+- *Timescale:* analysis windows were many× the task's own stim→feedback latency, so the
+  event was smeared out. **Match windows to the dataset's event timescale and extract
+  event-locked baseline/response segments DIRECTLY from the raw signal** (computing M_r on
+  exact segments, not by masking a sliding grid by window-center time — that leaks ±½ window
+  across interval edges).
+
+With both fixed, the instrument recovers the expected effects. **But check the E-ceiling:**
+in hippocampal CA1 the theta/delta arousal term `E` saturates at its cap on ~100% of
+windows, so `M_r` collapses to its `L` (gamma-PLV) factor alone — a PASS there validates
+**L only, not the full L·E**. A genuine full-instrument test needs a region where
+theta/delta is NOT saturated (neocortex). Always report E cap-hit fraction.
+
+**Streaming budget:** one ~300 s contiguous LF read ≈288 MB is fine; a 600 s single stream
+(~1.15 GB) exceeds budget / times out — use two independent 300 s windows for power instead.
+Cross-animal reliability stays DEFERRED to a multi-session cohort (single-session PASSes
+are reachability necessary-conditions only, not closed-loop efficacy).

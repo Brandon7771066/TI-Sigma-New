@@ -1,3 +1,13 @@
+> **⚠️ SUPERSEDED — see `DIAGNOSIS.md`.** The REFUTED verdicts below were traced to an
+> instrument-misapplication artifact: the default session's probe was in midbrain/brainstem
+> (incl. out-of-brain "void" channels) and the 2 s windows were far coarser than the task's
+> 0.29 s stim→feedback structure. With an anatomically-valid CA1 session (`sub-NR-0028`) and
+> event-locked analysis — **same instrument, same thresholds** — both hypotheses **PASS**
+> across two independent windows (F1c d=0.61/1.08; F2c valence reward>error, p=0.007 / 7.6e-7).
+> Honest caveat: in CA1 the arousal term E saturates (cap-hit 100%), so these PASSes
+> validate the **L / gamma-PLV component** of M_r, not the full L·E (see DIAGNOSIS.md).
+> The original run is retained below as the documented negative control.
+
 # Pass-77-B4 Phase-1B — IBL Mouse Valence-Reachability (DANDI:000409)
 
 **Sibling to** Phase-1A (`pass77_b4_phase1a_rodent_mood_trajectory`). Ports the

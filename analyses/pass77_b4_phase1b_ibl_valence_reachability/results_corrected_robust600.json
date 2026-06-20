@@ -1,0 +1,84 @@
+{
+  "pass": "77-B4",
+  "phase": "1B-corrected",
+  "dataset": "IBL Brain Wide Map",
+  "dandiset": "000409",
+  "session": "sub-NR-0028/sub-NR-0028_ses-f56194bc-8215-4ae8-bc6a-89781ad8e050",
+  "target_region": "Field CA1",
+  "seed": 27182818,
+  "prereg_locked": true,
+  "corrections": [
+    "session chosen for ANATOMY (probe in CA1/visual cortex) before seeing M_r",
+    "channels restricted to target gray-matter region, void excluded",
+    "event-locked fine resolution: 1s win/0.5s step, baseline[-1.5,-0.5] response[0,1]"
+  ],
+  "instrument_canonical": "M_r=L*E (gamma-PLV * theta/delta), identical to original",
+  "scope_limits": [
+    "pre-recorded => reachability necessary-condition ONLY",
+    "single session => cross-animal DEFERRED",
+    "valence co-varies with licking/arousal => correlate not pure code"
+  ],
+  "config": {
+    "window_sec": 1.0,
+    "step_sec": 0.5,
+    "baseline_s": [
+      -1.5,
+      -0.5
+    ],
+    "response_s": [
+      0.0,
+      1.0
+    ],
+    "max_channels": 6,
+    "offset_sec": 10,
+    "max_duration_sec": 600
+  },
+  "stages": {
+    "s2": {
+      "n_trials": 696,
+      "n_rewarded": 551,
+      "n_error": 145,
+      "n_region_channels": 102,
+      "target_region": "Field CA1"
+    },
+    "s3": {
+      "fs_hz": 2500.0367069488716,
+      "n_channels_used": 6,
+      "n_windows": 1199,
+      "analyzed_span_s": [
+        10.499817914579811,
+        609.4910230587631
+      ],
+      "M_r_mean": 0.8636456917054669,
+      "M_r_std": 0.04632955391653481,
+      "M_r_min": 0.6886240564747512,
+      "M_r_max": 0.9788916795537851
+    }
+  },
+  "F_PHASE1B_1c": {
+    "n_events": 99,
+    "cohens_d": 0.8791396534306283,
+    "abs_d": 0.8791396534306283,
+    "delta_mean": 0.03908250593764392,
+    "bootstrap_95ci": [
+      0.030491681446537144,
+      0.04785040450991046
+    ],
+    "ci_excludes_zero": true,
+    "verdict": "PASS"
+  },
+  "F_PHASE1B_2c": {
+    "n_rewarded": 81,
+    "n_error": 18,
+    "rewarded_mean_dMr": 0.06837369493588513,
+    "error_mean_dMr": -0.01552864903185004,
+    "p_mannwhitney": 1.465288485574175e-08,
+    "rank_biserial_rewarded_minus_error": 0.8573388203017833,
+    "kruskal_H": 32.15020576131684,
+    "p_kruskal": 1.4270157958793467e-08,
+    "eta_squared": 0.3211361418692458,
+    "verdict": "PASS"
+  },
+  "aggregate_verdict": "F1c(stim)=PASS | F2c(valence)=PASS",
+  "total_elapsed_s": 64.38
+}
