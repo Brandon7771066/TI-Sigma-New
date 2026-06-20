@@ -29,3 +29,28 @@ description: Non-obvious choices for GILE feature decoding + closed-loop efficac
   so a closed-loop efficacy *proof* is in-simulation only; on the live data claim at most
   an observational **reachability necessary-condition** (target state reachable from all
   states), explicitly NOT a drivability/efficacy claim.
+
+- **IBL valence reachability does NOT cross-replicate in SIGN across animals — treat any
+  single-animal "PASS" as provisional.** Visual-cortex dual-operator J (reward-vs-error ΔJ):
+  animal NR-0028 reward>error (rb≈+0.67, PASS); animal DY-009 reward<error (rb≈−0.42,
+  significant WRONG direction). Stimulus reaction also flips sign (washes out vs significant
+  negative). **Why:** likely arousal/licking/movement confound, not a code-level mood signal.
+  **How to apply:** never report a single IBL session's valence as support; require a
+  pre-registered multi-animal cohort with a FIXED directional test + arousal controls.
+
+- **Valence verdicts MUST be direction-aware (the hypothesis is directional: reward raises J).**
+  A two-sided Kruskal/MWU test will mislabel a significant WRONG-direction effect as "PASS".
+  Gate on rank-biserial sign (rb>0), consistent with the rank test: significant∧rb>0→PASS;
+  significant∧rb<0→REFUTED_WRONG_SIGN. This stricter gate is what surfaced the DY-009 reversal.
+
+- **The multiplicative "hyperconnection gate" (T×E) is the WEAKEST valence term, not the carrier.**
+  Canonical dual J = T×E + T+E. Empirically reward-vs-error separates in the ADDITIVE (T+E) term;
+  T×E alone is inconclusive everywhere tested. Don't assume co-activation (both-axes) is the mood
+  detector — the data say it's a substitutable/additive-type effect.
+
+- **Cross-dataset feasibility (scoped 2026-06-20):** Allen Visual BEHAVIOR (DANDI 000713) CAN test
+  valence cross-lab (reward/hit/miss + VISp LFP) but LFP and trials live in SEPARATE files
+  (`probe-*_ecephys.nwb` vs `*_image.nwb`) sharing Allen's master clock → needs a session-matched
+  join loader. Allen Visual CODING (000021) is passive (no valence). PRIME-DE is macaque resting
+  fMRI (wrong modality for the LFP gamma-PLV/theta-delta instrument). "OSERR" = no confirmable
+  public streamable dataset.

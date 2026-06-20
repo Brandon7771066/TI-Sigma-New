@@ -1,0 +1,147 @@
+{
+  "pass": "77-B4",
+  "phase": "1B-GILE-HEM",
+  "dandiset": "000409",
+  "session": "sub-NR-0028/sub-NR-0028_ses-f56194bc-8215-4ae8-bc6a-89781ad8e050",
+  "target_region": "Primary visual area",
+  "region_match": "contains",
+  "seed": 27182818,
+  "prereg_locked": true,
+  "instrument_canonical": "GILE-HEM UOP J = f(G)+g(H); G=gamma-PLV(cap0.93), H=theta/(theta+delta)",
+  "supersedes_metric": "legacy M_r = L*E (multiplicative)",
+  "scope_limits": [
+    "pre-recorded => reachability necessary-condition ONLY",
+    "single session => cross-animal DEFERRED",
+    "valence co-varies with licking/arousal => correlate not pure code"
+  ],
+  "config": {
+    "window_sec": 1.0,
+    "step_sec": 0.5,
+    "baseline_s": [
+      -1.5,
+      -0.5
+    ],
+    "response_s": [
+      0.0,
+      1.0
+    ],
+    "G_star": 0.93,
+    "alpha_J": 10.0,
+    "max_channels": 6,
+    "offset_sec": 320,
+    "max_duration_sec": 300
+  },
+  "stages": {
+    "s2": {
+      "n_trials": 696,
+      "n_rewarded": 551,
+      "n_error": 145,
+      "n_region_channels": 118,
+      "target_region": "Primary visual area",
+      "region_match": "contains"
+    },
+    "s3": {
+      "fs_hz": 2500.0367069488716,
+      "n_channels_used": 6,
+      "n_windows": 599,
+      "J_dual_mean": 0.7881321152636127,
+      "J_dual_std": 0.2603152106353173,
+      "J_mult_mean": 0.1068343564663434,
+      "J_mult_std": 0.07707833917136529,
+      "J_add_mean": 0.6812977587972693,
+      "J_add_std": 0.18482698906219563,
+      "G_mean": 0.5569003481960365,
+      "G_std": 0.12470167012380387,
+      "G_cap_hit_fraction": 0.0,
+      "H_mean": 0.29114030558064985,
+      "H_std": 0.22099311723461199,
+      "H_ceiling_fraction": 0.0
+    }
+  },
+  "F_PHASE1B_1c": {
+    "n_events": 67,
+    "primary_mode": "dual",
+    "verdict": "REFUTED",
+    "by_mode": {
+      "add": {
+        "cohens_d": 0.12187774505319836,
+        "abs_d": 0.12187774505319836,
+        "delta_mean": 0.029228756623943874,
+        "bootstrap_95ci": [
+          -0.027189046157576294,
+          0.08779666321199109
+        ],
+        "ci_excludes_zero": false,
+        "verdict": "REFUTED"
+      },
+      "mult": {
+        "cohens_d": -0.13534102905865422,
+        "abs_d": 0.13534102905865422,
+        "delta_mean": -0.013440833454371824,
+        "bootstrap_95ci": [
+          -0.03709496319057288,
+          0.010274716410417698
+        ],
+        "ci_excludes_zero": false,
+        "verdict": "REFUTED"
+      },
+      "dual": {
+        "cohens_d": 0.04681866451289649,
+        "abs_d": 0.04681866451289649,
+        "delta_mean": 0.015787923169572057,
+        "bootstrap_95ci": [
+          -0.06517587400275085,
+          0.09782516702931147
+        ],
+        "ci_excludes_zero": false,
+        "verdict": "REFUTED"
+      }
+    }
+  },
+  "F_PHASE1B_2c": {
+    "n_rewarded": 55,
+    "n_error": 12,
+    "primary_mode": "dual",
+    "verdict": "PASS",
+    "by_mode": {
+      "add": {
+        "n_rewarded": 55,
+        "n_error": 12,
+        "rewarded_mean_dJ": 0.21181976547273249,
+        "error_mean_dJ": -0.05533329319763506,
+        "p_mannwhitney": 0.0002924332755569825,
+        "rank_biserial_rewarded_minus_error": 0.6727272727272726,
+        "kruskal_H": 13.177540106951852,
+        "p_kruskal": 0.0002833244245710173,
+        "eta_squared": 0.18734677087618234,
+        "verdict": "PASS"
+      },
+      "mult": {
+        "n_rewarded": 55,
+        "n_error": 12,
+        "rewarded_mean_dJ": 0.05658757823870641,
+        "error_mean_dJ": -0.029921556565287572,
+        "p_mannwhitney": 0.010495905450371459,
+        "rank_biserial_rewarded_minus_error": 0.4757575757575758,
+        "kruskal_H": 6.590641711229921,
+        "p_kruskal": 0.010251621193769597,
+        "eta_squared": 0.08600987248046033,
+        "verdict": "INCONCLUSIVE_GRAY_ZONE"
+      },
+      "dual": {
+        "n_rewarded": 55,
+        "n_error": 12,
+        "rewarded_mean_dJ": 0.2684073437114389,
+        "error_mean_dJ": -0.08525484976292264,
+        "p_mannwhitney": 0.0007337806854776677,
+        "rank_biserial_rewarded_minus_error": 0.6272727272727272,
+        "kruskal_H": 11.456951871657736,
+        "p_kruskal": 0.0007122703565726118,
+        "eta_squared": 0.16087618264088824,
+        "verdict": "PASS"
+      }
+    }
+  },
+  "aggregate_verdict": "[dual */+ primary] F1c(stim)=REFUTED | F2c(valence)=PASS",
+  "total_elapsed_s": 26.3
+}

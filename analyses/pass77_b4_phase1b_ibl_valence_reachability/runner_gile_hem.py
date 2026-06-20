@@ -13,9 +13,24 @@ Phase-1B reachability tests on the canonical GILE-HEM Unified Optimization Princ
     f(G) = ln(1+G)                              for G <= 0.93
          = ln(1+0.93) - alpha*(G-0.93)^2        for G  > 0.93   (alpha=10)
     g(H) = ln(1+H)
-    J    = f(G) + g(H)        <- the "*/+" UOP combination (additive of the two log
-                                 contributions; the multiplicative gate is reserved for
-                                 hyperconnection components, not used at this layer).
+
+    THE CANONICAL DUAL "*/+" OPERATOR (Truth */+ Existence; APERIODIC_DUAL / B83 lineage):
+    Reality = alpha*(L x E) + beta*(L + E) -- the Einstein-tiling dual where BOTH the
+    multiplicative (hyperconnection) and additive (existence) modes are combined. Mapping
+    the two operands to our neural axes T_bound=f(G) (Truth) and E_bound=g(H) (Existence):
+
+      J_mult = T_bound * E_bound      # L x E HYPERCONNECTION GATE: fires only when BOTH
+                                      #   truth-coherence AND existence-arousal are present;
+                                      #   zero in either factor annihilates the product.
+      J_add  = T_bound + E_bound      # L + E EXISTENCE (substitutable; survives if one axis
+                                      #   is zero). This is the legacy additive-only J.
+      J_dual = J_mult + J_add         # literal "*/+" = (T x E) + (T + E). PRIMARY metric.
+
+    Earlier additive-only runs used J_add alone -- literally half the operator -- which is
+    why activating Existence DILUTED rather than GATED the signal. The multiplicative term
+    is the component that detects a genuinely *reached* mood state (reward co-activating
+    gamma-coherence AND theta-arousal together). dJ is reported for ALL THREE modes per test
+    so we can see which mode carries the signal; J_dual is the pre-registered primary.
 
 WHY VISUAL CORTEX (not CA1):
 The CA1 GILE-HEM run would be uninformative for the EXISTENCE axis: in hippocampus
@@ -135,16 +150,29 @@ def g_H(h):
     return math.log(1.0 + max(float(h), 0.0))
 
 
+MODES = ("add", "mult", "dual")
+
+
+def J_modes(T_bound, E_bound):
+    """The canonical dual */+ operator over the two per-axis bounds.
+    add  = T+E (L+E existence); mult = T*E (LxE hyperconnection gate);
+    dual = T*E + T+E (literal '*/+', primary)."""
+    j_add = T_bound + E_bound
+    j_mult = T_bound * E_bound
+    return {"add": j_add, "mult": j_mult, "dual": j_mult + j_add}
+
+
 def compute_J(seg, fs, pairs):
-    """Canonical GILE-HEM UOP J = f(G) + g(H) (Phase-1A compute_J_window, Pass-68-B1).
-    G = mean gamma-PLV (truth axis, cap 0.93); H = theta/(theta+delta) (existence axis)."""
+    """Canonical GILE-HEM UOP dual operator (Phase-1A compute_J_window axes, B83 dual */+).
+    G = mean gamma-PLV (truth axis, cap 0.93); H = theta/(theta+delta) (existence axis).
+    Returns (modes_dict, G, H) where modes_dict has add/mult/dual J values."""
     plvs = [gamma_plv(seg[i], seg[j], fs) for i, j in pairs]
     G = float(np.mean(plvs)) if plvs else 0.0
     avg = np.mean(seg, axis=0)
     theta = bandpower(avg, fs, THETA_LO, THETA_HI)
     delta = bandpower(avg, fs, DELTA_LO, DELTA_HI)
     H = float(theta / (theta + delta + 1e-12))
-    return f_G(G) + g_H(H), G, H
+    return J_modes(f_G(G), g_H(H)), G, H
 
 
 def cohens_d(arr):
@@ -211,21 +239,23 @@ def region_channels(hr, target, match=REGION_MATCH):
 
 
 def _seg_J(data, fs, pairs, lo_samp, hi_samp):
+    """Returns the per-mode J dict {add,mult,dual} for the segment, or None if invalid."""
     if lo_samp < 0 or hi_samp > data.shape[1] or (hi_samp - lo_samp) < int(0.3 * fs):
         return None
-    j, _, _ = compute_J(data[:, lo_samp:hi_samp], fs, pairs)
-    return j
+    modes, _, _ = compute_J(data[:, lo_samp:hi_samp], fs, pairs)
+    return modes
 
 
 def event_delta_direct(data, fs, pairs, i_lo, t_off, t_ev):
-    """Exact event-locked dJ = J(response segment) - J(baseline segment)."""
+    """Exact event-locked dJ = J(response segment) - J(baseline segment), per mode.
+    Returns {add,mult,dual} of deltas, or None if either segment is invalid."""
     def s(t):
         return int(round((t - t_off) * fs)) - i_lo
     jb = _seg_J(data, fs, pairs, s(t_ev + BASELINE[0]), s(t_ev + BASELINE[1]))
     jr = _seg_J(data, fs, pairs, s(t_ev + RESPONSE[0]), s(t_ev + RESPONSE[1]))
     if jb is None or jr is None:
         return None
-    return jr - jb
+    return {m: jr[m] - jb[m] for m in MODES}
 
 
 def main():
@@ -303,24 +333,30 @@ def main():
         data = np.asarray(raw, dtype=np.float32).T
         log(f"   loaded {data.shape} in {time.time()-t0:.1f}s")
         pairs = [(i, j) for i in range(data.shape[0]) for j in range(i + 1, data.shape[0])][:10]
-        Jv, G_arr, H_arr = [], [], []
+        Jv = {m: [] for m in MODES}; G_arr, H_arr = [], []
         w = 0
         while w + win_n <= data.shape[1]:
-            j, G, H = compute_J(data[:, w:w + win_n], fs, pairs)
-            Jv.append(j); G_arr.append(G); H_arr.append(H)
+            modes, G, H = compute_J(data[:, w:w + win_n], fs, pairs)
+            for m in MODES:
+                Jv[m].append(modes[m])
+            G_arr.append(G); H_arr.append(H)
             w += step_n
-        Jv = np.asarray(Jv); G_arr = np.asarray(G_arr); H_arr = np.asarray(H_arr)
+        Jv = {m: np.asarray(v) for m, v in Jv.items()}
+        G_arr = np.asarray(G_arr); H_arr = np.asarray(H_arr)
         results["stages"]["s3"] = {
-            "fs_hz": fs, "n_channels_used": len(sel), "n_windows": len(Jv),
-            "J_mean": float(np.mean(Jv)), "J_std": float(np.std(Jv)),
+            "fs_hz": fs, "n_channels_used": len(sel), "n_windows": len(Jv["dual"]),
+            "J_dual_mean": float(np.mean(Jv["dual"])), "J_dual_std": float(np.std(Jv["dual"])),
+            "J_mult_mean": float(np.mean(Jv["mult"])), "J_mult_std": float(np.std(Jv["mult"])),
+            "J_add_mean": float(np.mean(Jv["add"])), "J_add_std": float(np.std(Jv["add"])),
             "G_mean": float(np.mean(G_arr)), "G_std": float(np.std(G_arr)),
             "G_cap_hit_fraction": float(np.mean(G_arr >= G_STAR)),
             "H_mean": float(np.mean(H_arr)), "H_std": float(np.std(H_arr)),
             "H_ceiling_fraction": float(np.mean(H_arr >= 0.999)),
         }
-        log(f"   J mean={np.mean(Jv):.4f} std={np.std(Jv):.4f} | G={np.mean(G_arr):.3f} "
+        log(f"   J_dual mean={np.mean(Jv['dual']):.4f} (mult={np.mean(Jv['mult']):.4f} "
+            f"add={np.mean(Jv['add']):.4f}) | G={np.mean(G_arr):.3f} "
             f"(cap_hit={np.mean(G_arr>=G_STAR):.1%}) | H={np.mean(H_arr):.3f}+-{np.std(H_arr):.3f} "
-            f"(ceil={np.mean(H_arr>=0.999):.1%}) over {len(Jv)} windows")
+            f"(ceil={np.mean(H_arr>=0.999):.1%}) over {len(Jv['dual'])} windows")
     except Exception as e:
         log(traceback.format_exc()); results["aggregate_verdict"] = f"BLOCKED_S3: {e!r}"
         json.dump(results, open(OUT, "w"), indent=2, default=str); return
@@ -328,67 +364,99 @@ def main():
     span_lo = t_off + (i_lo + win_n / 2) / fs
     span_hi = t_off + (i_hi - win_n / 2) / fs
 
-    # F-PHASE1B-1c : stimulus-onset reaction
+    def _stim_verdict(arr):
+        d = cohens_d(arr); lo, hi = bootstrap_ci(arr)
+        ci_excl = (lo > 0) or (hi < 0); ad = abs(d)
+        verdict = ("PASS" if (ad >= D_PASS and ci_excl)
+                   else "INCONCLUSIVE_GRAY_ZONE" if ad >= D_INCONCLUSIVE_LO else "REFUTED")
+        return {"cohens_d": d, "abs_d": ad, "delta_mean": float(np.mean(arr)),
+                "bootstrap_95ci": [lo, hi], "ci_excludes_zero": ci_excl, "verdict": verdict}
+
+    def _valence_verdict(rew_d, err_d):
+        from scipy.stats import mannwhitneyu, kruskal
+        U, p_mw = mannwhitneyu(rew_d, err_d, alternative="two-sided")
+        n1, n2 = len(rew_d), len(err_d)
+        rb = (2.0 * U) / (n1 * n2) - 1.0
+        Hs, p_kw = kruskal(rew_d, err_d); N = n1 + n2
+        eps2 = max(0.0, float((Hs - 1) / (N - 2)))
+        # Pre-registered hypothesis is DIRECTIONAL: reward should RAISE J vs error.
+        # Use the RANK-based sign (rank-biserial > 0) to stay consistent with the
+        # rank-based Kruskal/MWU significance test (robust to skew/outliers, unlike
+        # the raw mean). A two-sided "significant" result in the WRONG sign
+        # CONTRADICTS the hypothesis -> it is NOT a pass.
+        correct_sign = (rb > 0.0)
+        sig = (p_kw < KW_P_PASS and eps2 > ETA2_PASS)
+        if sig and correct_sign:
+            verdict = "PASS"
+        elif sig and not correct_sign:
+            verdict = "REFUTED_WRONG_SIGN"
+        elif p_kw < 0.05:
+            verdict = "INCONCLUSIVE_GRAY_ZONE"
+        else:
+            verdict = "REFUTED"
+        return {"n_rewarded": n1, "n_error": n2,
+                "rewarded_mean_dJ": float(np.mean(rew_d)), "error_mean_dJ": float(np.mean(err_d)),
+                "p_mannwhitney": float(p_mw), "rank_biserial_rewarded_minus_error": float(rb),
+                "kruskal_H": float(Hs), "p_kruskal": float(p_kw),
+                "eta_squared": eps2, "verdict": verdict}
+
+    # F-PHASE1B-1c : stimulus-onset reaction (per dual */+ mode)
     try:
-        log("Stage 4: F-PHASE1B-1c stimulus reaction (event-locked, dJ)")
-        deltas = []
+        log("Stage 4: F-PHASE1B-1c stimulus reaction (event-locked, dJ; add/mult/dual)")
+        deltas = {m: [] for m in MODES}
         for t_ev in stim:
             if span_lo - BASELINE[0] <= t_ev <= span_hi - RESPONSE[1]:
                 d = event_delta_direct(data, fs, pairs, i_lo, t_off, float(t_ev))
                 if d is not None:
-                    deltas.append(d)
-        if len(deltas) >= 5:
-            d = cohens_d(deltas); lo, hi = bootstrap_ci(deltas)
-            ci_excl = (lo > 0) or (hi < 0); ad = abs(d)
-            verdict = ("PASS" if (ad >= D_PASS and ci_excl)
-                       else "INCONCLUSIVE_GRAY_ZONE" if ad >= D_INCONCLUSIVE_LO else "REFUTED")
-            results["F_PHASE1B_1c"] = {"n_events": len(deltas), "cohens_d": d, "abs_d": ad,
-                                       "delta_mean": float(np.mean(deltas)),
-                                       "bootstrap_95ci": [lo, hi], "ci_excludes_zero": ci_excl,
-                                       "verdict": verdict}
+                    for m in MODES:
+                        deltas[m].append(d[m])
+        n_ev = len(deltas["dual"])
+        if n_ev >= 5:
+            per_mode = {m: _stim_verdict(deltas[m]) for m in MODES}
+            results["F_PHASE1B_1c"] = {"n_events": n_ev, "primary_mode": "dual",
+                                       "verdict": per_mode["dual"]["verdict"],
+                                       "by_mode": per_mode}
         else:
-            results["F_PHASE1B_1c"] = {"n_events": len(deltas), "verdict": "INSUFFICIENT_EVENTS"}
-        log(f"   F1c: {results['F_PHASE1B_1c']}")
+            results["F_PHASE1B_1c"] = {"n_events": n_ev, "verdict": "INSUFFICIENT_EVENTS"}
+        log(f"   F1c: n={n_ev} -> " + " | ".join(
+            f"{m}={results['F_PHASE1B_1c'].get('by_mode',{}).get(m,{}).get('verdict','-')}"
+            f"(d={results['F_PHASE1B_1c'].get('by_mode',{}).get(m,{}).get('cohens_d',float('nan')):.3f})"
+            for m in MODES) if n_ev >= 5 else f"   F1c: {results['F_PHASE1B_1c']}")
     except Exception as e:
         log(traceback.format_exc()); results["F_PHASE1B_1c"] = {"error": repr(e)}
 
-    # F-PHASE1B-2c : valence (reward vs error), feedback-locked
+    # F-PHASE1B-2c : valence (reward vs error), feedback-locked (per dual */+ mode)
     try:
-        log("Stage 5: F-PHASE1B-2c valence (feedback-locked, dJ)")
-        rew_d, err_d = [], []
+        log("Stage 5: F-PHASE1B-2c valence (feedback-locked, dJ; add/mult/dual)")
+        rew_d = {m: [] for m in MODES}; err_d = {m: [] for m in MODES}
         for tf, rw in zip(fb, rewarded):
             if np.isnan(tf) or np.isnan(rw):
                 continue
             if span_lo - BASELINE[0] <= tf <= span_hi - RESPONSE[1]:
                 d = event_delta_direct(data, fs, pairs, i_lo, t_off, float(tf))
                 if d is not None:
-                    (rew_d if rw == 1 else err_d).append(d)
-        if len(rew_d) >= 5 and len(err_d) >= 5:
-            from scipy.stats import mannwhitneyu, kruskal
-            U, p_mw = mannwhitneyu(rew_d, err_d, alternative="two-sided")
-            n1, n2 = len(rew_d), len(err_d)
-            rb = (2.0 * U) / (n1 * n2) - 1.0
-            Hs, p_kw = kruskal(rew_d, err_d); N = n1 + n2
-            eps2 = max(0.0, float((Hs - 1) / (N - 2)))
-            verdict = ("PASS" if (p_kw < KW_P_PASS and eps2 > ETA2_PASS)
-                       else "INCONCLUSIVE_GRAY_ZONE" if p_kw < 0.05 else "REFUTED")
-            results["F_PHASE1B_2c"] = {"n_rewarded": n1, "n_error": n2,
-                                       "rewarded_mean_dJ": float(np.mean(rew_d)),
-                                       "error_mean_dJ": float(np.mean(err_d)),
-                                       "p_mannwhitney": float(p_mw),
-                                       "rank_biserial_rewarded_minus_error": float(rb),
-                                       "kruskal_H": float(Hs), "p_kruskal": float(p_kw),
-                                       "eta_squared": eps2, "verdict": verdict}
+                    tgt = rew_d if rw == 1 else err_d
+                    for m in MODES:
+                        tgt[m].append(d[m])
+        n1, n2 = len(rew_d["dual"]), len(err_d["dual"])
+        if n1 >= 5 and n2 >= 5:
+            per_mode = {m: _valence_verdict(rew_d[m], err_d[m]) for m in MODES}
+            results["F_PHASE1B_2c"] = {"n_rewarded": n1, "n_error": n2, "primary_mode": "dual",
+                                       "verdict": per_mode["dual"]["verdict"],
+                                       "by_mode": per_mode}
         else:
-            results["F_PHASE1B_2c"] = {"n_rewarded": len(rew_d), "n_error": len(err_d),
+            results["F_PHASE1B_2c"] = {"n_rewarded": n1, "n_error": n2,
                                        "verdict": "INSUFFICIENT_OUTCOME_GROUPS"}
-        log(f"   F2c: {results['F_PHASE1B_2c']}")
+        log(f"   F2c: rew={n1} err={n2} -> " + " | ".join(
+            f"{m}={results['F_PHASE1B_2c'].get('by_mode',{}).get(m,{}).get('verdict','-')}"
+            f"(p={results['F_PHASE1B_2c'].get('by_mode',{}).get(m,{}).get('p_kruskal',float('nan')):.3g})"
+            for m in MODES) if (n1 >= 5 and n2 >= 5) else f"   F2c: {results['F_PHASE1B_2c']}")
     except Exception as e:
         log(traceback.format_exc()); results["F_PHASE1B_2c"] = {"error": repr(e)}
 
     v1 = results.get("F_PHASE1B_1c", {}).get("verdict", "?")
     v2 = results.get("F_PHASE1B_2c", {}).get("verdict", "?")
-    results["aggregate_verdict"] = f"F1c(stim)={v1} | F2c(valence)={v2}"
+    results["aggregate_verdict"] = f"[dual */+ primary] F1c(stim)={v1} | F2c(valence)={v2}"
     results["total_elapsed_s"] = round(time.time() - t0, 2)
     json.dump(results, open(OUT, "w"), indent=2, default=str)
     log(f"DONE in {time.time()-t0:.1f}s — {results['aggregate_verdict']}")
