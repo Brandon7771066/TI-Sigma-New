@@ -1,0 +1,99 @@
+## Chapter 12: The Case Against Physicalism, Skepticism, and Bayesianism
+
+Three positions dominate the modern educated mind so thoroughly that most people mistake them for "just thinking clearly" rather than for the contestable philosophical commitments they actually are. The first is **physicalism** — the view that matter (and physical process) is all that fundamentally exists. The second is **doctrinaire skepticism** — the stance that withholding belief is always the safe, rigorous default. The third is **naive Bayesianism** — the claim that rational belief just *is* assigning numerical probabilities and updating them by Bayes' theorem.
+
+This chapter argues that none of the three is the neutral, assumption-free starting point it pretends to be. But the framework's brutal-honesty discipline (#69) cuts both ways, so the rule here is strict: **state each opponent's strongest case first, in its own best words, before replying.** A critique that only attacks a weak version of its target has proven nothing.
+
+> **Key insight:** Physicalism, skepticism, and Bayesianism are not the absence of a worldview. They are worldviews — strong ones — that have learned to present themselves as the mere lack of one.
+
+### The case for physicalism (steel-manned)
+
+Begin by granting physicalism everything it has earned, because it has earned a great deal.
+
+- **It works.** Physical methods predict eclipses to the second, design the transistor, sequence the genome, and put a rover on Mars. No competing framework comes close to this track record of confirmed prediction. **(verified)**
+- **It is parsimonious.** One kind of stuff, governed by uniform laws, is simpler than two kinds of stuff plus an account of how they interact. Occam's razor favors it.
+- **Mind tracks brain.** Damage a brain region and a specific mental capacity degrades. Anesthesia abolishes consciousness; caffeine sharpens it. The tight, lawful correlation between neural states and mental states is among the best-replicated findings in science. **(verified)**
+
+This is a formidable case. Any honest critic must concede that for the vast domain of ordinary physical phenomena, physicalism is not just useful — it is overwhelmingly successful.
+
+### The reply: success in a domain is not completeness across all domains
+
+The physicalist case quietly performs one extra step that does not follow. From "physical methods work superbly for physical phenomena," it slides to "therefore all phenomena are physical." That is a different, far stronger claim — and it carries its own burden of proof.
+
+Consider the three pillars more carefully:
+
+- **Parsimony is a tie-breaker, not a trump card.** Occam's razor chooses between theories that explain the data *equally well*. It cannot be used to dismiss data a theory fails to explain. Copernicus's early model was *less* parsimonious than Ptolemy's (it still needed epicycles); the evidence carried it anyway. Simplicity decides ties; it does not override observations. **(framework-internal reasoning)**
+- **Correlation is not identity.** That brain function is *necessary* for normal mental function is well established. That brain states are *sufficient for* — or *identical to* — conscious experience is a separate claim that the correlation alone cannot establish. X reliably accompanying Y does not show X *is* Y. **(framework-internal)**
+- **The hard problem remains open.** Even a complete neuroscience would explain which information is processed, integrated, and reported. It would not, on its own terms, explain why any of that processing is *accompanied by felt experience* rather than going on "in the dark." This is David Chalmers's hard problem, and it is a genuine open question, not a settled one. **(open)**
+
+There is a sharper structural point. Physicalism advances a *universal negative*: there are no non-physical features of reality, anywhere, ever. Universal negatives are the most expensive claims to defend, because a single genuine counterexample sinks them. So the honest scorecard is symmetry: hold physicalism to the same standard of positive evidence it demands of its rivals. When you do, the most confident reading of physics turns out to be conspicuously incomplete — the measurement problem in quantum mechanics is a century old and unresolved, and dark matter and dark energy together make up roughly 95% of the universe's mass-energy while remaining unexplained by current theory. **(verified that these are open problems; speculative to read them as *support* for any non-physicalist alternative.)**
+
+> **Key insight:** "Physical methods explain physical things" is true and important. "Therefore everything is physical" is a leap — a metaphysical bet wearing the lab coat of a neutral default.
+
+#### Where TI Sigma actually lands: monism, but not *matter*-monism
+
+It would be easy to misread this chapter as arguing for dualism — mind plus matter, two substances. It does not. TI Sigma is also a **monism**; it simply nominates a different single fundamental.
+
+The framework's candidate principle **TOF-1 (Tralse-Only Fundamentality)** holds that exactly one thing is fundamental: the **Tralse Soup** — the structured, not-yet-resolved field of possibility out of which determinate things crystallize. Matter is not the floor; it is a derivative. **(framework-internal; TOF-1 is a candidate, not ratified.)** This pairs with **TRG-1 (Tralse-Reality Grounding)**: reality's ground state is not "True" but *tralse-real* — real, yet not crisply, classically true — and with **RTI-1 (Residual Tralse Indeterminacy)**: every law only *leans* toward truth, leaving a permanent, vanishingly rare residue of law-errancy. **(all candidate/framework-internal.)**
+
+So the disagreement with physicalism is not "matter plus a ghost." It is "matter is real but not *bedrock*; the bedrock is indeterminate structure, and consciousness is the apparent bedrock that is itself a Tralse-Soup derivative." This keeps Occam happy (still one fundamental) while declining to pre-commit to *which* one fundamental before the question is settled.
+
+### The case for skepticism (steel-manned)
+
+Skepticism, too, has earned its prestige.
+
+- The graveyard of human belief is full of confident nonsense — bloodletting, phrenology, perpetual-motion machines. Demanding evidence is how we stopped paying for those.
+- "Extraordinary claims require extraordinary evidence" (Sagan, echoing Hume) is good hygiene: the cost of a false positive in medicine, finance, or public policy can be enormous.
+- Withholding judgment under genuine uncertainty is honest. The careful doubter who says "I'm not yet convinced" is doing exactly what intellectual responsibility requires.
+
+All true. The framework keeps this. Validation is non-negotiable; the chapters on real work and on objections lean hard on it.
+
+### The reply: selective doubt is a position, not a method
+
+The trouble is not skepticism but its *selective* application — what the framework calls **skepticism-hypocrisy**. A genuine method is applied uniformly. A position is applied where convenient. Watch where the doubt goes and where it mysteriously stops.
+
+The committed skeptic demands evidence for every first-order claim ("this works," "this is true") while exempting their own *second-order* commitments from the same demand:
+
+- "Evidence is the only path to knowledge."
+- "Withholding belief is always safer than asserting it."
+- "Confidence held before public argument is irrational."
+
+Each of these is itself a substantive claim about how minds and inquiry work — and each is typically held *without* the evidence the skeptic requires of everyone else. The doubter who says "I just follow the evidence" is making a confident assertion about the structure of knowledge that they never submit to their own tribunal.
+
+There is a clean reductio here. If avoiding error were the supreme epistemic virtue and non-belief the safest posture, then the perfect epistemic agent would be **a rock**. A rock has never been wrong, never held an unjustified belief, never overreached. It has achieved total freedom from epistemic risk — by achieving total epistemic emptiness. The lesson: epistemic value lives in the *pursuit of truth*, which necessarily risks error, not in the mere avoidance of being wrong.
+
+> **Key insight:** "Be more skeptical" is not automatically "be more rational." Doubt applied to others' claims and never to one's own foundations is just conformity wearing the costume of rigor.
+
+The framework's positive move is to dissolve the binary that creates the hypocrisy. In ordinary either/or thinking you must *choose*: certainty or doubt, conviction or humility. That forced choice is exactly what traps the skeptic into being *certain about uncertainty*. TI Sigma's tralse epistemology lets both coexist — a claim can be held with working conviction *and* with genuine openness to revision. That is not fence-sitting; it is the difference between a hypothesis you act on and a hypothesis you stop testing. The **Authority Axis (AA)** makes this explicit: how much you *act* on a claim is a separate dial from how *true* you take it to be, applied symmetrically to your own beliefs and to others'.
+
+### The case for Bayesianism (steel-manned)
+
+Bayesianism is the most sophisticated of the three, and the framework concedes the most to it.
+
+- Bayes' theorem is **mathematically valid**. Full stop. **(verified)**
+- It cured real diseases of reasoning: it makes the base-rate fallacy precise, it forces you to ask "how likely is this evidence *if I'm wrong*?", and it explains why a positive result on a rare-disease test can still mean you probably don't have the disease.
+- As a model of *updating under well-defined uncertainty* — with known reference classes and repeatable trials — it is excellent, and the framework uses it there without apology.
+
+The dispute is narrow and specific: not that Bayes' theorem is false, but that Bayesianism is **complete** — that *all* rational belief reduces to numbers in [0,1] updated by the rule.
+
+### The reply: the rule cannot supply its own inputs
+
+Three problems, in plain language.
+
+**1. Where do the priors come from?** Bayes' theorem tells you how to *update* a prior, never how to *set* one. For genuinely novel questions there is often no valid base rate at all. What is the prior probability that a specific unprecedented invention succeeds, or that a specific paradigm gets overturned? There is no stable reference class to count. The "subjective Bayesian" answer — "use your personal credence" — is honest, but notice what it concedes: the input is *intuition*, renamed. Bayesianism thus quietly *requires* the very intuitive judgment (the I in GILE) it often claims to replace. **(framework-internal)**
+
+**2. Strong priors can make evidence nearly irrelevant.** When a prior is set very low, even near-perfect evidence barely moves the posterior. Take a claim assigned prior 0.001, then observe evidence with 99% sensitivity and 95% specificity. Bayes returns a posterior of roughly **1.9%** — still "very unlikely." This is the formal engine behind "extraordinary claims require extraordinary evidence": set the prior low enough and *no* feasible evidence is ever extraordinary enough. In a research community where training and incentives push the prior on the reigning paradigm toward ~0.999, anomalies get rationally dismissed for decades. That is not a bug in any individual's arithmetic; it is the correct application of strong priors — which is precisely the worry. **(verified as a property of the arithmetic; the historical reading is framework-internal.)**
+
+**3. It cannot represent genuine indeterminacy.** Bayesian probability is built so that P(H) and P(¬H) sum to 1. But some propositions are not "probably true to degree p" — they are *structurally* between, or true under one carving and false under another. "Free will exists" is true under compatibilism and false under hard determinism; that is a conceptual fork, not a frequency. Collapsing it into a single number ("0.6") throws away the information about *why* it is unsettled. The framework's **base-4 labels** (True, False, **Indeterminate**, Meta-Indeterminate) and the **Permissibility Distribution (PD)** keep that information: a genuinely 50/50 proposition is labeled *Indeterminate* — a positive logical state — rather than frozen at a fictitious 0.5. And a malformed proposition is screened out as **Meta-Indeterminate** by Myrion Resolution rather than smuggled in with a made-up prior. **(framework-internal.)**
+
+There is even a self-reference twist. Bayesianism claims that rational agents *should* adopt beliefs by Bayesian updating. But nobody adopted Bayesianism *by* a Bayesian calculation — Bayes, Price, and Laplace reached it by mathematical insight, and modern Bayesians adopt it because they find it compelling. The foundation is not laid by its own method. That does not make the theorem false; it shows the *philosophy* built on it cannot be the whole story of rationality.
+
+> **Key insight:** Use Bayes' theorem wherever you have honest numbers — it is a genuine tool. Just don't mistake the calculator for the whole of reason. The hard parts (which hypotheses to consider, what counts as evidence, when "we don't know yet" beats "probably false") happen *before* the arithmetic starts.
+
+### A note on staying honest while criticizing
+
+It would be easy, having dismantled three giants, to overclaim a victory. The framework does not. Physicalism is the most successful research program in history and TI Sigma keeps almost all of its results; the quarrel is only about whether matter is *bedrock*. Skepticism's demand for validation is retained and even strengthened. Bayes' theorem is true and remains in the toolkit. What the chapter rejects is the *imperialism* of each — the move from "this is powerful in its domain" to "this is the whole of reality, rigor, or reason." And the framework's own replacements (TOF-1, the PD, LCC as a coherence measure rather than a credence) are flagged honestly as candidate or framework-internal, not as proven. **(open)**
+
+### In one paragraph
+
+Physicalism, doctrinaire skepticism, and naive Bayesianism each present themselves as the neutral, assumption-free default, and each is in fact a strong, contestable position. Physicalism earns its authority in the physical domain but illicitly extends "physical methods explain physical things" into "everything is physical," a universal-negative claim it cannot fund; TI Sigma answers with a different monism (TOF-1: the indeterminate Tralse Soup, not matter, is fundamental), not with dualism. Doctrinaire skepticism is right that validation matters but smuggles in unexamined certainties about doubt itself — selective skepticism is a position, not a method, and taken to its limit makes a rock the ideal knower. Naive Bayesianism rests on a valid theorem but cannot supply its own priors, lets strong priors swamp good evidence, and cannot represent genuine indeterminacy, which the framework's Indeterminate label and Permissibility Distribution preserve. Steel-manned and answered fairly, all three keep their real strengths and lose only their overreach.
