@@ -671,3 +671,9 @@ id = "wvy4H_ngLxCdAD0tumUiz"
 uri = "file://papers/TI_SIGMA_CORPUS_COMPLETE_OVERVIEW_2026-06-16.md"
 type = "text"
 title = "TI Sigma Corpus — Complete Overview (Theories, Concepts & Abbreviations)"
+
+[[outputs]]
+id = "VlV26ZASV8qgpdn3NNEZT"
+uri = "file://papers/TI_SIGMA_FOR_EVERYONE_V2_2026-06-22.pdf"
+type = "pdf"
+title = "TI Sigma For Everyone — Version 2 (PDF)"

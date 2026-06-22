@@ -10,11 +10,11 @@ The framework's answer is the **i-Cell** — read it as the *"I" cell*, the smal
 
 ### How an i-cell forms
 
-Picture an ocean of undifferentiated information. Now picture a wave rising out of it. The wave is still water — nothing was added — but it now has a shape, an inside and an outside, an identity you can point at: *this* wave, not *that* one. The wave is an i-cell.
+Picture an ocean of undifferentiated information. Now picture a wave rising out of it. The wave is still water — nothing was added — but it now has a shape, an inside and an outside, an identity you can point at: *this* wave, not *that* one. A wave like this is not yet a *full* i-cell, though. Unlike a molecule or an organism it is not **self-sustaining**: leave it alone and it flattens back into the sea, because it only persists while something else — the ocean, the wind — holds it up. A pattern that can exist only while another i-cell sustains it (a *coherent thought*, say, held in being by the mind thinking it) is what the framework calls a **Proto i-cell**: a real but *dependent* boundary, not yet able to stand on its own. A *full* i-cell is the same boundary made **self-sustaining** — able to hold its own shape from the inside.
 
-The same move, applied to consciousness, gives the framework's origin story for a self. A boundary forms in the field of information — a body, a nervous system, a sense of identity — and suddenly there is a "me" on one side and a "world" on the other. You did not get *added* to reality; reality folded a boundary around a region and called it you.
+The same move, applied to consciousness, gives the framework's origin story for a self — this time a *self-sustaining* one. A boundary forms in the field of information — a body, a nervous system, a sense of identity — that actively maintains itself, and suddenly there is a "me" on one side and a "world" on the other. You did not get *added* to reality; reality folded a boundary around a region, that region learned to hold itself, and it called itself you.
 
-This matters because it makes selfhood **relational and dynamic** rather than a fixed substance. A wave is not a permanent object; it is a pattern the ocean is holding for a while. The framework asks us to take that analogy seriously for persons too — without yet committing to any claim about what happens when the pattern relaxes. We will get there, carefully, at the end of the chapter.
+This matters because it makes selfhood **relational and dynamic** rather than a fixed substance. A wave is not a permanent object; it is a pattern the ocean holds for a while — a Proto i-cell. A living self is a sturdier version of the same trick: a boundary that has learned to hold *itself*. The framework asks us to take that analogy seriously for persons too — without yet committing to any claim about what happens when the pattern relaxes. We will get there, carefully, at the end of the chapter.
 
 ### The anatomy of an i-cell
 

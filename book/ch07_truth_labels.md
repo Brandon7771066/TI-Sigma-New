@@ -22,19 +22,19 @@ Chapter 8 walks a single proposition through these gates in detail. Here we just
 
 ### N/A — the question that was never a question
 
-Start with the label that is *not* on the spectrum. **N/A ("Not Applicable")** flags a string of words that looks grammatical but asks nothing truth-evaluable.
+Start with the label that sits **farthest out** on the spectrum. **N/A ("Not Applicable")** flags a real, well-formed question that a given mind simply *lacks the data to settle* — undetermined, at least for that i-cell at that time, and regardless of tense (the answer may lie in the past, present, or future).
 
-- "Is the number seven jealous?"
-- "What colour is Tuesday?"
-- "Is *justice* heavier than *envy*?"
+- "How many grains of sand were on this stretch of beach at dawn on this exact day in 1600?"
+- "Is there a planet circling that particular faint star?" — *asked before anyone has looked.*
+- "What did my great-great-grandmother dream the night before her wedding?"
 
-None of these are *unknown* answers waiting to be found. They are **category errors**: there is no fact of the matter, not even a hidden one. The framework's ruling (NAO-1, the N/A Off-Spectrum ruling) puts this sharply: **N/A is necessarily off the truth spectrum** *(framework-internal)*. It is not a shy fifth value hiding among the others; it is exterior to the whole apparatus.
+Each of these has a perfectly real fact of the matter; it is just out of reach for this observer, now. That is what makes N/A different from nonsense (the next screen) and from a genuine, *stable* middle (Indeterminate, below). The framework's ruling here, refined from earlier drafts, is precise: **N/A is off the real true/false line, but not off the map.** It sits far out on the spectrum's *imaginary* axis — in what the framework calls the **hyperimaginary** region — fully *located*, just beyond present data *(framework-internal)*. New data can, in principle, pull such a question back toward a verdict.
 
-There is a precise analogy from mathematics that the framework leans on. Think of the truth spectrum as the complex plane. Ordinary true-and-false claims live on the familiar number line; the more exotic states (which we'll meet below) live out along the imaginary axis — strange, but still genuine *points* you can locate. **N/A is like "1 ÷ 0": not a far-flung point but no point at all** — *undefined*. The imaginary number *i* was once scandalous, yet it is fully defined and locatable. "Undefined" is more radical: it left the plane entirely.
+There is a clean analogy from mathematics. Picture the truth spectrum as the complex plane: ordinary true-and-false claims live on the familiar number line, and the more exotic but still genuine states live out along the imaginary axis. **N/A is a point very far out on that imaginary axis** — a location you can name but cannot yet evaluate, like a large imaginary number. (The truly *undefined* case — "1 ÷ 0", a question whose own terms collapse — is *not* N/A; that is **Meta-Indeterminate**, which we meet next.)
 
-> **Key insight:** "We don't know yet" and "this isn't a real question" are completely different failures. The first is **Indeterminate** (a genuine answer is pending); the second is **N/A** (there was never an answer to pend). Collapsing the two is the single most common mistake people make about borderline claims.
+> **Key insight:** "I don't have the data to say" and "this isn't a coherent question" are completely different failures. The first is **N/A** (a real answer exists but is out of reach for this observer now); the second is **Meta-Indeterminate** (the question dismantles itself). Both differ again from **Indeterminate** — a claim that is fully answerable yet *stably* rests between the poles. Collapsing these three is the single most common mistake people make about borderline claims.
 
-We screen N/A *first* for a practical reason: there is no point running the rest of the machinery on a string that never entered the contest. If you would not bet on a coin flip that never happened, you should not assign a truth-value to a question that was never asked.
+We flag N/A early for a practical reason: a question you cannot currently settle for lack of data should be held *open, pending data*, not forced to a verdict the evidence cannot support. Marking it N/A keeps it honestly unresolved rather than falsely decided.
 
 ### Meta-Indeterminate (MI) — the nonsense screen
 
@@ -44,7 +44,7 @@ This is **Meta-Indeterminate (MI)**. Its definition is compact and worth stating
 
 > **MI(P) ⟺ τ(P) ∧ ¬τ(P)** — a proposition is Meta-Indeterminate when it both *is* and *is not* Tralse; it asserts and withdraws its own coherence in the same breath.
 
-In plainer terms: an MI statement contradicts the very feature that would let it be evaluated. The classic ancestors are the self-undermining sentences philosophers have chewed on for centuries — "This sentence is false," and similar knots that explode whichever value you try to give them. The framework's verdict is unsentimental: **MI statements are discarded as nonsense.** They are not borderline truths, not 50/50 cases, not "deep paradoxes" to be revered. They simply fail to admit truth-evaluation, so they are screened out before any verdict is attempted.
+In plainer terms: an MI statement contradicts the very feature that would let it be evaluated. The classic ancestors are the self-undermining sentences philosophers have chewed on for centuries — "This sentence is false," and similar knots that explode whichever value you try to give them. A second family belongs here too: **category errors** — *"Is the number seven jealous?", "What colour is Tuesday?", "Is justice heavier than envy?"* — where the subject's very identity leaves no room for the predicate, so the proposition's identity *self-implodes*. (Earlier drafts filed these under N/A; the framework now places them with MI, because the failure is *incoherence*, not *missing data*.) The framework's verdict is unsentimental: **MI statements are discarded as nonsense.** They are not borderline truths, not 50/50 cases, not "deep paradoxes" to be revered. They simply fail to admit truth-evaluation, so they are screened out before any verdict is attempted.
 
 A historical footnote for readers of older TI Sigma material: what earlier drafts called "Double Tralse" or "DT" was renamed corpus-wide to **MI** *(framework-internal)*. If you meet "DT" in an old paper, read "MI."
 
@@ -89,7 +89,7 @@ The discipline that keeps this from becoming a dodge is twofold. **For faithfuln
 
 A fair challenge: isn't five-plus-a-catalogue just arbitrary? The framework's answer is that each item earns its place by catching a failure the others cannot:
 
-- Drop **N/A** and category-errors smuggle themselves in as fake unknowns.
+- Drop **N/A** and genuine data-gaps get forced into false verdicts — questions answered that no one yet has the evidence to answer.
 - Drop **MI** and self-cancelling nonsense pollutes your real verdicts.
 - Drop **Indeterminate** and you are back in Chapter 1's two-box trap, lying about every genuinely balanced claim.
 - Drop the **Meta-Truths** and you cannot say "true but it doesn't matter" without inventing a confused new value.
@@ -98,4 +98,4 @@ None is redundant; none can absorb another without loss. That is the test a good
 
 ### In one paragraph
 
-TI Sigma replaces the true/false binary with a disciplined set: four base labels that live on the truth spectrum — **True, False, Indeterminate, and Meta-Indeterminate** — plus an **N/A** flag, screened first, for "questions" that were never truth-apt at all; together these are the five fundamental labels. The pipeline runs in order: screen out N/A (off-spectrum), screen out MI (self-cancelling nonsense, formally a claim that both is and isn't Tralse), then resolve survivors to True, False, or Indeterminate — where Indeterminate is a real, stable balance, not mere ignorance, and is told from MI by whether any leeway survives. On top of the base verdicts sits a separate catalogue of **Meta-Truths**, such as **Moot** ("true, but it doesn't matter here"), which modify a verdict rather than replace it, and the framework permits honest **hybrid** verdicts when a single label would lose information. Throughout, remember that **Tralse is a quality every coherent claim carries, not a label** — it is the grain of the wood, never one of the shapes cut from it.
+TI Sigma replaces the true/false binary with a disciplined set: four base labels that live on the truth spectrum — **True, False, Indeterminate, and Meta-Indeterminate** — plus an **N/A** flag for real questions a given mind lacks the data to settle — off the true/false line but located far out on the imaginary (*hyperimaginary*) axis, not off the map; together these are the five fundamental labels. The pipeline sets aside N/A (real but unanswerable-for-now, held open pending data) and screens out MI (self-cancelling nonsense *and* category errors, formally a claim that both is and isn't Tralse), then resolves the survivors to True, False, or Indeterminate — where Indeterminate is a real, stable balance, not mere ignorance, and is told from MI by whether any leeway survives. On top of the base verdicts sits a separate catalogue of **Meta-Truths**, such as **Moot** ("true, but it doesn't matter here"), which modify a verdict rather than replace it, and the framework permits honest **hybrid** verdicts when a single label would lose information. Throughout, remember that **Tralse is a quality every coherent claim carries, not a label** — it is the grain of the wood, never one of the shapes cut from it.
