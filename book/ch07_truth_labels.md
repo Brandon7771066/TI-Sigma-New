@@ -23,6 +23,23 @@ Two consequences follow at once, and both matter for the labels below:
 
 A one-line version, kept honest: **truth (τ) is the graded, context-indexed degree to which a proposition coheres with what exists, always carrying its irreducible Tralse-quality** — never a bare on/off, and never a perfect 1.0 (Chapter 6's 0.93 cap applies to truth too). The labels that follow are simply the disciplined way of *reporting* that graded reading when you finally have to act on it.
 
+### Truth in one sentence: the six clauses
+
+The framework also offers a compact, citable form of the same idea — its "truth in one sentence" definition **(framework-internal; Brandon Emerick, April 2026)**:
+
+> *Truth is a proper, relational, and fundamentally beautiful depiction of what exists as such, that can be mentally grasped at the present moment.*
+
+It reads like an aphorism, but every word is load-bearing. Six clauses each do a distinct job:
+
+1. **"Proper"** — the depiction must actually *fit* what it depicts; this is adequacy, not just any loose correspondence.
+2. **"Relational"** — truth is not a property a statement owns in isolation; it lives in the relationship between the depiction, the thing depicted, and a mind that grasps it.
+3. **"Fundamentally beautiful"** — beauty is built *into* truth, not added afterward. This is the framework's most distinctive claim about truth, and it is the same wager as Elegance in Chapter 5: at the deepest level, what is most true tends also to be most beautiful.
+4. **"Depiction of what exists as such"** — truth points at *existence*, at the thing's actual mode of being, not merely its surface appearance. (A later refinement widens this to allow faithful depictions of what does *not* exist — a true statement that something is absent — but the core idea is grounding in what is real **(framework-internal/refinement)**.)
+5. **"Can be mentally grasped"** — a truth must be receivable by *some* mind in principle. This is deliberately weaker than "already known": it admits truths no one has grasped yet, while refusing "truths" no mind could ever reach.
+6. **"At the present moment"** — truth is anchored in time. A truth about today's weather is not a truth about tomorrow's; the reading is taken *now*. This is the same time-indexing that makes τ a moment-by-moment quantity rather than an eternal stamp.
+
+Read together, the six clauses say truth is *fitting, relational, beautiful, existence-grounded, mind-graspable, and time-bound* — a far richer object than the on/off switch most of us were handed, and the reason the labels in this chapter come in five flavors rather than two.
+
 ### The five, in order of when you meet them
 
 The labels are not a flat list you choose from at random. They form a screening pipeline — a sequence of gates each statement passes through. The order matters, so here it is up front:

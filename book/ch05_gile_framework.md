@@ -35,6 +35,26 @@ The legacy word "Environment" is kept only as a **gloss** — a licensed shortha
 
 An everyday illustration: two people give the same correct directions. One says, "Go three blocks, turn left at the bakery, it's the blue door." The other delivers a five-minute monologue with three corrections and a digression about a one-way street. Same Goodness (you arrive either way), but very different Elegance. You *feel* the difference, and that feeling is the E-axis doing its work.
 
+### Formal definitions: each value in one sentence
+
+The framework offers a one-sentence canonical definition for each GILE value — short enough to memorize, precise enough to argue with **(framework-internal; Brandon Emerick, April 2026)**:
+
+- **Goodness** is *the Four C's* — Continuity, Coherence, Concreteness, and Consistency (unpacked just below). Rather than a list of approved things, Goodness is whatever survives all four tests at once.
+- **Intuition** is *the conscious experience of knowing something is correct.* Note the careful wording: it is the experience-*of*-knowing, not a guarantee of being right — which is exactly why intuition can be sincerely felt and still be wrong, and so must be trained.
+- **Love** is *a positive relational orientation toward yourself or others* — whether expressed through tangible action or through subjective experience. Action-love couples two people more strongly than feeling alone does, which is why "love in action" accomplishes more than good wishes (both are real; one is heavier).
+- **Elegance** is *aesthetic value, whether physical or abstract.* A serene meadow and Euler's identity (e^(iπ) + 1 = 0) qualify in the very same way; a cluttered room and a sloppy proof fail in the very same way. The unifying property is the beauty, not the material.
+
+### The Four C's of Goodness
+
+Goodness earns its own internal structure because it is the value most often accused of being circular — "good is just whatever I call good." The framework answers with four explicit criteria, the **Four C's**, and treats them not as a checklist of approved contents but as a *self-collapse test*: a candidate is good if it can survive all four pressures at once.
+
+- **Continuity** — the good persists under repeated honest inspection across time; it does not need ever-growing rationalization to survive. *(Fails: flash-in-the-pan or performative virtue.)*
+- **Coherence** — the good fits with one's other genuine commitments without contradiction. *(Fails: "be honest, except when it's inconvenient.")*
+- **Concreteness** — the good can be pointed at, instantiated, demonstrated in specific behavior. *(Fails: abstract platitudes no one can actually enact.)*
+- **Consistency** — the good applies equally to relevantly similar cases, in-group and out-group alike. *(Fails: special-pleading — one rule for "us," another for "them.")*
+
+The force of the test is that it is *multiplicative*: failing any single C collapses the whole score, and you cannot buy back a failed C by over-scoring another. Run the Four C's on genuine goods — honest gratitude, care for a child — and they hold up, often reading *truer* the harder you press. Run them on cruelty, exploitation, or bigotry and they fall apart by their own weight: the case demands more and more rationalization (Continuity fails), contradicts the holder's own stated values (Coherence fails), retreats into vague abstractions under scrutiny (Concreteness fails), or applies one standard to "us" and another to "them" (Consistency fails). Goodness, on this view, is not a list the framework hands you — it is the set of things that can *survive their own examination* **(framework-internal/preliminary)**.
+
 ### Why these four — and only these four?
 
 A fair challenge arrives immediately: why *these* four? Why not three, or seven? There are two honest answers — one from the social sciences, one from the natural sciences — plus a structural argument that ties them together. All three are offered openly: that GILE is genuinely *exhaustive* is a strong claim, and the framework holds it as a well-motivated conjecture, not a closed theorem **(framework-internal/open)**.

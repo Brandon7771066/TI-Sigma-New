@@ -1,25 +1,36 @@
 ---
-name: 64D GILE Matrix — name the 4 truth-axes per canon
-description: When writing about the 64D/32D GILE Matrix, the four "truth-axes" must match the canonical 4 Truth-Axes, not an intuitive re-split.
+name: 64D GILE Matrix — the three edges and the 4 Truth Axes
+description: When writing about the 64D/32D GILE Matrix, its three edges are GILE values / MR Truth Values / Truth Axes — the categorical MR labels are their OWN edge, NOT one of the truth-axes.
 ---
 
-The 64D GILE Matrix is canonically `4 GILE × 4 truth-axes × 4 truth-labels`
-(NA→MI to keep 4³=64). The **four truth-axes are the canonical set**: (1) the PD
-spectrum as ONE axis carrying both real (degree/coherence) and imaginary
-(modality) aspects, (2) the categorical MR truth-label axis, (3) τ/δ
-separability, (4) the Authority Axis.
+The 64D GILE Matrix is canonically a 4×4×4 cube with THREE DISTINCT edges
+(B61 "4 truth-axes × 4 truth-elements × 4 GILE-values"; PDR-1 "4 GILE × 4 axes ×
+4 labels, NA→MI"):
 
-**Why:** It is tempting (and a reader will phrase it as "axes such as AA and
-coherence") to split PD's coherence and modality into TWO separate axes and drop
-the categorical MR axis. That silently changes the canonical axis model and a
-code review will flag it as canon drift. PDR-1's "4 axes × 4 labels" wording
-invites this because the categorical axis and the label edge look redundant —
-but canon keeps them distinct (the existing Ch8 book text already says "crossing
-the GILE values against the truth-axes and labels").
+1. **GILE values** — Goodness, Intuition, Love, Elegance.
+2. **MR Truth Values** — True, False, Indeterminate, Meta-Indeterminate (the
+   off-spectrum N/A is FOLDED onto MI for the 4³ count; conceptually distinct).
+3. **The 4 Truth Axes** — the angles for *reading* a claim, EXCLUDING the
+   verdict it earns: (a) PD-degree (real part / coherence), (b) PD-modality
+   (imaginary part / kind-of-shortfall), (c) τ/δ separability, (d) Authority Axis.
 
-**How to apply:** Keep PD a single axis; present coherence/modality as its two
-aspects (you can still surface the word "coherence" for a lay reader). Do not
-promote them to standalone axes. The conceptual N/A↔MI point is separate and
-correct: they coincide mathematically (same hyperimaginary far end) but stay
-distinct — N/A is a real-but-unreachable answer that lacks a SPECIFIC value (a
-region, not a point), MI is genuine self-cancelling incoherence.
+**Why:** The categorical MR labels ARE edge 2 (MR Truth Values), so they must
+NOT also appear inside edge 3. Putting the categorical MR axis into edge 3
+duplicates edge 2 and is wrong. The three edges are GILE / MR Truth Values /
+Truth Axes, with the 4 Truth Axes distinct from the MR values.
+
+**Reconciliation with replit.md refinement #8 (do not "fix" this as drift):**
+The standalone "4 Truth-Axes" taxonomy folds PD into ONE axis and counts the
+categorical MR labels as the 4th axis ({PD, MR-labels, τ/δ, AA}). The MATRIX
+un-folds PD into its two aspects (degree + modality) precisely BECAUSE the
+categorical labels have moved to their own edge. Same four-ness, counted from a
+different seat — PD is still one spectrum (two coordinates, like one complex
+number = two reals). Both descriptions are the identical object; this is a
+canonical CLARIFICATION, not a redefinition or a count change (stays 79).
+
+**How to apply:** In matrix context, edge-3 axes = {PD-degree, PD-modality,
+τ/δ, AA}; never put the categorical MR-label axis in edge 3. In standalone
+axis-taxonomy context, the canonical list {PD (folded), MR-labels, τ/δ, AA} is
+correct. State the reconciliation explicitly when both appear. N/A↔MI: coincide
+mathematically (same hyperimaginary far end), stay conceptually distinct (N/A =
+real-but-unreachable, a region not a point; MI = self-cancelling incoherence).

@@ -461,6 +461,26 @@ The legacy word "Environment" is kept only as a **gloss** — a licensed shortha
 
 An everyday illustration: two people give the same correct directions. One says, "Go three blocks, turn left at the bakery, it's the blue door." The other delivers a five-minute monologue with three corrections and a digression about a one-way street. Same Goodness (you arrive either way), but very different Elegance. You *feel* the difference, and that feeling is the E-axis doing its work.
 
+### Formal definitions: each value in one sentence
+
+The framework offers a one-sentence canonical definition for each GILE value — short enough to memorize, precise enough to argue with **(framework-internal; Brandon Emerick, April 2026)**:
+
+- **Goodness** is *the Four C's* — Continuity, Coherence, Concreteness, and Consistency (unpacked just below). Rather than a list of approved things, Goodness is whatever survives all four tests at once.
+- **Intuition** is *the conscious experience of knowing something is correct.* Note the careful wording: it is the experience-*of*-knowing, not a guarantee of being right — which is exactly why intuition can be sincerely felt and still be wrong, and so must be trained.
+- **Love** is *a positive relational orientation toward yourself or others* — whether expressed through tangible action or through subjective experience. Action-love couples two people more strongly than feeling alone does, which is why "love in action" accomplishes more than good wishes (both are real; one is heavier).
+- **Elegance** is *aesthetic value, whether physical or abstract.* A serene meadow and Euler's identity (e^(iπ) + 1 = 0) qualify in the very same way; a cluttered room and a sloppy proof fail in the very same way. The unifying property is the beauty, not the material.
+
+### The Four C's of Goodness
+
+Goodness earns its own internal structure because it is the value most often accused of being circular — "good is just whatever I call good." The framework answers with four explicit criteria, the **Four C's**, and treats them not as a checklist of approved contents but as a *self-collapse test*: a candidate is good if it can survive all four pressures at once.
+
+- **Continuity** — the good persists under repeated honest inspection across time; it does not need ever-growing rationalization to survive. *(Fails: flash-in-the-pan or performative virtue.)*
+- **Coherence** — the good fits with one's other genuine commitments without contradiction. *(Fails: "be honest, except when it's inconvenient.")*
+- **Concreteness** — the good can be pointed at, instantiated, demonstrated in specific behavior. *(Fails: abstract platitudes no one can actually enact.)*
+- **Consistency** — the good applies equally to relevantly similar cases, in-group and out-group alike. *(Fails: special-pleading — one rule for "us," another for "them.")*
+
+The force of the test is that it is *multiplicative*: failing any single C collapses the whole score, and you cannot buy back a failed C by over-scoring another. Run the Four C's on genuine goods — honest gratitude, care for a child — and they hold up, often reading *truer* the harder you press. Run them on cruelty, exploitation, or bigotry and they fall apart by their own weight: the case demands more and more rationalization (Continuity fails), contradicts the holder's own stated values (Coherence fails), retreats into vague abstractions under scrutiny (Concreteness fails), or applies one standard to "us" and another to "them" (Consistency fails). Goodness, on this view, is not a list the framework hands you — it is the set of things that can *survive their own examination* **(framework-internal/preliminary)**.
+
 ### Why these four — and only these four?
 
 A fair challenge arrives immediately: why *these* four? Why not three, or seven? There are two honest answers — one from the social sciences, one from the natural sciences — plus a structural argument that ties them together. All three are offered openly: that GILE is genuinely *exhaustive* is a strong claim, and the framework holds it as a well-motivated conjecture, not a closed theorem **(framework-internal/open)**.
@@ -625,6 +645,23 @@ Two consequences follow at once, and both matter for the labels below:
 
 A one-line version, kept honest: **truth (τ) is the graded, context-indexed degree to which a proposition coheres with what exists, always carrying its irreducible Tralse-quality** — never a bare on/off, and never a perfect 1.0 (Chapter 6's 0.93 cap applies to truth too). The labels that follow are simply the disciplined way of *reporting* that graded reading when you finally have to act on it.
 
+### Truth in one sentence: the six clauses
+
+The framework also offers a compact, citable form of the same idea — its "truth in one sentence" definition **(framework-internal; Brandon Emerick, April 2026)**:
+
+> *Truth is a proper, relational, and fundamentally beautiful depiction of what exists as such, that can be mentally grasped at the present moment.*
+
+It reads like an aphorism, but every word is load-bearing. Six clauses each do a distinct job:
+
+1. **"Proper"** — the depiction must actually *fit* what it depicts; this is adequacy, not just any loose correspondence.
+2. **"Relational"** — truth is not a property a statement owns in isolation; it lives in the relationship between the depiction, the thing depicted, and a mind that grasps it.
+3. **"Fundamentally beautiful"** — beauty is built *into* truth, not added afterward. This is the framework's most distinctive claim about truth, and it is the same wager as Elegance in Chapter 5: at the deepest level, what is most true tends also to be most beautiful.
+4. **"Depiction of what exists as such"** — truth points at *existence*, at the thing's actual mode of being, not merely its surface appearance. (A later refinement widens this to allow faithful depictions of what does *not* exist — a true statement that something is absent — but the core idea is grounding in what is real **(framework-internal/refinement)**.)
+5. **"Can be mentally grasped"** — a truth must be receivable by *some* mind in principle. This is deliberately weaker than "already known": it admits truths no one has grasped yet, while refusing "truths" no mind could ever reach.
+6. **"At the present moment"** — truth is anchored in time. A truth about today's weather is not a truth about tomorrow's; the reading is taken *now*. This is the same time-indexing that makes τ a moment-by-moment quantity rather than an eternal stamp.
+
+Read together, the six clauses say truth is *fitting, relational, beautiful, existence-grounded, mind-graspable, and time-bound* — a far richer object than the on/off switch most of us were handed, and the reason the labels in this chapter come in five flavors rather than two.
+
 ### The five, in order of when you meet them
 
 The labels are not a flat list you choose from at random. They form a screening pipeline — a sequence of gates each statement passes through. The order matters, so here it is up front:
@@ -764,9 +801,11 @@ The practical takeaway is unglamorous and exactly the framework's style: **use C
 
 The fourth representation deserves its own look, because it is where the framework's bookkeeping all comes together. The **64D GILE Matrix** is not a single dial but a *cube* — a 4×4×4 ledger that records a claim's full evaluative state. Its three edges are:
 
-- **The four GILE elements** — Goodness, Intuition, Love, Elegance (Chapter 5). *Which value is being read.*
-- **The four truth-axes** — the framework's four canonical angles on a claim: the **PD spectrum** (its degree of trueness, or *coherence*, together with the *modality* of its shortfall — the real and imaginary aspects of this single axis), the **categorical MR axis** (the base-four verdict the claim resolves to), **τ/δ separability** (claim-truth versus how much the claim is actually instantiated in existence), and the **Authority Axis** (how the credibility of the source weights the reading). *From which angle the value is read.*
-- **The four truth-labels** — True, False, Indeterminate, Meta-Indeterminate (Chapter 7). *Which verdict that reading earns.*
+- **The four GILE values** — Goodness, Intuition, Love, Elegance (Chapter 5). *Which value is being read.*
+- **The four MR truth-values** — True, False, and Indeterminate, plus Meta-Indeterminate, onto which the off-spectrum N/A is *folded* for counting (Chapter 7). *Which verdict the reading earns.*
+- **The four truth-axes** — the framework's four *angles* for reading a claim, kept deliberately distinct from the verdict it earns: **PD-degree** (how true — the real part of the Permissibility Distribution, its *coherence*), **PD-modality** (the *kind* of shortfall — the imaginary part of that same spectrum), **τ/δ separability** (claim-truth versus how much the claim is actually instantiated in existence), and the **Authority Axis** (how the credibility of the source weights the reading). *From which angle the value is read.*
+
+A word of canonical clarity, because this is exactly where the bookkeeping trips careful readers up. Elsewhere the framework lists "the four truth-axes" and counts the *categorical verdict* (the MR truth-values) as one of them, alongside a single, folded PD spectrum. That is the **same four-ness counted from a different seat**. Inside the matrix the verdict is promoted to its **own edge** — the second bullet above — so to keep the third edge at four, the PD spectrum is shown as its **two aspects** (degree and modality) rather than as one folded axis. Nothing is added or lost: the categorical verdict is always present (here as an edge of its own), and PD is always one spectrum carrying two aspects (here written out as two coordinates, the way a single complex number is two real numbers). The standalone list keeps PD folded and counts the verdict *as* an axis; the matrix unfolds PD and gives the verdict its own edge. Both describe the identical object **(framework-internal; canonical clarification)**.
 
 Four by four by four is sixty-four, which is where the name comes from (the 32D variant is the same ledger collapsed to a single meta-level). The matrix is a **state-carrier, not a classifier**: you do not consult it to *decide* a label — Myrion Resolution does that — you use it to *store the full context* once labels are known, the way a cockpit records every instrument reading rather than just the autopilot's final command.
 
