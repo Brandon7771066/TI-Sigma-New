@@ -31,3 +31,20 @@ outlook). Two non-obvious guards MUST stay attached or the argument breaks #69:
    **How to apply:** describe replications generically (don't invent author names/DOIs);
    keep the "(verified studies exist; replication contested; causal claim preliminary)"
    tag.
+
+3. **The decision-theoretic ("for all practical purposes") capstone.** The corpus
+   extends the pragmatic-cost argument into a precautionary / expected-value claim:
+   non-physical phenomena sit at *Indeterminate* (not crisply False), so P(physicalism
+   wrong) is not zero; under asymmetric stakes the practical decision to ADOPT
+   physicalism-as-a-worldview is a losing bet even with the truth question open. Rule:
+   adopt a totalizing worldview only if (1) near-zero chance of being wrong AND (2) a
+   workable way to hold it without harming the holder — physicalism meets neither.
+   **Why:** this is the user's intended framing and is legitimate *only* as a decision
+   under uncertainty, NOT a truth claim — keep it firewalled from the appeal-to-
+   consequences guard above (truth-subdual ≠ practical-subdual; method survives,
+   worldview is subdued).
+   **How to apply:** (a) state the 5% / cost magnitudes are ILLUSTRATIVE, not measured;
+   (b) it is a cousin of Pascal's Wager — pre-empt the many-beliefs objection by noting
+   the cheap alternative is mere *withholding* (stay Indeterminate), not a rival creed,
+   so it doesn't license arbitrary beliefs; (c) the social/economic cost of mass-
+   pathologizing is a QUALITATIVE order-of-magnitude argument — claim no figure.
