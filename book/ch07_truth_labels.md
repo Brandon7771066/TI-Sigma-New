@@ -10,6 +10,19 @@ Before we begin, one reminder from Chapter 2, because nearly every confusion in 
 
 > **Key insight:** Tralse is the *grain of the wood*; the truth labels are the *shapes you cut from it*. Asking "is it true, false, indeterminate, or tralse?" is a category mistake — like asking whether a chair is wooden, plastic, metal, or *grainy*.
 
+### A formal definition of truth
+
+Before sorting claims into labels, it helps to say — carefully — what the framework even *means* by "truth," because the definition is not the textbook one. In the correspondence picture most of us inherited, a statement is true when it matches the world, and "true" is a switch: on or off. TI Sigma keeps the matching idea and throws away the switch.
+
+Formally, the framework treats truth as a **graded, time-indexed quantity** rather than a binary one. Write **τ(P)** (Greek *tau*) for the *degree of trueness* a proposition P carries — how far its content coheres with what actually is, read at a particular moment. Truth in this sense is not something a sentence simply has or lacks; it is a *reading on a spectrum* — the very dial Chapter 8 will call the Permissibility Distribution. A claim's full truth-state also has a second coordinate: *how* it falls short of being simply-true (its modality), which is why the faithful representation of τ is complex-valued, not a lone number **(framework-internal)**.
+
+Two consequences follow at once, and both matter for the labels below:
+
+- **Truth is indexed to a context.** "It is raining" is not true-or-false in the abstract; it has a τ-value *here, now, for this asker*. The framework defines truth as the actual tralse-state of what exists, indexed to its temporal (and observer) context — which is exactly why **N/A** ("no answer reachable for this mind now") is a real category rather than a dodge.
+- **Truth is what resolution *approaches*, not where it starts.** The procedure that takes a messy proposition and improves its coherence until a verdict is earned is **Myrion Resolution** (Chapter 8). On this view truth is the limit resolution drives toward — maximal coherence given the context — and the labels in this chapter are the discrete *verdicts* it hands back.
+
+A one-line version, kept honest: **truth (τ) is the graded, context-indexed degree to which a proposition coheres with what exists, always carrying its irreducible Tralse-quality** — never a bare on/off, and never a perfect 1.0 (Chapter 6's 0.93 cap applies to truth too). The labels that follow are simply the disciplined way of *reporting* that graded reading when you finally have to act on it.
+
 ### The five, in order of when you meet them
 
 The labels are not a flat list you choose from at random. They form a screening pipeline — a sequence of gates each statement passes through. The order matters, so here it is up front:

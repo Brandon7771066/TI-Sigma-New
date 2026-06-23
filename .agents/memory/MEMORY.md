@@ -10,4 +10,5 @@
 - [Retrieval-operator benchmark matched-control](retrieval-benchmark-matched-baseline.md) — fancy operators only beat a SCALAR baseline; a feature-matched nearest-centroid (P0b) erases the gain; always add matched control + train-only cluster targets + per-block acausal filtering.
 - [IBL Brain Wide Map on DANDI](ibl-on-dandi-integration.md) — IBL mouse Neuropixels streams via DANDI:000409 (no ibllib needed); paired processed(trials/units)+raw(LF) NWB; M_r ported = reachability-only.
 - [Proof status & revenue overclaim hazard](proof-status-and-revenue-claims.md) — corpus has only elementary proofs (no Millennium closed) and the business docs overclaim; lead honest, gate trading claims.
+- [64D GILE Matrix axes](gile-64d-matrix-axes.md) — name the matrix's 4 truth-axes per canon (PD single axis w/ real+imag, categorical MR, τ/δ, AA); don't split PD's coherence/modality into 2 axes (code-review canon drift).
 - [Myrion term overload](myrion-term-overload.md) — "Myrion" = 3 distinct senses: balance-target (Truth↔Existence, EVD-1) vs Myrion Resolution (labelling op) vs Grand Myrion (speculative cosmology); never conflate.

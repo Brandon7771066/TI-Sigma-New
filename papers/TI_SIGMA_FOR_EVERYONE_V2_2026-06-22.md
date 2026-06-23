@@ -461,6 +461,16 @@ The legacy word "Environment" is kept only as a **gloss** — a licensed shortha
 
 An everyday illustration: two people give the same correct directions. One says, "Go three blocks, turn left at the bakery, it's the blue door." The other delivers a five-minute monologue with three corrections and a digression about a one-way street. Same Goodness (you arrive either way), but very different Elegance. You *feel* the difference, and that feeling is the E-axis doing its work.
 
+### Why these four — and only these four?
+
+A fair challenge arrives immediately: why *these* four? Why not three, or seven? There are two honest answers — one from the social sciences, one from the natural sciences — plus a structural argument that ties them together. All three are offered openly: that GILE is genuinely *exhaustive* is a strong claim, and the framework holds it as a well-motivated conjecture, not a closed theorem **(framework-internal/open)**.
+
+**The social-science reading: four things researchers already measure.** Independent research traditions, none of them TI Sigma, keep rediscovering the same small set of roughly-orthogonal dimensions whenever they ask what makes an act, a mind, or a life go well. Benefit-and-harm by outcome — the territory of welfare economics and consequentialist ethics — is **Goodness**. A calibrated inner signal distinct from raw IQ — the "rationality is not intelligence" literature, studies of expert intuition — is **Intuition**. Connection versus isolation — attachment research, and the finding that the quality of close relationships is among the single largest long-run correlates of well-being — is **Love**. The human pull toward parsimony and clean form — the aesthetics-of-simplicity and "cognitive fluency" results — is **Elegance**. The framework's own internal factor analyses recover four factors that load cleanly, with no cross-loading large enough (>0.40) to suggest two of them are secretly one **(framework-internal/preliminary)**. For a lay reader the statistic matters less than the pattern: serious work outside the framework keeps landing on four different things — benefit, signal, connection, form.
+
+**The natural-science reading: four kinds of constraint that do not reduce to each other.** Look at the axes as *types of constraint a system can satisfy or violate* and they come apart cleanly. Goodness is about **causal outcome** — what a process does to the world. Intuition is about **information** — how well an agent's internal state tracks what is the case. Love is about **coupling** — how strongly distinct parts are joined into a larger whole. Elegance is about **structure** — the order and economy of the form itself. Outcome, information, coupling, structure are not interchangeable, and none derives from another: a system can be tightly coupled yet destructive, or beautifully structured yet uninformative. The framework's more speculative program tries to anchor each axis to a distinct fundamental constant of physics, but that mapping is *conjectural*, flagged as such, and is emphatically **not** the load-bearing reason to accept the tetrad **(framework-internal/speculative)**. The durable, sturdier claim is the weaker one: these are four different *categories* of fact, so collapsing them loses information.
+
+**The exhaustiveness test: try to add a fifth.** The strongest case for "four and only four" is the same test Chapter 7 runs on the truth labels — each axis must catch something no other can, and any proposed fifth must either collapse into one of the four or turn out to belong to a *different pillar entirely*. The usual candidates do exactly that. *Truth* is not a fifth GILE value; it is what the whole GILE composite is *measuring* (Chapter 6). *Power, intensity, how-much-there-is* is not a value at all; it is the **existence** pillar, HEM, which the rename of E to Elegance deliberately moved out of GILE. *Meaning* and *freedom*, pushed on, dissolve into combinations — meaning as Love-and-Goodness sustained over time, freedom as the reserved autonomy of the existence pillar. Each apparent fifth axis either melts back into the four or reveals itself as the existence pillar wearing a value's clothing. That is the framework's case that GILE is not an arbitrary list but a complete one — held, in keeping with this book's discipline, as a strong and falsifiable conjecture rather than a finished proof.
+
 ### The scale: why (−3, +2)?
 
 Each dimension is scored on a deliberately **asymmetric scale from −3 to +2**, and the composite is the average:
@@ -602,6 +612,19 @@ Before we begin, one reminder from Chapter 2, because nearly every confusion in 
 
 > **Key insight:** Tralse is the *grain of the wood*; the truth labels are the *shapes you cut from it*. Asking "is it true, false, indeterminate, or tralse?" is a category mistake — like asking whether a chair is wooden, plastic, metal, or *grainy*.
 
+### A formal definition of truth
+
+Before sorting claims into labels, it helps to say — carefully — what the framework even *means* by "truth," because the definition is not the textbook one. In the correspondence picture most of us inherited, a statement is true when it matches the world, and "true" is a switch: on or off. TI Sigma keeps the matching idea and throws away the switch.
+
+Formally, the framework treats truth as a **graded, time-indexed quantity** rather than a binary one. Write **τ(P)** (Greek *tau*) for the *degree of trueness* a proposition P carries — how far its content coheres with what actually is, read at a particular moment. Truth in this sense is not something a sentence simply has or lacks; it is a *reading on a spectrum* — the very dial Chapter 8 will call the Permissibility Distribution. A claim's full truth-state also has a second coordinate: *how* it falls short of being simply-true (its modality), which is why the faithful representation of τ is complex-valued, not a lone number **(framework-internal)**.
+
+Two consequences follow at once, and both matter for the labels below:
+
+- **Truth is indexed to a context.** "It is raining" is not true-or-false in the abstract; it has a τ-value *here, now, for this asker*. The framework defines truth as the actual tralse-state of what exists, indexed to its temporal (and observer) context — which is exactly why **N/A** ("no answer reachable for this mind now") is a real category rather than a dodge.
+- **Truth is what resolution *approaches*, not where it starts.** The procedure that takes a messy proposition and improves its coherence until a verdict is earned is **Myrion Resolution** (Chapter 8). On this view truth is the limit resolution drives toward — maximal coherence given the context — and the labels in this chapter are the discrete *verdicts* it hands back.
+
+A one-line version, kept honest: **truth (τ) is the graded, context-indexed degree to which a proposition coheres with what exists, always carrying its irreducible Tralse-quality** — never a bare on/off, and never a perfect 1.0 (Chapter 6's 0.93 cap applies to truth too). The labels that follow are simply the disciplined way of *reporting* that graded reading when you finally have to act on it.
+
 ### The five, in order of when you meet them
 
 The labels are not a flat list you choose from at random. They form a screening pipeline — a sequence of gates each statement passes through. The order matters, so here it is up front:
@@ -736,6 +759,18 @@ What did the comparison actually show? Using 500 gold-standard propositions each
 > **Key insight:** The single most valuable upgrade to a truth representation was not more dimensions or fancier geometry — it was simply **giving "this was never a real question" its own slot**. Honesty about non-questions buys more accuracy than any amount of additional machinery.
 
 The practical takeaway is unglamorous and exactly the framework's style: **use Complex PD for everyday labeling, the 64D matrix when you need to carry the full GILE state, and the Crystal/TECC only when you need maximum robustness** — and do not pretend the simplest representation is free of cost.
+
+### Inside the 64D GILE Matrix: a 4×4×4 ledger
+
+The fourth representation deserves its own look, because it is where the framework's bookkeeping all comes together. The **64D GILE Matrix** is not a single dial but a *cube* — a 4×4×4 ledger that records a claim's full evaluative state. Its three edges are:
+
+- **The four GILE elements** — Goodness, Intuition, Love, Elegance (Chapter 5). *Which value is being read.*
+- **The four truth-axes** — the framework's four canonical angles on a claim: the **PD spectrum** (its degree of trueness, or *coherence*, together with the *modality* of its shortfall — the real and imaginary aspects of this single axis), the **categorical MR axis** (the base-four verdict the claim resolves to), **τ/δ separability** (claim-truth versus how much the claim is actually instantiated in existence), and the **Authority Axis** (how the credibility of the source weights the reading). *From which angle the value is read.*
+- **The four truth-labels** — True, False, Indeterminate, Meta-Indeterminate (Chapter 7). *Which verdict that reading earns.*
+
+Four by four by four is sixty-four, which is where the name comes from (the 32D variant is the same ledger collapsed to a single meta-level). The matrix is a **state-carrier, not a classifier**: you do not consult it to *decide* a label — Myrion Resolution does that — you use it to *store the full context* once labels are known, the way a cockpit records every instrument reading rather than just the autopilot's final command.
+
+One subtlety in the label edge is worth stating precisely, because it is exactly where careful readers get tripped up. To keep the label dimension at exactly four (so the cube stays a clean 4×4×4 = 4³), **N/A is folded onto Meta-Indeterminate**. The two **coincide mathematically** — both sit at the same far, *hyperimaginary* end of the spectrum (Chapter 7) — but they remain **conceptually distinct**. MI is genuine incoherence: a claim that cancels itself. **N/A is a real question whose answer is merely out of reach — and, crucially, N/A lacks a *specific* value**: it marks a region you know the answer falls within, not a point you can name. The matrix collapses the two for arithmetic convenience; your reasoning never should. This is the same lesson the representation study taught from the other direction — the largest single accuracy gain came from *honoring*, not erasing, the difference that "this was never a reachable question" makes.
 
 ### MR: the gated pipeline
 

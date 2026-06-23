@@ -40,6 +40,18 @@ What did the comparison actually show? Using 500 gold-standard propositions each
 
 The practical takeaway is unglamorous and exactly the framework's style: **use Complex PD for everyday labeling, the 64D matrix when you need to carry the full GILE state, and the Crystal/TECC only when you need maximum robustness** — and do not pretend the simplest representation is free of cost.
 
+### Inside the 64D GILE Matrix: a 4×4×4 ledger
+
+The fourth representation deserves its own look, because it is where the framework's bookkeeping all comes together. The **64D GILE Matrix** is not a single dial but a *cube* — a 4×4×4 ledger that records a claim's full evaluative state. Its three edges are:
+
+- **The four GILE elements** — Goodness, Intuition, Love, Elegance (Chapter 5). *Which value is being read.*
+- **The four truth-axes** — the framework's four canonical angles on a claim: the **PD spectrum** (its degree of trueness, or *coherence*, together with the *modality* of its shortfall — the real and imaginary aspects of this single axis), the **categorical MR axis** (the base-four verdict the claim resolves to), **τ/δ separability** (claim-truth versus how much the claim is actually instantiated in existence), and the **Authority Axis** (how the credibility of the source weights the reading). *From which angle the value is read.*
+- **The four truth-labels** — True, False, Indeterminate, Meta-Indeterminate (Chapter 7). *Which verdict that reading earns.*
+
+Four by four by four is sixty-four, which is where the name comes from (the 32D variant is the same ledger collapsed to a single meta-level). The matrix is a **state-carrier, not a classifier**: you do not consult it to *decide* a label — Myrion Resolution does that — you use it to *store the full context* once labels are known, the way a cockpit records every instrument reading rather than just the autopilot's final command.
+
+One subtlety in the label edge is worth stating precisely, because it is exactly where careful readers get tripped up. To keep the label dimension at exactly four (so the cube stays a clean 4×4×4 = 4³), **N/A is folded onto Meta-Indeterminate**. The two **coincide mathematically** — both sit at the same far, *hyperimaginary* end of the spectrum (Chapter 7) — but they remain **conceptually distinct**. MI is genuine incoherence: a claim that cancels itself. **N/A is a real question whose answer is merely out of reach — and, crucially, N/A lacks a *specific* value**: it marks a region you know the answer falls within, not a point you can name. The matrix collapses the two for arithmetic convenience; your reasoning never should. This is the same lesson the representation study taught from the other direction — the largest single accuracy gain came from *honoring*, not erasing, the difference that "this was never a reachable question" makes.
+
 ### MR: the gated pipeline
 
 With a PD in hand, **Myrion Resolution (MR)** is the procedure that converts it into a verdict. MR is *gated*: a proposition passes through a fixed sequence of screens, in order, and each gate can either stop it or pass it along. The order is not cosmetic — running the gates out of order produces nonsense.
