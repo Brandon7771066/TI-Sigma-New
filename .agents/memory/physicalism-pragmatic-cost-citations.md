@@ -48,3 +48,21 @@ outlook). Two non-obvious guards MUST stay attached or the argument breaks #69:
    the cheap alternative is mere *withholding* (stay Indeterminate), not a rival creed,
    so it doesn't license arbitrary beliefs; (c) the social/economic cost of mass-
    pathologizing is a QUALITATIVE order-of-magnitude argument — claim no figure.
+
+4. **The positive turn: withholding is the FLOOR, not the destination.** The TI Sigma
+   practitioner does NOT merely suspend judgment (that is the skeptic's resting place);
+   they ACTIVELY/openly explore the evidence for the "supernatural" because curiosity is
+   a virtue. Spirituality is framed as plausibly the HIGHEST virtue because it is the
+   *direction* toward **Myrion** (the situation-specific GILE-Truth↔Existence/HEM optimum
+   = SUP-1's Supreme, made personal). Refinement: the greatest marker of spirituality
+   shifts from "GILE-Truth-seeking/alignment" → **"Myrion-alignment."**
+   **Why:** without this, "stay Indeterminate" reads as passive fence-sitting, which the
+   author rejects as un-TI-Sigma.
+   **How to apply:** (a) the book must NOT assert spirituality is correct or that any
+   spiritual claim is true — only that *entertaining/exploring* it is what a GILE-sane
+   person does; legitimacy is left to the reader; (b) preserves the Pascal firewall —
+   active *exploration* ≠ *asserting* a rival creed, and inquiry keeps the same
+   evidence-discipline (no "believe whatever you like"); (c) Myrion here = the
+   balance-target sense (EVD-1), NOT Myrion Resolution or Grand Myrion — never conflate;
+   (d) "spirituality = highest virtue because it leads to Myrion" is a framework-internal
+   NORMATIVE claim (flag it; SUP-1 + Myrion balance-target are canonical, the ranking is not).
