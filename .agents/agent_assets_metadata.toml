@@ -683,3 +683,9 @@ id = "yd5tlofWj65S4RVeRjdg7"
 uri = "file://papers/EVIDENCE_DOCTRINE_CANONICAL_RULING_EVD_1_2026-06-22.pdf"
 type = "pdf"
 title = "The Evidence Doctrine (EVD-1) — KEY PAPER (+ Myrion refinement)"
+
+[[outputs]]
+id = "jG4hzK-oEm6RqovQTvsyU"
+uri = "file://book/HEDGE_INVENTORY_V2.md"
+type = "text"
+title = "Hedge Inventory — TI Sigma For Everyone V2 (468 hedges)"
