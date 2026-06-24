@@ -1,0 +1,180 @@
+{
+  "batch": "pass77_b131",
+  "config": {
+    "E5": {
+      "n_nodes": 30,
+      "p_edge": 0.15,
+      "T": 60,
+      "beta": 0.07,
+      "base_hazard": 0.004,
+      "reps": 400,
+      "z_crit": 1.645,
+      "seed0": 4131
+    },
+    "E2": {
+      "n": 60,
+      "noise": 0.45,
+      "theta0": 0.41421356237309515,
+      "grid": "0.15..0.85 x25",
+      "bp_params_k": 6,
+      "reps": 600,
+      "seed0": 9131
+    },
+    "honesty": "method-validation only; NO human data; necessary-not-sufficient"
+  },
+  "config_sha": "ca33c98a9748",
+  "theta0_emerick": 0.41421356237309515,
+  "E5_network_propagation": {
+    "contagion": {
+      "n": 400,
+      "A1_logistic_rate": 1.0,
+      "A1_ci": [
+        0.9904873594003194,
+        1.0
+      ],
+      "A2_naive_net_rate": 0.9975,
+      "A2_ci": [
+        0.9859763590327523,
+        0.9995585635705655
+      ],
+      "A3_cmh_rate": 0.995,
+      "A3_ci": [
+        0.9819547100278873,
+        0.9986277757784288
+      ],
+      "A3_z_mean": 3.626306955310723
+    },
+    "common_trend": {
+      "n": 400,
+      "A1_logistic_rate": 0.965,
+      "A1_ci": [
+        0.942114344143788,
+        0.9790389000985089
+      ],
+      "A2_naive_net_rate": 0.4025,
+      "A2_ci": [
+        0.35558826388280423,
+        0.4512667010341335
+      ],
+      "A3_cmh_rate": 0.05,
+      "A3_ci": [
+        0.0325971756266401,
+        0.0759642009130725
+      ],
+      "A3_z_mean": -0.059505353804247506
+    },
+    "no_spread": {
+      "n": 400,
+      "A1_logistic_rate": 0.3425,
+      "A1_ci": [
+        0.2976902293324949,
+        0.39030625245640455
+      ],
+      "A2_naive_net_rate": 0.055,
+      "A2_ci": [
+        0.03659822186405928,
+        0.08186802826965651
+      ],
+      "A3_cmh_rate": 0.06,
+      "A3_ci": [
+        0.04064768052466109,
+        0.0877234432030579
+      ],
+      "A3_z_mean": -0.0750754411420536
+    }
+  },
+  "E2_threshold_detection": {
+    "threshold": {
+      "n": 600,
+      "naive_detect_rate": 1.0,
+      "naive_ci": [
+        0.9936380666717896,
+        1.0000000000000002
+      ],
+      "proper_detect_rate": 0.945,
+      "proper_ci": [
+        0.9237657772414771,
+        0.9605721020964154
+      ],
+      "theta_hat_mean": 0.4155864197530864,
+      "theta_hat_sd": 0.03561974444290297,
+      "theta_bias_vs_0p4142": 0.0013728573799912658
+    },
+    "linear": {
+      "n": 600,
+      "naive_detect_rate": 0.10166666666666667,
+      "naive_ci": [
+        0.07996324359046854,
+        0.1284384299610059
+      ],
+      "proper_detect_rate": 0.065,
+      "proper_ci": [
+        0.047910320670338805,
+        0.08762456132520442
+      ],
+      "theta_hat_mean": 0.5373931623931625,
+      "theta_hat_sd": 0.2552066211864548,
+      "theta_bias_vs_0p4142": 0.12317960002006734
+    },
+    "quad_curve": {
+      "n": 600,
+      "naive_detect_rate": 0.5566666666666666,
+      "naive_ci": [
+        0.5166806044415179,
+        0.595931709781285
+      ],
+      "proper_detect_rate": 0.07,
+      "proper_ci": [
+        0.052201622018617534,
+        0.09326964064364358
+      ],
+      "theta_hat_mean": 0.529861111111111,
+      "theta_hat_sd": 0.19466876941089092,
+      "theta_bias_vs_0p4142": 0.11564754873801586
+    },
+    "smooth_curve": {
+      "n": 600,
+      "naive_detect_rate": 0.11166666666666666,
+      "naive_ci": [
+        0.08889460000176137,
+        0.13937983488314887
+      ],
+      "proper_detect_rate": 0.06333333333333334,
+      "proper_ci": [
+        0.04648686348679297,
+        0.0857358916198443
+      ],
+      "theta_hat_mean": 0.46699561403508766,
+      "theta_hat_sd": 0.2049514579771565,
+      "theta_bias_vs_0p4142": 0.05278205166199251
+    }
+  },
+  "E2_power_curve": [
+    {
+      "jump_size": 0.0,
+      "power": 0.03666666666666667
+    },
+    {
+      "jump_size": 0.4,
+      "power": 0.11666666666666667
+    },
+    {
+      "jump_size": 0.8,
+      "power": 0.51
+    },
+    {
+      "jump_size": 1.2,
+      "power": 0.8633333333333333
+    },
+    {
+      "jump_size": 1.6,
+      "power": 0.97
+    },
+    {
+      "jump_size": 2.0,
+      "power": 0.9966666666666667
+    }
+  ],
+  "runtime_sec": 14.7,
+  "honesty_floor": "Method-validation/power sims only; NO human data. Confirms the E5/E2 DESIGNS are well-posed, adequately powered, and -- crucially -- that only a confound-controlled statistic (time-stratified CMH for E5; beat-the-smooth-curve for E2) isolates the claim. NECESSARY, not sufficient: not evidence the LCC Virus propagates in humans nor that a real neural phase transition exists (E5/E2-SIM-F3 = the human study)."
+}
