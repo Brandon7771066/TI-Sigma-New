@@ -146,14 +146,37 @@ Lean confirmed **implications** (`axiom ⟹ conclusion`) and **trivial lemmas** 
 
 ---
 
+## I. HEM is the residual; supererogatory above-cap GILE (Brandon, this batch — candidates HRR-1 / SAC-1)
+
+Two linked refinements of the cap. Neither increments the count (candidates, not ratified; count stays **79**).
+
+**HRR-1 — HEM-as-Residual.** HEM **does not need to be separately optimized** so long as GILE and Myrion are being targeted, *because HEM is the residual*. In the grounded program (§C, §G) you maximize the joint objective by targeting the truth aggregate `G` and the Myrion balance (the stationarity `ρ·u'(G*) = v'(H*)`); existence then **falls out as the leftover** — in the unit-budget effort-allocation model of Part 4, literally `H* = 1 − G*`. This is **not** a licence to neglect Existence — Existence is the *outcome* of pursuing Ultimate + Truth correctly, not a quantity you chase independently. It is another case of a **mere identity carrying an enlightening property** (cf. the companion Key Paper's definitional-realism thread, and the FEP "life = maximal model-evidence" identity): the residual form `HEM = budget − GILE` is trivially true yet operationally illuminating — it tells you *where not to spend separate optimization effort*.
+
+**SAC-1 — Supererogatory Above-Cap GILE.** More Ultimate **can look like exceeding the 0.93 cap — IFF Existence does not NEED to come into play in that instance.** The package (Part 4) demonstrates this on a transparent effort-allocation model `max_G ρ·log(1+G) + active·log(1+(1−G))` with **no over-reach penalty on truth itself**:
+
+- With Existence **active** (`v' > 0`), the trade-off optimum is interior at `G* = 0.93233` — *exactly* the Radiant cap (`ρ` calibrated to `1.8099`). So the 0.93 cap **can be read as the shadow of the existence opportunity-cost** rather than an intrinsic disvalue of truth. (This reconciles with §C: `f_cap`'s over-reach penalty **can be interpreted as the reduced-form projection** of this trade-off — an interpretive mapping, not a derivation.)
+- With Existence **inactive in that instance** (`v' = 0` — already maintained / not at stake), the objective is monotone in `G` and the optimum is `G = 1.0 > 0.93`. **Exceeding the cap is permissible** — this is **intrinsic motivation / supererogatory action** toward GILE.
+
+**Permissible but not sustainable.** A *constant* above-cap policy is dominated by the state-contingent policy as soon as Existence is at stake a positive fraction `φ` of the time, and the deficit grows monotonically with `φ` (Part 4 sweep: `0 → 0.00032 → 0.0008 → 0.00159 → 0.00239 → 0.00318` for `φ = 0 … 1`). So above-cap optimization is per-instance optimal **only** when Existence is moot; as a standing policy it is less Myrion-optimal than Existence maintenance — consistent with SUP-1 and the established penalty-above-0.93.
+
+**The invariant truth (load-bearing).** None of this changes the fact that **you cannot have too much GILE-Truth.** Truth's marginal value `u'(G) = 1/(1+G) > 0` everywhere — it never turns negative, so there is **no intrinsic ceiling** on GILE-truth. Every apparent ceiling is the competing marginal claim of Existence, never a disvalue of truth itself.
+
+**Scope note.** This refinement does **not** alter the holistic-cap clarification (§F): the cap remains a target on the single GILE *aggregate*, with per-dimension allocation agnostic. §I refines only the *interpretation* of **why** cap-pressure appears (existence opportunity-cost) and **when** it lifts (existence moot), not the cap's holistic scope or value.
+
+**#69.** Part 4 is a model-level illustration: "Existence not at stake" (`v' = 0`) is an idealization, and `ρ` is **calibrated** (not derived) so the active optimum coincides with the cap — it shows the cap *can* arise purely as a trade-off shadow, reconciling "no too-much-truth" with the penalty-above-0.93; it does **not** prove the cap's numeric value.
+
+---
+
 ## Falsifiers (this paper)
 
 - **UZG-1-F1/F2/F3** (§C): functionals-equivalent ⇒ pin-J void; `λ=2` forced ⇒ upgrade; interior-optimum lemma fails ⇒ grounding broken.
 - **AAB-1-F1/F2** (§D): a quantum-reproducing global joint exists ⇒ axiom-failure illusory; UOP covertly needs a global joint ⇒ advantage collapses.
+- **HRR-1-F1** (§I): a domain where targeting GILE+Myrion leaves Existence *systematically* below its viable floor (residual identity insufficient — HEM would then need independent optimization).
+- **SAC-1-F1/F2** (§I): an instance with genuinely `v' = 0` where exceeding 0.93 is nonetheless Myrion-*worse* (supererogation illusory); OR a case where a constant above-cap policy is sustainable with `φ > 0` (permissible-not-sustainable false).
 - Inherited: **UPS-1-F1/F2/F3** (B132), and the standing UOP-gap falsifiers (RH/NS bridge remains REFUTED-as-closed until an operator/PDE bridge replaces the axioms).
 
 ## Deliverables
 
 - This paper + companion Key Paper (`AXIOMATIC_FAITHFULNESS_AND_DEFINITIONAL_REALISM_CANONICAL_2026-06-24.md`).
-- Package `analyses/pass77_b133_grounding_uop/uop_zfc_grounding.py` + `results.json` (interior-optimum verification; CHSH/Fine LP; math-cap-binding rho-sweep).
+- Package `analyses/pass77_b133_grounding_uop/uop_zfc_grounding.py` + `results.json` (Part 1 interior-optimum verification; Part 2 CHSH/Fine LP; Part 3 math-cap-binding rho-sweep + holistic-aggregate scope; Part 4 HEM-as-residual + supererogatory above-cap, cap emerges as trade-off shadow at `G*=0.93233`, inactive-existence optimum `G=1.0`, sustainability sweep).
 - `replit.md` §7.7.317 ledger; B132 cross-ref refinement; memory topic. **Canonical count unchanged: 79.**

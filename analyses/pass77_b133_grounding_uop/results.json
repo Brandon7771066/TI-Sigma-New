@@ -290,5 +290,60 @@
     "holistic_scope": "The 0.93 cap is applied HOLISTICALLY to the single GILE AGGREGATE A* = sum_t w_t*x_t (one number combining all four dimensions G/I/L/E), NOT to each dimension separately. The per-dimension allocation x* is DELIBERATELY AGNOSTIC / problem-specific: here it is {'G': 1.0, 'I': 1.0, 'L': 1.0, 'E': 0.323} (three dims at 1.0, one far below) while the AGGREGATE sits exactly at the cap 0.9323. We claim ~0.93 is ideal for the OVERALL truth-aggregate of any given problem; we do NOT claim a per-dimension ideal, and do not extrapolate one.",
     "mechanism": "The 0.93 cap is IDENTICAL for every discipline. A* reaches it ONLY when rho is large enough that the unconstrained optimum exceeds the cap => the cap BINDS. Math has the highest rho (2.4 across the 12 surveyed), so it ALONE saturates the cap. For NEARLY ALL other fields the 0.93 optimum does NOT apply (they optimize below the cap); math is one of the only fields for which it does. The 'math = 0.93' match is the cap binding for the most truth-dominant field, NOT an independent numerical coincidence.",
     "honesty_69": "A* is a single DERIVED archetype value pinned AT the cap by construction once rho is high; there is no sampling distribution, so a frequentist significance test of '0.93 vs 0.93-0.95' is not well-defined. The defensible claim is the ORDERING: among fields, mathematics is uniquely truth-priority (GILE-truth IS the objective), while other fields optimize below the cap (more HEM tradeoff)."
+  },
+  "part4_hem_residual_supererogatory": {
+    "model": "maximize rho*log(1+G) + active*log(1+(1-G)) over G in [0,1]; unit effort budget",
+    "rho_calibrated_to_cap": 1.809863,
+    "G_opt_existence_active": 0.93233,
+    "cap_G_star": 0.93233,
+    "active_optimum_equals_cap": true,
+    "G_opt_existence_inactive": 1.0,
+    "inactive_optimum_exceeds_cap": true,
+    "hem_residual_H_star": 0.06767,
+    "hem_is_residual": "H* = 1 - G* falls out as the leftover once truth+Myrion are targeted; HEM is NOT separately optimized (mere identity, enlightening property).",
+    "truth_marginal_value_positive_everywhere": true,
+    "no_such_thing_as_too_much_truth": "u'(G)=1/(1+G) > 0 for all G in [0,1]; truth's marginal value never turns negative => no INTRINSIC ceiling on GILE-truth. The 0.93 cap is the SHADOW of the existence opportunity-cost, present ONLY when existence has a live marginal claim (v' > 0).",
+    "supererogatory": "When existence does NOT need to come into play in an instance (v' == 0), the objective is monotone in G and the optimum is G=1.0 > 0.93: exceeding the cap is PERMISSIBLE (intrinsic-motivation / supererogatory action toward GILE).",
+    "sustainability_sweep": [
+      {
+        "phi_existence_at_stake": 0.0,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.2545,
+        "above_cap_deficit": 0.0
+      },
+      {
+        "phi_existence_at_stake": 0.1,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.25482,
+        "above_cap_deficit": 0.00032
+      },
+      {
+        "phi_existence_at_stake": 0.25,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.2553,
+        "above_cap_deficit": 0.0008
+      },
+      {
+        "phi_existence_at_stake": 0.5,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.25609,
+        "above_cap_deficit": 0.00159
+      },
+      {
+        "phi_existence_at_stake": 0.75,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.25689,
+        "above_cap_deficit": 0.00239
+      },
+      {
+        "phi_existence_at_stake": 1.0,
+        "always_above_cap": 1.2545,
+        "state_contingent": 1.25768,
+        "above_cap_deficit": 0.00318
+      }
+    ],
+    "above_cap_deficit_increases_with_phi": true,
+    "permissible_not_sustainable": "A CONSTANT above-cap policy is dominated by the state-contingent policy whenever existence is at stake (phi>0), and the deficit grows with phi => above-cap is per-instance optimal only when existence is moot, NOT as a standing policy (consistent with SUP-1 / UOP cap).",
+    "honesty_69": "Model-level illustration only. 'Existence not at stake' (v'==0) is an idealization; rho is CALIBRATED (not derived) to make the active optimum coincide with the cap, showing the cap CAN arise purely as a trade-off shadow without an intrinsic truth penalty. It does NOT prove the cap's numeric value; it reconciles 'no too-much-truth' with the established penalty-above-0.93 (the latter = reduced-form projection)."
   }
 }

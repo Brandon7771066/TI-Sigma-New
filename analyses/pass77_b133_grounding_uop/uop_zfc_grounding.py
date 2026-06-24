@@ -42,6 +42,29 @@ PART 3 — Why mathematics "coincides with 0.93" (B75 reanalysis, de-mystified).
   defensible claim is the ORDERING ("in math, GILE-truth is THE priority"), not a
   significance test (A* is a single derived archetype, pinned by construction).
 
+PART 4 — HEM-as-residual + supererogatory above-cap GILE (Brandon, this batch).
+  Two linked refinements of the cap, demonstrated on a transparent effort-
+  allocation model (no over-reach penalty on truth itself):
+    maximize  rho*u(G) + v(H)   s.t.  G + H <= 1,  G,H in [0,1],
+    u(G)=log(1+G) STRICTLY increasing (truth's marginal value u'(G)=1/(1+G) > 0
+    EVERYWHERE -> "you cannot have too much GILE Truth"; no intrinsic ceiling).
+  (i) HEM IS THE RESIDUAL: at the joint optimum H* = 1 - G* falls out as the
+      LEFTOVER once truth+Myrion (the balance rho*u'(G*) = v'(H*)) are targeted.
+      You do NOT separately optimize HEM; it is the residual of pursuing Ultimate
+      + Truth -> a "mere identity" with an enlightening property.
+  (ii) SUPEREROGATORY ABOVE-CAP: with existence ACTIVE (v'>0) the trade-off
+      optimum is interior at G* (we calibrate rho so G* == the 0.9323 cap), so the
+      0.93 cap is the SHADOW of the existence opportunity-cost, NOT an intrinsic
+      disvalue of truth. In an instance where existence does NOT need to come into
+      play (v' == 0), the objective is monotone in G and the optimum is G = 1.0 >
+      cap: exceeding 0.93 is PERMISSIBLE (intrinsic-motivation / supererogatory).
+  (iii) PERMISSIBLE-BUT-NOT-SUSTAINABLE: a CONSTANT above-cap policy loses to the
+      state-contingent policy whenever existence is at stake a positive fraction
+      phi of the time; the deficit grows with phi -> above-cap is per-instance
+      optimal only when existence is moot, not as a standing policy. Reconciles
+      with Part 1: f_cap's over-reach penalty is the reduced-form PROJECTION of
+      this trade-off, not an intrinsic penalty on truth.
+
 Run:
     python analyses/pass77_b133_grounding_uop/uop_zfc_grounding.py
 """
@@ -297,6 +320,90 @@ def part3_math_cap_binding() -> dict:
     }
 
 
+# --------------------------------------------------------------------------- #
+# PART 4 — HEM-as-residual + supererogatory above-cap GILE (Brandon refinement).
+# --------------------------------------------------------------------------- #
+def part4_hem_residual_supererogatory() -> dict:
+    # Effort-allocation model: split a unit budget between truth G and existence H.
+    #   u(G) = log(1+G)  (truth value; u'(G) = 1/(1+G) > 0 everywhere => no ceiling)
+    #   v(H) = log(1+H)  (existence value when ACTIVE)
+    #   maximize rho*u(G) + active*v(1-G) over G in [0,1].
+    grid = np.linspace(0.0, 1.0, 100001)
+
+    def argmax(rho: float, active: bool) -> float:
+        if active:
+            vals = rho * np.log1p(grid) + np.log1p(1.0 - grid)
+        else:
+            vals = rho * np.log1p(grid)            # existence not at stake: v' == 0
+        return float(grid[int(np.argmax(vals))])
+
+    # Calibrate rho so the ACTIVE (existence-at-stake) trade-off optimum == cap.
+    # Interior FOC: rho/(1+G) = 1/(2-G) => G* = (2 rho - 1)/(1 + rho).
+    # Solve for rho giving G* = G_STAR:  rho = (1 + G_STAR) / (2 - G_STAR).
+    rho_cal = (1.0 + G_STAR) / (2.0 - G_STAR)
+    g_active = argmax(rho_cal, active=True)         # ~ 0.9323 (cap emerges)
+    g_inactive = argmax(rho_cal, active=False)      # 1.0 (exceeds cap)
+    h_residual = 1.0 - g_active                     # HEM = residual identity
+
+    # Truth's marginal value is strictly positive across the whole range.
+    truth_marginal_positive = bool(np.all(1.0 / (1.0 + grid) > 0.0))
+
+    # Sustainability: a CONSTANT above-cap policy (always G=1) vs the state-
+    # contingent policy (G=1 when existence moot, G* when existence at stake),
+    # over a mix where existence is at stake a fraction phi of the time.
+    def obj(rho: float, g: float, active: bool) -> float:
+        return rho * math.log1p(g) + (math.log1p(1.0 - g) if active else 0.0)
+
+    sustain = []
+    for phi in [0.0, 0.1, 0.25, 0.5, 0.75, 1.0]:
+        # always-above-cap plays G=1 in BOTH states.
+        always_max = phi * obj(rho_cal, 1.0, True) + (1 - phi) * obj(rho_cal, 1.0, False)
+        # contingent plays G* when active, G=1 when inactive (per-instance optimal).
+        contingent = phi * obj(rho_cal, g_active, True) + (1 - phi) * obj(rho_cal, 1.0, False)
+        sustain.append({
+            "phi_existence_at_stake": phi,
+            "always_above_cap": round(always_max, 5),
+            "state_contingent": round(contingent, 5),
+            "above_cap_deficit": round(contingent - always_max, 5),
+        })
+    deficit_increases_with_phi = all(
+        sustain[i + 1]["above_cap_deficit"] >= sustain[i]["above_cap_deficit"] - 1e-9
+        for i in range(len(sustain) - 1)
+    )
+
+    return {
+        "model": "maximize rho*log(1+G) + active*log(1+(1-G)) over G in [0,1]; unit effort budget",
+        "rho_calibrated_to_cap": round(rho_cal, 6),
+        "G_opt_existence_active": round(g_active, 5),
+        "cap_G_star": round(G_STAR, 5),
+        "active_optimum_equals_cap": abs(g_active - G_STAR) < 1e-3,
+        "G_opt_existence_inactive": round(g_inactive, 5),
+        "inactive_optimum_exceeds_cap": g_inactive > G_STAR + 1e-3,
+        "hem_residual_H_star": round(h_residual, 5),
+        "hem_is_residual": "H* = 1 - G* falls out as the leftover once truth+Myrion are targeted; "
+                           "HEM is NOT separately optimized (mere identity, enlightening property).",
+        "truth_marginal_value_positive_everywhere": truth_marginal_positive,
+        "no_such_thing_as_too_much_truth": "u'(G)=1/(1+G) > 0 for all G in [0,1]; truth's marginal value "
+                                           "never turns negative => no INTRINSIC ceiling on GILE-truth. The "
+                                           "0.93 cap is the SHADOW of the existence opportunity-cost, present "
+                                           "ONLY when existence has a live marginal claim (v' > 0).",
+        "supererogatory": "When existence does NOT need to come into play in an instance (v' == 0), the "
+                          "objective is monotone in G and the optimum is G=1.0 > 0.93: exceeding the cap is "
+                          "PERMISSIBLE (intrinsic-motivation / supererogatory action toward GILE).",
+        "sustainability_sweep": sustain,
+        "above_cap_deficit_increases_with_phi": deficit_increases_with_phi,
+        "permissible_not_sustainable": "A CONSTANT above-cap policy is dominated by the state-contingent "
+                                       "policy whenever existence is at stake (phi>0), and the deficit grows "
+                                       "with phi => above-cap is per-instance optimal only when existence is "
+                                       "moot, NOT as a standing policy (consistent with SUP-1 / UOP cap).",
+        "honesty_69": "Model-level illustration only. 'Existence not at stake' (v'==0) is an idealization; "
+                      "rho is CALIBRATED (not derived) to make the active optimum coincide with the cap, "
+                      "showing the cap CAN arise purely as a trade-off shadow without an intrinsic truth "
+                      "penalty. It does NOT prove the cap's numeric value; it reconciles 'no too-much-truth' "
+                      "with the established penalty-above-0.93 (the latter = reduced-form projection).",
+    }
+
+
 def main() -> None:
     out = {
         "constants": {
@@ -308,6 +415,7 @@ def main() -> None:
         "part1_interior_optimum_theorem": part1_interior_optimum(),
         "part2_axiom_bayes_lacks": part2_axiom_bayes_lacks(),
         "part3_math_cap_binding": part3_math_cap_binding(),
+        "part4_hem_residual_supererogatory": part4_hem_residual_supererogatory(),
     }
     here = Path(__file__).resolve().parent
     (here / "results.json").write_text(json.dumps(out, indent=2))
