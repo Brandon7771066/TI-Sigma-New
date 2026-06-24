@@ -15,10 +15,14 @@ This is the **single source of truth for voice, format, and rules**. Every chapt
   - "Divine self-realization / God" → discussed only as comparative philosophy of religion (open theism, process theology) and clearly labeled non-doctrinal.
 - **Do NOT** include fringe parapsychology as fact. Telekinesis, psi, "soul Bluetooth," spirit animals, conscious stars, etc. are NOT to be asserted. If a chapter must mention them, frame as clearly-labeled speculation the framework does not rest on — better to omit.
 
-## BRUTAL HONESTY (#69 — both directions)
-- Status-flag every empirical/strong claim: **(verified)**, **(framework-internal)**, **(preliminary)**, or **(speculative/open)**.
-- State the strongest objection to a claim *before* defending it. Name open falsifiers where relevant.
-- Never overclaim. The corpus has **elementary** math proofs only — **no Millennium Prize problem is closed.** Trading/efficacy/medical claims are gated, not proven. Say so plainly.
+## CONSTRUCTIVE HONESTY (#69 — both directions, hopeful)
+*(Formerly "Brutal Honesty." Same teeth — never overclaim — but the discipline now runs in **both** directions: claim the genuine wins as confidently as you flag the open gaps, and frame what's unfinished in a forward-looking, hopeful tone rather than as self-criticism.)*
+
+- **Claim the earned victories out loud.** Where the corpus genuinely supports a result, say so with force: *"thoroughly debunked X," "shown X to be plainly true," "a rare and useful observation," "decisively closes the case."* **Under-claiming a real win is as much an honesty failure as overclaiming one.**
+- **Status-flag every empirical/strong claim:** **(verified)**, **(framework-internal)**, **(preliminary)**, or **(speculative/open)**. Precision is the *source* of confidence, not the enemy of it.
+- **State the strongest objection before defending — then resolve it constructively.** Name open falsifiers, but pair each with the path forward (the experiment or argument that would close it), not as an apology.
+- **Hopeful framing for what's unfinished.** Prefer *"room to strengthen this,"* *"the next test that would settle it"* over *"we have not / cannot."* Do not enumerate an infinite list of non-accomplishments — that list is endless and corrosive to the reader.
+- **The one hard floor stays.** Never fabricate. The corpus has **elementary** math proofs only — **no Millennium Prize problem is closed**; trading/efficacy/medical claims are gated, not proven. State such limits plainly and calmly, once, then move on.
 
 ## Canon vocabulary cheat-sheet (use the NEWEST terms)
 - **Tralse / Tralseness** — the structured imperfection inside *every* coherent truth-claim; a universal *quality*, NOT a truth label.

@@ -1,40 +1,47 @@
 ---
-name: Book tone — confident, victory-forward (not over-hedged)
-description: How the TI Sigma BOOK should read tonally — distinct from the #69 honesty convention that governs the analyses/papers.
+name: Constructive Honesty (#69) + confident book tone
+description: The governing honesty discipline — Constructive Honesty (renamed from "Brutal Honesty") — and how the TI Sigma book should read tonally.
 ---
+
+# Constructive Honesty (#69) — both directions, hopeful
+
+**The rule.** The honesty discipline (legacy name "Brutal Honesty") is **"Constructive
+Honesty."** Same teeth — **never overclaim, never fabricate** — but it runs in **both
+directions**:
+
+- **Claim earned victories out loud.** Where the corpus genuinely supports a result,
+  say so with force: "thoroughly debunked X," "shown X to be plainly true," "a rare and
+  useful observation," "decisively closes the case." **Under-claiming a real win is as
+  much an honesty failure as overclaiming one.**
+- **Hopeful framing for what's unfinished.** Pair every open falsifier with the path
+  that would close it ("the next test that would settle it"), not an apology. Don't
+  enumerate an infinite list of non-accomplishments — corrosive and endless.
+- **Status-flag still required:** (verified) / (framework-internal) / (preliminary) /
+  (speculative/open). Precision is the *source* of confidence, not its enemy.
+- **Hard floor unchanged:** elementary math proofs only (no Millennium Prize closed);
+  trading/efficacy/medical claims gated, not proven; no fabricated citations. State
+  limits plainly and calmly, **once**, then move on.
+
+**Where it's documented:** `book/STYLE_GUIDE.md` §"CONSTRUCTIVE HONESTY (#69)". The
+483 historical `#69` references in `papers/` were **not** mass-renamed (they're
+historical record); the rule change is forward-looking.
 
 # Book tone: academic + secular + CONFIDENT
 
-**The rule.** The BOOK (TRALSE_BOOK1_MANUSCRIPT / V2 mirror, TI-for-Everyone) must
-read as **confident and decisive**, not over-hedged or self-effacing. The reader
-should come away **enlightened and with ANSWERS** (alongside open questions), NOT
-thinking "why does this say almost none of its own conclusions can be trusted?"
+The BOOK (TI-for-Everyone / V2 mirror) must read **confident and decisive**, not
+over-hedged. Reader should leave **enlightened, with ANSWERS** (alongside open
+questions). Brandon's style: *"report victories mainly — they are what really matter."*
 
-**Brandon's stated style:** *"report victories mainly, since they are what really
-matter."* Do NOT repeatedly enumerate what "we didn't accomplish" — that list is
-practically infinite and corrosive to the reader's confidence. State the solid
-conclusions (esp. philosophy of mind + epistemology — the corpus's strongest
-ground) as conclusions.
+- Constructive Honesty is the umbrella; in the **book**, that means stating solid
+  conclusions (esp. philosophy of mind + epistemology — the strongest ground) AS
+  conclusions, and reserving hedging for genuinely live/speculative claims.
+- The heavier falsifier/two-sided detail still lives mainly in the **analyses, anchor
+  papers, and ledger** — but even there, note the wins and frame gaps hopefully.
+- Still secular, still academic, still no fabricated citations. Confidence comes from
+  the strength of the argued conclusions, not from overclaiming.
 
-**How this coexists with #69 (NOT a contradiction):**
-- #69 brutal-honesty / two-sided reporting / flag-speculative / no-fake-citations
-  still governs the **analyses, anchor papers, and ledger** — that is where the
-  hedging, falsifiers, and "preliminary/contested" labels belong.
-- In the **book**, precision ≠ self-doubt. State precisely, but a claim that OUGHT
-  to be made should leave the reader with **answers as well as questions**. Reserve
-  hedging for genuinely live/speculative claims; do not hedge the solid ones.
-- Still secular, still academic, still no fabricated citations. Confidence comes
-  from the strength of the argued conclusions, not from overclaiming.
-
-**Practical edit heuristics when de-hedging the book:**
-- Cut reflexive qualifiers ("merely," "only a preliminary," "we cannot really
-  claim," "this is just one framework among many") on conclusions that the corpus
-  actually supports.
-- Lead sections with the conclusion/victory, then support it.
-- Keep a falsifier/limitation where it is load-bearing, but state it once, calmly,
-  not as a recurring apology.
-
-**Workflow note:** Brandon drives this via per-passage **annotations** ("suggesting
-soon") and is curating his paper index for the most consequential discoveries —
-wait for / work from those targets rather than mass-rewriting blindly. Book chapters
-must stay byte-identical with the V2 mirror (existing convention).
+**Edit heuristics when de-hedging:** cut reflexive qualifiers ("merely," "only
+preliminary," "just one framework among many") on corpus-supported conclusions; lead
+sections with the conclusion/victory; keep a limitation only where load-bearing, stated
+once. Book chapters must stay byte-identical with the V2 mirror. Brandon drives this
+via per-passage annotations — work from his curated targets, don't mass-rewrite blindly.
