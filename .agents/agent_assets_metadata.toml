@@ -689,3 +689,9 @@ id = "jG4hzK-oEm6RqovQTvsyU"
 uri = "file://book/HEDGE_INVENTORY_V2.md"
 type = "text"
 title = "Hedge Inventory — TI Sigma For Everyone V2 (468 hedges)"
+
+[[outputs]]
+id = "_nUoc24gyMkSvqc3t_n19"
+uri = "file://book/STRONGEST_CLAIMS_RANKED.md"
+type = "text"
+title = "The Book's Strongest Claims — Ranked by Significance If Backed"
