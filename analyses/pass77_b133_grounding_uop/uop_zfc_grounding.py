@@ -266,6 +266,8 @@ def part3_math_cap_binding() -> dict:
     # math at its canonical rho = 2.4.
     x_math = _optimize(w, 2.4, restarts=120)
     a_math = _aggregate(w, x_math)
+    per_dim = {t: round(x_math[t], 3) for t in ORDER}
+    per_dim_at_cap = {t: abs(x_math[t] - G_STAR) < 5e-3 for t in ORDER}
 
     return {
         "math_rho": 2.4,
@@ -273,11 +275,20 @@ def part3_math_cap_binding() -> dict:
         "gap_to_cap": round(a_math - G_STAR, 4),
         "rho_at_which_cap_binds": rho_bind,
         "rho_sweep": sweep,
+        "per_dimension_GILE_allocation": per_dim,
+        "per_dimension_each_at_cap": per_dim_at_cap,
+        "holistic_scope": "The 0.93 cap is applied HOLISTICALLY to the single GILE AGGREGATE A* = sum_t w_t*x_t "
+                          "(one number combining all four dimensions G/I/L/E), NOT to each dimension separately. "
+                          "The per-dimension allocation x* is DELIBERATELY AGNOSTIC / problem-specific: here it "
+                          "is " + str(per_dim) + " (three dims at 1.0, one far below) while the AGGREGATE sits "
+                          "exactly at the cap 0.9323. We claim ~0.93 is ideal for the OVERALL truth-aggregate of "
+                          "any given problem; we do NOT claim a per-dimension ideal, and do not extrapolate one.",
         "mechanism": "The 0.93 cap is IDENTICAL for every discipline. A* reaches it ONLY when rho is large "
                      "enough that the unconstrained optimum exceeds the cap => the cap BINDS. Math has the "
-                     "highest rho (2.4 across the 12 surveyed), so it ALONE saturates the cap. The 'math = "
-                     "0.93' match is the cap binding for the most truth-dominant field, NOT an independent "
-                     "numerical coincidence.",
+                     "highest rho (2.4 across the 12 surveyed), so it ALONE saturates the cap. For NEARLY ALL "
+                     "other fields the 0.93 optimum does NOT apply (they optimize below the cap); math is one "
+                     "of the only fields for which it does. The 'math = 0.93' match is the cap binding for the "
+                     "most truth-dominant field, NOT an independent numerical coincidence.",
         "honesty_69": "A* is a single DERIVED archetype value pinned AT the cap by construction once rho is "
                       "high; there is no sampling distribution, so a frequentist significance test of "
                       "'0.93 vs 0.93-0.95' is not well-defined. The defensible claim is the ORDERING: among "
