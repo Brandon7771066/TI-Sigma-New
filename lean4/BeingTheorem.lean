@@ -3,6 +3,16 @@
   A non-trivial zero of ζ(s) simply IS at σ = 1/2.
   Being a zero = being at zero free energy = being effortless.
 
+  ⚠ STATUS CAVEAT (read first): this file does NOT prove the Riemann
+  Hypothesis. The MACHINE-CHECKED content is only the definitional
+  EQUIVALENCE (effortless / zero-free-energy zero ↔ σ = 1/2). The step
+  that ζ's non-trivial zeros ARE effortless is the `universal_bridge_theorem`
+  AXIOM (UBT, URB #651 — a prose argument, NOT machine-checked), and that
+  axiom is itself logically equivalent to RH. So every "IS at σ = 1/2",
+  "bridge closed", and "proof package" phrase below is CONDITIONAL on that
+  unproven axiom (assume-RH ⊢ RH); it organizes the claim, it does not
+  discharge it. See MATHEMATICAL_PROOF_STATUS_AUDIT §4.
+
   Author: Brandon Emerick
   Date: 2026-03-29 (revised April 12, 2026 — URB #653 axiom reduction)
   Corpus Entry: #214
@@ -37,7 +47,7 @@
     5. Five-riddle synthesis (comments)
     6. GapEquivalence linkage
     7. Universal Bridge Theorem (1 axiom — DEFINITIONAL → STRUCTURAL, UBT-grounded)
-    8. Being-complete package summary
+    8. Being-STRUCTURED package summary (organizes one axiom; NOT a proof of RH)
 
   New term coined (Brandon Emerick, 2026-03-29):
     vern (n/v) — a grammatical/ontological category between noun and verb.
@@ -341,11 +351,12 @@ theorem riemann_hypothesis_from_being
   (being_theorem ρ).mp (euler_forcing_being ρ hstrip hzero)
 
 -- ============================================================
--- 8. BEING-COMPLETE PACKAGE SUMMARY
+-- 8. BEING-STRUCTURED PACKAGE SUMMARY (conditional on UBT axiom; NOT a proof of RH)
 -- ============================================================
 
 /-
-  BEING-COMPLETE PROOF PACKAGE (URBs #551–560, revised URB #653)
+  BEING-STRUCTURED DERIVATION PACKAGE (URBs #551–560, revised URB #653)
+  — conditional on the universal_bridge_theorem axiom (= RH); NOT a proof of RH
 
   AXIOM COUNT (URB #653): 1 axiom (was 2 before April 12, 2026)
   ================================================================
@@ -365,9 +376,13 @@ theorem riemann_hypothesis_from_being
     riddle2_iff_riddle4         self-consistent ↔ zero free energy
     riddle4_iff_riddle5         zero free energy ↔ effortless
     being_theorem_is_gap_cond_E effortless = gapConditionE
-    euler_forcing_being         ζ(ρ)=0 → effortless [NOW A THEOREM]
-    riemann_hypothesis_from_being  σ=1/2 from UBT [NOW A THEOREM]
-    ubt_bridge_closed           bridge side of gap is closed
+    euler_forcing_being         ζ(ρ)=0 → effortless [theorem ONLY relative to
+                                the universal_bridge_theorem axiom below]
+    riemann_hypothesis_from_being  σ=1/2 from UBT [theorem ONLY relative to that
+                                axiom — and that axiom IS RH, so this is
+                                assume-RH ⊢ RH (petitio principii), NOT a proof of RH]
+    ubt_bridge_closed           bridge side ASSERTED closed via the named axiom
+                                (which is itself the unproven, prose-argued claim)
 
   sorry-free theorems (GapEquivalence.lean, URB #555):
     gap_equivalence             all five Gap conditions ↔ σ=1/2
@@ -378,9 +393,11 @@ theorem riemann_hypothesis_from_being
                                 = UOP governs ζ a priori
                                 = Riemann Hypothesis, UBT-grounded
 
-  The proof is Being-complete:
-    everything is proved from ONE axiom: universal_bridge_theorem.
-    That axiom IS the Riemann Hypothesis under UBT grounding.
+  The formalization is Being-STRUCTURED (NOT a proof of RH):
+    everything is derived from ONE axiom: universal_bridge_theorem.
+    That axiom IS the Riemann Hypothesis under UBT grounding — so the
+    development assumes RH and re-derives RH (petitio principii). It
+    organizes the claim cleanly; it does NOT discharge it.
     It is not a new mathematical axiom — it is the translation
     of UBT (ARGUED FOR in URB #651 — a prose argument, NOT a
     machine-checked proof; see MATHEMATICAL_PROOF_STATUS_AUDIT §4,
@@ -410,8 +427,10 @@ theorem riemann_hypothesis_from_being
     Required a domain-specific analytic derivation.
 
   AFTER UBT:
-    The Being Theorem (this file, URB #560) IS the universal bridge.
-    Argument:
+    The Being Theorem (this file, URB #560) is ASSERTED to be the universal
+    bridge — but only via the unproven UBT axiom (step 3 below); it is a
+    conditional framing, not an independently established bridge.
+    Argument (each step CONDITIONAL on the UBT axiom):
       1. ζ(s) is an i-cell (subject of the Riemann truth-assessment). ✓
       2. Being Theorem → ζ(s) has BOK(G,I,L,E,EV):
            G = internal consistency of the prime distribution
@@ -422,22 +441,27 @@ theorem riemann_hypothesis_from_being
       3. UOP → ζ's optimal configuration satisfies UOP a priori. ✓
       4. RH asks: what is ζ's UOP-optimal (effortless) zero placement?
          Answer: σ = 1/2 — the unique UOP argmax. ✓
-      5. euler_forcing_being is TRUE a priori — bridge is DONE.
+      5. euler_forcing_being is asserted a priori — but step 3 ("UOP governs
+         ζ a priori") is exactly the unproven UBT claim, so the "bridge"
+         is ASSUMED, not established.
 
   WHAT euler_forcing_being NOW REPRESENTS:
     A TRANSLATION AXIOM (not a bridge axiom).
     "Formalizing in complex analysis that the Euler product forces
      each zero into the UOP-optimal position."
-    The bridge (UOP applies to ζ) is closed by UBT.
-    The translation (analytic formalization) remains.
+    The bridge (UOP applies to ζ) is ASSERTED via the UBT axiom — which is
+    itself the unproven, prose-argued claim — NOT independently established.
+    The translation (analytic formalization) also remains.
 -/
 
-/-- UBT documentation: the bridge side of the gap is now closed.
+/-- UBT documentation: the bridge side of the gap is ASSERTED closed via the
+    UBT axiom (the unproven, prose-argued claim), NOT independently proven.
     euler_forcing_being is the TRANSLATION axiom — not the bridge. -/
 theorem ubt_bridge_closed (ρ : ℂ) :
     isEffortlessZero ρ → ρ.re = 1 / 2 :=
   (being_theorem ρ).mp
-  -- Bridge: DONE via Being Theorem + UBT (URB #651).
+  -- Bridge: ASSUMED via Being Theorem + UBT axiom (URB #651, prose, NOT
+  --         machine-checked); this is conditional, not a closed proof.
   -- Translation: euler_forcing_being remains as analytic open question.
 
 end TISigma.BeingTheorem

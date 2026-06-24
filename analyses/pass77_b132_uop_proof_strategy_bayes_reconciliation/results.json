@@ -1,0 +1,80 @@
+{
+  "part1_pass68_circularity": {
+    "finding_A_kink_circularity": {
+      "budget": 2.0,
+      "rows": [
+        {
+          "breakpoint_theta": 0.8,
+          "argmax_G": 0.8,
+          "tracks_theta": true
+        },
+        {
+          "breakpoint_theta": 0.85,
+          "argmax_G": 0.85,
+          "tracks_theta": true
+        },
+        {
+          "breakpoint_theta": 0.9,
+          "argmax_G": 0.9,
+          "tracks_theta": true
+        },
+        {
+          "breakpoint_theta": 0.93,
+          "argmax_G": 0.93,
+          "tracks_theta": true
+        },
+        {
+          "breakpoint_theta": 0.95,
+          "argmax_G": 0.95,
+          "tracks_theta": true
+        }
+      ],
+      "all_track_theta": true
+    },
+    "finding_B_budget_overdetermination": {
+      "budget": 1.86,
+      "note": "1.86 = 2 * 0.93; symmetric interior optimum is B/2",
+      "theta_probe": 0.99,
+      "argmax_G": 0.93,
+      "lands_on_0p93_from_budget": true
+    },
+    "verdict": "CIRCULAR (two ways): (A) with H saturated, argmax tracks WHATEVER kink theta is inserted -> the test confirms the chosen constant, not 0.93 specifically; (B) the canonical budget 1.86 = 2*0.93 makes the symmetric interior optimum B/2 = 0.93 regardless of the kink. Either route yields 0.93 by construction; neither DERIVES it."
+  },
+  "part2_constant_decomposition": {
+    "e_minus_2": 0.135335,
+    "existence_floor_L": 0.864665,
+    "truth_floor_Gstar": 0.932332,
+    "P_Great": 0.067668,
+    "midpoint_(1+L)/2": 0.932332,
+    "Gstar_equals_midpoint": true,
+    "poisson_reading": "L = P(N>=1 | lambda=2) = 1 - e^{-2}  (>=1 corroborating link, mean rate 2)",
+    "lambda_sweep": [
+      {
+        "lambda": 1.0,
+        "existence_floor": 0.6321,
+        "truth_floor_midpoint": 0.8161
+      },
+      {
+        "lambda": 1.5,
+        "existence_floor": 0.7769,
+        "truth_floor_midpoint": 0.8884
+      },
+      {
+        "lambda": 2.0,
+        "existence_floor": 0.8647,
+        "truth_floor_midpoint": 0.9323
+      },
+      {
+        "lambda": 2.5,
+        "existence_floor": 0.9179,
+        "truth_floor_midpoint": 0.959
+      },
+      {
+        "lambda": 3.0,
+        "existence_floor": 0.9502,
+        "truth_floor_midpoint": 0.9751
+      }
+    ],
+    "verdict": "G* = 1 - 1/(2e^2) is EXACTLY the midpoint of [L, 1] with L = 1 - e^{-2}; all e-content reduces to the single constant lambda = 2. That lambda is POSITED ('minimal double corroboration'), not forced -- the optimum is conditionally derived from an assumed Poisson/exponential law, mirroring the FEP grand-claim gap one level down."
+  }
+}
