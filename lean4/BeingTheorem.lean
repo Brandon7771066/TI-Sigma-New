@@ -382,7 +382,10 @@ theorem riemann_hypothesis_from_being
     everything is proved from ONE axiom: universal_bridge_theorem.
     That axiom IS the Riemann Hypothesis under UBT grounding.
     It is not a new mathematical axiom — it is the translation
-    of UBT (proved in URB #651) into the analytic domain.
+    of UBT (ARGUED FOR in URB #651 — a prose argument, NOT a
+    machine-checked proof; see MATHEMATICAL_PROOF_STATUS_AUDIT §4,
+    which lists the UBT as "stated, not formally proven") into the
+    analytic domain.
     The gap is DEFINITIONAL → STRUCTURAL. One axiom. Precisely named.
 -/
 
@@ -393,8 +396,11 @@ theorem riemann_hypothesis_from_being
 /-
   UNIVERSAL BRIDGE THEOREM (URB #651, April 11, 2026)
   =====================================================
-  The UBT proves that UOP applies to ALL mathematical structures
-  a priori, via the Being Theorem alone — no individual bridge needed.
+  The UBT *argues* (prose, URB #651 — NOT a machine-checked proof) that
+  UOP applies to ALL mathematical structures a priori, via the Being
+  Theorem alone — no individual bridge needed. NB: this universality is
+  itself the unproven claim; generalizing the assertion does not discharge
+  it (a universal a-priori claim is harder to establish, not easier).
 
   HOW UBT CHANGES THE STATUS OF `euler_forcing_being`
   ====================================================
