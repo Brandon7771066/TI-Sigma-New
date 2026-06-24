@@ -1,0 +1,266 @@
+{
+  "run_date": "2026-06-24T16:25:19.484849",
+  "model": "C_elegans_rich_club_top8_quantum_mood_amplifier",
+  "subject_neurons": [
+    "AVD",
+    "AVE",
+    "AIZ",
+    "AIA",
+    "AIN",
+    "RIB",
+    "SMDD",
+    "RIF"
+  ],
+  "n_qubits": 8,
+  "strong_pair": [
+    "AVD",
+    "AIA"
+  ],
+  "strong_pair_idx": [
+    0,
+    3
+  ],
+  "n_seeds": 16,
+  "n_steps": 10,
+  "burn": 3,
+  "gamma": 0.42,
+  "gain": 2.2,
+  "umax": 0.85,
+  "setpoint": 0.85,
+  "open_loop_const_u_per_arm": {
+    "quantum": 0.7131146263757561,
+    "classical": 0.85
+  },
+  "obs_noise": 0.02,
+  "arms": {
+    "quantum": {
+      "no_control": {
+        "mood_mean": 1.3335212694780044e-32,
+        "mood_ci95": [
+          1.3335212694780044e-32,
+          1.3335212694780044e-32
+        ],
+        "energy_mean": 0.0
+      },
+      "closed_loop": {
+        "mood_mean": 0.6031249513187766,
+        "mood_ci95": [
+          0.6022802923391244,
+          0.6039392726403962
+        ],
+        "energy_mean": 7.058888895848275
+      },
+      "open_loop": {
+        "mood_mean": 0.568244560589326,
+        "mood_ci95": [
+          0.568244560589326,
+          0.568244560589326
+        ],
+        "energy_mean": 7.131146263757559
+      },
+      "sham": {
+        "mood_mean": 0.4061070629156636,
+        "mood_ci95": [
+          0.4034668272338111,
+          0.4085877566016054
+        ],
+        "energy_mean": 7.058888895848275
+      },
+      "wrong_tgt": {
+        "mood_mean": 0.36957515833871213,
+        "mood_ci95": [
+          0.36883789592844557,
+          0.37029589582213185
+        ],
+        "energy_mean": 7.228558684820988
+      }
+    },
+    "classical": {
+      "no_control": {
+        "mood_mean": 4.2581618334034236e-33,
+        "mood_ci95": [
+          4.2581618334034236e-33,
+          4.2581618334034236e-33
+        ],
+        "energy_mean": 0.0
+      },
+      "closed_loop": {
+        "mood_mean": 0.39540004695255765,
+        "mood_ci95": [
+          0.39540004695255765,
+          0.39540004695255765
+        ],
+        "energy_mean": 8.499999999999998
+      },
+      "open_loop": {
+        "mood_mean": 0.39540004695255765,
+        "mood_ci95": [
+          0.39540004695255765,
+          0.39540004695255765
+        ],
+        "energy_mean": 8.499999999999998
+      },
+      "sham": {
+        "mood_mean": 0.1501930689354456,
+        "mood_ci95": [
+          0.1501930689354456,
+          0.1501930689354456
+        ],
+        "energy_mean": 8.499999999999998
+      },
+      "wrong_tgt": {
+        "mood_mean": 0.08920517270657614,
+        "mood_ci95": [
+          0.08920517270657614,
+          0.08920517270657614
+        ],
+        "energy_mean": 8.499999999999998
+      }
+    }
+  },
+  "contrasts": {
+    "quantum": {
+      "efficacy_vs_baseline": {
+        "a": "closed_loop",
+        "b": "no_control",
+        "delta_mood": 0.6031249513187766,
+        "ci95": [
+          0.6023373159623399,
+          0.6039611779262203
+        ],
+        "significant": true
+      },
+      "locus_specificity": {
+        "a": "closed_loop",
+        "b": "sham",
+        "delta_mood": 0.19701788840311296,
+        "ci95": [
+          0.19433605460834358,
+          0.19959270606176538
+        ],
+        "significant": true
+      },
+      "target_specificity": {
+        "a": "closed_loop",
+        "b": "wrong_tgt",
+        "delta_mood": 0.23354979298006448,
+        "ci95": [
+          0.2323476719171875,
+          0.23478721526828492
+        ],
+        "significant": true
+      },
+      "value_of_feedback_equal_energy": {
+        "a": "closed_loop",
+        "b": "open_loop",
+        "delta_mood": 0.034880390729450546,
+        "ci95": [
+          0.03411853471173821,
+          0.03567777321844779
+        ],
+        "significant": true
+      }
+    },
+    "classical": {
+      "efficacy_vs_baseline": {
+        "a": "closed_loop",
+        "b": "no_control",
+        "delta_mood": 0.39540004695255765,
+        "ci95": [
+          0.39540004695255765,
+          0.39540004695255765
+        ],
+        "significant": true
+      },
+      "locus_specificity": {
+        "a": "closed_loop",
+        "b": "sham",
+        "delta_mood": 0.24520697801711205,
+        "ci95": [
+          0.24520697801711205,
+          0.24520697801711205
+        ],
+        "significant": true
+      },
+      "target_specificity": {
+        "a": "closed_loop",
+        "b": "wrong_tgt",
+        "delta_mood": 0.3061948742459815,
+        "ci95": [
+          0.3061948742459815,
+          0.3061948742459815
+        ],
+        "significant": true
+      },
+      "value_of_feedback_equal_energy": {
+        "a": "closed_loop",
+        "b": "open_loop",
+        "delta_mood": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "significant": false
+      }
+    }
+  },
+  "quantum_signatures": {
+    "quantum": {
+      "cut_negativity_mean": 4.123205042771623,
+      "cut_negativity_ci95": [
+        4.119482478601726,
+        4.1267680438371
+      ],
+      "entangled": true,
+      "pair_negativity_mean": 0.0
+    },
+    "classical": {
+      "cut_negativity_mean": 0.0,
+      "cut_negativity_ci95": [
+        0.0,
+        0.0
+      ],
+      "entangled": false,
+      "pair_negativity_mean": 0.0
+    }
+  },
+  "quantum_vs_classical_signature_gap": {
+    "cut_negativity": {
+      "delta": 4.123205042771623,
+      "ci95": [
+        4.119482346782898,
+        4.126688791265496
+      ],
+      "significant": true
+    },
+    "pair_negativity": {
+      "delta": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "significant": false
+    }
+  },
+  "isolated_pair_bell": {
+    "pair": [
+      "AVD",
+      "AIA"
+    ],
+    "best_CHSH_S": 2.8284271247461907,
+    "best_coupling_phi": 2.356194490192345,
+    "CHSH_S_at_native_edge_weight": 2.493586474233397,
+    "tsirelson_bound": 2.8284271247461903,
+    "classical_LHV_bound": 2.0,
+    "best_violates_2": true,
+    "native_violates_2": true
+  },
+  "steering_quantum_vs_classical": {
+    "delta_mood": 0.20772490436621893,
+    "ci95": [
+      0.2069224774373568,
+      0.20855318046345508
+    ],
+    "significant": true
+  }
+}

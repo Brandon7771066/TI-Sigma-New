@@ -1,0 +1,15 @@
+{
+  "hardware_status": "UNAVAILABLE",
+  "reason": "IBM token authenticates but no usable instance/plan is attached (open plan retired; ibm_quantum_platform and ibm_cloud channels both return 'No matching instances found'). Attach an IBM Quantum instance to the account to run.",
+  "pair": [
+    "AVD",
+    "AIA"
+  ],
+  "coupling_phi": 2.356194490192345,
+  "ideal_chsh_S": 2.8284271247461903,
+  "classical_LHV_bound": 2.0,
+  "tsirelson_bound": 2.8284271247461903,
+  "circuit": "amplifier 2-qubit primitive: ry(pi,0); rxx(phi,0,1); ryy(phi,0,1) + Horodecki-optimal CHSH settings (4 circuits)",
+  "fabricated_data": false,
+  "note": "Re-run analyses/pass77_b129_quantum_connectome_mood_amplifier/hw_confirm.py once an instance is available; it submits the job, saves job_id, and records real counts. NO hardware numbers are reported until a real job completes."
+}
