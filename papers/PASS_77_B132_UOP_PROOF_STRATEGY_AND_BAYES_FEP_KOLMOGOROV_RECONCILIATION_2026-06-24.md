@@ -5,6 +5,8 @@
 **Anchors / inputs:** `lean4/BeingTheorem.lean` (honesty fix this batch), `papers/MATHEMATICAL_PROOF_STATUS_AUDIT_2026-05-15.md` (authoritative), `papers/URB_TI_SIGMA_BAYESIANISM_SELF_DEFEAT_518.md` (13 arguments), `papers/URB_UOP_FREE_ENERGY_BRIDGE_559.md`, URB #525 (UOP↔FEP), `papers/URB_523_EXISTENCE_VS_TRUTH_LCC_GILE_GAP.md`, `papers/URB_521_RATIONAL_TRANSCENDENTAL_BOUNDARY_PD.md`, `analyses/uop_phase_transition_v1/` (Pass-68 test).
 **Package:** `analyses/pass77_b132_uop_proof_strategy_bayes_reconciliation/` (`uop_constant_audit.py`, `results.json`).
 
+> **B133 ERRATUM/REFINEMENT (2026-06-24):** §A.3's "the UOP *strictly generalizes* the FEP ⇒ inherits its unproven grand claim ⇒ a-fortiori unproven" holds **only** under the antecedent "the UOP is *defined as* a generalization of the FEP." Per Brandon, the FEP was **inspiration, not definition**: the UOP is **formally independent**. Under that reading the correct relation is "FEP = a limit/special-case of the UOP (to be *derived*)," and the UOP's burden is its **own** posits ({λ=2, the log-concave functional form}), **not** the FEP's gap. The trilemma (§A.1) likewise concerns the *bridge* `UOP ⊢ RH/NS` (the converse project), not the UOP's *definition*, which is grounded in ZFC independently. See `papers/PASS_77_B133_GROUNDING_THE_UOP_ZFC_INDEPENDENCE_FROM_FEP_AXIOMATIC_ADVANTAGE_OVER_BAYES_AND_GENERALIZATION_2026-06-24.md` and the companion Key Paper `papers/AXIOMATIC_FAITHFULNESS_AND_DEFINITIONAL_REALISM_CANONICAL_2026-06-24.md`.
+
 ---
 
 ## 0. The two questions
