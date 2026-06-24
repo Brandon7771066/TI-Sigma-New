@@ -1,0 +1,144 @@
+{
+  "config": {
+    "fs": 250.0,
+    "f0": 40.0,
+    "pole_r": 0.92,
+    "t_sec": 8.0,
+    "gc_lag": 6,
+    "tx_lag": 5,
+    "band": [
+      30.0,
+      50.0
+    ],
+    "n_dyads": 20,
+    "alpha": 0.01,
+    "c_main": 0.15,
+    "seed": 20260624
+  },
+  "config_sha": "7cd4ef400d40",
+  "conditions": {
+    "directional_LCC": {
+      "params": {
+        "c_h2l": 0.15
+      },
+      "delta_gc_mean": 0.08761153291458863,
+      "delta_gc_sd": 0.032647834102417846,
+      "delta_gc_t": 12.001123418810318,
+      "delta_gc_p": 0.0,
+      "delta_gc_ci95": [
+        0.07359039388592546,
+        0.10146861690525061
+      ],
+      "psi_mean": 1.475565846113852,
+      "psi_t": 10.800605814663925,
+      "psi_p": 0.0,
+      "reject_dGC": true
+    },
+    "common_input": {
+      "params": {
+        "c_h2l": 0.0,
+        "common": 0.8
+      },
+      "delta_gc_mean": 0.00011634315522724391,
+      "delta_gc_sd": 0.002361543824116965,
+      "delta_gc_t": 0.2203229947699182,
+      "delta_gc_p": 0.8256196128902067,
+      "delta_gc_ci95": [
+        -0.0008822404089095674,
+        0.001135898610349483
+      ],
+      "psi_mean": 0.0658262344438433,
+      "psi_t": 0.5797798162796536,
+      "psi_p": 0.5620631103463773,
+      "reject_dGC": false
+    },
+    "no_coupling": {
+      "params": {
+        "c_h2l": 0.0
+      },
+      "delta_gc_mean": -0.0004206332953964785,
+      "delta_gc_sd": 0.0019207129546849934,
+      "delta_gc_t": -0.9793911576553433,
+      "delta_gc_p": 0.32738674445225646,
+      "delta_gc_ci95": [
+        -0.001228067092414889,
+        0.0004046938740151588
+      ],
+      "psi_mean": 0.3417610472558629,
+      "psi_t": 2.960790028022955,
+      "psi_p": 0.003068510580737094,
+      "reject_dGC": false
+    },
+    "snr_confound": {
+      "params": {
+        "c_h2l": 0.0,
+        "sensor_high": 0.1,
+        "sensor_low": 1.5
+      },
+      "delta_gc_mean": -5.853738374397803e-05,
+      "delta_gc_sd": 0.002473118964786901,
+      "delta_gc_t": -0.10585303104317477,
+      "delta_gc_p": 0.9156989604131065,
+      "delta_gc_ci95": [
+        -0.0011347477118298225,
+        0.0009640399461506089
+      ],
+      "psi_mean": 0.43153160943469865,
+      "psi_t": 3.073110037021875,
+      "psi_p": 0.0021184035866443907,
+      "reject_dGC": false
+    }
+  },
+  "power": {
+    "directional_C0.15_power": {
+      "rate": 1.0,
+      "n_reps": 1000,
+      "hits": 1000,
+      "wilson_ci95": [
+        0.9962,
+        1.0
+      ]
+    },
+    "no_coupling_FPR": {
+      "rate": 0.019,
+      "n_reps": 1000,
+      "hits": 19,
+      "wilson_ci95": [
+        0.0122,
+        0.0295
+      ]
+    },
+    "common_input_FPR": {
+      "rate": 0.012,
+      "n_reps": 1000,
+      "hits": 12,
+      "wilson_ci95": [
+        0.0069,
+        0.0209
+      ]
+    },
+    "snr_confound_FPR": {
+      "rate": 0.017,
+      "n_reps": 1000,
+      "hits": 17,
+      "wilson_ci95": [
+        0.0106,
+        0.0271
+      ]
+    },
+    "power_curve_vs_C": {
+      "0.00": 0.0067,
+      "0.06": 1.0,
+      "0.10": 1.0,
+      "0.15": 1.0,
+      "0.20": 1.0,
+      "0.30": 1.0
+    }
+  },
+  "hrv_surrogate": {
+    "status": "NOT_SIMULATED",
+    "note": "URB-620 E3 predicts >=15% host HRV/LCC-surrogate uplift; left out of scope because no independent HRV generative model exists here -- any % would be model-baked/circular. Recover-the-drive (delta_GC) is the part this package validates.",
+    "urb620_target_pct": 15.0
+  },
+  "runtime_sec": 79.1
+}
