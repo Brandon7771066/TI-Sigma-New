@@ -2,7 +2,7 @@
 
 **Pass 77 · Batch B128 · 2026-06-23 · CANDIDATE (NOT ratified; canonical principle count unchanged at 79)**
 
-> Plain-language, secular. Written to the #69 brutal-honesty standard: framework-internal claims are flagged; every historical and empirical case below is reported with its real *limits* as well as its strengths; no fabricated citations or page numbers. The acupuncture/EFT evidence is reported as mixed-to-weak, NOT as "confirmed."
+> Plain-language, secular. Written to the #69 brutal-honesty standard: framework-internal claims are flagged; every historical and empirical case below is reported with its real *limits* as well as its strengths; no fabricated citations or page numbers. The acupuncture/EFT evidence is reported as **genuinely contested and mixed** — stronger than reflexive dismissal allows, weaker than enthusiasts announce — NOT as "confirmed" and NOT as "debunked." (This corrects an earlier draft of this section that leaned one-sidedly skeptical, which was itself a #69 cherry-picking failure.)
 
 ## The claim in one sentence
 
@@ -21,7 +21,7 @@ Empiricism tells you *how* to find out what is real (observe carefully, test, ke
 Disciplined empirical achievement long predates the modern materialist settlement:
 
 - **Architecture/engineering** — Roman concrete and the Pantheon dome, Gothic cathedrals, aqueducts; Roman concrete's durability is only now being reverse-engineered. **(verified.)**
-- **Agriculture** — terracing, crop rotation, polycultures, paddy rice sustained for millennia solved long-run soil/water problems that some industrial monocultures have *re-created* (erosion, depletion). **#69 BALANCE:** the same industrial science produced the Green Revolution, which averted famine for hundreds of millions — so the verdict is *both*, and "permaculture simply beats modern farming" is an overclaim.
+- **Agriculture** — terracing, crop rotation, polycultures, cover-cropping, paddy rice sustained fertility for millennia and solved long-run soil/water problems that industrial monoculture has *re-created* (erosion, depletion, creeping *dependence* on ever-larger chemical inputs). **#69 BALANCE:** the "Green Revolution was *necessary* to avert famine" rejoinder overstates the case — long-running trials (e.g. Rodale's 40-year Farming Systems Trial) find well-managed regenerative/organic systems *matching* conventional yields and *out*-yielding in drought while building soil carbon, so — in those systems and conditions — the chemical-dependency path was a choice, not the only road. The remaining honest caveat: global meta-analyses (Seufert et al. 2012, *Nature*) still show an organic yield gap (~20-25% on average, narrowing under best management) — so "regenerative out-produces industrial farming at any scale" is *not* settled; what *is* well-supported is that high yields and soil-building need not be opposed and the input-dependency was avoidable.
 - **Contemplative traditions** — yoga and Buddhist/Hindu meditative disciplines are systematic first-person investigations of mind; modern psychology confirms real effects (stress, attention), though effect sizes are debated and the *metaphysics* is separable from the *practice*.
 - **Traditional medicine** — mostly unvalidated, *but* **artemisinin** (antimalarial, Nobel 2015) was isolated from a TCM herb. Mining old traditions for what survives testing is correct; dismissing them unexamined is not.
 
@@ -36,16 +36,16 @@ When a metaphysics fixes in advance what *kinds* of thing may be real, it become
 - **Continental drift** dismissed for decades for lack of an *acceptable* mechanism.
 - **Meteorites** waved off by academies because rocks "do not fall from the sky."
 
-This is the PDU-1 resist-then-relabel pattern from the metaphysical side: ruled out for clashing with the reigning notion of "the physical," then absorbed once the evidence forced it in. **#69 carve-out:** "germ theory was rejected for being *non*-physical" is **not** a clean example — germs are physical and the resistance was paradigm-bound, not metaphysical — so it is dropped in favour of cases that actually fit.
+This is the PDU-1 resist-then-relabel pattern from the metaphysical side: ruled out for clashing with the reigning notion of "the physical," then absorbed once the evidence forced it in. **#69 — germ theory now INCLUDED (revised):** the objection "germs are physical, so this isn't a metaphysical exclusion" assumes *today's* settled meaning of "physical." But PDU-1's whole point is that "physical" is bound to the present: to the 1850s gatekeepers (miasma orthodoxy, Semmelweis broken), invisible microbial agents were exactly as *un*-physical as action-at-a-distance was to Newton's critics. What counts as a legitimate physical cause is precisely what keeps shifting — so germ theory *does* fit the gatekeeping pattern, and the earlier draft's exclusion of it was a mistake.
 
 ### 4. The live case: "energy medicine" dismissed by metaphysics, not by data
 
 The methodological principle (the load-bearing point) is symmetric and uncomfortable for **both** camps:
 
 - **Against the dismissers:** ruling out an intervention *a priori* because it "sounds non-physical" is the gatekeeping error. The legitimate test is empirical — does it work, and by what mechanism?
-- **Against the enthusiasts (#69, harder):** when tested, the results are **mixed-to-weak, not vindication**. *Acupuncture* (most-studied) gives real symptom relief for some conditions (some chronic pain, nausea), but well-designed trials repeatedly find **sham acupuncture works about as well**, undercutting the specific "energy-meridian" mechanism even where the symptom effect is real. *EFT/"tapping"* has a few positive trials, but **dismantling studies suggest the acupoint-tapping component adds little** beyond the bundled exposure/breathing.
+- **The evidence, fairly consulted (#69):** reflexive dismissal does not survive the better data, but neither does triumphalism. *Acupuncture* (most-studied) is genuinely **contested, not debunked**: the largest *sham-controlled* synthesis — an individual-patient-data meta-analysis of ~21,000 patients (Vickers et al. 2018) — found acupuncture **statistically superior to sham** as well as to no-acupuncture for several chronic-pain conditions; NICE recommends it for chronic primary pain (2021) and Cochrane supports it for migraine prophylaxis (major-hospital uptake is context, not itself evidence). **Caveat the other way:** the true-vs-sham *margin is small*, so specific-effect-vs-powerful-placebo and the "meridian" mechanism stay debated. *EFT/"tapping"* has a substantial trial literature and several meta-analyses reporting benefit for anxiety/PTSD (e.g. Clond 2016); the live, unresolved questions are whether the acupoint-tapping *component* adds anything beyond the bundled exposure/breathing (dismantling studies **disagree**, not "inert") and that much positive work comes from a small circle of affiliated researchers (a fair independence caution).
 
-So the honest statement is **not** "acupuncture and tapping are confirmed"; it is that they deserve — and increasingly get — *fair empirical testing instead of metaphysical exclusion*, with the verdict so far partial and mechanism-poor. The principle holds whichever way the trials fall: **decide by evidence, not by whether it sounds physical.**
+So the honest statement is **neither** "acupuncture and tapping are proven" **nor** "they have been debunked": the evidence is real, mixed, and genuinely live — stronger than reflexive dismissal allows, weaker than enthusiasts announce. That is exactly the state in which the methodological rule earns its keep: **decide by evidence, not by whether it sounds physical.**
 
 ## Relationship to other principles
 
@@ -63,11 +63,11 @@ So the honest statement is **not** "acupuncture and tapping are confirmed"; it i
 
 - EMD-1 is a **credit-reassignment and dissolving** result; it does not make any non-physical claim true.
 - The agriculture and traditional-medicine cases are deliberately reported **two-sided**; do not quote them as one-sided wins.
-- The acupuncture/EFT evidence is **mixed-to-weak**; the "valid concept, wrongly ignored" framing is endorsed ONLY as *deserves-testing*, never as *established*.
-- The germ-theory example is explicitly **excluded** as not fitting the "non-physical" framing.
+- The acupuncture/EFT evidence is **genuinely contested and live** (better than reflexive dismissal, weaker than enthusiast claims); endorsed as *deserves-testing-and-is-partly-supported*, never as *established/proven* and never as *debunked*.
+- The germ-theory example is now **included** (via PDU-1's present-bound "physical"), correcting the earlier draft that wrongly excluded it.
 
 ## Literature (real, named — no fabricated specifics)
 
-Newton/Faraday/Mendel/Maxwell's documented non-materialist convictions; Ibn al-Haytham's *Book of Optics*; Eratosthenes; the Green Revolution (Borlaug); Tu Youyou / artemisinin (Nobel 2015); the large pragmatic acupuncture trials reporting real≈sham (e.g., the German acupuncture trials) and the acupuncture systematic-review literature; EFT dismantling-study critiques; Wegener and the continental-drift reception; the historical reception of meteorites; the "spooky action at a distance" episode.
+Newton/Faraday/Mendel/Maxwell's documented non-materialist convictions; Ibn al-Haytham's *Book of Optics*; Eratosthenes; the Green Revolution (Borlaug); the Rodale Institute Farming Systems Trial (proponent source, noted) and Seufert, Ramankutty & Foley 2012 (*Nature*) on the organic yield gap; Tu Youyou / artemisinin (Nobel 2015); Vickers et al. 2018 individual-patient-data meta-analysis (acupuncture superior to sham for chronic pain), NICE NG193 (2021), Cochrane (Linde et al.) acupuncture-for-migraine reviews, and the German pragmatic acupuncture trials (real-vs-sham margin small); Clond 2016 and the EFT/energy-psychology meta-analytic literature plus the dismantling-study debate (and its researcher-independence caveat); Semmelweis and the germ-theory/miasma reception; Wegener and the continental-drift reception; the historical reception of meteorites; the "spooky action at a distance" episode.
 
 **Anchor for the corpus ledger entry §7.7.312.**
