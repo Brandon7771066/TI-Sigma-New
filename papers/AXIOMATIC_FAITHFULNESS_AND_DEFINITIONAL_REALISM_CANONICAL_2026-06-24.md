@@ -62,6 +62,16 @@ Hence **semantic precision is not pedantry.** Distinguishing the conditional fro
 
 ---
 
+## 4.1 The arithmetic face — Revelation by Mere Arithmetic Identity (RAI-1, candidate, B134)
+
+NAD-1 has an arithmetic-facing twin. A huge amount of insight arrives via equations that are, *as algebra*, trivially-true rearrangements or definitions — and whose force comes **not from the algebra but from the independent characterization of their terms.**
+
+> **RAI-1.** The *same* equation is **content-free** when its terms are mutually defined by it, and **content-bearing** when its terms are anchored independently and the identity then asserts a real regularity. Which reading holds is the objective, joint-carving fact.
+
+The canonical specimen is **Ohm's Law, `V = I·R`**: read as the *definition* `R ≡ V/I` it is a tautology true of every conductor (zero content); read as Ohm's *empirical law* (R an independently-fixed material constant, asserted constant in V) it is a substantive, **falsifiable** claim that *fails* for non-ohmic devices (diodes, thermistors, a hot filament). Same five symbols; a "merely semantic" choice of reading flips whether "Ohm's Law holds here" is even true — the §4 lesson in miniature. Siblings (all real): **Little's Law** `L=λW`; **Bayes' theorem** as a rearrangement of the product rule (whose trivial-looking form smuggles in the single-global-joint axiom of §3 — a *cautionary* RAI-1 case); **Newton's `F=ma`** (Mach's definition-vs-law critique); the **free-energy decomposition** `F = complexity − accuracy`; and the corpus's own `HEM = budget − GILE` (B133 §I). **Anti-cheat:** the content never comes from the algebra — a genuine reveal requires at least one term measurable *independently* of the identity, so the identity *could* come out false (Ohm's `R` passes; a pure definition fails). See `papers/PASS_77_B134_*` §A; falsifier RAI-1-F1 OPEN.
+
+---
+
 ## 5. Synthesis, lineage, falsifiers
 
 **Synthesis.** Three claims, one root: a formal system's axioms/definitions are answerable to the structure they model. The conditional is eternal; the categorical and the applied are hostage to faithfulness; faithfulness is objective but must be earned. This is *why* TI Sigma needs Indeterminate/TRALSE and a complex/imaginary PD axis: classical bivalent + single-joint-measure probability is an **unfaithful** model of a Tralse reality (TRG-1/TOF-1), and the unfaithfulness is a *definitional* fact, demonstrable (Fine/Bell), not a matter of taste.

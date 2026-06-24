@@ -113,6 +113,19 @@ Stated as a falsifiable claim so it isn't itself just a vibe:
 - **Falsifier NAD-1-F2:** show the PD re-carving (or FEP-reproduction) is in fact a synonym-swap — same predictions, same distinctions, no orphan rescued — which would make *this paper's* showcase examples arbitrary after all.
 - **Status:** candidate idea, **not** a canonical principle; canonical count unchanged (79). It's really the epistemic license the whole truth-labels program was already operating under, finally said out loud.
 
+### 9.2 The arithmetic version of the same point (RAI-1 — Revelation by Mere Arithmetic Identity)
+
+Here's the same lesson wearing a math hat. Some of the most useful equations in science are, *as algebra*, completely trivial — and they're still revelatory. The catch: the revelation comes from what the **letters mean independently**, never from the algebra.
+
+Take the most famous one, **Ohm's Law: `V = I·R`** (voltage = current × resistance).
+
+- If you *define* resistance as `R = V/I`, then `V = I·R` is just `V = V`. A tautology. It's true for a lightbulb, a banana, a puddle — everything. It tells you **nothing.**
+- But Ohm meant something bigger: that `R` is a **fixed property of the material** (set by what it's made of and its shape), and that it **stays the same** as you crank up the voltage. *That* is a real, riskable claim — and it's **false** for lots of things (a diode, a hot lightbulb filament, your skin). For those, `V/I` keeps changing. The *law* breaks even though the *definition* never could.
+
+Same five symbols. One reading is empty, the other is a discovery — and the only difference is whether `R` is **pinned down independently** or just **defined into existence.** That's *exactly* the "arm ≠ hand / is this a real joint or a relabel?" point from §9, now in arithmetic. Other examples that work the same way: **Little's Law** (`L = λ·W` in queues), **Bayes' theorem** (a one-line rearrangement that quietly assumes one shared probability-world — the assumption that *breaks* for quantum systems), **Newton's `F = ma`** (Mach's old worry: definition or law?), and our own **`HEM = budget − GILE`** (B133 — trivial rearrangement, but it teaches that Existence is what's *left over* when you chase Truth, not a separate thing to grab at).
+
+**The honesty rule (so this can't be abused):** you don't get to manufacture insight by renaming. A *real* arithmetic reveal needs at least one letter you can **measure on its own**, so the equation could actually come out **wrong**. Ohm's `R` passes that test; a pure definition never can. Full write-up: `papers/PASS_77_B134_*` §A (RAI-1, candidate, count unchanged 79; falsifier RAI-1-F1 open).
+
 ---
 
 ## 10. The thirty-second recap

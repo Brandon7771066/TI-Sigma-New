@@ -1,0 +1,88 @@
+{
+  "constants": {
+    "G*_radiant_cap": 0.932332
+  },
+  "part1_always_works_regardless": {
+    "n_instances": 3000,
+    "frac_hypotheses_hold": 1.0,
+    "frac_unique_optimum": 1.0,
+    "frac_interior_threshold_rho_gt_k_over_2_correct": 0.9997,
+    "optimum_class_counts": {
+      "lower_boundary": 128,
+      "interior_below_cap": 279,
+      "at_cap": 2593
+    },
+    "mean_rho_when_cap_binds": 2.863,
+    "mean_rho_when_cap_not_binds": 0.68,
+    "cap_binds_only_for_higher_rho": true,
+    "interpretation": "Across a broad random admissible class the theorem's hypotheses hold and a UNIQUE optimum exists in EVERY instance: the UOP 'always works regardless' of domain. The FORM is invariant; only the LOCATION (lower-boundary / interior-below-cap / at-cap) is domain-specific, set by rho (truth-dominance) and the tradeoff slope k. The cap binds ONLY for high rho \u2014 consistent with 'math nearly alone saturates it' (B133).",
+    "honesty_69": "This shows the hypotheses are MILD/generic on the sampled class; it does NOT prove every real problem admits a faithful UOP casting. That casting/representation theorem (R1) is the genuine OPEN obligation, stated as such in the paper."
+  },
+  "part2_subsumption_special_cases": {
+    "no_cap_high_rho_to_truth_corner": {
+      "sweep": [
+        {
+          "rho": 1,
+          "argmax_G": 1.0
+        },
+        {
+          "rho": 2,
+          "argmax_G": 1.0
+        },
+        {
+          "rho": 5,
+          "argmax_G": 1.0
+        },
+        {
+          "rho": 20,
+          "argmax_G": 1.0
+        },
+        {
+          "rho": 100,
+          "argmax_G": 1.0
+        }
+      ],
+      "reaches_G_eq_1": true,
+      "note": "alpha=0, rho large => optimum at G=1: pure truth-max (expected-utility / MLE corner)."
+    },
+    "low_rho_to_existence_corner": {
+      "sweep": [
+        {
+          "rho": 0.5,
+          "argmax_G": 0.9323
+        },
+        {
+          "rho": 0.1,
+          "argmax_G": 0.0
+        },
+        {
+          "rho": 0.02,
+          "argmax_G": 0.0
+        },
+        {
+          "rho": 0.001,
+          "argmax_G": 0.0
+        }
+      ],
+      "reaches_G_eq_0": true,
+      "note": "rho->0 => optimum at G=0: pure existence."
+    },
+    "fep_structural_limit": {
+      "argmax_numeric": 0.4285,
+      "argmax_closed_form": 0.4286,
+      "matches": true,
+      "note": "accuracy-minus-complexity (variational free energy) shares the SAME interior-optimum structure. FEP is INSPIRATION; the UOP owns its own posits and is formally independent (B133 \u00a7A)."
+    },
+    "interpretation": "Major optimization frameworks are LIMITS / special cases of the one UOP schema (truth-only, existence-only, free-energy). Universality by SUBSUMPTION \u2014 no claim that any object is conscious."
+  },
+  "part3_icell_bypass_no_consciousness": {
+    "problem": "firm effort allocation: quality (G_D) vs cash runway (H_D=1-k*q); NO consciousness anywhere",
+    "rho": 2.4,
+    "k": 0.25,
+    "argmax_q": 0.9325,
+    "unique_optimum": true,
+    "at_cap": true,
+    "interpretation": "The IDENTICAL Interior-Optimum Theorem governs a non-conscious resource problem. The UOP schema requires only (X, G_D, H_D, rho_D) well-defined \u2014 never that the variable is an i-Cell. So universality is established WITHOUT the claim 'all mathematical statements are i-Cells' (route A), via the schema's domain-agnostic form (route B)."
+  },
+  "strategy_note": "UNV-1: prove UOP universality via the SCHEMA ('always works regardless'), bypassing 'all math statements are i-Cells'. Proof obligations R1 (representation/casting) OPEN; R2 (interior-optimum) lemma-level + shown generic here; R4 (subsumption) demonstrated."
+}
