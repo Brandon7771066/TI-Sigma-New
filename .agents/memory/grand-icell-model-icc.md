@@ -45,10 +45,39 @@ TTI-1 label in {1,i,−1,−i}.
   perturbed), so it isn't a relabelled MR overall-label.
 
 - **It is REPRESENTATIONAL, not empirical.** Value = faithfulness + parsimony of
-  the join; predicts NO new fact (anti-numerology). Falsifier ICC-F1 (OPEN): must
-  distinguish two i-Cells that ALL sub-models conflate, outcome-blind — else it's
-  faithful re-organisation, not an advance. Stays CANDIDATE; count stays 79. Does
-  NOT claim i-Cells conscious nor "all math are i-Cells" (UNV-1 Route A rejected).
+  the join; predicts NO new fact (anti-numerology). Stays CANDIDATE; count stays
+  79. Does NOT claim i-Cells conscious nor "all math are i-Cells" (UNV-1 Route A
+  rejected).
+
+## ICC-F1 RESOLVED — NEGATIVE (B142): the bolt is a re-indexing, not new info
+
+- **Strong ICC-F1 is provably UNMEETABLE.** The five sub-models are JOINTLY a
+  LOSSLESS (injective) encoding of ICC: `M`←64D-matrix (identity), HEM `D1..D4`←
+  8-Tralsebit block, `D5,D6`←Crystal-8 shell; scalar-PD/TTI-1 are derived from M.
+  So `reconstruct_from_submodels(project(ic))==ic` exactly ⇒ NO pair of distinct
+  i-Cells is conflated by all five ⇒ the pair ICC-F1 asks for cannot exist. The
+  "bolt" (join along GILE index) adds ZERO bits over the tuple ⟨M,H,shell⟩.
+- **No-free-lunch corollary:** because the battery losslessly re-encodes ICC, ANY
+  task computable from ICC is computable from the sub-models COLLECTIVELY ⇒ ICC
+  can NEVER beat the full battery. ICC = faithful UNIFIER (organisational value
+  only), NOT an informational advance.
+- **The bolt's cross-moment** `C=Σ_g trueness_g(M)·H[D_g]` does distinguish a
+  same-M same-HEM-multiset PERMUTED pair that an AGGREGATE-HEM `(M,ΣH)` store
+  conflates (integrity vs dissonance) — BUT the real 8-Tralsebit already
+  GILE-orders HEM and also distinguishes it, so the bolt beats only a weaker
+  store the corpus doesn't use. Don't oversell L2.
+- **KEY LESSON (durable):** subsumption-completeness is INCOMPATIBLE with an
+  informational advance. A rep that projects losslessly onto every sub-model
+  contains exactly their union ⇒ can't out-distinguish them collectively. To gain
+  power it MUST store a primitive its sub-models can't reconstruct (breaking exact
+  subsumption). **Why:** this is the no-free-lunch tradeoff for the corpus's
+  representation-stacking habit. **Apply:** before building a richer unifier, decide
+  — faithful subsumption OR new power, not both.
+- **NEW falsifier ICC-F2 (OPEN, replaces strong ICC-F1):** add a decision-relevant
+  primitive DOF provably NOT reconstructable from the 5 outputs (breaks the L0
+  injectivity) AND show it predicts a held-out outcome-blind fact. Candidate: make
+  the cross-moment C a stored field, not a derived one. Package
+  `analyses/pass77_b142_icc_f1/` imports the REAL B137 ICell (no re-impl drift).
 
 ## Crystal / Graph hosting verdict (recurring question)
 

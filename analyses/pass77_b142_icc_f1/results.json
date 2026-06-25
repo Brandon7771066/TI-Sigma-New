@@ -1,0 +1,67 @@
+{
+  "batch": "Pass-77 B142 -- ICC-F1 test (honest, deterministic)",
+  "level0_battery_lossless": {
+    "n_random_icells": 400,
+    "reconstruction_exact_for_all": true,
+    "worst_abs_reconstruction_error": 0.0,
+    "implication": "the 5 sub-models are a LOSSLESS (injective) encoding of ICC; therefore NO pair of distinct i-Cells is conflated by all five at once => STRONG ICC-F1 is UNMEETABLE.",
+    "corollary_no_free_lunch": "any task computable from ICC is computable from the sub-models collectively; ICC cannot beat the full battery on ANY task.",
+    "the_bolt_adds_bits": false
+  },
+  "level1_no_single_submodel_suffices": {
+    "64d_matrix_blind_to_HEM": {
+      "submodel_outputs_equal": true,
+      "icc_distinguishes": true
+    },
+    "scalar_pd_blind_to_HEM_and_most_of_M": {
+      "submodel_outputs_equal": true,
+      "icc_distinguishes": true
+    },
+    "tti1_label_blind_to_operators_and_HEM": {
+      "submodel_outputs_equal": true,
+      "icc_distinguishes": true
+    },
+    "summary": "each SINGLE sub-model conflates a pair ICC separates (ICC strictly contains each piece) -- but this does NOT beat the battery (see Level 0)."
+  },
+  "level2_bolt_vs_aggregate": {
+    "construction": "two i-Cells share M and HEM multiset; HEM assignment to GILE dims is reversed (same sum).",
+    "gile_trueness_from_M": {
+      "G": 0.022,
+      "I": -0.0142,
+      "L": -0.1482,
+      "E": -0.0102
+    },
+    "HEM_a": {
+      "D1": 0.8,
+      "D2": 0.6,
+      "D3": 0.7,
+      "D4": 0.5
+    },
+    "HEM_b": {
+      "D1": 0.5,
+      "D2": 0.7,
+      "D3": 0.6,
+      "D4": 0.8
+    },
+    "aggregate_hem_a": 2.6,
+    "aggregate_hem_b": 2.6,
+    "aggregate_baseline_conflates": true,
+    "existence_weighted_trueness_a": -0.099832,
+    "existence_weighted_trueness_b": -0.096076,
+    "bolt_distinguishes": true,
+    "interpretation": "same truth-interior and same TOTAL existence, but one being's existence backs its strong-truth GILE dims and the other's backs its weak ones; the marginals miss it, the GILE-aligned cross-moment catches it.",
+    "honest_caveat_8tralsebit_also_distinguishes": true,
+    "scope": "the bolt beats only a WEAKER aggregate-HEM store the corpus does not actually use; it does NOT beat the existing 8-Tralsebit -> Level 2 does not rescue ICC-F1."
+  },
+  "verdict": {
+    "ICC_F1_strong_form_met": false,
+    "ICC_F1_strong_form_reason": "provably unmeetable: the five sub-models are an injective (lossless) encoding of ICC (Level 0).",
+    "ICC_F1_weak_form_no_single_submodel_suffices": true,
+    "bolt_beats_existing_battery": false,
+    "bolt_beats_aggregate_only_store": true,
+    "net": "ICC is a FAITHFUL UNIFIER with ZERO informational advantage over the union of its sub-models; its value is organisational, not informational.",
+    "key_lesson": "subsumption-completeness is incompatible with an informational advance; to gain new power a representation must store a primitive its sub-models do not carry.",
+    "principle_count": 79,
+    "ICC_status": "CANDIDATE (unchanged); honesty rails satisfied; result is reported straight (#69), negative-leaning."
+  }
+}
