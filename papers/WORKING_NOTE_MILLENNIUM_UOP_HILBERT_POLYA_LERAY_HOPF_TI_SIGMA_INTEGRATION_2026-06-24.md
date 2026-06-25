@@ -178,6 +178,31 @@ The two shifts **a = 1/4 ↔ residue 1 mod 4** and **a = 3/4 ↔ residue 3 mod 4
 
 ---
 
+### II.9 Ternary / base-3 — where "3" is real, and where it is only a shared digit
+
+**[REAL OVERLAP for the math — `TERNARY_SUPERIORITY_PROOF.md`, `URB_PD_SUPREMACY_TERNARY_CATEGORICAL_541`, `urb_568`, `URB_788`; SPARK + anti-numerology rail for the "3-mod-4 = base-3" link]**
+
+Brandon's instinct: ternary is the framework's deepest "3," so it ought to touch the "remainder 3" phenomenon. It does — but only after one honest separation.
+
+**The rail (state it first, so nothing leans on a pun).** The "3" in **3 mod 4** is a *residue class* in ℤ/4ℤ; **ternary / base-3** is a *radix* (ℤ/3ℤ, or 3-adic). They share the glyph "3" but are different objects, and a bridge built on the shared digit alone is numerology, not math. So we do **not** claim ternary explains the mod-4 bias. Ternary instead contributes three *genuine* things.
+
+**(A) Ternary's real prime-race role is the mod-3 race — it makes Falsifier II.8-F1 concrete.** The honest place ternary meets the bias is its OWN modulus. The non-principal character mod 3 is χ₃ (χ₃(1)=+1, χ₃(2)=−1), and its L-function is again a difference of Hurwitz zetas:
+> L(s, χ₃) = 3^{−s} [ ζ(s, 1/3) − ζ(s, 2/3) ],  with a = 1/3 ↔ residue 1, a = 2/3 ↔ residue 2.
+
+Exactly as mod 4, the quadratic **non-residue leads**: primes ≡ **2 mod 3** outnumber ≡ 1 mod 3 (Rubinstein–Sarnak, same GRH + Grand-Simplicity machinery). This *is* the predict-then-check test II.8-F1 asked for: *before* computing, write down what GILE/ternary structure says the mod-3 leader and rough density should be, then verify. Calling mod-3 (and mod-8, mod-5…) from structure would be a result; reproducing mod-4 after the fact is not.
+
+**(B) The ternary Cantor set is a real bridge to the fractal-zeta lead (II.4).** The middle-thirds Cantor set is *the* canonical base-3 object, and it is also the textbook **fractal string** (Lapidus): its geometric zeta function has **complex dimensions on the vertical line Re(s) = log₃2 ≈ 0.6309**, spaced periodically by 2π/log 3. Our corpus already flags it (`BOT_BAND…` NNL-018: "Cantor set = Nonlinear-Number-Line prototype"). So "base-3" lands directly on the FHS drum picture — a fractal whose complex dimensions sit on a vertical line is the toy model of zeros on a critical line. **The honest lead:** the Cantor string's complex dimensions are *known and not on Re=½*, so the task is not "Cantor proves RH" but "use the Cantor string as the *worked example* that calibrates the FHS drum's Weyl-count test (II.4) before trusting it on ζ."
+
+**(C) Balanced ternary {−1, 0, +1} is the natural numeral for the framework's signed three-valued core — but the current logic is base-4, so don't overclaim.** TI's pre-MI truth skeleton {False, Indeterminate, True} = {−, 0, +} is literally balanced ternary, and the corpus radix-economy note (`TERNARY_SUPERIORITY_PROOF`: 3 is the integer nearest e, minimal radix economy; Soviet **Setun**, 1958) is a real, if modest, efficiency fact. **Honest caveat:** the *ratified* truth system is now base-4 (Meta-Indeterminate added — `MR_TRUTH_LABELS_CANONICAL`), so ternary is the **historical skeleton**, not the present logic; calling today's labels "ternary" is a refinement-count error. The legitimate claim is structural elegance (the {−,0,+} signed symmetry), not "the logic is ternary."
+
+**(D) 3-adic is one prime, not a chosen one.** Base-3 expansions are 3-adic; `URB_788` already notes the p-adic factors of Connes' adelic operator "carry the prime-power data" the real component lacks — the heart of the `BK_spectrum` frontier (II.2). But Ostrowski gives *every* prime equal standing; nothing in the number theory privileges 3. Ternary is a fine *lens* on the adelic picture, not a special key to it.
+
+> **Falsifier II.9-F1:** ternary earns a place in this hunt only via (i) a *pre-registered* mod-3 (and other-modulus) prime-race prediction from GILE/ternary structure per II.8-F1, or (ii) using the Cantor string as a checkable calibration of the FHS Weyl-count (II.4). The "3 mod 4 = base 3" identification is **explicitly disallowed** as a digit-coincidence across two different rings, and "the logic is ternary" is disallowed against the ratified base-4 system. Per §0, none of this proves RH.
+
+**Cheapest first move:** compute the mod-3 prime race to *see* 2-mod-3 lead 1-mod-3 (mirror of the mod-4 run in II.8), and overlay the Cantor string's complex dimensions on the FHS drum spectrum — both are an afternoon's tabulation, and both are decisive about whether ternary is structure or coincidence here.
+
+---
+
 ## PART III — The one idea under all of it: find the symmetry that forbids the bad configuration
 
 Both problems reduce to the same craft move, and it's the move you're best at:
@@ -200,6 +225,8 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 | II.2 | Berry–Keating `BK_spectrum` | KNOWN FRONTIER | Connes-adelic / Selberg realization | Hard (the true RH gap) |
 | II.7 | Moonshine/Leech VOA drum | SPARK | Settle `URB_793` Conj. 3.1 first | Gated |
 | II.8 | Hurwitz quaternion/D₄ ↔ Hurwitz-zeta ↔ Chebyshev bias | REAL OVERLAP (math); SPARK (i-Cell bridge) | Predict a *new* prime-race bias from GILE structure, not match mod-4 post hoc | Beautiful resonance; unproven bridge |
+| II.9 | Ternary mod-3 race (L(s,χ₃)=3⁻ˢ[ζ(s,1/3)−ζ(s,2/3)]) | REAL OVERLAP | Pre-register the mod-3 leader + density from GILE, then check (= II.8-F1) | The concrete falsifiable test |
+| II.9 | Ternary Cantor string → complex dimensions | REAL OVERLAP | Calibrate FHS Weyl-count (II.4) against known Cantor dims | Tractable worked example |
 | I.3 | No-actual-infinite toll-booth | REAL OVERLAP (prior) | Must distinguish true NS from Tao's averaged NS | The crux test |
 | I.4 | Metacausal cascade graph | SPARK | Must separate 2D / 3D / averaged NS | Conceptual |
 | I.5 | Fractal-harmonic enstrophy norm | REAL OVERLAP | Must reproduce CKN measure-zero bound | Tractable |
@@ -234,8 +261,10 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 - Korkine, A., Zolotareff, G. (1877). "Sur les formes quadratiques positives." *Math. Ann.* 11, 242–292. (D₄ densest lattice in 4D.)
 - Musin, O.R. (2008). "The kissing number in four dimensions." *Annals of Mathematics* 168, 1–32.
 - Chebyshev, P.L. (1853). Letter to M. Fuss (on the prevalence of primes ≡ 3 mod 4). Rubinstein, M., Sarnak, P. (1994). "Chebyshev's bias." *Experimental Mathematics* 3, 173–197.
+- Łukasiewicz, J. (1920). "O logice trójwartościowej" (On three-valued logic). *Ruch Filozoficzny* 5, 170–171.
+- Knuth, D.E. *The Art of Computer Programming, Vol. 2: Seminumerical Algorithms* (balanced ternary; radix economy, 3 nearest to e). (Cantor-string complex dimensions: Lapidus–van Frankenhuijsen, above.)
 
-**Corpus:** `urb_682`, `urb_633`, `urb_566`, `urb_567`, `urb_568`, `URB_371`, `URB_670`, `URB_793`, `PASS_77_B58`, `PASS_77_B68`, `SIX_QUESTIONS_PHILOSOPHY_PHYSICS_GILE.md`, `PASS_77_B132…`, `lean4/RiemannUOP.lean`, `NavierStokes.lean`.
+**Corpus:** `urb_682`, `urb_633`, `urb_566`, `urb_567`, `urb_568`, `URB_371`, `URB_670`, `URB_788`, `URB_793`, `TERNARY_SUPERIORITY_PROOF.md`, `URB_PD_SUPREMACY_TERNARY_CATEGORICAL_541`, `MR_TRUTH_LABELS_CANONICAL`, `BOT_BAND…` (NNL-018), `PASS_77_B58`, `PASS_77_B68`, `SIX_QUESTIONS_PHILOSOPHY_PHYSICS_GILE.md`, `PASS_77_B132…`, `lean4/RiemannUOP.lean`, `NavierStokes.lean`.
 
 ---
 
