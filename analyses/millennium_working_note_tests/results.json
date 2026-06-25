@@ -1,0 +1,280 @@
+{
+  "preregistered_predictions": {
+    "rule": "non-residue (chi=-1, 'imaginary/Tralse') leads residue (chi=+1, 'real/G')",
+    "predicted_leader_side": "non-residue",
+    "qr": {
+      "3": [
+        1
+      ],
+      "4": [
+        1
+      ],
+      "5": [
+        1,
+        4
+      ],
+      "8": [
+        1
+      ],
+      "12": [
+        1
+      ]
+    },
+    "nonqr": {
+      "3": [
+        2
+      ],
+      "4": [
+        3
+      ],
+      "5": [
+        2,
+        3
+      ],
+      "8": [
+        3,
+        5,
+        7
+      ],
+      "12": [
+        5,
+        7,
+        11
+      ]
+    },
+    "predicts_magnitude": false,
+    "predicts_among_nonresidue_order": false
+  },
+  "T1_prime_races": {
+    "3": {
+      "classes": [
+        1,
+        2
+      ],
+      "final_counts": {
+        "1": 2880517,
+        "2": 2880937
+      },
+      "S_final_meanNonQR_minus_meanQR": 420.0,
+      "frac_checkpoints_nonQR_ahead": 1.0,
+      "direction_predicted_correct": true
+    },
+    "4": {
+      "classes": [
+        1,
+        3
+      ],
+      "final_counts": {
+        "1": 2880504,
+        "3": 2880950
+      },
+      "S_final_meanNonQR_minus_meanQR": 446.0,
+      "frac_checkpoints_nonQR_ahead": 1.0,
+      "direction_predicted_correct": true
+    },
+    "5": {
+      "classes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "final_counts": {
+        "1": 1440298,
+        "2": 1440496,
+        "3": 1440474,
+        "4": 1440186
+      },
+      "S_final_meanNonQR_minus_meanQR": 243.0,
+      "frac_checkpoints_nonQR_ahead": 1.0,
+      "direction_predicted_correct": true
+    },
+    "8": {
+      "classes": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "final_counts": {
+        "1": 1439970,
+        "3": 1440544,
+        "5": 1440534,
+        "7": 1440406
+      },
+      "S_final_meanNonQR_minus_meanQR": 524.6666666667443,
+      "frac_checkpoints_nonQR_ahead": 1.0,
+      "direction_predicted_correct": true,
+      "nonresidue_order_observed_high_to_low": [
+        3,
+        5,
+        7
+      ]
+    },
+    "12": {
+      "classes": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "final_counts": {
+        "1": 1440021,
+        "5": 1440483,
+        "7": 1440496,
+        "11": 1440453
+      },
+      "S_final_meanNonQR_minus_meanQR": 456.3333333332557,
+      "frac_checkpoints_nonQR_ahead": 1.0,
+      "direction_predicted_correct": true,
+      "nonresidue_order_observed_high_to_low": [
+        7,
+        5,
+        11
+      ]
+    }
+  },
+  "T1_verdict": {
+    "direction_rule_confirmed_all_moduli": true,
+    "independent_of_known_number_theory": false,
+    "classification": "RESONANCE_NOT_RESULT",
+    "why": "The 'non-residue leads' rule IS Chebyshev's bias (a known, proved-under-GRH number-theoretic fact) relabelled in GILE terms. Direction is reproduced, not predicted independently. Per II.8-F1/II.9-F1 this is resonance. To become a RESULT the framework must predict, from GILE structure ALONE, something NT does not readily give: e.g. the density (mod-4 ~0.9959) or the ordering AMONG non-residues (mod 8: which of 3,5,7 leads). It currently predicts neither."
+  },
+  "T2_dirichlet_zeros": {
+    "L_chi4_beta": [
+      {
+        "t0_seed": 6.0000000000000036,
+        "re": 0.5,
+        "im": 6.020948904697597,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 0.0
+      },
+      {
+        "t0_seed": 10.200000000000006,
+        "re": 0.5,
+        "im": 10.243770304166555,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 0.0
+      },
+      {
+        "t0_seed": 13.00000000000001,
+        "re": 0.5,
+        "im": 12.988098012312422,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 0.0
+      },
+      {
+        "t0_seed": 16.30000000000001,
+        "re": 0.5,
+        "im": 16.342607104587223,
+        "abs_dev_from_half": 9.4039548065783e-38,
+        "L_abs_at_root": 0.0
+      },
+      {
+        "t0_seed": 18.300000000000015,
+        "re": 0.5,
+        "im": 18.291993196123535,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 0.0
+      }
+    ],
+    "L_chi3": [
+      {
+        "t0_seed": 8.000000000000005,
+        "re": 0.5,
+        "im": 8.039737155681467,
+        "abs_dev_from_half": 9.4039548065783e-38,
+        "L_abs_at_root": 1.173665353064871e-31
+      },
+      {
+        "t0_seed": 11.200000000000008,
+        "re": 0.5,
+        "im": 11.249206207772936,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 4.598752926974467e-31
+      },
+      {
+        "t0_seed": 15.700000000000012,
+        "re": 0.5,
+        "im": 15.704619176721625,
+        "abs_dev_from_half": 9.4039548065783e-38,
+        "L_abs_at_root": 8.051277899256339e-31
+      },
+      {
+        "t0_seed": 18.300000000000015,
+        "re": 0.5,
+        "im": 18.261997495693127,
+        "abs_dev_from_half": 4.70197740328915e-38,
+        "L_abs_at_root": 2.7386552253708036e-31
+      },
+      {
+        "t0_seed": 20.500000000000018,
+        "re": 0.5,
+        "im": 20.455770807742493,
+        "abs_dev_from_half": 0.0,
+        "L_abs_at_root": 1.0954620901483214e-30
+      }
+    ],
+    "chi4_stats": {
+      "seeds_attempted": 5,
+      "zeros_found": 5,
+      "max_abs_dev_from_half": 9.4039548065783e-38,
+      "all_on_critical_line": true
+    },
+    "chi3_stats": {
+      "seeds_attempted": 5,
+      "zeros_found": 5,
+      "max_abs_dev_from_half": 9.4039548065783e-38,
+      "all_on_critical_line": true
+    },
+    "verdict": "Every located nontrivial zero of BOTH L-functions sits on Re(s)=1/2 to high precision (GRH sanity for the mod-4 and mod-3 L-functions). Consistency check on the Hurwitz-zeta identities used, NOT a proof."
+  },
+  "T3_cantor_vs_riemann": {
+    "cantor_dimension_D0_log3_2": 0.6309297535714574,
+    "cantor_vertical_period_2pi_over_log3": 5.7192017347602535,
+    "complex_dims_on_vertical_line_Re_s": 0.6309297535714574,
+    "comparison": [
+      {
+        "T": 50,
+        "cantor_count_linear": 17,
+        "riemann_N_T": 8.547781789846386,
+        "ratio_riemann_over_cantor": 0.5028106935203757
+      },
+      {
+        "T": 100,
+        "cantor_count_linear": 35,
+        "riemann_N_T": 28.12734358732535,
+        "ratio_riemann_over_cantor": 0.8036383882092957
+      },
+      {
+        "T": 500,
+        "cantor_count_linear": 175,
+        "riemann_N_T": 268.7117176183208,
+        "ratio_riemann_over_cantor": 1.5354955292475474
+      },
+      {
+        "T": 1000,
+        "cantor_count_linear": 349,
+        "riemann_N_T": 647.7412353129674,
+        "ratio_riemann_over_cantor": 1.8559920782606516
+      }
+    ],
+    "verdict": "Cantor string is a LATTICE fractal string: complex dimensions are periodic on the vertical line Re(s)=log_3 2 (~0.6309), so its counting function grows LINEARLY in T. Riemann N(T) grows like (T/2pi)log T -- super-linearly -- and its line is Re(s)=1/2. The ratio diverges, so the Cantor string CANNOT model the zeta zeros; it is a calibration toy. Modelling zeta needs a NON-lattice / generalized fractal string. Honest negative calibration result."
+  },
+  "T4_operator_vs_zeros": {
+    "first_10_riemann_zero_imag_parts": [
+      14.134725141734695,
+      21.022039638771556,
+      25.01085758014569,
+      30.424876125859512,
+      32.93506158773919,
+      37.586178158825675,
+      40.9187190121475,
+      43.327073280915,
+      48.00515088116716,
+      49.7738324776723
+    ],
+    "status": "CANNOT_RUN_HONESTLY",
+    "why": "replit.md's 'cheapest decisive test' is the TWA/Berry-Keating operator's first-10 eigenvalues vs these first-10 zeros. But NO concrete self-adjoint operator whose spectrum equals the zeta zeros is specified anywhere in the corpus -- constructing one IS the open Hilbert-Polya problem (Berry-Keating xp is heuristic; it does not yield these numbers). Producing such an operator here would amount to claiming a proof of RH, which #69 forbids. So this test is logged as an honest NON-RESULT: the target operator does not yet exist."
+  }
+}

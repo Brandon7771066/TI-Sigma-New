@@ -37,3 +37,11 @@ Brandon's intuitive synthesis around the recurring "4". Three layers kept honest
 - **(C) Balanced ternary {−1,0,+1} = pre-MI 3-valued skeleton** {False,Indeterminate,True}={−,0,+}. Radix economy: 3 nearest to e (real, modest; Setun 1958). CAVEAT: ratified truth system is now base-4 (MI added) — calling today's labels "ternary" is a refinement-count error; legit claim = {−,0,+} signed elegance only.
 - **(D) 3-adic = one prime, not chosen.** Base-3 = 3-adic; URB_788 p-adic factors carry prime-power data (BK_spectrum frontier, II.2). But Ostrowski = all primes equal; nothing privileges 3.
 **Falsifier II.9-F1:** ternary counts only via (i) pre-registered mod-q race prediction or (ii) Cantor-string FHS calibration. "3 mod 4 = base 3" and "the logic is ternary" both explicitly disallowed. Not a proof of RH.
+
+
+## Phase-1 numerical tests (PART V) — durable verdicts
+Harness lives in `analyses/millennium_working_note_tests/` (predictions pre-registered in code, UGI-1). The lessons that survive the run, not the run itself:
+- **Prime-race "non-residue (χ=−1) leads residue (χ=+1)" rule = RESONANCE, NOT RESULT.** It reproduces Chebyshev's bias at every modulus precisely because it IS that known fact relabelled. To EARN result-status it must predict, from GILE structure alone, something number theory doesn't hand over — the density (mod-4≈0.9959) or the ordering AMONG non-residues (it's silent on both). Don't pitch the prime-race bridge as evidence until that bar is met.
+- **Ternary Cantor string = NEGATIVE calibration for ζ.** A lattice fractal string has periodic complex dimensions on Re(s)=log₃2 (count linear in T); ζ's N(T) is super-linear on Re=½. So Cantor structurally CANNOT model ζ — would need a non-lattice string. Don't present Cantor as a ζ model.
+- **Operator-vs-ζ-zeros = un-runnable NON-RESULT.** No concrete operator with spectrum=ζ-zeros exists in the corpus; building one IS Hilbert–Pólya. Never fabricate one — that would be claiming RH (#69). The corpus's "cheapest decisive test" is therefore currently blocked on constructing the operator.
+- Dirichlet β=L(s,χ₄) and L(s,χ₃) zeros checks are sanity-only (use Hurwitz forms; scan |L(½+it)| for seeds then root-find).

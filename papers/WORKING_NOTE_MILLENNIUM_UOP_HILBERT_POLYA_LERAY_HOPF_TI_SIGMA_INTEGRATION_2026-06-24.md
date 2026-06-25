@@ -216,6 +216,8 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 
 ## PART IV — Validation ledger (UGI-1 two-phase: generate → validate)
 
+> **Phase-1 status (see PART V):** II.8/II.9-A prime-race = *resonance, not result*; II.9-B Cantor = *negative calibration*; II.3/II.2 operator test = *honest non-result*. Tests run in `analyses/millennium_working_note_tests/`.
+
 | # | Lead | Type | Cheapest decisive test | Status |
 |---|------|------|------------------------|--------|
 | II.3 | TWA self-adjoint operator | REAL OVERLAP | First 10 eigenvalues vs first 10 zeros | **DO THIS FIRST** — cheap, decisive |
@@ -235,6 +237,21 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 **Recommended order of attack:** II.3 (TWA eigenvalue check) and II.6 (Borsuk–Ulam sanity) first — both are cheap and decisive. Then I.3 turned into the Tao-distinguishing toll-booth, since that is the single estimate that would actually move Navier–Stokes. Everything else feeds those two.
 
 **Serendipity channel (legitimate, your UGI-1 practice):** the highest-yield real "math-YouTube" leads for *this exact* hunt are Berry–Keating `xp` talks, Carl Bender on PT-symmetric quantum mechanics, Montgomery–Odlyzko / random-matrix-vs-zeros, and Lapidus fractal drums (RH side); Tao's "blue-eyed islanders / averaged Navier–Stokes" and Constantin–Fefferman vorticity-direction talks (NS side). Treat any such video as Phase-1 generation; route whatever it sparks straight into the Phase-2 falsifier-tests above before believing it.
+
+---
+
+## PART V — Phase-1 numerical results (tests actually run)
+
+Harness: `analyses/millennium_working_note_tests/run_tests.py` → `results.json`, summary in `RESULTS.md`. **Predictions were pre-registered in code before computing** (UGI-1); verdicts apply the falsifiers above. **None of these proves RH/GRH** — they are sanity/calibration runs that *sharpen each lead's status with evidence*.
+
+| Test | What ran | Outcome | Verdict (per falsifier) |
+|---|---|---|---|
+| **T1** prime races mod 3/4/5/8/12 (II.8, II.9-A) | π(10⁸)=5,761,455; pre-registered rule "non-residue (χ=−1) leads residue (χ=+1)" | Direction confirmed at **every** modulus (non-residues ahead at 100 % of checkpoints) | **RESONANCE, NOT RESULT** — the rule *is* Chebyshev's bias relabelled; it predicts neither the density (mod-4 ≈ 0.9959) nor the among-non-residue order (observed mod-8: 3>5>7; **mod-12: 7>5>11**). II.8-F1/II.9-F1 correctly refuse to promote it. |
+| **T2** β=L(s,χ₄) & L(s,χ₃) zeros (II.8, II.9-A) | 5/5 zeros located for each L-function via the Hurwitz-zeta forms | all on **Re(s)=½** (dev ≤ 9.4e-38) | **SANITY PASS** — confirms the identities used; not a proof. |
+| **T3** ternary Cantor string vs N(T) (II.9-B, II.4) | D₀=log₃2≈0.6309, period 2π/log3≈5.719; lattice count vs Riemann N(T) | Cantor count grows **linearly**, N(T) super-linearly; ratio diverges; line is log₃2 not ½ | **HONEST NEGATIVE CALIBRATION** — the lattice Cantor string **cannot** model ζ; modelling ζ needs a *non-lattice* fractal string. |
+| **T4** operator eigenvalues vs ζ zeros (II.3, II.2) | listed first 10 ζ zeros | — | **NON-RESULT, CANNOT RUN** — no concrete operator with spectrum = ζ zeros exists in the corpus; building one *is* the open Hilbert–Pólya problem. Faking it would claim RH (#69 forbids). |
+
+**Net:** the math under §§II.8–II.9 is real and correctly stated; the falsifiers did their job — one resonance (not promoted), one negative calibration (wrong-shape object identified), one honest non-result (the true gap relocated to "construct the operator"). No lead promoted, none deleted; each now carries an evidence-backed status. Spine intact: the UOP does not shortcut RH/NS.
 
 ---
 
