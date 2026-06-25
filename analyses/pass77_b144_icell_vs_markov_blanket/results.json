@@ -1,0 +1,30 @@
+{
+  "section_A_HAN1_numerology_heuristic": {
+    "what_this_shows": "estimator honesty for a STIPULATED real effect; NOT evidence numerology is real",
+    "true_effect_delta_over_chance": 0.08,
+    "naive_all_readings_rate": 0.5232,
+    "naive_dilutes_effect": true,
+    "prospective_committed_rate": 0.5803,
+    "prospective_recovers_true_delta": true,
+    "survivorship_drop_all_misses_rate": 1.0,
+    "survivorship_subtle_drop_half_misses_rate": 0.7344,
+    "survivorship_inflates": true,
+    "honest_reading_of_ignore_nulls": "LEGITIMATE = exclude non-attempts / low-confidence noise from the denominator (prospective inclusion) -> recovers the true effect. ILLEGITIMATE = delete committed misses after the fact -> survivorship inflation. The falsifier (validate phase) still counts both ways.",
+    "evd1_status_vs_weight": "numerology propositions have Evidence STATUS=yes (used in support of a conclusion, authority-independent) and GRADED WEIGHT (confidence-scaled, track-record SECONDARY). Heuristic for intuition, never Proof."
+  },
+  "section_B_IMB1_icell_vs_markov_blanket": {
+    "what_this_shows": "GENUINE MATH: a classical Markov Blanket (single global joint / conditional-independence factorization, as in the FEP) cannot host the contextual truth-axis the i-Cell carries (QTA-1 A4).",
+    "classical_markov_blanket_CHSH_cap": 2.0,
+    "classical_cap_is_two": true,
+    "icell_contextual_CHSH": 2.828427,
+    "icell_matches_tsirelson": true,
+    "quantum_correlations_reproducible_by_markov_blanket": false,
+    "classical_correlations_reproducible_by_markov_blanket": true,
+    "separation_holds": true,
+    "irreducible_reconstruction_gap": 0.828427,
+    "non_contextual_control": "when data is non-contextual (|S|<=2) the Markov Blanket reproduces it exactly -> the two frameworks are EQUIVALENT; the i-Cell's advantage appears ONLY when genuine contextuality is present (conditional on QTA-1-F2). #69 both-directions honesty: no free lunch off-contextuality.",
+    "scope_caveat": "the rival here is the CLASSICAL Markov Blanket (Pearl / Friston FEP), which is non-contextual by construction. A hypothetical *quantum* Markov blanket would need exactly this contextual structure -> it would concede the i-Cell's point, not refute it.",
+    "what_this_does_NOT_claim": "NOT that i-Cells are physically real, NOT that they beat Markov Blankets on any empirical dataset, NOT a resolution of ICC-F2 (which is about beating the i-Cell's OWN sub-models). This is an INTER-framework EXPRESSIVENESS separation, conditional on contextuality."
+  },
+  "all_checks_pass": true
+}
