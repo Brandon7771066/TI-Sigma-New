@@ -1,0 +1,31 @@
+{
+  "scope": "ILLUSTRATIVE STRUCTURAL TOY -- stipulated structure, zero empirical weight, no numerology",
+  "P1_convergence_when_value_intrinsic": {
+    "cross_society_agreement": 0.9992,
+    "clears_RD": true,
+    "claim": "with valence intrinsically (dis)valued, heterogeneous societies CONVERGE on valence-promoting norms -> morality 'falls out' of valence"
+  },
+  "P2_collapse_when_value_stripped": {
+    "cross_society_agreement": 0.6788,
+    "clears_RD": false,
+    "claim": "strip intrinsic value -> convergence collapses to chance; norms become arbitrary/'meaningless' -- exactly what denying realism requires"
+  },
+  "E1_target_identification": {
+    "naturalist_realist_is_physicalist": true,
+    "naturalist_realist_converges": true,
+    "refuted_target": "value-eliminativism / valueless universe",
+    "claim": "what's refuted is the VALUELESS UNIVERSE (axiological nihilism), NOT physicalism-as-such; a value-keeping physicalist (Cornell realism) is untouched. 'physicalism is impossible' -> sharpen to 'the valueless universe is impossible'"
+  },
+  "E2_agent_relative_vs_neutral": {
+    "gate1_agent_relative_derivable": true,
+    "gate2_agent_neutral_without_bridge": null,
+    "gate2_agent_neutral_requires_injected_bridge": true,
+    "claim": "agent-RELATIVE 'bad-for-subject' is robust & nearly undeniable; agent-NEUTRAL 'bad simpliciter, binding on all' needs an INJECTED bridge (Hume/Moore) = B140 Q2 residual. Toy refuses to manufacture it (anti-rig #69)."
+  },
+  "performative_check": {
+    "verbal_denial": true,
+    "behavior_avoids_negative_valence": true,
+    "mismatch_flagged": true,
+    "claim": "a verbal denier whose revealed behavior still flees suffering exhibits a word/deed contradiction (catches the naive nihilist; the careful quasi-realist escapes by affirming Q1 and contesting only Q2)"
+  }
+}

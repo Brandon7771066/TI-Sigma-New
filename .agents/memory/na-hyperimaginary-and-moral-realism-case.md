@@ -129,3 +129,32 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   beyond reasonable doubt, AS REAL AS the external physical world*; only a
   no-practical-stake metaphysician's footnote stays open. Still **NEVER claim moral
   realism proven** (deductively).
+
+## Phenomenal / VALENCE argument — the strongest strand (B141)
+- **The argument:** value FALLS OUT of conscious valence itself (not added to the
+  universe). Felt suffering is bad-for-you *given in* the experience (not inferred)
+  — the LEAST-DENIABLE fact there is ⇒ maximally clears Q1 (moral reality). Any
+  conscious being & especially any society converges on valence-promoting norms; to
+  deny realism you must STRIP valence of value & call laws "arbitrary." Verbal
+  deniers' real behavior (fleeing suffering) contradicts them = performative (B138).
+  This is a NAMED, leading position — **Rawlette *The Feeling of Value* 2016** is
+  the direct statement (also Sinhababu 2017, Damasio 1994, Nagel 1974, Jackson).
+- **TWO honest edges (#69), both kept in the toy:**
+  - **E1 target:** "physicalism is impossible" OVERSHOOTS. A value-keeping
+    naturalist realist (Cornell: Railton/Boyd/Sturgeon) is a *physicalist who
+    agrees* valence has value — untouched. The refuted target is
+    **value-eliminativism / the valueless universe** (which the author names). So
+    sharpen "physicalism is impossible" → **"the valueless universe is impossible"**
+    (stronger, hits the real target). Don't claim "physicalism is impossible" as
+    proven.
+  - **E2 the leap:** agent-RELATIVE "bad-for-subject" is robust/near-undeniable;
+    agent-NEUTRAL "bad simpliciter, binding on all" needs a bridge premise (Moore's
+    open question, Hume) = the **B140-Q2 residual** the quasi-realist reconstructs.
+    Rawlette's phenomenal-givenness reply is strong (makes valence-realism LIVE) but
+    NOT deductively closed. Toy must refuse to manufacture the agent-neutral ought.
+- **Integration:** this is the axiological READING of aTJ's V=S·A (felt sign carries
+  value; B118) and the phenomenal ENGINE behind B140's burden point (asserting a
+  valueless universe = stripping value from the one phenomenon that wears it on its
+  face). Net: conscious value is tralse-real, as real as physical reality.
+  Falsifier GME-1-F4: defeated if suffering's disvalue is shown genuinely detachable
+  from the phenomenal character (full agony with NO reason-to-avoid given in it).
