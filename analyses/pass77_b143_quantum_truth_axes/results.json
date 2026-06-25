@@ -1,0 +1,55 @@
+{
+  "batch": "Pass-77 B143",
+  "claim_type": "REPRESENTATIONAL FAITHFULNESS / compelling analogy (NOT empirical, NOT physical-instantiation proof)",
+  "A1_PD_degree": {
+    "slot": "Bloch polar angle theta; PD-degree = Born Pr(True) = cos^2(theta/2)",
+    "grade": "STRUCTURAL-ANALOGY (a qubit needs exactly one polar DOF; magnitude of a complex truth value)",
+    "pole_checks_pass": true,
+    "monotone_decreasing_in_theta": true,
+    "born_identity_holds": true
+  },
+  "A2_PD_modality": {
+    "slot": "Bloch azimuthal phase phi; modality recovered only by a rotated (Y-basis) measurement",
+    "grade": "STRUCTURAL-ANALOGY (phase is a real, basis-dependent qubit DOF; the 2nd of exactly two PD coordinates)",
+    "degree_cannot_see_modality": true,
+    "rotated_probe_separates_I_from_MI": true,
+    "Y_expect_I_vs_MI": [
+      1.0,
+      -1.0
+    ],
+    "novel_prediction": "QTA-1-F1: in real rater data, I vs MI must be indistinguishable on a pure T/F probe yet separable with a dedicated modality/leeway probe. If a plain T/F probe already separates them, the qubit-phase slot is wrong (degree, not phase, carried modality)."
+  },
+  "A3_tau_delta_separability": {
+    "slot": "bipartite (intention (x) truth) state; separability = Schmidt rank 1 (concurrence 0); TJ = tau*delta factorizes",
+    "grade": "STRUCTURAL-ANALOGY ('separable' read literally as product-state factorization; matches tau/delta separability def)",
+    "product_state_concurrence_zero": true,
+    "tau_and_delta_independently_recoverable": true,
+    "entangled_state_concurrence": 0.9999999999999998,
+    "entangled_makes_tau_undefined_alone": true
+  },
+  "A4_authority_axis": {
+    "slot": "measurement context (POVM/basis = authority frame); contextuality witness = CHSH",
+    "grade": "STRUCTURAL-ANALOGY + canon tie-in (Fine 1982 no global joint measure == UOP B133 Contextual Admissibility)",
+    "chsh_quantum_S": 2.82842712474619,
+    "tsirelson_bound_2sqrt2": 2.8284271247461903,
+    "quantum_matches_tsirelson": true,
+    "context_free_bound": 2.0,
+    "monte_carlo_best_context_free_S": 2.0,
+    "authority_irreducible_to_contextfree": true,
+    "falsifier": "QTA-1-F2: AA earns the contextuality slot only if real rater data shows a genuine authority-frame-dependent verdict that no single context-free assignment reproduces. Else AA reduces to an ordinary (non-contextual) feature."
+  },
+  "cross_linkage_HEM_64D": {
+    "slot": "polar decomposition z_k = r_k*exp(i*a_k): HEM=modulus, GILE=phase",
+    "grade": "STRUCTURAL (polar form is an identity; explains the natural GILE-index binding of B137's bolt)",
+    "dof_count": "8 = 4 moduli (HEM) + 4 phases (GILE)",
+    "modulus_phase_roundtrip_exact": true
+  },
+  "anti_numerology_guard": {
+    "quantum_slots_independent_of_constant_assignment": true,
+    "cross_linkage_invariant_under_scrambled_phases": true,
+    "axes_A1_A4_invariant_no_constant_dependence": true,
+    "recorded_constant_map_result": "natural map corr 0.075, permutation p=1.0 (B135/B138) -> OVERLAY, zero evidential weight; DCI-1-F1 OPEN",
+    "note": "The structural slots stand whether or not any constant maps to any dimension. The constant identity remains a mnemonic overlay."
+  },
+  "all_faithfulness_checks_pass": true
+}
