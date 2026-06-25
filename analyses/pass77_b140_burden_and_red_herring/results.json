@@ -1,0 +1,34 @@
+{
+  "scope": "ILLUSTRATIVE STRUCTURAL TOY -- stipulated likelihoods, zero empirical weight, no numerology",
+  "standard": {
+    "reasonable_doubt_threshold": 0.95,
+    "certainty_bar_REJECTED": 1.0,
+    "note": "the 2+2=4 certainty bar is the WRONG test for BOTH physics and ethics"
+  },
+  "Q1_moral_reality": {
+    "posterior": 0.983698,
+    "clears_beyond_reasonable_doubt": true,
+    "claim": "morality is real / not illusion -- quasi-realist AFFIRMS this; clears RD bar"
+  },
+  "red_herring_check": {
+    "Q1_posterior_full": 0.983698,
+    "Q1_posterior_without_indispensability": 0.983698,
+    "verdict_unchanged": true,
+    "claim": "indispensability is NON-PIVOTAL -> RED HERRING confirmed"
+  },
+  "fundamentality_orthogonality": {
+    "physics_strictly_more_fundamental_granted": true,
+    "Q1_posterior": 0.983698,
+    "claim": "fundamentality != reality; granting physics more fundamental leaves Q1 untouched"
+  },
+  "Q2_robust_mind_independence": {
+    "posterior": 0.524979,
+    "clears_beyond_reasonable_doubt": false,
+    "claim": "the ONE honest residual -- metaphysical truth-maker question, NOT practical; QR matches first-order data so this specific thesis stays sub-certain"
+  },
+  "burden_of_proof": {
+    "Q1_if_eliminativist_gets_free_default": 0.983698,
+    "Q1_if_eliminativist_bears_its_burden": 0.994506,
+    "claim": "'valueless universe / knowledge without awareness' is an extraordinary positive claim, NOT the zero-info default; denying it a free ride only RAISES Q1; the skeptic does not get a free dismissal"
+  }
+}

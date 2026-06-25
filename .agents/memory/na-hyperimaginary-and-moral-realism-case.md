@@ -96,3 +96,36 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   the honest output is a WASH (domains trade indispensability vs livability; the
   ordering is contested-weighting noise). Establish only "ethics NOT inferior" +
   "neither closes." Rigging toward the desired conclusion = #69 violation.
+
+## Burden-of-proof STANDARD + indispensability RED HERRING (B140; corrects B139)
+- **The bar is "beyond reasonable doubt" + pragmatic, NOT mathematical certainty
+  (2+2=4).** Demanding 100% of EITHER physicalist or moral realist is illegitimate.
+  So "posterior < 1 / not deductively closed" is NOT a deficiency of ethics — it is
+  the universal condition of ALL empirical knowledge (external world, other minds),
+  and TRG-1 says the same. **Erratum:** B139 leaned on "posterior<1" as if it were a
+  strike; it isn't. **Rail calibration:** the rail "never claim moral realism
+  *proven*" = never claim DEDUCTIVE/2+2=4 certainty (kept); you CAN assess the lower,
+  correct beyond-reasonable-doubt bar without breaching it.
+- **Burden is on the skeptic.** A physicalist asserting "physics MORE indispensable
+  than ethics" / a valueless universe / "knowledge without awareness" makes a
+  positive EXTRAORDINARY claim needing evidence — NOT a free skeptical default
+  (EMD-1: success credits the *method*; PDU-1/Hempel + hard problem: eliminating
+  value/consciousness is itself extraordinary). **Erratum to B139 §3 scenario B:**
+  its *stipulated* physics-indispensability edge was itself question-begging ⇒
+  WITHDRAWN, channel symmetric. Denying the skeptic a free ride only RAISES the
+  realist.
+- **Indispensability = RED HERRING; fundamentality ≠ reality.** Even GRANTING physics
+  strictly more fundamental says NOTHING about whether morality is REAL (temperature/
+  money/species less fundamental than quarks, fully real; non-reductive realism). This
+  DEMOTES B139's "surviving novel-prediction/indispensability disanalogy" to
+  orthogonal noise — leaving ONLY the quasi-realist, who AFFIRMS moral reality.
+- **Split the conflated word "realism"** (the move that honors the author without
+  rigging): **Q1 = MORAL REALITY** (real/not-illusion/truth-apt; competitor =
+  error-theory/nihilism; quasi-realist is ON the realist's side) clears
+  beyond-reasonable-doubt and is nearly hypothesis-independent; **Q2 = ROBUST
+  MIND-INDEPENDENCE** (stance-independent facts vs projected attitudes; competitor =
+  quasi-realism) is the ONE honest residual — metaphysical, NOT practical (QR and
+  robust-realism agree on every action). Net honest landing: *morality is real
+  beyond reasonable doubt, AS REAL AS the external physical world*; only a
+  no-practical-stake metaphysician's footnote stays open. Still **NEVER claim moral
+  realism proven** (deductively).
