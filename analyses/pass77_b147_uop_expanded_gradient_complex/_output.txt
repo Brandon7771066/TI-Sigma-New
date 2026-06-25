@@ -1,0 +1,53 @@
+==============================================================================
+SECTION 0 — constants (derived, not posited at 0.93)
+==============================================================================
+L = 1 - e^-2                 = 0.864665
+G* = (1+L)/2 = 1 - e^-2/2    = 0.932332
+T_d that gives 3*T_d-1 = G*  = 0.644111   (3*T_d-1 = 0.932332)
+
+==============================================================================
+SECTION 1 — the four written forms of f_cap are identical
+==============================================================================
+max disagreement across forms A,B,C,D over u in [0,1.2]: 2.22e-16
+PASS: piecewise == min/max == max-only == basic-ops(sqrt) form.
+
+==============================================================================
+SECTION 1b — closed form  G*(T_d) = 3*T_d - 1  (clamped to thirds regimes)
+==============================================================================
+max |(2rho-1)/(1+rho) - (3T_d-1)| on interior (1/3,2/3): 2.22e-16
+  T_d=0.2000 -> G*_clamped = 0.00000   [existence-only (-)]
+  T_d=0.4000 -> G*_clamped = 0.20000   [balanced/Myrion (0)]
+  T_d=0.6441 -> G*_clamped = 0.93233   [balanced -> G* ref]
+  T_d=0.7000 -> G*_clamped = 1.00000   [truth-saturated (+)]
+PASS: thirds closed-form + clamp reproduce the three regimes and the 0.93 cap.
+
+==============================================================================
+SECTION 2 — UOP is a concave program; gradient ascent reaches the global optimum
+==============================================================================
+max J_thirds''(G) over (0,1) at T_d=0.55: -0.9844  (<=0 => concave)
+max J_fcap''(G) over (0,1) at T_d=0.55: -0.9844  (<=0 => concave)
+PASS: both objectives are concave => convex-optimization guarantees apply.
+
+  gradient-ascent on the THIRDS objective (20 random inits each):
+  (decaying step size; target = clamp(3*T_d-1) = the emergent cap.)
+   T_d=0.4000: target=0.20000  mean_final=0.20000  spread=3.64e-10  |err|=9.08e-11
+   T_d=0.6441: target=0.93233  mean_final=0.93233  spread=5.43e-11  |err|=9.76e-11
+   T_d=0.7000: target=1.00000  mean_final=1.00000  spread=0.00e+00  |err|=1.00e-09
+  PASS: every random start converges to the single thirds optimum.
+
+  4-D holistic: aggregate G = 0.93233 (target 0.93233); per-dim spread = 0.271 (allocation agnostic)
+  PASS: cap binds holistically on the GILE aggregate, not per-dimension.
+
+==============================================================================
+SECTION 3 — complex-confinement geometry (ternary-real / MI-pure-i / N/A-j-wildcard)
+==============================================================================
+  (a) PASS: {True,Indeterminate,False} have zero i and zero j -> real axis only.
+  (b) PASS: MI has real=0, j=0, i!=0 -> confined to the complex plane only.
+  (c) PASS: MI is never classified N/A; the two occupy different axes.
+  (d) N/A real coords span [-3.00, 1.95] (NOT fixed at 0); j magnitudes span [0.34, 4.98] (unspecified).
+      a fixed-origin N/A decoder would treat 81/200 N/A tokens as 'far from prototype' -> origin-pinning is unfaithful (refines B138).
+  (d) PASS: N/A must be decoded with a real-axis WILDCARD, not origin-pinned.
+
+==============================================================================
+ALL B147 CHECKS PASSED
+==============================================================================
