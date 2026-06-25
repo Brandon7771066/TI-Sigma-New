@@ -1,0 +1,49 @@
+========================================================================
+BLOCK 1 [GENUINE]: ratio-reframing cap and the thirds
+  T_d=0.400  numeric T*=0.20000  closed 3T_d-1=0.20000  |err|=1.00e-07
+  T_d=0.500  numeric T*=0.50000  closed 3T_d-1=0.50000  |err|=5.55e-17
+  T_d=0.600  numeric T*=0.80000  closed 3T_d-1=0.80000  |err|=1.00e-07
+  T_d=0.644  numeric T*=0.93200  closed 3T_d-1=0.93200  |err|=1.36e-07
+  T_d=0.660  numeric T*=0.98000  closed 3T_d-1=0.98000  |err|=4.00e-08
+  -> max |numeric - closed| over interior band = 1.36e-07
+  regime lower boundary cap(1/3) = 0.000000  (truth-pursuit switches ON at 0)
+  regime upper boundary cap(2/3) = 1.000000  (truth-saturation: cap hits 1)
+  SHOWS: with logs ln(1+T), ln(2-T) and existence=1-T, the cap is EXACTLY
+         3*T_d-1, and the three regimes split at T_d = 1/3 and 2/3.
+  DOES NOT SHOW: that the LOG forms are uniquely correct (contingency C1);
+         the '3' is 2(existence offset)+1(truth pole), form-dependent.
+========================================================================
+BLOCK 2 [GENUINE]: ternary real axis + complex extras (TRR-1)
+  distinct REAL-axis values     = [-1.0, 0.0, 1.0]   (count=3)
+  distinct nonzero IMAG values   = [-1.0, 1.0]   (count=2)
+  real-axis (ternary) labels = ['True', 'Indeterminate', 'False']
+  complex labels             = ['MetaIndet', 'NA']
+  SHOWS: the real-axis projection is EXACTLY ternary {+1,0,-1}={T,I,F}
+         (= Lukasiewicz-3), and precisely TWO labels (MI, N/A) are complex.
+         This reconciles 'ternary skeleton' with 'base-4/5 ratified labels'.
+  REFINES B143/QTA-1: plain Indeterminate sits at real-0 (a DEGREE), not at
+         +i; only MI is a phase (a MODALITY). Consistent w/ canonical
+         PD-degree(real) vs PD-modality(imag) split. Count stays 79.
+  DOES NOT SHOW: that N/A's hyperimaginary placement is unique (open).
+========================================================================
+BLOCK 3 [CANDIDATE/CONSISTENCY]: 2/3 i-Cell determinacy (ICD-1)
+  posited concrete-i-Cell determinacy d = 0.6667, indeterminacy = 0.3333
+  UOP truth-saturation boundary T_d = 2/3 = 0.6667
+  determinacy ratio d/(1-d) = 2.0000  (= rho at the boundary = 2.0)
+  SHOWS: IF a concrete i-Cell is 2/3-determinate THEN it sits exactly at the
+         truth-saturation onset (cap->1): a clean alignment of two 2/3's.
+  DOES NOT SHOW: that the human nervous system IS empirically 2/3-determinate.
+         That number is the author's posited intuition-lead (TRI-1) -> owes a
+         measurement falsifier (ICD-1-F1). i-Web = lower d (more decentralized).
+========================================================================
+BLOCK 4 [RESONANCE — NOT RESULT]: the 4/3 ratio family
+  2*(2/3) = 1.3333 = 4/3 ; the documented 4:3:2 threshold pattern
+  contains both the 2/3 determinacy and the 4/3 indeterminate-range scaling.
+  STATUS (HAN-1): evidence-status YES, evidential WEIGHT ~0. The 4/3 family
+  is a recurring corpus ratio ('recursive numerical beauty') that PREDICTS
+  NOTHING NEW here -> it stays a lead to chase, never load-bearing, until it
+  forecasts an out-of-sample quantity (existing falsifier: holds at N>=1000).
+========================================================================
+GENUINE-MATH CHECKS PASS = True  (b1=True b1b=True b2=True b3=True)
+Resonance blocks (4/3) are intentionally NOT gated on a pass — heuristic only.
+Canonical count unchanged: 79. All items are CANDIDATES.
