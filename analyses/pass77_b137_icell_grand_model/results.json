@@ -1,0 +1,166 @@
+{
+  "model_name": "ICC (i-Cell Complete) = 64D GILE Matrix BOLTED to HEM, summarised by one overall TTI-1 label independent of PD",
+  "structure": {
+    "GILE_truth_dimensions": [
+      "G",
+      "I",
+      "L",
+      "E"
+    ],
+    "truth_axes_total": [
+      "PD",
+      "MR",
+      "tau_delta",
+      "AA"
+    ],
+    "overall_label_readout_axis": "MR",
+    "truth_aspect_operator_axes": [
+      "PD",
+      "tau_delta",
+      "AA"
+    ],
+    "base4_labels": [
+      "T",
+      "I",
+      "F",
+      "MI"
+    ],
+    "TTI1_units": {
+      "T": "(1+0j)",
+      "I": "1j",
+      "F": "(-1+0j)",
+      "MI": "-1j"
+    },
+    "HEM_core_bijection": {
+      "G": "D1",
+      "I": "D2",
+      "L": "D3",
+      "E": "D4"
+    },
+    "HEM_shell_dims": [
+      "D5_presence",
+      "D6_coupling"
+    ],
+    "the_bolt": "truth-interior M and existence-exterior H are joined along the GILE index (join key = GILE dim)."
+  },
+  "demo_icell": {
+    "overall_label": "T",
+    "overall_label_unit": "(1+0j)",
+    "overall_label_distribution": {
+      "T": 0.6,
+      "I": 0.2,
+      "F": 0.1,
+      "MI": 0.1
+    },
+    "scalar_pd_projection": -0.0998,
+    "8_tralsebit_projection": [
+      0.022,
+      -0.0142,
+      -0.1482,
+      -0.0102,
+      0.8,
+      0.6,
+      0.7,
+      0.5
+    ],
+    "crystal8_projection": [
+      0.022,
+      -0.0142,
+      -0.1482,
+      -0.0102,
+      0.8,
+      0.6,
+      0.9,
+      0.75
+    ],
+    "HEM_core": {
+      "D1": 0.8,
+      "D2": 0.6,
+      "D3": 0.7,
+      "D4": 0.5
+    },
+    "HEM_shell": {
+      "D5_presence": 0.9,
+      "D6_coupling": 0.75
+    }
+  },
+  "validation": {
+    "M_shape_4x4x4": true,
+    "M_nonneg": true,
+    "M_rows_are_distributions": true,
+    "hem_bijection_complete": true,
+    "existence_instantiated": true,
+    "overall_label_in_tetrad": true,
+    "overall_label_independent_of_pd": true,
+    "subsumes_64d_matrix_identity": true,
+    "subsumes_8_tralsebit_values": true,
+    "subsumes_crystal8_values": true,
+    "subsumes_scalar_pd_value": true,
+    "subsumes_tti1_label_unit": true,
+    "all_passed": true
+  },
+  "model_comparison": [
+    {
+      "model": "Scalar PD (PDR-1 rep 1)",
+      "dof": 1,
+      "captures": "single trueness number",
+      "has_HEM": false,
+      "has_64D_interior": false,
+      "has_overall_label": "implicit",
+      "ICC_recovers_via": "project_to_scalar_pd()"
+    },
+    {
+      "model": "TTI-1 overall label (B136)",
+      "dof": "1 of 4",
+      "captures": "categorical truth label in {1,i,-1,-i}",
+      "has_HEM": false,
+      "has_64D_interior": false,
+      "has_overall_label": true,
+      "ICC_recovers_via": "overall_label_unit()"
+    },
+    {
+      "model": "64D GILE Matrix (B108)",
+      "dof": 64,
+      "captures": "GILE x 4 axes x 4 labels truth interior",
+      "has_HEM": false,
+      "has_64D_interior": true,
+      "has_overall_label": false,
+      "ICC_recovers_via": "project_to_64d_matrix() (identity)"
+    },
+    {
+      "model": "8-Tralsebit i-Cell (B58)",
+      "dof": 8,
+      "captures": "4 GILE truth + 4 HEM existence (bolted scalars)",
+      "has_HEM": true,
+      "has_64D_interior": false,
+      "has_overall_label": false,
+      "ICC_recovers_via": "project_to_8_tralsebit()"
+    },
+    {
+      "model": "TI Sigma Crystal 8D (TSC/TECC)",
+      "dof": 8,
+      "captures": "G,I,L,E + HEM D1,D2,D5-Presence,D6-Coupling on E8",
+      "has_HEM": true,
+      "has_64D_interior": false,
+      "has_overall_label": false,
+      "ICC_recovers_via": "project_to_crystal8()"
+    },
+    {
+      "model": "*** ICC (this batch) ***",
+      "dof": "64 + 6 + (label derived)",
+      "captures": "64D truth interior BOLTED to HEM(4+2) + overall TTI-1 label",
+      "has_HEM": true,
+      "has_64D_interior": true,
+      "has_overall_label": true,
+      "ICC_recovers_via": "(is the superset)"
+    }
+  ],
+  "honest_status": {
+    "is_empirical": false,
+    "value": "faithful subsumption of all prior i-Cell representations as exact projections (NAD-1), at the cost of more parameters",
+    "predicts_new_fact": false,
+    "falsifier_ICC_F1": "OPEN -- ICC must enable a task the sub-models cannot (e.g. distinguish two i-Cells that every single sub-model conflates), validated outcome-blind; else it is reorganisation, not an advance.",
+    "principle_count": 79,
+    "ICC_is": "CANDIDATE model, not a ratified principle"
+  }
+}
