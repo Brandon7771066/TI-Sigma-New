@@ -1,0 +1,49 @@
+==============================================================================
+SETUP — cap derived from T_d
+==============================================================================
+  G* = 0.93233 (= 3*T_d-1 at T_d=0.644111); no '0.93' typed.
+
+==============================================================================
+PART A — non-trivial structural fidelity is POSSIBLE (escapes tautology)
+==============================================================================
+  held-out structural accuracy = 0.904
+  no-structure majority baseline = 0.529
+  PASS: P_A1: structural F beats chance (>=0.75) and the no-structure baseline
+  PASS: P_A2: F consulted ONLY features X, never a checker/oracle (by construction)
+  => when intrinsic structure genuinely correlates with truth, a computable
+     F predicts BEFORE any proof, with no oracle. The B148 tautology is gone.
+
+==============================================================================
+PART B — anti-magic control: structure DECOUPLED from truth -> chance
+==============================================================================
+  held-out accuracy on decoupled class = 0.486 (chance ~ 0.5)
+  PASS: P_B1: decoupled-label accuracy collapses to ~chance [0.42,0.58]
+  => F has NO independent access to truth; it only harvests a real
+     structure<->truth correlation when the class supplies one (No-Free-Lunch).
+
+==============================================================================
+PART C — undecidability wall: a diagonal adversary defeats ANY fixed F
+==============================================================================
+  fixed-F accuracy on the diagonal adversarial set = 0.000
+  PASS: P_C1: the diagonal adversary forces fixed-F accuracy to exactly 0.0
+  => for ANY fixed computable F there is a consistent label-assignment it
+     fails on. Real-math analog (Turing 1936 / Rice 1953 / Goedel 1931):
+     no TOTAL computable F is both SOUND and COMPLETE as a truth-decider
+     over a class encoding self-reference / the halting problem.
+
+==============================================================================
+PART D — the dichotomy (SFC-1 is a fallible heuristic, not a proof method)
+==============================================================================
+  A: non-trivial structural F EXISTS (predictive, oracle-free).
+  B: but it has no magic truth access (chance off the real correlation).
+  C: and any fixed F is defeatable -> no sound+complete computable F over
+     a rich (undecidable) class. ChatGPT M2(Soundness)+M3(Completeness)
+     are unattainable TOGETHER there; trivial only on decidable subclasses.
+  PASS: P_D1: no single computable F is sound+complete across A & B & C (>=2 of the three regimes defeat any one F)
+  RH is set aside (per the recommendation). We claim a NEW, honest object:
+  a structural truth-support heuristic with a proven fallibility boundary,
+  NOT a predictor of RH and NOT a soundness/completeness theorem.
+
+==============================================================================
+ALL SFC-1 CHECKS PASSED
+==============================================================================
