@@ -1,0 +1,22 @@
+---
+name: UOP 0.93 cap fragility + i-cosmogenesis honest limits
+description: Why the 0.93 GILE cap is not a privileged constant, and why a designed sim can't prove moral realism / spontaneous i-Cell emergence.
+---
+
+## The 0.93 cap is breakpoint-agnostic AND triple-valued
+- `uop_constant_audit.py` already proves the cap is **circular**: in the argmax `ρ·f_cap(G)+g(H)`, the optimizer **tracks whatever kink θ you insert** (and the canonical budget 1.86 = 2×0.93 forces B/2 = 0.93 by construction). A sim that "lands on 0.93" therefore proves nothing about 0.93 being special.
+- The corpus carries **three different analytic "0.93" values that disagree** (spread ≈ 0.0038): `√(e/π)=0.9302` (constants.py LCC_RADIANT), `1−e^{−e}=0.9340` (stack.py RT), `1−½e^{−2}=0.9323` (audit midpoint (1+L)/2). Post-hoc multiplicity = anti-numerology hazard (NAD-1).
+- **How to apply:** never present 0.93 as a derived/natural constant or as sim evidence; treat it as a POSITED modeling choice. If asked to "show 0.93 emerges," reproduce the breakpoint sweep instead.
+
+## Corpus bug: LCC_RADIANT has two definitions
+- `lean4/TISigma.lean`: `LCC_RADIANT = 1/φ ≈ 0.618`. `ti_sigma/constants.py`: `LCC_RADIANT = √(e/π) ≈ 0.930`. Same name, two values. Use **constants.py (Python) as the operational source** for sims; flag the clash rather than silently picking one.
+
+## A designed sim cannot prove moral realism or spontaneous emergence (HGR-1)
+- **Why:** a simulation establishes an *is* (a dynamics has a fixed point); calling that point *good* requires already choosing the objective that makes it a fixed point. Empirically: **value-free dynamics do NOT select the Myrion optimum** — a max-entropy random walk has a uniform stationary law (no cell preferred); least-action relaxation goes to the geometric **centroid (0.5,0.5)**, not 0.93. The moral optimum appears only after the moral objective is **injected**.
+- **Random-walk stationary-law trap:** a propose-one-of-4-directions-and-STAY-if-invalid grid walk is **doubly stochastic** ⇒ **uniform** stationary, NOT degree-proportional. π(v)∝deg(v) holds only if you choose uniformly among **valid** neighbours (1/deg). Always state which transition rule you used; and run long enough to mix (check TV-distance to the claimed stationary law) before reading occupancy. **Why:** misidentifying the stationary law inverts the conclusion (a "disfavoured optimum" vs "no preference"); pick the law from the actual transition matrix, not intuition.
+- So **Hume's is→ought gap is RELOCATED into the objective choice, not demolished.** "i spontaneously becomes a Myrion-optimizer over any other attractor" stays UNSUPPORTED until falsifier **HGR-1-F1** is met (a value-free dynamics from a neutral seed that provably concentrates on the GILE-HEM optimum > chance and > rivals).
+- A GILE-HEM↔8-constant mapping with only 4 anchor points **cannot beat a random relabeling** (24 perms → min two-sided p≈0.08; observed p=1.0). Mapping constants onto GILE-HEM is interpretive overlay, NOT evidence; to earn joint-carving it must PREDICT a new out-of-sample fact (anti-numerology rail).
+- **Under-mixing masquerades as concentration:** a too-short walk on a large grid leaves apparent "excess" at whatever region it hasn't yet escaped; that is a mixing artifact, not a real attractor. Always confirm mixing (TV→stationary small) before reading any occupancy peak as meaningful.
+
+## Genuine (keep, but weight as elementary)
+- `i` generates C4 {i,−1,−i,1} (the i-Cell tetrad), closed under {×i, conj, negate}; the Extended Euler Identity `e^{iπ}+√2·φ·C=0` is machine-zero. Real, but ordinary group theory / one identity — not evidence of consciousness or value. RH-as-self-complementary-zeros (σ:s↦1−s̄ fixes the critical line) and NS-as-rotation-vs-decay are coherent reframings, NOT proofs (RH/NS remain open; UOP doesn't shortcut them).

@@ -1,0 +1,124 @@
+{
+  "preregistered_predictions": {
+    "P_A_group": "i generates exactly 4 distinct powers (C4); the complement PAIR {i,-i} is NOT closed under *i, only the full C4 orbit is closed under {*i, conj, negate}. EXPECT: TRUE (trivial group theory).",
+    "P_B_euler": "|e^(i*pi)+sqrt2*phi*C| < 1e-9. EXPECT: TRUE (machine zero).",
+    "MORAL_F1": "A VALUE-FREE dynamics seeded at the i-Cell concentrates on the Myrion optimum (G*~0.93) MORE than chance AND more than rivals. EXPECT: FALSE -> max-entropy walk stays ~uniform; least-action relaxation goes to the geometric centroid (0.5), NOT 0.93. If FALSE, spontaneous moral emergence is NOT shown (Hume stands).",
+    "NUM_F1": "The argmax does NOT track an arbitrary inserted kink theta, AND the three corpus '0.93' values agree to <1e-3. EXPECT: FALSE on both -> argmax tracks theta (circular) and the three differ (numerology hazard)."
+  },
+  "part_a_i_to_icell": {
+    "powers_of_i": [
+      "1j",
+      "(-1+0j)",
+      "(-0-1j)",
+      "(1+0j)"
+    ],
+    "is_C4_cyclic_group": true,
+    "icell_complement_pair": [
+      "i",
+      "-i (= conj i = negative complement)"
+    ],
+    "pair_closed_under_times_i": false,
+    "gaussian_unit_orbit": [
+      "1",
+      "i",
+      "-1",
+      "-i"
+    ],
+    "orbit_closed_under_elementary_ops": true,
+    "honest_note": "Real but ELEMENTARY. {i,-i} is the complement PAIR, NOT operation-closed under x*i; the closed object is the full Gaussian-unit orbit {1,i,-1,-i} = the cyclic group C4. Closure is group theory, NOT evidence of consciousness or of an 'ought'.",
+    "prereg_P_A_group_passes": true
+  },
+  "part_b_eight_constants": {
+    "classical_euler_residual": 1.2246467991473532e-16,
+    "extended_euler_residual": 1.2246467991473532e-16,
+    "extended_euler_is_machine_zero": true,
+    "eight_constant_magnitude_ladder": [
+      "0_PN=0.0000",
+      "C_GM=0.4370",
+      "1_UT=1.0000",
+      "i_OPS=1.0000",
+      "sqrt2_PHYS=1.4142",
+      "phi_CS=1.6180",
+      "e_MATH=2.7183",
+      "pi_AI=3.1416"
+    ],
+    "honest_note": "The identity is GENUINE (machine zero). The Level-0..7 / GILE-HEM ROLE labels attached to each constant are an interpretive overlay, not forced by the identity.",
+    "prereg_P_B_euler_passes": true
+  },
+  "part_b2_mapping_nonarbitrary": {
+    "observed_corr_gileweight_vs_constant": 0.07454707896072164,
+    "perm_null_p_two_sided": 1.0,
+    "mapping_beats_random_relabel": false,
+    "honest_note": "With only 4 points, NO 4-element mapping can reach p<0.05 (24 permutations -> min two-sided p ~0.08). The GILE<->constant map is therefore NOT statistically distinguishable from a random relabeling = it is interpretive, not a proven joint-carving. (NAD-1: faithfulness must be EARNED.)"
+  },
+  "part_c_attractor_competition": {
+    "seed_state": [
+      0.5,
+      0.5
+    ],
+    "myrion_optimum_point": [
+      0.9400000000000001,
+      1.0
+    ],
+    "walk_transition_doubly_stochastic": true,
+    "stationary_law": "UNIFORM (doubly-stochastic propose-or-stay walk); no cell preferred",
+    "maxentropy_walk_tv_distance_to_uniform": 0.021982013456362935,
+    "maxentropy_walk_mixed": true,
+    "empirical_myrion_cell_vs_uniform": 0.9948824999999999,
+    "empirical_centroid_cell_vs_uniform": 0.98903025,
+    "walk_selects_myrion": false,
+    "least_action_limit": [
+      0.5,
+      0.5
+    ],
+    "least_action_goes_to_myrion": false,
+    "MORAL_F1_spontaneous_emergence_shown": false,
+    "honest_note": "The propose-or-stay walk is doubly stochastic, so its EXACT stationary law is UNIFORM: it does not prefer any cell, Myrion included (empirical single-cell ratios ~1.0 once mixed; per-cell counts are Poisson-noisy, so the analytic uniform fact is the primary evidence). An earlier draft wrongly claimed a degree-proportional law -- that would require choosing uniformly among VALID neighbours (1/deg), which this walk does not do.",
+    "verdict": "Value-free dynamics do NOT select the Myrion optimum: the max-entropy walk's stationary distribution is uniform (no preference for Myrion), and least-action relaxation goes to the geometric centroid (0.5,0.5), not 0.93. The Myrion point is selected ONLY when the Myrion objective is INJECTED into the dynamics. => the 'ought' must be put in by hand; it does not emerge from i."
+  },
+  "part_d_circularity_and_numerology": {
+    "breakpoint_sweep": [
+      {
+        "theta": 0.8,
+        "argmax_G": 0.8,
+        "tracks_theta": true
+      },
+      {
+        "theta": 0.85,
+        "argmax_G": 0.85,
+        "tracks_theta": true
+      },
+      {
+        "theta": 0.9,
+        "argmax_G": 0.9,
+        "tracks_theta": true
+      },
+      {
+        "theta": 0.93,
+        "argmax_G": 0.93,
+        "tracks_theta": true
+      },
+      {
+        "theta": 0.95,
+        "argmax_G": 0.95,
+        "tracks_theta": true
+      },
+      {
+        "theta": 0.99,
+        "argmax_G": 0.99,
+        "tracks_theta": true
+      }
+    ],
+    "argmax_tracks_inserted_theta": true,
+    "three_rival_0p93_values": {
+      "radiant_sqrt(e/pi)": 0.930191,
+      "RT_1-e^-e": 0.934012,
+      "midpoint_1-0.5e^-2": 0.932332
+    },
+    "spread_between_them": 0.003821,
+    "three_agree_within_1e-3": false,
+    "NUM_F1_passes_nonnumerology": false,
+    "verdict": "The argmax tracks WHATEVER kink theta is inserted -> the 0.93 cap is breakpoint-agnostic (circular), reproducing uop_constant_audit.py. And the corpus carries THREE different analytic '0.93' values spread by 0.0038 -- post-hoc multiplicity is a numerology hazard (NAD-1)."
+  },
+  "HONEST_BOTTOM_LINE": "GENUINE: i generates the C4 i-Cell tetrad and the Extended Euler Identity binds 5 constants at machine zero. NOT SHOWN: that i SPONTANEOUSLY becomes a Myrion-optimizer over rival attractors (value-free dynamics do not select it), and that the numbers PROVE moral realism. The 0.93 cap is breakpoint-agnostic and the moral content is injected via the chosen objective. Hume's is->ought gap is RELOCATED into that choice, not demolished. A designed simulation cannot prove spontaneous emergence or consciousness. (UGI-1 validate-phase result; #69 logged not tuned.)"
+}
