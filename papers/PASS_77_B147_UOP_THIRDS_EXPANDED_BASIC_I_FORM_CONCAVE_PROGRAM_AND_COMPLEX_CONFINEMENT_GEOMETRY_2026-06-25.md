@@ -1,7 +1,7 @@
 # Pass 77 · B147 — The UOP, fully written out: thirds-expanded with `max`, in basic operations & in `i`, backed by a PROVEN optimization method, plus the complex-confinement geometry refinement
 
 **Date:** 2026-06-25
-**Status:** Presentational consolidation (Sections A–B) + TWO candidates (Section C **UCP-1**; Section D **CCG-1**), **NONE ratified**. Canonical principle **count unchanged 79**.
+**Status:** Presentational consolidation (Sections A–B) + candidates (Section C **UCP-1**; Section D **CCG-1**, corrected by **NPA-1** = CCG-1 refinement #1 per the author), **NONE ratified**. Canonical principle **count unchanged 79**.
 **Package:** `analyses/pass77_b147_uop_expanded_gradient_complex/uop_b147_checks.py` (+ `_output.txt`) — all checks pass.
 
 > **Honesty rails honored throughout.** Sections A–B are exact-algebra / presentation upgrades (RAI-1, TPS-1): the same function written four ways, plus a representation in `i`. They add **zero new content**. Section C's gradient result backs **well-posedness and findability** of the optimum by a standard proven method — it is **necessary, not sufficient** (#69): it does **NOT** prove the UOP is the correct *normative* principle. Section D is a **geometry/representation** refinement (NAD-1 carve-at-joints), not a new principle. No numerology; the cap is **derived from `T_d`**, never typed as "0.93".
@@ -108,7 +108,7 @@ with three orthogonal carriers: **real** `1` = ternary **degree** `d ∈ {−1, 
 J  =  ρ · f_cap( Re(z) )  +  ln(1 + H),        Re(z) = d   (the ternary degree).
 ```
 
-The consequences are exactly the new geometry: **MI = pure `+i`** contributes **nothing** to the capped truth aggregate (a modality clash is not a truth-degree), and **N/A on `j`** is **off the optimized plane entirely** (its real location is unspecified, so it cannot enter `G` at all). This is a faithful *re-statement* of the UOP in the corrected complex coordinates — a presentation, not a new claim (TPS-1/RAI-1).
+The consequences (as corrected by **NPA-1**, Section D.2): MI is **imaginary-dominant** so it contributes only its **small real residue** to the capped aggregate (a modality clash is *mostly* not a truth-degree, but — being *both* tralse *and* not-tralse — it does predicate on truth, so its real projection is small **but nonzero**). N/A is **`j`-dominant** with a **wildcard** real coordinate, so its contribution to `G` is whatever its (possibly ~0) real projection happens to be. The earlier wording "MI contributes **nothing** / N/A is **off the plane entirely**" is **withdrawn**: read it as "contributes **minimally**" under dominance, never "exactly zero". This is a faithful *re-statement* of the UOP in the corrected complex coordinates — a presentation, not a new claim (TPS-1/RAI-1).
 
 ---
 
@@ -131,32 +131,48 @@ The consequences are exactly the new geometry: **MI = pure `+i`** contributes **
 
 ---
 
-## Section D — complex-confinement geometry (candidate **CCG-1**, refining TRR-1 / NAH-1)
+## Section D — complex-DOMINANCE geometry (candidate **CCG-1**, refining TRR-1 / NAH-1; corrected by **NPA-1**)
 
-**CCG-1 (Complex-Confinement Geometry).** *Three orthogonal carriers, each label confined to its own:*
+> **Read this section through Section D.2.** The first draft of CCG-1 used the word *confinement* and assigned **exactly zero** to the off-axis components ("MI = pure `+i`, real part 0"). The author corrected this (see D.2): **no truth-state is pure** — placement on an axis is by **dominance** (which carrier is largest), **not** by the others being exactly 0. The table below is the corrected (dominance) version.
 
-| Carrier | Axis | Labels | Confinement rule |
+**CCG-1 (Complex-DOMINANCE Geometry).** *Three carriers; each label sits where its component is **dominant**, while still carrying a small nonzero amount of the others:*
+
+| Carrier | Axis | Labels | Dominance rule (NPA-1-corrected) |
 |---|---|---|---|
-| Real `1` | degree | **True `+1`, Indeterminate `0`, False `−1`** | ternary logic lives **here only** (Łukasiewicz-3) |
-| Imaginary `i` | modality | **MI `= +i`** (conjugate `−i`) | MI is **pure-imaginary ONLY** — real part **0** |
-| Hyperimaginary `j` | applicability | **N/A** | **`j`-location unspecified AND real location completely unspecified** |
+| Real `1` | degree | **True `≈+1`, Indeterminate `≈0`, False `≈−1`** | ternary is **real-DOMINANT** (`|im| < |re|`), with a **small nonzero** imaginary residue |
+| Imaginary `i` | modality | **MI `≈ +i`** (conjugate `−i`) | MI is **imaginary-DOMINANT** (`|re| < |im|`), with a **small nonzero REAL** part (it is *both* tralse *and* not-tralse ⇒ predicates on truth) |
+| Hyperimaginary `j` | applicability | **N/A** (screened **first**) | N/A is **`j`-DOMINANT**; real coordinate is a **WILDCARD** (possibly present, possibly ≈0); a small `i` residue too |
 
 This **refines** two prior statements and **corrects** one:
 
-* **Refines B145 TRR-1**: ternary on the real axis ✓ — and now adds the *strict* clauses "MI on the complex plane **only**" and "N/A's real coordinate is **unspecified**".
-* **Refines B138 NAH-1**: NAH-1 placed N/A on a hyperimaginary `j` axis but **projected it to the origin `(0,0)`** on the truth plane. CCG-1 **withdraws the origin-pinning**: N/A is "high but imprecise" — its real location is *completely unspecified*, so a faithful decoder must treat the real coordinate as a **wildcard**, not 0.
-* **Corrects the 64D matrix**: the `4³` closure **folds N/A → MI**. That is now **doubly wrong** — N/A and MI are on **different axes** (`j` vs `i`), and N/A cannot even be pinned to a fixed point on the truth plane. The matrix's MR slice should carry MI on `i`; N/A is screened *first* (pre-base-4) and sits off-plane on `j`.
+* **Refines B145 TRR-1**: ternary is real-**dominant** (not "real only") — it carries a minimal imaginary magnitude (NPA-1).
+* **Refines B138 NAH-1**: NAH-1 **projected N/A to the origin `(0,0)`**. CCG-1 **withdraws the origin-pinning**: N/A's real coordinate is a **wildcard** (possibly present), so a faithful decoder must treat it as a region, not 0. (The N/A screen runs **first**: a claim can fail the N/A screen and then be evaluated as MI, landing imaginary-dominant.)
+* **Corrects the 64D matrix**: the `4³` closure **folds N/A → MI**. Wrong on two counts — N/A and MI have **different dominant carriers** (`j` vs `i`), and N/A's real coordinate is not pinnable. The matrix's MR slice should carry MI imaginary-dominant; N/A is screened *first* (pre-base-4) and sits `j`-dominant.
 
-**What the harness shows** (`Section 3`): (a) {T,I,F} have zero `i` and zero `j` → real only; (b) MI has real = 0, `j` = 0, `i ≠ 0` → complex-plane only; (c) MI is never classified N/A (different axes); (d) 200 N/A tokens with random real ∈ `[−3, 2]` and random `j` ∈ `[0.3, 5]` are all still N/A, and a fixed-origin decoder would misrank `81/200` as "far from prototype" → origin-pinning is unfaithful.
+**What the harness shows** (`Section 3`, NPA-1-corrected): (a) {T,I,F} are real-**dominant** but each carries a **small nonzero** imaginary part (not pure-real); (b) MI is imaginary-**dominant** but carries a **small nonzero real** part (the both-tralse-and-not-tralse predication) — the old "real = 0" is withdrawn; (c) the two families have **opposite** dominance yet **both** carry a real component, so a strict `real==0` confinement decoder is provably wrong; (d) N/A tokens have a wildcard real coordinate (197/200 with a non-trivial real part, the rest ≈0) and a fixed-origin decoder would misrank ~86/200 — origin-pinning is unfaithful.
+
+### D.2 NPA-1 — No Pure Axis (CCG-1 refinement #1; the author's B147 correction)
+
+**NPA-1 (No-Pure-Axis / Dominance-not-Confinement).** *You cannot cleanly separate the real from the imaginary: **every** truth-state `z = d·1 + m·i + n·j` carries **some** of every component. An "axis" names which component **dominates**, never that the others vanish. In particular:*
+
+1. **Real-axis (ternary) statements have *minimal* — not zero — imaginary magnitude.** A crisp True/False still carries a faint modality/MI residue.
+2. **MI statements have *minimal* — not zero — REAL magnitude.** This is forced: MI is **by definition both tralse and not-tralse** (`τ(P) ∧ ¬τ(P)`), which is a *predication about truth*, so an MI state necessarily has a real projection. The two families are mirror images: ternary = real-dominant/`i`-minimal; MI = `i`-dominant/real-minimal.
+3. **All N/A *and* MI claims have *some* real component.** N/A is screened first and definitely carries a `j` part; its real part is a wildcard (possibly present). MI's real part is small-but-forced. Neither is ever "off the truth plane entirely."
+
+**Why this matters (honest scope).** This is a **geometry correction**, not a new principle (count unchanged 79). It *softens* CCG-1's claims (good: the strict version was over-stated) and it *re-couples* MI and N/A to the real axis by a small amount — which means, in the UOP (Section B.2), MI and N/A contribute **minimally** to the capped aggregate rather than **exactly zero**. No downstream numeric result changes materially (the residues are minimal by construction), but the *categorical* "contributes nothing" claims are retracted.
+
+**Falsifier NPA-1-F1 (OPEN).** Exhibit a truth-state that is *genuinely, exactly* pure — a determinate ternary value with provably **zero** modality, or an MI state with provably **zero** real predication — without smuggling in an idealization. If pure states exist, "no pure axis" is too strong and reverts to dominance-with-possible-zeros.
 
 ### D.1 Representation-by-representation adjustments
 
-* **Scalar PD (`−3 … +2`)** — the signed **real** axis now carries **only the ternary degree** {T, I, F}. **MI is NOT on this line** (it was placed "near False" — withdrawn; MI is off-axis on `i`). **N/A is off-axis on `j`** with unspecified real position. So scalar PD is, honestly, a **ternary** instrument; it **cannot** represent MI or N/A (it has no `i` or `j`).
-* **Complex PD (`real + i`)** — real = ternary degree, `i` = MI modality. It represents **{T, I, F, MI}** faithfully but **cannot hold N/A** (N/A needs `j`). The old "NA = `−e·i`" placement is **withdrawn** (that put N/A on the `i`-axis; N/A is on `j`).
-* **TI Sigma Graph (TIG)** — the real-axis projection plus the `i` vertex: ternary on the real, MI at the `i` vertex; **N/A is not representable** on the 2-D graph (it lives on the third `j` axis).
+> All entries below are **NPA-1-corrected**: "on axis X" means **X-dominant**, never "X-only / other components exactly 0".
+
+* **Scalar PD (`−3 … +2`)** — the signed **real** axis carries the **real-dominant ternary degree** {T, I, F}. **MI is not well-represented on this line** (its old "near False" placement is withdrawn; MI is `i`-dominant). **N/A is `j`-dominant** with a wildcard real position. So scalar PD is, honestly, a **ternary-dominant** instrument; it cannot faithfully carry MI or N/A (it exposes no `i` or `j`).
+* **Complex PD (`real + i`)** — real = ternary degree, `i` = MI modality. It represents **{T, I, F, MI}** faithfully (each as a dominance, with the small off-axis residue) but **cannot hold N/A** (N/A needs `j`). The old "NA = `−e·i`" placement is **withdrawn** (that put N/A on the `i`-axis; N/A is `j`-dominant).
+* **TI Sigma Graph (TIG)** — the real-dominant projection plus the `i` vertex: ternary on the real, MI at the `i` vertex; **N/A is not representable** on the 2-D graph (it is `j`-dominant).
 * **TI Sigma Crystal / TECC** — the codewords for {T, F, I} sit on the real shell, MI on the `i`-plane; the **N/A codeword carries a wildcard real coordinate** (and an unspecified `j` magnitude) rather than a fixed point — the decoder must accept a *region*, not a vertex, for N/A.
-* **64D GILE Matrix** — stop folding N/A into MI; the matrix natively covers the on-plane base-4 (real `T/F/I`, imaginary `MI`); **N/A is an off-matrix pre-screen** on `j`.
-* **UOP** — unaffected in value (it already optimizes the real GILE aggregate); Section B.2 makes explicit that it reads `Re(z)` only, so MI (`i`) and N/A (`j`) correctly contribute nothing to the capped truth aggregate.
+* **64D GILE Matrix** — stop folding N/A into MI; the matrix natively covers the base-4 (real-dominant `T/F/I`, imaginary-dominant `MI`); **N/A is an off-matrix pre-screen** (`j`-dominant).
+* **UOP** — unaffected in value (it already optimizes the real GILE aggregate); Section B.2 makes explicit that it reads `Re(z)` only, so MI (`i`) and N/A (`j`) contribute only their **minimal** real projection to the capped truth aggregate — **minimal, not exactly zero** (NPA-1; the earlier "contribute nothing" is withdrawn).
 
 **Falsifier CCG-1-F1 (OPEN).** Exhibit a genuine proposition that is **uncontroversially N/A** yet has a **determinate, agreed real truth-degree** (a fixed non-wildcard real location). If such cases are common, the "completely unspecified real location" clause is too strong and N/A collapses back toward an on-plane point.
 
@@ -164,12 +180,14 @@ This **refines** two prior statements and **corrects** one:
 
 ## Cross-references & consistency
 
-* **B145** (thirds URR-1 / TRR-1): Section A is the requested full expansion of that "new version"; Section D tightens TRR-1.
+* **B145** (thirds URR-1 / TRR-1): Section A is the requested full expansion of that "new version"; Section D refines TRR-1 to real-**dominance** (NPA-1).
 * **B138** (NAH-1): Section D refines its origin-projection to a wildcard.
 * **B133/B134** (UOP grounding, `f_cap`, universality): Section A.2 re-expresses the same `f_cap`; Section C adds the concave-program property as proven-method backing.
 * **SAC-1 / HRR-1** (above-cap supererogation, HEM-as-residual): Section C's reconciliation note makes the two cap-formulations' divergence above `T_d = 2/3` *be* the SAC-1 distinction.
-* Count stays **79**: UCP-1 and CCG-1 are **candidates**; Sections A–B are presentation (TPS-1/RAI-1).
+* **NPA-1 vs the corpus complex-number commitments** (PDR-1 Complex-PD, TRG-1 tralse-real): NPA-1 ("no pure axis") harmonizes with TRG-1 — if reality's ground state is tralse (not crisply True), then no truth-state is a *pure* anything, so MI/N/A carrying a real residue is expected, not anomalous.
+* Count stays **79**: UCP-1, CCG-1 and the NPA-1 correction are **candidates / refinements**; Sections A–B are presentation (TPS-1/RAI-1).
 
 ## Open falsifiers introduced
 * **UCP-1-F1** — a faithful non-concave UOP casting (ungerrymandered) would limit the proven-method backing.
-* **CCG-1-F1** — a common N/A-with-determinate-real-degree would refute "completely unspecified real location".
+* **CCG-1-F1** — a common N/A-with-determinate-real-degree would refute "wildcard real coordinate".
+* **NPA-1-F1** — a genuinely, exactly **pure** truth-state (determinate ternary with zero modality, or MI with zero real predication) would refute "no pure axis" and revert to dominance-with-possible-zeros.

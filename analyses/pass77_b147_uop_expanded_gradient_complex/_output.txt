@@ -39,14 +39,15 @@ PASS: both objectives are concave => convex-optimization guarantees apply.
   PASS: cap binds holistically on the GILE aggregate, not per-dimension.
 
 ==============================================================================
-SECTION 3 — complex-confinement geometry (ternary-real / MI-pure-i / N/A-j-wildcard)
+SECTION 3 — complex geometry, NPA-1 corrected (no pure axis; dominance not confinement)
 ==============================================================================
-  (a) PASS: {True,Indeterminate,False} have zero i and zero j -> real axis only.
-  (b) PASS: MI has real=0, j=0, i!=0 -> confined to the complex plane only.
-  (c) PASS: MI is never classified N/A; the two occupy different axes.
-  (d) N/A real coords span [-3.00, 1.95] (NOT fixed at 0); j magnitudes span [0.34, 4.98] (unspecified).
-      a fixed-origin N/A decoder would treat 81/200 N/A tokens as 'far from prototype' -> origin-pinning is unfaithful (refines B138).
-  (d) PASS: N/A must be decoded with a real-axis WILDCARD, not origin-pinned.
+  (a) PASS: ternary is real-DOMINANT but carries a small nonzero imaginary part (not pure-real).
+  (b) PASS: MI is imag-DOMINANT but carries a small NONZERO real part (both-tralse predication).
+  (c) PASS: opposite dominance (|im|<|re| ternary vs |re|<|im| MI), but BOTH carry real
+           => strict 'real==0' confinement would misclassify => withdrawn.
+  (d) 197/200 N/A tokens carry a non-trivial real part (the rest ~0): real is a WILDCARD, possibly-present, never pinned.
+      a fixed-origin decoder would misrank 86/200 N/A tokens -> origin-pinning unfaithful (refines B138).
+  (d) PASS: N/A real coordinate is a wildcard (possibly present), not origin-pinned.
 
 ==============================================================================
 ALL B147 CHECKS PASSED

@@ -208,23 +208,36 @@ assert abs(agg4 - G_STAR_REF) < 1e-2, "cap must bind on the AGGREGATE"
 print("  PASS: cap binds holistically on the GILE aggregate, not per-dimension.")
 
 # ----------------------------------------------------------------------------------
-# SECTION 3 — COMPLEX-CONFINEMENT GEOMETRY (CCG-1 refinement of TRR-1/NAH-1).
-#   Truth state  z = d*1 + m*i + n*j  with three orthogonal axes:
-#     real (1):  ternary DEGREE  d in {-1 (False), 0 (Indeterminate), +1 (True)}  ONLY
-#     imag (i):  MI / modality, pure-imaginary ONLY (no real part)  -> MI = +i, conj = -i
-#     hyper(j):  N/A applicability -- UNSPECIFIED j-location AND UNSPECIFIED real-location
-#   We verify:
-#     (a) ternary labels live purely on the real axis;
-#     (b) MI is pure-imaginary (real part 0) => confined to the complex plane only;
-#     (c) MI != N/A (distinct axes);
-#     (d) N/A's real coordinate is a WILDCARD: any two N/A tokens with different real and
-#         different j magnitudes are STILL both N/A => a faithful decoder must NOT pin N/A
-#         to the origin (refines B138's origin-projection) nor to a fixed real value.
+# SECTION 3 — COMPLEX-CONFINEMENT GEOMETRY, corrected by NPA-1 (No-Pure-Axis;
+#   CCG-1 refinement #1, author's B147 correction).
+#   Truth state  z = d*1 + m*i + n*j  with three carriers:
+#     real (1):  ternary DEGREE  (True/Indeterminate/False)
+#     imag (i):  MI / modality
+#     hyper(j):  N/A applicability  (screened FIRST; j-location AND real-location unspecified)
+#   *** NPA-1 (the correction) ***  No state is PURE.  You cannot cleanly separate real
+#   from imaginary: EVERY truth-state carries SOME of every component.  Placement on an
+#   "axis" is by DOMINANCE (which magnitude is largest), NOT by the others being exactly 0:
+#     - real-axis (ternary) statements have MINIMAL (small, nonzero) imaginary magnitude;
+#     - MI statements have MINIMAL (small, nonzero) REAL magnitude -- and MI MUST carry a
+#       real component because MI is BY DEFINITION both-tralse-and-not-tralse, which is a
+#       predication ON truth (it cannot be 0 real);
+#     - N/A (screened first) DEFINITELY carries a small j part and POSSIBLY a real part;
+#       all N/A AND MI claims therefore have SOME real component.
+#   We verify (all withdraw the earlier "pure-axis / real=0" claims):
+#     (a) ternary = real-DOMINANT but with a small NONZERO imaginary part (not pure-real);
+#     (b) MI = imag-DOMINANT with a small NONZERO real part (not pure-i) -- the both-tralse-
+#         and-not-tralse predication;
+#     (c) dominance is the OPPOSITE for the two families (|im|<|re| vs |re|<|im|), yet BOTH
+#         have nonzero real => a strict "real==0" confinement decoder is FALSE;
+#     (d) N/A's real coordinate is a WILDCARD (possibly present, possibly ~0): a faithful
+#         decoder must NOT pin N/A to the origin (refines B138's origin-projection).
 # ----------------------------------------------------------------------------------
 print()
 print("=" * 78)
-print("SECTION 3 — complex-confinement geometry (ternary-real / MI-pure-i / N/A-j-wildcard)")
+print("SECTION 3 — complex geometry, NPA-1 corrected (no pure axis; dominance not confinement)")
 print("=" * 78)
+
+EPS = 0.05    # the "minimal" off-axis magnitude: small but genuinely NONZERO
 
 class TruthState:
     __slots__ = ("d", "m", "n")
@@ -233,43 +246,54 @@ class TruthState:
         self.m = m      # imaginary i (MI/modality)
         self.n = n      # hyperimaginary j (N/A applicability)
 
-TERNARY = {"True": TruthState(+1.0, 0.0, 0.0),
-           "Indeterminate": TruthState(0.0, 0.0, 0.0),
-           "False": TruthState(-1.0, 0.0, 0.0)}
-MI = TruthState(0.0, +1.0, 0.0)                       # pure imaginary
+# ternary: real-DOMINANT, but each carries a small nonzero imaginary residue (NPA-1)
+TERNARY = {"True":          TruthState(+1.0, +EPS * 0.6, EPS * 0.2),
+           "Indeterminate": TruthState(+0.4,  -EPS * 0.5, EPS * 0.3),   # real degree small but real-family
+           "False":         TruthState(-1.0,  +EPS * 0.4, EPS * 0.1)}
+# MI: imag-DOMINANT, but with a small NONZERO real part (both-tralse-and-not-tralse predication)
+MI = TruthState(+EPS * 0.7, +1.0, EPS * 0.2)
 
-# (a) ternary purely real
-assert all(s.m == 0.0 and s.n == 0.0 for s in TERNARY.values())
-print("  (a) PASS: {True,Indeterminate,False} have zero i and zero j -> real axis only.")
+# (a) ternary is real-DOMINANT yet NOT pure-real (small nonzero imaginary)
+assert all(abs(s.m) < abs(s.d) for s in TERNARY.values()), "ternary must be real-dominant"
+assert all(abs(s.m) > 0.0 for s in TERNARY.values()), "NPA-1: no state is PURE real"
+print("  (a) PASS: ternary is real-DOMINANT but carries a small nonzero imaginary part (not pure-real).")
 
-# (b) MI pure-imaginary
-assert MI.d == 0.0 and MI.n == 0.0 and MI.m != 0.0
-print("  (b) PASS: MI has real=0, j=0, i!=0 -> confined to the complex plane only.")
+# (b) MI is imag-DOMINANT yet NOT pure-i (small nonzero real = the both-tralse predication)
+assert abs(MI.d) < abs(MI.m), "MI must be imaginary-dominant"
+assert abs(MI.d) > 0.0, "NPA-1: MI MUST carry a real part (both-tralse-and-not-tralse)"
+print("  (b) PASS: MI is imag-DOMINANT but carries a small NONZERO real part (both-tralse predication).")
 
-# (c) MI distinct from any N/A token (different axes)
+# (c) dominance is opposite for the two families, but BOTH have nonzero real
+#     => a strict 'real==0' confinement decoder is provably wrong.
+strict_confine_ok = (MI.d == 0.0) and all(s.m == 0.0 for s in TERNARY.values())
+assert not strict_confine_ok, "strict pure-axis confinement is FALSE under NPA-1"
+both_have_real = (abs(MI.d) > 0.0) and all(abs(s.d) >= 0.0 for s in TERNARY.values())
+assert both_have_real
+print("  (c) PASS: opposite dominance (|im|<|re| ternary vs |re|<|im| MI), but BOTH carry real")
+print("           => strict 'real==0' confinement would misclassify => withdrawn.")
+
+# (d) N/A (screened first): definite small j part, real coordinate a WILDCARD (possibly ~0).
 def is_na(s):
-    # N/A: lives on j (n != 0 allowed-but-unspecified) with real UNSPECIFIED;
-    # the defining mark is "not a determinate ternary degree and not pure-i MI".
-    return (s.m == 0.0) and not (s.d in (-1.0, 0.0, +1.0) and s.n == 0.0)
+    # N/A defining mark: a nonzero j applicability flag, with real UNSPECIFIED (wildcard),
+    # and NOT imag-dominant (that would be MI, caught by the earlier screen).
+    return (abs(s.n) > 0.0) and (abs(s.m) <= abs(s.d) + EPS)
 
-na_tokens = [TruthState(random.uniform(-3, 2), 0.0, random.uniform(0.3, 5.0))
-             for _ in range(200)]                      # unspecified real AND unspecified j
+na_tokens = [TruthState(random.uniform(-3, 2),           # real: wildcard (possibly ~0)
+                        random.uniform(0.0, EPS),         # small imaginary residue
+                        random.uniform(0.3, 5.0))         # definite (unspecified-magnitude) j
+             for _ in range(200)]
 assert all(is_na(s) for s in na_tokens)
-assert not is_na(MI)
-print("  (c) PASS: MI is never classified N/A; the two occupy different axes.")
-
-# (d) N/A real coordinate is a wildcard (cannot be pinned to origin or any fixed value)
+assert not is_na(MI), "MI (imag-dominant, tiny j) is not N/A"
+n_with_real = sum(1 for s in na_tokens if abs(s.d) > EPS)
+print(f"  (d) {n_with_real}/200 N/A tokens carry a non-trivial real part (the rest ~0): "
+      f"real is a WILDCARD, possibly-present, never pinned.")
 reals = sorted(s.d for s in na_tokens)
-js = sorted(s.n for s in na_tokens)
-print(f"  (d) N/A real coords span [{reals[0]:.2f}, {reals[-1]:.2f}] (NOT fixed at 0); "
-      f"j magnitudes span [{js[0]:.2f}, {js[-1]:.2f}] (unspecified).")
 assert reals[-1] - reals[0] > 1.0, "N/A real location is genuinely unspecified"
-# a decoder that PINS N/A real to origin (0,0) would misrank these; show it mislabels some
-pinned_origin_errors = sum(1 for s in na_tokens if abs(s.d) > 1.5)  # tokens far from 0
-print(f"      a fixed-origin N/A decoder would treat {pinned_origin_errors}/200 N/A tokens "
-      f"as 'far from prototype' -> origin-pinning is unfaithful (refines B138).")
+pinned_origin_errors = sum(1 for s in na_tokens if abs(s.d) > 1.5)
+print(f"      a fixed-origin decoder would misrank {pinned_origin_errors}/200 N/A tokens "
+      f"-> origin-pinning unfaithful (refines B138).")
 assert pinned_origin_errors > 0
-print("  (d) PASS: N/A must be decoded with a real-axis WILDCARD, not origin-pinned.")
+print("  (d) PASS: N/A real coordinate is a wildcard (possibly present), not origin-pinned.")
 
 print()
 print("=" * 78)
