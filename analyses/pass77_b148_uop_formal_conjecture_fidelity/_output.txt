@@ -1,0 +1,60 @@
+==============================================================================
+SECTION 1 — J is monotone in G on [0, G*] => argmax orders by support
+==============================================================================
+  cap G* = 0.93233 (derived from T_d=0.644111); J(0)=0.0000  J(base)=0.7338  J(G*)=1.1922
+  PASS: P1: J strictly increasing on [0,G*] so argmax_s J(G_s) = argmax_s G_s
+  PASS: verified(G*) outranks baseline outranks refuted
+
+==============================================================================
+SECTION 2 — fidelity on SOLVED conjectures (test on easy RH-like cases first)
+==============================================================================
+  PASS: Infinitude of primes (Euclid): wrapper -> TRUE (checker: TRUE)
+  PASS: Irrationality of sqrt(2): wrapper -> TRUE (checker: TRUE)
+  PASS: Basel problem zeta(2)=pi^2/6 (Euler): wrapper -> TRUE (checker: TRUE)
+  PASS: Prime Number Theorem (Hadamard / de la Vallee Poussin): wrapper -> TRUE (checker: TRUE)
+  PASS: zeta(-2)=0 (a trivial zero): wrapper -> TRUE (checker: TRUE)
+  PASS: No nontrivial zeros with Re(s)>1 (Euler product): wrapper -> TRUE (checker: TRUE)
+  PASS: 'All primes are odd': wrapper -> FALSE (checker: FALSE)
+  PASS: Polya conjecture (Haselgrove 1958 disproof): wrapper -> FALSE (checker: FALSE)
+  PASS: Mertens conjecture (Odlyzko-te Riele 1985): wrapper -> FALSE (checker: FALSE)
+  P2 holds iff every line above is PASS: the wrapper reproduces the checker verdict
+  (because G encodes it and J is monotone). It does NOT re-derive the proof.
+
+==============================================================================
+SECTION 3 — OPEN conjectures: wrapper returns UNDECIDED, never 'true'
+==============================================================================
+  PASS: Riemann Hypothesis: wrapper -> UNDECIDED (expected UNDECIDED, NOT TRUE)
+  PASS: Riemann Hypothesis: wrapper did NOT assert TRUE
+  PASS: Goldbach conjecture: wrapper -> UNDECIDED (expected UNDECIDED, NOT TRUE)
+  PASS: Goldbach conjecture: wrapper did NOT assert TRUE
+  P3 holds: with no checker-verified proof either way, the UOP optimum is UNDECIDED.
+  The UOP cannot manufacture a verdict it was not given.
+
+==============================================================================
+SECTION 4 — anti-cheat: inject a FABRICATED verdict, wrapper parrots it
+==============================================================================
+  honest open     -> UNDECIDED
+  fake 'proof'    -> TRUE
+  fake 'disproof' -> FALSE
+  PASS: P4: injecting a fake verdict flips the wrapper output to the fake => wrapper has NO independent truth access
+  This is the decisive honesty check: the Fidelity Lemma does ZERO proving work.
+  Garbage in -> garbage out. The mathematics lives entirely in the checker.
+
+==============================================================================
+SECTION 5 — the RH conditional theorem is non-actionable (B132 spine)
+==============================================================================
+  PASS: P5: G_RH is unevaluable until RH is resolved (antecedent == conclusion => conditional vacuous for RH)
+  FCF-1-RH (conditional): IF RH is faithfully cast into Phi with G_RH the
+  checker verdict-strength, AND the Fidelity Lemma holds for the analytic-
+  number-theory subclass, THEN argmax J_RH returns RH's correct status.
+  BUT the first hypothesis requires a checker-verified RH proof to exist,
+  i.e. RH already settled. The theorem waits on its own antecedent and
+  cannot shortcut the proof. Consistent with B132 (solving RH removes the
+  asserted bridge axiom; the UOP does not route through it) and with
+  UNV-1's R1 (faithful-casting) being the OPEN frontier: FCF-1 shows R1 is
+  satisfiable for this class but only TRIVIALLY (checker-derived G), which
+  does no proving work.
+
+==============================================================================
+ALL FCF-1 CHECKS PASSED
+==============================================================================
