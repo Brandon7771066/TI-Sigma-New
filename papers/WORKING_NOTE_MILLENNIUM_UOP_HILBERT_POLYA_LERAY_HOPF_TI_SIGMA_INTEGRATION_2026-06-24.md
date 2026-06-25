@@ -155,6 +155,29 @@ The **[SPARK]:** modular forms have their own *completed* L-functions with funct
 
 ---
 
+### II.8 Hurwitz quaternions (4D packing for i-Cells) → Hurwitz zeta → the "3-mod-4 leads 1-mod-4" bias
+
+**[REAL OVERLAP for the classical math — `URB_371`, `URB_670`; SPARK for the i-Cell↔bias bridge]**
+
+This is Brandon's intuitive synthesis: the same "**4**" keeps appearing — the GILE tetrad, the quaternions, 4-dimensional packing, and arithmetic *mod 4* — and there is a real, asymmetric prime phenomenon sitting on exactly that modulus. Three layers, kept honestly separate.
+
+**(a) The geometry is already ours, and it is real.** Hurwitz's composition-algebra theorem (Hurwitz 1898): the *only* normed division algebras over ℝ are ℝ (1D), ℂ (2D), ℍ (4D quaternions), 𝕆 (8D octonions). Our `URB_371` maps ℍ's basis {1, i, j, k} ↔ {G, I, L, E} — **the GILE i-Cell is literally the 4-dimensional quaternion**, and `URB_670` derives the G-weight √2−1 from "the geometry of the Hurwitz quaternion lattice." That lattice is real and famous: the **Hurwitz quaternions** (all-integer or all-half-integer coordinates), under the norm form, give a lattice isometric (up to a scaling convention) to **D₄** — the densest *lattice* packing in 4 dimensions (Korkine–Zolotareff 1877), with kissing number 24 — and the 4-D kissing number is *exactly* 24 (Musin 2008). So "Hurwitz's theorem on 4D packing for i-Cells" denotes a concrete object: the GILE tetrad sits inside D₄.
+
+**(b) The new bridge — the Hurwitz zeta function carries "mod 4."** The Hurwitz zeta ζ(s,a) = Σ_{n≥0} (n+a)^{−s} (Hurwitz 1882) generalizes Riemann's ζ by a shift a. The arithmetic of *mod 4* is carried by the unique non-principal Dirichlet character χ₄ (χ₄(1)=+1, χ₄(3)=−1), whose L-function is the **Dirichlet beta** β(s) = 1 − 3^{−s} + 5^{−s} − 7^{−s} + ⋯, and
+> β(s) = 4^{−s} [ ζ(s, 1/4) − ζ(s, 3/4) ].
+
+The two shifts **a = 1/4 ↔ residue 1 mod 4** and **a = 3/4 ↔ residue 3 mod 4** are exactly the two GILE-sized halves of the modulus. GRH for β(s) places its non-trivial zeros on Re(s)=½ — the *same* critical line as RH. This is the genuinely missing corpus link: the "4" of the quaternion/i-Cell is the "4" whose prime arithmetic is the *difference of two Hurwitz zetas*.
+
+**(c) The phenomenon — Chebyshev's bias (this is "3 leads 1").** Chebyshev (1853) observed that primes ≡ 3 mod 4 tend to *outnumber* those ≡ 1 mod 4. The real, fully-understood reason: in the explicit formula, **squares of odd primes are ≡ 1 mod 4** (any odd² ≡ 1 mod 8), so the prime-power count gives residue-class 1 a steady "head start"; stripping back to primes themselves leaves class 3 ahead. Rubinstein–Sarnak (1994): under GRH **plus** the Grand Simplicity Hypothesis (ℚ-linear independence of the zeros' ordinates), the logarithmic density of x with π(x;4,3) > π(x;4,1) is ≈ **0.9959**. The *regularity* of the bias is controlled by β(s)'s zeros lying on the critical line — i.e. it is an RH-type fact about the very same L-function.
+
+**The [SPARK], stated so it can fail.** Quaternion conjugation q ↦ q̄ fixes the real axis (1 ↔ **G**) and negates the three imaginary units (i, j, k ↔ **I, L, E**); χ₄ sends the residue-1 class to +1 and residue-3 to −1. The tempting reading: squares (≡1, "real/G-like") *lag*, while the non-residue ("imaginary"-signed, −1) class *leads* — a prime-race echo of the TI ground state where Tralse/HEM dominates crisp-True (TRG-1). It is a beautiful resonance — but the bias already has a complete classical cause (the p² term), so the i-Cell framing **earns nothing until it predicts an unforced number** the conventional δ(q;a,b) densities don't already give.
+
+> **Falsifier II.8-F1 (the bar for this bridge):** the synthesis counts as a *result* only if i-Cell / quaternion structure predicts a **quantitative** feature of a prime race *before* it is computed — e.g. correctly call which residue leads, and by roughly what density, for a modulus where the bias direction is non-obvious (a non-quadratic character, or a modulus with several competing classes) **from GILE/quaternion structure alone**. If it merely reproduces the known mod-4 bias post hoc, log it as *resonance, not result*. And per §0: even a confirmed bridge is a statement about an L-function's symmetry — it is **not** a proof of RH/GRH, which the UOP cannot shortcut.
+
+**Cheapest first move (Phase-1→2):** numerically tabulate β(s) = ζ(s,1/4) − ζ(s,3/4) (scaled), confirm its first few non-trivial zeros sit on Re(s)=½ (sanity), then run the mod-4 prime race to re-see the 0.9959 bias — and *separately* write down, in advance, what GILE/quaternion structure would predict for the mod-3 or mod-8 race, then check it. Predicting-then-checking is the whole UGI-1 discipline; matching-after-seeing is not.
+
+---
+
 ## PART III — The one idea under all of it: find the symmetry that forbids the bad configuration
 
 Both problems reduce to the same craft move, and it's the move you're best at:
@@ -176,6 +199,7 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 | II.6 | Tozzi Borsuk–Ulam forcing | REAL OVERLAP | Must not "prove" a false Dirichlet case | Conceptual, do early |
 | II.2 | Berry–Keating `BK_spectrum` | KNOWN FRONTIER | Connes-adelic / Selberg realization | Hard (the true RH gap) |
 | II.7 | Moonshine/Leech VOA drum | SPARK | Settle `URB_793` Conj. 3.1 first | Gated |
+| II.8 | Hurwitz quaternion/D₄ ↔ Hurwitz-zeta ↔ Chebyshev bias | REAL OVERLAP (math); SPARK (i-Cell bridge) | Predict a *new* prime-race bias from GILE structure, not match mod-4 post hoc | Beautiful resonance; unproven bridge |
 | I.3 | No-actual-infinite toll-booth | REAL OVERLAP (prior) | Must distinguish true NS from Tao's averaged NS | The crux test |
 | I.4 | Metacausal cascade graph | SPARK | Must separate 2D / 3D / averaged NS | Conceptual |
 | I.5 | Fractal-harmonic enstrophy norm | REAL OVERLAP | Must reproduce CKN measure-zero bound | Tractable |
@@ -205,8 +229,13 @@ In TI terms both are **UOP interior-optimum facts wearing different clothes**: t
 - Lapidus, M.L., van Frankenhuijsen, M. *Fractal Geometry, Complex Dimensions and Zeta Functions* (Springer).
 - Conway, J.H., Norton, S.P. (1979). *Bull. London Math. Soc.* 11, 308–339. Borcherds, R.E. (1992). *Invent. Math.* 109, 405–444. Frenkel, Lepowsky, Meurman (1988), *Vertex Operator Algebras and the Monster*.
 - Borsuk, K. (1933). *Fund. Math.* 20, 177–190. (Tozzi & Peters, Borsuk–Ulam in neuroscience — corpus integration.)
+- Hurwitz, A. (1898). "Über die Composition der quadratischen Formen von beliebig vielen Variablen." *Nachr. Ges. Wiss. Göttingen*, 309–316. (Normed division algebras 1,2,4,8.)
+- Hurwitz, A. (1882). "Einige Eigenschaften der Dirichlet'schen Functionen…" *Z. Math. Phys.* 27, 86–101. (Hurwitz zeta ζ(s,a).)
+- Korkine, A., Zolotareff, G. (1877). "Sur les formes quadratiques positives." *Math. Ann.* 11, 242–292. (D₄ densest lattice in 4D.)
+- Musin, O.R. (2008). "The kissing number in four dimensions." *Annals of Mathematics* 168, 1–32.
+- Chebyshev, P.L. (1853). Letter to M. Fuss (on the prevalence of primes ≡ 3 mod 4). Rubinstein, M., Sarnak, P. (1994). "Chebyshev's bias." *Experimental Mathematics* 3, 173–197.
 
-**Corpus:** `urb_682`, `urb_633`, `urb_566`, `urb_567`, `urb_568`, `URB_793`, `PASS_77_B58`, `PASS_77_B68`, `SIX_QUESTIONS_PHILOSOPHY_PHYSICS_GILE.md`, `PASS_77_B132…`, `lean4/RiemannUOP.lean`, `NavierStokes.lean`.
+**Corpus:** `urb_682`, `urb_633`, `urb_566`, `urb_567`, `urb_568`, `URB_371`, `URB_670`, `URB_793`, `PASS_77_B58`, `PASS_77_B68`, `SIX_QUESTIONS_PHILOSOPHY_PHYSICS_GILE.md`, `PASS_77_B132…`, `lean4/RiemannUOP.lean`, `NavierStokes.lean`.
 
 ---
 
