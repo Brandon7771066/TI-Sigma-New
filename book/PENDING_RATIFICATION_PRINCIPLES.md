@@ -51,6 +51,7 @@ new experiments.
 | **SIS-1** | Superintelligence = sane restraint, not maximization | Keep the "relocates AI risk" limits; ratify as thesis-with-limits (its derivation is already a corollary of UOP+GILE-E+GIT-1). | B123 |
 | **CRD-1** | Crank defensibility — split hearing-prior (moderate) vs truth-prior (weak) | Confirm the a/b split is stable post-GIT-1; ratify CRD-1a and CRD-1b as the *pair*. | B120 |
 | **IPA-1** | Individual↔population inference asymmetry | Single falsifier F1; underwrites MEP & #69 bias-sim — ratify with MEP. | B119 |
+| **SPF-1** | Survivorship is a *pseudo-fallacy* under pre-outcome (seriousness) selection + outcome-symmetric memory | Structural twin of IPA-1 — ratify near it. Keep "possibly/likely" hedge; load-bearing only after SPF-1-F1 (prospective outcome-blind memory study) estimates α for the domain. Do NOT let it weaken the Axis-B survivorship correction (Ch4/MEP). | B146 |
 | **PDU-1** | "Physical" is undefined (Hempel's Dilemma) | Flag strong-emergence step as the contested link; ratify as **dissolving** (not a proof of TOF-1). | B127 |
 
 ### Tier 3 — needs empirical method-validation or a real study first

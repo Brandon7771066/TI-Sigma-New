@@ -1,0 +1,45 @@
+==============================================================================
+GROUND TRUTH (stipulated world)
+==============================================================================
+  population success rate              = 0.3700
+  TRUE P(success | serious)  [target]  = 0.5495
+  TRUE P(success | non-serious)        = 0.2502
+
+==============================================================================
+SPF-1a  --  null-exclusion is conditioning, NOT inflation
+==============================================================================
+[PASS] serious-conditional differs from population (reference classes differ): serious 0.550 vs population 0.370 (gap +0.180)
+[PASS] alpha=0 recall of serious attempts is UNBIASED for the target: recalled 0.5498 vs target 0.5495 (|err|=0.0003, n=143796)
+
+==============================================================================
+SPF-1   --  bias vs outcome-asymmetry alpha (= 1 - memory quality)
+==============================================================================
+   alpha |  recalled |   true | inflation | n_remembered
+  ------------------------------------------------------------
+    0.00 |    0.5498 |  0.550 |   +0.0002 | 144028
+    0.10 |    0.5988 |  0.550 |   +0.0493 | 145373
+    0.20 |    0.6279 |  0.550 |   +0.0783 | 140070
+    0.30 |    0.6591 |  0.550 |   +0.1095 | 133448
+    0.50 |    0.7294 |  0.550 |   +0.1798 | 120584
+    0.70 |    0.8202 |  0.550 |   +0.2707 | 107228
+    0.90 |    0.9315 |  0.550 |   +0.3820 | 94416
+[PASS] alpha=0 inflation is ~0 (PSEUDO-FALLACY regime: no survivorship): inflation at alpha=0 = +0.0002
+[PASS] inflation increases monotonically with alpha (FALLACY regime grows): inflation 0->0.9 : +0.0002 -> +0.3820
+
+==============================================================================
+SPF-1   --  crossover alpha* where survivorship becomes non-negligible
+==============================================================================
+[PASS] a finite crossover alpha* exists (claim is a REGIME, not absolute): alpha* (inflation>2%) ~ 0.05
+
+==============================================================================
+SPF-1-F3  --  hindsight-corrupted confidence smuggles the bias back in
+==============================================================================
+[PASS] hindsight-defined 'serious' inflates even at alpha=0 (selection became post-outcome): recalled 0.6106 vs target 0.5495 (+0.0610); => confidence MUST be prospectively logged, not recalled
+
+==============================================================================
+RESONANCE-ONLY (NOT gated, ZERO evidential weight): no '2/3' or numerology
+here. The only structural number is the user-chosen tolerance band; nothing
+load-bearing depends on a recurring constant.
+==============================================================================
+
+ALL CHECKS PASSED
