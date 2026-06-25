@@ -1,0 +1,64 @@
+{
+  "scope": "ILLUSTRATIVE STRUCTURAL TOY \u2014 stipulated likelihoods, zero empirical weight, no numerology",
+  "scenario_A_strict_parity": {
+    "channel_LLRs": {
+      "experiential": 0.8,
+      "inductive_convergence": 0.1,
+      "indispensability": 0.6,
+      "livability": 0.7
+    },
+    "posterior_physicalism": 0.90025,
+    "posterior_moral_realism": 0.90025,
+    "equal": true,
+    "claim": "P1 parity is VALID: identical evidence-type => identical posterior"
+  },
+  "scenario_B_channel_realistic": {
+    "phys_LLRs": {
+      "experiential": 0.8,
+      "inductive_convergence": 0.05,
+      "indispensability": 0.95,
+      "livability": 0.55
+    },
+    "moral_LLRs": {
+      "experiential": 0.8,
+      "inductive_convergence": 0.05,
+      "indispensability": 0.45,
+      "livability": 1.0
+    },
+    "posterior_physicalism": 0.912934,
+    "posterior_moral_realism": 0.908877,
+    "moral_minus_phys": -0.004057,
+    "residual_to_proof_phys": 0.087066,
+    "residual_to_proof_moral": 0.091123,
+    "claim": "P2/P3: near-parity WASH (domains trade strengths); the tiny ordering is an artifact of a contested weighting, NOT a ranking; ethics is NOT inferior; BOTH bounded < 1 (neither closed)"
+  },
+  "scenario_C_closure_requires_unmatched_datum": {
+    "sweep": [
+      {
+        "competitor_mismatch": 0.0,
+        "posterior_MR": 0.908877
+      },
+      {
+        "competitor_mismatch": 0.5,
+        "posterior_MR": 0.964429
+      },
+      {
+        "competitor_mismatch": 1.0,
+        "posterior_MR": 0.986613
+      },
+      {
+        "competitor_mismatch": 2.0,
+        "posterior_MR": 0.998167
+      },
+      {
+        "competitor_mismatch": 4.0,
+        "posterior_MR": 0.999966
+      },
+      {
+        "competitor_mismatch": 8.0,
+        "posterior_MR": 1.0
+      }
+    ],
+    "claim": "P2: posterior -> 1 ONLY as the data-respecting competitor stops matching (= a realist-only residual datum, the GME-1-F1 strengthening condition). It has NOT happened; this shows what closure would REQUIRE."
+  }
+}

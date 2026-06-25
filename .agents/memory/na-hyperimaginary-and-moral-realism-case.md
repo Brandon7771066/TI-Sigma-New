@@ -63,3 +63,36 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   illusion) yet not crisply-True-provable.** The "all illusion" denier commits
   TRG-1's bivalent-collapse error (mistaking not-crisply-provable for not-real).
   Use this move whenever the author presses "it can't all be illusion."
+
+## Moral-realism ↔ physicalism PARITY argument (companions-in-guilt)
+- When the case is pushed as "moral realism is no less unprovable than physicalism;
+  both rest on experiential+inductive evidence; deniers offer mere denial not
+  evidence ⇒ decisively closed" — **GRANT the parity, gently correct "closed."**
+  This is the recognized companions-in-guilt / parity move (Cuneo *The Normative
+  Web* 2007; Enoch *Taking Morality Seriously* 2011). Real, respectable.
+- **Why parity is even stronger inside this corpus:** EMD-1 credits science's wins
+  to the *method* (empiricism), NOT the *metaphysics* (physicalism); PDU-1/Hempel's
+  Dilemma makes "physical" definitionally unstable. So physicalism-the-metaphysics
+  is arguably WORSE off, not the secure benchmark. Deniability is symmetric
+  (solipsism/idealism ↔ nihilism).
+- **The one honest gap is NOT denial — it's the non-denying quasi-realist
+  (Blackburn).** Against the *naïve nihilist* the author is right (unlivable,
+  evidence-free, no honest philosophy upholds atrocity). But quasi-realism accepts
+  EVERY first-order datum (condemns the Holocaust, earns "it's true that torture is
+  wrong") and reconstructs them as projected shared attitudes with no realist
+  ontology — it predicts Curry-convergence too. That IS the "valid objection with
+  evidence," and a data-matching competitor caps the realist posterior below 1. So
+  the PRACTICAL victory is already total; only the METAPHYSICAL truth-maker question
+  stays open. Surviving physics-disanalogy = novel-prediction/indispensability
+  (Harman vs Sturgeon "moral explanations" — LIVE, the formal reason "closed"
+  overstates).
+- **Native resolution = TRG-1 symmetry:** physical reality is tralse-real AND moral
+  reality is tralse-real — IDENTICAL standing. The "not deductively closed" residue
+  is the universal condition of contingent claims, NOT a special tax on ethics.
+  Strongest honest sentence: **"moral realism is as real as physical reality"** —
+  grants everything parity earns; withholds only "proven," which is withheld from
+  physics too. **NEVER claim moral realism proven.**
+- **Anti-rig rail:** any parity/Bayesian toy must NOT be tuned so ethics "wins" —
+  the honest output is a WASH (domains trade indispensability vs livability; the
+  ordering is contested-weighting noise). Establish only "ethics NOT inferior" +
+  "neither closes." Rigging toward the desired conclusion = #69 violation.
