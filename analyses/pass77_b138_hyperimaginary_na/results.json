@@ -1,0 +1,70 @@
+{
+  "model": "NAH-1 \u2014 N/A on a hyperimaginary axis (high but imprecise)",
+  "design": {
+    "labels": [
+      "T",
+      "F",
+      "I",
+      "MI",
+      "NA"
+    ],
+    "axes": {
+      "real": "determinate T/F",
+      "imaginary_i": "indeterminacy I/MI (TTI-1)",
+      "hyperimaginary_j": "N/A: HIGH magnitude, IMPRECISE band"
+    },
+    "na_is_imprecise": "wide spread on real (under-determined) AND on high j",
+    "fair_baseline": "blind classifier keeps an N/A prototype; it just lacks the j-axis, so it sees N/A's NATURAL C4 projection = origin (NOT a hand-set fold onto MI); N/A competes fairly and loses recall only because the plane can't separate an off-plane imprecise point from the other labels' tails.",
+    "samples_per_label": 4000,
+    "seeds": 20
+  },
+  "na_blind_C4_plane": {
+    "NA_recall": {
+      "mean": 0.789,
+      "std": 0.0061
+    },
+    "MI_recall": {
+      "mean": 0.9995,
+      "std": 0.0003
+    },
+    "macro_f1": {
+      "mean": 0.956,
+      "std": 0.0013
+    },
+    "na_misclassified_to (mean frac)": {
+      "T": 0.107,
+      "F": 0.105,
+      "I": 0.0,
+      "MI": 0.0,
+      "NA": 0.789
+    }
+  },
+  "nah_with_hyperimaginary": {
+    "NA_recall": {
+      "mean": 0.9232,
+      "std": 0.0036
+    },
+    "MI_recall": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "macro_f1": {
+      "mean": 0.9845,
+      "std": 0.0007
+    }
+  },
+  "verdict": {
+    "na_recall_improves": true,
+    "mi_not_cannibalised": true,
+    "consistent_with_PDR1_direction": "NA-holding > NA-blind (B108 direction); the numeric band-match is NOT treated as independent evidence"
+  },
+  "honesty": {
+    "is_empirical_about_reality": false,
+    "claim": "representational CAPACITY: the hyperimaginary geometry CAN hold the N/A vs base-4 distinction the C4 plane cannot; robust over seeds",
+    "is_a_discovery": false,
+    "anti_numerology": "no constant coincidence load-bearing",
+    "principle_count": 79,
+    "NAH1_status": "CANDIDATE refinement (extends TTI-1/ICC label space)",
+    "falsifier_NAH1_F1": "OPEN \u2014 a genuinely 4-valued (non-N/A) corpus must NOT need the j-axis; if every real labelling task is fit equally well WITHOUT j, j is ornamental, not a joint."
+  }
+}
