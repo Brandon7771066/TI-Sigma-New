@@ -145,8 +145,8 @@ For a credible math/philosophy reconciliation, lead with the strong, mainstream-
 **WEAK / position-taking (do not lean on these in a math-facing argument):**
 - **#1 Sleeping Beauty** — an unsettled halfer/thirder debate about self-locating conditioning, not a refutation.
 - **#10 TRALSE** — begs the question (assumes the TRALSE ontology to indict Bayes); better cashed out as imprecise probability (see B.3).
-- **#12 Historical self-contradiction** — genetic fallacy: how Bayesianism was *adopted* says nothing about its *validity*.
-- **#13 Self-defeat** — equivocation: a Bayesian *lowering* credence in "Bayesianism-as-complete" when shown its failures is Bayesianism **working**, not self-defeating.
+- **#12 Historical self-contradiction** — genetic fallacy: how Bayesianism was *adopted* says nothing about its *validity*. **⚠ ERRATUM (B153, 2026-06-26):** this classification is WRONG for the *universal-normative doctrine* ("ALL rational belief-revision must be Bayesian"). That doctrine self-scopes over its own (non-Bayesian) adoption ⇒ the charge is a **legitimate performative self-refutation (PIA-1)**, not a genetic fallacy. The genetic-fallacy label is correct ONLY against the **theorem's** validity (origin-independent). See `papers/PASS_77_B153_HYPOCRISY_AND_PROPOSITION_IMPLIED_BY_ACTION_PIA_1_WHEN_TU_QUOQUE_IS_NOT_A_FALLACY_2026-06-26.md` §3.
+- **#13 Self-defeat** — equivocation: a Bayesian *lowering* credence in "Bayesianism-as-complete" when shown its failures is Bayesianism **working**, not self-defeating. **⚠ ERRATUM (B153):** holds only for the *modest* (non-universal) version; the *universal* version is genuinely self-defeating (PIA-1). Keep the two scopes apart.
 
 ### B.5 The synthesis (consistency achieved)
 

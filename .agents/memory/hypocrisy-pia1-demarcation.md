@@ -1,0 +1,14 @@
+---
+name: Hypocrisy / Proposition-Implied-by-Action (PIA-1) demarcation
+description: B153 — when a hypocrisy charge is a legitimate defeater vs a tu-quoque/genetic fallacy; the B132 Bayes-doctrine erratum.
+---
+
+# PIA-1, B153
+
+**Core demarcation.** A hypocrisy charge is NOT auto-*tu-quoque*. *Tu quoque* is fallacious ONLY when the charge **fails to defeat** the argument. A charge is a **legitimate defeater iff ALL THREE**: (1) **self_scope** — the thesis claims UNIVERSAL scope including the speaker's own act/belief; (2) **action_negates** — the speaker's action instantiates the NEGATION of a proposition the thesis requires universally; (3) **targets_thesis** — the charge attacks the thesis's TRUTH via this self-contradiction (performative self-refutation), not a claim's validity via its ORIGIN. Else FALLACY: **genetic** (origin-judging when origin irrelevant) or **mere *tu quoque*** (hypocrisy doesn't bear on the thesis). The load-bearing variable is **self-scope** — a claim with no universal self-application (smoking-is-unhealthy) can't be touched by the arguer's conduct; a universal ("no objective truth", "no one is responsible", "all rational belief is Bayesian") ranges over its own author, so the author's contrary act is a counterexample.
+
+**The B132 erratum (why this batch exists).** B132 §B.4 filed the charge *"Bayesianism was not adopted by Bayesian principles"* (URB#518 Arg#12) under **genetic fallacy**. That is WRONG for the **universal-normative DOCTRINE** ("ALL rational belief-revision must be Bayesian") — it self-scopes over its own non-Bayesian adoption ⇒ legitimate PIA self-refutation. The genetic-fallacy label is correct ONLY against the **THEOREM's** validity (the identity is origin-independent). B132 conflated doctrine with theorem (its own elsewhere-stated "Bayes-theorem ≠ doctrine"). Arg#13 ("self-defeat") refined: universal version genuinely self-defeating, modest (one-tool-among-many) version not — keep scopes apart. **#69 guard:** none of this refutes Bayesianism wholesale, only the universal-normative scope; EVD-1 "potentially legitimate" = graded, never auto.
+
+**Complement, don't contradict:** `papers/SKEPTICISM_HYPOCRISY_PROPHET_PARADOX.md` guards the OTHER direction (don't judge a prophet's conviction by its origin — that IS a genetic fallacy). PIA-1 + that paper fix the boundary both ways.
+
+**Reusable cases (all universal self-scoped ⇒ PIA-vulnerable):** postmodernist "no objective truth" asserted as objective truth; free-will denier who blames; moral non-realist who categorically condemns; external-world denier who dodges cars (G.E. Moore 1939). Controls that are real fallacies: smoking arguer (no self-scope, *tu quoque*); Bayes-theorem-via-origin (genetic); pharma-funding (genetic). Real refs: Aristotle *Soph. Ref.*; Moore 1939; Mackie 1964 self-refutation.

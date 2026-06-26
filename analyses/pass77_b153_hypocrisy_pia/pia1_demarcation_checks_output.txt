@@ -1,0 +1,39 @@
+==========================================================================
+B153 PIA-1 -- legitimate-defeater vs fallacy demarcation
+==========================================================================
+[OK ] Bayesianism-as-universal-norm (DOCTRINE)  [B132 correction]
+      gold=legitimate_defeater  pred=legitimate_defeater  (performative self-refutation (PIA))
+[OK ] Postmodernist 'no objective truth'
+      gold=legitimate_defeater  pred=legitimate_defeater  (performative self-refutation (PIA))
+[OK ] Free-will denier who blames
+      gold=legitimate_defeater  pred=legitimate_defeater  (performative self-refutation (PIA))
+[OK ] Moral non-realist who morally blames
+      gold=legitimate_defeater  pred=legitimate_defeater  (performative self-refutation (PIA))
+[OK ] External-world denier who acts in the world
+      gold=legitimate_defeater  pred=legitimate_defeater  (performative self-refutation (PIA))
+[OK ] Smoking arguer (tu quoque control)
+      gold=fallacy              pred=fallacy              (mere tu quoque (hypocrisy does not bear on the thesis))
+[OK ] Bayes' THEOREM via its origin (genetic control)  [the legitimate genetic-fallacy twin]
+      gold=fallacy              pred=fallacy              (genetic fallacy (origin irrelevant to validity))
+[OK ] Pharma-funded scientist (circumstantial/genetic control)
+      gold=fallacy              pred=fallacy              (genetic fallacy (origin irrelevant to validity))
+--------------------------------------------------------------------------
+criterion accuracy on labelled set: 1.000  (8/8)
+==========================================================================
+ABLATION -- remove universal self-scope from the legitimate cases
+  legitimate cases that become NON-defeaters once self-scope removed: 5/5
+  -> the criterion tracks self-scope/performative-contradiction, not keywords.
+==========================================================================
+PRE-REGISTERED PREDICTIONS
+  [PASS] P1 perfect separation
+  [PASS] P2 Bayes splits: doctrine=legit, theorem=genetic-fallacy
+  [PASS] P3 self-scope load-bearing (ablation flips all)
+  [PASS] P4 no false-positive defeaters among controls
+==========================================================================
+VERDICT: the demarcation is OPERATIONAL (coherent + covers the cases),
+including the B132 correction: 'Bayes not adopted by Bayesian principles' is
+a legitimate PIA self-refutation of the DOCTRINE, NOT a genetic fallacy; the
+genetic-fallacy label is correct only against the THEOREM's validity. PIA-1
+stays a CANDIDATE (NOT ratified); EVD-1 'potentially legitimate', graded.
+
+ALL PRE-REGISTERED PREDICTIONS PASS.
