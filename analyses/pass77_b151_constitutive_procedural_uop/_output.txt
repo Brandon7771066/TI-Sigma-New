@@ -1,0 +1,58 @@
+================================================================================
+SETUP
+================================================================================
+  True-Tralse cap = 0.93233  (= 3*T_d - 1 at T_d = 0.644111); not hard-typed.
+  Claim under test: PD updated to the cap = the ideally-correct truth-value
+  of the proposition (incl. open theorems). We test both directions.
+
+================================================================================
+PART A — the REAL vacuity hazard: post-hoc GILE fitting on pure noise
+================================================================================
+  post-hoc consistency on RANDOM outcomes = 1.000
+  => coordinates chosen AFTER the outcome 'explain' anything. THIS is the
+     vacuity threat NAD-1/AFD-1 name -- not undecidability.
+  PASS: P_A (post-hoc consistency > 0.95)
+
+================================================================================
+PART B — outcome-blind operational GILE determinacy (candidate ODG-1)
+================================================================================
+  committed-before-outcome rule:  accuracy on REAL signal = 0.713
+                                  accuracy on NOISE       = 0.515
+  => the rule FORBIDS outcomes: it fails on noise (as it must) and predicts on
+     signal. Falsifiability restored. (Metaphysical determinacy alone wouldn't.)
+  PASS: P_B1 (noise in [0.40,0.60])  PASS: P_B2 (signal > 0.70)
+
+================================================================================
+PART C — credence vs proof: the procedural bound (Mertens/Polya structure)
+================================================================================
+  horizon H = 200 confirmations; 30 true vs 30 Mertens-like (eventually FALSE)
+  PD(true within H)        = 0.99730  -> certified=True
+  PD(Mertens-like within H)= 0.99730  -> certified=True  (a FALSE prop)
+  within-horizon true vs false PD indistinguishable: True
+  within-horizon false-certification rate among eventually-false set = 1.00
+  => crossing the cap is a fallible CREDENCE, not a PROOF of an open theorem.
+     (Mertens: supported for huge ranges, FALSE -- Odlyzko & te Riele 1985.)
+  PASS: P_C1 (false proposition certified)  PASS: P_C2 (indistinguishable within horizon)
+
+================================================================================
+PART D — the other side (#69): decidable subclass, the engine DOES answer truth
+================================================================================
+  decidable arithmetic, decision-procedure as input: accuracy = 1.000
+  => where inputs DETERMINE the answer, the engine returns the truth-value.
+  PASS: P_D1 (decidable accuracy >= 0.95)
+
+================================================================================
+VERDICT (constitutive vs procedural; count unchanged 79)
+================================================================================
+  * ODG-1 (outcome-blind operational GILE determinacy): the anti-vacuity guarantor
+    WORKS as an OPERATIONAL rule (A vacuous, B falsifiable). Candidate, NOT ratified.
+  * Constitutive arm: the truth-axis MAY be oracle-like (non-computable is coherent,
+    Turing 1939). Limitative theorems bind only the PROCEDURAL arm (computing it).
+  * Procedural arm: DECIDABLE/settled -> returns truth (D); genuinely-OPEN -> fallible
+    credence that can cross the cap on a falsehood (C). So the engine's honest output
+    on open theorems is a CREDENCE, not a proof. No RH/Millennium claim. Consistent
+    with B132/B148/B149/B150.
+
+================================================================================
+ALL B151 CAPABILITY CHECKS PASSED
+================================================================================
