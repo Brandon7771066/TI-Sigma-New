@@ -52,3 +52,9 @@ They differ ~1.3% and are **never forced identical** (#69/HAN-1). The Radiant-Ca
 It is a **two-axis embedding, NOT a value identity**: TSC **ring** (radius `{C,T,1,√2,φ,e,π}`) = LCC/existence scale; TSC **layer** (angle `i^y`) = PD/truth mode. PD-degree boundaries (0.5/1.5/2.0/π, e-base above the Radiant Threshold) live on the angular axis; 0.865/0.930 are pillar thresholds on the real/imag axes, NOT PD boundaries. A forced "LCC value ↦ specific PD critical value" table is rejected (HAN-1). Crystal/Graph host the 8-D GILE-HEM shell, NOT the 64D truth interior (needs a fibre-bundle upgrade).
 
 **Anchor:** `papers/LCC_COMPOSITION_AND_TRUTH_EXISTENCE_PILLAR_SEPARATION_CANONICAL_RULING_2026-06-27.md`.
+
+# Floor 1−e⁻² is NOT redundant vs cos²(π/8) (author-approved keep-both, 2026-06-27)
+
+- The Existence floor `1−e⁻²≈0.8647` is **multiply-derived** — 4 independent routes: PD extreme-zone complement `1−1/e²` (URB_523) / λ=2 settling / Born-partner `Existence=G*²` / Freedom-Floor (URB_548) — so it is structural, NOT a coincidental near-twin of the empirical `cos²(π/8)≈0.8536`.
+- **Different layers = different applications:** `1−e⁻²` lives in the **value-optimization layer** (min existence to count as causally real; generates the cap by `G*=√L`; bounds becoming-interval `[L,G*)`); `cos²(π/8)` lives in the **empirical-measurement layer** (LCC neuronal-coupling detection threshold on neural data). Different questions, different evidential footing (posit vs measurement).
+- **Why not collapse:** substituting `cos²(π/8)` via the Born relation would force cap=`cos(π/8)=0.9239` — the value Fork-B rejected as numerology — and unravel URB_523's 2:1 asymmetry + the becoming-interval. **Why:** the floor is in the value-optimization layer and the ceiling is an empirical measurement; same band ≠ same quantity. Author ruling 2026-06-27: **keep both, distinct, NO value change.**

@@ -68,6 +68,7 @@ The decisive variable is **self-scope**. A claim with no universal self-applicat
 | "There are **no** objective truths." | Asserts *this* as an objective truth. | The claim ranges over itself; its assertion enacts the negation. Classic self-referential incoherence. |
 | "**No one** is ever morally responsible (no free will)." | Sincerely **blames/resents** people. | Blame presupposes the responsibility the thesis universally denies; the blamer's own practice is the counterexample. |
 | "There are **no** moral facts." | Categorically condemns an act as *really* wrong. | Categorical condemnation presupposes the moral facts denied. |
+| "Values are **fictions** — none really exist; I just *act as if* they do because it's *optimal*." (fictionalism) | Calls a policy *optimal*; sustains a *will to live*. | "Optimal" is itself a value (*optimal by what standard?*), and willing-to-live *enacts* an adopted normative principle — so denying one *has* values is self-contradicted. **Scope:** refutes value-*lessness* (a fact about the valuer), **not** anti-realism about *mind-independent* facts (the careful quasi-realist still escapes that). |
 | "The external physical world is **unreal**." | Eats when hungry; dodges moving cars. | Each survival action asserts the world's reality (G. E. Moore, "Proof of an External World," 1939). |
 | "**All** rational belief-revision must be Bayesian." | The doctrine was adopted non-Bayesianly. | The universal ranges over its own adoption; adoption violated it (the B132 case). |
 

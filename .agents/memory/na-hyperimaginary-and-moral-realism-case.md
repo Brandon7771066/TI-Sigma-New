@@ -158,3 +158,8 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   face). Net: conscious value is tralse-real, as real as physical reality.
   Falsifier GME-1-F4: defeated if suffering's disvalue is shown genuinely detachable
   from the phenomenal character (full agony with NO reason-to-avoid given in it).
+
+# PIA-1 anti-fictionalism (scope guard, 2026-06-27)
+
+- Fictionalism ("values don't exist but I act *as if*, because *optimal*" / "I live by values I *create*") self-refutes via **PIA-1**: "optimal" is itself a value (*by what standard?*), and a *will to live* ENACTS an adopted normative principle. Denying you HAVE values ≈ denying you have thoughts/valence (it is *given*, not inferred).
+- **Scope (rail, do not overclaim):** this proves only the agent's OWN values are real (a fact about the valuer); it does NOT reach *mind-independent* moral realism — the careful quasi-realist still escapes (GME-1-F1). Use it to kill value-LESSNESS, never to claim moral realism deductively proven.

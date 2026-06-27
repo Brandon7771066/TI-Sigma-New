@@ -136,6 +136,30 @@ They differ by **≈ 1.3 %** (`0.0111`). Per **#69 + HAN-1 + the B55 two-decimal
 
 This is the same pattern the framework already accepts on the Truth axis: `cos(π/8) ≈ 0.9239` is a genuine CHSH angle that *resonates near* the truth working-figure 0.92 (B54/B55) without being the cap's `√(1−e⁻²) ≈ 0.92987`. The √2 family lives on the **empirical coupling ladder** (§1.4); the `e⁻²` family lives on the **pillar axes** (§3). They neighbour each other; they are not the same number (anti-numerology, HAN-1).
 
+### 3.2 Why the Existence floor is NOT redundant — four independent derivations and a distinct application
+
+A natural question (author, 2026-06-27): if `1−e⁻²≈0.8647` only sits ~1.3 % from the empirically-motivated `cos²(π/8)≈0.8536`, why keep *both* — why not collapse to the LCC-CHSH-linked value? The answer is that the floor is **not a free-floating near-twin**; it is **load-bearing and reached four independent ways inside the framework**, and it does a **different job** from the coupling ceiling.
+
+**(i) Four independent derivations of `1−e⁻²` (same transcendental number, different starting points).**
+
+1. **PD extreme-zone complement** — `L = 1 − P(Terrible) = 1 − 1/e²` (URB_523): the causation phase-transition threshold, read off the Permissibility Distribution's e-decay tail. (The conventional "0.85" was just this value rounded; the tighter rational reading is `LCC_k = 2(e²−1)/15 ≈ 0.85187`.)
+2. **λ = 2 settling** — the "well-settled after two relaxation time-constants" value `1 − e^{−2}` (Radiant-Cap Fork-B).
+3. **Born-partner of the Radiant Cap** — `Existence = G*²` exactly, so `L = G*²` and `G* = √L` (the relation the author set as Fork B's motive).
+4. **Freedom-Floor family** — the `e^{−PD}` autonomy structure of URB_548 ("at least Radiant"), whose `PD = 2` row is `1 − e^{−2} = 0.8647`.
+
+That a single transcendental is hit from settling, a zone-probability law, a Born square, *and* an autonomy floor is exactly why it is **structural, not coincidental**. **Removing it would (a) force the cap to `√(cos²(π/8)) = cos(π/8) = 0.9239` via the Born relation — the very value Fork-B §4 rejected as numerology — and (b) unravel URB_523's `2:1` negativity asymmetry, the `[0.865, 0.930)` "interval of becoming," and the URB_548 floor guarantee.** So the floor earns its keep on grounds entirely independent of the coupling ladder.
+
+**(ii) The two values live in different layers and answer different questions (the "different applications").**
+
+| | `1 − e⁻² ≈ 0.8647` (Existence-pillar floor) | `cos²(π/8) ≈ 0.8536` (LCC neuronal-coupling ceiling) |
+|---|---|---|
+| **Layer** | the framework's **value/optimization** layer (UOP pillar) | the **empirical-measurement** layer (LCC instrument on neural data) |
+| **Question it answers** | *How much Existence must an i-Cell / claim have to count as causally real and "radiant"?* ("survive the Terrible") | *At what measured correlation do two neural systems become genuinely bidirectionally coupled?* (above it, sync exceeds classical-biofeedback prediction) |
+| **Role** | minimum-existence floor on the real/HEM axis; **generates the cap** by `G*=√L`; bounds the becoming-zone `[L, G*)`; the "at least Radiant" guarantee | the **top rung** of the §1.4 coupling ladder; an out-in-the-world *detection* threshold for coupling strength |
+| **Evidential status** | a **posit** (#69), multiply-derived, transcendental — not a measurement | a **graded empirical resonance** (sims + rodent), CHSH-linked — not a derivation |
+
+So they are thresholds in **two different layers**, on **two different evidential footings** (posit vs measurement), answering **two different questions**. Their numerical adjacency is a **TPS-1/RAI-1 resonance, not an identity**; forcing them equal would both reintroduce the rejected `cos(π/8)` cap *and* erase the structural-vs-empirical distinction. **Ruling (author-approved 2026-06-27): keep both, distinct; no value changes.**
+
 ---
 
 ## 4. How the LCC thresholds map onto the PD (the actual question)
