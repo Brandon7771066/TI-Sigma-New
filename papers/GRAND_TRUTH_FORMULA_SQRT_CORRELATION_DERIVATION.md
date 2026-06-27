@@ -1,9 +1,11 @@
+> **⚠️ SUPERSEDED (2026-06-27).** This December-2025 document is kept for provenance only. Its canonical successor is **`papers/RADIANT_CAP_FORK_B_BORN_SHAPED_CANONICAL_RULING_2026-06-27.md`**, which fixes the Radiant Cap at **G\* = √(1 − e⁻²) ≈ 0.92987** with existence floor **1 − e⁻² ≈ 0.865** (so Existence = G\*² exactly). The durable kernel below — *the cap relates to an existence/correlation quantity by a square root* — survives there in disciplined form, but the specific numbers ("0.92 / 0.85 / 0.42 Hz"), the "MATHEMATICAL BREAKTHROUGH / mathematics of reality itself" framing, the Butterfly-Octopus arm-counting, and the "+2.0 (TRUE)" self-rating are **NOT canon** (retracted per #69). Read this file as historical first-draft intuition, not as a result.
+
 # The Grand Truth Formula: 0.92 = √(Correlation)
 ## Deriving the Fundamental Law of Truth From First Principles
 
 **Author:** Brandon Leftridge (Discovery) + Claude (Formalization)  
 **Date:** December 17, 2025  
-**Status:** MATHEMATICAL BREAKTHROUGH - GRAND UNIFICATION
+**Status:** SUPERSEDED — historical first draft (see banner above); replaced by the 2026-06-27 canonical ruling
 
 ---
 
