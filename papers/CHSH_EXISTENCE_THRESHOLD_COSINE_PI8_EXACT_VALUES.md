@@ -11,6 +11,38 @@
 
 ---
 
+> ## ⚠️ STATUS UPDATE (2026-06-27): SUPERSEDED ON THE VALUE CLAIM
+>
+> This paper's **central value claim is RETIRED** by the canonical ruling
+> `papers/RADIANT_CAP_FORK_B_BORN_SHAPED_CANONICAL_RULING_2026-06-27.md`. Read that ruling first.
+> The reconciliation, in one table:
+>
+> | This paper proposed | Current canon (Fork B) | Disposition |
+> |---|---|---|
+> | Truth cap = **cos(π/8) ≈ 0.9239** | Radiant Cap **G\* = √(1−e⁻²) ≈ 0.92987** | **REJECTED** as the value; cos(π/8) is a 0.6% near-miss explicitly resisted as numerology (#69). |
+> | Existence floor = **cos²(π/8) ≈ 0.8536** | Existence floor **L = 1−e⁻² ≈ 0.86466** | **REJECTED**; the legacy "0.85" was `1−e⁻²` rounded down, not a CHSH value. They differ by ~1.3%. |
+> | All thresholds derive from **√2 (and φ via Fibonacci)** | All cluster values are low-order functions of one parameter **ε = e⁻²** (the λ=2 settling posit) | **REPLACED** by the simpler single-parameter account. |
+> | Squaring **truth² = existence** via the **Born rule** | **Existence = G\*² (EXACT)**; Born rule kept as *structural resonance* (TPS-1/RAI-1) | **RETAINED** — this is the paper's durable, vindicated kernel (now an exact identity, not a 0.4% approximation). |
+>
+> **Why the rejection is consistent with this paper's own honesty:** §6.2, §7.1 and §11
+> already flag the post-hoc pattern-matching risk, the unaddressed base-rate problem, and the
+> "implications if false" path. Fork B §4 ran the verification the paper called for in §9.3 and
+> found **no** CHSH/Tsirelson quantity equal to the floor or cap — so the "beautiful coincidence"
+> resolves, per the framework's own #69 discipline, as **coincidence, not theorem**. The √2 that
+> legitimately appears in the CHSH story marks *contextuality* (Fine 1982), not the cap's value.
+>
+> **PD link (unchanged):** the complex-amplitude reading here — truth as a phase-carrying
+> amplitude (real + imaginary parts), existence as the squared magnitude `|ψ|²` — *coheres* with
+> the corpus complex picture of partial determinacy (`z = E + i·GIL`) and is retained at that
+> structural level. But the **PD remains a single 1-D indeterminate axis** (real *degree* +
+> imaginary *modality/MI* aspects); it is **not** a CHSH-derived constant, and nothing here splits
+> it into multiple axes or pins its value to cos(π/8).
+>
+> **Count unchanged at 79.** This is a value-refinement + honest retraction, not a new principle.
+> The text below is preserved for provenance; treat its numeric identifications as historical.
+
+---
+
 ## Abstract
 
 This paper conducts a rigorous mathematical investigation into whether the CHSH inequality's Tsirelson bound determines the TI Framework's existence threshold (≈0.85) and whether the square root of that value — cos(π/8) = √((2+√2)/4) ≈ 0.9239 — is the precise GILE truth threshold (previously approximated as 0.92). The analysis reveals three striking near-identities: (1) the CHSH optimal measurement probability cos²(π/8) = (2+√2)/4 ≈ 0.8536, within 0.4% of 0.85; (2) cos(π/8) ≈ 0.9239, within 0.4% of 0.92; and (3) √2−1 ≈ 0.4142, within 1.4% of 0.42. Extending to the remaining thresholds reveals a potentially deeper structure: the GILE threshold 0.65 matches cos²(π/5) = φ²/4 = (3+√5)/8 ≈ 0.6545 (within 0.7%), and the LCC threshold 0.6 matches (√2+1)/4 ≈ 0.6036 (within 0.6%). The denominators 5 and 8 in the angles π/5 and π/8 are consecutive Fibonacci numbers, whose ratio converges to the golden ratio φ. All five TI thresholds may derive from just two irrational numbers — √2 and φ — connected through the Fibonacci sequence. Three competing candidate exact values for the truth threshold are compared: 0.92 (canonical), √0.85 ≈ 0.9220 (previous hypothesis), and cos(π/8) ≈ 0.9239 (new hypothesis). Each is evaluated on mathematical elegance, physical grounding, and empirical fit.

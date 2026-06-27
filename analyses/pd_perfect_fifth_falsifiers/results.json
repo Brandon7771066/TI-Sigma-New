@@ -1,0 +1,261 @@
+{
+  "prereg": {
+    "ratio_target": 1.5,
+    "confirm_partial_band": [
+      1.4,
+      1.6
+    ],
+    "h4_falsifier": "ratio randomly distributed = KILL (paper \u00a72.4)",
+    "h1_only_kill_band_outside": [
+      1.0,
+      2.0
+    ],
+    "primary_expansions": [
+      [
+        "1982-11-01",
+        "1990-07-01"
+      ],
+      [
+        "1991-03-01",
+        "2001-03-01"
+      ],
+      [
+        "2009-06-01",
+        "2020-02-01"
+      ]
+    ],
+    "other_expansions": [
+      [
+        "1970-11-01",
+        "1973-11-01"
+      ],
+      [
+        "1975-03-01",
+        "1980-01-01"
+      ],
+      [
+        "1980-07-01",
+        "1981-07-01"
+      ],
+      [
+        "2001-11-01",
+        "2007-12-01"
+      ],
+      [
+        "2020-04-01",
+        "2026-06-01"
+      ]
+    ],
+    "contractions_control": [
+      [
+        "2007-12-01",
+        "2009-06-01"
+      ],
+      [
+        "2001-03-01",
+        "2001-11-01"
+      ],
+      [
+        "1990-07-01",
+        "1991-03-01"
+      ],
+      [
+        "2020-02-01",
+        "2020-04-01"
+      ]
+    ],
+    "base_rate_n": 20000,
+    "rng_seed": 47
+  },
+  "generated_utc": "2026-06-27T10:15:31.238335Z",
+  "data": {
+    "source": "Yahoo Finance ^GSPC daily (no key)",
+    "n_days": 14242,
+    "first": "1970-01-02",
+    "last": "2026-06-26"
+  },
+  "primary_expansions": [
+    {
+      "span": [
+        "1982-11-01",
+        "1990-07-01"
+      ],
+      "n": 1938,
+      "ratio": 1.1557,
+      "sum_up": 7.3091,
+      "sum_dn": 6.3242,
+      "total_log_return": 0.9848,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "1991-03-01",
+        "2001-03-01"
+      ],
+      "n": 2527,
+      "ratio": 1.1559,
+      "sum_up": 9.0327,
+      "sum_dn": 7.8144,
+      "total_log_return": 1.2183,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "2009-06-01",
+        "2020-02-01"
+      ],
+      "n": 2687,
+      "ratio": 1.1548,
+      "sum_up": 9.3668,
+      "sum_dn": 8.1113,
+      "total_log_return": 1.2554,
+      "in_confirm_band": false
+    }
+  ],
+  "other_expansions": [
+    {
+      "span": [
+        "1970-11-01",
+        "1973-11-01"
+      ],
+      "n": 758,
+      "ratio": 1.1423,
+      "sum_up": 2.0668,
+      "sum_dn": 1.8094,
+      "total_log_return": 0.2574,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "1975-03-01",
+        "1980-01-01"
+      ],
+      "n": 1222,
+      "ratio": 1.0834,
+      "sum_up": 3.6341,
+      "sum_dn": 3.3542,
+      "total_log_return": 0.2799,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "1980-07-01",
+        "1981-07-01"
+      ],
+      "n": 253,
+      "ratio": 1.1494,
+      "sum_up": 0.9807,
+      "sum_dn": 0.8533,
+      "total_log_return": 0.1275,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "2001-11-01",
+        "2007-12-01"
+      ],
+      "n": 1531,
+      "ratio": 1.0623,
+      "sum_up": 5.7081,
+      "sum_dn": 5.3733,
+      "total_log_return": 0.3348,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "2020-04-01",
+        "2026-06-01"
+      ],
+      "n": 1549,
+      "ratio": 1.1937,
+      "sum_up": 6.6468,
+      "sum_dn": 5.5682,
+      "total_log_return": 1.0786,
+      "in_confirm_band": false
+    }
+  ],
+  "contractions": [
+    {
+      "span": [
+        "2007-12-01",
+        "2009-06-01"
+      ],
+      "n": 376,
+      "ratio": 0.8696,
+      "sum_up": 3.0126,
+      "sum_dn": 3.4643,
+      "total_log_return": -0.4516,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "2001-03-01",
+        "2001-11-01"
+      ],
+      "n": 168,
+      "ratio": 0.8643,
+      "sum_up": 0.8552,
+      "sum_dn": 0.9895,
+      "total_log_return": -0.1343,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "1990-07-01",
+        "1991-03-01"
+      ],
+      "n": 169,
+      "ratio": 1.0457,
+      "sum_up": 0.7821,
+      "sum_dn": 0.7479,
+      "total_log_return": 0.0342,
+      "in_confirm_band": false
+    },
+    {
+      "span": [
+        "2020-02-01",
+        "2020-04-01"
+      ],
+      "n": 42,
+      "ratio": 0.6692,
+      "sum_up": 0.5395,
+      "sum_dn": 0.8062,
+      "total_log_return": -0.2667,
+      "in_confirm_band": false
+    }
+  ],
+  "base_rate_null": {
+    "window_len": 2527,
+    "n_windows": 20000,
+    "frac_in_confirm_band_all": 0.0,
+    "frac_in_confirm_band_positive_return_only": 0.0,
+    "ratio_pctiles": {
+      "5": 0.9985,
+      "25": 1.0518,
+      "50": 1.1077,
+      "75": 1.1371,
+      "95": 1.1912
+    },
+    "corr_totalreturn_vs_ratio": 0.9783
+  },
+  "H_PD_MUSIC_4_verdict": {
+    "falsifier_rule": "\u00a72.4: ratio randomly distributed = KILL",
+    "n_primary_in_confirm_band": 0,
+    "two_of_three": false,
+    "base_rate_special": false,
+    "randomly_distributed": true,
+    "verdict": "KILL (per \u00a72.4: ratio is randomly distributed w.r.t. the 3:2 prediction \u2014 fully explained by drift, no concentration at 1.5)"
+  },
+  "H_PD_MUSIC_1_2_3": {
+    "status": "NOT EXECUTABLE in this environment (data unavailable)",
+    "H-PD-MUSIC-1": "needs Brandon's autobiographical event-stream or a labelled diary corpus (Pennebaker etc.) \u2014 no free API access here.",
+    "H-PD-MUSIC-2": "needs Brandon's tagged decision-stream (T45-7 DPES log) \u2014 private.",
+    "H-PD-MUSIC-3": "needs human-subject within-subject A/B music ratings \u2014 none here.",
+    "note": "Per corpus convention these are necessary-not-sufficient and must not be faked; a synthetic method-validation null is included below for #1 only."
+  },
+  "H_PD_MUSIC_1_methodval": {
+    "generator": "symmetric ternary (P(pos)=P(neg)=0.4, P(neutral)=0.2), 120 events",
+    "frac_in_band_under_no_effect_null": 0.044,
+    "interpretation": "fraction of NO-EFFECT streams that still land in (1.4,1.6); the real test must beat this base rate to mean anything."
+  }
+}
