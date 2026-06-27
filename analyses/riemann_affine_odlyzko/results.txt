@@ -1,0 +1,31 @@
+==============================================================================
+Q4(a) Riemann affine PD-map on the open 1,000,000-zero Odlyzko table
+==============================================================================
+loaded N = 1,000,000 zeros; gamma_1 = 14.134725142
+
+## V1  Re(PD)=5*(sigma-1/2) with sigma=1/2 for every zero
+  Re(PD)=0 for all 1,000,000 zeros BY CONSTRUCTION (data are heights on the
+  assumed critical line). This is NOT evidence for RH (#69).
+
+## V2  Im(PD)=gamma/gamma_1 (a few landmarks)
+  zero #       1  gamma=       14.1347  Im(PD)=       1.00000
+  zero #       2  gamma=       21.0220  Im(PD)=       1.48726
+  zero #      10  gamma=       49.7738  Im(PD)=       3.52139
+  zero #     100  gamma=      236.5242  Im(PD)=      16.73356
+  zero #  10,000  gamma=     9877.7827  Im(PD)=     698.83090
+  zero #1,000,000  gamma=   600269.6770  Im(PD)=   42467.72901
+
+## V4  Emerick-Crossover identity (algebraic, data-independent)
+  sigma = 1/2 +- 1/(5*sqrt2) = 1/2 +- 0.1414213562
+  PD-real = 5 * 1/(5*sqrt2) = 1/sqrt2 = 0.7071067812
+  exact match to 1/sqrt2 = 0.7071067812: True
+
+## V5  GUE nearest-neighbour spacing (open-data reproduction)
+  unfolded spacings: n=999,999  mean=1.0000 (target ~1.0)  std=0.4063
+  mean|hist-GUE|     = 0.0149
+  mean|hist-Poisson| = 0.2645
+  -> data follows GUE (expected: GUE, the Montgomery-Odlyzko law). Scale-invariant, so the
+     PD-image inherits the identical spacing law. Reproduction, not new.
+
+SUMMARY: affine embedding is internally consistent at 1e6 scale; Emerick
+crossover exact; zeros obey GUE spacing. NONE of this bears on RH (#69).

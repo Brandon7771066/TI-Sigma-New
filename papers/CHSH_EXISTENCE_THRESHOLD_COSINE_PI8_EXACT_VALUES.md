@@ -33,7 +33,7 @@
 >
 > **PD link (unchanged):** the complex-amplitude reading here — truth as a phase-carrying
 > amplitude (real + imaginary parts), existence as the squared magnitude `|ψ|²` — *coheres* with
-> the corpus complex picture of partial determinacy (`z = E + i·GIL`) and is retained at that
+> the corpus complex picture of partial determinacy (`z = HEM + i·GILE`, supersedes `z = E + i·GIL`) and is retained at that
 > structural level. But the **PD remains a single 1-D indeterminate axis** (real *degree* +
 > imaginary *modality/MI* aspects); it is **not** a CHSH-derived constant, and nothing here splits
 > it into multiple axes or pins its value to cos(π/8).

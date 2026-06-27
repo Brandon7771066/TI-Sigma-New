@@ -56,7 +56,7 @@ Reading the analogy:
 - **GILE-Truth ↔ amplitude** — the deeper, *phase-carrying* quantity (carries a real part *and* an imaginary/indeterminate part).
 - **Existence ↔ Born probability `|ψ|²`** — the real, manifest "shadow" we actually observe; "manifestation" is the squaring.
 
-This **coheres with two things already in the corpus**: the complex picture of partial determinacy (`z = E + i·GIL`, urb_629) and **TRG-1** (reality is *tralse*, not crisply true) — the amplitude is itself tralse-complex, and squaring it to a real probability is exactly what manifestation does. That internal coherence is the strongest kind of support available here.
+This **coheres with two things already in the corpus**: the complex picture of partial determinacy (`z = HEM + i·GILE` — real = HEM/Existence, imaginary = all-GILE/abstract-Truth; supersedes the legacy `z = E + i·GIL`, urb_629) and **TRG-1** (reality is *tralse*, not crisply true) — the amplitude is itself tralse-complex, and squaring it to a real probability is exactly what manifestation does. That internal coherence is the strongest kind of support available here.
 
 **This is a resonance (TPS-1 / RAI-1), not a derivation.** The cap's *value* still comes from the λ=2 posit plus the √-choice; the Born rule explains the *shape*, not the number.
 

@@ -1,0 +1,22 @@
+============================================================================================
+Q4(b) TSC ring-constant signature expansion (pre-registered, coincidence-controlled)
+============================================================================================
+Observable                                  Observed      Ring   % dev  Domain
+Equal-temperament perfect fifth 2^(7/12)      1.4983     sqrt2    5.95  Music
+Just perfect fifth 3:2                        1.5000     sqrt2    6.07  Music
+Golden angle fraction 1 - 1/phi               0.3820   sqrt2-1    7.79  Phyllotaxis
+Minor sixth 8:5                               1.6000       phi    1.11  Music
+Silver ratio 1+sqrt2                          2.4142         e   11.19  Number theory
+Feigenbaum delta (scaled /3)                  1.5564       phi    3.81  Chaos
+Plastic number                                1.3247     sqrt2    6.33  Number theory
+Sqrt of 2 (control duplicate)                 1.4142     sqrt2    0.00  Control
+
+Real observables (excl. control): n=7  mean nearest-ring dev = 6.03%  median = 6.07%
+Random-constant baseline in [0.414,3.142]: mean nearest-ring dev = 9.19%  median = 7.53%
+
+VERDICT: real-observable mean dev < chance baseline.
+  P(random constant beats the observed mean dev) = 0.437
+  Interpretation (#69): the ring set covers its range densely enough that a
+  random constant is already fairly close; matches are SUGGESTIVE / heuristic
+  (HAN-1 graded evidence), NOT a validated cross-domain law. Reported honestly
+  both ways: some music ratios land near rings, but so does noise.
