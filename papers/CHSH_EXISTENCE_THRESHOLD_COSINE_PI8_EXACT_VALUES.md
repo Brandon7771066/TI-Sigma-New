@@ -20,7 +20,7 @@
 > | This paper proposed | Current canon (Fork B) | Disposition |
 > |---|---|---|
 > | Truth cap = **cos(π/8) ≈ 0.9239** | Radiant Cap **G\* = √(1−e⁻²) ≈ 0.92987** | **REJECTED** as the value; cos(π/8) is a 0.6% near-miss explicitly resisted as numerology (#69). |
-> | Existence floor = **cos²(π/8) ≈ 0.8536** | Existence floor **L = 1−e⁻² ≈ 0.86466** | **REJECTED**; the legacy "0.85" was `1−e⁻²` rounded down, not a CHSH value. They differ by ~1.3%. |
+> | Existence **PILLAR** floor = **cos²(π/8) ≈ 0.8536** | Existence-pillar floor **L = 1−e⁻² ≈ 0.86466** | **REJECTED for the PILLAR floor**; that floor is the λ=2 settling value `1−e⁻²`, not a CHSH value (they differ by ~1.3%). **BUT** `cos²(π/8) ≈ 0.8536` is **RETAINED** as the **LCC instrument's empirical neuronal-coupling threshold** (CHSH-linked; author's "as we found previously") — a *different, adjacent* quantity. See LCC-composition ruling §3.1. |
 > | All thresholds derive from **√2 (and φ via Fibonacci)** | All cluster values are low-order functions of one parameter **ε = e⁻²** (the λ=2 settling posit) | **REPLACED** by the simpler single-parameter account. |
 > | Squaring **truth² = existence** via the **Born rule** | **Existence = G\*² (EXACT)**; Born rule kept as *structural resonance* (TPS-1/RAI-1) | **RETAINED** — this is the paper's durable, vindicated kernel (now an exact identity, not a 0.4% approximation). |
 >

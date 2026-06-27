@@ -77,6 +77,8 @@ It is tempting — and would be *wrong* — to claim the cap equals a quantum-co
 
 The nearest, `cos(π/8) = 0.9239`, is a genuine CHSH measurement angle and sits only 0.6% from the cap — precisely the kind of near-miss the framework must **resist as numerology** (#69). The √2 that *does* legitimately appear in the CHSH story is doing a different job: it marks where reality outruns any single classical joint-probability model (Fine 1982; the framework's "Contextual Admissibility"). It is **not** where the cap's value comes from.
 
+> **Scope of this disclaimer (added 2026-06-27).** This "no CHSH coincidence" verdict is about the **UOP pillar values** `G*` (Radiant Cap) and `L` (settling Existence floor `1−e⁻²`) **only**. It does **not** deny the separate, retained result that the **LCC instrument's empirical neuronal-coupling threshold ≈ `cos²(π/8) = 0.8536`** carries a graded CHSH correspondence (the level above which neuronal synchronization exceeds classical-biofeedback prediction — author's "as we found previously"). That LCC coupling-ceiling and this pillar floor are **two adjacent-but-distinct quantities** (0.8536 vs 0.8647, ~1.3% apart) and must not be conflated. See `papers/LCC_COMPOSITION_AND_TRUTH_EXISTENCE_PILLAR_SEPARATION_CANONICAL_RULING_2026-06-27.md` §3.1.
+
 ---
 
 ## 5. Honest status (#69)

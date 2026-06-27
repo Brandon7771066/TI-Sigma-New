@@ -15,6 +15,25 @@ Two faces of the superseding object:
 
 **Do NOT regress the name:** LCC = **Law of Correlational Causation** (ruled Pass-76 B1) is retained; only the `L × E` *composition* is retired. Distinct concepts sharing the letters (Libertarian Causal Capacity, Lean Confidence Constant, Local Coherence Constraint, Lempel-Ziv) are preserved.
 
+# LCC is a correlation→bidirectional-coupling instrument (3-rung ladder, NOT one floor)
+
+LCC = the framework's **correlation → bidirectional-coupling** instrument: *when does a high correlation between ≥2 systems indicate genuine bidirectional causal coupling?* Exercised on brain dynamics + mood amplification, in **sims AND live rodent electrophysiology**, in active-entrainment and passive-bidirectional/Granger modes. It carries a **ladder of critical values**:
+- **Onset (hyperconnection)** `√2−1≈0.4142` = CHSH fractional advantage `(2√2−2)/2`; legacy "L×E hyperconnection" ≈0.42. **NOT equal to** the pre-reg bidirectional-Granger proxy `C_EMERICK=1/(φ√2)≈0.4370` (DANDI:000552 mean≈0.4349) — two distinct onset readings ~5% apart, keep distinct (#69).
+- **Resonance** `≈0.6` = LCC-Virus R≥0.6; `(√2+1)/4≈0.6036`.
+- **Neuronal-coupling ceiling** `0.85–0.86` = `cos²(π/8)=(2+√2)/4≈0.8536` (CHSH optimal-correlation prob); above it neuronal sync exceeds classical-biofeedback prediction.
+
+These √2-family rungs are **graded EVD-1 resonances** (sims+rodent), agree only to 1–2 sig figs (B55 two-decimal rule) — NOT derivations. Falsifier LCC-LADDER-F1.
+
+# CHSH-band carve: "0.85–0.86" = TWO distinct quantities (do NOT merge)
+
+The 0.85–0.86 band holds **two adjacent-but-distinct** quantities that must be kept separate:
+- **(a) LCC empirical neuronal-coupling threshold `cos²(π/8)≈0.8536`** — CHSH-linked, a graded resonance (author's standing finding: "corresponds to CHSH and a critical value for neuronal coupling, as we found previously"). RETAINED.
+- **(b) UOP Existence-PILLAR floor `1−e⁻²≈0.8647`** — λ=2 settling, NOT CHSH-derived.
+
+They differ ~1.3% and are **never forced identical** (#69/HAN-1). The Radiant-Cap "no CHSH coincidence" verdict is scoped to the pillar cap/floor `G*`,`L` ONLY — it does NOT deny the LCC coupling-ladder CHSH link. The scope is stated in Radiant-Cap-Fork-B §4 AND the CHSH-existence paper's status-note table.
+**Why:** a blanket "no CHSH coincidence" verdict over-rejects the author's empirical CHSH/neuronal-coupling result. The honest reconciliation keeps BOTH the settling floor and the empirical coupling threshold, separated by axis (pillar value vs instrument rung), rather than collapsing them.
+**How to apply:** when asked about ~0.85 in this framework, first disambiguate pillar-floor (settling) vs LCC neuronal ceiling (CHSH); only the latter carries the CHSH/`cos²(π/8)` reading, and only as a graded resonance — never as a derivation.
+
 # Truth vs Existence pillars (carve at the joint)
 
 - **Truth pillar** = the **64D GILE Truth Matrix** `M` — i-Cell truth interior, contains NO HEM, imaginary axis of `z=HEM+i·GILE`, carries the Radiant Cap `G*≈0.930`.
