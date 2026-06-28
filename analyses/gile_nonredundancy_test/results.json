@@ -1,0 +1,142 @@
+{
+  "seed": 20260628,
+  "n_perm": 500,
+  "runtime_sec": 62.6,
+  "controls": {
+    "negative_control_E_redundant": {
+      "label": "NEG control: E := f(G,I,L), no independent Y info",
+      "n_rows": 1600,
+      "coords": {
+        "G": {
+          "delta_r2_linear": 0.0006,
+          "delta_r2_rf": -0.0447,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0001,
+          "partial_corr": 0.0707,
+          "nonredundant_sig": true
+        },
+        "I": {
+          "delta_r2_linear": 0.0008,
+          "delta_r2_rf": 0.0259,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0001,
+          "partial_corr": 0.082,
+          "nonredundant_sig": true
+        },
+        "L": {
+          "delta_r2_linear": 0.0031,
+          "delta_r2_rf": 0.0721,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0001,
+          "partial_corr": 0.1265,
+          "nonredundant_sig": true
+        },
+        "E": {
+          "delta_r2_linear": 0.0001,
+          "delta_r2_rf": -0.0004,
+          "perm_pvalue": 0.1018,
+          "perm_null_mean": -0.0001,
+          "partial_corr": 0.0274,
+          "nonredundant_sig": false
+        }
+      }
+    },
+    "positive_control_all_informative": {
+      "label": "POS control: all four independently drive Y",
+      "n_rows": 1600,
+      "coords": {
+        "G": {
+          "delta_r2_linear": 0.2117,
+          "delta_r2_rf": 0.1038,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0002,
+          "partial_corr": 0.8591,
+          "nonredundant_sig": true
+        },
+        "I": {
+          "delta_r2_linear": 0.228,
+          "delta_r2_rf": 0.1208,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0002,
+          "partial_corr": 0.8671,
+          "nonredundant_sig": true
+        },
+        "L": {
+          "delta_r2_linear": 0.2123,
+          "delta_r2_rf": 0.0939,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0003,
+          "partial_corr": 0.8593,
+          "nonredundant_sig": true
+        },
+        "E": {
+          "delta_r2_linear": 0.2456,
+          "delta_r2_rf": 0.1317,
+          "perm_pvalue": 0.002,
+          "perm_null_mean": -0.0003,
+          "partial_corr": 0.874,
+          "nonredundant_sig": true
+        }
+      }
+    }
+  },
+  "real_data": {
+    "label": "REAL: GILE coords vs held-out test perf",
+    "n_rows": 52,
+    "coords": {
+      "G": {
+        "delta_r2_linear": -0.0087,
+        "delta_r2_rf": -0.0054,
+        "perm_pvalue": 1.0,
+        "perm_null_mean": -0.0005,
+        "partial_corr": 0.0474,
+        "nonredundant_sig": false
+      },
+      "I": {
+        "delta_r2_linear": 0.6182,
+        "delta_r2_rf": 0.5908,
+        "perm_pvalue": 0.002,
+        "perm_null_mean": -0.016,
+        "partial_corr": 0.984,
+        "nonredundant_sig": true
+      },
+      "L": {
+        "delta_r2_linear": -0.0012,
+        "delta_r2_rf": -0.0052,
+        "perm_pvalue": 0.7944,
+        "perm_null_mean": -0.0004,
+        "partial_corr": -0.12,
+        "nonredundant_sig": false
+      },
+      "E": {
+        "delta_r2_linear": -0.0008,
+        "delta_r2_rf": -0.0099,
+        "perm_pvalue": 0.6387,
+        "perm_null_mean": -0.0006,
+        "partial_corr": 0.0984,
+        "nonredundant_sig": false
+      }
+    },
+    "n_models_per_dataset": {
+      "breast_cancer": 13,
+      "digits": 13,
+      "synthetic_clf": 13,
+      "wine": 13
+    },
+    "marginal_corr_with_Y": {
+      "G": 0.7203,
+      "I": 0.9919,
+      "L": 0.1313,
+      "E": -0.5564
+    },
+    "coordinate_pair_corr": {
+      "G-I": 0.7277,
+      "G-L": 0.09,
+      "G-E": -0.7419,
+      "I-L": 0.1607,
+      "I-E": -0.5803,
+      "L-E": -0.4838
+    }
+  },
+  "honest_scope": "Single domain (supervised model selection, tree-based family). Proxies are one defensible choice among several. Positive results are SUGGESTIVE and necessary-not-sufficient (UGI-1): they support non-redundancy in THIS domain with THESE proxies, not universal non-redundancy. The representation-theorem half of 'substantive' (corpus R1) is NOT addressed here."
+}
