@@ -1,0 +1,69 @@
+
+========== CORPUS: PRIMARY (Mathlib) ==========
+files scanned: 4633; files with >=1 classified tactic: 4425
+
+[PRIMARY taxonomy]
+  ΣR = 240,179   ΣS = 119,390   aggregate r = ΣR/ΣS = 2.0117
+  per-file r: n=3965  median=2.0000  IQR=[1.094, 3.750]
+  fraction of files with r_i in [1.5, 2.2]: 723/3965 = 0.182
+
+[sensitivity variants — aggregate r]
+  S1_have_suffices_to_rigor        r = 2.7712   [OUT-of-band]
+  S2_rw_to_search                  r = 1.0223   [OUT-of-band]
+  S3_simp_to_search                r = 0.7346   [OUT-of-band]
+  S4_drop_intro                    r = 2.3867   [OUT-of-band]
+
+[tactic totals, descending]
+  simp                     78,540  (R)
+  rw                       58,388  (R)
+  rfl                      38,674  (R)
+  exact                    37,019  (R)
+  have                     22,083  (S)
+  refine                   16,803  (S)
+  apply                    13,992  (S)
+  let                      12,362  (S)
+  intro                    10,812  (S)
+  simpa                     8,918  (R)
+  obtain                    7,991  (S)
+  rintro                    6,759  (S)
+  rcases                    6,030  (S)
+  cases                     5,562  (S)
+  by_cases                  3,145  (S)
+  induction                 3,115  (S)
+  congr                     2,920  (R)
+  constructor               2,764  (S)
+  norm_cast                 2,535  (R)
+  calc                      2,426  (R)
+  suffices                  1,961  (S)
+  use                       1,675  (S)
+  intros                    1,185  (S)
+  ring                      1,144  (R)
+  gcongr                    1,034  (R)
+  omega                     1,014  (R)
+  set                         967  (S)
+  subst                       937  (R)
+  positivity                  901  (R)
+  norm_num                    882  (R)
+  linarith                    854  (R)
+  trivial                     745  (R)
+  contrapose                  674  (S)
+  choose                      664  (S)
+  by_contra                   626  (S)
+  decide                      547  (R)
+  assumption                  484  (R)
+  simp_all                    449  (R)
+  field_simp                  398  (R)
+  abel                        354  (R)
+  push_cast                   317  (R)
+  tauto                       262  (R)
+  ring_nf                     211  (R)
+  linear_combination          123  (R)
+  generalize                  122  (S)
+  wlog                         98  (S)
+  nlinarith                    71  (R)
+  rewrite                      23  (R)
+  polyrith                      8  (R)
+  exact?                        1  (R)
+
+========== CORPUS: SECONDARY (repo TI Lean, contrast only) ==========
+files: 20   ΣR=483  ΣS=318  aggregate r = 1.5189
