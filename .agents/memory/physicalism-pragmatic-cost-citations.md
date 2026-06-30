@@ -18,6 +18,17 @@ outlook). Two non-obvious guards MUST stay attached or the argument breaks #69:
    UOP (a worldview is judged on truth AND existence/HEM together), so the cost counts
    against physicalism's *imperial* whole-picture claim, never against its narrow
    physical claims.
+   **ACP-1 nuance (book Ch17, ratified):** the appeal-to-consequences charge itself
+   has TWO forms — the GENUINE fallacy (bare desirability/bleakness ⇒ true/false; KEEP
+   this, the book scrupulously avoids it in Ch5/Ch12) vs a PSEUDO-fallacy = the BLANKET
+   ban ("consequences can NEVER bear on truth"). The blanket form is unsound because
+   (a) truth is partly pragmatic (POD-1; James/Peirce/Dewey workability ⇒ "can it be
+   lived" IS truth-relevant) and (b) it quietly assumes pragmatic-truth can diverge from
+   metaphysical-truth WITHOUT LIMIT, whereas constitutive-Elegance (Ch5) makes it
+   *plausible* SOME Elegance always accompanies anything worthy of "Truth" ⇒ the drift is
+   BOUNDED. Both graded/framework-internal, NOT proof; Elegance bound = plausible not
+   demonstrated. So genuine performative-unlivability + inelegance carry graded truth-
+   weight via the twin axes; bare liking/disliking still earns zero.
 
 2. **The free-will psychology is REAL BUT CONTESTED — never cite it as settled.**
    Vohs & Schooler (2008, *Psychological Science*, "The Value of Believing in Free
