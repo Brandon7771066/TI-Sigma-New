@@ -200,6 +200,19 @@ TRG-1's move is to take the third option. The ground of reality is neither class
 
 A licensed, gentler synonym the framework uses for this status is **"work of art"** (the *canvas gloss*). A painting is not a lie and not a literal photograph; it is real, made, meaningful, and not-fully-true all at once. Calling reality a work of art is a positive way of saying *tralse-real* — and it carries no claim about a painter (more on that below).
 
+### Existing is a *standing*, not a verdict
+
+A natural objection lands right here. If TRG-1 says *everything* real is "tralse-real," isn't that just a roundabout way of calling everything true? If reality is a work of art and nothing is plainly false, hasn't the framework quietly made everything true by fiat?
+
+The reply turns on a distinction the framework insists on — between a thing's **standing** (*that* it exists at all) and its **content** (*what* it actually says or is). Tralse-real is a claim about *standing*: whatever exists has real footing, neither pure illusion nor crisp truth. It is emphatically **not** a claim that the *content* of everything that exists is factually correct. This is why the strict definition of truth matters, and the cleanest way to see it is to watch what goes wrong the instant you erase that line and let *existing* confer *content-truth*:
+
+- **On the propositional side**, every proposition that exists — and a false statement exists perfectly well *as a statement* — would have to count as "factually true in character" merely by existing. "The Earth is flat" exists as a sentence; so does its negation. If existing made content true, both would be true at once, the very idea of a false claim would evaporate, and truth would do no work because nothing could ever fail it.
+- **On the moral side**, every act that is ever done likewise *exists*. If existing conferred correctness, then everything done would be, by the same stroke, **permissible** — every cruelty licensed simply because it happened. Morality would collapse into "whatever occurs is thereby fine."
+
+Both consequences are intolerable, and that is exactly the point: they show the collapse-position refutes itself, so existence *cannot* confer content-truth. A false proposition is **tralse-real in standing** (it genuinely exists, and even leans on a sliver of structure) while being **False in content**; an evil act **really happens** while being **value-negative** on the GILE scale, its permissibility a separate verdict (the Permissibility Distribution of Chapter 8) that its mere occurrence never settles. This is precisely why the framework keeps **truth (content)** and **existence (standing)** on two different axes — the Truth-vs-Existence pillars of Chapter 6 — instead of folding either into the other. Tralse-real rescues reality from the charge of *illusion* without surrendering it to the opposite error of making everything *true*. (To be exact about its reach: this is a *consistency* argument for keeping the two axes apart — it shows the collapse-position self-destructs — not, by itself, a standalone proof that morality is objectively real; that larger question is weighed, and carefully bounded, elsewhere.)
+
+> **Key insight:** "It exists" and "it is true" are different verdicts on different axes. Tralse-real grants the first to everything real; it withholds the second from all but what genuinely coheres with what is. Collapse the two and you make every sentence true and every deed permissible — which is the whole reason the strict definition of truth keeps them apart.
+
 ### TOF-1: the one fundamental thing
 
 If reality's ground is tralse, what *is* that ground, concretely? The framework's answer is **TOF-1 — Tralse-Only Fundamentality** (framework-internal): there is exactly one fundamental, the **Tralse Soup** — a rule-less, pattern-less "chaotic nothingness" that precedes logic, mathematics, and the physical universe. Everything else is a *derivative* of it and therefore inherits its tralse character.
@@ -261,7 +274,7 @@ Each identity in that chain has been **numerically verified to machine precision
 
 In the spirit of the book's constructive-honesty discipline, here is the ledger for this chapter:
 
-- **Logical, demonstrable:** "There is no truth" is self-refuting; therefore truth must exist. The i = √(self × not-self) identity and the verified links in the i-Completeness chain are correct mathematics.
+- **Logical, demonstrable:** "There is no truth" is self-refuting; therefore truth must exist. By the same kind of reductio, *existence cannot confer content-truth* — if it did, every existing proposition would be "factually true in character" and every act that occurs would be permissible, both absurd — so "real" (standing) and "true" (content) must stay separate verdicts. The i = √(self × not-self) identity and the verified links in the i-Completeness chain are correct mathematics.
 - **Framework-internal (canonical within TI Sigma, not externally established):** TRG-1 (reality is tralse-real), TOF-1 (the Tralse Soup is the one fundamental), RTI-1 (residual law-errancy), and the reading of i *as* tralseness.
 - **Open / speculative:** the strong i-completeness conjecture for all of mathematics; the self-arising-consciousness cosmology and any cosmic-scale-mind hypothesis; whether reality's ground is "really" indeterminate rather than merely modeled that way. Named falsifiers stay on the table — e.g., if a strictly two-valued metaphysics could answer the "why is the ground called unreal?" puzzle without any third value, TRG-1's motivation would weaken.
 

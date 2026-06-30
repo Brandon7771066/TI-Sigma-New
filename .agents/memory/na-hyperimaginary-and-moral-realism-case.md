@@ -180,6 +180,28 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   Falsifier GME-1-F4: defeated if suffering's disvalue is shown genuinely detachable
   from the phenomenal character (full agony with NO reason-to-avoid given in it).
 
+# Tralse-real STANDING ≠ content-truth (the "everything-real-so-everything-true?" objection)
+
+- Standard objection to TRG-1: "if everything real is *tralse-real*, haven't you
+  made everything true by fiat?" **Answer = the standing-vs-content reductio**
+  (author's, now in the book Ch2 TRG-1 "Existing is a *standing*, not a verdict"):
+  distinguish **standing** (*that* a thing exists) from **content** (*what* it says/is).
+  Tralse-real is a claim about STANDING only. If you let existence confer
+  CONTENT-truth you get two absurdities — (a) every existing proposition (a false
+  statement exists fine *as* a statement, so does its negation) is "factually true
+  in character" ⇒ no false claim is possible, truth does no work; (b) every act that
+  *occurs* is thereby *permissible* ⇒ morality collapses. Both intolerable ⇒
+  existence CANNOT confer content-truth. A false prop is *tralse-real in standing*
+  yet *False in content*; an evil act *really happens* yet is *value-negative* (GILE),
+  its permissibility a separate PD verdict mere occurrence never settles.
+- **Why it matters:** this is the cleanest defense of the Truth(GILE/content) vs
+  Existence(HEM/standing) PILLAR SEPARATION — keep the two on different axes.
+- **Rail (do not overclaim):** it is a **consistency/reductio argument** for keeping
+  the axes apart, NOT a standalone proof that morality is objectively real. Same
+  ceiling as the rest of this file: NEVER claim moral realism deductively proven.
+  It belongs in the "logically demonstrable" bucket only as a *category-collapse*
+  result, not as a moral-realism proof.
+
 # PIA-1 anti-fictionalism (scope guard, 2026-06-27)
 
 - Fictionalism ("values don't exist but I act *as if*, because *optimal*" / "I live by values I *create*") self-refutes via **PIA-1**: "optimal" is itself a value (*by what standard?*), and a *will to live* ENACTS an adopted normative principle. Denying you HAVE values ≈ denying you have thoughts/valence (it is *given*, not inferred).
