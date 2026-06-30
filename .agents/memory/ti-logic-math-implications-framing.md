@@ -5,8 +5,8 @@ description: How the popular book frames TI-Logic "refuting" theorems without br
 
 # TI-Logic implications-for-mathematics section (book Ch14)
 
-The author wants a STRONG "TI-Logic refutes theorems" claim. The honest way to give it
-(architect-approved) is the structure **Building / Refuting / Reframing**:
+The book wants a STRONG "TI-Logic refutes theorems" claim. The honest way to give it is
+the structure **Building / Refuting / Reframing**:
 
 - **The one unbreakable guardrail:** a valid *conditional* (`if these axioms, then this
   conclusion`) can NEVER be refuted — that is just logical validity. Every strong
@@ -16,6 +16,13 @@ The author wants a STRONG "TI-Logic refutes theorems" claim. The honest way to g
 - **What may honestly be called REFUTED** (not merely re-scoped):
   1. Any argument resting on a **false dichotomy** — defensible because false dichotomy
      is a recognized fallacy and TI supplies the systematic 3rd/4th truth values.
+     NUANCE: false dichotomies are *both* universally discarded *and* not —
+     mathematicians spot them case-by-case yet keep truth itself bivalent. The
+     case-by-case rejection is uncontroversial; elevating it into the *structure of
+     truth* is TI's signature contested thesis ("binary thinking = greatest unrecognized
+     flaw in cognition"; thinking you escaped binary by swatting individual either/or
+     traps while keeping 2-valued truth is itself the symptom). Flag as framework-internal
+     diagnosis, NOT a proven psychological finding.
   2. Any theorem that **essentially requires the unrestricted excluded middle** (e.g.
      non-constructive existence-by-contradiction) — defensible via REAL precedent that
      constructive/intuitionistic math (Brouwer, Heyting, Bishop) already discards exactly
