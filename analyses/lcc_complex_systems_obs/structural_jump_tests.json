@@ -1,0 +1,195 @@
+{
+  "rungs": {
+    "onset_sqrt2_minus_1": 0.41421356237309515,
+    "resonance": 0.6035533905932737,
+    "ceiling_cos2_pi8": 0.8535533905932737
+  },
+  "T2b_ceiling_replication": {
+    "desync_edge_r_per_seed": [
+      0.8593,
+      0.8351,
+      0.8575,
+      0.8518,
+      0.8493,
+      0.8663,
+      0.8486,
+      0.7689
+    ],
+    "mean": 0.8421,
+    "std": 0.029,
+    "cos2_pi8_target": 0.8536,
+    "mean_abs_dev_from_target": 0.0171,
+    "within_2pct_of_target_count": 6,
+    "verdict": "if edges scatter widely / mean far from 0.8536 => the single-seed near-match was coincidence (rung NOT a robust structural value); if they cluster tightly near 0.8536 => mild EVD-1 support worth a real-data follow-up."
+  },
+  "T1_continuous_kuramoto": {
+    "K_c_theory_2gamma": 1.0,
+    "r_at_K0": 0.0357,
+    "r_at_Kmax": 0.8869,
+    "max_single_step_jump_in_r": 0.2973,
+    "r_value_at_max_jump": 0.3586,
+    "r_where_slope_dr_dK_is_max": 0.3586,
+    "K_where_slope_max": 1.125,
+    "verdict": "second-order: r departs continuously from ~0 at K_c; the ONLY structural point is the onset at r~=0, NOT at any rung value."
+  },
+  "T2_explosive_kuramoto": {
+    "network": "Barabasi-Albert N=400 m=3, omega=degree (explosive setup)",
+    "forward_jump_size": 0.4301,
+    "forward_jump_r_before": 0.2724,
+    "forward_jump_r_after": 0.7025,
+    "forward_jump_K": 1.6,
+    "backward_jump_size": 0.7619,
+    "backward_branch_edge_r": 0.854,
+    "hysteresis_present": true,
+    "verdict": "first-order: r jumps discontinuously across a wide span; the jump endpoints skip past rung(s) and land between rungs (system-specific), not on any rung; hysteresis present. See printed endpoints for the exact span."
+  },
+  "T3_directional_inference_window": {
+    "ground_truth_direction": "y -> x (net_granger should be > 0)",
+    "table": [
+      {
+        "R": 0.0755,
+        "net_granger_y2x": 0.0272,
+        "reliability_z": 6.671,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.4
+      },
+      {
+        "R": 0.1231,
+        "net_granger_y2x": 0.0256,
+        "reliability_z": 6.369,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.4
+      },
+      {
+        "R": 0.1721,
+        "net_granger_y2x": 0.0257,
+        "reliability_z": 4.755,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.4
+      },
+      {
+        "R": 0.2206,
+        "net_granger_y2x": 0.0261,
+        "reliability_z": 5.349,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.5
+      },
+      {
+        "R": 0.2664,
+        "net_granger_y2x": 0.023,
+        "reliability_z": 5.77,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.6
+      },
+      {
+        "R": 0.3239,
+        "net_granger_y2x": 0.0227,
+        "reliability_z": 4.481,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.7
+      },
+      {
+        "R": 0.3659,
+        "net_granger_y2x": 0.024,
+        "reliability_z": 5.448,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.8
+      },
+      {
+        "R": 0.4202,
+        "net_granger_y2x": 0.0222,
+        "reliability_z": 5.524,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 2.9
+      },
+      {
+        "R": 0.465,
+        "net_granger_y2x": 0.0205,
+        "reliability_z": 4.373,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 3.0
+      },
+      {
+        "R": 0.513,
+        "net_granger_y2x": 0.0196,
+        "reliability_z": 4.656,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 3.1
+      },
+      {
+        "R": 0.5619,
+        "net_granger_y2x": 0.0181,
+        "reliability_z": 3.559,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 3.3
+      },
+      {
+        "R": 0.606,
+        "net_granger_y2x": 0.0156,
+        "reliability_z": 4.197,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 3.5
+      },
+      {
+        "R": 0.6526,
+        "net_granger_y2x": 0.0151,
+        "reliability_z": 4.892,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 3.7
+      },
+      {
+        "R": 0.6999,
+        "net_granger_y2x": 0.0128,
+        "reliability_z": 3.099,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 4.0
+      },
+      {
+        "R": 0.7461,
+        "net_granger_y2x": 0.0117,
+        "reliability_z": 3.93,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 4.4
+      },
+      {
+        "R": 0.7929,
+        "net_granger_y2x": 0.0095,
+        "reliability_z": 3.411,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 4.9
+      },
+      {
+        "R": 0.8376,
+        "net_granger_y2x": 0.0078,
+        "reliability_z": 2.778,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 5.5
+      },
+      {
+        "R": 0.8832,
+        "net_granger_y2x": 0.006,
+        "reliability_z": 2.237,
+        "frac_correct_sign": 1.0,
+        "mean_condnum": 6.6
+      },
+      {
+        "R": 0.9288,
+        "net_granger_y2x": 0.0033,
+        "reliability_z": 1.544,
+        "frac_correct_sign": 0.925,
+        "mean_condnum": 8.7
+      },
+      {
+        "R": 0.9735,
+        "net_granger_y2x": 0.0006,
+        "reliability_z": 0.709,
+        "frac_correct_sign": 0.775,
+        "mean_condnum": 17.8
+      }
+    ],
+    "R_at_reliability_collapse_frac<0.9": 0.9735,
+    "ceiling_cos2_pi8": 0.8535533905932737,
+    "verdict": "directional inference is reliable at low/mid R and DEGRADES as R->1 (condition number explodes, sign reliability falls); collapse onset is gradual/system-specific, compare to cos^2(pi/8) below."
+  },
+  "config_sha": "d7712fb41859"
+}
