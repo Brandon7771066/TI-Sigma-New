@@ -1,0 +1,11 @@
+{
+  "sync": {
+    "error": "401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions"
+  },
+  "causality": {
+    "error": "401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions"
+  },
+  "brainnet": {
+    "error": "401 Client Error: Unauthorized for url: https://api.perplexity.ai/chat/completions"
+  }
+}
