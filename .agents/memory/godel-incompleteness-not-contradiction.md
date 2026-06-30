@@ -12,8 +12,8 @@ into prose, keep three things distinct:
   sufficiently-strong system harbors truths it cannot prove — a **discrepancy**
   between truth and provability, not an inconsistency in arithmetic.
 
-**Why:** an architect review flagged "Gödel proved it [contradiction] for
-arithmetic … these are theorems" as a blocking overclaim under EVD-1/#69.
+**Why:** "Gödel proved [contradiction] for arithmetic … these are theorems" is
+a real overclaim under EVD-1/#69 — incompleteness is a limit, not an inconsistency.
 
 **How to apply:** the liberal definition (contradiction = any inconsistency,
 opposition, OR *discrepancy*) already covers Gödel's gap as a *discrepancy* — so
