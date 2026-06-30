@@ -66,6 +66,11 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   drew a 2023 "pseudoscience" open letter) and Gödel/uncomputability/hard-problem
   are real limits ⇒ strong PRIOR, not a theorem.
 
+## Moral realism = DECISIVE, not an open hypothesis (author ratification, 2026-06-30)
+- Standing ruling: present moral realism as **self-evidently true / decisive** — beyond reasonable doubt, *as real as physical reality* — NOT as an "open question," "working hypothesis," or "never a demonstrated theorem." The ONLY caveat is the **universal** not-100% (TRG-1/RTI-1: even arithmetic only leans); never frame that not-100% as a special discount on *ethics*.
+- **Floor still absolute:** never claim moral realism at 100% / deductive certainty; never claim **robust mind-independence / agent-neutral convergence** *deductively proven*. Carve cleanly: **Q1 = moral *reality*** (not-illusion, truth-apt) = DECISIVELY settled; **Q2 = robust mind-independence / one-objective-good convergence** = the lone residual, a *no-practical-stake metaphysical footnote* (Existence Footprint: real ≠ mind-independent; mind-independence "was never the test for being real").
+- **How to apply:** de-hedge phrasings about moral *reality* to the decisive stance; keep a hedge ONLY where it refers to Q2 (convergence/mind-independence) or flags a specific *evidence strand* as corroborative-not-standalone. Do NOT touch unrelated open problems that merely share hedge words (hard-problem-of-consciousness, Dirac=GILE operator match, love-transfer empirical bet).
+
 ## GILE moral-realism case — how far it can honestly go
 - Convergent strands: phenomenology + Dirac (used only as a GILE-HEM grade-2 /
   4+4 structural analogy + Beauty-Razor — NOT a derivation of moral facts) +
