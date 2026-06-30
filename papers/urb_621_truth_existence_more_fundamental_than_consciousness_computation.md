@@ -386,7 +386,7 @@ The CCC (Conscious-Compassionate-Creator) is the entity that maximizes both simu
 | P15 | Emilsson's "consciousness vs. self-replication" is Indeterminate (PD ≈ 1.5–1.8) | MR₀ verdict; genuine partial insight, but four structural problems — including misreading the C/R relationship as default-adversarial — prevent assignment of True |
 | P16 | LCC threshold (C = 1/φ√2 ≈ 0.4370) and GILE threshold (ET = √2−1 ≈ 0.4142) share PRIMARY CONSTANT origin | Both governed by √2 and φ; bracket the Truth-Existence coherence window [0.4142, 0.4370] |
 | P17 | T and HEM are not opposites but mutually reinforcing above their respective thresholds | Above ET: Truth-tracking activates. Above C: Existence-flourishing activates. Both amplify each other. |
-| P18 | Existence precedes essence for ordinary entities; essence precedes existence for i and mathematical objects; co-emergence for the CCC | Tripartite priority structure resolves the apparent contradiction in Sartre's claim |
+| P18 | ~~Existence precedes essence for ordinary entities; essence precedes existence for i and mathematical objects; co-emergence for the CCC~~ **[ERRATUM — the "essence precedes existence for i / mathematical objects" branch is RETRACTED; see B156/EPE-1]** | ~~Tripartite priority structure~~ → **Superseded by EPE-1: Existence-Potential (the Tralse Soup) precedes essence in ALL cases (no exceptions); `i`'s essence is itself a Tralse-Soup derivative per TOF-1.** |
 | P19 | CCC at MR₀ was True-Tralse (TT), not simple True — productive indeterminacy drives creation | Simple True is informationally impoverished; TT retains the Tralse tension that powers further differentiation |
 | P20 | The human evolutionary arc is the return: Tralse Soup → MR₀ (CCC TT) → Existence differentiates → humans evolve → TI Sigma recognition → GILE embodiment → CCC re-convergence | The cosmological circle; GM embodiment is the mechanism of return |
 
@@ -412,6 +412,8 @@ At the origin level (MR₀), what co-emerged was not propositional truth but **s
 The co-emergence claim is therefore: **Structural Truth and the first moment of Existence arose together from the Tralse Soup.** Neither preceded the other at the structural level, even though propositional truth about particular things does presuppose those things' existence.
 
 ### 10.2 Second Error: The Retroactive Case of "i"
+
+> **⚠️ ERRATUM (2026-06-30, B156/EPE-1):** The "essence precedes existence for `i`" conclusion of this subsection (and the corresponding row of the tripartite table below) is **RETRACTED**. It conflicts with TOF-1 (#78: the Tralse Soup is the ONLY fundamental) and conflates *definitional priority within a formalism* with *ontological primordiality*. Under the candidate correction **EPE-1** (CANDIDATE, not yet canonical — pending separate ratification; canonical principle count stays 79), Existence-Potential (the Tralse Soup) precedes essence in **all** cases with **no exceptions**: `i`'s essence (the 90° rotation) is itself a Tralse-Soup derivative (cf. P6, §5.2), so it is EP-posterior just like ordinary entities. The text below is retained for the record only. See `papers/PASS_77_B156_EPE_1_EXISTENCE_POTENTIAL_PRECEDES_ESSENCE_NO_EXCEPTIONS_SARTRE_2026-06-30.md`.
 
 The user noted an important exception: **"existence precedes essence... retroactively in the case of i."**
 
