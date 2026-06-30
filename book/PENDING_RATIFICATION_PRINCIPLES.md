@@ -15,16 +15,21 @@
 
 ## Status key
 
-* **CANONICAL** — ratified; counts toward the principle total (**79**). Refinements and
-  renames do **not** increment the count.
+* **CANONICAL** — ratified; counts toward the principle total (**80**). Refinements and
+  renames do **not** increment the count. (Most recent: **EPE-1** #80 — Existence-Potential
+  Precedes Essence, ratified 2026-06-30, B156; it was a fresh ratification, never queued below.)
 * **CANDIDATE** — argued in the corpus, **not yet ratified**. Queued here.
 * **SELECTION-GUIDE** — a useful decision tool, *intentionally* never a principle
   (e.g. PDR-1). Listed for completeness; needs no ratification.
 
 A candidate is ready to ratify when: (1) an anchor paper states it with derivation +
 open falsifiers; (2) it survives the #69 both-directions check; (3) it is coherent
-with the canonical 79 (no silent contradiction); (4) any load-bearing empirical claim
+with the canonical 80 (no silent contradiction); (4) any load-bearing empirical claim
 is at least **method-validated** (sim) with the real study named.
+
+> A candidate may also be ratified *directly* (skipping this queue) when the author calls it,
+> as with **EPE-1** (#80): it cleared (1)–(3) at its anchor (B156) and carries no load-bearing
+> empirical claim, so it went straight to canonical.
 
 ---
 

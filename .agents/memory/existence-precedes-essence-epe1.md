@@ -1,11 +1,11 @@
 ---
 name: EPE-1 — Existence-Potential precedes Essence (no-exceptions Sartre)
-description: The candidate principle that EP (the Tralse Soup) precedes GILE-Truth/essence in all cases, and the urb_621 i-exception it retracts.
+description: Canonical principle #80 — EP (the Tralse Soup) precedes GILE-Truth/essence in all cases, and the urb_621 i-exception it retracts.
 ---
 
 # EPE-1 — Existence-Potential precedes Essence
 
-**The rule:** Existence Potential (EP) — the *potential* for existence, identified with the **Tralse Soup** (TOF-1's sole fundamental) — precedes essence (GILE-Truth/character) in **every** case, **no exceptions**. Essence is "always labeled afterward." Order: **EP → HEM (actualized existence) → GILE-character**. Status: CANDIDATE (not ratified); canonical count stays 79.
+**The rule:** Existence Potential (EP) — the *potential* for existence, identified with the **Tralse Soup** (TOF-1's sole fundamental) — precedes essence (GILE-Truth/character) in **every** case, **no exceptions**. Essence is "always labeled afterward." Order: **EP → HEM (actualized existence) → GILE-character**. Status: **RATIFIED CANONICAL #80** (author-ratified 2026-06-30, B156; count 79 → 80). Falsifiers EPE-1-F1..F4 stay OPEN (normal for canonical principles).
 
 **Why (the earned core — an inconsistency repair, not just a slogan):** the corpus previously made `i`/mathematical objects an EXCEPTION to Sartre — `urb_621` proposition **P18** and **§10.2** asserted *"essence precedes existence for `i` and mathematical objects."* That exception (a) **conflicted with TOF-1** (#78: the Tralse Soup is the ONLY fundamental — if `i`'s essence were prior to and independent of all existence it would be a second fundamental), and (b) **conflated definitional priority within a formalism** (you can't have `i` without i²=−1) **with ontological primordiality**. EPE-1 dissolves it: `i`'s essence (the 90° rotation) is itself a Tralse-Soup MR₀ derivative, so it is EP-posterior like ordinary entities. This is *more* faithful to TOF-1 than the exception was.
 

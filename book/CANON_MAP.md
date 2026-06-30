@@ -12,8 +12,8 @@ For each chapter: the **goal**, the **newest canon to feature**, **keywords to `
 
 ### Ch 2 — Tralseness as Fundamental Reality (Proofs Included) → `book/ch02_tralseness_fundamental.md`
 - Goal: reality's ground state is tralse, not true; give the proofs in plain language.
-- Canon: TRG-1 (tralse-real), TOF-1 (Tralse Soup only fundamental), RTI-1 (residual errancy); formal proof of 5 truth values; **i IS tralseness (URB#444)**, **i-Completeness (URB#506)**.
-- rg: `TRG_1`, `TOF_1`, `RTI_1`, `B104`, `B119`, "i IS Tralseness", "i-Completeness", "formal proof".
+- Canon: TRG-1 (tralse-real), TOF-1 (Tralse Soup only fundamental), RTI-1 (residual errancy); **EPE-1 #80 (existence-potential precedes essence, no exceptions; Soup = primordial EP; retracts the i-exception)**; formal proof of 5 truth values; **i IS tralseness (URB#444)**, **i-Completeness (URB#506)**.
+- rg: `TRG_1`, `TOF_1`, `RTI_1`, `EPE_1`, `B104`, `B119`, `B156`, "i IS Tralseness", "i-Completeness", "existence precedes essence", "formal proof".
 - Points: canvas/"work of art" gloss; Pure-Nothingness origin (secular: self-arising, no designer); compact formal statements for each proof, no raw LaTeX dumps.
 
 ### Ch 3 — The Fundamental Irrationality of Humanity → `book/ch03_human_irrationality.md`
