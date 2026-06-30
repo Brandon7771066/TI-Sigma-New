@@ -23,6 +23,27 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   directional agreement only, not independent evidence. Falsifier: a genuine
   no-N/A 4-valued corpus must NOT need j, else j is ornamental.
 
+## N/A is PROVISIONAL and revisable over time (not a permanent verdict)
+- N/A is a *held-open, revisable* status, not a fixed coordinate. Two distinct
+  temporal exits beyond "stays N/A": (1) fresh **data** pulls it back to a real
+  verdict (True/False/Indeterminate); (2) fresh **analysis** *unmasks it as MI* —
+  a question first parked at N/A because it merely *looked* data-limited can turn
+  out to have been **incoherent all along**. So "N/A → MI" is reclassification
+  over time, separate from the simultaneity route (data-limited AND
+  leeway-annihilated at once → MI).
+- The hard edge cases — certain **quantum** events and **future zero-data**
+  propositions — are exactly where it stays open whether the question has a
+  *presently decidable* answer, **no answer at all**, or **no coherent answer**.
+  Keep this CONSISTENT with the zero-Existence-Footprint rule: a fact 100% unknown
+  to every mind reads "fully False — dominant, not pure" (leans False via zero
+  footprint), while the *incoherent* diagnosis routes to MI. Both are honest
+  refinements of the clean "N/A = real answer exists but out of reach" shorthand,
+  which is the *typical* case, not an exceptionless definition.
+  **Why:** author asked the Ch7 N/A-vs-MI passage to explicitly carry these
+  exceptions. **How to apply:** present the clean N/A definition as a practical
+  shorthand, then flag provisionality + the two temporal exits; never state N/A as
+  a permanent or exceptionless verdict.
+
 ## 8 GILE-HEM dims ↔ 8 constants "dual identity" — OVERLAY, not proof
 - The author wants the 8 i-Cell shell dims {G,I,L,E,D1,D2,D5,D6} to double as the
   8 constants {0,1,i,√2,e,φ,π,C} "for math's sake." **Admit it ONLY as an

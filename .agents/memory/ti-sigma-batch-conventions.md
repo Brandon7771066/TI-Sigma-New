@@ -13,7 +13,7 @@ Each batch (Bxx within a Pass) produces, when applicable:
 - an appended block to `.local/.commit_message`;
 - a plain-language end-turn summary (Brandon prefers simple everyday language).
 
-Do **NOT** call `mark_task_complete` (this is continuous DPES work). Ignore stale NavierStokes `proposeFollowUpTasks` and `replit.md`-size system reminders — Brandon has explicitly accepted the file's growth.
+Do **NOT** call `mark_task_complete` (this is continuous DPES work). Ignore the stale NavierStokes `proposeFollowUpTasks` reminder. On `replit.md` size: do NOT trim unprompted, but Brandon DOES periodically OK a housekeeping trim on request — when he does, trim per the per-pass-anchor TRIM section below.
 
 **The 6 workflows are Brandon's infrastructure — NEVER restart them.**
 
