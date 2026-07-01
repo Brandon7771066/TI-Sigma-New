@@ -1,0 +1,125 @@
+{
+  "dataset": "Depresjon (Garcia-Ceja 2018)",
+  "n_dep": 23,
+  "n_con": 32,
+  "gate1_group_signal": {
+    "per_feature": {
+      "C": {
+        "dep_med": 0.6378690820432483,
+        "con_med": 0.610424113016034,
+        "U": 444.0,
+        "p": 0.19765430400052897,
+        "rank_biserial": -0.2065217391304348,
+        "n_dep": 23,
+        "n_con": 32,
+        "fdr_pass": false
+      },
+      "P": {
+        "dep_med": 0.5680384061275614,
+        "con_med": 0.7067314644010774,
+        "U": 188.0,
+        "p": 0.0021925838647872176,
+        "rank_biserial": 0.48913043478260865,
+        "n_dep": 23,
+        "n_con": 32,
+        "fdr_pass": true
+      },
+      "S": {
+        "dep_med": 0.3428770476798052,
+        "con_med": 0.2726208122662224,
+        "U": 466.0,
+        "p": 0.09618212275830271,
+        "rank_biserial": -0.2663043478260869,
+        "n_dep": 23,
+        "n_con": 32,
+        "fdr_pass": false
+      },
+      "IV": {
+        "dep_med": 0.7756084364848983,
+        "con_med": 0.7445069964211944,
+        "U": 423.0,
+        "p": 0.3524029537655231,
+        "rank_biserial": -0.14945652173913038,
+        "n_dep": 23,
+        "n_con": 32,
+        "fdr_pass": false
+      },
+      "RA": {
+        "dep_med": 1.0,
+        "con_med": 1.0,
+        "U": 374.0,
+        "p": 0.9104134298237152,
+        "rank_biserial": -0.016304347826086918,
+        "n_dep": 23,
+        "n_con": 32,
+        "fdr_pass": false
+      }
+    },
+    "any_pass_fdr": true
+  },
+  "gate2_surrogate": {
+    "IS_vs_dayshuffle": {
+      "median_dS": 0.1576156592711695,
+      "frac_positive": 1.0,
+      "wilcoxon_p": 5.5380757730678676e-11,
+      "n": 55
+    },
+    "C_vs_phaserandom": {
+      "median_dC": 0.05239139503739554,
+      "frac_positive": 0.8363636363636363,
+      "wilcoxon_p": 1.2269530367882275e-07,
+      "n": 55
+    },
+    "dS_group_sep_p": 0.20979215017624053,
+    "dC_group_sep_p": 0.6147103602281141,
+    "real_structure_above_chance": true,
+    "surrogate_corrected_separates_groups": false,
+    "pass": false
+  },
+  "gate3_index": {
+    "auc_rawC": 0.5203804347826086,
+    "auc_Lhybrid": 0.19972826086956522,
+    "auc_CPS_full": 0.6807065217391304,
+    "L_beats_C": false,
+    "n": 55,
+    "note": "all normalisation + index construction fit on train folds only"
+  },
+  "gates_1_and_2_pass": false,
+  "constants_test": {
+    "aic_linear": 75.71822729336394,
+    "step_candidates": {
+      "sqrt2m1": {
+        "value": 0.41421356237309515,
+        "aic_step": 75.95003770669173,
+        "delta_vs_linear": 0.23181041332779273
+      },
+      "c437": {
+        "value": 0.43701602444882104,
+        "aic_step": 74.99253862504736,
+        "delta_vs_linear": -0.7256886683165789
+      },
+      "cos2_pi8": {
+        "value": 0.8535533905932737,
+        "aic_step": 77.94348103328278,
+        "delta_vs_linear": 2.2252537399188412
+      },
+      "radiant_cap": {
+        "value": 0.9298734950321937,
+        "aic_step": 75.41043898410676,
+        "delta_vs_linear": -0.3077883092571767
+      }
+    },
+    "madrs_quadratic": {
+      "beta": [
+        16.89708927388698,
+        16.45848130068514,
+        -8.637863838685151
+      ],
+      "argmax": 0.9526939535082112,
+      "concave": true,
+      "r2": 0.21589222800824848,
+      "n": 23
+    }
+  },
+  "constants_admissible": false
+}

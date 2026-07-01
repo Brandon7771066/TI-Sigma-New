@@ -1,0 +1,143 @@
+Yes — I would **not** rerun ds007471 with the same feature family. The failed manipulation check and the negative cross-pair surrogate mean the substrate did not contain the interaction-specific signal LCC needed.
+
+## Next methodological pivot
+
+Use a **gate-first pipeline**:
+
+[
+\text{Manipulation signal}
+\to
+\text{surrogate control}
+\to
+\text{LCC index}
+\to
+\text{threshold test}
+\to
+\text{UOP/Radiant Cap test}
+]
+
+Do not test constants until the first two gates pass.
+
+## Best next datasets
+
+### 1. Physiological synchrony → group cohesion
+
+This is the best immediate replacement. It has a much stronger prior for real interaction-specific synchrony than EEG PLV in ds007471. Tomashin et al. studied synchronous interbeat-interval dynamics and group cohesion, while Gordon et al. found physiological and behavioral synchrony predicted group cohesion and later group-task performance. ([PMC][1])
+
+Use ECG/IBI instead of EEG. Metrics:
+
+[
+C=\text{IBI correlation}
+]
+
+[
+P=\text{bidirectional Granger/CCM/transfer entropy}
+]
+
+[
+S=\text{windowed synchrony stability}
+]
+
+Outcome:
+
+[
+\text{group cohesion or group performance}
+]
+
+This is the cleanest LCC-EMP-F1 follow-up.
+
+### 2. Heart-rate synchrony → decision correctness
+
+This is the best bridge to GILE because the outcome is not just “felt agency” but **correctness/consensus quality**. The key hypothesis becomes:
+
+[
+L_{hybrid} \rightarrow \text{decision accuracy}
+]
+
+not merely synchrony. This is much closer to GILE Truth.
+
+### 3. Depresjon / OBF-Psychiatric actigraphy
+
+For mood-amplifier relevance, move to within-person dynamics. The Depresjon dataset has motor activity recordings for 23 unipolar/bipolar depressed patients and 32 controls, with multi-day activity traces; OBF-Psychiatric expands this kind of dataset across bipolar depression, unipolar depression, schizophrenia, and ADHD. ([Simula Datasets][2])
+
+Here LCC should not be inter-person synchrony. It should be **within-person rhythm coupling**:
+
+[
+C=\text{sleep/activity rhythm coherence}
+]
+
+[
+P=\text{activity}_{t}\to\text{future state}
+]
+
+[
+S=\text{circadian stability}
+]
+
+Outcome:
+
+[
+\text{diagnosis, MADRS/severity, episode state, or future activity collapse}
+]
+
+This is better for Mood Amplifier than ds007471.
+
+### 4. DANDI / NWB rodent neurophysiology
+
+For live-rodent Mood Amplifier testing, DANDI is still the right ecosystem: it hosts searchable NWB neurophysiology datasets with electrophysiology, optophysiology, and behavioral data. ([Neurodata Without Borders][3])
+
+But the dataset must include an **intervention or behaviorally meaningful state transition**, not just passive recording. Search specifically for:
+
+[
+\text{rodent + stimulation/optogenetic + behavior + NWB}
+]
+
+Then apply LCC to pre/post stimulation network changes.
+
+## Metric changes
+
+Replace ds007471’s PLV-first approach with:
+
+[
+C=\text{surrogate-corrected synchrony}
+]
+
+[
+P=\text{cross-validated predictive gain}
+]
+
+[
+S=\text{stability across windows}
+]
+
+[
+T=\text{alignment to task/outcome}
+]
+
+[
+M=\text{trial-to-trial correction}
+]
+
+Most important: compute every synchrony metric as:
+
+[
+\Delta C = C_{\text{real partners}} - C_{\text{matched surrogate}}
+]
+
+not raw synchrony.
+
+## Revised decision rule
+
+A dataset is eligible for constant testing only if:
+
+1. manipulation check passes;
+2. real-pair synchrony exceeds matched surrogate;
+3. (L_{hybrid}) beats raw (C) in cross-validation.
+
+If any of these fail, record a negative and move on.
+
+My recommendation: next run should be **physiological synchrony / group cohesion**, then **Depresjon/OBF actigraphy** for Mood Amplifier relevance.
+
+[1]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9314573/?utm_source=chatgpt.com "Interpersonal Physiological Synchrony Predicts Group Cohesion"
+[2]: https://datasets.simula.no/depresjon/?utm_source=chatgpt.com "Depresjon - Simula Datasets"
+[3]: https://nwb.org/archives/?utm_source=chatgpt.com "Public Data Archives"
