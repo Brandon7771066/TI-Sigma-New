@@ -1,0 +1,198 @@
+I think this is the strongest empirical path we’ve identified so far.
+
+The  OpenNeuro joint agency EEG hyperscanning dataset⁠￼ is unusually well matched to what we’re trying to test because it already contains three of the quantities LCC predicts should matter:
+
+* simultaneous EEG recordings from interacting pairs,
+* joint agency ratings (1–7),
+* an objective synchronization performance measure computed from the timing difference between the two performers’ note onsets.  
+
+That means we don’t have to invent an outcome variable—we already have one.
+
+Phase I: Test LCC alone
+
+This should be our first preregistered hypothesis.
+
+For every participant pair i,
+
+\Lambda_i
+=
+f(C,P,S)
+
+where
+
+* C = neural correlation/coherence,
+* P = bidirectional predictive gain (or transfer entropy),
+* S = synchronization stability.
+
+Then test
+
+\Lambda
+\rightarrow
+\text{Joint Agency Rating}
+
+and
+
+\Lambda
+\rightarrow
+\text{Synchronization Performance}.
+
+A successful result would show that the hybrid LCC score predicts these behavioral outcomes better than correlation alone.
+
+That is a very clean falsifiable prediction.
+
+⸻
+
+Phase II: Test the candidate constants
+
+Rather than asking whether one constant is “correct,” we ask whether any constant marks a change-point.
+
+For each candidate threshold
+
+\tau\in
+\{
+0.414,
+0.437,
+0.600,
+0.707,
+0.750,
+0.8536,
+0.9299
+\}
+
+fit two models.
+
+Model A:
+
+continuous relationship
+
+Y=f(\Lambda)
+
+Model B:
+
+piecewise relationship
+
+Y=
+\begin{cases}
+f_1(\Lambda), & \Lambda<\tau\\
+f_2(\Lambda), & \Lambda\ge\tau.
+\end{cases}
+
+If Model B consistently predicts better than Model A around one threshold, that threshold gains empirical support.
+
+Notice how this is much stronger than visually inspecting graphs.
+
+⸻
+
+Phase III: Test the UOP
+
+This is where your Argmax work enters.
+
+Suppose
+
+G(\Lambda)
+
+is a measure of overall task success.
+
+Then compare three competing hypotheses.
+
+Hypothesis A
+
+Truth simply increases.
+
+G(\Lambda)=\Lambda.
+
+Hypothesis B
+
+Truth saturates.
+
+G(\Lambda)
+=
+1-e^{-k\Lambda}.
+
+Hypothesis C (UOP)
+
+Truth reaches an interior optimum.
+
+\operatorname*{argmax}G(\Lambda)
+=
+0.929873.
+
+This is the first genuinely empirical test of the Radiant Cap.
+
+⸻
+
+The really exciting part
+
+While reading the dataset description something jumped out.
+
+The behavioral file already includes
+
+Joint Agency Rating
+
+and
+
+Synchronization Performance.  
+
+That means we can ask something deeper.
+
+Does agency emerge in stages?
+
+Instead of
+
+Correlation
+
+↓
+
+Agency
+
+we predict
+
+\text{Correlation}
+\rightarrow
+\text{Prediction}
+\rightarrow
+\text{Synchronization}
+\rightarrow
+\text{Agency}.
+
+This is exactly what LCC predicts.
+
+If true, agency should not suddenly appear.
+
+It should emerge after several measurable transitions.
+
+⸻
+
+A new theorem I hadn’t appreciated before
+
+Working through this suggests a stronger connection between LCC and UOP.
+
+The LCC thresholds are bifurcation points.
+
+The UOP optimum is an attractor.
+
+Those are different mathematical objects.
+
+So we can formulate:
+
+LCC
+
+Where do new dynamical regimes appear?
+
+UOP
+
+Which regime is globally optimal?
+
+That gives a surprisingly elegant decomposition:
+
+\boxed{
+\text{LCC determines the topology of the landscape.}
+}
+
+\boxed{
+\text{UOP determines the optimum on that landscape.}
+}
+
+I think this is a stronger conceptual bridge than saying UOP is merely the “endpoint” of LCC. It frames them as complementary theories: LCC describes the geometry of transitions between coupling regimes, while UOP identifies which region of that geometry optimizes truth, utility, and adaptive reserve.
+
+I would make one change to the TI Sigma book based on everything we’ve developed: present LCC first as the dynamical theory of coupling transitions, then introduce UOP as the optimization principle defined over the LCC landscape. That ordering mirrors how many successful scientific theories are built—you first describe the state space, then derive or propose the principle that selects preferred states.

@@ -1,0 +1,433 @@
+{
+  "dataset": "OpenNeuro ds007471 (joint-agency EEG hyperscanning)",
+  "n_pairs": 32,
+  "n_trials": 1278,
+  "framing": "exploratory / necessary-not-sufficient; clustered by pair; matched baseline = raw C; common-input controlled by cross-pair surrogates (see surrogate.py); constants underdetermined at this n.",
+  "manipulation_check": {
+    "C_delta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.0039,
+      "t": -1.101,
+      "p": 0.2793
+    },
+    "P_delta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.03151,
+      "t": 1.555,
+      "p": 0.1302
+    },
+    "S_delta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.00315,
+      "t": 0.379,
+      "p": 0.7075
+    },
+    "C_theta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.00153,
+      "t": 0.655,
+      "p": 0.5175
+    },
+    "P_theta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.00845,
+      "t": -1.397,
+      "p": 0.1723
+    },
+    "S_theta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.00108,
+      "t": 0.207,
+      "p": 0.8377
+    },
+    "C_alpha": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.00089,
+      "t": 0.348,
+      "p": 0.7301
+    },
+    "P_alpha": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.00716,
+      "t": -0.707,
+      "p": 0.4847
+    },
+    "S_alpha": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.00396,
+      "t": -0.544,
+      "p": 0.5901
+    },
+    "C_beta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.00083,
+      "t": -0.827,
+      "p": 0.4146
+    },
+    "P_beta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": 0.00022,
+      "t": 1.213,
+      "p": 0.2343
+    },
+    "S_beta": {
+      "n_pairs": 32,
+      "mean_duet_minus_const": -0.00064,
+      "t": -0.119,
+      "p": 0.9063
+    }
+  },
+  "phase1": {
+    "theta": {
+      "band": "theta",
+      "n_trials": 1278,
+      "n_pairs": 32,
+      "agency": {
+        "C_only": {
+          "cv_r2": -0.0159,
+          "ci95": [
+            -0.0263,
+            0.0021
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0206,
+          "ci95": [
+            -0.0279,
+            -0.011
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.0233,
+          "ci95": [
+            -0.0295,
+            -0.0135
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.0222,
+          "ci95": [
+            -0.0291,
+            -0.0117
+          ]
+        }
+      },
+      "sync_q": {
+        "C_only": {
+          "cv_r2": -0.0154,
+          "ci95": [
+            -0.0202,
+            -0.0065
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0178,
+          "ci95": [
+            -0.0216,
+            -0.0102
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.0179,
+          "ci95": [
+            -0.0213,
+            -0.0118
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.0179,
+          "ci95": [
+            -0.0211,
+            -0.0105
+          ]
+        }
+      }
+    },
+    "alpha": {
+      "band": "alpha",
+      "n_trials": 1278,
+      "n_pairs": 32,
+      "agency": {
+        "C_only": {
+          "cv_r2": -0.0127,
+          "ci95": [
+            -0.026,
+            0.0039
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0187,
+          "ci95": [
+            -0.027,
+            -0.0071
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.0197,
+          "ci95": [
+            -0.0273,
+            -0.0075
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.019,
+          "ci95": [
+            -0.0276,
+            -0.0087
+          ]
+        }
+      },
+      "sync_q": {
+        "C_only": {
+          "cv_r2": -0.0129,
+          "ci95": [
+            -0.0182,
+            -0.0029
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0156,
+          "ci95": [
+            -0.0202,
+            -0.0061
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.016,
+          "ci95": [
+            -0.0212,
+            -0.0033
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.0157,
+          "ci95": [
+            -0.0204,
+            -0.0059
+          ]
+        }
+      }
+    },
+    "beta": {
+      "band": "beta",
+      "n_trials": 1278,
+      "n_pairs": 32,
+      "agency": {
+        "C_only": {
+          "cv_r2": -0.025,
+          "ci95": [
+            -0.0302,
+            -0.0126
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0245,
+          "ci95": [
+            -0.0304,
+            -0.0124
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.0216,
+          "ci95": [
+            -0.0291,
+            -0.0069
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.0233,
+          "ci95": [
+            -0.0301,
+            -0.0068
+          ]
+        }
+      },
+      "sync_q": {
+        "C_only": {
+          "cv_r2": -0.0171,
+          "ci95": [
+            -0.0216,
+            -0.0065
+          ]
+        },
+        "L_add": {
+          "cv_r2": -0.0165,
+          "ci95": [
+            -0.0216,
+            -0.0062
+          ]
+        },
+        "L_geo": {
+          "cv_r2": -0.0136,
+          "ci95": [
+            -0.0197,
+            0.0005
+          ]
+        },
+        "L_hybrid": {
+          "cv_r2": -0.0151,
+          "ci95": [
+            -0.021,
+            -0.0006
+          ]
+        }
+      }
+    }
+  },
+  "phase2": {
+    "alpha": {
+      "band": "alpha",
+      "target": "agency",
+      "n": 1278,
+      "aic_linear": -26.86,
+      "constants": {
+        "sqrt2_minus_1": {
+          "tau": 0.4142,
+          "home": "tan(pi/8) Emerick/LCC onset",
+          "testable": true,
+          "aic_break": -25.5,
+          "delta_aic_vs_linear": -1.36,
+          "break_helps": false
+        },
+        "inv_sqrt2_phi": {
+          "tau": 0.437,
+          "home": "1/(sqrt2*phi) NEW candidate; HAN-1 resonance",
+          "testable": true,
+          "aic_break": -25.46,
+          "delta_aic_vs_linear": -1.4,
+          "break_helps": false
+        },
+        "0.6": {
+          "tau": 0.6,
+          "home": "operational-only (declined as fundamental, B157)",
+          "testable": true,
+          "aic_break": -24.9,
+          "delta_aic_vs_linear": -1.96,
+          "break_helps": false
+        },
+        "inv_sqrt2": {
+          "tau": 0.7071,
+          "home": "0.707 collides w/ baseline (declined, B157)",
+          "testable": true,
+          "aic_break": -25.15,
+          "delta_aic_vs_linear": -1.7,
+          "break_helps": false
+        },
+        "0.75": {
+          "tau": 0.75,
+          "home": "three-quarters",
+          "testable": true,
+          "aic_break": -25.04,
+          "delta_aic_vs_linear": -1.82,
+          "break_helps": false
+        },
+        "cos2_pi8": {
+          "tau": 0.8536,
+          "home": "0.8536 Tsirelson/Bell home, NOT classical sync",
+          "testable": true,
+          "aic_break": -25.0,
+          "delta_aic_vs_linear": -1.86,
+          "break_helps": false
+        },
+        "radiant_cap": {
+          "tau": 0.9299,
+          "home": "0.9299 UOP Radiant Cap (Born-shaped)",
+          "testable": true,
+          "aic_break": -24.86,
+          "delta_aic_vs_linear": -1.99,
+          "break_helps": false
+        }
+      }
+    },
+    "beta": {
+      "band": "beta",
+      "target": "agency",
+      "n": 1278,
+      "aic_linear": -29.65,
+      "constants": {
+        "sqrt2_minus_1": {
+          "tau": 0.4142,
+          "home": "tan(pi/8) Emerick/LCC onset",
+          "testable": true,
+          "aic_break": -27.9,
+          "delta_aic_vs_linear": -1.75,
+          "break_helps": false
+        },
+        "inv_sqrt2_phi": {
+          "tau": 0.437,
+          "home": "1/(sqrt2*phi) NEW candidate; HAN-1 resonance",
+          "testable": true,
+          "aic_break": -27.76,
+          "delta_aic_vs_linear": -1.88,
+          "break_helps": false
+        },
+        "0.6": {
+          "tau": 0.6,
+          "home": "operational-only (declined as fundamental, B157)",
+          "testable": true,
+          "aic_break": -28.04,
+          "delta_aic_vs_linear": -1.6,
+          "break_helps": false
+        },
+        "inv_sqrt2": {
+          "tau": 0.7071,
+          "home": "0.707 collides w/ baseline (declined, B157)",
+          "testable": true,
+          "aic_break": -29.51,
+          "delta_aic_vs_linear": -0.14,
+          "break_helps": false
+        },
+        "0.75": {
+          "tau": 0.75,
+          "home": "three-quarters",
+          "testable": true,
+          "aic_break": -30.42,
+          "delta_aic_vs_linear": 0.78,
+          "break_helps": true
+        },
+        "cos2_pi8": {
+          "tau": 0.8536,
+          "home": "0.8536 Tsirelson/Bell home, NOT classical sync",
+          "testable": true,
+          "aic_break": -29.94,
+          "delta_aic_vs_linear": 0.3,
+          "break_helps": true
+        },
+        "radiant_cap": {
+          "tau": 0.9299,
+          "home": "0.9299 UOP Radiant Cap (Born-shaped)",
+          "testable": true,
+          "aic_break": -30.9,
+          "delta_aic_vs_linear": 1.25,
+          "break_helps": true
+        }
+      }
+    }
+  },
+  "phase3": {
+    "alpha": {
+      "band": "alpha",
+      "target": "agency",
+      "n": 1278,
+      "aic_linear": -26.86,
+      "aic_saturating": -25.25,
+      "sat_k": 5.692,
+      "aic_quadratic": -25.29,
+      "quad_argmax": 0.4805,
+      "argmax_interior": true,
+      "best_model": "linear"
+    },
+    "beta": {
+      "band": "beta",
+      "target": "agency",
+      "n": 1278,
+      "aic_linear": -29.65,
+      "aic_saturating": -27.89,
+      "sat_k": 8.0,
+      "aic_quadratic": -27.76,
+      "quad_argmax": 0.9387,
+      "argmax_interior": true,
+      "best_model": "linear"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "TaskName": "jointaction",
+  "SamplingFrequency": 1000,
+  "EEGReference": "left mastoid",
+  "PowerLineFrequency": 60,
+  "SoftwareFilters": "n/a",
+  "EEGGround": "Ground",
+  "EEGPlacementScheme": "10-20",
+  "CapManufacturer": "BrainProducts",
+  "Manufacturer": "BrainProducts",
+  "RecordingType": "continuous"
+}

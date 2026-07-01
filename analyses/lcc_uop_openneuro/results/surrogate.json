@@ -1,0 +1,52 @@
+{
+  "n_trials": 1278,
+  "n_pairs": 32,
+  "measure": "C = inter-brain PLV (phase-coupling)",
+  "n_surrogate_draws": 10,
+  "bands": {
+    "delta": {
+      "real_C_mean": 0.3118,
+      "surr_C_mean": 0.3208,
+      "real_minus_surr": -0.0091,
+      "surr_mean_ci95": [
+        0.3181,
+        0.3235
+      ],
+      "real_exceeds_surr": false,
+      "p_one_sided_real_gt_surr": 1.0
+    },
+    "theta": {
+      "real_C_mean": 0.0929,
+      "surr_C_mean": 0.0959,
+      "real_minus_surr": -0.003,
+      "surr_mean_ci95": [
+        0.0951,
+        0.0968
+      ],
+      "real_exceeds_surr": false,
+      "p_one_sided_real_gt_surr": 1.0
+    },
+    "alpha": {
+      "real_C_mean": 0.0903,
+      "surr_C_mean": 0.0937,
+      "real_minus_surr": -0.0034,
+      "surr_mean_ci95": [
+        0.0928,
+        0.0946
+      ],
+      "real_exceeds_surr": false,
+      "p_one_sided_real_gt_surr": 1.0
+    },
+    "beta": {
+      "real_C_mean": 0.0436,
+      "surr_C_mean": 0.0463,
+      "real_minus_surr": -0.0028,
+      "surr_mean_ci95": [
+        0.0459,
+        0.0468
+      ],
+      "real_exceeds_surr": false,
+      "p_one_sided_real_gt_surr": 1.0
+    }
+  }
+}

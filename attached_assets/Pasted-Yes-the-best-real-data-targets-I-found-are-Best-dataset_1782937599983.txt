@@ -1,0 +1,45 @@
+Yes — the best real-data targets I found are:
+
+Best datasets / empirical domains
+
+1. OpenNeuro joint-agency EEG hyperscanning dataset
+    Best for testing LCC directly: two-person neural synchrony, joint action, shared agency, and nonseparable coordination. This is the strongest candidate for 0.6, 0.707, 0.75, and 0.8536.  
+2. Interpersonal physiological synchrony / group cohesion data
+    Heart-rate/interbeat-interval synchrony predicts group cohesion, so this is excellent for testing whether LCC thresholds correspond to real social coupling.  
+3. Heart-rate synchrony and group decision correctness
+    This is especially useful because it links synchrony to correct consensus, which connects LCC to GILE Truth.  
+4. Mood disorder sleep-wake wearable data
+    Best for testing within-person LCC: sleep/circadian rhythms coupling to mood episodes. Useful for 0.414, C=1/(\sqrt2\varphi), 0.6.  
+5. Depresjon motor-activity dataset
+    Public dataset with motor activity recordings from depressed/bipolar and healthy controls. Good first lightweight real-data test.  
+6. MultiAgentBench / multi-agent LLM benchmark
+    Best for testing UOP/Radiant Cap: whether multi-agent coherence improves reasoning up to an interior optimum rather than 1.0.  
+
+How to test each constant
+
+Constant	Value	Best real-data test
+\sqrt2-1	0.414	first above-noise cross-prediction
+1/(\sqrt2\varphi)	0.437	first stable balanced cross-channel prediction
+0.6	0.600	stable bidirectional synchrony
+\sqrt2/2	0.707	majority shared structure
+0.75	0.750	best separable/additive model ceiling
+\cos^2(\pi/8)	0.8536	whole-system model beats separable models
+\sqrt{1-e^{-2}}	0.9299	truth/reasoning performance peaks before unity
+
+Best immediate next step
+
+Start with the OpenNeuro joint-agency EEG hyperscanning dataset and compute:
+
+C,P,S,T,M,G
+
+Then compare:
+
+L_{add},\quad L_{geo},\quad L_{hybrid}
+
+against outcomes like joint-agency rating, task success, or neural synchrony stability.
+
+The strongest falsifiable prediction is:
+
+L_{hybrid}
+
+should outperform raw correlation in predicting real joint success.
