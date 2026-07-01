@@ -54,7 +54,7 @@ HEM_CORE_DIMS = ["D1", "D2", "D3", "D4"]
 HEM_SHELL_DIMS = ["D5_presence", "D6_coupling"]  # the "cross-connections" that
 #   make an i-Cell actually exist (B58: an i-Cell is not complete without them).
 
-# The existing 8-D TI Sigma Crystal carries exactly these 8 GILE-HEM dims:
+# The existing 8-D TI Sigma Crystal carries exactly these 8 HEM-GILE dims:
 CRYSTAL8_DIMS = ["G", "I", "L", "E", "HEM-D1", "HEM-D2", "HEM-D5-Presence",
                  "HEM-D6-Coupling"]
 
@@ -129,7 +129,7 @@ class ICell:
         return np.concatenate([gile, hem])
 
     def project_to_crystal8(self) -> np.ndarray:
-        """The 8 GILE-HEM dims the existing TI Sigma Crystal already carries."""
+        """The 8 HEM-GILE dims the existing TI Sigma Crystal already carries."""
         gile = self._gile_trueness()
         return np.array([gile[0], gile[1], gile[2], gile[3],
                          self.H["D1"], self.H["D2"],

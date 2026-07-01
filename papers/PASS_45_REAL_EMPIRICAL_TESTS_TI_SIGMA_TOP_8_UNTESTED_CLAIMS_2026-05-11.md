@@ -262,5 +262,5 @@ Each test has the same skeleton: **Claim → H1 → H0 → Protocol → Kill →
 
 ## §12 — Open questions deferred to Pass-46+
 
-- The corpus has additional major claims (URB-828 GILE-HEM full coupling; Mycelial network at scale; UOP universality; Tralse-Joules absolute scale) that are not in this 8 because they fail the ≤$50/≤90-day cost-discipline filter. They are not exempt — they are deferred. Pass-46 should propose larger-budget tests for these (NIH SBIR / Startup Warrior / collaborator paths per §7.7.26 funding audit).
+- The corpus has additional major claims (URB-828 HEM-GILE full coupling; Mycelial network at scale; UOP universality; Tralse-Joules absolute scale) that are not in this 8 because they fail the ≤$50/≤90-day cost-discipline filter. They are not exempt — they are deferred. Pass-46 should propose larger-budget tests for these (NIH SBIR / Startup Warrior / collaborator paths per §7.7.26 funding audit).
 - The 14 existing carry-overs (p38-A through p43-D) remain open and unaffected by Pass-45. Brandon to triage which 8 of 22 total open items (8 new + 14 carry-over) are highest priority for the next sprint.

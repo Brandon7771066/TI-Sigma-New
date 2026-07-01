@@ -20,7 +20,7 @@ empirical testing of Brandon's Pass-67 batch-7 + Pass-68 batch-1 predictions:
        an agent at (G > 0.93, H) is suboptimal in J but still has
        higher G than an agent at (0.93, H + Delta). The "non-shifter"
        is NOT erring (G is strictly higher); they are merely
-       suboptimal in the J = GILE-HEM true-tralseness sense.
+       suboptimal in the J = HEM-GILE true-tralseness sense.
        MT-B1 Moot status applies.
 
 Functional choices:

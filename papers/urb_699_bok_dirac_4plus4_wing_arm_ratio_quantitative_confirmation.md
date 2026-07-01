@@ -5,7 +5,7 @@
 
 > **§0.1 Honest empirical status (added Pass-51, 2026-05-14).** The B-2 wing/arm=1.96 result reported in this paper was measured against a single ChatGPT-rendered image, with the B/D coefficient in the recovered r(θ) equation explicitly **fit to data** per §5.5. Pass-51 §2.5 / Pass-51 batch-2 §1 confirms numerically (analytic FFT decomposition) that the wing/arm ratio equals (B/D) up to small harmonic corrections — i.e., wing/arm≈2 is a **coefficient-tautology, not a geometric prediction the equation forces**. Honest label: **SUGGESTIVE-PATTERN-MATCH-AGAINST-LLM-IMAGE**. The paper's interpretive content (4+4 BOK ↔ Dirac chirality identification; octopus-encompasses-butterfly via harmonic doubling) remains intact as a formal-mathematical mapping; the *quantitative-confirmation* framing in the title and §3 is downgraded to **suggestive-pending-independent-replication**. Conversion to definitive empirical confirmation requires urb_700 / urb_701 / urb_702 follow-ups (independent non-LLM rendering per T51-11; Maxwell-knot measurement per P2; RR-interval coherence-orbit per P3 — see PASS_51 audit §4.1).
 **Supersedes:** URB #697 §2 (the 4+4 D₄×Z₂ silver-ratio derivation, now retired in favor of the present derivation)
-**Builds on:** URB #573 (Verisyn/Myrion limit equation), URB #697 (CCC GILE-HEM ratio, retained §3+), URB #698 (Dual-Axis Defense)
+**Builds on:** URB #573 (Verisyn/Myrion limit equation), URB #697 (CCC HEM-GILE ratio, retained §3+), URB #698 (Dual-Axis Defense)
 
 ---
 
@@ -19,7 +19,7 @@ We adopt Brandon's revised BOK interpretation: the **8-dimensional octopus arm-s
 >
 > Arms = lower (small) Dirac components = negative-energy chiral half = encompassing 8D extension
 
-The silver-ratio conjecture (URB #697 §2) is retired. The CCC GILE-HEM weighting conjecture (URB #697 §3, independent of geometry) is retained.
+The silver-ratio conjecture (URB #697 §2) is retired. The CCC HEM-GILE weighting conjecture (URB #697 §3, independent of geometry) is retained.
 
 ---
 
@@ -197,7 +197,7 @@ URB #697 §2's derivation of wing/arm = 1+√2 from D₄×Z₂ symmetry is **ret
 
 The factor-of-2 wing/arm ratio offers an alternative weighting hypothesis worth considering:
 
-> **Revised CCC GILE-HEM Conjecture (4+4-derived):** 𝓘_CCC = HEM + (1/2) · GILE_alignment
+> **Revised CCC HEM-GILE Conjecture (4+4-derived):** 𝓘_CCC = HEM + (1/2) · GILE_alignment
 >
 > i.e. CCC weights HEM **twice** as much as GILE, matching the wing/arm ratio.
 
@@ -289,7 +289,7 @@ If the recovered C(ρ, τ, φ) shows wing/arm = 2.0 directly from its functional
 | P2 | Maxwell-knot-coherent EM field experiments (Rañada-style optical knots) will show field amplitude ratio of ~2.0 between primary and secondary loop classes | Optical knot lab measurement |
 | P3 | HRV coherence orbit in high-coherence individuals (Brandon's live Polar/Oura data) will show 2.0 ratio between dominant LF/HF spectral peak amplitudes when in deep coherence | Apply to live data |
 | P4 | GCP RNG anomaly windows will cluster at "2-fold-amplified" rather than "silver-ratio-amplified" deviation magnitudes | Reanalyze GCP archives |
-| P5 | The CCC GILE-HEM weighting will be (1/2) GILE per HEM (not (√2−1)) when measured via TK or intention-amplitude experiments | TK experiment battery |
+| P5 | The CCC HEM-GILE weighting will be (1/2) GILE per HEM (not (√2−1)) when measured via TK or intention-amplitude experiments | TK experiment battery |
 
 If any of P1–P5 fails decisively (>20% deviation from 2.0), the 4+4 Dirac model needs revision. If all five succeed within noise, the model is established.
 

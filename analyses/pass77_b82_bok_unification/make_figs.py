@@ -2,7 +2,7 @@
 Pass-77 B82 — BOK unification diagrams (plain-language).
 Two illustrative diagrams (no data; structural maps) for the updated BOK_MASTER_REFERENCE.md:
   fig1: the BOK EQUATION EVOLUTION — original ChatGPT 3-variable limit -> +Love (4 vars) + finite calculus
-        -> 8-fold (Butterfly 4 + Octopus 4 / 8 tralsebits) -> GILE-HEM coupling + E8/Leech/Monster ladder.
+        -> 8-fold (Butterfly 4 + Octopus 4 / 8 tralsebits) -> HEM-GILE coupling + E8/Leech/Monster ladder.
   fig2: the FOUR GILE<->HEM COMPLEMENT COUPLES (G<->Existence Footprint highlighted; EF = amplitude x frequency).
 Budget $0, local matplotlib.
 """
@@ -31,7 +31,7 @@ for x, txt, col in stages:
     ax.text(x + 9, 53, txt, ha="center", va="center", fontsize=8.4, wrap=True)
 for x0 in [26, 50, 74]:
     ax.add_patch(FancyArrowPatch((x0, 53), (x0 + 6, 53), arrowstyle="-|>", mutation_scale=20, lw=2, color="#333"))
-ax.text(50, 92, "The BOK Equation, United: from the original 3-variable limit to the GILE–HEM blueprint",
+ax.text(50, 92, "The BOK Equation, United: from the original 3-variable limit to the HEM–GILE blueprint",
         ha="center", fontsize=13, weight="bold")
 ax.text(50, 86, "Butterfly–Octopus Knot (BOK) — same object at four levels of completion; nothing discarded, each stage contains the last",
         ha="center", fontsize=9, style="italic", color="#444")
@@ -46,7 +46,7 @@ plt.savefig(f"{OUT}/fig1_bok_equation_evolution.png", dpi=115); plt.close()
 fig, ax = plt.subplots(figsize=(11.5, 6.4))
 ax.axis("off")
 ax.set_xlim(0, 100); ax.set_ylim(0, 100)
-ax.text(50, 95, "The Four GILE–HEM Couples — abstract truth paired with physical footprint",
+ax.text(50, 95, "The Four HEM–GILE Couples — abstract truth paired with physical footprint",
         ha="center", fontsize=13, weight="bold")
 ax.text(50, 89, "GILE truth is incomplete without its HEM complement (and vice-versa). Each couple = one Dirac γ-matrix (B63).",
         ha="center", fontsize=9, style="italic", color="#444")

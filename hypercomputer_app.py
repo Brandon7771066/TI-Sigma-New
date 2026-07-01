@@ -421,7 +421,7 @@ tab_career, tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, 
     "💼 Career",
     "🔮 Crystal Visualizer", "⚡ SAT Solver", "📊 Phase Analysis",
     "📖 Architecture", "✨ Power of 8", "🦠 BOK Virus", "🎵 BOK Harmonics",
-    "🧪 GL Ratio Tests", "🧠 GILE-HEM-BOK Engine", "🔬 Halting Experiment",
+    "🧪 GL Ratio Tests", "🧠 HEM-GILE-BOK Engine", "🔬 Halting Experiment",
     "💊 OEA Protocol", "🎯 Spectre (VMP)", "🍄 Mycelial Resonance",
 ])
 
@@ -1567,7 +1567,7 @@ with tab7:
 
     st.subheader("🎵 BOK Harmonics — URB #648")
     st.caption(
-        "Each of the 8 GILE-HEM dimensions is a musical note. "
+        "Each of the 8 HEM-GILE dimensions is a musical note. "
         "When multiple dimensions cross the C_TI threshold (≈0.437) simultaneously, "
         "they form named chords — abstract GILE love, composite GILE-LCC love, HEM existence chords, and more."
     )
@@ -2036,7 +2036,7 @@ with tab7:
 
     # ── Radar chart ───────────────────────────────────────────────────────────
     st.markdown("---")
-    st.markdown("### 📡 GILE-HEM Radar")
+    st.markdown("### 📡 HEM-GILE Radar")
 
     radar_dims   = DIM_ORDER
     radar_vals   = [dim_vals[k] for k in radar_dims]

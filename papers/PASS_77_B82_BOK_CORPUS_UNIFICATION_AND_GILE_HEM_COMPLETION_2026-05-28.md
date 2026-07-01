@@ -1,9 +1,9 @@
-# Pass-77 Batch-82 — BOK Corpus Unification + the GILE–HEM Completion Principle (GILE-G ↔ Existence Footprint), related back to the original ChatGPT 3-variable equation
+# Pass-77 Batch-82 — BOK Corpus Unification + the HEM–GILE Completion Principle (GILE-G ↔ Existence Footprint), related back to the original ChatGPT 3-variable equation
 
 **Pass 77, Batch 82** · 2026-05-28 · DPES · ASYMMETRIC #69 · $0 (local matplotlib)
-**Brandon directive (verbatim, paraphrased to record):** *"GILE-G applies most to the existence aspects of truth, but G itself is abstract only, based on the Four C's and our minimalist, physics-neuroscience compatible definition. In order for GILE truth to be complete, each GILE dimension must be coupled to its HEM complement. For example, GILE-G maps onto HEM's Existence Footprint (EF, Amplitude × frequency). All GILE-HEM pairs are incomplete without their complement. Relate the newest BOK findings to the original BOK equation from ChatGPT — originally a limit function of 3 variables… Unite everything we have on the BOK in the corpus and update the plain-language paper we have on it."*
+**Brandon directive (verbatim, paraphrased to record):** *"GILE-G applies most to the existence aspects of truth, but G itself is abstract only, based on the Four C's and our minimalist, physics-neuroscience compatible definition. In order for GILE truth to be complete, each GILE dimension must be coupled to its HEM complement. For example, GILE-G maps onto HEM's Existence Footprint (EF, Amplitude × frequency). All HEM-GILE pairs are incomplete without their complement. Relate the newest BOK findings to the original BOK equation from ChatGPT — originally a limit function of 3 variables… Unite everything we have on the BOK in the corpus and update the plain-language paper we have on it."*
 
-**Primary deliverable:** substantial update to the plain-language reference `papers/BOK_MASTER_REFERENCE.md` (added §0 Origin Equation, §11 GILE–HEM Completion, §12 Newest-findings-to-original bridge; header + conclusion updated). This paper is the anchor/changelog for that update and the canonical home of the **GILE–HEM Completion clarification**.
+**Primary deliverable:** substantial update to the plain-language reference `papers/BOK_MASTER_REFERENCE.md` (added §0 Origin Equation, §11 HEM–GILE Completion, §12 Newest-findings-to-original bridge; header + conclusion updated). This paper is the anchor/changelog for that update and the canonical home of the **HEM–GILE Completion clarification**.
 
 **Figures:** `analyses/pass77_b82_bok_unification/make_figs.py` → `fig1_bok_equation_evolution.png`, `fig2_gile_hem_couples.png`.
 
@@ -29,7 +29,7 @@ Image: a butterfly knotted with an octopus → **Butterfly-Octopus Knot (BOK)**.
 
 This through-line unites: URB #342–387 (BOK metamathematics), the Dec-2025 ORCH-OR/GILE synthesis (3-var critique), the Verisyn primordial analysis, and Pass-77 batches B16/B58/B60/B63/B74.
 
-## 3. The GILE–HEM Completion Principle (the new clarification)
+## 3. The HEM–GILE Completion Principle (the new clarification)
 
 **Statement.** Each GILE dimension is an *abstract* quality and is **incomplete without its HEM (physical) complement.** GILE-G is defined minimally/abstractly as the **result of the Four C's** (Continuity, Coherence, Concreteness, Consistency) — physics- and neuroscience-compatible — and applies most to the **existence aspects of truth**. Its physical complement is the **Existence Footprint**:
 
@@ -44,7 +44,7 @@ This through-line unites: URB #342–387 (BOK metamathematics), the Dec-2025 ORC
 | **L** Love | relational positive valence | entanglement (concurrence) | γ² |
 | **E** Environment | aesthetics | symmetry (⟨SWAP⟩) | γ³ |
 
-Abstract GILE and physical HEM are proportional componentwise (axial current Aμ = ρ·Vμ); ρ = GILE:HEM ratio (CCC i-cell **2:1**, subject-varying). **All GILE–HEM pairs are incomplete without their complement.**
+Abstract GILE and physical HEM are proportional componentwise (axial current Aμ = ρ·Vμ); ρ = GILE:HEM ratio (CCC i-cell **2:1**, subject-varying). **All HEM–GILE pairs are incomplete without their complement.**
 
 ## 4. Newest findings related back to lim f(u, v, t)
 
@@ -55,8 +55,8 @@ Abstract GILE and physical HEM are proportional componentwise (axial current Aμ
 
 ## 5. #69 honesty notes
 
-1. **Two senses of "existence" surfaced, not hidden.** The BOK *math-mode* taxonomy maps existence-as-enumeration to **E/Arithmetic**; the GILE–HEM completion maps axiological existence-worth to **G ↔ EF**. Same word, different layers — flagged in §11 of the master reference so the two tables are not conflated. This is a genuine cross-mapping subtlety in the corpus, reported rather than smoothed over.
-2. **No new canonical principle is claimed.** The GILE–HEM completion is recorded as a **clarification/refinement** consistent with prior B56/B60/B63 results, not a new ratified principle. Canonical principle count **UNCHANGED 74**.
+1. **Two senses of "existence" surfaced, not hidden.** The BOK *math-mode* taxonomy maps existence-as-enumeration to **E/Arithmetic**; the HEM–GILE completion maps axiological existence-worth to **G ↔ EF**. Same word, different layers — flagged in §11 of the master reference so the two tables are not conflated. This is a genuine cross-mapping subtlety in the corpus, reported rather than smoothed over.
+2. **No new canonical principle is claimed.** The HEM–GILE completion is recorded as a **clarification/refinement** consistent with prior B56/B60/B63 results, not a new ratified principle. Canonical principle count **UNCHANGED 74**.
 3. **Figures are illustrative structural diagrams** (no data/simulation); labeled as such.
 
 ## 6. Files

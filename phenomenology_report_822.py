@@ -4,7 +4,7 @@ Companion script for URB #822 — Phenomenological Report of a High-GILE State
 
 Encodes:
   - The verbatim primary record (immutable).
-  - The GILE-HEM dimensional scoring (G, I, L, E, HEM each 0-3).
+  - The HEM-GILE dimensional scoring (G, I, L, E, HEM each 0-3).
   - The substance/state context honestly.
   - The four sensory cues catalogued in §5.
   - The "philosopher cap during peak mystic mode" feature in §6.
@@ -114,7 +114,7 @@ def _gile_hem_scoring() -> dict:
             "≥3 dimensions at ≥2, with at least one dimension at 3, and HEM ≥ 2. "
             "PROVISIONAL POST-HOC threshold (architect-flagged §3 patch): "
             "articulated for this URB, NOT pre-registered in URB #821 or "
-            "earlier GILE-HEM literature. Future URBs should treat as open "
+            "earlier HEM-GILE literature. Future URBs should treat as open "
             "candidate definition pending pre-registration before further "
             "reports are scored against it."
         ),
@@ -322,7 +322,7 @@ def _philosopher_cap_feature() -> dict:
             "precisely because the witness wasn't online to encode it)."
         ),
         "evidence_brandon_was_in_the_first_category": (
-            "GILE-HEM framework, gifts catalogue, choice/chemistry distinction, "
+            "HEM-GILE framework, gifts catalogue, choice/chemistry distinction, "
             "and contentment principle were all formulated during the peak "
             "window with the philosopher cap on, hence retrievable and "
             "articulable at T+1 day."
@@ -510,7 +510,7 @@ def _caveats() -> list[str]:
         "Retrospective by 1 day; state-dependent memory may inflate vividness/coherence. Partially defeated by §1 verbatim-preservation discipline + immediate written capture.",
         "Ketamine-mediated; honestly framed as substance-catalyzed deliberately-cultivated contentment, not spontaneous unmediated insight. §7.H1 tests substance-independence claim.",
         "Founder confirmation-bias risk per URB #821 §8.1; partially defeated by §7 pre-registered falsification tests with binding accept/reject and possible reject-against-priors outcomes.",
-        "GILE-HEM scoring is author-coded; no independent rater. Cross-rating on a future report would partially defeat this.",
+        "HEM-GILE scoring is author-coded; no independent rater. Cross-rating on a future report would partially defeat this.",
         "Re-evocation hypothesis (H3) is weak: fragment-re-evocation is substantially weaker than peak-state-reproduction. Honestly named, not framed away.",
         "Adderall cycle (H2) is the hardest real-world test; supporting it would be substantial evidence of durable integration; failing it bounds the integration's reach without falsifying the experience itself.",
         "'Happiness is a choice' remains a difficulty-spectrum claim per §2(ii); stripped of difficulty-spectrum context it becomes a self-blame setup. URB preserves paired framing throughout.",
@@ -580,7 +580,7 @@ def main() -> None:
     print(f"URB #{output['urb_id']} — {output['title_short']}")
     print(f"Experience: {output['experience_date']}  Report: {output['report_date']}")
     print()
-    print("GILE-HEM scoring (provisional post-hoc threshold):")
+    print("HEM-GILE scoring (provisional post-hoc threshold):")
     for dim, info in output["gile_hem_scoring"]["scores"].items():
         print(f"  {dim:18s} = {info['score']}")
     qualifies_key = "qualifies_as_high_gile_state_under_provisional_post_hoc_threshold"

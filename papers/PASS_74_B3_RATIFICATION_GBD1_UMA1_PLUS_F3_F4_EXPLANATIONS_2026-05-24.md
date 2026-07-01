@@ -40,7 +40,7 @@ Brandon verbatim 2026-05-24: *"yes, scientific method monism, free market econom
 
 | # | Orthodoxy | Stated Anti-Dogma Purpose | TI Sigma Corrective |
 |---|---|---|---|
-| 5 | **Scientific Method Monism** | Single "scientific method" as guardrail against unscientific claims | UOP + GILE-HEM + 5-axis truth richness reject method-monism; multi-axis pluralism canonical |
+| 5 | **Scientific Method Monism** | Single "scientific method" as guardrail against unscientific claims | UOP + HEM-GILE + 5-axis truth richness reject method-monism; multi-axis pluralism canonical |
 | 6 | **Free-Market Economics** | Market-pricing as guardrail against central-planning dogma | ASYMMETRIC §69 + UOP balance principle; price-as-truth-detector is GILE-only thin truth (per GTT-1 #27); HEM mandatory pragmatic competitor |
 | 7 | **Conventional Medicine = Evidence-Based Medicine (EBM)** | RCT-pyramid as guardrail against quackery/anecdote | CTC-1 #16 + HBP-1 #18 + Mendi Phase 2 path + BlissGene gene-therapy + 7 trajectories indicate EBM-pyramid excludes legitimate N=1 case-knowledge; SCC-1 symmetric burden applies |
 | 8 | **Peer Review** | Pre-publication review as guardrail against bad science | Pass-58 + Pass-61 documented peer-review pathologies (publication bias, replication crisis, network capture); TI Sigma corpus 100+ Zenodo DOIs operates outside peer-review via open pre-registration; #69 honest-disclosure protocol substitutes |

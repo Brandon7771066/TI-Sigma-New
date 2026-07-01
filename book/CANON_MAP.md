@@ -92,7 +92,7 @@ For each chapter: the **goal**, the **newest canon to feature**, **keywords to `
 - Points: what is built vs conceptual; reachability results are necessary-conditions only, not efficacy.
 
 ### Ch 18 — Scientific Achievements and Implications → `book/ch18_scientific_achievements.md`
-- Canon: empirical backbone (URB#668/669), per-subject EEG, GHZ/Mermin quantum-HW work, invention-concentration (B92/B115), GILE-HEM operationalization results.
+- Canon: empirical backbone (URB#668/669), per-subject EEG, GHZ/Mermin quantum-HW work, invention-concentration (B92/B115), HEM-GILE operationalization results.
 - rg: `URB.*668`, `URB.*669`, "Empirical Backbone", "per-subject EEG", "invention", "Mermin", "GHZ".
 - Points: status-flag everything; separate genuine results from framework-internal sims; #69.
 
@@ -137,6 +137,6 @@ For each chapter: the **goal**, the **newest canon to feature**, **keywords to `
 - Points: list the strongest real objections and answer each plainly; concede what is unproven.
 
 ### Ch 27 — Enlightenment as THE Objective For All → `book/ch27_enlightenment.md`
-- Canon: SUP-1 (Supreme = willful GILE-HEM optimization); enlightenment as operational flourishing/sanity; GCU-1 + LAS-1 (love as path); DSR-1 (treat as comparative/speculative); telos for all.
+- Canon: SUP-1 (Supreme = willful HEM-GILE optimization); enlightenment as operational flourishing/sanity; GCU-1 + LAS-1 (love as path); DSR-1 (treat as comparative/speculative); telos for all.
 - rg: `SUP_1`, `GCU_1`, `LAS_1`, `DSR_1`, "enlightenment", "Supreme".
 - Points: secular definition of enlightenment; why it's universal and reachable-in-principle; honest about the speculative theological cousins. Strong closing chapter.

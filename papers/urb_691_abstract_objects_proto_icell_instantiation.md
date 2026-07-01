@@ -76,7 +76,7 @@ After MR-Zero (URB #686), I emerged and G was born. The G-I mutual constitution 
 
 Physical reality is **Phase B instantiation writ large** — the universe continuously instantiating abstract mathematical structure into minimal HEM substance through proto i-cell (particle) activity.
 
-This makes physics and mathematics not two separate domains but **two layers of the same GILE-HEM structure:** mathematics is the GILE layer (high GILE-G, near-zero HEM); physics is the HEM layer (the same structure with HEM substance added through instantiation).
+This makes physics and mathematics not two separate domains but **two layers of the same HEM-GILE structure:** mathematics is the GILE layer (high GILE-G, near-zero HEM); physics is the HEM layer (the same structure with HEM substance added through instantiation).
 
 ---
 

@@ -36,7 +36,7 @@ modulus to its phase, not ad hoc). **8 = 4 moduli (HEM) + 4 phases (GILE).**
 ## The honest spine — STRUCTURAL vs OVERLAY (the #69 rail)
 - STRUCTURAL/earned-analogy: label geometry, 8=4+4 DOF (Dirac), the qubit/Bloch/
   contextuality slots, the polar cross-linkage.
-- OVERLAY (mnemonic, ZERO evidential weight): the 8 GILE-HEM ↔ 8-constant
+- OVERLAY (mnemonic, ZERO evidential weight): the 8 HEM-GILE ↔ 8-constant
   assignment {0,1,i,√2,e,φ,π,C}. Recorded result: natural map corr **0.075**,
   permutation **p=1.0** (B135/B138); 4 points can't reach p<0.05 (floor ≈0.08).
 - **ANTI-NUMEROLOGY GUARD (the decisive move — reuse this pattern):** the demo

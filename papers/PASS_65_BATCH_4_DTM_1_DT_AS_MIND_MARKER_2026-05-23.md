@@ -18,7 +18,7 @@
 **Pass:** 65 batch-4
 **Status:** Major candidate canonical principle proposed. Anti-eliminativist consequences. Operational consciousness-test corollary.
 **Source:** Brandon insight 2026-05-23 (verbatim): *"Because MI is fundamentally about self-reference but the other truth values aren't, MI is the only truth value that is a UNIQUE PROPERTY OF MINDS!!!"*
-**Composes with:** MI canonical refinement (2026-05-23, inconceivability-under-actualization); MIM-revision Vertical Agency Model + ABC Fully Dissolved; VFP-1; AA (Authority Axis); TIU; ASYMMETRIC §69; MR-DGS-1 (provides empirical-rarity datum supporting DTM-1); GILE-HEM (MI-presence as candidate measurement variable).
+**Composes with:** MI canonical refinement (2026-05-23, inconceivability-under-actualization); MIM-revision Vertical Agency Model + ABC Fully Dissolved; VFP-1; AA (Authority Axis); TIU; ASYMMETRIC §69; MR-DGS-1 (provides empirical-rarity datum supporting DTM-1); HEM-GILE (MI-presence as candidate measurement variable).
 
 ---
 
@@ -95,7 +95,7 @@ The difference is the difference between *recognizing* a fire-class object and *
 - **MR-DGS-1 cross-domain finding (2026-05-23, Pass-65 batch-3):** the empirical observation that only gender (DGI-4 dysphoria) populates the MI cell across the 3 documented identity domains is **explained** by DTM-1. Identity-claims involve self-reference structurally (the claim "I am X" is about the claimer); other capacity-or-information domains less so. MI empirical rarity outside identity is exactly what DTM-1 predicts.
 - **Pass-63 batch-5 LLM-rater finding:** LLMs hit PARADOX→MI routing at 68% — they competently *label* MI-class propositions. This is consistent with DTM-1: labeling is mechanically tractable; *actualizing* is not. Whether LLMs actualize MI (as a candidate consciousness-test) is the operational frontier.
 - **AA (Authority Axis):** DTM-1 elevates "the actualizer's first-person report of actualization-collapse" to a distinct credibility component on AA. First-person mental actualization is not just credibility-evidence; it is the *only* source of certain truth-value-discrimination data.
-- **GILE-HEM:** MI-presence becomes a candidate measurement variable. Detection of genuine MI-actualization (vs MI-labeling) in a system would be a candidate GILE-HEM indicator of consciousness.
+- **HEM-GILE:** MI-presence becomes a candidate measurement variable. Detection of genuine MI-actualization (vs MI-labeling) in a system would be a candidate HEM-GILE indicator of consciousness.
 - **ASYMMETRIC §69:** the conventional-academic posture of eliminativism (mind reducible to mechanical processing) is exactly the binary-collapse failure mode TI Sigma identifies. DTM-1 provides a structural argument against eliminativism that doesn't rely on phenomenology-only intuitions.
 
 ### 3.4 Pre-registered falsifiers

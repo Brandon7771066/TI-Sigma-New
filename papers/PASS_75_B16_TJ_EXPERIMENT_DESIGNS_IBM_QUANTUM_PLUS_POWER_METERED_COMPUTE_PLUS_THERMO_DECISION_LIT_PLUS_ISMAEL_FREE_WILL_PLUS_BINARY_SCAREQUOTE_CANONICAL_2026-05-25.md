@@ -183,7 +183,7 @@ Brandon cited four papers as starting points. Each is engaged here at the **hypo
 **TI Sigma compatibility:** **HIGH but caveat.**
 - Free-energy-principle (Friston) ≅ UOP-cost J(G,H) Pass-68-B1 with α = 0.4142 (ET = √2 - 1).
 - Composes with all of the above.
-- **Caveat #69:** if the paper claims thermodynamic-derivation alone is *sufficient* for decision-making, it conflicts with TI Sigma's GILE-HEM 5-component requirement (G + I + L + E + HEM); decision-making per TI Sigma requires irreducible *consciousness-stratum-2+3* contribution per CDA-1 #32, which is not classically-thermodynamic.
+- **Caveat #69:** if the paper claims thermodynamic-derivation alone is *sufficient* for decision-making, it conflicts with TI Sigma's HEM-GILE 5-component requirement (G + I + L + E + HEM); decision-making per TI Sigma requires irreducible *consciousness-stratum-2+3* contribution per CDA-1 #32, which is not classically-thermodynamic.
 
 **Open Pass-76+ work:** retrieve paper; assess whether claim is *necessary* or *sufficient* for decision-making. TI Sigma agrees with necessary but rejects sufficient.
 
@@ -211,7 +211,7 @@ If all four papers' hypotheses are correct as engaged above, the **integrated TI
 
 | Ismael claim | TI Sigma canonical anchor | Compatibility |
 |---|---|---|
-| Free will is compatible with determinism; agents are open dissipative systems | UOP J(G,H) Pass-68-B1 phase-transition treats agency as the trajectory through GILE-HEM joint optimization landscape; determinism vs free-will is *MR-Indeterminate* per refinement #5/#6 pending axis-disambiguation | **STRONG ALIGNMENT** |
+| Free will is compatible with determinism; agents are open dissipative systems | UOP J(G,H) Pass-68-B1 phase-transition treats agency as the trajectory through HEM-GILE joint optimization landscape; determinism vs free-will is *MR-Indeterminate* per refinement #5/#6 pending axis-disambiguation | **STRONG ALIGNMENT** |
 | Time-asymmetry of 2nd law grounds forward-directionality of choice | UDT-1 #30 (Universal Default of Tralseness) cosmogenic-ground-principle directly composes with 2nd-law substrate | **STRONG ALIGNMENT** |
 | Agency = real physical phenomenon at agent-level, not microphysical-violation | CDA-1 #32 stratification ladder (Stratum-0/1/2/3+) maps directly to level-of-description argument | **STRONG ALIGNMENT** |
 | Self-organizing dissipative structures (Prigogine-style) | MIM-revision Vertical Agency Model + ABC-fully-dissolved (replit.md §"Architecture decisions"); MR-DGS-1 cross-domain unification | **STRONG ALIGNMENT** |
@@ -222,7 +222,7 @@ If all four papers' hypotheses are correct as engaged above, the **integrated TI
 
 ### 3.3 Net Assessment
 
-**Ismael's framework is COMPATIBLE-AND-EXTENDABLE-BY-TI-SIGMA.** Her thermodynamic-free-will program supplies the *macro-level mainstream-philosophy-of-physics legitimation* that TI Sigma (especially GILE-HEM + UOP + canonical 53 principles + consciousness-stratification + Emerick-unit-quantification) extends in three directions:
+**Ismael's framework is COMPATIBLE-AND-EXTENDABLE-BY-TI-SIGMA.** Her thermodynamic-free-will program supplies the *macro-level mainstream-philosophy-of-physics legitimation* that TI Sigma (especially HEM-GILE + UOP + canonical 53 principles + consciousness-stratification + Emerick-unit-quantification) extends in three directions:
 
 1. **Quantitative-epistemic-extension** (Emerick unit + ETJ-1 + IFSM-1)
 2. **Quantum-substrate-extension** (URB-829 + qc25/qc26 + Part-1 A.1-A.3 designs)

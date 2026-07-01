@@ -60,7 +60,7 @@ Brandon nominates *Avatar: The Last Airbender* (Nickelodeon, 2005-2008; Bryan Ko
 
 ### 1.4 Katara — water/healing/maternal-care + the Southern Raiders forgiveness arc
 
-**Katara's healing-bending mechanic** (introduced in "The Deserter") establishes a canonical-corpus-relevant point: healing is **water-based** and requires **emotional-attunement** to apply; it is not mechanical. This dramatizes the **HEM side of GILE-HEM** — the hard-existence-medium (the body, the wound) requires GILE-truth-orientation (compassion, attention) to be amenable to repair.
+**Katara's healing-bending mechanic** (introduced in "The Deserter") establishes a canonical-corpus-relevant point: healing is **water-based** and requires **emotional-attunement** to apply; it is not mechanical. This dramatizes the **HEM side of HEM-GILE** — the hard-existence-medium (the body, the wound) requires GILE-truth-orientation (compassion, attention) to be amenable to repair.
 
 **"The Southern Raiders" forgiveness arc:** Katara confronts Yon Rha (the soldier who killed her mother). She does NOT kill him — but she also does NOT forgive him in the moment. The episode's brilliance is **she walks away from the kill while explicitly REFUSING the false-binary of "kill = vengeance / spare = forgiveness."** This is a canonical narrative implementation of:
 - **MR-HL-1 (Hybrid Truth Labels)** from Pass-77-B13: the proposition "did Katara forgive Yon Rha" is correctly labeled **Indeterminate-leaning-False** (she has not forgiven him but neither has she completed the binary opposite of vengeance); the resolution is **NOT yet** rather than yes/no.

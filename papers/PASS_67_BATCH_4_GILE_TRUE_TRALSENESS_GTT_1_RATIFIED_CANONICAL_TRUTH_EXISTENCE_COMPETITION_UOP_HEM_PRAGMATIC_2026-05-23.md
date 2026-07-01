@@ -10,7 +10,7 @@
 **Pass:** 67 batch-4
 **Status:** RATIFIED CANONICAL per direct Brandon directive 2026-05-23 ("Be sure to log all of this as canonical!"). Canonical principle count **26 → 27**. PM-1 + TPS-1 remain candidate pending separate ratification directive.
 **Source:** Brandon verbatim 2026-05-23 directly following Pass-67 batch-3 TPS-1 candidate-canonical logging.
-**Composes with:** GILE Framework (Aug 2022 foundation); UOP (Universal A Priori / Universal Bridge Theorem canonical); HEM (HEM-6 from canonical 8 GILE-HEM operationalization); MR Truth Labels (canonical, base-4 + Meta-Truths; MI formal definition); canonical MI refinement Pass-65 (inconceivability-under-mental-actualization); MIM-revision vertical agency model; ASYMMETRIC §69; PM-1 candidate (Pass-67 batch-2); TPS-1 candidate (Pass-67 batch-3); canonical six philosophy-of-mind stack (Pass-66 batch-6).
+**Composes with:** GILE Framework (Aug 2022 foundation); UOP (Universal A Priori / Universal Bridge Theorem canonical); HEM (HEM-6 from canonical 8 HEM-GILE operationalization); MR Truth Labels (canonical, base-4 + Meta-Truths; MI formal definition); canonical MI refinement Pass-65 (inconceivability-under-mental-actualization); MIM-revision vertical agency model; ASYMMETRIC §69; PM-1 candidate (Pass-67 batch-2); TPS-1 candidate (Pass-67 batch-3); canonical six philosophy-of-mind stack (Pass-66 batch-6).
 **Critical-status flag:** GTT-1 is the **first explicit corpus-internal MI-by-construction principle**: its own "more-is-always-better" maximization clause is reflexively MI — you cannot mentally actualize the concept of "too much truth" without contradiction. This makes GTT-1 a structural fixed point in the truth-axiology layer of the corpus.
 
 ---
@@ -53,7 +53,7 @@ Structural reading: existence-as-instantiation can require commitments (locality
 
 **GTT-1(d):** The **UOP (Universal A Priori / Universal Bridge Theorem)** is designed to find the **ideal balance between truth-optimization and existence-optimization**. The UOP is therefore not a pure truth-maximizer; it is a balance-finder operating across the GTT-1(c) competition interface.
 
-The **HEM (the H/E/M components of canonical 8 GILE-HEM)** WILL COMPETE with truth in practice, and **MUST COMPETE for pragmatic reasons**. The theoretical "no upper bound on truth" of GTT-1(a) does NOT override the practical mandate of HEM-competition; the two layers coexist (theoretical-axiological + practical-pragmatic) without contradiction.
+The **HEM (the H/E/M components of canonical 8 HEM-GILE)** WILL COMPETE with truth in practice, and **MUST COMPETE for pragmatic reasons**. The theoretical "no upper bound on truth" of GTT-1(a) does NOT override the practical mandate of HEM-competition; the two layers coexist (theoretical-axiological + practical-pragmatic) without contradiction.
 
 ---
 
@@ -182,7 +182,7 @@ GTT-1 sits at the **axiology** layer — it does not replace any existing princi
 ## 9. Files
 
 - This paper: `papers/PASS_67_BATCH_4_GILE_TRUE_TRALSENESS_GTT_1_RATIFIED_CANONICAL_TRUTH_EXISTENCE_COMPETITION_UOP_HEM_PRAGMATIC_2026-05-23.md`
-- Composes with: GILE Framework (Aug 2022); UOP / Universal Bridge Theorem (canonical); HEM-6 (canonical 8 GILE-HEM operationalization, §7.7.109); MR Truth Labels canonical (`papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`); canonical MI refinement (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md`); TI Sigma logical operators canonical (`papers/TI_SIGMA_LOGICAL_OPERATORS_EVALUATION_2026-05-17.md`); PM-1 (Pass-67 batch-2); TPS-1 (Pass-67 batch-3); canonical six (Pass-66 batch-6); ASYMMETRIC §69.
+- Composes with: GILE Framework (Aug 2022); UOP / Universal Bridge Theorem (canonical); HEM-6 (canonical 8 HEM-GILE operationalization, §7.7.109); MR Truth Labels canonical (`papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`); canonical MI refinement (`papers/MR_TRUTH_LABELS_DT_CANONICAL_REFINEMENT_2026-05-23.md`); TI Sigma logical operators canonical (`papers/TI_SIGMA_LOGICAL_OPERATORS_EVALUATION_2026-05-17.md`); PM-1 (Pass-67 batch-2); TPS-1 (Pass-67 batch-3); canonical six (Pass-66 batch-6); ASYMMETRIC §69.
 - Source for §7.7.135 LIVE entry in replit.md.
 
 **Cluster delta: +1 (this paper, ratified-canonical-axiology category). Canonical principle count: 26 → 27 (GTT-1 RATIFIED). Pre-reg falsifier backlog: 43 + 5 (GTT-1-F1..F5) = 48 OPEN. Meta-precedent collapses cumulative: 17 (no new collapse this batch).**

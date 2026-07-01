@@ -1,9 +1,9 @@
-# URB #784 — GILE–HEM Ratio Modulation of PD Expression: Beauty Razor as a ρ-Gated Phenomenon, with the Eight-Dimensional Prediction Cube and the Inversion Theorem
+# URB #784 — HEM–GILE Ratio Modulation of PD Expression: Beauty Razor as a ρ-Gated Phenomenon, with the Eight-Dimensional Prediction Cube and the Inversion Theorem
 
 **Author:** Brandon Charles Emerick
 **Date:** April 21, 2026
-**Series:** Unified Research Brief #784 — formalizes the ρ-dependence of PD expression across the BOK 4+4 architecture; refines URB #781 (Beauty Razor) by stating its activation regime; and discharges Brandon's directive of April 21, 2026: *"The GILE-HEM ratio influences how the PD is expressed in an intricate manner… let's account for those predictions and empirically verify them."*
-**Builds on:** URB #781 (Beauty Razor), URB #772 (six-clause GILE Truth definition), URB #699 (BOK 4+4 Dirac wing/arm), URB #697 (CCC GILE-HEM weighting; Emerick Threshold), URB #694 (Collective HEM-GILE Ratio Invariance), URB #652 (full GILE/HEM operationalization), URB #625 (GILE→PD piecewise conversion), URB #609 (HEM framework), URB #696 (GM HEM-Override).
+**Series:** Unified Research Brief #784 — formalizes the ρ-dependence of PD expression across the BOK 4+4 architecture; refines URB #781 (Beauty Razor) by stating its activation regime; and discharges Brandon's directive of April 21, 2026: *"The HEM-GILE ratio influences how the PD is expressed in an intricate manner… let's account for those predictions and empirically verify them."*
+**Builds on:** URB #781 (Beauty Razor), URB #772 (six-clause GILE Truth definition), URB #699 (BOK 4+4 Dirac wing/arm), URB #697 (CCC HEM-GILE weighting; Emerick Threshold), URB #694 (Collective HEM-GILE Ratio Invariance), URB #652 (full GILE/HEM operationalization), URB #625 (GILE→PD piecewise conversion), URB #609 (HEM framework), URB #696 (GM HEM-Override).
 **Status:** Core conjectural URB with empirical verification harness shipped (`gile_hem_pd_predictions.py`).
 
 ---

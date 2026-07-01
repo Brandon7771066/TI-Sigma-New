@@ -35,7 +35,7 @@ This is the **single source of truth for voice, format, and rules**. Every chapt
 - **i-Cell** — the structural unit of consciousness.
 - **LCC** — Law of Correlational Causation.
 - **TI Sigma** is the framework name; "Tralse Informationalism" is its philosophical core. Avoid the older "Transcendent Intelligence" framing except as a one-line historical note.
-- Canonical **principle count is 79** (ratified). Candidates/refinements do NOT change it. Recent canon to weave in where relevant: TRG-1 (reality is tralse-real), TOF-1 (Tralse Soup is the one fundamental), RTI-1 (residual law-errancy), SUP-1 (Supreme = willful GILE-HEM optimization), GIT-1 (GILE-intelligence tracks truth), GAR-1 (genius/sanity), SIS-1 (superintelligence as sane restraint), LDD-1 (legitimate definitional defense), NRI-1 (norm–rarity independence), UGI-1 (unaided generation of insight), CRD-1 (crank/hearing prior), LAS-1 (love as skill), GCU-1 (great-commandment unification, treat secularly).
+- Canonical **principle count is 79** (ratified). Candidates/refinements do NOT change it. Recent canon to weave in where relevant: TRG-1 (reality is tralse-real), TOF-1 (Tralse Soup is the one fundamental), RTI-1 (residual law-errancy), SUP-1 (Supreme = willful HEM-GILE optimization), GIT-1 (GILE-intelligence tracks truth), GAR-1 (genius/sanity), SIS-1 (superintelligence as sane restraint), LDD-1 (legitimate definitional defense), NRI-1 (norm–rarity independence), UGI-1 (unaided generation of insight), CRD-1 (crank/hearing prior), LAS-1 (love as skill), GCU-1 (great-commandment unification, treat secularly).
 
 ## Formatting (Markdown)
 - Start each file with `## Chapter N: <Exact Title from TOC>`.

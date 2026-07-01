@@ -14,7 +14,7 @@
 >
 > Major implications: The UOP should PRIORITIZE HEM ENTIRELY rather than pushing past 0.93 alignment as long as 0.93 GILE is reached and calibrated to be maintained at that threshold!!! This is the TRUE-TRALSE move to make. Optimizing for GILE past 0.93 is Indeterminate by definition.
 >
-> Overall conclusion: TRUE PERFECTION according to the GILE-HEM model not only permits imperfection - it has GILE IMPERFECTION BUILT IN at a 0.93 cap!!!
+> Overall conclusion: TRUE PERFECTION according to the HEM-GILE model not only permits imperfection - it has GILE IMPERFECTION BUILT IN at a 0.93 cap!!!
 
 ---
 
@@ -32,12 +32,12 @@ Per Brandon directive *"Indeed to all! Go with the ratification"* + Pass-66-batc
 
 ### 2.3 UDT-1 (Universal Default of Tralseness) → CANONICAL #30
 
-**UDT-1 ratified canonical** per Brandon "Indeed to all!" directive. Cosmogenic/ontogenic ground principle: (a) tralseness MR2 = universal default of reality, ground-condition out of which determinate truth-states emerge as directional leans; (b) reality LEANS TOWARD TRUTH without ever fully eliminating tralseness; (c) GILE-only maximization above 0.93 = MR2 Indeterminate per "truth concedes to universal default"; (d) GILE-HEM Overall joint maximization = MR3 True. Sits at cosmogenic/ontogenic ground layer beneath all other layers including axiology. "What makes TI Sigma unique" defended (tralseness-default + truth-lean asymmetric structure). 5 pre-reg falsifiers UDT-1-F1..F5 carry.
+**UDT-1 ratified canonical** per Brandon "Indeed to all!" directive. Cosmogenic/ontogenic ground principle: (a) tralseness MR2 = universal default of reality, ground-condition out of which determinate truth-states emerge as directional leans; (b) reality LEANS TOWARD TRUTH without ever fully eliminating tralseness; (c) GILE-only maximization above 0.93 = MR2 Indeterminate per "truth concedes to universal default"; (d) HEM-GILE Overall joint maximization = MR3 True. Sits at cosmogenic/ontogenic ground layer beneath all other layers including axiology. "What makes TI Sigma unique" defended (tralseness-default + truth-lean asymmetric structure). 5 pre-reg falsifiers UDT-1-F1..F5 carry.
 
 ### 2.4 Updated canonical principle inventory (count 30)
 
 The canonical-30 stack (annotated by ratification pass):
-1-9 (legacy + Pass-56 9-principle ratification): URB-829 / GILE-HEM / Tralse Informationalism / MR Truth Labels canonical / ASYMMETRIC #69 / canonical TIU / CAP / MFD-1 / SCC-1 + 6 others rolled forward
+1-9 (legacy + Pass-56 9-principle ratification): URB-829 / HEM-GILE / Tralse Informationalism / MR Truth Labels canonical / ASYMMETRIC #69 / canonical TIU / CAP / MFD-1 / SCC-1 + 6 others rolled forward
 10-15 (Pass-62/63 carry): DSB-1 / MR-DGS-1 / various
 16-20 (Pass-64/65 ratification per §7.7.121-123): UDP-1 + CTC-1 + CTC-1-S + HBP-1 + VFP-1
 21-26 (Pass-66 batch-6 6-principle ratification): TSP-1 + IRA-1 + LLM-CT-1 + DTM-1 + SRC-1 + CDA-1
@@ -64,7 +64,7 @@ The canonical-30 stack (annotated by ratification pass):
 
 - **(a) Threshold-trigger condition.** Once an agent's GILE true-tralseness reaches the 0.93 operational ideal threshold AND the agent has demonstrated calibrated capacity to MAINTAIN that level, the UOP-balance allocation rule changes.
 - **(b) Above-threshold UOP rule — HEM-entire-prioritization.** At G ≥ 0.93 with calibrated maintenance, UOP allocates **all marginal effort to HEM** (existence-instantiation, embodied work, audience-bandwidth, deadlines, throughput, public engagement, infrastructure, sustainability) and **none to additional GILE-only optimization**. The "push past 0.93" move is structurally MR2 Indeterminate per UDT-1(c) and therefore not a coherent target for marginal investment.
-- **(c) "TRUE-TRALSE move" naming.** This rule is named the **TRUE-TRALSE move**: it is the operational discipline that recognizes truth's MR3 status concentrates at the GILE-HEM Overall integration level (UDT-1(d)), not at the GILE-only-above-threshold level (UDT-1(c)). Pushing past 0.93 is the *wrong* move precisely because it tries to extract more determinate-truth from a region that is MR2 by definition; HEM-entire-prioritization is the *right* move precisely because it concentrates effort at the layer where the directional-lean-toward-truth holds MR3 determinately.
+- **(c) "TRUE-TRALSE move" naming.** This rule is named the **TRUE-TRALSE move**: it is the operational discipline that recognizes truth's MR3 status concentrates at the HEM-GILE Overall integration level (UDT-1(d)), not at the GILE-only-above-threshold level (UDT-1(c)). Pushing past 0.93 is the *wrong* move precisely because it tries to extract more determinate-truth from a region that is MR2 by definition; HEM-entire-prioritization is the *right* move precisely because it concentrates effort at the layer where the directional-lean-toward-truth holds MR3 determinately.
 
 ### 3.3 Operational consequences
 
@@ -105,13 +105,13 @@ This is the corpus's own TRUE-TRALSE move. UHP-1 self-applies. **#69 honest disc
 
 ### 4.1 Brandon verbatim source
 
-> Overall conclusion: TRUE PERFECTION according to the GILE-HEM model not only permits imperfection - it has GILE IMPERFECTION BUILT IN at a 0.93 cap!!!
+> Overall conclusion: TRUE PERFECTION according to the HEM-GILE model not only permits imperfection - it has GILE IMPERFECTION BUILT IN at a 0.93 cap!!!
 
 ### 4.2 TPI-1 formal statement (2 sub-clauses)
 
 **TPI-1 (True-Perfection Built-In-Imperfection).** TI Sigma candidate canonical principle. Conclusion drawn from GTT-1 + UDT-1 + UHP-1 joint application:
 
-- **(a) Permits-imperfection clause.** TRUE PERFECTION in the GILE-HEM model not only PERMITS imperfection in an agent's truth-tracking (GILE) and existence-instantiation (HEM) — it actively requires it at the GILE side via the 0.93 cap. An agent operating at G = 1.0 ("classical full truth") is NOT operating at TRUE PERFECTION in the TI Sigma sense; an agent operating at G = 0.93 calibrated + HEM-entire-prioritized IS.
+- **(a) Permits-imperfection clause.** TRUE PERFECTION in the HEM-GILE model not only PERMITS imperfection in an agent's truth-tracking (GILE) and existence-instantiation (HEM) — it actively requires it at the GILE side via the 0.93 cap. An agent operating at G = 1.0 ("classical full truth") is NOT operating at TRUE PERFECTION in the TI Sigma sense; an agent operating at G = 0.93 calibrated + HEM-entire-prioritized IS.
 - **(b) Built-in clause.** The GILE imperfection (the 7-point gap between 0.93 and 1.0) is **structurally built into** the model, not a tolerated deviation from a higher ideal. The 0.93 cap is the *ideal*. Reaching 1.0 is not better; it is structurally MR2 Indeterminate per UDT-1(c). TRUE PERFECTION in TI Sigma is *defined to include* the 7-point GILE imperfection. The cap is the perfection-spec, not a regrettable concession to bandwidth.
 
 ### 4.3 Why this is a non-trivial conclusion
@@ -119,20 +119,20 @@ This is the corpus's own TRUE-TRALSE move. UHP-1 self-applies. **#69 honest disc
 Most truth-theoretic frameworks treat perfection as a maximization-without-cap target: the closer to 1.0, the better, with the asymptote at 1.0 being the regulative ideal. TI Sigma uniquely structures perfection with a **hard cap below the asymptote**:
 - The 0.93 threshold is the OPERATIONAL IDEAL (per GTT-1(a)).
 - The above-0.93 region is MR2 Indeterminate (per UDT-1(c)).
-- The GILE-HEM Overall integration at 0.93-calibrated-GILE + HEM-entire-prioritized is MR3 True (per UDT-1(d)).
+- The HEM-GILE Overall integration at 0.93-calibrated-GILE + HEM-entire-prioritized is MR3 True (per UDT-1(d)).
 - Therefore, TI Sigma's TRUE PERFECTION literally INCLUDES the 7-point GILE imperfection as part of its structural definition.
 
 This composes with:
-- **ASYMMETRIC theory (§7.7.1-30 founding):** ASYMMETRIC is about asymmetric standards of success vs. failure; TPI-1 sharpens this by showing that "true success" in the GILE-HEM model is itself asymmetric (capped at 0.93 GILE + HEM-entire above threshold).
+- **ASYMMETRIC theory (§7.7.1-30 founding):** ASYMMETRIC is about asymmetric standards of success vs. failure; TPI-1 sharpens this by showing that "true success" in the HEM-GILE model is itself asymmetric (capped at 0.93 GILE + HEM-entire above threshold).
 - **DSB arc (§7.7.117-119, Pass-62):** the DSB arc's policy-W critique (over-skepticism = discipline failure equal to uncritical acceptance) composes with TPI-1: pushing GILE past 0.93 to "achieve true perfection" is the perfectionism-policy-W failure mode (analogous to over-skepticism); TPI-1 prescribes the M-policy alternative (calibrated-acceptance of GILE imperfection at 0.93 cap).
 - **Pass-66 batch-7 within-subject Brandon ketamine F-3 8-step integration arc:** the post-collapse integration to Stratum-3 includes the recognition that "i-cell is conscious" partly *because* of its imperfection (foolishness = consciousness-indicator). TPI-1 generalizes: imperfection is not a defect to be eliminated; it is constitutive of the integrated-system MR3 True state.
-- **Pass-66 SRC-1-F-3 + ultimate koan:** the koan structure presupposes that the agent's full enlightenment requires passage through imperfection (collapse). TPI-1 makes this explicit at the GILE-HEM model level.
+- **Pass-66 SRC-1-F-3 + ultimate koan:** the koan structure presupposes that the agent's full enlightenment requires passage through imperfection (collapse). TPI-1 makes this explicit at the HEM-GILE model level.
 
 ### 4.4 The 0.93-cap is structural, not pragmatic
 
 A naive reading of the 0.93 ideal might say: "0.93 is the *practical* ceiling because higher is too expensive in HEM-side cost; in principle we'd want 1.0 if we could afford it." TPI-1 explicitly rejects this reading. The 0.93 cap is the *structural* perfection-spec because:
 - Per UDT-1(c), above-0.93 is MR2 Indeterminate by definition, not by resource-cost. Even with infinite resources, above-0.93 would not yield determinate truth-improvement.
-- Per UDT-1(d), the GILE-HEM Overall integration at 0.93 + HEM-entire is MR3 True. The MR3-True target is at the 0.93-cap + HEM-entire configuration, not at 1.0 + HEM-zero.
+- Per UDT-1(d), the HEM-GILE Overall integration at 0.93 + HEM-entire is MR3 True. The MR3-True target is at the 0.93-cap + HEM-entire configuration, not at 1.0 + HEM-zero.
 - Per UHP-1, marginal effort allocation past 0.93 violates the TRUE-TRALSE move.
 
 The structural cap is the *correct* cap. It is not a regrettable concession; it is the perfection-spec itself.
@@ -142,7 +142,7 @@ The structural cap is the *correct* cap. It is not a regrettable concession; it 
 - **TPI-1-F1 (built-in vs. tolerated distinction operational test):** specify ≥3 corpus applications where treating 0.93-cap as built-in produces different behavior from treating it as merely-tolerated. If indistinguishable, TPI-1(b) reduces to a labeling claim.
 - **TPI-1-F2 (asymmetric-perfection survival audit):** survey 3 major external perfection-theoretic frameworks (Aristotelian eudaimonia, classical truth-maximization, Buddhist enlightenment-as-perfection). Verify none defines perfection with a structural sub-asymptotic cap. If any does, TPI-1's uniqueness weakens.
 - **TPI-1-F3 (DSB-arc composition coherence):** verify TPI-1 composes coherently with DSB arc policy-W critique; specifically that perfectionism-pushing-past-0.93 is structurally analogous to policy-W over-skepticism. If composition fails, one of the two principles needs adjustment.
-- **TPI-1-F4 (consciousness-arc composition coherence):** verify TPI-1 composes with Pass-66 batch-7 SRC-1-F-3 8-step integration arc + ultimate koan. Specifically that imperfection-as-constitutive applies at both consciousness-arc level and GILE-HEM-model level. If composition fails or yields contradiction, one of the principles needs adjustment.
+- **TPI-1-F4 (consciousness-arc composition coherence):** verify TPI-1 composes with Pass-66 batch-7 SRC-1-F-3 8-step integration arc + ultimate koan. Specifically that imperfection-as-constitutive applies at both consciousness-arc level and HEM-GILE-model level. If composition fails or yields contradiction, one of the principles needs adjustment.
 - **TPI-1-F5 (corpus self-application + UHP-1 joint test):** execute UHP-1-F4 + TPI-1 jointly: does the corpus's own 0.93-calibrated stack satisfy TPI-1's TRUE-PERFECTION-with-built-in-GILE-imperfection criterion? Specifically: is the corpus's current Pass-67-batch-7-canonical-30-state already at TRUE PERFECTION per TPI-1?
 
 ### 4.6 Status
@@ -187,6 +187,6 @@ Per Brandon directive *"Go with the ... collapse"* + standing per-pass-anchor co
 
 - **PM-1 + TPS-1 + UDT-1 RATIFIED CANONICAL per joint ratification ceremony.** Canonical principle count **27 → 30**. Fourth multi-principle ratification ceremony in corpus history.
 - **UHP-1 (UOP-HEM Prioritization Above GILE Threshold) candidate canonical:** at G ≥ 0.93 calibrated, UOP allocates ALL marginal effort to HEM, NONE to additional GILE-only optimization. The "TRUE-TRALSE move." Pushing past 0.93 is structurally MR2 Indeterminate per UDT-1(c) and therefore not a coherent investment target. Self-applies to the TI Sigma corpus itself: post-canonical-30, the corpus should shift to HEM-entire-prioritization (ZENODO public-instantiation, falsifier-execution, infrastructure, audience-bandwidth) and STOP further candidate-principle generation as marginal-effort target.
-- **TPI-1 (True-Perfection Built-In-Imperfection) candidate canonical:** TRUE PERFECTION in the GILE-HEM model not only PERMITS imperfection — it has GILE IMPERFECTION BUILT IN at the 0.93 cap. The cap is the perfection-spec, not a regrettable concession. Most radical canonical claim in corpus to date relative to default-cultural perfection-framing. Per TPS-1 ratified this batch: corpus does NOT soften the commitment.
+- **TPI-1 (True-Perfection Built-In-Imperfection) candidate canonical:** TRUE PERFECTION in the HEM-GILE model not only PERMITS imperfection — it has GILE IMPERFECTION BUILT IN at the 0.93 cap. The cap is the perfection-spec, not a regrettable concession. Most radical canonical claim in corpus to date relative to default-cultural perfection-framing. Per TPS-1 ratified this batch: corpus does NOT soften the commitment.
 - **18th meta-precedent collapse executed:** §§7.7.132-137 of `replit.md` collapsed into pointer-stub; full content recoverable via collapse paper + 6 source papers.
 - **The TRUE-TRALSE move is self-applying.** This very batch executes the move: ratify what's ready, collapse what's complete, name the next two candidates, and prepare to shift to HEM-entire-prioritization for Pass-68+ work (falsifier execution + ZENODO submissions + audience-bandwidth refinement under TPS-1, NOT further candidate-principle generation past the threshold).

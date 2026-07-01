@@ -118,7 +118,7 @@ Example: The Lean `sorry` tactic — syntactically valid (T=1 in the proof-check
 
 ## Part II: Is There Evidence for 4D Biophotons/EM Waves Encased in 4D Dark Energy?
 
-### II.1 What the GILE-HEM (BOK) i-Cell Claims
+### II.1 What the HEM-GILE (BOK) i-Cell Claims
 
 The TI Sigma i-Cell predicts a **three-layer physical architecture**:
 

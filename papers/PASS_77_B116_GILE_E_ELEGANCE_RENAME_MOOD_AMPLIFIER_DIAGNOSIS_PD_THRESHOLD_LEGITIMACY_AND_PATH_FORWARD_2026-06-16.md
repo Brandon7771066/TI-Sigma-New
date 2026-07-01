@@ -5,7 +5,7 @@
 
 This paper answers four Brandon directives in one batch:
 1. Rename **GILE-E** from *Environment* to **Elegance** (dual-label).
-2. **Diagnose and address** the problems the Consciousness-Hamiltonian Mood-Amplifier batch (§7.7.293) hit, and reconcile them with the prior bidirectional neuroscience↔quantum validation of GILE-HEM.
+2. **Diagnose and address** the problems the Consciousness-Hamiltonian Mood-Amplifier batch (§7.7.293) hit, and reconcile them with the prior bidirectional neuroscience↔quantum validation of HEM-GILE.
 3. **Chart a path forward** for the animal experiments and simulations.
 4. **Determine the legitimacy** of the proposed PD thresholds.
 
@@ -14,7 +14,7 @@ This paper answers four Brandon directives in one batch:
 ## 1. GILE-E: *Environment* → **Elegance** (dual-label)
 
 ### 1.1 The change
-In the most-updated GILE-HEM model, **GILE-E is named *Elegance*** and its role is sharpened to its sole function: **aesthetics** (structural regularity / spectral purity / beauty-of-form). The legacy name **"Environment" is preserved as a concise gloss** standing for *the context of an agent's most-sacred values* — it is not deleted, it is demoted from primary label to shorthand.
+In the most-updated HEM-GILE model, **GILE-E is named *Elegance*** and its role is sharpened to its sole function: **aesthetics** (structural regularity / spectral purity / beauty-of-form). The legacy name **"Environment" is preserved as a concise gloss** standing for *the context of an agent's most-sacred values* — it is not deleted, it is demoted from primary label to shorthand.
 
 - **GILE** continues to stand on its own as the truth/valence tetrad (G, I, L, E) and embodies the BOK **once one recognizes that the HEM existence-dimensions are packed inside what "Environment" used to gesture at** — i.e. "Environment" was doing double duty (aesthetic-fit *and* existence-context). Splitting that load is the point of this rename.
 - **HEM stays separate.** H/E/M (the existence-instantiation dimensions; D1 Physical, D2 Social/Tralse, D3 Aesthetic, D4 Conscious in the operational stack) remain their own pillar. The rename does **not** merge HEM into GILE; it clarifies that the *existence* content people informally read into "Environment" lives in **HEM**, while the *aesthetic* content is **GILE-E = Elegance**.
@@ -39,23 +39,23 @@ So the measurement has been *Elegance* all along; only the **label** said "Envir
 
 ### 2.1 The three problems observed
 From the Consciousness-Hamiltonian batch:
-- **P1 — raw GILE-HEM (8 dims) decodes *worse* than a plain spectral baseline** (GILEHEM-alone below BASE on every source).
+- **P1 — raw HEM-GILE (8 dims) decodes *worse* than a plain spectral baseline** (GILEHEM-alone below BASE on every source).
 - **P2 — the composite CH block *hurts* mouse20** (−0.359) where simple spectral features already hit 0.913.
 - **P3 — closed-loop GILE-feedback is marginally but significantly *worse* than an equal-energy open-loop drive** (−0.053, CI excludes 0).
 
-### 2.2 Reconciliation with "GILE-HEM was already validated bidirectionally (neuroscience↔quantum)"
-The prior validation Brandon refers to is the **Dirac-equation grounding** (Pass-77 B56/B60): GILE-HEM's **8 = 4 + 4** structure and its **modulus↔Existence / phase↔Valence** split are physically natural — a **Grade-2 homomorphism**. That result is real and is *not* contradicted here. But it must be read for **exactly what it established**:
+### 2.2 Reconciliation with "HEM-GILE was already validated bidirectionally (neuroscience↔quantum)"
+The prior validation Brandon refers to is the **Dirac-equation grounding** (Pass-77 B56/B60): HEM-GILE's **8 = 4 + 4** structure and its **modulus↔Existence / phase↔Valence** split are physically natural — a **Grade-2 homomorphism**. That result is real and is *not* contradicted here. But it must be read for **exactly what it established**:
 
 > The Dirac result validated the **architecture** (an 8-component object that splits 4 truth + 4 existence, modulus/phase). It did **NOT** validate the **specific EEG operationalizations** — the choice that "L = mean |corr|" or "E = spectral purity" computed on a particular LFP window is the *right* estimator of that dimension. The per-dimension γ-matrix labels were explicitly graded **1.5 (interpretive overlay), not a derivation.**
 
-So there is **no contradiction**: a structurally-sound framework can still have **weak first-pass estimators** for its axes on a new signal. P1/P2/P3 are **operationalization and regime problems, not a refutation of GILE-HEM.** Concretely:
+So there is **no contradiction**: a structurally-sound framework can still have **weak first-pass estimators** for its axes on a new signal. P1/P2/P3 are **operationalization and regime problems, not a refutation of HEM-GILE.** Concretely:
 
 - **P1 (raw dims weak):** the 8 EEG estimators are noisy, partially redundant (E≡D3 by construction), and individually low-SNR; the *composite* CH block (which adds PD + H_TSC spectrum + graph geometry) is where signal concentrates. This is expected if the axes are real but the per-axis estimators are immature — value emerges only after the geometry binds them. **Action:** treat the 8 raw estimators as *candidates to be improved*, not as finished instruments; the one we already fixed (L: broadband-Pearson → theta-gamma PAC) is the template — each dimension needs the same "is this estimator faithful to the definition?" audit.
 - **P2 (mouse20 ceiling/redundancy):** where a 2-feature spectral baseline already reaches 0.913, a 23-D block can only add variance, not signal — classic bias-variance. **Action:** gate the CH block behind a complexity test (only deploy where the simple baseline leaves headroom); report per-session, never pool away a negative.
 - **P3 (feedback ≤ open-loop):** the simulation made the latent **too benignly controllable** — a constant correct-phase drive suffices, so adaptive feedback has nothing to fix. Feedback only earns its keep when **over-stimulation / tolerance / homeostatic-rebound costs** are steep. We deliberately did **not** tune those to manufacture a win. **Action:** see §4 (sim with real tolerance costs).
 
 ### 2.3 The honest one-line reconciliation
-**The framework's *skeleton* is physically grounded (Dirac, Grade-2); its *muscles* (the EEG estimators) and the *test regime* (a too-easy control model) are what underperformed.** Fixing estimators and hardening the sim is the productive path — not abandoning GILE-HEM, and not over-claiming it from the Dirac result either.
+**The framework's *skeleton* is physically grounded (Dirac, Grade-2); its *muscles* (the EEG estimators) and the *test regime* (a too-easy control model) are what underperformed.** Fixing estimators and hardening the sim is the productive path — not abandoning HEM-GILE, and not over-claiming it from the Dirac result either.
 
 ---
 
@@ -113,7 +113,7 @@ To reach the **F** zone you need comp ≤ **0.367**; to reach the **MI cliff** y
 **Hard honesty constraint (unchanged):** the DANDI recordings are **pre-recorded**; there is **no possible on-animal intervention**, so nothing here can become an on-animal efficacy claim without new wet-lab hardware. The path is staged by what each tier can *legitimately* establish.
 
 ### Tier 1 — Better features on observational data ($0, runnable now)
-1. **Estimator-fidelity audit of all 8 GILE-HEM dimensions** (repeat the L: Pearson→PAC fix for G, I, E, and the four HEM dims): for each, ask "does this estimator move with its definition on a signal where the construct is ground-truth-known?" Drop or replace flat estimators.
+1. **Estimator-fidelity audit of all 8 HEM-GILE dimensions** (repeat the L: Pearson→PAC fix for G, I, E, and the four HEM dims): for each, ask "does this estimator move with its definition on a signal where the construct is ground-truth-known?" Drop or replace flat estimators.
 2. **Per-domain PD affine recalibration** (§3.4): fit the composite→pd_real map to the EEG distribution so zones are non-degenerate; re-test whether `pd_zone` then adds decoding power.
 3. **Pre-register** the composite-vs-parts and complexity-gate (§2.2 P2) hypotheses on **more DANDI sessions** before looking, and report per-session (no pooling away negatives). *Falsifiable:* CH block beats matched baseline on ≥X/N held-out sessions with simple-baseline headroom.
 

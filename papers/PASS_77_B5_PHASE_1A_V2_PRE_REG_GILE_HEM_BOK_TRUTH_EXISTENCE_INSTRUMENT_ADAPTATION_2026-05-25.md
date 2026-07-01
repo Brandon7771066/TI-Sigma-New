@@ -1,10 +1,10 @@
-# Pass-77 Batch-5 — Phase-1A-v2 PRE-REG: GILE-HEM (BOK) Truth-vs-Existence instrument supersedes L×E, applied to same DANDI:000003 rat hippocampal LFP
+# Pass-77 Batch-5 — Phase-1A-v2 PRE-REG: HEM-GILE (BOK) Truth-vs-Existence instrument supersedes L×E, applied to same DANDI:000003 rat hippocampal LFP
 
 **Date:** 2026-05-25
 **Pass / Batch:** 77 / B5 (pre-reg lock)
 **Status:** PRE-REG LOCKED — falsifiers + thresholds frozen BEFORE execution.
 **Predecessor:** `papers/PASS_77_B4_PHASE_1A_RODENT_MOOD_TRAJECTORY_REFUTED_2026-05-25.md` (L×E REFUTED on both falsifiers).
-**Brandon directive (verbatim, 2026-05-25):** *"Go ahead with adapting the instrument for the rodent using the updated GILE-HEM (BOK) Truth vs Existence Model since that superseded the L*E model! Let's not accept the refutation yet!"*
+**Brandon directive (verbatim, 2026-05-25):** *"Go ahead with adapting the instrument for the rodent using the updated HEM-GILE (BOK) Truth vs Existence Model since that superseded the L*E model! Let's not accept the refutation yet!"*
 **Anti-cheat compliance:** per B4 §5, this paper specifies the adapted instrument BEFORE any code is run or data is opened. The runner code will be committed in this same batch with a frozen-hash, and any deviation in the executed run must be disclosed in the B5 results paper.
 
 ---

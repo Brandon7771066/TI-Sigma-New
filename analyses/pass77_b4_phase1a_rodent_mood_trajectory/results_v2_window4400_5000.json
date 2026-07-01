@@ -42,7 +42,7 @@
       "states_path": "processing/behavior/states"
     },
     "s3_J": {
-      "instrument": "Pass-77-B5 GILE-HEM BOK J=f(G)+g(H)",
+      "instrument": "Pass-77-B5 HEM-GILE BOK J=f(G)+g(H)",
       "lfp_path": "processing/ecephys/LFP/LFP/data",
       "fs_hz": 1250.0,
       "n_channels_used": 4,

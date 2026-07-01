@@ -55,7 +55,7 @@ future leg, not yet implemented.)
 - **Passive resonance probe** retuned to a fixed 0.03 Hz infraslow oscillator.
 
 **Modality-agnostic (carried over unchanged):** the 57-vertex TI-Sigma Crystal
-Hamiltonian (`tsc_hamiltonian.py`), GILE-HEM definitions (coherence stability,
+Hamiltonian (`tsc_hamiltonian.py`), HEM-GILE definitions (coherence stability,
 spectral entropy/purity, amplitude stability, contradiction ratio), FULL PD
 (real+imaginary)+zone, GILE-graph Fiedler, the leakage-safe block-filtering /
 train-only-standardization / nearest-centroid decoding / bootstrap-CI machinery.

@@ -23,7 +23,7 @@ This is **framework-altering**: it disambiguates LCC from spurious correlation i
 LCC (Law of Correlational Causation) was one of the five TI Sigma flagships but was the **least operationally specified** of the five (BOK, LCC, PD, MR, HEAR). The framework had:
 
 - A formal LCC equation describing law of correlational causation between i-cells
-- Empirical instances (e.g., consciousness-substrate coupling, GILE-HEM cross-effects)
+- Empirical instances (e.g., consciousness-substrate coupling, HEM-GILE cross-effects)
 - A general claim that LCC explains framework-relevant cross-domain correlations
 
 **But it lacked**: a principled way to distinguish **genuine LCC participation** from **spurious correlation** with no causal LCC mechanism. Any sufficiently large dataset will contain pairs of variables that correlate without one causing the other (e.g., the classic "ice cream sales correlate with drownings"). Without a constraint specifying **which entities can participate in LCC**, the framework was vulnerable to over-application: anyone could claim "LCC!" for any correlation.

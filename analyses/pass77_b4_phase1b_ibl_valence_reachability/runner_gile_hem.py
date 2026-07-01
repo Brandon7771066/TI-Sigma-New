@@ -1,10 +1,10 @@
 """
-Pass-77-B4 Phase-1B GILE-HEM — IBL Valence-Reachability re-tested with the canonical
+Pass-77-B4 Phase-1B HEM-GILE — IBL Valence-Reachability re-tested with the canonical
 UOP "Truth */+ Existence" tradeoff instead of the legacy M_r = L*E.
 
 WHY THIS RUNNER:
 Per Brandon's directive, retire the legacy multiplicative M_r = L*E and re-run the
-Phase-1B reachability tests on the canonical GILE-HEM Unified Optimization Principle
+Phase-1B reachability tests on the canonical HEM-GILE Unified Optimization Principle
 (UOP) J-score, identical to the operationalization already used in Phase-1A
 (pass77_b4_phase1a_rodent_mood_trajectory/runner_v2.py:compute_J_window):
 
@@ -33,7 +33,7 @@ Phase-1B reachability tests on the canonical GILE-HEM Unified Optimization Princ
     so we can see which mode carries the signal; J_dual is the pre-registered primary.
 
 WHY VISUAL CORTEX (not CA1):
-The CA1 GILE-HEM run would be uninformative for the EXISTENCE axis: in hippocampus
+The CA1 HEM-GILE run would be uninformative for the EXISTENCE axis: in hippocampus
 theta is so dominant that H -> ~1 saturates (the legacy E term hit its cap on 100% of
 windows). Neocortex (Primary visual area, 118ch on this same sub-NR-0028 probe) is the
 natural place where theta/delta is NOT saturated, so the H/Existence term actually
@@ -163,7 +163,7 @@ def J_modes(T_bound, E_bound):
 
 
 def compute_J(seg, fs, pairs):
-    """Canonical GILE-HEM UOP dual operator (Phase-1A compute_J_window axes, B83 dual */+).
+    """Canonical HEM-GILE UOP dual operator (Phase-1A compute_J_window axes, B83 dual */+).
     G = mean gamma-PLV (truth axis, cap 0.93); H = theta/(theta+delta) (existence axis).
     Returns (modes_dict, G, H) where modes_dict has add/mult/dual J values."""
     plvs = [gamma_plv(seg[i], seg[j], fs) for i, j in pairs]
@@ -260,10 +260,10 @@ def event_delta_direct(data, fs, pairs, i_lo, t_off, t_ev):
 
 def main():
     results = {
-        "pass": "77-B4", "phase": "1B-GILE-HEM", "dandiset": DANDISET, "session": SESSION,
+        "pass": "77-B4", "phase": "1B-HEM-GILE", "dandiset": DANDISET, "session": SESSION,
         "target_region": TARGET_REGION, "region_match": REGION_MATCH,
         "seed": SEED, "prereg_locked": True,
-        "instrument_canonical": "GILE-HEM UOP J = f(G)+g(H); G=gamma-PLV(cap0.93), H=theta/(theta+delta)",
+        "instrument_canonical": "HEM-GILE UOP J = f(G)+g(H); G=gamma-PLV(cap0.93), H=theta/(theta+delta)",
         "supersedes_metric": "legacy M_r = L*E (multiplicative)",
         "scope_limits": [
             "pre-recorded => reachability necessary-condition ONLY",
@@ -317,7 +317,7 @@ def main():
         json.dump(results, open(OUT, "w"), indent=2, default=str); return
 
     try:
-        log("Stage 3: stream LF snippet (region channels) + GILE-HEM J(t) diagnostics")
+        log("Stage 3: stream LF snippet (region channels) + HEM-GILE J(t) diagnostics")
         lf_name, es = find_lf_series(hr)
         data_ds = es["data"]; n_total, n_ch_total = data_ds.shape
         t_off, fs = lf_timing(es)

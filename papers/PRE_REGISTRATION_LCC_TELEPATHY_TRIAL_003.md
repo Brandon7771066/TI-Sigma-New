@@ -20,7 +20,7 @@ The within-top-3 ranking has been mis-calibrated for both trials. Two trials of 
 
 | Number | Corpus weight | Originated | Notes |
 |--------|---------------|------------|-------|
-| **4** | GILE corners (G/I/L/E) — the philosophical foundation; "GILE" = 4 letters; GILE-HEM operationalization throughout corpus | **Aug 2022** | EARLIEST-DATED corpus element; foundational ETHICS layer parallel to 5's foundational LOGIC and 8's foundational REALIZATION |
+| **4** | GILE corners (G/I/L/E) — the philosophical foundation; "GILE" = 4 letters; HEM-GILE operationalization throughout corpus | **Aug 2022** | EARLIEST-DATED corpus element; foundational ETHICS layer parallel to 5's foundational LOGIC and 8's foundational REALIZATION |
 | **1** | UOP (Universal A Priori); Universal Bridge Theorem connecting to all Millennium Problems; Being Theorem; "0 → 1 emergence" in Origin of Existence | Foundational | Deepest ONTOLOGICAL foundation; the "1" that emerges from the void-0 |
 | **7** | Brandon's name = 7 letters ("NOT coincidence"); Iridium-77 / Meta-Indeterminate; personal-significance | Pre-corpus / personal | Was adversarially avoided in Trial 001 — now potentially safe to re-engage if Brandon wants to demonstrate the framework-corpus weight independent of the bias-avoidance test |
 | **3** | Central truth value of 5-valued logic; LCC three phases; three i-cell layers | Foundational | Was Trial 002 Primary — Brandon may avoid since I just predicted it |

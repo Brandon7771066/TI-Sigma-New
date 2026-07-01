@@ -65,7 +65,7 @@ Each representation is treated as an **encoder**: truth-label → coordinate, wi
 |---|---|---|
 | Quick human-readable scoring / 1-D plot | **Scalar PD / TIG** | cheapest, intuitive; accept that NA & MI/F blur |
 | Default truth-labelling that must keep indeterminacy separate from truth-polarity | **Complex PD (2-D)** | minimal rep that holds all 5; robustness scales with raters; d_min 2.0 |
-| Carrying full ethical/meaning/aesthetic agent state (UOP optimization, GILE-HEM) | **64D / 32D GILE Matrix** | rich GILE×axis context per label; *not* for label decisions (NA folded) |
+| Carrying full ethical/meaning/aesthetic agent state (UOP optimization, HEM-GILE) | **64D / 32D GILE Matrix** | rich GILE×axis context per label; *not* for label decisions (NA folded) |
 | Noisy / adversarial / MI-saturated inputs where robustness & all-5 separation matter | **TSC / TECC (orthogonal embedding)** | best accuracy + best noise-correction; specify distinct-axis embedding |
 
 **Pros/cons one-liners.** Scalar/TIG: + simplest, interpretable / − no NA, no error-correction (flat robustness). Complex: + all 5 with minimal dims, best separation / − loses GILE context, NA placement is a representational convenience (NAO-1). 64D/32D: + full GILE state, algebraic 4³ closure / − ties the NA-blind accuracy floor (0.746), NA≡MI (not for label decisions). TSC/TECC: + most robust, native 5-valued, E8 packing / − 8-D, hard to visualize, *literal table correction radius (0.248) below the advertised 0.309* (must use orthogonal embedding).

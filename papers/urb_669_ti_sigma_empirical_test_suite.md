@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick (TI Sigma / BlissGene Therapeutics)  
 **Date:** April 13, 2026  
 **Corpus Entry:** #669  
-**Related URBs:** #586 (Sacred Laziness), #587 (LLM Analysis), #589 (Halting Experiment), #614 (BOK 15 Predictions), #622 (GILE-HEM Lattice), #652 (GILE-HEM Operationalization), #658 (HEAR), #667 (Dottie), #668 (Physics Backbone)  
+**Related URBs:** #586 (Sacred Laziness), #587 (LLM Analysis), #589 (Halting Experiment), #614 (BOK 15 Predictions), #622 (HEM-GILE Lattice), #652 (HEM-GILE Operationalization), #658 (HEAR), #667 (Dottie), #668 (Physics Backbone)  
 **DOI:** Pending Zenodo  
 **Keywords:** empirical test suite, GILE biometrics, HEM measurement, HEAR phase transition, BOK predictions, Halting Problem, Collatz, noncomputational intuition, Dottie threshold, I-particle, Sacred Laziness, BlissGene
 
@@ -462,7 +462,7 @@ These are BlissGene Therapeutics' primary research targets. Funded by the $750K 
 | Component | File | Status |
 |-----------|------|--------|
 | H3/H4 Experiment UI | `halting_experiment_ui.py` | ✅ Built |
-| GILE-HEM-BOK Engine | `mood_amplifier_gile_hem_bok.py` | ✅ Built |
+| HEM-GILE-BOK Engine | `mood_amplifier_gile_hem_bok.py` | ✅ Built |
 | Pharmacological Simulator | `ti_pharmacological_simulator.py` | ✅ (canonical weights) |
 | TI Sigma Pharma Predictor | `pharma_tsc_predictor.py` | ✅ (canonical GILE_W) |
 | GSA Live Trader | `gsa_live_trader.py` | ✅ (live Alpaca) |

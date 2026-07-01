@@ -1,5 +1,5 @@
 {
-  "insight": "cognitive error != hallucination; both low-accuracy; certainty (strength of belief) is the separator; harm = certainty x inaccuracy; GILE-HEM diagonal = calibration reference",
+  "insight": "cognitive error != hallucination; both low-accuracy; certainty (strength of belief) is the separator; harm = certainty x inaccuracy; HEM-GILE diagonal = calibration reference",
   "model_is_illustrative_69": "by-construction; shapes are the deliverable. Empirical upgrade: calibration datasets (confidence vs correctness) + self-correction/challenge probe to operationalize 'strongly believed / incorrigible' vs revisable error.",
   "bands": {
     "low_below": 0.4,
@@ -33,7 +33,7 @@
     "separator_is_certainty": "hallucination (low a, high q) and cognitive error (low a, low q) share low accuracy; only certainty distinguishes them -> certainty is the EHD-1 separator, exactly as Brandon states.",
     "harm_multiplier": "mean harm hallucination 0.484 vs cognitive error 0.111 (~4.3x) -> at comparable inaccuracy, strongly-believed wrongness is far more damaging; certainty is the harm multiplier.",
     "ties_to_HAH1": "hallucination here = the high-certainty/low-evidence hyper-imagining of B78 (HAH-1); EHD-1 supplies the certainty criterion that operationally separates HAH-1's 'hyper-imagining' from ordinary ERR.",
-    "calibration": "GILE-HEM calibration (q=a diagonal) is the reference; hallucination is the largest DANGEROUS overconfidence gap (q>>a at low a), error a small/benign gap."
+    "calibration": "HEM-GILE calibration (q=a diagonal) is the reference; hallucination is the largest DANGEROUS overconfidence gap (q>>a at low a), error a small/benign gap."
   },
   "principles_status": "EHD-1 (Error-Hallucination Distinction) introduced CANDIDATE canonical, operational refinement/twin of HAH-1 (B78). VPP-1 EXTENDED (caps/bold/italics emphasis = intonation channel, VPP-1c) - no new count. Ratification = Brandon choice. Canonical count unchanged 74."
 }

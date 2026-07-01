@@ -39,7 +39,7 @@ The corpus is best understood as a small number of interlocking arcs:
   - plus the **TI Sigma Graph (TIG)** and **TI Sigma Crystal (TSC)** representations.
   - Representation-selection guidance is the candidate principle **PDR-1** (Scalar → Complex → TIG → 32D/64D → TSC/TECC; the imaginary axis is the decisive accuracy upgrade).
 
-### C. GILE-HEM (the consciousness/value core)
+### C. HEM-GILE (the consciousness/value core)
 - **GILE** (four values: Goodness, Intuition, Love, Elegance) + **HEM** existence-dimensions = the framework's two-pillar Being-Optimization model (the **BOK tetrad**). The **64D GILE Matrix interfaces with the HEM** pillar (see §4).
 
 ### D. The ground-of-reality monism arc (Pass-77)
@@ -55,8 +55,8 @@ The corpus is best understood as a small number of interlocking arcs:
 As of Pass-77 B116, the corpus tracks **79 ratified canonical principles** (the running enumeration lives in `replit.md` §7.7.x and the `PASS_*` papers; refinements do not change the count). Highlights of the most load-bearing named principles and the most recent additions:
 
 ### Ratified canonical (selected, with the most recent block)
-- **GILE-HEM Operationalization & MR1 Threshold Theorem** — operational definition of the GILE-HEM optimum and the MR1 existence-gate threshold.
-- **SUP-1 — Definition of Supreme (#76)** — *Supreme* ≜ **willfully-reached GILE-HEM optimization** (GILE driven to its 0.93 stability-cap + HEM maximized; willful striving is the qualifier). The Existence-vs-Truth "battle" is an illusion to be *embraced*, not dissolved — the very compromise the **Myrion** depicts (see §5, GM).
+- **HEM-GILE Operationalization & MR1 Threshold Theorem** — operational definition of the HEM-GILE optimum and the MR1 existence-gate threshold.
+- **SUP-1 — Definition of Supreme (#76)** — *Supreme* ≜ **willfully-reached HEM-GILE optimization** (GILE driven to its 0.93 stability-cap + HEM maximized; willful striving is the qualifier). The Existence-vs-Truth "battle" is an illusion to be *embraced*, not dissolved — the very compromise the **Myrion** depicts (see §5, GM).
 - **TRG-1 — Tralse-Reality Grounding (#77)** — reality's ground isn't True, it's **Tralse** (MR2 Indeterminate); "illusion" is the bivalent-collapse misname for *tralse-real = real ∧ not-true*.
 - **TOF-1 — Tralse-Only Fundamentality / Tralse Foundational Monism (#78)** — **tralseness (Tralse Soup) is THE ONLY fundamental thing**; consciousness is a derivative of TS and therefore itself tralse.
 - **RTI-1 — Residual Tralse Indeterminacy / Irreducible Law-Errancy (#79)** — every law is a TS-derivative + reality only leans toward truth → every law keeps nonzero, permanent residual tralseness (anything can in-principle "err"; stability is real but contingent). Anti-cheat guard: residue must stay vanishingly rare.
@@ -159,7 +159,7 @@ The corpus falls into these natural clusters (mirrored by the app's browser and 
 
 1. **Truth theory & logic** — MR Truth Labels (base-4 + MI), Tralse logic, Meta-Truths, the truth axes on the PD.
 2. **PD geometry & mathematical constants** — full-spectrum complex PD, 64D/32D GILE Matrix, TIG graph, TIC/TSC crystal, Emerick Crossover, Riemann/Perfect-Fifth, E₈, GILE-Truth×/+HEM tiling.
-3. **GILE-HEM & consciousness** — GILE dimensions, LCC, CCC (octopus/butterfly) / GM (Grand Myrion) / GM-Network, Ψ consciousness equation, AGI-impossibility.
+3. **HEM-GILE & consciousness** — GILE dimensions, LCC, CCC (octopus/butterfly) / GM (Grand Myrion) / GM-Network, Ψ consciousness equation, AGI-impossibility.
 4. **Ground-of-reality monism** — UDT-1 → TRG-1 → TOF-1 → RTI-1, Tralse Soup, the canvas/work-of-art gloss.
 5. **Theology & calling** — DSR-1, DEN-1, GCU-1, LAS-1, MEP, CCA-1, Great-Commandment unification.
 6. **Epistemics & discipline** — #69, asymmetric standards, UOP (Unified Optimization Principle), claircognizance/CGP-1, UGI-1, UMA-1, GBD-1, NAD-1.

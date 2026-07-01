@@ -2,13 +2,13 @@
 
 Per window (computed STRICTLY within the window slice -> no cross-window /
 cross-split bleed by construction), we:
-  1. infer the canonical 8-D GILE-HEM state (lcc_virus_gile_inference.py semantics),
+  1. infer the canonical 8-D HEM-GILE state (lcc_virus_gile_inference.py semantics),
   2. compute FULL PD (pd_real degree + pd_imag MI/Tralse axis) + zone,
   3. embed the window as a quantum state on the TI-Sigma Crystal and read off
      H_TSC spectral descriptors (Consciousness Hamiltonian),
   4. read the GILE-weighted TI-Sigma Graph algebraic connectivity (Fiedler).
 
-GILE-HEM dimension definitions (canonical docstrings):
+HEM-GILE dimension definitions (canonical docstrings):
   G  Goodness   = temporal stability of LCC coherence across sub-windows
   I  Intuition  = information density (normalized spectral entropy)
   L  Love       = cross-channel coupling strength (mean |corr| across channels)
@@ -82,7 +82,7 @@ def _spectral_purity(f, P):
 
 
 def gile_hem_from_window(seg, fs, n_sub=4):
-    """seg : (n_ch, w) slice of observed channels. Returns the 8-D GILE-HEM dict."""
+    """seg : (n_ch, w) slice of observed channels. Returns the 8-D HEM-GILE dict."""
     n_ch, w = seg.shape
     # --- per-channel coherence + temporal stability across sub-windows ---
     sub = max(8, w // n_sub)

@@ -1,4 +1,4 @@
-# Phase-1B re-test on the canonical GILE-HEM "Truth */+ Existence" (UOP J-score)
+# Phase-1B re-test on the canonical HEM-GILE "Truth */+ Existence" (UOP J-score)
 
 Per directive: **retire the legacy `M_r = L·E`** and re-run the Phase-1B reachability
 tests on the canonical UOP J-score (identical operationalization to Phase-1A

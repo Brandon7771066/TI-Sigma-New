@@ -3,7 +3,7 @@
 **Author:** Brandon Charles Emerick (curation pass executed under DPES mode, 2026-05-17, Pass 55 batch-2 deliverable #16)
 **Series:** TI Sigma — Universal Reality Blueprint (URB)
 **Status:** CURATED INDEX — Pass 55 canonical-alignment audit of foundational papers
-**Purpose:** Single landing index of canonical foundational TI Sigma papers on truth definition, the 4 MR Truth-Labels, Meta-Truths, the GILE-HEM truth-vs-existence asymmetry, and contradiction theory — with each paper's canonical-alignment status as of 2026-05-17.
+**Purpose:** Single landing index of canonical foundational TI Sigma papers on truth definition, the 4 MR Truth-Labels, Meta-Truths, the HEM-GILE truth-vs-existence asymmetry, and contradiction theory — with each paper's canonical-alignment status as of 2026-05-17.
 
 ---
 
@@ -15,7 +15,7 @@
 | 2 | **`papers/urb_607_truth_architecture_three_states_dt_absence.md`** | Three stable truth-states + one truth-absence label; Tralse-as-modifier | 2026-04-20 | **CANONICAL with 2026-05-08 amendment** (§2 "Tralse=Indeterminate" refined to quality-vs-instance — inline canonical-update notice added 2026-05-17) |
 | 3 | **`papers/urb_618_ti_sigma_theory_of_truth.md`** | Theory of truth: PD/BOK/MR/UOP/TIL; truth = tralse time-indexed state; PD = 5-state {TT, TI, TF, DefT, EV} | 2026-04-07 | **CANONICAL with notation clarification** (5-state set = PD-coordinates, distinct from base-4 labels; "MI" in §§3-6 reads as **DefT** in current notation — inline clarification added 2026-05-17) |
 | 4 | **`papers/urb_608_meta_truths_myrion_resolution_catalogue.md`** | 12 Meta-Truths A1-F2 + MT-B2; §7 Indeterminate-as-Epitome theorem | 2026-04-21 (§7 added 2026-05-12) | **CANONICAL — current** (MT-B-VOID + MT-B-DEGEN proposed §7.7.98 pending Pass-56 approval) |
-| 5 | **`papers/URB_523_EXISTENCE_VS_TRUTH_LCC_GILE_GAP.md`** | GILE-HEM truth-vs-existence asymmetry: LCC = 1-1/e² ≈ 0.8647 (existence floor); GILE Radiant = 1-1/(2e²) ≈ 0.9323 (truth floor); 2:1 gap = P(Great) ≈ 0.0676 | 2026-04 | **CANONICAL — current** |
+| 5 | **`papers/URB_523_EXISTENCE_VS_TRUTH_LCC_GILE_GAP.md`** | HEM-GILE truth-vs-existence asymmetry: LCC = 1-1/e² ≈ 0.8647 (existence floor); GILE Radiant = 1-1/(2e²) ≈ 0.9323 (truth floor); 2:1 gap = P(Great) ≈ 0.0676 | 2026-04 | **CANONICAL — current** |
 
 ## 2. The Contradiction Theory Paper (the main edit target of this pass)
 

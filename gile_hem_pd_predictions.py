@@ -1,5 +1,5 @@
 """
-URB #784 — GILE-HEM Ratio Modulation of PD Expression: empirical verification harness.
+URB #784 — HEM-GILE Ratio Modulation of PD Expression: empirical verification harness.
 
 Encodes the 96-cell prediction cube (8 axes x 4 rho-regimes x 3 PD-signs),
 provides classifiers for rho and PD, and runs a seed-observation corpus check
@@ -404,7 +404,7 @@ def cube_summary() -> dict:
 if __name__ == "__main__":
     summary = cube_summary()
     print("=" * 72)
-    print("URB #784 — GILE-HEM Ratio Modulation: Prediction Cube Summary")
+    print("URB #784 — HEM-GILE Ratio Modulation: Prediction Cube Summary")
     print("=" * 72)
     print(f"Boundaries: ET={summary['boundaries']['ET']:.4f}  "
           f"Verisyn={summary['boundaries']['verisyn']:.1f}  "

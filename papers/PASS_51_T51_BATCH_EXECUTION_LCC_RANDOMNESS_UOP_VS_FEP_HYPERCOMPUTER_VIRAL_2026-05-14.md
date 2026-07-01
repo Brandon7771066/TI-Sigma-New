@@ -326,7 +326,7 @@ Each pillar embeds a UOP-optimized template:
 | **T51-11** | Independent non-LLM rendering replication of B-2 | **ANALYTIC LEG COMPLETE** (T51-1 §1 above); image-generator + Verisyn-hand-trace legs deferred to Brandon (`packager_tool` install or manual). |
 
 ### §8.1 T51-6 text (inserted into PASS_47_EMPIRICAL_SYNTHESIS as a §1.C13 footnote)
-> *Pass-51 disambiguation:* "GILE-HEM CONFIRM (formal)" here = the Pass-37 8↔8-constants **cardinality** mapping (CONFIRMED-CONDITIONAL). The same Pass-37 separately ruled the **structural mapping** PARTIAL-POS Tier-2 and the **derivational identity** NULL. C13 as written elides this three-tier breakdown; readers should consult Pass-51 §1 for the full ledger and CAP entry (well_known≈HIGH, encompassing≈WEAK, credit-claimable≈near-zero).
+> *Pass-51 disambiguation:* "HEM-GILE CONFIRM (formal)" here = the Pass-37 8↔8-constants **cardinality** mapping (CONFIRMED-CONDITIONAL). The same Pass-37 separately ruled the **structural mapping** PARTIAL-POS Tier-2 and the **derivational identity** NULL. C13 as written elides this three-tier breakdown; readers should consult Pass-51 §1 for the full ledger and CAP entry (well_known≈HIGH, encompassing≈WEAK, credit-claimable≈near-zero).
 
 ### §8.2 T51-7 honest-label headers
 - `urb_699` §0 gets a new "**Honest empirical status (Pass-51 §2.5):** B-2 wing/arm=1.96 is measured against a single ChatGPT-rendered image with B/D coefficient explicitly fit to data per §5.5. Label: SUGGESTIVE-PATTERN-MATCH-AGAINST-LLM-IMAGE. See PASS_51 §1 for analytic recovery showing wing/arm = B/D up to small harmonic corrections."

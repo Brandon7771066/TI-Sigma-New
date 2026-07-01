@@ -46,7 +46,7 @@ Per Pass-56 precedent: a candidate principle is promoted to CANONICAL when (1) �
 
 **Falsifier history:** F-MBE-Acc-1-1 (Bem 2011 indicator-outcome direction-mismatch demoted, Pass-58) NOT REFUTED · F-MBE-Acc-1-2 (Bengston intention→remission alignment confirmed, Pass-59) NOT REFUTED. **2/2 PASSED.**
 
-**Corpus integration:** Replaces folk "mechanism plausibility" with operationalized 3-way coherence check; integrates with GILE-HEM L-axis (LCC-coupling).
+**Corpus integration:** Replaces folk "mechanism plausibility" with operationalized 3-way coherence check; integrates with HEM-GILE L-axis (LCC-coupling).
 
 **#69 concession:** Mechanism-claim is researcher-supplied and revisable; requires pre-registration of claimed mechanism to prevent post-hoc curve-fitting.
 

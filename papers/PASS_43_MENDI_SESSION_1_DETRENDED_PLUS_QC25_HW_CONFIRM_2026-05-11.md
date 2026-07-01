@@ -85,7 +85,7 @@ The script's `_provenance` block records that thresholds were frozen before Welc
 - **Per-stimulus replication**: 1/2 for breath-hold, 0/2 for arithmetic.
 - **Cross-session replication**: NOT YET DONE — n=1 session. Pre-Pass-44 priority: ≥3 more sessions before any quantitative claim.
 - **Cannot distinguish**: HbO₂ vs HbR vs absolute blood volume (1–2 wavelength caveat persists).
-- **Cannot claim**: any GILE-HEM / URB-828 endorsement. This is hardware-functionality + drift-correction validation only.
+- **Cannot claim**: any HEM-GILE / URB-828 endorsement. This is hardware-functionality + drift-correction validation only.
 - **Drift is the dominant signal** in this session. Future sessions should consider shorter blocks (e.g., 10-min protocol with 2 stimuli) to reduce drift confound, and/or fit drift on baseline+recovery segments only (to avoid overfitting through stimulus epochs).
 
 ## §3 — qc25 IBMQ hardware CONFIRM (Pass-31 D2-HYBRID 5-qubit instantiation)

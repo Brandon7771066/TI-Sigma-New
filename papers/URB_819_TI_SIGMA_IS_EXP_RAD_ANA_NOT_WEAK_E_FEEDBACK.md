@@ -142,7 +142,7 @@ The TI Sigma hard core consists of:
 
 - **The 5-valued truth system** (T, F, t, f, MI): not 2-valued bivalence, not 3-valued (Łukasiewicz, Kleene), not fuzzy degrees. The Meta-Indeterminate (MI) value is the distinctive commitment that allows the framework to handle phenomena that bivalent and standard 3-valued logics cannot.
 - **The MR (Myrion Resolution) protocol**: the explicit procedure for collapsing tralse states under suitable conditions; the MR-relaxation contexts (MRC) where MI tolerance is elevated.
-- **The GILE weights** (Goodness, Intuition, Love, Environment): the philosophical-anchor commitment that derived constructs (TJ, GILE-HEM ratio, the Mood Amplifier scoring) must be expressible in terms of these four dimensions.
+- **The GILE weights** (Goodness, Intuition, Love, Environment): the philosophical-anchor commitment that derived constructs (TJ, HEM-GILE ratio, the Mood Amplifier scoring) must be expressible in terms of these four dimensions.
 - **The constitutive vs corrective polarity**: the URB #816 commitment that languages are constitutively tralse and that bivalent semantics is a corrective post-hoc imposition rather than a foundational fact.
 - **The tralse predicate**: the meta-level commitment that propositions can have multiple truth values simultaneously and that this is a foundational property of representation, not a pathology.
 

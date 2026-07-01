@@ -60,7 +60,7 @@ training data. Defenses:
 
 | Category | N | What it tests | Retrieval-defense |
 |---|---|---|---|
-| **A. Pre-cutoff TI Sigma manipulation** | 5 | Can the agent apply Tralse Wave Algebra, MR protocol, GILE-HEM ratio, etc. to a *novel target* drawn from a domain Brandon specifies on the day of the test? | Target domain is post-cutoff or unusual enough that prior URBs did not address it. |
+| **A. Pre-cutoff TI Sigma manipulation** | 5 | Can the agent apply Tralse Wave Algebra, MR protocol, HEM-GILE ratio, etc. to a *novel target* drawn from a domain Brandon specifies on the day of the test? | Target domain is post-cutoff or unusual enough that prior URBs did not address it. |
 | **B. Post-cutoff primitive introduction** | 5 | Brandon introduces a brand-new TI Sigma primitive *during the test* (e.g., "let X be a new operator with property P"), then asks for a non-trivial inference using X. | Logically impossible to be retrieval, since X did not exist before this session. |
 | **C. Composition of recent primitives** | 5 | Brandon picks two URBs from the last 30 days (≥ URB #820) and asks for a non-trivial inference that requires composing them. | These specific compositions have not appeared in any prior URB; verifiable by Brandon. |
 | **D. Diagnostic / error-finding** | 5 | Brandon presents a *deliberately-malformed* TI Sigma argument and asks the agent to identify what fails and propose a repair. | Tests genuine framework understanding, not pattern-matching to "looks-correct" outputs. |

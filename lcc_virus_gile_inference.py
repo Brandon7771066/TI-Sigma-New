@@ -1,5 +1,5 @@
 """
-LCC Virus GILE-HEM Inference Engine
+LCC Virus HEM-GILE Inference Engine
 =====================================
 URB #644 — Brandon Emerick | TI Sigma Research | April 2026
 
@@ -8,9 +8,9 @@ CORE INSIGHT:
   is already established (URBs #612–#615). This module uses those exact thresholds
   to make the LCC Virus GILE-aware: every resonance computation now simultaneously
   infers the GILE truth-state of the target i-cell and tracks how all 8
-  GILE-HEM dimensions evolve over time.
+  HEM-GILE dimensions evolve over time.
 
-THE 8 GILE-HEM DIMENSIONS OF EVERY I-CELL:
+THE 8 HEM-GILE DIMENSIONS OF EVERY I-CELL:
   GILE-G  — Goodness / coherence temporal stability (is the i-cell stable?)
   GILE-I  — Intuition / information density (how rich is the pattern?)
   GILE-L  — Love / cross-i-cell coupling strength (how connected?)
@@ -29,17 +29,17 @@ GILE TRUTH THRESHOLDS (from URBs #612–#615):
 
 KEY ARCHITECTURAL ADVANCE:
   The LCC Virus previously: discovered causal correlations between streams.
-  After this upgrade: discovers causal correlations AND infers GILE-HEM truth-state
+  After this upgrade: discovers causal correlations AND infers HEM-GILE truth-state
   from every correlation, tracks its temporal evolution, runs Myrion Resolution
   when dimensions conflict, and propagates GILE truth changes through the network.
 
   For the first time: the virus can tell you not just THAT two i-cells are related,
-  but WHAT their GILE-HEM state is, HOW IT IS CHANGING, and WHETHER a DT risk exists.
+  but WHAT their HEM-GILE state is, HOW IT IS CHANGING, and WHETHER a DT risk exists.
 
 MYRION RESOLUTION INTEGRATION:
   When multiple resonance streams give conflicting GILE-dimension assessments:
   Level 1 MR: DT screen (HEM-D2 > 0.65 → pause, flag for human review)
-  Level 2 MR: GILE-HEM weighted integration (resolve contradictions by GILE weights)
+  Level 2 MR: HEM-GILE weighted integration (resolve contradictions by GILE weights)
   Level 3 MR: Convergence confirmation (dominant truth-state > 0.45 → mr_resolved)
 """
 
@@ -136,12 +136,12 @@ def lcc_to_gile_truth(r: float, hem_d2: float = 0.0) -> GILETruthState:
         return GILETruthState.MOTT
 
 
-# ─── 8 GILE-HEM Dimensions ─────────────────────────────────────────────────
+# ─── 8 HEM-GILE Dimensions ─────────────────────────────────────────────────
 
 @dataclass
 class GILEHEMState:
     """
-    The complete 8-dimensional GILE-HEM state of a single i-cell at one moment.
+    The complete 8-dimensional HEM-GILE state of a single i-cell at one moment.
 
     The four GILE dimensions (inner BOK loops — GILE operates as the organizing
     structure at the Radiant level and above):
@@ -255,16 +255,16 @@ class GILEHEMState:
         }
 
 
-# ─── GILE-HEM Timeline ───────────────────────────────────────────────────────
+# ─── HEM-GILE Timeline ───────────────────────────────────────────────────────
 
 @dataclass
 class GILEHEMTimeline:
     """
-    Ordered history of GILE-HEM states for one i-cell over time.
+    Ordered history of HEM-GILE states for one i-cell over time.
     Detects truth-state transitions and GILE dimension trends.
 
     KEY: This is what enables 'figuring out the holistic evolution of all
-    8 GILE-HEM dimensions of every i-cell over time.'
+    8 HEM-GILE dimensions of every i-cell over time.'
     """
     icell_name: str
     states: List[GILEHEMState] = field(default_factory=list)
@@ -292,7 +292,7 @@ class GILEHEMTimeline:
 
     def gile_velocity(self) -> dict:
         """
-        Rate of change of each GILE-HEM dimension per observation.
+        Rate of change of each HEM-GILE dimension per observation.
         Positive = dimension growing. Negative = dimension declining.
         """
         if len(self.states) < 2:
@@ -353,7 +353,7 @@ class GILEHEMTimeline:
 
     def predict_next_state(self) -> dict:
         """
-        Linear extrapolation of GILE-HEM dimensions to next observation.
+        Linear extrapolation of HEM-GILE dimensions to next observation.
         Returns predicted state values with confidence interval (±1 step velocity).
         """
         if len(self.states) < 2:
@@ -402,9 +402,9 @@ class GILEHEMTimeline:
 
 class GILEInferenceEngine:
     """
-    Infers all 8 GILE-HEM dimensions of an i-cell from raw LCC resonance data.
+    Infers all 8 HEM-GILE dimensions of an i-cell from raw LCC resonance data.
 
-    Called at every step of the LCC Virus to update the GILE-HEM state of
+    Called at every step of the LCC Virus to update the HEM-GILE state of
     both the target i-cell and any related i-cells discovered via propagation.
 
     DESIGN PRINCIPLE: Each dimension maps to a specific property of the
@@ -647,10 +647,10 @@ class GILEInferenceEngine:
 
     def myrion_resolution(self, state: GILEHEMState) -> GILEHEMState:
         """
-        Apply 3-level Myrion Resolution to resolve GILE-HEM contradictions.
+        Apply 3-level Myrion Resolution to resolve HEM-GILE contradictions.
 
         Level 1: DT screen — if HEM-D2 > 0.65, flag and return (don't act).
-        Level 2: GILE-HEM integration — resolve by weighted GILE composite.
+        Level 2: HEM-GILE integration — resolve by weighted GILE composite.
         Level 3: Convergence — confirm if dominant truth-state weight > 0.45.
 
         MR is NOT algorithmic in its generative mode — but here we implement
@@ -667,7 +667,7 @@ class GILEInferenceEngine:
             mr_state.truth_state = GILETruthState.MOTT
             return mr_state
 
-        # Level 2: GILE-HEM weighted integration
+        # Level 2: HEM-GILE weighted integration
         composite = state.gile_composite
         hem = state.hem_score
 
@@ -708,7 +708,7 @@ class GILEInferenceEngine:
         contradicting_ids: Optional[List[str]] = None,
     ) -> GILEHEMState:
         """
-        Infer the complete 8-dimensional GILE-HEM state from LCC Virus data.
+        Infer the complete 8-dimensional HEM-GILE state from LCC Virus data.
 
         This is called at the end of each LCC Virus step (Resonate, Listen,
         Propagate, Expand) with the data produced by that step.
@@ -739,7 +739,7 @@ class GILEInferenceEngine:
         Returns
         -------
         GILEHEMState
-            Complete 8-dimensional GILE-HEM state with truth-state classification.
+            Complete 8-dimensional HEM-GILE state with truth-state classification.
         """
         timeline = self.get_timeline(icell_name)
 
@@ -802,12 +802,12 @@ class GILEInferenceEngine:
         return state
 
     def all_summaries(self) -> List[dict]:
-        """Return GILE-HEM timeline summaries for all tracked i-cells."""
+        """Return HEM-GILE timeline summaries for all tracked i-cells."""
         return [timeline.summary() for timeline in self._history.values()]
 
     def network_truth_map(self) -> dict:
         """
-        Map of all i-cells' current GILE-HEM truth-states.
+        Map of all i-cells' current HEM-GILE truth-states.
         Gives a holistic snapshot of the entire network's GILE state.
         """
         result = {}
@@ -939,7 +939,7 @@ class GILEEnrichedLCCVirus:
     """
     Drop-in upgrade layer for LCCVirus / LCCVirusFramework.
 
-    Wraps any existing LCC Virus instance and adds GILE-HEM inference
+    Wraps any existing LCC Virus instance and adds HEM-GILE inference
     at every step without changing the existing virus behavior.
 
     Usage:
@@ -952,7 +952,7 @@ class GILEEnrichedLCCVirus:
         # Run normally — GILE inference happens automatically at each step
         result = virus.run(question, template, data_dict)
 
-        # Access GILE-HEM state for any i-cell
+        # Access HEM-GILE state for any i-cell
         print(virus.gile_engine.get_timeline("target_question").summary())
 
         # Get network-wide GILE truth map
@@ -973,7 +973,7 @@ class GILEEnrichedLCCVirus:
 
     def step2_resonate_gile(self, target_name: str, resonating_results: list) -> GILEHEMState:
         """
-        After step2_resonate: infer GILE-HEM from resonance scores.
+        After step2_resonate: infer HEM-GILE from resonance scores.
         The resonating_results are ResonanceResult objects from the base virus.
         """
         r_scores = [res.resonance_score for res in resonating_results]
@@ -997,7 +997,7 @@ class GILEEnrichedLCCVirus:
         self, icell_name: str, noise_sig, r_score: float
     ) -> GILEHEMState:
         """
-        After step3_listen: infer GILE-HEM from full noise signature.
+        After step3_listen: infer HEM-GILE from full noise signature.
         noise_sig is a NoiseSignature from the base virus.
         """
         self._record_resonance(icell_name, r_score)
@@ -1017,7 +1017,7 @@ class GILEEnrichedLCCVirus:
         self, icell_name: str, noise_sig, related_icells: list
     ) -> GILEHEMState:
         """
-        After step4_propagate: update GILE-HEM with coupling data.
+        After step4_propagate: update HEM-GILE with coupling data.
         related_icells is a list of (ICell, score) from base virus.
         """
         coupled_scores = [score for _, score in related_icells]
@@ -1053,9 +1053,9 @@ class GILEEnrichedLCCVirus:
         resonance_threshold: float = 0.6,
     ) -> dict:
         """
-        Full LCC Virus run with GILE-HEM inference at every step.
+        Full LCC Virus run with HEM-GILE inference at every step.
 
-        Returns the base virus result PLUS the complete GILE-HEM analysis
+        Returns the base virus result PLUS the complete HEM-GILE analysis
         of the target i-cell and all discovered i-cells.
         """
         # Step 1: Seed
@@ -1120,13 +1120,13 @@ class GILEEnrichedLCCVirus:
                     n_library_icells=len(getattr(self.virus, 'icell_library', [])),
                 )
 
-        # ── Final GILE-HEM output ─────────────────────────────────────────────
+        # ── Final HEM-GILE output ─────────────────────────────────────────────
         target_timeline = self.gile_engine.get_timeline(question)
         network_map = self.gile_engine.network_truth_map()
 
         if self.verbose:
             print(f"\n{'═'*60}")
-            print(f"  GILE-HEM FINAL STATE: {question}")
+            print(f"  HEM-GILE FINAL STATE: {question}")
             print(f"{'═'*60}")
             ts = target_timeline.summary()
             curr = ts.get('current', {})
@@ -1154,7 +1154,7 @@ class GILEEnrichedLCCVirus:
         }
 
 
-# ─── Standalone: GILE-HEM Inference from Any Signal Pair ────────────────────
+# ─── Standalone: HEM-GILE Inference from Any Signal Pair ────────────────────
 
 def infer_gile_hem_from_signals(
     name_a: str,
@@ -1164,7 +1164,7 @@ def infer_gile_hem_from_signals(
     existing_engine: Optional[GILEInferenceEngine] = None,
 ) -> Tuple[GILEHEMState, GILEHEMState, float]:
     """
-    Convenience function: infer GILE-HEM states for two signals from their
+    Convenience function: infer HEM-GILE states for two signals from their
     LCC resonance and noise structure.
 
     Useful for direct application outside the full LCC Virus loop.
@@ -1241,7 +1241,7 @@ if __name__ == "__main__":
     import sys
     np.random.seed(42)
     print("\n" + "═" * 65)
-    print("  LCC Virus GILE-HEM Inference Engine — URB #644 Demo")
+    print("  LCC Virus HEM-GILE Inference Engine — URB #644 Demo")
     print("═" * 65)
 
     # Simulate 3 i-cells with different LCC truth states
@@ -1259,7 +1259,7 @@ if __name__ == "__main__":
     engine = GILEInferenceEngine()
     propagator = GILETruthPropagator(engine)
 
-    print("\n[1/4] Inferring GILE-HEM states from pairwise LCC resonance...")
+    print("\n[1/4] Inferring HEM-GILE states from pairwise LCC resonance...")
 
     state_a, state_b, r_ab = infer_gile_hem_from_signals(
         "BEC_icell", signal_a, "Supersolid_icell", signal_b, engine
@@ -1271,7 +1271,7 @@ if __name__ == "__main__":
     print(f"\n  LCC R(A,B) = {r_ab:.4f}  → {state_a.truth_state.value} / {state_b.truth_state.value}")
     print(f"  LCC R(B,C) = {r_bc:.4f}  → {state_b2.truth_state.value} / {state_c.truth_state.value}")
 
-    print("\n[2/4] GILE-HEM state of each i-cell:")
+    print("\n[2/4] HEM-GILE state of each i-cell:")
     for state in [state_a, state_b, state_c]:
         d = state.to_dict()
         print(f"\n  {d['icell']}")
@@ -1306,8 +1306,8 @@ if __name__ == "__main__":
               f"traj={info['trajectory']:<15}  predict→{info['prediction']}")
 
     print("\n" + "═" * 65)
-    print("  URB #644 — GILE-HEM Inference Engine operational")
+    print("  URB #644 — HEM-GILE Inference Engine operational")
     print("  Key advance: LCC Virus now infers holistic 8-dimensional")
-    print("  GILE-HEM truth-state at every step, tracking temporal")
+    print("  HEM-GILE truth-state at every step, tracking temporal")
     print("  evolution and propagating truth changes through the network.")
     print("═" * 65 + "\n")

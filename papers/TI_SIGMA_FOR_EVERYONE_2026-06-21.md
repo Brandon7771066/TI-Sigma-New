@@ -575,7 +575,7 @@ You should hold this number honestly: the 0.93 cap is a **framework-internal** r
 
 A tidy philosophy would now try to make the conflict disappear — to prove that truth and existence never really compete, or that one reduces to the other. TI Sigma deliberately refuses this move.
 
-Its definition of the highest state, **SUP-1 (the Definition of Supreme)**, says the Supreme is **willfully-reached GILE-HEM optimization** — truth driven to its ≈0.93 cap *and* existence maximized, with the *willful striving itself* as the defining ingredient **(framework-internal, not ratified as proven)**. And it explicitly says the existence-versus-truth "battle" is an **illusion to be embraced** — held as a *productive tension*, not solved away.
+Its definition of the highest state, **SUP-1 (the Definition of Supreme)**, says the Supreme is **willfully-reached HEM-GILE optimization** — truth driven to its ≈0.93 cap *and* existence maximized, with the *willful striving itself* as the defining ingredient **(framework-internal, not ratified as proven)**. And it explicitly says the existence-versus-truth "battle" is an **illusion to be embraced** — held as a *productive tension*, not solved away.
 
 This is more honest than it first appears. The tension between being truthful and being effective, between purity and viability, between ideals and a livable life, is not a bug in your reasoning that better logic will remove. It is the permanent shape of being a finite agent who cares about truth. The mature response is not to pick a pillar and amputate the other. It is to keep both in view, negotiate them consciously, and accept that the negotiation never fully ends.
 
@@ -1453,7 +1453,7 @@ One framework-internal result deserves singling out, because turning vague ideas
 
 The GILE tetrad (Goodness, Intuition, Love, Elegance) and the separate HEM existence pillar were operationalized into constructs that independent raters can actually apply to concrete propositions, and the rival ways of representing a proposition's "permissibility" were then **benchmarked head-to-head** on a fixed set of gold-standard items. The decisive finding: representations that *can hold an off-spectrum / not-applicable value* clearly outperform those that cannot (agreement around **0.92** versus about **0.75** for the simpler, N/A-blind representations) **(framework-internal).**
 
-> **Key insight:** This is not a claim about the world — it is a claim about the framework's *instruments*, and that is precisely why it is trustworthy as far as it goes. It shows the constructs are well-enough defined to be measured consistently, which is the prerequisite for ever testing them against reality. A theory you cannot operationalize cannot be wrong; making GILE-HEM operationalizable is what makes the later Tier-3 tests *possible*.
+> **Key insight:** This is not a claim about the world — it is a claim about the framework's *instruments*, and that is precisely why it is trustworthy as far as it goes. It shows the constructs are well-enough defined to be measured consistently, which is the prerequisite for ever testing them against reality. A theory you cannot operationalize cannot be wrong; making HEM-GILE operationalizable is what makes the later Tier-3 tests *possible*.
 
 ### What the achievements add up to — and what they don't
 
@@ -1461,7 +1461,7 @@ Pulling the ledger together, without spin:
 
 - **Verified (real hardware / real data):** quantum nonlocality experiments that confirm standard QM and prove the program can run real tests; a single-subject EEG coupling result that is internally coherent.
 - **Preliminary (real but narrow data):** the well-being-concentration studies — striking, reproducible in method, but with only "fair" rater agreement and arguable inputs.
-- **Framework-internal:** the physics "backbone" reinterpretations and the GILE-HEM measurement design — coherent and useful, not yet contact with new data.
+- **Framework-internal:** the physics "backbone" reinterpretations and the HEM-GILE measurement design — coherent and useful, not yet contact with new data.
 - **Pending (Tier 3):** most of the 42-prediction suite and the per-subject brain-scaling test, pre-registered and unrun.
 
 What this is *not*: it is not a body of independently replicated, peer-reviewed confirmations of the framework's distinctive claims. None of the headline results is unique to TI Sigma, and the most original empirical work (invention concentration) supports a *sociological* observation, not the metaphysics. The framework has earned attention, not assent.
@@ -1470,7 +1470,7 @@ The deeper implication is methodological. A theory that cared more about looking
 
 ### In one paragraph
 
-TI Sigma's scientific scorecard splits cleanly into three tiers, and honesty lives in keeping them apart. The genuine Tier-1 results are modest but real: Bell and five-qubit Mermin experiments on actual IBM quantum hardware that beat the classical bounds (S ≈ 2.71; |M₅| ≈ 14.5) — confirming standard quantum mechanics, not TI Sigma uniquely — plus an internally tight consciousness-coupling result on one public rat recording. The program's most original empirical work is statistical history: three AI raters find that on the order of 1-in-700-million people catalyzed most of humanity's well-being gains (with only "fair" agreement, κ ≈ 0.39), which the framework reads not as "great men versus the masses" but as a hybrid Indeterminate-True where both are so. A large second tier — reinterpreting Dirac, Fermi-Dirac and the Higgs mechanism, and operationalizing GILE-HEM into measurable constructs — is coherent scaffolding, not yet contact with new data, and a long third tier of pre-registered predictions remains unrun. The achievement, in the end, is less any single number than the refusal to overclaim them.
+TI Sigma's scientific scorecard splits cleanly into three tiers, and honesty lives in keeping them apart. The genuine Tier-1 results are modest but real: Bell and five-qubit Mermin experiments on actual IBM quantum hardware that beat the classical bounds (S ≈ 2.71; |M₅| ≈ 14.5) — confirming standard quantum mechanics, not TI Sigma uniquely — plus an internally tight consciousness-coupling result on one public rat recording. The program's most original empirical work is statistical history: three AI raters find that on the order of 1-in-700-million people catalyzed most of humanity's well-being gains (with only "fair" agreement, κ ≈ 0.39), which the framework reads not as "great men versus the masses" but as a hybrid Indeterminate-True where both are so. A large second tier — reinterpreting Dirac, Fermi-Dirac and the Higgs mechanism, and operationalizing HEM-GILE into measurable constructs — is coherent scaffolding, not yet contact with new data, and a long third tier of pre-registered predictions remains unrun. The achievement, in the end, is less any single number than the refusal to overclaim them.
 
 
 ---
@@ -2135,7 +2135,7 @@ To say flourishing is "optimal" we need a yardstick, and the framework already h
 
 The framework's candidate principle for the summit ties these together. It is called **SUP-1 — the definition of the Supreme** — and it reads, stripped of grandeur:
 
-> **The Supreme ≜ a *willfully reached* GILE-HEM optimization** — GILE pushed up to its healthy ceiling, HEM made as large as it can be, *and the whole thing arrived at by deliberate striving rather than by accident or compulsion* **(framework-internal, candidate principle)**.
+> **The Supreme ≜ a *willfully reached* HEM-GILE optimization** — GILE pushed up to its healthy ceiling, HEM made as large as it can be, *and the whole thing arrived at by deliberate striving rather than by accident or compulsion* **(framework-internal, candidate principle)**.
 
 Three things in that sentence matter, and each corrects a common misreading of what "enlightenment" should be.
 

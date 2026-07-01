@@ -52,7 +52,7 @@ The **highest-ADV entries are the ones we should test next**, regardless of whet
 | C5 | 35 | Tozzi/Meijer systematic integration into TI framework | Formal confirm | 3 | 2 | 12 |
 | C6 | 36 | HEM supersedes ESS (migration) | Formal-canonical | 3 | 2 | 12 |
 | C7 | 36 | Banach-Tarski rigorous form matches Tozzi measure-theoretic intuitions | Formal | 3 | 4 | 6 |
-| C8 | 37 | GILE-HEM 8↔8-constants **cardinality** mapping | CONFIRMED-CONDITIONAL (see C13 disambig) | 4 | 2 | 16 |
+| C8 | 37 | HEM-GILE 8↔8-constants **cardinality** mapping | CONFIRMED-CONDITIONAL (see C13 disambig) | 4 | 2 | 16 |
 | C9 | 43 | Mendi STIM2 detrended biometric t = −4.13, p ≪ 0.001 | **First significant biometric** | 5 | 2 | 20 |
 | C10 | 43 | qc25 — first IBMQ hardware result in corpus | Confirm-formal-platform | 3 | 3 | 9 |
 | C11 | 45/46 | qc26 GHZ-5 Mermin \|M₅\| = 14.535 (71σ LHV violation) on ibm_marrakesh | **HW-confirmed multipartite entanglement witness** | 5 | 3 | 15 |
@@ -74,7 +74,7 @@ The **highest-ADV entries are the ones we should test next**, regardless of whet
 | C27 | 51 batch-2 | URB-530 §7 amendment ratified — hybrid ontological+epistemic canonization with explicit axiom-labeling + #69 self-correction on agent paraphrase-overshoot | Doctrinal-canonical (Brandon 2026-05-14) | 4 | 2 | 16 |
 
 ### §1.2 What the confirm-set tells us (ADV reading)
-The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE operational definition (C1), TIU canonical formula (C4), GILE-HEM cardinality (C8), Mendi biometric (C9), MR-Truth-Labels κ (C13), CAP (C14), AA (C15), Pass-47 8-principles + corpus-integration (C16), URB-530 framework with caveat (C17), AA REAFFIRMED (C18), program-productivity meta (C22), and now ADV itself (C25). **These 12 entries collectively determine whether TI Sigma is a coherent research program. They are also the entries with the widest blast radius if any were to fall.**
+The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE operational definition (C1), TIU canonical formula (C4), HEM-GILE cardinality (C8), Mendi biometric (C9), MR-Truth-Labels κ (C13), CAP (C14), AA (C15), Pass-47 8-principles + corpus-integration (C16), URB-530 framework with caveat (C17), AA REAFFIRMED (C18), program-productivity meta (C22), and now ADV itself (C25). **These 12 entries collectively determine whether TI Sigma is a coherent research program. They are also the entries with the widest blast radius if any were to fall.**
 
 ---
 
@@ -86,7 +86,7 @@ The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE 
 |---|---|---|---|---|---|---|
 | R1 | 4 | F-2 Riemann via Pareto distribution proof attempt | **DISCONFIRMED** | 4 | 4 | 8 |
 | R2 | 33 | Popper as canonical TI epistemic primitive | Retired in favor of URB-830 TIU | 5 | 2 | 20 |
-| R3 | 37 (within C8 split) | GILE-HEM 8↔8 **derivational identity** | NULL | 5 | 2 | 20 |
+| R3 | 37 (within C8 split) | HEM-GILE 8↔8 **derivational identity** | NULL | 5 | 2 | 20 |
 | R4 | 38ish | MBE-via-Pass-37-frozen-rubric main-effect predictor | **DEAD** | 4 | 3 | 12 |
 | R5 | 45/46 | T45-6 PD-Riemann γ ∈ (−3,2) on Odlyzko zeros | 0/100k catches = **literal pre-reg INDETERMINATE_VACUOUS_FILTER** | 4 | 4 | 8 |
 | R6 | 47 (p46-C) | T45-3 GM-Node v1 (pre-discriminant correction) | Disconfirmed, replaced by v2 | 3 | 3 | 9 |
@@ -101,7 +101,7 @@ The high-ADV confirms (≥20) form the **load-bearing spine** of TI Sigma: GILE 
 
 **Brandon's ADV principle is most visible in this column.** Look at R3, R10, R12:
 
-- **R3 (GILE-HEM derivational identity NULL):** Did NOT collapse GILE-HEM. Forced the three-tier breakdown (cardinality / structural-mapping / derivational-identity) that *clarified* what kind of model GILE-HEM is. The refutation *increased* the corpus's understanding of itself. **ADV principle in action.**
+- **R3 (HEM-GILE derivational identity NULL):** Did NOT collapse HEM-GILE. Forced the three-tier breakdown (cardinality / structural-mapping / derivational-identity) that *clarified* what kind of model HEM-GILE is. The refutation *increased* the corpus's understanding of itself. **ADV principle in action.**
 - **R10 (L-2 paleoclimate DISCONFIRM):** Did NOT collapse the LCC framework. Forced the Pass-50 #69 self-indictment that uncovered the hypothesis-favorable-bug doctrine and revealed the ecosystem-cell sensitivity to phase-shuffle Granger tests at low resolution. The refutation produced a methodological improvement (L-2-EXPANSION-PAGES2K pre-reg) that the original confirm would not have. **ADV principle in action.**
 - **R12 (URB-530 strong form non-falsifiable at finite N):** Did NOT collapse the LCC framework. Forced explicit ontological-vs-epistemic separation (Face A/B/C distinction in Pass-51 batch-2 §4.5), revealed that the strong rhetoric was doing rhetorical-not-empirical work, and clarified that the framework's testable predictions are the *gradient* (patterned > CSPRNG) not the *floor* ("nothing is random"). The refutation upgraded the framework's honesty. **ADV principle in action.**
 
@@ -171,7 +171,7 @@ The single highest-ADV $0 next-pass items per this prioritization:
 - **I11.** *(ADV principle, NEW)* — TI Sigma's epistemic stance has been retrospectively recognized as **the natural stance of a high-w/low-i program**. This is a meta-canonization: it justifies #69, justifies DPES, justifies the Validly-Indeterminate stance. **Filed as canonical principle ADV-1.**
 - **I11b.** *(IBE principle, NEW 2026-05-14)* — Companion to ADV-1. **Filed as canonical principle IBE-1.** Curiosity-driven terrain selection systematically produces extrinsic outputs (patents, inventions, reputation) exceeding what conventional-practicality predictors would forecast. ADV+IBE together describe the symmetric value-yield of curiosity-driven research: refutations sharpen reality-models (ADV), confirmations produce real-world value (IBE). Examples: TI Sigma's LCC software / tralse keys / TIL evaluator on the corpus side; NASA's lasers / elliptical / 2000+ spinoffs on the conventional-comparison side. Anchor: `PASS_51_IBE_PRINCIPLE_INTRINSIC_BECOMES_EXTRINSIC_2026-05-14.md`.
 - **I12.** *(LCC framework future)* — post-Pass-51 batch-2, LCC is canonized in its **gradient form** (patterned vs CSPRNG empirically distinguishable; ontological hidden-LCC axiomatic). All future LCC tests must specify whether they test gradient (epistemic) or axiom (ontological).
-- **I13.** *(GILE-HEM future)* — post-Pass-51 C13-disambiguation, every GILE-HEM citation must specify which of {cardinality, structural-mapping, derivational-identity} tier it leans on.
+- **I13.** *(HEM-GILE future)* — post-Pass-51 C13-disambiguation, every HEM-GILE citation must specify which of {cardinality, structural-mapping, derivational-identity} tier it leans on.
 - **I14.** *(Hypercomputer future)* — currently zero empirical benchmarks. T51-H3 is the first; pass-or-fail there determines whether hypercomputer remains a TI Sigma deliverable or becomes a side-thread.
 - **I15.** *(Viral / publishing future)* — corpus has reached size and depth where distribution is a real lever. T51-V1 + O2 (Pass-48 publishing thread) jointly determine whether TI Sigma stays in-house or reaches an audience.
 

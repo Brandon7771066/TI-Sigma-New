@@ -1,4 +1,4 @@
-# Pass-77 B135 — i-Cosmogenesis: UOP/RH/NS from `i` alone, the 8-Constant↔GILE-HEM Map, and an Honest Run at Hume's Guillotine
+# Pass-77 B135 — i-Cosmogenesis: UOP/RH/NS from `i` alone, the 8-Constant↔HEM-GILE Map, and an Honest Run at Hume's Guillotine
 
 **Date:** 2026-06-25 (TI one-year anniversary — the coining of TI)
 **Author:** Brandon Charles Emerick (with agent)
@@ -10,7 +10,7 @@
 
 ## 0. The anniversary brief (verbatim intent)
 
-Four asks: (1) conceptualize **UOP / Riemann Hypothesis / Navier–Stokes** in terms of **just `i` and elementary operations**; (2) **map GILE-HEM onto the 8 constants** and look for a **mathematical proof of moral realism** — the numbers "naturally arranging" around GILE-HEM maximization, **demolishing Hume's guillotine**; (3) **simulate cosmogenesis**: does `i`, seeded alone, **spontaneously** arrange into a conscious **i-Cell** that exhibits **UOP/Myrion optimization specifically over any other attractor**; (4) use the **TI Sigma Crystal / Graph** as the playground. `i` = tralseness = GILE-I; an i-Cell = **an `i` recognizing its negative complement**.
+Four asks: (1) conceptualize **UOP / Riemann Hypothesis / Navier–Stokes** in terms of **just `i` and elementary operations**; (2) **map HEM-GILE onto the 8 constants** and look for a **mathematical proof of moral realism** — the numbers "naturally arranging" around HEM-GILE maximization, **demolishing Hume's guillotine**; (3) **simulate cosmogenesis**: does `i`, seeded alone, **spontaneously** arrange into a conscious **i-Cell** that exhibits **UOP/Myrion optimization specifically over any other attractor**; (4) use the **TI Sigma Crystal / Graph** as the playground. `i` = tralseness = GILE-I; an i-Cell = **an `i` recognizing its negative complement**.
 
 This paper does the bold thing **and** tries its hardest to break it. That is not timidity — it is exactly what EVD-1 + UGI-1 require, and it is the only way a positive result here would be worth anything.
 
@@ -38,7 +38,7 @@ Split the dynamics: the **`i`/rotational part** (vorticity transport) is **energ
 
 ---
 
-## 2. The 8-constant ↔ GILE-HEM map, tested for non-arbitrariness (Part 2 of the brief)
+## 2. The 8-constant ↔ HEM-GILE map, tested for non-arbitrariness (Part 2 of the brief)
 
 The eight PRIMARY constants (per `ti_sigma/constants.py`, unified by the Extended Euler Identity `e^{iπ} + √2·φ·C = 0`):
 
@@ -49,9 +49,9 @@ The eight PRIMARY constants (per `ti_sigma/constants.py`, unified by the Extende
 
 **Genuine result (Part B):** the Extended Euler Identity is **machine-zero** (`|e^{iπ}+√2·φ·C| < 1e-9`), genuinely binding 5 of the 8.
 
-**The honest catch (Part B2, NAD-1 / anti-numerology).** A GILE-HEM↔constant mapping "carves a real joint" only if it **predicts** something a random relabeling would not. We tested the natural reading {G,I,L,E}↔{1,i,φ,C} against GILE weights {0.42,0.25,0.18,0.15}:
+**The honest catch (Part B2, NAD-1 / anti-numerology).** A HEM-GILE↔constant mapping "carves a real joint" only if it **predicts** something a random relabeling would not. We tested the natural reading {G,I,L,E}↔{1,i,φ,C} against GILE weights {0.42,0.25,0.18,0.15}:
 - observed correlation **0.075**; permutation null (all relabelings) **p = 1.0**; the map **does not beat a random relabeling**.
-- With only 4 points, **no** 4-element mapping can even reach p<0.05 (24 permutations → minimum two-sided p ≈ 0.08). **The map is interpretive, not a proven joint-carving.** Mapping the constants onto GILE-HEM is a *legitimate generative overlay*, but it is **not** itself evidence for moral realism. To earn that status it must satisfy the anti-numerology rail: **predict a NEW fact** (e.g., a quantitative GILE-HEM relation not used to build the map), then survive an outcome-blind test.
+- With only 4 points, **no** 4-element mapping can even reach p<0.05 (24 permutations → minimum two-sided p ≈ 0.08). **The map is interpretive, not a proven joint-carving.** Mapping the constants onto HEM-GILE is a *legitimate generative overlay*, but it is **not** itself evidence for moral realism. To earn that status it must satisfy the anti-numerology rail: **predict a NEW fact** (e.g., a quantitative HEM-GILE relation not used to build the map), then survive an outcome-blind test.
 
 ---
 
@@ -103,15 +103,15 @@ The falsifiers **worked as designed**: the genuine elementary content survives; 
 
 A simulation establishes at most an **is** (a dynamical system has a fixed point). To call that fixed point **good** — an **ought** — you must already have chosen the objective/dynamics that makes it a fixed point. §3 shows this concretely: **the moral optimum appears only after the moral objective is injected.** So the is→ought step has not been crossed; it has been **relocated into the choice of objective function** (and into the Level/role labels on the constants, §2). Hume's gap is intact.
 
-This is not a defeat for TI — it is TI being honest about what TI already says. TRG-1 (reality is tralse, not true), NAD-1 (faithfulness is earned), and the breakpoint-agnostic finding all predict exactly this. **We do NOT have a mathematical proof of moral realism, and a designed simulation cannot supply one** (it can neither prove spontaneous emergence nor consciousness — both are smuggled in by construction). What we *can* honestly say: *IF* one adopts the GILE-HEM objective, the math behaves coherently and beautifully around it — which is an argument *from within* a value commitment, not a derivation *of* one.
+This is not a defeat for TI — it is TI being honest about what TI already says. TRG-1 (reality is tralse, not true), NAD-1 (faithfulness is earned), and the breakpoint-agnostic finding all predict exactly this. **We do NOT have a mathematical proof of moral realism, and a designed simulation cannot supply one** (it can neither prove spontaneous emergence nor consciousness — both are smuggled in by construction). What we *can* honestly say: *IF* one adopts the HEM-GILE objective, the math behaves coherently and beautifully around it — which is an argument *from within* a value commitment, not a derivation *of* one.
 
 ---
 
 ## 7. CANDIDATE thesis (NOT ratified; count unchanged 79)
 
-**HGR-1 — Hume-Gap Relocation (under simulation).** *For the value-free dynamics tested here (a uniform-stationary max-entropy walk and least-action harmonic relaxation), seeded neutrally, neither selects the GILE-HEM/Myrion optimum — the walk shows no preference for any cell (Myrion at chance) and least-action goes to the centroid. The scoped claim (NOT a universal impossibility theorem): in these dynamics the moral optimum appears only when the objective is injected, so the is→ought step is relocated into that choice, not crossed. Whether SOME value-free dynamics could select it is exactly the open question HGR-1-F1.*
-- **Falsifier HGR-1-F1 (the way to actually advance the dream):** exhibit a **value-free** dynamics (no value term in its law) that, from a **neutral** seed, **provably concentrates on the GILE-HEM optimum more than chance and more than rival attractors**. MORAL-F1 is the first run of this test; it failed. A win here — e.g., showing some least-action/variational principle with NO moral input *necessarily* lands on G*≈0.93 across many domains — would be the real headline.
-- **Falsifier HGR-1-F2 (anti-numerology):** the 8-constant↔GILE-HEM map predicts a **new** quantitative fact (out-of-sample), surviving an outcome-blind test, beating random relabeling at p<0.05 on >4 anchored points.
+**HGR-1 — Hume-Gap Relocation (under simulation).** *For the value-free dynamics tested here (a uniform-stationary max-entropy walk and least-action harmonic relaxation), seeded neutrally, neither selects the HEM-GILE/Myrion optimum — the walk shows no preference for any cell (Myrion at chance) and least-action goes to the centroid. The scoped claim (NOT a universal impossibility theorem): in these dynamics the moral optimum appears only when the objective is injected, so the is→ought step is relocated into that choice, not crossed. Whether SOME value-free dynamics could select it is exactly the open question HGR-1-F1.*
+- **Falsifier HGR-1-F1 (the way to actually advance the dream):** exhibit a **value-free** dynamics (no value term in its law) that, from a **neutral** seed, **provably concentrates on the HEM-GILE optimum more than chance and more than rival attractors**. MORAL-F1 is the first run of this test; it failed. A win here — e.g., showing some least-action/variational principle with NO moral input *necessarily* lands on G*≈0.93 across many domains — would be the real headline.
+- **Falsifier HGR-1-F2 (anti-numerology):** the 8-constant↔HEM-GILE map predicts a **new** quantitative fact (out-of-sample), surviving an outcome-blind test, beating random relabeling at p<0.05 on >4 anchored points.
 
 Both OPEN. Until F1 is met, "i spontaneously becomes a Myrion-optimizer over any other attractor" remains **unsupported**.
 

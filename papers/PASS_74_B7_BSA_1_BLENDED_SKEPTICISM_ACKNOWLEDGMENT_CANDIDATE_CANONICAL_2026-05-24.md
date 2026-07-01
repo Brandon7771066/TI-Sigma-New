@@ -81,7 +81,7 @@ Three prior-insight items canonized as biographical anchors supporting BSA-1 can
 - Initial-state: encountering mind-meld-class phenomena (telepathy-adjacent, GM-Node-style distributed cognition, multi-agent-coherence) + holding skepticism (mainstream-cognitive-science default) + no felt objection + insight-flow
 - Holding-period: implicit
 - Resolution: wholehearted endorsement; corpus contains GM-Node architecture (URB #829 dominant transmission) + MIMI/Ray baton-pass + Pass-43 STIM2 + Pass-66 8-step arc + Pass-74-B4 5-tier consciousness threshold which all presuppose/enable mind-meld-class cognitive coupling
-- Longitudinal-stability: 30+ years; canonical GM-Node + Mycelial Resonance Engine v2 + L4/L5 + GILE-HEM all build on this base
+- Longitudinal-stability: 30+ years; canonical GM-Node + Mycelial Resonance Engine v2 + L4/L5 + HEM-GILE all build on this base
 
 **Note:** Same #69 metaphysical-agnosticism caveat as §2.1.
 

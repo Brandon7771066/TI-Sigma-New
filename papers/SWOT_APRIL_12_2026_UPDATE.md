@@ -33,12 +33,12 @@
 
 ---
 
-## URB #652 — GILE-HEM Operationalization & MR1 Threshold Theorem
+## URB #652 — HEM-GILE Operationalization & MR1 Threshold Theorem
 
 **Status:** 🆕 NEW — STRONG  
 **File:** `papers/urb_652_gile_hem_operationalization.md`
 
-**Summary:** The GILE-HEM system is now fully operationalized. The four HEM dimensions (D1=MindBody, D2=Community, D3=System, D4=Universal) are defined with measurable indicators. The MR1 threshold is formally proved: GILE-G must meet ET = √2−1 ≈ 0.4142 as the minimum gate for any MR1 resolution attempt.
+**Summary:** The HEM-GILE system is now fully operationalized. The four HEM dimensions (D1=MindBody, D2=Community, D3=System, D4=Universal) are defined with measurable indicators. The MR1 threshold is formally proved: GILE-G must meet ET = √2−1 ≈ 0.4142 as the minimum gate for any MR1 resolution attempt.
 
 **Key change:** HEM is now THE replacement for "EV/FDE" in all papers. No more EV or FDE terminology.
 

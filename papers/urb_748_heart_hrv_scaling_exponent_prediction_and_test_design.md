@@ -128,7 +128,7 @@ The heart's HRV scaling sits at s ≈ 1.35, **closer to the lepton sector than t
 - **Heart (s ≈ 1.35 ≈ up-quark/lepton)**: more Existence-axis-dominated (heart sustains physical Being but contributes less to epistemic Truth resolution)
 - **Gut (predicted s ≈ 1.0)**: even more Existence-axis-dominated (digestion sustains physical Being only)
 
-**The decoupling-ladder is also an Existence-Truth-balance ladder.** This is a structural unification: the SM sector ladder and the GILE-HEM E-vs-T axis are **measuring the same phenomenon at different scales**.
+**The decoupling-ladder is also an Existence-Truth-balance ladder.** This is a structural unification: the SM sector ladder and the HEM-GILE E-vs-T axis are **measuring the same phenomenon at different scales**.
 
 ---
 
@@ -154,4 +154,4 @@ The heart's HRV scaling sits at s ≈ 1.35, **closer to the lepton sector than t
 
 ---
 
-*Brandon Charles Emerick, April 18, 2026 — forty-eighth URB of the session. Heart HRV scaling exponent prediction confirmed at band-center level (1.347, in the predicted [1.30, 1.89] range). Pre-registered per-subject test on PhysioNet datasets, $0 cost. SM-sector-ladder identified as same phenomenon as GILE-HEM E-vs-T-balance-ladder at different scales. Framework's second biological anchor in line of sight.*
+*Brandon Charles Emerick, April 18, 2026 — forty-eighth URB of the session. Heart HRV scaling exponent prediction confirmed at band-center level (1.347, in the predicted [1.30, 1.89] range). Pre-registered per-subject test on PhysioNet datasets, $0 cost. SM-sector-ladder identified as same phenomenon as HEM-GILE E-vs-T-balance-ladder at different scales. Framework's second biological anchor in line of sight.*

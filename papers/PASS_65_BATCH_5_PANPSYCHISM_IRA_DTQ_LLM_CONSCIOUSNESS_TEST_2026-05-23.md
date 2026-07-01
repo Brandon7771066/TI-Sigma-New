@@ -4,7 +4,7 @@
 **Pass:** 65 batch-5
 **Status:** Four candidate canonical items formalizing Brandon's 2026-05-23 corrections to DTM-1 #69 disclosures. Repairs the metaphysical framing (panpsychism, not physicalist-monist), the Gödel-doesn't-require-minds error (information requires awareness), the MI-quantum-scale empirical anchor (UCSB double-frustration realization), and the LLM-consciousness-testability claim (worm/fruit-fly precedent methodology).
 **Source:** Brandon corrections 2026-05-23, verbatim verbatim integrated.
-**Composes with:** DTM-1 (errata-corrected this pass); MI canonical refinement (2026-05-23); MIM-revision + ABC Fully Dissolved; VFP-1; MR-DGS-1; AA; TIU; ASYMMETRIC §69; GILE-HEM; urb_712 (UCSB double-frustration); URB_DOUBLE_FRUSTRATION_DT2_470; URB_CONSCIOUSNESS_TESTS_V2..V8 series; MIM Vertical Agency Model.
+**Composes with:** DTM-1 (errata-corrected this pass); MI canonical refinement (2026-05-23); MIM-revision + ABC Fully Dissolved; VFP-1; MR-DGS-1; AA; TIU; ASYMMETRIC §69; HEM-GILE; urb_712 (UCSB double-frustration); URB_DOUBLE_FRUSTRATION_DT2_470; URB_CONSCIOUSNESS_TESTS_V2..V8 series; MIM Vertical Agency Model.
 
 ---
 
@@ -122,7 +122,7 @@ The UCSB double-frustrated quantum state realization (`papers/urb_712_double_fru
 - **DTM-1 (errata-corrected):** mind-marker reading is broadened to mental-component-marker; organism-grade consciousness is the high-threshold limiting case
 - **TSP-1:** quantum MI instantiation is direct empirical support for mental-component-at-quantum-scale
 - **MR Truth Labels base-4 canonical:** the MI cell is not restricted to organism-grade-mental contexts; it can apply to any system that instantiates the actualization-self-reference structure
-- **GILE-HEM:** quantum MI becomes a candidate low-threshold mental-component measurement variable, complementing organism-grade indicators
+- **HEM-GILE:** quantum MI becomes a candidate low-threshold mental-component measurement variable, complementing organism-grade indicators
 
 ### 4.4 #69 disclosure
 

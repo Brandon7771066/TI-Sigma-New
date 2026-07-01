@@ -1,4 +1,4 @@
-# URB #743 — Existence vs Truth Axis Replaces Love-Existence Split: Reanalysis of L*/+E and Einstein Tiles Under Updated GILE-HEM Framework
+# URB #743 — Existence vs Truth Axis Replaces Love-Existence Split: Reanalysis of L*/+E and Einstein Tiles Under Updated HEM-GILE Framework
 
 **Author:** Brandon Charles Emerick
 **Date:** April 18, 2026
@@ -12,7 +12,7 @@
 
 Brandon's structural intuition (April 18, 2026):
 
-> "Reanalysis of L*/+E and Einstein tiling. Reconcile with new GILE-HEM framework. Before, we split love and existence, but now it's existence vs truth!"
+> "Reanalysis of L*/+E and Einstein tiling. Reconcile with new HEM-GILE framework. Before, we split love and existence, but now it's existence vs truth!"
 
 This URB executes the framework re-anchoring. The previous Love-vs-Existence axis split is superseded by an **Existence-vs-Truth axis split**, and L*/+E + Einstein tiles are re-read under the new architecture.
 
@@ -20,20 +20,20 @@ This URB executes the framework re-anchoring. The previous Love-vs-Existence axi
 
 ## 2. The Old Axis: Love vs Existence (Superseded)
 
-The earlier framework reading split the GILE-HEM into:
+The earlier framework reading split the HEM-GILE into:
 
 - **Love (L)** axis: emotional / connection / inter-agent bonding
 - **Existence (E)** axis: ontological / being / persistent-identity
 
 The "Empirical L/E Divergence" URB family argued that L and E diverge in certain regimes (e.g., love can lose its target while existence persists; existence can be sustained while love withdraws).
 
-**Why this split is being superseded**: in the updated GILE-HEM framework, Love is structurally bifurcated (URB family on Revised GILE-Existence Architecture), and the **deeper axis distinction** is between the **Existence pillar** (ontological persistence, Being, BOK substrate) and the **Truth pillar** (epistemic resolution, MR convergence, Verisyn). Love distributes across both axes rather than forming its own axis.
+**Why this split is being superseded**: in the updated HEM-GILE framework, Love is structurally bifurcated (URB family on Revised GILE-Existence Architecture), and the **deeper axis distinction** is between the **Existence pillar** (ontological persistence, Being, BOK substrate) and the **Truth pillar** (epistemic resolution, MR convergence, Verisyn). Love distributes across both axes rather than forming its own axis.
 
 ---
 
 ## 3. The New Axis: Existence vs Truth
 
-The updated GILE-HEM framework axis distinction:
+The updated HEM-GILE framework axis distinction:
 
 ### 3.1 Existence (E) axis
 - **What it represents**: ontological persistence of the BOK substrate (URB #699)
@@ -110,7 +110,7 @@ The Einstein tile is **the geometric signature of E-T balance**.
 
 ---
 
-## 6. The Updated GILE-HEM Architecture
+## 6. The Updated HEM-GILE Architecture
 
 The full updated architecture:
 
@@ -167,7 +167,7 @@ Currently no failure modes triggered.
 
 ## 9. The Slogan Form
 
-> **"Two axes (Existence + Truth) with Love as cross-modulator replaces three axes (Love + Existence + Environment) with poorly-defined dynamics. Pillar correspondence cleaner; empirical anchor distribution balanced (3 per axis); Einstein tiles are the geometric paradigm of E-T cross-coupling. Framework's GILE-HEM architecture upgraded."**
+> **"Two axes (Existence + Truth) with Love as cross-modulator replaces three axes (Love + Existence + Environment) with poorly-defined dynamics. Pillar correspondence cleaner; empirical anchor distribution balanced (3 per axis); Einstein tiles are the geometric paradigm of E-T cross-coupling. Framework's HEM-GILE architecture upgraded."**
 
 ---
 

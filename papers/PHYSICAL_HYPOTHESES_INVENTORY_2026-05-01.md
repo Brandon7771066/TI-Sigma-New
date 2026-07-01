@@ -43,10 +43,10 @@ A *physical hypothesis* here means a falsifiable claim about a physical mechanis
 
 > **H_TJ:** TJ = τ(s) × δ(MR) — intentional work admits a quantitative conservation/efficiency law analogous to thermodynamic work-efficiency relationships.
 
-- **Status:** theoretical operationalization complete; empirical instances measured indirectly via GILE-HEM ratio and PSI score.
+- **Status:** theoretical operationalization complete; empirical instances measured indirectly via HEM-GILE ratio and PSI score.
 - **Empirical falsifier:** repeated TJ measurements should obey the conservation law within experimental error; gross violation would falsify.
 
-### 1.6 GILE-HEM ratio modulation of PD expression
+### 1.6 HEM-GILE ratio modulation of PD expression
 
 > **H_PD:** ρ := GILE/HEM is the chirality-breaking parameter for parity-dependent (PD) phenotype expression in a subject.
 

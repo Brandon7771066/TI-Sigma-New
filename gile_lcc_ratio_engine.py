@@ -178,7 +178,7 @@ class DomainGLSpec:
                                self.alpha, self.k, self.mu)
 
     def convert_8d(self, lcc_dict: Dict[str, float]) -> Dict[str, float]:
-        """Convert all 8 GILE-HEM LCC values to GILE values."""
+        """Convert all 8 HEM-GILE LCC values to GILE values."""
         return {dim: self.convert(v) for dim, v in lcc_dict.items()}
 
     def add_calibration_point(self, lcc_val: float, gile_val: float) -> None:

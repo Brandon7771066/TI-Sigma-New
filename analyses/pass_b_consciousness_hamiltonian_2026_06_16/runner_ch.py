@@ -11,8 +11,8 @@ Leakage discipline (identical to the retrieval benchmark):
 
 Feature sets compared on the SAME readout:
   BASE     = group-B window_features (the matched P0b features)
-  GILEHEM  = 8-D GILE-HEM block only
-  CH       = full Consciousness-Hamiltonian block (GILE-HEM + PD + H_TSC spectrum + graph)
+  GILEHEM  = 8-D HEM-GILE block only
+  CH       = full Consciousness-Hamiltonian block (HEM-GILE + PD + H_TSC spectrum + graph)
   BASE+CH  = concatenation
 """
 import json

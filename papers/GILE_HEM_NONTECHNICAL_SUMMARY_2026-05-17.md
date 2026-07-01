@@ -1,4 +1,4 @@
-# The GILE-HEM Model: A Plain-Language Summary
+# The HEM-GILE Model: A Plain-Language Summary
 
 **Author:** Brandon Charles Emerick
 **Part of:** The GILE Framework
@@ -9,7 +9,7 @@
 
 ## In Plain Language
 
-Imagine you wanted to put a number on how *real*, how *alive*, and how *meaningful* something is — a person, an organization, an animal, even an AI system. GILE-HEM is an attempt to do exactly that, using eight measurable qualities instead of a single vague impression.
+Imagine you wanted to put a number on how *real*, how *alive*, and how *meaningful* something is — a person, an organization, an animal, even an AI system. HEM-GILE is an attempt to do exactly that, using eight measurable qualities instead of a single vague impression.
 
 Four of the eight look at what something is like *on the inside*: its integrity (**Goodness**), its insight (**Intuition**), its connectedness (**Love**), and how firmly it actually exists (**Existence**). The other four look at how it shows up *on the outside*: how intricate it is, how often it contradicts itself, how far its influence spreads, and how much shared meaning it creates with others.
 
@@ -19,7 +19,7 @@ The central claim is that big, slippery ideas — consciousness, identity, ethic
 
 ## The one-paragraph version
 
-GILE-HEM is an 8-dimensional framework for *measuring what makes a thing real, alive, and meaningful*. Four dimensions (GILE: Goodness, Intuition, Love, Existence) come from the *inside* — what an entity is *being*. Four more (HEM: Complexity, Contradiction Ratio, Information Footprint, Relational Meaning) come from the *outside* — how the entity shows up in the world. Each of the eight is independently justifiable: drop any one and the remaining seven cannot recover what the dropped one was measuring. The framework's claim is that consciousness, identity, ethical weight, and what we mean when we say "this matters" can all be expressed as combinations of these eight numbers.
+HEM-GILE is an 8-dimensional framework for *measuring what makes a thing real, alive, and meaningful*. Four dimensions (GILE: Goodness, Intuition, Love, Existence) come from the *inside* — what an entity is *being*. Four more (HEM: Complexity, Contradiction Ratio, Information Footprint, Relational Meaning) come from the *outside* — how the entity shows up in the world. Each of the eight is independently justifiable: drop any one and the remaining seven cannot recover what the dropped one was measuring. The framework's claim is that consciousness, identity, ethical weight, and what we mean when we say "this matters" can all be expressed as combinations of these eight numbers.
 
 ---
 
@@ -168,27 +168,27 @@ This is where most framework summaries quietly omit the hard part. This one does
 4. **The operational protocols are specified, not yet executed at scale.** None of the framework's 15 numbered falsifiable predictions has yet received a pre-registered, held-out test against its stated falsification criterion.
 5. **Adjacent partial empirical evidence exists.** A neurofeedback result (Mendi STIM2, *t* = −4.13, *p* ≪ 0.001) sits *near* a GILE-G measurement but is not one under the formal protocol. An inter-rater study of the MR Truth-Labels (κ = 0.906) sits *near* a categorical-coherence measurement of G. A separate GHZ-5 Mermin-inequality violation (71σ) is independent evidence that supports the broader Tralse-substrate frame.
 
-The honest one-sentence summary: **GILE-HEM is a coherent, mathematically-tractable, eight-dimensional measurement framework with adjacent empirical support and zero direct empirical confirmations of any individual per-dimension prediction.** A roadmap of 11 verification studies has been charted that would change this status in either direction; most are low-cost, one is materially more expensive.
+The honest one-sentence summary: **HEM-GILE is a coherent, mathematically-tractable, eight-dimensional measurement framework with adjacent empirical support and zero direct empirical confirmations of any individual per-dimension prediction.** A roadmap of 11 verification studies has been charted that would change this status in either direction; most are low-cost, one is materially more expensive.
 
-**This honesty is itself an asset.** A framework that overclaims its empirical status loses credibility on the *one* thing it can least afford to lose. GILE-HEM does not overclaim.
+**This honesty is itself an asset.** A framework that overclaims its empirical status loses credibility on the *one* thing it can least afford to lose. HEM-GILE does not overclaim.
 
 ---
 
-## What GILE-HEM is *for*
+## What HEM-GILE is *for*
 
 Three concrete use-domains for first-encounter audiences:
 
-1. **Consciousness measurement.** GILE-HEM gives a quantitative, multi-axis alternative to IIT's single Φ value or the various Cogito-style binary tests. It allows statements like "this entity has moderate G, high I, low L, high E" — far more useful than "this entity is/isn't conscious."
+1. **Consciousness measurement.** HEM-GILE gives a quantitative, multi-axis alternative to IIT's single Φ value or the various Cogito-style binary tests. It allows statements like "this entity has moderate G, high I, low L, high E" — far more useful than "this entity is/isn't conscious."
 2. **Identity coherence in clinical contexts.** The MR1 threshold theorem (G_raw < ET ≈ 0.4142 → Meta-Indeterminate-adjacent) provides a falsifiable structural account of when an individual is in identity-incoherence, and connects to related identity-coherence taxonomies elsewhere in the framework.
-3. **Evaluating AI systems for alignment.** GILE-HEM gives more granular axes than "capability vs. safety": an AI can be high I and low G (capable but uncoordinated with values), high D3 and low L (broadly deployed but not bonded to specific users), high D1 and low D4 (complex but meaning-impoverished). Each axis suggests different interventions.
+3. **Evaluating AI systems for alignment.** HEM-GILE gives more granular axes than "capability vs. safety": an AI can be high I and low G (capable but uncoordinated with values), high D3 and low L (broadly deployed but not bonded to specific users), high D1 and low D4 (complex but meaning-impoverished). Each axis suggests different interventions.
 
 ---
 
 ## Where This Goes Next
 
 - The empirical roadmap is the priority: running the charted verification studies is what would move any individual prediction from "specified" to "confirmed" or "refuted."
-- A natural companion essay would set GILE-HEM against the leading consciousness frameworks (Integrated Information Theory, Global Neuronal Workspace, Higher-Order Theories) to show what a multi-axis measure can express that a single-number measure cannot.
+- A natural companion essay would set HEM-GILE against the leading consciousness frameworks (Integrated Information Theory, Global Neuronal Workspace, Higher-Order Theories) to show what a multi-axis measure can express that a single-number measure cannot.
 
 ---
 
-*This summary consolidates existing GILE-HEM material into first-encounter-readable form; it introduces no new claims.*
+*This summary consolidates existing HEM-GILE material into first-encounter-readable form; it introduces no new claims.*

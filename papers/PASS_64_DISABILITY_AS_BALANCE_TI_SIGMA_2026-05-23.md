@@ -3,7 +3,7 @@
 **Date:** 2026-05-23
 **Pass:** 64 batch-2
 **Status:** Three candidate canonical principles proposed (UDP-1, CTC-1, HBP-1). Each ships with at least one pre-registered falsifier. Status: PROVISIONAL pending Pass-65+ ratification batch.
-**Composes with:** TSD (`papers/TI_SIGMA_TRALSE_SUCCESS_DISTINCTION_TSD_2026-05-17.md`); MR Truth Labels (`papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`); Gender as MR Truth-Label Phenomenon (§7.7.101); DGI-1..4 + CDP-1 + NAD-1 (§7.7.102-104); MFD-1 Moot-Failure Duality; ASYMMETRIC §69; GILE-HEM measurement audit.
+**Composes with:** TSD (`papers/TI_SIGMA_TRALSE_SUCCESS_DISTINCTION_TSD_2026-05-17.md`); MR Truth Labels (`papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`); Gender as MR Truth-Label Phenomenon (§7.7.101); DGI-1..4 + CDP-1 + NAD-1 (§7.7.102-104); MFD-1 Moot-Failure Duality; ASYMMETRIC §69; HEM-GILE measurement audit.
 **Source:** Brandon morning conversation 2026-05-23 (verbatim opening preserved §1).
 
 ---
@@ -95,7 +95,7 @@ Albrecht & Devlieger (1999) *Soc. Sci. Med.* — N=153 in-depth interviews; ~54%
 | MFD-1 Moot-Failure Duality | "Disabled" carries dual reading: pragmatic Moot in adapted-environment + epistemic capacity-below-threshold; both simultaneously legitimate |
 | ABC Fully Dissolved | Capacity domain covers affect, behavior, cognition single stack — disability concept applies across the integrated stack |
 | ASYMMETRIC §69 | Binary disabled-vs-human framing = over-skeptical discipline-failure; brutal-honesty prescribes capacity-balance measurement |
-| GILE-HEM measurement audit | HBP-1's C(agent, env) formula is a candidate GILE-HEM extension — capacity-redistribution as a GILE-component variable |
+| HEM-GILE measurement audit | HBP-1's C(agent, env) formula is a candidate HEM-GILE extension — capacity-redistribution as a GILE-component variable |
 
 ## 4. Falsifier table summary
 

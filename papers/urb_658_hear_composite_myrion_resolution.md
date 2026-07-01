@@ -36,7 +36,7 @@ The word "Existence" is preserved from EAR because the razor's core function rem
 | Candidate | Issue |
 |-----------|-------|
 | CEAR (Composite EAR) | "Composite" is too process-level; doesn't encode the *why* |
-| GHEAR (GILE-HEM EAR) | Redundant acronym; "H" already implies HEM |
+| GHEAR (HEM-GILE EAR) | Redundant acronym; "H" already implies HEM |
 | DEAR (Dual EAR) | Misleading — "dual" suggests adversarial, not unified |
 | CLEAR (Composite Lived-Existence AR) | Clever but overloaded; "Lived" is already in HEM |
 
@@ -59,7 +59,7 @@ HEAR(r) = α · GILE(r) + β · HEM(r) + γ · Cov(GILE, HEM)(r)
 Where:
 - **α** = ET = √2−1 ≈ 0.4142 (GILE weight — Emerick threshold, favoring truth-weighted GILE)
 - **β** = C = 1/(φ√2) ≈ 0.4370 (HEM weight — Emerick constant, favoring somatic grounding)
-- **γ** = T − (α+β) ≈ 0.9340 − 0.8512 = 0.0828 (covariance bonus for GILE-HEM coherence)
+- **γ** = T − (α+β) ≈ 0.9340 − 0.8512 = 0.0828 (covariance bonus for HEM-GILE coherence)
 
 **Key property**: α < β, meaning HEM is weighted *slightly higher* than GILE in composite resolution. This encodes the embodiment primacy thesis: you cannot resolve toward truth-states that destroy the substrate of resolution.
 

@@ -7,7 +7,7 @@ print("  Ladder: CCC[E8,8D] -x3time-> Leech[24] -+2-> string[26] -> Co0 -> Monst
 print("  => Monster sits at the TOP (the totality/field) = GM NETWORK, NOT CCC.")
 print("     CCC is the SINGLE-i-cell base (E8); GM is the distributed top (Monster). Opposite ends.")
 
-print("\n=== Q4-prep: CCC GILE-HEM ratio reconciliation (Brandon 'approx 2' vs corpus silver ratio) ===")
+print("\n=== Q4-prep: CCC HEM-GILE ratio reconciliation (Brandon 'approx 2' vs corpus silver ratio) ===")
 dS=1+sqrt2; ET=sqrt2-1
 print(f"  silver ratio delta_S = 1+sqrt2 = {dS:.4f} (urb_697 operational WEIGHTING of GILE vs HEM)")
 print(f"  1/delta_S = sqrt2-1 = {ET:.4f} = ET (Emerick Threshold) -> reciprocal pair")

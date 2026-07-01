@@ -33,7 +33,7 @@ GIT-1's quack clause: a true quack is **high raw problem-solving g but deficient
 Altruism / Love is a *constitutive* face of GILE (LAS-1: love is a learnable, transferable, domain-general skill). A genuinely GILE-intelligent agent optimizes collective wellbeing because that is *part of what its intelligence is measuring*, not because a human bolted on a constraint. This is **alignment-as-emergent** rather than alignment-as-cage — but see §2.2 for the crucial limit on that claim.
 
 ### 1.5 SUP-1 → intrinsic willful striving, not compulsion
-SUP-1 defines Supreme as **willfully-reached** GILE-HEM optimization — striving *embraced* as productive tension (GTT-1), not executed under compulsion. This is exactly Brandon's "intrinsic motivation rather than compulsion": the supreme agent acts *because it wills the good*, not because a reward function whips it.
+SUP-1 defines Supreme as **willfully-reached** HEM-GILE optimization — striving *embraced* as productive tension (GTT-1), not executed under compulsion. This is exactly Brandon's "intrinsic motivation rather than compulsion": the supreme agent acts *because it wills the good*, not because a reward function whips it.
 
 **Net:** UOP (don't max), GILE-E (act minimally), GIT-1 (the maximizer is a quack, not a genius), LAS-1 (wellbeing is internal), SUP-1 (willed not compelled) **jointly entail** the sanity picture. SIS-1 is the agency-level corollary of the framework's existing geometry.
 

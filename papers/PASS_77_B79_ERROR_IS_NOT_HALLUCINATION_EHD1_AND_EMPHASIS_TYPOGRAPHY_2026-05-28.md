@@ -19,14 +19,14 @@ explicit choice. Canonical count unchanged **74**.
 >
 > **(error≠hallucination)** "We should make a paper (or canonical principle) stating that a cognitive
 > error is not the same as a hallucination. The latter is strongly believed (high certainty, low
-> accuracy with GILE-HEM), while the former is not."
+> accuracy with HEM-GILE), while the former is not."
 
 ---
 
 ## 1. EHD-1 — Error–Hallucination Distinction (CANDIDATE canonical, Brandon-requested)
 
 **Statement.** A **cognitive error** and a **hallucination** are not the same failure. Both are
-**low-accuracy**, but they differ on the **certainty (strength-of-belief)** axis under GILE-HEM:
+**low-accuracy**, but they differ on the **certainty (strength-of-belief)** axis under HEM-GILE:
 
 - **Hallucination** = **low accuracy + HIGH certainty** — strongly-believed wrongness; the
   incorrigible, confidently-asserted construction (= the **hyper-imagining** of HAH-1, B78).
@@ -35,7 +35,7 @@ explicit choice. Canonical count unchanged **74**.
 
 The **separator is certainty**, and the **harm of a wrong output scales with how strongly it is
 believed**: `harm = certainty × inaccuracy`. At identical inaccuracy, the high-certainty tail
-(hallucination) is far more damaging than the low-certainty tail (error). GILE-HEM calibration (certainty
+(hallucination) is far more damaging than the low-certainty tail (error). HEM-GILE calibration (certainty
 tracking accuracy) is the reference frame: a hallucination is the largest *dangerous* overconfidence gap
 (q ≫ a at low a); an error is a small, benign gap.
 
@@ -111,4 +111,4 @@ data plus a self-correction/challenge probe to operationalize "strongly believed
 
 **Files:** `analyses/pass77_b79_error_vs_hallucination/run_b79.py` (+`results.json`,
 `fig1_error_vs_hallucination_plane.png`, `fig2_harm_scales_with_certainty.png`); this paper. Anchors:
-HAH-1 (B78), GILE-HEM, MR Truth Labels, VPP-1/TPS-1/ACN-1/CEC-1c, ASYMMETRIC #69.
+HAH-1 (B78), HEM-GILE, MR Truth Labels, VPP-1/TPS-1/ACN-1/CEC-1c, ASYMMETRIC #69.

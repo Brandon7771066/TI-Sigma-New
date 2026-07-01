@@ -80,7 +80,7 @@ Domains where bivalent logic is structurally inadequate:
 - Quantum mechanics (superposition states are paradigmatically not bivalent until measurement; bivalent only emerges via collapse).
 - Self-referential and meta-logical claims (Russell, Tarski, Gödel — the limit cases).
 - Value judgments, aesthetic judgments, ethical judgments (typically aspectual: "good in respect R, bad in respect R'").
-- Most consciousness-related claims (per the GILE-HEM scoring discipline in URB #822 §3 — dimensions are 0–3 graded, not present/absent).
+- Most consciousness-related claims (per the HEM-GILE scoring discipline in URB #822 §3 — dimensions are 0–3 graded, not present/absent).
 
 The "extremely narrow and artificial" qualifier captures both clauses: bivalent's domain is narrow (a small fraction of the claim-space humans actually reason about), and the legitimacy *within* that domain depends on an artificial aspectual collapse that the application context justifies but the metaphysics of reality does not.
 

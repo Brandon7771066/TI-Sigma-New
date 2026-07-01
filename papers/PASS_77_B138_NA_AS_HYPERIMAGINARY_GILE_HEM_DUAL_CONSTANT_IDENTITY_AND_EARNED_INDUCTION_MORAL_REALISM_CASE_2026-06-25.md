@@ -1,4 +1,4 @@
-# Pass-77 B138 — N/A as Hyperimaginary (NAH-1), GILE-HEM↔8-Constant Dual Identity (DCI-1), Math-as-Earned-Hyperbole (CIO-1 refinement), and the Convergent-Evidence Case for GILE Moral Realism (GME-1)
+# Pass-77 B138 — N/A as Hyperimaginary (NAH-1), HEM-GILE↔8-Constant Dual Identity (DCI-1), Math-as-Earned-Hyperbole (CIO-1 refinement), and the Convergent-Evidence Case for GILE Moral Realism (GME-1)
 
 **Date:** 2026-06-25 · **Pass:** 77 · **Batch:** B138
 **Status:** THREE candidate refinements (NAH-1, DCI-1, GME-1) + ONE refinement to CIO-1. **NONE ratified. Canonical principle count unchanged: 79.**
@@ -14,7 +14,7 @@ The author raised four points. Two are concrete, testable representational refin
 | # | Thread | Result | Type |
 |---|---|---|---|
 | 1 | N/A is an *imprecise real value that is hyperimaginary* (high but imprecise) | **NAH-1** — a third axis off the C4 truth plane; improves N/A separation (recall 0.79→0.92, fair baseline) | candidate refinement, **runnable** |
-| 2 | The 8 GILE-HEM dims have a *dual identity* as the 8 fundamental constants "for math's sake" | **DCI-1** — admit as an aesthetic/mnemonic overlay; the *specific* ordering is NOT statistically earned (B135) | candidate, honestly gated |
+| 2 | The 8 HEM-GILE dims have a *dual identity* as the 8 fundamental constants "for math's sake" | **DCI-1** — admit as an aesthetic/mnemonic overlay; the *specific* ordering is NOT statistically earned (B135) | candidate, honestly gated |
 | 3 | "Math explains everything" is a *valid hyperbole* (earned inductive value); consciousness already HAS math programs | **CIO-1 refinement** — concede the strong inductive prior; cite IIT / IWMT / Hoffman | refinement |
 | 4 | GILE moral realism from phenomenology + Dirac + cross-cultural + linguistic + "can't live as if it's illusion" | **GME-1** — strong abductive + pragmatic case: posterior raised, burden shifted, action-mandating — but NOT deductively closed; best held **tralse-real** (TRG-1) | candidate, rail-respecting |
 
@@ -53,15 +53,15 @@ This is a **representational-capacity** result (the geometry *can* hold the N/A�
 
 ---
 
-## 2. DCI-1 — GILE-HEM ↔ 8-Constant Dual Identity ("for math's sake")
+## 2. DCI-1 — HEM-GILE ↔ 8-Constant Dual Identity ("for math's sake")
 
-The author asks us to "consider the dual identity of the 8 GILE-HEM dimensions of the i-Cell as representing the 8 fundamental constants." The 8 dims `{G, I, L, E, D1, D2, D5, D6}` (B137's ICC shell) and the 8 primary URB constants `{0, 1, i, √2, e, φ, π, C≈0.437}` are both 8-element sets, so a bijection trivially *exists*; the question is whether the *specific* pairing **carves a real joint** (NAD-1) or is a **legitimate generative overlay** (TPS-1 presentation).
+The author asks us to "consider the dual identity of the 8 HEM-GILE dimensions of the i-Cell as representing the 8 fundamental constants." The 8 dims `{G, I, L, E, D1, D2, D5, D6}` (B137's ICC shell) and the 8 primary URB constants `{0, 1, i, √2, e, φ, π, C≈0.437}` are both 8-element sets, so a bijection trivially *exists*; the question is whether the *specific* pairing **carves a real joint** (NAD-1) or is a **legitimate generative overlay** (TPS-1 presentation).
 
 **The honest reconciliation (we already tested this — B135).** The natural reading {G,I,L,E}↔{1,i,φ,C} against GILE weights {0.42,0.25,0.18,0.15} gave observed correlation **0.075**, permutation null **p = 1.0** — *the map does not beat a random relabeling*. With only 4 anchored points, **no** mapping can even reach p<0.05 (24 permutations → min two-sided p≈0.08). So:
 
-> **DCI-1 is admitted as a CANDIDATE *aesthetic/mnemonic overlay*** — a useful "for math's sake" double-labelling of the i-Cell's 8 shell dimensions that lets the same object be read as a GILE-HEM state *and* as a constant-tuple — **but the specific ordering is NOT a proven joint-carving.** It is presentation (TPS-1), not discovery (NAD-1). Using it as *evidence* (e.g. for moral realism) would violate the anti-numerology rail.
+> **DCI-1 is admitted as a CANDIDATE *aesthetic/mnemonic overlay*** — a useful "for math's sake" double-labelling of the i-Cell's 8 shell dimensions that lets the same object be read as a HEM-GILE state *and* as a constant-tuple — **but the specific ordering is NOT a proven joint-carving.** It is presentation (TPS-1), not discovery (NAD-1). Using it as *evidence* (e.g. for moral realism) would violate the anti-numerology rail.
 
-**Falsifier DCI-1-F1 (OPEN, = HGR-1-F2 inherited):** the dual identity earns joint-carving status only if it **predicts a NEW quantitative GILE-HEM↔constant relation** not used to build the map, on **>4 anchored points**, surviving an **outcome-blind** test at **p<0.05** against random relabeling. Until then it is an overlay, held with low confidence and zero evidential weight.
+**Falsifier DCI-1-F1 (OPEN, = HGR-1-F2 inherited):** the dual identity earns joint-carving status only if it **predicts a NEW quantitative HEM-GILE↔constant relation** not used to build the map, on **>4 anchored points**, surviving an **outcome-blind** test at **p<0.05** against random relabeling. Until then it is an overlay, held with low confidence and zero evidential weight.
 
 This is the disciplined way to honor the author's enthusiasm ("!!!") *and* the corpus's own honest negative: **the dual identity is allowed as a lens, forbidden as a proof.**
 
@@ -89,7 +89,7 @@ The author: GILE moral realism "comes from phenomenology and scientific sources 
 ### 4.1 The four evidential strands (abductive)
 
 1. **Phenomenology** — the *lived givenness* of moral salience (cruelty presents as wrong, not as a neutral fact one then disprefers). Phenomenal force is data, not nothing.
-2. **Scientific/structural — the Dirac Equation.** The corpus uses Dirac as the **GILE-HEM grade-2 / "4+4 wing-arm" structure** (URB #699, B82) and in the **Beauty Razor** lineage (URB #781, continuous with Dirac's Principle of Mathematical Beauty). *Honest framing:* Dirac supplies a **structural/aesthetic analogy** (8 = 4+4; elegance-tracks-truth) — it does **not derive moral facts**. It is suggestive convergence, weighted as such.
+2. **Scientific/structural — the Dirac Equation.** The corpus uses Dirac as the **HEM-GILE grade-2 / "4+4 wing-arm" structure** (URB #699, B82) and in the **Beauty Razor** lineage (URB #781, continuous with Dirac's Principle of Mathematical Beauty). *Honest framing:* Dirac supplies a **structural/aesthetic analogy** (8 = 4+4; elegance-tracks-truth) — it does **not derive moral facts**. It is suggestive convergence, weighted as such.
 3. **Cross-cultural convergence** — recurrent independent moral cores (reciprocity, care, fairness; cf. Curry et al. 2019 "morality-as-cooperation," seven cooperative goods across 60 societies) are what you'd expect if there were a real joint being tracked.
 4. **Linguistic clues** — the ineliminable normative vocabulary of every natural language (ought, owe, deserve) is a *companions-in-guilt* datum: we don't talk this way about acknowledged illusions.
 

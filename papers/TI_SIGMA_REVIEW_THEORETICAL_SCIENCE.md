@@ -48,7 +48,7 @@ This review covers TI Sigma's contributions to theoretical science: universal la
 - **Theoretical content:** Below the Radiant Threshold, systems remain in locally stable but globally suboptimal states. Above it, Myrion Resolution becomes possible and the system can access higher-order truth values.
 - **Connection to UOP:** The Radiant Threshold is the analog of a nucleation barrier in thermodynamics — the minimum free-energy input required to escape a local minimum.
 
-### 2.6 GILE-HEM Ratio Modulation of PD Expression
+### 2.6 HEM-GILE Ratio Modulation of PD Expression
 
 - **What it is:** Defines ρ := GILE/HEM as the chirality-breaking parameter, where HEM (Hatred-Ego-Malice) is the anti-GILE state space.
 - **Theoretical content:** The PD's 5-zone distribution shifts as ρ varies. At ρ > 1, the distribution skews toward the ambient/mild zones (more benign life events). At ρ < 1, it skews toward catastrophic/severe zones.

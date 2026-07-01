@@ -63,7 +63,7 @@ You should hold this number honestly: the 0.93 cap is a **framework-internal** r
 
 A tidy philosophy would now try to make the conflict disappear — to prove that truth and existence never really compete, or that one reduces to the other. TI Sigma deliberately refuses this move.
 
-Its definition of the highest state, **SUP-1 (the Definition of Supreme)**, says the Supreme is **willfully-reached GILE-HEM optimization** — truth driven to its ≈0.93 cap *and* existence maximized, with the *willful striving itself* as the defining ingredient **(framework-internal, not ratified as proven)**. And it explicitly says the existence-versus-truth "battle" is an **illusion to be embraced** — held as a *productive tension*, not solved away.
+Its definition of the highest state, **SUP-1 (the Definition of Supreme)**, says the Supreme is **willfully-reached HEM-GILE optimization** — truth driven to its ≈0.93 cap *and* existence maximized, with the *willful striving itself* as the defining ingredient **(framework-internal, not ratified as proven)**. And it explicitly says the existence-versus-truth "battle" is an **illusion to be embraced** — held as a *productive tension*, not solved away.
 
 This is more honest than it first appears. The tension between being truthful and being effective, between purity and viability, between ideals and a livable life, is not a bug in your reasoning that better logic will remove. It is the permanent shape of being a finite agent who cares about truth. The mature response is not to pick a pillar and amputate the other. It is to keep both in view, negotiate them consciously, and accept that the negotiation never fully ends.
 

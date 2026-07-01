@@ -1,13 +1,13 @@
 {
   "pass": "77-B4",
-  "phase": "1B-GILE-HEM",
+  "phase": "1B-HEM-GILE",
   "dandiset": "000409",
   "session": "sub-DY-009/sub-DY-009_ses-158d5d35-a2ab-4a76-87b0-51048c5d5283",
   "target_region": "Primary visual area",
   "region_match": "contains",
   "seed": 27182818,
   "prereg_locked": true,
-  "instrument_canonical": "GILE-HEM UOP J = f(G)+g(H); G=gamma-PLV(cap0.93), H=theta/(theta+delta)",
+  "instrument_canonical": "HEM-GILE UOP J = f(G)+g(H); G=gamma-PLV(cap0.93), H=theta/(theta+delta)",
   "supersedes_metric": "legacy M_r = L*E (multiplicative)",
   "scope_limits": [
     "pre-recorded => reachability necessary-condition ONLY",

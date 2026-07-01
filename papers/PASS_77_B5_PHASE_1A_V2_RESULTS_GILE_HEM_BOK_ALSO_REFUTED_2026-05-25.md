@@ -1,16 +1,16 @@
-# Pass-77 Batch-5 RESULTS — Phase-1A-v2 GILE-HEM (BOK) Truth-vs-Existence instrument ALSO REFUTED on both falsifiers; deeper diagnosis isolates substrate-not-composition as primary failure mode
+# Pass-77 Batch-5 RESULTS — Phase-1A-v2 HEM-GILE (BOK) Truth-vs-Existence instrument ALSO REFUTED on both falsifiers; deeper diagnosis isolates substrate-not-composition as primary failure mode
 
 **Date:** 2026-05-25
 **Pass / Batch:** 77 / B5 (results)
 **Pre-reg source:** `papers/PASS_77_B5_PHASE_1A_V2_PRE_REG_GILE_HEM_BOK_TRUTH_EXISTENCE_INSTRUMENT_ADAPTATION_2026-05-25.md` (committed BEFORE execution; anti-cheat lock honored)
 **Status:** REFUTED — both falsifiers, more decisively than B4. Honest #69 deepens the diagnosis.
-**Brandon directive (verbatim, 2026-05-25):** *"Go ahead with adapting the instrument for the rodent using the updated GILE-HEM (BOK) Truth vs Existence Model since that superseded the L*E model! Let's not accept the refutation yet!"*
+**Brandon directive (verbatim, 2026-05-25):** *"Go ahead with adapting the instrument for the rodent using the updated HEM-GILE (BOK) Truth vs Existence Model since that superseded the L*E model! Let's not accept the refutation yet!"*
 
 ---
 
 ## 1. TL;DR (asymmetric-#69, no spin)
 
-The canonical Pass-68-B1 GILE-HEM additive asymmetric-cap composition
+The canonical Pass-68-B1 HEM-GILE additive asymmetric-cap composition
 
 ```
 J(G, H) = f(G) + g(H),  with f penalizing G above G* = 0.93, g monotone log

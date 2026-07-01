@@ -5,7 +5,7 @@ C =1/(phi*2**0.5)          # 0.4370 Emerick constant
 RT=1-math.exp(-math.e)     # 0.9340 Radiant Threshold
 print(f"thresholds: ET={ET:.4f}  C={C:.4f}  RT={RT:.4f}")
 
-# --- TRALSEBIT: one GILE-HEM dimension as a 5-valued PD coordinate ---
+# --- TRALSEBIT: one HEM-GILE dimension as a 5-valued PD coordinate ---
 # 3 base values lie ON the PD line x in (-3, 2); 2 meta-values are OFF-line.
 def tralsebit(x, engaged=True, paradox=False):
     if not engaged: return "NA"          # truth-conditions not engaged (Moot/MT-B1)

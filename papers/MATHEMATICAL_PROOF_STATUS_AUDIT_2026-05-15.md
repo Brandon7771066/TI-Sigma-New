@@ -93,7 +93,7 @@ soundness of TI Sigma but do not establish mathematical theorems in any
 formal axiom system. They should not be conflated with §1's accounting.
 
 Similarly:
-- "GILE-HEM MR1 Threshold Theorem" — stated, not formally proven
+- "HEM-GILE MR1 Threshold Theorem" — stated, not formally proven
 - "Universal Bridge Theorem" — stated, not formally proven
 - "TIU = |log P(H|e)/P(H)|" — definition canonicalized, not a theorem
 - "Tralse-Joules TJ = τ(s) × δ(MR)" — definition, not theorem

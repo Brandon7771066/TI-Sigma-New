@@ -1,4 +1,4 @@
-# Pass 60 batch-1 — Statistical Significance in PD / TIL / GILE-HEM Languages
+# Pass 60 batch-1 — Statistical Significance in PD / TIL / HEM-GILE Languages
 
 **Date:** 2026-05-22
 **Author:** Brandon Emerick (originator of the marginal-significance-as-indeterminate insight) + TI Sigma framework
@@ -13,7 +13,7 @@
 
 Three crisp asks:
 1. Map TSIS verdicts → MR Truth Labels {T, F, I, MI} with PD coordinates.
-2. Communicate stats across all 8 GILE-HEM dimensions.
+2. Communicate stats across all 8 HEM-GILE dimensions.
 3. Handle marginal cases (effect within ε of T_RAND) with INDETERMINATE rather than binary pass/fail.
 
 This paper delivers all three.
@@ -71,7 +71,7 @@ This paper delivers all three.
 
 ---
 
-## 4. GILE-HEM 8-Dim Communication Layer for Statistics
+## 4. HEM-GILE 8-Dim Communication Layer for Statistics
 
 Per `papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`: canonical 8 = {G, I, L, E, D1, D2, D3, D4}. Each dimension has a stats-communication interpretation:
 
@@ -93,7 +93,7 @@ Per `papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`: canonical 8 = {G, I, L
 | **D3 — Information Footprint / Citation Reach** | How far does the result propagate? | Citation count, replication attempts initiated, secondary-literature engagement. Measures *influence*, not validity. High D3 + low G is the celebrity-bad-paper pattern. | "D3 = 0.40: 14 citations, 3 replication attempts, 2 secondary reviews — moderate reach for 2-year window." |
 | **D4 — Relational Meaning** | Does this result meaningfully connect to other results? | Does it cohere with related theoretical work, predict downstream effects, integrate into a broader research program? D4 is the *patterned-significance* dimension. | "D4 = 0.78: result confirms TJ-axis prediction from `urb_650`, integrates with Pass-58 batch-1 corpus, and predicts oncology TSS-EMP-8 outcome — strong relational coherence." |
 
-### 4.1 Bengston in GILE-HEM Form
+### 4.1 Bengston in HEM-GILE Form
 
 | Dim | Bengston score | Source |
 |---|---|---|
@@ -106,9 +106,9 @@ Per `papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`: canonical 8 = {G, I, L
 | D3 (information footprint) | **0.55** | Bengston book + JSE corpus + popular-press coverage; outside mainstream oncology literature |
 | D4 (relational meaning) | **0.80** | integrates with TJ-axis, distant-healing LCC paper, resonant-bonding hypothesis — strong patterned significance within TI Sigma's broader research program |
 
-**Composite GILE-HEM headline:** Bengston is **structurally strong on the inside (G, E) and the outside (D2 low, D4 high), but methodologically thin (D1, I, L) by mainstream oncology standards.** The TSS-EMP-8 replication design (Pass-59 paper §5) is precisely engineered to raise I, L, and D1 — the three weak axes — without touching the strong axes.
+**Composite HEM-GILE headline:** Bengston is **structurally strong on the inside (G, E) and the outside (D2 low, D4 high), but methodologically thin (D1, I, L) by mainstream oncology standards.** The TSS-EMP-8 replication design (Pass-59 paper §5) is precisely engineered to raise I, L, and D1 — the three weak axes — without touching the strong axes.
 
-This is what the GILE-HEM communication layer *adds* over a single-number TSIS verdict: it tells you *which axes to invest in to improve the analysis*.
+This is what the HEM-GILE communication layer *adds* over a single-number TSIS verdict: it tells you *which axes to invest in to improve the analysis*.
 
 ---
 
@@ -118,9 +118,9 @@ This is what the GILE-HEM communication layer *adds* over a single-number TSIS v
 
 2. **PD coordinates give a real-line gradient** (−2 to +2) rather than 4-way categorical clumping. Two TRUE-class results at PD +1.4 vs +1.9 are both TRUE, but the +1.9 is much more confidently TRUE. This matches how researchers actually reason about evidence.
 
-3. **GILE-HEM stats-communication layer makes the analysis legible to multiple audiences.** Mathematicians read the PD coordinate; clinicians read the GILE-HEM table; mainstream peer-reviewers read I + L + D1 (the gates they care about); the public reads the MR Truth Label.
+3. **HEM-GILE stats-communication layer makes the analysis legible to multiple audiences.** Mathematicians read the PD coordinate; clinicians read the HEM-GILE table; mainstream peer-reviewers read I + L + D1 (the gates they care about); the public reads the MR Truth Label.
 
-4. **Replication design becomes targeted.** Rather than "do another study," the GILE-HEM table tells you *which dimensions are weak* (Bengston: I, L, D1) and the replication can be designed to specifically raise those scores.
+4. **Replication design becomes targeted.** Rather than "do another study," the HEM-GILE table tells you *which dimensions are weak* (Bengston: I, L, D1) and the replication can be designed to specifically raise those scores.
 
 ---
 
@@ -130,17 +130,17 @@ This is what the GILE-HEM communication layer *adds* over a single-number TSIS v
 
 **F-PD-MAP-2.** If the ε = 0.020 marginal band is empirically too wide (creating INDETERMINATE labels for cases that subsequent meta-analysis confirms as crisp TRUE/FALSE) or too narrow (failing to flag marginal cases that replicate as INDETERMINATE), the band parameter requires re-calibration at Pass-61. → Sensitivity sweep TBA.
 
-**F-GH-COMM-1.** If the GILE-HEM 8-dim communication layer produces dimension-scores that contradict each other (e.g., high G + high D2 from the same data) on > 10% of test cases, the mapping has a coherence failure. → To be evaluated at Pass-61 against ≥ 10 test cases.
+**F-GH-COMM-1.** If the HEM-GILE 8-dim communication layer produces dimension-scores that contradict each other (e.g., high G + high D2 from the same data) on > 10% of test cases, the mapping has a coherence failure. → To be evaluated at Pass-61 against ≥ 10 test cases.
 
 ---
 
 ## 7. #69 Honesty Notes
 
 - The ε = 0.020 marginal band is a **first proposal**, not derived from first principles. Sensitivity analysis at Pass-61 may refine.
-- The GILE-HEM stats-axis interpretations are **canonical proposals**, not yet executed across the full Pass-58 corpus. Section 4.1 (Bengston) is the first worked application; the other 5 corpus programs need scoring at Pass-61.
+- The HEM-GILE stats-axis interpretations are **canonical proposals**, not yet executed across the full Pass-58 corpus. Section 4.1 (Bengston) is the first worked application; the other 5 corpus programs need scoring at Pass-61.
 - The PD coordinates assigned in Table 1 are **central-tendency estimates** for each label class. Individual studies within a class may sit anywhere in the indicated band.
 - The MI (Meta-Indeterminate) row in Table 1 is **conjectural** — no Pass-58 corpus program currently qualifies. Candidates exist (Sheldrake certain trials, Bengston certain follow-ups) but full MI assignment requires the structural-contradiction analysis specified in Section 2.
-- This mapping does NOT replace the Pass-58 TSIS four-gate stack; it provides a **finer-grained labeling layer on top of TSIS**. TSIS still does the gate-counting; the PD/TIL/GILE-HEM layer translates the count into the canonical TI Sigma vocabulary.
+- This mapping does NOT replace the Pass-58 TSIS four-gate stack; it provides a **finer-grained labeling layer on top of TSIS**. TSIS still does the gate-counting; the PD/TIL/HEM-GILE layer translates the count into the canonical TI Sigma vocabulary.
 
 ---
 

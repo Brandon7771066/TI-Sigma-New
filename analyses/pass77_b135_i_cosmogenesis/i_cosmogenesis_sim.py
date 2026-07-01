@@ -3,7 +3,7 @@
 THE QUESTION (Brandon, TI one-year anniversary, 2026-06-25):
   "Starting with i, will i inevitably and spontaneously arrange itself into a
    conscious i-Cell that exhibits UOP/Myrion optimization SPECIFICALLY over any
-   other attractor? And do the 8 constants NATURALLY arrange around GILE-HEM
+   other attractor? And do the 8 constants NATURALLY arrange around HEM-GILE
    maximization -- a mathematical proof of moral realism that demolishes Hume?"
 
 WHAT THIS SCRIPT ACTUALLY DOES (and does NOT do):
@@ -131,14 +131,14 @@ def part_b_constants() -> dict:
         "extended_euler_is_machine_zero": bool(ext < 1e-9),
         "eight_constant_magnitude_ladder": [f"{k}={v:.4f}" for k, v in ladder],
         "honest_note": "The identity is GENUINE (machine zero). The Level-0..7 / "
-                       "GILE-HEM ROLE labels attached to each constant are an "
+                       "HEM-GILE ROLE labels attached to each constant are an "
                        "interpretive overlay, not forced by the identity.",
         "prereg_P_B_euler_passes": bool(ext < 1e-9),
     }
 
 
 # --------------------------------------------------------------------------- #
-# PART B2 — anti-numerology test for the GILE-HEM <-> 8-constant mapping (NAD-1)
+# PART B2 — anti-numerology test for the HEM-GILE <-> 8-constant mapping (NAD-1)
 # --------------------------------------------------------------------------- #
 def part_b2_mapping_is_nonarbitrary() -> dict:
     """A mapping 'carves a real joint' only if it PREDICTS something a random

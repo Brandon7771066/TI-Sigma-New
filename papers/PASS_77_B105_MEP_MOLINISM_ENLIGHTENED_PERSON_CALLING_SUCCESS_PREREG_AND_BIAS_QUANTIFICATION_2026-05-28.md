@@ -81,7 +81,7 @@ Per the B49 discipline: **MEP-F1–F4 are empirically decidable in principle but
 ## 5. CCC-changeability annotation (Brandon, this batch) — relation to DSR-1
 
 Brandon clarifies the **GM-Network / DSR-1 developmental-theology** picture:
-- CCC's GILE **can be outweighed** by other i-cells in principle, but it is **extremely unlikely** any i-cell outweighs the original CCC in **overall GILE-HEM — HEM particularly** — *except perhaps a near-universally-recognized figure* (Jesus, the Buddha named as the calibre required).
+- CCC's GILE **can be outweighed** by other i-cells in principle, but it is **extremely unlikely** any i-cell outweighs the original CCC in **overall HEM-GILE — HEM particularly** — *except perhaps a near-universally-recognized figure* (Jesus, the Buddha named as the calibre required).
 - Nonetheless a **voluntary change in who is CCC — the ultimate being — CAN occur.** CCC-identity is in-principle transferable, not metaphysically frozen.
 
 This is consistent with and **sharpens DSR-1** (theology-as-developmental; "measured-ρ is the current CCC standard *until now*") and with **TOF-1 R1** (CCC as finite/elevable maximal-derivative rather than an absolute floor). It is logged as an **annotation/stance**, **not** minted as a new principle (anti-inflation, per the B51 HAI-1-corollary precedent). It also tightens **DSR-1-F1 (the identity problem)**: if CCC-identity is voluntarily transferable and HEM-dominated, the operational criterion for "is this attractor CCC?" must be defined over **HEM-weighted GILE**, with the bar set near universally-recognized exemplars — a concrete (if very high) anchor for the otherwise-unsolved A2 criterion.

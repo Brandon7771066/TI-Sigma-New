@@ -60,7 +60,7 @@ Brandon's correction: *"Just because there are a lot of studies on one thing, or
 
 ### The corpus connection: the truth-vs-existence gap (GTT-1)
 
-Brandon explicitly invokes the **truth-vs-existence gap** here, and it is the right lens. Per canonical **GTT-1 (GILE True-Tralseness):** the maximum of any single axis is *not* the optimum — truth competes with existence, and the genuinely best option is a **GILE-HEM balance**, not the extremum of one dimension. Applied to exercise:
+Brandon explicitly invokes the **truth-vs-existence gap** here, and it is the right lens. Per canonical **GTT-1 (GILE True-Tralseness):** the maximum of any single axis is *not* the optimum — truth competes with existence, and the genuinely best option is a **HEM-GILE balance**, not the extremum of one dimension. Applied to exercise:
 
 > **The BEST exercise option is not necessarily the TOUGHEST, nor the one that yields the MOST GILE results on a single salient axis (e.g., muscle aesthetics).**
 

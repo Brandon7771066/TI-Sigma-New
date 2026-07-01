@@ -134,7 +134,7 @@ def g_H(h):
     return math.log(1.0 + max(float(h), 0.0))
 
 def compute_J_window(lfp_window, fs, channel_pairs):
-    """Pass-77-B5 GILE-HEM (BOK) Truth-vs-Existence per Pass-68-B1 canonical.
+    """Pass-77-B5 HEM-GILE (BOK) Truth-vs-Existence per Pass-68-B1 canonical.
     G = mean gamma-PLV across sampled channel pairs in [0,1] (truth axis, G*=0.93 cap)
     H = theta / (theta + delta) in [0,1] (existence axis, no cap)
     J = f(G) + g(H) (additive, asymmetric-cap)."""
@@ -298,7 +298,7 @@ def main():
         Mr = np.asarray(Mr); L_arr = np.asarray(L_arr); E_arr = np.asarray(E_arr); t_arr = np.asarray(t_arr)
         n_G_at_cap = int(np.sum(L_arr >= G_STAR))
         results["stages"]["s3_J"] = {
-            "instrument": "Pass-77-B5 GILE-HEM BOK J=f(G)+g(H)",
+            "instrument": "Pass-77-B5 HEM-GILE BOK J=f(G)+g(H)",
             "lfp_path": lfp_name, "fs_hz": fs, "n_channels_used": int(len(ch_indices)),
             "n_windows": n_windows, "window_sec": WINDOW_SEC,
             "G_STAR": G_STAR, "alpha": ALPHA_J,

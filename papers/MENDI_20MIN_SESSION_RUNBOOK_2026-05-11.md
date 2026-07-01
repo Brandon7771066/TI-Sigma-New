@@ -169,4 +169,4 @@ If your STIM1 and STIM3 deltas are both negative AND of similar magnitude → st
 - **The 12-bit-ADC NIR-intensity interpretation is the strongest hypothesis** but unverified in absolute physical units. The stimulus deltas measured here are the verification path.
 - **Single-session results are noisy** — replicate across 3–5 sessions before drawing any individual-level conclusion. The protocol is designed for repeated runs.
 - **Streaming dropout is expected** — Pass-2 saw ~60% dropout on a 10-min meditation. The 20-min protocol has 4 stimulus events specifically to give multiple chances at clean stimulus-baseline pairs even if 1–2 are corrupted by dropout.
-- **No claim is made that this validates URB #828 or any GILE-HEM hypothesis** — this is hardware-functionality validation only. Higher-order theoretical claims require the multi-session designs in the relevant URB papers.
+- **No claim is made that this validates URB #828 or any HEM-GILE hypothesis** — this is hardware-functionality validation only. Higher-order theoretical claims require the multi-session designs in the relevant URB papers.

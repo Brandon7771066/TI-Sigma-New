@@ -1,17 +1,17 @@
 """
-Pass-77 B79 — Cognitive ERROR is NOT a hallucination (EHD-1). The separator is CERTAINTY under GILE-HEM.
+Pass-77 B79 — Cognitive ERROR is NOT a hallucination (EHD-1). The separator is CERTAINTY under HEM-GILE.
 
 Brandon insight (2026-05-28): "a cognitive error is not the same as a hallucination. The latter is
-strongly believed (high certainty, low accuracy with GILE-HEM), while the former is not."
+strongly believed (high certainty, low accuracy with HEM-GILE), while the former is not."
 
-OPERATIONAL MODEL. Each output has accuracy a in [0,1] (P correct, GILE-HEM ground truth) and the
+OPERATIONAL MODEL. Each output has accuracy a in [0,1] (P correct, HEM-GILE ground truth) and the
 agent's CERTAINTY q in [0,1]. Both ERROR and HALLUCINATION are low-accuracy; what separates them is
 certainty:
   - KNOWLEDGE         : high a, high q       (calibrated correct)
   - HALLUCINATION     : low  a, HIGH q       (strongly-believed wrong -> dangerous; == hyper-imagining, B78)
   - COGNITIVE ERROR   : low  a, LOW/MID q    (wrong but NOT strongly believed -> self-correctable, cheap)
   - underconfident    : high a, low q        (correct but not asserted)
-GILE-HEM calibration = q tracking a (diagonal). Overconfidence gap g = q - a. Hallucination = large
+HEM-GILE calibration = q tracking a (diagonal). Overconfidence gap g = q - a. Hallucination = large
 positive g AT low a. Cognitive error = small g at low a. The HARM of a wrong output scales with how
 strongly it is believed: harm = q * (1 - a). -> at the SAME inaccuracy, certainty is the harm multiplier.
 
@@ -68,15 +68,15 @@ for k, c in cmap.items():
     plt.scatter(a[m][:1400], q[m][:1400], s=7, c=c, alpha=.55,
                 label=f"{k} (n={counts[k]})")
 xs = np.linspace(0, 1, 50)
-plt.plot(xs, xs, "k--", lw=1.2, label="GILE-HEM calibration (q=a)")
+plt.plot(xs, xs, "k--", lw=1.2, label="HEM-GILE calibration (q=a)")
 plt.axvspan(0, LO, color="red", alpha=0.04)
 plt.text(0.02, 0.96, "HALLUCINATION\nlow accuracy + HIGH certainty\n(strongly-believed wrong)",
          fontsize=7.5, va="top", color="#9d0208")
 plt.text(0.02, 0.18, "COGNITIVE ERROR\nlow accuracy + LOW certainty\n(not strongly believed)",
          fontsize=7.5, va="top", color="#1d3557")
-plt.xlabel("accuracy a  (GILE-HEM ground truth)")
+plt.xlabel("accuracy a  (HEM-GILE ground truth)")
 plt.ylabel("agent certainty q")
-plt.title("Cognitive ERROR ≠ HALLUCINATION (EHD-1): both are low-accuracy;\nCERTAINTY is the separator (GILE-HEM diagonal = calibration)")
+plt.title("Cognitive ERROR ≠ HALLUCINATION (EHD-1): both are low-accuracy;\nCERTAINTY is the separator (HEM-GILE diagonal = calibration)")
 plt.legend(fontsize=7, loc="lower right"); plt.tight_layout()
 plt.savefig(f"{OUT}/fig1_error_vs_hallucination_plane.png", dpi=110); plt.close()
 
@@ -96,7 +96,7 @@ plt.savefig(f"{OUT}/fig2_harm_scales_with_certainty.png", dpi=110); plt.close()
 
 out = dict(
   insight="cognitive error != hallucination; both low-accuracy; certainty (strength of belief) is the "
-          "separator; harm = certainty x inaccuracy; GILE-HEM diagonal = calibration reference",
+          "separator; harm = certainty x inaccuracy; HEM-GILE diagonal = calibration reference",
   model_is_illustrative_69=("by-construction; shapes are the deliverable. Empirical upgrade: calibration "
      "datasets (confidence vs correctness) + self-correction/challenge probe to operationalize "
      "'strongly believed / incorrigible' vs revisable error."),
@@ -115,7 +115,7 @@ out = dict(
     ties_to_HAH1="hallucination here = the high-certainty/low-evidence hyper-imagining of B78 (HAH-1); "
        "EHD-1 supplies the certainty criterion that operationally separates HAH-1's 'hyper-imagining' "
        "from ordinary ERR.",
-    calibration="GILE-HEM calibration (q=a diagonal) is the reference; hallucination is the largest "
+    calibration="HEM-GILE calibration (q=a diagonal) is the reference; hallucination is the largest "
        "DANGEROUS overconfidence gap (q>>a at low a), error a small/benign gap."),
   principles_status="EHD-1 (Error-Hallucination Distinction) introduced CANDIDATE canonical, operational "
      "refinement/twin of HAH-1 (B78). VPP-1 EXTENDED (caps/bold/italics emphasis = intonation channel, "

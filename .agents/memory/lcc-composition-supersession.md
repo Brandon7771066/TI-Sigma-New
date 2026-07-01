@@ -5,7 +5,9 @@ description: The current Law-of-Correlational-Causation composition is NOT L×E;
 
 # LCC composition is NOT L×E anymore
 
-**Rule:** When asked for the "Law of Correlational Causation formula," do NOT answer `L × E`. That multiplicative composition was **refuted** (Pass-77 B4) by *multiplicative cancellation* (L=gamma-PLV and E=theta/delta have opposing sleep-state signatures ⇒ product cancels, η²≈0) and **superseded** by the **GILE-HEM (BOK) Truth-vs-Existence model** (Brandon directive, verbatim 2026-05-25, in the B5 pre-reg paper).
+**Naming:** the model is written **HEM-GILE**, not GILE-HEM — existence leads, per EPE-1's existence-first ordering (EP → HEM → GILE-character). Do NOT reintroduce the "GILE-HEM" order in prose. (Underscore code identifiers `gile_hem_*`/`GILE_HEM` still use the legacy order — they are functional, not the model name.)
+
+**Rule:** When asked for the "Law of Correlational Causation formula," do NOT answer `L × E`. That multiplicative composition was **refuted** (Pass-77 B4) by *multiplicative cancellation* (L=gamma-PLV and E=theta/delta have opposing sleep-state signatures ⇒ product cancels, η²≈0) and **superseded** by the **HEM-GILE (BOK) Truth-vs-Existence model** (Brandon directive, verbatim 2026-05-25, in the B5 pre-reg paper).
 
 Two faces of the superseding object:
 - **Conceptual / tiling:** **GILE-Truth `(×/+)` HEM** (the aperiodic dual) — supersedes the "L×E Einstein tiling" (per the 2026-06-16 corpus overview).
@@ -49,7 +51,7 @@ They differ ~1.3% and are **never forced identical** (#69/HAN-1). The Radiant-Ca
 
 # LCC → PD mapping (anti-numerology)
 
-It is a **two-axis embedding, NOT a value identity**: TSC **ring** (radius `{C,T,1,√2,φ,e,π}`) = LCC/existence scale; TSC **layer** (angle `i^y`) = PD/truth mode. PD-degree boundaries (0.5/1.5/2.0/π, e-base above the Radiant Threshold) live on the angular axis; 0.865/0.930 are pillar thresholds on the real/imag axes, NOT PD boundaries. A forced "LCC value ↦ specific PD critical value" table is rejected (HAN-1). Crystal/Graph host the 8-D GILE-HEM shell, NOT the 64D truth interior (needs a fibre-bundle upgrade).
+It is a **two-axis embedding, NOT a value identity**: TSC **ring** (radius `{C,T,1,√2,φ,e,π}`) = LCC/existence scale; TSC **layer** (angle `i^y`) = PD/truth mode. PD-degree boundaries (0.5/1.5/2.0/π, e-base above the Radiant Threshold) live on the angular axis; 0.865/0.930 are pillar thresholds on the real/imag axes, NOT PD boundaries. A forced "LCC value ↦ specific PD critical value" table is rejected (HAN-1). Crystal/Graph host the 8-D HEM-GILE shell, NOT the 64D truth interior (needs a fibre-bundle upgrade).
 
 **Anchor:** `papers/LCC_COMPOSITION_AND_TRUTH_EXISTENCE_PILLAR_SEPARATION_CANONICAL_RULING_2026-06-27.md`.
 

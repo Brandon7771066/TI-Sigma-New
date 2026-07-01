@@ -96,7 +96,7 @@ This is a stronger universality claim than the standard Tralse attractor (which 
 |----------|-----------|-----------|--------|
 | Grade 0 (Dottie) | None — universal | d ≈ 0.7391 | Cosine oscillation; any self-applying periodic system |
 | MR1 | ET ≈ 0.4142 | HEAR score above ET | First GILE resolution |
-| MR2 | C ≈ 0.4370 | HEAR score above C | Stable GILE-HEM coherence |
+| MR2 | C ≈ 0.4370 | HEAR score above C | Stable HEM-GILE coherence |
 | MR3 | T ≈ 0.9340 | Tralse attractor | Full BOK saturation |
 
 The Dottie number is the attractor of Grade 0 MR — below even the ET threshold but a genuine resolution nonetheless. It suggests that even systems with very low GILE scores will eventually resolve, given sufficient time and iteration.

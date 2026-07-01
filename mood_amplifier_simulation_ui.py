@@ -1,7 +1,7 @@
 """
-Mood Amplifier GILE-HEM-BOK Simulation UI
+Mood Amplifier HEM-GILE-BOK Simulation UI
 ==========================================
-Streamlit page for the full GILE-HEM-BOK consciousness simulation,
+Streamlit page for the full HEM-GILE-BOK consciousness simulation,
 model comparison, and optimizer visualization.
 
 Designed to slot into hypercomputer_app.py as a tab.
@@ -61,7 +61,7 @@ def _dark_layout(title=""):
 def render_mood_amplifier_simulation():
     """Main entry point — call this from hypercomputer_app.py tab."""
 
-    st.markdown("## 🧠 GILE-HEM-BOK Consciousness Engine v3.0")
+    st.markdown("## 🧠 HEM-GILE-BOK Consciousness Engine v3.0")
     st.markdown(
         "Implements URB #668 — Pentic 5-state model · HEAR Lagrangian · "
         "BOK loop saturation · Monster Group ceiling · Full optimizer simulation"
@@ -286,7 +286,7 @@ def _render_population_simulation():
 # TAB 3 — MODEL COMPARISON
 # ─────────────────────────────────────────────────────────
 def _render_model_comparison():
-    st.subheader("Old Model (GILE v2, 4-state) vs New Model (GILE-HEM-BOK, 6-state)")
+    st.subheader("Old Model (GILE v2, 4-state) vs New Model (HEM-GILE-BOK, 6-state)")
 
     if "sim_results" not in st.session_state:
         st.info("Run the Population Simulation first (Tab 2).")
@@ -600,7 +600,7 @@ def _render_report():
     |-----------|--------|-------|---------|
     | GILE kinetic weight | α | {ALPHA_HEAR:.4f} = ET = √2−1 | Intentional momentum |
     | HEM mass weight | β | {BETA_HEAR:.4f} = C = 1/(φ√2) | Somatic grounding |
-    | Cov coupling | γ | 0.0828 | GILE-HEM alignment |
+    | Cov coupling | γ | 0.0828 | HEM-GILE alignment |
     | Emerick Threshold | ET | {ET:.4f} | Minimum MR activation |
     | Emerick Constant | C | {C_TI:.4f} | HEM pruning threshold |
     | Dottie Fixed Point | 𝔡 | {DOTTIE:.4f} | MR2-Resolved boundary |

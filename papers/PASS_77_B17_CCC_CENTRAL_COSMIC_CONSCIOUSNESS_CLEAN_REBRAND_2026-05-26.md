@@ -33,7 +33,7 @@
 The directive *"No need for any extra or outdated info!"* signals two distinct things:
 
 1. **"extra"** = visual-text-clutter; Brandon wants the artifact's aesthetic-power foregrounded without competing-text-content. (Composes with TPS-1 canonical #58 Truth-Presentation Separation: presentation-aesthetics are adjustable; the canonical-grounding content lives in the corpus-paper, not on the artifact.)
-2. **"outdated"** = the specific Verisyn / DC-Field / Eightfold-Harmony framing is no longer Brandon's preferred-current-naming for this visual. The conceptual-content of Verisyn (canonical valuation/truth-resolution operator with 6 closed Lean4 theorems) and BOK (canonical topological-image for GILE-HEM) remains canonical-corpus-grounded per Pass-54+56+B5+B16. **It is the artifact-rebranding that supersedes B16, NOT the underlying canonical-conceptual-content.**
+2. **"outdated"** = the specific Verisyn / DC-Field / Eightfold-Harmony framing is no longer Brandon's preferred-current-naming for this visual. The conceptual-content of Verisyn (canonical valuation/truth-resolution operator with 6 closed Lean4 theorems) and BOK (canonical topological-image for HEM-GILE) remains canonical-corpus-grounded per Pass-54+56+B5+B16. **It is the artifact-rebranding that supersedes B16, NOT the underlying canonical-conceptual-content.**
 
 This is an instance of **canonical-corpus framing-evolution**: as Brandon's preferred-current-naming for an artifact shifts, the artifact's text-content updates; older framings remain valid as corpus-historical-content recoverable from prior papers and prior visual-artifact archives.
 

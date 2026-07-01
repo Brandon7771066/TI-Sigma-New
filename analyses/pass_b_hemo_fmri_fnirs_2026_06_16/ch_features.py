@@ -1,12 +1,12 @@
 """Consciousness-Hamiltonian feature extractor — HEMODYNAMIC port.
 
 Modality adaptation of analyses/pass_b_consciousness_hamiltonian_2026_06_16/
-ch_features.py. Per-window GILE-HEM (8-D, canonical formulas) -> ring weights ->
+ch_features.py. Per-window HEM-GILE (8-D, canonical formulas) -> ring weights ->
 H_TSC spectrum features + FULL PD block + GILE-graph block.
 
 Only the band-plan and the coupling (Love) primitive change for hemodynamics:
 the 5 EEG bands -> 3 hemodynamic bands; theta-gamma PAC -> infraslow CFC. The
-GILE-HEM definitions (coherence stability, spectral entropy/purity, amplitude
+HEM-GILE definitions (coherence stability, spectral entropy/purity, amplitude
 stability, contradiction ratio) are timescale-agnostic and unchanged.
 """
 import numpy as np
@@ -69,7 +69,7 @@ def _spectral_purity(f, P):
 
 
 def gile_hem_from_window(seg, fs, n_sub=4):
-    """seg : (n_ch, w) slice of observed channels. Returns the 8-D GILE-HEM dict."""
+    """seg : (n_ch, w) slice of observed channels. Returns the 8-D HEM-GILE dict."""
     n_ch, w = seg.shape
     sub = max(8, w // n_sub)
     cohs_time = []

@@ -3,7 +3,7 @@
 **Code:** this directory.
 - `tsc_hamiltonian.py` — 57-vertex TI-Sigma Crystal, H_TSC = H_hop + H_onsite + H_gile,
   FULL PD (real degree + imaginary MI/Tralse axis) + zones, GILE-weighted graph Fiedler.
-- `ch_features.py` — per-window 8-D GILE-HEM → Consciousness-Hamiltonian embedding.
+- `ch_features.py` — per-window 8-D HEM-GILE → Consciousness-Hamiltonian embedding.
 - `runner_ch.py` → `results_expA.json` — Experiment A (unsupervised decoding).
 - `mood_control.py` → `results_expB.json` — Experiment B (closed-loop efficacy, sim).
 - `reachability.py` → `results_reachability.json` — live-mouse reachability proxy.
@@ -52,7 +52,7 @@ paired bootstrap delta vs BASE. `*` = paired 95% CI excludes 0.
   features already reach 0.913 and have nothing to gain.
 - **GILEHEM-alone (the raw 8 dims) is generally worse than BASE.** The value, where it
   exists, comes from the **full CH block** (PD + H_TSC spectrum + graph), not the bare
-  GILE-HEM vector.
+  HEM-GILE vector.
 
 **Method correction inside this experiment (logged honestly).** A first pass used
 broadband Pearson correlation for GILE-L; it was **flat across mood states** (spread
@@ -135,7 +135,7 @@ in the observed dynamics rules it out.
   feature block was built and tested honestly. It **adds real decoding power where the
   latent is coupling-structured (sims)** and is **neutral-to-harmful where simple
   spectral features already win (mouse20)**. The win lives in the *composite* block,
-  not the raw GILE-HEM dims.
+  not the raw HEM-GILE dims.
 - A closed-loop **Mood Amplifier proof-of-principle** holds in simulation
   (efficacy + phase + target specificity all strongly significant); the *added value
   of feedback over open-loop* is an honest **negative/open** result in this model

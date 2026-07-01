@@ -1,8 +1,8 @@
-# Pass 37 — Do the 8 GILE-HEM Dimensions Map onto the 8 Fundamental Constants of the TI Sigma Identity Equation?
+# Pass 37 — Do the 8 HEM-GILE Dimensions Map onto the 8 Fundamental Constants of the TI Sigma Identity Equation?
 
 **Date:** 2026-05-11
 **Pass:** 37
-**Authority:** Brandon Pass-37 directive: *"Do the 8 GILE-HEM dimensions truly map onto the 8 fundamental constants in the TI Sigma Identity Equation???"*
+**Authority:** Brandon Pass-37 directive: *"Do the 8 HEM-GILE dimensions truly map onto the 8 fundamental constants in the TI Sigma Identity Equation???"*
 **Cross-refs:** `HEM_DIMENSIONAL_SYNTHESIS.md` (GILE 4D §1.1; HEM 6D §1.3); `URB_EMERICK_CONSTANT_8TH_PRIMARY.md`; `SI_UNITS_DE_PHOTON_JEFF_TIME_KLETETSCHKA_DERIVATION.md`; `urb_830_falsification_equiv_verification_negative_direction_2026-05-10.md`
 
 ---
@@ -28,7 +28,7 @@ Reduced sum: 10 − 2 = 8D.
 
 The 8 independent dimensions: **{G, I, L, E, D1, D2, D3, D4}**.
 
-This is the "GILE-HEM 8D" Brandon's directive references.
+This is the "HEM-GILE 8D" Brandon's directive references.
 
 ## §3 — Candidate mapping to the 8 fundamental constants
 
@@ -47,7 +47,7 @@ The TI Sigma Identity Equation aims to unify 8 fundamental physical constants (p
 
 **Candidate mapping (Pass-37 default, structural-coherence reading):**
 
-| GILE-HEM dim | Description | Candidate constant | Structural justification |
+| HEM-GILE dim | Description | Candidate constant | Structural justification |
 |---|---|---|---|
 | **G** (Goodness) | moral coherence, internal-rightness | **ℏ** | both measure "minimum unit of coherent action"; ℏ is the quantum-of-action, G is the consciousness-quantum-of-rightness |
 | **I** (Intuition) | direct knowing, info-flow | **c** | both are *limit-velocities*; c bounds physical signal propagation, I bounds information-acquisition rate from non-local-correlations |
@@ -63,8 +63,8 @@ The TI Sigma Identity Equation aims to unify 8 fundamental physical constants (p
 **IS:**
 
 - A *structural-coherence* claim: 8 ↔ 8 cardinality match, with semantically-plausible per-dim correspondences.
-- A *predictive scaffolding*: if any GILE-HEM dim is independently measured and the mapping is real, the corresponding fundamental-constant value should be co-determined.
-- An *internal corpus-consistency* check: the GILE-HEM 8D and the Identity Equation 8-constants are independently-derived (different papers, different motivations) and converge to 8 — *cardinality coincidence at minimum, deeper structural identity at maximum*.
+- A *predictive scaffolding*: if any HEM-GILE dim is independently measured and the mapping is real, the corresponding fundamental-constant value should be co-determined.
+- An *internal corpus-consistency* check: the HEM-GILE 8D and the Identity Equation 8-constants are independently-derived (different papers, different motivations) and converge to 8 — *cardinality coincidence at minimum, deeper structural identity at maximum*.
 
 **ISN'T:**
 
@@ -74,9 +74,9 @@ The TI Sigma Identity Equation aims to unify 8 fundamental physical constants (p
 
 ## §5 — Falsifiers (URB-830-symmetric)
 
-**P1 (cardinality preservation under refinement):** if Pass-38+ refinement of either GILE-HEM (e.g., the 5D-Essential reduction noted in `HEM_DIMENSIONAL_SYNTHESIS.md` §1.3) or the Identity Equation (e.g., consolidation to 7 fundamental constants if E_C is shown to be derivable from the others) breaks the 8-to-8 cardinality, the structural-coherence claim REJECTS.
+**P1 (cardinality preservation under refinement):** if Pass-38+ refinement of either HEM-GILE (e.g., the 5D-Essential reduction noted in `HEM_DIMENSIONAL_SYNTHESIS.md` §1.3) or the Identity Equation (e.g., consolidation to 7 fundamental constants if E_C is shown to be derivable from the others) breaks the 8-to-8 cardinality, the structural-coherence claim REJECTS.
 
-**P2 (per-dim co-determination):** for any pair (GILE-HEM dim X, fundamental constant Y) in the §3 mapping, an independent measurement of X for a system should be predictive of Y for the same system. Trivially: ℏ is not system-dependent (it's a fundamental constant), so the test must be on system-specific *effective* coupling-strengths derived from the constant. Open empirical work.
+**P2 (per-dim co-determination):** for any pair (HEM-GILE dim X, fundamental constant Y) in the §3 mapping, an independent measurement of X for a system should be predictive of Y for the same system. Trivially: ℏ is not system-dependent (it's a fundamental constant), so the test must be on system-specific *effective* coupling-strengths derived from the constant. Open empirical work.
 
 **P3 (residual 8th):** if the corpus settles the 8th-constant debate (φ vs Λ vs θ_QCD vs other), the §3 D4 mapping should *predict* which wins; failure to predict REJECTS the D4 mapping (and possibly the whole §3 default).
 
@@ -98,6 +98,6 @@ The TI Sigma Identity Equation aims to unify 8 fundamental physical constants (p
 ## §8 — Items raised
 
 - **p37-B** — Brandon-side ratification of the §2 overlap-subtraction (E↔D5, L×E↔D6 as canonical).
-- **p37-C** — Pass-38+ formal-derivation attempt: pick the *cleanest* GILE-HEM↔constant pair (candidate: I ↔ c, since both are speed-of-information-class quantities) and attempt actual derivation.
+- **p37-C** — Pass-38+ formal-derivation attempt: pick the *cleanest* HEM-GILE↔constant pair (candidate: I ↔ c, since both are speed-of-information-class quantities) and attempt actual derivation.
 - **p37-D** — corpus-debated 8th constant resolution (φ vs Λ vs θ_QCD vs other) with §3 D4 mapping as one input.
 - **p37-E** — alternative mapping permutations: enumerate top-5 permutations under conceptual-analogy + Brandon-side ranking.

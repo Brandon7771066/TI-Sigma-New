@@ -62,11 +62,11 @@ L-2 PILOT on Brandon-affirmed Ecosystem-dyad pivot (paleoclimate δ¹⁸O cross-
 
 ## §4 §7.7.87 (Pass 51, 2026-05-14) — full preserved content
 
-**GILE-HEM + BOK Models measurement-empirical-status audit.** Brandon directive: "Assess GILE-HEM and various BOK Models' measurements and empirical status. Chart a path for proper measurement and verification of claims, whether positive or negative." Pass-51 is a **#69 audit, not an empirical pass**.
+**HEM-GILE + BOK Models measurement-empirical-status audit.** Brandon directive: "Assess HEM-GILE and various BOK Models' measurements and empirical status. Chart a path for proper measurement and verification of claims, whether positive or negative." Pass-51 is a **#69 audit, not an empirical pass**.
 
 Four structural label-inflations identified and downgraded without retracting prior positives (C14 Mendi/C16 GHZ-5/C17-19 GM-Node/C20 MR Truth κ remain intact):
 
-1. Pass-47 C13 "GILE-HEM CONFIRM (formal)" elides the three-tier Pass-37 breakdown (cardinality CONFIRMED-CONDITIONAL / structural-mapping PARTIAL-POS / derivational-identity NULL)
+1. Pass-47 C13 "HEM-GILE CONFIRM (formal)" elides the three-tier Pass-37 breakdown (cardinality CONFIRMED-CONDITIONAL / structural-mapping PARTIAL-POS / derivational-identity NULL)
 2. urb_699 B-2 "first quantitative confirmation" wing/arm=1.96 is measured against a single ChatGPT-rendered image with B/D coefficient explicitly "fit to data" — honest label SUGGESTIVE-PATTERN-MATCH-AGAINST-LLM-IMAGE
 3. BOK_TOPOLOGY β₁=6 is dominated by 400 synthetic points padding 15 real ESP32 points — needs competing-topology null
 4. BOK 4+4 math-fields split is post-hoc alignment with a conventional MSC partition, not a pre-registered TI-Sigma prediction

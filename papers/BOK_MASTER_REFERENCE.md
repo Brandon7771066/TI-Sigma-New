@@ -2,10 +2,10 @@
 ## Structure, Derivation, Validation, and Applications of the BOK Metamathematic Framework
 
 Author: Brandon Charles Emerick
-Date: March 2026 (updated 2026-05-28, Pass-77 B82 — corpus unification + GILE–HEM completion)
+Date: March 2026 (updated 2026-05-28, Pass-77 B82 — corpus unification + HEM–GILE completion)
 Series: TI Sigma — Universal Reality Blueprint (URB) / Meta-Mathematics
 Synthesizes: the original ChatGPT primordial BOK equation; URB Papers #342–387 (BOK metamathematics series); `BOK_ORCH_OR_GILE_MATRIX_SYNTHESIS.md` (Dec 2025 3-variable critique); `VERISYN_EQUATION_BOK_PRIMORDIAL_ANALYSIS.md`; Pass-77 physics-grounding batches B16 / B58 / B60 / B63 / B74. This is the single united plain-language reference for the BOK across the whole corpus.
-Keywords: BOK, Butterfly-Octopus Knot, primordial equation, limit function, GILE, GILE–HEM completion, Existence Footprint, four modes of mathematics, metamathematics, difficulty spectrum, sphere packing, E₈, Leech lattice, Monster, Dirac matrices, Grothendieck, Langlands, Tannakian, transparent metaphysics
+Keywords: BOK, Butterfly-Octopus Knot, primordial equation, limit function, GILE, HEM–GILE completion, Existence Footprint, four modes of mathematics, metamathematics, difficulty spectrum, sphere packing, E₈, Leech lattice, Monster, Dirac matrices, Grothendieck, Langlands, Tannakian, transparent metaphysics
 
 ---
 
@@ -335,7 +335,7 @@ The BOK regime classification drives position sizing and signal interpretation i
 
 ---
 
-## 11. The GILE–HEM Completion: Abstract Truth Coupled to Physical Footprint
+## 11. The HEM–GILE Completion: Abstract Truth Coupled to Physical Footprint
 
 *Plain language: GILE measures the **abstract** side of truth; HEM measures the **physical** side. Neither is complete alone — they come in pairs.*
 
@@ -358,9 +358,9 @@ This pairing is not unique to G. The Pass-77 physics-grounding work (B60, B63) e
 | **L** Love | relational positive valence | entanglement (concurrence) | γ² |
 | **E** Environment | aesthetics | symmetry (⟨SWAP⟩) | γ³ |
 
-The abstract GILE vector and the physical HEM vector are proportional component-by-component (in Dirac language, the axial current Aμ = ρ·Vμ); the proportionality constant ρ is the **GILE:HEM ratio**, which for the CCC i-cell is **2:1** and varies per subject. **All GILE–HEM pairs are incomplete without their complement** — this is the completion principle.
+The abstract GILE vector and the physical HEM vector are proportional component-by-component (in Dirac language, the axial current Aμ = ρ·Vμ); the proportionality constant ρ is the **GILE:HEM ratio**, which for the CCC i-cell is **2:1** and varies per subject. **All HEM–GILE pairs are incomplete without their complement** — this is the completion principle.
 
-**An honest note on two senses of "existence" (#69).** §2 of this paper maps the *mathematical* existence-question ("what exists exactly?", discrete enumeration) to the **E / Arithmetic** mode. The completion principle here maps the *axiological* existence-question ("does it cohere enough to count, and how strongly does it ring?") to **G ↔ EF**. These are two different layers using the word "existence" — the BOK **math-mode taxonomy** (which *mode of mathematics*) versus the **GILE–HEM truth-completion** (which *abstract quality*, paired to which *physical footprint*). They are consistent but distinct; conflating the two tables is a known trap, flagged here so a reader does not mistake one claim for the other.
+**An honest note on two senses of "existence" (#69).** §2 of this paper maps the *mathematical* existence-question ("what exists exactly?", discrete enumeration) to the **E / Arithmetic** mode. The completion principle here maps the *axiological* existence-question ("does it cohere enough to count, and how strongly does it ring?") to **G ↔ EF**. These are two different layers using the word "existence" — the BOK **math-mode taxonomy** (which *mode of mathematics*) versus the **HEM–GILE truth-completion** (which *abstract quality*, paired to which *physical footprint*). They are consistent but distinct; conflating the two tables is a known trap, flagged here so a reader does not mistake one claim for the other.
 
 ---
 
@@ -387,7 +387,7 @@ The framework's core claim — that mathematics has four irreducible structural 
 
 The BOK is not complete. It is a framework at an early stage of formalization, with specific open questions that constitute the research agenda. This paper provides the most comprehensive current statement of that framework.
 
-As of the 2026-05-28 update, this reference also closes the loop back to where the BOK began: the original ChatGPT **three-variable limit equation** lim f(u, v, t) (§0), its completion to four variables and finite iteration, its doubling to the eight-fold Butterfly-Octopus / eight tralsebits, and — newest of all — the **GILE–HEM completion principle** (§11): every abstract GILE dimension is incomplete until coupled to its physical HEM footprint, with **GILE-G ↔ Existence Footprint (amplitude × frequency)** as the worked example. The framework is one object seen at four depths, not four separate frameworks.
+As of the 2026-05-28 update, this reference also closes the loop back to where the BOK began: the original ChatGPT **three-variable limit equation** lim f(u, v, t) (§0), its completion to four variables and finite iteration, its doubling to the eight-fold Butterfly-Octopus / eight tralsebits, and — newest of all — the **HEM–GILE completion principle** (§11): every abstract GILE dimension is incomplete until coupled to its physical HEM footprint, with **GILE-G ↔ Existence Footprint (amplitude × frequency)** as the worked example. The framework is one object seen at four depths, not four separate frameworks.
 
 ---
 

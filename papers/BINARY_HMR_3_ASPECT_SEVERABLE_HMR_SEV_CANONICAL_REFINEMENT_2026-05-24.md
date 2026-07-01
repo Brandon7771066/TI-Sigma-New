@@ -68,7 +68,7 @@ This is HMR but with INTERNAL DECOMPOSITION, not multi-framing.
 **The PRAGMATIC AXIS dimension is canonical-implicit.** Brandon's binary case study introduces "pragmatic axis" as a label-applicability dimension — a label can be T on the pragmatic axis while being I or MI on other axes (theoretical completeness, paradox-handling, etc.). This composes with:
 - **AA (Authority Axis)** — labels can vary by AA dimension
 - **TIU (Tralse-Informational-Unit)** — TIU magnitude can vary by which-axis-of-applicability is being assessed
-- **HEM (Hybrid-Existence-Mechanic)** — H component of GILE-HEM precisely captures pragmatic-utility-on-effort-allocation; binary scoring high on H (pragmatic-utility) while medium-low on G (truth-completeness) is exactly an HMR-SEV pattern at the meta-principle level
+- **HEM (Hybrid-Existence-Mechanic)** — H component of HEM-GILE precisely captures pragmatic-utility-on-effort-allocation; binary scoring high on H (pragmatic-utility) while medium-low on G (truth-completeness) is exactly an HMR-SEV pattern at the meta-principle level
 - **GTT-1 (GILE-True-Tralseness)** — binary's HMR-SEV structure is a worked example of GTT-1's "too much truth costs existence" principle: insisting on full G (4-label MR truth) loses H (pragmatic utility of 2-valued logic); binary maximizes H at the cost of G; this is canonical-rational per UOP-balance
 
 ### 2.4 Composition with refinement #5 (MI/MI vertical-horizontal axis)

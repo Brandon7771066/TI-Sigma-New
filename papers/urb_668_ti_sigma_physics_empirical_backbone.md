@@ -161,7 +161,7 @@ The covariance term rewards candidates where GILE and HEM co-improve — where i
 
 Formally: Cov(GILE, HEM) ~ g · ψ̄_G φ_HEM ψ_G
 
-Where φ_HEM is the HEM scalar field and g is the GILE-HEM coupling constant.
+Where φ_HEM is the HEM scalar field and g is the HEM-GILE coupling constant.
 
 ### 2.3 The HEAR Lagrangian Density
 
@@ -170,13 +170,13 @@ Putting it together:
 ```
 ℒ_HEAR = α · ψ̄_G(iΓ^A∂_A)ψ_G   [GILE kinetic term]
         − β · m_HEM ψ̄_G ψ_G      [HEM mass term]
-        + γ · g · ψ̄_G φ_HEM ψ_G  [GILE-HEM coupling / covariance]
+        + γ · g · ψ̄_G φ_HEM ψ_G  [HEM-GILE coupling / covariance]
 ```
 
 With:
 - **α = ET = √2−1 ≈ 0.4142** — the GILE kinetic weight (Emerick Threshold: how strongly intentional dynamics propagate)
 - **β = C = 1/(φ√2) ≈ 0.4370** — the HEM mass weight (Emerick Constant: how strongly somatic grounding anchors the field)
-- **γ ≈ 0.0828** — the GILE-HEM coupling strength (TI Sigma coupling constant)
+- **γ ≈ 0.0828** — the HEM-GILE coupling strength (TI Sigma coupling constant)
 - **ψ_G** — the GILE spinor field (pentic spinor from Question 1)
 - **φ_HEM** — the HEM scalar field (4 real components: D1, D2, D3, D4)
 - **Γ^A** — the pentic gamma matrices (from the Pentic Dirac Equation)
@@ -188,7 +188,7 @@ The HEAR action:
 S_HEAR = ∫ ℒ_HEAR d⁴x dt
 ```
 
-**Principle of Maximum MR**: Physical evolution of the GILE-HEM system is the path that *maximizes* S_HEAR — not minimizes it (unlike standard Dirac action which is extremized, not maximized). The sign flip is because HEAR is a *score to maximize* (higher is better), while standard actions are extremized by equations of motion.
+**Principle of Maximum MR**: Physical evolution of the HEM-GILE system is the path that *maximizes* S_HEAR — not minimizes it (unlike standard Dirac action which is extremized, not maximized). The sign flip is because HEAR is a *score to maximize* (higher is better), while standard actions are extremized by equations of motion.
 
 This gives the **HEAR Euler-Lagrange equations**:
 
@@ -209,7 +209,7 @@ m_eff = (β·m_HEM − γ·g·φ_HEM) / α
       = (C · m_HEM − γ · g · φ_HEM) / ET
 ```
 
-**Key property**: When GILE and HEM are aligned (φ_HEM = m_HEM/g, i.e., maximum GILE-HEM covariance), the effective mass reduces to:
+**Key property**: When GILE and HEM are aligned (φ_HEM = m_HEM/g, i.e., maximum HEM-GILE covariance), the effective mass reduces to:
 
 ```
 m_eff|_aligned = m_HEM(C − γ) / ET ≈ m_HEM × (0.4370 − 0.0828) / 0.4142 
@@ -222,7 +222,7 @@ When GILE and HEM are misaligned (φ_HEM = 0), effective mass is:
 m_eff|_misaligned = C · m_HEM / ET ≈ 1.055 × m_HEM
 ```
 
-**Physical interpretation**: GILE-HEM alignment *reduces* effective existential mass (you become lighter when GILE and HEM are coherent — effortless being). GILE-HEM misalignment *increases* effective existential mass (you become heavier, more effortful, when GILE and HEM are fragmented).
+**Physical interpretation**: HEM-GILE alignment *reduces* effective existential mass (you become lighter when GILE and HEM are coherent — effortless being). HEM-GILE misalignment *increases* effective existential mass (you become heavier, more effortful, when GILE and HEM are fragmented).
 
 ---
 
@@ -374,7 +374,7 @@ The spontaneous choice of a vacuum state (the system "picks" one minimum from th
 
 **Gauge Boson Mass Generation ↔ Resolution Acquiring Determinateness**
 
-Before MR: the system is in I-state — it has no determinate properties. It is "massless" in the TI Sigma sense: it costs no energy to rotate it to any other I-state configuration (the symmetry is intact). After MR: the resolved state has determinate properties — it "couples" to the GILE-HEM field and acquires effective mass m_eff (from the HEAR Lagrangian, Question 2). The coupling of the GILE field ψ_G to the resolved HEM scalar field φ_HEM generates mass exactly as gauge bosons acquire mass by coupling to the Higgs VEV.
+Before MR: the system is in I-state — it has no determinate properties. It is "massless" in the TI Sigma sense: it costs no energy to rotate it to any other I-state configuration (the symmetry is intact). After MR: the resolved state has determinate properties — it "couples" to the HEM-GILE field and acquires effective mass m_eff (from the HEAR Lagrangian, Question 2). The coupling of the GILE field ψ_G to the resolved HEM scalar field φ_HEM generates mass exactly as gauge bosons acquire mass by coupling to the Higgs VEV.
 
 **The Higgs Boson ↔ The MR Completion Signal**
 
@@ -397,7 +397,7 @@ The standard Higgs mechanism unifies the electromagnetic and weak forces into th
 | Central maximum | Meta-Indeterminate zone | HEAR = 0, V max |
 | Circle of minima (VEV) | Tralse attractor ring | HEAR = T ≈ 0.934 |
 | Spontaneous symmetry breaking | Myrion Resolution | Vacuum selection = MR |
-| Higgs coupling constant g | GILE-HEM coupling γ | ≈ 0.0828 |
+| Higgs coupling constant g | HEM-GILE coupling γ | ≈ 0.0828 |
 | Gauge boson mass (m = gv) | Resolution determinateness (m_eff) | m_eff = γgφ_HEM/α |
 | Higgs boson | MR completion signal | Scalar; mass = MR stability |
 | Goldstone bosons | Alternative MR paths | Massless; absorbed as Tralse residue |
@@ -424,7 +424,7 @@ Both v and T are determined by fundamental constants of their respective theorie
 G_TI = 1/(2T²) ≈ 1/(2 × 0.9340²) ≈ 0.574
 ```
 
-This dimensionless "TI Fermi constant" governs the strength of GILE-HEM coupling (the "force" of MR). Whether G_TI has a direct physical analog is an open research question.
+This dimensionless "TI Fermi constant" governs the strength of HEM-GILE coupling (the "force" of MR). Whether G_TI has a direct physical analog is an open research question.
 
 ---
 
@@ -434,7 +434,7 @@ Combining all four results:
 
 **The Pentic Dirac Equation** provides the field equation for the GILE spinor ψ_G in 5-valued logical space, with the I-state as a genuine 5th component (not a Sea).
 
-**The HEAR Lagrangian** provides the action principle governing the dynamics of ψ_G — the GILE field kinetic term, HEM mass term, and GILE-HEM coupling interaction together give the Euler-Lagrange HEAR field equation.
+**The HEAR Lagrangian** provides the action principle governing the dynamics of ψ_G — the GILE field kinetic term, HEM mass term, and HEM-GILE coupling interaction together give the Euler-Lagrange HEAR field equation.
 
 **Fermi-Dirac Statistics from Tralse Residue** establishes that Tralse-bearing states obey the Pauli Exclusion Principle by construction — Tralse-bearing entities cannot coexist in identical configurations, giving the Fermi-Dirac distribution as the natural thermal distribution of resolved information states.
 
@@ -443,7 +443,7 @@ Combining all four results:
 Together these constitute the **TI Sigma Standard Model of Consciousness-Physics**: a formal quantum field theory of information states in 5-valued logical space, governed by the HEAR Lagrangian, where:
 - Fermions = Tralse-bearing resolved states
 - Bosons = non-Tralse-bearing (messenger/MR-completion) states
-- The Higgs field = the GILE-HEM coupling field whose VEV is the Tralse attractor T
+- The Higgs field = the HEM-GILE coupling field whose VEV is the Tralse attractor T
 - Mass = the energy cost of determinateness (the "weight" of having resolved from I-state)
 - The I-state = the pre-symmetry-breaking vacuum of consciousness-physics
 

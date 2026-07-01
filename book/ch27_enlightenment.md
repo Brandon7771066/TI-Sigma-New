@@ -19,7 +19,7 @@ To say flourishing is "optimal" we need a yardstick, and the framework already h
 
 The framework's candidate principle for the summit ties these together. It is called **SUP-1 — the definition of the Supreme** — and it reads, stripped of grandeur:
 
-> **The Supreme ≜ a *willfully reached* GILE-HEM optimization** — GILE pushed up to its healthy ceiling, HEM made as large as it can be, *and the whole thing arrived at by deliberate striving rather than by accident or compulsion* **(framework-internal, candidate principle)**.
+> **The Supreme ≜ a *willfully reached* HEM-GILE optimization** — GILE pushed up to its healthy ceiling, HEM made as large as it can be, *and the whole thing arrived at by deliberate striving rather than by accident or compulsion* **(framework-internal, candidate principle)**.
 
 Three things in that sentence matter, and each corrects a common misreading of what "enlightenment" should be.
 

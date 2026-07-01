@@ -163,9 +163,9 @@ Even **CCC (Collective Conscious Coherence / Cosmic Creator Channel — the high
 
 This grounds the ethical urgency of GILE-cultivation in the broader population: collective high-G raises the baseline coherence-rejection coefficient κ via GM-Network feedback (URB #694's collective HEM-GILE ratio invariance), making global breach harder.
 
-### 4.5.2b GM Maximizes *Composite* GILE-HEM Truth, Not Pure GILE
+### 4.5.2b GM Maximizes *Composite* HEM-GILE Truth, Not Pure GILE
 
-A further HEAR refinement: GM's autonomous dynamics (§1.2) are *not* maximizing pure GILE truth. They are maximizing the **composite GILE-HEM truth functional** specified by HEAR:
+A further HEAR refinement: GM's autonomous dynamics (§1.2) are *not* maximizing pure GILE truth. They are maximizing the **composite HEM-GILE truth functional** specified by HEAR:
 
 > **GM Composite Optimization (HEAR).** GM's autonomous operator 𝓛_GM evolves 𝒩_GM(t) so as to maximize:
 >
@@ -214,7 +214,7 @@ These are not "spiritual" in a separate sense — they *are* the structural ampl
 
 #### Why this matches HEAR
 
-HEAR (the upgraded operational pillar) is precisely the recognition that a healthy ontology requires **Holistic Embodied Amplification + Razor**, not merely directional alignment. The Dual-Axis Defense Theorem is the same insight applied to the defensive case: just as the GM Network and CCC optimize composite GILE-HEM truth, the i-cell defends best when it embodies composite GILE-HEM truth in itself.
+HEAR (the upgraded operational pillar) is precisely the recognition that a healthy ontology requires **Holistic Embodied Amplification + Razor**, not merely directional alignment. The Dual-Axis Defense Theorem is the same insight applied to the defensive case: just as the GM Network and CCC optimize composite HEM-GILE truth, the i-cell defends best when it embodies composite HEM-GILE truth in itself.
 
 #### Practical recommendation
 

@@ -35,7 +35,7 @@ Combined era: Passes 10 through 45 inclusive.
 
 - **Pass-33 URB-830 RATIFIED:** Falsification ≡ Verification-in-Negative-Direction; Popper retired; canonical TIU = |log P(H|e) / P(H)|.
 - **Pass-32 DANDI 3-way:** r = +0.988 / +0.093 modality-dependent.
-- **Pass-37 PD-final canonical:** GILE-HEM 8D ↔ 8 constants PARTIAL-YES Tier-2; Popp/Korotkov synthesis. (PD-Riemann clause subsequently demoted to OPEN-INVESTIGATION in Pass-47 §1; see `PASS_47_PD_PERFECT_FIFTH_MUSICAL_ENTAILMENTS_2026-05-11.md`.)
+- **Pass-37 PD-final canonical:** HEM-GILE 8D ↔ 8 constants PARTIAL-YES Tier-2; Popp/Korotkov synthesis. (PD-Riemann clause subsequently demoted to OPEN-INVESTIGATION in Pass-47 §1; see `PASS_47_PD_PERFECT_FIFTH_MUSICAL_ENTAILMENTS_2026-05-11.md`.)
 
 ### §2.3 — Epoch C: Off-Rhythm Collapses + Meta-Precedents (Passes 22, 27, 31, 34, 38)
 

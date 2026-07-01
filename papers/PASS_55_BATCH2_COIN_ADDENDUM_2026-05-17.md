@@ -41,7 +41,7 @@ If you sample at t = 1.0s you record heads; at t = 1.4s you record tails. Both s
 
 The fix is **time-indexed truth**: τ(P, t). But the moment you index by time, you have **continuous-valued temporal extension** that binary cannot natively represent. This is also why classical philosophy's "presentism vs eternalism" debate is unresolvable in binary — both positions are forced to mean things the framework can't say.
 
-**Connection to existing corpus:** This is the axis that **GILE-HEM operationalization** (architecture decision #1 in replit.md) implicitly requires — every GILE event is time-indexed, and the corpus's measurement convention has always implicitly treated τ as time-indexed without flagging that this *itself* is a binary-violating step.
+**Connection to existing corpus:** This is the axis that **HEM-GILE operationalization** (architecture decision #1 in replit.md) implicitly requires — every GILE event is time-indexed, and the corpus's measurement convention has always implicitly treated τ as time-indexed without flagging that this *itself* is a binary-violating step.
 
 ### 2.3 Axis 6 — Termination / decidability (the never-lands case)
 
@@ -160,7 +160,7 @@ This is an instance of ASC-1 (Aesthetic-Structural-Coherence, parent paper §4.4
 |---|---|---|
 | 1 | Adopt the **eight-axis binary-failure proof** as canonical, replacing the three-axis version in parent §3.2 | **Proposed for Pass-56 approval** |
 | 2 | Use the coin sextet (edge / bounce / never-lands / destroyed / stuck-to-finger / no-airtime) as the canonical teaching example for binary-failure | **Proposed** |
-| 3 | Update GILE-HEM operationalization docs to flag that time-indexed τ is itself Axis-5 evidence | Optional Pass-56 task |
+| 3 | Update HEM-GILE operationalization docs to flag that time-indexed τ is itself Axis-5 evidence | Optional Pass-56 task |
 | 4 | Cross-link MT-B1 Moot → Halting Problem → Gödel incompleteness explicitly in the canonical ruling | Optional Pass-56 task |
 | 5 | **Add new Meta-Truth MT-B-VOID (Referential Void) to the urb_608 12-MT corpus** | **Proposed for Pass-56 approval** |
 | 6 | **Add new Meta-Truth MT-B-DEGEN (Degenerate-Protocol Failure, with sub-axes 8a/8b for initiation vs execution failure) to the urb_608 12-MT corpus** | **Proposed for Pass-56 approval** |

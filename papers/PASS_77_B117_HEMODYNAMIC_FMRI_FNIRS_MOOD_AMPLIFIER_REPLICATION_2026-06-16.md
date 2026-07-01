@@ -37,7 +37,7 @@ environment via `HEMO_LIVE=1`.
 ## Method port
 
 Modality-agnostic carried over verbatim: 57-vertex TI-Sigma Crystal Hamiltonian
-(H_hop+H_onsite+H_gile), GILE-HEM 8-D definitions, FULL PD (real+imag)+zone,
+(H_hop+H_onsite+H_gile), HEM-GILE 8-D definitions, FULL PD (real+imag)+zone,
 GILE-graph Fiedler, leakage-safe block-filtering / train-only standardization /
 nearest-centroid decoding / bootstrap CIs.
 

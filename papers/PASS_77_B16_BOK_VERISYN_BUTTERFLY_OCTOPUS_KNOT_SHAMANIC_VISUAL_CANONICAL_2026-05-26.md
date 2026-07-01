@@ -32,7 +32,7 @@ The image's framing **"stable attractor at the origin of the Double Contradictio
 
 ### 1.2 BOK — Butterfly-Octopus Knot canonical-corpus referent
 
-BOK appears in Pass-77-B5 in context of GILE-HEM empirical-test (PASS_77_B5_PHASE_1A_V2_RESULTS_GILE_HEM_BOK_ALSO_REFUTED). The Butterfly-Octopus Knot is the **canonical-corpus topological image** for the GILE-HEM relation: butterfly (lightness, transformation, GILE side) ⋈ octopus (substance, eight-fold ground, HEM side) joined at a Knot-resolution-point. The B5 falsifier-refutation tested a specific operationalization (G_max=0.47 never approached G*=0.93 cap; substrate-driven not composition-driven); the **topological image as canonical aesthetic remains intact** — the empirical-refutation was of a specific operationalization-instrument, not of the BOK image as canonical-conceptual-aesthetic.
+BOK appears in Pass-77-B5 in context of HEM-GILE empirical-test (PASS_77_B5_PHASE_1A_V2_RESULTS_GILE_HEM_BOK_ALSO_REFUTED). The Butterfly-Octopus Knot is the **canonical-corpus topological image** for the HEM-GILE relation: butterfly (lightness, transformation, GILE side) ⋈ octopus (substance, eight-fold ground, HEM side) joined at a Knot-resolution-point. The B5 falsifier-refutation tested a specific operationalization (G_max=0.47 never approached G*=0.93 cap; substrate-driven not composition-driven); the **topological image as canonical aesthetic remains intact** — the empirical-refutation was of a specific operationalization-instrument, not of the BOK image as canonical-conceptual-aesthetic.
 
 ### 1.3 Double Contradiction Field
 

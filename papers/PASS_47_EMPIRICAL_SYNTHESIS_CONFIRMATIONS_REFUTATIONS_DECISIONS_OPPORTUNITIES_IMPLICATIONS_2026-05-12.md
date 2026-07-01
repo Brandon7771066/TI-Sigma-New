@@ -79,12 +79,12 @@ C1-C8 anchor in Pass-28 paper; C9-C20 new in this paper. Each entry: pass, claim
 | **Status** | Formal confirm; cross-references `PASS_35_TOZZI_MEIJER_SYSTEMATIC_INTEGRATION_2026-05-11.md` |
 | **Anchor** | `PASS_36_T35_B_TOZZI_BANACH_TARSKI_RIGOROUS_2026-05-11.md` |
 
-### C13 — Pass-37 GILE-HEM 8D identity equation + 8-constants mapping — **CONFIRM (formal)**
+### C13 — Pass-37 HEM-GILE 8D identity equation + 8-constants mapping — **CONFIRM (formal)**
 
 | | |
 |---|---|
 | **Pass** | 37 |
-| **Claim** | GILE-HEM 8D framework yields a single identity equation parameterized by 8 fundamental constants |
+| **Claim** | HEM-GILE 8D framework yields a single identity equation parameterized by 8 fundamental constants |
 | **Result** | Equation derived; constants mapped to canonical positions |
 | **Status** | Confirmed at the formal level. Extends `PASS_36_HEM_SUPERSEDES_ESS_MIGRATION_NOTE_2026-05-11.md`. |
 | **Anchor** | `PASS_37_GILE_HEM_8D_IDENTITY_EQUATION_8_CONSTANTS_MAPPING_2026-05-11.md` |
@@ -465,7 +465,7 @@ Per Pass-28 §6.7 plus newly-named Radical Acceptance:
 | **C10** DANDI 3-way + U27 v2 | Confirm | 32 | `PASS_32_*` |
 | **C11** V4-cubed Meijer 8D mapping | Confirm-formal | 36 | `PASS_36_T35_A_*` |
 | **C12** Tozzi-Banach-Tarski rigorous | Confirm-formal | 36 | `PASS_36_T35_B_*` |
-| **C13** GILE-HEM 8D identity equation | Confirm-formal | 37 | `PASS_37_GILE_HEM_8D_*` |
+| **C13** HEM-GILE 8D identity equation | Confirm-formal | 37 | `PASS_37_GILE_HEM_8D_*` |
 | **C14** Mendi STIM2 detrended | **Confirm-MAJOR-biometric** | 43 | `PASS_43_*` |
 | **C15** qc25 IBMQ uniform-32 | Confirm | 43 | `PASS_43_*` |
 | **C16** qc26 GHZ-5 Mermin HW | **Confirm-MAJOR-71σ** | 46 | `PASS_46_*`; `analyses/pass45_qc26_ghz5_mermin/` |

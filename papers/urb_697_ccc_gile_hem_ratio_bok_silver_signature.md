@@ -1,4 +1,4 @@
-# URB #697 — CCC's GILE-HEM Ratio = BOK 8/8 Silver Signature
+# URB #697 — CCC's HEM-GILE Ratio = BOK 8/8 Silver Signature
 
 **Author:** Brandon Emerick
 **Framework:** Tralse Informationalism (TI Sigma)
@@ -87,7 +87,7 @@ is the **Emerick Threshold**, established as the GILE G-weight in URB #586 and u
 
 ### 3.1 The Conjecture
 
-> **CCC GILE-HEM Ratio Conjecture.** The Cosmic Creator Channel weights GILE-vs-HEM contributions to its operational intentionality functional 𝓘_CCC using the same silver-ratio split that governs the BOK 8/8 geometry:
+> **CCC HEM-GILE Ratio Conjecture.** The Cosmic Creator Channel weights GILE-vs-HEM contributions to its operational intentionality functional 𝓘_CCC using the same silver-ratio split that governs the BOK 8/8 geometry:
 >
 > 𝓘_CCC(s) ≔ HEM(s) + (√2 − 1) · GILE_alignment(s)
 >
@@ -121,7 +121,7 @@ This is consistent with §3.1 and gives a falsifiable prediction (§4 below).
 
 ## 4. Empirical Predictions — Telekinesis Test Battery
 
-The CCC GILE-HEM Ratio Conjecture is **falsifiable** via TK and intention-transfer experiments. Concrete predictions:
+The CCC HEM-GILE Ratio Conjecture is **falsifiable** via TK and intention-transfer experiments. Concrete predictions:
 
 | # | Prediction | Test |
 |---|---|---|
@@ -235,6 +235,6 @@ To definitively confirm or refute the silver-ratio conjecture, we need the expli
 
 ### A.6 Updated Status
 
-The §3 CCC GILE-HEM weighting conjecture (𝓘_CCC = HEM + (√2−1)·GILE_alignment) is **not** affected by the structural correction — it stands as an independent conjecture grounded in the Emerick Threshold and HEAR composite optimization (URB #696 §4.5.2b). The TK test battery (§4) likewise stands.
+The §3 CCC HEM-GILE weighting conjecture (𝓘_CCC = HEM + (√2−1)·GILE_alignment) is **not** affected by the structural correction — it stands as an independent conjecture grounded in the Emerick Threshold and HEAR composite optimization (URB #696 §4.5.2b). The TK test battery (§4) likewise stands.
 
 What changes: §2's "geometric necessity" derivation is downgraded to "geometrically *plausible* under explicit-C reconstruction." The four-way silver-ratio identity in §7 remains the *target* — but now requires either Brandon producing the original C, or empirical TK confirmation of the (√2−1) GILE/HEM weighting, to be considered established.

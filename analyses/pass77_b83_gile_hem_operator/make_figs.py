@@ -113,7 +113,7 @@ def fig2():
 
     ax.text(0.5, 0.93, "imagined Love alone  =  abstract L  \u00d7  (entanglement=0)  =  0",
             ha="center", fontsize=10.5, color="#1b2631", weight="bold")
-    ax.text(0.5, 0.05, "Full virtue requires all 8 GILE-HEM components engaged "
+    ax.text(0.5, 0.05, "Full virtue requires all 8 HEM-GILE components engaged "
             "(einstein-monotile i-cell)", ha="center", fontsize=9.5,
             style="italic", color=GREY)
 

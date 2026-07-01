@@ -212,7 +212,7 @@ This refinement is consistent with all prior TI Sigma papers. It is a **structur
 
 - **URB #528 (5-Valued Logic):** MI is now understood as the extreme case where Kind 3 (Dialectical) fails — when the co-presence produces not a higher truth but an unresolvable contradiction. The three-kind classification shows that most apparent MI states are actually Kind 2 (axial) or Kind 3 (dialectical) — only truly contradictory co-presences are MI.
 - **URB #650 (Tralse-Joules):** Each kind of Tralsity has a different TJ cost: Kind 1 (information gathering), Kind 2 (conceptual reframing), Kind 3 (synthesis generation — the highest TJ cost, but also the highest MR output).
-- **URB #652 (GILE-HEM operationalization):** The Existence vs Truth Tralsity is now formally classified as Kind 2 (Axial), which is why UOP uses a 2D manifold rather than a 1D spectrum.
+- **URB #652 (HEM-GILE operationalization):** The Existence vs Truth Tralsity is now formally classified as Kind 2 (Axial), which is why UOP uses a 2D manifold rather than a 1D spectrum.
 - **URB #655 (UOP truth/existence):** The distinction between truth and existence optimization is an axial relationship, not a dialectical or spectral one.
 
 ---

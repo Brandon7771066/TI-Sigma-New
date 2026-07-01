@@ -12,7 +12,7 @@
 
 ## Abstract
 
-"Positive regard" is a foundational concept in humanistic psychology (Carl Rogers), Buddhist ethics (metta/loving-kindness), and clinical research on therapeutic alliance. It is also profoundly underspecified. The common reduction — that positive regard means "having positive feelings toward someone" — is philosophically inadequate because it conflates affect with attitude, feeling with orientation, emotion with disposition. Love, in the GILE framework and in the most careful neuroscientific treatments of the concept, is not a feeling. It is a **relational attitude** — a sustained directional orientation of the L-dimension toward a target (self, other, or community) that is *structurally* distinct from momentary affect and cannot be reduced to it. This paper develops a formal operationalization of positive regard using three convergent frameworks: (1) the Symmetry Theory of Valence (STV), which grounds positive valence in mathematical regularity of experiential structure; (2) the best neuroscientific models of empathy and metta meditation; and (3) the TI Sigma L-dimension architecture within GILE-HEM-BOK. We derive a composite Positive Regard Score (PRS), identify its detection signatures across behavioral, neural, physiological, and phenomenological channels, and connect it to Myrion Resolution as a facilitating mechanism.
+"Positive regard" is a foundational concept in humanistic psychology (Carl Rogers), Buddhist ethics (metta/loving-kindness), and clinical research on therapeutic alliance. It is also profoundly underspecified. The common reduction — that positive regard means "having positive feelings toward someone" — is philosophically inadequate because it conflates affect with attitude, feeling with orientation, emotion with disposition. Love, in the GILE framework and in the most careful neuroscientific treatments of the concept, is not a feeling. It is a **relational attitude** — a sustained directional orientation of the L-dimension toward a target (self, other, or community) that is *structurally* distinct from momentary affect and cannot be reduced to it. This paper develops a formal operationalization of positive regard using three convergent frameworks: (1) the Symmetry Theory of Valence (STV), which grounds positive valence in mathematical regularity of experiential structure; (2) the best neuroscientific models of empathy and metta meditation; and (3) the TI Sigma L-dimension architecture within HEM-GILE-BOK. We derive a composite Positive Regard Score (PRS), identify its detection signatures across behavioral, neural, physiological, and phenomenological channels, and connect it to Myrion Resolution as a facilitating mechanism.
 
 ---
 
@@ -240,7 +240,7 @@ Integrating all three frameworks, here is a practical detection protocol for pos
 | Skin conductance | During target salience | Moderate positive arousal, stable |
 | Respiratory coherence | Synchrony of breath with heart | High |
 
-In HEAR terms: physiological positive regard is present when HEM composite ≥ ET, and GILE-HEM covariance is positive. HEM ≥ ET during focus on T is a sufficient physiological indicator of genuine L-dimension activation toward T.
+In HEAR terms: physiological positive regard is present when HEM composite ≥ ET, and HEM-GILE covariance is positive. HEM ≥ ET during focus on T is a sufficient physiological indicator of genuine L-dimension activation toward T.
 
 ### 5.4 Self-Report / Phenomenological
 

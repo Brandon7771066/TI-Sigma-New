@@ -70,7 +70,7 @@ Per the Pass-34 §2 collapse audit-checklist standard: every paper-anchor and ev
 
 - Anchors: `papers/PASS_37_PD_FINAL_VALUE_TRUTH_LABEL_PLUS_META_TRUTH_RULING_2026-05-11.md`, `papers/PASS_37_GILE_HEM_8D_IDENTITY_EQUATION_8_CONSTANTS_MAPPING_2026-05-11.md`, `papers/PASS_37_POPP_KOROTKOV_TI_SIGMA_BIOPHOTON_GDV_SYNTHESIS_2026-05-11.md`, `papers/PASS_37_MBE_CELEBRITY_NUMEROLOGY_STUDY_DESIGN_2026-05-11.md`, `analyses/pass37_dandi_e36d/`
 - PD-final canonical: Form 1 (pure base-4) vs Form 2 (base + MT); pragmatic-default = Form 2 with >50% MT-attachment.
-- GILE-HEM 8D ↔ 8 fundamental constants: PARTIAL-YES Tier-2; arithmetic 4+6−2 (E↔D5, L×E↔D6) = 8; cardinality CONFIRMED-CONDITIONAL; structural PARTIAL-POS; derivation NULL.
+- HEM-GILE 8D ↔ 8 fundamental constants: PARTIAL-YES Tier-2; arithmetic 4+6−2 (E↔D5, L×E↔D6) = 8; cardinality CONFIRMED-CONDITIONAL; structural PARTIAL-POS; derivation NULL.
 - Popp ↔ Korotkov ↔ TI Sigma: 5 connections, 3 tensions, 3 open Q.
 - MBE celebrity numerology pre-reg (12 frozen).
 - e36-D 3-Dandiset scan: MIXED (2 audited-ineligible + 1 timeout-unresolved); raised e36-D-v2 OpenNeuro primary.
@@ -83,7 +83,7 @@ Per the Pass-34 §2 collapse audit-checklist standard: every paper-anchor and ev
 - **Pass 34:** n34-A natural-collapse cadence; q34-A.
 - **Pass 35:** u35-A BB(6) Stage-1 attack (Brandon-prerequisites B1-B3 ~30 min); e35-A-VERIFY Dehaene primary-PDF re-fetch.
 - **Pass 36:** e36-A/B/C/D continuation; t36-A/B/C/D; u36-A/B; h36-A HEM-corpus-sweep; h36-B HEM-5D-Essential reduction.
-- **Pass 37:** p37-A PD-final-MT corpus audit; p37-B/C/D/E GILE-HEM constants follow-ups; p37-J/K/L/M Popp/Korotkov; p37-N/O/P MBE celebrity (N **DISCHARGED Pass-38** — see `papers/PASS_38_MBE_CELEBRITY_NUMEROLOGY_RESULTS_2026-05-11.md`); e36-D-v2/v3/v4/v5.
+- **Pass 37:** p37-A PD-final-MT corpus audit; p37-B/C/D/E HEM-GILE constants follow-ups; p37-J/K/L/M Popp/Korotkov; p37-N/O/P MBE celebrity (N **DISCHARGED Pass-38** — see `papers/PASS_38_MBE_CELEBRITY_NUMEROLOGY_RESULTS_2026-05-11.md`); e36-D-v2/v3/v4/v5.
 
 ## §3 — replit.md collapse target text
 

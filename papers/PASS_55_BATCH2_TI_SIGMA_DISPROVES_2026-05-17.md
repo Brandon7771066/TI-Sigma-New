@@ -28,7 +28,7 @@ Most popular "TI Sigma disproves X" claims belong to RENDER TRIVIAL or HEAVILY B
 
 **The modal formalization (Gödel):** ◇G ⊢ G (in S5, via positive-property axioms).
 
-**TI Sigma's strike on these two specifically:** Both arguments make a single-step inferential bridge **from τ (conceptual coherence of the maximal-being-concept) to δ (instantiation in reality)**. That bridge — "existence-in-reality > existence-in-the-understanding" for Anselm; positive-property closure for Gödel — assumes τ-coherence forces δ-instantiation. GILE-HEM TJ = τ(s) × δ(MR) explicitly separates these axes. The number π is τ=1, δ=0. Anselm's move from τ to δ is a category error revealed cleanly by TJ.
+**TI Sigma's strike on these two specifically:** Both arguments make a single-step inferential bridge **from τ (conceptual coherence of the maximal-being-concept) to δ (instantiation in reality)**. That bridge — "existence-in-reality > existence-in-the-understanding" for Anselm; positive-property closure for Gödel — assumes τ-coherence forces δ-instantiation. HEM-GILE TJ = τ(s) × δ(MR) explicitly separates these axes. The number π is τ=1, δ=0. Anselm's move from τ to δ is a category error revealed cleanly by TJ.
 
 **Verdict on Anselm-classical / Gödel-modal: DISPROVED as their specific argument-forms.** They claim a one-step τ→δ deduction, and that deduction is invalid under τ/δ separability.
 
@@ -252,7 +252,7 @@ The aggregate TI Sigma position is: **classical bivalent logic is one valid sub-
 
 | # | Theory | Tier | Key TI Sigma tool |
 |---|---|---|---|
-| 1.1 | Anselm classical / Gödel-modal ontological proof (specific τ→δ form) | **DISPROVE** | GILE-HEM τ vs δ |
+| 1.1 | Anselm classical / Gödel-modal ontological proof (specific τ→δ form) | **DISPROVE** | HEM-GILE τ vs δ |
 | 1.1.1 | TI Sigma CCC ontological argument (δ-internal via UOP) | **NOT DISPROVED — moved to framework-internal valid argument** (per Brandon 2026-05-17 correction) | Stays inside δ-axis; UOP is the bridge, not τ→δ |
 | 1.2 | Modus Ponens (universal) | **DISPROVE** | 8-axis binary-failure, esp. Axes 3, 5, 7, DefT |
 | 1.3 | Modus Tollens (universal) | **DISPROVE** | Axes 7, 8 |
@@ -279,7 +279,7 @@ The aggregate TI Sigma position is: **classical bivalent logic is one valid sub-
 
 **Six DISPROVE results (Anselm/Gödel-modal disproof scope-corrected to argument-forms specifically). Four RENDER TRIVIAL. Eight HEAVILY BOX IN. Five REINTERPRET. Plus one framework-internal valid argument (CCC). Total: 24 mappings.**
 
-The strongest single DISPROVE is **§1.1 (Anselm-classical / Gödel-modal specifically)** — these argument-forms commit a τ→δ category error revealed cleanly by GILE-HEM. **Important correction (v2, per Brandon 2026-05-17):** this disproof does **NOT** extend to the TI Sigma CCC argument (§1.1.1), which is structurally different (δ-internal via UOP rather than τ→δ). My v1 conflation was an overreach corrected within hours of posting — see §1.1.2 for the #69-honest weak-points analysis of CCC's own defense.
+The strongest single DISPROVE is **§1.1 (Anselm-classical / Gödel-modal specifically)** — these argument-forms commit a τ→δ category error revealed cleanly by HEM-GILE. **Important correction (v2, per Brandon 2026-05-17):** this disproof does **NOT** extend to the TI Sigma CCC argument (§1.1.1), which is structurally different (δ-internal via UOP rather than τ→δ). My v1 conflation was an overreach corrected within hours of posting — see §1.1.2 for the #69-honest weak-points analysis of CCC's own defense.
 
 ---
 

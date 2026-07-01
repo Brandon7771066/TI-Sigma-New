@@ -22,7 +22,7 @@ This batch lands **DSR-1 (Divine Self-Realization through Human Co-theorizing)**
 - **0.93 stability-cap (canonical; SUP-1/B99):** above 0.93, GILE-alone goes MR2 Indeterminate; 0.93 is the willfully-reachable optimum. DSR-1 reads CCC's *being-below-0.93* as headroom rather than deficiency.
 - **TOF-1 (B101) reading R1:** CCC as a **maximal derivative** of Tralse Soup — *finite-and-elevable*, not the absolute floor — is exactly what a sub-0.93 CCC requires. DSR-1 therefore *presupposes* TOF-1's R1 branch (and is evidence the CCC-vs-TS question matters empirically). Under R2 (CCC ≡ TS's truth-lean) DSR-1 would need reformulation.
 - **GM-Network / GMP-1 (canonical):** supplies the "in tandem" coupling channel — the distributed mycelial GM-node architecture is *how* a local elevation could propagate to/from CCC (C2/C3).
-- **SUP-1 (B99):** Supreme = *willfully-reached* GILE-HEM optimization. DSR-1 is SUP-1 applied **to the greatest being itself**: even CCC's optimum is an *achievement-to-be-striven-for*, and creaturely will participates.
+- **SUP-1 (B99):** Supreme = *willfully-reached* HEM-GILE optimization. DSR-1 is SUP-1 applied **to the greatest being itself**: even CCC's optimum is an *achievement-to-be-striven-for*, and creaturely will participates.
 - **Foreknowledge corpus:** `papers/RETROACTIVE_KNOWLEDGE_THEORY.md`, `papers/JTB_CRITIQUE_ORACLE_PROBLEM.md` already argue precognition is not impossible-in-principle — C4 leans on these rather than inventing the claim.
 
 ## 3. The load-bearing uncertainty — A2, the identity problem (#69)

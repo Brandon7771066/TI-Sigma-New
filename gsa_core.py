@@ -154,7 +154,7 @@ class PDDistribution:
 
     MR Resolution:
       Level 1: DT screen — if dt_weight > 0.35, action = 'pause' (MR gate)
-      Level 2: GILE-HEM integration — reweight TT/TI/TF by GILE + HEM-Score
+      Level 2: HEM-GILE integration — reweight TT/TI/TF by GILE + HEM-Score
       Level 3: Convergence — if dominant state weight > MR_THRESHOLD, mr_resolved = True
     """
     tt_weight:   float   # True-Tralse weight
@@ -1137,7 +1137,7 @@ class GSACore:
             0.0, 1.0
         ))
 
-        # ── Level 2: GILE-HEM integration ───────────────────────────────────
+        # ── Level 2: HEM-GILE integration ───────────────────────────────────
         # TT weight: GILE composite + positive PD + HEM-Score all supporting
         pd_pos = float(np.clip(pd_val / 2.0, 0.0, 1.0))   # normalize PD to [0,1]
         pd_neg = float(np.clip(-pd_val / 3.0, 0.0, 1.0))  # normalize neg PD

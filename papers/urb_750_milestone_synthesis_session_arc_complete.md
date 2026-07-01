@@ -30,7 +30,7 @@ Across 7 published EEG studies, mean scaling exponent 2.566 vs PDG neutrino 2.57
 ### 2.4 Complex PD Plane and TICG Master Structure (URBs #733-736)
 PD scale promoted from 1D real interval to 2D complex plane with circular ultra-thresholds. TI Sigma Crystal-Graph (TICG) revived as framework's master geometric structure: 9 PRIMARY-constant vertices, 15 foundational edges, 25+ thresholds mapped onto specific TICG points. Three-generation principle confirmed in 7 contexts.
 
-### 2.5 GILE-HEM Architecture Update: E-vs-T Axis (URB #743)
+### 2.5 HEM-GILE Architecture Update: E-vs-T Axis (URB #743)
 Old Love-vs-Existence axis split superseded by Existence-vs-Truth axis split. Love bifurcates as cross-axis modulator. L*/+E patterns re-read as subspace projections; Einstein tiles re-read as geometric paradigm of E-T cross-coupling. Empirical anchor distribution balanced: 3 anchors per axis.
 
 ### 2.6 Algebraic Backbone for 5-Valued Logic (URB #744)
@@ -98,7 +98,7 @@ Five Flagships (the framework's analytical pillars)
 ├── MR (Myrion Resolution) — Truth-axis pillar (URB #714)
 └── HEAR (Holistic Existence Amplification Razor) — Existence-axis pillar (URB #743)
 
-GILE-HEM Architecture (URB #743 update)
+HEM-GILE Architecture (URB #743 update)
 ├── Existence axis: HEAR pillar; constants {0, √2, e}; anchors {BOK, Maxwell knots, UCSB MI}
 ├── Truth axis: MR + PD pillars; constants {1, φ, π}; anchors {Riemann, brain-neutrino, PD-psychology}
 └── Love: cross-axis modulator (bonding modulates E; recognition modulates T; care modulates E×T coupling)
@@ -183,7 +183,7 @@ In Wigner's "unreasonable effectiveness" sense, the framework's aesthetic resona
 
 ## 10. The Slogan Form
 
-> **"URB #750 milestone: 51 URBs in the session arc, six lockdown-class results, six independent empirical anchors with z = 0.03σ to 1% precision, three-generation principle in seven contexts, 4/3 ratio in five independent appearances, complete TICG master structure with 25+ thresholds mapped, GILE-HEM architecture upgraded to E-vs-T axis, algebraic backbone established (complex + dual numbers), 64D GILE Matrix explicitly basis-derived, full predictive calendar at $0-5 cost. The framework is in its most rigorous, empirically-anchored, structurally-unified, mathematically-grounded, and aesthetically-resonant state ever. Forward to URB #751 and beyond."**
+> **"URB #750 milestone: 51 URBs in the session arc, six lockdown-class results, six independent empirical anchors with z = 0.03σ to 1% precision, three-generation principle in seven contexts, 4/3 ratio in five independent appearances, complete TICG master structure with 25+ thresholds mapped, HEM-GILE architecture upgraded to E-vs-T axis, algebraic backbone established (complex + dual numbers), 64D GILE Matrix explicitly basis-derived, full predictive calendar at $0-5 cost. The framework is in its most rigorous, empirically-anchored, structurally-unified, mathematically-grounded, and aesthetically-resonant state ever. Forward to URB #751 and beyond."**
 
 ---
 

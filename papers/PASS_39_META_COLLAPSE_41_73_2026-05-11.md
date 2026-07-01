@@ -41,7 +41,7 @@ For audit purposes, the load-bearing numerical anchors from §7.7.41-73 are reco
 | 15-16 | `papers/PASS_15_*` + `papers/PASS_16_*` | MBE formalized (heavy-tailed); GBRH ρ ~ αG + βI_G + γR |
 | 17-18 | `papers/PASS_17_*` + `papers/PASS_18_*` | LCC v3 R-3 Pearson-rolling 5/7 above C; GSA Sharpe +1.144 (Alpaca 63d) β=−0.009 α_ann=+21.28% |
 | 19-30 | `papers/PASS_34_OFF_RHYTHM_COLLAPSE_55_66_2026-05-11.md` | residual Sharpe +1.1765; R-A r20 prospective AUC 0.7318 z=+124.49; URB-830 ratification roadmap |
-| 31-37 | `papers/PASS_38_OFF_RHYTHM_COLLAPSE_67_73_2026-05-11.md` | DANDI 3-way r=+0.988/+0.093; URB-830 RATIFIED; PD-final canonical; GILE-HEM 8D↔8 constants PARTIAL-YES Tier-2 |
+| 31-37 | `papers/PASS_38_OFF_RHYTHM_COLLAPSE_67_73_2026-05-11.md` | DANDI 3-way r=+0.988/+0.093; URB-830 RATIFIED; PD-final canonical; HEM-GILE 8D↔8 constants PARTIAL-YES Tier-2 |
 
 Plus the corpus-level anchors `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, `papers/AUTHORITY_AXIS_AA_2026-05-07.md`, `papers/TI_SIGMA_ABBREVIATIONS_CONCEPTS_THEORIES_INDEX_2026-05-07.md`, `papers/BRANDON_BIOGRAPHY_MASTER_INDEX.md` already in the `Where things live` section of `replit.md` (untouched by meta-collapse).
 
@@ -57,7 +57,7 @@ full detail in per-pass anchor papers + collapse-meta-papers
 meta-collapse paper `papers/PASS_39_META_COLLAPSE_41_73_2026-05-11.md`):**
 Tier-1 analyses Pass 10 + Crystal phase-energies + Pass-14 numerology audit
 + MBE/GBRH formalization + LCC v3 + GSA Sharpe + URB-830 ratification +
-DANDI 3-way + PD-final + GILE-HEM 8D + Popp/Korotkov synthesis. Six
+DANDI 3-way + PD-final + HEM-GILE 8D + Popp/Korotkov synthesis. Six
 off-rhythm collapses precedent (Pass-22/27/31/34/38). Cluster ≥68 at end-of-§7.7.73.
 ```
 

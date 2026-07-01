@@ -69,7 +69,7 @@ The author says "physicalism is impossible." That **overshoots**, and the corpus
 
 This argument is not a foreign import — it is the philosophical ground of machinery the corpus already has:
 - **aTJ / QVF-1 (B118):** affective Tralse-Joules already *quantify* valence as V = S·A (signed intensity). B141 supplies the **axiological reading** of that quantity: V is not a neutral coordinate, it is intrinsically valenced — the felt sign carries value. The formula is unchanged (TPS-1 presentation upgrade; NAD-1 carve-at-joints).
-- **GILE-HEM:** "promoting stability and continuity of wellbeing" is HEM (existence/persistence) wedded to GILE; the valence argument is why HEM is *worth* sustaining.
+- **HEM-GILE:** "promoting stability and continuity of wellbeing" is HEM (existence/persistence) wedded to GILE; the valence argument is why HEM is *worth* sustaining.
 - **TRG-1 (#77):** the intrinsic value of valence is itself best held **tralse-real** — genuinely there (not illusion) without being crisply-True-provable to the agent-neutral bar. "Not deductively closed" is the universal condition (B140), not a special tax on value.
 
 ---

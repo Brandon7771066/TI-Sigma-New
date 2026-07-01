@@ -11,7 +11,7 @@ Per the Pass-65 / Pass-74 mass-ratification precedent and the standing conventio
 
 | # | Principle | One-line | Falsifiers (remain OPEN) | Source |
 |---|-----------|----------|--------------------------|--------|
-| **76** | **SUP-1** Definition of Supreme | Supreme ≜ WILLFULLY-reached GILE-HEM optimization (GILE→0.93 cap + HEM max); GTT-1 Existence-vs-Truth battle = illusion-to-EMBRACE | SUP-1-F1/F2/F3 | B99 |
+| **76** | **SUP-1** Definition of Supreme | Supreme ≜ WILLFULLY-reached HEM-GILE optimization (GILE→0.93 cap + HEM max); GTT-1 Existence-vs-Truth battle = illusion-to-EMBRACE | SUP-1-F1/F2/F3 | B99 |
 | **77** | **TRG-1** Tralse-Reality Grounding | the ground of reality is called "unreal" because it isn't TRUE, it's TRALSE (MR2); tralse-real = real ∧ not-true | TRG-1-F1/F2/F3 | B100 |
 | **78** | **TOF-1** Tralse-Only Fundamentality | tralseness (Tralse Soup) is THE ONLY fundamental; consciousness is a TS-derivative ⇒ tralse | TOF-1-F1/F2/F3 | B101 |
 | **79** | **RTI-1** Residual Tralse Indeterminacy | every law retains nonzero residual tralseness → even fundamental laws can "err"; residue PERMANENT | RTI-1-F1/F2/F3 | B102 |

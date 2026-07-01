@@ -1,9 +1,9 @@
-# Pass 51 — GILE-HEM and BOK Models: Measurement-Empirical-Status Audit and Verification Roadmap
+# Pass 51 — HEM-GILE and BOK Models: Measurement-Empirical-Status Audit and Verification Roadmap
 
 **Author:** Brandon Charles Emerick (directive) + DPES agent (compilation + #69 audit)
 **Date:** 2026-05-14
 **Pass:** 51
-**Authority:** Brandon Pass-51 directive: *"Assess GILE-HEM framework and various BOK Models' measurements and empirical status. Chart a path for proper measurement and verification of claims, whether positive or negative."*
+**Authority:** Brandon Pass-51 directive: *"Assess HEM-GILE framework and various BOK Models' measurements and empirical status. Chart a path for proper measurement and verification of claims, whether positive or negative."*
 **Doctrine:** Asymmetric-Standards #69 — brutal honesty; over-skepticism = discipline failure equal to uncritical acceptance. Pass-47 §3 Radical Acceptance: accept the corpus as it actually is before any change-action.
 **Predecessor synthesis:** `papers/PASS_47_EMPIRICAL_SYNTHESIS_CONFIRMATIONS_REFUTATIONS_DECISIONS_OPPORTUNITIES_IMPLICATIONS_2026-05-12.md`
 **Related anchors:** `papers/PASS_37_GILE_HEM_8D_IDENTITY_EQUATION_8_CONSTANTS_MAPPING_2026-05-11.md`, `papers/urb_652_gile_hem_full_operationalization.md`, `papers/urb_622_empirical_foundations_bok_gile_hem_lattice.md`, `papers/urb_614_bok_flagship_empirical_predictions_bayesian_alternative.md`, `papers/urb_699_bok_dirac_4plus4_wing_arm_ratio_quantitative_confirmation.md`, `papers/BOK_TOPOLOGY_AND_PERSISTENT_HOMOLOGY.md`
@@ -12,15 +12,15 @@
 
 ## §0 — Headline (one paragraph, #69-calibrated)
 
-**Of GILE-HEM's 8-constants mapping and the BOK's three quantitative variants (Dirac wing/arm ratio, persistent-homology β₁=6, 4+4 mathematical-field split), the corpus has produced exactly zero empirical confirmations against pre-registered held-out data with N adequate for inference**. What the corpus *does* have is: (a) formal/structural derivations (Pass-37 8↔8 cardinality match, urb_699 harmonic-doubling identification with Dirac chirality); (b) suggestive single-instance measurements against artifacts that are not the underlying claim (wing/arm=1.96 against a ChatGPT image; β₁=6 in 15 real + 400 synthetic biometric points); (c) a complete measurement specification (urb_652) that has never been executed at scale; (d) 15 numbered falsifiable predictions in urb_614 of which **0 have received a direct, pre-registered, held-out test** to date (adjacent partials exist — e.g., LCC-related Pass-49 pilots touch P6 — but no numbered P1–P15 prediction has been run end-to-end against its stated falsification criterion). The Pass-47 §1 synthesis labels C13 GILE-HEM as `CONFIRM (formal)` — accurate when read narrowly, **misleadingly inflated when read alongside the operational/biometric claims that share the framework name**. This pass downgrades the inflated labels, ratifies the formal/structural confirms that are real, and charts an information-gain-ordered roadmap of verification tasks executable at $0 (with a single optional $800–$2k Prolific item requiring Brandon-decision against the $2k settlement reserve).
+**Of HEM-GILE's 8-constants mapping and the BOK's three quantitative variants (Dirac wing/arm ratio, persistent-homology β₁=6, 4+4 mathematical-field split), the corpus has produced exactly zero empirical confirmations against pre-registered held-out data with N adequate for inference**. What the corpus *does* have is: (a) formal/structural derivations (Pass-37 8↔8 cardinality match, urb_699 harmonic-doubling identification with Dirac chirality); (b) suggestive single-instance measurements against artifacts that are not the underlying claim (wing/arm=1.96 against a ChatGPT image; β₁=6 in 15 real + 400 synthetic biometric points); (c) a complete measurement specification (urb_652) that has never been executed at scale; (d) 15 numbered falsifiable predictions in urb_614 of which **0 have received a direct, pre-registered, held-out test** to date (adjacent partials exist — e.g., LCC-related Pass-49 pilots touch P6 — but no numbered P1–P15 prediction has been run end-to-end against its stated falsification criterion). The Pass-47 §1 synthesis labels C13 HEM-GILE as `CONFIRM (formal)` — accurate when read narrowly, **misleadingly inflated when read alongside the operational/biometric claims that share the framework name**. This pass downgrades the inflated labels, ratifies the formal/structural confirms that are real, and charts an information-gain-ordered roadmap of verification tasks executable at $0 (with a single optional $800–$2k Prolific item requiring Brandon-decision against the $2k settlement reserve).
 
 **Budget posture: $0/$50 corpus + $2k settlement reserve intact.** Of the 11 verification tasks filed in §4, **10 are $0 (DPES-executable or Brandon-blocked-on-data-export)** and **1 (T51-9) is $800–$2k requiring Brandon-decision against the settlement reserve**. No spend in Pass-51 itself.
 
 ---
 
-## §1 — GILE-HEM Framework: Per-Claim Empirical Ledger
+## §1 — HEM-GILE Framework: Per-Claim Empirical Ledger
 
-The "GILE-HEM framework" is not a single claim. It is at least **five distinct claims that share a name** and have wildly different empirical statuses. Conflating them is the corpus's central #69 hazard.
+The "HEM-GILE framework" is not a single claim. It is at least **five distinct claims that share a name** and have wildly different empirical statuses. Conflating them is the corpus's central #69 hazard.
 
 ### §1.1 Claim breakdown
 
@@ -28,13 +28,13 @@ The "GILE-HEM framework" is not a single claim. It is at least **five distinct c
 |---|---|---|---|---|---|
 | **G-1** | GILE = {G, I, L, E} is a coherent 4D abstract framework | Definitional | Internal corpus consistency (URBs #560, #563, #573, #604, #609, #612-622) | RATIFIED | RATIFIED-DEFINITIONAL (no empirical content; coherence only) |
 | **G-2** | HEM = {D1, D2, D3, D4, D5, D6} is a coherent 6D physical framework | Definitional | Internal corpus consistency (URB #609, #619, #622) | RATIFIED | RATIFIED-DEFINITIONAL |
-| **G-3** | GILE 4D + HEM 6D − 2D overlap = 8D ("GILE-HEM 8D") | Structural-arithmetic | Pass-37 §2 (E↔D5, L×E↔D6 overlap subtraction) | CONFIRMED-CONDITIONAL | CONFIRMED-CONDITIONAL on Brandon-side ratification of §2 overlaps (Pass-37 p37-B still open) |
-| **G-4** | The 8 GILE-HEM dimensions map 1-to-1 onto 8 fundamental physical constants {ℏ, c, k_B, ε₀, G_N, α, E_C, θ/Λ/φ} | Empirical (per-dim co-determination) | None — Pass-37 §6 ruling: "Derivational identity NULL"; §4 explicitly disclaims empirical content | CONFIRM (formal) per Pass-47 C13 | **PARTIAL-POS STRUCTURAL-COHERENCE ONLY** — 8↔8 cardinality is a permutation-rich coincidence; per-dim derivation is null at Pass-37 and unchanged through Pass-50 |
+| **G-3** | GILE 4D + HEM 6D − 2D overlap = 8D ("HEM-GILE 8D") | Structural-arithmetic | Pass-37 §2 (E↔D5, L×E↔D6 overlap subtraction) | CONFIRMED-CONDITIONAL | CONFIRMED-CONDITIONAL on Brandon-side ratification of §2 overlaps (Pass-37 p37-B still open) |
+| **G-4** | The 8 HEM-GILE dimensions map 1-to-1 onto 8 fundamental physical constants {ℏ, c, k_B, ε₀, G_N, α, E_C, θ/Λ/φ} | Empirical (per-dim co-determination) | None — Pass-37 §6 ruling: "Derivational identity NULL"; §4 explicitly disclaims empirical content | CONFIRM (formal) per Pass-47 C13 | **PARTIAL-POS STRUCTURAL-COHERENCE ONLY** — 8↔8 cardinality is a permutation-rich coincidence; per-dim derivation is null at Pass-37 and unchanged through Pass-50 |
 | **G-5** | Each GILE/HEM dimension has a concrete operational biometric measurement protocol (urb_652) | Measurement specification | None executed at scale; urb_652 specifies G/I/L/E and D1-D4 protocols + thresholds (ET=√2−1, C=1/(φ√2)) but no N≥80 study has been run | SPECIFIED, NOT EXECUTED | SPECIFIED-NOT-EXECUTED. Zero of urb_614's 15 numbered predictions has been tested to date. |
 
 ### §1.2 The C13 label-inflation issue (#69 finding)
 
-Pass-47 §1 lists **C13 — Pass-37 GILE-HEM 8D identity equation + 8-constants mapping — CONFIRM (formal)**.
+Pass-47 §1 lists **C13 — Pass-37 HEM-GILE 8D identity equation + 8-constants mapping — CONFIRM (formal)**.
 
 This is *technically* correct under the parenthetical "(formal)" qualifier. But two #69 problems:
 
@@ -56,7 +56,7 @@ urb_652 (April 2026, pre-Pass-28) is a 530-line measurement specification coveri
 
 **Status:** Every protocol is specified at the "anchor + procedure + proxy" level. **None has been administered to a sample sufficient for inference.** The Pass-43 Mendi STIM2 result (C14, t=−4.13) is a single-session NIR test that is *adjacent* to GILE-G (HRV/PFC engagement) but is not a GILE-G measurement under the urb_652 protocol.
 
-**This is the corpus's largest unmeasured asset.** All five "GILE-HEM" claims (G-1 through G-5) collapse to "spec not yet field-tested."
+**This is the corpus's largest unmeasured asset.** All five "HEM-GILE" claims (G-1 through G-5) collapse to "spec not yet field-tested."
 
 ---
 
@@ -135,7 +135,7 @@ The primary source (urb_699 §4.3, §5.5, §8) is honest about this — it expli
 
 ### §3.1 Three recurring label-inflation patterns
 
-1. **"CONFIRM (formal)" without explicit reader-disclosure.** Pass-47 C11 (V4-cubed Meijer 8D), C12 (Tozzi-Banach-Tarski), C13 (GILE-HEM 8↔8) all carry `CONFIRM (formal)`. These are honest IF the reader parses "formal" as "no empirical-data validation." But the visual presentation makes them look equivalent to C14 (Mendi t=−4.13) or C16 (GHZ-5 71σ). **Recommendation:** explicit two-track table in Pass-52 — `CONFIRM (formal/derivational)` separate from `CONFIRM (empirical/data)`.
+1. **"CONFIRM (formal)" without explicit reader-disclosure.** Pass-47 C11 (V4-cubed Meijer 8D), C12 (Tozzi-Banach-Tarski), C13 (HEM-GILE 8↔8) all carry `CONFIRM (formal)`. These are honest IF the reader parses "formal" as "no empirical-data validation." But the visual presentation makes them look equivalent to C14 (Mendi t=−4.13) or C16 (GHZ-5 71σ). **Recommendation:** explicit two-track table in Pass-52 — `CONFIRM (formal/derivational)` separate from `CONFIRM (empirical/data)`.
 
 2. **Measurement of an LLM-generated artifact treated as measurement of the underlying claim.** B-2 wing/arm=1.96 measured against a ChatGPT image is the cleanest example. Whenever an LLM is in the measurement loop, the question "is this measuring the claim or measuring the LLM's rendering of the claim" must be asked. Per Pass-47 §4 worked-example exchange, LLMs have an unavoidable confirmation bias toward the user's stated thesis.
 
@@ -145,9 +145,9 @@ The primary source (urb_699 §4.3, §5.5, §8) is honest about this — it expli
 
 C14 (Pass-43 Mendi STIM2 t=−4.13, p≪0.001) is the corpus's strongest claimed biometric result. Pass-47 §1 lists it `CONFIRM (NEW; first significant biometric)` with the honest caveat: single-session, 1-2 wavelength single-optode, no Beer-Lambert HbO₂/HbR separability, awaiting T45-1 5× replication.
 
-**Pass-51 #69 sharpening:** C14 is not *yet* a confirmation of any GILE-HEM claim. It is a confirmation that the Mendi STIM2 condition produces a detectable detrended-NIR-intensity signal vs baseline. The bridge from "detrended NIR signal during stim" to "GILE-G axis activation per urb_652 §2.2" is not yet built. Multiple bridging arguments exist (HRV ↔ G; PFC engagement ↔ G) but none has been operationalized in the urb_652 protocol form (Four C's scoring on the post-Mendi behavioral/self-report data).
+**Pass-51 #69 sharpening:** C14 is not *yet* a confirmation of any HEM-GILE claim. It is a confirmation that the Mendi STIM2 condition produces a detectable detrended-NIR-intensity signal vs baseline. The bridge from "detrended NIR signal during stim" to "GILE-G axis activation per urb_652 §2.2" is not yet built. Multiple bridging arguments exist (HRV ↔ G; PFC engagement ↔ G) but none has been operationalized in the urb_652 protocol form (Four C's scoring on the post-Mendi behavioral/self-report data).
 
-C14 remains a real empirical positive; it is just not a GILE-HEM confirmation specifically.
+C14 remains a real empirical positive; it is just not a HEM-GILE confirmation specifically.
 
 ### §3.3 The unmeasured-asset table
 
@@ -155,7 +155,7 @@ C14 remains a real empirical positive; it is just not a GILE-HEM confirmation sp
 |---|---|---|---|---|
 | urb_614 P1 — I→L dependency | urb_614 §P1 | $0 if LLM-rater; $5k+ if N≥30 humans | HIGH (clean dependency test) | YES at LLM-rater level (T1) |
 | urb_614 P2 — Aesthetics-structure correlation | urb_614 §P2 | $0 if open-data; $10k+ if recruit | HIGH (clean correlation prediction, r≥0.55 falsifiable at r<0.35) | YES — Brandon's domain expertise (math/architecture/biology) suffices for self-rated calibration check; T2 (DPES with caveats) |
-| urb_614 P3 — Radiant Threshold behavioral discontinuity | urb_614 §P3 | $20k+ (validated dilemma battery + biometrics × N≥80) | VERY HIGH (this is THE central GILE-HEM phase-transition claim) | NO — Brandon-blocked on funding/recruitment |
+| urb_614 P3 — Radiant Threshold behavioral discontinuity | urb_614 §P3 | $20k+ (validated dilemma battery + biometrics × N≥80) | VERY HIGH (this is THE central HEM-GILE phase-transition claim) | NO — Brandon-blocked on funding/recruitment |
 | urb_614 P4 — HEM-Truth decoupling in social belief prevalence | urb_614 §P4 | $0-$50 (public dataset: archival belief-prevalence × HEM proxies via web-scraped sentiment) | HIGH (testable on Twitter archives, Reddit BeliefPlace, Politifact) | **YES — T1 DPES-executable** |
 | urb_614 P5 — Physical Bonds / GILE-L pharmacological dissociation | urb_614 §P5 | $50k+ (oxytocin administration study, IRB) | HIGH (key BOK inner/outer distinction) | NO — Brandon-blocked |
 | urb_614 P6 — LCC Drift > Bayesian on regime-change prediction | urb_614 §P6 | $0-$50 (Pass-49 LCC virus / FRED CSV adapter already in repo) | HIGH (cross-cell test; complements Pass-50 ecosystem L-2) | **YES — T1** |
@@ -219,9 +219,9 @@ Pre-bound by SHA hash of this document at commit time, the following predictions
 
 ## §6 — Closing (§7.7.87 entry text for replit.md)
 
-Pass-51 is **not an empirical pass**. It is the corpus's first comprehensive **measurement-status audit** on the two largest-surface-area model families (GILE-HEM and BOK). **Four structural label-inflations** are recorded — (1) C13 formal/empirical conflation, (2) B-2 LLM-image-measured, (3) B-3 synthetic-dominated, (4) B-4 post-hoc-aligned — and downgraded *without retracting any prior empirical positive* (C14 Mendi, C16 GHZ-5, C17/C18/C19 GM-Node, C20 MR Truth κ remain intact). An **11-item verification roadmap** is filed: 9 DPES-executable at $0 (T51-1..7, T51-10, T51-11), 1 single-N T2 at $0 (T51-8, Brandon-export dependent), and 1 T2 at $800–$2k (T51-9) requiring Brandon-decision. The corpus's largest unmeasured asset is identified as urb_622 E-F1 (4-factor GILE biometric structure across N≥200), Brandon-blocked on funding/recruitment.
+Pass-51 is **not an empirical pass**. It is the corpus's first comprehensive **measurement-status audit** on the two largest-surface-area model families (HEM-GILE and BOK). **Four structural label-inflations** are recorded — (1) C13 formal/empirical conflation, (2) B-2 LLM-image-measured, (3) B-3 synthetic-dominated, (4) B-4 post-hoc-aligned — and downgraded *without retracting any prior empirical positive* (C14 Mendi, C16 GHZ-5, C17/C18/C19 GM-Node, C20 MR Truth κ remain intact). An **11-item verification roadmap** is filed: 9 DPES-executable at $0 (T51-1..7, T51-10, T51-11), 1 single-N T2 at $0 (T51-8, Brandon-export dependent), and 1 T2 at $800–$2k (T51-9) requiring Brandon-decision. The corpus's largest unmeasured asset is identified as urb_622 E-F1 (4-factor GILE biometric structure across N≥200), Brandon-blocked on funding/recruitment.
 
-**Headline (per #69):** GILE-HEM and BOK both have **rich formal/derivational scaffolding** and **near-zero empirical-data validation against pre-registered held-out tests**. The work for Pass-52+ is to close the gap by executing the T51-1..11 roadmap and being honest about what each closure delivers.
+**Headline (per #69):** HEM-GILE and BOK both have **rich formal/derivational scaffolding** and **near-zero empirical-data validation against pre-registered held-out tests**. The work for Pass-52+ is to close the gap by executing the T51-1..11 roadmap and being honest about what each closure delivers.
 
 **Budget:** $0/$50 corpus + $2k settlement reserve intact (no spend in Pass-51).
 **Cluster:** ≥126 (Pass-51 adds 1 audit-pass entry).

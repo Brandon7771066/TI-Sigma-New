@@ -1300,7 +1300,7 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - URB #778*: *Jarlskog Invariant in Cortical Oscillatory Dynamics.*
 - URB #779*: *GILE-Based Differential Diagnosis: Clinical Hypothesis Development.*
 - URB #781*: *Truth Depicts Nonexistence and the Beauty Razor.*
-- URB #784*: *GILE-HEM Ratio Modulation of PD Expression. With prediction cube.*
+- URB #784*: *HEM-GILE Ratio Modulation of PD Expression. With prediction cube.*
 
 (URBs marked with an asterisk are directly cited in the text. The complete URB series, with abstracts and dates, is maintained in the framework's internal repository and is available to qualified researchers on request.)
 
@@ -1455,7 +1455,7 @@ Emerick, B. C. (2025–2026). *Universal Research Briefs (URBs)* #001–#784, Tr
 - G-anchor effect, §10.7
 - GILE compass, Chapter 6; weights, §6.6, §6.7
 - GILE Coherence (Schumann attractor), §6.10n, URB #781
-- GILE-HEM ratio (ρ), URB #784
+- HEM-GILE ratio (ρ), URB #784
 - GILE Intuition, §6.4, §11.5
 - GM coherence-rejection signal, URB #696
 - Group MR (Power of Eight), §7.7

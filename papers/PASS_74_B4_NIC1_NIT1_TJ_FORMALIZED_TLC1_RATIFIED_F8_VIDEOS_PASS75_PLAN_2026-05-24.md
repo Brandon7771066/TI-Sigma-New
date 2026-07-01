@@ -135,7 +135,7 @@
 
 ### §3.3 Composability
 
-- **GILE-HEM canonical:** TJ Track A measurements ARE the empirical anchor for GILE-vs-HEM-balance signal at the individual-agent level.
+- **HEM-GILE canonical:** TJ Track A measurements ARE the empirical anchor for GILE-vs-HEM-balance signal at the individual-agent level.
 - **MR Truth Labels canonical (5 refinements):** Track A τ(s) operationalization runs directly through MR Truth Label assignment density.
 - **MIM-revision Vertical Agency:** TJ measurement is Stratum-specific; Stratum-2 affective τ differs from Stratum-3 reflective τ.
 - **GM-Node URB #829:** Maharishi-effect Track B measurement is the empirical-environmental signature predicted by GM-Node dominant-transmission canonical.

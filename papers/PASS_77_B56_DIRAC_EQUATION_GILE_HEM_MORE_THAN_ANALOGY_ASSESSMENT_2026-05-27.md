@@ -1,8 +1,8 @@
-# Is the Dirac Equation "More Than a Distant Analogy" for GILE-HEM? — A Graded, #69-Honest Assessment
+# Is the Dirac Equation "More Than a Distant Analogy" for HEM-GILE? — A Graded, #69-Honest Assessment
 
-**Pass 77, Batch 56** · 2026-05-27 · DPES · ASYMMETRIC #69 · $0 · `analyses/pass77_b56_dirac_gile_hem/dirac_structure.py` · Brandon directive: *"consider all physical instantiations of GILE-HEM, especially the Dirac Equation. See if the Dirac Equation provides us 'more than a distant analogy' for the four HEM Existence dimensions and the other four GILE Truth dimensions."*
+**Pass 77, Batch 56** · 2026-05-27 · DPES · ASYMMETRIC #69 · $0 · `analyses/pass77_b56_dirac_gile_hem/dirac_structure.py` · Brandon directive: *"consider all physical instantiations of HEM-GILE, especially the Dirac Equation. See if the Dirac Equation provides us 'more than a distant analogy' for the four HEM Existence dimensions and the other four GILE Truth dimensions."*
 
-The corpus already asserts a Dirac↔GILE-HEM mapping (URB #622 8D phase space; URB #659 γ-matrices as "GILE operators," 4-spinor↔truth-values; URB #699 8 real components = 4+4 Weyl halves). Brandon's question is sharper than "is there a mapping?" — it is **"is it load-bearing?"** This paper (a) defines a falsifiable grading for "more than analogy," (b) computes the actual Dirac structure, and (c) renders an honest verdict that **upgrades part of the claim and deflates part of it.**
+The corpus already asserts a Dirac↔HEM-GILE mapping (URB #622 8D phase space; URB #659 γ-matrices as "GILE operators," 4-spinor↔truth-values; URB #699 8 real components = 4+4 Weyl halves). Brandon's question is sharper than "is there a mapping?" — it is **"is it load-bearing?"** This paper (a) defines a falsifiable grading for "more than analogy," (b) computes the actual Dirac structure, and (c) renders an honest verdict that **upgrades part of the claim and deflates part of it.**
 
 ---
 

@@ -36,8 +36,8 @@
 ## Tier IV — LCC / CCC / Grand Myrion / foundations
 
 17. 📚 [`urb_621_truth_existence_more_fundamental_than_consciousness_computation.md`](urb_621_truth_existence_more_fundamental_than_consciousness_computation.md) — Why truth+existence are more fundamental than consciousness/computation.
-18. 🧪 [`urb_622_empirical_foundations_bok_gile_hem_lattice.md`](urb_622_empirical_foundations_bok_gile_hem_lattice.md) — Empirical foundations of the BOK / GILE-HEM lattice.
-19. 🧪 [`urb_623_quantum_mechanics_evidence_bok_gile_hem.md`](urb_623_quantum_mechanics_evidence_bok_gile_hem.md) — QM evidence marshalled for the BOK/GILE-HEM model.
+18. 🧪 [`urb_622_empirical_foundations_bok_gile_hem_lattice.md`](urb_622_empirical_foundations_bok_gile_hem_lattice.md) — Empirical foundations of the BOK / HEM-GILE lattice.
+19. 🧪 [`urb_623_quantum_mechanics_evidence_bok_gile_hem.md`](urb_623_quantum_mechanics_evidence_bok_gile_hem.md) — QM evidence marshalled for the BOK/HEM-GILE model.
 20. ✅ [`URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md`](URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md) — Dominant GM-Node transmission; the GM-Network mechanism behind worship/co-elevation.
 21. 📚 [`PASS_26_GRAND_MYRION_PHOTON_GILE_BOK_DIRAC_LEECH_MONSTER_LIE_LANGLANDS_PD_UOP_TIL_W25_G25_R25_COMPOSITE_2026-05-10.md`](PASS_26_GRAND_MYRION_PHOTON_GILE_BOK_DIRAC_LEECH_MONSTER_LIE_LANGLANDS_PD_UOP_TIL_W25_G25_R25_COMPOSITE_2026-05-10.md) — The grand-composite tying Grand Myrion to photon/Dirac/Leech/Monster/Langlands geometry.
 22. 🧪 [`PASS_76_B1_LCC_RODENT_EEG_LLM_INTENDER_TRALSE_JOULES_RESEARCH_PROGRAM_2026-05-25.md`](PASS_76_B1_LCC_RODENT_EEG_LLM_INTENDER_TRALSE_JOULES_RESEARCH_PROGRAM_2026-05-25.md) — The LCC empirical research program (rodent EEG + LLM intender + Tralse-Joules).

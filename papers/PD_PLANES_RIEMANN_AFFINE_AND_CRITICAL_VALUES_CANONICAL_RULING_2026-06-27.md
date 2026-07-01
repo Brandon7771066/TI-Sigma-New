@@ -14,7 +14,7 @@ The corpus uses an "imaginary axis" in three different constructions. They share
 
 | Plane | Real axis | Imaginary axis | what "i" carries |
 | :-- | :-- | :-- | :-- |
-| **1. Truth–Existence (GILE–HEM)** | **HEM** (physical Existence) | **GILE** (all four G/I/L/E; abstract Truth) | abstract Truth |
+| **1. Truth–Existence (HEM–GILE)** | **HEM** (physical Existence) | **GILE** (all four G/I/L/E; abstract Truth) | abstract Truth |
 | **2. PD plane** (canonical PD, one 1-D axis) | PD **degree**-of-truth | **MI / Tralse modality** | indeterminacy modality |
 | **3. Riemann affine map** | σ-coordinate (deviation from the critical line) | **γ** (a zero's height) | the zeta ordinate |
 

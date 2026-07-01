@@ -17,7 +17,7 @@ The UOP cap, once the domain dial ρ is specified as a ratio `ρ = T_d/(1−T_d)
 ## 1. URR-1 — UOP Ratio-Reframing & the Thirds Regime *(CANDIDATE)*
 
 ### 1.1 Statement
-Specify the UOP domain dial as the field's own GILE-HEM (Truth/Existence) ratio:
+Specify the UOP domain dial as the field's own HEM-GILE (Truth/Existence) ratio:
 
 > **ρ = T_d / (1 − T_d)**, with `T_d` a FIXED property of the domain (its truth-importance), **distinct** from the action-truth `T` being optimized.
 

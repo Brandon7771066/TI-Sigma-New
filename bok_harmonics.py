@@ -1,5 +1,5 @@
 """
-BOK Harmonics — 8 GILE-HEM Dimensions as Musical Notes
+BOK Harmonics — 8 HEM-GILE Dimensions as Musical Notes
 ========================================================
 URB #648 — Brandon Emerick | TI Sigma Research | April 2026
 
@@ -127,7 +127,7 @@ class NamedChord:
 CHORD_REGISTRY: List[NamedChord] = [
     # ── Complete chords ──────────────────────────────────────────────────────
     NamedChord(frozenset(DIM_ORDER), "BEC Full Chord",
-               "Complete BOK coherence — all 8 GILE-HEM dimensions activated simultaneously. "
+               "Complete BOK coherence — all 8 HEM-GILE dimensions activated simultaneously. "
                "Crystal Truth at maximum. The universe is singing.",
                'bec', 2.0),
 

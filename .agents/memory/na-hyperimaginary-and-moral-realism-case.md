@@ -44,7 +44,7 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   shorthand, then flag provisionality + the two temporal exits; never state N/A as
   a permanent or exceptionless verdict.
 
-## 8 GILE-HEM dims ↔ 8 constants "dual identity" — OVERLAY, not proof
+## 8 HEM-GILE dims ↔ 8 constants "dual identity" — OVERLAY, not proof
 - The author wants the 8 i-Cell shell dims {G,I,L,E,D1,D2,D5,D6} to double as the
   8 constants {0,1,i,√2,e,φ,π,C} "for math's sake." **Admit it ONLY as an
   aesthetic/mnemonic overlay (TPS-1), never as a joint-carving (NAD-1).**
@@ -54,7 +54,7 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
   forbidden as evidence (e.g. for moral realism — anti-numerology rail).
 - **How to apply:** present the dual identity as a lens; never let a constant
   coincidence become load-bearing. To earn joint status it must predict a NEW
-  constant↔GILE-HEM relation, >4 points, outcome-blind, p<0.05.
+  constant↔HEM-GILE relation, >4 points, outcome-blind, p<0.05.
 
 ## "Math explains everything" = valid EARNED hyperbole
 - Treat it as a strong inductive prior (track record + prima-facie applicability),
@@ -72,7 +72,7 @@ description: Durable rulings on how to treat N/A geometrically, the honest gate 
 - **How to apply:** de-hedge phrasings about moral *reality* to the decisive stance; keep a hedge ONLY where it refers to Q2 (convergence/mind-independence) or flags a specific *evidence strand* as corroborative-not-standalone. Do NOT touch unrelated open problems that merely share hedge words (hard-problem-of-consciousness, Dirac=GILE operator match, love-transfer empirical bet).
 
 ## GILE moral-realism case — how far it can honestly go
-- Convergent strands: phenomenology + Dirac (used only as a GILE-HEM grade-2 /
+- Convergent strands: phenomenology + Dirac (used only as a HEM-GILE grade-2 /
   4+4 structural analogy + Beauty-Razor — NOT a derivation of moral facts) +
   cross-cultural convergence (Curry et al. 2019, 60 societies) + linguistic
   companions-in-guilt + the **performative-contradiction** ("can't LIVE as a

@@ -3,7 +3,7 @@
 
 **For:** Brandon Charles Emerick
 **Date:** April 29, 2026
-**Scope:** DPES / empirical work in the URB #780–#808 range, plus the foundational pieces those URBs lean on (the brain-neutrino bridge, the Monster Group pilot, MR1, GILE-HEM, Tralse-Joules, the LCC threshold theorem, and the new AI-LCC test).
+**Scope:** DPES / empirical work in the URB #780–#808 range, plus the foundational pieces those URBs lean on (the brain-neutrino bridge, the Monster Group pilot, MR1, HEM-GILE, Tralse-Joules, the LCC threshold theorem, and the new AI-LCC test).
 **Length:** ~10 minutes of reading. No equations in the body; equations in footnote-style boxes.
 
 ---
@@ -101,7 +101,7 @@ The "1" in MR1 means it's the threshold-level check. Higher MR levels (MR2, MR3)
 
 ---
 
-## 5. GILE-HEM and the GILE/HEM ratio (URB #784)
+## 5. HEM-GILE and the GILE/HEM ratio (URB #784)
 
 ### The pieces
 

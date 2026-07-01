@@ -1,5 +1,5 @@
 """
-Mood Amplifier: GILE-HEM-BOK Engine v3.0
+Mood Amplifier: HEM-GILE-BOK Engine v3.0
 =========================================
 Implements the full URB #668 architecture:
   - Pentic 5-state consciousness classifier
@@ -39,7 +39,7 @@ W_GILE_SUM = W_G + W_I + W_L + W_E      # ≈ 0.9942 ≈ T_TI
 # HEAR weights (from HEAR Lagrangian, URB #658 / #668)
 ALPHA_HEAR = ET                          # GILE kinetic weight ≈ 0.4142
 BETA_HEAR  = C_TI                        # HEM mass weight     ≈ 0.4370
-GAMMA_HEAR = 0.0828                      # GILE-HEM coupling   ≈ 0.0828
+GAMMA_HEAR = 0.0828                      # HEM-GILE coupling   ≈ 0.0828
 
 # ══════════════════════════════════════════════════════════
 # CONSCIOUSNESS STATE ENUM
@@ -211,7 +211,7 @@ def map_biometrics(b: BiometricReading) -> Tuple[GILEVector, HEMVector, BOKState
 # ══════════════════════════════════════════════════════════
 def compute_hear(gile: GILEVector, hem: HEMVector) -> Tuple[float, float]:
     """
-    Compute HEAR score and GILE-HEM covariance.
+    Compute HEAR score and HEM-GILE covariance.
     
     HEAR(r) = α·GILE_composite(r) + β·HEM_composite(r) + γ·Cov(GILE,HEM)(r)
     
@@ -443,7 +443,7 @@ def run_full_simulation(
     Full comparison simulation:
     - N subjects, random biometrics across three profiles
     - Old model: single GILE score, 4-state classification
-    - New model: GILE-HEM-BOK HEAR, 6-state classification
+    - New model: HEM-GILE-BOK HEAR, 6-state classification
     - Optimization: greedy protocol optimizer per subject
     
     Returns comprehensive results dict.
@@ -550,7 +550,7 @@ def format_simulation_report(results: Dict) -> str:
     c = results["comparison"]
     lines = [
         "=" * 62,
-        " GILE-HEM-BOK MOOD AMPLIFIER — SIMULATION REPORT",
+        " HEM-GILE-BOK MOOD AMPLIFIER — SIMULATION REPORT",
         f" N = {results['n_subjects']} subjects | 5 optimizer steps each",
         "=" * 62,
         "",
@@ -571,7 +571,7 @@ def format_simulation_report(results: Dict) -> str:
         "",
         "── BOK COHERENCE METRICS ─────────────────────────────────",
         f"  Mean BOK loop saturation    : {c['mean_bok_saturation_score']:.3f}",
-        f"  Mean GILE–HEM covariance    : {c['mean_gile_hem_cov']:.3f}  (ideal → 1.0)",
+        f"  Mean HEM–GILE covariance    : {c['mean_gile_hem_cov']:.3f}  (ideal → 1.0)",
         "",
         "── STATE DISTRIBUTIONS (NEW MODEL) ──────────────────────",
     ]
@@ -601,7 +601,7 @@ def format_simulation_report(results: Dict) -> str:
 # STANDALONE ENTRY POINT
 # ══════════════════════════════════════════════════════════
 if __name__ == "__main__":
-    print("Running GILE-HEM-BOK simulation (N=300)...")
+    print("Running HEM-GILE-BOK simulation (N=300)...")
     results = run_full_simulation(n_subjects=300, n_session_steps=5)
     print(format_simulation_report(results))
 

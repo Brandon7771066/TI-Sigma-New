@@ -1198,7 +1198,7 @@
 - `[URB]` `urb_740_gcp_neutrino_correlation_analysis_proposal.md` — # URB #740 — Predicted GCP-Neutrino Correlation Analysis: Pre-Registered Test of URB #731's P2
 - `[URB]` `urb_741_quark_sector_scaling_refinement.md` — # URB #741 — Quark Sector Scaling Refinement: Sharpening the s ≈ 1.92 Quark-Mass-Ratio Estimate from URB #732
 - `[URB]` `urb_742_cross_domain_mixing_matrix_correspondence.md` — # URB #742 — Cross-Domain Mixing-Matrix Correspondence: Formal Derivation Linking PMNS, CKM, Brain CFC, and Pillar Coupling
-- `[URB]` `urb_743_existence_vs_truth_axis_replaces_love_existence_split_einstein_tiles_revisited.md` — # URB #743 — Existence vs Truth Axis Replaces Love-Existence Split: Reanalysis of L*/+E and Einstein Tiles Under Updated GILE-HEM Framework
+- `[URB]` `urb_743_existence_vs_truth_axis_replaces_love_existence_split_einstein_tiles_revisited.md` — # URB #743 — Existence vs Truth Axis Replaces Love-Existence Split: Reanalysis of L*/+E and Einstein Tiles Under Updated HEM-GILE Framework
 - `[URB]` `urb_744_dual_numbers_and_ti_sigma.md` — # URB #744 — Dual Numbers and TI Sigma: Why ε² = 0 Is the Right Algebra for the Indeterminate State
 - `[URB]` `urb_745_64d_gile_matrix_status_update.md` — # URB #745 — 64-Dimensional GILE Matrix: Status Update Under Updated Architecture
 - `[URB]` `urb_746_brain_band_aesthetics_three_band_hierarchy_as_natural_beauty.md` — # URB #746 — Brain Band Aesthetics: The Three-Band Hierarchy as Natural Beauty and the Aesthetic Significance of the Brain-Neutrino Bridge
@@ -1254,7 +1254,7 @@
 - `[URB]` `urb_781_truth_depicts_nonexistence_and_the_beauty_razor.md` — # URB #781 — Truth Depicts Nonexistence Too + The Beauty Razor (Relative-Sense Aesthetic Criterion)
 - `[BIO]` `urb_782_bok_crystal_ratified_jeff_time_leech_alignment_t_star_plus_e_einstein_tiling.md` — # URB #782 — BOK Crystal Ratified as 24-Cell, Jeff-Time / Leech-Lattice Triple-Cover Alignment, and the T*/+E Einstein Tiling Model
 - `[URB]` `urb_783_ti_viral_meme_project_vmp_formula_generator_placement_monetization.md` — # URB #783 — TI Viral Meme Project (VMP): Virality Formula, Generator Architecture, Strategic Placement, and Monetization Model
-- `[URB]` `urb_784_gile_hem_ratio_modulation_of_pd_expression_and_beauty_razor_inversion.md` — # URB #784 — GILE–HEM Ratio Modulation of PD Expression: Beauty Razor as a ρ-Gated Phenomenon, with the Eight-Dimensional Prediction Cube an
+- `[URB]` `urb_784_gile_hem_ratio_modulation_of_pd_expression_and_beauty_razor_inversion.md` — # URB #784 — HEM–GILE Ratio Modulation of PD Expression: Beauty Razor as a ρ-Gated Phenomenon, with the Eight-Dimensional Prediction Cube an
 
 </details>
 

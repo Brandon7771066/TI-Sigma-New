@@ -2,9 +2,9 @@
 
 **Pass 77, Batch 83** · 2026-05-28 · DPES · ASYMMETRIC #69 · $0 (local matplotlib)
 
-**Brandon directive (verbatim, paraphrased to record):** *"Write a paper on the GILE +/× HEM relationship as the SUCCESSOR to L\*+E. (a) Check the ×/+ relationship per applicable GILE-HEM dimension — those with ≥2 components (e.g. EF = amplitude × frequency is ×; I = accuracy + certainty is +). (b) Assess the ×/+ with the Einstein tiling + the pharmacology dream-drug-receptor image, as before. (c) Bring in the Penrose tiles relationship and pull up the major NONCOMPUTATIONAL-ability demonstration. (d) The EF distinction: the EXISTENCE of the i-cell ITSELF vs the IMPACT the i-cell made on the universe — BOTH matter for EF. (e) GILE-Love alone is abstract — you can IMAGINE attachment, which is pure L. ALL 8 GILE-HEM dimensions must engage for full virtue expression; otherwise it is mere abstraction, with Maharishi-effect / character-building effects at best (TM/Metta), potentially nontrivial."*
+**Brandon directive (verbatim, paraphrased to record):** *"Write a paper on the GILE +/× HEM relationship as the SUCCESSOR to L\*+E. (a) Check the ×/+ relationship per applicable HEM-GILE dimension — those with ≥2 components (e.g. EF = amplitude × frequency is ×; I = accuracy + certainty is +). (b) Assess the ×/+ with the Einstein tiling + the pharmacology dream-drug-receptor image, as before. (c) Bring in the Penrose tiles relationship and pull up the major NONCOMPUTATIONAL-ability demonstration. (d) The EF distinction: the EXISTENCE of the i-cell ITSELF vs the IMPACT the i-cell made on the universe — BOTH matter for EF. (e) GILE-Love alone is abstract — you can IMAGINE attachment, which is pure L. ALL 8 HEM-GILE dimensions must engage for full virtue expression; otherwise it is mere abstraction, with Maharishi-effect / character-building effects at best (TM/Metta), potentially nontrivial."*
 
-**Primary deliverable:** this anchor paper. It promotes the B82 GILE–HEM Completion clarification one level: from "each GILE dim needs a HEM complement" to "the *binding operator* between each GILE dim and its HEM complement is itself either × or +, and that ×/+ split is the direct successor of the L\*+E (L×E vs L+E) distinction."
+**Primary deliverable:** this anchor paper. It promotes the B82 HEM–GILE Completion clarification one level: from "each GILE dim needs a HEM complement" to "the *binding operator* between each GILE dim and its HEM complement is itself either × or +, and that ×/+ split is the direct successor of the L\*+E (L×E vs L+E) distinction."
 
 **Figures:** `analyses/pass77_b83_gile_hem_operator/make_figs.py` → `fig1_lstar_plus_e_to_gile_hem.png` (lineage/generalization map), `fig2_multiplicative_gate_vs_additive_residue.png` (illustrative ×-gate vs +-residue curves).
 
@@ -26,7 +26,7 @@ The predecessor therefore carried **one** ×/+ switch — applied to the single 
 
 ## 2. The successor: GILE +/× HEM
 
-B82 (GILE–HEM Completion) established that **every** GILE dimension is abstract-only and incomplete without its **physical HEM complement**, with a per-dimension bijection to the Dirac γ-matrices:
+B82 (HEM–GILE Completion) established that **every** GILE dimension is abstract-only and incomplete without its **physical HEM complement**, with a per-dimension bijection to the Dirac γ-matrices:
 
 | GILE (abstract) | Brandon semantics | HEM (physical) complement | γ |
 |---|---|---|---|
@@ -116,7 +116,7 @@ The multiplicative gate means imagined Love produces **no full virtue** — the 
 
 This generalizes to the **8-component full-virtue condition**:
 
-> **Full virtue expression requires all 8 GILE-HEM components engaged** (4 abstract GILE × 4 physical HEM). Because the existence-type and love-type couplings are **multiplicative**, any one of them left as pure abstraction (HEM = 0) drives that dimension's full-virtue contribution to zero — leaving, at best, the additive Maharishi/character residue. The einstein-monotile i-cell (all 8 inseparable) is the geometry of *enacted* virtue; the free-floating abstract ligand is the geometry of *meditation about* virtue.
+> **Full virtue expression requires all 8 HEM-GILE components engaged** (4 abstract GILE × 4 physical HEM). Because the existence-type and love-type couplings are **multiplicative**, any one of them left as pure abstraction (HEM = 0) drives that dimension's full-virtue contribution to zero — leaving, at best, the additive Maharishi/character residue. The einstein-monotile i-cell (all 8 inseparable) is the geometry of *enacted* virtue; the free-floating abstract ligand is the geometry of *meditation about* virtue.
 
 This is the same hyperconnection-vs-existence threshold the predecessor drew for L×E vs L+E — now stated as the operating condition for virtue itself: **imagined GILE = L+E bare-persistence residue (Maharishi-grade); enacted, HEM-coupled GILE = L×E hyperconnection (full virtue).**
 
@@ -127,7 +127,7 @@ This is the same hyperconnection-vs-existence threshold the predecessor drew for
 
 ## 9. #69 honesty notes
 
-1. **No new canonical principle claimed.** B83 is a **clarification/refinement** extending B82's GILE–HEM Completion and the L\*+E predecessor. The four-way ×/+ classification (G:×, I:+, L:×, E:+) is a **candidate refinement**, supported by four independent per-dimension arguments but **not ratified**. Canonical principle count **UNCHANGED 74**.
+1. **No new canonical principle claimed.** B83 is a **clarification/refinement** extending B82's HEM–GILE Completion and the L\*+E predecessor. The four-way ×/+ classification (G:×, I:+, L:×, E:+) is a **candidate refinement**, supported by four independent per-dimension arguments but **not ratified**. Canonical principle count **UNCHANGED 74**.
 2. **I↔precision cross-penalty surfaced, not hidden.** Brandon's "+" is kept as primary, but confident-wrong (certain×inaccurate) is a multiplicative danger term the pure-additive form misses — logged as a refinement candidate (§3.2).
 3. **The ×,+,×,+ alternation is suggestive, not a proven law** (§3.5). Reported as a pattern consistent with the predecessor, explicitly fallible.
 4. **Penrose/Gödel noncomputational hook is behavioral, not a hypercomputation proof** (§5); requires multi-rater replication.

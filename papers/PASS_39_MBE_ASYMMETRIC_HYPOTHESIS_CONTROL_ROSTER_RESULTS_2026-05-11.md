@@ -86,7 +86,7 @@ Brandon's full asymmetric hypothesis predicted **CONVERSE-FALSE + FORWARD-TRUE**
 **SURVIVES:**
 - Pass-15 broader MBE (heavy-tailed individual base rates) is **not directly tested** by Pass-38 + Pass-39; only the keyword-rubric operationalization is.
 - Pass-14 family-cluster numerology result (T=2 P=0.57%) is independent and unaffected.
-- Pass-37 PD-final canonical / GILE-HEM / Popp-Korotkov synthesis are independent and unaffected.
+- Pass-37 PD-final canonical / HEM-GILE / Popp-Korotkov synthesis are independent and unaffected.
 - Pass-21 R-A inverted-H4 AUC=0.7318 (the cleanly-replicated empirical prediction) is independent and unaffected.
 
 **DOES NOT SURVIVE (under this rubric):**

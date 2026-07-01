@@ -18,7 +18,7 @@ closed-loop efficacy test.
 
 The retrieval benchmark left a clear lesson: on real brain data, **good features beat
 clever machinery.** So the obvious next question is whether *this program's own*
-ideas — the GILE-HEM matrix, the FULL Permissibility Distribution (both the real
+ideas — the HEM-GILE matrix, the FULL Permissibility Distribution (both the real
 "degree" axis and the imaginary MI/Tralse axis), and the TI-Sigma Crystal read as a
 **"Consciousness Hamiltonian"** — make *better features* than generic spectral power.
 
@@ -39,7 +39,7 @@ This paper does two things, both honestly:
   coupling** (the simulations: +7 to +18 points over baseline, statistically clean).
   On the live mice the result is **mixed**: it helps one mouse (not significantly) and
   *hurts* the other, where plain power features already do nearly perfectly. The raw
-  GILE-HEM numbers alone are *worse* than baseline — the value, where it exists, is in
+  HEM-GILE numbers alone are *worse* than baseline — the value, where it exists, is in
   the **whole block** (crystal + PD + graph), not the eight GILE numbers by themselves.
 - The closed-loop Mood Amplifier **works as a proof-of-principle in simulation**: it
   drives the mood to the target far above baseline, and it provably needs the **right
@@ -57,7 +57,7 @@ theory targets, a clean in-sim efficacy proof, and two honest nulls.
 
 ## 1. The Consciousness Hamiltonian
 
-Each analysis window is reduced to an 8-dimensional **GILE-HEM** vector using the
+Each analysis window is reduced to an 8-dimensional **HEM-GILE** vector using the
 canonical corpus formulas (G/I/L/E primitives + H/E/M aggregates), where **GILE-L is
 operationalized as theta-gamma phase-amplitude coupling** (`features.theta_gamma_pac`)
 — the corpus definition of L as coupling strength. (A first pass used broadband
@@ -70,7 +70,7 @@ and we form the **Consciousness Hamiltonian**
 (hopping on the crystal adjacency A, on-site amplitude, GILE ring potential), faithfully
 ported from `hypercomputer/hamiltonian.py` / `tsc.py`. From each window we extract:
 
-- **8 GILE-HEM dims** (the matrix itself);
+- **8 HEM-GILE dims** (the matrix itself);
 - a **FULL PD block** — `pd_real = 5·(complexity − ½)` (degree axis) and
   `pd_imag = D2` (the imaginary MI / Tralse-zone axis) + soft zone memberships;
 - a **Hamiltonian spectrum block** — low eigenvalues, spectral gap, ground-state
@@ -179,7 +179,7 @@ efficacy, phase specificity, and target specificity; (iii) a satisfied **reachab
 necessary-condition** on two live mice.
 
 **Does not:** (i) show the principled block helps on *all* real data — it hurts the
-mouse where simple features already win; (ii) show GILE-HEM dims help on their own;
+mouse where simple features already win; (ii) show HEM-GILE dims help on their own;
 (iii) show *feedback* beats open-loop; (iv) demonstrate any on-animal efficacy — that
 requires a real closed loop, which recordings cannot provide.
 

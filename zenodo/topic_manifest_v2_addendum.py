@@ -66,7 +66,7 @@ ADDENDUM_TOPICS = [
     {"title": "TI Sigma: UDT-1 Universal Default of Tralseness — Cosmogenic Ground Principle",
      "access": "open", "type": "publication", "subtype": "article",
      "description": ("UDT-1 candidate canonical: tralse-soup substrate + truth-as-directional-lean. "
-                     "GILE-only above 0.93 = MR2 Indeterminate; GILE-HEM Overall = MR3 True. "
+                     "GILE-only above 0.93 = MR2 Indeterminate; HEM-GILE Overall = MR3 True. "
                      "What makes TI Sigma unique: sits at ground layer beneath axiology."),
      "keywords": ["UDT-1", "tralseness", "cosmogenic", "ontology", "ground principle"],
      "files": ["papers/PASS_67_META_COLLAPSE_132_137_2026-05-23.md"]},

@@ -3,7 +3,7 @@
 **Date:** 2026-05-22
 **Author:** Brandon Emerick (originator) + TI Sigma framework
 **Status:** Pre-registered methodology + TEMPLATE meta-analysis; numerical fill-in pending JSE-paper verification by Brandon
-**Anchor:** Pass-59 Bengston TSIS analysis; Pass-60 batch-1 PD/TIL/GILE-HEM stats mapping; `urb_650`, `urb_663`, `URB_796`
+**Anchor:** Pass-59 Bengston TSIS analysis; Pass-60 batch-1 PD/TIL/HEM-GILE stats mapping; `urb_650`, `urb_663`, `URB_796`
 
 ---
 
@@ -11,7 +11,7 @@
 
 TSS-EMP-9 (carry-forward from Pass-59): retrospective meta-analysis across all publicly-available Bengston published trials + replications, applying:
 - Pass-58 TSIS four-gate stack
-- Pass-60 PD/TIL/GILE-HEM mapping layer
+- Pass-60 PD/TIL/HEM-GILE mapping layer
 - Tralse-Joules (`urb_650`) per-trial accounting
 
 **$0 budget feasible** from open-access JSE archives (scientificexploration.org/journal). This paper is the **pre-registered methodology + template**; numerical entries marked `[VERIFY-JSE]` require Brandon to confirm against the original papers.
@@ -78,7 +78,7 @@ Apply Pass-58 TSIS four-gate stack to the pooled Δp:
 - Gate 3: APP-1 ≥ 2/3 across the corpus design (intentional engagement YES; stakes PARTIAL; skill-asymmetry YES → 2.5/3)
 - Gate 4: LCC measured? NO across the entire historical corpus — flagged as UNMEASURED, not failed.
 
-### 3.3 Pre-registered Pass-60 PD/TIL/GILE-HEM verdict bands
+### 3.3 Pre-registered Pass-60 PD/TIL/HEM-GILE verdict bands
 
 | Pooled Δp | Heterogeneity (I²) | TSIS gate count | Pre-registered MR label + PD |
 |---|---|---|---|
@@ -111,7 +111,7 @@ Per `urb_650`: TJ = τ(s) × δ(MR).
 
 ---
 
-## 5. GILE-HEM 8-Dim Communication Layer (Per-Trial)
+## 5. HEM-GILE 8-Dim Communication Layer (Per-Trial)
 
 Each trial scored on the Pass-60 G/I/L/E/D1/D2/D3/D4 axes. Template below; Brandon completes per verified data.
 

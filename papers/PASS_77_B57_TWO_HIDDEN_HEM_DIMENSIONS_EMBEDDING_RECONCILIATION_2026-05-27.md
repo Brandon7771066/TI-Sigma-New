@@ -1,4 +1,4 @@
-# The 2 "Missing" HEM Dimensions: Reconciling the 6 Physical DOF with the 8 GILE-HEM Dimensions
+# The 2 "Missing" HEM Dimensions: Reconciling the 6 Physical DOF with the 8 HEM-GILE Dimensions
 
 **Pass 77, Batch 57** · 2026-05-27 · DPES · ASYMMETRIC #69 · $0 · `analyses/pass77_b56_dirac_gile_hem/embedding_dof.py` · Brandon directive: *"reconcile the 6 dimensions with the 8 … identify the 2 missing HEM dimensions since 2 are physically meaningless. Use the 2 remaining physical constants and the 8 Meijer dimensions as clues."*
 

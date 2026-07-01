@@ -117,7 +117,7 @@ both physical and abstract domains.
 - Combined with URB #772 (GILE-Truth six clauses), the GILE framework now has
   both a **truth-criterion** (URB #772) and **dimensional definitions** (this URB).
 - Ready for: formalization in TI Sigma Lean4, public publication, Zenodo DOI,
-  and integration into the GILE-HEM operationalization spec.
+  and integration into the HEM-GILE operationalization spec.
 
 **Next URB candidate (#774):** Empirical operationalization of the Four C's —
 how to measure Continuity, Coherence, Concreteness, Consistency in a given

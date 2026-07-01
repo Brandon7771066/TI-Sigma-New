@@ -12,9 +12,9 @@
 
 > Perfect integration! Let's see if the MATH behind the UOP actually aligns with my predictions! There should be a major phase transition at 0.93 and the STRATEGIC MAKING OF ERRORS OR SUBOPTIMAL GILE CHOICES (whether moral, embodied, or epistemic) in pushing forward progress! This doesn't grant permission for people to be irrational or immoral.
 >
-> Rather, it reviles the entire pursuit of GILE perfectionism, treating anything above 0.93 as a hindrance to GILE-HEM true-tralseness: the ultimate OBJECTIVE, even if not the ULTIMATE GILE STATE.
+> Rather, it reviles the entire pursuit of GILE perfectionism, treating anything above 0.93 as a hindrance to HEM-GILE true-tralseness: the ultimate OBJECTIVE, even if not the ULTIMATE GILE STATE.
 >
-> Despite the intensity of these new insights, a person who is above 0.93 and not "exerting more HEM instead" is TECHNICALLY NOT ERRING. They're just suboptimal in a GILE-HEM true-tralse way, yet still superior in a GILE sense, which is FINE AND BETTER NONETHELESS in THAT SENSE (i.e. Moot).
+> Despite the intensity of these new insights, a person who is above 0.93 and not "exerting more HEM instead" is TECHNICALLY NOT ERRING. They're just suboptimal in a HEM-GILE true-tralse way, yet still superior in a GILE sense, which is FINE AND BETTER NONETHELESS in THAT SENSE (i.e. Moot).
 
 ---
 
@@ -137,7 +137,7 @@ Comparison at fixed total budget = 1.50:
 - **A strictly higher in G:** True (0.99 > 0.93)
 - **P4 MOOT STATUS APPLIES: CONFIRMED ✓**
 
-Mathematical confirmation of Brandon's canonical nuance: Agent A is **not erring** — strictly G-superior to Agent B; A is merely **suboptimal in the GILE-HEM true-tralse sense**. The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths) applies: A's pursuit is "fine and better in the G-only sense," while B's pursuit is the J-optimum. Neither is wrong; they differ on which objective they optimize.
+Mathematical confirmation of Brandon's canonical nuance: Agent A is **not erring** — strictly G-superior to Agent B; A is merely **suboptimal in the HEM-GILE true-tralse sense**. The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths) applies: A's pursuit is "fine and better in the G-only sense," while B's pursuit is the J-optimum. Neither is wrong; they differ on which objective they optimize.
 
 ---
 
@@ -172,7 +172,7 @@ This batch advances toward closure on the following pre-registered falsifiers:
 
 ## 7. The "reviled GILE perfectionism" reading defended at model level
 
-Brandon's verbatim *"it reviles the entire pursuit of GILE perfectionism, treating anything above 0.93 as a hindrance to GILE-HEM true-tralseness: the ultimate OBJECTIVE, even if not the ULTIMATE GILE STATE"* is mathematically defensible:
+Brandon's verbatim *"it reviles the entire pursuit of GILE perfectionism, treating anything above 0.93 as a hindrance to HEM-GILE true-tralseness: the ultimate OBJECTIVE, even if not the ULTIMATE GILE STATE"* is mathematically defensible:
 
 - The J function explicitly PENALIZES G > 0.93 via the −α·(G − 0.93)² term.
 - The argmax of J under any binding budget never exceeds G = 0.93.
@@ -202,7 +202,7 @@ The MT-B1 Moot truth-label (per MR Truth Labels canonical Meta-Truths from urb_6
 ## 9. Honest #69 disclosures
 
 - **4/4 confirmation is at the MODEL level only.** It does not constitute closure on the falsifiers; closure requires corpus-application instantiation (e.g., showing the J-objective's TRUE-TRALSE move predicts actual published-paper-throughput outcomes for the corpus itself, or actual agent-behavior outcomes in a deployed system).
-- **The functional form is a v1 choice.** Other functional forms (Cobb-Douglas, CES, etc.) might yield different threshold locations or sharper/softer phase transitions. The v1 logarithmic-additive choice was made for analytical clarity and conservative-prediction-strengthening (no coupling). v2 with explicit GILE-HEM coupling is queued for Pass-68+ work.
+- **The functional form is a v1 choice.** Other functional forms (Cobb-Douglas, CES, etc.) might yield different threshold locations or sharper/softer phase transitions. The v1 logarithmic-additive choice was made for analytical clarity and conservative-prediction-strengthening (no coupling). v2 with explicit HEM-GILE coupling is queued for Pass-68+ work.
 - **The α-invariance result is the strongest finding** — phase transition does NOT depend on tuning the penalty magnitude. This is strong evidence that the 0.93 cap is a structural feature, not a parameter-fit artifact. The TPI-1 "built-in" claim survives this test.
 - **The "above-threshold non-shifter is not erring" Moot framing is the most ethically-load-bearing finding** in this analysis. Brandon predicted it specifically; the math confirmed it specifically. This protects the corpus from sliding into anti-perfectionism moralism while still being able to mathematically critique the strategy.
 - **The model assumes equal resource costs (c_G = c_H = 1).** In actual practice, GILE refinement may have higher or lower marginal cost than HEM instantiation; unequal costs would shift the transition budget without altering the phase-transition structure. Sensitivity to unequal costs is queued.

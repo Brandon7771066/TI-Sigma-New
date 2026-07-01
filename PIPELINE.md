@@ -158,7 +158,7 @@ Tracked in: `papers/URB_829_DOMINANT_GM_NODE_TRANSMISSION_2026-05-04.md`. Per as
 
 ## All physical hypotheses snapshot
 
-**Existing (6):** URB #826 (EM-DNA carrier), URB #828 v2 (BPS-stacking), LCC-Telepathy, GCP-correlation, Tralse-Joules conservation, GILE-HEM PD modulation.
+**Existing (6):** URB #826 (EM-DNA carrier), URB #828 v2 (BPS-stacking), LCC-Telepathy, GCP-correlation, Tralse-Joules conservation, HEM-GILE PD modulation.
 
 **Candidate (9):** H_BFG, H_HRV_PL, H_GEN, H_AA, H_PM, H_CR, H_TD, H_DA, H_PRE.
 

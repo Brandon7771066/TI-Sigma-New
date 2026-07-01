@@ -178,7 +178,7 @@ This is the SWOT applied to TI Sigma's **overall unique contribution**, not to a
 - **Emerick Aphorism** and the broader quotes repository.
 
 **June 2026 update — the ground-of-reality arc (the field's biggest single advance).** Four principles were ratified into the canon (count ~75 → **79**):
-- **SUP-1 — Definition of Supreme:** *supreme* ≜ a *willfully-reached* GILE-HEM optimum (willful striving is the defining qualifier), with the existence-vs-truth tension *embraced* as productive rather than dissolved.
+- **SUP-1 — Definition of Supreme:** *supreme* ≜ a *willfully-reached* HEM-GILE optimum (willful striving is the defining qualifier), with the existence-vs-truth tension *embraced* as productive rather than dissolved.
 - **TRG-1 — Tralse-Reality Grounding:** reality's ground state is Indeterminate (tralse), so "illusion" is a bivalent mind's misname for "real but not-true"; this dissolves the regress/eliminativism fork via the third truth-value.
 - **TOF-1 — Tralse-Only Fundamentality:** tralseness is the *single* fundamental; consciousness itself is a derivative (and therefore tralse-inheriting) — a genuine monism capstone.
 - **RTI-1 — Residual Tralse Indeterminacy:** the scientific corollary (see Field 2).

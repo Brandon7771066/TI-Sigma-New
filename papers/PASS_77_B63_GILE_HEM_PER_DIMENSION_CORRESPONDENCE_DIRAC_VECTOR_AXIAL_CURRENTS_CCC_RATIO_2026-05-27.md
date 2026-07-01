@@ -54,7 +54,7 @@ The Maxwell analog of vector-vs-axial: **physical energy density u = ½(E²+B²)
 - **Grade 1 / honest gaps:** generic proportionality only *median R²=0.52* ("largely," with mass-mixing residual); the Intuition accuracy/certainty demo was degenerate (eigenstate masquerading as superposition) — conceptually sound, numerically un-demonstrated this run; Maxwell-side 4↔4 exhaustion unproven; ρ-as-"derivation" is a scaling relation, not a derivation of abstract-from-physical in the strong reductive sense.
 
 ## 7. Candidate (flagged, not ratified)
-**GHC-1 (GILE–HEM Componentwise correspondence):** for each i-cell there is a per-dimension bijection GILE_k ↔ HEM_k with GILE_k ≈ ρ·HEM_k, ρ the i-cell's GILE:HEM magnitude-ratio (CCC ρ=2), exact for chiral/maximally-coherent states and "largely" (median R²≈0.5) for generic states; ρ varies per i-cell, collectively invariant per domain. Pre-reg falsifiers to be drafted before any ratification. Principle count held at **73** (candidate only).
+**GHC-1 (HEM–GILE Componentwise correspondence):** for each i-cell there is a per-dimension bijection GILE_k ↔ HEM_k with GILE_k ≈ ρ·HEM_k, ρ the i-cell's GILE:HEM magnitude-ratio (CCC ρ=2), exact for chiral/maximally-coherent states and "largely" (median R²≈0.5) for generic states; ρ varies per i-cell, collectively invariant per domain. Pre-reg falsifiers to be drafted before any ratification. Principle count held at **73** (candidate only).
 
 ---
 

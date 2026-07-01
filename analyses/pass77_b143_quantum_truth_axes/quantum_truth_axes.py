@@ -13,7 +13,7 @@ Honesty rails honored (#69 / anti-numerology / EVD-1):
   * The qubit / Bloch / contextuality reading is an ANALOGY + faithful encoding.
     It is the thing the author explicitly allowed ("or compelling analogy"). It
     does NOT prove physical instantiation.
-  * The 8 GILE-HEM <-> 8 fundamental-constant assignment is NOT re-run as if to
+  * The 8 HEM-GILE <-> 8 fundamental-constant assignment is NOT re-run as if to
     vindicate it. The already-recorded result stands: natural map corr 0.075,
     permutation p = 1.0 (B135/B138). It is an OVERLAY with ZERO evidential weight.
     We additionally SHOW that every quantum slot below is INDEPENDENT of that

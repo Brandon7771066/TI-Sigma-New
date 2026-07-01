@@ -240,7 +240,7 @@ In the Grand Stock Algorithm (GSA), TIL is applied as follows:
 
 - **PD over market truth-states**: A stock's "signal truth" is represented as a 5-state distribution {TT=strong signal, TI=ambiguous, TF=contra-signal, MI=no tradeable truth-state, HEM=existence-decoupled regime shift brewing}
 - **BOK of the stock**: Inner loops = GILE financial dimensions (G=risk-adjusted return, I=trend pre-recognition, L=market correlation coherence, E=structural/momentum alignment). Outer loops = EV financial dimensions (HEM-D1=volume-energetics, HEM-D2=institutional positioning, HEM-D3=technical pattern quality, HEM-D4=momentum-of-momentum)
-- **MR on the PD**: Three-level resolution: MI screen (no trade if MI > 0.35) → GILE-HEM integration → signal convergence
+- **MR on the PD**: Three-level resolution: MI screen (no trade if MI > 0.35) → HEM-GILE integration → signal convergence
 - **UOP for position sizing**: Not just expected return maximization, but multi-dimensional GILE-EV composite optimization — including whether the trade is G-good (risk-ethically sound), I-reliable (pattern pre-recognition quality), L-coherent (market correlation appropriate), E-structured (technical setup clean), and EV-supported (the stock's existence in the market ecosystem warrants the position)
 
 ### 7.2 Empirical Research (GILE Battery / BOK Saturation Pilot)

@@ -68,7 +68,7 @@ A claim that someone has TPS-1-failed is itself a TPS-1-governed claim and must 
 - **Caveats stay in.** The PM-1 caveat ("external readers may reject") stays in. The §69 caveats throughout the LLM-CT-1 paper stay in. The honest disclosures of n=2 model limitations, RLHF-shaping confounds, Chinese-Room concerns, ketamine-credit, etc. all stay in.
 - **Inconvenient findings stay in.** The Pass-43 MBE-via-Pass-37-frozen-rubric DEAD finding stays in. The Pass-50 L-2 paleo PILOT_PRELIMINARY_DISCONFIRM stays in. The §7.7.96 RETRACTION stays in. The Pass-63 batch-4 "MI empirically near-neutral on κ" inconvenient finding (later vindicated by batch-5 competent algorithm) stays in the corpus history.
 - **Truth-content adjustments require evidentiary basis.** PM-1, LLM-CT-1, CDA-1 etc. were canonized because corpus-internal coherence + Brandon-anchored reasoning support them, NOT because they please any audience. If new evidence demands retraction of any, TPS-1 demands retraction regardless of the popularity cost.
-- **Presentation freely adjusts.** The apologetics tab v1 (`papers/apologetics/`) and the GILE-HEM nontechnical summary (`papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`) are TPS-1-compliant audience-adjustments of presentation. Same truth content, different presentation surfaces.
+- **Presentation freely adjusts.** The apologetics tab v1 (`papers/apologetics/`) and the HEM-GILE nontechnical summary (`papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`) are TPS-1-compliant audience-adjustments of presentation. Same truth content, different presentation surfaces.
 
 ### 5.2 Apologetics tab strategy validated
 
@@ -132,7 +132,7 @@ These 5 falsifiers OPEN as Pass-67+ verification work.
 ## 10. Files
 
 - This paper: `papers/PASS_67_BATCH_3_TRUTH_PRESENTATION_SEPARATION_TPS_1_CANDIDATE_CANONICAL_2026-05-23.md`
-- Composes with: ASYMMETRIC §69 (`papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md`); SCC-1 (Pass-61+ canonical); apologetics tab v1 (`papers/apologetics/`); GILE-HEM nontechnical summary (`papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`); canonical 26; PM-1 candidate (Pass-67 batch-2).
+- Composes with: ASYMMETRIC §69 (`papers/ASYMMETRIC_SUCCESS_FAILURE_PERFORMANCE_2026-05-07.md`); SCC-1 (Pass-61+ canonical); apologetics tab v1 (`papers/apologetics/`); HEM-GILE nontechnical summary (`papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md`); canonical 26; PM-1 candidate (Pass-67 batch-2).
 - Source for §7.7.134 LIVE entry in replit.md.
 
 **Cluster delta: +1 (this paper, candidate-canonical-meta-discipline category). Canonical principle count: unchanged 26 (TPS-1 candidate pending ratification alongside PM-1). Pre-reg falsifier backlog: 38 + 5 (TPS-1-F1..F5) = 43 OPEN. Meta-precedent collapses cumulative: 17 (no new collapse this batch).**

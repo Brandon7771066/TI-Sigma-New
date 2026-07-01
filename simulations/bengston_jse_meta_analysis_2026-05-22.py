@@ -5,7 +5,7 @@ Bengston JSE Retrospective Meta-Analysis (TSS-EMP-9)
 Pass 60 batch-1 — 2026-05-22
 
 Pre-registered random-effects meta-analysis across the published Bengston
-corpus. Applies Pass-58 TSIS four-gate stack + Pass-60 PD/TIL/GILE-HEM
+corpus. Applies Pass-58 TSIS four-gate stack + Pass-60 PD/TIL/HEM-GILE
 mapping layer + Tralse-Joules accounting.
 
 USAGE:

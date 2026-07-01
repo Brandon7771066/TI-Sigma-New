@@ -64,7 +64,7 @@ TI Sigma spans multiple distinct intellectual domains — philosophy of mind, ma
 **Audience**: Consciousness researchers, clinical psychologists, neuroscientists, meditators, life coaches
 
 **Core content**:
-- Full GILE-HEM operationalization
+- Full HEM-GILE operationalization
 - Biometric correlates (EEG coherence, HRV, fNIRS, OURA data)
 - The HEAR score as a clinical tool for wellbeing assessment
 - Comparison with existing frameworks (Positive Psychology, ACE, HRV-based wellness)

@@ -178,7 +178,7 @@
 1. **Evidence-Based Medicine (EBM):** Where TI Sigma might intervene — n-of-1 trials, rare-disease individualized therapy, Brandon's own Mood Amplifier work (which is structurally n-of-1 + complex-systems + ASYMMETRIC §69-disciplined)
 2. **Peer Review:** Where TI Sigma might intervene — Zenodo direct-publishing (already in active use; bypasses peer-review-as-gatekeeper while maintaining empirical discipline)
 3. **Scientific Method (methodological monism):** Where TI Sigma might intervene — the multi-axis 5-truth-axis framework + URB experimental templates + pre-reg-falsifier discipline together constitute methodological pluralism
-4. **Free Market Economics:** Where TI Sigma might intervene — prediction markets (already in active use; Kalshi + Collective2 + Polymarket); GILE-HEM framework for prediction-market modeling
+4. **Free Market Economics:** Where TI Sigma might intervene — prediction markets (already in active use; Kalshi + Collective2 + Polymarket); HEM-GILE framework for prediction-market modeling
 5. **Standard Model physics monism:** Where TI Sigma might intervene — quantum-classical-hybrid + non-local-correlations + Mycelial Resonance Engine (already in canonical stack via TSP-1 + IRA-1 + DTQ-1)
 
 **Pass-74+ work:** identify which of these 5 candidate domains has the highest TI Sigma leverage; consider candidate canonical for the next GBD-1 application case.
