@@ -11,8 +11,18 @@ description: How "can a near-MI concept be held with value?" separates from the 
 - **NGK = Negative Gap Knowledge** and the **graded "fading line, not a wall" I↔MI boundary** are BOTH already canonical (`TI_SIGMA_FOR_EVERYONE_V2`). So "there is no precise difference between high-Indeterminate and MI" is *already* corpus, not a new claim.
 - The **`in-1` I/MI leeway demarcation** (leeway remaining → Indeterminate; leeway annihilated → MI) is canonical (B107, MR-labels refinement #17). Kin: POD-1 pragmatic register, CAD value-floor.
 
-## The one durable distinction (the delta)
-**Tolerability ≠ sensicality.** NGK makes a nonsense concept *holdable in mind* (tolerable) but NOT *sensical*. Coherentist support-premises are a *separate* scaffold that can confer coherent, usable value (sensicality). Two scaffolds, two different jobs.
+## Three grounds separate a genuine Indeterminate from an MI — sorted by what they're a property of
+- **Coherentism** (supporting premises) → **sensicality** — **content-side** (property of the proposition/premise-web).
+- **NGK** (Negative Gap Knowledge) → **tolerability** (holdable by the gap) — **content-side**.
+- **eTJ** (Epistemic Tralse-Joule = canonical **ETJ-1 #53**, incoherence-holding capacity) → **comprehensibility-by-this-mind** — **agent-side** ("motor" capacity to hold a tralsity without collapse).
+
+**Tolerability ≠ sensicality** (NGK holds, coherentism makes-sense — two different jobs). eTJ is the *agent-side* third leg: it explains the residual failure the content-side tools can't — a mind can have scaffolding AND NGK available yet a **low-eTJ** mind still snaps a genuine Indeterminate to a false resolution / files it under "nonsense." eTJ lives on the **Q-use/access** axis; it does NOT touch the **Q-label**.
+
+## eTJ anti-crank-shield (critical honesty rail — `PSM-1-F2`)
+eTJ makes *comprehension* agent-relative but must NEVER make the *label* agent-relative. eTJ may explain access-failure to a statement ONLY AFTER it independently qualifies as Indeterminate (passes the `in-1` label gate, with load-bearing scaffolding as supporting evidence, never a substitute). It can NEVER convert a genuine MI into an Indeterminate — "you just lack the eTJ to see it" is the cheat. No amount of eTJ moves the Q-label. eTJ itself is early-stage (ETJ-1's physical-energy "Joule" bridge + Φ/global-workspace cross-walk are openly OWED, not delivered).
+
+## √2−1 is NOT the MI cutoff (`PSM-1-F3`)
+√2−1≈0.414 = the **Emerick/LCC ONSET** threshold (existence/consciousness onset on the real/HEM axis; RTI-1 minimum-Tralse-zone floor `LCC_TRALSE`). The **I/MI cutoff is the leeway-exhaustion `in-1` gate, left UN-pinned numerically** (a categorical leeway screen, not a magnitude on the GILE-Truth axis). Identifying the two is an attractive resonance but an un-earned posit — flag, don't adopt.
 
 ## Why the "no precise difference" claim doesn't abolish the label gate
 Keep three questions separate so they don't collide:
