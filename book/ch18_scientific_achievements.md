@@ -1,4 +1,4 @@
-## Chapter 16: Scientific Achievements and Implications
+## Chapter 18: Scientific Achievements and Implications
 
 ### What counts as an "achievement"
 
@@ -42,7 +42,7 @@ The framework's *interpretive* contribution sits on top of this data and is genu
 
 ### Tier 1, result three: consciousness metrics that track real brain states
 
-Chapter 13 already met this result; it belongs on the achievement ledger too. On a publicly archived rat hippocampal recording (DANDI:000003), re-analyzed at zero cost, the framework's coupling measure tracks distinct states extremely tightly — the internal consistency between its two coupling estimates came out at a correlation of about **0.99** within that recording, and the coupling metric significantly separates Wake, NREM, and REM **(preliminary).**
+Chapter 15 already met this result; it belongs on the achievement ledger too. On a publicly archived rat hippocampal recording (DANDI:000003), re-analyzed at zero cost, the framework's coupling measure tracks distinct states extremely tightly — the internal consistency between its two coupling estimates came out at a correlation of about **0.99** within that recording, and the coupling metric significantly separates Wake, NREM, and REM **(preliminary).**
 
 The honest ceiling: this is **one animal**. A high correlation *within* a single recording shows the metric is internally coherent and that the proposed axes behave as the theory needs — a necessary condition, not a demonstration that pushing coupling up *causes* a conscious state. It is a real result on real data; it is also narrow, and the program says so.
 

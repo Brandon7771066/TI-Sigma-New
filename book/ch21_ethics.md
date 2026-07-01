@@ -1,4 +1,4 @@
-## Chapter 19: Major Ethical Proposals and Implications
+## Chapter 21: Major Ethical Proposals and Implications
 
 ### Ethics without a separate magisterium
 

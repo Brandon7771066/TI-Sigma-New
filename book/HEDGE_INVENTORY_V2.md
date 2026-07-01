@@ -6,7 +6,10 @@
 > index) versus **which are genuinely speculative** and should keep a light caveat.
 >
 > This audit only *locates and classifies* the hedges — it does not decide which to
-> keep. Total flagged: **468** across 25 chapters + front matter.
+> keep. Total flagged: **468** across the original 25 chapters + front matter. (The
+> book was later restructured to 27 chapters — old Chapter 9's coherentism and JBK-1
+> material was split into new Chapters 10 and 11 and the rest renumbered; the two new
+> chapters are noted below but not yet re-audited.)
 
 ## How to read each entry
 `L<line>` = line number in the V2 file · `[TAG]` = hedge type · then the phrase in context.
@@ -50,22 +53,24 @@
 | 6 | Chapter 7: Five Fundamental Truth Labels and Meta-Truths |
 | 9 | Chapter 8: TI-Logic (TIL): MR via UOP and PD |
 | 28 | Chapter 9: Major Amendments to Epistemology and Metaphysics ★ |
-| 22 | Chapter 10: i-Cell Theory |
-| 16 | Chapter 11: The Nature of Consciousness and Why It Matters ★ |
-| 48 | Chapter 12: The Case Against Physicalism, Skepticism, and Bayesianism ★ |
-| 21 | Chapter 13: The Law of Correlational Causation and its Applications ★ |
-| 23 | Chapter 14: New Additions and Amendments to Mathematics |
-| 18 | Chapter 15: Engineering Applications of TI Sigma |
-| 12 | Chapter 16: Scientific Achievements and Implications |
-| 10 | Chapter 17: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies |
-| 12 | Chapter 18: SDT and the Three C's of Social Success |
-| 15 | Chapter 19: Major Ethical Proposals and Implications |
-| 13 | Chapter 20: What Real Work Looks Like |
-| 12 | Chapter 21: The True Definitions of Intelligence and Genius |
-| 28 | Chapter 22: The Future of AI and the Pitfalls of Modern Computer Science |
-| 33 | Chapter 23: Alternative Meta-Philosophies TI Sigma Supplants |
-| 43 | Chapter 24: Potential Objections to TI Sigma Addressed |
-| 20 | Chapter 25: Enlightenment as THE Objective For All |
+| — | Chapter 10: Coherentism — Why a Sentence Needs Its Novel *(new; not yet audited)* |
+| — | Chapter 11: Dropping the T — Justified Belief as Knowledge (JBK-1) *(new; not yet audited)* |
+| 22 | Chapter 12: i-Cell Theory |
+| 16 | Chapter 13: The Nature of Consciousness and Why It Matters ★ |
+| 48 | Chapter 14: The Case Against Physicalism, Skepticism, and Bayesianism ★ |
+| 21 | Chapter 15: The Law of Correlational Causation and its Applications ★ |
+| 23 | Chapter 16: New Additions and Amendments to Mathematics |
+| 18 | Chapter 17: Engineering Applications of TI Sigma |
+| 12 | Chapter 18: Scientific Achievements and Implications |
+| 10 | Chapter 19: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies |
+| 12 | Chapter 20: SDT and the Three C's of Social Success |
+| 15 | Chapter 21: Major Ethical Proposals and Implications |
+| 13 | Chapter 22: What Real Work Looks Like |
+| 12 | Chapter 23: The True Definitions of Intelligence and Genius |
+| 28 | Chapter 24: The Future of AI and the Pitfalls of Modern Computer Science |
+| 33 | Chapter 25: Alternative Meta-Philosophies TI Sigma Supplants |
+| 43 | Chapter 26: Potential Objections to TI Sigma Addressed |
+| 20 | Chapter 27: Enlightenment as THE Objective For All |
 
 ---
 
@@ -73,7 +78,7 @@
 
 ### (front matter)  (1)
 
-- **L7** `[STATUS]` — …gence defined holistically across the GILE tetrad (Chapter 11); and a working definition of "evidence" as a role distinct from its weight and from proof (Chap…
+- **L7** `[STATUS]` — …gence defined holistically across the GILE tetrad (Chapter 13); and a working definition of "evidence" as a role distinct from its weight and from proof (Chap…
 
 ### Publication Front-Matter  (3)
 
@@ -232,7 +237,7 @@
 - **L927** `[FALSIF]` — …ations and replace it with a discipline for acting well without them. Falsifiability stays as a rule of thumb but is retired as a strict gate (URB-830) —…
 - **L927** `[FALSIF]` — …n matters as much as refutation. A claim is worthless only if it is unfalsifiable *and* unconfirmable *and* idle all at once, so defending and refining…
 
-### Chapter 10: i-Cell Theory  (22)
+### Chapter 12: i-Cell Theory  (22)
 
 - **L952** `[SOFTEN]` — …reat these as a useful map of your own experience, not as anatomy you could dissect.
 - **L964** `[STATUS]` — …hingly thin. (That this far end of the ladder is real *at all* is a **speculative/open** claim; the framework flags it as such rather than asserting th…
@@ -257,7 +262,7 @@
 - **L1018** `[STATUS]` — …hinkers** whose many-valued bandwidth gets compressed by schooling, a preliminary and testable claim with real implications for creativity. And on deat…
 - **L1018** `[STATUS]` — …e treating any continuation of inner experience as an honestly **open hypothesis** it neither asserts nor depends upon.
 
-### Chapter 11: The Nature of Consciousness and Why It Matters ★  (16)
+### Chapter 13: The Nature of Consciousness and Why It Matters ★  (16)
 
 - **L1029** `[STATUS]` — …of *operational proposals* — some framework-internal, some genuinely speculative — that make the open questions sharper. Read the status flags. They a…
 - **L1029** `[FALSIF]` — …— some framework-internal, some genuinely speculative — that make the open questions sharper. Read the status flags. They are doing real work.
@@ -268,15 +273,15 @@
 - **L1070** `[STATUS]` — …its tie to the golden ratio, is a **framework-internal** mathematical conjecture, not an established measurement. The attempts to read it off real sig…
 - **L1070** `[STATUS]` — …read it off real signals — EEG, heart-rate variability (HRV) — are **preliminary** instrument-building, not confirmed results. Do not cite the number…
 - **L1080** `[SELF-EFF]` — …ons onto consciousness levels is a framework-internal interpretation, not a proof about minds.
-- **L1090** `[STATUS]` — …sure*.** Chapter 21 develops this holistic definition in full, as the candidate principle **GIT-1**.
+- **L1090** `[STATUS]` — …sure*.** Chapter 23 develops this holistic definition in full, as the candidate principle **GIT-1**.
 - **L1090** `[SELF-EFF]` — …*I**ntuition), as the good-faith care to get things right rather than merely to win (**G**oodness and **L**ove), and as genuine openness to update…
 - **L1094** `[STATUS]` — …?" from a pure intuition-pump into something with a number attached — provisional, falsifiable, and worth testing.
 - **L1094** `[FALSIF]` — …e intuition-pump into something with a number attached — provisional, falsifiable, and worth testing.
 - **L1098** `[STATUS]` — …dimensional mapping, and the master equation are *framework-internal* conjectures and the EEG/HRV measurements *preliminary* — the ideas sharpen the op…
 - **L1098** `[STATUS]` — …on are *framework-internal* conjectures and the EEG/HRV measurements *preliminary* — the ideas sharpen the open problem of consciousness, they do not c…
-- **L1098** `[FALSIF]` — …lanation (defended in Chapter 12). The framework proposes a concrete, falsifiable onset threshold built on the Law of Correlational Causation, the Emer…
+- **L1098** `[FALSIF]` — …lanation (defended in Chapter 14). The framework proposes a concrete, falsifiable onset threshold built on the Law of Correlational Causation, the Emer…
 
-### Chapter 12: The Case Against Physicalism, Skepticism, and Bayesianism ★  (48)
+### Chapter 14: The Case Against Physicalism, Skepticism, and Bayesianism ★  (48)
 
 - **L1121** `[SELF-EFF]` — …one of those triumphs is a triumph of **physical method**, and of the modest claim that **the physical world is real** — and almost nobody dispute…
 - **L1125** `[STATUS]` — …e achievements of **empiricism**, the disciplined practice of forming conjectures, testing them against careful observation, and keeping only what surv…
@@ -327,7 +332,7 @@
 - **L1313** `[STATUS]` — …s a coherence measure rather than a credence) are flagged honestly as candidate or framework-internal, not as proven. **(open)**
 - **L1317** `[SOFTEN]` — …Myrion (the Truth–Existence optimum the framework calls Supreme) — is plausibly the highest one, so the book urges the reader to seek GILE-Truth and…
 
-### Chapter 13: The Law of Correlational Causation and its Applications ★  (21)
+### Chapter 15: The Law of Correlational Causation and its Applications ★  (21)
 
 - **L1330** `[SOFTEN]` — …tion is not causation" warns you that a *single observed correlation* may be spurious. The **Law of Correlational Causation (LCC)** makes a dif…
 - **L1334** `[SOFTEN]` — …hear a faint, garbled echo of one station bleeding into another, that could be anything — interference, chance, your imagination. But if you can…
@@ -351,7 +356,7 @@
 - **L1427** `[STATUS]` — …Treat the structure as the real contribution, the exact constants as provisional, and every application as preliminary rather than proven.
 - **L1427** `[STATUS]` — …ibution, the exact constants as provisional, and every application as preliminary rather than proven.
 
-### Chapter 14: New Additions and Amendments to Mathematics  (23)
+### Chapter 16: New Additions and Amendments to Mathematics  (23)
 
 - **L1434** `[STATUS]` — …apter as a tour of real-but-modest contributions and honestly-flagged conjectures, not as a victory lap.
 - **L1434** `[SELF-EFF]` — …ork's own audit retracted it. Read this chapter as a tour of real-but-modest contributions and honestly-flagged conjectures, not as a victory lap.
@@ -377,7 +382,7 @@
 - **L1510** `[STATUS]` — …flagging the sweeping "all of mathematics from i" version as an open conjecture. Its genuinely proved output is a small pile of elementary, machine-v…
 - **L1510** `[SELF-EFF]` — TI Sigma's mathematical contributions are real but deliberately modest. Its signature idea reinterprets the imaginary unit i as the operator…
 
-### Chapter 15: Engineering Applications of TI Sigma  (18)
+### Chapter 17: Engineering Applications of TI Sigma  (18)
 
 - **L1523** `[SELF-EFF]` — …t engineering idea in this chapter is a **necessary-condition test**, not a proof that anything works. Here is the everyday version.
 - **L1525** `[SOFTEN]` — Suppose you want to know whether you could, in principle, drive from your house to the coast. Before you ask whe…
@@ -398,7 +403,7 @@
 - **L1581** `[STATUS]` — - **Conceptual / speculative:** the Crystal decoder, the tralsebit-native processors, the aperiodi…
 - **L1587** `[SELF-EFF]` — …ng "Hypercomputer," none of which has been built. The honest claim is modest: the framework has working biofeedback plumbing and a passed *necessa…
 
-### Chapter 16: Scientific Achievements and Implications  (12)
+### Chapter 18: Scientific Achievements and Implications  (12)
 
 - **L1606** `[SOFTEN]` — …ble" story — any account where each side already carries its answer — could allow? Classical physics caps the relevant score, called **S**, at 2.…
 - **L1612** `[FALSIF]` — …timately demonstrate is twofold. First, the program *can* run a real, falsifiable experiment on real equipment and report it cleanly. Second, the world…
@@ -413,7 +418,7 @@
 - **L1661** `[STATUS]` — - **Preliminary (real but narrow data):** the well-being-concentration studies — stri…
 - **L1671** `[SELF-EFF]` — …d honesty lives in keeping them apart. The genuine Tier-1 results are modest but real: Bell and five-qubit Mermin experiments on actual IBM quantu…
 
-### Chapter 17: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies  (10)
+### Chapter 19: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies  (10)
 
 - **L1680** `[FALSIF]` — …a conspiracy theory," "you're not a credentialed expert," "this isn't falsifiable") to license a dismissal that the costume hasn't earned.
 - **L1693** `[STATUS]` — …er point — **NRI-1, norm–rarity independence** **(framework-internal, candidate)** — the rarity of a standard is not evidence against it.)
@@ -426,7 +431,7 @@
 - **L1746** `[STATUS]` — …ses — **(verified)**, **(framework-internal)**, **(preliminary)**, **(speculative/open)** — and you have a practical communication grammar. Flag the st…
 - **L1750** `[SOFTEN]` — …, not jargon.** Ask "have you ever known something was off before you could explain why?" before you say "I-dimension." People test ideas against…
 
-### Chapter 18: SDT and the Three C's of Social Success  (12)
+### Chapter 20: SDT and the Three C's of Social Success  (12)
 
 - **L1773** `[WEAKVB]` — > **Key insight:** Most of what looks like "nobody cares" is good will trapped behind missing capacity. Diagnosi…
 - **L1823** `[STATUS]` — …of the framework's more hopeful proposals: **LAS-1, the Love-As-Skill hypothesis** **(candidate hypothesis, NOT ratified)**. The claim is that love —…
@@ -441,7 +446,7 @@
 - **L1841** `[SELF-EFF]` — …ly and universally — is how a person becomes good at love rather than merely fond of the idea of it.
 - **L1845** `[WEAKVB]` — Most of what looks like "nobody cares" is really good will trapped behind missing capacity, a…
 
-### Chapter 19: Major Ethical Proposals and Implications  (15)
+### Chapter 21: Major Ethical Proposals and Implications  (15)
 
 - **L1858** `[SELF-EFF]` — …the framework's structural unit of awareness — a GILE value does not merely sit there as an inert "is." It is *experienced as binding*. The "ough…
 - **L1864** `[STATUS]` — …ot have to accept this to use the chapter. Hold it as the framework's working hypothesis — a status-flagged proposal, not a proven theorem — and watch what it…
@@ -459,7 +464,7 @@
 - **L1926** `[STATUS]` — …d spiritual intuitions into a secular vocabulary, clearly labelled as speculative, so that a reader of any conviction can weigh the ethics on its merit…
 - **L1930** `[STATUS]` — …d-talk (**NOG-1, DTHI-1, WHM-1**) is offered strictly as comparative, speculative philosophy — never doctrine.
 
-### Chapter 20: What Real Work Looks Like  (13)
+### Chapter 22: What Real Work Looks Like  (13)
 
 - **L1941** `[WEAKVB]` — …h a usable answer to a simple question: *what does real work actually look like?*
 - **L1949** `[WEAKVB]` — …ur own, the borrowed frame crowds out the original move before it can appear. Psychologists call the underlying effect *functional fixedness* or t…
@@ -475,7 +480,7 @@
 - **L2015** `[FALSIF]` — …aws — UGI-1 and SIS-1 are explicitly *candidate* principles with open falsifiers, and the attractor-basin account is a model, not a measurement. But y…
 - **L2019** `[SELF-EFF]` — …onsumed, validate after I generated, do the necessary rather than the merely possible, and stay out of the basin?
 
-### Chapter 21: The True Definitions of Intelligence and Genius  (12)
+### Chapter 23: The True Definitions of Intelligence and Genius  (12)
 
 - **L2028** `[SOFTEN]` — …er years insisting, against the evidence, that megadoses of vitamin C could cure cancer and the common cold. Luc Montagnier shared a Nobel for di…
 - **L2032** `[STATUS]` — …as **candidates** — proposed, argued, supported by simulation, but **not yet ratified on real-world data**. I will keep saying so, because the framework's…
@@ -490,7 +495,7 @@
 - **L2088** `[FALSIF]` — …ILE "sane" inside one argument. Second is the **self-location trap** (falsifier GAR-1-F4): the cluster "few people I meet seem sane, and I can see ev…
 - **L2092** `[STATUS]` — …, outcome-blind validation, and all of it offered here as a promising candidate rather than a settled result.
 
-### Chapter 22: The Future of AI and the Pitfalls of Modern Computer Science  (28)
+### Chapter 24: The Future of AI and the Pitfalls of Modern Computer Science  (28)
 
 - **L2101** `[SOFTEN]` — …ntelligence is** — and yet the danger from advanced AI is **real, and arguably harder to handle** than the doom stories suggest, not easier.
 - **L2101** `[WEAKVB]` — …save us, or the machines will doom us — and in both cases the author seems oddly relieved to have settled the matter. This chapter does neither.…
@@ -521,7 +526,7 @@
 - **L2167** `[STATUS]` — …enough to represent indeterminacy. All of this is offered as argued *candidate* canon, not settled result, with its falsifiers left open.
 - **L2167** `[FALSIF]` — …is offered as argued *candidate* canon, not settled result, with its falsifiers left open.
 
-### Chapter 23: Alternative Meta-Philosophies TI Sigma Supplants  (33)
+### Chapter 25: Alternative Meta-Philosophies TI Sigma Supplants  (33)
 
 - **L2174** `[STATUS]` — …status of that claim as **(verified)**, **(framework-internal)**, **(preliminary)**, or **(speculative/open)**.
 - **L2174** `[STATUS]` — …as **(verified)**, **(framework-internal)**, **(preliminary)**, or **(speculative/open)**.
@@ -557,7 +562,7 @@
 - **L2240** `[STATUS]` — …r/or (dissolved into a data-backed hybrid Indeterminate-True, κ≈0.39, preliminary); and pure falsificationism as sole arbiter (retired in favor of Laka…
 - **L2240** `[SELF-EFF]` — …sm dropped); string theory's dimensional machinery (engaged only as a humble, speculative consciousness-first reading of the 24-D Leech/E8 facts,…
 
-### Chapter 24: Potential Objections to TI Sigma Addressed  (43)
+### Chapter 26: Potential Objections to TI Sigma Addressed  (43)
 
 - **L2249** `[STATUS]` — …. And where the honest answer is "we don't know yet" or "that part is not proven," it says exactly that. An objection that survives the answer is left…
 - **L2249** `[SELF-EFF]` — …lly use. Then it is answered plainly. And where the honest answer is "we don't know yet" or "that part is not proven," it says exactly that. An objection…
@@ -603,7 +608,7 @@
 - **L2310** `[FALSIF]` — …theory absorbs every outcome, is met not by denial but by named open falsifiers and an explicit no-post-hoc-wildcard rule that the framework lists as…
 - **L2310** `[FALSIF]` — …xplicit no-post-hoc-wildcard rule that the framework lists as ways it could be wrong; and where the ideas restate known work, that lineage is credited, wi…
 
-### Chapter 25: Enlightenment as THE Objective For All  (20)
+### Chapter 27: Enlightenment as THE Objective For All  (20)
 
 - **L2319** `[SOFTEN]` — …nciple, headed — and the framework defines it plainly enough that you could in theory measure your progress toward it.
 - **L2334** `[STATUS]` — The framework's candidate principle for the summit ties these together. It is called **SUP-1 —…

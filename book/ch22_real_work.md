@@ -1,4 +1,4 @@
-## Chapter 20: What Real Work Looks Like
+## Chapter 22: What Real Work Looks Like
 
 ### The question hiding inside "productivity"
 
@@ -41,7 +41,7 @@ Put plainly: the busiest person in the room is not, on this view, the most intel
 
 > **Key insight:** Real work subtracts. It asks "what is the *necessary* thing?" and refuses the seductive list of merely *possible* things.
 
-A blunt honesty note, because the framework insists on it: SIS-1's restraint claim does **not** mean a powerful system will automatically be safe or benevolent. The hard fact (the *orthogonality* worry) is that raw capability and good values are logically independent — you can build enormous capability *without* the full GILE tetrad, and that GILE-deficient maximizer is exactly the dangerous thing, and the *easier* thing to build. So SIS-1 is an argument for harder, not softer, alignment work. The same caution applies to *you*: "do only the necessary" is a discipline, not a license to do little. (More on the AI version of this in Chapter 22.)
+A blunt honesty note, because the framework insists on it: SIS-1's restraint claim does **not** mean a powerful system will automatically be safe or benevolent. The hard fact (the *orthogonality* worry) is that raw capability and good values are logically independent — you can build enormous capability *without* the full GILE tetrad, and that GILE-deficient maximizer is exactly the dangerous thing, and the *easier* thing to build. So SIS-1 is an argument for harder, not softer, alignment work. The same caution applies to *you*: "do only the necessary" is a discipline, not a license to do little. (More on the AI version of this in Chapter 24.)
 
 ### The productivity trap: why busywork is sticky
 

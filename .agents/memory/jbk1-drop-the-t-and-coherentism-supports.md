@@ -5,7 +5,7 @@ description: The JTB critique candidate, its tralse-knowledge move, and the hone
 
 # JBK-1 — Justified-Belief-as-Knowledge ("drop the T") + coherentism supports
 
-**Candidate, NOT ratified. Canonical count stays 80.** Reader home: `book/ch09_epistemology_metaphysics.md`; corpus anchor + replit.md architecture bullet carry the full form.
+**Candidate, NOT ratified. Canonical count stays 80.** Reader homes (after the ch09 split): coherentism = `book/ch10_coherentism.md`, JBK-1 = `book/ch11_justified_belief.md`, the I/MI three-grounds section = `book/ch07_truth_labels.md`. Corpus anchor + replit.md architecture bullet carry the full form.
 
 ## The thesis
 JTB's **T** is the defective condition. "Truth" conflates **justified-truth** (accessible web-support) with **metaphysical-truth** (correspondence, inaccessible by definition). T is (a) **unreachable** — every certification we run checks *justification*, never a correspondence box; (b) **redundant** — metaphysical truth holds *regardless of justification*, so it floats free of J. ⇒ knowledge = **justified belief**. A justified-but-false belief = **"tralse knowledge"** (TRG-1 real∧not-true applied to knowing; Newtonian mechanics = the stock example). JTB welds two theories of truth = the Gettier engine.
@@ -22,7 +22,7 @@ JTB's **T** is the defective condition. "Truth" conflates **justified-truth** (a
 
 ## Book-placement facts (durable, don't relearn)
 - Live book source = `book/chNN_*.md`. `papers/TI_SIGMA_FOR_EVERYONE_V2_*.md` is a **stale compiled snapshot with no live concat script** — DO NOT hand-patch it.
-- **eTJ and NGK are not yet in the book chapter files** — introduce them self-contained when first referenced (the ch09 three-grounds section: Coherentism→sense, NGK→tolerability, eTJ→capacity; carries the anti-crank guard = eTJ is access-only, never converts MI→Indeterminate).
+- **eTJ and NGK live only in the ch07 three-grounds section** — introduce them self-contained when referenced elsewhere (Coherentism→sense, NGK→tolerability, eTJ→capacity; carries the anti-crank guard = eTJ is access-only, never converts MI→Indeterminate). eTJ points to the consciousness chapter (Chapter 13 after the renumber).
 - **Secular STYLE_GUIDE:** Akasha/Akashic branding (TSG-1) is OMITTED from the book; present TSG-1 generativity + Platonism-as-tralse naturalistically, flagged speculative, with Boden recombination named as the live creativity rival.
 - STYLE_GUIDE + CANON_MAP say count **79** (stale) while replit.md + PENDING_RATIFICATION say **80** — pre-existing drift, leave alone unless asked.
-- **Chapter length:** the house target is ~1600–2600 words; ch09 runs over because it now carries three theses — trim fat before cutting requested substance.
+- **Chapter length:** the house target is ~1600–2600 words. ch09 was split into three chapters (ch09 = falsifiability/LDD-1/NAD-1/Authority-Axis; ch10 = coherentism; ch11 = JBK-1); trim fat before cutting requested substance.

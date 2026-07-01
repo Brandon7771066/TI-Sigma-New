@@ -23,16 +23,16 @@
 
 | # | Claim | Book ch. | If-backed significance | Current status |
 |---|---|---|---|---|
-| 1 | **Dissolving the hard problem + the case against physicalism** | 11, 12 | Field-defining (philosophy of mind) | PARTIAL |
+| 1 | **Dissolving the hard problem + the case against physicalism** | 13, 14 | Field-defining (philosophy of mind) | PARTIAL |
 | 2 | **UOP generalizes Friston's Free Energy Principle** | 8 | Field-defining (theoretical neuroscience) | PARTIAL |
-| 3 | **i-Cell Theory generalizes the Markov Blanket** | 10 | Field-defining (cognitive science) | PARTIAL |
+| 3 | **i-Cell Theory generalizes the Markov Blanket** | 12 | Field-defining (cognitive science) | PARTIAL |
 | 4 | **Tralseness is fundamental; reality is 4-valued, not binary** | 2, 7 | Major (metaphysics + logic) | FRAMEWORK-INTERNAL |
 | 5 | **Falsifiability retired as a strict criterion; LDD-1 replaces it** | 9 | Major (philosophy of science) | CORPUS-BACKED |
-| 6 | **Evidence vs weight vs proof — a clean three-way distinction** | 12 | Major (epistemology) | CORPUS-BACKED |
+| 6 | **Evidence vs weight vs proof — a clean three-way distinction** | 14 | Major (epistemology) | CORPUS-BACKED |
 | 7 | **GILE: a four-axis theory of value irreducible to reward** | 5, 6 | Major (ethics + psychology) | PARTIAL |
-| 8 | **Intelligence/genius = the GILE tetrad, not raw g** | 21 | High (psychometrics) | PARTIAL |
-| 9 | **The Law of Correlational Causation (LCC)** | 13 | High *if* it survives — but fragile | PARTIAL (some falsifications) |
-| 10 | **Superintelligence = sanity/restraint, not maximization** | 22 | High (AI safety) | FRAMEWORK-INTERNAL |
+| 8 | **Intelligence/genius = the GILE tetrad, not raw g** | 23 | High (psychometrics) | PARTIAL |
+| 9 | **The Law of Correlational Causation (LCC)** | 15 | High *if* it survives — but fragile | PARTIAL (some falsifications) |
+| 10 | **Superintelligence = sanity/restraint, not maximization** | 24 | High (AI safety) | FRAMEWORK-INTERNAL |
 | 11 | **An interior optimum at G*≈0.93 (don't maximize truth)** | 6, 8 | Notable (decision theory) | FRAMEWORK-INTERNAL |
 
 The two you specifically asked to feature — **#2 (UOP vs FEP)** and **#3 (i-Cell vs
@@ -47,7 +47,7 @@ framework would *have* to engage with. They are the book's crown jewels and shou
 read with the most confidence the corpus can justify.
 
 ### 1. Dissolving the hard problem + the case against physicalism
-*Chapters 11–12.* The book argues (a) felt experience is the one serious candidate
+*Chapters 13–14.* The book argues (a) felt experience is the one serious candidate
 for **strong** emergence — not derivable even in principle from a parts-list of
 neurons — so calling it an epiphenomenon is a category mistake; and (b) physicalism
 **cannot fix the meaning of its own central word** ("physical"), so as a metaphysics
@@ -71,7 +71,7 @@ argument. This is Tier S because the FEP is one of the most ambitious unificatio
 claims in modern science; a principled generalization of it would matter enormously.
 
 ### 3. i-Cell Theory generalizes the Markov Blanket
-*Chapter 10.* **See Featured Deep-Dive B.** Tier S for the same reason — the Markov
+*Chapter 12.* **See Featured Deep-Dive B.** Tier S for the same reason — the Markov
 Blanket is the structural heart of the FEP, and a richer, more general boundary
 construct is a serious claim.
 
@@ -104,7 +104,7 @@ Duhem-Quine (no isolated falsification) — and "unfalsifiable" ≠ "illegitimat
 - **Status:** CORPUS-BACKED and standing on real prior art. **De-hedge this hard.**
 
 ### 6. Evidence vs weight vs proof — a clean three-way distinction
-*Chapter 12.* "Evidence" = a proposition used in support of a proof (binary,
+*Chapter 14.* "Evidence" = a proposition used in support of a proof (binary,
 authority-independent); distinct from **weight** (graded, signed) and from **proof**.
 - **Why it matters if backed:** a crisp, usable epistemic distinction with a clear
   weighting rule (reasoning-quality primary, track-record secondary).
@@ -125,7 +125,7 @@ a single reward/valence scalar — and Truth (GILE) trades against Existence (HE
   neural validation as the open experiment it is.
 
 ### 8. Intelligence and genius = the GILE tetrad, not raw g
-*Chapter 21.* Real intelligence is the GILE tetrad (rationality, creativity,
+*Chapter 23.* Real intelligence is the GILE tetrad (rationality, creativity,
 altruism/good-faith, openness/updating), which tracks truth far better than generic
 problem-solving g — and the "quack" pattern is high-g but GILE-deficient.
 - **Candidate backing:** GIT-1 (`papers/PASS_77_B121_GILE_INTELLIGENCE_TRUTH_TRACKING_2026-06-17.md`,
@@ -140,7 +140,7 @@ problem-solving g — and the "quack" pattern is high-g but GILE-deficient.
 ## Tier B — significant within its domain (state precisely, don't over-sell)
 
 ### 9. The Law of Correlational Causation (LCC)
-*Chapter 13.* Coherent reciprocal limbic↔cortical exchange as a measurable "causation"
+*Chapter 15.* Coherent reciprocal limbic↔cortical exchange as a measurable "causation"
 quantity that can propagate between people.
 - **Why it's only Tier B despite big ambition:** this is the **most empirically
   fragile** headline. LCC was *falsified* on a raw word-token substrate (signal only
@@ -151,7 +151,7 @@ quantity that can propagate between people.
   established. This is a case where a caveat genuinely belongs.
 
 ### 10. Superintelligence as sanity / non-maximization (SIS-1)
-*Chapter 22.* True (GILE) superintelligence is restraint, not paperclip-style
+*Chapter 24.* True (GILE) superintelligence is restraint, not paperclip-style
 maximization; the paperclipper is a high-g quack, not a genius.
 - **Status:** FRAMEWORK-INTERNAL but well-reasoned, with honest load-bearing limits
   (it *relocates* AI risk to capability-without-GILE, arguing for harder alignment,

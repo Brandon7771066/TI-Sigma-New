@@ -1,4 +1,4 @@
-## Chapter 22: The Future of AI and the Pitfalls of Modern Computer Science
+## Chapter 24: The Future of AI and the Pitfalls of Modern Computer Science
 
 ### The reassurance you will not get here
 
@@ -24,7 +24,7 @@ There is an everyday version of this. The most destructive people in an organiza
 
 Here is where a lazier book would relax. This one cannot, because two objections are fatal if ignored.
 
-**First, the definitional trap.** It is tempting to *define* "true superintelligence" as the sane kind. Do not. If you do, "superintelligence is sane" becomes true by stipulation — unfalsifiable, and able to absorb any counterexample ("that destructive system just wasn't *really* superintelligent"). That is the **No-True-Scotsman** move, and the framework explicitly bars it (the same correction it had to apply to GIT-1 in Chapter 21). SIS-1 is admissible **only** as a *substantive, testable* claim: *as the GILE faces are increased — measured independently and behavior-blind — restraint increases.* That is a trait-to-behavior prediction, the same form as "conscientiousness predicts saving money." It can be wrong, which is exactly why it is worth stating.
+**First, the definitional trap.** It is tempting to *define* "true superintelligence" as the sane kind. Do not. If you do, "superintelligence is sane" becomes true by stipulation — unfalsifiable, and able to absorb any counterexample ("that destructive system just wasn't *really* superintelligent"). That is the **No-True-Scotsman** move, and the framework explicitly bars it (the same correction it had to apply to GIT-1 in Chapter 23). SIS-1 is admissible **only** as a *substantive, testable* claim: *as the GILE faces are increased — measured independently and behavior-blind — restraint increases.* That is a trait-to-behavior prediction, the same form as "conscientiousness predicts saving money." It can be wrong, which is exactly why it is worth stating.
 
 **Second, and more important: the orthogonality thesis survives.** Bostrom's point — that a system's *capability* and its *goals* are logically independent — is correct, and SIS-1 does not refute it. Nothing guarantees that the systems we actually build will be GILE-*complete*. They may be enormously capable and yet missing Love and environmental integration entirely. And here is the sting:
 

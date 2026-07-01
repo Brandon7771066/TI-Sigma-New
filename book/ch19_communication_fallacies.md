@@ -1,4 +1,4 @@
-## Chapter 17: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies
+## Chapter 19: Communicate Effectively, Avoid Fallacies, Counter Pseudo-Fallacies
 
 ### Two skills that look like one
 

@@ -1,4 +1,4 @@
-## Chapter 13: The Law of Correlational Causation and its Applications
+## Chapter 15: The Law of Correlational Causation and its Applications
 
 ### The claim, stated carefully
 

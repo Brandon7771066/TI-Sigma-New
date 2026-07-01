@@ -1,4 +1,4 @@
-## Chapter 24: Potential Objections to TI Sigma Addressed
+## Chapter 26: Potential Objections to TI Sigma Addressed
 
 A framework that claimed to have no serious objections would be lying, and lying in a way this one is specifically built to forbid. The brutal-honesty discipline that runs through the whole book — flag every strong claim, and state the strongest version of an objection *before* you answer it (we call it the **#69 rule**) — applies most sharply right here. This chapter is the place where the framework is supposed to be hardest on itself.
 

@@ -1,4 +1,4 @@
-## Chapter 12: The Case Against Physicalism, Skepticism, and Bayesianism
+## Chapter 14: The Case Against Physicalism, Skepticism, and Bayesianism
 
 Three positions dominate the modern educated mind so thoroughly that most people mistake them for "just thinking clearly" rather than for the contestable philosophical commitments they actually are. The first is **physicalism** — the view that matter (and physical process) is all that fundamentally exists. The second is **doctrinaire skepticism** — the stance that withholding belief is always the safe, rigorous default. The third is **naive Bayesianism** — the claim that rational belief just *is* assigning numerical probabilities and updating them by Bayes' theorem.
 

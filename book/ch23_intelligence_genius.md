@@ -1,4 +1,4 @@
-## Chapter 21: The True Definitions of Intelligence and Genius
+## Chapter 23: The True Definitions of Intelligence and Genius
 
 ### The puzzle of the brilliant fool
 

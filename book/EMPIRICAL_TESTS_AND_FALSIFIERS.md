@@ -23,23 +23,23 @@
 
 | # | Claim (ch.) | Strongest proposed test | Falsifiers | Test status |
 |---|---|---|---|---|
-| 1 | Against physicalism / hard problem (11,12) | Definability challenge for "physical"; strong-emergence demonstration | PDU-1-F1/F2/F3 | conceptual |
+| 1 | Against physicalism / hard problem (13,14) | Definability challenge for "physical"; strong-emergence demonstration | PDU-1-F1/F2/F3 | conceptual |
 | 2 | UOP generalizes the FEP (8) | Interior-optimum recovery on FEP agents; G* penalty curve | UOP/G*-axiom | [PRE-REG] |
-| 3 | i-Cell generalizes the Markov Blanket (10) | i-Boundary reduction theorem at Level 4; tralsebit formalism | reduction-theorem | conceptual + [PRE-REG] |
+| 3 | i-Cell generalizes the Markov Blanket (12) | i-Boundary reduction theorem at Level 4; tralsebit formalism | reduction-theorem | conceptual + [PRE-REG] |
 | 4 | Tralseness fundamental; 4-valued logic (2,7) | Gold-prop labelling benchmark (NA-holding vs NA-blind) | PD-rep benchmark | **[SIM DONE]** + [PRE-REG] |
 | 5 | Falsifiability retired (LDD-1) (9) | Lakatos progressive/degenerating audit of corpus | LDD-1-F1/F2/F3 | conceptual |
-| 6 | Evidence vs weight vs proof (EVD-1) (12) | Inter-rater reliability of the three-way coding | EVD-1 def-tests | [PRE-REG] |
+| 6 | Evidence vs weight vs proof (EVD-1) (14) | Inter-rater reliability of the three-way coding | EVD-1 def-tests | [PRE-REG] |
 | 7 | GILE four-axis value (5,6) | fMRI anatomical dissociation (G→dlPFC-ACC, L→vmPFC-amygdala) | GILE-dissociation | [PRE-REG] |
-| 8 | Intelligence = GILE tetrad, not g (21) | Prospective outcome-blind GILE→truth study | GIT-1-F1..F5 | [SIM DONE, contaminated] + [PRE-REG] |
-| 9 | LCC (Law of Correlational Causation) (13) | E1–E5 brain-imaging programme | E3/E5/E2-SIM-F* | **[SIM DONE: E3,E5,E2]** + [PRE-REG] |
-| 10 | Superintelligence as sanity (SIS-1) (22) | Behaviour-blind GILE→restraint study | SIS-1-F1..F4 | [PRE-REG] |
+| 8 | Intelligence = GILE tetrad, not g (23) | Prospective outcome-blind GILE→truth study | GIT-1-F1..F5 | [SIM DONE, contaminated] + [PRE-REG] |
+| 9 | LCC (Law of Correlational Causation) (15) | E1–E5 brain-imaging programme | E3/E5/E2-SIM-F* | **[SIM DONE: E3,E5,E2]** + [PRE-REG] |
+| 10 | Superintelligence as sanity (SIS-1) (24) | Behaviour-blind GILE→restraint study | SIS-1-F1..F4 | [PRE-REG] |
 | 11 | Interior optimum G*≈0.93 (6,8) | Penalty-above-optimum recovery; constant calibration | G*-context | [PRE-REG] |
 
 ---
 
 ## Tier S
 
-### Claim 1 — The case against physicalism / dissolving the hard problem (Ch. 11, 12)
+### Claim 1 — The case against physicalism / dissolving the hard problem (Ch. 13, 14)
 **Anchor:** PDU-1 (`papers/PASS_77_B127_PHYSICAL_DEFINITIONAL_INSTABILITY_PDU_1_2026-06-23.md`).
 This is a **conceptual/philosophical** claim, so its "tests" are argumentative
 challenges, not experiments — but it has crisp falsifiers.
@@ -75,7 +75,7 @@ challenges, not experiments — but it has crisp falsifiers.
 * **#69:** PARTIAL — the reduction is argued, not demonstrated on real agents; the
   symmetric equal-weighting of TT and G is a modelling choice.
 
-### Claim 3 — i-Cell Theory generalizes the Markov Blanket (Ch. 10)
+### Claim 3 — i-Cell Theory generalizes the Markov Blanket (Ch. 12)
 **Anchor:** URB-532 (i-Cell/tralsebit), URB-620 §i-Cell layer.
 * **Proposed tests:**
   - **Reduction theorem (Level 4)** — formally confirm the i-Boundary *reduces to* the
@@ -121,7 +121,7 @@ challenges, not experiments — but it has crisp falsifiers.
   predicts), which the gate keeps even as it widens to confirmation+pragmatics.
   **De-hedge hard.**
 
-### Claim 6 — Evidence vs weight vs proof (EVD-1) (Ch. 12)
+### Claim 6 — Evidence vs weight vs proof (EVD-1) (Ch. 14)
 **Anchor:** EVD-1 (`papers/EVIDENCE_DOCTRINE_CANONICAL_RULING_EVD_1_2026-06-22.md`).
 * **Proposed test [PRE-REG]:** **inter-rater reliability** — independent coders
   classify a corpus of arguments into evidence (binary, authority-independent) vs
@@ -145,7 +145,7 @@ challenges, not experiments — but it has crisp falsifiers.
   empirically-motivated, not derived. State the structure confidently; mark the neural
   validation as the open experiment.
 
-### Claim 8 — Intelligence/genius = the GILE tetrad, not raw g (Ch. 21)
+### Claim 8 — Intelligence/genius = the GILE tetrad, not raw g (Ch. 23)
 **Anchor:** GIT-1 (B121/B122); packages `analyses/pass77_b121_...`, `..._b122_...`.
 * **Tests:**
   - **[SIM DONE — but contaminated/structure-only]** the headline AUC numbers
@@ -166,7 +166,7 @@ challenges, not experiments — but it has crisp falsifiers.
 
 ## Tier B
 
-### Claim 9 — The Law of Correlational Causation (LCC) (Ch. 13)
+### Claim 9 — The Law of Correlational Causation (LCC) (Ch. 15)
 **Anchor:** URB-620 §6 (E1–E5 programme). **This is the most empirically active
 claim — and the most fragile.**
 * **Tests executed as method-validation sims (NO human data):**
@@ -190,7 +190,7 @@ claim — and the most fragile.**
   **necessary-not-sufficient** design validations; **do not state cross-person LCC as
   established.** This is a case where a caveat genuinely belongs.
 
-### Claim 10 — Superintelligence as sanity / non-maximization (SIS-1) (Ch. 22)
+### Claim 10 — Superintelligence as sanity / non-maximization (SIS-1) (Ch. 24)
 **Anchor:** SIS-1 (`papers/PASS_77_B123_...SIS_1...md`).
 * **Proposed test [PRE-REG]:** a **behaviour-blind** study — measure GILE-completeness
   and later observe whether higher-GILE agents show **more restraint** (do only the

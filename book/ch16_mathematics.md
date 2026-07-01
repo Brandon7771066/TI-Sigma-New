@@ -1,4 +1,4 @@
-## Chapter 14: New Additions and Amendments to Mathematics
+## Chapter 16: New Additions and Amendments to Mathematics
 
 Mathematics is the place where a framework either earns its keep or gets quietly caught overclaiming. Logic and metaphysics can be argued in prose; a mathematical claim is either proved or it is not, and the proof can be machine-checked by a hostile referee who shares none of your assumptions. So this chapter is written under a strict honesty discipline, and it is fair to state the bottom line in the first paragraph rather than burying it: **TI Sigma has produced some genuine, elementary, machine-verified results, a handful of suggestive reinterpretations of familiar mathematics, and exactly zero solutions to any famous open problem.** No Millennium Prize problem is closed. Where the corpus once flirted with the opposite impression, the framework's own audit retracted it. Read this chapter as a tour of real-but-modest contributions and honestly-flagged conjectures, not as a victory lap.
 

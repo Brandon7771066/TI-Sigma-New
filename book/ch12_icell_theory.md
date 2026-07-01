@@ -1,4 +1,4 @@
-## Chapter 10: i-Cell Theory
+## Chapter 12: i-Cell Theory
 
 ### The unit you have been missing
 
@@ -70,7 +70,7 @@ One of the theory's most testable suggestions concerns how i-cells *develop*. Yo
 
 The standard developmental reading is that children simply "can't tell fantasy from reality yet" and will grow out of it. The framework offers a different reading: this is not pre-logical confusion but **high-bandwidth exploratory cognition** — the native tolerance for indeterminacy that earlier chapters argued reality actually requires. Pretend play, on this view, is the running of several possibility-models in parallel before any of them is collapsed to a single answer (it draws on developmental work such as Gopnik's studies of children's flexible causal reasoning). Schooling and social pressure then **compress** that bandwidth — trading exploratory power for the efficiency of crisp, shared answers. Useful for getting along; costly for original thought.
 
-If this is right, the people we later call visionaries are often the ones who **kept, or regained, the child's tolerance for the tralse** while adding adult discipline on top — which connects directly to the two-phase rule of Chapter 20: open generation *followed by* hard validation. This is an empirical conjecture, not a proven result, and it is offered as a hypothesis to test, not a finding to bank.
+If this is right, the people we later call visionaries are often the ones who **kept, or regained, the child's tolerance for the tralse** while adding adult discipline on top — which connects directly to the two-phase rule of Chapter 22: open generation *followed by* hard validation. This is an empirical conjecture, not a proven result, and it is offered as a hypothesis to test, not a finding to bank.
 
 ### Death, and an honestly open hypothesis
 

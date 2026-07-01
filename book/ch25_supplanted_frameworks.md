@@ -1,4 +1,4 @@
-## Chapter 23: Alternative Meta-Philosophies TI Sigma Supplants
+## Chapter 25: Alternative Meta-Philosophies TI Sigma Supplants
 
 Every framework worth taking seriously must say, plainly, what it claims to do *better* than the alternatives — and must say it without cheating. This chapter lays TI Sigma side by side with six well-established ways of organizing thought: **physicalism**, **classical bivalent logic**, **naive Bayesianism**, **string theory**, **great-man theory** (and its mirror, "history is only impersonal forces"), and **pure falsificationism**. For each, the rule is the framework's brutal-honesty discipline (#69): name what the rival gets *right* first, then say exactly where TI Sigma claims to go further — and flag the status of that claim as **(verified)**, **(framework-internal)**, **(preliminary)**, or **(speculative/open)**.
 
@@ -8,7 +8,7 @@ Every framework worth taking seriously must say, plainly, what it claims to do *
 
 ### Physicalism — kept almost entirely, demoted by one step
 
-Physicalism says matter and physical process are all that fundamentally exists. Its track record is the best in the history of ideas: it predicts eclipses, builds transistors, and sequences genomes. **(verified)** Chapter 12 steel-mans it at length; here it is enough to state the single move TI Sigma rejects. Physicalism slides from *"physical methods explain physical phenomena"* (true, earned) to *"therefore everything is physical"* (a universal negative, unfunded).
+Physicalism says matter and physical process are all that fundamentally exists. Its track record is the best in the history of ideas: it predicts eclipses, builds transistors, and sequences genomes. **(verified)** Chapter 14 steel-mans it at length; here it is enough to state the single move TI Sigma rejects. Physicalism slides from *"physical methods explain physical phenomena"* (true, earned) to *"therefore everything is physical"* (a universal negative, unfunded).
 
 TI Sigma's reply is **not** dualism. It is a different **monism**: the candidate principle **TOF-1 (Tralse-Only Fundamentality)** nominates one fundamental — the **Tralse Soup**, the structured, not-yet-resolved field of possibility — of which matter is a derivative rather than the bedrock. **(framework-internal; TOF-1 is a candidate.)** Occam stays satisfied (still exactly one fundamental); the only change is *which* one. Everything physicalism actually demonstrated is retained; what is supplanted is the metaphysical bet wearing the lab coat.
 
@@ -20,7 +20,7 @@ What bivalence cannot represent is the proposition that is *stably between* — 
 
 ### Naive Bayesianism — the theorem kept, the imperialism dropped
 
-Bayes' theorem is **mathematically valid** — full stop **(verified)** — and TI Sigma uses it wherever there are honest numbers. What is supplanted is the *philosophy* that all rational belief reduces to numbers in [0,1] updated by the rule. As Chapter 12 details, that philosophy cannot supply its own priors (for genuinely novel questions there is no reference class), lets strong priors swamp good evidence, and cannot represent genuine indeterminacy (it forces P and not-P to sum to 1). The framework's **Permissibility Distribution (PD)** and base-4 labels preserve the information a single probability throws away — *why* a question is unsettled, not merely *how much*. **(framework-internal.)**
+Bayes' theorem is **mathematically valid** — full stop **(verified)** — and TI Sigma uses it wherever there are honest numbers. What is supplanted is the *philosophy* that all rational belief reduces to numbers in [0,1] updated by the rule. As Chapter 14 details, that philosophy cannot supply its own priors (for genuinely novel questions there is no reference class), lets strong priors swamp good evidence, and cannot represent genuine indeterminacy (it forces P and not-P to sum to 1). The framework's **Permissibility Distribution (PD)** and base-4 labels preserve the information a single probability throws away — *why* a question is unsettled, not merely *how much*. **(framework-internal.)**
 
 ### String theory — a fair, and deliberately humble, comparison
 

@@ -1,4 +1,4 @@
-## Chapter 25: Enlightenment as THE Objective For All
+## Chapter 27: Enlightenment as THE Objective For All
 
 ### Reclaiming a worn-out word
 

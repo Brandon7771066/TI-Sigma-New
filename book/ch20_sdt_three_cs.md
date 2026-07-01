@@ -1,4 +1,4 @@
-## Chapter 18: SDT and the Three C's of Social Success
+## Chapter 20: SDT and the Three C's of Social Success
 
 ### "Nobody cares" — and why that is a lie
 
