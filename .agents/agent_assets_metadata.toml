@@ -695,3 +695,9 @@ id = "_nUoc24gyMkSvqc3t_n19"
 uri = "file://book/STRONGEST_CLAIMS_RANKED.md"
 type = "text"
 title = "The Book's Strongest Claims — Ranked by Significance If Backed"
+
+[[outputs]]
+id = "RlwyKc-Uw5QzBCckiU5lr"
+uri = "file://papers/pdfs/TI_SIGMA_FOR_EVERYONE_V3.pdf"
+type = "pdf"
+title = "TI Sigma For Everyone V3"
