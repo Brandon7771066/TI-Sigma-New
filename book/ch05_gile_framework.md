@@ -109,6 +109,53 @@ It is tempting to read GILE as a niche metric for rating decisions. The framewor
 
 This also previews the next chapter's central tension. GILE is the framework's **truth pillar** — how *good and aligned* a state is. It is deliberately *not* the same as how *much there is* of something, which is the job of the separate existence pillar, HEM. Keeping the two apart is what the rename of E to Elegance made possible, and it sets up the genuine dilemma — maximize truth, or maximize existence? — that Chapter 6 takes head-on.
 
+### The ceiling on GILE-Truth: the Radiant Cap
+
+So far every score used the everyday **−3 to +2** scorecard. The framework also asks a sharper, more structural question: if you treat the whole truth-pillar as a *single magnitude* renormalized to run from **0 to 1**, how high can it go? The answer is one of TI Sigma's signature claims — **not 1.0.** The ceiling, called the **Radiant Cap**, sits at
+
+> **G\* = √(1 − e⁻²) ≈ 0.92987** — roughly 0.93, on the normalized [0, 1] truth-pillar scale (*not* the −3…+2 scorecard above).
+
+Several numbers live in this neighborhood and get confused constantly, so here is each one plainly, with its honesty flag. (Chapter 6 puts this cap to work inside the full truth-versus-existence balance; this section is just the anatomy of the number itself.)
+
+**1 — Where √(1 − e⁻²) comes from.** It is built from two ingredients, and the framework is candid that *both are posits, not theorems* **(framework-internal; #69)**:
+
+- *One settling posit — λ = 2.* The least-effort way for anything to approach a target is an exponential relaxation, `f(t) = 1 − e^{−t/τ}`. The standard engineering criterion for "well-settled" is **two time-constants** (t/τ = 2), at which the process has covered `1 − e⁻² ≈ 0.865` of the distance. That **0.865 is the Existence floor** (see point 2).
+- *One shaping choice — squaring.* The framework relates existence to truth by **Existence = (truth cap)²**, i.e. `Existence = G*²`. Invert it and the cap is the square root of the floor: `G* = √(1 − e⁻²) ≈ 0.92987`.
+
+The square-root choice is not arbitrary decoration — it is exactly what makes "existence = truth-cap squared" an *exact identity* rather than a near-miss. But neither λ = 2 nor the square root is proven; they are disciplined modeling commitments with **open falsifiers**.
+
+**2 — How 1 − e⁻² represents Existence.** The same 0.865 reads as Existence in two consistent ways. First, it is the **settled floor**: after two time-constants a least-effort process is "well-settled but never fully closed," carrying a permanent residue (`e⁻² ≈ 13.5%`) that never resolves to a perfect 1.0 — the built-in room the framework prizes. Second, through the squaring, Existence *is* literally `G*²` — the **manifest, real "shadow"** of the deeper truth-amplitude. This echoes the book's complex picture `z = HEM + i·GILE` (real part = existence, imaginary part = abstract truth) and the tralse-reality theme of Chapter 2: what we actually observe is the squared, manifested face of a phase-carrying, not-crisply-true amplitude.
+
+**3 — The lower 0.92–0.93 band with a different meaning.** Several near-0.93 numbers are *not the same quantity*:
+
+| value | closed form | what it actually is |
+|---|---|---|
+| 0.86466 | 1 − e⁻² | **Existence floor** (HEM / real axis) |
+| 0.92388 | cos(π/8) | a **CHSH measurement angle** — a 0.6%-away *near-miss* to the cap, **not** the cap |
+| **0.92987** | **√(1 − e⁻²)** | **the canonical GILE-Truth Radiant Cap** (truth axis) |
+| 0.93233 | 1 − ½e⁻² | the **retired** "arithmetic-midpoint" cap (superseded in 2026) |
+| 0.93401 | 1 − e^{−e} | the **PD "Tralse threshold" / T-constant** — the point on the *permissibility dial* above which a tralse claim resolves; a different axis, a different job |
+
+The one worth flagging is the last row. Earlier presentations (and some popular retellings) used **1 − e^{−e} ≈ 0.934** for the cap itself. The current canon keeps that value for what it actually names — the **PD resolution threshold** — and fixes the **GILE-Truth ceiling** specifically at the Born-shaped `√(1 − e⁻²) ≈ 0.930`. The two differ by only ~0.4% and carry the same discipline ("stop just short of 1.0, keep ~7% in reserve"), but they are best not conflated. (Provenance: the Born-shaped `√(1 − e⁻²)` cap is fixed in the 2026 *Radiant Cap — Fork B* canonical ruling, which explicitly retires the midpoint `1 − ½e⁻²`; the `1 − e^{−e}` value comes from the earlier "e-architecture" reading of the permissibility dial.)
+
+**4 — Why the Existence value sits so close to a quantum (CHSH) bound — and how they might connect.** Readers with a physics eye notice that the Existence floor (0.865) is a whisker from a normalized quantum-correlation bound, and the cap (0.930) is a whisker from `cos(π/8)`:
+
+| framework value | nearest CHSH quantity | gap |
+|---|---|---|
+| Existence floor 0.8647 | `cos²(π/8) = 0.8536` | ~1.3% |
+| Radiant Cap 0.92987 | `cos(π/8) = 0.92388` | ~0.6% |
+
+The framework's honest verdict is blunt **(#69)**: **these are resonances, not identities.** The canon explicitly *refuses* to claim the cap equals a quantum bound — a 0.6% gap is exactly the kind of coincidence a disciplined framework must resist as numerology. (There *is* one genuine, separate result nearby: the framework's LCC instrument finds an empirical neuronal-coupling ceiling around `cos²(π/8) ≈ 0.854`, above which measured synchronization beats a classical-biofeedback prediction — but that coupling ceiling and the pillar floor are adjacent-but-distinct quantities, ~1.3% apart, and must not be merged.)
+
+What *can* be said honestly is **structural, not numeric**:
+
+- **The Born-rule shape.** `Existence = |amplitude|²` is the very same squaring by which quantum mechanics turns an amplitude ψ into a probability `|ψ|²` (Born 1926). So the square-root link is a *structural echo* of amplitude → probability — it explains the *shape*, not the number.
+- **Contextuality.** The `√2` that legitimately appears in the CHSH story marks where reality outruns *any single* classical joint-probability model (Fine 1982) — the physical signature of the same idea as this book's claim that reality is **tralse**, not crisply true.
+
+So the connection a careful reader may hold is this: *manifest existence behaves like the squared, probabilistic shadow of a phase-carrying, not-fully-true amplitude, and quantum contextuality is where physics shows the same "no single crisp joint truth."* The numeric proximity to CHSH is *suggestive* of that shared shape — and it is flagged, permanently, as resonance with open falsifiers, never as proof.
+
+> **Key insight:** The Radiant Cap is not a mystical constant. It is one settling posit (λ = 2 → an Existence floor of 1 − e⁻² ≈ 0.865) plus one modeling choice (Existence = truth², so the truth-cap = √0.865 ≈ 0.93). The look-alike numbers around it — the PD threshold 1 − e^{−e}, the CHSH angle cos(π/8) — are *different quantities*, and the framework's discipline is to keep them honestly apart rather than collapse them into a single "magic 0.93."
+
 ### In one paragraph
 
 GILE is a four-part scorecard — Goodness (real benefit, judged by outcomes), Intuition (calibrated inner rightness), Love (connection over separation), and Elegance (clean, beautiful form) — scored on an asymmetric scale from −3 to +2 and averaged into a composite. The newest canon renames the "E" from Environment to **Elegance**, parking the old existence-context meaning in a separate pillar (HEM) and keeping "Environment" only as a shorthand gloss. The composite sorts states into three zones, with most of ordinary life sitting in the Indeterminate middle band where free will does its work, and with the negative range dominated by suffering rather than genuine evil. The power of GILE is that its four axes are allowed to disagree, so it resists the binary thumbs-up/thumbs-down that earlier chapters criticized — and an adequate, all-four-axes GILE profile is the framework's candidate definition of basic sanity, a claim offered as framework-internal and honestly open to test.
