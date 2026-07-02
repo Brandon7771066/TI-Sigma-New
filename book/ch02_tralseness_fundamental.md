@@ -105,6 +105,8 @@ Each identity in that chain has been **numerically verified to machine precision
 
 > **Key insight:** Two routes reach √2 — the ordinary one (diagonal of a unit square, never touching i) and the i-route through rotation. That the same number sits at the end of both is, to the framework, a hint that the "imaginary" and the "real" are two faces of one tralse structure. To a skeptic it is an elegant identity. Both readings are honest; the data underdetermine which.
 
+(The unit-square diagonal carries a *second*, unrelated argument the framework leans on — the "tralse staircase" of Chapter 1, where √2 measures the irreducible overhead a binary scheme pays trying to approximate the genuine middle. Same number, different point: here √2 hints at real↔imaginary unity; there it measures binary's permanent shortfall. Keep the two apart.)
+
 ### What is proved, and what is wagered
 
 In the spirit of the book's brutal-honesty discipline, here is the ledger for this chapter:
