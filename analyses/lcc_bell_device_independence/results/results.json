@@ -1,0 +1,26 @@
+{
+  "quantum_chsh_max_tsirelson": 2.8284271247461903,
+  "classical_bound": 2.0,
+  "locality_loophole": {
+    "distance_m": 1.0,
+    "light_gap_s": 3.3356409519815204e-09,
+    "neural_event_duration_s": 0.001,
+    "slowness_ratio_event_over_lightgap": 299792.458,
+    "locality_loophole_closable": false
+  },
+  "decoherence": {
+    "decoherence_time_s": 1e-13,
+    "neural_process_time_s": 0.001,
+    "orders_of_magnitude_gap": 10.0,
+    "coherence_survives_one_step": false
+  },
+  "monogamy_network": {
+    "S_AB": 2.8284271247461903,
+    "max_possible_S_AC": 0.0,
+    "second_partner_can_violate": false
+  },
+  "route_a_two_brain_DI_reachable": false,
+  "route_b_negative_no_biological_DI": true,
+  "interpretation": "Route (a) is UNREACHABLE for a neural two-brain substrate: the locality loophole needs setting+readout within d/c (~ns over 1 m) but neural events take ~ms (~3e5 too slow), and any shared quantum coherence decoheres ~10 orders of magnitude (factor ~1e10) faster than one neural step (Tegmark 2000). Monogamy additionally bars a full-brain network of pairwise Bell violations. => LCC-PROOF-F3(b) resolves NEGATIVE on known physics: the Bell/CHSH route stays a flagged STRUCTURAL RESONANCE (the corpus's no-global-joint-measure result), not a live experimental path to a non-conditional LCC. LCC-PROOF-F3(a) stays open only in principle (a non-neural engineered substrate is not excluded by THIS analysis).",
+  "config_sha": "102a1a56cee5"
+}
