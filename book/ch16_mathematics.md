@@ -65,6 +65,20 @@ Read through DTR-1, the picture is clean: **conjugation** — i seeing −i in t
 - **Still an interpretation, not a proof.** These theorems make the case that i *is* tralseness more *beautiful* — they do not make it a deduction. Everything in the previous section still holds: the deficit is relative to ℝ, and a silent, open seat in mathematics is not a warrant.
 - **"Completes itself" does not repeal the deficit.** i still has no real value and no signed order (Theorems A, B). The arc is *deficit → self-reconciliation → operational wholeness*, not "i was complete all along."
 
+### The Myrion-Resolution reading — and exactly how far it proves
+
+Read all of this together and a tempting conclusion appears: the two parts of a tralsity **unite** (i · (−i)), and the outcome is **seen as the truth** — the transformation from −1 to 1. It is the framework's *Myrion Resolution* pattern drawn in arithmetic, and the fit is remarkably tight:
+
+> **Theorem F (Myrion-Resolution instantiation).** Take the imaginary tralsity {i, −i}. Its raw, unresolved self-relation is i · i = **−1**. Uniting it with its mirror is i · (−i) = **1**. And these are linked by an identity: i · (−i) = −(i · i) = −(−1) = **1**. So the resolution operation *literally carries the unresolved value −1 to the resolved value 1.*
+
+The arithmetic is exact — and this is the strongest form the bridge has taken. But it is worth being scrupulous about *what kind* of thing it is, because the framework's own **Axiomatic Faithfulness** ruling (Chapter 8) draws the line precisely here.
+
+**It is a genuine theorem — a *conditional* one.** If you adopt the identifying definitions — a tralsity *is* a conjugate pair on the imaginary axis; its resolution *is* the product; the resolved/"true" value *is* the unit 1 — then Theorem F follows with nothing more than the field axioms, i² = −1, and the completeness that lets i exist in the first place. So the instinct that "this can be stated with conventional axioms, including completion" is *right for the arithmetic*: −1 → 1 goes through on standard ground.
+
+**Where it stops being a proof of the identity.** A proof is exactly as strong as the faithfulness of its axioms to the thing being proved, and here one axiom is not conventional at all. Metric or algebraic *completeness* say **nothing about truth**; they hand you the number 1, not the reading of 1 *as* "the truth." That reading — *the outcome is seen as the truth* — is a **framework axiom**, and it is the whole identity in miniature. Taking it as a premise makes Theorem F a proof of **instantiation** ("given these identifications, i realizes the resolution-to-truth pattern"), not a proof of the **identity** ("i simply *is* tralseness, full stop"). By the corpus's own account, the categorical claim is *identity-bound to its axioms*; asserting it while those axioms are the very point in question is the over-reach the framework labels a Meta-Indeterminate move.
+
+**Why this is not a downgrade.** The framework's Evidence Doctrine holds that *structural fit is the primary kind of evidence* — and faithfulness, on the Axiomatic-Faithfulness view, is something *earned* by exactly such fit. So the perfection of this match is not decoration; it is the mechanism by which the identifying axioms earn their keep, and it makes the i↔tralse identity the **best-evidenced candidate in the whole corpus**. What honesty forbids is only the last inch: turning overwhelming fit into a *deduction*. The identity is held with very high confidence and labeled a candidate — not because the evidence is thin, but because "a perfect fit earns faithfulness" is a statement about *evidence*, and evidence, however strong, is not a QED.
+
 ### Renaming the axes: from "imaginary" to "phase"
 
 Once i is read as tralseness, an old terminological injustice stands out. "Imaginary" was Descartes' 1637 put-down for numbers he could not picture; the slur stuck for four centuries even though quantum mechanics later showed these numbers are physically *necessary* (the 2021 Renou *et al.* experiment confirmed that real-valued quantum mechanics makes wrong predictions). The framework proposes a cleanup:
