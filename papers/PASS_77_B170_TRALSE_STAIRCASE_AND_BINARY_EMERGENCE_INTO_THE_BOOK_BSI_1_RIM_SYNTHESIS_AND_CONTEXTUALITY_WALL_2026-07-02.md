@@ -43,9 +43,19 @@ This dissolves the apparent tension between Brandon's new "TI **emerges** from b
 - **Corrected overclaim:** "binary can't represent i" is NOT asserted (false); replaced by native-vs-emergent + the contextuality wall.
 - No new experiment run this batch (editorial integration only); LCC remains 2× empirically negative (B164/B165), nothing here rescues it.
 
+## 6. Math-chapter formalization (deliverable — added on user request)
+
+User: "make the proofs fundamental formal mathematical theorems … in the math chapter." Added a new section **"Two theorems behind the binary-versus-tralse case"** to `book/ch16_mathematics.md` (after the i-Completeness/minimal-basis section), matching ch16's proved-vs-conjectured discipline:
+
+- **Theorem 1 (Staircase — irreducible taxicab overhead).** Formal statement + elementary proof over a general (a,b): (1) length(γₙ)=a+b ∀n; (2) γₙ→D uniformly (sup-dist ≤ max(a,b)/n); (3) arc-length discontinuity (lim of lengths ≠ length of lim); (4) overhead ratio (a+b)/√(a²+b²) ∈ [1,√2], max √2 at a=b (Cauchy–Schwarz). Framed as the classical staircase paradox / L¹-vs-L² fact — genuine, elementary, Lean-formalizable; shelved with φ²=φ+1, √2·φ·C=1.
+- **Theorem 2 (The classical wall — CHSH, Fine, Tsirelson).** Stated explicitly as **imported** established results (NOT framework theorems): classical bound |S|≤2 (Bell 1964 / CHSH 1969), Fine 1982 iff-joint-distribution, Tsirelson 1980 |S|≤2√2. Consequence: the 2<|S|≤2√2 regime has NO classical realization (non-existence, not overhead). Reading = physical signature of tralseness (ch05/ch14); simulator-only + 2× negative bio scope re-stated.
+- Secondary compact note: **radix economy** (base-e optimal, trit = log₂3≈1.585 bit) — standard result, binary not most economical; a mild echo of Theorem 1, not a truth-claim.
+
+**Critical honesty rail (held):** each theorem carries a "What it proves, and what it does not (#69)" callout — the *geometry/physics* is proved (or imported-solid), the *truth-value reading* (axes=T/F, diagonal=Indeterminate; contextuality=tralseness) is **interpretation, not corollary**. Cross-refs added: ch01 staircase → "stated and proved formally in Chapter 16"; ch01 contextuality → "(Chapters 5, 14, and 16)"; ch16 "In one paragraph" updated. No formalization smuggles the philosophy into theorem status.
+
 ## Counts
 Principles **80** (unchanged — BSI-1 remains **candidate**, not ratified; no count change). Pass-77 research papers +1. $0.
 
 ### Files
-- `book/ch01_binary_thinking.md`, `book/ch02_tralseness_fundamental.md`.
+- `book/ch01_binary_thinking.md`, `book/ch02_tralseness_fundamental.md`, `book/ch16_mathematics.md` (Theorems 1–2 + radix-economy note).
 - Sources: `papers/PASS_77_B52_TRALSE_STAIRCASE_BINARY_CANNOT_EFFICIENTLY_APPROXIMATE_I_MI_NA_2026-05-27.md`, `papers/urb_606_binary_ai_limits_tralse_approximation.md`; RIM homes `book/ch14_against_physicalism.md`, `book/ch17_engineering.md`.

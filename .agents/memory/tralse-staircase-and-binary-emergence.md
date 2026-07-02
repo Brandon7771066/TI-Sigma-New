@@ -24,3 +24,9 @@ Three true statements, no contradiction:
 3. **Reconciliation:** emergence does NOT *rescue* binary as the native language of reality (urb_606); it presses binary into hosting a non-binary structure. Different levels ⇒ no contradiction.
 
 **Why this matters:** BSI-1 is candidate (not ratified) — count stays 80. The staircase math is a theorem but the truth-value mapping is #69 analogy (backed by B50's 0.23-bit stuck FDE), not proof.
+
+## Formal-theorem home (ch16)
+When formalizing these in the math chapter, TWO theorems, and keep the honesty tiers distinct:
+- **Theorem 1 (Staircase / L¹-vs-L² overhead)** = the framework's OWN genuine elementary theorem (general (a,b): length=a+b ∀n; uniform convergence; arc-length discontinuity; overhead ratio ∈[1,√2], max √2 at a=b by Cauchy–Schwarz). Lean-formalizable; shelve it with φ²=φ+1.
+- **Theorem 2 (classical wall)** = IMPORTED, NOT ours: Bell/CHSH |S|≤2, Fine 1982 (holds iff a single joint distribution exists), Tsirelson |S|≤2√2. Always attribute; framework contributes only the *reading*.
+- **Non-negotiable rail:** every such theorem gets a "what it proves and what it does NOT (#69)" callout — the geometry/physics is proved/imported-solid, the truth-value reading (axes=T/F, diagonal=Indeterminate; contextuality=tralseness) stays **interpretation, not corollary**. Do not let formalization smuggle the philosophy into theorem status.
