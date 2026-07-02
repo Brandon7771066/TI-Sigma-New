@@ -46,6 +46,25 @@ Put together: i is exactly where the *real*-number description runs out — it h
 
 Stated at that resolution, the bridge is both stronger and more modest than the napkin: a genuine theorem shows i is where the reals fall short, and the identification of that shortfall *with tralseness* is a clearly-labeled interpretation, held open to challenge.
 
+### The deficit completes itself: i, its mirror, and the return to unity
+
+The theorems above show i is a *deficit*. But a deficit that only ever fell short would be a dead end, and tralse is not a dead end — tralse is generative (Chapter 2; the canvas paints itself from nothing). Here is the completing half, and it is exactly the framework's older intuition made exact: **i sees −i in the mirror, and by turning on itself it completes to unity.** Three more real theorems anchor it. Write z̄ for the complex conjugate — the *mirror image* of z reflected across the real axis, so that ī = −i.
+
+> **Theorem C (the mirror product is unity).** i · (−i) = −i² = −(−1) = **1**. More generally, for *any* complex z, z · z̄ = |z|² is a nonnegative real. The imaginary unit, multiplied by its own **mirror image**, returns the **unit 1** — the canonical "whole."
+
+> **Theorem D (the deficit closes a cycle back to unity).** i is a **primitive fourth root of unity**: iterating it runs i → i² = −1 → i³ = −i → i⁴ = **1**, closing back to the unit in exactly four steps (the four quarter-turns of the plane). The powers of i form a cyclic group of order four.
+
+> **Theorem E (the tralse pair — nothing by addition, unity by multiplication).** The two solutions of x² + 1 = 0 are the conjugate pair {i, −i}. They **add to 0** (return to the origin — to nothing) and **multiply to 1** (return to unity). And by the symmetry of the complex numbers over the reals, the two are *algebraically indistinguishable* — there is no internal fact that says which one is "really" i. A genuine *this-and-its-mirror*, with no privileged twin.
+
+Read through DTR-1, the picture is clean: **conjugation** — i seeing −i in the mirror — is the deficit's *recognition of its own not-real character*; **multiplication** is *reconciling that recognition with itself*; and the **product, 1**, is *completion*. The deficit completes itself by reconciling its recognition of its own deficiency with itself. That is the tralse signature drawn in arithmetic: a thing that holds itself-and-its-negation and, by self-interaction, returns whole.
+
+**What this proves, and what it does NOT (#69).** Theorems C, D, E are proved; the reading is an interpretation. Four cautions keep it honest:
+
+- **Two different operations — don't merge them.** "Multiplies with itself" gives i · i = **−1** (self-squaring re-presents the very deficit — the −1 with no real root). "Sees −i in the mirror" gives i · (−i) = **+1** (completion to unity). These are *different operations with different results*; the unity reading rests on the **conjugate** product, not the plain square. The honest unifying sentence is the weaker, truer one: *every* self-interaction of i collapses the imaginary back onto the real line — squaring to the deficit, mirroring and cycling to unity.
+- **This is generic to the plane, and that's fine.** z · z̄ is a nonnegative real for *every* complex number, so mirror-completion is a feature of the whole complex plane, not something special to i. (Closing a *cycle* back to 1 is rarer — only unit-length numbers turned by a rational fraction of a full circle ever return; a number at an irrational angle never comes home. i is one of the few that does — the quarter-turn.) So i is the **paradigm case** (the unit, the √−1, the primitive fourth root), never the only one.
+- **Still an interpretation, not a proof.** These theorems make the case that i *is* tralseness more *beautiful* — they do not make it a deduction. Everything in the previous section still holds: the deficit is relative to ℝ, and a silent, open seat in mathematics is not a warrant.
+- **"Completes itself" does not repeal the deficit.** i still has no real value and no signed order (Theorems A, B). The arc is *deficit → self-reconciliation → operational wholeness*, not "i was complete all along."
+
 ### Renaming the axes: from "imaginary" to "phase"
 
 Once i is read as tralseness, an old terminological injustice stands out. "Imaginary" was Descartes' 1637 put-down for numbers he could not picture; the slur stuck for four centuries even though quantum mechanics later showed these numbers are physically *necessary* (the 2021 Renou *et al.* experiment confirmed that real-valued quantum mechanics makes wrong predictions). The framework proposes a cleanup:

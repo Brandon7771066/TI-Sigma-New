@@ -35,6 +35,8 @@ The virtue of this phrasing is that it *contains* the framework's other, narrowe
 
 So DTR-1 sits *above* both lists: the FFF's **Limit** and the Goodness **C's** are instances of one thing — a deficit in reality. That single-word generalization is what makes the definition worth featuring.
 
+A deficit, though, is not a dead end. Tralse is generative — the deficit *completes itself*. The clearest picture is the imaginary unit i, which sees its mirror image −i and, by turning on itself, returns to unity (i · (−i) = 1; and i⁴ = 1). Chapter 16 makes that exact with theorems; the point here is only that "deficit" names a starting shortfall that reconciles with its own recognition, not a permanent lack.
+
 Two honesties keep this candidate honest rather than tidy. First (**DTR-1-F1**): some tralse looks less like a *deficit* than a *surplus* — a *valid* contradiction holds **two** truths at once, and maximal incoherence is an *excess* of clashing determination, not an absence. If "deficit" cannot stretch over those without strain, the honest repair is "deficit-**or**-over-determination," and that repair stays on the table. Second (**DTR-1-F2**): "deficit in reality" seems to need a *full* reality to fall short of — yet TRG-1 has just told us reality's own ground is tralse, with no fully-true baseline. The framework's working answer is that the shortfall is measured against the **ideal/cap along each axis**, not against a fully-true world; whether that fully escapes the circle is left open. Both flags are named, not buried.
 
 ### TOF-1: the one fundamental thing
