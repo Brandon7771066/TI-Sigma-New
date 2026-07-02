@@ -1,0 +1,106 @@
+{
+  "config": {
+    "N": 2500,
+    "N_SEEDS": 24,
+    "WIN": 500,
+    "N_WIN": 6,
+    "N_SURR": 120,
+    "A_SELF": 0.55,
+    "C_COUP": 0.35,
+    "B_COMMON": 0.55,
+    "AZ_COMMON": 0.92,
+    "PROXY_NOISE": 0.8,
+    "PROBE_AMP": 6.0,
+    "ALPHA": 0.05,
+    "seed": 20260702,
+    "gen_offset": {
+      "BIDIR": 11,
+      "COMMON": 23,
+      "ONEWAY": 37,
+      "INDEP": 53
+    }
+  },
+  "config_sha": "778afc34be41",
+  "per_generator": {
+    "BIDIR": {
+      "ground_truth_bidirectional": true,
+      "truth_label": "X<->Y",
+      "fractions": {
+        "G1": 1.0,
+        "G2": 1.0,
+        "G3": 1.0,
+        "G4_proxy": 1.0,
+        "G4_oracle_screensoff": 0.0,
+        "G6": 1.0,
+        "G5_perturb_bidir": 1.0
+      },
+      "S_obs_passes": true,
+      "S_int_passes": true,
+      "g5_example_response": {
+        "x_to_y": 1.8284,
+        "y_to_x": 1.8284
+      }
+    },
+    "COMMON": {
+      "ground_truth_bidirectional": false,
+      "truth_label": "Z1+Z2->X,Y (no X<->Y); Z2 unmeasured",
+      "fractions": {
+        "G1": 1.0,
+        "G2": 1.0,
+        "G3": 1.0,
+        "G4_proxy": 1.0,
+        "G4_oracle_screensoff": 0.708,
+        "G6": 1.0,
+        "G5_perturb_bidir": 0.0
+      },
+      "S_obs_passes": true,
+      "S_int_passes": false,
+      "g5_example_response": {
+        "x_to_y": 0.0,
+        "y_to_x": 0.0
+      }
+    },
+    "ONEWAY": {
+      "ground_truth_bidirectional": false,
+      "truth_label": "X->Y",
+      "fractions": {
+        "G1": 1.0,
+        "G2": 0.0,
+        "G3": 0.0,
+        "G4_proxy": 1.0,
+        "G4_oracle_screensoff": 0.0,
+        "G6": 1.0,
+        "G5_perturb_bidir": 0.0
+      },
+      "S_obs_passes": false,
+      "S_int_passes": false,
+      "g5_example_response": {
+        "x_to_y": 1.2464,
+        "y_to_x": 0.0
+      }
+    },
+    "INDEP": {
+      "ground_truth_bidirectional": false,
+      "truth_label": "X _||_ Y",
+      "fractions": {
+        "G1": 1.0,
+        "G2": 0.042,
+        "G3": 0.042,
+        "G4_proxy": 1.0,
+        "G4_oracle_screensoff": 0.0,
+        "G6": 1.0,
+        "G5_perturb_bidir": 0.0
+      },
+      "S_obs_passes": false,
+      "S_int_passes": false,
+      "g5_example_response": {
+        "x_to_y": 0.0,
+        "y_to_x": 0.0
+      }
+    }
+  },
+  "observational_guardrails_sound": false,
+  "observational_proof_by_contradiction_cracked": true,
+  "interventional_guardrails_sound_on_this_model_class": true,
+  "verdict": "OBSERVATIONAL-ONLY LCC PROOF IS UNSOUND: the hidden-common-cause world passes every observational guardrail yet has no X<->Y edge. Adding surgical bidirectional intervention (G5) uniquely recovers ground truth on this model class."
+}

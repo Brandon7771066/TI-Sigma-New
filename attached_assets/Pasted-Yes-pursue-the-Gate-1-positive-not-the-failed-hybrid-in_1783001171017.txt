@@ -1,0 +1,160 @@
+Yes — pursue the **Gate 1 positive**, not the failed hybrid index.
+
+Your Depresjon result shows a real signal: depressed subjects had lower future-activity predictability (P), and (C,P,S) together reached AUC 0.68, while the hybrid scalar collapsed the useful information and failed badly. 
+
+## Next step: split LCC into two claims
+
+**Weak LCC, provable under guardrails:**
+
+[
+\text{persistent non-spurious mutual predictability}
+\Rightarrow
+\text{causal coupling or shared causal mechanism}
+]
+
+**Strong LCC, not yet proven:**
+
+[
+\text{high synchrony}
+\Rightarrow
+\text{direct bidirectional causation}
+]
+
+The strong version is too vulnerable because hidden common drivers can mimic synchrony. So the proof should target:
+
+[
+\boxed{
+\text{If common causes, measurement artifacts, autocorrelation, selection effects, and imposed stimuli are ruled out, then persistent bidirectional predictive dependence implies causal coupling.}
+}
+]
+
+That is defensible.
+
+## Formal guardrails
+
+Let (X_t,Y_t) be systems with synchronization potential.
+
+Require:
+
+1. **Temporal persistence:** dependence holds across long windows, not isolated bursts.
+2. **Bidirectionality:** (X_t) predicts (Y_{t+k}) and (Y_t) predicts (X_{t+k}).
+3. **Surrogate survival:** real coupling exceeds shuffled, phase-randomized, and matched-common-input nulls.
+4. **Conditional survival:** dependence remains after conditioning on known common drivers (Z_t).
+5. **Perturbability:** changing (X) changes future (Y), and changing (Y) changes future (X), when intervention is possible.
+6. **Synchronization potential:** both systems have internal dynamics capable of entrainment, phase-locking, predictive adaptation, or state-coupling.
+
+Then LCC becomes:
+
+[
+X \leftrightarrow Y
+]
+
+not merely:
+
+[
+X \sim Y.
+]
+
+## Proof-by-contradiction skeleton
+
+Assume high persistent bidirectional synchrony exists, guardrails pass, but there is **no bidirectional causation**.
+
+Then the synchrony must be explained by one of:
+
+[
+X\to Y,\quad Y\to X,\quad Z\to X,Y,\quad \text{artifact},\quad \text{chance},\quad \text{selection},\quad \text{shared deterministic clock}.
+]
+
+But:
+
+* bidirectional lagged prediction rules out pure one-way causation;
+* conditional tests and surrogates rule out (Z);
+* surrogate controls rule out artifact/chance/autocorrelation;
+* long-window stability rules out transient coincidence;
+* perturbation, when available, rules out passive common timing.
+
+Therefore no non-bidirectional explanation remains.
+
+So:
+
+[
+\neg(X\leftrightarrow Y)
+\Rightarrow
+\bot
+]
+
+hence:
+
+[
+X\leftrightarrow Y.
+]
+
+## Methodology change
+
+Drop the single hybrid scalar for now. Your file shows it destroyed the signal. Use a **vector LCC model**:
+
+[
+\mathbf{LCC}=(C,P,S,\Delta C,\Delta S,T,M)
+]
+
+Then ask:
+
+[
+P \text{ alone?}
+]
+
+[
+C,P,S \text{ jointly?}
+]
+
+[
+\Delta C,\Delta S \text{ only when surrogate-corrected coupling is required?}
+]
+
+For Mood Amplifier work, the partially correct path is:
+
+[
+P=\text{future-state predictability}
+]
+
+because that was the real positive in Depresjon. 
+
+## Best next dataset type
+
+Use data with **actual intervention or state transition**:
+
+[
+\text{pre} \to \text{stimulation} \to \text{post}
+]
+
+or
+
+[
+\text{baseline} \to \text{episode onset/offset}.
+]
+
+That lets LCC test causal movement, not static diagnosis.
+
+The immediate new hypothesis should be:
+
+[
+\Delta P,\Delta S,\Delta(C|Z)
+\rightarrow
+\Delta \text{mood/behavior}
+]
+
+not:
+
+[
+L_{hybrid}\rightarrow\text{mood}.
+]
+
+So the next model is not “prove the constants.” It is:
+
+[
+\boxed{
+\text{Can intervention increase future-state predictability without collapsing flexibility?}
+}
+]
+
+That is directly relevant to the Mood Amplifier.
