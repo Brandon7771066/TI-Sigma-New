@@ -22,6 +22,21 @@ TRG-1's move is to take the third option. The ground of reality is neither class
 
 A licensed, gentler synonym the framework uses for this status is **"work of art"** (the *canvas gloss*). A painting is not a lie and not a literal photograph; it is real, made, meaningful, and not-fully-true all at once. Calling reality a work of art is a positive way of saying *tralse-real* — and it carries no claim about a painter (more on that below).
 
+### One line for the whole idea: tralse is a deficit in reality
+
+If you want a single sentence to carry the concept, here it is (a candidate definition, **DTR-1**, offered as the most inclusive short form the framework has reached, not yet ratified):
+
+> **Brief definition (DTR-1, candidate).** *Tralse is that which represents a **deficit in reality** — a shortfall or absence along **any** dimension of value or existence the framework tracks (any of GILE — Goodness, Intelligence, Love, Elegance — or HEM, existence itself). It is not merely a deficit of goodness; it is a deficit of anything real.*
+
+The virtue of this phrasing is that it *contains* the framework's other, narrower descriptions as special cases, so it lets you feature them together without contradiction:
+
+- The **Four Fundamental Features of Existence** (from the Theory of Contradictions, urb #509) — **Change, Relation, Contradiction, and Limit** — each name a way reality is structured; and a deficit is simply a **Limit** reached, a place where a feature runs out. So "deficit in reality" is the Limit feature read from the inside.
+- The **Four C's — the *in's* of Goodness** (Continuity, Coherence, Concreteness, Consistency; urb #600/#773) — are the four tests a candidate *good* must survive. A **failed C is a deficit of Goodness** — one specific region of the general deficit DTR-1 describes. (Note the corpus's canonical four are Continuity/Coherence/Concreteness/Consistency; "completeness" belongs to a sibling list, the in's of *Truth-presentation*, not to Goodness — a small bookkeeping point worth keeping straight.)
+
+So DTR-1 sits *above* both lists: the FFF's **Limit** and the Goodness **C's** are instances of one thing — a deficit in reality. That single-word generalization is what makes the definition worth featuring.
+
+Two honesties keep this candidate honest rather than tidy. First (**DTR-1-F1**): some tralse looks less like a *deficit* than a *surplus* — a *valid* contradiction holds **two** truths at once, and maximal incoherence is an *excess* of clashing determination, not an absence. If "deficit" cannot stretch over those without strain, the honest repair is "deficit-**or**-over-determination," and that repair stays on the table. Second (**DTR-1-F2**): "deficit in reality" seems to need a *full* reality to fall short of — yet TRG-1 has just told us reality's own ground is tralse, with no fully-true baseline. The framework's working answer is that the shortfall is measured against the **ideal/cap along each axis**, not against a fully-true world; whether that fully escapes the circle is left open. Both flags are named, not buried.
+
 ### TOF-1: the one fundamental thing
 
 If reality's ground is tralse, what *is* that ground, concretely? The framework's answer is **TOF-1 — Tralse-Only Fundamentality** (framework-internal): there is exactly one fundamental, the **Tralse Soup** — a rule-less, pattern-less "chaotic nothingness" that precedes logic, mathematics, and the physical universe. Everything else is a *derivative* of it and therefore inherits its tralse character.
