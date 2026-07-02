@@ -1,0 +1,134 @@
+{
+  "config": {
+    "mode": "AER_SIMULATOR_ideal (NOT IBM hardware; account has no matching instance)",
+    "shots": 20000,
+    "seed": 168,
+    "angles_rad": [
+      0.0,
+      0.7853981633974483,
+      0.39269908169872414,
+      1.1780972450961724
+    ],
+    "sweep_points": 19
+  },
+  "config_sha": "696dd92e82d5",
+  "test1_entangled_vs_separable": {
+    "S_quantum_entangled": 2.8224,
+    "S_classical_separable": 1.4124,
+    "classical_bound": 2.0,
+    "tsirelson_bound": 2.8284,
+    "quantum_violates_2": true,
+    "separable_violates_2": false
+  },
+  "test2_partial_entanglement_sweep": {
+    "onset_alpha_where_S_exceeds_2": 0.2181661564992912,
+    "sweep": [
+      {
+        "alpha": 0.0,
+        "concurrence": 0.0,
+        "S": 1.4311
+      },
+      {
+        "alpha": 0.04363323129985824,
+        "concurrence": 0.08715574274765817,
+        "S": 1.5534
+      },
+      {
+        "alpha": 0.08726646259971647,
+        "concurrence": 0.17364817766693033,
+        "S": 1.6774
+      },
+      {
+        "alpha": 0.1308996938995747,
+        "concurrence": 0.25881904510252074,
+        "S": 1.7999
+      },
+      {
+        "alpha": 0.17453292519943295,
+        "concurrence": 0.3420201433256687,
+        "S": 1.9100000000000001
+      },
+      {
+        "alpha": 0.2181661564992912,
+        "concurrence": 0.42261826174069944,
+        "S": 2.0199
+      },
+      {
+        "alpha": 0.2617993877991494,
+        "concurrence": 0.49999999999999994,
+        "S": 2.1295
+      },
+      {
+        "alpha": 0.30543261909900765,
+        "concurrence": 0.573576436351046,
+        "S": 2.2294
+      },
+      {
+        "alpha": 0.3490658503988659,
+        "concurrence": 0.6427876096865393,
+        "S": 2.3305
+      },
+      {
+        "alpha": 0.39269908169872414,
+        "concurrence": 0.7071067811865475,
+        "S": 2.4193
+      },
+      {
+        "alpha": 0.4363323129985824,
+        "concurrence": 0.766044443118978,
+        "S": 2.5015
+      },
+      {
+        "alpha": 0.4799655442984406,
+        "concurrence": 0.8191520442889918,
+        "S": 2.5776
+      },
+      {
+        "alpha": 0.5235987755982988,
+        "concurrence": 0.8660254037844386,
+        "S": 2.6418
+      },
+      {
+        "alpha": 0.5672320068981571,
+        "concurrence": 0.9063077870366499,
+        "S": 2.6978999999999997
+      },
+      {
+        "alpha": 0.6108652381980153,
+        "concurrence": 0.9396926207859083,
+        "S": 2.7462
+      },
+      {
+        "alpha": 0.6544984694978736,
+        "concurrence": 0.9659258262890683,
+        "S": 2.7866000000000004
+      },
+      {
+        "alpha": 0.6981317007977318,
+        "concurrence": 0.984807753012208,
+        "S": 2.8096
+      },
+      {
+        "alpha": 0.74176493209759,
+        "concurrence": 0.9961946980917455,
+        "S": 2.8217
+      },
+      {
+        "alpha": 0.7853981633974483,
+        "concurrence": 1.0,
+        "S": 2.8224
+      }
+    ]
+  },
+  "lcc_ladder_RESONANCE_ONLY_not_derivation": {
+    "tsirelson_2root2": 2.8284,
+    "ceiling_cos2_pi8": 0.8536,
+    "onset_sqrt2_minus_1": 0.4142,
+    "note": "sqrt(2)-family constants are flagged EVD-1 resonances, NOT derived here."
+  },
+  "scope": {
+    "this_is": "THAT-level demonstration that quantum-formal coupling>2 is instantiable on a quantum substrate (RIM).",
+    "this_is_NOT": "a brain test; LCC remains 2x empirically NEGATIVE on real bio data (B164, B165).",
+    "hardware": "real IBM HW code-ready (b54 pattern) but IBMQ account returns 'No matching instances'."
+  }
+}
