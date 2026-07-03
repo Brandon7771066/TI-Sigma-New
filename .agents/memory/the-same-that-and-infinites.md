@@ -18,6 +18,12 @@ The **THAT** in the tralse/N/A/MI definitions is ONE referent, always **object-s
 ## 2. "as-a-whole" not-tralse verdict — two tralsities, differing THATs (ruled earlier; APPLIED in book at B179)
 When 2+ indeterminate statements are taken **together** and self-defeat (excessive nonsensical incoherence), the "**not tralse**" verdict attaches to the **statement AS A WHOLE**, never to either half. Always: **two genuine tralsities first**, then the whole earns "not tralse." Tell-tale: the **THAT is NOT the same** across the two self-referring propositions. This is *how* an MI verdict is generated (why MI says "…overall").
 
+## 2b. "Not-tralse" = the UNREAL category (B180, same day)
+"Not tralse" is NOT a fainter grade of tralse — it's a **different category**:
+- **tralse** = "deficit **in reality**" ⇒ presupposes a **real object** ⇒ tralse always presumes the proposition is indeterminate BUT **REAL**.
+- **not-tralse (= unreal)** = "deficit in something that **DOES NOT EXIST**."
+Two categories (real object vs none), not two grades on one scale. **Direct corollary of TRG-1** (real ⇔ tralse ⇒ not-tralse ⇔ unreal) — no new machinery, count stays 80. It supplies the *ontology* of the negative pole in the B179 defs: MI's "is not tralse" + certain-N/A's "may not be tralse" = the **unreal** pole. Applies to **MI and certain N/A**. Squares with ch16: actual infinites = MI = not-tralse = unreal; their *potential* stays real. Book-applied ch02 (new "different category" para) + ch07 (verdict meaning). Anchor `papers/PASS_77_B180_NOT_TRALSE_...2026-07-03.md`.
+
 ## 3. Infinites — REVISION with caveat (NEW)
 The blunt "absolute infinites do not exist" (URB #433 §A) is now too strong given Platonism-as-tralse (B159 / TSG-1 / EPE-1):
 - The **potential** of any infinite is **truly real** (notions it entails exist in potential; Linnebo mathematical potentialism = real cite/support, not a derivation).
