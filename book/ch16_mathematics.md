@@ -81,7 +81,7 @@ The arithmetic is exact — and this is the strongest form the bridge has taken.
 
 ### The rotation: falsehood *turns into* truth
 
-There is a subtlety worth getting right. The two poles −1 and +1 are not two rival results of "uniting i with itself" versus "with its mirror" — that framing is a false dichotomy. The truer picture is a **rotation**: −1 does not *sit opposite* +1, it *turns into* it.
+There is a subtlety worth getting right, and it has **two halves that must both be kept**. First — and this is the decisive lesson — the two operations genuinely *do* differ, and the difference is the whole point: pairing i with a mere **copy of itself** gives i · i = −1 (the false pole), because a bare i is *not* the complement that completes what −i represents; only when i **correctly recognizes** its true complement −i and reconciles with it does i · (−i) = +1 (truth) emerge. **Truth comes from correctly-recognized reconciliation, never from self-doubling.** (An earlier draft called the self-versus-mirror contrast a "false dichotomy"; that overshot — the contrast is real and decisive.) Second — and this is what keeps the false pole from being a *dead end* — −1 is not *stranded opposite* +1: once i acts, −1 **turns into** +1. So the truer picture is a **rotation layered on a recognition**: recognize the right complement and land at truth directly, or pass through the false pole and let the rotation i generates carry you home.
 
 The mechanism is the one already established: multiplication by i is a **quarter-turn counterclockwise** (i is the primitive fourth root of unity — the generator of rotation). Start at the false pole and let i act:
 
