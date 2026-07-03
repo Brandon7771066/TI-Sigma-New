@@ -59,6 +59,9 @@ All are cited as **convergence** with IRD-1, not as its proof — doing otherwis
 - **No** new truth-label, no change to the MR pipeline (N/A → MI → T/F/I), no new mechanism, no new falsifier of an existing principle.
 - **Canonical principle count: 80 (unchanged).** IRD-1 is a candidate, not ratified — like IRO-1/TSG-1/PSM-1/JBK-1, candidates do not increment the count.
 - The i↔tralse / "1 = truth" readings, the UOP PD-to-cap, and every other high-confidence corpus claim remain **pragmatic-best, never `τ = 1`** — IRD-1 is the general statement of the ceiling AFD-1/EVD-1 already set for all of them.
+- **Book application (BOTH sections, per user request that the polemic appear in the epistemology *and* math-proof chapters):**
+  - `book/ch09` (Epistemology & Metaphysics) — new subsection "Deductive proof is not a separate certainty-class (IRD-1)" + intro "Five pieces → Six" with the IRD-1 item + one-paragraph summary clause; the primary epistemological home.
+  - `book/ch16` (Mathematics) — inside the existing "Two senses of proof" section, a new passage **"Deductive proof is not a certainty-class apart (IRD-1)"** that states the general claim as the local face of the chapter's proof discussion: the conditional is exception-free, only *detaching* it is the AFD-1 MI move, the axioms/rules are reached abductively (Quine 1951 / Maddy 1988 / Lakatos 1976 / Carroll 1895) ⇒ the deductive tower is impeccable inside but **inductive at its roots**; the charge is on *disposition*, not a conscious cover-up (if-then-ism/formalism credited), and it self-applies to the corpus's own posits. Cross-refs ch08 (AFD-1) and ch09.
 
 ## 6. IRD-1 falsifiers (OPEN)
 
