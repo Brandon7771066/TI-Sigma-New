@@ -1,4 +1,4 @@
-## Chapter 15: The Law of Correlational Causation and its Applications
+## Chapter 15: The Law of Correlative Coupling and its Applications
 
 ### The claim, stated carefully
 
@@ -6,7 +6,7 @@ Every student of statistics learns a protective slogan on day one: **correlation
 
 TI Sigma does not deny the slogan. It adds a second, narrower claim on top of it, and the two are easy to confuse, so we will state the new one with care.
 
-> **Key insight:** "Correlation is not causation" warns you that a *single observed correlation* may be spurious. The **Law of Correlational Causation (LCC)** makes a different, stronger-conditioned claim: when two systems show a correlation that is high enough, stable enough, and structured enough, that correlation *reflects a real coupling* between them — a genuine channel through which one can influence the other.
+> **Key insight:** "Correlation is not causation" warns you that a *single observed correlation* may be spurious. The **Law of Correlative Coupling (LCC)** makes a different, stronger-conditioned claim: when two systems show a correlation that is high enough, stable enough, and structured enough, that correlation *reflects a real coupling* between them — a genuine channel through which they participate in a shared organization. (The name deliberately says *coupling*, not *causation*: what a strong stable correlation licenses is a claim about **organization**, not a claim that one system mechanistically drives the other — see "The reframing" below.)
 
 The LCC is not "all correlations are causal." That would be false, and the framework knows it. The LCC is a claim about a **threshold**: weak, noisy, transient correlations carry no causal commitment (the day-one slogan governs them completely), but once a coupling score climbs past a critical level and *holds*, the framework treats it as evidence of a real connection rather than an accident **(framework-internal)**.
 
@@ -22,7 +22,7 @@ For a single person, the score is estimated from things you can actually record:
 
 None of those inputs is exotic. Heart-rate variability comes off a chest strap; alpha and theta rhythms come off a consumer EEG headband. The LCC bundles them into one number meant to capture "how well-locked is this system, internally and with its environment?"
 
-A short terminology note for honesty's sake: the acronym "LCC" has drifted across the corpus's history, picking up half a dozen rival expansions. The canon has since been tidied: **LCC = Law of Correlational Causation**, one measure, one name, and the older drifted expansions are retracted **(framework-internal, ruled canonical)**.
+A short terminology note for honesty's sake: the acronym "LCC" has drifted across the corpus's history, picking up half a dozen rival expansions. The canon has since been tidied to one measure, one name — and that name was recently **renamed** from "Law of Correlational Causation" to **Law of Correlative Coupling** (the acronym "LCC" is unchanged). The rename is not cosmetic: it marks a deliberate retreat from the word *causation*, which promised more than the evidence delivers, toward *coupling*, which says only what a strong stable correlation can honestly support — that two systems participate in a shared organization. The older expansion, and all the earlier drifted ones, are retracted **(framework-internal, ruled canonical)**.
 
 ### The landmark values
 
@@ -32,12 +32,12 @@ The framework marks out specific coupling levels where the behavior of the syste
 |---|---|---|
 | Tralse floor | √2 − 1 ≈ **0.414** | Below this, a state is too indeterminate to even be called true-or-false. |
 | Calibration baseline | 1/√2 ≈ **0.707** | A neutral fixed point; below it, *more* coupling can actually hurt. |
-| Causation threshold | ≈ **0.85** | Where the framework says correlation tips into genuine causation. |
+| Organizational-emergence threshold | ≈ **0.85** | *Conjectured* level where the organization becomes the better explanatory unit; the older "correlation tips into causation" reading is **retired** (see "The reframing"). **(candidate, untested)** |
 | Stability cap | ≈ **0.93** | The ceiling — the most coherent, stable state the model allows. |
 
 The 0.93 cap is the same number readers met as the Unified Optimization Principle's interior optimum — the framework's recurring claim that perfect lock-on (a flat 1.0) is neither reachable nor desirable.
 
-> **Key insight:** The single most important LCC threshold is **≈ 0.85**, the "causation line." Below it, you are in the correlation band — interesting, suggestive, but not yet a demonstrated channel. Above it is where the framework claims a real causal coupling lives. Most of the program's own data, honestly reported, sits *below* this line.
+> **Key insight:** The single most important LCC threshold is **≈ 0.85**, the *conjectured* organizational-emergence line. Below it, you are in the correlation band — interesting, suggestive, but not yet a demonstrated shared organization. Above it is where the framework *claims* (candidate, untested — see "The reframing") that the coupled whole becomes the better unit of explanation. Note the careful wording: this is a claim about **organization**, not about one system mechanistically *driving* the other — that stronger, interventional reading is retired. Most of the program's own data, honestly reported, sits *below* this line anyway.
 
 I want to flag a genuine open problem rather than paper over it. Some of these constants are **conjectural numerical fits**, not quantities derived from first principles, and at least one pair of "boundary" values appears with two different numbers in different documents — an internal inconsistency the framework openly lists as unresolved **(open)**. A reader should treat the *structure* (there are thresholds; behavior flips at them) as the load-bearing claim, and treat the *exact decimals* as provisional.
 
@@ -101,6 +101,25 @@ Stepping back, what should a careful reader take from the LCC?
 
 That combination — a sharp idea, modest real support, and unflinching reporting of what did not work — is the right posture for a young framework. The LCC earns continued attention not because it has been proven, but because it has been stated precisely enough to be wrong, and tested honestly enough to show where it is.
 
+### The reframing: from causation to coupling, and the OET
+
+The two negatives above forced a sharpening, not a retreat. The honest reading is that they refuted a *particular* claim — that a strong stable correlation, by itself, establishes that one system **drives** another (the interventionist sense of causation, the sense you can only verify by *intervening*). They did not, and could not, touch a different and more careful claim, because that claim is about a different object.
+
+The revised framework distinguishes **three layers of causation** and is explicit about which one it is entitled to:
+
+1. **Mechanistic** — one thing physically pushes another (billiard balls, synapses).
+2. **Interventional** — what changes when you *manipulate* a variable and watch. This is the gold standard of causal inference (Woodward; Pearl), and it is exactly the layer the negative studies lived in. Observation alone cannot supply it — two clocks synced to the same GPS predict each other perfectly yet neither drives the other.
+3. **Constitutive / organizational** — the degree to which one subsystem helps *maintain the ongoing identity and predictive structure* of another within a larger whole. This is the layer LCC now claims, and only this one.
+
+The ontology shifts to match. The basic units are not isolated variables but **causal clusters** — organized subsystems — and coupling is measured between clusters. The author's own image is a river: what looks like one current is really countless interacting parcels, each contributing to the organization of the flow; no parcel is "the river," yet removing a coherent region changes everything downstream. The causal reality is the *organization*, not the molecules and not a mystical whole. This is a genuine convergence with complex-systems and network-neuroscience thinking rather than a statistical trick.
+
+Two honesty guardrails travel with this shift, and the book states them plainly:
+
+- **Broadening a definition is cheating if it makes the theory unfalsifiable.** Redefining "causation" widely enough that no negative result can ever bite would be exactly the move a careful reader should distrust. The framework escapes this **only** because it pins the new picture to a *risky, testable* claim — the **Organizational Emergence Theorem (OET)**: above a critical coupling threshold, a model of the *whole organization* predicts the future better than the best set of independent per-part models (in symbols, the organization's error falls below the summed errors of its parts). That can fail. If broadening the definition were ever used to absorb further negatives *without* a fresh falsifiable bet like OET, that would be goalpost-moving, and the framework flags it as such.
+- **OET's core is not new, and the book says so.** That the macro level can out-predict the micro level is established science (Hoel, Albantakis and Tononi's work on causal emergence; the partial-information-decomposition literature on synergy). OET's *only* original contribution is the conjecture that these emergence transitions line up with the LCC landmark values — and that conjecture is **untested**. The landmark constants, likewise, remain unvalidated fits; one near-match to the 0.93 cap in the hyperscanning data was explicitly a coincidence in an unsupported model, and the cap has never actually been reached in real data.
+
+So the mature claim is narrower than the original slogan promised, and stronger for it: *reality is organized into coupled clusters; persistent structured correlation measures how much clusters participate in a shared organization; and there is a falsifiable theorem — OET — about when that organization becomes the better level of explanation.* Whether OET survives contact with data is an open, and eminently checkable, question.
+
 ### In one paragraph
 
-The **Law of Correlational Causation (LCC)** does not contradict the familiar warning that "correlation is not causation"; it adds a narrower claim on top of it — that a correlation which is *strong enough, stable enough, and structured enough* (a coupling score past roughly **0.85** on a 0-to-1 "antenna-gain" scale) reflects a real channel between two systems, while weaker correlations stay in the skeptical band the day-one slogan governs. The framework applies this to consciousness (coupling metrics genuinely track Wake/NREM/REM states in one real rat — preliminary), to pharmacology (an honest, literature-anchored simulation of the FAAH pathway, with one of its own predictions failing in the open), and to a self-policing **randomness audit** that throws out numerological mirages. Its most telling result is a negative one — the **Retrieval Gap**: being coupled to a system is necessary but *not* sufficient to read information out of it, a claim the program tested and largely failed to overturn, in full view. Treat the structure as the real contribution, the exact constants as provisional, and every application as preliminary rather than proven.
+The **Law of Correlative Coupling (LCC)** does not contradict the familiar warning that "correlation is not causation"; it adds a narrower claim on top of it — that a correlation which is *strong enough, stable enough, and structured enough* (a coupling score past roughly **0.85** on a 0-to-1 "antenna-gain" scale) reflects a real shared *organization* between two systems — that they participate in one coupled whole — while weaker correlations stay in the skeptical band the day-one slogan governs. The claim is deliberately about organization, not about one system mechanistically driving another (that interventional reading is retired; see "The reframing"), and its falsifiable centerpiece is the candidate OET. The framework applies this to consciousness (coupling metrics genuinely track Wake/NREM/REM states in one real rat — preliminary), to pharmacology (an honest, literature-anchored simulation of the FAAH pathway, with one of its own predictions failing in the open), and to a self-policing **randomness audit** that throws out numerological mirages. Its most telling result is a negative one — the **Retrieval Gap**: being coupled to a system is necessary but *not* sufficient to read information out of it, a claim the program tested and largely failed to overturn, in full view. Treat the structure as the real contribution, the exact constants as provisional, and every application as preliminary rather than proven.
