@@ -1,0 +1,118 @@
+{
+  "dataset": "OpenNeuro ds007471 dual-EEG (32 interacting pairs)",
+  "n_trials": 1278,
+  "n_pairs": 32,
+  "order": 5,
+  "train_frac": 0.6,
+  "model": "PART=AR(own past); WHOLE=VAR(both brains past); OOS one-step MSE",
+  "bands": {
+    "theta": {
+      "n_real_trials": 1278,
+      "n_surrogate_deltas": 12780,
+      "coupling_C_mean": 0.0929,
+      "delta_real_mean": 1e-06,
+      "delta_real_ci95": [
+        1e-06,
+        1e-06
+      ],
+      "frac_trials_inequality_holds": 0.7488,
+      "p_delta_real_le_0": 0.0,
+      "delta_surrogate_mean": 1e-06,
+      "delta_surrogate_ci95": [
+        1e-06,
+        1e-06
+      ],
+      "interaction_specific_gain": 0.0,
+      "p_real_gt_surrogate": 0.3419,
+      "lcc_indexing": {
+        "corr_delta_vs_coupling": -0.035,
+        "threshold_indexing": {
+          "0.414": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.437": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.6": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.707": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.854": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.93": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          }
+        }
+      }
+    },
+    "beta": {
+      "n_real_trials": 1278,
+      "n_surrogate_deltas": 12780,
+      "coupling_C_mean": 0.0436,
+      "delta_real_mean": -0.000495,
+      "delta_real_ci95": [
+        -0.000533,
+        -0.000459
+      ],
+      "frac_trials_inequality_holds": 0.1972,
+      "p_delta_real_le_0": 1.0,
+      "delta_surrogate_mean": -0.000557,
+      "delta_surrogate_ci95": [
+        -0.000572,
+        -0.000544
+      ],
+      "interaction_specific_gain": 6.2e-05,
+      "p_real_gt_surrogate": 0.0018,
+      "lcc_indexing": {
+        "corr_delta_vs_coupling": 0.0188,
+        "threshold_indexing": {
+          "0.414": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.437": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.6": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.707": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.854": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          },
+          "0.93": {
+            "n_above": 0,
+            "n_below": 1278,
+            "note": "insufficient trials on one side"
+          }
+        }
+      }
+    }
+  }
+}
