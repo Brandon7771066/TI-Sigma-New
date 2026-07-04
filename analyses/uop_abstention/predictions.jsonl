@@ -1,0 +1,300 @@
+{"qi": 0, "n_options": 8, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"C\", \"confidence\": 90}"}
+{"qi": 2, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"C\",\"confidence\":92}"}
+{"qi": 1, "n_options": 7, "chosen": "G", "correct_letter": "F", "is_correct": 0, "confidence": 70.0, "raw": "{\"answer\":\"G\",\"confidence\":70}"}
+{"qi": 4, "n_options": 7, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"G\",\"confidence\":94}"}
+{"qi": 3, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"B\",\"confidence\":94}"}
+{"qi": 8, "n_options": 7, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\": \"B\", \"confidence\": 96}"}
+{"qi": 6, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 5, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"D\",\"confidence\":96}"}
+{"qi": 7, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"C\",\"confidence\":90}"}
+{"qi": 9, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"C\", \"confidence\": 90}"}
+{"qi": 11, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\": \"C\", \"confidence\": 95}"}
+{"qi": 14, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\", \"confidence\": 95}"}
+{"qi": 13, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"E\",\"confidence\":90}"}
+{"qi": 12, "n_options": 7, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 10, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"E\",\"confidence\":92}"}
+{"qi": 16, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"C\",\"confidence\":95}"}
+{"qi": 18, "n_options": 7, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"A\", \"confidence\": 94}"}
+{"qi": 15, "n_options": 7, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"A\",\"confidence\":90}"}
+{"qi": 19, "n_options": 5, "chosen": "E", "correct_letter": "A", "is_correct": 0, "confidence": 98.0, "raw": "{\"answer\":\"E\",\"confidence\":98}"}
+{"qi": 17, "n_options": 7, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"D\",\"confidence\":92}"}
+{"qi": 20, "n_options": 7, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"F\",\"confidence\":92}"}
+{"qi": 23, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"C\", \"confidence\": 90}"}
+{"qi": 22, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"A\",\"confidence\":98}"}
+{"qi": 28, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"B\",\"confidence\":98}"}
+{"qi": 21, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 26, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"B\", \"confidence\": 94}"}
+{"qi": 24, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\": \"C\", \"confidence\": 92}"}
+{"qi": 25, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 31, "n_options": 8, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"F\", \"confidence\": 99}"}
+{"qi": 33, "n_options": 11, "chosen": "I", "correct_letter": "I", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"I\",\"confidence\":95}"}
+{"qi": 35, "n_options": 10, "chosen": "J", "correct_letter": "J", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\": \"J\", \"confidence\": 98}"}
+{"qi": 29, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\":\"B\",\"confidence\":85}"}
+{"qi": 36, "n_options": 7, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"G\",\"confidence\":99}"}
+{"qi": 32, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"C\", \"confidence\": 94}"}
+{"qi": 27, "n_options": 2, "chosen": "A", "correct_letter": "B", "is_correct": 0, "confidence": 80.0, "raw": "{\"answer\":\"A\",\"confidence\":80}"}
+{"qi": 38, "n_options": 8, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"G\",\"confidence\":99}"}
+{"qi": 37, "n_options": 11, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"G\",\"confidence\":93}"}
+{"qi": 40, "n_options": 8, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"F\",\"confidence\":95}"}
+{"qi": 34, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"E\",\"confidence\":82}"}
+{"qi": 41, "n_options": 10, "chosen": "J", "correct_letter": "H", "is_correct": 0, "confidence": 68.0, "raw": "{\"answer\":\"J\",\"confidence\":68}"}
+{"qi": 30, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"D\",\"confidence\":82}"}
+{"qi": 39, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"E\",\"confidence\":90}"}
+{"qi": 42, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"F\",\"confidence\":93}"}
+{"qi": 45, "n_options": 5, "chosen": "A", "correct_letter": "B", "is_correct": 0, "confidence": 93.0, "raw": "{\"answer\":\"A\",\"confidence\":93}"}
+{"qi": 46, "n_options": 4, "chosen": "A", "correct_letter": "C", "is_correct": 0, "confidence": 93.0, "raw": "{\"answer\":\"A\",\"confidence\":93}"}
+{"qi": 44, "n_options": 6, "chosen": "D", "correct_letter": "E", "is_correct": 0, "confidence": 88.0, "raw": "{\"answer\":\"D\",\"confidence\":88}"}
+{"qi": 43, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"B\",\"confidence\":82}"}
+{"qi": 48, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\": \"E\", \"confidence\": 96}"}
+{"qi": 47, "n_options": 6, "chosen": "F", "correct_letter": "B", "is_correct": 0, "confidence": 88.0, "raw": "{\"answer\": \"F\", \"confidence\": 88}"}
+{"qi": 51, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"E\",\"confidence\":98}"}
+{"qi": 49, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"D\",\"confidence\":90}"}
+{"qi": 50, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 83.0, "raw": "{\"answer\":\"A\",\"confidence\":83}"}
+{"qi": 53, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 73.0, "raw": "{\"answer\":\"B\",\"confidence\":73}"}
+{"qi": 54, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 55, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"D\",\"confidence\":82}"}
+{"qi": 52, "n_options": 4, "chosen": "C", "correct_letter": "D", "is_correct": 0, "confidence": 88.0, "raw": "{\"answer\":\"C\",\"confidence\":88}"}
+{"qi": 56, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"B\",\"confidence\":92}"}
+{"qi": 58, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"A\",\"confidence\":98}"}
+{"qi": 59, "n_options": 5, "chosen": "D", "correct_letter": "A", "is_correct": 0, "confidence": 82.0, "raw": "{\"answer\":\"D\",\"confidence\":82}"}
+{"qi": 60, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 61, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 76.0, "raw": "{\"answer\":\"D\",\"confidence\":76}"}
+{"qi": 57, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 64.0, "raw": "{\"answer\":\"A\",\"confidence\":64}"}
+{"qi": 65, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\": \"B\", \"confidence\": 92}"}
+{"qi": 63, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"E\",\"confidence\":86}"}
+{"qi": 64, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"D\",\"confidence\":94}"}
+{"qi": 62, "n_options": 7, "chosen": "D", "correct_letter": "G", "is_correct": 0, "confidence": 75.0, "raw": "{\"answer\":\"D\",\"confidence\":75}"}
+{"qi": 67, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"B\",\"confidence\":99}"}
+{"qi": 68, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\": \"A\", \"confidence\": 98}"}
+{"qi": 66, "n_options": 4, "chosen": "A", "correct_letter": "B", "is_correct": 0, "confidence": 90.0, "raw": "{\"answer\":\"A\",\"confidence\":90}"}
+{"qi": 70, "n_options": 4, "chosen": "D", "correct_letter": "A", "is_correct": 0, "confidence": 88.0, "raw": "{\"answer\":\"D\",\"confidence\":88}"}
+{"qi": 73, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"C\",\"confidence\":99}"}
+{"qi": 75, "n_options": 4, "chosen": "D", "correct_letter": "B", "is_correct": 0, "confidence": 97.0, "raw": "{\"answer\":\"D\",\"confidence\":97}"}
+{"qi": 72, "n_options": 5, "chosen": "D", "correct_letter": "B", "is_correct": 0, "confidence": 91.0, "raw": "{\"answer\": \"D\", \"confidence\": 91}"}
+{"qi": 74, "n_options": 5, "chosen": "E", "correct_letter": "A", "is_correct": 0, "confidence": 97.0, "raw": "{\"answer\": \"E\", \"confidence\": 97}"}
+{"qi": 76, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"C\",\"confidence\":99}"}
+{"qi": 69, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"B\", \"confidence\": 93}"}
+{"qi": 77, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"C\",\"confidence\":98}"}
+{"qi": 71, "n_options": 7, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\":\"D\",\"confidence\":78}"}
+{"qi": 78, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"A\",\"confidence\":98}"}
+{"qi": 81, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"B\",\"confidence\":98}"}
+{"qi": 79, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"B\",\"confidence\":86}"}
+{"qi": 85, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"C\",\"confidence\":98}"}
+{"qi": 80, "n_options": 4, "chosen": "C", "correct_letter": "D", "is_correct": 0, "confidence": 85.0, "raw": "{\"answer\":\"C\",\"confidence\":85}"}
+{"qi": 84, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 83, "n_options": 5, "chosen": "B", "correct_letter": "A", "is_correct": 0, "confidence": 92.0, "raw": "{\"answer\": \"B\", \"confidence\": 92}"}
+{"qi": 88, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"A\",\"confidence\":98}"}
+{"qi": 82, "n_options": 6, "chosen": "E", "correct_letter": "C", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\":\"E\", \"confidence\": 78}"}
+{"qi": 89, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"C\", \"confidence\": 99}"}
+{"qi": 90, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 87, "n_options": 4, "chosen": "C", "correct_letter": "B", "is_correct": 0, "confidence": 83.0, "raw": "{\"answer\":\"C\",\"confidence\":83}"}
+{"qi": 92, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"C\",\"confidence\":95}"}
+{"qi": 91, "n_options": 6, "chosen": "A", "correct_letter": "C", "is_correct": 0, "confidence": 90.0, "raw": "{\"answer\":\"A\",\"confidence\":90}"}
+{"qi": 86, "n_options": 4, "chosen": "A", "correct_letter": "C", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\":\"A\",\"confidence\":78}"}
+{"qi": 93, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"D\",\"confidence\":90}"}
+{"qi": 98, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"C\",\"confidence\":99}"}
+{"qi": 96, "n_options": 4, "chosen": "C", "correct_letter": "D", "is_correct": 0, "confidence": 92.0, "raw": "{\"answer\":\"C\",\"confidence\":92}"}
+{"qi": 95, "n_options": 3, "chosen": "A", "correct_letter": "B", "is_correct": 0, "confidence": 82.0, "raw": "{\"answer\":\"A\",\"confidence\":82}"}
+{"qi": 99, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 94, "n_options": 4, "chosen": "B", "correct_letter": "D", "is_correct": 0, "confidence": 68.0, "raw": "{\"answer\":\"B\",\"confidence\":68}"}
+{"qi": 100, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 100.0, "raw": "{\"answer\":\"D\",\"confidence\":100}"}
+{"qi": 102, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"E\",\"confidence\":99}"}
+{"qi": 101, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 100.0, "raw": "{\"answer\":\"C\",\"confidence\":100}"}
+{"qi": 97, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"D\",\"confidence\":88}"}
+{"qi": 103, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"C\",\"confidence\":97}"}
+{"qi": 108, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"D\",\"confidence\":94}"}
+{"qi": 106, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"D\",\"confidence\":98}"}
+{"qi": 109, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"E\",\"confidence\":88}"}
+{"qi": 110, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"A\",\"confidence\":90}"}
+{"qi": 104, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\":\"B\",\"confidence\":78}"}
+{"qi": 105, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"A\", \"confidence\": 94}"}
+{"qi": 111, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 115, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 84.0, "raw": "{\"answer\":\"E\",\"confidence\":84}"}
+{"qi": 107, "n_options": 7, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"F\",\"confidence\":98}"}
+{"qi": 114, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 112, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 75.0, "raw": "{\"answer\":\"C\",\"confidence\":75}"}
+{"qi": 116, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"A\",\"confidence\":93}"}
+{"qi": 113, "n_options": 8, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"G\",\"confidence\":88}"}
+{"qi": 117, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"D\",\"confidence\":90}"}
+{"qi": 119, "n_options": 6, "chosen": "F", "correct_letter": "D", "is_correct": 0, "confidence": 96.0, "raw": "{\"answer\":\"F\",\"confidence\":96}"}
+{"qi": 121, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"E\",\"confidence\":95}"}
+{"qi": 118, "n_options": 9, "chosen": "H", "correct_letter": "E", "is_correct": 0, "confidence": 92.0, "raw": "{\"answer\":\"H\",\"confidence\":92}"}
+{"qi": 122, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"C\",\"confidence\":92}"}
+{"qi": 124, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 125, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"F\",\"confidence\":94}"}
+{"qi": 126, "n_options": 7, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"G\",\"confidence\":90}"}
+{"qi": 123, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\":\"C\",\"confidence\":78}"}
+{"qi": 128, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"E\",\"confidence\":97}"}
+{"qi": 130, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"D\",\"confidence\":98}"}
+{"qi": 133, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"B\",\"confidence\":95}"}
+{"qi": 132, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"B\",\"confidence\":96}"}
+{"qi": 127, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\": \"F\", \"confidence\": 85}"}
+{"qi": 131, "n_options": 7, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 120, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"C\",\"confidence\":86}"}
+{"qi": 135, "n_options": 7, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"G\",\"confidence\":96}"}
+{"qi": 129, "n_options": 5, "chosen": "B", "correct_letter": "A", "is_correct": 0, "confidence": 70.0, "raw": "{\"answer\":\"B\",\"confidence\":70}"}
+{"qi": 139, "n_options": 5, "chosen": "C", "correct_letter": "A", "is_correct": 0, "confidence": 97.0, "raw": "{\"answer\":\"C\",\"confidence\":97}"}
+{"qi": 134, "n_options": 10, "chosen": "H", "correct_letter": "H", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"H\", \"confidence\": 94}"}
+{"qi": 137, "n_options": 4, "chosen": "A", "correct_letter": "C", "is_correct": 0, "confidence": 96.0, "raw": "{\"answer\":\"A\",\"confidence\":96}"}
+{"qi": 136, "n_options": 5, "chosen": "E", "correct_letter": "C", "is_correct": 0, "confidence": 86.0, "raw": "{\"answer\":\"E\",\"confidence\":86}"}
+{"qi": 142, "n_options": 5, "chosen": "E", "correct_letter": "B", "is_correct": 0, "confidence": 93.0, "raw": "{\"answer\": \"E\", \"confidence\": 93}"}
+{"qi": 140, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"A\",\"confidence\":82}"}
+{"qi": 144, "n_options": 6, "chosen": "D", "correct_letter": "F", "is_correct": 0, "confidence": 95.0, "raw": "{\"answer\": \"D\", \"confidence\": 95}"}
+{"qi": 141, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 91.0, "raw": "{\"answer\": \"D\", \"confidence\": 91}"}
+{"qi": 143, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 91.0, "raw": "{\"answer\": \"A\", \"confidence\": 91}"}
+{"qi": 145, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"B\",\"confidence\":94}"}
+{"qi": 146, "n_options": 5, "chosen": "C", "correct_letter": "A", "is_correct": 0, "confidence": 85.0, "raw": "{\"answer\":\"C\",\"confidence\":85}"}
+{"qi": 148, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\": \"C\", \"confidence\": 95}"}
+{"qi": 138, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 70.0, "raw": "{\"answer\":\"B\",\"confidence\":70}"}
+{"qi": 151, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"A\",\"confidence\":99}"}
+{"qi": 152, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 100.0, "raw": "{\"answer\":\"B\",\"confidence\": 100}"}
+{"qi": 149, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 84.0, "raw": "{\"answer\":\"A\",\"confidence\":84}"}
+{"qi": 153, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"B\", \"confidence\": 95}"}
+{"qi": 154, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\": \"C\", \"confidence\": 97}"}
+{"qi": 155, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"B\",\"confidence\":99}"}
+{"qi": 157, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"B\",\"confidence\":99}"}
+{"qi": 147, "n_options": 5, "chosen": "C", "correct_letter": "A", "is_correct": 0, "confidence": 62.0, "raw": "{\"answer\": \"C\", \"confidence\": 62}"}
+{"qi": 156, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"B\", \"confidence\": 99}"}
+{"qi": 150, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 74.0, "raw": "{\"answer\":\"B\",\"confidence\":74}"}
+{"qi": 159, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"C\",\"confidence\":94}"}
+{"qi": 160, "n_options": 8, "chosen": "H", "correct_letter": "H", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"H\",\"confidence\":99}"}
+{"qi": 163, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 158, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\":\"B\",\"confidence\":85}"}
+{"qi": 161, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"D\",\"confidence\":99}"}
+{"qi": 162, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"B\",\"confidence\":94}"}
+{"qi": 165, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"B\",\"confidence\":92}"}
+{"qi": 167, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 164, "n_options": 5, "chosen": "A", "correct_letter": "E", "is_correct": 0, "confidence": 76.0, "raw": "{\"answer\":\"A\",\"confidence\":76}"}
+{"qi": 170, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"F\", \"confidence\": 94}"}
+{"qi": 169, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"E\", \"confidence\": 94}"}
+{"qi": 171, "n_options": 7, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"F\",\"confidence\":96}"}
+{"qi": 172, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"C\",\"confidence\":92}"}
+{"qi": 173, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\": \"B\", \"confidence\": 88}"}
+{"qi": 166, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 176, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\":\"B\",\"confidence\":78}"}
+{"qi": 168, "n_options": 5, "chosen": "E", "correct_letter": "B", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\":\"E\",\"confidence\":78}"}
+{"qi": 174, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 80.0, "raw": "{\"answer\":\"D\",\"confidence\":80}"}
+{"qi": 175, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"B\",\"confidence\":88}"}
+{"qi": 177, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 84.0, "raw": "{\"answer\":\"B\",\"confidence\":84}"}
+{"qi": 178, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"D\",\"confidence\":92}"}
+{"qi": 179, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"E\",\"confidence\":88}"}
+{"qi": 182, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"F\",\"confidence\":93}"}
+{"qi": 181, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\": \"B\", \"confidence\": 92}"}
+{"qi": 180, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"C\",\"confidence\":88}"}
+{"qi": 184, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 188, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"B\",\"confidence\":99}"}
+{"qi": 186, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"B\", \"confidence\": 99}"}
+{"qi": 187, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"A\", \"confidence\": 93}"}
+{"qi": 189, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"A\",\"confidence\":99}"}
+{"qi": 183, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\":\"A\",\"confidence\":85}"}
+{"qi": 190, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\": \"A\", \"confidence\": 88}"}
+{"qi": 194, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 195, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"B\",\"confidence\":96}"}
+{"qi": 193, "n_options": 6, "chosen": "A", "correct_letter": "E", "is_correct": 0, "confidence": 80.0, "raw": "{\"answer\":\"A\",\"confidence\":80}"}
+{"qi": 185, "n_options": 5, "chosen": "E", "correct_letter": "D", "is_correct": 0, "confidence": 83.0, "raw": "{\"answer\":\"E\",\"confidence\":83}"}
+{"qi": 191, "n_options": 5, "chosen": "D", "correct_letter": "E", "is_correct": 0, "confidence": 94.0, "raw": "{\"answer\":\"D\",\"confidence\":94}"}
+{"qi": 197, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 196, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"C\", \"confidence\": 93}"}
+{"qi": 198, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"E\", \"confidence\": 99}"}
+{"qi": 199, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"E\",\"confidence\":90}"}
+{"qi": 200, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 204, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\", \"confidence\": 95}"}
+{"qi": 192, "n_options": 5, "chosen": "E", "correct_letter": "B", "is_correct": 0, "confidence": 70.0, "raw": "{\"answer\": \"E\", \"confidence\": 70}"}
+{"qi": 205, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"B\",\"confidence\":93}"}
+{"qi": 201, "n_options": 5, "chosen": "D", "correct_letter": "B", "is_correct": 0, "confidence": 70.0, "raw": "{\"answer\":\"D\",\"confidence\":70}"}
+{"qi": 206, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"E\", \"confidence\": 94}"}
+{"qi": 203, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\": \"B\", \"confidence\": 78}"}
+{"qi": 202, "n_options": 4, "chosen": "A", "correct_letter": "C", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\": \"A\", \"confidence\": 78}"}
+{"qi": 208, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 210, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"B\",\"confidence\":93}"}
+{"qi": 212, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"C\",\"confidence\":97}"}
+{"qi": 214, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"E\", \"confidence\": 94}"}
+{"qi": 209, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"E\",\"confidence\":90}"}
+{"qi": 213, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"A\",\"confidence\":94}"}
+{"qi": 207, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"B\",\"confidence\":90}"}
+{"qi": 216, "n_options": 7, "chosen": "G", "correct_letter": "G", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"G\",\"confidence\":97}"}
+{"qi": 217, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\": \"C\", \"confidence\": 97}"}
+{"qi": 218, "n_options": 7, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"F\",\"confidence\":98}"}
+{"qi": 215, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"E\",\"confidence\":93}"}
+{"qi": 219, "n_options": 6, "chosen": "F", "correct_letter": "C", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\":\"F\",\"confidence\":78}"}
+{"qi": 211, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"F\",\"confidence\":82}"}
+{"qi": 221, "n_options": 6, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"F\",\"confidence\":82}"}
+{"qi": 224, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"B\", \"confidence\": 90}"}
+{"qi": 220, "n_options": 6, "chosen": "F", "correct_letter": "C", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\": \"F\", \"confidence\": 78}"}
+{"qi": 223, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"D\",\"confidence\":88}"}
+{"qi": 222, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 80.0, "raw": "{\"answer\":\"E\",\"confidence\":80}"}
+{"qi": 225, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"A\",\"confidence\":99}"}
+{"qi": 228, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"B\",\"confidence\":93}"}
+{"qi": 227, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"C\",\"confidence\":96}"}
+{"qi": 226, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\": \"D\", \"confidence\": 98}"}
+{"qi": 229, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 233, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"D\",\"confidence\":97}"}
+{"qi": 231, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"B\",\"confidence\":94}"}
+{"qi": 232, "n_options": 6, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\": \"E\", \"confidence\": 92}"}
+{"qi": 230, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 87.0, "raw": "{\"answer\":\"B\",\"confidence\":87}"}
+{"qi": 234, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"B\",\"confidence\":95}"}
+{"qi": 235, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 237, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"D\",\"confidence\":96}"}
+{"qi": 236, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"A\", \"confidence\": 90}"}
+{"qi": 243, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\": \"C\", \"confidence\": 96}"}
+{"qi": 239, "n_options": 2, "chosen": "B", "correct_letter": "A", "is_correct": 0, "confidence": 76.0, "raw": "{\"answer\":\"B\",\"confidence\":76}"}
+{"qi": 242, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"D\", \"confidence\": 93}"}
+{"qi": 240, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 238, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\": \"B\", \"confidence\": 82}"}
+{"qi": 246, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\": \"D\", \"confidence\": 97}"}
+{"qi": 244, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\": \"E\", \"confidence\": 92}"}
+{"qi": 248, "n_options": 2, "chosen": "B", "correct_letter": "A", "is_correct": 0, "confidence": 99.0, "raw": "{\"answer\": \"B\", \"confidence\": 99}"}
+{"qi": 241, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"A\",\"confidence\":97}"}
+{"qi": 245, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 247, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"C\", \"confidence\": 93}"}
+{"qi": 249, "n_options": 3, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"B\",\"confidence\":96}"}
+{"qi": 250, "n_options": 2, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\": \"B\", \"confidence\": 99}"}
+{"qi": 253, "n_options": 2, "chosen": "A", "correct_letter": "B", "is_correct": 0, "confidence": 97.0, "raw": "{\"answer\": \"A\", \"confidence\": 97}"}
+{"qi": 252, "n_options": 6, "chosen": "B", "correct_letter": "E", "is_correct": 0, "confidence": 94.0, "raw": "{\"answer\":\"B\",\"confidence\":94}"}
+{"qi": 254, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\":\"C\",\"confidence\":98}"}
+{"qi": 251, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 256, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"D\",\"confidence\":95}"}
+{"qi": 259, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"D\",\"confidence\":94}"}
+{"qi": 255, "n_options": 4, "chosen": "B", "correct_letter": "C", "is_correct": 0, "confidence": 93.0, "raw": "{\"answer\":\"B\",\"confidence\":93}"}
+{"qi": 258, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"C\",\"confidence\":92}"}
+{"qi": 257, "n_options": 4, "chosen": "B", "correct_letter": "A", "is_correct": 0, "confidence": 95.0, "raw": "{\"answer\":\"B\",\"confidence\":95}"}
+{"qi": 260, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\",\"confidence\":95}"}
+{"qi": 262, "n_options": 4, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\": \"D\", \"confidence\": 97}"}
+{"qi": 261, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"A\",\"confidence\":86}"}
+{"qi": 265, "n_options": 5, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"D\",\"confidence\":93}"}
+{"qi": 267, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 97.0, "raw": "{\"answer\":\"E\",\"confidence\":97}"}
+{"qi": 263, "n_options": 5, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 269, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\":\"C\",\"confidence\": 94}"}
+{"qi": 264, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\": \"E\", \"confidence\": 85}"}
+{"qi": 266, "n_options": 2, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"A\",\"confidence\":92}"}
+{"qi": 268, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\": \"C\", \"confidence\": 90}"}
+{"qi": 271, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"A\", \"confidence\": 95}"}
+{"qi": 270, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 94.0, "raw": "{\"answer\": \"A\", \"confidence\": 94}"}
+{"qi": 274, "n_options": 3, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 96.0, "raw": "{\"answer\":\"C\",\"confidence\":96}"}
+{"qi": 275, "n_options": 4, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"B\",\"confidence\":92}"}
+{"qi": 277, "n_options": 4, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 98.0, "raw": "{\"answer\": \"C\", \"confidence\": 98}"}
+{"qi": 276, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"E\",\"confidence\":95}"}
+{"qi": 281, "n_options": 4, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 99.0, "raw": "{\"answer\":\"A\",\"confidence\":99}"}
+{"qi": 278, "n_options": 3, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"A\",\"confidence\":88}"}
+{"qi": 273, "n_options": 5, "chosen": "D", "correct_letter": "B", "is_correct": 0, "confidence": 84.0, "raw": "{\"answer\":\"D\",\"confidence\":84}"}
+{"qi": 280, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"A\",\"confidence\":90}"}
+{"qi": 272, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 85.0, "raw": "{\"answer\":\"C\",\"confidence\":85}"}
+{"qi": 279, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 72.0, "raw": "{\"answer\":\"E\",\"confidence\":72}"}
+{"qi": 282, "n_options": 7, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 95.0, "raw": "{\"answer\":\"C\",\"confidence\":95}"}
+{"qi": 283, "n_options": 8, "chosen": "F", "correct_letter": "F", "is_correct": 1, "confidence": 80.0, "raw": "{\"answer\":\"F\",\"confidence\":80}"}
+{"qi": 285, "n_options": 6, "chosen": "C", "correct_letter": "C", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\":\"C\",\"confidence\":93}"}
+{"qi": 289, "n_options": 9, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"B\",\"confidence\":90}"}
+{"qi": 287, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"B\",\"confidence\":88}"}
+{"qi": 286, "n_options": 5, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 88.0, "raw": "{\"answer\":\"A\",\"confidence\":88}"}
+{"qi": 290, "n_options": 5, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 90.0, "raw": "{\"answer\":\"E\",\"confidence\":90}"}
+{"qi": 284, "n_options": 7, "chosen": "E", "correct_letter": "D", "is_correct": 0, "confidence": 78.0, "raw": "{\"answer\":\"E\",\"confidence\":78}"}
+{"qi": 293, "n_options": 8, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 72.0, "raw": "{\"answer\":\"E\",\"confidence\":72}"}
+{"qi": 291, "n_options": 8, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 78.0, "raw": "{\"answer\":\"D\",\"confidence\":78}"}
+{"qi": 296, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"A\",\"confidence\": 86}"}
+{"qi": 292, "n_options": 7, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 64.0, "raw": "{\"answer\":\"D\",\"confidence\":64}"}
+{"qi": 294, "n_options": 7, "chosen": "E", "correct_letter": "E", "is_correct": 1, "confidence": 82.0, "raw": "{\"answer\":\"E\",\"confidence\":82}"}
+{"qi": 299, "n_options": 5, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 93.0, "raw": "{\"answer\": \"B\", \"confidence\": 93}"}
+{"qi": 298, "n_options": 6, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 92.0, "raw": "{\"answer\":\"D\",\"confidence\":92}"}
+{"qi": 295, "n_options": 6, "chosen": "A", "correct_letter": "A", "is_correct": 1, "confidence": 83.0, "raw": "{\"answer\":\"A\",\"confidence\":83}"}
+{"qi": 297, "n_options": 6, "chosen": "B", "correct_letter": "B", "is_correct": 1, "confidence": 68.0, "raw": "{\"answer\":\"B\",\"confidence\":68}"}
+{"qi": 288, "n_options": 11, "chosen": "D", "correct_letter": "D", "is_correct": 1, "confidence": 86.0, "raw": "{\"answer\":\"D\",\"confidence\":86}"}
