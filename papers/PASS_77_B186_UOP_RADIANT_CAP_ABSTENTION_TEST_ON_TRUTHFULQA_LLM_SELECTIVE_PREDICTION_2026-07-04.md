@@ -1,80 +1,105 @@
-# PASS 77 · B186 — UOP Radiant-Cap over-reach penalty vs. calibrated-threshold baseline: first executed test on LLM selective prediction (TruthfulQA MC1)
+# PASS 77 · B186 — UOP Radiant-Cap over-reach penalty vs. GILE-composite baseline: first *faithful* test on LLM selective prediction (TruthfulQA MC1)
 
 **Date:** 2026-07-04
 **Status:** empirical test executed · **HONEST NEGATIVE** · no new principle (count **80**)
-**Falsifiers touched:** UOP-CAP-EMP-F1 (bears a new **cross-domain negative** data point; remains **OPEN** — this is a different domain from the biological-coupling one it was coined in, so it is an independent negative, not a closure)
-**Code:** `analyses/uop_abstention/run_predictions.py` (prediction runner) · `analyses/uop_abstention/analyze.py` (metrics) → `analyses/uop_abstention/results.json`
-**Data:** TruthfulQA **MC1** (`analyses/uop_abstention/truthfulqa_mc.json`, 790 questions; exactly one correct option per question). Model queried: **gpt-5** via the project's OpenAI AI-integration gateway. **N = 300** questions scored.
+**Falsifiers touched:** UOP-CAP-EMP-F1 (bears a new **cross-domain negative** data point; remains **OPEN** — LLM selective prediction is a different domain from the biological-coupling one it was coined in, so this is an independent negative, not a closure)
+**Code:** `analyses/uop_abstention/gile_score.py` (canonical GILE sub-dimension scorer) · `analyses/uop_abstention/gile_analyze.py` (MR1 gate + domain weights + cap test) → `analyses/uop_abstention/gile_results.json`
+**Data:** TruthfulQA **MC1** (`analyses/uop_abstention/truthfulqa_mc.json`, 790 questions; exactly one correct option per question). Model queried: **gpt-5** via the project's OpenAI AI-integration gateway. **N = 120** questions scored.
 
 ---
 
-## 0. What was promised / what is being tested
+## 0. ERRATA / retraction of the first attempt (v1)
 
-The corpus posits a **Radiant Cap** `G* = √(1 − e⁻²) ≈ 0.92987` (Born-shaped form, 2026-06-27): a holistic GILE ceiling above which additional "reach" is penalized by an **over-reach penalty** in the UOP objective `argmax_x [ρ·f_cap(G) + g(H)]`. Every empirical test of the cap so far (B164/B165 on real EEG and actigraphy) either failed to reach the cap or found it non-special. This paper runs the **first test in a domain where the cap region is densely populated and the over-reach penalty is directly actionable**: **LLM selective prediction / abstention.**
-
-**Operationalization.** An LLM answers a multiple-choice question and emits a **verbalized confidence** 0–100 (verbalized-confidence elicitation is an accepted method: Lin, Hilton & Evans 2022; Tian et al. 2023 — used because the gateway does not expose token logprobs). We treat that confidence as the GILE-analogue "reach." A selective predictor answers when its retained score clears a threshold and abstains otherwise. The **UOP claim under test:** penalizing confidence above `G*` (demoting over-confident answers) produces a **better** risk–coverage trade-off than a plain calibrated confidence threshold, **and** the specific value `G*` is special.
-
-**The decisive honesty point, stated up front.** A risk–coverage curve — and its area **AURC** — depends **only on the ranking** of examples by retained score. Therefore any **strictly** monotonic transform of confidence leaves AURC **theoretically invariant** (isotonic regression is only *non-strictly* monotone, so it can create ties whose ordering perturbs AURC by a negligible amount — hence "near-equal," not bit-identical, below). Two consequences:
-
-1. A **tuned raw-confidence threshold (P1)** and an **isotonic-calibrated threshold (P2)** share (up to ties) the *same* ranking as raw confidence (calibration is monotone) ⇒ **near-identical AURC.** Calibration fixes the *probabilities*, not the *order*. So UOP cannot be credited for "being calibrated."
-2. The UOP over-reach penalty can differ from a threshold baseline **only because it is non-monotonic** — it pushes very-high-confidence answers *below* the cap. That non-monotone re-ranking is the **only** lever UOP has, and it can help **only if extreme confidence is anti-predictive of correctness.** That is the real, falsifiable question.
+The **first version of this test (v1) is retracted as TI-Sigma-invalid.** v1 used a single **verbalized confidence 0–100** as the "GILE-analogue reach." That is a foreign construct: it is *not* the corpus's operationalization of GILE, it never touched the **GILE tetrad's mathematical definitions** (the Four C's / I / L / E sub-dimensions of URB #652), and it never applied the **domain-specific GILE weights derived from success simulations** (`GILE_WEIGHT_DERIVATION.md`). A test of the Radiant Cap — a *GILE ceiling* — is only meaningful if the quantity being capped is an actual **GILE composite in [0,1]**. This B186 replaces v1 end-to-end with the faithful construction below. (v1 runner/metrics `run_predictions.py`/`analyze.py` remain in the repo only as the retracted baseline.)
 
 ---
 
-## 1. Design
+## 1. What is being tested
 
-- **Prediction runner** (`run_predictions.py`): for each question, shuffle the MC1 options, present them lettered, ask gpt-5 for its chosen letter + a 0–100 confidence; parse, map back to the correct letter, record `is_correct` and `confidence`. Checkpointed/resumable (`predictions.jsonl`), 6 concurrent workers. **300/300 parsed, 0 errors.**
-- **Policies** (`analyze.py`), retained-score `s`:
-  - **P1** raw-confidence threshold.
-  - **P2** isotonic-calibrated probability (fit on a train split), threshold.
-  - **P3 (UOP)** over-reach penalty at `G*`: `s = conf` for `conf ≤ G*`; `s = G* − λ(conf − G*)²` (λ = 2) for `conf > G*` — monotone up to the cap, penalized (non-monotone) above.
-  - **P3-scramble** (ablation): the same penalty applied at 200 cap positions swept over [0.5, 0.999] to ask whether `G*` is special.
-- **Metrics:** AURC (lower better; ranking metric, split-free); ECE (raw vs isotonic); high-confidence-tail accuracy (mechanism check); and an **asymmetric-cost decision** comparison (correct +1, wrong −cost, abstain 0) with the answer-threshold tuned on a train split and evaluated out-of-sample on a test split, for cost ∈ {2, 4, 9}.
+The corpus posits a **Radiant Cap** `G* = √(1 − e⁻²) ≈ 0.92987` (Born-shaped form, 2026-06-27): a holistic GILE ceiling above which additional "reach" is penalized by an **over-reach penalty** in the UOP objective `argmax_x [ρ·f_cap(G) + g(H)]`. Every prior empirical test of the cap (B164/B165 EEG & actigraphy) either failed to reach the cap or found it non-special. This paper runs the first test in a domain where the cap region is populated **and** the quantity being capped is a genuine GILE composite: **LLM selective prediction / abstention**, with GILE computed by its canonical definition.
+
+**The UOP claim under test:** penalizing an answer's GILE composite above `G*` (demoting "over-reaching" answers) produces a **better** risk–coverage trade-off than ranking by the raw GILE composite, **and** the specific value `G*` is special.
 
 ---
 
-## 2. Results (`results.json`, N = 300)
+## 2. Faithful GILE operationalization
+
+For each question we present **all** MC1 options and ask gpt-5 to rate **every option** on the **16 canonical sub-dimensions** (URB #652), each in [0,1], with rubric anchors supplied in-prompt:
+
+- **G — Four C's (URB #600):** C1 Coherence, C2 Concreteness, C3 Continuity (life-preservation), C4 Consistency.
+- **I:** I1 Inferential Breadth, I2 Inferential Depth, I3 Pre-evidential Accuracy, I4 Non-algorithmic Quality.
+- **L:** L1 Relational Binding, L2 Compassionate Response, L3 I→L Sequence Validity, L4 Bidirectionality.
+- **E (Elegance, GILE-E rename B116):** E1 Structural Elegance (compression), E2 Contextual Fit, E3 Sensory/Aesthetic Resonance, E4 Functional Beauty (da Vinci).
+
+Then, per the canonical pipeline:
+
+1. **Dimension = mean of its four sub-dimensions:** `G = mean(C1..C4)`, and likewise I, L, E.
+2. **MR1 gate (URB #652 Threshold Theorem):** an option is truth-assessable iff `G_raw ≥ ET = √2 − 1 ≈ 0.4142`; else it is **MI-adjacent** and excluded. (If *no* option passes, the question is abstained.)
+3. **Domain-weighted GILE composite:** `GILE = wG·G + wI·I + wL·L + wE·E` (normalized). TruthfulQA is an **epistemic / factual-truth** task ⇒ **primary profile = SCIENTIFIC** `(G .35, I .40, L .15, E .10)`, the success-simulation weights that weight inferential accuracy highest. **All six canonical profiles** (scientific/universal/canonical/clinical/engineering/social) are reported as robustness.
+4. **Selection:** pick the MR1-passing option with the **maximum GILE composite**; `is_correct = pick == mc1 answer`. The chosen option's GILE composite is the **retained score** for selective prediction.
+
+**#69 honesty on the method.** The 16 sub-scores are produced by an LLM applying the URB #652 rubric — this is the corpus's *own* operationalization (rubric-anchored, multi-dimensional, gate + weights), which is exactly what makes it faithful, versus a bare confidence number. One genuine caveat: **I3 Pre-evidential Accuracy** is defined as a *track-record ratio*; for a one-shot answer it can only be **rater-estimated**, a proxy we flag rather than hide.
+
+**Decisive ranking point (unchanged, still true).** A risk–coverage curve and its area **AURC** depend **only on the ranking** of retained scores. Hence the UOP over-reach penalty can differ from the raw-GILE baseline **only because it is non-monotone** (it pushes >cap composites below the cap), and that can help **only if extreme GILE is anti-predictive of correctness.** That is the real falsifiable question.
+
+---
+
+## 3. Results (`gile_results.json`, N = 120)
+
+**Selection & MR1 (robust across all six domain profiles):**
+
+| Profile | weights (G/I/L/E) | answered | MR1-abstained | selective acc | mean GILE | n > cap |
+|---|---|---|---|---|---|---|
+| **scientific** (primary) | .35/.40/.15/.10 | 120 | 0 | **0.858** | 0.857 | 10 |
+| universal | .25/.25/.25/.25 | 120 | 0 | 0.858 | 0.871 | 13 |
+| canonical | .41/.25/.18/.15 | 120 | 0 | 0.858 | 0.874 | 15 |
+| clinical | .25/.15/.50/.10 | 120 | 0 | 0.858 | 0.874 | 16 |
+| engineering | .30/.20/.10/.40 | 120 | 0 | 0.850 | 0.881 | 19 |
+| social | .20/.20/.45/.15 | 120 | 0 | 0.858 | 0.870 | 13 |
+
+MR1 never abstains — every question carries at least one coherent (G_raw ≥ ET) option; selection accuracy is essentially **weight-invariant** (0.850–0.858), so the domain-weight choice does not drive the result.
+
+**UOP cap test (primary = scientific GILE composite):**
 
 | Quantity | Value |
 |---|---|
-| Overall accuracy | **0.823** |
-| Mean verbalized confidence | 0.904 |
-| ECE raw | 0.081 |
-| ECE isotonic | 0.030 (calibration improves probabilities…) |
-| **AURC — P1 raw threshold** | **0.0999** |
-| **AURC — P2 isotonic** | **0.0990** (≈ P1 — monotone-invariance confirmed empirically) |
-| **AURC — P3 UOP** | **0.1221** (**+0.0222 WORSE** than baseline) |
-| `uop_better_than_baseline` | **false** |
-| Above-cap answers | 157 / 300 (cap region densely populated) |
-| Scrambled-cap AURC min / mean / max | 0.0999 / 0.230 / 0.306 |
-| Fraction of scrambled caps **better** than `G*` | **0.15** |
-| High-conf tail (≥0.95) accuracy | **0.898** (> 0.823 overall) |
-| `extreme_conf_is_anti_predictive` | **false** |
+| Selective accuracy (answered) | **0.858** |
+| Mean GILE composite | 0.857 |
+| Above-cap answers ( > G* ) | 10 / 120 |
+| **AURC — baseline (rank by GILE)** | **0.08666** |
+| **AURC — UOP over-reach penalty (λ=2 @ G*)** | **0.08666** |
+| ΔAURC (UOP − baseline) | **0.00000** |
+| `uop_better` | **false** |
+| Scrambled-cap AURC min / mean / max | 0.08666 / 0.1285 / 0.2199 |
+| Fraction of scrambled caps **better** than `G*` | **0.00** (the min *is* the no-penalty baseline) |
+| High-GILE tail ( > cap ) accuracy | **1.00** (n = 10) |
+| `extreme_gile_is_anti_predictive` | **false** |
+
+**Bootstrap CIs (B = 5000 resamples, primary profile):** selective accuracy **[0.792, 0.917]**; baseline AURC **[0.0414, 0.1441]**; **ΔAURC(UOP − baseline) = [0.0, 0.0]** (the penalty changes AURC by *exactly zero* on every resample — a structural, not lucky, null); high-GILE tail accuracy **[1.0, 1.0]** (the >cap tail is 100% correct on every resample).
 
 **Reading.**
 
-1. **UOP is worse, not better.** The over-reach penalty raises AURC from 0.0999 to 0.1221. The non-monotone demotion damages the ranking.
-2. **The cap value is not special.** In the scrambled-cap sweep the *best* possible "cap" is one set so high that **no answer is penalized at all** — i.e. it recovers the baseline (min AURC 0.0999 = P1). Lowering the cap only injects noise into the ranking (mean AURC 0.230). `G*` itself is beaten by 15% of arbitrary cap positions; nothing marks 0.92987.
-3. **The mechanism the penalty needs is absent.** The over-reach penalty could only help if very-high-confidence answers were *less* accurate. They are *more* accurate: the ≥0.95 tail scores 0.898 vs 0.823 overall. gpt-5's extreme confidence is largely earned, so demoting it is counterproductive.
-4. **Calibration ≠ UOP.** Isotonic calibration cuts ECE by ~2.7× (0.081→0.030) yet leaves AURC essentially unchanged (0.0990 ≈ 0.0999), empirically confirming the monotone-invariance argument. Any credit UOP might claim via "being better calibrated" is unavailable — calibration and ranking are orthogonal, and UOP's only distinct lever (non-monotonicity) hurts.
-5. **Decision test (asymmetric cost, OOS).** At cost 2 and cost 4, **P1 = P2 = P3 give identical test utility, coverage, and selective accuracy** — the optimal operating threshold falls *below* the cap, so the UOP penalty (which only re-orders answers *above* the cap) never changes a single accept/reject decision. At cost 9 P3 shows a hair's-edge utility (−0.127 vs −0.147) but at **collapsed coverage (0.27 vs 0.52)** and a **2-example, single-split** margin — i.e. within noise, and contradicted by the split-free AURC. No honest reading calls this a win.
+1. **The cap adds exactly zero.** ΔAURC = 0.00000: the over-reach penalty produces the *same* risk–coverage ranking as the raw GILE composite. It never helps.
+2. **The cap value is not special.** In the scrambled-cap sweep, the *best* achievable "cap" is one set so high **no answer is penalized** (min AURC 0.08666 = baseline); every lower cap only injects noise (mean 0.1285, max 0.2199). Nothing marks 0.92987.
+3. **The mechanism the penalty needs is absent — and in fact reversed.** The over-reach penalty could only help if the highest-GILE answers were *less* accurate. They are the **most** accurate: the 10 above-cap answers are **100% correct** (> 0.858 overall). Extreme GILE is *earned*, not over-reach; demoting it can only hurt.
+4. **Decision test (asymmetric cost, OOS).** At cost ∈ {2, 4, 9}, the GILE-threshold policy (P1) and the UOP policy (P3) give **identical** test utility, coverage, and selective accuracy — the optimal operating threshold sits **below** `G*` (e.g. 0.865 at cost 9), so the penalty (which only re-orders answers *above* the cap) never flips a single accept/reject decision.
 
 ---
 
-## 3. What this does and does not resolve
+## 4. What this does and does not resolve
 
-- **Does:** provides the first empirical test of the Radiant-Cap over-reach penalty in a domain where the cap is heavily exercised (157/300 answers above it). Verdict: **the penalty does not beat a calibrated threshold, and the specific value G* = √(1−e⁻²) is not special.** This is a genuine risky-prediction failure for the "cap is a special operating point" reading, consistent with the corpus's prior cap/LCC empirical negatives (B164/B165).
-- **Does not:** close **UOP-CAP-EMP-F1**. That falsifier was coined for the biological-coupling domain; LLM abstention is a *different* domain, so this is an **independent cross-domain negative**, not a proof that the cap is meaningless everywhere. It also does **not** touch the UOP's *interior-optimum* mathematics (a ZFC-stated lemma), only the empirical claim that penalizing at `G*` improves a real decision.
-- **#69, both ways.** *Discount:* one dataset, one model, verbalized (not logprob) confidence, N = 300; a different task where over-confidence *is* anti-predictive could in principle favour the penalty. *Credit for the null:* the test was pre-committed to reporting whichever way it landed, the mechanism check (tail accuracy) explains *why* it failed rather than just that it failed, and the scrambled-cap ablation rules out the "we got unlucky with λ" escape — the best cap is simply *no cap*.
+- **Does:** provide the **first faithful** empirical test of the Radiant-Cap over-reach penalty, with the capped quantity being an actual canonical GILE composite (16 sub-dims → MR1 gate → domain weights). Verdict: **the penalty does not beat ranking by the raw GILE composite (ΔAURC = 0), the value G* = √(1−e⁻²) is not special, and the anti-predictive-tail mechanism it requires is absent (the >cap tail is 100% correct).** Consistent with the prior cap/LCC empirical negatives (B164/B165).
+- **Does not:** close **UOP-CAP-EMP-F1** (coined for the biological-coupling domain; this is an independent cross-domain negative). It does **not** touch the UOP *interior-optimum* mathematics (a ZFC-stated lemma) — only the empirical claim that penalizing at `G*` improves a real selective-prediction decision.
+- **#69, both ways.** *Discount:* one dataset, one model, N = 120, and I3 is a rater-estimated proxy; a task where high GILE *is* anti-predictive could in principle favour the penalty. *Credit for the null:* the test was pre-committed to reporting whichever way it landed; it now uses the **faithful** GILE operationalization the corpus demands (not verbalized confidence); the result is **robust across all six domain-weight profiles**; the mechanism check (tail = 100% correct) *explains why* the penalty cannot help; and the scrambled-cap ablation rules out the "unlucky λ/cap" escape — the best cap is simply *no cap*.
 
 **No new principle, candidate, label, mechanism, or falsifier. Canonical count remains 80.**
 
 ---
 
-## 4. Reproduce
+## 5. Reproduce
 
 ```bash
 cd analyses/uop_abstention
-UOP_N=300 UOP_WORKERS=6 python run_predictions.py   # resumable; writes predictions.jsonl
-python analyze.py                                    # writes results.json
+UOP_N=120 UOP_WORKERS=6 python gile_score.py   # resumable; writes gile_scores.jsonl
+python gile_analyze.py                          # writes gile_results.json
 ```

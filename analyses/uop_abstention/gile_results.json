@@ -1,0 +1,192 @@
+{
+  "n_questions": 120,
+  "ET_MR1_gate": 0.41421356237309515,
+  "cap_G_star": 0.9298734950321937,
+  "primary_profile": "scientific",
+  "bootstrap_primary": {
+    "B": 5000,
+    "selective_accuracy_ci95": [
+      0.7916666666666666,
+      0.9166666666666666
+    ],
+    "baseline_aurc_ci95": [
+      0.04138612350189856,
+      0.14413603786682336
+    ],
+    "delta_aurc_uop_minus_baseline_ci95": [
+      0.0,
+      0.0
+    ],
+    "high_gile_tail_accuracy_ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  "per_profile": {
+    "scientific": {
+      "weights": {
+        "G": 0.35,
+        "I": 0.4,
+        "L": 0.15,
+        "E": 0.1
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.8583333333333333,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.8571333333333333,
+      "n_above_cap": 10
+    },
+    "universal": {
+      "weights": {
+        "G": 0.25,
+        "I": 0.25,
+        "L": 0.25,
+        "E": 0.25
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.8583333333333333,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.8705989583333335,
+      "n_above_cap": 13
+    },
+    "canonical": {
+      "weights": {
+        "G": 0.4142,
+        "I": 0.25,
+        "L": 0.18,
+        "E": 0.15
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.8583333333333333,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.8735718374907797,
+      "n_above_cap": 15
+    },
+    "clinical": {
+      "weights": {
+        "G": 0.25,
+        "I": 0.15,
+        "L": 0.5,
+        "E": 0.1
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.8583333333333333,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.874478125,
+      "n_above_cap": 16
+    },
+    "engineering": {
+      "weights": {
+        "G": 0.3,
+        "I": 0.2,
+        "L": 0.1,
+        "E": 0.4
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.85,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.8814750000000001,
+      "n_above_cap": 19
+    },
+    "social": {
+      "weights": {
+        "G": 0.2,
+        "I": 0.2,
+        "L": 0.45,
+        "E": 0.15
+      },
+      "n_answered": 120,
+      "n_abstained_MR1": 0,
+      "selective_accuracy_on_answered": 0.8583333333333333,
+      "coverage": 1.0,
+      "mean_gile_composite": 0.8699604166666667,
+      "n_above_cap": 13
+    }
+  },
+  "uop_cap_test_primary": {
+    "n_answered": 120,
+    "selective_accuracy": 0.8583333333333333,
+    "mean_gile_composite": 0.8571333333333333,
+    "n_above_cap": 10,
+    "aurc_baseline_rank_by_gile": 0.0866610995687927,
+    "aurc_uop_overreach_penalty": 0.0866610995687927,
+    "aurc_uop_minus_baseline": 0.0,
+    "uop_better": false,
+    "scrambled_cap_aurc_min": 0.0866610995687927,
+    "scrambled_cap_aurc_mean": 0.1285479357345417,
+    "scrambled_cap_aurc_max": 0.21992636442655297,
+    "frac_scrambled_caps_better_than_G_star": 0.0,
+    "high_gile_tail_>cap_accuracy": 1.0,
+    "high_gile_tail_n": 10,
+    "extreme_gile_is_anti_predictive": false,
+    "selective_acc_baseline": {
+      "0.1": 1.0,
+      "0.2": 0.9583333333333334,
+      "0.5": 0.8833333333333333,
+      "0.8": 0.875,
+      "1.0": 0.8583333333333333
+    },
+    "selective_acc_uop": {
+      "0.1": 1.0,
+      "0.2": 0.9583333333333334,
+      "0.5": 0.8833333333333333,
+      "0.8": 0.875,
+      "1.0": 0.8583333333333333
+    },
+    "asymmetric_cost_decisions": {
+      "cost_2": {
+        "P1_gile_threshold": {
+          "cost": 2.0,
+          "threshold": 0.7162499999999999,
+          "test_utility": 0.5166666666666667,
+          "test_coverage": 0.9666666666666667,
+          "test_selective_acc": 0.8448275862068966
+        },
+        "P3_uop": {
+          "cost": 2.0,
+          "threshold": 0.7162499999999999,
+          "test_utility": 0.5166666666666667,
+          "test_coverage": 0.9666666666666667,
+          "test_selective_acc": 0.8448275862068966
+        }
+      },
+      "cost_4": {
+        "P1_gile_threshold": {
+          "cost": 4.0,
+          "threshold": 0.7162499999999999,
+          "test_utility": 0.21666666666666667,
+          "test_coverage": 0.9666666666666667,
+          "test_selective_acc": 0.8448275862068966
+        },
+        "P3_uop": {
+          "cost": 4.0,
+          "threshold": 0.7162499999999999,
+          "test_utility": 0.21666666666666667,
+          "test_coverage": 0.9666666666666667,
+          "test_selective_acc": 0.8448275862068966
+        }
+      },
+      "cost_9": {
+        "P1_gile_threshold": {
+          "cost": 9.0,
+          "threshold": 0.8652500000000001,
+          "test_utility": -0.5666666666666667,
+          "test_coverage": 0.6,
+          "test_selective_acc": 0.8055555555555556
+        },
+        "P3_uop": {
+          "cost": 9.0,
+          "threshold": 0.8652500000000001,
+          "test_utility": -0.5666666666666667,
+          "test_coverage": 0.6,
+          "test_selective_acc": 0.8055555555555556
+        }
+      }
+    }
+  }
+}
