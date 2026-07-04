@@ -24,6 +24,8 @@ The corpus posits a **Radiant Cap** `G* = √(1 − e⁻²) ≈ 0.92987` (Born-s
 
 ## 2. Faithful GILE operationalization
 
+> **METHOD RE-TAG (B187, 2026-07-04):** the 16-sub-dimension scheme below is the **pre-GSN-1** operationalization. Under the later **GSN-1** refinement (B187) *only G decomposes* (the Four C's); **I, L, E are single notes** scored directly on [0,1], so `I_raw/L_raw/E_raw` are **no longer the mean of four sub-dims** (`G_raw = mean(Four C's)` is retained). This B186 test was run under the mean-of-4 method. **The HONEST NEGATIVE here is *expected* to be robust** to the change — its decisive quantity (AURC) depends only on the *ranking* of retained scores, and its mechanism check (>cap tail 100% correct) is independent of I/L/E granularity — **but it has NOT been re-run** under single-note scoring, so this is a stated expectation, not a demonstrated invariance. See `papers/PASS_77_B187_GILE_SINGLE_NOTE_REFINEMENT_ONLY_G_DECOMPOSES_FOUR_CS_UNDER_G_CANONICAL_AND_SHORT_STATEMENTS_2026-07-04.md`.
+
 For each question we present **all** MC1 options and ask gpt-5 to rate **every option** on the **16 canonical sub-dimensions** (URB #652), each in [0,1], with rubric anchors supplied in-prompt:
 
 - **G — Four C's (URB #600):** C1 Coherence, C2 Concreteness, C3 Continuity (life-preservation), C4 Consistency.
