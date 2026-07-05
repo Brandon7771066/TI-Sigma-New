@@ -3,9 +3,9 @@ name: FTE-1 Fundamental Tension Between Truth and Existence
 description: What FTE-1 names, what's genuinely new vs already-canonical, and its honest soft spot (the knownness-floor).
 ---
 
-# FTE-1 — Fundamental Tension Between Truth and Existence (candidate)
+# FTE-1 — Fundamental Tension Between Truth and Existence (CANONICAL #81)
 
-User-named concept, put in the book at the user's request. It is a **candidate, framework-internal, NOT ratified** — the canonical principle count stays 80 (naming + consolidation does not increment). Ratification to a numbered principle is a SEPARATE step the user has not requested.
+User-named concept, put in the book at the user's request. **RATIFIED → canonical principle #81 on 2026-07-04 (B189)** (named B188). Ratification incremented the count 80→81 (ratifications DO increment; refinements/renames/candidates do NOT). All 4 falsifiers remain OPEN; the leg-(d) knownness-floor soft spot (FTE-1-F2) is preserved as the #69 honest weak point even post-ratification.
 
 ## The rule
 FTE-1 is the metaphysical **source-condition**; the **Compromise** (UOP/SUP-1) is the agent's **response** to it. Keep them DISTINCT (terrain vs path) — treating the 0.93 cap as the metaphysical fact is a category error. Four legs:

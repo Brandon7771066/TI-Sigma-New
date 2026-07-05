@@ -7,9 +7,10 @@ description: What the real-data gate-first tests of the LCC index / Radiant Cap 
 
 **Decision rule (pre-committed).** Pipeline = `group-signal gate → surrogate gate → LCC index (CV) → threshold → UOP/cap`. Every coupling metric must be **surrogate-corrected** (`ΔC = C_real − C_matched_surrogate`). **Do NOT test constants (√2−1, 0.437, cos²(π/8), radiant_cap √(1−e⁻²)) or the cap until all three pass:** (1) group-signal present, (2) real beats surrogate AND the *surrogate-corrected* signal still separates the outcome, (3) `L_hybrid` beats raw `C` in CV. Otherwise record an honest negative and move on.
 
-## Outcome so far: two independent real-data negatives
+## Outcome so far: three independent real-data negatives
 - **OpenNeuro dual-EEG hyperscanning** — negative on every phase; inter-brain coupling consistent with common-input, not interaction-specific. (Detail: `lcc-uop-hyperscanning-empirical-test.md`.)
 - **Depresjon actigraphy** (within-person circadian rhythm coupling → depression) — *partial* negative: a real actigraphy→depression signal exists (group-signal gate passes), but the surrogate-corrected coupling does NOT track depression and the hybrid index is *worse* than raw features. Constants gated out. Code: `analyses/lcc_depresjon/`.
+- **User↔chatbot dialogue** (hh-rlhf + mt_bench, B189) — clean null: C+RAS≈C_only, hybrid ≤ chance. **New twist: the synthetic method-validation itself FAILED** (RAS misses ground-truth reciprocal coupling p=0.16 yet fires on common-input p<0.001) ⇒ the null is *explained* by the instrument, not merely observed. mt_bench too short (2 turns/speaker) to test at all. (Detail: `lcc-dialogue-tests.md`.)
 
 ## Durable lessons (not derivable from code)
 - **The LCC hybrid AGGREGATION is a liability, not a feature.** On both datasets raw single features (or a plain multi-feature model) beat the `Λ=α·Σwᵢxᵢ+(1−α)·∏xᵢ^wᵢ` scalar — the aggregation can even invert the signal. Any future "L beats raw C" claim must clear this bar first.

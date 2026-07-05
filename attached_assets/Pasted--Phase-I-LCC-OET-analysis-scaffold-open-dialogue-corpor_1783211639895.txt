@@ -1,0 +1,348 @@
+"""
+Phase I LCC/OET analysis scaffold: open dialogue corpora.
+
+Purpose:
+Test whether reciprocal adaptive synchronization (RAS) in multi-turn conversations
+predicts conversational success/coherence better than simple semantic similarity.
+
+Recommended datasets:
+1. DailyDialog / DailyDialog++ for human-human daily-life dialogue with emotion and dialog-act labels.
+2. MultiWOZ for task-oriented human-human Wizard-of-Oz dialogue with task structure.
+3. LMSYS Chatbot Arena Conversations for human-AI conversations with pairwise preference labels.
+4. LMSYS-Chat-1M for large-scale real-world human-LLM conversations.
+
+Core metric:
+RAS = sqrt(P_A_to_B * P_B_to_A)
+
+Where P_A_to_B measures how much speaker A's recent behavior improves prediction
+of speaker B's next turn beyond B's own history, and symmetrically for P_B_to_A.
+
+Install:
+pip install datasets sentence-transformers scikit-learn pandas numpy scipy matplotlib
+
+Example:
+python phase1_lcc_dialogue_pipeline.py --dataset daily_dialog --max_dialogues 5000
+"""
+
+import argparse
+import json
+import math
+from dataclasses import dataclass
+from typing import List, Dict, Any, Optional
+
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import Ridge, LogisticRegression
+from sklearn.metrics import mean_squared_error, accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+
+
+# -----------------------------
+# Constants / thresholds
+# -----------------------------
+
+PHI = (1 + np.sqrt(5)) / 2
+
+THRESHOLDS = {
+    "sqrt2_minus_1_recursive_onset": np.sqrt(2) - 1,
+    "golden_orthogonal_C_balanced_onset": 1 / (np.sqrt(2) * PHI),
+    "sync_0_6_stable_bidirectional": 0.6,
+    "sqrt2_over_2_majority_structure": np.sqrt(2) / 2,
+    "classical_0_75_separable_ceiling": 0.75,
+    "CHSH_cos2_pi8_nonseparable": np.cos(np.pi / 8) ** 2,
+    "Radiant_Cap_UOP": np.sqrt(1 - np.exp(-2)),
+}
+
+
+# -----------------------------
+# Embeddings
+# -----------------------------
+
+def embed_texts(texts: List[str], model_name: str = "sentence-transformers/all-MiniLM-L6-v2") -> np.ndarray:
+    from sentence_transformers import SentenceTransformer
+    model = SentenceTransformer(model_name)
+    return model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+
+
+# -----------------------------
+# Conversation parsing
+# -----------------------------
+
+@dataclass
+class Turn:
+    speaker: str
+    text: str
+    meta: Dict[str, Any]
+
+
+def normalize_daily_dialog(example: Dict[str, Any]) -> Dict[str, Any]:
+    # Hugging Face daily_dialog generally has `dialog`, `act`, `emotion`.
+    turns = []
+    dialog = example.get("dialog", [])
+    acts = example.get("act", [None] * len(dialog))
+    emotions = example.get("emotion", [None] * len(dialog))
+    for i, text in enumerate(dialog):
+        speaker = "A" if i % 2 == 0 else "B"
+        turns.append(Turn(speaker=speaker, text=text, meta={
+            "act": acts[i] if i < len(acts) else None,
+            "emotion": emotions[i] if i < len(emotions) else None,
+        }))
+    return {"turns": turns, "outcome": None, "dataset": "daily_dialog"}
+
+
+def normalize_lmsys_conversation(example: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    # LMSYS-Chat-1M has conversation text in OpenAI-style JSON in many mirrors.
+    conv = example.get("conversation") or example.get("conversations") or example.get("conversation_a")
+    if conv is None:
+        return None
+    if isinstance(conv, str):
+        try:
+            conv = json.loads(conv)
+        except Exception:
+            return None
+
+    turns = []
+    for msg in conv:
+        role = msg.get("role") or msg.get("from")
+        content = msg.get("content") or msg.get("value") or ""
+        if not content:
+            continue
+        speaker = "A" if role in ("user", "human") else "B"
+        turns.append(Turn(speaker=speaker, text=content, meta={"role": role}))
+
+    if len(turns) < 4:
+        return None
+
+    # Chatbot Arena preference data may include winner/vote columns.
+    outcome = (
+        example.get("winner") or
+        example.get("vote") or
+        example.get("preference") or
+        None
+    )
+    return {"turns": turns, "outcome": outcome, "dataset": "lmsys"}
+
+
+# -----------------------------
+# LCC metrics
+# -----------------------------
+
+def cosine(a: np.ndarray, b: np.ndarray) -> float:
+    denom = (np.linalg.norm(a) * np.linalg.norm(b)) + 1e-12
+    return float(np.dot(a, b) / denom)
+
+
+def semantic_alignment(embeddings: np.ndarray) -> float:
+    if len(embeddings) < 2:
+        return np.nan
+    vals = [cosine(embeddings[i], embeddings[i+1]) for i in range(len(embeddings)-1)]
+    return float(np.nanmean(vals))
+
+
+def adaptation_slope(embeddings: np.ndarray) -> float:
+    """
+    Measures whether adjacent-turn similarity rises through the conversation.
+    Positive slope = increasing alignment/coherence over time.
+    """
+    if len(embeddings) < 4:
+        return np.nan
+    vals = np.array([cosine(embeddings[i], embeddings[i+1]) for i in range(len(embeddings)-1)])
+    x = np.arange(len(vals))
+    if np.std(vals) == 0:
+        return 0.0
+    slope = np.polyfit(x, vals, 1)[0]
+    # Squash into [0,1] approximately.
+    return float(1 / (1 + np.exp(-10 * slope)))
+
+
+def predictive_gain_direction(embeddings: np.ndarray, speakers: List[str], source: str, target: str) -> float:
+    """
+    Estimate whether source's latest embedding improves prediction of target's next embedding
+    beyond target's own latest embedding.
+
+    We construct examples at every target turn t:
+    - y = embedding(target turn at t)
+    - self = previous embedding from target
+    - cross = previous embedding from source
+    """
+    rows_self = []
+    rows_cross = []
+    y = []
+
+    last_by_speaker = {}
+    for i, spk in enumerate(speakers):
+        if spk == target and source in last_by_speaker and target in last_by_speaker:
+            rows_self.append(last_by_speaker[target])
+            rows_cross.append(np.concatenate([last_by_speaker[target], last_by_speaker[source]]))
+            y.append(embeddings[i])
+        last_by_speaker[spk] = embeddings[i]
+
+    if len(y) < 4:
+        return np.nan
+
+    X_self = np.vstack(rows_self)
+    X_cross = np.vstack(rows_cross)
+    Y = np.vstack(y)
+
+    # small sample split; for real paper use KFold or nested CV
+    idx = np.arange(len(Y))
+    train, test = train_test_split(idx, test_size=0.35, random_state=42)
+
+    m_self = make_pipeline(StandardScaler(), Ridge(alpha=1.0)).fit(X_self[train], Y[train])
+    m_cross = make_pipeline(StandardScaler(), Ridge(alpha=1.0)).fit(X_cross[train], Y[train])
+
+    e_self = mean_squared_error(Y[test], m_self.predict(X_self[test]))
+    e_cross = mean_squared_error(Y[test], m_cross.predict(X_cross[test]))
+    if e_self <= 0:
+        return np.nan
+    return float(max(0, (e_self - e_cross) / e_self))
+
+
+def compute_lcc_for_conversation(turns: List[Turn], embeddings: np.ndarray) -> Dict[str, float]:
+    speakers = [t.speaker for t in turns]
+    C = semantic_alignment(embeddings)
+    S = adaptation_slope(embeddings)
+
+    p_ab = predictive_gain_direction(embeddings, speakers, source="A", target="B")
+    p_ba = predictive_gain_direction(embeddings, speakers, source="B", target="A")
+
+    if np.isnan(p_ab) or np.isnan(p_ba):
+        P = np.nan
+    else:
+        P = float(np.sqrt(p_ab * p_ba))
+
+    # A minimal Phase-I LCC/RAS score.
+    usable = [x for x in [C, S, P] if not np.isnan(x)]
+    L_add = float(np.mean(usable)) if usable else np.nan
+
+    # Geometric term penalizes missing/weak components.
+    if usable:
+        L_geo = float(np.prod([max(x, 1e-6) for x in usable]) ** (1 / len(usable)))
+        L_hybrid = 0.5 * L_add + 0.5 * L_geo
+    else:
+        L_geo = np.nan
+        L_hybrid = np.nan
+
+    return {
+        "C_semantic_alignment": C,
+        "S_adaptation_slope": S,
+        "P_A_to_B": p_ab,
+        "P_B_to_A": p_ba,
+        "RAS_bidirectional_predictive_gain": P,
+        "L_add": L_add,
+        "L_geo": L_geo,
+        "L_hybrid": L_hybrid,
+        "n_turns": len(turns),
+    }
+
+
+# -----------------------------
+# Threshold tests
+# -----------------------------
+
+def threshold_counts(df: pd.DataFrame, score_col: str = "L_hybrid") -> pd.DataFrame:
+    rows = []
+    for name, tau in THRESHOLDS.items():
+        rows.append({
+            "threshold": name,
+            "tau": tau,
+            "n_above": int((df[score_col] >= tau).sum()),
+            "n_below": int((df[score_col] < tau).sum()),
+        })
+    return pd.DataFrame(rows)
+
+
+def piecewise_outcome_test(df: pd.DataFrame, outcome_col: str, score_col: str = "L_hybrid") -> pd.DataFrame:
+    """
+    Works when outcome_col is numeric or binary.
+    For text labels, pre-map to numeric before calling.
+    """
+    clean = df[[score_col, outcome_col]].dropna().copy()
+    if len(clean) < 30:
+        return pd.DataFrame()
+
+    y = clean[outcome_col].values.astype(float)
+    x = clean[score_col].values
+
+    base_X = x.reshape(-1, 1)
+    base = Ridge(alpha=1.0).fit(base_X, y)
+    base_mse = mean_squared_error(y, base.predict(base_X))
+
+    rows = []
+    for name, tau in THRESHOLDS.items():
+        X = np.column_stack([x, (x >= tau).astype(float), x * (x >= tau).astype(float)])
+        model = Ridge(alpha=1.0).fit(X, y)
+        mse = mean_squared_error(y, model.predict(X))
+        rows.append({
+            "threshold": name,
+            "tau": tau,
+            "base_mse": base_mse,
+            "piecewise_mse": mse,
+            "improvement": base_mse - mse,
+        })
+    return pd.DataFrame(rows).sort_values("improvement", ascending=False)
+
+
+# -----------------------------
+# Dataset runners
+# -----------------------------
+
+def run_daily_dialog(max_dialogues: int = 1000, split: str = "train") -> pd.DataFrame:
+    from datasets import load_dataset
+
+    ds = load_dataset("daily_dialog", split=split)
+    if max_dialogues:
+        ds = ds.select(range(min(max_dialogues, len(ds))))
+
+    all_texts = []
+    normalized = []
+    for ex in ds:
+        conv = normalize_daily_dialog(ex)
+        normalized.append(conv)
+        all_texts.extend([t.text for t in conv["turns"]])
+
+    all_emb = embed_texts(all_texts)
+    pointer = 0
+    rows = []
+    for i, conv in enumerate(normalized):
+        n = len(conv["turns"])
+        emb = all_emb[pointer:pointer+n]
+        pointer += n
+        metrics = compute_lcc_for_conversation(conv["turns"], emb)
+
+        # DailyDialog has no task-success outcome, so use internal labels as exploratory outcomes.
+        # Example: emotional volatility or act diversity can be added here.
+        emotions = [t.meta.get("emotion") for t in conv["turns"] if t.meta.get("emotion") is not None]
+        acts = [t.meta.get("act") for t in conv["turns"] if t.meta.get("act") is not None]
+        metrics.update({
+            "dialogue_id": i,
+            "dataset": "daily_dialog",
+            "emotion_diversity": len(set(emotions)) if emotions else np.nan,
+            "act_diversity": len(set(acts)) if acts else np.nan,
+        })
+        rows.append(metrics)
+
+    return pd.DataFrame(rows)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset", default="daily_dialog", choices=["daily_dialog"])
+    parser.add_argument("--max_dialogues", type=int, default=500)
+    parser.add_argument("--out", default="phase1_lcc_dialogue_results.csv")
+    args = parser.parse_args()
+
+    if args.dataset == "daily_dialog":
+        df = run_daily_dialog(max_dialogues=args.max_dialogues)
+
+    df.to_csv(args.out, index=False)
+    print(df.describe(include="all"))
+    print("\nThreshold counts:")
+    print(threshold_counts(df).to_string(index=False))
+    print(f"\nSaved: {args.out}")
+
+
+if __name__ == "__main__":
+    main()
