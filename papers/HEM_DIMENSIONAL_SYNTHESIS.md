@@ -3,7 +3,9 @@
 
 Author: Brandon Emerick | TI Framework
 Date: December 20, 2025
-Status: FOUNDATIONAL SYNTHESIS
+Status: HISTORICAL / ORIGIN (Dec 2025)
+
+> **⚠️ SUPERSEDED AS THE HEM OVERVIEW (2026-07-05).** The current overview of the HEM dimensions is `papers/HEM_DIMENSIONS_8D_OVERVIEW_2026-07-05.md`. This document is preserved as the historical origin. Two of its central claims are no longer canon: (1) the "all dimensions reduce to **L × E**" thesis is **retired** (`L × E` refuted B4; the pillars are kept separate, composition is now `J = f(G) + g(H)`); (2) the GILE weights here (40/25/25/10) are **superseded** by the canonical `.4142 / .25 / .18 / .15` (URB #576). Its §5 measurement zones and the 6D→4D reduction rationale carry over. See the new overview §7 for the full carried-over-vs-retired ledger.
 
 ---
 
