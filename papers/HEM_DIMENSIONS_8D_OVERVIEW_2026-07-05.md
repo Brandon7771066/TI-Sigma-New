@@ -11,7 +11,7 @@
 
 This document is an **overview**, not a new principle. Three honesty flags apply throughout and are spelled out in §7:
 
-1. **"Spectrum exhaustion" is not a pre-existing term in the corpus.** Before this overview, a full-text search (`rg`) returned **zero hits** for "spectrum exhaustion" / "spectral exhaustion" anywhere in the corpus (the phrase now appears only inside this document and its `replit.md` cross-ref). The real, code-backed metric the phrase most plausibly refers to is **HEM-D3 spectral purity** (`dominant-frequency power / total power`), with the closely related **spectral entropy** used for GILE-I. Rather than invent a definition for a term that did not exist, §3.3 states the actual metrics and notes the terminology gap. If "spectrum exhaustion" is meant to name something *else*, it needs a first definition — it was not in the corpus prior to this document.
+1. **"Spectrum exhaustion" is not a pre-existing term in the corpus.** Before this overview, a full-text search (`rg`) returned **zero hits** for "spectrum exhaustion" / "spectral exhaustion" anywhere in the corpus (the phrase now appears only inside this document and its `replit.md` cross-ref). The real, code-backed metric the phrase most plausibly refers to is **HEM-D3 spectral purity** (`dominant-frequency power / total power`), with the closely related **spectral entropy** used for GILE-I. Rather than invent a definition for a term that did not exist, §3.3 states the actual metrics and notes the terminology gap. If "spectrum exhaustion" is meant to name something *else*, it needs a first definition — it was not in the corpus prior to this document. **RESOLVED (B190, 2026-07-06):** Brandon defined it — "spectrum exhaustion" = the third leg of the **truth-label validation battery** (does the label/dimension set jointly cover/exhaust its spectrum: silhouette clustering for labels, candidate-extra-axis unique-variance probe for dimensions), NOT D3 spectral purity. The D3 guess in this paragraph is withdrawn as the phrase's referent; see `papers/PASS_77_B190_GILE_HEM_DIMENSIONS_TRUTH_LABEL_BATTERY_PILOT_FLEISS_MI_SPECTRUM_EXHAUSTION_2026-07-06.md`.
 2. **The "everything reduces to L × E" thesis of the 2025 synthesis is retired.** Per canon (`replit.md`, LCC composition ruling), the multiplicative `L × E` form was **refuted (B4, multiplicative cancellation)** and replaced by the additive asymmetric-cap UOP composition `J(G,H) = f(G) + g(H)`. The two pillars (Truth = GILE, Existence = HEM) are kept **separate**, not collapsed to one 2D product.
 3. **"HEM" has two distinct historical senses.** Current canon: **HEM = the Holistic Existence** pillar/matrix (the "how much is there" existence-content axis; the code calls its scalar the *Holistic Existence Score*). Legacy: in the Nov-2025 `TRALSEBIT_DIMENSIONAL_ARCHITECTURE.md`, "HEM" abbreviated **Heart-EEG-Mendi** (a biometric *device* triad). These are different referents; this overview uses only the current sense.
 
@@ -64,13 +64,13 @@ All formulas below are transcribed from `lcc_virus_gile_inference.py` (i-cell / 
 - **DT gate:** `D2 > 0.65 → Double-Tralse (MI) risk` → pause and flag for human review (MR Level-1 screen).
 - **Reading:** D2 is the one HEM dimension that is **inverted** in the aggregate score (high contradiction → low existence quality).
 
-### 3.3 HEM-D3 — Aesthetic-Structural (spectral purity) — *the "spectrum exhaustion" metric*
+### 3.3 HEM-D3 — Aesthetic-Structural (spectral purity)
 
 - **Metric (EEG / i-cell):** **spectral purity** = `dominant-frequency power / total power`.
   `D3 = P(f_dominant) / Σ P(f)`. High D3 = clean, structured, single-tone signal; low D3 = noisy / diffuse.
 - **Related metric (used for GILE-I, not D3):** **normalized spectral entropy** of the noise residual — `H = −Σ pᵢ ln pᵢ`, normalized by `ln N`. High entropy = rich multi-frequency structure.
 - **Metric (market):** technical-pattern quality (clean-chart proxy).
-- **Terminology honesty:** the phrase *"spectrum exhaustion"* does not appear in the corpus. Spectral **purity** (concentration of power in the dominant peak) and spectral **entropy** (spread of power across the spectrum) are the two real, opposite-signed spectral metrics in the code. "Spectrum exhaustion" is *not defined anywhere*; treat this section as the closest verified referent, not as a rename.
+- **Terminology honesty (updated B190):** *"spectrum exhaustion"* is NOT this metric — it is the coverage/exhaustion leg of the truth-label validation battery (§0 flag 1, RESOLVED). Spectral **purity** (concentration of power in the dominant peak) and spectral **entropy** (spread of power across the spectrum) are the two real, opposite-signed spectral metrics in the code.
 
 ### 3.4 HEM-D4 — Conscious-Experiential (coherence velocity)
 
@@ -176,7 +176,7 @@ The corpus contains **two** D1–D4 schemes. Both are real; they are different v
 
 ## 8. Open items / falsifiers
 
-- **Terminology:** "spectrum exhaustion" was undefined pre-this-overview — needs a first definition or confirmation it means D3 spectral purity (§3.3).
+- **Terminology:** RESOLVED (B190, 2026-07-06) — "spectrum exhaustion" = the coverage/exhaustion leg of the truth-label validation battery (§0 flag 1), not D3 spectral purity.
 - **Aggregation drift:** the market ESV (weighted, no D2 inversion / no D4 peaking) and the i-cell/EEG HEM score (equal weights, D2 inverted, D4 peaked) are unreconciled (§4.1) — driven by domain-specific D2/D4 orientation.
 - **GILE weight drift:** three GILE weight sets in-repo (canonical URB #576, market-tuned `gsa_core`, legacy synthesis) — only URB #576 canonical (§4.2).
 - **Labeling drift:** operational vs. 6D-synthesis D1–D4 (§6) unreconciled.

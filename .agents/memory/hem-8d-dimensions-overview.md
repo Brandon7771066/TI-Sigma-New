@@ -14,7 +14,7 @@ description: The 4 HEM existence dimensions, their real code metrics, and the cr
 - **D4 Conscious-Experiential** — `d(LCC)/dt` coherence velocity (EEG) / momentum-of-momentum (market).
 
 ## Honest flags that MUST accompany any HEM overview
-- **"Spectrum exhaustion" is NOT a corpus term** (0 hits pre-overview). The real metric is **D3 spectral purity**; spectral *entropy* (different, opposite-signed) is used for GILE-I. Don't invent a definition for it.
+- **"Spectrum exhaustion" (CORRECTED B190, 2026-07-06):** Brandon defined it = the coverage/exhaustion leg of the **truth-label validation battery** (Fleiss κ + MI + coverage; silhouette for labels, extra-axis unique-variance probe for dimensions) — NOT D3 spectral purity (earlier guess withdrawn in the overview §0). Spectral *entropy* (different, opposite-signed) is used for GILE-I.
 - **Two HEM aggregations, genuinely unreconciled** — NOT just different weights but different D2/D4 *orientation handling*:
   - `gsa_core.py` ESV (market): `0.25·D1+0.25·D2+0.30·D3+0.20·D4` — **no** D2 inversion, **no** D4 peaking (its D2=52W-pos, D4=momentum-sigmoid already higher=better).
   - `lcc_virus_gile_inference.py` (EEG): `[D1+(1−D2)+D3+(1−2|D4−0.5|)]/4` equal weights — **D2 inverted, D4 peaked at 0.5**.
