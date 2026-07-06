@@ -1,0 +1,77 @@
+Excellent. Replit’s changes put the app in the right commercial direction: **truth-label triage + report generation**, not “automatic proof of a bug.”
+
+Your new `truth_engine.py` now has the core pieces I’d want: sharper N/A/MI/Indeterminate definitions, claim+source context wrapping, strict JSON parsing, consensus voting, and a clearly marked non-validated triage score. 
+
+## Next refinements
+
+1. **Use `build_claim_block()` inside `evaluate_single()` and `evaluate_consensus()`**
+   The function exists, but the current functions still accept only `claim` and use `PROMPT + claim.strip()`. Add optional `context` arguments so app context always reaches raters.
+
+2. **Add a “citation needed” flag**
+   If authority-loading > 0.7 and source/context is empty, flag: “High authority dependence without source.”
+
+3. **Add report types**
+   Separate:
+
+   * hallucination report
+   * unsafe advice report
+   * self-contradiction report
+   * citation-fabrication report
+   * N/A/unanswerable report
+
+4. **Add calibration logging**
+   Save every evaluation to a CSV/JSONL with:
+
+   * claim
+   * label votes
+   * axes
+   * rater spread
+   * final human outcome
+     This becomes your evidence base.
+
+5. **Add “submit / do not submit” heuristic**
+   Example:
+
+   * submit if label = FALSE or MI
+   * triage score ≥ 0.65
+   * rater consensus ≥ 2/3
+   * reproducible by you
+
+## Immediate money plan
+
+Use the app on **AI safety bug bounties and eval datasets**.
+
+Your first target should be **fabricated citations / false authoritative claims**, because your axes fit that perfectly:
+
+* FALSE label
+* high authority-loading
+* high hallucination risk
+* clear reproduction steps
+* easy human verification
+
+## One small code fix
+
+Change:
+
+```python
+def evaluate_single(claim: str, provider_model=DEFAULT_SINGLE) -> TruthEvaluation:
+```
+
+to:
+
+```python
+def evaluate_single(claim: str, context: dict | None = None, provider_model=DEFAULT_SINGLE) -> TruthEvaluation:
+    provider, model = provider_model
+    claim_block = build_claim_block(claim, context)
+    prompt = PROMPT + claim_block
+```
+
+And similarly:
+
+```python
+def evaluate_consensus(claim: str, context: dict | None = None) -> ConsensusEvaluation:
+    claim_block = build_claim_block(claim, context)
+    prompt = PROMPT + claim_block
+```
+
+That ensures your new claim+source mode actually affects evaluation.

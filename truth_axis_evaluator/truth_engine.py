@@ -103,16 +103,117 @@ def triage_score(ev, impact: float = 0.5) -> float:
     return round((hallucination_risk + ev.pd_modality + ev.authority_loading + max(0.0, min(1.0, impact))) / 4.0, 3)
 
 
-def evaluate_single(claim: str, provider_model=DEFAULT_SINGLE) -> TruthEvaluation:
+def citation_flag(ev, context: dict | None = None) -> str | None:
+    """Item-2 flag: high authority dependence with no source/context supplied."""
+    has_source = bool(context and (context.get("source") or "").strip())
+    if ev.authority_loading > 0.7 and not has_source:
+        return ("High authority dependence without source: this claim leans heavily on "
+                "trusting an authority (authority-loading > 0.7) but no source/reference "
+                "context was provided — citation needed before acting on the label.")
+    return None
+
+
+def submit_recommendation(label: str, triage: float, consensus_votes: dict | None,
+                          reproducible: bool) -> tuple[bool, list[str]]:
+    """HEURISTIC submit / do-not-submit gate — NOT battery-validated.
+
+    Submit iff: label in {FALSE, META_INDETERMINATE}, triage >= 0.65,
+    rater consensus >= 2/3 (or single-rater mode explicitly noted), and
+    the human confirms reproducibility.
+    """
+    reasons = []
+    if label not in ("FALSE", "META_INDETERMINATE"):
+        reasons.append(f"label is {label}, not FALSE/MI")
+    if triage < 0.65:
+        reasons.append(f"triage score {triage:.2f} < 0.65")
+    if consensus_votes is not None:
+        top = max(consensus_votes.values()) if consensus_votes else 0
+        if top < 2:
+            reasons.append("no >=2/3 rater consensus")
+    else:
+        reasons.append("single-rater mode (consensus not checked — softer signal)")
+    if not reproducible:
+        reasons.append("not confirmed reproducible by you")
+    return (len(reasons) == 0, reasons)
+
+
+CALIBRATION_LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "calibration_log.jsonl")
+
+
+def log_calibration(claim: str, result, triage: float, context: dict | None = None,
+                    human_outcome: str | None = None) -> dict:
+    """Item-4 calibration logging: append every evaluation (and later, the human
+    outcome) to a JSONL evidence base. Entries carry a UUID; append is flock-guarded."""
+    import datetime
+    import fcntl
+    import uuid
+    d = result.model_dump()
+    entry = {
+        "id": str(uuid.uuid4()),
+        "ts": datetime.datetime.utcnow().isoformat() + "Z",
+        "claim": claim,
+        "label": d.get("label"),
+        "label_votes": d.get("label_votes"),
+        "axes": {a: d.get(a) for a in ("pd_degree", "pd_modality", "tau_delta", "authority_loading")},
+        "axis_spread": d.get("axis_spread"),
+        "raters": d.get("raters", ["single"]),
+        "triage_score": triage,
+        "context": {k: v for k, v in (context or {}).items() if v},
+        "human_outcome": human_outcome,  # filled in later via update_human_outcome
+    }
+    with open(CALIBRATION_LOG, "a") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            f.write(json.dumps(entry, default=str) + "\n")
+            f.flush()
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+    return entry
+
+
+def update_human_outcome(outcome: str, entry_id: str) -> bool:
+    """Attach the final human outcome to the calibration entry with the given id.
+
+    ID-targeted (never 'last line' — batch rows may have been appended since) and
+    flock-guarded read-modify-write to avoid lost updates across sessions.
+    """
+    import fcntl
+    if not entry_id or not os.path.exists(CALIBRATION_LOG):
+        return False
+    with open(CALIBRATION_LOG, "r+") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            lines = [ln for ln in f.read().splitlines() if ln.strip()]
+            found = False
+            for i, ln in enumerate(lines):
+                rec = json.loads(ln)
+                if rec.get("id") == entry_id:
+                    rec["human_outcome"] = outcome
+                    lines[i] = json.dumps(rec, default=str)
+                    found = True
+                    break
+            if not found:
+                return False
+            f.seek(0)
+            f.truncate()
+            f.write("\n".join(lines) + "\n")
+            f.flush()
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+    return True
+
+
+def evaluate_single(claim: str, context: dict | None = None,
+                    provider_model=DEFAULT_SINGLE) -> TruthEvaluation:
     provider, model = provider_model
-    prompt = PROMPT + claim.strip()
+    prompt = PROMPT + build_claim_block(claim, context)
     raw = _call_openai(model, prompt) if provider == "openai" else _call_anthropic(model, prompt)
     return _strict_parse(raw)
 
 
-def evaluate_consensus(claim: str) -> ConsensusEvaluation:
+def evaluate_consensus(claim: str, context: dict | None = None) -> ConsensusEvaluation:
     """3-rater consensus — the configuration the battery numbers actually certify."""
-    prompt = PROMPT + claim.strip()
+    prompt = PROMPT + build_claim_block(claim, context)
     results: dict[str, TruthEvaluation] = {}
     failed: list[str] = []
 

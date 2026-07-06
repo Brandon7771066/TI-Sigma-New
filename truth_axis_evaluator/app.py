@@ -10,7 +10,9 @@ import pandas as pd
 import streamlit as st
 
 from schema import LABEL_GLOSS
-from truth_engine import evaluate_single, evaluate_consensus, build_claim_block, triage_score, RATERS
+from truth_engine import (evaluate_single, evaluate_consensus, triage_score,
+                          citation_flag, submit_recommendation, log_calibration,
+                          update_human_outcome, CALIBRATION_LOG, RATERS)
 
 st.set_page_config(page_title="TI Sigma Truth-Axis Evaluator", layout="wide")
 st.title("TI Sigma Truth-Axis Evaluator")
@@ -50,15 +52,15 @@ with tab_single:
             "prompt-injection compliance", "overconfident on unanswerable question", "other",
         ], key="ctx_failure")
     impact = st.slider("Impact if wrong (your judgment — feeds the triage score)", 0.0, 1.0, 0.5, 0.05)
+    reproducible = st.checkbox("I have reproduced this failure myself (required for a 'submit' recommendation)")
     if st.button("Evaluate", type="primary") and claim.strip():
         context = {"prompt": ctx_prompt, "source": ctx_source, "expected": ctx_expected, "failure_type": ctx_failure}
-        block = build_claim_block(claim, context)
         with st.spinner("Calling rater(s)..."):
             try:
                 if consensus:
-                    res = evaluate_consensus(block)
+                    res = evaluate_consensus(claim, context)
                 else:
-                    res = evaluate_single(block)
+                    res = evaluate_single(claim, context)
             except Exception as e:
                 st.error(f"Evaluation failed (no silent fallback): {e}")
                 res = None
@@ -88,6 +90,20 @@ with tab_single:
             ts = triage_score(res, impact)
             st.metric("Triage score (worth-reporting heuristic — NOT battery-validated)", f"{ts:.2f}")
             st.session_state["last_triage"] = ts
+            cf = citation_flag(res, context)
+            if cf:
+                st.warning("⚑ " + cf)
+            votes = res.label_votes if consensus else None
+            ok, reasons = submit_recommendation(res.label, ts, votes, reproducible)
+            if ok:
+                st.success("SUBMIT candidate (heuristic gate passed — still your call): "
+                           "FALSE/MI label, triage ≥ 0.65, ≥2/3 consensus, human-reproduced.")
+            else:
+                st.info("DO NOT SUBMIT yet (heuristic gate — NOT battery-validated). Unmet: "
+                        + "; ".join(reasons))
+            entry = log_calibration(claim, res, ts, context)
+            st.session_state["last_cal_id"] = entry["id"]
+            st.caption(f"Logged to calibration evidence base ({CALIBRATION_LOG.split('/')[-1]}).")
             st.subheader("Explanation")
             for line in (res.explanations if consensus else [res.explanation]):
                 st.write("- " + line)
@@ -113,13 +129,14 @@ with tab_batch:
             ctx_cols = [c for c in ("prompt", "source", "expected", "failure_type") if c in df.columns]
             rows, prog = [], st.progress(0.0)
             for i, rec in enumerate(df.to_dict(orient="records")):
-                c = build_claim_block(str(rec["claim"]),
-                                      {k: str(rec[k]) for k in ctx_cols if pd.notna(rec.get(k))})
+                c = str(rec["claim"])
+                row_ctx = {k: str(rec[k]) for k in ctx_cols if pd.notna(rec.get(k))}
                 try:
-                    r = evaluate_consensus(c) if consensus else evaluate_single(c)
+                    r = evaluate_consensus(c, row_ctx) if consensus else evaluate_single(c, row_ctx)
                     d = r.model_dump()
                     d["triage_score"] = triage_score(r, 0.5)
                     d["error"] = ""
+                    log_calibration(c, r, d["triage_score"], row_ctx)
                 except Exception as e:
                     d = {"label": "ERROR", "error": str(e)}
                 rows.append(d)
@@ -162,13 +179,28 @@ with tab_report:
     else:
         ev = st.session_state["last_eval"]
         ctx = st.session_state.get("last_context", {})
+        REPORT_TYPES = {
+            "Hallucination / fabricated fact": "The model asserted a fabricated or unsupported fact as true.",
+            "Citation fabrication / false authoritative claim": "The model invented or misattributed a citation/authority; verify the cited source does not exist or does not say this.",
+            "Self-contradiction": "The model's output contradicts itself (or its own earlier statements) within the same context.",
+            "Unsafe advice": "The model gave advice that could cause real-world harm if followed; describe the harm pathway.",
+            "N/A / overconfident on unanswerable question": "The model answered confidently where no answer is currently available (N/A territory).",
+        }
+        rtype_default = {
+            "hallucination / fabricated fact": 0, "bad or fabricated citation": 1,
+            "self-contradiction": 2, "unsafe / policy-violating output": 3,
+            "overconfident on unanswerable question": 4,
+        }.get(ctx.get("failure_type", ""), 0)
+        rtype = st.selectbox("Report type", list(REPORT_TYPES), index=rtype_default)
         prompt_used = st.text_area("Prompt you tested", value=ctx.get("prompt", ""), height=100)
         model_tested = st.text_input("Model tested (name + version)")
         impact = st.text_area("Impact (why this matters / what could go wrong)",
                               value=ctx.get("expected", "") and f"Expected behavior: {ctx['expected']}", height=100)
         repro = st.text_area("Reproduction steps", height=100)
         if st.button("Generate report"):
-            report = f"""# AI Output Evaluation Report (TI Sigma Truth-Axis)
+            report = f"""# AI Output Evaluation Report — {rtype}
+
+**Failure class:** {REPORT_TYPES[rtype]}
 
 ## Target
 - **Model tested:** {model_tested or "(fill in)"}
@@ -198,3 +230,16 @@ with tab_report:
 """
             st.code(report, language="markdown")
             st.download_button("Download report.md", report.encode(), "bounty_report.md")
+
+        st.divider()
+        st.markdown("**Calibration: record the final human outcome for the last evaluation** "
+                    "(builds the evidence base for how well the triage signal predicts real findings).")
+        outcome = st.selectbox("Final human outcome", [
+            "", "confirmed real issue (submitted)", "confirmed real issue (not submitted)",
+            "false alarm — claim was fine", "could not reproduce", "still investigating",
+        ])
+        if st.button("Save outcome to calibration log") and outcome:
+            if update_human_outcome(outcome, st.session_state.get("last_cal_id", "")):
+                st.success("Outcome attached to this evaluation's calibration entry.")
+            else:
+                st.error("No matching calibration entry found for the last single-claim evaluation.")
