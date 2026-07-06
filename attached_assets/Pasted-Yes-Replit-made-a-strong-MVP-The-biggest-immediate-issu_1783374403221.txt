@@ -1,0 +1,116 @@
+Yes. Replit made a strong MVP. The biggest immediate issue: **you uploaded `app.py` and `truth_engine.py`, but the app imports `schema.py`, which is not included**, so it likely will not run until that file exists. 
+
+## Highest-priority refinements
+
+1. **Add `schema.py`**
+   Include `TruthEvaluation`, `ConsensusEvaluation`, and `LABEL_GLOSS`.
+
+2. **Add a “claim + source” mode**
+   Right now the app evaluates a claim alone. For paid use, users need:
+
+   * prompt
+   * model output
+   * source/context
+   * expected behavior
+   * failure type
+
+3. **Separate “truth evaluation” from “bug bounty report”**
+   The bounty report should not imply the truth label itself proves a security issue. It should say: “triage signal; human reproduction required.”
+
+4. **Add export formats**
+   Add:
+
+   * CSV
+   * JSONL
+   * Markdown report
+   * “Bug bounty report”
+   * “AI eval dataset row”
+
+5. **Improve the N/A and MI screens**
+   Your `truth_engine.py` already uses the right order: N/A → MI → truth spectrum → axes. 
+   But the prompt should clarify:
+
+   * N/A = answer not currently possible
+   * MI = internally incoherent/category error/self-canceling
+   * Indeterminate = stable middle-region truth, not merely unavailable
+
+6. **Add “severity / monetization score”**
+   For bug bounties or AI eval:
+   [
+   Score = hallucination_risk + authority_loading + modality + impact
+   ]
+   This helps rank which reports are worth submitting.
+
+## Missing `schema.py`
+
+Use this:
+
+```python
+from pydantic import BaseModel, Field
+from typing import Literal, Dict, List
+
+TruthLabel = Literal[
+    "TRUE",
+    "FALSE",
+    "INDETERMINATE",
+    "META_INDETERMINATE",
+    "N_A",
+    "NO_CONSENSUS"
+]
+
+LABEL_GLOSS = {
+    "TRUE": "TRUE — proposition holds on the truth spectrum",
+    "FALSE": "FALSE — proposition fails on the truth spectrum",
+    "INDETERMINATE": "INDETERMINATE — stable middle-region truth",
+    "META_INDETERMINATE": "META-INDETERMINATE — incoherent, self-defeating, or category-confused",
+    "N_A": "N/A — answer not currently possible",
+    "NO_CONSENSUS": "NO CONSENSUS — raters split"
+}
+
+class TruthEvaluation(BaseModel):
+    label: TruthLabel
+    pd_degree: float = Field(ge=0, le=1)
+    pd_modality: float = Field(ge=0, le=1)
+    tau_delta: float = Field(ge=0, le=1)
+    authority_loading: float = Field(ge=0, le=1)
+    explanation: str
+
+class ConsensusEvaluation(BaseModel):
+    label: TruthLabel
+    label_votes: Dict[str, int]
+    unanimous: bool
+    pd_degree: float
+    pd_modality: float
+    tau_delta: float
+    authority_loading: float
+    axis_spread: Dict[str, float]
+    explanations: List[str]
+    raters: List[str]
+    failed_raters: List[str] = []
+
+    @property
+    def agreement_note(self) -> str:
+        return f"Votes: {self.label_votes}; unanimous={self.unanimous}"
+```
+
+## Moving-forward plan
+
+Build in this order:
+
+1. **Make MVP run locally/Replit**
+   Add `schema.py`, `requirements.txt`, and API keys.
+
+2. **Create 50 demo evaluations**
+   Use public AI outputs, hallucinations, bad citations, impossible claims, paradoxes, and N/A cases.
+
+3. **Add triage scoring**
+   Rank outputs by “worth reporting” or “worth annotating.”
+
+4. **Use it privately on bounty/eval opportunities**
+   Do not sell TI Sigma yet. Use the app to produce better reports faster.
+
+5. **Package results**
+   Build a portfolio page:
+   “Five-valued truth evaluation catches ambiguity binary labels miss.”
+
+Your app is already positioned correctly: **triage/report-quality amplifier**, not “automatic truth oracle.”

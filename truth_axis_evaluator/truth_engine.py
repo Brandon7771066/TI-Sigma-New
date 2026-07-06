@@ -29,11 +29,11 @@ DEFAULT_SINGLE = ("openai", "gpt-4o-mini")
 
 PROMPT = """You are a TI Sigma truth evaluator. Evaluate the CLAIM below using this exact pipeline.
 
-STEP 1 — N/A screen: Is an answer currently possible at all, for any evaluator, at this time, with available information? If the claim's truth is simply not answerable NOW (e.g. undecided future contingents with no basis, missing referent, question not yet posed to reality), label = "N_A".
+STEP 1 — N/A screen: N/A means an answer is NOT CURRENTLY POSSIBLE — for any evaluator, at this time, with available information (e.g. undecided future contingents with no basis, missing referent, question not yet posed to reality). N/A is about AVAILABILITY of an answer, not about the claim sitting in the middle of the truth spectrum. If triggered, label = "N_A".
 
-STEP 2 — MI screen (Meta-Indeterminate): Is the proposition self-defeating, paradoxical, category-confused, or fundamentally incoherent — such that it both is and is not what it claims (a fundamental-nature clash, not mere uncertainty)? Examples: "This sentence is false.", "The number 7 is jealous." If so, label = "META_INDETERMINATE".
+STEP 2 — MI screen (Meta-Indeterminate): MI means the proposition is INTERNALLY INCOHERENT — self-defeating, self-canceling, paradoxical, or a category error — such that it both is and is not what it claims (a fundamental-nature clash, not mere uncertainty). Examples: "This sentence is false.", "The number 7 is jealous." If triggered, label = "META_INDETERMINATE".
 
-STEP 3 — truth-spectrum placement: If it passes both screens, place it on the truth spectrum: "TRUE" (holds), "FALSE" (fails), or "INDETERMINATE" (open/unsettled/qualified — leeway remains; genuinely contested or context-dependent claims go here, NOT forced into TRUE/FALSE).
+STEP 3 — truth-spectrum placement: If it passes both screens, place it on the truth spectrum: "TRUE" (holds), "FALSE" (fails), or "INDETERMINATE". INDETERMINATE = STABLE middle-region truth — the claim is coherent and an answer is in principle available, but leeway genuinely remains (contested, qualified, context-dependent). Do NOT use INDETERMINATE for mere unavailability (that is N_A) or incoherence (that is META_INDETERMINATE), and do NOT force contested claims into TRUE/FALSE.
 
 STEP 4 — score the 4 truth axes, each 0.00-1.00:
 - pd_degree: how true the claim is on the real axis. 0=clearly false, 0.5=maximally indeterminate, 1=clearly true.
@@ -71,6 +71,36 @@ def _strict_parse(raw: str) -> TruthEvaluation:
     s = re.sub(r"^```(?:json)?\s*|\s*```$", "", s).strip()
     data = json.loads(s)  # raises on malformed output — caller records the failure
     return TruthEvaluation(**data)
+
+
+def build_claim_block(claim: str, context: dict | None = None) -> str:
+    """Optionally wrap the claim with source/context fields (claim+source mode).
+
+    context keys (all optional): prompt, source, expected, failure_type.
+    """
+    if not context or not any(v.strip() for v in context.values() if v):
+        return claim.strip()
+    parts = []
+    if context.get("prompt"):
+        parts.append(f"PROMPT GIVEN TO THE MODEL:\n{context['prompt'].strip()}")
+    if context.get("source"):
+        parts.append(f"SOURCE / REFERENCE CONTEXT (treat as the ground the claim should answer to):\n{context['source'].strip()}")
+    if context.get("expected"):
+        parts.append(f"EXPECTED BEHAVIOR:\n{context['expected'].strip()}")
+    if context.get("failure_type"):
+        parts.append(f"SUSPECTED FAILURE TYPE: {context['failure_type'].strip()}")
+    parts.append(f"MODEL OUTPUT / CLAIM UNDER EVALUATION:\n{claim.strip()}")
+    return "\n\n".join(parts)
+
+
+def triage_score(ev, impact: float = 0.5) -> float:
+    """HEURISTIC worth-reporting score in [0,1] — NOT validated by any battery.
+
+    Ranks candidate reports: distance-from-clearly-true (hallucination risk proxy)
+    + modality + authority-loading + user-judged impact, equally weighted.
+    """
+    hallucination_risk = 1.0 - ev.pd_degree
+    return round((hallucination_risk + ev.pd_modality + ev.authority_loading + max(0.0, min(1.0, impact))) / 4.0, 3)
 
 
 def evaluate_single(claim: str, provider_model=DEFAULT_SINGLE) -> TruthEvaluation:

@@ -10,7 +10,7 @@ import pandas as pd
 import streamlit as st
 
 from schema import LABEL_GLOSS
-from truth_engine import evaluate_single, evaluate_consensus, RATERS
+from truth_engine import evaluate_single, evaluate_consensus, build_claim_block, triage_score, RATERS
 
 st.set_page_config(page_title="TI Sigma Truth-Axis Evaluator", layout="wide")
 st.title("TI Sigma Truth-Axis Evaluator")
@@ -40,19 +40,33 @@ tab_single, tab_batch, tab_report = st.tabs(["Evaluate a claim", "Batch (CSV)", 
 # ---------------------------------------------------------------- single
 with tab_single:
     claim = st.text_area("Paste an AI output or claim:", height=160, key="claim_single")
+    with st.expander("Claim + source mode (optional — recommended for bounty/eval work)"):
+        ctx_prompt = st.text_area("Prompt given to the model", height=80, key="ctx_prompt")
+        ctx_source = st.text_area("Source / reference context the output should answer to", height=80, key="ctx_source")
+        ctx_expected = st.text_area("Expected behavior", height=60, key="ctx_expected")
+        ctx_failure = st.selectbox("Suspected failure type", [
+            "", "hallucination / fabricated fact", "bad or fabricated citation",
+            "self-contradiction", "unsafe / policy-violating output",
+            "prompt-injection compliance", "overconfident on unanswerable question", "other",
+        ], key="ctx_failure")
+    impact = st.slider("Impact if wrong (your judgment — feeds the triage score)", 0.0, 1.0, 0.5, 0.05)
     if st.button("Evaluate", type="primary") and claim.strip():
+        context = {"prompt": ctx_prompt, "source": ctx_source, "expected": ctx_expected, "failure_type": ctx_failure}
+        block = build_claim_block(claim, context)
         with st.spinner("Calling rater(s)..."):
             try:
                 if consensus:
-                    res = evaluate_consensus(claim)
+                    res = evaluate_consensus(block)
                 else:
-                    res = evaluate_single(claim)
+                    res = evaluate_single(block)
             except Exception as e:
                 st.error(f"Evaluation failed (no silent fallback): {e}")
                 res = None
         if res:
             st.session_state["last_eval"] = res.model_dump()
             st.session_state["last_claim"] = claim
+            st.session_state["last_context"] = context
+            st.session_state["last_impact"] = impact
             if res.label == "NO_CONSENSUS":
                 st.subheader("NO CONSENSUS — raters split with no strict majority")
                 st.error("Do not act on a label for this claim; axes below are averages of disagreeing raters.")
@@ -71,6 +85,9 @@ with tab_single:
             st.dataframe(axes_df, use_container_width=True)
             if consensus and max(res.axis_spread.values()) > 0.4:
                 st.warning(f"Large rater disagreement on axes: {res.axis_spread}")
+            ts = triage_score(res, impact)
+            st.metric("Triage score (worth-reporting heuristic — NOT battery-validated)", f"{ts:.2f}")
+            st.session_state["last_triage"] = ts
             st.subheader("Explanation")
             for line in (res.explanations if consensus else [res.explanation]):
                 st.write("- " + line)
@@ -81,8 +98,9 @@ with tab_single:
 with tab_batch:
     st.markdown(
         "Upload a CSV with a **`claim`** column (e.g. model outputs from a public "
-        "dataset, benchmark answers, or your own prompt/response pairs). Each row is "
-        "run through the full pipeline. Extra columns are preserved."
+        "dataset, benchmark answers, or your own prompt/response pairs). Optional "
+        "context columns are used if present: **`prompt`**, **`source`**, "
+        "**`expected`**, **`failure_type`**. Extra columns are preserved."
     )
     up = st.file_uploader("CSV file", type=["csv"])
     max_rows = st.number_input("Max rows to evaluate (cost guard)", 1, 500, 25)
@@ -92,11 +110,15 @@ with tab_batch:
             st.error("CSV must contain a 'claim' column.")
         else:
             df = df.head(int(max_rows)).copy()
+            ctx_cols = [c for c in ("prompt", "source", "expected", "failure_type") if c in df.columns]
             rows, prog = [], st.progress(0.0)
-            for i, c in enumerate(df["claim"].astype(str)):
+            for i, rec in enumerate(df.to_dict(orient="records")):
+                c = build_claim_block(str(rec["claim"]),
+                                      {k: str(rec[k]) for k in ctx_cols if pd.notna(rec.get(k))})
                 try:
                     r = evaluate_consensus(c) if consensus else evaluate_single(c)
                     d = r.model_dump()
+                    d["triage_score"] = triage_score(r, 0.5)
                     d["error"] = ""
                 except Exception as e:
                     d = {"label": "ERROR", "error": str(e)}
@@ -106,11 +128,27 @@ with tab_batch:
             st.session_state["batch_out"] = out
     if "batch_out" in st.session_state:
         out = st.session_state["batch_out"]
+        if "triage_score" in out.columns:
+            out = out.sort_values("triage_score", ascending=False, na_position="last").reset_index(drop=True)
+        st.caption("Sorted by triage score (worth-reporting heuristic, impact fixed at 0.5 in batch — NOT battery-validated).")
         st.dataframe(out, use_container_width=True)
         st.bar_chart(out["label"].value_counts())
-        st.download_button("Download results CSV",
-                           out.to_csv(index=False).encode(),
+        jsonl = "\n".join(json.dumps({k: (None if pd.isna(v) else v) if not isinstance(v, (dict, list)) else v
+                                      for k, v in rec.items()}, default=str)
+                          for rec in out.to_dict(orient="records"))
+        eval_rows = "\n".join(json.dumps({
+            "input": rec.get("claim", ""),
+            "label": rec.get("label", ""),
+            "axes": {a: rec.get(a) for a in ("pd_degree", "pd_modality", "tau_delta", "authority_loading")},
+            "annotator": "TI Sigma LLM-judge (triage signal, human verification required)",
+        }, default=str) for rec in out.to_dict(orient="records"))
+        c1, c2, c3 = st.columns(3)
+        c1.download_button("Download CSV", out.to_csv(index=False).encode(),
                            "truth_axis_results.csv", "text/csv")
+        c2.download_button("Download JSONL", jsonl.encode(),
+                           "truth_axis_results.jsonl", "application/jsonl")
+        c3.download_button("Download AI-eval dataset rows (JSONL)", eval_rows.encode(),
+                           "truth_axis_eval_dataset.jsonl", "application/jsonl")
 
 # ---------------------------------------------------------------- report
 with tab_report:
@@ -123,9 +161,11 @@ with tab_report:
         st.info("Evaluate a claim in the first tab, then come back here.")
     else:
         ev = st.session_state["last_eval"]
-        prompt_used = st.text_area("Prompt you tested", height=100)
+        ctx = st.session_state.get("last_context", {})
+        prompt_used = st.text_area("Prompt you tested", value=ctx.get("prompt", ""), height=100)
         model_tested = st.text_input("Model tested (name + version)")
-        impact = st.text_area("Impact (why this matters / what could go wrong)", height=100)
+        impact = st.text_area("Impact (why this matters / what could go wrong)",
+                              value=ctx.get("expected", "") and f"Expected behavior: {ctx['expected']}", height=100)
         repro = st.text_area("Reproduction steps", height=100)
         if st.button("Generate report"):
             report = f"""# AI Output Evaluation Report (TI Sigma Truth-Axis)
@@ -137,11 +177,15 @@ with tab_report:
 ## Model output under evaluation
 > {st.session_state.get("last_claim", "")}
 
-## TI Sigma evaluation
+## TI Sigma triage signal (NOT proof of a security issue — human reproduction required)
 - **Truth label:** {ev["label"]} — {LABEL_GLOSS.get(ev["label"], "no strict rater majority — label unusable")}
 - **PD-degree:** {ev["pd_degree"]:.2f} | **PD-modality:** {ev["pd_modality"]:.2f} | **τ/δ:** {ev["tau_delta"]:.2f} | **Authority-loading:** {ev["authority_loading"]:.2f}
+- **Triage score (heuristic):** {st.session_state.get("last_triage", "n/a")}
+- **Suspected failure type:** {ctx.get("failure_type") or "(not specified)"}
 - **Rater(s):** {", ".join(ev.get("raters", ["single rater"]))}
 - **Rationale:** {"; ".join(ev.get("explanations", [ev.get("explanation", "")]))}
+
+*The truth label is an automated triage signal used to prioritize this report; the actual issue is established by the human-verified reproduction below.*
 
 ## Why this output is problematic
 {impact or "(fill in)"}
