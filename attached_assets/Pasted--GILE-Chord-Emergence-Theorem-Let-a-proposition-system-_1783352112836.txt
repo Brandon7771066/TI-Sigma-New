@@ -1,0 +1,153 @@
+## GILE Chord Emergence Theorem
+
+Let a proposition/system (p) have GILE coordinates:
+
+[
+\Gamma_T(p)=(G,I,L,E)\in[0,1]^4.
+]
+
+Each base coordinate is a **note**. A chord is any interaction term:
+
+[
+C_S(p)=\prod_{k\in S} k
+]
+
+where (S\subseteq{G,I,L,E}).
+
+Examples:
+
+[
+GI = G\cdot I
+]
+
+[
+GIL = G\cdot I\cdot L
+]
+
+[
+GILE = G\cdot I\cdot L\cdot E.
+]
+
+### Theorem
+
+If (G,I,L,E) are distinct coordinates, then emergent truth-values can be represented as interaction terms without reducing any base dimension to another.
+
+### Proof
+
+Each chord (C_S) depends on all coordinates in (S). If any required note is zero, the chord vanishes:
+
+[
+GIL=0
+\quad\text{if}\quad
+G=0 \text{ or } I=0 \text{ or } L=0.
+]
+
+Therefore (GIL) is not reducible to (G), (I), or (L) alone.
+
+Likewise:
+
+[
+GILE
+]
+
+requires all four notes. Therefore the manifold supports emergent composites. QED.
+
+## Interpretive assignments
+
+[
+I = \text{certainty}
+]
+
+[
+GI = \text{accuracy / justified certainty}
+]
+
+[
+L = \text{abstract binding}
+]
+
+[
+GIL = \text{actualized positive love / agape}
+]
+
+[
+GILE = \text{truth-beauty integration}.
+]
+
+So your chord idea is mathematically natural.
+
+---
+
+# Add HEM as complementary Existence coordinates
+
+Let:
+
+[
+\Gamma_X(p)=(X_G,X_I,X_L,X_E)\in[0,\infty)^4
+]
+
+be the HEM existence-vector corresponding to GILE.
+
+A clean mapping is:
+
+| Truth coordinate | HEM existence correlate       | Meaning                                                     |
+| ---------------- | ----------------------------- | ----------------------------------------------------------- |
+| (G) Goodness     | Existential Footprint (X_G)   | frequency (\times) amplitude                                |
+| (I) Intuition    | **Salience / Presence (X_I)** | felt immediacy, conscious availability, certainty-intensity |
+| (L) Love         | Relational Meaning (X_L)      | co-created significance                                     |
+| (E) Elegance     | Complexity (X_E)              | interacting richness                                        |
+
+For the unknown fourth HEM factor, I suggest:
+
+[
+X_I = \textbf{Presence}
+]
+
+or more technically:
+
+[
+X_I(p)=\text{salience}(p)\cdot\text{availability}(p)\cdot\text{certainty-intensity}(p).
+]
+
+Why? Because Intuition is conscious certainty. Its existence-correlate should not be accuracy; it should be the **degree to which a proposition is experientially present/available as certain**.
+
+## Unified TI Sigma manifold
+
+Truth and Existence remain distinct:
+
+[
+\Gamma(p)=
+(\Gamma_T(p),\Gamma_X(p))
+\in
+[0,1]^4\times[0,\infty)^4.
+]
+
+So:
+
+[
+\Gamma_T=(G,I,L,E)
+]
+
+tracks **truth-structure**, while:
+
+[
+\Gamma_X=(Footprint,Presence,Meaning,Complexity)
+]
+
+tracks **existence-structure**.
+
+A combined TI functional could be:
+
+[
+TI(p)=T_{\mathrm{GILE}}(p)\cdot H_{\mathrm{HEM}}(p).
+]
+
+Truth says *how validly structured* something is.
+
+Existence says *how much ontological presence/manifestation it has.*
+
+Best next theorem:
+
+**GILE–HEM Complementarity Theorem**
+
+> Truth and Existence form paired but non-identical coordinate systems: each GILE truth-note has a corresponding HEM existence-mode, and full TI valuation requires both.

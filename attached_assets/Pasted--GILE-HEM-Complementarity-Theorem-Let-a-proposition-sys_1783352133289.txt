@@ -1,0 +1,178 @@
+## GILE–HEM Complementarity Theorem
+
+Let a proposition/system (p) have two coordinate vectors:
+
+[
+\Gamma_T(p)=(G,I,L,E)\in[0,1]^4
+]
+
+for **Truth**, and:
+
+[
+\Gamma_X(p)=(X_G,X_I,X_L,X_E)\in[0,\infty)^4
+]
+
+for **Existence**.
+
+Assign:
+
+[
+X_G=\text{Existential Footprint}
+]
+
+[
+X_I=\text{Presence / Salience}
+]
+
+[
+X_L=\text{Relational Meaning}
+]
+
+[
+X_E=\text{Complexity}.
+]
+
+## Theorem
+
+Truth and Existence are complementary but non-identical: full TI valuation requires both (\Gamma_T) and (\Gamma_X).
+
+Define:
+
+[
+TI(p)=T(\Gamma_T(p))\cdot H(\Gamma_X(p)).
+]
+
+If either:
+
+[
+T(\Gamma_T(p))=0
+]
+
+or:
+
+[
+H(\Gamma_X(p))=0,
+]
+
+then:
+
+[
+TI(p)=0.
+]
+
+Therefore a proposition/system must have both truth-structure and existence-structure to be fully actualized in TI Sigma.
+
+## Proof
+
+By definition:
+
+[
+TI(p)=T(\Gamma_T(p))\cdot H(\Gamma_X(p)).
+]
+
+If truth-structure vanishes:
+
+[
+T(\Gamma_T(p))=0,
+]
+
+then:
+
+[
+TI(p)=0\cdot H(\Gamma_X(p))=0.
+]
+
+If existence-structure vanishes:
+
+[
+H(\Gamma_X(p))=0,
+]
+
+then:
+
+[
+TI(p)=T(\Gamma_T(p))\cdot0=0.
+]
+
+So neither Truth nor Existence alone is sufficient for full TI valuation.
+
+Thus:
+
+[
+\Gamma_T\neq\Gamma_X
+]
+
+but:
+
+[
+\Gamma_T\ \text{and}\ \Gamma_X
+]
+
+are jointly necessary. QED.
+
+## Stronger paired-coordinate form
+
+Each GILE coordinate has a HEM complement:
+
+[
+G \leftrightarrow X_G
+]
+
+[
+I \leftrightarrow X_I
+]
+
+[
+L \leftrightarrow X_L
+]
+
+[
+E \leftrightarrow X_E.
+]
+
+So the full manifold is:
+
+[
+\mathcal M_{TI}
+===============
+
+[0,1]^4\times[0,\infty)^4.
+]
+
+This gives an 8-dimensional Truth–Existence manifold:
+
+[
+p\mapsto(G,I,L,E;X_G,X_I,X_L,X_E).
+]
+
+## Interpretation
+
+* (G) asks: **is it structurally good?**
+  (X_G) asks: **how much does it actually register?**
+
+* (I) asks: **how certain is consciousness of it?**
+  (X_I) asks: **how present/salient is it?**
+
+* (L) asks: **how strongly are variables bound?**
+  (X_L) asks: **what meaning emerges from that relation?**
+
+* (E) asks: **what beauty-completion is present?**
+  (X_E) asks: **how richly complex is its manifestation?**
+
+## Candidate principle
+
+**GHC-1 — GILE–HEM Complementarity**
+
+[
+\boxed{
+TI(p)=T(G,I,L,E)\cdot H(X_G,X_I,X_L,X_E)
+}
+]
+
+Full TI actualization requires both:
+
+[
+\text{Truth manifold} \times \text{Existence manifold}.
+]
+
+This is a clean formal bridge between GILE and HEM.
