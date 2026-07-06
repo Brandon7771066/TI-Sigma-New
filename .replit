@@ -43,6 +43,10 @@ args = "viral_pre_reg_batch"
 task = "workflow.run"
 args = "lean_mathlib4_install"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "truth_axis_evaluator"
+
 [[workflows.workflow]]
 name = "discovery_scheduler"
 author = "agent"
@@ -110,6 +114,18 @@ args = "bash lean4_ns_uop_pass54_mathlib/install_and_build.sh"
 [workflows.workflow.metadata]
 outputType = "console"
 
+[[workflows.workflow]]
+name = "truth_axis_evaluator"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run truth_axis_evaluator/app.py --server.port 8080 --server.headless true"
+waitForPort = 8080
+
+[workflows.workflow.metadata]
+outputType = "console"
+
 [userenv]
 
 [userenv.shared]
@@ -129,3 +145,7 @@ externalPort = 3000
 [[ports]]
 localPort = 8000
 externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
