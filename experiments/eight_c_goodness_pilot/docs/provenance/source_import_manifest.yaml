@@ -1,302 +1,576 @@
-manifest_version: 1
-generated_utc: 2026-08-02T00:00:00Z
-sources:
-  - source_id: SRC-001
-    source_name: Book Annotation Feedback
-    expected_filename: SRC-001_book_annotation_feedback.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-001_book_annotation_feedback.md
-    source_type: chat_export
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: docs/ti_sigma_framework/
-    expected_topics:
-      - GILE definitions
-      - HEM:GILE relationships
-      - Eight-C development
-      - contradiction framework
-      - scale evolution
-    notes: "Unresolved provenance until raw export is imported and hashed."
-
-  - source_id: SRC-002
-    source_name: Argmax Function Proofs
-    expected_filename: SRC-002_argmax_function_proofs.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-002_argmax_function_proofs.md
-    source_type: chat_export
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: docs/ti_sigma_framework/
-    expected_topics:
-      - GILE definitions
-      - HEM:GILE relationships
-      - Eight-C development
-      - contradiction framework
-      - scale evolution
-    notes: "Unresolved provenance until raw export is imported and hashed."
-
-  - source_id: SRC-003
-    source_name: Law of Correlative Causation
-    expected_filename: SRC-003_law_of_correlative_causation.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-003_law_of_correlative_causation.md
-    source_type: chat_export
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: docs/ti_sigma_framework/
-    expected_topics:
-      - GILE definitions
-      - HEM:GILE relationships
-      - Eight-C development
-      - contradiction framework
-      - scale evolution
-    notes: "Unresolved provenance until raw export is imported and hashed."
-
-  - source_id: SRC-004
-    source_name: Replit GitHub Data Security
-    expected_filename: SRC-004_replit_github_data_security.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-004_replit_github_data_security.md
-    source_type: chat_export
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: docs/ti_sigma_framework/source_provenance.md
-    expected_topics:
-      - provenance controls
-      - source handling
-      - auditability
-      - security boundaries
-      - reconstruction constraints
-    notes: "High-priority dependency for pipeline reconstruction gate criteria."
-
-  - source_id: SRC-005
-    source_name: Current Eight-C Validation Tab
-    expected_filename: SRC-005_current_eight_c_validation.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-005_current_eight_c_validation.md
-    source_type: chat_export
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: docs/ti_sigma_framework/
-    expected_topics:
-      - GILE definitions
-      - HEM:GILE relationships
-      - Eight-C development
-      - contradiction framework
-      - scale evolution
-    notes: "Primary current-source dependency for framework and pilot continuity."
-
-  - source_id: SRC-006
-    source_name: Perplexity Scaffold Descriptions
-    expected_filename: SRC-006_perplexity_scaffold_descriptions.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-006_perplexity_scaffold_descriptions.md
-    source_type: generated_notes
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/provenance/
-    expected_topics:
-      - scaffold assumptions
-      - source traceability
-      - repository recovery notes
-      - constraints
-      - pending artifacts
-    notes: "Treat as derivative planning aid, not original empirical evidence."
-
-  - source_id: SRC-007
-    source_name: Public TI-Sigma-New Repository
-    expected_filename: SRC-007_public_ti_sigma_new_repository_snapshot.txt
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-007_public_ti_sigma_new_repository_snapshot.txt
-    source_type: repository_snapshot
-    required: true
-    reconstruction_allowed: false
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: git_commit_pinning_and_sha256_if_exported
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/provenance/source_ledger.csv
-    expected_topics:
-      - canonical repo identity
-      - baseline commit references
-      - recoverable paths
-      - provenance anchors
-      - non-fabrication controls
-    notes: "Repository baseline already pinned in ledger; optional exported note remains pending."
-
-  - source_id: SRC-008
-    source_name: Locally Recovered Artifacts
-    expected_filename: SRC-008_local_recovered_artifacts_index.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-008_local_recovered_artifacts_index.md
-    source_type: recovery_index
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: false
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_provenance_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/provenance/
-    expected_topics:
-      - recovered file index
-      - source locations
-      - recovery confidence
-      - artifact integrity
-      - unresolved gaps
-    notes: "Must separate recovered-verbatim artifacts from reconstructed summaries."
-
-  - source_id: SRC-009
-    source_name: Frozen 21-Item Corpus
-    expected_filename: SRC-009_frozen_21_item_corpus.csv
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-009_frozen_21_item_corpus.csv
-    source_type: corpus
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_line_count_and_schema_validation
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/data/frozen_corpus/
-    expected_topics:
-      - 21-item corpus rows
-      - source text boundaries
-      - inclusion criteria
-      - freeze timestamp
-      - integrity checks
-    notes: "If not recovered verbatim, reconstruction must remain explicitly labeled and non-empirical."
-
-  - source_id: SRC-010
-    source_name: Frozen Metadata
-    expected_filename: SRC-010_frozen_metadata.csv
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-010_frozen_metadata.csv
-    source_type: metadata
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_schema_validation_and_row_link_check
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/data/frozen_metadata/
-    expected_topics:
-      - item metadata
-      - provenance columns
-      - timestamps
-      - version fields
-      - linkage keys
-    notes: "Needed before any transparent corpus-level rerun."
-
-  - source_id: SRC-011
-    source_name: Frozen Preregistration
-    expected_filename: SRC-011_frozen_preregistration.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-011_frozen_preregistration.md
-    source_type: preregistration
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_and_manual_scope_integrity_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/preregistration/
-    expected_topics:
-      - hypotheses
-      - metrics
-      - decision rules
-      - exclusion criteria
-      - prereg scope
-    notes: "Must be present before recreating any release-gate style evaluation flow."
-
-  - source_id: SRC-012
-    source_name: Frozen Prompt and Rating Schema
-    expected_filename: SRC-012_frozen_prompt_and_rating_schema.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-012_frozen_prompt_and_rating_schema.md
-    source_type: prompt_schema
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_and_field_completeness_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/spec/
-    expected_topics:
-      - evaluator prompt
-      - rating rubric
-      - field schema
-      - output format
-      - tie-break rules
-    notes: "Critical for reproducibility and auditability of any future pilot rerun."
-
-  - source_id: SRC-013
-    source_name: Amendment Records
-    expected_filename: SRC-013_amendment_records.md
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-013_amendment_records.md
-    source_type: amendment_log
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_and_chronology_consistency_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/provenance/
-    expected_topics:
-      - amendment timestamps
-      - rationale
-      - changed fields
-      - approver identity
-      - supersession links
-    notes: "Required to separate historical and current versions without silent overwrite."
-
-  - source_id: SRC-014
-    source_name: Hash and Manifest Originals
-    expected_filename: SRC-014_hash_and_manifest_originals.zip
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-014_hash_and_manifest_originals.zip
-    source_type: integrity_artifacts
-    required: true
-    reconstruction_allowed: false
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_crosscheck_and_internal_manifest_verification
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/docs/provenance/hash_archive/
-    expected_topics:
-      - original checksums
-      - manifest mappings
-      - artifact lineage
-      - freeze markers
-      - verification instructions
-    notes: "Cannot be fabricated; originals or explicit absence statement required."
-
-  - source_id: SRC-015
-    source_name: Prior Mock Outputs and Reports
-    expected_filename: SRC-015_prior_mock_outputs_and_reports.zip
-    import_destination: experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-015_prior_mock_outputs_and_reports.zip
-    source_type: mock_outputs
-    required: true
-    reconstruction_allowed: true
-    verbatim_recovery_required: true
-    received: false
-    content_status: pending
-    validation_method: sha256_and_non_evidentiary_label_review
-    canonical_destination_after_review: experiments/eight_c_goodness_pilot/results/archive/
-    expected_topics:
-      - mock outputs
-      - run summaries
-      - report templates
-      - toolchain notes
-      - limitations
-    notes: "Must remain non-empirical unless originals are recovered and independently validated."
+{
+  "manifest_version": 2,
+  "generated_utc": "2026-08-02T00:00:00Z",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "source_name": "Book Annotation Feedback",
+      "source_type": "chat_export",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-001_book_annotation_feedback(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "docs/ti_sigma_framework/",
+      "expected_topics": ["GILE definitions", "HEM:GILE relationships", "Eight-C development", "contradiction framework", "scale evolution"],
+      "files": [
+        {
+          "source_id": "SRC-001",
+          "expected_filename": "SRC-001_book_annotation_feedback.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-001_book_annotation_feedback.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Unresolved provenance until raw export is imported and hashed."
+    },
+    {
+      "source_id": "SRC-002",
+      "source_name": "Argmax Function Proofs",
+      "source_type": "chat_export",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-002_argmax_function_proofs(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "docs/ti_sigma_framework/",
+      "expected_topics": ["GILE definitions", "HEM:GILE relationships", "Eight-C development", "contradiction framework", "scale evolution"],
+      "files": [
+        {
+          "source_id": "SRC-002",
+          "expected_filename": "SRC-002_argmax_function_proofs.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-002_argmax_function_proofs.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Unresolved provenance until raw export is imported and hashed."
+    },
+    {
+      "source_id": "SRC-003",
+      "source_name": "Law of Correlative Causation",
+      "source_type": "chat_export",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-003_law_of_correlative_causation(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "docs/ti_sigma_framework/",
+      "expected_topics": ["GILE definitions", "HEM:GILE relationships", "Eight-C development", "contradiction framework", "scale evolution"],
+      "files": [
+        {
+          "source_id": "SRC-003",
+          "expected_filename": "SRC-003_law_of_correlative_causation.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-003_law_of_correlative_causation.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Unresolved provenance until raw export is imported and hashed."
+    },
+    {
+      "source_id": "SRC-004",
+      "source_name": "Replit GitHub Data Security",
+      "source_type": "chat_export",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": true,
+      "segment_filename_regex": "^SRC-004_replit_github_data_security(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "docs/ti_sigma_framework/source_provenance.md",
+      "expected_topics": ["provenance controls", "source handling", "auditability", "security boundaries", "reconstruction constraints"],
+      "files": [
+        {
+          "source_id": "SRC-004",
+          "expected_filename": "SRC-004_replit_github_data_security.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-004_replit_github_data_security.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "High-priority dependency for pipeline reconstruction gate criteria."
+    },
+    {
+      "source_id": "SRC-005",
+      "source_name": "Current Eight-C Validation Tab",
+      "source_type": "chat_export",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": true,
+      "segment_filename_regex": "^SRC-005_current_eight_c_validation(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "docs/ti_sigma_framework/",
+      "expected_topics": ["GILE definitions", "HEM:GILE relationships", "Eight-C development", "contradiction framework", "scale evolution"],
+      "files": [
+        {
+          "source_id": "SRC-005",
+          "expected_filename": "SRC-005_current_eight_c_validation.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-005_current_eight_c_validation.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Primary current-source dependency for framework and pilot continuity."
+    },
+    {
+      "source_id": "SRC-006",
+      "source_name": "Perplexity Scaffold Descriptions",
+      "source_type": "generated_notes",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-006_perplexity_scaffold_descriptions(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/provenance/",
+      "expected_topics": ["scaffold assumptions", "source traceability", "repository recovery notes", "constraints", "pending artifacts"],
+      "files": [
+        {
+          "source_id": "SRC-006",
+          "expected_filename": "SRC-006_perplexity_scaffold_descriptions.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-006_perplexity_scaffold_descriptions.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Treat as derivative planning aid, not original empirical evidence."
+    },
+    {
+      "source_id": "SRC-007",
+      "source_name": "Public TI-Sigma-New Repository",
+      "source_type": "repository_snapshot",
+      "required": true,
+      "reconstruction_allowed": false,
+      "verbatim_recovery_required": true,
+      "received": true,
+      "content_status": "RECOVERED_VERBATIM",
+      "review_status": "READY_FOR_INDEXING",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-007_public_ti_sigma_new_repository_snapshot(?:_part_\\d+)?\\.txt$",
+      "validation_method": "git_commit_pinning_and_sha256_if_exported",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/provenance/source_ledger.csv",
+      "expected_topics": ["canonical repo identity", "baseline commit references", "recoverable paths", "provenance anchors", "non-fabrication controls"],
+      "files": [
+        {
+          "source_id": "SRC-007",
+          "expected_filename": "SRC-007_public_ti_sigma_new_repository_snapshot.txt",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-007_public_ti_sigma_new_repository_snapshot.txt",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "2026-08-02",
+          "conversation_end_date": "2026-08-02",
+          "first_message_excerpt": "Repository baseline pinned at af2fb65a7d6bf95bf82ba247673d4f965c955013.",
+          "last_message_excerpt": "Canonical repository snapshot referenced from current consolidation branch.",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "af2fb65a7d6bf95bf82ba247673d4f965c955013",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Repository baseline already pinned in ledger; optional exported note remains pending."
+    },
+    {
+      "source_id": "SRC-008",
+      "source_name": "Locally Recovered Artifacts",
+      "source_type": "recovery_index",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": false,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-008_local_recovered_artifacts_index(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_provenance_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/provenance/",
+      "expected_topics": ["recovered file index", "source locations", "recovery confidence", "artifact integrity", "unresolved gaps"],
+      "files": [
+        {
+          "source_id": "SRC-008",
+          "expected_filename": "SRC-008_local_recovered_artifacts_index.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-008_local_recovered_artifacts_index.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Must separate recovered-verbatim artifacts from reconstructed summaries."
+    },
+    {
+      "source_id": "SRC-009",
+      "source_name": "Frozen 21-Item Corpus",
+      "source_type": "corpus",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-009_frozen_21_item_corpus(?:_part_\\d+)?\\.csv$",
+      "validation_method": "sha256_line_count_and_schema_validation",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/data/frozen_corpus/",
+      "expected_topics": ["21-item corpus rows", "source text boundaries", "inclusion criteria", "freeze timestamp", "integrity checks"],
+      "files": [
+        {
+          "source_id": "SRC-009",
+          "expected_filename": "SRC-009_frozen_21_item_corpus.csv",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-009_frozen_21_item_corpus.csv",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "If not recovered verbatim, reconstruction must remain explicitly labeled and non-empirical."
+    },
+    {
+      "source_id": "SRC-010",
+      "source_name": "Frozen Metadata",
+      "source_type": "metadata",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-010_frozen_metadata(?:_part_\\d+)?\\.csv$",
+      "validation_method": "sha256_schema_validation_and_row_link_check",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/data/frozen_metadata/",
+      "expected_topics": ["item metadata", "provenance columns", "timestamps", "version fields", "linkage keys"],
+      "files": [
+        {
+          "source_id": "SRC-010",
+          "expected_filename": "SRC-010_frozen_metadata.csv",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-010_frozen_metadata.csv",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Needed before any transparent corpus-level rerun."
+    },
+    {
+      "source_id": "SRC-011",
+      "source_name": "Frozen Preregistration",
+      "source_type": "preregistration",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-011_frozen_preregistration(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_manual_scope_integrity_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/preregistration/",
+      "expected_topics": ["hypotheses", "metrics", "decision rules", "exclusion criteria", "prereg scope"],
+      "files": [
+        {
+          "source_id": "SRC-011",
+          "expected_filename": "SRC-011_frozen_preregistration.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-011_frozen_preregistration.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Must be present before recreating any release-gate style evaluation flow."
+    },
+    {
+      "source_id": "SRC-012",
+      "source_name": "Frozen Prompt and Rating Schema",
+      "source_type": "prompt_schema",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-012_frozen_prompt_and_rating_schema(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_field_completeness_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/spec/",
+      "expected_topics": ["evaluator prompt", "rating rubric", "field schema", "output format", "tie-break rules"],
+      "files": [
+        {
+          "source_id": "SRC-012",
+          "expected_filename": "SRC-012_frozen_prompt_and_rating_schema.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-012_frozen_prompt_and_rating_schema.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Critical for reproducibility and auditability of any future pilot rerun."
+    },
+    {
+      "source_id": "SRC-013",
+      "source_name": "Amendment Records",
+      "source_type": "amendment_log",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-013_amendment_records(?:_part_\\d+)?\\.md$",
+      "validation_method": "sha256_and_chronology_consistency_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/provenance/",
+      "expected_topics": ["amendment timestamps", "rationale", "changed fields", "approver identity", "supersession links"],
+      "files": [
+        {
+          "source_id": "SRC-013",
+          "expected_filename": "SRC-013_amendment_records.md",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-013_amendment_records.md",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Required to separate historical and current versions without silent overwrite."
+    },
+    {
+      "source_id": "SRC-014",
+      "source_name": "Hash and Manifest Originals",
+      "source_type": "integrity_artifacts",
+      "required": true,
+      "reconstruction_allowed": false,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-014_hash_and_manifest_originals(?:_part_\\d+)?\\.zip$",
+      "validation_method": "sha256_crosscheck_and_internal_manifest_verification",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/docs/provenance/hash_archive/",
+      "expected_topics": ["original checksums", "manifest mappings", "artifact lineage", "freeze markers", "verification instructions"],
+      "files": [
+        {
+          "source_id": "SRC-014",
+          "expected_filename": "SRC-014_hash_and_manifest_originals.zip",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-014_hash_and_manifest_originals.zip",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Cannot be fabricated; originals or explicit absence statement required."
+    },
+    {
+      "source_id": "SRC-015",
+      "source_name": "Prior Mock Outputs and Reports",
+      "source_type": "mock_outputs",
+      "required": true,
+      "reconstruction_allowed": true,
+      "verbatim_recovery_required": true,
+      "received": false,
+      "content_status": "pending",
+      "review_status": "NOT_RECEIVED",
+      "supports_segmented_imports": false,
+      "segment_filename_regex": "^SRC-015_prior_mock_outputs_and_reports(?:_part_\\d+)?\\.zip$",
+      "validation_method": "sha256_and_non_evidentiary_label_review",
+      "canonical_destination_after_review": "experiments/eight_c_goodness_pilot/results/archive/",
+      "expected_topics": ["mock outputs", "run summaries", "report templates", "toolchain notes", "limitations"],
+      "files": [
+        {
+          "source_id": "SRC-015",
+          "expected_filename": "SRC-015_prior_mock_outputs_and_reports.zip",
+          "import_destination": "experiments/eight_c_goodness_pilot/docs/framework_sources/inbox/SRC-015_prior_mock_outputs_and_reports.zip",
+          "part_number": 1,
+          "total_parts_if_known": 1,
+          "conversation_start_date": "",
+          "conversation_end_date": "",
+          "first_message_excerpt": "",
+          "last_message_excerpt": "",
+          "sha256": "",
+          "received": false,
+          "content_status": "pending",
+          "claimed_original_hash": "",
+          "observed_import_hash": "",
+          "hash_agreement": "",
+          "file_size": "",
+          "review_status": "NOT_RECEIVED"
+        }
+      ],
+      "notes": "Must remain non-empirical unless originals are recovered and independently validated."
+    }
+  ]
+}

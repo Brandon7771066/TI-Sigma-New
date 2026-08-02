@@ -33,6 +33,13 @@ class IngestionInfrastructureTests(unittest.TestCase):
 
         _, cls.manifest_entries = cls.validate_mod.load_manifest(cls.manifest_path)
 
+    def flattened_manifest_files(self):
+        flattened = []
+        for entry in self.manifest_entries:
+            for file_entry in self.validate_mod.iter_expected_files(entry):
+                flattened.append((entry, file_entry))
+        return flattened
+
     def test_manifest_loads(self):
         self.assertGreater(len(self.manifest_entries), 0)
 
@@ -41,24 +48,27 @@ class IngestionInfrastructureTests(unittest.TestCase):
         self.assertEqual(len(ids), len(set(ids)))
 
     def test_expected_filenames_are_unique(self):
-        names = [entry["expected_filename"] for entry in self.manifest_entries]
+        names = [file_entry["expected_filename"] for _, file_entry in self.flattened_manifest_files()]
         self.assertEqual(len(names), len(set(names)))
 
     def test_import_destinations_are_unique(self):
-        destinations = [entry["import_destination"] for entry in self.manifest_entries]
+        destinations = [file_entry["import_destination"] for _, file_entry in self.flattened_manifest_files()]
         self.assertEqual(len(destinations), len(set(destinations)))
 
     def test_allowed_status_values(self):
-        allowed_content_status = {
-            "pending",
-            "RECONSTRUCTED_FROM_CHAT",
-            "RECOVERED_VERBATIM",
-            "RECOVERED_UNVERIFIED",
-            "NEW_CANONICAL_DRAFT",
-        }
+        allowed_group_status = {"pending", "RECOVERED_VERBATIM"}
+        allowed_review_status = {"NOT_RECEIVED", "READY_FOR_INDEXING"}
         for entry in self.manifest_entries:
-            status = entry.get("content_status", "")
-            self.assertIn(status, allowed_content_status)
+            self.assertIn(entry.get("content_status", ""), allowed_group_status)
+            self.assertIn(entry.get("review_status", ""), allowed_review_status)
+            for file_entry in self.validate_mod.iter_expected_files(entry):
+                self.assertIn(file_entry.get("content_status", ""), {"pending"})
+                self.assertIn(file_entry.get("review_status", ""), {"NOT_RECEIVED"})
+
+    def test_segmented_sources_declared(self):
+        segmented_ids = {entry["source_id"] for entry in self.manifest_entries if entry.get("supports_segmented_imports")}
+        self.assertIn("SRC-004", segmented_ids)
+        self.assertIn("SRC-005", segmented_ids)
 
     def test_duplicate_hash_detection(self):
         with tempfile.TemporaryDirectory() as td:
@@ -75,35 +85,45 @@ class IngestionInfrastructureTests(unittest.TestCase):
             e1 = {
                 "source_id": "SRC-001",
                 "source_name": "A",
-                "expected_filename": f1.name,
-                "import_destination": str(f1.relative_to(root)).replace("\\", "/"),
                 "required": True,
                 "reconstruction_allowed": True,
                 "verbatim_recovery_required": False,
                 "received": True,
-                "content_status": "RECOVERED_VERBATIM",
+                "content_status": "pending",
+                "review_status": "NOT_RECEIVED",
+                "supports_segmented_imports": False,
+                "segment_filename_regex": "^SRC-001_alpha\\.md$",
+                "files": [
+                    {
+                        "expected_filename": f1.name,
+                        "import_destination": str(f1.relative_to(root)).replace("\\", "/"),
+                        "part_number": 1,
+                    }
+                ],
             }
             e2 = {
                 "source_id": "SRC-002",
                 "source_name": "B",
-                "expected_filename": f2.name,
-                "import_destination": str(f2.relative_to(root)).replace("\\", "/"),
                 "required": True,
                 "reconstruction_allowed": True,
                 "verbatim_recovery_required": False,
                 "received": True,
-                "content_status": "RECOVERED_VERBATIM",
+                "content_status": "pending",
+                "review_status": "NOT_RECEIVED",
+                "supports_segmented_imports": False,
+                "segment_filename_regex": "^SRC-002_beta\\.md$",
+                "files": [
+                    {
+                        "expected_filename": f2.name,
+                        "import_destination": str(f2.relative_to(root)).replace("\\", "/"),
+                        "part_number": 1,
+                    }
+                ],
             }
 
             r1 = self.validate_mod.classify(e1, root)
             r2 = self.validate_mod.classify(e2, root)
-            hash_to_ids = {}
-            for r in [r1, r2]:
-                if r["sha256"]:
-                    hash_to_ids.setdefault(r["sha256"], []).append(r["source_id"])
-            for r in [r1, r2]:
-                if r["sha256"] and len(hash_to_ids[r["sha256"]]) > 1:
-                    r["status"] = "DUPLICATE_CONTENT"
+            self.validate_mod.apply_duplicate_detection([r1, r2])
             self.assertEqual(r1["status"], "DUPLICATE_CONTENT")
             self.assertEqual(r2["status"], "DUPLICATE_CONTENT")
 
@@ -118,8 +138,12 @@ class IngestionInfrastructureTests(unittest.TestCase):
             entry = {
                 "source_id": "SRC-001",
                 "source_name": "A",
-                "expected_filename": target.name,
-                "import_destination": str(target.relative_to(root)).replace("\\", "/"),
+                "required": True,
+                "reconstruction_allowed": True,
+                "verbatim_recovery_required": False,
+                "supports_segmented_imports": False,
+                "segment_filename_regex": "^SRC-001_alpha\\.md$",
+                "files": [{"expected_filename": target.name, "import_destination": str(target.relative_to(root)).replace("\\", "/") }],
             }
             result = self.validate_mod.classify(entry, root)
             self.assertEqual(result["status"], "EMPTY")
@@ -131,13 +155,16 @@ class IngestionInfrastructureTests(unittest.TestCase):
             d.mkdir(parents=True, exist_ok=True)
             wrong = d / "SRC-001_unexpected_name.md"
             wrong.write_text("non-empty content for test", encoding="utf-8")
-
             expected = d / "SRC-001_expected_name.md"
             entry = {
                 "source_id": "SRC-001",
                 "source_name": "A",
-                "expected_filename": expected.name,
-                "import_destination": str(expected.relative_to(root)).replace("\\", "/"),
+                "required": True,
+                "reconstruction_allowed": True,
+                "verbatim_recovery_required": False,
+                "supports_segmented_imports": False,
+                "segment_filename_regex": "^SRC-001_expected_name\\.md$",
+                "files": [{"expected_filename": expected.name, "import_destination": str(expected.relative_to(root)).replace("\\", "/") }],
             }
             result = self.validate_mod.classify(entry, root)
             self.assertEqual(result["status"], "INVALID_FILENAME")
@@ -154,6 +181,20 @@ class IngestionInfrastructureTests(unittest.TestCase):
         self.assertEqual(passages[0][0], 1)
         self.assertEqual(passages[0][1], 3)
         self.assertEqual(passages[0][2], "# Heading\nUser: A line about GILE\nSecond line with Concreteness")
+
+    def test_speaker_and_revision_detection(self):
+        lines = [
+            "User: Actually, Concreteness belongs to GILE and instantiation belongs to HEM.",
+            "",
+        ]
+        _, speaker_at, _ = self.index_mod.annotate_lines(lines)
+        speakers = self.index_mod.detect_speakers(speaker_at, 1, 1)
+        self.assertEqual(speakers, ["USER"])
+        self.assertEqual(self.index_mod.derive_authorship_status(speakers), "USER_AUTHORED")
+        self.assertEqual(self.index_mod.derive_user_approval_status(lines[0], "USER"), "REJECTED_OR_CORRECTED")
+        flags = self.index_mod.detect_candidate_flags(lines[0])
+        self.assertIn("POTENTIAL_REVISION", flags)
+        self.assertIn("CATEGORY_BOUNDARY_UPDATE", flags)
 
     def test_import_scripts_do_not_modify_canonical_files(self):
         before = hashlib.sha256(self.canonical_path.read_bytes()).hexdigest()
@@ -187,10 +228,7 @@ class IngestionInfrastructureTests(unittest.TestCase):
             "vagueness, or ambiguity."
         )
         self.assertIn(canonical_sentence, canonical)
-
-        definition_history = (
-            self.pilot_root / "docs" / "provenance" / "definition_history.csv"
-        ).read_text(encoding="utf-8")
+        definition_history = (self.pilot_root / "docs" / "provenance" / "definition_history.csv").read_text(encoding="utf-8")
         self.assertIn(definition, definition_history)
 
 
