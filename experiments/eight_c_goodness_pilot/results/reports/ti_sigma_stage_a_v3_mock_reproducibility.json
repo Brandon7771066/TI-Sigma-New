@@ -1,0 +1,28 @@
+{
+  "attempts_per_item": 3,
+  "item_groups": 21,
+  "exact_match_rate": 0.0,
+  "mean_abs_diff": {
+    "goodness": 4.031746031746032,
+    "C_scores": {
+      "coherence": 3.4603174603174605,
+      "consistency": 3.746031746031746,
+      "continuity": 3.142857142857143,
+      "concreteness": 3.587301587301587,
+      "completion": 3.5238095238095237,
+      "criticality": 3.4603174603174605,
+      "closeness": 3.3968253968253967,
+      "choice": 3.7777777777777777
+    },
+    "contradictions": {
+      "incomplete_information": 1.4285714285714286,
+      "competing_domains": 1.2063492063492063,
+      "category_error": 1.2698412698412698,
+      "genuine_tradeoff": 1.3015873015873016,
+      "self_reference": 1.3015873015873016,
+      "temporal_inconsistency": 1.26984126984127,
+      "measurement_uncertainty": 1.2380952380952381,
+      "true_incoherence": 1.3333333333333333
+    }
+  }
+}

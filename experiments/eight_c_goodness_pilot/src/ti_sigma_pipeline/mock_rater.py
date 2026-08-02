@@ -10,11 +10,20 @@ def _bucket(seed: str, key: str, maximum: int) -> int:
     return int(digest[:8], 16) % (maximum + 1)
 
 
-def build_mock_rating(item: dict[str, str], attempt_index: int = 1) -> dict:
+def build_mock_rating(
+    item: dict[str, str],
+    attempt_index: int = 1,
+    seed_strategy: str = "vary_by_attempt",
+    base_seed: str = "",
+) -> dict:
     if attempt_index < 1:
         raise ValueError("attempt_index must be >= 1")
+    if seed_strategy not in {"vary_by_attempt", "fixed"}:
+        raise ValueError("seed_strategy must be 'vary_by_attempt' or 'fixed'")
 
-    seed = item["item_id"] + "|" + item["scenario_text"] + f"|attempt={attempt_index}"
+    suffix = f"attempt={attempt_index}" if seed_strategy == "vary_by_attempt" else "attempt=fixed"
+    seed_prefix = f"{base_seed}|" if base_seed else ""
+    seed = seed_prefix + item["item_id"] + "|" + item["scenario_text"] + f"|{suffix}"
 
     c_scores = {name: _bucket(seed, name, 10) for name in EIGHT_C_KEYS}
     contradictions = {name: _bucket(seed, name, 3) for name in CONTRADICTION_KEYS}
@@ -32,5 +41,5 @@ def build_mock_rating(item: dict[str, str], attempt_index: int = 1) -> dict:
         "C_scores": c_scores,
         "goodness": _bucket(seed, "goodness", 10),
         "contradictions": contradictions,
-        "notes": f"MOCK_ONLY: deterministic phase 4 scaffolding output (attempt {attempt_index})",
+        "notes": f"MOCK_ONLY: deterministic output (seed_strategy={seed_strategy})",
     }

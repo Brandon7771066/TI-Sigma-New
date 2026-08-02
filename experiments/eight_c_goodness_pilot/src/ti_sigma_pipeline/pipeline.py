@@ -70,9 +70,13 @@ def run_mock_pipeline(
     output_jsonl: Path,
     attempts_per_item: int = 1,
     output_metrics_json: Path | None = None,
+    seed_strategy: str = "vary_by_attempt",
+    base_seed: str = "",
 ) -> dict:
     if attempts_per_item < 1:
         raise ValueError("attempts_per_item must be >= 1")
+    if seed_strategy not in {"vary_by_attempt", "fixed"}:
+        raise ValueError("seed_strategy must be 'vary_by_attempt' or 'fixed'")
 
     items = load_items(items_csv)
     metadata = load_metadata(metadata_csv)
@@ -85,7 +89,12 @@ def run_mock_pipeline(
     with output_jsonl.open("w", encoding="utf-8", newline="") as handle:
         for attempt_index in range(1, attempts_per_item + 1):
             for item in merged:
-                rating = build_mock_rating(item, attempt_index=attempt_index)
+                rating = build_mock_rating(
+                    item,
+                    attempt_index=attempt_index,
+                    seed_strategy=seed_strategy,
+                    base_seed=base_seed,
+                )
                 validate_rating_like_schema(rating)
                 handle.write(json.dumps(rating, ensure_ascii=False) + "\n")
                 all_records.append(rating)
@@ -101,6 +110,8 @@ def run_mock_pipeline(
         "items": len(items),
         "metadata": len(metadata),
         "attempts_per_item": attempts_per_item,
+        "seed_strategy": seed_strategy,
+        "base_seed": base_seed,
         "written": written,
         "reproducibility": reproducibility,
     }
