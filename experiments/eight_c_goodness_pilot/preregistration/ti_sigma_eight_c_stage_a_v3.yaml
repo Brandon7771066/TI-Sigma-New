@@ -1,0 +1,94 @@
+study_id: ti_sigma_eight_c_stage_a_v3
+protocol_version: 3.0.0
+status: NEW_CANONICAL_DRAFT
+relationship_to_prior_work: transparent reconstruction, not recovered original
+
+reconstruction_statement: >-
+  The prior Eight-C pilot archive was not recovered locally. Stage A v3 is therefore
+  a newly constructed, preregistered study based on the current canonical TI Sigma
+  framework and documented conversation-derived development. It does not reuse or
+  claim the empirical status, hashes, manifests, test results, or outputs previously
+  attributed to the lost pilot.
+
+framework:
+  goodness_definition: structural and evaluative adequacy expressed through the Eight Cs
+  goodness_scalar_independent: true
+  eight_cs:
+    - Coherence
+    - Consistency
+    - Continuity
+    - Concreteness
+    - Completion
+    - Criticality
+    - Closeness
+    - Choice
+  concreteness_definition: >-
+    Concreteness is the degree of tangibility or determinate intelligibility of the
+    evaluated entity: how readily it can be understood, represented, or operationally
+    grasped with minimal fuzziness, vagueness, or ambiguity.
+  concreteness_boundary: >-
+    Concreteness in GILE-G does not measure ontological instantiation. Ontological
+    instantiation and concrete physical mechanisms belong to HEM.
+  category_boundaries:
+    intuition: conscious certainty
+    love: internal and external binding, extending across scale into relational positive affect and coordinated action
+    elegance: beauty, simplicity, economy, ideal form, and related aesthetic or formal qualities
+    goodness: structural and evaluative adequacy expressed through the Eight Cs
+    interaction_rule: cross-component interaction does not imply categorical identity
+
+design:
+  item_count: 21
+  clusters: 7
+  ratings_per_item: 3
+  logical_ratings_planned: 63
+  max_attempts_per_logical_rating: 3
+  max_api_attempts: 189
+  stopping_rule: fixed at 63 terminal logical ratings
+  no_sample_extension_reasons:
+    - poor reliability
+    - unexpected results
+    - failure to support TI Sigma
+    - weak contrasts
+    - lack of significance
+
+contradictions:
+  score_range: 0-3
+  labels:
+    - incomplete_information
+    - competing_domains
+    - category_error
+    - genuine_tradeoff
+    - self_reference
+    - temporal_inconsistency
+    - measurement_uncertainty
+    - true_incoherence
+  interpretation: classifiable features, not automatic disproofs
+
+analysis:
+  primary:
+    - per-C means and dispersion
+    - schema validity
+    - first-attempt and eventual validity
+    - within-item reproducibility
+    - ICC or suitable agreement estimates
+    - engineered contrast checks
+    - Choice versus Concreteness discrimination
+    - Concreteness versus Completion discrimination
+    - Closeness versus Continuity discrimination
+    - contradiction selectivity
+  exploratory:
+    - correlations with Goodness
+    - conditional mutual information
+    - leave-one-C-out prediction
+    - incremental value of Choice
+    - effective-rank diagnostics
+    - candidate residual dimensions
+  restraint: do not make strong factor-structure or completeness claims from only 21 independent items
+
+execution_boundary:
+  paid_api_calls_authorized: false
+  current_goal:
+    - complete v3 protocol
+    - 21-item corpus
+    - prompt
+    - schema
