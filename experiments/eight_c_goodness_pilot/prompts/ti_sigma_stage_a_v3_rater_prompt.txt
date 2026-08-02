@@ -1,0 +1,120 @@
+You are rating a single TI Sigma Stage A v3 item.
+
+Return strict JSON only. Do not include markdown, explanation outside JSON, or extra keys.
+
+Task overview:
+- Evaluate the presented entity, target, purpose, scope, and contestability.
+- Score the Eight Cs separately on integer scales from 0 to 10.
+- Score Goodness independently on an integer scale from 0 to 10.
+- Score each contradiction category on an integer scale from 0 to 3.
+- Do not infer hidden intended profiles.
+- Do not use any metadata that is not explicitly present in the item.
+
+Definitions:
+
+Goodness:
+- Structural and evaluative adequacy expressed through the Eight Cs.
+- Rate Goodness independently as a circularity safeguard. Do not derive it mechanically from the Eight C scores.
+
+The Eight Cs:
+
+1. Coherence
+- Degree to which the parts and relations hang together as an intelligible whole.
+
+2. Consistency
+- Degree to which claims, rules, or actions avoid contradiction within the relevant frame.
+
+3. Continuity
+- Degree to which intelligible linkage is preserved across time, stages, or transitions.
+
+4. Concreteness
+- **Concreteness is the degree of tangibility or determinate intelligibility of the evaluated entity: how readily it can be understood, represented, or operationally grasped with minimal fuzziness, vagueness, or ambiguity.**
+- Concreteness in GILE-G does not measure ontological instantiation. Ontological instantiation and concrete physical mechanisms belong to HEM.
+
+5. Completion
+- Degree to which the entity includes the parts or conditions needed for its stated function within scope.
+
+6. Criticality
+- Degree to which the evaluation appropriately tracks how much correctness, failure tolerance, and accuracy discipline matter for the case.
+
+7. Closeness
+- Degree to which the entity remains near the relevant target, need, or purpose rather than drifting into nearby but less relevant success.
+
+8. Choice
+- Degree to which the relevant bearer has meaningful, attributable, and normatively interpretable choice within the situation, including the alignment of that choice with the relevant target.
+
+Category boundaries:
+- Intuition concerns conscious certainty.
+- Love concerns internal and external binding, extending across scale into relational positive affect and coordinated action.
+- Elegance concerns beauty, simplicity, economy, ideal form, and related aesthetic or formal qualities.
+- Goodness concerns structural and evaluative adequacy expressed through the Eight Cs.
+- Cross-component interaction does not imply categorical identity.
+
+Item fields you must use:
+- item_id
+- evaluated_entity
+- relevant_target
+- intended_purpose
+- domain
+- target_scope
+- target_contestability
+- choice_bearer
+- choice_scope
+- scenario_text
+
+Target contestability:
+- "fixed" means the relevant target is treated as stable for the task.
+- "contestable" means the target itself may reasonably be disputed or reframed.
+
+Contradiction ratings (0 to 3 each):
+- incomplete_information
+- competing_domains
+- category_error
+- genuine_tradeoff
+- self_reference
+- temporal_inconsistency
+- measurement_uncertainty
+- true_incoherence
+
+Scoring guidance:
+- 0 means effectively absent or maximally poor for the rated dimension.
+- 10 means exceptionally strong for the rated dimension.
+- Use the full range when warranted.
+- Contradiction scores are not automatic disproofs; they classify features of the case.
+
+Output JSON shape:
+{
+  "item_id": "string",
+  "evaluated_entity": "string",
+  "relevant_target": "string",
+  "intended_purpose": "string",
+  "domain": "string",
+  "target_scope": "string",
+  "target_contestability": "fixed or contestable",
+  "choice_bearer": "string",
+  "choice_scope": "string",
+  "C_scores": {
+    "coherence": 0,
+    "consistency": 0,
+    "continuity": 0,
+    "concreteness": 0,
+    "completion": 0,
+    "criticality": 0,
+    "closeness": 0,
+    "choice": 0
+  },
+  "goodness": 0,
+  "contradictions": {
+    "incomplete_information": 0,
+    "competing_domains": 0,
+    "category_error": 0,
+    "genuine_tradeoff": 0,
+    "self_reference": 0,
+    "temporal_inconsistency": 0,
+    "measurement_uncertainty": 0,
+    "true_incoherence": 0
+  },
+  "notes": "string"
+}
+
+Return JSON only.

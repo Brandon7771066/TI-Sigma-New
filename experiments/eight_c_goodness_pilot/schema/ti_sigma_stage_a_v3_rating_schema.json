@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ti_sigma_stage_a_v3_rating_schema.json",
+  "title": "TI Sigma Stage A v3 Rating Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "evaluated_entity",
+    "relevant_target",
+    "intended_purpose",
+    "domain",
+    "target_scope",
+    "target_contestability",
+    "choice_bearer",
+    "choice_scope",
+    "C_scores",
+    "goodness",
+    "contradictions",
+    "notes"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluated_entity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relevant_target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intended_purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target_contestability": {
+      "type": "string",
+      "enum": ["fixed", "contestable"]
+    },
+    "choice_bearer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "choice_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "C_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coherence",
+        "consistency",
+        "continuity",
+        "concreteness",
+        "completion",
+        "criticality",
+        "closeness",
+        "choice"
+      ],
+      "properties": {
+        "coherence": {"type": "integer", "minimum": 0, "maximum": 10},
+        "consistency": {"type": "integer", "minimum": 0, "maximum": 10},
+        "continuity": {"type": "integer", "minimum": 0, "maximum": 10},
+        "concreteness": {"type": "integer", "minimum": 0, "maximum": 10},
+        "completion": {"type": "integer", "minimum": 0, "maximum": 10},
+        "criticality": {"type": "integer", "minimum": 0, "maximum": 10},
+        "closeness": {"type": "integer", "minimum": 0, "maximum": 10},
+        "choice": {"type": "integer", "minimum": 0, "maximum": 10}
+      }
+    },
+    "goodness": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "contradictions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "incomplete_information",
+        "competing_domains",
+        "category_error",
+        "genuine_tradeoff",
+        "self_reference",
+        "temporal_inconsistency",
+        "measurement_uncertainty",
+        "true_incoherence"
+      ],
+      "properties": {
+        "incomplete_information": {"type": "integer", "minimum": 0, "maximum": 3},
+        "competing_domains": {"type": "integer", "minimum": 0, "maximum": 3},
+        "category_error": {"type": "integer", "minimum": 0, "maximum": 3},
+        "genuine_tradeoff": {"type": "integer", "minimum": 0, "maximum": 3},
+        "self_reference": {"type": "integer", "minimum": 0, "maximum": 3},
+        "temporal_inconsistency": {"type": "integer", "minimum": 0, "maximum": 3},
+        "measurement_uncertainty": {"type": "integer", "minimum": 0, "maximum": 3},
+        "true_incoherence": {"type": "integer", "minimum": 0, "maximum": 3}
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
