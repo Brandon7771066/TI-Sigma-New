@@ -1,0 +1,50 @@
+{
+  "study_id": "ti_sigma_eight_c_stage_a_v3",
+  "study_version": "3.0.0",
+  "freeze_timestamp_utc": "2026-08-02T23:27:42Z",
+  "git_commit": "4a5bfde",
+  "hash_method": "sha256_file_bytes_utf8",
+  "ordered_item_ids": [
+    "V3-01",
+    "V3-02",
+    "V3-03",
+    "V3-04",
+    "V3-05",
+    "V3-06",
+    "V3-07",
+    "V3-08",
+    "V3-09",
+    "V3-10",
+    "V3-11",
+    "V3-12",
+    "V3-13",
+    "V3-14",
+    "V3-15",
+    "V3-16",
+    "V3-17",
+    "V3-18",
+    "V3-19",
+    "V3-20",
+    "V3-21"
+  ],
+  "frozen_hashes": {
+    "items_csv": "050b5590cf83bb8dca1cb0825141a7eac09b25771efb5b60a329a259c45464b9",
+    "items_jsonl": "b4230de1f2d45c5050605bc51973ab287d72c37e8baa3fd1f8f2ed1de7afacfa",
+    "metadata_csv": "f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1",
+    "prompt": "9dbb143ca1a73ae6a2fa556da7833bd11f3e2445010e223a50d6927de8f6aaaf",
+    "schema": "8a192f0e8ba6cb4101e6980f668110d6f7715706db744c656d0315361bc57fba",
+    "preregistration_md": "7c719ce77bb2e20ed7faefcbb974f8e53a92f3e1142c64281109e72b18ebfbfe",
+    "preregistration_yaml": "6076fd1e403cb19752bedb8470a2250d0bd92382a2b537e00e4e576ca2ea6d1b",
+    "operational_definitions": "3aa067be6590f59b6a7aaae4c27882ab2320dae95e461d060d82fce38ae60894",
+    "config": "10662a853e0b59f89bea8506c56e09354165db4c9834940144cdd268a32f79de"
+  },
+  "registered_plan": {
+    "items": 21,
+    "ratings_per_item": 3,
+    "planned_logical_ratings": 63,
+    "maximum_attempts_per_logical_rating": 3,
+    "maximum_total_attempts": 189,
+    "fixed_stopping_rule": "fixed at 63 terminal logical ratings",
+    "paid_collection_started": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "study_id": "ti_sigma_eight_c_stage_a_v3",
+  "study_version": "3.0.0",
+  "status": "NEW_CANONICAL_DRAFT",
+  "hash_method": "sha256_file_bytes_utf8",
+  "items": 21,
+  "ratings_per_item": 3,
+  "planned_logical_ratings": 63,
+  "maximum_attempts_per_logical_rating": 3,
+  "maximum_total_attempts": 189,
+  "fixed_stopping_rule": "fixed at 63 terminal logical ratings",
+  "paid_collection_started": false,
+  "seed_strategy": "vary_by_attempt",
+  "base_seed": "TI_SIGMA_STAGE_A_V3_REGISTERED",
+  "logical_rating_definition": "One planned (item_id, replicate_index) unit counted toward registered sample size.",
+  "api_attempt_definition": "One model call attempt attached to an existing logical rating key.",
+  "replicate_definition": "One of exactly three logical ratings per item (replicate_index 1..3).",
+  "retry_definition": "A non-terminal additional API attempt for the same logical key; never creates a new key.",
+  "retry_fail_first_attempt_keys": [
+    "registered_stage_a:V3-03:2",
+    "registered_stage_a:V3-07:1",
+    "registered_stage_a:V3-11:3",
+    "registered_stage_a:V3-16:2",
+    "registered_stage_a:V3-20:1"
+  ]
+}
