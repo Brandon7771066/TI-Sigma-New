@@ -47,24 +47,43 @@ class StageAV3PipelinePhase4Tests(unittest.TestCase):
         merged = self.io_mod.merge_items_with_metadata(items, metadata)
         row = merged[0]
 
-        first = self.mock_mod.build_mock_rating(row)
-        second = self.mock_mod.build_mock_rating(row)
+        first = self.mock_mod.build_mock_rating(row, attempt_index=1)
+        second = self.mock_mod.build_mock_rating(row, attempt_index=1)
+        third = self.mock_mod.build_mock_rating(row, attempt_index=2)
         self.assertEqual(first, second)
+        self.assertNotEqual(first, third)
         self.schema_mod.validate_rating_like_schema(first)
 
-    def test_pipeline_writes_one_json_per_item(self):
+    def test_pipeline_writes_attempt_expanded_jsonl_and_metrics(self):
         with tempfile.TemporaryDirectory() as td:
             output = Path(td) / "mock_ratings.jsonl"
-            summary = self.pipeline_mod.run_mock_pipeline(self.items_csv, self.metadata_csv, output)
+            metrics_path = Path(td) / "reproducibility.json"
+            summary = self.pipeline_mod.run_mock_pipeline(
+                self.items_csv,
+                self.metadata_csv,
+                output,
+                attempts_per_item=3,
+                output_metrics_json=metrics_path,
+            )
 
             self.assertTrue(output.exists())
-            self.assertEqual(summary["written"], 21)
+            self.assertTrue(metrics_path.exists())
+            self.assertEqual(summary["attempts_per_item"], 3)
+            self.assertEqual(summary["written"], 63)
 
             lines = output.read_text(encoding="utf-8").strip().splitlines()
-            self.assertEqual(len(lines), 21)
+            self.assertEqual(len(lines), 63)
 
             sample = json.loads(lines[0])
             self.schema_mod.validate_rating_like_schema(sample)
+
+            metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+            self.assertEqual(metrics["attempts_per_item"], 3)
+            self.assertEqual(metrics["item_groups"], 21)
+            self.assertGreaterEqual(metrics["exact_match_rate"], 0.0)
+            self.assertLessEqual(metrics["exact_match_rate"], 1.0)
+            self.assertIn("C_scores", metrics["mean_abs_diff"])
+            self.assertIn("contradictions", metrics["mean_abs_diff"])
 
 
 if __name__ == "__main__":

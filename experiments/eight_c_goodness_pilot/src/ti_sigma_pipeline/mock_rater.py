@@ -10,8 +10,11 @@ def _bucket(seed: str, key: str, maximum: int) -> int:
     return int(digest[:8], 16) % (maximum + 1)
 
 
-def build_mock_rating(item: dict[str, str]) -> dict:
-    seed = item["item_id"] + "|" + item["scenario_text"]
+def build_mock_rating(item: dict[str, str], attempt_index: int = 1) -> dict:
+    if attempt_index < 1:
+        raise ValueError("attempt_index must be >= 1")
+
+    seed = item["item_id"] + "|" + item["scenario_text"] + f"|attempt={attempt_index}"
 
     c_scores = {name: _bucket(seed, name, 10) for name in EIGHT_C_KEYS}
     contradictions = {name: _bucket(seed, name, 3) for name in CONTRADICTION_KEYS}
@@ -29,5 +32,5 @@ def build_mock_rating(item: dict[str, str]) -> dict:
         "C_scores": c_scores,
         "goodness": _bucket(seed, "goodness", 10),
         "contradictions": contradictions,
-        "notes": "MOCK_ONLY: deterministic phase 4 scaffolding output",
+        "notes": f"MOCK_ONLY: deterministic phase 4 scaffolding output (attempt {attempt_index})",
     }
