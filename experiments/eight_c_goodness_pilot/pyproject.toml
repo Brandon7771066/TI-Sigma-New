@@ -1,0 +1,8 @@
+[project]
+name = "ti-sigma-eight-c-goodness-pilot"
+version = "0.0.1"
+description = "Canonical consolidation scaffold for TI Sigma Eight-C Goodness pilot"
+readme = "README.md"
+requires-python = ">=3.11"
+
+Status = "NEW_CANONICAL_DRAFT"
