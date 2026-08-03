@@ -78,7 +78,7 @@ $terminalManifestPath = Join-Path $repoRoot "experiments/eight_c_goodness_pilot/
 $terminal = Get-Content -Path $terminalManifestPath -Raw | ConvertFrom-Json
 
 Write-Output "============================================================"
-Write-Output "TI SIGMA EIGHT-C — STAGE A V3 MOCK RELEASE GATE"
+Write-Output "TI SIGMA EIGHT-C - STAGE A V3 MOCK RELEASE GATE"
 Write-Output "============================================================"
 Write-Output "Tests: PASS"
 Write-Output "Freeze check: PASS"

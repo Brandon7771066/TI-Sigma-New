@@ -52,6 +52,8 @@ def render_reproducibility_markdown(metrics: dict) -> str:
     lines = [
         "# TI Sigma Stage A v3 Mock Reproducibility Summary",
         "",
+        "> These ratings are synthetic engineering outputs generated to test pipeline behavior. They are not empirical observations and must not be used to evaluate the Eight-C framework.",
+        "",
         f"- attempts_per_item: {metrics.get('attempts_per_item')}",
         f"- item_groups: {metrics.get('item_groups')}",
         f"- exact_match_rate: {metrics.get('exact_match_rate'):.6f}",

@@ -1,5 +1,7 @@
 # TI Sigma Stage A v3 Mock Reproducibility Summary
 
+> These ratings are synthetic engineering outputs generated to test pipeline behavior. They are not empirical observations and must not be used to evaluate the Eight-C framework.
+
 - attempts_per_item: 3
 - item_groups: 21
 - exact_match_rate: 0.000000
