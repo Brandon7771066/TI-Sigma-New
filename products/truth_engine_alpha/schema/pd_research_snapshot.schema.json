@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "truth_engine_alpha.pd_research_snapshot.v1",
+  "title": "PD Research Snapshot",
+  "type": "object",
+  "required": [
+    "pd_variant",
+    "input_features",
+    "continuous_state",
+    "soft_ternary",
+    "hard_ternary",
+    "threshold_set",
+    "threshold_provenance",
+    "ratios_used",
+    "calibration_status",
+    "uncertainty",
+    "projection",
+    "research_only",
+    "limitations"
+  ],
+  "properties": {
+    "pd_variant": {"type": "string"},
+    "input_features": {"type": "object"},
+    "continuous_state": {"type": ["number", "null"]},
+    "soft_ternary": {
+      "type": "object",
+      "required": ["p_false", "p_indeterminate", "p_true"],
+      "properties": {
+        "p_false": {"type": "number"},
+        "p_indeterminate": {"type": "number"},
+        "p_true": {"type": "number"}
+      }
+    },
+    "hard_ternary": {"type": "string", "enum": ["FALSE", "INDETERMINATE", "TRUE"]},
+    "threshold_set": {"type": "string"},
+    "threshold_provenance": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "ratios_used": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "calibration_status": {"type": "string"},
+    "uncertainty": {"type": "number"},
+    "projection": {"type": "object"},
+    "research_only": {"type": "boolean"},
+    "limitations": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": true
+}
