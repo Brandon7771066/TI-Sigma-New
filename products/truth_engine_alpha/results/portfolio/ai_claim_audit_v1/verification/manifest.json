@@ -1,0 +1,13 @@
+{
+  "package": "ai_claim_audit_v1",
+  "created_from_branch": "product/truth-engine-alpha-1.1",
+  "baseline_reference": "results/verification/product_baseline_20260804_155015",
+  "release_verification_reference": "results/verification/truth_engine_alpha_1_1_verify_20260804_155451",
+  "contains": {
+    "input_sample": true,
+    "analysis_outputs": true,
+    "equivalence_gate": true,
+    "shadow_isolation_gate": true,
+    "commercial_offer": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "baseline_result": "C:\\Users\\brand\\Documents\\GitHub\\TI-Sigma-Truth-Engine-release\\products\\truth_engine_alpha\\results\\verification\\product_baseline_20260804_155015\\ai_hallucination_demo\\full_result.json",
+  "current_result": "C:\\Users\\brand\\Documents\\GitHub\\TI-Sigma-Truth-Engine-release\\products\\truth_engine_alpha\\results\\verification\\truth_engine_alpha_1_1_verify_20260804_155451\\pd_disabled_run\\full_result.json",
+  "payload_diffs": {},
+  "file_diffs": {}
+}
