@@ -1,0 +1,21 @@
+{
+  "case_id": "case_02",
+  "label": "initial diagnostic case-study evidence",
+  "claim_extraction_precision": 1.0,
+  "claim_extraction_recall": 1.0,
+  "citation_status_accuracy": 0.75,
+  "citation_error_precision": 1.0,
+  "citation_error_recall": 0.667,
+  "contradiction_type_accuracy": 0.25,
+  "scope_mismatch_accuracy": 1.0,
+  "scaffolding_route_accuracy": 0.333,
+  "resolution_status_accuracy": 1.0,
+  "false_positives": {
+    "claims": 0,
+    "citation_errors": 0
+  },
+  "false_negatives": {
+    "claims": 0,
+    "citation_errors": 1
+  }
+}

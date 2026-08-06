@@ -1,0 +1,33 @@
+{
+  "case_id": "case_03",
+  "expected_resolution_status": "partially_resolved",
+  "claim_expectations": [
+    {"claim_id": "c03_001", "expected_citation_status": "NOT_VERIFIED_OFFLINE"},
+    {"claim_id": "c03_002", "expected_citation_status": "NO_CITATION_PROVIDED"},
+    {"claim_id": "c03_003", "expected_citation_status": "NO_CITATION_PROVIDED"},
+    {"claim_id": "c03_004", "expected_citation_status": "NO_CITATION_PROVIDED"}
+  ],
+  "expected_contradictions": [
+    {
+      "reference_contradiction_id": "ref_contra_001",
+      "claim_pair": ["c03_001", "c03_002"],
+      "expected_contradiction_type": "POPULATION_DIFFERENCE",
+      "expected_scope_population_time_mismatch": true,
+      "expected_scaffolding_route": "population"
+    },
+    {
+      "reference_contradiction_id": "ref_contra_002",
+      "claim_pair": ["c03_002", "c03_003"],
+      "expected_contradiction_type": "TEMPORAL_DIFFERENCE",
+      "expected_scope_population_time_mismatch": true,
+      "expected_scaffolding_route": "time"
+    },
+    {
+      "reference_contradiction_id": "ref_contra_003",
+      "claim_pair": ["c03_003", "c03_004"],
+      "expected_contradiction_type": "SCOPE_DIFFERENCE",
+      "expected_scope_population_time_mismatch": true,
+      "expected_scaffolding_route": "scope"
+    }
+  ]
+}

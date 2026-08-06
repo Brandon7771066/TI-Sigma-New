@@ -1,0 +1,16 @@
+{
+  "case_id": "case_02",
+  "annotation_timestamp": "2026-08-04T19:54:45Z",
+  "engine_output_hidden_from_annotator": true,
+  "annotation_guidelines": "Expected citation-support gradient labels were assigned from source-claim fit before engine execution.",
+  "adjudication_basis": "Public guideline interpretation and claim-qualification review.",
+  "sources_reviewed": [
+    "WHO sugars guideline page",
+    "USPSTF recommendation materials",
+    "CDC guidance pages"
+  ],
+  "changes_after_engine_output": false,
+  "original_annotation": "preserved in human_reference_annotation.json",
+  "revised_annotation": null,
+  "reason_for_revision": null
+}

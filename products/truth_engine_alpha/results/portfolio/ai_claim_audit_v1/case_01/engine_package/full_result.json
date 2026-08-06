@@ -1,0 +1,897 @@
+{
+  "analysis_id": "input",
+  "claims": [
+    {
+      "claim_id": "c01_001",
+      "normalized_claim": "The answer relies on a fabricated legal citation pattern.",
+      "verbatim_text": "The answer cites DOI 10.1234/fake-xxxxx-2023 as controlling authority.",
+      "source_id": "ai_answer_case_01",
+      "source_location": "paragraph_1",
+      "claim_type": "citation_validity",
+      "population": "n/a",
+      "intervention": "n/a",
+      "comparison": "n/a",
+      "outcome": "citation validity",
+      "timeframe": "n/a",
+      "conditions": "public_source",
+      "certainty_language": "states",
+      "citations": [
+        "10.1234/fake-xxxxx-2023"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c01_002",
+      "normalized_claim": "The answer references a source identifier that is not in the provided source map.",
+      "verbatim_text": "The answer cites source key appellate_report_2019 which is not in the package.",
+      "source_id": "ai_answer_case_01",
+      "source_location": "paragraph_1",
+      "claim_type": "citation_validity",
+      "population": "n/a",
+      "intervention": "n/a",
+      "comparison": "n/a",
+      "outcome": "citation mapping",
+      "timeframe": "n/a",
+      "conditions": "public_source",
+      "certainty_language": "states",
+      "citations": [
+        "appellate_report_2019"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c01_003",
+      "normalized_claim": "The answer references Reuters coverage but no retrieval was performed in this run.",
+      "verbatim_text": "The answer references Reuters legal coverage and treats it as authority.",
+      "source_id": "reuters_2023_chatgpt_cases",
+      "source_location": "paragraph_1",
+      "claim_type": "citation_validity",
+      "population": "n/a",
+      "intervention": "n/a",
+      "comparison": "n/a",
+      "outcome": "citation access",
+      "timeframe": "n/a",
+      "conditions": "source_found_not_accessed",
+      "certainty_language": "states",
+      "citations": [
+        "reuters_2023_chatgpt_cases"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ai_answer_case_01",
+      "title": "The answer cites DOI 10.1234/fake-xxxxx-2023 as controlling authority.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "ai_answer_case_01",
+      "title": "The answer cites source key appellate_report_2019 which is not in the package.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "reuters_2023_chatgpt_cases",
+      "title": "The answer references Reuters legal coverage and treats it as authority.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra_001",
+      "claim_ids": [
+        "c01_001",
+        "c01_002"
+      ],
+      "contradiction_type": "MISSING_INFORMATION",
+      "explanation": "Pairwise conflict detected between c01_001 and c01_002.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "contradiction_id": "contra_002",
+      "claim_ids": [
+        "c01_002",
+        "c01_003"
+      ],
+      "contradiction_type": "MISSING_INFORMATION",
+      "explanation": "Pairwise conflict detected between c01_002 and c01_003.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_candidates": [
+    {
+      "candidate_id": "scaffold_001",
+      "contradiction_id": "contra_001",
+      "route": "context",
+      "rationale": "context check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_002",
+      "contradiction_id": "contra_002",
+      "route": "context",
+      "rationale": "context check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "evidence_assessment": {
+    "source_type": "mixed",
+    "study_design": "claim-set review",
+    "sample_size": null,
+    "replication": null,
+    "directness": "moderate",
+    "risk_of_bias": "unknown",
+    "measurement_quality": "unknown",
+    "statistical_uncertainty": "unquantified",
+    "external_validity": "case dependent",
+    "recency": "depends on source",
+    "citation_support": "partial",
+    "independence_of_sources": "unknown",
+    "summary_rating": "provisional",
+    "evidence_level": "IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status": "partially_resolved",
+  "confidence": 0.45,
+  "critical_unknowns": [
+    "at least one contradiction requires scaffolding"
+  ],
+  "recommended_actions": [
+    {
+      "action_id": "action_001",
+      "description": "Review source provenance and direct quotations.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.2,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "action_id": "action_002",
+      "description": "Collect missing context or comparative sources.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.25,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "commercial_opportunities": [
+    "claim audit report",
+    "evidence map package",
+    "hallucination review service",
+    "prior-art triage service"
+  ],
+  "limitations": [
+    "Provisional commercial MVP",
+    "Not a substitute for expert review"
+  ],
+  "truth_engine_level": 4,
+  "truth_engine_score": {
+    "report_completeness": 1.0,
+    "evidence_coverage": 1.0,
+    "citation_support": 1.0,
+    "conflict_density": 0.667,
+    "resolution_potential": 0.6,
+    "confidence_calibration": 0.45,
+    "actionability": 0.8
+  },
+  "contradiction_graph": {
+    "nodes": [
+      {
+        "claim_id": "c01_001",
+        "label": "The answer relies on a fabricated legal citation pattern."
+      },
+      {
+        "claim_id": "c01_002",
+        "label": "The answer references a source identifier that is not in the provided source map."
+      },
+      {
+        "claim_id": "c01_003",
+        "label": "The answer references Reuters coverage but no retrieval was performed in this run."
+      }
+    ],
+    "edges": [
+      {
+        "from": "c01_001",
+        "to": "c01_002",
+        "relation": "contradicts",
+        "contradiction_type": "MISSING_INFORMATION"
+      },
+      {
+        "from": "c01_002",
+        "to": "c01_003",
+        "relation": "contradicts",
+        "contradiction_type": "MISSING_INFORMATION"
+      }
+    ]
+  },
+  "information_gain": [
+    {
+      "item_id": "ig_001",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: context",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_001"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    },
+    {
+      "item_id": "ig_002",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: context",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_002"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    }
+  ],
+  "claim_labels": {
+    "c01_001": "SOURCE_DERIVED_FACT",
+    "c01_002": "SOURCE_DERIVED_FACT",
+    "c01_003": "SOURCE_DERIVED_FACT"
+  },
+  "research_mode_fields": {
+    "seed": 0,
+    "citation_audit": [
+      {
+        "claim_id": "c01_001",
+        "status": "POSSIBLY_FABRICATED_CITATION",
+        "reason": "Citation token pattern appears synthetic and requires manual verification.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c01_002",
+        "status": "SOURCE_NOT_FOUND",
+        "reason": "Citation reference not present in provided source map.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c01_003",
+        "status": "SOURCE_FOUND_NOT_ACCESSED",
+        "reason": "Source located but not accessed in this run per case annotation.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    ],
+    "scaffolding_analysis": [
+      {
+        "claim_a": "c01_001",
+        "claim_b": "c01_002",
+        "initial_conflict_type": "MISSING_INFORMATION",
+        "candidate_scope_resolution": "possible",
+        "candidate_population_resolution": "unknown",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "possible",
+        "remaining_conflict": "Pairwise conflict detected between c01_001 and c01_002.",
+        "final_resolution_status": "PARTIALLY_RESOLVED"
+      },
+      {
+        "claim_a": "c01_002",
+        "claim_b": "c01_003",
+        "initial_conflict_type": "MISSING_INFORMATION",
+        "candidate_scope_resolution": "possible",
+        "candidate_population_resolution": "unknown",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "possible",
+        "remaining_conflict": "Pairwise conflict detected between c01_002 and c01_003.",
+        "final_resolution_status": "PARTIALLY_RESOLVED"
+      }
+    ],
+    "safety_labels": [
+      "medical_claims_warning",
+      "legal_conclusions_warning",
+      "investment_conclusions_warning",
+      "patentability_warning",
+      "safety_critical_engineering_warning"
+    ],
+    "schema_version": "truth_engine_alpha.v1"
+  },
+  "citation_audit": [
+    {
+      "claim_id": "c01_001",
+      "status": "POSSIBLY_FABRICATED_CITATION",
+      "reason": "Citation token pattern appears synthetic and requires manual verification.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c01_002",
+      "status": "SOURCE_NOT_FOUND",
+      "reason": "Citation reference not present in provided source map.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c01_003",
+      "status": "SOURCE_FOUND_NOT_ACCESSED",
+      "reason": "Source located but not accessed in this run per case annotation.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_analysis": [
+    {
+      "claim_a": "c01_001",
+      "claim_b": "c01_002",
+      "initial_conflict_type": "MISSING_INFORMATION",
+      "candidate_scope_resolution": "possible",
+      "candidate_population_resolution": "unknown",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "possible",
+      "remaining_conflict": "Pairwise conflict detected between c01_001 and c01_002.",
+      "final_resolution_status": "PARTIALLY_RESOLVED"
+    },
+    {
+      "claim_a": "c01_002",
+      "claim_b": "c01_003",
+      "initial_conflict_type": "MISSING_INFORMATION",
+      "candidate_scope_resolution": "possible",
+      "candidate_population_resolution": "unknown",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "possible",
+      "remaining_conflict": "Pairwise conflict detected between c01_002 and c01_003.",
+      "final_resolution_status": "PARTIALLY_RESOLVED"
+    }
+  ],
+  "safety_labels": [
+    "medical_claims_warning",
+    "legal_conclusions_warning",
+    "investment_conclusions_warning",
+    "patentability_warning",
+    "safety_critical_engineering_warning"
+  ],
+  "schema_version": "truth_engine_alpha.v1",
+  "static_artifacts_disclosed": true,
+  "claim_graph": {
+    "nodes": [
+      {
+        "node_id": "c01_001",
+        "node_type": "Claim",
+        "label": "The answer relies on a fabricated legal citation pattern.",
+        "attributes": {
+          "claim_type": "citation_validity",
+          "source_id": "ai_answer_case_01"
+        }
+      },
+      {
+        "node_id": "population_n/a",
+        "node_type": "Population",
+        "label": "n/a",
+        "attributes": {
+          "claim_id": "c01_001"
+        }
+      },
+      {
+        "node_id": "method_n/a",
+        "node_type": "Method",
+        "label": "n/a",
+        "attributes": {
+          "claim_id": "c01_001"
+        }
+      },
+      {
+        "node_id": "evidence_c01_001",
+        "node_type": "Evidence",
+        "label": "citation validity",
+        "attributes": {
+          "claim_id": "c01_001"
+        }
+      },
+      {
+        "node_id": "citation_c01_001",
+        "node_type": "Citation",
+        "label": "10.1234/fake-xxxxx-2023",
+        "attributes": {
+          "claim_id": "c01_001",
+          "status": "POSSIBLY_FABRICATED_CITATION"
+        }
+      },
+      {
+        "node_id": "c01_002",
+        "node_type": "Claim",
+        "label": "The answer references a source identifier that is not in the provided source map.",
+        "attributes": {
+          "claim_type": "citation_validity",
+          "source_id": "ai_answer_case_01"
+        }
+      },
+      {
+        "node_id": "evidence_c01_002",
+        "node_type": "Evidence",
+        "label": "citation mapping",
+        "attributes": {
+          "claim_id": "c01_002"
+        }
+      },
+      {
+        "node_id": "citation_c01_002",
+        "node_type": "Citation",
+        "label": "appellate_report_2019",
+        "attributes": {
+          "claim_id": "c01_002",
+          "status": "SOURCE_NOT_FOUND"
+        }
+      },
+      {
+        "node_id": "c01_003",
+        "node_type": "Claim",
+        "label": "The answer references Reuters coverage but no retrieval was performed in this run.",
+        "attributes": {
+          "claim_type": "citation_validity",
+          "source_id": "reuters_2023_chatgpt_cases"
+        }
+      },
+      {
+        "node_id": "evidence_c01_003",
+        "node_type": "Evidence",
+        "label": "citation access",
+        "attributes": {
+          "claim_id": "c01_003"
+        }
+      },
+      {
+        "node_id": "citation_c01_003",
+        "node_type": "Citation",
+        "label": "reuters_2023_chatgpt_cases",
+        "attributes": {
+          "claim_id": "c01_003",
+          "status": "SOURCE_FOUND_NOT_ACCESSED"
+        }
+      },
+      {
+        "node_id": "ai_answer_case_01",
+        "node_type": "Source",
+        "label": "The answer cites DOI 10.1234/fake-xxxxx-2023 as controlling authority.",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "reuters_2023_chatgpt_cases",
+        "node_type": "Source",
+        "label": "The answer references Reuters legal coverage and treats it as authority.",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "scaffold_001",
+        "node_type": "Action",
+        "label": "context check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "context",
+          "contradiction_id": "contra_001"
+        }
+      },
+      {
+        "node_id": "scaffold_002",
+        "node_type": "Action",
+        "label": "context check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "context",
+          "contradiction_id": "contra_002"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "edge_cites_c01_001",
+        "source": "c01_001",
+        "target": "ai_answer_case_01",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c01_001",
+        "source": "c01_001",
+        "target": "population_n/a",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c01_001",
+        "source": "c01_001",
+        "target": "method_n/a",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c01_001",
+        "source": "evidence_c01_001",
+        "target": "c01_001",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c01_001",
+        "source": "citation_c01_001",
+        "target": "c01_001",
+        "edge_type": "CITES",
+        "evidence": "Citation token pattern appears synthetic and requires manual verification.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c01_002",
+        "source": "c01_002",
+        "target": "ai_answer_case_01",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c01_002",
+        "source": "c01_002",
+        "target": "population_n/a",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c01_002",
+        "source": "c01_002",
+        "target": "method_n/a",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c01_002",
+        "source": "evidence_c01_002",
+        "target": "c01_002",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c01_002",
+        "source": "citation_c01_002",
+        "target": "c01_002",
+        "edge_type": "CITES",
+        "evidence": "Citation reference not present in provided source map.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c01_003",
+        "source": "c01_003",
+        "target": "reuters_2023_chatgpt_cases",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c01_003",
+        "source": "c01_003",
+        "target": "population_n/a",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c01_003",
+        "source": "c01_003",
+        "target": "method_n/a",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c01_003",
+        "source": "evidence_c01_003",
+        "target": "c01_003",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c01_003",
+        "source": "citation_c01_003",
+        "target": "c01_003",
+        "edge_type": "CITES",
+        "evidence": "Source located but not accessed in this run per case annotation.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_001",
+        "source": "c01_001",
+        "target": "c01_002",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c01_001 and c01_002.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "MISSING_INFORMATION"
+        }
+      },
+      {
+        "edge_id": "contra_002",
+        "source": "c01_002",
+        "target": "c01_003",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c01_002 and c01_003.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "MISSING_INFORMATION"
+        }
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_001",
+        "source": "scaffold_001",
+        "target": "contra_001",
+        "edge_type": "QUALIFIES",
+        "evidence": "context check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_002",
+        "source": "scaffold_002",
+        "target": "contra_002",
+        "edge_type": "QUALIFIES",
+        "evidence": "context check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_ai_answer_case_01_ai_answer_case_01",
+        "source": "ai_answer_case_01",
+        "target": "ai_answer_case_01",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_ai_answer_case_01_reuters_2023_chatgpt_cases",
+        "source": "ai_answer_case_01",
+        "target": "reuters_2023_chatgpt_cases",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      }
+    ],
+    "metadata": {
+      "claim_count": 3,
+      "source_count": 3,
+      "contradiction_count": 2,
+      "citation_statuses": [
+        "POSSIBLY_FABRICATED_CITATION",
+        "SOURCE_FOUND_NOT_ACCESSED",
+        "SOURCE_NOT_FOUND"
+      ]
+    }
+  },
+  "graph_errors": [
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c01_001",
+        "population_n/a"
+      ],
+      "affected_edges": [
+        "edge_pop_c01_001"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c01_002",
+        "population_n/a"
+      ],
+      "affected_edges": [
+        "edge_pop_c01_002"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c01_003",
+        "population_n/a"
+      ],
+      "affected_edges": [
+        "edge_pop_c01_003"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_001",
+        "contra_001"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_001"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_002",
+        "contra_002"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_002"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    }
+  ],
+  "crystal_matrix": [
+    {
+      "claim_id": "c01_001",
+      "claim structure": 1.0,
+      "source structure": 0.3333333333333333,
+      "evidence quality": 1.0,
+      "contradictions": 0.5,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.5,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.5,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.3333333333333333,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.3666666666666667
+    },
+    {
+      "claim_id": "c01_002",
+      "claim structure": 1.0,
+      "source structure": 0.3333333333333333,
+      "evidence quality": 1.0,
+      "contradictions": 1.0,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 1.0,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.0,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 1.0,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.3333333333333333,
+      "critical_unknown_centrality": 1.0,
+      "structural_instability": 0.7833333333333333
+    },
+    {
+      "claim_id": "c01_003",
+      "claim structure": 1.0,
+      "source structure": 0.3333333333333333,
+      "evidence quality": 1.0,
+      "contradictions": 0.5,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.5,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.5,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.3333333333333333,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.3666666666666667
+    }
+  ],
+  "crystal_diagnostics": {
+    "isolated_claim_score": 0.333,
+    "evidence_asymmetry": 0.0,
+    "conflict_density": 0.667,
+    "assumption_sensitivity": 0.35,
+    "resolution_potential": 0.9,
+    "source_dependency_concentration": 0.333,
+    "critical_unknown_centrality": 0.5,
+    "structural_instability": 0.506,
+    "claim_count": 3,
+    "graph_node_count": 15,
+    "graph_edge_count": 21
+  },
+  "crystal_explanation": "Crystal v0.1 is a multilayer error-analysis structure for claim graph diagnostics, not a physical or octonionic object."
+}

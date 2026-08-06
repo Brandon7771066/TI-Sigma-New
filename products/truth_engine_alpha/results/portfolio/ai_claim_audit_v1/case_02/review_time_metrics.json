@@ -1,0 +1,7 @@
+{
+  "case_id": "case_02",
+  "engine_runtime_seconds": 0.25,
+  "human_post_engine_review_time_seconds": 420,
+  "performance_claim_status": "INTERNAL_PLANNING_ESTIMATE_NOT_A_MEASURED_PERFORMANCE_RESULT",
+  "note": "Without-engine baseline and savings are intentionally excluded from public performance claims."
+}

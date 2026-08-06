@@ -1,0 +1,1341 @@
+{
+  "analysis_id": "input",
+  "claims": [
+    {
+      "claim_id": "c02_001",
+      "normalized_claim": "The answer overstates WHO guidance as deterministic proof.",
+      "verbatim_text": "The claim overstates WHO guidance and mischaracterized the recommendation as absolute proof.",
+      "source_id": "who_sugar_guideline_2015",
+      "source_location": "paragraph_1",
+      "claim_type": "effectiveness",
+      "population": "adults",
+      "intervention": "sugar reduction",
+      "comparison": "none",
+      "outcome": "diabetes risk",
+      "timeframe": "long_term",
+      "conditions": "public_source",
+      "certainty_language": "proves",
+      "citations": [
+        "who_sugar_guideline_2015"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_002",
+      "normalized_claim": "The answer says USPSTF supports universal statins for everyone over 30.",
+      "verbatim_text": "The cited USPSTF statement does not support universal statin initiation without risk criteria.",
+      "source_id": "uspstf_statin_primary_prevention",
+      "source_location": "paragraph_1",
+      "claim_type": "recommendation",
+      "population": "adults_over_30",
+      "intervention": "statin initiation",
+      "comparison": "risk stratification",
+      "outcome": "primary prevention",
+      "timeframe": "current_guideline",
+      "conditions": "public_source",
+      "certainty_language": "supports",
+      "citations": [
+        "uspstf_statin_primary_prevention"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_003",
+      "normalized_claim": "The answer claims CDC guidance universally endorses one supplement protocol.",
+      "verbatim_text": "CDC guidance partially supports targeted supplementation but does not justify universal protocol claims.",
+      "source_id": "cdc_public_guidance_collection",
+      "source_location": "paragraph_2",
+      "claim_type": "guidance",
+      "population": "mixed",
+      "intervention": "supplement protocol",
+      "comparison": "targeted_vs_universal",
+      "outcome": "guideline applicability",
+      "timeframe": "current_guideline",
+      "conditions": "public_source",
+      "certainty_language": "claims",
+      "citations": [
+        "cdc_public_guidance_collection"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_004",
+      "normalized_claim": "The source confirms recommendation language should include risk context.",
+      "verbatim_text": "The source confirms recommendations include explicit risk-context qualifiers and supports this statement.",
+      "source_id": "uspstf_statin_primary_prevention",
+      "source_location": "paragraph_2",
+      "claim_type": "guidance",
+      "population": "at_risk_adults",
+      "intervention": "statin initiation",
+      "comparison": "qualified_use",
+      "outcome": "guideline interpretation",
+      "timeframe": "current_guideline",
+      "conditions": "public_source",
+      "certainty_language": "confirms",
+      "citations": [
+        "uspstf_statin_primary_prevention"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "who_sugar_guideline_2015",
+      "title": "The claim overstates WHO guidance and mischaracterized the recommendation as abs",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "uspstf_statin_primary_prevention",
+      "title": "The cited USPSTF statement does not support universal statin initiation without ",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "cdc_public_guidance_collection",
+      "title": "CDC guidance partially supports targeted supplementation but does not justify un",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "uspstf_statin_primary_prevention",
+      "title": "The source confirms recommendations include explicit risk-context qualifiers and",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra_001",
+      "claim_ids": [
+        "c02_001",
+        "c02_002"
+      ],
+      "contradiction_type": "POPULATION_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c02_001 and c02_002.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "contradiction_id": "contra_002",
+      "claim_ids": [
+        "c02_002",
+        "c02_003"
+      ],
+      "contradiction_type": "POPULATION_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c02_002 and c02_003.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "contradiction_id": "contra_003",
+      "claim_ids": [
+        "c02_003",
+        "c02_004"
+      ],
+      "contradiction_type": "POPULATION_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c02_003 and c02_004.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_candidates": [
+    {
+      "candidate_id": "scaffold_001",
+      "contradiction_id": "contra_001",
+      "route": "population",
+      "rationale": "population check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_002",
+      "contradiction_id": "contra_002",
+      "route": "population",
+      "rationale": "population check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_003",
+      "contradiction_id": "contra_003",
+      "route": "population",
+      "rationale": "population check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "evidence_assessment": {
+    "source_type": "mixed",
+    "study_design": "claim-set review",
+    "sample_size": null,
+    "replication": null,
+    "directness": "moderate",
+    "risk_of_bias": "unknown",
+    "measurement_quality": "unknown",
+    "statistical_uncertainty": "unquantified",
+    "external_validity": "case dependent",
+    "recency": "depends on source",
+    "citation_support": "partial",
+    "independence_of_sources": "unknown",
+    "summary_rating": "provisional",
+    "evidence_level": "IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status": "partially_resolved",
+  "confidence": 0.45,
+  "critical_unknowns": [
+    "at least one contradiction requires scaffolding"
+  ],
+  "recommended_actions": [
+    {
+      "action_id": "action_001",
+      "description": "Review source provenance and direct quotations.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.2,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "action_id": "action_002",
+      "description": "Collect missing context or comparative sources.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.25,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "commercial_opportunities": [
+    "claim audit report",
+    "evidence map package",
+    "hallucination review service",
+    "prior-art triage service"
+  ],
+  "limitations": [
+    "Provisional commercial MVP",
+    "Not a substitute for expert review"
+  ],
+  "truth_engine_level": 4,
+  "truth_engine_score": {
+    "report_completeness": 1.0,
+    "evidence_coverage": 1.0,
+    "citation_support": 1.0,
+    "conflict_density": 0.75,
+    "resolution_potential": 0.6,
+    "confidence_calibration": 0.45,
+    "actionability": 0.8
+  },
+  "contradiction_graph": {
+    "nodes": [
+      {
+        "claim_id": "c02_001",
+        "label": "The answer overstates WHO guidance as deterministic proof."
+      },
+      {
+        "claim_id": "c02_002",
+        "label": "The answer says USPSTF supports universal statins for everyone over 30."
+      },
+      {
+        "claim_id": "c02_003",
+        "label": "The answer claims CDC guidance universally endorses one supplement protocol."
+      },
+      {
+        "claim_id": "c02_004",
+        "label": "The source confirms recommendation language should include risk context."
+      }
+    ],
+    "edges": [
+      {
+        "from": "c02_001",
+        "to": "c02_002",
+        "relation": "contradicts",
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      },
+      {
+        "from": "c02_002",
+        "to": "c02_003",
+        "relation": "contradicts",
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      },
+      {
+        "from": "c02_003",
+        "to": "c02_004",
+        "relation": "contradicts",
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      }
+    ]
+  },
+  "information_gain": [
+    {
+      "item_id": "ig_001",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: population",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_001"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    },
+    {
+      "item_id": "ig_002",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: population",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_002"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    },
+    {
+      "item_id": "ig_003",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: population",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_003"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    }
+  ],
+  "claim_labels": {
+    "c02_001": "SOURCE_DERIVED_FACT",
+    "c02_002": "SOURCE_DERIVED_FACT",
+    "c02_003": "SOURCE_DERIVED_FACT",
+    "c02_004": "SOURCE_DERIVED_FACT"
+  },
+  "research_mode_fields": {
+    "seed": 0,
+    "citation_audit": [
+      {
+        "claim_id": "c02_001",
+        "status": "SOURCE_MISCHARACTERIZED",
+        "reason": "Claim likely overstates source conclusions.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c02_002",
+        "status": "SOURCE_DOES_NOT_SUPPORT_CLAIM",
+        "reason": "Claim language signals source mismatch.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c02_003",
+        "status": "SOURCE_SUPPORTS_CLAIM",
+        "reason": "Claim text and citation context indicate direct support.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c02_004",
+        "status": "SOURCE_SUPPORTS_CLAIM",
+        "reason": "Claim text and citation context indicate direct support.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    ],
+    "scaffolding_analysis": [
+      {
+        "claim_a": "c02_001",
+        "claim_b": "c02_002",
+        "initial_conflict_type": "POPULATION_DIFFERENCE",
+        "candidate_scope_resolution": "unlikely",
+        "candidate_population_resolution": "possible",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c02_001 and c02_002.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      },
+      {
+        "claim_a": "c02_002",
+        "claim_b": "c02_003",
+        "initial_conflict_type": "POPULATION_DIFFERENCE",
+        "candidate_scope_resolution": "unlikely",
+        "candidate_population_resolution": "possible",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c02_002 and c02_003.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      },
+      {
+        "claim_a": "c02_003",
+        "claim_b": "c02_004",
+        "initial_conflict_type": "POPULATION_DIFFERENCE",
+        "candidate_scope_resolution": "unlikely",
+        "candidate_population_resolution": "possible",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c02_003 and c02_004.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      }
+    ],
+    "safety_labels": [
+      "medical_claims_warning",
+      "legal_conclusions_warning",
+      "investment_conclusions_warning",
+      "patentability_warning",
+      "safety_critical_engineering_warning"
+    ],
+    "schema_version": "truth_engine_alpha.v1"
+  },
+  "citation_audit": [
+    {
+      "claim_id": "c02_001",
+      "status": "SOURCE_MISCHARACTERIZED",
+      "reason": "Claim likely overstates source conclusions.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_002",
+      "status": "SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "reason": "Claim language signals source mismatch.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_003",
+      "status": "SOURCE_SUPPORTS_CLAIM",
+      "reason": "Claim text and citation context indicate direct support.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c02_004",
+      "status": "SOURCE_SUPPORTS_CLAIM",
+      "reason": "Claim text and citation context indicate direct support.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_analysis": [
+    {
+      "claim_a": "c02_001",
+      "claim_b": "c02_002",
+      "initial_conflict_type": "POPULATION_DIFFERENCE",
+      "candidate_scope_resolution": "unlikely",
+      "candidate_population_resolution": "possible",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c02_001 and c02_002.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    },
+    {
+      "claim_a": "c02_002",
+      "claim_b": "c02_003",
+      "initial_conflict_type": "POPULATION_DIFFERENCE",
+      "candidate_scope_resolution": "unlikely",
+      "candidate_population_resolution": "possible",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c02_002 and c02_003.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    },
+    {
+      "claim_a": "c02_003",
+      "claim_b": "c02_004",
+      "initial_conflict_type": "POPULATION_DIFFERENCE",
+      "candidate_scope_resolution": "unlikely",
+      "candidate_population_resolution": "possible",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c02_003 and c02_004.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    }
+  ],
+  "safety_labels": [
+    "medical_claims_warning",
+    "legal_conclusions_warning",
+    "investment_conclusions_warning",
+    "patentability_warning",
+    "safety_critical_engineering_warning"
+  ],
+  "schema_version": "truth_engine_alpha.v1",
+  "static_artifacts_disclosed": true,
+  "claim_graph": {
+    "nodes": [
+      {
+        "node_id": "c02_001",
+        "node_type": "Claim",
+        "label": "The answer overstates WHO guidance as deterministic proof.",
+        "attributes": {
+          "claim_type": "effectiveness",
+          "source_id": "who_sugar_guideline_2015"
+        }
+      },
+      {
+        "node_id": "population_adults",
+        "node_type": "Population",
+        "label": "adults",
+        "attributes": {
+          "claim_id": "c02_001"
+        }
+      },
+      {
+        "node_id": "method_sugar reduction",
+        "node_type": "Method",
+        "label": "sugar reduction",
+        "attributes": {
+          "claim_id": "c02_001"
+        }
+      },
+      {
+        "node_id": "evidence_c02_001",
+        "node_type": "Evidence",
+        "label": "diabetes risk",
+        "attributes": {
+          "claim_id": "c02_001"
+        }
+      },
+      {
+        "node_id": "citation_c02_001",
+        "node_type": "Citation",
+        "label": "who_sugar_guideline_2015",
+        "attributes": {
+          "claim_id": "c02_001",
+          "status": "SOURCE_MISCHARACTERIZED"
+        }
+      },
+      {
+        "node_id": "c02_002",
+        "node_type": "Claim",
+        "label": "The answer says USPSTF supports universal statins for everyone over 30.",
+        "attributes": {
+          "claim_type": "recommendation",
+          "source_id": "uspstf_statin_primary_prevention"
+        }
+      },
+      {
+        "node_id": "population_adults_over_30",
+        "node_type": "Population",
+        "label": "adults_over_30",
+        "attributes": {
+          "claim_id": "c02_002"
+        }
+      },
+      {
+        "node_id": "method_statin initiation",
+        "node_type": "Method",
+        "label": "statin initiation",
+        "attributes": {
+          "claim_id": "c02_002"
+        }
+      },
+      {
+        "node_id": "evidence_c02_002",
+        "node_type": "Evidence",
+        "label": "primary prevention",
+        "attributes": {
+          "claim_id": "c02_002"
+        }
+      },
+      {
+        "node_id": "citation_c02_002",
+        "node_type": "Citation",
+        "label": "uspstf_statin_primary_prevention",
+        "attributes": {
+          "claim_id": "c02_002",
+          "status": "SOURCE_DOES_NOT_SUPPORT_CLAIM"
+        }
+      },
+      {
+        "node_id": "c02_003",
+        "node_type": "Claim",
+        "label": "The answer claims CDC guidance universally endorses one supplement protocol.",
+        "attributes": {
+          "claim_type": "guidance",
+          "source_id": "cdc_public_guidance_collection"
+        }
+      },
+      {
+        "node_id": "population_mixed",
+        "node_type": "Population",
+        "label": "mixed",
+        "attributes": {
+          "claim_id": "c02_003"
+        }
+      },
+      {
+        "node_id": "method_supplement protocol",
+        "node_type": "Method",
+        "label": "supplement protocol",
+        "attributes": {
+          "claim_id": "c02_003"
+        }
+      },
+      {
+        "node_id": "evidence_c02_003",
+        "node_type": "Evidence",
+        "label": "guideline applicability",
+        "attributes": {
+          "claim_id": "c02_003"
+        }
+      },
+      {
+        "node_id": "citation_c02_003",
+        "node_type": "Citation",
+        "label": "cdc_public_guidance_collection",
+        "attributes": {
+          "claim_id": "c02_003",
+          "status": "SOURCE_SUPPORTS_CLAIM"
+        }
+      },
+      {
+        "node_id": "c02_004",
+        "node_type": "Claim",
+        "label": "The source confirms recommendation language should include risk context.",
+        "attributes": {
+          "claim_type": "guidance",
+          "source_id": "uspstf_statin_primary_prevention"
+        }
+      },
+      {
+        "node_id": "population_at_risk_adults",
+        "node_type": "Population",
+        "label": "at_risk_adults",
+        "attributes": {
+          "claim_id": "c02_004"
+        }
+      },
+      {
+        "node_id": "evidence_c02_004",
+        "node_type": "Evidence",
+        "label": "guideline interpretation",
+        "attributes": {
+          "claim_id": "c02_004"
+        }
+      },
+      {
+        "node_id": "citation_c02_004",
+        "node_type": "Citation",
+        "label": "uspstf_statin_primary_prevention",
+        "attributes": {
+          "claim_id": "c02_004",
+          "status": "SOURCE_SUPPORTS_CLAIM"
+        }
+      },
+      {
+        "node_id": "who_sugar_guideline_2015",
+        "node_type": "Source",
+        "label": "The claim overstates WHO guidance and mischaracterized the recommendation as abs",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "uspstf_statin_primary_prevention",
+        "node_type": "Source",
+        "label": "The cited USPSTF statement does not support universal statin initiation without ",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "cdc_public_guidance_collection",
+        "node_type": "Source",
+        "label": "CDC guidance partially supports targeted supplementation but does not justify un",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "scaffold_001",
+        "node_type": "Action",
+        "label": "population check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "population",
+          "contradiction_id": "contra_001"
+        }
+      },
+      {
+        "node_id": "scaffold_002",
+        "node_type": "Action",
+        "label": "population check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "population",
+          "contradiction_id": "contra_002"
+        }
+      },
+      {
+        "node_id": "scaffold_003",
+        "node_type": "Action",
+        "label": "population check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "population",
+          "contradiction_id": "contra_003"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "edge_cites_c02_001",
+        "source": "c02_001",
+        "target": "who_sugar_guideline_2015",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c02_001",
+        "source": "c02_001",
+        "target": "population_adults",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c02_001",
+        "source": "c02_001",
+        "target": "method_sugar reduction",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c02_001",
+        "source": "evidence_c02_001",
+        "target": "c02_001",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c02_001",
+        "source": "citation_c02_001",
+        "target": "c02_001",
+        "edge_type": "CITES",
+        "evidence": "Claim likely overstates source conclusions.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c02_002",
+        "source": "c02_002",
+        "target": "uspstf_statin_primary_prevention",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c02_002",
+        "source": "c02_002",
+        "target": "population_adults_over_30",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c02_002",
+        "source": "c02_002",
+        "target": "method_statin initiation",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c02_002",
+        "source": "evidence_c02_002",
+        "target": "c02_002",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c02_002",
+        "source": "citation_c02_002",
+        "target": "c02_002",
+        "edge_type": "CITES",
+        "evidence": "Claim language signals source mismatch.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c02_003",
+        "source": "c02_003",
+        "target": "cdc_public_guidance_collection",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c02_003",
+        "source": "c02_003",
+        "target": "population_mixed",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c02_003",
+        "source": "c02_003",
+        "target": "method_supplement protocol",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c02_003",
+        "source": "evidence_c02_003",
+        "target": "c02_003",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c02_003",
+        "source": "citation_c02_003",
+        "target": "c02_003",
+        "edge_type": "CITES",
+        "evidence": "Claim text and citation context indicate direct support.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_support_c02_003",
+        "source": "cdc_public_guidance_collection",
+        "target": "c02_003",
+        "edge_type": "SUPPORTS",
+        "evidence": "Claim text and citation context indicate direct support.",
+        "confidence": 0.8,
+        "severity": "high",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c02_004",
+        "source": "c02_004",
+        "target": "uspstf_statin_primary_prevention",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c02_004",
+        "source": "c02_004",
+        "target": "population_at_risk_adults",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c02_004",
+        "source": "c02_004",
+        "target": "method_statin initiation",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c02_004",
+        "source": "evidence_c02_004",
+        "target": "c02_004",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c02_004",
+        "source": "citation_c02_004",
+        "target": "c02_004",
+        "edge_type": "CITES",
+        "evidence": "Claim text and citation context indicate direct support.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_support_c02_004",
+        "source": "uspstf_statin_primary_prevention",
+        "target": "c02_004",
+        "edge_type": "SUPPORTS",
+        "evidence": "Claim text and citation context indicate direct support.",
+        "confidence": 0.8,
+        "severity": "high",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_001",
+        "source": "c02_001",
+        "target": "c02_002",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c02_001 and c02_002.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "POPULATION_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_001_differs_by_population",
+        "source": "c02_001",
+        "target": "c02_002",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "POPULATION_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_002",
+        "source": "c02_002",
+        "target": "c02_003",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c02_002 and c02_003.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "POPULATION_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_002_differs_by_population",
+        "source": "c02_002",
+        "target": "c02_003",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "POPULATION_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_003",
+        "source": "c02_003",
+        "target": "c02_004",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c02_003 and c02_004.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "POPULATION_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_003_differs_by_population",
+        "source": "c02_003",
+        "target": "c02_004",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "POPULATION_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_001",
+        "source": "scaffold_001",
+        "target": "contra_001",
+        "edge_type": "QUALIFIES",
+        "evidence": "population check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_002",
+        "source": "scaffold_002",
+        "target": "contra_002",
+        "edge_type": "QUALIFIES",
+        "evidence": "population check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_003",
+        "source": "scaffold_003",
+        "target": "contra_003",
+        "edge_type": "QUALIFIES",
+        "evidence": "population check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_who_sugar_guideline_2015_uspstf_statin_primary_prevention",
+        "source": "who_sugar_guideline_2015",
+        "target": "uspstf_statin_primary_prevention",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_who_sugar_guideline_2015_cdc_public_guidance_collection",
+        "source": "who_sugar_guideline_2015",
+        "target": "cdc_public_guidance_collection",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_who_sugar_guideline_2015_uspstf_statin_primary_prevention",
+        "source": "who_sugar_guideline_2015",
+        "target": "uspstf_statin_primary_prevention",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      }
+    ],
+    "metadata": {
+      "claim_count": 4,
+      "source_count": 4,
+      "contradiction_count": 3,
+      "citation_statuses": [
+        "SOURCE_DOES_NOT_SUPPORT_CLAIM",
+        "SOURCE_MISCHARACTERIZED",
+        "SOURCE_SUPPORTS_CLAIM"
+      ]
+    }
+  },
+  "graph_errors": [
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_001",
+        "population_adults"
+      ],
+      "affected_edges": [
+        "edge_pop_c02_001"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_002",
+        "population_adults_over_30"
+      ],
+      "affected_edges": [
+        "edge_pop_c02_002"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_003",
+        "population_mixed"
+      ],
+      "affected_edges": [
+        "edge_pop_c02_003"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_004",
+        "population_at_risk_adults"
+      ],
+      "affected_edges": [
+        "edge_pop_c02_004"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_001",
+        "c02_002"
+      ],
+      "affected_edges": [
+        "contra_001_differs_by_population"
+      ],
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_002",
+        "c02_003"
+      ],
+      "affected_edges": [
+        "contra_002_differs_by_population"
+      ],
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c02_003",
+        "c02_004"
+      ],
+      "affected_edges": [
+        "contra_003_differs_by_population"
+      ],
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "conflicting_high_quality_sources",
+      "affected_nodes": [
+        "c02_003",
+        "c02_004"
+      ],
+      "affected_edges": [
+        "edge_support_c02_003",
+        "edge_support_c02_004"
+      ],
+      "evidence": "multiple high-confidence support paths",
+      "severity": "low",
+      "confidence": 0.6,
+      "explanation": "high-quality support sources disagree or concentrate",
+      "recommended_review": "compare source quality"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_001",
+        "contra_001"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_001"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_002",
+        "contra_002"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_002"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_003",
+        "contra_003"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_003"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    }
+  ],
+  "crystal_matrix": [
+    {
+      "claim_id": "c02_001",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 1.0,
+      "contradictions": 0.3333333333333333,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.6666666666666667,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.3333333333333333,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.3111111111111111
+    },
+    {
+      "claim_id": "c02_002",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 1.0,
+      "contradictions": 0.6666666666666666,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.33333333333333337,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.6666666666666666,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.4222222222222222
+    },
+    {
+      "claim_id": "c02_003",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 1.0,
+      "contradictions": 0.6666666666666666,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.33333333333333337,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.6666666666666666,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.4222222222222222
+    },
+    {
+      "claim_id": "c02_004",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 1.0,
+      "contradictions": 0.3333333333333333,
+      "scaffolding": 1.0,
+      "uncertainty": 0.0,
+      "criticality": 0.25,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.6666666666666667,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.3333333333333333,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.3111111111111111
+    }
+  ],
+  "crystal_diagnostics": {
+    "isolated_claim_score": 0.5,
+    "evidence_asymmetry": 0.0,
+    "conflict_density": 0.5,
+    "assumption_sensitivity": 0.35,
+    "resolution_potential": 0.9,
+    "source_dependency_concentration": 0.25,
+    "critical_unknown_centrality": 0.25,
+    "structural_instability": 0.367,
+    "claim_count": 4,
+    "graph_node_count": 25,
+    "graph_edge_count": 34
+  },
+  "crystal_explanation": "Crystal v0.1 is a multilayer error-analysis structure for claim graph diagnostics, not a physical or octonionic object."
+}

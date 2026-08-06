@@ -1,0 +1,34 @@
+{
+  "case_id": "case_01",
+  "title": "Fabricated and missing citation discrimination",
+  "created_before_engine_run": true,
+  "claims": [
+    {
+      "claim_id": "c01_001",
+      "text": "The AI cites an impossible legal citation pattern tied to a nonexistent appellate decision.",
+      "expected_citation_status": "POSSIBLY_FABRICATED_CITATION",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "none",
+      "expected_scaffolding_route": "context"
+    },
+    {
+      "claim_id": "c01_002",
+      "text": "The AI cites a legal source identifier that is not present in the provided source map.",
+      "expected_citation_status": "SOURCE_NOT_FOUND",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "none",
+      "expected_scaffolding_route": "context"
+    },
+    {
+      "claim_id": "c01_003",
+      "text": "The AI references a known public source that exists but was not accessed during this run.",
+      "expected_citation_status": "SOURCE_FOUND_NOT_ACCESSED",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "none",
+      "expected_scaffolding_route": "context"
+    }
+  ],
+  "expected_corrected_conclusion": "The answer should be treated as legally unreliable until each citation is verified against primary court records.",
+  "severity": "high",
+  "commercial_significance": "Prevents client exposure to fabricated authority and reduces legal-review rework."
+}

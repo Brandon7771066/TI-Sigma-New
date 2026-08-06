@@ -1,0 +1,13 @@
+{
+  "variant": "continuous",
+  "value": 0.75,
+  "threshold_set": "historical_candidate_001",
+  "decoder": "gaussian_softmax",
+  "gate": {
+    "pd": {
+      "enabled": true,
+      "model": "continuous",
+      "projection_target": "truth_engine_score"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "case_01",
+  "original_ai_system": "ChatGPT (publicly reported hallucination pattern context)",
+  "model_name_or_unknown": "unknown",
+  "generation_date_or_unknown": "unknown",
+  "original_prompt": "unknown",
+  "public_page_or_archive": "https://www.reuters.com/world/us/lawyers-cite-fake-cases-made-up-by-chatgpt-judge-is-not-amused-2023-05-27/",
+  "source_urls": [
+    "https://www.reuters.com/world/us/lawyers-cite-fake-cases-made-up-by-chatgpt-judge-is-not-amused-2023-05-27/"
+  ],
+  "answer_verbatim": "not available in a complete public transcript for this package",
+  "answer_excerpted": true,
+  "excerpt_method": "Reconstructed representative excerpt from publicly reported citation-fabrication pattern",
+  "human_annotation_created_before_engine_run": true,
+  "annotator": "Brandon + Copilot working draft",
+  "annotation_independence": "Annotation authored before case CLI run artifacts were generated",
+  "engine_rules_used_to_design_case": "Citation-status taxonomy labels were intentionally targeted",
+  "copyright_or_excerpt_notes": "Contains minimal paraphrased excerpted text for commentary and diagnostic analysis",
+  "limitations": "This is not a raw full transcript from an original public chat log.",
+  "case_classification": "RECONSTRUCTED_FROM_PUBLIC_SOURCES"
+}

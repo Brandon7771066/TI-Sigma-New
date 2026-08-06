@@ -1,0 +1,22 @@
+{
+  "case_id": "case_03",
+  "original_ai_system": "Composite public AI scope-overgeneralization pattern",
+  "model_name_or_unknown": "unknown",
+  "generation_date_or_unknown": "unknown",
+  "original_prompt": "unknown",
+  "public_page_or_archive": "composite_from_public_sources",
+  "source_urls": [
+    "https://www.cdc.gov/",
+    "https://www.nih.gov/"
+  ],
+  "answer_verbatim": "not available as a single raw public transcript",
+  "answer_excerpted": true,
+  "excerpt_method": "Curated synthetic excerpt mirroring common population/timeframe/causality overreach",
+  "human_annotation_created_before_engine_run": true,
+  "annotator": "Brandon + Copilot working draft",
+  "annotation_independence": "Reference annotation prepared before engine output generation",
+  "engine_rules_used_to_design_case": "Contradiction taxonomy classes were intentionally represented",
+  "copyright_or_excerpt_notes": "Paraphrased summary-style excerpt only",
+  "limitations": "Not a single naturally occurring public transcript; intentionally engineered for diagnostic stress-testing.",
+  "case_classification": "SYNTHETIC_ENGINEERING_CASE"
+}

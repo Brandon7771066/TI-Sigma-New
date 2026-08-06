@@ -1,0 +1,1260 @@
+{
+  "analysis_id": "input",
+  "claims": [
+    {
+      "claim_id": "c03_001",
+      "normalized_claim": "The source evidence is a mouse model observed over an 8-week protocol.",
+      "verbatim_text": "The cited mouse study reports an 8-week protocol outcome.",
+      "source_id": "mouse_model_study_public_2021",
+      "source_location": "paragraph_1",
+      "claim_type": "effectiveness",
+      "population": "mice",
+      "intervention": "compound Q",
+      "comparison": "vehicle_control",
+      "outcome": "metabolic response",
+      "timeframe": "8_weeks",
+      "conditions": "public_source",
+      "certainty_language": "reports",
+      "citations": [
+        "mouse_model_study_public_2021"
+      ],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_002",
+      "normalized_claim": "The AI answer generalizes the same effect to all adults.",
+      "verbatim_text": "The answer states all adults will have the same outcome.",
+      "source_id": "ai_answer_case_03",
+      "source_location": "paragraph_1",
+      "claim_type": "generalization",
+      "population": "all_adults",
+      "intervention": "compound Q",
+      "comparison": "none",
+      "outcome": "metabolic response",
+      "timeframe": "8_weeks",
+      "conditions": "public_source",
+      "certainty_language": "guarantees",
+      "citations": [],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_003",
+      "normalized_claim": "The AI answer extends 8-week findings to guaranteed 5-year outcomes.",
+      "verbatim_text": "The answer claims the observed benefit remains guaranteed for 5 years.",
+      "source_id": "ai_answer_case_03",
+      "source_location": "paragraph_2",
+      "claim_type": "generalization",
+      "population": "all_adults",
+      "intervention": "compound Q",
+      "comparison": "none",
+      "outcome": "long_term_benefit",
+      "timeframe": "5_years",
+      "conditions": "public_source",
+      "certainty_language": "guarantees",
+      "citations": [],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_004",
+      "normalized_claim": "The AI answer treats observational association as causal proof.",
+      "verbatim_text": "The answer says observational association proves causation without further qualification.",
+      "source_id": "ai_answer_case_03",
+      "source_location": "paragraph_3",
+      "claim_type": "causal_inference",
+      "population": "all_adults",
+      "intervention": "compound Q",
+      "comparison": "randomized_trial",
+      "outcome": "causal_effect",
+      "timeframe": "5_years",
+      "conditions": "public_source",
+      "certainty_language": "proves",
+      "citations": [],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "mouse_model_study_public_2021",
+      "title": "The cited mouse study reports an 8-week protocol outcome.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "ai_answer_case_03",
+      "title": "The answer states all adults will have the same outcome.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "ai_answer_case_03",
+      "title": "The answer claims the observed benefit remains guaranteed for 5 years.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "source_id": "ai_answer_case_03",
+      "title": "The answer says observational association proves causation without further quali",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra_001",
+      "claim_ids": [
+        "c03_001",
+        "c03_002"
+      ],
+      "contradiction_type": "POPULATION_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c03_001 and c03_002.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "contradiction_id": "contra_002",
+      "claim_ids": [
+        "c03_002",
+        "c03_003"
+      ],
+      "contradiction_type": "TEMPORAL_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c03_002 and c03_003.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "contradiction_id": "contra_003",
+      "claim_ids": [
+        "c03_003",
+        "c03_004"
+      ],
+      "contradiction_type": "SCOPE_DIFFERENCE",
+      "explanation": "Pairwise conflict detected between c03_003 and c03_004.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_candidates": [
+    {
+      "candidate_id": "scaffold_001",
+      "contradiction_id": "contra_001",
+      "route": "population",
+      "rationale": "population check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_002",
+      "contradiction_id": "contra_002",
+      "route": "time",
+      "rationale": "time check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_003",
+      "contradiction_id": "contra_003",
+      "route": "scope",
+      "rationale": "scope check may resolve the apparent conflict.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "evidence_assessment": {
+    "source_type": "mixed",
+    "study_design": "claim-set review",
+    "sample_size": null,
+    "replication": null,
+    "directness": "moderate",
+    "risk_of_bias": "unknown",
+    "measurement_quality": "unknown",
+    "statistical_uncertainty": "unquantified",
+    "external_validity": "case dependent",
+    "recency": "depends on source",
+    "citation_support": "partial",
+    "independence_of_sources": "unknown",
+    "summary_rating": "provisional",
+    "evidence_level": "IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status": "partially_resolved",
+  "confidence": 0.45,
+  "critical_unknowns": [
+    "at least one contradiction requires scaffolding",
+    "c03_002: missing citation support",
+    "c03_003: missing citation support",
+    "c03_004: missing citation support"
+  ],
+  "recommended_actions": [
+    {
+      "action_id": "action_001",
+      "description": "Review source provenance and direct quotations.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.2,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "action_id": "action_002",
+      "description": "Collect missing context or comparative sources.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.25,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "commercial_opportunities": [
+    "claim audit report",
+    "evidence map package",
+    "hallucination review service",
+    "prior-art triage service"
+  ],
+  "limitations": [
+    "Provisional commercial MVP",
+    "Not a substitute for expert review"
+  ],
+  "truth_engine_level": 4,
+  "truth_engine_score": {
+    "report_completeness": 1.0,
+    "evidence_coverage": 0.25,
+    "citation_support": 0.25,
+    "conflict_density": 0.75,
+    "resolution_potential": 0.6,
+    "confidence_calibration": 0.45,
+    "actionability": 0.8
+  },
+  "contradiction_graph": {
+    "nodes": [
+      {
+        "claim_id": "c03_001",
+        "label": "The source evidence is a mouse model observed over an 8-week protocol."
+      },
+      {
+        "claim_id": "c03_002",
+        "label": "The AI answer generalizes the same effect to all adults."
+      },
+      {
+        "claim_id": "c03_003",
+        "label": "The AI answer extends 8-week findings to guaranteed 5-year outcomes."
+      },
+      {
+        "claim_id": "c03_004",
+        "label": "The AI answer treats observational association as causal proof."
+      }
+    ],
+    "edges": [
+      {
+        "from": "c03_001",
+        "to": "c03_002",
+        "relation": "contradicts",
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      },
+      {
+        "from": "c03_002",
+        "to": "c03_003",
+        "relation": "contradicts",
+        "contradiction_type": "TEMPORAL_DIFFERENCE"
+      },
+      {
+        "from": "c03_003",
+        "to": "c03_004",
+        "relation": "contradicts",
+        "contradiction_type": "SCOPE_DIFFERENCE"
+      }
+    ]
+  },
+  "information_gain": [
+    {
+      "item_id": "ig_001",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: population",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_001"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    },
+    {
+      "item_id": "ig_002",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: time",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_002"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    },
+    {
+      "item_id": "ig_003",
+      "label": "HEURISTIC_INFORMATION_GAIN_ESTIMATE",
+      "action": "Collect targeted evidence for route: scope",
+      "uncertainties_addressed": [
+        "context gap",
+        "source support gap"
+      ],
+      "contradictions_addressed": [
+        "contra_003"
+      ],
+      "estimated_cost_level": "medium",
+      "estimated_time_level": "short",
+      "expected_decision_impact": "medium",
+      "expected_uncertainty_reduction": 0.15,
+      "assumptions": [
+        "public source availability",
+        "stable claim framing"
+      ],
+      "calculation_method": "rule_based_priority_v1",
+      "priority": "medium"
+    }
+  ],
+  "claim_labels": {
+    "c03_001": "SOURCE_DERIVED_FACT",
+    "c03_002": "ENGINE_INFERENCE",
+    "c03_003": "ENGINE_INFERENCE",
+    "c03_004": "ENGINE_INFERENCE"
+  },
+  "research_mode_fields": {
+    "seed": 0,
+    "citation_audit": [
+      {
+        "claim_id": "c03_001",
+        "status": "NOT_VERIFIED_OFFLINE",
+        "reason": "Source exists but direct retrieval/access was not performed in offline mode.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c03_002",
+        "status": "NO_CITATION_PROVIDED",
+        "reason": "Claim has no citation references.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c03_003",
+        "status": "NO_CITATION_PROVIDED",
+        "reason": "Claim has no citation references.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      },
+      {
+        "claim_id": "c03_004",
+        "status": "NO_CITATION_PROVIDED",
+        "reason": "Claim has no citation references.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    ],
+    "scaffolding_analysis": [
+      {
+        "claim_a": "c03_001",
+        "claim_b": "c03_002",
+        "initial_conflict_type": "POPULATION_DIFFERENCE",
+        "candidate_scope_resolution": "unlikely",
+        "candidate_population_resolution": "possible",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c03_001 and c03_002.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      },
+      {
+        "claim_a": "c03_002",
+        "claim_b": "c03_003",
+        "initial_conflict_type": "TEMPORAL_DIFFERENCE",
+        "candidate_scope_resolution": "unlikely",
+        "candidate_population_resolution": "unknown",
+        "candidate_temporal_resolution": "possible",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c03_002 and c03_003.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      },
+      {
+        "claim_a": "c03_003",
+        "claim_b": "c03_004",
+        "initial_conflict_type": "SCOPE_DIFFERENCE",
+        "candidate_scope_resolution": "possible",
+        "candidate_population_resolution": "unknown",
+        "candidate_temporal_resolution": "unknown",
+        "candidate_definition_resolution": "unknown",
+        "candidate_method_resolution": "unknown",
+        "candidate_measurement_resolution": "unknown",
+        "candidate_parameter_resolution": "unknown",
+        "candidate_mechanism_resolution": "unknown",
+        "remaining_conflict": "Pairwise conflict detected between c03_003 and c03_004.",
+        "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+      }
+    ],
+    "safety_labels": [
+      "medical_claims_warning",
+      "legal_conclusions_warning",
+      "investment_conclusions_warning",
+      "patentability_warning",
+      "safety_critical_engineering_warning"
+    ],
+    "schema_version": "truth_engine_alpha.v1"
+  },
+  "citation_audit": [
+    {
+      "claim_id": "c03_001",
+      "status": "NOT_VERIFIED_OFFLINE",
+      "reason": "Source exists but direct retrieval/access was not performed in offline mode.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_002",
+      "status": "NO_CITATION_PROVIDED",
+      "reason": "Claim has no citation references.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_003",
+      "status": "NO_CITATION_PROVIDED",
+      "reason": "Claim has no citation references.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "claim_id": "c03_004",
+      "status": "NO_CITATION_PROVIDED",
+      "reason": "Claim has no citation references.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_analysis": [
+    {
+      "claim_a": "c03_001",
+      "claim_b": "c03_002",
+      "initial_conflict_type": "POPULATION_DIFFERENCE",
+      "candidate_scope_resolution": "unlikely",
+      "candidate_population_resolution": "possible",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c03_001 and c03_002.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    },
+    {
+      "claim_a": "c03_002",
+      "claim_b": "c03_003",
+      "initial_conflict_type": "TEMPORAL_DIFFERENCE",
+      "candidate_scope_resolution": "unlikely",
+      "candidate_population_resolution": "unknown",
+      "candidate_temporal_resolution": "possible",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c03_002 and c03_003.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    },
+    {
+      "claim_a": "c03_003",
+      "claim_b": "c03_004",
+      "initial_conflict_type": "SCOPE_DIFFERENCE",
+      "candidate_scope_resolution": "possible",
+      "candidate_population_resolution": "unknown",
+      "candidate_temporal_resolution": "unknown",
+      "candidate_definition_resolution": "unknown",
+      "candidate_method_resolution": "unknown",
+      "candidate_measurement_resolution": "unknown",
+      "candidate_parameter_resolution": "unknown",
+      "candidate_mechanism_resolution": "unknown",
+      "remaining_conflict": "Pairwise conflict detected between c03_003 and c03_004.",
+      "final_resolution_status": "RESOLVED_BY_SCAFFOLDING"
+    }
+  ],
+  "safety_labels": [
+    "medical_claims_warning",
+    "legal_conclusions_warning",
+    "investment_conclusions_warning",
+    "patentability_warning",
+    "safety_critical_engineering_warning"
+  ],
+  "schema_version": "truth_engine_alpha.v1",
+  "static_artifacts_disclosed": true,
+  "claim_graph": {
+    "nodes": [
+      {
+        "node_id": "c03_001",
+        "node_type": "Claim",
+        "label": "The source evidence is a mouse model observed over an 8-week protocol.",
+        "attributes": {
+          "claim_type": "effectiveness",
+          "source_id": "mouse_model_study_public_2021"
+        }
+      },
+      {
+        "node_id": "population_mice",
+        "node_type": "Population",
+        "label": "mice",
+        "attributes": {
+          "claim_id": "c03_001"
+        }
+      },
+      {
+        "node_id": "method_compound Q",
+        "node_type": "Method",
+        "label": "compound Q",
+        "attributes": {
+          "claim_id": "c03_001"
+        }
+      },
+      {
+        "node_id": "evidence_c03_001",
+        "node_type": "Evidence",
+        "label": "metabolic response",
+        "attributes": {
+          "claim_id": "c03_001"
+        }
+      },
+      {
+        "node_id": "citation_c03_001",
+        "node_type": "Citation",
+        "label": "mouse_model_study_public_2021",
+        "attributes": {
+          "claim_id": "c03_001",
+          "status": "NOT_VERIFIED_OFFLINE"
+        }
+      },
+      {
+        "node_id": "c03_002",
+        "node_type": "Claim",
+        "label": "The AI answer generalizes the same effect to all adults.",
+        "attributes": {
+          "claim_type": "generalization",
+          "source_id": "ai_answer_case_03"
+        }
+      },
+      {
+        "node_id": "population_all_adults",
+        "node_type": "Population",
+        "label": "all_adults",
+        "attributes": {
+          "claim_id": "c03_002"
+        }
+      },
+      {
+        "node_id": "evidence_c03_002",
+        "node_type": "Evidence",
+        "label": "metabolic response",
+        "attributes": {
+          "claim_id": "c03_002"
+        }
+      },
+      {
+        "node_id": "citation_c03_002",
+        "node_type": "Citation",
+        "label": "c03_002",
+        "attributes": {
+          "claim_id": "c03_002",
+          "status": "NO_CITATION_PROVIDED"
+        }
+      },
+      {
+        "node_id": "c03_003",
+        "node_type": "Claim",
+        "label": "The AI answer extends 8-week findings to guaranteed 5-year outcomes.",
+        "attributes": {
+          "claim_type": "generalization",
+          "source_id": "ai_answer_case_03"
+        }
+      },
+      {
+        "node_id": "evidence_c03_003",
+        "node_type": "Evidence",
+        "label": "long_term_benefit",
+        "attributes": {
+          "claim_id": "c03_003"
+        }
+      },
+      {
+        "node_id": "citation_c03_003",
+        "node_type": "Citation",
+        "label": "c03_003",
+        "attributes": {
+          "claim_id": "c03_003",
+          "status": "NO_CITATION_PROVIDED"
+        }
+      },
+      {
+        "node_id": "c03_004",
+        "node_type": "Claim",
+        "label": "The AI answer treats observational association as causal proof.",
+        "attributes": {
+          "claim_type": "causal_inference",
+          "source_id": "ai_answer_case_03"
+        }
+      },
+      {
+        "node_id": "evidence_c03_004",
+        "node_type": "Evidence",
+        "label": "causal_effect",
+        "attributes": {
+          "claim_id": "c03_004"
+        }
+      },
+      {
+        "node_id": "citation_c03_004",
+        "node_type": "Citation",
+        "label": "c03_004",
+        "attributes": {
+          "claim_id": "c03_004",
+          "status": "NO_CITATION_PROVIDED"
+        }
+      },
+      {
+        "node_id": "mouse_model_study_public_2021",
+        "node_type": "Source",
+        "label": "The cited mouse study reports an 8-week protocol outcome.",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "ai_answer_case_03",
+        "node_type": "Source",
+        "label": "The answer states all adults will have the same outcome.",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      },
+      {
+        "node_id": "scaffold_001",
+        "node_type": "Action",
+        "label": "population check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "population",
+          "contradiction_id": "contra_001"
+        }
+      },
+      {
+        "node_id": "scaffold_002",
+        "node_type": "Action",
+        "label": "time check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "time",
+          "contradiction_id": "contra_002"
+        }
+      },
+      {
+        "node_id": "scaffold_003",
+        "node_type": "Action",
+        "label": "scope check may resolve the apparent conflict.",
+        "attributes": {
+          "route": "scope",
+          "contradiction_id": "contra_003"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "edge_cites_c03_001",
+        "source": "c03_001",
+        "target": "mouse_model_study_public_2021",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c03_001",
+        "source": "c03_001",
+        "target": "population_mice",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c03_001",
+        "source": "c03_001",
+        "target": "method_compound Q",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c03_001",
+        "source": "evidence_c03_001",
+        "target": "c03_001",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c03_001",
+        "source": "citation_c03_001",
+        "target": "c03_001",
+        "edge_type": "CITES",
+        "evidence": "Source exists but direct retrieval/access was not performed in offline mode.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c03_002",
+        "source": "c03_002",
+        "target": "ai_answer_case_03",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c03_002",
+        "source": "c03_002",
+        "target": "population_all_adults",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c03_002",
+        "source": "c03_002",
+        "target": "method_compound Q",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c03_002",
+        "source": "evidence_c03_002",
+        "target": "c03_002",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c03_002",
+        "source": "citation_c03_002",
+        "target": "c03_002",
+        "edge_type": "CITES",
+        "evidence": "Claim has no citation references.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c03_003",
+        "source": "c03_003",
+        "target": "ai_answer_case_03",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c03_003",
+        "source": "c03_003",
+        "target": "population_all_adults",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c03_003",
+        "source": "c03_003",
+        "target": "method_compound Q",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c03_003",
+        "source": "evidence_c03_003",
+        "target": "c03_003",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c03_003",
+        "source": "citation_c03_003",
+        "target": "c03_003",
+        "edge_type": "CITES",
+        "evidence": "Claim has no citation references.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_cites_c03_004",
+        "source": "c03_004",
+        "target": "ai_answer_case_03",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_pop_c03_004",
+        "source": "c03_004",
+        "target": "population_all_adults",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "population annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_method_c03_004",
+        "source": "c03_004",
+        "target": "method_compound Q",
+        "edge_type": "DEPENDS_ON",
+        "evidence": "method annotation",
+        "confidence": 0.4,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_evidence_c03_004",
+        "source": "evidence_c03_004",
+        "target": "c03_004",
+        "edge_type": "SUPPORTS",
+        "evidence": "evidence annotation",
+        "confidence": 0.5,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_c03_004",
+        "source": "citation_c03_004",
+        "target": "c03_004",
+        "edge_type": "CITES",
+        "evidence": "Claim has no citation references.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_001",
+        "source": "c03_001",
+        "target": "c03_002",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c03_001 and c03_002.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "POPULATION_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_001_differs_by_population",
+        "source": "c03_001",
+        "target": "c03_002",
+        "edge_type": "DIFFERS_BY_POPULATION",
+        "evidence": "POPULATION_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_002",
+        "source": "c03_002",
+        "target": "c03_003",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c03_002 and c03_003.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "TEMPORAL_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_002_differs_by_time",
+        "source": "c03_002",
+        "target": "c03_003",
+        "edge_type": "DIFFERS_BY_TIME",
+        "evidence": "TEMPORAL_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "contra_003",
+        "source": "c03_003",
+        "target": "c03_004",
+        "edge_type": "CONTRADICTS",
+        "evidence": "Pairwise conflict detected between c03_003 and c03_004.",
+        "confidence": 0.9,
+        "severity": "high",
+        "attributes": {
+          "contradiction_type": "SCOPE_DIFFERENCE"
+        }
+      },
+      {
+        "edge_id": "contra_003_differs_by_scope",
+        "source": "c03_003",
+        "target": "c03_004",
+        "edge_type": "DIFFERS_BY_SCOPE",
+        "evidence": "SCOPE_DIFFERENCE mismatch",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_001",
+        "source": "scaffold_001",
+        "target": "contra_001",
+        "edge_type": "QUALIFIES",
+        "evidence": "population check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_002",
+        "source": "scaffold_002",
+        "target": "contra_002",
+        "edge_type": "QUALIFIES",
+        "evidence": "time check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_scaffold_scaffold_003",
+        "source": "scaffold_003",
+        "target": "contra_003",
+        "edge_type": "QUALIFIES",
+        "evidence": "scope check may resolve the apparent conflict.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+        "source": "mouse_model_study_public_2021",
+        "target": "ai_answer_case_03",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+        "source": "mouse_model_study_public_2021",
+        "target": "ai_answer_case_03",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+        "source": "mouse_model_study_public_2021",
+        "target": "ai_answer_case_03",
+        "edge_type": "SAME_ONLY_IF",
+        "evidence": "source concentration check",
+        "confidence": 0.3,
+        "severity": "low",
+        "attributes": {}
+      }
+    ],
+    "metadata": {
+      "claim_count": 4,
+      "source_count": 4,
+      "contradiction_count": 3,
+      "citation_statuses": [
+        "NOT_VERIFIED_OFFLINE",
+        "NO_CITATION_PROVIDED"
+      ]
+    }
+  },
+  "graph_errors": [
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c03_001",
+        "population_mice"
+      ],
+      "affected_edges": [
+        "edge_pop_c03_001"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c03_002",
+        "population_all_adults"
+      ],
+      "affected_edges": [
+        "edge_pop_c03_002"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c03_003",
+        "population_all_adults"
+      ],
+      "affected_edges": [
+        "edge_pop_c03_003"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c03_004",
+        "population_all_adults"
+      ],
+      "affected_edges": [
+        "edge_pop_c03_004"
+      ],
+      "evidence": "population annotation",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "population_mismatch",
+      "affected_nodes": [
+        "c03_001",
+        "c03_002"
+      ],
+      "affected_edges": [
+        "contra_001_differs_by_population"
+      ],
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "population mismatch annotated",
+      "recommended_review": "review population framing"
+    },
+    {
+      "detector": "temporal_mismatch",
+      "affected_nodes": [
+        "c03_002",
+        "c03_003"
+      ],
+      "affected_edges": [
+        "contra_002_differs_by_time"
+      ],
+      "evidence": "TEMPORAL_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "temporal mismatch annotated",
+      "recommended_review": "review time frame"
+    },
+    {
+      "detector": "scope_mismatch",
+      "affected_nodes": [
+        "c03_003",
+        "c03_004"
+      ],
+      "affected_edges": [
+        "contra_003_differs_by_scope"
+      ],
+      "evidence": "SCOPE_DIFFERENCE mismatch",
+      "severity": "medium",
+      "confidence": 0.8,
+      "explanation": "scope mismatch annotated",
+      "recommended_review": "review scope statements"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_001",
+        "contra_001"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_001"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_002",
+        "contra_002"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_002"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    },
+    {
+      "detector": "missing_dependency",
+      "affected_nodes": [
+        "scaffold_003",
+        "contra_003"
+      ],
+      "affected_edges": [
+        "edge_scaffold_scaffold_003"
+      ],
+      "evidence": "edge references missing nodes",
+      "severity": "high",
+      "confidence": 0.95,
+      "explanation": "graph edge references a missing node",
+      "recommended_review": "review source-target linkage"
+    }
+  ],
+  "crystal_matrix": [
+    {
+      "claim_id": "c03_001",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 1.0,
+      "contradictions": 0.3333333333333333,
+      "scaffolding": 1.0,
+      "uncertainty": 0.75,
+      "criticality": 1.0,
+      "resolution actions": 0.9,
+      "isolated_claim_score": 0.6666666666666667,
+      "evidence_asymmetry": 0.75,
+      "conflict_density": 0.3333333333333333,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.9,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 1.0,
+      "structural_instability": 0.5611111111111111
+    },
+    {
+      "claim_id": "c03_002",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 0.25,
+      "contradictions": 0.6666666666666666,
+      "scaffolding": 1.0,
+      "uncertainty": 0.75,
+      "criticality": 1.0,
+      "resolution actions": 0.55,
+      "isolated_claim_score": 0.33333333333333337,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.6666666666666666,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.55,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 1.0,
+      "structural_instability": 0.6722222222222222
+    },
+    {
+      "claim_id": "c03_003",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 0.25,
+      "contradictions": 0.6666666666666666,
+      "scaffolding": 1.0,
+      "uncertainty": 0.75,
+      "criticality": 1.0,
+      "resolution actions": 0.55,
+      "isolated_claim_score": 0.33333333333333337,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.6666666666666666,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.55,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 1.0,
+      "structural_instability": 0.6722222222222222
+    },
+    {
+      "claim_id": "c03_004",
+      "claim structure": 1.0,
+      "source structure": 0.25,
+      "evidence quality": 0.25,
+      "contradictions": 0.3333333333333333,
+      "scaffolding": 1.0,
+      "uncertainty": 0.75,
+      "criticality": 1.0,
+      "resolution actions": 0.55,
+      "isolated_claim_score": 0.6666666666666667,
+      "evidence_asymmetry": 0.0,
+      "conflict_density": 0.3333333333333333,
+      "assumption_sensitivity": 0.35,
+      "resolution_potential": 0.55,
+      "source_dependency_concentration": 0.25,
+      "critical_unknown_centrality": 1.0,
+      "structural_instability": 0.5611111111111111
+    }
+  ],
+  "crystal_diagnostics": {
+    "isolated_claim_score": 0.5,
+    "evidence_asymmetry": 0.188,
+    "conflict_density": 0.5,
+    "assumption_sensitivity": 0.35,
+    "resolution_potential": 0.638,
+    "source_dependency_concentration": 0.25,
+    "critical_unknown_centrality": 1.0,
+    "structural_instability": 0.617,
+    "claim_count": 4,
+    "graph_node_count": 20,
+    "graph_edge_count": 32
+  },
+  "crystal_explanation": "Crystal v0.1 is a multilayer error-analysis structure for claim graph diagnostics, not a physical or octonionic object."
+}

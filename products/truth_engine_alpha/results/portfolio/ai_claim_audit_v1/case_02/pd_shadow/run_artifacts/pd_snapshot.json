@@ -1,0 +1,86 @@
+{
+  "pd_value": 0.75,
+  "pd_status": "TRUE",
+  "threshold_profile": {
+    "profile_id": "pd_symmetry_v1",
+    "scale_min": -1.0,
+    "scale_max": 1.0,
+    "false_max": -0.33,
+    "true_min": 0.33,
+    "default_for_analysis": true,
+    "status": "COMPATIBLE_REINTERPRETATION",
+    "provenance_passage_id": "PDPASS-0059",
+    "notes": "Symmetric ternary partition chosen for current research simulations."
+  },
+  "qutrit_state": {
+    "p_false": 0.0,
+    "p_indeterminate": 0.1,
+    "p_true": 0.9,
+    "expected_truth_axis": 0.9
+  },
+  "ratios": [
+    {
+      "ratio_id": "ratio_4_over_3",
+      "expression": "4/3",
+      "numeric_value": 1.3333333333,
+      "applies_to": "scaling",
+      "status": "CONFLICTING",
+      "provenance_passage_id": "PDPASS-0033",
+      "notes": "Recovered from quaternion-roadmap context; direct archived formula line not found in current corpus."
+    },
+    {
+      "ratio_id": "ratio_3_over_2",
+      "expression": "3/2",
+      "numeric_value": 1.5,
+      "applies_to": "scaling",
+      "status": "CONFLICTING",
+      "provenance_passage_id": "PDPASS-0035",
+      "notes": "Alternative scaling proposal preserved while historical reconstruction remains incomplete."
+    },
+    {
+      "ratio_id": "ratio_2_over_3",
+      "expression": "2/3",
+      "numeric_value": 0.6666666667,
+      "applies_to": "normalization",
+      "status": "HISTORICAL",
+      "provenance_passage_id": "PDPASS-0046",
+      "notes": "Directly observed in historical test material."
+    },
+    {
+      "ratio_id": "ratio_1_over_e",
+      "expression": "1/e",
+      "numeric_value": 0.3678794412,
+      "applies_to": "decay",
+      "status": "PROPOSED",
+      "provenance_passage_id": "PDPASS-0034",
+      "notes": "Inferred from radix-e framing in archived roadmap and historical notes."
+    },
+    {
+      "ratio_id": "ratio_e_minus_1",
+      "expression": "e-1",
+      "numeric_value": 1.7182818285,
+      "applies_to": "growth",
+      "status": "PROPOSED",
+      "provenance_passage_id": "PDPASS-0038",
+      "notes": "Inferred growth-offset variant retained for controlled comparison."
+    },
+    {
+      "ratio_id": "ratio_euler_base",
+      "expression": "e",
+      "numeric_value": 2.7182818285,
+      "applies_to": "radix",
+      "status": "COMPATIBLE_REINTERPRETATION",
+      "provenance_passage_id": "PDPASS-0034",
+      "notes": "Base-e anchor retained for radix optimization experiments."
+    }
+  ],
+  "ratio_index": {
+    "4/3": 1.3333333333,
+    "3/2": 1.5,
+    "2/3": 0.6666666667,
+    "1/e": 0.3678794412,
+    "e-1": 1.7182818285,
+    "e": 2.7182818285
+  },
+  "status": "RESEARCH_ONLY"
+}

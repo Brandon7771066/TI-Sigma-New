@@ -1,0 +1,15 @@
+{
+  "case_id": "case_03",
+  "annotation_timestamp": "2026-08-04T19:56:05Z",
+  "engine_output_hidden_from_annotator": true,
+  "annotation_guidelines": "Scope/population/time and causality expectations assigned before any engine report output was reviewed.",
+  "adjudication_basis": "Public evidence interpretation of extrapolation boundaries.",
+  "sources_reviewed": [
+    "NIH public health pages",
+    "CDC guidance pages"
+  ],
+  "changes_after_engine_output": false,
+  "original_annotation": "preserved in human_reference_annotation.json",
+  "revised_annotation": null,
+  "reason_for_revision": null
+}

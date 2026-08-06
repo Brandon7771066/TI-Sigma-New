@@ -1,0 +1,42 @@
+{
+  "case_id": "case_03",
+  "title": "Scope and population conflation",
+  "created_before_engine_run": true,
+  "claims": [
+    {
+      "claim_id": "c03_001",
+      "text": "Evidence comes from a mouse model under short protocol conditions.",
+      "expected_citation_status": "NOT_VERIFIED_OFFLINE",
+      "expected_contradiction_type": "POPULATION_DIFFERENCE",
+      "expected_scope_population_time_mismatch": "animal to human",
+      "expected_scaffolding_route": "population"
+    },
+    {
+      "claim_id": "c03_002",
+      "text": "The answer generalizes to all adults without qualification.",
+      "expected_citation_status": "NO_CITATION_PROVIDED",
+      "expected_contradiction_type": "POPULATION_DIFFERENCE",
+      "expected_scope_population_time_mismatch": "one population to another",
+      "expected_scaffolding_route": "population"
+    },
+    {
+      "claim_id": "c03_003",
+      "text": "The answer extrapolates an 8-week result to 5 years.",
+      "expected_citation_status": "NO_CITATION_PROVIDED",
+      "expected_contradiction_type": "TEMPORAL_DIFFERENCE",
+      "expected_scope_population_time_mismatch": "short-term to long-term",
+      "expected_scaffolding_route": "time"
+    },
+    {
+      "claim_id": "c03_004",
+      "text": "The answer treats observational association as causal proof.",
+      "expected_citation_status": "NO_CITATION_PROVIDED",
+      "expected_contradiction_type": "SCOPE_DIFFERENCE",
+      "expected_scope_population_time_mismatch": "association to causation",
+      "expected_scaffolding_route": "scope"
+    }
+  ],
+  "expected_corrected_conclusion": "Limit conclusions to population/time/context directly supported and classify causal claims as unproven.",
+  "severity": "high",
+  "commercial_significance": "Prevents overclaiming in regulated or safety-sensitive client content."
+}

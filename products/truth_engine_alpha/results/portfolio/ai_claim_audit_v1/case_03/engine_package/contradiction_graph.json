@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "claim_id": "c03_001",
+      "label": "The source evidence is a mouse model observed over an 8-week protocol."
+    },
+    {
+      "claim_id": "c03_002",
+      "label": "The AI answer generalizes the same effect to all adults."
+    },
+    {
+      "claim_id": "c03_003",
+      "label": "The AI answer extends 8-week findings to guaranteed 5-year outcomes."
+    },
+    {
+      "claim_id": "c03_004",
+      "label": "The AI answer treats observational association as causal proof."
+    }
+  ],
+  "edges": [
+    {
+      "from": "c03_001",
+      "to": "c03_002",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    },
+    {
+      "from": "c03_002",
+      "to": "c03_003",
+      "relation": "contradicts",
+      "contradiction_type": "TEMPORAL_DIFFERENCE"
+    },
+    {
+      "from": "c03_003",
+      "to": "c03_004",
+      "relation": "contradicts",
+      "contradiction_type": "SCOPE_DIFFERENCE"
+    }
+  ]
+}

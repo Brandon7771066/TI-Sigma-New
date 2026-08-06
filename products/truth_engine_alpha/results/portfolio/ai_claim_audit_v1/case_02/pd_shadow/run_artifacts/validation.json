@@ -1,0 +1,11 @@
+{
+  "soft_ternary_sum": 1.0,
+  "shadow_payload_has_pd": true,
+  "gate": {
+    "pd": {
+      "enabled": true,
+      "model": "continuous",
+      "projection_target": "truth_engine_score"
+    }
+  }
+}

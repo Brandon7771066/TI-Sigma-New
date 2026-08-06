@@ -1,0 +1,360 @@
+{
+  "nodes": [
+    {
+      "node_id": "c01_001",
+      "node_type": "Claim",
+      "label": "The answer relies on a fabricated legal citation pattern.",
+      "attributes": {
+        "claim_type": "citation_validity",
+        "source_id": "ai_answer_case_01"
+      }
+    },
+    {
+      "node_id": "population_n/a",
+      "node_type": "Population",
+      "label": "n/a",
+      "attributes": {
+        "claim_id": "c01_001"
+      }
+    },
+    {
+      "node_id": "method_n/a",
+      "node_type": "Method",
+      "label": "n/a",
+      "attributes": {
+        "claim_id": "c01_001"
+      }
+    },
+    {
+      "node_id": "evidence_c01_001",
+      "node_type": "Evidence",
+      "label": "citation validity",
+      "attributes": {
+        "claim_id": "c01_001"
+      }
+    },
+    {
+      "node_id": "citation_c01_001",
+      "node_type": "Citation",
+      "label": "10.1234/fake-xxxxx-2023",
+      "attributes": {
+        "claim_id": "c01_001",
+        "status": "POSSIBLY_FABRICATED_CITATION"
+      }
+    },
+    {
+      "node_id": "c01_002",
+      "node_type": "Claim",
+      "label": "The answer references a source identifier that is not in the provided source map.",
+      "attributes": {
+        "claim_type": "citation_validity",
+        "source_id": "ai_answer_case_01"
+      }
+    },
+    {
+      "node_id": "evidence_c01_002",
+      "node_type": "Evidence",
+      "label": "citation mapping",
+      "attributes": {
+        "claim_id": "c01_002"
+      }
+    },
+    {
+      "node_id": "citation_c01_002",
+      "node_type": "Citation",
+      "label": "appellate_report_2019",
+      "attributes": {
+        "claim_id": "c01_002",
+        "status": "SOURCE_NOT_FOUND"
+      }
+    },
+    {
+      "node_id": "c01_003",
+      "node_type": "Claim",
+      "label": "The answer references Reuters coverage but no retrieval was performed in this run.",
+      "attributes": {
+        "claim_type": "citation_validity",
+        "source_id": "reuters_2023_chatgpt_cases"
+      }
+    },
+    {
+      "node_id": "evidence_c01_003",
+      "node_type": "Evidence",
+      "label": "citation access",
+      "attributes": {
+        "claim_id": "c01_003"
+      }
+    },
+    {
+      "node_id": "citation_c01_003",
+      "node_type": "Citation",
+      "label": "reuters_2023_chatgpt_cases",
+      "attributes": {
+        "claim_id": "c01_003",
+        "status": "SOURCE_FOUND_NOT_ACCESSED"
+      }
+    },
+    {
+      "node_id": "ai_answer_case_01",
+      "node_type": "Source",
+      "label": "The answer cites DOI 10.1234/fake-xxxxx-2023 as controlling authority.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "reuters_2023_chatgpt_cases",
+      "node_type": "Source",
+      "label": "The answer references Reuters legal coverage and treats it as authority.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "scaffold_001",
+      "node_type": "Action",
+      "label": "context check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "context",
+        "contradiction_id": "contra_001"
+      }
+    },
+    {
+      "node_id": "scaffold_002",
+      "node_type": "Action",
+      "label": "context check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "context",
+        "contradiction_id": "contra_002"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_cites_c01_001",
+      "source": "c01_001",
+      "target": "ai_answer_case_01",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c01_001",
+      "source": "c01_001",
+      "target": "population_n/a",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c01_001",
+      "source": "c01_001",
+      "target": "method_n/a",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c01_001",
+      "source": "evidence_c01_001",
+      "target": "c01_001",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c01_001",
+      "source": "citation_c01_001",
+      "target": "c01_001",
+      "edge_type": "CITES",
+      "evidence": "Citation token pattern appears synthetic and requires manual verification.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_c01_002",
+      "source": "c01_002",
+      "target": "ai_answer_case_01",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c01_002",
+      "source": "c01_002",
+      "target": "population_n/a",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c01_002",
+      "source": "c01_002",
+      "target": "method_n/a",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c01_002",
+      "source": "evidence_c01_002",
+      "target": "c01_002",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c01_002",
+      "source": "citation_c01_002",
+      "target": "c01_002",
+      "edge_type": "CITES",
+      "evidence": "Citation reference not present in provided source map.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_c01_003",
+      "source": "c01_003",
+      "target": "reuters_2023_chatgpt_cases",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c01_003",
+      "source": "c01_003",
+      "target": "population_n/a",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c01_003",
+      "source": "c01_003",
+      "target": "method_n/a",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c01_003",
+      "source": "evidence_c01_003",
+      "target": "c01_003",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c01_003",
+      "source": "citation_c01_003",
+      "target": "c01_003",
+      "edge_type": "CITES",
+      "evidence": "Source located but not accessed in this run per case annotation.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_001",
+      "source": "c01_001",
+      "target": "c01_002",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between c01_001 and c01_002.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "MISSING_INFORMATION"
+      }
+    },
+    {
+      "edge_id": "contra_002",
+      "source": "c01_002",
+      "target": "c01_003",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between c01_002 and c01_003.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "MISSING_INFORMATION"
+      }
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_001",
+      "source": "scaffold_001",
+      "target": "contra_001",
+      "edge_type": "QUALIFIES",
+      "evidence": "context check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_002",
+      "source": "scaffold_002",
+      "target": "contra_002",
+      "edge_type": "QUALIFIES",
+      "evidence": "context check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_ai_answer_case_01_ai_answer_case_01",
+      "source": "ai_answer_case_01",
+      "target": "ai_answer_case_01",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_ai_answer_case_01_reuters_2023_chatgpt_cases",
+      "source": "ai_answer_case_01",
+      "target": "reuters_2023_chatgpt_cases",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    }
+  ],
+  "metadata": {
+    "claim_count": 3,
+    "source_count": 3,
+    "contradiction_count": 2,
+    "citation_statuses": [
+      "POSSIBLY_FABRICATED_CITATION",
+      "SOURCE_FOUND_NOT_ACCESSED",
+      "SOURCE_NOT_FOUND"
+    ]
+  }
+}

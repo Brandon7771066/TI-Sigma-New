@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "claim_id": "c01_001",
+      "label": "The answer relies on a fabricated legal citation pattern."
+    },
+    {
+      "claim_id": "c01_002",
+      "label": "The answer references a source identifier that is not in the provided source map."
+    },
+    {
+      "claim_id": "c01_003",
+      "label": "The answer references Reuters coverage but no retrieval was performed in this run."
+    }
+  ],
+  "edges": [
+    {
+      "from": "c01_001",
+      "to": "c01_002",
+      "relation": "contradicts",
+      "contradiction_type": "MISSING_INFORMATION"
+    },
+    {
+      "from": "c01_002",
+      "to": "c01_003",
+      "relation": "contradicts",
+      "contradiction_type": "MISSING_INFORMATION"
+    }
+  ]
+}

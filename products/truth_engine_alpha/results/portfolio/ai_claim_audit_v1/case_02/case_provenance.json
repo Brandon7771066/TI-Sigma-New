@@ -1,0 +1,23 @@
+{
+  "case_id": "case_02",
+  "original_ai_system": "Composite public AI-answer failure mode",
+  "model_name_or_unknown": "unknown",
+  "generation_date_or_unknown": "unknown",
+  "original_prompt": "unknown",
+  "public_page_or_archive": "composite_from_public_sources",
+  "source_urls": [
+    "https://www.who.int/publications/i/item/9789241549028",
+    "https://www.uspreventiveservicestaskforce.org/",
+    "https://www.cdc.gov/"
+  ],
+  "answer_verbatim": "not available as a single raw public transcript",
+  "answer_excerpted": true,
+  "excerpt_method": "Curated composite excerpt designed from public guideline mischaracterization patterns",
+  "human_annotation_created_before_engine_run": true,
+  "annotator": "Brandon + Copilot working draft",
+  "annotation_independence": "Annotation drafted before engine output package generation",
+  "engine_rules_used_to_design_case": "Citation-status and support-gradient classes were intentionally included",
+  "copyright_or_excerpt_notes": "No long copyrighted passages reproduced; only short paraphrased examples",
+  "limitations": "This case is a synthetic engineering composition rather than one naturally occurring public answer.",
+  "case_classification": "SYNTHETIC_ENGINEERING_CASE"
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph id="TruthEngineClaimGraph" edgedefault="directed">
+<node id="c01_001"><data key="type">Claim</data><data key="label">The answer relies on a fabricated legal citation pattern.</data></node>
+<node id="population_n/a"><data key="type">Population</data><data key="label">n/a</data></node>
+<node id="method_n/a"><data key="type">Method</data><data key="label">n/a</data></node>
+<node id="evidence_c01_001"><data key="type">Evidence</data><data key="label">citation validity</data></node>
+<node id="citation_c01_001"><data key="type">Citation</data><data key="label">10.1234/fake-xxxxx-2023</data></node>
+<node id="c01_002"><data key="type">Claim</data><data key="label">The answer references a source identifier that is not in the provided source map.</data></node>
+<node id="evidence_c01_002"><data key="type">Evidence</data><data key="label">citation mapping</data></node>
+<node id="citation_c01_002"><data key="type">Citation</data><data key="label">appellate_report_2019</data></node>
+<node id="c01_003"><data key="type">Claim</data><data key="label">The answer references Reuters coverage but no retrieval was performed in this run.</data></node>
+<node id="evidence_c01_003"><data key="type">Evidence</data><data key="label">citation access</data></node>
+<node id="citation_c01_003"><data key="type">Citation</data><data key="label">reuters_2023_chatgpt_cases</data></node>
+<node id="ai_answer_case_01"><data key="type">Source</data><data key="label">The answer cites DOI 10.1234/fake-xxxxx-2023 as controlling authority.</data></node>
+<node id="reuters_2023_chatgpt_cases"><data key="type">Source</data><data key="label">The answer references Reuters legal coverage and treats it as authority.</data></node>
+<node id="scaffold_001"><data key="type">Action</data><data key="label">context check may resolve the apparent conflict.</data></node>
+<node id="scaffold_002"><data key="type">Action</data><data key="label">context check may resolve the apparent conflict.</data></node>
+<edge id="edge_cites_c01_001" source="c01_001" target="ai_answer_case_01"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c01_001" source="c01_001" target="population_n/a"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c01_001" source="c01_001" target="method_n/a"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c01_001" source="evidence_c01_001" target="c01_001"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c01_001" source="citation_c01_001" target="c01_001"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_cites_c01_002" source="c01_002" target="ai_answer_case_01"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c01_002" source="c01_002" target="population_n/a"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c01_002" source="c01_002" target="method_n/a"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c01_002" source="evidence_c01_002" target="c01_002"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c01_002" source="citation_c01_002" target="c01_002"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_cites_c01_003" source="c01_003" target="reuters_2023_chatgpt_cases"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c01_003" source="c01_003" target="population_n/a"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c01_003" source="c01_003" target="method_n/a"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c01_003" source="evidence_c01_003" target="c01_003"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c01_003" source="citation_c01_003" target="c01_003"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="contra_001" source="c01_001" target="c01_002"><data key="type">CONTRADICTS</data><data key="confidence">0.9</data></edge>
+<edge id="contra_002" source="c01_002" target="c01_003"><data key="type">CONTRADICTS</data><data key="confidence">0.9</data></edge>
+<edge id="edge_scaffold_scaffold_001" source="scaffold_001" target="contra_001"><data key="type">QUALIFIES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_scaffold_scaffold_002" source="scaffold_002" target="contra_002"><data key="type">QUALIFIES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_source_ai_answer_case_01_ai_answer_case_01" source="ai_answer_case_01" target="ai_answer_case_01"><data key="type">SAME_ONLY_IF</data><data key="confidence">0.3</data></edge>
+<edge id="edge_source_ai_answer_case_01_reuters_2023_chatgpt_cases" source="ai_answer_case_01" target="reuters_2023_chatgpt_cases"><data key="type">SAME_ONLY_IF</data><data key="confidence">0.3</data></edge>
+</graph>
+</graphml>

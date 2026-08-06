@@ -1,0 +1,24 @@
+{
+  "case_id": "case_01",
+  "label": "initial diagnostic case-study evidence",
+  "claim_ingestion_integrity": {
+    "value": 1.0,
+    "numerator": 3,
+    "denominator": 3,
+    "matching_method": "claim_id exact match",
+    "limitations": "Not a free-text claim extraction benchmark."
+  },
+  "claim_extraction_precision": "NOT_EVALUATED",
+  "claim_extraction_recall": "NOT_EVALUATED",
+  "citation_status_exact_match": 1.0,
+  "citation_error_detection_recall": 1.0,
+  "contradiction_type_exact_match": 1.0,
+  "scope_population_time_mismatch_detection": 1.0,
+  "scaffolding_route_exact_match": 0.0,
+  "resolution_status_exact_match": 1.0,
+  "report_completeness": 1.0,
+  "artifact_generation_success": 1.0,
+  "engine_runtime_seconds": 0.304,
+  "human_post_engine_review_time_seconds": 360,
+  "review_time_baseline_note": "INTERNAL_PLANNING_ESTIMATE_NOT_A_MEASURED_PERFORMANCE_RESULT"
+}

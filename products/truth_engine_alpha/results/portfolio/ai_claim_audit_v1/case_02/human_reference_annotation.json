@@ -1,0 +1,42 @@
+{
+  "case_id": "case_02",
+  "title": "Real citation but unsupported or qualified claim",
+  "created_before_engine_run": true,
+  "claims": [
+    {
+      "claim_id": "c02_001",
+      "text": "The claim overstates what the WHO source says.",
+      "expected_citation_status": "SOURCE_MISCHARACTERIZED",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "guideline scope overgeneralized",
+      "expected_scaffolding_route": "definitions"
+    },
+    {
+      "claim_id": "c02_002",
+      "text": "The cited statement does not support universal treatment language.",
+      "expected_citation_status": "SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "risk-group restriction ignored",
+      "expected_scaffolding_route": "scope"
+    },
+    {
+      "claim_id": "c02_003",
+      "text": "The cited CDC material only partially supports the broad claim.",
+      "expected_citation_status": "SOURCE_PARTIALLY_SUPPORTS_CLAIM",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "population qualification omitted",
+      "expected_scaffolding_route": "population"
+    },
+    {
+      "claim_id": "c02_004",
+      "text": "One factual statement is directly supported by the referenced source.",
+      "expected_citation_status": "SOURCE_SUPPORTS_CLAIM",
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": "none",
+      "expected_scaffolding_route": "context"
+    }
+  ],
+  "expected_corrected_conclusion": "The answer should narrow recommendations to the source-defined populations and confidence bounds.",
+  "severity": "high",
+  "commercial_significance": "High value for clients publishing health content where citation nuance affects trust and liability."
+}

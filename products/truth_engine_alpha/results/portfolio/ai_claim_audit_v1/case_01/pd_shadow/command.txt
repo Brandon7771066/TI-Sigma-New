@@ -1,0 +1,1 @@
+﻿python scripts/run_pd_research.py --variant continuous --value 0.75 --threshold-set historical_candidate_001 --pd-enabled --projection-target truth_engine_score

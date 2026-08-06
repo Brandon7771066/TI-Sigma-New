@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph id="TruthEngineClaimGraph" edgedefault="directed">
+<node id="c02_001"><data key="type">Claim</data><data key="label">The answer overstates WHO guidance as deterministic proof.</data></node>
+<node id="population_adults"><data key="type">Population</data><data key="label">adults</data></node>
+<node id="method_sugar reduction"><data key="type">Method</data><data key="label">sugar reduction</data></node>
+<node id="evidence_c02_001"><data key="type">Evidence</data><data key="label">diabetes risk</data></node>
+<node id="citation_c02_001"><data key="type">Citation</data><data key="label">who_sugar_guideline_2015</data></node>
+<node id="c02_002"><data key="type">Claim</data><data key="label">The answer says USPSTF supports universal statins for everyone over 30.</data></node>
+<node id="population_adults_over_30"><data key="type">Population</data><data key="label">adults_over_30</data></node>
+<node id="method_statin initiation"><data key="type">Method</data><data key="label">statin initiation</data></node>
+<node id="evidence_c02_002"><data key="type">Evidence</data><data key="label">primary prevention</data></node>
+<node id="citation_c02_002"><data key="type">Citation</data><data key="label">uspstf_statin_primary_prevention</data></node>
+<node id="c02_003"><data key="type">Claim</data><data key="label">The answer claims CDC guidance universally endorses one supplement protocol.</data></node>
+<node id="population_mixed"><data key="type">Population</data><data key="label">mixed</data></node>
+<node id="method_supplement protocol"><data key="type">Method</data><data key="label">supplement protocol</data></node>
+<node id="evidence_c02_003"><data key="type">Evidence</data><data key="label">guideline applicability</data></node>
+<node id="citation_c02_003"><data key="type">Citation</data><data key="label">cdc_public_guidance_collection</data></node>
+<node id="c02_004"><data key="type">Claim</data><data key="label">The source confirms recommendation language should include risk context.</data></node>
+<node id="population_at_risk_adults"><data key="type">Population</data><data key="label">at_risk_adults</data></node>
+<node id="evidence_c02_004"><data key="type">Evidence</data><data key="label">guideline interpretation</data></node>
+<node id="citation_c02_004"><data key="type">Citation</data><data key="label">uspstf_statin_primary_prevention</data></node>
+<node id="who_sugar_guideline_2015"><data key="type">Source</data><data key="label">The claim overstates WHO guidance and mischaracterized the recommendation as abs</data></node>
+<node id="uspstf_statin_primary_prevention"><data key="type">Source</data><data key="label">The cited USPSTF statement does not support universal statin initiation without </data></node>
+<node id="cdc_public_guidance_collection"><data key="type">Source</data><data key="label">CDC guidance partially supports targeted supplementation but does not justify un</data></node>
+<node id="scaffold_001"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<node id="scaffold_002"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<node id="scaffold_003"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<edge id="edge_cites_c02_001" source="c02_001" target="who_sugar_guideline_2015"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c02_001" source="c02_001" target="population_adults"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c02_001" source="c02_001" target="method_sugar reduction"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c02_001" source="evidence_c02_001" target="c02_001"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c02_001" source="citation_c02_001" target="c02_001"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_cites_c02_002" source="c02_002" target="uspstf_statin_primary_prevention"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c02_002" source="c02_002" target="population_adults_over_30"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c02_002" source="c02_002" target="method_statin initiation"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c02_002" source="evidence_c02_002" target="c02_002"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c02_002" source="citation_c02_002" target="c02_002"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_cites_c02_003" source="c02_003" target="cdc_public_guidance_collection"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c02_003" source="c02_003" target="population_mixed"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c02_003" source="c02_003" target="method_supplement protocol"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c02_003" source="evidence_c02_003" target="c02_003"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c02_003" source="citation_c02_003" target="c02_003"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_support_c02_003" source="cdc_public_guidance_collection" target="c02_003"><data key="type">SUPPORTS</data><data key="confidence">0.8</data></edge>
+<edge id="edge_cites_c02_004" source="c02_004" target="uspstf_statin_primary_prevention"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_pop_c02_004" source="c02_004" target="population_at_risk_adults"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.4</data></edge>
+<edge id="edge_method_c02_004" source="c02_004" target="method_statin initiation"><data key="type">DEPENDS_ON</data><data key="confidence">0.4</data></edge>
+<edge id="edge_evidence_c02_004" source="evidence_c02_004" target="c02_004"><data key="type">SUPPORTS</data><data key="confidence">0.5</data></edge>
+<edge id="edge_audit_c02_004" source="citation_c02_004" target="c02_004"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_support_c02_004" source="uspstf_statin_primary_prevention" target="c02_004"><data key="type">SUPPORTS</data><data key="confidence">0.8</data></edge>
+<edge id="contra_001" source="c02_001" target="c02_002"><data key="type">CONTRADICTS</data><data key="confidence">0.9</data></edge>
+<edge id="contra_001_differs_by_population" source="c02_001" target="c02_002"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.7</data></edge>
+<edge id="contra_002" source="c02_002" target="c02_003"><data key="type">CONTRADICTS</data><data key="confidence">0.9</data></edge>
+<edge id="contra_002_differs_by_population" source="c02_002" target="c02_003"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.7</data></edge>
+<edge id="contra_003" source="c02_003" target="c02_004"><data key="type">CONTRADICTS</data><data key="confidence">0.9</data></edge>
+<edge id="contra_003_differs_by_population" source="c02_003" target="c02_004"><data key="type">DIFFERS_BY_POPULATION</data><data key="confidence">0.7</data></edge>
+<edge id="edge_scaffold_scaffold_001" source="scaffold_001" target="contra_001"><data key="type">QUALIFIES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_scaffold_scaffold_002" source="scaffold_002" target="contra_002"><data key="type">QUALIFIES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_scaffold_scaffold_003" source="scaffold_003" target="contra_003"><data key="type">QUALIFIES</data><data key="confidence">0.6</data></edge>
+<edge id="edge_source_who_sugar_guideline_2015_uspstf_statin_primary_prevention" source="who_sugar_guideline_2015" target="uspstf_statin_primary_prevention"><data key="type">SAME_ONLY_IF</data><data key="confidence">0.3</data></edge>
+<edge id="edge_source_who_sugar_guideline_2015_cdc_public_guidance_collection" source="who_sugar_guideline_2015" target="cdc_public_guidance_collection"><data key="type">SAME_ONLY_IF</data><data key="confidence">0.3</data></edge>
+<edge id="edge_source_who_sugar_guideline_2015_uspstf_statin_primary_prevention" source="who_sugar_guideline_2015" target="uspstf_statin_primary_prevention"><data key="type">SAME_ONLY_IF</data><data key="confidence">0.3</data></edge>
+</graph>
+</graphml>

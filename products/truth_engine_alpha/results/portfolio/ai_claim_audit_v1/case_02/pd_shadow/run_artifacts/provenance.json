@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-08-06T06:15:25.124759+00:00",
+  "research_only": true,
+  "threshold_profile": {
+    "profile_id": "pd_symmetry_v1",
+    "scale_min": -1.0,
+    "scale_max": 1.0,
+    "false_max": -0.33,
+    "true_min": 0.33,
+    "default_for_analysis": true,
+    "status": "COMPATIBLE_REINTERPRETATION",
+    "provenance_passage_id": "PDPASS-0059",
+    "notes": "Symmetric ternary partition chosen for current research simulations."
+  },
+  "threshold_provenance": "PDPASS-0059",
+  "ratio_provenance": [
+    "PDPASS-0033",
+    "PDPASS-0035",
+    "PDPASS-0046",
+    "PDPASS-0034",
+    "PDPASS-0038",
+    "PDPASS-0034"
+  ],
+  "variant_registry": {
+    "PD-A": {
+      "range": "[-3, 2]",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-T": {
+      "range": "{FALSE, INDETERMINATE, TRUE}",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-S": {
+      "range": "simplex probabilities",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-G": {
+      "range": "graph potential domain",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-C": {
+      "range": "crystal layer potential domain",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-Q": {
+      "range": "R^4 quaternion block",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-O": {
+      "range": "R^8 octonion block",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    },
+    "PD-M": {
+      "range": "R^16 myrion/sedenion block",
+      "version": "v0.1",
+      "threshold_set": "pd_symmetry_v1",
+      "provenance_ids": [
+        "PDPASS-0059"
+      ],
+      "calibration_status": "UNCALIBRATED",
+      "validation_status": "UNVALIDATED",
+      "research_only": true
+    }
+  }
+}

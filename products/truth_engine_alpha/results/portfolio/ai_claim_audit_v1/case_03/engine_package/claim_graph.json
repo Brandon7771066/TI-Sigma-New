@@ -1,0 +1,514 @@
+{
+  "nodes": [
+    {
+      "node_id": "c03_001",
+      "node_type": "Claim",
+      "label": "The source evidence is a mouse model observed over an 8-week protocol.",
+      "attributes": {
+        "claim_type": "effectiveness",
+        "source_id": "mouse_model_study_public_2021"
+      }
+    },
+    {
+      "node_id": "population_mice",
+      "node_type": "Population",
+      "label": "mice",
+      "attributes": {
+        "claim_id": "c03_001"
+      }
+    },
+    {
+      "node_id": "method_compound Q",
+      "node_type": "Method",
+      "label": "compound Q",
+      "attributes": {
+        "claim_id": "c03_001"
+      }
+    },
+    {
+      "node_id": "evidence_c03_001",
+      "node_type": "Evidence",
+      "label": "metabolic response",
+      "attributes": {
+        "claim_id": "c03_001"
+      }
+    },
+    {
+      "node_id": "citation_c03_001",
+      "node_type": "Citation",
+      "label": "mouse_model_study_public_2021",
+      "attributes": {
+        "claim_id": "c03_001",
+        "status": "NOT_VERIFIED_OFFLINE"
+      }
+    },
+    {
+      "node_id": "c03_002",
+      "node_type": "Claim",
+      "label": "The AI answer generalizes the same effect to all adults.",
+      "attributes": {
+        "claim_type": "generalization",
+        "source_id": "ai_answer_case_03"
+      }
+    },
+    {
+      "node_id": "population_all_adults",
+      "node_type": "Population",
+      "label": "all_adults",
+      "attributes": {
+        "claim_id": "c03_002"
+      }
+    },
+    {
+      "node_id": "evidence_c03_002",
+      "node_type": "Evidence",
+      "label": "metabolic response",
+      "attributes": {
+        "claim_id": "c03_002"
+      }
+    },
+    {
+      "node_id": "citation_c03_002",
+      "node_type": "Citation",
+      "label": "c03_002",
+      "attributes": {
+        "claim_id": "c03_002",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "c03_003",
+      "node_type": "Claim",
+      "label": "The AI answer extends 8-week findings to guaranteed 5-year outcomes.",
+      "attributes": {
+        "claim_type": "generalization",
+        "source_id": "ai_answer_case_03"
+      }
+    },
+    {
+      "node_id": "evidence_c03_003",
+      "node_type": "Evidence",
+      "label": "long_term_benefit",
+      "attributes": {
+        "claim_id": "c03_003"
+      }
+    },
+    {
+      "node_id": "citation_c03_003",
+      "node_type": "Citation",
+      "label": "c03_003",
+      "attributes": {
+        "claim_id": "c03_003",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "c03_004",
+      "node_type": "Claim",
+      "label": "The AI answer treats observational association as causal proof.",
+      "attributes": {
+        "claim_type": "causal_inference",
+        "source_id": "ai_answer_case_03"
+      }
+    },
+    {
+      "node_id": "evidence_c03_004",
+      "node_type": "Evidence",
+      "label": "causal_effect",
+      "attributes": {
+        "claim_id": "c03_004"
+      }
+    },
+    {
+      "node_id": "citation_c03_004",
+      "node_type": "Citation",
+      "label": "c03_004",
+      "attributes": {
+        "claim_id": "c03_004",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "mouse_model_study_public_2021",
+      "node_type": "Source",
+      "label": "The cited mouse study reports an 8-week protocol outcome.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "ai_answer_case_03",
+      "node_type": "Source",
+      "label": "The answer states all adults will have the same outcome.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "scaffold_001",
+      "node_type": "Action",
+      "label": "population check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "population",
+        "contradiction_id": "contra_001"
+      }
+    },
+    {
+      "node_id": "scaffold_002",
+      "node_type": "Action",
+      "label": "time check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "time",
+        "contradiction_id": "contra_002"
+      }
+    },
+    {
+      "node_id": "scaffold_003",
+      "node_type": "Action",
+      "label": "scope check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "scope",
+        "contradiction_id": "contra_003"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_cites_c03_001",
+      "source": "c03_001",
+      "target": "mouse_model_study_public_2021",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c03_001",
+      "source": "c03_001",
+      "target": "population_mice",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c03_001",
+      "source": "c03_001",
+      "target": "method_compound Q",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c03_001",
+      "source": "evidence_c03_001",
+      "target": "c03_001",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c03_001",
+      "source": "citation_c03_001",
+      "target": "c03_001",
+      "edge_type": "CITES",
+      "evidence": "Source exists but direct retrieval/access was not performed in offline mode.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_c03_002",
+      "source": "c03_002",
+      "target": "ai_answer_case_03",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c03_002",
+      "source": "c03_002",
+      "target": "population_all_adults",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c03_002",
+      "source": "c03_002",
+      "target": "method_compound Q",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c03_002",
+      "source": "evidence_c03_002",
+      "target": "c03_002",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c03_002",
+      "source": "citation_c03_002",
+      "target": "c03_002",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_c03_003",
+      "source": "c03_003",
+      "target": "ai_answer_case_03",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c03_003",
+      "source": "c03_003",
+      "target": "population_all_adults",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c03_003",
+      "source": "c03_003",
+      "target": "method_compound Q",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c03_003",
+      "source": "evidence_c03_003",
+      "target": "c03_003",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c03_003",
+      "source": "citation_c03_003",
+      "target": "c03_003",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_c03_004",
+      "source": "c03_004",
+      "target": "ai_answer_case_03",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_c03_004",
+      "source": "c03_004",
+      "target": "population_all_adults",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_c03_004",
+      "source": "c03_004",
+      "target": "method_compound Q",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_c03_004",
+      "source": "evidence_c03_004",
+      "target": "c03_004",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_c03_004",
+      "source": "citation_c03_004",
+      "target": "c03_004",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_001",
+      "source": "c03_001",
+      "target": "c03_002",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between c03_001 and c03_002.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_001_differs_by_population",
+      "source": "c03_001",
+      "target": "c03_002",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_002",
+      "source": "c03_002",
+      "target": "c03_003",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between c03_002 and c03_003.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "TEMPORAL_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_002_differs_by_time",
+      "source": "c03_002",
+      "target": "c03_003",
+      "edge_type": "DIFFERS_BY_TIME",
+      "evidence": "TEMPORAL_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_003",
+      "source": "c03_003",
+      "target": "c03_004",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between c03_003 and c03_004.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "SCOPE_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_003_differs_by_scope",
+      "source": "c03_003",
+      "target": "c03_004",
+      "edge_type": "DIFFERS_BY_SCOPE",
+      "evidence": "SCOPE_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_001",
+      "source": "scaffold_001",
+      "target": "contra_001",
+      "edge_type": "QUALIFIES",
+      "evidence": "population check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_002",
+      "source": "scaffold_002",
+      "target": "contra_002",
+      "edge_type": "QUALIFIES",
+      "evidence": "time check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_003",
+      "source": "scaffold_003",
+      "target": "contra_003",
+      "edge_type": "QUALIFIES",
+      "evidence": "scope check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+      "source": "mouse_model_study_public_2021",
+      "target": "ai_answer_case_03",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+      "source": "mouse_model_study_public_2021",
+      "target": "ai_answer_case_03",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_mouse_model_study_public_2021_ai_answer_case_03",
+      "source": "mouse_model_study_public_2021",
+      "target": "ai_answer_case_03",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    }
+  ],
+  "metadata": {
+    "claim_count": 4,
+    "source_count": 4,
+    "contradiction_count": 3,
+    "citation_statuses": [
+      "NOT_VERIFIED_OFFLINE",
+      "NO_CITATION_PROVIDED"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "case_01",
+  "annotation_timestamp": "2026-08-04T19:53:30Z",
+  "engine_output_hidden_from_annotator": true,
+  "annotation_guidelines": "Claim-by-claim expected citation status and contradiction/scaffolding expectations drafted before running CLI outputs.",
+  "adjudication_basis": "Public-source review notes plus independent human interpretation of expected support status.",
+  "sources_reviewed": [
+    "Reuters legal coverage on fabricated-case incident"
+  ],
+  "changes_after_engine_output": false,
+  "original_annotation": "preserved in human_reference_annotation.json",
+  "revised_annotation": null,
+  "reason_for_revision": null
+}

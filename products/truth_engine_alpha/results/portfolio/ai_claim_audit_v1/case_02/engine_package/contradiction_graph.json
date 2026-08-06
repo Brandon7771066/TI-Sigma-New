@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "claim_id": "c02_001",
+      "label": "The answer overstates WHO guidance as deterministic proof."
+    },
+    {
+      "claim_id": "c02_002",
+      "label": "The answer says USPSTF supports universal statins for everyone over 30."
+    },
+    {
+      "claim_id": "c02_003",
+      "label": "The answer claims CDC guidance universally endorses one supplement protocol."
+    },
+    {
+      "claim_id": "c02_004",
+      "label": "The source confirms recommendation language should include risk context."
+    }
+  ],
+  "edges": [
+    {
+      "from": "c02_001",
+      "to": "c02_002",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    },
+    {
+      "from": "c02_002",
+      "to": "c02_003",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    },
+    {
+      "from": "c02_003",
+      "to": "c02_004",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    }
+  ]
+}

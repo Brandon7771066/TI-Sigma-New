@@ -1,0 +1,25 @@
+{
+  "case_id": "case_01",
+  "expected_resolution_status": "partially_resolved",
+  "claim_expectations": [
+    {"claim_id": "c01_001", "expected_citation_status": "POSSIBLY_FABRICATED_CITATION"},
+    {"claim_id": "c01_002", "expected_citation_status": "SOURCE_NOT_FOUND"},
+    {"claim_id": "c01_003", "expected_citation_status": "SOURCE_FOUND_NOT_ACCESSED"}
+  ],
+  "expected_contradictions": [
+    {
+      "reference_contradiction_id": "ref_contra_001",
+      "claim_pair": ["c01_001", "c01_002"],
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": false,
+      "expected_scaffolding_route": "context"
+    },
+    {
+      "reference_contradiction_id": "ref_contra_002",
+      "claim_pair": ["c01_002", "c01_003"],
+      "expected_contradiction_type": "MISSING_INFORMATION",
+      "expected_scope_population_time_mismatch": false,
+      "expected_scaffolding_route": "context"
+    }
+  ]
+}
