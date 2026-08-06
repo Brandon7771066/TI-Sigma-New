@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/scaffolding-candidate.schema.json",
+  "title": "Truth Engine Alpha Scaffolding Candidate",
+  "type": "object",
+  "required": ["candidate_id", "contradiction_id", "route", "rationale"],
+  "properties": {
+    "candidate_id": {"type": "string"},
+    "contradiction_id": {"type": "string"},
+    "route": {"type": "string"},
+    "rationale": {"type": "string"},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

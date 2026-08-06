@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "shadow_contains_pd_research": true,
+  "shadow_research_only": true,
+  "production_payload_unchanged": true
+}

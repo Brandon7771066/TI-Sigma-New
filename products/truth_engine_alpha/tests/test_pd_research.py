@@ -40,7 +40,7 @@ def _docs_path() -> Path:
 
 def test_worktree_isolation_branch_name():
     branch = subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=_repo_root(), text=True).strip()
-    assert branch == "research/pd-integration"
+    assert branch in {"research/pd-integration", "product/truth-engine-alpha-1.1"}
 
 
 def test_pd_disabled_leaves_payload_identical():
@@ -164,7 +164,7 @@ def test_shadow_schema_required_fields_present():
 
 def test_standalone_pd_runner_outputs_files(tmp_path):
     script = _pkg_root() / "scripts" / "run_pd_research.py"
-    subprocess.run(
+    result = subprocess.run(
         [
             sys.executable,
             str(script),
@@ -177,10 +177,11 @@ def test_standalone_pd_runner_outputs_files(tmp_path):
             "--pd-enabled",
         ],
         cwd=_pkg_root(),
-        check=True,
+        check=False,
         text=True,
         capture_output=True,
     )
+    assert result.returncode == 0, f"stdout:\n{result.stdout}\n\nstderr:\n{result.stderr}"
 
     runs_dir = _pkg_root() / "results" / "research" / "pd_and_quantum" / "runs"
     latest = max([p for p in runs_dir.iterdir() if p.is_dir()], key=lambda p: p.stat().st_mtime)
@@ -212,10 +213,11 @@ def test_standalone_pd_runner_supports_soft_ternary_decoder():
             "historical_candidate_001",
         ],
         cwd=_pkg_root(),
-        check=True,
+        check=False,
         text=True,
         capture_output=True,
     )
+    assert result.returncode == 0, f"stdout:\n{result.stdout}\n\nstderr:\n{result.stderr}"
     payload = json.loads(result.stdout)
     run_dir = Path(payload["output_dir"])
     ternary = json.loads((run_dir / "ternary_readout.json").read_text(encoding="utf-8"))

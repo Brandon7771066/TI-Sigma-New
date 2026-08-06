@@ -1,0 +1,58 @@
+{
+  "analysis_id": "research_diligence_demo_001",
+  "claims": [
+    {"claim_id":"rd_001","normalized_claim":"Mechanism A is claimed to be primary in outcome B.","verbatim_text":"Source set claims mechanism A primarily drives outcome B.","source_id":"rd_source_001","source_location":"intro","claim_type":"mechanism","population":"target market population","intervention":"product mechanism A","comparison":"alternative mechanism C","outcome":"outcome B","timeframe":"short term","conditions":"public evidence","certainty_language":"claims","citations":["rd_source_001"],"evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"claim_id":"rd_002","normalized_claim":"Independent sources report mixed evidence on mechanism A in long-term outcomes.","verbatim_text":"Several public sources report mixed long-term evidence for mechanism A.","source_id":"rd_source_002","source_location":"results","claim_type":"mechanism","population":"target market population","intervention":"product mechanism A","comparison":"none","outcome":"outcome B long term","timeframe":"long term","conditions":"public evidence","certainty_language":"report","citations":["rd_source_002"],"evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"claim_id":"rd_003","normalized_claim":"No public replication was identified for the highest-impact claim.","verbatim_text":"The highest-impact claim lacks direct public replication in the reviewed set.","source_id":"rd_source_003","source_location":"discussion","claim_type":"replication","population":"target market population","intervention":"product mechanism A","comparison":"none","outcome":"replication support","timeframe":"n/a","conditions":"public evidence","certainty_language":"lacks","citations":[],"evidence_level":"IMPLEMENTED_AND_TESTED"}
+  ],
+  "sources": [
+    {"source_id":"rd_source_001","title":"Primary claim source","url":null,"source_type":"public_literature","evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"source_id":"rd_source_002","title":"Independent evidence source","url":null,"source_type":"public_literature","evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"source_id":"rd_source_003","title":"Replication status source","url":null,"source_type":"public_literature","evidence_level":"IMPLEMENTED_AND_TESTED"}
+  ],
+  "contradictions": [
+    {"contradiction_id":"contra_001","claim_ids":["rd_001","rd_002"],"contradiction_type":"TEMPORAL_DIFFERENCE","explanation":"Short-term primacy claim conflicts with mixed long-term evidence framing.","evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"contradiction_id":"contra_002","claim_ids":["rd_001","rd_003"],"contradiction_type":"EVIDENCE_QUALITY_CONFLICT","explanation":"High-impact mechanism claim lacks direct replication support.","evidence_level":"IMPLEMENTED_AND_TESTED"}
+  ],
+  "scaffolding_candidates": [
+    {"candidate_id":"scaffold_001","contradiction_id":"contra_001","route":"time","rationale":"Separate short-term and long-term outcome windows.","evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"candidate_id":"scaffold_002","contradiction_id":"contra_002","route":"measurement_quality","rationale":"Collect direct replication evidence and protocol comparability.","evidence_level":"IMPLEMENTED_AND_TESTED"}
+  ],
+  "evidence_assessment": {
+    "source_type":"public_literature",
+    "study_design":"mixed",
+    "sample_size":null,
+    "replication":"limited",
+    "directness":"moderate",
+    "risk_of_bias":"unknown",
+    "measurement_quality":"mixed",
+    "statistical_uncertainty":"unquantified",
+    "external_validity":"case dependent",
+    "recency":"mixed",
+    "citation_support":"partial",
+    "independence_of_sources":"partially independent",
+    "summary_rating":"provisional",
+    "evidence_level":"IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status":"partially_resolved",
+  "confidence":0.49,
+  "critical_unknowns":["rd_003: missing citation support","Direct replication dataset not confirmed"],
+  "recommended_actions":[
+    {"action_id":"action_001","description":"Build timeline-separated evidence matrix for short-term vs long-term outcomes.","action_type":"analysis","expected_uncertainty_reduction":0.2,"priority":"high","evidence_level":"IMPLEMENTED_AND_TESTED"},
+    {"action_id":"action_002","description":"Prioritize replication-focused public studies for mechanism A.","action_type":"research","expected_uncertainty_reduction":0.3,"priority":"high","evidence_level":"IMPLEMENTED_AND_TESTED"}
+  ],
+  "commercial_opportunities":["Research diligence contradiction brief","Public evidence risk memo for technical investors"],
+  "limitations":["Not investment advice","Public source analysis only"],
+  "truth_engine_level":4,
+  "truth_engine_score":{"report_completeness":1.0,"evidence_coverage":0.667,"conflict_density":0.667,"resolution_potential":0.6,"confidence_calibration":0.49},
+  "contradiction_graph":{
+    "nodes":[{"claim_id":"rd_001","label":"primary mechanism claim"},{"claim_id":"rd_002","label":"mixed long-term evidence"},{"claim_id":"rd_003","label":"replication gap"}],
+    "edges":[{"from":"rd_001","to":"rd_002","relation":"contradicts","contradiction_type":"TEMPORAL_DIFFERENCE"},{"from":"rd_001","to":"rd_003","relation":"requires","contradiction_type":"EVIDENCE_QUALITY_CONFLICT"}]
+  },
+  "information_gain":[
+    {"item_id":"ig_001","target_contradiction_id":"contra_001","best_experiment":"Collect matched long-term follow-up data under equivalent protocol.","expected_uncertainty_reduction":0.2,"priority":"medium"},
+    {"item_id":"ig_002","target_contradiction_id":"contra_002","best_experiment":"Run independent replication with preregistered endpoints.","expected_uncertainty_reduction":0.35,"priority":"high"}
+  ],
+  "claim_labels":{"rd_001":"SOURCE-DERIVED_FACT","rd_002":"SOURCE-DERIVED_FACT","rd_003":"ENGINE_INFERENCE"},
+  "research_mode_fields":{}
+}

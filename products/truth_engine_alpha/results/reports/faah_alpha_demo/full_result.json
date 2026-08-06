@@ -1,0 +1,125 @@
+{
+  "analysis_id": "faah_alpha_demo_001",
+  "claims": [
+    {
+      "claim_id": "faah_001",
+      "normalized_claim": "FAAH inhibition and FAAH gene editing may produce different effects because the mechanisms differ.",
+      "verbatim_text": "Public literature suggests FAAH inhibition and FAAH gene editing may differ mechanistically.",
+      "source_id": "source_001",
+      "source_location": "Abstract",
+      "claim_type": "mechanistic",
+      "population": "humans and rodents",
+      "intervention": "FAAH inhibition or gene editing",
+      "comparison": "pharmacologic vs genetic alteration",
+      "outcome": "pain, mood, fear, safety",
+      "timeframe": "unspecified",
+      "conditions": "public evidence",
+      "certainty_language": "may",
+      "citations": ["public literature"],
+      "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"
+    },
+    {
+      "claim_id": "faah_002",
+      "normalized_claim": "Jo Cameron phenotype is publicly discussed as a relevant FAAH-related case.",
+      "verbatim_text": "Jo Cameron phenotype is often discussed in the public FAAH literature.",
+      "source_id": "source_002",
+      "source_location": "Abstract",
+      "claim_type": "context",
+      "population": "human",
+      "intervention": "observed phenotype",
+      "comparison": "none",
+      "outcome": "pain and mood phenotype",
+      "timeframe": "unspecified",
+      "conditions": "public evidence",
+      "certainty_language": "often",
+      "citations": ["public literature"],
+      "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"
+    },
+    {
+      "claim_id": "faah_003",
+      "normalized_claim": "Rodent evidence and human evidence may not directly transfer for FAAH-related claims.",
+      "verbatim_text": "Rodent versus human evidence may differ for FAAH-related claims.",
+      "source_id": "source_003",
+      "source_location": "Abstract",
+      "claim_type": "evidence",
+      "population": "rodents and humans",
+      "intervention": "FAAH-related interventions",
+      "comparison": "species context",
+      "outcome": "translational relevance",
+      "timeframe": "unspecified",
+      "conditions": "public evidence",
+      "certainty_language": "may",
+      "citations": ["public literature"],
+      "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"
+    }
+  ],
+  "sources": [
+    {"source_id": "source_001", "title": "Public FAAH evidence set", "url": null, "source_type": "public_literature", "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"},
+    {"source_id": "source_002", "title": "Public FAAH-OUT context", "url": null, "source_type": "public_literature", "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"},
+    {"source_id": "source_003", "title": "Public translational evidence", "url": null, "source_type": "public_literature", "evidence_level": "RECONSTRUCTED_FROM_DOCUMENTED_SOURCES"}
+  ],
+  "contradictions": [
+    {
+      "contradiction_id": "contra_001",
+      "claim_ids": ["faah_001", "faah_003"],
+      "contradiction_type": "POPULATION_DIFFERENCE",
+      "explanation": "Mechanistic claims and translational claims may conflict unless species context is normalized.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_candidates": [
+    {
+      "candidate_id": "scaffold_001",
+      "contradiction_id": "contra_001",
+      "route": "population",
+      "rationale": "Separate rodent and human claims before mechanism-level synthesis.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    },
+    {
+      "candidate_id": "scaffold_002",
+      "contradiction_id": "contra_001",
+      "route": "methods",
+      "rationale": "Normalize intervention type (pharmacologic inhibition vs genetic alteration).",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "evidence_assessment": {
+    "source_type": "public_literature",
+    "study_design": "mixed",
+    "sample_size": null,
+    "replication": "unknown",
+    "directness": "moderate",
+    "risk_of_bias": "unknown",
+    "measurement_quality": "unknown",
+    "statistical_uncertainty": "unquantified",
+    "external_validity": "case dependent",
+    "recency": "mixed",
+    "citation_support": "partial",
+    "independence_of_sources": "unclear",
+    "summary_rating": "provisional",
+    "evidence_level": "IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status": "partially_resolved",
+  "confidence": 0.46,
+  "critical_unknowns": [
+    "Dose and parameter comparability",
+    "Species-specific pathway differences",
+    "Long-term safety outcome comparability"
+  ],
+  "recommended_actions": [
+    {"action_id": "action_001", "description": "Build a rodent vs human claim split table.", "action_type": "analysis", "evidence_level": "IMPLEMENTED_AND_TESTED"},
+    {"action_id": "action_002", "description": "Tag claims by intervention class: inhibitor, knockout, regulatory variant.", "action_type": "analysis", "evidence_level": "IMPLEMENTED_AND_TESTED"},
+    {"action_id": "action_003", "description": "Prioritize public sources with explicit mechanism and safety measurements.", "action_type": "research", "evidence_level": "IMPLEMENTED_AND_TESTED"}
+  ],
+  "commercial_opportunities": [
+    "Public evidence contradiction audit package for cannabinoid-pathway claims",
+    "Translational-risk brief for biotech diligence",
+    "Mechanism-gap report for public R&D prioritization"
+  ],
+  "limitations": [
+    "No medical-treatment recommendations",
+    "Public-evidence synthesis only",
+    "Not legal or investment advice"
+  ],
+  "research_mode_fields": {}
+}

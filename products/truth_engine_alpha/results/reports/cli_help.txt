@@ -1,0 +1,14 @@
+usage: truth-engine [-h] {analyze,validate,benchmark,report,compare} ...
+
+Truth Engine Alpha CLI
+
+positional arguments:
+  {analyze,validate,benchmark,report,compare}
+    analyze             Analyze claims or documents
+    validate            Validate inputs or result files
+    benchmark           Run benchmark cases
+    report              Render a report from a result file
+    compare             Compare two result files
+
+options:
+  -h, --help            show this help message and exit

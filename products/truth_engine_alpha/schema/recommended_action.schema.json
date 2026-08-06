@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/recommended-action.schema.json",
+  "title": "Truth Engine Alpha Recommended Action",
+  "type": "object",
+  "required": ["action_id", "description"],
+  "properties": {
+    "action_id": {"type": "string"},
+    "description": {"type": "string"},
+    "action_type": {"type": "string"},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

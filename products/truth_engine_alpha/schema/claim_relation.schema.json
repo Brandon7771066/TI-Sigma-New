@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/claim-relation.schema.json",
+  "title": "Truth Engine Alpha Claim Relation",
+  "type": "object",
+  "required": ["relation_id", "left_claim_id", "right_claim_id", "relation_type"],
+  "properties": {
+    "relation_id": {"type": "string"},
+    "left_claim_id": {"type": "string"},
+    "right_claim_id": {"type": "string"},
+    "relation_type": {"type": "string"},
+    "rationale": {"type": ["string", "null"]},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

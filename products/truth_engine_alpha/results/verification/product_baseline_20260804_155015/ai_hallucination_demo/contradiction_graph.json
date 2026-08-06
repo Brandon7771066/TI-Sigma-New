@@ -1,0 +1,40 @@
+{
+  "nodes": [
+    {
+      "claim_id": "ai_001",
+      "label": "Study X proved intervention Y cures condition Z in all adults."
+    },
+    {
+      "claim_id": "ai_002",
+      "label": "Study X reported improvement under specific subgroups rather than universal cure."
+    },
+    {
+      "claim_id": "ai_003",
+      "label": "The AI answer cites a DOI that does not map to the claimed outcome."
+    },
+    {
+      "claim_id": "ai_004",
+      "label": "The answer conflates observational and randomized evidence."
+    }
+  ],
+  "edges": [
+    {
+      "from": "ai_001",
+      "to": "ai_002",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    },
+    {
+      "from": "ai_002",
+      "to": "ai_003",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    },
+    {
+      "from": "ai_003",
+      "to": "ai_004",
+      "relation": "contradicts",
+      "contradiction_type": "POPULATION_DIFFERENCE"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "generated_by_engine": false,
+  "generated_by_cli": false,
+  "manually_authored_fields": [
+    "full_result.json",
+    "executive_summary.md"
+  ],
+  "source_material": "products/truth_engine_alpha/data/inputs/research_diligence_case_01.jsonl",
+  "source_verification_status": "NOT_VERIFIED_OFFLINE",
+  "generation_timestamp": "2026-08-03T00:00:00Z",
+  "git_commit": "UNKNOWN_LOCAL_STATE",
+  "schema_version": "truth_engine_alpha.v1",
+  "limitations": [
+    "Demo currently includes manually authored artifacts for presentation",
+    "Use verify_track1.ps1 outputs for executable proof"
+  ]
+}

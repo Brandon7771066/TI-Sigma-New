@@ -1,0 +1,22 @@
+[
+  {"benchmark_id":"bench_01","category":"biomedical contradictions","expected_contradiction_type":"MISSING_INFORMATION","expected_scaffolding_route":"context","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_02","category":"AI hallucination and citation errors","expected_contradiction_type":"DIRECT_LOGICAL_CONFLICT","expected_scaffolding_route":"definitions","expected_resolution_status":"unresolved"},
+  {"benchmark_id":"bench_03","category":"formal/logical conflicts","expected_contradiction_type":"DIRECT_LOGICAL_CONFLICT","expected_scaffolding_route":"scope","expected_resolution_status":"unresolved"},
+  {"benchmark_id":"bench_04","category":"policy or economic tradeoffs","expected_contradiction_type":"GENUINE_TRADEOFF","expected_scaffolding_route":"assumptions","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_05","category":"patent/prior-art claim conflicts","expected_contradiction_type":"DEFINITION_DIFFERENCE","expected_scaffolding_route":"definitions","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_06","category":"biomedical contradictions","expected_contradiction_type":"POPULATION_DIFFERENCE","expected_scaffolding_route":"population","expected_resolution_status":"resolved"},
+  {"benchmark_id":"bench_07","category":"AI hallucination and citation errors","expected_contradiction_type":"EVIDENCE_QUALITY_CONFLICT","expected_scaffolding_route":"measurement_quality","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_08","category":"formal/logical conflicts","expected_contradiction_type":"CATEGORY_ERROR","expected_scaffolding_route":"context","expected_resolution_status":"unresolved"},
+  {"benchmark_id":"bench_09","category":"policy or economic tradeoffs","expected_contradiction_type":"TEMPORAL_DIFFERENCE","expected_scaffolding_route":"time","expected_resolution_status":"resolved"},
+  {"benchmark_id":"bench_10","category":"patent/prior-art claim conflicts","expected_contradiction_type":"METHOD_DIFFERENCE","expected_scaffolding_route":"methods","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_11","category":"biomedical contradictions","expected_contradiction_type":"MEASUREMENT_DIFFERENCE","expected_scaffolding_route":"measurement_quality","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_12","category":"AI hallucination and citation errors","expected_contradiction_type":"MISSING_INFORMATION","expected_scaffolding_route":"assumptions","expected_resolution_status":"insufficient_evidence"},
+  {"benchmark_id":"bench_13","category":"formal/logical conflicts","expected_contradiction_type":"SELF_REFERENCE","expected_scaffolding_route":"assumptions","expected_resolution_status":"unresolved"},
+  {"benchmark_id":"bench_14","category":"policy or economic tradeoffs","expected_contradiction_type":"UNRESOLVED_INCOHERENCE","expected_scaffolding_route":"domain_differences","expected_resolution_status":"unresolved"},
+  {"benchmark_id":"bench_15","category":"patent/prior-art claim conflicts","expected_contradiction_type":"DOSE_OR_PARAMETER_DIFFERENCE","expected_scaffolding_route":"assumptions","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_16","category":"biomedical contradictions","expected_contradiction_type":"SCOPE_DIFFERENCE","expected_scaffolding_route":"scope","expected_resolution_status":"resolved"},
+  {"benchmark_id":"bench_17","category":"AI hallucination and citation errors","expected_contradiction_type":"EVIDENCE_QUALITY_CONFLICT","expected_scaffolding_route":"measurement_quality","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_18","category":"formal/logical conflicts","expected_contradiction_type":"MISSING_INFORMATION","expected_scaffolding_route":"context","expected_resolution_status":"insufficient_evidence"},
+  {"benchmark_id":"bench_19","category":"policy or economic tradeoffs","expected_contradiction_type":"GENUINE_TRADEOFF","expected_scaffolding_route":"assumptions","expected_resolution_status":"partially_resolved"},
+  {"benchmark_id":"bench_20","category":"patent/prior-art claim conflicts","expected_contradiction_type":"METHOD_DIFFERENCE","expected_scaffolding_route":"methods","expected_resolution_status":"partially_resolved"}
+]

@@ -1,0 +1,39 @@
+{
+  "benchmark_count": 20,
+  "simple_baseline": {
+    "contradiction_type_accuracy": 0.15,
+    "scaffolding_route_accuracy": 0.15,
+    "resolution_status_accuracy": 0.5,
+    "citation_error_recall": 0.0,
+    "citation_error_precision": 0.0,
+    "report_completeness": 1.0,
+    "processing_time": "heuristic_simple_baseline"
+  },
+  "truth_engine_alpha": {
+    "contradiction_type_accuracy": 1.0,
+    "scaffolding_route_accuracy": 1.0,
+    "resolution_status_accuracy": 1.0,
+    "citation_error_recall": 0.7,
+    "citation_error_precision": 0.6,
+    "report_completeness": 1.0,
+    "processing_time": "heuristic_offline_baseline"
+  },
+  "held_out_performance": {
+    "keyword_baseline": {
+      "accuracy": 0.4,
+      "notes": "keyword route prediction versus labeled scaffold route"
+    },
+    "flat_truth_engine": {
+      "accuracy": 1.0,
+      "notes": "flat engine contradiction accuracy from benchmark set"
+    },
+    "claim_graph": {
+      "accuracy": 0.45,
+      "notes": "graph detector and mismatch-edge recall against reference labels"
+    },
+    "crystal_diagnostics": {
+      "accuracy": 1.0,
+      "notes": "crystal instability threshold versus graph-error labels"
+    }
+  }
+}

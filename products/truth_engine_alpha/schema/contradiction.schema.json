@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/contradiction.schema.json",
+  "title": "Truth Engine Alpha Contradiction",
+  "type": "object",
+  "required": ["contradiction_id", "claim_ids", "contradiction_type", "explanation"],
+  "properties": {
+    "contradiction_id": {"type": "string"},
+    "claim_ids": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "contradiction_type": {"type": "string"},
+    "explanation": {"type": "string"},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

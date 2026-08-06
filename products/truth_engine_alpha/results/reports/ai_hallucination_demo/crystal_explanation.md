@@ -1,0 +1,26 @@
+# Crystal v0.1 Explanation
+
+Crystal is a multilayer error-analysis structure for claim graph diagnostics, not a physical or octonionic object.
+
+## Layers
+- claim structure
+- source structure
+- evidence quality
+- contradictions
+- scaffolding
+- uncertainty
+- criticality
+- resolution actions
+
+## Diagnostics
+- isolated_claim_score: 0.5
+- evidence_asymmetry: 0.188
+- conflict_density: 0.5
+- assumption_sensitivity: 0.35
+- resolution_potential: 0.638
+- source_dependency_concentration: 0.25
+- critical_unknown_centrality: 1.0
+- structural_instability: 0.617
+- claim_count: 4
+- graph_node_count: 23
+- graph_edge_count: 32

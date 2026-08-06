@@ -1,0 +1,538 @@
+{
+  "nodes": [
+    {
+      "node_id": "ai_001",
+      "node_type": "Claim",
+      "label": "Study X proved intervention Y cures condition Z in all adults.",
+      "attributes": {
+        "claim_type": "effectiveness",
+        "source_id": "llm_answer_001"
+      }
+    },
+    {
+      "node_id": "population_adults",
+      "node_type": "Population",
+      "label": "adults",
+      "attributes": {
+        "claim_id": "ai_001"
+      }
+    },
+    {
+      "node_id": "method_intervention Y",
+      "node_type": "Method",
+      "label": "intervention Y",
+      "attributes": {
+        "claim_id": "ai_001"
+      }
+    },
+    {
+      "node_id": "evidence_ai_001",
+      "node_type": "Evidence",
+      "label": "condition Z cure",
+      "attributes": {
+        "claim_id": "ai_001"
+      }
+    },
+    {
+      "node_id": "citation_ai_001",
+      "node_type": "Citation",
+      "label": "ai_001",
+      "attributes": {
+        "claim_id": "ai_001",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "ai_002",
+      "node_type": "Claim",
+      "label": "Study X reported improvement under specific subgroups rather than universal cure.",
+      "attributes": {
+        "claim_type": "effectiveness",
+        "source_id": "source_pub_001"
+      }
+    },
+    {
+      "node_id": "population_specific subgroup",
+      "node_type": "Population",
+      "label": "specific subgroup",
+      "attributes": {
+        "claim_id": "ai_002"
+      }
+    },
+    {
+      "node_id": "evidence_ai_002",
+      "node_type": "Evidence",
+      "label": "improvement",
+      "attributes": {
+        "claim_id": "ai_002"
+      }
+    },
+    {
+      "node_id": "citation_ai_002",
+      "node_type": "Citation",
+      "label": "source_pub_001",
+      "attributes": {
+        "claim_id": "ai_002",
+        "status": "NOT_VERIFIED_OFFLINE"
+      }
+    },
+    {
+      "node_id": "ai_003",
+      "node_type": "Claim",
+      "label": "The AI answer cites a DOI that does not map to the claimed outcome.",
+      "attributes": {
+        "claim_type": "citation_validity",
+        "source_id": "llm_answer_001"
+      }
+    },
+    {
+      "node_id": "population_n/a",
+      "node_type": "Population",
+      "label": "n/a",
+      "attributes": {
+        "claim_id": "ai_003"
+      }
+    },
+    {
+      "node_id": "method_n/a",
+      "node_type": "Method",
+      "label": "n/a",
+      "attributes": {
+        "claim_id": "ai_003"
+      }
+    },
+    {
+      "node_id": "evidence_ai_003",
+      "node_type": "Evidence",
+      "label": "citation mismatch",
+      "attributes": {
+        "claim_id": "ai_003"
+      }
+    },
+    {
+      "node_id": "citation_ai_003",
+      "node_type": "Citation",
+      "label": "ai_003",
+      "attributes": {
+        "claim_id": "ai_003",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "ai_004",
+      "node_type": "Claim",
+      "label": "The answer conflates observational and randomized evidence.",
+      "attributes": {
+        "claim_type": "method_strength",
+        "source_id": "llm_answer_001"
+      }
+    },
+    {
+      "node_id": "population_mixed",
+      "node_type": "Population",
+      "label": "mixed",
+      "attributes": {
+        "claim_id": "ai_004"
+      }
+    },
+    {
+      "node_id": "evidence_ai_004",
+      "node_type": "Evidence",
+      "label": "evidence strength",
+      "attributes": {
+        "claim_id": "ai_004"
+      }
+    },
+    {
+      "node_id": "citation_ai_004",
+      "node_type": "Citation",
+      "label": "ai_004",
+      "attributes": {
+        "claim_id": "ai_004",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "llm_answer_001",
+      "node_type": "Source",
+      "label": "The answer states intervention Y cures condition Z in all adults.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "source_pub_001",
+      "node_type": "Source",
+      "label": "A source summary notes subgroup-limited improvement and no universal cure claim.",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    },
+    {
+      "node_id": "scaffold_001",
+      "node_type": "Action",
+      "label": "population check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "population",
+        "contradiction_id": "contra_001"
+      }
+    },
+    {
+      "node_id": "scaffold_002",
+      "node_type": "Action",
+      "label": "population check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "population",
+        "contradiction_id": "contra_002"
+      }
+    },
+    {
+      "node_id": "scaffold_003",
+      "node_type": "Action",
+      "label": "population check may resolve the apparent conflict.",
+      "attributes": {
+        "route": "population",
+        "contradiction_id": "contra_003"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_cites_ai_001",
+      "source": "ai_001",
+      "target": "llm_answer_001",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_ai_001",
+      "source": "ai_001",
+      "target": "population_adults",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_ai_001",
+      "source": "ai_001",
+      "target": "method_intervention Y",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_ai_001",
+      "source": "evidence_ai_001",
+      "target": "ai_001",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_ai_001",
+      "source": "citation_ai_001",
+      "target": "ai_001",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_ai_002",
+      "source": "ai_002",
+      "target": "source_pub_001",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_ai_002",
+      "source": "ai_002",
+      "target": "population_specific subgroup",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_ai_002",
+      "source": "ai_002",
+      "target": "method_intervention Y",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_ai_002",
+      "source": "evidence_ai_002",
+      "target": "ai_002",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_ai_002",
+      "source": "citation_ai_002",
+      "target": "ai_002",
+      "edge_type": "CITES",
+      "evidence": "Source exists but direct retrieval/access was not performed in offline mode.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_ai_003",
+      "source": "ai_003",
+      "target": "llm_answer_001",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_ai_003",
+      "source": "ai_003",
+      "target": "population_n/a",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_ai_003",
+      "source": "ai_003",
+      "target": "method_n/a",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_ai_003",
+      "source": "evidence_ai_003",
+      "target": "ai_003",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_ai_003",
+      "source": "citation_ai_003",
+      "target": "ai_003",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_cites_ai_004",
+      "source": "ai_004",
+      "target": "llm_answer_001",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_pop_ai_004",
+      "source": "ai_004",
+      "target": "population_mixed",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "population annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_method_ai_004",
+      "source": "ai_004",
+      "target": "method_intervention Y",
+      "edge_type": "DEPENDS_ON",
+      "evidence": "method annotation",
+      "confidence": 0.4,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_evidence_ai_004",
+      "source": "evidence_ai_004",
+      "target": "ai_004",
+      "edge_type": "SUPPORTS",
+      "evidence": "evidence annotation",
+      "confidence": 0.5,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_ai_004",
+      "source": "citation_ai_004",
+      "target": "ai_004",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_001",
+      "source": "ai_001",
+      "target": "ai_002",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between ai_001 and ai_002.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_001_differs_by_population",
+      "source": "ai_001",
+      "target": "ai_002",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_002",
+      "source": "ai_002",
+      "target": "ai_003",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between ai_002 and ai_003.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_002_differs_by_population",
+      "source": "ai_002",
+      "target": "ai_003",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "contra_003",
+      "source": "ai_003",
+      "target": "ai_004",
+      "edge_type": "CONTRADICTS",
+      "evidence": "Pairwise conflict detected between ai_003 and ai_004.",
+      "confidence": 0.9,
+      "severity": "high",
+      "attributes": {
+        "contradiction_type": "POPULATION_DIFFERENCE"
+      }
+    },
+    {
+      "edge_id": "contra_003_differs_by_population",
+      "source": "ai_003",
+      "target": "ai_004",
+      "edge_type": "DIFFERS_BY_POPULATION",
+      "evidence": "POPULATION_DIFFERENCE mismatch",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_001",
+      "source": "scaffold_001",
+      "target": "contra_001",
+      "edge_type": "QUALIFIES",
+      "evidence": "population check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_002",
+      "source": "scaffold_002",
+      "target": "contra_002",
+      "edge_type": "QUALIFIES",
+      "evidence": "population check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_scaffold_scaffold_003",
+      "source": "scaffold_003",
+      "target": "contra_003",
+      "edge_type": "QUALIFIES",
+      "evidence": "population check may resolve the apparent conflict.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_llm_answer_001_source_pub_001",
+      "source": "llm_answer_001",
+      "target": "source_pub_001",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_llm_answer_001_llm_answer_001",
+      "source": "llm_answer_001",
+      "target": "llm_answer_001",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_source_llm_answer_001_llm_answer_001",
+      "source": "llm_answer_001",
+      "target": "llm_answer_001",
+      "edge_type": "SAME_ONLY_IF",
+      "evidence": "source concentration check",
+      "confidence": 0.3,
+      "severity": "low",
+      "attributes": {}
+    }
+  ],
+  "metadata": {
+    "claim_count": 4,
+    "source_count": 4,
+    "contradiction_count": 3,
+    "citation_statuses": [
+      "NOT_VERIFIED_OFFLINE",
+      "NO_CITATION_PROVIDED"
+    ]
+  }
+}

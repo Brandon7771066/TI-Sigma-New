@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/source.schema.json",
+  "title": "Truth Engine Alpha Source",
+  "type": "object",
+  "required": ["source_id", "title"],
+  "properties": {
+    "source_id": {"type": "string"},
+    "title": {"type": "string"},
+    "url": {"type": ["string", "null"]},
+    "source_type": {"type": "string"},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

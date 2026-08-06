@@ -1,0 +1,10 @@
+{
+  "TRUTH_ENGINE_BASELINE_EXECUTABLE": true,
+  "TRACK_1": true,
+  "CLAIM_GRAPH": true,
+  "CRYSTAL": true,
+  "REPORTING": true,
+  "SCHEMA": true,
+  "PAID_API_REQUESTS": 0,
+  "missing_files": []
+}

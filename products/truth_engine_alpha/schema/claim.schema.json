@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/claim.schema.json",
+  "title": "Truth Engine Alpha Claim",
+  "type": "object",
+  "required": ["claim_id", "normalized_claim", "verbatim_text", "source_id", "claim_type", "citations"],
+  "properties": {
+    "claim_id": {"type": "string"},
+    "normalized_claim": {"type": "string"},
+    "verbatim_text": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_location": {"type": ["string", "null"]},
+    "claim_type": {"type": "string"},
+    "population": {"type": ["string", "null"]},
+    "intervention": {"type": ["string", "null"]},
+    "comparison": {"type": ["string", "null"]},
+    "outcome": {"type": ["string", "null"]},
+    "timeframe": {"type": ["string", "null"]},
+    "conditions": {"type": ["string", "null"]},
+    "certainty_language": {"type": ["string", "null"]},
+    "citations": {"type": "array", "items": {"type": "string"}},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}

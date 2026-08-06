@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph id="TruthEngineClaimGraph" edgedefault="directed">
+<node id="ai_001"><data key="type">Claim</data><data key="label">Study X proved intervention Y cures condition Z in all adults.</data></node>
+<node id="population_adults"><data key="type">Population</data><data key="label">adults</data></node>
+<node id="method_intervention Y"><data key="type">Method</data><data key="label">intervention Y</data></node>
+<node id="evidence_ai_001"><data key="type">Evidence</data><data key="label">condition Z cure</data></node>
+<node id="citation_ai_001"><data key="type">Citation</data><data key="label">ai_001</data></node>
+<node id="ai_002"><data key="type">Claim</data><data key="label">Study X reported improvement under specific subgroups rather than universal cure.</data></node>
+<node id="population_specific subgroup"><data key="type">Population</data><data key="label">specific subgroup</data></node>
+<node id="evidence_ai_002"><data key="type">Evidence</data><data key="label">improvement</data></node>
+<node id="citation_ai_002"><data key="type">Citation</data><data key="label">source_pub_001</data></node>
+<node id="ai_003"><data key="type">Claim</data><data key="label">The AI answer cites a DOI that does not map to the claimed outcome.</data></node>
+<node id="population_n/a"><data key="type">Population</data><data key="label">n/a</data></node>
+<node id="method_n/a"><data key="type">Method</data><data key="label">n/a</data></node>
+<node id="evidence_ai_003"><data key="type">Evidence</data><data key="label">citation mismatch</data></node>
+<node id="citation_ai_003"><data key="type">Citation</data><data key="label">ai_003</data></node>
+<node id="ai_004"><data key="type">Claim</data><data key="label">The answer conflates observational and randomized evidence.</data></node>
+<node id="population_mixed"><data key="type">Population</data><data key="label">mixed</data></node>
+<node id="evidence_ai_004"><data key="type">Evidence</data><data key="label">evidence strength</data></node>
+<node id="citation_ai_004"><data key="type">Citation</data><data key="label">ai_004</data></node>
+<node id="llm_answer_001"><data key="type">Source</data><data key="label">The answer states intervention Y cures condition Z in all adults.</data></node>
+<node id="source_pub_001"><data key="type">Source</data><data key="label">A source summary notes subgroup-limited improvement and no universal cure claim.</data></node>
+<node id="scaffold_001"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<node id="scaffold_002"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<node id="scaffold_003"><data key="type">Action</data><data key="label">population check may resolve the apparent conflict.</data></node>
+<edge id="edge_cites_ai_001" source="ai_001" target="llm_answer_001"><data key="type">CITES</data></edge>
+<edge id="edge_pop_ai_001" source="ai_001" target="population_adults"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="edge_method_ai_001" source="ai_001" target="method_intervention Y"><data key="type">DEPENDS_ON</data></edge>
+<edge id="edge_evidence_ai_001" source="evidence_ai_001" target="ai_001"><data key="type">SUPPORTS</data></edge>
+<edge id="edge_audit_ai_001" source="citation_ai_001" target="ai_001"><data key="type">CITES</data></edge>
+<edge id="edge_cites_ai_002" source="ai_002" target="source_pub_001"><data key="type">CITES</data></edge>
+<edge id="edge_pop_ai_002" source="ai_002" target="population_specific subgroup"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="edge_method_ai_002" source="ai_002" target="method_intervention Y"><data key="type">DEPENDS_ON</data></edge>
+<edge id="edge_evidence_ai_002" source="evidence_ai_002" target="ai_002"><data key="type">SUPPORTS</data></edge>
+<edge id="edge_audit_ai_002" source="citation_ai_002" target="ai_002"><data key="type">CITES</data></edge>
+<edge id="edge_cites_ai_003" source="ai_003" target="llm_answer_001"><data key="type">CITES</data></edge>
+<edge id="edge_pop_ai_003" source="ai_003" target="population_n/a"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="edge_method_ai_003" source="ai_003" target="method_n/a"><data key="type">DEPENDS_ON</data></edge>
+<edge id="edge_evidence_ai_003" source="evidence_ai_003" target="ai_003"><data key="type">SUPPORTS</data></edge>
+<edge id="edge_audit_ai_003" source="citation_ai_003" target="ai_003"><data key="type">CITES</data></edge>
+<edge id="edge_cites_ai_004" source="ai_004" target="llm_answer_001"><data key="type">CITES</data></edge>
+<edge id="edge_pop_ai_004" source="ai_004" target="population_mixed"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="edge_method_ai_004" source="ai_004" target="method_intervention Y"><data key="type">DEPENDS_ON</data></edge>
+<edge id="edge_evidence_ai_004" source="evidence_ai_004" target="ai_004"><data key="type">SUPPORTS</data></edge>
+<edge id="edge_audit_ai_004" source="citation_ai_004" target="ai_004"><data key="type">CITES</data></edge>
+<edge id="contra_001" source="ai_001" target="ai_002"><data key="type">CONTRADICTS</data></edge>
+<edge id="contra_001_differs_by_population" source="ai_001" target="ai_002"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="contra_002" source="ai_002" target="ai_003"><data key="type">CONTRADICTS</data></edge>
+<edge id="contra_002_differs_by_population" source="ai_002" target="ai_003"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="contra_003" source="ai_003" target="ai_004"><data key="type">CONTRADICTS</data></edge>
+<edge id="contra_003_differs_by_population" source="ai_003" target="ai_004"><data key="type">DIFFERS_BY_POPULATION</data></edge>
+<edge id="edge_scaffold_scaffold_001" source="scaffold_001" target="contra_001"><data key="type">QUALIFIES</data></edge>
+<edge id="edge_scaffold_scaffold_002" source="scaffold_002" target="contra_002"><data key="type">QUALIFIES</data></edge>
+<edge id="edge_scaffold_scaffold_003" source="scaffold_003" target="contra_003"><data key="type">QUALIFIES</data></edge>
+<edge id="edge_source_llm_answer_001_source_pub_001" source="llm_answer_001" target="source_pub_001"><data key="type">SAME_ONLY_IF</data></edge>
+<edge id="edge_source_llm_answer_001_llm_answer_001" source="llm_answer_001" target="llm_answer_001"><data key="type">SAME_ONLY_IF</data></edge>
+<edge id="edge_source_llm_answer_001_llm_answer_001" source="llm_answer_001" target="llm_answer_001"><data key="type">SAME_ONLY_IF</data></edge>
+</graph>
+</graphml>

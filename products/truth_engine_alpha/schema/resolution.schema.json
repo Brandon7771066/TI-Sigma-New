@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/truth-engine-alpha/resolution.schema.json",
+  "title": "Truth Engine Alpha Resolution",
+  "type": "object",
+  "required": ["resolution_status", "confidence"],
+  "properties": {
+    "resolution_status": {"type": "string", "enum": ["resolved", "partially_resolved", "unresolved", "insufficient_evidence"]},
+    "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "critical_unknowns": {"type": "array", "items": {"type": "string"}},
+    "evidence_level": {"type": "string"}
+  },
+  "additionalProperties": false
+}
