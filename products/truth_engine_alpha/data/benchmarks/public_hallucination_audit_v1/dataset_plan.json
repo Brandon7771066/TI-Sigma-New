@@ -1,0 +1,33 @@
+{
+  "dataset_id": "public_hallucination_audit_v1",
+  "target_total_cases": {
+    "min": 30,
+    "max": 50
+  },
+  "splits": {
+    "development": {
+      "min": 20,
+      "max": 30
+    },
+    "held_out_test": {
+      "min": 10,
+      "max": 20
+    }
+  },
+  "class_balance": [
+    "supported_claims",
+    "unsupported_claims",
+    "fabricated_citations",
+    "mischaracterized_citations",
+    "scope_errors",
+    "population_errors",
+    "timeframe_errors",
+    "causal_overclaims",
+    "correct_but_uncited_claims"
+  ],
+  "policy": {
+    "public_sources_only": true,
+    "no_tuning_on_heldout": true,
+    "human_supervised_service_only_until_gate": true
+  }
+}
