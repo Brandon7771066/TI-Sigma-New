@@ -59,3 +59,7 @@ def main() -> None:
         raise SystemExit(f'Unknown command: {args.command}')
 
     print(json.dumps(result, indent=2))
+
+
+if __name__ == '__main__':
+    main()

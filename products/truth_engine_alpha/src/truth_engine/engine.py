@@ -306,6 +306,7 @@ def _citation_status_for(claim: Claim, source_ids: set[str], offline_mode: bool 
     else:
         citation = str(claim.citations[0]).strip()
         lower = citation.lower()
+        conditions = (claim.conditions or '').lower()
         text = f"{claim.normalized_claim} {claim.verbatim_text}".lower()
         if any(token in lower for token in ['fake', 'fabricated', 'xxxxx', '0000']):
             status = 'POSSIBLY_FABRICATED_CITATION'
@@ -313,6 +314,9 @@ def _citation_status_for(claim: Claim, source_ids: set[str], offline_mode: bool 
         elif citation not in source_ids:
             status = 'SOURCE_NOT_FOUND'
             reason = 'Citation reference not present in provided source map.'
+        elif 'source_found_not_accessed' in conditions or 'not_accessed' in conditions:
+            status = 'SOURCE_FOUND_NOT_ACCESSED'
+            reason = 'Source located but not accessed in this run per case annotation.'
         elif any(token in text for token in ['does not support', 'unrelated', 'mismatch']):
             status = 'SOURCE_DOES_NOT_SUPPORT_CLAIM'
             reason = 'Claim language signals source mismatch.'
