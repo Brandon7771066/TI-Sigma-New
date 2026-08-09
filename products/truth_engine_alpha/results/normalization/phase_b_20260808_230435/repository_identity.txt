@@ -1,0 +1,13 @@
+Branch: product/truth-engine-alpha-1.1
+Commit: 9a000499c47811969739bcab5b66440100c9c149
+Log:
+9a000499 Audit and certify Phase A calibration provenance
+47cd3cce Recover Truth Axes quantitative calibration artifacts
+be5951eb Add TI Sigma calibration registry knowledge ledger and recovery gaps
+ad669035 Recover PD Crystal Graph and Myrion Resolution quantitative artifacts
+b1053224 Recover GILE values HEM:GILE ratios and domain weights
+84335786 Recover TI Sigma truth-label validation and completeness metrics
+98ad0588 Add portfolio evaluation and provenance audit
+c8e04006 Add Truth Engine commercial launch materials
+973ecd34 Add three-case AI Claim Audit diagnostic portfolio
+128e232c Repair Truth Engine CLI execution and citation-status handling
