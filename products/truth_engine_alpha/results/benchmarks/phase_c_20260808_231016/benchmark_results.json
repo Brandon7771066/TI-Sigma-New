@@ -1,0 +1,30 @@
+{
+  "task": "AI Hallucination & Evidence-Gap Auditing",
+  "dataset_size": 60,
+  "held_out_size": 12,
+  "baseline_2_retrieval": {
+    "macro_f1": 0.0571,
+    "accuracy": 0.1667,
+    "bootstrap_ci": [
+      0.0,
+      0.4167
+    ],
+    "human_review_time_sec": 45.0
+  },
+  "full_ti_sigma_module": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "bootstrap_ci": [
+      1.0,
+      1.0
+    ],
+    "human_review_time_sec": 22.0
+  },
+  "improvements": {
+    "absolute_macro_f1_delta": 0.9429,
+    "relative_macro_f1_delta_pct": 1651.31,
+    "review_time_reduction_pct": 51.11,
+    "p_value": 0.0008,
+    "cohens_d": 1.42
+  }
+}
