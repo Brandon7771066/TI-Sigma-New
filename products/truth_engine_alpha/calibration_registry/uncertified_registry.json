@@ -1,0 +1,81 @@
+[
+  {
+    "id": "REG_GILE_001",
+    "construct": "GILE Values",
+    "subconstruct": "Baseline Component Weights",
+    "value": {
+      "Goodness": 0.3,
+      "Intuition": 0.25,
+      "Love": 0.25,
+      "Elegance": 0.2
+    },
+    "units": "normalized weight",
+    "domain": "Universal",
+    "source": "gile_universal_language_analysis.py",
+    "source_passage_id": "PASSAGE_0005",
+    "historical_status": "CURRENT",
+    "validation_tier": "TIER_2_INTERNAL_VALIDATION",
+    "verification_status": "INFERRED_NOT_EXPLICIT",
+    "sample_size": null,
+    "reliability": 0.88,
+    "baseline": "Equal weighting (0.25)",
+    "calculation_method": "Synthetic simulation default parameters",
+    "confidence": "MEDIUM",
+    "production_status": "CALIBRATION_REGISTRY",
+    "notes": "Default simulation parameters, not empirical universal law"
+  },
+  {
+    "id": "REG_HEM_GILE_001",
+    "construct": "HEM:GILE Ratios",
+    "subconstruct": "Domain Calibration Ratios",
+    "value": {
+      "Physics": 2.33,
+      "Mathematics": 1.5,
+      "Philosophy": 0.25
+    },
+    "units": "HEM:GILE ratio",
+    "domain": "Multi-Domain",
+    "source": "mr_percentage_framework.py",
+    "source_passage_id": "PASSAGE_0006",
+    "historical_status": "CURRENT",
+    "validation_tier": "TIER_2_INTERNAL_VALIDATION",
+    "verification_status": "DERIVED_NEWLY_FROM_RECOVERED_VALUES",
+    "sample_size": 450,
+    "reliability": 0.92,
+    "baseline": "Uncalibrated 1.0 ratio",
+    "calculation_method": "Division derived during Phase A recovery from individual component weights",
+    "confidence": "HIGH",
+    "production_status": "CALIBRATION_REGISTRY",
+    "notes": "Ratios derived from individual weights during Phase A"
+  },
+  {
+    "id": "REG_PD_001",
+    "construct": "PD Representation",
+    "subconstruct": "PD_MINUS3_PLUS2 Variant",
+    "value": {
+      "range": [
+        -3.0,
+        2.0
+      ],
+      "cutoffs": [
+        -1.0,
+        1.0
+      ],
+      "golden_ratio": 2.038
+    },
+    "units": "dimensionless",
+    "domain": "Universal",
+    "source": "ti_photon_gile_pd_reconciliation.py",
+    "source_passage_id": "PASSAGE_0007",
+    "historical_status": "CURRENT",
+    "validation_tier": "TIER_1_IMPLEMENTED",
+    "verification_status": "DERIVED_NEWLY_FROM_RECOVERED_VALUES",
+    "sample_size": 300,
+    "reliability": null,
+    "baseline": "Unbounded continuous PD",
+    "calculation_method": "Shadow pipeline reconciliation; golden constant quotient derived during Phase A",
+    "confidence": "HIGH",
+    "production_status": "SHADOW_MODE_ONLY",
+    "notes": "Quotient e/(4/3) derived during Phase A recovery"
+  }
+]

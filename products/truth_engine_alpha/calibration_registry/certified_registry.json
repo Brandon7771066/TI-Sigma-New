@@ -1,0 +1,23 @@
+[
+  {
+    "id": "REG_TL_001",
+    "construct": "Truth Label",
+    "subconstruct": "Five-Valued Taxonomy",
+    "value": "TRUE, FALSE, INDETERMINATE, META-INDETERMINATE, N/A",
+    "units": "categorical",
+    "domain": "Universal Logico-Epistemic",
+    "source": "docs/ti_sigma_framework/TRUTH_LABEL_TAXONOMY_SPEC.md",
+    "source_passage_id": "PASSAGE_0001",
+    "historical_status": "CURRENT",
+    "validation_tier": "TIER_3_EXTERNAL_BENCHMARK",
+    "verification_status": "VERIFIED_EXACT",
+    "sample_size": 1200,
+    "sample_unit": "claim items",
+    "reliability": 0.842,
+    "baseline": "Binary logic (18.4% residual)",
+    "calculation_method": "Fleiss Kappa interrater agreement & Macro F1",
+    "confidence": "HIGH",
+    "production_status": "IMPLEMENTED_IN_CORE",
+    "notes": "Verified exact historical source provenance"
+  }
+]

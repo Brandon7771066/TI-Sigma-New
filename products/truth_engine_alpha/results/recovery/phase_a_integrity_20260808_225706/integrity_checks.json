@@ -1,0 +1,25 @@
+{
+  "percentages_compatible": true,
+  "ratios_match_numerators_denominators": true,
+  "cis_contain_estimates": true,
+  "probabilities_in_valid_range": true,
+  "weights_sum_correctly": true,
+  "f1_mcc_valid_range": true,
+  "sample_sizes_positive_integers": true,
+  "source_passage_ids_exist": true,
+  "historical_source_paths_exist": true,
+  "no_source_missing_marked_production_ready": true,
+  "mi_entropy_consistency_check": {
+    "mi_reported_bits": 1.94,
+    "max_5label_entropy_bits": 2.321928,
+    "theoretical_retention": 0.83551,
+    "reported_retention": 0.968,
+    "consistent": false,
+    "explanation": "Reported 96.8% used empirical label entropy denominator (2.004 bits) or 2.0-bit 4-valued baseline, not log2(5)=2.3219 bits."
+  },
+  "sample_size_semantics": {
+    "reported": "N=1,200 expert raters",
+    "verified": "N=1,200 expert-annotated claim items (annotated by 5 experts = 6,000 ratings)",
+    "corrected": true
+  }
+}
