@@ -1,0 +1,1 @@
+"""Ternary representation placeholder."""
