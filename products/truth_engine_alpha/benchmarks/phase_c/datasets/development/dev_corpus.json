@@ -1,0 +1,866 @@
+[
+  {
+    "case_id": "CASE_PHASE_C_001",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_1 demonstrates property_1 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_1 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_1"
+    ],
+    "retrieved_text": "Study on phenomenon_1 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_002",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_2 demonstrates property_2 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_2 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_2"
+    ],
+    "retrieved_text": "Study on phenomenon_2 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_003",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_3 demonstrates property_3 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_3 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_3"
+    ],
+    "retrieved_text": "Study on phenomenon_3 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_004",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_4 demonstrates property_4 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_4 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_4"
+    ],
+    "retrieved_text": "Study on phenomenon_4 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_005",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_5 demonstrates property_5 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_5 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_5"
+    ],
+    "retrieved_text": "Study on phenomenon_5 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_006",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_6 demonstrates property_6 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_6 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_6"
+    ],
+    "retrieved_text": "Study on phenomenon_6 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_007",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_7 demonstrates property_7 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_7 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_7"
+    ],
+    "retrieved_text": "Study on phenomenon_7 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_008",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_8 demonstrates property_8 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_8 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_8"
+    ],
+    "retrieved_text": "Study on phenomenon_8 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_009",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_9 demonstrates property_9 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_9 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_9"
+    ],
+    "retrieved_text": "Study on phenomenon_9 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_010",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_10 demonstrates property_10 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_10 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_10"
+    ],
+    "retrieved_text": "Study on phenomenon_10 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_011",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_11 demonstrates property_11 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_11 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_11"
+    ],
+    "retrieved_text": "Study on phenomenon_11 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_012",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_12 demonstrates property_12 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_12 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_12"
+    ],
+    "retrieved_text": "Study on phenomenon_12 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": true,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_013",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_13 demonstrates property_13 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_13 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_13"
+    ],
+    "retrieved_text": "Study on phenomenon_13 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_014",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_14 demonstrates property_14 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_14 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_14"
+    ],
+    "retrieved_text": "Study on phenomenon_14 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_015",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_15 demonstrates property_15 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_15 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_15"
+    ],
+    "retrieved_text": "Study on phenomenon_15 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_016",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_16 demonstrates property_16 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_16 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_16"
+    ],
+    "retrieved_text": "Study on phenomenon_16 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_017",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_17 demonstrates property_17 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_17 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_17"
+    ],
+    "retrieved_text": "Study on phenomenon_17 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_018",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_18 demonstrates property_18 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_18 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_18"
+    ],
+    "retrieved_text": "Study on phenomenon_18 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_019",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_19 demonstrates property_19 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_19 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_19"
+    ],
+    "retrieved_text": "Study on phenomenon_19 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_020",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_20 demonstrates property_20 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_20 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_20"
+    ],
+    "retrieved_text": "Study on phenomenon_20 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_021",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_21 demonstrates property_21 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_21 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_21"
+    ],
+    "retrieved_text": "Study on phenomenon_21 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_022",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_22 demonstrates property_22 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_22 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_22"
+    ],
+    "retrieved_text": "Study on phenomenon_22 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_023",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_23 demonstrates property_23 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_23 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_23"
+    ],
+    "retrieved_text": "Study on phenomenon_23 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_024",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_24 demonstrates property_24 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_24 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_24"
+    ],
+    "retrieved_text": "Study on phenomenon_24 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_025",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_25 demonstrates property_25 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_25 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_25"
+    ],
+    "retrieved_text": "Study on phenomenon_25 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_026",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_26 demonstrates property_26 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_26 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_26"
+    ],
+    "retrieved_text": "Study on phenomenon_26 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_027",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_27 demonstrates property_27 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_27 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_27"
+    ],
+    "retrieved_text": "Study on phenomenon_27 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_028",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_28 demonstrates property_28 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_28 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_28"
+    ],
+    "retrieved_text": "Study on phenomenon_28 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_029",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_29 demonstrates property_29 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_29 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_29"
+    ],
+    "retrieved_text": "Study on phenomenon_29 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_030",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_30 demonstrates property_30 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_30 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_30"
+    ],
+    "retrieved_text": "Study on phenomenon_30 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_031",
+    "domain": "Physics",
+    "ai_answer": "In physics, phenomenon_31 demonstrates property_31 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_31 in physics.",
+    "citations": [
+      "https://doi.org/10.1000/src_31"
+    ],
+    "retrieved_text": "Study on phenomenon_31 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_032",
+    "domain": "Medicine",
+    "ai_answer": "In medicine, phenomenon_32 demonstrates property_32 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_32 in medicine.",
+    "citations": [
+      "https://doi.org/10.1000/src_32"
+    ],
+    "retrieved_text": "Study on phenomenon_32 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_status": "MISCHARACTERIZED",
+      "contradiction_type": "PARAMETRIC",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "HIGH"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_033",
+    "domain": "Mathematics",
+    "ai_answer": "In mathematics, phenomenon_33 demonstrates property_33 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_33 in mathematics.",
+    "citations": [
+      "https://doi.org/10.1000/src_33"
+    ],
+    "retrieved_text": "Study on phenomenon_33 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_034",
+    "domain": "Software",
+    "ai_answer": "In software, phenomenon_34 demonstrates property_34 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_34 in software.",
+    "citations": [
+      "https://doi.org/10.1000/src_34"
+    ],
+    "retrieved_text": "Study on phenomenon_34 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_035",
+    "domain": "History",
+    "ai_answer": "In history, phenomenon_35 demonstrates property_35 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_35 in history.",
+    "citations": [
+      "https://doi.org/10.1000/src_35"
+    ],
+    "retrieved_text": "Study on phenomenon_35 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "EPISTEMIC",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "timeframe_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Requires secondary peer review audit",
+      "recommended_action": "VERIFY_SOURCE",
+      "severity": "MEDIUM"
+    }
+  },
+  {
+    "case_id": "CASE_PHASE_C_036",
+    "domain": "Philosophy",
+    "ai_answer": "In philosophy, phenomenon_36 demonstrates property_36 as verified by Smith et al. (2024).",
+    "prompt": "Explain the empirical support for phenomenon_36 in philosophy.",
+    "citations": [
+      "https://doi.org/10.1000/src_36"
+    ],
+    "retrieved_text": "Study on phenomenon_36 shows empirical evidence under controlled conditions.",
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_status": "ACCESSIBLE",
+      "contradiction_type": "NONE",
+      "scope_mismatch": true,
+      "population_mismatch": true,
+      "timeframe_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None",
+      "recommended_action": "ACCEPT",
+      "severity": "LOW"
+    }
+  }
+]

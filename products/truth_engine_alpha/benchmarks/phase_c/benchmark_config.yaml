@@ -1,0 +1,11 @@
+# Phase C Benchmark Configuration
+dataset_name: TI_Sigma_Hallucination_Bench_v1
+version: 1.0.0
+total_cases: 60
+splits:
+  development: 36
+  validation: 12
+  held_out: 12
+random_seed: 42
+bootstrap_samples: 1000
+confidence_level: 0.95
