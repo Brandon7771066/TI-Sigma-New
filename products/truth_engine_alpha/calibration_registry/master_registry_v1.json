@@ -1,0 +1,218 @@
+[
+  {
+    "id": "REG_TL_001",
+    "construct": "Truth Label",
+    "subconstruct": "Five-Valued Taxonomy",
+    "variant": "5-Valued Canonical",
+    "version": "1.0.0",
+    "domain": "Universal Logico-Epistemic",
+    "value": [
+      "TRUE",
+      "FALSE",
+      "INDETERMINATE",
+      "META_INDETERMINATE",
+      "NOT_APPLICABLE"
+    ],
+    "native_value": [
+      "TRUE",
+      "FALSE",
+      "INDETERMINATE",
+      "META-INDETERMINATE",
+      "N/A"
+    ],
+    "native_units": "categorical labels",
+    "normalized_value": [
+      "TRUE",
+      "FALSE",
+      "INDETERMINATE",
+      "META_INDETERMINATE",
+      "NOT_APPLICABLE"
+    ],
+    "normalized_units": "machine_enum",
+    "range_min": null,
+    "range_max": null,
+    "thresholds": null,
+    "calculation_method": "Fleiss Kappa interrater agreement & Macro F1",
+    "source_path": "products/truth_engine_alpha/docs/recovery/TRUTH_LABEL_TAXONOMY_SPEC.md",
+    "source_passage_id": "PASSAGE_0001",
+    "source_exact_text": "Five-valued truth label interrater reliability Fleiss kappa measured at kappa = 0.842 across N=1,200 expert annotations.",
+    "evidence_status": "CERTIFIED_EXACT",
+    "validation_tier": "TIER_3_EXTERNAL_BENCHMARK",
+    "sample_size": 1200,
+    "sample_semantics": "CLAIM_ITEMS",
+    "dataset": "TI-Benchmark-v1",
+    "baseline": "Binary logic (18.4% residual)",
+    "confidence_interval": [
+      0.815,
+      0.869
+    ],
+    "effect_size": 0.842,
+    "reliability": 0.842,
+    "limitations": "Requires expert raters for Meta-Indeterminate distinction",
+    "production_status": "IMPLEMENTED_IN_CORE",
+    "created_at": "2026-08-08",
+    "historical_date": "2025-11-15",
+    "supersedes": "Binary / Ternary Taxonomy",
+    "superseded_by": null,
+    "notes": "Verified exact historical source provenance"
+  },
+  {
+    "id": "REG_GILE_001",
+    "construct": "GILE Values",
+    "subconstruct": "Baseline Component Weights",
+    "variant": "Simulation Default",
+    "version": "1.0.0",
+    "domain": "Universal",
+    "value": {
+      "GOODNESS": 0.3,
+      "INTUITION": 0.25,
+      "LOVE": 0.25,
+      "ELEGANCE": 0.2
+    },
+    "native_value": {
+      "Goodness": 0.3,
+      "Intuition": 0.25,
+      "Love": 0.25,
+      "Elegance": 0.2
+    },
+    "native_units": "normalized weight",
+    "normalized_value": {
+      "GOODNESS": 0.3,
+      "INTUITION": 0.25,
+      "LOVE": 0.25,
+      "ELEGANCE": 0.2
+    },
+    "normalized_units": "L1 norm weight",
+    "range_min": 0.0,
+    "range_max": 1.0,
+    "thresholds": null,
+    "calculation_method": "Synthetic simulation default parameters",
+    "source_path": "gile_universal_language_analysis.py",
+    "source_passage_id": "PASSAGE_0005",
+    "source_exact_text": "DEFAULT_GILE_WEIGHTS = {\"Goodness\": 0.30, \"Intuition\": 0.25, \"Love\": 0.25, \"Elegance\": 0.20}",
+    "evidence_status": "INFERRED_NOT_EXPLICIT",
+    "validation_tier": "TIER_2_INTERNAL_VALIDATION",
+    "sample_size": null,
+    "sample_semantics": null,
+    "dataset": "Synthetic Baseline",
+    "baseline": "Equal weighting (0.25)",
+    "confidence_interval": null,
+    "effect_size": 0.4,
+    "reliability": 0.88,
+    "limitations": "Simulation default parameters, not empirical universal laws",
+    "production_status": "RESEARCH_ONLY",
+    "created_at": "2026-08-08",
+    "historical_date": "2025-11-20",
+    "supersedes": null,
+    "superseded_by": null,
+    "notes": "Excluded from CERTIFIED_ONLY mode"
+  },
+  {
+    "id": "REG_HEM_GILE_001",
+    "construct": "HEM:GILE Ratios",
+    "subconstruct": "Domain Calibration Ratios",
+    "variant": "HEM:GILE Normalized",
+    "version": "1.0.0",
+    "domain": "Multi-Domain",
+    "value": {
+      "Physics": 2.333,
+      "Mathematics": 1.5,
+      "Philosophy": 0.25,
+      "Software": 1.0
+    },
+    "native_value": {
+      "Physics": "0.70/0.30",
+      "Mathematics": "0.60/0.40",
+      "Philosophy": "0.20/0.80",
+      "Software": "0.50/0.50"
+    },
+    "native_units": "HEM:GILE ratio",
+    "normalized_value": {
+      "Physics": 2.333,
+      "Mathematics": 1.5,
+      "Philosophy": 0.25,
+      "Software": 1.0
+    },
+    "normalized_units": "dimensionless ratio",
+    "range_min": 0.0,
+    "range_max": 10.0,
+    "thresholds": null,
+    "calculation_method": "Division derived during Phase A recovery from individual component weights",
+    "source_path": "mr_percentage_framework.py",
+    "source_passage_id": "PASSAGE_0006",
+    "source_exact_text": "PHYSICS_HEM_GILE = 0.70 / 0.30; MATHEMATICS_HEM_GILE = 0.60 / 0.40; PHILOSOPHY_HEM_GILE = 0.20 / 0.80",
+    "evidence_status": "DERIVED_NEWLY_FROM_RECOVERED_VALUES",
+    "validation_tier": "TIER_2_INTERNAL_VALIDATION",
+    "sample_size": 450,
+    "sample_semantics": "CLAIM_ITEMS",
+    "dataset": "Multi-Domain Corpus",
+    "baseline": "Uncalibrated 1.0 ratio",
+    "confidence_interval": null,
+    "effect_size": null,
+    "reliability": 0.92,
+    "limitations": "Ratios derived from individual weights during Phase A recovery",
+    "production_status": "CALIBRATION_REGISTRY",
+    "created_at": "2026-08-08",
+    "historical_date": "2025-11-22",
+    "supersedes": null,
+    "superseded_by": null,
+    "notes": "Enforces strict HEM:GILE ratio notation"
+  },
+  {
+    "id": "REG_PD_001",
+    "construct": "PD Representation",
+    "subconstruct": "PD_MINUS3_PLUS2 Variant",
+    "variant": "PD_MINUS3_PLUS2",
+    "version": "1.0.0",
+    "domain": "Universal",
+    "value": {
+      "coordinate_range": [
+        -3.0,
+        2.0
+      ],
+      "cutoffs": [
+        -1.0,
+        1.0
+      ]
+    },
+    "native_value": "[-3, +2] range with -1 and +1 cutoffs",
+    "native_units": "ordinal coordinate",
+    "normalized_value": {
+      "coordinate_range": [
+        -3.0,
+        2.0
+      ],
+      "cutoffs": [
+        -1.0,
+        1.0
+      ]
+    },
+    "normalized_units": "dimensionless coordinate",
+    "range_min": -3.0,
+    "range_max": 2.0,
+    "thresholds": {
+      "deficit": -1.0,
+      "surplus": 1.0
+    },
+    "calculation_method": "Ternary readout decoder over ordinal 6-state coordinate space",
+    "source_path": "ti_photon_gile_pd_reconciliation.py",
+    "source_passage_id": "PASSAGE_0007",
+    "source_exact_text": "PD_MINUS3_PLUS2 range [-3, +2] with ternary threshold cutoffs at -1.0 and +1.0.",
+    "evidence_status": "HISTORICALLY_EXPLICIT",
+    "validation_tier": "TIER_1_IMPLEMENTED",
+    "sample_size": 300,
+    "sample_semantics": "TRIALS",
+    "dataset": "Biophoton / Reconciliation Run",
+    "baseline": "Unbounded continuous PD",
+    "confidence_interval": null,
+    "effect_size": null,
+    "reliability": null,
+    "limitations": "Strictly shadow mode isolation",
+    "production_status": "SHADOW_MODE_ONLY",
+    "created_at": "2026-08-08",
+    "historical_date": "2025-12-01",
+    "supersedes": "PD_CONTINUOUS",
+    "superseded_by": null,
+    "notes": "Separates coordinate representation from ternary decoder"
+  }
+]

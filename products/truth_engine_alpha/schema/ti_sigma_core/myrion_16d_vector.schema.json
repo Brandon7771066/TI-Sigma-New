@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Myrion16DVector",
+  "type": "object",
+  "properties": {
+    "existence_byte": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "truth_byte": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "algebra_type": {
+      "type": "string",
+      "enum": [
+        "PROPOSED_SEDENION",
+        "R16_VECTOR"
+      ]
+    },
+    "baseline": {
+      "type": "string",
+      "enum": [
+        "R16_VECTOR"
+      ]
+    }
+  },
+  "required": [
+    "existence_byte",
+    "truth_byte",
+    "algebra_type",
+    "baseline"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CalibrationEntry",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "construct": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "evidence_status": {
+      "type": "string"
+    },
+    "validation_tier": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "construct",
+    "version",
+    "evidence_status"
+  ]
+}
