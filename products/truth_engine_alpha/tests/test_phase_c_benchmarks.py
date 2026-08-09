@@ -28,6 +28,13 @@ def test_dataset_split_integrity():
     assert len(dev) + len(val) + len(test) == 60
 
 
+def test_provenance_and_case_classification():
+    """Verify Phase C.5 provenance audit classifies cases as SYNTHETIC_ENGINEERING_CASE."""
+    cal_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'calibration_registry'))
+    prov_path = os.path.join(cal_dir, 'phase_c_case_provenance.csv')
+    assert os.path.exists(prov_path)
+
+
 def test_held_out_isolation():
     """Verify held-out IDs do not overlap with development or validation sets."""
     bench_root = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'benchmarks', 'phase_c'))

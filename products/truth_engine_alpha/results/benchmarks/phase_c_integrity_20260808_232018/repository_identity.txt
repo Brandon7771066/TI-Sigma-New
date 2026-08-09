@@ -1,0 +1,18 @@
+Branch: product/truth-engine-alpha-1.1
+Commit: 22bdb4271d3d0dc242e39d224a4d5c6af13c34d9
+Log:
+22bdb427 Add Phase C statistical commercial and scientific reports
+f5d6e4c4 Add MR PD Graph Crystal comparative evaluation
+bffb520e Add TI Sigma module GILE Truth Axis and HEM ablations
+0de6e9f6 Add conventional baselines and full TI Sigma benchmark condition
+7a23e763 Add Phase C hallucination benchmark and public dataset framework
+c8b070e8 Add Phase B normalization report and readiness evidence
+b3b2395d Add versioned TI Sigma Core registry resolver and schemas
+e909b8e8 Normalize Crystal Graph and Myrion Resolution versions
+687167ab Normalize HEM HEM:GILE domain profiles and PD family
+f9c08a02 Normalize TI Sigma truth labels GILE and Truth Axes
+9a000499 Audit and certify Phase A calibration provenance
+47cd3cce Recover Truth Axes quantitative calibration artifacts
+be5951eb Add TI Sigma calibration registry knowledge ledger and recovery gaps
+ad669035 Recover PD Crystal Graph and Myrion Resolution quantitative artifacts
+b1053224 Recover GILE values HEM:GILE ratios and domain weights
