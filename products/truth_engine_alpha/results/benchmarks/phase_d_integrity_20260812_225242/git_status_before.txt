@@ -1,0 +1,9 @@
+?? products/truth_engine_alpha/docs/reports/~$uth_engine_and_ti_sigma_framework_verbatim_archive.md
+?? products/truth_engine_alpha/docs/reports/~$uth_engine_one_page_investor_brief.md
+?? products/truth_engine_alpha/results/research/pd_and_quantum/runs/
+?? scripts/build_phase_a_integrity_audit.py
+?? scripts/build_phase_a_recovery.py
+?? scripts/build_phase_b_normalization.py
+?? scripts/build_phase_c5_verification_audit.py
+?? scripts/build_phase_c_benchmarks.py
+?? scripts/build_phase_d_external_validation.py
