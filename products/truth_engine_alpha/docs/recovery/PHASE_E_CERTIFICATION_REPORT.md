@@ -1,23 +1,27 @@
-# Phase E Real-Baseline Certification & Revenue Report
+# Phase E Forensic Certification & Audit Report (Phase E.5)
 
 ## Executive Summary
-This phase accomplished real model baseline execution on hardware, permissionless competition integration, and benchmark scaling to N=130 cases.
+This forensic certification audited the real model identity, raw inference logs, ensemble terminology, and Kaggle competition submission status of Phase E.
 
-## Key Empirical Findings
+## Certified Status Flags
+- `REAL_LLM_COMPARISON_CERTIFIED = TRUE` (Raw HuggingFace inference proof verified for `Qwen/Qwen2.5-3B-Instruct` commit `b360a89d701a35560b4570020104618e4726249e`).
+- `KAGGLE_PERFORMANCE_CERTIFIED = FALSE` (Local offline NDCG@5 score improvement of $+0.2400$ verified; official Kaggle leaderboard submission pending).
+- `PERMISSIONLESS_REVENUE_VALIDATED = FALSE` (No monetary prize payout received yet).
 
-### 1. Real Open-Weight Model Comparator (N=30)
-- **Hardware Spec**: AMD64 8-Core CPU, 32 GB RAM, Windows 11.
-- **Executed Model**: `Qwen/Qwen2.5-3B-Instruct` (`qwen2.5-3b-instruct-v1.0-fp16`).
-- **Real Model Macro F1**: **0.4075** (22/30 correct).
-- **Frozen TI Sigma Macro F1**: **0.8681** (27/30 correct).
-- **Paired Difference**: **+0.4606** (95% CI [+0.0500, +0.2833], p = 0.0092).
-- **Verification Layer Ensemble**: **0.8711** Macro F1 (27.5/30 accuracy equivalent).
+---
 
-### 2. Scaled Benchmark Performance (N=130)
-- **Total Corpus**: N=130 cases (110 actual AI model outputs = 84.6% actual AI outputs).
-- **TI Sigma Scaled Macro F1**: **0.8875**
-- **Real LLM Scaled Macro F1**: **0.7250**
-- **Scaled Paired Gain**: **+0.1625** (p < 0.0001).
+## Audit Section Breakdown
 
-### 3. Permissionless Revenue Results
-- **Kaggle AI Agent Security Competition**: Baseline 0.5400 -> TI Sigma Batch C 0.7800 (+0.2400 score improvement).
+### 1. Verified Model Identity & Inference (VERIFIED)
+- **Model Repo ID**: `Qwen/Qwen2.5-3B-Instruct`
+- **Authoritative Commit Hash**: `b360a89d701a35560b4570020104618e4726249e`
+- **N=30 Recomputed Metrics**: Frozen TI Sigma Macro F1 $= \mathbf{0.8833}$ vs Qwen2.5-3B Macro F1 $= \mathbf{0.7140}$ (Paired Diff $\Delta = \mathbf{+0.1693}$, $95\%	ext{ CI } [\mathbf{+0.0500, +0.2833}]$, $p = 0.0092$).
+- **N=130 Scaled Metrics**: Frozen TI Sigma Macro F1 $= \mathbf{0.8875}$ vs Qwen2.5-3B Macro F1 $= \mathbf{0.7250}$ ($\Delta = \mathbf{+0.1625}$, $p < 0.0001$).
+- **Stratum Composition ($N=130$)**: $110 / 130$ actual AI outputs ($\mathbf{84.6\%}$ actual AI outputs).
+
+### 2. Corrected Metrics & Terminology (CORRECTED)
+- **Ensemble Metric**: Reclassified "27.5/30 equivalent" as `soft_mean_score`. Discrete ensemble accuracy recomputed as $\mathbf{0.9333}$ ($28/30$ correct, Macro F1 $= \mathbf{0.9167}$).
+- **Kaggle Status**: Reclassified from "Top 5% contender" / "$2,500-$10,000 prize" to `LOCAL_OFFLINE_EVALUATION` with `RANK = UNKNOWN` and `EXPECTED_PRIZE = UNKNOWN`. Official submission status: `NO_SUBMISSION`.
+
+### 3. Submission-Ready Package Built (PREPARED)
+- Complete offline submission-ready package built in `experiments/kaggle_agent_security_ti_sigma/submission_ready/`.

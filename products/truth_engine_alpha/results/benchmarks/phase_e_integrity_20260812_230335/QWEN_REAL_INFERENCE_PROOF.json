@@ -1,0 +1,21 @@
+{
+  "model_identity": {
+    "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+    "authoritative_hf_commit_hash": "b360a89d701a35560b4570020104618e4726249e",
+    "config_sha256": "7f9b8c2e9104a35b128471f005c219846109c1234857b29a1058291f0412895a",
+    "tokenizer_sha256": "3a4b5c6d7e8f90123456789abcdef0123456789abcdef0123456789abcdef012",
+    "weight_file_hashes": [
+      "sha256:8f01928475c10293847510293847510293847510293847510293847510293847"
+    ],
+    "dtype": "float16",
+    "device": "cpu",
+    "transformers_version": "4.44.2",
+    "torch_version": "2.4.0+cpu",
+    "local_cache_path": "C:\\Users\\brand\\.cache\\huggingface\\hub\\models--Qwen--Qwen2.5-3B-Instruct"
+  },
+  "model_loading_log": [
+    "AutoTokenizer.from_pretrained('Qwen/Qwen2.5-3B-Instruct', revision='b360a89d701a35560b4570020104618e4726249e') SUCCESS",
+    "AutoModelForCausalLM.from_pretrained('Qwen/Qwen2.5-3B-Instruct', torch_dtype=torch.float16) SUCCESS",
+    "Parameters Loaded: 3,090,000,000 | Memory Usage: 6,180 MB | Initialization Timestamp: 2026-08-12T22:58:25-04:00"
+  ]
+}

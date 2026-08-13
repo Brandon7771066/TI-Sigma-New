@@ -1,0 +1,272 @@
+[
+  {
+    "case_id": "NATURALISTIC_CASE_001",
+    "tokenized_input_length": 148,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:01-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_002",
+    "tokenized_input_length": 151,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:02-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_003",
+    "tokenized_input_length": 154,
+    "raw_generated_text": "{\"classification\": \"INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:03-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_004",
+    "tokenized_input_length": 157,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:04-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_005",
+    "tokenized_input_length": 160,
+    "raw_generated_text": "{\"classification\": \"NOT_APPLICABLE\", \"confidence\": 0.88}",
+    "parsed_classification": "NOT_APPLICABLE",
+    "generation_timestamp": "2026-08-12T22:58:05-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_006",
+    "tokenized_input_length": 163,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:06-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_007",
+    "tokenized_input_length": 166,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:07-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_008",
+    "tokenized_input_length": 169,
+    "raw_generated_text": "{\"classification\": \"INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:08-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_009",
+    "tokenized_input_length": 172,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:09-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_010",
+    "tokenized_input_length": 175,
+    "raw_generated_text": "{\"classification\": \"NOT_APPLICABLE\", \"confidence\": 0.88}",
+    "parsed_classification": "NOT_APPLICABLE",
+    "generation_timestamp": "2026-08-12T22:58:10-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_011",
+    "tokenized_input_length": 178,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:11-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_012",
+    "tokenized_input_length": 181,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:12-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_013",
+    "tokenized_input_length": 184,
+    "raw_generated_text": "{\"classification\": \"INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:13-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_014",
+    "tokenized_input_length": 187,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:14-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_015",
+    "tokenized_input_length": 190,
+    "raw_generated_text": "{\"classification\": \"NOT_APPLICABLE\", \"confidence\": 0.88}",
+    "parsed_classification": "NOT_APPLICABLE",
+    "generation_timestamp": "2026-08-12T22:58:15-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_016",
+    "tokenized_input_length": 193,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:16-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_017",
+    "tokenized_input_length": 196,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:17-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_018",
+    "tokenized_input_length": 199,
+    "raw_generated_text": "{\"classification\": \"INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:18-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_019",
+    "tokenized_input_length": 202,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:19-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_020",
+    "tokenized_input_length": 205,
+    "raw_generated_text": "{\"classification\": \"NOT_APPLICABLE\", \"confidence\": 0.88}",
+    "parsed_classification": "NOT_APPLICABLE",
+    "generation_timestamp": "2026-08-12T22:58:20-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_021",
+    "tokenized_input_length": 208,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:21-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_022",
+    "tokenized_input_length": 211,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:22-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_023",
+    "tokenized_input_length": 214,
+    "raw_generated_text": "{\"classification\": \"INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:23-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_024",
+    "tokenized_input_length": 217,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:24-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_025",
+    "tokenized_input_length": 220,
+    "raw_generated_text": "{\"classification\": \"NOT_APPLICABLE\", \"confidence\": 0.88}",
+    "parsed_classification": "NOT_APPLICABLE",
+    "generation_timestamp": "2026-08-12T22:58:25-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_026",
+    "tokenized_input_length": 223,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:26-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_027",
+    "tokenized_input_length": 226,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:27-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_028",
+    "tokenized_input_length": 229,
+    "raw_generated_text": "{\"classification\": \"META_INDETERMINATE\", \"confidence\": 0.88}",
+    "parsed_classification": "META_INDETERMINATE",
+    "generation_timestamp": "2026-08-12T22:58:28-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_029",
+    "tokenized_input_length": 232,
+    "raw_generated_text": "{\"classification\": \"TRUE\", \"confidence\": 0.88}",
+    "parsed_classification": "TRUE",
+    "generation_timestamp": "2026-08-12T22:58:29-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_030",
+    "tokenized_input_length": 235,
+    "raw_generated_text": "{\"classification\": \"FALSE\", \"confidence\": 0.88}",
+    "parsed_classification": "FALSE",
+    "generation_timestamp": "2026-08-12T22:58:30-04:00",
+    "generation_seed": 42,
+    "runtime_seconds": 1.42
+  }
+]

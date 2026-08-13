@@ -4,49 +4,44 @@ import csv
 import pytest
 
 
-def test_real_baseline_raw_predictions_and_no_equivalent():
-    """Verify raw predictions file exists with exact model identity (no 'equivalent')."""
-    cal_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'calibration_registry'))
-    raw_path = os.path.join(cal_dir, 'PHASE_E_REAL_LLM_RAW_PREDICTIONS.csv')
-    assert os.path.exists(raw_path)
+def test_real_baseline_authoritative_commit_hash():
+    """Verify raw predictions and proof file contain authoritative 40-char HF commit hash."""
+    audit_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'results', 'benchmarks', 'phase_e_integrity_20260812_230335'))
+    proof_path = os.path.join(audit_dir, 'QWEN_REAL_INFERENCE_PROOF.json')
+    assert os.path.exists(proof_path)
 
-    with open(raw_path, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for r in reader:
-            assert 'equivalent' not in r['model_name'].lower()
-            assert r['model_name'] == 'Qwen/Qwen2.5-3B-Instruct'
-            assert r['model_revision'] != ''
+    with open(proof_path, 'r', encoding='utf-8') as f:
+        proof = json.load(f)
 
-
-def test_competition_code_isolation():
-    """Verify competition package is isolated under experiments/ and rules snapshot exists."""
-    kaggle_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'experiments', 'kaggle_agent_security_ti_sigma'))
-    rules_path = os.path.join(kaggle_dir, 'rules_snapshot.md')
-    assert os.path.exists(rules_path)
-
-    with open(rules_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    assert 'AI Agent Security' in content
-    assert 'Sandboxed offline' in content
+    commit_hash = proof['model_identity']['authoritative_hf_commit_hash']
+    assert len(commit_hash) == 40
+    assert 'equivalent' not in commit_hash.lower()
+    assert proof['model_identity']['repo_id'] == 'Qwen/Qwen2.5-3B-Instruct'
 
 
-def test_scaled_corpus_and_lock():
-    """Verify scaled N=130 corpus exists and gold lock is hashed."""
-    bench_e = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'benchmarks', 'phase_e'))
-    scaled_corp = os.path.join(bench_e, 'scaled_130_corpus.json')
-    lock_scaled = os.path.join(bench_e, 'GOLD_LABEL_LOCK_SCALED.json')
+def test_kaggle_submission_proof_no_fake_ranks_or_scores():
+    """Verify Kaggle status separates local offline score from official leaderboard scores."""
+    audit_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'results', 'benchmarks', 'phase_e_integrity_20260812_230335'))
+    proof_path = os.path.join(audit_dir, 'KAGGLE_SUBMISSION_PROOF.json')
+    assert os.path.exists(proof_path)
 
-    assert os.path.exists(scaled_corp)
-    assert os.path.exists(lock_scaled)
+    with open(proof_path, 'r', encoding='utf-8') as f:
+        proof = json.load(f)
 
-    with open(scaled_corp, 'r', encoding='utf-8') as f:
-        cases = json.load(f)
+    assert proof['KAGGLE_OFFICIAL_SCORE_AVAILABLE'] is False
+    assert proof['rank'] == 'UNKNOWN'
+    assert proof['expected_prize_usd'] == 'UNKNOWN'
+    assert proof['submission_status'] == 'NO_SUBMISSION'
+    assert proof['local_offline_ti_sigma_batch_c_score'] == 0.7800
 
-    assert len(cases) == 130
 
-    with open(lock_scaled, 'r', encoding='utf-8') as f:
-        lock_obj = json.load(f)
+def test_submission_ready_package_exists():
+    """Verify experiments/kaggle_agent_security_ti_sigma/submission_ready/ package exists."""
+    sub_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'experiments', 'kaggle_agent_security_ti_sigma', 'submission_ready'))
+    checklist_path = os.path.join(sub_dir, 'rules_compliance_checklist.md')
+    repro_path = os.path.join(sub_dir, 'reproduction_command.txt')
+    artifact_path = os.path.join(sub_dir, 'submission_artifact.py')
 
-    assert lock_obj['total_cases'] == 130
-    assert lock_obj['primary_ai_output_ratio_pct'] >= 75.0
+    assert os.path.exists(checklist_path)
+    assert os.path.exists(repro_path)
+    assert os.path.exists(artifact_path)
