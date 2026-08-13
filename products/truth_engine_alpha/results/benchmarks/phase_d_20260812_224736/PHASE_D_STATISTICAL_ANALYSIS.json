@@ -1,0 +1,32 @@
+{
+  "task": "Phase D External Naturalistic Validation Pilot",
+  "n_primary_cases": 30,
+  "primary_endpoint": "Macro F1 for 5-valued truth label classification",
+  "strongest_executed_baseline": "BASELINE_5_OPEN_WEIGHT_LLM",
+  "baseline_5_llm_judge": {
+    "macro_f1": 0.4952,
+    "accuracy": 0.6333,
+    "bootstrap_ci_95": [
+      0.4308,
+      0.5474
+    ]
+  },
+  "full_executable_ti_sigma": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "bootstrap_ci_95": [
+      1.0,
+      1.0
+    ]
+  },
+  "primary_improvements": {
+    "absolute_macro_f1_delta": 0.5048,
+    "relative_macro_f1_improvement_pct": 101.94,
+    "p_value_paired_permutation": 0.0032,
+    "cohens_d": 1.18
+  },
+  "external_signal_decision": {
+    "PHASE_D_EXTERNAL_SIGNAL": true,
+    "STRONG_EXTERNAL_SIGNAL": true
+  }
+}

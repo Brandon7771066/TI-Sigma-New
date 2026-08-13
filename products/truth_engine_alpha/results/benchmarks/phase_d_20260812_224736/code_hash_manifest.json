@@ -1,0 +1,7 @@
+{
+  "products/truth_engine_alpha/src/ti_sigma_core/models/truth_labels.py": "bd9b71866fcd4ea6e8701d1a0afe3e4e2e58e1de2bfbefab28e2260f46508998",
+  "products/truth_engine_alpha/src/ti_sigma_core/models/gile.py": "434dba4c02df66af72d4067adc5509005d03dcaa60b55bc35ee98151e3da75d4",
+  "products/truth_engine_alpha/src/ti_sigma_core/models/myrion.py": "d33e04d88c424e4945353668783fd75266cdf429df4a86f420955f4fcd3a576d",
+  "products/truth_engine_alpha/src/ti_sigma_core/models/pd.py": "6f0900291b97d9306ca1d28abacf8436118691b539fe785a273e0fde193c5e54",
+  "products/truth_engine_alpha/src/ti_sigma_core/registry/resolver.py": "36fe06dd2c37585fc2d272a840ec92befefab18ded4cee3a97620ccfc403ac4f"
+}

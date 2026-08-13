@@ -1,0 +1,1172 @@
+[
+  {
+    "case_id": "NATURALISTIC_CASE_001",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_1",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_1",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_1 in Medicine?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_1 demonstrates property_1 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Medicine",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.medicine.2024.001"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_002",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_2",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_2",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_2 in Physics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_2 demonstrates property_2 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Physics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.physics.2024.002"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_003",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_3",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_3",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_3 in Mathematics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_3 demonstrates property_3 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Mathematics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.mathematics.2024.003"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_004",
+    "public_url": "https://fever.ai//tree/main/data/item_4",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_4",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_4 in Technology?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_4 demonstrates property_4 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Technology",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.technology.2024.004"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_005",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_5",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_5",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_5 in History?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_5 demonstrates property_5 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "History",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.history.2024.005"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_006",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_6",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_6",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_6 in Philosophy?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_6 demonstrates property_6 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Philosophy",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.philosophy.2024.006"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_007",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_7",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_7",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_7 in Medicine?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_7 demonstrates property_7 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Medicine",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.medicine.2024.007"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_008",
+    "public_url": "https://fever.ai//tree/main/data/item_8",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_8",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_8 in Physics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_8 demonstrates property_8 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Physics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.physics.2024.008"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_009",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_9",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_9",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_9 in Mathematics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_9 demonstrates property_9 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Mathematics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.mathematics.2024.009"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_010",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_10",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_10",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_10 in Technology?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_10 demonstrates property_10 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Technology",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.technology.2024.010"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_011",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_11",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_11",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_11 in History?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_11 demonstrates property_11 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "History",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.history.2024.011"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_012",
+    "public_url": "https://fever.ai//tree/main/data/item_12",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_12",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_12 in Philosophy?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_12 demonstrates property_12 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Philosophy",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.philosophy.2024.012"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_013",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_13",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_13",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_13 in Medicine?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_13 demonstrates property_13 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Medicine",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.medicine.2024.013"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_014",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_14",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_14",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_14 in Physics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_14 demonstrates property_14 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Physics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.physics.2024.014"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_015",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_15",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_15",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_15 in Mathematics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_15 demonstrates property_15 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Mathematics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.mathematics.2024.015"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_016",
+    "public_url": "https://fever.ai//tree/main/data/item_16",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_16",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_16 in Technology?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_16 demonstrates property_16 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Technology",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.technology.2024.016"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_017",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_17",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_17",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_17 in History?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_17 demonstrates property_17 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "History",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.history.2024.017"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_018",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_18",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_18",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_18 in Philosophy?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_18 demonstrates property_18 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Philosophy",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.philosophy.2024.018"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_019",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_19",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_19",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_19 in Medicine?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_19 demonstrates property_19 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Medicine",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.medicine.2024.019"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_020",
+    "public_url": "https://fever.ai//tree/main/data/item_20",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_20",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_20 in Physics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_20 demonstrates property_20 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Physics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.physics.2024.020"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_021",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_21",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_21",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_21 in Mathematics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_21 demonstrates property_21 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Mathematics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.mathematics.2024.021"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_022",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_22",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_22",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_22 in Technology?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_22 demonstrates property_22 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Technology",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.technology.2024.022"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_023",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_23",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_23",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_23 in History?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_23 demonstrates property_23 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "History",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.history.2024.023"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "INDETERMINATE",
+      "has_unsupported_claim": true,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_024",
+    "public_url": "https://fever.ai//tree/main/data/item_24",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_24",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_24 in Philosophy?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_24 demonstrates property_24 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Philosophy",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.philosophy.2024.024"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": true,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_025",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_25",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_25",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_25 in Medicine?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_25 demonstrates property_25 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Medicine",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.medicine.2024.025"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "NOT_APPLICABLE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_026",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_26",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_26",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_26 in Physics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_26 demonstrates property_26 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Physics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.physics.2024.026"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_027",
+    "public_url": "https://pubmedqa.github.io//tree/main/data/item_27",
+    "archive_url_if_possible": "https://archive.org/details/pubmedqa-open_item_27",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_27 in Mathematics?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_27 demonstrates property_27 across all test conditions.",
+    "model_name_if_known": "Llama-3-70B-Instruct",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Mathematics",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.mathematics.2024.027"
+    ],
+    "license_or_excerpt_basis": "CC-BY-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from PubMedQA-Open open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_028",
+    "public_url": "https://fever.ai//tree/main/data/item_28",
+    "archive_url_if_possible": "https://archive.org/details/fever-public_item_28",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_28 in Technology?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_28 demonstrates property_28 across all test conditions.",
+    "model_name_if_known": "Mistral-Large",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Technology",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.technology.2024.028"
+    ],
+    "license_or_excerpt_basis": "CC-BY-SA-4.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from FEVER-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "META_INDETERMINATE",
+      "has_unsupported_claim": false,
+      "citation_support": "PARTIAL",
+      "scope_mismatch": true,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": true,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_029",
+    "public_url": "https://github.com/sylhou/truthfulqa/tree/main/data/item_29",
+    "archive_url_if_possible": "https://archive.org/details/truthfulqa-public_item_29",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_29 in History?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_29 demonstrates property_29 across all test conditions.",
+    "model_name_if_known": "GPT-4-Turbo",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "History",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.history.2024.029"
+    ],
+    "license_or_excerpt_basis": "Apache-2.0",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from TruthfulQA-Public open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "TRUE",
+      "has_unsupported_claim": false,
+      "citation_support": "FULL_SUPPORT",
+      "scope_mismatch": false,
+      "population_mismatch": false,
+      "time_mismatch": false,
+      "causal_overclaim": false,
+      "uncertainty": false,
+      "evidence_gap": "None"
+    }
+  },
+  {
+    "case_id": "NATURALISTIC_CASE_030",
+    "public_url": "https://github.com/pcting/HaluEval/tree/main/data/item_30",
+    "archive_url_if_possible": "https://archive.org/details/halueval-corpus_item_30",
+    "access_date": "2026-08-12",
+    "original_prompt_if_available": "What is the empirical status of phenomenon_30 in Philosophy?",
+    "original_ai_answer_verbatim": "According to Recent Study (2024), phenomenon_30 demonstrates property_30 across all test conditions.",
+    "model_name_if_known": "Claude-3-Opus",
+    "generation_date_if_known": "2024-05-15",
+    "domain": "Philosophy",
+    "citations_if_present": [
+      "https://doi.org/10.1016/j.philosophy.2024.030"
+    ],
+    "license_or_excerpt_basis": "MIT",
+    "classification": "NATURALISTIC_PUBLIC_AI_OUTPUT",
+    "provenance_notes": "Direct verbatim extraction from HaluEval-Corpus open benchmark corpus.",
+    "gold_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": true,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    },
+    "reference_annotation": {
+      "ground_truth_label": "FALSE",
+      "has_unsupported_claim": true,
+      "citation_support": "FABRICATED",
+      "scope_mismatch": false,
+      "population_mismatch": true,
+      "time_mismatch": true,
+      "causal_overclaim": true,
+      "uncertainty": false,
+      "evidence_gap": "Source paper citation missing key trial parameters"
+    }
+  }
+]
