@@ -1,0 +1,7 @@
+Hardware & Environment Specification:
+OS: Windows 11 (Windows Version: 10.0.26200)
+Python Version: 3.14.0
+CPU: AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD (8 cores)
+RAM: 32 GB (System RAM)
+Disk Free Space: 562.1 GB
+GPU: Open-Weight Local Inference (PyTorch CPU / HuggingFace Transformers / Ollama local runner)
