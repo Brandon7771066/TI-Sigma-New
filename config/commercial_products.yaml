@@ -1,0 +1,51 @@
+# Truth Engine Commercial Product Tiers Configuration
+
+products:
+  quick-audit:
+    id: QUICK_AUDIT
+    name: "Truth Engine Quick AI Audit"
+    description: "Rapid claim extraction, citation verification, and high-risk finding report for single AI answers or short documents."
+    price: 49.00
+    currency: "USD"
+    max_input_length: 5000 # characters
+    turnaround_target_hours: 2
+    human_review_required: true
+    report_depth: "Standard Audit (Executive Summary, Scorecard, Critical Findings, Corrected Answer)"
+    features:
+      - Claim decomposition & 5-Truth Label classification
+      - Citation hallucination check
+      - High-risk finding flags
+      - Standard HTML & Markdown audit reports
+
+  deep-audit:
+    id: DEEP_AUDIT
+    name: "Truth Engine Deep Scientific & Technical Audit"
+    description: "In-depth contradiction analysis, scaffolding resolution, evidence-gap prioritization, and detailed source traceability."
+    price: 199.00
+    currency: "USD"
+    max_input_length: 25000 # characters
+    turnaround_target_hours: 12
+    human_review_required: true
+    report_depth: "Deep Audit (Scorecard, Claim-by-Claim breakdown, Evidence hierarchy, Scaffolding analysis, Corrected Answer)"
+    features:
+      - Complete Myrion Resolution contradiction analysis
+      - Detailed evidence gap ranking
+      - Priority verification action plan
+      - Technical TI Sigma Appendix
+      - Dedicated human reviewer sign-off
+
+  batch-audit:
+    id: BATCH_AUDIT
+    name: "Truth Engine Enterprise Batch Audit"
+    description: "Multi-document or bulk AI output evaluation for enterprise model evaluation, patent triage, or literature mapping."
+    price: 499.00
+    currency: "USD"
+    max_input_length: 100000 # characters
+    turnaround_target_hours: 24
+    human_review_required: true
+    report_depth: "Enterprise Portfolio Audit (Aggregated Scorecard, Multi-document claim graph, Batch CSV/JSON export)"
+    features:
+      - Bulk claim & citation verification
+      - Cross-document contradiction graph (`claim_graph.json`, `claim_graph.graphml`)
+      - Custom domain profile adaptation
+      - Priority delivery manifest
