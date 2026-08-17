@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Algorithm H solves NP-complete problems in O(N) polynomial time."
+    }
+  ],
+  "edges": []
+}

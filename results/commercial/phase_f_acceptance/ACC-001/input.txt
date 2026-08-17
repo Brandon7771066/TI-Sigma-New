@@ -1,0 +1,1 @@
+Drug A reduces systolic blood pressure by 25mmHg based on Johnson et al. (2023), Clinical Trials 45:102.

@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Photosynthesis in plants has an energy conversion efficiency of 95% under direct sunlight."
+    }
+  ],
+  "edges": []
+}

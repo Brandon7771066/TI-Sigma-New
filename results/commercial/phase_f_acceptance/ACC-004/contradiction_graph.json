@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Vaccine C completely prevents infection in 100% of human subjects across all age groups."
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,16 @@
+{
+  "order_id": "ACC-003",
+  "created_at": "2026-08-17T09:09:44.183273+00:00",
+  "customer_email": "client_03@techfirm.io",
+  "product_type": "QUICK_AUDIT",
+  "input_path": "results\\commercial\\phase_f_acceptance\\ACC-003\\input.txt",
+  "customer_name_optional": null,
+  "payment_status": "PAID",
+  "audit_status": "DELIVERED",
+  "review_status": "APPROVED",
+  "delivery_status": "DELIVERED",
+  "amount": 49.0,
+  "currency": "USD",
+  "payment_reference": null,
+  "notes": null
+}

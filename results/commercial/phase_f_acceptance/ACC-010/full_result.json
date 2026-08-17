@@ -1,0 +1,259 @@
+{
+  "analysis_id": "input",
+  "claims": [
+    {
+      "claim_id": "input_claim_001",
+      "normalized_claim": "Algorithm H solves NP-complete problems in O(N) polynomial time.",
+      "verbatim_text": "Algorithm H solves NP-complete problems in O(N) polynomial time.",
+      "source_id": "input",
+      "source_location": null,
+      "claim_type": "document",
+      "population": null,
+      "intervention": null,
+      "comparison": null,
+      "outcome": null,
+      "timeframe": null,
+      "conditions": null,
+      "certainty_language": null,
+      "citations": [],
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "input",
+      "title": "Algorithm H solves NP-complete problems in O(N) polynomial time.",
+      "url": null,
+      "source_type": "unknown",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "contradictions": [],
+  "scaffolding_candidates": [],
+  "evidence_assessment": {
+    "source_type": "mixed",
+    "study_design": "claim-set review",
+    "sample_size": null,
+    "replication": null,
+    "directness": "moderate",
+    "risk_of_bias": "unknown",
+    "measurement_quality": "unknown",
+    "statistical_uncertainty": "unquantified",
+    "external_validity": "case dependent",
+    "recency": "depends on source",
+    "citation_support": "partial",
+    "independence_of_sources": "unknown",
+    "summary_rating": "provisional",
+    "evidence_level": "IMPLEMENTED_AND_TESTED"
+  },
+  "resolution_status": "resolved",
+  "confidence": 0.8,
+  "critical_unknowns": [
+    "input_claim_001: missing citation support"
+  ],
+  "recommended_actions": [
+    {
+      "action_id": "action_001",
+      "description": "Review source provenance and direct quotations.",
+      "action_type": "analysis",
+      "expected_uncertainty_reduction": 0.2,
+      "priority": "high",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "commercial_opportunities": [
+    "claim audit report",
+    "evidence map package",
+    "hallucination review service",
+    "prior-art triage service"
+  ],
+  "limitations": [
+    "Provisional commercial MVP",
+    "Not a substitute for expert review"
+  ],
+  "truth_engine_level": 4,
+  "truth_engine_score": {
+    "report_completeness": 1.0,
+    "evidence_coverage": 0.0,
+    "citation_support": 0.0,
+    "conflict_density": 0.0,
+    "resolution_potential": 0.9,
+    "confidence_calibration": 0.8,
+    "actionability": 0.5
+  },
+  "contradiction_graph": {
+    "nodes": [
+      {
+        "claim_id": "input_claim_001",
+        "label": "Algorithm H solves NP-complete problems in O(N) polynomial time."
+      }
+    ],
+    "edges": []
+  },
+  "information_gain": [],
+  "claim_labels": {
+    "input_claim_001": "ENGINE_INFERENCE"
+  },
+  "research_mode_fields": {
+    "seed": 0,
+    "citation_audit": [
+      {
+        "claim_id": "input_claim_001",
+        "status": "NOT_APPLICABLE",
+        "reason": "Document-level claim with no structured citation requirement.",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    ],
+    "scaffolding_analysis": [],
+    "safety_labels": [
+      "medical_claims_warning",
+      "legal_conclusions_warning",
+      "investment_conclusions_warning",
+      "patentability_warning",
+      "safety_critical_engineering_warning"
+    ],
+    "schema_version": "truth_engine_alpha.v1"
+  },
+  "citation_audit": [
+    {
+      "claim_id": "input_claim_001",
+      "status": "NOT_APPLICABLE",
+      "reason": "Document-level claim with no structured citation requirement.",
+      "evidence_level": "IMPLEMENTED_AND_TESTED"
+    }
+  ],
+  "scaffolding_analysis": [],
+  "safety_labels": [
+    "medical_claims_warning",
+    "legal_conclusions_warning",
+    "investment_conclusions_warning",
+    "patentability_warning",
+    "safety_critical_engineering_warning"
+  ],
+  "schema_version": "truth_engine_alpha.v1",
+  "static_artifacts_disclosed": true,
+  "claim_graph": {
+    "nodes": [
+      {
+        "node_id": "input_claim_001",
+        "node_type": "Claim",
+        "label": "Algorithm H solves NP-complete problems in O(N) polynomial time.",
+        "attributes": {
+          "claim_type": "document",
+          "source_id": "input"
+        }
+      },
+      {
+        "node_id": "citation_input_claim_001",
+        "node_type": "Citation",
+        "label": "input_claim_001",
+        "attributes": {
+          "claim_id": "input_claim_001",
+          "status": "NOT_APPLICABLE"
+        }
+      },
+      {
+        "node_id": "input",
+        "node_type": "Source",
+        "label": "Algorithm H solves NP-complete problems in O(N) polynomial time.",
+        "attributes": {
+          "source_type": "unknown",
+          "evidence_level": "IMPLEMENTED_AND_TESTED"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "edge_cites_input_claim_001",
+        "source": "input_claim_001",
+        "target": "input",
+        "edge_type": "CITES",
+        "evidence": "claim cites its source",
+        "confidence": 0.7,
+        "severity": "medium",
+        "attributes": {}
+      },
+      {
+        "edge_id": "edge_audit_input_claim_001",
+        "source": "citation_input_claim_001",
+        "target": "input_claim_001",
+        "edge_type": "CITES",
+        "evidence": "Document-level claim with no structured citation requirement.",
+        "confidence": 0.6,
+        "severity": "medium",
+        "attributes": {}
+      }
+    ],
+    "metadata": {
+      "claim_count": 1,
+      "source_count": 1,
+      "contradiction_count": 0,
+      "citation_statuses": [
+        "NOT_APPLICABLE"
+      ]
+    }
+  },
+  "graph_errors": [
+    {
+      "detector": "citation_claim_disconnect",
+      "affected_nodes": [
+        "input_claim_001"
+      ],
+      "affected_edges": [
+        "edge_cites_input_claim_001"
+      ],
+      "evidence": "claim cites sources but lacks support linkage",
+      "severity": "medium",
+      "confidence": 0.78,
+      "explanation": "citation exists without support linkage",
+      "recommended_review": "review whether the citation actually supports the claim"
+    },
+    {
+      "detector": "weak_central_claim",
+      "affected_nodes": [
+        "input_claim_001"
+      ],
+      "affected_edges": [],
+      "evidence": "no direct support edges",
+      "severity": "medium",
+      "confidence": 0.7,
+      "explanation": "central claim has weak support",
+      "recommended_review": "add supporting evidence"
+    }
+  ],
+  "crystal_matrix": [
+    {
+      "claim_id": "input_claim_001",
+      "claim structure": 1.0,
+      "source structure": 1.0,
+      "evidence quality": 0.25,
+      "contradictions": 0.0,
+      "scaffolding": 0.5,
+      "uncertainty": 1.0,
+      "criticality": 0.25,
+      "resolution actions": 0.55,
+      "isolated_claim_score": 1.0,
+      "evidence_asymmetry": 0.25,
+      "conflict_density": 0.0,
+      "assumption_sensitivity": 0.8,
+      "resolution_potential": 0.55,
+      "source_dependency_concentration": 1.0,
+      "critical_unknown_centrality": 0.25,
+      "structural_instability": 0.35000000000000003
+    }
+  ],
+  "crystal_diagnostics": {
+    "isolated_claim_score": 1.0,
+    "evidence_asymmetry": 0.25,
+    "conflict_density": 0.0,
+    "assumption_sensitivity": 0.8,
+    "resolution_potential": 0.55,
+    "source_dependency_concentration": 1.0,
+    "critical_unknown_centrality": 0.25,
+    "structural_instability": 0.35,
+    "claim_count": 1,
+    "graph_node_count": 3,
+    "graph_edge_count": 2
+  },
+  "crystal_explanation": "Crystal v0.1 is a multilayer error-analysis structure for claim graph diagnostics, not a physical or octonionic object."
+}

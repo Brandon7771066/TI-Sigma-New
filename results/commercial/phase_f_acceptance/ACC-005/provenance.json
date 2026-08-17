@@ -1,0 +1,10 @@
+{
+  "order_id": "ACC-005",
+  "customer_email": "client_05@fin.com",
+  "product_type": "BATCH_AUDIT",
+  "input_path": "results\\commercial\\phase_f_acceptance\\ACC-005\\input.txt",
+  "engine_version": "truth_engine_alpha.v1.1",
+  "generated_at": "2026-08-17T09:09:44.293498+00:00",
+  "source_verification_status": "CHECKED_OFFLINE",
+  "human_review_gate_required": true
+}

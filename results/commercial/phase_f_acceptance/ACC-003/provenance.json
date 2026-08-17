@@ -1,0 +1,10 @@
+{
+  "order_id": "ACC-003",
+  "customer_email": "client_03@techfirm.io",
+  "product_type": "QUICK_AUDIT",
+  "input_path": "results\\commercial\\phase_f_acceptance\\ACC-003\\input.txt",
+  "engine_version": "truth_engine_alpha.v1.1",
+  "generated_at": "2026-08-17T09:09:44.218152+00:00",
+  "source_verification_status": "CHECKED_OFFLINE",
+  "human_review_gate_required": true
+}

@@ -1,0 +1,14 @@
+{
+  "generated_by_engine": true,
+  "generated_by_cli": true,
+  "manually_authored_fields": [],
+  "source_material": "results\\commercial\\phase_f_acceptance\\ACC-010\\input.txt",
+  "source_verification_status": "NOT_VERIFIED_OFFLINE",
+  "generation_timestamp": "2026-08-17T09:09:44.472654+00:00",
+  "git_commit": "UNKNOWN_LOCAL_STATE",
+  "schema_version": "truth_engine_alpha.v1",
+  "limitations": [
+    "This bundle is generated from the current CLI implementation without external source retrieval.",
+    "Legacy static demo packs remain in the repository but are not part of this verified bundle."
+  ]
+}

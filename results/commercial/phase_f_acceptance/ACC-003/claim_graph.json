@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "node_id": "input_claim_001",
+      "node_type": "Claim",
+      "label": "Model B achieves 99.9% accuracy on ImageNet without any pre-training or GPU usage.",
+      "attributes": {
+        "claim_type": "document",
+        "source_id": "input"
+      }
+    },
+    {
+      "node_id": "citation_input_claim_001",
+      "node_type": "Citation",
+      "label": "input_claim_001",
+      "attributes": {
+        "claim_id": "input_claim_001",
+        "status": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "node_id": "input",
+      "node_type": "Source",
+      "label": "Model B achieves 99.9% accuracy on ImageNet without any pre-training or GPU usag",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_cites_input_claim_001",
+      "source": "input_claim_001",
+      "target": "input",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_input_claim_001",
+      "source": "citation_input_claim_001",
+      "target": "input_claim_001",
+      "edge_type": "CITES",
+      "evidence": "Document-level claim with no structured citation requirement.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    }
+  ],
+  "metadata": {
+    "claim_count": 1,
+    "source_count": 1,
+    "contradiction_count": 0,
+    "citation_statuses": [
+      "NOT_APPLICABLE"
+    ]
+  }
+}

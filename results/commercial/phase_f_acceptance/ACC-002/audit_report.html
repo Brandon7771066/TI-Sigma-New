@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Engine Audit Report — ACC-002</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 1100px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        header { border-bottom: 3px solid #0d6efd; padding-bottom: 15px; margin-bottom: 25px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h1 { margin: 0 0 10px 0; color: #0d6efd; font-size: 28px; }
+        .scorecard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .card { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #0d6efd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card.danger { border-left-color: #dc3545; }
+        .card.warning { border-left-color: #ffc107; }
+        .card.success { border-left-color: #198754; }
+        .card .number { font-size: 32px; font-weight: bold; margin-top: 5px; }
+        section { background: white; padding: 25px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        h2 { color: #212529; border-bottom: 1px solid #dee2e6; padding-bottom: 8px; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; font-size: 14px; }
+        th { background-color: #f1f3f5; font-weight: 600; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
+        .badge-danger { background-color: #dc3545; }
+        .badge-warning { background-color: #fd7e14; color: white; }
+        .badge-success { background-color: #198754; }
+        footer { text-align: center; color: #6c757d; font-size: 13px; margin-top: 40px; padding: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Truth Engine AI Audit Report</h1>
+        <div><strong>Order ID:</strong> ACC-002 | <strong>Product Tier:</strong> QUICK_AUDIT | <strong>Customer:</strong> client_02@legal.com</div>
+    </header>
+
+    <!-- 30-SECOND AUDIT SCORECARD -->
+    <div class="scorecard">
+        <div class="card">
+            <div>Claims Analyzed</div>
+            <div class="number">1</div>
+        </div>
+        <div class="card success">
+            <div>Claims Supported</div>
+            <div class="number">0</div>
+        </div>
+        <div class="card danger">
+            <div>High-Risk Findings</div>
+            <div class="number">0</div>
+        </div>
+        <div class="card warning">
+            <div>Unsupported / Gaps</div>
+            <div class="number">0</div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Executive Summary</h2>
+        <p>This commercial audit evaluates the evidence support, citation accuracy, and logical consistency of submitted material. Results enable decision-makers to rapidly identify hallucinated citations, overclaimed conclusions, and evidence deficits.</p>
+    </section>
+
+    <section>
+        <h2>Critical Findings & Risk Analysis</h2>
+        <p>Total high-risk issues flagged: <strong>0</strong>. Total citation issues: <strong>0</strong>. Total contradictions: <strong>0</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Claim-by-Claim Audit</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Claim Text</th>
+                    <th>Truth Label</th>
+                    <th>Support Status</th>
+                    <th>Risk Level</th>
+                    <th>Source</th>
+                    <th>Confidence</th>
+                    <th>Recommended Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>input_claim_001</code></td><td>Patent US9988776 covers all quantum key distribution systems operating above 100MHz.</td><td><strong>INDETERMINATE</strong></td><td>UNRESOLVED</td><td><span class="badge badge-warning">MEDIUM</span></td><td><code>input</code></td><td>0.8</td><td>Verify primary source text.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Corrected Answer & Recommendations</h2>
+        <p>Unverified or unsupported statements should be removed or downgraded to probabilistic language before commercial or clinical reliance.</p>
+    </section>
+
+    <section>
+        <h2>Methodology & Limitations</h2>
+        <p>Automated claim graph decomposition and citation status tracking performed by Truth Engine Alpha v1.1. Verified through human review gate.</p>
+    </section>
+
+    <section>
+        <h2>Technical TI Sigma Appendix</h2>
+        <p>Detailed graph diagnostics and Myrion Resolution metrics are stored in <code>full_result.json</code> and <code>claim_graph.json</code>.</p>
+    </section>
+
+    <footer>
+        Truth Engine AI Audit &copy; 2026 TI Sigma Commercial Release. Order ID: ACC-002
+    </footer>
+</body>
+</html>

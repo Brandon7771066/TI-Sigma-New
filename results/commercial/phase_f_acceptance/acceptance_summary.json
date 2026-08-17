@@ -1,0 +1,15 @@
+{
+  "orders_created": 10,
+  "audits_completed": 10,
+  "reports_rendered": 10,
+  "order_structure_valid_rate": "10/10",
+  "audit_completion_rate": "10/10",
+  "report_render_rate": "10/10",
+  "citation_traceability_rate": "100.0%",
+  "invented_citations_count": 0,
+  "human_review_gate_enforced": "10/10",
+  "total_runtime_seconds": 0.369,
+  "avg_runtime_per_order_seconds": 0.037,
+  "timestamp": "2026-08-17T09:09:44.482237+00:00",
+  "all_success_criteria_passed": true
+}

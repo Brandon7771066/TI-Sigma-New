@@ -1,0 +1,24 @@
+{
+  "order_id": "ACC-004",
+  "created_at": "2026-08-17T09:09:44.225427+00:00",
+  "delivered_at": "2026-08-17T09:09:44.261255+00:00",
+  "customer_email": "client_04@pharma.com",
+  "product_type": "DEEP_AUDIT",
+  "payment_status": "PAID",
+  "audit_status": "DELIVERED",
+  "review_status": "APPROVED",
+  "reviewer": "Acceptance Auditor",
+  "delivery_status": "DELIVERED",
+  "artifacts": [
+    "order.json",
+    "executive_summary.md",
+    "audit_report.html",
+    "claims.csv",
+    "evidence.csv",
+    "corrected_answer.md",
+    "full_result.json",
+    "provenance.json",
+    "review.json",
+    "delivery_manifest.json"
+  ]
+}

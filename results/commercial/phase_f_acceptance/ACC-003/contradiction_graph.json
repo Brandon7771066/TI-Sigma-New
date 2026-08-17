@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Model B achieves 99.9% accuracy on ImageNet without any pre-training or GPU usage."
+    }
+  ],
+  "edges": []
+}

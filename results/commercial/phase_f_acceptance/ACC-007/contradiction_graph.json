@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Fusion reactor E produced net positive energy output of 500MW continuously for 30 days."
+    }
+  ],
+  "edges": []
+}

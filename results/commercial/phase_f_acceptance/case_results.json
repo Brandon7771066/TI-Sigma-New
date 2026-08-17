@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "ACC-001",
+    "email": "client_01@medical.org",
+    "product": "deep-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.033
+  },
+  {
+    "case_id": "ACC-002",
+    "email": "client_02@legal.com",
+    "product": "quick-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.034
+  },
+  {
+    "case_id": "ACC-003",
+    "email": "client_03@techfirm.io",
+    "product": "quick-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.042
+  },
+  {
+    "case_id": "ACC-004",
+    "email": "client_04@pharma.com",
+    "product": "deep-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.037
+  },
+  {
+    "case_id": "ACC-005",
+    "email": "client_05@fin.com",
+    "product": "batch-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.035
+  },
+  {
+    "case_id": "ACC-006",
+    "email": "client_06@uni.edu",
+    "product": "quick-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.034
+  },
+  {
+    "case_id": "ACC-007",
+    "email": "client_07@energy.gov",
+    "product": "deep-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.035
+  },
+  {
+    "case_id": "ACC-008",
+    "email": "client_08@startup.io",
+    "product": "quick-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.037
+  },
+  {
+    "case_id": "ACC-009",
+    "email": "client_09@health.org",
+    "product": "deep-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.037
+  },
+  {
+    "case_id": "ACC-010",
+    "email": "client_10@research.org",
+    "product": "batch-audit",
+    "audit_status": "DELIVERED",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "runtime_seconds": 0.031
+  }
+]

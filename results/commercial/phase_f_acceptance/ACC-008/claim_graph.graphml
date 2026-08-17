@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<graph id="TruthEngineClaimGraph" edgedefault="directed">
+<node id="input_claim_001"><data key="type">Claim</data><data key="label">LLM F has zero hallucination rate on all medical licensing examinations.</data></node>
+<node id="citation_input_claim_001"><data key="type">Citation</data><data key="label">input_claim_001</data></node>
+<node id="input"><data key="type">Source</data><data key="label">LLM F has zero hallucination rate on all medical licensing examinations.</data></node>
+<edge id="edge_cites_input_claim_001" source="input_claim_001" target="input"><data key="type">CITES</data><data key="confidence">0.7</data></edge>
+<edge id="edge_audit_input_claim_001" source="citation_input_claim_001" target="input_claim_001"><data key="type">CITES</data><data key="confidence">0.6</data></edge>
+</graph>
+</graphml>

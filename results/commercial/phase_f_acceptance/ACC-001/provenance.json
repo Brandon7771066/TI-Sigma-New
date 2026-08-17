@@ -1,0 +1,10 @@
+{
+  "order_id": "ACC-001",
+  "customer_email": "client_01@medical.org",
+  "product_type": "DEEP_AUDIT",
+  "input_path": "results\\commercial\\phase_f_acceptance\\ACC-001\\input.txt",
+  "engine_version": "truth_engine_alpha.v1.1",
+  "generated_at": "2026-08-17T09:09:44.141912+00:00",
+  "source_verification_status": "CHECKED_OFFLINE",
+  "human_review_gate_required": true
+}

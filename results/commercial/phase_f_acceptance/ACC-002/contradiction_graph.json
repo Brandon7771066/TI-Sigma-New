@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Patent US9988776 covers all quantum key distribution systems operating above 100MHz."
+    }
+  ],
+  "edges": []
+}

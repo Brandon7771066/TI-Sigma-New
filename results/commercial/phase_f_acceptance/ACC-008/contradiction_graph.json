@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "LLM F has zero hallucination rate on all medical licensing examinations."
+    }
+  ],
+  "edges": []
+}

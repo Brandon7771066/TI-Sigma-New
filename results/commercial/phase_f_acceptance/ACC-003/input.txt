@@ -1,0 +1,1 @@
+Model B achieves 99.9% accuracy on ImageNet without any pre-training or GPU usage.

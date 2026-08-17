@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "claim_id": "input_claim_001",
+      "label": "Strategy D guarantees 50% annual risk-free yields using arbitrage algorithms."
+    }
+  ],
+  "edges": []
+}
