@@ -1,0 +1,874 @@
+﻿[
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\google_accounts.json",
+        "type":  "file",
+        "size":  57,
+        "created":  "2026-08-06T09:32:13.0078776-04:00",
+        "modified":  "2026-08-13T21:14:07.6460209-04:00",
+        "likely_role":  "credentials"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\installation_id",
+        "type":  "file",
+        "size":  36,
+        "created":  "2026-08-06T09:32:01.4574099-04:00",
+        "modified":  "2026-08-06T09:32:01.4574099-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\oauth_creds.json",
+        "type":  "file",
+        "size":  1812,
+        "created":  "2026-08-13T21:14:06.5995770-04:00",
+        "modified":  "2026-08-13T21:14:06.5995770-04:00",
+        "likely_role":  "credentials"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\projects.json",
+        "type":  "file",
+        "size":  170,
+        "created":  "2026-08-06T09:31:57.1452702-04:00",
+        "modified":  "2026-08-06T09:31:57.1452702-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\settings.json",
+        "type":  "file",
+        "size":  82,
+        "created":  "2026-08-06T09:32:13.0098646-04:00",
+        "modified":  "2026-08-13T21:13:51.5652901-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\state.json",
+        "type":  "file",
+        "size":  20,
+        "created":  "2026-08-06T09:32:01.7490447-04:00",
+        "modified":  "2026-08-13T21:10:45.3334465-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\trustedFolders.json",
+        "type":  "file",
+        "size":  126,
+        "created":  "2026-08-13T21:10:37.8763307-04:00",
+        "modified":  "2026-08-13T21:10:37.8763307-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\antigravity_state.pbtxt",
+        "type":  "file",
+        "size":  702,
+        "created":  "2026-08-13T21:21:43.8257318-04:00",
+        "modified":  "2026-08-13T21:21:43.8263099-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\installation_id",
+        "type":  "file",
+        "size":  36,
+        "created":  "2026-08-13T21:20:53.7166121-04:00",
+        "modified":  "2026-08-13T21:20:53.7166121-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\bin\\webm_encoder.exe",
+        "type":  "file",
+        "size":  13615104,
+        "created":  "2026-08-13T21:21:44.2468409-04:00",
+        "modified":  "2026-08-13T21:21:44.2998745-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\.checksum",
+        "type":  "file",
+        "size":  64,
+        "created":  "2026-08-13T21:21:02.7038202-04:00",
+        "modified":  "2026-08-13T21:21:02.7038202-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\keep.txt",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-13T21:21:02.6803454-04:00",
+        "modified":  "2026-08-13T21:21:02.7013975-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\SKILL.md",
+        "type":  "file",
+        "size":  5321,
+        "created":  "2026-08-13T21:21:02.6824179-04:00",
+        "modified":  "2026-08-13T21:21:02.6829750-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\hooks.md",
+        "type":  "file",
+        "size":  10421,
+        "created":  "2026-08-13T21:21:02.6848680-04:00",
+        "modified":  "2026-08-13T21:21:02.6855563-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\json_configs.md",
+        "type":  "file",
+        "size":  3983,
+        "created":  "2026-08-13T21:21:02.6867081-04:00",
+        "modified":  "2026-08-13T21:21:02.6872879-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\mcp_servers.md",
+        "type":  "file",
+        "size":  2966,
+        "created":  "2026-08-13T21:21:02.6884563-04:00",
+        "modified":  "2026-08-13T21:21:02.6900532-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\plugins.md",
+        "type":  "file",
+        "size":  3512,
+        "created":  "2026-08-13T21:21:02.6919171-04:00",
+        "modified":  "2026-08-13T21:21:02.6919171-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\rules.md",
+        "type":  "file",
+        "size":  1063,
+        "created":  "2026-08-13T21:21:02.6926848-04:00",
+        "modified":  "2026-08-13T21:21:02.6945105-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\agy-customizations\\docs\\skills.md",
+        "type":  "file",
+        "size":  2650,
+        "created":  "2026-08-13T21:21:02.6955693-04:00",
+        "modified":  "2026-08-13T21:21:02.6955693-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\antigravity_guide\\SKILL.md",
+        "type":  "file",
+        "size":  2955,
+        "created":  "2026-08-13T21:21:02.6966407-04:00",
+        "modified":  "2026-08-13T21:21:02.6966407-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\antigravity_guide\\references\\app.md",
+        "type":  "file",
+        "size":  3852,
+        "created":  "2026-08-13T21:21:02.6977991-04:00",
+        "modified":  "2026-08-13T21:21:02.6981153-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\antigravity_guide\\references\\cli.md",
+        "type":  "file",
+        "size":  1686,
+        "created":  "2026-08-13T21:21:02.6986242-04:00",
+        "modified":  "2026-08-13T21:21:02.6991911-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\antigravity_guide\\references\\ide.md",
+        "type":  "file",
+        "size":  3399,
+        "created":  "2026-08-13T21:21:02.7002863-04:00",
+        "modified":  "2026-08-13T21:21:02.7002863-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\antigravity_guide\\references\\sdk.md",
+        "type":  "file",
+        "size":  3130,
+        "created":  "2026-08-13T21:21:02.7008330-04:00",
+        "modified":  "2026-08-13T21:21:02.7013975-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\builtin\\skills\\permissioned-github\\SKILL.md",
+        "type":  "file",
+        "size":  5890,
+        "created":  "2026-08-13T21:21:02.7027181-04:00",
+        "modified":  "2026-08-13T21:21:02.7032750-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\crashes\\crash_35000_2eee53cd-6068-4e2f-a29c-19dc9bca4028.log",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-13T21:20:53.7146158-04:00",
+        "modified":  "2026-08-13T21:20:53.7146158-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity\\knowledge\\knowledge.lock",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-13T21:21:02.6776554-04:00",
+        "modified":  "2026-08-13T21:21:02.6776554-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\cli.log",
+        "type":  "file",
+        "size":  1565471,
+        "created":  "2026-08-06T09:40:04.5019836-04:00",
+        "modified":  "2026-08-13T21:09:28.3422562-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\conversation_summaries.db",
+        "type":  "file",
+        "size":  20480,
+        "created":  "2026-08-06T09:40:06.1124709-04:00",
+        "modified":  "2026-08-06T09:40:37.1209762-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\history.jsonl",
+        "type":  "file",
+        "size":  97153,
+        "created":  "2026-08-06T09:42:21.2791826-04:00",
+        "modified":  "2026-08-13T21:09:17.2091039-04:00",
+        "likely_role":  "history_log"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\installation_id",
+        "type":  "file",
+        "size":  36,
+        "created":  "2026-08-06T09:40:04.5049831-04:00",
+        "modified":  "2026-08-06T09:40:04.5049831-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\jetski_state.pbtxt",
+        "type":  "file",
+        "size":  390,
+        "created":  "2026-08-06T09:40:06.0788385-04:00",
+        "modified":  "2026-08-06T09:40:06.0793754-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\last_check.timestamp",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.1095431-04:00",
+        "modified":  "2026-08-06T09:40:06.1095431-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\settings.json",
+        "type":  "file",
+        "size":  9603,
+        "created":  "2026-08-12T23:04:18.3791224-04:00",
+        "modified":  "2026-08-12T23:04:18.3796639-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\bin\\agentapi.bat",
+        "type":  "file",
+        "size":  69,
+        "created":  "2026-08-06T09:42:29.9733994-04:00",
+        "modified":  "2026-08-12T23:04:23.0044150-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\bin\\webm_encoder.exe",
+        "type":  "file",
+        "size":  13615104,
+        "created":  "2026-08-06T09:40:06.1622527-04:00",
+        "modified":  "2026-08-06T09:40:06.1869775-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\logs\\transcript.jsonl",
+        "type":  "file",
+        "size":  446440,
+        "created":  "2026-08-06T09:42:22.5074464-04:00",
+        "modified":  "2026-08-13T21:09:21.1108415-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\logs\\transcript_full.jsonl",
+        "type":  "file",
+        "size":  953109,
+        "created":  "2026-08-06T09:42:22.5091886-04:00",
+        "modified":  "2026-08-13T21:09:21.1142600-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\4059791b-ef0d-429d-844f-189b3756357d.json",
+        "type":  "file",
+        "size":  1684,
+        "created":  "2026-08-08T22:52:28.0255334-04:00",
+        "modified":  "2026-08-08T22:52:28.0262972-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\40c7bd20-9de6-455a-945a-4286102577f9.json",
+        "type":  "file",
+        "size":  5945,
+        "created":  "2026-08-08T22:38:26.2009101-04:00",
+        "modified":  "2026-08-08T22:38:26.2018772-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\6f38cb74-a93c-43d4-b5b1-6006fb8e57a3.json",
+        "type":  "file",
+        "size":  7720,
+        "created":  "2026-08-08T22:48:36.4925265-04:00",
+        "modified":  "2026-08-08T22:48:36.4935540-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\709759d7-7230-43ed-afbf-e1008f25d8cb.json",
+        "type":  "file",
+        "size":  2147,
+        "created":  "2026-08-12T22:48:57.2298134-04:00",
+        "modified":  "2026-08-12T22:48:57.2298134-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\78d01f86-60f5-433e-9832-ddea99846012.json",
+        "type":  "file",
+        "size":  7034,
+        "created":  "2026-08-08T22:44:21.6713877-04:00",
+        "modified":  "2026-08-08T22:44:21.6719650-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\7d52dd3f-3868-4e5f-bb25-6fec07d728c6.json",
+        "type":  "file",
+        "size":  2219,
+        "created":  "2026-08-12T22:53:49.7500318-04:00",
+        "modified":  "2026-08-12T22:53:49.7510849-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\87d7b709-d623-4514-9fad-6c35911cbd76.json",
+        "type":  "file",
+        "size":  1783,
+        "created":  "2026-08-08T23:06:35.2725396-04:00",
+        "modified":  "2026-08-08T23:06:35.2730626-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\8c4e62b9-7a21-460e-a4b3-f6026e60173b.json",
+        "type":  "file",
+        "size":  7837,
+        "created":  "2026-08-08T22:43:42.1707597-04:00",
+        "modified":  "2026-08-08T22:43:42.1713321-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\9b50107c-6286-44ff-90f5-1f85f87a564d.json",
+        "type":  "file",
+        "size":  2341,
+        "created":  "2026-08-12T23:04:28.3518884-04:00",
+        "modified":  "2026-08-12T23:04:28.3524064-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\9e590827-fdd5-430c-b55b-e87ed425776f.json",
+        "type":  "file",
+        "size":  1855,
+        "created":  "2026-08-08T23:14:46.4960901-04:00",
+        "modified":  "2026-08-08T23:14:46.4972268-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\a71d6b67-f83b-4a83-a9b0-695af75186fa.json",
+        "type":  "file",
+        "size":  1872,
+        "created":  "2026-08-08T23:21:33.6773041-04:00",
+        "modified":  "2026-08-08T23:21:33.6778313-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\b48f754e-1b85-482f-ba17-b47105cebad7.json",
+        "type":  "file",
+        "size":  8686,
+        "created":  "2026-08-08T22:51:44.8166848-04:00",
+        "modified":  "2026-08-08T22:51:44.8172589-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\b916cae9-1078-43e2-a6a3-ab6f9dfc8a45.json",
+        "type":  "file",
+        "size":  1664,
+        "created":  "2026-08-08T23:00:09.8880249-04:00",
+        "modified":  "2026-08-08T23:00:09.8886218-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\bafb6516-63eb-41c4-8f6e-6e7b4817238f.json",
+        "type":  "file",
+        "size":  9085,
+        "created":  "2026-08-08T23:14:37.7586256-04:00",
+        "modified":  "2026-08-08T23:14:37.7592179-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\fae79372-8123-48de-8727-2fa18906ae00.json",
+        "type":  "file",
+        "size":  2300,
+        "created":  "2026-08-12T22:59:41.1639803-04:00",
+        "modified":  "2026-08-12T22:59:41.1639803-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\messages\\read.json",
+        "type":  "file",
+        "size":  661,
+        "created":  "2026-08-08T22:38:30.6024241-04:00",
+        "modified":  "2026-08-12T23:04:29.5509999-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-106.log",
+        "type":  "file",
+        "size":  251,
+        "created":  "2026-08-08T23:00:07.4896753-04:00",
+        "modified":  "2026-08-08T23:00:09.8178162-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-12.log",
+        "type":  "file",
+        "size":  332,
+        "created":  "2026-08-08T22:38:25.1337252-04:00",
+        "modified":  "2026-08-08T22:38:26.0878410-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-127.log",
+        "type":  "file",
+        "size":  293,
+        "created":  "2026-08-08T23:06:32.5471585-04:00",
+        "modified":  "2026-08-08T23:06:35.2014036-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-154.log",
+        "type":  "file",
+        "size":  3593,
+        "created":  "2026-08-08T23:14:36.5250945-04:00",
+        "modified":  "2026-08-08T23:14:37.6960734-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-159.log",
+        "type":  "file",
+        "size":  332,
+        "created":  "2026-08-08T23:14:43.8980159-04:00",
+        "modified":  "2026-08-08T23:14:46.4159555-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-186.log",
+        "type":  "file",
+        "size":  380,
+        "created":  "2026-08-08T23:21:31.0679171-04:00",
+        "modified":  "2026-08-08T23:21:33.5985625-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-213.log",
+        "type":  "file",
+        "size":  612,
+        "created":  "2026-08-12T22:48:56.7880391-04:00",
+        "modified":  "2026-08-12T22:48:57.1728018-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-23.log",
+        "type":  "file",
+        "size":  1370,
+        "created":  "2026-08-08T22:41:39.1289792-04:00",
+        "modified":  "2026-08-08T22:43:42.0570941-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-234.log",
+        "type":  "file",
+        "size":  661,
+        "created":  "2026-08-12T22:53:49.4998384-04:00",
+        "modified":  "2026-08-12T22:53:49.6989561-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-261.log",
+        "type":  "file",
+        "size":  750,
+        "created":  "2026-08-12T22:59:40.8611758-04:00",
+        "modified":  "2026-08-12T22:59:41.1130899-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-284.log",
+        "type":  "file",
+        "size":  799,
+        "created":  "2026-08-12T23:04:28.0034862-04:00",
+        "modified":  "2026-08-12T23:04:28.2936049-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-29.log",
+        "type":  "file",
+        "size":  34,
+        "created":  "2026-08-08T22:44:03.2426902-04:00",
+        "modified":  "2026-08-08T22:44:21.5220279-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-39.log",
+        "type":  "file",
+        "size":  3320,
+        "created":  "2026-08-08T22:48:25.9202503-04:00",
+        "modified":  "2026-08-08T22:48:36.3953583-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-62.log",
+        "type":  "file",
+        "size":  4097,
+        "created":  "2026-08-08T22:51:42.5550355-04:00",
+        "modified":  "2026-08-08T22:51:44.7240922-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\brain\\4318db1e-d373-4d9e-9b76-9fcd78e79db4\\.system_generated\\tasks\\task-71.log",
+        "type":  "file",
+        "size":  207,
+        "created":  "2026-08-08T22:52:25.1458327-04:00",
+        "modified":  "2026-08-08T22:52:27.9466696-04:00",
+        "likely_role":  "brain_storage"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\.checksum",
+        "type":  "file",
+        "size":  64,
+        "created":  "2026-08-06T09:40:06.0760428-04:00",
+        "modified":  "2026-08-06T09:40:06.0760428-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\keep.txt",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.0636734-04:00",
+        "modified":  "2026-08-06T09:40:06.0744030-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\SKILL.md",
+        "type":  "file",
+        "size":  5321,
+        "created":  "2026-08-06T09:40:06.0647245-04:00",
+        "modified":  "2026-08-06T09:40:06.0652447-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\hooks.md",
+        "type":  "file",
+        "size":  10421,
+        "created":  "2026-08-06T09:40:06.0657830-04:00",
+        "modified":  "2026-08-06T09:40:06.0663192-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\json_configs.md",
+        "type":  "file",
+        "size":  3983,
+        "created":  "2026-08-06T09:40:06.0674083-04:00",
+        "modified":  "2026-08-06T09:40:06.0674083-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\mcp_servers.md",
+        "type":  "file",
+        "size":  2966,
+        "created":  "2026-08-06T09:40:06.0679568-04:00",
+        "modified":  "2026-08-06T09:40:06.0679568-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\plugins.md",
+        "type":  "file",
+        "size":  2453,
+        "created":  "2026-08-06T09:40:06.0685030-04:00",
+        "modified":  "2026-08-06T09:40:06.0685030-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\rules.md",
+        "type":  "file",
+        "size":  1063,
+        "created":  "2026-08-06T09:40:06.0690319-04:00",
+        "modified":  "2026-08-06T09:40:06.0700800-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\agy-customizations\\docs\\skills.md",
+        "type":  "file",
+        "size":  2650,
+        "created":  "2026-08-06T09:40:06.0700800-04:00",
+        "modified":  "2026-08-06T09:40:06.0706236-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\antigravity_guide\\SKILL.md",
+        "type":  "file",
+        "size":  2955,
+        "created":  "2026-08-06T09:40:06.0711485-04:00",
+        "modified":  "2026-08-06T09:40:06.0711485-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\antigravity_guide\\references\\app.md",
+        "type":  "file",
+        "size":  3852,
+        "created":  "2026-08-06T09:40:06.0716673-04:00",
+        "modified":  "2026-08-06T09:40:06.0722007-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\antigravity_guide\\references\\cli.md",
+        "type":  "file",
+        "size":  1686,
+        "created":  "2026-08-06T09:40:06.0727922-04:00",
+        "modified":  "2026-08-06T09:40:06.0727922-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\antigravity_guide\\references\\ide.md",
+        "type":  "file",
+        "size":  3399,
+        "created":  "2026-08-06T09:40:06.0733350-04:00",
+        "modified":  "2026-08-06T09:40:06.0733350-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\antigravity_guide\\references\\sdk.md",
+        "type":  "file",
+        "size":  3130,
+        "created":  "2026-08-06T09:40:06.0733350-04:00",
+        "modified":  "2026-08-06T09:40:06.0738631-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\builtin\\skills\\permissioned-github\\SKILL.md",
+        "type":  "file",
+        "size":  5565,
+        "created":  "2026-08-06T09:40:06.0755011-04:00",
+        "modified":  "2026-08-06T09:40:06.0755011-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\cache\\default_project_id.txt",
+        "type":  "file",
+        "size":  19,
+        "created":  "2026-08-06T09:40:06.1257491-04:00",
+        "modified":  "2026-08-06T09:40:06.1262977-04:00",
+        "likely_role":  "cache"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\cache\\last_conversations.json",
+        "type":  "file",
+        "size":  114,
+        "created":  "2026-08-13T21:09:28.2868305-04:00",
+        "modified":  "2026-08-13T21:09:28.2873927-04:00",
+        "likely_role":  "cache"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\cache\\onboarding.json",
+        "type":  "file",
+        "size":  111,
+        "created":  "2026-08-06T09:42:01.9232012-04:00",
+        "modified":  "2026-08-06T09:42:01.9232012-04:00",
+        "likely_role":  "cache"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\conversations\\4318db1e-d373-4d9e-9b76-9fcd78e79db4.db",
+        "type":  "file",
+        "size":  6131712,
+        "created":  "2026-08-06T09:42:21.4845700-04:00",
+        "modified":  "2026-08-13T21:09:28.2766317-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\implicit\\423f7c19-ddf1-4c40-9069-a7273a10497b.pb",
+        "type":  "file",
+        "size":  600,
+        "created":  "2026-08-06T09:42:05.0821608-04:00",
+        "modified":  "2026-08-06T09:42:05.0821608-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\knowledge\\knowledge.lock",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.0610226-04:00",
+        "modified":  "2026-08-06T09:40:06.0610226-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\log\\cli-20260806_094004.log",
+        "type":  "file",
+        "size":  1565471,
+        "created":  "2026-08-06T09:40:04.5019836-04:00",
+        "modified":  "2026-08-13T21:09:28.3422562-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\presence\\4318db1e-d373-4d9e-9b76-9fcd78e79db4.lock",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:42:21.6514310-04:00",
+        "modified":  "2026-08-06T09:42:21.6514310-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\antigravity-cli\\updater\\update.lock",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.0914895-04:00",
+        "modified":  "2026-08-06T09:40:06.0914895-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\.migrated",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.0623616-04:00",
+        "modified":  "2026-08-06T09:40:06.0623616-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\config.json",
+        "type":  "file",
+        "size":  124,
+        "created":  "2026-08-13T21:21:26.7578418-04:00",
+        "modified":  "2026-08-13T21:21:26.7578418-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\mcp_config.json",
+        "type":  "file",
+        "size":  0,
+        "created":  "2026-08-06T09:40:06.0576045-04:00",
+        "modified":  "2026-08-06T09:40:06.0576045-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\plugins\\gemini-api\\installed_version.json",
+        "type":  "file",
+        "size":  20,
+        "created":  "2026-08-13T21:21:43.8083979-04:00",
+        "modified":  "2026-08-13T21:21:43.8083979-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\plugins\\gemini-api\\plugin.json",
+        "type":  "file",
+        "size":  441,
+        "created":  "2026-08-13T21:21:43.8026889-04:00",
+        "modified":  "2026-08-13T21:21:43.8032449-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\plugins\\gemini-api\\skills\\gemini-interactions-api\\SKILL.md",
+        "type":  "file",
+        "size":  19906,
+        "created":  "2026-08-13T21:21:43.8043485-04:00",
+        "modified":  "2026-08-13T21:21:43.8043485-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\plugins\\gemini-api\\skills\\gemini-interactions-api\\references\\migration.md",
+        "type":  "file",
+        "size":  9418,
+        "created":  "2026-08-13T21:21:43.8059812-04:00",
+        "modified":  "2026-08-13T21:21:43.8067068-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\plugins\\gemini-api\\skills\\gemini-live-api-dev\\SKILL.md",
+        "type":  "file",
+        "size":  15015,
+        "created":  "2026-08-13T21:21:43.8078386-04:00",
+        "modified":  "2026-08-13T21:21:43.8078386-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\projects\\default-cli-project.json",
+        "type":  "file",
+        "size":  133,
+        "created":  "2026-08-13T21:21:02.7173932-04:00",
+        "modified":  "2026-08-13T21:21:02.7179358-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\config\\projects\\outside-of-project.json",
+        "type":  "file",
+        "size":  113,
+        "created":  "2026-08-13T21:21:02.7238113-04:00",
+        "modified":  "2026-08-13T21:21:02.7245690-04:00",
+        "likely_role":  "config"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\history\\system32\\.project_root",
+        "type":  "file",
+        "size":  19,
+        "created":  "2026-08-06T09:30:49.5616756-04:00",
+        "modified":  "2026-08-06T09:30:49.5626766-04:00",
+        "likely_role":  "history_log"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\history\\ti-sigma-truth-engine-release\\.project_root",
+        "type":  "file",
+        "size":  61,
+        "created":  "2026-08-06T09:31:57.1432646-04:00",
+        "modified":  "2026-08-06T09:31:57.1432646-04:00",
+        "likely_role":  "history_log"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\tmp\\system32\\.project_root",
+        "type":  "file",
+        "size":  19,
+        "created":  "2026-08-06T09:30:49.5596712-04:00",
+        "modified":  "2026-08-06T09:30:49.5596712-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\tmp\\system32\\logs.json",
+        "type":  "file",
+        "size":  2,
+        "created":  "2026-08-13T21:10:25.8310863-04:00",
+        "modified":  "2026-08-13T21:10:25.9266314-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\tmp\\ti-sigma-truth-engine-release\\.project_root",
+        "type":  "file",
+        "size":  61,
+        "created":  "2026-08-06T09:31:57.1412584-04:00",
+        "modified":  "2026-08-06T09:31:57.1422584-04:00",
+        "likely_role":  "other"
+    },
+    {
+        "path":  "C:\\Users\\brand\\.gemini\\tmp\\ti-sigma-truth-engine-release\\logs.json",
+        "type":  "file",
+        "size":  2,
+        "created":  "2026-08-06T09:32:01.5104172-04:00",
+        "modified":  "2026-08-06T09:32:01.5124092-04:00",
+        "likely_role":  "other"
+    }
+]
