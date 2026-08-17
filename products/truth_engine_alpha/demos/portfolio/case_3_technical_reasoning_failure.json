@@ -1,0 +1,33 @@
+{
+  "case_id": "portfolio_case_03",
+  "title": "Technical / Factual Reasoning Failure Audit",
+  "category": "technical_factual_reasoning_failure",
+  "prompt": "Evaluate the energy efficiency of perpetual motion mechanism Z.",
+  "original_output": "Mechanism Z achieves 120% thermodynamic efficiency by converting ambient heat into net electric power without energy loss.",
+  "qwen_comparator_output": "Mechanism Z claims over-unity efficiency by capturing thermal fluctuations, operating beyond standard Carnot limits.",
+  "truth_engine_audit": {
+    "truth_label": "FALSE",
+    "support_status": "CONTRADICTED",
+    "risk_level": "CRITICAL",
+    "citation_status": "SOURCE_DOES_NOT_SUPPORT_CLAIM",
+    "what_truth_engine_caught": "Violates Second Law of Thermodynamics. Claim of >100% net electrical power output from ambient thermal energy without temperature gradient is physically impossible."
+  },
+  "sources": [
+    {
+      "source_id": "Thermodynamics_Standard_Ref",
+      "title": "Principles of Engineering Thermodynamics 9th Ed.",
+      "verification_status": "SOURCE_FOUND_ACCESSED"
+    }
+  ],
+  "corrected_output": "Mechanism Z cannot achieve 120% efficiency or generate net electric power from ambient heat without a temperature gradient, as this violates the Second Law of Thermodynamics.",
+  "claims": [
+    {
+      "claim_id": "case03_claim_001",
+      "normalized_claim": "Mechanism Z achieves 120% thermodynamic efficiency by converting ambient heat into net electric power",
+      "verbatim_text": "Mechanism Z achieves 120% thermodynamic efficiency by converting ambient heat into net electric power without energy loss.",
+      "source_id": "Thermodynamics_Standard_Ref",
+      "citations": ["Principles of Engineering Thermodynamics"],
+      "conditions": "does not support"
+    }
+  ]
+}

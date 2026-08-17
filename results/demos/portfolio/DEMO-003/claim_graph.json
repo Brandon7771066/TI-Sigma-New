@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "node_id": "claim_001",
+      "node_type": "Claim",
+      "label": "",
+      "attributes": {
+        "claim_type": "statement",
+        "source_id": "source_001"
+      }
+    },
+    {
+      "node_id": "citation_claim_001",
+      "node_type": "Citation",
+      "label": "claim_001",
+      "attributes": {
+        "claim_id": "claim_001",
+        "status": "NO_CITATION_PROVIDED"
+      }
+    },
+    {
+      "node_id": "source_001",
+      "node_type": "Source",
+      "label": "claim_001",
+      "attributes": {
+        "source_type": "unknown",
+        "evidence_level": "IMPLEMENTED_AND_TESTED"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge_cites_claim_001",
+      "source": "claim_001",
+      "target": "source_001",
+      "edge_type": "CITES",
+      "evidence": "claim cites its source",
+      "confidence": 0.7,
+      "severity": "medium",
+      "attributes": {}
+    },
+    {
+      "edge_id": "edge_audit_claim_001",
+      "source": "citation_claim_001",
+      "target": "claim_001",
+      "edge_type": "CITES",
+      "evidence": "Claim has no citation references.",
+      "confidence": 0.6,
+      "severity": "medium",
+      "attributes": {}
+    }
+  ],
+  "metadata": {
+    "claim_count": 1,
+    "source_count": 1,
+    "contradiction_count": 0,
+    "citation_statuses": [
+      "NO_CITATION_PROVIDED"
+    ]
+  }
+}

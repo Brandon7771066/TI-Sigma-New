@@ -1,0 +1,33 @@
+{
+  "case_id": "portfolio_case_01",
+  "title": "Citation Hallucination Audit",
+  "category": "citation_hallucination",
+  "prompt": "Explain the cardiovascular benefits of compound X with citations.",
+  "original_output": "Compound X drastically reduces blood pressure by 40% according to Smith et al. (2024), Journal of Cardiology 12(3): 45-52.",
+  "qwen_comparator_output": "Compound X is a vascular agent studied by Smith et al. (2024) showing significant systolic reduction in clinical trials.",
+  "truth_engine_audit": {
+    "truth_label": "FALSE",
+    "support_status": "CONTRADICTED",
+    "risk_level": "CRITICAL",
+    "citation_status": "POSSIBLY_FABRICATED_CITATION",
+    "what_truth_engine_caught": "Smith et al. (2024) in Journal of Cardiology 12(3) does not exist in PubMed/DOI registry. Synthetic citation pattern flagged."
+  },
+  "sources": [
+    {
+      "source_id": "Smith_2024_fake",
+      "title": "Journal of Cardiology 12(3): 45-52",
+      "verification_status": "POSSIBLY_FABRICATED_CITATION"
+    }
+  ],
+  "corrected_output": "No published clinical trial by Smith et al. (2024) exists in Journal of Cardiology. Assertions regarding a 40% blood pressure reduction are ungrounded and should be removed.",
+  "claims": [
+    {
+      "claim_id": "case01_claim_001",
+      "normalized_claim": "Compound X drastically reduces blood pressure by 40% according to Smith et al. (2024)",
+      "verbatim_text": "Compound X drastically reduces blood pressure by 40% according to Smith et al. (2024)",
+      "source_id": "Smith_2024_fake",
+      "citations": ["Smith et al. (2024) fake"],
+      "conditions": "possibly_fabricated_citation"
+    }
+  ]
+}

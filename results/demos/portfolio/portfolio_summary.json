@@ -1,0 +1,26 @@
+[
+  {
+    "order_id": "DEMO-001",
+    "case_file": "case_1_citation_hallucination.json",
+    "output_dir": "results\\demos\\portfolio\\DEMO-001",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "artifacts_count": 10
+  },
+  {
+    "order_id": "DEMO-002",
+    "case_file": "case_2_biomedical_overclaim.json",
+    "output_dir": "results\\demos\\portfolio\\DEMO-002",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "artifacts_count": 10
+  },
+  {
+    "order_id": "DEMO-003",
+    "case_file": "case_3_technical_reasoning_failure.json",
+    "output_dir": "results\\demos\\portfolio\\DEMO-003",
+    "review_status": "APPROVED",
+    "delivery_status": "DELIVERED",
+    "artifacts_count": 10
+  }
+]

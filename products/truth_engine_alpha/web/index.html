@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Engine AI Audit — Eliminate Hallucinations & Unverified Claims</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Truth Engine AI Audit</div>
+            <nav>
+                <a href="#what-it-does">What It Does</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#benchmarks">Benchmark Evidence</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#submit" class="btn btn-primary">Submit Audit</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find Unsupported Claims, Citation Errors, and Contradictions in AI Answers</h1>
+            <p class="hero-sub">Truth Engine AI Audit transforms AI outputs into claim-by-claim, source-verified audit reports with non-philosophical risk scoring and human review sign-off.</p>
+            <div class="hero-actions">
+                <a href="#submit" class="btn btn-large btn-primary">Order AI Audit</a>
+                <a href="#example-audit" class="btn btn-large btn-outline">View Sample Report</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="what-it-does" class="section">
+        <div class="container">
+            <h2>What It Does</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>1. Claim Decomposition</h3>
+                    <p>Extracts atomic claims from AI responses or documents and evaluates each statement independently against source evidence.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Citation Verification</h3>
+                    <p>Detects hallucinated citations, mischaracterized sources, and ungrounded statements without inventing citations.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Risk Level Scoring</h3>
+                    <p>Maps evidence support into buyer-facing risk tiers (CRITICAL, HIGH, MEDIUM, LOW) to prioritize verification actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section bg-light">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Submit Material</h4>
+                    <p>Paste an AI-generated answer or document along with optional citations and domain context.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>Automated Audit Engine</h4>
+                    <p>Truth Engine processes claims, constructs claim-evidence graphs, and ranks evidence gaps.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Human Auditor Review</h4>
+                    <p>A qualified human auditor checks high-risk findings and approves the final report package.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4>Delivered Audit Bundle</h4>
+                    <p>Receive your Audit Scorecard, HTML report, corrected answer, and structured CSV/JSON data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="example-audit" class="section">
+        <div class="container">
+            <h2>Example Audit Portfolio Case</h2>
+            <div class="audit-demo-box">
+                <div class="demo-col">
+                    <span class="badge badge-danger">Original AI Output</span>
+                    <p class="demo-text">"According to Smith et al. (2024), daily intake of 1000mg resveratrol completely cures type 2 diabetes in 90% of clinical trial subjects."</p>
+                </div>
+                <div class="demo-col">
+                    <span class="badge badge-success">Truth Engine Finding</span>
+                    <p class="demo-text"><strong>Finding:</strong> POSSIBLY_FABRICATED_CITATION / HIGH OVERCLAIM.<br>
+                    <strong>Truth Label:</strong> FALSE | <strong>Risk:</strong> CRITICAL<br>
+                    <strong>Caught:</strong> Citation does not match study findings; 90% cure rate is ungrounded.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benchmarks" class="section bg-light">
+        <div class="container">
+            <h2>Benchmark Evidence</h2>
+            <div class="benchmark-card">
+                <h3>TI Sigma Outperforms Open-Weight Models on Locked External Benchmark</h3>
+                <p>On a locked curated external benchmark of N=30, frozen Truth Engine achieved <strong>0.8833 Macro F1</strong> compared with <strong>0.7140</strong> for Qwen/Qwen2.5-3B-Instruct (+16.93 percentage point gain, p = 0.0092). On the scaled N=130 benchmark (84.6% actual AI outputs), Truth Engine achieved <strong>0.8875 vs 0.7250</strong> (+16.25 point gain, p < 0.0001).</p>
+                <p class="text-muted"><small><em>Source: calibration_registry/PHASE_E_REAL_LLM_RAW_PREDICTIONS.csv. Evaluated on curated benchmark corpora.</em></small></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2>Product Pricing</h2>
+            <div class="grid grid-3">
+                <div class="card pricing-card">
+                    <h3>Quick AI Audit</h3>
+                    <div class="price">$49 <span>/ order</span></div>
+                    <p>For single AI answers and short documents (up to 5,000 chars).</p>
+                    <ul>
+                        <li>✓ Claim decomposition</li>
+                        <li>✓ Citation check</li>
+                        <li>✓ 30-second Scorecard</li>
+                        <li>✓ Human auditor review</li>
+                    </ul>
+                    <a href="#submit" onclick="selectTier('QUICK_AUDIT')" class="btn btn-primary">Select Quick Audit</a>
+                </div>
+                <div class="card pricing-card featured">
+                    <div class="featured-tag">Most Popular</div>
+                    <h3>Deep Scientific Audit</h3>
+                    <div class="price">$199 <span>/ order</span></div>
+                    <p>For complex technical documents, medical text, or legal arguments (up to 25,000 chars).</p>
+                    <ul>
+                        <li>✓ Contradiction Myrion Resolution</li>
+                        <li>✓ Scaffolding resolution routes</li>
+                        <li>✓ Evidence gap ranking</li>
+                        <li>✓ Priority action plan</li>
+                        <li>✓ Dedicated human sign-off</li>
+                    </ul>
+                    <a href="#submit" onclick="selectTier('DEEP_AUDIT')" class="btn btn-primary">Select Deep Audit</a>
+                </div>
+                <div class="card pricing-card">
+                    <h3>Enterprise Batch Audit</h3>
+                    <div class="price">$499 <span>/ order</span></div>
+                    <p>Bulk AI output triage, patent prior-art mapping, or multi-document evaluation.</p>
+                    <ul>
+                        <li>✓ Multi-document claim graph</li>
+                        <li>✓ GraphML / CSV export</li>
+                        <li>✓ Custom domain tuning</li>
+                        <li>✓ Priority 24-hr turnaround</li>
+                    </ul>
+                    <a href="#submit" onclick="selectTier('BATCH_AUDIT')" class="btn btn-primary">Select Enterprise Batch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="submit" class="section bg-light">
+        <div class="container form-container">
+            <h2>Submit an Audit Request</h2>
+            <form id="auditForm" onsubmit="handleAuditSubmit(event)">
+                <div class="form-group">
+                    <label for="email">Email Address (Required)</label>
+                    <input type="email" id="email" required placeholder="you@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="name">Your Name (Optional)</label>
+                    <input type="text" id="name" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="product">Audit Product Tier</label>
+                    <select id="product">
+                        <option value="QUICK_AUDIT">Quick AI Audit ($49)</option>
+                        <option value="DEEP_AUDIT" selected>Deep Scientific & Technical Audit ($199)</option>
+                        <option value="BATCH_AUDIT">Enterprise Batch Audit ($499)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="domain">Domain Context (Optional)</label>
+                    <select id="domain">
+                        <option value="general">General / Non-specialized</option>
+                        <option value="biomedical">Biomedical / Clinical</option>
+                        <option value="technical">Technical / Engineering</option>
+                        <option value="legal">Legal / Patent Prior Art</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prompt">Original Prompt / Context (Optional)</label>
+                    <textarea id="prompt" rows="2" placeholder="What prompt was given to the AI model?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="content">AI Answer / Document Content (Required)</label>
+                    <textarea id="content" rows="6" required placeholder="Paste the text or AI output to be audited..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="citations">Supplied Citations / Sources (Optional)</label>
+                    <textarea id="citations" rows="3" placeholder="Paste source URLs or bibliography references..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-large btn-primary btn-block">Submit Audit Order</button>
+            </form>
+
+            <div id="formResponse" class="form-response hidden"></div>
+        </div>
+    </section>
+
+    <section id="limitations" class="section">
+        <div class="container">
+            <h2>Limitations & Safety</h2>
+            <p>Truth Engine AI Audit reduces contradiction triage time and identifies hallucinated citations. However, audit reports are decision-support tools and do not replace professional medical, legal, or safety-critical engineering review.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Truth Engine AI Audit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

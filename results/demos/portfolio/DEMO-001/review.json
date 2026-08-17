@@ -1,0 +1,14 @@
+{
+  "order_id": "DEMO-001",
+  "reviewer": "Senior Commercial Auditor",
+  "timestamp": "2026-08-17T09:09:24.595876+00:00",
+  "review_status": "APPROVED",
+  "notes": "Verified commercial audit bundle for portfolio demo DEMO-001. All claims sourced or flagged.",
+  "checks": {
+    "critical_high_findings_verified": true,
+    "citation_provenance_checked": true,
+    "corrected_answer_verified": true,
+    "no_false_positives": true,
+    "report_readability_approved": true
+  }
+}

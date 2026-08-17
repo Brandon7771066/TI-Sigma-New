@@ -1,0 +1,24 @@
+{
+  "order_id": "DEMO-001",
+  "created_at": "2026-08-17T09:09:24.549801+00:00",
+  "delivered_at": "2026-08-17T09:09:24.603412+00:00",
+  "customer_email": "demo_customer@example.com",
+  "product_type": "DEEP_AUDIT",
+  "payment_status": "PAID",
+  "audit_status": "DELIVERED",
+  "review_status": "APPROVED",
+  "reviewer": "Senior Commercial Auditor",
+  "delivery_status": "DELIVERED",
+  "artifacts": [
+    "order.json",
+    "executive_summary.md",
+    "audit_report.html",
+    "claims.csv",
+    "evidence.csv",
+    "corrected_answer.md",
+    "full_result.json",
+    "provenance.json",
+    "review.json",
+    "delivery_manifest.json"
+  ]
+}

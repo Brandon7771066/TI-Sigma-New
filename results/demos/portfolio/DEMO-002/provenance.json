@@ -1,0 +1,10 @@
+{
+  "order_id": "DEMO-002",
+  "customer_email": "demo_customer@example.com",
+  "product_type": "DEEP_AUDIT",
+  "input_path": "products\\truth_engine_alpha\\demos\\portfolio\\case_2_biomedical_overclaim.json",
+  "engine_version": "truth_engine_alpha.v1.1",
+  "generated_at": "2026-08-17T09:09:24.646681+00:00",
+  "source_verification_status": "CHECKED_OFFLINE",
+  "human_review_gate_required": true
+}

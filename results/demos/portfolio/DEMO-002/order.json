@@ -1,0 +1,16 @@
+{
+  "order_id": "DEMO-002",
+  "created_at": "2026-08-17T09:09:24.604982+00:00",
+  "customer_email": "demo_customer@example.com",
+  "product_type": "DEEP_AUDIT",
+  "input_path": "products\\truth_engine_alpha\\demos\\portfolio\\case_2_biomedical_overclaim.json",
+  "customer_name_optional": null,
+  "payment_status": "PAID",
+  "audit_status": "DELIVERED",
+  "review_status": "APPROVED",
+  "delivery_status": "DELIVERED",
+  "amount": 199.0,
+  "currency": "USD",
+  "payment_reference": null,
+  "notes": null
+}
