@@ -1,0 +1,104 @@
+name: MIM v0.9 Real Run
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/mim_v09_real_run_main.yml']
+
+permissions:
+  contents: read
+
+env:
+  SHIU_PIN: 91bdd1e7dcf193f3e7ca5a8933497fcef63b7960
+
+jobs:
+  codex:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas
+      - name: Download and resolve FAFB v783 annotations
+        run: |
+          mkdir -p out/codex/raw out/codex/targets
+          B=https://storage.googleapis.com/flywire-data/codex/data/fafb/783
+          for f in consolidated_cell_types.csv.gz classification.csv.gz neurons.csv.gz; do curl -fL --retry 3 "$B/$f" -o "out/codex/raw/$f"; done
+          sha256sum out/codex/raw/* > out/codex/raw/SHA256SUMS.txt
+          python - <<'PY'
+          import pandas as pd, pathlib, json
+          p=pathlib.Path('out/codex')
+          ct=pd.read_csv(p/'raw/consolidated_cell_types.csv.gz')
+          cl=pd.read_csv(p/'raw/classification.csv.gz')
+          nr=pd.read_csv(p/'raw/neurons.csv.gz')
+          def rc(df):
+            for c in df.columns:
+              if c.lower().replace(' ','_') in ('root_id','rootid','id'): return c
+            raise RuntimeError(list(df.columns))
+          rid=rc(ct); text=ct.drop(columns=[rid]).fillna('').astype(str).agg(' | '.join,axis=1)
+          masks={'PAM':text.str.contains('PAM',case=False,regex=False),'PPL1':text.str.contains('PPL1',case=False,regex=False),'KC':text.str.contains(r'(^|[^A-Za-z])KC([A-Za-z0-9_-]*)|Kenyon',case=False,regex=True),'MBON':text.str.contains('MBON',case=False,regex=False)}
+          summary={}
+          for k,m in masks.items():
+            sub=ct.loc[m].copy(); sub.to_csv(p/f'targets/{k}.csv',index=False)
+            summary[k]={'n':int(len(sub)),'root_ids':[str(x) for x in sub[rid].tolist()]}
+          cltxt=cl.fillna('').astype(str).agg(' | '.join,axis=1)
+          mbcl=cl.loc[cltxt.str.contains('MBON',case=False,regex=False)]; mbcl.to_csv(p/'targets/MBON_classification.csv',index=False)
+          ntcols=[c for c in nr.columns if 'nt' in c.lower() or 'transmitter' in c.lower()]
+          if ntcols:
+            nt=nr[ntcols].fillna('').astype(str).agg(' | '.join,axis=1)
+            da=nr.loc[nt.str.contains(r'(^|\W)(DA|dopamine|dopaminergic)(\W|$)',case=False,regex=True)]
+          else: da=nr.iloc[:0]
+          da.to_csv(p/'targets/dopaminergic.csv',index=False)
+          summary['MBON_classification_rows']=int(len(mbcl)); summary['dopaminergic_rows']=int(len(da)); summary['dataset_rows']={'cell_types':int(len(ct)),'classification':int(len(cl)),'neurons':int(len(nr))}
+          (p/'targets/summary.json').write_text(json.dumps(summary,indent=2)); print(json.dumps({k:(v['n'] if isinstance(v,dict) and 'n' in v else v) for k,v in summary.items()},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with: {name: mim-v09-codex-fafb783-real, path: out/codex, retention-days: 30}
+
+  shiu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install 'brian2>=2.5,<3' pandas pyarrow joblib numpy
+      - name: Pin Shiu model
+        run: |
+          git clone https://github.com/philshiu/Drosophila_brain_model.git shiu
+          cd shiu && git checkout "$SHIU_PIN" && test "$(git rev-parse HEAD)" = "$SHIU_PIN"
+          sha256sum Completeness_783.csv Connectivity_783.parquet model.py > ../shiu_inputs_sha256.txt
+      - name: Real v783 exact replay and sugar experiment
+        run: |
+          mkdir -p out/shiu
+          python - <<'PY'
+          import sys,json,hashlib,pathlib,time,numpy as np,pandas as pd
+          sys.path.insert(0,'shiu')
+          from model import create_model,default_params,get_spk_trn,run_exp
+          from brian2 import Network,ms
+          O=pathlib.Path('out/shiu'); t0=time.time()
+          def sd(neu,syn):
+            h=hashlib.sha256()
+            for x in (neu.v,neu.g,neu.rfc,syn.w): h.update(np.asarray(x[:]).tobytes())
+            return h.hexdigest()
+          def spikes(mon): return {str(int(k)):[float(t) for t in v] for k,v in get_spk_trn(mon).items()}
+          def sh(d): return hashlib.sha256(json.dumps(d,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+          neu,syn,mon=create_model('shiu/Completeness_783.csv','shiu/Connectivity_783.parquet',default_params)
+          net=Network(neu,syn,mon); net.store('cp')
+          recs=[]
+          for label in ('a','b'):
+            net.restore('cp',restore_random_state=True); i=sd(neu,syn); net.run(10*ms); f=sd(neu,syn); s=spikes(mon)
+            r={'neuron_count':len(neu),'synapse_count':len(syn),'initial_digest':i,'final_digest':f,'spike_digest':sh(s),'total_spikes':sum(map(len,s.values())),'active_neurons':len(s)}
+            (O/f'replay_{label}.json').write_text(json.dumps(r,indent=2)); recs.append(r)
+          exact=all(recs[0][k]==recs[1][k] for k in ('initial_digest','final_digest','spike_digest'))
+          sugar=[720575940624963786,720575940630233916,720575940637568838,720575940638202345,720575940617000768,720575940630797113,720575940632889389,720575940621754367,720575940621502051,720575940640649691,720575940639332736,720575940616885538,720575940639198653,720575940620900446,720575940617937543,720575940632425919,720575940633143833,720575940612670570,720575940628853239,720575940629176663,720575940611875570]
+          params=dict(default_params); params['n_run']=1; params['t_run']=100*ms
+          run_exp('mim_v09_sugar',sugar,'out/shiu','shiu/Completeness_783.csv','shiu/Connectivity_783.parquet',params=params,n_proc=1,force_overwrite=True)
+          df=pd.read_parquet(O/'mim_v09_sugar.parquet'); df.to_csv(O/'sugar_spikes.csv',index=False)
+          summary={'neuron_count':len(neu),'synapse_count':len(syn),'exact_replay_pass':exact,'sugar_spike_rows':int(len(df)),'sugar_active_neurons':int(df.flywire_id.nunique()) if len(df) else 0,'elapsed_seconds':time.time()-t0}
+          (O/'summary.json').write_text(json.dumps(summary,indent=2)); print(json.dumps(summary,indent=2))
+          PY
+          cp shiu_inputs_sha256.txt out/shiu/
+      - uses: actions/upload-artifact@v4
+        with: {name: mim-v09-shiu-v783-real, path: out/shiu, retention-days: 30}
