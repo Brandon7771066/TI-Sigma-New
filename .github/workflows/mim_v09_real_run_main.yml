@@ -1,4 +1,4 @@
-# trigger: 2026-08-31 real execution
+# trigger: 2026-08-31 real execution v3
 name: MIM v0.9 Real Run
 
 on:
@@ -64,7 +64,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install 'brian2>=2.5,<3' pandas pyarrow joblib numpy
+      - run: pip install 'numpy<2.0' 'brian2>=2.5,<3' pandas pyarrow joblib
       - name: Pin Shiu model
         run: |
           git clone https://github.com/philshiu/Drosophila_brain_model.git shiu
