@@ -171,3 +171,26 @@ This audit does not require those steps. They are the missing evidence:
 | Zebrafish numeric results stored | 0 |
 | TIG epidemic artifacts | 0 |
 | Persistent-homology library experiments | 0 |
+| Operational 8C Goodness protocol in code | 0 |
+| Zebrafish FAAH-OUT ortholog artifacts | 0 |
+| Experiments with all four required model comparisons | 0 confirmed |
+
+## G14. Integrity rules applied
+
+The human-authored standard is `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. The notes below are an AI-assisted reading of the repo against that standard.
+
+**HYPOTHESIS is now a status.** Framework formulas, literature associations, and print-only extrapolations are not results. The zebrafish size label, the Radiant-cap formulas, FAAH-OUT translational language, and axiom-conditional Lean headlines are HYPOTHESIS.
+
+**Thresholds stay uncollapsed.** `√2−1`, the several ~0.93 expressions (`sqrt(e/π)`, `√(1−e^{−2})`, `1−e^{−e}`), the name `T`, `φ`, the Born-shaped `1−e^{−2}`, and `C_EMERICK ≈ 0.437` are different objects. No experiment here shows they are the same quantity.
+
+**Goodness is not the 8Cs in this tree.** The 2026-07-04 canonical note uses four facets (Coherence, Concreteness, Continuity, Consistency). Older notes use Clarity, Coherence, Compassion, Courage. The non-redundancy script's G feature is a bootstrap-stability proxy. Elegance in that script is `−log(tree node count)`, which overlaps compression. Book prose that calls Elegance "least action" overlaps HEM and pragmatic success. Those overlaps are flags, not measurements of Elegance.
+
+**TIC and TIG are not frozen.** The Hamiltonian artifact is 57 vertices. The chromatic artifact is 9 vertices. `ti_sigma_graph.py` rebuilds a 57-node epidemic graph from the crystal rings and has no saved run. A prose relabel is not a canonical version pin. No biological prediction should cite either graph as canonical until a version is frozen.
+
+**Biology.** No zebrafish FAAH-OUT ortholog, Jo Cameron genotype file, or therapeutic-outcome table is in the repo. `analyses/pharma_baseline/linear_baseline.py` hardcodes a Jo Cameron row `(100.0, 134.3)`. `analyses/pharma_baseline/results_2026-05-08.txt` compares those hardcoded numbers with simple baselines and records that the book claim of about 82% versus about 46% is not what this script computes (75% magnitude versus 66.7% mean-magnitude, margin +8.3 percentage points; directional accuracy ties the always-positive baseline). That negative comparison stays. It is not a human trial and not a zebrafish result.
+
+**Model competition.** None of the indexed TI Sigma models was shown to beat all four of: a simple baseline, a conventional baseline, a capacity-matched generic model, and a null. Interesting spectral or graph patterns are not wins.
+
+**Negative results.** Section 21.7 of the ledger lists failures that remain failures. The H4 inverted replication does not rewrite the original H4 hypothesis.
+
+**Authorship.** Rules: human-authored in the chat that added them. Ledger, gaps, and this application: AI-assisted. The only check re-run in the audit remains `python3 lean4/verify_theorems.py`.

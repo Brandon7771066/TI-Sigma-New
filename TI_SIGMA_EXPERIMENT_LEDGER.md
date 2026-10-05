@@ -4,6 +4,8 @@ Audit date: 2026-10-05. Repository state: `main` at `b5955f25` (`Adapt published
 
 This ledger records what is in the repository. It does not treat comments, paper prose, or README claims as experimental results. A number appears here only when it is in a result artifact or was produced by a command run during this audit.
 
+Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. The rules in that file are the human-authored working standard. This ledger is an AI-assisted inventory of files. It is not a human-authored hypothesis list and it is not an independent verification, except for the one floating-point command named under VERIFIED.
+
 ## Status labels
 
 | Label | Meaning used in this audit |
@@ -14,6 +16,7 @@ This ledger records what is in the repository. It does not treat comments, paper
 | UNREPRODUCED | Code describes a computation, but no saved numeric artifact of that computation is in the repo. |
 | INCONSISTENT | Two in-repo sources assign different values or criteria to the same named object. |
 | PLANNED | Design, dashboard, or code path with no stored outcome. |
+| HYPOTHESIS | A stated expectation, framework-internal formula, or literature association. Not a result. A failed prediction stays a failed prediction unless a later pre-registration explicitly changes the hypothesis. |
 
 `lean` and `lake` are not on `PATH` in this environment. The only project `.olean` files found outside vendored Mathlib are `lean4_ns_uop/.lake/lakefile.olean` and `lean4_ns_uop_pass54_mathlib/.lake/lakefile.olean`. No module `.olean` exists for any project theorem file. Header text that says "formally verified" is therefore not Lean verification.
 
@@ -909,3 +912,113 @@ Pass runners under `analyses/pass*/runner.py` or `run.py` pair with the `results
 - No Lean type-check.
 - Nested fields that this process did not open are marked as parallel reads or omitted.
 - Paper and book claims of "Lean verified", "99.71% accuracy", sacred-interval laws, and consciousness thresholds are not given experiment IDs unless a script artifact exists.
+
+## 21. Integrity reclassification
+
+Applied against `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. This section does not add results. It stops several stored or printed objects from being read as confirmation.
+
+### 21.1 Evidence class
+
+| Object | Class | Why |
+| --- | --- | --- |
+| `lean4/verify_theorems.py` 9/9 | VERIFIED | Floating-point identity check under Lean names. Not empirical validation. |
+| Crystal B.4 `Match: False` | REPRODUCIBLE | Negative result. Kept. |
+| H4 AUC 0.2678, p_perm 1.0 | REPRODUCIBLE | Failed original direction. Not converted into the R20 confirmation. |
+| H4-R20 inverted AUC 0.7318 | REPRODUCIBLE | A different, pre-registered hypothesis. |
+| GILE real-data G, L, E non-significant | REPRODUCIBLE | Negative results. Kept. |
+| UOP `uop_better_than_baseline=false` | REPORTED | Negative result. Kept. |
+| Pharma Pass-6 margin +8.3 pp, not +35 pp | REPORTED | `analyses/pharma_baseline/results_2026-05-08.txt`. The file itself rejects the book figure. |
+| Zebrafish N=10000 print label | HYPOTHESIS | No stored row, no connectome. |
+| Radiant / G* / Born-shaped formulas | HYPOTHESIS | Framework-internal. Not experimentally resolved. |
+| FAAH-OUT therapy, Jo Cameron phenotype as a TI result | HYPOTHESIS | Literature and pitch prose. No wet-lab artifact. No zebrafish ortholog file. |
+| LLM rater κ and Truth Engine UI | REPORTED or PLANNED | LLM output is not evidence of the claim being rated. |
+| Millennium Lean headlines | HYPOTHESIS | Gap axioms. Not proofs. |
+
+A simulation, including UOP phase transition, connectome scorecards, and GILE intelligence sims, is not empirical validation. A Pearson r, including DANDI coupling, is not causation. A hardcoded literature percentage is not a TI Sigma confirmation.
+
+### 21.2 Thresholds that stay separate
+
+These are not one constant. No experiment in this audit resolves them into each other.
+
+| Symbol in the rules | What the repo currently writes | Class |
+| --- | --- | --- |
+| `√2 − 1` | `LCC_TRALSE` in `ti_sigma/constants.py`; Emerick Threshold `ET` and the canonical G weight in `papers/GILE_DEFINITION_CANONICAL_2026-07-04.md` | Definition. Using it as both a gate and a GILE weight is a modeling choice, not a measurement. |
+| 0.93 Radiant | At least three formulas: Python `sqrt(e/π) ≈ 0.9306`; canonical `G* = √(1 − e^{−2}) ≈ 0.92987`; prose `1 − e^{−e} ≈ 0.934` | INCONSISTENT formulas. Each is HYPOTHESIS until an experiment distinguishes them. |
+| `T` | Used for different objects (tralse region, a diagram constant `1 − e^{−e}`, truth labels). Not a single frozen threshold. | INCONSISTENT name. |
+| `φ` | `(1+√5)/2`. Algebraic. | Definition. Not a biological threshold. |
+| Born-shaped value | Canonical paper: `Existence = (G*)² = 1 − e^{−2} ≈ 0.865` | HYPOTHESIS. Distinct from G* and from `C_EMERICK`. |
+| Emerick Constant | `C = 1/(φ√2) ≈ 0.437016024448821` | Algebraic definition. Distinct from `√2 − 1` and from 0.93. |
+
+### 21.3 Elegance and Goodness
+
+`papers/GILE_DEFINITION_CANONICAL_2026-07-04.md` defines Elegance as beauty of form and Goodness as the mean of four facets: Coherence, Concreteness, Continuity, Consistency. Older URBs use a different quartet: Clarity, Coherence, Compassion, Courage. A search did not find an operational definition named "8Cs" in code or in that canonical file.
+
+The integrity rule requires Goodness through the 8Cs. That operationalization is not implemented. Status of "8Cs": **HYPOTHESIS** (named in the rules, absent as a measurement protocol).
+
+Overlap flags, not confirmations:
+
+| Feature | Overlaps | Where |
+| --- | --- | --- |
+| E = `−log(decision-tree node count)` | compression / complexity, not a separate beauty measurement | `analyses/gile_nonredundancy_test/gile_nonredundancy_test.py` lines 21 and 312–313 |
+| G = `−mean std` of bootstrap probabilities, called a "Four-C proxy" | stability / one coherence facet, not four or eight facets | same file, lines 23–24 |
+| Book gloss "Elegance is least action" | HEM, pragmatic success | `book/ch21_ethics.md`, `book/ch27_enlightenment.md` |
+| Canonical note that E overlaps HEM presence | HEM | `papers/GILE_HEM_NONTECHNICAL_SUMMARY_2026-05-17.md` |
+| `G + I → accuracy` chord | Intuition absorbed into a joint accuracy claim | canonical GILE file, section 1 |
+
+On the 52-row real table, E is not non-redundant. That negative result stands. It does not show that Elegance-the-construct failed, because the feature is a compression proxy.
+
+### 21.4 TIC and TIG
+
+They are not one object in the artifacts.
+
+| Object | Vertices | Artifact |
+| --- | --- | --- |
+| Crystal / TSC Hamiltonian | 57 | `analyses/crystal_b4_hamiltonian/results.txt` |
+| B68 graph called TIG | 9 | `analyses/pass77_b68_meijer_octahedron_vs_ti/results.json` |
+| `ti_sigma_graph.py` TI-G | 57, "same nodes and ring assignments as the TSC Crystal" | no epidemic artifact |
+
+`papers/PASS_77_B74_...md` records a prose ruling that the canonical TSC is the 57-vertex object and the 9-vertex object is TIG. That sentence is a **HYPOTHESIS / naming ruling**, not a frozen code version. `ti_sigma_graph.py` still builds the epidemic graph from the crystal's rings. No canonical hash or version pin exists for either graph. Biological prediction from either graph is not licensed by a frozen canonical version.
+
+### 21.5 Biology
+
+Search of the repo found no zebrafish FAAH-OUT ortholog sequence, alignment, or experiment. The connectome script's "Zebrafish" label is a size on a power-law printout.
+
+Jo Cameron appears as:
+
+- pitch and book prose (`blissgene_slides_content.md`, `book/ch15_lcc.md`, which calls the FAAH sweep simulation-only)
+- a hardcoded row in `analyses/pharma_baseline/linear_baseline.py`: `("E05", 100.0, 134.3, 5)` commented "Jo Cameron -> full FAAH stack"
+
+That row is a literature percentage placed next to a simulator output. It is not a therapeutic-effect measurement, not a human trial, and not a zebrafish result. Class: **HYPOTHESIS** for any translational claim. The Pass-6 baseline file is a **REPORTED** comparison of those hardcoded numbers, and it preserves the negative finding that the book margin is not reproduced.
+
+### 21.6 Model competition
+
+A TI Sigma model does not win by producing a pattern. The four required comparisons are: simple baseline, conventional scientific baseline, capacity-matched generic model, randomized or null model.
+
+| Experiment | Simple | Conventional | Capacity-matched | Null | Outcome |
+| --- | --- | --- | --- | --- | --- |
+| Pharma Pass 6 | mean, median, majority, coin-flip | stack-size linear LOO | not present | coin-flip | Directional 100% ties majority, because 12/12 effects are positive. Magnitude 75% vs mean-magnitude 66.7% (+8.3 pp). Book "+35 pp / 46% linear" is not in this file. |
+| GILE non-redundancy | permutation | linear ΔR² | random forest is the nonlinear arm, not a separate capacity-matched non-TI model | 500 perms; synthetic controls | I only, on this proxy |
+| H4 SAT | permutation AUC | none | none | permutation mean 0.499 | original direction fails |
+| Crystal B.4 | urb_645 order (not matched) | none | none | none | negative |
+| 9-vertex TIG | octahedron chromatic 3 | none | none | none | chromatic-3 claim fails |
+| UOP abstention | raw threshold | isotonic / scrambled cap as stored | not separated | scrambled caps | UOP not better |
+
+No other indexed experiment was shown to have all four comparisons.
+
+### 21.7 Negative results kept
+
+These stay in the record as failures or ties. They are not re-read as confirmation.
+
+- Crystal B.4 order mismatch
+- H4 lower-energy AUC 0.268
+- GILE G, L, E on the real 52-row table
+- UOP abstention `uop_better_than_baseline=false`
+- Pharma directional tie with the majority baseline, and the +8.3 pp margin instead of +35 pp
+- DANDI P3b `INELIGIBLE` and the mixed 3-way
+- IBL and rodent mood F-tests stored as `REFUTED` where the artifact says so
+- Polar LF/HF with zero sessions
+- MR rater κ of 0 for correctness on the OpenAI arm
+
+### 21.8 What this file is
+
+AI-assisted file inventory, 2026-10-05. Human-authored rules live in `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. Suggestions in section 21 are audit notes. They are not new scientific hypotheses and they were not independently verified beyond the citations above.
