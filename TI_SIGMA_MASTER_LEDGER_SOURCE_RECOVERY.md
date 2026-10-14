@@ -4,7 +4,9 @@ Recovery date: 2026-10-14.
 
 This file fills the 14 October 2026 master test ledger (`TI_Sigma_Master_Test_Ledger_Latest_Results_2026-10-14_2119.md`, entries T01–T38). The master ledger was an inclusive register of remembered scores. Many of those scores were marked unreconciled because the raw artifact had not been attached. This recovery attaches the artifact when one exists.
 
-Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. A stored JSON is REPORTED. It is not re-executed here. LLM raters are not human psychometrics. Simulations are not external benchmarks. Two reports of the same named test that disagree stay INCONSISTENT.
+Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. A stored JSON is REPORTED unless a later note says the arithmetic was recomputed. LLM raters are not human psychometrics. Simulations are not external benchmarks. Two reports of the same named test that disagree stay INCONSISTENT.
+
+The version comparison for truth labels, the Eight-C mock, GILE weight specifications, and the LCC brain-coupling tests is in `TI_SIGMA_PROVENANCE_AND_DISCREPANCY.md`. The BlissGene zebrafish primary-study proposal is in `BLISSGENE_ZEBRAFISH_PRIMARY_STUDY_PROPOSAL.md`.
 
 ## Sources actually searched
 
