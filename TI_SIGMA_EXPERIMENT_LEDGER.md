@@ -6,6 +6,8 @@ This ledger records what is in the repository. It does not treat comments, paper
 
 Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. The rules in that file are the human-authored working standard. This ledger is an AI-assisted inventory of files. It is not a human-authored hypothesis list and it is not an independent verification, except for the one floating-point command named under VERIFIED.
 
+Source recovery against the 14 October 2026 master test ledger (T01–T38) is in `TI_SIGMA_MASTER_LEDGER_SOURCE_RECOVERY.md`. That file attaches each master-ledger entry to the GitHub artifact that actually stores the number. It also records which ChatGPT extracts are in the repo and which master-ledger claims have no artifact in GitHub, ChatGPT extracts, or the current Perplexity upload set.
+
 ## Status labels
 
 | Label | Meaning used in this audit |

@@ -194,3 +194,7 @@ The human-authored standard is `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. The notes
 **Negative results.** Section 21.7 of the ledger lists failures that remain failures. The H4 inverted replication does not rewrite the original H4 hypothesis.
 
 **Authorship.** Rules: human-authored in the chat that added them. Ledger, gaps, and this application: AI-assisted. The only check re-run in the audit remains `python3 lean4/verify_theorems.py`.
+
+## G15. Master-ledger rows still without an artifact
+
+`TI_SIGMA_MASTER_LEDGER_SOURCE_RECOVERY.md` attaches T02–T18, T23, T32, and T33 to stored files. The rows that remain raw-data-missing after searching this branch, `origin/product/truth-engine-alpha-1.1` at `58e78046`, the in-repo ChatGPT extracts, and the current upload set are T01, T24–T31, T34–T36, and T38. Phase D is INCONSISTENT: the same commit stores module macro-F1 `1.0` and module macro-F1 `0.8833`. Eight-C Stage A mock exact-match `0.0` lives only on the product branch. It is not an Eight-C κ.
