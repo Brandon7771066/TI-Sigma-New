@@ -6,7 +6,7 @@ This file fills the 14 October 2026 master test ledger (`TI_Sigma_Master_Test_Le
 
 Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. A stored JSON is REPORTED unless a later note says the arithmetic was recomputed. LLM raters are not human psychometrics. Simulations are not external benchmarks. Two reports of the same named test that disagree stay INCONSISTENT.
 
-The version comparison for truth labels, the Eight-C mock, GILE weight specifications, and the LCC brain-coupling tests is in `TI_SIGMA_PROVENANCE_AND_DISCREPANCY.md`. The BlissGene zebrafish primary-study proposal is in `BLISSGENE_ZEBRAFISH_PRIMARY_STUDY_PROPOSAL.md`.
+The version comparison for truth labels, the Eight-C mock, GILE weight specifications, and the LCC brain-coupling tests is in `TI_SIGMA_PROVENANCE_AND_DISCREPANCY.md`. The BlissGene zebrafish primary-study proposal is in `BLISSGENE_ZEBRAFISH_PRIMARY_STUDY_PROPOSAL.md`. The 2026-10-16 ChatGPT consolidation (read 2026-10-20, not committed) is indexed in `research/chatgpt_recovery/`.
 
 ## Sources actually searched
 
@@ -15,6 +15,7 @@ The version comparison for truth labels, the Eight-C mock, GILE weight specifica
 | GitHub, current branch | Result JSON under `analyses/`, papers under `papers/` | The GILE, HEM, truth-label, truth-axis, UOP, CHSH, and Mermin artifacts below |
 | GitHub, `origin/product/truth-engine-alpha-1.1` at `58e78046` | Eight-C Stage A and Truth Engine phases C–F | Mock reproducibility and phase reports. Not on this branch’s working tree |
 | ChatGPT extracts in-repo | `extracted_chatgpt/` (6 markdown files), `.agents/memory/lcc-chatgpt-source-reconciliation.md`, ChatGPT pastes under `attached_assets/` | Conceptual LCC/UOP/patent notes. They do not contain the NIMA, LAPIS, aesthetics, TIG-15, or “IBM score 710” tables |
+| ChatGPT consolidation dossier | Uploaded text dump of `TI_Sigma_Cursor_Recovery_Bundle_2026-10-16.zip`, indexed under `research/chatgpt_recovery/` | Literature transcriptions for Mather, Chen/NIMA, LAPIS, PAMELA, Koyama, and Krug. Computational pilots for formal economy, Phase 45, DailyDialog, and a nine-turn chatbot thread. The dump is not in git |
 | Perplexity | No conversation export is in the current upload set | The master ledger cites a 2026-08-02 Perplexity note on Eight-C freeze integrity. That note is not re-extractable from a file here |
 
 ChatGPT is not a container of the Perplexity, Gemini, or VS Code numerical tables in this repository. Those tools are mentioned in memory notes and import guides. Their raw transcripts are not stored as result files.
@@ -204,23 +205,23 @@ Current `main` commit message at the 2026-10-05 audit: `b5955f25`, “Adapt publ
 
 Three radiant-cap formulas remain in the corpus and must stay uncollapsed: `√(e/π) ≈ 0.9306` in `ti_sigma/constants.py`, `G* = √(1−e^{−2}) ≈ 0.92987` in the UOP JSON, and prose `1−e^{−e} ≈ 0.934`. MR1 `√2−1` is a different constant. ChatGPT reconciliation (`.agents/memory/lcc-chatgpt-source-reconciliation.md`) declines treating 0.6 and 0.707 as derived rungs.
 
-## Still missing after GitHub, ChatGPT-extract, and Perplexity search
+## Still missing after GitHub, the in-repo extracts, and the 2026-10-16 dossier
 
-These master-ledger rows have no matching result JSON, CSV, or ChatGPT extract in the workspace. They stay REPORTED / RAW DATA MISSING. They are not confirmed by their absence from the search, and they are not refuted by it.
+Rows with no result file and no literature transcription stay REPORTED / RAW DATA MISSING. Rows that now have a published-number CSV are REPORTED transcriptions: the underlying participant, annotation, or neural files are still absent. Absence does not confirm a claim, and a transcription does not replicate it.
 
 | ID | Claim as stated in the master ledger | Search result |
 | --- | --- | --- |
-| T01 | Eight-C LLM conceptual-validation metrics | Definitions exist on `58e78046` (`docs/conceptual/eight_c_operational_definitions_v3.md`). No endorsement counts or validity coefficients |
-| T24 | E8 match ≈70.8%; moonshine ≈67.69% | Moonshine paper `papers/URB_793_MOONSHINE_BOK_CRYSTAL.md` is an open conjecture. The 70.8% figure in `PASS_77_B166` is a confounder screen-off rate, not an E8 match |
-| T25 | TIG-15 C_avg ≈0.824; betweenness 0.625 / 0.089 / 0.036 | No TIG-15 result file with those values |
+| T01 | Eight-C LLM conceptual-validation metrics | Definitions exist on `58e78046` (`docs/conceptual/eight_c_operational_definitions_v3.md`). The dossier adds `analyze_stage_a.py` and empty rating templates. No endorsement counts or validity coefficients |
+| T24 | E8 match ≈70.8%; moonshine ≈67.69% | Moonshine paper `papers/URB_793_MOONSHINE_BOK_CRYSTAL.md` is an open conjecture. The 70.8% figure in `PASS_77_B166` is a confounder screen-off rate, not an E8 match. Not in the dossier |
+| T25 | TIG-15 C_avg ≈0.824; betweenness 0.625 / 0.089 / 0.036 | No TIG-15 result file with those values. The dossier’s 15-edge audit (chromatic number 4, diameter 2, spectral gap 2.2073) is a different graph summary |
 | T26 | “tralsebits ≈33 bits” tied to MI | Not derived in the 5-tier MI battery. Leave separate |
-| T27 | n=106 observers, ~66% island preference | No participant file |
-| T28 | NIMA SROCC 0.514→0.650 | No NIMA file. Word search hits “animal,” not NIMA |
-| T29 | FAAH network R²≈0.918 vs 0.624 | FAAH papers are in-silico sweeps and pitch prose. This R² pair is not in them |
-| T30 | LAPIS uniformly positive gains | No LAPIS result table |
-| T31 | Art cohorts vs population means | No effect-size table |
+| T27 | n=106 observers, ~66% island preference | Literature summary only. Mather 2023 numbers are in the dossier evidence matrix. Participant-level maps were not downloaded |
+| T28 | NIMA SROCC 0.514→0.650 | Literature summary only. PARA NIMA-trait 0.514 to 0.650 is one row of `TI_Sigma_Phase29_Personalization_Performance_Gains.csv`. Raw annotations absent |
+| T29 | FAAH network R²≈0.918 vs 0.624 | FAAH papers are in-silico sweeps and pitch prose. This R² pair is not in them and not in the gene screen |
+| T30 | LAPIS uniformly positive gains | Literature summary only. LAPIS NIMA-trait is 0.392 to 0.434. All six listed Chen gains are positive. Mean absolute gain is 0.023 on LAPIS, so “uniformly large” is not what the table says |
+| T31 | Art cohorts vs population means | Literature mention only. Celikors and Field, optimum cohort about 12% of sample. No effect size |
 | T34 | Halting / noncomputability | Design notes only. No oracle result |
-| T35 | Zebrafish TIΣ cognitive result | Koyama acquisition notes exist from earlier Perplexity work. No decisive TI-specific statistic is stored as a result JSON |
+| T35 | Zebrafish TIΣ cognitive result | Literature summary only. Koyama 2026 and Krug 2018 statistics are transcribed in the Phase 4 audit CSV. No TI-specific statistic and no fish recording |
 | T36 | Crystal / Myrion certification benchmark | Formulas exist. No frozen benchmark with a null model |
 | T38 | “100+/1300+ papers,” external architect review, IBM score 710 | URB #710 is a gravity paper title, not a score. No architect-review file and no deduplicated paper index with those counts |
 

@@ -90,4 +90,29 @@ Constants √2−1, 0.437, and the radiant cap were gated out of these tests bec
 
 ## 5. Still absent
 
-Eight-C endorsement counts and Eight-C κ. A rating matrix for the product-branch κ 0.842 / macro-F1 0.891 paragraph. A truth-axis study other than B125. A GILE weight tuple G .30 / I .25 / L .25 / E .20. Any LCC result in which L_hybrid beats raw coupling on held-out real data.
+Eight-C endorsement counts and Eight-C κ. A rating matrix for the product-branch κ 0.842 / macro-F1 0.891 paragraph. A truth-axis study other than B125. A GILE weight tuple G .30 / I .25 / L .25 / E .20. Any LCC result in which L_hybrid beats raw coupling on held-out real data. FAAH network R² 0.918 versus 0.624. E8 match 70.8% and moonshine match 67.69%. TIG-15 C_avg ≈ 0.824. A zebrafish FAAH-OUT ortholog alignment.
+
+## 6. ChatGPT consolidation dossier, read 2026-10-20
+
+The upload is a text dump of `TI_Sigma_Cursor_Recovery_Bundle_2026-10-16.zip` (108 indexed sources, 105 `SHA256SUMS.csv` rows, 89 distinct hashes). The dump itself is not in git. Inventory, crosswalk, missing list, and file hashes are in `research/chatgpt_recovery/`. Notebooks were not executed. `.gz` and `.parquet` members were not decoded. No credit, settlement, NDA, resume, or financial workbook is in the bundle.
+
+These rows are published numbers copied into CSVs. They are REPORTED transcriptions. They are not TI Sigma datasets and they are not replications.
+
+| Ledger ID | Transcription | File in the dump | Limit |
+| --- | --- | --- | --- |
+| T27 | Mather 2023: 106 observers, about 66% in two preference islands | `TI_Sigma_Phase29_Elegance_Empirical_Evidence_Matrix.csv` | Pavlovia raw file not downloaded |
+| T28 | PARA NIMA-trait SROCC 0.514 to 0.650. Five further Chen rows are in the same file. Mean absolute gain 0.076 on PARA and 0.023 on LAPIS | `TI_Sigma_Phase29_Personalization_Performance_Gains.csv` | Raw annotations not unpacked |
+| T30 | LAPIS NIMA-trait SROCC 0.392 to 0.434. Separate published score: PAMELA user SROCC 0.4514 versus HPSv3 0.4019 | same gains CSV; `TI_Sigma_Phase30_PAMELA_Published_Personalization_Results.csv` | Gains are small. User-study totals are condition scores, not sample sizes |
+| T31 | Celikors and Field mentioned; optimum cohort about 12% of sample | Phase 29 evidence matrix | No effect size and no raw ratings |
+| T35 | Koyama 2026: 181 fish, learner fraction 46.4%, 804 event cells across 10 fish, danger reassignment 89.7%, safety 81.0%. Krug 2018: faah2a genotype F = 1.89 and genotype × nicotine F = 1.224, both P > 0.05; nicotine F = 81.51, P < 0.0001 | `TI_Sigma_Zebrafish_Phase4_empirical_audit.csv` | Not a TI feature test. Raw neural binaries still blocked. faah2a larval nervous system: not detected by whole-mount ISH |
+
+Computational files recovered with the ceiling written in the source:
+
+- Phase 31 formal economy: 20 math, 10 code, and 10 explanation pairs; equivalence rate 1.0. H_FE0 (“formal economy is the universal core of elegance”) is REJECTED in the decision CSV. Human elegance ratings are still required.
+- Phase 45: M2 minus M1 cross-validated R² surplus 0.18345. The report says the outcome proxy was built from the elegance features.
+- DailyDialog: 302 eligible dialogues. Mean real-partner gain over self-history −0.0747. Real versus permuted partners, permutation p = 0.0396. High-RAS half ρ = 0.023, p = 0.78. The report says this is not confirmation of an LCC constant.
+- Nine-turn chatbot thread: mean reciprocal alignment 0.967. The report says this is not rigorous validation.
+- Phase 8 gene screen: hand-assigned components. cnr1 screen score 0.778, faah2a 0.681. A screen weight, not a measured effect.
+- A 15-edge itinerary audit (connected, chromatic number 4, unweighted diameter 2, weighted diameter 5.8599, Laplacian spectral gap 2.2073) is a different object from the missing TIG-15 clustering coefficient.
+
+The 28 September archive still summarizes truth-label κ as about 0.906–0.92. It does not contain the rating matrices already in GitHub, and it does not resolve the product-branch prose κ 0.842. MIM `REAL_RUN_ANALYSIS.json` matches the counts already tied to GitHub Actions run 33466162168. Biological Phase 0 remains false.

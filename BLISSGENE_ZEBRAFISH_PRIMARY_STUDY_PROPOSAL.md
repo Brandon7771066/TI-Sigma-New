@@ -12,11 +12,13 @@ Governing standard: `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`. A fish behavior stud
 | Pharma baseline | `analyses/pharma_baseline/results_2026-05-08.txt` | 12 published experiments. Directional accuracy 12/12 ties an always-positive baseline, because every empirical effect in the set is positive. Magnitude-within-2× is 75% versus 66.7% for a mean-magnitude baseline | Not a trial. The Jo Cameron row in `linear_baseline.py` is a hardcoded pair `(100.0, 134.3)` |
 | Human FAAH-OUT / Jo Cameron | pitch and book prose, including `book/ch15_lcc.md` | Motivation for a hypothesis | No genotype file, no zebrafish ortholog alignment, no therapeutic outcome table |
 | Larval zebrafish mention | `papers/PASS_77_B35_...md` | One inventory row: whole-brain light-sheet, about 80,000 neurons, synapse map partial, Ahrens/Janelia | No recording, no endpoint, no statistic |
-| Koyama acquisition notes | remembered in the master ledger; no result JSON in this workspace | A lead | Not a TI Sigma effect |
+| Koyama 2026 figures | ChatGPT recovery dossier, `TI_Sigma_Zebrafish_Phase4_empirical_audit.csv` (SHA-256 `cf7e6261824a5b1e70bbee2df9145ee7daec7d5e935ff45ab369fb79558628ad`) | Published transcription: 181 fish, learner fraction 46.4%, 804 event cells across 10 fish, danger reassignment 89.7%, safety reassignment 81.0% | Not a TI Sigma feature test. Raw neural binaries are still blocked. Not refit in this repo |
+| Krug 2018 faah2a locomotor statistics | same Phase 4 CSV | Published transcription: genotype main effect F = 1.89 and genotype × nicotine F = 1.224, both P > 0.05. Nicotine F = 81.51, P < 0.0001. Phase 6 prior: faah2a not detected by whole-mount ISH in the larval nervous system | Not a new fish experiment. Not an FAAH-OUT ortholog. Not a BlissGene knockdown |
+| Phase 8 gene screen | dossier file `TI_Sigma_Zebrafish_Phase8_Gene_Screen.csv` | Hand-assigned component scores. cnr1 0.778, faah2a 0.681, faah 0.667 | Screen weights, not measured effects |
 | Drosophila MIM | `main` at `b5955f25` and the master-ledger run summary | Whole-brain model execution and sensory propagation | Not a learning result and not a zebrafish result |
 | LCC vs synchronized brains | `analyses/lcc_uop_openneuro/` and `PASS_77_B164` | Human dual-EEG. The coupling features did not track duet versus metronome. L_hybrid did not beat raw correlation | The test of “does current LCC predict synchronized brain activity?” already exists, and it is negative on that dataset |
 
-Species actually studied in stored analyses: a C. elegans behavioral surrogate, a human EEG hyperscanning set, human actigraphy, and a fly connectome model. No Danio rerio recording is in the repo.
+Species actually studied in stored analyses: a C. elegans behavioral surrogate, a human EEG hyperscanning set, human actigraphy, and a fly connectome model. No Danio rerio recording is in the repo. The Koyama and Krug rows above are literature numbers copied into CSVs. They do not change BG-ZF-01. The Krug locomotor null and the larval in-situ limit are additional reasons the FAAH arm stays no-go until an orthology memo exists.
 
 ## Where LCC fits
 
