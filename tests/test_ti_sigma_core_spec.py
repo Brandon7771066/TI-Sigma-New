@@ -63,6 +63,8 @@ def test_eight_c_draft_is_not_described_as_validated():
 def test_hem_gile_bijection_stays_a_claim():
     assert "CONFLICT-HEM-GILE-MAP" in SPEC
     assert "provisionally maintained as a hypothesis" in SPEC
+    assert "Goodness" in SPEC and "Footprint" in SPEC
+    assert "has not been formally proven" in SPEC
     assert "not a demonstrated bijection" in SPEC or "Not a bijection" in SPEC
 
 
@@ -73,12 +75,20 @@ def test_open_questions_ask_the_owner_and_do_not_edit_the_registry():
     assert "CERTIFIED_EXACT" in OPEN
 
 
+def test_later_owner_sentences_stay_hypotheses():
+    assert "closest applicability" in SPEC
+    assert "different geometric axes" in SPEC
+    assert "before it is certified exact" in SPEC
+    assert "no particular order is expected" in SPEC
+    assert "No spacetime dimension has been speculated" in SPEC
+
+
 def test_owner_reading_is_recorded_as_definition_not_measurement():
-    assert "0.2.1-draft" in SPEC
+    assert "0.2.2-draft" in SPEC
     assert "deliberately unclear" in SPEC
     assert "base-5" in SPEC
     assert "two octonions" in SPEC
     assert "string theory" in SPEC
     assert "HYPOTHESIS" in SPEC
     assert "The Eight-C model is not a validated manifold." in SPEC
-    assert "0.2.1-draft" in LOG
+    assert "0.2.2-draft" in LOG
