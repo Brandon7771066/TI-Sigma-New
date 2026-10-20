@@ -54,6 +54,8 @@ Commit `58e78046`. Eight-C operational definitions v3, status `NEW_CANONICAL_DRA
 
 `TI_SIGMA_PROVENANCE_AND_DISCREPANCY.md` separates the truth-label instruments and records that GILE-W-SIM was not found as a stored tuple on this branch. The 2026-08-08 product file is where that tuple is explicit. Finding it there does not promote it from a simulation default.
 
-## 2026-10-20 — this freeze
+## 2026-10-20 — definition freeze, then owner reading
 
-`docs/theory/TI_SIGMA_CORE_SPECIFICATION.md` version 0.1.0-draft collects the rows above and assigns conflict IDs. It changes no weight, label, or result file. Open choices are listed in `docs/theory/TI_SIGMA_CORE_OPEN_QUESTIONS.md`.
+`docs/theory/TI_SIGMA_CORE_SPECIFICATION.md` version 0.1.0-draft collected the rows above and assigned conflict IDs. It changed no weight, label, or result file.
+
+Version 0.2.0-draft records the theory owner’s reading of the same day. Current use is: the Eight Cs are a matrix whose weights are deliberately unclear and may vary by domain when past weights were successful (harmonious with Goodness) or applicable; operational HEM is Footprint, Concrete Mechanisms, Relational Meaning, and Form, with the glosses in section 0 of the specification; GILE weights vary with domain success; truth axes are Real, Imaginary, Authority, and Pragmatic; truth values are base-5, so the 2026-05-08 base-4 ruling is superseded for current use and kept as history; Indeterminate stands until there is a reason to update it; Meta-Indeterminate may be resolved as Indeterminate; Myrion is the ideal balance of truth and existence; Myrion Resolution covers incompatible Meta-Indeterminate cases, ordinary evidence updates, and a Real-versus-Imaginary resolution. The sixteen coordinates are hypothesized as two octonions, Truth (GILE plus the four truth axes) and Existence (four HEM dimensions plus four spacetime dimensions). Existence’s spacetime half is unfinished, with string theory named only as a later intention. No coordinate array was filled. No result file was edited.

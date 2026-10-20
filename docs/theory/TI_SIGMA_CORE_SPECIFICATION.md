@@ -1,6 +1,6 @@
 # TI Sigma core specification
 
-Version: 0.1.0-draft. Date: 2026-10-20. Status of this document: PROVISIONAL DEFINITION.
+Version: 0.2.0-draft. Date: 2026-10-20. Status of this document: PROVISIONAL DEFINITION.
 
 This file freezes names, historical definitions, and provenance. It is not a validation experiment and it does not replace a result file. A canonical name is not a validated construct.
 
@@ -31,6 +31,35 @@ The calibration registry on `origin/product/truth-engine-alpha-1.1` was inspecte
 | `b3b2395d` | 2026-08-08 | Registry version 1.0.0, loader, resolver, schemas |
 
 On this branch the companion evidence files are `TI_SIGMA_PROVENANCE_AND_DISCREPANCY.md`, `papers/GILE_DEFINITION_CANONICAL_2026-07-04.md`, `papers/MR_TRUTH_LABELS_CANONICAL_RULING_2026-05-08.md`, and `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md`.
+
+## 0. Current operational reading (theory owner, 2026-10-20)
+
+The statements in this section are the theory owner’s current reading. Status: PROVISIONAL DEFINITION, except the octonion split, which is HYPOTHESIS. They do not erase earlier versions, and they are not new measurements.
+
+**Eight Cs.** The eight names are a matrix. Their weighting is deliberately unclear. A weight may be assigned to a C for a given problem when two conditions are both considered: the domain of that problem, and whether past weights were successful or applicable. Success here means harmonious with Goodness itself. No numeric weight vector is fixed by this ruling. The Eight-C model is not a validated manifold.
+
+**HEM, operational list.** Four dimensions:
+
+| Dimension | Owner definition, 2026-10-20 |
+| --- | --- |
+| Footprint | Existential impact on reality of the being or thing itself, for example mass or volume, distinguished from the imprint that being or thing leaves on reality through time, meaning indicators of existence. |
+| Concrete Mechanisms | Physical laws. |
+| Relational Meaning | Physical relationships between things. This dimension goes hand in hand with Concrete Mechanisms. |
+| Form | Material essence of beings or things. |
+
+URB #652’s Moral Presence / Conscious Meaning / Aesthetics list, and the product file’s Length / Width / Height / Time rows, stay historical. Spacetime is not part of this operational HEM list. It is named only inside the Existence hypothesis below, and that half is a work in progress.
+
+**GILE weights.** The weight tuple varies with domain success. The stored tuples in section 1 remain historical specifications. The simulation tuple 0.30 / 0.25 / 0.25 / 0.20 stays `INFERRED_NOT_EXPLICIT`. These are not universal empirical weights.
+
+**Truth axes.** The axes are the Real axis, the Imaginary axis, the Authority axis, and the Pragmatic axis. The 2026-05-07 five-axis list and the B125 names (degree, modality, separability, authority) stay historical instruments. Naming these four axes does not adopt the quaternion defaults 0.35 / 0.25 / 0.20 / 0.20, and it does not adopt the code flag `VALIDATED_CLUSTER`.
+
+**Truth values.** The set is base-5: True, False, Indeterminate, Meta-Indeterminate, and N/A. N/A is a fifth truth value. The 2026-05-08 base-4 ruling is superseded as the current owner position and remains in the corpus as a historical ruling. This statement does not place N/A on the Authority axis. That placement still has no file citation (`CONFLICT-NA-PLACEMENT`).
+
+**Indeterminate and Meta-Indeterminate.** An Indeterminate sentence stays Indeterminate unless there is a reason to update the truth value. The words “a reason” are not further operationalized here. A Meta-Indeterminate statement may be resolved as Indeterminate. The owner’s example is a 45-degree door: a door that is both closed and not closed. The 2026-05-08 ruling used the 45-degree door as the definition of Indeterminate itself. This 2026-10-20 example uses that image for a resolution from Meta-Indeterminate into Indeterminate. Both sentences stay.
+
+**Myrion and Myrion Resolution.** Myrion represents the ideal balance between truth and existence. Myrion Resolution is the process of resolving Meta-Indeterminate statements that seem incompatibly contradictory. Myrion Resolution also includes continuously updating truth values in general as new evidence arrives. A Myrion Resolution can also be carried out between the Real axis and the Imaginary axis, to arrive at an overall conclusion on a proposition’s truth value.
+
+**Sixteen coordinates.** Their structure is unclear. The hypothesis is two octonions. Truth is hypothesized to be an octonion of GILE’s four dimensions together with the four truth axes. Existence is hypothesized to be another octonion of the four operational HEM dimensions together with four spacetime dimensions. The Existence dimensions are a work in progress: string theory’s dimensions are intended to be integrated later, and they are not specified here. This hypothesis does not fill the length-8 arrays in `myrion_16d_vector.schema.json`, and it does not choose `PROPOSED_SEDENION` over `R16_VECTOR`. It is not a demonstrated bijection between GILE and HEM.
 
 ## 1. GILE
 
@@ -66,7 +95,7 @@ Falsifiable questions already written, still open in the cited notes: GSN-1-F1 (
 
 ## 2. HEM
 
-Canonical name: HEM, Holistic Existence Matrix. The user-facing four names for this freeze are Footprint, Concrete Mechanisms, Relational Meaning, and Form. Those four words are the first four entries of `HEM_CANONICAL_DIMENSIONS` in `687167ab` `hem.py`. They are not the only HEM list in the corpus.
+Canonical name: HEM, Holistic Existence Matrix. The operational list is the four definitions in section 0. Those four words are also the first four entries of `HEM_CANONICAL_DIMENSIONS` in `687167ab` `hem.py`. The owner’s 2026-10-20 glosses are the current reading of the words. They are not the only HEM list in the corpus.
 
 | Version | Dimensions | Source | Status |
 | --- | --- | --- | --- |
@@ -94,13 +123,13 @@ The instrument text is `experiments/eight_c_goodness_pilot/docs/conceptual/eight
 | Eight Cs | The eight names above | v3 says Goodness is scored separately, as a circularity safeguard | Product file at `58e78046` |
 | Integrity rule | “the 8Cs” | “Goodness must remain operationally defined through the 8Cs” | `TI_SIGMA_RESEARCH_INTEGRITY_RULES.md` |
 
-The Eight-C draft and the integrity rule disagree about whether Goodness is computed from the Cs. The 2026-07-04 note uses four facets, not eight. Status of the Eight-C model: PROVISIONAL DEFINITION. The Eight-C model is not a validated manifold. Validity and any unified-manifold claim are UNRESOLVED. Terminology in this section does not validate the model.
+The Eight-C draft and the integrity rule disagree about whether Goodness is computed from the Cs. The 2026-07-04 note uses four facets, not eight. The 2026-10-20 owner reading treats the eight names as a matrix and leaves the weighting deliberately unclear, with domain-conditional weights allowed only by the rule in section 0. Status of the Eight-C model: PROVISIONAL DEFINITION. The Eight-C model is not a validated manifold. Validity and any unified-manifold claim are UNRESOLVED. Terminology in this section does not validate the model.
 
 No Eight-C Fleiss κ or endorsement table is in the repository. Conceptual, scoring, discriminant, predictive, and incremental validity are unmeasured.
 
 ## 4. Truth axes
 
-The four names requested for this freeze are Real, Imaginary, Authority, and Pragmatic. Those four strings are the fields of `TruthAxesQuaternionBlock` (`f9c08a02`): defaults 0.35, 0.25, 0.20, 0.20, notation `Q = Real + i*Imaginary + j*Authority + k*Pragmatic`. The same class sets `cluster_validation_status` to `VALIDATED_CLUSTER` and `individual_axis_status` to `PARTIALLY_VALIDATED`. This specification does not adopt that cluster string as an empirical result. No rating matrix for those four weights is in the registry JSON. `get_truth_axes` returns nothing in `CERTIFIED_ONLY` mode.
+The current axis names, by the 2026-10-20 owner statement, are Real, Imaginary, Authority, and Pragmatic. Those four strings are also the fields of `TruthAxesQuaternionBlock` (`f9c08a02`): defaults 0.35, 0.25, 0.20, 0.20, notation `Q = Real + i*Imaginary + j*Authority + k*Pragmatic`. The owner statement selects the names. It does not select those default numbers. The same class sets `cluster_validation_status` to `VALIDATED_CLUSTER` and `individual_axis_status` to `PARTIALLY_VALIDATED`. This specification does not adopt that cluster string as an empirical result. No rating matrix for those four weights is in the registry JSON. `get_truth_axes` returns nothing in `CERTIFIED_ONLY` mode.
 
 Other axis lists that remain in force as historical versions:
 
@@ -148,7 +177,7 @@ Raters in these files are language models. The studies are not human psychometri
 | Indeterminate | Passes MR1, MR2 holds a coherent balance. The ruling says this is not ignorance and not missing data. | The prompt defines I as unknown though determinate. |
 | Meta-Indeterminate | Fails MR1. Formal line: MI(P) ⟺ τ(P) ∧ ¬τ(P). “Always some form of nonsense.” | The prompt’s examples include a married bachelor and a four-sided triangle, which the ruling would also call nonsense, but the ruling’s operator is the identity clash, not the prompt’s “incoherence when entertained.” |
 
-Status of the ruling: CANONICAL TERMINOLOGY for the base-4 set inside that paper. The rater studies still used five codes. Both stay.
+Status of the ruling: CANONICAL TERMINOLOGY for the base-4 set inside that paper, as of 2026-05-08. The 2026-10-20 owner statement supersedes it for current use: the set is base-5, and N/A is a fifth truth value. The paper stays in the corpus. The rater studies already used five codes, with their own glosses. All three readings stay.
 
 ### 5.3 Product-branch glosses, marked as proposed relative to the ruling
 
@@ -180,6 +209,10 @@ Stored relations:
 
 Pipeline sentence in `replit.md`: N/A, then MI, then True / False / Indeterminate. That is an ordering claim in the architecture bullet, not a result from the rater studies.
 
+### 5.5 Owner reading, 2026-10-20
+
+Current set: base-5, as in section 0. An Indeterminate assignment stands until there is a reason to update it. Meta-Indeterminate may be resolved to Indeterminate, with the 45-degree door given as an example of a state that is both closed and not closed. Myrion Resolution covers that resolution of an apparent incompatibility, the later updating of any truth value when evidence arrives, and a resolution between the Real axis and the Imaginary axis that yields one conclusion about the proposition. Myrion is the ideal balance between truth and existence. None of these sentences replaces the 2026-05-27 prompt inside the stored κ files.
+
 ## 6. GILE–HEM mapping and higher-dimensional architecture
 
 These are theoretical claims. None is encoded here as a demonstrated bijection.
@@ -192,26 +225,27 @@ These are theoretical claims. None is encoded here as a demonstrated bijection.
 | 64-dimensional matrix | 4 GILE × 4 axes × 4 labels, with N/A folded into MI for a 4³ closure. | `replit.md` PDR-1 bullet; B108 | PROVISIONAL. B147 says that fold is the wrong identification of N/A and MI. |
 | Myrion 16-vector | `existence_byte` length 8, `truth_byte` length 8. `algebra_type` enum `PROPOSED_SEDENION` or `R16_VECTOR`. Baseline fixed to `R16_VECTOR`. | `b3b2395d` `myrion_16d_vector.schema.json` | The schema’s own algebra name says PROPOSED. Not a demonstrated sedenion model. |
 | Quaternion block | Four truth-axis slots as a quaternion. | `f9c08a02` | Code notation. See section 4. |
+| Two octonions | Truth = GILE plus the four truth axes. Existence = the four operational HEM dimensions plus four spacetime dimensions. Sixteen coordinates in all. Structure otherwise unclear. Existence’s spacetime half is unfinished; string theory’s dimensions are an intended later integration and are not listed. | Theory owner, 2026-10-20, section 0 | HYPOTHESIS. Not a filled coordinate array. Not a choice of `PROPOSED_SEDENION`. Not a demonstrated bijection. |
 
-`CONFLICT-HEM-GILE-MAP`: a bijection between the four GILE names and the four HEM names (Footprint, Concrete Mechanisms, Relational Meaning, Form) is a theoretical claim awaiting a separate validation. URB #652 does not state that bijection. The product HEM list has eight names, so it cannot be that bijection either.
+`CONFLICT-HEM-GILE-MAP`: a bijection between the four GILE names and the four HEM names (Footprint, Concrete Mechanisms, Relational Meaning, Form) is a theoretical claim awaiting a separate validation. URB #652 does not state that bijection. The product HEM list has eight names, so it cannot be that bijection either. The 2026-10-20 hypothesis pairs a Truth octonion with an Existence octonion. That pairing is not a dimension-wise bijection.
 
 ## 7. Conflict register
 
-Decisions below are not made in this file.
+Section 0 records the 2026-10-20 owner disposition. The historical definitions stay in the corpus. A disposition is not a measurement.
 
 | ID | Conflict | Left open because |
 | --- | --- | --- |
 | CONFLICT-GILE-NAME | Elegance versus Environment | B116 renames E and keeps Environment as a gloss. Older public copy still says Environment. |
-| CONFLICT-GILE-WEIGHTS | ET / 0.25 / 0.18 / 0.15, versus market 0.20 / 0.25 / 0.25 / 0.30, versus simulation 0.30 / 0.25 / 0.25 / 0.20 | Three specifications. The simulation tuple is `INFERRED_NOT_EXPLICIT`. None is a fitted universal weight. |
-| CONFLICT-EIGHT-C | Four Cs under G, versus eight Cs with Goodness separate, versus the integrity rule that Goodness is the eight Cs, versus Clarity / Coherence / Compassion / Courage | Four lists. The eight-C file is `NEW_CANONICAL_DRAFT`. No endorsement study. |
-| CONFLICT-HEM-DIMS | URB #652’s Footprint / Moral Presence / Conscious Meaning / Aesthetics, versus Footprint / Concrete Mechanisms / Relational Meaning / Form, versus those four plus Length, Width, Height, Time | The product file calls eight names canonical. URB #652 defines a different four, and ties three of them to GILE. |
-| CONFLICT-HEM-GILE-MAP | Bijection claim versus URB #652’s many-to-one (I and L into D3) versus domain ratios that are pillar weights | No validation study of a bijection is in the registry. |
-| CONFLICT-TRUTH-AXES | Five-axis review, versus the four-axis refinement (degree, labels, separability, authority), versus the quaternion (Real, Imaginary, Authority, Pragmatic) | B125 tested the refinement names, not the quaternion weights. The code’s `VALIDATED_CLUSTER` flag has no matrix here. |
-| CONFLICT-NA-PLACEMENT | N/A as a fifth rater code, versus base-4 with N/A outside the base set, versus `j`-dominant applicability, versus a remembered placement on the Authority axis | The Authority-axis placement has no file citation in the sources searched. B147’s falsifier is OPEN. |
-| CONFLICT-TRUTH-LABELS | Ruling glosses, versus the 2026-05-27 prompt, versus product glosses, versus κ 0.886 / 0.957 / 0.924 / 0.906 versus prose κ 0.842 | Different instruments. The 0.842 matrix is absent. 96.8% is already `MATHEMATICALLY_INCONSISTENT` on `58e78046`. |
-| CONFLICT-INDETERMINATE | Ruling: coherent balance, not missing data. Prompt: unknown though determinate. Product text: missing empirical data. | Three semantics. The κ studies used the prompt. |
+| CONFLICT-GILE-WEIGHTS | ET / 0.25 / 0.18 / 0.15, versus market 0.20 / 0.25 / 0.25 / 0.30, versus simulation 0.30 / 0.25 / 0.25 / 0.20 | Three specifications. The simulation tuple is `INFERRED_NOT_EXPLICIT`. None is a fitted universal weight. Owner disposition: the tuple in use varies with domain success. No new numeric tuple was supplied. |
+| CONFLICT-EIGHT-C | Four Cs under G, versus eight Cs with Goodness separate, versus the integrity rule that Goodness is the eight Cs, versus Clarity / Coherence / Compassion / Courage | Four lists. The eight-C file is `NEW_CANONICAL_DRAFT`. No endorsement study. Owner disposition: the eight names are a matrix and the weighting is deliberately unclear. |
+| CONFLICT-HEM-DIMS | URB #652’s Footprint / Moral Presence / Conscious Meaning / Aesthetics, versus Footprint / Concrete Mechanisms / Relational Meaning / Form, versus those four plus Length, Width, Height, Time | The product file calls eight names canonical. URB #652 defines a different four, and ties three of them to GILE. Owner disposition: the operational list is the four glosses in section 0. Spacetime is reserved for the unfinished Existence octonion. |
+| CONFLICT-HEM-GILE-MAP | Bijection claim versus URB #652’s many-to-one (I and L into D3) versus domain ratios that are pillar weights | No validation study of a bijection is in the registry. The 2026-10-20 octonion hypothesis does not state a dimension-wise bijection. |
+| CONFLICT-TRUTH-AXES | Five-axis review, versus the four-axis refinement (degree, labels, separability, authority), versus the quaternion (Real, Imaginary, Authority, Pragmatic) | B125 tested the refinement names, not the quaternion weights. The code’s `VALIDATED_CLUSTER` flag has no matrix here. Owner disposition: current names are Real, Imaginary, Authority, and Pragmatic. |
+| CONFLICT-NA-PLACEMENT | N/A as a fifth rater code, versus base-4 with N/A outside the base set, versus `j`-dominant applicability, versus a remembered placement on the Authority axis | The Authority-axis placement has no file citation in the sources searched. B147’s falsifier is OPEN. Owner disposition: N/A is a fifth truth value, so the current label count is base-5. That statement does not assign N/A to the Authority axis. |
+| CONFLICT-TRUTH-LABELS | Ruling glosses, versus the 2026-05-27 prompt, versus product glosses, versus κ 0.886 / 0.957 / 0.924 / 0.906 versus prose κ 0.842 | Different instruments. The 0.842 matrix is absent. 96.8% is already `MATHEMATICALLY_INCONSISTENT` on `58e78046`. The base-5 ruling does not rewrite those instruments. |
+| CONFLICT-INDETERMINATE | Ruling: coherent balance, not missing data. Prompt: unknown though determinate. Product text: missing empirical data. | Three semantics. The κ studies used the prompt. Owner disposition: Indeterminate stands until there is a reason to update it, and Meta-Indeterminate may be resolved as Indeterminate. The update rule is not yet an instrument sentence. |
 | CONFLICT-ELEGANCE | Beauty of form, versus Environment, versus an MDL / node-count proxy, versus HEM Form | Integrity rules require the overlap to stay flagged. |
 
 ## 8. What this freeze does not do
 
-It does not change `master_registry_v1.json`, the rating files, or any result JSON. It does not treat LLM κ as human validation. It does not treat the Eight Cs as a validated manifold. It does not treat GILE-W-SIM as universal empirical weights. It does not treat a HEM:GILE bijection as a fact.
+It does not change `master_registry_v1.json`, the rating files, or any result JSON. It does not treat LLM κ as human validation. It does not treat the Eight Cs as a validated manifold. It does not treat GILE-W-SIM as universal empirical weights. It does not treat a HEM:GILE bijection as a fact. The 2026-10-20 owner reading is a definition update. It is not a completed coordinate map and not a string-theory construction.
