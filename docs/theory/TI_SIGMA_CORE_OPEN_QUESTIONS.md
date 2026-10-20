@@ -15,6 +15,7 @@ These are definition choices. They are not new empirical results.
 5. **Label count.** Base-5. N/A is a fifth truth value. The 2026-05-08 base-4 paper remains historical.
 6. **Update rule.** Indeterminate stands unless there is a reason to update it. Meta-Indeterminate may be resolved as Indeterminate. Myrion Resolution covers that case, ordinary evidence updates, and a Real-versus-Imaginary resolution. Myrion is the ideal balance between truth and existence.
 7. **Sixteen coordinates, as a hypothesis only.** Two octonions: Truth = GILE plus the four truth axes; Existence = four operational HEM dimensions plus four spacetime dimensions. The internal structure is still unclear, and the Existence half is unfinished.
+8. **GILE–HEM bijection, as a hypothesis only.** The four-to-four bijection is provisionally maintained. It is not a demonstrated correspondence, and the pairing of names was not given.
 
 ## Decisions still needed
 
@@ -23,7 +24,7 @@ These are definition choices. They are not new empirical results.
 3. **N/A’s geometric home.** Base-5 settles the label count. It does not say whether N/A also sits on the Authority axis, on B147’s hyperimaginary `j`, or on neither. The Authority-axis placement still has no file citation. B147’s falsifier CCG-1-F1 stays open.
 4. **Registry entry `REG_TL_001`.** Decide whether a later registry version changes `CERTIFIED_EXACT` to a conflict status. The evidence for a change is already on `58e78046`: the 96.8% line is `MATHEMATICALLY_INCONSISTENT`, and Phase C says κ 0.842 was copied. No N=1,200 matrix has been found. This decision belongs on the product branch, in a new registry version, not as a silent edit of `master_registry_v1.json`. The base-5 ruling does not certify that entry.
 5. **Order inside each octonion, and the spacetime four.** The hypothesis names the two groups of eight. It does not order the eight Truth slots or the eight Existence slots. String theory’s dimensions were named as a later intention and were not listed. Do not fill the two length-8 arrays in `myrion_16d_vector.schema.json`. The schema’s `PROPOSED_SEDENION` choice is still unresolved against the two-octonion hypothesis.
-6. **HEM:GILE bijection.** Still not established. The octonion hypothesis does not state one. URB #652’s map of G onto Moral Presence, and of I and L together onto Conscious Meaning, is a historical formula, not the operational HEM list.
+6. **Which GILE dimension pairs with which HEM dimension.** The bijection is provisionally maintained as a hypothesis. The 2026-10-20 statements do not say whether Goodness pairs with Footprint, with Form, or with another operational HEM dimension, and likewise for Intuition, Love, and Elegance. URB #652’s map of G onto Moral Presence, and of I and L together onto Conscious Meaning, is a historical formula. It is not this bijection, and it is not the operational HEM list. How the bijection sits inside the two-octonion hypothesis is also unspecified.
 
 ## Not a decision, because the result already exists
 
@@ -33,4 +34,4 @@ These are definition choices. They are not new empirical results.
 
 ## Next implementation step
 
-A registry major version, under the rule in `b3b2395d` `VERSIONING.md`, is now licensed by the label-count change from the historical base-4 ruling to base-5, and by the change in which HEM names are operational. That version is not written in this patch. It waits until the remaining instrument sentences above are fixed, so the registry is not revised twice. Version 1.0.0 of the calibration registry and version 0.2.0-draft of this specification refer to each other and do not overwrite each other.
+A registry major version, under the rule in `b3b2395d` `VERSIONING.md`, is now licensed by the label-count change from the historical base-4 ruling to base-5, and by the change in which HEM names are operational. That version is not written in this patch. It waits until the remaining instrument sentences above are fixed, so the registry is not revised twice. Version 1.0.0 of the calibration registry and version 0.2.1-draft of this specification refer to each other and do not overwrite each other.
