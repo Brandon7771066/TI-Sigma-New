@@ -1,0 +1,204 @@
+{
+  "eight_c_kappa": {
+    "status": "ABSENT"
+  },
+  "eight_c_names": [
+    "coherence",
+    "consistency",
+    "continuity",
+    "concreteness",
+    "completion",
+    "criticality",
+    "closeness",
+    "choice"
+  ],
+  "mock": {
+    "base_seed_matching_stored_json": "TI_SIGMA_STAGE_A_V3_MOCK",
+    "choice_fields_excluded_from_hash": true,
+    "definitions_status": "NEW_CANONICAL_DRAFT",
+    "empirical_status": "ABSENT",
+    "fixed_strategy_exact_match_rate": 1.0,
+    "fixed_strategy_goodness_mad": 0.0,
+    "goodness_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 3.6374238095238094,
+      "observed": 4.031746031746032,
+      "seed": 20261021,
+      "two_sided_tail": 0.2897
+    },
+    "goodness_versus_mean_c": {
+      "generator_fact": "build_mock_rating draws goodness from sha256(seed|goodness) and each C from sha256(seed|name). Goodness is a separate bucket, not a function of the eight Cs.",
+      "n_mock_rows": 63,
+      "pearson_r_goodness_vs_mean_c": 0.012507296714551402,
+      "permutation_draws": 5000,
+      "permutation_seed": 20261022,
+      "two_sided_permutation_p": 0.9198160367926415
+    },
+    "instrument": "stage_a_v3_mock_hash",
+    "interpretation": "exact_match_rate 0.0 is the vary_by_attempt hash on this item file. The fixed strategy on the same items returns exact_match_rate 1.0 and MAD 0. The stored JSON is the CLI default seed, not the registered config seed.",
+    "items_csv": "Git LFS oid sha256:050b5590cf83bb8dca1cb0825141a7eac09b25771efb5b60a329a259c45464b9 size 10758. Not downloaded. Item text was read from the JSONL.",
+    "mean_c_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 3.6374238095238094,
+      "observed": 3.511904761904762,
+      "seed": 20261021,
+      "two_sided_tail": 0.72595
+    },
+    "mean_contradiction_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 1.2497396825396825,
+      "observed": 1.2936507936507937,
+      "seed": 20261024,
+      "two_sided_tail": 0.71375
+    },
+    "mean_of_contradiction_mads": 1.2936507936507937,
+    "mean_of_eight_c_mads": 3.511904761904762,
+    "metadata_csv": "Git LFS oid sha256:f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1 size 4549. Not downloaded. Repository LFS budget exceeded.",
+    "paid_collection_started": false,
+    "recomputed_fixed_cli_default": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 1.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 0.0,
+          "closeness": 0.0,
+          "coherence": 0.0,
+          "completion": 0.0,
+          "concreteness": 0.0,
+          "consistency": 0.0,
+          "continuity": 0.0,
+          "criticality": 0.0
+        },
+        "contradictions": {
+          "category_error": 0.0,
+          "competing_domains": 0.0,
+          "genuine_tradeoff": 0.0,
+          "incomplete_information": 0.0,
+          "measurement_uncertainty": 0.0,
+          "self_reference": 0.0,
+          "temporal_inconsistency": 0.0,
+          "true_incoherence": 0.0
+        },
+        "goodness": 0.0
+      }
+    },
+    "recomputed_vary_by_attempt_cli_default": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 0.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 3.7777777777777777,
+          "closeness": 3.3968253968253967,
+          "coherence": 3.4603174603174605,
+          "completion": 3.5238095238095237,
+          "concreteness": 3.587301587301587,
+          "consistency": 3.746031746031746,
+          "continuity": 3.142857142857143,
+          "criticality": 3.4603174603174605
+        },
+        "contradictions": {
+          "category_error": 1.2698412698412698,
+          "competing_domains": 1.2063492063492063,
+          "genuine_tradeoff": 1.3015873015873016,
+          "incomplete_information": 1.4285714285714286,
+          "measurement_uncertainty": 1.2380952380952381,
+          "self_reference": 1.3015873015873016,
+          "temporal_inconsistency": 1.26984126984127,
+          "true_incoherence": 1.3333333333333333
+        },
+        "goodness": 4.031746031746032
+      }
+    },
+    "recomputed_vary_by_attempt_registered_seed": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 0.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 3.8412698412698414,
+          "closeness": 3.8095238095238093,
+          "coherence": 3.8730158730158726,
+          "completion": 3.4603174603174605,
+          "concreteness": 3.619047619047619,
+          "consistency": 3.746031746031746,
+          "continuity": 3.555555555555556,
+          "criticality": 3.7777777777777777
+        },
+        "contradictions": {
+          "category_error": 1.3333333333333333,
+          "competing_domains": 1.0476190476190477,
+          "genuine_tradeoff": 1.0793650793650793,
+          "incomplete_information": 1.4285714285714286,
+          "measurement_uncertainty": 1.2380952380952381,
+          "self_reference": 1.2063492063492063,
+          "temporal_inconsistency": 1.3968253968253967,
+          "true_incoherence": 1.1428571428571428
+        },
+        "goodness": 4.317460317460318
+      }
+    },
+    "registered_base_seed": "TI_SIGMA_STAGE_A_V3_REGISTERED",
+    "seed_strategy_stored_run": "vary_by_attempt",
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "source_file_sha256": {
+      "config/stage_a_v3.yaml": "d1b8283b50674a447925029559f51cf3df7a1008fa9e36290465067b7215ad5d",
+      "data/items/ti_sigma_stage_a_v3_items.jsonl": "7d0e710a2dd0eee201be9b9d3db17cb1b477b1b5151c53c03ab77487d4fb5b29",
+      "results/reports/ti_sigma_stage_a_v3_mock_reproducibility.json": "1597aac4842fdaedd5ce0acd619d4c17e9b72b4d8892198ec76674d5f812be7c",
+      "src/ti_sigma_pipeline/contracts.py": "99d1a22d690fe3192d5e893fe71a62803df4e64c3f5ba5e90d082cd4bc9e7297",
+      "src/ti_sigma_pipeline/mock_rater.py": "8a7b53d2ce434f79e463661aeb7485d702f31b112bd7a61f3a652383ec40177f",
+      "src/ti_sigma_pipeline/pipeline.py": "42ebd44d009f2e2e3a5c1f9c3417b9f86ca7cf691a0df86df8101317c7be14fd"
+    },
+    "status": "REPRODUCIBLE",
+    "stored_json_matches_cli_default_seed": true,
+    "stored_json_matches_registered_seed": false,
+    "uniform_expectation_contradiction_mad": "20/16",
+    "uniform_expectation_score_mad": "440/121"
+  },
+  "preregistered_discriminations": {
+    "reason": "Stage A names Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity. No ratings table is in the repo. paid_collection_started is false. Those contrasts were not estimated.",
+    "status": "PLANNED"
+  },
+  "study": "eight_c_instrument_2026_10_20",
+  "weights": {
+    "baseline_choice_only_eighths": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "baseline_equal_weights_eighths": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "class": "SIMULATION",
+    "closest_applicability": "not scored; no distance was defined",
+    "constructed_nonredundant_transfer_tau_b": -1.0,
+    "domain_weights_assigned": false,
+    "duplicate_column_max_abs_composite_diff": 0,
+    "empirical_status": "ABSENT",
+    "independent_fraction_tau_below_1": 1.0,
+    "independent_mean_kendall_tau_b": 0.24050465826369907,
+    "independent_min_kendall_tau_b": -0.11315527740769757,
+    "instrument": "seeded_weight_identifiability",
+    "interpretation": "A single Eight-C weight vector is unidentified when two columns carry the same profile. A composite ranking stays put when every C is the same latent value, and it moves when the eight profiles are drawn independently. No domain success history was used.",
+    "n_items": 24,
+    "n_matrices": 200,
+    "null": "rank invariance, Kendall tau-b = 1, which is what proportional profiles satisfy",
+    "proportional_all_tau_equal_1": true,
+    "score_support": "uniform integers {0..10}",
+    "seed": 20261020,
+    "status": "REPRODUCIBLE"
+  }
+}

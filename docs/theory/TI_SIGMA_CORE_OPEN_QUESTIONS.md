@@ -31,6 +31,7 @@ These are definition choices. They are not new empirical results.
 - Truth-label κ values 0.886, 0.957, 0.924, and 0.906 stay attached to their own files. They are not averaged, and the arithmetic checks already performed are not a replication.
 - The GILE/HEM rater battery stays MIXED. Only G cleared κ 0.40 in that file.
 - LCC hybrid-index negatives stay negatives. They are outside this definition freeze and are not reopened here.
+- The 2026-10-20 Eight-C check (`analyses/eight_c_instrument_2026_10_20/`) recomputes the Stage A mock and runs a seeded weight simulation. Exact-match 0.0 is the `vary_by_attempt` hash under the CLI default seed. The simulation does not choose a weight vector and does not score closest applicability. Eight-C κ stays absent.
 
 ## Next implementation step
 

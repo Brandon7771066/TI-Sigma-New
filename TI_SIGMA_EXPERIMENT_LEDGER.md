@@ -955,7 +955,9 @@ These are not one constant. No experiment in this audit resolves them into each 
 
 `papers/GILE_DEFINITION_CANONICAL_2026-07-04.md` defines Elegance as beauty of form and Goodness as the mean of four facets: Coherence, Concreteness, Continuity, Consistency. Older URBs use a different quartet: Clarity, Coherence, Compassion, Courage. A search did not find an operational definition named "8Cs" in code or in that canonical file.
 
-The integrity rule requires Goodness through the 8Cs. That operationalization is not implemented. Status of "8Cs": **HYPOTHESIS** (named in the rules, absent as a measurement protocol).
+The integrity rule requires Goodness through the 8Cs. That operationalization is not implemented on this branch. Status of "8Cs" in the 2026-10-14 audit of this tree: **HYPOTHESIS** (named in the rules, absent here as a measurement protocol).
+
+2026-10-20 addendum. The product commit `58e78046` does contain a Stage A v3 draft (`NEW_CANONICAL_DRAFT`, `paid_collection_started` false). `analyses/eight_c_instrument_2026_10_20/` recomputes that commit’s mock. Exact-match 0.0 matches the runner default seed `TI_SIGMA_STAGE_A_V3_MOCK` with `vary_by_attempt`. The registered seed `TI_SIGMA_STAGE_A_V3_REGISTERED` does not match the stored JSON. The mock draws Goodness from its own hash key. A seeded weight simulation (seed 20261020) keeps rankings fixed for proportional profiles and moves them for independent profiles. That simulation assigns no domain weight. Eight-C κ remains absent. The draft is still not a validated manifold.
 
 Overlap flags, not confirmations:
 

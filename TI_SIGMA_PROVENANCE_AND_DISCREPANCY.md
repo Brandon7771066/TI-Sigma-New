@@ -42,19 +42,23 @@ Macro-F1 0.891 was not recomputed. No held-out prediction file for that F1 was f
 | ID | Instrument | File | Sample | Metric | Value | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | 8C-def | Operational definitions v3 | `experiments/eight_c_goodness_pilot/docs/conceptual/eight_c_operational_definitions_v3.md` on `58e78046` | definitions | none | status label `NEW_CANONICAL_DRAFT` | PLANNED instrument. Goodness is scored separately from the eight Cs |
-| 8C-mock | Hash mock rater | `src/ti_sigma_pipeline/mock_rater.py`; config `config/stage_a_v3.yaml`; report `results/reports/ti_sigma_stage_a_v3_mock_reproducibility.json` | 21 items × 3 attempts | exact-match rate | 0.0 | REPORTED. See the generator note below |
-| 8C-gaps | same JSON | same | same | mean absolute gap on a 0–10 integer scale | Goodness 4.032; eight Cs 3.143–3.778 | REPORTED |
+| 8C-mock | Hash mock rater | `experiments/eight_c_goodness_pilot/src/ti_sigma_pipeline/mock_rater.py` on `58e78046`; stored report `results/reports/ti_sigma_stage_a_v3_mock_reproducibility.json`; recompute `analyses/eight_c_instrument_2026_10_20/` | 21 JSONL items × 3 attempts | exact-match rate | 0.0 | REPRODUCIBLE against the original functions. The match is the CLI default seed `TI_SIGMA_STAGE_A_V3_MOCK` with `vary_by_attempt`. See the generator note |
+| 8C-seed | same functions, registered config seed | `config/stage_a_v3.yaml` base seed `TI_SIGMA_STAGE_A_V3_REGISTERED` | same 21 items | goodness mean absolute difference | 4.317460317460318 | REPRODUCIBLE arithmetic. This seed does not reproduce the stored JSON |
+| 8C-gaps | stored JSON, CLI default seed | same recompute | same | mean absolute gap on a 0–10 integer scale | Goodness 4.031746031746032; eight Cs 3.142857142857143–3.7777777777777777 | REPRODUCIBLE. Same seed as 8C-mock |
+| 8C-weights | Seeded synthetic profiles | `analyses/eight_c_instrument_2026_10_20/results.json` | 200 matrices, 24 items, seed 20261020 | Kendall tau-b, equal weights versus choice only | independent mean 0.24050465826369907; proportional tau-b 1; duplicate-column composite difference 0 | REPRODUCIBLE arithmetic. Class SIMULATION. No domain weight was fit |
 | 8C-κ | Eight-C Fleiss κ or endorsement counts | — | — | — | — | ABSENT |
 
 ### Generator note
 
-`stage_a_v3.yaml` sets `seed_strategy` to `vary_by_attempt` and `paid_collection_started` to false. `mock_rater.py` builds each score as `sha256(item, attempt) mod 11` for the Cs and Goodness (range 0–10). Changing the attempt index changes the hash. The generator is written to produce different integers on different attempts.
+`stage_a_v3.yaml` sets `seed_strategy` to `vary_by_attempt`, `base_seed` to `TI_SIGMA_STAGE_A_V3_REGISTERED`, and `paid_collection_started` to false. The mock runner’s own default base seed is `TI_SIGMA_STAGE_A_V3_MOCK`. On 2026-10-20 the original `build_mock_rating` and `_compute_reproducibility` were imported from `58e78046` and run on the 21-item JSONL. The stored reproducibility JSON matches the runner default as a parsed metric object. It does not match the registered config seed. The items CSV and the metadata CSV are still LFS pointers (budget exceeded, not downloaded). The hash input is item id, scenario text, attempt, and base seed. Substituting `choice_bearer` and `choice_scope` left the scores unchanged.
 
-The expected absolute difference of two independent uniform draws on {0,1,…,10} is 3.636. The stored gaps sit in that neighborhood. An exact-match rate of 0.0 is what this generator produces. It is a smoke test of a varying hash. It is not a human reliability study, not an LLM endorsement study, and not evidence that the eight definitions are meaningless.
+`mock_rater.py` builds each score as `sha256(seed|name) mod 11` for the eight Cs and, separately, for Goodness (range 0–10). Changing the attempt index changes the hash. The `fixed` strategy on the same items returns exact-match rate 1.0 and mean absolute difference 0.
 
-A `fixed` seed strategy exists in the same function and would repeat the hash. The stored run did not use it.
+The expected absolute difference of two independent uniform draws on {0,1,…,10} is 440/121. A 20,000-draw reference for the mean of 21 three-attempt gaps (seed 20261021) has Monte Carlo mean about 3.637. The stored goodness gap 4.031746031746032 has two-sided tail 0.2897 under that reference. The mean of the eight C gaps, 3.511904761904762, has two-sided tail 0.72595. The contradiction scale’s expectation is 20/16. These tails locate the hash output near the uniform expectation. They are not a reliability coefficient.
 
-Conceptual validity, scoring reliability, discriminant validity, predictive validity, and incremental validity remain unmeasured for the Eight Cs. The draft definitions are the instrument to freeze before any of those studies.
+Pearson r between the separate goodness bucket and the mean of the eight Cs, 63 mock rows, is 0.012507296714551402 (5,000 shuffles, seed 20261022, permutation p 0.9198160367926415). The source draws those two quantities from different hash keys.
+
+The weight check is separate and synthetic. Seed 20261020, 200 matrices of 24 items. Proportional profiles keep Kendall tau-b at 1 for equal weights versus choice only. Independent profiles move: mean tau-b 0.24050465826369907, and every matrix had tau-b below 1. Copying coherence into choice makes a transfer of weight between those two columns leave the integer composite unchanged (maximum absolute difference 0). A two-item transfer of the same mass onto concreteness reverses order (tau-b −1). No domain success history entered the seed. Closest applicability was not scored. Stage A’s named discriminations (Choice versus Concreteness, Concreteness versus Completion, Closeness versus Continuity) stay PLANNED. Eight-C κ stays ABSENT.
 
 ## 3. GILE and HEM specifications versus batteries
 
