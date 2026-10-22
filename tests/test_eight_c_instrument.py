@@ -92,11 +92,57 @@ def test_mock_schema_passes_and_fixed_icc_is_one():
     assert abs(local["icc"]["goodness"]["icc_1_1"]) < 0.5
 
 
+def test_registered_retry_accounting_and_blocked_profiles():
+    payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    attempts = payload["attempt_accounting"]
+    assert attempts["class"] == "GENERATOR"
+    assert attempts["planned_logical_ratings"] == 63
+    assert attempts["first_attempt_valid"] == 58
+    assert attempts["eventual_valid"] == 63
+    assert attempts["eventual_invalid"] == 0
+    assert attempts["total_attempts"] == 68
+    assert attempts["within_attempt_cap"] is True
+    assert attempts["base_seed"] == "TI_SIGMA_STAGE_A_V3_REGISTERED"
+    assert len(attempts["retry_keys"]) == 5
+    profiles = payload["engineered_profiles"]
+    assert profiles["status"] == "BLOCKED"
+    assert profiles["lfs_oid_sha256"].startswith("f5f3a276")
+    assert "intended_contrast" in profiles["required_and_unread"]
+    assert payload["preregistered_discriminations"]["status"] == "BLOCKED"
+
+
+def test_common_construct_and_goodness_accounting_stay_generator_results():
+    payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    construct = payload["common_construct"]
+    goodness = payload["goodness_accounted_for"]
+    assert construct["class"] == "GENERATOR"
+    assert construct["empirical_status"] == "ABSENT"
+    assert construct["permutation_seed"] == 20261024
+    assert construct["horn_seed"] == 20260902
+    assert construct["alpha"] == 0.05
+    assert len(construct["eigenvalues"]) == 8
+    assert construct["one_common_construct_accounts_for_the_eight"] is False
+    assert goodness["class"] == "GENERATOR"
+    assert goodness["fully_accounted_for"] is False
+    assert goodness["loo_r2"] < 1
+    assert "choice" in goodness["leave_one_c_out"]
+    assert payload["contradiction_selectivity"]["designed_type_selectivity"] == "BLOCKED"
+    assert payload["named_pairs"]["engineered_directional_contrast"] == "BLOCKED"
+    assert payload["mock_fleiss_kappa"]["human_or_llm_kappa"] == "ABSENT"
+    assert set(payload["named_pairs"]["pairs"]) == {
+        "choice_versus_concreteness",
+        "concreteness_versus_completion",
+        "closeness_versus_continuity",
+    }
+
+
 def test_report_keeps_the_reliability_claim_absent():
     text = (OUT / "EIGHT_C_INSTRUMENT_REPORT.md").read_text(encoding="utf-8")
     payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
     assert payload["eight_c_kappa"]["status"] == "ABSENT"
-    assert payload["preregistered_discriminations"]["status"] == "PLANNED"
+    assert payload["preregistered_discriminations"]["status"] == "BLOCKED"
+    assert payload["common_construct"]["construct_status"] == "NO_COMMON_CONSTRUCT"
+    assert "NO_COMMON_CONSTRUCT" in text
     assert "REPRODUCIBLE" in text
     assert "SIMULATION" in text
     assert "ABSENT" in text

@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import importlib.util
 import json
 import random
 import subprocess
@@ -62,6 +63,7 @@ MODULE_FILES = (
     "src/ti_sigma_pipeline/schema_check.py",
     "src/ti_sigma_pipeline/mock_rater.py",
     "src/ti_sigma_pipeline/pipeline.py",
+    "src/ti_sigma_pipeline/stage_a_v3.py",
 )
 
 ITEM_JSONL = f"{SOURCE_PREFIX}/data/items/ti_sigma_stage_a_v3_items.jsonl"
@@ -562,11 +564,35 @@ def weight_identifiability() -> dict:
     }
 
 
+def _remaining_module():
+    name = "stage_a_remaining"
+    if name in sys.modules:
+        return sys.modules[name]
+    script = Path(__file__).with_name("stage_a_remaining.py")
+    spec = importlib.util.spec_from_file_location(name, script)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
 def build_report() -> dict:
     mock = recompute_mock()
     weights = weight_identifiability()
     local = local_planned_mock_checks()
     corpus = corpus_balance()
+    remaining = _remaining_module()
+    items = _items()
+    records = _records(
+        _load_original_pipeline()[0],
+        items,
+        "vary_by_attempt",
+        MOCK_SEED,
+    )
+    config_text = _git_bytes(f"{SOURCE_COMMIT}:{SOURCE_PREFIX}/config/stage_a_v3.yaml").decode("utf-8")
+    construct = remaining.common_construct(records)
+    goodness_fit = remaining.goodness_accounted_for(records)
+    profiles = remaining.blocked_profiles()
     return {
         "study": "eight_c_instrument_2026_10_20",
         "eight_c_names": list(EIGHT_C),
@@ -574,22 +600,17 @@ def build_report() -> dict:
         "local_mock_checks": local,
         "corpus": corpus,
         "weights": weights,
+        "attempt_accounting": remaining.registered_attempt_accounting(items, config_text),
+        "common_construct": construct,
+        "goodness_accounted_for": goodness_fit,
+        "named_pairs": remaining.named_pair_exchangeability(records),
+        "contradiction_selectivity": remaining.contradiction_selectivity(records),
+        "mock_fleiss_kappa": remaining.fleiss_kappa_mock(records),
+        "engineered_profiles": profiles,
         "preregistered_discriminations": {
-            "status": "PLANNED",
-            "reason": (
-                "Stage A names Choice versus Concreteness, Concreteness versus Completion, "
-                "and Closeness versus Continuity. No ratings table is in the repo. "
-                "paid_collection_started is false. Those contrasts were not estimated."
-            ),
+            "status": "BLOCKED",
+            "reason": profiles["reason"],
         },
-        "blocked_without_ratings_or_metadata": [
-            "first-attempt and eventual validity under the five registered retry keys",
-            "engineered contrast checks against provisional score profiles",
-            "Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity",
-            "contradiction selectivity",
-            "conditional mutual information, leave-one-C-out, incremental Choice, effective rank",
-            "Eight-C Fleiss kappa",
-        ],
         "eight_c_kappa": {"status": "ABSENT"},
     }
 
@@ -603,6 +624,9 @@ def render_markdown(report: dict) -> str:
     weights = report["weights"]
     local = report["local_mock_checks"]
     corpus = report["corpus"]
+    attempts = report["attempt_accounting"]
+    construct = report["common_construct"]
+    goodness_fit = report["goodness_accounted_for"]
     stored = mock["recomputed_vary_by_attempt_cli_default"]
     registered = mock["recomputed_vary_by_attempt_registered_seed"]
     goodness = stored["mean_abs_diff"]["goodness"]
@@ -692,15 +716,69 @@ def render_markdown(report: dict) -> str:
             "",
             corpus["note"],
             "",
-            "## Still blocked",
+            "## Registered attempt accounting",
             "",
-            report["preregistered_discriminations"]["reason"],
+            f"Original `_mock_response_for_attempt`, registered seed `{attempts['base_seed']}`. Planned logical ratings: {attempts['planned_logical_ratings']}. First-attempt valid: {attempts['first_attempt_valid']}. Eventual valid: {attempts['eventual_valid']}. Eventual invalid: {attempts['eventual_invalid']}. Total attempts: {attempts['total_attempts']}. Within the cap of {attempts['maximum_total_attempts']}: `{attempts['within_attempt_cap']}`.",
+            "",
+            "Retry keys: " + ", ".join(attempts["retry_keys"]) + ".",
+            "",
+            "## Common construct",
+            "",
+            f"Unit: {construct['unit']}. Cronbach alpha: `{_fmt(construct['cronbach_alpha'])}`. First eigenvalue: `{_fmt(construct['first_eigenvalue'])}`. Permutation p: `{_fmt(construct['first_eigenvalue_permutation_p'])}` from {construct['permutation_draws']} column shuffles, seed {construct['permutation_seed']}. Independence rejected at {construct['alpha']}: `{construct['independence_rejected']}`.",
+            "",
+            f"Horn retained components: {construct['retained_components']}. Seed {construct['horn_seed']}, {construct['horn_draws']} shuffles. PC1 share of variance: `{_fmt(construct['pc1_variance_share'])}`. Residual share after PC1: `{_fmt(construct['residual_variance_share_after_pc1'])}`. Mean PC1 communality: `{_fmt(construct['mean_communality_pc1'])}`. Effective rank: `{_fmt(construct['effective_rank'])}`.",
+            "",
+            f"Status: {construct['construct_status']}. One common construct accounts for the eight scores: `{construct['one_common_construct_accounts_for_the_eight']}`. {construct['n_limit']}",
+            "",
+            "## Goodness accounted for by the eight Cs",
+            "",
+            f"In-sample R-squared: `{_fmt(goodness_fit['in_sample_r2'])}`. Permutation p: `{_fmt(goodness_fit['in_sample_r2_permutation_p'])}`. Leave-one-out R-squared: `{_fmt(goodness_fit['loo_r2'])}`. Full linear accounting: `{goodness_fit['fully_accounted_for']}`.",
+            "",
+            f"Incremental Choice delta R-squared: `{_fmt(goodness_fit['incremental_choice_delta_r2'])}`. Permutation p: `{_fmt(goodness_fit['incremental_choice_permutation_p'])}`.",
+            "",
+            goodness_fit["cmi_note"],
+            "",
+            "## Named pairs and contradictions",
+            "",
+            "Exchangeability of the three named pairs in the mock item means. This is not the directional engineered contrast.",
             "",
         ]
     )
-    for item in report["blocked_without_ratings_or_metadata"]:
-        lines.append(f"- {item}")
-    lines.extend(["", "Eight-C Fleiss kappa: ABSENT.", ""])
+    flagged = []
+    for name, pair in report["named_pairs"]["pairs"].items():
+        lines.append(
+            f"- {name}: mean difference `{_fmt(pair['mean_difference'])}`, p `{_fmt(pair['mean_difference_permutation_p'])}`; Pearson r `{_fmt(pair['pearson_r'])}`, p `{_fmt(pair['pearson_r_permutation_p'])}`."
+        )
+        if pair["mean_difference_permutation_p"] < 0.05 or pair["pearson_r_permutation_p"] < 0.05:
+            flagged.append(name)
+    lines.append("")
+    lines.append(
+        "Six exchangeability p-values were computed, with no multiplicity adjustment. "
+        + (
+            "Pairs with an unadjusted p-value below 0.05: " + ", ".join(flagged) + "."
+            if flagged
+            else "None of the six unadjusted p-values is below 0.05."
+        )
+        + " A single unadjusted p-value is not the registered directional contrast."
+    )
+    selectivity = report["contradiction_selectivity"]
+    fleiss = report["mock_fleiss_kappa"]["kappa"]
+    lines.extend(
+        [
+            "",
+            f"Contradiction peak-minus-rest mean `{_fmt(selectivity['mean_peak_minus_rest'])}` versus independent uniform scores. One-sided permutation p `{_fmt(selectivity['permutation_p_greater'])}`. Designed type selectivity: {selectivity['designed_type_selectivity']}.",
+            "",
+            "Fleiss kappa treating the three hash attempts as raters and scores 0–10 as categories. Goodness kappa "
+            f"`{_fmt(fleiss['goodness'])}`. This is generator agreement. A human or LLM Eight-C kappa remains ABSENT.",
+            "",
+            "## Still blocked",
+            "",
+            report["engineered_profiles"]["reason"],
+            "",
+            f"Metadata OID `{report['engineered_profiles']['lfs_oid_sha256']}`.",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -717,6 +795,10 @@ def main() -> None:
     print(f"independent_mean_tau={report['weights']['independent_mean_kendall_tau_b']}")
     print(f"corpus_status={report['corpus']['status']}")
     print(f"schema_failures={report['local_mock_checks']['schema_failures']}")
+    print(f"construct={report['common_construct']['construct_status']}")
+    print(f"first_p={report['common_construct']['first_eigenvalue_permutation_p']}")
+    print(f"loo_r2={report['goodness_accounted_for']['loo_r2']}")
+    print(f"first_valid={report['attempt_accounting']['first_attempt_valid']}")
     print(f"wrote={out_json}")
 
 

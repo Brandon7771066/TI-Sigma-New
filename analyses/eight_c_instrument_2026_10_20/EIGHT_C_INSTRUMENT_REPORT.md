@@ -78,15 +78,44 @@ Stored scales: biological 2, cognitive 3, formal 1, institutional 5, interperson
 
 The balance report is prose on the product commit. No script in that commit writes it. The item CSV is an unread LFS pointer, so this comparison uses the JSONL.
 
+## Registered attempt accounting
+
+Original `_mock_response_for_attempt`, registered seed `TI_SIGMA_STAGE_A_V3_REGISTERED`. Planned logical ratings: 63. First-attempt valid: 58. Eventual valid: 63. Eventual invalid: 0. Total attempts: 68. Within the cap of 189: `True`.
+
+Retry keys: registered_stage_a:V3-03:2, registered_stage_a:V3-07:1, registered_stage_a:V3-11:3, registered_stage_a:V3-16:2, registered_stage_a:V3-20:1.
+
+## Common construct
+
+Unit: 21 item means of 3 hash attempts. Cronbach alpha: `0.146050066723026`. First eigenvalue: `2.2853934527091626`. Permutation p: `0.14457108578284344` from 5000 column shuffles, seed 20261024. Independence rejected at 0.05: `False`.
+
+Horn retained components: 0. Seed 20260902, 2000 shuffles. PC1 share of variance: `0.2856741815886454`. Residual share after PC1: `0.7143258184113546`. Mean PC1 communality: `0.2856741815886453`. Effective rank: `6.58819161744164`.
+
+Status: NO_COMMON_CONSTRUCT. One common construct accounts for the eight scores: `False`. N=21 is diagnostic. The preregistration forbids a strong completeness claim from 21 items.
+
+## Goodness accounted for by the eight Cs
+
+In-sample R-squared: `0.3019137838619306`. Permutation p: `0.7320535892821436`. Leave-one-out R-squared: `-1.2630063958020945`. Full linear accounting: `False`.
+
+Incremental Choice delta R-squared: `0.007453560096458811`. Permutation p: `0.7280543891221756`.
+
+Gaussian CMI from partial correlations. N=21 with seven conditioners is unstable and is not a confirmation sample.
+
+## Named pairs and contradictions
+
+Exchangeability of the three named pairs in the mock item means. This is not the directional engineered contrast.
+
+- choice_versus_concreteness: mean difference `0.8412698412698413`, p `0.14557088582283542`; Pearson r `0.08257557576855584`, p `0.7438512297540492`.
+- concreteness_versus_completion: mean difference `-1.2698412698412698`, p `0.04999000199960008`; Pearson r `-0.018834432613821724`, p `0.9488102379524095`.
+- closeness_versus_continuity: mean difference `-0.3174603174603175`, p `0.5720855828834233`; Pearson r `0.15990309461929067`, p `0.48010397920415915`.
+
+Six exchangeability p-values were computed, with no multiplicity adjustment. Pairs with an unadjusted p-value below 0.05: concreteness_versus_completion. A single unadjusted p-value is not the registered directional contrast.
+
+Contradiction peak-minus-rest mean `1.63718820861678` versus independent uniform scores. One-sided permutation p `0.22975404919016196`. Designed type selectivity: BLOCKED.
+
+Fleiss kappa treating the three hash attempts as raters and scores 0–10 as categories. Goodness kappa `-0.0298759864712514`. This is generator agreement. A human or LLM Eight-C kappa remains ABSENT.
+
 ## Still blocked
 
-Stage A names Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity. No ratings table is in the repo. paid_collection_started is false. Those contrasts were not estimated.
+The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.
 
-- first-attempt and eventual validity under the five registered retry keys
-- engineered contrast checks against provisional score profiles
-- Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity
-- contradiction selectivity
-- conditional mutual information, leave-one-C-out, incremental Choice, effective rank
-- Eight-C Fleiss kappa
-
-Eight-C Fleiss kappa: ABSENT.
+Metadata OID `f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1`.

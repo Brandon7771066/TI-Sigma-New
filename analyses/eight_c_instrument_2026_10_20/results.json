@@ -1,12 +1,115 @@
 {
-  "blocked_without_ratings_or_metadata": [
-    "first-attempt and eventual validity under the five registered retry keys",
-    "engineered contrast checks against provisional score profiles",
-    "Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity",
-    "contradiction selectivity",
-    "conditional mutual information, leave-one-C-out, incremental Choice, effective rank",
-    "Eight-C Fleiss kappa"
-  ],
+  "attempt_accounting": {
+    "base_seed": "TI_SIGMA_STAGE_A_V3_REGISTERED",
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "eventual_invalid": 0,
+    "eventual_valid": 63,
+    "first_attempt_valid": 58,
+    "first_attempt_valid_rate": 0.9206349206349206,
+    "instrument": "registered_mock_attempt_accounting",
+    "maximum_total_attempts": 189,
+    "planned_logical_ratings": 63,
+    "retry_keys": [
+      "registered_stage_a:V3-03:2",
+      "registered_stage_a:V3-07:1",
+      "registered_stage_a:V3-11:3",
+      "registered_stage_a:V3-16:2",
+      "registered_stage_a:V3-20:1"
+    ],
+    "seed_strategy": "vary_by_attempt",
+    "source_function": "ti_sigma_pipeline.stage_a_v3._mock_response_for_attempt",
+    "total_attempts": 68,
+    "within_attempt_cap": true
+  },
+  "common_construct": {
+    "alpha": 0.05,
+    "class": "GENERATOR",
+    "communalities_pc1": {
+      "choice": 0.381694627904474,
+      "closeness": 0.40495455314831935,
+      "coherence": 0.0001316209687222095,
+      "completion": 0.45507247437773574,
+      "concreteness": 0.1437092248588136,
+      "consistency": 0.38868054085042947,
+      "continuity": 0.03625831819671152,
+      "criticality": 0.4748920924039569
+    },
+    "construct_status": "NO_COMMON_CONSTRUCT",
+    "cronbach_alpha": 0.146050066723026,
+    "effective_rank": 6.58819161744164,
+    "eigenvalues": [
+      2.2853934527091626,
+      1.566472412942264,
+      1.2776758930334626,
+      0.9898575949459065,
+      0.6777160478997316,
+      0.504163993821385,
+      0.37582582672455034,
+      0.3228947779235356
+    ],
+    "empirical_status": "ABSENT",
+    "first_eigenvalue": 2.2853934527091626,
+    "first_eigenvalue_permutation_p": 0.14457108578284344,
+    "horn_95": [
+      2.44626277509581,
+      1.8368005879573202,
+      1.4675463122095032,
+      1.1874527116707114,
+      0.9544237123755368,
+      0.7465686524037807,
+      0.5534406410188998,
+      0.367465074044578
+    ],
+    "horn_draws": 2000,
+    "horn_seed": 20260902,
+    "independence_rejected": false,
+    "instrument": "eight_c_common_construct",
+    "item_ids": [
+      "V3-01",
+      "V3-02",
+      "V3-03",
+      "V3-04",
+      "V3-05",
+      "V3-06",
+      "V3-07",
+      "V3-08",
+      "V3-09",
+      "V3-10",
+      "V3-11",
+      "V3-12",
+      "V3-13",
+      "V3-14",
+      "V3-15",
+      "V3-16",
+      "V3-17",
+      "V3-18",
+      "V3-19",
+      "V3-20",
+      "V3-21"
+    ],
+    "mean_communality_pc1": 0.2856741815886453,
+    "n_limit": "N=21 is diagnostic. The preregistration forbids a strong completeness claim from 21 items.",
+    "one_common_construct_accounts_for_the_eight": false,
+    "pc1_variance_share": 0.2856741815886454,
+    "permutation_draws": 5000,
+    "permutation_seed": 20261024,
+    "residual_variance_share_after_pc1": 0.7143258184113546,
+    "retained_components": 0,
+    "unit": "21 item means of 3 hash attempts"
+  },
+  "contradiction_selectivity": {
+    "class": "GENERATOR",
+    "designed_type_selectivity": "BLOCKED",
+    "empirical_status": "ABSENT",
+    "instrument": "contradiction_selectivity_versus_independent_uniform",
+    "mean_peak_minus_rest": 1.63718820861678,
+    "n_rows": 63,
+    "null": "eight independent uniform{0,1,2,3} contradiction scores",
+    "permutation_draws": 5000,
+    "permutation_p_greater": 0.22975404919016196,
+    "permutation_seed": 20261024
+  },
   "corpus": {
     "corpus_report_sha256": "9781e84692d1f4088882a81aea701a41cd3336052651d8eb395a03d8acfd50f1",
     "domains_match_jsonl": false,
@@ -74,6 +177,112 @@
     "closeness",
     "choice"
   ],
+  "engineered_profiles": {
+    "lfs_oid_sha256": "f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1",
+    "lfs_size": 4549,
+    "missing_file": "experiments/eight_c_goodness_pilot/data/metadata/ti_sigma_stage_a_v3_metadata.csv",
+    "reason": "The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.",
+    "required_and_unread": [
+      "intended_coherence",
+      "intended_consistency",
+      "intended_continuity",
+      "intended_concreteness",
+      "intended_completion",
+      "intended_criticality",
+      "intended_closeness",
+      "intended_choice",
+      "intended_goodness",
+      "intended_contradiction_types",
+      "intended_contrast",
+      "predicted_profile_notes"
+    ],
+    "status": "BLOCKED"
+  },
+  "goodness_accounted_for": {
+    "class": "GENERATOR",
+    "cmi_note": "Gaussian CMI from partial correlations. N=21 with seven conditioners is unstable and is not a confirmation sample.",
+    "empirical_status": "ABSENT",
+    "extent": -1.2630063958020945,
+    "extent_definition": "leave-one-out R-squared of Goodness on the eight item-mean Cs",
+    "fully_accounted_for": false,
+    "gaussian_cmi_with_goodness": {
+      "choice": {
+        "gaussian_cmi_bits": 0.007661097274351489,
+        "partial_r_with_goodness_given_other_cs": 0.10278296156996723
+      },
+      "closeness": {
+        "gaussian_cmi_bits": 0.00444636376977501,
+        "partial_r_with_goodness_given_other_cs": -0.0783901188750032
+      },
+      "coherence": {
+        "gaussian_cmi_bits": 0.00014186462383376138,
+        "partial_r_with_goodness_given_other_cs": -0.014023080636859827
+      },
+      "completion": {
+        "gaussian_cmi_bits": 0.001070347523037781,
+        "partial_r_with_goodness_given_other_cs": 0.03850605697628725
+      },
+      "concreteness": {
+        "gaussian_cmi_bits": 0.0001689364894329084,
+        "partial_r_with_goodness_given_other_cs": 0.015302557989283138
+      },
+      "consistency": {
+        "gaussian_cmi_bits": 0.08699478307945803,
+        "partial_r_with_goodness_given_other_cs": -0.3370636294578224
+      },
+      "continuity": {
+        "gaussian_cmi_bits": 0.09100492798908631,
+        "partial_r_with_goodness_given_other_cs": -0.3442758545562487
+      },
+      "criticality": {
+        "gaussian_cmi_bits": 0.1492144238977887,
+        "partial_r_with_goodness_given_other_cs": -0.43227600751979683
+      }
+    },
+    "in_sample_r2": 0.3019137838619306,
+    "in_sample_r2_permutation_p": 0.7320535892821436,
+    "incremental_choice_delta_r2": 0.007453560096458811,
+    "incremental_choice_permutation_p": 0.7280543891221756,
+    "instrument": "goodness_accounted_for_by_eight_cs",
+    "leave_one_c_out": {
+      "choice": {
+        "delta_r2": 0.007453560096458811,
+        "in_sample_r2_without_dimension": 0.29446022376547176
+      },
+      "closeness": {
+        "delta_r2": 0.004316270824245572,
+        "in_sample_r2_without_dimension": 0.297597513037685
+      },
+      "coherence": {
+        "delta_r2": 0.00013730341420503667,
+        "in_sample_r2_without_dimension": 0.30177648044772554
+      },
+      "completion": {
+        "delta_r2": 0.0010366008830932083,
+        "in_sample_r2_without_dimension": 0.30087718297883737
+      },
+      "concreteness": {
+        "delta_r2": 0.00016350793760622206,
+        "in_sample_r2_without_dimension": 0.30175027592432435
+      },
+      "consistency": {
+        "delta_r2": 0.08947648749174553,
+        "in_sample_r2_without_dimension": 0.21243729637018505
+      },
+      "continuity": {
+        "delta_r2": 0.09386693104102461,
+        "in_sample_r2_without_dimension": 0.20804685282090596
+      },
+      "criticality": {
+        "delta_r2": 0.16042326867961,
+        "in_sample_r2_without_dimension": 0.1414905151823206
+      }
+    },
+    "loo_r2": -1.2630063958020945,
+    "n_items": 21,
+    "permutation_draws": 5000,
+    "permutation_seed": 20261024
+  },
   "local_mock_checks": {
     "class": "GENERATOR",
     "empirical_status": "ABSENT",
@@ -357,9 +566,55 @@
     "uniform_expectation_contradiction_mad": "20/16",
     "uniform_expectation_score_mad": "440/121"
   },
+  "mock_fleiss_kappa": {
+    "categories": "integers 0..10",
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "human_or_llm_kappa": "ABSENT",
+    "instrument": "fleiss_kappa_hash_attempts_as_raters",
+    "kappa": {
+      "choice": -0.004756575265808607,
+      "closeness": 0.005076142131979691,
+      "coherence": 0.04276871131119865,
+      "completion": -0.051187782805429856,
+      "concreteness": -0.017888055395268346,
+      "consistency": 0.0011325028312570737,
+      "continuity": -0.04586381541924592,
+      "criticality": -0.0008361204013377816,
+      "goodness": -0.0298759864712514
+    },
+    "raters": "three hash attempts, not human or LLM raters"
+  },
+  "named_pairs": {
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "engineered_directional_contrast": "BLOCKED",
+    "instrument": "named_pair_exchangeability",
+    "null": "the two columns are exchangeable in the mock item means",
+    "pairs": {
+      "choice_versus_concreteness": {
+        "mean_difference": 0.8412698412698413,
+        "mean_difference_permutation_p": 0.14557088582283542,
+        "pearson_r": 0.08257557576855584,
+        "pearson_r_permutation_p": 0.7438512297540492
+      },
+      "closeness_versus_continuity": {
+        "mean_difference": -0.3174603174603175,
+        "mean_difference_permutation_p": 0.5720855828834233,
+        "pearson_r": 0.15990309461929067,
+        "pearson_r_permutation_p": 0.48010397920415915
+      },
+      "concreteness_versus_completion": {
+        "mean_difference": -1.2698412698412698,
+        "mean_difference_permutation_p": 0.04999000199960008,
+        "pearson_r": -0.018834432613821724,
+        "pearson_r_permutation_p": 0.9488102379524095
+      }
+    }
+  },
   "preregistered_discriminations": {
-    "reason": "Stage A names Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity. No ratings table is in the repo. paid_collection_started is false. Those contrasts were not estimated.",
-    "status": "PLANNED"
+    "reason": "The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.",
+    "status": "BLOCKED"
   },
   "study": "eight_c_instrument_2026_10_20",
   "weights": {
