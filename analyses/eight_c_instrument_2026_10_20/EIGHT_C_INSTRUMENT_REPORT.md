@@ -40,10 +40,53 @@ When the choice column is a copy of coherence, moving the choice weight onto coh
 
 A two-item matrix with the mass on coherence in one weighting and the same mass on concreteness in the other reverses order. Kendall tau-b: `-1.0`.
 
-Status: REPRODUCIBLE arithmetic, class SIMULATION. No domain weight was assigned. Closest applicability was not scored.
+Status: REPRODUCIBLE arithmetic, class SIMULATION. This weight check is not one of the Stage A primary analyses. No domain weight was assigned. Closest applicability was not scored.
 
-## Left unestimated
+## Planned local checks
+
+Schema validity of the 63 CLI-default mock records: failures `0`. Status: REPRODUCIBLE.
+
+Fixed-strategy goodness ICC(1,1): `1.0`. ICC(2,1): `1.0`.
+
+Vary-by-attempt moments and agreement, 63 mock scores. The uniform mean on {0..10} is 5. These are hash summaries.
+
+| Score | Mean | Sample SD | ICC(1,1) | ICC(2,1) |
+| --- | ---: | ---: | ---: | ---: |
+| goodness | 4.523809523809524 | 3.3207905338315538 | -0.0883895491507482 | -0.10209749323978659 |
+| coherence | 5.349206349206349 | 3.13234288362628 | 0.035281443576622606 | 0.02195281782437744 |
+| consistency | 5.285714285714286 | 3.013028545139406 | -0.1727128875344313 | -0.19096509240246415 |
+| continuity | 4.523809523809524 | 2.8672631823189914 | 0.11515773275198764 | 0.1120548209632274 |
+| concreteness | 3.9682539682539684 | 3.3067294726704732 | 0.029778594218311794 | 0.032118055555555435 |
+| completion | 5.238095238095238 | 3.078092652582145 | 0.06202976090954693 | 0.08676542405990564 |
+| criticality | 5.285714285714286 | 3.347741518081915 | 0.14865626761886852 | 0.16924558145932184 |
+| closeness | 4.2063492063492065 | 3.13234288362628 | 0.1284034154986305 | 0.12032520325203239 |
+| choice | 4.809523809523809 | 3.2915196159963074 | -0.07961222091656874 | -0.0963603818615752 |
+
+Goodness ICC(1,1) `-0.0883895491507482` against 2000 independent uniform studies, seed 20261023: Monte Carlo mean `-0.0028445151813530963`, two-sided tail `0.5065`.
+
+Corpus balance status: INCONSISTENT. JSONL items: 21. Cluster roles A/B/C for clusters 1–7 complete: `True`.
+
+Stored domain counts sum to 23. JSONL domain counts sum to 21. Domain counts match: `False`. Scale counts match: `False`.
+
+JSONL domains: AI 3, biology 2, engineering 3, ethics/economics 1, individual cognition 2, institutions/governance 3, interpersonal relations 2, mathematics/formal reasoning 1, science 4.
+
+Stored domains: AI 3, biology 2, engineering 4, ethics/economics 1, individual cognition 2, institutions/governance 3, interpersonal relations 2, mathematics/formal reasoning 1, science 5.
+
+JSONL scales: biological 2, cognitive 3, formal 1, institutional 6, interpersonal 2, physical 4, societal 3.
+
+Stored scales: biological 2, cognitive 3, formal 1, institutional 5, interpersonal 2, physical 5, societal 3.
+
+The balance report is prose on the product commit. No script in that commit writes it. The item CSV is an unread LFS pointer, so this comparison uses the JSONL.
+
+## Still blocked
 
 Stage A names Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity. No ratings table is in the repo. paid_collection_started is false. Those contrasts were not estimated.
+
+- first-attempt and eventual validity under the five registered retry keys
+- engineered contrast checks against provisional score profiles
+- Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity
+- contradiction selectivity
+- conditional mutual information, leave-one-C-out, incremental Choice, effective rank
+- Eight-C Fleiss kappa
 
 Eight-C Fleiss kappa: ABSENT.

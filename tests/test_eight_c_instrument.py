@@ -61,6 +61,37 @@ def test_weight_simulation_separates_proportional_duplicate_and_independent():
     assert weights["seed"] == 20261020
 
 
+def test_corpus_balance_disagrees_with_the_item_jsonl():
+    corpus = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["corpus"]
+    assert corpus["status"] == "INCONSISTENT"
+    assert corpus["jsonl_items"] == 21
+    assert corpus["jsonl_cluster_roles_complete"] is True
+    assert corpus["jsonl_domains"]["science"] == 4
+    assert corpus["stored_domains"]["science"] == 5
+    assert corpus["jsonl_domains"]["engineering"] == 3
+    assert corpus["stored_domains"]["engineering"] == 4
+    assert corpus["stored_domain_total"] == 23
+    assert corpus["jsonl_scales"]["institutional"] == 6
+    assert corpus["stored_scales"]["institutional"] == 5
+    assert corpus["jsonl_scales"]["physical"] == 4
+    assert corpus["stored_scales"]["physical"] == 5
+    assert corpus["domains_match_jsonl"] is False
+    assert corpus["scales_match_jsonl"] is False
+
+
+def test_mock_schema_passes_and_fixed_icc_is_one():
+    local = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["local_mock_checks"]
+    assert local["class"] == "GENERATOR"
+    assert local["empirical_status"] == "ABSENT"
+    assert local["schema_records"] == 63
+    assert local["schema_failures"] == 0
+    assert local["schema_status"] == "REPRODUCIBLE"
+    assert local["fixed_strategy_goodness_icc_1_1"] == 1.0
+    assert local["fixed_strategy_goodness_icc_2_1"] == 1.0
+    assert local["moments"]["goodness"]["n"] == 63
+    assert abs(local["icc"]["goodness"]["icc_1_1"]) < 0.5
+
+
 def test_report_keeps_the_reliability_claim_absent():
     text = (OUT / "EIGHT_C_INSTRUMENT_REPORT.md").read_text(encoding="utf-8")
     payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))

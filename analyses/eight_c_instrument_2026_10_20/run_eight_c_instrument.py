@@ -66,6 +66,9 @@ MODULE_FILES = (
 
 ITEM_JSONL = f"{SOURCE_PREFIX}/data/items/ti_sigma_stage_a_v3_items.jsonl"
 STORED_JSON = f"{SOURCE_PREFIX}/results/reports/ti_sigma_stage_a_v3_mock_reproducibility.json"
+CORPUS_MD = f"{SOURCE_PREFIX}/results/reports/ti_sigma_stage_a_v3_corpus_balance.md"
+ICC_MC_SEED = 20261023
+N_ICC_MC = 2000
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = Path(__file__).resolve().parent
 
@@ -336,6 +339,166 @@ def _column_scores(matrix: list[list[int]], weights: list[int]) -> list[int]:
     return [_dot(row, weights) for row in matrix]
 
 
+def _sample_sd(values: list[float]) -> float:
+    n = len(values)
+    mean = sum(values) / n
+    return (sum((value - mean) ** 2 for value in values) / (n - 1)) ** 0.5
+
+
+def _icc_from_groups(groups: list[list[float]]) -> dict:
+    """Shrout-Fleiss ICC(1,1) and two-way absolute ICC(2,1).
+
+    Rows are items. Columns are attempt indices. Attempt index is a hash input,
+    not a human rater.
+    """
+    n = len(groups)
+    k = len(groups[0])
+    grand = sum(sum(group) for group in groups) / (n * k)
+    row_means = [sum(group) / k for group in groups]
+    col_means = [sum(groups[i][j] for i in range(n)) / n for j in range(k)]
+    ss_rows = k * sum((mean - grand) ** 2 for mean in row_means)
+    ss_cols = n * sum((mean - grand) ** 2 for mean in col_means)
+    ss_total = sum((value - grand) ** 2 for group in groups for value in group)
+    ss_error = ss_total - ss_rows - ss_cols
+    ms_rows = ss_rows / (n - 1)
+    ms_within = (ss_total - ss_rows) / (n * (k - 1))
+    ms_cols = ss_cols / (k - 1)
+    ms_error = ss_error / ((n - 1) * (k - 1))
+    if ms_within == 0:
+        icc_1 = 1.0
+    else:
+        icc_1 = (ms_rows - ms_within) / (ms_rows + (k - 1) * ms_within)
+    if ms_error == 0 and ms_cols == 0:
+        icc_2 = 1.0
+    else:
+        icc_2 = (ms_rows - ms_error) / (ms_rows + (k - 1) * ms_error + k * (ms_cols - ms_error) / n)
+    return {"icc_1_1": icc_1, "icc_2_1": icc_2, "n_items": n, "k_attempts": k}
+
+
+def _groups_for(records: list[dict], key: str) -> list[list[float]]:
+    by_item: dict[str, list[float]] = {}
+    for record in records:
+        if key == "goodness":
+            value = float(record["goodness"])
+        else:
+            value = float(record["C_scores"][key])
+        by_item.setdefault(record["item_id"], []).append(value)
+    return [by_item[item_id] for item_id in sorted(by_item)]
+
+
+def _icc_reference(observed: float) -> dict:
+    rng = random.Random(ICC_MC_SEED)
+    samples = []
+    for _ in range(N_ICC_MC):
+        groups = [[rng.randrange(11) for _ in range(3)] for _ in range(21)]
+        samples.append(_icc_from_groups(groups)["icc_1_1"])
+    center = sum(samples) / len(samples)
+    distance = abs(observed - center)
+    as_extreme = sum(abs(sample - center) >= distance - 1e-15 for sample in samples)
+    return {
+        "draws": N_ICC_MC,
+        "seed": ICC_MC_SEED,
+        "monte_carlo_mean": center,
+        "two_sided_tail": as_extreme / N_ICC_MC,
+        "null": "21 items, 3 independent uniform{0..10} attempts, ICC(1,1)",
+    }
+
+
+def local_planned_mock_checks() -> dict:
+    """Primary analyses that the preregistration can run on the mock alone."""
+    mock_rater, _pipeline = _load_original_pipeline()
+    schema_mod = sys.modules["ti_sigma_pipeline"].schema_check
+    items = _items()
+    records = _records(mock_rater, items, "vary_by_attempt", MOCK_SEED)
+    fixed = _records(mock_rater, items, "fixed", MOCK_SEED)
+    failures = []
+    for record in records:
+        try:
+            schema_mod.validate_rating_like_schema(record)
+        except ValueError as exc:
+            failures.append(str(exc))
+    moments = {}
+    icc = {}
+    for key in ("goodness",) + EIGHT_C:
+        values = [record["goodness"] if key == "goodness" else record["C_scores"][key] for record in records]
+        moments[key] = {
+            "n": len(values),
+            "mean": sum(values) / len(values),
+            "sample_sd": _sample_sd([float(value) for value in values]),
+            "min": min(values),
+            "max": max(values),
+        }
+        icc[key] = _icc_from_groups(_groups_for(records, key))
+    fixed_icc = _icc_from_groups(_groups_for(fixed, "goodness"))
+    return {
+        "instrument": "stage_a_v3_mock_schema_moments_icc",
+        "class": "GENERATOR",
+        "empirical_status": "ABSENT",
+        "schema_records": len(records),
+        "schema_failures": len(failures),
+        "schema_status": "REPRODUCIBLE" if not failures else "INCONSISTENT",
+        "moments": moments,
+        "icc": icc,
+        "fixed_strategy_goodness_icc_1_1": fixed_icc["icc_1_1"],
+        "fixed_strategy_goodness_icc_2_1": fixed_icc["icc_2_1"],
+        "goodness_icc_1_1_versus_uniform": _icc_reference(icc["goodness"]["icc_1_1"]),
+        "uniform_mean_on_0_to_10": 5.0,
+    }
+
+
+def _section_counts(text: str, heading: str, following: str) -> dict[str, int]:
+    start = text.index(heading)
+    end = text.index(following, start)
+    counts = {}
+    for line in text[start:end].splitlines():
+        if not line.startswith("- "):
+            continue
+        name, value = line[2:].rsplit(": ", 1)
+        counts[name] = int(value)
+    return counts
+
+
+def corpus_balance() -> dict:
+    """Compare the stored balance report with the readable item JSONL."""
+    raw = _git_bytes(f"{SOURCE_COMMIT}:{ITEM_JSONL}").decode("utf-8")
+    items = [json.loads(line) for line in raw.splitlines() if line.strip()]
+    report = _git_bytes(f"{SOURCE_COMMIT}:{CORPUS_MD}").decode("utf-8")
+    stored_domains = _section_counts(report, "## Domain coverage", "## Scale coverage")
+    stored_scales = _section_counts(report, "## Scale coverage", "## Design notes")
+    jsonl_domains: dict[str, int] = {}
+    jsonl_scales: dict[str, int] = {}
+    for item in items:
+        jsonl_domains[item["domain"]] = jsonl_domains.get(item["domain"], 0) + 1
+        jsonl_scales[item["scale_level"]] = jsonl_scales.get(item["scale_level"], 0) + 1
+    cluster_ids = sorted({item["cluster_id"] for item in items})
+    roles_ok = cluster_ids == [f"C{cluster}{role}" for cluster in range(1, 8) for role in "ABC"]
+    stored_domain_total = sum(stored_domains.values())
+    stored_scale_total = sum(stored_scales.values())
+    domains_match = stored_domains == jsonl_domains
+    scales_match = stored_scales == jsonl_scales
+    return {
+        "instrument": "stage_a_v3_corpus_balance",
+        "source_commit": SOURCE_COMMIT,
+        "corpus_report_sha256": _sha256(report.encode("utf-8")),
+        "jsonl_items": len(items),
+        "jsonl_cluster_roles_complete": roles_ok,
+        "jsonl_domains": jsonl_domains,
+        "jsonl_scales": jsonl_scales,
+        "stored_domains": stored_domains,
+        "stored_scales": stored_scales,
+        "stored_domain_total": stored_domain_total,
+        "stored_scale_total": stored_scale_total,
+        "domains_match_jsonl": domains_match,
+        "scales_match_jsonl": scales_match,
+        "status": "REPRODUCIBLE" if domains_match and scales_match and roles_ok else "INCONSISTENT",
+        "empirical_status": "ABSENT",
+        "note": (
+            "The balance report is prose on the product commit. No script in that commit writes it. "
+            "The item CSV is an unread LFS pointer, so this comparison uses the JSONL."
+        ),
+    }
+
+
 def weight_identifiability() -> dict:
     rng = random.Random(WEIGHT_SEED)
     equal = [1, 1, 1, 1, 1, 1, 1, 1]
@@ -402,10 +565,14 @@ def weight_identifiability() -> dict:
 def build_report() -> dict:
     mock = recompute_mock()
     weights = weight_identifiability()
+    local = local_planned_mock_checks()
+    corpus = corpus_balance()
     return {
         "study": "eight_c_instrument_2026_10_20",
         "eight_c_names": list(EIGHT_C),
         "mock": mock,
+        "local_mock_checks": local,
+        "corpus": corpus,
         "weights": weights,
         "preregistered_discriminations": {
             "status": "PLANNED",
@@ -415,6 +582,14 @@ def build_report() -> dict:
                 "paid_collection_started is false. Those contrasts were not estimated."
             ),
         },
+        "blocked_without_ratings_or_metadata": [
+            "first-attempt and eventual validity under the five registered retry keys",
+            "engineered contrast checks against provisional score profiles",
+            "Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity",
+            "contradiction selectivity",
+            "conditional mutual information, leave-one-C-out, incremental Choice, effective rank",
+            "Eight-C Fleiss kappa",
+        ],
         "eight_c_kappa": {"status": "ABSENT"},
     }
 
@@ -426,6 +601,8 @@ def _fmt(value: float) -> str:
 def render_markdown(report: dict) -> str:
     mock = report["mock"]
     weights = report["weights"]
+    local = report["local_mock_checks"]
+    corpus = report["corpus"]
     stored = mock["recomputed_vary_by_attempt_cli_default"]
     registered = mock["recomputed_vary_by_attempt_registered_seed"]
     goodness = stored["mean_abs_diff"]["goodness"]
@@ -475,15 +652,55 @@ def render_markdown(report: dict) -> str:
         "",
         f"A two-item matrix with the mass on coherence in one weighting and the same mass on concreteness in the other reverses order. Kendall tau-b: `{weights['constructed_nonredundant_transfer_tau_b']}`.",
         "",
-        "Status: REPRODUCIBLE arithmetic, class SIMULATION. No domain weight was assigned. Closest applicability was not scored.",
+        "Status: REPRODUCIBLE arithmetic, class SIMULATION. This weight check is not one of the Stage A primary analyses. No domain weight was assigned. Closest applicability was not scored.",
         "",
-        "## Left unestimated",
+        "## Planned local checks",
         "",
-        report["preregistered_discriminations"]["reason"],
+        f"Schema validity of the {local['schema_records']} CLI-default mock records: failures `{local['schema_failures']}`. Status: {local['schema_status']}.",
         "",
-        "Eight-C Fleiss kappa: ABSENT.",
+        f"Fixed-strategy goodness ICC(1,1): `{_fmt(local['fixed_strategy_goodness_icc_1_1'])}`. ICC(2,1): `{_fmt(local['fixed_strategy_goodness_icc_2_1'])}`.",
         "",
+        "Vary-by-attempt moments and agreement, 63 mock scores. The uniform mean on {0..10} is 5. These are hash summaries.",
+        "",
+        "| Score | Mean | Sample SD | ICC(1,1) | ICC(2,1) |",
+        "| --- | ---: | ---: | ---: | ---: |",
     ]
+    for key in ("goodness",) + EIGHT_C:
+        moment = local["moments"][key]
+        agreement = local["icc"][key]
+        lines.append(
+            f"| {key} | {_fmt(moment['mean'])} | {_fmt(moment['sample_sd'])} | {_fmt(agreement['icc_1_1'])} | {_fmt(agreement['icc_2_1'])} |"
+        )
+    goodness_icc = local["icc"]["goodness"]["icc_1_1"]
+    icc_ref = local["goodness_icc_1_1_versus_uniform"]
+    lines.extend(
+        [
+            "",
+            f"Goodness ICC(1,1) `{_fmt(goodness_icc)}` against {icc_ref['draws']} independent uniform studies, seed {icc_ref['seed']}: Monte Carlo mean `{_fmt(icc_ref['monte_carlo_mean'])}`, two-sided tail `{_fmt(icc_ref['two_sided_tail'])}`.",
+            "",
+            f"Corpus balance status: {corpus['status']}. JSONL items: {corpus['jsonl_items']}. Cluster roles A/B/C for clusters 1–7 complete: `{corpus['jsonl_cluster_roles_complete']}`.",
+            "",
+            f"Stored domain counts sum to {corpus['stored_domain_total']}. JSONL domain counts sum to {corpus['jsonl_items']}. Domain counts match: `{corpus['domains_match_jsonl']}`. Scale counts match: `{corpus['scales_match_jsonl']}`.",
+            "",
+            "JSONL domains: " + ", ".join(f"{name} {count}" for name, count in sorted(corpus["jsonl_domains"].items())) + ".",
+            "",
+            "Stored domains: " + ", ".join(f"{name} {count}" for name, count in sorted(corpus["stored_domains"].items())) + ".",
+            "",
+            "JSONL scales: " + ", ".join(f"{name} {count}" for name, count in sorted(corpus["jsonl_scales"].items())) + ".",
+            "",
+            "Stored scales: " + ", ".join(f"{name} {count}" for name, count in sorted(corpus["stored_scales"].items())) + ".",
+            "",
+            corpus["note"],
+            "",
+            "## Still blocked",
+            "",
+            report["preregistered_discriminations"]["reason"],
+            "",
+        ]
+    )
+    for item in report["blocked_without_ratings_or_metadata"]:
+        lines.append(f"- {item}")
+    lines.extend(["", "Eight-C Fleiss kappa: ABSENT.", ""])
     return "\n".join(lines)
 
 
@@ -498,6 +715,8 @@ def main() -> None:
     print(f"registered_match={mock['stored_json_matches_registered_seed']}")
     print(f"fixed_exact={mock['fixed_strategy_exact_match_rate']}")
     print(f"independent_mean_tau={report['weights']['independent_mean_kendall_tau_b']}")
+    print(f"corpus_status={report['corpus']['status']}")
+    print(f"schema_failures={report['local_mock_checks']['schema_failures']}")
     print(f"wrote={out_json}")
 
 

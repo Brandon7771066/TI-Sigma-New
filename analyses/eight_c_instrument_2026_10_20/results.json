@@ -1,4 +1,66 @@
 {
+  "blocked_without_ratings_or_metadata": [
+    "first-attempt and eventual validity under the five registered retry keys",
+    "engineered contrast checks against provisional score profiles",
+    "Choice versus Concreteness, Concreteness versus Completion, and Closeness versus Continuity",
+    "contradiction selectivity",
+    "conditional mutual information, leave-one-C-out, incremental Choice, effective rank",
+    "Eight-C Fleiss kappa"
+  ],
+  "corpus": {
+    "corpus_report_sha256": "9781e84692d1f4088882a81aea701a41cd3336052651d8eb395a03d8acfd50f1",
+    "domains_match_jsonl": false,
+    "empirical_status": "ABSENT",
+    "instrument": "stage_a_v3_corpus_balance",
+    "jsonl_cluster_roles_complete": true,
+    "jsonl_domains": {
+      "AI": 3,
+      "biology": 2,
+      "engineering": 3,
+      "ethics/economics": 1,
+      "individual cognition": 2,
+      "institutions/governance": 3,
+      "interpersonal relations": 2,
+      "mathematics/formal reasoning": 1,
+      "science": 4
+    },
+    "jsonl_items": 21,
+    "jsonl_scales": {
+      "biological": 2,
+      "cognitive": 3,
+      "formal": 1,
+      "institutional": 6,
+      "interpersonal": 2,
+      "physical": 4,
+      "societal": 3
+    },
+    "note": "The balance report is prose on the product commit. No script in that commit writes it. The item CSV is an unread LFS pointer, so this comparison uses the JSONL.",
+    "scales_match_jsonl": false,
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "status": "INCONSISTENT",
+    "stored_domain_total": 23,
+    "stored_domains": {
+      "AI": 3,
+      "biology": 2,
+      "engineering": 4,
+      "ethics/economics": 1,
+      "individual cognition": 2,
+      "institutions/governance": 3,
+      "interpersonal relations": 2,
+      "mathematics/formal reasoning": 1,
+      "science": 5
+    },
+    "stored_scale_total": 21,
+    "stored_scales": {
+      "biological": 2,
+      "cognitive": 3,
+      "formal": 1,
+      "institutional": 5,
+      "interpersonal": 2,
+      "physical": 5,
+      "societal": 3
+    }
+  },
   "eight_c_kappa": {
     "status": "ABSENT"
   },
@@ -12,6 +74,145 @@
     "closeness",
     "choice"
   ],
+  "local_mock_checks": {
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "fixed_strategy_goodness_icc_1_1": 1.0,
+    "fixed_strategy_goodness_icc_2_1": 1.0,
+    "goodness_icc_1_1_versus_uniform": {
+      "draws": 2000,
+      "monte_carlo_mean": -0.0028445151813530963,
+      "null": "21 items, 3 independent uniform{0..10} attempts, ICC(1,1)",
+      "seed": 20261023,
+      "two_sided_tail": 0.5065
+    },
+    "icc": {
+      "choice": {
+        "icc_1_1": -0.07961222091656874,
+        "icc_2_1": -0.0963603818615752,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "closeness": {
+        "icc_1_1": 0.1284034154986305,
+        "icc_2_1": 0.12032520325203239,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "coherence": {
+        "icc_1_1": 0.035281443576622606,
+        "icc_2_1": 0.02195281782437744,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "completion": {
+        "icc_1_1": 0.06202976090954693,
+        "icc_2_1": 0.08676542405990564,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "concreteness": {
+        "icc_1_1": 0.029778594218311794,
+        "icc_2_1": 0.032118055555555435,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "consistency": {
+        "icc_1_1": -0.1727128875344313,
+        "icc_2_1": -0.19096509240246415,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "continuity": {
+        "icc_1_1": 0.11515773275198764,
+        "icc_2_1": 0.1120548209632274,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "criticality": {
+        "icc_1_1": 0.14865626761886852,
+        "icc_2_1": 0.16924558145932184,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "goodness": {
+        "icc_1_1": -0.0883895491507482,
+        "icc_2_1": -0.10209749323978659,
+        "k_attempts": 3,
+        "n_items": 21
+      }
+    },
+    "instrument": "stage_a_v3_mock_schema_moments_icc",
+    "moments": {
+      "choice": {
+        "max": 10,
+        "mean": 4.809523809523809,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.2915196159963074
+      },
+      "closeness": {
+        "max": 10,
+        "mean": 4.2063492063492065,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.13234288362628
+      },
+      "coherence": {
+        "max": 10,
+        "mean": 5.349206349206349,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.13234288362628
+      },
+      "completion": {
+        "max": 10,
+        "mean": 5.238095238095238,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.078092652582145
+      },
+      "concreteness": {
+        "max": 10,
+        "mean": 3.9682539682539684,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.3067294726704732
+      },
+      "consistency": {
+        "max": 10,
+        "mean": 5.285714285714286,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.013028545139406
+      },
+      "continuity": {
+        "max": 10,
+        "mean": 4.523809523809524,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 2.8672631823189914
+      },
+      "criticality": {
+        "max": 10,
+        "mean": 5.285714285714286,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.347741518081915
+      },
+      "goodness": {
+        "max": 10,
+        "mean": 4.523809523809524,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.3207905338315538
+      }
+    },
+    "schema_failures": 0,
+    "schema_records": 63,
+    "schema_status": "REPRODUCIBLE",
+    "uniform_mean_on_0_to_10": 5.0
+  },
   "mock": {
     "base_seed_matching_stored_json": "TI_SIGMA_STAGE_A_V3_MOCK",
     "choice_fields_excluded_from_hash": true,
