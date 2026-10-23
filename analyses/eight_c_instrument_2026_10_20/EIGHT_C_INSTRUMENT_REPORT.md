@@ -119,3 +119,18 @@ Fleiss kappa treating the three hash attempts as raters and scores 0–10 as cat
 The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.
 
 Metadata OID `f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1`.
+
+## Definition fidelity
+
+Mock reads the definition text: `False`. Seed inputs: base_seed, item_id, scenario_text, attempt index, score name.
+
+Definition sentences contained in the rater prompt: 2 exact, 6 reworded. Operational questions absent: 8. High-anchor sets absent: 8. Do-not-confuse lines absent: 8.
+
+- coherence: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- consistency: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- continuity: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- concreteness: definition EXACT; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary PRESENT.
+- completion: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- criticality: definition EXACT; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- closeness: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.
+- choice: definition REWORDED; operational question ABSENT; anchors ABSENT; do-not-confuse ABSENT; HEM boundary ABSENT.

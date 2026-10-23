@@ -164,6 +164,129 @@
       "societal": 3
     }
   },
+  "definition_fidelity": {
+    "anchor_sets_absent": 8,
+    "cards_parsed": 8,
+    "class": "INSTRUMENT_TEXT",
+    "definition_sentences_exact": 2,
+    "definition_sentences_reworded": 6,
+    "do_not_confuse_absent": 8,
+    "empirical_status": "ABSENT",
+    "goodness_prompt_also_says_rate_independently": true,
+    "goodness_prompt_sentence": "Structural and evaluative adequacy expressed through the Eight Cs.",
+    "instrument": "eight_c_definition_fidelity",
+    "mock_reads_definition_text": false,
+    "mock_seed_inputs": [
+      "base_seed",
+      "item_id",
+      "scenario_text",
+      "attempt index",
+      "score name"
+    ],
+    "operational_questions_absent": 8,
+    "prompt_blocks_parsed": 8,
+    "rows": [
+      {
+        "canonical_definition": "degree to which parts, relations, and stated aims hang together as an intelligible whole.",
+        "definition_status": "REWORDED",
+        "dimension": "coherence",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the parts and relations hang together as an intelligible whole."
+      },
+      {
+        "canonical_definition": "degree to which claims, constraints, and actions avoid contradiction across the relevant frame.",
+        "definition_status": "REWORDED",
+        "dimension": "consistency",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which claims, rules, or actions avoid contradiction within the relevant frame."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity preserves intelligible linkage across time, stages, or developmental transitions.",
+        "definition_status": "REWORDED",
+        "dimension": "continuity",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which intelligible linkage is preserved across time, stages, or transitions."
+      },
+      {
+        "canonical_definition": "degree of tangibility or determinate intelligibility of the evaluated entity: how readily it can be understood, represented, or operationally grasped with minimal fuzziness, vagueness, or ambiguity.",
+        "definition_status": "EXACT",
+        "dimension": "concreteness",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "PRESENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "**Concreteness is the degree of tangibility or determinate intelligibility of the evaluated entity: how readily it can be understood, represented, or operationally grasped with minimal fuzziness, vagueness, or ambiguity.**\nConcreteness in GILE-G does not measure ontological instantiation. Ontological instantiation and concrete physical mechanisms belong to HEM."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity includes the parts, stages, or conditions needed for its stated function within scope.",
+        "definition_status": "REWORDED",
+        "dimension": "completion",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the entity includes the parts or conditions needed for its stated function within scope."
+      },
+      {
+        "canonical_definition": "degree to which the evaluation appropriately tracks how much correctness, failure tolerance, and accuracy discipline matter for the case.",
+        "definition_status": "EXACT",
+        "dimension": "criticality",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the evaluation appropriately tracks how much correctness, failure tolerance, and accuracy discipline matter for the case."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity remains near the relevant target, need, or purpose rather than drifting into adjacent but less relevant success.",
+        "definition_status": "REWORDED",
+        "dimension": "closeness",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the entity remains near the relevant target, need, or purpose rather than drifting into nearby but less relevant success."
+      },
+      {
+        "canonical_definition": "degree to which the relevant bearer has meaningful, attributable, and normatively interpretable choice within the evaluated situation, including the alignment of that choice with the relevant target.",
+        "definition_status": "REWORDED",
+        "dimension": "choice",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the relevant bearer has meaningful, attributable, and normatively interpretable choice within the situation, including the alignment of that choice with the relevant target."
+      }
+    ],
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "source_definitions": "experiments/eight_c_goodness_pilot/docs/conceptual/eight_c_operational_definitions_v3.md",
+    "source_prompt": "experiments/eight_c_goodness_pilot/prompts/ti_sigma_stage_a_v3_rater_prompt.txt"
+  },
   "eight_c_kappa": {
     "status": "ABSENT"
   },

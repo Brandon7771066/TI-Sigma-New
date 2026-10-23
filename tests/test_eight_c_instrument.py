@@ -136,6 +136,23 @@ def test_common_construct_and_goodness_accounting_stay_generator_results():
     }
 
 
+def test_prompt_does_not_carry_the_full_definition_cards():
+    fidelity = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["definition_fidelity"]
+    by_name = {row["dimension"]: row for row in fidelity["rows"]}
+    assert fidelity["mock_reads_definition_text"] is False
+    assert fidelity["cards_parsed"] == 8
+    assert fidelity["prompt_blocks_parsed"] == 8
+    assert by_name["concreteness"]["definition_status"] == "EXACT"
+    assert by_name["criticality"]["definition_status"] == "EXACT"
+    assert by_name["coherence"]["definition_status"] == "REWORDED"
+    assert "stated aims" in by_name["coherence"]["canonical_definition"]
+    assert "stated aims" not in by_name["coherence"]["prompt_text"]
+    assert fidelity["operational_questions_absent"] == 8
+    assert fidelity["anchor_sets_absent"] == 8
+    assert fidelity["do_not_confuse_absent"] == 8
+    assert fidelity["goodness_prompt_also_says_rate_independently"] is True
+
+
 def test_report_keeps_the_reliability_claim_absent():
     text = (OUT / "EIGHT_C_INSTRUMENT_REPORT.md").read_text(encoding="utf-8")
     payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))

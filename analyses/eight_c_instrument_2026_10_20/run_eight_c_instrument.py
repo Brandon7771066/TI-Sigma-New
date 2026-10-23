@@ -590,6 +590,12 @@ def build_report() -> dict:
         MOCK_SEED,
     )
     config_text = _git_bytes(f"{SOURCE_COMMIT}:{SOURCE_PREFIX}/config/stage_a_v3.yaml").decode("utf-8")
+    definitions_md = _git_bytes(
+        f"{SOURCE_COMMIT}:{SOURCE_PREFIX}/docs/conceptual/eight_c_operational_definitions_v3.md"
+    ).decode("utf-8")
+    prompt_text = _git_bytes(
+        f"{SOURCE_COMMIT}:{SOURCE_PREFIX}/prompts/ti_sigma_stage_a_v3_rater_prompt.txt"
+    ).decode("utf-8")
     construct = remaining.common_construct(records)
     goodness_fit = remaining.goodness_accounted_for(records)
     profiles = remaining.blocked_profiles()
@@ -606,6 +612,7 @@ def build_report() -> dict:
         "named_pairs": remaining.named_pair_exchangeability(records),
         "contradiction_selectivity": remaining.contradiction_selectivity(records),
         "mock_fleiss_kappa": remaining.fleiss_kappa_mock(records),
+        "definition_fidelity": remaining.definition_fidelity(definitions_md, prompt_text),
         "engineered_profiles": profiles,
         "preregistered_discriminations": {
             "status": "BLOCKED",
@@ -625,6 +632,7 @@ def render_markdown(report: dict) -> str:
     local = report["local_mock_checks"]
     corpus = report["corpus"]
     attempts = report["attempt_accounting"]
+    fidelity = report["definition_fidelity"]
     construct = report["common_construct"]
     goodness_fit = report["goodness_accounted_for"]
     stored = mock["recomputed_vary_by_attempt_cli_default"]
@@ -777,8 +785,19 @@ def render_markdown(report: dict) -> str:
             "",
             f"Metadata OID `{report['engineered_profiles']['lfs_oid_sha256']}`.",
             "",
+            "## Definition fidelity",
+            "",
+            f"Mock reads the definition text: `{fidelity['mock_reads_definition_text']}`. Seed inputs: {', '.join(fidelity['mock_seed_inputs'])}.",
+            "",
+            f"Definition sentences contained in the rater prompt: {fidelity['definition_sentences_exact']} exact, {fidelity['definition_sentences_reworded']} reworded. Operational questions absent: {fidelity['operational_questions_absent']}. High-anchor sets absent: {fidelity['anchor_sets_absent']}. Do-not-confuse lines absent: {fidelity['do_not_confuse_absent']}.",
+            "",
         ]
     )
+    for row in fidelity["rows"]:
+        lines.append(
+            f"- {row['dimension']}: definition {row['definition_status']}; operational question {row['operational_question']}; anchors {row['high_anchor']}; do-not-confuse {row['do_not_confuse']}; HEM boundary {row['hem_boundary']}."
+        )
+    lines.append("")
     return "\n".join(lines)
 
 

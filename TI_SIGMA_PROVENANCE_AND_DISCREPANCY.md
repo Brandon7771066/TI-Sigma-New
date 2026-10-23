@@ -56,6 +56,7 @@ Macro-F1 0.891 was not recomputed. No held-out prediction file for that F1 was f
 | 8C-selectivity | Peak contradiction minus the other types, versus independent uniform{0..3} | same | 63 mock rows | mean peak-minus-rest; one-sided p | 1.63718820861678; 0.22975404919016196 | REPRODUCIBLE generator null. Designed type selectivity is BLOCKED |
 | 8C-fleiss-mock | Fleiss κ with three hash attempts as raters and scores 0–10 as categories | same | 21 items | goodness κ | −0.0298759864712514 | REPRODUCIBLE generator agreement. A human or LLM Eight-C κ is still ABSENT |
 | 8C-contrast | Directional engineered contrasts and designed contradiction types | metadata CSV on `58e78046` | — | — | — | BLOCKED. LFS oid `f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1`, size 4549, not downloaded. No profile was inferred from titles |
+| 8C-definitions | v3 definition cards versus the rater prompt | `eight_c_operational_definitions_v3.md` and `ti_sigma_stage_a_v3_rater_prompt.txt` on `58e78046` | 8 cards | definition sentence contained in the prompt; operational questions; anchors; do-not-confuse lines | 2 exact (Concreteness, Criticality), 6 reworded; 8 operational questions absent; 8 anchor sets absent; 8 do-not-confuse lines absent | REPRODUCIBLE text comparison. The mock hash does not read either file. Concreteness is the only card whose HEM boundary is also in the prompt |
 | 8C-κ | Eight-C Fleiss κ from human or LLM raters | — | — | — | — | ABSENT |
 
 ### Generator note

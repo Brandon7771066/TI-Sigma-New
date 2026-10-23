@@ -466,6 +466,104 @@ def registered_attempt_accounting(items: list[dict], config_text: str) -> dict:
     }
 
 
+def _norm(text: str) -> str:
+    cleaned = text.replace("**", "").replace("`", "")
+    return " ".join(cleaned.lower().split()).rstrip(".")
+
+
+def _parse_definition_cards(markdown: str) -> dict[str, dict[str, str]]:
+    cards: dict[str, dict[str, str]] = {}
+    current = ""
+    for line in markdown.splitlines():
+        if line.startswith("## "):
+            title = line[3:].strip().lower()
+            current = title if title in EIGHT_C else ""
+            if current:
+                cards[current] = {}
+            continue
+        if current and line.startswith("- ") and ": " in line:
+            label, value = line[2:].split(": ", 1)
+            cards[current][label] = value.strip()
+    return cards
+
+
+def _parse_prompt_blocks(prompt: str) -> dict[str, str]:
+    blocks: dict[str, str] = {}
+    current = ""
+    collecting: list[str] = []
+    for line in prompt.splitlines():
+        stripped = line.strip()
+        numbered = stripped[2:].strip() if len(stripped) > 2 and stripped[0].isdigit() and stripped[1] == "." else ""
+        if numbered.lower() in EIGHT_C:
+            if current:
+                blocks[current] = "\n".join(collecting).strip()
+            current = numbered.lower()
+            collecting = []
+            continue
+        if current and stripped.startswith("- "):
+            collecting.append(stripped[2:].strip())
+        elif current and stripped and not stripped.startswith("-"):
+            if current:
+                blocks[current] = "\n".join(collecting).strip()
+            current = ""
+            collecting = []
+    if current:
+        blocks[current] = "\n".join(collecting).strip()
+    return blocks
+
+
+def definition_fidelity(definitions_md: str, prompt: str) -> dict:
+    """Compare the v3 definition cards with the sentences the rater prompt actually carries.
+
+    The mock hash does not read either file. Its seed is item id, scenario text,
+    and attempt index.
+    """
+    cards = _parse_definition_cards(definitions_md)
+    blocks = _parse_prompt_blocks(prompt)
+    prompt_norm = _norm(prompt)
+    rows = []
+    for name in EIGHT_C:
+        card = cards[name]
+        block = blocks.get(name, "")
+        canonical = card["Definition"]
+        contained = _norm(canonical) in _norm(block)
+        rows.append(
+            {
+                "dimension": name,
+                "definition_status": "EXACT" if contained else "REWORDED",
+                "canonical_definition": canonical,
+                "prompt_text": block,
+                "operational_question": "ABSENT" if _norm(card["Operational question"]) not in prompt_norm else "PRESENT",
+                "high_anchor": "ABSENT" if _norm(card["High-score anchor"]) not in prompt_norm else "PRESENT",
+                "mid_anchor": "ABSENT" if _norm(card["Mid-score anchor"]) not in prompt_norm else "PRESENT",
+                "low_anchor": "ABSENT" if _norm(card["Low-score anchor"]) not in prompt_norm else "PRESENT",
+                "do_not_confuse": "ABSENT" if _norm(card["Do not confuse with"]) not in prompt_norm else "PRESENT",
+                "hem_boundary": "ABSENT" if _norm(card["Possible HEM boundary"]) not in prompt_norm else "PRESENT",
+            }
+        )
+    exact = sum(row["definition_status"] == "EXACT" for row in rows)
+    return {
+        "instrument": "eight_c_definition_fidelity",
+        "class": "INSTRUMENT_TEXT",
+        "empirical_status": "ABSENT",
+        "source_definitions": "experiments/eight_c_goodness_pilot/docs/conceptual/eight_c_operational_definitions_v3.md",
+        "source_prompt": "experiments/eight_c_goodness_pilot/prompts/ti_sigma_stage_a_v3_rater_prompt.txt",
+        "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+        "mock_reads_definition_text": False,
+        "mock_seed_inputs": ["base_seed", "item_id", "scenario_text", "attempt index", "score name"],
+        "cards_parsed": len(cards),
+        "prompt_blocks_parsed": len(blocks),
+        "definition_sentences_exact": exact,
+        "definition_sentences_reworded": len(rows) - exact,
+        "operational_questions_absent": sum(row["operational_question"] == "ABSENT" for row in rows),
+        "anchor_sets_absent": sum(row["high_anchor"] == "ABSENT" for row in rows),
+        "do_not_confuse_absent": sum(row["do_not_confuse"] == "ABSENT" for row in rows),
+        "rows": rows,
+        "goodness_prompt_sentence": "Structural and evaluative adequacy expressed through the Eight Cs.",
+        "goodness_prompt_also_says_rate_independently": "Rate Goodness independently as a circularity safeguard." in prompt,
+    }
+
+
 def blocked_profiles() -> dict:
     return {
         "status": "BLOCKED",
