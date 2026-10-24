@@ -61,6 +61,7 @@ logs/
 
 # Generated files
 *.pdf
+!analyses/eight_c_instrument_2026_10_20/EIGHT_C_STAGE_A_TEST_RECORD.pdf
 *.zip
 generated_pdfs/
 

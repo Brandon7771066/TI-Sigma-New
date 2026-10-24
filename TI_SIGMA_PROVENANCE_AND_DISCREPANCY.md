@@ -75,6 +75,8 @@ The registered retry rule, run through the original function on the registered s
 
 The weight check is separate and synthetic. Seed 20261020, 200 matrices of 24 items. Proportional profiles keep Kendall tau-b at 1 for equal weights versus choice only. Independent profiles move: mean tau-b 0.24050465826369907, and every matrix had tau-b below 1. Copying coherence into choice makes a transfer of weight between those two columns leave the integer composite unchanged (maximum absolute difference 0). A two-item transfer of the same mass onto concreteness reverses order (tau-b −1). No domain success history entered the seed. Closest applicability was not scored. Stage A’s named discriminations (Choice versus Concreteness, Concreteness versus Completion, Closeness versus Continuity) stay PLANNED. Eight-C κ stays ABSENT.
 
+A reading copy of these checks, including what remains, is `analyses/eight_c_instrument_2026_10_20/EIGHT_C_STAGE_A_TEST_RECORD.pdf`. `analyses/eight_c_instrument_2026_10_20/build_test_record_pdf.py` writes that file from `results.json` and does not add a result.
+
 ## 3. GILE and HEM specifications versus batteries
 
 Stored weight tuples are specifications. They are not weights estimated from the rater battery.
