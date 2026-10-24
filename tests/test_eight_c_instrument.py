@@ -1,0 +1,167 @@
+"""Locks the 2026-10-20 Eight-C generator check and weight simulation.
+
+The product-branch calibration schema is not in this tree. These checks
+rerun the original Stage A mock functions from commit 58e78046 and the
+seeded weight arithmetic, then require the committed JSON to match.
+"""
+
+import importlib.util
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "analyses/eight_c_instrument_2026_10_20"
+SCRIPT = OUT / "run_eight_c_instrument.py"
+
+_spec = importlib.util.spec_from_file_location("eight_c_instrument_2026_10_20", SCRIPT)
+instrument = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(instrument)
+
+
+def test_committed_results_match_a_fresh_run():
+    fresh = instrument.build_report()
+    committed = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    assert committed == fresh
+    assert (OUT / "EIGHT_C_INSTRUMENT_REPORT.md").read_text(encoding="utf-8") == instrument.render_markdown(fresh)
+
+
+def test_stored_mock_matches_the_cli_default_and_not_the_registered_seed():
+    mock = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["mock"]
+    assert mock["status"] == "REPRODUCIBLE"
+    assert mock["empirical_status"] == "ABSENT"
+    assert mock["stored_json_matches_cli_default_seed"] is True
+    assert mock["stored_json_matches_registered_seed"] is False
+    assert mock["base_seed_matching_stored_json"] == "TI_SIGMA_STAGE_A_V3_MOCK"
+    assert mock["registered_base_seed"] == "TI_SIGMA_STAGE_A_V3_REGISTERED"
+    stored = mock["recomputed_vary_by_attempt_cli_default"]
+    assert stored["exact_match_rate"] == 0.0
+    assert stored["item_groups"] == 21
+    assert stored["attempts_per_item"] == 3
+    assert stored["mean_abs_diff"]["goodness"] == 4.031746031746032
+    assert mock["fixed_strategy_exact_match_rate"] == 1.0
+    assert mock["fixed_strategy_goodness_mad"] == 0.0
+    assert mock["choice_fields_excluded_from_hash"] is True
+    assert mock["uniform_expectation_score_mad"] == "440/121"
+    assert mock["uniform_expectation_contradiction_mad"] == "20/16"
+    assert "LFS" in mock["metadata_csv"]
+
+
+def test_weight_simulation_separates_proportional_duplicate_and_independent():
+    weights = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["weights"]
+    assert weights["status"] == "REPRODUCIBLE"
+    assert weights["class"] == "SIMULATION"
+    assert weights["empirical_status"] == "ABSENT"
+    assert weights["domain_weights_assigned"] is False
+    assert weights["closest_applicability"] == "not scored; no distance was defined"
+    assert weights["proportional_all_tau_equal_1"] is True
+    assert weights["duplicate_column_max_abs_composite_diff"] == 0
+    assert weights["constructed_nonredundant_transfer_tau_b"] == -1.0
+    assert weights["independent_fraction_tau_below_1"] == 1.0
+    assert weights["independent_mean_kendall_tau_b"] < 0.5
+    assert weights["seed"] == 20261020
+
+
+def test_corpus_balance_disagrees_with_the_item_jsonl():
+    corpus = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["corpus"]
+    assert corpus["status"] == "INCONSISTENT"
+    assert corpus["jsonl_items"] == 21
+    assert corpus["jsonl_cluster_roles_complete"] is True
+    assert corpus["jsonl_domains"]["science"] == 4
+    assert corpus["stored_domains"]["science"] == 5
+    assert corpus["jsonl_domains"]["engineering"] == 3
+    assert corpus["stored_domains"]["engineering"] == 4
+    assert corpus["stored_domain_total"] == 23
+    assert corpus["jsonl_scales"]["institutional"] == 6
+    assert corpus["stored_scales"]["institutional"] == 5
+    assert corpus["jsonl_scales"]["physical"] == 4
+    assert corpus["stored_scales"]["physical"] == 5
+    assert corpus["domains_match_jsonl"] is False
+    assert corpus["scales_match_jsonl"] is False
+
+
+def test_mock_schema_passes_and_fixed_icc_is_one():
+    local = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["local_mock_checks"]
+    assert local["class"] == "GENERATOR"
+    assert local["empirical_status"] == "ABSENT"
+    assert local["schema_records"] == 63
+    assert local["schema_failures"] == 0
+    assert local["schema_status"] == "REPRODUCIBLE"
+    assert local["fixed_strategy_goodness_icc_1_1"] == 1.0
+    assert local["fixed_strategy_goodness_icc_2_1"] == 1.0
+    assert local["moments"]["goodness"]["n"] == 63
+    assert abs(local["icc"]["goodness"]["icc_1_1"]) < 0.5
+
+
+def test_registered_retry_accounting_and_blocked_profiles():
+    payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    attempts = payload["attempt_accounting"]
+    assert attempts["class"] == "GENERATOR"
+    assert attempts["planned_logical_ratings"] == 63
+    assert attempts["first_attempt_valid"] == 58
+    assert attempts["eventual_valid"] == 63
+    assert attempts["eventual_invalid"] == 0
+    assert attempts["total_attempts"] == 68
+    assert attempts["within_attempt_cap"] is True
+    assert attempts["base_seed"] == "TI_SIGMA_STAGE_A_V3_REGISTERED"
+    assert len(attempts["retry_keys"]) == 5
+    profiles = payload["engineered_profiles"]
+    assert profiles["status"] == "BLOCKED"
+    assert profiles["lfs_oid_sha256"].startswith("f5f3a276")
+    assert "intended_contrast" in profiles["required_and_unread"]
+    assert payload["preregistered_discriminations"]["status"] == "BLOCKED"
+
+
+def test_common_construct_and_goodness_accounting_stay_generator_results():
+    payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    construct = payload["common_construct"]
+    goodness = payload["goodness_accounted_for"]
+    assert construct["class"] == "GENERATOR"
+    assert construct["empirical_status"] == "ABSENT"
+    assert construct["permutation_seed"] == 20261024
+    assert construct["horn_seed"] == 20260902
+    assert construct["alpha"] == 0.05
+    assert len(construct["eigenvalues"]) == 8
+    assert construct["one_common_construct_accounts_for_the_eight"] is False
+    assert goodness["class"] == "GENERATOR"
+    assert goodness["fully_accounted_for"] is False
+    assert goodness["loo_r2"] < 1
+    assert "choice" in goodness["leave_one_c_out"]
+    assert payload["contradiction_selectivity"]["designed_type_selectivity"] == "BLOCKED"
+    assert payload["named_pairs"]["engineered_directional_contrast"] == "BLOCKED"
+    assert payload["mock_fleiss_kappa"]["human_or_llm_kappa"] == "ABSENT"
+    assert set(payload["named_pairs"]["pairs"]) == {
+        "choice_versus_concreteness",
+        "concreteness_versus_completion",
+        "closeness_versus_continuity",
+    }
+
+
+def test_prompt_does_not_carry_the_full_definition_cards():
+    fidelity = json.loads((OUT / "results.json").read_text(encoding="utf-8"))["definition_fidelity"]
+    by_name = {row["dimension"]: row for row in fidelity["rows"]}
+    assert fidelity["mock_reads_definition_text"] is False
+    assert fidelity["cards_parsed"] == 8
+    assert fidelity["prompt_blocks_parsed"] == 8
+    assert by_name["concreteness"]["definition_status"] == "EXACT"
+    assert by_name["criticality"]["definition_status"] == "EXACT"
+    assert by_name["coherence"]["definition_status"] == "REWORDED"
+    assert "stated aims" in by_name["coherence"]["canonical_definition"]
+    assert "stated aims" not in by_name["coherence"]["prompt_text"]
+    assert fidelity["operational_questions_absent"] == 8
+    assert fidelity["anchor_sets_absent"] == 8
+    assert fidelity["do_not_confuse_absent"] == 8
+    assert fidelity["goodness_prompt_also_says_rate_independently"] is True
+
+
+def test_report_keeps_the_reliability_claim_absent():
+    text = (OUT / "EIGHT_C_INSTRUMENT_REPORT.md").read_text(encoding="utf-8")
+    payload = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
+    assert payload["eight_c_kappa"]["status"] == "ABSENT"
+    assert payload["preregistered_discriminations"]["status"] == "BLOCKED"
+    assert payload["common_construct"]["construct_status"] == "NO_COMMON_CONSTRUCT"
+    assert "NO_COMMON_CONSTRUCT" in text
+    assert "REPRODUCIBLE" in text
+    assert "SIMULATION" in text
+    assert "ABSENT" in text
+    assert "paid_collection_started" in text
+    assert "closest applicability" in text.lower() or "Closest applicability" in text

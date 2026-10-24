@@ -1,0 +1,783 @@
+{
+  "attempt_accounting": {
+    "base_seed": "TI_SIGMA_STAGE_A_V3_REGISTERED",
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "eventual_invalid": 0,
+    "eventual_valid": 63,
+    "first_attempt_valid": 58,
+    "first_attempt_valid_rate": 0.9206349206349206,
+    "instrument": "registered_mock_attempt_accounting",
+    "maximum_total_attempts": 189,
+    "planned_logical_ratings": 63,
+    "retry_keys": [
+      "registered_stage_a:V3-03:2",
+      "registered_stage_a:V3-07:1",
+      "registered_stage_a:V3-11:3",
+      "registered_stage_a:V3-16:2",
+      "registered_stage_a:V3-20:1"
+    ],
+    "seed_strategy": "vary_by_attempt",
+    "source_function": "ti_sigma_pipeline.stage_a_v3._mock_response_for_attempt",
+    "total_attempts": 68,
+    "within_attempt_cap": true
+  },
+  "common_construct": {
+    "alpha": 0.05,
+    "class": "GENERATOR",
+    "communalities_pc1": {
+      "choice": 0.381694627904474,
+      "closeness": 0.40495455314831935,
+      "coherence": 0.0001316209687222095,
+      "completion": 0.45507247437773574,
+      "concreteness": 0.1437092248588136,
+      "consistency": 0.38868054085042947,
+      "continuity": 0.03625831819671152,
+      "criticality": 0.4748920924039569
+    },
+    "construct_status": "NO_COMMON_CONSTRUCT",
+    "cronbach_alpha": 0.146050066723026,
+    "effective_rank": 6.58819161744164,
+    "eigenvalues": [
+      2.2853934527091626,
+      1.566472412942264,
+      1.2776758930334626,
+      0.9898575949459065,
+      0.6777160478997316,
+      0.504163993821385,
+      0.37582582672455034,
+      0.3228947779235356
+    ],
+    "empirical_status": "ABSENT",
+    "first_eigenvalue": 2.2853934527091626,
+    "first_eigenvalue_permutation_p": 0.14457108578284344,
+    "horn_95": [
+      2.44626277509581,
+      1.8368005879573202,
+      1.4675463122095032,
+      1.1874527116707114,
+      0.9544237123755368,
+      0.7465686524037807,
+      0.5534406410188998,
+      0.367465074044578
+    ],
+    "horn_draws": 2000,
+    "horn_seed": 20260902,
+    "independence_rejected": false,
+    "instrument": "eight_c_common_construct",
+    "item_ids": [
+      "V3-01",
+      "V3-02",
+      "V3-03",
+      "V3-04",
+      "V3-05",
+      "V3-06",
+      "V3-07",
+      "V3-08",
+      "V3-09",
+      "V3-10",
+      "V3-11",
+      "V3-12",
+      "V3-13",
+      "V3-14",
+      "V3-15",
+      "V3-16",
+      "V3-17",
+      "V3-18",
+      "V3-19",
+      "V3-20",
+      "V3-21"
+    ],
+    "mean_communality_pc1": 0.2856741815886453,
+    "n_limit": "N=21 is diagnostic. The preregistration forbids a strong completeness claim from 21 items.",
+    "one_common_construct_accounts_for_the_eight": false,
+    "pc1_variance_share": 0.2856741815886454,
+    "permutation_draws": 5000,
+    "permutation_seed": 20261024,
+    "residual_variance_share_after_pc1": 0.7143258184113546,
+    "retained_components": 0,
+    "unit": "21 item means of 3 hash attempts"
+  },
+  "contradiction_selectivity": {
+    "class": "GENERATOR",
+    "designed_type_selectivity": "BLOCKED",
+    "empirical_status": "ABSENT",
+    "instrument": "contradiction_selectivity_versus_independent_uniform",
+    "mean_peak_minus_rest": 1.63718820861678,
+    "n_rows": 63,
+    "null": "eight independent uniform{0,1,2,3} contradiction scores",
+    "permutation_draws": 5000,
+    "permutation_p_greater": 0.22975404919016196,
+    "permutation_seed": 20261024
+  },
+  "corpus": {
+    "corpus_report_sha256": "9781e84692d1f4088882a81aea701a41cd3336052651d8eb395a03d8acfd50f1",
+    "domains_match_jsonl": false,
+    "empirical_status": "ABSENT",
+    "instrument": "stage_a_v3_corpus_balance",
+    "jsonl_cluster_roles_complete": true,
+    "jsonl_domains": {
+      "AI": 3,
+      "biology": 2,
+      "engineering": 3,
+      "ethics/economics": 1,
+      "individual cognition": 2,
+      "institutions/governance": 3,
+      "interpersonal relations": 2,
+      "mathematics/formal reasoning": 1,
+      "science": 4
+    },
+    "jsonl_items": 21,
+    "jsonl_scales": {
+      "biological": 2,
+      "cognitive": 3,
+      "formal": 1,
+      "institutional": 6,
+      "interpersonal": 2,
+      "physical": 4,
+      "societal": 3
+    },
+    "note": "The balance report is prose on the product commit. No script in that commit writes it. The item CSV is an unread LFS pointer, so this comparison uses the JSONL.",
+    "scales_match_jsonl": false,
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "status": "INCONSISTENT",
+    "stored_domain_total": 23,
+    "stored_domains": {
+      "AI": 3,
+      "biology": 2,
+      "engineering": 4,
+      "ethics/economics": 1,
+      "individual cognition": 2,
+      "institutions/governance": 3,
+      "interpersonal relations": 2,
+      "mathematics/formal reasoning": 1,
+      "science": 5
+    },
+    "stored_scale_total": 21,
+    "stored_scales": {
+      "biological": 2,
+      "cognitive": 3,
+      "formal": 1,
+      "institutional": 5,
+      "interpersonal": 2,
+      "physical": 5,
+      "societal": 3
+    }
+  },
+  "definition_fidelity": {
+    "anchor_sets_absent": 8,
+    "cards_parsed": 8,
+    "class": "INSTRUMENT_TEXT",
+    "definition_sentences_exact": 2,
+    "definition_sentences_reworded": 6,
+    "do_not_confuse_absent": 8,
+    "empirical_status": "ABSENT",
+    "goodness_prompt_also_says_rate_independently": true,
+    "goodness_prompt_sentence": "Structural and evaluative adequacy expressed through the Eight Cs.",
+    "instrument": "eight_c_definition_fidelity",
+    "mock_reads_definition_text": false,
+    "mock_seed_inputs": [
+      "base_seed",
+      "item_id",
+      "scenario_text",
+      "attempt index",
+      "score name"
+    ],
+    "operational_questions_absent": 8,
+    "prompt_blocks_parsed": 8,
+    "rows": [
+      {
+        "canonical_definition": "degree to which parts, relations, and stated aims hang together as an intelligible whole.",
+        "definition_status": "REWORDED",
+        "dimension": "coherence",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the parts and relations hang together as an intelligible whole."
+      },
+      {
+        "canonical_definition": "degree to which claims, constraints, and actions avoid contradiction across the relevant frame.",
+        "definition_status": "REWORDED",
+        "dimension": "consistency",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which claims, rules, or actions avoid contradiction within the relevant frame."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity preserves intelligible linkage across time, stages, or developmental transitions.",
+        "definition_status": "REWORDED",
+        "dimension": "continuity",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which intelligible linkage is preserved across time, stages, or transitions."
+      },
+      {
+        "canonical_definition": "degree of tangibility or determinate intelligibility of the evaluated entity: how readily it can be understood, represented, or operationally grasped with minimal fuzziness, vagueness, or ambiguity.",
+        "definition_status": "EXACT",
+        "dimension": "concreteness",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "PRESENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "**Concreteness is the degree of tangibility or determinate intelligibility of the evaluated entity: how readily it can be understood, represented, or operationally grasped with minimal fuzziness, vagueness, or ambiguity.**\nConcreteness in GILE-G does not measure ontological instantiation. Ontological instantiation and concrete physical mechanisms belong to HEM."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity includes the parts, stages, or conditions needed for its stated function within scope.",
+        "definition_status": "REWORDED",
+        "dimension": "completion",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the entity includes the parts or conditions needed for its stated function within scope."
+      },
+      {
+        "canonical_definition": "degree to which the evaluation appropriately tracks how much correctness, failure tolerance, and accuracy discipline matter for the case.",
+        "definition_status": "EXACT",
+        "dimension": "criticality",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the evaluation appropriately tracks how much correctness, failure tolerance, and accuracy discipline matter for the case."
+      },
+      {
+        "canonical_definition": "degree to which the evaluated entity remains near the relevant target, need, or purpose rather than drifting into adjacent but less relevant success.",
+        "definition_status": "REWORDED",
+        "dimension": "closeness",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the entity remains near the relevant target, need, or purpose rather than drifting into nearby but less relevant success."
+      },
+      {
+        "canonical_definition": "degree to which the relevant bearer has meaningful, attributable, and normatively interpretable choice within the evaluated situation, including the alignment of that choice with the relevant target.",
+        "definition_status": "REWORDED",
+        "dimension": "choice",
+        "do_not_confuse": "ABSENT",
+        "hem_boundary": "ABSENT",
+        "high_anchor": "ABSENT",
+        "low_anchor": "ABSENT",
+        "mid_anchor": "ABSENT",
+        "operational_question": "ABSENT",
+        "prompt_text": "Degree to which the relevant bearer has meaningful, attributable, and normatively interpretable choice within the situation, including the alignment of that choice with the relevant target."
+      }
+    ],
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "source_definitions": "experiments/eight_c_goodness_pilot/docs/conceptual/eight_c_operational_definitions_v3.md",
+    "source_prompt": "experiments/eight_c_goodness_pilot/prompts/ti_sigma_stage_a_v3_rater_prompt.txt"
+  },
+  "eight_c_kappa": {
+    "status": "ABSENT"
+  },
+  "eight_c_names": [
+    "coherence",
+    "consistency",
+    "continuity",
+    "concreteness",
+    "completion",
+    "criticality",
+    "closeness",
+    "choice"
+  ],
+  "engineered_profiles": {
+    "lfs_oid_sha256": "f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1",
+    "lfs_size": 4549,
+    "missing_file": "experiments/eight_c_goodness_pilot/data/metadata/ti_sigma_stage_a_v3_metadata.csv",
+    "reason": "The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.",
+    "required_and_unread": [
+      "intended_coherence",
+      "intended_consistency",
+      "intended_continuity",
+      "intended_concreteness",
+      "intended_completion",
+      "intended_criticality",
+      "intended_closeness",
+      "intended_choice",
+      "intended_goodness",
+      "intended_contradiction_types",
+      "intended_contrast",
+      "predicted_profile_notes"
+    ],
+    "status": "BLOCKED"
+  },
+  "goodness_accounted_for": {
+    "class": "GENERATOR",
+    "cmi_note": "Gaussian CMI from partial correlations. N=21 with seven conditioners is unstable and is not a confirmation sample.",
+    "empirical_status": "ABSENT",
+    "extent": -1.2630063958020945,
+    "extent_definition": "leave-one-out R-squared of Goodness on the eight item-mean Cs",
+    "fully_accounted_for": false,
+    "gaussian_cmi_with_goodness": {
+      "choice": {
+        "gaussian_cmi_bits": 0.007661097274351489,
+        "partial_r_with_goodness_given_other_cs": 0.10278296156996723
+      },
+      "closeness": {
+        "gaussian_cmi_bits": 0.00444636376977501,
+        "partial_r_with_goodness_given_other_cs": -0.0783901188750032
+      },
+      "coherence": {
+        "gaussian_cmi_bits": 0.00014186462383376138,
+        "partial_r_with_goodness_given_other_cs": -0.014023080636859827
+      },
+      "completion": {
+        "gaussian_cmi_bits": 0.001070347523037781,
+        "partial_r_with_goodness_given_other_cs": 0.03850605697628725
+      },
+      "concreteness": {
+        "gaussian_cmi_bits": 0.0001689364894329084,
+        "partial_r_with_goodness_given_other_cs": 0.015302557989283138
+      },
+      "consistency": {
+        "gaussian_cmi_bits": 0.08699478307945803,
+        "partial_r_with_goodness_given_other_cs": -0.3370636294578224
+      },
+      "continuity": {
+        "gaussian_cmi_bits": 0.09100492798908631,
+        "partial_r_with_goodness_given_other_cs": -0.3442758545562487
+      },
+      "criticality": {
+        "gaussian_cmi_bits": 0.1492144238977887,
+        "partial_r_with_goodness_given_other_cs": -0.43227600751979683
+      }
+    },
+    "in_sample_r2": 0.3019137838619306,
+    "in_sample_r2_permutation_p": 0.7320535892821436,
+    "incremental_choice_delta_r2": 0.007453560096458811,
+    "incremental_choice_permutation_p": 0.7280543891221756,
+    "instrument": "goodness_accounted_for_by_eight_cs",
+    "leave_one_c_out": {
+      "choice": {
+        "delta_r2": 0.007453560096458811,
+        "in_sample_r2_without_dimension": 0.29446022376547176
+      },
+      "closeness": {
+        "delta_r2": 0.004316270824245572,
+        "in_sample_r2_without_dimension": 0.297597513037685
+      },
+      "coherence": {
+        "delta_r2": 0.00013730341420503667,
+        "in_sample_r2_without_dimension": 0.30177648044772554
+      },
+      "completion": {
+        "delta_r2": 0.0010366008830932083,
+        "in_sample_r2_without_dimension": 0.30087718297883737
+      },
+      "concreteness": {
+        "delta_r2": 0.00016350793760622206,
+        "in_sample_r2_without_dimension": 0.30175027592432435
+      },
+      "consistency": {
+        "delta_r2": 0.08947648749174553,
+        "in_sample_r2_without_dimension": 0.21243729637018505
+      },
+      "continuity": {
+        "delta_r2": 0.09386693104102461,
+        "in_sample_r2_without_dimension": 0.20804685282090596
+      },
+      "criticality": {
+        "delta_r2": 0.16042326867961,
+        "in_sample_r2_without_dimension": 0.1414905151823206
+      }
+    },
+    "loo_r2": -1.2630063958020945,
+    "n_items": 21,
+    "permutation_draws": 5000,
+    "permutation_seed": 20261024
+  },
+  "local_mock_checks": {
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "fixed_strategy_goodness_icc_1_1": 1.0,
+    "fixed_strategy_goodness_icc_2_1": 1.0,
+    "goodness_icc_1_1_versus_uniform": {
+      "draws": 2000,
+      "monte_carlo_mean": -0.0028445151813530963,
+      "null": "21 items, 3 independent uniform{0..10} attempts, ICC(1,1)",
+      "seed": 20261023,
+      "two_sided_tail": 0.5065
+    },
+    "icc": {
+      "choice": {
+        "icc_1_1": -0.07961222091656874,
+        "icc_2_1": -0.0963603818615752,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "closeness": {
+        "icc_1_1": 0.1284034154986305,
+        "icc_2_1": 0.12032520325203239,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "coherence": {
+        "icc_1_1": 0.035281443576622606,
+        "icc_2_1": 0.02195281782437744,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "completion": {
+        "icc_1_1": 0.06202976090954693,
+        "icc_2_1": 0.08676542405990564,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "concreteness": {
+        "icc_1_1": 0.029778594218311794,
+        "icc_2_1": 0.032118055555555435,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "consistency": {
+        "icc_1_1": -0.1727128875344313,
+        "icc_2_1": -0.19096509240246415,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "continuity": {
+        "icc_1_1": 0.11515773275198764,
+        "icc_2_1": 0.1120548209632274,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "criticality": {
+        "icc_1_1": 0.14865626761886852,
+        "icc_2_1": 0.16924558145932184,
+        "k_attempts": 3,
+        "n_items": 21
+      },
+      "goodness": {
+        "icc_1_1": -0.0883895491507482,
+        "icc_2_1": -0.10209749323978659,
+        "k_attempts": 3,
+        "n_items": 21
+      }
+    },
+    "instrument": "stage_a_v3_mock_schema_moments_icc",
+    "moments": {
+      "choice": {
+        "max": 10,
+        "mean": 4.809523809523809,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.2915196159963074
+      },
+      "closeness": {
+        "max": 10,
+        "mean": 4.2063492063492065,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.13234288362628
+      },
+      "coherence": {
+        "max": 10,
+        "mean": 5.349206349206349,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.13234288362628
+      },
+      "completion": {
+        "max": 10,
+        "mean": 5.238095238095238,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.078092652582145
+      },
+      "concreteness": {
+        "max": 10,
+        "mean": 3.9682539682539684,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.3067294726704732
+      },
+      "consistency": {
+        "max": 10,
+        "mean": 5.285714285714286,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.013028545139406
+      },
+      "continuity": {
+        "max": 10,
+        "mean": 4.523809523809524,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 2.8672631823189914
+      },
+      "criticality": {
+        "max": 10,
+        "mean": 5.285714285714286,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.347741518081915
+      },
+      "goodness": {
+        "max": 10,
+        "mean": 4.523809523809524,
+        "min": 0,
+        "n": 63,
+        "sample_sd": 3.3207905338315538
+      }
+    },
+    "schema_failures": 0,
+    "schema_records": 63,
+    "schema_status": "REPRODUCIBLE",
+    "uniform_mean_on_0_to_10": 5.0
+  },
+  "mock": {
+    "base_seed_matching_stored_json": "TI_SIGMA_STAGE_A_V3_MOCK",
+    "choice_fields_excluded_from_hash": true,
+    "definitions_status": "NEW_CANONICAL_DRAFT",
+    "empirical_status": "ABSENT",
+    "fixed_strategy_exact_match_rate": 1.0,
+    "fixed_strategy_goodness_mad": 0.0,
+    "goodness_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 3.6374238095238094,
+      "observed": 4.031746031746032,
+      "seed": 20261021,
+      "two_sided_tail": 0.2897
+    },
+    "goodness_versus_mean_c": {
+      "generator_fact": "build_mock_rating draws goodness from sha256(seed|goodness) and each C from sha256(seed|name). Goodness is a separate bucket, not a function of the eight Cs.",
+      "n_mock_rows": 63,
+      "pearson_r_goodness_vs_mean_c": 0.012507296714551402,
+      "permutation_draws": 5000,
+      "permutation_seed": 20261022,
+      "two_sided_permutation_p": 0.9198160367926415
+    },
+    "instrument": "stage_a_v3_mock_hash",
+    "interpretation": "exact_match_rate 0.0 is the vary_by_attempt hash on this item file. The fixed strategy on the same items returns exact_match_rate 1.0 and MAD 0. The stored JSON is the CLI default seed, not the registered config seed.",
+    "items_csv": "Git LFS oid sha256:050b5590cf83bb8dca1cb0825141a7eac09b25771efb5b60a329a259c45464b9 size 10758. Not downloaded. Item text was read from the JSONL.",
+    "mean_c_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 3.6374238095238094,
+      "observed": 3.511904761904762,
+      "seed": 20261021,
+      "two_sided_tail": 0.72595
+    },
+    "mean_contradiction_mad_versus_uniform": {
+      "draws": 20000,
+      "monte_carlo_mean": 1.2497396825396825,
+      "observed": 1.2936507936507937,
+      "seed": 20261024,
+      "two_sided_tail": 0.71375
+    },
+    "mean_of_contradiction_mads": 1.2936507936507937,
+    "mean_of_eight_c_mads": 3.511904761904762,
+    "metadata_csv": "Git LFS oid sha256:f5f3a276063af7f895ac4f61c49c349bb02cfbcc50327a9bd69a7819221f82e1 size 4549. Not downloaded. Repository LFS budget exceeded.",
+    "paid_collection_started": false,
+    "recomputed_fixed_cli_default": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 1.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 0.0,
+          "closeness": 0.0,
+          "coherence": 0.0,
+          "completion": 0.0,
+          "concreteness": 0.0,
+          "consistency": 0.0,
+          "continuity": 0.0,
+          "criticality": 0.0
+        },
+        "contradictions": {
+          "category_error": 0.0,
+          "competing_domains": 0.0,
+          "genuine_tradeoff": 0.0,
+          "incomplete_information": 0.0,
+          "measurement_uncertainty": 0.0,
+          "self_reference": 0.0,
+          "temporal_inconsistency": 0.0,
+          "true_incoherence": 0.0
+        },
+        "goodness": 0.0
+      }
+    },
+    "recomputed_vary_by_attempt_cli_default": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 0.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 3.7777777777777777,
+          "closeness": 3.3968253968253967,
+          "coherence": 3.4603174603174605,
+          "completion": 3.5238095238095237,
+          "concreteness": 3.587301587301587,
+          "consistency": 3.746031746031746,
+          "continuity": 3.142857142857143,
+          "criticality": 3.4603174603174605
+        },
+        "contradictions": {
+          "category_error": 1.2698412698412698,
+          "competing_domains": 1.2063492063492063,
+          "genuine_tradeoff": 1.3015873015873016,
+          "incomplete_information": 1.4285714285714286,
+          "measurement_uncertainty": 1.2380952380952381,
+          "self_reference": 1.3015873015873016,
+          "temporal_inconsistency": 1.26984126984127,
+          "true_incoherence": 1.3333333333333333
+        },
+        "goodness": 4.031746031746032
+      }
+    },
+    "recomputed_vary_by_attempt_registered_seed": {
+      "attempts_per_item": 3,
+      "exact_match_rate": 0.0,
+      "item_groups": 21,
+      "mean_abs_diff": {
+        "C_scores": {
+          "choice": 3.8412698412698414,
+          "closeness": 3.8095238095238093,
+          "coherence": 3.8730158730158726,
+          "completion": 3.4603174603174605,
+          "concreteness": 3.619047619047619,
+          "consistency": 3.746031746031746,
+          "continuity": 3.555555555555556,
+          "criticality": 3.7777777777777777
+        },
+        "contradictions": {
+          "category_error": 1.3333333333333333,
+          "competing_domains": 1.0476190476190477,
+          "genuine_tradeoff": 1.0793650793650793,
+          "incomplete_information": 1.4285714285714286,
+          "measurement_uncertainty": 1.2380952380952381,
+          "self_reference": 1.2063492063492063,
+          "temporal_inconsistency": 1.3968253968253967,
+          "true_incoherence": 1.1428571428571428
+        },
+        "goodness": 4.317460317460318
+      }
+    },
+    "registered_base_seed": "TI_SIGMA_STAGE_A_V3_REGISTERED",
+    "seed_strategy_stored_run": "vary_by_attempt",
+    "source_commit": "58e78046101afdd58797e1f369f7b7ae4f204b5b",
+    "source_file_sha256": {
+      "config/stage_a_v3.yaml": "d1b8283b50674a447925029559f51cf3df7a1008fa9e36290465067b7215ad5d",
+      "data/items/ti_sigma_stage_a_v3_items.jsonl": "7d0e710a2dd0eee201be9b9d3db17cb1b477b1b5151c53c03ab77487d4fb5b29",
+      "results/reports/ti_sigma_stage_a_v3_mock_reproducibility.json": "1597aac4842fdaedd5ce0acd619d4c17e9b72b4d8892198ec76674d5f812be7c",
+      "src/ti_sigma_pipeline/contracts.py": "99d1a22d690fe3192d5e893fe71a62803df4e64c3f5ba5e90d082cd4bc9e7297",
+      "src/ti_sigma_pipeline/mock_rater.py": "8a7b53d2ce434f79e463661aeb7485d702f31b112bd7a61f3a652383ec40177f",
+      "src/ti_sigma_pipeline/pipeline.py": "42ebd44d009f2e2e3a5c1f9c3417b9f86ca7cf691a0df86df8101317c7be14fd"
+    },
+    "status": "REPRODUCIBLE",
+    "stored_json_matches_cli_default_seed": true,
+    "stored_json_matches_registered_seed": false,
+    "uniform_expectation_contradiction_mad": "20/16",
+    "uniform_expectation_score_mad": "440/121"
+  },
+  "mock_fleiss_kappa": {
+    "categories": "integers 0..10",
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "human_or_llm_kappa": "ABSENT",
+    "instrument": "fleiss_kappa_hash_attempts_as_raters",
+    "kappa": {
+      "choice": -0.004756575265808607,
+      "closeness": 0.005076142131979691,
+      "coherence": 0.04276871131119865,
+      "completion": -0.051187782805429856,
+      "concreteness": -0.017888055395268346,
+      "consistency": 0.0011325028312570737,
+      "continuity": -0.04586381541924592,
+      "criticality": -0.0008361204013377816,
+      "goodness": -0.0298759864712514
+    },
+    "raters": "three hash attempts, not human or LLM raters"
+  },
+  "named_pairs": {
+    "class": "GENERATOR",
+    "empirical_status": "ABSENT",
+    "engineered_directional_contrast": "BLOCKED",
+    "instrument": "named_pair_exchangeability",
+    "null": "the two columns are exchangeable in the mock item means",
+    "pairs": {
+      "choice_versus_concreteness": {
+        "mean_difference": 0.8412698412698413,
+        "mean_difference_permutation_p": 0.14557088582283542,
+        "pearson_r": 0.08257557576855584,
+        "pearson_r_permutation_p": 0.7438512297540492
+      },
+      "closeness_versus_continuity": {
+        "mean_difference": -0.3174603174603175,
+        "mean_difference_permutation_p": 0.5720855828834233,
+        "pearson_r": 0.15990309461929067,
+        "pearson_r_permutation_p": 0.48010397920415915
+      },
+      "concreteness_versus_completion": {
+        "mean_difference": -1.2698412698412698,
+        "mean_difference_permutation_p": 0.04999000199960008,
+        "pearson_r": -0.018834432613821724,
+        "pearson_r_permutation_p": 0.9488102379524095
+      }
+    }
+  },
+  "preregistered_discriminations": {
+    "reason": "The registered directional contrasts and the designed contradiction types are columns of the metadata CSV. Git LFS returned the budget error and the object was not downloaded. No provisional profile was inferred from item titles.",
+    "status": "BLOCKED"
+  },
+  "study": "eight_c_instrument_2026_10_20",
+  "weights": {
+    "baseline_choice_only_eighths": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "baseline_equal_weights_eighths": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "class": "SIMULATION",
+    "closest_applicability": "not scored; no distance was defined",
+    "constructed_nonredundant_transfer_tau_b": -1.0,
+    "domain_weights_assigned": false,
+    "duplicate_column_max_abs_composite_diff": 0,
+    "empirical_status": "ABSENT",
+    "independent_fraction_tau_below_1": 1.0,
+    "independent_mean_kendall_tau_b": 0.24050465826369907,
+    "independent_min_kendall_tau_b": -0.11315527740769757,
+    "instrument": "seeded_weight_identifiability",
+    "interpretation": "A single Eight-C weight vector is unidentified when two columns carry the same profile. A composite ranking stays put when every C is the same latent value, and it moves when the eight profiles are drawn independently. No domain success history was used.",
+    "n_items": 24,
+    "n_matrices": 200,
+    "null": "rank invariance, Kendall tau-b = 1, which is what proportional profiles satisfy",
+    "proportional_all_tau_equal_1": true,
+    "score_support": "uniform integers {0..10}",
+    "seed": 20261020,
+    "status": "REPRODUCIBLE"
+  }
+}
